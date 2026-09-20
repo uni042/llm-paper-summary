@@ -1,0 +1,958 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0151JST-worker30-openalex-agentic-serving-14",
+  "collector_id": "worker30-openalex-agentic-serving",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "agentic multi-turn LLM serving KV cache workflow scheduling",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=agentic%20multi-turn%20LLM%20serving%20KV%20cache%20workflow%20scheduling&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzgzOTg3MjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTY5NDczNzgyJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c003ca1aeda5e8d4bc29db32b03032f4024d8f97",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 27,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 3,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:51:04.319576+00:00",
+  "results": [
+    {
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "source_url": "https://arxiv.org/abs/2609.13356",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13356",
+      "arxiv_id": "2609.13356",
+      "authors": [
+        "Jiyan He",
+        "Guang Liang",
+        "Hao Liu",
+        "Haoxiang Guan",
+        "Jinbo Sun",
+        "Junyi Guo",
+        "Wenjun Feng",
+        "Yantai Xie",
+        "Yifei Shen",
+        "Bin Shao",
+        "Chuyang Wei",
+        "Kai Chen",
+        "Kexin Zhou",
+        "Minghang Zhu",
+        "Shuxin Zheng",
+        "Tie-Yan Liu",
+        "Taine Zhao",
+        "Wenhui Zhu",
+        "Xueyin Xu",
+        "Xiaoqing Zhang",
+        "Yatao Li",
+        "Yuxuan Ren"
+      ]
+    },
+    {
+      "title": "Efficient Vision-Language-Action Management and Serving for Robot Factories",
+      "source_url": "https://arxiv.org/abs/2609.12075",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.12075",
+      "arxiv_id": "2609.12075",
+      "authors": [
+        "Dionysios Adamopoulos",
+        "Nattapol Chanpaisit",
+        "Basel Fakhri",
+        "Christina Giannoula"
+      ]
+    },
+    {
+      "title": "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
+      "source_url": "https://arxiv.org/abs/2609.10494",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10494",
+      "arxiv_id": "2609.10494",
+      "authors": [
+        "Blake Stenstrom",
+        "Charangan Vasantharajan",
+        "Brian Sathianathan"
+      ]
+    },
+    {
+      "title": "How Portable Are LLM-Serving Scheduler Rankings Across Workloads, Operating Regions, and Metrics?",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10935389/v1",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10935389/v1",
+      "doi": "10.21203/rs.3.rs-10935389/v1",
+      "authors": [
+        "Soroush Vahidi"
+      ]
+    },
+    {
+      "title": "BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.08566",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08566",
+      "arxiv_id": "2609.08566",
+      "authors": [
+        "Yanhong Qian",
+        "何宣莹",
+        "Qingguo Meng",
+        "Shihao Ding",
+        "Xingbo Dong",
+        "Zhe Jin"
+      ]
+    },
+    {
+      "title": "PARSER: Read in Parallel, Reason in Depth for Long-Context LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.06702",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06702",
+      "arxiv_id": "2609.06702",
+      "authors": [
+        "Kun Li",
+        "Zexuan Qiu",
+        "Tianhua Zhang",
+        "Irwin King",
+        "Helen Meng"
+      ]
+    },
+    {
+      "title": "AgentBrew: Offline Tool-Use Agent Learning from Raw Real-World Trajectories",
+      "source_url": "https://arxiv.org/abs/2609.05837",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "arXiv:2609.05837",
+      "arxiv_id": "2609.05837",
+      "authors": [
+        "Zhiyi Lyu",
+        "Yewen Li",
+        "Longtao Zheng",
+        "Shengtian Yang",
+        "Lang Feng",
+        "Lei Feng",
+        "Peng Jiang",
+        "Kun Gai",
+        "Qingpeng Cai",
+        "Bo An"
+      ]
+    },
+    {
+      "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.05821",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "arXiv:2609.05821",
+      "arxiv_id": "2609.05821",
+      "authors": [
+        "Pengan Chen",
+        "Kaikai Zheng",
+        "Liang Hong",
+        "Lixia Yi",
+        "Jiyue Jiang",
+        "Jiayang Chen",
+        "Yixuan Wang",
+        "Yimin Fan",
+        "Xinyuan Liu",
+        "Jiayi Li",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Yu Li"
+      ]
+    },
+    {
+      "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+      "source_url": "https://arxiv.org/abs/2609.05707",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.05707",
+      "arxiv_id": "2609.05707",
+      "authors": [
+        "Theodore Glavas",
+        "Nikhita Vedula",
+        "Dushyanta Dhyani",
+        "Antonios Valkanas",
+        "Yilun Zhu",
+        "Shervin Malmasi"
+      ]
+    },
+    {
+      "title": "FiMI Banking: A Sovereign Model for Indian Retail Banking",
+      "source_url": "https://arxiv.org/abs/2609.03960",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.03960",
+      "arxiv_id": "2609.03960",
+      "authors": [
+        "NPCI AI Research Team",
+        "Aman Kumar",
+        "Asit Desai",
+        "Chandra Bhushan",
+        "Harsh Sharma",
+        "Harshit Bhushan",
+        "Hrithik Kadam",
+        "Keyur Doshi",
+        "Kolisetty Sai Kapardheeswar",
+        "Krishanu Adhikary",
+        "Nadeem Shaik",
+        "Navya Prakash",
+        "Nitin Kukreja",
+        "Prashant Devadiga",
+        "Shamanth MH",
+        "Shantanu Pandey",
+        "Suvradip Paul",
+        "Yatharth Dedhia"
+      ]
+    },
+    {
+      "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+      "source_url": "https://arxiv.org/abs/2609.05565",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.05565",
+      "arxiv_id": "2609.05565",
+      "authors": [
+        "Twinkll Sisodia"
+      ]
+    },
+    {
+      "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+      "source_url": "https://arxiv.org/abs/2609.00643",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "arXiv:2609.00643",
+      "arxiv_id": "2609.00643",
+      "authors": [
+        "Ruoling Qi",
+        "Xuaner Wu",
+        "Penghang Liu",
+        "Jian Chen",
+        "Yirui Liu"
+      ]
+    },
+    {
+      "title": "A Survey on Self-Improving Test-Time Intelligence: Feedback-Driven Adapting, Learning, and Scaling at Inference",
+      "source_url": "https://arxiv.org/abs/2609.01679",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "arXiv:2609.01679",
+      "arxiv_id": "2609.01679",
+      "authors": [
+        "Shuaicheng Niu",
+        "Guohao Chen",
+        "Yaofo Chen",
+        "Zhiquan Wen",
+        "Jinwu Hu",
+        "Zeshuai Deng",
+        "Deyu Chen",
+        "Shuhai Zhang",
+        "Renjie Chen",
+        "Zihao Lian",
+        "Shoukai Xu",
+        "Gang Dai",
+        "Yunbei Zhang",
+        "Wei Luo",
+        "Yifan Zhang",
+        "Mingkui Tan",
+        "Cheng Deng"
+      ]
+    },
+    {
+      "title": "Pro-Router: Token-Aware Progressive Model Routing with Adaptive Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.28726",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28726",
+      "arxiv_id": "2608.28726",
+      "authors": [
+        "Xinyuan Gui",
+        "Shaowen Wang",
+        "Sheng Sun",
+        "Zijian Wang",
+        "Zishu Yu",
+        "Zheming Yang"
+      ]
+    },
+    {
+      "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27046",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27046",
+      "arxiv_id": "2608.27046",
+      "authors": [
+        "Maciej Besta",
+        "Leonard Schmidt",
+        "Lara Nonino",
+        "Robert Gerstenberger",
+        "Pierre Pang",
+        "Patrik Okanovic",
+        "Ales Kubicek",
+        "Tiancheng Chen",
+        "B. Lipshitz",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "LMSM: LLM Security Framework Inspired by Linux Security Modules",
+      "source_url": "https://arxiv.org/abs/2608.25697",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.25697",
+      "arxiv_id": "2608.25697",
+      "authors": [
+        "XiuYu Zhang",
+        "Bonan Ruan",
+        "Junfeng Fang",
+        "An Zhang",
+        "Tat-Seng Chua",
+        "Zhenkai Liang"
+      ]
+    },
+    {
+      "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing",
+      "source_url": "https://arxiv.org/abs/2608.25683",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.25683",
+      "arxiv_id": "2608.25683",
+      "authors": [
+        "Mianjie Yu",
+        "Zizhao Mo",
+        "Huanyu Qu",
+        "Zhirong Qian",
+        "Huanle Xu",
+        "Cen Li",
+        "Zifeng Zhao",
+        "Zhi Zhou",
+        "Jinhua Zhou",
+        "Jun Xie",
+        "Chengzhong Xu"
+      ]
+    },
+    {
+      "title": "Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.24664",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.24664",
+      "arxiv_id": "2608.24664",
+      "authors": [
+        "Sherry Xu",
+        "Marco Heddes",
+        "Jackson Peng",
+        "Tom Savell",
+        "Monica Tang",
+        "Prashant Ranjan",
+        "Jesse Benson",
+        "Ofer Dekel",
+        "Saurabh Dighe",
+        "Anupama Kurpad",
+        "Artour Levin",
+        "Matthew Mattina",
+        "George Petre",
+        "Cheng Tang",
+        "Yuan Yu",
+        "Li Zhang",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "Simthesizer: An Agent-Driven Simulation Framework for LLM Serving Systems",
+      "source_url": "https://arxiv.org/abs/2608.24650",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.24650",
+      "arxiv_id": "2608.24650",
+      "authors": [
+        "Wonung Kim",
+        "Hyunmin Choi",
+        "Minsu Kim",
+        "Jaehong Cho",
+        "Yeong Wook Kim",
+        "Jongse Park"
+      ]
+    },
+    {
+      "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",
+      "source_url": "https://arxiv.org/abs/2608.25053",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.25053",
+      "arxiv_id": "2608.25053",
+      "authors": [
+        "Amir Taherin",
+        "Sana Taghipour Anvari",
+        "Charles Amante",
+        "Yixiao Chen",
+        "Ruben Noroian",
+        "Zlatan Feric",
+        "Nícolas Bohm Agostini",
+        "Pu Zhao",
+        "José Cano",
+        "Bin Ren",
+        "Yanzhi Wang",
+        "David Kaeli"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.13356",
+      "identity_tokens": [
+        "id:arXiv:2609.13356",
+        "title:zgcm1 a fully open and extremely efficient foundation model for math and agentic search",
+        "url:https://arxiv.org/abs/2609.13356"
+      ],
+      "record": {
+        "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+        "source_url": "https://arxiv.org/abs/2609.13356",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13356",
+        "arxiv_id": "2609.13356",
+        "authors": [
+          "Jiyan He",
+          "Guang Liang",
+          "Hao Liu",
+          "Haoxiang Guan",
+          "Jinbo Sun",
+          "Junyi Guo",
+          "Wenjun Feng",
+          "Yantai Xie",
+          "Yifei Shen",
+          "Bin Shao",
+          "Chuyang Wei",
+          "Kai Chen",
+          "Kexin Zhou",
+          "Minghang Zhu",
+          "Shuxin Zheng",
+          "Tie-Yan Liu",
+          "Taine Zhao",
+          "Wenhui Zhu",
+          "Xueyin Xu",
+          "Xiaoqing Zhang",
+          "Yatao Li",
+          "Yuxuan Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12075",
+      "identity_tokens": [
+        "id:arXiv:2609.12075",
+        "title:efficient visionlanguageaction management and serving for robot factories",
+        "url:https://arxiv.org/abs/2609.12075"
+      ],
+      "record": {
+        "title": "Efficient Vision-Language-Action Management and Serving for Robot Factories",
+        "source_url": "https://arxiv.org/abs/2609.12075",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.12075",
+        "arxiv_id": "2609.12075",
+        "authors": [
+          "Dionysios Adamopoulos",
+          "Nattapol Chanpaisit",
+          "Basel Fakhri",
+          "Christina Giannoula"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10494",
+      "identity_tokens": [
+        "id:arXiv:2609.10494",
+        "title:ibib a protocol for measuring enterprise ai systems by serving route not model identifier",
+        "url:https://arxiv.org/abs/2609.10494"
+      ],
+      "record": {
+        "title": "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
+        "source_url": "https://arxiv.org/abs/2609.10494",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10494",
+        "arxiv_id": "2609.10494",
+        "authors": [
+          "Blake Stenstrom",
+          "Charangan Vasantharajan",
+          "Brian Sathianathan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10935389/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10935389/v1",
+        "title:how portable are llmserving scheduler rankings across workloads operating regions and metrics",
+        "url:https://doi.org/10.21203/rs.3.rs-10935389/v1"
+      ],
+      "record": {
+        "title": "How Portable Are LLM-Serving Scheduler Rankings Across Workloads, Operating Regions, and Metrics?",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10935389/v1",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10935389/v1",
+        "doi": "10.21203/rs.3.rs-10935389/v1",
+        "authors": [
+          "Soroush Vahidi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08566",
+      "identity_tokens": [
+        "id:arXiv:2609.08566",
+        "title:biomemart biometricaware kv cache memory for multiuser llm agents",
+        "url:https://arxiv.org/abs/2609.08566"
+      ],
+      "record": {
+        "title": "BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.08566",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08566",
+        "arxiv_id": "2609.08566",
+        "authors": [
+          "Yanhong Qian",
+          "何宣莹",
+          "Qingguo Meng",
+          "Shihao Ding",
+          "Xingbo Dong",
+          "Zhe Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06702",
+      "identity_tokens": [
+        "id:arXiv:2609.06702",
+        "title:parser read in parallel reason in depth for longcontext llm agents",
+        "url:https://arxiv.org/abs/2609.06702"
+      ],
+      "record": {
+        "title": "PARSER: Read in Parallel, Reason in Depth for Long-Context LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.06702",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06702",
+        "arxiv_id": "2609.06702",
+        "authors": [
+          "Kun Li",
+          "Zexuan Qiu",
+          "Tianhua Zhang",
+          "Irwin King",
+          "Helen Meng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05837",
+      "identity_tokens": [
+        "id:arXiv:2609.05837",
+        "title:agentbrew offline tooluse agent learning from raw realworld trajectories",
+        "url:https://arxiv.org/abs/2609.05837"
+      ],
+      "record": {
+        "title": "AgentBrew: Offline Tool-Use Agent Learning from Raw Real-World Trajectories",
+        "source_url": "https://arxiv.org/abs/2609.05837",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "arXiv:2609.05837",
+        "arxiv_id": "2609.05837",
+        "authors": [
+          "Zhiyi Lyu",
+          "Yewen Li",
+          "Longtao Zheng",
+          "Shengtian Yang",
+          "Lang Feng",
+          "Lei Feng",
+          "Peng Jiang",
+          "Kun Gai",
+          "Qingpeng Cai",
+          "Bo An"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05821",
+      "identity_tokens": [
+        "id:arXiv:2609.05821",
+        "title:conduit a unified residualstream restoration framework for kv cache reuse in visionlanguage models",
+        "url:https://arxiv.org/abs/2609.05821"
+      ],
+      "record": {
+        "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.05821",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "arXiv:2609.05821",
+        "arxiv_id": "2609.05821",
+        "authors": [
+          "Pengan Chen",
+          "Kaikai Zheng",
+          "Liang Hong",
+          "Lixia Yi",
+          "Jiyue Jiang",
+          "Jiayang Chen",
+          "Yixuan Wang",
+          "Yimin Fan",
+          "Xinyuan Liu",
+          "Jiayi Li",
+          "Zhanqiu Zhang",
+          "Yiwen Guo",
+          "Yu Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05707",
+      "identity_tokens": [
+        "id:arXiv:2609.05707",
+        "title:intraprompt parallel decoding for commoncontext question answering",
+        "url:https://arxiv.org/abs/2609.05707"
+      ],
+      "record": {
+        "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+        "source_url": "https://arxiv.org/abs/2609.05707",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.05707",
+        "arxiv_id": "2609.05707",
+        "authors": [
+          "Theodore Glavas",
+          "Nikhita Vedula",
+          "Dushyanta Dhyani",
+          "Antonios Valkanas",
+          "Yilun Zhu",
+          "Shervin Malmasi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.03960",
+      "identity_tokens": [
+        "id:arXiv:2609.03960",
+        "title:fimi banking a sovereign model for indian retail banking",
+        "url:https://arxiv.org/abs/2609.03960"
+      ],
+      "record": {
+        "title": "FiMI Banking: A Sovereign Model for Indian Retail Banking",
+        "source_url": "https://arxiv.org/abs/2609.03960",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.03960",
+        "arxiv_id": "2609.03960",
+        "authors": [
+          "NPCI AI Research Team",
+          "Aman Kumar",
+          "Asit Desai",
+          "Chandra Bhushan",
+          "Harsh Sharma",
+          "Harshit Bhushan",
+          "Hrithik Kadam",
+          "Keyur Doshi",
+          "Kolisetty Sai Kapardheeswar",
+          "Krishanu Adhikary",
+          "Nadeem Shaik",
+          "Navya Prakash",
+          "Nitin Kukreja",
+          "Prashant Devadiga",
+          "Shamanth MH",
+          "Shantanu Pandey",
+          "Suvradip Paul",
+          "Yatharth Dedhia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05565",
+      "identity_tokens": [
+        "id:arXiv:2609.05565",
+        "title:toward sustainable distributed llm inference a systems synthesis and research agenda for an energy carbon and cacheaware llmd control plane",
+        "url:https://arxiv.org/abs/2609.05565"
+      ],
+      "record": {
+        "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+        "source_url": "https://arxiv.org/abs/2609.05565",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.05565",
+        "arxiv_id": "2609.05565",
+        "authors": [
+          "Twinkll Sisodia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00643",
+      "identity_tokens": [
+        "id:arXiv:2609.00643",
+        "title:revise validityguided recovery for online revisions in agent workflows",
+        "url:https://arxiv.org/abs/2609.00643"
+      ],
+      "record": {
+        "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+        "source_url": "https://arxiv.org/abs/2609.00643",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "arXiv:2609.00643",
+        "arxiv_id": "2609.00643",
+        "authors": [
+          "Ruoling Qi",
+          "Xuaner Wu",
+          "Penghang Liu",
+          "Jian Chen",
+          "Yirui Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.01679",
+      "identity_tokens": [
+        "id:arXiv:2609.01679",
+        "title:a survey on selfimproving testtime intelligence feedbackdriven adapting learning and scaling at inference",
+        "url:https://arxiv.org/abs/2609.01679"
+      ],
+      "record": {
+        "title": "A Survey on Self-Improving Test-Time Intelligence: Feedback-Driven Adapting, Learning, and Scaling at Inference",
+        "source_url": "https://arxiv.org/abs/2609.01679",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "arXiv:2609.01679",
+        "arxiv_id": "2609.01679",
+        "authors": [
+          "Shuaicheng Niu",
+          "Guohao Chen",
+          "Yaofo Chen",
+          "Zhiquan Wen",
+          "Jinwu Hu",
+          "Zeshuai Deng",
+          "Deyu Chen",
+          "Shuhai Zhang",
+          "Renjie Chen",
+          "Zihao Lian",
+          "Shoukai Xu",
+          "Gang Dai",
+          "Yunbei Zhang",
+          "Wei Luo",
+          "Yifan Zhang",
+          "Mingkui Tan",
+          "Cheng Deng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28726",
+      "identity_tokens": [
+        "id:arXiv:2608.28726",
+        "title:prorouter tokenaware progressive model routing with adaptive edgecloud collaboration for efficient multimodal llm inference",
+        "url:https://arxiv.org/abs/2608.28726"
+      ],
+      "record": {
+        "title": "Pro-Router: Token-Aware Progressive Model Routing with Adaptive Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.28726",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28726",
+        "arxiv_id": "2608.28726",
+        "authors": [
+          "Xinyuan Gui",
+          "Shaowen Wang",
+          "Sheng Sun",
+          "Zijian Wang",
+          "Zishu Yu",
+          "Zheming Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27046",
+      "identity_tokens": [
+        "id:arXiv:2608.27046",
+        "title:performance foundations of parallel distributed reasoning language models",
+        "url:https://arxiv.org/abs/2608.27046"
+      ],
+      "record": {
+        "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27046",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27046",
+        "arxiv_id": "2608.27046",
+        "authors": [
+          "Maciej Besta",
+          "Leonard Schmidt",
+          "Lara Nonino",
+          "Robert Gerstenberger",
+          "Pierre Pang",
+          "Patrik Okanovic",
+          "Ales Kubicek",
+          "Tiancheng Chen",
+          "B. Lipshitz",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25697",
+      "identity_tokens": [
+        "id:arXiv:2608.25697",
+        "title:lmsm llm security framework inspired by linux security modules",
+        "url:https://arxiv.org/abs/2608.25697"
+      ],
+      "record": {
+        "title": "LMSM: LLM Security Framework Inspired by Linux Security Modules",
+        "source_url": "https://arxiv.org/abs/2608.25697",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.25697",
+        "arxiv_id": "2608.25697",
+        "authors": [
+          "XiuYu Zhang",
+          "Bonan Ruan",
+          "Junfeng Fang",
+          "An Zhang",
+          "Tat-Seng Chua",
+          "Zhenkai Liang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25683",
+      "identity_tokens": [
+        "id:arXiv:2608.25683",
+        "title:psrl efficient training for agentic ai via trainingtime prefix sharing",
+        "url:https://arxiv.org/abs/2608.25683"
+      ],
+      "record": {
+        "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing",
+        "source_url": "https://arxiv.org/abs/2608.25683",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.25683",
+        "arxiv_id": "2608.25683",
+        "authors": [
+          "Mianjie Yu",
+          "Zizhao Mo",
+          "Huanyu Qu",
+          "Zhirong Qian",
+          "Huanle Xu",
+          "Cen Li",
+          "Zifeng Zhao",
+          "Zhi Zhou",
+          "Jinhua Zhou",
+          "Jun Xie",
+          "Chengzhong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24664",
+      "identity_tokens": [
+        "id:arXiv:2608.24664",
+        "title:maia 200 a software defined dataflow system for largescale ai acceleration",
+        "url:https://arxiv.org/abs/2608.24664"
+      ],
+      "record": {
+        "title": "Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration",
+        "source_url": "https://arxiv.org/abs/2608.24664",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.24664",
+        "arxiv_id": "2608.24664",
+        "authors": [
+          "Sherry Xu",
+          "Marco Heddes",
+          "Jackson Peng",
+          "Tom Savell",
+          "Monica Tang",
+          "Prashant Ranjan",
+          "Jesse Benson",
+          "Ofer Dekel",
+          "Saurabh Dighe",
+          "Anupama Kurpad",
+          "Artour Levin",
+          "Matthew Mattina",
+          "George Petre",
+          "Cheng Tang",
+          "Yuan Yu",
+          "Li Zhang",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24650",
+      "identity_tokens": [
+        "id:arXiv:2608.24650",
+        "title:simthesizer an agentdriven simulation framework for llm serving systems",
+        "url:https://arxiv.org/abs/2608.24650"
+      ],
+      "record": {
+        "title": "Simthesizer: An Agent-Driven Simulation Framework for LLM Serving Systems",
+        "source_url": "https://arxiv.org/abs/2608.24650",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.24650",
+        "arxiv_id": "2608.24650",
+        "authors": [
+          "Wonung Kim",
+          "Hyunmin Choi",
+          "Minsu Kim",
+          "Jaehong Cho",
+          "Yeong Wook Kim",
+          "Jongse Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25053",
+      "identity_tokens": [
+        "id:arXiv:2608.25053",
+        "title:hydra phaseaware workload characterization of llm inference across edge soc generations backends and quantization levels",
+        "url:https://arxiv.org/abs/2608.25053"
+      ],
+      "record": {
+        "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",
+        "source_url": "https://arxiv.org/abs/2608.25053",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.25053",
+        "arxiv_id": "2608.25053",
+        "authors": [
+          "Amir Taherin",
+          "Sana Taghipour Anvari",
+          "Charles Amante",
+          "Yixiao Chen",
+          "Ruben Noroian",
+          "Zlatan Feric",
+          "Nícolas Bohm Agostini",
+          "Pu Zhao",
+          "José Cano",
+          "Bin Ren",
+          "Yanzhi Wang",
+          "David Kaeli"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:7504dbf6a7fa33cef58328a9469ed775d4e45b66de86ca0c299eeae072ef217c",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

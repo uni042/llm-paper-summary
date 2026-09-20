@@ -1,0 +1,928 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0151JST-worker30-openalex-speculative-serving-15",
+  "collector_id": "worker30-openalex-speculative-serving",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "speculative decoding serving scheduler draft verify systems",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=speculative%20decoding%20LLM%20serving%20scheduler%20draft%20verify%20systems&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg0NTkyMDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTcwMjI0NjA0J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c003ca1aeda5e8d4bc29db32b03032f4024d8f97",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 23,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:51:05.932644+00:00",
+  "results": [
+    {
+      "title": "Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache",
+      "source_url": "https://arxiv.org/abs/2609.15030",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15030",
+      "arxiv_id": "2609.15030",
+      "authors": [
+        "Frank Li"
+      ]
+    },
+    {
+      "title": "When does a scaling result justify a different allocation? A critical review of resource-allocation evidence for AI systems",
+      "source_url": "https://arxiv.org/abs/2609.14500",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14500",
+      "arxiv_id": "2609.14500",
+      "authors": [
+        "Seyed Morteza Emadi"
+      ]
+    },
+    {
+      "title": "One Size Does Not Fit All: Setting Inference Depth from the Questions a Deployment Actually Asks",
+      "source_url": "https://arxiv.org/abs/2609.14144",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.14144",
+      "arxiv_id": "2609.14144",
+      "authors": [
+        "Jerry Kaplan"
+      ]
+    },
+    {
+      "title": "Operationalising cognitive digital twins through a cognitive-function framework and GenAI tools",
+      "source_url": "https://doi.org/10.1080/00207543.2026.2732141",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "DOI:10.1080/00207543.2026.2732141",
+      "doi": "10.1080/00207543.2026.2732141",
+      "authors": [
+        "Yangyang Liu",
+        "Tang Ji",
+        "Xiangyu Guo",
+        "Yinwang Ren",
+        "Xun Xu",
+        "Jan Polzer"
+      ]
+    },
+    {
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "source_url": "https://arxiv.org/abs/2609.11873",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11873",
+      "arxiv_id": "2609.11873",
+      "authors": [
+        "Yi Duan",
+        "Ying Liu",
+        "Zirui Tang",
+        "Haodong Chen",
+        "Jun Zhou",
+        "Yumou Liu",
+        "Xu BangRui",
+        "Yukai Wu",
+        "Sidi Chen",
+        "Yuhan Zhou",
+        "Haoyu Wang",
+        "Xiaoyou Yu",
+        "Shaokun Han",
+        "Xuzhou Zhu",
+        "Le Zhou",
+        "Bolin Lu",
+        "Wei Zhou",
+        "Jiachen Liu",
+        "Nuozhou Fang",
+        "Jiaxin Tian",
+        "Ruoyu Chen",
+        "Yuxuan Li",
+        "Kai Zuo",
+        "Kaiyan Zhang",
+        "Qianyu Yang",
+        "Zijie Wang",
+        "黎国樑",
+        "Conghui He",
+        "Zhiyuan Liu",
+        "Bowen Zhou",
+        "Zhiyuan Liu",
+        "Zhoufutu Wen",
+        "Jihua Kang",
+        "Xuanhe Zhou",
+        "Fan Wu"
+      ]
+    },
+    {
+      "title": "SpecGuard: Inference-Time Backdoor Detection For Free",
+      "source_url": "https://arxiv.org/abs/2609.11799",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11799",
+      "arxiv_id": "2609.11799",
+      "authors": [
+        "Rui Wen",
+        "Ahmed Salem",
+        "Andrew Paverd",
+        "Mark Russinovich",
+        "Zheng Li"
+      ]
+    },
+    {
+      "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+      "source_url": "https://arxiv.org/abs/2609.10714",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10714",
+      "arxiv_id": "2609.10714",
+      "authors": [
+        "Yu Ma",
+        "Zhen Gao",
+        "Li Qiao",
+        "Xiaoyuan Zhang",
+        "Mahdi Boloursaz Mashhadi",
+        "Yin Xu",
+        "Wenjun Xu",
+        "Xiaodong Xu",
+        "Kaibin Huang",
+        "Jiangzhou Wang",
+        "Rahim Tafazolli",
+        "Sheng Chen",
+        "Tony Q. S. Quek",
+        "Ping Zhang"
+      ]
+    },
+    {
+      "title": "EvSpark: Lossless Speculative Decoding for Hybrid DNA Foundation Models",
+      "source_url": "https://doi.org/10.64898/2026.09.02.749017",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "DOI:10.64898/2026.09.02.749017",
+      "doi": "10.64898/2026.09.02.749017",
+      "authors": [
+        "Hao Ding",
+        "Nannan Wu",
+        "Tianyi Qiu"
+      ]
+    },
+    {
+      "title": "OmniEye: Efficient Multimodal Forensic Video Intelligence for Law-Enforcement Body-Worn Cameras",
+      "source_url": "https://arxiv.org/abs/2609.09460",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.09460",
+      "arxiv_id": "2609.09460",
+      "authors": [
+        "Mamadou Keïta",
+        "Angela Srbinovska",
+        "Anita Srbinovska",
+        "Nishka Desai",
+        "Isabella Zicari",
+        "P. Kwaku Sanaah-Faried",
+        "Sujith Makam",
+        "Wyatt Auten",
+        "V. Senthil",
+        "Hannah Desnick",
+        "Jonathan Bateman",
+        "Adrián Martín",
+        "Christopher Homan",
+        "John McCluskey",
+        "Ernest Fokoué"
+      ]
+    },
+    {
+      "title": "Line-Coupled Language Model",
+      "source_url": "https://arxiv.org/abs/2609.07129",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07129",
+      "arxiv_id": "2609.07129",
+      "authors": [
+        "Shiyuan Li",
+        "Shaorong Zhang",
+        "Zhaorui Yang",
+        "Qian Zhang",
+        "Greg Ver Steeg",
+        "Bo Li"
+      ]
+    },
+    {
+      "title": "Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.07108",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07108",
+      "arxiv_id": "2609.07108",
+      "authors": [
+        "Zili Wang",
+        "Zhaopeng Qiu",
+        "Yuekai Zhang",
+        "Shuang Yu",
+        "Junjie Lai"
+      ]
+    },
+    {
+      "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+      "source_url": "https://arxiv.org/abs/2609.05707",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.05707",
+      "arxiv_id": "2609.05707",
+      "authors": [
+        "Theodore Glavas",
+        "Nikhita Vedula",
+        "Dushyanta Dhyani",
+        "Antonios Valkanas",
+        "Yilun Zhu",
+        "Shervin Malmasi"
+      ]
+    },
+    {
+      "title": "From Monolithic Blending to Agentic Orchestration: Dynamic Response for Conversational Assistants at Scale",
+      "source_url": "https://arxiv.org/abs/2609.05758",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.05758",
+      "arxiv_id": "2609.05758",
+      "authors": [
+        "Cen Mia Zhao",
+        "Peng Wang",
+        "Chuan Shi",
+        "Yufeng Zhang",
+        "Ying Lyu",
+        "Wanmeng Ren",
+        "Robert Xue",
+        "Claire Na Cheng",
+        "Yashar Mehdad"
+      ]
+    },
+    {
+      "title": "CogEvol: Towards Efficient and Reliable Learning Environment Generation",
+      "source_url": "https://arxiv.org/abs/2608.30968",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "arXiv:2608.30968",
+      "arxiv_id": "2608.30968",
+      "authors": [
+        "Shangqing Tu",
+        "Daniel Zhang-Li",
+        "Yucheng Wang",
+        "Shiyu Gan",
+        "Yanpeng Wang",
+        "Huiqiang Rong",
+        "Mofei Chen",
+        "Shen Yang",
+        "Yini Chen",
+        "Yinuo Duan",
+        "Haoxuan Li",
+        "Ye He",
+        "Ye He",
+        "Zhanxin Hao",
+        "Yuxuan Wu",
+        "Mengting Tao",
+        "Yuqiu Liu",
+        "Jifan Yu",
+        "Jifan Yu",
+        "Bin Xu",
+        "Lei Hou",
+        "Lei Hou",
+        "Yu Zhang"
+      ]
+    },
+    {
+      "title": "ConvDeck: Conversational Paper-to-Slide Generation via Stage-Specific User Feedback",
+      "source_url": "https://arxiv.org/abs/2609.00226",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "arXiv:2609.00226",
+      "arxiv_id": "2609.00226",
+      "authors": [
+        "Tarik Can Ozden",
+        "Sachidanand VS",
+        "Furkan Horoz",
+        "Ozgur Kara",
+        "Dilek Hakkani-Tür",
+        "Junho Kim",
+        "James M. Rehg"
+      ]
+    },
+    {
+      "title": "ReTrace: Rejected-Trajectory Conditioning for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.29748",
+      "year": 2026,
+      "published": "2026-08-30",
+      "canonical_id": "arXiv:2608.29748",
+      "arxiv_id": "2608.29748",
+      "authors": [
+        "Luxi Lin",
+        "Zhanpeng Zeng",
+        "Shuang Peng",
+        "Songwei Liu",
+        "Rongrong Ji"
+      ]
+    },
+    {
+      "title": "A Network-aware Cross-layer Framework for Real-time LLM Service Orchestration Integrating QoS, QoE, and Academic Quality",
+      "source_url": "https://doi.org/10.22266/ijies2026.0930.40",
+      "year": 2026,
+      "published": "2026-08-29",
+      "canonical_id": "DOI:10.22266/ijies2026.0930.40",
+      "doi": "10.22266/ijies2026.0930.40",
+      "authors": [
+        "Abbas M. Ali Al-Muqarm",
+        "Ameer Mohammed Al-hakeem",
+        "Ayad Hasan Adhab",
+        "Ghaith Mousa Hamzah"
+      ]
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
+      "source_url": "https://arxiv.org/abs/2608.27339",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27339",
+      "arxiv_id": "2608.27339",
+      "authors": [
+        "Xinwei Qiang",
+        "Xiang Fang",
+        "Chang Chen",
+        "Yue Guan",
+        "Yufei Ding"
+      ]
+    },
+    {
+      "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing",
+      "source_url": "https://arxiv.org/abs/2608.25683",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.25683",
+      "arxiv_id": "2608.25683",
+      "authors": [
+        "Mianjie Yu",
+        "Zizhao Mo",
+        "Huanyu Qu",
+        "Zhirong Qian",
+        "Huanle Xu",
+        "Cen Li",
+        "Zifeng Zhao",
+        "Zhi Zhou",
+        "Jinhua Zhou",
+        "Jun Xie",
+        "Chengzhong Xu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.15030",
+      "identity_tokens": [
+        "id:arXiv:2609.15030",
+        "title:validating hybridstate cache recovery for glm53flash with vllm and lmcache",
+        "url:https://arxiv.org/abs/2609.15030"
+      ],
+      "record": {
+        "title": "Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache",
+        "source_url": "https://arxiv.org/abs/2609.15030",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15030",
+        "arxiv_id": "2609.15030",
+        "authors": [
+          "Frank Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14500",
+      "identity_tokens": [
+        "id:arXiv:2609.14500",
+        "title:when does a scaling result justify a different allocation a critical review of resourceallocation evidence for ai systems",
+        "url:https://arxiv.org/abs/2609.14500"
+      ],
+      "record": {
+        "title": "When does a scaling result justify a different allocation? A critical review of resource-allocation evidence for AI systems",
+        "source_url": "https://arxiv.org/abs/2609.14500",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14500",
+        "arxiv_id": "2609.14500",
+        "authors": [
+          "Seyed Morteza Emadi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14144",
+      "identity_tokens": [
+        "id:arXiv:2609.14144",
+        "title:one size does not fit all setting inference depth from the questions a deployment actually asks",
+        "url:https://arxiv.org/abs/2609.14144"
+      ],
+      "record": {
+        "title": "One Size Does Not Fit All: Setting Inference Depth from the Questions a Deployment Actually Asks",
+        "source_url": "https://arxiv.org/abs/2609.14144",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.14144",
+        "arxiv_id": "2609.14144",
+        "authors": [
+          "Jerry Kaplan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1080/00207543.2026.2732141",
+      "identity_tokens": [
+        "id:DOI:10.1080/00207543.2026.2732141",
+        "title:operationalising cognitive digital twins through a cognitivefunction framework and genai tools",
+        "url:https://doi.org/10.1080/00207543.2026.2732141"
+      ],
+      "record": {
+        "title": "Operationalising cognitive digital twins through a cognitive-function framework and GenAI tools",
+        "source_url": "https://doi.org/10.1080/00207543.2026.2732141",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "DOI:10.1080/00207543.2026.2732141",
+        "doi": "10.1080/00207543.2026.2732141",
+        "authors": [
+          "Yangyang Liu",
+          "Tang Ji",
+          "Xiangyu Guo",
+          "Yinwang Ren",
+          "Xun Xu",
+          "Jan Polzer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11873",
+      "identity_tokens": [
+        "id:arXiv:2609.11873",
+        "title:the last ai built by humans toward genuine recursive selfimprovement",
+        "url:https://arxiv.org/abs/2609.11873"
+      ],
+      "record": {
+        "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+        "source_url": "https://arxiv.org/abs/2609.11873",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11873",
+        "arxiv_id": "2609.11873",
+        "authors": [
+          "Yi Duan",
+          "Ying Liu",
+          "Zirui Tang",
+          "Haodong Chen",
+          "Jun Zhou",
+          "Yumou Liu",
+          "Xu BangRui",
+          "Yukai Wu",
+          "Sidi Chen",
+          "Yuhan Zhou",
+          "Haoyu Wang",
+          "Xiaoyou Yu",
+          "Shaokun Han",
+          "Xuzhou Zhu",
+          "Le Zhou",
+          "Bolin Lu",
+          "Wei Zhou",
+          "Jiachen Liu",
+          "Nuozhou Fang",
+          "Jiaxin Tian",
+          "Ruoyu Chen",
+          "Yuxuan Li",
+          "Kai Zuo",
+          "Kaiyan Zhang",
+          "Qianyu Yang",
+          "Zijie Wang",
+          "黎国樑",
+          "Conghui He",
+          "Zhiyuan Liu",
+          "Bowen Zhou",
+          "Zhiyuan Liu",
+          "Zhoufutu Wen",
+          "Jihua Kang",
+          "Xuanhe Zhou",
+          "Fan Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11799",
+      "identity_tokens": [
+        "id:arXiv:2609.11799",
+        "title:specguard inferencetime backdoor detection for free",
+        "url:https://arxiv.org/abs/2609.11799"
+      ],
+      "record": {
+        "title": "SpecGuard: Inference-Time Backdoor Detection For Free",
+        "source_url": "https://arxiv.org/abs/2609.11799",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11799",
+        "arxiv_id": "2609.11799",
+        "authors": [
+          "Rui Wen",
+          "Ahmed Salem",
+          "Andrew Paverd",
+          "Mark Russinovich",
+          "Zheng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10714",
+      "identity_tokens": [
+        "id:arXiv:2609.10714",
+        "title:from semantic to token communication the next paradigm for largemodeldriven 6g intelligent connectivity",
+        "url:https://arxiv.org/abs/2609.10714"
+      ],
+      "record": {
+        "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+        "source_url": "https://arxiv.org/abs/2609.10714",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10714",
+        "arxiv_id": "2609.10714",
+        "authors": [
+          "Yu Ma",
+          "Zhen Gao",
+          "Li Qiao",
+          "Xiaoyuan Zhang",
+          "Mahdi Boloursaz Mashhadi",
+          "Yin Xu",
+          "Wenjun Xu",
+          "Xiaodong Xu",
+          "Kaibin Huang",
+          "Jiangzhou Wang",
+          "Rahim Tafazolli",
+          "Sheng Chen",
+          "Tony Q. S. Quek",
+          "Ping Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.64898/2026.09.02.749017",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.09.02.749017",
+        "title:evspark lossless speculative decoding for hybrid dna foundation models",
+        "url:https://doi.org/10.64898/2026.09.02.749017"
+      ],
+      "record": {
+        "title": "EvSpark: Lossless Speculative Decoding for Hybrid DNA Foundation Models",
+        "source_url": "https://doi.org/10.64898/2026.09.02.749017",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "DOI:10.64898/2026.09.02.749017",
+        "doi": "10.64898/2026.09.02.749017",
+        "authors": [
+          "Hao Ding",
+          "Nannan Wu",
+          "Tianyi Qiu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09460",
+      "identity_tokens": [
+        "id:arXiv:2609.09460",
+        "title:omnieye efficient multimodal forensic video intelligence for lawenforcement bodyworn cameras",
+        "url:https://arxiv.org/abs/2609.09460"
+      ],
+      "record": {
+        "title": "OmniEye: Efficient Multimodal Forensic Video Intelligence for Law-Enforcement Body-Worn Cameras",
+        "source_url": "https://arxiv.org/abs/2609.09460",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.09460",
+        "arxiv_id": "2609.09460",
+        "authors": [
+          "Mamadou Keïta",
+          "Angela Srbinovska",
+          "Anita Srbinovska",
+          "Nishka Desai",
+          "Isabella Zicari",
+          "P. Kwaku Sanaah-Faried",
+          "Sujith Makam",
+          "Wyatt Auten",
+          "V. Senthil",
+          "Hannah Desnick",
+          "Jonathan Bateman",
+          "Adrián Martín",
+          "Christopher Homan",
+          "John McCluskey",
+          "Ernest Fokoué"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07129",
+      "identity_tokens": [
+        "id:arXiv:2609.07129",
+        "title:linecoupled language model",
+        "url:https://arxiv.org/abs/2609.07129"
+      ],
+      "record": {
+        "title": "Line-Coupled Language Model",
+        "source_url": "https://arxiv.org/abs/2609.07129",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07129",
+        "arxiv_id": "2609.07129",
+        "authors": [
+          "Shiyuan Li",
+          "Shaorong Zhang",
+          "Zhaorui Yang",
+          "Qian Zhang",
+          "Greg Ver Steeg",
+          "Bo Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07108",
+      "identity_tokens": [
+        "id:arXiv:2609.07108",
+        "title:online draft cotraining for speculative decoding in largescale longcontext rl posttraining",
+        "url:https://arxiv.org/abs/2609.07108"
+      ],
+      "record": {
+        "title": "Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training",
+        "source_url": "https://arxiv.org/abs/2609.07108",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07108",
+        "arxiv_id": "2609.07108",
+        "authors": [
+          "Zili Wang",
+          "Zhaopeng Qiu",
+          "Yuekai Zhang",
+          "Shuang Yu",
+          "Junjie Lai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05707",
+      "identity_tokens": [
+        "id:arXiv:2609.05707",
+        "title:intraprompt parallel decoding for commoncontext question answering",
+        "url:https://arxiv.org/abs/2609.05707"
+      ],
+      "record": {
+        "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+        "source_url": "https://arxiv.org/abs/2609.05707",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.05707",
+        "arxiv_id": "2609.05707",
+        "authors": [
+          "Theodore Glavas",
+          "Nikhita Vedula",
+          "Dushyanta Dhyani",
+          "Antonios Valkanas",
+          "Yilun Zhu",
+          "Shervin Malmasi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05758",
+      "identity_tokens": [
+        "id:arXiv:2609.05758",
+        "title:from monolithic blending to agentic orchestration dynamic response for conversational assistants at scale",
+        "url:https://arxiv.org/abs/2609.05758"
+      ],
+      "record": {
+        "title": "From Monolithic Blending to Agentic Orchestration: Dynamic Response for Conversational Assistants at Scale",
+        "source_url": "https://arxiv.org/abs/2609.05758",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.05758",
+        "arxiv_id": "2609.05758",
+        "authors": [
+          "Cen Mia Zhao",
+          "Peng Wang",
+          "Chuan Shi",
+          "Yufeng Zhang",
+          "Ying Lyu",
+          "Wanmeng Ren",
+          "Robert Xue",
+          "Claire Na Cheng",
+          "Yashar Mehdad"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.30968",
+      "identity_tokens": [
+        "id:arXiv:2608.30968",
+        "title:cogevol towards efficient and reliable learning environment generation",
+        "url:https://arxiv.org/abs/2608.30968"
+      ],
+      "record": {
+        "title": "CogEvol: Towards Efficient and Reliable Learning Environment Generation",
+        "source_url": "https://arxiv.org/abs/2608.30968",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "arXiv:2608.30968",
+        "arxiv_id": "2608.30968",
+        "authors": [
+          "Shangqing Tu",
+          "Daniel Zhang-Li",
+          "Yucheng Wang",
+          "Shiyu Gan",
+          "Yanpeng Wang",
+          "Huiqiang Rong",
+          "Mofei Chen",
+          "Shen Yang",
+          "Yini Chen",
+          "Yinuo Duan",
+          "Haoxuan Li",
+          "Ye He",
+          "Ye He",
+          "Zhanxin Hao",
+          "Yuxuan Wu",
+          "Mengting Tao",
+          "Yuqiu Liu",
+          "Jifan Yu",
+          "Jifan Yu",
+          "Bin Xu",
+          "Lei Hou",
+          "Lei Hou",
+          "Yu Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00226",
+      "identity_tokens": [
+        "id:arXiv:2609.00226",
+        "title:convdeck conversational papertoslide generation via stagespecific user feedback",
+        "url:https://arxiv.org/abs/2609.00226"
+      ],
+      "record": {
+        "title": "ConvDeck: Conversational Paper-to-Slide Generation via Stage-Specific User Feedback",
+        "source_url": "https://arxiv.org/abs/2609.00226",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "arXiv:2609.00226",
+        "arxiv_id": "2609.00226",
+        "authors": [
+          "Tarik Can Ozden",
+          "Sachidanand VS",
+          "Furkan Horoz",
+          "Ozgur Kara",
+          "Dilek Hakkani-Tür",
+          "Junho Kim",
+          "James M. Rehg"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.29748",
+      "identity_tokens": [
+        "id:arXiv:2608.29748",
+        "title:retrace rejectedtrajectory conditioning for speculative decoding",
+        "url:https://arxiv.org/abs/2608.29748"
+      ],
+      "record": {
+        "title": "ReTrace: Rejected-Trajectory Conditioning for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2608.29748",
+        "year": 2026,
+        "published": "2026-08-30",
+        "canonical_id": "arXiv:2608.29748",
+        "arxiv_id": "2608.29748",
+        "authors": [
+          "Luxi Lin",
+          "Zhanpeng Zeng",
+          "Shuang Peng",
+          "Songwei Liu",
+          "Rongrong Ji"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.22266/ijies2026.0930.40",
+      "identity_tokens": [
+        "id:DOI:10.22266/ijies2026.0930.40",
+        "title:a networkaware crosslayer framework for realtime llm service orchestration integrating qos qoe and academic quality",
+        "url:https://doi.org/10.22266/ijies2026.0930.40"
+      ],
+      "record": {
+        "title": "A Network-aware Cross-layer Framework for Real-time LLM Service Orchestration Integrating QoS, QoE, and Academic Quality",
+        "source_url": "https://doi.org/10.22266/ijies2026.0930.40",
+        "year": 2026,
+        "published": "2026-08-29",
+        "canonical_id": "DOI:10.22266/ijies2026.0930.40",
+        "doi": "10.22266/ijies2026.0930.40",
+        "authors": [
+          "Abbas M. Ali Al-Muqarm",
+          "Ameer Mohammed Al-hakeem",
+          "Ayad Hasan Adhab",
+          "Ghaith Mousa Hamzah"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27339",
+      "identity_tokens": [
+        "id:arXiv:2608.27339",
+        "title:beyond parallel blindness information floors and model gaps in block drafting",
+        "url:https://arxiv.org/abs/2608.27339"
+      ],
+      "record": {
+        "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
+        "source_url": "https://arxiv.org/abs/2608.27339",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27339",
+        "arxiv_id": "2608.27339",
+        "authors": [
+          "Xinwei Qiang",
+          "Xiang Fang",
+          "Chang Chen",
+          "Yue Guan",
+          "Yufei Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25683",
+      "identity_tokens": [
+        "id:arXiv:2608.25683",
+        "title:psrl efficient training for agentic ai via trainingtime prefix sharing",
+        "url:https://arxiv.org/abs/2608.25683"
+      ],
+      "record": {
+        "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing",
+        "source_url": "https://arxiv.org/abs/2608.25683",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.25683",
+        "arxiv_id": "2608.25683",
+        "authors": [
+          "Mianjie Yu",
+          "Zizhao Mo",
+          "Huanyu Qu",
+          "Zhirong Qian",
+          "Huanle Xu",
+          "Cen Li",
+          "Zifeng Zhao",
+          "Zhi Zhou",
+          "Jinhua Zhou",
+          "Jun Xie",
+          "Chengzhong Xu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:a6b27a070ac4425aae8c56f4b4f4f48c959211b02b09331c76a9be409d835219",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
