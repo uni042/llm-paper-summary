@@ -4,10 +4,42 @@
   "slot": "metadata",
   "attempt_id": "attempt-89bc644c23d78357d6c68f4d",
   "job_id": "job-research-e405cf8340f00512",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-89bc644c23d78357d6c68f4d",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2503.20552",
+    "arxiv_id": "2503.20552",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.LG"]},
+    "title": "Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation",
+    "summary": "プリフィルとデコードを別GPU群へ分離するLLM配信では、プリフィル側は計算資源を使う一方でHBM容量・帯域が余り、デコード側はKVキャッシュでHBMを圧迫する一方で計算器が余る。Adrenalineはデコード中のメモリ律速な注意計算だけをプリフィルGPUへ移し、両側の余剰資源を相互補完する。層ごとの往復通信を局所注意と重ねる低遅延同期、MPSによる計算資源分割、実行時負荷とサービス品質目標に基づく動的オフロード判定を組み合わせる。8台A100環境のLlama-2 7B/13B評価では、プリフィル側のHBM利用とデコード側の計算利用を高め、vLLMに対して出力トークンスループットを最大1.68倍へ改善した。",
+    "list_summary": "デコード注意をプリフィルGPUの余剰HBMへ動的に移し、低遅延同期・GPU資源分割・負荷連動制御で分離配信の資源偏りを解消する。",
+    "authors": ["Yunkai Liang", "Zhangyu Chen", "Pengfei Zuo", "Zhi Zhou", "Xu Chen", "Zhou Yu"],
+    "authors_affiliations": "Sun Yat-sen University; Huawei Cloud",
+    "published": "2025-03-26",
+    "publication": "arXiv preprint arXiv:2503.20552",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "prefill-decode disaggregation / attention offloading / LLM serving",
+    "topics": ["プリフィル・デコード分離", "注意計算オフロード", "GPU資源共有", "LLM配信スケジューリング"],
+    "importance": "プリフィル・デコード分離後に生じる相補的なGPU資源余剰を、デコード注意の移動で再結合する配信システム。追加GPUなしでクラスタ利用率を上げる点が重要。",
+    "hardware_evaluation": "8台のNVIDIA A100-80GB SXM GPUを600 GB/s NVLinkで接続した単一高性能サーバ上で評価。Llama-2 7B/13Bをfloat16で実行。",
+    "quality_effect": "モデル計算の近似や重み変更は行わず、注意計算の実行場所を変える方式であるため、生成品質そのものは原理上変更しない。主評価はTTFT、TPOT、P99 TPOT、スループット、資源利用率。",
+    "source": "https://arxiv.org/pdf/2503.20552",
+    "sources": ["https://arxiv.org/abs/2503.20552", "https://asisys.github.io/projects/2025-07-08-adrenaline/"],
+    "code": "https://github.com/ASISys/Adrenaline",
+    "implementation": "vLLM 0.6.3を基盤に実装。CUDA Graphで実行系列を捕捉し、NVIDIA MPSでプリフィルと遠隔注意実行器のSM資源を分割する。公式コードがApache-2.0で公開されている。",
+    "last_checked": "2026-09-20",
+    "storage_targets": [],
+    "bottlenecks": ["デコードGPUのHBM容量・帯域", "プリフィルGPUの未使用HBM", "層ごとの遠隔注意同期", "固定オフロード率の負荷不整合"],
+    "hardware_details": "プリフィル側とデコード側のGPU群を分け、プリフィル側に注意実行器を併置する。GPU間転送は高帯域相互接続を前提とする。",
+    "evidence_locations": ["§2.3-2.4", "§3.2-3.4", "§4.1-4.3"],
+    "references": [
+      {"canonical_id": "arXiv:2405.01814", "arxiv_id": "2405.01814", "title": "Efficient and Economic Large Language Model Inference with Attention Offloading"},
+      {"canonical_id": "doi:10.1145/3600006.3613165", "doi": "10.1145/3600006.3613165", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"}
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary-reference-section",
+    "references_total": 32
+  },
+  "reservation": {"claim_id": "claim-89bc644c23d78357d6c68f4d", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
 }
