@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-38cf98b68843d7c7",
+  "type": "research",
+  "parent_job_id": "job-f0a81d01f73e759d",
+  "priority": 97,
+  "canonical_id": "arXiv:2608.28911",
+  "arxiv_id": "2608.28911",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "SemKV: Semantic Mixed-Precision KV Cache Quantization Guided by the Quality Cliff for Long-Context LLM Inference",
+  "source_url": "https://www.semanticscholar.org/paper/d3f7b7e4211810aede1fbf47e1b342071445dacb",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.28911-semkv-semantic-mixed-precision-kv-cache-quantization-guided-by-the-quality-cliff-for-long-context-llm-inference.md",
+  "selection_reason": "長文脈LLMのKV量子化で品質崖を実測し、その上側の隣接精度を混合するSemKVを提案。全トークン保持のまま6.0倍、量子化器変更時7.9倍の保存量削減を報告しており、KV圧縮系統への直接性が高い。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T21:04:17+00:00"
+}

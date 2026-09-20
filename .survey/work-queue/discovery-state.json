@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T20:57:11+00:00",
-  "last_run_key": "2026-09-21T05:32:01+09:00",
-  "last_round": "round-12",
+  "updated_at": "2026-09-20T21:04:17+00:00",
+  "last_run_key": "2026-09-21T06:00:07+09:00-hourly30",
+  "last_round": "round-01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,21 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T17:00:00+09:00",
-      "round": "specialist-recurrent-state-cache-10",
-      "axis": "hybrid/recurrent LLM・疎state checkpoint prefix caching",
-      "query_summary": "dense Transformer KVからモデル構造を変え、recurrent/SSM stateを疎checkpointとして配置するprefix reuse研究を探索し、GitHub正本でcanonical ID重複を確認した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "主要重点軸を一巡したため、最新Actions反映後の在庫と重複結果を再取得して次モードを判定する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260916T1700-r10-sparse-prefix-recurrent.json"
-    },
     {
       "run_key": "2026-09-16T17:00:00+09:00",
       "round": "specialist-pnm-kv-sparse-attention-2",
@@ -8001,6 +7986,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0556JST-worker30-discovery-round-12-moelightning-forward.json"
+    },
+    {
+      "run_key": "2026-09-21T06:00:07+09:00-hourly30",
+      "round": "round-01",
+      "axis": "forward citations of FlexGen for offloaded LLM inference",
+      "query_summary": null,
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0603JST-hourly30-discovery-round-01-flexgen-forward.json"
     }
   ],
   "axes": {
@@ -15574,6 +15580,19 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 5,
       "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "forward citations of FlexGen for offloaded LLM inference": {
+      "last_run_key": "2026-09-21T06:00:07+09:00-hourly30",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 3,
+      "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null

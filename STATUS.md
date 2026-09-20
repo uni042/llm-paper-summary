@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 06:05:14 JST**
+> 自動生成: **2026-09-21 06:05:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **294** |
-| 未claim Research job | **294** |
+| 収録候補論文 | **297** |
+| 未claim Research job | **297** |
 | 直近24hの検証済みResearch収録 | **77** |
 | 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間17分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **294** |
+| canonical_id確認済みの一意な候補論文 | **297** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **294** |
+| 非終端Research job合計 | **297** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **40** | **12** | **12** | **0** | **0** | **0** | **30** |
-| 合計 | **40** | **18** | **16** | **0** | **0** | **0** | **30** |
+| Discovery | **40** | **1** | **0** | **1** | **0** | **0** | **2** |
+| 合計 | **40** | **7** | **4** | **1** | **0** | **0** | **2** |
 
-- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -151,49 +151,13 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-21 05:32 JST**
-- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **0件** / 候補: **30件**
-- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems / recent MoE expert prefetch prediction offload inference alternate provider / forward citations of H2O for KV cache serving systems / forward citations of FlexGen for hierarchical-memory inference systems / forward citations of Splitwise for disaggregated LLM serving / forward citations of Mooncake for KV-centric disaggregated serving / forward citations of MoE-Lightning for offloaded MoE inference
-- round `round-01` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
-  - 探索軸: backward structured references across repository
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0540JST-worker30-discovery-round-01-backward.json` (`ok=true`)
-- round `round-02` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-02-forward-vllm.json`
-  - 探索軸: forward citations of vLLM PagedAttention
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0540JST-worker30-discovery-round-02-forward-vllm.json` (`ok=true`)
-- round `round-03` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-03-ssd-kv.json`
-  - 探索軸: recent SSD NVMe KV cache offload for LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-03-ssd-kv.json` (`ok=true`)
-- round `round-04` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-04-moe-cache.json`
-  - 探索軸: recent MoE expert cache offload serving systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-04-moe-cache.json` (`ok=true`)
-- round `round-05` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-05-survey.json`
-  - 探索軸: recent surveys of LLM inference serving memory and systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-05-survey.json` (`ok=true`)
-- round `round-06` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-06-specdecode.json`
-  - 探索軸: recent speculative decoding serving systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-06-specdecode.json` (`ok=true`)
-- round `round-07` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json`
-  - 探索軸: recent MoE expert prefetch prediction offload inference alternate provider
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json` (`ok=true`)
-- round `round-08` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260921T0552JST-worker30-discovery-round-08-h2o-forward.json`
-  - 探索軸: forward citations of H2O for KV cache serving systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0552JST-worker30-discovery-round-08-h2o-forward.json` (`ok=true`)
-- round `round-09` / 候補 **4件**
-  - submission: `.survey/work-queue/submissions/20260921T0553JST-worker30-discovery-round-09-flexgen-forward.json`
-  - 探索軸: forward citations of FlexGen for hierarchical-memory inference systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0553JST-worker30-discovery-round-09-flexgen-forward.json` (`ok=true`)
-- round `round-10` / 候補 **5件**
-  - submission: `.survey/work-queue/submissions/20260921T0554JST-worker30-discovery-round-10-splitwise-forward.json`
-  - 探索軸: forward citations of Splitwise for disaggregated LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0554JST-worker30-discovery-round-10-splitwise-forward.json` (`ok=true`)
+- 最新観測run: **2026-09-21 05:58 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **2件**
+- 探索軸: repository-wide structured references for LLM inference systems
+- round `hourly00-backward-01` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-21T05-58-48+09-00-hourly00-backward-01.json`
+  - 探索軸: repository-wide structured references for LLM inference systems
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -220,7 +184,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **294** |
+| ready | **297** |
 
 ### 候補の重複・識別情報欠損
 
@@ -248,10 +212,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **911** |
+| 成功result未照合のimmutable submission | **912** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **197** |
+| └ Discovery | **198** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
