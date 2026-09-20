@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:01:40 JST**
+> 自動生成: **2026-09-20 14:02:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **129** |
 | 未claim Research job | **127** |
 | 直近24hの検証済みResearch収録 | **51** |
-| 最終検証済みResearch収録 | **09-20 13:13:48 JST（47分前）** |
+| 最終検証済みResearch収録 | **09-20 13:13:48 JST（48分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -178,7 +178,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `DOI:10.1145/3676641.3715996` — POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference / worker `scheduled-chat-discovery-overflow`
-  - claim: **09-20 13:58:42 JST** / heartbeat: **—** / lease expiry: **09-20 15:28:42 JST**
+  - claim: **09-20 14:01:51 JST** / heartbeat: **—** / lease expiry: **09-20 15:31:51 JST**
   - evidence: `.survey/work-queue/claims/job-research-2ce5fda4ee4799b0.json`
 - `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 13:32:13 JST** / heartbeat: **—** / lease expiry: **09-20 15:02:13 JST**
