@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 14:12:09 JST**
+> 自動生成: **2026-09-20 14:12:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **127** |
+| 収録候補論文 | **126** |
 | 未claim Research job | **125** |
-| 直近24hの検証済みResearch収録 | **53** |
-| 最終検証済みResearch収録 | **09-20 14:05:53 JST（6分前）** |
+| 直近24hの検証済みResearch収録 | **54** |
+| 最終検証済みResearch収録 | **09-20 14:12:13 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **127** |
+| canonical_id確認済みの一意な候補論文 | **126** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **127** |
+| 非終端Research job合計 | **126** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **9** | **3** | **0** | **2** | **0** | — |
+| Research | **23** | **9** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **22** | **10** | **4** | **0** | **2** | **0** | **5** |
+| 合計 | **23** | **10** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 14:12:13 JST** [research] `arXiv:2404.19429` — Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping
+  - job: `.survey/work-queue/jobs/job-research-3ee76817e29cd5c6.json`
+  - result: `.survey/work-queue/results/research/attempt-70a666fee11f193ab86cf1e3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-70a666fee11f193ab86cf1e3.json`
+  - paper: `papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md`
 - **09-20 14:05:53 JST** [research] `arXiv:2605.00528` — SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters
   - job: `.survey/work-queue/jobs/job-research-989ee0a4e32cc6c3.json`
   - result: `.survey/work-queue/results/research/attempt-44b24147d79154a807dce87e.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-715ca0ac1e2c0533b0313a9c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-715ca0ac1e2c0533b0313a9c.json`
   - paper: `papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md`
-- **09-20 12:14:59 JST** [research] `arXiv:2406.10774` — Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference
-  - job: `.survey/work-queue/jobs/job-research-8fc74c0fbb46c30e.json`
-  - result: `.survey/work-queue/results/research/attempt-74f796116b0c55afd81f6ad5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-74f796116b0c55afd81f6ad5.json`
-  - paper: `papers/inference/10-sparse-attention/2024-2406.10774-quest.md`
 
 ### Audit
 
@@ -176,10 +176,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2404.19429` — Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping / worker `scheduled-chat-discovery-overflow`
-  - claim: **09-20 14:11:05 JST** / heartbeat: **—** / lease expiry: **09-20 15:41:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3ee76817e29cd5c6.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding / worker `scheduled-chat-llm-survey`
   - claim: **09-20 13:32:13 JST** / heartbeat: **—** / lease expiry: **09-20 15:02:13 JST**
   - evidence: `.survey/work-queue/claims/job-research-b27d4d0f59f887b3.json`
@@ -202,7 +199,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **127** |
+| ready | **126** |
 
 ### 候補の重複・識別情報欠損
 
@@ -222,7 +219,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **805** |
+| inference/training/survey配下の論文Markdown実体 | **806** |
 
 ### immutable submissionの未照合
 
@@ -230,8 +227,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **723** |
-| └ Research | **537** |
+| 成功result未照合のimmutable submission | **722** |
+| └ Research | **536** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
