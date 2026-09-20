@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 17:32:57 JST**
+> 自動生成: **2026-09-20 17:33:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **1** | **0** | **0** | **2** | **0** | — |
+| Research | **38** | **5** | **3** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **38** | **2** | **1** | **0** | **2** | **0** | **5** |
+| 合計 | **38** | **6** | **4** | **0** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -126,14 +126,31 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-bbc6c14d4fcb44b8a7c50e4e.json` (job `job-research-0ad72717e3fdb154`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-bbc6c14d4fcb44b8a7c50e4e.json` (`ok=false`)
+- 最新観測run: **2026-09-20 16:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-09bd2697a0dd22f424d5ad13.json` (job `job-research-c7bef3f1698aa85a`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-09bd2697a0dd22f424d5ad13.json` (`ok=true`)
+- **成功** `arXiv:2605.29343` — Draft-OPD: On-Policy Distillation for Speculative Draft Models
+  - job: `.survey/work-queue/jobs/job-research-98f40fbe8624cabd.json`
+  - result: `.survey/work-queue/results/research/attempt-5273a11ee27324b1d0305aa3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5273a11ee27324b1d0305aa3.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2605.29343-draft-opd.md`
+- **成功** `arXiv:2311.04934` — Prompt Cache: Modular Attention Reuse for Low-Latency Inference
+  - job: `.survey/work-queue/jobs/job-research-9c3fc1bfa46c87d0.json`
+  - result: `.survey/work-queue/results/research/attempt-cb9b65cad9eb01765ba97d06.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-cb9b65cad9eb01765ba97d06.json`
+  - paper: `papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md`
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-df7a80addf0ba7c0728d75ec.json` (job `job-research-7059e5a5af8e2266`, failure_class `state_or_transport_guard`)
+  - result: `.survey/work-queue/results/research/attempt-df7a80addf0ba7c0728d75ec.json` (`ok=false`)
+- **成功** `arXiv:2410.13276` — SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs
+  - job: `.survey/work-queue/jobs/job-research-7441b15a7ee76c92.json`
+  - result: `.survey/work-queue/results/research/attempt-f132295037f6bf230d13b845.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f132295037f6bf230d13b845.json`
+  - paper: `papers/inference/10-sparse-attention/2024-2410.13276-seerattention.md`
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 16:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -153,7 +170,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2405.01481` — NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 17:30:16 JST** / heartbeat: **—** / lease expiry: **09-20 19:00:16 JST**
+  - claim: **09-20 17:33:20 JST** / heartbeat: **—** / lease expiry: **09-20 19:03:20 JST**
   - evidence: `.survey/work-queue/claims/job-research-0ad72717e3fdb154.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey-01`
   - claim: **09-20 16:02:12 JST** / heartbeat: **09-20 16:28:58 JST** / lease expiry: **09-20 17:58:58 JST**
