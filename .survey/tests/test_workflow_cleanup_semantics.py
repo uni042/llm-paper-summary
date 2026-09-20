@@ -103,6 +103,14 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn(".survey/docs/survey-workflow/fallback-routing.md", checker)
         self.assertNotIn(".survey/docs/survey-workflow/backlog-resilience.md", checker)
 
+    def test_repository_checker_uses_current_daily_maintenance_contract(self):
+        checker = (ROOT / ".survey/scripts/check_repository.py").read_text(encoding="utf-8")
+        self.assertNotIn("cadence_runs", checker)
+        self.assertNotIn("runs_since_maintenance", checker)
+        self.assertIn("maintenance_pending", checker)
+        self.assertIn("scheduled_chat_0830_jst_30_worker", checker)
+        self.assertIn("daily_0830_jst", checker)
+
     def test_maintenance_refreshes_metadata_coverage_before_health(self):
         workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
         metadata_command = (
