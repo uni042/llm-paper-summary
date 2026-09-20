@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T0616Z-scheduled-chat-llm-survey-17",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-f4b6d40ae418a58e",
+      "claim_id": "claim-b269ed373464c47a4c4f738e",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-b269ed373464c47a4c4f738e",
+      "claimed_at": "2026-09-20T06:15:22+00:00",
+      "expires_at": "2026-09-20T07:45:22+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-f4b6d40ae418a58e"
+      ],
+      "job": {
+        "job_id": "job-research-f4b6d40ae418a58e",
+        "type": "research",
+        "parent_job_id": "job-6b91941a45cfbd24",
+        "priority": 95,
+        "canonical_id": "arXiv:2606.02091",
+        "arxiv_id": "2606.02091",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2606.02091",
+        "paper_path": "papers/inference/06-speculative-decoding/2026-2606.02091-dflare.md",
+        "selection_reason": "Block-diffusion speculative-decoding method scaling draft capacity through layer-wise target-feature fusion, with strong wall-clock speedups across several target models.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T03:59:03+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T06:15:22+00:00",
+  "checkpoint_released": 0
+}
