@@ -33,7 +33,7 @@ def make_args(**overrides):
         seconds_to_run_deadline=1800,
         seconds_to_next_scheduled_task=None,
         scheduled_handoff_guard_seconds=600,
-        worker_kind="normal",
+        candidate_inventory=49,
         discovery_rounds_completed=0,
         discovery_rounds_since_last_novel=None,
         discovery_min_rounds=4,
