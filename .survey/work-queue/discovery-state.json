@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T21:11:09+00:00",
+  "updated_at": "2026-09-20T21:22:45+00:00",
   "last_run_key": "2026-09-21T05:58:48+09:00",
-  "last_round": "hourly00-forward-deepspeedmoe-04",
+  "last_round": "hourly00-backward-required",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,23 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T17:00:00+09:00",
-      "round": "specialist-cross-datacenter-prefill-6",
-      "axis": "cross-datacenter prefill・commodity Ethernet KV転送",
-      "query_summary": "分離推論のネットワーク律速をRDMAラック内に限定せず、cross-datacenter/commodity Ethernetへ広げたprefill配置研究を探索し、GitHub正本でcanonical ID重複を確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.28150"
-      ],
-      "next_axis_hint": "ラック内CXL共有KVとcross-DC Ethernetの中間にあるネットワーク/共有メモリ設計を探索する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260916T1700-r6-prfaas.json"
-    },
     {
       "run_key": "2026-09-16T17:00:00+09:00",
       "round": "specialist-cxl-shared-kv-7",
@@ -8031,6 +8014,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json"
+    },
+    {
+      "run_key": "2026-09-21T05:58:48+09:00",
+      "round": "hourly00-backward-required",
+      "axis": "repository-wide structured references for LLM inference systems",
+      "query_summary": null,
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0619JST-hourly00-discovery-backward-required.json"
     }
   ],
   "axes": {
@@ -15362,14 +15366,14 @@
       "next_axis_hint": null
     },
     "repository-wide structured references for LLM inference systems": {
-      "last_run_key": "2026-09-21T05:29:37+09:00",
-      "rounds": 1,
-      "candidate_count": 3,
+      "last_run_key": "2026-09-21T05:58:48+09:00",
+      "rounds": 2,
+      "candidate_count": 5,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
+      "novel_candidate_count": 5,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 3,
-      "accepted_count": 3,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
