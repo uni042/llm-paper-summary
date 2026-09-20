@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r18",
+    "summary": "Adaptive Expert Computation / Compression をさらに厚くするため、test-time expert search・lookup experts・adaptive FFN reuse・heterogeneous expert sizingを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.22572",
+      "title": "Dynamic Experts Search: Enhancing Reasoning in Mixture-of-Experts LLMs at Test Time",
+      "source_url": "https://arxiv.org/abs/2509.22572",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.22572-dynamic-experts-search.md",
+      "priority": 97,
+      "reason": "推論時にactive expert数をsearch dimensionとして制御し、追加FLOPsを増やさずreasoning trajectory diversityを作るtest-time adaptive computation。"
+    },
+    {
+      "canonical_id": "arXiv:2503.15798",
+      "title": "Mixture of Lookup Experts",
+      "source_url": "https://arxiv.org/abs/2503.15798",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
+      "priority": 97,
+      "reason": "training時FFN expertを推論前にlookup tableへ再parameterizeし、expert計算をstorage lookupへ置換してVRAMとcomputeを削減する。"
+    },
+    {
+      "canonical_id": "arXiv:2512.14531",
+      "title": "VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse",
+      "source_url": "https://arxiv.org/abs/2512.14531",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md",
+      "priority": 96,
+      "reason": "difficulty-aware gateでshared FFNをwidth-wise sub-expert reuseかdepth-wise repeated computationへ動的配分し、parameter一定でcomputeを適応させる。"
+    },
+    {
+      "canonical_id": "arXiv:2508.07785",
+      "title": "Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts",
+      "source_url": "https://arxiv.org/abs/2508.07785",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+      "priority": 96,
+      "reason": "異なるsizeのexpertsとdynamic activationでtoken complexityに応じてactivated parametersを可変化するheterogeneous MoE architecture。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-adaptive-max-20260920-zero-compute",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-adaptive-max-20260920-zero-compute.json",
+    "receipt": "sha256:4fb1362626d2d45f4aaa1636593f6b334cf82dab720fc2d19bacf2bec1e59f55"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+    "round": "adaptive-max-r18-adaptive-architecture",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2410.07348 (zero-computation experts / skipping)",
+    "query_summary": "zero-compute expert forward citationsからtest-time expert search・lookup experts・adaptive FFN reuse・heterogeneous expert sizingの4件を選定。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "latest 2026-09 seeds and remaining compression-specific citations",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "adaptive expert architectures",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2410.07348",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 61,
+        "unseen_result_count": 50,
+        "duplicate_filtered_count": 11,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 40,
+        "candidate_accepted_count": 4,
+        "position": "1 page"
+      }
+    ]
+  }
+}
