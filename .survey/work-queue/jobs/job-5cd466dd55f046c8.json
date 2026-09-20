@@ -1,0 +1,23 @@
+{
+  "job_id": "job-5cd466dd55f046c8",
+  "type": "discovery",
+  "lane": "discovery-ingest",
+  "priority": 50,
+  "status": "completed",
+  "ingest_only": true,
+  "ingest_for_submission": "work-queue/submissions/20260921T0544JST-worker30-discovery-round-06-specdecode.json",
+  "submitted_job_id": null,
+  "instructions": "Internal Discovery ingest job. Apply the already durable candidate payload; do not perform new research or discovery in this job.",
+  "completion": "Apply the durable Discovery round payload.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-20T20:48:01+00:00",
+  "completed_at": "2026-09-20T20:48:09+00:00",
+  "result_summary": {
+    "submitted_candidates": 0,
+    "final_duplicate_filtered_count": 0,
+    "research_jobs_added": 0,
+    "precheck_request_id": "20260921T053201JST-worker30-openalex-specdecode-08",
+    "precheck_snapshot_source_commit": "dff5dd4b1b61496ba52d2975e505fbd75fe3d978"
+  }
+}
