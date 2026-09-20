@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6f2e6a2b41a89ff181e07ec0",
-  "job_id": "job-research-159e5ee7f39d28f8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6f2e6a2b41a89ff181e07ec0",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6f2e6a2b41a89ff181e07ec0","job_id":"job-research-159e5ee7f39d28f8",
+  "data":{"limitations":"置換はルータ得点が専門家寄与を十分表し、細粒度MoEの低得点専門家が互いに冗長であることへ依存する。αを大きくすると代替得点範囲が広がり、特にコード等で品質変動が増える。高速化はGPU計算がCPU/PCIeより十分速いほど大きく、3080 Tiのように差が小さい環境では利得が縮む。入力処理は専門家活性が密なので置換余地が少ない。三モデル・三GPUの低バッチ端末条件が中心で、データセンター高並行や別MoE構造への一般化は追加検証が必要。","differences":"MoE-Infinity等は必要専門家を予測・キャッシュして転送を隠し、HybriMoEはCPU/GPU計算と転送を割り振るが、活性専門家そのものは原則維持する。枝刈りはロードを消せる代わりに専門家出力を捨てる。SMoEは低得点活性専門家をGPU内の近い得点の非活性専門家へ置換する第三の選択肢を導入し、転送を消しつつ計算経路自体は残す。さらに置換を前提にキャッシュ追い出しと先読み対象を設計する点がシステム協調の差である。","implementation_status":"ISCA 2026採択論文で、Artifact Appendixにコード、ハードウェア・ソフトウェア依存、データセット、モデル、実験手順、期待結果を記載する。端末GPU上の実測を含み、単なるシミュレーションではない。","research_positioning":"階層メモリ型MoE推論では通常『どの専門家をいつCPUからGPUへ動かすか』が中心問題だが、SMoEはモデル側の低重要度冗長性を利用して『そもそもその専門家を動かさなくてよい』状態を作る。これはキャッシュ予測精度だけを高める方式と直交し、SSD/CPU/GPU階層でも低価値転送を代替計算で回避する設計へ拡張できる。一方でモデル品質を守るには置換可能性を実行時に検証するしきい値とフォールバックが不可欠である。"},
+  "reservation":{"claim_id":"claim-6f2e6a2b41a89ff181e07ec0","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
