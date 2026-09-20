@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:42:08 JST**
+> 自動生成: **2026-09-21 05:44:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **255** |
-| 未claim Research job | **255** |
+| 収録候補論文 | **262** |
+| 未claim Research job | **262** |
 | 直近24hの検証済みResearch収録 | **78** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（5時間53分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（5時間56分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **255** |
+| canonical_id確認済みの一意な候補論文 | **262** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **255** |
+| 非終端Research job合計 | **262** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,12 +50,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **2** | **6** | **4** | **0** | **0** | **0** | — |
+| Research | **1** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **23** | **4** | **0** | **4** | **0** | **0** | **5** |
-| 合計 | **25** | **10** | **4** | **4** | **0** | **0** | **5** |
+| Discovery | **28** | **6** | **4** | **2** | **0** | **0** | **5** |
+| 合計 | **29** | **12** | **8** | **2** | **0** | **0** | **5** |
 
-- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **6件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -68,11 +68,6 @@
   - result: `.survey/work-queue/results/research/attempt-8eee4a640ec2d03e43ea9f98.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8eee4a640ec2d03e43ea9f98.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md`
-- **09-20 23:43:39 JST** [research] `arXiv:2509.21892` — Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts
-  - job: `.survey/work-queue/jobs/job-research-7878dfa1090aac77.json`
-  - result: `.survey/work-queue/results/research/attempt-524e1ba9cb57a926cc0c9550.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-524e1ba9cb57a926cc0c9550.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.21892-elastic-moe-inference-time-scalability.md`
 
 ### Audit
 
@@ -80,6 +75,22 @@
 
 ### Discovery
 
+- **09-21 05:41:36 JST** job `job-5079ad94e40e3371` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0540JST-worker30-discovery-round-01-backward.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
+  - 探索軸: backward structured references across repository
+- **09-21 05:41:48 JST** job `job-2fae2e91bed27cba` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260921T0540JST-worker30-discovery-round-02-forward-vllm.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-02-forward-vllm.json`
+  - 探索軸: forward citations of vLLM PagedAttention
+- **09-21 05:42:11 JST** job `job-f7229f717fccdf28` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-03-ssd-kv.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-03-ssd-kv.json`
+  - 探索軸: recent SSD NVMe KV cache offload for LLM inference
+- **09-21 05:42:23 JST** job `job-50d21e6a131eb546` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-04-moe-cache.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-04-moe-cache.json`
+  - 探索軸: recent MoE expert cache offload serving systems
 - **09-21 05:32:50 JST** job `job-7cf235b2465d2a2c` / 候補 **3件**
   - result: `.survey/work-queue/results/20260921T0532JST-discovery-backward-01.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0532JST-discovery-backward-01.json`
@@ -96,30 +107,14 @@
   - result: `.survey/work-queue/results/20260921T0539JST-discovery-cxl-memory-04.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0539JST-discovery-cxl-memory-04.json`
   - 探索軸: recent LLM inference CXL hierarchical memory offloading
+- **09-21 05:41:59 JST** job `job-bea79878a81e6cef` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260921T0541JST-discovery-cpu-kernel-05.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0541JST-discovery-cpu-kernel-05.json`
+  - 探索軸: recent CPU SIMD AMX SME LLM inference kernels
 - **09-21 05:08:33 JST** job `job-8568b8b1c995b662` / 候補 **0件**
   - result: `.survey/work-queue/results/20260921T0505JST-discovery-round-01b-backward.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-01b-backward.json`
   - 探索軸: backward-reference structured repository-wide
-- **09-21 05:08:45 JST** job `job-079abec9c4fbe585` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0505JST-discovery-round-02-forward.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-02-forward.json`
-  - 探索軸: forward citations of Elastic MoE for inference-time expert scaling
-- **09-21 05:11:35 JST** job `job-7e0952878e4e9c9f` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0509JST-discovery-round-03-backward.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0509JST-discovery-round-03-backward.json`
-  - 探索軸: backward-reference structured repository-wide continuation
-- **09-21 05:11:44 JST** job `job-8ea4f1a64f999113` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0511JST-discovery-round-04-backward.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0511JST-discovery-round-04-backward.json`
-  - 探索軸: backward-reference structured repository-wide round 4
-- **09-21 05:16:04 JST** job `job-f20aeb95ea9030ce` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0516JST-discovery-round-05-openalex-memory.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0516JST-discovery-round-05-openalex-memory.json`
-  - 探索軸: OpenAlex recent LLM inference memory offloading
-- **09-21 05:18:33 JST** job `job-3a8348ca8e5e47a6` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260921T0517JST-discovery-round-06-openalex-moe.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0517JST-discovery-round-06-openalex-moe.json`
-  - 探索軸: OpenAlex recent MoE serving expert cache offloading
 
 ### 直近タスク
 
@@ -161,23 +156,31 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:32 JST**
-- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **5件**
-- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems
+- 耐久探索round: **6件** / immutable submission: **6件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **2件** / 候補: **5件**
+- 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
   - 探索軸: backward structured references across repository
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0540JST-worker30-discovery-round-01-backward.json` (`ok=true`)
 - round `round-02` / 候補 **2件**
   - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-02-forward-vllm.json`
   - 探索軸: forward citations of vLLM PagedAttention
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0540JST-worker30-discovery-round-02-forward-vllm.json` (`ok=true`)
 - round `round-03` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-03-ssd-kv.json`
   - 探索軸: recent SSD NVMe KV cache offload for LLM inference
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-03-ssd-kv.json` (`ok=true`)
 - round `round-04` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-04-moe-cache.json`
   - 探索軸: recent MoE expert cache offload serving systems
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-04-moe-cache.json` (`ok=true`)
+- round `round-05` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-05-survey.json`
+  - 探索軸: recent surveys of LLM inference serving memory and systems
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `round-06` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-06-specdecode.json`
+  - 探索軸: recent speculative decoding serving systems
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -205,7 +208,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **255** |
+| ready | **262** |
 
 ### 候補の重複・識別情報欠損
 
@@ -233,10 +236,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **914** |
+| 成功result未照合のimmutable submission | **912** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **200** |
+| └ Discovery | **198** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
