@@ -10,12 +10,12 @@ LLMシステム研究を横断的に整理する **survey / review 論文** を�
 2. それ以前で、リポジトリ内の別論文から arXiv ID / DOI が明示参照されている論文
 3. その他
 
-実装情報が論文メタデータまたは構造化本文で明示されている場合は一覧に `✓` を表示する。
+実装情報が論文メタデータまたは構造化本文で明示されている場合は一覧に ✓ を表示する。
 
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-サーベイ論文：**7本**。
+サーベイ論文：**10本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -23,5 +23,8 @@ LLMシステム研究を横断的に整理する **survey / review 論文** を�
 | [01-kv-cache-systems](01-kv-cache-systems/README.md) | 1 |
 | [02-diffusion-llm-inference](02-diffusion-llm-inference/README.md) | 1 |
 | [03-inference-engines](03-inference-engines/README.md) | 2 |
+| [04-distributed-training-systems](04-distributed-training-systems/README.md) | 1 |
+| [05-moe-inference-optimization](05-moe-inference-optimization/README.md) | 1 |
+| [06-long-context-serving](06-long-context-serving/README.md) | 1 |
 | [llm-serving-systems](llm-serving-systems/README.md) | 2 |
 <!-- survey:auto:end -->
