@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 21:09:00 JST**
+> 自動生成: **2026-09-20 21:09:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **204** |
-| 未claim Research job | **203** |
-| 直近24hの検証済みResearch収録 | **90** |
-| 最終検証済みResearch収録 | **09-20 21:05:53 JST（3分前）** |
+| 収録候補論文 | **203** |
+| 未claim Research job | **202** |
+| 直近24hの検証済みResearch収録 | **91** |
+| 最終検証済みResearch収録 | **09-20 21:09:21 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **204** |
+| canonical_id確認済みの一意な候補論文 | **203** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **204** |
+| 非終端Research job合計 | **203** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **4** | **3** | **0** | **1** | **0** | — |
+| Research | **36** | **4** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **5** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **36** | **5** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 21:09:21 JST** [research] `arXiv:2509.01322` — LongCat-Flash Technical Report
+  - job: `.survey/work-queue/jobs/job-research-1d4c48939bbf9fa8.json`
+  - result: `.survey/work-queue/results/research/attempt-a23c984134283281d819be9c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-a23c984134283281d819be9c.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md`
 - **09-20 21:05:53 JST** [research] `arXiv:2609.00575` — Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs
   - job: `.survey/work-queue/jobs/job-research-89e4b35d6854b9b6.json`
   - result: `.survey/work-queue/results/research/attempt-83e541e2c7e7c88135f96320.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-0035fe851a4c5bf25fbbacc2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-0035fe851a4c5bf25fbbacc2.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md`
-- **09-20 19:16:54 JST** [research] `arXiv:2605.18810` — D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting
-  - job: `.survey/work-queue/jobs/job-research-2b2648af1ffd1107.json`
-  - result: `.survey/work-queue/results/research/attempt-682f2ca2eca58d18d9e46ca8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-682f2ca2eca58d18d9e46ca8.json`
-  - paper: `papers/inference/06-speculative-decoding/2026-2605.18810-d-pace.md`
 
 ### Audit
 
@@ -167,9 +167,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2509.01322` — LongCat-Flash Technical Report / worker `scheduled-chat-discovery-hourly`
-  - claim: **09-20 21:06:08 JST** / heartbeat: **—** / lease expiry: **09-20 22:36:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1d4c48939bbf9fa8.json`
+- `arXiv:2603.12645` — LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing / worker `scheduled-chat-discovery-hourly`
+  - claim: **09-20 21:09:11 JST** / heartbeat: **—** / lease expiry: **09-20 22:39:11 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c39635b6c8612e08.json`
 
 #### Audit
 
@@ -189,7 +189,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **204** |
+| ready | **203** |
 
 ### 候補の重複・識別情報欠損
 
@@ -209,7 +209,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **855** |
+| inference/training/survey配下の論文Markdown実体 | **856** |
 
 ### immutable submissionの未照合
 
@@ -217,8 +217,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **828** |
-| └ Research | **593** |
+| 成功result未照合のimmutable submission | **827** |
+| └ Research | **592** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **88** |
