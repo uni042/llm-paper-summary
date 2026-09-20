@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-f99914b9bbfb8b9c4e33456a",
-  "job_id": "job-research-59739220ff5250cc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f99914b9bbfb8b9c4e33456a",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-f99914b9bbfb8b9c4e33456a","job_id":"job-research-59739220ff5250cc","data":{"limitations":"観測窓Wの選択が重要で、本文はmodel/taskごとに1% sampleからMRI分布をoffline計測する。この方法は実運用では追加準備とdata leakage懸念があり、著者も動的適応をfuture workとする。非reasoning一般生成では再帰間隔が短く、累積attention削除との差が小さい。評価は4B〜32Bで、100B級は資源制約により未検証。観測窓の間は新規KVを蓄えるため厳密な定数メモリではなくbudget周辺で小さく変動し、MRI追跡/score計算のoverheadも追加される。","differences":"TOVA/NACL/TreeKVは現在attentionで各step削除し、H2O/Scissorhands/Keyformer/RaaSは累積attentionや最終時刻を使うが、低注意区間の後に再重要化する周期を明示的に扱わない。LazyEvictionは最大再帰間隔を記録し、削除判断自体を観測窓境界まで遅らせる。R-KV/RPCはreasoning path内のtoken類似性・冗長性を利用するのに対し、本方式はattentionの時間変化を直接扱う。KV量子化とは直交し、vLLMやCPU offload等のsystem-level管理とも併用可能。","implementation_status":"著者コードがGitHubで公開されている。再学習不要の復号時KV管理方式として、DeepSeek-R1 distilled系、Qwen3、QwQへ適用して評価済み。","research_positioning":"長時間reasoning向けKV圧縮の中で、token重要度を静的・単調な量とみなさず時間的に再帰する状態として扱う系統。長い思考では検証、backtracking、要約により初期条件や中間結論が再参照されるため、将来重要度予測をKV evictionへ導入する。特に50〜70%のKV削減でもreasoning精度を保つことを狙い、単step greedy evictionからwindow単位のpredictive retentionへ設計を変える。"},"reservation":{"claim_id":"claim-f99914b9bbfb8b9c4e33456a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
