@@ -161,6 +161,36 @@ class ProcessImmutableSubmissionTests(unittest.TestCase):
                     module.process(repo, path)
             self.assertEqual(paper.read_text(encoding="utf-8"), "old paper\n")
 
+    def test_research_cannot_create_new_training_paper(self):
+        self.assertTrue((SCRIPTS / "process_immutable_submission.py").exists(), "processor must exist")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _install_scripts(repo)
+            module = _load(repo / ".survey/scripts/process_immutable_submission.py", "processor_training_freeze")
+            path = _make_descriptor(repo, module, attempt="attempt-training", job="job-training")
+            descriptor = json.loads(path.read_text(encoding="utf-8"))
+            descriptor["paper_path"] = "papers/training/test/job-training.md"
+            _write(path, descriptor)
+            _write(repo / ".survey/work-queue/jobs/job-training.json", {
+                "job_id": "job-training", "type": "research", "status": "ready", "priority": 80,
+            })
+            _write(repo / ".survey/work-queue/claims/job-training.json", {
+                "job_id": "job-training", "attempt_id": "attempt-training", "claim_id": "claim-training",
+                "worker_id": "worker-training", "worker_kind": "scheduled_chat",
+                "expires_at": "2099-01-01T00:00:00+00:00",
+            })
+
+            fake_markdown = "# Paper\n\n" + ("日本語の検証本文です。" * 80)
+            with mock.patch.object(module, "render_descriptor", return_value=fake_markdown):
+                with self.assertRaisesRegex(ValueError, "Training paper entries are frozen"):
+                    module.process(repo, path)
+
+            self.assertFalse((repo / "papers/training/test/job-training.md").exists())
+            self.assertEqual(
+                json.loads((repo / ".survey/work-queue/jobs/job-training.json").read_text())["status"],
+                "ready",
+            )
+
     def test_main_persists_failure_result_before_returning_nonzero(self):
         self.assertTrue((SCRIPTS / "process_immutable_submission.py").exists(), "processor must exist")
         with tempfile.TemporaryDirectory() as td:
