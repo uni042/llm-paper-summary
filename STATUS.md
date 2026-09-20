@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:40:39 JST**
+> 自動生成: **2026-09-20 15:41:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **112** |
 | 未claim Research job | **110** |
 | 直近24hの検証済みResearch収録 | **68** |
-| 最終検証済みResearch収録 | **09-20 15:37:50 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-20 15:37:50 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **3** | **2** | **0** | **2** | **0** | — |
+| Research | **35** | **2** | **2** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **4** | **3** | **0** | **2** | **0** | **5** |
+| 合計 | **35** | **3** | **3** | **0** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,14 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 15:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2503.06823` — eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference
   - job: `.survey/work-queue/jobs/job-research-bb33e470bd8a5f8f.json`
   - result: `.survey/work-queue/results/research/attempt-01cbf1c46fe8f68f25b18de7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-01cbf1c46fe8f68f25b18de7.json`
   - paper: `papers/inference/06-moe-expert-offloading/2025-2503.06823-emoe.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-b00534d1eda56e9a95608aea.json` (job `job-research-18c89b68d0c6c10d`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-b00534d1eda56e9a95608aea.json` (`ok=false`)
 - **成功** `arXiv:2408.10284` — AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference
   - job: `.survey/work-queue/jobs/job-research-4892de26a5d749a2.json`
   - result: `.survey/work-queue/results/research/attempt-f2e51bafaabacfadeaecc0ee.json` (`ok=true`)
@@ -163,7 +161,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `DOI:10.18653/v1/2026.findings-acl.494` — OjaKV: Context-Aware Online Low-Rank KV Cache Compression / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 15:38:18 JST** / heartbeat: **—** / lease expiry: **09-20 17:08:18 JST**
+  - claim: **09-20 15:40:57 JST** / heartbeat: **—** / lease expiry: **09-20 17:10:57 JST**
   - evidence: `.survey/work-queue/claims/job-research-18c89b68d0c6c10d.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
