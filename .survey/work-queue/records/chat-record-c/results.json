@@ -1,1 +1,74 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-29decd31684db3d73ba627a0","job_id":"job-research-27175547de1e3880","data":{"overview":"Triton-distributedは、Triton生成GEMM単体がcuBLAS/CUTLASSの約95%でも、通信と計算を細粒度に重ねることで複合処理全体を高速化する。NVIDIA/AMD双方でPyTorch通信基盤を上回り、MoE通信では大幅な改善を示す一方、ノード間MoE+ReduceScatterや128 GPU AllToAllでは通信方式の限界も明示される。","key_results":[{"metric":"単一ノードAllGather+GEMM","value":"PyTorch+NCCL比1.42倍、FLUX比1.09倍","baseline":"PyTorch+NCCL / FLUX","condition":"8基H800","interpretation":"GEMM単体性能が約95%でも重ね合わせで複合処理を上回る。"},{"metric":"単一ノードGEMM+ReduceScatter","value":"PyTorch+NCCL比1.28倍、FLUX比1.30倍","baseline":"PyTorch+NCCL / FLUX","condition":"8基H800","interpretation":"scatterを別ストリームへ出し局所リダクションと重ねる構成が有効。"},{"metric":"ノード間AllGather+GEMM","value":"PyTorch+NCCL比1.33倍、FLUXの95.60%","baseline":"PyTorch+NCCL / FLUX","condition":"16基H800","interpretation":"Python/コンパイラ生成でも手調整FLUXに近い性能。"},{"metric":"ノード間GEMM+ReduceScatter","value":"PyTorch+NCCL比1.42倍、FLUXの96.36%","baseline":"PyTorch+NCCL / FLUX","condition":"16基H800","interpretation":"階層通信と資源分割でノード間重ね合わせを維持。"},{"metric":"MoE複合カーネル","value":"AG+MoE単一ノード44.97倍、ノード間26.50倍、MoE+RS単一ノード15.55倍、ノード間5.16倍","baseline":"PyTorch+NCCL","condition":"H800","interpretation":"比較PyTorch実装がPythonループを含むため倍率は強い基準との比較ではない点に注意が必要。"},{"metric":"低遅延AllToAll","value":"DeepEP比Dispatch平均1.18倍、Combine平均1.44倍","baseline":"DeepEP","condition":"8〜64基H800","interpretation":"数百行のPython実装で高性能CUDA実装を概ね上回るが64基Dispatchは例外。"},{"metric":"AMD単一ノード","value":"AG+GEMM 1.09倍、GEMM+RS 1.16倍","baseline":"PyTorch+RCCL","condition":"8基MI308X","interpretation":"同じコンパイラ設計がAMDでも重ね合わせ利得を持つ。"}],"negative_results":["MoE+ReduceScatterは1ノードから2ノードで良好な弱スケーリングを示さず、専用ReduceScatter実装が将来課題。","AllToAllは128 GPUではIBGDAを使うDeepEPが優位で、NVSHMEMビットコードがIBGDAを支えないことが制約。","分散FlashDecodeは全体KV長が256K未満ではGPU数を増やしても有利でない。","主評価はカーネル単位であり、LLMサービング全体のスループット改善率ではない。"],"quality_impact":"演算内容を近似せず通信・計算の実行順と資源利用を変えるため、モデル品質を意図的に変えない。","interpretation":"高速化は、通信を別工程として待つのではなく、必要データが届いたタイルから計算し、コピーエンジンや少数SMへ通信を割り当てて計算資源との競合を抑えることで生じる。ノード数が増えて通信方式自体のスケーラビリティが不足すると、重ね合わせだけでは隠し切れず利得が縮小する。"},"reservation":{"claim_id":"claim-29decd31684db3d73ba627a0","worker_id":"scheduled-chat-discovery","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-82f210d05fe49128bf6c17e8",
+  "job_id": "job-research-27175547de1e3880",
+  "data": {
+    "overview": "Triton-distributedは、Triton生成GEMM単体がcuBLAS/CUTLASSの約95%でも、通信と計算を細粒度に重ねることで複合処理全体を高速化する。NVIDIA/AMD双方でPyTorch通信基盤を上回り、MoE通信では大幅な改善を示す一方、ノード間MoE+ReduceScatterや128 GPU AllToAllでは通信方式の限界も明示される。",
+    "key_results": [
+      {
+        "metric": "単一ノードAllGather+GEMM",
+        "value": "PyTorch+NCCL比1.42倍、FLUX比1.09倍",
+        "baseline": "PyTorch+NCCL / FLUX",
+        "condition": "8基H800",
+        "interpretation": "GEMM単体性能が約95%でも重ね合わせで複合処理を上回る。"
+      },
+      {
+        "metric": "単一ノードGEMM+ReduceScatter",
+        "value": "PyTorch+NCCL比1.28倍、FLUX比1.30倍",
+        "baseline": "PyTorch+NCCL / FLUX",
+        "condition": "8基H800",
+        "interpretation": "scatterを別ストリームへ出し局所リダクションと重ねる構成が有効。"
+      },
+      {
+        "metric": "ノード間AllGather+GEMM",
+        "value": "PyTorch+NCCL比1.33倍、FLUXの95.60%",
+        "baseline": "PyTorch+NCCL / FLUX",
+        "condition": "16基H800",
+        "interpretation": "Python/コンパイラ生成でも手調整FLUXに近い性能。"
+      },
+      {
+        "metric": "ノード間GEMM+ReduceScatter",
+        "value": "PyTorch+NCCL比1.42倍、FLUXの96.36%",
+        "baseline": "PyTorch+NCCL / FLUX",
+        "condition": "16基H800",
+        "interpretation": "階層通信と資源分割でノード間重ね合わせを維持。"
+      },
+      {
+        "metric": "MoE複合カーネル",
+        "value": "AG+MoE単一ノード44.97倍、ノード間26.50倍、MoE+RS単一ノード15.55倍、ノード間5.16倍",
+        "baseline": "PyTorch+NCCL",
+        "condition": "H800",
+        "interpretation": "比較PyTorch実装がPythonループを含むため倍率は強い基準との比較ではない点に注意が必要。"
+      },
+      {
+        "metric": "低遅延AllToAll",
+        "value": "DeepEP比Dispatch平均1.18倍、Combine平均1.44倍",
+        "baseline": "DeepEP",
+        "condition": "8〜64基H800",
+        "interpretation": "数百行のPython実装で高性能CUDA実装を概ね上回るが64基Dispatchは例外。"
+      },
+      {
+        "metric": "AMD単一ノード",
+        "value": "AG+GEMM 1.09倍、GEMM+RS 1.16倍",
+        "baseline": "PyTorch+RCCL",
+        "condition": "8基MI308X",
+        "interpretation": "同じコンパイラ設計がAMDでも重ね合わせ利得を持つ。"
+      }
+    ],
+    "negative_results": [
+      "MoE+ReduceScatterは1ノードから2ノードで良好な弱スケーリングを示さず、専用ReduceScatter実装が将来課題。",
+      "AllToAllは128 GPUではIBGDAを使うDeepEPが優位で、NVSHMEMビットコードがIBGDAを支えないことが制約。",
+      "分散FlashDecodeは全体KV長が256K未満ではGPU数を増やしても有利でない。",
+      "主評価はカーネル単位であり、LLMサービング全体のスループット改善率ではない。"
+    ],
+    "quality_impact": "演算内容を近似せず通信・計算の実行順と資源利用を変えるため、モデル品質を意図的に変えない。",
+    "interpretation": "高速化は、通信を別工程として待つのではなく、必要データが届いたタイルから計算し、コピーエンジンや少数SMへ通信を割り当てて計算資源との競合を抑えることで生じる。ノード数が増えて通信方式自体のスケーラビリティが不足すると、重ね合わせだけでは隠し切れず利得が縮小する。"
+  },
+  "reservation": {
+    "claim_id": "claim-82f210d05fe49128bf6c17e8",
+    "worker_id": "scheduled-chat-discovery",
+    "worker_kind": "scheduled_chat"
+  }
+}
