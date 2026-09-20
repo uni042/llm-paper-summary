@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-6b53b1926ec03fe03eb46c7c",
-  "job_id": "job-research-95a4661f225665ff",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6b53b1926ec03fe03eb46c7c",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6b53b1926ec03fe03eb46c7c","job_id":"job-research-95a4661f225665ff","data":{"evaluation_summary":"内部1.032B MoE（k_pre=2/4/6）、OLMoE-1B-7B-0125（8/64専門家）、Qwen1.5-MoE-A2.7B（4/60専門家）と各instruction/chat版を評価する。Oracleはk_pre固定SFT、Naiveは単一低k SFT、PHDSは複数k混合と任意の低kアンカーを比較する。lm-evaluation-harnessでARC-C/E、BoolQ、HellaSwag、PIQA、SciQ、WinoGrande等のzero-shot QA、TriviaQA-fixed、WikiText perplexityを測り、同じ一チェックポイントを複数k_evで評価する。内部モデルでは異なるk専用Oracle間とPHDS同一チェックポイント内の回答一致率も比較する。","scope":"1B〜14.3B総パラメータの等サイズrouted expert MoEが対象。生成中心のcoding/summarization、大規模MoE、異種専門家サイズは未評価。k_evはk_pre以下。","hardware":["2×A100 40GB","8×A100 40GB"],"models":["Internal 1.032B MoE k=2/4/6","OLMoE-1B-7B-0125","OLMoE-Instruct","Qwen1.5-MoE-A2.7B","Qwen1.5-MoE-A2.7B-Chat"],"datasets":["CommonSense170K","Tülu-3 SFT mixture","Internal Data Mixture","ARC-C/E","BoolQ","HellaSwag","PIQA","SciQ","WinoGrande","SocialIQA","OpenBookQA","TriviaQA-fixed","WikiText"],"workload":"同一SFT条件内でOracle/Naive/PHDSを比較し、選択した単一チェックポイントを複数k_evへ切替。OLMoE/Qwenの主要SFTはTülu-3で初期39B tokens、アブレーション7.8B tokens。","baselines":["well-specified Oracle k_pre","Naive single-low-k SFT","pretrained checkpoint runtime mis-specification","PHDS multi-k without curriculum","PHDS multi-k with curriculum"],"metrics":["平均multiple-choice accuracy","TriviaQA accuracy","WikiText perplexity","cross-k answer agreement","FLOPs/accuracy operating point","relative accuracy/perplexity degradation"],"control_knobs":"K_train集合、低k curriculum anchor、soft-mask ε。既定ε=1e-6、一般にK_train={k_pre/2,...,k_pre}。"},"reservation":{"claim_id":"claim-6b53b1926ec03fe03eb46c7c","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
