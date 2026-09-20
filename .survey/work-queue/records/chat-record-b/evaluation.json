@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-3e684f03399af677163ad4a2",
-  "job_id": "job-research-d223f7a181256e07",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e684f03399af677163ad4a2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3e684f03399af677163ad4a2","job_id":"job-research-d223f7a181256e07","data":{"hardware":"全baselineを単一NVIDIA A100 80GBで評価。124K contextのimportance scoring/FlashAttention効率分析もA100。","software":"公式KVzip実装。FlashAttention-2のvariable-length attentionを圧縮cache復号に利用し、QServe W8A8KV4量子化とも統合。softmax-free scoring用custom CUDA variantも付録で扱う。","methodology":"queryを含めずcontextだけをprefill・圧縮し、その同一cacheを単一または複数queryへ再利用するquery-agnostic設定で比較する。非均等head budgetを全baselineへ適用し、system prompt KVは保持する。Qwen2.5-7B-1M、Qwen2.5-14B-1M、LLaMA3.1-8B、Gemma3-12B等でcache ratio 0.1〜1.0を掃引し、12 task平均と個別taskを測る。文脈長は100〜170K。H2O、SnapKV、PyramidKV、head-levelではDuoAttentionと比較し、4-bit KV量子化との併用、context-independent score、chunk size、uniform budgetも分析する。","datasets":["SQuAD","GSM8K","Needle-in-a-Haystack","SCBench nine tasks","RULER","InfinityBench"],"models":["Qwen2.5-7B-1M","Qwen2.5-14B-1M","LLaMA3.1-8B","LLaMA3.1-3B","Gemma3-12B","LLaMA3-8B-W8A8KV4"],"baselines":["H2O","SnapKV","PyramidKV","DuoAttention","full KV cache"],"metrics":["task performance relative to full cache","KV cache size","FlashAttention decoding latency","importance scoring overhead","cache budget ratio"],"scope":"単一A100上の実機評価で、長文脈QA・retrieval・reasoning・code comprehension等12 task、最大170K tokenを含む。圧縮自体は近似であり、タスク性能とbehavior変化を同時評価する。"},"reservation":{"claim_id":"claim-3e684f03399af677163ad4a2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
