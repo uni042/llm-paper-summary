@@ -6,12 +6,34 @@
     "terminal_research_rejections"
   ],
   "updated_at": "scheduled-20260921T0330JST",
-  "submission_count": 29,
+  "submission_count": 31,
   "research_terminal_rejection_count": 9,
-  "rejection_observation_count": 76,
-  "rejection_record_count": 74,
+  "rejection_observation_count": 106,
+  "rejection_record_count": 103,
   "ignored_without_identity": 0,
   "records": {
+    "id:DOI:10.1007/978-3-031-99489-0_6": {
+      "primary_identity": "id:DOI:10.1007/978-3-031-99489-0_6",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-031-99489-0_6",
+        "title:wsc hardware computing building blocks",
+        "url:https://doi.org/10.1007/978-3-031-99489-0_6"
+      ],
+      "canonical_id": "DOI:10.1007/978-3-031-99489-0_6",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "WSC Hardware: Computing Building Blocks",
+      "source_url": "https://doi.org/10.1007/978-3-031-99489-0_6",
+      "rejection_reason": "書籍章・一般WSC hardwareで対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:DOI:10.1007/s10791-026-10449-7": {
       "primary_identity": "id:DOI:10.1007/s10791-026-10449-7",
       "identity_tokens": [
@@ -32,6 +54,50 @@
       "axis": "OpenAlex search: LLM inference serving KV cache",
       "run_key": "2026-09-20T01:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.1007/s42514-025-00268-5": {
+      "primary_identity": "id:DOI:10.1007/s42514-025-00268-5",
+      "identity_tokens": [
+        "id:DOI:10.1007/s42514-025-00268-5",
+        "title:survey of storage systems in high performance computing",
+        "url:https://doi.org/10.1007/s42514-025-00268-5"
+      ],
+      "canonical_id": "DOI:10.1007/s42514-025-00268-5",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Survey of storage systems in high performance computing",
+      "source_url": "https://doi.org/10.1007/s42514-025-00268-5",
+      "rejection_reason": "HPC storage surveyで対象外。",
+      "rejection_count": 2,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.1016/j.hcc.2026.100428": {
+      "primary_identity": "id:DOI:10.1016/j.hcc.2026.100428",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.hcc.2026.100428",
+        "title:sok towards a usercentric privacypreserving and reliable ai agent via ondevice llm personalization",
+        "url:https://doi.org/10.1016/j.hcc.2026.100428"
+      ],
+      "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+      "source_url": "https://doi.org/10.1016/j.hcc.2026.100428",
+      "rejection_reason": "SoK/personalization中心で推論システム最適化への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:DOI:10.1038/s41598-026-71065-5": {
@@ -144,6 +210,116 @@
       "source_submission": ".survey/work-queue/submissions/research/attempt-11067fab859094f25d88d7c5.json",
       "origin": "research_blocked_permanent"
     },
+    "id:DOI:10.1145/3695053.3731032": {
+      "primary_identity": "id:DOI:10.1145/3695053.3731032",
+      "identity_tokens": [
+        "id:DOI:10.1145/3695053.3731032",
+        "title:instorage acceleration of retrieval augmented generation as a service",
+        "url:https://doi.org/10.1145/3695053.3731032"
+      ],
+      "canonical_id": "DOI:10.1145/3695053.3731032",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "In-Storage Acceleration of Retrieval Augmented Generation as a Service",
+      "source_url": "https://doi.org/10.1145/3695053.3731032",
+      "rejection_reason": "RAG retrieval側のin-storage accelerationが主題でmodel inference系統への直接性が相対的に弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.1145/3722215": {
+      "primary_identity": "id:DOI:10.1145/3722215",
+      "identity_tokens": [
+        "id:DOI:10.1145/3722215",
+        "title:io in machine learning applications on hpc systems a 360degree survey",
+        "url:https://doi.org/10.1145/3722215"
+      ],
+      "canonical_id": "DOI:10.1145/3722215",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "I/O in Machine Learning Applications on HPC Systems: A 360-degree Survey",
+      "source_url": "https://doi.org/10.1145/3722215",
+      "rejection_reason": "HPC ML I/O surveyで個別LLM推論研究ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.1145/3725274": {
+      "primary_identity": "id:DOI:10.1145/3725274",
+      "identity_tokens": [
+        "id:DOI:10.1145/3725274",
+        "title:carina an efficient cxloriented embedding serving system for recommendation models",
+        "url:https://doi.org/10.1145/3725274"
+      ],
+      "canonical_id": "DOI:10.1145/3725274",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "CARINA: An Efficient CXL-Oriented Embedding Serving System for Recommendation Models",
+      "source_url": "https://doi.org/10.1145/3725274",
+      "rejection_reason": "recommendation embedding servingが主題でLLM推論対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.1145/3744905": {
+      "primary_identity": "id:DOI:10.1145/3744905",
+      "identity_tokens": [
+        "id:DOI:10.1145/3744905",
+        "title:metaec an efficient and resilient erasurecoded kv store on disaggregated memory",
+        "url:https://doi.org/10.1145/3744905"
+      ],
+      "canonical_id": "DOI:10.1145/3744905",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "MetaEC: An Efficient and Resilient Erasure-Coded KV Store on Disaggregated Memory",
+      "source_url": "https://doi.org/10.1145/3744905",
+      "rejection_reason": "汎用KV storeでLLM KV cacheとは別対象。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.1145/3773772": {
+      "primary_identity": "id:DOI:10.1145/3773772",
+      "identity_tokens": [
+        "id:DOI:10.1145/3773772",
+        "title:mooncake a kvcachecentric disaggregated architecture for llm serving",
+        "url:https://doi.org/10.1145/3773772"
+      ],
+      "canonical_id": "DOI:10.1145/3773772",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+      "source_url": "https://doi.org/10.1145/3773772",
+      "rejection_reason": "既存リポジトリで広く扱われる代表的KVCache disaggregation系で、新規候補としての追加価値を今回の5件より低く評価。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:DOI:10.1145/3847111": {
       "primary_identity": "id:DOI:10.1145/3847111",
       "identity_tokens": [
@@ -164,6 +340,50 @@
       "axis": "OpenAlex search: LLM inference serving KV cache",
       "run_key": "2026-09-20T01:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.20944/preprints202512.1908.v1": {
+      "primary_identity": "id:DOI:10.20944/preprints202512.1908.v1",
+      "identity_tokens": [
+        "id:DOI:10.20944/preprints202512.1908.v1",
+        "title:flashserve costefficient serverless inference scheduling for large language models via tiered memory management and predictive autoscaling",
+        "url:https://doi.org/10.20944/preprints202512.1908.v1"
+      ],
+      "canonical_id": "DOI:10.20944/preprints202512.1908.v1",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "FlashServe: Cost-Efficient Serverless Inference Scheduling for Large Language Models via Tiered Memory Management and Predictive Autoscaling",
+      "source_url": "https://doi.org/10.20944/preprints202512.1908.v1",
+      "rejection_reason": "preprint server上の記録で、今回の強候補より一次研究としての優先度を下げる。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.2139/ssrn.7332578": {
+      "primary_identity": "id:DOI:10.2139/ssrn.7332578",
+      "identity_tokens": [
+        "id:DOI:10.2139/ssrn.7332578",
+        "title:ailzo hierarchical weight streaming and memory economics for llm agents on a 6 gib gpu",
+        "url:https://doi.org/10.2139/ssrn.7332578"
+      ],
+      "canonical_id": "DOI:10.2139/ssrn.7332578",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "AILZO: Hierarchical Weight Streaming and Memory Economics for LLM Agents on a 6 GiB GPU",
+      "source_url": "https://doi.org/10.2139/ssrn.7332578",
+      "rejection_reason": "SSRNで一次研究としての品質・検証性が候補上位5件より弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:DOI:10.21427/zs9c-0w38": {
@@ -208,6 +428,50 @@
       "axis": "OpenAlex search: LLM inference serving KV cache",
       "run_key": "2026-09-20T01:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.3390/app16031476": {
+      "primary_identity": "id:DOI:10.3390/app16031476",
+      "identity_tokens": [
+        "id:DOI:10.3390/app16031476",
+        "title:reconfigurable smartnics a comprehensive review of fpga shells and heterogeneous offloading architectures",
+        "url:https://doi.org/10.3390/app16031476"
+      ],
+      "canonical_id": "DOI:10.3390/app16031476",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Reconfigurable SmartNICs: A Comprehensive Review of FPGA Shells and Heterogeneous Offloading Architectures",
+      "source_url": "https://doi.org/10.3390/app16031476",
+      "rejection_reason": "SmartNIC reviewで個別LLM推論研究ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:OpenAlex:W7133286581": {
+      "primary_identity": "id:OpenAlex:W7133286581",
+      "identity_tokens": [
+        "id:OpenAlex:W7133286581",
+        "title:a survey on the use of aiml for storage system design and optimization",
+        "url:https://hal.science/hal-05528520"
+      ],
+      "canonical_id": "OpenAlex:W7133286581",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "A Survey on the Use of AI/ML for Storage System Design and Optimization",
+      "source_url": "https://hal.science/hal-05528520",
+      "rejection_reason": "storage一般surveyでLLM推論への直接性がない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2203.04910": {
@@ -343,6 +607,50 @@
       "source_submission": ".survey/work-queue/submissions/20260917T0400JST-discovery-specialist-flash-memory-hardware-1.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2412.04747": {
+      "primary_identity": "id:arXiv:2412.04747",
+      "identity_tokens": [
+        "id:arXiv:2412.04747",
+        "title:code generation and runtime techniques for enabling dataefficient deep learning training on gpus",
+        "url:http://arxiv.org/abs/2412.04747"
+      ],
+      "canonical_id": "arXiv:2412.04747",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Code generation and runtime techniques for enabling data-efficient deep learning training on GPUs",
+      "source_url": "http://arxiv.org/abs/2412.04747",
+      "rejection_reason": "deep learning trainingが主題で推論対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2412.20249": {
+      "primary_identity": "id:arXiv:2412.20249",
+      "identity_tokens": [
+        "id:arXiv:2412.20249",
+        "title:nextgen computing systems with compute express link a comprehensive survey",
+        "url:http://arxiv.org/abs/2412.20249"
+      ],
+      "canonical_id": "arXiv:2412.20249",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey",
+      "source_url": "http://arxiv.org/abs/2412.20249",
+      "rejection_reason": "CXL一般surveyで個別LLM推論研究ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2502.08363": {
       "primary_identity": "id:arXiv:2502.08363",
       "identity_tokens": [
@@ -408,6 +716,28 @@
       "axis": "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation",
       "run_key": "2026-09-17T07:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2504.09775": {
+      "primary_identity": "id:arXiv:2504.09775",
+      "identity_tokens": [
+        "id:arXiv:2504.09775",
+        "title:mist a codesign framework for heterogeneous multistage llm inference",
+        "url:https://arxiv.org/abs/2504.09775"
+      ],
+      "canonical_id": "arXiv:2504.09775",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+      "source_url": "https://arxiv.org/abs/2504.09775",
+      "rejection_reason": "強い関連候補だが1submission上限5件のため、CXL/階層メモリ軸への直接性がより高い5件を優先。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2505.03780": {
@@ -564,6 +894,28 @@
       "source_submission": ".survey/work-queue/submissions/20260919T0600JST-discovery-specialist-heterogeneous-hardware-2.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2512.24637": {
+      "primary_identity": "id:arXiv:2512.24637",
+      "identity_tokens": [
+        "id:arXiv:2512.24637",
+        "title:towards fullyfledged gpu multitasking via proactive memory scheduling",
+        "url:http://arxiv.org/abs/2512.24637"
+      ],
+      "canonical_id": "arXiv:2512.24637",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Towards Fully-fledged GPU Multitasking via Proactive Memory Scheduling",
+      "source_url": "http://arxiv.org/abs/2512.24637",
+      "rejection_reason": "GPU multitasking一般でLLM推論への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2602.02987": {
       "primary_identity": "id:arXiv:2602.02987",
       "identity_tokens": [
@@ -606,6 +958,28 @@
       "axis": "forward citations of Elastic MoE",
       "run_key": "scheduled-20260921T0330JST",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-35-00+09-00-worker30-forward-elasticmoe-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2602.22457": {
+      "primary_identity": "id:arXiv:2602.22457",
+      "identity_tokens": [
+        "id:arXiv:2602.22457",
+        "title:cccl nodespanning gpu collectives with cxl memory pooling",
+        "url:https://arxiv.org/abs/2602.22457"
+      ],
+      "canonical_id": "arXiv:2602.22457",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "CCCL: Node-Spanning GPU Collectives with CXL Memory Pooling",
+      "source_url": "https://arxiv.org/abs/2602.22457",
+      "rejection_reason": "GPU collectives一般でLLM推論固有性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2603.04971": {
@@ -652,6 +1026,28 @@
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-35-00+09-00-worker30-forward-elasticmoe-01.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2603.13591": {
+      "primary_identity": "id:arXiv:2603.13591",
+      "identity_tokens": [
+        "id:arXiv:2603.13591",
+        "title:dhnsw a highperformance vector search engine on disaggregated memory",
+        "url:http://arxiv.org/abs/2603.13591"
+      ],
+      "canonical_id": "arXiv:2603.13591",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "d-HNSW: A High-performance Vector Search Engine on Disaggregated Memory",
+      "source_url": "http://arxiv.org/abs/2603.13591",
+      "rejection_reason": "vector search engineが主題でLLM model inferenceへの直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2604.03342": {
       "primary_identity": "id:arXiv:2604.03342",
       "identity_tokens": [
@@ -694,6 +1090,28 @@
       "axis": "direct I/O・GPU-initiated storage・SSD-backed LLM inference",
       "run_key": "2026-09-18T03:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260918T0300JST-discovery-specialist-gpu-storage-2.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2604.17227": {
+      "primary_identity": "id:arXiv:2604.17227",
+      "identity_tokens": [
+        "id:arXiv:2604.17227",
+        "title:cloudnative and distributed systems for efficient and scalable large language models a research agenda",
+        "url:https://arxiv.org/abs/2604.17227"
+      ],
+      "canonical_id": "arXiv:2604.17227",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Cloud-native and Distributed Systems for Efficient and Scalable Large Language Models -- A Research Agenda",
+      "source_url": "https://arxiv.org/abs/2604.17227",
+      "rejection_reason": "research agendaで個別推論システム研究ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2604.21231": {
@@ -762,6 +1180,28 @@
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-35-00+09-00-worker30-forward-elasticmoe-01.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2605.24569": {
+      "primary_identity": "id:arXiv:2605.24569",
+      "identity_tokens": [
+        "id:arXiv:2605.24569",
+        "title:energyaware computing in the year 2026",
+        "url:https://arxiv.org/abs/2605.24569"
+      ],
+      "canonical_id": "arXiv:2605.24569",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Energy-Aware Computing in the Year 2026",
+      "source_url": "https://arxiv.org/abs/2605.24569",
+      "rejection_reason": "energy-aware computing一般で対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2606.03910": {
       "primary_identity": "id:arXiv:2606.03910",
       "identity_tokens": [
@@ -782,6 +1222,138 @@
       "axis": "network/RDMA・KV transfer・topology-aware routing",
       "run_key": "2026-09-19T17:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260919T1819JST-discovery-specialist-network-kv-4.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2606.04908": {
+      "primary_identity": "id:arXiv:2606.04908",
+      "identity_tokens": [
+        "id:arXiv:2606.04908",
+        "title:gnstor design of gpunative highperformance remote allflash array",
+        "url:https://arxiv.org/abs/2606.04908"
+      ],
+      "canonical_id": "arXiv:2606.04908",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "GNStor: Design of GPU-Native High-Performance Remote All-Flash Array",
+      "source_url": "https://arxiv.org/abs/2606.04908",
+      "rejection_reason": "汎用remote all-flash arrayでLLM推論固有性がない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2606.13708": {
+      "primary_identity": "id:arXiv:2606.13708",
+      "identity_tokens": [
+        "id:arXiv:2606.13708",
+        "title:tiara a programmable linerate isa for remote memory access",
+        "url:https://arxiv.org/abs/2606.13708"
+      ],
+      "canonical_id": "arXiv:2606.13708",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+      "source_url": "https://arxiv.org/abs/2606.13708",
+      "rejection_reason": "remote memory ISA一般でLLM推論への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2606.18144": {
+      "primary_identity": "id:arXiv:2606.18144",
+      "identity_tokens": [
+        "id:arXiv:2606.18144",
+        "title:memory as a wasting asset pricing flash endurance for embodied agents and the limits of doing so",
+        "url:https://arxiv.org/abs/2606.18144"
+      ],
+      "canonical_id": "arXiv:2606.18144",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Memory as a Wasting Asset: Pricing Flash Endurance for Embodied Agents, and the Limits of Doing So",
+      "source_url": "https://arxiv.org/abs/2606.18144",
+      "rejection_reason": "embodied agentのflash endurance経済性が主題でLLM推論基盤への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2607.02574": {
+      "primary_identity": "id:arXiv:2607.02574",
+      "identity_tokens": [
+        "id:arXiv:2607.02574",
+        "title:from tensor buffer to distributed memory hierarchy a survey of kv cache management for llm serving",
+        "url:https://arxiv.org/abs/2607.02574"
+      ],
+      "canonical_id": "arXiv:2607.02574",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "rejection_reason": "KV cache surveyで個別新規システムではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2607.09084": {
+      "primary_identity": "id:arXiv:2607.09084",
+      "identity_tokens": [
+        "id:arXiv:2607.09084",
+        "title:a survey on the green development of large models from resourceefficient architectures to hardwaresoftware codesign",
+        "url:https://arxiv.org/abs/2607.09084"
+      ],
+      "canonical_id": "arXiv:2607.09084",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design",
+      "source_url": "https://arxiv.org/abs/2607.09084",
+      "rejection_reason": "広範なsurveyで個別推論システム研究ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2607.16836": {
+      "primary_identity": "id:arXiv:2607.16836",
+      "identity_tokens": [
+        "id:arXiv:2607.16836",
+        "title:beyond storage state as a runtime control problem in parallel and distributed systems",
+        "url:https://arxiv.org/abs/2607.16836"
+      ],
+      "canonical_id": "arXiv:2607.16836",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+      "source_url": "https://arxiv.org/abs/2607.16836",
+      "rejection_reason": "parallel/distributed state一般でLLM推論固有性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2607.17880": {
@@ -848,6 +1420,28 @@
       "axis": "network・RDMA・collective・distributed serving",
       "run_key": "2026-09-19T12:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-19T12-00-00+09-00-specialist-network-saturation-4.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2608.04458": {
+      "primary_identity": "id:arXiv:2608.04458",
+      "identity_tokens": [
+        "id:arXiv:2608.04458",
+        "title:architectural implications of agentic ai workflows",
+        "url:https://arxiv.org/abs/2608.04458"
+      ],
+      "canonical_id": "arXiv:2608.04458",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Architectural Implications of Agentic AI Workflows",
+      "source_url": "https://arxiv.org/abs/2608.04458",
+      "rejection_reason": "agentic workload一般のarchitecture議論で個別LLM推論機構への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2608.15118": {
@@ -936,6 +1530,28 @@
       "axis": "energy-aware serving・GPU power control",
       "run_key": "2026-09-19T17:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260919T1724JST-discovery-specialist-energy-4.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2608.27865": {
+      "primary_identity": "id:arXiv:2608.27865",
+      "identity_tokens": [
+        "id:arXiv:2608.27865",
+        "title:ffslim an efficient and lightweight format for multimodal data storage and retrieval",
+        "url:https://arxiv.org/abs/2608.27865"
+      ],
+      "canonical_id": "arXiv:2608.27865",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "FFSlim: An Efficient and Lightweight Format for Multi-modal Data Storage and Retrieval",
+      "source_url": "https://arxiv.org/abs/2608.27865",
+      "rejection_reason": "汎用multimodal storage formatでLLM推論への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.00891": {
@@ -1068,6 +1684,28 @@
       "axis": "Compute-in-Flash・SSD/Flash近傍計算・KV圧縮",
       "run_key": "2026-09-19T17:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260919T1708JST-discovery-specialist-flash-cim-1.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.10347": {
+      "primary_identity": "id:arXiv:2609.10347",
+      "identity_tokens": [
+        "id:arXiv:2609.10347",
+        "title:certiflash a formal verification framework for flash translation layers in computational solid state drives",
+        "url:https://arxiv.org/abs/2609.10347"
+      ],
+      "canonical_id": "arXiv:2609.10347",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "CertiFlash: A Formal Verification Framework for Flash Translation Layers in Computational Solid State Drives",
+      "source_url": "https://arxiv.org/abs/2609.10347",
+      "rejection_reason": "FTL formal verificationが主題でLLM推論対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "SSD NVMe flash hierarchical memory for LLM inference serving",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.10861": {
