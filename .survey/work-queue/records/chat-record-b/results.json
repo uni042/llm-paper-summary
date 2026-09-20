@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-3c0144987279113ac5ae99fd",
   "job_id": "job-research-b27d4d0f59f887b3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3c0144987279113ac5ae99fd",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "MTPではTraining-Time Testとtarget rolloutにより深いdraft位置の受理率が大きく改善し、DFlyではhybrid target conditioning、hidden correction、コード・数学データ強化が段階的に受理長を伸ばす。Hy3-A21BではDFlyの平均受理長がMTP 3.00、DFlash 3.69に対して4.79となり、並行度4〜64の全点で最高平均スループットを達成した。高負荷本番trafficではD-cutが受理長をほぼ維持しつつ検証slotを削り、DFlyが飽和する並行度48超でもスループットを伸ばした。",
+    "key_results": [
+      {"metric": "MTP mean acceptance / MAL", "value": "T=0: 52.8%/2.58 → 66.4%/2.99; T=0.9: 51.3%/2.54 → 63.3%/2.90", "baseline": "base MTP", "condition": "TTT+target rollout, D=3, seven benchmarks", "interpretation": "第1位置をほぼ維持したまま第2・第3位置を改善し、train-inference mismatch低減が深いdraftに効いた。"},
+      {"metric": "DFly mean accepted length", "value": "4.79 vs 3.00 (MTP) and 3.69 (DFlash)", "baseline": "MTP and DFlash", "condition": "Hy3-A21B, six benchmarks", "interpretation": "MTP比59.7%、DFlash比29.8%の相対増加で、hybrid conditioningとAR補正が長blockのsuffix品質を改善した。"},
+      {"metric": "architecture ablation MAL", "value": "DFlash 3.77 → DFly 4.40 → Markov 4.56 → hidden correction 4.60 → +code/math data 4.75", "baseline": "DFlash", "condition": "Hy3, greedy no-thinking, six benchmarks", "interpretation": "backbone、自己回帰補正、domain dataが累積的に寄与する。"},
+      {"metric": "serving throughput speedup", "value": "1.98–2.40× over AR; 10.5–11.8% above DFlash", "baseline": "autoregressive decoding and DFlash", "condition": "Hy3-A21B/Hy3 series, tested concurrency 4–64", "interpretation": "受理長増加がdraft/verify roundの追加costを上回り、全並行度で平均throughput首位となった。"},
+      {"metric": "D-cut throughput", "value": "c48/c56/c64: 886/937/981 tok/s vs DFly 860/858/848 tok/s; +3.0/+9.2/+15.7%", "baseline": "DFly full verification", "condition": "Hy3-295B-A21B, TP=8, 8×H20, Hunyuan live traffic replay", "interpretation": "verification-bound領域で低効用suffixを削ることで、DFly飽和後もloadをthroughputへ変換できる。"},
+      {"metric": "D-cut acceptance preservation", "value": "mean 2.50 → 2.46; at c64 2.50 → 2.43 while throughput +15.7%", "baseline": "DFly full verification", "condition": "live traffic concurrency sweep", "interpretation": "平均受理長の損失約1.5%に対して検証計算削減のthroughput利得が大きく、prefix utility選択が有効。"},
+      {"metric": "thinking-mode specialization", "value": "no-think→no-think 4.79; no-think→high-think 3.29; high-think→high-think 4.27", "baseline": "mismatched train/test thinking mode", "condition": "T=1, six benchmarks", "interpretation": "thinking modeでhidden-state/acceptance分布が変わるため、draft modelを別訓練・別配備すべきことを示す。"}
+    ],
+    "negative_results": "万能ドラフタは成立せず、MT-BenchではMTP-3がDFlyより好ましい条件があり、DSparkも一部chatでわずかに優れる。3-layer/block5はMAL 3.29と浅すぎ、5-layer/block8の4.25まで改善する一方、7-layer/block8も4.25で追加depthの利得がない。no-think drafterをhigh-thinkへ流用すると平均MALが4.79相当のmatched条件から3.29へ大幅低下する。D-cutは受理長をわずかに犠牲にし、cost profileはdeployment依存である。",
+    "interpretation": "論文の主要な示唆は、推測デコード性能を単一のdraft quality指標で最適化せず、出力分布に合うdrafter構造・訓練分布と、現在のverification costに合う実行時budgetを分離して最適化することにある。特にparallel drafterは長い候補を安価に生成できてもtarget verificationが高負荷時のボトルネックになるため、D-cutのglobal resource allocationがend-to-end throughputに直結する。",
+    "quality_impact": "rejection-sampling型の推測検証によりターゲット分布を保持する設計で、モデル品質を近似的に落として速度を得る方式ではない。"
+  },
+  "reservation": {"claim_id": "claim-3c0144987279113ac5ae99fd", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
