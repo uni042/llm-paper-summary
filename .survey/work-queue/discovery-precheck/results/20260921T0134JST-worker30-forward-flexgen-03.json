@@ -1,0 +1,892 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0134JST-worker30-forward-flexgen-03",
+  "collector_id": "worker30-forward-flexgen",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "forward citations from FlexGen offload lineage",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=title,abstract,year,authors,url,externalIds,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3fa26643ea8348b05abd5ac470597619fe1b0423",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 39,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:32:55.302517+00:00",
+  "results": [
+    {
+      "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+      "source_url": "https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.future.2026.108697",
+      "doi": "10.1016/j.future.2026.108697",
+      "authors": [
+        "Guanghan Wu",
+        "Roberto Morabito"
+      ]
+    },
+    {
+      "title": "Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation",
+      "source_url": "https://www.semanticscholar.org/paper/54db2b227072dcee4790de99c581d51c7d3c17f7",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Autoregressive image generation has emerged as a paradigm for multimodal AI systems due to its compatibility with transformer-based LLM serving infrastructures. However, generating thousands of visual tokens per request makes decoding increasingly bottlenecked by KV cache accesses during attention computation. Sparse attention is particularly attractive for this workload because many visual generation applications tolerate moderate quality degradation in exchange for improved performance and efficiency. While sparse attention has been extensively explored for text-based LLM inference, it remains unclear whether its sparsity assumptions generalize effectively to autoregressive image generation. We present the first systematic characterization of attention sparsity in autoregressive image generation across diverse workloads and representative open-source models. Our analysis reveals several distinguishing properties, including a pronounced prefill-decode asymmetry, strong attention concentration on prompt and local tokens, and a unique diagonal attention sparsity pattern arising from the spatial locality of visual tokens. Motivated by these observations, we propose a diagonal-aware sparse attention mechanism that selectively skips KV entries along the diagonal attention direction within a recent window. Implemented on top of a GPU-based serving system using FlexGen, FlashAttention-2, and custom kernels, our approach achieves up to 3.1x throughput and 1.19x latency improvements with less than 2% quality degradation compared to dense inference.",
+      "canonical_id": "arXiv:2609.19702",
+      "arxiv_id": "2609.19702",
+      "authors": [
+        "Daeun Kim",
+        "Junwha Hong",
+        "Changhun Oh",
+        "Yoonsung Kim",
+        "Yoonhyeong Lee",
+        "Jongse Park"
+      ]
+    },
+    {
+      "title": "MeshKV: A Network-on-Chip KV Cache Fabric for Scalable Transformer Decoding Accelerators",
+      "source_url": "https://www.semanticscholar.org/paper/65d3be59ad62a77bff075ef0163e1707f24b7027",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Autoregressive transformer decoding is constrained by irregular key-value (KV) cache movement on tiled accelerators. Prior compression and DRAM-placement systems still concentrate traffic on centralized memory paths that bottleneck long-context serving. We present MeshKV, a KV cache fabric that moves blocks as packetized flows over a lightweight NoC. It co-designs (i) TaKV affine striping to spread homes and cut hotspot load, (ii) Mare multicast with verified duplicate suppression, and (iii) Pad, which overlaps prefetch, tile multiply, and streaming softmax behind credit-aligned FIFOs. Together they convert bisection back-pressure into useful KV transfer. On our 8x8 FPGA implementation with LLaMA-2-7B and Mistral-7B at 8K-32K, MeshKV reduces interconnect traffic by up to 58%, improves KV bandwidth utilization by 2.1x, and delivers up to 1.9x multi-stream throughput.",
+      "canonical_id": "arXiv:2609.19207",
+      "arxiv_id": "2609.19207",
+      "authors": [
+        "Dong Liu",
+        "Yan-Xuan Yu"
+      ]
+    },
+    {
+      "title": "Efficient LLM Coserving at the Edge via Resource-Aware Cooperative Scheduling",
+      "source_url": "https://www.semanticscholar.org/paper/3f71f011292d4504aa0b754cb9854b3140cba51b",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "Large language models (LLMs) are increasingly deployed on edge nodes to support edge intelligence applications. To overcome limited GPU memory, offloading-based methods partition model parameters between the GPU and host memory, enabling inference on commodity hardware. However, deploying a single model instance using the offloading-based method often results in significant infrastructure overhead and the underutilization of CPU, GPU, and PCIe resources due to a persistently idle CPU, bursty workload patterns, and bandwidth–compute mismatches. To address this issue, this article proposes RACS, a resource-aware cooperative scheduling (RACS) framework that enables a single edge node to coserve a latency-critical high-priority model and a latency-tolerant low-priority model. The key insight is that PCIe bandwidth constitutes the primary bottleneck in offloading-based inference. RACS comprises a runtime state manager that monitors PCIe availability in real time and a resource-aware cooperative scheduler that orchestrates the low-priority model accordingly. When the high-priority model is active, RACS restricts low-priority execution to preloaded feed-forward layers to avoid PCIe contention. When PCIe is idle, RACS aggressively utilizes GPU and PCIe resources while cooperatively scheduling computations on the CPU to maximize throughput. Extensive experiments with the OPT-13-B and OPT-6.7-B models under diverse prompt lengths, generation lengths, and real-world request traces demonstrate that RACS improves the throughput of offline tasks by up to 27.4% without compromising the latency of the high-priority model.",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3718029",
+      "doi": "10.1109/JIOT.2026.3718029",
+      "authors": [
+        "Zhen-Zheng Li",
+        "Zhiqing Tang",
+        "Jian-Xiong Guo",
+        "Wei-Jia Jia",
+        "Wei Zhao"
+      ]
+    },
+    {
+      "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+      "source_url": "https://www.semanticscholar.org/paper/7230bca60434024cc679e0d1e71a80bde5a9f3c5",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "GPU high bandwidth memory is scarce and expensive, and KV caches consume much of it as chats, agent loops, and document question answering accumulate state. Systems such as Mooncake, LMCache, FlexGen, InfiniGen, and AttentionStore extend GPU memory with CPU DRAM and SSD. The harder question is which blocks belong in each tier, when to move or evict them, and whether prefetching helps. We study these choices in a discrete event simulator spanning GPU HBM, CPU DRAM, and SSD, calibrated against a random forest execution time predictor. We compare recency, reuse frequency, predicted reuse, and an EWMA predictor with prefetch lookahead across chat, agent, and document question answering workloads. Tiering supports 73.02 times more concurrent sessions per GPU and lowers cost per session by 62.04 times. These gains come from tier capacities of 1 plus 8 plus 64, not placement policy. Decode is compute bound at batch size one in our setup, so placement barely affects throughput. It mainly changes PCIe migration traffic and time to first token. Recency produces 2.30 times less migration traffic than reuse frequency for chat. Reuse frequency performs best for agents and document question answering. The existing predicted reuse policy is byte identical to recency, making its agent recommendation effectively recency. A genuine EWMA predictor changes behavior but still ranks behind reuse frequency on the workloads prediction was expected to help. Prefetching does not justify its bandwidth cost. Across the policy and cache size grid, even an oracle with knowledge of future requests never beats no prefetch on migration traffic. Workload specific placement can reduce data movement, but the predicted reuse and prefetch recommendations are not supported as implemented.",
+      "canonical_id": "arXiv:2609.16215",
+      "arxiv_id": "2609.16215",
+      "authors": [
+        "Srikanta Datta Tumkur",
+        "Jay Iyer",
+        "Mehar Simhadri",
+        "S. Kumar",
+        "Sai Kapil Kumar",
+        "Ramesh Nampelly"
+      ]
+    },
+    {
+      "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+      "source_url": "https://www.semanticscholar.org/paper/ad14a5226c99c4f3f97e37102ae12fcf6662cdd4",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Quantized Mixture-of-Experts (MoE) services can hold several pre-materialized instances of one base model, but quantization damage varies sharply across requests and bitwidths. Because instance materialization and replica counts consume memory and require slow reconfiguration, we treat them as upstream provisioning decisions and study routing within a fixed resident pool. Within this fixed-pool boundary, we route each request to maximize modeled throughput under a class-level expected quality-degradation budget and measured instance capacities. To predict this request-specific risk, we introduce FWP (Fragility-Weighted Perplexity), computed from prompt tokens on a reference-instance prefill and calibrated to candidate-instance degradation. Underlying FWP is an exact two-expert affinity--fragility decomposition and a conditional multi-layer top-$k$ expansion whose bias, interaction, route-change, separability, and higher-order terms remain explicit. Using these calibrated risks, a window-level linear program yields a signed reduced-reward score that is KKT-consistent with the LP optimum under optimal prices and primal-feasible tie allocation. On 88 extended Qwen prompts, complete W2, W3, and W4 instances quantizing all 6,144 expert blocks incur mean $\\Delta$NLL of $0.9437$, $0.1832$, and $0.0513$. Under the same population and $\\tau=0.1513$, FWP allocation reaches a $1.284\\times$ offline model-based multiplier versus $1.253\\times$ for request-agnostic mixing and $1.000\\times$ for static W4, an incremental $2.5\\%$ relative FWP gain.",
+      "canonical_id": "arXiv:2609.12550",
+      "arxiv_id": "2609.12550",
+      "authors": [
+        "Zheng-Hong Huang",
+        "Hong-Fan Wu",
+        "Ji-Heng Zhang"
+      ]
+    },
+    {
+      "title": "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/e3a3775ceccced8e94b159ada5ecdac57aa8d83a",
+      "year": 2026,
+      "published": "2026-09-07",
+      "abstract": "Large language model (LLM) cascades answer easy requests with a small model and escalate selected requests to a larger model. Most routers prioritize examples on which the small model appears uncertain or likely to be wrong. This proxy ignores a decisive fact: escalation is useful only when the large model corrects the small model, and it is harmful when the large model replaces a correct answer with an incorrect one. We introduce Signed Rescue Routing (SRR), a budgeted routing method that predicts these two events separately and ranks requests by their difference. We show that this signed conditional gain is the Bayes-optimal routing score under a fixed escalation budget. SRR requires only the small model's output statistics at deployment and adds a lightweight two-head router. We evaluate SRR with Qwen3-4B and Qwen3-8B on TBD examples from MMLU, HellaSwag, and ARC-Challenge. Across the accuracy-compute curve, SRR reaches an area of TBD, compared with TBD for a learned small-model error predictor and TBD for entropy routing. These results show that predicting incremental value, rather than model uncertainty, is a simple and effective objective for efficient LLM cascades.",
+      "canonical_id": "arXiv:2609.07786",
+      "arxiv_id": "2609.07786",
+      "authors": [
+        "Zhe-Yuan Wang",
+        "Si-Yu Li",
+        "Pei-Qiao Song",
+        "Si-An Chen",
+        "Qiang-Qiang Song",
+        "Qian Liu"
+      ]
+    },
+    {
+      "title": "Confidence-Gated Admission for Hardware Prefetching: When the Gate Matters More Than the Predictor",
+      "source_url": "https://www.semanticscholar.org/paper/828d428a86a6c8925448f51489ba9105bcfb0ba5",
+      "year": 2026,
+      "published": "2026-09-03",
+      "abstract": "Learned cache prefetchers are typically evaluated against classical predictors that always issue requests, confounding the prediction model with the admission policy. We disentangle these variables with matched controls: the same admission gate is applied to both a 257-parameter online MLP and a classical stride predictor. The neural advantage vanishes; the MLP is indistinguishable from gated stride on random traffic and slower on most regular streams. The gate itself is architecturally useful independent of the predictor: on twenty SPEC CPU2017 programs in native ChampSim, it removes 35% of prefetches and improves accuracy from 11% to 15%, but DRAM reads change by only 0.07% demonstrating that proxy metrics do not predict endpoint behavior. We prove gate-closed execution reproduces the no-prefetch baseline exactly. The gate matters more than the predictor, and better proxies do not imply better endpoints.",
+      "canonical_id": "arXiv:2609.04040",
+      "arxiv_id": "2609.04040",
+      "authors": [
+        "Youssef Majdane",
+        "Simone Jarno Casartelli",
+        "Enrico Lopedoto"
+      ]
+    },
+    {
+      "title": "SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL",
+      "source_url": "https://www.semanticscholar.org/paper/e2fc1357f7604e49cfc3ae67e9879373bc35d58a",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "The disaggregated Prefill-Decode (PD) architecture has emerged as a prominent paradigm for efficient Large Language Model inference serving. However, resource management remains a critical challenge, particularly under the dual burstiness of real-world scenarios—characterized by volatile fluctuations in both request arrival rates and Prompt-to-Response ratios. Existing rule-based heuristics often fail to accurately identify system bottlenecks, leading to severe resource misallocation and Service Level Objective (SLO) violations. To address this, we propose a Deep Reinforcement Learning-based auto-scaling framework tailored for the PD architecture. By modeling the resource allocation problem as a Markov Decision Process, our framework enables the agent to capture non-linear load dynamics, thereby achieving decoupled and precise scaling for prefill and decode pools. Furthermore, to mitigate Head-of-Line blocking caused by scaling latency, we design an immediate rescheduling mechanism that migrates queued tasks to newly ready nodes in real-time. Experimental results driven by Azure bursty load traces demonstrate that our framework significantly reduces computational costs by 25.2% and 28.3% compared to the Static configuration and HeteroScale, respectively, while strictly adhering to SLOs.",
+      "canonical_id": "DOI:10.24963/ijcai.2026/568",
+      "doi": "10.24963/ijcai.2026/568",
+      "authors": [
+        "Wei Xiao",
+        "Xue-Feng Huang",
+        "Wei-Jia Shi",
+        "Bao-Kang Zhao"
+      ]
+    },
+    {
+      "title": "Prediction-Assisted Pricing and Admission for LLM APIs with Stochastic Token Consumption",
+      "source_url": "https://www.semanticscholar.org/paper/fc2501ae5670b734cb594c40e6a039d30a7ac497",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "An LLM application often sells or internally allocates several service products: a small or premium model, a short or long token cap, and possibly multiple posted prices. The operational decision is not merely which model answers a prompt. A price changes purchase probability, a token cap changes both user value and the tail of resource consumption, and accepted requests compete for shared compute and premium-model capacity. Demand and output length are initially uncertain, while an offline model may provide useful but imperfect predictions. We formulate sequential pricing and admission with stochastic resource consumption. Each arriving request belongs to an observable segment. The platform chooses a product--price pair or makes no offer; purchase, revenue, and resource use are then random. An offline predictor supplies a uniform, validated error radius for every segment--product cell. We propose Prediction-Clipped UCB (PCUCB), which intersects the offline prediction interval with an online confidence interval, evaluates products using resource shadow prices, and reserves a sample-path envelope before commitment. The prior gives a fast start when accurate, while online learning protects the platform when predictions are coarse. The analysis is modular. On a simultaneous confidence event, regret against a buffered fluid benchmark is bounded by a pacing term plus the cumulative diameter of the intersected intervals. For $J$ segment-product cells and prediction radius $\\varepsilon$, this yields \\[ \\widetilde O\\left( \\sqrt{T}+(1+\\bar\\Lambda) \\min\\{T\\varepsilon,\\sqrt{JT}\\} \\right), \\] where $\\bar\\Lambda$ bounds operational shadow prices. Thus the algorithm smoothly interpolates between an almost full-information regime and learning from scratch. Hard feasibility holds on every sample path through reservation envelopes.",
+      "canonical_id": "arXiv:2609.00710",
+      "arxiv_id": "2609.00710",
+      "authors": [
+        "Peter Wong"
+      ]
+    },
+    {
+      "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+      "source_url": "https://www.semanticscholar.org/paper/497713a2d160150e71305cff4f9fe4046aea8879",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+      "doi": "10.1016/j.hcc.2026.100428",
+      "authors": [
+        "Yu Duan",
+        "Jia-Teng Li",
+        "Navya Goli",
+        "Yuma Ishimura",
+        "Yi-Yan Li",
+        "U. R. Tida",
+        "Zhen-Ge Jia"
+      ]
+    },
+    {
+      "title": "Load balancing for large language model inference serving: A control and learning oriented survey",
+      "source_url": "https://www.semanticscholar.org/paper/6a10b90cf3514d0b49fd40ac155f8610068ef4e0",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134973",
+      "doi": "10.1016/j.neucom.2026.134973",
+      "authors": [
+        "Hanbo Ma",
+        "Zhongguo Li",
+        "Ju-Nan Wang",
+        "Chun-Yi Cao",
+        "Dong-Lin Li",
+        "Jun Yang",
+        "Zheng-Tao Ding"
+      ]
+    },
+    {
+      "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+      "source_url": "https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+      "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+      "doi": "10.1007/s11432-026-5037-1",
+      "authors": [
+        "Assia Belbachir",
+        "M. Blake",
+        "Jin-Song Dong",
+        "S. Dustdar",
+        "Christof Ebert",
+        "C. Ghezzi",
+        "David Harel",
+        "S. Helal",
+        "Chun-Min Hu",
+        "Lin-Peng Huang",
+        "Hans-Arno Jacobsen",
+        "Chang-Jun Jiang",
+        "Zhi Jin",
+        "Jia-Lin Li",
+        "Xuanzhe Liu",
+        "Jian Lu",
+        "Xiao-Xing Ma",
+        "Assaf Marron",
+        "Hong Mei",
+        "B. Nuseibeh",
+        "Xin Peng",
+        "Yuanchun Shi",
+        "Huai-Min Wang",
+        "Ji Wang",
+        "Jian-Min Wang",
+        "Danny Weyns",
+        "James Woodcock",
+        "Tao Xie",
+        "H. Xu",
+        "Mengfei Yang",
+        "Jian-Wei Yin",
+        "Naijun Zhan"
+      ]
+    },
+    {
+      "title": "SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving",
+      "source_url": "https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.parco.2026.103216",
+      "doi": "10.1016/j.parco.2026.103216",
+      "authors": [
+        "Si-Yuan Sun",
+        "Zhao-Jia Wang",
+        "Han-Shuo Liu",
+        "Jie-Han Zhou"
+      ]
+    },
+    {
+      "title": "SemKV: Semantic Mixed-Precision KV Cache Quantization Guided by the Quality Cliff for Long-Context LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/d3f7b7e4211810aede1fbf47e1b342071445dacb",
+      "year": 2026,
+      "published": "2026-08-28",
+      "abstract": "The key-value (KV) cache is the dominant memory bottleneck of long-context large language model (LLM) inference, growing linearly with context length. We show that uniform KV quantization on a fractional-bit grid does not degrade gracefully: under a prespecified multi-seed statistical protocol, Llama-3.1-8B-Instruct with an affine quantizer is statistically indistinguishable from FP16 KV down to 2.322 code bits/value and collapses at 2.0 bits - a quality cliff in (2.0, 2.322] that reappears in generation-time quantization and multi-turn dialogue and transfers to Mistral-7B. The cliff reframes importance-aware mixed precision: above it, eight model-internal importance indicators are statistically interchangeable, so the benefit of mixing is grid interpolation, reaching average precisions uniform quantization cannot realize. SemKV preserves every token, ranks tokens by a model-internal score, and assigns two adjacent above-cliff precisions, achieving a measured 6.0x storage reduction with no statistically detectable quality difference from full KV (n=900, three seeds), and outperforming FP16 token pruning granted a 1.5x larger memory budget. Replacing the affine base with a distortion-optimized quantizer (TurboQuant-MSE) lowers the cliff in every protocol tested, raising the no-detectable-loss operating point to 7.9x. The recipe: measure the cliff for the target deployment setting, then interpolate above it.",
+      "canonical_id": "arXiv:2608.28911",
+      "arxiv_id": "2608.28911",
+      "authors": [
+        "D. Lee",
+        "Do-Hyung Kim",
+        "Jae-Hong Kim"
+      ]
+    },
+    {
+      "title": "VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/2655c9d3521d8af9a51c602f9cb9bb3a33f74c31",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "While Vision Large Language Models (VLLMs) have achieved remarkable success in multimodal reasoning, their long-context inference remains prohibitively expensive due to the massive computation and memory overhead of visual Key-Value (KV) caches. Existing KV compression methods often apply uniform pruning across visual tokens and layers, leading to substantial information loss and degraded performance.To address this challenge, we propose \\textbf{VisCache}, a plug-and-play framework for coarse-to-fine \\textbf{Vis}ual KV \\textbf{Cache} pruning without training, which consists of two synergistic stages. First, a lightweight VLM filters temporal redundancy by selectively forwarding semantically informative keyframes. Second, we introduce {PruneKV}, a surgical KV compression algorithm tailored to the attention dynamics of VLLMs. Unlike rigid pruning strategies, PruneKV adopts a parabolic layer-wise budget allocation together with an asymmetric update mechanism that selectively prunes keys while fusing values, thereby preserving critical contextual information. Extensive experiments demonstrate that VisCache substantially improves inference efficiency, achieving up to {2.35$\\times$ speedup} and significant memory reduction while maintaining competitive performance with only {19--28\\%} KV cache retention. VisCache consistently outperforms existing baselines, establishing a new Pareto frontier between efficiency and performance for long-context VLLM inference. Code is available at https://github.com/Wlklk/VisCache",
+      "canonical_id": "arXiv:2608.24063",
+      "arxiv_id": "2608.24063",
+      "authors": [
+        "Lyuke Wang",
+        "Zhuo Li",
+        "Guangxu Zhu"
+      ]
+    },
+    {
+      "title": "LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization",
+      "source_url": "https://www.semanticscholar.org/paper/05ce627af947fbb7b08b2b653f62974cce24b1b2",
+      "year": 2026,
+      "published": "2026-08-22",
+      "abstract": "Large language models have become increasingly capable agents for low-level code and kernel optimization, but isolated kernel benchmarks provide only a proxy for the deployment behavior that matters in language-model inference. We identify a benchmark-to-deployment gap: candidate kernels that appear correct and fast in standalone harnesses can exhibit different performance, safety, or phase behavior after integration into a real inference workload. We introduce LLM4LLM, a deployment-aware closed-loop optimization framework that starts from a target inference script, extracts phase-aware optimization tasks, searches with an experience-guided episodic agent, and accepts patches through in-model validation. Across ten language-model inference workloads on A100 and H100 GPUs, LLM4LLM improves end-to-end latency for every evaluated model, achieving 3.91$\\times$/6.98$\\times$ geometric-mean speedups on A100/H100; as supporting kernel-level evidence, it also attains up to 2.745$\\times$ GeoMean speedup on KernelBench Level 2.",
+      "canonical_id": "arXiv:2608.21836",
+      "arxiv_id": "2608.21836",
+      "authors": [
+        "Hui Zeng",
+        "Pengfei Yang",
+        "Yanxin Chen",
+        "Fusong Ju",
+        "Xinran Wei"
+      ]
+    },
+    {
+      "title": "AI Infrastructure in Space: How Far Can We Go?",
+      "source_url": "https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7",
+      "year": 2026,
+      "published": "2026-08-21",
+      "abstract": "Satellites are becoming programmable computing platforms capable of running increasingly demanding AI workloads. This shift raises a systems problem: how can AI services remain deployable, manageable, and recoverable after launch when compute capacity, connectivity, energy, and thermal headroom vary over orbital time? This paper develops a systems vision for AI infrastructure in space. We define it as the systems layer that manages AI capabilities across spacecraft, orbital networks, ground stations, and cloud backends, while treating orbital and physical state as part of the resource model. We synthesize relevant foundations from terrestrial AI infrastructure, satellite networking, and satellite edge computing, and examine the physical constraints that directly shape system design. We further ground this vision in three in-orbit case studies spanning the node, platform, and service levels. Telemetry from BUPT-1 satellite shows that usable compute capacity is bounded by thermal and energy envelopes. SateLight on BUPT-2 satellite reduces application-update transmission latency by 56.54% on average and up to 91.18%, with 100% update correctness. A stateful VLM serving case further shows that thermal interruptions make execution-state recovery a first-class systems problem. These observations motivate a research agenda for space-native resource management, lifecycle support, and sustained AI service across space and ground.",
+      "canonical_id": "arXiv:2608.21034",
+      "arxiv_id": "2608.21034",
+      "authors": [
+        "Qing Li",
+        "Qi-Yang Zhang",
+        "Daliang Xu",
+        "Tianze Huang",
+        "Ding-Ge Zhang",
+        "Yihao Zhao",
+        "Xiaolong Huang",
+        "Jin-Feng Wen",
+        "Xiameng Hu",
+        "Tao Qi",
+        "Mengwei Xu",
+        "Shang-Guang Wang",
+        "Xuazhe Liu"
+      ]
+    },
+    {
+      "title": "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+      "source_url": "https://www.semanticscholar.org/paper/8d068707668fc4d27c281f24e5bcc5c3be03cef9",
+      "year": 2026,
+      "published": "2026-08-20",
+      "abstract": "A lot of prior work addressed key-value (KV) cache selection and compression by sparse attention to enable long-context inference for transformer language models without excessive hardware budgets. We provide a new method for fine-tuning models with sparse attention. It works for any KV cache policy, runs on a moderate hardware budget (e.g., a single Nvidia A100 GPU with 40 GB RAM), and allows the model to co-adapt with the policy, often outperforming models trained with exact attention (sequence parallelism). We also provide an efficient implementation of H2O sparse attention (the leading policy in our experiments) with dedicated scaled dot product attention kernel support. KeysAndValues (https://github.com/awslabs/keys_values), a new open source library for long-context inference and fine-tuning, provides easy-to-use and performant code for all methods discussed here.",
+      "canonical_id": "arXiv:2608.19920",
+      "arxiv_id": "2608.19920",
+      "authors": [
+        "Matthias W. Seeger",
+        "Zeyu Zhang",
+        "Vihang Patil",
+        "Konstantinos Benidis",
+        "Sebastian Schelter"
+      ]
+    },
+    {
+      "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241",
+      "year": 2026,
+      "published": "2026-08-17",
+      "abstract": "The rapid adoption of large language models (LLMs) has increased the need for efficient multi-tenant inference systems that maximize GPU utilization. However, existing frameworks struggle to scale due to the high memory demands of model weights and key-value (KV) caches. We present DynamoServe, a multi-tenant LLM serving framework that addresses these challenges through three key innovations: (1) leveraging stranded GPU memory to offload model weights and KV caches, (2) mitigating resource fragmentation in multi-workload environments, and (3) improving memory locality through coordinated data placement and demand-driven weight migration across GPUs. Together, these techniques enable high-throughput, low-latency inference. Experiments on state-of-the-art models show that DynamoServe significantly improves memory efficiency without sacrificing latency.",
+      "canonical_id": "DOI:10.1145/3789240.3829347",
+      "doi": "10.1145/3789240.3829347",
+      "authors": [
+        "Diman Zad Tootaghaj",
+        "Khaled Diab",
+        "Bob Lantz",
+        "Hanjiang Wu",
+        "K. Ramakrishnan",
+        "Md Ashfaqur Rahaman",
+        "Ryan Stutsman",
+        "Puneet Sharma",
+        "Tushar Krishna"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.future.2026.108697",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.future.2026.108697",
+        "title:beaveredge an llmorchestrated framework for edge ai lifecycle management automation",
+        "url:https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559"
+      ],
+      "record": {
+        "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+        "source_url": "https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.future.2026.108697",
+        "doi": "10.1016/j.future.2026.108697",
+        "authors": [
+          "Guanghan Wu",
+          "Roberto Morabito"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19702",
+      "identity_tokens": [
+        "id:arXiv:2609.19702",
+        "title:understanding and exploiting diagonal attention sparsity in autoregressive image generation",
+        "url:https://www.semanticscholar.org/paper/54db2b227072dcee4790de99c581d51c7d3c17f7"
+      ],
+      "record": {
+        "title": "Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation",
+        "source_url": "https://www.semanticscholar.org/paper/54db2b227072dcee4790de99c581d51c7d3c17f7",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Autoregressive image generation has emerged as a paradigm for multimodal AI systems due to its compatibility with transformer-based LLM serving infrastructures. However, generating thousands of visual tokens per request makes decoding increasingly bottlenecked by KV cache accesses during attention computation. Sparse attention is particularly attractive for this workload because many visual generation applications tolerate moderate quality degradation in exchange for improved performance and efficiency. While sparse attention has been extensively explored for text-based LLM inference, it remains unclear whether its sparsity assumptions generalize effectively to autoregressive image generation. We present the first systematic characterization of attention sparsity in autoregressive image generation across diverse workloads and representative open-source models. Our analysis reveals several distinguishing properties, including a pronounced prefill-decode asymmetry, strong attention concentration on prompt and local tokens, and a unique diagonal attention sparsity pattern arising from the spatial locality of visual tokens. Motivated by these observations, we propose a diagonal-aware sparse attention mechanism that selectively skips KV entries along the diagonal attention direction within a recent window. Implemented on top of a GPU-based serving system using FlexGen, FlashAttention-2, and custom kernels, our approach achieves up to 3.1x throughput and 1.19x latency improvements with less than 2% quality degradation compared to dense inference.",
+        "canonical_id": "arXiv:2609.19702",
+        "arxiv_id": "2609.19702",
+        "authors": [
+          "Daeun Kim",
+          "Junwha Hong",
+          "Changhun Oh",
+          "Yoonsung Kim",
+          "Yoonhyeong Lee",
+          "Jongse Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19207",
+      "identity_tokens": [
+        "id:arXiv:2609.19207",
+        "title:meshkv a networkonchip kv cache fabric for scalable transformer decoding accelerators",
+        "url:https://www.semanticscholar.org/paper/65d3be59ad62a77bff075ef0163e1707f24b7027"
+      ],
+      "record": {
+        "title": "MeshKV: A Network-on-Chip KV Cache Fabric for Scalable Transformer Decoding Accelerators",
+        "source_url": "https://www.semanticscholar.org/paper/65d3be59ad62a77bff075ef0163e1707f24b7027",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Autoregressive transformer decoding is constrained by irregular key-value (KV) cache movement on tiled accelerators. Prior compression and DRAM-placement systems still concentrate traffic on centralized memory paths that bottleneck long-context serving. We present MeshKV, a KV cache fabric that moves blocks as packetized flows over a lightweight NoC. It co-designs (i) TaKV affine striping to spread homes and cut hotspot load, (ii) Mare multicast with verified duplicate suppression, and (iii) Pad, which overlaps prefetch, tile multiply, and streaming softmax behind credit-aligned FIFOs. Together they convert bisection back-pressure into useful KV transfer. On our 8x8 FPGA implementation with LLaMA-2-7B and Mistral-7B at 8K-32K, MeshKV reduces interconnect traffic by up to 58%, improves KV bandwidth utilization by 2.1x, and delivers up to 1.9x multi-stream throughput.",
+        "canonical_id": "arXiv:2609.19207",
+        "arxiv_id": "2609.19207",
+        "authors": [
+          "Dong Liu",
+          "Yan-Xuan Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jiot.2026.3718029",
+      "identity_tokens": [
+        "id:DOI:10.1109/jiot.2026.3718029",
+        "title:efficient llm coserving at the edge via resourceaware cooperative scheduling",
+        "url:https://www.semanticscholar.org/paper/3f71f011292d4504aa0b754cb9854b3140cba51b"
+      ],
+      "record": {
+        "title": "Efficient LLM Coserving at the Edge via Resource-Aware Cooperative Scheduling",
+        "source_url": "https://www.semanticscholar.org/paper/3f71f011292d4504aa0b754cb9854b3140cba51b",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "Large language models (LLMs) are increasingly deployed on edge nodes to support edge intelligence applications. To overcome limited GPU memory, offloading-based methods partition model parameters between the GPU and host memory, enabling inference on commodity hardware. However, deploying a single model instance using the offloading-based method often results in significant infrastructure overhead and the underutilization of CPU, GPU, and PCIe resources due to a persistently idle CPU, bursty workload patterns, and bandwidth–compute mismatches. To address this issue, this article proposes RACS, a resource-aware cooperative scheduling (RACS) framework that enables a single edge node to coserve a latency-critical high-priority model and a latency-tolerant low-priority model. The key insight is that PCIe bandwidth constitutes the primary bottleneck in offloading-based inference. RACS comprises a runtime state manager that monitors PCIe availability in real time and a resource-aware cooperative scheduler that orchestrates the low-priority model accordingly. When the high-priority model is active, RACS restricts low-priority execution to preloaded feed-forward layers to avoid PCIe contention. When PCIe is idle, RACS aggressively utilizes GPU and PCIe resources while cooperatively scheduling computations on the CPU to maximize throughput. Extensive experiments with the OPT-13-B and OPT-6.7-B models under diverse prompt lengths, generation lengths, and real-world request traces demonstrate that RACS improves the throughput of offline tasks by up to 27.4% without compromising the latency of the high-priority model.",
+        "canonical_id": "DOI:10.1109/JIOT.2026.3718029",
+        "doi": "10.1109/JIOT.2026.3718029",
+        "authors": [
+          "Zhen-Zheng Li",
+          "Zhiqing Tang",
+          "Jian-Xiong Guo",
+          "Wei-Jia Jia",
+          "Wei Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16215",
+      "identity_tokens": [
+        "id:arXiv:2609.16215",
+        "title:where should the kv cache live placement policies across gpu cpu and ssd for longlived sessions",
+        "url:https://www.semanticscholar.org/paper/7230bca60434024cc679e0d1e71a80bde5a9f3c5"
+      ],
+      "record": {
+        "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+        "source_url": "https://www.semanticscholar.org/paper/7230bca60434024cc679e0d1e71a80bde5a9f3c5",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "GPU high bandwidth memory is scarce and expensive, and KV caches consume much of it as chats, agent loops, and document question answering accumulate state. Systems such as Mooncake, LMCache, FlexGen, InfiniGen, and AttentionStore extend GPU memory with CPU DRAM and SSD. The harder question is which blocks belong in each tier, when to move or evict them, and whether prefetching helps. We study these choices in a discrete event simulator spanning GPU HBM, CPU DRAM, and SSD, calibrated against a random forest execution time predictor. We compare recency, reuse frequency, predicted reuse, and an EWMA predictor with prefetch lookahead across chat, agent, and document question answering workloads. Tiering supports 73.02 times more concurrent sessions per GPU and lowers cost per session by 62.04 times. These gains come from tier capacities of 1 plus 8 plus 64, not placement policy. Decode is compute bound at batch size one in our setup, so placement barely affects throughput. It mainly changes PCIe migration traffic and time to first token. Recency produces 2.30 times less migration traffic than reuse frequency for chat. Reuse frequency performs best for agents and document question answering. The existing predicted reuse policy is byte identical to recency, making its agent recommendation effectively recency. A genuine EWMA predictor changes behavior but still ranks behind reuse frequency on the workloads prediction was expected to help. Prefetching does not justify its bandwidth cost. Across the policy and cache size grid, even an oracle with knowledge of future requests never beats no prefetch on migration traffic. Workload specific placement can reduce data movement, but the predicted reuse and prefetch recommendations are not supported as implemented.",
+        "canonical_id": "arXiv:2609.16215",
+        "arxiv_id": "2609.16215",
+        "authors": [
+          "Srikanta Datta Tumkur",
+          "Jay Iyer",
+          "Mehar Simhadri",
+          "S. Kumar",
+          "Sai Kapil Kumar",
+          "Ramesh Nampelly"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12550",
+      "identity_tokens": [
+        "id:arXiv:2609.12550",
+        "title:qualityconstrained routing over a fixed pool of quantized mixtureofexperts instances",
+        "url:https://www.semanticscholar.org/paper/ad14a5226c99c4f3f97e37102ae12fcf6662cdd4"
+      ],
+      "record": {
+        "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+        "source_url": "https://www.semanticscholar.org/paper/ad14a5226c99c4f3f97e37102ae12fcf6662cdd4",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Quantized Mixture-of-Experts (MoE) services can hold several pre-materialized instances of one base model, but quantization damage varies sharply across requests and bitwidths. Because instance materialization and replica counts consume memory and require slow reconfiguration, we treat them as upstream provisioning decisions and study routing within a fixed resident pool. Within this fixed-pool boundary, we route each request to maximize modeled throughput under a class-level expected quality-degradation budget and measured instance capacities. To predict this request-specific risk, we introduce FWP (Fragility-Weighted Perplexity), computed from prompt tokens on a reference-instance prefill and calibrated to candidate-instance degradation. Underlying FWP is an exact two-expert affinity--fragility decomposition and a conditional multi-layer top-$k$ expansion whose bias, interaction, route-change, separability, and higher-order terms remain explicit. Using these calibrated risks, a window-level linear program yields a signed reduced-reward score that is KKT-consistent with the LP optimum under optimal prices and primal-feasible tie allocation. On 88 extended Qwen prompts, complete W2, W3, and W4 instances quantizing all 6,144 expert blocks incur mean $\\Delta$NLL of $0.9437$, $0.1832$, and $0.0513$. Under the same population and $\\tau=0.1513$, FWP allocation reaches a $1.284\\times$ offline model-based multiplier versus $1.253\\times$ for request-agnostic mixing and $1.000\\times$ for static W4, an incremental $2.5\\%$ relative FWP gain.",
+        "canonical_id": "arXiv:2609.12550",
+        "arxiv_id": "2609.12550",
+        "authors": [
+          "Zheng-Hong Huang",
+          "Hong-Fan Wu",
+          "Ji-Heng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07786",
+      "identity_tokens": [
+        "id:arXiv:2609.07786",
+        "title:signed rescue routing harmaware cascades for efficient llm inference",
+        "url:https://www.semanticscholar.org/paper/e3a3775ceccced8e94b159ada5ecdac57aa8d83a"
+      ],
+      "record": {
+        "title": "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/e3a3775ceccced8e94b159ada5ecdac57aa8d83a",
+        "year": 2026,
+        "published": "2026-09-07",
+        "abstract": "Large language model (LLM) cascades answer easy requests with a small model and escalate selected requests to a larger model. Most routers prioritize examples on which the small model appears uncertain or likely to be wrong. This proxy ignores a decisive fact: escalation is useful only when the large model corrects the small model, and it is harmful when the large model replaces a correct answer with an incorrect one. We introduce Signed Rescue Routing (SRR), a budgeted routing method that predicts these two events separately and ranks requests by their difference. We show that this signed conditional gain is the Bayes-optimal routing score under a fixed escalation budget. SRR requires only the small model's output statistics at deployment and adds a lightweight two-head router. We evaluate SRR with Qwen3-4B and Qwen3-8B on TBD examples from MMLU, HellaSwag, and ARC-Challenge. Across the accuracy-compute curve, SRR reaches an area of TBD, compared with TBD for a learned small-model error predictor and TBD for entropy routing. These results show that predicting incremental value, rather than model uncertainty, is a simple and effective objective for efficient LLM cascades.",
+        "canonical_id": "arXiv:2609.07786",
+        "arxiv_id": "2609.07786",
+        "authors": [
+          "Zhe-Yuan Wang",
+          "Si-Yu Li",
+          "Pei-Qiao Song",
+          "Si-An Chen",
+          "Qiang-Qiang Song",
+          "Qian Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04040",
+      "identity_tokens": [
+        "id:arXiv:2609.04040",
+        "title:confidencegated admission for hardware prefetching when the gate matters more than the predictor",
+        "url:https://www.semanticscholar.org/paper/828d428a86a6c8925448f51489ba9105bcfb0ba5"
+      ],
+      "record": {
+        "title": "Confidence-Gated Admission for Hardware Prefetching: When the Gate Matters More Than the Predictor",
+        "source_url": "https://www.semanticscholar.org/paper/828d428a86a6c8925448f51489ba9105bcfb0ba5",
+        "year": 2026,
+        "published": "2026-09-03",
+        "abstract": "Learned cache prefetchers are typically evaluated against classical predictors that always issue requests, confounding the prediction model with the admission policy. We disentangle these variables with matched controls: the same admission gate is applied to both a 257-parameter online MLP and a classical stride predictor. The neural advantage vanishes; the MLP is indistinguishable from gated stride on random traffic and slower on most regular streams. The gate itself is architecturally useful independent of the predictor: on twenty SPEC CPU2017 programs in native ChampSim, it removes 35% of prefetches and improves accuracy from 11% to 15%, but DRAM reads change by only 0.07% demonstrating that proxy metrics do not predict endpoint behavior. We prove gate-closed execution reproduces the no-prefetch baseline exactly. The gate matters more than the predictor, and better proxies do not imply better endpoints.",
+        "canonical_id": "arXiv:2609.04040",
+        "arxiv_id": "2609.04040",
+        "authors": [
+          "Youssef Majdane",
+          "Simone Jarno Casartelli",
+          "Enrico Lopedoto"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/568",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/568",
+        "title:splitscaling adaptive scaling for disaggregated llm serving against traffic bursts via drl",
+        "url:https://www.semanticscholar.org/paper/e2fc1357f7604e49cfc3ae67e9879373bc35d58a"
+      ],
+      "record": {
+        "title": "SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL",
+        "source_url": "https://www.semanticscholar.org/paper/e2fc1357f7604e49cfc3ae67e9879373bc35d58a",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "The disaggregated Prefill-Decode (PD) architecture has emerged as a prominent paradigm for efficient Large Language Model inference serving. However, resource management remains a critical challenge, particularly under the dual burstiness of real-world scenarios—characterized by volatile fluctuations in both request arrival rates and Prompt-to-Response ratios. Existing rule-based heuristics often fail to accurately identify system bottlenecks, leading to severe resource misallocation and Service Level Objective (SLO) violations. To address this, we propose a Deep Reinforcement Learning-based auto-scaling framework tailored for the PD architecture. By modeling the resource allocation problem as a Markov Decision Process, our framework enables the agent to capture non-linear load dynamics, thereby achieving decoupled and precise scaling for prefill and decode pools. Furthermore, to mitigate Head-of-Line blocking caused by scaling latency, we design an immediate rescheduling mechanism that migrates queued tasks to newly ready nodes in real-time. Experimental results driven by Azure bursty load traces demonstrate that our framework significantly reduces computational costs by 25.2% and 28.3% compared to the Static configuration and HeteroScale, respectively, while strictly adhering to SLOs.",
+        "canonical_id": "DOI:10.24963/ijcai.2026/568",
+        "doi": "10.24963/ijcai.2026/568",
+        "authors": [
+          "Wei Xiao",
+          "Xue-Feng Huang",
+          "Wei-Jia Shi",
+          "Bao-Kang Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00710",
+      "identity_tokens": [
+        "id:arXiv:2609.00710",
+        "title:predictionassisted pricing and admission for llm apis with stochastic token consumption",
+        "url:https://www.semanticscholar.org/paper/fc2501ae5670b734cb594c40e6a039d30a7ac497"
+      ],
+      "record": {
+        "title": "Prediction-Assisted Pricing and Admission for LLM APIs with Stochastic Token Consumption",
+        "source_url": "https://www.semanticscholar.org/paper/fc2501ae5670b734cb594c40e6a039d30a7ac497",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "An LLM application often sells or internally allocates several service products: a small or premium model, a short or long token cap, and possibly multiple posted prices. The operational decision is not merely which model answers a prompt. A price changes purchase probability, a token cap changes both user value and the tail of resource consumption, and accepted requests compete for shared compute and premium-model capacity. Demand and output length are initially uncertain, while an offline model may provide useful but imperfect predictions. We formulate sequential pricing and admission with stochastic resource consumption. Each arriving request belongs to an observable segment. The platform chooses a product--price pair or makes no offer; purchase, revenue, and resource use are then random. An offline predictor supplies a uniform, validated error radius for every segment--product cell. We propose Prediction-Clipped UCB (PCUCB), which intersects the offline prediction interval with an online confidence interval, evaluates products using resource shadow prices, and reserves a sample-path envelope before commitment. The prior gives a fast start when accurate, while online learning protects the platform when predictions are coarse. The analysis is modular. On a simultaneous confidence event, regret against a buffered fluid benchmark is bounded by a pacing term plus the cumulative diameter of the intersected intervals. For $J$ segment-product cells and prediction radius $\\varepsilon$, this yields \\[ \\widetilde O\\left( \\sqrt{T}+(1+\\bar\\Lambda) \\min\\{T\\varepsilon,\\sqrt{JT}\\} \\right), \\] where $\\bar\\Lambda$ bounds operational shadow prices. Thus the algorithm smoothly interpolates between an almost full-information regime and learning from scratch. Hard feasibility holds on every sample path through reservation envelopes.",
+        "canonical_id": "arXiv:2609.00710",
+        "arxiv_id": "2609.00710",
+        "authors": [
+          "Peter Wong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.hcc.2026.100428",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.hcc.2026.100428",
+        "title:sok towards a usercentric privacypreserving and reliable ai agent via ondevice llm personalization",
+        "url:https://www.semanticscholar.org/paper/497713a2d160150e71305cff4f9fe4046aea8879"
+      ],
+      "record": {
+        "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+        "source_url": "https://www.semanticscholar.org/paper/497713a2d160150e71305cff4f9fe4046aea8879",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+        "doi": "10.1016/j.hcc.2026.100428",
+        "authors": [
+          "Yu Duan",
+          "Jia-Teng Li",
+          "Navya Goli",
+          "Yuma Ishimura",
+          "Yi-Yan Li",
+          "U. R. Tida",
+          "Zhen-Ge Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134973",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134973",
+        "title:load balancing for large language model inference serving a control and learning oriented survey",
+        "url:https://www.semanticscholar.org/paper/6a10b90cf3514d0b49fd40ac155f8610068ef4e0"
+      ],
+      "record": {
+        "title": "Load balancing for large language model inference serving: A control and learning oriented survey",
+        "source_url": "https://www.semanticscholar.org/paper/6a10b90cf3514d0b49fd40ac155f8610068ef4e0",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134973",
+        "doi": "10.1016/j.neucom.2026.134973",
+        "authors": [
+          "Hanbo Ma",
+          "Zhongguo Li",
+          "Ju-Nan Wang",
+          "Chun-Yi Cao",
+          "Dong-Lin Li",
+          "Jun Yang",
+          "Zheng-Tao Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-026-5037-1",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5037-1",
+        "title:towards sociocyberphysical systems a software perspective amid ai breakthroughs",
+        "url:https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459"
+      ],
+      "record": {
+        "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+        "source_url": "https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+        "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+        "doi": "10.1007/s11432-026-5037-1",
+        "authors": [
+          "Assia Belbachir",
+          "M. Blake",
+          "Jin-Song Dong",
+          "S. Dustdar",
+          "Christof Ebert",
+          "C. Ghezzi",
+          "David Harel",
+          "S. Helal",
+          "Chun-Min Hu",
+          "Lin-Peng Huang",
+          "Hans-Arno Jacobsen",
+          "Chang-Jun Jiang",
+          "Zhi Jin",
+          "Jia-Lin Li",
+          "Xuanzhe Liu",
+          "Jian Lu",
+          "Xiao-Xing Ma",
+          "Assaf Marron",
+          "Hong Mei",
+          "B. Nuseibeh",
+          "Xin Peng",
+          "Yuanchun Shi",
+          "Huai-Min Wang",
+          "Ji Wang",
+          "Jian-Min Wang",
+          "Danny Weyns",
+          "James Woodcock",
+          "Tao Xie",
+          "H. Xu",
+          "Mengfei Yang",
+          "Jian-Wei Yin",
+          "Naijun Zhan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.parco.2026.103216",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.parco.2026.103216",
+        "title:smartbatchllm an efficient adaptive hybrid batching strategy for large language model serving",
+        "url:https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c"
+      ],
+      "record": {
+        "title": "SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving",
+        "source_url": "https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.parco.2026.103216",
+        "doi": "10.1016/j.parco.2026.103216",
+        "authors": [
+          "Si-Yuan Sun",
+          "Zhao-Jia Wang",
+          "Han-Shuo Liu",
+          "Jie-Han Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28911",
+      "identity_tokens": [
+        "id:arXiv:2608.28911",
+        "title:semkv semantic mixedprecision kv cache quantization guided by the quality cliff for longcontext llm inference",
+        "url:https://www.semanticscholar.org/paper/d3f7b7e4211810aede1fbf47e1b342071445dacb"
+      ],
+      "record": {
+        "title": "SemKV: Semantic Mixed-Precision KV Cache Quantization Guided by the Quality Cliff for Long-Context LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/d3f7b7e4211810aede1fbf47e1b342071445dacb",
+        "year": 2026,
+        "published": "2026-08-28",
+        "abstract": "The key-value (KV) cache is the dominant memory bottleneck of long-context large language model (LLM) inference, growing linearly with context length. We show that uniform KV quantization on a fractional-bit grid does not degrade gracefully: under a prespecified multi-seed statistical protocol, Llama-3.1-8B-Instruct with an affine quantizer is statistically indistinguishable from FP16 KV down to 2.322 code bits/value and collapses at 2.0 bits - a quality cliff in (2.0, 2.322] that reappears in generation-time quantization and multi-turn dialogue and transfers to Mistral-7B. The cliff reframes importance-aware mixed precision: above it, eight model-internal importance indicators are statistically interchangeable, so the benefit of mixing is grid interpolation, reaching average precisions uniform quantization cannot realize. SemKV preserves every token, ranks tokens by a model-internal score, and assigns two adjacent above-cliff precisions, achieving a measured 6.0x storage reduction with no statistically detectable quality difference from full KV (n=900, three seeds), and outperforming FP16 token pruning granted a 1.5x larger memory budget. Replacing the affine base with a distortion-optimized quantizer (TurboQuant-MSE) lowers the cliff in every protocol tested, raising the no-detectable-loss operating point to 7.9x. The recipe: measure the cliff for the target deployment setting, then interpolate above it.",
+        "canonical_id": "arXiv:2608.28911",
+        "arxiv_id": "2608.28911",
+        "authors": [
+          "D. Lee",
+          "Do-Hyung Kim",
+          "Jae-Hong Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24063",
+      "identity_tokens": [
+        "id:arXiv:2608.24063",
+        "title:viscache visual kv cache pruning for efficient vision large language model inference",
+        "url:https://www.semanticscholar.org/paper/2655c9d3521d8af9a51c602f9cb9bb3a33f74c31"
+      ],
+      "record": {
+        "title": "VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/2655c9d3521d8af9a51c602f9cb9bb3a33f74c31",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "While Vision Large Language Models (VLLMs) have achieved remarkable success in multimodal reasoning, their long-context inference remains prohibitively expensive due to the massive computation and memory overhead of visual Key-Value (KV) caches. Existing KV compression methods often apply uniform pruning across visual tokens and layers, leading to substantial information loss and degraded performance.To address this challenge, we propose \\textbf{VisCache}, a plug-and-play framework for coarse-to-fine \\textbf{Vis}ual KV \\textbf{Cache} pruning without training, which consists of two synergistic stages. First, a lightweight VLM filters temporal redundancy by selectively forwarding semantically informative keyframes. Second, we introduce {PruneKV}, a surgical KV compression algorithm tailored to the attention dynamics of VLLMs. Unlike rigid pruning strategies, PruneKV adopts a parabolic layer-wise budget allocation together with an asymmetric update mechanism that selectively prunes keys while fusing values, thereby preserving critical contextual information. Extensive experiments demonstrate that VisCache substantially improves inference efficiency, achieving up to {2.35$\\times$ speedup} and significant memory reduction while maintaining competitive performance with only {19--28\\%} KV cache retention. VisCache consistently outperforms existing baselines, establishing a new Pareto frontier between efficiency and performance for long-context VLLM inference. Code is available at https://github.com/Wlklk/VisCache",
+        "canonical_id": "arXiv:2608.24063",
+        "arxiv_id": "2608.24063",
+        "authors": [
+          "Lyuke Wang",
+          "Zhuo Li",
+          "Guangxu Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21836",
+      "identity_tokens": [
+        "id:arXiv:2608.21836",
+        "title:llm4llm bridging kernel benchmarks and real deployment via closedloop agentic optimization",
+        "url:https://www.semanticscholar.org/paper/05ce627af947fbb7b08b2b653f62974cce24b1b2"
+      ],
+      "record": {
+        "title": "LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization",
+        "source_url": "https://www.semanticscholar.org/paper/05ce627af947fbb7b08b2b653f62974cce24b1b2",
+        "year": 2026,
+        "published": "2026-08-22",
+        "abstract": "Large language models have become increasingly capable agents for low-level code and kernel optimization, but isolated kernel benchmarks provide only a proxy for the deployment behavior that matters in language-model inference. We identify a benchmark-to-deployment gap: candidate kernels that appear correct and fast in standalone harnesses can exhibit different performance, safety, or phase behavior after integration into a real inference workload. We introduce LLM4LLM, a deployment-aware closed-loop optimization framework that starts from a target inference script, extracts phase-aware optimization tasks, searches with an experience-guided episodic agent, and accepts patches through in-model validation. Across ten language-model inference workloads on A100 and H100 GPUs, LLM4LLM improves end-to-end latency for every evaluated model, achieving 3.91$\\times$/6.98$\\times$ geometric-mean speedups on A100/H100; as supporting kernel-level evidence, it also attains up to 2.745$\\times$ GeoMean speedup on KernelBench Level 2.",
+        "canonical_id": "arXiv:2608.21836",
+        "arxiv_id": "2608.21836",
+        "authors": [
+          "Hui Zeng",
+          "Pengfei Yang",
+          "Yanxin Chen",
+          "Fusong Ju",
+          "Xinran Wei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21034",
+      "identity_tokens": [
+        "id:arXiv:2608.21034",
+        "title:ai infrastructure in space how far can we go",
+        "url:https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7"
+      ],
+      "record": {
+        "title": "AI Infrastructure in Space: How Far Can We Go?",
+        "source_url": "https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7",
+        "year": 2026,
+        "published": "2026-08-21",
+        "abstract": "Satellites are becoming programmable computing platforms capable of running increasingly demanding AI workloads. This shift raises a systems problem: how can AI services remain deployable, manageable, and recoverable after launch when compute capacity, connectivity, energy, and thermal headroom vary over orbital time? This paper develops a systems vision for AI infrastructure in space. We define it as the systems layer that manages AI capabilities across spacecraft, orbital networks, ground stations, and cloud backends, while treating orbital and physical state as part of the resource model. We synthesize relevant foundations from terrestrial AI infrastructure, satellite networking, and satellite edge computing, and examine the physical constraints that directly shape system design. We further ground this vision in three in-orbit case studies spanning the node, platform, and service levels. Telemetry from BUPT-1 satellite shows that usable compute capacity is bounded by thermal and energy envelopes. SateLight on BUPT-2 satellite reduces application-update transmission latency by 56.54% on average and up to 91.18%, with 100% update correctness. A stateful VLM serving case further shows that thermal interruptions make execution-state recovery a first-class systems problem. These observations motivate a research agenda for space-native resource management, lifecycle support, and sustained AI service across space and ground.",
+        "canonical_id": "arXiv:2608.21034",
+        "arxiv_id": "2608.21034",
+        "authors": [
+          "Qing Li",
+          "Qi-Yang Zhang",
+          "Daliang Xu",
+          "Tianze Huang",
+          "Ding-Ge Zhang",
+          "Yihao Zhao",
+          "Xiaolong Huang",
+          "Jin-Feng Wen",
+          "Xiameng Hu",
+          "Tao Qi",
+          "Mengwei Xu",
+          "Shang-Guang Wang",
+          "Xuazhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19920",
+      "identity_tokens": [
+        "id:arXiv:2608.19920",
+        "title:learning how to forget finetuning for longcontext sparse attention",
+        "url:https://www.semanticscholar.org/paper/8d068707668fc4d27c281f24e5bcc5c3be03cef9"
+      ],
+      "record": {
+        "title": "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+        "source_url": "https://www.semanticscholar.org/paper/8d068707668fc4d27c281f24e5bcc5c3be03cef9",
+        "year": 2026,
+        "published": "2026-08-20",
+        "abstract": "A lot of prior work addressed key-value (KV) cache selection and compression by sparse attention to enable long-context inference for transformer language models without excessive hardware budgets. We provide a new method for fine-tuning models with sparse attention. It works for any KV cache policy, runs on a moderate hardware budget (e.g., a single Nvidia A100 GPU with 40 GB RAM), and allows the model to co-adapt with the policy, often outperforming models trained with exact attention (sequence parallelism). We also provide an efficient implementation of H2O sparse attention (the leading policy in our experiments) with dedicated scaled dot product attention kernel support. KeysAndValues (https://github.com/awslabs/keys_values), a new open source library for long-context inference and fine-tuning, provides easy-to-use and performant code for all methods discussed here.",
+        "canonical_id": "arXiv:2608.19920",
+        "arxiv_id": "2608.19920",
+        "authors": [
+          "Matthias W. Seeger",
+          "Zeyu Zhang",
+          "Vihang Patil",
+          "Konstantinos Benidis",
+          "Sebastian Schelter"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3829347",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3829347",
+        "title:dynamoserve a distributed tiered memory system for multitenant llm serving",
+        "url:https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241"
+      ],
+      "record": {
+        "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241",
+        "year": 2026,
+        "published": "2026-08-17",
+        "abstract": "The rapid adoption of large language models (LLMs) has increased the need for efficient multi-tenant inference systems that maximize GPU utilization. However, existing frameworks struggle to scale due to the high memory demands of model weights and key-value (KV) caches. We present DynamoServe, a multi-tenant LLM serving framework that addresses these challenges through three key innovations: (1) leveraging stranded GPU memory to offload model weights and KV caches, (2) mitigating resource fragmentation in multi-workload environments, and (3) improving memory locality through coordinated data placement and demand-driven weight migration across GPUs. Together, these techniques enable high-throughput, low-latency inference. Experiments on state-of-the-art models show that DynamoServe significantly improves memory efficiency without sacrificing latency.",
+        "canonical_id": "DOI:10.1145/3789240.3829347",
+        "doi": "10.1145/3789240.3829347",
+        "authors": [
+          "Diman Zad Tootaghaj",
+          "Khaled Diab",
+          "Bob Lantz",
+          "Hanjiang Wu",
+          "K. Ramakrishnan",
+          "Md Ashfaqur Rahaman",
+          "Ryan Stutsman",
+          "Puneet Sharma",
+          "Tushar Krishna"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:02b7e048aa6e430520b27805cee954c21e6d49d0c229b56b715086c77257417a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
