@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T04:05:44+00:00",
-  "last_run_key": "manual-stress-deep-2026-09-20",
-  "last_round": "refcuration-stress-offset4000-3",
+  "updated_at": "2026-09-20T10:19:13+00:00",
+  "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+  "last_round": "adaptive-forward-citation-seed-2402.14800-r1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T03:00:00+09:00",
-      "round": "specialist-moe-io-2",
-      "axis": "MoE expert I/O scheduling・CPU/GPU協調・spatio-temporal prefetch",
-      "query_summary": "前roundからMoEのデータ移動へ軸を分離し、diffusion MoEのexpert refresh、AMX CPU-GPU co-execution、時空間expert prefetchを評価した。canonical IDをGitHub正本検索で再確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "CXL/NVMe/JBOFを使う共有KV/context tierとGPU-direct storage、次にpower-aware disaggregated servingへ移る",
-      "source_submission": "work-queue/submissions/20260916T0312JST-discovery-specialist-moe-io-2.json"
-    },
     {
       "run_key": "2026-09-16T03:00:00+09:00",
       "round": "specialist-cxl-context-3",
@@ -7694,6 +7679,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "The tail remains productive; continue structured-reference curation rather than switching to ordinary search.",
       "source_submission": "work-queue/submissions/refcuration-stress-final-drain-2000-4000-20260920.json"
+    },
+    {
+      "run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+      "round": "adaptive-forward-citation-seed-2402.14800-r1",
+      "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+      "query_summary": "Adaptive Expert Computation / Compression の代表論文 arXiv:2402.14800 の Semantic Scholar citations 固定ソースを schema v3 precheck で2ページ走査。raw 160件から既知重複等を除外して未収録100件を得て、新着かつ系統への直接性が高い5件を選定した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次ラウンドは同系統の別seed論文をforward citationで走査し、shared identity snapshotで今回候補との重複を除外する。",
+      "source_submission": "work-queue/submissions/manual-user-adaptive-forward-citation-20260920-r1.json"
     }
   ],
   "axes": {
@@ -14607,6 +14610,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0375,
       "next_axis_hint": "The tail remains productive; continue structured-reference curation rather than switching to ordinary search."
+    },
+    "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800": {
+      "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "次ラウンドは同系統の別seed論文をforward citationで走査し、shared identity snapshotで今回候補との重複を除外する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -14886,6 +14902,29 @@
       "cooldown": false,
       "last_run_key": "2026-09-20T01:58:54+09:00",
       "last_round": "specialist-moe-offload-openalex-02"
+    },
+    "window-4ab0752a8a2ef848719e": {
+      "topic": "adaptive expert computation / compression lineage forward citations",
+      "source": "semantic scholar citations endpoint",
+      "date_range": "through 2026-09-20",
+      "category": "adaptive expert computation / compression",
+      "citation_direction": "forward",
+      "query_family": "lineage-scoped-forward-citation",
+      "search_window_key": "window-4ab0752a8a2ef848719e",
+      "scan_count": 1,
+      "raw_result_count": 160,
+      "unseen_result_count": 100,
+      "duplicate_filtered_count": 24,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 5,
+      "last_position": "2 pages",
+      "unseen_rate": 0.625,
+      "duplicate_rate": 0.15,
+      "candidate_acceptance_rate": 0.25,
+      "cooldown": false,
+      "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+      "last_round": "adaptive-forward-citation-seed-2402.14800-r1"
     }
   },
   "recent_search_windows": [
@@ -15140,6 +15179,27 @@
       "duplicate_rate": 0.5,
       "candidate_acceptance_rate": 1.0,
       "last_position": "3 cursor pages"
+    },
+    {
+      "topic": "adaptive expert computation / compression lineage forward citations",
+      "source": "semantic scholar citations endpoint",
+      "date_range": "through 2026-09-20",
+      "category": "adaptive expert computation / compression",
+      "citation_direction": "forward",
+      "query_family": "lineage-scoped-forward-citation",
+      "search_window_key": "window-4ab0752a8a2ef848719e",
+      "run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+      "round": "adaptive-forward-citation-seed-2402.14800-r1",
+      "raw_result_count": 160,
+      "unseen_result_count": 100,
+      "duplicate_filtered_count": 24,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 5,
+      "unseen_rate": 0.625,
+      "duplicate_rate": 0.15,
+      "candidate_acceptance_rate": 0.25,
+      "last_position": "2 pages"
     }
   ],
   "search_window_history_limit": 96,

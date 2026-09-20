@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-e6e95e05f07deb20",
+  "type": "research",
+  "parent_job_id": "job-5b45b987a6b3d98b",
+  "priority": 96,
+  "canonical_id": "arXiv:2605.29350",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "ConMoE: Expert-Pool Consolidation via Prototype Reassignment for MoE Compression",
+  "source_url": "https://arxiv.org/abs/2605.29350",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.29350-conmoe-prototype-reassignment-compression.md",
+  "selection_reason": "ConMoEはexpert pruning/weight mergingではなく、保持expertをprototypeとして元expert参照を決定的に再割当するtraining-free compression。router interfaceを維持したままexpert poolを縮小し、DeepSeek-MoE-16Bで25%/50% routed-expert reduction時に強いbaselineを上回るため、Compression系統の設計差分として有用。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:19:13+00:00"
+}

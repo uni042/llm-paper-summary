@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-901c881ed2cc963f",
+  "type": "research",
+  "parent_job_id": "job-5b45b987a6b3d98b",
+  "priority": 98,
+  "canonical_id": "arXiv:2608.26650",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs",
+  "source_url": "https://arxiv.org/abs/2608.26650",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+  "selection_reason": "MetaNetはtask-conditioned support-set controllerで層ごとのexpert retention thresholdとrouting biasを予測し、固定kをタスク条件付きに変える。DeepSeek-MoE-16B-Chatで平均active expertsを40%削減しつつMMLUを同等以上に保つ設定を示し、Adaptive Expert Computationに直接対応する。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:19:13+00:00"
+}

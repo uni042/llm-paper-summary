@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-89e4b35d6854b9b6",
+  "type": "research",
+  "parent_job_id": "job-5b45b987a6b3d98b",
+  "priority": 99,
+  "canonical_id": "arXiv:2609.00575",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs",
+  "source_url": "https://arxiv.org/abs/2609.00575",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.00575-parser-residual-sparsification-output-importance.md",
+  "selection_reason": "PARSERはexpert残差の個別行列誤差ではなくexpert出力誤差を圧縮目的に置き換えるMoE圧縮法。Qwen/DeepSeekで同一peak memory reduction時の非圧縮モデルとのaccuracy gapを既存法比1.41x/1.44x縮小しており、Compression系統を直接更新する。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:19:13+00:00"
+}
