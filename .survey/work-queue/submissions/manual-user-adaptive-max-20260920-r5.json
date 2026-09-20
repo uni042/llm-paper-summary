@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r5",
+    "summary": "Adaptive Expert Computation / Compression を厚くするため、Merge Then Compressの被引用側からexpert pruning/compressionの強候補を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.08601",
+      "title": "It Takes a MAESTRO To Prune Bad Experts",
+      "source_url": "https://arxiv.org/abs/2607.08601",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
+      "priority": 98,
+      "reason": "Markov chainでcross-layer expert activation依存をモデル化するglobal structured pruning。"
+    },
+    {
+      "canonical_id": "arXiv:2606.15716",
+      "title": "How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle",
+      "source_url": "https://arxiv.org/abs/2606.15716",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.15716-one-shot-expert-pruning-scoring.md",
+      "priority": 97,
+      "reason": "routing frequency・gate weight・activation strengthを統一しone-shot pruning criterionの選択原理を与える。"
+    },
+    {
+      "canonical_id": "arXiv:2606.05538",
+      "title": "Less is MoE: Trimming Experts in Domain-Specialist Language Models",
+      "source_url": "https://arxiv.org/abs/2606.05538",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.05538-less-is-moe-fisher-trimming.md",
+      "priority": 96,
+      "reason": "expert単位ではなくFFN intermediate dimensionのFisher importanceで圧縮する中間粒度手法。"
+    },
+    {
+      "canonical_id": "arXiv:2606.09885",
+      "title": "TENP: Trapezoidal Expert Neuron Pruning For Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2606.09885",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.09885-tenp-trapezoidal-expert-neuron-pruning.md",
+      "priority": 96,
+      "reason": "重要expertを残しつつ低重要expert内部をstructured neuron pruningするtrapezoidal圧縮。"
+    },
+    {
+      "canonical_id": "arXiv:2605.28207",
+      "title": "Pruning and Distilling Mixture-of-Experts into Dense Language Models",
+      "source_url": "https://arxiv.org/abs/2605.28207",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.28207-prune-distill-moe-to-dense.md",
+      "priority": 96,
+      "reason": "trained MoEをexpert選択・grouping・dense FFN化・distillationで標準dense modelへ変換する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920-merge-compress",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920-merge-compress.json",
+    "receipt": "sha256:b625c9595029007fb123f307419f39ca6e7431f522462fa2fa8f964862f60877"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-max-2026-09-20",
+    "round": "adaptive-max-r5-merge-forward",
+    "axis": "forward citations of Merge Then Compress for expert pruning/compression",
+    "query_summary": "Merge Then Compress forward citationsの未収録50件からpruning/compression設計を補完する5件を選定。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "残るcompression候補と別seedへ進む",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "expert pruning and compression",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2310.01334",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 100,
+        "unseen_result_count": 50,
+        "duplicate_filtered_count": 14,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 5,
+        "position": "1 page"
+      }
+    ]
+  }
+}
