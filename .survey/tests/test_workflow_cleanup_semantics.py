@@ -13,12 +13,10 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
 
         survey = (ROOT / ".survey/scripts/survey.py").read_text(encoding="utf-8")
         template = (ROOT / ".survey/templates/paper.md").read_text(encoding="utf-8")
-        queue = (ROOT / ".survey/docs/survey-workflow/queue-v10.md").read_text(encoding="utf-8")
         self.assertIn("for family in PAPER_FAMILIES", survey)
         self.assertIn("citation_counts_from_view_records", survey)
         for key in ("references:", "references_checked_at:", "references_source:", "references_total:"):
             self.assertIn(key, template)
-            self.assertIn(key.rstrip(":"), queue)
 
     def test_citation_backfill_configures_commit_identity(self):
         workflow = (ROOT / ".github/workflows/citation-graph-backfill.yml").read_text(encoding="utf-8")
@@ -55,7 +53,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn("overflow research mode", router)
         self.assertIn("schema_version: 3", router)
         self.assertIn("target_unseen: 20", router)
-        self.assertIn("実装リファレンス", queue)
+        self.assertIn("これはワーカー実行手順ではない", queue)
+        self.assertIn("実装の所在だけ", queue)
 
         retired_worker_surfaces = [
             ".survey/docs/survey-workflow/always-on-worker.md",
