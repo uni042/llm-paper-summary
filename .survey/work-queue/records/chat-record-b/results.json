@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6500850523776f2b702f4a6d","job_id":"job-research-954a443cf32500d8","data":{"overview":"K=4、batch 1でChinchilla 70Bを評価し、XSum nucleusは14.1→7.52ms/token（1.92倍）、XSum greedyは14.1→7.00ms/token（2.01倍）、HumanEval nucleusは14.1→5.73ms/token（2.46倍）へ高速化した。下流指標はXSum ROUGE-2 0.112対0.114、greedy 0.157対0.156、HumanEval 45.1%対47.0%で同等。","key_results":[{"metric":"XSum nucleus平均token時間","value":"7.52ms/token、1.92倍高速化","baseline":"ArS 14.1ms/token","condition":"K=4, p=0.8, batch 1, 11,305 sequences","interpretation":"要約taskでも約2倍のlossless latency reductionを達成。"},{"metric":"XSum greedy平均token時間","value":"7.00ms/token、2.01倍高速化","baseline":"ArS 14.1ms/token","condition":"K=4, greedy, batch 1","interpretation":"確率samplingだけでなくgreedyでも有効で、数値差による系列分岐があってもROUGEは同等。"},{"metric":"HumanEval nucleus平均token時間","value":"5.73ms/token、2.46倍高速化","baseline":"ArS 14.1ms/token","condition":"K=4, p=0.95, temperature 0.8, 16,400 samples","interpretation":"codeの予測容易な共通部分系列などでdraft受理率が高く、最大のspeedupを得た。"},{"metric":"下流品質","value":"XSum 0.112→0.114、greedy 0.157→0.156、HumanEval 45.1%→47.0%","baseline":"ArS→SpS","condition":"同一benchmark設定","interpretation":"理論上同一のtarget分布を、実験上も同等task metricとして確認。"}],"negative_results":"Kを増やすほどtarget call回数は減る一方、draft callとscoring時間が増え、後段tokenは前段受理に依存するため受理効率が低下する。XSum nucleusではK=3付近が最適で、それ以上では平均speedupがplateauまたは悪化する。K増加は系列生成時間のvarianceも増やし、P90/P99 latency重視では不利になり得る。","interpretation":"speedupはdraftの速さだけでなくtargetとの分布一致度に依存し、domain/decoding設定ごとに最適Kが異なる。HumanEvalではコードの定型部分とtemperatureによるlogit鋭化が高い受理率に寄与したと著者らは推測する。","quality_impact":"修正棄却samplingはtarget分布をhardware numerics内で保存するため、原理上sample qualityを変えない。実測task metricでも差は統計的・数値的揺らぎの範囲と解釈されている。"},"reservation":{"claim_id":"claim-6500850523776f2b702f4a6d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-22a85da9fa40ba86114440e5",
+  "job_id": "job-research-7462825d21914fcd",
+  "data": {
+    "overview": "A100 attention benchmarkでFlashAttention-2は初代FlashAttention比1.7〜3.0倍、Triton版比1.3〜2.5倍、standard attention比3〜10倍となり、最大230 TFLOPs/s、理論FP16/BF16性能の73%へ到達した。GPT 1.3B/2.7Bの8×A100学習では初代FlashAttention比最大1.3倍、非FlashAttention baseline比最大2.8倍で、225 TFLOPs/s/GPU・72% model FLOPs utilizationを達成した。",
+    "key_results": [
+      {
+        "metric": "attention kernel speedup",
+        "value": "FlashAttention比1.7〜3.0×",
+        "baseline": "FlashAttention",
+        "condition": "A100 80GB、seq 512〜16K、head dim 64/128、causal有無",
+        "interpretation": "I/O最適化後に残るparallelism/work partitioningが大きな性能余地だった。"
+      },
+      {
+        "metric": "A100 kernel throughput",
+        "value": "最大230 TFLOPs/s、理論値73%",
+        "baseline": "A100 FP16/BF16 theoretical 312 TFLOPs/s",
+        "condition": "attention microbenchmark",
+        "interpretation": "exact attentionがGEMMに近いGPU効率へ到達する。"
+      },
+      {
+        "metric": "standard attention比較",
+        "value": "最大10×高速",
+        "baseline": "PyTorch standard attention",
+        "condition": "A100 microbenchmark",
+        "interpretation": "N² intermediate HBM traffic削減と実行配置改善の合成効果。"
+      },
+      {
+        "metric": "E2E GPT training",
+        "value": "最大225 TFLOPs/s/GPU、72% MFU",
+        "baseline": "FlashAttention / no-FlashAttention",
+        "condition": "GPT 1.3B/2.7B、context 2K/8K、8×A100",
+        "interpretation": "kernel高速化がattention-heavyな8K contextでE2Eへ大きく反映される。"
+      },
+      {
+        "metric": "E2E speedup",
+        "value": "FlashAttention比最大1.3×、baseline比最大2.8×",
+        "baseline": "FlashAttention / no FlashAttention",
+        "condition": "8×A100 GPT training",
+        "interpretation": "attention以外のmodel計算が残るためkernel単体2倍前後よりE2E利得は小さい。"
+      },
+      {
+        "metric": "H100参考性能",
+        "value": "最大335 TFLOPs/s",
+        "baseline": "same implementation",
+        "condition": "H100、新TMA/4th-gen Tensor Core専用最適化なし",
+        "interpretation": "移植だけでも高速だがH100固有機能の余地を残す。"
+      }
+    ],
+    "negative_results": "block sizeを大きくするとshared-memory trafficは減るがregister/shared-memory消費が増え、register spillingや容量超過で遅くなるため64/128の少数候補をhead dimensionごとに手動tuningする。H100固有命令、FP8、AMDは未最適化。長系列で計算量O(N²d)自体は変わらず、アルゴリズム的なsubquadratic attentionではない。",
+    "interpretation": "初代FlashAttentionでHBM trafficを削った後のボトルネックが、非Tensor-Core FLOPs、SM occupancy、warp間shared-memory通信へ移ったことを示す。FlashAttention-2は同じexact tilingを保ったまま、その新しいボトルネックに合わせてkernel execution mappingを再設計したため、追加の約2倍高速化を得る。",
+    "quality_impact": "standard softmax attentionと数学的に同じoutputとgradientを返し、近似・疎化・量子化を導入しない。したがってモデル品質への交換条件はなく、性能・実装複雑性・hardware tuningが主要な論点である。"
+  },
+  "reservation": {
+    "claim_id": "claim-22a85da9fa40ba86114440e5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

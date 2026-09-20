@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6500850523776f2b702f4a6d","job_id":"job-research-954a443cf32500d8","data":{"hardware":"Chinchilla 70Bは研究用serving構成として16 TPU v4で14.1ms/token。ドラフトは4B、8層で同じ16 TPU v4上に最適化し1.8ms/token。比較説明では7Bモデルは4 TPU v4で約5ms/tokenが最適で、16 TPUへ増やすと通信overheadで遅くなる。","software":"Chinchilla 70B targetと同一tokenizer/datasetで訓練した4B draft。Megatron型model parallelismを想定し、nucleus、greedy、temperature samplingを評価。公開code repositoryは本文に記載なし。","methodology":"batch size 1、主にK=4で通常自己回帰sampling（ArS）と投機的サンプリング（SpS）を比較。XSumは1-shot、最大長128、11,305系列でnucleus p=0.8とgreedyを評価。HumanEvalは100-shot、16,400 sample、最大長512、nucleus p=0.95、temperature 0.8。TPU profileからloop時間を測り、各speculative loopの生成token数をlogして平均speedup等を算出。Kを変えた受理率・loop時間・系列生成時間の感度も測定。","scope":"低batch latencyに焦点を置き、throughput-oriented large batchingは主対象外。評価targetはChinchilla 70B、draftは専用4Bモデル、taskはXSumとHumanEvalであり、他のmodel family、GPU、production trafficでの一般化は直接検証していない。"},"reservation":{"claim_id":"claim-6500850523776f2b702f4a6d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-22a85da9fa40ba86114440e5",
+  "job_id": "job-research-7462825d21914fcd",
+  "data": {
+    "hardware": "attention microbenchmarkはNVIDIA A100 80GB SXM4。H100でも新機能TMA/4th-gen Tensor Coresを使わない同実装を参考測定する。E2E GPT trainingは8×A100 80GB SXM。",
+    "software": "FlashAttention-2 CUDA kernelをPyTorch standard attention、初代FlashAttention、xFormers/CUTLASS系、Triton FlashAttentionと比較する。公式実装はDao-AILab/flash-attention。",
+    "methodology": "attention benchmarkはsequence 512〜16K、総token数16Kになるようbatch調整、hidden dimension 2048、head dimension 64/128、causal有無でforward/backwardを測定する。E2EはGPT-style 1.3B/2.7B、context 2K/8Kを8 A100で学習しTFLOPs/s/GPUとmodel FLOPs utilizationを比較する。",
+    "scope": "主評価はtraining forward/backward kernelで、autoregressive decode専用KV-cache kernelのserving latencyは直接評価しない。A100向けにblock sizeを手動tuningし、H100は新命令未利用。head dimensionsは主に64/128で、将来のFP8、AMD等はfuture work。"
+  },
+  "reservation": {
+    "claim_id": "claim-22a85da9fa40ba86114440e5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

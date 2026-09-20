@@ -1,1 +1,56 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6500850523776f2b702f4a6d","job_id":"job-research-954a443cf32500d8","data":{"canonical_id":"DOI:10.48550/arxiv.2302.01318","arxiv_id":"2302.01318","doi":"10.48550/arXiv.2302.01318","openreview_id":null,"title":"Accelerating Large Language Model Decoding with Speculative Sampling","summary":"投機的サンプリングは、小型の下書きモデルで複数トークンを先に生成し、大型の対象モデルで短い継続を一括採点して、修正棄却サンプリングにより対象モデルの出力分布を数値誤差の範囲で厳密に復元する。700億パラメータのChinchillaを16基のTPU v4で評価し、XSumで約1.9～2.0倍、HumanEvalで2.46倍のデコード高速化を、モデル改変やサンプル品質低下なしに示した。","list_summary":"小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。","authors":["Charlie Chen","Sebastian Borgeaud","Geoffrey Irving","Jean-Baptiste Lespiau","Laurent Sifre","John Jumper"],"published":"2023-02-02","publication":"arXiv:2302.01318","publication_type":"Preprint","publication_status":"arXiv preprint","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"lineage":"投機的デコード / 分布保存型デコード高速化","topics":["投機的サンプリング","投機的デコード","修正棄却サンプリング","大規模言語モデル推論高速化","低バッチ遅延"],"importance":"投機的デコードの基礎論文の一つで、Leviathanらと独立・同時期に、分布保存の棄却サンプリングと大規模分散700億パラメータモデルでの実測を示した。","hardware_evaluation":"Chinchilla 70Bと4Bドラフトを主に16基のTPU v4で実行。ドラフトは同じ構成で1.8ミリ秒/トークン、Chinchillaは14.1ミリ秒/トークン。","quality_effect":"理論上は対象モデルの出力分布をハードウェア数値誤差内で保存する。XSumのROUGE-2とHumanEvalの合格率でも通常自己回帰と投機的サンプリングが同等であることを実証。","source":"https://arxiv.org/abs/2302.01318","sources":["https://arxiv.org/abs/2302.01318","https://ar5iv.labs.arxiv.org/html/2302.01318"],"implementation":"アルゴリズム2として完全な手順を提示。40億パラメータ・8層の幅広ドラフトモデルをChinchillaと同一のトークナイザ・データセットで訓練し、同一16基TPU v4構成で実行。","code":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":27},"reservation":{"claim_id":"claim-6500850523776f2b702f4a6d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-22a85da9fa40ba86114440e5",
+  "job_id": "job-research-7462825d21914fcd",
+  "data": {
+    "canonical_id": "arXiv:2307.08691",
+    "arxiv_id": "2307.08691",
+    "doi": "10.48550/arXiv.2307.08691",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "summary": "FlashAttention-2は、正確なattentionをHBM/SRAM間のI/O削減で高速化したFlashAttentionを、非行列積演算削減、系列長方向のthread-block並列化、warp間shared-memory通信削減で再設計するGPU attention kernelである。A100でFlashAttention比1.7〜3.0倍、最大230 TFLOPs/s（理論値73%）、GPT学習で最大225 TFLOPs/s/GPU（72% MFU）を達成する。",
+    "list_summary": "FlashAttentionのonline-softmax tilingを保ちつつ非GEMM演算・block/warp分割を再設計し、A100で最大73%理論FLOPsとFlashAttention比約2倍を達成する。",
+    "authors": [
+      "Tri Dao"
+    ],
+    "authors_affiliations": "Princeton University; Stanford University",
+    "published": "2023-07-17",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint (v1, 2023-07-17)",
+    "lineage": "exact attention / IO-aware attention / GPU kernel optimization / FlashAttention",
+    "topics": [
+      "注意カーネル",
+      "GPU並列化",
+      "ワーク分割",
+      "オンラインsoftmax",
+      "長文脈"
+    ],
+    "importance": "FlashAttentionのI/O最適性だけでは残っていたGPU occupancyとwarp通信の非効率を解消し、exact attentionをGEMMに近い実効効率へ押し上げた。",
+    "implementation": "CUDA実装をflash-attentionリポジトリで公開。MHAに加えMQA/GQA、causal mask、forward/backwardを扱う。",
+    "hardware_evaluation": "A100 80GB SXM4を主要評価、H100でも特殊命令未使用の同実装を測定。E2Eは8×A100でGPT 1.3B/2.7B。",
+    "quality_effect": "近似なしでstandard attentionと同じ出力を計算する。性能のみを変更し、モデル品質の交換条件はない。",
+    "source": "https://arxiv.org/abs/2307.08691",
+    "sources": [
+      "https://arxiv.org/abs/2307.08691",
+      "https://arxiv.org/html/2307.08691v1"
+    ],
+    "code": "https://github.com/Dao-AILab/flash-attention",
+    "last_checked": "2026-09-20",
+    "references": [],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary-reference-section",
+    "references_total": 20
+  },
+  "reservation": {
+    "claim_id": "claim-22a85da9fa40ba86114440e5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

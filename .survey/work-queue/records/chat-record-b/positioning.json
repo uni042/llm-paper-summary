@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6500850523776f2b702f4a6d","job_id":"job-research-954a443cf32500d8","data":{"limitations":"効果はdraft-target一致度、draft latency、Kに強く依存し、Kを大きくすれば単調に速くなるわけではない。評価はbatch size 1のlatency-critical setting、Chinchilla 70Bと専用4B draft、16 TPU v4、XSum/HumanEvalに限定される。高batch throughput、GPU実装、production multi-tenant servingは未評価。専用draftを訓練する追加costがあり、公開codeは本文に示されない。","differences":"block parallel decodingやaggressive decodingはgreedy限定、分布bias、別modality等の制約があった。Leviathanらのspeculative decodingとは独立・同時期でcore ideaは同じだが、本論文は大規模分散serving、同一hardware向けdraft aspect ratio、追加1 token生成などの実装最適化を強調する。量子化やmulti-query attentionと異なりtarget weight/architectureを変更せず、既存sampling分布を保存する。","implementation_status":"DeepMind内部のChinchilla 70Bと4B draftを16 TPU v4上で実装・評価。アルゴリズムは論文に擬似codeと証明を掲載するが、公式公開repositoryは確認できない。","research_positioning":"現在の投機的デコード系の基礎。後続研究のdraft model設計、multi-token prediction、tree speculation、serving scheduler統合などが最適化する中心trade-off――draft cost、acceptance rate、lookahead K、target parallel scoring――を明確に定式化した。特に『target distributionを変えずに複数token/target callを得る』ことが、近似推論ではなくlossless systems accelerationとして重要。"},"reservation":{"claim_id":"claim-6500850523776f2b702f4a6d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-22a85da9fa40ba86114440e5",
+  "job_id": "job-research-7462825d21914fcd",
+  "data": {
+    "limitations": "計算量は依然O(N²d)で、長文脈のattention FLOPsそのものを削減する方式ではない。主要tuningはA100とhead dimension 64/128を中心に行われ、block sizeは手動選択である。H100ではTMA、4th-generation Tensor Cores、FP8を使っておらず、著者自身が追加1.5〜2倍の最適化余地を見込む。論文のE2E評価はtraining中心で、LLM servingのdecode latency、KV-cache管理、continuous batchingとの相互作用は直接評価されていない。",
+    "differences": "Standard attentionはS=QK^TとP=softmax(S)をN×NでHBMへmaterializeする。初代FlashAttentionはtilingとonline softmaxでこれを避け、HBM I/Oとmemoryを大幅削減した。FlashAttention-2はこのI/O-aware algorithmを置き換えるのではなく、I/O削減後に顕在化したGPU execution inefficiencyを対象にする。具体的にはsequence方向thread-block parallelismとQ-split warp partitioningが新しく、初代のbatch/head parallelismとsplit-K reductionを改善する。近似attentionやsparse attentionと異なり、計算するattention自体はexactである。",
+    "implementation_status": "公式CUDA実装がDao-AILab/flash-attentionで公開され、論文時点でcausal attention、forward/backward、MQA/GQAを扱う。A100で詳細benchmarkし、H100でも同一実装を測定している。arXiv v1（2023-07-17）のプレプリントで、実装は後続フレームワークに広く統合可能なkernel libraryとして提供される。",
+    "research_positioning": "長文脈attention最適化の中で、FlashAttentionがmemory hierarchy/I/O complexityを主題にしたのに対し、FlashAttention-2はGPU scheduler hierarchyに焦点を一段深めた仕事である。HBM↔SRAM、thread blocks↔SM、warps↔shared memoryという複数階層をそれぞれ最適化し、exact attentionのhardware efficiencyをGEMMへ近づける。LLM inferenceではprefill attention高速化の基盤kernelとして重要だが、decodeではKV-cacheアクセスと小query形状が異なるためserving-specific kernel研究とは区別される。"
+  },
+  "reservation": {
+    "claim_id": "claim-22a85da9fa40ba86114440e5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
