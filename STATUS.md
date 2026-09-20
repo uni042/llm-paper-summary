@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:10:36 JST**
+> 自動生成: **2026-09-20 12:11:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **6** | **6** | **0** | **1** | **0** | — |
+| Research | **14** | **7** | **6** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **14** | **7** | **7** | **0** | **1** | **0** | **5** |
+| 合計 | **14** | **8** | **7** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **6件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **7件** / 検証済み成功: **6件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
 - **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
   - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
@@ -138,6 +138,7 @@
   - result: `.survey/work-queue/results/research/attempt-6500850523776f2b702f4a6d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6500850523776f2b702f4a6d.json`
   - paper: `papers/inference/05-speculative-decoding/2023-2302.01318-speculative-sampling.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-6d86d84ba0b861b36b84973e.json` (job `job-research-8b52cc53189781e3`)
 - **成功** `arXiv:2006.16668` — GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding
   - job: `.survey/work-queue/jobs/job-research-710ff1d6feeafd76.json`
   - result: `.survey/work-queue/results/research/attempt-85841135c44788f4cd9b5a81.json` (`ok=true`)
@@ -215,8 +216,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **684** |
-| └ Research | **523** |
+| 成功result未照合のimmutable submission | **685** |
+| └ Research | **524** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
