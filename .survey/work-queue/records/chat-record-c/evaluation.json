@@ -1,5 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6f2e6a2b41a89ff181e07ec0","job_id":"job-research-159e5ee7f39d28f8",
-  "data":{"hardware":"S1: DeepSeek-MoE-16B 31GBをRTX 3080 Ti 12GB、S2: XVERSE-MoE-A4.2B 49GBをRTX 4060 Ti 16GB、S3: Qwen2-57B-A14B 107GBをNVIDIA A6000 48GBで評価する。GPUへ全専門家が収まらずCPUメモリとPCIeを使う端末条件を意図的に作る。","software":"比較対象にはllama.cpp、DeepSpeed、MoE-Infinity、HybriMoE等の一般/専用オフロード方式を含む。OpenCompassの基本プロンプトを用い、各データセットから約1000点を抽出する。","methodology":"端末で典型的な低バッチを重視し、バッチ1と3の出力トークン間時間（Time Per Output Token; TPOT）を主指標にする。入力処理では先頭トークンまでの時間（Time To First Token; TTFT）も測る。GPU専門家キャッシュ率、先読み精度、PCIe時間、CPU時間を分解し、キャッシュ追い出し、専門家置換、先読み、CPU負荷分散を段階的に追加するアブレーションを行う。品質はGaokao、WiC、TriviaQA、RACE-middle、GSM8K、MT-Bench、MMLU、HumanEval等で元モデルと比較し、αを0〜0.6へ変えて置換率と品質の関係を測る。","scope":"評価は三つの細粒度MoEと三GPUに限られ、主眼は低バッチ端末推論である。置換の安全性はルータ得点が重要度を適切に表し、低得点専門家が冗長であることに依存する。モデルやワークロードで適切なαが異なるため、固定しきい値を普遍的に使えるとは限らない。"},
-  "reservation":{"claim_id":"claim-6f2e6a2b41a89ff181e07ec0","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-1b08fd001736973847b9f640",
+  "job_id": "job-research-69e7666b88522bc6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1b08fd001736973847b9f640",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
