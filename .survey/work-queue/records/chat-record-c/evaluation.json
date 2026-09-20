@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0a552544ab2dcbe33abaf790",
+  "attempt_id": "attempt-f3691cd828efd3171a54ab5c",
   "job_id": "job-research-e203c47aded67247",
   "data": {
     "hardware": "LLM微調整はOLMoE-7B-A1BとQwen1.5-14B-A2.7Bを8基のNVIDIA A100で実施。182MパラメータのMoE事前学習も8基のNVIDIA A100を使用し、The Pile約300億トークン・60,000ステップで学習する。推論効率測定はOLMoEでhuggingface.generate()とKV Cacheを有効化して比較する。",
@@ -11,7 +11,7 @@
     "scope": "実機A100上の学習・推論測定を含み、単なるFLOPs推定ではない。一方、実験対象は主にOLMoE、Qwen1.5-MoEと182M規模の自前MoEであり、密モデルには適用できない。推論測定はHugging Face生成経路で、専用高性能サービング基盤や大規模分散推論での速度・負荷分散は直接評価していない。"
   },
   "reservation": {
-    "claim_id": "claim-0a552544ab2dcbe33abaf790",
+    "claim_id": "claim-f3691cd828efd3171a54ab5c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

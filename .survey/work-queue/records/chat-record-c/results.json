@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-0a552544ab2dcbe33abaf790",
+  "attempt_id": "attempt-f3691cd828efd3171a54ab5c",
   "job_id": "job-research-e203c47aded67247",
   "data": {
     "overview": "SeqTopKは総活性エキスパート数を標準TopKと同じに保ったまま、OLMoEとQwen1.5-MoEの複数タスク平均を改善し、差はスパース性が高いほど拡大した。特にOLMoEでK=2まで削った条件では平均22.04となり、TopKの14.49を7.55点上回る。実装コストは小さく、事前学習GPU時間・推論スループット・ピークメモリはいずれも約1%程度の差に収まる。ただし追加微調整なしでTopK学習済みモデルへオンラインSeqTopKだけを適用すると平均性能はわずかに低下し、文脈依存配分を学習する短い微調整が主要な性能向上に必要である。",
@@ -48,7 +48,7 @@
     "quality_impact": "近似的・適応的なルーティング方式であり、品質無損失を保証する手法ではない。微調整済みSeqTopKでは同一総予算のTopKより品質が上がる一方、学習なしの置換では小幅な品質低下が確認されるため、運用上はモデル・タスクに対する短い適応学習を前提に評価すべきである。"
   },
   "reservation": {
-    "claim_id": "claim-0a552544ab2dcbe33abaf790",
+    "claim_id": "claim-f3691cd828efd3171a54ab5c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
