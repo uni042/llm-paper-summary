@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 96,
-    "actively_claimed": 0,
-    "claimable": 96
+    "actively_claimed": 1,
+    "claimable": 95
   },
   "next_jobs": [
     {
@@ -123,14 +123,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-2e7cd1c4e1dc851d",
+      "job_id": "job-research-2b2648af1ffd1107",
       "type": "research",
       "lane": null,
       "priority": 92,
-      "canonical_id": "arXiv:2608.06989",
-      "title": "Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM",
-      "source_url": "https://arxiv.org/abs/2608.06989",
-      "paper_path": "papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md",
+      "canonical_id": "arXiv:2605.18810",
+      "title": "D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting",
+      "source_url": "https://arxiv.org/abs/2605.18810",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2605.18810-d-pace.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T10:05:05+00:00"
+  "generated_at": "2026-09-20T10:08:35+00:00"
 }
