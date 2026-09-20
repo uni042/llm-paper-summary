@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 22:55:31 JST**
+> 自動生成: **2026-09-20 22:55:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **28** | **6** | **0** | **1** | **1** | **0** | — |
+| Research | **28** | **6** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **28** | **7** | **1** | **1** | **1** | **0** | **5** |
+| 合計 | **28** | **7** | **1** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,8 +127,9 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 22:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **0件** / result照合済み非成功: **5件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5648936959aa67c66ac34543.json` (job `job-research-e203c47aded67247`)
+- immutable submission: **6件** / 検証済み成功: **0件** / result照合済み非成功: **6件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5648936959aa67c66ac34543.json` (job `job-research-e203c47aded67247`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-5648936959aa67c66ac34543.json` (`ok=false`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-769c5731a70c4b5146c3ee76.json` (job `job-research-f837d96601e69237`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-769c5731a70c4b5146c3ee76.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-8837b183815ff352f1066a0d.json` (job `job-research-00f6a78e028bd698`, failure_class `non_success`)
