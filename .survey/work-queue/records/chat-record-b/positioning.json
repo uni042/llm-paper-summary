@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-76fbde0c7b747f7dc5bad2a5","job_id":"job-research-bb33e470bd8a5f8f","data":{"limitations":"要求トレースはPoisson到着と一様タスク分布から作る合成データであり、実サービスで連続プロンプトの相関がどの程度維持されるかは未検証である。タスク抽出は既知タスクのプロファイル済みキーワード照合なので、未知・複合タスクでは誤分類し得る。ルーティング感度と生成長を事前プロファイルするため、入力分布やモデル更新後には再測定が必要になる。品質は全エキスパート出力とのBERT意味類似度で、真のタスク正解率や人間評価ではない。論文の予測器学習データ記述は80%訓練・30%テストと合計が100%を超えており、再現時に確認が必要である。","differences":"Pre-Gated MoEやMoEInfinity、EdgeMoEが推論中の層間先読みで転送と計算を重ねるのに対し、eMoEはプロンプト間の相関を利用してエキスパート集合を要求到着前に予測し、複数要求へ再利用して転送頻度自体を下げる。AdapMoEが層感度に応じてtop-1/top-2活性数を変え、既存ゲートを使う先読みと層別キャッシュを統合するのに対し、eMoEは独立XLNet予測器、タスク別誤ルーティング感度、生成長・SLOを含むサービススケジューリングを中心にする。vLLMやDeepSpeed-FastGen等の密Transformer向け基盤に対しては、MoE固有の重み常駐量とロード時間をスケジューラへ明示的に持ち込む。","implementation_status":"Python/PyTorchで実装され、DeepSpeed-FastGenを推論エンジンに利用する実機システムである。Hugging FaceのMoEモデル実装を拡張し、層別ロックとCUDAイベントで重み入替えを同期し、非同期copy_でCPU-GPU転送を重畳する。論文本文から公開コードURLは確認できず、arXiv v1の実装記述と実験結果を根拠とする。","research_positioning":"eMoEはMoEオフロード研究の中でも、エキスパートキャッシュの局所性を『層間』ではなく『要求間』へ広げ、タスク意味とサービスSLOをメモリ管理へ接続する研究である。単純なLRUや頻度キャッシュより先に将来集合を予測し、誤ルーティングに強いタスクでは正確なエキスパートを意図的に省くため、品質許容度を資源配分へ変換している。メモリ削減分を長文・大バッチへ再利用する評価まで含むため、単一要求レイテンシだけでなくMoEサービング容量を扱う系統として位置付けられる。"},"reservation":{"claim_id":"claim-76fbde0c7b747f7dc5bad2a5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-01cbf1c46fe8f68f25b18de7",
+  "job_id": "job-research-bb33e470bd8a5f8f",
+  "data": {
+    "limitations": "要求トレースはPoisson到着と一様タスク分布から作る合成データであり、実サービスで連続プロンプトの相関がどの程度維持されるかは未検証である。タスク抽出は既知タスクのプロファイル済みキーワード照合なので、未知・複合タスクでは誤分類し得る。ルーティング感度と生成長を事前プロファイルするため、入力分布やモデル更新後には再測定が必要になる。品質は全エキスパート出力とのBERT意味類似度で、真のタスク正解率や人間評価ではない。論文の予測器学習データ記述は80%訓練・30%テストと合計が100%を超えており、再現時に確認が必要である。",
+    "differences": "Pre-Gated MoEやMoEInfinity、EdgeMoEが推論中の層間先読みで転送と計算を重ねるのに対し、eMoEはプロンプト間の相関を利用してエキスパート集合を要求到着前に予測し、複数要求へ再利用して転送頻度自体を下げる。AdapMoEが層感度に応じてtop-1/top-2活性数を変え、既存ゲートを使う先読みと層別キャッシュを統合するのに対し、eMoEは独立XLNet予測器、タスク別誤ルーティング感度、生成長・SLOを含むサービススケジューリングを中心にする。vLLMやDeepSpeed-FastGen等の密Transformer向け基盤に対しては、MoE固有の重み常駐量とロード時間をスケジューラへ明示的に持ち込む。",
+    "implementation_status": "Python/PyTorchで実装され、DeepSpeed-FastGenを推論エンジンに利用する実機システムである。Hugging FaceのMoEモデル実装を拡張し、層別ロックとCUDAイベントで重み入替えを同期し、非同期copy_でCPU-GPU転送を重畳する。論文本文から公開コードURLは確認できず、arXiv v1の実装記述と実験結果を根拠とする。",
+    "research_positioning": "eMoEはMoEオフロード研究の中でも、エキスパートキャッシュの局所性を『層間』ではなく『要求間』へ広げ、タスク意味とサービスSLOをメモリ管理へ接続する研究である。単純なLRUや頻度キャッシュより先に将来集合を予測し、誤ルーティングに強いタスクでは正確なエキスパートを意図的に省くため、品質許容度を資源配分へ変換している。メモリ削減分を長文・大バッチへ再利用する評価まで含むため、単一要求レイテンシだけでなくMoEサービング容量を扱う系統として位置付けられる。"
+  },
+  "reservation": {
+    "claim_id": "claim-01cbf1c46fe8f68f25b18de7",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,68 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-76fbde0c7b747f7dc5bad2a5","job_id":"job-research-bb33e470bd8a5f8f","data":{"canonical_id":"arXiv:2503.06823","arxiv_id":"2503.06823","doi":null,"title":"eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference","authors":["Suraiya Tairin","Shohaib Mahmud","Haiying Shen","Anand Iyer"],"list_summary":"過去のエキスパート選択から必要エキスパートを予測・周期再利用し、タスク感度とSLOを考慮した読み込み・スケジューリングでGPUメモリを削減する。","summary":"eMoEはMoE推論で全エキスパートをGPU常駐させるメモリ費用と、要求ごとにCPUから動的転送する遅延の両方を抑えるシステムである。過去のルーティング系列から必要エキスパートをXLNetで予測し、連続プロンプト間の相関を利用して予測結果を周期的に再利用する。さらにタスクごとの誤ルーティング感度をオフライン測定し、感度の高いタスクを優先してエキスパートをロードし、出力長・ロード時間・遅延SLOを考慮した要求スケジューラを組み合わせる。4種類のMoEモデルと4基A100環境で、最大80%のメモリ削減、最大17%の遅延削減、40倍長いプロンプト、4.5倍大きいバッチ、1.5倍高いスループットを報告する。","source":"https://arxiv.org/abs/2503.06823","sources":["https://arxiv.org/abs/2503.06823","https://arxiv.org/pdf/2503.06823"],"code":null,"publication":"arXiv preprint","publication_type":"preprint","published":"2025-03-10","publication_status":"preprint","arxiv_categories":{"primary":"cs.LG","cross_list":[]},"topics":["MoE推論","エキスパート予測","メモリ効率","タスク認識スケジューリング","CPU-GPUオフロード"],"implementation":"PythonとPyTorchで実装し、DeepSpeed-FastGenを推論エンジンとしてHugging Faceモデルを拡張。MoE層ごとのロック、CUDAイベント、非同期Tensor.copy_でロードと非エキスパート計算を重畳する。","hardware_evaluation":"Intel Xeon、ホストメモリ128GB、40GBのNVIDIA A100 Tensor Core GPU 4基でOpenMoE、TinyMixtral、Mixtral-8x7B、Mixtral-8x22Bを評価。","quality_effect":"全エキスパート出力を正解としBERT意味類似度で品質を測定。20～80%のエキスパートだけをロードする条件で93.7～99.8%の類似度を維持し、60%ロードでは98.2～98.8%。","last_checked":"2026-09-20","references_checked_at":"2026-09-20","references_source":"arXiv PDF reference section","references_total":78,"references":[{"canonical_id":"arXiv:1810.04805","arxiv_id":"1810.04805"},{"canonical_id":"arXiv:1904.10509","arxiv_id":"1904.10509"},{"canonical_id":"arXiv:2112.06905","arxiv_id":"2112.06905"}]},"reservation":{"claim_id":"claim-76fbde0c7b747f7dc5bad2a5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-01cbf1c46fe8f68f25b18de7",
+  "job_id": "job-research-bb33e470bd8a5f8f",
+  "data": {
+    "canonical_id": "arXiv:2503.06823",
+    "arxiv_id": "2503.06823",
+    "doi": null,
+    "title": "eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference",
+    "authors": [
+      "Suraiya Tairin",
+      "Shohaib Mahmud",
+      "Haiying Shen",
+      "Anand Iyer"
+    ],
+    "list_summary": "過去のエキスパート選択から必要エキスパートを予測・周期再利用し、タスク感度とSLOを考慮した読み込み・スケジューリングでGPUメモリを削減する。",
+    "summary": "eMoEはMoE推論で全エキスパートをGPU常駐させるメモリ費用と、要求ごとにCPUから動的転送する遅延の両方を抑えるシステムである。過去のルーティング系列から必要エキスパートをXLNetで予測し、連続プロンプト間の相関を利用して予測結果を周期的に再利用する。さらにタスクごとの誤ルーティング感度をオフライン測定し、感度の高いタスクを優先してエキスパートをロードし、出力長・ロード時間・遅延SLOを考慮した要求スケジューラを組み合わせる。4種類のMoEモデルと4基A100環境で、最大80%のメモリ削減、最大17%の遅延削減、40倍長いプロンプト、4.5倍大きいバッチ、1.5倍高いスループットを報告する。",
+    "source": "https://arxiv.org/abs/2503.06823",
+    "sources": [
+      "https://arxiv.org/abs/2503.06823",
+      "https://arxiv.org/pdf/2503.06823"
+    ],
+    "code": null,
+    "publication": "arXiv preprint",
+    "publication_type": "preprint",
+    "published": "2025-03-10",
+    "publication_status": "preprint",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "topics": [
+      "MoE推論",
+      "エキスパート予測",
+      "メモリ効率",
+      "タスク認識スケジューリング",
+      "CPU-GPUオフロード"
+    ],
+    "implementation": "PythonとPyTorchで実装し、DeepSpeed-FastGenを推論エンジンとしてHugging Faceモデルを拡張。MoE層ごとのロック、CUDAイベント、非同期Tensor.copy_でロードと非エキスパート計算を重畳する。",
+    "hardware_evaluation": "Intel Xeon、ホストメモリ128GB、40GBのNVIDIA A100 Tensor Core GPU 4基でOpenMoE、TinyMixtral、Mixtral-8x7B、Mixtral-8x22Bを評価。",
+    "quality_effect": "全エキスパート出力を正解としBERT意味類似度で品質を測定。20～80%のエキスパートだけをロードする条件で93.7～99.8%の類似度を維持し、60%ロードでは98.2～98.8%。",
+    "last_checked": "2026-09-20",
+    "references_checked_at": "2026-09-20",
+    "references_source": "arXiv PDF reference section",
+    "references_total": 78,
+    "references": [
+      {
+        "canonical_id": "arXiv:1810.04805",
+        "arxiv_id": "1810.04805"
+      },
+      {
+        "canonical_id": "arXiv:1904.10509",
+        "arxiv_id": "1904.10509"
+      },
+      {
+        "canonical_id": "arXiv:2112.06905",
+        "arxiv_id": "2112.06905"
+      }
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-01cbf1c46fe8f68f25b18de7",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
