@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1183d9b80698481178086936",
+  "attempt_id": "attempt-2aa6f3a5ce12c662b86bbbe1",
   "job_id": "job-research-e2f947500152f11f",
   "data": {
     "overview": "LRAではIceFormerが元Transformerに対し平均7.63倍のattention高速化を達成しながら平均98.6%の精度を維持し、同程度精度の効率Transformerより平均3.04倍速い。ピークメモリも全5タスクで最小で、元Transformerより最大0.862GB削減した。Vicuna-7b-v1.5-16kのZeroSCROLLSでは10タスク平均attention時間4.38秒から1.60秒へ2.73倍高速化し、平均スコア23.9から23.8、すなわち99.6%を維持した。LongEvalでも3k〜16kへpromptが伸びるほど元注意との差が拡大し、ほぼ同一精度を保つ。",
@@ -48,7 +48,7 @@
     "quality_impact": "LRAでは元モデル精度の平均98.6%、ZeroSCROLLSでは平均99.6%を保持する。個別ZeroSCROLLSでも10タスクすべて99.0%以上を保つ一方、H-Transformer-1Dは平均32.5%まで低下した。kを増やせば元注意へ近づくため、利用者は許容精度に応じて速度を調整できる。"
   },
   "reservation": {
-    "claim_id": "claim-1183d9b80698481178086936",
+    "claim_id": "claim-2aa6f3a5ce12c662b86bbbe1",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

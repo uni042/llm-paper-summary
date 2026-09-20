@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-1183d9b80698481178086936",
+  "attempt_id": "attempt-2aa6f3a5ce12c662b86bbbe1",
   "job_id": "job-research-e2f947500152f11f",
   "data": {
     "limitations": "attention上位kだけを残す近似なので厳密同値ではなく、kを小さくすると下流精度が低下する。索引構築と検索の費用があり、Prioritized DCIの優位性はCPU環境と評価データで確認された範囲に限る。LLM評価はVicuna-7B-16k一系統で、GPUやより大規模な最新LLM、生成デコード全体のend-to-end性能は検証していない。ZeroSCROLLSでは再学習不要かつ因果マスク対応という条件を満たさない多くの効率注意が比較から外れる。",
@@ -11,7 +11,7 @@
     "research_positioning": "CPUのみの長文Transformer/LLM推論において、モデル全体の重みオフロードではなくattentionの計算量そのものを減らす系統に位置する。特に、既存LLMを再学習せず適用できることを要件の中心に置き、一般keyの最大内積探索を最近傍探索へ変換する数理的工夫と、索引構築・検索の実装選択を結びつけている。長文promptが長くなるほど総当たりattentionとの差が広がるため、CPU推論でコンテキスト長が主要ボトルネックになる用途と相性がよい。"
   },
   "reservation": {
-    "claim_id": "claim-1183d9b80698481178086936",
+    "claim_id": "claim-2aa6f3a5ce12c662b86bbbe1",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
