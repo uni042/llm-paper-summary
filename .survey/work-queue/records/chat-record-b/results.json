@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-14e4c1618de1040b458998ef",
+  "attempt_id": "attempt-206de3a6d433e93dd5ba5f49",
   "job_id": "job-research-d223f7a181256e07",
   "data": {
     "overview": "主結果は、KVzipが将来queryを使わない一回のcontext圧縮で、Qwen/LLaMA/Gemmaと12種類の長文脈taskにまたがって多くの条件でcacheを20〜30%まで縮めてもほぼ性能を維持し、既存query-aware法が90%保持でも崩れるmulti-query条件を大幅に改善したことである。実用上は、文書やpersonal historyのKVを質問ごとに再prefillせず共有しながら、KV memoryを3〜4倍、FlashAttention復号attention latencyを約2倍削減でき、量子化とも重ねられる。",
@@ -55,7 +55,7 @@
     "quality_impact": "近似圧縮でありlosslessではない。多くのbenchmarkでは20〜30%保持までnegligible lossだが、個別taskとsafety/alignment behaviorの変化を確認してbudgetを選ぶ必要がある。"
   },
   "reservation": {
-    "claim_id": "claim-14e4c1618de1040b458998ef",
+    "claim_id": "claim-206de3a6d433e93dd5ba5f49",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-14e4c1618de1040b458998ef",
+  "attempt_id": "attempt-206de3a6d433e93dd5ba5f49",
   "job_id": "job-research-d223f7a181256e07",
   "data": {
     "hardware": "全baselineを単一NVIDIA A100 80GBで評価。124K contextのimportance scoring/FlashAttention効率分析もA100。",
@@ -41,7 +41,7 @@
     "scope": "単一A100上の実機評価で、長文脈QA・retrieval・reasoning・code comprehension等12 task、最大170K tokenを含む。圧縮自体は近似であり、タスク性能とbehavior変化を同時評価する。"
   },
   "reservation": {
-    "claim_id": "claim-14e4c1618de1040b458998ef",
+    "claim_id": "claim-206de3a6d433e93dd5ba5f49",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

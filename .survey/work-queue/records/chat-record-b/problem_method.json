@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-14e4c1618de1040b458998ef",
+  "attempt_id": "attempt-206de3a6d433e93dd5ba5f49",
   "job_id": "job-research-d223f7a181256e07",
   "data": {
     "problem": "長文脈LLMでは文脈トークンごとのkey/valueを全層・全KV headに保持するため、文脈長に比例してメモリと復号attention時間が増える。Qwen2.5-14Bでは120K tokenのFP16 KV cacheが約33GBとなり、同精度の28GB model parametersを超える。既存のSnapKVやPyramidKV等は直近クエリがどの文脈KVへattentionするかを見て削除するため、一つの質問には有効でも、その質問向けに圧縮したcacheを別質問へ再利用すると必要KVが失われる。毎クエリ元文脈を再prefillすれば精度は戻るが、事前計算cacheを再利用したいpersonal agentや文書cache用途の計算節約を失う。将来クエリを知らずに多様な質問へ通用する重要KVを選ぶ必要がある。",
@@ -29,7 +29,7 @@
     "system_design": "KVzipは既存Transformer重みを再学習せず、prefill後のKV cacheに対する一回のimportance scoringとevictionとして挿入できる。長文脈scoreは2K chunkで処理し、圧縮cacheはvariable-length FlashAttention-2で復号する。pair-level、uniform/non-uniform budget、head-level、context-independent modeを持ち、KV量子化とも併用可能である。"
   },
   "reservation": {
-    "claim_id": "claim-14e4c1618de1040b458998ef",
+    "claim_id": "claim-206de3a6d433e93dd5ba5f49",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
