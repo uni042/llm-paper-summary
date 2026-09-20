@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:17:08 JST**
+> 自動生成: **2026-09-20 12:17:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **78** |
+| 収録候補論文 | **77** |
 | 未claim Research job | **77** |
-| 直近24hの検証済みResearch収録 | **44** |
-| 最終検証済みResearch収録 | **09-20 12:14:59 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **45** |
+| 最終検証済みResearch収録 | **09-20 12:17:21 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **78** |
+| canonical_id確認済みの一意な候補論文 | **77** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **78** |
+| 非終端Research job合計 | **77** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **9** | **8** | **1** | **1** | **0** | — |
+| Research | **17** | **9** | **9** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **16** | **10** | **9** | **1** | **1** | **0** | **5** |
+| 合計 | **17** | **10** | **10** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 12:17:21 JST** [research] `arXiv:2109.10465` — Scalable and Efficient MoE Training for Multitask Multilingual Models
+  - job: `.survey/work-queue/jobs/job-research-b2016b76225eff0c.json`
+  - result: `.survey/work-queue/results/research/attempt-715ca0ac1e2c0533b0313a9c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-715ca0ac1e2c0533b0313a9c.json`
+  - paper: `papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md`
 - **09-20 12:14:59 JST** [research] `arXiv:2406.10774` — Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference
   - job: `.survey/work-queue/jobs/job-research-8fc74c0fbb46c30e.json`
   - result: `.survey/work-queue/results/research/attempt-74f796116b0c55afd81f6ad5.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-a3583b512bca09151ba946d2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a3583b512bca09151ba946d2.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md`
-- **09-20 09:47:41 JST** [research] `arXiv:2308.14352` — EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices
-  - job: `.survey/work-queue/jobs/job-research-42834c639c34d742.json`
-  - result: `.survey/work-queue/results/research/attempt-a86622b38716752ba65bde87.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a86622b38716752ba65bde87.json`
-  - paper: `papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md`
 
 ### Audit
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **9件** / 検証済み成功: **8件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **9件** / 検証済み成功: **9件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
   - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
@@ -143,7 +143,11 @@
   - result: `.survey/work-queue/results/research/attempt-6d86d84ba0b861b36b84973e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6d86d84ba0b861b36b84973e.json`
   - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2402.02750-kivi.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-715ca0ac1e2c0533b0313a9c.json` (job `job-research-b2016b76225eff0c`)
+- **成功** `arXiv:2109.10465` — Scalable and Efficient MoE Training for Multitask Multilingual Models
+  - job: `.survey/work-queue/jobs/job-research-b2016b76225eff0c.json`
+  - result: `.survey/work-queue/results/research/attempt-715ca0ac1e2c0533b0313a9c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-715ca0ac1e2c0533b0313a9c.json`
+  - paper: `papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md`
 - **成功** `arXiv:2406.10774` — Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference
   - job: `.survey/work-queue/jobs/job-research-8fc74c0fbb46c30e.json`
   - result: `.survey/work-queue/results/research/attempt-74f796116b0c55afd81f6ad5.json` (`ok=true`)
@@ -175,10 +179,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2109.10465` — Scalable and Efficient MoE Training for Multitask Multilingual Models / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 12:15:24 JST** / heartbeat: **—** / lease expiry: **09-20 13:45:24 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b2016b76225eff0c.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -198,7 +200,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **78** |
+| ready | **77** |
 
 ### 候補の重複・識別情報欠損
 
@@ -218,7 +220,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **796** |
+| inference/training/survey配下の論文Markdown実体 | **797** |
 
 ### immutable submissionの未照合
 
@@ -226,8 +228,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **686** |
-| └ Research | **525** |
+| 成功result未照合のimmutable submission | **685** |
+| └ Research | **524** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T03:15:03.402696+00:00",
+  "updated_at": "2026-09-20T03:17:25.996747+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T03:15:03.402696+00:00",
+      "last_recorded_at": "2026-09-20T03:17:25.996747+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 332,
+        "research_completed": 333,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 44,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35435257351:1",
-          "recorded_at": "2026-09-19T09:39:05.450055+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35435257351",
-            "run_attempt": "1",
-            "source_sha": "e7af885e23f7edb7d2b29fbab4aedb5a34d32787"
-          },
-          "signals": [
-            "job_blocked"
-          ]
-        },
         {
           "event_id": "35435418149:1",
           "recorded_at": "2026-09-19T09:42:20.342193+00:00",
@@ -19595,6 +19581,20 @@
             "run_id": "35486064695",
             "run_attempt": "1",
             "source_sha": "d2231be703481577d2311ebeb7040a23537a33f5"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35486174322:1",
+          "recorded_at": "2026-09-20T03:17:25.996747+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35486174322",
+            "run_attempt": "1",
+            "source_sha": "fc77700bd8a622878252b01eb70999d8bddec937"
           },
           "signals": [
             "research_completed"
@@ -24151,6 +24151,14 @@
           "type": "research",
           "canonical_id": "arXiv:2406.10774",
           "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-b2016b76225eff0c",
+          "type": "research",
+          "canonical_id": "arXiv:2109.10465",
+          "title": "Scalable and Efficient MoE Training for Multitask Multilingual Models",
           "from": "ready",
           "to": "completed"
         }

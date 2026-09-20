@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 78,
-      "completed": 607,
+      "ready": 77,
+      "completed": 608,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 78,
+    "ready_research_audit": 77,
     "actively_claimed": 0,
-    "claimable": 78
+    "claimable": 77
   },
   "next_jobs": [
     {
@@ -95,20 +95,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-b2016b76225eff0c",
-      "type": "research",
-      "lane": null,
-      "priority": 93,
-      "canonical_id": "arXiv:2109.10465",
-      "title": "Scalable and Efficient MoE Training for Multitask Multilingual Models",
-      "source_url": "https://arxiv.org/abs/2109.10465",
-      "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-3cf2e0a916913e29",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-4786c27e72f86caf",
+      "type": "research",
+      "lane": null,
+      "priority": 92,
+      "canonical_id": "arXiv:2401.11181",
+      "title": "Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads",
+      "source_url": "https://arxiv.org/abs/2401.11181",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T03:14:59+00:00"
+  "generated_at": "2026-09-20T03:17:21+00:00"
 }
