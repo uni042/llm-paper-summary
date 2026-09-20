@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T20:36:15+00:00",
+  "updated_at": "2026-09-20T20:39:10+00:00",
   "last_run_key": "2026-09-21T05:29:37+09:00",
-  "last_round": "round-03",
+  "last_round": "round-04",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T14:00:00+09:00",
-      "round": "specialist-cxl-k8s-3",
-      "axis": "Composable CXL・Kubernetes共有KVメモリ",
-      "query_summary": "CXL/共有メモリをLLM servingのKV tierとして実装する2026年9月研究を探索し、vLLM/llm-dとの接続性を重視してmain重複確認した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "disaggregated servingのpower/energy co-designへ軸を移す",
-      "source_submission": "work-queue/submissions/20260916T1434JST-discovery-specialist-cxl-k8s-3.json"
-    },
     {
       "run_key": "2026-09-16T14:00:00+09:00",
       "round": "specialist-disagg-power-4",
@@ -7893,6 +7878,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0537JST-discovery-forward-elasticmoe-03.json"
+    },
+    {
+      "run_key": "2026-09-21T05:29:37+09:00",
+      "round": "round-04",
+      "axis": "recent LLM inference CXL hierarchical memory offloading",
+      "query_summary": null,
+      "provider": "openalex",
+      "source_url": "https://api.openalex.org/works?search=LLM%20inference%20CXL%20memory%20offloading&sort=publication_date:desc&per-page=100",
+      "citation_direction": null,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0539JST-discovery-cxl-memory-04.json"
     }
   ],
   "axes": {
@@ -15237,6 +15243,19 @@
       "next_axis_hint": null
     },
     "forward citations of FlashAttention for recent attention kernels and serving systems": {
+      "last_run_key": "2026-09-21T05:29:37+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "recent LLM inference CXL hierarchical memory offloading": {
       "last_run_key": "2026-09-21T05:29:37+09:00",
       "rounds": 1,
       "candidate_count": 5,
