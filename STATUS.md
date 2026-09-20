@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 16:30:05 JST**
+> 自動生成: **2026-09-20 16:30:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **115** |
+| 収録候補論文 | **114** |
 | 未claim Research job | **113** |
-| 直近24hの検証済みResearch収録 | **69** |
-| 最終検証済みResearch収録 | **09-20 15:41:40 JST（48分前）** |
+| 直近24hの検証済みResearch収録 | **70** |
+| 最終検証済みResearch収録 | **09-20 16:30:16 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **115** |
+| canonical_id確認済みの一意な候補論文 | **114** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **115** |
+| 非終端Research job合計 | **114** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **33** | **4** | **3** | **1** | **2** | **1** | — |
+| Research | **34** | **4** | **4** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **33** | **5** | **4** | **1** | **2** | **1** | **5** |
+| 合計 | **34** | **5** | **5** | **0** | **1** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 16:30:16 JST** [research] `DOI:10.18653/v1/2026.findings-acl.2153` — SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences
+  - job: `.survey/work-queue/jobs/job-research-264bf27e36d7341a.json`
+  - result: `.survey/work-queue/results/research/attempt-53c9640aa2c8756a83217d2e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-53c9640aa2c8756a83217d2e.json`
+  - paper: `papers/inference/05-speculative-decoding/2026-specextend.md`
 - **09-20 15:41:40 JST** [research] `DOI:10.18653/v1/2026.findings-acl.494` — OjaKV: Context-Aware Online Low-Rank KV Cache Compression
   - job: `.survey/work-queue/jobs/job-research-18c89b68d0c6c10d.json`
   - result: `.survey/work-queue/results/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-89bc644c23d78357d6c68f4d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-89bc644c23d78357d6c68f4d.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.20552-adrenaline.md`
-- **09-20 15:02:27 JST** [research] `arXiv:2505.23416` — KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction
-  - job: `.survey/work-queue/jobs/job-research-d223f7a181256e07.json`
-  - result: `.survey/work-queue/results/research/attempt-a81c3fda043b3840209ea896.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a81c3fda043b3840209ea896.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md`
 
 ### Audit
 
@@ -127,13 +127,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 15:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **4件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2503.06823` — eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference
   - job: `.survey/work-queue/jobs/job-research-bb33e470bd8a5f8f.json`
   - result: `.survey/work-queue/results/research/attempt-01cbf1c46fe8f68f25b18de7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-01cbf1c46fe8f68f25b18de7.json`
   - paper: `papers/inference/06-moe-expert-offloading/2025-2503.06823-emoe.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-53c9640aa2c8756a83217d2e.json` (job `job-research-264bf27e36d7341a`)
+- **成功** `DOI:10.18653/v1/2026.findings-acl.2153` — SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences
+  - job: `.survey/work-queue/jobs/job-research-264bf27e36d7341a.json`
+  - result: `.survey/work-queue/results/research/attempt-53c9640aa2c8756a83217d2e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-53c9640aa2c8756a83217d2e.json`
+  - paper: `papers/inference/05-speculative-decoding/2026-specextend.md`
 - **成功** `DOI:10.18653/v1/2026.findings-acl.494` — OjaKV: Context-Aware Online Low-Rank KV Cache Compression
   - job: `.survey/work-queue/jobs/job-research-18c89b68d0c6c10d.json`
   - result: `.survey/work-queue/results/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (`ok=true`)
@@ -165,10 +169,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `DOI:10.18653/v1/2026.findings-acl.2153` — SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 16:28:58 JST** / heartbeat: **—** / lease expiry: **09-20 17:58:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-264bf27e36d7341a.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey-01`
   - claim: **09-20 16:02:12 JST** / heartbeat: **09-20 16:28:58 JST** / lease expiry: **09-20 17:58:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -191,7 +192,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **115** |
+| ready | **114** |
 
 ### 候補の重複・識別情報欠損
 
@@ -211,7 +212,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **821** |
+| inference/training/survey配下の論文Markdown実体 | **822** |
 
 ### immutable submissionの未照合
 
@@ -219,8 +220,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **741** |
-| └ Research | **555** |
+| 成功result未照合のimmutable submission | **740** |
+| └ Research | **554** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |

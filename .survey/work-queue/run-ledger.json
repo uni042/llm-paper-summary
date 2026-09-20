@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T07:06:55.777318+00:00",
+  "updated_at": "2026-09-20T07:30:22.197386+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T07:06:55.777318+00:00",
+      "last_recorded_at": "2026-09-20T07:30:22.197386+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 357,
+        "research_completed": 358,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35453753304:1",
-          "recorded_at": "2026-09-19T16:05:59.886185+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35453753304",
-            "run_attempt": "1",
-            "source_sha": "9fc35beb349f5eb518ca4b6cad6573ee93287588"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35455750706:1",
           "recorded_at": "2026-09-19T16:42:06.033011+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35497002599:1",
+          "recorded_at": "2026-09-20T07:30:22.197386+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35497002599",
+            "run_attempt": "1",
+            "source_sha": "9bcd4953e2621f3d4b70ca7f8c47c986f85f1466"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -24404,6 +24404,14 @@
           "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-264bf27e36d7341a",
+          "type": "research",
+          "canonical_id": "DOI:10.18653/v1/2026.findings-acl.2153",
+          "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -27340,7 +27348,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 821,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
