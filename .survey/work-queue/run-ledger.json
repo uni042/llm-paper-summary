@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T06:05:14.389300+00:00",
+  "updated_at": "2026-09-20T06:08:16.428688+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T06:05:14.389300+00:00",
+      "last_recorded_at": "2026-09-20T06:08:16.428688+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 349,
+        "research_completed": 350,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35449225216:1",
-          "recorded_at": "2026-09-19T14:36:05.068934+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35449225216",
-            "run_attempt": "1",
-            "source_sha": "c72ffddc1fa6b2c3260dcd57ddf2e72ff2156d76"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35449413381:1",
           "recorded_at": "2026-09-19T14:39:52.543863+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35493294483",
             "run_attempt": "1",
             "source_sha": "99b8e1a052ddb754406166fc50a545de7d52d61b"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35493403131:1",
+          "recorded_at": "2026-09-20T06:08:16.428688+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35493403131",
+            "run_attempt": "1",
+            "source_sha": "9b5fdf8380c468dd6e8d9191fc847bbd1ae58e6a"
           },
           "signals": [
             "research_completed"
@@ -24339,6 +24339,14 @@
           "type": "research",
           "canonical_id": "arXiv:2503.20552",
           "title": "Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-be4feb2ff4a84f5b",
+          "type": "research",
+          "canonical_id": "arXiv:2405.03917",
+          "title": "KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization",
           "from": "ready",
           "to": "completed"
         }

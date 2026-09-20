@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 119,
-      "completed": 624,
+      "ready": 118,
+      "completed": 625,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 119,
+    "ready_research_audit": 118,
     "actively_claimed": 2,
-    "claimable": 117
+    "claimable": 116
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-f8d11555626eb92a",
-      "type": "research",
-      "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2405.05254",
-      "title": "You Only Cache Once: Decoder-Decoder Architectures for Language Models",
-      "source_url": "https://arxiv.org/abs/2405.05254",
-      "paper_path": "papers/inference/06-kv-cache-memory/2024-2405.05254-yoco.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-5cec4a19e423bce9",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-4892de26a5d749a2",
+      "type": "research",
+      "lane": null,
+      "priority": 95,
+      "canonical_id": "arXiv:2408.10284",
+      "title": "AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2408.10284",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2024-2408.10284-adapmoe.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T06:05:09+00:00"
+  "generated_at": "2026-09-20T06:08:11+00:00"
 }
