@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-480662bc3f90f56bffdcef2f",
-  "job_id": "job-research-f8d11555626eb92a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-480662bc3f90f56bffdcef2f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-480662bc3f90f56bffdcef2f","job_id":"job-research-f8d11555626eb92a","data":{"canonical_id":"arXiv:2405.05254","title":"You Only Cache Once: Decoder-Decoder Architectures for Language Models","list_summary":"自己デコーダが一度だけ生成した大域鍵値を後半の交差デコーダ全層で共有し、長文脈の鍵値メモリと事前充填時間を桁違いに削減する。","summary":"YOCOは自己回帰言語モデルを自己デコーダと交差デコーダの二段へ分けるデコーダ・デコーダ構造である。前半はゲート付き保持またはスライディング窓注意により定数規模の状態で文脈を処理し、その最終表現から一組の大域鍵値キャッシュを生成する。後半の全交差デコーダ層は同じ鍵値を共有するため、通常Transformerの層数×文脈長に比例する鍵値メモリをほぼ文脈長だけへ削減する。さらに事前充填では後半を通らず早期終了できる。3Bモデルを1.6兆トークンまで学習し、160M〜13Bのスケーリング、1M文脈、H100上の推論を評価し、品質を保ちながら大幅なメモリ・遅延・処理能力改善を示す。","source":"https://arxiv.org/html/2405.05254v2","sources":["https://arxiv.org/abs/2405.05254","https://arxiv.org/html/2405.05254v2","https://aka.ms/YOCO"],"authors":["Yutao Sun","Li Dong","Yi Zhu","Shaohan Huang","Wenhui Wang","Shuming Ma","Quanlu Zhang","Jianyong Wang","Furu Wei"],"published":"2024-05-08","publication":"arXiv preprint","publication_type":"preprint","publication_status":"preprint","primary_category":"cs.CL","cross_list_categories":[],"topics":["長文脈推論","鍵値キャッシュ共有","デコーダ・デコーダ構造","ゲート付き保持"],"implementation":"公式コードはaka.ms/YOCOから公開。推論評価ではゲート付き保持用Tritonカーネルを実装。","code":"https://aka.ms/YOCO","last_checked":"2026-09-20","hardware_evaluation":"推論プロファイルはH100 80GB GPU。1M長文脈学習にはCUBEの内部版を使用。","quality_effect":"構造変更を伴う再学習型手法で、既存モデルへ後付けする圧縮ではない。3Bおよび160M〜13Bの比較ではTransformerと同等以上の言語モデル品質を示す。","references":[],"references_checked_at":"2026-09-20","references_source":"arXiv v2 full-text reference section","references_total":45},"reservation":{"claim_id":"claim-480662bc3f90f56bffdcef2f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
