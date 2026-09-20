@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r25",
+    "summary": "Adaptive Expert Computation / Compression をさらに厚くするため、foundational dynamic expert countとpost-training FFN-to-MoE restructuringを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2405.14297",
+      "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models",
+      "source_url": "https://arxiv.org/abs/2405.14297",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2024-2405.14297-dynmoe-auto-tuning.md",
+      "priority": 98,
+      "reason": "各tokenがactivateするexpert数を自動決定し、training中のexpert数もadaptiveに調整するfoundational dynamic MoE。"
+    },
+    {
+      "canonical_id": "arXiv:2502.04416",
+      "title": "Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis",
+      "source_url": "https://arxiv.org/abs/2502.04416",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2502.04416-analytical-ffn-to-moe-restructuring.md",
+      "priority": 97,
+      "reason": "dense FFNのactivation patternからshared/routed expertsとrouterを解析的に構築し、大規模retrainingなしでsparse MoEへ変換する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920-xmoe",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920-xmoe.json",
+    "receipt": "sha256:7c72f6631d057024eb67c2c3f5da44bbda627a3f5d6963b641f583409749855a"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
+    "round": "adaptive-max-r25-foundational-dynamic",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2403.18926",
+    "query_summary": "XMoE forward citationsからDynMoEとanalytical FFN-to-MoE restructuringの2件を選定。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "backward references from foundational seeds",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "dynamic expert count and post-training restructuring",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2403.18926",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 34,
+        "unseen_result_count": 29,
+        "duplicate_filtered_count": 5,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 2,
+        "position": "1 page"
+      }
+    ]
+  }
+}
