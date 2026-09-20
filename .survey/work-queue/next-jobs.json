@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 122,
-    "actively_claimed": 1,
-    "claimable": 121
+    "actively_claimed": 2,
+    "claimable": 120
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-d223f7a181256e07",
-      "type": "research",
-      "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2505.23416",
-      "title": "KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction",
-      "source_url": "https://arxiv.org/abs/2505.23416",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-51de804389577a72",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-f8d11555626eb92a",
+      "type": "research",
+      "lane": null,
+      "priority": 96,
+      "canonical_id": "arXiv:2405.05254",
+      "title": "You Only Cache Once: Decoder-Decoder Architectures for Language Models",
+      "source_url": "https://arxiv.org/abs/2405.05254",
+      "paper_path": "papers/inference/06-kv-cache-memory/2024-2405.05254-yoco.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T05:49:26+00:00"
+  "generated_at": "2026-09-20T05:53:20+00:00"
 }
