@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:16:38 JST**
+> 自動生成: **2026-09-20 19:17:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **95** |
+| 収録候補論文 | **94** |
 | 未claim Research job | **94** |
-| 直近24hの検証済みResearch収録 | **82** |
-| 最終検証済みResearch収録 | **09-20 19:10:57 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **83** |
+| 最終検証済みResearch収録 | **09-20 19:16:54 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **95** |
+| canonical_id確認済みの一意な候補論文 | **94** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **95** |
+| 非終端Research job合計 | **94** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **36** | **10** | **7** | **1** | **1** | **0** | — |
+| Research | **37** | **10** | **8** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **36** | **11** | **8** | **1** | **1** | **0** | **5** |
+| 合計 | **37** | **11** | **9** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 19:16:54 JST** [research] `arXiv:2605.18810` — D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting
+  - job: `.survey/work-queue/jobs/job-research-2b2648af1ffd1107.json`
+  - result: `.survey/work-queue/results/research/attempt-682f2ca2eca58d18d9e46ca8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-682f2ca2eca58d18d9e46ca8.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2605.18810-d-pace.md`
 - **09-20 19:10:57 JST** [research] `arXiv:2608.06989` — Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM
   - job: `.survey/work-queue/jobs/job-research-2e7cd1c4e1dc851d.json`
   - result: `.survey/work-queue/results/research/attempt-ade4ad902d6f7670ee635b88.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-09fd18d9c803c17379a43783.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-09fd18d9c803c17379a43783.json`
   - paper: `papers/inference/06-kv-cache-memory/2024-2405.12981-cross-layer-attention.md`
-- **09-20 18:05:23 JST** [research] `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment
-  - job: `.survey/work-queue/jobs/job-research-da8147ed3835966f.json`
-  - result: `.survey/work-queue/results/research/attempt-5605d7717d39930ab2f4dcc5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5605d7717d39930ab2f4dcc5.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.07903-hexgen-2.md`
 
 ### Audit
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **10件** / 検証済み成功: **7件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
+- immutable submission: **10件** / 検証済み成功: **8件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -138,7 +138,11 @@
   - result: `.survey/work-queue/results/research/attempt-3e00451f32958b311cdc3f3c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3e00451f32958b311cdc3f3c.json`
   - paper: `papers/inference/05-speculative-decoding/2023-2310.07177-online-speculative-decoding.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-682f2ca2eca58d18d9e46ca8.json` (job `job-research-2b2648af1ffd1107`)
+- **成功** `arXiv:2605.18810` — D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting
+  - job: `.survey/work-queue/jobs/job-research-2b2648af1ffd1107.json`
+  - result: `.survey/work-queue/results/research/attempt-682f2ca2eca58d18d9e46ca8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-682f2ca2eca58d18d9e46ca8.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2605.18810-d-pace.md`
 - **成功** `arXiv:2311.09431` — Striped Attention: Faster Ring Attention for Causal Transformers
   - job: `.survey/work-queue/jobs/job-research-8c68e144047ac9bb.json`
   - result: `.survey/work-queue/results/research/attempt-726aa6f9d7bb4140731a500b.json` (`ok=true`)
@@ -189,10 +193,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.18810` — D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 19:15:33 JST** / heartbeat: **—** / lease expiry: **09-20 20:45:33 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2b2648af1ffd1107.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -212,7 +214,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **95** |
+| ready | **94** |
 
 ### 候補の重複・識別情報欠損
 
@@ -232,7 +234,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **845** |
+| inference/training/survey配下の論文Markdown実体 | **846** |
 
 ### immutable submissionの未照合
 
@@ -240,8 +242,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **765** |
-| └ Research | **579** |
+| 成功result未照合のimmutable submission | **764** |
+| └ Research | **578** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |

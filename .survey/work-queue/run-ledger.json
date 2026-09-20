@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:11:02.199611+00:00",
+  "updated_at": "2026-09-20T10:16:59.974022+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:11:02.199611+00:00",
+      "last_recorded_at": "2026-09-20T10:16:59.974022+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 375,
+        "research_completed": 376,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 49,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35479428147:1",
-          "recorded_at": "2026-09-20T00:41:55.676093+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35479428147",
-            "run_attempt": "1",
-            "source_sha": "17e49b96a0041ef8598533582a725592b2c9fc03"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35479693062:1",
           "recorded_at": "2026-09-20T00:47:44.886969+00:00",
@@ -19589,6 +19575,20 @@
             "run_id": "35504331585",
             "run_attempt": "1",
             "source_sha": "f450fa5d71b5530ed0ebe36929a1d5950c2d5ad4"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35504607913:1",
+          "recorded_at": "2026-09-20T10:16:59.974022+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35504607913",
+            "run_attempt": "1",
+            "source_sha": "a03a069efe099dedc5b701d678e1a5de51fb7c75"
           },
           "signals": [
             "research_completed"
@@ -24561,6 +24561,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.06989",
           "title": "Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2b2648af1ffd1107",
+          "type": "research",
+          "canonical_id": "arXiv:2605.18810",
+          "title": "D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting",
           "from": "ready",
           "to": "completed"
         }
