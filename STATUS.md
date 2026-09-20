@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:10:31 JST**
+> 自動生成: **2026-09-20 18:10:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **6** | **5** | **1** | **1** | **0** | — |
+| Research | **37** | **6** | **5** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **7** | **6** | **1** | **1** | **0** | **5** |
+| 合計 | **37** | **7** | **6** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention
   - job: `.survey/work-queue/jobs/job-research-ab19fa17920fb404.json`
   - result: `.survey/work-queue/results/research/attempt-09fd18d9c803c17379a43783.json` (`ok=true`)
@@ -153,7 +153,8 @@
   - result: `.survey/work-queue/results/research/attempt-57d5d091923e08545a3ff388.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-57d5d091923e08545a3ff388.json`
   - paper: `papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5f2844ad503568d40a7ed5ff.json` (job `job-research-7975c226ad04d80a`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5f2844ad503568d40a7ed5ff.json` (job `job-research-7975c226ad04d80a`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-5f2844ad503568d40a7ed5ff.json` (`ok=false`)
 
 #### Audit (:30)
 
