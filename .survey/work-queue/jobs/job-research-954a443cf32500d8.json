@@ -27,5 +27,14 @@
     }
   ],
   "last_blocked_at": "2026-09-19T19:21:33+00:00",
-  "retry_queued_at": "2026-09-20T01:42:55+00:00"
+  "retry_queued_at": "2026-09-20T01:42:55+00:00",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: structured record validation failed: metadata.arxiv_categories.primary is required for arXiv papers | problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | Japanese-first prose ratio is too low: 57.4% < 70% (Japanese=2322, Latin=1722)",
+  "validation_errors": [
+    "metadata.arxiv_categories.primary is required for arXiv papers",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "Japanese-first prose ratio is too low: 57.4% < 70% (Japanese=2322, Latin=1722)"
+  ],
+  "last_validation_failed_at": "2026-09-20T02:44:32+00:00"
 }
