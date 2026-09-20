@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-098c5b91676f2a1a4d4737af","job_id":"job-research-f018d8c28f4995e5","data":{"overview":"KVLink 5は全モデル規模で単純キャッシュ再利用を大きく上回り、1BではNaturalQuestions 45.0%、HotpotQA 55.6%、3Bでは64.4%と69.5%を達成する。著者集計では既存最良法より質問応答精度を平均約4ポイント改善する。事前キャッシュ再利用により文脈長1,000～5,000トークンで最初のトークンまでの時間を約85～96%削減し、5,000トークンでは最大96%削減する。","key_results":[{"metric":"NaturalQuestions精度","value":"1Bで45.0%、3Bで64.4%","baseline":"BlockAttentionは39.0%、58.8%","condition":"KVLink 5、10文書、正解位置10通り平均","interpretation":"リンクトークンにより独立文書間の情報統合を回復し、単純再利用より上限に近づく。"},{"metric":"HotpotQA精度","value":"1Bで55.6%、3Bで69.5%","baseline":"BlockAttentionは48.3%、64.3%","condition":"KVLink 5","interpretation":"複数文書を横断する質問で文書間再接続が特に有効。"},{"metric":"最初のトークンまでの時間","value":"1,000～5,000トークンで約85～96%削減、最大96%","baseline":"通常の全コンテキスト再符号化","condition":"事前計算済みキャッシュ再利用、長文脈ほど利得増大","interpretation":"プリフィルの大部分をオフラインへ移し、オンラインでは位置補正と少数リンクだけを計算する効果。"},{"metric":"5,000トークン時の処理能力換算","value":"固定GPU時間で約25倍の要求、100万要求で9 GPU時間対246 GPU時間","baseline":"通常デコード","condition":"Llama-3.1-8B、A100 80GB、付録の費用試算","interpretation":"保存費用との交換でGPU計算費を大幅に削減できる。"},{"metric":"圧縮キャッシュ併用","value":"50%圧縮HotpotQA 55.4%、75%圧縮52.4%","baseline":"改良AnLLM+BlockAttentionは54.3%、51.1%","condition":"Llama-3.2-1B、KVLink 5","interpretation":"保存量削減後もリンク機構が精度低下を一部回復する。"}],"negative_results":"圧縮を適用するとKVLinkでも無圧縮より精度が低下する。事前キャッシュ自体は巨大で、1000トークンのLlama3-8B文書が約131MBになるためベクトルデータベースへそのまま保存するのは難しい。一般能力は同じ微調整モデルと概ね同等だが、元の未微調整Llamaと比べると一部ベンチマークで低下し、データ混合の最適化余地が残る。","interpretation":"位置再符号化だけでは不十分で、KVLink 0より1個・5個のリンクトークンが多くの質問応答で一貫して改善することから、文書間注意欠落が主要な精度要因である。性能利得は文書本体を再計算しないため文脈が長いほど大きい。","quality_impact":"通常全符号化の微調整上限には完全には届かないが、PromptCache、CacheBlend、BlockAttentionより大幅に近い。一般能力は微調整対照と概ね同等で、再利用専用学習による追加劣化は小さい。"},"reservation":{"claim_id":"claim-098c5b91676f2a1a4d4737af","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-31c2c5e14daaa2ebda862c39",
+  "job_id": "job-research-06ec3586821ff3bb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-31c2c5e14daaa2ebda862c39",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
