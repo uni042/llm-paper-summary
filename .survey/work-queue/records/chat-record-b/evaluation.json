@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-16712b93d70f46eb3fb21fac",
-  "job_id": "job-research-821e549f36e154dd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-16712b93d70f46eb3fb21fac",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-16712b93d70f46eb3fb21fac","job_id":"job-research-821e549f36e154dd","data":{"hardware":"主評価は16台のDGX-A100、合計128×NVIDIA A100 80GB。各サーバは96 AMD EPYC 7V12 CPU cores、1900GiB DRAM、サーバ内NVLINK 3.0、サーバ間InfiniBand。単一サーバ特性評価も同構成を使用。","software":"ModServe約5000行Python。Text InstanceはvLLM 0.7.2、Image InstanceはHuggingFace Transformers。管理器はgRPC、通信はPyTorch distributed/NCCL/GPU Direct RDMA。","methodology":"特性評価では交差注意とデコーダのみの6種類の公開LMMをShareGPT-4oの50K画像で比較する。主エンドツーエンド評価はLlama3.2-11BとInternVL-26Bを使い、Azure本番トレースの要求到着時刻と0〜16画像/要求の分布を再生する。vLLM一体配備、段階分離のみ、分離+モダリティ認識スケジューリング、完全ModServeを比較し、単一要求のTTFT/TBTを係数倍したP99 SLOを設定する。固定128GPUで最大SLO内スループットを測り、一日本番バーストでは自動拡縮時の必要GPU数を測る。64GPU感度試験、prefill/decode分離との合成、InfiniBand/Ethernet転送費用も評価する。","datasets":["ShareGPT-4o","Azure production LMM inference trace"],"models":["Llama 3.2 Vision 11B","Llama 3.2 Vision 90B","LLaVA-OneVision 7B","LLaVA-OneVision 72B","InternVL-2.5 26B","NVLM-D 72B"],"baselines":["vLLM monolith","ModServe-Decoup","ModServe-Sched","PD-Monolith"],"metrics":["P99 TTFT","TBT","maximum throughput under SLO","GPU count/cost","image token transfer latency","stage latency"],"scope":"視覚入力LMMが主対象。公開モデルは最大90B、主エンドツーエンドは11B/26B。128GPUまでの実機クラスタと本番由来トレースを使う。音声は類似構造として適用可能性を述べるが直接評価していない。"},"reservation":{"claim_id":"claim-16712b93d70f46eb3fb21fac","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
