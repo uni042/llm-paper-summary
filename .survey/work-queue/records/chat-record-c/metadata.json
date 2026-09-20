@@ -1,1 +1,85 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-745f84fe29e16642827eabf3","job_id":"job-research-98f40fbe8624cabd","data":{"canonical_id":"arXiv:2605.29343","arxiv_id":"2605.29343","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Draft-OPD: On-Policy Distillation for Speculative Draft Models","list_summary":"投機的復号の検証で露出したドラフト誤り位置から提案を再生し、教師分布でオンポリシー蒸留することで受理長と無損失推論速度を高める。","summary":"EAGLE-3やDFlashのような学習型ドラフトモデルは、対象モデルが生成した固定軌跡で教師あり学習されるため、実際の投機的復号で自分自身が作る誤った接頭辞状態を十分に学べず受理長が早期に頭打ちになる。Draft-OPDは対象モデルによる検証を使って高品質な生成軌跡を保ちながら、各ドラフトブロックの開始位置を記録し、後からその位置でドラフト提案を再生する。受理・棄却された提案の双方について対象モデルとドラフトモデルの確率を計算し、受理位置には順方向KL、棄却位置には逆方向KLと位置減衰重みを適用する。これにより、単独では安定した長文生成が難しい学習型ドラフトでも、推論時に実際に生じる失敗状態を用いたオンポリシー蒸留が可能になる。","source":"https://arxiv.org/abs/2605.29343","sources":["https://arxiv.org/abs/2605.29343","https://arxiv.org/html/2605.29343v2"],"authors":["Haodi Lei","Yafu Li","Haoran Zhang","Shunkai Zhang","Qianjia Cheng","Xiaoye Qu","Ganqu Cui","Bowen Zhou","Ning Ding","Yun Luo","Yu Cheng"],"published":"2026-05-28","publication":"arXiv","publication_type":"preprint","publication_status":"preprint","topics":["投機的復号","オンポリシー蒸留","ドラフトモデル","知識蒸留"],"implementation":"DFlashのSFT済みドラフトを初期値とし、SpecForgeをSFT、verlをOPD学習に使用。SGLangとFlashAttention 3バックエンドで実サービング性能も評価する。","code":"https://github.com/haodilei/Draft-OPD","last_checked":"2026-09-20","hardware_evaluation":"特記のない実験はNVIDIA H200 GPU、バッチサイズ1。Qwen3-4B、8B、30B-A3B-Thinking-2507を評価。","quality_effect":"推論時の投機的検証手順自体は変更せず、対象モデルの出力分布を厳密に保つ無損失方式。学習はドラフトモデルだけを改善するため、生成品質ではなく受理長・速度を改善する。","references":[{"canonical_id":"arXiv:2602.06036","arxiv_id":"2602.06036"},{"canonical_id":"arXiv:2503.01840","arxiv_id":"2503.01840"},{"canonical_id":"arXiv:2401.15077","arxiv_id":"2401.15077"},{"canonical_id":"arXiv:2310.07177","arxiv_id":"2310.07177"},{"canonical_id":"arXiv:2310.08461","arxiv_id":"2310.08461"},{"canonical_id":"arXiv:2312.07104","arxiv_id":"2312.07104"}],"references_checked_at":"2026-09-20","references_source":"arXiv v2 primary HTML reference section","references_total":31},"reservation":{"claim_id":"claim-745f84fe29e16642827eabf3","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-5273a11ee27324b1d0305aa3",
+  "job_id": "job-research-98f40fbe8624cabd",
+  "data": {
+    "canonical_id": "arXiv:2605.29343",
+    "arxiv_id": "2605.29343",
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "title": "Draft-OPD: On-Policy Distillation for Speculative Draft Models",
+    "list_summary": "投機的復号の検証で露出したドラフト誤り位置から提案を再生し、教師分布でオンポリシー蒸留することで受理長と無損失推論速度を高める。",
+    "summary": "EAGLE-3やDFlashのような学習型ドラフトモデルは、対象モデルが生成した固定軌跡で教師あり学習されるため、実際の投機的復号で自分自身が作る誤った接頭辞状態を十分に学べず受理長が早期に頭打ちになる。Draft-OPDは対象モデルによる検証を使って高品質な生成軌跡を保ちながら、各ドラフトブロックの開始位置を記録し、後からその位置でドラフト提案を再生する。受理・棄却された提案の双方について対象モデルとドラフトモデルの確率を計算し、受理位置には順方向KL、棄却位置には逆方向KLと位置減衰重みを適用する。これにより、単独では安定した長文生成が難しい学習型ドラフトでも、推論時に実際に生じる失敗状態を用いたオンポリシー蒸留が可能になる。",
+    "source": "https://arxiv.org/abs/2605.29343",
+    "sources": [
+      "https://arxiv.org/abs/2605.29343",
+      "https://arxiv.org/html/2605.29343v2"
+    ],
+    "authors": [
+      "Haodi Lei",
+      "Yafu Li",
+      "Haoran Zhang",
+      "Shunkai Zhang",
+      "Qianjia Cheng",
+      "Xiaoye Qu",
+      "Ganqu Cui",
+      "Bowen Zhou",
+      "Ning Ding",
+      "Yun Luo",
+      "Yu Cheng"
+    ],
+    "published": "2026-05-28",
+    "publication": "arXiv",
+    "publication_type": "preprint",
+    "publication_status": "preprint",
+    "topics": [
+      "投機的復号",
+      "オンポリシー蒸留",
+      "ドラフトモデル",
+      "知識蒸留"
+    ],
+    "implementation": "DFlashのSFT済みドラフトを初期値とし、SpecForgeをSFT、verlをOPD学習に使用。SGLangとFlashAttention 3バックエンドで実サービング性能も評価する。",
+    "code": "https://github.com/haodilei/Draft-OPD",
+    "last_checked": "2026-09-20",
+    "hardware_evaluation": "特記のない実験はNVIDIA H200 GPU、バッチサイズ1。Qwen3-4B、8B、30B-A3B-Thinking-2507を評価。",
+    "quality_effect": "推論時の投機的検証手順自体は変更せず、対象モデルの出力分布を厳密に保つ無損失方式。学習はドラフトモデルだけを改善するため、生成品質ではなく受理長・速度を改善する。",
+    "references": [
+      {
+        "canonical_id": "arXiv:2602.06036",
+        "arxiv_id": "2602.06036"
+      },
+      {
+        "canonical_id": "arXiv:2503.01840",
+        "arxiv_id": "2503.01840"
+      },
+      {
+        "canonical_id": "arXiv:2401.15077",
+        "arxiv_id": "2401.15077"
+      },
+      {
+        "canonical_id": "arXiv:2310.07177",
+        "arxiv_id": "2310.07177"
+      },
+      {
+        "canonical_id": "arXiv:2310.08461",
+        "arxiv_id": "2310.08461"
+      },
+      {
+        "canonical_id": "arXiv:2312.07104",
+        "arxiv_id": "2312.07104"
+      }
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "arXiv v2 primary HTML reference section",
+    "references_total": 31
+  },
+  "reservation": {
+    "claim_id": "claim-5273a11ee27324b1d0305aa3",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
