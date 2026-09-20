@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-424d7c9bd547a6273a4b2a1c","job_id":"job-research-d9598f14ff4bcd81","data":{"overview":"ZeRO-100Bは400基のV100上で最大170BパラメータのGPT-2型モデルを効率的に実行し、8B〜100Bでは平均15PFLOPS、100BモデルではGPU当たり38TFLOPS超を報告した。メモリ削減により各GPUでより大きなバッチを使えるため、64〜400GPUの60BモデルではGPU数を増やす以上にGPU当たり効率も改善する超線形スケーリングが観測された。データ並列だけでも128GPUで13Bモデルを学習でき、モデル並列を必須にしない範囲を大きく広げた。","key_results":[{"metric":"最大実測モデル規模","value":"170Bパラメータ","baseline":"Megatron-LM単独は効率的には約40B超で急激に悪化","condition":"最大400 V100 GPU、ZeRO-100Bと最大16-wayモデル並列の併用","interpretation":"状態分割と残余メモリ削減により、ノード間へ極端なモデル並列を広げずに大規模モデルを収容できる。"},{"metric":"学習演算性能","value":"8B〜100Bで平均15PFLOPS超、100BでGPU当たり38TFLOPS超、比較対象より最大10倍高速","baseline":"Megatron-LM中心のモデル並列比較対象","condition":"最大400GPUのGPT-2型モデル","interpretation":"ノード間の低帯域で細粒度モデル並列通信を増やす代わりに、データ並列の大きな計算粒度を維持するため性能低下を抑える。"},{"metric":"データ並列だけで学習可能な規模","value":"128GPUで最大13B、GPU当たり平均40TFLOPS超","baseline":"通常データ並列は最大約1.4B、20TFLOPS/GPU未満","condition":"モデル並列なし","interpretation":"モデル状態の複製を除くことで、モデル書換えを伴うモデル並列なしでも一桁大きいモデルを扱える。"},{"metric":"モデル状態メモリ削減","value":"最適化器状態分割で約4倍、勾配分割追加で約8倍、パラメータ分割追加ではデータ並列度に比例","baseline":"通常データ並列の完全複製","condition":"混合精度Adamの理論メモリ解析","interpretation":"GPU数を増やすほど総クラスタメモリをモデル状態保持へ有効利用できる。"},{"metric":"通信量","value":"最適化器状態＋勾配分割は通常データ並列と同じ2Ψ、パラメータ分割まで含めると3Ψで1.5倍","baseline":"通常データ並列2Ψ","condition":"1学習反復当たりのモデル状態通信解析","interpretation":"大幅なメモリ削減を通信量の爆発ではなく、必要時通信への並べ替えで実現する。"}],"negative_results":"CPUへの活性値退避はPCIe往復を増やすため、60BモデルなどGPU内で十分なバッチを確保できる条件では性能を悪化させる。論文は必要な場合だけ有効化する。また1兆パラメータ学習は実機達成ではなく、完全な第3段階を前提とした容量・通信解析であり、当時の計算能力では学習完了に1年以上かかり得ると明記する。大きなバッチは一般に収束を悪化させ得るため、メモリ削減で常にバッチを増やせばよいわけでもない。","interpretation":"ZeROの性能利益は、単にメモリ使用量が減ることだけでなく、減ったメモリをより大きなGPU内バッチへ変換し、演算強度を高められることから生じる。モデル並列をノード間へ広げるとNVSwitch級のノード内帯域からInfiniBand級へ通信帯域が落ちるが、ZeROは状態保存をデータ並列GPUへ分散してモデル並列度を抑えられるため、巨大モデルほど差が大きくなる。","quality_impact":"状態配置と通信順序を変更する方式であり、量子化や近似で勾配・パラメータを変えない。論文は最適化法や収束保証を変更しない方式として位置付け、17B Turing-NLGを実際に学習して検証パープレキシティ10.21を報告している。"},"reservation":{"claim_id":"claim-424d7c9bd547a6273a4b2a1c","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-da94ea040a72507f8287f79f",
+  "job_id": "job-research-207dd824b238b749",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-da94ea040a72507f8287f79f",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}
