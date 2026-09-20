@@ -1,0 +1,10 @@
+{
+  "operation":"submit_discovery_round",
+  "candidates":[
+    {"title":"MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson","source_url":"https://doi.org/10.1145/3838177.3841726","canonical_id":"DOI:10.1145/3838177.3841726","doi":"10.1145/3838177.3841726","year":2026,"published":"2026-09-17","reason":"Very recent memory-controller-aware scheduling system for embodied LLM workloads on NVIDIA Jetson; directly relevant to on-device inference scheduling and memory contention.","priority":99},
+    {"title":"SpliTEE: Improving LLM Inference on Trusted Hardware with Differentially Private GPU Outsourcing","source_url":"https://arxiv.org/abs/2609.15039","canonical_id":"arXiv:2609.15039","arxiv_id":"2609.15039","year":2026,"published":"2026-09-14","reason":"Recent heterogeneous trusted-hardware/GPU inference system that improves LLM execution via outsourcing; relevant to partitioning and secure heterogeneous inference.","priority":95},
+    {"title":"Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution","source_url":"https://arxiv.org/abs/2609.14213","canonical_id":"arXiv:2609.14213","arxiv_id":"2609.14213","year":2026,"published":"2026-09-13","reason":"Recent mobile heterogeneous inference scheduling method centered on partition-aware co-execution; directly relevant to on-device runtime scheduling.","priority":96}
+  ],
+  "discovery_stats":{"run_key":"2026-09-21T05:01:46+09:00","round":"round-10","axis":"OpenAlex recent on-device edge LLM inference","trigger":"scheduled_worker","evaluated_count":20,"selected_count":3},
+  "discovery_precheck":{"request_id":"20260921T0518JST-worker00-openalex-edge-13","result_path":".survey/work-queue/discovery-precheck/results/20260921T0518JST-worker00-openalex-edge-13.json","receipt":"sha256:83f30f2b27d5ee4ef355f368183d3e282d657346ddd41bf9d662b43cad86246b"}
+}
