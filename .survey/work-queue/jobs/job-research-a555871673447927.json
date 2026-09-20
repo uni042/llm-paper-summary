@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-a555871673447927",
+  "type": "research",
+  "parent_job_id": "job-435d396a91e7c8ca",
+  "priority": 98,
+  "canonical_id": "DOI:10.1145/3789240.3829201",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Balancing and Beyond: Communication-Centric Optimizations in Expert Parallelism",
+  "source_url": "https://www.semanticscholar.org/paper/eac99489e90aa20cb13cb7d63f53c9014b797164",
+  "paper_path": null,
+  "selection_reason": "EPICは実運用MoE推論のexpert parallelismで、性能認識型expert migration・runtime activation・topology-adaptive transport・細粒度compute/communication overlapを統合する。約1万GPU規模のonline inferenceで通信時間最大40%、token latency最大21%削減を報告し、MoE serving基盤への直接性が非常に高い。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T21:11:09+00:00"
+}
