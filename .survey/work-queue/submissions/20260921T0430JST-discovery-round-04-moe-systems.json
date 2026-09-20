@@ -1,0 +1,22 @@
+{
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {"title":"Performance Foundations of Parallel & Distributed Reasoning Language Models","source_url":"https://arxiv.org/abs/2608.27046","canonical_id":"arXiv:2608.27046","arxiv_id":"2608.27046","year":2026,"published":"2026-08-27","reason":"Very recent systems work on performance foundations for parallel and distributed reasoning-model execution; directly relevant to inference scaling and communication.","priority":95},
+    {"title":"BatchGen: An Architecture for Scalable and Efficient Batch Inference","source_url":"https://arxiv.org/abs/2606.21712","canonical_id":"arXiv:2606.21712","arxiv_id":"2606.21712","year":2026,"published":"2026-06-19","reason":"Direct LLM batch-inference architecture contribution focused on scalable and efficient serving.","priority":94},
+    {"title":"Efficient, VRAM-Constrained xLM Inference on Clients","source_url":"https://arxiv.org/abs/2604.26334","canonical_id":"arXiv:2604.26334","arxiv_id":"2604.26334","year":2026,"published":"2026-04-29","reason":"Direct memory-constrained client inference work, aligned with GPU-memory limits and offload-oriented inference systems.","priority":93},
+    {"title":"Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores","source_url":"https://doi.org/10.36227/techrxiv.177205041.14536362/v1","canonical_id":"DOI:10.36227/techrxiv.177205041.14536362/v1","doi":"10.36227/techrxiv.177205041.14536362/v1","year":2026,"published":"2026-02-25","reason":"Direct MoE inference optimization combining expert-aware adaptive compression with sparse Tensor Core execution.","priority":93}
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-21T04:30:00+09:00",
+    "round": "round-04",
+    "axis": "recent MoE expert cache offload prefetch placement LLM inference systems",
+    "trigger": "scheduled_worker",
+    "evaluated_count": 20,
+    "selected_count": 4
+  },
+  "discovery_precheck": {
+    "request_id": "20260921T0430JST-scheduled-search-moe-04",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260921T0430JST-scheduled-search-moe-04.json",
+    "receipt": "sha256:9b455dbcfa5474db26d6848378e611c1760ee00f5732815ee801143bb4376ba5"
+  }
+}
