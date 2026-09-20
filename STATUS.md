@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:41:06 JST**
+> 自動生成: **2026-09-20 15:41:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **2** | **2** | **0** | **2** | **0** | — |
+| Research | **35** | **3** | **2** | **1** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **3** | **3** | **0** | **2** | **0** | **5** |
+| 合計 | **35** | **4** | **3** | **1** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,12 +127,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 15:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
 - **成功** `arXiv:2503.06823` — eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference
   - job: `.survey/work-queue/jobs/job-research-bb33e470bd8a5f8f.json`
   - result: `.survey/work-queue/results/research/attempt-01cbf1c46fe8f68f25b18de7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-01cbf1c46fe8f68f25b18de7.json`
   - paper: `papers/inference/06-moe-expert-offloading/2025-2503.06823-emoe.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (job `job-research-18c89b68d0c6c10d`)
 - **成功** `arXiv:2408.10284` — AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference
   - job: `.survey/work-queue/jobs/job-research-4892de26a5d749a2.json`
   - result: `.survey/work-queue/results/research/attempt-f2e51bafaabacfadeaecc0ee.json` (`ok=true`)
@@ -213,8 +214,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **739** |
-| └ Research | **553** |
+| 成功result未照合のimmutable submission | **740** |
+| └ Research | **554** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
