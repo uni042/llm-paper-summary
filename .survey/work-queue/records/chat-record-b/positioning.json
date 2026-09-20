@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-018be4cd03a3fdd526c3cb8e",
-  "job_id": "job-research-59739220ff5250cc",
+  "attempt_id": "attempt-d9e87a2e384695561c52ab9b",
+  "job_id": "job-research-7975c226ad04d80a",
   "data": {
-    "limitations": "観測窓Wの選択が重要で、本文はmodel/taskごとに1% sampleからMRI分布をoffline計測する。この方法は実運用では追加準備とdata leakage懸念があり、著者も動的適応をfuture workとする。非reasoning一般生成では再帰間隔が短く、累積attention削除との差が小さい。評価は4B〜32Bで、100B級は資源制約により未検証。観測窓の間は新規KVを蓄えるため厳密な定数メモリではなくbudget周辺で小さく変動し、MRI追跡/score計算のoverheadも追加される。",
-    "differences": "TOVA/NACL/TreeKVは現在attentionで各step削除し、H2O/Scissorhands/Keyformer/RaaSは累積attentionや最終時刻を使うが、低注意区間の後に再重要化する周期を明示的に扱わない。LazyEvictionは最大再帰間隔を記録し、削除判断自体を観測窓境界まで遅らせる。R-KV/RPCはreasoning path内のtoken類似性・冗長性を利用するのに対し、本方式はattentionの時間変化を直接扱う。KV量子化とは直交し、vLLMやCPU offload等のsystem-level管理とも併用可能。",
-    "implementation_status": "著者コードがGitHubで公開されている。再学習不要の復号時KV管理方式として、DeepSeek-R1 distilled系、Qwen3、QwQへ適用して評価済み。",
-    "research_positioning": "長時間reasoning向けKV圧縮の中で、token重要度を静的・単調な量とみなさず時間的に再帰する状態として扱う系統。長い思考では検証、backtracking、要約により初期条件や中間結論が再参照されるため、将来重要度予測をKV evictionへ導入する。特に50〜70%のKV削減でもreasoning精度を保つことを狙い、単step greedy evictionからwindow単位のpredictive retentionへ設計を変える。"
+    "limitations": "離散拡散draftと自己回帰targetの確率分布calibrationが弱く、temperature>0ではdiffusion側がtop-1へ過信しやすい。主要実験はtemperature 0なのでstochastic samplingは未実証。利用可能な離散拡散modelはtokenizer互換性が限られ、異なるtarget用には新規pretraining/fine-tuningが必要になり得る。短い生成では長い候補列を並列化する利得が小さく、targetとのalignment不足も相対的に大きい。最適速度は拡散step Tに敏感で調整が必要。",
+    "differences": "標準speculative decodingは小型自己回帰drafterがγ tokenを逐次生成するためdraft depthがγに比例する。SpecDiffは離散拡散でγ位置を同時生成しdepthをTへ置換する。Medusa/Hydra/EAGLE系はtarget由来の追加headやtreeを使い、target architectureとの強い結合や追加trainingを伴う。SpecDiffは異種architectureの独立diffusion drafterを利用でき、既存targetの検証規則を変更しない。tree方式より候補長拡大時のmemory/FLOPs増加を抑えやすい。",
+    "implementation_status": "2×A100上でMDLM drafterと複数targetを組み合わせて実測。既存speculative decoding codeのdraft生成を置換する形で実装可能。論文ではmodelをHuggingFace公開予定と記載するが、本文から独立code repository URLは確認できない。",
+    "research_positioning": "投機的復号の研究を『targetの並列検証』から『draft生成自体の並列化』へ拡張する方式。非自己回帰modelの品質不足をそのまま最終生成へ使わず、target modelのaccept/reject補正の内側に閉じ込めることで、diffusionの速度と自己回帰LLMの品質を分業させる。将来diffusion modelのcalibrationと速度が改善すると、draft長をさらに伸ばして利得を拡大できる。"
   },
   "reservation": {
-    "claim_id": "claim-018be4cd03a3fdd526c3cb8e",
+    "claim_id": "claim-d9e87a2e384695561c52ab9b",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

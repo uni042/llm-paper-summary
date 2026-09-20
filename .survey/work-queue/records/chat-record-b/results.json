@@ -2,53 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-018be4cd03a3fdd526c3cb8e",
-  "job_id": "job-research-59739220ff5250cc",
+  "attempt_id": "attempt-d9e87a2e384695561c52ab9b",
+  "job_id": "job-research-7975c226ad04d80a",
   "data": {
-    "overview": "LazyEvictionはFullKVの30〜50%だけを保持する厳しい予算でも、4種類のreasoning modelと複数領域で既存KV削除法より高い精度を示した。GSM8K 50%予算ではDS-Llama 80.06対FullKV 81.73、DS-Qwen 88.40対89.92。MATH-500 50%ではDS-Llamaが75.2でFullKV 74.8を上回り、DS-Qwenも85.4対86.0に近い。AIME 30%ではDS-Llama 30.0でFullKVと同値、QwQ-32B 66.7対73.3。GPQA 50%では36.9/54.6でFullKV 37.4/55.7に近く、LiveCodeBench 40%でも56.90/51.72で既存圧縮を上回る。",
+    "overview": "CNN/DMではGPT-2 XL targetで4.80倍、GPT-NEOで6.63倍の自己回帰生成比高速化を達成し、標準投機的復号の3.58倍/5.45倍を上回った。OpenWebTextでは5.38倍/7.23倍で、標準投機的復号3.66倍/4.12倍に対して最大約1.75倍改善した。MT-BenchのVicuna 33Bでは2.61倍で、EAGLE 2.41倍、EAGLE-2 2.60倍と同等以上のoverall speedupを、EAGLE-2より33%以上少ないdraft FLOPsで得た。",
     "key_results": [
       {
-        "metric": "GSM8K accuracy at 50% KV budget",
-        "value": "DS-Llama 80.06、DS-Qwen 88.40、Qwen3 91.50、QwQ 93.48",
-        "baseline": "FullKV 81.73/89.92/93.32/95.61",
-        "condition": "KV budget ratio 50%",
-        "interpretation": "半分のKVでもFullKVに近い数学推論精度を維持。"
+        "metric": "OpenWebText speedup",
+        "value": "7.23倍 GPT-NEO、5.38倍 GPT-2 XL",
+        "baseline": "autoregressive target decoding",
+        "condition": "MDLM draft、temperature 0、2×A100",
+        "interpretation": "長い並列diffusion draftで最大高速化を達成。"
       },
       {
-        "metric": "MATH-500 accuracy at 50% KV budget",
-        "value": "75.2/85.4/85.8/85.4",
-        "baseline": "FullKV 74.8/86.0/87.2/87.2",
-        "condition": "4 reasoning models",
-        "interpretation": "DS-LlamaではFullKVを上回り、他モデルも小さい差に抑える。"
+        "metric": "standard speculative decoding比",
+        "value": "最大約1.75倍、範囲1.45〜1.75倍",
+        "baseline": "GPT-2 autoregressive drafter",
+        "condition": "CNN/DM/OpenWebText",
+        "interpretation": "draft側の直列生成を並列化する利得を確認。"
       },
       {
-        "metric": "GPQA Diamond at 50% KV budget",
-        "value": "36.9 DS-Llama、54.6 DS-Qwen",
-        "baseline": "FullKV 37.4、55.7",
-        "condition": "science QA",
-        "interpretation": "数学以外の推論でも精度をほぼ維持。"
+        "metric": "CNN/DM speedup",
+        "value": "4.80倍 GPT-2 XL、6.63倍 GPT-NEO",
+        "baseline": "autoregressive decoding",
+        "condition": "1024 token generation",
+        "interpretation": "要約でも標準投機的復号を上回る。"
       },
       {
-        "metric": "LiveCodeBench at 40% KV budget",
-        "value": "56.90 DS-Llama、51.72 DS-Qwen",
-        "baseline": "FullKV 58.62、55.17",
-        "condition": "code generation",
-        "interpretation": "60%削減でもH2O/TOVA/RaaS/R-KVを上回る。"
+        "metric": "MT-Bench overall speedup",
+        "value": "2.61倍",
+        "baseline": "EAGLE 2.41倍、EAGLE-2 2.60倍",
+        "condition": "Vicuna 33B target、MDLM 141M",
+        "interpretation": "SOTA級速度をより小さいdiffusion draftで達成。"
       },
       {
-        "metric": "H1 score ablation",
-        "value": "-3.95点 DS-Llama、-5.62点 DS-Qwen",
-        "baseline": "full LazyEviction",
-        "condition": "GSM8K setting",
-        "interpretation": "最終重要時刻からMRIまでの経過を使う生存確率が主要寄与。"
+        "metric": "draft FLOPs",
+        "value": "5.53×10^10 FLOPs/draft",
+        "baseline": "EAGLE-2 8.35×10^10",
+        "condition": "MT-Bench Vicuna 33B",
+        "interpretation": "EAGLE-2より33%以上少ないdraft計算で同等overall speedup。"
       }
     ],
-    "negative_results": "観測窓Wはmodel/taskごとのMRI分布に依存し、本文実装はtest sampleの1%をoffline解析して80% tokenを覆う閾値を選ぶため実運用では非効率かつdata leakage懸念がある。一般的な非reasoning言語モデルではMRIが10未満と短く、H2O/RaaSなど累積attention法との差が小さい。100B級モデルは未評価。観測窓中はKV数が一時的にbudgetを超えるためメモリ使用量が少し変動し、score追跡の追加計算もある。",
-    "interpretation": "長い推論ではtoken重要度が単調に減るのではなく、問題条件や中間結論が後段で再利用される。現在値や累積値だけでは低注意の休眠区間に重要tokenを捨てるが、MRIは再利用の時間尺度を保持するため、将来重要化の直前までKVを残せる。",
-    "quality_impact": "30〜50% KV budgetでFullKVに近い精度を保ち、特に既存貪欲削除が崩れやすい長い推論で改善が大きい。一般長文生成では利得が小さくなる。"
+    "negative_results": "diffusion drafterの確率はtargetと十分calibrateされず、特にtemperature>0ではtop-1へ過度に集中するため確率的samplingの有効性は未検証。利用可能なdiffusion modelのtokenizerがGPT-2系に偏り、Vicuna用には別tokenizerで新規学習が必要だった。短い生成では並列化利得が小さく、fine-tuningなしでは初期acceptance率が低い。性能はγより拡散step数Tの調整に敏感。",
+    "interpretation": "投機的復号の速度上限はtarget検証だけでなくdraftの直列depthにも依存する。diffusion draftでは候補長γとnetwork evaluation数Tを分離でき、より長い候補を低depthで提案できるため、acceptance率が標準draftより少し低くてもwalltimeでは速くなる。",
+    "quality_impact": "標準speculative samplingのaccept/reject補正を維持するためtarget modelのgreedy出力品質を保持する。実験はtemperature 0であり、多様な確率的samplingでの同等性は今後の課題。"
   },
   "reservation": {
-    "claim_id": "claim-018be4cd03a3fdd526c3cb8e",
+    "claim_id": "claim-d9e87a2e384695561c52ab9b",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

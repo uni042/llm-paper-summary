@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-018be4cd03a3fdd526c3cb8e","job_id":"job-research-59739220ff5250cc","data":{"problem":"長い思考連鎖では復号が数千から16k語へ伸び、過去tokenの鍵・値を保持するKVキャッシュが系列長に比例して増える。batch 32の16k推論では100GB超になり得る。既存削除法は現在attention値、累積attention値、直近/先頭位置などから各stepで不要tokenを貪欲に捨てる。しかし推論中のtokenは、一度重要になった後しばらく注意が低下し、検証・逆戻り・要約時に再び強く参照される。論文は95%超のtokenでこの重要度再帰を観測し、GSM8Kでは同じ50%圧縮でH2O/TOVAが一般長文より約20%精度を落とすことを示す。したがって現在や累積の低注意だけで削除せず、将来再び重要になる可能性を時間パターンから判断する必要がある。","novelty":"LazyEvictionは毎step即時削除をやめ、W stepの観測窓ごとに削除判断を遅延する。各tokenについてattentionが閾値を超えた最終時刻と、過去の重要化間隔の最大値である最大再帰間隔（Maximum Recurrence Interval: MRI）を追跡する。最終重要時刻からの経過時間がMRIへ近づくほど再重要化の見込みが下がるという生存確率と、MRIが短いtokenほど頻繁に再帰するという頻度事前分布を組み合わせて将来重要度を推定する。これにより低注意区間にいる再帰tokenを保持し、将来必要になる前の早期削除を避ける。","method_overview":"入力は自己回帰復号中に各層から得られるtoken別attention値、現在GPU上に保持するKV集合S、最終的に残したい容量上限B、削除判断間隔となる観測窓W、重要attentionを判定する閾値αである。新しいtokenを一つ生成するたび、まず通常のattentionを実行してそのtokenのKVを追加する。同時に、既存tokenのattentionがαを超えた場合は、そのtokenが再び重要化したと判定する。前回重要時刻と現在時刻の差を求め、それが過去最大より長ければ最大再帰間隔MRIを更新し、最新重要時刻TSを現在stepへ進める。この追跡は毎step行うが、KV削除そのものはt=kWとなる観測窓境界だけで実行する。境界に到達して保持数がBを超えたら、最新W個のKVを局所一貫性のため無条件に保護する。それより古いtokenについて、現在時刻からTSまでの経過時間をMRIで正規化した生存確率項と、MRIが短いほど高くなる再帰頻度項を計算し、両者を足した将来重要度scoreを作る。MRIが0で再重要化実績のないtokenは生存確率項だけで扱う。古いKVをscore順に並べ、上位B-W個を最新W個と結合して次の保持集合S'とし、残りのKVをGPUメモリから削除する。次のW stepではこの圧縮済み集合へ新規KVを足しながらTS/MRI追跡を続け、次の境界で同じ選別を反復する。最終的にモデルが出すtoken列は通常の自己回帰復号と同じ手順で生成されるが、attentionが参照できる過去KVだけが将来重要度予測によって動的に制限される。","components":[{"name":"重要度再帰の時刻追跡","description":"各tokenに最新重要時刻TSと最大再帰間隔MRIを持たせる。attention scoreが閾値αを超えたときだけ重要化とみなし、前回TSとの差を計算してMRI=max(旧MRI, 今回間隔)へ更新した後、TSを現在stepへ進める。新規tokenのMRIは0から始まる。これによりattention値そのものを長期累積する代わりに、『最後にいつ重要だったか』『これまで最長で何step休眠してから再重要化したか』という時間構造を小さい状態で保持する。入力はstepごとのattention、出力はtokenごとのTS/MRIで、削除判断の将来予測へ渡される。"},{"name":"観測窓による遅延削除","description":"従来法のように各復号stepで即座にKVを削除せず、W stepごとの判断時点だけで削除する。窓の開始後は通常どおり新規tokenのKVを追加し、保持数が一時的にBを超えても境界までは削除せず、その間のattention変化を観測する。これにより、あるtokenが数stepだけ低注意になった直後に再び重要化する場合、その再帰を確認する前に捨てる危険を減らす。境界t=kWで選別を始める際には最新W個を無条件に保護し、局所的な言語一貫性を維持する。残りの古いtokenにだけMRI中心scoreを適用し、B-W枠を配分する。Wは再帰tokenの休眠期間を覆う安全bufferであり、論文では各model/taskについてtest sampleの1%からMRI分布を事前測定し、80%のtokenのMRIを覆う値をWとして選ぶ。たとえばQwenのMATH-500では出力が8kに達しても80%のtokenのMRIが175未満であり、W=175程度の観測で多数の再帰を捕捉できる。出力は『最新W個＋予測重要度の高い古いB-W個』からなる次窓のKV集合である。"},{"name":"MRI中心の将来重要度score","description":"古いtoken iについて二つの項を計算する。第一項は最終重要時刻からの経過ΔTをMRIで割り、ΔTがMRIへ近づくほどsigmoidで値を下げる生存確率である。第二項はMRI自体が短いtokenほど頻繁に再重要化するとみなして高得点にする頻度事前分布である。MRIが0なら第二項は使わない。二項を足したscoreで古いKVを順位付けし、上位B-Wだけを保持する。これにより単なる累積attentionが低いtokenでも、再帰周期から近い将来の重要化が期待されれば残せる。ablationでは第一項を外すとGSM8K精度がDS-Llamaで3.95点、DS-Qwenで5.62点低下した。"},{"name":"予算制約付き反復復号","description":"KV数が予算Bを超えた観測窓境界でだけscore計算と選別を行い、保持集合をB程度へ戻す。その後も通常の自己回帰復号を続け、新しいKVを追加しながら次の窓までTS/MRIを更新する。削除計算をW stepに一度へ間引くため、毎step圧縮より管理overheadを抑える。長い生成ではFullKVのattention計算量がtoken数とともに増え続ける一方、LazyEvictionはKV budgetを制限するため、論文では16k生成付近で追加score計算を含めてもFullKVより推論効率が高くなると報告する。"}],"system_design":"既存推論モデルを再学習せず、復号時のKV管理層へ追加できる。attention値からTS/MRIを更新し、W stepごとに最新W個＋将来重要度上位B-W個だけをGPU上のKVとして残す。コードは著者GitHubで公開され、4B〜32Bの推論モデルで評価されている。"},"reservation":{"claim_id":"claim-018be4cd03a3fdd526c3cb8e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-d9e87a2e384695561c52ab9b",
+  "job_id": "job-research-7975c226ad04d80a",
+  "data": {
+    "problem": "通常の自己回帰生成は次tokenが前tokenへ依存するため直列で、target LLMが大きいほど復号時間が支配的になる。標準投機的復号は小さいdraft modelでγ個の候補を先に作り、target modelでγ位置を一括検証してtarget側を並列化する。しかしdraft model自身はγ tokenを順番に生成するため、draft長を増やすほどγ回のnetwork evaluationが必要になる。γを小さくすると一回に進めるtoken数が減り、大きくするとdraft時間が増えて高速化が消える。tree型draftは並列性を増やせるが追加FLOPsやmemoryを要する。そこでdraft列そのものを非自己回帰的に並列生成し、候補長を増やしても直列depthが増えにくい方式が必要になる。",
+    "novelty": "SpecDiffは投機的復号のdraft modelを自己回帰LLMから離散拡散言語モデルへ置換する。離散拡散はγ位置全体を同時にdenoiseし、draft長γではなく拡散step数Tだけnetwork evaluationを行う。通常T<γなので候補長を10〜20程度へ増やしてもdraftの直列depthを抑えられる。生成した各位置のdraft確率分布qを保存し、target modelの確率pと標準speculative sampling規則で左からaccept/rejectするため、draft自体のperplexityが高くても最終出力はtarget分布へ補正される。",
+    "method_overview": "入力は既生成prefix、target自己回帰model Mp、離散拡散draft model Mq、draft長γ、拡散step数Tである。まず次のγ位置をmask/noise状態として用意し、MqをT回適用して全γ位置を並列に復元する。最終draft token列と各位置の確率qを保存する。次にMpへprefix＋draft列を一度に入力し、γ位置とその次位置のtarget確率pを並列計算する。左から順にp/qに基づく標準acceptance testを行い、最初のrejectまでのdraft tokenを確定する。rejectが起きた位置ではmax(0,p-q)を正規化した補正分布からtarget tokenを一つsampleし、全draftがacceptならtargetの次tokenを一つ追加する。この確定prefixから次iterationを繰り返す。未調整のdiffusion drafterは生成初期にtarget分布とずれやすいため、実験の一部では最初100 tokenだけ標準投機的復号で初期化し、その後SpecDiffへ切り替える。",
+    "components": [
+      {
+        "name": "離散拡散による並列draft生成",
+        "description": "次γ位置を一つずつ自己回帰生成せず、全位置をnoise/mask状態から同時に復元する。入力は確定prefixとγ位置のnoisy token状態で、各拡散stepにMqを一回適用し全位置の確率分布を更新する。T回後に各位置から候補tokenを得る。自己回帰draftでは計算depthがγDqだが、SpecDiffではTDqとなり、Tがγより小さい条件でdraft側の直列依存を減らせる。"
+      },
+      {
+        "name": "target modelによる一括検証と補正",
+        "description": "diffusion drafterが出したγ tokenと各q分布をtarget modelへまとめて渡し、Mpが各位置のp分布を一度の並列forwardで計算する。左からp/q acceptance testを適用し、acceptしたprefixだけを確定する。reject時はp-qの正部分から補正sampleを生成する。この手順は標準投機的復号の検証規則をそのまま利用するため、draft architectureやdraft品質がtargetと異なっても最終sampleをtarget分布へ整合させる。"
+      },
+      {
+        "name": "draft長γと拡散step Tの分離",
+        "description": "自己回帰draftではγを増やすとnetwork evaluation数も増えるため最適値に敏感だが、diffusionではγ位置を同時処理するためγを10〜20へ広げても追加depthが小さい。一方、Tを増やすとdraft品質とacceptance率は上がるがMq evaluationが増える。したがってγは比較的広い範囲で頑健に設定し、Tをaccepted tokensとdraft overheadの交換として調整する。実験でも速度はγよりTに敏感だった。"
+      },
+      {
+        "name": "prefix初期化とdistribution alignment",
+        "description": "事前学習済みdiffusion modelとtarget modelはarchitecture・token distributionが異なるため、生成開始直後はacceptance率が低い。未fine-tune条件では最初100 tokenを標準投機的復号で生成し、target分布に沿ったprefixを与えてからSpecDiffへ切り替える。Vicuna 33B評価ではtokenizerを合わせたMDLMを用い、teacher-student instruction tuningでtargetとのalignmentを改善したため初期化を不要にした。"
+      }
+    ],
+    "system_design": "既存speculative decoding実装のdraft部分をMDLMへ置換し、target検証・acceptance logicは再利用する。draftとtargetを2×A100上で動かし、FlashAttentionを双方の比較条件へ適用する。"
+  },
+  "reservation": {
+    "claim_id": "claim-d9e87a2e384695561c52ab9b",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -2,47 +2,43 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-018be4cd03a3fdd526c3cb8e",
-  "job_id": "job-research-59739220ff5250cc",
+  "attempt_id": "attempt-d9e87a2e384695561c52ab9b",
+  "job_id": "job-research-7975c226ad04d80a",
   "data": {
-    "hardware": "主要評価のGPU型番は本文主要節で明示されない。制約説明では100B級DeepSeek-R1のMATH-500 500問評価に8×A100で数日必要と記載。",
-    "software": "著者実装を公開。復号attention値からtokenごとの最新重要時刻と最大再帰間隔を追跡し、観測窓ごとにKVを削除。",
-    "methodology": "DeepSeek-R1-Distill-Llama-8B、DeepSeek-R1-Distill-Qwen-7B、Qwen3-4B、QwQ-32Bを数学GSM8K/MATH-500/AIME、科学QAのGPQA Diamond、コードのLiveCodeBenchで評価する。FullKV、RaaS、H2O、TOVA、CAKE、R-KVと同じKV予算比で精度を比較する。主要条件はGSM8K/MATH-500が50%、AIMEが30%、GPQAが50%、LiveCodeBenchが40%。さらにLlama-3.1-8B-Instructで一般長文QA/要約も検証し、観測窓・score項・閾値のablation、0〜8k生成でのKVメモリ変化と長生成時overheadを測る。",
-    "scope": "長い思考連鎖を生成する復号段階のKV削除が中心。再学習なしの推論時圧縮で、4B〜32B reasoning modelと一部一般長文生成を対象にする。",
+    "hardware": "2×NVIDIA A100 80GB。",
+    "software": "CUDA 12.2、FlashAttention。Masked Diffusion Language Modelをdraftとして使用。",
+    "methodology": "CNN/DailyMail要約、OpenWebText生成、MT-Bench、およびSpecBenchで評価。CNN/DMとOpenWebTextは1024 tokenをtemperature 0で生成し、targetにGPT-2 XL 1.5B/GPT-NEO 2.7B、draftにMDLM 110Mを使用。標準投機的復号はGPT-2 86M draft。MT-BenchではVicuna 33B target、MDLM 141M draftを用いEAGLE/EAGLE-2と比較。walltime speedup、acceptance rate、FLOPs/draft、memory/depthを測定し、γとT、標準投機的初期化の有無もablation。",
+    "scope": "自己回帰target modelの出力品質を保った投機的復号高速化。主に長いgreedy generationを対象とし、temperature>0の確率的生成は未評価。",
     "models": [
-      "DeepSeek-R1-Distill-Llama-8B",
-      "DeepSeek-R1-Distill-Qwen-7B",
-      "Qwen3-4B",
-      "QwQ-32B",
-      "Llama-3.1-8B-Instruct"
+      "GPT-2 XL 1.5B",
+      "GPT-NEO 2.7B",
+      "Vicuna 33B",
+      "MDLM 110M",
+      "MDLM 141M",
+      "GPT-2 86M drafter"
     ],
     "datasets_benchmarks": [
-      "GSM8K",
-      "MATH-500",
-      "AIME",
-      "GPQA Diamond",
-      "LiveCodeBench",
-      "PIQA",
-      "long-document summarization"
+      "CNN/DailyMail",
+      "OpenWebText",
+      "MT-Bench",
+      "SpecBench"
     ],
     "baselines": [
-      "FullKV",
-      "RaaS",
-      "H2O",
-      "TOVA",
-      "CAKE",
-      "R-KV"
+      "autoregressive decoding",
+      "standard speculative decoding",
+      "EAGLE",
+      "EAGLE-2"
     ],
     "metrics": [
-      "task accuracy",
-      "KV cache budget ratio",
-      "KV cache memory usage",
-      "inference efficiency",
-      "ablation accuracy"
+      "walltime speedup",
+      "acceptance rate",
+      "FLOPs per draft",
+      "memory consumption",
+      "computation depth"
     ]
   },
   "reservation": {
-    "claim_id": "claim-018be4cd03a3fdd526c3cb8e",
+    "claim_id": "claim-d9e87a2e384695561c52ab9b",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

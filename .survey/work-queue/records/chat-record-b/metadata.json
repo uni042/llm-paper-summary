@@ -2,67 +2,68 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-018be4cd03a3fdd526c3cb8e",
-  "job_id": "job-research-59739220ff5250cc",
+  "attempt_id": "attempt-d9e87a2e384695561c52ab9b",
+  "job_id": "job-research-7975c226ad04d80a",
   "data": {
-    "canonical_id": "DOI:10.18653/v1/2026.acl-long.1683",
+    "canonical_id": "DOI:10.18653/v1/2025.naacl-long.601",
     "arxiv_id": null,
-    "doi": "10.18653/v1/2026.acl-long.1683",
+    "doi": "10.18653/v1/2025.naacl-long.601",
     "openreview_id": null,
     "arxiv_categories": {
       "primary": null,
       "cross_list": []
     },
-    "title": "LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning",
-    "summary": "長い思考連鎖では生成tokenが数千〜16kへ伸び、KVキャッシュがGPUメモリを圧迫する。従来の現在注意値や累積注意値による貪欲削除は、一時的に注意が低くても後で再び重要になるtokenを早期削除する。LazyEvictionはtoken重要度再帰現象を観測し、重要になった時刻間の最大再帰間隔を追跡する。W復号stepごとの観測窓で削除を遅延し、最終重要時刻からの経過と最大再帰間隔から将来重要度を予測してKVを保持する。4B〜32Bの推論モデルと数学・科学QA・コード生成で、FullKVの30〜50%予算でも近い精度を保ち、従来KV圧縮を上回る。",
-    "list_summary": "一時的に注意が下がって後で再重要化するtokenを最大再帰間隔で予測し、観測窓ごとの遅延削除で長い推論のKVキャッシュを圧縮する方式。",
+    "title": "Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion",
+    "summary": "通常の投機的復号は小型自己回帰draft modelがγ個の候補tokenを逐次生成するため、target側の並列検証は速くてもdraft段階に直列依存が残る。SpecDiffはdraft modelを離散拡散言語モデルへ置換し、候補列全体をT回の拡散stepで並列生成する。draft長γを増やしても評価回数はγではなくTに依存するため、長い候補を低depthで生成できる。候補は標準投機的復号と同じtarget確率によるaccept/rejectで検証するのでtarget modelの出力品質を保持する。CNN/DM、OpenWebText、MT-Benchで最大7.23倍の自己回帰生成比高速化、標準投機的復号比1.45〜1.75倍改善を示す。",
+    "list_summary": "自己回帰draftを離散拡散draftへ置換し、候補列の生成とtarget検証の双方を並列化して投機的復号を高速化する方式。",
     "authors": [
-      "Haoyue Zhang",
-      "Hualei Zhang",
-      "Xiaosong Ma",
-      "Jie Zhang",
-      "Song Guo"
+      "Jacob K. Christopher",
+      "Brian R. Bartoldson",
+      "Tal Ben-Nun",
+      "Michael Cardei",
+      "Bhavya Kailkhura",
+      "Ferdinando Fioretto"
     ],
-    "authors_affiliations": "The Hong Kong University of Science and Technology; The Hong Kong Polytechnic University",
-    "published": "2026-07-02",
-    "publication": "ACL 2026 Long Papers",
+    "authors_affiliations": "University of Virginia; Lawrence Livermore National Laboratory",
+    "published": "2025-04-29",
+    "publication": "NAACL 2025 Long Papers",
     "publication_type": "Conference paper",
     "publication_status": "Published",
-    "lineage": "長時間推論向けKVキャッシュ削除",
+    "lineage": "投機的復号・非自己回帰draft",
     "topics": [
-      "KV cache eviction",
-      "long reasoning",
-      "token importance recurrence",
-      "attention sparsity"
+      "speculative decoding",
+      "discrete diffusion",
+      "parallel drafting",
+      "LLM inference"
     ],
-    "importance": "長い推論ではtoken重要度が時間を置いて再発することを実測し、単step貪欲削除ではなく将来の再重要化を予測するKV保持へ転換した。",
-    "hardware_evaluation": "本文主要節では評価GPU型を明示していない。4B〜32B推論モデルを評価。100B級評価の資源例として8×A100でMATH-500 500問に数日を要すると記載。",
-    "hardware_details": "主要評価ハードウェアの型番は本文から確認できず。",
-    "quality_effect": "FullKVの30〜50% KV予算で数学・科学QA・コード生成の精度を概ね維持し、複数条件で既存削除法を上回る。",
-    "source": "https://aclanthology.org/2026.acl-long.1683/",
+    "importance": "投機的復号のdraft側に残る自己回帰直列性を離散拡散で除き、draft長とnetwork evaluation数を分離した。",
+    "hardware_evaluation": "2×NVIDIA A100 80GB、CUDA 12.2、FlashAttention。",
+    "hardware_details": "全主要評価を2台のA100 80GBで実施。",
+    "quality_effect": "target modelの標準投機的accept/reject補正を維持するため、target分布の品質を保持する設計。評価はtemperature 0。",
+    "source": "https://aclanthology.org/2025.naacl-long.601/",
     "sources": [
-      "https://aclanthology.org/2026.acl-long.1683/",
-      "https://aclanthology.org/2026.acl-long.1683.pdf"
+      "https://aclanthology.org/2025.naacl-long.601/",
+      "https://aclanthology.org/2025.naacl-long.601.pdf"
     ],
-    "code": "https://github.com/Halo-949/LazyEviction",
-    "implementation": "復号時にattention threshold超過時刻と最大再帰間隔をtokenごとに更新し、W step間隔で最新W tokenを常時保持した上で残りをMRI中心scoreで選別する。",
+    "code": null,
+    "implementation": "Masked Diffusion Language Modelをdraftとして用い、既存speculative decodingのdraft部分だけを置換。初期tokenでは必要に応じ標準speculative decodingでdistribution alignmentを改善。",
     "last_checked": "2026-09-20",
     "references": [
       {
-        "canonical_id": "arXiv:2309.17453",
-        "arxiv_id": "2309.17453"
+        "canonical_id": "arXiv:2211.17192",
+        "arxiv_id": "2211.17192"
       },
       {
-        "canonical_id": "arXiv:2401.06104",
-        "arxiv_id": "2401.06104"
+        "canonical_id": "arXiv:2401.10774",
+        "arxiv_id": "2401.10774"
       },
       {
-        "canonical_id": "arXiv:2408.03675",
-        "arxiv_id": "2408.03675"
+        "canonical_id": "arXiv:2402.05109",
+        "arxiv_id": "2402.05109"
       },
       {
-        "canonical_id": "arXiv:2502.11147",
-        "arxiv_id": "2502.11147"
+        "canonical_id": "arXiv:2406.16858",
+        "arxiv_id": "2406.16858"
       }
     ],
     "references_checked_at": "2026-09-20",
@@ -70,7 +71,7 @@
     "references_total": 4
   },
   "reservation": {
-    "claim_id": "claim-018be4cd03a3fdd526c3cb8e",
+    "claim_id": "claim-d9e87a2e384695561c52ab9b",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
