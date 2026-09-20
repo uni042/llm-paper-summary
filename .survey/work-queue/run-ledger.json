@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T07:36:00.053860+00:00",
+  "updated_at": "2026-09-20T07:40:06.002656+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T07:36:00.053860+00:00",
+      "last_recorded_at": "2026-09-20T07:40:06.002656+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 359,
+        "research_completed": 360,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35456280821:1",
-          "recorded_at": "2026-09-19T16:51:58.469156+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35456280821",
-            "run_attempt": "1",
-            "source_sha": "32ac715018c3cb9c6d91619ec423af304a34f22b"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35456667320:1",
           "recorded_at": "2026-09-19T17:03:32.050965+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35497289167",
             "run_attempt": "1",
             "source_sha": "938cfed94cf88f2ab79e068266692434ee97ec3a"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35497455940:1",
+          "recorded_at": "2026-09-20T07:40:06.002656+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35497455940",
+            "run_attempt": "1",
+            "source_sha": "be67495a5d321ab7b7da7e092a95190b27962b95"
           },
           "signals": [
             "research_completed"
@@ -24418,6 +24418,14 @@
           "type": "research",
           "canonical_id": "arXiv:2311.04934",
           "title": "Prompt Cache: Modular Attention Reuse for Low-Latency Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-98f40fbe8624cabd",
+          "type": "research",
+          "canonical_id": "arXiv:2605.29343",
+          "title": "Draft-OPD: On-Policy Distillation for Speculative Draft Models",
           "from": "ready",
           "to": "completed"
         }

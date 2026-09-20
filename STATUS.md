@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 16:39:40 JST**
+> 自動生成: **2026-09-20 16:40:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **113** |
+| 収録候補論文 | **112** |
 | 未claim Research job | **111** |
-| 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-20 16:35:54 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **72** |
+| 最終検証済みResearch収録 | **09-20 16:40:00 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **113** |
+| canonical_id確認済みの一意な候補論文 | **112** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **113** |
+| 非終端Research job合計 | **112** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **2** | **1** | **1** | **2** | **1** | — |
+| Research | **36** | **2** | **2** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **3** | **2** | **1** | **2** | **1** | **5** |
+| 合計 | **36** | **3** | **3** | **0** | **1** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 16:40:00 JST** [research] `arXiv:2605.29343` — Draft-OPD: On-Policy Distillation for Speculative Draft Models
+  - job: `.survey/work-queue/jobs/job-research-98f40fbe8624cabd.json`
+  - result: `.survey/work-queue/results/research/attempt-5273a11ee27324b1d0305aa3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5273a11ee27324b1d0305aa3.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2605.29343-draft-opd.md`
 - **09-20 16:35:54 JST** [research] `arXiv:2311.04934` — Prompt Cache: Modular Attention Reuse for Low-Latency Inference
   - job: `.survey/work-queue/jobs/job-research-9c3fc1bfa46c87d0.json`
   - result: `.survey/work-queue/results/research/attempt-cb9b65cad9eb01765ba97d06.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-95845744b63d99732374d3b0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-95845744b63d99732374d3b0.json`
   - paper: `papers/inference/06-kv-cache-memory/2024-2405.05254-yoco.md`
-- **09-20 15:08:10 JST** [research] `arXiv:2405.03917` — KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization
-  - job: `.survey/work-queue/jobs/job-research-be4feb2ff4a84f5b.json`
-  - result: `.survey/work-queue/results/research/attempt-bdf0c488544312e64b741a67.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bdf0c488544312e64b741a67.json`
-  - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2405.03917-coupled-quantization.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 16:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5273a11ee27324b1d0305aa3.json` (job `job-research-98f40fbe8624cabd`)
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2605.29343` — Draft-OPD: On-Policy Distillation for Speculative Draft Models
+  - job: `.survey/work-queue/jobs/job-research-98f40fbe8624cabd.json`
+  - result: `.survey/work-queue/results/research/attempt-5273a11ee27324b1d0305aa3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5273a11ee27324b1d0305aa3.json`
+  - paper: `papers/inference/06-speculative-decoding/2026-2605.29343-draft-opd.md`
 - **成功** `arXiv:2311.04934` — Prompt Cache: Modular Attention Reuse for Low-Latency Inference
   - job: `.survey/work-queue/jobs/job-research-9c3fc1bfa46c87d0.json`
   - result: `.survey/work-queue/results/research/attempt-cb9b65cad9eb01765ba97d06.json` (`ok=true`)
@@ -155,10 +159,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2605.29343` — Draft-OPD: On-Policy Distillation for Speculative Draft Models / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 16:38:44 JST** / heartbeat: **—** / lease expiry: **09-20 18:08:44 JST**
-  - evidence: `.survey/work-queue/claims/job-research-98f40fbe8624cabd.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey-01`
   - claim: **09-20 16:02:12 JST** / heartbeat: **09-20 16:28:58 JST** / lease expiry: **09-20 17:58:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -181,7 +182,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **113** |
+| ready | **112** |
 
 ### 候補の重複・識別情報欠損
 
@@ -201,7 +202,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **823** |
+| inference/training/survey配下の論文Markdown実体 | **824** |
 
 ### immutable submissionの未照合
 
@@ -209,8 +210,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **744** |
-| └ Research | **558** |
+| 成功result未照合のimmutable submission | **743** |
+| └ Research | **557** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
