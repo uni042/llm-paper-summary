@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f2383c99186b0edb3dfe445b","job_id":"job-research-2442fe5802b5c31d","data":{"canonical_id":"arXiv:2506.20675","title":"Utility-Driven Speculative Decoding for Mixture-of-Experts","list_summary":"MoEでは投機長が増やす専門家読出し費用まで含めた効用を実測し、投機の無効化とK選択を動的に行って最悪減速を5%へ抑える。","summary":"CascadeはMoE向け投機的復号の実行時制御方式である。密モデルでは複数候補を一括検証しても全重みを読むため検証時間がほぼ一定だが、MoEでは候補ごとに異なる専門家を活性化し、K増加で専門家重み転送が2〜3倍になるため、ETR向上より費用が大きくなり最大1.5倍程度の減速が起こる。CascadeはETR利得を反復時間増加で割った投機効用を定義し、効用1未満ならK=0、1超なら短い試験期間で複数Kを測って効用最大Kを設定期間へ採用する。低効用時の指数バックオフと山登り探索を組み合わせ、vLLM上で5種MoE・7負荷を評価し最悪減速を5%へ抑え、静的K比7〜14%改善する。","source":"https://arxiv.org/html/2506.20675v1","sources":["https://arxiv.org/abs/2506.20675","https://arxiv.org/html/2506.20675v1"],"authors":["Anish Saxena","Po-An Tsai","Hritvik Taneja","Aamer Jaleel","Moinuddin Qureshi"],"published":"2025-06-17","publication":"MICRO 2025 / arXiv preprint","publication_type":"conference-preprint","publication_status":"preprint","primary_category":"cs.DC","cross_list_categories":["cs.AI","cs.LG"],"topics":["MoE推論","投機的復号","動的投機長","vLLM","専門家データ移動"],"implementation":"vLLM 0.6.6のspec-decode workerへ約500行のPython/PyTorch変更として実装。","code":null,"last_checked":"2026-09-20","hardware_evaluation":"RTX 6000 Ada 48GB、Intel i9-14900K 24コア、64GB RAM。単一バッチ低遅延サービング。","quality_effect":"投機的復号の受理・棄却規則は維持し、制御対象は投機の有無とKのみ。出力品質を近似で変更せずTPOTを最適化する。","references":[],"references_checked_at":"2026-09-20","references_source":"arXiv v1 full text references inspected; individual reference transport omitted","references_total":0},"reservation":{"claim_id":"claim-f2383c99186b0edb3dfe445b","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-2f18ec233c0f768fe4b55277",
+  "job_id": "job-research-2442fe5802b5c31d",
+  "data": {
+    "canonical_id": "arXiv:2506.20675",
+    "title": "Utility-Driven Speculative Decoding for Mixture-of-Experts",
+    "list_summary": "MoEでは投機長が増やす専門家読出し費用まで含めた効用を実測し、投機の無効化とK選択を動的に行って最悪減速を5%へ抑える。",
+    "summary": "CascadeはMoE向け投機的復号の実行時制御方式である。密モデルでは複数候補を一括検証しても全重みを読むため検証時間がほぼ一定だが、MoEでは候補ごとに異なる専門家を活性化し、K増加で専門家重み転送が2〜3倍になるため、ETR向上より費用が大きくなり最大1.5倍程度の減速が起こる。CascadeはETR利得を反復時間増加で割った投機効用を定義し、効用1未満ならK=0、1超なら短い試験期間で複数Kを測って効用最大Kを設定期間へ採用する。低効用時の指数バックオフと山登り探索を組み合わせ、vLLM上で5種MoE・7負荷を評価し最悪減速を5%へ抑え、静的K比7〜14%改善する。",
+    "source": "https://arxiv.org/html/2506.20675v1",
+    "sources": [
+      "https://arxiv.org/abs/2506.20675",
+      "https://arxiv.org/html/2506.20675v1"
+    ],
+    "authors": [
+      "Anish Saxena",
+      "Po-An Tsai",
+      "Hritvik Taneja",
+      "Aamer Jaleel",
+      "Moinuddin Qureshi"
+    ],
+    "published": "2025-06-17",
+    "publication": "MICRO 2025 / arXiv preprint",
+    "publication_type": "conference-preprint",
+    "publication_status": "preprint",
+    "primary_category": "cs.DC",
+    "cross_list_categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "topics": [
+      "MoE推論",
+      "投機的復号",
+      "動的投機長",
+      "vLLM",
+      "専門家データ移動"
+    ],
+    "implementation": "vLLM 0.6.6のspec-decode workerへ約500行のPython/PyTorch変更として実装。",
+    "code": null,
+    "last_checked": "2026-09-20",
+    "hardware_evaluation": "RTX 6000 Ada 48GB、Intel i9-14900K 24コア、64GB RAM。単一バッチ低遅延サービング。",
+    "quality_effect": "投機的復号の受理・棄却規則は維持し、制御対象は投機の有無とKのみ。出力品質を近似で変更せずTPOTを最適化する。",
+    "references": [],
+    "references_checked_at": "2026-09-20",
+    "references_source": "arXiv v1 full text references inspected; individual reference transport omitted",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-2f18ec233c0f768fe4b55277",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

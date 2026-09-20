@@ -1,1 +1,69 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-f2383c99186b0edb3dfe445b","job_id":"job-research-2442fe5802b5c31d","data":{"overview":"主結果は、MoEで投機的復号を常時有効にする従来前提が崩れることを実測し、利益と専門家読出し費用を同じ効用尺度で測れば、投機を使うかどうかまで含めて安全に動的制御できることを示した点である。静的Kは5種MoE・7負荷のどこかで必ず悪化し、最悪はK=3で54%減速する。CascadeはK=0を探索空間へ含め、低効用時の適応バックオフと高効用時の山登りを組み合わせて最悪減速を5%へ制限した。一方、投機が有効な領域では平均20%程度の非投機比改善を得て、静的K比でも7〜14%改善する。Mixtralでは最良静的K=2比18%改善し、コードでは静的K=3の39%高速化に対して57%高速化した。効用と実速度の関係は120条件でR²=99.4%であり、単なるヒューリスティックではなくTPOT比を直接表す指標として機能した。","key_results":[{"metric":"静的K最悪減速","value":"K=1:26%、K=2:38%、K=3:54%","baseline":"no speculation","condition":"5 MoE、7 workloads","interpretation":"MoEでは固定投機長が安全ではなく、K=0を含む動的制御が必要。"},{"metric":"Cascade最悪減速","value":"5%","baseline":"static K最大54%、back-offなし14%","condition":"投機が不利な負荷","interpretation":"適応バックオフが試験自体の害を抑える。"},{"metric":"静的K比平均改善","value":"7〜14%","baseline":"best static K variants","condition":"全MoE・負荷集計","interpretation":"要求・反復ごとのK適応が課題固定プロファイルを上回る。"},{"metric":"Mixtral best-static比","value":"18%改善","baseline":"static K=2","condition":"7 workloads","interpretation":"専門家親和性が低く検証費用が変動するモデルほど動的制御が効く。"},{"metric":"Mixtral code","value":"57% speedup","baseline":"static K=3は39% speedup","condition":"n-gram speculation","interpretation":"減速回避だけでなく有利な位相ではより攻めたK選択で速度を伸ばす。"},{"metric":"効用の速度予測","value":"R²=99.4%","baseline":"120 datapoints","condition":"5 MoE、3 tasks、K=0〜7設定","interpretation":"効用がTPOT速度比を高精度に表し、U=1を有効/無効境界に使える。"},{"metric":"dense LLaMA-3 speculation","value":"1.4〜1.8倍 speedup at K=7","baseline":"no speculation","condition":"dense model","interpretation":"密モデルでは検証費用増が最大3%程度でMoEとの対照になる。"}],"negative_results":"Cascade自体にも試験費用があり、OLMoEでは静的K=2/3が31%/33%高速化するのに対しCascadeは29%でわずかに劣る。DeepSeekでは平均改善が約1%と小さい。モデル型ドラフトをK=0から再有効化するため投機停止中もドラフトKV状態維持用にドラフトを走らせ、平均2〜3%の追加費用がある。評価は単一RTX 6000 Ada、単一バッチに限定され、高バッチや専門家並列の通信環境では費用構造が変わり得る。","interpretation":"MoEではKを増やすとETRだけでなく活性化専門家集合も増え、メモリ帯域費用が同時に増える。したがって『受理率を最大化』ではなく『受理で得る出力トークン数÷検証を含む反復費用』を最大化する必要がある。効用はこの比を直接速度へ対応させ、短期局所性を使うtest-and-setで予測モデルなしに追従する。","quality_impact":"標的モデルの検証規則は変更せず、投機長だけを制御するため出力分布を近似で変更しない。"},"reservation":{"claim_id":"claim-f2383c99186b0edb3dfe445b","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-2f18ec233c0f768fe4b55277",
+  "job_id": "job-research-2442fe5802b5c31d",
+  "data": {
+    "overview": "主結果は、MoEで投機的復号を常時有効にする従来前提が崩れることを実測し、利益と専門家読出し費用を同じ効用尺度で測れば、投機を使うかどうかまで含めて安全に動的制御できることを示した点である。静的Kは5種MoE・7負荷のどこかで必ず悪化し、最悪はK=3で54%減速する。CascadeはK=0を探索空間へ含め、低効用時の適応バックオフと高効用時の山登りを組み合わせて最悪減速を5%へ制限した。一方、投機が有効な領域では平均20%程度の非投機比改善を得て、静的K比でも7〜14%改善する。Mixtralでは最良静的K=2比18%改善し、コードでは静的K=3の39%高速化に対して57%高速化した。効用と実速度の関係は120条件でR²=99.4%であり、単なるヒューリスティックではなくTPOT比を直接表す指標として機能した。",
+    "key_results": [
+      {
+        "metric": "静的K最悪減速",
+        "value": "K=1:26%、K=2:38%、K=3:54%",
+        "baseline": "no speculation",
+        "condition": "5 MoE、7 workloads",
+        "interpretation": "MoEでは固定投機長が安全ではなく、K=0を含む動的制御が必要。"
+      },
+      {
+        "metric": "Cascade最悪減速",
+        "value": "5%",
+        "baseline": "static K最大54%、back-offなし14%",
+        "condition": "投機が不利な負荷",
+        "interpretation": "適応バックオフが試験自体の害を抑える。"
+      },
+      {
+        "metric": "静的K比平均改善",
+        "value": "7〜14%",
+        "baseline": "best static K variants",
+        "condition": "全MoE・負荷集計",
+        "interpretation": "要求・反復ごとのK適応が課題固定プロファイルを上回る。"
+      },
+      {
+        "metric": "Mixtral best-static比",
+        "value": "18%改善",
+        "baseline": "static K=2",
+        "condition": "7 workloads",
+        "interpretation": "専門家親和性が低く検証費用が変動するモデルほど動的制御が効く。"
+      },
+      {
+        "metric": "Mixtral code",
+        "value": "57% speedup",
+        "baseline": "static K=3は39% speedup",
+        "condition": "n-gram speculation",
+        "interpretation": "減速回避だけでなく有利な位相ではより攻めたK選択で速度を伸ばす。"
+      },
+      {
+        "metric": "効用の速度予測",
+        "value": "R²=99.4%",
+        "baseline": "120 datapoints",
+        "condition": "5 MoE、3 tasks、K=0〜7設定",
+        "interpretation": "効用がTPOT速度比を高精度に表し、U=1を有効/無効境界に使える。"
+      },
+      {
+        "metric": "dense LLaMA-3 speculation",
+        "value": "1.4〜1.8倍 speedup at K=7",
+        "baseline": "no speculation",
+        "condition": "dense model",
+        "interpretation": "密モデルでは検証費用増が最大3%程度でMoEとの対照になる。"
+      }
+    ],
+    "negative_results": "Cascade自体にも試験費用があり、OLMoEでは静的K=2/3が31%/33%高速化するのに対しCascadeは29%でわずかに劣る。DeepSeekでは平均改善が約1%と小さい。モデル型ドラフトをK=0から再有効化するため投機停止中もドラフトKV状態維持用にドラフトを走らせ、平均2〜3%の追加費用がある。評価は単一RTX 6000 Ada、単一バッチに限定され、高バッチや専門家並列の通信環境では費用構造が変わり得る。",
+    "interpretation": "MoEではKを増やすとETRだけでなく活性化専門家集合も増え、メモリ帯域費用が同時に増える。したがって『受理率を最大化』ではなく『受理で得る出力トークン数÷検証を含む反復費用』を最大化する必要がある。効用はこの比を直接速度へ対応させ、短期局所性を使うtest-and-setで予測モデルなしに追従する。",
+    "quality_impact": "標的モデルの検証規則は変更せず、投機長だけを制御するため出力分布を近似で変更しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-2f18ec233c0f768fe4b55277",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
