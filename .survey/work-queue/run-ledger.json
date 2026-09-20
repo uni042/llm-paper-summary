@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T11:51:27.218114+00:00",
+  "updated_at": "2026-09-20T11:57:14.260670+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T11:51:27.218114+00:00",
+      "last_recorded_at": "2026-09-20T11:57:14.260670+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 384,
         "audit_completed": 0,
-        "discovery_completed": 210,
+        "discovery_completed": 217,
         "blocked": 55,
-        "new_jobs": 366,
+        "new_jobs": 388,
         "new_papers": 393,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35488304119:1",
-          "recorded_at": "2026-09-20T04:07:10.315648+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35488304119",
-            "run_attempt": "1",
-            "source_sha": "52111d848755cf3c9c42b835907fe5de77ba37b7"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35488416683:1",
           "recorded_at": "2026-09-20T04:09:37.755356+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35509059386:1",
+          "recorded_at": "2026-09-20T11:57:14.260670+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35509059386",
+            "run_attempt": "1",
+            "source_sha": "70964e5d5103c225b978949ef07b4d622aa2b8f0"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -24788,6 +24788,62 @@
           "title": "It Takes a MAESTRO To Prune Bad Experts",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-2210f6c23271755b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-24d6f1211abcac2b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6b2608b80772325a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-7b4dbcca7496d5a8",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-7e84bd41a7991db6",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ba1ecf3d88f94dfd",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d30b7841c5acf727",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -27352,6 +27408,160 @@
           "type": "research",
           "canonical_id": "arXiv:2507.00390",
           "title": "MoNE: Replacing Redundant Experts with Lightweight Novices for Structured Pruning of MoE"
+        },
+        {
+          "job_id": "job-2210f6c23271755b",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-24d6f1211abcac2b",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-6b2608b80772325a",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-7b4dbcca7496d5a8",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-7e84bd41a7991db6",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-ba1ecf3d88f94dfd",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-d30b7841c5acf727",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-11ed8db2a9d8a3d3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.10603",
+          "title": "MoEITS: A Green AI approach for simplifying MoE-LLMs"
+        },
+        {
+          "job_id": "job-research-159e5ee7f39d28f8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2508.18983",
+          "title": "SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution"
+        },
+        {
+          "job_id": "job-research-1d4c48939bbf9fa8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.01322",
+          "title": "LongCat-Flash Technical Report"
+        },
+        {
+          "job_id": "job-research-23b60cfb5b252b01",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.10703",
+          "title": "From Observation to Intervention: A Causal Audit of Expert Importance in Mixture-of-Experts Models"
+        },
+        {
+          "job_id": "job-research-71cfe275bb4fcca4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.23888",
+          "title": "SiftMoE: Similarity-Aware Energy-Efficient Expert Selection for Wireless Distributed MoE Inference"
+        },
+        {
+          "job_id": "job-research-88a9229b2587f714",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.18089",
+          "title": "LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts"
+        },
+        {
+          "job_id": "job-research-af2d156c40ee16cb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3789240.3830285",
+          "title": "POSTER: Prediction-Enhanced Expert Prefetching and Eviction for MoE Offloading via PRED-MoE"
+        },
+        {
+          "job_id": "job-research-b921c5addc92d695",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2507.23279",
+          "title": "Unveiling Super Experts in Mixture-of-Experts Large Language Models"
+        },
+        {
+          "job_id": "job-research-c39635b6c8612e08",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.12645",
+          "title": "LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing"
+        },
+        {
+          "job_id": "job-research-d41379318dda5663",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08663",
+          "title": "MoEMB: Scaling Universal Multimodal Embeddings with Efficient Mixture-of-Experts Models"
+        },
+        {
+          "job_id": "job-research-d4631c2cf9f2d1d7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.30876",
+          "title": "dMoE: dLLMs with Learnable Block Experts"
+        },
+        {
+          "job_id": "job-research-d522f30f5ddd350f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.26730",
+          "title": "ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference"
+        },
+        {
+          "job_id": "job-research-d5b6de209d3bfef0",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.01444",
+          "title": "On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain"
+        },
+        {
+          "job_id": "job-research-e488ee96459c1b4f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.16503",
+          "title": "Dense to MoE Adaptation for Compact Vision Language Action Policies"
+        },
+        {
+          "job_id": "job-research-f10be2e9a7bd04f7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.24963/ijcai.2026/657",
+          "title": "DoMoE: Domain-Aware Semantic Expert Prediction for Efficient MoE Inference Under Expert Offloading"
         }
       ],
       "new_paper_ids": [
@@ -28135,7 +28345,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 854,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

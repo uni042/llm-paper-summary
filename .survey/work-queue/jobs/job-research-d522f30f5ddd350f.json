@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-d522f30f5ddd350f",
+  "type": "research",
+  "parent_job_id": "job-2210f6c23271755b",
+  "priority": 98,
+  "canonical_id": "arXiv:2510.26730",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference",
+  "source_url": "https://arxiv.org/abs/2510.26730",
+  "paper_path": "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+  "selection_reason": "runtime帯域・parameter size・model feedbackからprefetch horizonを動的調整し、cache-aware routingと組み合わせてexpert swap-in stallをほぼ消す。前方引用から得たが分類先はExpert Prefetchが適切。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T11:55:28+00:00"
+}

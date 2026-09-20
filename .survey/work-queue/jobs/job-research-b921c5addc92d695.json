@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-b921c5addc92d695",
+  "type": "research",
+  "parent_job_id": "job-24d6f1211abcac2b",
+  "priority": 96,
+  "canonical_id": "arXiv:2507.23279",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Unveiling Super Experts in Mixture-of-Experts Large Language Models",
+  "source_url": "https://arxiv.org/abs/2507.23279",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md",
+  "selection_reason": "ごく少数のSuper Expertsを削るだけでモデルが崩壊する現象を示し、expert pruning/mergingで一律redundancy仮定を置けないことを示す重要なcompression safety分析。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T11:55:13+00:00"
+}

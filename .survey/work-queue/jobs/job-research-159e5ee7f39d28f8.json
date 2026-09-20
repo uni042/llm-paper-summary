@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-159e5ee7f39d28f8",
+  "type": "research",
+  "parent_job_id": "job-7e84bd41a7991db6",
+  "priority": 99,
+  "canonical_id": "arXiv:2508.18983",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution",
+  "source_url": "https://arxiv.org/abs/2508.18983",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2508.18983-smoe-expert-substitution-edge.md",
+  "selection_reason": "低重要度active expertをGPU常駐の機能的類似expertで代替し、offload transfer自体を回避するalgorithm-system co-design。48% decoding latency削減と60%以上cache hitを報告する。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T11:55:43+00:00"
+}

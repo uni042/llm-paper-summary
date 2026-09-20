@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-c39635b6c8612e08",
+  "type": "research",
+  "parent_job_id": "job-d30b7841c5acf727",
+  "priority": 99,
+  "canonical_id": "arXiv:2603.12645",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing",
+  "source_url": "https://arxiv.org/abs/2603.12645",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+  "selection_reason": "冗長expertを削除・統合せずparameter-efficient moduleへ置換し、adaptive expert selectionとhierarchical constructionで50%圧縮でも性能を回復する新しいcompression paradigm。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T11:55:05+00:00"
+}
