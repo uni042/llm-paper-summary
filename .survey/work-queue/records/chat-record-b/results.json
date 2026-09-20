@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-391330299d0747934ae3c7ee","job_id":"job-research-abc92cd8a94f1144","data":{"overview":"SnapKVは圧縮後のプロンプトKV容量を固定するため、完全KVでは入力長に伴って増える復号遅延をほぼ一定にできる。LWM-Text-Chat-1Mの16K入力・batch 2では約3.6倍高速化し、同じbatch 2でOOM限界を16K超から131Kへ伸ばして約8.2倍のメモリ効率を示した。さらに単一A100 80GBで380KトークンのNeedle-in-a-Haystackを処理し、140Kまでは正確な検索を保ち、その後も小さな精度低下に留まる。LongBenchでは保持容量を増やすほど完全KVへ近づき、H2Oより長文検索性能を保つ傾向を示す。","key_results":[{"metric":"生成速度","value":"約3.6倍高速化","baseline":"完全KVのLWM-Text-Chat-1M","condition":"16K入力、batch size 2、生成512トークン、SnapKV最大KV 2048、A100 80GB","interpretation":"完全KVの復号が100ms/token超へ伸びる一方、圧縮後は40ms/token未満を維持し、入力長に比例する注意計算を抑えた。"},{"metric":"メモリ効率","value":"OOMまでの入力長を16K超から131Kへ拡大、約8.2倍","baseline":"完全KV","condition":"batch size 2、A100 80GB","interpretation":"プロンプトKVを固定容量へ圧縮することで、長文入力時の主要メモリ占有を直接削減した。"},{"metric":"超長文処理","value":"最大380Kトークンを単一A100で処理","baseline":"元実装は33K入力でOOM","condition":"LWM-Text-Chat-1M、Needle-in-a-Haystack、KV 1024、観測窓16、pool kernel 5","interpretation":"高圧縮でも検索に必要な位置を観測窓から選択でき、140Kまでは正確なneedle検索を維持した。"},{"metric":"RAG生成品質","value":"8Kで平均-1.7%、14Kで-0.6%、24Kで+5.4%の相対差","baseline":"Command-R完全KV","condition":"BioASQ由来RAG、30/100/200文書、ground-truth位置を前中後へ変更","interpretation":"圧縮は必ずしも一方向の品質劣化を生まず、文書数が多い条件では不要文書ノイズを減らして改善する場合もあった。"}],"negative_results":"近似圧縮のため保持容量が小さいほど完全KVとの差が生じ、LongBenchの一部要約・合成タスクでは低容量設定のスコア低下が見られる。Needle-in-a-Haystackでも140Kを超えるとわずかな精度低下が現れる。単純な上位注意位置だけの選択は局所情報を欠落し、LongEval-Linesではプーリングなし構成が16K付近より長い入力で検索性能を大きく落とす。","interpretation":"高速化と省メモリは、生成中に参照するプロンプトKV数を入力長から切り離すことで生じる。品質維持には重要位置だけでなくその近傍を残すことが重要で、圧縮率を上げすぎると長文全体に分散した情報を失う。したがって容量は用途に応じて速度・メモリと精度の交換条件として設定する必要がある。","quality_impact":"損失ありのKV選択手法であり完全KVと等価ではない。ただし重要位置の入力依存選択と近傍プーリングにより、多数の長文タスクで完全KVに近い品質を保ち、RAGでは条件によってノイズ除去効果で改善する例もある。"},"reservation":{"claim_id":"claim-391330299d0747934ae3c7ee","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-36a9cdcc5175155fa19ebfd4",
+  "job_id": "job-research-3f4b0e4a187439dd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-36a9cdcc5175155fa19ebfd4",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

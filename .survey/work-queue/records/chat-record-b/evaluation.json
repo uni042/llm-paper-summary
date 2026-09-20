@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-391330299d0747934ae3c7ee","job_id":"job-research-abc92cd8a94f1144","data":{"hardware":"速度・メモリ限界とNeedle-in-a-Haystackの主要試験は単一NVIDIA A100 80GB GPU。","software":"LWM-Text-Chat-1M、Mistral-7B-Instruct-v0.2、LongChat、Mixtral、Command-Rなど複数モデルをHuggingFace系実装で評価し、LongBenchでは完全KVとH2Oを比較対象にする。公開SnapKV実装はTransformers 4.37.0、FlashAttention 2.4.0を基準にする。","methodology":"LWM-Text-Chat-1MではKV上限1024または2048、観測窓16、最大pool kernel 5として、最大380KトークンのNeedle-in-a-Haystack、入力長とbatch sizeを変えた復号遅延・OOM限界を測る。MistralではLongEval-Linesでプーリング除去実験、LongBenchの16長文データセットではSnapKV容量1024/2048/4096と完全KV、H2Oを比較する。Command-RではRAGの引用F1、end-to-end F1、ground-truth位置を変えた生成品質を評価する。","baselines":["完全KVキャッシュ","H2O","プーリングなしSnapKV","通常HuggingFace復号"],"metrics":["復号遅延","OOMまでの入力長","LongBenchスコア","検索精度","RAG F1","メモリ効率"],"scope":"複数モデル・複数長文タスクを含む実GPU評価だが、圧縮率・観測窓・pool kernelなどの最適値はモデルやタスクに依存する。380K試験は情報検索型のNeedle-in-a-Haystackであり、超長文全体を均等に必要とする生成品質を保証するものではない。"},"reservation":{"claim_id":"claim-391330299d0747934ae3c7ee","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-36a9cdcc5175155fa19ebfd4",
+  "job_id": "job-research-3f4b0e4a187439dd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-36a9cdcc5175155fa19ebfd4",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
