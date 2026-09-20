@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-1330e1d7068cf379",
+  "type": "research",
+  "parent_job_id": "job-27a5a2b97d3fb34f",
+  "priority": 94,
+  "canonical_id": "arXiv:2605.08738",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training",
+  "source_url": "https://arxiv.org/abs/2605.08738",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+  "selection_reason": "depth・width・expert compressionとdistillationを大規模continued pretraining条件で比較し、圧縮後回復の挙動を系統的に調べる。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:37:41+00:00"
+}
