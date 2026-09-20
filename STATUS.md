@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 22:33:31 JST**
+> 自動生成: **2026-09-20 22:34:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,7 +11,7 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **209** |
+| 収録候補論文 | **208** |
 | 未claim Research job | **208** |
 | 直近24hの検証済みResearch収録 | **89** |
 | 最終検証済みResearch収録 | **09-20 22:10:28 JST（23分前）** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **209** |
+| canonical_id確認済みの一意な候補論文 | **208** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **209** |
+| 非終端Research job合計 | **208** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **31** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **31** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **31** | **4** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **31** | **2** | **1** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -126,27 +126,14 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-20 20:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
-- **成功** `arXiv:2603.11535` — Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing
-  - job: `.survey/work-queue/jobs/job-research-b0f3ab31cdfd9a01.json`
-  - result: `.survey/work-queue/results/research/attempt-3abd5ab214b6f2e829c399c9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3abd5ab214b6f2e829c399c9.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md`
-- **成功** `arXiv:2606.09886` — SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs
-  - job: `.survey/work-queue/jobs/job-research-6e63ee697d71f91d.json`
-  - result: `.survey/work-queue/results/research/attempt-5a4b45332ca9b9f0a0bd90d0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5a4b45332ca9b9f0a0bd90d0.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2606.09886-shape-coalition-aware-expert-pruning.md`
-- **成功** `arXiv:2607.08601` — It Takes a MAESTRO To Prune Bad Experts
-  - job: `.survey/work-queue/jobs/job-research-92c83b7c2ec8a78f.json`
-  - result: `.survey/work-queue/results/research/attempt-70943e20a527c6aa030a2179.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-70943e20a527c6aa030a2179.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md`
+- 最新観測run: **2026-09-20 22:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f41da056f98a23fc46687f34.json` (job `job-research-8f68f6b8d4d62651`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-f41da056f98a23fc46687f34.json` (`ok=true`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-20 20:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 22:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -164,10 +151,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.15299` — MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 22:33:22 JST** / heartbeat: **—** / lease expiry: **09-21 00:03:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8f68f6b8d4d62651.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -187,7 +172,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **209** |
+| ready | **208** |
 
 ### 候補の重複・識別情報欠損
 
@@ -215,8 +200,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **847** |
-| └ Research | **597** |
+| 成功result未照合のimmutable submission | **848** |
+| └ Research | **598** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **103** |

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T13:12:57.328263+00:00",
+  "updated_at": "2026-09-20T13:34:03.478897+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T13:12:57.328263+00:00",
+      "last_recorded_at": "2026-09-20T13:34:03.478897+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35493133772:1",
-          "recorded_at": "2026-09-20T06:01:38.603445+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35493133772",
-            "run_attempt": "1",
-            "source_sha": "7214046abebe4a7f930f4d35f5c9988e3cf2935f"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35493171863:1",
           "recorded_at": "2026-09-20T06:02:33.164765+00:00",
@@ -19591,6 +19577,20 @@
             "run_id": "35512829910",
             "run_attempt": "1",
             "source_sha": "371bda06adcfcbead5fc15747e7c685899c1da18"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35513868787:1",
+          "recorded_at": "2026-09-20T13:34:03.478897+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35513868787",
+            "run_attempt": "1",
+            "source_sha": "77198a9fe44e4bcf044a51b32b0a60cb074e10b8"
           },
           "signals": [
             "job_blocked"
