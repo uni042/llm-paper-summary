@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r13",
+    "summary": "Adaptive Expert Computation / Compression をさらに厚くするため、実行時sparsity・dynamic rerouting・elastic servingの強候補を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.08575",
+      "title": "Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution",
+      "source_url": "https://arxiv.org/abs/2605.08575",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08575-intra-expert-activation-sparsity.md",
+      "priority": 98,
+      "reason": "既存pretrained MoE内部にあるintra-expert activation sparsityを利用し、expert粒度の外側だけでなく内部計算も削減する。"
+    },
+    {
+      "canonical_id": "arXiv:2511.02237",
+      "title": "Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining",
+      "source_url": "https://arxiv.org/abs/2511.02237",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.02237-opportunistic-expert-activation.md",
+      "priority": 99,
+      "reason": "batch-awareにtoken-to-expert mappingを動的再配置し、active expert数とdecode latencyをtraining-freeに削減する。"
+    },
+    {
+      "canonical_id": "arXiv:2510.19366",
+      "title": "MoE-Prism: Disentangling Monolithic Experts for Elastic MoE Services via Model-System Co-Designs",
+      "source_url": "https://arxiv.org/abs/2510.19366",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.19366-moe-prism-elastic-services.md",
+      "priority": 99,
+      "reason": "requestごとにtop-k budgetを変えるelastic MoE servingをmodel-system co-designで実現し、異なるquality-latency要求へ1 checkpointで適応する。"
+    },
+    {
+      "canonical_id": "arXiv:2510.13999",
+      "title": "REAP the Experts: Why Pruning Prevails for One-Shot MoE compression",
+      "source_url": "https://arxiv.org/abs/2510.13999",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+      "priority": 98,
+      "reason": "router gate valueとexpert activation normを組み合わせたone-shot pruning criterionを提案し、generative taskでmergingよりpruningが有利な条件を示す。"
+    },
+    {
+      "canonical_id": "arXiv:2509.22299",
+      "title": "HEAPr: Hessian-based Efficient Atomic Expert Pruning in Output Space",
+      "source_url": "https://arxiv.org/abs/2509.22299",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.22299-heapr-atomic-expert-pruning.md",
+      "priority": 97,
+      "reason": "expertをatomic expertへ分解し、output-space Hessian情報で細粒度pruningする。expert-level pruningより柔軟な圧縮粒度を提供する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920T1906JST-2402",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920T1906JST-2402.json",
+    "receipt": "sha256:e9382854009131ea50ac85882bdabd681d9290b8dc78c43a989776e2f67677df"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+    "round": "adaptive-max-r13-execution",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+    "query_summary": "Not All Experts Are Equal forward citationsからruntime sparsity・elastic serving・fine-grained pruningの5件を選定。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "continue remaining high-directness Adaptive Expert Computation / Compression candidates",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "Adaptive Expert Computation / Compression",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2402.14800",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 160,
+        "unseen_result_count": 100,
+        "duplicate_filtered_count": 60,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 30,
+        "candidate_accepted_count": 5,
+        "position": "prechecked result set"
+      }
+    ]
+  }
+}
