@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0035fe851a4c5bf25fbbacc2","job_id":"job-research-6778a26f7c6381c5","data":{"limitations":"事前にワークフロー構造を定義できるアプリを主対象とし、自己反省や動的計画で実行グラフ自体が逐次変わる自律エージェントでは先行グラフ最適化が難しい。細粒度化には部分プリフィル等を支えるバックエンド変更が必要で、完全に差し替え可能な黒箱エンジン基盤より実装結合が強い。複数アプリ間のKV共有や優先度・資源制約を含む共同最適化は未実装。","differences":"LlamaIndex/LangChain/AutoGen系は高水準モジュールやエージェントを主な実行単位とし、バックエンドは要求を独立に扱う。Teolaはモジュール内部をプリミティブへ展開して依存グラフを明示し、その情報をバックエンドのバッチ選択まで伝える。LLM単体のvLLM等のスケジューリング最適化とも異なり、検索・埋め込み・LLMをまたぐアプリ全体のクリティカルパスを対象にする。","implementation_status":"約5,300行のPython試作を実装し、コードはNetX-lab/Ayoとして公開。Rayと複数実行エンジンを統合し、vLLMへ部分プリフィル対応を追加している。","research_positioning":"LLMサービング研究の対象を単一モデル・単一要求から複合アプリのデータフローへ拡張する系統である。モデルカーネル高速化やKVキャッシュ管理とは直交し、それらを個別エンジンとして利用した上で、アプリケーション層の依存除去、パイプライン化、バッチ順序を最適化する。特にRAGやツール利用のように非LLM処理が支配的になる構成で重要になる。"},"reservation":{"claim_id":"claim-0035fe851a4c5bf25fbbacc2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-36775161dea47254d363d39c",
+  "job_id": "job-research-89e4b35d6854b9b6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-36775161dea47254d363d39c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

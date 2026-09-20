@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0035fe851a4c5bf25fbbacc2","job_id":"job-research-6778a26f7c6381c5","data":{"canonical_id":"arXiv:2407.00326","arxiv_id":"2407.00326","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Teola: Towards End-to-End Optimization of LLM-based Applications","summary":"Teolaは、検索、埋め込み、再ランキング、LLM推論など複数モジュールからなるLLMアプリケーションを、モジュール単位ではなく細粒度の処理プリミティブへ分解して最適化するオーケストレーション基盤である。各問い合わせをプリミティブ依存グラフへ変換し、不要依存の除去、段階分割、部分プリフィル、部分デコードによってモジュール境界をまたぐ並列化とパイプライン化を行う。実行時はグラフの依存関係と深さを使う二層スケジューラが、各実行エンジンのバッチをアプリ全体の完了時間に寄与する順で構成する。RAGなどの実アプリで既存方式比最大2.09倍のエンドツーエンド高速化を示す。","list_summary":"LLMアプリをプリミティブ依存グラフへ分解し、モジュール横断の並列化・パイプライン化とトポロジ認識バッチングでエンドツーエンド遅延を短縮する。","authors":["Xin Tan","Yimin Jiang","Yitao Yang","Hong Xu"],"authors_affiliations":"The Chinese University of Hong Kong; unaffiliated","published":"2025-03-31","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"LLMサービング、ワークフロー実行、分散スケジューリング、RAG/エージェント基盤。","topics":["LLMアプリケーション","分散スケジューリング","グラフ最適化","RAG","バッチング"],"importance":"LLM単体ではなく非LLM処理を含むアプリ全体を最適化対象にし、モジュール境界を越えた実行計画を生成する。","hardware_evaluation":"埋め込み等はRTX 3090、gemma-2-2B/llama-2-7B/13Bは3090、llama-30BはA800 80GBを用いる分散テストベッドで評価。サーバ間は100 Gbps。","quality_effect":"生成アルゴリズムを近似する方式ではなく、同じ処理の依存関係・並列化・バッチ順を変更するシステム最適化であり、モデル品質を意図的に変更しない。","source":"https://arxiv.org/abs/2407.00326","sources":["https://arxiv.org/abs/2407.00326","https://arxiv.org/html/2407.00326","https://arxiv.org/pdf/2407.00326"],"code":"https://github.com/NetX-lab/Ayo","implementation":"約5,300行のPython試作。Ray、LlamaIndex、PostgreSQL、pgvector、Google検索、vLLM、FastAPIを統合し、vLLMへ部分プリフィル機構を追加。","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-0035fe851a4c5bf25fbbacc2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-36775161dea47254d363d39c",
+  "job_id": "job-research-89e4b35d6854b9b6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-36775161dea47254d363d39c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
