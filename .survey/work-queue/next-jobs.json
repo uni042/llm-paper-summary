@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 131,
-      "completed": 612,
+      "ready": 130,
+      "completed": 613,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -19,25 +19,11 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 131,
+    "ready_research_audit": 130,
     "actively_claimed": 0,
-    "claimable": 131
+    "claimable": 130
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-d9598f14ff4bcd81",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:1910.02054",
-      "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
-      "source_url": "https://arxiv.org/abs/1910.02054",
-      "paper_path": "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-6882c5cf191305a1",
       "type": "research",
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-3ee76817e29cd5c6",
+      "type": "research",
+      "lane": null,
+      "priority": 97,
+      "canonical_id": "arXiv:2404.19429",
+      "title": "Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping",
+      "source_url": "https://arxiv.org/abs/2404.19429",
+      "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T04:07:05+00:00"
+  "generated_at": "2026-09-20T04:09:32+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T04:07:10.315648+00:00",
+  "updated_at": "2026-09-20T04:09:37.755356+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T04:07:10.315648+00:00",
+      "last_recorded_at": "2026-09-20T04:09:37.755356+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 337,
+        "research_completed": 338,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35441774251:1",
-          "recorded_at": "2026-09-19T12:05:27.884940+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35441774251",
-            "run_attempt": "1",
-            "source_sha": "068ef6f68bae44660bf2a190261145571853d336"
-          },
-          "signals": [
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "35443308591:1",
           "recorded_at": "2026-09-19T12:36:12.485140+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35488304119",
             "run_attempt": "1",
             "source_sha": "52111d848755cf3c9c42b835907fe5de77ba37b7"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35488416683:1",
+          "recorded_at": "2026-09-20T04:09:37.755356+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35488416683",
+            "run_attempt": "1",
+            "source_sha": "d9ae4afd3bd214ada63c1c088ddc2196ebb275aa"
           },
           "signals": [
             "research_completed"
@@ -24245,6 +24245,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.12171",
           "title": "PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-d9598f14ff4bcd81",
+          "type": "research",
+          "canonical_id": "arXiv:1910.02054",
+          "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
           "from": "ready",
           "to": "completed"
         }
