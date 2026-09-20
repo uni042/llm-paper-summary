@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-bbc6c14d4fcb44b8a7c50e4e",
   "job_id": "job-research-0ad72717e3fdb154",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bbc6c14d4fcb44b8a7c50e4e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価環境はH100、NVLink、InfiniBand、TensorRT-LLMなどNVIDIAのハードウェア・ソフトウェア構成に強く依存し、異種GPUや低帯域クラスタで同じ効率が得られるかは未評価である。PPOの詳細アブレーションは主にLlama 3 70Bで、405Bは実行可能性と時間内訳が中心である。生成エンジンをメモリへ常駐させるため追加メモリが必要で、活性値再計算との交換条件が生じる。405Bでは生成にパイプライン並列が必要で、生成時間が依然支配的である。動的生成負荷分散も小さいバッチではオーバーヘッドが利益を上回った。",
+    "differences": "HuggingFace TRL、trlX、DeepSpeed-Chatのような既存整合ツールに対し、本研究は手法数の追加よりも数百B級モデルを多数GPUで動かすシステム設計を主眼とする。特に、PPOの四役モデルを二組へまとめた重み交換、別計算群間の非同期通信、学習と生成で並列配置を切り替える再配置、TensorRT-LLMエンジンの再フィットを一つの訓練ループへ統合し、それぞれの寄与を実機アブレーションで分離している点が特徴である。",
+    "implementation_status": "NeMo-AlignerはNVIDIAからApache 2.0で公開され、論文時点でSFT、PPO型RLHF、DPO、SteerLM、SPINと多くの手法のLoRA設定を実装する。コードはNVIDIA/NeMo-Alignerとして公開され、論文中では報酬モデルとPPO後モデルの公開先も示されている。",
+    "research_positioning": "大規模言語モデル学習システムの中では、事前学習の並列化そのものではなく、整合学習特有の複数モデル・生成・学習が混在する反復を効率化する研究として位置付けられる。推論基盤TensorRT-LLMを学習ループ内のロールアウトへ組み込み、推論時だけ配置を変えるため、学習系と推論系の境界を跨ぐシステム設計の実例でもある。1000 GPU級の405B PPOを実証したことで、整合アルゴリズム研究を巨大モデルへ適用する際の実装上の基盤と、生成が残存ボトルネックになることの双方を示している。"
+  },
+  "reservation": {"claim_id": "claim-bbc6c14d4fcb44b8a7c50e4e", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
