@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-391a60b20009f8118bae73b5","job_id":"job-research-8fc74c0fbb46c30e","data":{"overview":"Questは現在クエリに応じて重要KVページを毎回再選択することで、履歴ベース削除より長距離依存を保ちつつ、注意時に読むKV量を固定予算へ削減した。10K/100K passkeyでは系列長の約1%規模の予算でほぼ完全な検索精度を示し、LongBenchでもタスクに応じ1/5〜1/10程度のKV予算で全注意相当品質を達成する。32K文脈・2048トークン予算ではFlashInfer比で自己注意7.03倍、4ビット重み併用の端から端推論2.23倍の高速化を得た。","key_results":[{"metric":"自己注意高速化","value":"7.03倍","baseline":"FlashInfer全注意","condition":"Llama-2-7B、32K文脈、KV予算2048、RTX4090","interpretation":"全32K KVではなく上位ページのみを読むため、重要度推定を含めても帯域削減が大きく勝つ。"},{"metric":"端から端推論高速化","value":"2.23倍","baseline":"FlashInfer、AWQ 4ビット重み","condition":"32K文脈、KV予算2048、RTX 6000 Ada","interpretation":"重み側を圧縮するとKV注意の比率が相対的に高まり、QuestのKV読み出し削減が全体速度へより強く反映される。"},{"metric":"端から端推論高速化","value":"1.74倍","baseline":"FlashInfer、FP16重み","condition":"32K文脈、KV予算2048","interpretation":"FFNや重み読み出しが残るFP16条件でも注意削減が全体遅延を有意に下げる。"},{"metric":"100K passkey検索精度","value":"KV予算1024で96%、2048以上で100%","baseline":"H2O/TOVAは同予算で2%、StreamingLLMは2〜4%","condition":"Yarn-Llama-2-7B-128k、100K系列","interpretation":"過去に重要でなかった答えを永久削除せず、質問時のQで再発見できることが長距離検索に効く。"},{"metric":"同品質時の注意高速化","value":"GovReport 3.82倍、TriviaQA 4.54倍","baseline":"TOVAを同等品質に必要なKV予算で実行した推定遅延","condition":"LongBench、全注意相当精度","interpretation":"クエリ依存選択は同じ品質を達成するためのKV予算自体を履歴ベース方式より小さくできる。"}],"negative_results":"最初の2層ではPG19上のクエリ依存疎性が10%未満で、Questを適用せず全KVを読む必要がある。全KV本体を保持するためメモリ容量削減手法ではなく、非常に長い文脈では保存容量は残る。選択予算を小さくしすぎれば重要ページの取りこぼしで精度が落ちる。比較対象のH2O/TOVA等には同等の専用カーネル実装がないため、同品質時の一部速度比較はFlashInfer遅延を用いた定性的評価であり、各方式の完全実装同士の直接比較ではない。","interpretation":"重要なのは注意疎性そのものより、どのトークンが重要かがQごとに変わる点である。ページKの範囲からQK最大値の上界を作れば、全Kをロードせずに現在の重要候補を保守的に絞れる。選択をページ単位に合わせたことで、理論的なトークン疎性を実際の連続メモリロード削減へ変換できた。","quality_impact":"PG19では4096トークン予算で全注意のperplexityに近く、passkeyでは履歴削除方式を大幅に上回る。LongBenchでは全注意相当品質に必要な予算がQasper 1/6、HotpotQA 1/6、GovReport 1/5、TriviaQA 1/10、NarrativeQA 1/5、MultiFieldQA 1/6程度と報告される。"},"reservation":{"claim_id":"claim-391a60b20009f8118bae73b5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-74f796116b0c55afd81f6ad5",
+  "job_id": "job-research-8fc74c0fbb46c30e",
+  "data": {
+    "overview": "Questは現在クエリに応じて重要KVページを毎回再選択することで、履歴ベース削除より長距離依存を保ちつつ、注意時に読むKV量を固定予算へ削減した。10K/100K passkeyでは系列長の約1%規模の予算でほぼ完全な検索精度を示し、LongBenchでもタスクに応じ1/5〜1/10程度のKV予算で全注意相当品質を達成する。32K文脈・2048トークン予算ではFlashInfer比で自己注意7.03倍、4ビット重み併用の端から端推論2.23倍の高速化を得た。",
+    "key_results": [
+      {
+        "metric": "自己注意高速化",
+        "value": "7.03倍",
+        "baseline": "FlashInfer全注意",
+        "condition": "Llama-2-7B、32K文脈、KV予算2048、RTX4090",
+        "interpretation": "全32K KVではなく上位ページのみを読むため、重要度推定を含めても帯域削減が大きく勝つ。"
+      },
+      {
+        "metric": "端から端推論高速化",
+        "value": "2.23倍",
+        "baseline": "FlashInfer、AWQ 4ビット重み",
+        "condition": "32K文脈、KV予算2048、RTX 6000 Ada",
+        "interpretation": "重み側を圧縮するとKV注意の比率が相対的に高まり、QuestのKV読み出し削減が全体速度へより強く反映される。"
+      },
+      {
+        "metric": "端から端推論高速化",
+        "value": "1.74倍",
+        "baseline": "FlashInfer、FP16重み",
+        "condition": "32K文脈、KV予算2048",
+        "interpretation": "FFNや重み読み出しが残るFP16条件でも注意削減が全体遅延を有意に下げる。"
+      },
+      {
+        "metric": "100K passkey検索精度",
+        "value": "KV予算1024で96%、2048以上で100%",
+        "baseline": "H2O/TOVAは同予算で2%、StreamingLLMは2〜4%",
+        "condition": "Yarn-Llama-2-7B-128k、100K系列",
+        "interpretation": "過去に重要でなかった答えを永久削除せず、質問時のQで再発見できることが長距離検索に効く。"
+      },
+      {
+        "metric": "同品質時の注意高速化",
+        "value": "GovReport 3.82倍、TriviaQA 4.54倍",
+        "baseline": "TOVAを同等品質に必要なKV予算で実行した推定遅延",
+        "condition": "LongBench、全注意相当精度",
+        "interpretation": "クエリ依存選択は同じ品質を達成するためのKV予算自体を履歴ベース方式より小さくできる。"
+      }
+    ],
+    "negative_results": "最初の2層ではPG19上のクエリ依存疎性が10%未満で、Questを適用せず全KVを読む必要がある。全KV本体を保持するためメモリ容量削減手法ではなく、非常に長い文脈では保存容量は残る。選択予算を小さくしすぎれば重要ページの取りこぼしで精度が落ちる。比較対象のH2O/TOVA等には同等の専用カーネル実装がないため、同品質時の一部速度比較はFlashInfer遅延を用いた定性的評価であり、各方式の完全実装同士の直接比較ではない。",
+    "interpretation": "重要なのは注意疎性そのものより、どのトークンが重要かがQごとに変わる点である。ページKの範囲からQK最大値の上界を作れば、全Kをロードせずに現在の重要候補を保守的に絞れる。選択をページ単位に合わせたことで、理論的なトークン疎性を実際の連続メモリロード削減へ変換できた。",
+    "quality_impact": "PG19では4096トークン予算で全注意のperplexityに近く、passkeyでは履歴削除方式を大幅に上回る。LongBenchでは全注意相当品質に必要な予算がQasper 1/6、HotpotQA 1/6、GovReport 1/5、TriviaQA 1/10、NarrativeQA 1/5、MultiFieldQA 1/6程度と報告される。"
+  },
+  "reservation": {
+    "claim_id": "claim-74f796116b0c55afd81f6ad5",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
