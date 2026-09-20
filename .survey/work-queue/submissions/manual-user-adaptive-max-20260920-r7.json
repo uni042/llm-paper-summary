@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r7",
+    "summary": "Adaptive Expert Computation / Compression を厚くするため、expert merging・training-free specialization・pretraining-scale compressionを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.04356",
+      "title": "REAM: Merging Improves Pruning of Experts in LLMs",
+      "source_url": "https://arxiv.org/abs/2604.04356",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md",
+      "priority": 97,
+      "reason": "REAP型pruningの代わりにrouter-weighted expert mergingを行い、性能をより保つ方向を比較する。"
+    },
+    {
+      "canonical_id": "arXiv:2506.23266",
+      "title": "Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging",
+      "source_url": "https://arxiv.org/abs/2506.23266",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2506.23266-sub-moe-subspace-expert-merging.md",
+      "priority": 97,
+      "reason": "joint SVDでshared subspaceを抽出し、adaptive expert clustering後にexpert-specific成分をmergeするsubspace compression。"
+    },
+    {
+      "canonical_id": "arXiv:2505.17639",
+      "title": "PreMoE: Proactive Inference for Efficient Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2505.17639",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2505.17639-premoe-proactive-sparse-specialists.md",
+      "priority": 96,
+      "reason": "router logits由来のPredicted Expert Utilityでdomain-specific sparse variantsをtraining-freeにcompileする。"
+    },
+    {
+      "canonical_id": "arXiv:2505.03531",
+      "title": "Faster MoE LLM Inference for Extremely Large Models",
+      "source_url": "https://arxiv.org/abs/2505.03531",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2505.03531-faster-moe-llm-inference.md",
+      "priority": 95,
+      "reason": "activated expert数とtotal expert数の削減が性能・throughputへ与える差をfine-grained MoEで実測し、expert削減の実用境界を示す。"
+    },
+    {
+      "canonical_id": "arXiv:2605.08738",
+      "title": "SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training",
+      "source_url": "https://arxiv.org/abs/2605.08738",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+      "priority": 94,
+      "reason": "depth・width・expert compressionとdistillationを大規模continued pretraining条件で比較し、圧縮後回復の挙動を系統的に調べる。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920T1906JST-2402",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920T1906JST-2402.json",
+    "receipt": "sha256:e9382854009131ea50ac85882bdabd681d9290b8dc78c43a989776e2f67677df"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-max-2026-09-20",
+    "round": "adaptive-max-r7-merging-specialization",
+    "axis": "expert merging and specialization from lineage forward citations",
+    "query_summary": "forward citation未収録集合からsubspace merging、training-free specialization、compression recoveryを補う5件を選定。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "残存seedのforward citationsを新着側から追加探索",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "expert merging specialization",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2402.14800",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 160,
+        "unseen_result_count": 100,
+        "duplicate_filtered_count": 24,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 35,
+        "candidate_accepted_count": 5,
+        "position": "2 pages"
+      }
+    ]
+  }
+}
