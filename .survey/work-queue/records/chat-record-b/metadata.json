@@ -1,13 +1,3 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-391330299d0747934ae3c7ee",
-  "job_id": "job-research-abc92cd8a94f1144",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-391330299d0747934ae3c7ee",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-391330299d0747934ae3c7ee","job_id":"job-research-abc92cd8a94f1144","data":{
+"canonical_id":"arXiv:2404.14469","arxiv_id":"2404.14469","title":"SnapKV: LLM Knows What You are Looking for Before Generation","list_summary":"プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。","summary":"長文入力ではプロンプト由来のKVキャッシュが入力長に比例して増え、復号1ステップごとの注意計算時間とGPUメモリ消費を押し上げる。SnapKVは、生成中に各注意ヘッドが参照する重要なプロンプト位置が生成開始前の末尾観測窓から高い一貫性で予測できるという観察を利用する。観測窓からヘッド別に重要位置へ投票し、近傍情報をプーリングでまとめて選択したKVと観測窓全体だけを保持する。微調整不要で既存モデルへ組み込め、16K入力では約3.6倍の復号高速化と8.2倍のメモリ効率改善を示し、長文ベンチマークでも完全KVに近い性能を維持する。","source":"https://arxiv.org/abs/2404.14469","sources":["https://arxiv.org/abs/2404.14469","https://arxiv.org/pdf/2404.14469","https://github.com/FasterDecoding/SnapKV"],"authors":["Yuhong Li","Yingbing Huang","Bowen Yang","Bharat Venkitesh","Acyr Locatelli","Hanchen Ye","Tianle Cai","Patrick Lewis","Deming Chen"],"published":"2024-06-17","publication":"arXiv","publication_type":"preprint","publication_status":"arXiv v2 preprint; under review","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"topics":["KVキャッシュ圧縮","長文推論","注意機構","推論高速化"],"implementation":"公開実装FasterDecoding/SnapKVはHuggingFace Transformersへのモンキーパッチ方式でLlama、Mistral、Mixtral系を支援し、論文の疑似コードと同じ観測窓投票・プーリング・KV選択を実装する。","code":"https://github.com/FasterDecoding/SnapKV","hardware_evaluation":"主要な速度・メモリ圧力試験は単一NVIDIA A100 80GB GPUで実施し、LWM-Text-Chat-1Mでは最大380Kトークンまで評価する。","quality_effect":"近似圧縮なので完全KVと数学的に同一ではなく、保持KV数が少なすぎる場合は精度低下が起こり得る。ただしLongBenchの16データセット、Needle-in-a-Haystack、Command-RのRAG評価で完全KVに近い品質を確認する。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2306.14048","arxiv_id":"2306.14048"},{"canonical_id":"arXiv:2306.00978","arxiv_id":"2306.00978"},{"canonical_id":"arXiv:2302.01318","arxiv_id":"2302.01318"},{"canonical_id":"arXiv:2305.09781","arxiv_id":"2305.09781"},{"canonical_id":"arXiv:2401.10774","arxiv_id":"2401.10774"},{"canonical_id":"arXiv:2307.08691","arxiv_id":"2307.08691"},{"canonical_id":"arXiv:2105.03011","arxiv_id":"2105.03011"}],"references_checked_at":"2026-09-20","references_source":"https://arxiv.org/pdf/2404.14469","references_total":37},"reservation":{"claim_id":"claim-391330299d0747934ae3c7ee","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
