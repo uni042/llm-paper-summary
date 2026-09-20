@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-latest-sweep-r43",
+    "summary": "2026年9月の最新MoE expert pruning論文を総ざらいし、未収録の直接関連論文を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.18916",
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.18916-hope-higher-order-expert-pruning.md",
+      "priority": 100,
+      "reason": "HOPEはexpert間相互作用を二次項まで扱う枝刈り目的を導出し、REAPを相互作用項を無視した特殊ケースとして包含する。最大122B級MoEで高枝刈り率ほど優位で、50% pruning時にagentic codingで最大+6.1%を報告。Adaptive Expert Computation / Compressionへ直接該当する最新重要論文。"
+    },
+    {
+      "canonical_id": "arXiv:2609.12310",
+      "title": "ESTS at WMT26: Routing-Informed Expert Pruning for Model Compression",
+      "source_url": "https://arxiv.org/abs/2609.12310",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.12310-ests-routing-informed-expert-pruning.md",
+      "priority": 96,
+      "reason": "task-specific routing massでexpertを順位付けし、cross-lingual routing divergenceで層ごとの保持容量を配分して低重要度expertを物理削除する。GPT-OSS-20Bの実運用圧縮例としてrouting-informed pruningの最新事例。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-latest-sweep-20260920-pruning-focused",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-latest-sweep-20260920-pruning-focused.json",
+    "receipt": "sha256:9009fb1ddf5a7848e74be5e0df94acbbc4c53555a596dfddf5899013dcea11f6"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-latest-sweep-2026-09-20",
+    "round": "latest-sweep-r43-pruning",
+    "axis": "2026-08-01..2026-09-20 latest MoE expert pruning",
+    "query_summary": "最新期間のexpert pruningをOpenAlexで再探索し、既収録・既候補を除外した直接関連2件を追加。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "next_axis_hint": "latest routing/quantization/offload/system sweep"
+  }
+}
