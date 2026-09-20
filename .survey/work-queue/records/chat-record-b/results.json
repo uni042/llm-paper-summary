@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-362ad2690372255c3afaa71b",
-  "job_id": "job-research-da8147ed3835966f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-362ad2690372255c3afaa71b",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-362ad2690372255c3afaa71b","job_id":"job-research-da8147ed3835966f",
+  "data":{
+    "overview":"同じ価格予算ではHexGen-2がHexGenに対して最大1.5倍・平均1.4倍、8×H100上のDistServeに対して最大2.0倍・平均1.3倍のサービングスループットを達成した。オンライン評価では比較対象より平均1.5倍低い遅延期限を達成する。異種設定の予算を同種H100構成より30%削減した設定5でもDistServeと同程度の性能を保ち、一部ワークロードでは30%上回る。最大流誘導辺交換を含むスケジューラは全ワークロードで90〜120秒以内に配置を見つけ、辺交換なし/遺伝的探索より平均1.8倍高いスループットの配置へ高速に収束した。",
+    "key_results":[
+      {"metric":"DistServe比サービングスループット","value":"最大2.0倍、平均1.3倍","baseline":"DistServe on homogeneous H100 cluster","condition":"同程度の価格予算、OPT-30B/Llama-2-70B、複数workload","interpretation":"異種GPUでも分離配置とKV通信を共同最適化すれば同価格の同種高性能GPU構成を上回れる。"},
+      {"metric":"HexGen比サービングスループット","value":"最大1.5倍、平均1.4倍","baseline":"HexGen","condition":"異種GPU設定、複数workload","interpretation":"同居型異種配置に対し、事前充填/復号分離と段階別並列化が有効。"},
+      {"metric":"オンライン遅延期限","value":"平均1.5倍低減","baseline":"HexGen/DistServe counterparts","condition":"online arrival rate=cluster peak throughputの75%","interpretation":"スループットだけでなく要求遅延/SLO側にも改善が及ぶ。"},
+      {"metric":"価格効率","value":"30%低い予算でも同等、特定workloadでは30%高性能","baseline":"DistServe homogeneous setup","condition":"heterogeneous setting 5=$20.5/h vs homogeneous $29.52/h","interpretation":"安価な異種GPUを組み合わせて同等サービス水準を狙える。"},
+      {"metric":"スケジューラ収束","value":"90〜120秒、平均1.8倍高いserving throughputの配置","baseline":"edge-swap無効変種およびgenetic algorithm","condition":"heterogeneous setting 1、4 workload、各15回","interpretation":"最大流のボトルネック情報を使う辺交換が局所最小回避と探索高速化に寄与する。"}
+    ],
+    "negative_results":"性能利得はワークロードと異種構成に依存し、すべてのケースで同じ倍率ではない。スケジューラは静的に測定したGPU/通信特性とワークロード条件を入力とし、配置探索に90〜120秒を要する。評価モデルはOPT-30BとLlama-2-70B、GPU種類はH100/A100/L40/A6000に限られ、より新しいモデルやBlackwell世代、極端に動的な故障/帯域変化は本文の主要評価対象ではない。",
+    "interpretation":"異種環境では単に安価なGPUを増やすだけでなく、計算特性が異なる事前充填と復号を別資源へ割り当て、KV転送が低帯域リンクを通らないよう配置することが重要である。最大流表現により計算ノード容量とネットワーク容量を同じ要求流量として扱えるため、どちらか一方だけを最適化して別のボトルネックを作る問題を避けられる。",
+    "quality_impact":"モデルの近似や量子化を行わないため生成品質を変更する方式ではない。主な効果は同じモデル・要求に対するサービング性能、SLO、価格効率の改善である。"
+  },
+  "reservation":{"claim_id":"claim-362ad2690372255c3afaa71b","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
