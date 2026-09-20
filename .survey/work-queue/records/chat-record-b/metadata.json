@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f3aa5f123e2ae8cb2ff1aa59",
-  "job_id": "job-research-e0a5ea7f3cdd2886",
-  "data": {
-    "canonical_id": "arXiv:2503.04398",
-    "title": "Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling",
-    "list_summary": "トークンと専門家の活性化親和性を事前学習し、専門家配置と要求・トークン配置を協調させてMoEの全対全通信を削減する推論方式。",
-    "summary": "Semantic Parallelismは、専門家並列MoE推論で専門家配置とデータ配置を別々に最適化すると全対全通信が残る問題に対し、トークンと専門家の安定した活性化親和性を利用して両者を協調スケジューリングする。Sem-MoEはオフラインで専門家とトークンを共クラスタ化し、注意層がデータ並列の場合は要求単位、テンソル並列の場合はトークン単位で予測配置する。SGLang上の実装では、DeepSeek-V2-Liteのデータ並列注意でSLO制約下のスループットを最大2.78倍、テンソル並列注意でQwen3-30B-A3Bの初回トークン遅延を最大24.9%削減した。",
-    "source": "https://arxiv.org/html/2503.04398v5",
-    "sources": [
-      "https://arxiv.org/abs/2503.04398",
-      "https://arxiv.org/html/2503.04398v5"
-    ],
-    "authors": [
-      "Yan Li",
-      "Zhenyu Zhang",
-      "Zhengang Wang",
-      "Pengfei Chen",
-      "Pengfei Zheng"
-    ],
-    "published": "2025-03-06",
-    "publication": "ICLR 2026",
-    "publication_type": "conference",
-    "publication_status": "published",
-    "primary_category": "cs.LG",
-    "cross_list_categories": [
-      "cs.AI",
-      "cs.DC"
-    ],
-    "topics": [
-      "MoE inference",
-      "expert parallelism",
-      "model-data co-scheduling",
-      "communication reduction",
-      "SGLang"
-    ],
-    "implementation": "SGLangへのプラグインとして約5000行のPythonと通信向けTritonカーネルを実装。Attention-TP向けにshuffled-reduce-scatterとshuffled-allgatherを追加する。",
-    "code": null,
-    "last_checked": "2026-09-20",
-    "hardware_evaluation": "96GB HBMを持つGPU 8基、400GB/s超の高速相互接続、44コアCPU 2基、DDR5 2TBの単一サーバで評価。",
-    "quality_effect": "モデル重みやルータの意味を変更せず、専門家の透過的再配置とデータ配置で通信だけを削減するため、生成品質を近似化して速度を得る方式ではない。",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "arXiv v5 full-text reference section",
-    "references_total": 42
-  },
+  "attempt_id": "attempt-16712b93d70f46eb3fb21fac",
+  "job_id": "job-research-821e549f36e154dd",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f3aa5f123e2ae8cb2ff1aa59",
+    "claim_id": "claim-16712b93d70f46eb3fb21fac",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
