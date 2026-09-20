@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6246bd4f8827dbfcc3bc3a62",
-  "job_id": "job-research-be4feb2ff4a84f5b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6246bd4f8827dbfcc3bc3a62",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6246bd4f8827dbfcc3bc3a62","job_id":"job-research-be4feb2ff4a84f5b","data":{"overview":"連結量子化は同じ実効ビット幅の非疎量子化を一貫して上回り、特に1〜2ビットで差が大きい。WikiText-2のLLaMA-7bでは2ビット相当CQがパープレキシティ5.97で、KVQuantの2ビット8.17、一般的な2ビット整数・NormalFloatの破綻に対してFP16の5.68へ近い。1ビット相当CQでも8.09を保ち、KVQuant 1ビットの321.58より大幅に良い。","key_results":[{"metric":"WikiText-2、LLaMA-7b、2ビット相当","value":"パープレキシティ5.97","baseline":"FP16 5.68、KVQuant 2ビット8.17","condition":"CQ-4c8b","interpretation":"チャネル共同符号化により2ビットでもFP16へ近い品質を保つ。"},{"metric":"WikiText-2、LLaMA-7b、1ビット相当","value":"パープレキシティ8.09","baseline":"KVQuant 1ビット321.58、KVQuant 1%外れ値9.93","condition":"CQ-8c8b","interpretation":"密な1ビット表現でも外れ値疎表現に匹敵する品質を得る。"},{"metric":"C4、LLaMA-7b、2ビット相当","value":"パープレキシティ7.52","baseline":"FP16 7.08、KVQuant 2ビット10.28","condition":"CQ-4c8b","interpretation":"校正と異なる評価コーパスでも改善が維持される。"},{"metric":"アブレーション、Mistral-7b","value":"2ビットで97.76から5.11へ改善","baseline":"1チャネル・通常重心97.76","condition":"4チャネル連結＋フィッシャー誘導重心","interpretation":"チャネル連結と重要度誘導重心の両方が品質改善へ寄与する。"},{"metric":"重心学習時間","value":"Mistral-7bで4〜13分、LLaMA-13bで22〜94分","baseline":"単一GPU、100回k-means","condition":"連結数により変動","interpretation":"オフライン校正費用はモデル推論とは分離できる。"}],"negative_results":"1ビットCQは従来の密量子化より大幅に良いがFP16品質を完全には保持せず、例えばWikiText-2のLLaMA-7bで5.68から8.09へ悪化する。フィッシャー誘導重心は通常の量子化誤差そのものを増やす場合があるが、重要活性を優先するためパープレキシティは改善する。重心表はモデル重量の約0.232〜0.996%を追加し、校正には最大94分程度を要する。","interpretation":"極低ビットで独立スカラー量子化が破綻する主因の一つは、チャネル間の相互情報を捨てることにある。複数チャネルを同じ符号へまとめると同じ総ビット数で多次元分布を表現でき、重要度をフィッシャー近似で重み付けすると言語モデル損失に効く領域へ重心を集中できる。","quality_impact":"4ビットではほぼFP16相当、2ビットでも小さな劣化、1ビットでは明確な劣化が残るが従来密量子化よりはるかに安定する。"},"reservation":{"claim_id":"claim-6246bd4f8827dbfcc3bc3a62","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
