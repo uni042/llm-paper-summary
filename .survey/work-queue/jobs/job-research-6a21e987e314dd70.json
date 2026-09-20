@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-6a21e987e314dd70",
+  "type": "research",
+  "parent_job_id": "job-1849ac829790a8ce",
+  "priority": 98,
+  "canonical_id": "arXiv:2608.21541",
+  "arxiv_id": "2608.21541",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Beyond Sparse Weights: When Is Attention Compressible?",
+  "source_url": "https://www.semanticscholar.org/paper/33b03facc184393c55f5656d43a5bfdeaedace56",
+  "paper_path": null,
+  "selection_reason": "attention mapの見かけのsparsityではなくmass/value/future query/taskからKV compressibilityを整理し、tail-summary slotを持つCertKVを提案。packed Llama prototypeで10倍cache budget。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:17:31+00:00"
+}

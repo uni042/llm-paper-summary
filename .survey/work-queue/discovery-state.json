@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T22:15:20+00:00",
+  "updated_at": "2026-09-20T22:17:43+00:00",
   "last_run_key": "2026-09-21T06:58:37+09:00",
-  "last_round": "hourly00-forward-deepspeedmoe-10",
+  "last_round": "hourly00-forward-flexgen-12",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,45 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-network-routing-8",
-      "axis": "disaggregated serving・network/KV-aware routing・hardware calibration",
-      "query_summary": "RDMA/KV transfer congestion、decode instance selection、multi-stage flow scheduling、prefill deflectionを探索し、既知候補群から本日公開のcalibrated request routing研究を新規強候補として選定した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.8,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.02043",
-        "arXiv:2607.28150",
-        "arXiv:2605.13734",
-        "arXiv:2603.17456"
-      ],
-      "next_axis_hint": "新着軸をさらに走査し、9月公開のmemory/network/serving論文に未収録が残るか確認する",
-      "source_submission": "work-queue/submissions/20260916T1924JST-discovery-specialist-network-routing-8.json"
-    },
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-adaptive-kv-9",
-      "axis": "新着KV compression・prompt-adaptive configuration selection",
-      "query_summary": "9月新着のLLM serving/KV cacheを再走査し、固定圧縮方式間をprompt制約ごとに選択するMetaKVをrepository code searchで未収録と確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.28150",
-        "arXiv:2606.24467",
-        "arXiv:2603.20397"
-      ],
-      "next_axis_hint": "新規発見で枯渇判定をリセットし、forward citation・backward reference・隣接OS/storage・重点MoE・networkの独立経路を再一巡する",
-      "source_submission": "work-queue/submissions/20260916T1927JST-discovery-specialist-adaptive-kv-9.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-forward-citations-10",
@@ -8075,6 +8036,48 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0714JST-hourly00-discovery-forward-deepspeedmoe-10.json"
+    },
+    {
+      "run_key": "2026-09-21T06:58:37+09:00",
+      "round": "hourly00-forward-h2o-11",
+      "axis": "forward citations of H2O KV cache eviction and efficient inference",
+      "query_summary": null,
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0715JST-hourly00-discovery-forward-h2o-11.json"
+    },
+    {
+      "run_key": "2026-09-21T06:58:37+09:00",
+      "round": "hourly00-forward-flexgen-12",
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "query_summary": null,
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0717JST-hourly00-discovery-forward-flexgen-12.json"
     }
   ],
   "axes": {
@@ -15843,6 +15846,32 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 4,
       "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "forward citations of H2O KV cache eviction and efficient inference": {
+      "last_run_key": "2026-09-21T06:58:37+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
+      "last_run_key": "2026-09-21T06:58:37+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
