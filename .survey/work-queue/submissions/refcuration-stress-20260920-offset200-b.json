@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920-offset200",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920-offset200.json",
+    "receipt": "sha256:39456e0f338ae3b9002e59106e77471eaf65cc97e89f21f5b22d55cb74e928a1"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2502.00937",
+      "arxiv_id": "2502.00937",
+      "title": "ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving",
+      "source_url": "https://arxiv.org/abs/2502.00937",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
+      "priority": 96,
+      "reason": "Production-oriented multimodal serving system with stage disaggregation, modality-aware scheduling, and autoscaling evaluated at 128-GPU scale."
+    },
+    {
+      "canonical_id": "arXiv:2502.13189",
+      "arxiv_id": "2502.13189",
+      "title": "MoBA: Mixture of Block Attention for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2502.13189",
+      "paper_path": "papers/inference/10-sparse-attention/2025-2502.13189-moba.md",
+      "priority": 91,
+      "reason": "Long-context sparse-attention architecture with deployment evidence and direct attention-compute reduction, relevant to efficient inference."
+    },
+    {
+      "canonical_id": "arXiv:2505.23416",
+      "arxiv_id": "2505.23416",
+      "title": "KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction",
+      "source_url": "https://arxiv.org/abs/2505.23416",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+      "priority": 96,
+      "reason": "Query-agnostic reusable KV-cache eviction/compression with substantial cache-size and decoding-latency reductions across long-context workloads."
+    },
+    {
+      "canonical_id": "arXiv:2407.00326",
+      "arxiv_id": "2407.00326",
+      "title": "Teola: Towards End-to-End Optimization of LLM-based Applications",
+      "source_url": "https://arxiv.org/abs/2407.00326",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md",
+      "priority": 92,
+      "reason": "Fine-grained orchestration framework for end-to-end LLM applications, exposing cross-module pipelining, parallelism, and scheduling opportunities."
+    },
+    {
+      "canonical_id": "arXiv:2412.14219",
+      "arxiv_id": "2412.14219",
+      "title": "A Survey on Inference Optimization Techniques for Mixture of Experts Models",
+      "source_url": "https://arxiv.org/abs/2412.14219",
+      "paper_path": "papers/survey/04-moe-inference/2024-2412.14219-moe-inference-optimization-survey.md",
+      "priority": 88,
+      "reason": "Focused MoE inference-optimization survey spanning model-, system-, and hardware-level techniques, useful as a lineage map for the MoE survey."
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20-offset200",
+    "round": "refcuration-stress-offset200-b",
+    "axis": "structured references stress probe at raw offset 200",
+    "query_summary": "Evaluated a 20-record structured-reference buffer around raw offset 200; systems papers were submitted while weak-fit items were durably classified.",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2502.00937",
+      "arXiv:2502.13189",
+      "arXiv:2505.23416",
+      "arXiv:2407.00326",
+      "arXiv:2412.14219"
+    ],
+    "next_axis_hint": "Continue deeper structured-reference probes; systems yield remains substantial at relation_count 6-7."
+  }
+}
