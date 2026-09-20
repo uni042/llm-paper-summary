@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-76fbde0c7b747f7dc5bad2a5",
-  "job_id": "job-research-bb33e470bd8a5f8f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-76fbde0c7b747f7dc5bad2a5",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-76fbde0c7b747f7dc5bad2a5","job_id":"job-research-bb33e470bd8a5f8f","data":{"overview":"eMoEは全エキスパート常駐と要求内逐次ロードの中間として、将来必要なエキスパート集合を予測して周期的に入れ替えることでGPUメモリを20～80%削減しつつ93.7～99.8%の出力類似度を維持する。DeepSpeed-FastGen上の同一推論基盤に対してエンドツーエンド遅延を最大17%削減し、空いたメモリをKVキャッシュやバッチへ回すことでMixtralでは最大40倍長いプロンプト、4.5倍大きいバッチ、1.5倍のトークンスループットを実現する。","key_results":[{"metric":"GPUメモリ削減","value":"20～80%","baseline":"全エキスパートGPU常駐Baseline","condition":"エキスパートロード率20～80%、4種類のMoEモデル","interpretation":"必要と予測したエキスパートだけを保持することで、モデル重みが占めるGPU容量を大きく減らせる。"},{"metric":"出力類似度","value":"93.7～99.8%","baseline":"全エキスパート常駐出力を100%相当","condition":"ロード率20～80%。60%ロードで98.2～98.8%、80%ロードで99.6～99.7%","interpretation":"大幅なメモリ削減でも予測型ロードはランダム選択より品質低下を抑え、Pre-Gated MoEやMoEInfinityと同程度の類似度を保つ。"},{"metric":"エンドツーエンド遅延削減","value":"最大17%","baseline":"DeepSpeed-FastGen","condition":"4モデル、到着率を変えた要求処理。Mixtral-8x22Bで最大、TinyMixtralで最小9%","interpretation":"モデルが大きいほど削減したエキスパート計算とGPUメモリ読み出しの効果が大きくなる。"},{"metric":"長文・バッチ・スループット拡張","value":"40×長いプロンプト、4.5×大きいバッチ、最大1.5×スループット","baseline":"全エキスパート常駐Baseline","condition":"60%エキスパートロード。Mixtral-8x7Bでは512トークン時96GB→59GB、バッチ4時約100GB→59GB","interpretation":"重みから解放したGPU容量をKVキャッシュや同時要求へ再配分でき、単なる省メモリ以上にサービス容量を増やす。"},{"metric":"予測器精度","value":"約69～71%","baseline":"GPT-2約49～51%、BERT-base約12～16%","condition":"OpenMoE/Mixtralルーティング系列、XLNet、eMoE-L/eMoE-A","interpretation":"完全なルータ一致ではないが、頻出エキスパート集合を選ぶ用途には十分な予測性能を示し、予測器自体のメモリはMoEモデルの0.24～1.3%に留まる。"}],"negative_results":"予測器を毎プロンプト呼ぶeMoE-EはeMoE-A/Lより精度が0.1～0.4ポイント高い一方、推論時間は9～34%増えるため採用されない。Pre-Gated MoEはeMoE系より2.4～3.5倍、MoEInfinityは1.25～1.5倍長い推論時間となる。エキスパートロード率を20%まで下げるとモデルによって類似度は90%前後まで落ち、メモリ削減と品質には明確なトレードオフがある。","interpretation":"eMoEの主効果は、推論中に層ごと重みを追いかけるのではなく、要求間の時間的局所性を使って転送回数を粗粒度化した点にある。さらにタスク感度を使って『正確なルーティングが必要な要求』へロード容量を集中するため、同じ部分常駐率でもタスク非認識方式より会話・QA・要約で品質が高い。メモリ節約分をより長いKVキャッシュや大きいバッチへ使えるため、推論速度の直接改善よりもサービス容量拡大の効果が大きい条件もある。","quality_impact":"品質は全エキスパート常駐出力とのBERT意味類似度で測る。60%ロードで98.2～98.8%、80%ロードで99.6～99.7%を保ち、20～80%ロード全体では93.7～99.8%。分類・意味類似度は誤ルーティング耐性が高いためタスク認識ロードの差が小さいが、会話・質問応答・要約ではタスク認識方式が非認識方式を上回る。"},"reservation":{"claim_id":"claim-76fbde0c7b747f7dc5bad2a5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
