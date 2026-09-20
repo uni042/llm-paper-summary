@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 22:10:08 JST**
+> 自動生成: **2026-09-20 22:10:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **212** |
+| 収録候補論文 | **211** |
 | 未claim Research job | **211** |
-| 直近24hの検証済みResearch収録 | **88** |
-| 最終検証済みResearch収録 | **09-20 22:06:53 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **89** |
+| 最終検証済みResearch収録 | **09-20 22:10:28 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **212** |
+| canonical_id確認済みの一意な候補論文 | **211** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **212** |
+| 非終端Research job合計 | **211** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **31** | **3** | **3** | **0** | **1** | **0** | — |
+| Research | **32** | **3** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **31** | **4** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **32** | **4** | **4** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 22:10:28 JST** [research] `arXiv:2508.18983` — SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution
+  - job: `.survey/work-queue/jobs/job-research-159e5ee7f39d28f8.json`
+  - result: `.survey/work-queue/results/research/attempt-6f2e6a2b41a89ff181e07ec0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-6f2e6a2b41a89ff181e07ec0.json`
+  - paper: `papers/inference/01-offload-hierarchical-memory/2025-2508.18983-smoe-expert-substitution-edge.md`
 - **09-20 22:06:53 JST** [research] `arXiv:2607.06601` — TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation
   - job: `.survey/work-queue/jobs/job-research-0f282c93dba72c85.json`
   - result: `.survey/work-queue/results/research/attempt-f7ba62a568920d99b231d2ff.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-bd7edc3a59e4ce43ac25f884.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-bd7edc3a59e4ce43ac25f884.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2511.02237-opportunistic-expert-activation.md`
-- **09-20 20:14:15 JST** [research] `arXiv:2510.19366` — MoE-Prism: Disentangling Monolithic Experts for Elastic MoE Services via Model-System Co-Designs
-  - job: `.survey/work-queue/jobs/job-research-5ce9880c62119377.json`
-  - result: `.survey/work-queue/results/research/attempt-1487e2feb0d7ced553b8414c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-1487e2feb0d7ced553b8414c.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.19366-moe-prism-elastic-services.md`
 
 ### Audit
 
@@ -164,10 +164,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2508.18983` — SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-20 22:07:38 JST** / heartbeat: **—** / lease expiry: **09-20 23:37:38 JST**
-  - evidence: `.survey/work-queue/claims/job-research-159e5ee7f39d28f8.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -187,7 +185,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **212** |
+| ready | **211** |
 
 ### 候補の重複・識別情報欠損
 
@@ -207,7 +205,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **858** |
+| inference/training/survey配下の論文Markdown実体 | **859** |
 
 ### immutable submissionの未照合
 
@@ -215,8 +213,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **846** |
-| └ Research | **596** |
+| 成功result未照合のimmutable submission | **845** |
+| └ Research | **595** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **103** |

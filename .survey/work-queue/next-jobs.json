@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 212,
-      "completed": 663,
+      "ready": 211,
+      "completed": 664,
       "superseded": 46,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -19,25 +19,11 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 212,
+    "ready_research_audit": 211,
     "actively_claimed": 0,
-    "claimable": 212
+    "claimable": 211
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-159e5ee7f39d28f8",
-      "type": "research",
-      "lane": null,
-      "priority": 99,
-      "canonical_id": "arXiv:2508.18983",
-      "title": "SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution",
-      "source_url": "https://arxiv.org/abs/2508.18983",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2508.18983-smoe-expert-substitution-edge.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-69e7666b88522bc6",
       "type": "research",
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-e203c47aded67247",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2511.06494",
+      "title": "Route Experts by Sequence, not by Token",
+      "source_url": "https://arxiv.org/abs/2511.06494",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T13:06:53+00:00"
+  "generated_at": "2026-09-20T13:10:29+00:00"
 }
