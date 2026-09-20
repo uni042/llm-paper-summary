@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5a2d8cb943b02cb27fc0083a",
-  "job_id": "job-research-6e63ee697d71f91d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5a2d8cb943b02cb27fc0083a",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5a2d8cb943b02cb27fc0083a","job_id":"job-research-6e63ee697d71f91d","data":{"hardware":"本文はGPU型を明記しない。配備評価では32K文脈長・バッチサイズ1でピークGPU VRAMを測定し、20%・40%の専門家削除に応じた一貫したメモリ削減を報告する。","software":"公開実装はgithub.com/Alizen-1009/Shapley-Moe。既存モデルのルーティング記録を用いる訓練不要の後処理で、専門家パラメータやルータ方針は更新しない。","methodology":"Qwen3-30B-A3B、GPT-OSS-20B、DeepSeek-V2-Liteを対象に、GSM8K、MATH-500、HumanEval、GPQA-Diamond、TruthfulQA、OntoNotes5、MedMCQAの7タスクを評価する。各タスク25例で未枝刈りモデルのTop-kルーティングとゲート値を記録し、観測連合からShapley風専門家価値を推定する。品質カバレッジ閾値を二分探索して全体keep率へ合わせ、追加訓練なしで20%・40%の専門家を削除する。比較はRandom、Frequency、Gating、RAEP、EASY-EP、および同じShapleyスコアを使うglobal・固定layer-wise選択。タスク精度と算術平均、32K文脈時のピークVRAMを測定する。","scope":"タスク特化キャリブレーションとタスク特化枝刈りを前提とし、汎用チャット混合ワークロードで単一の枝刈り構成がどこまで一般化するかは未検証。速度・帯域・電力は直接測定せず、メモリは図によるピークVRAM傾向を示す。厳密Shapley値ではなく観測連合と共起頻度に限定した近似である。"},"reservation":{"claim_id":"claim-5a2d8cb943b02cb27fc0083a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
