@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T054520Z-scheduled-chat-llm-survey-15",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-e0a5ea7f3cdd2886",
+      "claim_id": "claim-f3aa5f123e2ae8cb2ff1aa59",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-f3aa5f123e2ae8cb2ff1aa59",
+      "claimed_at": "2026-09-20T05:45:20+00:00",
+      "expires_at": "2026-09-20T07:15:20+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-e0a5ea7f3cdd2886"
+      ],
+      "job": {
+        "job_id": "job-research-e0a5ea7f3cdd2886",
+        "type": "research",
+        "parent_job_id": "job-4a06419a3d931893",
+        "priority": 96,
+        "canonical_id": "arXiv:2503.04398",
+        "arxiv_id": "2503.04398",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling",
+        "source_url": "https://arxiv.org/abs/2503.04398",
+        "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md",
+        "selection_reason": "MoE serving system that jointly schedules expert placement and request/token placement to reduce all-to-all communication, implemented in SGLang.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T03:59:14+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.novelty must explain the paper-specific idea | problem_method.method_overview must explain the end-to-end mechanism",
+        "validation_errors": [
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.novelty must explain the paper-specific idea",
+          "problem_method.method_overview must explain the end-to-end mechanism"
+        ],
+        "last_validation_failed_at": "2026-09-20T05:44:20+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-22c6cd91832db65b7ee858af"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-22c6cd91832db65b7ee858af.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T05:45:20+00:00",
+  "checkpoint_released": 0
+}

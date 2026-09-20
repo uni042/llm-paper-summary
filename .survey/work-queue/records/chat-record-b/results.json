@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-22c6cd91832db65b7ee858af","job_id":"job-research-e0a5ea7f3cdd2886","data":{"overview":"主結果は、専門家配置と要求・トークン配置を同じ親和性で協調させるSem-MoEが遠隔全対全通信を減らし、DeepSeek-V2-Liteのデータ並列注意でSLO下スループットをMoETuner比最大2.78倍、Qwen3-30B-A3Bのテンソル並列注意で初回トークン遅延を最大24.9%削減したことである。実用上は、モデル品質やMoE構造を変えず、SGLangのスケジューラと既存通信へ配置制御を組み込むだけで、専門家並列通信が律速する配備の処理能力と応答遅延を改善できることを意味する。","key_results":[{"metric":"Attention-DP throughput under SLO","value":"DeepSeek-V2-Lite: SGLang比+31%/+221%、MoETuner比+32%/+278%（TTFT/E2E SLO）","baseline":"SGLang with DeepEP / MoETuner","condition":"8 GPU, request rate 10–175 req/s","interpretation":"要求配置と専門家配置を協調させることで、高負荷時にベースラインへ未処理要求が蓄積する領域でも処理能力を維持した。"},{"metric":"Attention-DP throughput under SLO","value":"Qwen3-30B-A3B: SGLang比最大+98%/+11%、MoETuner比+35%/+32%","baseline":"SGLang / MoETuner","condition":"TTFT/E2E SLO","interpretation":"別の専門家構成でも協調配置の効果を確認した。"},{"metric":"Attention-TP TTFT reduction","value":"DeepSeek-V2-Lite: 12.21%/10.60%/18.89%; Qwen3-30B-A3B: 17.16%/24.90%/3.80%","baseline":"best baseline","condition":"input length 256/512/1024, 1 req/s","interpretation":"予測トークン並べ替えを既存通信へ融合することで、追加通信をほぼ増やさず遠隔専門家送信を減らした。"},{"metric":"local activation rate and expert-layer latency","value":"LAR +37%/+43%, expert-layer latency -41.8%/-46.6%","baseline":"vanilla placement","condition":"DeepSeek-V2-Lite / Qwen3-30B-A3B, Attention-TP","interpretation":"エンドツーエンド改善の直接要因が専門家の局所活性化増加であることを示す。"},{"metric":"co-scheduling algorithm","value":"best baseline比 local activation rate +15.4%, load imbalance metric +36.7% improvement","baseline":"vanilla / MoETuner","condition":"DeepSeek-V2-Lite, EP8","interpretation":"通信局所性だけでなく負荷均衡も同時に改善する共クラスタ化が機能した。"},{"metric":"static routing prediction","value":"precision 96.3%, F1 78.8%","baseline":"token identity based static top-k experts","condition":"25% profile / 75% test split","interpretation":"トークン識別子だけでも実用的な専門家予測信号が存在し、軽量表参照による先回り配置を可能にする。"}],"negative_results":"局所活性化率100%は、異なるトークンが互いに矛盾する専門家配置を要求しGPUメモリも有限なため理論的にも一般には達成できない。MoETunerは負荷均衡の効果で一部条件を改善する一方、条件によっては遅くなる。Qwen3-30B-A3Bの入力長1024ではTTFT改善が3.80%まで縮小し、効果量はモデル・入力長・並列方式に依存する。","interpretation":"MoE通信削減では専門家をどこへ置くかだけでなく、どの要求・トークンをその装置へ置くかを同じ親和性モデルで決めることが重要である。特にテンソル並列注意では、もともと必要なreduce-scatterへ予測再配置を融合することで追加通信を避けながら次の専門家層の全対全量を減らせる。","quality_impact":"専門家とゲート列を透過的に並べ替え、予測が外れたトークンは通常の遠隔通信で処理するため、推論意味やモデル品質を近似化しない。"},"reservation":{"claim_id":"claim-22c6cd91832db65b7ee858af","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-f3aa5f123e2ae8cb2ff1aa59",
+  "job_id": "job-research-e0a5ea7f3cdd2886",
+  "data": {
+    "overview": "主結果は、専門家配置と要求・トークン配置を同じ親和性で協調させるSem-MoEが遠隔全対全通信を減らし、DeepSeek-V2-Liteのデータ並列注意でSLO下スループットをMoETuner比最大2.78倍、Qwen3-30B-A3Bのテンソル並列注意で初回トークン遅延を最大24.9%削減したことである。実用上は、モデル品質やMoE構造を変えず、SGLangのスケジューラと既存通信へ配置制御を組み込むだけで、専門家並列通信が律速する配備の処理能力と応答遅延を改善できることを意味する。",
+    "key_results": [
+      {
+        "metric": "Attention-DP throughput under SLO",
+        "value": "DeepSeek-V2-Lite: SGLang比+31%/+221%、MoETuner比+32%/+278%（TTFT/E2E SLO）",
+        "baseline": "SGLang with DeepEP / MoETuner",
+        "condition": "8 GPU, request rate 10–175 req/s",
+        "interpretation": "要求配置と専門家配置を協調させることで、高負荷時にベースラインへ未処理要求が蓄積する領域でも処理能力を維持した。"
+      },
+      {
+        "metric": "Attention-DP throughput under SLO",
+        "value": "Qwen3-30B-A3B: SGLang比最大+98%/+11%、MoETuner比+35%/+32%",
+        "baseline": "SGLang / MoETuner",
+        "condition": "TTFT/E2E SLO",
+        "interpretation": "別の専門家構成でも協調配置の効果を確認した。"
+      },
+      {
+        "metric": "Attention-TP TTFT reduction",
+        "value": "DeepSeek-V2-Lite: 12.21%/10.60%/18.89%; Qwen3-30B-A3B: 17.16%/24.90%/3.80%",
+        "baseline": "best baseline",
+        "condition": "input length 256/512/1024, 1 req/s",
+        "interpretation": "予測トークン並べ替えを既存通信へ融合することで、追加通信をほぼ増やさず遠隔専門家送信を減らした。"
+      },
+      {
+        "metric": "local activation rate and expert-layer latency",
+        "value": "LAR +37%/+43%, expert-layer latency -41.8%/-46.6%",
+        "baseline": "vanilla placement",
+        "condition": "DeepSeek-V2-Lite / Qwen3-30B-A3B, Attention-TP",
+        "interpretation": "エンドツーエンド改善の直接要因が専門家の局所活性化増加であることを示す。"
+      },
+      {
+        "metric": "co-scheduling algorithm",
+        "value": "best baseline比 local activation rate +15.4%, load imbalance metric +36.7% improvement",
+        "baseline": "vanilla / MoETuner",
+        "condition": "DeepSeek-V2-Lite, EP8",
+        "interpretation": "通信局所性だけでなく負荷均衡も同時に改善する共クラスタ化が機能した。"
+      },
+      {
+        "metric": "static routing prediction",
+        "value": "precision 96.3%, F1 78.8%",
+        "baseline": "token identity based static top-k experts",
+        "condition": "25% profile / 75% test split",
+        "interpretation": "トークン識別子だけでも実用的な専門家予測信号が存在し、軽量表参照による先回り配置を可能にする。"
+      }
+    ],
+    "negative_results": "局所活性化率100%は、異なるトークンが互いに矛盾する専門家配置を要求しGPUメモリも有限なため理論的にも一般には達成できない。MoETunerは負荷均衡の効果で一部条件を改善する一方、条件によっては遅くなる。Qwen3-30B-A3Bの入力長1024ではTTFT改善が3.80%まで縮小し、効果量はモデル・入力長・並列方式に依存する。",
+    "interpretation": "MoE通信削減では専門家をどこへ置くかだけでなく、どの要求・トークンをその装置へ置くかを同じ親和性モデルで決めることが重要である。特にテンソル並列注意では、もともと必要なreduce-scatterへ予測再配置を融合することで追加通信を避けながら次の専門家層の全対全量を減らせる。",
+    "quality_impact": "専門家とゲート列を透過的に並べ替え、予測が外れたトークンは通常の遠隔通信で処理するため、推論意味やモデル品質を近似化しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-f3aa5f123e2ae8cb2ff1aa59",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

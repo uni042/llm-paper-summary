@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-22c6cd91832db65b7ee858af",
+  "attempt_id": "attempt-f3aa5f123e2ae8cb2ff1aa59",
   "job_id": "job-research-e0a5ea7f3cdd2886",
   "data": {
     "limitations": "評価は主に高速な装置間接続を持つ8GPU単一サーバで行われ、複数ノードEthernetやPCIe主体の環境では通信削減の絶対効果と追加並べ替え費用が変わる可能性がある。活性化予測と専門家配置は代表データの20%を使って事前構築するため、運用トラフィックの分布が大きく変化した場合は再計測・再配置が必要になる。未知トークンは埋め込み近傍で補うため、語彙外や特殊ドメインで予測精度が低下しうる。局所活性化率はトークン間で望ましい専門家配置が衝突し、装置メモリも有限なため100%にはできない。主実験はプロンプト部分に集中しており、長時間の復号で要求内容や専門家利用分布が変化する場合の継続適応は限定的である。",
@@ -11,7 +11,7 @@
     "research_positioning": "専門家並列MoEの通信最適化において、静的・動的専門家配置だけでなく入力データの配置まで同一の確率的親和性モデルで扱うモデル・データ共同スケジューリング研究に位置する。オフロードや専門家キャッシュとは補完関係にあり、GPU常駐専門家間の遠隔通信を減らす。サービングスケジューラとMoE並列通信カーネルを跨ぐため、MoE配置研究とLLM servingの要求スケジューリング研究を接続する。"
   },
   "reservation": {
-    "claim_id": "claim-22c6cd91832db65b7ee858af",
+    "claim_id": "claim-f3aa5f123e2ae8cb2ff1aa59",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
