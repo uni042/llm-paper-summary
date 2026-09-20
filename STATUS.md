@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 22:05:04 JST**
+> 自動生成: **2026-09-20 22:05:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **213** |
 | 未claim Research job | **212** |
 | 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-20 22:01:31 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-20 22:01:31 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -166,7 +166,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.06601` — TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation / worker `scheduled-chat-discovery-specialist`
-  - claim: **09-20 22:02:08 JST** / heartbeat: **—** / lease expiry: **09-20 23:32:08 JST**
+  - claim: **09-20 22:05:38 JST** / heartbeat: **—** / lease expiry: **09-20 23:35:38 JST**
   - evidence: `.survey/work-queue/claims/job-research-0f282c93dba72c85.json`
 
 #### Audit
