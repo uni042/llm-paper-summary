@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "request_id": "claim-20260920T005300Z-scheduled-chat-llm-survey-11k",
+  "request_id": "claim-20260920T013200Z-scheduled-chat-llm-survey-11",
   "worker_id": "scheduled-chat-llm-survey",
   "worker_kind": "scheduled_chat",
   "ok": true,
@@ -40,18 +40,10 @@
         "schema_version": 1,
         "created_at": "2026-09-19T18:48:21+00:00"
       },
-      "record_bank": "b",
-      "record_bank_root": ".survey/work-queue/records/chat-record-b",
-      "record_slot_paths": {
-        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
-        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
-        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
-        "results": ".survey/work-queue/records/chat-record-b/results.json",
-        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
-      }
+      "record_bank": "b"
     }
   ],
-  "processed_at": "2026-09-20T00:51:47+00:00",
-  "checkpoint_released": 0,
-  "heartbeat_at": "2026-09-20T01:31:17+00:00"
+  "processed_at": "2026-09-20T01:31:17+00:00",
+  "reason": "resumed active unsubmitted claim",
+  "checkpoint_released": 0
 }
