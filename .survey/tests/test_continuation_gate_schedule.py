@@ -33,7 +33,6 @@ def make_args(**overrides):
         seconds_to_next_scheduled_task=None,
         seconds_to_run_deadline=None,
         scheduled_handoff_guard_seconds=600,
-        worker_kind="normal",
         candidate_inventory=None,
         work_mode="auto",
         papers_added_this_invocation=0,
@@ -49,25 +48,21 @@ def make_args(**overrides):
 
 
 class ContinuationGateScheduleTests(unittest.TestCase):
-    def test_both_schedule_labels_choose_same_mode_from_inventory(self):
-        for worker_kind in ("normal", "discovery"):
-            with self.subTest(worker_kind=worker_kind):
-                research = mod.decide(make_args(
-                    worker_kind=worker_kind,
-                    candidate_inventory=49,
-                    seconds_to_run_deadline=3600,
-                ))
-                discovery = mod.decide(make_args(
-                    worker_kind=worker_kind,
-                    candidate_inventory=50,
-                    discovery_rounds_since_last_novel=0,
-                    seconds_to_run_deadline=3600,
-                ))
-                self.assertEqual(research["work_mode"], "research")
-                self.assertEqual(research["mode_source"], "candidate_inventory")
-                self.assertEqual(discovery["work_mode"], "discovery")
-                self.assertEqual(discovery["mode_source"], "candidate_inventory")
-                self.assertEqual(discovery["required_action"], "DISCOVER_AGAIN")
+    def test_inventory_alone_selects_mode(self):
+        research = mod.decide(make_args(
+            candidate_inventory=49,
+            seconds_to_run_deadline=3600,
+        ))
+        discovery = mod.decide(make_args(
+            candidate_inventory=50,
+            discovery_rounds_since_last_novel=0,
+            seconds_to_run_deadline=3600,
+        ))
+        self.assertEqual(research["work_mode"], "research")
+        self.assertEqual(research["mode_source"], "candidate_inventory")
+        self.assertEqual(discovery["work_mode"], "discovery")
+        self.assertEqual(discovery["mode_source"], "candidate_inventory")
+        self.assertEqual(discovery["required_action"], "DISCOVER_AGAIN")
 
     def test_threshold_boundary_50_is_discovery(self):
         result = mod.decide(make_args(
@@ -140,17 +135,9 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertEqual(result["decision"], "STOP_RUN")
         self.assertIn("next_scheduled_task_within_handoff_guard", result["stop_reasons"])
 
-    def test_old_callers_without_inventory_fall_back_to_worker_kind(self):
-        research = mod.decide(make_args(worker_kind="normal", candidate_inventory=None))
-        discovery = mod.decide(make_args(
-            worker_kind="discovery",
-            candidate_inventory=None,
-            discovery_rounds_since_last_novel=0,
-        ))
-        self.assertEqual(research["work_mode"], "research")
-        self.assertEqual(research["mode_source"], "legacy_worker_kind_fallback")
-        self.assertEqual(discovery["work_mode"], "discovery")
-        self.assertEqual(discovery["mode_source"], "legacy_worker_kind_fallback")
+    def test_auto_mode_requires_candidate_inventory(self):
+        with self.assertRaises(ValueError):
+            mod.decide(make_args(candidate_inventory=None))
 
 
 if __name__ == "__main__":
