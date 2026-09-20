@@ -1,1 +1,97 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-8c0b23180b0d626bedc629c2","job_id":"job-research-5ce9880c62119377","data":{"canonical_id":"arXiv:2510.19366","arxiv_id":"2510.19366","doi":"10.48550/arXiv.2510.19366","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.LG"]},"title":"MoE-Prism: Model and System Support for Request-Level Compute Elasticity in MoE Serving","summary":"MoE-Prismは、単一のMoEモデルを要求ごとに異なる計算予算で効率良く提供するモデル・システム協調方式である。既存専門家をニューロン共活性に基づく4個の細粒度サブ専門家へ分解してルーティング動作点を4倍へ増やし、要求ごとのtop-k予算を保持するスケジューラと、注意機構グラフを予算間で共有する分割CUDAグラフ実行器をvLLMへ統合する。3種のMoEで品質を概ね維持し、オフライン推論スループットを最大33.9%改善し、異種予算のオンライン負荷でも先頭トークン時間を低減する。","list_summary":"専門家を4分割してtop-k動作点を4倍に増やし、予算別バッチングと分割CUDAグラフで要求ごとの計算予算をvLLM上で効率的に実行する。","authors":["Xinfeng Xia","Xiaofeng Hou","Jiacheng Liu","Wenfeng Wang","Mingxuan Zhang","Peng Tang","Chao Li","Minyi Guo"],"authors_affiliations":"Shanghai Jiao Tong University; Hong Kong University of Science and Technology; State Key Laboratory of Public Big Data, Guizhou University","published":"2025-10-22","publication":"arXiv preprint arXiv:2510.19366v2","publication_type":"arXivプレプリント","publication_status":"2025年10月22日初版、2026年8月10日v2。IEEEへ投稿中。","lineage":"adaptive-expert-computation-compression","topics":["混合専門家モデル","要求単位計算弾力性","細粒度専門家","動的top-k","vLLM","CUDAグラフ"],"importance":"単一常駐MoEで要求ごとの品質・計算予算を直接受け取り、モデル側の細粒度化とサービング側の異種予算処理を一体化する。","hardware_evaluation":"A100、RTX A6000、H800を用いた実機サービング評価。","hardware_details":"DeepSeek-V2-LiteとOLMoE-1B-7BをA100/RTX A6000、Qwen3-30B-A3BをH800で評価。オンライン評価は2 GPU構成を含む。","quality_effect":"同等活性パラメータで元モデルと概ね同等のパープレキシティ・下流精度を維持し、一部条件では改善。","bottlenecks":["粗い専門家単位top-k","異種top-k混在による過剰実行","予算別バッチ分割によるGEMM効率低下","CUDAグラフ状態数増大"],"evidence_locations":["第II節","第III節","第IV節","第V節"],"source":"https://arxiv.org/abs/2510.19366","sources":["https://arxiv.org/abs/2510.19366","https://arxiv.org/html/2510.19366","https://arxiv.org/pdf/2510.19366"],"code":null,"implementation":"vLLM v0.11.2上に実装し、CUDA 12.6、Python 3.11、PyTorch 2.9.0で評価。確認した本文には公開コードURLの明記なし。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2401.04088","title":"Mixtral of Experts"},{"canonical_id":"arXiv:2505.09388","title":"Qwen3 Technical Report"},{"canonical_id":"arXiv:2405.14297","title":"Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models"},{"canonical_id":"arXiv:2509.21892","title":"Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts"}],"references_checked_at":"2026-09-20","references_source":"arXiv HTML参考文献節","references_total":4},"reservation":{"claim_id":"claim-8c0b23180b0d626bedc629c2","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-1487e2feb0d7ced553b8414c",
+  "job_id": "job-research-5ce9880c62119377",
+  "data": {
+    "canonical_id": "arXiv:2510.19366",
+    "arxiv_id": "2510.19366",
+    "doi": "10.48550/arXiv.2510.19366",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
+    "title": "MoE-Prism: Model and System Support for Request-Level Compute Elasticity in MoE Serving",
+    "summary": "MoE-Prismは、単一のMoEモデルを要求ごとに異なる計算予算で効率良く提供するモデル・システム協調方式である。既存専門家をニューロン共活性に基づく4個の細粒度サブ専門家へ分解してルーティング動作点を4倍へ増やし、要求ごとのtop-k予算を保持するスケジューラと、注意機構グラフを予算間で共有する分割CUDAグラフ実行器をvLLMへ統合する。3種のMoEで品質を概ね維持し、オフライン推論スループットを最大33.9%改善し、異種予算のオンライン負荷でも先頭トークン時間を低減する。",
+    "list_summary": "専門家を4分割してtop-k動作点を4倍に増やし、予算別バッチングと分割CUDAグラフで要求ごとの計算予算をvLLM上で効率的に実行する。",
+    "authors": [
+      "Xinfeng Xia",
+      "Xiaofeng Hou",
+      "Jiacheng Liu",
+      "Wenfeng Wang",
+      "Mingxuan Zhang",
+      "Peng Tang",
+      "Chao Li",
+      "Minyi Guo"
+    ],
+    "authors_affiliations": "Shanghai Jiao Tong University; Hong Kong University of Science and Technology; State Key Laboratory of Public Big Data, Guizhou University",
+    "published": "2025-10-22",
+    "publication": "arXiv preprint arXiv:2510.19366v2",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "2025年10月22日初版、2026年8月10日v2。IEEEへ投稿中。",
+    "lineage": "adaptive-expert-computation-compression",
+    "topics": [
+      "混合専門家モデル",
+      "要求単位計算弾力性",
+      "細粒度専門家",
+      "動的top-k",
+      "vLLM",
+      "CUDAグラフ"
+    ],
+    "importance": "単一常駐MoEで要求ごとの品質・計算予算を直接受け取り、モデル側の細粒度化とサービング側の異種予算処理を一体化する。",
+    "hardware_evaluation": "A100、RTX A6000、H800を用いた実機サービング評価。",
+    "hardware_details": "DeepSeek-V2-LiteとOLMoE-1B-7BをA100/RTX A6000、Qwen3-30B-A3BをH800で評価。オンライン評価は2 GPU構成を含む。",
+    "quality_effect": "同等活性パラメータで元モデルと概ね同等のパープレキシティ・下流精度を維持し、一部条件では改善。",
+    "bottlenecks": [
+      "粗い専門家単位top-k",
+      "異種top-k混在による過剰実行",
+      "予算別バッチ分割によるGEMM効率低下",
+      "CUDAグラフ状態数増大"
+    ],
+    "evidence_locations": [
+      "第II節",
+      "第III節",
+      "第IV節",
+      "第V節"
+    ],
+    "source": "https://arxiv.org/abs/2510.19366",
+    "sources": [
+      "https://arxiv.org/abs/2510.19366",
+      "https://arxiv.org/html/2510.19366",
+      "https://arxiv.org/pdf/2510.19366"
+    ],
+    "code": null,
+    "implementation": "vLLM v0.11.2上に実装し、CUDA 12.6、Python 3.11、PyTorch 2.9.0で評価。確認した本文には公開コードURLの明記なし。",
+    "last_checked": "2026-09-20",
+    "references": [
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "title": "Mixtral of Experts"
+      },
+      {
+        "canonical_id": "arXiv:2505.09388",
+        "title": "Qwen3 Technical Report"
+      },
+      {
+        "canonical_id": "arXiv:2405.14297",
+        "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models"
+      },
+      {
+        "canonical_id": "arXiv:2509.21892",
+        "title": "Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts"
+      }
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "arXiv HTML参考文献節",
+    "references_total": 4
+  },
+  "reservation": {
+    "claim_id": "claim-1487e2feb0d7ced553b8414c",
+    "worker_id": "scheduled-chat-discovery-hourly",
+    "worker_kind": "scheduled_chat"
+  }
+}
