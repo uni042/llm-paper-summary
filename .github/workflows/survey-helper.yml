@@ -61,8 +61,6 @@ jobs:
             .survey/scripts/status_publish_gate.py \
             .survey/scripts/build_status_dashboard.py \
             .survey/scripts/render_status_dashboard.py \
-            .survey/scripts/append_research_throughput_status.py \
-            .survey/scripts/refine_status_observability.py \
             .survey/scripts/ensure_dashboard_history.py \
             .survey/scripts/queue_worker.py \
             .survey/scripts/blocked_retry.py
@@ -108,7 +106,7 @@ jobs:
       - name: Suppress stale duplicate research jobs
         run: python .survey/scripts/dedupe_queue.py --root .survey
 
-      - name: Process queue and compatibility submissions
+      - name: Process queue submissions
         run: python .survey/scripts/queue_worker.py --root .survey
 
       - name: Suppress duplicates created by discovery and refresh queue snapshot
@@ -237,8 +235,6 @@ jobs:
 
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
             python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
-            python .survey/scripts/append_research_throughput_status.py --repo-root . --status STATUS.md
-            python .survey/scripts/refine_status_observability.py --repo-root . --status STATUS.md
             git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json
 
             if git diff --cached --quiet; then
