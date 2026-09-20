@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 834,
+      "completed": 837,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 176,
+      "ready": 188,
       "completed": 657,
       "superseded": 46,
       "deferred": 3,
@@ -19,20 +19,34 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 176,
-    "actively_claimed": 0,
-    "claimable": 176
+    "ready_research_audit": 188,
+    "actively_claimed": 1,
+    "claimable": 187
   },
   "next_jobs": [
     {
-      "job_id": "job-research-92c83b7c2ec8a78f",
+      "job_id": "job-research-6e63ee697d71f91d",
       "type": "research",
       "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2607.08601",
-      "title": "It Takes a MAESTRO To Prune Bad Experts",
-      "source_url": "https://arxiv.org/abs/2607.08601",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
+      "priority": 99,
+      "canonical_id": "arXiv:2606.09886",
+      "title": "SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2606.09886",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.09886-shape-coalition-aware-expert-pruning.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-0f282c93dba72c85",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "arXiv:2607.06601",
+      "title": "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation",
+      "source_url": "https://arxiv.org/abs/2607.06601",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.06601-triroute-joint-adaptive-routing.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -123,20 +137,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-5cd2beb9d9cae3d8",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2605.08575",
-      "title": "Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution",
-      "source_url": "https://arxiv.org/abs/2605.08575",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08575-intra-expert-activation-sparsity.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T11:36:19+00:00"
+  "generated_at": "2026-09-20T11:38:30+00:00"
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T11:04:12+00:00",
-  "last_run_key": "manual-user-adaptive-max-2026-09-20-backrefs",
-  "last_round": "adaptive-max-r27-foundational-routing",
+  "updated_at": "2026-09-20T11:38:29+00:00",
+  "last_run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+  "last_round": "adaptive-max-r30-forward-adaptive-routing",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,57 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T07:00:00+09:00",
-      "round": "specialist-moe-nearmem-8",
-      "axis": "HPC/architecture隣接・MoE near-memory・FFN disaggregation",
-      "query_summary": "resource disaggregation/memory poolingからMoE FFN poolへ隣接探索し、ReRAM near-memoryでexpert residencyとplacementを扱う候補をGitHub正本で再照合した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.10790"
-      ],
-      "next_axis_hint": "推論フレームワーク実装（vLLM/SGLang/llama.cpp）に直結する新しいcache/offload runtime論文へ展開する",
-      "source_submission": "work-queue/submissions/20260916T0725JST-discovery-specialist-moe-nearmem-8b.json"
-    },
-    {
-      "run_key": "2026-09-16T07:00:00+09:00",
-      "round": "specialist-runtime-semantics-9",
-      "axis": "vLLM/SGLang/TensorRT-LLM・KV runtime semantics",
-      "query_summary": "主要推論runtimeに直結するcache/offload primitiveを探索し、KV residency claimのfail-closed loweringを実装横断で扱う候補をGitHub正本で再照合した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135"
-      ],
-      "next_axis_hint": "agentic servingのpause/resume・interception・KV lifecycle管理へ軸を移す",
-      "source_submission": "work-queue/submissions/20260916T0727JST-discovery-specialist-runtime-semantics-9.json"
-    },
-    {
-      "run_key": "2026-09-16T07:00:00+09:00",
-      "round": "specialist-agent-kv-10",
-      "axis": "agentic serving・pause/resume・KV retention/prefetch",
-      "query_summary": "tool/human pauseを伴うagentic servingへ軸を変更し、human-approval timescale retentionとagent-transition学習型KV管理をGitHub正本で再照合した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2511.02230"
-      ],
-      "next_axis_hint": "KV圧縮以外のattention sparsity/long-context servingとmemory hierarchyの交点へ展開する",
-      "source_submission": "work-queue/submissions/20260916T0730JST-discovery-specialist-agent-kv-10.json"
-    },
     {
       "run_key": "2026-09-16T07:00:00+09:00",
       "round": "specialist-sparse-hierarchy-11",
@@ -7728,6 +7677,69 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "final deduplication and remaining direct backreferences",
       "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r27.json"
+    },
+    {
+      "run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+      "round": "adaptive-max-r28-forward-pruning-core",
+      "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2206.00277 (Task-Specific Expert Pruning forward citations)",
+      "query_summary": "Task-Specific Expert Pruningの前方引用から直接的なpruning/merging 5件を追加。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2206.00277/citations",
+      "citation_direction": "forward",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "continue same forward-citation result for additional direct compression candidates",
+      "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r28.json"
+    },
+    {
+      "run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+      "round": "adaptive-max-r29-forward-pruning-merge",
+      "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2206.00277 (Task-Specific Expert Pruning forward citations)",
+      "query_summary": "Task-Specific Expert Pruningの前方引用からtask-agnostic pruningとadaptive expert merging 3件を追加。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2206.00277/citations",
+      "citation_direction": "forward",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "switch to Expert Choice forward citations for adaptive routing and expert budget",
+      "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r29.json"
+    },
+    {
+      "run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+      "round": "adaptive-max-r30-forward-adaptive-routing",
+      "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)",
+      "query_summary": "Expert Choice Routingの前方引用からjoint adaptive routing・dynamic top-k・adaptive expert merging・modular sparse pathの4件を追加。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2202.09368/citations",
+      "citation_direction": "forward",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "continue remaining forward-citation seeds with high-yield windows",
+      "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r30.json"
     }
   ],
   "axes": {
@@ -14771,6 +14783,32 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "final deduplication and remaining direct backreferences"
+    },
+    "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2206.00277 (Task-Specific Expert Pruning forward citations)": {
+      "last_run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+      "rounds": 2,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 8,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 8,
+      "accepted_count": 8,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "switch to Expert Choice forward citations for adaptive routing and expert budget"
+    },
+    "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)": {
+      "last_run_key": "manual-user-adaptive-max-2026-09-20-foundation-fwd",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "continue remaining forward-citation seeds with high-yield windows"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",

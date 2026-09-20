@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-6e63ee697d71f91d",
+  "type": "research",
+  "parent_job_id": "job-f47be01be52256f8",
+  "priority": 99,
+  "canonical_id": "arXiv:2606.09886",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs",
+  "source_url": "https://arxiv.org/abs/2606.09886",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.09886-shape-coalition-aware-expert-pruning.md",
+  "selection_reason": "top-kで共同動作するexpertの相互作用をShapley風に評価し、coalition-awareにglobal budget下でexpert pruningする。独立expert scoreの弱点を直接補う新しい圧縮軸。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T11:38:13+00:00"
+}
