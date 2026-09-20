@@ -14,7 +14,7 @@ Scheduled Chat / Work のワーカー（worker）が実行判断のために読�
 ## 現行経路
 
 - 研究・監査（Research / Audit）: 1件だけ担当確保（claim）→一次資料全文→5スロット構造化レコード→事前検査（preflight）→不変提出（immutable submission）またはChatGPT Libraryへ耐久保存。
-- 探索（Discovery）: 固定ソース方式の schema v3 だけを新規利用。**毎runの初手は `repository_references`** とし、全収録論文の構造化 `references` を横断した未探索候補の山を既定20件ずつ処理する。候補が1件でも残る間はこの経路を繰り返す。明確な対象外論文は無関係台帳、関連性や価値が微妙な論文は微妙台帳へ保存して再判定を避ける。そのrun最初の `repository_references` が0件かつprovider exhaustedになった場合だけ、通常検索・前方引用・後方引用へフォールバックでき、0件precheckの証明が必須。
+- 探索（Discovery）: 固定ソース方式の schema v3 だけを新規利用。引用グラフ優先で、通常runは `repository_references` による後方引用を先に1バッファ処理し、同じrunで前方引用も実行する。後方引用候補が残っていても前方引用を止めない。通常検索は同じrunで後方引用・前方引用の両方を試した後の補完にだけ使う。候補は既定20件ずつ事前検査し、無関係・微妙判定を台帳へ残して再判定を避ける。
 - 外部退避（fallback）: GitHub直接保存またはChatGPT Libraryのみ。
 - ワーカーが誤った経路を選んだ場合は、検証エラーの `next_action` / `recovery_steps` に従って現行経路へ戻す。旧経路で回避しない。
 
