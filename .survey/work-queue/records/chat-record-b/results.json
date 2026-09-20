@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-95845744b63d99732374d3b0","job_id":"job-research-f8d11555626eb92a","data":{"overview":"主結果は、YOCOが層ごとの大域鍵値キャッシュを一組へ集約しても言語モデル能力を維持しながら、長文脈サービングのメモリと事前充填時間を桁違いに削減できたことである。3Bモデルは1兆トークン学習時の8課題平均0.634でOpenLLaMA-v2-3Bの0.619を上回り、160M〜13BのスケーリングでもLlama型Transformerと競争力を保った。1M文脈へ延長したYOCO-3Bは単一needle検索でほぼ完全な正解率を示し、128Kの複数needleでもより大きい長文脈モデルに匹敵した。実用上の効果は長さと層数が増えるほど大きく、H100上の3B・1M文脈では推論メモリ12.4GBでTransformerの約1/9.4、512K事前充填は約180秒から6秒未満、512K処理能力は4.5から43.1 tokens/sへ向上した。したがって単なるキャッシュ容量削減ではなく、同じGPUでより長い文脈・大きいバッチを収容し、最初の応答までの待ち時間と総処理能力を同時に改善する構造的利得が確認された。","key_results":[{"metric":"1M文脈の3B推論メモリ","value":"12.4GB","baseline":"同等Transformerは9.4倍のメモリ","condition":"H100、YOCO-3B、1M文脈","interpretation":"層ごとの大域鍵値複製をなくすことで長文脈の主要メモリを削減する。"},{"metric":"512K事前充填遅延","value":"180秒から6秒未満","baseline":"GQA、Flash-Decoding、kernel fusion適用Transformer","condition":"H100、長文脈入力","interpretation":"後半交差デコーダの早期省略と前半の線形効率注意が大幅な初回応答短縮を生む。"},{"metric":"1M事前充填高速化","value":"71.8倍","baseline":"最適化Transformer","condition":"1M入力","interpretation":"Transformerの二乗増加に対してYOCOは線形に近い増加となる。"},{"metric":"512K処理能力","value":"43.1 tokens/s","baseline":"Transformer 4.5 tokens/s","condition":"事前充填と生成を含む","interpretation":"事前充填短縮と低メモリによる大きなバッチの両方が処理能力を上げる。"},{"metric":"65B鍵値収容能力","value":"1GBで128Kトークン","baseline":"GQA Transformerは1GBで1.6Kトークン","condition":"65Bモデル","interpretation":"共有大域キャッシュの利得は層数が増えるほど大きい。"},{"metric":"1T学習の下流平均","value":"0.634","baseline":"OpenLLaMA-v2-3B 0.619、StableLM-base-alpha-3B-v2 0.612","condition":"YOCO-3B、ゼロショット8課題","interpretation":"効率化構造が言語モデル品質を犠牲にしていない。"},{"metric":"128K multi-needle","value":"N=1/2/4/8で0.98/0.98/0.84/0.56","baseline":"LWM-1M-text 1.00/0.90/0.76/0.62","condition":"YOCO-3B-1M、比較相手LWMは7B","interpretation":"半分以下のモデル規模でも競争力ある長距離検索を示す。"}],"negative_results":"YOCOは既存Transformerの後付け最適化ではなく新規学習が必要である。1M文脈への到達には64K、256K、1Mの段階的継続学習と専用チャンク並列化を使う。multi-needleの8本条件では0.56でLWM-1M-textの0.62を下回る。スライディング窓版よりゲート付き保持版がスケーリングで良く、自己デコーダ方式の選択が品質へ影響する。","interpretation":"鍵値メモリの主因は各層が同じ長文脈に対して別の鍵値を持つ層方向の重複である。YOCOは大域参照用キャッシュをモデル内の一箇所へ集約し、各後半層は問い合わせだけ変えて共有するため、文脈長と層数の積を避ける。同時に共有キャッシュ生成までで事前充填を止められる計算依存が遅延削減を生む。","quality_impact":"構造変更後も同規模Transformerに匹敵する言語モデル品質を維持し、ゲート付き保持版は一部スケーリング条件でTransformerを上回る。"},"reservation":{"claim_id":"claim-95845744b63d99732374d3b0","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5589a405f0ee58411def153e",
+  "job_id": "job-research-5cec4a19e423bce9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5589a405f0ee58411def153e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
