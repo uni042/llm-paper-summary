@@ -73,6 +73,72 @@ def _load_ledger_tokens(path: Path, *, label: str) -> set[str]:
     return tokens
 
 
+def _reference_progress_counts(
+    papers: list[Any],
+    *,
+    represented: set[str],
+    unrelated: set[str],
+    borderline: set[str],
+) -> dict[str, int]:
+    """Count the full structured-reference mountain with mutually exclusive states."""
+    buckets: dict[str, set[str]] = {}
+    alias_to_key: dict[str, str] = {}
+
+    def merge_keys(keys: set[str]) -> str:
+        target = sorted(keys)[0]
+        for other in sorted(keys - {target}):
+            tokens = buckets.pop(other)
+            buckets[target].update(tokens)
+            for token in tokens:
+                alias_to_key[token] = target
+        return target
+
+    for source in papers:
+        refs = source.meta.get("references")
+        if not isinstance(refs, list):
+            continue
+        for ref in refs:
+            identities = citation_graph.reference_identifiers(ref)
+            if not identities:
+                continue
+            matched_keys = {alias_to_key[i] for i in identities if i in alias_to_key}
+            if not matched_keys:
+                key = identities[0]
+                buckets[key] = set(identities)
+            elif len(matched_keys) == 1:
+                key = next(iter(matched_keys))
+                buckets[key].update(identities)
+            else:
+                key = merge_keys(matched_keys)
+                buckets[key].update(identities)
+            for identity in identities:
+                alias_to_key[identity] = key
+
+    represented_count = 0
+    unrelated_count = 0
+    borderline_count = 0
+    remaining_count = 0
+    for tokens in buckets.values():
+        if tokens & represented:
+            represented_count += 1
+        elif tokens & unrelated:
+            unrelated_count += 1
+        elif tokens & borderline:
+            borderline_count += 1
+        else:
+            remaining_count += 1
+
+    total_count = len(buckets)
+    return {
+        "reference_total_count": total_count,
+        "reference_processed_count": total_count - remaining_count,
+        "reference_remaining_count": remaining_count,
+        "reference_represented_count": represented_count,
+        "reference_unrelated_count": unrelated_count,
+        "reference_borderline_count": borderline_count,
+    }
+
+
 def build_reference_pool(
     repo_root: Path,
     *,
@@ -101,6 +167,12 @@ def build_reference_pool(
         set()
         if include_borderline
         else _load_ledger_tokens(borderline_path, label="borderline-paper")
+    )
+    progress = _reference_progress_counts(
+        papers,
+        represented=represented,
+        unrelated=unrelated,
+        borderline=borderline,
     )
 
     buckets: dict[str, dict[str, Any]] = {}
@@ -193,6 +265,11 @@ def build_reference_pool(
             str(row.get("canonical_id") or "").casefold(),
         )
     )
+    if progress["reference_remaining_count"] != len(candidates):
+        raise RuntimeError(
+            "structured-reference progress census disagrees with candidate pool: "
+            f"{progress['reference_remaining_count']} != {len(candidates)}"
+        )
     return {
         "schema_version": 1,
         "source_url": SOURCE_URL,
@@ -201,6 +278,7 @@ def build_reference_pool(
         "unrelated_identity_count": len(unrelated),
         "borderline_identity_count": len(borderline),
         "borderline_excluded": not include_borderline,
+        **progress,
         "candidate_count": len(candidates),
         "candidates": candidates,
     }
@@ -252,9 +330,14 @@ def main() -> int:
     }
     print(json.dumps(out, ensure_ascii=False, indent=2))
     print(
-        f"[WORKER-GUIDE][完了] 構造化referencesから候補 {pool['candidate_count']} 件を構築し、"
-        f"無関係台帳 {pool['unrelated_identity_count']} 識別子、"
-        f"微妙台帳 {pool['borderline_identity_count']} 識別子を除外しました。",
+        f"[WORKER-GUIDE][探索状況] 構造化references 総候補 {pool['reference_total_count']}件 / "
+        f"処理済み {pool['reference_processed_count']}件 / 未処理 {pool['reference_remaining_count']}件 / "
+        f"収録済み {pool['reference_represented_count']}件 / 無関係 {pool['reference_unrelated_count']}件 / "
+        f"微妙 {pool['reference_borderline_count']}件 / offset {args.offset}",
+        file=sys.stderr,
+    )
+    print(
+        f"[WORKER-GUIDE][完了] 構造化referencesから未処理候補 {pool['candidate_count']} 件を構築しました。",
         file=sys.stderr,
     )
     print(
