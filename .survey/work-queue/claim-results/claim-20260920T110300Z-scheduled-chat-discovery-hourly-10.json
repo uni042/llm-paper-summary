@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T110300Z-scheduled-chat-discovery-hourly-10",
+  "worker_id": "scheduled-chat-discovery-hourly",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-08b5458cb63307f5",
+      "claim_id": "claim-3b676d8b0647321f3ab94c21",
+      "worker_id": "scheduled-chat-discovery-hourly",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-3b676d8b0647321f3ab94c21",
+      "claimed_at": "2026-09-20T11:02:34+00:00",
+      "expires_at": "2026-09-20T12:32:34+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-08b5458cb63307f5"
+      ],
+      "job": {
+        "job_id": "job-research-08b5458cb63307f5",
+        "type": "research",
+        "parent_job_id": "job-bb24d3e1ba400df7",
+        "priority": 99,
+        "canonical_id": "arXiv:2608.10392",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
+        "source_url": "https://arxiv.org/abs/2608.10392",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.10392-share-first-route-what-remains.md",
+        "selection_reason": "shared computationを先に抽出し、残余に必要なexpert capacityをtoken-adaptiveに割り当てる統合設計。adaptive expert computationの最新直系候補。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T10:41:40+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T11:02:34+00:00",
+  "checkpoint_released": 0
+}
