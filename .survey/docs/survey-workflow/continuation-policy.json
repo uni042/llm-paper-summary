@@ -1,14 +1,20 @@
 {
   "schema_version": 10,
   "name": "scheduled-chat-continuation-gate",
-  "principle": "The :30 research-heavy and :00 discovery-heavy paper workers share one execution workflow. Their only paper-work difference is the Research/Audit versus Discovery work mix. After a work type is selected, both workers use the same research/audit or discovery procedure, persistence rules, continuation gate, and finalization gate.",
+  "principle": "The hourly :00 and :30 paper workers are the same task. At run start, read the latest durable candidate_inventory: candidate_inventory >= 50 selects Discovery; candidate_inventory < 50 selects Research/Audit. After that selection both schedules use the same mode procedure, persistence rules, continuation gate, and finalization gate. Existing mode quotas remain floors, not stop ceilings.",
   "always_on_policy": {
     "canonical_doc": ".survey/docs/survey-workflow/worker-router.md",
     "paper_stock_zero_action": "DISCOVER_NOW",
     "empty_discovery_round_action": "CHANGE_AXIS_AND_DISCOVER_AGAIN",
     "after_research_or_checkpoint": "REFRESH_STATE_AND_CONTINUE",
-    "rule": "Both hourly paper workers are work-conserving and return to the same common router after each durable work unit. A temporarily unavailable side falls back to the other side; one empty side or one empty discovery round is not a run stop.",
-    "work_mix_rule": "Use weighted round-robin only to choose the next work type. research-heavy targets Research/Audit:Discovery=3:1; discovery-heavy targets Research/Audit:Discovery=1:3. Once selected, execution is identical across tasks."
+    "rule": "Both hourly paper workers use the same threshold router. Schedule time never selects a different paper workflow. candidate_inventory >= 50 means Discovery; candidate_inventory < 50 means Research/Audit.",
+    "threshold_router": {
+      "source": "latest durable candidate_inventory",
+      "discovery_when": "candidate_inventory >= 50",
+      "research_when": "candidate_inventory < 50",
+      "boundary_50": "discovery",
+      "schedule_specific_modes": false
+    }
   },
   "scheduled_handoff_policy": {
     "timezone": "Asia/Tokyo",
@@ -29,7 +35,7 @@
     "github_read_unavailable_for_repo_state",
     "completed_result_or_required_spillover_seed_cannot_be_durably_preserved_in_github_or_library",
     "platform_time_context_or_execution_limit_reached",
-    "no_independent_research_audit_or_discovery_work_remains_after_common_router_refresh"
+    "selected_mode_exhausted_after_its_minimum_quota_and_no_independent_work_remains"
   ],
   "non_stop_conditions": [
     "paper_stock_zero",
@@ -39,15 +45,15 @@
     "one_discovery_round_returned_zero_novel_candidates",
     "one_discovery_round_returned_only_duplicates",
     "one_search_axis_is_saturated",
-    "one_work_side_temporarily_unavailable",
-    "candidate_inventory_high_or_low_by_itself",
     "one_job_completed",
     "one_job_blocked",
     "one_payload_checkpointed",
     "record_bank_exhausted_or_dirty",
     "library_pending_backlog_growing",
     "github_fallback_intake_backlog_growing",
-    "nominal_schedule_boundary_is_near_but_actual_start_run_deadline_is_not"
+    "nominal_schedule_boundary_is_near_but_actual_start_run_deadline_is_not",
+    "fewer_than_three_durable_new_papers_in_research_mode_without_hard_stop",
+    "fewer_than_four_materially_distinct_discovery_rounds_in_discovery_mode_without_hard_stop"
   ],
   "job_local_failures": [
     "full_text_unavailable_for_one_paper",
@@ -112,7 +118,7 @@
     "id_conflict": "quarantine only the conflicting envelope; do not overwrite the GitHub ledger and do not stop unrelated work"
   },
   "end_of_run_gate": {
-    "rule": "Before emitting a final response or ending voluntarily, apply the run-local handoff policy and continuation_gate.py, then refresh actionable Research/Audit work, pending claim/submission state, fallback work, candidate inventory, and discovery state. The :00 and :30 paper workers use the same continuation/finalization semantics; their compatibility worker_kind label does not create separate stop rules. If one work side is unavailable, return to the common router and try the other side. A single empty discovery round, duplicate-only round, candidate inventory level, or one completed job is not a stop condition. STOP_RUN for no-work is allowed only when the common router has refreshed both sides and no independent Research/Audit or Discovery work can reasonably proceed. Platform/context limits, the run-local handoff guard, unreadable canonical state, or inability to durably preserve required state remain hard stops.",
+    "rule": "Before emitting a final response, apply the run-local handoff policy and continuation_gate.py. The :00 and :30 schedules are identical paper workers. Determine mode only from the latest durable candidate_inventory: >=50 is Discovery, <50 is Research/Audit. In Research/Audit mode, fewer than 3 durably added new papers cannot establish voluntary completion unless a hard stop applies. In Discovery mode, fewer than 4 materially distinct durable rounds cannot establish discovery exhaustion unless a hard stop applies. Quotas are floors, not ceilings. A single empty or duplicate-only Discovery round, one completed paper, or schedule identity is not a stop reason.",
     "default_decision": "CONTINUE"
   },
   "canonical_worker_doc": ".survey/docs/survey-workflow/worker-router.md",
@@ -134,7 +140,12 @@
       "library_replay_bundle_workflow"
     ],
     "shared_research_discovery_procedures": true,
-    "only_task_difference": "work_mix_profile"
+    "only_task_difference": "none; both schedules use candidate_inventory threshold routing",
+    "candidate_inventory_threshold": 50,
+    "discovery_when": "candidate_inventory >= 50",
+    "research_when": "candidate_inventory < 50",
+    "research_minimum_papers": 3,
+    "discovery_minimum_rounds": 4
   },
   "discovery_route_policy": {
     "mode": "citation_first",
@@ -148,31 +159,30 @@
     "normal_search_role": "fallback_after_same_run_backward_and_forward_attempts",
     "rule": "Normal Discovery prioritizes the citation graph in both directions. Process at least one backward-reference window and one forward-citation window for the same run_key before normal/new keyword search. A non-empty structured-reference pool does not block forward-citation refresh. After both directions are attempted, continue with the citation direction/seed that has the best recent yield; use normal search only to fill gaps."
   },
-  "work_mix_policy": {
-    "selection_model": "weighted_round_robin",
-    "profiles": {
-      "research_heavy": {
-        "research_audit_weight": 3,
-        "discovery_weight": 1,
-        "scheduled_task": ":30"
-      },
-      "discovery_heavy": {
-        "research_audit_weight": 1,
-        "discovery_weight": 3,
-        "scheduled_task": ":00"
-      }
-    },
-    "work_units": {
-      "research_audit": "one durable Research or Audit job",
-      "discovery": "one durable Discovery round"
-    },
-    "selection_rule": "At run start and after every completed work unit, refresh canonical queue/claim/discovery state and choose the side that is furthest below its profile target share. If the selected side is not runnable, execute the other side. After that unit, return to the common router.",
-    "shared_execution_rule": "After selecting Research/Audit, always use worker-router section 3. After selecting Discovery, always use worker-router section 4. The originating scheduled task must not introduce a different procedure.",
-    "retired_task_specific_modes": [
-      "overflow_research_mode",
-      "discovery_minimum_rounds",
-      "paper_addition_quota"
+  "common_paper_worker_policy": {
+    "schedules": [
+      ":00",
+      ":30"
     ],
-    "task_specific_execution_variants_forbidden": true
+    "same_task": true,
+    "routing_key": "candidate_inventory",
+    "threshold": 50,
+    "at_or_above_threshold": "discovery",
+    "below_threshold": "research_audit",
+    "schedule_time_must_not_affect_mode": true
+  },
+  "research_quota_policy": {
+    "papers_added_minimum": 3,
+    "counting_rule": "Count only new papers durably reflected on latest main after full-text reading, five-slot record completion, preflight, and immutable submission. Claims, checkpoints, status-only outcomes, audits, discovery candidates, and pending submissions do not count.",
+    "minimum_is_not_stop_ceiling": true,
+    "hard_stops_override": true
+  },
+  "discovery_progression": {
+    "minimum_distinct_rounds_before_exhaustion_stop": 4,
+    "minimum_is_not_stop_quota": true,
+    "finalization_requires_gate": true,
+    "continue_action": "DISCOVER_AGAIN",
+    "finalize_action": "FINALIZE",
+    "rule": "When the threshold router selects Discovery, one durable discovery submission is an intermediate checkpoint. Unless a hard stop or the run-local handoff guard is active, complete at least four materially distinct Discovery rounds before discovery-space exhaustion may be used as a voluntary stop reason. Four rounds is a floor, not a ceiling."
   }
 }
