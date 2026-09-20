@@ -49,6 +49,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         queue = (ROOT / ".survey/docs/survey-workflow/queue-v10.md").read_text(encoding="utf-8")
 
         self.assertIn("唯一の人間向け正本", readme)
+        self.assertNotIn("continuation-policy.json", readme)
+        self.assertIn("手順書ではなく入力データ", readme)
         self.assertIn("candidate_inventory > 50", router)
         self.assertIn("overflow research mode", router)
         self.assertIn("schema_version: 3", router)
