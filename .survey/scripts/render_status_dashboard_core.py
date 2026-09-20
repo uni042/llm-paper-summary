@@ -13,6 +13,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 import build_status_dashboard as evidence
+import reference_pool
 
 
 KINDS = ("research", "audit", "discovery")
@@ -40,6 +41,60 @@ def _candidate_count(submissions: list[dict[str, Any]]) -> int:
         elif isinstance(stats, dict):
             count += int(stats.get("candidate_count") or 0)
     return count
+
+
+
+
+def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
+    """Recompute structured-reference progress from durable papers and relevance ledgers."""
+    try:
+        pool = reference_pool.build_reference_pool(repo_root)
+    except Exception as exc:
+        return {
+            "available": False,
+            "error": f"{type(exc).__name__}: {exc}",
+        }
+    return {
+        "available": True,
+        "total": int(pool["reference_total_count"]),
+        "processed": int(pool["reference_processed_count"]),
+        "remaining": int(pool["reference_remaining_count"]),
+        "represented": int(pool["reference_represented_count"]),
+        "unrelated": int(pool["reference_unrelated_count"]),
+        "borderline": int(pool["reference_borderline_count"]),
+    }
+
+
+def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]:
+    lines = ["## 構造化references探索状況", ""]
+    if progress.get("available") is not True:
+        lines.extend([
+            "- 現在の構造化references候補プールを再計算できませんでした。",
+            f"- 診断: {progress.get('error') or 'unknown error'}",
+            "",
+        ])
+        return lines
+
+    total = int(progress["total"])
+    processed = int(progress["processed"])
+    remaining = int(progress["remaining"])
+    ratio = (processed / total * 100.0) if total else 100.0
+    lines.extend([
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| 構造化references総候補 | **{total}** |",
+        f"| 処理済み | **{processed}** |",
+        f"| 未処理 | **{remaining}** |",
+        f"| 収録済みとして除外 | **{progress['represented']}** |",
+        f"| 無関係として除外 | **{progress['unrelated']}** |",
+        f"| 微妙として除外 | **{progress['borderline']}** |",
+        "",
+        f"- 消化率: **{ratio:.1f}%**",
+        "- 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。",
+        "- 件数は現在のpaper実体と無関係/微妙台帳から毎回再計算します。",
+        "",
+    ])
+    return lines
 
 
 def _durable_candidate_backlog(jobs: dict[str, dict[str, Any]]) -> dict[str, int]:
@@ -583,6 +638,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     verified_discovery = evidence._verified_discovery_rows(repo_root, jobs, submissions, results)
     active = evidence._active_claims(repo_root, jobs, now)
     candidate_backlog = _durable_candidate_backlog(jobs)
+    reference_progress = _structured_reference_progress(repo_root)
     direct_metrics = _direct_evidence_metrics(
         repo_root,
         jobs=jobs,
