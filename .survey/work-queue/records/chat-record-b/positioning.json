@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6500850523776f2b702f4a6d",
-  "job_id": "job-research-954a443cf32500d8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6500850523776f2b702f4a6d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6500850523776f2b702f4a6d","job_id":"job-research-954a443cf32500d8","data":{"limitations":"効果はdraft-target一致度、draft latency、Kに強く依存し、Kを大きくすれば単調に速くなるわけではない。評価はbatch size 1のlatency-critical setting、Chinchilla 70Bと専用4B draft、16 TPU v4、XSum/HumanEvalに限定される。高batch throughput、GPU実装、production multi-tenant servingは未評価。専用draftを訓練する追加costがあり、公開codeは本文に示されない。","differences":"block parallel decodingやaggressive decodingはgreedy限定、分布bias、別modality等の制約があった。Leviathanらのspeculative decodingとは独立・同時期でcore ideaは同じだが、本論文は大規模分散serving、同一hardware向けdraft aspect ratio、追加1 token生成などの実装最適化を強調する。量子化やmulti-query attentionと異なりtarget weight/architectureを変更せず、既存sampling分布を保存する。","implementation_status":"DeepMind内部のChinchilla 70Bと4B draftを16 TPU v4上で実装・評価。アルゴリズムは論文に擬似codeと証明を掲載するが、公式公開repositoryは確認できない。","research_positioning":"現在の投機的デコード系の基礎。後続研究のdraft model設計、multi-token prediction、tree speculation、serving scheduler統合などが最適化する中心trade-off――draft cost、acceptance rate、lookahead K、target parallel scoring――を明確に定式化した。特に『target distributionを変えずに複数token/target callを得る』ことが、近似推論ではなくlossless systems accelerationとして重要。"},"reservation":{"claim_id":"claim-6500850523776f2b702f4a6d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
