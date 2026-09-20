@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d9bfe22acbd9e709c4fcf1f8",
-  "job_id": "job-research-b8f01545319d9604",
-  "data": {
-    "limitations": "主実験はClaude CodeによるReAct型エージェント、Qwen3.6-27BとGemma4-31B、単一2×H100 NVLサーバに限定される。KVキャッシュがGPU容量内に残るよう同時実行を制御しているため、多数エージェント同時実行時の追い出し・オフロード・再計算を直接測っていない。DABStepとSWE-bench Proは100件抽出で全件評価ではない。ツール構成や失敗率はエージェント実装、環境、モデルに依存し、他の計画型・検索型エージェントへそのまま一般化できない。",
-    "differences": "通常のLLMサービングベンチマークが独立要求の入力長・出力長・スループットを測るのに対し、本研究は同一タスク内で成長する文脈と繰り返しモデル呼出を軌跡として測る。長文プロンプト研究とも異なり、入力の大半が前ターンから再利用されることを明示してキャッシュ命中部分と新規追加部分を分離する。既存のエージェントシステム研究が能力・成功率やCPU実行を中心にするのに対し、vLLMのプリフィル/デコードと外部ツール時間を端から端で相関させる。",
-    "implementation_status": "Harbor、Claude Code、vLLM v0.20.0、OpenTelemetry、Jaeger、独自ゲートウェイを組み合わせた実動計測基盤で、5ベンチマークを実際に走らせた特性研究。論文中に独立した公開コードURLは示されていない。",
-    "research_positioning": "エージェント向け推論基盤の設計前提を定量化するベンチマーク・特性解析に位置する。特に高い文脈再利用率が得られる場合、KVキャッシュを長く保持することがプリフィル削減の鍵となり、負荷はデコード支配へ移る。この結果はKV保持スケジューリング、CPU/SSDオフロード、階層メモリ、キャッシュ追い出し方針を研究する際のワークロードモデルとして重要である。同時にツール失敗や返却観測が将来のKV状態を増やすため、エージェント実行制御とモデルサービングを共同最適化する必要性を示す。"
-  },
+  "attempt_id": "attempt-f8b09fceaf979c451783d9d6",
+  "job_id": "job-research-8c68e144047ac9bb",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d9bfe22acbd9e709c4fcf1f8",
+    "claim_id": "claim-f8b09fceaf979c451783d9d6",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
