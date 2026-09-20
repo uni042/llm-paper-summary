@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 07:03:01 JST**
+> 自動生成: **2026-09-21 07:03:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **303** |
 | 未claim Research job | **303** |
 | 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間14分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間15分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **42** | **3** | **0** | **2** | **0** | **0** | **6** |
-| 合計 | **42** | **9** | **4** | **2** | **0** | **0** | **6** |
+| Discovery | **42** | **4** | **0** | **3** | **0** | **0** | **11** |
+| 合計 | **42** | **10** | **4** | **3** | **0** | **0** | **11** |
 
-- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **4件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -152,8 +152,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 06:58 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **6件**
-- 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse
+- 耐久探索round: **4件** / immutable submission: **4件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **4件** / 候補: **11件**
+- 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse / forward citations of LMCache enterprise-scale KV cache layer
 - round `hourly00-backward-01` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260921T0700JST-hourly00-discovery-backward-01.json`
   - 探索軸: repository-wide structured backward references for LLM inference systems
@@ -165,6 +165,10 @@
 - round `hourly00-forward-kvlink-03` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0703JST-hourly00-discovery-forward-kvlink-03.json`
   - 探索軸: forward citations of KVLink efficient KV cache reuse
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `hourly00-forward-lmcache-04` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260921T0703JST-hourly00-discovery-forward-lmcache-04.json`
+  - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -220,10 +224,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **924** |
+| 成功result未照合のimmutable submission | **925** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **210** |
+| └ Discovery | **211** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
