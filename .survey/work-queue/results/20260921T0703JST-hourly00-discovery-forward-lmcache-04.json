@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "submission": "work-queue/submissions/20260921T0703JST-hourly00-discovery-forward-lmcache-04.json",
+  "ok": false,
+  "operation": "submit_discovery_round",
+  "failure_class": "discovery_precheck",
+  "error_code": "citation_first_required",
+  "error": "Do not repeat the same citation direction before completing the citation-first pair. Missing same-run direction(s): backward-reference.",
+  "next_action": "Use schema-v3 fixed-source precheck on the missing citation direction. Backward routes include repository_references/openalex_references/Semantic Scholar references; forward routes include Semantic Scholar citations or OpenAlex works filtered with cites:W.... Normal/new keyword search is allowed only after both directions have been attempted in this run.",
+  "recovery_steps": [
+    "Do not edit or overwrite the failed Discovery submission.",
+    "For backward citation, prefer provider=repository_references with source_url=repository://structured-references; use a direct seed references endpoint when structured metadata is incomplete.",
+    "For forward citation, choose a collected seed paper and use a fixed citations source, preferably newest-first.",
+    "Run each source through schema-v3 process_discovery_precheck.py with target_unseen=20 and submit 0-5 strong candidates.",
+    "After both citation directions are durably recorded for the same run_key, normal/new search may be used as a gap-filling fallback."
+  ],
+  "submitted_job_id": null
+}
