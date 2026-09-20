@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-384c21db2f0f88434c7e5ef8","job_id":"job-research-8b52cc53189781e3","data":{"hardware":"効率評価は単一NVIDIA A100 80GB。モデルはLlama/Llama-2 7B・13B、Falcon-7B、Mistral-7Bを中心に評価し、長文脈検索ではLlama-3-8B-Instruct等も確認する。","software":"Hugging Face Transformersを基盤にKIVIを実装。CUDAで2ビットKVの逆量子化とタイル行列積を融合し、Tritonでグループ量子化カーネルを実装する。","methodology":"通常文脈はLM-EvalのCoQA、TruthfulQA、GSM8K、長文脈はLongBenchのQasper、QMSum、MultiNews、TREC、TriviaQA、SAMSum、LCC、RepoBench-Pとneedle-in-a-haystackで評価する。標準設定はグループサイズ32、残差長128で、2ビットKIVIを16ビットKVと比較する。FalconはMQAのため4ビットも重点比較する。効率はShareGPTに基づく平均入力161・出力338トークンの合成ワークロードで、Llama-2-7Bのバッチをメモリ不足まで増やし、ピークメモリとスループットを測定する。残差長32/128の比較とグループサイズ32/64/128のアブレーションも行う。","scope":"品質・システムの双方を実測するが、効率値は単一A100とLlama-2-7B中心で、他GPUや分散サービングへの絶対性能一般化には追加検証が必要。長文脈上限はMistralで8192、その他で4096が中心である。"},"reservation":{"claim_id":"claim-384c21db2f0f88434c7e5ef8","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6d86d84ba0b861b36b84973e",
+  "job_id": "job-research-8b52cc53189781e3",
+  "data": {
+    "hardware": "効率評価は単一NVIDIA A100 80GB。モデルはLlama/Llama-2 7B・13B、Falcon-7B、Mistral-7Bを中心に評価し、長文脈検索ではLlama-3-8B-Instruct等も確認する。",
+    "software": "Hugging Face Transformersを基盤にKIVIを実装。CUDAで2ビットKVの逆量子化とタイル行列積を融合し、Tritonでグループ量子化カーネルを実装する。",
+    "methodology": "通常文脈はLM-EvalのCoQA、TruthfulQA、GSM8K、長文脈はLongBenchのQasper、QMSum、MultiNews、TREC、TriviaQA、SAMSum、LCC、RepoBench-Pとneedle-in-a-haystackで評価する。標準設定はグループサイズ32、残差長128で、2ビットKIVIを16ビットKVと比較する。FalconはMQAのため4ビットも重点比較する。効率はShareGPTに基づく平均入力161・出力338トークンの合成ワークロードで、Llama-2-7Bのバッチをメモリ不足まで増やし、ピークメモリとスループットを測定する。残差長32/128の比較とグループサイズ32/64/128のアブレーションも行う。",
+    "scope": "品質・システムの双方を実測するが、効率値は単一A100とLlama-2-7B中心で、他GPUや分散サービングへの絶対性能一般化には追加検証が必要。長文脈上限はMistralで8192、その他で4096が中心である。"
+  },
+  "reservation": {
+    "claim_id": "claim-6d86d84ba0b861b36b84973e",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
