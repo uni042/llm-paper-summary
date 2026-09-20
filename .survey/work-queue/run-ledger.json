@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:44:20.998489+00:00",
+  "updated_at": "2026-09-20T10:55:25.116059+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:44:20.998489+00:00",
+      "last_recorded_at": "2026-09-20T10:55:25.116059+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 377,
         "audit_completed": 0,
-        "discovery_completed": 203,
+        "discovery_completed": 205,
         "blocked": 52,
-        "new_jobs": 337,
+        "new_jobs": 349,
         "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35485235549:1",
-          "recorded_at": "2026-09-20T02:55:30.651791+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35485235549",
-            "run_attempt": "1",
-            "source_sha": "a2049d319947afc930602d29edc6a6906dba4556"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35485593401:1",
           "recorded_at": "2026-09-20T03:04:00.545666+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35505625615",
             "run_attempt": "1",
             "source_sha": "e8404a0a3ad5cc429cd296d6249d737d445f16b7"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35506321838:1",
+          "recorded_at": "2026-09-20T10:55:25.116059+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35506321838",
+            "run_attempt": "1",
+            "source_sha": "5409a463880a3ae1879159b06312e0688fc66fb9"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -24652,6 +24652,22 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-6baaa199325a8201",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-aea330cec87e5b3c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -27013,6 +27029,90 @@
           "type": "research",
           "canonical_id": "arXiv:2602.11192",
           "title": "MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models"
+        },
+        {
+          "job_id": "job-6baaa199325a8201",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-aea330cec87e5b3c",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-1b89c86f687054e4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.16105",
+          "title": "DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning"
+        },
+        {
+          "job_id": "job-research-2dff89406766fc1d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.13999",
+          "title": "REAP the Experts: Why Pruning Prevails for One-Shot MoE compression"
+        },
+        {
+          "job_id": "job-research-3218c42781ec549d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.19781",
+          "title": "Faster, Smaller, and Smarter: Task-Aware Expert Merging for Online MoE Inference"
+        },
+        {
+          "job_id": "job-research-5cd2beb9d9cae3d8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.08575",
+          "title": "Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution"
+        },
+        {
+          "job_id": "job-research-5ce9880c62119377",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.19366",
+          "title": "MoE-Prism: Disentangling Monolithic Experts for Elastic MoE Services via Model-System Co-Designs"
+        },
+        {
+          "job_id": "job-research-67ddaa9ed58fd85b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.02237",
+          "title": "Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining"
+        },
+        {
+          "job_id": "job-research-8e7748dc329cd36d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.04805",
+          "title": "PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Sparse Expert Merging and Bit-packed inference"
+        },
+        {
+          "job_id": "job-research-97e05693104abe69",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.10377",
+          "title": "Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs"
+        },
+        {
+          "job_id": "job-research-98b9431cd6bf114a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.14436",
+          "title": "MergeMoE: Efficient Compression of MoE Models via Expert Output Merging"
+        },
+        {
+          "job_id": "job-research-a61328ecbdf05053",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.22299",
+          "title": "HEAPr: Hessian-based Efficient Atomic Expert Pruning in Output Space"
         }
       ],
       "new_paper_ids": [
