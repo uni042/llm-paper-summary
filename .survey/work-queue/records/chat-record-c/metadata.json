@@ -2,88 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-bd7edc3a59e4ce43ac25f884",
-  "job_id": "job-research-67ddaa9ed58fd85b",
-  "data": {
-    "canonical_id": "arXiv:2511.02237",
-    "arxiv_id": "2511.02237",
-    "doi": "10.48550/arXiv.2511.02237",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining",
-    "summary": "機会的専門家活性化（Opportunistic Expert Activation; OEA）は、MoEデコードのメモリ律速領域で遅延がバッチ内の固有活性専門家数にほぼ比例することを利用し、再学習なしでトークン・専門家対応をバッチ単位に再配置する。各トークンに上位k0専門家を品質基準として保証し、その和集合ですでに他トークンのためロードされる専門家だけを追加で相乗りさせることで、固有専門家数を増やさず品質を回復する。Qwen3-30B-A3Bではバッチ16でMoE層デコード遅延39%、Qwen3-235B-A22Bでは15%削減し、統計的に有意な精度低下なしと報告する。",
-    "list_summary": "各トークンの必須上位専門家を確保した後、同じバッチですでにロードされる専門家へ追加相乗りする再学習不要ルーティングで、MoEデコード遅延を最大39%削減する。",
-    "authors": [
-      "Costin-Andrei Oncescu",
-      "Qingyang Wu",
-      "Wai Tong Chung",
-      "Robert Wu",
-      "Bryan Gopal",
-      "Junxiong Wang",
-      "Tri Dao",
-      "Ben Athiwaratkun"
-    ],
-    "authors_affiliations": "Harvard University; Together AI; Princeton University",
-    "published": "2025-11-04",
-    "publication": "arXiv preprint arXiv:2511.02237v1",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "2025年11月4日投稿のarXiv初版。",
-    "lineage": "adaptive-expert-computation-compression",
-    "topics": [
-      "混合専門家モデル",
-      "バッチ対応ルーティング",
-      "デコード高速化",
-      "メモリ律速",
-      "再学習不要"
-    ],
-    "importance": "専門家ごとの計算量ではなくバッチ全体で一度でもロードされる固有専門家数を最適化対象にし、バッチ構成を利用して品質を無料に近い形で回復する。",
-    "hardware_evaluation": "H100 80GB単体および8×H100 HGX/NVSwitchで実機評価。",
-    "hardware_details": "Qwen3-30Bは主に単一H100 80GB、Qwen3-235Bは8 H100をテンソル並列で実行。SGLangへルータを統合。",
-    "quality_effect": "AIME24、GPQA、LiveCodeBench、MATH500で複数回評価し、選択設定では標準誤差を考慮して基準モデルから統計的に有意な低下なし。",
-    "bottlenecks": [
-      "デコード時の低専門家負荷",
-      "HBMからSRAMへの専門家重み転送",
-      "バッチ拡大で増える固有活性専門家数",
-      "単純top-k削減による品質低下"
-    ],
-    "evidence_locations": [
-      "第2節",
-      "第3節",
-      "第4節",
-      "付録A/B"
-    ],
-    "source": "https://arxiv.org/abs/2511.02237",
-    "sources": [
-      "https://arxiv.org/abs/2511.02237",
-      "https://arxiv.org/html/2511.02237",
-      "https://arxiv.org/pdf/2511.02237"
-    ],
-    "code": null,
-    "implementation": "SGLangへ推論時ルータを統合して実機測定。確認した本文では公開コードURLは明記されていない。",
-    "last_checked": "2026-09-20",
-    "references": [
-      {
-        "canonical_id": "arXiv:2505.09388",
-        "title": "Qwen3 Technical Report"
-      },
-      {
-        "canonical_id": "arXiv:2412.19437",
-        "title": "DeepSeek-V3 Technical Report"
-      },
-      {
-        "canonical_id": "arXiv:2405.14297",
-        "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "arXiv HTML参考文献節",
-    "references_total": 3
-  },
+  "attempt_id": "attempt-6b53b1926ec03fe03eb46c7c",
+  "job_id": "job-research-95a4661f225665ff",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-bd7edc3a59e4ce43ac25f884",
+    "claim_id": "claim-6b53b1926ec03fe03eb46c7c",
     "worker_id": "scheduled-chat-discovery-hourly",
     "worker_kind": "scheduled_chat"
   }
