@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-44b24147d79154a807dce87e","job_id":"job-research-989ee0a4e32cc6c3","data":{"positioning":"SAGAはvLLMやSGLangの要求単位連続バッチを置き換える上位の分散スケジューリング層で、エージェントのworkflow identityとKV状態をタスク完了まで追跡する。PagedAttention/RadixAttentionがメモリ配置、Automatic Prefix Cachingが共有プレフィックス、Llumnixが負荷偏り時のKV移行を扱うのに対し、SAGAは『次に同じセッションが戻る確率と時期』をAEGから予測し、保持・配送・移行・公平性を一つのワークフロー単位で結ぶ。","differences":"既存のvLLM affinity routerは類似プレフィックスを持つ要求を同じworkerへ送るがセッションIDとツール境界を追跡せず、長い待ちの間はLRUでセッション固有KVを失う。KVFlowはワークフロー認識の追い出しを扱うが、SAGAはそれに分散ルーティング、仕事奪取、ツール別TTL、タスク単位公平性を加える。SOLA等のSLOスケジューラが要求遅延を最適化するのに対し、SAGAのAgent Fair Shareは複数段タスクの残作業と締切から完了時間公平性を定義する。","relation_to_prior_work":[{"work":"vLLM / PagedAttention","difference":"個別要求のメモリ管理と連続バッチに対し、SAGAは複数要求をまたぐセッションKVの将来再利用をAEGから予測して保持する。"},{"work":"SGLang / RadixAttention","difference":"共有プレフィックス構造の再利用に加え、ツール待ちを挟むセッション固有状態とタスク全体の配置を追跡する。"},{"work":"Llumnix","difference":"負荷偏りに反応してKVを移行する方式に対し、SAGAは通常はセッション親和性を維持し、閾値を超えた時だけ仕事奪取とKV移行を行う。"},{"work":"KVFlow","difference":"workflow-aware cache eviction単体に対し、SAGAはTTL、分散ルーティング、load balancing、Agent Fair Shareを統合する。"},{"work":"Sarathi-Serve / DistServe","difference":"プリフィル・デコードの要求内フェーズを最適化する方式に対し、SAGAはツール呼び出しを挟む複数LLM要求からなるエージェント全体を最適化する。"}],"strengths":["64基A100の実機クラスタで最新vLLM+APCを含む複数比較対象を評価する。","SWE-benchとWebArenaという実エージェント型ワークロードを使う。","WA-LRUをBeladyオフライン最適と直接比較しワークフロー情報の価値を定量化する。","局所性、負荷分散、キャッシュ保持、公平性を同一workflow identityで連携させる。","明示AEGがない場合のパターン推定とcold-start退避を持つ。"],"limitations":["AEGの明示ヒントがないとパターン推定精度87%となりTCTが15.6%悪化する。","動的なmulti-agent debateのように構造自体が頻繁に変わる場合はAEG再推定が増える。","ツール待ち時間の極端な外れ値ではTTL予測が外れる。","AFSは未知エージェントの残作業時間推定誤差に影響される。","単一データセンターのみで、地理分散KV移行は未対応。","実機評価モデルはLlama-3-70B-Instructのみで、Mistral/Qwen/DeepSeekやMoEは未検証。","95%超のHBM過剰割当領域は未検証。","対話型TCTを優先するため処理量最大化方式よりピーク処理量が約30%低い。"],"implementation_status":"vLLM 0.6.0 V1 engineを拡張し、約8.5K行Python、1.2K行C++/CUDAで実装。Ray+gRPCのGlobal Scheduler、PagedAttentionを拡張したKV Cache Manager、AFSモジュールを持つ。64 GPU実機で評価済みだが、確認した本文には公開コードURLの明記がない。","research_positioning":"エージェント推論の性能問題を、個々のLLM呼び出しではなくツール待ちを含むプログラム全体の状態保存問題として捉え直した研究である。今後のagentic servingではKVキャッシュの価値が単なる最近利用時刻ではなくワークフロー上の将来再利用に依存することを示し、request-centric servingからworkflow-centric servingへの比較基準を与える。","repository_fit":"LLMサービング・スケジューリング・分離系統に直接該当し、特にagentic workload、KV再利用、session affinity、state migrationを結ぶ論文として、vLLM/SGLang/Llumnix/KVFlow等との比較に有用。"},"reservation":{"claim_id":"claim-44b24147d79154a807dce87e","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-34fda1e4845e29f50bd2e325",
+  "job_id": "job-research-3ee76817e29cd5c6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-34fda1e4845e29f50bd2e325",
+    "worker_id": "scheduled-chat-discovery-overflow",
+    "worker_kind": "scheduled_chat"
+  }
+}

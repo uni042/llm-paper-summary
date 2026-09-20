@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-44b24147d79154a807dce87e","job_id":"job-research-989ee0a4e32cc6c3","data":{"evaluation_summary":"8ノード・64基A100の実機クラスタでLlama-3-70B-Instructを4GPUテンソル並列として実行し、SWE-bench verified 500タスク、WebArena全812タスク、BurstGPT由来10テナント合成負荷を評価する。vLLM 0.6.0、最新vLLM 0.15.1の自動プレフィックスキャッシュ＋親和性ルータ、SGLang、Llumnix、TensorRT-LLM Scaffolding、KVFlow再実装と比較し、タスク完了時間、KVに使われるGPUメモリ有効利用、タスク処理量、SLO達成率を測る。各実験10回、3回のwarm-upを除外し、Welchのt検定で有意性を確認する。","scope":"単一データセンターのA100クラスタとLlama-3-70B-Instructに限定した実機評価。SWE-benchは平均37段・最大150段、WebArenaは平均18段の長いエージェントワークフローを含む。マルチテナント負荷はクラスタ最大処理量のおよそ80%を狙う競合状態。95%超のHBM過剰割当、地理分散、MoEモデルは未評価。","hardware":["8ノード×NVIDIA A100-80GB 8基＝64 GPU","各ノードAMD EPYC 7763 CPU 2基・128コア、DDR4-3200 1TB、NVMe 4×3.84TB","ノード間200Gbps InfiniBand HDR + GPUDirect RDMA","総GPUメモリ5.12TB"],"models":["Llama-3-70B-Instruct（4 GPUテンソル並列）"],"datasets":["SWE-bench verified 500タスク","WebArena 812タスク","BurstGPT由来10テナント合成ワークロード"],"workload":"SWE-benchは平均37段・最大150段、各段2〜4K入力・100〜500出力トークン。WebArenaは平均18段、各段4〜8K入力・50〜200出力。BurstGPT由来負荷はheavy 3、medium 4、light 3テナントで、それぞれ概ね16/8/4 task/min/tenantのポアソン到着を使う。SWE-bench/WebArenaの端から端評価も約8 task/minで再生する。","baselines":["vLLM 0.6.0 FCFS + PagedAttention","vLLM 0.15.1 Automatic Prefix Caching + PrefixCacheAffinityRouter","SGLang 0.5.8 + RadixAttention","Llumnix 1.2 + live KV migration","TensorRT-LLM 1.1 + Scaffolding","vLLM上のKVFlow再実装"],"metrics":["タスク完了時間（TCT）","有用KVが占めるGPUメモリ割合","完了タスク/分","期限1.5倍以内のSLO達成率","KV再生成時間割合","仕事奪取時のKV移行遅延","coordinator CPUオーバーヘッド"],"methodology":"各実験10回を異なる乱数seedで実行し平均±標準偏差を報告。両側Welch t検定で有意差を評価し、3回のwarm-upを除外。1.5×IQR外れ値は2%未満を除外。","software":"Ubuntu 22.04、CUDA 12.1.1、Python 3.10.12、PyTorch 2.1.2+cu121、vLLM 0.6.0、FlashAttention 2.5.6、Ray 2.9.0。"},"reservation":{"claim_id":"claim-44b24147d79154a807dce87e","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-34fda1e4845e29f50bd2e325",
+  "job_id": "job-research-3ee76817e29cd5c6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-34fda1e4845e29f50bd2e325",
+    "worker_id": "scheduled-chat-discovery-overflow",
+    "worker_kind": "scheduled_chat"
+  }
+}
