@@ -146,6 +146,7 @@ Discoveryは軽量評価だけを行う。title、abstract、書誌、一次資�
 - **情報不明時**: 採択状況・venueが不明なら `+0` とし、推測しない。arXivのみであること自体を減点理由にはしない。
 - **追加ネットアクセス禁止**: 新しさや採択状況の採点だけを目的として追加のWeb/APIアクセスを発生させない。schema v3 precheck、既に取得したOpenAlex / Semantic Scholar / arXiv / OpenReview /会議公式等の結果、既存metadata、一次資料中の書誌情報に含まれている範囲だけを使う。既存取得情報にない場合は未確認のまま `+0` とする。
 - candidateの `reason` には、priorityを押し上げた主要因が新しさ・主要venue採択である場合、その事実を短く残す。採択が確認できないものを「採択済み」と書かない。
+
 1回のDiscovery submissionへ送るcandidateは0〜5件。**5件はrun上限ではなく1 submissionの上限**である。
 
 Discoveryのmulti-round submissionは、どちらのwork mixから探索を選んだ場合でも自己記述型（self-describing）を使い、存在しないDiscovery `job_id` を合成しない。candidate投入前に最新HEAD / identity / queueを再確認する。
