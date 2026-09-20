@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-22a85da9fa40ba86114440e5",
-  "job_id": "job-research-7462825d21914fcd",
-  "data": {
-    "hardware": "attention microbenchmarkはNVIDIA A100 80GB SXM4。H100でも新機能TMA/4th-gen Tensor Coresを使わない同実装を参考測定する。E2E GPT trainingは8×A100 80GB SXM。",
-    "software": "FlashAttention-2 CUDA kernelをPyTorch standard attention、初代FlashAttention、xFormers/CUTLASS系、Triton FlashAttentionと比較する。公式実装はDao-AILab/flash-attention。",
-    "methodology": "attention benchmarkはsequence 512〜16K、総token数16Kになるようbatch調整、hidden dimension 2048、head dimension 64/128、causal有無でforward/backwardを測定する。E2EはGPT-style 1.3B/2.7B、context 2K/8Kを8 A100で学習しTFLOPs/s/GPUとmodel FLOPs utilizationを比較する。",
-    "scope": "主評価はtraining forward/backward kernelで、autoregressive decode専用KV-cache kernelのserving latencyは直接評価しない。A100向けにblock sizeを手動tuningし、H100は新命令未利用。head dimensionsは主に64/128で、将来のFP8、AMD等はfuture work。"
-  },
+  "attempt_id": "attempt-098c5b91676f2a1a4d4737af",
+  "job_id": "job-research-f018d8c28f4995e5",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-22a85da9fa40ba86114440e5",
+    "claim_id": "claim-098c5b91676f2a1a4d4737af",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-22a85da9fa40ba86114440e5",
-  "job_id": "job-research-7462825d21914fcd",
-  "data": {
-    "limitations": "計算量は依然O(N²d)で、長文脈のattention FLOPsそのものを削減する方式ではない。主要tuningはA100とhead dimension 64/128を中心に行われ、block sizeは手動選択である。H100ではTMA、4th-generation Tensor Cores、FP8を使っておらず、著者自身が追加1.5〜2倍の最適化余地を見込む。論文のE2E評価はtraining中心で、LLM servingのdecode latency、KV-cache管理、continuous batchingとの相互作用は直接評価されていない。",
-    "differences": "Standard attentionはS=QK^TとP=softmax(S)をN×NでHBMへmaterializeする。初代FlashAttentionはtilingとonline softmaxでこれを避け、HBM I/Oとmemoryを大幅削減した。FlashAttention-2はこのI/O-aware algorithmを置き換えるのではなく、I/O削減後に顕在化したGPU execution inefficiencyを対象にする。具体的にはsequence方向thread-block parallelismとQ-split warp partitioningが新しく、初代のbatch/head parallelismとsplit-K reductionを改善する。近似attentionやsparse attentionと異なり、計算するattention自体はexactである。",
-    "implementation_status": "公式CUDA実装がDao-AILab/flash-attentionで公開され、論文時点でcausal attention、forward/backward、MQA/GQAを扱う。A100で詳細benchmarkし、H100でも同一実装を測定している。arXiv v1（2023-07-17）のプレプリントで、実装は後続フレームワークに広く統合可能なkernel libraryとして提供される。",
-    "research_positioning": "長文脈attention最適化の中で、FlashAttentionがmemory hierarchy/I/O complexityを主題にしたのに対し、FlashAttention-2はGPU scheduler hierarchyに焦点を一段深めた仕事である。HBM↔SRAM、thread blocks↔SM、warps↔shared memoryという複数階層をそれぞれ最適化し、exact attentionのhardware efficiencyをGEMMへ近づける。LLM inferenceではprefill attention高速化の基盤kernelとして重要だが、decodeではKV-cacheアクセスと小query形状が異なるためserving-specific kernel研究とは区別される。"
-  },
+  "attempt_id": "attempt-098c5b91676f2a1a4d4737af",
+  "job_id": "job-research-f018d8c28f4995e5",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-22a85da9fa40ba86114440e5",
+    "claim_id": "claim-098c5b91676f2a1a4d4737af",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
