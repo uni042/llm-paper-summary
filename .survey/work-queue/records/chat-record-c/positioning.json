@@ -1,1 +1,51 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-34fda1e4845e29f50bd2e325","job_id":"job-research-3ee76817e29cd5c6","data":{"positioning":"LancetはMoEのexpert配置やrouting policyそのものを変える方式ではなく、既存routingが生むall-to-allを学習グラフ上の独立計算で隠すcompiler最適化である。Tutel/FasterMoEが主にall-to-allとexpert計算の局所pipelineを作るのに対し、Lancetはforwardでself-attention/FFN等の非MoE計算までpartitionし、backwardでweight gradientを別層のcommunicationへ移してfocus regionをwhole graphへ広げる。","differences":"単純micro-batchingはexpert capacityを各partitionへ固定配分するためtoken dropが変わり得るが、Lancetはcapacity消費をpartition間で引き継ぐgateとirregular all-to-allで未分割時のroutingを保つ。forwardは依存関係が強いためpartition軸制約とDP探索、backwardはdWがcritical pathから独立するためbest-fit schedulingという異なる解法を使う。通信を減らすのではなく、padding転送削減を除けば主に計算と通信の時間重畳を増やす。","relation_to_prior_work":[{"work":"Tutel","difference":"all-to-allとexpert計算の重畳に限定せず、MoE前後の非MoE計算とbackward dWまで重畳範囲を拡張する。"},{"work":"FasterMoE","difference":"expert不均衡やtopology-aware expert selectionではなく、既存routingを保ったままcompiler scheduling/partitionでcommunication hidingを増やす。"},{"work":"DeepSpeed","difference":"MoE並列実行基盤に対し、Lancetはwhole-graph依存解析から自動的にoverlap scheduleを生成する。"},{"work":"Lina","difference":"all-to-all trafficをall-reduceより優先して帯域競合を抑える方式と直交し、Lancetはcommunicationを計算で隠すため併用可能。"}],"strengths":["forwardとbackwardの依存関係を別々に利用しwhole-graphの重畳余地を広げる。","数学的等価性をpartition constraintとcapacity-aware gateで維持する。","A100/V100、最大64 GPUでDeepSpeed/Tutel/RAFと比較する。","cost model、DP、greedy schedulingをcompiler passへ統合しuser code変更を不要にする。","routing方式がpartition可能範囲を制限する場合も評価する。"],"limitations":["評価modelはGPT-2ベースMoE 2種、sequence長512であり現代の大規模LLMを直接評価していない。","data parallel + expert parallel中心で、FSDP/ZeRO3、tensor parallel、sequence parallelとのcommunication干渉は未統合。","partitionは小kernel化による計算overheadを増やし、重畳利得を相殺する条件がある。","irregular expert shapeではpadding計算が残り、block-sparse kernelとの統合余地がある。","routing方式によってforwardでpartitionできる範囲が変わり、任意のgateで同じ利得を保証しない。"],"implementation_status":"RAF compiler上に約13K行C++で2つのIR optimization passとして実装。NCCL grouped send/recvでirregular all-to-allを実装し、MoE dispatchはTutel kernelを利用。論文本文で公開repository URLは確認できない。","research_positioning":"MoE trainingの通信最適化を、通信primitiveやexpert kernelだけでなく学習グラフ全体のcompiler scheduling問題として扱った研究である。特に通信時間がexpert計算を大幅に上回る環境では局所pipelineの理論上限が低いことを示し、non-MoE計算とgradient計算を通信隠蔽資源として使う設計点を確立した。","repository_fit":"trainingのdistributed/heterogeneous/MoE系統に直接該当する。expert parallel all-to-all、communication-computation overlap、compiler graph transformationの比較基準としてTutel/FasterMoE/DeepSpeed系研究と強く関連する。"},"reservation":{"claim_id":"claim-34fda1e4845e29f50bd2e325","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-4153e066ad5dce9da5473686",
+  "job_id": "job-research-3ee76817e29cd5c6",
+  "data": {
+    "positioning": "LancetはMoEのexpert配置やrouting policyそのものを変える方式ではなく、既存routingが生むall-to-allを学習グラフ上の独立計算で隠すcompiler最適化である。Tutel/FasterMoEが主にall-to-allとexpert計算の局所pipelineを作るのに対し、Lancetはforwardでself-attention/FFN等の非MoE計算までpartitionし、backwardでweight gradientを別層のcommunicationへ移してfocus regionをwhole graphへ広げる。",
+    "differences": "単純micro-batchingはexpert capacityを各partitionへ固定配分するためtoken dropが変わり得るが、Lancetはcapacity消費をpartition間で引き継ぐgateとirregular all-to-allで未分割時のroutingを保つ。forwardは依存関係が強いためpartition軸制約とDP探索、backwardはdWがcritical pathから独立するためbest-fit schedulingという異なる解法を使う。通信を減らすのではなく、padding転送削減を除けば主に計算と通信の時間重畳を増やす。",
+    "relation_to_prior_work": [
+      {
+        "work": "Tutel",
+        "difference": "all-to-allとexpert計算の重畳に限定せず、MoE前後の非MoE計算とbackward dWまで重畳範囲を拡張する。"
+      },
+      {
+        "work": "FasterMoE",
+        "difference": "expert不均衡やtopology-aware expert selectionではなく、既存routingを保ったままcompiler scheduling/partitionでcommunication hidingを増やす。"
+      },
+      {
+        "work": "DeepSpeed",
+        "difference": "MoE並列実行基盤に対し、Lancetはwhole-graph依存解析から自動的にoverlap scheduleを生成する。"
+      },
+      {
+        "work": "Lina",
+        "difference": "all-to-all trafficをall-reduceより優先して帯域競合を抑える方式と直交し、Lancetはcommunicationを計算で隠すため併用可能。"
+      }
+    ],
+    "strengths": [
+      "forwardとbackwardの依存関係を別々に利用しwhole-graphの重畳余地を広げる。",
+      "数学的等価性をpartition constraintとcapacity-aware gateで維持する。",
+      "A100/V100、最大64 GPUでDeepSpeed/Tutel/RAFと比較する。",
+      "cost model、DP、greedy schedulingをcompiler passへ統合しuser code変更を不要にする。",
+      "routing方式がpartition可能範囲を制限する場合も評価する。"
+    ],
+    "limitations": [
+      "評価modelはGPT-2ベースMoE 2種、sequence長512であり現代の大規模LLMを直接評価していない。",
+      "data parallel + expert parallel中心で、FSDP/ZeRO3、tensor parallel、sequence parallelとのcommunication干渉は未統合。",
+      "partitionは小kernel化による計算overheadを増やし、重畳利得を相殺する条件がある。",
+      "irregular expert shapeではpadding計算が残り、block-sparse kernelとの統合余地がある。",
+      "routing方式によってforwardでpartitionできる範囲が変わり、任意のgateで同じ利得を保証しない。"
+    ],
+    "implementation_status": "RAF compiler上に約13K行C++で2つのIR optimization passとして実装。NCCL grouped send/recvでirregular all-to-allを実装し、MoE dispatchはTutel kernelを利用。論文本文で公開repository URLは確認できない。",
+    "research_positioning": "MoE trainingの通信最適化を、通信primitiveやexpert kernelだけでなく学習グラフ全体のcompiler scheduling問題として扱った研究である。特に通信時間がexpert計算を大幅に上回る環境では局所pipelineの理論上限が低いことを示し、non-MoE計算とgradient計算を通信隠蔽資源として使う設計点を確立した。",
+    "repository_fit": "trainingのdistributed/heterogeneous/MoE系統に直接該当する。expert parallel all-to-all、communication-computation overlap、compiler graph transformationの比較基準としてTutel/FasterMoE/DeepSpeed系研究と強く関連する。"
+  },
+  "reservation": {
+    "claim_id": "claim-4153e066ad5dce9da5473686",
+    "worker_id": "scheduled-chat-discovery-overflow",
+    "worker_kind": "scheduled_chat"
+  }
+}
