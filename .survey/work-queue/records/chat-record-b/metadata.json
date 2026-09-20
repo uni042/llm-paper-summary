@@ -2,32 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-37851a31293499313033e7f8",
-  "job_id": "job-research-b27d4d0f59f887b3",
-  "data": {
-    "canonical_id": "arXiv:2607.25852",
-    "title": "AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding",
-    "list_summary": "会話には短い多トークン予測、コード・数学には並列草稿DFlyを使い分け、実行時負荷に応じて検証深度も動的調整する推測デコード基盤。",
-    "summary": "AngelSpecは、実運用の推測デコードで単一のドラフタ構造が全ワークロードに最適ではないという問題に対し、会話向け自己回帰MTPとコード・数学向けブロック並列DFlyを共通訓練基盤で扱う。DFlyはターゲット層の共有変換と層別融合を組み合わせた条件付け、前トークン依存の軽量自己回帰補正、受理長を意識した損失を統合する。さらにD-cutで同時要求間の検証計算を共有予算として配分し、負荷・ハードウェアに応じて検証深度を動的調整する。Hy3系列の実機評価ではDFlyが並行度4〜64で最高平均スループットを示し、自己回帰デコード比1.98〜2.40倍、DFlash比10.5〜11.8%高いスループットを報告する。",
-    "source": "https://arxiv.org/html/2607.25852v2",
-    "sources": ["https://arxiv.org/abs/2607.25852", "https://arxiv.org/html/2607.25852v2", "https://github.com/Tencent/AngelSpec", "https://angelspec.readthedocs.io"],
-    "authors": ["Hong Liu", "Rui Cen", "Junhan Shi", "Guangshuo Qin", "Jiebin Zhang", "Tianyu Liu", "Runzhi Fan", "Guoliang Zhao", "Ruobing Xie", "Kai Zhang", "Song Liu", "Guanghua Yu", "Jianchen Zhu"],
-    "published": "2026-07-28",
-    "publication": "arXiv:2607.25852v2",
-    "publication_type": "preprint",
-    "publication_status": "preprint",
-    "primary_category": "cs.CL",
-    "cross_list_categories": [],
-    "topics": ["speculative decoding", "multi-token prediction", "parallel drafting", "block diffusion", "adaptive verification", "LLM serving"],
-    "implementation": "AngelSpecとして公開。MTP、DFlash系、DFly、長文脈訓練、分離型hidden-state生成、実推測デコードによるオンライン評価を統一実装する。",
-    "code": "https://github.com/Tencent/AngelSpec",
-    "last_checked": "2026-09-20",
-    "hardware_evaluation": "実機評価。Hy3-295B-A21BのサービングではTP=8、8×NVIDIA H20を使用し、並行度2〜64の本番トラフィック再生も評価。コンポーネント分析も8×H20で実施。",
-    "quality_effect": "推測デコードのターゲット分布を変えないlosslessなdraft-then-verify方式を前提とする。速度改善はドラフト品質と検証計算配分による。",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "arXiv v2 full-text reference section",
-    "references_total": 52
-  },
-  "reservation": {"claim_id": "claim-37851a31293499313033e7f8", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-95a787743074667431de8920",
+  "job_id": "job-research-e0a5ea7f3cdd2886",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-95a787743074667431de8920",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
