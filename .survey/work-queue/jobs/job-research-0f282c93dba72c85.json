@@ -12,14 +12,13 @@
   "source_url": "https://arxiv.org/abs/2607.06601",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.06601-triroute-joint-adaptive-routing.md",
   "selection_reason": "token/layerごとにattention mode・expert subset・KV bit-widthを同一controllerで共同決定し、compute/memory budget下でexpert数も適応配分する拡張的adaptive computation。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T11:38:29+00:00",
-  "completed_at": "2026-09-20T11:44:18+00:00",
   "blocker": "Primary arXiv HTML for arXiv:2607.06601 was successfully retrieved and read through the method and start of experimental setup (HTML lines 0-295), but the run exhausted the web retrieval call limit before the remaining primary-source sections (results, limitations, appendices, references) could be fetched. Direct container network retrieval of the arXiv PDF was also attempted and failed due runtime DNS/network isolation. Because the full primary source was not read, no five-slot record was fabricated. This is a transient run-local retrieval/tool limit and should be retried.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-2ba79169b09085044fd31ab0.json",
   "blocked_attempts": 1,
@@ -32,5 +31,5 @@
     }
   ],
   "last_blocked_at": "2026-09-20T11:44:18+00:00",
-  "retry_not_before": "2026-09-20T12:50:22+00:00"
+  "retry_queued_at": "2026-09-20T12:59:45+00:00"
 }

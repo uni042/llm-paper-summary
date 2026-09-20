@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T12:13:37+00:00",
+  "updated_at": "2026-09-20T12:57:49+00:00",
   "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20",
-  "last_round": "adaptive-max-r38-cross-lineage-leftovers",
+  "last_round": "adaptive-max-r39-direct-forward-leftovers",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,23 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T08:00:00+09:00",
-      "round": "specialist-kv-adaptive-2",
-      "axis": "動的KV容量・cross-context/checkpoint KV再利用",
-      "query_summary": "固定圧縮率のKV compressionから離れ、runtimeで容量を伸縮するGrowPageと、prefix外・checkpoint間再利用を比較するKVShareArenaを評価した。直近runで既知のMetaKVは反復投入しなかった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.07966"
-      ],
-      "next_axis_hint": "KV以外へ移り、latent-space inference・token/segment圧縮によるmemory/compute削減を探索する",
-      "source_submission": "work-queue/submissions/20260916T0813JST-discovery-specialist-kv-adaptive-2.json"
-    },
     {
       "run_key": "2026-09-16T08:00:00+09:00",
       "round": "specialist-latent-memory-3",
@@ -7773,6 +7756,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次段階は2025-2026の収録seed（LExI、MoE-PHDS、BuddyMoE、Alloc-MoE、ReMoE等）のforward citationを新規precheckし、既存100件集合の外側を掘る。",
       "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r38.json"
+    },
+    {
+      "run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+      "round": "adaptive-max-r39-direct-forward-leftovers",
+      "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+      "query_summary": "arXiv:2402.14800の既存schema-v3 precheckから未候補化かつ直接性の高い4件を追加。router post-training、memory-constrained expert fine-tuning、temporal expert persistence、expert upcyclingをカバー。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.14800/citations",
+      "citation_direction": "forward",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "LExI/BuddyMoE/Cost-Aware Expert Execution の未消化forward citationを追加する。",
+      "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r39.json"
     }
   ],
   "axes": {
@@ -14689,16 +14693,16 @@
     },
     "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800": {
       "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20",
-      "rounds": 11,
-      "candidate_count": 46,
+      "rounds": 12,
+      "candidate_count": 50,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 46,
+      "novel_candidate_count": 50,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 46,
-      "accepted_count": 46,
+      "post_final_dedupe_count": 50,
+      "accepted_count": 50,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
-      "next_axis_hint": "次段階は2025-2026の収録seed（LExI、MoE-PHDS、BuddyMoE、Alloc-MoE、ReMoE等）のforward citationを新規precheckし、既存100件集合の外側を掘る。"
+      "next_axis_hint": "LExI/BuddyMoE/Cost-Aware Expert Execution の未消化forward citationを追加する。"
     },
     "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2310.01334": {
       "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
