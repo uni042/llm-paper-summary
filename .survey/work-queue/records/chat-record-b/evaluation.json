@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-aa5fee4140884cdeb790c49e","job_id":"job-research-710ff1d6feeafd76","data":{"hardware":"TPU v3を128、512、2048コア規模で使用。最大の報告モデルMoE(2048E,36L)は2048 TPU v3コア、6000億パラメータ。1兆パラメータの60層モデルもスケーラビリティ試験を行ったが数値安定性の問題から品質結果には含めていない。","software":"TensorFlowによるモデル記述、XLAコンパイラを拡張したGShard分割器。専門家配送と再分割にAllToAll、部分和統合にAllReduceなどTPU集合通信を使用する。","methodology":"100言語から英語への多言語翻訳を約130億訓練例で評価し、各MoE構成は1兆トークンを見るまで学習する。専門家数128/512/2048、深さ12/36層を主に比較し、二言語別Transformer群と2048コアで学習した密な96層Transformerを比較対象とする。品質はBLEU、学習効率は所定交差エントロピーへ達するトークン数、ステップ毎秒、TPUコア年、実時間で評価する。システム評価では端末当たりメモリ、演算別実行時間、128→2048専門家の拡張、AllReduce/AllToAll通信時間を実機測定する。","scope":"実機TPUクラスタでの学習評価でありシミュレーションではない。翻訳タスクと当時のTPU v3/XLA環境が中心で、現代GPUクラスタや推論サービングへ性能値を直接一般化はできない。1兆パラメータ60層構成は数値安定性に課題があり、再現可能な品質比較は6000億パラメータ構成までが中心である。"},"reservation":{"claim_id":"claim-aa5fee4140884cdeb790c49e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-85841135c44788f4cd9b5a81",
+  "job_id": "job-research-710ff1d6feeafd76",
+  "data": {
+    "hardware": "TPU v3を128、512、2048コア規模で使用。最大の報告モデルMoE(2048E,36L)は2048 TPU v3コア、6000億パラメータ。1兆パラメータの60層モデルもスケーラビリティ試験を行ったが数値安定性の問題から品質結果には含めていない。",
+    "software": "TensorFlowによるモデル記述、XLAコンパイラを拡張したGShard分割器。専門家配送と再分割にAllToAll、部分和統合にAllReduceなどTPU集合通信を使用する。",
+    "methodology": "100言語から英語への多言語翻訳を約130億訓練例で評価し、各MoE構成は1兆トークンを見るまで学習する。専門家数128/512/2048、深さ12/36層を主に比較し、二言語別Transformer群と2048コアで学習した密な96層Transformerを比較対象とする。品質はBLEU、学習効率は所定交差エントロピーへ達するトークン数、ステップ毎秒、TPUコア年、実時間で評価する。システム評価では端末当たりメモリ、演算別実行時間、128→2048専門家の拡張、AllReduce/AllToAll通信時間を実機測定する。",
+    "scope": "実機TPUクラスタでの学習評価でありシミュレーションではない。翻訳タスクと当時のTPU v3/XLA環境が中心で、現代GPUクラスタや推論サービングへ性能値を直接一般化はできない。1兆パラメータ60層構成は数値安定性に課題があり、再現可能な品質比較は6000億パラメータ構成までが中心である。"
+  },
+  "reservation": {
+    "claim_id": "claim-85841135c44788f4cd9b5a81",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
