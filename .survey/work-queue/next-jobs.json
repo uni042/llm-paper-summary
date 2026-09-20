@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 829,
+      "completed": 831,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 171,
+      "ready": 174,
       "completed": 652,
       "superseded": 46,
       "deferred": 3,
@@ -19,25 +19,11 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 171,
+    "ready_research_audit": 174,
     "actively_claimed": 1,
-    "claimable": 170
+    "claimable": 173
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-08b5458cb63307f5",
-      "type": "research",
-      "lane": null,
-      "priority": 99,
-      "canonical_id": "arXiv:2608.10392",
-      "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
-      "source_url": "https://arxiv.org/abs/2608.10392",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.10392-share-first-route-what-remains.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-5ce9880c62119377",
       "type": "research",
@@ -75,6 +61,20 @@
       "title": "MoE-PHDS: One MoE checkpoint for flexible runtime sparsity",
       "source_url": "https://arxiv.org/abs/2509.23012",
       "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.23012-moe-phds-flexible-runtime-sparsity.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-3b1c7287727937a1",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2609.06076",
+      "title": "Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment",
+      "source_url": "https://arxiv.org/abs/2609.06076",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T11:00:09+00:00"
+  "generated_at": "2026-09-20T11:03:33+00:00"
 }
