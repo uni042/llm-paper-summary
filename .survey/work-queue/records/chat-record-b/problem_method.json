@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-5605d7717d39930ab2f4dcc5","job_id":"job-research-da8147ed3835966f","data":{"problem":"事前充填は計算律速、復号はHBM帯域律速であり、両者を同一GPU群に同居させると連続バッチ内で干渉する。分離サービングはこの干渉を除けるが、異種GPU環境ではGPUごとにFLOPS、HBM帯域、容量が異なり、さらにNVLink、PCIe、InfiniBand、RoCE、TCP/Ethernetなど接続帯域も不均一である。従来の異種配置は同居型推論を中心に計算割当を扱い、分離後に必要となる大量のKVキャッシュ転送、事前充填/復号ごとに異なる最適並列構成、ワークロードに応じた段階別資源比率を同時に扱えない。したがって、異種GPU群を複数のモデル複製へ分け、各群を事前充填か復号へ割り当て、各群のTP/PP構成と群間KV転送経路まで共同で決める必要がある。","novelty":"HexGen-2は異種GPU上の分離推論配置を、群分割・群種別・段階別TP/PP・KV通信の4要素からなる制約最適化として定式化する。探索空間がNP困難であるため、GPU/通信網を重み付きグラフへ変換し、グラフ分割で通信局所性とメモリ容量を考慮した複製群を作り、最大流で計算容量とKV転送容量を同一フロー上に表現する。さらに最大流が示すボトルネック辺と未利用辺を用いて分割を辺交換で反復改善することで、単なる遺伝的探索より速く高性能な配置を得る。","method_overview":"入力はGPU集合、各GPUのメモリ/計算特性、GPU間通信帯域、対象LLM、到着率と入出力長からなるワークロードである。第一段階ではGPUをノード、GPUメモリをノード重み、通信リンクを辺、帯域を辺重みとするグラフを作る。総メモリとモデル複製必要量から群数Kを決め、スペクトル分割で高帯域接続を群内に保ちながらメモリを均衡させ、Kernighan-Lin交換で初期分割を改善する。各群をスーパーノードへ縮約し、二次分割では事前充填群と復号群の間の辺重みを大きくしてKV転送しやすい組合せを作り、元GPUへ投影する。第二段階では各事前充填/復号複製を計算ノードとする有向フローグラフを構成する。計算辺容量は一定時間内に処理できる要求数で、事前充填では遅延最小、復号ではスループット最大となるTP/PP組合せを列挙して容量を決める。事前充填から復号への辺容量は対応層のKVキャッシュをGPU間で送れる要求数から決める。preflow-push最大流を解き、フロー量を要求割当とKV転送頻度へ変換する。最後に、容量まで使い切るボトルネック辺と余力のある辺を最大流結果から検出し、群内/群間の辺を局所交換して再び分割と最大流を解く。この反復を改善が止まるまで続け、最終配置、段階別並列計画、要求経路、KV転送計画を実行系へ渡す。","components":[{"name":"通信・メモリを考慮した二段グラフ分割","description":"入力は各GPUのメモリ容量とGPU間の実測通信帯域である。GPUをノード、メモリ容量をノード重み、通信リンクを辺、帯域を辺重みとする大域グラフを構築する。まず総GPUメモリを単一モデル複製の推定必要メモリで割って群数Kを決め、スペクトル分割で高帯域接続をできるだけ群内へ保持しながら各群のメモリ容量を均衡させる。次にKernighan-Lin法でGPU対を交換し、OOMを避ける容量条件を保ったまま群内通信を改善する。各群をスーパーノードへ縮約した二次グラフでは目的を変え、事前充填群と復号群の間に高帯域辺が多く残るよう二分する。最後にスーパーノードを元GPUへ投影する。出力はGPU群、各群のprefill/decode種別、群内GPU情報であり、後段のTP/PP選択とKV通信最大流の初期配置として使われる。"},{"name":"段階別並列構成を含む最大流モデル","description":"入力はグラフ分割で得たprefill/decodeモデル複製群と、HexGen由来の計算コストモデルである。各複製をin/outの2ノードへ分割し、その間の有向辺容量を時間窓T内に処理できる要求数として表す。prefillは計算律速で小batchが遅延に有利なため、候補TP/PP構成を列挙して要求遅延が最小となる構成を選び、その処理率を容量とする。decodeはHBM帯域律速でbatch拡大がスループットに効くため、同じ候補集合からthroughput最大構成を選ぶ。source coordinator→prefill→decode→sink coordinatorだけを有効経路とし、各要求が両段階を必ず通るよう制約する。出力は各複製の段階別TP/PP計画と計算容量を含む有向フロー網で、通信容量と同じ『要求/時間』単位で比較できる。"},{"name":"KVキャッシュ転送容量とフロー連動","description":"入力はprefill複製で生成された各層のKVキャッシュ、decode複製の層配置、両群を結ぶGPU間帯域である。prefill側で第j層を保持するGPUは、decode側で同じ第j層を保持するGPUへその要求のKVを送る必要があるため、単一の代表帯域ではなく関連する全GPU-to-GPU転送の集合性能からprefill→decode辺の要求処理容量を推定する。低帯域リンクを含む経路は容量が小さくなり、最大流計算で自動的に流量が抑えられる。preflow-pushで得た各prefill→decode辺のフロー量を実行時の要求割当比率とKV転送頻度へ変換し、一定時間にまとめてburst送信せずフロー比に沿って平滑化する。出力は各要求がどのdecode複製へKVを渡すかという通信計画であり、計算能力だけ高くてもKVリンクが詰まる配置を排除する。"},{"name":"最大流誘導の反復辺交換","description":"入力は一度最大流を解いた後の各有向辺の容量と実フローである。フローが容量上限に達して全体throughputを制限する辺をbottleneck、容量に余裕があるのに上流・下流制約で流量が少ない辺をunderutilizedとして識別する。これらの位置関係を使って、GPU群の境界をランダムに変えるのではなく、群内の高帯域性を維持しながらprefill/decode間KV経路や計算容量の不均衡を改善できる局所的なedge swap候補を選ぶ。交換後はGPU群、群種別、TP/PP候補、通信容量を更新し、再びgraph partitionとpreflow-push最大流を解く。この閉ループを最大流が改善しなくなるまで反復する。出力は局所最小を避けた最終配置で、評価ではrandom-swap変種や遺伝的探索より90〜120秒で速く収束し、平均1.8倍高いthroughputの配置を得た。"},{"name":"分離実行ランタイム","description":"入力はスケジューラが確定したGPU群、段階別TP/PP、要求フロー比率、KV転送先である。タスクcoordinatorは到着要求を指定prefill複製へdispatchし、その複製がprompt全体を処理してfirst tokenとKV cacheを生成する。次に最大流で割り当てられたdecode複製へKVを転送し、decode側が後続tokenを逐次生成して完了結果をcoordinatorへ返す。群内parallel communicationはNCCLで実行し、必要なcommunication groupは事前構築してruntime setup overheadを避ける。群間KVは非同期NCCL SendRecv/CudaMemcpyを用いて計算と重畳する。continuous batching、FlashAttention、PagedAttentionも統合され、出力は通常のLLM応答である。配置最適化だけでなく、計画した通信を実機上で重畳実行できることがend-to-end利得につながる。"}],"system_design":"オフラインのスケジューラが異種GPU/ネットワークとワークロードから配置・TP/PP・KV経路を生成し、実行時はlibP2P系調整器とNCCL通信で要求を事前充填群→復号群へ流す。事前充填と復号を物理的に分離し、各段階の資源特性に合わせて異なる並列化とバッチ戦略を採用する。"},"reservation":{"claim_id":"claim-5605d7717d39930ab2f4dcc5","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-09fd18d9c803c17379a43783",
+  "job_id": "job-research-ab19fa17920fb404",
+  "data": {
+    "problem": "自己回帰復号では各層・各過去tokenのK/V活性を保持するため、KVキャッシュ容量は系列長、バッチサイズ、KV head数、層数に比例する。MQA/GQAは同一層内でquery head間のKV head数を減らすが、すべてのTransformer層が依然として独自KVを保存する。長文・大バッチではこの層方向の重複がGPUメモリを圧迫し、バッチ数や保持可能コンテキストを制限する。量子化・evictionなど学習後圧縮とは別に、モデル設計時点で層数方向のKVキャッシュを減らす方法が必要である。",
+    "novelty": "CLAはMQA/GQAの『query head間でKVを共有する』考えを層方向へ直交的に拡張し、一部層だけK/V projectionを持たせ、後続層は以前の層が生成したKV活性を再利用する。sharing factor sなら概ねs層で1組のKVを共有し、KVキャッシュを約s分の1へ減らす。MHA/GQA/MQAのどれとも組み合わせられ、特にMQA+CLA2が精度/メモリのPareto frontierを改善する。",
+    "method_overview": "入力token列は通常どおり各Transformer層を順に通る。KV生成層ではhidden stateからQ/K/Vを投影し、K/VをKVキャッシュへ保存する。次の共有層ではQ projectionと出力projection/FFNは独自に計算するが、新しいK/V projectionを計算・保存せず、直前のKV生成層が同じtoken位置について作ったK/Vをattention入力として再利用する。CLA2では2連続層ごとに1つのKVキャッシュ、CLA3では3層ごとに1つを持つ。これにより保存対象となるKV層数が減り、KV cache bytes/tokenをsharing factorにほぼ反比例して削減する。各attention層は共有KVをそれぞれ読み出してattentionを実行するため、core attentionの帯域量そのものは直接減らないが、保存容量が空くことで長い系列や大きいbatchを収容できる。",
+    "components": [
+      {
+        "name": "層間KV共有",
+        "description": "KV projectionを全層に置かず、KV生成層のK/V活性を隣接する1層以上が再利用する。共有層も独自Qを持つため各層の問い合わせ表現は保たれるが、キャッシュへ保存するK/Vは共有元だけになる。入力は各層hidden stateと共有元KV、出力は通常と同形のattention出力で、KVキャッシュの層数次元を圧縮する。"
+      },
+      {
+        "name": "sharing factorによる設計空間",
+        "description": "CLA2/CLA3/CLA4のように1つのKV projectionを共有する連続層数を設定する。sharing factorが大きいほどKV容量は減るが表現力低下が増える。実験では2層共有が最も安定した精度/メモリ交換を示し、3層・4層共有も通常MQAよりPareto改善するがCLA2より劣る。"
+      },
+      {
+        "name": "MQA/GQAとの直交的組合せ",
+        "description": "CLAは層間共有、MQA/GQAは同一層内のquery head間共有なので両者を同時に適用できる。実験ではMQA+CLA2が最も堅牢で、通常MQAと同じhead dimensionならKVキャッシュを2倍削減し、同一KV予算ならhead dimensionを大きくしてperplexityを改善できる。"
+      },
+      {
+        "name": "並列実行上の制約",
+        "description": "tensor parallelismとはそのまま互換だが、pipeline parallelismでは同じKVを共有する層を同一pipeline stageに置くか、stage間でKV活性を通信する必要がある。CLAはK/V projection数を減らすためparameter/FLOPsも少し減るが、各共有層はKVを再読込してattentionするのでcore attention latencyを直接削減しない。"
+      }
+    ],
+    "system_design": "新規モデルのattention architectureとして導入し、事前学習からCLAを用いる。推論時にはKV生成層だけをキャッシュし、共有層はそのKVを参照する。主目的はオンデバイスKV容量削減であり、空いたメモリをより長いcontext、大きいbatch、長期KV persistenceへ使う。"
+  },
+  "reservation": {
+    "claim_id": "claim-09fd18d9c803c17379a43783",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

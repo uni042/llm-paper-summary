@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5605d7717d39930ab2f4dcc5",
-  "job_id": "job-research-da8147ed3835966f",
+  "attempt_id": "attempt-09fd18d9c803c17379a43783",
+  "job_id": "job-research-ab19fa17920fb404",
   "data": {
-    "limitations": "配置最適化はGPU計算/メモリ特性、実測通信帯域、想定ワークロードを入力とするため、到着分布やネットワーク状態が急変する環境では再探索や適応機構が必要になる。配置探索自体に90〜120秒程度を要する。主要評価はOPT-30BとLlama-2-70B、H100/A100/L40/A6000のRunPod環境であり、より新しいLLM、MoE、Blackwell世代、複数クラウド間の障害や帯域揺らぎへの一般化は未検証である。比較は価格を揃えた構成を中心とするが、クラウド価格は時期・地域で変化する。",
-    "differences": "HexGenは異種GPU上で非対称TP/PPと配置を最適化するが事前充填/復号を同居させる。HexGen-2は両段階を別モデル複製へ分離し、段階ごとに異なる最適並列化を選び、追加されるKVキャッシュ転送まで最大流へ組み込む。DistServeは事前充填/復号分離を採用するが主に同種GPUクラスタを前提とする。Helixも異種GPU/ネットワークを最大流として扱うが、HexGen-2は分離推論の段階別複製とKV転送を明示的に共同配置する。Melangeは異種GPUの価格効率をbin packingとして扱うのに対し、本方式は通信トポロジと段階間KV移動を中心に含める。",
-    "implementation_status": "論文では分散実行系を実装し、libP2Pによるタスク調整、NCCL通信、非同期SendRecv/CudaMemcpyによるKV転送重畳、continuous batching、FlashAttention、PagedAttentionを統合して実機評価している。本文で独立した公開コードURLは明示されていない。",
-    "research_positioning": "事前充填/復号分離サービングと異種GPU配置最適化の交点に位置する。重要点は、異種GPUの計算能力だけでなく、分離によって新たに発生する大量のKVキャッシュ通信を同じ配置問題へ含めたことにある。グラフ分割で通信局所性とメモリを整え、最大流で段階別計算容量と通信容量を統一的に評価し、そのボトルネック情報を再び分割改善へ戻す閉ループ設計により、価格効率の高い異種資源を分離推論へ適用する。"
+    "limitations": "CLAは学習済みモデルへそのまま適用するpost-training圧縮ではなく、K/V projection配置を変えたモデルを事前学習する必要がある。共有KVは各attention層で再度メモリから読むため、KVキャッシュ保存容量は減ってもcore attentionの帯域や1 step latencyを直接減らさない。長文・大batchのend-to-end serving throughput/latencyは論文では未評価でfuture work。主要規模は1B/3Bであり、数十B〜数百Bモデルへのスケーリングは未実証。pipeline parallelismでは共有層を同一stageへ置くかKVをstage間通信する必要がある。",
+    "differences": "MQA/GQAは同一層内で複数query headがKV headを共有し、KVキャッシュのhead次元を削減する。CLAはこれと直交して隣接層がKV活性を共有し、層次元を削減する。KVQuant等の量子化は保存bit数、H2O/Scissorhands等のevictionはtoken数、CacheGenは転送表現を削減するのに対し、CLAはアーキテクチャ自体の独立KV projection数を減らす。FlashAttentionは単一passのIOを最適化するが、CLAはpass間に永続するKV保存容量を狙う。",
+    "implementation_status": "PyTorchで1B/3Bモデルをscratch学習して実証。CLAはattention blockから一部K/V projectionを除き、前層KVを参照する比較的単純なアーキテクチャ変更として実装できる。論文本文で独立した公開コードURLは確認できない。",
+    "research_positioning": "KVキャッシュ圧縮のうち、量子化・token eviction・offloadではなくモデル設計時の構造共有に属する。MQA/GQAで既にhead方向の冗長性を削った後にも層方向の冗長性が残ることを示し、特にMQA+CLA2を保守的な設計レシピとして提示する。将来の長文サービングでは、節約したKV容量をbatch拡大や長期cache persistenceへ転換できる可能性がある。"
   },
   "reservation": {
-    "claim_id": "claim-5605d7717d39930ab2f4dcc5",
+    "claim_id": "claim-09fd18d9c803c17379a43783",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
