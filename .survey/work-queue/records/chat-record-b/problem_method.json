@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-7d885ba839f618fd75926d05",
-  "job_id": "job-research-ab19fa17920fb404",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7d885ba839f618fd75926d05",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-7d885ba839f618fd75926d05","job_id":"job-research-ab19fa17920fb404","data":{"problem":"自己回帰復号では各層・各過去tokenのK/V活性を保持するため、KVキャッシュ容量は系列長、バッチサイズ、KV head数、層数に比例する。MQA/GQAは同一層内でquery head間のKV head数を減らすが、すべてのTransformer層が依然として独自KVを保存する。長文・大バッチではこの層方向の重複がGPUメモリを圧迫し、バッチ数や保持可能コンテキストを制限する。量子化・evictionなど学習後圧縮とは別に、モデル設計時点で層数方向のKVキャッシュを減らす方法が必要である。","novelty":"CLAはMQA/GQAの『query head間でKVを共有する』考えを層方向へ直交的に拡張し、一部層だけK/V projectionを持たせ、後続層は以前の層が生成したKV活性を再利用する。sharing factor sなら概ねs層で1組のKVを共有し、KVキャッシュを約s分の1へ減らす。MHA/GQA/MQAのどれとも組み合わせられ、特にMQA+CLA2が精度/メモリのPareto frontierを改善する。","method_overview":"入力token列は通常どおり各Transformer層を順に通る。KV生成層ではhidden stateからQ/K/Vを投影し、K/VをKVキャッシュへ保存する。次の共有層ではQ projectionと出力projection/FFNは独自に計算するが、新しいK/V projectionを計算・保存せず、直前のKV生成層が同じtoken位置について作ったK/Vをattention入力として再利用する。CLA2では2連続層ごとに1つのKVキャッシュ、CLA3では3層ごとに1つを持つ。これにより保存対象となるKV層数が減り、KV cache bytes/tokenをsharing factorにほぼ反比例して削減する。各attention層は共有KVをそれぞれ読み出してattentionを実行するため、core attentionの帯域量そのものは直接減らないが、保存容量が空くことで長い系列や大きいbatchを収容できる。","components":[{"name":"層間KV共有","description":"KV projectionを全層に置かず、KV生成層のK/V活性を隣接する1層以上が再利用する。共有層も独自Qを持つため各層の問い合わせ表現は保たれるが、キャッシュへ保存するK/Vは共有元だけになる。入力は各層hidden stateと共有元KV、出力は通常と同形のattention出力で、KVキャッシュの層数次元を圧縮する。"},{"name":"sharing factorによる設計空間","description":"CLA2/CLA3/CLA4のように1つのKV projectionを共有する連続層数を設定する。sharing factorが大きいほどKV容量は減るが表現力低下が増える。実験では2層共有が最も安定した精度/メモリ交換を示し、3層・4層共有も通常MQAよりPareto改善するがCLA2より劣る。"},{"name":"MQA/GQAとの直交的組合せ","description":"CLAは層間共有、MQA/GQAは同一層内のquery head間共有なので両者を同時に適用できる。実験ではMQA+CLA2が最も堅牢で、通常MQAと同じhead dimensionならKVキャッシュを2倍削減し、同一KV予算ならhead dimensionを大きくしてperplexityを改善できる。"},{"name":"並列実行上の制約","description":"tensor parallelismとはそのまま互換だが、pipeline parallelismでは同じKVを共有する層を同一pipeline stageに置くか、stage間でKV活性を通信する必要がある。CLAはK/V projection数を減らすためparameter/FLOPsも少し減るが、各共有層はKVを再読込してattentionするのでcore attention latencyを直接削減しない。"}],"system_design":"新規モデルのattention architectureとして導入し、事前学習からCLAを用いる。推論時にはKV生成層だけをキャッシュし、共有層はそのKVを参照する。主目的はオンデバイスKV容量削減であり、空いたメモリをより長いcontext、大きいbatch、長期KV persistenceへ使う。"},"reservation":{"claim_id":"claim-7d885ba839f618fd75926d05","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
