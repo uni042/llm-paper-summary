@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 04:39:52 JST**
+> 自動生成: **2026-09-21 04:42:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **208** |
 | 未claim Research job | **208** |
 | 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間51分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間53分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **1** | **0** | **0** | **0** | **0** | **0** |
-| 合計 | **4** | **7** | **4** | **0** | **0** | **0** | **0** |
+| Discovery | **1** | **2** | **1** | **0** | **0** | **0** | **0** |
+| 合計 | **5** | **8** | **5** | **0** | **0** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -90,7 +90,10 @@
 
 ### Discovery
 
-- 検証済み成功なし。
+- **09-21 04:41:56 JST** job `job-5ce2fc5cb7683904` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0430JST-discovery-round-01-backward-recovery.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-01-backward-recovery.json`
+  - 探索軸: repository-wide structured backward references for LLM inference systems
 
 ### 直近タスク
 
@@ -132,12 +135,13 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 04:30 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **0件**
+- 耐久探索round: **1件** / immutable submission: **2件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **1件** / 候補: **0件**
+- round識別子重複submission: **1件** / round識別子なしsubmission: **0件**
 - 探索軸: repository-wide structured backward references for LLM inference systems
 - round `round-01` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-01-backward.json`
+  - submission: `.survey/work-queue/submissions/20260921T0430JST-discovery-round-01-backward-recovery.json`
   - 探索軸: repository-wide structured backward references for LLM inference systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0430JST-discovery-round-01-backward-recovery.json` (`ok=true`)
 
 ### 現在処理中
 
