@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-b269ed373464c47a4c4f738e",
-  "job_id": "job-research-f4b6d40ae418a58e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b269ed373464c47a4c4f738e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b269ed373464c47a4c4f738e","job_id":"job-research-f4b6d40ae418a58e","data":{"hardware":"ドラフト学習は8×NVIDIA H20、推論の実時間評価は単一NVIDIA H20。付録では全手法を同一ハードウェア・実装条件で測定する。","software":"公式AngelSlim実装。標的はQwen3-4B、Qwen3-8B、GPT-OSS-20B。","methodology":"数学GSM8K、MATH500、AIME25、コードHumanEval、MBPP、会話MT-Benchの6課題で、Qwen3-4B、Qwen3-8B、GPT-OSS-20Bを標的として評価する。比較はEAGLE3と直前最良のブロック拡散DFlash。温度0のgreedyと温度1の確率的復号の双方で、標準自回帰復号に対する実時間高速化倍率と一回の検証で受理される平均トークン数τを測る。DFlareは7ドラフト層、ブロック16、Qwenでは標的9層を第2層から末尾3層前まで一様抽出、GPT-OSSでは7特徴を使用する。学習データはNemotron Post-Training V2、CodeAlpaca、Step-3.5-Flash-SFTを混合した約240万件。解析ではDFlashと同一データでドラフト5/6/7層、標的特徴5/7/9層を比較し、融合ソフトマックス、異種鍵値射影、漸進損失、追加FCのアブレーションを行う。さらに学習データ27万〜240万への拡張を測る。","datasets":["GSM8K","MATH500","AIME25","HumanEval","MBPP","MT-Bench","Nemotron Post-Training Dataset V2","CodeAlpaca","Step-3.5-Flash-SFT"],"models":["Qwen3-4B","Qwen3-8B","GPT-OSS-20B"],"baselines":["standard autoregressive decoding","EAGLE3","DFlash"],"metrics":["wall-clock speedup","acceptance length tau"],"scope":"数学・コード・会話、三標的モデル、greedy/確率復号、構造・深度・標的特徴数・学習データ量の各アブレーションを含む。"},"reservation":{"claim_id":"claim-b269ed373464c47a4c4f738e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
