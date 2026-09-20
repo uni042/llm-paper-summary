@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-44b24147d79154a807dce87e",
-  "job_id": "job-research-989ee0a4e32cc6c3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-44b24147d79154a807dce87e",
-    "worker_id": "scheduled-chat-discovery-overflow",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-44b24147d79154a807dce87e","job_id":"job-research-989ee0a4e32cc6c3","data":{"overview":"SAGAは最新vLLM 0.15.1の自動プレフィックスキャッシュと親和性ルーティングを併用した比較対象に対し、SWE-benchで1.73倍、WebArenaで1.55倍、幾何平均1.64倍のTCT短縮を達成する。KV再生成割合を38%から8%へ、GPUメモリ有効利用をvLLMの42%からSAGAの71〜75%へ改善し、マルチテナントSLO達成率を99.2%へ高める。一方、タスク完了時間を優先するため純粋な処理量最大化方式よりピーク処理量は約30%低い。","key_results":[{"metric":"SWE-bench TCT","value":"203.4±12.8秒、vLLM+APC比1.73倍短縮","baseline":"vLLM 0.15.1 + APC + affinity routing 352.1±21.4秒","condition":"64 GPU、500 verified tasks","interpretation":"プレフィックス共有だけでなくセッション固有KVをツール境界越しに保持する利得が残る。"},{"metric":"WebArena TCT","value":"82.1±6.8秒、vLLM+APC比1.55倍短縮","baseline":"vLLM+APC 127.3±10.1秒","condition":"64 GPU、812 tasks","interpretation":"異なるエージェント種別でもワークフロー単位制御が有効。"},{"metric":"GPUメモリ有効利用","value":"SWE-bench 71.3%、WebArena 74.6%","baseline":"vLLM+APC 58.7%、61.2%","condition":"端から端評価","interpretation":"将来再利用価値を見てKVを保持し、空きHBMを有用状態へ使う。"},{"metric":"KV再生成時間割合","value":"8%","baseline":"vLLM 38%、vLLM+APC 22%","condition":"SWE-bench時間内訳","interpretation":"ツール待ち中のworkflow-aware TTLがセッション固有KVの消失を抑える。"},{"metric":"WA-LRUのBelady比","value":"SWE-bench 1.31倍、WebArena 1.28倍、平均1.30倍","baseline":"標準LRU平均2.48倍、prefix LRU平均1.86倍","condition":"production trace replay","interpretation":"ワークフロー構造が見えるとオンラインKV管理がオフライン最適へ大きく近づく。"},{"metric":"マルチテナントSLO達成率","value":"全体99.2%、light tenant 98.7%","baseline":"vLLM全体67.3%、light 43.2%","condition":"BurstGPT由来10 tenant、約80% offered load","interpretation":"Agent Fair Shareが要求量の少ないテナントの長い待ちを抑える。"},{"metric":"拡張性","value":"8→64 GPUで6.4倍、80%効率","baseline":"8 GPU","condition":"固定ワークロード","interpretation":"分散coordinatorを含めてもクラスタ規模で有効。"},{"metric":"ピーク処理量の代償","value":"throughput-optimal BFSより約30%低い","baseline":"純BFS 12.4 tasks/min","condition":"32 GPU SWE-bench","interpretation":"SAGAはバッチ処理量より対話型タスクのTCTを優先する設計。"}],"negative_results":["フレームワークからAEGヒントがなくパターン推定だけの場合、予測精度87%で明示ヒント比TCTが15.6%悪化する。","未知エージェントの最初の30タスクは要求単位処理へ退避するためcold-start費用がある。","5×P99を超える異常に長いツール待ちではTTL予測が外れてKVを追い出し得る。","95%超のHBM過剰割当状態は実験で検証していない。","TCT最適化は純粋な処理量最大化に対し約30%のピーク処理量を犠牲にする。"],"quality_impact":"スケジューリングとKV状態管理のみを変更し、モデルの数値計算や生成確率を近似しない。","interpretation":"最大寄与はセッション親和性で、除去するとTCTが96%悪化する。これはエージェントの次段要求を既存KVのあるworkerへ戻すことが再生成回避の前提だからである。workflow-aware evictionとTTLは42〜54%、仕事奪取は31%の寄与を持ち、局所性だけでは負荷偏り、負荷分散だけではKV移行が増えるため両者の組合せが必要になる。AFSは単一ベンチマークでは8%の寄与だが、競合する複数テナントではlight tenantのSLOを43.2%から98.7%へ引き上げるため役割が異なる。"},"reservation":{"claim_id":"claim-44b24147d79154a807dce87e","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}}
