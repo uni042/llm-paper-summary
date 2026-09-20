@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-20T03:50:00+00:00",
-  "record_count": 36,
+  "updated_at": "2026-09-20T03:56:00+00:00",
+  "record_count": 38,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -485,6 +485,42 @@
         "papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md"
       ],
       "title": "A Study of BFLOAT16 for Deep Learning Training"
+    },
+    "arXiv:2310.05736": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.05736",
+      "identity_tokens": [
+        "arXiv:2310.05736"
+      ],
+      "reason": "Prompt-compression method is deployment-relevant, but is less systems-focused than the runtime, memory, scheduling, and kernel papers prioritized for Research.",
+      "first_checked_at": "2026-09-20T03:56:00+00:00",
+      "last_checked_at": "2026-09-20T03:56:00+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.03065-cake-compute-or-load-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md"
+      ],
+      "title": "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models"
+    },
+    "arXiv:2401.02954": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.02954",
+      "identity_tokens": [
+        "arXiv:2401.02954"
+      ],
+      "reason": "Broad foundation-model technical report rather than a focused inference/training systems contribution.",
+      "first_checked_at": "2026-09-20T03:56:00+00:00",
+      "last_checked_at": "2026-09-20T03:56:00+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-expert-offloading/2026-2606.15453-spatio-temporal-expert-prefetching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "title": "DeepSeek LLM: Scaling Open-Source Language Models with Longtermism"
     }
   }
 }
