@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-424d7c9bd547a6273a4b2a1c",
-  "job_id": "job-research-d9598f14ff4bcd81",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-424d7c9bd547a6273a4b2a1c",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-424d7c9bd547a6273a4b2a1c","job_id":"job-research-d9598f14ff4bcd81","data":{"hardware":"25台のDGX-2、合計400基のNVIDIA V100 GPUを使用。ノード間通信帯域は800Gbps。論文中ではノード内NVSwitchが1リンク300GB/s、ノード間InfiniBand EDRが1リンク12.5GB/sという帯域差も比較理由として扱う。","software":"PyTorch上にZeRO-100Bを実装。モデル並列を使う実験では2019年9月時点のオープンソースMegatron-LMと組み合わせる。","models":["GPT-2型Transformer 1.5B〜170B","Turing-NLG 17B"],"baselines":["PyTorch Distributed Data Parallel","Megatron-LMモデル並列"],"metrics":["学習可能な最大モデル規模","GPU当たりTFLOPS","総PFLOPS","GPU数に対するスケーリング","最大キャッシュメモリ","通信量","Turing-NLG検証パープレキシティ"],"methodology":"モデル規模に応じて層数・隠れ次元・注意ヘッド数を変えたGPT-2型モデルを用い、ZeRO-100BとMegatron-LM中心の比較対象を最大400GPUで評価する。ZeRO単独のデータ並列、Megatron-LMとのモデル並列併用、活性値分割やCPU退避を含む複数構成を比較し、最大モデル規模、メモリ、GPU当たり演算性能、スケーリングを測る。60Bモデルでは64、128、256、400GPUへ増やしたときの超線形スケーリングも評価する。","scope":"実機の大規模学習評価だが、評価実装ZeRO-100BはZeRO-DPの最適化器状態＋勾配分割とZeRO-Rが中心で、パラメータ分割を含む完全な第3段階の1兆パラメータ学習は理論的容量解析であり実測ではない。最大170Bの実測は400 V100 GPUまでで、1兆パラメータを1024GPUで効率的に学習できるという主張はメモリ容量と通信解析に基づく将来可能性である。"},"reservation":{"claim_id":"claim-424d7c9bd547a6273a4b2a1c","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
