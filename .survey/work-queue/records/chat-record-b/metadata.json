@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-46bebe4124d9b569eda95755",
-  "job_id": "job-research-872c3c76cc1c3eff",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-46bebe4124d9b569eda95755",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-46bebe4124d9b569eda95755","job_id":"job-research-872c3c76cc1c3eff","data":{"canonical_id":"arXiv:2408.00741","arxiv_id":"2408.00741","doi":"10.1109/HPCA61900.2025.00102","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":["cs.AR","cs.DC"]},"title":"DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency","summary":"DynamoLLMは、要求長・モデル・負荷・SLOごとに異なるエネルギー最適点を利用し、LLM推論クラスタのインスタンス数、テンソル並列度、GPU周波数を階層制御で動的再構成する。要求を入出力長別プールへ分離し、負荷変動に応じてプールを統合・分割する。Microsoft Azure実運用トレースとH100クラスタ評価で、SLOを満たしながら平均52%のエネルギー、38%の運用炭素、61%の顧客コスト削減を報告する。","list_summary":"要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。","authors":["Jovan Stojkovic","Chaojie Zhang","Íñigo Goiri","Josep Torrellas","Esha Choukse"],"authors_affiliations":"University of Illinois Urbana-Champaign; Microsoft Azure Research - Systems","published":"2024-08-01","publication":"HPCA 2025","publication_type":"国際会議論文","publication_status":"Published","lineage":"LLM serving / energy management / cluster scheduling / dynamic reconfiguration","topics":["LLM推論クラスタ","エネルギー効率","テンソル並列","GPU周波数制御","SLO"],"importance":"性能だけでなくエネルギーを第一目的に、LLM固有の要求異質性と負荷変動を複数制御ノブへ統合したクラスタ管理研究。","implementation":"vLLM上に実装し、管理器を軽量gRPCサービス、MILPをPuLP、性能・エネルギープロファイル補間をSciPyで実装。","hardware_evaluation":"8基H100サーバ群の大規模クラスタとMicrosoft Azure Coding/Conversation本番級トレースを使用。","quality_effect":"モデル出力品質は変更せず、TTFT/TBT SLOを制約として構成を選ぶ。出力長予測誤りには再振り分け・周波数変更等で対処する。","source":"https://arxiv.org/abs/2408.00741","sources":["https://arxiv.org/abs/2408.00741","https://iacoma.cs.uiuc.edu/iacoma-papers/hpca25_2.pdf"],"code":null,"last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2211.05100","arxiv_id":"2211.05100"},{"canonical_id":"arXiv:2403.20306","arxiv_id":"2403.20306"}],"references_checked_at":"2026-09-20","references_source":"HPCA primary manuscript reference section","references_total":86},"reservation":{"claim_id":"claim-46bebe4124d9b569eda95755","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
