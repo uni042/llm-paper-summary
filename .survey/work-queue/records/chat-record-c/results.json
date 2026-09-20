@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5273a11ee27324b1d0305aa3",
-  "job_id": "job-research-98f40fbe8624cabd",
-  "data": {
-    "overview": "Draft-OPDは推論時に露出するドラフト誤りを学習へ戻すことで、同じ訓練計算量のEAGLE-3/DFlashより受理長と実測速度を改善する。思考有効・温度0ではQwen3-4B/8Bの7ベンチ平均4.88倍、非思考では平均5.17倍の高速化を達成する。SGLangでも高い受理長が同時実行時のスループット改善へつながり、30B-A3B-ThinkingではDFlash比最大17%増となる。",
-    "key_results": [
-      {
-        "metric": "思考有効・温度0の平均高速化",
-        "value": "4.88倍",
-        "baseline": "EAGLE-3およびDFlash",
-        "condition": "Qwen3-4B/8B、7ベンチ、同等訓練FLOPs",
-        "interpretation": "DFlash比13%、EAGLE-3比23%高く、平均受理長もDFlash 5.35から5.85へ上昇する。"
-      },
-      {
-        "metric": "非思考の平均高速化",
-        "value": "5.17倍",
-        "baseline": "通常自己回帰生成",
-        "condition": "Qwen3-4B/8B、温度0/0.6を含む報告平均",
-        "interpretation": "平均受理長6.33を維持し、短い非思考生成でも改善が持続する。"
-      },
-      {
-        "metric": "Qwen3-8B非思考・温度0",
-        "value": "平均5.60倍、MATH-500 7.64倍",
-        "baseline": "通常自己回帰生成",
-        "condition": "Qwen3-8B",
-        "interpretation": "DFlashの平均5.11倍を上回り、数学では特に大きい高速化を示す。"
-      },
-      {
-        "metric": "SGLangスループット",
-        "value": "DFlash比6〜17%改善",
-        "baseline": "DFlash",
-        "condition": "FA3、同時実行1〜32、Qwen3-4B/8B/30B-A3B-Thinking",
-        "interpretation": "受理長改善は単一要求だけでなく最適化済みサービングエンジンの高同時実行でも実効性能へ変換される。"
-      },
-      {
-        "metric": "単純対象支援ロールアウト比較",
-        "value": "平均4.63倍対4.29倍、相対7.3%差",
-        "baseline": "棄却提案を捨てるnaive rollout",
-        "condition": "Qwen3-4B、MATH-500/HumanEval/MT-Bench",
-        "interpretation": "高品質な対象モデル軌跡を集めるだけでは足りず、棄却されたドラフト誤りの再生が改善源である。"
-      }
-    ],
-    "negative_results": "思考モードでは対象モデル自身の次トークン不確実性が高く、非思考よりドラフトしにくい。思考訓練は最大4096トークンなのに評価は8192まで行うため、長い推論後半の失敗状態は十分に収集されない。適用範囲もQwen3とDFlash型並列ドラフト中心で、他モデル系列・ドラフト構造・推論基盤への一般化は未確認である。",
-    "interpretation": "追加のオフラインSFTではなく、検証で実際に失敗した接頭辞へ教師分布を与えることが受理長を押し上げる。ランダムアンカー、全順方向KL、全逆方向KL、位置減衰なしはいずれも完全構成より低いため、失敗位置の選択と受理・棄却を分ける損失設計がそれぞれ寄与する。",
-    "quality_impact": "投機的復号の検証・補正規則は変更しないため対象モデルの出力分布を厳密に維持する。Draft-OPDはドラフトだけを後学習し、品質との交換ではなく対象モデル呼び出し回数と壁時計時間を減らす。"
-  },
+  "attempt_id": "attempt-a87f8c2a924fc4c3d1858893",
+  "job_id": "job-research-7441b15a7ee76c92",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5273a11ee27324b1d0305aa3",
+    "claim_id": "claim-a87f8c2a924fc4c3d1858893",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

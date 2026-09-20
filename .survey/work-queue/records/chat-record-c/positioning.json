@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5273a11ee27324b1d0305aa3",
-  "job_id": "job-research-98f40fbe8624cabd",
-  "data": {
-    "limitations": "主実験はQwen3系列とDFlash型並列ドラフトに集中し、他の対象モデル系列やEAGLE型構造へのDraft-OPD自体の移植評価は限定的である。思考モードのOPD訓練は計算制約で最大4096トークンだが評価は8192まで生成するため、長い推論後半の状態分布を十分に覆わない。対象モデル支援ロールアウトと再生では教師・学生双方の確率計算が必要で、単純SFTより後学習コストと実装複雑性が増える。方式は無損失検証を前提としており、近似検証や品質と速度を交換する設定は未検討である。",
-    "differences": "EAGLE-3やDFlashは主に対象モデル生成の固定軌跡をSFTしてドラフト構造を強化するのに対し、Draft-OPDはそれらのSFT済みドラフトを後学習し、実際の検証でドラフト自身が作る状態分布へ合わせる。一般的なオンポリシー蒸留は学生単独の完全ロールアウトを使うが、Draft-OPDは短ブロック専用ドラフトが長文生成できない問題を対象モデル支援ロールアウト＋誤り位置再生で回避する。Online Speculative DecodingやDistillSpecが主に独立自己回帰ドラフトを対象とするのに対し、DFlash/EAGLE型の学習専用ドラフトを直接対象にする点が異なる。",
-    "implementation_status": "著者はコード・モデルを公開し、SFTにSpecForge、OPDにverl、推論評価にSGLangを利用する。DFlash済みチェックポイントから6 SFT epoch後に8 OPD epochを行う具体的設定を公開しており、SGLang/FA3上の同時実行スループットまで実測しているため、単なる学習曲線だけでなくサービングへの接続も確認されている。",
-    "research_positioning": "投機的復号研究のうちドラフト構造そのものではなく、ドラフトの訓練分布ずれを主対象にした後学習手法である。強い並列ドラフトがSFTで頭打ちになった後も、検証が露出する失敗位置を教師信号へ変換して改善余地を引き出す。既存ドラフト方式へ追加可能な訓練段階として位置付けられ、推論アルゴリズムを変えず無損失性を維持するため、改善した受理長を既存サービング基盤へ比較的直接持ち込める。"
-  },
+  "attempt_id": "attempt-a87f8c2a924fc4c3d1858893",
+  "job_id": "job-research-7441b15a7ee76c92",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5273a11ee27324b1d0305aa3",
+    "claim_id": "claim-a87f8c2a924fc4c3d1858893",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
