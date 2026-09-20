@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d9e87a2e384695561c52ab9b",
-  "job_id": "job-research-7975c226ad04d80a",
-  "data": {
-    "overview": "CNN/DMではGPT-2 XL targetで4.80倍、GPT-NEOで6.63倍の自己回帰生成比高速化を達成し、標準投機的復号の3.58倍/5.45倍を上回った。OpenWebTextでは5.38倍/7.23倍で、標準投機的復号3.66倍/4.12倍に対して最大約1.75倍改善した。MT-BenchのVicuna 33Bでは2.61倍で、EAGLE 2.41倍、EAGLE-2 2.60倍と同等以上のoverall speedupを、EAGLE-2より33%以上少ないdraft FLOPsで得た。",
-    "key_results": [
-      {
-        "metric": "OpenWebText speedup",
-        "value": "7.23倍 GPT-NEO、5.38倍 GPT-2 XL",
-        "baseline": "autoregressive target decoding",
-        "condition": "MDLM draft、temperature 0、2×A100",
-        "interpretation": "長い並列diffusion draftで最大高速化を達成。"
-      },
-      {
-        "metric": "standard speculative decoding比",
-        "value": "最大約1.75倍、範囲1.45〜1.75倍",
-        "baseline": "GPT-2 autoregressive drafter",
-        "condition": "CNN/DM/OpenWebText",
-        "interpretation": "draft側の直列生成を並列化する利得を確認。"
-      },
-      {
-        "metric": "CNN/DM speedup",
-        "value": "4.80倍 GPT-2 XL、6.63倍 GPT-NEO",
-        "baseline": "autoregressive decoding",
-        "condition": "1024 token generation",
-        "interpretation": "要約でも標準投機的復号を上回る。"
-      },
-      {
-        "metric": "MT-Bench overall speedup",
-        "value": "2.61倍",
-        "baseline": "EAGLE 2.41倍、EAGLE-2 2.60倍",
-        "condition": "Vicuna 33B target、MDLM 141M",
-        "interpretation": "SOTA級速度をより小さいdiffusion draftで達成。"
-      },
-      {
-        "metric": "draft FLOPs",
-        "value": "5.53×10^10 FLOPs/draft",
-        "baseline": "EAGLE-2 8.35×10^10",
-        "condition": "MT-Bench Vicuna 33B",
-        "interpretation": "EAGLE-2より33%以上少ないdraft計算で同等overall speedup。"
-      }
-    ],
-    "negative_results": "diffusion drafterの確率はtargetと十分calibrateされず、特にtemperature>0ではtop-1へ過度に集中するため確率的samplingの有効性は未検証。利用可能なdiffusion modelのtokenizerがGPT-2系に偏り、Vicuna用には別tokenizerで新規学習が必要だった。短い生成では並列化利得が小さく、fine-tuningなしでは初期acceptance率が低い。性能はγより拡散step数Tの調整に敏感。",
-    "interpretation": "投機的復号の速度上限はtarget検証だけでなくdraftの直列depthにも依存する。diffusion draftでは候補長γとnetwork evaluation数Tを分離でき、より長い候補を低depthで提案できるため、acceptance率が標準draftより少し低くてもwalltimeでは速くなる。",
-    "quality_impact": "標準speculative samplingのaccept/reject補正を維持するためtarget modelのgreedy出力品質を保持する。実験はtemperature 0であり、多様な確率的samplingでの同等性は今後の課題。"
-  },
+  "attempt_id": "attempt-175fe59944f6ca42687384fc",
+  "job_id": "job-research-529f8795f6dde556",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d9e87a2e384695561c52ab9b",
+    "claim_id": "claim-175fe59944f6ca42687384fc",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

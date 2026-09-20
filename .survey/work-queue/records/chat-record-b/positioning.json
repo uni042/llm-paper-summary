@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d9e87a2e384695561c52ab9b",
-  "job_id": "job-research-7975c226ad04d80a",
-  "data": {
-    "limitations": "離散拡散draftと自己回帰targetの確率分布calibrationが弱く、temperature>0ではdiffusion側がtop-1へ過信しやすい。主要実験はtemperature 0なのでstochastic samplingは未実証。利用可能な離散拡散modelはtokenizer互換性が限られ、異なるtarget用には新規pretraining/fine-tuningが必要になり得る。短い生成では長い候補列を並列化する利得が小さく、targetとのalignment不足も相対的に大きい。最適速度は拡散step Tに敏感で調整が必要。",
-    "differences": "標準speculative decodingは小型自己回帰drafterがγ tokenを逐次生成するためdraft depthがγに比例する。SpecDiffは離散拡散でγ位置を同時生成しdepthをTへ置換する。Medusa/Hydra/EAGLE系はtarget由来の追加headやtreeを使い、target architectureとの強い結合や追加trainingを伴う。SpecDiffは異種architectureの独立diffusion drafterを利用でき、既存targetの検証規則を変更しない。tree方式より候補長拡大時のmemory/FLOPs増加を抑えやすい。",
-    "implementation_status": "2×A100上でMDLM drafterと複数targetを組み合わせて実測。既存speculative decoding codeのdraft生成を置換する形で実装可能。論文ではmodelをHuggingFace公開予定と記載するが、本文から独立code repository URLは確認できない。",
-    "research_positioning": "投機的復号の研究を『targetの並列検証』から『draft生成自体の並列化』へ拡張する方式。非自己回帰modelの品質不足をそのまま最終生成へ使わず、target modelのaccept/reject補正の内側に閉じ込めることで、diffusionの速度と自己回帰LLMの品質を分業させる。将来diffusion modelのcalibrationと速度が改善すると、draft長をさらに伸ばして利得を拡大できる。"
-  },
+  "attempt_id": "attempt-175fe59944f6ca42687384fc",
+  "job_id": "job-research-529f8795f6dde556",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d9e87a2e384695561c52ab9b",
+    "claim_id": "claim-175fe59944f6ca42687384fc",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

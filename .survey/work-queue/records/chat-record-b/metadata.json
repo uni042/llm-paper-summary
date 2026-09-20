@@ -2,76 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-d9e87a2e384695561c52ab9b",
-  "job_id": "job-research-7975c226ad04d80a",
-  "data": {
-    "canonical_id": "DOI:10.18653/v1/2025.naacl-long.601",
-    "arxiv_id": null,
-    "doi": "10.18653/v1/2025.naacl-long.601",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": null,
-      "cross_list": []
-    },
-    "title": "Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion",
-    "summary": "通常の投機的復号は小型自己回帰draft modelがγ個の候補tokenを逐次生成するため、target側の並列検証は速くてもdraft段階に直列依存が残る。SpecDiffはdraft modelを離散拡散言語モデルへ置換し、候補列全体をT回の拡散stepで並列生成する。draft長γを増やしても評価回数はγではなくTに依存するため、長い候補を低depthで生成できる。候補は標準投機的復号と同じtarget確率によるaccept/rejectで検証するのでtarget modelの出力品質を保持する。CNN/DM、OpenWebText、MT-Benchで最大7.23倍の自己回帰生成比高速化、標準投機的復号比1.45〜1.75倍改善を示す。",
-    "list_summary": "自己回帰draftを離散拡散draftへ置換し、候補列の生成とtarget検証の双方を並列化して投機的復号を高速化する方式。",
-    "authors": [
-      "Jacob K. Christopher",
-      "Brian R. Bartoldson",
-      "Tal Ben-Nun",
-      "Michael Cardei",
-      "Bhavya Kailkhura",
-      "Ferdinando Fioretto"
-    ],
-    "authors_affiliations": "University of Virginia; Lawrence Livermore National Laboratory",
-    "published": "2025-04-29",
-    "publication": "NAACL 2025 Long Papers",
-    "publication_type": "Conference paper",
-    "publication_status": "Published",
-    "lineage": "投機的復号・非自己回帰draft",
-    "topics": [
-      "speculative decoding",
-      "discrete diffusion",
-      "parallel drafting",
-      "LLM inference"
-    ],
-    "importance": "投機的復号のdraft側に残る自己回帰直列性を離散拡散で除き、draft長とnetwork evaluation数を分離した。",
-    "hardware_evaluation": "2×NVIDIA A100 80GB、CUDA 12.2、FlashAttention。",
-    "hardware_details": "全主要評価を2台のA100 80GBで実施。",
-    "quality_effect": "target modelの標準投機的accept/reject補正を維持するため、target分布の品質を保持する設計。評価はtemperature 0。",
-    "source": "https://aclanthology.org/2025.naacl-long.601/",
-    "sources": [
-      "https://aclanthology.org/2025.naacl-long.601/",
-      "https://aclanthology.org/2025.naacl-long.601.pdf"
-    ],
-    "code": null,
-    "implementation": "Masked Diffusion Language Modelをdraftとして用い、既存speculative decodingのdraft部分だけを置換。初期tokenでは必要に応じ標準speculative decodingでdistribution alignmentを改善。",
-    "last_checked": "2026-09-20",
-    "references": [
-      {
-        "canonical_id": "arXiv:2211.17192",
-        "arxiv_id": "2211.17192"
-      },
-      {
-        "canonical_id": "arXiv:2401.10774",
-        "arxiv_id": "2401.10774"
-      },
-      {
-        "canonical_id": "arXiv:2402.05109",
-        "arxiv_id": "2402.05109"
-      },
-      {
-        "canonical_id": "arXiv:2406.16858",
-        "arxiv_id": "2406.16858"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 4
-  },
+  "attempt_id": "attempt-175fe59944f6ca42687384fc",
+  "job_id": "job-research-529f8795f6dde556",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d9e87a2e384695561c52ab9b",
+    "claim_id": "claim-175fe59944f6ca42687384fc",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
