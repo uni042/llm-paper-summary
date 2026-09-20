@@ -12,11 +12,13 @@
   "source_url": "https://arxiv.org/abs/2509.23012",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.23012-moe-phds-flexible-runtime-sparsity.md",
   "selection_reason": "単一checkpointを複数runtime sparsityへ対応させ、accuracy/latency/energy要求に応じて推論時kを変えられるようにする。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T10:56:08+00:00"
+  "created_at": "2026-09-20T10:56:08+00:00",
+  "completed_at": "2026-09-20T11:22:32+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-6b53b1926ec03fe03eb46c7c.json"
 }

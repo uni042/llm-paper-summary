@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 20:22:09 JST**
+> 自動生成: **2026-09-20 20:22:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **179** |
+| 収録候補論文 | **178** |
 | 未claim Research job | **178** |
-| 直近24hの検証済みResearch収録 | **85** |
-| 最終検証済みResearch収録 | **09-20 20:19:14 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **86** |
+| 最終検証済みResearch収録 | **09-20 20:22:32 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **179** |
+| canonical_id確認済みの一意な候補論文 | **178** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **179** |
+| 非終端Research job合計 | **178** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **3** | **0** | **0** | **1** | **0** | — |
+| Research | **38** | **3** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **4** | **1** | **0** | **1** | **0** | **5** |
+| 合計 | **38** | **4** | **1** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 20:22:32 JST** [research] `arXiv:2509.23012` — MoE-PHDS: One MoE checkpoint for flexible runtime sparsity
+  - job: `.survey/work-queue/jobs/job-research-95a4661f225665ff.json`
+  - result: `.survey/work-queue/results/research/attempt-6b53b1926ec03fe03eb46c7c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-6b53b1926ec03fe03eb46c7c.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.23012-moe-phds-flexible-runtime-sparsity.md`
 - **09-20 20:19:14 JST** [research] `arXiv:2511.02237` — Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining
   - job: `.survey/work-queue/jobs/job-research-67ddaa9ed58fd85b.json`
   - result: `.survey/work-queue/results/research/attempt-bd7edc3a59e4ce43ac25f884.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-d9bfe22acbd9e709c4fcf1f8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-d9bfe22acbd9e709c4fcf1f8.json`
   - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.26297-agentic-ai-workload-characteristics.md`
-- **09-20 18:37:26 JST** [research] `arXiv:2310.07177` — Online Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-3cf2e0a916913e29.json`
-  - result: `.survey/work-queue/results/research/attempt-3e00451f32958b311cdc3f3c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3e00451f32958b311cdc3f3c.json`
-  - paper: `papers/inference/05-speculative-decoding/2023-2310.07177-online-speculative-decoding.md`
 
 ### Audit
 
@@ -155,10 +155,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2509.23012` — MoE-PHDS: One MoE checkpoint for flexible runtime sparsity / worker `scheduled-chat-discovery-hourly`
-  - claim: **09-20 20:19:49 JST** / heartbeat: **—** / lease expiry: **09-20 21:49:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-95a4661f225665ff.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -178,7 +176,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **179** |
+| ready | **178** |
 
 ### 候補の重複・識別情報欠損
 
@@ -198,7 +196,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **850** |
+| inference/training/survey配下の論文Markdown実体 | **851** |
 
 ### immutable submissionの未照合
 
