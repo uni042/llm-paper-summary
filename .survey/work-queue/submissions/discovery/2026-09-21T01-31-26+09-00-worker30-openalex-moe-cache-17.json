@@ -1,0 +1,9 @@
+{
+  "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round",
+  "precheck_result_path":".survey/work-queue/discovery-precheck/results/20260921T0153JST-worker30-openalex-moe-cache-17.json","precheck_receipt":"sha256:5eafb9f7736bb7d1305d1c960a48e5ef940359457250c72c5781a2b4c924fdef",
+  "candidates":[
+    {"canonical_id":"arXiv:2606.04101","title":"UltraEP: Unleash MoE Training and Inference on Rack-Scale Nodes with Near-Optimal Load Balancing","source_url":"https://arxiv.org/abs/2606.04101","paper_path":"papers/inference/05-moe-expert-offload/2026-2606.04101-ultraep-rackscale-moe-load-balancing.md","priority":93,"reason":"rack-scale MoE training/inferenceのexpert-parallel通信とload balancingを直接扱うsystems研究で、MoE通信・配置系統に強く関連する。"},
+    {"canonical_id":"arXiv:2605.06206","title":"Federation of Experts: Communication Efficient Distributed Inference for Large Language Models","source_url":"https://arxiv.org/abs/2605.06206","paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06206-federation-of-experts-distributed-inference.md","priority":90,"reason":"expert federationによる通信効率の高い分散LLM推論を扱い、distributed inferenceとMoE communicationの接点として価値が高い。"}
+  ],"rejected_candidates":[],
+  "discovery_stats":{"run_key":"2026-09-21T01:31:26+09:00-worker30","round":"openalex-moe-cache-17","axis":"MoE expert cache placement replication prefetch LLM inference","query_summary":"MoE cache/placement/prefetch検索の未評価集合を評価し、rack-scale load balancingのUltraEPとcommunication-efficient distributed inferenceのFederation of Expertsを強い候補として選定。","candidate_count":2,"duplicate_filtered_count":0,"duplicate_canonical_ids":[],"next_axis_hint":"PD/KV networkへ進む","empty_round_reason":null}
+}
