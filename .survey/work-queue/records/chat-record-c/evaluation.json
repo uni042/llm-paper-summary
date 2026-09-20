@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4153e066ad5dce9da5473686",
+  "attempt_id": "attempt-70a666fee11f193ab86cf1e3",
   "job_id": "job-research-3ee76817e29cd5c6",
   "data": {
     "evaluation_summary": "Amazon EC2のA100-80GBクラスタとV100クラスタを各8ノード・最大64 GPUまで使い、GPT-2の隔Transformer blockをMoE化した12層/24層モデルをWikiTextで学習する。各GPUにexpert 2個を置きGPU数とexpert数を比例拡張し、weak scalingでDeepSpeed 0.5.8、Tutel 0.3、未最適化RAFとiteration timeを比較する。routing制約の違いを見るためSwitch gateとBatch Prioritized gateの双方を評価し、Tutelはpartition数1/2/4/8から最良値を採用する。",
@@ -38,7 +38,7 @@
     "gating": "Switch gateはMoE前後の計算をpipelineへ含められ、Batch Prioritized gateは主にMoE後の計算のみを含められるため、routing方式による探索範囲差も評価する。"
   },
   "reservation": {
-    "claim_id": "claim-4153e066ad5dce9da5473686",
+    "claim_id": "claim-70a666fee11f193ab86cf1e3",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

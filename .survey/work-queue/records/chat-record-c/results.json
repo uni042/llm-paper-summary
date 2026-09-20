@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4153e066ad5dce9da5473686",
+  "attempt_id": "attempt-70a666fee11f193ab86cf1e3",
   "job_id": "job-research-3ee76817e29cd5c6",
   "data": {
     "overview": "Lancetはwhole-graph重畳により、Switch gateでA100上最大1.21倍・平均1.17倍、V100上最大1.30倍・平均1.22倍の端から端高速化を比較対象に対して達成する。Batch Prioritized gateでもA100最大1.24倍・平均1.17倍、V100最大1.24倍・平均1.21倍。非重畳all-to-all時間はRAF比A100最大69%/V100最大83%、Tutel比A100最大66%/V100最大77%削減する。",
@@ -54,7 +54,7 @@
     "interpretation": "既存方式の限界はall-to-allがexpert計算より長く、expertを完全に隠しても通信が残る点にある。Lancetはforwardでは非MoE演算をpipelineへ取り込み、backwardではpartitionなしでdWを通信区間へ移すため、異なる依存関係から独立した重畳余地を足し合わせる。V100で最大利得が大きいのは通信対計算比やpartition overheadの違いで隠せる通信割合が変わるためであり、forward partitionだけでなくdW schedulingも併用する方が両model・両clusterで一貫して速い。"
   },
   "reservation": {
-    "claim_id": "claim-4153e066ad5dce9da5473686",
+    "claim_id": "claim-70a666fee11f193ab86cf1e3",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
