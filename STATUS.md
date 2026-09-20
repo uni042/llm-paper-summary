@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:36:09 JST**
+> 自動生成: **2026-09-21 05:36:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **245** |
-| 未claim Research job | **245** |
+| 収録候補論文 | **250** |
+| 未claim Research job | **250** |
 | 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（5時間47分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（5時間48分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **245** |
+| canonical_id確認済みの一意な候補論文 | **250** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **245** |
+| 非終端Research job合計 | **250** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
+| Research | **3** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **20** | **3** | **1** | **2** | **0** | **0** | **8** |
-| 合計 | **24** | **9** | **5** | **2** | **0** | **0** | **8** |
+| Discovery | **22** | **3** | **3** | **0** | **0** | **0** | **8** |
+| 合計 | **25** | **9** | **7** | **0** | **0** | **0** | **8** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,11 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-4198d6e57abb83d655f6b5bb.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-4198d6e57abb83d655f6b5bb.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md`
-- **09-20 23:36:30 JST** [research] `arXiv:2511.06494` — Route Experts by Sequence, not by Token
-  - job: `.survey/work-queue/jobs/job-research-e203c47aded67247.json`
-  - result: `.survey/work-queue/results/research/attempt-c9fddc3f170c1ce1924365e6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c9fddc3f170c1ce1924365e6.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md`
 
 ### Audit
 
@@ -94,6 +89,14 @@
   - result: `.survey/work-queue/results/20260921T0532JST-discovery-backward-01.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0532JST-discovery-backward-01.json`
   - 探索軸: repository-wide structured references for LLM inference systems
+- **09-21 05:36:10 JST** job `job-99746c3421d040c0` / 候補 **5件**
+  - result: `.survey/work-queue/results/20260921T0536JST-discovery-forward-flashattention-02.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0536JST-discovery-forward-flashattention-02.json`
+  - 探索軸: forward citations of FlashAttention for recent attention kernels and serving systems
+- **09-21 05:36:15 JST** job `job-3549744addf9ad2c` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0537JST-discovery-forward-elasticmoe-03.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0537JST-discovery-forward-elasticmoe-03.json`
+  - 探索軸: forward citations of Elastic MoE for inference-time expert scaling
 - **09-21 05:08:33 JST** job `job-8568b8b1c995b662` / 候補 **0件**
   - result: `.survey/work-queue/results/20260921T0505JST-discovery-round-01b-backward.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-01b-backward.json`
@@ -122,14 +125,6 @@
   - result: `.survey/work-queue/results/20260921T0520JST-discovery-round-07-speculative.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0520JST-discovery-round-07-speculative.json`
   - 探索軸: OpenAlex recent speculative decoding inference serving
-- **09-21 05:21:46 JST** job `job-1a356d7c46d6248e` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260921T0521JST-discovery-round-08-kv.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0521JST-discovery-round-08-kv.json`
-  - 探索軸: OpenAlex recent KV cache compression offload serving
-- **09-21 05:21:54 JST** job `job-a2ada465f9ccaf11` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0522JST-discovery-round-09-sparse.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0522JST-discovery-round-09-sparse.json`
-  - 探索軸: OpenAlex recent sparse attention inference serving
 
 ### 直近タスク
 
@@ -171,7 +166,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:29 JST**
-- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **8件**
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **3件** / 個別result照合: **3件** / 個別result未照合: **0件** / 候補: **8件**
 - 探索軸: repository-wide structured references for LLM inference systems / forward citations of FlashAttention for recent attention kernels and serving systems / forward citations of Elastic MoE for inference-time expert scaling
 - round `round-01` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260921T0532JST-discovery-backward-01.json`
@@ -180,11 +175,11 @@
 - round `round-02` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0536JST-discovery-forward-flashattention-02.json`
   - 探索軸: forward citations of FlashAttention for recent attention kernels and serving systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0536JST-discovery-forward-flashattention-02.json` (`ok=true`)
 - round `round-03` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0537JST-discovery-forward-elasticmoe-03.json`
   - 探索軸: forward citations of Elastic MoE for inference-time expert scaling
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0537JST-discovery-forward-elasticmoe-03.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -211,7 +206,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **245** |
+| ready | **250** |
 
 ### 候補の重複・識別情報欠損
 
@@ -239,10 +234,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **911** |
+| 成功result未照合のimmutable submission | **909** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **197** |
+| └ Discovery | **195** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
