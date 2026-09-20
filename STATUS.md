@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 16:33:59 JST**
+> 自動生成: **2026-09-20 16:34:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **114** |
 | 未claim Research job | **112** |
 | 直近24hの検証済みResearch収録 | **70** |
-| 最終検証済みResearch収録 | **09-20 16:30:16 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-20 16:30:16 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **34** | **4** | **4** | **0** | **2** | **1** | — |
+| Research | **34** | **1** | **0** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **34** | **5** | **5** | **0** | **2** | **1** | **5** |
+| 合計 | **34** | **2** | **1** | **0** | **2** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -126,32 +126,14 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-20 15:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **4件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
-- **成功** `arXiv:2503.06823` — eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference
-  - job: `.survey/work-queue/jobs/job-research-bb33e470bd8a5f8f.json`
-  - result: `.survey/work-queue/results/research/attempt-01cbf1c46fe8f68f25b18de7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-01cbf1c46fe8f68f25b18de7.json`
-  - paper: `papers/inference/06-moe-expert-offloading/2025-2503.06823-emoe.md`
-- **成功** `DOI:10.18653/v1/2026.findings-acl.2153` — SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences
-  - job: `.survey/work-queue/jobs/job-research-264bf27e36d7341a.json`
-  - result: `.survey/work-queue/results/research/attempt-53c9640aa2c8756a83217d2e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-53c9640aa2c8756a83217d2e.json`
-  - paper: `papers/inference/05-speculative-decoding/2026-specextend.md`
-- **成功** `DOI:10.18653/v1/2026.findings-acl.494` — OjaKV: Context-Aware Online Low-Rank KV Cache Compression
-  - job: `.survey/work-queue/jobs/job-research-18c89b68d0c6c10d.json`
-  - result: `.survey/work-queue/results/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c9c4d6d6478bfe538fe0a2c9.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md`
-- **成功** `arXiv:2408.10284` — AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference
-  - job: `.survey/work-queue/jobs/job-research-4892de26a5d749a2.json`
-  - result: `.survey/work-queue/results/research/attempt-f2e51bafaabacfadeaecc0ee.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f2e51bafaabacfadeaecc0ee.json`
-  - paper: `papers/inference/06-moe-expert-offloading/2024-2408.10284-adapmoe.md`
+- 最新観測run: **2026-09-20 16:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-58fed7e57ba9f56b62bd697a.json` (job `job-research-9c3fc1bfa46c87d0`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-58fed7e57ba9f56b62bd697a.json` (`ok=false`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-20 15:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 16:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -223,8 +205,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **741** |
-| └ Research | **555** |
+| 成功result未照合のimmutable submission | **742** |
+| └ Research | **556** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
