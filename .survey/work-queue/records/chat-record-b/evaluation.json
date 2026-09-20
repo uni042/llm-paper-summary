@@ -2,42 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-26cd74667eb00ab5badaabeb",
-  "job_id": "job-research-53d31e41c03b4f2d",
-  "data": {
-    "hardware": "異種GPUの実機2ノード構成。NVIDIA A100 80GB（メモリ帯域2039GB/s、FP16/BF16 Tensor Core 624TFLOPS）とNVIDIA L40S 48GB（メモリ帯域864GB/s、FP16/BF16 Tensor Core 733TFLOPS）をInfiniBandで接続し、NCCLによるGPU間通信を使用する。",
-    "software": "vLLMを基盤にPipeLiveを実装し、2段のパイプライン並列で動的再構成を評価する。KV移動は専用NCCL通信グループと低優先度CUDAストリームを用いる。",
-    "models": [
-      "Llama 3-70B",
-      "Qwen3-30B"
-    ],
-    "workloads": [
-      "プリフィル重視: 平均入力512トークン・出力16トークン",
-      "デコード重視: 平均入力128トークン・出力512トークン",
-      "両パターンを切り替える200リクエストの混合ベンチマーク"
-    ],
-    "baselines": [
-      "プリフィル最適の静的PP構成",
-      "デコード最適の静的PP構成",
-      "両ワークロードを均衡させた静的PP構成",
-      "KV容量変更を無効化したPipeLive",
-      "KV差分パッチを無効化したPipeLive",
-      "非同期重み読込みとKV差分パッチを無効化した同期型変種"
-    ],
-    "metrics": [
-      "先頭トークン遅延（TTFT）",
-      "出力トークン当たり遅延（TPOT）",
-      "総トークンスループット",
-      "三指標を等重みで正規化した総合性能値",
-      "再構成時の停止時間",
-      "移動総時間",
-      "有効KVメモリ利用率"
-    ],
-    "methodology": "A100とL40S上で実行可能なパイプライン並列配置を2層粒度で事前計測し、プリフィル重視とデコード重視それぞれの最適配置を求める。混合ベンチマークではワークロードパターンを切り替え、その都度対応する最適配置へPipeLiveで再構成する。高負荷条件としてLlama 3-70Bは毎秒3要求、Qwen3-30Bは毎秒5要求を用い、静的配置とのエンドツーエンド差を測る。さらにKV容量変更、レイヤースタッキング数、KV差分パッチ、非同期重み読込みを個別に無効化し、各機構の寄与を分離する。",
-    "scope": "評価は1基のA100と1基のL40Sからなる2段パイプライン並列の実機環境に限定される。異種GPUでワークロード依存の最適配置が変わる状況を強く意識した評価であり、多数GPU、多段パイプライン、同種GPU大規模クラスタ、複数モデル同時運用への一般化は直接測定していない。再構成の発火時刻や最適目標配置を決める上位制御も評価対象外で、既知の目標構成へ安全に切り替える機構を評価している。"
-  },
+  "attempt_id": "attempt-424d7c9bd547a6273a4b2a1c",
+  "job_id": "job-research-d9598f14ff4bcd81",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-26cd74667eb00ab5badaabeb",
+    "claim_id": "claim-424d7c9bd547a6273a4b2a1c",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
