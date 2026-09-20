@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-c9c4d6d6478bfe538fe0a2c9","job_id":"job-research-18c89b68d0c6c10d","data":{"canonical_id":"DOI:10.18653/v1/2026.findings-acl.494","arxiv_id":null,"doi":"10.18653/v1/2026.findings-acl.494","title":"OjaKV: Context-Aware Online Low-Rank KV Cache Compression","authors":["Yuxuan Zhu","David H. Yang","Mohammad Mohammadi Amiri","Keerthiram Murugesan","Tejaswini Pedapati","Pin-Yu Chen"],"list_summary":"重要トークンをフルランク保持し、残りのKVキャッシュをOja則で文脈適応する低ランク部分空間へ圧縮して長文生成時の分布変化へ追随する。","summary":"OjaKVは長文LLM推論のKVキャッシュを低ランク圧縮する際、静的な校正データ由来部分空間が会話・コード・長期推論などの分布変化で崩れる問題を扱う。再構成誤差と直近注意を用いて圧縮に弱い重要トークンだけをフルランク保持し、大多数の中間トークンは低ランク表現で保存する。射影基底はprefillでまとめて更新し、decode中は一定間隔でバッファをOja則により軽量更新して現在文脈の主成分へ追随する。FlashAttention互換の再構成経路を持ち、RULER・LongBench・AIME2025で静的低ランク法を上回る。","source":"https://aclanthology.org/2026.findings-acl.494/","sources":["https://aclanthology.org/2026.findings-acl.494/","https://aclanthology.org/2026.findings-acl.494.pdf"],"code":"https://github.com/zzbright1998/OjaKV","publication":"Findings of ACL 2026","publication_type":"conference","published":"2026-07-02","publication_status":"published","arxiv_categories":{"primary":null,"cross_list":[]},"topics":["KVキャッシュ圧縮","低ランク近似","オンラインPCA","長文推論","FlashAttention"],"implementation":"著者コード公開。圧縮KVを注意計算直前にフル次元へ再構成してFlashAttentionへ渡し、prefillとdecodeでOja則による基底更新を行う。","hardware_evaluation":"NVIDIA H100 GPU上でLlama-2-7B、Llama-3.1-8B、LongChat-7b-v1.5-32k、DeepSeek-R1-Distill-Llama3-8B等を評価。","quality_effect":"0.8x/0.6xキャッシュ予算で静的PCAより長文検索・生成・推論精度を大幅に維持。lm-evalでは0.6xでもLlama-3.1-8B平均69.18%でFull KV 69.34%に近い。","last_checked":"2026-09-20","references_checked_at":"2026-09-20","references_source":"ACL Anthology PDF reference section; normalized subset recorded","references_total":1,"references":[{"canonical_id":"arXiv:2402.14261","arxiv_id":"2402.14261"}]},"reservation":{"claim_id":"claim-c9c4d6d6478bfe538fe0a2c9","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-6868419a4cc373f656554634",
+  "job_id": "job-research-264bf27e36d7341a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6868419a4cc373f656554634",
+    "worker_id": "scheduled-chat-llm-survey-01",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c9c4d6d6478bfe538fe0a2c9",
-  "job_id": "job-research-18c89b68d0c6c10d",
-  "data": {
-    "overview": "OjaKVは静的低ランク基底が崩れやすい長文・非定常生成ほど効果が大きい。RULER 16Kでは0.6x cacheでStaticPCA平均23.44%に対し39.99%、prefillフルランク版は50.7%。AIME2025では静的圧縮群が0%になる中で13%を維持する。一般多肢選択では0.6xでもFull KVとほぼ同等の平均精度を保つ一方、オンライン更新によりdecode遅延は約10.9～13.4%増える。",
-    "key_results": [
-      {
-        "metric": "RULER平均精度",
-        "value": "39.99%（OjaKV）、50.7%（OjaKV-PF）",
-        "baseline": "StaticPCA 23.44%、Full KV 74%",
-        "condition": "LongChat-7b-v1.5-32k、16K入力、0.6x cache",
-        "interpretation": "長文検索では混合保存と適応基底が静的低ランクより大幅に情報保持を改善する。"
-      },
-      {
-        "metric": "AIME2025精度",
-        "value": "13.0%",
-        "baseline": "Eigen-N/StaticPCA/Paluはいずれも0%、Vanilla 43.3%",
-        "condition": "DeepSeek-R1-Distill-Llama3-8B、長いdecode推論",
-        "interpretation": "生成中に意味分布が継続変化する推論では静的基底が完全崩壊する一方、オンライン追随は意味のある推論能力を残す。"
-      },
-      {
-        "metric": "lm-eval平均精度",
-        "value": "Llama-3.1-8Bで69.18%",
-        "baseline": "Full KV 69.34%、StaticPCA 66.18%",
-        "condition": "0.6x圧縮、WinoG/PiQA/HellaS/ARC-e/ARC-c",
-        "interpretation": "一般タスクでは40%のcache削減でもほぼ非圧縮精度を維持できる。"
-      },
-      {
-        "metric": "32K KVメモリ",
-        "value": "11.6GB",
-        "baseline": "Full KV 16GB",
-        "condition": "Llama-3.1-8B-Instruct、32K、論文表記60% compression設定",
-        "interpretation": "長文入力で主要ボトルネックとなるKV容量を4.4GB削減する。"
-      },
-      {
-        "metric": "decode遅延",
-        "value": "40.44～41.38 ms/token",
-        "baseline": "Full KV 36.48、StaticPCA 36.60 ms/token",
-        "condition": "Oja更新間隔T=64～256",
-        "interpretation": "オンライン適応は10.9～13.4%の計算オーバーヘッドを持ち、Tを広げるほど軽くなる。"
-      }
-    ],
-    "negative_results": "OjaKVはメモリ削減と品質を改善するが、32KのTTFTはFull KV 2102msから2801msへ増える。AIME2025も13%でVanilla 43.3%には大きく届かず、低ランク圧縮自体の限界は残る。LongBenchではRULERほど差が大きくなく、安定した長文理解では静的基底でも相対的に崩れにくい。固定間隔Oja更新は不要な位置でも計算する可能性があり、著者も再構成誤差スパイクに基づく動的更新を今後の課題とする。",
-    "interpretation": "アブレーションではStaticPCA平均38.9%からHybrid Storageだけで57%、さらにOnline Ojaを加えると60%となり、最大の寄与は高誤差トークンをフルランク保持する混合保存にある。その上でオンライン更新が分布変化の大きい長期decodeで追加効果を与える。したがってOjaKVの強みは単なるオンラインPCAではなく、圧縮に不向きな外れトークンをアンカーとして残し、残りの低ランク部分だけを適応させる分業にある。",
-    "quality_impact": "0.6x圧縮でもLlama-3.1-8Bのlm-eval平均69.18%はFull KV 69.34%に近い。LongBenchではLlama-3.1-8B 0.6xでStaticPCA 15.70に対しOjaKV 20.66、OjaKV-PF 28.46。RULERとAIMEのような長期・非定常文脈で改善幅が特に大きい。"
-  },
+  "attempt_id": "attempt-6868419a4cc373f656554634",
+  "job_id": "job-research-264bf27e36d7341a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c9c4d6d6478bfe538fe0a2c9",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-6868419a4cc373f656554634",
+    "worker_id": "scheduled-chat-llm-survey-01",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c9c4d6d6478bfe538fe0a2c9",
-  "job_id": "job-research-18c89b68d0c6c10d",
-  "data": {
-    "hardware": "主要実験はNVIDIA H100 GPU。Llama-3.1-8B-Instructの8K～32K効率測定ではKVメモリと最初のトークンまでの時間（TTFT）、decode ms/tokenを測定する。",
-    "software": "Llama-2-7B、Llama-3.1-8B、RULER用LongChat-7b-v1.5-32k、AIME2025用DeepSeek-R1-Distill-Llama3-8Bを使用。比較対象はFull KV、Eigen-N、StaticPCA、Palu。OjaKVとprefillをフルランク化したOjaKV-PFを評価し、FlashAttention互換再構成を使う。",
-    "methodology": "RULERでは16K入力でFull、0.8x、0.6xのcache予算を比較する。LongBenchでは単一/複数文書QA、few-shot、synthetic、codeなどをLlama-2-7BとLlama-3.1-8Bで評価する。AIME2025では長い推論生成を伴う蒸留R1モデルを用い、promptはフルランク保持しdecode生成の大半を圧縮する。補助的にlm-eval-harnessのWinoGrande、PiQA、HellaSwag、ARC-easy/challengeを測る。効率では32KまでのTTFT・GPUメモリ、更新間隔T=64/128/256のdecode遅延を測り、アブレーションでStaticPCA→Hybrid Storage→Hybrid+Onlineの寄与を分離する。",
-    "scope": "長文検索、長文理解、数学推論、一般多肢選択まで広く評価する一方、GPUはH100中心であり、低帯域GPUやCPUオフロード環境は対象外。0.8x/0.6xという低ランクcache比率が中心で、量子化との統合性能は主要表で測らない。実装は固定学習率、更新間隔、バッファ長、top-kを使い、モデルやタスクごとの自動調整は今後の課題とされる。"
-  },
+  "attempt_id": "attempt-6868419a4cc373f656554634",
+  "job_id": "job-research-264bf27e36d7341a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c9c4d6d6478bfe538fe0a2c9",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-6868419a4cc373f656554634",
+    "worker_id": "scheduled-chat-llm-survey-01",
     "worker_kind": "scheduled_chat"
   }
 }
