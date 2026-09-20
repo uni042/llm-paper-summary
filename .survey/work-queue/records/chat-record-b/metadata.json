@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-aa5fee4140884cdeb790c49e",
-  "job_id": "job-research-710ff1d6feeafd76",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-aa5fee4140884cdeb790c49e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-aa5fee4140884cdeb790c49e","job_id":"job-research-710ff1d6feeafd76","data":{"canonical_id":"arXiv:2006.16668","arxiv_id":"2006.16668","doi":"10.48550/arXiv.2006.16668","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.LG","stat.ML"]},"title":"GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding","summary":"GShardは、巨大ニューラルネットワークのモデル記述と並列化実装を分離し、少数のテンソル分割注釈からXLAコンパイラが単一プログラム複数データ方式の分割と通信を自動生成する仕組みである。これを各トークンが少数エキスパートだけを使う疎な混合専門家Transformerと組み合わせ、モデル容量を増やしても1トークン当たり計算と端末当たりメモリの増加を抑える。2048 TPU v3上で6000億パラメータの100言語→英語翻訳モデルを4日で学習し、密モデルより大幅に低い学習費用で高い翻訳品質を示した。","list_summary":"疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。","authors":["Dmitry Lepikhin","HyoukJoong Lee","Yuanzhong Xu","Dehao Chen","Orhan Firat","Yanping Huang","Maxim Krikun","Noam Shazeer","Zhifeng Chen"],"published":"2020-06-30","publication":"arXiv:2006.16668","publication_type":"Preprint","publication_status":"Preprint","lineage":"分散学習 / 混合専門家モデル / 自動シャーディング / SPMD","topics":["混合専門家モデル","条件付き計算","自動シャーディング","SPMD並列化","大規模分散学習"],"importance":"後続の大規模MoE学習を支える代表的な基礎研究で、条件付き計算による容量拡張とコンパイラ主導の自動分割を一体化した。","hardware_evaluation":"最大2048 TPU v3コア。600Bモデルは2048コアで4日、性能評価は128〜2048コアを中心に通信・メモリ・実行時間を測定。","quality_effect":"100言語から英語への翻訳で、単一多言語MoEモデルが二言語別モデル群および密な96層Transformerより高い平均BLEUを達成。600Bモデルの平均BLEUは44.3。","source":"https://arxiv.org/abs/2006.16668","sources":["https://arxiv.org/abs/2006.16668","https://arxiv.org/pdf/2006.16668"],"implementation":"TensorFlow上の軽量な分割注釈APIとXLAのSPMD分割拡張。注釈を伝播し、必要なAllReduce、AllToAll、AllGather、CollectivePermute等の通信をコンパイラが挿入する。","code":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":87},"reservation":{"claim_id":"claim-aa5fee4140884cdeb790c49e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
