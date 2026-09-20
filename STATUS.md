@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:41:18 JST**
+> 自動生成: **2026-09-20 18:41:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **100** |
+| 収録候補論文 | **99** |
 | 未claim Research job | **99** |
-| 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-20 18:37:26 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **82** |
+| 最終検証済みResearch収録 | **09-20 18:41:27 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **100** |
+| canonical_id確認済みの一意な候補論文 | **99** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **100** |
+| 非終端Research job合計 | **99** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **4** | **3** | **1** | **1** | **0** | — |
+| Research | **38** | **4** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **5** | **4** | **1** | **1** | **0** | **5** |
+| 合計 | **38** | **5** | **5** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 18:41:27 JST** [research] `arXiv:2605.26297` — Agentic AI Workload Characteristics
+  - job: `.survey/work-queue/jobs/job-research-b8f01545319d9604.json`
+  - result: `.survey/work-queue/results/research/attempt-d9bfe22acbd9e709c4fcf1f8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d9bfe22acbd9e709c4fcf1f8.json`
+  - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.26297-agentic-ai-workload-characteristics.md`
 - **09-20 18:37:26 JST** [research] `arXiv:2310.07177` — Online Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-3cf2e0a916913e29.json`
   - result: `.survey/work-queue/results/research/attempt-3e00451f32958b311cdc3f3c.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-57d5d091923e08545a3ff388.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-57d5d091923e08545a3ff388.json`
   - paper: `papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md`
-- **09-20 17:07:45 JST** [research] `arXiv:2504.19442` — Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler
-  - job: `.survey/work-queue/jobs/job-research-27175547de1e3880.json`
-  - result: `.survey/work-queue/results/research/attempt-82f210d05fe49128bf6c17e8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-82f210d05fe49128bf6c17e8.json`
-  - paper: `papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md`
 
 ### Audit
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **4件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -138,7 +138,11 @@
   - result: `.survey/work-queue/results/research/attempt-3e00451f32958b311cdc3f3c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3e00451f32958b311cdc3f3c.json`
   - paper: `papers/inference/05-speculative-decoding/2023-2310.07177-online-speculative-decoding.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-d9bfe22acbd9e709c4fcf1f8.json` (job `job-research-b8f01545319d9604`)
+- **成功** `arXiv:2605.26297` — Agentic AI Workload Characteristics
+  - job: `.survey/work-queue/jobs/job-research-b8f01545319d9604.json`
+  - result: `.survey/work-queue/results/research/attempt-d9bfe22acbd9e709c4fcf1f8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d9bfe22acbd9e709c4fcf1f8.json`
+  - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.26297-agentic-ai-workload-characteristics.md`
 - **成功** `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion
   - job: `.survey/work-queue/jobs/job-research-7975c226ad04d80a.json`
   - result: `.survey/work-queue/results/research/attempt-da2aebbde976d20453f0ceeb.json` (`ok=true`)
@@ -165,10 +169,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.26297` — Agentic AI Workload Characteristics / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:40:26 JST** / heartbeat: **—** / lease expiry: **09-20 20:10:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b8f01545319d9604.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -188,7 +190,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **100** |
+| ready | **99** |
 
 ### 候補の重複・識別情報欠損
 
@@ -208,7 +210,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **835** |
+| inference/training/survey配下の論文Markdown実体 | **836** |
 
 ### immutable submissionの未照合
 
@@ -216,8 +218,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **759** |
-| └ Research | **573** |
+| 成功result未照合のimmutable submission | **758** |
+| └ Research | **572** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
