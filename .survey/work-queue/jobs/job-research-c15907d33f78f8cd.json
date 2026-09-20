@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-c15907d33f78f8cd",
+  "type": "research",
+  "parent_job_id": "job-2fef032c4dc8c67d",
+  "priority": 98,
+  "canonical_id": "arXiv:2609.12412",
+  "arxiv_id": "2609.12412",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+  "source_url": "https://www.semanticscholar.org/paper/5fedeb84be4240c6c87fa5e311714720f66491e8",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md",
+  "selection_reason": "20 model×7 device×3 quantization×8 backendをaccuracy/latency/energyで横断測定するdeployment toolkit。低bit hardware supportの有無でlatency効果が変わる点も定量化。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:23:26+00:00"
+}

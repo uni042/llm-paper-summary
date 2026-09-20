@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-ff7167d92a15ba4e",
+  "type": "research",
+  "parent_job_id": "job-2fef032c4dc8c67d",
+  "priority": 100,
+  "canonical_id": "arXiv:2609.16338",
+  "arxiv_id": "2609.16338",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+  "source_url": "https://www.semanticscholar.org/paper/b1ee259c114b4150ed5f6d2645d3d0d1a90c55a7",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.16338-breaking-the-1-58-bit-barrier-for-ternary-llms.md",
+  "selection_reason": "29 ternary LLMのzero densityを利用するBITCOS layoutとAVX/Xe2 unpackingを実装し、1.485 bit/weight、kernel最大1.28倍、end-to-end decode最大1.27倍を実測。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T22:23:26+00:00"
+}
