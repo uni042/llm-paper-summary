@@ -2,44 +2,49 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-89bc644c23d78357d6c68f4d",
-  "job_id": "job-research-e405cf8340f00512",
+  "attempt_id": "attempt-bdf0c488544312e64b741a67",
+  "job_id": "job-research-be4feb2ff4a84f5b",
   "data": {
-    "canonical_id": "arXiv:2503.20552",
-    "arxiv_id": "2503.20552",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.LG"]},
-    "title": "Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation",
-    "summary": "プリフィルとデコードを別GPU群へ分離するLLM配信では、プリフィル側は計算資源を使う一方でHBM容量・帯域が余り、デコード側はKVキャッシュでHBMを圧迫する一方で計算器が余る。Adrenalineはデコード中のメモリ律速な注意計算だけをプリフィルGPUへ移し、両側の余剰資源を相互補完する。層ごとの往復通信を局所注意と重ねる低遅延同期、MPSによる計算資源分割、実行時負荷とサービス品質目標に基づく動的オフロード判定を組み合わせる。8台A100環境のLlama-2 7B/13B評価では、プリフィル側のHBM利用とデコード側の計算利用を高め、vLLMに対して出力トークンスループットを最大1.68倍へ改善した。",
-    "list_summary": "デコード注意をプリフィルGPUの余剰HBMへ動的に移し、低遅延同期・GPU資源分割・負荷連動制御で分離配信の資源偏りを解消する。",
-    "authors": ["Yunkai Liang", "Zhangyu Chen", "Pengfei Zuo", "Zhi Zhou", "Xu Chen", "Zhou Yu"],
-    "authors_affiliations": "Sun Yat-sen University; Huawei Cloud",
-    "published": "2025-03-26",
-    "publication": "arXiv preprint arXiv:2503.20552",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "prefill-decode disaggregation / attention offloading / LLM serving",
-    "topics": ["プリフィル・デコード分離", "注意計算オフロード", "GPU資源共有", "LLM配信スケジューリング"],
-    "importance": "プリフィル・デコード分離後に生じる相補的なGPU資源余剰を、デコード注意の移動で再結合する配信システム。追加GPUなしでクラスタ利用率を上げる点が重要。",
-    "hardware_evaluation": "8台のNVIDIA A100-80GB SXM GPUを600 GB/s NVLinkで接続した単一高性能サーバ上で評価。Llama-2 7B/13Bをfloat16で実行。",
-    "quality_effect": "モデル計算の近似や重み変更は行わず、注意計算の実行場所を変える方式であるため、生成品質そのものは原理上変更しない。主評価はTTFT、TPOT、P99 TPOT、スループット、資源利用率。",
-    "source": "https://arxiv.org/pdf/2503.20552",
-    "sources": ["https://arxiv.org/abs/2503.20552", "https://asisys.github.io/projects/2025-07-08-adrenaline/"],
-    "code": "https://github.com/ASISys/Adrenaline",
-    "implementation": "vLLM 0.6.3を基盤に実装。CUDA Graphで実行系列を捕捉し、NVIDIA MPSでプリフィルと遠隔注意実行器のSM資源を分割する。公式コードがApache-2.0で公開されている。",
-    "last_checked": "2026-09-20",
-    "storage_targets": [],
-    "bottlenecks": ["デコードGPUのHBM容量・帯域", "プリフィルGPUの未使用HBM", "層ごとの遠隔注意同期", "固定オフロード率の負荷不整合"],
-    "hardware_details": "プリフィル側とデコード側のGPU群を分け、プリフィル側に注意実行器を併置する。GPU間転送は高帯域相互接続を前提とする。",
-    "evidence_locations": ["§2.3-2.4", "§3.2-3.4", "§4.1-4.3"],
-    "references": [
-      {"canonical_id": "arXiv:2405.01814", "arxiv_id": "2405.01814", "title": "Efficient and Economic Large Language Model Inference with Attention Offloading"},
-      {"canonical_id": "doi:10.1145/3600006.3613165", "doi": "10.1145/3600006.3613165", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"}
+    "canonical_id": "arXiv:2405.03917",
+    "title": "KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization",
+    "list_summary": "鍵値活性のチャネル間依存を利用して複数チャネルを共同量子化し、極低ビットでも品質劣化を抑える連結量子化を提案する。",
+    "summary": "連結量子化（Coupled Quantization; CQ）は、鍵値活性埋め込みの異なるチャネルが強く依存し、複数チャネルの同時エントロピーが周辺エントロピー総和より遅く増える観測を利用する。連続チャネルを群に分け、各群を多次元重心へ共同量子化することで、独立なチャネル単位量子化より情報効率を高める。さらにフィッシャー情報行列の対角近似で重要活性を重み付けした重心学習を導入する。5モデル、WikiText-2、C4、WinoGrande、PIQA、ARC Challengeで評価し、特に1〜2ビットで既存の密量子化を大幅に上回り、1ビットでも実用的な品質を維持した。",
+    "source": "https://arxiv.org/html/2405.03917",
+    "sources": [
+      "https://arxiv.org/abs/2405.03917",
+      "https://arxiv.org/html/2405.03917"
     ],
+    "authors": [
+      "Tianyi Zhang",
+      "Jonah Yi",
+      "Zhaozhuo Xu",
+      "Anshumali Shrivastava"
+    ],
+    "published": "2024-05-07",
+    "publication": "arXiv preprint",
+    "publication_type": "preprint",
+    "publication_status": "preprint",
+    "primary_category": "cs.LG",
+    "cross_list_categories": [],
+    "topics": [
+      "鍵値キャッシュ量子化",
+      "連結量子化",
+      "チャネル間依存",
+      "フィッシャー誘導重心学習"
+    ],
+    "implementation": "論文はPyTorchとHuggingFace Transformersに基づく実装で評価している。本文で公式コード公開先は確認できない。",
+    "code": null,
+    "last_checked": "2026-09-20",
+    "hardware_evaluation": "Ubuntu 20.04、AMD EPYC 7742 CPU 2基、1.5TB RAM、NVIDIA A100 40GB GPU 4基のサーバで評価。重心学習は単一GPUで実施。",
+    "quality_effect": "近似量子化であり完全無損失ではない。4ビットではFP16に近く、1〜2ビットでは従来の密量子化より大幅に品質を保つが、1ビットではFP16との差が残る。",
+    "references": [],
     "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 32
+    "references_source": "arXiv v1 full-text reference section",
+    "references_total": 37
   },
-  "reservation": {"claim_id": "claim-89bc644c23d78357d6c68f4d", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bdf0c488544312e64b741a67",
+    "worker_id": "scheduled-chat-discovery-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }
