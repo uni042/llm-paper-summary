@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.09603",
+      "arxiv_id": "2604.09603",
+      "title": "ECHO: Elastic Speculative Decoding with Sparse Gating for High-Concurrency Scenarios",
+      "source_url": "https://arxiv.org/abs/2604.09603",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2604.09603-echo.md",
+      "priority": 97,
+      "reason": "SGLang-integrated speculative-decoding serving framework that dynamically allocates verification budget across batch depth/width for high-concurrency regimes."
+    },
+    {
+      "canonical_id": "arXiv:2604.12171",
+      "arxiv_id": "2604.12171",
+      "title": "PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.12171",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.12171-pipelive.md",
+      "priority": 98,
+      "reason": "Focused serving system enabling live pipeline-parallel reconfiguration through live KV resizing and incremental KV patching without service interruption."
+    },
+    {
+      "canonical_id": "arXiv:2605.18810",
+      "arxiv_id": "2605.18810",
+      "title": "D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting",
+      "source_url": "https://arxiv.org/abs/2605.18810",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2605.18810-d-pace.md",
+      "priority": 92,
+      "reason": "Speculative-drafting training method directly optimizing accepted draft length and measured wall-clock inference speed across multiple targets and workloads."
+    },
+    {
+      "canonical_id": "arXiv:2605.26297",
+      "arxiv_id": "2605.26297",
+      "title": "Agentic AI Workload Characteristics",
+      "source_url": "https://arxiv.org/abs/2605.26297",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2026-2605.26297-agentic-ai-workload-characteristics.md",
+      "priority": 93,
+      "reason": "End-to-end serving/tool-execution characterization showing persistent KV state, repeated model re-entry, and decode-dominated behavior unique to agentic workloads."
+    },
+    {
+      "canonical_id": "arXiv:2605.29343",
+      "arxiv_id": "2605.29343",
+      "title": "Draft-OPD: On-Policy Distillation for Speculative Draft Models",
+      "source_url": "https://arxiv.org/abs/2605.29343",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2605.29343-draft-opd.md",
+      "priority": 94,
+      "reason": "On-policy distillation approach for speculative drafters that targets draft-induced errors and reports material lossless inference acceleration gains."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920-offset1000",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920-offset1000.json",
+    "receipt": "sha256:cac39d8568fc9817fa2f84d4cc67ce7cbb64f79eaea1a00473dd25141f0f790b"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20-offset1000",
+    "round": "refcuration-stress-20260920-offset1000-a",
+    "axis": "structured references stress probe at raw offset 1000",
+    "query_summary": "Evaluated a 20-record structured-reference sample at relation_count≈2. Recent 2026 papers were verified against primary sources; generic scheduling, application surveys, benchmarks, and historical background references were classified out.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2604.09603",
+      "arXiv:2604.12171",
+      "arXiv:2605.18810",
+      "arXiv:2605.26297",
+      "arXiv:2605.29343"
+    ],
+    "next_axis_hint": "Low-relation references still contain strong recent systems papers; continue structured-reference exploration rather than falling back to ordinary search."
+  }
+}
