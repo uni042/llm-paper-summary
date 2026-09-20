@@ -1,0 +1,21 @@
+{
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {"title":"Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache","source_url":"https://arxiv.org/abs/2609.15030","canonical_id":"arXiv:2609.15030","arxiv_id":"2609.15030","year":2026,"published":"2026-09-14","reason":"Very recent direct systems validation of hybrid-state cache recovery using vLLM and LMCache; directly relevant to inference cache/offload infrastructure.","priority":95},
+    {"title":"LayerRoute: Adaptive Layer-Skipping with LoRA-Preserved Quality for Efficient LLM Inference","source_url":"https://arxiv.org/abs/2609.13682","canonical_id":"arXiv:2609.13682","arxiv_id":"2609.13682","year":2026,"published":"2026-09-12","reason":"Very recent adaptive-computation inference work using layer skipping with quality preservation; directly aligned with efficient LLM inference.","priority":94},
+    {"title":"Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training","source_url":"https://arxiv.org/abs/2609.07108","canonical_id":"arXiv:2609.07108","arxiv_id":"2609.07108","year":2026,"published":"2026-09-07","reason":"Very recent speculative-decoding work coupling draft adaptation with large-scale long-context execution; relevant to draft/verification efficiency and serving throughput.","priority":92}
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-21T04:30:00+09:00",
+    "round": "round-05",
+    "axis": "recent speculative decoding draft verification parallel decoding LLM inference systems",
+    "trigger": "scheduled_worker",
+    "evaluated_count": 20,
+    "selected_count": 3
+  },
+  "discovery_precheck": {
+    "request_id": "20260921T0430JST-scheduled-search-speculative-07",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260921T0430JST-scheduled-search-speculative-07.json",
+    "receipt": "sha256:522911b380ad5193638b588b6d8269ec8f3a504ff7fdecb3c732e9963098362c"
+  }
+}
