@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-36a9cdcc5175155fa19ebfd4","job_id":"job-research-3f4b0e4a187439dd","data":{"overview":"同じ総KV budgetでもhead間を適応配分するとSnapKV/Pyramidの品質が一貫して改善し、特に将来質問を圧縮時に使えないquestion-agnostic条件で差が大きい。Llama-3.1-8BのRulerではSnapKVの80%/20% cache score 87.59/44.02をAda-SnapKVが92.67/53.29へ改善し、難しいneedle検索では80% budgetで62.4→97.6、85.2→99.6という大幅改善を示す。LongBenchでも16 datasetで各budgetのbase methodを上回り、variable-length実装によりmemory/latencyは元SnapKVと同程度を維持する。","key_results":[{"metric":"Ruler平均score","value":"87.59→92.67（80% cache）、44.02→53.29（20% cache）","baseline":"SnapKV","condition":"Llama-3.1-8B-Instruct、question-agnostic","interpretation":"同一総cache量でも、将来質問を知らない厳しい条件でhead-wise adaptive allocationが保持情報量を改善する。"},{"metric":"S-NIAH-3","value":"62.4→97.6","baseline":"SnapKV","condition":"Llama-3.1-8B-Instruct、question-agnostic、80% cache","interpretation":"均等配分で重要位置を失う分散headへbudgetを移す効果が難しい検索タスクで顕著に出た。"},{"metric":"MK-NIAH-2","value":"85.2→99.6","baseline":"SnapKV","condition":"Llama-3.1-8B-Instruct、question-agnostic、80% cache","interpretation":"複数key検索でもほぼlossless水準へ回復した。"},{"metric":"LongBench Llama-3.1-70B average","value":"20%: 44.95→46.08、40%: 48.91→49.64","baseline":"SnapKV","condition":"question-agnostic ratio budget","interpretation":"8Bだけでなく70BでもCode以外の主要domainで改善が再現した。"},{"metric":"計算効率","value":"peak memoryとdecoding latencyがSnapKVと同程度","baseline":"SnapKV","condition":"budget 1024、FlashAttention-2、8K〜448K context","interpretation":"可変head長をflattened layoutとCUDA kernelで扱うことで品質改善のためのpadding/計算overheadを抑えた。"}],"negative_results":"question-agnostic化すると全eviction法で品質が下がり、Llama・budget 2048のSnapKVはLongBench平均49.09から42.86へ低下する。Ada-KVはこの低下を緩和するが完全には消さない。LongBenchのCode domainは圧縮への感度が低く、adaptive allocationが常に元SnapKVより高いわけではない。理論的に最小化するのはeviction lossの上界であり、上界が小さいこと自体は実損失や最終品質の厳密保証ではない。","interpretation":"改善源は新たなcache量ではなく、同じbudgetをattention集中度に合わせてhead間移動することにある。sparse headでは少数KVでattention massをほぼ保持できるため、余剰枠をdispersionの大きいheadへ渡すと層全体の保持attention massが増える。question-agnostic条件ほど重要位置推定が難しいため、budget浪費を減らす効果が大きくなる。","quality_impact":"Ada-KV自体は既存lossy evictionのbudget allocationを改善する層であり、full cacheとの差を縮める方向に働く。低budgetでは依然品質低下が残るため、完全KVと同等性を保証する手法ではない。"},"reservation":{"claim_id":"claim-36a9cdcc5175155fa19ebfd4","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-b4be6a1ab5725fa47fd44d34",
+  "job_id": "job-research-9d57d4c95ee33e52",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b4be6a1ab5725fa47fd44d34",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
