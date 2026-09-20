@@ -1,55 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-eda6a759c3d074c07a647fb0",
-  "job_id": "job-research-765eee68b506c6ff",
-  "data": {
-    "overview": "REALは特に厳しいKV予算で既存方式との差を広げ、予算が増えるにつれて差が縮む。これは、メモリが不足するほどヘッド間で容量を一律配分する損失が大きくなり、失敗挙動まで見た重要度配分の価値が高まることを示す。質問既知・質問未知の両条件で改善し、圧縮後の先頭トークン遅延もFull-KVに近い。",
-    "key_results": [
-      {
-        "metric": "Full-KV比精度",
-        "value": "約98%",
-        "baseline": "Full-KV",
-        "condition": "Llama-3-8B-Instruct、LongBench、質問既知、KV予算256トークン",
-        "interpretation": "非常に小さい固定予算でも元キャッシュに近い精度を維持する。"
-      },
-      {
-        "metric": "平均スコア",
-        "value": "31.8",
-        "baseline": "Full-KV 31.24",
-        "condition": "Mistral-Large-Instruct-2411、LongBench v2、KV予算8192",
-        "interpretation": "単なる近似保持にとどまらず、不要・誤誘導KVを抑えることでFull-KVを0.6点上回った条件がある。"
-      },
-      {
-        "metric": "先頭トークン遅延",
-        "value": "平均4.63秒",
-        "baseline": "Full-KV 4.45秒、HeadKV-R2 4.72秒",
-        "condition": "Mistral-7B-Instruct、Reasoning-in-a-Haystack、10回平均",
-        "interpretation": "圧縮処理を加えてもFull-KVとの差は小さく、比較した圧縮方式より低遅延だった。"
-      },
-      {
-        "metric": "注意挙動行列構築時間",
-        "value": "26.04 ms / 27.86 ms",
-        "baseline": "一度だけ行う追加プロファイル",
-        "condition": "Llama-3-8B-Instruct / Mistral-7B-Instruct-v0.2",
-        "interpretation": "ヘッド挙動の診断費用は長文脈推論全体に比べ小さい。"
-      },
-      {
-        "metric": "Few-shot性能保持率",
-        "value": "90% / 99%",
-        "baseline": "ランダム配分46% / 53%",
-        "condition": "LongBench、KV予算64 / 128、INFsc配分",
-        "interpretation": "単純な統計集約より失敗認識型スコアが厳しい予算で重要ヘッドを選べることを示す。"
-      }
-    ],
-    "negative_results": "INFscが低いヘッドを意図的に優先する逆順配分では精度が大幅に崩れ、重要ヘッドの容量不足が直接的な失敗要因になる。合成タスクでは挙動成分追加による改善が小さい条件もある。また英語以外の言語では注意挙動とINFscの一般化を確認していない。",
-    "interpretation": "改善幅が小容量で大きいのは、限られたKVをどのヘッドへ残すかという配分誤差の影響が強まるためである。容量が十分なら多くのヘッドが必要情報を保持できるので方式間差は縮む。偏りと注意散漫の両方を罰することで、検索能力だけ高いが失敗しやすいヘッドへの過剰配分を避けられる。",
-    "quality_impact": "KVを追い出す近似方式なので理論的な無損失保証はない。実測では多くの条件でFull-KVに近い精度を維持し、一部では不要・誤誘導情報を除く効果によりFull-KVを上回るが、極端な圧縮や不適切な配分では品質が低下する。"
-  },
-  "reservation": {
-    "claim_id": "claim-eda6a759c3d074c07a647fb0",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-eda6a759c3d074c07a647fb0","job_id":"job-research-765eee68b506c6ff",
+  "data":{"overview":"REALは特に厳しいKV予算で既存方式との差を広げ、予算が増えるにつれて差が縮む。これは、メモリが不足するほどヘッド間で容量を一律配分する損失が大きくなり、失敗挙動まで見た重要度配分の価値が高まることを示す。質問既知・質問未知の両条件で改善し、圧縮後の先頭トークン遅延もFull-KVに近い。Llama-3-8B-Instructでは256トークンのKV予算でFull-KV精度の約98%を保持し、Mistral-Large-Instruct-2411のLongBench v2では8192トークン予算でFull-KVを0.6点上回った。さらに、推論スコアが低いヘッドを優先する逆順配分では性能が崩れるため、改善が単なる容量削減ではなく、失敗を避けるヘッドへ容量を移した結果であることも確認されている。","key_results":[{"metric":"Full-KV比精度","value":"約98%","baseline":"Full-KV","condition":"Llama-3-8B-Instruct、LongBench、質問既知、KV予算256トークン","interpretation":"非常に小さい固定予算でも元キャッシュに近い精度を維持する。"},{"metric":"平均スコア","value":"31.8","baseline":"Full-KV 31.24","condition":"Mistral-Large-Instruct-2411、LongBench v2、KV予算8192","interpretation":"単なる近似保持にとどまらず、不要・誤誘導KVを抑えることでFull-KVを0.6点上回った条件がある。"},{"metric":"先頭トークン遅延","value":"平均4.63秒","baseline":"Full-KV 4.45秒、HeadKV-R2 4.72秒","condition":"Mistral-7B-Instruct、Reasoning-in-a-Haystack、10回平均","interpretation":"圧縮処理を加えてもFull-KVとの差は小さく、比較した圧縮方式より低遅延だった。"},{"metric":"注意挙動行列構築時間","value":"26.04 ms / 27.86 ms","baseline":"一度だけ行う追加プロファイル","condition":"Llama-3-8B-Instruct / Mistral-7B-Instruct-v0.2","interpretation":"ヘッド挙動の診断費用は長文脈推論全体に比べ小さい。"},{"metric":"Few-shot性能保持率","value":"90% / 99%","baseline":"ランダム配分46% / 53%","condition":"LongBench、KV予算64 / 128、INFsc配分","interpretation":"単純な統計集約より失敗認識型スコアが厳しい予算で重要ヘッドを選べることを示す。"}],"negative_results":"INFscが低いヘッドを意図的に優先する逆順配分では精度が大幅に崩れ、重要ヘッドの容量不足が直接的な失敗要因になる。合成タスクでは挙動成分追加による改善が小さい条件もある。また英語以外の言語では注意挙動とINFscの一般化を確認していない。","interpretation":"改善幅が小容量で大きいのは、限られたKVをどのヘッドへ残すかという配分誤差の影響が強まるためである。容量が十分なら多くのヘッドが必要情報を保持できるので方式間差は縮む。偏りと注意散漫の両方を罰することで、検索能力だけ高いが失敗しやすいヘッドへの過剰配分を避けられる。","quality_impact":"KVを追い出す近似方式なので理論的な無損失保証はない。実測では多くの条件でFull-KVに近い精度を維持し、一部では不要・誤誘導情報を除く効果によりFull-KVを上回るが、極端な圧縮や不適切な配分では品質が低下する。"},
+  "reservation":{"claim_id":"claim-eda6a759c3d074c07a647fb0","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
