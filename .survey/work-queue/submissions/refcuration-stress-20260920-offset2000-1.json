@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2404.15778",
+      "arxiv_id": "2404.15778",
+      "title": "BASS: Batched Attention-optimized Speculative Sampling",
+      "source_url": "https://arxiv.org/abs/2404.15778",
+      "paper_path": "papers/inference/05-speculative-decoding/2024-2404.15778-bass.md",
+      "priority": 94,
+      "reason": "Batched speculative-decoding system designed for multi-sequence serving, improving GPU utilization and generation latency over regular and single-sequence speculative decoding."
+    },
+    {
+      "canonical_id": "arXiv:2404.19429",
+      "arxiv_id": "2404.19429",
+      "title": "Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping",
+      "source_url": "https://arxiv.org/abs/2404.19429",
+      "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md",
+      "priority": 97,
+      "reason": "Compiler-based MoE training system that overlaps all-to-all communication with computation across the whole training graph."
+    },
+    {
+      "canonical_id": "arXiv:2405.00263",
+      "arxiv_id": "2405.00263",
+      "title": "Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge",
+      "source_url": "https://arxiv.org/abs/2405.00263",
+      "paper_path": "papers/inference/05-speculative-decoding/2024-2405.00263-clover.md",
+      "priority": 91,
+      "reason": "Lightweight speculative-decoding method focused on improving draft-token accuracy and inference acceleration with sequential knowledge."
+    },
+    {
+      "canonical_id": "arXiv:2405.01481",
+      "arxiv_id": "2405.01481",
+      "title": "NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment",
+      "source_url": "https://arxiv.org/abs/2405.01481",
+      "paper_path": "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md",
+      "priority": 94,
+      "reason": "Scalable alignment training toolkit with optimized RLHF/DPO/etc. implementations demonstrated up to thousand-GPU scale and 405B-class models."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-deep-20260920-offset2000",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-deep-20260920-offset2000.json",
+    "receipt": "sha256:343ff493a270e2acee9ee4fb77228a63e2a953701326a880f8d598bf616ebd9e"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-deep-2026-09-20",
+    "round": "refcuration-stress-offset2000-1",
+    "axis": "structured references deep stress probe at raw offset 2000",
+    "query_summary": "Evaluated a 20-record relation_count=1 structured-reference sample near raw offset 2000 using primary sources. Strong systems, training infrastructure, memory, quantization, and serving papers were retained.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2404.15778",
+      "arXiv:2404.19429",
+      "arXiv:2405.00263",
+      "arXiv:2405.01481"
+    ],
+    "next_axis_hint": "Continue tail exploration; high-value systems papers remain frequent even at relation_count=1."
+  }
+}
