@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:48:35 JST**
+> 自動生成: **2026-09-21 05:49:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **262** |
-| 未claim Research job | **262** |
+| 収録候補論文 | **269** |
+| 未claim Research job | **269** |
 | 直近24hの検証済みResearch収録 | **77** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間0分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6時間1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **262** |
+| canonical_id確認済みの一意な候補論文 | **269** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **262** |
+| 非終端Research job合計 | **269** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **28** | **7** | **4** | **3** | **0** | **0** | **10** |
-| 合計 | **28** | **13** | **8** | **3** | **0** | **0** | **10** |
+| Discovery | **34** | **7** | **6** | **1** | **0** | **0** | **10** |
+| 合計 | **34** | **13** | **10** | **1** | **0** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -87,6 +87,14 @@
   - result: `.survey/work-queue/results/20260921T0541JST-worker30-discovery-round-04-moe-cache.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0541JST-worker30-discovery-round-04-moe-cache.json`
   - 探索軸: recent MoE expert cache offload serving systems
+- **09-21 05:48:01 JST** job `job-cd7ebe8d747babfe` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-05-survey.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-05-survey.json`
+  - 探索軸: recent surveys of LLM inference serving memory and systems
+- **09-21 05:48:09 JST** job `job-5cd466dd55f046c8` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-06-specdecode.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-06-specdecode.json`
+  - 探索軸: recent speculative decoding serving systems
 - **09-21 05:32:50 JST** job `job-7cf235b2465d2a2c` / 候補 **3件**
   - result: `.survey/work-queue/results/20260921T0532JST-discovery-backward-01.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0532JST-discovery-backward-01.json`
@@ -103,14 +111,6 @@
   - result: `.survey/work-queue/results/20260921T0539JST-discovery-cxl-memory-04.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0539JST-discovery-cxl-memory-04.json`
   - 探索軸: recent LLM inference CXL hierarchical memory offloading
-- **09-21 05:41:59 JST** job `job-bea79878a81e6cef` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260921T0541JST-discovery-cpu-kernel-05.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0541JST-discovery-cpu-kernel-05.json`
-  - 探索軸: recent CPU SIMD AMX SME LLM inference kernels
-- **09-21 05:08:33 JST** job `job-8568b8b1c995b662` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0505JST-discovery-round-01b-backward.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-01b-backward.json`
-  - 探索軸: backward-reference structured repository-wide
 
 ### 直近タスク
 
@@ -152,7 +152,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:32 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **4件** / 個別result照合: **4件** / 個別result未照合: **3件** / 候補: **10件**
+- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **6件** / 個別result照合: **6件** / 個別result未照合: **1件** / 候補: **10件**
 - 探索軸: backward structured references across repository / forward citations of vLLM PagedAttention / recent SSD NVMe KV cache offload for LLM inference / recent MoE expert cache offload serving systems / recent surveys of LLM inference serving memory and systems / recent speculative decoding serving systems / recent MoE expert prefetch prediction offload inference alternate provider
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0540JST-worker30-discovery-round-01-backward.json`
@@ -173,11 +173,11 @@
 - round `round-05` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-05-survey.json`
   - 探索軸: recent surveys of LLM inference serving memory and systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-05-survey.json` (`ok=true`)
 - round `round-06` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-06-specdecode.json`
   - 探索軸: recent speculative decoding serving systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-06-specdecode.json` (`ok=true`)
 - round `round-07` / 候補 **5件**
   - submission: `.survey/work-queue/submissions/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json`
   - 探索軸: recent MoE expert prefetch prediction offload inference alternate provider
@@ -208,7 +208,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **262** |
+| ready | **269** |
 
 ### 候補の重複・識別情報欠損
 
@@ -236,10 +236,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **916** |
+| 成功result未照合のimmutable submission | **910** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **202** |
+| └ Discovery | **196** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
