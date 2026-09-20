@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 09:44:29 JST**
+> 自動生成: **2026-09-20 09:44:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **4** | **3** | **1** | **1** | **0** | — |
+| Research | **13** | **4** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **13** | **5** | **4** | **1** | **1** | **0** | **5** |
+| 合計 | **13** | **5** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 09:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2306.14048` — H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models
   - job: `.survey/work-queue/jobs/job-research-9824d8080e264ed4.json`
   - result: `.survey/work-queue/results/research/attempt-0b14b95da2b3a2abc2e9855f.json` (`ok=true`)
@@ -123,7 +123,8 @@
   - result: `.survey/work-queue/results/research/attempt-1e7b670e9a35584762c55c56.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-1e7b670e9a35584762c55c56.json`
   - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2401.18079-kvquant.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-46a86de7e7ad6cfc5fe5c306.json` (job `job-research-42834c639c34d742`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-46a86de7e7ad6cfc5fe5c306.json` (job `job-research-42834c639c34d742`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-46a86de7e7ad6cfc5fe5c306.json` (`ok=false`)
 - **成功** `arXiv:2309.17453` — Efficient Streaming Language Models with Attention Sinks
   - job: `.survey/work-queue/jobs/job-research-e12ae17b96a85ee5.json`
   - result: `.survey/work-queue/results/research/attempt-d96484c2d2d3c4cd1838a754.json` (`ok=true`)
