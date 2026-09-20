@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 04:06:07 JST**
+> 自動生成: **2026-09-21 04:29:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **208** |
 | 未claim Research job | **208** |
-| 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間17分前）** |
+| 直近24hの検証済みResearch収録 | **82** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（4時間41分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **6** | **4** | **0** | **0** | **0** | — |
+| Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **0** | **0** | **0** | **0** | **2** |
-| 合計 | **6** | **7** | **4** | **0** | **0** | **0** | **2** |
+| 合計 | **4** | **7** | **4** | **0** | **0** | **0** | **2** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -83,16 +83,6 @@
   - result: `.survey/work-queue/results/research/attempt-c9fddc3f170c1ce1924365e6.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c9fddc3f170c1ce1924365e6.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md`
-- **09-20 22:10:28 JST** [research] `arXiv:2508.18983` — SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution
-  - job: `.survey/work-queue/jobs/job-research-159e5ee7f39d28f8.json`
-  - result: `.survey/work-queue/results/research/attempt-6f2e6a2b41a89ff181e07ec0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-6f2e6a2b41a89ff181e07ec0.json`
-  - paper: `papers/inference/01-offload-hierarchical-memory/2025-2508.18983-smoe-expert-substitution-edge.md`
-- **09-20 22:06:53 JST** [research] `arXiv:2607.06601` — TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation
-  - job: `.survey/work-queue/jobs/job-research-0f282c93dba72c85.json`
-  - result: `.survey/work-queue/results/research/attempt-f7ba62a568920d99b231d2ff.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f7ba62a568920d99b231d2ff.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2607.06601-triroute-joint-adaptive-routing.md`
 
 ### Audit
 
