@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T063800Z-scheduled-chat-llm-survey-turn9-next2",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-18c89b68d0c6c10d",
+      "claim_id": "claim-b00534d1eda56e9a95608aea",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-b00534d1eda56e9a95608aea",
+      "claimed_at": "2026-09-20T06:38:18+00:00",
+      "expires_at": "2026-09-20T08:08:18+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-18c89b68d0c6c10d"
+      ],
+      "job": {
+        "job_id": "job-research-18c89b68d0c6c10d",
+        "type": "research",
+        "parent_job_id": "job-6b877091a5608906",
+        "priority": 95,
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.494",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
+        "source_url": "https://aclanthology.org/2026.findings-acl.494/",
+        "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md",
+        "selection_reason": "Online low-rank KV compression with adaptive subspace tracking and a hybrid full-rank anchor policy, compatible with FlashAttention.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T04:05:12+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T06:38:18+00:00",
+  "checkpoint_released": 0
+}
