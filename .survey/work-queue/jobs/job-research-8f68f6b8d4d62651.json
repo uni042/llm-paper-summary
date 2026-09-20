@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2608.15299",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.15299-maple-layer-wise-expert-allocation.md",
   "selection_reason": "MAPLEはpretrained MoEの重みを変えず、layer sensitivityからexpert budgetを非一様配分するplug-and-play方式。75% expert budgetで品質を維持・改善し、SGLang実装でsingle-GPU latency 32.2%減・throughput 47.4%増を報告しており、適応的expert数配分の実測系として価値が高い。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T10:19:13+00:00"
+  "created_at": "2026-09-20T10:19:13+00:00",
+  "completed_at": "2026-09-20T10:32:43+00:00",
+  "blocker": "The runtime could retrieve arXiv metadata/abstract and third-party renderings, including a ResearchGate PDF copy, but could not retrieve the primary arXiv full text through an official route. No author/project official full-text copy was found in the checked routes. Because third-party summaries/copies are not sufficient for the required primary-source full reading, no five-slot record was inferred.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-92a81eea4a04eb4c80bbed4e.json"
 }
