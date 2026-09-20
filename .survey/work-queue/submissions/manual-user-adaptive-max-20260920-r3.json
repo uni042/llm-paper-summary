@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r3",
+    "summary": "Adaptive Expert Computation / Compression を厚くするため、XMoEの被引用側から動的expert数・elastic inferenceの強候補を段階的に追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.11535",
+      "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+      "source_url": "https://arxiv.org/abs/2603.11535",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+      "priority": 98,
+      "reason": "expertごとのEMA thresholdでtoken単位に可変個数のexpertを選び、補助load-balancing lossなしで動的計算配分を実現する。"
+    },
+    {
+      "canonical_id": "arXiv:2512.13996",
+      "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+      "source_url": "https://arxiv.org/abs/2512.13996",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md",
+      "priority": 97,
+      "reason": "token difficultyとlayer需要に応じてexpert数を変えるTop-p routingをPI controllerでsparsity制御可能にする。"
+    },
+    {
+      "canonical_id": "arXiv:2511.18314",
+      "title": "AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert",
+      "source_url": "https://arxiv.org/abs/2511.18314",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md",
+      "priority": 95,
+      "reason": "semantic importanceに応じてexpert slot数を可変化し、総計算予算を上限付きで制御するbudget-aware routing。"
+    },
+    {
+      "canonical_id": "arXiv:2509.26520",
+      "title": "Training Matryoshka Mixture-of-Experts for Elastic Inference-Time Expert Utilization",
+      "source_url": "https://arxiv.org/abs/2509.26520",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.26520-matryoshka-moe-elastic-expert-utilization.md",
+      "priority": 97,
+      "reason": "学習中にactive expert数を変えてnested expert構造を学習し、推論時のexpert利用数を弾力的に変更できる。"
+    },
+    {
+      "canonical_id": "arXiv:2602.05711",
+      "title": "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+      "source_url": "https://arxiv.org/abs/2602.05711",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md",
+      "priority": 94,
+      "reason": "vector-level Atomic Experts、Cartesian Product Router、expert-centric schedulingで細粒度expert実行をsystem-algorithm co-designする。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920-xmoe",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920-xmoe.json",
+    "receipt": "sha256:7c72f6631d057024eb67c2c3f5da44bbda627a3f5d6963b641f583409749855a"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-max-2026-09-20",
+    "round": "adaptive-max-r3-xmoe-forward",
+    "axis": "forward citations of XMoE for dynamic expert allocation",
+    "query_summary": "XMoE forward citationsの未収録29件から可変expert数・elastic inferenceに直接効く5件を選定。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "AdaMoE forward citationsへ進む",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "adaptive expert routing",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2403.18926",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 34,
+        "unseen_result_count": 29,
+        "duplicate_filtered_count": 5,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 12,
+        "candidate_accepted_count": 5,
+        "position": "1 page"
+      }
+    ]
+  }
+}
