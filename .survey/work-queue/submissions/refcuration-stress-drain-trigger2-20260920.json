@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.02091",
+      "arxiv_id": "2606.02091",
+      "title": "DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2606.02091",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2606.02091-dflare.md",
+      "priority": 95,
+      "reason": "Block-diffusion speculative-decoding method scaling draft capacity through layer-wise target-feature fusion, with strong wall-clock speedups across several target models."
+    },
+    {
+      "canonical_id": "arXiv:2607.25852",
+      "arxiv_id": "2607.25852",
+      "title": "AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2607.25852",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md",
+      "priority": 97,
+      "reason": "Unified speculative-decoding training/inference framework adapting drafter structure and verification depth to domain, request, load, and hardware."
+    },
+    {
+      "canonical_id": "DOI:10.1109/cloud67622.2025.00028",
+      "title": "ZipNN: Lossless Compression for AI Models",
+      "source_url": "https://doi.org/10.1109/cloud67622.2025.00028",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-zipnn-lossless-model-compression.md",
+      "priority": 90,
+      "reason": "Lossless model compression specialized for neural-network weights, directly reducing model storage and network-transfer cost while maintaining high decompression throughput."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920-offset1000",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920-offset1000.json",
+    "receipt": "sha256:cac39d8568fc9817fa2f84d4cc67ce7cbb64f79eaea1a00473dd25141f0f790b"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20",
+    "round": "refcuration-stress-20260920-offset1000-b",
+    "axis": "structured references stress probe at raw offset 1000",
+    "query_summary": "Evaluated a 20-record structured-reference sample at relation_count≈2. Recent 2026 papers were verified against primary sources; generic scheduling, application surveys, benchmarks, and historical background references were classified out.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2606.02091",
+      "arXiv:2607.25852",
+      "DOI:10.1109/cloud67622.2025.00028"
+    ],
+    "next_axis_hint": "Low-relation references still contain strong recent systems papers; continue structured-reference exploration rather than falling back to ordinary search."
+  }
+}
