@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 16:45:39 JST**
+> 自動生成: **2026-09-20 16:46:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **111** |
 | 未claim Research job | **109** |
 | 直近24hの検証済みResearch収録 | **73** |
-| 最終検証済みResearch収録 | **09-20 16:44:01 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-20 16:44:01 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -167,9 +167,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2305.17118` — Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 16:44:28 JST** / heartbeat: **—** / lease expiry: **09-20 18:14:28 JST**
-  - evidence: `.survey/work-queue/claims/job-research-7059e5a5af8e2266.json`
+- `arXiv:2410.18248` — Fast Inference for Augmented Large Language Models / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 16:46:05 JST** / heartbeat: **—** / lease expiry: **09-20 18:16:05 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c7bef3f1698aa85a.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey-01`
   - claim: **09-20 16:02:12 JST** / heartbeat: **09-20 16:28:58 JST** / lease expiry: **09-20 17:58:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
