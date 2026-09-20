@@ -2,69 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-a18ba59d385be8e704c64c6d",
-  "job_id": "job-research-207dd824b238b749",
-  "data": {
-    "canonical_id": "arXiv:2604.09603",
-    "arxiv_id": "2604.09603",
-    "doi": "10.48550/arXiv.2604.09603",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "ECHO: Elastic Speculative Decoding with Sparse Gating for High-Concurrency Scenarios",
-    "summary": "ECHOは、高同時実行時の投機的デコードで検証計算が律速になることに着目し、1反復で検証する候補トークン総数を固定予算として扱う方式である。候補木の全深さで判断せず、受理・棄却を判別しやすい少数の深さだけで信頼度判定を行い、確信の高い要求には木を深く、確信の低い要求には枝を広くする。さらに同一バッチ内で不要になった検証予算を別要求へ再配分し、不規則な候補数はSGLangで効率よく検証できる密な配置へ詰め直す。8基のH100で8B〜235B級モデルを評価し、低負荷では最大5.35倍の実時間高速化、高負荷Qwen3-235Bではバッチ256でEAGLE-3より14.4%高いスループットを報告した。",
-    "list_summary": "高同時実行時の投機的デコードを固定検証予算の配分問題として扱い、信頼度の高い深さだけで候補木を伸縮し、バッチ内要求間で予算を再配分するSGLang統合方式。",
-    "authors": [
-      "Xinyi Hu",
-      "Yuhao Shen",
-      "Baolin Zhang",
-      "Hengxin Zhang",
-      "Jun Dai",
-      "Shuang Ge",
-      "Lei Chen",
-      "Yue Li",
-      "Mingcheng Wan"
-    ],
-    "authors_affiliations": "Alibaba Qwen Applications Business Group、Zhejiang University。",
-    "published": "2026-05-14",
-    "publication": "arXiv preprint arXiv:2604.09603v2",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "投機的デコード／動的候補木／高同時実行LLMサービング",
-    "topics": [
-      "投機的デコード",
-      "高同時実行",
-      "SGLang",
-      "動的候補木",
-      "検証予算"
-    ],
-    "importance": "単一要求の平均受理長だけでなく、検証計算が飽和する実運用バッチ全体の有効トークン進捗を目的に投機的デコードを再定式化し、動的木を高性能サービングカーネルへ統合する。",
-    "hardware_evaluation": "8基のNVIDIA H100 80GB GPUで実機評価。低負荷はHuggingFace transformers、高同時実行はSGLangへ全方式を統合。",
-    "quality_effect": "投機的デコードの正規受理条件を維持し、対象モデル重みを変更しないため、出力分布は通常の自己回帰デコードと数学的に同一。",
-    "evidence_locations": [
-      "§2 Problem Formulation",
-      "§3 Method",
-      "§5 Experiments",
-      "Appendix C.4 Evaluation Details"
-    ],
-    "source": "https://arxiv.org/abs/2604.09603",
-    "sources": [
-      "https://arxiv.org/abs/2604.09603",
-      "https://arxiv.org/pdf/2604.09603"
-    ],
-    "code": null,
-    "implementation": "高同時実行評価ではSGLangへECHOと比較方式を統合し、不規則な候補数を密なカーネル互換配置へ詰める専用処理を実装。公式コードURLは今回確認した一次資料中で特定できなかった。",
-    "last_checked": "2026-09-20",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-3c0144987279113ac5ae99fd",
+  "job_id": "job-research-b27d4d0f59f887b3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a18ba59d385be8e704c64c6d",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-3c0144987279113ac5ae99fd",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

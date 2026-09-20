@@ -2,48 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a18ba59d385be8e704c64c6d",
-  "job_id": "job-research-207dd824b238b749",
-  "data": {
-    "hardware": "全実験を8基のNVIDIA H100 80GB GPUで実施。",
-    "software": "低負荷BS=1はHuggingFace transformers、高同時実行BS>1はSGLangへ各方式を統合。Qwen3-235BのFigure 1を除く高バッチ条件ではCUDA Graphを使用。重みはbfloat16で読み込み、量子化なし。",
-    "models": [
-      "Vicuna-13B",
-      "Llama-3.1-8B",
-      "Llama-3.3-70B",
-      "Qwen3-8B",
-      "Qwen3-32B",
-      "Qwen3-235B-A22B"
-    ],
-    "workloads": [
-      "HumanEval",
-      "GSM8K",
-      "CNN/DailyMail",
-      "Alpaca",
-      "MT-Bench"
-    ],
-    "baselines": [
-      "通常自己回帰デコード",
-      "EAGLE-3",
-      "DDD",
-      "OPT-Tree",
-      "Medusa",
-      "Hydra",
-      "Lookahead",
-      "標準投機的デコード系比較対象"
-    ],
-    "metrics": [
-      "通常自己回帰に対する実時間高速化倍率",
-      "平均受理トークン数",
-      "下書き利用率",
-      "高同時実行時トークン毎秒"
-    ],
-    "methodology": "温度0の貪欲生成で再現性を確保し、低負荷では各方式の単一要求実時間高速化と平均受理長を比較する。高負荷ではSGLang上でバッチ8〜256を変え、検証計算が飽和する領域のトークンスループットを測る。ECHOはウォームアップでモデル・データ集合ごとの信頼度分布を測り、判別性の高い深さと深さ別しきい値を較正する。さらに全深さで判定する変種と単一しきい値変種を用いて、疎な判定と深さ別較正の寄与を分離する。",
-    "scope": "8基H100上の実機サービング評価で、8Bから235B級まで幅広いモデルと5種類のタスクを含む。一方、主要な高同時実行比較はSGLang、EAGLE-3系下書きモデル、特定の固定検証予算と較正手順に依存し、他エンジン・他GPU世代・サンプリング温度が高い条件への一般化は直接測定していない。"
-  },
+  "attempt_id": "attempt-3c0144987279113ac5ae99fd",
+  "job_id": "job-research-b27d4d0f59f887b3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a18ba59d385be8e704c64c6d",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-3c0144987279113ac5ae99fd",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
