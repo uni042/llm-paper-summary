@@ -133,12 +133,6 @@ def _manifest_source_commit(snapshot_dir: Path) -> str | None:
     return str(value) if value else None
 
 
-def _results_dir(request_path: Path) -> Path:
-    if request_path.parent.name == "requests":
-        return request_path.parent.parent / "results"
-    return request_path.parent / "results"
-
-
 def _allowed_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     out = []
     for record in records:
