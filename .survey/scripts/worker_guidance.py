@@ -32,12 +32,15 @@ PROFILES = {
             "decision=READY_FOR_EVALUATION かつ evaluation_allowed=true の場合だけ results[] を軽量評価する。",
             "採用候補0〜5件を operation=submit_discovery_round の不変 submission として .survey/work-queue/submissions/ に保存し、precheck の result_path と receipt を参照させる。",
             "submission 保存後は最新 queue / identity を再取得する。同一 source_url の追加ページをワーカー側で手取得しない。",
+            "通常Discoveryでは引用系を主経路にする。同じ run_key で後方引用と前方引用を少なくとも1回ずつ試し、通常検索はその後の補完にだけ使う。",
+            "repository_references に候補が残っていても前方引用を止めない。後方引用1バッファ処理後は系統別の前方引用refreshへ進める。",
         ],
         "recovery": [
             "失敗した request は変更せず証跡として残す。",
             "新しい schema_version=3 request を作り、provider / source_url / collector_id / run_key / axis を指定する。",
             "records を直接渡さず、1つの固定した検索結果 source_url を指定する。",
             "不足時のページ送りは precheck に任せ、別クエリへ切り替えるのは同一結果集合を使い切った後にする。",
+            "通常検索を先に使って citation_first_required が出た場合は、表示された不足方向（backward / forward）をschema v3固定ソースで実行してから戻る。",
         ],
     },
     "recover_discovery_submissions.py": {
