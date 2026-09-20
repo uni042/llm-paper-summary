@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 07:07:58 JST**
+> 自動生成: **2026-09-21 07:09:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **303** |
-| 未claim Research job | **303** |
+| 収録候補論文 | **304** |
+| 未claim Research job | **304** |
 | 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間19分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間21分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **303** |
+| canonical_id確認済みの一意な候補論文 | **304** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **303** |
+| 非終端Research job合計 | **304** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **43** | **7** | **1** | **1** | **0** | **0** | **19** |
-| 合計 | **43** | **13** | **5** | **1** | **0** | **0** | **19** |
+| Discovery | **44** | **10** | **2** | **3** | **0** | **0** | **34** |
+| 合計 | **44** | **16** | **6** | **3** | **0** | **0** | **34** |
 
-- 最新Discovery runの耐久探索round: **7件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -75,6 +75,10 @@
   - result: `.survey/work-queue/results/20260921T0702JST-hourly00-discovery-forward-specoffload-02.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0702JST-hourly00-discovery-forward-specoffload-02.json`
   - 探索軸: forward citations of SpecOffload heterogeneous CPU-GPU LLM inference
+- **09-21 07:07:59 JST** job `job-d35d779262e92333` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260921T0707JST-hourly00-discovery-backward-repair-01b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0707JST-hourly00-discovery-backward-repair-01b.json`
+  - 探索軸: repository structured backward references
 - **09-21 06:11:09 JST** job `job-435d396a91e7c8ca` / 候補 **2件**
   - result: `.survey/work-queue/results/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0609JST-hourly00-discovery-round-04-deepspeedmoe-forward.json`
@@ -107,10 +111,6 @@
   - result: `.survey/work-queue/results/20260921T0544JST-worker30-discovery-round-06-specdecode.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0544JST-worker30-discovery-round-06-specdecode.json`
   - 探索軸: recent speculative decoding serving systems
-- **09-21 05:49:25 JST** job `job-6c396baca556989f` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json`
-  - 探索軸: recent MoE expert prefetch prediction offload inference alternate provider
 
 ### 直近タスク
 
@@ -152,8 +152,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 06:58 JST**
-- 耐久探索round: **7件** / immutable submission: **7件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **6件** / 候補: **19件**
-- 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse / forward citations of LMCache enterprise-scale KV cache layer / forward citations of PagedAttention/vLLM memory-efficient LLM serving / forward citations of SmoothQuant efficient LLM inference quantization / repository structured backward references
+- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **8件** / 候補: **34件**
+- 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse / forward citations of LMCache enterprise-scale KV cache layer / forward citations of PagedAttention/vLLM memory-efficient LLM serving / forward citations of SmoothQuant efficient LLM inference quantization / repository structured backward references / forward citations of Sequoia hardware-aware speculative decoding
 - round `hourly00-backward-01` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260921T0700JST-hourly00-discovery-backward-01.json`
   - 探索軸: repository-wide structured backward references for LLM inference systems
@@ -181,6 +181,18 @@
 - round `hourly00-backward-repair-01b` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260921T0707JST-hourly00-discovery-backward-repair-01b.json`
   - 探索軸: repository structured backward references
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0707JST-hourly00-discovery-backward-repair-01b.json` (`ok=true`)
+- round `hourly00-forward-sequoia-07b` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260921T0708JST-hourly00-discovery-forward-sequoia-07b.json`
+  - 探索軸: forward citations of Sequoia hardware-aware speculative decoding
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `hourly00-forward-kvlink-03b` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260921T0709JST-hourly00-discovery-forward-kvlink-03b.json`
+  - 探索軸: forward citations of KVLink efficient KV cache reuse
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `hourly00-forward-lmcache-04b` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260921T0709JST-hourly00-discovery-forward-lmcache-04b.json`
+  - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
   - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
@@ -208,7 +220,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **303** |
+| ready | **304** |
 
 ### 候補の重複・識別情報欠損
 
@@ -236,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **927** |
+| 成功result未照合のimmutable submission | **929** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **213** |
+| └ Discovery | **215** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
