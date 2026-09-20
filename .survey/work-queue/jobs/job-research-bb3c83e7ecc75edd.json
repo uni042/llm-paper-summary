@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-bb3c83e7ecc75edd",
+  "type": "research",
+  "parent_job_id": "job-d78803446ba63921",
+  "priority": 103,
+  "canonical_id": "arXiv:2607.18081",
+  "arxiv_id": "2607.18081",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs",
+  "source_url": "https://www.semanticscholar.org/paper/dbf67d0f22b702fc06e4fcd516a4226830b859ec",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md",
+  "selection_reason": "重要ニューロンの選択的loadingと実行時の選択的計算を組み合わせ、端末LLMのメモリ・計算量を削減する。階層メモリ・動的疎性・edge inference系統に直接関連する。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T23:08:39+00:00"
+}

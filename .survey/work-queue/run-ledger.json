@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T23:07:38.470730+00:00",
+  "updated_at": "2026-09-20T23:10:13.027367+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -30632,6 +30632,96 @@
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260921T0805JST-auto-discovery-backward-01.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 863,
+      "paper_active_count_after": 863,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "unattributed:35543732956",
+      "first_recorded_at": "2026-09-20T23:10:13.027367+00:00",
+      "last_recorded_at": "2026-09-20T23:10:13.027367+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 2,
+        "blocked": 0,
+        "new_jobs": 4,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35543732956:1",
+          "recorded_at": "2026-09-20T23:10:13.027367+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35543732956",
+            "run_attempt": "1",
+            "source_sha": "01998633ca252cdcfe07cb3e9161327a4500ea8f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-d78803446ba63921",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f3569e68e3a9353b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-d78803446ba63921",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-f3569e68e3a9353b",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-bb3c83e7ecc75edd",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.18081",
+          "title": "SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs"
+        },
+        {
+          "job_id": "job-research-d21a98f99faeb4fe",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.01785",
+          "title": "HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260921T0808JST-auto-discovery-backward-01-retry.json",
+        ".survey/work-queue/results/20260921T0808JST-auto-discovery-forward-powerinfer-02-retry.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 863,

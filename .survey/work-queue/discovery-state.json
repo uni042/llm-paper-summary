@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T22:30:15+00:00",
-  "last_run_key": "2026-09-21T07:26:35+09:00",
-  "last_round": "hourly00-repository-refs-01",
+  "updated_at": "2026-09-20T23:08:39+00:00",
+  "last_run_key": "20260921T0802JST-auto",
+  "last_round": "auto-forward-powerinfer-02-retry",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,44 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-moe-memory-pool-13",
-      "axis": "MoE multi-model serving・weight/KV disaggregation・GPU memory pooling",
-      "query_summary": "重点MoE軸をexpert prefetch以外へ広げ、cold model、weight pool、KV pool、persistent kernelを組み合わせるmulti-LLM serving研究を探索した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.21240",
-        "arXiv:2601.17063"
-      ],
-      "next_axis_hint": "network schedulingと新着9月を再確認後、残り時間に応じてhandoff guardを評価する",
-      "source_submission": "work-queue/submissions/20260916T1939JST-discovery-specialist-moe-memory-pool-13.json"
-    },
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-network-kv-14",
-      "axis": "network-aware decode routing・mixed-precision KV transfer",
-      "query_summary": "disaggregated servingのnetwork congestion、decode selection、KV transfer compressionを再探索し、NetKVとSpectrumKVをrepository未収録の強候補として確認した。",
-      "candidate_count": 6,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.02043",
-        "arXiv:2607.28150",
-        "arXiv:2605.13734",
-        "arXiv:2603.17456"
-      ],
-      "next_axis_hint": "新規発見で枯渇判定を再リセット。新着、forward/backward、OS/storage、GPU runtime、MoE、agentic servingを再一巡する",
-      "source_submission": "work-queue/submissions/20260916T1942JST-discovery-specialist-network-kv-14.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-agent-storage-15",
@@ -8083,6 +8045,48 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0730JST-hourly00-discovery-repository-refs-01.json"
+    },
+    {
+      "run_key": "20260921T0802JST-auto",
+      "round": "auto-backward-01-retry",
+      "axis": "backward-reference-structured",
+      "query_summary": null,
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0808JST-auto-discovery-backward-01-retry.json"
+    },
+    {
+      "run_key": "20260921T0802JST-auto",
+      "round": "auto-forward-powerinfer-02-retry",
+      "axis": "forward-citation-powerinfer",
+      "query_summary": null,
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.12456/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0808JST-auto-discovery-forward-powerinfer-02-retry.json"
     }
   ],
   "axes": {
@@ -15916,6 +15920,32 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 3,
       "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "backward-reference-structured": {
+      "last_run_key": "20260921T0802JST-auto",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "forward-citation-powerinfer": {
+      "last_run_key": "20260921T0802JST-auto",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 2,
+      "accepted_count": 2,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
