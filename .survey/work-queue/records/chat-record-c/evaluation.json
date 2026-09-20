@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-0035fe851a4c5bf25fbbacc2",
-  "job_id": "job-research-6778a26f7c6381c5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0035fe851a4c5bf25fbbacc2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0035fe851a4c5bf25fbbacc2","job_id":"job-research-6778a26f7c6381c5","data":{"hardware":"埋め込み等の非LLMモデルはRTX 3090 24GB、gemma-2-2Bとllama-2-7Bは各1枚、llama-2-13Bは2枚の3090、llama-30Bは2枚のA800 80GBで実行。物理サーバ間帯域は100 Gbps。","software":"Ray、LlamaIndex、PostgreSQL、pgvector、Google Custom Search、vLLM、FastAPIからなる実機分散試作。vLLMへ部分プリフィル/完全プリフィルを追加。","methodology":"検索支援生成、単純RAG文書QA、高度RAG文書QA、Contextual Retrieval等を、Ray版LlamaIndex、手動並列化と接頭辞キャッシュを加えた強化版、AutoGen、プリミティブ順のみ最適化した変種などと比較する。低負荷・高負荷、単一アプリと同居アプリ、グラフ最適化・トポロジ認識バッチングの除去実験を実施する。","scope":"シミュレーションではなく複数GPU/サーバの実機テストベッドでエンドツーエンド遅延を測る。一方、対象ワークフローは事前に構造を定義できるRAG等が中心で、完全動的な自律エージェントには適用範囲が限定される。"},"reservation":{"claim_id":"claim-0035fe851a4c5bf25fbbacc2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
