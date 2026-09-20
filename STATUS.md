@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:14:47 JST**
+> 自動生成: **2026-09-20 12:15:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **79** |
+| 収録候補論文 | **78** |
 | 未claim Research job | **78** |
-| 直近24hの検証済みResearch収録 | **43** |
-| 最終検証済みResearch収録 | **09-20 12:11:09 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **44** |
+| 最終検証済みResearch収録 | **09-20 12:14:59 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **79** |
+| canonical_id確認済みの一意な候補論文 | **78** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **79** |
+| 非終端Research job合計 | **78** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **8** | **7** | **1** | **1** | **0** | — |
+| Research | **16** | **8** | **8** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **15** | **9** | **8** | **1** | **1** | **0** | **5** |
+| 合計 | **16** | **9** | **9** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 12:14:59 JST** [research] `arXiv:2406.10774` — Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-8fc74c0fbb46c30e.json`
+  - result: `.survey/work-queue/results/research/attempt-74f796116b0c55afd81f6ad5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-74f796116b0c55afd81f6ad5.json`
+  - paper: `papers/inference/10-sparse-attention/2024-2406.10774-quest.md`
 - **09-20 12:11:09 JST** [research] `arXiv:2402.02750` — KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache
   - job: `.survey/work-queue/jobs/job-research-8b52cc53189781e3.json`
   - result: `.survey/work-queue/results/research/attempt-6d86d84ba0b861b36b84973e.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-a86622b38716752ba65bde87.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a86622b38716752ba65bde87.json`
   - paper: `papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md`
-- **09-20 09:41:50 JST** [research] `arXiv:2306.14048` — H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models
-  - job: `.survey/work-queue/jobs/job-research-9824d8080e264ed4.json`
-  - result: `.survey/work-queue/results/research/attempt-0b14b95da2b3a2abc2e9855f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0b14b95da2b3a2abc2e9855f.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md`
 
 ### Audit
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **8件** / 検証済み成功: **7件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **8件** / 検証済み成功: **8件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
   - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
@@ -143,7 +143,11 @@
   - result: `.survey/work-queue/results/research/attempt-6d86d84ba0b861b36b84973e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6d86d84ba0b861b36b84973e.json`
   - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2402.02750-kivi.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-74f796116b0c55afd81f6ad5.json` (job `job-research-8fc74c0fbb46c30e`)
+- **成功** `arXiv:2406.10774` — Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference
+  - job: `.survey/work-queue/jobs/job-research-8fc74c0fbb46c30e.json`
+  - result: `.survey/work-queue/results/research/attempt-74f796116b0c55afd81f6ad5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-74f796116b0c55afd81f6ad5.json`
+  - paper: `papers/inference/10-sparse-attention/2024-2406.10774-quest.md`
 - **成功** `arXiv:2006.16668` — GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding
   - job: `.survey/work-queue/jobs/job-research-710ff1d6feeafd76.json`
   - result: `.survey/work-queue/results/research/attempt-85841135c44788f4cd9b5a81.json` (`ok=true`)
@@ -170,10 +174,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2406.10774` — Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 12:13:58 JST** / heartbeat: **—** / lease expiry: **09-20 13:43:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8fc74c0fbb46c30e.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -193,7 +195,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **79** |
+| ready | **78** |
 
 ### 候補の重複・識別情報欠損
 
@@ -213,7 +215,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **795** |
+| inference/training/survey配下の論文Markdown実体 | **796** |
 
 ### immutable submissionの未照合
 
@@ -221,8 +223,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **686** |
-| └ Research | **525** |
+| 成功result未照合のimmutable submission | **685** |
+| └ Research | **524** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
