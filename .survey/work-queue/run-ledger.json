@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:55:25.116059+00:00",
+  "updated_at": "2026-09-20T10:58:51.391037+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:55:25.116059+00:00",
+      "last_recorded_at": "2026-09-20T10:58:51.391037+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 377,
         "audit_completed": 0,
-        "discovery_completed": 205,
+        "discovery_completed": 208,
         "blocked": 52,
-        "new_jobs": 349,
+        "new_jobs": 361,
         "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35485593401:1",
-          "recorded_at": "2026-09-20T03:04:00.545666+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35485593401",
-            "run_attempt": "1",
-            "source_sha": "68519de50be55496ba7143e2e8a6d470f560c8fc"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35485740792:1",
           "recorded_at": "2026-09-20T03:07:34.081662+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35506321838",
             "run_attempt": "1",
             "source_sha": "5409a463880a3ae1879159b06312e0688fc66fb9"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "35506329618:1",
+          "recorded_at": "2026-09-20T10:58:51.391037+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35506329618",
+            "run_attempt": "1",
+            "source_sha": "7a7bd311c083ef8ad6e2cc2456d9b9e9e52d8c12"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -24668,6 +24668,30 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-21c4ed6d667c39ba",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-291766755e6c4210",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-c120188f018fe47b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -27113,6 +27137,90 @@
           "type": "research",
           "canonical_id": "arXiv:2509.22299",
           "title": "HEAPr: Hessian-based Efficient Atomic Expert Pruning in Output Space"
+        },
+        {
+          "job_id": "job-21c4ed6d667c39ba",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-291766755e6c4210",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-c120188f018fe47b",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2c92c0a3b8a6da0e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.06663",
+          "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity"
+        },
+        {
+          "job_id": "job-research-3ccfe94f6e9f9715",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/ICEIC69189.2026.11386441",
+          "title": "Toward Efficient Deployment of Mixture of Experts Models: Quantization and Compression Analysis"
+        },
+        {
+          "job_id": "job-research-71e43b4e5ff698a1",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.10933",
+          "title": "DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices"
+        },
+        {
+          "job_id": "job-research-95a4661f225665ff",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.23012",
+          "title": "MoE-PHDS: One MoE checkpoint for flexible runtime sparsity"
+        },
+        {
+          "job_id": "job-research-9b33865bddc54a07",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.13079",
+          "title": "GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models"
+        },
+        {
+          "job_id": "job-research-b5c12e0015184a80",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/icassp55912.2026.11465104",
+          "title": "Parsimony, Order and Balance: Principles for Compressing Mixture-of-Experts Models"
+        },
+        {
+          "job_id": "job-research-c58272e75725b517",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.13565",
+          "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking"
+        },
+        {
+          "job_id": "job-research-c9fd7d4e4bda09de",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.28042",
+          "title": "Extracting Small Translation Specialists from LLMs by Aggressively Pruning Experts"
+        },
+        {
+          "job_id": "job-research-eed4801f6d21f8d7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1016/j.neunet.2025.108274",
+          "title": "Expertfuse: A huffman tree-based gradual expert integration framework for MoE models"
         }
       ],
       "new_paper_ids": [

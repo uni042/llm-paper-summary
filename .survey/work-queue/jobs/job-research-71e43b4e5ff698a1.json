@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-71e43b4e5ff698a1",
+  "type": "research",
+  "parent_job_id": "job-c120188f018fe47b",
+  "priority": 95,
+  "canonical_id": "arXiv:2605.10933",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices",
+  "source_url": "https://arxiv.org/abs/2605.10933",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.10933-deco-end-side-sparse-moe.md",
+  "selection_reason": "ReLU-based flexible routingとexpert-wise scalingで、end-side deployment向けにstorage・compute・accuracyを同時設計する。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:56:20+00:00"
+}
