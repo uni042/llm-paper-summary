@@ -6,10 +6,10 @@
     "terminal_research_rejections"
   ],
   "updated_at": "scheduled-20260921T0330JST",
-  "submission_count": 31,
+  "submission_count": 32,
   "research_terminal_rejection_count": 9,
-  "rejection_observation_count": 106,
-  "rejection_record_count": 103,
+  "rejection_observation_count": 121,
+  "rejection_record_count": 118,
   "ignored_without_identity": 0,
   "records": {
     "id:DOI:10.1007/978-3-031-99489-0_6": {
@@ -120,6 +120,28 @@
       "axis": "OpenAlex search: LLM inference serving KV cache",
       "run_key": "2026-09-20T01:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260920T0202JST-discovery-fixedsource-openalex-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.1080/00207543.2026.2732141": {
+      "primary_identity": "id:DOI:10.1080/00207543.2026.2732141",
+      "identity_tokens": [
+        "id:DOI:10.1080/00207543.2026.2732141",
+        "title:operationalising cognitive digital twins through a cognitivefunction framework and genai tools",
+        "url:https://doi.org/10.1080/00207543.2026.2732141"
+      ],
+      "canonical_id": "DOI:10.1080/00207543.2026.2732141",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Operationalising cognitive digital twins through a cognitive-function framework and GenAI tools",
+      "source_url": "https://doi.org/10.1080/00207543.2026.2732141",
+      "rejection_reason": "digital twin応用で対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:DOI:10.1109/hpca68181.2026.11408592": {
@@ -450,6 +472,28 @@
       "axis": "CXL remote shared memory for LLM KV cache and inference serving",
       "run_key": "scheduled-20260921T0330JST",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.64898/2026.09.02.749017": {
+      "primary_identity": "id:DOI:10.64898/2026.09.02.749017",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.09.02.749017",
+        "title:evspark lossless speculative decoding for hybrid dna foundation models",
+        "url:https://doi.org/10.64898/2026.09.02.749017"
+      ],
+      "canonical_id": "DOI:10.64898/2026.09.02.749017",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "EvSpark: Lossless Speculative Decoding for Hybrid DNA Foundation Models",
+      "source_url": "https://doi.org/10.64898/2026.09.02.749017",
+      "rejection_reason": "DNA foundation model固有でLLM推論への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:OpenAlex:W7133286581": {
@@ -1620,6 +1664,28 @@
       "source_submission": ".survey/work-queue/submissions/20260918T2008JST-discovery-specialist-serving-measurement-2.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2609.06784": {
+      "primary_identity": "id:arXiv:2609.06784",
+      "identity_tokens": [
+        "id:arXiv:2609.06784",
+        "title:greenpassport requestlevel carbon accounting for crossborder ai inference",
+        "url:https://arxiv.org/abs/2609.06784"
+      ],
+      "canonical_id": "arXiv:2609.06784",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "GreenPassport: Request-Level Carbon Accounting for Cross-Border AI Inference",
+      "source_url": "https://arxiv.org/abs/2609.06784",
+      "rejection_reason": "carbon accountingが主題で推論効率方式ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2609.06940": {
       "primary_identity": "id:arXiv:2609.06940",
       "identity_tokens": [
@@ -1642,6 +1708,28 @@
       "source_submission": ".survey/work-queue/submissions/20260918T2008JST-discovery-specialist-serving-measurement-2.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2609.07129": {
+      "primary_identity": "id:arXiv:2609.07129",
+      "identity_tokens": [
+        "id:arXiv:2609.07129",
+        "title:linecoupled language model",
+        "url:https://arxiv.org/abs/2609.07129"
+      ],
+      "canonical_id": "arXiv:2609.07129",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Line-Coupled Language Model",
+      "source_url": "https://arxiv.org/abs/2609.07129",
+      "rejection_reason": "model architecture中心で推論システムへの直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2609.08307": {
       "primary_identity": "id:arXiv:2609.08307",
       "identity_tokens": [
@@ -1662,6 +1750,72 @@
       "axis": "mobile/on-device inference・DRAM-Flash hybrid storage・CPU/GPU runtime",
       "run_key": "2026-09-19T20:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260919T2047JST-discovery-specialist-mobile-storage-7.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.08703": {
+      "primary_identity": "id:arXiv:2609.08703",
+      "identity_tokens": [
+        "id:arXiv:2609.08703",
+        "title:tontaubev1 streaming texttospeech with hierarchical codec modeling and bounded context",
+        "url:https://arxiv.org/abs/2609.08703"
+      ],
+      "canonical_id": "arXiv:2609.08703",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "TontaubeV1: Streaming Text-to-Speech with Hierarchical Codec Modeling and Bounded Context",
+      "source_url": "https://arxiv.org/abs/2609.08703",
+      "rejection_reason": "TTS modelが主題で対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.09460": {
+      "primary_identity": "id:arXiv:2609.09460",
+      "identity_tokens": [
+        "id:arXiv:2609.09460",
+        "title:omnieye efficient multimodal forensic video intelligence for lawenforcement bodyworn cameras",
+        "url:https://arxiv.org/abs/2609.09460"
+      ],
+      "canonical_id": "arXiv:2609.09460",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "OmniEye: Efficient Multimodal Forensic Video Intelligence for Law-Enforcement Body-Worn Cameras",
+      "source_url": "https://arxiv.org/abs/2609.09460",
+      "rejection_reason": "forensic video応用で対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.10226": {
+      "primary_identity": "id:arXiv:2609.10226",
+      "identity_tokens": [
+        "id:arXiv:2609.10226",
+        "title:φbench can large language models engineer the infrastructure that powers them",
+        "url:https://arxiv.org/abs/2609.10226"
+      ],
+      "canonical_id": "arXiv:2609.10226",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "$Φ$-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?",
+      "source_url": "https://arxiv.org/abs/2609.10226",
+      "rejection_reason": "benchmarkで推論システム自体の新規方式ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.10266": {
@@ -1708,6 +1862,50 @@
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2609.10372": {
+      "primary_identity": "id:arXiv:2609.10372",
+      "identity_tokens": [
+        "id:arXiv:2609.10372",
+        "title:pace perceivedlatencyaware cascading service routing and filler control for qoeefficient retrievalaugmented dialogue serving",
+        "url:https://arxiv.org/abs/2609.10372"
+      ],
+      "canonical_id": "arXiv:2609.10372",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "PACE: Perceived-Latency-Aware Cascading Service Routing and Filler Control for QoE-Efficient Retrieval-Augmented Dialogue Serving",
+      "source_url": "https://arxiv.org/abs/2609.10372",
+      "rejection_reason": "RAG dialogue QoE routing中心でmodel inference基盤への直接性が相対的に弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.10714": {
+      "primary_identity": "id:arXiv:2609.10714",
+      "identity_tokens": [
+        "id:arXiv:2609.10714",
+        "title:from semantic to token communication the next paradigm for largemodeldriven 6g intelligent connectivity",
+        "url:https://arxiv.org/abs/2609.10714"
+      ],
+      "canonical_id": "arXiv:2609.10714",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+      "source_url": "https://arxiv.org/abs/2609.10714",
+      "rejection_reason": "6G communicationが主題で対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2609.10861": {
       "primary_identity": "id:arXiv:2609.10861",
       "identity_tokens": [
@@ -1730,6 +1928,94 @@
       "source_submission": ".survey/work-queue/submissions/research/attempt-cca7e7bbfc9f8b8d085149eb.json",
       "origin": "research_blocked_permanent"
     },
+    "id:arXiv:2609.11799": {
+      "primary_identity": "id:arXiv:2609.11799",
+      "identity_tokens": [
+        "id:arXiv:2609.11799",
+        "title:specguard inferencetime backdoor detection for free",
+        "url:https://arxiv.org/abs/2609.11799"
+      ],
+      "canonical_id": "arXiv:2609.11799",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "SpecGuard: Inference-Time Backdoor Detection For Free",
+      "source_url": "https://arxiv.org/abs/2609.11799",
+      "rejection_reason": "security/backdoor detectionが主題で推論効率基盤への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.11873": {
+      "primary_identity": "id:arXiv:2609.11873",
+      "identity_tokens": [
+        "id:arXiv:2609.11873",
+        "title:the last ai built by humans toward genuine recursive selfimprovement",
+        "url:https://arxiv.org/abs/2609.11873"
+      ],
+      "canonical_id": "arXiv:2609.11873",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "source_url": "https://arxiv.org/abs/2609.11873",
+      "rejection_reason": "recursive self-improvementが主題で推論システム対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.13770": {
+      "primary_identity": "id:arXiv:2609.13770",
+      "identity_tokens": [
+        "id:arXiv:2609.13770",
+        "title:training specialist models without reasoning trajectories for domain expert distillation",
+        "url:https://arxiv.org/abs/2609.13770"
+      ],
+      "canonical_id": "arXiv:2609.13770",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Training Specialist Models without Reasoning Trajectories for Domain Expert Distillation",
+      "source_url": "https://arxiv.org/abs/2609.13770",
+      "rejection_reason": "distillation/trainingが主題で推論対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.14144": {
+      "primary_identity": "id:arXiv:2609.14144",
+      "identity_tokens": [
+        "id:arXiv:2609.14144",
+        "title:one size does not fit all setting inference depth from the questions a deployment actually asks",
+        "url:https://arxiv.org/abs/2609.14144"
+      ],
+      "canonical_id": "arXiv:2609.14144",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "One Size Does Not Fit All: Setting Inference Depth from the Questions a Deployment Actually Asks",
+      "source_url": "https://arxiv.org/abs/2609.14144",
+      "rejection_reason": "adaptive depthの分析寄りで今回のシステム候補5件より直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2609.14320": {
       "primary_identity": "id:arXiv:2609.14320",
       "identity_tokens": [
@@ -1750,6 +2036,50 @@
       "axis": "2026-09新着のKV表現・stateful context materialization・model-runtime co-design・speculative decoding correctness",
       "run_key": "2026-09-17T03:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260917T0300JST-discovery-specialist-recent-inference-1.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.14500": {
+      "primary_identity": "id:arXiv:2609.14500",
+      "identity_tokens": [
+        "id:arXiv:2609.14500",
+        "title:when does a scaling result justify a different allocation a critical review of resourceallocation evidence for ai systems",
+        "url:https://arxiv.org/abs/2609.14500"
+      ],
+      "canonical_id": "arXiv:2609.14500",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "When does a scaling result justify a different allocation? A critical review of resource-allocation evidence for AI systems",
+      "source_url": "https://arxiv.org/abs/2609.14500",
+      "rejection_reason": "critical reviewで個別推論システム研究ではない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2609.14708": {
+      "primary_identity": "id:arXiv:2609.14708",
+      "identity_tokens": [
+        "id:arXiv:2609.14708",
+        "title:lightning weave improving the accuracyefficiency frontier of reasoning models through capability composition",
+        "url:https://arxiv.org/abs/2609.14708"
+      ],
+      "canonical_id": "arXiv:2609.14708",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Lightning Weave: Improving the Accuracy-Efficiency Frontier of Reasoning Models through Capability Composition",
+      "source_url": "https://arxiv.org/abs/2609.14708",
+      "rejection_reason": "reasoning capability compositionが主題で推論基盤への直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2609.14850": {
