@@ -145,9 +145,9 @@ PROFILES = {
     "run_finalization_gate.py": {
         "task": "最終化許可判定",
         "next": [
-            "出力の permit / blocking_reasons / next_action / wait_targets / wait_seconds を確認する。",
-            "permit が出ていなければ wait_targets の同一 claim / submission / ACK を再確認し、状態を更新して run_finalization_gate.py を再実行する。",
-            "permit が明示的に出た場合だけ最終応答へ進む。",
+            "出力の finalization_permit.issued / blocking_reasons / next_action / wait_targets / wait_seconds を確認する。",
+            "finalization_permit.issued=false なら wait_targets の同一 claim / submission / ACK を再確認し、状態を更新して run_finalization_gate.py を再実行する。",
+            "finalization_permit.issued=true の場合だけ最終応答へ進む。",
         ],
         "recovery": [
             "continuation decision と finalization_allowed を再確認する。",
