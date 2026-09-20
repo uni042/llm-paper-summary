@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-20T04:10:00+00:00",
-  "record_count": 55,
+  "updated_at": "2026-09-20T04:15:00+00:00",
+  "record_count": 60,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -781,6 +781,76 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
       ],
       "title": "VB-LoRA: Extreme Parameter Efficient Fine-Tuning with Vector Banks"
+    },
+    "DOI:10.18653/v1/2025.emnlp-main.673": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.673",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.673"
+      ],
+      "reason": "Reasoning compression method with efficiency implications, but not a focused inference-system implementation.",
+      "first_checked_at": "2026-09-20T04:15:00+00:00",
+      "last_checked_at": "2026-09-20T04:15:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv.md"
+      ],
+      "title": "LightThinker: Thinking Step-by-Step Compression"
+    },
+    "DOI:10.18653/v1/2025.findings-acl.1183": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1183",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.1183"
+      ],
+      "reason": "Kernel-generation benchmark useful to compiler work, but not itself an LLM inference/training systems optimization.",
+      "first_checked_at": "2026-09-20T04:15:00+00:00",
+      "last_checked_at": "2026-09-20T04:15:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md"
+      ],
+      "title": "TritonBench: Benchmarking Large Language Model Capabilities for Generating Triton Operators"
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.568": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.568",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.568"
+      ],
+      "reason": "RAG method/application optimization rather than core inference/training infrastructure.",
+      "first_checked_at": "2026-09-20T04:15:00+00:00",
+      "last_checked_at": "2026-09-20T04:15:00+00:00",
+      "linked_from": [
+        "papers/inference/05-kv-cache-memory-management/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md"
+      ],
+      "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation"
+    },
+    "DOI:10.18653/v1/2025.findings-naacl.251": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.251",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-naacl.251"
+      ],
+      "reason": "MoE analysis/understanding work rather than a focused serving, offload, or training-system contribution.",
+      "first_checked_at": "2026-09-20T04:15:00+00:00",
+      "last_checked_at": "2026-09-20T04:15:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md"
+      ],
+      "title": "A Closer Look into Mixture-of-Experts in Large Language Models"
+    },
+    "DOI:10.18653/v1/2025.starsem-1.26": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.starsem-1.26",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.starsem-1.26"
+      ],
+      "reason": "Long-text semantic-memory architecture with some scalability relevance, but not a core LLM systems contribution for immediate Research.",
+      "first_checked_at": "2026-09-20T04:15:00+00:00",
+      "last_checked_at": "2026-09-20T04:15:00+00:00",
+      "linked_from": [
+        "papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md"
+      ],
+      "title": "HSGM: Hierarchical Segment-Graph Memory for Scalable Long-Text Semantics"
     }
   }
 }
