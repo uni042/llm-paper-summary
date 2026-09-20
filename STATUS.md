@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:13:20 JST**
+> 自動生成: **2026-09-20 12:13:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **8** | **7** | **1** | **1** | **0** | — |
+| Research | **15** | **8** | **7** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **15** | **9** | **8** | **1** | **1** | **0** | **5** |
+| 合計 | **15** | **9** | **8** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **8件** / 検証済み成功: **7件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **8件** / 検証済み成功: **7件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
   - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
@@ -123,7 +123,8 @@
   - result: `.survey/work-queue/results/research/attempt-22a85da9fa40ba86114440e5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-22a85da9fa40ba86114440e5.json`
   - paper: `papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-391a60b20009f8118bae73b5.json` (job `job-research-8fc74c0fbb46c30e`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-391a60b20009f8118bae73b5.json` (job `job-research-8fc74c0fbb46c30e`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-391a60b20009f8118bae73b5.json` (`ok=false`)
 - **成功** `arXiv:2309.08168` — Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-06ec3586821ff3bb.json`
   - result: `.survey/work-queue/results/research/attempt-494231538c84c48296aa17b3.json` (`ok=true`)

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-391a60b20009f8118bae73b5",
+  "job_id": "job-research-8fc74c0fbb46c30e",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-391a60b20009f8118bae73b5.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short",
+  "processed_at": "2026-09-20T03:13:35+00:00",
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
