@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-0035fe851a4c5bf25fbbacc2",
-  "job_id": "job-research-6778a26f7c6381c5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0035fe851a4c5bf25fbbacc2",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0035fe851a4c5bf25fbbacc2","job_id":"job-research-6778a26f7c6381c5","data":{"overview":"Teolaは、特に依存関係と並列化機会が多い高度RAGで効果が大きく、低要求率で既存方式比最大2.09倍、高要求率でも最大2.03倍のエンドツーエンド高速化を示す。単純RAGでも最大1.62〜1.67倍、Contextual Retrievalでは1.06〜1.59倍改善する。同居する2アプリでも1.2〜1.55倍を維持し、グラフ最適化とトポロジ認識バッチングの双方が寄与する。細粒度分割は単体演算をわずかに遅くする場合があるが、並列化による全体短縮が上回る。","key_results":[{"metric":"エンドツーエンド遅延高速化","value":"最大2.09倍","baseline":"既存オーケストレーション群","condition":"高度RAG文書QA、低要求率","interpretation":"モジュール横断の並列化・パイプライン化が複雑ワークフローほど大きく効く。"},{"metric":"高負荷高速化","value":"最大2.03倍","baseline":"既存方式","condition":"高度RAG、高要求率","interpretation":"アプリ認識スケジューリングが待ち行列支配条件でも効果を保つ。"},{"metric":"同居アプリ高速化","value":"1.2〜1.55倍","baseline":"LlamaDistPC","condition":"単純RAGと高度RAGを各3 req/sで同居","interpretation":"個別アプリ最適化を維持したまま共有基盤でも優位を示す。"},{"metric":"トポロジ認識バッチング","value":"単一問い合わせ平均1.15倍、複数問い合わせ最大19.2%短縮","baseline":"トポロジ情報なし","condition":"高度RAGアブレーション","interpretation":"要求単位ではなくグラフ進行への寄与でバッチを選ぶ効果を分離確認。"},{"metric":"分割プリフィル効率損失","value":"3.11〜12.12%","baseline":"単一完全プリフィル","condition":"llama-2-7B、複数入力長","interpretation":"単体効率は落ちるが他処理との重複実行による全体利益が上回る。"}],"negative_results":"Contextual Retrievalのように大量チャンクの文脈化が支配的でグラフ並列化余地が小さいワークフローでは改善幅が1.06倍まで縮む。部分プリフィル等の細分化は単体演算効率を3.11〜12.12%下げる。グラフ最適化費用は全遅延の1.3〜3%、通信費は3.1〜6.2%を占める。","interpretation":"高速化の源泉は個々のLLMカーネルを速くすることではなく、モジュール黒箱の内部をプリミティブとして露出し、依存のない処理を重ねることにある。高負荷ではさらに、どの要求を実行するとグラフが前進するかをバッチ形成へ反映することで待ち行列を抑える。","quality_impact":"処理の意味やモデル推論を近似せず、依存を守った実行順序・分割・重複を変更するため、生成品質を意図的に犠牲にしない。部分デコードは意味的に完成した構造化断片だけを下流へ渡す。"},"reservation":{"claim_id":"claim-0035fe851a4c5bf25fbbacc2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
