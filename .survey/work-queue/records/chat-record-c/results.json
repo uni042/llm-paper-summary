@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-8eee4a640ec2d03e43ea9f98","job_id":"job-research-2dff89406766fc1d","data":{"overview":"生成課題ではpruningがmergingを明確に上回り、REAPが特に50%圧縮で安定する。中小モデル群のcoding平均低下は25%圧縮で1.9%、50%で6.9%に対し、HC-SMoE/M-SMoEは25%で5%超、50%で20%超低下。Qwen3-30Bのcode平均はbaseline 0.558、50% REAP 0.541で、EAN 0.530、frequency 0.452、HC-SMoE 0.364、M-SMoE 0.397を上回る。大規模Qwen3-Coder/Kimi-K2では25/50%で非agentic coding平均低下がそれぞれ0.16%/1.2%とnear-losslessである。","key_results":[{"metric":"Qwen3-30B 50% compression Code Avg","value":"0.541","baseline":"uncompressed 0.558; EAN 0.530; M-SMoE 0.397; HC-SMoE 0.364","condition":"domain-specific coding calibration, one-shot, no fine-tuning","interpretation":"半数expert削除でもbaseline差0.017に抑え、mergingより生成品質を大幅に維持する。"},{"metric":"大規模Qwen3-Coder/Kimi-K2 non-agentic coding平均低下","value":"1.2%","baseline":"uncompressed models","condition":"50% expert pruning with REAP","interpretation":"480B〜1T級かつ量子化済みモデルでも半数expert削除がnear-lossless。"},{"metric":"中小モデル generative coding平均低下","value":"6.9%","baseline":"HC-SMoE/M-SMoE >20%","condition":"50% compression, excluding large-scale SMoEs","interpretation":"MCでは差が小さいが自己回帰生成ではrouter独立制御を残すpruningの優位が拡大する。"},{"metric":"GLM-4.5-Air 50% Math Avg","value":"0.857","baseline":"uncompressed 0.882; EAN 0.809; M-SMoE 0.465","condition":"domain-specific math calibration","interpretation":"高圧縮でも数学推論品質を比較的維持する。"}],"negative_results":"MCではmergingも競争力があり、REAPが常に全指標で最良ではない。Qwen3-30B 50% creative writingではM-SMoE 0.725がREAP 0.718をわずかに上回る。domain-specific calibrationが重要で、codeモデルをC4で校正すると複数圧縮モデルがcoherent outputを失い0% accuracyへ崩壊する例がある。Kimi-K2 50%ではtool-use Overallがbaseline 0.666からREAP 0.564へ下がり、全生成用途が完全無損失ではない。","interpretation":"expert mergingは個々の関数を残す代わりにgate自由度を束ねるため、長い自己回帰生成ほどlogitずれが累積する。REAPは関数数を減らすが残存関数のrouter制御を保ち、低寄与expertだけを選ぶため、生成trajectoryをbaselineへ近く保てる。","quality_impact":"50%の大幅圧縮でもcode/math/creative generationを実用水準に維持するが、校正分布とtask依存性があり、用途別校正が推奨される。"},"reservation":{"claim_id":"claim-8eee4a640ec2d03e43ea9f98","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-7f1cfa62b8748ba1f034c4fa",
+  "job_id": "job-research-5cd2beb9d9cae3d8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7f1cfa62b8748ba1f034c4fa",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

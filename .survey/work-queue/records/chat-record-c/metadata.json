@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-8eee4a640ec2d03e43ea9f98","job_id":"job-research-2dff89406766fc1d","data":{"canonical_id":"arXiv:2510.13999","arxiv_id":"2510.13999","title":"REAP the Experts: Why Pruning Prevails for One-Shot MoE compression","list_summary":"ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。","summary":"MoEの専門家統合は多肢選択では有効でも生成ではルーターの入力依存な独立制御を失い、機能部分空間を崩壊させると理論・実験で示す。REAPは専門家が実際に活性化したトークンだけについてrouter gate×expert output normを平均し、出力寄与の小さい専門家を枝刈りする。頻度とは分離されたsaliencyで専門家を選び、圧縮後も残存専門家への独立ルーティングを維持する。21B〜1T、7種のSMoEをone-shot・再学習なしで25/50%圧縮し、コード、数学、創作、tool-useなど生成課題で統合手法と他の枝刈りを上回る。Qwen3-Coder-480BとKimi-K2では50%枝刈り後も非agentic code平均低下を約1.2%に抑える。","source":"https://arxiv.org/html/2510.13999v3","sources":["https://arxiv.org/abs/2510.13999","https://arxiv.org/html/2510.13999v3","https://arxiv.org/pdf/2510.13999","https://github.com/CerebrasResearch/reap"],"authors":["Mike Lasby","Ivan Lazarevich","Nish Sinnadurai","Sean Lie","Yani Ioannou","Vithursan Thangarasa"],"published":"2025-10-15","publication":"arXiv preprint","publication_type":"preprint","publication_status":"arXiv v3 revised 2026-05-13","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"topics":["MoE","expert pruning","model compression","generative evaluation"],"implementation":"公式PyTorch実装と一部圧縮済みチェックポイントをCerebrasResearch/reapおよびHugging Faceで公開。","code":"https://github.com/CerebrasResearch/reap","hardware_evaluation":"21.9B ERNIEから1.026T Kimi-K2まで7構成を評価。大規模モデルはFP8/W4A16を含み、one-shot圧縮後の生成・MC品質を中心に測定する。","quality_effect":"生成課題で特に強く、50%圧縮時のコード平均低下は中小モデル群で6.9%、Qwen3-Coder/Kimi-K2大規模群では平均約1.2%。Qwen3-30Bの50%コード平均はbaseline 0.558に対しREAP 0.541。","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"Primary arXiv HTML v3 including the complete references section was reviewed; normalized repository IDs were not added in this pass.","references_total":0},"reservation":{"claim_id":"claim-8eee4a640ec2d03e43ea9f98","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-7f1cfa62b8748ba1f034c4fa",
+  "job_id": "job-research-5cd2beb9d9cae3d8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7f1cfa62b8748ba1f034c4fa",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

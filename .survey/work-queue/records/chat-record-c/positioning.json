@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-8eee4a640ec2d03e43ea9f98","job_id":"job-research-2dff89406766fc1d","data":{"limitations":"one-shot品質は校正分布へ強く依存し、C4でcode向け圧縮を校正すると生成崩壊する例がある。expertを物理削除するため、後で別domainが必要とするspecialistを復元できず、動的cache/offloadのように容量を保持する方式とは異なる。MCではmergingとの差が小さく一部条件でmergingが勝つため、pruning優位は特に生成・高granularityで強いという条件付き結論である。圧縮後の実測latency/memory bandwidth評価は主要焦点ではなく、品質改善がハードウェア速度へどの程度直結するかは別評価が必要。","differences":"frequency pruningは呼出回数だけ、EANはexpert output norm中心だが、REAPはrouter gateとactivation normの積をexpertが活性化した条件付き集合で平均し、頻度から独立した実出力寄与を測る。EASY-EPのgate-weighted norm集計と近いが、REAPは条件付き平均でfrequency biasを除き、pruning error上界から基準を導出する。M-SMoE/HC-SMoEはexpertを統合して情報を残す代わりにrouter gateを束ねるが、REAPは情報を削る代わりに残存expertへの独立制御を保持する。","implementation_status":"公式PyTorchコードがCerebrasResearch/reapで公開され、Hugging Faceに選択圧縮チェックポイントも公開。FP8 Qwen3-Coder-480BやW4A16 Kimi-K2まで実際に圧縮しており、大規模・量子化済みMoEへの適用を実証している。","research_positioning":"MoEメモリ削減の『mergingなら削除より情報を残せるので有利』という直感を、生成時のrouter制御自由度という観点から反転させた研究。CPU/SSD expert offloadやexpert cacheとは直交し、モデル自体の総expert数を事前に半減して常駐・転送対象集合を縮める前処理として組み合わせられる。特にローカル推論や小batchで全重み容量が支配的な環境に適する。"},"reservation":{"claim_id":"claim-8eee4a640ec2d03e43ea9f98","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-7f1cfa62b8748ba1f034c4fa",
+  "job_id": "job-research-5cd2beb9d9cae3d8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7f1cfa62b8748ba1f034c4fa",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
