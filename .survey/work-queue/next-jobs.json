@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 125,
-    "actively_claimed": 1,
-    "claimable": 124
+    "actively_claimed": 2,
+    "claimable": 123
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-da8147ed3835966f",
-      "type": "research",
-      "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2502.07903",
-      "title": "HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment",
-      "source_url": "https://arxiv.org/abs/2502.07903",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.07903-hexgen-2.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-e0a5ea7f3cdd2886",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-51de804389577a72",
+      "type": "research",
+      "lane": null,
+      "priority": 96,
+      "canonical_id": "arXiv:2407.02490",
+      "title": "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2407.02490",
+      "paper_path": "papers/inference/10-sparse-attention/2024-2407.02490-minference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T05:16:31+00:00"
+  "generated_at": "2026-09-20T05:34:54+00:00"
 }

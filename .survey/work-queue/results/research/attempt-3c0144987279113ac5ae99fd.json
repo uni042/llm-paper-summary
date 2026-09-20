@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-3c0144987279113ac5ae99fd",
+  "job_id": "job-research-b27d4d0f59f887b3",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-3c0144987279113ac5ae99fd.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | problem_method.components[5].description is too short | Japanese-first prose ratio is too low: 51.6% < 70% (Japanese=3310, Latin=3103)",
+  "processed_at": "2026-09-20T05:34:54+00:00",
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "problem_method.components[5].description is too short",
+    "Japanese-first prose ratio is too low: 51.6% < 70% (Japanese=3310, Latin=3103)"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
