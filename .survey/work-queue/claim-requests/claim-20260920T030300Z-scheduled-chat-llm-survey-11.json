@@ -5,5 +5,21 @@
   "worker_kind": "scheduled_chat",
   "requested_at": "2026-09-20T03:03:00Z",
   "max_jobs": 1,
-  "job_types": ["research"]
+  "job_types": [
+    "research"
+  ],
+  "checkpointed_jobs": [
+    {
+      "job_id": "job-research-0e84e93a7c48f41f",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/attempt-419c292422737fc99e76b4d3.json"
+    },
+    {
+      "job_id": "job-research-6882c5cf191305a1",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/attempt-613023b3610ac9e4b50ad840.json"
+    },
+    {
+      "job_id": "job-research-958b0ab5aeb9819d",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/attempt-305a1c02b4c98a32f145ec7a.json"
+    }
+  ]
 }
