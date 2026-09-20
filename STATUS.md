@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 20:05:19 JST**
+> 自動生成: **2026-09-20 20:05:45 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **183** |
-| 未claim Research job | **182** |
+| 収録候補論文 | **182** |
+| 未claim Research job | **181** |
 | 直近24hの検証済みResearch収録 | **82** |
 | 最終検証済みResearch収録 | **09-20 19:20:46 JST（44分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **183** |
+| canonical_id確認済みの一意な候補論文 | **182** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **183** |
+| 非終端Research job合計 | **182** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **3** | **0** | **1** | **1** | **1** | — |
+| Research | **37** | **3** | **0** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **4** | **1** | **1** | **1** | **1** | **5** |
+| 合計 | **37** | **4** | **1** | **0** | **1** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,12 +127,13 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 19:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **3件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
+- immutable submission: **3件** / 検証済み成功: **0件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-92a81eea4a04eb4c80bbed4e.json` (job `job-research-8f68f6b8d4d62651`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-92a81eea4a04eb4c80bbed4e.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-982ad17a239ebb28dac11e22.json` (job `job-research-901c881ed2cc963f`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-982ad17a239ebb28dac11e22.json` (`ok=true`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-f9a8eb6ffcd986b77ec0c7a3.json` (job `job-research-3b1c7287727937a1`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f9a8eb6ffcd986b77ec0c7a3.json` (job `job-research-3b1c7287727937a1`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-f9a8eb6ffcd986b77ec0c7a3.json` (`ok=true`)
 
 #### Audit (:30)
 
@@ -177,7 +178,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **183** |
+| ready | **182** |
 
 ### 候補の重複・識別情報欠損
 
@@ -205,8 +206,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **800** |
-| └ Research | **582** |
+| 成功result未照合のimmutable submission | **801** |
+| └ Research | **583** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **71** |
