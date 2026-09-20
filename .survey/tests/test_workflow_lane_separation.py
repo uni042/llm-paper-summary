@@ -81,9 +81,9 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         self.assertNotIn("Install citation schema hooks", workflow)
         self.assertNotIn("Commit schema and graph hooks", workflow)
 
-        queue = (ROOT / ".survey/docs/survey-workflow/queue-v10.md").read_text(encoding="utf-8")
-        for key in ("references", "references_checked_at", "references_source", "references_total"):
-            self.assertIn(key, queue)
+        template = (ROOT / ".survey/templates/paper.md").read_text(encoding="utf-8")
+        for key in ("references:", "references_checked_at:", "references_source:", "references_total:"):
+            self.assertIn(key, template)
 
     def test_background_writers_recover_from_concurrent_main_pushes(self):
         citation = self._text("citation-graph-backfill.yml")
