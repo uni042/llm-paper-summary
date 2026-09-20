@@ -1,17 +1,55 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-175fe59944f6ca42687384fc","job_id":"job-research-529f8795f6dde556",
- "data":{
-   "overview":"DELTAは1kトークン相当の小さな注意予算でもQuestとRaaSより高い推論精度を保ち、条件によって完全注意に近づくか上回った。速度面では長文化に伴う注意遅延の増加を抑え、1.5Bモデル・バッチ64・最大18k生成の測定で総デコード時間を403秒から261秒へ短縮し、スループットを2,921から4,517トークン/秒へ高めた。改善の源はKV容量削減ではなく、Δ層以外で読むページ数を制限して高帯域メモリの反復読み出しを減らすことにある。",
-   "key_results":[
-     {"metric":"総デコード時間","value":"403秒から261秒へ短縮（約1.54倍のエンドツーエンド高速化）","baseline":"完全注意","condition":"DeepSeek-R1-Distill-Qwen-1.5B、バッチ64、最大18k生成、1kトークン注意予算","interpretation":"系列が長くなっても疎注意層のKV読み出し量が予算で抑えられるため、全履歴を読む完全注意より累積時間が小さくなる。"},
-     {"metric":"スループット","value":"2,921から4,517トークン/秒へ55%向上","baseline":"完全注意","condition":"同じ1.5B、バッチ64、最大18k生成の速度測定","interpretation":"Δ層の全注意とページ選択の追加費用を含めても、後続層で削減したKV読み出しの効果が上回る。"},
-     {"metric":"長系列末尾の1ステップ時間","value":"完全注意約29.8〜30 msに対しDELTA約13 ms","baseline":"完全注意","condition":"1.5Bモデル、最大18k付近、選択開始後","interpretation":"完全注意は文脈長とともにほぼ線形に増える一方、DELTAは選択ページ数を制限するため増加が緩やかになる。"},
-     {"metric":"AIME-2024正答率","value":"14B・1k予算でDELTA約50%、完全注意約60%、Quest/RaaSは20%未満","baseline":"完全注意、Quest、RaaS","condition":"DeepSeek-R1-Distill-Qwen-14B、ページ予算64、直近8ページ保持","interpretation":"極端に小さい保持予算では完全注意との差は残るが、動的再選択と直近窓により既存疎方式の大きな精度崩壊を抑える。"},
-     {"metric":"GPQA正答率","value":"7B・2k予算で完全注意を約30%相対的に上回ると報告","baseline":"完全注意","condition":"DeepSeek-R1-Distill-Qwen-7B、2kトークン相当予算","interpretation":"重要文脈を選別することが冗長な履歴を除く正則化的効果を持つ可能性を示すが、4kへ増やしても一貫して改善せず、単純な予算増加が精度向上を保証しない。"}
-   ],
-   "negative_results":"注意予算を1kから2kへ増やすと改善する例が多い一方、4kまで増やすと改善は小さく、場合によって精度がわずかに低下する。Δ層を増やすほど各更新層の全注意費用が増え、最終的には完全注意の実行時間へ近づく。Δ層配置の違いでも正答率が目立って変動し、直近窓Lの設定だけでもMixed120で最大約10ポイントの差が出る。",
-   "interpretation":"長いデコードでは全注意の費用が文脈長に比例して増えるのに対し、DELTAの通常層は固定予算の選択ページだけを読むため、長文化するほど相対的な利得が大きくなる。一方、Δ層は全履歴を読むため数を増やすと利得が減る。精度は重要ページの再現率と直近文脈の保持の釣り合いで決まり、予算が小さいと直近窓を厚くする価値が高いが、大きい予算では広い過去文脈へ配分した方がよい。",
-   "quality_impact":"近似的な疎注意方式であり数学的な無損失保証はない。ただし評価した推論課題では既存疎方式より精度劣化が小さく、多くの条件で完全注意に匹敵または上回る。設定感度があるため、モデルごとの較正なしに同等品質を仮定すべきではない。"
- },
- "reservation":{"claim_id":"claim-175fe59944f6ca42687384fc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-da2aebbde976d20453f0ceeb",
+  "job_id": "job-research-7975c226ad04d80a",
+  "data": {
+    "overview": "CNN/DMではGPT-2 XL targetで4.80倍、GPT-NEOで6.63倍の自己回帰生成比高速化を達成し、標準投機的復号の3.58倍/5.45倍を上回った。OpenWebTextでは5.38倍/7.23倍で、標準投機的復号3.66倍/4.12倍に対して最大約1.75倍改善した。MT-BenchのVicuna 33Bでは2.61倍で、EAGLE 2.41倍、EAGLE-2 2.60倍と同等以上のoverall speedupを、EAGLE-2より33%以上少ないdraft FLOPsで得た。",
+    "key_results": [
+      {
+        "metric": "OpenWebText speedup",
+        "value": "7.23倍 GPT-NEO、5.38倍 GPT-2 XL",
+        "baseline": "autoregressive target decoding",
+        "condition": "MDLM draft、temperature 0、2×A100",
+        "interpretation": "長い並列diffusion draftで最大高速化を達成。"
+      },
+      {
+        "metric": "standard speculative decoding比",
+        "value": "最大約1.75倍、範囲1.45〜1.75倍",
+        "baseline": "GPT-2 autoregressive drafter",
+        "condition": "CNN/DM/OpenWebText",
+        "interpretation": "draft側の直列生成を並列化する利得を確認。"
+      },
+      {
+        "metric": "CNN/DM speedup",
+        "value": "4.80倍 GPT-2 XL、6.63倍 GPT-NEO",
+        "baseline": "autoregressive decoding",
+        "condition": "1024 token generation",
+        "interpretation": "要約でも標準投機的復号を上回る。"
+      },
+      {
+        "metric": "MT-Bench overall speedup",
+        "value": "2.61倍",
+        "baseline": "EAGLE 2.41倍、EAGLE-2 2.60倍",
+        "condition": "Vicuna 33B target、MDLM 141M",
+        "interpretation": "SOTA級速度をより小さいdiffusion draftで達成。"
+      },
+      {
+        "metric": "draft FLOPs",
+        "value": "5.53×10^10 FLOPs/draft",
+        "baseline": "EAGLE-2 8.35×10^10",
+        "condition": "MT-Bench Vicuna 33B",
+        "interpretation": "EAGLE-2より33%以上少ないdraft計算で同等overall speedup。"
+      }
+    ],
+    "negative_results": "diffusion drafterの確率はtargetと十分calibrateされず、特にtemperature>0ではtop-1へ過度に集中するため確率的samplingの有効性は未検証。利用可能なdiffusion modelのtokenizerがGPT-2系に偏り、Vicuna用には別tokenizerで新規学習が必要だった。短い生成では並列化利得が小さく、fine-tuningなしでは初期acceptance率が低い。性能はγより拡散step数Tの調整に敏感。",
+    "interpretation": "投機的復号の速度上限はtarget検証だけでなくdraftの直列depthにも依存する。diffusion draftでは候補長γとnetwork evaluation数Tを分離でき、より長い候補を低depthで提案できるため、acceptance率が標準draftより少し低くてもwalltimeでは速くなる。",
+    "quality_impact": "標準speculative samplingのaccept/reject補正を維持するためtarget modelのgreedy出力品質を保持する。実験はtemperature 0であり、多様な確率的samplingでの同等性は今後の課題。"
+  },
+  "reservation": {
+    "claim_id": "claim-da2aebbde976d20453f0ceeb",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
