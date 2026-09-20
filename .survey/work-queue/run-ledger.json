@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T20:17:44.262133+00:00",
+  "updated_at": "2026-09-20T20:20:54.161810+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -28908,6 +28908,101 @@
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260921T0516JST-discovery-round-05-openalex-memory.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 863,
+      "paper_active_count_after": 863,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "unattributed:35534987734",
+      "first_recorded_at": "2026-09-20T20:20:54.161810+00:00",
+      "last_recorded_at": "2026-09-20T20:20:54.161810+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 6,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35534987734:1",
+          "recorded_at": "2026-09-20T20:20:54.161810+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35534987734",
+            "run_attempt": "1",
+            "source_sha": "c1218cdc4664271cf5195bbfff34555db81bf409"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-3a8348ca8e5e47a6",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-3a8348ca8e5e47a6",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0d7416aaa0ab7962",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.23841",
+          "title": "Pipeline-Native Transformers: Co-Designing Model Architecture and CPU Inference for Bandwidth-Efficient Autoregressive Decode"
+        },
+        {
+          "job_id": "job-research-2c335f8cbb6722b2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.26004",
+          "title": "AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs"
+        },
+        {
+          "job_id": "job-research-898c6226a202425e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.24664",
+          "title": "Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration"
+        },
+        {
+          "job_id": "job-research-b6a722146f5922c5",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.12550",
+          "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances"
+        },
+        {
+          "job_id": "job-research-c67c0a139707ac48",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.24650",
+          "title": "Simthesizer: An Agent-Driven Simulation Framework for LLM Serving Systems"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260921T0517JST-discovery-round-06-openalex-moe.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 863,

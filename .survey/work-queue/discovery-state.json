@@ -1,30 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T20:16:04+00:00",
+  "updated_at": "2026-09-20T20:18:33+00:00",
   "last_run_key": "2026-09-21T05:01:46+09:00",
-  "last_round": "round-05",
+  "last_round": "round-06",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 5,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T13:00:00+09:00",
-      "round": "specialist-storage-moe-2",
-      "axis": "SSD/NVMe KV offload・MoE expert cache/placement",
-      "query_summary": "SSD/NVMe direct KV offloadとMoE expert cache/placementを独立軸として探索。GitHub code searchでcanonical ID/titleをwrite前に再照合し、未検出5件を投入。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "forward/backward citationとCXL・remote memory・networking系の階層メモリを探索する",
-      "source_submission": "work-queue/submissions/20260916T1312JST-discovery-specialist-storage-moe-2.json"
-    },
     {
       "run_key": "2026-09-16T13:00:00+09:00",
       "round": "specialist-cxl-remote-3",
@@ -7827,6 +7812,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0516JST-discovery-round-05-openalex-memory.json"
+    },
+    {
+      "run_key": "2026-09-21T05:01:46+09:00",
+      "round": "round-06",
+      "axis": "OpenAlex recent MoE serving expert cache offloading",
+      "query_summary": null,
+      "provider": "openalex",
+      "source_url": "https://api.openalex.org/works?search=mixture%20experts%20LLM%20serving%20expert%20cache%20offloading&sort=publication_date:desc&per-page=100",
+      "citation_direction": null,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0517JST-discovery-round-06-openalex-moe.json"
     }
   ],
   "axes": {
@@ -15036,6 +15042,19 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 0,
       "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "OpenAlex recent MoE serving expert cache offloading": {
+      "last_run_key": "2026-09-21T05:01:46+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
