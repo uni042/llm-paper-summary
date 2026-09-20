@@ -2,46 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-53f30943d2cb795096db98fc",
-  "job_id": "job-research-d0436ba646148687",
-  "data": {
-    "evaluation_summary": "主実時間評価はT5 v1.1のT5-XXL 11Bをターゲットに、英独翻訳とニュース要約で標準T5X復号と比較する。近似モデルはT5-small 77M、T5-base 250M、T5-large 800Mで、単一TPU-v4・バッチ1、貪欲相当の温度0と標準サンプリングの温度1を評価する。加えてGPT風97MモデルとLaMDA 137Bで受理率αを測定し、近似モデルの大きさ・サンプリング鋭さと受理率の関係を調べる。",
-    "scope": "実時間の高速化比較はT5-XXLとT5Xに限定され、GPT風97MとLaMDA 137Bでは主に受理率αを測る。バッチサイズは1であり、大規模連続バッチ型サービングのスループット評価ではない。評価対象はテキスト生成で、画像など他モダリティは未評価。",
-    "hardware": [
-      "単一TPU-v4"
-    ],
-    "software": [
-      "T5Xを標準復号の比較実装として使用し、同じ既存T5チェックポイント上で投機的復号を実装。"
-    ],
-    "model": [
-      "T5-XXL 11B",
-      "T5-small 77M",
-      "T5-base 250M",
-      "T5-large 800M",
-      "GPT風97M/6M",
-      "LaMDA 137B/8B/2B/100M"
-    ],
-    "datasets": [
-      "WMT English-German",
-      "CNN/DailyMail",
-      "One Billion Word Benchmark",
-      "LaMDAの対話タスク"
-    ],
-    "baselines": [
-      "標準T5X自己回帰復号"
-    ],
-    "correctness": "投機的サンプリングはターゲット分布と同一の出力分布を保証し、品質近似ではなく分布同値性を理論的に示す。",
-    "methodology": "T5-XXLの実時間では温度0と温度1をそれぞれ評価し、近似モデルサイズごとにγ、平均受理率α、標準T5X比の実時間高速化を測定する。受理率分析では各設定についてターゲットモデルが生成した1万トークン上でαを推定し、理論式による期待改善と実測値も比較する。",
-    "settings": [
-      "T5実時間評価はバッチサイズ1。",
-      "英独翻訳ではT5-XXLをWMT EnDe微調整済みチェックポイントで使用。",
-      "要約ではCNN/DailyMail微調整済みチェックポイントを使用。",
-      "温度0と温度1の両方を測定。"
-    ]
-  },
+  "attempt_id": "attempt-0ab84ae32ed1ca16a3e50130",
+  "job_id": "job-research-51de804389577a72",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-53f30943d2cb795096db98fc",
-    "worker_id": "manual-refcuration-savecheck-20260920",
+    "claim_id": "claim-0ab84ae32ed1ca16a3e50130",
+    "worker_id": "scheduled-chat-discovery-hourly",
     "worker_kind": "scheduled_chat"
   }
 }

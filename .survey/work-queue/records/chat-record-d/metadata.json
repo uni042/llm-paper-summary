@@ -2,96 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-53f30943d2cb795096db98fc",
-  "job_id": "job-research-d0436ba646148687",
-  "data": {
-    "canonical_id": "arXiv:2211.17192",
-    "arxiv_id": "2211.17192",
-    "doi": "10.48550/arXiv.2211.17192",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.CL"
-      ]
-    },
-    "title": "Fast Inference from Transformers via Speculative Decoding",
-    "summary": "本論文は、大規模自己回帰モデルの復号が1トークンごとに巨大モデルを逐次実行するため遅いという問題に対し、小さな近似モデルが複数トークンを先行提案し、大きなターゲットモデルがそれらを一括評価する投機的復号を提案する。受理確率と補正分布を設計することで、棄却が起きても最終的なサンプリング分布をターゲットモデル単独時と厳密に一致させる。T5-XXL 11Bを単一TPU-v4・バッチ1で評価し、標準T5X実装に対して翻訳で最大3.4倍、要約で最大3.1倍の実時間高速化を示す。",
-    "list_summary": "小型モデルの複数トークン提案を大型モデルで並列検証し、出力分布を変えずにT5-XXL復号を最大3.4倍高速化する投機的復号を提案。",
-    "authors": [
-      "Yaniv Leviathan",
-      "Matan Kalman",
-      "Yossi Matias"
-    ],
-    "authors_affiliations": "Google Research, Mountain View, CA, USA",
-    "published": "2023-07-03",
-    "publication": "Proceedings of the 40th International Conference on Machine Learning (ICML 2023), PMLR 202:19274-19286",
-    "publication_type": "国際会議論文",
-    "publication_status": "ICML 2023採択論文（Oral）。arXiv v2は2023年5月18日公開。",
-    "publication_version": "arXiv:2211.17192v2 / ICML 2023 camera-ready",
-    "lineage": "speculative-decoding",
-    "topics": [
-      "LLM推論",
-      "投機的復号",
-      "並列復号",
-      "自己回帰生成",
-      "レイテンシ最適化"
-    ],
-    "importance": "後続の投機的復号研究が前提とする受理・補正機構を一般の確率的サンプリングへ定式化し、再学習なし・出力分布不変で実時間高速化できることを理論と実測の両方で示した基礎研究。",
-    "hardware_evaluation": "T5-XXLの実時間評価は単一TPU-v4、バッチサイズ1で実施。追加分析ではGPT風97Mモデル、T5-XXL 11B、LaMDA 137Bと複数サイズの近似モデルを用いる。",
-    "hardware_details": "実時間比較ではT5-XXL 11Bをターゲット、T5-small 77M・T5-base 250M・T5-large 800Mを近似モデルとして同一TPU-v4上で評価する。論文中のコスト係数cは近似モデル1ステップとターゲットモデル1ステップの時間比で、実験では概ね0.05未満。",
-    "quality_effect": "投機的サンプリングの受理・補正則により、標準化後の任意のターゲット分布pに対して最終出力分布をpと一致させる。近似による品質劣化を許容して高速化する方式ではない。",
-    "bottlenecks": [
-      "自己回帰復号の逐次ターゲットモデル呼び出し",
-      "メモリ帯域・通信律速時の演算資源遊休",
-      "近似モデルの提案精度と実行コストの交換条件",
-      "追加並列計算資源の必要性"
-    ],
-    "evidence_locations": [
-      "第2節 Speculative Decoding",
-      "第3節 Analysis",
-      "第4節 Experiments",
-      "第6節 Discussion",
-      "付録A.3"
-    ],
-    "references": [
-      {
-        "canonical_id": "arXiv:1706.03762",
-        "title": "Attention Is All You Need"
-      },
-      {
-        "canonical_id": "arXiv:1910.10683",
-        "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
-      },
-      {
-        "canonical_id": "arXiv:2201.08239",
-        "title": "LaMDA: Language Models for Dialog Applications"
-      },
-      {
-        "canonical_id": "arXiv:2204.02311",
-        "title": "PaLM: Scaling Language Modeling with Pathways"
-      },
-      {
-        "canonical_id": "arXiv:2302.01318",
-        "title": "Accelerating Large Language Model Decoding with Speculative Sampling"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "arXiv:2211.17192v2 PDFの参考文献節",
-    "references_total": 5,
-    "source": "https://arxiv.org/abs/2211.17192",
-    "sources": [
-      "https://arxiv.org/abs/2211.17192",
-      "https://arxiv.org/pdf/2211.17192",
-      "https://proceedings.mlr.press/v202/leviathan23a.html"
-    ],
-    "code": null,
-    "implementation": "著者はT5Xを基準に投機的復号を実装し実時間評価している。論文・Google Research・PMLRの一次公開ページから著者公式の独立コードリポジトリは確認できない。",
-    "last_checked": "2026-09-20"
-  },
+  "attempt_id": "attempt-0ab84ae32ed1ca16a3e50130",
+  "job_id": "job-research-51de804389577a72",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-53f30943d2cb795096db98fc",
-    "worker_id": "manual-refcuration-savecheck-20260920",
+    "claim_id": "claim-0ab84ae32ed1ca16a3e50130",
+    "worker_id": "scheduled-chat-discovery-hourly",
     "worker_kind": "scheduled_chat"
   }
 }

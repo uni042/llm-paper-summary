@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-53f30943d2cb795096db98fc",
-  "job_id": "job-research-d0436ba646148687",
-  "data": {
-    "positioning": "本論文は、後続の投機的復号研究の基準点となる分布保存型の復号アルゴリズムである。量子化・蒸留・早期終了のように各トークンの計算を軽くするのではなく、安価な近似モデルと並列検証によって巨大ターゲットモデルの逐次呼び出し回数を減らす。",
-    "differences": "Blockwise Parallel Decodingは複数トークンを並列生成するが主に貪欲復号を対象とし専用学習を必要とする。Shallow Aggressive Decodingは入力コピーに近いタスクへ適用範囲が限られる。本手法は任意の近似モデルを利用でき、一般の確率的サンプリングでターゲット分布を厳密に保存する点が異なる。また、後発のChenらのspeculative samplingと独立に同種の考え方を示し、T5X上で2〜3倍級の実時間改善を実測した。",
-    "limitations": [
-      "追加の並列計算資源を使ってレイテンシを下げるため、総算術演算量は増える。演算資源が飽和している構成では有効でない。",
-      "主な実時間評価はT5-XXL・単一TPU-v4・バッチ1であり、現代的な連続バッチ型GPUサービングへ結果をそのまま外挿できない。",
-      "本文ではテキスト生成のみを評価し、画像など他モダリティは未評価。",
-      "固定の近似モデルと固定γを主に使い、入力や受理難度に応じた動的ドラフト選択は将来課題。",
-      "beam searchとの完全な互換性は未解決事項として残る。"
-    ],
-    "implementation_status": "著者はT5Xを基準にT5-XXL向け投機的復号を実装し、単一TPU-v4で実時間を測定している。一次公開ページから著者公式コードの独立公開は確認できないが、アルゴリズムはモデル再学習を必要とせず既存チェックポイントへ適用する設計である。",
-    "research_positioning": "推論システムの観点では、メモリ帯域律速で演算余力がある状況を利用し、追加計算を逐次レイテンシ削減へ変換する代表的手法である。後続研究ではドラフトモデル学習、自己投機、木状候補、適応γ、MoEとの統合などへ発展しており、本論文はそれらを比較する際の『単一ドラフト・分布保存・並列検証』の基準線となる。"
-  },
+  "attempt_id": "attempt-0ab84ae32ed1ca16a3e50130",
+  "job_id": "job-research-51de804389577a72",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-53f30943d2cb795096db98fc",
-    "worker_id": "manual-refcuration-savecheck-20260920",
+    "claim_id": "claim-0ab84ae32ed1ca16a3e50130",
+    "worker_id": "scheduled-chat-discovery-hourly",
     "worker_kind": "scheduled_chat"
   }
 }
