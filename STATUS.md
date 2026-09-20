@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:11:00 JST**
+> 自動生成: **2026-09-20 18:11:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **104** |
-| 未claim Research job | **103** |
-| 直近24hの検証済みResearch収録 | **79** |
-| 最終検証済みResearch収録 | **09-20 18:06:15 JST（4分前）** |
+| 収録候補論文 | **103** |
+| 未claim Research job | **102** |
+| 直近24hの検証済みResearch収録 | **80** |
+| 最終検証済みResearch収録 | **09-20 18:11:14 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **104** |
+| canonical_id確認済みの一意な候補論文 | **103** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **104** |
+| 非終端Research job合計 | **103** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **7** | **5** | **1** | **1** | **0** | — |
+| Research | **37** | **6** | **6** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **8** | **6** | **1** | **1** | **0** | **5** |
+| 合計 | **37** | **7** | **7** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 18:11:14 JST** [research] `DOI:10.18653/v1/2026.acl-long.1683` — LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning
+  - job: `.survey/work-queue/jobs/job-research-59739220ff5250cc.json`
+  - result: `.survey/work-queue/results/research/attempt-018be4cd03a3fdd526c3cb8e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-018be4cd03a3fdd526c3cb8e.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-lazyeviction.md`
 - **09-20 18:06:15 JST** [research] `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention
   - job: `.survey/work-queue/jobs/job-research-ab19fa17920fb404.json`
   - result: `.survey/work-queue/results/research/attempt-09fd18d9c803c17379a43783.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-cb9b65cad9eb01765ba97d06.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-cb9b65cad9eb01765ba97d06.json`
   - paper: `papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md`
-- **09-20 16:30:16 JST** [research] `DOI:10.18653/v1/2026.findings-acl.2153` — SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences
-  - job: `.survey/work-queue/jobs/job-research-264bf27e36d7341a.json`
-  - result: `.survey/work-queue/results/research/attempt-53c9640aa2c8756a83217d2e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-53c9640aa2c8756a83217d2e.json`
-  - paper: `papers/inference/05-speculative-decoding/2026-specextend.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **7件** / 検証済み成功: **5件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-018be4cd03a3fdd526c3cb8e.json` (job `job-research-59739220ff5250cc`)
+- immutable submission: **6件** / 検証済み成功: **6件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `DOI:10.18653/v1/2026.acl-long.1683` — LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning
+  - job: `.survey/work-queue/jobs/job-research-59739220ff5250cc.json`
+  - result: `.survey/work-queue/results/research/attempt-018be4cd03a3fdd526c3cb8e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-018be4cd03a3fdd526c3cb8e.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2026-lazyeviction.md`
 - **成功** `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention
   - job: `.survey/work-queue/jobs/job-research-ab19fa17920fb404.json`
   - result: `.survey/work-queue/results/research/attempt-09fd18d9c803c17379a43783.json` (`ok=true`)
@@ -154,8 +158,6 @@
   - result: `.survey/work-queue/results/research/attempt-57d5d091923e08545a3ff388.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-57d5d091923e08545a3ff388.json`
   - paper: `papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5f2844ad503568d40a7ed5ff.json` (job `job-research-7975c226ad04d80a`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-5f2844ad503568d40a7ed5ff.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -178,9 +180,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.18653/v1/2026.acl-long.1683` — LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:10:10 JST** / heartbeat: **—** / lease expiry: **09-20 19:40:10 JST**
-  - evidence: `.survey/work-queue/claims/job-research-59739220ff5250cc.json`
+- `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 18:11:09 JST** / heartbeat: **—** / lease expiry: **09-20 19:41:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7975c226ad04d80a.json`
 
 #### Audit
 
@@ -200,7 +202,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **104** |
+| ready | **103** |
 
 ### 候補の重複・識別情報欠損
 
@@ -220,7 +222,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **831** |
+| inference/training/survey配下の論文Markdown実体 | **832** |
 
 ### immutable submissionの未照合
 
@@ -228,8 +230,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **756** |
-| └ Research | **570** |
+| 成功result未照合のimmutable submission | **755** |
+| └ Research | **569** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |

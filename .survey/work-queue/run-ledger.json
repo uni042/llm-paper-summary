@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T09:06:20.808713+00:00",
+  "updated_at": "2026-09-20T09:11:19.699108+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T09:06:20.808713+00:00",
+      "last_recorded_at": "2026-09-20T09:11:19.699108+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 367,
+        "research_completed": 368,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 48,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35468123647:1",
-          "recorded_at": "2026-09-19T20:40:58.291390+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35468123647",
-            "run_attempt": "1",
-            "source_sha": "7755f470ec1a376560f8823c2601807a9548bf14"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35468331306:1",
           "recorded_at": "2026-09-19T20:45:11.445829+00:00",
@@ -19589,6 +19575,20 @@
             "run_id": "35501371573",
             "run_attempt": "1",
             "source_sha": "4c6691ef894f193bdc118688a499e79f3de44b3e"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35501591110:1",
+          "recorded_at": "2026-09-20T09:11:19.699108+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35501591110",
+            "run_attempt": "1",
+            "source_sha": "ec29a7d4636267b2c26263d37400cf4101d706bb"
           },
           "signals": [
             "research_completed"
@@ -24489,6 +24489,14 @@
           "type": "research",
           "canonical_id": "arXiv:2405.12981",
           "title": "Reducing Transformer Key-Value Cache Size with Cross-Layer Attention",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-59739220ff5250cc",
+          "type": "research",
+          "canonical_id": "DOI:10.18653/v1/2026.acl-long.1683",
+          "title": "LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning",
           "from": "ready",
           "to": "completed"
         }
