@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-503df587e7eb88ec",
+  "type": "research",
+  "parent_job_id": "job-d3a6acf43cbaee2c",
+  "priority": 98,
+  "canonical_id": "arXiv:2609.13486",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers",
+  "source_url": "https://arxiv.org/abs/2609.13486",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.13486-efficient-moe-retrievers-adaptive-expert-count.md",
+  "selection_reason": "MoE retrieverで推論時のexpert数を再学習・再indexなしに減らし、retrieval effectivenessを99%以上維持しながらquery encoding timeを最大26%削減する。利用expert数を実行時に縮退できる実証としてAdaptive Expert Computationに直接対応する。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T12:13:37+00:00"
+}
