@@ -271,6 +271,7 @@ def _process_v3(
         "cross_page_alias_duplicate_filtered_count": collected["cross_page_alias_duplicate_filtered_count"],
         "unresolved_identity_count": collected["unresolved_identity_count"],
         "unseen_result_count": collected["unseen_result_count"],
+        "provider_progress": collected.get("provider_progress"),
         "results": results,
         "allowed_records": allowed,
         "receipt": receipt,
