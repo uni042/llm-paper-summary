@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-682f2ca2eca58d18d9e46ca8",
-  "job_id": "job-research-2b2648af1ffd1107",
-  "data": {
-    "limitations": "導出は全B位置を一度に生成する並列単一軌跡ドラフタを前提とする。逐次ドラフタでは後半の隠れ状態が前半ドラフト誤差に依存するため固定接頭辞分解が崩れる。評価は損失なし投機的デコードに限定され、KL蒸留版D-PAKLは導出のみで実証していない。ドラフタ確率は離散的な実受理確率そのものではなく、特に学習初期は代理の整合性が弱い可能性がある。",
-    "differences": "DFlashはブロック位置だけで決まる固定指数減衰、GRIFFIN由来マスクは前半がTop-Kに入るかの硬い0/1信号を使う。D-PACEは現在のドラフタ確率から位置ごとの受理長寄与を連続値で再計算し、例・学習段階ごとに重みを変える。受理率代理を直接最大化する方式と違い、代理は重み生成にだけ使い、交差エントロピー勾配を保持する。",
-    "implementation_status": "著者公式GitHubを公開。SpecForge上で学習でき、DFlashのモデル構造・推論コードを変更しない。",
-    "research_positioning": "投機的デコード研究のうち、ドラフタ構造や検証木を変える系統ではなく、学習目的を実際の受理長へ近づける系統に属する。並列ブロック生成では位置ごとの重要度が固定ではないという問題を、微分可能な受理長代理から直接導いた重みで解くため、DFlash型ドラフタへ直交的に組み合わせられる。"
-  },
+  "attempt_id": "attempt-0035fe851a4c5bf25fbbacc2",
+  "job_id": "job-research-6778a26f7c6381c5",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-682f2ca2eca58d18d9e46ca8",
+    "claim_id": "claim-0035fe851a4c5bf25fbbacc2",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

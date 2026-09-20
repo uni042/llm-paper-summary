@@ -2,96 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-682f2ca2eca58d18d9e46ca8",
-  "job_id": "job-research-2b2648af1ffd1107",
-  "data": {
-    "canonical_id": "arXiv:2605.18810",
-    "arxiv_id": "2605.18810",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting",
-    "summary": "D-PACEは、並列投機ドラフタの学習で各ブロック位置へ固定重みを与える代わりに、現在のドラフタが実際に受理長を制限している位置へ学習信号を動的に集中する損失関数である。各位置で対象モデルが選んだトークンに対するドラフタ確率から、受理される接頭辞長の滑らかな代理量を作り、その勾配寄与を位置別交差エントロピー重みへ変換する。低確率の前半位置で後半重みが消える問題は重み計算だけを非対称に平滑化して防ぎ、交差エントロピー自体の勾配は維持する。DFlashの構造や推論手順を変えず、複数モデル・温度・ベンチマークで平均受理長と実測推論高速化を改善する。",
-    "list_summary": "並列投機ドラフタで、受理接頭辞長への位置別寄与から交差エントロピー重みを毎例動的に計算し、固定位置減衰より受理長と実測高速化を改善する。",
-    "authors": [
-      "Tianyu Wu",
-      "Yu Yao",
-      "Zhenting Qi",
-      "Han Zheng",
-      "Zhuohan Wang",
-      "Haoran Ma",
-      "Lawrence Liao",
-      "Himabindu Lakkaraju",
-      "Ju Li",
-      "Yilun Du"
-    ],
-    "authors_affiliations": "MIT; Harvard",
-    "published": "2026-05-12",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "投機的デコード、並列ブロックドラフタ、DFlash、受理率指向学習。",
-    "topics": [
-      "投機的デコード",
-      "並列ドラフタ",
-      "学習損失",
-      "受理長最適化"
-    ],
-    "importance": "推論器を変えず、学習時の位置重みだけを受理長の寄与から適応化するため既存DFlashへ低コストで適用できる。",
-    "hardware_evaluation": "学習は単一NVIDIA H200、実測推論高速化はL40Sで評価。",
-    "quality_effect": "損失を変えてドラフタを学習するが、検証は対象モデルによる損失なし投機的デコードであり、対象モデルの出力分布を変更しない。",
-    "source": "https://arxiv.org/abs/2605.18810",
-    "sources": [
-      "https://arxiv.org/abs/2605.18810",
-      "https://arxiv.org/html/2605.18810",
-      "https://arxiv.org/pdf/2605.18810"
-    ],
-    "code": "https://github.com/Lucas-TY/D-PACE",
-    "implementation": "著者公式コードを公開。学習はSpecForge上のDFlash実装を利用し、推論評価はDFlash公式ベンチマークを使用。",
-    "last_checked": "2026-09-20",
-    "references": [
-      {
-        "canonical_id": "arXiv:2303.08774",
-        "arxiv_id": "2303.08774"
-      },
-      {
-        "canonical_id": "arXiv:2302.01318",
-        "arxiv_id": "2302.01318"
-      },
-      {
-        "canonical_id": "arXiv:2602.06036",
-        "arxiv_id": "2602.06036"
-      },
-      {
-        "canonical_id": "arXiv:2602.23881",
-        "arxiv_id": "2602.23881"
-      },
-      {
-        "canonical_id": "arXiv:2601.19278",
-        "arxiv_id": "2601.19278"
-      },
-      {
-        "canonical_id": "arXiv:2407.21783",
-        "arxiv_id": "2407.21783"
-      },
-      {
-        "canonical_id": "arXiv:2505.09388",
-        "arxiv_id": "2505.09388"
-      },
-      {
-        "canonical_id": "arXiv:2603.18567",
-        "arxiv_id": "2603.18567"
-      }
-    ],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 47
-  },
+  "attempt_id": "attempt-0035fe851a4c5bf25fbbacc2",
+  "job_id": "job-research-6778a26f7c6381c5",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-682f2ca2eca58d18d9e46ca8",
+    "claim_id": "claim-0035fe851a4c5bf25fbbacc2",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
