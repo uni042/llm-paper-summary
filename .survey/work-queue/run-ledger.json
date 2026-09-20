@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T11:22:38.551004+00:00",
+  "updated_at": "2026-09-20T11:30:53.577627+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T11:22:38.551004+00:00",
+      "last_recorded_at": "2026-09-20T11:30:53.577627+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 381,
         "audit_completed": 0,
         "discovery_completed": 210,
-        "blocked": 53,
+        "blocked": 54,
         "new_jobs": 366,
         "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35487078924:1",
-          "recorded_at": "2026-09-20T03:38:43.879687+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35487078924",
-            "run_attempt": "1",
-            "source_sha": "14ea88f2bb8f14c61462147eb3ecd8e9d7fef8b8"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35487241518:1",
           "recorded_at": "2026-09-20T03:42:03.669087+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35508031346:1",
+          "recorded_at": "2026-09-20T11:30:53.577627+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35508031346",
+            "run_attempt": "1",
+            "source_sha": "bb7d70c00d8ff7af1dbc5309475d1aaa30ee51d7"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -24748,6 +24748,14 @@
           "title": "MoE-PHDS: One MoE checkpoint for flexible runtime sparsity",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-f837d96601e69237",
+          "type": "research",
+          "canonical_id": "arXiv:2608.24938",
+          "title": "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -28088,7 +28096,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 847,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

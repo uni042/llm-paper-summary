@@ -9,35 +9,21 @@
       "completed": 6
     },
     "research": {
-      "ready": 178,
+      "ready": 177,
       "completed": 656,
       "superseded": 46,
       "deferred": 3,
       "blocked_permanent": 7,
       "rejected": 2,
-      "blocked": 6
+      "blocked": 7
     }
   },
   "claiming": {
-    "ready_research_audit": 178,
+    "ready_research_audit": 177,
     "actively_claimed": 0,
-    "claimable": 178
+    "claimable": 177
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-f837d96601e69237",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2608.24938",
-      "title": "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration",
-      "source_url": "https://arxiv.org/abs/2608.24938",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.24938-exfold-training-free-expert-folding.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-b0f3ab31cdfd9a01",
       "type": "research",
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-2dff89406766fc1d",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2510.13999",
+      "title": "REAP the Experts: Why Pruning Prevails for One-Shot MoE compression",
+      "source_url": "https://arxiv.org/abs/2510.13999",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T11:22:32+00:00"
+  "generated_at": "2026-09-20T11:30:49+00:00"
 }
