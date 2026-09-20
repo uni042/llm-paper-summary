@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 21:05:47 JST**
+> 自動生成: **2026-09-20 21:05:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **205** |
+| 収録候補論文 | **204** |
 | 未claim Research job | **204** |
-| 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-20 20:45:57 JST（19分前）** |
+| 直近24hの検証済みResearch収録 | **90** |
+| 最終検証済みResearch収録 | **09-20 21:05:53 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **205** |
+| canonical_id確認済みの一意な候補論文 | **204** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **205** |
+| 非終端Research job合計 | **204** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **4** | **3** | **0** | **1** | **0** | — |
+| Research | **36** | **4** | **3** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **5** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **36** | **5** | **4** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 21:05:53 JST** [research] `arXiv:2609.00575` — Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs
+  - job: `.survey/work-queue/jobs/job-research-89e4b35d6854b9b6.json`
+  - result: `.survey/work-queue/results/research/attempt-83e541e2c7e7c88135f96320.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-83e541e2c7e7c88135f96320.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2609.00575-parser-residual-sparsification-output-importance.md`
 - **09-20 20:45:57 JST** [research] `arXiv:2607.08601` — It Takes a MAESTRO To Prune Bad Experts
   - job: `.survey/work-queue/jobs/job-research-92c83b7c2ec8a78f.json`
   - result: `.survey/work-queue/results/research/attempt-70943e20a527c6aa030a2179.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-682f2ca2eca58d18d9e46ca8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-682f2ca2eca58d18d9e46ca8.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2605.18810-d-pace.md`
-- **09-20 19:10:57 JST** [research] `arXiv:2608.06989` — Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM
-  - job: `.survey/work-queue/jobs/job-research-2e7cd1c4e1dc851d.json`
-  - result: `.survey/work-queue/results/research/attempt-ade4ad902d6f7670ee635b88.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ade4ad902d6f7670ee635b88.json`
-  - paper: `papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md`
 
 ### Audit
 
@@ -166,10 +166,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.00575` — Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs / worker `scheduled-chat-discovery-hourly`
-  - claim: **09-20 21:04:14 JST** / heartbeat: **—** / lease expiry: **09-20 22:34:14 JST**
-  - evidence: `.survey/work-queue/claims/job-research-89e4b35d6854b9b6.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -189,7 +187,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **205** |
+| ready | **204** |
 
 ### 候補の重複・識別情報欠損
 
@@ -209,7 +207,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **854** |
+| inference/training/survey配下の論文Markdown実体 | **855** |
 
 ### immutable submissionの未照合
 
@@ -217,8 +215,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **828** |
-| └ Research | **593** |
+| 成功result未照合のimmutable submission | **827** |
+| └ Research | **592** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **88** |
