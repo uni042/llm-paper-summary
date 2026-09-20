@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T21:10:24.616659+00:00",
+  "updated_at": "2026-09-20T21:13:59.053681+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -29734,6 +29734,49 @@
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260921T0608JST-hourly30-discovery-round-03-h2o-forward.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 863,
+      "paper_active_count_after": 863,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "unattributed:35537901628",
+      "first_recorded_at": "2026-09-20T21:13:59.053681+00:00",
+      "last_recorded_at": "2026-09-20T21:13:59.053681+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35537901628:1",
+          "recorded_at": "2026-09-20T21:13:59.053681+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35537901628",
+            "run_attempt": "1",
+            "source_sha": "47d40f8762b089e849354d47d7ebafaf49e5b6b5"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260921T0612JST-hourly00-discovery-round-06-smoothquant-forward.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 863,

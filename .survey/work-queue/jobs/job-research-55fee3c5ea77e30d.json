@@ -10,7 +10,7 @@
   "identifiers": [],
   "title": "Understanding the Synchronization Tax in GPU Scale-Up Domains",
   "source_url": "https://arxiv.org/abs/2608.22503",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.22503-understanding-the-synchronization-tax-in-gpu-scale-up-domains.md",
   "selection_reason": "複数LLM・GPU世代の数十万collectiveを解析し、rank間GEMM時間ばらつきによるbarrier待ちがcollective時間の50%以上を占め得ることを示す。MoEを含む大規模推論・学習の通信設計に効くGPU scale-up基盤研究として有用。",
   "status": "ready",
   "workflow_version": 10,
