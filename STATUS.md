@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 07:32:30 JST**
+> 自動生成: **2026-09-21 07:32:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **354** |
-| 未claim Research job | **354** |
+| 収録候補論文 | **357** |
+| 未claim Research job | **357** |
 | 直近24hの検証済みResearch収録 | **74** |
 | 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間44分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **354** |
+| canonical_id確認済みの一意な候補論文 | **357** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **354** |
+| 非終端Research job合計 | **357** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **56** | **1** | **0** | **1** | **0** | **0** | **3** |
-| 合計 | **56** | **7** | **4** | **1** | **0** | **0** | **3** |
+| Discovery | **57** | **1** | **1** | **0** | **0** | **0** | **3** |
+| 合計 | **57** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -71,6 +71,10 @@
 
 ### Discovery
 
+- **09-21 07:30:15 JST** job `job-02e6f104a8a47df1` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260921T0730JST-hourly00-discovery-repository-refs-01.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0730JST-hourly00-discovery-repository-refs-01.json`
+  - 探索軸: repository structured references curation
 - **09-21 07:03:32 JST** job `job-06d1d333bbd93236` / 候補 **0件**
   - result: `.survey/work-queue/results/20260921T0702JST-hourly00-discovery-forward-specoffload-02.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0702JST-hourly00-discovery-forward-specoffload-02.json`
@@ -107,10 +111,6 @@
   - result: `.survey/work-queue/results/20260921T0712JST-hourly00-discovery-backward-09.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0712JST-hourly00-discovery-backward-09.json`
   - 探索軸: repository structured backward references batch 2
-- **09-21 07:15:20 JST** job `job-12568c96b9a4cf81` / 候補 **4件**
-  - result: `.survey/work-queue/results/20260921T0714JST-hourly00-discovery-forward-deepspeedmoe-10.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0714JST-hourly00-discovery-forward-deepspeedmoe-10.json`
-  - 探索軸: forward citations of DeepSpeed-MoE large-scale MoE inference
 
 ### 直近タスク
 
@@ -152,12 +152,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 07:26 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **3件**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **3件**
 - 探索軸: repository structured references curation
 - round `hourly00-repository-refs-01` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260921T0730JST-hourly00-discovery-repository-refs-01.json`
   - 探索軸: repository structured references curation
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0730JST-hourly00-discovery-repository-refs-01.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -184,7 +184,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **354** |
+| ready | **357** |
 
 ### 候補の重複・識別情報欠損
 
@@ -212,10 +212,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **927** |
+| 成功result未照合のimmutable submission | **926** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **213** |
+| └ Discovery | **212** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job

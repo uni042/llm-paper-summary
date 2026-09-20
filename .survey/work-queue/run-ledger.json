@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T22:25:11.678489+00:00",
+  "updated_at": "2026-09-20T22:32:37.768517+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -30508,6 +30508,87 @@
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260921T0721JST-hourly00-discovery-forward-awq-retry-15.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 863,
+      "paper_active_count_after": 863,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "unattributed:35541848378",
+      "first_recorded_at": "2026-09-20T22:32:37.768517+00:00",
+      "last_recorded_at": "2026-09-20T22:32:37.768517+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 4,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35541848378:1",
+          "recorded_at": "2026-09-20T22:32:37.768517+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35541848378",
+            "run_attempt": "1",
+            "source_sha": "0492643b81f270589c53c40b92a71162ca43f2f1"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-02e6f104a8a47df1",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-02e6f104a8a47df1",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2310f02f05cacc23",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2310.08461",
+          "title": "DistillSpec: Improving Speculative Decoding via Knowledge Distillation"
+        },
+        {
+          "job_id": "job-research-303634fb993a11eb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2306.03078",
+          "title": "SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression"
+        },
+        {
+          "job_id": "job-research-f719eedd6807af4c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2211.05102",
+          "title": "Efficiently Scaling Transformer Inference"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260921T0730JST-hourly00-discovery-repository-refs-01.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 863,
