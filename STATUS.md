@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:32:04 JST**
+> 自動生成: **2026-09-20 18:32:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **103** |
 | 未claim Research job | **102** |
 | 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-20 18:11:14 JST（20分前）** |
+| 最終検証済みResearch収録 | **09-20 18:11:14 JST（21分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **8** | **6** | **0** | **1** | **1** | — |
+| Research | **35** | **7** | **6** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **9** | **7** | **0** | **1** | **1** | **5** |
+| 合計 | **35** | **8** | **7** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **8件** / 検証済み成功: **6件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **7件** / 検証済み成功: **6件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `DOI:10.18653/v1/2026.acl-long.1683` — LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning
   - job: `.survey/work-queue/jobs/job-research-59739220ff5250cc.json`
   - result: `.survey/work-queue/results/research/attempt-018be4cd03a3fdd526c3cb8e.json` (`ok=true`)
@@ -160,8 +160,6 @@
   - result: `.survey/work-queue/results/research/attempt-57d5d091923e08545a3ff388.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-57d5d091923e08545a3ff388.json`
   - paper: `papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-d9e87a2e384695561c52ab9b.json` (job `job-research-7975c226ad04d80a`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-d9e87a2e384695561c52ab9b.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -183,10 +181,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
-- `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:12:11 JST** / heartbeat: **09-20 18:29:00 JST** / lease expiry: **09-20 19:59:00 JST**
-  - evidence: `.survey/work-queue/claims/job-research-529f8795f6dde556.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `DOI:10.18653/v1/2025.naacl-long.601` — Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 18:32:08 JST** / heartbeat: **—** / lease expiry: **09-20 20:02:08 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7975c226ad04d80a.json`
 
 #### Audit
 
