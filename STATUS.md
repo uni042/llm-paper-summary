@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:02:40 JST**
+> 自動生成: **2026-09-20 18:02:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **4** | **3** | **1** | **1** | **0** | — |
+| Research | **37** | **4** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **5** | **4** | **1** | **1** | **0** | **5** |
+| 合計 | **37** | **5** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,13 +127,14 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs
   - job: `.survey/work-queue/jobs/job-research-e2f947500152f11f.json`
   - result: `.survey/work-queue/results/research/attempt-2aa6f3a5ce12c662b86bbbe1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-2aa6f3a5ce12c662b86bbbe1.json`
   - paper: `papers/inference/02-cpu-offload/2024-2405.02842-iceformer.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-362ad2690372255c3afaa71b.json` (job `job-research-da8147ed3835966f`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-362ad2690372255c3afaa71b.json` (job `job-research-da8147ed3835966f`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-362ad2690372255c3afaa71b.json` (`ok=false`)
 - **成功** `arXiv:2404.15778` — BASS: Batched Attention-optimized Speculative Sampling
   - job: `.survey/work-queue/jobs/job-research-76aff8aad6f29ebc.json`
   - result: `.survey/work-queue/results/research/attempt-3bb75bb690b745e4b4b44fd7.json` (`ok=true`)
