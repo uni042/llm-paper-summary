@@ -1,0 +1,850 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0717JST-hourly00-forward-sglang-13",
+  "collector_id": "hourly00-20260921T0658JST-forward-sglang",
+  "run_key": "2026-09-21T06:58:37+09:00",
+  "axis": "forward citations of SGLang structured generation serving runtime",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.07104/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "20eb07a91749bd9b5a6b4a053b5df83037dcb398",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 53,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 3,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T22:18:48.923094+00:00",
+  "results": [
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "CARE-MoE: Correlation-Aware Expert Placement and Semantic Equivalence Routing for MoE LLM Inference on Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Mixture-of-Experts (MoE) has become a mainstream architecture for Large Language Models (LLMs) due to its sparse activation mechanism. While distributed inference is promising for deploying LLMs on resource-constrained edge devices, it still faces two critical challenges for MoEs. First, the gating network’s strong bias toward a small subset of hot experts causes severe cross-device load imbalance. Cloud-side methods, such as expert replication, incur prohibitive memory overhead, and global load balancing introduces excessive communication latency in edge networks. Existing edge methods overlook expert co-activation correlations and cannot adapt to hot-cold expert drift induced by shifting user interactions. Second, the All-to-All communication overhead of expert parallelism can dominate the inference latency under bandwidth-constrained edge environments. Existing token dropping or fusion strategies reduce communication at the cost of distorted token feature propagation and degraded long-context accuracy. To address these challenges, we propose CARE-MoE, an efficient MoE LLM inference framework comprising two core components. The Correlation-Aware Expert Placer (CAEP) balances expert placement by jointly modeling co-activation correlation and hot–cold drift, preventing overload from correlated experts and enabling low-cost adaptive rebalancing. The Communication-Aware Expert Router (CAER) exploits semantic equivalence in MoEs to redirect token-expert assignments toward low-latency devices, thereby achieving significant communication reduction with negligible accuracy loss. Experiments across diverse edge environments and MoE models demonstrate that CARE-MoE achieves a 2.1 × to 5.2 × speedup over state-of-the-art baselines.",
+      "canonical_id": "DOI:10.1145/3832810.3832869",
+      "doi": "10.1145/3832810.3832869",
+      "authors": [
+        "Zhen-Yu Wang",
+        "Wei Li",
+        "Ao Ren",
+        "Duo Liu",
+        "Bo Zhang",
+        "Kan Zhong",
+        "Chao-Xia Qin",
+        "Hao-Yang Li"
+      ]
+    },
+    {
+      "title": "Long-Lived Characters, Local Inference: Incremental Memory Maintenance for Game NPCs",
+      "source_url": "https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "A game character should not have to reread its entire life before every conversation. For locally deployed language-model characters, however, revising a few memories can invalidate a long reusable prefix. The resulting preparation cost competes with both foreground dialogue and the maintenance of other characters. This matters especially when dialogue feeds game-defined actions and value judgments: a fluent but incorrect account of who owns an item, or whether a transfer has already happened, can corrupt the input to otherwise deterministic rules. We study incremental memory maintenance for long-lived game NPCs in a quantized Qwen hybrid recurrent-attention model. Our runtime removes superseded attention KV entries, computes replacement records at the true sequence tail, and preserves the continuing recurrent state and unchanged KV. Existing local experiments combine multi-update dialogue replays, fixed-input placement ablations, and attention diagnostics. Independent block composition weakens query-conditioned memory selection without a uniform chunk-initial attention collapse. True-tail updates preserve important current-state and historical bindings across eight scripted maintenance rounds; a placement case recovers the full-refill quantity in three reconstructions, while slot-preserving alternatives repeat a double-subtraction error. Attention-distribution proximity alone does not explain these semantic differences. The results motivate treating a character's inference state as a maintained, history-dependent resource, rather than only a disposable encoding of its latest memory text.",
+      "canonical_id": "arXiv:2609.18935",
+      "arxiv_id": "2609.18935",
+      "authors": [
+        "Zi-Mu Xu"
+      ]
+    },
+    {
+      "title": "MiST: Mid-Training LLMs for Cybersecurity",
+      "source_url": "https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Cybersecurity combines high-stakes analysis with complex technical language, making it an impactful and challenging domain for LLMs. We present MiST (Mid-trained Security Transformer), a suite of 8B and 32B models that achieve strong performance on public cybersecurity benchmarks. We use mid-training as an intermediate adaptation stage between general pre-training and cybersecurity training. Rather than performing continual pre-training over large volumes of raw domain text, we curate a compact, expert-vetted seed corpus, and transform it into high-quality domain-specific synthetic training data. The final MiST checkpoints improve mean cybersecurity accuracy by +13.1 and +8.6 absolute percentage points over the corresponding Qwen baselines for 8B and 32B, respectively, corresponding to relative gains of +27.0% and +15.8%. Ablation results further show that these cybersecurity gains arise in the mid-training and supervised fine-tuning stages through a combination of the synthetic data generation flows. Furthermore, we show that MiST provides a stronger initialization for downstream task-specific fine-tuning adaptation and reinforcement learning.",
+      "canonical_id": "arXiv:2609.18496",
+      "arxiv_id": "2609.18496",
+      "authors": [
+        "O. Ovadia",
+        "Elad Ben Zaken",
+        "Elad Guttman",
+        "Orly Moreno Kadosh"
+      ]
+    },
+    {
+      "title": "Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs",
+      "source_url": "https://www.semanticscholar.org/paper/9b998f8a02c4bb92a679ad3c113bfda69dd9cdf0",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "A common small-model deployment runs one shared backbone with several LoRA specialists that answer over the same context. Serving them naively re-prefills that shared context once per specialist. We study a narrow, practical question: for already-trained standard LoRA adapters -- not adapters retrained for cache compatibility -- how much task quality is preserved if the backbone's prefill KV cache is computed once and reused across specialists, and what does that buy in serving cost? On a Qwen3-1.7B backbone with two adapters (extractive QA on HotpotQA, arithmetic reasoning on GSM8K), we sweep the boundary at which the specialist takes over from the reused base cache and measure paired quality differences and serving cost. Full-prefix reuse had the lowest prefill cost and a small quality difference on held-out GSM8K (Delta = -4.6 EM at a 160-token budget; -3.0 at 320 tokens; -0.8 under a second training seed -- all favoring native, only the first excluding zero, and the magnitude not consistent). Partial recomputation provided no demonstrated advantage. Neither quality equivalence nor a general boundary-selection rule is established. We also report a closed-form ridge KV translator that did not beat direct reuse, and specialist-dependence contrasts whose intervals all include zero. The measured serving benefit is warm-cache time-to-first-token, which grows with context (~16x at 8K); two-branch peak memory was only 12% lower and, on inspection, the prefix was never physically shared across branches -- this implementation reuses KV values but copies their storage, so shared-cache memory savings are not achieved.",
+      "canonical_id": "arXiv:2609.17109",
+      "arxiv_id": "2609.17109",
+      "authors": [
+        "D. Rajput"
+      ]
+    },
+    {
+      "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+      "source_url": "https://www.semanticscholar.org/paper/deae700f0061de98c92b3c0a4e321c8f5b996d68",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "As AI becomes increasingly ubiquitous, modern AI systems are shaped by a tight software-hardware co-design loop. Later GPUs expose features such as asynchronous data movement, tensor core pipelines, and fine-grained synchronization that high-performance kernels aggressively exploit, while emerging application behaviors increasingly influence the next generation of hardware design. Unfortunately, the latest open-source simulators for NVIDIA GPUs focus on architectures and software stacks from roughly six years ago. Therefore, they cannot support many state-of-the-art AI kernels generated by modern compiler stacks, e.g. Triton, or accurately model the hardware features they depend on. As a result, architects lack a credible platform for analyzing bottlenecks in this flywheel or evaluating design trade-offs for future AI systems. To bridge this gap, we present FlashGPU-sim, an open-source, execution-driven, cycle-accurate GPU simulator for modern AI workloads. FlashGPU-sim faithfully models modern hardware features such as asynchronous data movement, fine-grained synchronization, tensor-core execution, and distributed shared memory. A Triton extraction front-end allows direct simulation of optimized AI operators without manual porting, while multi-threaded execution makes large-scale software-hardware co-design practical. Across 131 workload configurations on RTX 5090, H100, and B200, FlashGPU-sim achieves a cycle-level MAPE of 5.24%, while multi-threaded simulation reaches a 7.86x speedup with 16 host threads. An H100 case study further demonstrates its utility for microarchitectural design exploration.",
+      "canonical_id": "arXiv:2609.15311",
+      "arxiv_id": "2609.15311",
+      "authors": [
+        "Si-Ying Yu",
+        "Yi-Xun Hong",
+        "Guo-Zhi Qiu",
+        "Jing-Ci Liu",
+        "Feng Gu",
+        "C. Geng",
+        "Zheng-Rong Wang",
+        "Chen Zhang",
+        "Bei Yu"
+      ]
+    },
+    {
+      "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+      "source_url": "https://www.semanticscholar.org/paper/5dfc253c4e99e4dc927022ba6963d6e82b5b7530",
+      "year": 2026,
+      "published": "2026-09-12",
+      "abstract": "Concurrent local LLM serving on unified-memory desktops must preserve memory headroom and output fidelity, which speed-only rankings overlook. We introduce SiliconBench, which evaluates nine Apple Silicon serving engines through three lenses: speed, memory, and fidelity. We evaluate chat and agent serving on Qwen3, Qwen3.5, and Gemma 4. We use a classification task to check for quality regressions against an NVIDIA reference. DGX Spark provides a complementary serving-performance reference. Three desiderata guide interpretation: serving architecture readiness, memory discipline, and multi-node scaling. On Qwen3-0.6B, vllm-metal alone more than doubles throughput on both workloads from concurrency 1 to 16. CUDA vLLM and SGLang show stronger concurrency scaling on the same prompts. Explicit memory budgets do not guarantee memory headroom: two stacks complete every request while memory use approaches physical capacity and throughput declines. The newer model architectures have narrower engine support. Their evaluated implementations match the fidelity reference. Only three stacks satisfy the completion, fidelity, and model-coverage gates. Comparisons on larger dense and MoE models reinforce the importance of scheduling prompt processing alongside ongoing generation: vllm-metal's packed prefill-decode path maintains lower first-token latency than omlx under concurrent load. In the tested two-machine configurations, tensor parallelism over Thunderbolt RDMA scales while pipeline parallelism over TCP regresses. We release benchmark code, per-run results, and maintenance journals, supported by a workflow combining bounded agent fixes with human review.",
+      "canonical_id": "arXiv:2609.19169",
+      "arxiv_id": "2609.19169",
+      "authors": [
+        "Ran-Ran Zhang",
+        "A. X. Fan",
+        "David Munhá Correia",
+        "Alex Cheema",
+        "Rui Zhang"
+      ]
+    },
+    {
+      "title": "Security-Augmented Use Case Flow Refinement for LLM-Based Agentic Systems",
+      "source_url": "https://www.semanticscholar.org/paper/4e435602476474730e219e89f49b5eea23d3b352",
+      "year": 2026,
+      "published": "2026-09-12",
+      "abstract": "Unlike conventional software systems and large language models (LLMs) evaluated in isolation, LLM-based agentic systems introduce a compositional, workflow-level attack surface. Existing security analysis approaches provide limited support for identifying security omissions implicit in functional use case flows and deriving corresponding flow refinements for direct incorporation into use case specifications. We formulate the Security-Augmented Use Case Flow Refinement Task and propose MA-SAFR, a multi-agent framework that coordinates Red Team, Blue Team, and Critic agents for threat anchoring, security-branch construction, and validation. EvoGraphRAG adapts relation-aware retrieval through validation feedback, while Risk-Specific Security Guidance (RSSG) provides risk- and role-specific constraints. To support systematic evaluation of this task, we construct SAFR-Bench from OWASP and MITRE ATLAS, comprising 157 cases and 235 source-grounded threat–refinement pairs. Across three generation models, MA-SAFR improves all three metrics on average compared with the strongest corresponding baselines; pipeline recall and pipeline precision increase by 63.44% and 54.96%, respectively. Controlled analyses show that RSSG and feedback-based graph evolution within gEvoGraphRAG improve downstream threat-to-defense conversion. Despite remaining challenges in implicit-threat identification, multi-threat coverage, and defense alignment, the results show that MA-SAFR can support the construction of valid security-augmented use case flows.",
+      "canonical_id": "DOI:10.3390/electronics15184135",
+      "doi": "10.3390/electronics15184135",
+      "authors": [
+        "Guang-Yu Wang",
+        "Bangqi Li",
+        "Ji Wu",
+        "Zhi-Jun Shao"
+      ]
+    },
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Auto-regressive model decode is bandwidth-bound, since every weight and key/value-cache byte crosses high-bandwidth memory once per token. A megakernel is an ideal solution, but existing automatic megakernel generation approaches cannot achieve both generalization across models and correctness guarantees. We present ForgeMegakernel, which generates a per-model high-performance decode megakernel using coding agents. ForgeMegakernel pairs a universal knowledge base of ten progressive milestones with an independent mid-state test oracle. The milestones provide the megakernel's structural properties: a fine-grained instruction stream for each SM, dependency counters replacing the global synchronization, and a shared-memory buffer pool for workload balance across SMs and greater parallelism. The test oracle derives the mid-states of the megakernel and checks the performance, error and precision during the generation process, guaranteeing a correct and trustworthy forged megakernel. We evaluated ForgeMegakernel on 14 representative decoding operations across eight model families spanning 0.6B-13B parameters. The generated megakernels achieved 50.5-85.9% MBU and geometric mean speedups of 1.21x over SGLang 0.5.18 and 1.54x over a megakernel compiler under identical configurations. Inside SGLang, evaluated on GSM8K with ragged prompts, all 14 megakernels decoded faster than the SGLang engine at comparable answer accuracy.",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Le-Shan Li",
+        "Zhui Zhu",
+        "Xiang-Long Deng",
+        "Yao-Jian Chen",
+        "Qing-Feng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhi-Yuan Liu"
+      ]
+    },
+    {
+      "title": "OneLA: Scaling Linear-Attention Decoding to Large Beams in Generative Recommendation",
+      "source_url": "https://www.semanticscholar.org/paper/5ed501d200a16be2542d821f48b168def5a84913",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Generative recommendation (GR) relies on large-beam decoding to generate hundreds of candidate items, creating a new scaling challenge for recurrent linear attention. Existing linear attention serving systems either materialize a full recurrent state for every beam or repeatedly replay shared history, incurring substantial memory and traffic overhead. To address this, we present OneLA, a linear-attention decoding framework that exploits the shared prompt and short divergent suffixes of GR workloads. Specifically, OneLA represents all beam states using a single shared prompt-derived state and compact, append-only records of their divergent transitions. Using this representation, OneLA computes only the state information required at each decoding step, without reconstructing a full recurrent state for every beam. Furthermore, OneLA uses a lightweight ancestry index to track the transition records that make up each beam's history, allowing beams to be updated without moving or copying existing records. A fused GPU kernel further reuses the shared state across beams. Our analysis shows that OneLA achieves 1.54-2.46x end-to-end decode speedups while substantially reducing recurrent-state memory use and data movement.",
+      "canonical_id": "arXiv:2609.12399",
+      "arxiv_id": "2609.12399",
+      "authors": [
+        "Xiang-Rui Yang",
+        "Cheng Peng",
+        "Yun-Feng Zhao",
+        "Liang Zeng",
+        "Ao Hu",
+        "Jia-Wei Yang",
+        "Sheng-Zhe Wang",
+        "Jing-Shan Lv",
+        "Xiao Liang",
+        "Chen Yang",
+        "Jia-Qi Liu",
+        "Yiming Qiu"
+      ]
+    },
+    {
+      "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+      "source_url": "https://www.semanticscholar.org/paper/5fedeb84be4240c6c87fa5e311714720f66491e8",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Foundation models, including large language models, vision-language models, and time-series foundation models, are increasingly deployed on embedded and edge platforms for CPS and IoT applications, where energy, latency, and memory are as critical as task accuracy. Existing benchmarking tools evaluate model capability in isolation, reporting accuracy assuming sufficient compute, while hardware profiling tools remain platform-specific and mutually incompatible. As a result, users lack a unified workflow for making deployment decisions across heterogeneous devices. We present HoliBench, a modular benchmarking and deployment toolkit that jointly characterizes accuracy, latency, and energy across platforms from single-board computers to GPU servers. Its platform abstraction layer calibrates cross-device measurement, and the toolkit supports multiple model modalities, inference engines, concurrencies, and existing evaluation harnesses. An interactive interface exposes constraint-aware configuration selection over a design space that is profiled once and reused across studies. Using HoliBench, we characterize 20 models across 7 device types, 3 quantization levels, 8 inference backends, and over 30 tasks, surfacing tradeoffs that existing tools miss: quantization reduces latency only on hardware with low-precision support, accuracy gains show diminishing returns relative to energy, and for autoregressive workloads, average inference power is approximately constant across output lengths. We further find that single-model profiles compose under sequential co-resident execution. In a multi-model CPS deployment, standalone profiles predict combined-pipeline latency and power within 1.2% and 2.5%, enabling deployment exploration without exhaustively profiling every pipeline configuration. We release HoliBench as open-source infrastructure for deployment-aware evaluation of foundation models.",
+      "canonical_id": "arXiv:2609.12412",
+      "arxiv_id": "2609.12412",
+      "authors": [
+        "Inesh Chakrabarti",
+        "Ze-Jun Xiong",
+        "Pragya Sharma",
+        "Mani Srivastava"
+      ]
+    },
+    {
+      "title": "A Voice-Interactive Multi-Agent System for Smart Operating Rooms: Architecture Design and Key Technologies",
+      "source_url": "https://www.semanticscholar.org/paper/1f23e69a9e43c5221d5f27d0b9f07553e4bc036c",
+      "year": 2026,
+      "published": "2026-09-10",
+      "abstract": "This paper presents SurgicalRoomAgent, a voice-interactive multi-agent system for smart operating rooms based on large language models (LLMs). The system achieves natural language understanding, device control, intraoperative recording, and surgical report generation through a layered architecture comprising a voice interaction pipeline (wake, ASR, turn detection, agent reasoning, TTS) and an agent core (skill registry, task planner, device manager). Three key technologies are investigated: (1) KV Cache prefix warming for low-latency inference, reducing recomputation overhead from approximately 500 ms to tens of milliseconds via byte-level Longest Common Prefix reuse; (2) streaming partial JSON parsing with early parallel task execution, reducing end-to-end latency by approximately 30%; and (3) progressive skill prompt disclosure, which dynamically filters system prompts based on user role, connected devices, and surgical phase to maximize information density within limited context windows. The system is implemented using the Qwen3-27B model with llama.cpp/sglang inference engines. Experimental analysis demonstrates effective operation within a 16,384-token context limit and multi-device parallel control response times meeting OR real-time requirements.",
+      "canonical_id": "arXiv:2609.11231",
+      "arxiv_id": "2609.11231",
+      "authors": [
+        "Tian Zhou"
+      ]
+    },
+    {
+      "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+      "source_url": "https://www.semanticscholar.org/paper/21236de8cc0df921c10a39e82cb5d32e1d9f76d2",
+      "year": 2026,
+      "published": "2026-09-10",
+      "abstract": "Agent usage is shifting toward long-horizon tasks such as coding and scientific discovery, among which terminal tasks are especially important. We introduce T1, a Mixture-of-Experts model of 122B total trained with reinforcement learning, operating a real shell in a cloud sandbox for up to 300+ tool-call turns per task, rewarded by executing each task's own verifier. We provide a comprehensive recipe: First, an aggressively warm-started to stabilize actor-critic training, with a dense process reward scoring trajectories by the absolute number of passing verifiers. Second, stable optimization through TITO construction, training on the exact sampled token identifiers with drift repair at turn boundaries, and rollout routing replay, recording the sampler's per-token expert choices at every MoE layer and replaying them during training. Third, fully out-of-distribution training corpus: isolated seeds and synthesized tasks disjoint from Terminal-Bench 2.1 ensures gains reflect genuine capability transfer over benchmark overfitting. Together, TITO and R3 cut the training-to-inference log-probability difference from 0.021 to 0.013, with exactly aligned zero token drift in the loss region. On Terminal-Bench 2.1, our post-train pipeline raises initial base model from 43.8% to T1 with 64.0% resolved. On Long-Horizon Terminal Bench, T1 reaches 27.9% and surpasses GPT-5.4 and GLM-5.1.",
+      "canonical_id": "arXiv:2609.11042",
+      "arxiv_id": "2609.11042",
+      "authors": [
+        "Jun-Yao Yang",
+        "Yucheng Shi",
+        "Zhongzhi Li",
+        "Ru-Han Wang",
+        "Zongxia Li",
+        "Haitao Mi",
+        "Leowei Liang"
+      ]
+    },
+    {
+      "title": "SIRF: A Spec-Internalized Risk Foundation Model for Industrial Content Risk Control",
+      "source_url": "https://www.semanticscholar.org/paper/c6eea74988ab8d787186d3c67d1c30f818a813ef",
+      "year": 2026,
+      "published": "2026-09-10",
+      "abstract": "For industrial content risk control, the real deployment constraint is not average accuracy but how much risk can be auto-handled under high precision and second-level latency. We present SIRF (Spec-Internalized Risk Foundation Model), which internalizes a platform's complex policies, synthesized without additional human annotation via EntiGraph, MAGA rewriting and account-level chain-of-thought (CoT), into the weights via continued pretraining (CPT), so rules are applied at high precision under an ultra-low-latency, verdict-only deployment. A controlled same-source comparison (Qwen3-8B-SFT vs. SIRF-8B-SFT, identical policy injection and verdict-only output form, differing only in policy-grounded CPT) attributes the gain to internalization: SIRF-8B-SFT reaches 71.3% Black Recall@P95, +15.1pp over the baseline, using only ~70M CPT tokens without harming general ability, and among included, logprob-available models under this interface it matches or exceeds far larger systems. SIRF is deployed as a tree-model adjudication layer (20% more mis-penalized samples recovered) and transfers to a freezing scenario at low cost (~70% relative mis-penalization reduction).",
+      "canonical_id": "arXiv:2609.11752",
+      "arxiv_id": "2609.11752",
+      "authors": [
+        "Su-Wan Wu",
+        "Yu-Meng Lin",
+        "Peng-Cheng Yuan",
+        "Xiao-Long Jiang"
+      ]
+    },
+    {
+      "title": "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
+      "source_url": "https://www.semanticscholar.org/paper/b2d9c8e421a272db2c47b60ac669610b8d0bb256",
+      "year": 2026,
+      "published": "2026-09-09",
+      "abstract": "Enterprises deploy systems, not checkpoints. Usable capability depends jointly on weights, serving route, precision, output contract, and harness, yet all 18 audited benchmarks score advertised model identifiers. We treat this as measurement error and give a protocol that makes it reportable. It has three parts. A gold-blind capability-binding preflight verifies that a route can execute the evaluation contract before any task reaches it; a reliability-inclusive first-pass scoring rule keeps failure in the score while keeping unsupported capability out; and adjudication is structurally score-blind. We call the protocol IB2 and release its algorithms, classification tables, request contract, and manifest schemas. Its reference instantiation, 128 locked tasks and 987 assertions over document, spreadsheet, chart, tool and database work, stays sealed: the procedure is the artifact, not the corpus. Across eleven systems, four results. Capability availability is measurable: two complete single-route runs on identical weights later failed distinct predicates of the finalized binding gate, while a third passed that gate before a fresh run. The advertised identifier exposed neither limit. Discrimination is not uniform: four of seven suites saturate under a six-system band, with the spread almost entirely from governed database work and multi-tab joins, so we report interval-backed resolution groups, not ranks; two of the nominal five-label output's four cuts fail multiplicity adjustment. Serving-arm choice moved one declared revision and precision from 77.38 to 82.54, paired interval [0.11,10.60], though the arms differ in access mode, harness generation, and the serving tool-call parser, and harness generation is a property of our evaluator, not any endpoint. Excluding failed responses from denominators changes the point ordering, so reliability inclusion changes a conclusion, not its wording.",
+      "canonical_id": "arXiv:2609.10494",
+      "arxiv_id": "2609.10494",
+      "authors": [
+        "Blake Stenstrom",
+        "Charangan Vasantharajan",
+        "Brian Sathianathan"
+      ]
+    },
+    {
+      "title": "TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents",
+      "source_url": "https://www.semanticscholar.org/paper/2a8d0326c065034809de115743ce83492ec4daae",
+      "year": 2026,
+      "published": "2026-09-09",
+      "abstract": "GUI agents accumulate high-resolution screenshots as the trajectory unfolds, increasing inference latency and memory usage. Training-free visual token pruning can reduce this cost, but cache reuse introduces a fundamental constraint. Once tokens are discarded, the corresponding visual evidence cannot be recovered without re-encoding. Pruning therefore becomes an \\textit{irreversible admission decision} that must remain useful for unknown future targets while preserving coverage of operable regions under tight budgets. To address these challenges, we propose \\textbf{\\method{}}, a training-free framework for \\emph{\\textbf{T}rajectory-\\textbf{r}obust \\textbf{A}dmission and \\textbf{C}overage-aware \\textbf{E}vidence ordering}. Specifically, we combine a query-independent layout-derived interaction prior with instruction relevance and feature novelty to rank visual evidence according to both potential future utility and diversity. Then, we reserve part of the budget for native visual tokens distributed across the screen, repairing missing spatial coverage without breaking the ordering. Together, these mechanisms produce a nested token order, allowing retained visual evidence to shrink monotonically across budgets while remaining reusable throughout the trajectory. Finally, our monotone KV contraction incrementally contracts retired frames into compact session state, avoiding repeated visual encoding or pruning. Extensive experiments across six GUI benchmarks and diverse models verify the effectiveness of our proposed \\method{} under tight budgets. The source code will be released.",
+      "canonical_id": "arXiv:2609.10297",
+      "arxiv_id": "2609.10297",
+      "authors": [
+        "Yu-Hao Wang",
+        "Mu Qiao",
+        "Xin-Dong Zhang",
+        "Yunzhi Zhuge",
+        "Lei Zhang",
+        "Hu-Chuan Lu"
+      ]
+    },
+    {
+      "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
+      "source_url": "https://www.semanticscholar.org/paper/4bf5cd06f594e129612ab60c0cc4fbf4a22002b9",
+      "year": 2026,
+      "published": "2026-09-09",
+      "abstract": "Multimodal entity linking grounds entity mentions in text and images to knowledge-base entries. These systems degrade on rare entities, but prior work measures rarity primarily through popularity-based metrics such as pageviews. We broaden this view using knowledge-graph structural metrics that capture how well an entity is documented and connected. These metrics identify many rare entities that popularity metrics miss. Across the resulting rare-entity slices, state-of-the-art accuracy drops by 15.4-39.9%, showing that different rarity definitions expose different failure modes. To address these failures, we introduce a simple, training-free framework in which a reasoning-capable vision-language model iteratively searches and reasons over Wikipedia, gathering evidence dynamically. Controlled experiments show that reasoning and retrieval are complementary. Reasoning alone does not significantly improve accuracy on rare entities. Retrieval without reasoning improves rare-entity accuracy but can hurt overall accuracy. Their combination performs best. On MERLIN, a multilingual multimodal entity linking benchmark over five languages (Hindi, Indonesian, Japanese, Tamil, Vietnamese), our best system improves over the state of the art by 6.9% overall and by up to 23.3% on rare-entity slices. We release MERLIN-Rare, rare-entity test slices for targeted evaluation, with our framework.",
+      "canonical_id": "arXiv:2609.10745",
+      "arxiv_id": "2609.10745",
+      "authors": [
+        "Parinthapat Pengpun",
+        "Simran Khanuja",
+        "Graham Neubig"
+      ]
+    },
+    {
+      "title": "Feyospace-v1: How the Cyber Mercury Seven Trained Frontier Cyber Models",
+      "source_url": "https://www.semanticscholar.org/paper/054f8533c2df2825d30e9aa7c91b75b33b7d85db",
+      "year": 2026,
+      "published": "2026-09-08",
+      "abstract": "Training capable cyber agents is often treated primarily as a problem of model scale, yet open-weight post-training is constrained more directly by the cost of executable environments, reliable multi-turn supervision, and access to strong teachers. We present a data-centric framework that addresses these bottlenecks through five complementary systems: Choulea analyzes hidden reasoning signatures, SkyReal reduces teacher-sampling cost, Hongzwang bypasses API restrictions on teacher execution, PSBreakup restores capabilities weakened by model merging, and Kreator converts expert interventions into trainable reasoning. Our data engine constructs resettable coding, vulnerability, CTF, kernel-history, full-exploit, firmware, and device-backed environments. Candidate trajectories are retained only after execution verification and evidence auditing, yielding 164,269 trajectories for long-context supervised fine-tuning. The three checkpoints improve over their starting models by an average of 23.76% on the full CyberGym suite and 10.49% across the pooled CTF suites. As of September 1, 2026, Feyospace-s1 achieves a verified success rate of 63.24% and ranks 10th on the official CyberGym leaderboard, while all three checkpoints rank 1st among models at comparable parameter scales. To our knowledge, this is the first end-to-end demonstration that a seven-person independent team can train open-weight models with leading agentic cyber capability.",
+      "canonical_id": "arXiv:2609.08418",
+      "arxiv_id": "2609.08418",
+      "authors": [
+        "Zong-Jie Li",
+        "W. AlanZ",
+        "J. JohnNicolas",
+        "F. WalterH",
+        "L. ScottDonald",
+        "P. GordonY",
+        "D. X."
+      ]
+    },
+    {
+      "title": "Miles v0.1: Production-Level Post-Training",
+      "source_url": "https://www.semanticscholar.org/paper/94b5059c15cfa8e5bd89b096ff01a562c941e46c",
+      "year": 2026,
+      "published": "2026-09-08",
+      "abstract": "We present Miles v0.1, a full-stack, production-ready system for frontier post-training. Building upon the clean design of slime, Miles designs each stage of the reinforcement-learning (RL) training loop around a single principle: components should be verified, clean, and customizable. With accuracy, efficiency, reliability, and scalability as first-class goals, Miles aims to make frontier-scale RL accessible to researchers and enterprises alike. This report walks through the system end to end: rollout engines built on SGLang, a trainer with a choice of two backends (NVIDIA Megatron-LM and PyTorch FSDP), and three weight-synchronization transports for different deployment topologies. Beyond full-parameter RL, Miles also supports LoRA RL, on-policy distillation, supervised fine-tuning, and true-on-policy rollout-training alignment, and extends the same architecture to diffusion models. We close with an end-to-end case study: fully asynchronous agentic RL on a GLM-5.2 744B-A40B model over terminal-use coding tasks, running on 64 NVIDIA GB300 GPUs with a median step time of 263 seconds over the first 30 measured steps. Miles is open-sourced at https://github.com/radixark/miles, with the project website at https://miles.radixark.com.",
+      "canonical_id": "arXiv:2609.08368",
+      "arxiv_id": "2609.08368",
+      "authors": [
+        "RadixArk Tom Chen",
+        "Ma Cheng",
+        "Shi Dong",
+        "Kang-Rui Du",
+        "Yang Jiang",
+        "Jia-Jun Li",
+        "Yi-Ming Li",
+        "Tao Lin",
+        "Yu-Sheng Su",
+        "Andy Ye",
+        "Yue-Ming Yuan",
+        "Zhi-Chen Zeng"
+      ]
+    },
+    {
+      "title": "Retrieval-Augmented Multi-Prompt Ensemble for Minor-Grain Breeding Information Extraction",
+      "source_url": "https://www.semanticscholar.org/paper/85a300df4c42fc06399d368577fb884ef568345e",
+      "year": 2026,
+      "published": "2026-09-07",
+      "abstract": "This paper presents our system for CCL2026-Eval Task 5: Minor-Grain Breeding Information Extraction (MGBIE), which jointly extracts 12 entity types and 6 relation types from minor-grain breeding literature. We propose RAME (Retrieval-Augmented Multi-Prompt Ensemble), a training-free framework that elicits multiple LLM outputs under controlled diversity and aggregates them by majority voting to obtain high-confidence predictions. RAME combines (i) retrieval-augmented few-shot selection via a hybrid BM25-embedding retriever, (ii) a three-prompt ensemble (Strict, Relaxed, Balanced) spanning the precision to recall spectrum, and (iii) large-scale repeated sampling with majority voting to filter noisy predictions. Built on DeepSeek-V4-Flash, RAME achieves a Total Score of 0.499 (NER 0.730, RE 0.346) on the leaderboard, ranking 1st and surpassing the official Track-A baseline powered by GPT-5.5 (0.448), representing an 11.4% relative improvement. Code is available at https://github.com/king-wang123/CCL26-RAME.",
+      "canonical_id": "arXiv:2609.07134",
+      "arxiv_id": "2609.07134",
+      "authors": [
+        "Hang-Bo-Ma-Sheng-Yuan Zhao",
+        "Jia-Hao Wang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832869",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832869",
+        "title:caremoe correlationaware expert placement and semantic equivalence routing for moe llm inference on edge devices",
+        "url:https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068"
+      ],
+      "record": {
+        "title": "CARE-MoE: Correlation-Aware Expert Placement and Semantic Equivalence Routing for MoE LLM Inference on Edge Devices",
+        "source_url": "https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Mixture-of-Experts (MoE) has become a mainstream architecture for Large Language Models (LLMs) due to its sparse activation mechanism. While distributed inference is promising for deploying LLMs on resource-constrained edge devices, it still faces two critical challenges for MoEs. First, the gating network’s strong bias toward a small subset of hot experts causes severe cross-device load imbalance. Cloud-side methods, such as expert replication, incur prohibitive memory overhead, and global load balancing introduces excessive communication latency in edge networks. Existing edge methods overlook expert co-activation correlations and cannot adapt to hot-cold expert drift induced by shifting user interactions. Second, the All-to-All communication overhead of expert parallelism can dominate the inference latency under bandwidth-constrained edge environments. Existing token dropping or fusion strategies reduce communication at the cost of distorted token feature propagation and degraded long-context accuracy. To address these challenges, we propose CARE-MoE, an efficient MoE LLM inference framework comprising two core components. The Correlation-Aware Expert Placer (CAEP) balances expert placement by jointly modeling co-activation correlation and hot–cold drift, preventing overload from correlated experts and enabling low-cost adaptive rebalancing. The Communication-Aware Expert Router (CAER) exploits semantic equivalence in MoEs to redirect token-expert assignments toward low-latency devices, thereby achieving significant communication reduction with negligible accuracy loss. Experiments across diverse edge environments and MoE models demonstrate that CARE-MoE achieves a 2.1 × to 5.2 × speedup over state-of-the-art baselines.",
+        "canonical_id": "DOI:10.1145/3832810.3832869",
+        "doi": "10.1145/3832810.3832869",
+        "authors": [
+          "Zhen-Yu Wang",
+          "Wei Li",
+          "Ao Ren",
+          "Duo Liu",
+          "Bo Zhang",
+          "Kan Zhong",
+          "Chao-Xia Qin",
+          "Hao-Yang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18935",
+      "identity_tokens": [
+        "id:arXiv:2609.18935",
+        "title:longlived characters local inference incremental memory maintenance for game npcs",
+        "url:https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3"
+      ],
+      "record": {
+        "title": "Long-Lived Characters, Local Inference: Incremental Memory Maintenance for Game NPCs",
+        "source_url": "https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "A game character should not have to reread its entire life before every conversation. For locally deployed language-model characters, however, revising a few memories can invalidate a long reusable prefix. The resulting preparation cost competes with both foreground dialogue and the maintenance of other characters. This matters especially when dialogue feeds game-defined actions and value judgments: a fluent but incorrect account of who owns an item, or whether a transfer has already happened, can corrupt the input to otherwise deterministic rules. We study incremental memory maintenance for long-lived game NPCs in a quantized Qwen hybrid recurrent-attention model. Our runtime removes superseded attention KV entries, computes replacement records at the true sequence tail, and preserves the continuing recurrent state and unchanged KV. Existing local experiments combine multi-update dialogue replays, fixed-input placement ablations, and attention diagnostics. Independent block composition weakens query-conditioned memory selection without a uniform chunk-initial attention collapse. True-tail updates preserve important current-state and historical bindings across eight scripted maintenance rounds; a placement case recovers the full-refill quantity in three reconstructions, while slot-preserving alternatives repeat a double-subtraction error. Attention-distribution proximity alone does not explain these semantic differences. The results motivate treating a character's inference state as a maintained, history-dependent resource, rather than only a disposable encoding of its latest memory text.",
+        "canonical_id": "arXiv:2609.18935",
+        "arxiv_id": "2609.18935",
+        "authors": [
+          "Zi-Mu Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18496",
+      "identity_tokens": [
+        "id:arXiv:2609.18496",
+        "title:mist midtraining llms for cybersecurity",
+        "url:https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9"
+      ],
+      "record": {
+        "title": "MiST: Mid-Training LLMs for Cybersecurity",
+        "source_url": "https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Cybersecurity combines high-stakes analysis with complex technical language, making it an impactful and challenging domain for LLMs. We present MiST (Mid-trained Security Transformer), a suite of 8B and 32B models that achieve strong performance on public cybersecurity benchmarks. We use mid-training as an intermediate adaptation stage between general pre-training and cybersecurity training. Rather than performing continual pre-training over large volumes of raw domain text, we curate a compact, expert-vetted seed corpus, and transform it into high-quality domain-specific synthetic training data. The final MiST checkpoints improve mean cybersecurity accuracy by +13.1 and +8.6 absolute percentage points over the corresponding Qwen baselines for 8B and 32B, respectively, corresponding to relative gains of +27.0% and +15.8%. Ablation results further show that these cybersecurity gains arise in the mid-training and supervised fine-tuning stages through a combination of the synthetic data generation flows. Furthermore, we show that MiST provides a stronger initialization for downstream task-specific fine-tuning adaptation and reinforcement learning.",
+        "canonical_id": "arXiv:2609.18496",
+        "arxiv_id": "2609.18496",
+        "authors": [
+          "O. Ovadia",
+          "Elad Ben Zaken",
+          "Elad Guttman",
+          "Orly Moreno Kadosh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.17109",
+      "identity_tokens": [
+        "id:arXiv:2609.17109",
+        "title:sharedprefix kv reuse across standard lora adapters quality and serving tradeoffs",
+        "url:https://www.semanticscholar.org/paper/9b998f8a02c4bb92a679ad3c113bfda69dd9cdf0"
+      ],
+      "record": {
+        "title": "Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs",
+        "source_url": "https://www.semanticscholar.org/paper/9b998f8a02c4bb92a679ad3c113bfda69dd9cdf0",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "A common small-model deployment runs one shared backbone with several LoRA specialists that answer over the same context. Serving them naively re-prefills that shared context once per specialist. We study a narrow, practical question: for already-trained standard LoRA adapters -- not adapters retrained for cache compatibility -- how much task quality is preserved if the backbone's prefill KV cache is computed once and reused across specialists, and what does that buy in serving cost? On a Qwen3-1.7B backbone with two adapters (extractive QA on HotpotQA, arithmetic reasoning on GSM8K), we sweep the boundary at which the specialist takes over from the reused base cache and measure paired quality differences and serving cost. Full-prefix reuse had the lowest prefill cost and a small quality difference on held-out GSM8K (Delta = -4.6 EM at a 160-token budget; -3.0 at 320 tokens; -0.8 under a second training seed -- all favoring native, only the first excluding zero, and the magnitude not consistent). Partial recomputation provided no demonstrated advantage. Neither quality equivalence nor a general boundary-selection rule is established. We also report a closed-form ridge KV translator that did not beat direct reuse, and specialist-dependence contrasts whose intervals all include zero. The measured serving benefit is warm-cache time-to-first-token, which grows with context (~16x at 8K); two-branch peak memory was only 12% lower and, on inspection, the prefix was never physically shared across branches -- this implementation reuses KV values but copies their storage, so shared-cache memory savings are not achieved.",
+        "canonical_id": "arXiv:2609.17109",
+        "arxiv_id": "2609.17109",
+        "authors": [
+          "D. Rajput"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15311",
+      "identity_tokens": [
+        "id:arXiv:2609.15311",
+        "title:flashgpusim enabling gpu modeling for modern architectures and ai workloads",
+        "url:https://www.semanticscholar.org/paper/deae700f0061de98c92b3c0a4e321c8f5b996d68"
+      ],
+      "record": {
+        "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+        "source_url": "https://www.semanticscholar.org/paper/deae700f0061de98c92b3c0a4e321c8f5b996d68",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "As AI becomes increasingly ubiquitous, modern AI systems are shaped by a tight software-hardware co-design loop. Later GPUs expose features such as asynchronous data movement, tensor core pipelines, and fine-grained synchronization that high-performance kernels aggressively exploit, while emerging application behaviors increasingly influence the next generation of hardware design. Unfortunately, the latest open-source simulators for NVIDIA GPUs focus on architectures and software stacks from roughly six years ago. Therefore, they cannot support many state-of-the-art AI kernels generated by modern compiler stacks, e.g. Triton, or accurately model the hardware features they depend on. As a result, architects lack a credible platform for analyzing bottlenecks in this flywheel or evaluating design trade-offs for future AI systems. To bridge this gap, we present FlashGPU-sim, an open-source, execution-driven, cycle-accurate GPU simulator for modern AI workloads. FlashGPU-sim faithfully models modern hardware features such as asynchronous data movement, fine-grained synchronization, tensor-core execution, and distributed shared memory. A Triton extraction front-end allows direct simulation of optimized AI operators without manual porting, while multi-threaded execution makes large-scale software-hardware co-design practical. Across 131 workload configurations on RTX 5090, H100, and B200, FlashGPU-sim achieves a cycle-level MAPE of 5.24%, while multi-threaded simulation reaches a 7.86x speedup with 16 host threads. An H100 case study further demonstrates its utility for microarchitectural design exploration.",
+        "canonical_id": "arXiv:2609.15311",
+        "arxiv_id": "2609.15311",
+        "authors": [
+          "Si-Ying Yu",
+          "Yi-Xun Hong",
+          "Guo-Zhi Qiu",
+          "Jing-Ci Liu",
+          "Feng Gu",
+          "C. Geng",
+          "Zheng-Rong Wang",
+          "Chen Zhang",
+          "Bei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19169",
+      "identity_tokens": [
+        "id:arXiv:2609.19169",
+        "title:siliconbench speed memory and fidelity for llm serving on unifiedmemory desktops",
+        "url:https://www.semanticscholar.org/paper/5dfc253c4e99e4dc927022ba6963d6e82b5b7530"
+      ],
+      "record": {
+        "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+        "source_url": "https://www.semanticscholar.org/paper/5dfc253c4e99e4dc927022ba6963d6e82b5b7530",
+        "year": 2026,
+        "published": "2026-09-12",
+        "abstract": "Concurrent local LLM serving on unified-memory desktops must preserve memory headroom and output fidelity, which speed-only rankings overlook. We introduce SiliconBench, which evaluates nine Apple Silicon serving engines through three lenses: speed, memory, and fidelity. We evaluate chat and agent serving on Qwen3, Qwen3.5, and Gemma 4. We use a classification task to check for quality regressions against an NVIDIA reference. DGX Spark provides a complementary serving-performance reference. Three desiderata guide interpretation: serving architecture readiness, memory discipline, and multi-node scaling. On Qwen3-0.6B, vllm-metal alone more than doubles throughput on both workloads from concurrency 1 to 16. CUDA vLLM and SGLang show stronger concurrency scaling on the same prompts. Explicit memory budgets do not guarantee memory headroom: two stacks complete every request while memory use approaches physical capacity and throughput declines. The newer model architectures have narrower engine support. Their evaluated implementations match the fidelity reference. Only three stacks satisfy the completion, fidelity, and model-coverage gates. Comparisons on larger dense and MoE models reinforce the importance of scheduling prompt processing alongside ongoing generation: vllm-metal's packed prefill-decode path maintains lower first-token latency than omlx under concurrent load. In the tested two-machine configurations, tensor parallelism over Thunderbolt RDMA scales while pipeline parallelism over TCP regresses. We release benchmark code, per-run results, and maintenance journals, supported by a workflow combining bounded agent fixes with human review.",
+        "canonical_id": "arXiv:2609.19169",
+        "arxiv_id": "2609.19169",
+        "authors": [
+          "Ran-Ran Zhang",
+          "A. X. Fan",
+          "David Munhá Correia",
+          "Alex Cheema",
+          "Rui Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/electronics15184135",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics15184135",
+        "title:securityaugmented use case flow refinement for llmbased agentic systems",
+        "url:https://www.semanticscholar.org/paper/4e435602476474730e219e89f49b5eea23d3b352"
+      ],
+      "record": {
+        "title": "Security-Augmented Use Case Flow Refinement for LLM-Based Agentic Systems",
+        "source_url": "https://www.semanticscholar.org/paper/4e435602476474730e219e89f49b5eea23d3b352",
+        "year": 2026,
+        "published": "2026-09-12",
+        "abstract": "Unlike conventional software systems and large language models (LLMs) evaluated in isolation, LLM-based agentic systems introduce a compositional, workflow-level attack surface. Existing security analysis approaches provide limited support for identifying security omissions implicit in functional use case flows and deriving corresponding flow refinements for direct incorporation into use case specifications. We formulate the Security-Augmented Use Case Flow Refinement Task and propose MA-SAFR, a multi-agent framework that coordinates Red Team, Blue Team, and Critic agents for threat anchoring, security-branch construction, and validation. EvoGraphRAG adapts relation-aware retrieval through validation feedback, while Risk-Specific Security Guidance (RSSG) provides risk- and role-specific constraints. To support systematic evaluation of this task, we construct SAFR-Bench from OWASP and MITRE ATLAS, comprising 157 cases and 235 source-grounded threat–refinement pairs. Across three generation models, MA-SAFR improves all three metrics on average compared with the strongest corresponding baselines; pipeline recall and pipeline precision increase by 63.44% and 54.96%, respectively. Controlled analyses show that RSSG and feedback-based graph evolution within gEvoGraphRAG improve downstream threat-to-defense conversion. Despite remaining challenges in implicit-threat identification, multi-threat coverage, and defense alignment, the results show that MA-SAFR can support the construction of valid security-augmented use case flows.",
+        "canonical_id": "DOI:10.3390/electronics15184135",
+        "doi": "10.3390/electronics15184135",
+        "authors": [
+          "Guang-Yu Wang",
+          "Bangqi Li",
+          "Ji Wu",
+          "Zhi-Jun Shao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12379",
+      "identity_tokens": [
+        "id:arXiv:2609.12379",
+        "title:forgemegakernel a general framework for efficient autoregressive model decode megakernels",
+        "url:https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f"
+      ],
+      "record": {
+        "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+        "source_url": "https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Auto-regressive model decode is bandwidth-bound, since every weight and key/value-cache byte crosses high-bandwidth memory once per token. A megakernel is an ideal solution, but existing automatic megakernel generation approaches cannot achieve both generalization across models and correctness guarantees. We present ForgeMegakernel, which generates a per-model high-performance decode megakernel using coding agents. ForgeMegakernel pairs a universal knowledge base of ten progressive milestones with an independent mid-state test oracle. The milestones provide the megakernel's structural properties: a fine-grained instruction stream for each SM, dependency counters replacing the global synchronization, and a shared-memory buffer pool for workload balance across SMs and greater parallelism. The test oracle derives the mid-states of the megakernel and checks the performance, error and precision during the generation process, guaranteeing a correct and trustworthy forged megakernel. We evaluated ForgeMegakernel on 14 representative decoding operations across eight model families spanning 0.6B-13B parameters. The generated megakernels achieved 50.5-85.9% MBU and geometric mean speedups of 1.21x over SGLang 0.5.18 and 1.54x over a megakernel compiler under identical configurations. Inside SGLang, evaluated on GSM8K with ragged prompts, all 14 megakernels decoded faster than the SGLang engine at comparable answer accuracy.",
+        "canonical_id": "arXiv:2609.12379",
+        "arxiv_id": "2609.12379",
+        "authors": [
+          "Le-Shan Li",
+          "Zhui Zhu",
+          "Xiang-Long Deng",
+          "Yao-Jian Chen",
+          "Qing-Feng He",
+          "Yuxuan Li",
+          "Rong Zhao",
+          "Xu Han",
+          "Zhi-Yuan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12399",
+      "identity_tokens": [
+        "id:arXiv:2609.12399",
+        "title:onela scaling linearattention decoding to large beams in generative recommendation",
+        "url:https://www.semanticscholar.org/paper/5ed501d200a16be2542d821f48b168def5a84913"
+      ],
+      "record": {
+        "title": "OneLA: Scaling Linear-Attention Decoding to Large Beams in Generative Recommendation",
+        "source_url": "https://www.semanticscholar.org/paper/5ed501d200a16be2542d821f48b168def5a84913",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Generative recommendation (GR) relies on large-beam decoding to generate hundreds of candidate items, creating a new scaling challenge for recurrent linear attention. Existing linear attention serving systems either materialize a full recurrent state for every beam or repeatedly replay shared history, incurring substantial memory and traffic overhead. To address this, we present OneLA, a linear-attention decoding framework that exploits the shared prompt and short divergent suffixes of GR workloads. Specifically, OneLA represents all beam states using a single shared prompt-derived state and compact, append-only records of their divergent transitions. Using this representation, OneLA computes only the state information required at each decoding step, without reconstructing a full recurrent state for every beam. Furthermore, OneLA uses a lightweight ancestry index to track the transition records that make up each beam's history, allowing beams to be updated without moving or copying existing records. A fused GPU kernel further reuses the shared state across beams. Our analysis shows that OneLA achieves 1.54-2.46x end-to-end decode speedups while substantially reducing recurrent-state memory use and data movement.",
+        "canonical_id": "arXiv:2609.12399",
+        "arxiv_id": "2609.12399",
+        "authors": [
+          "Xiang-Rui Yang",
+          "Cheng Peng",
+          "Yun-Feng Zhao",
+          "Liang Zeng",
+          "Ao Hu",
+          "Jia-Wei Yang",
+          "Sheng-Zhe Wang",
+          "Jing-Shan Lv",
+          "Xiao Liang",
+          "Chen Yang",
+          "Jia-Qi Liu",
+          "Yiming Qiu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12412",
+      "identity_tokens": [
+        "id:arXiv:2609.12412",
+        "title:holibench a crossplatform benchmarking and deployment toolkit for foundation models in cpsiot applications",
+        "url:https://www.semanticscholar.org/paper/5fedeb84be4240c6c87fa5e311714720f66491e8"
+      ],
+      "record": {
+        "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+        "source_url": "https://www.semanticscholar.org/paper/5fedeb84be4240c6c87fa5e311714720f66491e8",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Foundation models, including large language models, vision-language models, and time-series foundation models, are increasingly deployed on embedded and edge platforms for CPS and IoT applications, where energy, latency, and memory are as critical as task accuracy. Existing benchmarking tools evaluate model capability in isolation, reporting accuracy assuming sufficient compute, while hardware profiling tools remain platform-specific and mutually incompatible. As a result, users lack a unified workflow for making deployment decisions across heterogeneous devices. We present HoliBench, a modular benchmarking and deployment toolkit that jointly characterizes accuracy, latency, and energy across platforms from single-board computers to GPU servers. Its platform abstraction layer calibrates cross-device measurement, and the toolkit supports multiple model modalities, inference engines, concurrencies, and existing evaluation harnesses. An interactive interface exposes constraint-aware configuration selection over a design space that is profiled once and reused across studies. Using HoliBench, we characterize 20 models across 7 device types, 3 quantization levels, 8 inference backends, and over 30 tasks, surfacing tradeoffs that existing tools miss: quantization reduces latency only on hardware with low-precision support, accuracy gains show diminishing returns relative to energy, and for autoregressive workloads, average inference power is approximately constant across output lengths. We further find that single-model profiles compose under sequential co-resident execution. In a multi-model CPS deployment, standalone profiles predict combined-pipeline latency and power within 1.2% and 2.5%, enabling deployment exploration without exhaustively profiling every pipeline configuration. We release HoliBench as open-source infrastructure for deployment-aware evaluation of foundation models.",
+        "canonical_id": "arXiv:2609.12412",
+        "arxiv_id": "2609.12412",
+        "authors": [
+          "Inesh Chakrabarti",
+          "Ze-Jun Xiong",
+          "Pragya Sharma",
+          "Mani Srivastava"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11231",
+      "identity_tokens": [
+        "id:arXiv:2609.11231",
+        "title:a voiceinteractive multiagent system for smart operating rooms architecture design and key technologies",
+        "url:https://www.semanticscholar.org/paper/1f23e69a9e43c5221d5f27d0b9f07553e4bc036c"
+      ],
+      "record": {
+        "title": "A Voice-Interactive Multi-Agent System for Smart Operating Rooms: Architecture Design and Key Technologies",
+        "source_url": "https://www.semanticscholar.org/paper/1f23e69a9e43c5221d5f27d0b9f07553e4bc036c",
+        "year": 2026,
+        "published": "2026-09-10",
+        "abstract": "This paper presents SurgicalRoomAgent, a voice-interactive multi-agent system for smart operating rooms based on large language models (LLMs). The system achieves natural language understanding, device control, intraoperative recording, and surgical report generation through a layered architecture comprising a voice interaction pipeline (wake, ASR, turn detection, agent reasoning, TTS) and an agent core (skill registry, task planner, device manager). Three key technologies are investigated: (1) KV Cache prefix warming for low-latency inference, reducing recomputation overhead from approximately 500 ms to tens of milliseconds via byte-level Longest Common Prefix reuse; (2) streaming partial JSON parsing with early parallel task execution, reducing end-to-end latency by approximately 30%; and (3) progressive skill prompt disclosure, which dynamically filters system prompts based on user role, connected devices, and surgical phase to maximize information density within limited context windows. The system is implemented using the Qwen3-27B model with llama.cpp/sglang inference engines. Experimental analysis demonstrates effective operation within a 16,384-token context limit and multi-device parallel control response times meeting OR real-time requirements.",
+        "canonical_id": "arXiv:2609.11231",
+        "arxiv_id": "2609.11231",
+        "authors": [
+          "Tian Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11042",
+      "identity_tokens": [
+        "id:arXiv:2609.11042",
+        "title:t1 terminal agent reinforcement learning for longhorizon tasks",
+        "url:https://www.semanticscholar.org/paper/21236de8cc0df921c10a39e82cb5d32e1d9f76d2"
+      ],
+      "record": {
+        "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+        "source_url": "https://www.semanticscholar.org/paper/21236de8cc0df921c10a39e82cb5d32e1d9f76d2",
+        "year": 2026,
+        "published": "2026-09-10",
+        "abstract": "Agent usage is shifting toward long-horizon tasks such as coding and scientific discovery, among which terminal tasks are especially important. We introduce T1, a Mixture-of-Experts model of 122B total trained with reinforcement learning, operating a real shell in a cloud sandbox for up to 300+ tool-call turns per task, rewarded by executing each task's own verifier. We provide a comprehensive recipe: First, an aggressively warm-started to stabilize actor-critic training, with a dense process reward scoring trajectories by the absolute number of passing verifiers. Second, stable optimization through TITO construction, training on the exact sampled token identifiers with drift repair at turn boundaries, and rollout routing replay, recording the sampler's per-token expert choices at every MoE layer and replaying them during training. Third, fully out-of-distribution training corpus: isolated seeds and synthesized tasks disjoint from Terminal-Bench 2.1 ensures gains reflect genuine capability transfer over benchmark overfitting. Together, TITO and R3 cut the training-to-inference log-probability difference from 0.021 to 0.013, with exactly aligned zero token drift in the loss region. On Terminal-Bench 2.1, our post-train pipeline raises initial base model from 43.8% to T1 with 64.0% resolved. On Long-Horizon Terminal Bench, T1 reaches 27.9% and surpasses GPT-5.4 and GLM-5.1.",
+        "canonical_id": "arXiv:2609.11042",
+        "arxiv_id": "2609.11042",
+        "authors": [
+          "Jun-Yao Yang",
+          "Yucheng Shi",
+          "Zhongzhi Li",
+          "Ru-Han Wang",
+          "Zongxia Li",
+          "Haitao Mi",
+          "Leowei Liang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11752",
+      "identity_tokens": [
+        "id:arXiv:2609.11752",
+        "title:sirf a specinternalized risk foundation model for industrial content risk control",
+        "url:https://www.semanticscholar.org/paper/c6eea74988ab8d787186d3c67d1c30f818a813ef"
+      ],
+      "record": {
+        "title": "SIRF: A Spec-Internalized Risk Foundation Model for Industrial Content Risk Control",
+        "source_url": "https://www.semanticscholar.org/paper/c6eea74988ab8d787186d3c67d1c30f818a813ef",
+        "year": 2026,
+        "published": "2026-09-10",
+        "abstract": "For industrial content risk control, the real deployment constraint is not average accuracy but how much risk can be auto-handled under high precision and second-level latency. We present SIRF (Spec-Internalized Risk Foundation Model), which internalizes a platform's complex policies, synthesized without additional human annotation via EntiGraph, MAGA rewriting and account-level chain-of-thought (CoT), into the weights via continued pretraining (CPT), so rules are applied at high precision under an ultra-low-latency, verdict-only deployment. A controlled same-source comparison (Qwen3-8B-SFT vs. SIRF-8B-SFT, identical policy injection and verdict-only output form, differing only in policy-grounded CPT) attributes the gain to internalization: SIRF-8B-SFT reaches 71.3% Black Recall@P95, +15.1pp over the baseline, using only ~70M CPT tokens without harming general ability, and among included, logprob-available models under this interface it matches or exceeds far larger systems. SIRF is deployed as a tree-model adjudication layer (20% more mis-penalized samples recovered) and transfers to a freezing scenario at low cost (~70% relative mis-penalization reduction).",
+        "canonical_id": "arXiv:2609.11752",
+        "arxiv_id": "2609.11752",
+        "authors": [
+          "Su-Wan Wu",
+          "Yu-Meng Lin",
+          "Peng-Cheng Yuan",
+          "Xiao-Long Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10494",
+      "identity_tokens": [
+        "id:arXiv:2609.10494",
+        "title:ibib a protocol for measuring enterprise ai systems by serving route not model identifier",
+        "url:https://www.semanticscholar.org/paper/b2d9c8e421a272db2c47b60ac669610b8d0bb256"
+      ],
+      "record": {
+        "title": "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
+        "source_url": "https://www.semanticscholar.org/paper/b2d9c8e421a272db2c47b60ac669610b8d0bb256",
+        "year": 2026,
+        "published": "2026-09-09",
+        "abstract": "Enterprises deploy systems, not checkpoints. Usable capability depends jointly on weights, serving route, precision, output contract, and harness, yet all 18 audited benchmarks score advertised model identifiers. We treat this as measurement error and give a protocol that makes it reportable. It has three parts. A gold-blind capability-binding preflight verifies that a route can execute the evaluation contract before any task reaches it; a reliability-inclusive first-pass scoring rule keeps failure in the score while keeping unsupported capability out; and adjudication is structurally score-blind. We call the protocol IB2 and release its algorithms, classification tables, request contract, and manifest schemas. Its reference instantiation, 128 locked tasks and 987 assertions over document, spreadsheet, chart, tool and database work, stays sealed: the procedure is the artifact, not the corpus. Across eleven systems, four results. Capability availability is measurable: two complete single-route runs on identical weights later failed distinct predicates of the finalized binding gate, while a third passed that gate before a fresh run. The advertised identifier exposed neither limit. Discrimination is not uniform: four of seven suites saturate under a six-system band, with the spread almost entirely from governed database work and multi-tab joins, so we report interval-backed resolution groups, not ranks; two of the nominal five-label output's four cuts fail multiplicity adjustment. Serving-arm choice moved one declared revision and precision from 77.38 to 82.54, paired interval [0.11,10.60], though the arms differ in access mode, harness generation, and the serving tool-call parser, and harness generation is a property of our evaluator, not any endpoint. Excluding failed responses from denominators changes the point ordering, so reliability inclusion changes a conclusion, not its wording.",
+        "canonical_id": "arXiv:2609.10494",
+        "arxiv_id": "2609.10494",
+        "authors": [
+          "Blake Stenstrom",
+          "Charangan Vasantharajan",
+          "Brian Sathianathan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10297",
+      "identity_tokens": [
+        "id:arXiv:2609.10297",
+        "title:trace trajectoryrobust admission with evidence ordering for efficient gui agents",
+        "url:https://www.semanticscholar.org/paper/2a8d0326c065034809de115743ce83492ec4daae"
+      ],
+      "record": {
+        "title": "TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents",
+        "source_url": "https://www.semanticscholar.org/paper/2a8d0326c065034809de115743ce83492ec4daae",
+        "year": 2026,
+        "published": "2026-09-09",
+        "abstract": "GUI agents accumulate high-resolution screenshots as the trajectory unfolds, increasing inference latency and memory usage. Training-free visual token pruning can reduce this cost, but cache reuse introduces a fundamental constraint. Once tokens are discarded, the corresponding visual evidence cannot be recovered without re-encoding. Pruning therefore becomes an \\textit{irreversible admission decision} that must remain useful for unknown future targets while preserving coverage of operable regions under tight budgets. To address these challenges, we propose \\textbf{\\method{}}, a training-free framework for \\emph{\\textbf{T}rajectory-\\textbf{r}obust \\textbf{A}dmission and \\textbf{C}overage-aware \\textbf{E}vidence ordering}. Specifically, we combine a query-independent layout-derived interaction prior with instruction relevance and feature novelty to rank visual evidence according to both potential future utility and diversity. Then, we reserve part of the budget for native visual tokens distributed across the screen, repairing missing spatial coverage without breaking the ordering. Together, these mechanisms produce a nested token order, allowing retained visual evidence to shrink monotonically across budgets while remaining reusable throughout the trajectory. Finally, our monotone KV contraction incrementally contracts retired frames into compact session state, avoiding repeated visual encoding or pruning. Extensive experiments across six GUI benchmarks and diverse models verify the effectiveness of our proposed \\method{} under tight budgets. The source code will be released.",
+        "canonical_id": "arXiv:2609.10297",
+        "arxiv_id": "2609.10297",
+        "authors": [
+          "Yu-Hao Wang",
+          "Mu Qiao",
+          "Xin-Dong Zhang",
+          "Yunzhi Zhuge",
+          "Lei Zhang",
+          "Hu-Chuan Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10745",
+      "identity_tokens": [
+        "id:arXiv:2609.10745",
+        "title:think before you link rarity reasoning and retrieval in multilingual entity linking",
+        "url:https://www.semanticscholar.org/paper/4bf5cd06f594e129612ab60c0cc4fbf4a22002b9"
+      ],
+      "record": {
+        "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking",
+        "source_url": "https://www.semanticscholar.org/paper/4bf5cd06f594e129612ab60c0cc4fbf4a22002b9",
+        "year": 2026,
+        "published": "2026-09-09",
+        "abstract": "Multimodal entity linking grounds entity mentions in text and images to knowledge-base entries. These systems degrade on rare entities, but prior work measures rarity primarily through popularity-based metrics such as pageviews. We broaden this view using knowledge-graph structural metrics that capture how well an entity is documented and connected. These metrics identify many rare entities that popularity metrics miss. Across the resulting rare-entity slices, state-of-the-art accuracy drops by 15.4-39.9%, showing that different rarity definitions expose different failure modes. To address these failures, we introduce a simple, training-free framework in which a reasoning-capable vision-language model iteratively searches and reasons over Wikipedia, gathering evidence dynamically. Controlled experiments show that reasoning and retrieval are complementary. Reasoning alone does not significantly improve accuracy on rare entities. Retrieval without reasoning improves rare-entity accuracy but can hurt overall accuracy. Their combination performs best. On MERLIN, a multilingual multimodal entity linking benchmark over five languages (Hindi, Indonesian, Japanese, Tamil, Vietnamese), our best system improves over the state of the art by 6.9% overall and by up to 23.3% on rare-entity slices. We release MERLIN-Rare, rare-entity test slices for targeted evaluation, with our framework.",
+        "canonical_id": "arXiv:2609.10745",
+        "arxiv_id": "2609.10745",
+        "authors": [
+          "Parinthapat Pengpun",
+          "Simran Khanuja",
+          "Graham Neubig"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08418",
+      "identity_tokens": [
+        "id:arXiv:2609.08418",
+        "title:feyospacev1 how the cyber mercury seven trained frontier cyber models",
+        "url:https://www.semanticscholar.org/paper/054f8533c2df2825d30e9aa7c91b75b33b7d85db"
+      ],
+      "record": {
+        "title": "Feyospace-v1: How the Cyber Mercury Seven Trained Frontier Cyber Models",
+        "source_url": "https://www.semanticscholar.org/paper/054f8533c2df2825d30e9aa7c91b75b33b7d85db",
+        "year": 2026,
+        "published": "2026-09-08",
+        "abstract": "Training capable cyber agents is often treated primarily as a problem of model scale, yet open-weight post-training is constrained more directly by the cost of executable environments, reliable multi-turn supervision, and access to strong teachers. We present a data-centric framework that addresses these bottlenecks through five complementary systems: Choulea analyzes hidden reasoning signatures, SkyReal reduces teacher-sampling cost, Hongzwang bypasses API restrictions on teacher execution, PSBreakup restores capabilities weakened by model merging, and Kreator converts expert interventions into trainable reasoning. Our data engine constructs resettable coding, vulnerability, CTF, kernel-history, full-exploit, firmware, and device-backed environments. Candidate trajectories are retained only after execution verification and evidence auditing, yielding 164,269 trajectories for long-context supervised fine-tuning. The three checkpoints improve over their starting models by an average of 23.76% on the full CyberGym suite and 10.49% across the pooled CTF suites. As of September 1, 2026, Feyospace-s1 achieves a verified success rate of 63.24% and ranks 10th on the official CyberGym leaderboard, while all three checkpoints rank 1st among models at comparable parameter scales. To our knowledge, this is the first end-to-end demonstration that a seven-person independent team can train open-weight models with leading agentic cyber capability.",
+        "canonical_id": "arXiv:2609.08418",
+        "arxiv_id": "2609.08418",
+        "authors": [
+          "Zong-Jie Li",
+          "W. AlanZ",
+          "J. JohnNicolas",
+          "F. WalterH",
+          "L. ScottDonald",
+          "P. GordonY",
+          "D. X."
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08368",
+      "identity_tokens": [
+        "id:arXiv:2609.08368",
+        "title:miles v01 productionlevel posttraining",
+        "url:https://www.semanticscholar.org/paper/94b5059c15cfa8e5bd89b096ff01a562c941e46c"
+      ],
+      "record": {
+        "title": "Miles v0.1: Production-Level Post-Training",
+        "source_url": "https://www.semanticscholar.org/paper/94b5059c15cfa8e5bd89b096ff01a562c941e46c",
+        "year": 2026,
+        "published": "2026-09-08",
+        "abstract": "We present Miles v0.1, a full-stack, production-ready system for frontier post-training. Building upon the clean design of slime, Miles designs each stage of the reinforcement-learning (RL) training loop around a single principle: components should be verified, clean, and customizable. With accuracy, efficiency, reliability, and scalability as first-class goals, Miles aims to make frontier-scale RL accessible to researchers and enterprises alike. This report walks through the system end to end: rollout engines built on SGLang, a trainer with a choice of two backends (NVIDIA Megatron-LM and PyTorch FSDP), and three weight-synchronization transports for different deployment topologies. Beyond full-parameter RL, Miles also supports LoRA RL, on-policy distillation, supervised fine-tuning, and true-on-policy rollout-training alignment, and extends the same architecture to diffusion models. We close with an end-to-end case study: fully asynchronous agentic RL on a GLM-5.2 744B-A40B model over terminal-use coding tasks, running on 64 NVIDIA GB300 GPUs with a median step time of 263 seconds over the first 30 measured steps. Miles is open-sourced at https://github.com/radixark/miles, with the project website at https://miles.radixark.com.",
+        "canonical_id": "arXiv:2609.08368",
+        "arxiv_id": "2609.08368",
+        "authors": [
+          "RadixArk Tom Chen",
+          "Ma Cheng",
+          "Shi Dong",
+          "Kang-Rui Du",
+          "Yang Jiang",
+          "Jia-Jun Li",
+          "Yi-Ming Li",
+          "Tao Lin",
+          "Yu-Sheng Su",
+          "Andy Ye",
+          "Yue-Ming Yuan",
+          "Zhi-Chen Zeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07134",
+      "identity_tokens": [
+        "id:arXiv:2609.07134",
+        "title:retrievalaugmented multiprompt ensemble for minorgrain breeding information extraction",
+        "url:https://www.semanticscholar.org/paper/85a300df4c42fc06399d368577fb884ef568345e"
+      ],
+      "record": {
+        "title": "Retrieval-Augmented Multi-Prompt Ensemble for Minor-Grain Breeding Information Extraction",
+        "source_url": "https://www.semanticscholar.org/paper/85a300df4c42fc06399d368577fb884ef568345e",
+        "year": 2026,
+        "published": "2026-09-07",
+        "abstract": "This paper presents our system for CCL2026-Eval Task 5: Minor-Grain Breeding Information Extraction (MGBIE), which jointly extracts 12 entity types and 6 relation types from minor-grain breeding literature. We propose RAME (Retrieval-Augmented Multi-Prompt Ensemble), a training-free framework that elicits multiple LLM outputs under controlled diversity and aggregates them by majority voting to obtain high-confidence predictions. RAME combines (i) retrieval-augmented few-shot selection via a hybrid BM25-embedding retriever, (ii) a three-prompt ensemble (Strict, Relaxed, Balanced) spanning the precision to recall spectrum, and (iii) large-scale repeated sampling with majority voting to filter noisy predictions. Built on DeepSeek-V4-Flash, RAME achieves a Total Score of 0.499 (NER 0.730, RE 0.346) on the leaderboard, ranking 1st and surpassing the official Track-A baseline powered by GPT-5.5 (0.448), representing an 11.4% relative improvement. Code is available at https://github.com/king-wang123/CCL26-RAME.",
+        "canonical_id": "arXiv:2609.07134",
+        "arxiv_id": "2609.07134",
+        "authors": [
+          "Hang-Bo-Ma-Sheng-Yuan Zhao",
+          "Jia-Hao Wang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:e77422162e7cbd106a7f5755710f1e97fca5eef7579d5889b174a07735c6b920",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
