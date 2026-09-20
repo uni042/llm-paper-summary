@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:13:37 JST**
+> 自動生成: **2026-09-20 19:14:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **95** |
 | 未claim Research job | **94** |
 | 直近24hの検証済みResearch収録 | **82** |
-| 最終検証済みResearch収録 | **09-20 19:10:57 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-20 19:10:57 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **9** | **7** | **0** | **1** | **0** | — |
+| Research | **36** | **10** | **7** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **10** | **8** | **0** | **1** | **0** | **5** |
+| 合計 | **36** | **11** | **8** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **9件** / 検証済み成功: **7件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **10件** / 検証済み成功: **7件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -138,6 +138,7 @@
   - result: `.survey/work-queue/results/research/attempt-3e00451f32958b311cdc3f3c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3e00451f32958b311cdc3f3c.json`
   - paper: `papers/inference/05-speculative-decoding/2023-2310.07177-online-speculative-decoding.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-6d7a6414e2062e2233d5009c.json` (job `job-research-2b2648af1ffd1107`)
 - **成功** `arXiv:2311.09431` — Striped Attention: Faster Ring Attention for Causal Transformers
   - job: `.survey/work-queue/jobs/job-research-8c68e144047ac9bb.json`
   - result: `.survey/work-queue/results/research/attempt-726aa6f9d7bb4140731a500b.json` (`ok=true`)
@@ -239,8 +240,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **763** |
-| └ Research | **577** |
+| 成功result未照合のimmutable submission | **764** |
+| └ Research | **578** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
