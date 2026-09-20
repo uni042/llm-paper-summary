@@ -99,24 +99,21 @@ target_unseen: 20
 
 ### 4.1 探索方法
 
-次の4経路はすべて同じschema v3 precheckを通すが、**実行順序は固定**する。
+探索は**引用グラフ優先（citation-first）**とし、既存の収録論文に直接つながる2方向を主経路にする。どちらも同じschema v3 precheck、identity/rejection重複排除、固定ソースページ送りを使う。
 
-1. **最優先・毎runの初手**: structured-reference curation。収録済み論文の構造化 `references` 全体から未収録候補を掘る。必ず `provider: repository_references`、`source_url: repository://structured-references`、原則 `target_unseen: 20` を使う。
-2. 通常検索・新着検索: OpenAlex / Semantic Scholar等の固定検索URL。
-3. backward reference（収録論文が引用している論文）: `openalex_references` 等、参照先を列挙できる固定ソース。
-4. forward citation（収録論文を引用している論文）: OpenAlex等の被引用検索を固定ソースとして指定。
+1. **後方引用（backward reference）**: 収録済み論文が引用している論文を掘る。最初はリポジトリ全体の構造化 `references` を横断する `provider: repository_references`、`source_url: repository://structured-references`、原則 `target_unseen: 20` を使う。構造化メタデータが不足する系統では、種論文ごとの `openalex_references` または Semantic Scholar `/references` を補助的に使う。
+2. **前方引用（forward citation）**: 収録済み論文を引用している後続研究を、系統ごとの種論文から最新順に掘る。OpenAlexの `cites:W...` または Semantic Scholar `/citations` を固定ソースにする。
+3. **通常検索・新着検索**: 引用関係だけでは拾えない新系統・新用語を補完するフォールバック。OpenAlex / Semantic Scholar等の固定検索URLを使う。
 
-**structured-reference curation が候補を1件でも返す限り、2〜4へ切り替えない。** 次回Discovery runも再び1から開始し、無関係・微妙・Research化済み候補が除外された後の次の山を掘る。
+**通常・定期Discoveryでは、同じrun_keyの中で後方引用と前方引用を少なくとも1回ずつ試すまで通常検索へ進まない。** 一方、後方引用側の候補山が残っていても前方引用を止めない。原則として後方引用1バッファを分類・投入したら前方引用refreshへ進み、その後は `discovery_stats.search_windows` の未収録率・採用率・重複率を見て、実績の良い種論文／方向を優先する。これにより古い参考文献の巨大な山を掘りつつ、新しく既存研究を引用し始めた論文も取りこぼしにくくする。
 
-2〜4の従来探索へ移ってよいのは、そのrunの最初に実行した `repository_references` precheckが `unseen_result_count=0` かつ `provider_exhausted=true` を返した場合だけ。その場合、従来providerを使うDiscovery submissionには、0件だったprecheckの `request_id` / `result_path` / `receipt` を `reference_pool_fallback` として添付する。ゲートがこの証明を検証し、山が残っているのに従来探索へ迂回したsubmissionは拒否する。
+前方引用・後方引用のどちらも、同じ固定結果集合のページ送りは `collect_until_unseen()` に任せる。ワーカーが上位数件だけを手作業で抜き、重複が多いから別クエリに変えることは禁止する。原則 `target_unseen: 20` まで既収録・既候補・既却下・ページ間重複を飛ばしてから軽量評価する。
 
-**明示ユーザー指定探索（explicit user-directed discovery）の例外**: ユーザーが現在の会話で探索軸・対象系統・引用方向などを明示して個別探索を依頼した場合、その依頼に限って上記1→4の自動実行順を上書きしてよい。これは通常・定期Discoveryの方針変更ではなく、ユーザー指定軸を即時に調べるための限定例外である。候補投入は必ずschema v3固定ソース事前検査（fixed-source precheck）→identity/rejection重複排除→通常Discovery submission→queue workerの一本道を通し、precheck自体を省略してはならない。submissionには `discovery_stats.trigger: explicit_user_request` と、非空の `user_directed_request.request_id` / `user_directed_request.summary` を付ける。自律・Scheduled workerはこの印を自己生成して通常優先順位を回避してはならない。
-
-OpenAlexで直接ページ送り・引用関係を取得できる場合でも、`repository_references` が0件になった後のフォールバックとして使う。提供元を変える場合は別探索軸として記録する。
+**明示ユーザー指定探索（explicit user-directed discovery）の例外**: ユーザーが現在の会話で探索軸・対象系統・引用方向などを明示して個別探索を依頼した場合、その依頼に限って上記の自動実行順を上書きしてよい。これは通常・定期Discoveryの方針変更ではなく、ユーザー指定軸を即時に調べるための限定例外である。候補投入は必ずschema v3固定ソース事前検査（fixed-source precheck）→identity/rejection重複排除→通常Discovery submission→queue workerの一本道を通し、precheck自体を省略してはならない。submissionには `discovery_stats.trigger: explicit_user_request` と、非空の `user_directed_request.request_id` / `user_directed_request.summary` を付ける。自律・Scheduled workerはこの印を自己生成して通常優先順位を回避してはならない。
 
 #### 4.1.1 structured-reference curation の進め方
 
-この経路は、収録済み論文の `references` を横断して候補集合を作り、同じ候補を指す収録論文数 `relation_count` が多い順に少しずつ評価する。1回に全候補を掃除しようとせず、通常の `target_unseen: 20` の1バッファを処理する。**この候補集合が空になるまで、Discovery runごとにこの経路を繰り返す。**
+この経路は、収録済み論文の `references` を横断して候補集合を作り、同じ候補を指す収録論文数 `relation_count` が多い順に少しずつ評価する。1回に全候補を掃除しようとせず、通常の `target_unseen: 20` の1バッファを処理する。**候補集合は空になるまで継続して掘るが、前方引用refreshをブロックしない。各runで後方引用を処理したら前方引用も実行し、その後は探索実績に応じて配分する。**
 
 - 候補生成は `.survey/scripts/reference_pool.py` を正本とする。既収録論文に加え、`.survey/work-queue/reference-curation/unrelated-papers.json` と `.survey/work-queue/reference-curation/borderline-papers.json` の登録済み候補を通常時は除外する。
 - **明確にサーベイ対象外**と判断した候補は、次の候補へ進む前に `.survey/scripts/reference_relevance_ledger.py mark-unrelated` で無関係台帳へ永続保存する。同じ論文を後続runで再判定しない。
@@ -127,7 +124,7 @@ OpenAlexで直接ページ送り・引用関係を取得できる場合でも、
 
 ### 4.1.2 系統限定の最新被引用探索（lineage-scoped forward-citation refresh）
 
-特定の系統ページにある収録済み論文を**種論文（seed papers）**として、その論文を引用する後続研究から最新の有力候補を拾う方法。既存論文の引用先を掘るstructured-reference curationとは逆方向なので、直近数か月の新手法を拾うのに向く。通常runでは4.1の優先順位に従い、`repository_references` が枯れた後の前方引用探索（forward citation）として使う。ユーザーが「この系統を引用する最新論文を探して」のように明示した場合だけ、上記の明示ユーザー指定探索として即時実行してよい。
+特定の系統ページにある収録済み論文を**種論文（seed papers）**として、その論文を引用する後続研究から最新の有力候補を拾う方法。既存論文の引用先を掘るstructured-reference curationとは逆方向なので、直近数か月の新手法を拾うのに向く。通常runでも後方引用と並ぶ主経路として使い、`repository_references` の枯渇を待たない。ユーザーが「この系統を引用する最新論文を探して」のように明示した場合は、上記の明示ユーザー指定探索として対象系統を即時実行してよい。
 
 効率化の標準手順:
 
@@ -163,7 +160,7 @@ Discovery後半は次の順序を正規経路とする。途中を手作業で�
 
 失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` → `claim_worker_with_banks.py` の順へ戻る。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
 
-`repository_references` が候補を返したrunでは、採用0件・低採用率でも従来探索へ切り替えず、分類結果を台帳へ保存して次runも同じ山を掘る。そのrun最初の `repository_references` が0件かつprovider exhaustedだった場合だけ、通常検索、forward citation、backward reference、隣接分野、query family、providerへ切り替える。単一provider障害は「0件」とみなさない。ただし `candidate_inventory > 50` へ達した場合はoverflow research modeへ切り替える。
+引用優先runでは、後方引用の候補山が残っていても前方引用へ進む。逆に前方引用が0件でも後方引用の山は継続する。**通常検索へ進めるのは、同じrun_keyで後方引用と前方引用の両方を試した後だけ**とし、通常検索は引用グラフで空く領域を埋める用途に限定する。単一provider障害は「0件」とみなさず、同じ引用方向の別providerまたは別種論文を試す。ただし `candidate_inventory > 50` へ達した場合はoverflow research modeへ切り替える。
 
 ## 5. 重複排除
 
