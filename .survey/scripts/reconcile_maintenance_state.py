@@ -3,9 +3,9 @@
 
 This is intentionally conservative: it only copies fields from reports that are
 newer than the corresponding report timestamp already recorded in the state.
-It never changes cadence counters, run keys, maintenance sequence, or pending
-state. Overall maintenance status is derived from both structural consistency and
-maintenance-health whenever those statuses are known.
+It never changes the pending trigger or schedule ownership. Overall maintenance
+status is derived from both structural consistency and maintenance-health whenever
+those statuses are known.
 """
 
 from __future__ import annotations
