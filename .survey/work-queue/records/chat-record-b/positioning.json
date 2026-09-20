@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-3c0144987279113ac5ae99fd",
   "job_id": "job-research-b27d4d0f59f887b3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3c0144987279113ac5ae99fd",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主要結果はHy3系列とNVIDIA H20中心で、他モデル族・GPU・parallelismへのthroughput一般化は直接示されていない。D-cutはhardware/loadごとのruntime cost profileを必要とし、配備条件変更時は再profilingが必要である。DFlyはコード・数学に特化しており、高エントロピー会話ではMTPが優位な条件があるため、一つのcheckpointを全trafficへ適用する設計ではない。thinking modeもmatched trainingが必要で、no-think/high-think間の共有で受理長が大きく低下する。parallel backbone後のAR headは小さいが逐次処理を追加し、受理長増分がそのoverheadを上回る条件が必要である。論文はpreprintで、長期的な多様hardware上の再現性は今後の検証対象である。",
+    "differences": "EAGLE系やMTP系はtarget hidden stateを再利用する自己回帰drafterで、proposal depthに応じてdraft latencyが増える。DFlash/DFlareはblockを並列生成してdraft latencyを償却するが、同一block内の実現済みtokenを条件にできない。DFlyはDFlashの共有cross-layer変換とDFlareの層別target viewを統合し、そのparallel representationへ前token依存のhidden correctionを追加する。DSpark等の局所適応に対してD-cutはrequest-localではなくbatch全体のtarget verification capacityを共有資源として扱い、hardware-profiled costまで含めてglobal budgetを選ぶ。AngelSpec自体は個別アルゴリズムだけでなくMTPとblock-parallel系を同一訓練・評価基盤で扱い、workload別に使い分ける運用設計を中心に置く。",
+    "implementation_status": "公開実装あり。Tencent/AngelSpecでtorch-native訓練基盤、MTP/DFly/DFlash系、target hidden-state分離生成、document-aware packing、128k MTP訓練、実推測デコードevaluation server、Hy3/Qwen3系の公開drafter checkpointを提供している。",
+    "research_positioning": "推測デコード研究のうち、drafter architecture、acceptance-aligned training、serving-time verification schedulingを一つのend-to-end系として接続する研究に位置する。特に『平均benchmarkで一つのdrafterを選ぶ』前提を捨て、会話とコード・数学で構造・データを分け、さらにonline loadでverification depthを変えるため、モデル側最適化とサービング側resource allocationの橋渡しになっている。リポジトリ内ではspeculative decoding系統のEAGLE/MTP/parallel draftingと、LLM serving scheduling系統のbatch resource allocationの双方に関連する。"
+  },
+  "reservation": {"claim_id": "claim-3c0144987279113ac5ae99fd", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
