@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:32:46 JST**
+> 自動生成: **2026-09-21 05:33:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **242** |
-| 未claim Research job | **242** |
-| 直近24hの検証済みResearch収録 | **81** |
+| 収録候補論文 | **245** |
+| 未claim Research job | **245** |
+| 直近24hの検証済みResearch収録 | **80** |
 | 最終検証済みResearch収録 | **09-20 23:48:14 JST（5時間44分前）** |
 | 整合性異常 | **0** |
 
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **242** |
+| canonical_id確認済みの一意な候補論文 | **245** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **242** |
+| 非終端Research job合計 | **245** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,8 +52,8 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **19** | **1** | **0** | **1** | **0** | **0** | **3** |
-| 合計 | **23** | **7** | **4** | **1** | **0** | **0** | **3** |
+| Discovery | **20** | **1** | **1** | **0** | **0** | **0** | **3** |
+| 合計 | **24** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -90,6 +90,10 @@
 
 ### Discovery
 
+- **09-21 05:32:50 JST** job `job-7cf235b2465d2a2c` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260921T0532JST-discovery-backward-01.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260921T0532JST-discovery-backward-01.json`
+  - 探索軸: repository-wide structured references for LLM inference systems
 - **09-21 05:08:33 JST** job `job-8568b8b1c995b662` / 候補 **0件**
   - result: `.survey/work-queue/results/20260921T0505JST-discovery-round-01b-backward.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0505JST-discovery-round-01b-backward.json`
@@ -126,10 +130,6 @@
   - result: `.survey/work-queue/results/20260921T0522JST-discovery-round-09-sparse.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260921T0522JST-discovery-round-09-sparse.json`
   - 探索軸: OpenAlex recent sparse attention inference serving
-- **09-21 05:22:02 JST** job `job-a1758bddbe30cf10` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260921T0522JST-discovery-round-10-edge.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0522JST-discovery-round-10-edge.json`
-  - 探索軸: OpenAlex recent on-device edge LLM inference
 
 ### 直近タスク
 
@@ -171,12 +171,12 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:29 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **3件**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **3件**
 - 探索軸: repository-wide structured references for LLM inference systems
 - round `round-01` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260921T0532JST-discovery-backward-01.json`
   - 探索軸: repository-wide structured references for LLM inference systems
-  - 個別result照合: なし（immutable round記録は確認済み）
+  - 個別result照合: あり / `.survey/work-queue/results/20260921T0532JST-discovery-backward-01.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -203,7 +203,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **242** |
+| ready | **245** |
 
 ### 候補の重複・識別情報欠損
 
@@ -231,10 +231,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **910** |
+| 成功result未照合のimmutable submission | **909** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **196** |
+| └ Discovery | **195** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
