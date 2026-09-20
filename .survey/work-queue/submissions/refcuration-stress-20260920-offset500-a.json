@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:1910.02054",
+      "arxiv_id": "1910.02054",
+      "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+      "source_url": "https://arxiv.org/abs/1910.02054",
+      "paper_path": "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "priority": 98,
+      "reason": "Foundational large-model training systems work that eliminates optimizer/gradient/parameter-state memory redundancy through partitioning."
+    },
+    {
+      "canonical_id": "arXiv:2106.06899",
+      "arxiv_id": "2106.06899",
+      "title": "Memory-efficient Transformers via Top-k Attention",
+      "source_url": "https://arxiv.org/abs/2106.06899",
+      "paper_path": "papers/inference/10-sparse-attention/2021-2106.06899-top-k-attention.md",
+      "priority": 88,
+      "reason": "Memory-efficient attention mechanism that restricts attention to top-k keys and serves as a useful precursor for sparse long-context inference systems."
+    },
+    {
+      "canonical_id": "arXiv:2110.02861",
+      "arxiv_id": "2110.02861",
+      "title": "8-bit Optimizers via Block-wise Quantization",
+      "source_url": "https://arxiv.org/abs/2110.02861",
+      "paper_path": "papers/training/01-training-offload-memory-systems/2021-2110.02861-8-bit-optimizers.md",
+      "priority": 93,
+      "reason": "Training-memory optimization that reduces optimizer-state footprint through block-wise quantization and is directly relevant to large language model training."
+    },
+    {
+      "canonical_id": "arXiv:2112.05682",
+      "arxiv_id": "2112.05682",
+      "title": "Self-attention Does Not Need O(n²) Memory",
+      "source_url": "https://arxiv.org/abs/2112.05682",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2021-2112.05682-memory-efficient-attention.md",
+      "priority": 92,
+      "reason": "Foundational exact-attention algorithm reducing memory complexity from quadratic to linear without approximation, directly relevant to memory-efficient Transformer execution."
+    },
+    {
+      "canonical_id": "arXiv:2212.09720",
+      "arxiv_id": "2212.09720",
+      "title": "The case for 4-bit precision: k-bit Inference Scaling Laws",
+      "source_url": "https://arxiv.org/abs/2212.09720",
+      "paper_path": "papers/inference/08-quantization-kernels/2022-2212.09720-k-bit-inference-scaling-laws.md",
+      "priority": 91,
+      "reason": "Systematic low-bit inference scaling study that quantifies model-size/precision trade-offs and provides a foundational design point for quantized LLM inference."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "refcuration-stress-probe-20260920-offset500",
+    "result_path": ".survey/work-queue/discovery-precheck/results/refcuration-stress-probe-20260920-offset500.json",
+    "receipt": "sha256:14a77d1df867f469b5bcaca6494f987b029d31797564f79d55b313d485d24b94"
+  },
+  "discovery_stats": {
+    "run_key": "manual-stress-2026-09-20-offset500",
+    "round": "refcuration-stress-offset500-a",
+    "axis": "structured references stress probe at raw offset 500",
+    "query_summary": "Evaluated a 20-record structured-reference buffer around raw offset 500 (relation_count≈3). Five foundational training/inference efficiency papers were retained; datasets, broad model reports, and weak-fit historical methods were durably classified.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:1910.02054",
+      "arXiv:2106.06899",
+      "arXiv:2110.02861",
+      "arXiv:2112.05682",
+      "arXiv:2212.09720"
+    ],
+    "next_axis_hint": "Probe relation_count≈2 references next; yield has dropped but remains nonzero."
+  }
+}
