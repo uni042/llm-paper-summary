@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 17:07:41 JST**
+> 自動生成: **2026-09-20 17:07:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **110** |
+| 収録候補論文 | **109** |
 | 未claim Research job | **108** |
-| 直近24hの検証済みResearch収録 | **73** |
-| 最終検証済みResearch収録 | **09-20 16:44:01 JST（23分前）** |
+| 直近24hの検証済みResearch収録 | **74** |
+| 最終検証済みResearch収録 | **09-20 17:07:45 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **110** |
+| canonical_id確認済みの一意な候補論文 | **109** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **110** |
+| 非終端Research job合計 | **109** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **5** | **3** | **0** | **2** | **0** | — |
+| Research | **38** | **5** | **3** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **6** | **4** | **0** | **2** | **0** | **5** |
+| 合計 | **38** | **6** | **4** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 17:07:45 JST** [research] `arXiv:2504.19442` — Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler
+  - job: `.survey/work-queue/jobs/job-research-27175547de1e3880.json`
+  - result: `.survey/work-queue/results/research/attempt-82f210d05fe49128bf6c17e8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-82f210d05fe49128bf6c17e8.json`
+  - paper: `papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md`
 - **09-20 16:44:01 JST** [research] `arXiv:2410.13276` — SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs
   - job: `.survey/work-queue/jobs/job-research-7441b15a7ee76c92.json`
   - result: `.survey/work-queue/results/research/attempt-f132295037f6bf230d13b845.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-b269ed373464c47a4c4f738e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b269ed373464c47a4c4f738e.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2606.02091-dflare.md`
-- **09-20 15:14:43 JST** [research] `DOI:10.18653/v1/2025.emnlp-main.1079` — TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection
-  - job: `.survey/work-queue/jobs/job-research-5cec4a19e423bce9.json`
-  - result: `.survey/work-queue/results/research/attempt-7fd52d00bf1ebd2f2315994c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-7fd52d00bf1ebd2f2315994c.json`
-  - paper: `papers/inference/07-kv-cache-optimization-compression/2025-token-select.md`
 
 ### Audit
 
@@ -168,10 +168,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.19442` — Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler / worker `scheduled-chat-discovery`
-  - claim: **09-20 17:06:04 JST** / heartbeat: **—** / lease expiry: **09-20 18:36:04 JST**
-  - evidence: `.survey/work-queue/claims/job-research-27175547de1e3880.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey-01`
   - claim: **09-20 16:02:12 JST** / heartbeat: **09-20 16:28:58 JST** / lease expiry: **09-20 17:58:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -194,7 +191,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **110** |
+| ready | **109** |
 
 ### 候補の重複・識別情報欠損
 
@@ -214,7 +211,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **825** |
+| inference/training/survey配下の論文Markdown実体 | **826** |
 
 ### immutable submissionの未照合
 
@@ -222,8 +219,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **748** |
-| └ Research | **562** |
+| 成功result未照合のimmutable submission | **747** |
+| └ Research | **561** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
