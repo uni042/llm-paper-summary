@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-a87f8c2a924fc4c3d1858893",
-  "job_id": "job-research-7441b15a7ee76c92",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a87f8c2a924fc4c3d1858893",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a87f8c2a924fc4c3d1858893","job_id":"job-research-7441b15a7ee76c92","data":{"overview":"SeerAttentionは学習型ブロックゲートで入力ごとの注意疎性を選び、長文ほど大きい計算削減を実GPU速度へ変換する。論文の主要カーネル結果では128K系列・90%疎性で密なFlashAttention-2比7.3倍高速化し、ゲート学習は元LLMを凍結した0.5Bトークン・約40 A100 GPU時間で済む。長文精度評価では固定・ヒューリスティック疎注意より良い精度と遅延の交換関係を示す。","key_results":[{"metric":"注意カーネル高速化","value":"最大7.3倍","baseline":"密なFlashAttention-2","condition":"128K系列、90%疎性、A100","interpretation":"ブロック幅をFlashAttentionタイルへ揃えることで高疎性を実GPUのI/O・演算削減へ変換する。"},{"metric":"ゲート学習コスト","value":"0.5Bトークン、約40 A100 GPU時間","baseline":"元LLM再学習","condition":"Llama-3.1-8B-Instruct、元重み凍結","interpretation":"小さなAttnGateだけへ勾配を流すため、既存モデルへ後付けするコストを抑える。"},{"metric":"ゲート地図サイズ","value":"元注意地図の1/4096","baseline":"全注意地図","condition":"ブロック幅64","interpretation":"動的マスク予測自体が二次注意と同程度の費用になる問題を避ける。"},{"metric":"長さ外挿","value":"ブロックRoPEありで訓練長を超える評価へ安定","baseline":"元RoPE後Q/Kをプールする設計","condition":"8K学習から16K〜128K、64K学習から128KのPG19評価","interpretation":"プーリング後にブロック位置を再符号化することでゲートが特定訓練長へ過適合するのを抑える。"}],"negative_results":"注意ブロックを近似的に捨てるため厳密無損失ではなく、疎性を上げるほど一部タスクで精度低下が生じる。実験はLlama-3.1-8B-InstructとA100中心で、モデル・ハードウェア一般性は限定的である。さらにAttnGateはプリフィルだけに適用され、長い出力を逐次生成するデコード段階の注意コストは削減しない。","interpretation":"疎性が入力・ヘッドごとに動的でも、元注意分布を教師にすれば小さなゲートが重要ブロックを直接学習できる。粗いブロック粒度は要素単位の選択精度を犠牲にする可能性がある一方、GPUタイルを丸ごと省けるため速度へ結びつきやすい。テスト時にTopK比率を変更できるので、用途ごとに精度と速度の交換点を調整できる。","quality_impact":"元モデルの重みは変更しないが、推論時に注意接続を省略するため出力は密なモデルと厳密同一ではない。自己蒸留は元注意地図の重要ブロックを模倣して品質低下を抑える設計であり、長文・短文ベンチマークで精度保持を確認する。"},"reservation":{"claim_id":"claim-a87f8c2a924fc4c3d1858893","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
