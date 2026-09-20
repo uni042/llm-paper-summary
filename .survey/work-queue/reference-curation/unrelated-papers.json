@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-19T18:48:00+00:00",
-  "record_count": 18,
+  "updated_at": "2026-09-20T03:50:00+00:00",
+  "record_count": 21,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -159,12 +159,20 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:1905.07830",
       "identity_tokens": [
+        "DOI:10.18653/v1/p19-1472",
         "arXiv:1905.07830"
       ],
-      "reason": "Commonsense benchmark/dataset paper rather than an LLM systems contribution.",
+      "reason": "Benchmark/dataset paper rather than an LLM systems contribution.",
       "first_checked_at": "2026-09-19T18:45:00+00:00",
-      "last_checked_at": "2026-09-19T18:45:00+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md",
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md",
+        "papers/inference/05-kv-cache/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md"
+      ],
       "title": "HellaSwag: Can a Machine Really Finish Your Sentence?"
     },
     "arXiv:2210.03629": {
@@ -227,6 +235,65 @@
       "last_checked_at": "2026-09-19T18:48:00+00:00",
       "linked_from": [],
       "title": "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code"
+    },
+    "arXiv:2305.16291": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.16291",
+      "identity_tokens": [
+        "arXiv:2305.16291"
+      ],
+      "reason": "Agent/application methodology rather than an LLM inference or training systems contribution.",
+      "first_checked_at": "2026-09-20T03:50:00+00:00",
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
+        "papers/inference/99-other-inference-systems/2026-2605.22566-graphflow-agent-workflow-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2609.18675-hbflex.md"
+      ],
+      "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models"
+    },
+    "DOI:10.18653/v1/2025.acl-long.183": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.183",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.183"
+      ],
+      "reason": "Long-context benchmark/evaluation paper rather than an inference or training systems method.",
+      "first_checked_at": "2026-09-20T03:50:00+00:00",
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.26475-dualdecoder-predictive-prefetch.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md"
+      ],
+      "title": "LongBench v2: Towards Deeper Understanding and Reasoning on Realistic Long-context Multitasks"
+    },
+    "arXiv:2506.13131": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13131",
+      "identity_tokens": [
+        "arXiv:2506.13131"
+      ],
+      "reason": "Coding-agent methodology rather than an LLM inference or training systems contribution.",
+      "first_checked_at": "2026-09-20T03:50:00+00:00",
+      "last_checked_at": "2026-09-20T03:50:00+00:00",
+      "linked_from": [
+        "papers/inference/04-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2607.17979-harness-engineering-llm-gpu-kernels.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md",
+        "papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md"
+      ],
+      "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery"
     }
   }
 }
