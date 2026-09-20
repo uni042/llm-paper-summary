@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 16:38:18 JST**
+> 自動生成: **2026-09-20 16:39:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **113** |
 | 未claim Research job | **111** |
 | 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-20 16:35:54 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-20 16:35:54 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **2** | **1** | **0** | **2** | **1** | — |
+| Research | **35** | **1** | **1** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **3** | **2** | **0** | **2** | **1** | **5** |
+| 合計 | **35** | **2** | **2** | **0** | **2** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,9 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 16:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-745f84fe29e16642827eabf3.json` (job `job-research-98f40fbe8624cabd`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-745f84fe29e16642827eabf3.json` (`ok=false`)
+- immutable submission: **1件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2311.04934` — Prompt Cache: Modular Attention Reuse for Low-Latency Inference
   - job: `.survey/work-queue/jobs/job-research-9c3fc1bfa46c87d0.json`
   - result: `.survey/work-queue/results/research/attempt-cb9b65cad9eb01765ba97d06.json` (`ok=true`)
@@ -158,7 +156,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2605.29343` — Draft-OPD: On-Policy Distillation for Speculative Draft Models / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 16:36:19 JST** / heartbeat: **—** / lease expiry: **09-20 18:06:19 JST**
+  - claim: **09-20 16:38:44 JST** / heartbeat: **—** / lease expiry: **09-20 18:08:44 JST**
   - evidence: `.survey/work-queue/claims/job-research-98f40fbe8624cabd.json`
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey-01`
   - claim: **09-20 16:02:12 JST** / heartbeat: **09-20 16:28:58 JST** / lease expiry: **09-20 17:58:58 JST**
