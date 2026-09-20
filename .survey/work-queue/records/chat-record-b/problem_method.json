@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-6500850523776f2b702f4a6d",
-  "job_id": "job-research-954a443cf32500d8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6500850523776f2b702f4a6d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-6500850523776f2b702f4a6d","job_id":"job-research-954a443cf32500d8","data":{"problem":"巨大Transformerの自己回帰デコードは小バッチでメモリ帯域律速になり、1回のモデル呼び出しで1トークンしか得られない。モデルが70B～500B級になると重みを複数アクセラレータへ分割する必要があり、全重み読出しに加えてall-reduce通信遅延も発生するため、系列長に比例して低遅延生成コストが積み上がる。","novelty":"高速なドラフトモデルがKトークンの候補を作り、大型ターゲットモデルがK+1位置のlogitを一度に並列計算する。候補をq/p比で順に受理し、最初の棄却位置では正規化した(q-p)+から再サンプルする修正棄却サンプリングにより、ドラフトが異なる分布でもターゲット分布を厳密に回復する。全K候補が受理された場合は並列採点で得た次位置logitから追加1トークンを生成できる。","method_overview":"各loopでドラフトpがK個のtokenを自己回帰生成する。ターゲットqはpromptと各draft prefixに対するK+1組のlogitを並列計算する。左から各draft tokenについて一様乱数rを引き、r<min(1,q(token)/p(token))なら受理する。棄却した最初の位置では分布(q-p)+からtokenを引き直しloopを終了する。K個すべてを受理した場合はqの最後のlogitからさらに1 tokenを通常samplingする。短いKの並列scoringは、linear層とattentionがmemory-bound、all-reduceがlatency-boundであるため1 token samplingと近い時間で済むというhardware特性を利用する。","components":[{"name":"ドラフト生成と並列ターゲット採点","description":"高速な小型モデルpでKトークンを逐次生成し、そのK-token continuationを大型ターゲットqへまとめて入力して、元contextおよび各draft prefixに対応するK+1位置のlogitを一回のscoring callで得る。小バッチ巨大Transformerではlinear層のweight読出しがmemory-boundで、attentionも過去KV cacheの読出しが支配的であり、Kを小さく保つ限りtoken数増加による追加帯域は限定的である。さらにMegatron型model parallelismのall-reduceも小さなactivationではthroughputよりlatencyが支配するため、短い複数tokenの並列採点時間が単一token samplingと近くなる。この差を利用して、大型モデルをK回逐次呼ぶ代わりに1回の高価な呼出しから複数tokenを確定させる。"},{"name":"分布保存の修正棄却サンプリング","description":"draft token xを左から順にmin(1,q(x)/p(x))の確率で受理する。受理なら次draftへ進み、棄却した最初の位置では正規化したmax(0,q-p)からtokenを再サンプルする。この補正により、draft分布pがtarget分布qと一致していなくても最終出力はqからのsamplingと同じ分布になることをTheorem 1で示す。最初のdraftが棄却されても補正sampleが1 tokenを必ず生成するためloopは進行する。また全K tokenが受理された場合、最後のdraftまでを入力したtarget scoringですでに次位置のlogitも計算済みなので、qから追加1 tokenを生成して最大K+1 tokenを1 target callで確定できる。temperature、top-k、nucleus samplingも確率分布へ先に適用すれば同じ枠組みで利用できる。"},{"name":"同一hardware向け幅広・浅層ドラフト","description":"単にChinchilla-optimalな小型モデルをdraftにすると最適device数が異なり、target用16 TPUの一部しか使わず通信特性も合わない。そこで著者らはChinchillaと同じtokenizer/datasetを使い、4B parameterながら8層と浅く幅を広げたdraftを16 TPU v4向けに訓練した。これはmodel aspect ratio変更への性能頑健性を利用し、同じserving hardware上で1.8ms/tokenという高速draftを実現する一方、target Chinchilla 70Bは14.1ms/tokenである。追加のtarget生成データやtarget architecture変更を要求するsequence distillationやmulti-head draftより、既存training infrastructureで導入しやすい選択として位置付けられる。"}],"system_design":"target 70Bとdraft 4Bを同一16 TPU v4構成で動かし、draft生成→target並列scoring→sequential acceptance/correctionを反復する。target本体は変更せず、量子化やmulti-query attention等とも併用可能。"},"reservation":{"claim_id":"claim-6500850523776f2b702f4a6d","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
