@@ -1,32 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T20:27:16+00:00",
-  "last_run_key": "2026-09-21T05:01:46+09:00",
-  "last_round": "round-14",
+  "updated_at": "2026-09-20T20:32:51+00:00",
+  "last_run_key": "2026-09-21T05:29:37+09:00",
+  "last_round": "round-01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T09:00:00+09:00",
-      "round": "specialist-semantic-kv-6",
-      "axis": "意味検索head・KV retention/compression",
-      "query_summary": "memory-system軸からKV表現・保持へ切り替え、GQA head機能を利用するsemantic retrieval guided compressionを探索した。MetaKVは直近探索済みのため反復せず、CompressKVのcanonical ID未登録を確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.07966"
-      ],
-      "next_axis_hint": "新着2609 serving systems、特にheterogeneous disaggregationの引用・関連実装へ移る",
-      "source_submission": "work-queue/submissions/20260916T0922JST-discovery-specialist-semantic-kv-6.json"
-    },
     {
       "run_key": "2026-09-16T14:00:00+09:00",
       "round": "specialist-moe-cache-router-1",
@@ -7877,6 +7860,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0528JST-discovery-round-14-quant.json"
+    },
+    {
+      "run_key": "2026-09-21T05:29:37+09:00",
+      "round": "round-01",
+      "axis": "repository-wide structured references for LLM inference systems",
+      "query_summary": null,
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260921T0532JST-discovery-backward-01.json"
     }
   ],
   "axes": {
@@ -15203,6 +15207,19 @@
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 0,
       "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
+    },
+    "repository-wide structured references for LLM inference systems": {
+      "last_run_key": "2026-09-21T05:29:37+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 3,
+      "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null

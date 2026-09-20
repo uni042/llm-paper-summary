@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-e642f12f51409df8",
+  "type": "research",
+  "parent_job_id": "job-7cf235b2465d2a2c",
+  "priority": 78,
+  "canonical_id": "arXiv:1904.10509",
+  "arxiv_id": "1904.10509",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Generating Long Sequences with Sparse Transformers",
+  "source_url": "https://arxiv.org/abs/1904.10509",
+  "paper_path": null,
+  "selection_reason": "Foundational sparse-attention work reducing attention complexity to O(n sqrt(n)) and providing fast attention kernels; directly connected to many repository sparse-attention and long-context inference papers.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T20:32:50+00:00"
+}
