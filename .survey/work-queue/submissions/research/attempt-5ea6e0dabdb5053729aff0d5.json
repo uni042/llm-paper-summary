@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-5ea6e0dabdb5053729aff0d5",
+  "job_id": "job-research-9c3fc1bfa46c87d0",
+  "claim_id": "claim-5ea6e0dabdb5053729aff0d5",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "record_bank": "b",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+  "status": "blocked",
+  "reason": "一次資料の全文を安全に取得できなかったため、このattemptでは全文精読・5-slot生成を行わない。arXiv HTML full renderingは取得経路でDisabledError、arXiv PDF直接取得も失敗。MLSys 2024公式posterページとGoogle Research公式publicationページは取得できたが、いずれも本文全文ではなく抄録・書誌情報までだった。二次資料から科学的内容を補完せず再試行対象としてblocked保存する。",
+  "retrieval_evidence": [
+    {"url": "https://arxiv.org/html/2311.04934", "result": "full rendering retrieval failed (DisabledError)"},
+    {"url": "https://arxiv.org/pdf/2311.04934", "result": "direct PDF retrieval failed"},
+    {"url": "https://mlsys.org/virtual/2024/poster/2643", "result": "official MLSys page reachable; abstract only, not full paper"},
+    {"url": "https://research.google/pubs/prompt-cache-modular-attention-reuse-for-low-latency-inference/", "result": "official Google Research publication page reachable; bibliography/abstract and MLSys link only"}
+  ]
+}
