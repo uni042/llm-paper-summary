@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-1e7b670e9a35584762c55c56",
-  "job_id": "job-research-6e90b18bc4767f7c",
-  "data": {
-    "limitations": "KVQuantは全KVトークンを保持するため、系列長に対するメモリ増加そのものは線形のままであり、量子化率だけ定数倍縮小する。1000万トークン収容はメモリ容量上の主張で、モデルの学習済み文脈長や位置符号化限界を自動的に拡張しない。3ビットは高品質だが2ビットではRULER等で明確な劣化がある。Key用のオフライン校正、Value用オンライン統計、疎外れ値管理、専用CUDAカーネルが必要で、汎用推論基盤へ単純なdtype変更だけで導入できる方式ではない。速度評価は主に4ビット・batch 1の行列ベクトルカーネルであり、エンドツーエンドの全構成を網羅しない。",
-    "differences": "FlexGenやAtom型の一様・グループ量子化に対し、KVQuantはKeyのチャネル別分布、RoPE前構造、感度重み付き非一様符号点、ベクトル別外れ値を組み合わせて3ビット以下の精度を改善する。KIVIもKey/Valueの非対称性を利用するがfp16 residual windowを保持するのに対し、KVQuantは全トークンを同じ低ビット表現で残し、長距離passkey検索で有利な結果を示す。H2O/SnapKV等のeviction方式はトークン数自体を減らすため直交的で、KVQuantは保持トークンを圧縮する。SqueezeLLMの密・疎および感度重み付き量子化を重みから動的KV活性へ拡張した系譜に位置する。",
-    "implementation_status": "NeurIPS 2024。公式SqueezeAILab/KVQuantリポジトリで量子化コード、長文脈モデル評価、4ビット専用CUDAカーネルを公開。論文ではA6000カーネル実測とA100容量評価を報告し、重み量子化SqueezeLLMとの併用も検証している。",
-    "research_positioning": "KVキャッシュ圧縮研究では、単なるビット削減ではなく『KeyとValueの統計構造に量子化軸を合わせる』ことを体系化した代表例である。特にRoPE前Keyのチャネル別量子化と、動的Valueをトークン別オンライン処理する非対称設計は後続KV量子化の重要な設計点となる。メモリ階層・オフロード・evictionとは競合せず、保存するKV表現の1要素当たりバイト数を下げる層として組み合わせ可能である。"
-  },
+  "attempt_id": "attempt-0b14b95da2b3a2abc2e9855f",
+  "job_id": "job-research-9824d8080e264ed4",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-1e7b670e9a35584762c55c56",
+    "claim_id": "claim-0b14b95da2b3a2abc2e9855f",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
