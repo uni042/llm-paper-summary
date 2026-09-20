@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-d9175409e1e36a47b3e6d387",
+  "job_id": "job-research-b8f01545319d9604",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-d9175409e1e36a47b3e6d387.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+  "processed_at": "2026-09-20T09:40:03+00:00",
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
