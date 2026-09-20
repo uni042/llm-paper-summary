@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-aa5fee4140884cdeb790c49e",
-  "job_id": "job-research-710ff1d6feeafd76",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-aa5fee4140884cdeb790c49e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-aa5fee4140884cdeb790c49e","job_id":"job-research-710ff1d6feeafd76","data":{"limitations":"評価は2020年時点のTPU v3、TensorFlow/XLA、100言語→英語翻訳が中心で、GPUクラスタや現在のMoE実装へ性能値をそのまま移せない。専門家配送のAllToAllは端末数の平方根程度で増え、規模を無限には伸ばせない。専門家容量は少なくとも1トークン必要なため、グループ数・専門家数を端末数と共に増やす解析にも上限がある。1兆パラメータ60層モデルでは数値安定性問題が発生し、深いモデルでは活性値再計算の費用も増える。","differences":"Mesh-TensorFlowなどが並列化を明示的なメッシュ・テンソル配置として記述するのに対し、GShardは既存モデルコードへ軽量な分割注釈を加え、XLAが演算単位の分割と通信を自動生成する。GPipeのようなパイプライン並列は深い密モデルを段階分割するが、GShardの主実証は疎な専門家数を増やして容量を拡張し、トークンごとの実行部分を限定する。ZeROが重み・勾配・最適化状態の冗長性削減に特化するのに対し、GShardはテンソル種別を限定せず一般的な分割注釈とSPMD変換を提供する。","implementation_status":"Google内部のTensorFlow/XLA基盤上で実装され、2048 TPU v3までの実機学習・通信測定で検証された研究システムである。論文はGShard固有の独立公開コードURLを示していないが、分割API、XLA SPMD変換、演算別通信変換の設計を詳細に記述する。後続のXLA SPMD系自動シャーディングと大規模MoEの直接的な基礎となった。","research_positioning":"大規模MoE研究では、疎な条件付き計算そのものをTransformerへ大規模適用した点と、数千アクセラレータへ実装する自動シャーディングを同時に成立させた基礎研究である。後続のSwitch Transformerなどがルーティング簡素化やモデル規模をさらに進める一方、GShardは専門家容量、局所グループ配送、補助負荷分散、AllToAllによる専門家分散、SPMDコンパイラというシステム上の基本構造を確立した。リポジトリの分散・異種MoE学習系統では、モデル側の疎性とコンパイラ側の配置自動化を結び付ける起点として位置付けられる。"},"reservation":{"claim_id":"claim-aa5fee4140884cdeb790c49e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
