@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-forward-r38",
+    "summary": "Adaptive Expert Computation / Compression の収録論文 arXiv:2402.14800 の前方引用から、未候補化の強い関連論文を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.13486",
+      "title": "Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers",
+      "source_url": "https://arxiv.org/abs/2609.13486",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.13486-efficient-moe-retrievers-adaptive-expert-count.md",
+      "priority": 98,
+      "reason": "MoE retrieverで推論時のexpert数を再学習・再indexなしに減らし、retrieval effectivenessを99%以上維持しながらquery encoding timeを最大26%削減する。利用expert数を実行時に縮退できる実証としてAdaptive Expert Computationに直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2511.19480",
+      "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs",
+      "source_url": "https://arxiv.org/abs/2511.19480",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.19480-unauthorized-moe-compression-expert-attribution.md",
+      "priority": 93,
+      "reason": "task-specific expert attributionで重要expertを同定し、expert pruningと軽量再調整後の性能回復を系統評価する。セキュリティ文脈だが、MoEのtask-specific prunabilityと圧縮後re-alignmentの限界を直接測るためCompression系統の補完材料として有用。"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3712285.3759903",
+      "title": "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching",
+      "source_url": "https://doi.org/10.1145/3712285.3759903",
+      "paper_path": "papers/inference/04-moe-offload-expert-cache/2025-diff-moe-priority-driven-differential-expert-caching.md",
+      "priority": 99,
+      "reason": "global/temporal expert localityを分離した多段GPU cacheと次層expert prefetchを組み合わせ、大batchのoffloaded MoE推論を高速化する。DeepSpeed、Pre-gated MoE、MoE-Infinity比でthroughputをそれぞれ2.74x、2.22x、1.55x改善し、Expert Cache/Prefetch系統へ直接接続する。"
+    },
+    {
+      "canonical_id": "arXiv:2505.13345",
+      "title": "Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference",
+      "source_url": "https://arxiv.org/abs/2505.13345",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2505.13345-occult-collaborative-expert-communication.md",
+      "priority": 96,
+      "reason": "同一tokenで共活性化するexpert対をcollaborationとして捉え、配置とcollaboration pruningでall-to-all通信を削減するalgorithm-system co-design。複数MoE LLMで1.5x超の高速化を報告し、expert削減と通信局所性を結ぶ点が有用。"
+    },
+    {
+      "canonical_id": "arXiv:2606.19025",
+      "title": "FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs",
+      "source_url": "https://arxiv.org/abs/2606.19025",
+      "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2026-2606.19025-fomoe-federation-partial-expert-replication.md",
+      "priority": 95,
+      "reason": "expert layerをworker間に分割して非resident expertをlocal training時にskipし、full model replicaを不要にする分散MoE学習方式。通信量・メモリ制約を直接緩和し、partial expert replicationとskip-tokenを組み合わせるため分散・異種MoE学習系統に有用。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920T1906JST-2402",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920T1906JST-2402.json",
+    "receipt": "sha256:e9382854009131ea50ac85882bdabd681d9290b8dc78c43a989776e2f67677df"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+    "round": "adaptive-max-r38-cross-lineage-leftovers",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+    "query_summary": "Not All Experts Are Equal (arXiv:2402.14800) の既存 schema-v3 precheck 100件から、全Discovery stateと既存Adaptive forward-citation submissionsに未出の直接・隣接強候補5件を追加。adaptive expert count、compression security、expert caching、expert communication、distributed MoE trainingをカバー。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次段階は2025-2026の収録seed（LExI、MoE-PHDS、BuddyMoE、Alloc-MoE、ReMoE等）のforward citationを新規precheckし、既存100件集合の外側を掘る。"
+  }
+}
