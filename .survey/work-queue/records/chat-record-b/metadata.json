@@ -1,1 +1,56 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3e684f03399af677163ad4a2","job_id":"job-research-d223f7a181256e07","data":{"canonical_id":"arXiv:2505.23416","title":"KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction","list_summary":"元文脈の再構成時に使われるKVを重要とみなし、将来クエリを知らずに再利用可能な長文脈KVキャッシュを3〜4倍圧縮する。","summary":"KVzipは、既存のKV削除法が現在のクエリに依存して重要度を決めるため、同じ圧縮キャッシュを別クエリへ再利用すると性能が崩れる問題に対し、元文脈を再構成する際の注意度でKV重要度を決める。repeat promptと元文脈を教師強制で処理し、各KV pairが再構成クエリから受ける最大attentionを得点にする。長文脈では2K token chunkごとに再構成して得点計算のピークメモリを一定化し、pair-levelだけでなくhead-levelの静的圧縮にも使える。12ベンチマーク、最大170K文脈、Qwen/LLaMA/Gemmaで、70%削除でもほぼ性能を維持し、KVサイズを3〜4倍、FlashAttention復号遅延を約2倍削減した。","source":"https://arxiv.org/html/2505.23416v2","sources":["https://arxiv.org/abs/2505.23416","https://arxiv.org/html/2505.23416v2","https://github.com/snu-mllab/KVzip"],"authors":["Jang-Hyun Kim","Jinuk Kim","Sangwoo Kwon","Jae W. Lee","Sangdoo Yun","Hyun Oh Song"],"published":"2025-05-29","publication":"NeurIPS 2025 Oral","publication_type":"conference","publication_status":"published","primary_category":"cs.DB","cross_list_categories":["cs.LG"],"topics":["KV cache compression","query-agnostic eviction","context reconstruction","long-context inference","FlashAttention"],"implementation":"公式GitHub実装あり。pair-level/head-level eviction、chunked scoring、FlashAttention統合、量子化との併用を扱う。","code":"https://github.com/snu-mllab/KVzip","last_checked":"2026-09-20","hardware_evaluation":"主評価は単一NVIDIA A100 80GB。124K contextの計算分析もA100で実施。","quality_effect":"30% cache ratio付近まで多くのタスクでnegligible lossを報告する近似KV削除であり、完全losslessではない。privacy-related refusalが圧縮後に変化する例も観測される。","references":[],"references_checked_at":"2026-09-20","references_source":"arXiv v2 full-text reference section","references_total":60},"reservation":{"claim_id":"claim-3e684f03399af677163ad4a2","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-14e4c1618de1040b458998ef",
+  "job_id": "job-research-d223f7a181256e07",
+  "data": {
+    "canonical_id": "arXiv:2505.23416",
+    "title": "KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction",
+    "list_summary": "元文脈の再構成時に使われるKVを重要とみなし、将来クエリを知らずに再利用可能な長文脈KVキャッシュを3〜4倍圧縮する。",
+    "summary": "KVzipは、既存のKV削除法が現在のクエリに依存して重要度を決めるため、同じ圧縮キャッシュを別クエリへ再利用すると性能が崩れる問題に対し、元文脈を再構成する際の注意度でKV重要度を決める。repeat promptと元文脈を教師強制で処理し、各KV pairが再構成クエリから受ける最大attentionを得点にする。長文脈では2K token chunkごとに再構成して得点計算のピークメモリを一定化し、pair-levelだけでなくhead-levelの静的圧縮にも使える。12ベンチマーク、最大170K文脈、Qwen/LLaMA/Gemmaで、70%削除でもほぼ性能を維持し、KVサイズを3〜4倍、FlashAttention復号遅延を約2倍削減した。",
+    "source": "https://arxiv.org/html/2505.23416v2",
+    "sources": [
+      "https://arxiv.org/abs/2505.23416",
+      "https://arxiv.org/html/2505.23416v2",
+      "https://github.com/snu-mllab/KVzip"
+    ],
+    "authors": [
+      "Jang-Hyun Kim",
+      "Jinuk Kim",
+      "Sangwoo Kwon",
+      "Jae W. Lee",
+      "Sangdoo Yun",
+      "Hyun Oh Song"
+    ],
+    "published": "2025-05-29",
+    "publication": "NeurIPS 2025 Oral",
+    "publication_type": "conference",
+    "publication_status": "published",
+    "primary_category": "cs.DB",
+    "cross_list_categories": [
+      "cs.LG"
+    ],
+    "topics": [
+      "KV cache compression",
+      "query-agnostic eviction",
+      "context reconstruction",
+      "long-context inference",
+      "FlashAttention"
+    ],
+    "implementation": "公式GitHub実装あり。pair-level/head-level eviction、chunked scoring、FlashAttention統合、量子化との併用を扱う。",
+    "code": "https://github.com/snu-mllab/KVzip",
+    "last_checked": "2026-09-20",
+    "hardware_evaluation": "主評価は単一NVIDIA A100 80GB。124K contextの計算分析もA100で実施。",
+    "quality_effect": "30% cache ratio付近まで多くのタスクでnegligible lossを報告する近似KV削除であり、完全losslessではない。privacy-related refusalが圧縮後に変化する例も観測される。",
+    "references": [],
+    "references_checked_at": "2026-09-20",
+    "references_source": "arXiv v2 full-text reference section",
+    "references_total": 60
+  },
+  "reservation": {
+    "claim_id": "claim-14e4c1618de1040b458998ef",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
