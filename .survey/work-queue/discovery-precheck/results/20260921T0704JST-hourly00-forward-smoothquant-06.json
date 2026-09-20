@@ -1,0 +1,802 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0704JST-hourly00-forward-smoothquant-06",
+  "collector_id": "hourly00-20260921T0658JST-forward-smoothquant",
+  "run_key": "2026-09-21T06:58:37+09:00",
+  "axis": "forward citations of SmoothQuant efficient LLM inference quantization",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2211.10438/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5452f89eb6036db1c7974f0f818362dfbf12e42f",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 15,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T22:04:39.544220+00:00",
+  "results": [
+    {
+      "title": "Tiny Large Language Models for IoT networks: Potentials and challenges",
+      "source_url": "https://www.semanticscholar.org/paper/e24e705643638cb7f71e61a9812f5eec50c57c50",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.compeleceng.2026.111406",
+      "doi": "10.1016/j.compeleceng.2026.111406",
+      "authors": [
+        "Muhammed Golec",
+        "S. Melhem",
+        "Yaser M. Khamayseh",
+        "Abdulmalik Alwarafy",
+        "N. Al-Dhahir"
+      ]
+    },
+    {
+      "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+      "source_url": "https://www.semanticscholar.org/paper/87bd19f3b479204f2d3f7a6da4cbed192ddd55ab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+      "doi": "10.1016/j.engappai.2026.115411",
+      "authors": [
+        "Jing Xu",
+        "Qingqing Yang",
+        "Zhiwei Yang",
+        "Yingying Gao",
+        "Kewei Yang",
+        "Jiang Jiang"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+      "source_url": "https://www.semanticscholar.org/paper/6235547bd0265d1c893dec9744cb71bf6e91d73d",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+      "doi": "10.1016/j.engappai.2026.116054",
+      "authors": [
+        "Meng-Ke Wang",
+        "Min Gan",
+        "Fang Yuan",
+        "Jian-Nan Su"
+      ]
+    },
+    {
+      "title": "NeuFAS: Edge-Efficient Mamba-Based Channel Estimation for Fluid Antenna Systems",
+      "source_url": "https://www.semanticscholar.org/paper/a05caa0467a5f9267b0e534c4fc88e1d34f786f5",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/lcn67947.2026.11660767",
+      "doi": "10.1109/lcn67947.2026.11660767",
+      "authors": [
+        "Shengzhe Lyu",
+        "Qian-Ren Li",
+        "Weitao Xu",
+        "Chengwen Luo"
+      ]
+    },
+    {
+      "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+      "source_url": "https://www.semanticscholar.org/paper/b91d16e3cd753c397f0988d9afc63c785079aa2a",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms survive selection and form SoL-Pi, spanning action execution, context compaction, observation handling, and delegated reading. On the 51-task EdgeBench evaluation, SoL-Pi achieves performance comparable to Pi across GPT-5.6 Sol and Opus 5 while reducing recorded token traffic by 44.7-49.0% and API cost by about one third. In other words, estimated hourly savings are \\$8.75-\\$13.50 relative to native Codex and Claude Code harnesses, and \\$4.36-\\$5.71 relative to Pi.",
+      "canonical_id": "arXiv:2609.20519",
+      "arxiv_id": "2609.20519",
+      "authors": [
+        "Hao-Zhe Liu",
+        "Tian Ye",
+        "Sen-Sen Gao",
+        "Qi Cao",
+        "Yi-Tong Li",
+        "Mingchen Zhuge",
+        "Duo-Min Wang",
+        "Rui-Hua Zhang",
+        "Ping Luo",
+        "Jia-Wang Bian",
+        "Lei Zhu",
+        "Ligeng Zhu",
+        "Enze Xie",
+        "Song Han"
+      ]
+    },
+    {
+      "title": "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models",
+      "source_url": "https://www.semanticscholar.org/paper/5a5001330d3b932278bf04ee955777b733279496",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "World action models (WAMs) rely on video-generation backbones, requiring substantial memory and compute for deployment. Post-training quantization reduces memory and can accelerate inference, but bit width, grouping, and quantizer choice define a large configuration space. Identifying configurations that preserve task performance through exhaustive closed-loop evaluation is costly. We propose PreDE (Predict Before You Deploy), a policy-calibrated framework for predicting quantization-induced task degradation from offline action deviations. Using closed-loop outcomes from a small development set, PreDE calibrates two thresholds and accepts, rejects, or defers new configurations using a fixed observation log. Under a within-setting label-ordering hypothesis, the rule issues decisions where all thresholds consistent with the development labels agree. Across five WAMs and four benchmark settings, quantization produces configuration-dependent task losses that cannot be explained by bit width alone or a shared deviation threshold. Across 28 held-out configurations from two policies, PreDE issued 21 decisions before observing closed-loop outcomes (75% coverage), all matching the observed acceptable or degraded labels. Deferred candidates included both acceptable outcomes and a 33-percentage-point loss. In 450 Franka Research 3 trials across two independently fine-tuned policies, all configurations assigned to high-deviation groups before testing showed significant degradation, while low-deviation comparisons showed no statistically significant degradation. On the real robot, W4A4 achieved a 1.37x action-query speedup and approximately 44% lower peak memory. These results support policy-specific behavioral calibration for quantization configuration selection while identifying candidates that require closed-loop evaluation. The code is available at https://github.com/jiuyixu25/PreDE.",
+      "canonical_id": "arXiv:2609.19441",
+      "arxiv_id": "2609.19441",
+      "authors": [
+        "Jiu-Yi Xu",
+        "Jin-Jia Guo",
+        "Mei-Da Chen",
+        "Jing Du",
+        "Yang-Ming Shi"
+      ]
+    },
+    {
+      "title": "Channel-Wise and Token-Aware Post-Training Quantization for Visual State Space Duality",
+      "source_url": "https://www.semanticscholar.org/paper/63c0bd711426d7e50e5159efb55c0de28690b0d8",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "State space models (SSMs), particularly Mamba, have emerged as efficient alternatives to attention-based architectures and have been extended to vision through ViM, VMamba, and Visual State Space Duality (VSSD). Yet the low-bit post-training quantization (PTQ) behavior of VSSD remains insufficiently understood. A weight-activation split on VSSD-Tiny identifies activation quantization as the dominant low-bit bottleneck, while representative inputs to selected VSSD-backbone linear layers exhibit strong channel-wise magnitude variation and token-localized extremes. We propose the Channel-wise Token-balanced Output-Aware Clipping (CTOAC) method, which learns per-input-channel clipping bounds by minimizing a token-balanced reconstruction loss on the corresponding linear outputs. Only the selected linear layers and their input activations are quantized; other backbone operations retain their original precision. Across VSSD-Tiny, VSSD-Small, and VSSD-Base, the proposed CTOAC method retains ImageNet-1K accuracy and remains substantially more robust than the evaluated baselines at more aggressive precision settings. Applying the same quantization scope to VSSD backbones on COCO and ADE20K preserves strong object detection, instance segmentation, and semantic segmentation performance. An optimized RTX 4090 deployment configuration achieves up to 1.42x end-to-end speedup over FP32.",
+      "canonical_id": "arXiv:2609.16656",
+      "arxiv_id": "2609.16656",
+      "authors": [
+        "Jonghyeon Lim",
+        "Changhoon Yim"
+      ]
+    },
+    {
+      "title": "Where Post-Training Quantization Breaks Text Embedders: A Measured Map Across Four Embedder Families",
+      "source_url": "https://www.semanticscholar.org/paper/5e63241467a15dff09a0a288d7af76d8e52bbe7d",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "Weight-only post-training quantization is the cheapest way to shrink a retrieval embedder, and the received advice for applying it -- protect the embedding table, allocate bits by module sensitivity, prefer a ranking-aware objective over weight reconstruction -- was carried into LLM quantization largely intact. We test that advice on retrieval embedders directly, quantizing five checkpoints from four architecture families across a grid of bit widths and group sizes, and isolating the embedding, attention and feed-forward blocks at each width. Every heuristic fails to transfer as stated. The embedding table never emerges as the dominant isolated protection priority in any family, despite being the largest tensor in several of them. Module sensitivity does not survive as a transferable ordering: at INT4/g16 the spread between modules is too small to allocate against, at INT3 the ordering becomes family-dependent and joint damage stops being the sum of its parts, and at INT2 comparable reconstruction error accompanies retention ranging from 1.3 to 65.9 percent of full precision. A cheap reconstruction proxy is useful for screening uniform bit widths but substantially less reliable for choosing which tensors to protect; its apparent strength across the whole grid is a range-extension artifact. A distilled 109M student at INT3 holds 78.04 NDCG@10 in 68.4 MB and dominates the extreme-PTQ arm of its own 0.6B teacher, 297.9 MB at 64.46, on both size and quality -- but only inside the task it was distilled for. Sizes are byte counts of files that exist rather than arithmetic estimates, and the measurement repository carries the byte provenance for every one of them.",
+      "canonical_id": "arXiv:2609.16391",
+      "arxiv_id": "2609.16391",
+      "authors": [
+        "HyoJung Han"
+      ]
+    },
+    {
+      "title": "Permutation-Based Stegomalware in Large Language Models: Threats and Countermeasures",
+      "source_url": "https://www.semanticscholar.org/paper/a948f30f75544ee765b18f3f152c20eab3a4c9f9",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "The difficulty of training large language models (LLMs), together with their ubiquity, raises the threat of stegomalware, where malicious payloads are embedded into model weights. Recent work has demonstrated the use of permutation symmetry in model weights to mitigate these threats, but failed to show neutralization of stegomalware across all weights for LLMs. In this paper, we demonstrate the full potential of behavior-preserving symmetries as a defense against stegomalware, as well as the risks these symmetries pose when exploited by attackers. For stegomalware neutralization, we improve upon previous work, demonstrating that it is possible to select permutations which displace all model parameters. This contrasts with previous methods which left a significant percentage of weights unaltered in LLMs. When used in an attack, we show that permutation symmetries can encode malware into the weights of a model in a way that is theoretically lossless, requires no retraining after encoding, and needs no payload-specific information in the extraction script---a combination of characteristics not previously seen in any single method. While theoretically lossless, permutation can in practice alter model behavior due to the accumulation of numerical error. We therefore quantify the loss in model performance associated with applying these methods, for both attack and defense, showing it to be minimal.",
+      "canonical_id": "arXiv:2609.16193",
+      "arxiv_id": "2609.16193",
+      "authors": [
+        "Danny Wood",
+        "James Stringer"
+      ]
+    },
+    {
+      "title": "Is INT8 Portable? A Cross-Platform Measurement Study of Quantized Inference on Embedded and Automotive Accelerators",
+      "source_url": "https://www.semanticscholar.org/paper/a0edfe036cc8214fe966205dedb0a8214dd1914d",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "Eight-bit integer (INT8) post-training quantization is the default recipe for edge deployment, under a widely held assumption: INT8 makes inference faster at a small, predictable accuracy cost, and a model quantized once can be carried to any target. We test that assumption with a controlled measurement study across seven hardware classes -- ARM and x86 CPUs, a discrete GPU, an NVIDIA Jetson AGX Orin iGPU and its NVDLA cores, and two vendor NPUs (Qualcomm Hexagon HTP, DEEPX DX-M1) -- holding the ONNX artifact and the quantization scales fixed so the integer kernel or ISA is the only free variable. Portability fails on three axes. (1) The sign of the INT8 speedup is set by the CPU's dot-product ISA (ARM dotprod/SDOT, x86 VNNI): cores that have it speed up by up to 2.1x, cores that lack it slow down by 1.7x, for the identical model and runtime. (2) INT8 outputs are not portable, and the rule is an invariance rather than a gradient: FP32 predictions are bit-identical for every pair (1000/1000), while INT8 predictions agree 1000/1000 exactly when two targets share an integer kernel and 958-965/1000 whenever they do not -- independent of whether the boundary is CPU<->CPU or CPU<->accelerator, and invisible to top-1 accuracy, which is preserved. (3) Vendor NPUs own quantization: a bring-your-own QDQ graph fails silently on one NPU (external scales ignored, accuracy 0.75 ->0.005 while it compiles, profiles and runs without error) and loudly on the other (the compiler refuses the graph), so only the vendor's native path yields a correct engine. We further show that edge-NPU latency regimes are set by output/device-to-host transfer size rather than compute, and locate the transition with a fixed-compute sweep. We release the scripts and 32 reports.\"Quantize once, deploy anywhere\"is unsafe for embedded and automotive deployment, where per-input determinism and redundancy matter.",
+      "canonical_id": "arXiv:2609.16085",
+      "arxiv_id": "2609.16085",
+      "authors": [
+        "Yu-Len T. Shin"
+      ]
+    },
+    {
+      "title": "Structured Transforms for Low-Overhead Quantization of Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/aa2d1e435c726e052e5550468c8d4cf60db59331",
+      "year": 2026,
+      "published": "2026-09-10",
+      "abstract": "We revisit Kashin-decomposition-based weight quantization for large language models and propose an improved algorithm with stronger convergence properties and structured, efficient orthogonal transforms. The method retains the core factorization of each weight into two components -- one with bounded infinity norm and the other with bounded infinity norm after an orthogonal transformation -- but replaces the dense random orthogonal matrix with a sign-randomized Discrete Cosine Transform (DCT), reducing the per-iteration cost from $\\mathcal{O}(N^2)$ to $\\mathcal{O}(N \\log N)$. The proposed greedy algorithm with alternating updates guarantees the four-peak distribution required for stable 2-bit clustering of each factor and admits closed-form initialization of cluster centers, removing the multi-restart k-means bottleneck of prior work. Composed with OPTQ-style sequential error compensation and QuIP-style incoherence preprocessing, the resulting JAX pipeline is competitive with OPTQ, QuIP, QuIP-RG and a fine-tuning- and vector-quantization-free variant of QuIP# at 4-bit per channel on OPT, Llama-2 and Pythia, with favorable wall-clock scaling. The bounded-$\\ell_\\infty$ factorization is also notably robust: on stress configurations where QuIP variants diverge to four-digit perplexity (Pythia-6.9B) or abort with NaNs in LDL back-substitution (Mistral-7B), Kashin-DCT remains numerically stable and stays close to FP16 baseline. At inference time, each weight decomposes into two 2-bit factor codes per channel that are structurally suited to native-2-bit hardware.",
+      "canonical_id": "arXiv:2609.11687",
+      "arxiv_id": "2609.11687",
+      "authors": [
+        "Daria Cherniuk",
+        "A. Rudikov",
+        "B. Kashin",
+        "I. Oseledets"
+      ]
+    },
+    {
+      "title": "KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/384b3e22a60cd9fe55232c2725725a646bec1413",
+      "year": 2026,
+      "published": "2026-09-08",
+      "abstract": "We develop a second-order theory of quantization noise in matrix multiplication in which the quantization format is characterized by the variance it assigns to each element. The constant variance profile of integer quantization recovers existing integer-noise theory, while the multiplicative profile of floating-point rounding reduces the data dependence to a scalar, the participation factor $\\kappa$, yielding a closed-form signal-to-noise-ratio law. The resulting functional also admits a closed-form upper bound $\\kappa^{*}$ that no function-preserving linear transform can exceed and that is attained by a recent state-of-the-art method. Building on this analysis, we introduce KBBQ (\\textbf{K}appa-\\textbf{B}raked \\textbf{B}lockwise \\textbf{Q}uantization), which parameterizes the extent to which a transform approaches this ceiling. At W4A4, across four base models and two FP4 formats, KBBQ outperforms the prior state of the art without additional deployment-time computation.",
+      "canonical_id": "arXiv:2609.08135",
+      "arxiv_id": "2609.08135",
+      "authors": [
+        "L. Whalen",
+        "Yuki Ito",
+        "Ryo Sakamoto"
+      ]
+    },
+    {
+      "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution",
+      "source_url": "https://www.semanticscholar.org/paper/ad439a49b2602753b8acef14613508b559588e6e",
+      "year": 2026,
+      "published": "2026-09-08",
+      "abstract": "Ultra-low-bit language models promise reductions in storage and memory traffic, but a nominal\"1.58-bit\"label does not specify the deployed representation or its execution cost. We study a scale-up of an aggressive post-training conversion pipeline from Qwen3-4B to Qwen3-8B. The conversion uses KOTMS rotation, E2M-ATQ adaptive ternarisation, and GPTQ-style error compensation in a weight-only A16 configuration. We do not claim these algorithms as new. Our contribution is the end-to-end scale-up characterisation: an external reproduction gate, matched 4B/8B capability analysis, cross-corpus perplexity, effective-bit accounting, lossless lattice-aware packing, and direct packed execution. The 8B model reaches a three-corpus perplexity ratio of 1.361x, with WikiText-2, C4, and PTB ratios of 1.318x, 1.393x, and 1.371x. On eight zero-shot tasks at n = 500, mean accuracy is 64.6% versus 72.4% for FP16, corresponding to 78.5% chance-corrected retention and a 7.8-point absolute cost. The matched 4B run retains 69.6%, yielding an 8.9-point 8B advantage. The packed checkpoint is 8.24 GiB and preserves the recorded perplexity to measurement precision. Direct packed execution reaches 15.52 tokens/s in 7.35 GiB, while a preliminary packed GEMV remains slower than FP16 cuBLAS. The result is a validated scale-up baseline: model size improves robustness to aggressive post-training discretisation, actual serialisation is solved for the measured artefact, and direct execution is feasible, while broader seeds, calibration distributions, and kernel optimisation remain open.",
+      "canonical_id": "arXiv:2609.09240",
+      "arxiv_id": "2609.09240",
+      "authors": [
+        "A. Malik",
+        "M. Mehra",
+        "P. Devan"
+      ]
+    },
+    {
+      "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/84845b9a9ba10adeb94154d89fac900566597aaf",
+      "year": 2026,
+      "published": "2026-09-07",
+      "abstract": "Deployment of Large Language Models (LLMs) on memory-constrained edge devices relies heavily on aggressive post-training quantization. However, evaluating these models is largely based on zero-shot task accuracy, which depends solely on argmax predictions and is insensitive to changes in the underlying predictive distribution. Consequently, accuracy can exhibit unstable, non-monotonic behavior under progressive quantization, masking substantial fidelity loss relative to the BFloat16 (BF16) uncompressed base model and providing misleading deployment signals. We introduce a distribution-sensitive evaluation framework quantifying information loss in quantized LLMs as the divergence between full-vocabulary predictive distributions at the token decision boundary. We compute statistical distances, including Jensen-Shannon Divergence and Total Variation Distance, between outputs of full-precision and quantized models, enabling a fine-grained analysis of distributional shift. Using this framework, we quantify probability mass displacement and distributional drift relative to the BF16 reference, capturing predictive distribution changes not reflected in top-1 accuracy. We conduct a 120-run experimental matrix across five foundation architectures and four reasoning benchmarks under progressive quantization regimes, from uncompressed BF16 to Q2_K, providing a systematic fidelity analysis. Our results show divergence metrics generally increase under stronger quantization, complementing task accuracy with a fidelity signal. Across tested llama-cpp schemes, mixed-precision Q4_K generally yields lower divergence than uniform Q4_0 at similar memory footprints. These findings motivate distribution-aware evaluation as a practical diagnostic complement to task accuracy; they do not directly establish correctness, calibration, safety, or user-perceived quality.",
+      "canonical_id": "arXiv:2609.07664",
+      "arxiv_id": "2609.07664",
+      "authors": [
+        "Shahzeb Qamar",
+        "L. Sparrenberg",
+        "Christian Bauckhage",
+        "Baha Rababah",
+        "C. Leung",
+        "Murat Kantarcioglu",
+        "C. Akcora",
+        "R. Sifa"
+      ]
+    },
+    {
+      "title": "Steering Under Compression: Dose-Response, Capability Cost, and Failure Asymmetry in Quantized LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/b0e18b09010e657ef6211a832a72bfabd6c87167",
+      "year": 2026,
+      "published": "2026-09-06",
+      "abstract": "Inference-time activation steering enables behavioral control of large language models without parameter modification, while post-training quantization reduces memory and compute costs for deployment. Despite their growing convergence in practice, the interaction between these two techniques remains uncharacterized. We systematically study activation steering under weight-only quantization (INT8 and NF4) across four open-weight 7-9B models and two behavioral targets: judged sentiment and judge-free reasoning length. Using an iso-effect framework that compares capability costs at matched behavioral effect, we find that sentiment steering survives quantization intact. After correcting a GSM8K parser artifact with a uniform v2.3.1 rescore, the pooled INT8 contrast is -0.010 (90% CI [-0.026, +0.007]), descriptively Equivalent under the preregistered three-label rule, while NF4 remains Inconclusive at -0.017 ([-0.067, +0.033]). In contrast, reasoning length exhibits a surprising asymmetric dose-response: lengthening is graded but terminates in cap-runaway and collapse, while shortening is a step function with only 12-30% shortening (model-dependent) before discontinuous failure. We expose a methodological pitfall: the naive iso-effect ladder anchors on the collapse floor for floor-bounded targets, and we introduce a censored construction that restores interpretable crossings. We also quantify a substantial baseline capability shift for Mistral-NF4 (0.545 to 0.365 GSM8K at alpha=0), demonstrating that compression can dominate the steering intervention. Despite this, steering vectors remain highly collinear with their FP16 siblings (cosine similarity 0.989-0.998 for INT8, 0.945-0.990 for NF4), confirming that the behavioral direction survives quantization even when the cost structure does not. All code and data are released.",
+      "canonical_id": "arXiv:2609.06473",
+      "arxiv_id": "2609.06473",
+      "authors": [
+        "Saurav Bhandari",
+        "Benjamin Wade"
+      ]
+    },
+    {
+      "title": "Shift-Accumulate Attention: Multiplier-Free Query--Key Products for Transformer Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/d4e1e2e1f322265e2363d78961b2a6dc42cd2e29",
+      "year": 2026,
+      "published": "2026-09-05",
+      "abstract": "Power-of-two (PoT) quantisation turns a multiplication into a bit shift, so far only for the post-softmax attention--value product. The earlier and larger product, S=QK^T, has not been reformulated the same way. We quantise the key cache to a signed power-of-two fixed-point code, so that every scalar multiplication in QK^T becomes a sign flip, a bit shift and an integer accumulation. A fixed-point head-room F>= e_max turns every shift index r=F-e into a non-negative left shift, making the accumulation exact in integer arithmetic. We add a sub-power mantissa extension that halves the score error for one extra shift-add, a shift-exact online softmax whose running maximum lives in an integer log2 domain so that every rescaling is itself an exact shift, and a log-quantised AV product. Fused CUDA kernels in a 1.1B Llama decoder on an RTX 4090: at B=8, T=32k the 4-bit kernel is 4.60x faster than FP16 scaled dot-product attention with a 2.5x smaller KV cache, and batched decoding crosses over at B=64 to 1.22x FP16 throughput at 11.02 against 13.77 GB peak memory. A matched INT8 multiply--accumulate kernel on the same tiling reaches 5.29x: on a GPU with a hardware 4-way INT8 dot product, shift-accumulate is not faster than the MAC it replaces. An iso-storage control--an 8-bit shift code of exactly one byte per key, run through the identical kernel--prices the arithmetic substitution alone at 2.02x at comparable accuracy. The advantage of the PoT representation is therefore its density and the removal of the multiplier, not raw GPU throughput. A sweep over exponent width, mantissa levels, granularity and rounding gives the design lesson: nearest-PoT relative error is scale-free, so extra exponent bits buy nothing (eps_S=0.1302 at 3, 4 and 5 bits) and accuracy must come from mantissa terms.",
+      "canonical_id": "arXiv:2609.09208",
+      "arxiv_id": "2609.09208",
+      "authors": [
+        "Khubaib Ahmed",
+        "Amna Noor",
+        "A. Haq"
+      ]
+    },
+    {
+      "title": "FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators",
+      "source_url": "https://www.semanticscholar.org/paper/f6b60f9da5290522728925b366c56e93df7be228",
+      "year": 2026,
+      "published": "2026-09-04",
+      "abstract": "Large language models (LLMs) offer remarkable capabilities but impose prohibitive compute and energy costs. Quantization governs the trade-offs between accuracy and hardware efficiency across granularity and bit-width. Finer granularity (e.g., group-wise) provides high accuracy but incurs scaling and control overhead, while coarser granularity (e.g., channel-wise) has lower overhead but loses accuracy at low precision. Meanwhile, mixed-precision quantization exposes rich accuracy-efficiency trade-offs algorithmically, but existing LLM accelerators remain limited to discrete precision modes, leaving the fractional design space between them unexplored. FlexPosit bridges these gaps through co-design of Posit-based quantization and a precision-tunable bit-serial architecture. Algorithmically, FlexPosit employs distribution-aware quantization with hardware-aligned, sensitivity-guided mixed-precision allocation, leveraging the Posit format's tapered precision to achieve group-wise-like accuracy with channel-wise-like regularity. Architecturally, FlexPosit is a unified bit-serial systolic array with lightweight per-column decoders, unified Processing Elements (PEs), and a global precision controller, enabling tunable fractional precision while preserving fully regular systolic dataflow. Across diverse LLMs, FlexPosit achieves near-FP16 accuracy with sub-5-bit fractional weights. It achieves 1.8x higher throughput and 1.2x lower energy than BitMoD (group-wise quantization), and 1.5x higher throughput and 2.0x lower energy than OliVe (channel-wise quantization), establishing a new Pareto frontier for precision-tunable LLM acceleration.",
+      "canonical_id": "arXiv:2609.04724",
+      "arxiv_id": "2609.04724",
+      "authors": [
+        "Yimin Gao",
+        "Liangtao Dai",
+        "Jun Yin",
+        "Xin-Fei Guo",
+        "Mircea R. Stan"
+      ]
+    },
+    {
+      "title": "Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM",
+      "source_url": "https://www.semanticscholar.org/paper/5e685aaf411a874d5c2cd2290a189317775b93cc",
+      "year": 2026,
+      "published": "2026-09-03",
+      "abstract": "Hybrid LLMs pair softmax attention with linear-attention layers such as Gated DeltaNet (GDN), whose recurrent state summarizes the context in fixed size. Early community 4-bit quantizations of Qwen3.8-27B (48 GDN layers, 16 attention layers) left the GDN block in 8- or 16-bit precision -- especially its decay and write-strength gates -- on the intuition that errors in a recurrence accumulate over long contexts. We test that intuition by building Minima: NVFP4 W4A4 on all 496 linear layers, GDN included. Across perplexity at 4K/32K, MMLU-Pro, GSM8K, AIME'25, GPQA-Diamond, LiveCodeBench, and RULER retrieval to 64K, Minima matches BF16 within seed noise (5-task average -0.52) while being the smallest (17.5 GiB) and fastest-prefill (+14-19%) recipe we compare, and its 32K perplexity gap shrinks with position. A four-part mechanism study explains why: (i) NVFP4's 16-element block scaling localizes the residual stream's extreme outliers, equalizing activation error across layer roles; (ii) the supposedly fragile gate projections are the least sensitive -- softplus/exponential and sigmoid parameterizations compress ~11% GEMM error to ~2% output error; (iii) the delta-rule recurrence holds injected noise at a flat plateau over 32K tokens and forgets a state impulse within hundreds of steps, because each write overwrites the state along the current key direction; (iv) the per-token quantization cost washes out with context instead of compounding. We also repair a global-scale mismatch that arises when per-module-calibrated NVFP4 checkpoints are served by kernels that fuse those modules into one GEMM, and show calibrated FP8 KV-cache scales are performance-free. The result: a practical recipe -- quantize everything, ship KV scales -- and a mechanistic account of why the recurrent half of a hybrid LLM is the easy half to quantize. Checkpoint: https://huggingface.co/minima-ai/mnma_qwen3.8_27b_nvfp4",
+      "canonical_id": "arXiv:2609.04098",
+      "arxiv_id": "2609.04098",
+      "authors": [
+        "S. Kozyrev",
+        "D. Maiboroda"
+      ]
+    },
+    {
+      "title": "Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",
+      "source_url": "https://www.semanticscholar.org/paper/d01da12fc90b7bbc9875f1e04a072456d1d77e7d",
+      "year": 2026,
+      "published": "2026-09-02",
+      "abstract": "Ultra-low-bit language models can reduce storage and memory bandwidth, but a nominal\"1.58-bit\"label does not fully describe the stored representation, retained capability, or runtime behavior. We study an end-to-end post-training conversion of Qwen, an instruction-tuned 4B-parameter model, using KOTMS rotation, E2M-ATQ ternarization, and GPTQ-style error compensation from TWLA. The experiment is weight-only: activations remain at 16-bit precision, so ILA-AMP is omitted. We evaluate effective bit accounting, task capability retention, perplexity, calibration sensitivity, checkpoint composition, and deployment behavior. The final conversion uses 1.641 effective bits per weight for quantized linear weights, with 81.62% of model parameters targeted. Across ten scored capability comparisons, accuracy falls from 64.5% to 54.7%. Degradation is uneven: BoolQ retains 84.6% chance-corrected teacher performance, while ARC-Challenge retains 43.8%. Perplexity rises from 13.639 to 18.748 on WikiText-2, 24.700 to 31.992 on PTB, and 19.831 to 28.966 on C4. A subsequent packing run preserves the ternary planes and scales, reducing reported model size from 8.29 GiB to 3.96 GiB with essentially unchanged perplexity. A separate third-party packing attempt was lossy and is excluded from the primary artifact claim. The packed artifact has not been benchmarked end-to-end for task accuracy or generation throughput. A preliminary Triton GEMV microbenchmark is 4.6x slower than FP16 cuBLAS on one tested shape. We therefore do not claim that compression alone yields faster inference.",
+      "canonical_id": "arXiv:2609.01962",
+      "arxiv_id": "2609.01962",
+      "authors": [
+        "AI OneBit",
+        "A. Malik",
+        "Poojith",
+        "Sparsh Mehra"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.compeleceng.2026.111406",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.compeleceng.2026.111406",
+        "title:tiny large language models for iot networks potentials and challenges",
+        "url:https://www.semanticscholar.org/paper/e24e705643638cb7f71e61a9812f5eec50c57c50"
+      ],
+      "record": {
+        "title": "Tiny Large Language Models for IoT networks: Potentials and challenges",
+        "source_url": "https://www.semanticscholar.org/paper/e24e705643638cb7f71e61a9812f5eec50c57c50",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.compeleceng.2026.111406",
+        "doi": "10.1016/j.compeleceng.2026.111406",
+        "authors": [
+          "Muhammed Golec",
+          "S. Melhem",
+          "Yaser M. Khamayseh",
+          "Abdulmalik Alwarafy",
+          "N. Al-Dhahir"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115411",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115411",
+        "title:navigating maritime emergencies with large models a lifecycleoriented review",
+        "url:https://www.semanticscholar.org/paper/87bd19f3b479204f2d3f7a6da4cbed192ddd55ab"
+      ],
+      "record": {
+        "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+        "source_url": "https://www.semanticscholar.org/paper/87bd19f3b479204f2d3f7a6da4cbed192ddd55ab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+        "doi": "10.1016/j.engappai.2026.115411",
+        "authors": [
+          "Jing Xu",
+          "Qingqing Yang",
+          "Zhiwei Yang",
+          "Yingying Gao",
+          "Kewei Yang",
+          "Jiang Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116054",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116054",
+        "title:forecastpreserving lowbit quantization for transformerbased timeseries forecasting",
+        "url:https://www.semanticscholar.org/paper/6235547bd0265d1c893dec9744cb71bf6e91d73d"
+      ],
+      "record": {
+        "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+        "source_url": "https://www.semanticscholar.org/paper/6235547bd0265d1c893dec9744cb71bf6e91d73d",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+        "doi": "10.1016/j.engappai.2026.116054",
+        "authors": [
+          "Meng-Ke Wang",
+          "Min Gan",
+          "Fang Yuan",
+          "Jian-Nan Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/lcn67947.2026.11660767",
+      "identity_tokens": [
+        "id:DOI:10.1109/lcn67947.2026.11660767",
+        "title:neufas edgeefficient mambabased channel estimation for fluid antenna systems",
+        "url:https://www.semanticscholar.org/paper/a05caa0467a5f9267b0e534c4fc88e1d34f786f5"
+      ],
+      "record": {
+        "title": "NeuFAS: Edge-Efficient Mamba-Based Channel Estimation for Fluid Antenna Systems",
+        "source_url": "https://www.semanticscholar.org/paper/a05caa0467a5f9267b0e534c4fc88e1d34f786f5",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/lcn67947.2026.11660767",
+        "doi": "10.1109/lcn67947.2026.11660767",
+        "authors": [
+          "Shengzhe Lyu",
+          "Qian-Ren Li",
+          "Weitao Xu",
+          "Chengwen Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20519",
+      "identity_tokens": [
+        "id:arXiv:2609.20519",
+        "title:solpi recursively scaling autoresearch loops for efficient agent harness",
+        "url:https://www.semanticscholar.org/paper/b91d16e3cd753c397f0988d9afc63c785079aa2a"
+      ],
+      "record": {
+        "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+        "source_url": "https://www.semanticscholar.org/paper/b91d16e3cd753c397f0988d9afc63c785079aa2a",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms survive selection and form SoL-Pi, spanning action execution, context compaction, observation handling, and delegated reading. On the 51-task EdgeBench evaluation, SoL-Pi achieves performance comparable to Pi across GPT-5.6 Sol and Opus 5 while reducing recorded token traffic by 44.7-49.0% and API cost by about one third. In other words, estimated hourly savings are \\$8.75-\\$13.50 relative to native Codex and Claude Code harnesses, and \\$4.36-\\$5.71 relative to Pi.",
+        "canonical_id": "arXiv:2609.20519",
+        "arxiv_id": "2609.20519",
+        "authors": [
+          "Hao-Zhe Liu",
+          "Tian Ye",
+          "Sen-Sen Gao",
+          "Qi Cao",
+          "Yi-Tong Li",
+          "Mingchen Zhuge",
+          "Duo-Min Wang",
+          "Rui-Hua Zhang",
+          "Ping Luo",
+          "Jia-Wang Bian",
+          "Lei Zhu",
+          "Ligeng Zhu",
+          "Enze Xie",
+          "Song Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19441",
+      "identity_tokens": [
+        "id:arXiv:2609.19441",
+        "title:predict before you deploy offline prediction of quantizationinduced task degradation for world action models",
+        "url:https://www.semanticscholar.org/paper/5a5001330d3b932278bf04ee955777b733279496"
+      ],
+      "record": {
+        "title": "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models",
+        "source_url": "https://www.semanticscholar.org/paper/5a5001330d3b932278bf04ee955777b733279496",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "World action models (WAMs) rely on video-generation backbones, requiring substantial memory and compute for deployment. Post-training quantization reduces memory and can accelerate inference, but bit width, grouping, and quantizer choice define a large configuration space. Identifying configurations that preserve task performance through exhaustive closed-loop evaluation is costly. We propose PreDE (Predict Before You Deploy), a policy-calibrated framework for predicting quantization-induced task degradation from offline action deviations. Using closed-loop outcomes from a small development set, PreDE calibrates two thresholds and accepts, rejects, or defers new configurations using a fixed observation log. Under a within-setting label-ordering hypothesis, the rule issues decisions where all thresholds consistent with the development labels agree. Across five WAMs and four benchmark settings, quantization produces configuration-dependent task losses that cannot be explained by bit width alone or a shared deviation threshold. Across 28 held-out configurations from two policies, PreDE issued 21 decisions before observing closed-loop outcomes (75% coverage), all matching the observed acceptable or degraded labels. Deferred candidates included both acceptable outcomes and a 33-percentage-point loss. In 450 Franka Research 3 trials across two independently fine-tuned policies, all configurations assigned to high-deviation groups before testing showed significant degradation, while low-deviation comparisons showed no statistically significant degradation. On the real robot, W4A4 achieved a 1.37x action-query speedup and approximately 44% lower peak memory. These results support policy-specific behavioral calibration for quantization configuration selection while identifying candidates that require closed-loop evaluation. The code is available at https://github.com/jiuyixu25/PreDE.",
+        "canonical_id": "arXiv:2609.19441",
+        "arxiv_id": "2609.19441",
+        "authors": [
+          "Jiu-Yi Xu",
+          "Jin-Jia Guo",
+          "Mei-Da Chen",
+          "Jing Du",
+          "Yang-Ming Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16656",
+      "identity_tokens": [
+        "id:arXiv:2609.16656",
+        "title:channelwise and tokenaware posttraining quantization for visual state space duality",
+        "url:https://www.semanticscholar.org/paper/63c0bd711426d7e50e5159efb55c0de28690b0d8"
+      ],
+      "record": {
+        "title": "Channel-Wise and Token-Aware Post-Training Quantization for Visual State Space Duality",
+        "source_url": "https://www.semanticscholar.org/paper/63c0bd711426d7e50e5159efb55c0de28690b0d8",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "State space models (SSMs), particularly Mamba, have emerged as efficient alternatives to attention-based architectures and have been extended to vision through ViM, VMamba, and Visual State Space Duality (VSSD). Yet the low-bit post-training quantization (PTQ) behavior of VSSD remains insufficiently understood. A weight-activation split on VSSD-Tiny identifies activation quantization as the dominant low-bit bottleneck, while representative inputs to selected VSSD-backbone linear layers exhibit strong channel-wise magnitude variation and token-localized extremes. We propose the Channel-wise Token-balanced Output-Aware Clipping (CTOAC) method, which learns per-input-channel clipping bounds by minimizing a token-balanced reconstruction loss on the corresponding linear outputs. Only the selected linear layers and their input activations are quantized; other backbone operations retain their original precision. Across VSSD-Tiny, VSSD-Small, and VSSD-Base, the proposed CTOAC method retains ImageNet-1K accuracy and remains substantially more robust than the evaluated baselines at more aggressive precision settings. Applying the same quantization scope to VSSD backbones on COCO and ADE20K preserves strong object detection, instance segmentation, and semantic segmentation performance. An optimized RTX 4090 deployment configuration achieves up to 1.42x end-to-end speedup over FP32.",
+        "canonical_id": "arXiv:2609.16656",
+        "arxiv_id": "2609.16656",
+        "authors": [
+          "Jonghyeon Lim",
+          "Changhoon Yim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16391",
+      "identity_tokens": [
+        "id:arXiv:2609.16391",
+        "title:where posttraining quantization breaks text embedders a measured map across four embedder families",
+        "url:https://www.semanticscholar.org/paper/5e63241467a15dff09a0a288d7af76d8e52bbe7d"
+      ],
+      "record": {
+        "title": "Where Post-Training Quantization Breaks Text Embedders: A Measured Map Across Four Embedder Families",
+        "source_url": "https://www.semanticscholar.org/paper/5e63241467a15dff09a0a288d7af76d8e52bbe7d",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "Weight-only post-training quantization is the cheapest way to shrink a retrieval embedder, and the received advice for applying it -- protect the embedding table, allocate bits by module sensitivity, prefer a ranking-aware objective over weight reconstruction -- was carried into LLM quantization largely intact. We test that advice on retrieval embedders directly, quantizing five checkpoints from four architecture families across a grid of bit widths and group sizes, and isolating the embedding, attention and feed-forward blocks at each width. Every heuristic fails to transfer as stated. The embedding table never emerges as the dominant isolated protection priority in any family, despite being the largest tensor in several of them. Module sensitivity does not survive as a transferable ordering: at INT4/g16 the spread between modules is too small to allocate against, at INT3 the ordering becomes family-dependent and joint damage stops being the sum of its parts, and at INT2 comparable reconstruction error accompanies retention ranging from 1.3 to 65.9 percent of full precision. A cheap reconstruction proxy is useful for screening uniform bit widths but substantially less reliable for choosing which tensors to protect; its apparent strength across the whole grid is a range-extension artifact. A distilled 109M student at INT3 holds 78.04 NDCG@10 in 68.4 MB and dominates the extreme-PTQ arm of its own 0.6B teacher, 297.9 MB at 64.46, on both size and quality -- but only inside the task it was distilled for. Sizes are byte counts of files that exist rather than arithmetic estimates, and the measurement repository carries the byte provenance for every one of them.",
+        "canonical_id": "arXiv:2609.16391",
+        "arxiv_id": "2609.16391",
+        "authors": [
+          "HyoJung Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16193",
+      "identity_tokens": [
+        "id:arXiv:2609.16193",
+        "title:permutationbased stegomalware in large language models threats and countermeasures",
+        "url:https://www.semanticscholar.org/paper/a948f30f75544ee765b18f3f152c20eab3a4c9f9"
+      ],
+      "record": {
+        "title": "Permutation-Based Stegomalware in Large Language Models: Threats and Countermeasures",
+        "source_url": "https://www.semanticscholar.org/paper/a948f30f75544ee765b18f3f152c20eab3a4c9f9",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "The difficulty of training large language models (LLMs), together with their ubiquity, raises the threat of stegomalware, where malicious payloads are embedded into model weights. Recent work has demonstrated the use of permutation symmetry in model weights to mitigate these threats, but failed to show neutralization of stegomalware across all weights for LLMs. In this paper, we demonstrate the full potential of behavior-preserving symmetries as a defense against stegomalware, as well as the risks these symmetries pose when exploited by attackers. For stegomalware neutralization, we improve upon previous work, demonstrating that it is possible to select permutations which displace all model parameters. This contrasts with previous methods which left a significant percentage of weights unaltered in LLMs. When used in an attack, we show that permutation symmetries can encode malware into the weights of a model in a way that is theoretically lossless, requires no retraining after encoding, and needs no payload-specific information in the extraction script---a combination of characteristics not previously seen in any single method. While theoretically lossless, permutation can in practice alter model behavior due to the accumulation of numerical error. We therefore quantify the loss in model performance associated with applying these methods, for both attack and defense, showing it to be minimal.",
+        "canonical_id": "arXiv:2609.16193",
+        "arxiv_id": "2609.16193",
+        "authors": [
+          "Danny Wood",
+          "James Stringer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16085",
+      "identity_tokens": [
+        "id:arXiv:2609.16085",
+        "title:is int8 portable a crossplatform measurement study of quantized inference on embedded and automotive accelerators",
+        "url:https://www.semanticscholar.org/paper/a0edfe036cc8214fe966205dedb0a8214dd1914d"
+      ],
+      "record": {
+        "title": "Is INT8 Portable? A Cross-Platform Measurement Study of Quantized Inference on Embedded and Automotive Accelerators",
+        "source_url": "https://www.semanticscholar.org/paper/a0edfe036cc8214fe966205dedb0a8214dd1914d",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "Eight-bit integer (INT8) post-training quantization is the default recipe for edge deployment, under a widely held assumption: INT8 makes inference faster at a small, predictable accuracy cost, and a model quantized once can be carried to any target. We test that assumption with a controlled measurement study across seven hardware classes -- ARM and x86 CPUs, a discrete GPU, an NVIDIA Jetson AGX Orin iGPU and its NVDLA cores, and two vendor NPUs (Qualcomm Hexagon HTP, DEEPX DX-M1) -- holding the ONNX artifact and the quantization scales fixed so the integer kernel or ISA is the only free variable. Portability fails on three axes. (1) The sign of the INT8 speedup is set by the CPU's dot-product ISA (ARM dotprod/SDOT, x86 VNNI): cores that have it speed up by up to 2.1x, cores that lack it slow down by 1.7x, for the identical model and runtime. (2) INT8 outputs are not portable, and the rule is an invariance rather than a gradient: FP32 predictions are bit-identical for every pair (1000/1000), while INT8 predictions agree 1000/1000 exactly when two targets share an integer kernel and 958-965/1000 whenever they do not -- independent of whether the boundary is CPU<->CPU or CPU<->accelerator, and invisible to top-1 accuracy, which is preserved. (3) Vendor NPUs own quantization: a bring-your-own QDQ graph fails silently on one NPU (external scales ignored, accuracy 0.75 ->0.005 while it compiles, profiles and runs without error) and loudly on the other (the compiler refuses the graph), so only the vendor's native path yields a correct engine. We further show that edge-NPU latency regimes are set by output/device-to-host transfer size rather than compute, and locate the transition with a fixed-compute sweep. We release the scripts and 32 reports.\"Quantize once, deploy anywhere\"is unsafe for embedded and automotive deployment, where per-input determinism and redundancy matter.",
+        "canonical_id": "arXiv:2609.16085",
+        "arxiv_id": "2609.16085",
+        "authors": [
+          "Yu-Len T. Shin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11687",
+      "identity_tokens": [
+        "id:arXiv:2609.11687",
+        "title:structured transforms for lowoverhead quantization of language models",
+        "url:https://www.semanticscholar.org/paper/aa2d1e435c726e052e5550468c8d4cf60db59331"
+      ],
+      "record": {
+        "title": "Structured Transforms for Low-Overhead Quantization of Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/aa2d1e435c726e052e5550468c8d4cf60db59331",
+        "year": 2026,
+        "published": "2026-09-10",
+        "abstract": "We revisit Kashin-decomposition-based weight quantization for large language models and propose an improved algorithm with stronger convergence properties and structured, efficient orthogonal transforms. The method retains the core factorization of each weight into two components -- one with bounded infinity norm and the other with bounded infinity norm after an orthogonal transformation -- but replaces the dense random orthogonal matrix with a sign-randomized Discrete Cosine Transform (DCT), reducing the per-iteration cost from $\\mathcal{O}(N^2)$ to $\\mathcal{O}(N \\log N)$. The proposed greedy algorithm with alternating updates guarantees the four-peak distribution required for stable 2-bit clustering of each factor and admits closed-form initialization of cluster centers, removing the multi-restart k-means bottleneck of prior work. Composed with OPTQ-style sequential error compensation and QuIP-style incoherence preprocessing, the resulting JAX pipeline is competitive with OPTQ, QuIP, QuIP-RG and a fine-tuning- and vector-quantization-free variant of QuIP# at 4-bit per channel on OPT, Llama-2 and Pythia, with favorable wall-clock scaling. The bounded-$\\ell_\\infty$ factorization is also notably robust: on stress configurations where QuIP variants diverge to four-digit perplexity (Pythia-6.9B) or abort with NaNs in LDL back-substitution (Mistral-7B), Kashin-DCT remains numerically stable and stays close to FP16 baseline. At inference time, each weight decomposes into two 2-bit factor codes per channel that are structurally suited to native-2-bit hardware.",
+        "canonical_id": "arXiv:2609.11687",
+        "arxiv_id": "2609.11687",
+        "authors": [
+          "Daria Cherniuk",
+          "A. Rudikov",
+          "B. Kashin",
+          "I. Oseledets"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08135",
+      "identity_tokens": [
+        "id:arXiv:2609.08135",
+        "title:kbbq a predictive noise law and the limits of spectrum flattening in fp4 quantization",
+        "url:https://www.semanticscholar.org/paper/384b3e22a60cd9fe55232c2725725a646bec1413"
+      ],
+      "record": {
+        "title": "KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/384b3e22a60cd9fe55232c2725725a646bec1413",
+        "year": 2026,
+        "published": "2026-09-08",
+        "abstract": "We develop a second-order theory of quantization noise in matrix multiplication in which the quantization format is characterized by the variance it assigns to each element. The constant variance profile of integer quantization recovers existing integer-noise theory, while the multiplicative profile of floating-point rounding reduces the data dependence to a scalar, the participation factor $\\kappa$, yielding a closed-form signal-to-noise-ratio law. The resulting functional also admits a closed-form upper bound $\\kappa^{*}$ that no function-preserving linear transform can exceed and that is attained by a recent state-of-the-art method. Building on this analysis, we introduce KBBQ (\\textbf{K}appa-\\textbf{B}raked \\textbf{B}lockwise \\textbf{Q}uantization), which parameterizes the extent to which a transform approaches this ceiling. At W4A4, across four base models and two FP4 formats, KBBQ outperforms the prior state of the art without additional deployment-time computation.",
+        "canonical_id": "arXiv:2609.08135",
+        "arxiv_id": "2609.08135",
+        "authors": [
+          "L. Whalen",
+          "Yuki Ito",
+          "Ryo Sakamoto"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09240",
+      "identity_tokens": [
+        "id:arXiv:2609.09240",
+        "title:scaling posttraining ternarisation to qwen38b capability retention reproduction lossless packing and packed execution",
+        "url:https://www.semanticscholar.org/paper/ad439a49b2602753b8acef14613508b559588e6e"
+      ],
+      "record": {
+        "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution",
+        "source_url": "https://www.semanticscholar.org/paper/ad439a49b2602753b8acef14613508b559588e6e",
+        "year": 2026,
+        "published": "2026-09-08",
+        "abstract": "Ultra-low-bit language models promise reductions in storage and memory traffic, but a nominal\"1.58-bit\"label does not specify the deployed representation or its execution cost. We study a scale-up of an aggressive post-training conversion pipeline from Qwen3-4B to Qwen3-8B. The conversion uses KOTMS rotation, E2M-ATQ adaptive ternarisation, and GPTQ-style error compensation in a weight-only A16 configuration. We do not claim these algorithms as new. Our contribution is the end-to-end scale-up characterisation: an external reproduction gate, matched 4B/8B capability analysis, cross-corpus perplexity, effective-bit accounting, lossless lattice-aware packing, and direct packed execution. The 8B model reaches a three-corpus perplexity ratio of 1.361x, with WikiText-2, C4, and PTB ratios of 1.318x, 1.393x, and 1.371x. On eight zero-shot tasks at n = 500, mean accuracy is 64.6% versus 72.4% for FP16, corresponding to 78.5% chance-corrected retention and a 7.8-point absolute cost. The matched 4B run retains 69.6%, yielding an 8.9-point 8B advantage. The packed checkpoint is 8.24 GiB and preserves the recorded perplexity to measurement precision. Direct packed execution reaches 15.52 tokens/s in 7.35 GiB, while a preliminary packed GEMV remains slower than FP16 cuBLAS. The result is a validated scale-up baseline: model size improves robustness to aggressive post-training discretisation, actual serialisation is solved for the measured artefact, and direct execution is feasible, while broader seeds, calibration distributions, and kernel optimisation remain open.",
+        "canonical_id": "arXiv:2609.09240",
+        "arxiv_id": "2609.09240",
+        "authors": [
+          "A. Malik",
+          "M. Mehra",
+          "P. Devan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07664",
+      "identity_tokens": [
+        "id:arXiv:2609.07664",
+        "title:accuracy is not enough a divergencebased approach to evaluate fidelity loss in quantized llms",
+        "url:https://www.semanticscholar.org/paper/84845b9a9ba10adeb94154d89fac900566597aaf"
+      ],
+      "record": {
+        "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/84845b9a9ba10adeb94154d89fac900566597aaf",
+        "year": 2026,
+        "published": "2026-09-07",
+        "abstract": "Deployment of Large Language Models (LLMs) on memory-constrained edge devices relies heavily on aggressive post-training quantization. However, evaluating these models is largely based on zero-shot task accuracy, which depends solely on argmax predictions and is insensitive to changes in the underlying predictive distribution. Consequently, accuracy can exhibit unstable, non-monotonic behavior under progressive quantization, masking substantial fidelity loss relative to the BFloat16 (BF16) uncompressed base model and providing misleading deployment signals. We introduce a distribution-sensitive evaluation framework quantifying information loss in quantized LLMs as the divergence between full-vocabulary predictive distributions at the token decision boundary. We compute statistical distances, including Jensen-Shannon Divergence and Total Variation Distance, between outputs of full-precision and quantized models, enabling a fine-grained analysis of distributional shift. Using this framework, we quantify probability mass displacement and distributional drift relative to the BF16 reference, capturing predictive distribution changes not reflected in top-1 accuracy. We conduct a 120-run experimental matrix across five foundation architectures and four reasoning benchmarks under progressive quantization regimes, from uncompressed BF16 to Q2_K, providing a systematic fidelity analysis. Our results show divergence metrics generally increase under stronger quantization, complementing task accuracy with a fidelity signal. Across tested llama-cpp schemes, mixed-precision Q4_K generally yields lower divergence than uniform Q4_0 at similar memory footprints. These findings motivate distribution-aware evaluation as a practical diagnostic complement to task accuracy; they do not directly establish correctness, calibration, safety, or user-perceived quality.",
+        "canonical_id": "arXiv:2609.07664",
+        "arxiv_id": "2609.07664",
+        "authors": [
+          "Shahzeb Qamar",
+          "L. Sparrenberg",
+          "Christian Bauckhage",
+          "Baha Rababah",
+          "C. Leung",
+          "Murat Kantarcioglu",
+          "C. Akcora",
+          "R. Sifa"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06473",
+      "identity_tokens": [
+        "id:arXiv:2609.06473",
+        "title:steering under compression doseresponse capability cost and failure asymmetry in quantized llms",
+        "url:https://www.semanticscholar.org/paper/b0e18b09010e657ef6211a832a72bfabd6c87167"
+      ],
+      "record": {
+        "title": "Steering Under Compression: Dose-Response, Capability Cost, and Failure Asymmetry in Quantized LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/b0e18b09010e657ef6211a832a72bfabd6c87167",
+        "year": 2026,
+        "published": "2026-09-06",
+        "abstract": "Inference-time activation steering enables behavioral control of large language models without parameter modification, while post-training quantization reduces memory and compute costs for deployment. Despite their growing convergence in practice, the interaction between these two techniques remains uncharacterized. We systematically study activation steering under weight-only quantization (INT8 and NF4) across four open-weight 7-9B models and two behavioral targets: judged sentiment and judge-free reasoning length. Using an iso-effect framework that compares capability costs at matched behavioral effect, we find that sentiment steering survives quantization intact. After correcting a GSM8K parser artifact with a uniform v2.3.1 rescore, the pooled INT8 contrast is -0.010 (90% CI [-0.026, +0.007]), descriptively Equivalent under the preregistered three-label rule, while NF4 remains Inconclusive at -0.017 ([-0.067, +0.033]). In contrast, reasoning length exhibits a surprising asymmetric dose-response: lengthening is graded but terminates in cap-runaway and collapse, while shortening is a step function with only 12-30% shortening (model-dependent) before discontinuous failure. We expose a methodological pitfall: the naive iso-effect ladder anchors on the collapse floor for floor-bounded targets, and we introduce a censored construction that restores interpretable crossings. We also quantify a substantial baseline capability shift for Mistral-NF4 (0.545 to 0.365 GSM8K at alpha=0), demonstrating that compression can dominate the steering intervention. Despite this, steering vectors remain highly collinear with their FP16 siblings (cosine similarity 0.989-0.998 for INT8, 0.945-0.990 for NF4), confirming that the behavioral direction survives quantization even when the cost structure does not. All code and data are released.",
+        "canonical_id": "arXiv:2609.06473",
+        "arxiv_id": "2609.06473",
+        "authors": [
+          "Saurav Bhandari",
+          "Benjamin Wade"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09208",
+      "identity_tokens": [
+        "id:arXiv:2609.09208",
+        "title:shiftaccumulate attention multiplierfree querykey products for transformer decoding",
+        "url:https://www.semanticscholar.org/paper/d4e1e2e1f322265e2363d78961b2a6dc42cd2e29"
+      ],
+      "record": {
+        "title": "Shift-Accumulate Attention: Multiplier-Free Query--Key Products for Transformer Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/d4e1e2e1f322265e2363d78961b2a6dc42cd2e29",
+        "year": 2026,
+        "published": "2026-09-05",
+        "abstract": "Power-of-two (PoT) quantisation turns a multiplication into a bit shift, so far only for the post-softmax attention--value product. The earlier and larger product, S=QK^T, has not been reformulated the same way. We quantise the key cache to a signed power-of-two fixed-point code, so that every scalar multiplication in QK^T becomes a sign flip, a bit shift and an integer accumulation. A fixed-point head-room F>= e_max turns every shift index r=F-e into a non-negative left shift, making the accumulation exact in integer arithmetic. We add a sub-power mantissa extension that halves the score error for one extra shift-add, a shift-exact online softmax whose running maximum lives in an integer log2 domain so that every rescaling is itself an exact shift, and a log-quantised AV product. Fused CUDA kernels in a 1.1B Llama decoder on an RTX 4090: at B=8, T=32k the 4-bit kernel is 4.60x faster than FP16 scaled dot-product attention with a 2.5x smaller KV cache, and batched decoding crosses over at B=64 to 1.22x FP16 throughput at 11.02 against 13.77 GB peak memory. A matched INT8 multiply--accumulate kernel on the same tiling reaches 5.29x: on a GPU with a hardware 4-way INT8 dot product, shift-accumulate is not faster than the MAC it replaces. An iso-storage control--an 8-bit shift code of exactly one byte per key, run through the identical kernel--prices the arithmetic substitution alone at 2.02x at comparable accuracy. The advantage of the PoT representation is therefore its density and the removal of the multiplier, not raw GPU throughput. A sweep over exponent width, mantissa levels, granularity and rounding gives the design lesson: nearest-PoT relative error is scale-free, so extra exponent bits buy nothing (eps_S=0.1302 at 3, 4 and 5 bits) and accuracy must come from mantissa terms.",
+        "canonical_id": "arXiv:2609.09208",
+        "arxiv_id": "2609.09208",
+        "authors": [
+          "Khubaib Ahmed",
+          "Amna Noor",
+          "A. Haq"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04724",
+      "identity_tokens": [
+        "id:arXiv:2609.04724",
+        "title:flexposit tunable fractional precision for llm inference accelerators",
+        "url:https://www.semanticscholar.org/paper/f6b60f9da5290522728925b366c56e93df7be228"
+      ],
+      "record": {
+        "title": "FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators",
+        "source_url": "https://www.semanticscholar.org/paper/f6b60f9da5290522728925b366c56e93df7be228",
+        "year": 2026,
+        "published": "2026-09-04",
+        "abstract": "Large language models (LLMs) offer remarkable capabilities but impose prohibitive compute and energy costs. Quantization governs the trade-offs between accuracy and hardware efficiency across granularity and bit-width. Finer granularity (e.g., group-wise) provides high accuracy but incurs scaling and control overhead, while coarser granularity (e.g., channel-wise) has lower overhead but loses accuracy at low precision. Meanwhile, mixed-precision quantization exposes rich accuracy-efficiency trade-offs algorithmically, but existing LLM accelerators remain limited to discrete precision modes, leaving the fractional design space between them unexplored. FlexPosit bridges these gaps through co-design of Posit-based quantization and a precision-tunable bit-serial architecture. Algorithmically, FlexPosit employs distribution-aware quantization with hardware-aligned, sensitivity-guided mixed-precision allocation, leveraging the Posit format's tapered precision to achieve group-wise-like accuracy with channel-wise-like regularity. Architecturally, FlexPosit is a unified bit-serial systolic array with lightweight per-column decoders, unified Processing Elements (PEs), and a global precision controller, enabling tunable fractional precision while preserving fully regular systolic dataflow. Across diverse LLMs, FlexPosit achieves near-FP16 accuracy with sub-5-bit fractional weights. It achieves 1.8x higher throughput and 1.2x lower energy than BitMoD (group-wise quantization), and 1.5x higher throughput and 2.0x lower energy than OliVe (channel-wise quantization), establishing a new Pareto frontier for precision-tunable LLM acceleration.",
+        "canonical_id": "arXiv:2609.04724",
+        "arxiv_id": "2609.04724",
+        "authors": [
+          "Yimin Gao",
+          "Liangtao Dai",
+          "Jun Yin",
+          "Xin-Fei Guo",
+          "Mircea R. Stan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04098",
+      "identity_tokens": [
+        "id:arXiv:2609.04098",
+        "title:why gated deltanet survives 4bit quantization nvfp4 w4a4 for the recurrent half of a hybrid 27b llm",
+        "url:https://www.semanticscholar.org/paper/5e685aaf411a874d5c2cd2290a189317775b93cc"
+      ],
+      "record": {
+        "title": "Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM",
+        "source_url": "https://www.semanticscholar.org/paper/5e685aaf411a874d5c2cd2290a189317775b93cc",
+        "year": 2026,
+        "published": "2026-09-03",
+        "abstract": "Hybrid LLMs pair softmax attention with linear-attention layers such as Gated DeltaNet (GDN), whose recurrent state summarizes the context in fixed size. Early community 4-bit quantizations of Qwen3.8-27B (48 GDN layers, 16 attention layers) left the GDN block in 8- or 16-bit precision -- especially its decay and write-strength gates -- on the intuition that errors in a recurrence accumulate over long contexts. We test that intuition by building Minima: NVFP4 W4A4 on all 496 linear layers, GDN included. Across perplexity at 4K/32K, MMLU-Pro, GSM8K, AIME'25, GPQA-Diamond, LiveCodeBench, and RULER retrieval to 64K, Minima matches BF16 within seed noise (5-task average -0.52) while being the smallest (17.5 GiB) and fastest-prefill (+14-19%) recipe we compare, and its 32K perplexity gap shrinks with position. A four-part mechanism study explains why: (i) NVFP4's 16-element block scaling localizes the residual stream's extreme outliers, equalizing activation error across layer roles; (ii) the supposedly fragile gate projections are the least sensitive -- softplus/exponential and sigmoid parameterizations compress ~11% GEMM error to ~2% output error; (iii) the delta-rule recurrence holds injected noise at a flat plateau over 32K tokens and forgets a state impulse within hundreds of steps, because each write overwrites the state along the current key direction; (iv) the per-token quantization cost washes out with context instead of compounding. We also repair a global-scale mismatch that arises when per-module-calibrated NVFP4 checkpoints are served by kernels that fuse those modules into one GEMM, and show calibrated FP8 KV-cache scales are performance-free. The result: a practical recipe -- quantize everything, ship KV scales -- and a mechanistic account of why the recurrent half of a hybrid LLM is the easy half to quantize. Checkpoint: https://huggingface.co/minima-ai/mnma_qwen3.8_27b_nvfp4",
+        "canonical_id": "arXiv:2609.04098",
+        "arxiv_id": "2609.04098",
+        "authors": [
+          "S. Kozyrev",
+          "D. Maiboroda"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.01962",
+      "identity_tokens": [
+        "id:arXiv:2609.01962",
+        "title:posttraining ternarization of qwen34b capability effective bit budget storage compression and deployment",
+        "url:https://www.semanticscholar.org/paper/d01da12fc90b7bbc9875f1e04a072456d1d77e7d"
+      ],
+      "record": {
+        "title": "Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",
+        "source_url": "https://www.semanticscholar.org/paper/d01da12fc90b7bbc9875f1e04a072456d1d77e7d",
+        "year": 2026,
+        "published": "2026-09-02",
+        "abstract": "Ultra-low-bit language models can reduce storage and memory bandwidth, but a nominal\"1.58-bit\"label does not fully describe the stored representation, retained capability, or runtime behavior. We study an end-to-end post-training conversion of Qwen, an instruction-tuned 4B-parameter model, using KOTMS rotation, E2M-ATQ ternarization, and GPTQ-style error compensation from TWLA. The experiment is weight-only: activations remain at 16-bit precision, so ILA-AMP is omitted. We evaluate effective bit accounting, task capability retention, perplexity, calibration sensitivity, checkpoint composition, and deployment behavior. The final conversion uses 1.641 effective bits per weight for quantized linear weights, with 81.62% of model parameters targeted. Across ten scored capability comparisons, accuracy falls from 64.5% to 54.7%. Degradation is uneven: BoolQ retains 84.6% chance-corrected teacher performance, while ARC-Challenge retains 43.8%. Perplexity rises from 13.639 to 18.748 on WikiText-2, 24.700 to 31.992 on PTB, and 19.831 to 28.966 on C4. A subsequent packing run preserves the ternary planes and scales, reducing reported model size from 8.29 GiB to 3.96 GiB with essentially unchanged perplexity. A separate third-party packing attempt was lossy and is excluded from the primary artifact claim. The packed artifact has not been benchmarked end-to-end for task accuracy or generation throughput. A preliminary Triton GEMV microbenchmark is 4.6x slower than FP16 cuBLAS on one tested shape. We therefore do not claim that compression alone yields faster inference.",
+        "canonical_id": "arXiv:2609.01962",
+        "arxiv_id": "2609.01962",
+        "authors": [
+          "AI OneBit",
+          "A. Malik",
+          "Poojith",
+          "Sparsh Mehra"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:6ae55ac841c0cc9d150e48960e48a8eb5bbc669d4119348f7a69382844fec64d",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
