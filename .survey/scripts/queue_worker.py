@@ -1286,6 +1286,15 @@ def apply_artifact(sub: dict, job: dict):
         raise ValueError("completed artifact requires complete Markdown content or payload_path")
     content = loaded.rstrip() + "\n"
     target = ROOT.parent / paper
+    paper_parts = PurePosixPath(str(paper)).parts
+    if (
+        job.get("type") == "research"
+        and paper_parts[:2] == ("papers", "training")
+        and not target.exists()
+    ):
+        raise ValueError(
+            "new Training paper entries are frozen; do not create a new papers/training/** artifact"
+        )
     expected_sha = sub.get("expected_blob_sha")
     if target.exists():
         if not expected_sha:
