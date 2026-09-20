@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:10:05 JST**
+> 自動生成: **2026-09-20 12:10:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **80** |
 | 未claim Research job | **79** |
 | 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-20 12:07:28 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-20 12:07:28 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **7** | **6** | **0** | **1** | **0** | — |
+| Research | **14** | **6** | **6** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **14** | **8** | **7** | **0** | **1** | **0** | **5** |
+| 合計 | **14** | **7** | **7** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **7件** / 検証済み成功: **6件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **6件** / 検証済み成功: **6件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
   - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
@@ -123,8 +123,6 @@
   - result: `.survey/work-queue/results/research/attempt-22a85da9fa40ba86114440e5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-22a85da9fa40ba86114440e5.json`
   - paper: `papers/inference/09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-384c21db2f0f88434c7e5ef8.json` (job `job-research-8b52cc53189781e3`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-384c21db2f0f88434c7e5ef8.json` (`ok=false`)
 - **成功** `arXiv:2309.08168` — Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-06ec3586821ff3bb.json`
   - result: `.survey/work-queue/results/research/attempt-494231538c84c48296aa17b3.json` (`ok=true`)
@@ -168,7 +166,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2402.02750` — KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 12:07:56 JST** / heartbeat: **—** / lease expiry: **09-20 13:37:56 JST**
+  - claim: **09-20 12:10:11 JST** / heartbeat: **—** / lease expiry: **09-20 13:40:11 JST**
   - evidence: `.survey/work-queue/claims/job-research-8b52cc53189781e3.json`
 
 #### Audit
