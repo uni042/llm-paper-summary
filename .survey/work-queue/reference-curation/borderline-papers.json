@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-09-20T04:15:00+00:00",
-  "record_count": 60,
+  "updated_at": "2026-09-20T12:57:49+00:00",
+  "record_count": 61,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -851,6 +851,18 @@
         "papers/inference/05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md"
       ],
       "title": "HSGM: Hierarchical Segment-Graph Memory for Scalable Long-Text Semantics"
+    },
+    "arXiv:2609.17940": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.17940",
+      "identity_tokens": [
+        "arXiv:2609.17940"
+      ],
+      "reason": "Useful MoE routing-predictability analysis showing predictive signal beyond the immediately previous layer, but it does not implement an expert-prefetch, offload, or serving optimization system.",
+      "first_checked_at": "2026-09-20T12:57:49+00:00",
+      "last_checked_at": "2026-09-20T12:57:49+00:00",
+      "linked_from": [],
+      "title": "Beyond the Previous Layer: Residual Predictive Structure in Sparse MoE Routing"
     }
   }
 }
