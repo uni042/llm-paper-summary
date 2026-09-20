@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-36a9cdcc5175155fa19ebfd4",
-  "job_id": "job-research-3f4b0e4a187439dd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-36a9cdcc5175155fa19ebfd4",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-36a9cdcc5175155fa19ebfd4","job_id":"job-research-3f4b0e4a187439dd","data":{"limitations":"理論はValue/output projectionのrow normを共通定数で抑えたL1 attention-output loss上界に基づき、その上界の最小化が最終生成品質を直接保証するわけではない。重要度推定自体は統合先のSnapKV/Pyramidに依存するため、観測attentionが将来重要位置を外す場合はbudget再配分だけでは救えない。head budgetの極端化を防ぐα=0.2は経験的safeguardで、モデル・タスクごとの最適値探索は中心課題ではない。","differences":"SnapKVは各headで重要tokenを選ぶがheadごとの保持数は均等で、Pyramidはlayer間budgetを変える一方で同一layer内headは均等である。Ada-KVはこれらと直交するhead間allocation層として、既存attention scoreをglobal top-Bへ集約してhead別budgetを決める。DuoAttentionやHeadKVのような後続のtraining/profile-based head分類と異なり、追加学習なしで各入力の観測attentionから動的に配分する。","implementation_status":"FFY0/AdaKVでコード公開。flattened cache、custom CUDA kernel、variable-length FlashAttention、GQA-compatible selectionまで実装し、Ada-SnapKV/Ada-Pyramidとして評価可能。論文はNeurIPS 2025採択版で、後続CriticalKV/DefensiveKVにも同allocation戦略を組み込んだ結果を報告する。","research_positioning":"KV cache eviction研究を『どのtokenを残すか』だけでなく『有限budgetをどのheadへ配るか』という独立最適化問題へ拡張した研究である。layer-wise allocationを扱うPyramidとhead-wise allocationを組み合わせられ、token selection法そのものも交換できるため、既存圧縮法へ横断的に追加できる基盤的部品として位置づけられる。またquestion-awareだけの評価が実運用を過大評価し得ることを示し、prompt cachingやmulti-turnを意識したquestion-agnostic評価を強調した点も後続比較に重要である。"},"reservation":{"claim_id":"claim-36a9cdcc5175155fa19ebfd4","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
