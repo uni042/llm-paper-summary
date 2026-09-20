@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0e90bb35472b526a5318b2c6","job_id":"job-research-ff5accb2a519d706","data":{"limitations":"エキスパート類似度は事前の校正データに依存し、運用ドメインで機能関係が変化する場合の頑健性は限定的である。Sとrhoは品質・速度のトレードオフを持ち、強い削減では精度低下が残る。主実験は単一NVIDIA H20、固定128/32トークン、3種類のMoEモデルであり、複数GPUのExpert Parallelや長文脈・実トラフィックの可変バッチでの通信効果は直接示されない。","differences":"静的枝刈り・統合と違ってモデル重みや全エキスパート容量を変更せず、各バッチで実際に活性化した集合だけを縮める。Top-pや単純Top-K削減がルータースコア中心なのに対し、SEREはエキスパート出力の機能類似度を第二の信号として使い、主要順位を保持しつつ副次エキスパートを類似先へ再ルーティングする。LYNXのようなバッチ認識型手法に対しても、代替先をエキスパート間類似度から明示的に選び、類似度の低い固有エキスパートを保護する点が異なる。","implementation_status":"公式GitHub実装と専用CUDAカーネルが公開され、vLLMへ1行で有効化できるとされる。論文はQwen1.5-MoE、DeepSeekV2-Lite、Qwen3-30B-A3Bを実vLLM上で測定しており、概念実証だけでなくサービング経路への統合まで実装済みである。","research_positioning":"MoE推論のボトルネックを、モデル容量の圧縮ではなく『バッチ全体で何個の異なるエキスパート重みを読むか』というシステム指標から扱う研究に位置する。特にメモリ帯域律速のdecodeで有効で、エキスパートキャッシュやCPU/SSDオフロードとは競合というより、読み出すエキスパート集合そのものを減らす前段最適化として組み合わせられる可能性がある。"},"reservation":{"claim_id":"claim-0e90bb35472b526a5318b2c6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-4198d6e57abb83d655f6b5bb",
+  "job_id": "job-research-ff5accb2a519d706",
+  "data": {
+    "limitations": "エキスパート類似度は事前の校正データに依存し、運用ドメインで機能関係が変化する場合の頑健性は限定的である。Sとrhoは品質・速度のトレードオフを持ち、強い削減では精度低下が残る。主実験は単一NVIDIA H20、固定128/32トークン、3種類のMoEモデルであり、複数GPUのExpert Parallelや長文脈・実トラフィックの可変バッチでの通信効果は直接示されない。",
+    "differences": "静的枝刈り・統合と違ってモデル重みや全エキスパート容量を変更せず、各バッチで実際に活性化した集合だけを縮める。Top-pや単純Top-K削減がルータースコア中心なのに対し、SEREはエキスパート出力の機能類似度を第二の信号として使い、主要順位を保持しつつ副次エキスパートを類似先へ再ルーティングする。LYNXのようなバッチ認識型手法に対しても、代替先をエキスパート間類似度から明示的に選び、類似度の低い固有エキスパートを保護する点が異なる。",
+    "implementation_status": "公式GitHub実装と専用CUDAカーネルが公開され、vLLMへ1行で有効化できるとされる。論文はQwen1.5-MoE、DeepSeekV2-Lite、Qwen3-30B-A3Bを実vLLM上で測定しており、概念実証だけでなくサービング経路への統合まで実装済みである。",
+    "research_positioning": "MoE推論のボトルネックを、モデル容量の圧縮ではなく『バッチ全体で何個の異なるエキスパート重みを読むか』というシステム指標から扱う研究に位置する。特にメモリ帯域律速のdecodeで有効で、エキスパートキャッシュやCPU/SSDオフロードとは競合というより、読み出すエキスパート集合そのものを減らす前段最適化として組み合わせられる可能性がある。"
+  },
+  "reservation": {
+    "claim_id": "claim-4198d6e57abb83d655f6b5bb",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0e90bb35472b526a5318b2c6","job_id":"job-research-ff5accb2a519d706","data":{"hardware":"全実験はNVIDIA H20 GPUで実施し、速度評価ではQwen1.5-MoE-A2.7B-Chat、DeepSeekV2-Lite、Qwen3-30B-A3Bをそれぞれ単一GPUへ配備する。","software":"速度評価はvLLMを用い、SEREは著者実装の専用CUDAカーネルとして統合する。精度評価はOpenCompassの推論課題群を用いる。","methodology":"3モデルで元Top-K、Top-K削減、HC-SMoE、LYNX、SEREを比較する。精度はExam（CMMLU、BoolQ、BBH）、Math（MATH、GSM8K、Math_401）、Code（HumanEval、MBPP）の8課題で評価し、CMMLUとBoolQではCoTを使用する。速度は入力128・出力32トークンに固定し、QPSを変えてTime per Output Tokenを測る。類似度はFrobeniusノルム、校正データはFineWeb-Edu 400系列×128トークン。静的統合系はTPOTを動的スキップ系に合わせるよう枝刈り率を設定する。SEREでは主要順位Sと類似度閾値rhoを変え、品質と活性削減のトレードオフを比較する。","scope":"単一H20上の実vLLM復号時間と複数の公開MoEモデルを含むため、システム効果を直接検証している。一方、複数GPU・Expert Parallel、ネットワーク通信が支配する大規模分散配備、長文脈、実トラフィックの可変入出力長については主評価条件ではない。"},"reservation":{"claim_id":"claim-0e90bb35472b526a5318b2c6","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-4198d6e57abb83d655f6b5bb",
+  "job_id": "job-research-ff5accb2a519d706",
+  "data": {
+    "hardware": "全実験はNVIDIA H20 GPUで実施し、速度評価ではQwen1.5-MoE-A2.7B-Chat、DeepSeekV2-Lite、Qwen3-30B-A3Bをそれぞれ単一GPUへ配備する。",
+    "software": "速度評価はvLLMを用い、SEREは著者実装の専用CUDAカーネルとして統合する。精度評価はOpenCompassの推論課題群を用いる。",
+    "methodology": "3モデルで元Top-K、Top-K削減、HC-SMoE、LYNX、SEREを比較する。精度はExam（CMMLU、BoolQ、BBH）、Math（MATH、GSM8K、Math_401）、Code（HumanEval、MBPP）の8課題で評価し、CMMLUとBoolQではCoTを使用する。速度は入力128・出力32トークンに固定し、QPSを変えてTime per Output Tokenを測る。類似度はFrobeniusノルム、校正データはFineWeb-Edu 400系列×128トークン。静的統合系はTPOTを動的スキップ系に合わせるよう枝刈り率を設定する。SEREでは主要順位Sと類似度閾値rhoを変え、品質と活性削減のトレードオフを比較する。",
+    "scope": "単一H20上の実vLLM復号時間と複数の公開MoEモデルを含むため、システム効果を直接検証している。一方、複数GPU・Expert Parallel、ネットワーク通信が支配する大規模分散配備、長文脈、実トラフィックの可変入出力長については主評価条件ではない。"
+  },
+  "reservation": {
+    "claim_id": "claim-4198d6e57abb83d655f6b5bb",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
