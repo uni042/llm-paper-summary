@@ -1,0 +1,9 @@
+{
+  "schema_version":1,"workflow_version":10,"operation":"submit_discovery_round",
+  "precheck_result_path":".survey/work-queue/discovery-precheck/results/20260921T0154JST-worker30-openalex-pd-network-18.json","precheck_receipt":"sha256:14e07bb481d05d0b45d76654778c2a3df6723d1818dcffbca7bdd0296ee6a6d1",
+  "candidates":[
+    {"canonical_id":"arXiv:2606.01502","title":"Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics","source_url":"https://arxiv.org/abs/2606.01502","paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01502-move-query-not-cache-latent-attention-redistribution.md","priority":94,"reason":"KV/cache転送の代わりにquery redistributionを検討するcross-instance attention systems研究で、GPU fabric上のPD/KV転送設計に直結する。"},
+    {"canonical_id":"arXiv:2605.21100","title":"NanoCP: Request-Level Dynamic Context Parallelism for Data-Expert Parallel Decoding","source_url":"https://arxiv.org/abs/2605.21100","paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.21100-nanocp-dynamic-context-parallel-decoding.md","priority":92,"reason":"request単位でcontext parallelismを動的制御しdata-expert parallel decodingを効率化するserving systems研究。長文脈・MoE decode schedulingに直接関係する。"}
+  ],"rejected_candidates":[],
+  "discovery_stats":{"run_key":"2026-09-21T01:31:26+09:00-worker30","round":"openalex-pd-network-18","axis":"prefill decode disaggregation KV transfer RDMA network LLM serving","query_summary":"PD/KV transfer/RDMA系の未評価集合を評価し、query redistributionとdynamic context parallel decodingの2件を強いsystems候補として選定。","candidate_count":2,"duplicate_filtered_count":0,"duplicate_canonical_ids":[],"next_axis_hint":"novel candidate後の別軸探索を継続","empty_round_reason":null}
+}
