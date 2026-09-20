@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T05:12:16.956916+00:00",
+  "updated_at": "2026-09-20T05:16:36.743653+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T05:12:16.956916+00:00",
+      "last_recorded_at": "2026-09-20T05:16:36.743653+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 342,
+        "research_completed": 343,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35444112951:1",
-          "recorded_at": "2026-09-19T12:52:43.074079+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35444112951",
-            "run_attempt": "1",
-            "source_sha": "791846c6b95e79e779c9ec6e672021cd58685ca5"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35444546798:1",
           "recorded_at": "2026-09-19T13:05:28.306689+00:00",
@@ -19593,6 +19579,20 @@
             "run_id": "35491063082",
             "run_attempt": "1",
             "source_sha": "182d8f43cc1744d1b45fd15ba664892290c3b0a1"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35491246007:1",
+          "recorded_at": "2026-09-20T05:16:36.743653+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35491246007",
+            "run_attempt": "1",
+            "source_sha": "8ac424c5397c4b7a6052edd6bef2c90b222913c5"
           },
           "signals": [
             "research_completed"
@@ -24285,6 +24285,14 @@
           "type": "research",
           "canonical_id": "arXiv:2404.19429",
           "title": "Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-6adaa29fadc3e53e",
+          "type": "research",
+          "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1306",
+          "title": "SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation",
           "from": "ready",
           "to": "completed"
         }
