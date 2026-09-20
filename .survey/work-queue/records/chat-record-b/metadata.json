@@ -4,10 +4,41 @@
   "slot": "metadata",
   "attempt_id": "attempt-362ad2690372255c3afaa71b",
   "job_id": "job-research-da8147ed3835966f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-362ad2690372255c3afaa71b",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2502.07903",
+    "arxiv_id": "2502.07903",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment",
+    "summary": "異種GPU群で事前充填と復号を分離すると、各段階の計算特性に合う資源割当が可能になる一方、異種ネットワーク上のKVキャッシュ転送と段階別並列化を同時に最適化する必要がある。HexGen-2はGPUと通信リンクを重み付きグラフとして表現し、スペクトル分割とKernighan-Lin法でモデル複製群を構成した後、事前充填・復号群を分け、各群のTP/PP構成と群間KV転送を最大流として解く。最大流のボトルネック情報で辺交換を反復し配置を改善する。OPT-30BとLlama-2-70BをH100/A100/L40/A6000混成環境で評価し、同価格帯のHexGen/DistServeに対して最大2.0倍、平均1.3倍のスループット、平均1.5倍低い遅延期限を達成し、30%低予算でも同等水準の性能を示す。",
+    "list_summary": "異種GPU上の事前充填・復号分離を、グラフ分割と最大流で段階別並列化・資源配置・KV転送まで共同最適化するLLMサービング方式。",
+    "authors": ["Youhe Jiang", "Ran Yan", "Binhang Yuan"],
+    "authors_affiliations": "The Hong Kong University of Science and Technology",
+    "published": "2025-02-11",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "異種GPU・事前充填/復号分離サービング",
+    "topics": ["heterogeneous GPU serving", "prefill-decode disaggregation", "graph partitioning", "max-flow scheduling", "KV cache transfer"],
+    "importance": "異種GPUと異種ネットワークを前提に、事前充填・復号分離の配置、段階別並列化、KVキャッシュ通信を単一のスケジューリング問題として扱う。",
+    "hardware_evaluation": "RunPod上でH100-80G、A100、L40、A6000を用い、8×H100の同種構成と5種類の異種構成を比較。",
+    "hardware_details": "同種: 8×H100-80G ($29.52/h)。異種設定はH100/A100/L40/A6000の組合せで、設定1〜4は約$26.3〜28.8/h、設定5は70%予算の$20.5/h。",
+    "quality_effect": "モデル品質自体は変更しないサービング/配置方式で、評価指標はスループット、要求遅延、SLO達成率、価格効率。",
+    "source": "https://arxiv.org/abs/2502.07903",
+    "sources": ["https://arxiv.org/abs/2502.07903", "https://arxiv.org/pdf/2502.07903"],
+    "code": null,
+    "implementation": "libP2Pベースのタスク調整、NCCL通信、非同期NCCL SendRecv/CudaMemcpyによるKV転送重畳を実装し、continuous batching、FlashAttention、PagedAttentionを統合。",
+    "last_checked": "2026-09-20",
+    "references": [
+      {"canonical_id": "arXiv:2311.11514", "arxiv_id": "2311.11514"},
+      {"canonical_id": "arXiv:2403.02310", "arxiv_id": "2403.02310"},
+      {"canonical_id": "arXiv:2404.14527", "arxiv_id": "2404.14527"},
+      {"canonical_id": "arXiv:2401.11181", "arxiv_id": "2401.11181"}
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary-reference-section",
+    "references_total": 4
+  },
+  "reservation": {"claim_id": "claim-362ad2690372255c3afaa71b", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
