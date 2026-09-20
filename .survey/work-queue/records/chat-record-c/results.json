@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-b16e1c4e099c7c51205be842",
-  "job_id": "job-research-6adaa29fadc3e53e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b16e1c4e099c7c51205be842",
-    "worker_id": "scheduled-chat-discovery-overflow",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b16e1c4e099c7c51205be842","job_id":"job-research-6adaa29fadc3e53e","data":{"overview":"SwiftKVは25〜50%のプリフィル演算を削りながら、多くのモデルで平均品質差を0.5〜2%程度に抑える。H100上の実サービングでは8Bで入力2K時1.2〜1.3倍、128K時1.8〜1.9倍、70Bで2K時1.4〜1.5倍、128K時1.8〜2.0倍の総処理量を得る。70B・入力8Kでは4 H100で16K token/s超、元モデル換算560 TFLOPS/GPUを報告し、対話型負荷では先頭トークン時間を最大50%、出力トークン時間を最大60%削減する。","key_results":[{"metric":"プリフィル演算削減と品質","value":"25%削減は平均差0.5%未満、40〜50%でも多くのモデルで1〜2%程度","baseline":"元モデル","condition":"複数モデル・7種品質課題","interpretation":"入力トークンだけ後半層を省き生成トークンは全層を通すことで大きな削減率でも品質を保つ。"},{"metric":"8B一括処理量","value":"2K入力で1.2〜1.3倍、128Kで1.8〜1.9倍","baseline":"Llama-3.1-8B元モデル","condition":"H100、各要求256出力","interpretation":"入力が長いほどプリフィル比率が上がり演算削減の利得が増える。"},{"metric":"70B一括処理量","value":"2K入力で1.4〜1.5倍、128Kで1.8〜2.0倍","baseline":"Llama-3.1-70B元モデル","condition":"H100、各要求256出力","interpretation":"大モデルでもプリフィル削減が端から端処理量へ直接反映される。"},{"metric":"70B正規化処理量","value":"入力8Kで16K token/s超、560 TFLOPS/GPU","baseline":"元モデル演算量換算","condition":"4×H100","interpretation":"50%削減と層間KV共有で高い実効演算処理量を得る。"},{"metric":"対話型遅延","value":"先頭トークン時間最大50%減、出力トークン時間最大60%減、飽和前到着率1.5〜2倍","baseline":"元モデル","condition":"入力2K〜32K、到着率掃引","interpretation":"同一GPUでプリフィルと復号が競合するためプリフィル削減が復号遅延にも効く。"},{"metric":"低メモリ処理量","value":"20GBでFP8 KV付きSwiftKV 23.2K token/s、元モデル10.8K","baseline":"Llama-3.1-8B元モデル","condition":"50% SwiftKV + 4-way AcrossKV + FP8 KV","interpretation":"演算削減とKV圧縮を組み合わせるとメモリ制約下でも利得を維持する。"}],"negative_results":["50%を超えるプリフィル層削減では品質が急速に悪化する。","AcrossKVの共有度を上げるほどKVメモリは減るが品質差も増える。","長文RULERでは50% SwiftKVが元モデルより4Kで約0.5点、128Kで約3.7点低い。","理想的に全層KVを一つへ統合するメモリ圧縮だけでは80GB条件で元モデル比約10%の処理量改善に留まり、計算律速ではメモリ削減だけでは不十分。"],"quality_impact":"25%削減はほぼ無損失、40〜50%は小幅な平均差に抑えられるが、モデルと課題により差は広がる。蒸留は通常の言語モデル損失より平均2.64点高く、生成課題では差がさらに大きい。","interpretation":"SwiftKVの利得は入力対出力比が大きいほど増える。後半層をモデルから削除せず入力だけ早期退出させるため、復号能力を保ちながらプリフィルの全結合・注意計算を大幅に削れる。大容量GPUではKV圧縮だけより計算削減が重要で、メモリが厳しくなるとAcrossKVと量子化KVを組み合わせる価値が高まる。"},"reservation":{"claim_id":"claim-b16e1c4e099c7c51205be842","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}}
