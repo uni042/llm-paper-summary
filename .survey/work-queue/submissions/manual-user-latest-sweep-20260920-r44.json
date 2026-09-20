@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-latest-sweep-r44",
+    "summary": "2026年9月16日の最新MoE routing/quantization論文から未収録の直接関連論文を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.18176",
+      "title": "MoRE: Mixture of Reused Experts",
+      "source_url": "https://arxiv.org/abs/2609.18176",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.18176-more-mixture-of-reused-experts.md",
+      "priority": 98,
+      "reason": "隣接層間でexpert poolを共有し、各層は独立routerと軽量depth embeddingだけを持つことで、expert数に比例するメモリ増大を抑える。matched compute/parameter budgetで標準MoEより低perplexityと高downstream性能を示すため、expert構成自体を縮める系統に直接関連。"
+    },
+    {
+      "canonical_id": "arXiv:2609.18131",
+      "title": "Colla-Q: Toward Collaborative Experts in MoE Quantization via Minimax Precision Balancing",
+      "source_url": "https://arxiv.org/abs/2609.18131",
+      "paper_path": "papers/inference/06-moe-quantization-compression/2026-2609.18131-colla-q-collaborative-expert-quantization.md",
+      "priority": 97,
+      "reason": "activation entropyを使ってexpertごとのbit-widthを割り当て、特定expertだけの量子化劣化が協調出力を壊す問題を抑える。MoE固有の非一様mixed-precision量子化として最新の直接関連圧縮手法。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-latest-sweep-20260920-routing-focused",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-latest-sweep-20260920-routing-focused.json",
+    "receipt": "sha256:cf93024b2cc3413798d49a31b84613cd150d3a79de6f47b7f110dc7fb65af43c"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-latest-sweep-2026-09-20",
+    "round": "latest-sweep-r44-reuse-quantization",
+    "axis": "2026-09 latest MoE routing/reuse/quantization",
+    "query_summary": "最新routing検索からLLM system/compressionへ直接寄与するMoREとColla-Qを抽出。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "next_axis_hint": "latest edge/distributed MoE inference"
+  }
+}
