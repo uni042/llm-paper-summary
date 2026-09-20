@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:10:45 JST**
+> 自動生成: **2026-09-20 19:11:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **96** |
+| 収録候補論文 | **95** |
 | 未claim Research job | **95** |
-| 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-20 19:05:05 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **82** |
+| 最終検証済みResearch収録 | **09-20 19:10:57 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **96** |
+| canonical_id確認済みの一意な候補論文 | **95** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **96** |
+| 非終端Research job合計 | **95** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **36** | **9** | **6** | **1** | **1** | **0** | — |
+| Research | **37** | **9** | **7** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **36** | **10** | **7** | **1** | **1** | **0** | **5** |
+| 合計 | **37** | **10** | **8** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 19:10:57 JST** [research] `arXiv:2608.06989` — Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM
+  - job: `.survey/work-queue/jobs/job-research-2e7cd1c4e1dc851d.json`
+  - result: `.survey/work-queue/results/research/attempt-ade4ad902d6f7670ee635b88.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ade4ad902d6f7670ee635b88.json`
+  - paper: `papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md`
 - **09-20 19:05:05 JST** [research] `DOI:10.18653/v1/2026.acl-long.1811` — REAL: REtrieval-reAsoning and Logic-constructed Attention Behaviors for Long-Context KV Cache Compression
   - job: `.survey/work-queue/jobs/job-research-765eee68b506c6ff.json`
   - result: `.survey/work-queue/results/research/attempt-eda6a759c3d074c07a647fb0.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-5605d7717d39930ab2f4dcc5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5605d7717d39930ab2f4dcc5.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.07903-hexgen-2.md`
-- **09-20 17:44:56 JST** [research] `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs
-  - job: `.survey/work-queue/jobs/job-research-e2f947500152f11f.json`
-  - result: `.survey/work-queue/results/research/attempt-2aa6f3a5ce12c662b86bbbe1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-2aa6f3a5ce12c662b86bbbe1.json`
-  - paper: `papers/inference/02-cpu-offload/2024-2405.02842-iceformer.md`
 
 ### Audit
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **9件** / 検証済み成功: **6件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
+- immutable submission: **9件** / 検証済み成功: **7件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -143,7 +143,11 @@
   - result: `.survey/work-queue/results/research/attempt-726aa6f9d7bb4140731a500b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-726aa6f9d7bb4140731a500b.json`
   - paper: `papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-ade4ad902d6f7670ee635b88.json` (job `job-research-2e7cd1c4e1dc851d`)
+- **成功** `arXiv:2608.06989` — Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM
+  - job: `.survey/work-queue/jobs/job-research-2e7cd1c4e1dc851d.json`
+  - result: `.survey/work-queue/results/research/attempt-ade4ad902d6f7670ee635b88.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ade4ad902d6f7670ee635b88.json`
+  - paper: `papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-bb698348ca635e022360ff70.json` (job `job-research-c0742ec707ffbbe8`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-bb698348ca635e022360ff70.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-d6d0f050a2bc6af8b178330b.json` (job `job-research-d5278ec0af97bd4e`, failure_class `state_or_transport_guard`)
@@ -184,10 +188,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.06989` — Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 19:09:50 JST** / heartbeat: **—** / lease expiry: **09-20 20:39:50 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2e7cd1c4e1dc851d.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -207,7 +209,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **96** |
+| ready | **95** |
 
 ### 候補の重複・識別情報欠損
 
@@ -227,7 +229,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **844** |
+| inference/training/survey配下の論文Markdown実体 | **845** |
 
 ### immutable submissionの未照合
 
@@ -235,8 +237,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **764** |
-| └ Research | **578** |
+| 成功result未照合のimmutable submission | **763** |
+| └ Research | **577** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
