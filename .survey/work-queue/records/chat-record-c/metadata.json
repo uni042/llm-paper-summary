@@ -2,11 +2,63 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-2ba79169b09085044fd31ab0",
-  "job_id": "job-research-0f282c93dba72c85",
-  "data": {},
+  "attempt_id": "attempt-70943e20a527c6aa030a2179",
+  "job_id": "job-research-92c83b7c2ec8a78f",
+  "data": {
+    "canonical_id": "arXiv:2607.08601",
+    "arxiv_id": "2607.08601",
+    "title": "It Takes a MAESTRO To Prune Bad Experts",
+    "list_summary": "自己回帰生成時の層間専門家遷移をマルコフ連鎖として集計し、定常分布が小さい専門家を構造的に削除してMoEの常駐メモリを縮小する。",
+    "summary": "MoEは各トークンで少数の専門家だけを起動する一方、全専門家の重みをメモリへ常駐させる必要がある。MAESTROは層・専門家対を状態とする循環マルコフ連鎖を自己回帰キャリブレーションから構築し、定常分布を大域的な専門家重要度として利用する。各層で低確率の専門家を均等数だけ物理削除し、ルータ行も縮小した後、注意機構へのLoRAで性能を回復する。GPT-OSS-20BとQwen3-30Bの25%・50%圧縮で、局所ヒューリスティックや専門家統合より高い平均性能維持率を示した。",
+    "source": "https://arxiv.org/abs/2607.08601",
+    "sources": [
+      "https://arxiv.org/abs/2607.08601",
+      "https://arxiv.org/html/2607.08601"
+    ],
+    "authors": [
+      "Palaash Goel",
+      "Ayush Maheshwari",
+      "Tanmoy Chakraborty"
+    ],
+    "published": "2026-07-09",
+    "publication": "arXiv preprint arXiv:2607.08601",
+    "publication_type": "preprint",
+    "publication_status": "preprint",
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "topics": [
+      "混合専門家モデル",
+      "構造化枝刈り",
+      "マルコフ連鎖",
+      "モデル圧縮"
+    ],
+    "implementation": "PyTorchとHugging Face Transformersで実装。論文先頭は著者プロジェクトとしてGitHubプロフィールとWebサイトを示すが、個別リポジトリURLは本文HTMLから特定できない。",
+    "code": "https://github.com/parmanu-lcs2",
+    "hardware_evaluation": "8基のNVIDIA A100 80GBを備えたクラウドGPUサーバーで全実験を実施。GPT-OSS-20BとQwen3-30Bを対象に圧縮・回復学習・評価を行う。",
+    "quality_effect": "25%圧縮で平均性能維持率はGPT-OSS-20B 98.90%、Qwen3-30B 99.40%。50%圧縮でも92.59%、93.40%を維持し、REAPの89.37%、90.25%を上回る。",
+    "last_checked": "2026-09-20",
+    "references": [
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      },
+      {
+        "canonical_id": "arXiv:2502.12016",
+        "arxiv_id": "2502.12016"
+      },
+      {
+        "canonical_id": "arXiv:2406.16747",
+        "arxiv_id": "2406.16747"
+      }
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "arXiv HTML v2 reference section",
+    "references_total": 62
+  },
   "reservation": {
-    "claim_id": "claim-2ba79169b09085044fd31ab0",
+    "claim_id": "claim-70943e20a527c6aa030a2179",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
