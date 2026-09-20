@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-7d70a7f1bc8e9a1e1635f401",
-  "job_id": "job-research-d4631c2cf9f2d1d7",
-  "data": {
-    "hardware": "学習は4台のNVIDIA H100で実施。推論効率評価ではウォームアップを入れてメモリ、キャッシュ、カーネル状態を安定させ、TransformersとSGLangの双方でMoE・注意機構・その他の遅延内訳、および固有専門家数とMoEカーネル遅延の関係を測る。",
-    "software": "基盤モデルはLLaDA2.0-mini。ブロック拡散デコードを用い、信頼度しきい値0.95、ブロックサイズ32、最大生成長2048、早期終了を有効化する。学習はマスク率0.3〜0.8をランダム採取し、2エポック、全体バッチサイズ4、学習率2e-6のコサインスケジュール、学習時p=0.6。",
-    "methodology": "MATH500、GSM8K、ARC-C、MMLUの4ベンチマークをゼロショットで評価し、推論では段階的な推論過程を生成させる。比較対象は元モデル、トークン当たり8専門家を4へ減らすTop-4、著者実装のDES-SeqとDES-Voteで、DESは圧縮率を合わせた強圧縮設定も比較する。平均性能、層当たり平均固有専門家数、固有MoEパラメータの平均メモリ量、MoE遅延、エンドツーエンド遅延を測定する。さらにpの学習・推論値0.4〜0.8とブロックサイズ8/16/24/32を切り替えて頑健性を検証する。",
-    "scope": "評価は単一のMoE拡散LLMであるLLaDA2.0-miniと、数学・科学・一般推論の4ベンチマークが中心である。専門家圧縮の実機遅延・メモリ効果は確認するが、自己回帰MoE、他の拡散LLM、画像・動画など他モダリティ、長時間サービス時の多要求バッチや異種GPUへの一般化は未検証である。"
-  },
+  "attempt_id": "attempt-a57cb67e08f4bd0d41131033",
+  "job_id": "job-research-0f282c93dba72c85",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-7d70a7f1bc8e9a1e1635f401",
+    "claim_id": "claim-a57cb67e08f4bd0d41131033",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

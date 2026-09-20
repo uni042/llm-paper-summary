@@ -2,59 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-7d70a7f1bc8e9a1e1635f401",
-  "job_id": "job-research-d4631c2cf9f2d1d7",
-  "data": {
-    "canonical_id": "arXiv:2605.30876",
-    "arxiv_id": "2605.30876",
-    "doi": "10.48550/arXiv.2605.30876",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
-    },
-    "title": "dMoE: dLLMs with Learnable Block Experts",
-    "summary": "dMoEは、拡散型大規模言語モデルが1回の順伝播で複数トークンを処理するのに、混合専門家モデルが各トークンを独立に振り分けるため多数の異なる専門家重みを読み出してしまう問題を扱う。各ブロック内のトークン別ルータ得点を集約してブロック単位の専門家得点を作り、累積確率しきい値で適応的な候補集合を選んだ後、各トークンの選択先をその集合内へ制限する。LLaDA2.0-miniで平均固有専門家数を69.5から14.575へ削減し、4ベンチマーク平均性能の99.11%を維持しながら、専門家重みメモリを76.64〜79.84%削減、エンドツーエンド遅延を1.14〜1.66倍高速化した。",
-    "list_summary": "ブロック内のトークン別ルータ得点を集約して適応的な専門家候補集合を作り、MoE拡散LLMの固有専門家数と重み読出しを大幅に減らす。",
-    "authors": [
-      "Sicheng Feng",
-      "Zigeng Chen",
-      "Gongfan Fang",
-      "Xinyin Ma",
-      "Xinchao Wang"
-    ],
-    "authors_affiliations": "National University of Singapore",
-    "published": "2026-05-29",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint (v2, 2026-06-20; working in progress)",
-    "lineage": "diffusion LLM / mixture-of-experts / adaptive expert routing / memory-bound inference",
-    "topics": [
-      "拡散型大規模言語モデル",
-      "混合専門家モデル",
-      "ブロック単位ルーティング",
-      "専門家圧縮",
-      "推論高速化"
-    ],
-    "importance": "拡散LLM特有の並列ブロック処理とトークン単位MoEルーティングの粒度不一致を直接狙い、各トークンの選択専門家数を減らさずにブロック全体の固有専門家集合を縮小する。",
-    "implementation": "公式コードとdMoE-16Bモデルが公開され、LLaDA2.0-miniを基に学習・評価する研究実装。",
-    "hardware_evaluation": "学習は4×NVIDIA H100。推論効率はTransformersおよびSGLangでウォームアップ後に測定。",
-    "quality_effect": "p=0.6では4ベンチマーク平均83.95%から83.2%へ小幅低下し99.11%を維持。圧縮を強めるp=0.5では97.50%維持となり、効率と品質の調整余地がある。",
-    "source": "https://arxiv.org/abs/2605.30876",
-    "sources": [
-      "https://arxiv.org/abs/2605.30876",
-      "https://arxiv.org/html/2605.30876",
-      "https://fscdc.github.io/dMoE/"
-    ],
-    "code": "https://github.com/fscdc/dMoE",
-    "last_checked": "2026-09-20",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary manuscript reference section",
-    "references_total": 74
-  },
+  "attempt_id": "attempt-a57cb67e08f4bd0d41131033",
+  "job_id": "job-research-0f282c93dba72c85",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-7d70a7f1bc8e9a1e1635f401",
+    "claim_id": "claim-a57cb67e08f4bd0d41131033",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

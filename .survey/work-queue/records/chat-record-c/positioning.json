@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-7d70a7f1bc8e9a1e1635f401",
-  "job_id": "job-research-d4631c2cf9f2d1d7",
-  "data": {
-    "limitations": "評価対象はLLaDA2.0-mini中心であり、他のMoE拡散LLMや自己回帰MoEへ同じ効果が出るかは未確認である。公式コメントでも作業継続中のプレプリントで、画像・動画など他モダリティへの拡張は今後の課題である。候補集合を狭めすぎると必要専門家が除外され、p=0.5では平均性能維持率が97.50%まで下がる。学習不要のルーティング制約ではなく自己蒸留を伴う全パラメータ微調整が必要で、4台H100と約70万件の教師応答を使う。DESとの比較は公式実装ではなく著者再実装である。",
-    "differences": "専門家枝刈りや統合は推論前にモデル容量そのものを減らし、Top-4は各トークンが実行する専門家数を減らす。それに対しdMoEは各トークンのk=8を維持し、同じブロックで共有する候補集合を狭めて固有専門家重みの読出しだけを集中させる。EC-DLMは専門家側がトークンを選ぶ方式で負荷分散を改善し、TEAMはノイズ除去段階間の時間・空間的一貫性から専門家を再利用する。DESは候補制約という目的が近いが、dMoEはルータ得点をブロック集約し、適応的top-p集合と自己蒸留を組み合わせてより強い圧縮域で品質維持を狙う。",
-    "implementation_status": "公式GitHub実装とdMoE-16Bモデルが公開されている。論文はarXiv v2（2026-06-20）のプレプリントで、本文コメントはworking in progress。LLaDA2.0-mini上の学習・評価コードを含む。",
-    "research_positioning": "MoE推論効率研究のうち、キャッシュやオフロードで専門家重みの転送を隠すのではなく、ルーティング粒度を拡散デコードのブロック粒度へ合わせて『そもそも触る専門家集合』を減らすアルゴリズム側の手法である。特に並列デコード型MoEではトークン単位ルーティングが固有専門家集合を膨張させるという新しいメモリ律速を示し、専門家キャッシュ・階層メモリ手法と組み合わせる場合にも作業集合縮小の前段として利用できる。"
-  },
+  "attempt_id": "attempt-a57cb67e08f4bd0d41131033",
+  "job_id": "job-research-0f282c93dba72c85",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-7d70a7f1bc8e9a1e1635f401",
+    "claim_id": "claim-a57cb67e08f4bd0d41131033",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
