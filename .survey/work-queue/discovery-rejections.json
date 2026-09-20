@@ -5,11 +5,11 @@
     "immutable_discovery_submissions.rejected_candidates",
     "terminal_research_rejections"
   ],
-  "updated_at": "2026-09-20T01:00:00+09:00",
-  "submission_count": 28,
+  "updated_at": "scheduled-20260921T0330JST",
+  "submission_count": 29,
   "research_terminal_rejection_count": 9,
-  "rejection_observation_count": 71,
-  "rejection_record_count": 69,
+  "rejection_observation_count": 76,
+  "rejection_record_count": 74,
   "ignored_without_identity": 0,
   "records": {
     "id:DOI:10.1007/s10791-026-10449-7": {
@@ -586,6 +586,94 @@
       "source_submission": ".survey/work-queue/submissions/20260919T1900JST-discovery-specialist-energy-9.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2602.04705": {
+      "primary_identity": "id:arXiv:2602.04705",
+      "identity_tokens": [
+        "id:arXiv:2602.04705",
+        "title:ernie 50 technical report",
+        "url:https://www.semanticscholar.org/paper/a00eb9e6df862f35675927ab4e5c14eee3078d07"
+      ],
+      "canonical_id": "arXiv:2602.04705",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "ERNIE 5.0 Technical Report",
+      "source_url": "https://www.semanticscholar.org/paper/a00eb9e6df862f35675927ab4e5c14eee3078d07",
+      "rejection_reason": "汎用foundation model technical reportで、elastic trainingを含むが独立した推論システム研究としての直接性が弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "forward citations of Elastic MoE",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-35-00+09-00-worker30-forward-elasticmoe-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2603.04971": {
+      "primary_identity": "id:arXiv:2603.04971",
+      "identity_tokens": [
+        "id:arXiv:2603.04971",
+        "title:mixture of universal experts scaling virtual width via depthwidth transformation",
+        "url:https://www.semanticscholar.org/paper/a2a97db10bd97d27b4975418ff4d1c653f78ae6d"
+      ],
+      "canonical_id": "arXiv:2603.04971",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Mixture of Universal Experts: Scaling Virtual Width via Depth-Width Transformation",
+      "source_url": "https://www.semanticscholar.org/paper/a2a97db10bd97d27b4975418ff4d1c653f78ae6d",
+      "rejection_reason": "MoEモデルアーキテクチャ・学習スケーリングが主題で、推論システム最適化への直接性がMoSEより弱い。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "forward citations of Elastic MoE",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-35-00+09-00-worker30-forward-elasticmoe-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2603.06626": {
+      "primary_identity": "id:arXiv:2603.06626",
+      "identity_tokens": [
+        "id:arXiv:2603.06626",
+        "title:grouter decoupling routing from representation for accelerated moe training",
+        "url:https://www.semanticscholar.org/paper/688cbee8257319257a3644e3fb341f3ebbc44862"
+      ],
+      "canonical_id": "arXiv:2603.06626",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Grouter: Decoupling Routing from Representation for Accelerated MoE Training",
+      "source_url": "https://www.semanticscholar.org/paper/688cbee8257319257a3644e3fb341f3ebbc44862",
+      "rejection_reason": "主目的がMoE事前学習の収束・training throughput高速化であり今回の推論サーベイ対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "forward citations of Elastic MoE",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-35-00+09-00-worker30-forward-elasticmoe-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2604.03342": {
+      "primary_identity": "id:arXiv:2604.03342",
+      "identity_tokens": [
+        "id:arXiv:2604.03342",
+        "title:mixtureofexperts in remote sensing a survey",
+        "url:https://www.semanticscholar.org/paper/a339991d6c0b53b6191721047f2939dd69c5c065"
+      ],
+      "canonical_id": "arXiv:2604.03342",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Mixture-of-Experts in Remote Sensing: A Survey",
+      "source_url": "https://www.semanticscholar.org/paper/a339991d6c0b53b6191721047f2939dd69c5c065",
+      "rejection_reason": "remote sensing応用のsurveyでLLM推論システムへの直接性がない。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "forward citations of Elastic MoE",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-35-00+09-00-worker30-forward-elasticmoe-01.json",
+      "origin": "discovery_candidate_rejection"
+    },
     "id:arXiv:2604.06668": {
       "primary_identity": "id:arXiv:2604.06668",
       "identity_tokens": [
@@ -650,6 +738,28 @@
       "axis": "programmable serving・agentic runtime・application-specific generation loop",
       "run_key": "2026-09-19T06:00:00+09:00",
       "source_submission": ".survey/work-queue/submissions/20260919T0600JST-discovery-specialist-programmable-serving-1.json",
+      "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2605.12491": {
+      "primary_identity": "id:arXiv:2605.12491",
+      "identity_tokens": [
+        "id:arXiv:2605.12491",
+        "title:elastic attention cores for scalable vision transformers",
+        "url:https://www.semanticscholar.org/paper/43102eac180b55f8d50597b2e9a5cde0cebc1e42"
+      ],
+      "canonical_id": "arXiv:2605.12491",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Elastic Attention Cores for Scalable Vision Transformers",
+      "source_url": "https://www.semanticscholar.org/paper/43102eac180b55f8d50597b2e9a5cde0cebc1e42",
+      "rejection_reason": "Vision Transformer中心でLLM推論システムの対象外。",
+      "rejection_count": 1,
+      "first_rejected_at": "scheduled-20260921T0330JST",
+      "last_rejected_at": "scheduled-20260921T0330JST",
+      "axis": "forward citations of Elastic MoE",
+      "run_key": "scheduled-20260921T0330JST",
+      "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-35-00+09-00-worker30-forward-elasticmoe-01.json",
       "origin": "discovery_candidate_rejection"
     },
     "id:arXiv:2606.03910": {
