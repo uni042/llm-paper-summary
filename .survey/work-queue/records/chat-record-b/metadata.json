@@ -1,13 +1,21 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-4aedf8f4b7b74e0c27817979",
-  "job_id": "job-research-a568c8de790c8043",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4aedf8f4b7b74e0c27817979",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4aedf8f4b7b74e0c27817979","job_id":"job-research-a568c8de790c8043",
+  "data":{
+    "canonical_id":"DOI:10.1145/3731569.3764815","arxiv_id":null,"doi":"10.1145/3731569.3764815","openreview_id":null,
+    "title":"Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market",
+    "summary":"モデル市場では多数のLLMへの要求が疎かつ突発的で、モデルごとの専用GPU予約は大きな遊休資源を生む。Aegaeonは要求単位ではなくトークン単位でモデルを先取り停止・再配置する自動スケーリングを導入し、プリフィルとデコードを分離したSLO指向スケジューリング、推論エンジン部品再利用、明示的GPU/CPUメモリ管理、細粒度KVキャッシュ同期を組み合わせる。16基H800の評価ではServerlessLLMやMuxServeより高い到着率・goodputを達成し、Alibaba Cloud Model Studioの実運用ではH20を1,192基から213基へ削減した。",
+    "list_summary":"トークン単位の先取り自動スケーリングと高速モデル切替で多数LLMをGPUプールへ集約し、実運用でGPU数を82%削減したマルチモデル推論基盤。",
+    "authors":["Yuxing Xiang","Xue Li","Kun Qian","Yufan Yang","Diwen Zhu","Wenyuan Yu","Ennan Zhai","Xuanzhe Liu","Xin Jin","Jingren Zhou"],
+    "published":"2025-10-13","publication":"ACM SIGOPS 31st Symposium on Operating Systems Principles (SOSP '25), pp. 1030-1045","publication_type":"Conference paper","publication_status":"Published at SOSP 2025",
+    "arxiv_categories":null,"lineage":"マルチモデルLLMサービング / GPUプーリング / 自動スケーリング",
+    "topics":["GPUプーリング","マルチモデルサービング","トークン単位自動スケーリング","KVキャッシュ","プリフィル・デコード分離"],
+    "importance":"要求単位の自動スケーリングで生じるhead-of-line blockingを理論・実測の両面から示し、トークン単位の先取り切替を実運用規模まで実装した。モデル市場の長尾ワークロードに対する資源効率改善を本番データで検証している。",
+    "hardware_evaluation":"主要テストベッドは2ノード計16基のNVIDIA H800 80GB、各ノード8基NVLINK接続、2TB DDR5、Intel Xeon Platinum 8469Cを192 CPU。追加で4基A10、8基H800上の72B TP=4、実運用213基H20を評価。",
+    "quality_effect":"TTFT/TBTのトークン期限達成率をSLO指標とし、標準条件はTTFT 10秒・TBT 100ms、厳格条件は最小2秒・20ms。実運用70時間では観測可能なSLO違反やサービス中断なしと報告。",
+    "source":"https://ennanzhai.github.io/pub/sosp25-aegaeon.pdf",
+    "sources":["https://ennanzhai.github.io/pub/sosp25-aegaeon.pdf","https://doi.org/10.1145/3731569.3764815"],
+    "implementation":"vLLMを基礎に、分散executor等を再利用し、モデル重み・KVキャッシュのみをモデル固有に扱う。GPU側自己管理バッファ、CPU側統合KVキャッシュ、重みキャッシュ/プリフェッチ、細粒度同期を実装しAlibaba Cloud Model Studioへベータ展開。",
+    "code":null,"last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":52
+  },
+  "reservation":{"claim_id":"claim-4aedf8f4b7b74e0c27817979","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
