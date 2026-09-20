@@ -170,12 +170,30 @@ def _recover_legacy_terminal_submission(
     }
 
 
+def _precheck_failure_result(source_submission: str, sub: dict, exc: queue_worker.DiscoveryPrecheckError) -> dict[str, Any]:
+    """Durably isolate one invalid immutable round without weakening the precheck guard."""
+    return {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "submission": source_submission,
+        "ok": False,
+        "operation": "submit_discovery_round",
+        "failure_class": "discovery_precheck",
+        "error_code": exc.code,
+        "error": str(exc),
+        "next_action": exc.next_action,
+        "recovery_steps": exc.recovery_steps,
+        "submitted_job_id": sub.get("job_id") if isinstance(sub.get("job_id"), str) else None,
+    }
+
+
 def recover(root: Path) -> dict[str, Any]:
     _configure(root)
     queue_worker.SUBMISSIONS.mkdir(parents=True, exist_ok=True)
     queue_worker.RESULTS.mkdir(parents=True, exist_ok=True)
     st = queue_worker.load_state()
     recovered: list[dict[str, Any]] = []
+    isolated: list[dict[str, Any]] = []
 
     for submission_path in sorted(queue_worker.SUBMISSIONS.glob("*.json")):
         result_path = queue_worker.RESULTS / submission_path.name
@@ -188,9 +206,19 @@ def recover(root: Path) -> dict[str, Any]:
             continue
         source_submission = submission_path.relative_to(queue_worker.ROOT).as_posix()
 
-        result = _recover_self_describing_round(sub, source_submission, existing_result, st)
-        if result is None:
-            result = _recover_legacy_terminal_submission(sub, source_submission, existing_result, st)
+        try:
+            result = _recover_self_describing_round(sub, source_submission, existing_result, st)
+            if result is None:
+                result = _recover_legacy_terminal_submission(sub, source_submission, existing_result, st)
+        except queue_worker.DiscoveryPrecheckError as exc:
+            result = _precheck_failure_result(source_submission, sub, exc)
+            queue_worker.write_json(result_path, result)
+            isolated.append({
+                "submission": source_submission,
+                "error_code": exc.code,
+                "error": str(exc),
+            })
+            continue
         if result is None:
             continue
 
@@ -205,7 +233,12 @@ def recover(root: Path) -> dict[str, Any]:
     # Preserve the normal worker-facing Discovery lane independently of ingest jobs.
     queue_worker.ensure_discovery_job()
     queue_worker.save_state(st)
-    return {"recovered_count": len(recovered), "recovered": recovered}
+    return {
+        "recovered_count": len(recovered),
+        "recovered": recovered,
+        "isolated_count": len(isolated),
+        "isolated": isolated,
+    }
 
 
 def main() -> int:
