@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-74f796116b0c55afd81f6ad5",
-  "job_id": "job-research-8fc74c0fbb46c30e",
-  "data": {
-    "hardware": "カーネル評価はLlama-2-7BをRTX4090、CUDA 12.2で実施。端から端評価はより長い文脈を収めるためNVIDIA RTX 6000 Adaを使用。",
-    "software": "PyTorch、FlashInferを基盤とした専用CUDAカーネル。PagedAttentionのページ単位KV配置を利用し、重要度推定・Top-Kフィルタ・疎注意を統合する。端から端ではFP16重みとAWQ 4ビット重みの両方を評価。",
-    "methodology": "精度はLongChat-v1.5-7B-32kとYarn-Llama-2-7B-128kを用い、PG19の32K言語モデル、10K/100K passkey検索、LongBenchのQasper、HotpotQA、GovReport、TriviaQA、NarrativeQA、MultiFieldQAを評価する。H2O、TOVA、StreamingLLMおよび全注意と、256〜4096等の同一KVトークン予算で比較する。最初の2層は疎性が低いため全方式で原則全KVを保持する。効率はページサイズ16を中心に重要度推定、Top-K、疎注意の各カーネルを512〜64K文脈で測り、8K/16K/32K文脈の端から端デコード遅延も測定する。",
-    "scope": "全KVを保持するため主な削減対象はデコード時の読み出し・注意計算であり、KV保存容量自体は減らさない。速度評価は7B級と特定GPU/FlashInfer実装中心。固定Top-K予算はタスクごとに必要量が異なり、精度と速度のトレードオフを持つ。"
-  },
+  "attempt_id": "attempt-715ca0ac1e2c0533b0313a9c",
+  "job_id": "job-research-b2016b76225eff0c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-74f796116b0c55afd81f6ad5",
+    "claim_id": "claim-715ca0ac1e2c0533b0313a9c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

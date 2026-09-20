@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-74f796116b0c55afd81f6ad5",
-  "job_id": "job-research-8fc74c0fbb46c30e",
-  "data": {
-    "canonical_id": "arXiv:2406.10774",
-    "arxiv_id": "2406.10774",
-    "doi": "10.48550/arXiv.2406.10774",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": [
-        "cs.LG"
-      ]
-    },
-    "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
-    "summary": "Questは、長文脈デコードでKVキャッシュ全体を毎トークン読み込む帯域律速を、現在のクエリに応じたページ選択で削減する疎注意方式である。KVページごとにキー各チャネルの最小値・最大値だけをメタデータとして保持し、クエリとの積からページ内最大注意ロジットの上界を安価に推定して上位Kページだけを読み込む。全KV自体は捨てないため将来のクエリで重要になるトークンを復活できる。FlashInferベースのCUDA実装で32K文脈の自己注意を最大7.03倍、4ビット重み併用時の端から端推論を2.23倍高速化した。",
-    "list_summary": "KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。",
-    "authors": [
-      "Jiaming Tang",
-      "Yilong Zhao",
-      "Kan Zhu",
-      "Guangxuan Xiao",
-      "Baris Kasikci",
-      "Song Han"
-    ],
-    "published": "2024-06-16",
-    "publication": "ICML 2024 / PMLR 235",
-    "publication_type": "Conference",
-    "publication_status": "Published",
-    "lineage": "疎注意 / KVキャッシュ選択 / 長文脈推論",
-    "topics": [
-      "クエリ依存疎性",
-      "KVページ選択",
-      "PagedAttention",
-      "長文脈推論",
-      "メモリ帯域"
-    ],
-    "importance": "過去の注意履歴でKVを永久削除する方式と異なり、現在クエリごとに全KVから候補ページを再選択することで長距離依存を保ちつつ実カーネル高速化を示した。",
-    "hardware_evaluation": "カーネル評価はRTX 4090/CUDA 12.2、端から端評価はAda 6000。LongChat-7B-32kとYarn-Llama-2-7B-128k等を使用。",
-    "quality_effect": "PG19、長距離passkey、LongBenchで同一KV予算の履歴ベース削除方式より高精度。多くのLongBenchタスクで全注意相当の品質を1/5〜1/10程度のKV予算で維持。",
-    "source": "https://arxiv.org/abs/2406.10774",
-    "sources": [
-      "https://arxiv.org/abs/2406.10774",
-      "https://arxiv.org/pdf/2406.10774"
-    ],
-    "implementation": "FlashInfer/PageAttentionを基盤に、ページ重要度推定、Top-K選択、疎KVロードと注意を専用CUDAカーネルで実装。",
-    "code": "https://github.com/mit-han-lab/Quest",
-    "last_checked": "2026-09-20",
-    "references": [],
-    "references_checked_at": "2026-09-20",
-    "references_source": "primary-reference-section",
-    "references_total": 42
-  },
+  "attempt_id": "attempt-715ca0ac1e2c0533b0313a9c",
+  "job_id": "job-research-b2016b76225eff0c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-74f796116b0c55afd81f6ad5",
+    "claim_id": "claim-715ca0ac1e2c0533b0313a9c",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
