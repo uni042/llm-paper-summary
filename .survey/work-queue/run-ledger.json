@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T11:30:53.577627+00:00",
+  "updated_at": "2026-09-20T11:36:25.350558+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T11:30:53.577627+00:00",
+      "last_recorded_at": "2026-09-20T11:36:25.350558+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 381,
+        "research_completed": 382,
         "audit_completed": 0,
         "discovery_completed": 210,
         "blocked": 54,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35487241518:1",
-          "recorded_at": "2026-09-20T03:42:03.669087+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35487241518",
-            "run_attempt": "1",
-            "source_sha": "41d860cc1becf92d9167515c45213316fb669bef"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35487413205:1",
           "recorded_at": "2026-09-20T03:45:56.475834+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35508280860:1",
+          "recorded_at": "2026-09-20T11:36:25.350558+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35508280860",
+            "run_attempt": "1",
+            "source_sha": "8e0bb187cdd777de9f3089d83610d2c7e7d63c5f"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -24756,6 +24756,14 @@
           "title": "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-b0f3ab31cdfd9a01",
+          "type": "research",
+          "canonical_id": "arXiv:2603.11535",
+          "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -28096,7 +28104,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 847,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
