@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-61774f4ac669457f0e035bd8",
-  "job_id": "job-research-9c3fc1bfa46c87d0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-61774f4ac669457f0e035bd8",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-61774f4ac669457f0e035bd8","job_id":"job-research-9c3fc1bfa46c87d0","data":{"limitations":"効果は同じ文章断片が複数要求で再利用されることを前提とし、ほぼ全入力が毎回異なる場合はキャッシュ機会が少ない。TTFTのみを直接削減し、通常デコードの計算量は変えない。KV状態の保存量はモデル規模に比例して大きく、GPU容量だけで多数の長文モジュールを保持するのは難しい。CPU保存ではホスト・デバイス転送が必要である。論文はGPU/CPU間の置換、プリフェッチ、圧縮を将来課題としており、大規模な実運用キャッシュ管理は未解決である。またモジュール独立符号化は注意範囲を制限する近似で、全タスクで厳密に同一出力を保証しない。","differences":"PagedAttentionの接頭辞共有は同一先頭部分の再利用が中心だが、Prompt Cacheは固定位置IDと明示スキーマにより途中の複数断片を選択して組み合わせる。AttMemo型の類似度検索とは異なり、再利用対象を利用者がモジュールとして明示するため検索誤判定を避ける。KV圧縮・枝刈り方式が単一要求のキャッシュ量を減らすのに対し、本方式は要求間で計算済みKVそのものを共有し、主にプリフィル計算を省く。","implementation_status":"著者コードと評価データが公開され、HuggingFace Transformers/PyTorch上の約3千行の試作として実装済み。Llama2、Falcon、MPTの位置符号化へ離散位置ID対応を加え、CPU/GPU双方のキャッシュ保存を実装する。論文時点では本格的な置換・先読みポリシーを備えたサービング基盤ではなく、モジュール再利用機構の試作である。","research_positioning":"要求間KV再利用を、単純な共通接頭辞から構造化された任意の共通文脈へ拡張した初期のサービング研究として位置付けられる。長文RAG、共通システム指示、テンプレート、共有文書のようにプリフィル重複が大きいワークロードで、CPU/GPU階層キャッシュやPagedAttentionと組み合わせる基盤要素を提示した。後続のプロンプトキャッシュや文脈ロード高速化研究と比較する際は、TTFT削減とキャッシュ容量・転送の交換関係を明示した点が重要である。"},"reservation":{"claim_id":"claim-61774f4ac669457f0e035bd8","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
