@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T03:38:43.879687+00:00",
+  "updated_at": "2026-09-20T03:42:03.669087+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T03:38:43.879687+00:00",
+      "last_recorded_at": "2026-09-20T03:42:03.669087+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 334,
+        "research_completed": 335,
         "audit_completed": 0,
         "discovery_completed": 193,
         "blocked": 46,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35436283245:1",
-          "recorded_at": "2026-09-19T10:05:49.502615+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "35436283245",
-            "run_attempt": "1",
-            "source_sha": "5517ee2602751eb6cd716ec2f6308ad12e029913"
-          },
-          "signals": [
-            "discovery_or_queue_expanded",
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35436466106:1",
           "recorded_at": "2026-09-19T10:09:28.543125+00:00",
@@ -19595,6 +19580,20 @@
             "run_id": "35487078924",
             "run_attempt": "1",
             "source_sha": "14ea88f2bb8f14c61462147eb3ecd8e9d7fef8b8"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35487241518:1",
+          "recorded_at": "2026-09-20T03:42:03.669087+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35487241518",
+            "run_attempt": "1",
+            "source_sha": "41d860cc1becf92d9167515c45213316fb669bef"
           },
           "signals": [
             "research_completed"
@@ -24183,6 +24182,14 @@
           "type": "research",
           "canonical_id": "arXiv:2401.11181",
           "title": "Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-abc92cd8a94f1144",
+          "type": "research",
+          "canonical_id": "arXiv:2404.14469",
+          "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
           "from": "ready",
           "to": "completed"
         }

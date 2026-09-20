@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:41:25 JST**
+> 自動生成: **2026-09-20 12:42:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **74** |
+| 収録候補論文 | **73** |
 | 未claim Research job | **73** |
-| 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-20 12:38:38 JST（2分前）** |
+| 直近24hの検証済みResearch収録 | **47** |
+| 最終検証済みResearch収録 | **09-20 12:42:01 JST（2秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **74** |
+| canonical_id確認済みの一意な候補論文 | **73** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **74** |
+| 非終端Research job合計 | **73** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **18** | **5** | **1** | **0** | **1** | **0** | — |
+| Research | **18** | **6** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **18** | **6** | **2** | **0** | **1** | **0** | **5** |
+| 合計 | **18** | **7** | **3** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 12:42:01 JST** [research] `arXiv:2404.14469` — SnapKV: LLM Knows What You are Looking for Before Generation
+  - job: `.survey/work-queue/jobs/job-research-abc92cd8a94f1144.json`
+  - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee-repair1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee-repair1.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md`
 - **09-20 12:38:38 JST** [research] `arXiv:2401.11181` — Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads
   - job: `.survey/work-queue/jobs/job-research-4786c27e72f86caf.json`
   - result: `.survey/work-queue/results/research/attempt-f924026a9c059a8203a1b596-repair2.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-6500850523776f2b702f4a6d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6500850523776f2b702f4a6d.json`
   - paper: `papers/inference/05-speculative-decoding/2023-2302.01318-speculative-sampling.md`
-- **09-20 11:42:15 JST** [research] `DOI:10.1145/3731569.3764815` — Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market
-  - job: `.survey/work-queue/jobs/job-research-a568c8de790c8043.json`
-  - result: `.survey/work-queue/results/research/attempt-4aedf8f4b7b74e0c27817979.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4aedf8f4b7b74e0c27817979.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md`
 
 ### Audit
 
@@ -112,7 +112,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 12:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **1件** / result照合済み非成功: **4件** / 個別result未照合: **0件**
+- immutable submission: **6件** / 検証済み成功: **2件** / result照合済み非成功: **4件** / 個別result未照合: **0件**
+- **成功** `arXiv:2404.14469` — SnapKV: LLM Knows What You are Looking for Before Generation
+  - job: `.survey/work-queue/jobs/job-research-abc92cd8a94f1144.json`
+  - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee-repair1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee-repair1.json`
+  - paper: `papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-391330299d0747934ae3c7ee.json` (job `job-research-abc92cd8a94f1144`, failure_class `content_validation`)
   - result: `.survey/work-queue/results/research/attempt-391330299d0747934ae3c7ee.json` (`ok=false`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f50aea1a300a90e85b31bf68.json` (job `job-research-2e7cd1c4e1dc851d`, failure_class `non_success`)
@@ -147,10 +152,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2404.14469` — SnapKV: LLM Knows What You are Looking for Before Generation / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 12:39:06 JST** / heartbeat: **—** / lease expiry: **09-20 14:09:06 JST**
-  - evidence: `.survey/work-queue/claims/job-research-abc92cd8a94f1144.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -170,7 +173,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **74** |
+| ready | **73** |
 
 ### 候補の重複・識別情報欠損
 
@@ -190,7 +193,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **798** |
+| inference/training/survey配下の論文Markdown実体 | **799** |
 
 ### immutable submissionの未照合
 
