@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 23:45:22 JST**
+> 自動生成: **2026-09-20 23:46:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **201** |
 | 未claim Research job | **200** |
 | 直近24hの検証済みResearch収録 | **88** |
-| 最終検証済みResearch収録 | **09-20 23:43:39 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-20 23:43:39 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -167,9 +167,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.08780` — Sticky Routing: Training MoE Models for Memory-Efficient Inference / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 23:44:17 JST** / heartbeat: **—** / lease expiry: **09-21 01:14:17 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f32c4d7018f358c2.json`
+- `arXiv:2510.13999` — REAP the Experts: Why Pruning Prevails for One-Shot MoE compression / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 23:45:55 JST** / heartbeat: **—** / lease expiry: **09-21 01:15:55 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2dff89406766fc1d.json`
 
 #### Audit
 
