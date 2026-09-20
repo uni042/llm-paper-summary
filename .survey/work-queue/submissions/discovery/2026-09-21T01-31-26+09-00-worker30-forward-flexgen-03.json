@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "precheck_result_path": ".survey/work-queue/discovery-precheck/results/20260921T0134JST-worker30-forward-flexgen-03.json",
+  "precheck_receipt": "sha256:02b7e048aa6e430520b27805cee954c21e6d49d0c229b56b715086c77257417a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.19207",
+      "title": "MeshKV: A Network-on-Chip KV Cache Fabric for Scalable Transformer Decoding Accelerators",
+      "source_url": "https://arxiv.org/abs/2609.19207",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.19207-meshkv-noc-kv-cache-fabric.md",
+      "priority": 91,
+      "reason": "KV cache移動をNoC上のpacketized flowとして扱い、8x8 FPGA評価でinterconnect traffic最大58%削減、KV bandwidth utilization 2.1倍、multi-stream throughput最大1.9倍を報告する。長文脈decodeのmemory/interconnect bottleneckに直接関係するsystem研究。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-21T01:31:26+09:00-worker30",
+    "round": "forward-flexgen-03",
+    "axis": "forward citations from FlexGen offload lineage",
+    "query_summary": "FlexGen前方引用を正規schema-v3 precheckで取得し、未評価20件を品質スクリーニング。KV cache fabricを直接扱うMeshKVを強い候補として選定した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 39,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "別ページのPagedAttention/vLLM前方引用へ進む",
+    "empty_round_reason": null
+  }
+}
