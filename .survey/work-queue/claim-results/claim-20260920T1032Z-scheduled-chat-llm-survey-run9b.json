@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T1032Z-scheduled-chat-llm-survey-run9b",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-8f68f6b8d4d62651",
+      "claim_id": "claim-92a81eea4a04eb4c80bbed4e",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-92a81eea4a04eb4c80bbed4e",
+      "claimed_at": "2026-09-20T10:32:10+00:00",
+      "expires_at": "2026-09-20T12:02:10+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-8f68f6b8d4d62651"
+      ],
+      "job": {
+        "job_id": "job-research-8f68f6b8d4d62651",
+        "type": "research",
+        "parent_job_id": "job-5b45b987a6b3d98b",
+        "priority": 98,
+        "canonical_id": "arXiv:2608.15299",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation",
+        "source_url": "https://arxiv.org/abs/2608.15299",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.15299-maple-layer-wise-expert-allocation.md",
+        "selection_reason": "MAPLEはpretrained MoEの重みを変えず、layer sensitivityからexpert budgetを非一様配分するplug-and-play方式。75% expert budgetで品質を維持・改善し、SGLang実装でsingle-GPU latency 32.2%減・throughput 47.4%増を報告しており、適応的expert数配分の実測系として価値が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T10:19:13+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T10:32:10+00:00",
+  "checkpoint_released": 0
+}
