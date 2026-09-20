@@ -1,6 +1,6 @@
 # 学習システム研究
 
-収録論文: **23本**。
+収録論文: **25本**。
 
 事前学習（pre-training）、追加学習（fine-tuning）、分散学習、最適化状態（optimizer state）・活性値（activation）・パラメータ（parameter）のメモリ管理など、**モデルを学習・更新する工程そのものを高速化したり、必要なGPUメモリを減らしたりする研究**を収録する。
 
@@ -20,11 +20,11 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-学習論文：**23本**。
+学習論文：**25本**。
 
 | 系統 | 本数 |
 |---|---:|
 | [01-training-offload-memory-systems](01-training-offload-memory-systems/README.md) | 14 |
 | [02-distributed-heterogeneous-moe-training](02-distributed-heterogeneous-moe-training/README.md) | 8 |
-| [03-pipeline-parallel-modular-training](03-pipeline-parallel-modular-training/README.md) | 1 |
+| [03-pipeline-parallel-modular-training](03-pipeline-parallel-modular-training/README.md) | 3 |
 <!-- survey:auto:end -->

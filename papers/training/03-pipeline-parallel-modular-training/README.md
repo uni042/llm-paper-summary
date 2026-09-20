@@ -16,7 +16,7 @@
 CPU DRAMやSSD/NVMeへparameter・optimizer state・activationを退避することが中心なら `01-training-offload-memory-systems/`、MoE expertのGPU配置・複製・all-to-all通信が中心なら `02-distributed-heterogeneous-moe-training/` に分類する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1本）
+## 自動生成の論文一覧（3本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -30,4 +30,14 @@ CPU DRAMやSSD/NVMeへparameter・optimizer state・activationを退避するこ
 - **2026-08 · [ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling](2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md)**  
   実装：[✓](https://anonymous.4open.science/r/unlock_trainer-105B) ・ リポジトリ内被引用：0  
   モデルを複数チャンクへ分け、各チャンクを局所目的関数で独立更新して下流の逆伝播待ちと下流更新中の長時間の活性値保持を減らし、パイプライン並列のメモリ・通信・バブルを減らす微調整方式。
+
+### 3年前（2023-10〜2024-09）
+
+- **2023-11 · [Striped Attention: Faster Ring Attention for Causal Transformers](2023-2311.09431-striped-attention.md)**  
+  実装：[✓](https://github.com/exists-forall/striped_attention) ・ リポジトリ内被引用：7  
+  Ring 注意機構の連続分割を縞状のトークン配置へ変え、因果マスクで省略できる計算を全装置へ均等化して長文Transformer学習を高速化する厳密注意方式。
+
+- **2024-05 · [NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment](2024-2405.01481-nemo-aligner.md)**  
+  実装：[✓](https://github.com/NVIDIA/NeMo-Aligner) ・ リポジトリ内被引用：1  
+  整合学習の複数モデルを分散配置し、TensorRT-LLM生成・非同期通信・重み再配置を統合して、PPOを1000 GPU級まで拡張する学習基盤。
 <!-- survey:auto:end -->

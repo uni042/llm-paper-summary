@@ -55,7 +55,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 4年前（2022-10〜2023-09）
 
 - **2023-04 · [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：12  
   MoEのルーティング偏りを監視し、負荷の高いエキスパートだけを必要なGPUへ複製・移動して、トークンを捨てずにGPU間の待ち時間を減らす学習システム。
 
 ### 6年前（2020-10〜2021-09）
@@ -67,6 +67,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 7年前（2019-10〜2020-09）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
-  実装：✓ ・ リポジトリ内被引用：46  
+  実装：✓ ・ リポジトリ内被引用：48  
   疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。
 <!-- survey:auto:end -->

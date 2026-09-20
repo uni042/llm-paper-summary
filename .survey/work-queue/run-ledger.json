@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:20:52.601292+00:00",
+  "updated_at": "2026-09-20T10:29:00.113316+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:20:52.601292+00:00",
+      "last_recorded_at": "2026-09-20T10:29:00.113316+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 377,
         "audit_completed": 0,
-        "discovery_completed": 197,
+        "discovery_completed": 198,
         "blocked": 49,
-        "new_jobs": 312,
-        "new_papers": 360,
+        "new_jobs": 318,
+        "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35479848482:1",
-          "recorded_at": "2026-09-20T00:51:26.049476+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35479848482",
-            "run_attempt": "1",
-            "source_sha": "144107b4e9b5c627003e8a891949c26bb03c4030"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35482031051:1",
           "recorded_at": "2026-09-20T01:43:51.133329+00:00",
@@ -19592,6 +19578,21 @@
           },
           "signals": [
             "research_completed"
+          ]
+        },
+        {
+          "event_id": "35504883098:1",
+          "recorded_at": "2026-09-20T10:29:00.113316+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35504883098",
+            "run_attempt": "1",
+            "source_sha": "95ec2f483ddd25d5f929735f4ce8a342cfeecc9f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
           ]
         }
       ],
@@ -24579,6 +24580,14 @@
           "title": "Teola: Towards End-to-End Optimization of LLM-based Applications",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-9190571b18f6a526",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26765,6 +26774,48 @@
           "type": "research",
           "canonical_id": "arXiv:2405.05254",
           "title": "You Only Cache Once: Decoder-Decoder Architectures for Language Models"
+        },
+        {
+          "job_id": "job-9190571b18f6a526",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-015600d4d42febc5",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.07814",
+          "title": "Shape Mutating Expert Compression:LorExperts and BTExperts"
+        },
+        {
+          "job_id": "job-research-3b1c7287727937a1",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.06076",
+          "title": "Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment"
+        },
+        {
+          "job_id": "job-research-a46b5d827d3949cf",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.07890",
+          "title": "Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models"
+        },
+        {
+          "job_id": "job-research-f43aa8f1dfa7e573",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.14438",
+          "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE"
+        },
+        {
+          "job_id": "job-research-f837d96601e69237",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.24938",
+          "title": "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration"
         }
       ],
       "new_paper_ids": [
@@ -27127,7 +27178,33 @@
         "arXiv:2604.12171",
         "arXiv:2605.00528",
         "arXiv:2606.02091",
-        "arXiv:2607.25852"
+        "arXiv:2607.25852",
+        "DOI:10.18653/v1/2025.naacl-long.601",
+        "DOI:10.18653/v1/2026.acl-long.1683",
+        "DOI:10.18653/v1/2026.acl-long.1811",
+        "DOI:10.18653/v1/2026.findings-acl.2153",
+        "DOI:10.18653/v1/2026.findings-acl.558",
+        "arXiv:2310.07177",
+        "arXiv:2311.04934",
+        "arXiv:2311.09431",
+        "arXiv:2401.07851",
+        "arXiv:2404.15778",
+        "arXiv:2405.01481",
+        "arXiv:2405.02842",
+        "arXiv:2405.11299",
+        "arXiv:2405.12981",
+        "arXiv:2407.00326",
+        "arXiv:2407.20018",
+        "arXiv:2409.16694",
+        "arXiv:2410.11845",
+        "arXiv:2410.13276",
+        "arXiv:2412.14219",
+        "arXiv:2502.07903",
+        "arXiv:2504.19442",
+        "arXiv:2605.18810",
+        "arXiv:2605.26297",
+        "arXiv:2605.29343",
+        "arXiv:2608.06989"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -27514,8 +27591,8 @@
         ".survey/work-queue/fallback-archive/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04-library-recovery-v1.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 821,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 847,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

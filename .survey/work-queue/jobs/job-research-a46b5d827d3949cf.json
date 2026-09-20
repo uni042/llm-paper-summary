@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-a46b5d827d3949cf",
+  "type": "research",
+  "parent_job_id": "job-9190571b18f6a526",
+  "priority": 97,
+  "canonical_id": "arXiv:2608.07890",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models",
+  "source_url": "https://arxiv.org/abs/2608.07890",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.07890-router-sensitivity-prunable-experts.md",
+  "selection_reason": "router-only lightweight adaptationで生じるrouter norm変化をexpert重要度としてone-shot pruningに使う。Mixtralでexpert半減時にmemory 49%減・per-token latency 37%減を報告し、理論的pruning signalを低コスト適応で実用化する点がCompression系統に有用。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:24:57+00:00"
+}

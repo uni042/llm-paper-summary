@@ -12,11 +12,19 @@
   "source_url": "https://arxiv.org/abs/2412.14219",
   "paper_path": "papers/survey/04-moe-inference/2024-2412.14219-moe-inference-optimization-survey.md",
   "selection_reason": "Focused MoE inference-optimization survey spanning model-, system-, and hardware-level techniques, useful as a lineage map for the MoE survey.",
-  "status": "ready",
+  "status": "superseded",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T03:59:25+00:00"
+  "created_at": "2026-09-20T03:59:25+00:00",
+  "completed_at": "2026-09-20T10:24:45+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2412.14219",
+  "duplicate_of_path": "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2412.14219"
+  }
 }

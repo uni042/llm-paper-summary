@@ -20,11 +20,11 @@
   実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：2  
   専門家内部の不要チャネルを予測して転送対象を削り、次層の専門家を先読みすることで、小容量GPU上のMoE推論を高速化する。
 
+- **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
+
 - **2025-03 · [Accelerating MoE Model Inference with Expert Sharding](2025-2503.08467-moe-expert-sharding.md)**  
   実装：[✓](https://github.com/sacs-epfl/moe-inference) ・ リポジトリ内被引用：0  
   全エキスパートを全GPUへテンソル分割してルーティング偏りを計算負荷偏りから切り離し、カーネル融合でMoEエンコーダ推論を高速化する。
-
-- **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
 <!-- survey:auto:end -->
