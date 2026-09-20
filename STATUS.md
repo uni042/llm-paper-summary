@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:20:40 JST**
+> 自動生成: **2026-09-20 19:20:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **99** |
+| 収録候補論文 | **98** |
 | 未claim Research job | **98** |
-| 直近24hの検証済みResearch収録 | **83** |
-| 最終検証済みResearch収録 | **09-20 19:16:54 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **84** |
+| 最終検証済みResearch収録 | **09-20 19:20:46 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **99** |
+| canonical_id確認済みの一意な候補論文 | **98** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **99** |
+| 非終端Research job合計 | **98** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **11** | **8** | **1** | **1** | **0** | — |
+| Research | **38** | **11** | **9** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **12** | **9** | **1** | **1** | **0** | **5** |
+| 合計 | **38** | **12** | **10** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 19:20:46 JST** [research] `arXiv:2407.00326` — Teola: Towards End-to-End Optimization of LLM-based Applications
+  - job: `.survey/work-queue/jobs/job-research-6778a26f7c6381c5.json`
+  - result: `.survey/work-queue/results/research/attempt-0035fe851a4c5bf25fbbacc2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-0035fe851a4c5bf25fbbacc2.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md`
 - **09-20 19:16:54 JST** [research] `arXiv:2605.18810` — D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting
   - job: `.survey/work-queue/jobs/job-research-2b2648af1ffd1107.json`
   - result: `.survey/work-queue/results/research/attempt-682f2ca2eca58d18d9e46ca8.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-018be4cd03a3fdd526c3cb8e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-018be4cd03a3fdd526c3cb8e.json`
   - paper: `papers/inference/07-kv-cache-optimization-compression/2026-lazyeviction.md`
-- **09-20 18:06:15 JST** [research] `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention
-  - job: `.survey/work-queue/jobs/job-research-ab19fa17920fb404.json`
-  - result: `.survey/work-queue/results/research/attempt-09fd18d9c803c17379a43783.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-09fd18d9c803c17379a43783.json`
-  - paper: `papers/inference/06-kv-cache-memory/2024-2405.12981-cross-layer-attention.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **11件** / 検証済み成功: **8件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-0035fe851a4c5bf25fbbacc2.json` (job `job-research-6778a26f7c6381c5`)
+- immutable submission: **11件** / 検証済み成功: **9件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- **成功** `arXiv:2407.00326` — Teola: Towards End-to-End Optimization of LLM-based Applications
+  - job: `.survey/work-queue/jobs/job-research-6778a26f7c6381c5.json`
+  - result: `.survey/work-queue/results/research/attempt-0035fe851a4c5bf25fbbacc2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-0035fe851a4c5bf25fbbacc2.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md`
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -189,10 +193,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2407.00326` — Teola: Towards End-to-End Optimization of LLM-based Applications / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 19:17:46 JST** / heartbeat: **—** / lease expiry: **09-20 20:47:46 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6778a26f7c6381c5.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -212,7 +214,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **99** |
+| ready | **98** |
 
 ### 候補の重複・識別情報欠損
 
@@ -232,7 +234,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **846** |
+| inference/training/survey配下の論文Markdown実体 | **847** |
 
 ### immutable submissionの未照合
 
@@ -240,8 +242,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **766** |
-| └ Research | **579** |
+| 成功result未照合のimmutable submission | **765** |
+| └ Research | **578** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **40** |

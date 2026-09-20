@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:16:59.974022+00:00",
+  "updated_at": "2026-09-20T10:20:52.601292+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:16:59.974022+00:00",
+      "last_recorded_at": "2026-09-20T10:20:52.601292+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 376,
+        "research_completed": 377,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 49,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35479693062:1",
-          "recorded_at": "2026-09-20T00:47:44.886969+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35479693062",
-            "run_attempt": "1",
-            "source_sha": "188efa60292f7ef629e0b76262fe619f12107215"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35479848482:1",
           "recorded_at": "2026-09-20T00:51:26.049476+00:00",
@@ -19589,6 +19575,20 @@
             "run_id": "35504607913",
             "run_attempt": "1",
             "source_sha": "a03a069efe099dedc5b701d678e1a5de51fb7c75"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35504785902:1",
+          "recorded_at": "2026-09-20T10:20:52.601292+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35504785902",
+            "run_attempt": "1",
+            "source_sha": "df1511ce7459578bcc8c3d1c87f3934340d84a94"
           },
           "signals": [
             "research_completed"
@@ -24569,6 +24569,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.18810",
           "title": "D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-6778a26f7c6381c5",
+          "type": "research",
+          "canonical_id": "arXiv:2407.00326",
+          "title": "Teola: Towards End-to-End Optimization of LLM-based Applications",
           "from": "ready",
           "to": "completed"
         }
