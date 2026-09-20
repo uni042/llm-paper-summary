@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-31c2c5e14daaa2ebda862c39",
-  "job_id": "job-research-06ec3586821ff3bb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-31c2c5e14daaa2ebda862c39",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-31c2c5e14daaa2ebda862c39","job_id":"job-research-06ec3586821ff3bb","data":{"canonical_id":"arXiv:2309.08168","arxiv_id":"2309.08168","doi":"10.48550/arXiv.2309.08168","openreview_id":"ACC2nQYzPYS","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding","summary":"自己投機的デコードは、別の下書きモデルを用意せず、元の大規模言語モデル自身で中間層を選択的に飛ばして高速な下書きを作り、完全な元モデルで複数候補を一括検証する。飛ばす層はオフラインのベイズ最適化で選び、下書き継続長は受理率に応じた適応しきい値で決める。LLaMA-2 13B/70B、Chat、CodeLLaMAで出力品質を保ちながら最大1.99倍高速化し、追加モデル学習や追加モデル用GPUメモリを不要にする。","list_summary":"元モデルの中間層を一時的に飛ばして下書きを生成し、完全モデルで一括検証することで、追加下書きモデルなしに最大約2倍の損失なしデコード高速化を実現する。","authors":["Jun Zhang","Jue Wang","Huan Li","Lidan Shou","Ke Chen","Gang Chen","Sharad Mehrotra"],"published":"2023-09-14","publication":"arXiv:2309.08168 / OpenReview","publication_type":"Preprint","publication_status":"Preprint","lineage":"投機的デコード / 自己投機的デコード / 層スキップ","topics":["自己投機的デコード","層スキップ","ベイズ最適化","適応下書き終了","損失なし推論高速化"],"importance":"補助下書きモデルの選定・学習・メモリ常駐を不要にし、微調整済みモデルにも同一パラメータ共有のまま投機的デコードを適用できる基礎方式。","hardware_evaluation":"13B系はA100 40GB 1基、70BはA100 80GB 2基とHuggingFace Accelerate。CUDA 11.6/11.8、PyTorch 1.13.1/2.0.1、Transformers 4.33.1。","quality_effect":"貪欲生成では通常自己回帰と同一出力を目標とし、サンプリングでは元モデルと同じ分布を維持する。ROUGEとHumanEvalでも同等。","source":"https://arxiv.org/abs/2309.08168","sources":["https://arxiv.org/abs/2309.08168","https://arxiv.org/html/2309.08168"],"implementation":"中間Attention/MLP層を飛ばす下書き経路と完全モデル検証を同一重みで実装。モデルごとに1000回のベイズ最適化を行いスキップ組合せを固定する。","code":"https://openreview.net/attachment?id=ACC2nQYzPYS&name=software","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":66},"reservation":{"claim_id":"claim-31c2c5e14daaa2ebda862c39","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
