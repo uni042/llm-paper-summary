@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-a56fb97ebb61025c85c8af06",
+  "job_id": "job-research-901c881ed2cc963f",
+  "claim_id": "claim-a56fb97ebb61025c85c8af06",
+  "worker_id": "scheduled-chat-llm-survey",
+  "status": "blocked",
+  "reason": "Primary-source full text could not be safely retrieved through materially distinct official routes in this attempt. The official arXiv abstract/metadata page was retrievable, while direct official arXiv HTML and PDF fetches both returned DisabledError. Search exposed third-party renderings only; workflow policy requires a primary-source full reading before producing the five-slot record.",
+  "retrieval_evidence": [
+    "https://arxiv.org/abs/2608.26650 — official arXiv metadata/abstract retrievable",
+    "https://arxiv.org/html/2608.26650 — runtime DisabledError",
+    "https://arxiv.org/pdf/2608.26650 — runtime DisabledError",
+    "Third-party renderings found but intentionally not used as primary-source evidence"
+  ],
+  "blocked_at": "2026-09-20T13:37:00Z"
+}
