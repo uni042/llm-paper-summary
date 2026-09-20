@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:32:20 JST**
+> 自動生成: **2026-09-20 19:32:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **12** | **9** | **0** | **1** | **0** | — |
+| Research | **38** | **1** | **0** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **38** | **13** | **10** | **0** | **1** | **0** | **5** |
+| 合計 | **38** | **2** | **1** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -126,53 +126,13 @@
 
 #### Research (:30)
 
-- 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **12件** / 検証済み成功: **9件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
-- **成功** `arXiv:2407.00326` — Teola: Towards End-to-End Optimization of LLM-based Applications
-  - job: `.survey/work-queue/jobs/job-research-6778a26f7c6381c5.json`
-  - result: `.survey/work-queue/results/research/attempt-0035fe851a4c5bf25fbbacc2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0035fe851a4c5bf25fbbacc2.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md`
-- **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
-  - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
-  - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-130c102f178d2a82b4f2f771.json`
-  - paper: `papers/inference/10-sparse-attention/2026-delta.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-36775161dea47254d363d39c.json` (job `job-research-89e4b35d6854b9b6`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-36775161dea47254d363d39c.json` (`ok=true`)
-- **成功** `arXiv:2310.07177` — Online Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-3cf2e0a916913e29.json`
-  - result: `.survey/work-queue/results/research/attempt-3e00451f32958b311cdc3f3c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3e00451f32958b311cdc3f3c.json`
-  - paper: `papers/inference/05-speculative-decoding/2023-2310.07177-online-speculative-decoding.md`
-- **成功** `arXiv:2605.18810` — D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting
-  - job: `.survey/work-queue/jobs/job-research-2b2648af1ffd1107.json`
-  - result: `.survey/work-queue/results/research/attempt-682f2ca2eca58d18d9e46ca8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-682f2ca2eca58d18d9e46ca8.json`
-  - paper: `papers/inference/06-speculative-decoding/2026-2605.18810-d-pace.md`
-- **成功** `arXiv:2311.09431` — Striped Attention: Faster Ring Attention for Causal Transformers
-  - job: `.survey/work-queue/jobs/job-research-8c68e144047ac9bb.json`
-  - result: `.survey/work-queue/results/research/attempt-726aa6f9d7bb4140731a500b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-726aa6f9d7bb4140731a500b.json`
-  - paper: `papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md`
-- **成功** `arXiv:2608.06989` — Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM
-  - job: `.survey/work-queue/jobs/job-research-2e7cd1c4e1dc851d.json`
-  - result: `.survey/work-queue/results/research/attempt-ade4ad902d6f7670ee635b88.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ade4ad902d6f7670ee635b88.json`
-  - paper: `papers/inference/05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-bb698348ca635e022360ff70.json` (job `job-research-c0742ec707ffbbe8`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-bb698348ca635e022360ff70.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-d6d0f050a2bc6af8b178330b.json` (job `job-research-d5278ec0af97bd4e`, failure_class `state_or_transport_guard`)
-  - result: `.survey/work-queue/results/research/attempt-d6d0f050a2bc6af8b178330b.json` (`ok=false`)
-- **成功** `arXiv:2605.26297` — Agentic AI Workload Characteristics
-  - job: `.survey/work-queue/jobs/job-research-b8f01545319d9604.json`
-  - result: `.survey/work-queue/results/research/attempt-d9bfe22acbd9e709c4fcf1f8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d9bfe22acbd9e709c4fcf1f8.json`
-  - paper: `papers/inference/12-benchmarking-modeling-emulation/2026-2605.26297-agentic-ai-workload-characteristics.md`
+- 最新観測run: **2026-09-20 19:30 JST** / worker `scheduled-chat-llm-survey`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-92a81eea4a04eb4c80bbed4e.json` (job `job-research-8f68f6b8d4d62651`)
 
 #### Audit (:30)
 
-- 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-20 19:30 JST** / worker `scheduled-chat-llm-survey`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -241,8 +201,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **770** |
-| └ Research | **579** |
+| 成功result未照合のimmutable submission | **771** |
+| └ Research | **580** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **44** |
