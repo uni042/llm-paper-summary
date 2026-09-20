@@ -211,3 +211,17 @@ jobs:
           done
           echo 'Failed to publish maintenance results after 5 retries.' >&2
           exit 1
+
+      - name: Surface maintenance audit failures
+        if: always() && steps.pending.outputs.pending == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          health_rc='${{ steps.health.outputs.exit_code }}'
+          consistency_rc='${{ steps.consistency.outputs.exit_code }}'
+          metadata_outcome='${{ steps.metadata.outcome }}'
+          if [[ "${health_rc:-1}" != "0" || "${consistency_rc:-1}" != "0" || "$metadata_outcome" != "success" ]]; then
+            echo "Maintenance persisted its reports/state, but one or more audits found issues." >&2
+            echo "health_exit=${health_rc:-missing} consistency_exit=${consistency_rc:-missing} metadata_outcome=${metadata_outcome:-missing}" >&2
+            exit 1
+          fi
