@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 07:16:58 JST**
+> 自動生成: **2026-09-21 07:17:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **335** |
 | 未claim Research job | **335** |
 | 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間28分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（7時間29分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **52** | **16** | **10** | **1** | **0** | **0** | **55** |
-| 合計 | **52** | **22** | **14** | **1** | **0** | **0** | **55** |
+| Discovery | **52** | **17** | **10** | **2** | **0** | **0** | **60** |
+| 合計 | **52** | **23** | **14** | **2** | **0** | **0** | **60** |
 
-- 最新Discovery runの耐久探索round: **16件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **17件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -152,8 +152,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 06:58 JST**
-- 耐久探索round: **16件** / immutable submission: **16件** / 検証済み成功result: **10件** / 個別result照合: **10件** / 個別result未照合: **6件** / 候補: **55件**
-- 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse / forward citations of LMCache enterprise-scale KV cache layer / forward citations of PagedAttention/vLLM memory-efficient LLM serving / forward citations of SmoothQuant efficient LLM inference quantization / repository structured backward references / forward citations of Sequoia hardware-aware speculative decoding / forward citations of DistServe disaggregated prefill-decode LLM serving / repository structured backward references batch 2 / forward citations of DeepSpeed-MoE large-scale MoE inference / forward citations of H2O KV cache eviction and efficient inference
+- 耐久探索round: **17件** / immutable submission: **17件** / 検証済み成功result: **10件** / 個別result照合: **10件** / 個別result未照合: **7件** / 候補: **60件**
+- 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse / forward citations of LMCache enterprise-scale KV cache layer / forward citations of PagedAttention/vLLM memory-efficient LLM serving / forward citations of SmoothQuant efficient LLM inference quantization / repository structured backward references / forward citations of Sequoia hardware-aware speculative decoding / forward citations of DistServe disaggregated prefill-decode LLM serving / repository structured backward references batch 2 / forward citations of DeepSpeed-MoE large-scale MoE inference / forward citations of H2O KV cache eviction and efficient inference / forward citations of FlexGen offload and hierarchical-memory LLM inference
 - round `hourly00-backward-01` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260921T0700JST-hourly00-discovery-backward-01.json`
   - 探索軸: repository-wide structured backward references for LLM inference systems
@@ -248,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **927** |
+| 成功result未照合のimmutable submission | **928** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **213** |
+| └ Discovery | **214** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
