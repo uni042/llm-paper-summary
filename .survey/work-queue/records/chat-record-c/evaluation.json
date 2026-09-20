@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-a23c984134283281d819be9c",
-  "job_id": "job-research-1d4c48939bbf9fa8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a23c984134283281d819be9c",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a23c984134283281d819be9c","job_id":"job-research-1d4c48939bbf9fa8",
+ "data":{"evaluation_summary":"モデル設計の切り分けでは、固定top-k基準とゼロ計算専門家版を平均計算量一致で比較し、ScMoEは2.4B-16B+MLA、3B-20B+MHA、15B-193B+GQAの複数規模で学習損失を比較する。完成モデルは560B総パラメータ、平均27B活性で、DeepSeek-V3.1 Base、Llama-4-Maverick Base、Kimi-K2 Baseと一般知識・推論・数学・コードを同一評価系で比較する。後学習版は指示追従、長文脈、コード、数学、エージェント型ツール利用を評価する。システム側はH800大規模配備で生成速度と費用を測り、さらにEP=128、装置当たりバッチ96等の仮定で理論TPOTをDeepSeek-V3、Qwen3-235B-A22Bと比較する。","scope":"20兆超トークンの大規模学習と実配備を含む技術報告で、モデル品質とシステム効率を広範に扱う。ただし一部比較値は公開報告から引用され、理論推論比較には装置当たりバッチ96や既報カーネル性能などの仮定が含まれる。","hardware":["H800 GPU（推論実測）","数万アクセラレータ規模（学習）","NVLinkノード内通信","RDMAノード間通信"],"models":["LongCat-Flash 560B/平均27B活性","DeepSeek-V3.1 Base","Llama-4-Maverick Base","Kimi-K2 Base","DeepSeek-V3","Qwen3-235B-A22B"],"datasets":["MMLU","MMLU-Pro","C-Eval","CMMLU","GPQA","SuperGPQA","BBH","DROP","PIQA","WinoGrande","CLUEWSC","HumanEval+","MBPP+","MultiPL-E","CRUXEval","ArenaHard-V2","TerminalBench","τ²-Bench","VitaBench"],"workload":"基礎モデルは一般・推論・数学・コード課題、後学習モデルは指示追従・エージェント型ツール利用等を評価。推論はエージェント用途で可視推論文と短い行動コマンドの速度要求を分けて分析する。","baselines":["固定計算量MoE","ScMoEなしの同規模モデル","DeepSeek-V3.1","Llama-4-Maverick","Kimi-K2","DeepSeek-V3","Qwen3-235B-A22B"],"metrics":["検証損失","活性専門家数の平均・標準偏差","ベンチマーク精度/F1","学習可用率","トークン/秒","TPOT","100万出力トークン当たり費用","投機草稿受理率"],"predictor_accuracy":"予測器は中心機構ではない。PID制御が通常専門家の平均活性数を目標約8へ収束させ、約20Bトークン後の平均変動を1%未満に抑える。","control_knobs":"通常専門家期待数Ke、固定選択数K、ゼロ計算専門家数Z、専門家バイアス更新率、ScMoE有無、MTPヘッド構造、専門家並列度を切り替えて計算量・通信・品質を検証する。"},
+ "reservation":{"claim_id":"claim-a23c984134283281d819be9c","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}
 }
