@@ -4,10 +4,31 @@
   "slot": "metadata",
   "attempt_id": "attempt-5648936959aa67c66ac34543",
   "job_id": "job-research-e203c47aded67247",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5648936959aa67c66ac34543",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2511.06494",
+    "arxiv_id": "2511.06494",
+    "title": "Route Experts by Sequence, not by Token",
+    "summary": "標準的な混合エキスパート（Mixture-of-Experts; MoE）のTopKルーティングが全トークンへ同じエキスパート数を割り当てる非効率を、系列全体の総予算へ置き換えるSeqTopKで解消する研究。系列長T、従来のトークン当たり予算Kに対し、T×K個のルータースコアを系列内で大域選択することで、難しいトークンへ多く、容易なトークンへ少なく計算量を配分する。既存MoEのルーター構造やパラメータを増やさず微調整でき、自回帰生成では過去のルータースコアを保持するExpert Cacheを用いたオンライン版を導入する。OLMoEとQwen1.5-MoEの微調整、182M規模MoEの事前学習で、同一総エキスパート予算のTopKより一貫した性能向上を示す。",
+    "source": "https://arxiv.org/pdf/2511.06494",
+    "sources": ["https://arxiv.org/abs/2511.06494", "https://arxiv.org/pdf/2511.06494", "https://github.com/Y-Research-SBU/SeqTopK"],
+    "authors": ["Tiansheng Wen", "Yifei Wang", "Aosong Feng", "Long Ma", "Xinyang Liu", "Yifan Wang", "Lixuan Guo", "Bo Chen", "Stefanie Jegelka", "Chenyu You"],
+    "published": "2025-11-09",
+    "publication": "arXiv preprint",
+    "publication_type": "preprint",
+    "publication_status": "preprint; v2 dated 2026-03-27",
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.AI", "cs.IT"]},
+    "topics": ["MoE", "adaptive routing", "expert allocation", "inference efficiency"],
+    "implementation": "公式実装が公開され、OLMoEおよびQwen1.5-MoE向けの利用手順を提供する。論文はSeqTopKが標準TopKから数行の変更で実装できると説明する。",
+    "code": "https://github.com/Y-Research-SBU/SeqTopK",
+    "hardware_evaluation": "LLM微調整と182M規模MoEの事前学習は8基のNVIDIA A100で実施。推論効率はOLMoEをhuggingface.generate()とKV Cache有効条件で測定し、TopK 141.23 tokens/s・18.21 GBに対しSeqTopK 139.41 tokens/s・18.35 GBを報告する。",
+    "quality_effect": "同じ系列総エキスパート予算で標準TopKを上回り、特に高スパース性で差が拡大する。OLMoEのK=2では5タスク平均がTopK 14.49からSeqTopK 22.04へ向上する一方、追加微調整なしのオンライン適用では平均29.74から29.34へわずかに低下し、最大効果には短い微調整が必要。",
+    "last_checked": "2026-09-20",
+    "references": [
+      {"canonical_id": "arXiv:2409.02060", "arxiv_id": "2409.02060", "title": "OLMoE: Open Mixture-of-Experts Language Models"}
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "Primary arXiv PDF reference section; normalized identifiers recorded where directly visible in the retrieved text.",
+    "references_total": 1
+  },
+  "reservation": {"claim_id": "claim-5648936959aa67c66ac34543", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
