@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 22:40:19 JST**
+> 自動生成: **2026-09-20 22:40:48 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **207** |
 | 未claim Research job | **206** |
 | 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-20 22:10:28 JST（29分前）** |
+| 最終検証済みResearch収録 | **09-20 22:10:28 JST（30分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -155,9 +155,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.06076` — Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 22:39:47 JST** / heartbeat: **—** / lease expiry: **09-21 00:09:47 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3b1c7287727937a1.json`
+- `arXiv:2608.24938` — ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 22:40:32 JST** / heartbeat: **—** / lease expiry: **09-21 00:10:32 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f837d96601e69237.json`
 
 #### Audit
 
