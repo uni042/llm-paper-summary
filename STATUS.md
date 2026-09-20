@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:02:44 JST**
+> 自動生成: **2026-09-20 15:03:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **120** |
-| 未claim Research job | **118** |
+| 未claim Research job | **117** |
 | 直近24hの検証済みResearch収録 | **60** |
-| 最終検証済みResearch収録 | **09-20 15:02:27 JST（17秒前）** |
+| 最終検証済みResearch収録 | **09-20 15:02:27 JST（54秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **29** | **4** | **4** | **0** | **2** | **0** | — |
+| Research | **29** | **4** | **4** | **0** | **3** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **29** | **5** | **5** | **0** | **2** | **0** | **5** |
+| 合計 | **29** | **5** | **5** | **0** | **3** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -169,7 +169,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- `arXiv:2405.03917` — KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 15:03:09 JST** / heartbeat: **—** / lease expiry: **09-20 16:33:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-be4feb2ff4a84f5b.json`
 - `arXiv:2503.20552` — Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation / worker `scheduled-chat-discovery-hourly`
   - claim: **09-20 15:02:12 JST** / heartbeat: **—** / lease expiry: **09-20 16:32:12 JST**
   - evidence: `.survey/work-queue/claims/job-research-e405cf8340f00512.json`
