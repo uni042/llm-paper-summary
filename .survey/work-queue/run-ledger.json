@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T06:22:44.708781+00:00",
+  "updated_at": "2026-09-20T06:34:04.192313+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T06:22:44.708781+00:00",
+      "last_recorded_at": "2026-09-20T06:34:04.192313+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 354,
+        "research_completed": 355,
         "audit_completed": 0,
         "discovery_completed": 197,
         "blocked": 47,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35452399444:1",
-          "recorded_at": "2026-09-19T15:38:26.678042+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35452399444",
-            "run_attempt": "1",
-            "source_sha": "e82106c8fc37da04b448d0d935b0a5e5ee18fad8"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35452657510:1",
           "recorded_at": "2026-09-19T15:43:17.627578+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35494057112",
             "run_attempt": "1",
             "source_sha": "8c8ad4a7a611be3e325b8fc36a04d22a7691ca5b"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        },
+        {
+          "event_id": "35494550867:1",
+          "recorded_at": "2026-09-20T06:34:04.192313+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35494550867",
+            "run_attempt": "1",
+            "source_sha": "44751ff656ba96ea82b1216d3b9c5b8a12d27ca8"
           },
           "signals": [
             "research_completed"
@@ -24378,6 +24378,14 @@
           "type": "research",
           "canonical_id": "arXiv:2506.20675",
           "title": "Utility-Driven Speculative Decoding for Mixture-of-Experts",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-4892de26a5d749a2",
+          "type": "research",
+          "canonical_id": "arXiv:2408.10284",
+          "title": "AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference",
           "from": "ready",
           "to": "completed"
         }
