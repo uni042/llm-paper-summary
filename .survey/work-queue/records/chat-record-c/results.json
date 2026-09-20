@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-8c0b23180b0d626bedc629c2",
-  "job_id": "job-research-5ce9880c62119377",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8c0b23180b0d626bedc629c2",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-8c0b23180b0d626bedc629c2","job_id":"job-research-5ce9880c62119377","data":{"overview":"MoE-Prismは元専門家を4分割してルーティング動作点を4倍へ増やし、品質を概ね維持したまま要求ごとの細粒度kを実行できる。エンドツーエンドのオフライン推論では最大33.9%のスループット改善を報告し、スケジューラ単体でも動的k vLLM+Kに対してOLMoEで22.9%、DeepSeekで13.5%上積みした。オンラインでは異なるkをレーン分離することでTTFTを下げ、分割CUDAグラフは素朴なk対応グラフのメモリ6.19GBを0.96GBへ削減しながらスループット低下を0.2%に抑えた。","key_results":[{"metric":"利用可能ルーティング動作点","value":"4倍","baseline":"元の全専門家単位","condition":"各元専門家を4サブ専門家へ分割","interpretation":"隣接する元top-k間に細粒度な計算・品質点を追加する。"},{"metric":"オフライン推論スループット","value":"最大33.9%改善","baseline":"固定k vLLM","condition":"3種MoE・異種要求予算","interpretation":"要求ごとの計算削減をサービング性能へ変換できる。"},{"metric":"スケジューラ単体オフライン利得","value":"OLMoE +22.9%、DeepSeek +13.5%","baseline":"vLLM+K","condition":"OLMoE 16/6、DeepSeek 12/5","interpretation":"動的k実行だけでは混合バッチの過剰実行が残り、予算対応バッチングが必要。"},{"metric":"オンラインスケジューラ利得","value":"平均TTFT 229.15→222.24、p99 572.44→526.71","baseline":"vLLM+K","condition":"OLMoE 30 req/s、2×RTX A6000、k分布16/8","interpretation":"低k・高kレーン分離が交差干渉を減らす。"},{"metric":"CUDAグラフメモリ","value":"6.19GB→0.96GB","baseline":"再構成モデルの素朴なk対応グラフ","condition":"OLMoE、RTX A6000","interpretation":"注意区間をk間共有することで細粒度動作点増加のメモリ爆発を抑える。"},{"metric":"分割グラフのスループット損失","value":"19.97→19.93 req/s、0.2%低下","baseline":"素朴なk対応グラフ","condition":"最大k、スケジューラなし","interpretation":"大幅なグラフメモリ削減に対する実行時代償は小さい。"},{"metric":"下流品質","value":"多くの設定で元モデル同等、一部改善","baseline":"同等活性パラメータの元モデル","condition":"WinoGrande/ARC-C/SciQ/BoolQ","interpretation":"細粒度化は大きな品質損失を必須としない。"}],"negative_results":["要求kを決める上流の品質推定・SLOポリシーは設計対象外で、評価では合成分布から与える。","オンライン評価は利用可能な2 GPU試験環境までで、大規模クラスタへの一般化は未検証。","細粒度化だけでは異種k混在時の過剰実行は消えず、専用スケジューラが必要。","素朴にkごとのCUDAグラフを保持すると再構成モデルで6.19GBまで増え、KVキャッシュ容量を圧迫する。","学習なし代理ゲートは代表ニューロン計算の追加負担と忠実度のトレードオフを持つ。"],"quality_impact":"同等活性予算で元モデルのパープレキシティ・下流精度を概ね維持し、一部では改善する。計算削減は要求ごとのkを下げるため品質・計算トレードオフ自体は存在するが、同じ予算での再構成損失は小さい。","interpretation":"性能改善は二段階で生じる。モデル再構成が元専門家1個という粗い最小単位を4分の1へ縮め、要求予算に近い計算量を選べるようにする。次にスケジューラが近いkを同じ実行場所へ集め、バッチ最大kへ引き上げられる低予算要求を減らす。分割CUDAグラフは、この細粒度化で増えたk状態を注意区間まで複製しないことでGPUメモリを回収する。三者のどれかを欠くと、品質点は粗いまま、過剰実行が残る、またはグラフメモリが増えるため、モデル・スケジューラ・実行器の協調が必要になる。"},"reservation":{"claim_id":"claim-8c0b23180b0d626bedc629c2","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
