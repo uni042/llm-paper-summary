@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-715ca0ac1e2c0533b0313a9c",
-  "job_id": "job-research-b2016b76225eff0c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-715ca0ac1e2c0533b0313a9c",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-715ca0ac1e2c0533b0313a9c","job_id":"job-research-b2016b76225eff0c","data":{"canonical_id":"arXiv:2109.10465","arxiv_id":"2109.10465","doi":"10.48550/arXiv.2109.10465","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.AI","cs.LG"]},"title":"Scalable and Efficient MoE Training for Multitask Multilingual Models","summary":"本研究は、MoEで専門家数だけでなく基底モデルも拡大する際のGPUメモリ壁と並列化の不整合を、DeepSpeed MoEで解決する。専門家並列、データ並列、テンソル分割、ZeRO、ZeRO-Offloadを組み合わせ、非専門家状態の複製を除去しCPUメモリも使うことで、512枚のA100 40GB上で3.5兆パラメータ超を支援し、従来GPUメモリ制約の約8倍規模へ拡張する。さらにランダムトークン選択、専門家集約、専門家枝刈りを提案し、10B Z-code M3を50言語・複数タスクで学習して翻訳・生成性能を改善した。","list_summary":"専門家並列とZeRO/CPUオフロード等の多次元並列を統合してMoEを3.5兆パラメータ超へ拡張し、ランダムトークン選択や専門家枝刈りで学習・推論効率も改善するDeepSpeed MoE。","authors":["Young Jin Kim","Ammar Ahmad Awan","Alexandre Muzio","Andres Felipe Cruz Salinas","Liyang Lu","Amr Hendy","Samyam Rajbhandari","Yuxiong He","Hany Hassan Awadalla"],"published":"2021-09-22","publication":"arXiv:2109.10465","publication_type":"Preprint","publication_status":"Preprint","lineage":"分散MoE学習 / ZeRO / CPUオフロード / 多次元並列","topics":["DeepSpeed MoE","専門家並列","ZeRO-Offload","多言語多タスク学習","専門家枝刈り"],"importance":"MoEの専門家部分と非専門家部分を異なる並列化で同時拡張し、GPUメモリ壁をCPUオフロードで越える設計を公開DeepSpeedへ統合した初期の大規模MoEシステム。","hardware_evaluation":"40GB NVIDIA A100 GPU群。最大規模の容量解析は512 A100で3.5T超、400Bを64 GPUで支援。計算効率は隠れ次元4096でGPU当たり120 TFLOPS超。","quality_effect":"64専門家10B Z-code M3は50言語の社内評価で平均BLEU 37.15、0.7B密モデル32.76。公開WMTでは34.85対M2M-100 12Bの31.89。XNLIでも密モデル比約3ポイント改善。","source":"https://arxiv.org/abs/2109.10465","sources":["https://arxiv.org/abs/2109.10465","https://arxiv.org/html/2109.10465v1"],"implementation":"DeepSpeedへMoEレイヤAPI、専門家並列プロセス群、ZeRO/ZeRO-Offload/テンソル分割との統合として公開実装。","code":"https://github.com/microsoft/DeepSpeed","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":30},"reservation":{"claim_id":"claim-715ca0ac1e2c0533b0313a9c","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
