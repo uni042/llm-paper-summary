@@ -4,10 +4,44 @@
   "slot": "metadata",
   "attempt_id": "attempt-3b676d8b0647321f3ab94c21",
   "job_id": "job-research-08b5458cb63307f5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3b676d8b0647321f3ab94c21",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2608.10392",
+    "arxiv_id": "2608.10392",
+    "doi": "10.48550/arXiv.2608.10392",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.CL", "cs.CV"]},
+    "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
+    "summary": "UniF-MoEは、混合専門家モデル（Mixture of Experts; MoE）で共有計算、専門家内部の計算幅、活性化する専門家数を別々に決める従来設計を、共有部分を先に処理して残余だけを専門家へ回す一つの順序付き割当問題へ統合する。各専門家の全結合ネットワークを整列ブロックへ分割し、トークンごとの共有需要から共有ブロック数を決め、キー原型で共有内容を選び、残った需要を累積ルーティング確率で満たす最小数の残余専門家だけを実行する。DomainBed平均69.5%、GLUE平均82.76%を達成し、VLCSではtop-2 GMoE比で活性パラメータ9.1%、FLOPs16.1%、推論時間45.2%、推論時メモリ52.7%を削減した。",
+    "list_summary": "共有ブロックを先にトークン適応で選び、残余需要だけを可変数の専門家へ累積確率で回すUniF-MoEにより、精度を高めながら推論計算・遅延・メモリを削減する。",
+    "authors": ["Gongli Zhang", "Zhulin Liu", "C. L. Philip Chen"],
+    "authors_affiliations": "South China University of Technology; Pazhou Lab; Engineering Research Center of the Ministry of Education on Health Intelligent Perception and Paralleled Digital-Human",
+    "published": "2026-08-11",
+    "publication": "arXiv preprint arXiv:2608.10392v1",
+    "publication_type": "arXivプレプリント",
+    "publication_status": "2026年8月11日投稿のarXiv初版。主分類cs.LG、併記分類cs.CL・cs.CV。",
+    "lineage": "adaptive-expert-computation-compression",
+    "topics": ["混合専門家モデル", "動的ルーティング", "共有専門家", "細粒度計算", "トークン適応計算"],
+    "importance": "共有計算量・共有内容・残余専門家数を同一のトークン依存予算で順序付けて結合し、専門家内疎性と専門家間疎性を同時制御する。",
+    "hardware_evaluation": "NVIDIA GeForce RTX 3090を用いた実機評価。",
+    "hardware_details": "Ubuntu 20.04.2、AMD EPYC 75F3、ホストメモリ503 GiB、RTX 3090、PyTorch 2.4.1、CUDA 12.1。",
+    "quality_effect": "計算量削減だけでなくDomainBedとGLUEで比較対象より高い予測性能を報告する。",
+    "bottlenecks": ["複数専門家で重複する全結合計算", "固定専門家数による過剰・不足計算", "共有抽出後も元のルータを使う不整合", "専門家役割の重複"],
+    "evidence_locations": ["第II節", "第III節", "第IV節", "付録A"],
+    "source": "https://arxiv.org/abs/2608.10392",
+    "sources": ["https://arxiv.org/abs/2608.10392", "https://arxiv.org/html/2608.10392v1", "https://arxiv.org/pdf/2608.10392"],
+    "code": "https://github.com/existence0420/UniF-MoE",
+    "implementation": "公式実装が公開されており、論文ではDeiT-S/16およびBERT-largeを疎な専門家構造へ変換して実機評価している。",
+    "last_checked": "2026-09-20",
+    "references": [
+      {"title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"},
+      {"title": "Unlocking Emergent Modularity in Large Language Models"},
+      {"title": "Harder Task Needs More Experts: Dynamic Routing in MoE Models"},
+      {"title": "Sparse Upcycling: Training Mixture-of-Experts from Dense Checkpoints"},
+      {"title": "Transformer Feed-Forward Layers Are Key-Value Memories"}
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "arXiv HTML参考文献節",
+    "references_total": 5
+  },
+  "reservation": {"claim_id": "claim-3b676d8b0647321f3ab94c21", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
 }
