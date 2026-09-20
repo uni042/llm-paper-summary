@@ -8,6 +8,7 @@
     "canonical_id": "arXiv:2401.11181",
     "arxiv_id": "2401.11181",
     "title": "Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads",
+    "list_summary": "事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。",
     "summary": "大規模言語モデル（LLM）推論で、計算律速の事前充填（prefill）とメモリ律速・遅延重視の復号（decode）を同じ実行系に混在させると、長さの異なる要求同士が互いに干渉する問題を扱う。TetriInferは、事前充填を固定トークン数へ分割し、事前充填用と復号用のインスタンスを分離し、生成長予測を用いる二段階スケジューリングで復号側のメモリ容量・帯域競合を抑える。実機GPU上のOPT-13BとShareGPT由来ワークロードでvLLMと比較し、代表的な混合負荷では初回トークン時間、ジョブ完了時間、資源使用時間を同時に削減する一方、重い事前充填と重い復号が同時に多い条件では追加オーバーヘッドが利益を上回り得ることも示す。",
     "source": "https://arxiv.org/abs/2401.11181",
     "sources": ["https://arxiv.org/abs/2401.11181", "https://arxiv.org/pdf/2401.11181"],
