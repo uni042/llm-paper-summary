@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:05:12 JST**
+> 自動生成: **2026-09-20 18:05:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **106** |
-| 未claim Research job | **105** |
-| 直近24hの検証済みResearch収録 | **77** |
-| 最終検証済みResearch収録 | **09-20 17:44:56 JST（20分前）** |
+| 収録候補論文 | **105** |
+| 未claim Research job | **104** |
+| 直近24hの検証済みResearch収録 | **78** |
+| 最終検証済みResearch収録 | **09-20 18:05:23 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **106** |
+| canonical_id確認済みの一意な候補論文 | **105** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **106** |
+| 非終端Research job合計 | **105** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **36** | **5** | **3** | **1** | **1** | **0** | — |
+| Research | **37** | **4** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **36** | **6** | **4** | **1** | **1** | **0** | **5** |
+| 合計 | **37** | **5** | **5** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 18:05:23 JST** [research] `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment
+  - job: `.survey/work-queue/jobs/job-research-da8147ed3835966f.json`
+  - result: `.survey/work-queue/results/research/attempt-5605d7717d39930ab2f4dcc5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5605d7717d39930ab2f4dcc5.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.07903-hexgen-2.md`
 - **09-20 17:44:56 JST** [research] `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs
   - job: `.survey/work-queue/jobs/job-research-e2f947500152f11f.json`
   - result: `.survey/work-queue/results/research/attempt-2aa6f3a5ce12c662b86bbbe1.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-c9c4d6d6478bfe538fe0a2c9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c9c4d6d6478bfe538fe0a2c9.json`
   - paper: `papers/inference/07-kv-cache-optimization-compression/2026-ojakv.md`
-- **09-20 15:37:50 JST** [research] `arXiv:2503.06823` — eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference
-  - job: `.survey/work-queue/jobs/job-research-bb33e470bd8a5f8f.json`
-  - result: `.survey/work-queue/results/research/attempt-01cbf1c46fe8f68f25b18de7.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-01cbf1c46fe8f68f25b18de7.json`
-  - paper: `papers/inference/06-moe-expert-offloading/2025-2503.06823-emoe.md`
 
 ### Audit
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
+- immutable submission: **4件** / 検証済み成功: **4件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs
   - job: `.survey/work-queue/jobs/job-research-e2f947500152f11f.json`
   - result: `.survey/work-queue/results/research/attempt-2aa6f3a5ce12c662b86bbbe1.json` (`ok=true`)
@@ -138,14 +138,16 @@
   - result: `.survey/work-queue/results/research/attempt-3bb75bb690b745e4b4b44fd7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3bb75bb690b745e4b4b44fd7.json`
   - paper: `papers/inference/05-speculative-decoding/2024-2404.15778-bass.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5605d7717d39930ab2f4dcc5.json` (job `job-research-da8147ed3835966f`)
+- **成功** `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment
+  - job: `.survey/work-queue/jobs/job-research-da8147ed3835966f.json`
+  - result: `.survey/work-queue/results/research/attempt-5605d7717d39930ab2f4dcc5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5605d7717d39930ab2f4dcc5.json`
+  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.07903-hexgen-2.md`
 - **成功** `arXiv:2405.01481` — NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment
   - job: `.survey/work-queue/jobs/job-research-0ad72717e3fdb154.json`
   - result: `.survey/work-queue/results/research/attempt-57d5d091923e08545a3ff388.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-57d5d091923e08545a3ff388.json`
   - paper: `papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md`
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-7d885ba839f618fd75926d05.json` (job `job-research-ab19fa17920fb404`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-7d885ba839f618fd75926d05.json` (`ok=false`)
 
 #### Audit (:30)
 
@@ -168,9 +170,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:04:18 JST** / heartbeat: **—** / lease expiry: **09-20 19:34:18 JST**
-  - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
+- `arXiv:2405.12981` — Reducing Transformer Key-Value Cache Size with Cross-Layer Attention / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 18:05:17 JST** / heartbeat: **—** / lease expiry: **09-20 19:35:17 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ab19fa17920fb404.json`
 
 #### Audit
 
@@ -190,7 +192,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **106** |
+| ready | **105** |
 
 ### 候補の重複・識別情報欠損
 
@@ -210,7 +212,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **829** |
+| inference/training/survey配下の論文Markdown実体 | **830** |
 
 ### immutable submissionの未照合
 
@@ -218,8 +220,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **754** |
-| └ Research | **568** |
+| 成功result未照合のimmutable submission | **753** |
+| └ Research | **567** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
