@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:13:12 JST**
+> 自動生成: **2026-09-20 15:13:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **117** |
 | 未claim Research job | **115** |
 | 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-20 15:10:13 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-20 15:10:13 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **32** | **6** | **5** | **1** | **2** | **0** | — |
+| Research | **32** | **6** | **5** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **32** | **7** | **6** | **1** | **2** | **0** | **5** |
+| 合計 | **32** | **7** | **6** | **0** | **2** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
   - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
   - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
@@ -138,7 +138,8 @@
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json`
   - paper: `papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5589a405f0ee58411def153e.json` (job `job-research-5cec4a19e423bce9`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5589a405f0ee58411def153e.json` (job `job-research-5cec4a19e423bce9`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-5589a405f0ee58411def153e.json` (`ok=false`)
 - **成功** `arXiv:2405.05254` — You Only Cache Once: Decoder-Decoder Architectures for Language Models
   - job: `.survey/work-queue/jobs/job-research-f8d11555626eb92a.json`
   - result: `.survey/work-queue/results/research/attempt-95845744b63d99732374d3b0.json` (`ok=true`)

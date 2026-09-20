@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-5589a405f0ee58411def153e",
+  "job_id": "job-research-5cec4a19e423bce9",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-5589a405f0ee58411def153e.json",
+  "error": "RecordValidationError: metadata.references_total must be a non-negative integer",
+  "processed_at": "2026-09-20T06:13:22+00:00",
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
