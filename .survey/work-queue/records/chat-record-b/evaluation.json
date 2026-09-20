@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-494231538c84c48296aa17b3",
-  "job_id": "job-research-06ec3586821ff3bb",
-  "data": {
-    "hardware": "LLaMA-2-13B、13B-Chat、CodeLLaMA-13BはA100 40GB 1基。LLaMA-2-70BはA100 80GB 2基とHuggingFace Accelerate。13B環境はCUDA 11.6/PyTorch 1.13.1、70BはCUDA 11.8/PyTorch 2.0.1、Transformers 4.33.1。",
-    "software": "LLaMA-2 13B/70B、LLaMA-2-13B-Chat、CodeLLaMA-13B。スキップ層探索はBayesianOptimizationライブラリを用い1000反復。下書き最大Kは主に12、適応受理率目標はデータ・モデル別に0.70～0.90。",
-    "methodology": "CNN/DailyMailとXSumから各1000テスト例を無作為抽出し1-shot要約、ROUGE-2と平均トークン推論時間を測定。HumanEvalはCodeLLaMAでpass@1とpass@10。貪欲生成と温度0.2/0.6のサンプリングを比較する。ベイズ最適化は訓練集合から8例を選び、モデルごとに1000反復。付録ではGSM8K、MT-bench、量子化・疎化併用、K感度も評価。",
-    "scope": "主評価はバッチ1相当の低遅延デコードで、著者自身がバッチデコードへの適応を今後の課題として挙げる。層探索は一回限りだが13Bで約2.5時間、70Bで約6時間を要する。対象モデルはLLaMA-2系に集中する。"
-  },
+  "attempt_id": "attempt-aa5fee4140884cdeb790c49e",
+  "job_id": "job-research-710ff1d6feeafd76",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-494231538c84c48296aa17b3",
+    "claim_id": "claim-aa5fee4140884cdeb790c49e",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
