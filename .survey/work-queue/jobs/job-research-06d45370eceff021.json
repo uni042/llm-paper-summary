@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-06d45370eceff021",
+  "type": "research",
+  "parent_job_id": "job-bea79878a81e6cef",
+  "priority": 96,
+  "canonical_id": "arXiv:2606.25426",
+  "arxiv_id": "2606.25426",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX",
+  "source_url": "https://arxiv.org/abs/2606.25426",
+  "paper_path": null,
+  "selection_reason": "Direct LLM prefill GEMM optimization on Apple M1 AMX; relevant to CPU/on-device inference kernels and architecture-specific runtime optimization.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T20:41:59+00:00"
+}
