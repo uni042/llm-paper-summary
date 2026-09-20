@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-89bc644c23d78357d6c68f4d",
   "job_id": "job-research-e405cf8340f00512",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-89bc644c23d78357d6c68f4d",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "8台のNVIDIA A100-80GB SXM GPUを600 GB/s NVLinkで接続した高性能サーバを使用する。プリフィルGPUとデコードGPUを分け、プリフィルGPU上ではNVIDIA MPSで通常プリフィルと遠隔注意の計算資源を分割する。",
+    "software": "vLLM 0.6.3のプリフィル・デコード分離機能を基盤にAdrenalineを実装する。CUDA Graphを用いて局所デコード容量と遠隔注意容量の組合せを事前捕捉し、MPSでGPU計算資源を制御する。モデルはLlama-2 7B/13B、精度はfloat16。",
+    "methodology": "実環境ワークロードとして会話型のShareGPTと長い生成を含む推論型のOpenThoughtsを使用し、要求到着率を変えてエンドツーエンド性能を測る。主要指標は最初のトークンまでの時間（Time To First Token; TTFT）、出力トークン当たり時間（Time Per Output Token; TPOT）、P99 TPOT、出力トークンスループット。さらにHBM容量・帯域と計算利用率を測り、移動率40/60/70/80%の比較、計算資源制約下のプリフィルと注意カーネルの挙動を調べる。比較対象は同じ分離構成を持つvLLM。",
+    "scope": "実機8×A100の単一サーバ評価で、Llama-2 7B/13Bと2種類の実ワークロードに限定される。高速相互接続とNVIDIA MPS/CUDA Graphを利用するため、異種GPU、低帯域ネットワーク、大規模多ノード環境への倍率の一般化には追加評価が必要である。生成品質の近似は行わず、配信資源配置とサービス品質目標の改善を評価する。",
+    "baselines": ["vLLM 0.6.3 with prefill-decode disaggregation"],
+    "datasets": ["ShareGPT", "OpenThoughts"],
+    "models": ["Llama-2 7B", "Llama-2 13B"]
+  },
+  "reservation": {"claim_id": "claim-89bc644c23d78357d6c68f4d", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
 }
