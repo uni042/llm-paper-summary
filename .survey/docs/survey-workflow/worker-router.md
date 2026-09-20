@@ -218,6 +218,14 @@ Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと
 
 ## 9. 08:30更新とmaintenance
 
-08:30 JSTの更新workerは `framework-updates/**`、`llm-releases/**` と必要な `.survey/update-worker/**` だけを扱う。同じrunでResearch / Audit / Discoveryを行わない。
+毎時 `:30` のScheduled Chatから起動したworkerのうち、**08:30 JSTのrunだけ**を日次更新・maintenance専用runとする。このrunではResearch / Audit / Discoveryを行わない。
 
-maintenance runは `.github/workflows/maintenance.yml` に委譲し、GC、index再構築、品質・メタデータ監査、整合性確認を直列実行する。maintenanceの周期管理は論文作業のwork mixとは独立した運用状態として扱い、読解・探索の手順を分岐させる理由にしない。
+実行順序は固定する。
+
+1. 先に `framework-updates/**`、`llm-releases/**` と必要な `.survey/update-worker/**` の非論文更新を確認し、必要な変更を最新 `main` へ耐久反映する。
+2. 非論文更新の保存が完了した後、**runの最後の独立作業としてmaintenanceを実行する。**
+3. maintenanceは `.survey/work-queue/maintenance-cycle.json` の `maintenance_pending=true` を耐久反映して `.github/workflows/maintenance.yml` を起動し、GC、index再構築、品質・メタデータ監査、整合性確認を直列実行させる。
+4. maintenance workflowの結果を確認し、可能なら完了後の最新 `main` と `maintenance-cycle.json` を再取得して、`maintenance_pending=false` と結果状態が耐久反映されたことまで確認する。
+5. 最終報告には非論文更新点に加え、maintenanceの起動・完了状態、GC/監査/整合性確認の結果、最終main SHAを含める。
+
+これは毎時 `:30` workerの24回に1回に相当する定期maintenanceとして扱う。旧run-countカウンタを通常の `:00` / `:30` 論文処理のルーティング条件には使わない。maintenance実行の責任は08:30 JSTの `:30` workerに集約し、通常runで重ねて定期maintenanceを発火させない。
