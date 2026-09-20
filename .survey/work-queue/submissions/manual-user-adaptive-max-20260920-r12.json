@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-max-r12",
+    "summary": "ReMoEの被引用からmemory-efficient routing consistencyを追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.08780",
+      "title": "Sticky Routing: Training MoE Models for Memory-Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2607.08780",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
+      "priority": 98,
+      "reason": "隣接token間のexpert切替をrouting consistency lossで抑え、edge/deviceでのweight swappingを学習段階から減らす。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-adaptive-max-20260920-remoe",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-adaptive-max-20260920-remoe.json",
+    "receipt": "sha256:5cf993937af1425ffa1666e3544a3b473ad9b35738680d2bc0621ad5ae7e7565"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+    "round": "adaptive-max-r12-remoe-followup",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2605.27081 (router finetuning / expert reuse)",
+    "query_summary": "ReMoE forward citationsの未収録1件を本ページのmemory-efficient routing候補として選定。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "remaining recent page seeds if citations exist",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "routing consistency memory efficiency",
+        "source": "Semantic Scholar citations endpoint",
+        "seed_canonical_id": "arXiv:2605.27081",
+        "date_range": "through 2026-09-20",
+        "category": "Adaptive Expert Computation / Compression",
+        "citation_direction": "forward",
+        "query_family": "lineage-scoped-forward-citation",
+        "raw_result_count": 2,
+        "unseen_result_count": 1,
+        "duplicate_filtered_count": 1,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 1,
+        "candidate_accepted_count": 1,
+        "position": "1 page"
+      }
+    ]
+  }
+}
