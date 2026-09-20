@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-da94ea040a72507f8287f79f",
-  "job_id": "job-research-207dd824b238b749",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-da94ea040a72507f8287f79f",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-da94ea040a72507f8287f79f","job_id":"job-research-207dd824b238b749","data":{"limitations":"ウォームアップでモデル・データ集合ごとの受理／棄却信頼度分布を測り、判定深さとしきい値を較正するため、分布が大きく変化する運用では再較正が必要になり得る。評価は8基H100、温度0、特定のSGLang統合とEAGLE-3系下書きモデルが中心で、異なるGPU、別サービング基盤、高温度サンプリングで同じ飽和点や最適予算になる保証はない。高負荷での利益は対象モデル検証が計算律速になった後に大きく、メモリ律速の低負荷領域では余分な候補の費用が小さいため相対利益も小さくなる。","differences":"EAGLE-3など固定木方式は候補形状が単純でカーネル実装しやすい一方、要求難度に関係なく同じ枝数を検証する。DDDやOPT-Treeなど動的木方式は候補確率で形状を変えるが、細かな深さごとの判断で誤判定と不規則形状の実装コストが増える。ECHOは判定を信頼できる少数深さへ限定し、さらに候補木を要求単体の問題ではなくバッチ全体の固定検証予算として扱う。TETRISやTurboSpecのようなシステム側スケジューラが下書き木をブラックボックスとして扱うのに対し、ECHOは木内部の深さ・幅と要求間配分を同じ予算規則で結び付ける。","implementation_status":"高同時実行版はSGLangへ統合され、可変候補数を密な検証配置へ変換する処理まで実装して8 H100で評価されている。論文は実装提供を貢献として述べるが、今回確認したarXiv一次資料中では公式コードURLを特定できなかった。","research_positioning":"投機的デコード研究の中でも、下書きモデル自体の精度向上より、検証計算が飽和する実サービング環境で候補トークンをどこへ使うかに焦点を移したシステム論文である。候補木の局所適応とバッチスケジューリングを一つの資源配分問題として統合しており、高同時実行推論基盤のスケジューラ系統と投機的デコード系統を接続する位置付けになる。"},"reservation":{"claim_id":"claim-da94ea040a72507f8287f79f","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
