@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:24:38 JST**
+> 自動生成: **2026-09-21 05:25:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **17** | **13** | **12** | **0** | **0** | **0** | **16** |
-| 合計 | **21** | **19** | **16** | **0** | **0** | **0** | **16** |
+| Discovery | **17** | **15** | **12** | **2** | **0** | **0** | **21** |
+| 合計 | **21** | **21** | **16** | **2** | **0** | **0** | **21** |
 
-- 最新Discovery runの耐久探索round: **13件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -171,8 +171,8 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:01 JST**
-- 耐久探索round: **13件** / immutable submission: **13件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **1件** / 候補: **16件**
-- 探索軸: backward-reference structured repository-wide / forward citations of Elastic MoE for inference-time expert scaling / backward-reference structured repository-wide continuation / backward-reference structured repository-wide round 4 / OpenAlex recent LLM inference memory offloading / OpenAlex recent MoE serving expert cache offloading / OpenAlex recent speculative decoding inference serving / OpenAlex recent KV cache compression offload serving / OpenAlex recent sparse attention inference serving / OpenAlex recent on-device edge LLM inference / OpenAlex recent LLM serving batching scheduling / OpenAlex recent LLM inference kernel fusion compiler
+- 耐久探索round: **15件** / immutable submission: **15件** / 検証済み成功result: **12件** / 個別result照合: **12件** / 個別result未照合: **3件** / 候補: **21件**
+- 探索軸: backward-reference structured repository-wide / forward citations of Elastic MoE for inference-time expert scaling / backward-reference structured repository-wide continuation / backward-reference structured repository-wide round 4 / OpenAlex recent LLM inference memory offloading / OpenAlex recent MoE serving expert cache offloading / OpenAlex recent speculative decoding inference serving / OpenAlex recent KV cache compression offload serving / OpenAlex recent sparse attention inference serving / OpenAlex recent on-device edge LLM inference / OpenAlex recent LLM serving batching scheduling / OpenAlex recent LLM inference kernel fusion compiler / OpenAlex recent SSD NVMe LLM inference offload / OpenAlex recent LLM quantized inference runtime serving
 - round `round-01` / 候補 **0件**
   - submission: `.survey/work-queue/submissions/20260921T0504JST-discovery-round-01-backward.json`
   - 探索軸: backward-reference structured repository-wide
@@ -267,10 +267,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **909** |
+| 成功result未照合のimmutable submission | **911** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **195** |
+| └ Discovery | **197** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
