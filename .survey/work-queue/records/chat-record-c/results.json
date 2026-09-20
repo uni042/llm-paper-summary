@@ -1,5 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a23c984134283281d819be9c","job_id":"job-research-1d4c48939bbf9fa8",
- "data":{"overview":"LongCat-Flashは560B総パラメータに対し平均27Bだけを活性化し、トークン別には18.6B～31.3Bまで計算量を変える。ゼロ計算専門家は平均計算量を合わせた固定top-kより低い検証損失を示し、ScMoEは複数規模・注意方式で学習損失をほぼ変えずに通信重複を増やす。完成モデルは20兆超トークンを30日以内で学習し、H800配備で100トークン/秒超を達成する。基礎モデルは平均27B活性ながらDeepSeek-V3.1 Base等と広範な課題で競合し、エージェント課題でも強い性能を示す。","key_results":[{"metric":"トークン当たり活性パラメータ","value":"18.6B～31.3B、平均27B","baseline":"560B総パラメータ","condition":"ゼロ計算専門家付きLongCat-Flash","interpretation":"固定Kルーティング形式を保ちながら、実FFN計算量をトークンの文脈的重要度に応じて大きく変える。"},{"metric":"計算予算制御","value":"平均通常専門家数約8、約20Bトークン後の平均変動1%未満、標準偏差約3","baseline":"期待通常専門家数8","condition":"PID制御付き専門家バイアス","interpretation":"全体平均計算量は安定させつつ、個別トークン間の計算量差を維持する。"},{"metric":"ScMoE品質影響","value":"基準とほぼ同一の学習損失曲線","baseline":"ScMoEなし","condition":"2.4B-16B+MLA、3B-20B+MHA、15B-193B+GQA","interpretation":"通信重複のための実行順序変更が複数規模・注意方式で品質中立であることを示す。"},{"metric":"大規模学習","value":"20兆超トークンを30日以内、時間可用率98.48%","baseline":"なし","condition":"560Bモデル、数万アクセラレータ規模","interpretation":"モデル構造と決定論的・耐障害インフラを組み合わせて大規模学習を実運用規模で成立させる。"},{"metric":"推論実測","value":"100トークン/秒超、100万出力トークン当たり0.70ドル","baseline":"同規模モデルとの定性的比較","condition":"H800大規模配備、GPU 1時間2ドル仮定","interpretation":"短い行動コマンドではほぼ100トークン/秒となり、エージェントの単一ツール呼出し待ちを1秒未満へ抑える狙い。"},{"metric":"理論TPOT","value":"16 ms","baseline":"DeepSeek-V3 30 ms、Qwen3-235B-A22B 26.2 ms","condition":"EP=128、装置当たりバッチ96、MTP=1・受理率80%等の仮定","interpretation":"ScMoEの単一バッチ重複と少ない28層が通信・計算の直列部分を縮める。ただし理論比較であり実測値と区別が必要。"},{"metric":"基礎モデルMMLU-Pro/GPQA/BBH","value":"70.32/51.09/90.54","baseline":"DeepSeek-V3.1 Base 59.29/47.16/89.46","condition":"同一評価系","interpretation":"平均27B活性でも671B総量・37B活性のDeepSeek-V3.1 Baseと競合または上回る課題がある。"}],"negative_results":["ゼロ計算専門家の計算予算制御は小バッチで統計が不安定になり、バイアス更新頻度を下げる必要がある。","装置単位負荷分散損失が強すぎるとルータ均一化を招くため、負荷分散勾配を言語モデル勾配の約0.1未満に抑える指針が必要。","決定論的演算でも数値差が小さいだけでは品質保証にならず、演算実装差で学習損失差1e-3～1e-4でもベンチマーク5ポイント超の差が生じ得る。","理論推論比較のQwen構成はKVキャッシュ容量上、装置当たりバッチ96が実際には難しいと論文自身が注意する。"],"quality_impact":"動的計算配分は固定平均計算量で検証損失を改善し、ScMoEは品質中立を複数設定で確認する。完成モデルは一般・推論・数学・コード・エージェント課題で同世代MoEと競争力を持つ。","interpretation":"効率改善は、容易なトークンに不要なFFN計算を割り当てない『計算量の可変化』と、残った専門家計算の前後で避けられない全対全通信を別の密計算へ重ねる『待ち時間の隠蔽』を分離して同時に解くことから生じる。平均計算予算はPID制御で守るため、単に計算を減らして品質を落とす方式ではない。ScMoEは演算量を削るのではなく依存関係を組み替えて通信待ちを隠すため、二つの機構は直交的に効く。"},
- "reservation":{"claim_id":"claim-a23c984134283281d819be9c","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-09f713627dfe2c8537495b1a",
+  "job_id": "job-research-c39635b6c8612e08",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-09f713627dfe2c8537495b1a",
+    "worker_id": "scheduled-chat-discovery-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }

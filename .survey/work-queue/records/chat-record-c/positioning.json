@@ -1,5 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a23c984134283281d819be9c","job_id":"job-research-1d4c48939bbf9fa8",
- "data":{"positioning":"LongCat-Flashは新しいゼロ計算専門家概念そのものを提案した論文ではなく、MoE++系のゼロ計算専門家と既存ScMoEを560B級の実モデルへ統合し、計算予算制御、負荷分散、分散学習、推論実行系まで共同設計した大規模実証として位置付けられる。Adaptive Expert Computation / Compression系統では、専門家を削除・圧縮する静的手法と異なり、モデル全体は保持したまま各トークンで実際に計算する通常専門家数を変える動的疎性の代表例になる。","differences":"MoE++からはゼロ計算専門家を継承するが、LongCat-Flashは通常専門家の平均活性数をPID制御付きバイアスで安定化し、装置単位負荷分散と組み合わせて大規模学習へ展開する。ScMoEからは短絡接続を継承し、単一バッチ重複、NVLink/RDMA通信重複、MTP投機デコード、CUDAグラフ、多段スケジューリングまで推論系へ接続する。したがってアルゴリズム単体の新規性より、動的計算配分と通信隠蔽を同じ560Bモデルで成立させた統合設計が重要である。","relation_to_prior_work":[{"work":"MoE++","difference":"ゼロ計算専門家の原理を継承し、560Bモデルで18.6B～31.3Bの可変活性を実現。PID制御と大規模負荷分散を追加して実学習へ展開する。"},{"work":"Shortcut-connected Expert Parallelism","difference":"ScMoEの短絡接続を採用し、学習だけでなく単一バッチ重複と大規模推論のNVLink/RDMA重複へ統合する。"},{"work":"DeepSeek-V2/V3","difference":"MLAと細粒度専門家設計を土台にしつつ、固定活性専門家数ではなくゼロ計算専門家でトークン単位の計算予算を可変にする。"},{"work":"Auxiliary-Loss-Free Load Balancing","difference":"専門家バイアス方式を通常専門家の平均計算予算制御へ拡張し、固定増分ではなくPID制御で大規模ルータ分布へ追従する。"}],"strengths":["560B総量・20兆超トークンという大規模実証で動的専門家計算を検証する。","平均計算予算を固定しながらトークンごとの計算量を大きく変えられる。","ScMoEの品質中立性を複数規模・注意方式で切り分ける。","モデル構造だけでなく学習安定性、決定論的カーネル、推論スケジューラまで一体設計する。","モデル重みと配備コードを公開している。"],"limitations":["ゼロ計算専門家とScMoEは先行研究由来であり、技術報告の主要価値は統合・スケール実証にある。","大規模学習の詳細なハードウェア構成や総消費資源は報告が限定的で、第三者が同規模再現するのは難しい。","一部比較値は他モデルの公開報告を使用し、全結果が完全同条件の再測定ではない。","理論TPOT比較にはEP=128、装置当たりバッチ96、既報カーネル性能など強い仮定がある。","動的計算量はルータ学習とPID制御に依存し、分布変化時の計算予算・品質挙動は追加検証が必要。"],"implementation_status":"LongCat-Flash-Chatのモデル重みとコードをMITライセンスで公開し、SGLangとvLLM向け配備対応を提供する。技術報告は決定論的学習カーネル、専門家通信、推論スケジューラ等の実装詳細を記載するが、数万アクセラレータ規模の完全な社内学習基盤がそのまま公開されているわけではない。","research_positioning":"動的MoE研究を『小規模な可変top-kの精度比較』から『560B級モデルで平均予算を制御しながらトークン単位計算を変え、通信・学習・推論系まで成立させる』段階へ押し上げた実証研究である。特に今後の可変計算MoEでは、平均活性パラメータだけでなく活性数分布、ルータ安定性、装置負荷、通信重複を同時に評価する必要性を示す。","repository_fit":"Adaptive Expert Computation / Compression系統へ直接適合する。MoE++等のゼロ計算専門家の後続実証として、動的専門家計算と大規模サービングの接点を埋める。"},
- "reservation":{"claim_id":"claim-a23c984134283281d819be9c","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-09f713627dfe2c8537495b1a",
+  "job_id": "job-research-c39635b6c8612e08",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-09f713627dfe2c8537495b1a",
+    "worker_id": "scheduled-chat-discovery-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }
