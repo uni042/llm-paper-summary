@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-89bc644c23d78357d6c68f4d",
   "job_id": "job-research-e405cf8340f00512",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-89bc644c23d78357d6c68f4d",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "Adrenalineはプリフィル側の余剰HBMとデコード側の余剰計算資源を同時に利用し、vLLMの分離配信より高い飽和スループットを得た。ShareGPTではLlama-2 7Bで最大1.47倍、13Bで1.63倍、OpenThoughtsでは7Bで1.60〜1.66倍、13Bで1.57〜1.68倍の出力トークンスループット改善を報告する。長い出力でデコードHBM不足によるプリエンプションが起こる条件ではTPOTとP99 TPOTも大きく改善する。一方、低負荷では両方式のスループットは近く、遠隔実行の価値は資源飽和が近づくほど大きい。",
+    "key_results": [
+      {"metric": "出力トークンスループット", "value": "最大1.68×", "baseline": "vLLM 0.6.3のプリフィル・デコード分離", "condition": "OpenThoughts、Llama-2 13B、8×A100環境", "interpretation": "デコード側HBMだけで決まっていた同時実行上限を、プリフィル側HBMへ注意を移すことで引き上げた。"},
+      {"metric": "プリフィル側HBM容量利用", "value": "最大2.28×", "baseline": "vLLM分離構成", "condition": "実ワークロードでの資源利用評価", "interpretation": "プリフィル完了後に遊休化していたHBMへ遠隔要求のKV関連データを置くことで容量を再利用した。"},
+      {"metric": "プリフィル側HBM帯域利用", "value": "最大2.07×", "baseline": "vLLM分離構成", "condition": "注意オフロード実行時", "interpretation": "計算律速なプリフィルでは余っていた帯域を、メモリ律速なデコード注意が消費して資源特性を補完した。"},
+      {"metric": "デコード側計算利用", "value": "最大1.67×", "baseline": "vLLM分離構成", "condition": "注意オフロードで総デコードバッチを拡大", "interpretation": "注意のHBM負担を遠隔へ移した分だけ多くの要求の射影・全結合計算をまとめ、デコードGPUの演算器を使いやすくした。"},
+      {"metric": "OpenThoughtsの平均TPOT削減", "value": "7Bで26.9〜29.5%、13Bで23.4〜24.5%", "baseline": "vLLM", "condition": "長い出力によりプリエンプションが生じる要求率", "interpretation": "遠隔HBMの利用でデコード側の容量不足とプリエンプションを緩和した効果が、単なる帯域集約に加えて効いている。"},
+      {"metric": "OpenThoughtsのP99 TPOT削減", "value": "7Bで48.5〜58.8%、13Bで34.9〜38.7%", "baseline": "vLLM", "condition": "8×A100、実ワークロード", "interpretation": "容量飽和時の長い待ちを抑え、尾部遅延にも改善が現れる。"}
+    ],
+    "negative_results": "低い要求率ではvLLMとAdrenalineのスループットはほぼ同等で、余剰資源を借りる必要が少ない。ShareGPTで要求率が高くなると、遠隔注意のバッチは局所注意時間に収める制約で上限に達し、TPOT上の追加利得は小さくなる。OpenThoughtsはプロンプトが短いためTTFTは両方式で近く、オフロードが常に全指標を改善するわけではない。固定的に移動率を上げすぎるとプリフィル側資源競合や遠隔同期待ちを起こしうるため、70〜80%などの最適値はワークロードとモデルに依存する。",
+    "interpretation": "改善の本質は新しいGPU資源を追加することではなく、分離によって別々の資源島になったHBMと計算器を注意計算の移動で組み合わせ直すことにある。注意はデコードでメモリ律速なのでプリフィル側の余剰帯域と相性がよく、非注意カーネルはデコード側でバッチを増やすほど演算密度が上がる。この相補性が両側の利用率を同時に上げる。ただし遠隔注意が局所注意より遅いと層ごとに待つため、移動率上限と要求単位の動的判定が性能成立条件になる。",
+    "quality_impact": "演算を近似・省略せず、同じ注意計算を別GPUで実行して結果を戻すため、モデル品質を意図的に変える方式ではない。品質評価よりもサービス品質目標であるTTFT/TPOTとスループットを中心に評価しており、主なリスクは数値精度ではなく遠隔同期や資源競合による遅延悪化である。"
+  },
+  "reservation": {"claim_id": "claim-89bc644c23d78357d6c68f4d", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
 }
