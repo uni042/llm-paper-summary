@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-16712b93d70f46eb3fb21fac",
-  "job_id": "job-research-821e549f36e154dd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-16712b93d70f46eb3fb21fac",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-16712b93d70f46eb3fb21fac","job_id":"job-research-821e549f36e154dd","data":{"limitations":"評価は視覚入力LMMが中心で、音声は同様の多段構造を持つと論じるが実測していない。公開モデル特性評価は最大90B、主エンドツーエンドは11Bと26Bであり、より大規模な本番モデルでは画像符号化とLLM backendの比率が変わりうる。自動拡縮は約5分周期で、ヒステリシス抑制など高度な安定化は論文範囲外である。InfiniBand RDMAでは転送費用が小さいがEthernetではP99 180msとなり、ネットワーク条件で分離利得が縮む。画像インスタンスとテキストインスタンスの比率を誤ると一体配備より悪化する条件もあるため、オフラインプロファイルと容量制御が必須である。","differences":"SplitwiseやDistServe等のprefill/decode分離はテキストLLM backend内部の計算段階を分けるが、ModServeはその前段にある画像前処理・画像符号化を独立プールへ切り出す。したがってPD分離と競合せず、画像符号化・prefill・decodeの三段分離として合成できる。vLLM等の一体LMM配備は全段階を同一資源で拡縮するのに対し、ModServeは段階別性能プロファイルからテンソル並列度、バッチ、自動拡縮を独立決定する。モデル側の視覚トークン圧縮手法とは異なり、トークンを近似削減せずシステム配置だけを最適化する。","implementation_status":"約5000行のPythonで実装。vLLM 0.7.2、HuggingFace Transformers、gRPC、NCCL、GPU Direct RDMAを利用。Azureの大規模本番マルチモーダルトレースも公開されている。論文はACM SoCC 2025掲載。","research_positioning":"LLMサービングの資源分離研究をマルチモーダル推論の前処理・符号化段階まで拡張した研究に位置する。段階別の計算特性と本番モダリティ別バーストを結び付け、分離配置、要求ルーティング、SLO駆動スケジューリング、自動拡縮を一つの制御面で扱う。リポジトリ内ではprefill/decode分離、サービングスケジューリング、自動拡縮、マルチモーダル推論最適化の交点にある。"},"reservation":{"claim_id":"claim-16712b93d70f46eb3fb21fac","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
