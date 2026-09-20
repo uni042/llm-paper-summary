@@ -608,13 +608,20 @@ def _validate_citation_first_route(sub: dict, result: dict[str, Any], meta: dict
             )
 
     direction = _citation_direction_from_precheck_result(result)
-    if direction in {"backward", "forward"}:
-        return direction
     if _explicit_user_directed_discovery(sub):
-        return None
+        return direction if direction in {"backward", "forward"} else None
 
     run_key = str(meta.get("run_key") or "").strip()
     attempted = _same_run_citation_directions(run_key)
+    if direction in {"backward", "forward"}:
+        if direction in attempted and len(attempted) == 1:
+            missing = [item for item in ("backward", "forward") if item not in attempted]
+            raise _citation_first_guidance(
+                "Do not repeat the same citation direction before completing the citation-first pair.",
+                missing,
+            )
+        return direction
+
     missing = [direction for direction in ("backward", "forward") if direction not in attempted]
     if missing:
         raise _citation_first_guidance(
