@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "precheck_result_path": ".survey/work-queue/discovery-precheck/results/20260921T0401JST-scheduled-repository-references-01.json",
+  "precheck_receipt": "20260921T0401JST-scheduled-repository-references-01",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:1904.10509",
+      "title": "Generating Long Sequences with Sparse Transformers",
+      "source_url": "https://arxiv.org/abs/1904.10509",
+      "paper_path": "papers/inference/10-sparse-attention/2019-1904.10509-generating-long-sequences-sparse-transformers.md",
+      "priority": 82,
+      "reason": "構造化参照で22本の収録論文から参照される基礎的な疎注意研究。注意計算をO(n^2)からO(n sqrt(n))へ削減し、再計算と高速注意カーネルも扱うため、sparse-attention/長文脈推論系統の重要な未収録基礎論文として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2306.11695",
+      "title": "A Simple and Effective Pruning Approach for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2306.11695",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2023-2306.11695-wanda-llm-pruning.md",
+      "priority": 84,
+      "reason": "Wandaとして知られるLLMの再学習不要weight pruning手法で、構造化参照では22本の収録論文から接続される。MoE pruning・圧縮や疎行列推論の多数の後続研究の基準線になっており、圧縮系統の比較基盤として重要。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-21T04:01:03+09:00",
+    "round": "scheduled-backward-structured-references-01",
+    "axis": "repository structured references backward citation curation",
+    "query_summary": "schema v3 repository_referencesで構造化参照をrelation_count順に取得し、allowed_recordsのみを軽量評価。基礎的重要性と現在の推論サーベイへの直接性が高い2件を候補化した。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 22,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "同一run_keyで前方引用refreshを実行し、その後に別の後方引用バッファまたは高採用率軸へ進む",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "repository-structured-references",
+        "source": "repository_references",
+        "date_range": "all",
+        "category": "backward-citation",
+        "citation_direction": "backward",
+        "query_family": "structured-references",
+        "raw_result_count": 100,
+        "unseen_result_count": 20,
+        "duplicate_filtered_count": 21,
+        "rejection_filtered_count": 1,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 2,
+        "position": "cursor-0"
+      }
+    ]
+  }
+}
