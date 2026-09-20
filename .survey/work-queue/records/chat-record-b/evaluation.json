@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5f2844ad503568d40a7ed5ff",
-  "job_id": "job-research-7975c226ad04d80a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5f2844ad503568d40a7ed5ff",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5f2844ad503568d40a7ed5ff","job_id":"job-research-7975c226ad04d80a","data":{"hardware":"2×NVIDIA A100 80GB。","software":"CUDA 12.2、FlashAttention。Masked Diffusion Language Modelをdraftとして使用。","methodology":"CNN/DailyMail要約、OpenWebText生成、MT-Bench、およびSpecBenchで評価。CNN/DMとOpenWebTextは1024 tokenをtemperature 0で生成し、targetにGPT-2 XL 1.5B/GPT-NEO 2.7B、draftにMDLM 110Mを使用。標準投機的復号はGPT-2 86M draft。MT-BenchではVicuna 33B target、MDLM 141M draftを用いEAGLE/EAGLE-2と比較。walltime speedup、acceptance rate、FLOPs/draft、memory/depthを測定し、γとT、標準投機的初期化の有無もablation。","scope":"自己回帰target modelの出力品質を保った投機的復号高速化。主に長いgreedy generationを対象とし、temperature>0の確率的生成は未評価。","models":["GPT-2 XL 1.5B","GPT-NEO 2.7B","Vicuna 33B","MDLM 110M","MDLM 141M","GPT-2 86M drafter"],"datasets_benchmarks":["CNN/DailyMail","OpenWebText","MT-Bench","SpecBench"],"baselines":["autoregressive decoding","standard speculative decoding","EAGLE","EAGLE-2"],"metrics":["walltime speedup","acceptance rate","FLOPs per draft","memory consumption","computation depth"]},"reservation":{"claim_id":"claim-5f2844ad503568d40a7ed5ff","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
