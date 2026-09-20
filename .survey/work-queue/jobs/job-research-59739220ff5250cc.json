@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-59739220ff5250cc",
+  "type": "research",
+  "parent_job_id": "job-4243204e6865c123",
+  "priority": 94,
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.1683",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning",
+  "source_url": "https://aclanthology.org/2026.acl-long.1683/",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-lazyeviction.md",
+  "selection_reason": "Lagged KV-cache eviction for long reasoning that models token-importance recurrence and preserves accuracy under substantial cache reduction.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T04:05:01+00:00"
+}
