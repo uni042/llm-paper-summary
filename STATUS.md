@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 17:38:52 JST**
+> 自動生成: **2026-09-20 17:39:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **108** |
+| 収録候補論文 | **107** |
 | 未claim Research job | **106** |
-| 直近24hの検証済みResearch収録 | **75** |
-| 最終検証済みResearch収録 | **09-20 17:34:22 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **76** |
+| 最終検証済みResearch収録 | **09-20 17:38:58 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **108** |
+| canonical_id確認済みの一意な候補論文 | **107** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **108** |
+| 非終端Research job合計 | **107** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **2** | **1** | **1** | **2** | **0** | — |
+| Research | **40** | **2** | **2** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **39** | **3** | **2** | **1** | **2** | **0** | **5** |
+| 合計 | **40** | **3** | **3** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 17:38:58 JST** [research] `arXiv:2404.15778` — BASS: Batched Attention-optimized Speculative Sampling
+  - job: `.survey/work-queue/jobs/job-research-76aff8aad6f29ebc.json`
+  - result: `.survey/work-queue/results/research/attempt-3bb75bb690b745e4b4b44fd7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3bb75bb690b745e4b4b44fd7.json`
+  - paper: `papers/inference/05-speculative-decoding/2024-2404.15778-bass.md`
 - **09-20 17:34:22 JST** [research] `arXiv:2405.01481` — NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment
   - job: `.survey/work-queue/jobs/job-research-0ad72717e3fdb154.json`
   - result: `.survey/work-queue/results/research/attempt-57d5d091923e08545a3ff388.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-f2e51bafaabacfadeaecc0ee.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f2e51bafaabacfadeaecc0ee.json`
   - paper: `papers/inference/06-moe-expert-offloading/2024-2408.10284-adapmoe.md`
-- **09-20 15:22:39 JST** [research] `arXiv:2506.20675` — Utility-Driven Speculative Decoding for Mixture-of-Experts
-  - job: `.survey/work-queue/jobs/job-research-2442fe5802b5c31d.json`
-  - result: `.survey/work-queue/results/research/attempt-2f18ec233c0f768fe4b55277.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-2f18ec233c0f768fe4b55277.json`
-  - paper: `papers/inference/05-speculative-decoding-moe/2025-2506.20675-cascade.md`
 
 ### Audit
 
@@ -127,8 +127,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-3bb75bb690b745e4b4b44fd7.json` (job `job-research-76aff8aad6f29ebc`)
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2404.15778` — BASS: Batched Attention-optimized Speculative Sampling
+  - job: `.survey/work-queue/jobs/job-research-76aff8aad6f29ebc.json`
+  - result: `.survey/work-queue/results/research/attempt-3bb75bb690b745e4b4b44fd7.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3bb75bb690b745e4b4b44fd7.json`
+  - paper: `papers/inference/05-speculative-decoding/2024-2404.15778-bass.md`
 - **成功** `arXiv:2405.01481` — NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment
   - job: `.survey/work-queue/jobs/job-research-0ad72717e3fdb154.json`
   - result: `.survey/work-queue/results/research/attempt-57d5d091923e08545a3ff388.json` (`ok=true`)
@@ -155,10 +159,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2404.15778` — BASS: Batched Attention-optimized Speculative Sampling / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 17:37:19 JST** / heartbeat: **—** / lease expiry: **09-20 19:07:19 JST**
-  - evidence: `.survey/work-queue/claims/job-research-76aff8aad6f29ebc.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-llm-survey-01`
   - claim: **09-20 16:02:12 JST** / heartbeat: **09-20 16:28:58 JST** / lease expiry: **09-20 17:58:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -181,7 +182,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **108** |
+| ready | **107** |
 
 ### 候補の重複・識別情報欠損
 
@@ -201,7 +202,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **827** |
+| inference/training/survey配下の論文Markdown実体 | **828** |
 
 ### immutable submissionの未照合
 
@@ -209,8 +210,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **750** |
-| └ Research | **564** |
+| 成功result未照合のimmutable submission | **749** |
+| └ Research | **563** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
