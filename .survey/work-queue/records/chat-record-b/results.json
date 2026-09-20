@@ -1,13 +1,15 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-31c2c5e14daaa2ebda862c39",
-  "job_id": "job-research-06ec3586821ff3bb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-31c2c5e14daaa2ebda862c39",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,
+  "transport_version":10,
+  "slot":"results",
+  "attempt_id":"attempt-31c2c5e14daaa2ebda862c39",
+  "job_id":"job-research-06ec3586821ff3bb",
+  "data":{
+    "key_results":"主評価では、LLaMA-2-13BのCNN/DailyMailで1.572倍、XSumで1.429倍、LLaMA-2-13B-Chatで1.409倍と1.224倍、LLaMA-2-70Bで最大1.992倍と1.598倍の高速化を得た。温度0.2のサンプリングでも13Bは1.529倍/1.377倍、70Bは1.964倍/1.560倍だった。CodeLLaMA-13BのHumanEvalではpass@1で1.456倍、pass@10で1.345倍で、品質指標は比較対象とほぼ同等だった。",
+    "quantitative":"LLaMA-2-13BのCNN/DailyMail 10例で平均トークン遅延は56.3±1.23 msから36.8±3.23 msへ低下した。注意機構部分は39.7から22.2 ms、MLP部分は14.3から12.2 ms。適応下書き終了は固定K=2/4/6/8の1.37/1.44/1.42/1.36倍に対し1.57倍。ベイズ最適化したスキップ配置は受理率0.919・1.57倍で、先頭/中央/末尾/ランダムの0.091/0.393/0.508/0.592および0.696/0.887/0.951/1.01倍を上回った。GSM8KではCodeLLaMA-13Bで1.351倍、Instructで1.263倍、MT-benchではLLaMA-2-13B-Chatで1.269倍。",
+    "quality":"貪欲生成では完全モデルの予測で逐次検証するため通常自己回帰と同じ出力を維持する設計で、要約ROUGE-2は差がほぼない。HumanEval pass@1は0.311対0.317、pass@10は0.659対0.659。サンプリングでは投機的サンプリングの補正則により元モデルの分布を保つ。",
+    "limitations":"スキップ層のベイズ最適化は13B系で約2.5時間、70Bで約6時間を要し、タスク分布が大きく変わる場合は再探索が望ましい。追加学習をしないためスキップ可能な層数には限界があり、過度に削ると受理率低下で高速化が消える。評価はLLaMA-2系と低バッチ中心で、著者はバッチデコードへの統合を今後の課題としている。下書き段階が自己投機実行時間の大半を占めるため、下書き経路自体が十分軽くならないモデルでは利得が縮む。",
+    "interpretation":"利得の中心は、帯域律速の完全モデルを1トークンごとに呼ぶ回数を減らし、短い候補列の完全検証を一括前向き計算へ変換する点にある。層スキップだけでは候補品質と速度のトレードオフが強いが、実測時間を直接目的にした層選択と入力難易度へ追随する候補長制御を組み合わせることで、受理率を保ちながら下書き計算を削減している。"
+  },
+  "reservation":{"claim_id":"claim-31c2c5e14daaa2ebda862c39","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
