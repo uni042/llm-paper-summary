@@ -9,8 +9,8 @@
       "completed": 6
     },
     "research": {
-      "ready": 120,
-      "completed": 623,
+      "ready": 119,
+      "completed": 624,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 120,
+    "ready_research_audit": 119,
     "actively_claimed": 2,
-    "claimable": 118
+    "claimable": 117
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-be4feb2ff4a84f5b",
-      "type": "research",
-      "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2405.03917",
-      "title": "KV Cache is 1 Bit Per Channel: Efficient Large Language Model Inference with Coupled Quantization",
-      "source_url": "https://arxiv.org/abs/2405.03917",
-      "paper_path": "papers/inference/05-kv-cache-compression-quantization/2024-2405.03917-coupled-quantization.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-f8d11555626eb92a",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-2442fe5802b5c31d",
+      "type": "research",
+      "lane": null,
+      "priority": 95,
+      "canonical_id": "arXiv:2506.20675",
+      "title": "Utility-Driven Speculative Decoding for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2506.20675",
+      "paper_path": "papers/inference/05-speculative-decoding-moe/2025-2506.20675-cascade.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T06:02:27+00:00"
+  "generated_at": "2026-09-20T06:05:09+00:00"
 }
