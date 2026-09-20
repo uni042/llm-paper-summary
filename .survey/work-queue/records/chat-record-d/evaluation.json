@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-480662bc3f90f56bffdcef2f",
-  "job_id": "job-research-f8d11555626eb92a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-480662bc3f90f56bffdcef2f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-480662bc3f90f56bffdcef2f","job_id":"job-research-f8d11555626eb92a","data":{"hardware":"推論効率はH100 80GB GPUで32K〜1M文脈を評価。1M長文学習はCUBE内部版を利用。","software":"LM Eval Harnessで下流課題を評価。ゲート付き保持の推論用にTritonカーネルを実装。","methodology":"3B YOCOをStableLM-3B-4E1Tに近い学習設定で最大1.6兆トークンまで学習し、OpenLLaMA-v2-3BやStableLMとゼロショット下流課題を比較する。160M、400M、830M、1.4B、2.7B、6.8B、13Bでは同一データ・設定でLlama型Transformer、ゲート付き保持YOCO、スライディング窓YOCOの検証損失を比較する。長文脈版は64K、256K、1Mへ段階延長し、needle検索、多needle検索、書籍・リポジトリコードの負対数尤度を評価する。推論ではGQA、Flash-Decoding、カーネル融合を入れたTransformerを公平な基準とし、32K〜1M入力でGPUメモリ、事前充填遅延、処理能力、収容トークン数を比較する。","datasets":["LM Eval Harness下流課題群","Needle In A Haystack","multi-needle retrieval","book long-context validation","repository-level code validation"],"models":["YOCO-3B","YOCO-3B-1M","YOCO gRet 160M〜13B","YOCO SWA 160M〜13B","Llama-style Transformer 160M〜13B"],"baselines":["OpenLLaMA-v2-3B","StableLM-3B-4E1T","Llama型Transformer + GQA + Flash-Decoding + kernel fusion","LWM-1M-text","MiniCPM-128K","ChatGLM3-128K","YaRN-Mistral-128K"],"metrics":["ゼロショット正解率","検証損失","needle検索正解率","負対数尤度","GPUメモリ","事前充填遅延","tokens/s処理能力","鍵値キャッシュ収容トークン数"],"scope":"品質とシステム効率の双方を、3B実運用プロファイル、160M〜13Bスケーリング、最大1M文脈で検証する。"},"reservation":{"claim_id":"claim-480662bc3f90f56bffdcef2f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
