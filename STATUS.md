@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 09:41:15 JST**
+> 自動生成: **2026-09-20 09:41:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **87** |
 | 未claim Research job | **86** |
 | 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-20 09:39:31 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-20 09:39:31 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **12** | **2** | **2** | **0** | **1** | **0** | — |
+| Research | **12** | **3** | **2** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **12** | **3** | **3** | **0** | **1** | **0** | **5** |
+| 合計 | **12** | **4** | **3** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -112,7 +112,8 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 09:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-0b14b95da2b3a2abc2e9855f.json` (job `job-research-9824d8080e264ed4`)
 - **成功** `arXiv:2401.18079` — KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization
   - job: `.survey/work-queue/jobs/job-research-6e90b18bc4767f7c.json`
   - result: `.survey/work-queue/results/research/attempt-1e7b670e9a35584762c55c56.json` (`ok=true`)
@@ -195,8 +196,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **677** |
-| └ Research | **516** |
+| 成功result未照合のimmutable submission | **678** |
+| └ Research | **517** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
