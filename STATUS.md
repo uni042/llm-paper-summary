@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:47:12 JST**
+> 自動生成: **2026-09-20 18:47:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **98** |
 | 未claim Research job | **97** |
 | 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-20 18:45:26 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-20 18:45:26 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **37** | **6** | **5** | **0** | **1** | **0** | — |
+| Research | **37** | **7** | **5** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **37** | **7** | **6** | **0** | **1** | **0** | **5** |
+| 合計 | **37** | **8** | **6** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **7件** / 検証済み成功: **5件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
 - **成功** `DOI:10.18653/v1/2026.findings-acl.558` — DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning
   - job: `.survey/work-queue/jobs/job-research-529f8795f6dde556.json`
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
@@ -143,6 +143,7 @@
   - result: `.survey/work-queue/results/research/attempt-726aa6f9d7bb4140731a500b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-726aa6f9d7bb4140731a500b.json`
   - paper: `papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-bb698348ca635e022360ff70.json` (job `job-research-c0742ec707ffbbe8`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-d6d0f050a2bc6af8b178330b.json` (job `job-research-d5278ec0af97bd4e`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-d6d0f050a2bc6af8b178330b.json` (`ok=false`)
 - **成功** `arXiv:2605.26297` — Agentic AI Workload Characteristics
@@ -177,9 +178,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2110.02861` — 8-bit Optimizers via Block-wise Quantization / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 18:45:56 JST** / heartbeat: **—** / lease expiry: **09-20 20:15:56 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d5278ec0af97bd4e.json`
+- `arXiv:2405.14636` — PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 18:47:22 JST** / heartbeat: **—** / lease expiry: **09-20 20:17:22 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c0742ec707ffbbe8.json`
 
 #### Audit
 
@@ -227,8 +228,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **760** |
-| └ Research | **574** |
+| 成功result未照合のimmutable submission | **761** |
+| └ Research | **575** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
