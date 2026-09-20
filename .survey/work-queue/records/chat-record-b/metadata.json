@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-098c5b91676f2a1a4d4737af",
-  "job_id": "job-research-f018d8c28f4995e5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-098c5b91676f2a1a4d4737af",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-098c5b91676f2a1a4d4737af","job_id":"job-research-f018d8c28f4995e5","data":{"canonical_id":"arXiv:2502.16002","arxiv_id":"2502.16002","doi":"10.52202/085713-4461","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse","summary":"KVLinkは、検索拡張生成などで繰り返し現れる文書を個別に事前符号化して鍵・値キャッシュを再利用する方式である。単純連結で生じる位置埋め込み不整合を推論時の位置再符号化で補正し、独立文書間で失われる自己注意を学習可能なリンクトークンで再接続する。Llama 1B・3B・8Bと7データセットで既存再利用法より質問応答精度を平均約4ポイント改善し、5,000トークン級では最初のトークンまでの時間を最大96%削減する。","list_summary":"文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。","authors":["Jingbo Yang","Bairu Hou","Wei Wei","Yujia Bao","Shiyu Chang"],"published":"2025-02-21","publication":"NeurIPS 2025 Main Conference Track","publication_type":"Conference paper","publication_status":"Published at NeurIPS 2025","lineage":"鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論","topics":["鍵・値キャッシュ再利用","位置再符号化","リンクトークン","検索拡張生成","キャッシュ圧縮"],"importance":"任意位置の再利用キャッシュで問題となる位置不整合と文書間注意欠落を同時に扱い、精度と最初のトークンまでの時間を実験的に両立する。SSDなど階層ストレージへ事前キャッシュを置く設計とも直接接続する。","hardware_evaluation":"学習は8基のNVIDIA H100で6,000ステップ。効率評価ではLlama-3.1-8BをA100 80GBで実行し、文脈長1,000～5,000トークンの最初のトークンまでの時間を測定。","quality_effect":"NaturalQuestions、2WikiMQA、TriviaQA、HotpotQA、MuSiQue、MultiNews、Samsumで評価し、リンクトークン増加で単純再利用より精度を回復。一般能力は同じ微調整モデルと概ね同等。","source":"https://arxiv.org/abs/2502.16002","sources":["https://arxiv.org/abs/2502.16002","https://arxiv.org/html/2502.16002","https://proceedings.neurips.cc/paper_files/paper/2025/hash/c217d123885341853cecbdd2be809983-Abstract-Conference.html"],"implementation":"公式コードUCSB-NLP-Chang/KVLinkを公開。Llama-3.2-1B/3BとLlama-3.1-8Bを混合データで微調整し、0/1/5個のリンクトークン構成を比較する。","code":"https://github.com/UCSB-NLP-Chang/KVLink","last_checked":"2026-09-20","references":[],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":56},"reservation":{"claim_id":"claim-098c5b91676f2a1a4d4737af","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
