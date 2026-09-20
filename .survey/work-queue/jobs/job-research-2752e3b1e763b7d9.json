@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-2752e3b1e763b7d9",
+  "type": "research",
+  "parent_job_id": "job-41f0dd4feecf39a6",
+  "priority": 95,
+  "canonical_id": "arXiv:2602.02443",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE",
+  "source_url": "https://arxiv.org/abs/2602.02443",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md",
+  "selection_reason": "fine-grained MoEのrouter score head/tail構造を利用し、high-confidence expertsを維持しつつtailだけをstochasticに選ぶtraining-free expert allocation。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:38:32+00:00"
+}

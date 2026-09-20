@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:33:52.460990+00:00",
+  "updated_at": "2026-09-20T10:40:57.303428+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:33:52.460990+00:00",
+      "last_recorded_at": "2026-09-20T10:40:57.303428+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 377,
         "audit_completed": 0,
-        "discovery_completed": 198,
+        "discovery_completed": 200,
         "blocked": 52,
-        "new_jobs": 318,
+        "new_jobs": 330,
         "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35484887683:1",
-          "recorded_at": "2026-09-20T02:47:34.555451+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35484887683",
-            "run_attempt": "1",
-            "source_sha": "4ea216ae89f4f5c23399c2a492130c25408835f3"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35485066115:1",
           "recorded_at": "2026-09-20T02:51:37.359450+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35505612084:1",
+          "recorded_at": "2026-09-20T10:40:57.303428+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35505612084",
+            "run_attempt": "1",
+            "source_sha": "a2db8d2ef9d386799c8fb1d9fe287ae3af05d661"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
           ]
         }
       ],
@@ -24612,6 +24612,22 @@
           "title": "Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-41f0dd4feecf39a6",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b368d550b6fc18b4",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -26840,6 +26856,90 @@
           "type": "research",
           "canonical_id": "arXiv:2608.24938",
           "title": "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration"
+        },
+        {
+          "job_id": "job-41f0dd4feecf39a6",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-b368d550b6fc18b4",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2752e3b1e763b7d9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.02443",
+          "title": "Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE"
+        },
+        {
+          "job_id": "job-research-61e38612a8457ae4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.15690",
+          "title": "MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping"
+        },
+        {
+          "job_id": "job-research-6723d600d731caca",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.06346",
+          "title": "Ban&Pick: Enhancing Performance and Efficiency of MoE-LLMs via Smarter Routing"
+        },
+        {
+          "job_id": "job-research-74a266f79fc28554",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.21420",
+          "title": "ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation"
+        },
+        {
+          "job_id": "job-research-7878dfa1090aac77",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.21892",
+          "title": "Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts"
+        },
+        {
+          "job_id": "job-research-b3cb99418924d14e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.03151",
+          "title": "Mixture of Many Zero-Compute Experts: A High-Rate Quantization Theory Perspective"
+        },
+        {
+          "job_id": "job-research-e203c47aded67247",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.06494",
+          "title": "Route Experts by Sequence, not by Token"
+        },
+        {
+          "job_id": "job-research-e36fdfcc83960d96",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.14900",
+          "title": "FURINA: Free from Unmergeable Router via LINear Aggregation of mixed experts"
+        },
+        {
+          "job_id": "job-research-ff0b776f31e2fc4b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.02345",
+          "title": "Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression"
+        },
+        {
+          "job_id": "job-research-ff5accb2a519d706",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.07616",
+          "title": "SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models"
         }
       ],
       "new_paper_ids": [
@@ -27616,7 +27716,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 847,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

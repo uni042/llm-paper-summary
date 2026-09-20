@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-e36fdfcc83960d96",
+  "type": "research",
+  "parent_job_id": "job-b368d550b6fc18b4",
+  "priority": 94,
+  "canonical_id": "arXiv:2509.14900",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "FURINA: Free from Unmergeable Router via LINear Aggregation of mixed experts",
+  "source_url": "https://arxiv.org/abs/2509.14900",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.14900-furina-router-free-linear-expert-aggregation.md",
+  "selection_reason": "discrete routerをself-routingとlinear expert aggregationで置き換え、expert統合可能性を高めるMoE-LoRA設計。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:38:44+00:00"
+}

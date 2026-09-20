@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T10:37:41+00:00",
-  "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20",
-  "last_round": "adaptive-max-r7-merging-specialization",
+  "updated_at": "2026-09-20T10:38:44+00:00",
+  "last_run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+  "last_round": "adaptive-max-r9-zero-compute-b",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,40 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T06:00:00+09:00",
-      "round": "specialist-multiround-disagg-2",
-      "axis": "multi-round agent workload・P/D分離・適応resource allocation",
-      "query_summary": "新着scheduler軸からP/D disaggregationへ拡張し、multi-round workload特有のincremental prefill配置・scheduleとresource planningを扱うAMPDを評価した。canonical IDを最新repo検索で再確認し未収録として送信する。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.28150"
-      ],
-      "next_axis_hint": "既存重要serving論文のforward citationと、agentic servingのinterruption/resume・state migrationへ軸を移す",
-      "source_submission": "work-queue/submissions/20260916T0610JST-discovery-specialist-multiround-disagg-2.json"
-    },
-    {
-      "run_key": "2026-09-16T06:00:00+09:00",
-      "round": "specialist-agent-serving-3",
-      "axis": "agentic serving・session scheduling・agent memory KV reuse",
-      "query_summary": "multi-round servingからagentic workload固有のsession locality、KV再利用、stateful memoryへ探索軸を変更。SMetricとAgentKVShiftを評価し、Pallasは既知重複候補として除外した。送信直前にcanonical IDを最新repo検索で再確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.16477"
-      ],
-      "next_axis_hint": "agent interruption/resumeからOS・serverlessのstate spill/reclamation、またはforward citation経由の新しいcache-aware schedulerへ展開する",
-      "source_submission": "work-queue/submissions/20260916T0613JST-discovery-specialist-agent-serving-3.json"
-    },
     {
       "run_key": "2026-09-16T06:00:00+09:00",
       "round": "specialist-kv-reclaim-4",
@@ -7701,6 +7667,42 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "残存seedのforward citationsを新着側から追加探索",
       "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r7-retry.json"
+    },
+    {
+      "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+      "round": "adaptive-max-r8-zero-compute-a",
+      "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2410.07348 (zero-computation experts / skipping)",
+      "query_summary": "zero-compute系forward citationsからadaptive re-routing・sequence-level allocation・structured compressionの5件を選定。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "continue with remaining high-directness candidates or adjacent seed forward citations",
+      "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r8.json"
+    },
+    {
+      "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+      "round": "adaptive-max-r9-zero-compute-b",
+      "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2410.07348 (zero-computation experts / skipping)",
+      "query_summary": "zero-compute系forward citationsからelastic inference・post-training routing・dynamic skippingの5件を選定。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "continue with remaining high-directness candidates or adjacent seed forward citations",
+      "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r9.json"
     }
   ],
   "axes": {
@@ -14666,6 +14668,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "Merge Then Compress forward citationsへ進む"
+    },
+    "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2410.07348 (zero-computation experts / skipping)": {
+      "last_run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+      "rounds": 2,
+      "candidate_count": 10,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 10,
+      "accepted_count": 10,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "continue with remaining high-directness candidates or adjacent seed forward citations"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -15083,6 +15098,29 @@
       "cooldown": false,
       "last_run_key": "manual-user-forwardcite-adaptive-2026-09-20",
       "last_round": "adaptive-max-r7-merging-specialization"
+    },
+    "window-f61b5954bd34312bac24": {
+      "topic": "zero-compute experts / adaptive skipping",
+      "source": "semantic scholar citations endpoint",
+      "date_range": "through 2026-09-20",
+      "category": "adaptive expert computation / compression",
+      "citation_direction": "forward",
+      "query_family": "lineage-scoped-forward-citation",
+      "search_window_key": "window-f61b5954bd34312bac24",
+      "scan_count": 2,
+      "raw_result_count": 122,
+      "unseen_result_count": 100,
+      "duplicate_filtered_count": 22,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 60,
+      "candidate_accepted_count": 10,
+      "last_position": "1 page",
+      "unseen_rate": 0.819672131147541,
+      "duplicate_rate": 0.18032786885245902,
+      "candidate_acceptance_rate": 0.16666666666666666,
+      "cooldown": false,
+      "last_run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+      "last_round": "adaptive-max-r9-zero-compute-b"
     }
   },
   "recent_search_windows": [
@@ -15484,6 +15522,48 @@
       "duplicate_rate": 0.15,
       "candidate_acceptance_rate": 0.14285714285714285,
       "last_position": "2 pages"
+    },
+    {
+      "topic": "zero-compute experts / adaptive skipping",
+      "source": "semantic scholar citations endpoint",
+      "date_range": "through 2026-09-20",
+      "category": "adaptive expert computation / compression",
+      "citation_direction": "forward",
+      "query_family": "lineage-scoped-forward-citation",
+      "search_window_key": "window-f61b5954bd34312bac24",
+      "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+      "round": "adaptive-max-r8-zero-compute-a",
+      "raw_result_count": 61,
+      "unseen_result_count": 50,
+      "duplicate_filtered_count": 11,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 30,
+      "candidate_accepted_count": 5,
+      "unseen_rate": 0.819672131147541,
+      "duplicate_rate": 0.18032786885245902,
+      "candidate_acceptance_rate": 0.16666666666666666,
+      "last_position": "1 page"
+    },
+    {
+      "topic": "zero-compute experts / adaptive skipping",
+      "source": "semantic scholar citations endpoint",
+      "date_range": "through 2026-09-20",
+      "category": "adaptive expert computation / compression",
+      "citation_direction": "forward",
+      "query_family": "lineage-scoped-forward-citation",
+      "search_window_key": "window-f61b5954bd34312bac24",
+      "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+      "round": "adaptive-max-r9-zero-compute-b",
+      "raw_result_count": 61,
+      "unseen_result_count": 50,
+      "duplicate_filtered_count": 11,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 30,
+      "candidate_accepted_count": 5,
+      "unseen_rate": 0.819672131147541,
+      "duplicate_rate": 0.18032786885245902,
+      "candidate_acceptance_rate": 0.16666666666666666,
+      "last_position": "1 page"
     }
   ],
   "search_window_history_limit": 96,

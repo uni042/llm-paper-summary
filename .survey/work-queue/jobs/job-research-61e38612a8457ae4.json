@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-61e38612a8457ae4",
+  "type": "research",
+  "parent_job_id": "job-b368d550b6fc18b4",
+  "priority": 94,
+  "canonical_id": "arXiv:2511.15690",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping",
+  "source_url": "https://arxiv.org/abs/2511.15690",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.15690-modes-dynamic-expert-skipping.md",
+  "selection_reason": "layer重要度とmodality差を使ってexpert skipping scheduleを適応化するtraining-free方式。MLLM対象だがadaptive skipping設計として直接関連する。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T10:38:44+00:00"
+}

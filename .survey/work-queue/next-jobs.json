@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 814,
+      "completed": 816,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
       "completed": 6
     },
     "research": {
-      "ready": 123,
+      "ready": 133,
       "completed": 652,
       "superseded": 46,
       "deferred": 3,
@@ -19,9 +19,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 123,
+    "ready_research_audit": 133,
     "actively_claimed": 1,
-    "claimable": 122
+    "claimable": 132
   },
   "next_jobs": [
     {
@@ -81,6 +81,48 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-e203c47aded67247",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2511.06494",
+      "title": "Route Experts by Sequence, not by Token",
+      "source_url": "https://arxiv.org/abs/2511.06494",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-ff5accb2a519d706",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2602.07616",
+      "title": "SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models",
+      "source_url": "https://arxiv.org/abs/2602.07616",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-7878dfa1090aac77",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2509.21892",
+      "title": "Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2509.21892",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.21892-elastic-moe-inference-time-scalability.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-6882c5cf191305a1",
       "type": "research",
       "lane": null,
@@ -89,48 +131,6 @@
       "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
       "source_url": "https://arxiv.org/abs/2408.12757",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-958b0ab5aeb9819d",
-      "type": "research",
-      "lane": null,
-      "priority": 97,
-      "canonical_id": "DOI:10.1145/3651890.3672274",
-      "title": "CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving",
-      "source_url": "https://doi.org/10.1145/3651890.3672274",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-0e84e93a7c48f41f",
-      "type": "research",
-      "lane": null,
-      "priority": 97,
-      "canonical_id": "arXiv:2405.04532",
-      "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
-      "source_url": "https://arxiv.org/abs/2405.04532",
-      "paper_path": "papers/inference/08-quantization-kernels/2024-2405.04532-qserve.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-791dd06c8f3ceecf",
-      "type": "research",
-      "lane": null,
-      "priority": 97,
-      "canonical_id": "arXiv:2605.18643",
-      "title": "Post-Trained MoE Can Skip Half Experts via Self-Distillation",
-      "source_url": "https://arxiv.org/abs/2605.18643",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.18643-zeda-post-trained-dynamic-expert-skipping.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T10:37:41+00:00"
+  "generated_at": "2026-09-20T10:40:45+00:00"
 }
