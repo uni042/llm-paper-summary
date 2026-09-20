@@ -98,21 +98,22 @@ class StatusPublishGateTests(unittest.TestCase):
         self.assertNotIn("STATUS.md", text)
         self.assertIn(".survey/work-queue/claim-results", text)
 
-    def test_submission_fast_lane_keeps_canonical_renderer_with_inert_compatibility_shims(self):
+    def test_submission_fast_lane_uses_only_canonical_renderer(self):
         text = SUBMISSION_WORKFLOW.read_text(encoding="utf-8")
         self.assertIn(CANONICAL_RENDER, text)
         self.assertNotIn(LEGACY_RENDER, text)
-        self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
+        self.assertNotIn("append_research_throughput_status.py", text)
+        self.assertNotIn("refine_status_observability.py", text)
         self.assertIn("STATUS.md", text)
 
-    def test_background_helper_uses_canonical_renderer_with_inert_compatibility_shims(self):
+    def test_background_helper_uses_only_canonical_renderer(self):
         text = HELPER_WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("refresh_status_dashboard", text)
         self.assertIn("status_publish_gate.py", text)
         self.assertIn(CANONICAL_RENDER, text)
         self.assertNotIn(LEGACY_RENDER, text)
-        self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
-        self.assertIn("refine_status_observability.py --repo-root . --status STATUS.md", text)
+        self.assertNotIn("append_research_throughput_status.py", text)
+        self.assertNotIn("refine_status_observability.py", text)
         self.assertIn("git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json", text)
         self.assertIn("git commit --amend --no-edit", text)
 
