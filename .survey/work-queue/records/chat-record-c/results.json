@@ -4,10 +4,21 @@
   "slot": "results",
   "attempt_id": "attempt-3b676d8b0647321f3ab94c21",
   "job_id": "job-research-08b5458cb63307f5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3b676d8b0647321f3ab94c21",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "UniF-MoEはDomainBed平均69.5%で報告対象中最高、GLUE平均82.76%で固定top-kのタスク別最良値を含む比較対象を上回った。VLCSの実測ではtop-2 GMoEより活性パラメータ、FLOPs、推論時間、推論時メモリをすべて削減した。アブレーションでは共有量、残余専門家数、共有内容の三つを適応化した完全構成が精度と平均活性ブロック数の双方で最良となり、単に疎性機構を足したのではなく順序付き連携が効いていることを示す。",
+    "key_results": [
+      {"metric": "DomainBed平均領域外精度", "value": "69.5%", "baseline": "GMoE 67.9%、DynMoE 67.9%など", "condition": "5データセット平均", "interpretation": "共有再利用と残余専門化の連携が領域変化下でも精度を改善する。"},
+      {"metric": "GLUE平均", "value": "82.76%", "baseline": "固定top-kのタスク別最良平均81.95%、MASS 82.19%", "condition": "CoLA/MRPC/QNLI/MNLI/RTE", "interpretation": "データセット単位で最適な固定kを選ぶより、トークン単位で共有後の残余需要に応じて専門家数を変える方が高精度。"},
+      {"metric": "活性パラメータ", "value": "21.01 Mi相当", "baseline": "top-2 GMoE 23.11 Mi相当", "condition": "VLCS", "interpretation": "GMoE比9.1%削減。共有済みブロックを残余専門家で再計算しない効果が表れる。"},
+      {"metric": "FLOPs", "value": "8.70×2^30/画像", "baseline": "GMoE 10.37×2^30/画像", "condition": "VLCS", "interpretation": "GMoE比16.1%削減。分析的な演算量でも重複計算を減らす。"},
+      {"metric": "推論時間/step", "value": "0.17秒", "baseline": "GMoE 0.31秒、DynMoE 1.06秒", "condition": "RTX 3090上VLCS", "interpretation": "GMoE比45.2%短縮し、比較MoE中最短。"},
+      {"metric": "推論時メモリ", "value": "0.26 GiB", "baseline": "GMoE 0.55 GiB、DynMoE 0.99 GiB", "condition": "RTX 3090上VLCS", "interpretation": "GMoE比52.7%削減し、密DeiT-S/16の0.29 GiBも下回る。"},
+      {"metric": "多様性正則化の効果", "value": "残余専門家対の平均同時活性化62.9%減", "baseline": "正則化なし", "condition": "PACS", "interpretation": "ルータ方向の分離が専門家役割の重複を抑える。"},
+      {"metric": "完全構成の平均活性ブロック数", "value": "DomainBed 11.41、GLUE 47.61", "baseline": "共有量固定では14.17/78.33、残余top-2固定では13.41/66.74、固定先頭ブロックでは13.06/60.14", "condition": "アブレーション", "interpretation": "三段階をすべて適応化した構成が最少計算かつ最高精度。"}
+    ],
+    "negative_results": ["TerraIncognitaではUniF-MoE 52.6%に対しLFMEが53.4%で上回り、明示的な領域専門化が有利な条件が残る。", "EMoEは活性パラメータ18.81 Mi相当、FLOPs7.92×2^30でUniF-MoEより小さく、UniF-MoEがすべての解析的計算量指標を最小化するわけではない。", "ブロック数B=4では粒度が粗すぎ、B=32では各原型が狭すぎて意味を十分覆えず、B=8または16が多くのDomainBedデータで良好だった。", "多様性正則化を強くしすぎるとタスク損失を圧倒し得る。"],
+    "quality_impact": "計算削減と同時に精度も改善しており、品質を犠牲にした近似削減ではない。",
+    "interpretation": "利得の中心は、共有計算を先に確定することで残余専門家が処理すべき内容と量を変え、その新しい残余に対してだけ専門家数を決める点にある。固定共有量では最初の分割誤差が後段へ伝播し、固定top-2では残余量の違いを無視し、固定先頭ブロックでは入力ごとの共有内容を選べない。完全構成は三つの誤差源を同時に避けるため、精度向上と活性ブロック削減が同時に起きる。"
+  },
+  "reservation": {"claim_id": "claim-3b676d8b0647321f3ab94c21", "worker_id": "scheduled-chat-discovery-hourly", "worker_kind": "scheduled_chat"}
 }
