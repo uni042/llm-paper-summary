@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-cb9b65cad9eb01765ba97d06",
-  "job_id": "job-research-9c3fc1bfa46c87d0",
-  "data": {
-    "hardware": "CPUはIntel i9-13900K＋128GB DDR5-5600とAMD Ryzen 9 7950X＋128GB DDR4-3600。GPUはRTX 4090、NVIDIA A40、A100で、A40/A100ノードは16コアAMD EPYC 7763と224GB RAMを備える。GPU評価は単一GPU 40GB以内に収まるモデルを使う。",
-    "software": "HuggingFace Transformers/PyTorch上の約3千行の試作。Llama2、CodeLlama、MPT、Falconを使用し、通常KVキャッシュを比較対象とする。CPUメモリ保存とGPUメモリ保存の両構成を評価する。",
-    "methodology": "LongBenchの21データセット・6カテゴリから4K〜10K文脈を使い、文書部分をキャッシュ対象モジュール、タスク固有指示を未キャッシュ部分として設定する。先頭トークン時間（TTFT）を通常KVキャッシュと比較し、GPUではCPUメモリ保存とGPUメモリ保存、CPU推論ではCPUメモリ保存を測る。品質はLlama2、MPT、Falconで決定論的生成を用い、F1、ROUGE-L、正解率などLongBench指標を比較する。合成入力では文脈長とモデルサイズに対する計算・転送費の伸びを調べる。",
-    "scope": "主評価はプリフィル相当のTTFT短縮であり、先頭トークン後のデコード時間は通常KVキャッシュと同じ。単一GPUに収まるモデルと長文ベンチマークを中心とし、大規模分散サービングや動的キャッシュ置換は評価対象外である。コード生成、個人化、パラメータ化テンプレートの事例も示す。"
-  },
+  "attempt_id": "attempt-745f84fe29e16642827eabf3",
+  "job_id": "job-research-98f40fbe8624cabd",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-cb9b65cad9eb01765ba97d06",
+    "claim_id": "claim-745f84fe29e16642827eabf3",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
