@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-58fed7e57ba9f56b62bd697a",
+  "attempt_id": "attempt-cb9b65cad9eb01765ba97d06",
   "job_id": "job-research-9c3fc1bfa46c87d0",
   "data": {
     "overview": "Prompt Cacheは長い共通入力を再計算せずKV状態を読み出すことでTTFTを大幅に短縮する。LongBench平均約5KトークンではGPUメモリ保存時5〜10倍、CPUメモリからGPUへ転送する場合でも1.5〜3倍の短縮を示す。CPU推論では注意計算が相対的に高価なため最大70倍まで改善した。一方、デコード時間自体は変わらず、長い出力ではエンドツーエンド改善率が小さくなる。",
@@ -48,7 +48,7 @@
     "quality_impact": "モジュールを独立に符号化するためモジュール外への注意を省く近似は入るが、LongBenchのLlama2、MPT、Falconでは多くの指標が比較対象と近く、論文は全体として精度を維持すると評価する。ただしPassage Retrievalなど個別条件では数ポイントの低下も見られるため完全な数値同一性を保証する方式ではない。"
   },
   "reservation": {
-    "claim_id": "claim-58fed7e57ba9f56b62bd697a",
+    "claim_id": "claim-cb9b65cad9eb01765ba97d06",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
