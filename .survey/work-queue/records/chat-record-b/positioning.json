@@ -1,13 +1,2 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-424d7c9bd547a6273a4b2a1c",
-  "job_id": "job-research-d9598f14ff4bcd81",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-424d7c9bd547a6273a4b2a1c",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-424d7c9bd547a6273a4b2a1c","job_id":"job-research-d9598f14ff4bcd81","data":{"limitations":"評価版ZeRO-100Bは最適化器状態と勾配の分割、およびZeRO-Rを中心に実装しており、パラメータ分割まで含む完全な第3段階を用いた1兆パラメータ学習は実測していない。実機評価はV100世代のDGX-2クラスタ最大400GPUで、現代のGPU・相互接続・Transformer実装とは性能特性が異なる。CPUへの活性値退避は転送が追加され、GPU内メモリに余裕がある条件では逆に遅くなる。メモリ削減でバッチを大きくできても、データやモデルによっては臨界バッチを超えると収束効率が悪化するため、システム上の最大バッチが学習上の最適値とは限らない。","differences":"通常データ並列は計算粒度と通信効率が高い代わりに全モデル状態を各GPUへ複製する。Megatron-LM型モデル並列は状態メモリを分割できるが、層内演算をGPU間へ細分化して通信を増やし、ノード間帯域で効率が落ちる。ZeROは演算の分割ではなく保存状態の所有権を分け、必要な瞬間だけ状態を通信することで両者の長所を組み合わせる。パイプライン並列に対しても、モデル機能の変更や大きなマイクロバッチ、複数版パラメータ保持などを要求せず、標準データ並列に近い利用形態を保つ点が異なる。活性値再計算やAdafactorなどのメモリ節約最適化とは競合せず、別の重複要因を削る補完関係にある。","implementation_status":"PyTorch上でZeRO-100Bを実装し、DeepSpeedの一部としてhttps://github.com/microsoft/DeepSpeed で公開。論文時点では全機構を段階的に公開予定としており、その後ZeROはDeepSpeedの中核機能として発展した。","research_positioning":"大規模モデル学習のメモリ階層・オフロード系統における基礎的な状態分割方式であり、後続のZeRO-OffloadやZeRO-InfinityなどCPU・NVMeまで階層を広げる研究の出発点に位置付けられる。重要な設計原則は、巨大な学習状態を常時複製せず、時間的に必要な状態だけを通信して計算粒度を維持することにある。推論時の重み・KVオフロードとは対象が異なるが、状態所有権の分割、必要時取得、通信とメモリ容量の交換という観点で共通する。"},"reservation":{"claim_id":"claim-424d7c9bd547a6273a4b2a1c","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
