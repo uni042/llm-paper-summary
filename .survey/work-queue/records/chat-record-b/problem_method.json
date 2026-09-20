@@ -1,1 +1,32 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-b00534d1eda56e9a95608aea","job_id":"job-research-18c89b68d0c6c10d","data":{"problem":"長文LLMでは自己回帰生成の全過去トークンに対するkey/valueを保持するKVキャッシュが入力長・バッチに比例して増え、Llama-3.1-8Bの32Kトークン・batch 4では約16GBとモデル重み自体に匹敵する。低ランク射影は各KVベクトルをd次元からr次元へ落として保存量を減らせるが、既存のEigenAttentionやStaticPCAは小さな校正データで一度学習した固定部分空間を推論中ずっと使うため、対話からコード、promptから長いchain-of-thoughtへと活性分布が移ると射影誤差が増える。重み分解型は精度劣化やモデル変更を伴い、全履歴でSVDを再計算する動的方式は高価である。さらに全トークンを同じ比率で圧縮すると、現在の基底で表現しにくい重要トークンまで壊し、長文検索や生成品質が急落する。","novelty":"OjaKVの核は、低ランクKV圧縮を一様な静的射影ではなく『重要トークンだけフルランクで残す混合保存』と『推論中に基底を追随させるオンライン部分空間更新』の二つに分けた点である。各keyの低ランク再構成残差が注意logit摂動の上界を直接決めることを利用し、直近queryで重み付けした再構成誤差が大きいトークンをフルランクのアンカーとして選ぶ。残りの多数トークンだけを圧縮し、そのkey/value射影基底をOjaのオンラインPCA則で更新する。prefillではprompt全体を平均プーリングして包括的に更新し、decodeでは新規KVをバッファしてTトークンごとに小さな学習率で更新するため、毎回SVDを解かず非定常な文脈へ追随できる。圧縮表現を注意直前に再構成する経路を採用してFlashAttentionとの互換性も維持する。","method_overview":"初期基底は小さな校正集合のquery/keyを結合し、valueは別にSVDしてエネルギー閾値を満たすrankを選ぶ。推論開始後、各headのkey/valueをUk、Uvへ射影して低次元K̃、Ṽとして保存する。ただし各keyについて残差rt=kt-UkUk^Tktを計算し、最近のquery窓から得る注意影響で重み付けした誤差スコアを求める。上位k個の高誤差トークンは圧縮せずフルランク保持し、その他を低ランク化するため、最悪再構成誤差を直接抑える。prefillではpromptのKVを局所平均プーリングして共分散を作り、Oja更新U←U+η(CU-UU^TCU)を適用後QRで再直交化する。decodeでは新規KVをバッファBへ蓄積し、Tステップごとに同じ更新を小さいηで行い、基底を現在の生成分布へ追随させる。注意計算では圧縮K̃/ṼをUk^T/Uv^Tで元次元へ再構成し、フルランク保持トークンと合わせて標準FlashAttentionへ渡す。実用版OjaKV-PFはprefill注意自体は元のフルランクKVで行い、prompt特徴を基底更新と圧縮cache構築だけに使い、decodeから低ランク再構成を使う。","components":[{"name":"再構成誤差ベース混合保存","description":"低ランク基底で表現しにくいトークンを一律圧縮から除外する。key ktの再構成残差rtを計算すると、query qに対する注意logit誤差はCauchy-Schwarzにより||q||||rt||/√dで上界付けできる。そこで直近query窓から実際の注意影響を集約したスコアを作り、上位k個の高誤差トークンをフルランクで保持する。残りだけを低ランク化することで、位置固定のattention sink保持より現在基底の弱点を直接検出し、圧縮トークンの最大残差を抑える。論文はsoftmax安定性と後段ネットワークのLipschitz性から最終logit摂動まで残差に比例する上界を導き、この選択が生成品質保全につながる根拠を与える。"},{"name":"二段階Ojaオンライン更新","description":"静的校正基底の分布ずれを、ストリーミングPCAであるOja則を使って推論中に修正する。prefillではprompt全体のkey/value特徴を局所平均プーリングして冗長性を減らし、経験共分散に対するOja更新をまとめて適用してQR再直交化する。decodeでは各生成トークンの新規key/valueを小さなバッファへ蓄積し、固定間隔Tごとに保守的な学習率で基底を更新してバッファを消去する。全履歴SVDを繰り返さず、現在文脈の主成分方向へ少しずつ回転するため、長い生成で意味分布が変化しても射影誤差の累積を抑えられる。WikiText校正からMultiNewsへ移した実験では残差エネルギー比を0.255から0.097へ下げ、oracle基底との重なりを0.597から0.653へ改善する。"},{"name":"FlashAttention互換再構成経路","description":"FlashAttentionは通常n×dhのフル次元K/Vを受け取るため、圧縮特徴を直接処理する専用低ランクkernelは既存実行系との互換性を失いやすい。OjaKVはキャッシュ上ではK̃=KUk、Ṽ=VUvだけを保持してメモリを節約し、注意計算直前にK̂=K̃Uk^T、V̂=ṼUv^Tへ再構成して標準FlashAttentionへ渡す。QもUkへ射影して低ランク空間で計算した場合と、再構成K̂を使う場合のlogitが数学的に等価であることを示し、同じ1/√dhスケールなら出力も一致する。これにより既存の高速attention kernelを変更せず導入でき、OjaKV-PFではprefillを完全フルランクのまま実行してdecode時のメモリ削減だけを得る選択肢も持つ。"}],"system_design":"圧縮cache、フルランクアンカー、key/value別の適応基底、decode更新バッファをhead単位で管理する。オンライン更新間隔T、学習率、バッファ長、フルランク保持数top-kが主な実行時調整値で、token evictionとは直交するため併用してメモリ削減を乗算できる。"},"reservation":{"claim_id":"claim-b00534d1eda56e9a95608aea","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-c9c4d6d6478bfe538fe0a2c9",
+  "job_id": "job-research-18c89b68d0c6c10d",
+  "data": {
+    "problem": "長文LLMでは自己回帰生成の全過去トークンに対するkey/valueを保持するKVキャッシュが入力長・バッチに比例して増え、Llama-3.1-8Bの32Kトークン・batch 4では約16GBとモデル重み自体に匹敵する。低ランク射影は各KVベクトルをd次元からr次元へ落として保存量を減らせるが、既存のEigenAttentionやStaticPCAは小さな校正データで一度学習した固定部分空間を推論中ずっと使うため、対話からコード、promptから長いchain-of-thoughtへと活性分布が移ると射影誤差が増える。重み分解型は精度劣化やモデル変更を伴い、全履歴でSVDを再計算する動的方式は高価である。さらに全トークンを同じ比率で圧縮すると、現在の基底で表現しにくい重要トークンまで壊し、長文検索や生成品質が急落する。",
+    "novelty": "OjaKVの核は、低ランクKV圧縮を一様な静的射影ではなく『重要トークンだけフルランクで残す混合保存』と『推論中に基底を追随させるオンライン部分空間更新』の二つに分けた点である。各keyの低ランク再構成残差が注意logit摂動の上界を直接決めることを利用し、直近queryで重み付けした再構成誤差が大きいトークンをフルランクのアンカーとして選ぶ。残りの多数トークンだけを圧縮し、そのkey/value射影基底をOjaのオンラインPCA則で更新する。prefillではprompt全体を平均プーリングして包括的に更新し、decodeでは新規KVをバッファしてTトークンごとに小さな学習率で更新するため、毎回SVDを解かず非定常な文脈へ追随できる。圧縮表現を注意直前に再構成する経路を採用してFlashAttentionとの互換性も維持する。",
+    "method_overview": "初期基底は小さな校正集合のquery/keyを結合し、valueは別にSVDしてエネルギー閾値を満たすrankを選ぶ。推論開始後、各headのkey/valueをUk、Uvへ射影して低次元K̃、Ṽとして保存する。ただし各keyについて残差rt=kt-UkUk^Tktを計算し、最近のquery窓から得る注意影響で重み付けした誤差スコアを求める。上位k個の高誤差トークンは圧縮せずフルランク保持し、その他を低ランク化するため、最悪再構成誤差を直接抑える。prefillではpromptのKVを局所平均プーリングして共分散を作り、Oja更新U←U+η(CU-UU^TCU)を適用後QRで再直交化する。decodeでは新規KVをバッファBへ蓄積し、Tステップごとに同じ更新を小さいηで行い、基底を現在の生成分布へ追随させる。注意計算では圧縮K̃/ṼをUk^T/Uv^Tで元次元へ再構成し、フルランク保持トークンと合わせて標準FlashAttentionへ渡す。実用版OjaKV-PFはprefill注意自体は元のフルランクKVで行い、prompt特徴を基底更新と圧縮cache構築だけに使い、decodeから低ランク再構成を使う。",
+    "components": [
+      {
+        "name": "再構成誤差ベース混合保存",
+        "description": "低ランク基底で表現しにくいトークンを一律圧縮から除外する。key ktの再構成残差rtを計算すると、query qに対する注意logit誤差はCauchy-Schwarzにより||q||||rt||/√dで上界付けできる。そこで直近query窓から実際の注意影響を集約したスコアを作り、上位k個の高誤差トークンをフルランクで保持する。残りだけを低ランク化することで、位置固定のattention sink保持より現在基底の弱点を直接検出し、圧縮トークンの最大残差を抑える。論文はsoftmax安定性と後段ネットワークのLipschitz性から最終logit摂動まで残差に比例する上界を導き、この選択が生成品質保全につながる根拠を与える。"
+      },
+      {
+        "name": "二段階Ojaオンライン更新",
+        "description": "静的校正基底の分布ずれを、ストリーミングPCAであるOja則を使って推論中に修正する。prefillではprompt全体のkey/value特徴を局所平均プーリングして冗長性を減らし、経験共分散に対するOja更新をまとめて適用してQR再直交化する。decodeでは各生成トークンの新規key/valueを小さなバッファへ蓄積し、固定間隔Tごとに保守的な学習率で基底を更新してバッファを消去する。全履歴SVDを繰り返さず、現在文脈の主成分方向へ少しずつ回転するため、長い生成で意味分布が変化しても射影誤差の累積を抑えられる。WikiText校正からMultiNewsへ移した実験では残差エネルギー比を0.255から0.097へ下げ、oracle基底との重なりを0.597から0.653へ改善する。"
+      },
+      {
+        "name": "FlashAttention互換再構成経路",
+        "description": "FlashAttentionは通常n×dhのフル次元K/Vを受け取るため、圧縮特徴を直接処理する専用低ランクkernelは既存実行系との互換性を失いやすい。OjaKVはキャッシュ上ではK̃=KUk、Ṽ=VUvだけを保持してメモリを節約し、注意計算直前にK̂=K̃Uk^T、V̂=ṼUv^Tへ再構成して標準FlashAttentionへ渡す。QもUkへ射影して低ランク空間で計算した場合と、再構成K̂を使う場合のlogitが数学的に等価であることを示し、同じ1/√dhスケールなら出力も一致する。これにより既存の高速attention kernelを変更せず導入でき、OjaKV-PFではprefillを完全フルランクのまま実行してdecode時のメモリ削減だけを得る選択肢も持つ。"
+      }
+    ],
+    "system_design": "圧縮cache、フルランクアンカー、key/value別の適応基底、decode更新バッファをhead単位で管理する。オンライン更新間隔T、学習率、バッファ長、フルランク保持数top-kが主な実行時調整値で、token evictionとは直交するため併用してメモリ削減を乗算できる。"
+  },
+  "reservation": {
+    "claim_id": "claim-c9c4d6d6478bfe538fe0a2c9",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
