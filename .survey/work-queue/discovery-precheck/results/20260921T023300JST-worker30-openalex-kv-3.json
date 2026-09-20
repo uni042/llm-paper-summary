@@ -1,0 +1,532 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "worker30-20260921-023117-kv-hierarchy-3",
+  "collector_id": "worker30-openalex-kv-hierarchy",
+  "run_key": "2026-09-21T02:31:17+09:00-worker30",
+  "axis": "KV cache offload remote memory SSD CXL",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20offload%20remote%20memory%20SSD%20CXL&filter=from_publication_date:2024-01-01&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7cfd5f60ea937a7320522e9361ba484971342237",
+  "raw_search_result_count": 23,
+  "retrieval_duplicate_filtered_count": 11,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T17:34:27.566085+00:00",
+  "results": [
+    {
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "arXiv:2607.02574",
+      "arxiv_id": "2607.02574",
+      "authors": [
+        "Jie Li",
+        "Tongyang Wang",
+        "Yong Chen"
+      ]
+    },
+    {
+      "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://hdl.handle.net/10919/143438",
+      "year": 2026,
+      "published": "2026-06-16",
+      "canonical_id": "OpenAlex:W7165293849",
+      "authors": [
+        "Dongha Yoon"
+      ]
+    },
+    {
+      "title": "ReFlux: Reversible Compute Placement for CXL-Enabled Storage",
+      "source_url": "https://arxiv.org/abs/2604.02442",
+      "year": 2026,
+      "published": "2026-04-02",
+      "canonical_id": "arXiv:2604.02442",
+      "arxiv_id": "2604.02442",
+      "authors": [
+        "Yanpeng Hu",
+        "Yiwei Yang",
+        "Yusheng Zheng",
+        "Estabon Ramos",
+        "Jianchang Su",
+        "Andi Quinn",
+        "Wei Zhang"
+      ]
+    },
+    {
+      "title": "d-HNSW: A High-performance Vector Search Engine on Disaggregated Memory",
+      "source_url": "http://arxiv.org/abs/2603.13591",
+      "year": 2026,
+      "published": "2026-03-13",
+      "canonical_id": "arXiv:2603.13591",
+      "arxiv_id": "2603.13591",
+      "authors": [
+        "Fei Fang",
+        "Yi Liu",
+        "Chen Qian"
+      ]
+    },
+    {
+      "title": "Survey of storage systems in high performance computing",
+      "source_url": "https://doi.org/10.1007/s42514-025-00268-5",
+      "year": 2025,
+      "published": "2025-12-17",
+      "canonical_id": "DOI:10.1007/s42514-025-00268-5",
+      "doi": "10.1007/s42514-025-00268-5",
+      "authors": [
+        "Gen Zhang",
+        "Zhenlong Song",
+        "Wenzhe Zhang",
+        "Xinhai Chen",
+        "Shan Huang",
+        "Yong Dong"
+      ]
+    },
+    {
+      "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+      "source_url": "https://arxiv.org/abs/2504.09775",
+      "year": 2025,
+      "published": "2025-04-14",
+      "canonical_id": "arXiv:2504.09775",
+      "arxiv_id": "2504.09775",
+      "authors": [
+        "Abhimanyu Rajeshkumar Bambhaniya",
+        "Hanjiang Wu",
+        "Suvinay Subramanian",
+        "Sudarshan Srinivasan",
+        "Souvik Kundu",
+        "Amir Yazdanbakhsh",
+        "Midhilesh Elavazhagan",
+        "Madhu Kumar",
+        "Yu, Minlan",
+        "Raychowdhury, Arijit",
+        "Tushar Krishna"
+      ]
+    },
+    {
+      "title": "Disruptive Memory Technologies (Dagstuhl Seminar 25151)",
+      "source_url": "https://drops.dagstuhl.de/entities/document/10.4230/DagRep.15.4.1",
+      "year": 2025,
+      "published": "2025-01-01",
+      "canonical_id": "DOI:10.4230/dagrep.15.4.1",
+      "doi": "10.4230/dagrep.15.4.1",
+      "authors": [
+        "Chen, Haibo",
+        "Gavrilovska, Ada",
+        "Giceva, Jana",
+        "Spinczyk, Olaf"
+      ]
+    },
+    {
+      "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey",
+      "source_url": "http://arxiv.org/abs/2412.20249",
+      "year": 2024,
+      "published": "2024-12-28",
+      "canonical_id": "arXiv:2412.20249",
+      "arxiv_id": "2412.20249",
+      "authors": [
+        "Chen Chen",
+        "Xinkui Zhao",
+        "Guanjie Cheng",
+        "Yue Xu",
+        "Shuiguang Deng",
+        "Jianwei Yin"
+      ]
+    },
+    {
+      "title": "Accelerating Retrieval-Augmented Generation",
+      "source_url": "http://arxiv.org/abs/2412.15246",
+      "year": 2024,
+      "published": "2024-12-14",
+      "canonical_id": "arXiv:2412.15246",
+      "arxiv_id": "2412.15246",
+      "authors": [
+        "Derrick Quinn",
+        "Mohammad Nouri",
+        "Neel Patel",
+        "John Salihu",
+        "Alireza Salemi",
+        "Sukhan Lee",
+        "Hamed Zamani",
+        "Mohammad Alian"
+      ]
+    },
+    {
+      "title": "The Hitchhiker's Guide to Programming and Optimizing Cache Coherent Heterogeneous Systems: CXL, NVLink-C2C, and AMD Infinity Fabric",
+      "source_url": "http://arxiv.org/abs/2411.02814",
+      "year": 2024,
+      "published": "2024-11-05",
+      "canonical_id": "arXiv:2411.02814",
+      "arxiv_id": "2411.02814",
+      "authors": [
+        "Zixuan Wang",
+        "Suyash Mahar",
+        "L. Li",
+        "J. Park",
+        "J. Kim",
+        "Theodore Michailidis",
+        "Yue Pan",
+        "Shen, Mingyao",
+        "Tajana Rosing",
+        "Dean M. Tullsen",
+        "Steven Swanson",
+        "Jishen Zhao"
+      ]
+    },
+    {
+      "title": "Exploring and Evaluating Real-world CXL: Use Cases and System Adoption",
+      "source_url": "http://arxiv.org/abs/2405.14209",
+      "year": 2024,
+      "published": "2024-05-23",
+      "canonical_id": "arXiv:2405.14209",
+      "arxiv_id": "2405.14209",
+      "authors": [
+        "Xi Wang",
+        "Jie Liu",
+        "Jianbo Wu",
+        "Shuangyan Yang",
+        "Jie Ren",
+        "Bhanu Shankar",
+        "Dong Li"
+      ]
+    },
+    {
+      "title": "Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders",
+      "source_url": "http://arxiv.org/abs/2404.19381",
+      "year": 2024,
+      "published": "2024-04-30",
+      "canonical_id": "arXiv:2404.19381",
+      "arxiv_id": "2404.19381",
+      "authors": [
+        "Hyungkyu Ham",
+        "Jeongmin Hong",
+        "Geonwoo Park",
+        "Yunseon Shin",
+        "Okkyun Woo",
+        "Yang, Wonhyuk",
+        "Jinhoon Bae",
+        "Eunhyeok Park",
+        "Hyojin Sung",
+        "Euicheol Lim",
+        "Gwangsun Kim"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.02574",
+      "identity_tokens": [
+        "id:arXiv:2607.02574",
+        "title:from tensor buffer to distributed memory hierarchy a survey of kv cache management for llm serving",
+        "url:https://arxiv.org/abs/2607.02574"
+      ],
+      "record": {
+        "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.02574",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "arXiv:2607.02574",
+        "arxiv_id": "2607.02574",
+        "authors": [
+          "Jie Li",
+          "Tongyang Wang",
+          "Yong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7165293849",
+      "identity_tokens": [
+        "id:OpenAlex:W7165293849",
+        "title:disaggregated llm serving with cxl shared memory kv cache at rackscale",
+        "url:https://hdl.handle.net/10919/143438"
+      ],
+      "record": {
+        "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+        "source_url": "https://hdl.handle.net/10919/143438",
+        "year": 2026,
+        "published": "2026-06-16",
+        "canonical_id": "OpenAlex:W7165293849",
+        "authors": [
+          "Dongha Yoon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02442",
+      "identity_tokens": [
+        "id:arXiv:2604.02442",
+        "title:reflux reversible compute placement for cxlenabled storage",
+        "url:https://arxiv.org/abs/2604.02442"
+      ],
+      "record": {
+        "title": "ReFlux: Reversible Compute Placement for CXL-Enabled Storage",
+        "source_url": "https://arxiv.org/abs/2604.02442",
+        "year": 2026,
+        "published": "2026-04-02",
+        "canonical_id": "arXiv:2604.02442",
+        "arxiv_id": "2604.02442",
+        "authors": [
+          "Yanpeng Hu",
+          "Yiwei Yang",
+          "Yusheng Zheng",
+          "Estabon Ramos",
+          "Jianchang Su",
+          "Andi Quinn",
+          "Wei Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.13591",
+      "identity_tokens": [
+        "id:arXiv:2603.13591",
+        "title:dhnsw a highperformance vector search engine on disaggregated memory",
+        "url:http://arxiv.org/abs/2603.13591"
+      ],
+      "record": {
+        "title": "d-HNSW: A High-performance Vector Search Engine on Disaggregated Memory",
+        "source_url": "http://arxiv.org/abs/2603.13591",
+        "year": 2026,
+        "published": "2026-03-13",
+        "canonical_id": "arXiv:2603.13591",
+        "arxiv_id": "2603.13591",
+        "authors": [
+          "Fei Fang",
+          "Yi Liu",
+          "Chen Qian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s42514-025-00268-5",
+      "identity_tokens": [
+        "id:DOI:10.1007/s42514-025-00268-5",
+        "title:survey of storage systems in high performance computing",
+        "url:https://doi.org/10.1007/s42514-025-00268-5"
+      ],
+      "record": {
+        "title": "Survey of storage systems in high performance computing",
+        "source_url": "https://doi.org/10.1007/s42514-025-00268-5",
+        "year": 2025,
+        "published": "2025-12-17",
+        "canonical_id": "DOI:10.1007/s42514-025-00268-5",
+        "doi": "10.1007/s42514-025-00268-5",
+        "authors": [
+          "Gen Zhang",
+          "Zhenlong Song",
+          "Wenzhe Zhang",
+          "Xinhai Chen",
+          "Shan Huang",
+          "Yong Dong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.09775",
+      "identity_tokens": [
+        "id:arXiv:2504.09775",
+        "title:mist a codesign framework for heterogeneous multistage llm inference",
+        "url:https://arxiv.org/abs/2504.09775"
+      ],
+      "record": {
+        "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+        "source_url": "https://arxiv.org/abs/2504.09775",
+        "year": 2025,
+        "published": "2025-04-14",
+        "canonical_id": "arXiv:2504.09775",
+        "arxiv_id": "2504.09775",
+        "authors": [
+          "Abhimanyu Rajeshkumar Bambhaniya",
+          "Hanjiang Wu",
+          "Suvinay Subramanian",
+          "Sudarshan Srinivasan",
+          "Souvik Kundu",
+          "Amir Yazdanbakhsh",
+          "Midhilesh Elavazhagan",
+          "Madhu Kumar",
+          "Yu, Minlan",
+          "Raychowdhury, Arijit",
+          "Tushar Krishna"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.4230/dagrep.15.4.1",
+      "identity_tokens": [
+        "id:DOI:10.4230/dagrep.15.4.1",
+        "title:disruptive memory technologies dagstuhl seminar 25151",
+        "url:https://drops.dagstuhl.de/entities/document/10.4230/DagRep.15.4.1"
+      ],
+      "record": {
+        "title": "Disruptive Memory Technologies (Dagstuhl Seminar 25151)",
+        "source_url": "https://drops.dagstuhl.de/entities/document/10.4230/DagRep.15.4.1",
+        "year": 2025,
+        "published": "2025-01-01",
+        "canonical_id": "DOI:10.4230/dagrep.15.4.1",
+        "doi": "10.4230/dagrep.15.4.1",
+        "authors": [
+          "Chen, Haibo",
+          "Gavrilovska, Ada",
+          "Giceva, Jana",
+          "Spinczyk, Olaf"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.20249",
+      "identity_tokens": [
+        "id:arXiv:2412.20249",
+        "title:nextgen computing systems with compute express link a comprehensive survey",
+        "url:http://arxiv.org/abs/2412.20249"
+      ],
+      "record": {
+        "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey",
+        "source_url": "http://arxiv.org/abs/2412.20249",
+        "year": 2024,
+        "published": "2024-12-28",
+        "canonical_id": "arXiv:2412.20249",
+        "arxiv_id": "2412.20249",
+        "authors": [
+          "Chen Chen",
+          "Xinkui Zhao",
+          "Guanjie Cheng",
+          "Yue Xu",
+          "Shuiguang Deng",
+          "Jianwei Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.15246",
+      "identity_tokens": [
+        "id:arXiv:2412.15246",
+        "title:accelerating retrievalaugmented generation",
+        "url:http://arxiv.org/abs/2412.15246"
+      ],
+      "record": {
+        "title": "Accelerating Retrieval-Augmented Generation",
+        "source_url": "http://arxiv.org/abs/2412.15246",
+        "year": 2024,
+        "published": "2024-12-14",
+        "canonical_id": "arXiv:2412.15246",
+        "arxiv_id": "2412.15246",
+        "authors": [
+          "Derrick Quinn",
+          "Mohammad Nouri",
+          "Neel Patel",
+          "John Salihu",
+          "Alireza Salemi",
+          "Sukhan Lee",
+          "Hamed Zamani",
+          "Mohammad Alian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.02814",
+      "identity_tokens": [
+        "id:arXiv:2411.02814",
+        "title:the hitchhikers guide to programming and optimizing cache coherent heterogeneous systems cxl nvlinkc2c and amd infinity fabric",
+        "url:http://arxiv.org/abs/2411.02814"
+      ],
+      "record": {
+        "title": "The Hitchhiker's Guide to Programming and Optimizing Cache Coherent Heterogeneous Systems: CXL, NVLink-C2C, and AMD Infinity Fabric",
+        "source_url": "http://arxiv.org/abs/2411.02814",
+        "year": 2024,
+        "published": "2024-11-05",
+        "canonical_id": "arXiv:2411.02814",
+        "arxiv_id": "2411.02814",
+        "authors": [
+          "Zixuan Wang",
+          "Suyash Mahar",
+          "L. Li",
+          "J. Park",
+          "J. Kim",
+          "Theodore Michailidis",
+          "Yue Pan",
+          "Shen, Mingyao",
+          "Tajana Rosing",
+          "Dean M. Tullsen",
+          "Steven Swanson",
+          "Jishen Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14209",
+      "identity_tokens": [
+        "id:arXiv:2405.14209",
+        "title:exploring and evaluating realworld cxl use cases and system adoption",
+        "url:http://arxiv.org/abs/2405.14209"
+      ],
+      "record": {
+        "title": "Exploring and Evaluating Real-world CXL: Use Cases and System Adoption",
+        "source_url": "http://arxiv.org/abs/2405.14209",
+        "year": 2024,
+        "published": "2024-05-23",
+        "canonical_id": "arXiv:2405.14209",
+        "arxiv_id": "2405.14209",
+        "authors": [
+          "Xi Wang",
+          "Jie Liu",
+          "Jianbo Wu",
+          "Shuangyan Yang",
+          "Jie Ren",
+          "Bhanu Shankar",
+          "Dong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.19381",
+      "identity_tokens": [
+        "id:arXiv:2404.19381",
+        "title:lowoverhead generalpurpose neardata processing in cxl memory expanders",
+        "url:http://arxiv.org/abs/2404.19381"
+      ],
+      "record": {
+        "title": "Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders",
+        "source_url": "http://arxiv.org/abs/2404.19381",
+        "year": 2024,
+        "published": "2024-04-30",
+        "canonical_id": "arXiv:2404.19381",
+        "arxiv_id": "2404.19381",
+        "authors": [
+          "Hyungkyu Ham",
+          "Jeongmin Hong",
+          "Geonwoo Park",
+          "Yunseon Shin",
+          "Okkyun Woo",
+          "Yang, Wonhyuk",
+          "Jinhoon Bae",
+          "Eunhyeok Park",
+          "Hyojin Sung",
+          "Euicheol Lim",
+          "Gwangsun Kim"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:bca5665c75f1de2d04dc7716b748bb59db8ecc3b0d26459646755efd114c0e9c",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
