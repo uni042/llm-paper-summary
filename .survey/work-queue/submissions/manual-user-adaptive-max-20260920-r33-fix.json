@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "user_directed_request": {
+    "request_id": "chat-20260920-adaptive-forward-r33-fix",
+    "summary": "Adaptive Expert Computation / Compression の前方引用からblock-level routing・information-theoretic simplification・pruning safety分析を追加する。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.30876",
+      "title": "dMoE: dLLMs with Learnable Block Experts",
+      "source_url": "https://arxiv.org/abs/2605.30876",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+      "priority": 99,
+      "reason": "diffusion LLMのblock内token routingを統合し、unique activated expertsを69.5から14.6へ削減しつつ99.11%性能を維持する。routing粒度変更でactive expert set自体を縮める直接手法。"
+    },
+    {
+      "canonical_id": "arXiv:2604.10603",
+      "title": "MoEITS: A Green AI approach for simplifying MoE-LLMs",
+      "source_url": "https://arxiv.org/abs/2604.10603",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.10603-moeits-information-theoretic-simplification.md",
+      "priority": 98,
+      "reason": "情報理論に基づいてMoE-LLMを簡素化し、accuracy・reduction rate・計算量を既存expert pruningと比較する直接的compression手法。"
+    },
+    {
+      "canonical_id": "arXiv:2507.23279",
+      "title": "Unveiling Super Experts in Mixture-of-Experts Large Language Models",
+      "source_url": "https://arxiv.org/abs/2507.23279",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md",
+      "priority": 96,
+      "reason": "ごく少数のSuper Expertsを削るだけでモデルが崩壊する現象を示し、expert pruning/mergingで一律redundancy仮定を置けないことを示す重要なcompression safety分析。"
+    },
+    {
+      "canonical_id": "arXiv:2607.01444",
+      "title": "On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain",
+      "source_url": "https://arxiv.org/abs/2607.01444",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.01444-pruned-moe-utility-reliability.md",
+      "priority": 93,
+      "reason": "4 MoE・6 pruning法・複数ratioでutilityとfactual reliabilityを同時評価し、圧縮率やdomain shiftによる失敗境界を明らかにする。pruning評価軸を補完する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "manual-user-forwardcite-adaptive-20260920T1906JST-2402",
+    "result_path": ".survey/work-queue/discovery-precheck/results/manual-user-forwardcite-adaptive-20260920T1906JST-2402.json",
+    "receipt": "sha256:e9382854009131ea50ac85882bdabd681d9290b8dc78c43a989776e2f67677df"
+  },
+  "discovery_stats": {
+    "trigger": "explicit_user_request",
+    "run_key": "manual-user-forwardcite-adaptive-2026-09-20",
+    "round": "manual-user-adaptive-max-20260920-r33-fix",
+    "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+    "query_summary": "Not All Experts Are Equalの前方引用からdMoE、MoEITS、Super Experts、pruned-MoE reliabilityを追加。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "next_axis_hint": "continue Adaptive Expert Computation / Compression forward-citation expansion"
+  }
+}
