@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-175fe59944f6ca42687384fc",
-  "job_id": "job-research-529f8795f6dde556",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-175fe59944f6ca42687384fc",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-175fe59944f6ca42687384fc","job_id":"job-research-529f8795f6dde556",
+ "data":{
+   "limitations":"KVキャッシュを完全にGPU高帯域メモリへ保持するため、ピークメモリ容量は減らず、極端な文脈長や小容量GPUのメモリ不足を直接解決しない。評価対象は蒸留DeepSeek-R1系列と数学・科学推論に偏り、一般会話、コード生成、他アーキテクチャ、他モダリティへの一般化は未確認である。またΔ層の配置、総ページ予算K、直近窓Lに精度が依存し、注意対象が急速に変化する標本では最大注意得点による選択が追従しにくい可能性がある。",
+   "differences":"Questは現在の問い合わせとページ代表キーを照合して各層の候補を選ぶため代表ベクトルの追加保存と選択費用がある。RaaSなどの追い出し型はKV容量自体を減らせるが、後で重要になるトークンを不可逆に失う。TidalDecodeも層間の注意相関を利用するが、DELTAは長い推論での逐次ドリフトを明示的に扱い、各生成時点のΔ層で全注意を再計算し、ヘッド最大値と直近窓を組み合わせたページ選択を行う。SeerAttention-Rのような学習型疎注意と異なり追加学習を必要としない。",
+   "implementation_status":"著者実装が公開されている。論文ではFlashInferの実行時コンパイル機構とPyTorch上位選択を用いたページ単位実装を実機A100で評価しており、概念実証だけではなくカーネルから注意ロジットを取り出す実装まで含む。",
+   "research_positioning":"長文推論向けKV最適化の中では、メモリ容量を減らす圧縮・追い出しではなく、完全KVを残したまま読み出し計算を減らす選択型疎注意に位置する。特に『深さ方向の高い相関』と『時間方向の緩やかな重要度移動』を分離して利用し、少数の更新層を情報再取得点として配置する設計が中心である。オフロードや量子化とは競合せず、論文自身も将来の組合せを課題としており、容量制約と帯域制約を別々の機構で処理する構成へ拡張しやすい。"
+ },
+ "reservation":{"claim_id":"claim-175fe59944f6ca42687384fc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
