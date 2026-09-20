@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 05:34:13 JST**
+> 自動生成: **2026-09-21 05:35:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **245** |
 | 未claim Research job | **245** |
 | 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（5時間45分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（5時間47分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **4** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **20** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **24** | **7** | **5** | **0** | **0** | **0** | **3** |
+| Discovery | **20** | **3** | **1** | **2** | **0** | **0** | **8** |
+| 合計 | **24** | **9** | **5** | **2** | **0** | **0** | **8** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -171,12 +171,20 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 05:29 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **3件**
-- 探索軸: repository-wide structured references for LLM inference systems
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **2件** / 候補: **8件**
+- 探索軸: repository-wide structured references for LLM inference systems / forward citations of FlashAttention for recent attention kernels and serving systems / forward citations of Elastic MoE for inference-time expert scaling
 - round `round-01` / 候補 **3件**
   - submission: `.survey/work-queue/submissions/20260921T0532JST-discovery-backward-01.json`
   - 探索軸: repository-wide structured references for LLM inference systems
   - 個別result照合: あり / `.survey/work-queue/results/20260921T0532JST-discovery-backward-01.json` (`ok=true`)
+- round `round-02` / 候補 **5件**
+  - submission: `.survey/work-queue/submissions/20260921T0536JST-discovery-forward-flashattention-02.json`
+  - 探索軸: forward citations of FlashAttention for recent attention kernels and serving systems
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `round-03` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260921T0537JST-discovery-forward-elasticmoe-03.json`
+  - 探索軸: forward citations of Elastic MoE for inference-time expert scaling
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
@@ -231,10 +239,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **909** |
+| 成功result未照合のimmutable submission | **911** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **195** |
+| └ Discovery | **197** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
