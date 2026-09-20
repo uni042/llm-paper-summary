@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 07:09:36 JST**
+> 自動生成: **2026-09-21 07:10:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,10 +52,10 @@
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **44** | **10** | **2** | **3** | **0** | **0** | **34** |
-| 合計 | **44** | **16** | **6** | **3** | **0** | **0** | **34** |
+| Discovery | **44** | **12** | **2** | **5** | **0** | **0** | **41** |
+| 合計 | **44** | **18** | **6** | **5** | **0** | **0** | **41** |
 
-- 最新Discovery runの耐久探索round: **10件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **12件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -152,7 +152,7 @@
 #### Discovery (:00)
 
 - 最新観測run: **2026-09-21 06:58 JST**
-- 耐久探索round: **10件** / immutable submission: **10件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **8件** / 候補: **34件**
+- 耐久探索round: **12件** / immutable submission: **12件** / 検証済み成功result: **2件** / 個別result照合: **2件** / 個別result未照合: **10件** / 候補: **41件**
 - 探索軸: repository-wide structured backward references for LLM inference systems / forward citations of SpecOffload heterogeneous CPU-GPU LLM inference / forward citations of KVLink efficient KV cache reuse / forward citations of LMCache enterprise-scale KV cache layer / forward citations of PagedAttention/vLLM memory-efficient LLM serving / forward citations of SmoothQuant efficient LLM inference quantization / repository structured backward references / forward citations of Sequoia hardware-aware speculative decoding
 - round `hourly00-backward-01` / 候補 **1件**
   - submission: `.survey/work-queue/submissions/20260921T0700JST-hourly00-discovery-backward-01.json`
@@ -248,10 +248,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **929** |
+| 成功result未照合のimmutable submission | **931** |
 | └ Research | **609** |
 | └ Audit | **2** |
-| └ Discovery | **215** |
+| └ Discovery | **217** |
 | └ Other/Unknown | **103** |
 
 ### 厳格検証が未成立のcompleted job
