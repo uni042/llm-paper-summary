@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:04:48 JST**
+> 自動生成: **2026-09-20 18:05:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **106** |
 | 未claim Research job | **105** |
 | 直近24hの検証済みResearch収録 | **77** |
-| 最終検証済みResearch収録 | **09-20 17:44:56 JST（19分前）** |
+| 最終検証済みResearch収録 | **09-20 17:44:56 JST（20分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **36** | **4** | **3** | **0** | **1** | **0** | — |
+| Research | **36** | **5** | **3** | **1** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **36** | **5** | **4** | **0** | **1** | **0** | **5** |
+| 合計 | **36** | **6** | **4** | **1** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **4件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
 - **成功** `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs
   - job: `.survey/work-queue/jobs/job-research-e2f947500152f11f.json`
   - result: `.survey/work-queue/results/research/attempt-2aa6f3a5ce12c662b86bbbe1.json` (`ok=true`)
@@ -138,6 +138,7 @@
   - result: `.survey/work-queue/results/research/attempt-3bb75bb690b745e4b4b44fd7.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3bb75bb690b745e4b4b44fd7.json`
   - paper: `papers/inference/05-speculative-decoding/2024-2404.15778-bass.md`
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-5605d7717d39930ab2f4dcc5.json` (job `job-research-da8147ed3835966f`)
 - **成功** `arXiv:2405.01481` — NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment
   - job: `.survey/work-queue/jobs/job-research-0ad72717e3fdb154.json`
   - result: `.survey/work-queue/results/research/attempt-57d5d091923e08545a3ff388.json` (`ok=true`)
@@ -217,8 +218,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **753** |
-| └ Research | **567** |
+| 成功result未照合のimmutable submission | **754** |
+| └ Research | **568** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
