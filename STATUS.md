@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 18:31:50 JST**
+> 自動生成: **2026-09-20 18:32:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **35** | **8** | **6** | **1** | **1** | **1** | — |
+| Research | **35** | **8** | **6** | **0** | **1** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **35** | **9** | **7** | **1** | **1** | **1** | **5** |
+| 合計 | **35** | **9** | **7** | **0** | **1** | **1** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 17:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **8件** / 検証済み成功: **6件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
+- immutable submission: **8件** / 検証済み成功: **6件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
 - **成功** `DOI:10.18653/v1/2026.acl-long.1683` — LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning
   - job: `.survey/work-queue/jobs/job-research-59739220ff5250cc.json`
   - result: `.survey/work-queue/results/research/attempt-018be4cd03a3fdd526c3cb8e.json` (`ok=true`)
@@ -138,7 +138,8 @@
   - result: `.survey/work-queue/results/research/attempt-09fd18d9c803c17379a43783.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-09fd18d9c803c17379a43783.json`
   - paper: `papers/inference/06-kv-cache-memory/2024-2405.12981-cross-layer-attention.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-175fe59944f6ca42687384fc.json` (job `job-research-529f8795f6dde556`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-175fe59944f6ca42687384fc.json` (job `job-research-529f8795f6dde556`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-175fe59944f6ca42687384fc.json` (`ok=false`)
 - **成功** `arXiv:2405.02842` — IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs
   - job: `.survey/work-queue/jobs/job-research-e2f947500152f11f.json`
   - result: `.survey/work-queue/results/research/attempt-2aa6f3a5ce12c662b86bbbe1.json` (`ok=true`)
