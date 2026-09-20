@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-efe23ce921e3469dda4204fc",
-  "job_id": "job-research-4892de26a5d749a2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-efe23ce921e3469dda4204fc",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-efe23ce921e3469dda4204fc","job_id":"job-research-4892de26a5d749a2",
+ "data":{
+   "hardware":"実機GPU評価。Mixtral-8x7BはGeForce RTX 4090およびRTX A6000、Mixtral-8x22BはRTX A6000で測定する。論文冒頭ではA100と4090のメモリ・帯域特性も動機分析に用いるが、主要性能図の実測対象は4090/A6000である。",
+   "software":"Mixtral 8x7B/8x22Bを使用し、量子化にはHQQを利用する。4ビット構成に加え、注意ブロック4ビット・MoEブロック2ビットの4+2ビット構成も評価する。比較対象は層単位のベースラインオフロード、Mixtral-Offloading、Pre-gated MoEで、キャッシュ置換はLRUへ揃える。著者は公平比較のためMixtral-Offloadingを自前基盤へ移植し、公開実装より約2倍高速な版を比較対象にしている。",
+   "methodology":"精度評価ではMMLUとARC-Challengeを用い、感度閾値を変えて単一エキスパート選択率と精度の関係をスコアベース適応ゲーティングと比較する。速度評価ではMT-Benchからプロンプトを抽出し、モデル規模、量子化方式、GPU、GPU内にキャッシュするエキスパート総数を変えてレイテンシを測る。適応ゲーティング有り版は精度保全を優先して単一エキスパート選択率24%に設定する。アブレーションではMixtral-8x7B 4ビット、RTX 4090、キャッシュ128エキスパートを固定し、ゲーティング・先読み・適応キャッシュの組合せを比較する。",
+   "scope":"評価はMixtral系2サイズとNVIDIA GPU 2種類に限定され、端末向けオフロード状況を模した実機測定である。異なるMoEルータ構造、AMD等の別GPU、SSDを直接介する階層、複数GPU、長期サービス負荷での一般化は論文中で実証していない。精度評価もMMLU/ARC-Challenge中心であり、24%単一エキスパート設定を超える攻めた圧縮では精度低下が起こり得る。"
+ },
+ "reservation":{"claim_id":"claim-efe23ce921e3469dda4204fc","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
