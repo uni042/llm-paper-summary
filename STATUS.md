@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 15:22:35 JST**
+> 自動生成: **2026-09-20 15:22:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **115** |
+| 収録候補論文 | **114** |
 | 未claim Research job | **113** |
-| 直近24hの検証済みResearch収録 | **65** |
-| 最終検証済みResearch収録 | **09-20 15:17:41 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **66** |
+| 最終検証済みResearch収録 | **09-20 15:22:39 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **115** |
+| canonical_id確認済みの一意な候補論文 | **114** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **115** |
+| 非終端Research job合計 | **114** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **34** | **8** | **7** | **1** | **2** | **0** | — |
+| Research | **35** | **8** | **8** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **34** | **9** | **8** | **1** | **2** | **0** | **5** |
+| 合計 | **35** | **9** | **9** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 15:22:39 JST** [research] `arXiv:2506.20675` — Utility-Driven Speculative Decoding for Mixture-of-Experts
+  - job: `.survey/work-queue/jobs/job-research-2442fe5802b5c31d.json`
+  - result: `.survey/work-queue/results/research/attempt-2f18ec233c0f768fe4b55277.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2f18ec233c0f768fe4b55277.json`
+  - paper: `papers/inference/05-speculative-decoding-moe/2025-2506.20675-cascade.md`
 - **09-20 15:17:41 JST** [research] `arXiv:2606.02091` — DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-f4b6d40ae418a58e.json`
   - result: `.survey/work-queue/results/research/attempt-b269ed373464c47a4c4f738e.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f3aa5f123e2ae8cb2ff1aa59.json`
   - paper: `papers/inference/04-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md`
-- **09-20 14:40:06 JST** [research] `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
-  - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
-  - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-37851a31293499313033e7f8.json`
-  - paper: `papers/inference/06-speculative-decoding/2026-2607.25852-angelspec.md`
 
 ### Audit
 
@@ -127,13 +127,17 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 14:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **8件** / 検証済み成功: **7件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **8件** / 検証済み成功: **8件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.00937` — ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving
   - job: `.survey/work-queue/jobs/job-research-821e549f36e154dd.json`
   - result: `.survey/work-queue/results/research/attempt-16712b93d70f46eb3fb21fac.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-16712b93d70f46eb3fb21fac.json`
   - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-2f18ec233c0f768fe4b55277.json` (job `job-research-2442fe5802b5c31d`)
+- **成功** `arXiv:2506.20675` — Utility-Driven Speculative Decoding for Mixture-of-Experts
+  - job: `.survey/work-queue/jobs/job-research-2442fe5802b5c31d.json`
+  - result: `.survey/work-queue/results/research/attempt-2f18ec233c0f768fe4b55277.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2f18ec233c0f768fe4b55277.json`
+  - paper: `papers/inference/05-speculative-decoding-moe/2025-2506.20675-cascade.md`
 - **成功** `arXiv:2607.25852` — AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-b27d4d0f59f887b3.json`
   - result: `.survey/work-queue/results/research/attempt-37851a31293499313033e7f8.json` (`ok=true`)
@@ -185,10 +189,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2506.20675` — Utility-Driven Speculative Decoding for Mixture-of-Experts / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 15:21:41 JST** / heartbeat: **—** / lease expiry: **09-20 16:51:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2442fe5802b5c31d.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2502.07903` — HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment / worker `scheduled-chat-discovery-overflow`
   - claim: **09-20 14:16:58 JST** / heartbeat: **09-20 14:32:07 JST** / lease expiry: **09-20 16:02:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-da8147ed3835966f.json`
@@ -211,7 +212,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **115** |
+| ready | **114** |
 
 ### 候補の重複・識別情報欠損
 
@@ -231,7 +232,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **817** |
+| inference/training/survey配下の論文Markdown実体 | **818** |
 
 ### immutable submissionの未照合
 
@@ -239,8 +240,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **736** |
-| └ Research | **550** |
+| 成功result未照合のimmutable submission | **735** |
+| └ Research | **549** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **39** |
