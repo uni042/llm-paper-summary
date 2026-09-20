@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-46a86de7e7ad6cfc5fe5c306",
-  "job_id": "job-research-42834c639c34d742",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-46a86de7e7ad6cfc5fe5c306",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-46a86de7e7ad6cfc5fe5c306","job_id":"job-research-42834c639c34d742","data":{"overview":"EdgeMoEはexpertをstorageへ退避する単純on-demand方式に対し、Jetson TX2でTPOTを2.64〜3.03倍、Raspberry Piで2.55〜3.25倍高速化する。expert量子化済みIO-QEXP比でも1.19〜2.12倍、STI比1.22〜2.77倍で、量子化だけでなくactivation予測とcacheが効く。ablationではST-base-8/TX2で0.789sからQ後0.392s、preload後0.305s、cache後0.245sへ段階的に短縮する。","key_results":[{"metric":"TPOT speedup vs IO-EXP","value":"Jetson TX2 2.64〜3.03倍、Raspberry Pi 2.55〜3.25倍","baseline":"expert on-demand load","condition":"複数MoEモデル","interpretation":"mixed-bitでI/O量を減らし、preloadとcacheで残りI/Oを隠蔽・回避する。"},{"metric":"TPOT speedup vs IO-QEXP/STI","value":"IO-QEXP比1.19〜2.12倍、STI比1.22〜2.77倍","baseline":"量子化expert on-demand / generic pipeline","condition":"edge devices","interpretation":"単なる量子化やlayer pipelineよりMoE activation構造を使う予測が追加利得を持つ。"},{"metric":"Ablation ST-base-8 TX2","value":"0.789s→Q 0.392s→Q+P 0.305s→Q+P+C 0.245s TPOT","baseline":"未最適化expert loading","condition":"Jetson TX2","interpretation":"量子化、preload、expert cacheの各要素が累積して遅延を削減する。"},{"metric":"Ablation memory","value":"2.5GB→Q 1.21GB→Q+P 0.78GB→Q+P+C 0.81GB","baseline":"未最適化","condition":"ST-base-8、Jetson TX2","interpretation":"expert量子化とstorage階層化が主要なRAM削減を担い、cacheは少量RAMを戻して速度を稼ぐ。"},{"metric":"Xiaomi 14 MiniCPM MoE","value":"IO-FREE比63% memory削減、IO-QEXP比25% speedup","baseline":"全常駐 / 量子化on-demand","condition":"Snapdragon 8 Gen 3、16GB、4 big cores","interpretation":"Jetson/RPiだけでなく現行Android級SoCでもexpert storage方式が成立する。"},{"metric":"expert activation correlation","value":"例: 前2層の特定expert条件で次層expert #5の活性確率87.1%","baseline":"無条件では層内expert頻度は均衡","condition":"ST-base-8、SAMSum","interpretation":"単体頻度cacheが弱くてもpath条件付き予測ならrouter前preloadが可能。"}],"negative_results":"IO-FREEとの性能差は残り、予測miss時にはon-demand I/Oが発生する。Jetsonでは量子化全常駐IO-QFREEよりEdgeMoEが速い場合がある一方、Raspberry Pi CPUではIO-QFREEが速く、dequantization/compute/I/O比率に依存する。prefillや複数token同時処理には適さない。","interpretation":"MoEでは総parameter数ではなく『active parameterの時間局所性』をstorage hierarchyへ対応させることが重要である。expert別量子化は転送bytesを、path予測はI/Oのcritical pathを、cacheはI/O回数をそれぞれ削減し、三者が異なるボトルネックへ作用する。","quality_impact":"mixed-bit探索は許容損失Pに合わせてexpert精度を配分し、表のSwitch構成では0.89〜1.95% lossでstorageを0.81〜0.95GBへ削減する。offline dataset変更でも概ね約2%以内だが、soft constraintであり厳密保証ではない。"},"reservation":{"claim_id":"claim-46a86de7e7ad6cfc5fe5c306","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
