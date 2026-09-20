@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:32:47.062019+00:00",
+  "updated_at": "2026-09-20T10:33:52.460990+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:32:47.062019+00:00",
+      "last_recorded_at": "2026-09-20T10:33:52.460990+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 377,
         "audit_completed": 0,
         "discovery_completed": 198,
-        "blocked": 51,
+        "blocked": 52,
         "new_jobs": 318,
         "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35484658544:1",
-          "recorded_at": "2026-09-20T02:42:18.885171+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35484658544",
-            "run_attempt": "1",
-            "source_sha": "e20399360ee1c8ca54a10a45531e08f852825389"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35484887683:1",
           "recorded_at": "2026-09-20T02:47:34.555451+00:00",
@@ -19590,6 +19576,20 @@
             "run_id": "35505360104",
             "run_attempt": "1",
             "source_sha": "a17053ea58e05c893070771ae84c67f7bb2f91c2"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35505393045:1",
+          "recorded_at": "2026-09-20T10:33:52.460990+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35505393045",
+            "run_attempt": "1",
+            "source_sha": "af0bd04e6c33d574e4132ebf532f67872280c016"
           },
           "signals": [
             "job_blocked"
@@ -24602,6 +24602,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.15299",
           "title": "MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-901c881ed2cc963f",
+          "type": "research",
+          "canonical_id": "arXiv:2608.26650",
+          "title": "Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs",
           "from": "ready",
           "to": "blocked"
         }
