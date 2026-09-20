@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-20T03:56:00+00:00",
-  "record_count": 24,
+  "updated_at": "2026-09-20T03:59:00+00:00",
+  "record_count": 30,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -348,6 +348,102 @@
         "papers/inference/99-other-inference-systems/2026-2608.00101-agentic-coding-production-scale-characterization.md"
       ],
       "title": "OpenHands: An Open Platform for AI Software Developers as Generalist Agents"
+    },
+    "arXiv:1906.01749": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.01749",
+      "identity_tokens": [
+        "arXiv:1906.01749"
+      ],
+      "reason": "Dataset/benchmark contribution rather than an LLM inference or training systems method.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md"
+      ],
+      "title": "Multi-News: A Large-Scale Multi-Document Summarization Dataset and Abstractive Hierarchical Model"
+    },
+    "arXiv:1911.12237": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.12237",
+      "identity_tokens": [
+        "arXiv:1911.12237"
+      ],
+      "reason": "Dataset contribution rather than an LLM systems method.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/05-kv-cache-offloading/2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md"
+      ],
+      "title": "SAMSum Corpus: A Human-annotated Dialogue Dataset for Abstractive Summarization"
+    },
+    "arXiv:2004.13637": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.13637",
+      "identity_tokens": [
+        "arXiv:2004.13637"
+      ],
+      "reason": "Conversational model/application study rather than an inference or training systems optimization.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/06-serving-scheduling/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.13737-accelgen-heterogeneous-slo-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md"
+      ],
+      "title": "Recipes for Building an Open-Domain Chatbot"
+    },
+    "arXiv:2104.05938": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.05938",
+      "identity_tokens": [
+        "arXiv:2104.05938"
+      ],
+      "reason": "Benchmark/dataset contribution rather than an LLM systems method.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/05-kv-cache-offloading/2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md"
+      ],
+      "title": "QMSum: A New Benchmark for Query-based Multi-domain Meeting Summarization"
+    },
+    "arXiv:2109.01652": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.01652",
+      "identity_tokens": [
+        "arXiv:2109.01652"
+      ],
+      "reason": "Instruction-tuning/capability paper rather than a training-system implementation.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "title": "Finetuned Language Models Are Zero-Shot Learners"
+    },
+    "arXiv:2303.12712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.12712",
+      "identity_tokens": [
+        "arXiv:2303.12712"
+      ],
+      "reason": "Capability/evaluation study rather than an inference or training systems contribution.",
+      "first_checked_at": "2026-09-20T03:59:00+00:00",
+      "last_checked_at": "2026-09-20T03:59:00+00:00",
+      "linked_from": [
+        "papers/inference/06-serving-scheduling/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4"
     }
   }
 }
