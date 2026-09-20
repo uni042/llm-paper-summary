@@ -406,6 +406,24 @@ def _reference_pool_first_required(sub: dict) -> bool:
     )
 
 
+def _explicit_user_directed_discovery(sub: dict) -> bool:
+    """Return whether this round is tied to a current explicit user request.
+
+    This is a narrow route-order override only. It does not bypass schema-v3
+    provider retrieval, precheck provenance, identity filtering, or Candidate
+    ingestion. Autonomous/Scheduled workers must never synthesize this marker.
+    """
+    meta = sub.get("discovery_stats")
+    request = sub.get("user_directed_request")
+    if not isinstance(meta, dict) or not isinstance(request, dict):
+        return False
+    if str(meta.get("trigger") or "").strip() != "explicit_user_request":
+        return False
+    request_id = str(request.get("request_id") or "").strip()
+    summary = str(request.get("summary") or "").strip()
+    return bool(request_id and summary)
+
+
 def _discovery_precheck_required(sub: dict) -> bool:
     """Require precheck for Discovery submissions introduced after the enforcement marker."""
     proof_present = isinstance(sub.get("discovery_precheck"), dict)
@@ -662,6 +680,10 @@ def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
                 raise _reference_pool_guidance(
                     "repository_references must use source_url=repository://structured-references."
                 )
+        elif _explicit_user_directed_discovery(sub):
+            # An explicit user request may choose a specific search/citation axis
+            # immediately, but every normal retrieval/candidate safety gate still applies.
+            pass
         else:
             _validate_reference_pool_fallback(sub, meta)
 
