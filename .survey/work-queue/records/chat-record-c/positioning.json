@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a1f91ed5c60955cb4265b431","job_id":"job-research-2e7cd1c4e1dc851d","data":{"limitations":"32項目の対応付け記述表とオフラインプロファイルに依存するため、提供モデル集合やMoE活性傾向が大きく変化すると再プロファイルや記述表拡張が必要になる。性能評価は検証済みシステムシミュレータ中心であり、実製品NPU-PIM上の完全なエンドツーエンド実測ではない。","differences":"NeuPIMs型の分離メモリはデバイスごとの最適配置を保つ代わりに共有時の移動を要し、IANUSやFACIL型の統合メモリは共有空間を得る代わりに静的なデバイス偏重配置を使う。PFMは共有物理空間を保ったまま物理配置と論理視点を分離し、同じテンソルをNPU/PIMのどちらからも効率良く読めるようにする点が異なる。","implementation_status":"GPGPU-SimとRamulatorを統合した評価実装、PFMメモリ制御器の機能モデル、ARU/FASのRTL合成まで実施。一次資料で一般公開された完全実装リポジトリは確認できない。","research_positioning":"階層メモリ・近データ処理系の研究として、データをCPU/GPU/SSD間で移すオフロードとは異なり、同じ物理データを複数アクセサが異なる論理視点で読むことで移動そのものを避ける設計である。MoEの動的ルーティングとプリフィル/デコード相転移をメモリ配置問題へ結び付け、実行時演算配置とアドレス変換を一体化した点が重要である。"},"reservation":{"claim_id":"claim-a1f91ed5c60955cb4265b431","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ade4ad902d6f7670ee635b88",
+  "job_id": "job-research-2e7cd1c4e1dc851d",
+  "data": {
+    "limitations": "32項目の対応付け記述表とオフラインプロファイルに依存するため、提供モデル集合やMoE活性傾向が大きく変化すると再プロファイルや記述表拡張が必要になる。性能評価は検証済みシステムシミュレータ中心であり、実製品NPU-PIM上の完全なエンドツーエンド実測ではない。",
+    "differences": "NeuPIMs型の分離メモリはデバイスごとの最適配置を保つ代わりに共有時の移動を要し、IANUSやFACIL型の統合メモリは共有空間を得る代わりに静的なデバイス偏重配置を使う。PFMは共有物理空間を保ったまま物理配置と論理視点を分離し、同じテンソルをNPU/PIMのどちらからも効率良く読めるようにする点が異なる。",
+    "implementation_status": "GPGPU-SimとRamulatorを統合した評価実装、PFMメモリ制御器の機能モデル、ARU/FASのRTL合成まで実施。一次資料で一般公開された完全実装リポジトリは確認できない。",
+    "research_positioning": "階層メモリ・近データ処理系の研究として、データをCPU/GPU/SSD間で移すオフロードとは異なり、同じ物理データを複数アクセサが異なる論理視点で読むことで移動そのものを避ける設計である。MoEの動的ルーティングとプリフィル/デコード相転移をメモリ配置問題へ結び付け、実行時演算配置とアドレス変換を一体化した点が重要である。"
+  },
+  "reservation": {
+    "claim_id": "claim-ade4ad902d6f7670ee635b88",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

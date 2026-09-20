@@ -1,1 +1,83 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a1f91ed5c60955cb4265b431","job_id":"job-research-2e7cd1c4e1dc851d","data":{"canonical_id":"arXiv:2608.06989","arxiv_id":"2608.06989","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM","summary":"PFMは、NPUとメモリ内処理（Processing-in-Memory; PIM）が同じテンソルを共有しつつ、推論中の計算特性に応じて実行先を切り替えるための二重視点メモリ方式である。従来の統合メモリはテンソルごとにNPU向けまたはPIM向けの固定配置を選ぶため、プリフィルとデコード、混合専門家モデルの活性エキスパート数が変化すると、実行先と物理配置が不一致になり帯域が低下する。PFMは2 MBスーパーページ内の物理配置を両デバイス向けに共同最適化し、アドレス再対応付けと要求スケジューリングで各デバイスへ異なる論理視点を見せる。さらに実行時性能モデルで演算をNPU/PIMへ動的配置し、データ複製や再配置なしに最大2.32倍のスループット改善を報告する。","list_summary":"NPU/PIMで共有する物理配置と各デバイスが見る論理配置を分離し、実行時の演算特性に応じて実行先を切り替えても帯域を落とさない統合メモリ方式。","authors":["Shixin Zhao","Lian Liu","Tianhua Han","Mengdi Wang","Yinhe Han","Ying Wang"],"authors_affiliations":"Institute of Computing Technology, Chinese Academy of Sciences; University of Chinese Academy of Sciences","published":"2026-08-07","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"NPU-PIM統合メモリ、近データ処理、LLM推論メモリ階層。NeuPIMs、IANUS、FACILの静的配置を動的実行へ拡張する。","topics":["NPU-PIM","統合メモリ","動的演算配置","MoE推論","メモリ内処理"],"importance":"実行デバイスが時々刻々変わるLLM推論に対し、物理再配置なしでNPU/PIM双方のアクセス特性を満たす設計を示す。","hardware_evaluation":"A100級NPU計算資源とAttAcc型HBM-PIMをモデル化し、GPGPU-Sim 4.0とRamulator 2.0を統合したシステムシミュレータで評価。ARU/FASは7 nm想定でRTL合成。","quality_effect":"モデル精度を近似する手法ではなく、同じ演算とテンソルを異なる実行デバイス・メモリ視点で処理するシステム最適化であり、数値品質の低下を目的としない。","source":"https://arxiv.org/abs/2608.06989","sources":["https://arxiv.org/abs/2608.06989","https://arxiv.org/html/2608.06989","https://arxiv.org/pdf/2608.06989"],"code":null,"implementation":"研究用システムシミュレータへPFMのアドレス再対応付け・スケジューラを実装し、ARU/FASをRTLで合成。公開コードURLは一次資料で確認できない。","last_checked":"2026-09-20","references":[{"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088"},{"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},{"canonical_id":"arXiv:1701.03499","arxiv_id":"1701.03499"},{"canonical_id":"arXiv:2308.12950","arxiv_id":"2308.12950"},{"canonical_id":"arXiv:2407.21783","arxiv_id":"2407.21783"}],"references_checked_at":"2026-09-20","references_source":"primary-reference-section","references_total":67},"reservation":{"claim_id":"claim-a1f91ed5c60955cb4265b431","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-ade4ad902d6f7670ee635b88",
+  "job_id": "job-research-2e7cd1c4e1dc851d",
+  "data": {
+    "canonical_id": "arXiv:2608.06989",
+    "arxiv_id": "2608.06989",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
+    "title": "Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM",
+    "summary": "PFMは、NPUとメモリ内処理（Processing-in-Memory; PIM）が同じテンソルを共有しつつ、推論中の計算特性に応じて実行先を切り替えるための二重視点メモリ方式である。従来の統合メモリはテンソルごとにNPU向けまたはPIM向けの固定配置を選ぶため、プリフィルとデコード、混合専門家モデルの活性エキスパート数が変化すると、実行先と物理配置が不一致になり帯域が低下する。PFMは2 MBスーパーページ内の物理配置を両デバイス向けに共同最適化し、アドレス再対応付けと要求スケジューリングで各デバイスへ異なる論理視点を見せる。さらに実行時性能モデルで演算をNPU/PIMへ動的配置し、データ複製や再配置なしに最大2.32倍のスループット改善を報告する。",
+    "list_summary": "NPU/PIMで共有する物理配置と各デバイスが見る論理配置を分離し、実行時の演算特性に応じて実行先を切り替えても帯域を落とさない統合メモリ方式。",
+    "authors": [
+      "Shixin Zhao",
+      "Lian Liu",
+      "Tianhua Han",
+      "Mengdi Wang",
+      "Yinhe Han",
+      "Ying Wang"
+    ],
+    "authors_affiliations": "Institute of Computing Technology, Chinese Academy of Sciences; University of Chinese Academy of Sciences",
+    "published": "2026-08-07",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "NPU-PIM統合メモリ、近データ処理、LLM推論メモリ階層。NeuPIMs、IANUS、FACILの静的配置を動的実行へ拡張する。",
+    "topics": [
+      "NPU-PIM",
+      "統合メモリ",
+      "動的演算配置",
+      "MoE推論",
+      "メモリ内処理"
+    ],
+    "importance": "実行デバイスが時々刻々変わるLLM推論に対し、物理再配置なしでNPU/PIM双方のアクセス特性を満たす設計を示す。",
+    "hardware_evaluation": "A100級NPU計算資源とAttAcc型HBM-PIMをモデル化し、GPGPU-Sim 4.0とRamulator 2.0を統合したシステムシミュレータで評価。ARU/FASは7 nm想定でRTL合成。",
+    "quality_effect": "モデル精度を近似する手法ではなく、同じ演算とテンソルを異なる実行デバイス・メモリ視点で処理するシステム最適化であり、数値品質の低下を目的としない。",
+    "source": "https://arxiv.org/abs/2608.06989",
+    "sources": [
+      "https://arxiv.org/abs/2608.06989",
+      "https://arxiv.org/html/2608.06989",
+      "https://arxiv.org/pdf/2608.06989"
+    ],
+    "code": null,
+    "implementation": "研究用システムシミュレータへPFMのアドレス再対応付け・スケジューラを実装し、ARU/FASをRTLで合成。公開コードURLは一次資料で確認できない。",
+    "last_checked": "2026-09-20",
+    "references": [
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "arxiv_id": "2401.04088"
+      },
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      },
+      {
+        "canonical_id": "arXiv:1701.03499",
+        "arxiv_id": "1701.03499"
+      },
+      {
+        "canonical_id": "arXiv:2308.12950",
+        "arxiv_id": "2308.12950"
+      },
+      {
+        "canonical_id": "arXiv:2407.21783",
+        "arxiv_id": "2407.21783"
+      }
+    ],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary-reference-section",
+    "references_total": 67
+  },
+  "reservation": {
+    "claim_id": "claim-ade4ad902d6f7670ee635b88",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
