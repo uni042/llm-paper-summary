@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T11:05:45.193625+00:00",
+  "updated_at": "2026-09-20T11:08:28.603143+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T11:05:45.193625+00:00",
+      "last_recorded_at": "2026-09-20T11:08:28.603143+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 377,
+        "research_completed": 378,
         "audit_completed": 0,
         "discovery_completed": 210,
         "blocked": 53,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35486064695:1",
-          "recorded_at": "2026-09-20T03:15:03.402696+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "35486064695",
-            "run_attempt": "1",
-            "source_sha": "d2231be703481577d2311ebeb7040a23537a33f5"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "35486174322:1",
           "recorded_at": "2026-09-20T03:17:25.996747+00:00",
@@ -19593,6 +19579,20 @@
           },
           "signals": [
             "job_blocked"
+          ]
+        },
+        {
+          "event_id": "35506988142:1",
+          "recorded_at": "2026-09-20T11:08:28.603143+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35506988142",
+            "run_attempt": "1",
+            "source_sha": "9200c40841acdb3f6146f4dcf41b6d94f4eced4e"
+          },
+          "signals": [
+            "research_completed"
           ]
         }
       ],
@@ -24716,6 +24716,14 @@
           "title": "Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-research-08b5458cb63307f5",
+          "type": "research",
+          "canonical_id": "arXiv:2608.10392",
+          "title": "Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -28056,7 +28064,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 847,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "research_completed"
     }
   ]
 }
