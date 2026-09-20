@@ -16,15 +16,16 @@ CANONICAL_RENDER = "render_status_dashboard.py --repo-root . --output STATUS.md"
 LEGACY_RENDER = "build_status_dashboard.py --repo-root . --output STATUS.md"
 
 
-class SharedWorkMixRoutingTests(unittest.TestCase):
-    def test_canonical_router_differs_only_by_work_mix(self):
+class CommonThresholdRoutingTests(unittest.TestCase):
+    def test_canonical_router_uses_candidate_inventory_not_schedule_identity(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        self.assertIn("読解 3 : 探索 1", router)
-        self.assertIn("探索 3 : 読解 1", router)
-        self.assertIn("第3節の共通読解手順", router)
-        self.assertIn("第4節の共通探索手順", router)
-        self.assertIn("タスク固有の別モードを作る理由にはしない", router)
-        self.assertNotIn("通常論文ワーカーと同じ研究処理", router)
+        self.assertIn("candidate_inventory >= 50", router)
+        self.assertIn("candidate_inventory < 50", router)
+        self.assertIn("同じタスク・同じ手順", router)
+        self.assertIn("新規論文を最低3本", router)
+        self.assertIn("最低4つの materially distinct", router)
+        self.assertNotIn("読解 3 : 探索 1", router)
+        self.assertNotIn("overflow research mode", router)
 
     def test_repository_tests_watch_single_worker_router(self):
         text = REPOSITORY_TESTS.read_text(encoding="utf-8")
@@ -101,21 +102,22 @@ class StatusPublishGateTests(unittest.TestCase):
         self.assertNotIn("STATUS.md", text)
         self.assertIn(".survey/work-queue/claim-results", text)
 
-    def test_submission_fast_lane_keeps_canonical_renderer_with_inert_compatibility_shims(self):
+    def test_submission_fast_lane_uses_only_canonical_renderer(self):
         text = SUBMISSION_WORKFLOW.read_text(encoding="utf-8")
         self.assertIn(CANONICAL_RENDER, text)
         self.assertNotIn(LEGACY_RENDER, text)
-        self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
+        self.assertNotIn("append_research_throughput_status.py", text)
+        self.assertNotIn("refine_status_observability.py", text)
         self.assertIn("STATUS.md", text)
 
-    def test_background_helper_uses_canonical_renderer_with_inert_compatibility_shims(self):
+    def test_background_helper_uses_only_canonical_renderer(self):
         text = HELPER_WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("refresh_status_dashboard", text)
         self.assertIn("status_publish_gate.py", text)
         self.assertIn(CANONICAL_RENDER, text)
         self.assertNotIn(LEGACY_RENDER, text)
-        self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
-        self.assertIn("refine_status_observability.py --repo-root . --status STATUS.md", text)
+        self.assertNotIn("append_research_throughput_status.py", text)
+        self.assertNotIn("refine_status_observability.py", text)
         self.assertIn("git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json", text)
         self.assertIn("git commit --amend --no-edit", text)
 
