@@ -2,48 +2,105 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-693ab3f00680341f1d1e2e10",
+  "attempt_id": "attempt-26cd74667eb00ab5badaabeb",
   "job_id": "job-research-53d31e41c03b4f2d",
   "data": {
     "canonical_id": "arXiv:2604.12171",
     "arxiv_id": "2604.12171",
     "doi": "10.48550/arXiv.2604.12171",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.LG"]},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
     "title": "PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving",
     "summary": "PipeLiveは、動的なワークロードや異種GPU環境で最適なパイプライン並列構成が変化しても、推論サービスを停止せずにレイヤー配置を切り替えるサービング機構である。KVキャッシュを実行中に縮小・拡張できる非連続ブロック配置とレイヤースタッキングを導入し、移動中に更新されたKV状態を差分パッチとして継続同期する。これにより、旧構成を動かしたまま新構成の重みとKV状態を準備し、安全な収束点で短時間だけ同期して切り替える。A100 80GBとL40S 48GBの実機評価では、Llama 3-70BとQwen3-30Bの混合ワークロードで静的構成より総合性能を33〜36%改善し、再構成時のサービス停止をおおむね10msまで抑えた。",
     "list_summary": "実行中のKVキャッシュ容量とレイヤー配置を動的に組み替え、差分KV同期で停止を約10msに抑えながら、ワークロードに応じたパイプライン並列構成へ切り替えるLLMサービング方式。",
-    "authors": ["Xu Bai", "Muhammed Tawfiqul Islam", "Chen Wang", "Adel N. Toosi"],
+    "authors": [
+      "Xu Bai",
+      "Muhammed Tawfiqul Islam",
+      "Chen Wang",
+      "Adel N. Toosi"
+    ],
     "authors_affiliations": "Xu Bai、Muhammed Tawfiqul Islam、Adel N. ToosiはUniversity of Melbourne DisNet Lab、Chen WangはIBM Research。",
     "published": "2026-04-14",
     "publication": "arXiv preprint arXiv:2604.12171",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "動的LLMサービング／パイプライン並列再構成／KVキャッシュ管理",
-    "topics": ["LLMサービング", "パイプライン並列", "KVキャッシュ", "異種GPU", "動的再構成"],
+    "topics": [
+      "LLMサービング",
+      "パイプライン並列",
+      "KVキャッシュ",
+      "異種GPU",
+      "動的再構成"
+    ],
     "importance": "静的なパイプライン並列配置を実行時に変更できないというサービング基盤の制約に対し、メモリ再配置とKV状態整合性を同時に扱う実装可能な再構成経路を示す。",
     "hardware_evaluation": "実機。別ノードに配置したNVIDIA A100 80GB 1基とNVIDIA L40S 48GB 1基をInfiniBandとNCCLで接続し、2段パイプライン並列として評価。",
     "quality_effect": "近似や量子化によるモデル品質変更は行わない。評価対象はサービング遅延、スループット、再構成停止時間、KVメモリ利用率であり、生成品質の劣化を伴う方式ではない。",
-    "evidence_locations": ["§4 Algorithm 1", "§5 KV cache resizing and layer stacking", "§6 KV migration and patching", "§7.2 Experimental Setup", "§7.3-7.6 Evaluation", "§8 Related Work"],
+    "evidence_locations": [
+      "§4 Algorithm 1",
+      "§5 KV cache resizing and layer stacking",
+      "§6 KV migration and patching",
+      "§7.2 Experimental Setup",
+      "§7.3-7.6 Evaluation",
+      "§8 Related Work"
+    ],
     "source": "https://arxiv.org/abs/2604.12171",
-    "sources": ["https://arxiv.org/abs/2604.12171", "https://arxiv.org/pdf/2604.12171"],
+    "sources": [
+      "https://arxiv.org/abs/2604.12171",
+      "https://arxiv.org/pdf/2604.12171"
+    ],
     "code": null,
     "implementation": "論文はvLLM上に構築したオープンソースLLMサービングシステムと記述するが、確認できた一次資料中では公式コードURLを特定できなかった。",
     "last_checked": "2026-09-20",
     "references": [
-      {"canonical_id": "arXiv:2407.21783", "arxiv_id": "2407.21783"},
-      {"canonical_id": "arXiv:2404.14527", "arxiv_id": "2404.14527"},
-      {"canonical_id": "arXiv:2510.11938", "arxiv_id": "2510.11938"},
-      {"canonical_id": "arXiv:2502.15524", "arxiv_id": "2502.15524"},
-      {"canonical_id": "arXiv:1909.08053", "arxiv_id": "1909.08053"},
-      {"canonical_id": "arXiv:2303.08774", "arxiv_id": "2303.08774"},
-      {"canonical_id": "arXiv:2508.08448", "arxiv_id": "2508.08448"},
-      {"canonical_id": "arXiv:2505.09388", "arxiv_id": "2505.09388"},
-      {"canonical_id": "arXiv:2302.13971", "arxiv_id": "2302.13971"}
+      {
+        "canonical_id": "arXiv:2407.21783",
+        "arxiv_id": "2407.21783"
+      },
+      {
+        "canonical_id": "arXiv:2404.14527",
+        "arxiv_id": "2404.14527"
+      },
+      {
+        "canonical_id": "arXiv:2510.11938",
+        "arxiv_id": "2510.11938"
+      },
+      {
+        "canonical_id": "arXiv:2502.15524",
+        "arxiv_id": "2502.15524"
+      },
+      {
+        "canonical_id": "arXiv:1909.08053",
+        "arxiv_id": "1909.08053"
+      },
+      {
+        "canonical_id": "arXiv:2303.08774",
+        "arxiv_id": "2303.08774"
+      },
+      {
+        "canonical_id": "arXiv:2508.08448",
+        "arxiv_id": "2508.08448"
+      },
+      {
+        "canonical_id": "arXiv:2505.09388",
+        "arxiv_id": "2505.09388"
+      },
+      {
+        "canonical_id": "arXiv:2302.13971",
+        "arxiv_id": "2302.13971"
+      }
     ],
     "references_checked_at": "2026-09-20",
     "references_source": "primary-reference-section",
     "references_total": 33
   },
-  "reservation": {"claim_id": "claim-693ab3f00680341f1d1e2e10", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-26cd74667eb00ab5badaabeb",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
