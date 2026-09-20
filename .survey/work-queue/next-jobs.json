@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 124,
-    "actively_claimed": 1,
-    "claimable": 123
+    "actively_claimed": 2,
+    "claimable": 122
   },
   "next_jobs": [
     {
@@ -81,20 +81,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-e0a5ea7f3cdd2886",
-      "type": "research",
-      "lane": null,
-      "priority": 96,
-      "canonical_id": "arXiv:2503.04398",
-      "title": "Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling",
-      "source_url": "https://arxiv.org/abs/2503.04398",
-      "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-821e549f36e154dd",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-e405cf8340f00512",
+      "type": "research",
+      "lane": null,
+      "priority": 96,
+      "canonical_id": "arXiv:2503.20552",
+      "title": "Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation",
+      "source_url": "https://arxiv.org/abs/2503.20552",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.20552-adrenaline.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T05:40:06+00:00"
+  "generated_at": "2026-09-20T05:42:32+00:00"
 }
