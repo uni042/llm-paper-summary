@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 12:07:21 JST**
+> 自動生成: **2026-09-20 12:07:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **81** |
+| 収録候補論文 | **80** |
 | 未claim Research job | **80** |
-| 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-20 12:03:55 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **42** |
+| 最終検証済みResearch収録 | **09-20 12:07:28 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **81** |
+| canonical_id確認済みの一意な候補論文 | **80** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **81** |
+| 非終端Research job合計 | **80** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **6** | **5** | **1** | **1** | **0** | — |
+| Research | **14** | **6** | **6** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **13** | **7** | **6** | **1** | **1** | **0** | **5** |
+| 合計 | **14** | **7** | **7** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 12:07:28 JST** [research] `arXiv:2006.16668` — GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding
+  - job: `.survey/work-queue/jobs/job-research-710ff1d6feeafd76.json`
+  - result: `.survey/work-queue/results/research/attempt-85841135c44788f4cd9b5a81.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-85841135c44788f4cd9b5a81.json`
+  - paper: `papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md`
 - **09-20 12:03:55 JST** [research] `arXiv:2309.08168` — Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-06ec3586821ff3bb.json`
   - result: `.survey/work-queue/results/research/attempt-494231538c84c48296aa17b3.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-1e7b670e9a35584762c55c56.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-1e7b670e9a35584762c55c56.json`
   - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2401.18079-kvquant.md`
-- **09-20 09:35:29 JST** [research] `arXiv:2309.17453` — Efficient Streaming Language Models with Attention Sinks
-  - job: `.survey/work-queue/jobs/job-research-e12ae17b96a85ee5.json`
-  - result: `.survey/work-queue/results/research/attempt-d96484c2d2d3c4cd1838a754.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d96484c2d2d3c4cd1838a754.json`
-  - paper: `papers/inference/05-kv-cache-memory-management/2023-2309.17453-streamingllm.md`
 
 ### Audit
 
@@ -112,7 +112,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 11:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **6件** / 検証済み成功: **5件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **6件** / 検証済み成功: **6件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - **成功** `arXiv:2502.16002` — KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse
   - job: `.survey/work-queue/jobs/job-research-f018d8c28f4995e5.json`
   - result: `.survey/work-queue/results/research/attempt-098c5b91676f2a1a4d4737af.json` (`ok=true`)
@@ -138,7 +138,11 @@
   - result: `.survey/work-queue/results/research/attempt-6500850523776f2b702f4a6d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6500850523776f2b702f4a6d.json`
   - paper: `papers/inference/05-speculative-decoding/2023-2302.01318-speculative-sampling.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-85841135c44788f4cd9b5a81.json` (job `job-research-710ff1d6feeafd76`)
+- **成功** `arXiv:2006.16668` — GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding
+  - job: `.survey/work-queue/jobs/job-research-710ff1d6feeafd76.json`
+  - result: `.survey/work-queue/results/research/attempt-85841135c44788f4cd9b5a81.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-85841135c44788f4cd9b5a81.json`
+  - paper: `papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md`
 
 #### Audit (:30)
 
@@ -160,10 +164,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2006.16668` — GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 12:06:34 JST** / heartbeat: **—** / lease expiry: **09-20 13:36:34 JST**
-  - evidence: `.survey/work-queue/claims/job-research-710ff1d6feeafd76.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -183,7 +185,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **81** |
+| ready | **80** |
 
 ### 候補の重複・識別情報欠損
 
@@ -203,7 +205,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **793** |
+| inference/training/survey配下の論文Markdown実体 | **794** |
 
 ### immutable submissionの未照合
 
@@ -211,8 +213,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **684** |
-| └ Research | **523** |
+| 成功result未照合のimmutable submission | **683** |
+| └ Research | **522** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
