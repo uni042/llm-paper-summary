@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 09:39:25 JST**
+> 自動生成: **2026-09-20 09:39:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **88** |
+| 収録候補論文 | **87** |
 | 未claim Research job | **87** |
-| 直近24hの検証済みResearch収録 | **39** |
-| 最終検証済みResearch収録 | **09-20 09:35:29 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **40** |
+| 最終検証済みResearch収録 | **09-20 09:39:31 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **88** |
+| canonical_id確認済みの一意な候補論文 | **87** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **88** |
+| 非終端Research job合計 | **87** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **12** | **2** | **2** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **11** | **3** | **2** | **1** | **1** | **0** | **5** |
+| 合計 | **12** | **3** | **3** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -48,6 +48,11 @@
 
 ### Research
 
+- **09-20 09:39:31 JST** [research] `arXiv:2401.18079` — KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization
+  - job: `.survey/work-queue/jobs/job-research-6e90b18bc4767f7c.json`
+  - result: `.survey/work-queue/results/research/attempt-1e7b670e9a35584762c55c56.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1e7b670e9a35584762c55c56.json`
+  - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2401.18079-kvquant.md`
 - **09-20 09:35:29 JST** [research] `arXiv:2309.17453` — Efficient Streaming Language Models with Attention Sinks
   - job: `.survey/work-queue/jobs/job-research-e12ae17b96a85ee5.json`
   - result: `.survey/work-queue/results/research/attempt-d96484c2d2d3c4cd1838a754.json` (`ok=true`)
@@ -93,11 +98,6 @@
   - result: `.survey/work-queue/results/research/attempt-5dce2562aaf6112c45659534.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5dce2562aaf6112c45659534.json`
   - paper: `papers/inference/05-speculative-decoding/2022-2211.17192-speculative-decoding.md`
-- **09-20 04:17:50 JST** [research] `arXiv:2205.14135` — FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
-  - job: `.survey/work-queue/jobs/job-research-25491a773c352e2c.json`
-  - result: `.survey/work-queue/results/research/attempt-210ab028fb8916623648a61a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-210ab028fb8916623648a61a.json`
-  - paper: `papers/inference/09-attention-kernel-serving-optimization/2022-2205.14135-flashattention.md`
 
 ### Audit
 
@@ -112,8 +112,12 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 09:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-1e7b670e9a35584762c55c56.json` (job `job-research-6e90b18bc4767f7c`)
+- immutable submission: **2件** / 検証済み成功: **2件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
+- **成功** `arXiv:2401.18079` — KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization
+  - job: `.survey/work-queue/jobs/job-research-6e90b18bc4767f7c.json`
+  - result: `.survey/work-queue/results/research/attempt-1e7b670e9a35584762c55c56.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1e7b670e9a35584762c55c56.json`
+  - paper: `papers/inference/05-kv-cache-compression-quantization/2024-2401.18079-kvquant.md`
 - **成功** `arXiv:2309.17453` — Efficient Streaming Language Models with Attention Sinks
   - job: `.survey/work-queue/jobs/job-research-e12ae17b96a85ee5.json`
   - result: `.survey/work-queue/results/research/attempt-d96484c2d2d3c4cd1838a754.json` (`ok=true`)
@@ -140,10 +144,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2401.18079` — KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 09:38:53 JST** / heartbeat: **—** / lease expiry: **09-20 11:08:53 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6e90b18bc4767f7c.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -163,7 +165,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **88** |
+| ready | **87** |
 
 ### 候補の重複・識別情報欠損
 
@@ -183,7 +185,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **784** |
+| inference/training/survey配下の論文Markdown実体 | **785** |
 
 ### immutable submissionの未照合
 
@@ -191,8 +193,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **678** |
-| └ Research | **517** |
+| 成功result未照合のimmutable submission | **677** |
+| └ Research | **516** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **14** |
