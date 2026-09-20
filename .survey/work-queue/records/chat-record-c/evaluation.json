@@ -2,56 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-83e541e2c7e7c88135f96320",
-  "job_id": "job-research-89e4b35d6854b9b6",
-  "data": {
-    "evaluation_summary": "主評価は単一NVIDIA B200 GPUの実機で、Qwen1.5-MoE-A2.7BとDeepSeek-V2-Liteをbfloat16で読み込み、lm-eval-harnessのゼロショット7課題をバッチ64で測定する。比較対象は専門家枝刈りのMoE-I²、専門家統合のHC-SMoE、残差疎化のD2MoEとResMoE-SVD。既定の較正集合はDolly-15Kから種0で512系列を抽出し、連結して2048トークン単位へ分割した約100万トークンである。主結果は最後の3分の2の層へ90%圧縮を適用し、精度と課題別ピークGPUメモリを比較する。さらに圧縮率10～90%、較正集合の種・データ源・大きさ、重要度基準、大域選択方式、圧縮時間、サービング処理量を個別に検証する。",
-    "scope": "主結果はQwenとDeepSeekだが、付録でOLMoE-1B-7B-0125とMoonlight-16B-A3B、WikiTextとIFEvalも追加評価する。単一B200実機の結果であり、異なるGPU世代や分散推論で同じ圧縮時間・処理量になることは直接検証していない。",
-    "hardware": [
-      "NVIDIA B200 GPU 1基",
-      "Ubuntu 22.04",
-      "CUDA 13.0",
-      "PyTorch 2.9.0",
-      "bfloat16"
-    ],
-    "models": [
-      "Qwen1.5-MoE-A2.7B",
-      "DeepSeek-V2-Lite",
-      "OLMoE-1B-7B-0125（追加評価）",
-      "Moonlight-16B-A3B（追加評価）"
-    ],
-    "datasets": [
-      "ARC-Easy",
-      "ARC-Challenge",
-      "WinoGrande",
-      "HellaSwag",
-      "OpenBookQA",
-      "PIQA",
-      "MMLU",
-      "Dolly-15K（較正）",
-      "C4・WikiText（較正感度分析）"
-    ],
-    "workload": "lm-eval-harnessによるゼロショット評価、バッチ64。主設定は90%圧縮で最後の3分の2のMoE層を圧縮。圧縮率は10%刻みで10～90%まで走査する。",
-    "baselines": [
-      "MoE-I²",
-      "HC-SMoE",
-      "D2MoE",
-      "ResMoE-SVD",
-      "非圧縮モデル"
-    ],
-    "metrics": [
-      "7課題平均精度",
-      "課題別精度",
-      "ピークGPUメモリ",
-      "圧縮時間",
-      "サービング処理量（トークン/秒）",
-      "較正条件変更時の標準偏差"
-    ],
-    "predictor_accuracy": "予測器は使用しない。出力重要度は較正集合上の専門家出力寄与差を直接集計する。",
-    "control_knobs": "圧縮率ρ、較正集合の種・データ源・系列数、重要度基準、専門家内局所選択か層内大域選択か、ルーティング頻度重みの有無を変更して要因を分離する。"
-  },
+  "attempt_id": "attempt-a23c984134283281d819be9c",
+  "job_id": "job-research-1d4c48939bbf9fa8",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-83e541e2c7e7c88135f96320",
+    "claim_id": "claim-a23c984134283281d819be9c",
     "worker_id": "scheduled-chat-discovery-hourly",
     "worker_kind": "scheduled_chat"
   }
