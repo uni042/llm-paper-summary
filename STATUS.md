@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 19:31:58 JST**
+> 自動生成: **2026-09-20 19:32:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **101** |
-| 未claim Research job | **100** |
+| 収録候補論文 | **100** |
+| 未claim Research job | **99** |
 | 直近24hの検証済みResearch収録 | **84** |
 | 最終検証済みResearch収録 | **09-20 19:20:46 JST（11分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **101** |
+| canonical_id確認済みの一意な候補論文 | **100** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **101** |
+| 非終端Research job合計 | **100** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **38** | **12** | **9** | **1** | **1** | **0** | — |
+| Research | **38** | **12** | **9** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **38** | **13** | **10** | **1** | **1** | **0** | **5** |
+| 合計 | **38** | **13** | **10** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 18:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **12件** / 検証済み成功: **9件** / result照合済み非成功: **2件** / 個別result未照合: **1件**
+- immutable submission: **12件** / 検証済み成功: **9件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
 - **成功** `arXiv:2407.00326` — Teola: Towards End-to-End Optimization of LLM-based Applications
   - job: `.survey/work-queue/jobs/job-research-6778a26f7c6381c5.json`
   - result: `.survey/work-queue/results/research/attempt-0035fe851a4c5bf25fbbacc2.json` (`ok=true`)
@@ -138,7 +138,8 @@
   - result: `.survey/work-queue/results/research/attempt-130c102f178d2a82b4f2f771.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-130c102f178d2a82b4f2f771.json`
   - paper: `papers/inference/10-sparse-attention/2026-delta.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-36775161dea47254d363d39c.json` (job `job-research-89e4b35d6854b9b6`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-36775161dea47254d363d39c.json` (job `job-research-89e4b35d6854b9b6`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-36775161dea47254d363d39c.json` (`ok=true`)
 - **成功** `arXiv:2310.07177` — Online Speculative Decoding
   - job: `.survey/work-queue/jobs/job-research-3cf2e0a916913e29.json`
   - result: `.survey/work-queue/results/research/attempt-3e00451f32958b311cdc3f3c.json` (`ok=true`)
@@ -190,9 +191,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.00575` — Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 19:28:39 JST** / heartbeat: **—** / lease expiry: **09-20 20:58:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-89e4b35d6854b9b6.json`
+- `arXiv:2608.15299` — MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation / worker `scheduled-chat-llm-survey`
+  - claim: **09-20 19:32:10 JST** / heartbeat: **—** / lease expiry: **09-20 21:02:10 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8f68f6b8d4d62651.json`
 
 #### Audit
 
@@ -212,7 +213,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **101** |
+| ready | **100** |
 
 ### 候補の重複・識別情報欠損
 
@@ -240,11 +241,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **767** |
+| 成功result未照合のimmutable submission | **770** |
 | └ Research | **579** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
-| └ Other/Unknown | **41** |
+| └ Other/Unknown | **44** |
 
 ### 厳格検証が未成立のcompleted job
 

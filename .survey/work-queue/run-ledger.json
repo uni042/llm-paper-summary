@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-20T10:29:00.113316+00:00",
+  "updated_at": "2026-09-20T10:32:20.668857+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-20T10:29:00.113316+00:00",
+      "last_recorded_at": "2026-09-20T10:32:20.668857+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,26 +18692,12 @@
         "research_completed": 377,
         "audit_completed": 0,
         "discovery_completed": 198,
-        "blocked": 49,
+        "blocked": 50,
         "new_jobs": 318,
         "new_papers": 386,
         "fallback_archived": 72
       },
       "events": [
-        {
-          "event_id": "35482031051:1",
-          "recorded_at": "2026-09-20T01:43:51.133329+00:00",
-          "github": {
-            "event_name": "schedule",
-            "workflow": "Survey helper worker",
-            "run_id": "35482031051",
-            "run_attempt": "1",
-            "source_sha": "8136cc66b61cfeb5098cf1a4bd436939765f3fab"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "35484393996:1",
           "recorded_at": "2026-09-20T02:36:03.856674+00:00",
@@ -19593,6 +19579,20 @@
           "signals": [
             "discovery_or_queue_expanded",
             "paper_materialized"
+          ]
+        },
+        {
+          "event_id": "35505321423:1",
+          "recorded_at": "2026-09-20T10:32:20.668857+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35505321423",
+            "run_attempt": "1",
+            "source_sha": "fe205a8a0dac29b94a37670fd912035b2f331869"
+          },
+          "signals": [
+            "job_blocked"
           ]
         }
       ],
@@ -24588,6 +24588,14 @@
           "title": null,
           "from": null,
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-89e4b35d6854b9b6",
+          "type": "research",
+          "canonical_id": "arXiv:2609.00575",
+          "title": "Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -27592,7 +27600,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 847,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

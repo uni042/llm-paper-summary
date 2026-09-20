@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2609.00575",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.00575-parser-residual-sparsification-output-importance.md",
   "selection_reason": "PARSERはexpert残差の個別行列誤差ではなくexpert出力誤差を圧縮目的に置き換えるMoE圧縮法。Qwen/DeepSeekで同一peak memory reduction時の非圧縮モデルとのaccuracy gapを既存法比1.41x/1.44x縮小しており、Compression系統を直接更新する。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T10:19:13+00:00"
+  "created_at": "2026-09-20T10:19:13+00:00",
+  "completed_at": "2026-09-20T10:32:16+00:00",
+  "blocker": "Primary-source full text could not be safely retrieved in this run. Direct arXiv HTML and abstract-page fetches were attempted but the runtime returned DisabledError. An arXiv metadata mirror exposed only abstract/version metadata, and the authors' official PARSER GitHub repository exposed implementation/reproduction details but is not a substitute for reading the paper's full primary text. Per workflow policy, no five-slot record was inferred from abstract/code alone.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-36775161dea47254d363d39c.json"
 }
