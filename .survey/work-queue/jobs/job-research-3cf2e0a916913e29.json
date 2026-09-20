@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2310.07177",
   "paper_path": "papers/inference/05-speculative-decoding/2023-2310.07177-online-speculative-decoding.md",
   "selection_reason": "Speculative-decoding system that continuously adapts draft models to live query distributions to improve acceptance rates under workload shift.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-19T18:48:26+00:00"
+  "created_at": "2026-09-19T18:48:26+00:00",
+  "completed_at": "2026-09-20T03:18:49+00:00",
+  "blocker": "Primary-source full-text reading could not be completed in this invocation because the web retrieval budget was exhausted after the job was claimed. No scientific 5-slot content was inferred or fabricated. Retrieval of arXiv:2310.07177 must be retried from the official arXiv HTML/PDF path on a later eligible attempt.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-fbff7b50969572eba56c0514.json"
 }
