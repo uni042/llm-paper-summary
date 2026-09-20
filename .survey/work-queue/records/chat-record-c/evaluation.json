@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-8c0b23180b0d626bedc629c2",
-  "job_id": "job-research-5ce9880c62119377",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8c0b23180b0d626bedc629c2",
-    "worker_id": "scheduled-chat-discovery-hourly",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-8c0b23180b0d626bedc629c2","job_id":"job-research-5ce9880c62119377","data":{"evaluation_summary":"OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3Bを各元専門家4分割へ変換し、品質とサービング性能を実機評価する。品質はWikiTextパープレキシティとWinoGrande、ARC-Challenge、SciQ、BoolQで元モデルと同等活性パラメータを比較する。サービングはDynamoLLMのAzureトレースから総トークン長1024〜2048の要求を使い、要求kを打切り正規分布から生成する。オフラインは要求/秒、オンラインは平均・p75・p90・p99先頭トークン時間を測り、固定k vLLM、動的kだけを加えたvLLM+K、各並列方式と比較する。","scope":"A100、RTX A6000、H800の実機でvLLMへ統合したエンドツーエンド評価を行う。オンラインは2 GPU構成までであり、大規模クラスタでのレーン分離やネットワーク越し専門家並列は未検証。要求ごとの品質予算kは合成分布から与えられ、kを選ぶ上流ポリシー自体は対象外。","hardware":["NVIDIA A100","NVIDIA RTX A6000","NVIDIA H800","オンライン2 GPU構成"],"models":["OLMoE-1B-7B-0924","DeepSeek-V2-Lite","Qwen3-30B-A3B"],"datasets":["WikiText-2-raw-v1","SlimPajama","WinoGrande","ARC-Challenge","SciQ","BoolQ","DynamoLLM Azure serving trace"],"workload":"校正にはWikiText-2学習分割、ゲート微調整にはSlimPajama 20万系列。サービングはAzureトレースの1024〜2048総トークン要求を使い、到着はPoisson過程、要求kは打切り正規分布で制御する。","baselines":["元モデル固定k vLLM","vLLM+K（動的k実行+FIFO）","vLLM-DP","vLLM-TP","vLLM-TPEP","元粗粒度専門家+同一スケジューラ"],"metrics":["要求スループット","平均TTFT","TTFT p75/p90/p99","平均TPOT","実行バッチk","CUDAグラフメモリ","WikiTextパープレキシティ","下流タスク精度"],"control_knobs":"各元専門家をN=4分割。学習なしゲートは各サブ専門家r=4代表ニューロン。線形ゲート微調整は学習率1e-5。要求k分布の平均・標準偏差、オフライン品質階層結合、オンラインレーン境界を変える。"},"reservation":{"claim_id":"claim-8c0b23180b0d626bedc629c2","worker_id":"scheduled-chat-discovery-hourly","worker_kind":"scheduled_chat"}}
