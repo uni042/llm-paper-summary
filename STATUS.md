@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 23:48:01 JST**
+> 自動生成: **2026-09-20 23:48:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **201** |
+| 収録候補論文 | **200** |
 | 未claim Research job | **200** |
-| 直近24hの検証済みResearch収録 | **88** |
-| 最終検証済みResearch収録 | **09-20 23:43:39 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **89** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **201** |
+| canonical_id確認済みの一意な候補論文 | **200** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **201** |
+| 非終端Research job合計 | **200** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **5** | **3** | **1** | **1** | **0** | — |
+| Research | **28** | **5** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **27** | **6** | **4** | **1** | **1** | **0** | **5** |
+| 合計 | **28** | **6** | **5** | **0** | **0** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-20 23:48:14 JST** [research] `arXiv:2510.13999` — REAP the Experts: Why Pruning Prevails for One-Shot MoE compression
+  - job: `.survey/work-queue/jobs/job-research-2dff89406766fc1d.json`
+  - result: `.survey/work-queue/results/research/attempt-8eee4a640ec2d03e43ea9f98.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8eee4a640ec2d03e43ea9f98.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md`
 - **09-20 23:43:39 JST** [research] `arXiv:2509.21892` — Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts
   - job: `.survey/work-queue/jobs/job-research-7878dfa1090aac77.json`
   - result: `.survey/work-queue/results/research/attempt-524e1ba9cb57a926cc0c9550.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-70943e20a527c6aa030a2179.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-70943e20a527c6aa030a2179.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md`
-- **09-20 20:43:09 JST** [research] `arXiv:2606.09886` — SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs
-  - job: `.survey/work-queue/jobs/job-research-6e63ee697d71f91d.json`
-  - result: `.survey/work-queue/results/research/attempt-5a4b45332ca9b9f0a0bd90d0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5a4b45332ca9b9f0a0bd90d0.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2606.09886-shape-coalition-aware-expert-pruning.md`
 
 ### Audit
 
@@ -127,7 +127,7 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **3件** / result照合済み非成功: **1件** / 個別result未照合: **1件**
+- immutable submission: **5件** / 検証済み成功: **4件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2602.07616` — SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models
   - job: `.survey/work-queue/jobs/job-research-ff5accb2a519d706.json`
   - result: `.survey/work-queue/results/research/attempt-4198d6e57abb83d655f6b5bb.json` (`ok=true`)
@@ -140,7 +140,11 @@
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.21892-elastic-moe-inference-time-scalability.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-68ada84df4d15e6b33fe96ec.json` (job `job-research-f32c4d7018f358c2`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-68ada84df4d15e6b33fe96ec.json` (`ok=false`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-8eee4a640ec2d03e43ea9f98.json` (job `job-research-2dff89406766fc1d`)
+- **成功** `arXiv:2510.13999` — REAP the Experts: Why Pruning Prevails for One-Shot MoE compression
+  - job: `.survey/work-queue/jobs/job-research-2dff89406766fc1d.json`
+  - result: `.survey/work-queue/results/research/attempt-8eee4a640ec2d03e43ea9f98.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-8eee4a640ec2d03e43ea9f98.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md`
 - **成功** `arXiv:2511.06494` — Route Experts by Sequence, not by Token
   - job: `.survey/work-queue/jobs/job-research-e203c47aded67247.json`
   - result: `.survey/work-queue/results/research/attempt-c9fddc3f170c1ce1924365e6.json` (`ok=true`)
@@ -167,10 +171,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2510.13999` — REAP the Experts: Why Pruning Prevails for One-Shot MoE compression / worker `scheduled-chat-llm-survey`
-  - claim: **09-20 23:45:55 JST** / heartbeat: **—** / lease expiry: **09-21 01:15:55 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2dff89406766fc1d.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -190,7 +192,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **201** |
+| ready | **200** |
 
 ### 候補の重複・識別情報欠損
 
@@ -210,7 +212,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **862** |
+| inference/training/survey配下の論文Markdown実体 | **863** |
 
 ### immutable submissionの未照合
 
@@ -218,8 +220,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **859** |
-| └ Research | **609** |
+| 成功result未照合のimmutable submission | **858** |
+| └ Research | **608** |
 | └ Audit | **2** |
 | └ Discovery | **145** |
 | └ Other/Unknown | **103** |
