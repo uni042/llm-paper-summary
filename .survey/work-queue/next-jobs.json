@@ -20,8 +20,8 @@
   },
   "claiming": {
     "ready_research_audit": 88,
-    "actively_claimed": 0,
-    "claimable": 88
+    "actively_claimed": 1,
+    "claimable": 87
   },
   "next_jobs": [
     {
@@ -95,20 +95,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-6e90b18bc4767f7c",
-      "type": "research",
-      "lane": null,
-      "priority": 94,
-      "canonical_id": "arXiv:2401.18079",
-      "title": "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
-      "source_url": "https://arxiv.org/abs/2401.18079",
-      "paper_path": "papers/inference/05-kv-cache-compression-quantization/2024-2401.18079-kvquant.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-9824d8080e264ed4",
       "type": "research",
       "lane": null,
@@ -137,6 +123,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-872c3c76cc1c3eff",
+      "type": "research",
+      "lane": null,
+      "priority": 94,
+      "canonical_id": "arXiv:2408.00741",
+      "title": "DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency",
+      "source_url": "https://arxiv.org/abs/2408.00741",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -151,5 +151,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-20T00:35:30+00:00"
+  "generated_at": "2026-09-20T00:38:07+00:00"
 }
