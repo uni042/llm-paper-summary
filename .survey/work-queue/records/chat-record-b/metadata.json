@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-b269ed373464c47a4c4f738e",
-  "job_id": "job-research-f4b6d40ae418a58e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b269ed373464c47a4c4f738e",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-b269ed373464c47a4c4f738e","job_id":"job-research-f4b6d40ae418a58e","data":{"canonical_id":"arXiv:2606.02091","title":"DFlare: Scaling Up Draft Capacity for Block Diffusion Speculative Decoding","list_summary":"ブロック拡散ドラフトの各層へ異なる標的層混合を注入し、ドラフト深さ・標的知識・学習データを拡張して受理長と実時間高速化を伸ばす。","summary":"DFlareはブロック拡散型の投機的復号で、DFlashの全ドラフト層が同じ少数標的層の融合表現を共有する条件付けボトルネックを解消する。各ドラフト層が9個前後の標的モデル隠れ状態から独自のソフトマックス重み付き和を学習する適応層融合、標的文脈とドラフト状態を別の鍵値射影へ分ける異種鍵値射影、ブロック前半から後半へ重点を移す漸進位置重み付き損失を導入する。これにより5〜7層へのドラフト深度拡張が飽和せず、学習データも80万から240万へ拡大できる。Qwen3-4B、Qwen3-8B、GPT-OSS-20Bで平均5.52倍、5.46倍、3.91倍の実時間高速化を達成した。","source":"https://arxiv.org/html/2606.02091v2","sources":["https://arxiv.org/abs/2606.02091","https://arxiv.org/html/2606.02091v2","https://github.com/Tencent/AngelSlim"],"authors":["Jiebin Zhang","Zhenghan Yu","Song Liu","Eugene J. Yu","Zheng Li","Dawei Zhu","Jiangshan Duo","Weimin Xiong","Yifan Song","Guanghua Yu","Jianchen Zhu","Sujian Li"],"published":"2026-06-01","publication":"arXiv preprint","publication_type":"preprint","publication_status":"preprint","primary_category":"cs.CL","cross_list_categories":[],"topics":["投機的復号","ブロック拡散","ドラフトモデル拡張","標的特徴融合"],"implementation":"公式コードはTencent/AngelSlimで公開。","code":"https://github.com/Tencent/AngelSlim","last_checked":"2026-09-20","hardware_evaluation":"学習は8×NVIDIA H20 GPU、推論評価は単一NVIDIA H20 GPU。Qwen3-4B/8Bは7層ドラフト、ブロック16、標的特徴9層。GPT-OSS-20Bは標的特徴7層。","quality_effect":"投機的復号の標的分布を変更せず、受理された接頭辞だけを標的モデルが確定するため出力品質を保持する前提の高速化。ドラフト能力向上は主に受理長と速度へ反映される。","references":[],"references_checked_at":"2026-09-20","references_source":"arXiv v2 full-text references inspected; individual reference transport omitted","references_total":0},"reservation":{"claim_id":"claim-b269ed373464c47a4c4f738e","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}}
