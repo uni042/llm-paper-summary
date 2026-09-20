@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-20 20:38:44 JST**
+> 自動生成: **2026-09-20 20:39:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **39** | **2** | **1** | **1** | **1** | **0** | — |
+| Research | **39** | **2** | **1** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **5** |
-| 合計 | **39** | **3** | **2** | **1** | **1** | **0** | **5** |
+| 合計 | **39** | **3** | **2** | **0** | **1** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -127,13 +127,14 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 20:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `arXiv:2603.11535` — Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing
   - job: `.survey/work-queue/jobs/job-research-b0f3ab31cdfd9a01.json`
   - result: `.survey/work-queue/results/research/attempt-3abd5ab214b6f2e829c399c9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3abd5ab214b6f2e829c399c9.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md`
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-3bfbd9f2b2c22f927f203849.json` (job `job-research-92c83b7c2ec8a78f`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-3bfbd9f2b2c22f927f203849.json` (job `job-research-92c83b7c2ec8a78f`, failure_class `content_validation`)
+  - result: `.survey/work-queue/results/research/attempt-3bfbd9f2b2c22f927f203849.json` (`ok=false`)
 
 #### Audit (:30)
 
