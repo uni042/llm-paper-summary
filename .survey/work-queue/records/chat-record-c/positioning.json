@@ -2,18 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-08537f65a567d792ab20135d",
-  "job_id": "job-research-9119a9e35c42f3f7",
-  "data": {
-    "limitations": "評価は単一RTX 4090・single concurrencyが中心で、multi-GPU scalabilityは分析のみで実測していない。CPUはdual EPYC機を使いながらactive coreを10以下へ制限してconsumer CPUを模擬しており、一般的desktopのmemory bandwidth/NUMA条件と完全には一致しない。PCIe 4.0 x16が主要bottleneckであり、PCIe 5.0やNVLinkでは最適prefetch数とCPU/GPU分業点が変わり得る。SMOE-Flexは追加tuningが必要。",
-    "implementation_status": "KTransformersを基盤とする実装が公開され、GPU expert operator、dequantization CUDA kernel、C++ prefetch/cache管理を含む。論文Artifact DescriptionはFigshare DOI 10.6084/m9.figshare.31353823とGitHub rzhang772/SMOEを公式artifactとして挙げ、Docker setupと再現手順も記載する。",
-    "relation_to_existing": "KTransformersはrouted expertをCPUへ置く低concurrency基盤、HybriMoE/Fiddler/ProMoE/MoE-InfinityはcacheやprefetchでCPU/GPU分業を改善する。SMOEはこの系統で、671B級では静的hot cacheのhit率が低い点に対しprefillとdecodeを分離したruntime schedulingを導入する。",
-    "differences": "prefillではoffline hotnessではなく現在promptのgating負荷とhardware profileからGPUへ送るexpert数を層ごとに決める。decodeではcross-layer predictionだけでなくtoken単位で次tokenのexpertを早期予測し、非MoE層を含む長い計算窓へPCIe転送を重ねる。さらにLFU系cache更新を組み合わせるため、単なるexpert cache方式より動的である。",
-    "research_positioning": "単一consumer GPUで超巨大MoEを動かすexpert offloading研究のうち、CPU/GPU hybrid execution、dynamic expert cache、prefetch schedulingを統合するsystem研究に位置する。SSD/NVMe expert storageそのものは主対象ではなく、CPU DRAMからGPU HBMへのPCIe転送を隠す設計が中心である。",
-    "practical_takeaway": "12〜24GB級GPUでMoEをoffloadする場合、prefillとdecodeを同じexpert配置規則で処理せず、prefillでは実負荷の高いexpertだけを転送してGPU計算し、decodeでは早期予測と小容量cacheを頻繁に更新する方が合理的である。特にPCIeが遅い環境ではprefetch精度だけでなく利用可能なoverlap窓を長く取ることが重要。"
-  },
+  "attempt_id": "attempt-d842e88abd878f5c2ee2bcca",
+  "job_id": "job-research-289804590f1b694f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-08537f65a567d792ab20135d",
+    "claim_id": "claim-d842e88abd878f5c2ee2bcca",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
