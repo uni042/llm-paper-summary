@@ -2,47 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e5bacddc3c01f6fe7e094fd1",
-  "job_id": "job-research-bb3c83e7ecc75edd",
-  "data": {
-    "hardware": "NVIDIA Jetson Orin Nano Developer Kit: 6-core Arm Cortex-A78AE CPU、Ampere GPU 1024 CUDA cores/32 Tensor Cores、8 GB LPDDR5共有メモリ。オフライン解析はNVIDIA L40S、batch size 16。",
-    "software": "比較対象としてCoreInfer、bitsandbytes 4-bit量子化、ディスクオフロードを使用。SelectInferはFFNニューロンの重みスライス選択ロードとプリフィル由来の動的選択を実装。",
-    "methodology": "Llama3.2-3B、Llama3.2-1B、Qwen2.5-3BをQA・翻訳・要約で評価する。QAはSQuAD、TriviaQA、MLQA、PIQA、翻訳はWMT16 de-en/en-deとWMT14 fr-en/en-fr、要約はCNN/DailyMail、Samsum、XSumを用いる。主設定は最初の4層程度と末尾2層を避け、静的30%、動的10%、計算40%、二次40%、総ロード70%。精度、ピークメモリ、デコードtokens/sを測定し、ランダムロード、選択ロードのみ、CoreInfer、70% dense、4-bit量子化、ディスクオフロードと比較する。",
-    "scope": "3B以下のdense LLMを共有メモリ型の端末GPUへ載せる条件。オフライン解析コストと端末上のメモリ・精度・デコード速度の三軸を評価。",
-    "models": [
-      "Llama3.2-3B",
-      "Llama3.2-1B",
-      "Qwen2.5-3B"
-    ],
-    "datasets_benchmarks": [
-      "SQuAD",
-      "TriviaQA",
-      "MLQA",
-      "PIQA",
-      "WMT16",
-      "WMT14",
-      "CNN/DailyMail",
-      "Samsum",
-      "XSum"
-    ],
-    "baselines": [
-      "CoreInfer",
-      "CoreInfer + Selective Loading",
-      "CoreInfer + Random Loading",
-      "70% Dense",
-      "bitsandbytes 4-bit quantization",
-      "disk offloading"
-    ],
-    "metrics": [
-      "Exact Match",
-      "BLEU",
-      "ROUGE",
-      "peak memory GB",
-      "decoding tokens/s"
-    ]
-  },
+  "attempt_id": "attempt-517a28e2ede7107c32fbf37e",
+  "job_id": "job-research-50400bb966b2b5a1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e5bacddc3c01f6fe7e094fd1",
+    "claim_id": "claim-517a28e2ede7107c32fbf37e",
     "worker_id": "scheduled-chat-llm-paper-worker-30",
     "worker_kind": "scheduled_chat"
   }

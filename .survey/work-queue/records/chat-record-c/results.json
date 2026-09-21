@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-e5bacddc3c01f6fe7e094fd1",
-  "job_id": "job-research-bb3c83e7ecc75edd",
-  "data": {
-    "overview": "70%のFFNニューロンだけをロードするSelectInferは、Llama3.2-3Bのピークメモリを6.88 GBから5.97 GBへ13.2%削減し、Qwen2.5-3Bも6.48 GBから5.37 GBへ削減した。40%計算のLlama3.2-3Bでは9.85 tokens/sで、4-bit量子化6.41 tokens/sの約1.5倍、ディスクオフロード0.75 tokens/sの13倍超。精度は多くのQA・翻訳・要約でCoreInferを上回るが、Qwen2.5-3BのSQuADv2ではSelectInfer 24.32に対しCoreInfer 32.58で劣る。",
-    "key_results": [
-      {
-        "metric": "peak memory",
-        "value": "Llama3.2-3B 5.97 GB、Llama3.2-1B 2.60 GB、Qwen2.5-3B 5.37 GB",
-        "baseline": "original 6.88/2.86/6.48 GB; CoreInfer 7.44/2.86/7.52 GB",
-        "condition": "70% loaded neurons",
-        "interpretation": "3Bモデルで約0.9〜1.1 GBを削減し、全重み常駐が難しい端末条件へ収める。"
-      },
-      {
-        "metric": "decoding throughput",
-        "value": "Llama3.2-3B 9.85 tokens/s",
-        "baseline": "4-bit quantization 6.41 tokens/s; disk offloading 0.75 tokens/s",
-        "condition": "70% loaded, 40% computed on Jetson Orin Nano",
-        "interpretation": "ロード削減に加えて実計算ニューロンも40%へ絞ることで量子化より約1.5倍、ディスク退避より13倍超。"
-      },
-      {
-        "metric": "Llama3.2-3B WMT16 translation BLEU",
-        "value": "25.68 de-en、25.96 ro-en",
-        "baseline": "CoreInfer 4.97/4.98; CoreInfer + selective loading 1.70/1.65",
-        "condition": "SelectInfer main configuration",
-        "interpretation": "オフラインで選ぶ静的集合と入力適応の動的集合を組み合わせることが翻訳精度維持に寄与。"
-      },
-      {
-        "metric": "Qwen2.5-3B SQuADv2 Exact Match",
-        "value": "24.32",
-        "baseline": "CoreInfer 32.58; CoreInfer + selective loading 35.69",
-        "condition": "SelectInfer main configuration",
-        "interpretation": "全タスクで優位ではなく、モデル・タスク依存の精度損失が残る。"
-      },
-      {
-        "metric": "loading ratio trade-off",
-        "value": "40% loadで9.75 tokens/s、80% loadで8.65 tokens/s; SQuADv2 14.87から24.70へ上昇",
-        "baseline": "same method across load ratios",
-        "condition": "Llama3.2-3B",
-        "interpretation": "ロード量を減らすほど速度は上がるが精度が低下し、γが明示的なメモリ・速度・精度調整ノブになる。"
-      }
-    ],
-    "negative_results": "4-bit量子化はSelectInferより大幅に小さいメモリを実現し、Llama3.2-3Bでは3.03 GB対5.97 GB。Qwen2.5-3BのSQuADv2ではCoreInferに精度で負ける。パラメータ割合はハードウェアとタスクに依存し、論文自身も基底・二次・計算割合を経験的に検証する必要があるとしている。",
-    "interpretation": "FFN重みの一部をそもそも常駐させないためメモリを削減でき、さらに常駐集合の一部だけを入力適応で演算するため速度も上げられる。量子化ほどメモリは縮まない代わりに全精度重みと高い演算速度を保ち、二つの割合を独立に調整できる。",
-    "quality_impact": "多くの条件でCoreInfer系より高い精度を保ちつつメモリと速度を改善するが、タスク依存の劣化があり、量子化との比較でも精度・速度・容量の優劣は一様ではない。"
-  },
+  "attempt_id": "attempt-517a28e2ede7107c32fbf37e",
+  "job_id": "job-research-50400bb966b2b5a1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e5bacddc3c01f6fe7e094fd1",
+    "claim_id": "claim-517a28e2ede7107c32fbf37e",
     "worker_id": "scheduled-chat-llm-paper-worker-30",
     "worker_kind": "scheduled_chat"
   }
