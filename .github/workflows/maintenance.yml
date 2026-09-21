@@ -112,6 +112,7 @@ jobs:
             --overview-quality /tmp/overview-result-quality-audit.json \
             --index-drift-file /tmp/derived-index-drift.txt \
             --repair-snapshot \
+            --fail-on-error \
             --report .survey/reports/maintenance-health-latest.json
           rc=$?
           echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
