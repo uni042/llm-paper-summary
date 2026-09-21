@@ -5,10 +5,10 @@
   "attempt_id": "attempt-d67054767790b8a100027a66",
   "job_id": "job-research-b47f649340a3fc18",
   "data": {
-    "limitations": "評価はQwen3-NextのGDNとKimi-LinearのKDAというhybrid architectureに限定され、pure linear-attention/SSMへの転移は未確認。全serving experimentがTP8で、より大きいTP degreeの負荷均衡・all-to-all costは未検証。GDNはdecayがhead粒度のためKDAより容量gainが小さく、architecture依存性が強い。DASC-WRはreplay window以前のlocal-state historyを復元しない近似であり、aggressive compressionでは追加compute/communicationが利得を相殺し得る。",
-    "differences": "PagedAttention/RadixAttentionはtoken-indexed KVのallocation/reuseを管理するが、DASCはfull-attention KVを変更せずhybrid layerのpersistent recurrent boundary state内部を圧縮する。Marconiはhybrid prefix entryのadmission/evictionをcompute-memory utilityで改善するのに対し、DASCは各entryのstate bytesを削減するため補完関係にある。ReplaySSMは最近のSSM inputを保持してstateをon-demand再構成するが、DASCは長寿命unitを直接checkpointし短寿命unitだけ省略する。KVQuant/KIVI等の量子化はvalueあたりbitsを減らす一方、DASCは保持unit数を減らし、実際にINT8と合成して8.11× capacityを示す。",
-    "implementation_status": "著者らはSGLangへDASCを実装し、ragged state pool、TP-balanced STORE/LOAD、DASC-NR/WRをHopper TP8で評価している。arXiv v1は2026-08-31提出。本文中に独立した公開実装repository URLは記載されていないため、公開コードの存在は確認済みとは扱わない。",
-    "research_positioning": "Hybrid linear-attention servingでrecurrent state checkpointをKV cacheの付属物ではなく独立した階層メモリ資源として扱う研究。特にweight-onlyの静的寿命推定をcache representationへ接続し、logical selectionだけでなくragged physical layoutとTP rank bottleneckまで最適化した点がシステム研究として重要である。entry-level caching policy、state quantization、hierarchical KV cacheと直交して組み合わせられる。"
+    "limitations": "評価対象はQwen3-NextのGDNとKimi-LinearのKDAというハイブリッド構成に限られ、純粋な線形注意や状態空間モデルへの転移は未確認である。配信実験はすべて8並列のテンソル並列構成であり、より大きな並列度での負荷均衡や全対全通信費用は未検証である。GDNは減衰がヘッド粒度なのでKDAより容量利得が小さく、構成依存性が強い。窓再実行方式は再実行窓より前の局所状態履歴を復元しない近似であり、強い圧縮では追加計算と通信が利得を相殺し得る。",
+    "differences": "PagedAttentionやRadixAttentionはトークン索引型の鍵値キャッシュの割当と再利用を管理するが、DASCは全注意層の鍵値キャッシュを変更せず、ハイブリッド層の永続的な再帰境界状態の内部を圧縮する。Marconiはハイブリッド接頭辞項目の受入と追い出しを計算・メモリ効用で改善するのに対し、DASCは各項目の状態バイト数を削減するため補完関係にある。ReplaySSMは最近の状態空間モデル入力を保持して状態を必要時に再構成するが、DASCは長寿命単位を直接保存し短寿命単位だけを省略する。KVQuantやKIVIなどの量子化は値当たりのビット数を減らす一方、DASCは保持単位数を減らし、実際に8ビット量子化との併用で8.11倍の容量を示す。",
+    "implementation_status": "著者らはSGLangへDASCを実装し、可変長状態プール、テンソル並列で均衡化した保存・読込、再実行なし方式と窓再実行方式をHopper世代GPUの8並列構成で評価している。arXiv初版は2026年8月31日提出。本文中に独立した公開実装リポジトリのURLは記載されていないため、公開コードの存在は確認済みとは扱わない。",
+    "research_positioning": "ハイブリッド線形注意の配信において、再帰状態の保存点を鍵値キャッシュの付属物ではなく独立した階層メモリ資源として扱う研究である。特に重みだけから静的に寿命を推定して保存表現へ接続し、論理的な選択だけでなく可変長の物理配置とテンソル並列ランクのボトルネックまで最適化した点がシステム研究として重要である。項目単位のキャッシュ方針、状態量子化、階層型鍵値キャッシュと直交して組み合わせられる。"
   },
   "reservation": {
     "claim_id": "claim-d67054767790b8a100027a66",
