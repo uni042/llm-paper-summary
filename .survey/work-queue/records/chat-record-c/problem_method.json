@@ -1,1 +1,40 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-6b50588e5e9cc57491bfd0ef","job_id":"job-research-ff7167d92a15ba4e","data":{"problem":"三値LLMは{-1,0,+1}の3記号なので理論上log2(3)=1.585bit/weightだが、実装では5 trits/byteと128重みブロックの端数により1.625bit/weightになる。さらに固定長符号は3記号を等確率として扱い、実モデルでゼロが29.7〜51.5%を占める偏りを利用しない。単に疎行列化すると不規則アクセスと索引オーバーヘッドが生じ、batch-1 decodeの帯域律速GEMVでは不利になり得る。","novelty":"BITCOSは各重みに存在bitを1つ、非ゼロ重みにだけ符号bitを1つ保持し、ゼロ率zで2-z bit/weightを実現する。z>0.375で1.625bit five-tritより小さく、29モデル中26モデルが該当する。さらにこの可変長符号列をAVX-512/AVX2/Xe2で規則的に復号できる専用命令列を設計し、単なる圧縮率ではなく実推論高速化まで示す。","method_overview":"存在bitmapは重み位置を密に保持し、符号streamは非ゼロの順序だけを圧縮格納する。AVX-512では32行の存在maskを読み、pdepで圧縮符号を存在位置へ散布し、mask moveで±fp16 scaleを選ぶ。AVX2では存在/符号predicateをbyte maskへ展開しw=p-2nとしてint8三値を再構成しVNNI dot productへ渡す。Xe2はpdepがないため、4行の存在nibbleと次の4符号bitを8bit keyにした256-entry/2KB SLM LUTで4個のfp16三値を復元しDPASへ供給する。","components":[{"name":"BITCOS layout","description":"1bit/weightの存在bitmapと1bit/nonzeroのcompacted sign vector。記号格納量は2-z bit/weight。"},{"name":"AVX-512 decoder","description":"pdepと2つのmasked moveを核に32重みを復元しfp16 FMAへ接続。"},{"name":"AVX2/VNNI decoder","description":"mask register非対応CPU向けに存在・符号をbyte predicate化しint8三値を再構成してVNNI contractionを使う。"},{"name":"Xe2 SLM lookup decoder","description":"4行単位のpresence/signを256-entry LUTへ写像し、SIMD16で64重み/lookupをVNNI2順に供給する。"},{"name":"two-term roofline","description":"メモリ帯域項とL1-resident復号命令コストを比較し、圧縮が速度へ変換される条件を予測する。"}],"system_design":"既存三値モデルの量子化値自体は変更せず、格納形式とGEMV復号だけを置換するbit-exactな推論最適化。vLLM CPU/XPU backendへ統合してbatch-1 decodeで評価する。"},"reservation":{"claim_id":"claim-6b50588e5e9cc57491bfd0ef","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-72e8587e5880b220881d7af5",
+  "job_id": "job-research-ff7167d92a15ba4e",
+  "data": {
+    "problem": "三値LLMは{-1,0,+1}の3記号なので理論上log2(3)=1.585bit/weightだが、実装では5 trits/byteと128重みブロックの端数により1.625bit/weightになる。さらに固定長符号は3記号を等確率として扱い、実モデルでゼロが29.7〜51.5%を占める偏りを利用しない。単に疎行列化すると不規則アクセスと索引オーバーヘッドが生じ、batch-1 decodeの帯域律速GEMVでは不利になり得る。",
+    "novelty": "BITCOSは各重みに存在bitを1つ、非ゼロ重みにだけ符号bitを1つ保持し、ゼロ率zで2-z bit/weightを実現する。z>0.375で1.625bit five-tritより小さく、29モデル中26モデルが該当する。さらにこの可変長符号列をAVX-512/AVX2/Xe2で規則的に復号できる専用命令列を設計し、単なる圧縮率ではなく実推論高速化まで示す。",
+    "method_overview": "存在bitmapは重み位置を密に保持し、符号streamは非ゼロの順序だけを圧縮格納する。AVX-512では32行の存在maskを読み、pdepで圧縮符号を存在位置へ散布し、mask moveで±fp16 scaleを選ぶ。AVX2では存在/符号predicateをbyte maskへ展開しw=p-2nとしてint8三値を再構成しVNNI dot productへ渡す。Xe2はpdepがないため、4行の存在nibbleと次の4符号bitを8bit keyにした256-entry/2KB SLM LUTで4個のfp16三値を復元しDPASへ供給する。",
+    "components": [
+      {
+        "name": "BITCOS layout",
+        "description": "1bit/weightの存在bitmapと1bit/nonzeroのcompacted sign vector。記号格納量は2-z bit/weight。"
+      },
+      {
+        "name": "AVX-512 decoder",
+        "description": "pdepと2つのmasked moveを核に32重みを復元しfp16 FMAへ接続。"
+      },
+      {
+        "name": "AVX2/VNNI decoder",
+        "description": "mask register非対応CPU向けに存在・符号をbyte predicate化しint8三値を再構成してVNNI contractionを使う。"
+      },
+      {
+        "name": "Xe2 SLM lookup decoder",
+        "description": "4行単位のpresence/signを256-entry LUTへ写像し、SIMD16で64重み/lookupをVNNI2順に供給する。"
+      },
+      {
+        "name": "two-term roofline",
+        "description": "メモリ帯域項とL1-resident復号命令コストを比較し、圧縮が速度へ変換される条件を予測する。"
+      }
+    ],
+    "system_design": "既存三値モデルの量子化値自体は変更せず、格納形式とGEMV復号だけを置換するbit-exactな推論最適化。vLLM CPU/XPU backendへ統合してbatch-1 decodeで評価する。"
+  },
+  "reservation": {
+    "claim_id": "claim-72e8587e5880b220881d7af5",
+    "worker_id": "scheduled-chat-llm-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

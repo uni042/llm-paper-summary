@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6b50588e5e9cc57491bfd0ef","job_id":"job-research-ff7167d92a15ba4e","data":{"limitations":"最適化カーネルと実測はIntel x86（AVX-512/AVX2-VNNI）およびIntel Xe2に限定され、NVIDIA/AMD/ARM等への一般化は未実証。可変長sign streamの復号命令コストが高い環境では圧縮しても遅くなり、Lunar Lake CPUで実際に2-bit baselineへ敗れる。headlineの2-z bitは記号部分で、group scale overheadは別途必要。","differences":"five-trit/2-bitは固定長で記号分布を使わない。CSC型疎形式は非ゼロ索引と不規則gatherを使い、batch-1 decodeで不利になりやすい。Sparse-BitNetやSherryは学習時に構造化sparsityを作るため再学習と精度影響があるが、BITCOSは既存のunstructured zerosをbit-exactに格納し直すだけ。","implementation_status":"AVX-512、AVX2/VNNI、Xe2向け専用GEMVを実装しvLLM CPU/XPU backendへ統合。論文中にPrism ML llama.cppとの比較もあるが、BITCOS自体の公開コードURLは本文から確認できなかった。","research_positioning":"BITCOSは三値LLMの『量子化方法』ではなく『格納・復号方法』の研究である。BitNet、Bonsai、CAT-Q、TriLM等が作った三値値をそのまま保持し、実モデルでゼロが多いという統計だけを使って可変率符号化するため、学習品質と推論表現を分離できる。\n\n特にSSD/CPUオフロード系との関係では、重み転送量そのものを1.5bit前後まで下げられるため、ストレージ・PCIe・DRAM帯域が律速する階層メモリ推論の下位レイヤとして補完的である。一方、復号側が命令律速になると帯域削減を速度へ変換できないため、単純な圧縮率ではなくデコードコストを含むroofline評価が必要という示唆が重要である。\n\n既存の疎三値推論が索引型CSCやN:M構造化sparsityを使うのに対し、BITCOSはdense positional bitmapで順次アクセスを維持し、非ゼロ符号だけを圧縮する。これにより29.7〜51.5%程度の中程度な自然sparsityでもbatch-1 GEMVを高速化できる。"},"reservation":{"claim_id":"claim-6b50588e5e9cc57491bfd0ef","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-72e8587e5880b220881d7af5",
+  "job_id": "job-research-ff7167d92a15ba4e",
+  "data": {
+    "limitations": "最適化カーネルと実測はIntel x86（AVX-512/AVX2-VNNI）およびIntel Xe2に限定され、NVIDIA/AMD/ARM等への一般化は未実証。可変長sign streamの復号命令コストが高い環境では圧縮しても遅くなり、Lunar Lake CPUで実際に2-bit baselineへ敗れる。headlineの2-z bitは記号部分で、group scale overheadは別途必要。",
+    "differences": "five-trit/2-bitは固定長で記号分布を使わない。CSC型疎形式は非ゼロ索引と不規則gatherを使い、batch-1 decodeで不利になりやすい。Sparse-BitNetやSherryは学習時に構造化sparsityを作るため再学習と精度影響があるが、BITCOSは既存のunstructured zerosをbit-exactに格納し直すだけ。",
+    "implementation_status": "AVX-512、AVX2/VNNI、Xe2向け専用GEMVを実装しvLLM CPU/XPU backendへ統合。論文中にPrism ML llama.cppとの比較もあるが、BITCOS自体の公開コードURLは本文から確認できなかった。",
+    "research_positioning": "BITCOSは三値LLMの『量子化方法』ではなく『格納・復号方法』の研究である。BitNet、Bonsai、CAT-Q、TriLM等が作った三値値をそのまま保持し、実モデルでゼロが多いという統計だけを使って可変率符号化するため、学習品質と推論表現を分離できる。\n\n特にSSD/CPUオフロード系との関係では、重み転送量そのものを1.5bit前後まで下げられるため、ストレージ・PCIe・DRAM帯域が律速する階層メモリ推論の下位レイヤとして補完的である。一方、復号側が命令律速になると帯域削減を速度へ変換できないため、単純な圧縮率ではなくデコードコストを含むroofline評価が必要という示唆が重要である。\n\n既存の疎三値推論が索引型CSCやN:M構造化sparsityを使うのに対し、BITCOSはdense positional bitmapで順次アクセスを維持し、非ゼロ符号だけを圧縮する。これにより29.7〜51.5%程度の中程度な自然sparsityでもbatch-1 GEMVを高速化できる。"
+  },
+  "reservation": {
+    "claim_id": "claim-72e8587e5880b220881d7af5",
+    "worker_id": "scheduled-chat-llm-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
