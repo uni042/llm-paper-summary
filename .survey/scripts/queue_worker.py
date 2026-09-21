@@ -921,7 +921,10 @@ def existing_represented_resolver() -> dict[str, Any]:
 
 def candidate_priority_value(candidate: dict) -> int:
     """Return canonical 0-100 Candidate priority."""
-    return max(0, min(100, int(candidate.get("priority") or 50)))
+    raw = candidate.get("priority")
+    if raw is None:
+        raw = 50
+    return max(0, min(100, int(raw)))
 
 
 def make_research_job(c: dict, parent: str):
