@@ -59,6 +59,28 @@ class AuditMetadataRoutingTest(unittest.TestCase):
         self.assertIn("five-slot structured research record", created["completion"])
         self.assertNotIn("complete Markdown", created["completion"])
 
+    def test_research_priority_is_clamped_and_breakdown_is_preserved(self) -> None:
+        candidate = {
+            "canonical_id": "arXiv:2601.00003",
+            "title": "Priority paper",
+            "source_url": "https://arxiv.org/abs/2601.00003",
+            "priority": 140,
+            "priority_breakdown": {
+                "base": 55,
+                "lineage": 20,
+                "recency": 15,
+                "venue": 10,
+                "total": 100,
+            },
+            "reason": "priority regression",
+        }
+        with patch.object(queue_worker, "add_job", return_value=True) as add_job:
+            self.assertTrue(queue_worker.make_research_job(candidate, "job-discovery-parent"))
+        created = add_job.call_args.args[0]
+        self.assertEqual(created["priority"], 100)
+        self.assertEqual(created["priority_breakdown"]["lineage"], 20)
+        self.assertEqual(created["priority_breakdown"]["total"], 100)
+
     def test_short_completed_artifact_is_rejected_before_write(self) -> None:
         original_root = queue_worker.ROOT
         try:
