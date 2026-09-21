@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-7504b8d147f36a8ee02bc695",
-  "job_id": "job-research-c27f3a6ec993f9ab",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7504b8d147f36a8ee02bc695",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-7504b8d147f36a8ee02bc695","job_id":"job-research-c27f3a6ec993f9ab","data":{"hardware":"A100 platformはNVLink接続NVIDIA A100 80GB SXM4×4（各312 FP16/BF16 TFLOP/s、2.04 TB/s HBM2e）。GB10 platformはNVIDIA DGX Spark / GB10 Grace Blackwell Superchip（256 FP16/BF16 TFLOP/s、128GB coherent LPDDR5x、273 GB/s）。Qwen3.5-4B/9B/27Bは各platformでTP1、Qwen3.5-122B-A10BはA100 4GPU TP4で評価する。","software":"SGLangを基盤とし、全tree方式で各Qwen3.5 modelのnative MTP head、同一model weights、sampling設定、proposal-token budgetを使用する。Boleは約6.2 kLoCのPython/Triton integrationでparallel verifier、GDN backend、EAGLE loop、CUDA Graph runners、linear-state poolを接続する。baselineはSGLang-AR、SGLang-Tree、AdaServeで、AdaServeはhybrid model未対応の公開実装をSGLangへport/optimizeして比較する。","methodology":"offlineはactive batch sizeを固定し、accepted output tokens/sのdecode throughputを測る。MBPPでは4 models×2 platforms（122BはA100のみ）×batch sizesを含む28 configurationsを評価し、さらにQwen3.5-27B batch 4でGSM8K、ShareGPT、CNN/DailyMailへ一般化を確認する。onlineはNVIDIA Open-SWE-TracesのOpenHands coding-agent sessionsをPoisson arrivalでreplayし、同一arrival traceに対するTTFT（queueing+prefill）とTPOTをmean/p50/p99で比較する。kernel microbenchmarkはQwen3.5-9BでSGLang-Tree serial delta-rule verifierと同じproposal/drafter outputを使いnsys/ncuでlatency、occupancy、L1/shared throughputを測る。budget sensitivityと三要素のcumulative ablationも行う。tree方式はtop-k=4、maximum depth=8。","scope":"主評価はQwen3.5 familyのGated DeltaNet型hybrid attentionで、code/dialogue/math/summarizationおよびagent workloadを対象とする。A100と帯域特性の異なるGB10、単GPUから122B TP4までを含みsystem generalityは広い。一方、他のlinear-attention recurrence、別drafter、異なるGPU世代、training workloadは評価しておらず、Boleのclosed-form algebraが直接適用できるrecurrenceに範囲が限定される。"},"reservation":{"claim_id":"claim-7504b8d147f36a8ee02bc695","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
