@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 19:31:14 JST**
+> 自動生成: **2026-09-21 20:00:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **326** |
 | 未claim Research job | **324** |
 | 直近24hの検証済みResearch収録 | **34** |
-| 最終検証済みResearch収録 | **09-21 17:27:05 JST（2時間4分前）** |
+| 最終検証済みResearch収録 | **09-21 17:27:05 JST（2時間33分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **6** | **4** | **0** | **2** | **0** | — |
+| Research | **4** | **6** | **4** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **7** | **7** | **5** | **0** | **2** | **0** | **3** |
+| 合計 | **4** | **7** | **5** | **0** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -83,21 +83,6 @@
   - result: `.survey/work-queue/results/research/attempt-656236ce96424eaac8e4d26e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-656236ce96424eaac8e4d26e.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md`
-- **09-21 13:49:15 JST** [research] `arXiv:2608.15533` — DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding
-  - job: `.survey/work-queue/jobs/job-research-ba5c7828e1d46d9a.json`
-  - result: `.survey/work-queue/results/research/attempt-0efd061bb6cafbfb3405b15a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0efd061bb6cafbfb3405b15a.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md`
-- **09-21 13:40:58 JST** [research] `arXiv:2606.17107` — Models Take Notes at Prefill: KV Cache Can Be Editable and Composable
-  - job: `.survey/work-queue/jobs/job-research-a748d42a4b0082c7.json`
-  - result: `.survey/work-queue/results/research/attempt-f13484682295d4ae46534672.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f13484682295d4ae46534672.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md`
-- **09-21 13:36:27 JST** [research] `arXiv:2608.04974` — AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks
-  - job: `.survey/work-queue/jobs/job-research-68365ee603a68033.json`
-  - result: `.survey/work-queue/results/research/attempt-882a986d727aae3614a5b429.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-882a986d727aae3614a5b429.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.04974-asymspec-efficient-cloud-edge-speculative-decoding-over-asymmetric-networks.md`
 
 ### Audit
 
