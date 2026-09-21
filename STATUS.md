@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 15:47:48 JST**
+> 自動生成: **2026-09-21 15:48:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **6** | **4** | **0** | **2** | **1** | — |
+| Research | **14** | **6** | **4** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **14** | **7** | **5** | **0** | **2** | **1** | **3** |
+| 合計 | **14** | **7** | **5** | **0** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -173,7 +173,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.24938` — ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration / worker `scheduled-chat-llm-paper-30`
   - claim: **09-21 15:47:26 JST** / heartbeat: **—** / lease expiry: **09-21 17:17:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-f837d96601e69237.json`
@@ -227,8 +227,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **352** |
-| └ Research | **166** |
+| 成功result未照合のimmutable submission | **353** |
+| └ Research | **167** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
