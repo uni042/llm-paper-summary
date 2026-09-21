@@ -136,6 +136,36 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertEqual(result["decision"], "STOP_RUN")
         self.assertEqual(result["minimum_rounds_remaining"], 0)
 
+    def test_research_runwide_write_failure_checkpoints_without_next_paper(self):
+        result = mod.decide(make_args(
+            candidate_inventory=50,
+            work_mode="research",
+            write_failed=True,
+            probe="failure",
+            github_write=False,
+            library_writable=True,
+            seconds_to_run_deadline=2500,
+        ))
+        self.assertEqual(result["write_failure_scope"], "run_wide_github_write_unavailable")
+        self.assertIn("checkpoint_current_assignment_to_library", result["write_action"])
+        self.assertIn("do_not_start_next_paper", result["write_action"])
+        self.assertIn("keep_scheduled_task_enabled", result["write_action"])
+
+    def test_research_mode_does_not_treat_discovery_as_fallback_independent_work(self):
+        result = mod.decide(make_args(
+            candidate_inventory=50,
+            work_mode="research",
+            global_dependency=True,
+            independent_work=False,
+            spillover_work=False,
+            can_discover=True,
+            claim_state_checked=True,
+            submission_state_checked=True,
+            seconds_to_run_deadline=2500,
+        ))
+        self.assertEqual(result["decision"], "STOP_RUN")
+        self.assertIn("all_remaining_work_blocked_after_fallback_consideration", result["stop_reasons"])
+
     def test_run_deadline_guard_overrides_mode_quota(self):
         for candidate_inventory in (49, 50):
             with self.subTest(candidate_inventory=candidate_inventory):
