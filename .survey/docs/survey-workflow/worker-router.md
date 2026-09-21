@@ -20,7 +20,7 @@
 
 ## 2. 共通ルーター
 
-毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じタスク・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新状態から `candidate_inventory` を取得し、次の1条件だけで今回の論文作業モードを決める。
+毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じ論文処理規約・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新状態から `candidate_inventory` を取得し、次の1条件だけで今回の論文作業モードを決める。
 
 - **`candidate_inventory >= 50` → 読解（Research / Audit）**
 - **`candidate_inventory < 50` → 探索（Discovery）**
@@ -56,6 +56,8 @@ handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Li
 - 完成MarkdownをScheduled Chatから直接送らない。
 - claim resultが返したbankを無視して別bankへ書かない。
 - 1本処理したことだけをrun終了理由にしない。
+
+**論文単位の処理は完全直列とする。** 1本の一次資料取得・全文読解・5スロット作成・検証・耐久保存が完了する前に、次の論文の一次資料取得や全文読解を開始しない。待ち時間に行ってよいのは、次候補の識別子・書誌・取得経路の確認など、現在のclaimやrecord bankと競合しない準備だけである。
 
 ### 3.1 実運用で確立した高スループット原則
 
@@ -113,7 +115,7 @@ target_unseen: 20
 - **関連性・重要性・得られそうな知見が微妙で、現時点ではResearchへ送る価値が弱い候補**は `.survey/scripts/reference_relevance_ledger.py mark-borderline` で微妙台帳へ保存する。微妙台帳も通常の `repository_references` 探索ではデフォルト除外し、同じ候補を毎回評価し直さない。
 - 微妙台帳は永久除外ではない。後で明示的に再検討する場合だけ `reference_pool.py --include-borderline` を使って再び候補へ含めてよい。通常runでは使わない。
 - 関連ありの候補は一次資料でtitle/abstract/書誌を補完してから、当該schema v3 precheck result / receiptを参照する通常のDiscovery submissionへ送る。canonical IDだけをtitle代わりにして提出しない。
-- この経路からResearch jobを直接生成しない。Candidate投入以降は4.2〜4.3の一本道へ合流する。
+- この経路からResearch jobを直接生成しない。Candidate投入以降は4.3〜4.4の一本道へ合流する。
 
 ### 4.1.2 系統限定の最新被引用探索（lineage-scoped forward-citation refresh）
 
@@ -125,7 +127,7 @@ target_unseen: 20
 2. **最新順を保証できる固定ソースを優先する。** OpenAlexでWork IDを解決できる場合は `/works?filter=cites:W...&sort=publication_date:desc` を固定 `source_url` とし、必要なら公開日範囲も付ける。Semantic Scholarを使う場合は対象論文の `/citations` エンドポイントを固定ソースにする。検索語だけの類似検索に置き換えない。
 3. **schema v3事前検査（precheck）へ渡す。** 原則 `target_unseen: 20`。同一固定ソースのページ送りは `collect_until_unseen()` に任せ、既収録・既候補・既却下・ページ間重複を自動除外する。引用件数が大きい種論文でも、ワーカーが先頭数件だけ手で抜かない。
 4. **新しいものから軽量評価する。** `allowed_records` を公開日降順で見て、対象系統への直接性を確認する。「種論文を引用している」だけでは採用理由にせず、既存系統をどの軸で更新するか（例: expert数の適応配分、expert pruning/merging、圧縮後回復、実測serving改善）をreasonに書く。
-5. **1 submissionは強い候補だけ0〜5件。** 5件を埋めるための弱い候補は入れない。候補化後は4.2〜4.3の通常経路へ合流し、Research jobを直接生成しない。
+5. **1 submissionは強い候補だけ0〜5件。** 5件を埋めるための弱い候補は入れない。候補化後は4.3〜4.4の通常経路へ合流し、Research jobを直接生成しない。
 6. **次の種論文へ進む条件を明確にする。** 1本の種論文から十分な強候補が得られたら、そのsubmissionを先に耐久保存する。続行時は同じ種論文を再度precheckしてidentity snapshotにより既候補を飛ばすか、別の種論文へ移る。複数種で同じ後続論文が出てもshared identityで重複除外させる。
 7. **探索効率を記録する。** `discovery_stats.search_windows` に種論文、引用方向 `forward`、取得件数、未収録件数、評価件数、採用件数を残す。後続runでは採用率の高かった種論文を優先し、0件が続く種論文を毎回先頭から調べ直さない。
 
@@ -135,7 +137,7 @@ target_unseen: 20
 
 探索モードでは、hard stopまたはhandoff guardがない限り、**最低4つの materially distinct なDiscovery round**を耐久保存する。4 roundは停止上限ではない。1 round完了、0件、重複のみ、単一provider障害、単一探索軸の飽和は終了理由にしない。4 round到達後も有望な次軸がある場合は継続する。
 
-### 4.2 Candidate投入
+### 4.3 Candidate投入
 
 Discoveryは軽量評価だけを行う。title、abstract、書誌、一次資料の存在、テーマ適合性、新規性の見込みを確認し、全文精読はResearchへ送る。
 
@@ -151,7 +153,7 @@ Discoveryは軽量評価だけを行う。title、abstract、書誌、一次資�
 
 Discoveryのmulti-round submissionは、どちらのwork mixから探索を選んだ場合でも自己記述型（self-describing）を使い、存在しないDiscovery `job_id` を合成しない。candidate投入前に最新HEAD / identity / queueを再確認する。
 
-### 4.3 Discovery submissionからResearchへの一本道
+### 4.4 Discovery submissionからResearchへの一本道
 
 Discovery後半は次の順序を正規経路とする。途中を手作業で代替してはならない。
 
