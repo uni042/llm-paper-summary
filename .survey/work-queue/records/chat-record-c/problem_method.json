@@ -1,1 +1,44 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-e87ba9a7ec1323fe83b1d78f","job_id":"job-research-9119a9e35c42f3f7","data":{"problem":"超巨大MoEは疎にexpertを活性化するため演算量は抑えられるが、全expert重みはGPU HBMへ収まらずCPU DRAM等へoffloadする必要がある。consumer GPUではPCIe帯域が狭く、expert転送待ちが推論を支配しやすい。\n\n既存GPU-centric方式はcache miss時の転送か近似による品質低下を抱え、CPU/GPU hybrid方式もexpert cache hit率と負荷均衡に依存する。特に400B超ではGPUへ置けるexpert比率が小さく、layer-wise/iteration-wise prefetchだけでは転送時間を十分隠せない。","novelty":"SMOEはprefillとdecodeの性質を分離し、同じoffload方針を全段階へ適用しない。prefillではgating結果から高負荷expertを動的にGPUへ割り当て、CPU実行時間とGPU計算+PCIe転送時間を比較してGPUへ送る個数を決める。\n\ndecodeでは現在tokenから次tokenで使うexpertを予測するtoken-wise prefetchを導入し、非MoE層を含む長い計算窓で転送を隠す。さらにGPU容量内のexpert cacheをLFU系evictionで更新し、超巨大モデルでもCPU/GPU負荷を均衡させる。","method_overview":"入力は量子化MoEモデル、prompt/token列、各MoE層のgating結果、GPU/CPU計算性能、PCIe帯域、利用可能HBMである。attention等の非MoE演算はGPUに置き、MoE routed expertだけをCPUとGPUへ分散する。prefillでは各層のtoken-to-expert割当からexpert負荷を得て、CPUで実行する時間とGPUへ転送して実行する時間をhardware profileで比較し、GPU実行すべき高負荷expert数Kを決定する。選ばれたexpertはping-pong bufferへ転送し、CPU側の低負荷expert計算とGPU計算・PCIe転送をpipeline化する。\n\ndecodeへ移るとprefill中のactivation frequencyで初期GPU cacheを作る。各tokenのattention出力が得られた時点で次tokenのexpertを予測し、残りのforward計算中に非同期prefetchを進める。cache miss expertはCPUで計算し、予測expertはFixed-NまたはAdaptive LFU evictionで既存cacheを置換する。各層の予測精度に応じてprefetch対象層を選ぶSMOE-Flexも評価し、最終的にprefill TTFT、decode TPS、cache hit率、CPU/GPU/PCIe利用率を出力する。","components":[{"name":"stage-aware CPU/GPU分業","description":"attentionとhead projectionなどの非MoE部分をGPUへ固定し、routed expert計算だけをCPU/GPU間で動的に分配する。入力はモデル演算グラフとgating結果で、expertごとの実行場所を決めることでKTransformersの全routed-expert CPU実行よりGPUを活用する。\n\nprefillは計算集約、decodeはmemory/transfer集約という段階差を明示的に利用する。同じcache/prefetch規則を両段階へ流用せず、prefillでは負荷量、decodeでは予測とcache hitを中心に最適化する点が全体設計の基礎になる。"},{"name":"prefillオンデマンドexpert配置","description":"各MoE層でgating後のtoken数から高負荷expertと低負荷expertを判定する。hardware profileから各expertのCPU/GPU計算時間とtop-K expertのPCIe転送時間を見積もり、GPU計算+転送がCPU計算より短くなるKを選択する。\n\n高負荷expertはGPUへ移し、低負荷expertはCPUでそのまま計算するため、固定hot/cold配置よりpromptごとの実負荷へ追従できる。promptが長いほど高負荷expertをGPUへ移す利益が大きくなり、prefill高速化が伸びる。"},{"name":"prefill pipelineとping-pong buffer","description":"GPUへ送るexpertのPCIe転送をCPU expert計算およびGPU expert計算と重ね、転送をcritical pathから隠すpipelineを構成する。次に必要なexpertを準備しながら現在expertを処理するため、単純なon-demand loadingの直列待ちを避ける。\n\nGPU側にはping-pong bufferを用いて転送先を交互に使い、大量expertを恒久常駐させずにpipelineを維持する。これにより24GB級HBMでも671B級モデルのprefillで動的GPU実行を成立させる。"},{"name":"token-wise expert prefetch","description":"decodeでは現在tokenのattention layer出力を得た直後に、次tokenで活性化しそうなexpertを各MoE層について予測する。layer-wise方式より早い時点から転送を開始でき、現在tokenの残りのMoE/非MoE計算時間全体をprefetch窓として利用する。\n\n予測expertは非同期transfer queueへ投入され、対応層へ到達する前にGPU cacheへ入る。論文では同じ転送量でもHybriMoEのcache待ち約1ms/token/layerに対しSMOEはほぼ0まで隠せると報告する。"},{"name":"expert cache管理","description":"prefill中に全expertのactivation frequencyを記録し、decode開始時に最頻expertでGPU cacheを初期化する。その後は既存slotをin-place置換し、新しいcache領域を都度確保しない。\n\nFixed-N evictionは予測top-Nの未常駐expertでN個の低頻度expertを置換し、Adaptive evictionは未常駐数だけ可変転送する。どちらもLFU系で、PCIe帯域・GPU能力に応じて更新量Nを調整できる。"},{"name":"layer選択型SMOE-Flex","description":"token-wise予測の精度は層ごとに異なるため、すべての層で同じ数をprefetchする代わりに、精度の低い層ではprefetchを止め、その時間を高精度層の追加expert転送へ回す。\n\nこれにより選択層では最大3 expertまで更新でき、cache hit率を上げる。全体TPSは通常SMOEと同程度で複雑なhyperparameter調整を要するため、論文は柔軟性とhit率改善の追加設計として位置づける。"}],"system_design":"KTransformersのoperator insertionを利用し、attention等はGPUに残したままMoE operatorをCPU/GPU hybrid実行へ置換する。GPU expert operatorとdequantization CUDA kernel、C++のprefetch/cache管理を追加する。\n\n単一requestのforward中にCPU expert計算、GPU expert計算、PCIe transferを重ね、prefillは動的配置pipeline、decodeはtoken-wise prefetch+cache更新へ切り替える構成である。"},"reservation":{"claim_id":"claim-e87ba9a7ec1323fe83b1d78f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-08537f65a567d792ab20135d",
+  "job_id": "job-research-9119a9e35c42f3f7",
+  "data": {
+    "problem": "超巨大MoEは疎にexpertを活性化するため演算量は抑えられるが、全expert重みはGPU HBMへ収まらずCPU DRAM等へoffloadする必要がある。consumer GPUではPCIe帯域が狭く、expert転送待ちが推論を支配しやすい。\n\n既存GPU-centric方式はcache miss時の転送か近似による品質低下を抱え、CPU/GPU hybrid方式もexpert cache hit率と負荷均衡に依存する。特に400B超ではGPUへ置けるexpert比率が小さく、layer-wise/iteration-wise prefetchだけでは転送時間を十分隠せない。",
+    "novelty": "SMOEはprefillとdecodeの性質を分離し、同じoffload方針を全段階へ適用しない。prefillではgating結果から高負荷expertを動的にGPUへ割り当て、CPU実行時間とGPU計算+PCIe転送時間を比較してGPUへ送る個数を決める。\n\ndecodeでは現在tokenから次tokenで使うexpertを予測するtoken-wise prefetchを導入し、非MoE層を含む長い計算窓で転送を隠す。さらにGPU容量内のexpert cacheをLFU系evictionで更新し、超巨大モデルでもCPU/GPU負荷を均衡させる。",
+    "method_overview": "入力は量子化MoEモデル、prompt/token列、各MoE層のgating結果、GPU/CPU計算性能、PCIe帯域、利用可能HBMである。attention等の非MoE演算はGPUに置き、MoE routed expertだけをCPUとGPUへ分散する。prefillでは各層のtoken-to-expert割当からexpert負荷を得て、CPUで実行する時間とGPUへ転送して実行する時間をhardware profileで比較し、GPU実行すべき高負荷expert数Kを決定する。選ばれたexpertはping-pong bufferへ転送し、CPU側の低負荷expert計算とGPU計算・PCIe転送をpipeline化する。\n\ndecodeへ移るとprefill中のactivation frequencyで初期GPU cacheを作る。各tokenのattention出力が得られた時点で次tokenのexpertを予測し、残りのforward計算中に非同期prefetchを進める。cache miss expertはCPUで計算し、予測expertはFixed-NまたはAdaptive LFU evictionで既存cacheを置換する。各層の予測精度に応じてprefetch対象層を選ぶSMOE-Flexも評価し、最終的にprefill TTFT、decode TPS、cache hit率、CPU/GPU/PCIe利用率を出力する。",
+    "components": [
+      {
+        "name": "stage-aware CPU/GPU分業",
+        "description": "attentionとhead projectionなどの非MoE部分をGPUへ固定し、routed expert計算だけをCPU/GPU間で動的に分配する。入力はモデル演算グラフとgating結果で、expertごとの実行場所を決めることでKTransformersの全routed-expert CPU実行よりGPUを活用する。\n\nprefillは計算集約、decodeはmemory/transfer集約という段階差を明示的に利用する。同じcache/prefetch規則を両段階へ流用せず、prefillでは負荷量、decodeでは予測とcache hitを中心に最適化する点が全体設計の基礎になる。"
+      },
+      {
+        "name": "prefillオンデマンドexpert配置",
+        "description": "各MoE層でgating後のtoken数から高負荷expertと低負荷expertを判定する。hardware profileから各expertのCPU/GPU計算時間とtop-K expertのPCIe転送時間を見積もり、GPU計算+転送がCPU計算より短くなるKを選択する。\n\n高負荷expertはGPUへ移し、低負荷expertはCPUでそのまま計算するため、固定hot/cold配置よりpromptごとの実負荷へ追従できる。promptが長いほど高負荷expertをGPUへ移す利益が大きくなり、prefill高速化が伸びる。"
+      },
+      {
+        "name": "prefill pipelineとping-pong buffer",
+        "description": "GPUへ送るexpertのPCIe転送をCPU expert計算およびGPU expert計算と重ね、転送をcritical pathから隠すpipelineを構成する。次に必要なexpertを準備しながら現在expertを処理するため、単純なon-demand loadingの直列待ちを避ける。\n\nGPU側にはping-pong bufferを用いて転送先を交互に使い、大量expertを恒久常駐させずにpipelineを維持する。これにより24GB級HBMでも671B級モデルのprefillで動的GPU実行を成立させる。"
+      },
+      {
+        "name": "token-wise expert prefetch",
+        "description": "decodeでは現在tokenのattention layer出力を得た直後に、次tokenで活性化しそうなexpertを各MoE層について予測する。layer-wise方式より早い時点から転送を開始でき、現在tokenの残りのMoE/非MoE計算時間全体をprefetch窓として利用する。\n\n予測expertは非同期transfer queueへ投入され、対応層へ到達する前にGPU cacheへ入る。論文では同じ転送量でもHybriMoEのcache待ち約1ms/token/layerに対しSMOEはほぼ0まで隠せると報告する。"
+      },
+      {
+        "name": "expert cache管理",
+        "description": "prefill中に全expertのactivation frequencyを記録し、decode開始時に最頻expertでGPU cacheを初期化する。その後は既存slotをin-place置換し、新しいcache領域を都度確保しない。\n\nFixed-N evictionは予測top-Nの未常駐expertでN個の低頻度expertを置換し、Adaptive evictionは未常駐数だけ可変転送する。どちらもLFU系で、PCIe帯域・GPU能力に応じて更新量Nを調整できる。"
+      },
+      {
+        "name": "layer選択型SMOE-Flex",
+        "description": "token-wise予測の精度は層ごとに異なるため、すべての層で同じ数をprefetchする代わりに、精度の低い層ではprefetchを止め、その時間を高精度層の追加expert転送へ回す。\n\nこれにより選択層では最大3 expertまで更新でき、cache hit率を上げる。全体TPSは通常SMOEと同程度で複雑なhyperparameter調整を要するため、論文は柔軟性とhit率改善の追加設計として位置づける。"
+      }
+    ],
+    "system_design": "KTransformersのoperator insertionを利用し、attention等はGPUに残したままMoE operatorをCPU/GPU hybrid実行へ置換する。GPU expert operatorとdequantization CUDA kernel、C++のprefetch/cache管理を追加する。\n\n単一requestのforward中にCPU expert計算、GPU expert計算、PCIe transferを重ね、prefillは動的配置pipeline、decodeはtoken-wise prefetch+cache更新へ切り替える構成である。"
+  },
+  "reservation": {
+    "claim_id": "claim-08537f65a567d792ab20135d",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

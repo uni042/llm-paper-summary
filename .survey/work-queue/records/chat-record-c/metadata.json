@@ -1,1 +1,65 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e87ba9a7ec1323fe83b1d78f","job_id":"job-research-9119a9e35c42f3f7","data":{"canonical_id":"DOI:10.1109/IPDPS65963.2026.00101","arxiv_id":null,"doi":"10.1109/IPDPS65963.2026.00101","openreview_id":null,"arxiv_categories":{"primary":null,"cross_list":[]},"title":"Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching","summary":"SMOEは超巨大MoEを単一コンシューマGPUで動かすため、計算量の大きいprefillでは負荷に応じたオンデマンドexpert配置とパイプライン、decodeではtoken-wise予測取得とLFU系cache管理を使い分け、CPU/GPU負荷とPCIe転送を重ねるハイブリッド推論基盤である。DeepSeek-V3 671BとQwen3-235Bでprefill最大8.68倍、decode最大20.9%の高速化を示す。","list_summary":"prefillの動的expert配置とdecodeのtoken-wise予測取得を組み合わせ、単一RTX 4090で671B級MoEを高速化するCPU/GPUハイブリッド基盤。","authors":["Rui Zhang","Boxuan Yang","Rongji Wang","Xuemei Peng","Zeyi Wen"],"published":"2026-05-25","publication":"IEEE International Parallel and Distributed Processing Symposium (IPDPS 2026)","publication_type":"Conference Paper","publication_status":"Published","source":"https://doi.org/10.1109/IPDPS65963.2026.00101","sources":["https://doi.org/10.1109/IPDPS65963.2026.00101","https://zeyiwen.github.io/papers/ipdps26-smoe.pdf","https://github.com/rzhang772/SMOE","https://doi.org/10.6084/m9.figshare.31353823"],"primary_url":"https://zeyiwen.github.io/papers/ipdps26-smoe.pdf","html_url":null,"pdf_url":"https://zeyiwen.github.io/papers/ipdps26-smoe.pdf","implementation_url":"https://github.com/rzhang772/SMOE","implementation":"KTransformersを基盤にMoE operator、GPU expert operator、GPU cache expertのdequantization CUDA kernel、C++のprefetch/cache管理を実装。論文Artifact DescriptionでGitHubとFigshareが公式成果物として明記される。","last_checked":"2026-09-21","code":"https://github.com/rzhang772/SMOE","hardware_evaluation":"AMD EPYC 7T83×2、1TB DRAM、RTX 4090 24GB、PCIe 4.0 x16。単一GPUを使用しCPU active coreを10以下へ制限して一般的なconsumer CPU相当を模擬。","quality_effect":"SMOEは計算グラフを近似せずexpert計算の配置だけを変える。GSM8Kから5例を選びDeepSeekでKTransformersと比較したperplexityが全例同一でlosslessと報告する。評価モデル自体は4-bit量子化。","references_checked_at":"2026-09-21","references_source":"https://zeyiwen.github.io/papers/ipdps26-smoe.pdf#page=11","references_total":53,"references":[],"lineage":"MoE expert offloading / CPU-GPU hybrid inference / dynamic expert caching and prefetch","topics":["MoE","expert offloading","dynamic expert cache","token-wise prefetch","CPU/GPU hybrid inference","consumer GPU"]},"reservation":{"claim_id":"claim-e87ba9a7ec1323fe83b1d78f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-08537f65a567d792ab20135d",
+  "job_id": "job-research-9119a9e35c42f3f7",
+  "data": {
+    "canonical_id": "DOI:10.1109/IPDPS65963.2026.00101",
+    "arxiv_id": null,
+    "doi": "10.1109/IPDPS65963.2026.00101",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": null,
+      "cross_list": []
+    },
+    "title": "Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching",
+    "summary": "SMOEは超巨大MoEを単一コンシューマGPUで動かすため、計算量の大きいprefillでは負荷に応じたオンデマンドexpert配置とパイプライン、decodeではtoken-wise予測取得とLFU系cache管理を使い分け、CPU/GPU負荷とPCIe転送を重ねるハイブリッド推論基盤である。DeepSeek-V3 671BとQwen3-235Bでprefill最大8.68倍、decode最大20.9%の高速化を示す。",
+    "list_summary": "prefillの動的expert配置とdecodeのtoken-wise予測取得を組み合わせ、単一RTX 4090で671B級MoEを高速化するCPU/GPUハイブリッド基盤。",
+    "authors": [
+      "Rui Zhang",
+      "Boxuan Yang",
+      "Rongji Wang",
+      "Xuemei Peng",
+      "Zeyi Wen"
+    ],
+    "published": "2026-05-25",
+    "publication": "IEEE International Parallel and Distributed Processing Symposium (IPDPS 2026)",
+    "publication_type": "Conference Paper",
+    "publication_status": "Published",
+    "source": "https://doi.org/10.1109/IPDPS65963.2026.00101",
+    "sources": [
+      "https://doi.org/10.1109/IPDPS65963.2026.00101",
+      "https://zeyiwen.github.io/papers/ipdps26-smoe.pdf",
+      "https://github.com/rzhang772/SMOE",
+      "https://doi.org/10.6084/m9.figshare.31353823"
+    ],
+    "primary_url": "https://zeyiwen.github.io/papers/ipdps26-smoe.pdf",
+    "html_url": null,
+    "pdf_url": "https://zeyiwen.github.io/papers/ipdps26-smoe.pdf",
+    "implementation_url": "https://github.com/rzhang772/SMOE",
+    "implementation": "KTransformersを基盤にMoE operator、GPU expert operator、GPU cache expertのdequantization CUDA kernel、C++のprefetch/cache管理を実装。論文Artifact DescriptionでGitHubとFigshareが公式成果物として明記される。",
+    "last_checked": "2026-09-21",
+    "code": "https://github.com/rzhang772/SMOE",
+    "hardware_evaluation": "AMD EPYC 7T83×2、1TB DRAM、RTX 4090 24GB、PCIe 4.0 x16。単一GPUを使用しCPU active coreを10以下へ制限して一般的なconsumer CPU相当を模擬。",
+    "quality_effect": "SMOEは計算グラフを近似せずexpert計算の配置だけを変える。GSM8Kから5例を選びDeepSeekでKTransformersと比較したperplexityが全例同一でlosslessと報告する。評価モデル自体は4-bit量子化。",
+    "references_checked_at": "2026-09-21",
+    "references_source": "https://zeyiwen.github.io/papers/ipdps26-smoe.pdf#page=11",
+    "references_total": 53,
+    "references": [],
+    "lineage": "MoE expert offloading / CPU-GPU hybrid inference / dynamic expert caching and prefetch",
+    "topics": [
+      "MoE",
+      "expert offloading",
+      "dynamic expert cache",
+      "token-wise prefetch",
+      "CPU/GPU hybrid inference",
+      "consumer GPU"
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-08537f65a567d792ab20135d",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
