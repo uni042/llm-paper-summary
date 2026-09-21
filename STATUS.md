@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 19:00:46 JST**
+> 自動生成: **2026-09-21 19:01:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **327** |
 | 未claim Research job | **325** |
 | 直近24hの検証済みResearch収録 | **38** |
-| 最終検証済みResearch収録 | **09-21 17:27:05 JST（1時間33分前）** |
+| 最終検証済みResearch収録 | **09-21 17:27:05 JST（1時間34分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **7** | **6** | **4** | **0** | **2** | **0** | — |
+| Research | **7** | **6** | **4** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **7** | **7** | **5** | **0** | **2** | **0** | **3** |
+| 合計 | **7** | **7** | **5** | **0** | **2** | **1** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -158,13 +158,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- `arXiv:2608.21836` — LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization / worker `scheduled-chat-00`
+  - claim: **09-21 18:00:42 JST** / heartbeat: **09-21 19:01:09 JST** / lease expiry: **09-21 20:31:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f0b1ffeacc3b0ccd.json`
 - `DOI:10.1109/TC.2026.3701443` — GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning / worker `scheduled-chat-30`
   - claim: **09-21 18:32:35 JST** / heartbeat: **—** / lease expiry: **09-21 20:02:35 JST**
   - evidence: `.survey/work-queue/claims/job-research-50400bb966b2b5a1.json`
-- `arXiv:2608.21836` — LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization / worker `scheduled-chat-00`
-  - claim: **09-21 18:00:42 JST** / heartbeat: **—** / lease expiry: **09-21 19:30:42 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f0b1ffeacc3b0ccd.json`
 
 #### Audit
 
