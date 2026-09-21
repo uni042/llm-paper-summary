@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b27cb54145ccd14973517f2a","job_id":"job-research-3b1c7287727937a1","data":{"limitations":"評価はQwen3-30B-A3BとGemma4-26B-A4Bという2バックボーン、4つの代表圧縮法、3保持率に限定され、さらに大規模・異種構造のMoEへ一般化できる保証はない。調整はC4 3000例・1エポックという意図的に小さい予算で、長期学習時に知識蒸留が逆転する可能性は検証していない。費用は2×H200環境での実測であり別GPU・分散構成では順位が変わり得る。全パラメータ調整は回復量が大きいが、更新時のオプティマイザメモリとチェックポイント書込み量も大きい。行動代理指標は診断用で包括的な安全性評価ではない。","differences":"従来の再学習なし圧縮研究が『圧縮演算子→即評価』を中心とするのに対し、本研究は圧縮器を固定したまま、その出力を小規模回復学習の初期値として比較する。個別手法に付随する回復学習ではなく、削除・統合、複数バックボーン、複数保持率を横断して目的関数・更新範囲・実測GPU費用を同一条件で比較する。ルータ修復だけでなくエキスパート関数誤差と後段伝播を理論分解し、全パラメータ更新の優位性をその誤差構造と結び付ける。","implementation_status":"EMNLP 2026 Main Conference採択。著者公式GitHub AIDASLab/Post-Compression-Adjustmentが公開され、論文本文から直接リンクされている。","research_positioning":"Adaptive Expert Computation / Compression系統では、新しい削除・統合アルゴリズムではなく『圧縮後にどれだけ安価に品質を戻せるか』を第三軸として追加する研究である。圧縮率と圧縮直後精度だけでなく、少量調整後精度と回復に必要なGPU時間・メモリ・エネルギーを含めて手法を選ぶべきだという評価規範を提示する。既存のREAP、AIMER、HC-SMoE、M-SMoE等の成果を置換せず、その実用配備パイプラインを補完する。"},"reservation":{"claim_id":"claim-b27cb54145ccd14973517f2a","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-e58ebea7bf0407d48d7d69b2",
+  "job_id": "job-research-3b1c7287727937a1",
+  "data": {
+    "limitations": "評価はQwen3-30B-A3BとGemma4-26B-A4Bという2バックボーン、4つの代表圧縮法、3保持率に限定され、さらに大規模・異種構造のMoEへ一般化できる保証はない。調整はC4 3000例・1エポックという意図的に小さい予算で、長期学習時に知識蒸留が逆転する可能性は検証していない。費用は2×H200環境での実測であり別GPU・分散構成では順位が変わり得る。全パラメータ調整は回復量が大きいが、更新時のオプティマイザメモリとチェックポイント書込み量も大きい。行動代理指標は診断用で包括的な安全性評価ではない。",
+    "differences": "従来の再学習なし圧縮研究が『圧縮演算子→即評価』を中心とするのに対し、本研究は圧縮器を固定したまま、その出力を小規模回復学習の初期値として比較する。個別手法に付随する回復学習ではなく、削除・統合、複数バックボーン、複数保持率を横断して目的関数・更新範囲・実測GPU費用を同一条件で比較する。ルータ修復だけでなくエキスパート関数誤差と後段伝播を理論分解し、全パラメータ更新の優位性をその誤差構造と結び付ける。",
+    "implementation_status": "EMNLP 2026 Main Conference採択。著者公式GitHub AIDASLab/Post-Compression-Adjustmentが公開され、論文本文から直接リンクされている。",
+    "research_positioning": "Adaptive Expert Computation / Compression系統では、新しい削除・統合アルゴリズムではなく『圧縮後にどれだけ安価に品質を戻せるか』を第三軸として追加する研究である。圧縮率と圧縮直後精度だけでなく、少量調整後精度と回復に必要なGPU時間・メモリ・エネルギーを含めて手法を選ぶべきだという評価規範を提示する。既存のREAP、AIMER、HC-SMoE、M-SMoE等の成果を置換せず、その実用配備パイプラインを補完する。"
+  },
+  "reservation": {
+    "claim_id": "claim-e58ebea7bf0407d48d7d69b2",
+    "worker_id": "scheduled-chat-llm-paper-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
