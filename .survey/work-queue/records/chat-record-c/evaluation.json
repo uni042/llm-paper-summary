@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d67054767790b8a100027a66",
-  "job_id": "job-research-b47f649340a3fc18",
-  "data": {
-    "hardware": "正式評価はすべてHopper世代GPUを8並列のテンソル並列構成で実施する。Kimi-Linear-48B-A3B-Instruct（KDA層20個と全注意層7個）とQwen3-Next-80B-A3B-Instruct（GDN層36個と全注意層12個）を対象とする。",
-    "software": "DASCをSGLangへ実装した。モデル重みと通常実行は非量子化BF16、再帰状態の保存点はSGLang既定のFP32時間状態とBF16畳み込み状態を使う。基本設定は可変長格納と再実行なし方式である。",
-    "methodology": "長文脈品質はRULER全13課題を4千、8千、16千トークンで評価し、各課題・長さにつき30例を用いる。端から端までの品質評価にはAIME 2026 I/II、HMMT Feb 2026、IMO-AnswerBench、GPQA-Diamond、MMLU-Pro、LoCoMoを用いる。同じ圧縮量の無作為選択を各層・最大窓設定ごとに5個固定して作り、減衰認識順位付けと比較する。メモリ容量を揃えた配信評価ではMMLU-Pro由来の接頭辞再利用負荷を使い、各並列ランクの状態保存予算を固定して、3乱数種の平均初回トークン待ち時間と入力処理量を測る。窓再実行方式では厳密なウォーム・再実行品質と固定スロットの接尾辞再計算費用を分離して評価する。",
-    "scope": "ハイブリッド注意の2系統、すなわちチャネル粒度KDAとヘッド粒度GDNに限定する。最大再実行窓16から512または1024までで圧縮と品質を走査し、テンソル並列負荷均衡、可変長配置、接尾辞再計算、8ビット状態量子化との併用も評価する。純粋な線形注意や状態空間モデル、8並列を超える構成、他世代GPUは未検証である。"
-  },
+  "attempt_id": "attempt-b8a8b7bb8f5552157b8f356c",
+  "job_id": "job-research-28c5772328ef0791",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d67054767790b8a100027a66",
+    "claim_id": "claim-b8a8b7bb8f5552157b8f356c",
     "worker_id": "scheduled-chat-llm-00",
     "worker_kind": "scheduled_chat"
   }

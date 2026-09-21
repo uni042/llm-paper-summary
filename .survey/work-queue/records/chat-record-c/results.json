@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d67054767790b8a100027a66",
-  "job_id": "job-research-b47f649340a3fc18",
-  "data": {
-    "overview": "保守的Wmax=16ではKimi-KDAのragged + TP-balanced checkpoint容量がdenseの2.63倍になり、RULER平均はdenseとほぼ同等を維持した。固定HBMのprefix-reuse workloadではKimi-KDAのTTFTが567.6msから326.0msへ42.6%低下し、入力throughputが33.25kから55.98k tokens/sへ68.4%向上した。より強い圧縮ではNRの精度低下が増えるが、WR suffix refreshで大部分を回復する。",
-    "key_results": [
-      {
-        "metric": "Kimi-KDA checkpoint capacity",
-        "value": "2.63× at Wmax=16; up to 28.04× at Wmax=512",
-        "baseline": "dense mixed-precision state checkpoint",
-        "condition": "ragged + TP-balanced, complete checkpoint including BF16 convolution state",
-        "interpretation": "channel-grained KDAはlayer/head内のdecay heterogeneityを細粒度に除去でき、TP balanceでworst-rank bottleneckも軽減する。"
-      },
-      {
-        "metric": "Kimi-KDA mean TTFT",
-        "value": "567.6 ms → 326.0 ms (-42.6%)",
-        "baseline": "dense state checkpoint",
-        "condition": "Wmax=16, fixed matched-HBM state budget, TP8",
-        "interpretation": "1 checkpointあたりのbytes削減がresident prefix数を増やし、再prefillを減らす。"
-      },
-      {
-        "metric": "Kimi-KDA input throughput",
-        "value": "33.25k → 55.98k tokens/s (+68.4%)",
-        "baseline": "dense state checkpoint",
-        "condition": "Wmax=16, fixed matched-HBM state budget, TP8",
-        "interpretation": "同じHBMでcache hitを増やす容量効果がinput処理量へ直結する。"
-      },
-      {
-        "metric": "RULER aggregate quality",
-        "value": "Kimi Wmax16 0.95/0.95/0.95 vs dense 0.95/0.96/0.95 at 4k/8k/16k",
-        "baseline": "dense checkpoint",
-        "condition": "13 RULER subtasks, N=30 each",
-        "interpretation": "保守的thresholdではstate omissionの品質影響が小さい。"
-      },
-      {
-        "metric": "Suffix refresh recovery",
-        "value": "Wmax=128でNR比 +0.8〜7.4pt; MMLU-Pro WR 66.59〜67.19% vs dense 67.50% across sweep",
-        "baseline": "DASC-NR / dense",
-        "condition": "Kimi-KDA strict warm/replay",
-        "interpretation": "aggressive omissionの精度損失をbounded replayで回復できるが追加TTFTを要する。"
-      },
-      {
-        "metric": "GDN serving",
-        "value": "Wmax=512: TTFT 614.4→374.5 ms; throughput 30.56→50.96k tokens/s",
-        "baseline": "dense",
-        "condition": "Qwen-GDN, TP8",
-        "interpretation": "head-grained GDNでも効果はあるがKDAより圧縮粒度が粗く容量gainは最大2.48×。"
-      }
-    ],
-    "negative_results": "Kimi-KDAでWmax=1024までNRを強くするとRULER平均がdense比4k/8k/16kで0.04/0.06/0.07低下する。GDNはhead単位decayのためKDAほど圧縮できない。KDA Wmax=512では113-column headが不可分でremote ownershipを完全除去できず、all-to-allと長いsuffix replayがWRの容量利得を相殺する。pure linear/SSMとTP8超は未評価。",
-    "interpretation": "DASCの主要なシステム利得はcheckpoint compressionそのものより、固定HBMでresident reusable prefixを増やしてrecomputeを減らす点にある。静的weight-derived selectionはonline profiling不要で、ragged layoutとTP balanceを組み合わせないと実容量gainがpadding/worst-rankで失われる。",
-    "quality_impact": "Wmax=16ではend-task各行がdenseから1.3pt以内で、Kimi-KDAではdecay-aware DASCが15 reasoning comparisonsすべてで5-mask Random平均を上回り7件がHolm補正後も有意。強い圧縮ではNR劣化が増え、WRで精度とlatencyを交換する。"
-  },
+  "attempt_id": "attempt-b8a8b7bb8f5552157b8f356c",
+  "job_id": "job-research-28c5772328ef0791",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d67054767790b8a100027a66",
+    "claim_id": "claim-b8a8b7bb8f5552157b8f356c",
     "worker_id": "scheduled-chat-llm-00",
     "worker_kind": "scheduled_chat"
   }
