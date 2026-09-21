@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 11:04:00 JST**
+> 自動生成: **2026-09-21 11:04:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -184,7 +184,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.30386` — DASC: Decay-Aware State Compression for Hybrid Linear-Attention Serving / worker `scheduled-chat-llm-00`
-  - claim: **09-21 11:03:01 JST** / heartbeat: **—** / lease expiry: **09-21 12:33:01 JST**
+  - claim: **09-21 11:04:24 JST** / heartbeat: **—** / lease expiry: **09-21 12:34:24 JST**
   - evidence: `.survey/work-queue/claims/job-research-b47f649340a3fc18.json`
 
 #### Audit
