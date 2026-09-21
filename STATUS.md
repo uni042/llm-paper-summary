@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 20:42:53 JST**
+> 自動生成: **2026-09-21 22:02:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **324** |
-| 未claim Research job | **322** |
-| 直近24hの検証済みResearch収録 | **29** |
-| 最終検証済みResearch収録 | **09-21 17:27:05 JST（3時間15分前）** |
+| 未claim Research job | **323** |
+| 直近24hの検証済みResearch収録 | **24** |
+| 最終検証済みResearch収録 | **09-21 17:27:05 JST（4時間35分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **6** | **4** | **0** | **2** | **0** | — |
+| Research | **1** | **6** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **4** | **7** | **5** | **0** | **2** | **0** | **3** |
+| 合計 | **1** | **7** | **5** | **0** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -68,21 +68,6 @@
   - result: `.survey/work-queue/results/research/attempt-29cb222c40356af503452ebc-repair2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-29cb222c40356af503452ebc-repair2.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md`
-- **09-21 15:48:38 JST** [research] `arXiv:2608.24938` — ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration
-  - job: `.survey/work-queue/jobs/job-research-f837d96601e69237.json`
-  - result: `.survey/work-queue/results/research/attempt-edfac129f344bed99e666629.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-edfac129f344bed99e666629.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.24938-exfold-training-free-expert-folding.md`
-- **09-21 15:44:43 JST** [research] `arXiv:2609.06076` — Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment
-  - job: `.survey/work-queue/jobs/job-research-3b1c7287727937a1.json`
-  - result: `.survey/work-queue/results/research/attempt-820bde38d697073272d97db8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-820bde38d697073272d97db8.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md`
-- **09-21 15:38:56 JST** [research] `arXiv:2608.26650` — Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs
-  - job: `.survey/work-queue/jobs/job-research-901c881ed2cc963f.json`
-  - result: `.survey/work-queue/results/research/attempt-656236ce96424eaac8e4d26e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-656236ce96424eaac8e4d26e.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md`
 
 ### Audit
 
@@ -143,12 +128,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3789240.3829159` — DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O / worker `scheduled-chat-30`
-  - claim: **09-21 20:41:43 JST** / heartbeat: **—** / lease expiry: **09-21 22:11:43 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a5d6d7156c3ffec6.json`
-- `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-llm-paper-worker-30`
-  - claim: **09-21 19:31:03 JST** / heartbeat: **—** / lease expiry: **09-21 21:01:03 JST**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-00`
+  - claim: **09-21 22:02:17 JST** / heartbeat: **—** / lease expiry: **09-21 23:32:17 JST**
   - evidence: `.survey/work-queue/claims/job-research-c27f3a6ec993f9ab.json`
 
 #### Audit
