@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 15:37:47 JST**
+> 自動生成: **2026-09-21 15:38:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文 | **323** |
 | 未claim Research job | **321** |
-| 直近24hの検証済みResearch収録 | **52** |
+| 直近24hの検証済みResearch収録 | **51** |
 | 最終検証済みResearch収録 | **09-21 13:49:15 JST（1時間48分前）** |
 | 整合性異常 | **0** |
 
@@ -175,7 +175,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2608.26650` — Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs / worker `scheduled-chat-llm-paper-30`
-  - claim: **09-21 15:36:09 JST** / heartbeat: **—** / lease expiry: **09-21 17:06:09 JST**
+  - claim: **09-21 15:37:58 JST** / heartbeat: **—** / lease expiry: **09-21 17:07:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-901c881ed2cc963f.json`
 - `arXiv:2608.15299` — MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation / worker `scheduled-chat-30b`
   - claim: **09-21 14:29:58 JST** / heartbeat: **09-21 15:32:52 JST** / lease expiry: **09-21 17:02:52 JST**
