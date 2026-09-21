@@ -12,7 +12,7 @@
   "source_url": "https://www.semanticscholar.org/paper/5dfc253c4e99e4dc927022ba6963d6e82b5b7530",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md",
   "selection_reason": "Apple Silicon上9 serving engineを速度・memory・fidelityで比較しQwen3/Qwen3.5/Gemma4、concurrency、Thunderbolt RDMA TPまで評価。local inference基盤比較として直接有用。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,12 +32,6 @@
   ],
   "last_blocked_at": "2026-09-21T04:50:30+00:00",
   "retry_queued_at": "2026-09-21T14:09:55+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[1].description is too short | Japanese-first prose ratio is too low: 67.4% < 70% (Japanese=4163, Latin=2014)",
-  "last_validation_failed_at": "2026-09-21T17:38:47+00:00",
-  "validation_errors": [
-    "problem_method.method_overview must explain the end-to-end mechanism",
-    "problem_method.components[1].description is too short",
-    "Japanese-first prose ratio is too low: 67.4% < 70% (Japanese=4163, Latin=2014)"
-  ]
+  "completed_at": "2026-09-21T17:40:41+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-72aa5e973198ffd9d1b794da.json"
 }

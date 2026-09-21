@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T17:32:49.003070+00:00",
+  "updated_at": "2026-09-21T17:40:45.527380+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -33896,6 +33896,56 @@
       "paper_active_count_before": 882,
       "paper_active_count_after": 882,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35633488613",
+      "first_recorded_at": "2026-09-21T17:40:45.527380+00:00",
+      "last_recorded_at": "2026-09-21T17:40:45.527380+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35633488613:1",
+          "recorded_at": "2026-09-21T17:40:45.527380+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35633488613",
+            "run_attempt": "1",
+            "source_sha": "932e1b7b3a39ee28089679c92cb15cb86a7b3736"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-73f2d3c7c23735bb",
+          "type": "research",
+          "canonical_id": "arXiv:2609.19169",
+          "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 882,
+      "paper_active_count_after": 882,
+      "last_successful_action": "research_completed"
     }
   ]
 }
