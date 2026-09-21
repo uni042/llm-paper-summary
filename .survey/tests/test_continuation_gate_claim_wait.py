@@ -34,6 +34,9 @@ def make_args(**overrides):
         seconds_to_next_scheduled_task=None,
         scheduled_handoff_guard_seconds=600,
         candidate_inventory=50,
+        research_audit_completed_this_invocation=0,
+        research_minimum_completions=3,
+        last_terminal_job_status="none",
         discovery_rounds_completed=0,
         discovery_rounds_since_last_novel=None,
         discovery_min_rounds=4,
@@ -102,15 +105,43 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertIn("終了しません", result["progress_notice"])
         self.assertIn("再確認", result["progress_notice"])
 
-    def test_checked_clear_claim_state_allows_normal_work(self):
+    def test_checked_clear_claim_state_under_quota_claims_next_paper(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             claim_result_pending=False,
             submission_state_checked=True,
+            research_audit_completed_this_invocation=0,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertTrue(result["claim_state_checked"])
+        self.assertIn("次のResearch/Audit", result["next_action_message"])
+
+    def test_terminal_blocked_claims_next_paper_even_after_quota_floor(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            claim_result_pending=False,
+            submission_state_checked=True,
+            research_audit_completed_this_invocation=3,
+            last_terminal_job_status="blocked",
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+        self.assertTrue(result["status_only_terminal"])
+        self.assertFalse(result["finalization_allowed"])
+
+    def test_completed_terminal_after_quota_floor_allows_general_continuation(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            claim_result_pending=False,
+            submission_state_checked=True,
+            research_audit_completed_this_invocation=3,
+            last_terminal_job_status="completed",
         ))
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["required_action"], "CONTINUE_WORK")
-        self.assertTrue(result["claim_state_checked"])
+        self.assertFalse(result["status_only_terminal"])
 
 
 if __name__ == "__main__":
