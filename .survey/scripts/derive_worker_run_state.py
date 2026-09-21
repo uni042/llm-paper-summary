@@ -135,6 +135,9 @@ def _frozen_route(root: Path, run_key: str) -> tuple[int, str] | None:
 
 
 def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[str, dt.datetime]:
+    # Track current-run assignments, carry-over active assignments, and any older
+    # same-worker attempt whose terminal result was produced during this invocation.
+    all_worker_attempts: dict[str, dt.datetime] = {}
     attempts: dict[str, dt.datetime] = {}
     result_root = root / ".survey/work-queue/claim-results"
     if result_root.is_dir():
@@ -147,13 +150,12 @@ def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[s
                     continue
                 attempt_id = item.get("attempt_id")
                 claimed_at = _time(item.get("claimed_at"))
-                if isinstance(attempt_id, str) and claimed_at is not None and claimed_at >= started_at:
+                if not isinstance(attempt_id, str) or not attempt_id or claimed_at is None:
+                    continue
+                all_worker_attempts[attempt_id] = claimed_at
+                if claimed_at >= started_at:
                     attempts[attempt_id] = claimed_at
 
-    # A Scheduled Chat run must resume an active unsubmitted claim from the same
-    # worker lineage even when it was claimed during the previous invocation.
-    # Count it as this invocation's work only if its terminal result is produced
-    # after actual_invocation_start (enforced in _run_submission_state).
     now = dt.datetime.now(dt.timezone.utc)
     for current in claim_state.current_claims(root, now).values():
         if not isinstance(current, dict) or not current.get("active"):
@@ -163,9 +165,30 @@ def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[s
         attempt_id = current.get("attempt_id")
         claimed_at = _time(current.get("claimed_at")) or started_at
         if isinstance(attempt_id, str) and attempt_id:
+            all_worker_attempts.setdefault(attempt_id, claimed_at)
             attempts.setdefault(attempt_id, claimed_at)
-    return attempts
 
+    # A carry-over claim may be submitted and released before the next run-state
+    # snapshot. Recover it by exact attempt identity when its result was processed
+    # during this invocation.
+    for kind in ("research", "audit"):
+        folder = root / ".survey/work-queue/results" / kind
+        if not folder.is_dir():
+            continue
+        for path in folder.glob("*.json"):
+            result = _read(path, {})
+            if not isinstance(result, dict):
+                continue
+            attempt_id = result.get("attempt_id")
+            processed_at = _time(result.get("processed_at"))
+            if (
+                isinstance(attempt_id, str)
+                and attempt_id in all_worker_attempts
+                and processed_at is not None
+                and processed_at >= started_at
+            ):
+                attempts.setdefault(attempt_id, all_worker_attempts[attempt_id])
+    return attempts
 
 def _descriptor_for_attempt(root: Path, kind: str, attempt_id: str) -> Path | None:
     """Resolve the canonical <attempt_id>.json descriptor, with read-only legacy fallback."""
@@ -257,7 +280,6 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         for job_id, current in claims.items()
         if current.get("active")
         and current.get("worker_id") == worker_id
-        and (_time(current.get("claimed_at")) or started_at) >= started_at
     ]
     return {
         "claim_state_checked": True,
@@ -274,6 +296,8 @@ def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
     identities: set[str] = set()
     for row in history:
         if not isinstance(row, dict) or str(row.get("run_key") or "") != run_key:
+            continue
+        if not (row.get("round_accounted") is True or row.get("round_complete") is True):
             continue
         identity = str(row.get("round_identity") or row.get("round") or row.get("source_submission") or "")
         if identity:
