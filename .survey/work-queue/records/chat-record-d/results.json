@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e4fcacccce96800ab6bbc123",
-  "job_id": "job-research-f837d96601e69237",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e4fcacccce96800ab6bbc123",
-    "worker_id": "scheduled-chat-llm-paper-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e4fcacccce96800ab6bbc123","job_id":"job-research-f837d96601e69237","data":{"overview":"Qwen3-30B-A3Bの元Top-8平均69.04に対し、ExFoldは事前充填P4で69.26、復号D64で68.75、D32で68.97、共同P4+D64で68.50を維持する。直接Top-4を両段階へ適用すると56.17まで低下するため、除外寄与を明示的に回復する効果が大きい。実サービスでは最大1.41倍の初回トークン時間と2.45倍の出力トークン時間高速化を報告する。","key_results":[{"metric":"Qwen3事前充填P4品質","value":"平均69.26、元モデル比+0.22ポイント","baseline":"Original Top-8 69.04; Direct Top-4 66.64; MoDES-P4 66.59","condition":"事前充填で1トークン当たり保持4/8 experts、復号は元設定","interpretation":"事前充填のエキスパート計算を半減しても平均品質を維持し、単純削除より高い。"},{"metric":"Qwen3復号D32品質","value":"平均68.97、元モデル比-0.07ポイント","baseline":"Original 69.04; REAP-D32 22.25; SERE-K2 50.65","condition":"事前充填元設定、復号バッチの保持プール32","interpretation":"厳しい復号プール制約でも除外寄与回復によりほぼ元品質を保つ。"},{"metric":"共同P4+D64品質","value":"平均68.50","baseline":"Original 69.04; All TopK=4 56.17; MoDES K=4 65.72","condition":"事前充填50%計算予算、復号64-expert pool","interpretation":"両段階の近似誤差を同一射影で扱うことで独立な削除誤差の累積を抑える。"},{"metric":"GLM-4.5-Air構造横断保持率","value":"prefill P4で97.2%、decode D64で98.4%、joint P4+D32で96.7%の元平均品質を保持","baseline":"各元モデル100%","condition":"cross-architecture evaluation","interpretation":"Qwen3固有の専門家幾何だけに依存しない。"},{"metric":"オンライン速度","value":"最大1.41× TTFT、2.45× TPOT","baseline":"元vLLM MoE実行","condition":"H800、BF16、vLLM plugin","interpretation":"トークン計算削減とバッチ重み集合削減が実サービス遅延改善へつながる。"}],"negative_results":"直接Top-4を事前充填と復号の双方へ適用するとQwen3平均は69.04から56.17へ大幅低下する。単純なREAP-D32も22.25まで崩れる。より表現力の高い対角・低ランク射影はオンラインベクトル変換と大きな状態量を要求し、標準融合MoE経路を再利用できないため実装上の費用が大きい。","interpretation":"エキスパート削減の品質劣化は『どれを残すか』だけでなく『除外寄与をどう近似するか』に強く依存する。出力方向が近く大きさが異なるという幾何をスカラーで補正すれば、ルータメタデータだけの変更で品質を保ちながら二つの推論段階の異なる資源制約を同時に扱える。","quality_impact":"主Qwen3ではP4単独が元平均を僅かに上回り、D32は-0.07ポイント、共同P4+D64は-0.54ポイント。論文全体では約99%の元平均品質保持を主張する。"},"reservation":{"claim_id":"claim-e4fcacccce96800ab6bbc123","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
