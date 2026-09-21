@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 23:40:07 JST**
+> 自動生成: **2026-09-21 23:40:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **332** |
 | 未claim Research job | **331** |
-| 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-21 22:42:38 JST（57分前）** |
+| 直近24hの検証済みResearch収録 | **21** |
+| 最終検証済みResearch収録 | **09-21 22:42:38 JST（58分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -129,9 +129,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3712285.3759903` — Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching / worker `scheduled-chat-30`
-  - claim: **09-21 23:39:21 JST** / heartbeat: **—** / lease expiry: **09-22 01:09:21 JST**
-  - evidence: `.survey/work-queue/claims/job-research-69e7666b88522bc6.json`
+- `DOI:10.1145/3832810.3832866` — AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation / worker `scheduled-chat-30`
+  - claim: **09-21 23:40:23 JST** / heartbeat: **—** / lease expiry: **09-22 01:10:23 JST**
+  - evidence: `.survey/work-queue/claims/job-research-331c2ec4acba72cc.json`
 
 #### Audit
 
@@ -179,8 +179,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **388** |
-| └ Research | **202** |
+| 成功result未照合のimmutable submission | **389** |
+| └ Research | **203** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
