@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-5c5cef0e8b4a937f3bb1a4ec",
+  "job_id": "job-research-f2c000a0ecb53008",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-5c5cef0e8b4a937f3bb1a4ec.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | problem_method.components[5].description is too short | Japanese-first prose ratio is too low: 67.7% < 70% (Japanese=3505, Latin=1676)",
+  "processed_at": "2026-09-21T16:06:06+00:00",
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "problem_method.components[5].description is too short",
+    "Japanese-first prose ratio is too low: 67.7% < 70% (Japanese=3505, Latin=1676)"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
