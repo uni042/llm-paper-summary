@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 10:09:50 JST**
+> 自動生成: **2026-09-21 10:10:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **353** |
+| 収録候補論文 | **352** |
 | 未claim Research job | **352** |
-| 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-21 09:41:44 JST（28分前）** |
+| 直近24hの検証済みResearch収録 | **72** |
+| 最終検証済みResearch収録 | **09-21 10:10:07 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **353** |
+| canonical_id確認済みの一意な候補論文 | **352** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **353** |
+| 非終端Research job合計 | **352** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **2** | **6** | **4** | **0** | **1** | **0** | — |
+| Research | **3** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **57** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **59** | **7** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **60** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-21 10:10:07 JST** [research] `DOI:10.14778/3827998.3828047` — PolarKV: Tier Locally, Serve Globally-A KV Cache over Cloud Memory and Storage
+  - job: `.survey/work-queue/jobs/job-research-b865a4d050e3e427.json`
+  - result: `.survey/work-queue/results/research/attempt-5c2c382bbce50b33c11d2e0b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5c2c382bbce50b33c11d2e0b.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md`
 - **09-21 09:41:44 JST** [research] `arXiv:2608.17826` — Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State
   - job: `.survey/work-queue/jobs/job-research-97a84b19cac36f28.json`
   - result: `.survey/work-queue/results/research/attempt-c42378bb84cf93cfa6eb6efb.json` (`ok=true`)
@@ -172,10 +177,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.14778/3827998.3828047` — PolarKV: Tier Locally, Serve Globally-A KV Cache over Cloud Memory and Storage / worker `scheduled-chat-llm-paper-worker-00`
-  - claim: **09-21 10:08:54 JST** / heartbeat: **—** / lease expiry: **09-21 11:38:54 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b865a4d050e3e427.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -195,7 +198,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **353** |
+| ready | **352** |
 
 ### 候補の重複・識別情報欠損
 
@@ -215,7 +218,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **865** |
+| inference/training/survey配下の論文Markdown実体 | **866** |
 
 ### immutable submissionの未照合
 
