@@ -12,15 +12,15 @@
   "source_url": "https://www.semanticscholar.org/paper/76e42a42cea4ff264bf70534480254d6f2099a1a",
   "paper_path": "papers/inference/99-other-inference-systems/2026-b781449c0bd1-dynamo-moe-accelerating-sparse-large-model-inference-with-dynamic-parallelization.md",
   "selection_reason": "token sorting・on-demand expert loadingとworkload-aware TP/EP切替をpipeline overlapで統合するMoE推論framework。vLLM比TTFT最大6.75倍削減、TPOT 1.59倍、throughput 1.5倍改善。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T22:15:20+00:00",
-  "blocker": "Primary full text could not be safely retrieved in this invocation. Fresh lookup for DOI 10.1145/3806645.3807820 found bibliographic/abstract pages and explicitly reported that ResearchGate had no full text; DBLP/HPDC listings exposed metadata and DOI links but not the paper body in the available retrieval environment. Because workflow requires reading the primary source in full, no five-slot record was inferred from abstract or third-party summaries.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-7899e2e2a121878ada626550.json",
+  "blocker": "Primary full text could not be safely retrieved in this invocation. Fresh searches on 2026-09-21 found the HPDC 2026 bibliographic record, DOI-linked listings, abstract text, and an explicit Read PDF affordance on a secondary index, but no retrievable primary paper body in the available web environment. Because workflow v10 requires reading the primary source in full, no five-slot record was inferred from the abstract or third-party summaries.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-16c19eae5e50e9189d704129.json",
   "blocked_attempts": 1,
   "last_recorded_blocked_event": "2026-09-21T01:12:46+00:00",
   "block_history": [
@@ -31,5 +31,6 @@
     }
   ],
   "last_blocked_at": "2026-09-21T01:12:46+00:00",
-  "retry_queued_at": "2026-09-21T07:05:25+00:00"
+  "retry_queued_at": "2026-09-21T07:05:25+00:00",
+  "completed_at": "2026-09-21T14:03:47+00:00"
 }
