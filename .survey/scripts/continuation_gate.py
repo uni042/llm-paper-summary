@@ -63,6 +63,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         int(getattr(args, "research_minimum_completions", 3) or 3),
         1,
     )
+    last_terminal_job_status = str(
+        getattr(args, "last_terminal_job_status", "none") or "none"
+    ).strip().lower()
+    status_only_terminal = last_terminal_job_status in {"blocked", "deferred", "rejected"}
     claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
     submission_state_checked = bool(
         getattr(args, "submission_state_checked", False)
@@ -169,6 +173,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "WAIT_FOR_SUBMISSION_RESULT"
             finalization_allowed = False
+        elif status_only_terminal or research_audit_completed_this_invocation < research_minimum_completions:
+            decision = "CONTINUE"
+            required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
+            finalization_allowed = False
         else:
             decision = "CONTINUE"
             required_action = "CONTINUE_WORK"
@@ -243,6 +251,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
     elif required_action == "WAIT_FOR_SUBMISSION_RESULT":
         next_action_message = progress_notice
+    elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
+        next_action_message = (
+            "前jobは終端しましたがrunは終了しません。最新queue/claim stateを再取得し、"
+            "同一workerの未完了claimがないことを確認して次のResearch/Auditを1件claimします。"
+        )
     elif required_action == "CONTINUE_WORK":
         next_action_message = "最新queue/stateを再取得し、次の独立Research/Auditまたは許可された独立作業へ進みます。"
     elif required_action == "DISCOVER_AGAIN":
@@ -264,6 +277,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "mode_source": mode_source,
         "research_audit_completed_this_invocation": research_audit_completed_this_invocation,
         "research_minimum_completions": research_minimum_completions,
+        "last_terminal_job_status": last_terminal_job_status,
+        "status_only_terminal": status_only_terminal,
         "research_quota_remaining": max(
             research_minimum_completions - research_audit_completed_this_invocation, 0
         ),
@@ -308,8 +323,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
             "Discovery's four-round floor counts successful canonical precheck rounds in this invocation; "
             "multiple submissions derived from one precheck still count as one round. "
-            "Research/Audit exposes the combined three-completion quota "
-            "state and a pending submission remains a serial barrier before the next paper; hard "
+            "Research/Audit exposes the combined three-completion quota state. After a terminal "
+            "blocked/deferred/rejected result, or whenever the three-completion floor is still unmet, "
+            "the required action is CLAIM_NEXT_RESEARCH_AUDIT rather than run finalization. A pending "
+            "submission remains a serial barrier before the next paper; hard "
             "handoff/platform/durability/read "
             "failures override ordinary continuation."
         ),
@@ -343,6 +360,11 @@ def main() -> int:
     ap.add_argument("--work-mode", choices=("auto", "research", "discovery"), default="auto")
     ap.add_argument("--research-audit-completed-this-invocation", type=int, default=0)
     ap.add_argument("--research-minimum-completions", type=int, default=3)
+    ap.add_argument(
+        "--last-terminal-job-status",
+        choices=("none", "completed", "blocked", "deferred", "rejected"),
+        default="none",
+    )
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
     ap.add_argument("--discovery-min-rounds", type=int, default=4)
     ap.add_argument("--discovery-exhausted", type=yn, default=False)
