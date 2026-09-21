@@ -2,10 +2,9 @@
 """Validation and intake helpers for non-record survey fallback envelopes.
 
 Research/Audit record bundles are owned by ``replay_record_fallback.py`` and never
-flow through this generic writer. This module only handles allowlisted lightweight
-JSON transport such as discovery/control submissions, offline seeds, and update
-worker inputs. The external durable fallback is ChatGPT Library; GitHub fallback
-inbox/archive files provide the immutable replay ledger.
+flow through this generic writer. This module only handles allowlisted lightweight JSON transport for current
+submission and update-worker inputs. The external durable fallback is ChatGPT
+Library; GitHub fallback inbox/archive files provide the immutable replay ledger.
 """
 from __future__ import annotations
 
@@ -16,7 +15,6 @@ from typing import Any
 
 GENERIC_PREFIXES = (
     ".survey/work-queue/submissions/",
-    ".survey/work-queue/transport/",
     ".survey/update-worker/",
 )
 MAX_ENVELOPE_BYTES = 2 * 1024 * 1024
