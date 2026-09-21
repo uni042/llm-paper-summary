@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 10:08:29 JST**
+> 自動生成: **2026-09-21 10:09:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **353** |
 | 未claim Research job | **352** |
 | 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-21 09:41:44 JST（26分前）** |
+| 最終検証済みResearch収録 | **09-21 09:41:44 JST（27分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -174,7 +174,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.14778/3827998.3828047` — PolarKV: Tier Locally, Serve Globally-A KV Cache over Cloud Memory and Storage / worker `scheduled-chat-llm-paper-worker-00`
-  - claim: **09-21 10:06:23 JST** / heartbeat: **—** / lease expiry: **09-21 11:36:23 JST**
+  - claim: **09-21 10:08:54 JST** / heartbeat: **—** / lease expiry: **09-21 11:38:54 JST**
   - evidence: `.survey/work-queue/claims/job-research-b865a4d050e3e427.json`
 
 #### Audit
