@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-edfac129f344bed99e666629",
-  "job_id": "job-research-f837d96601e69237",
-  "data": {
-    "limitations": "射影係数は無ラベル校正分布上の共ルーティング出力から推定するため、校正で観測されないエキスパート対や大きく分布が変わる入力では最適な保持先が見つからない可能性がある。スカラー近似は出力方向が十分近いことを前提とし、方向差が大きい対では再構成損失が残る。動的復号プールはバッチごとの集約・候補探索を追加し、静的方式は柔軟性を失う。最大速度値はH800/vLLM条件であり、別GPU、通信構成、バッチ形状では変わる。",
-    "differences": "Dynamic-MoEやMoDESはトークンごとの実行エキスパート数を減らして事前充填計算を削るが復号のバッチ和集合を直接制御しない。REAPや静的統合はエキスパート集合を恒久的に縮小し、SEREは復号時に類似エキスパートへ転送するが置換先との出力大きさ差を明示補正しない。ExFoldは元エキスパートとルータを保存し、事前充填・復号で保持集合だけを別々に選び、除外寄与の回復には同じ方向付きスカラーと損失表を使う。",
-    "implementation_status": "arXiv v1、公式コードTime-Rune/ExFold-MoE公開。vLLMプラグインとカスタムTriton演算子でオンライン実装され、Qwen3、GLM、DeepSeek、Qwen3.5、DeepSeek-V4-Flash系へ評価を拡張している。",
-    "research_positioning": "Adaptive Expert Computation / Compression系統では、単なるエキスパート削除・統合ではなく『除外した計算の寄与を安価に回復する』出力近似型の推論高速化に位置付く。事前充填の計算律速と復号のメモリ律速を同じ折り畳み演算へ統一し、アルゴリズム上のエキスパート予算削減をvLLM実サービスのTTFT/TPOT改善まで接続している点が重要である。"
-  },
+  "attempt_id": "attempt-edddb03a59361ef75fa46b0f",
+  "job_id": "job-research-f0b1ffeacc3b0ccd",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-edfac129f344bed99e666629",
-    "worker_id": "scheduled-chat-llm-paper-30",
+    "claim_id": "claim-edddb03a59361ef75fa46b0f",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }
