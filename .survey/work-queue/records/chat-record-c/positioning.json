@@ -2,12 +2,56 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-16c19eae5e50e9189d704129",
-  "job_id": "job-research-43a2b5f54de86439",
-  "data": {},
+  "attempt_id": "attempt-756114b706b7d2942b0f7f61",
+  "job_id": "job-research-a5d6d7156c3ffec6",
+  "data": {
+    "relation_to_repository": "KVキャッシュ階層化・プリフィル/デコード分離・ストレージ活用の交点に位置する。StrataやKVPR/TailorKVが単一経路内でデータ量や再計算を最適化し、MooncakeがDRAM中間層の命中率を高めるのに対し、DualPathは『どの引擎のストレージNICから読むか』という経路拓撲そのものを変更する。SSD/3FS等の大容量層を主に使うエージェント推論やRLロールアウトで特に重要で、既存の圧縮・再計算・DRAMキャッシュとは補完関係にある。",
+    "differences": "既存のPD分離は計算段階を分けるがKV読出し帯域の役割分担は変えず、MooncakeはDRAMキャッシュ容量を増やし、Strata/KVPR/TailorKVは単一路のI/O量を減らす。DualPathはこれらと異なり、デコード側ストレージNICをKV読出しへ参加させて利用可能な物理I/O経路そのものを増やし、計算NICの優先度制御と共同スケジューリングで追加経路を安全に使う。",
+    "implementation_status": "DeepSeekの社内推論基盤へ約5K行の変更として実装済みで、3FS・FlashMLA・DeepGEMM・DeepEPなど基盤部品は公開されている。ただしDualPath固有の統合実装、中央スケジューラ、生産軌跡は公開URLが示されておらず、論文通りの完全再現には非公開部分が残る。",
+    "research_positioning": "長文脈エージェント推論でSSD/分散ストレージからKVを再利用する系統に対し、容量・圧縮率・再計算量ではなく『ストレージNICの集群内偏在』を第一級のボトルネックとして扱う研究である。階層メモリ研究では、どの階層へ置くかに加えて、どのノードのI/O入口から読み、どの相互接続でGPUへ運ぶかまで含めたトポロジ設計へ範囲を広げる位置付けを持つ。",
+    "closest_prior_work": [
+      {
+        "work": "DistServe / Splitwise",
+        "difference": "プリフィルとデコードを分離して段階ごとの資源最適化を可能にする基盤だが、外部KV読出しがプリフィル側へ集中する帯域偏り自体は解かない。DualPathはその分離構成を前提にデコード側ストレージNICまで読出し資源化する。"
+      },
+      {
+        "work": "Mooncake",
+        "difference": "分散DRAMへKVを置き親和性スケジューリングで命中率を高めるのに対し、DualPathは大容量ストレージを直接対象にし、DRAM使用量を抑えながら全ストレージNICの帯域を束ねる。"
+      },
+      {
+        "work": "Strata",
+        "difference": "階層ストレージ内のGPU支援I/Oとキャッシュ認識スケジューリングで単一路を効率化する。DualPathはPE/DE間で読出し経路を複数化し、ノード間のストレージ帯域偏りを解消する。"
+      },
+      {
+        "work": "KVPR / TailorKV",
+        "difference": "部分再計算や層粒度量子化で転送量を減らす方式であり、利用可能なNIC群を増やすDualPathとは直交する。"
+      },
+      {
+        "work": "LayerKV / PrefillOnly",
+        "difference": "一層分だけKVをHBMへ載せて長文脈プリフィルのHBM制約を緩和する。DualPathはこの層単位処理を採用しつつ、細粒度KV転送をCNIC中心のRDMA経路で効率化する。"
+      }
+    ],
+    "strengths": [
+      "生産エージェント軌跡から構造的なストレージ帯域偏りを特定",
+      "二経路化・通信優先度制御・GPU/ストレージ共同スケジューリングを一体設計",
+      "MoE 660B・内部27B・dense 32Bの異なるモデルで評価",
+      "オフラインとSLO付きオンラインの双方で実機改善を確認",
+      "最大1,152 GPUで拡張性を評価",
+      "理論帯域解析と消融で改善理由を分離"
+    ],
+    "limitations": [
+      "DualPath固有実装と生産軌跡は公開されておらず完全再現性が低い",
+      "評価基盤がHopper・InfiniBand・3FS中心で他ネットワーク/ストレージへの一般性は実証不足",
+      "一要求のKVをPE/DE両側から同時分割読出ししない",
+      "小モデルではP-D KV転送の基礎費用が目立つ",
+      "大規模構成の並列度・P/D比は十分に調整されていない",
+      "オンライン評価はツール呼出し待ちを省略し現実のKV作業集合を過小評価する可能性がある"
+    ],
+    "takeaway": "DualPathの本質は、KVキャッシュを『プリフィルがストレージから読むデータ』ではなく『集群内のどのストレージNICでも読み、空いている計算網で必要GPUへ運べるデータ』として扱い直した点にある。SSD/NVMe/分散ファイルシステムをLLM推論へ使う際、容量階層だけでなくNIC配置と転送優先度まで含めて資源プール化する設計を示している。"
+  },
   "reservation": {
-    "claim_id": "claim-16c19eae5e50e9189d704129",
-    "worker_id": "scheduled-chat-00",
+    "claim_id": "claim-756114b706b7d2942b0f7f61",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,12 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-16c19eae5e50e9189d704129",
-  "job_id": "job-research-43a2b5f54de86439",
-  "data": {},
+  "attempt_id": "attempt-756114b706b7d2942b0f7f61",
+  "job_id": "job-research-a5d6d7156c3ffec6",
+  "data": {
+    "scope": "実機システム評価が中心で、シミュレーションではない。単一クラスタのHopper/InfiniBand/3FS構成から最大1,152 GPUまで拡張し、3モデルと生産由来エージェント軌跡でオフライン・オンラインを評価する。一方、他GPU世代、Ethernet/RoCE、別ストレージ、公開ワークロードへの一般化は直接検証していない。",
+    "setup": "InfiniBand接続のGPUクラスタで評価する。各ノードはNVIDIA Hopper GPU 8基、400Gbps RDMA計算NIC 8枚、3FSへ接続する追加ストレージNIC 1枚を持ち、計算網とストレージ網は物理分離される。3FSには内部DRAMキャッシュを置かず、ストレージNICの400Gbpsを飽和可能とする。生産エージェント強化学習から採取した32K・48K・64K上限の各500軌跡を使い、オフラインの一括ロールアウトとオンライン到着の双方を測る。",
+    "models": [
+      "DeepSeek-V3.2 660B",
+      "DeepSeek-V3.2系の内部27B縮小モデル",
+      "Qwen2.5-32B"
+    ],
+    "hardware": [
+      "各ノード8× NVIDIA Hopper GPU",
+      "各GPU対応400Gbps RDMA計算NIC",
+      "各ノード1× 400Gbps級ストレージNIC",
+      "InfiniBand計算網",
+      "3FS分散ストレージ"
+    ],
+    "workloads": [
+      "32K上限: 平均60ターン・追加入力608・生成148・平均文脈17,183トークン",
+      "48K上限: 平均106ターン・追加入力474・生成172・平均文脈25,120トークン",
+      "64K上限: 平均157ターン・追加入力429・生成176・平均文脈32,721トークン",
+      "オフラインRLロールアウト",
+      "ポアソン到着のオンラインエージェントサービス",
+      "追加入力長・生成長・プリフィル/デコード比の感度評価",
+      "最大1,152 GPUの大規模評価"
+    ],
+    "baselines": [
+      "Basic: 未変更の社内推論基盤",
+      "SGL(MC): SGLang commit 19089aa + HiCache + Mooncake Store + 3FS + Mooncake Transfer Engine",
+      "Oracle: DualPathからディスク読出し、H2D/D2H、プリフィル・デコード間KV転送を除いたI/Oゼロ上限"
+    ],
+    "metrics": [
+      "ジョブ完了時間（JCT）",
+      "先頭トークン時間（TTFT）",
+      "第2トークン時間（TTST）",
+      "1トークン当たり時間（TPOT）",
+      "オンライン到着率（APS）容量",
+      "ストレージNIC負荷の最大/平均比",
+      "注意層実行時間の最大/平均比"
+    ],
+    "ablation": "DeepSeek-V3.2 660B、64K上限、1024/2048エージェントで、Basicへ層単位プリフィル、二経路読出し、適応スケジューラを順に追加する。さらにストレージNIC負荷と注意層時間の均衡、追加入力長・生成長、1P1D/2P1D/1P2D比を個別に評価する。",
+    "fairness": "社内基盤との差はBasic→DualPathで測り、SGL(MC)とは実装差があるため直接の高速化倍率を主張しない。オンラインはTTFT≤4秒かつTPOT≤50msをサービス品質目標とし、同じ軌跡再生で容量を比較する。SGL(MC)はDS 27B非対応のため同モデルでは未実施。",
+    "limitations_of_evaluation": "詳細評価はHopper/InfiniBand/3FSという特定の生産構成に依存する。DS 27Bは非公開内部モデルで、SGL(MC)は一部大規模条件で実行エラーとなる。オンライン軌跡再生はターン間・ツール呼出し待ちをゼロと仮定し、現実の作業集合はより大きくなり得る。大規模実験では並列度とP/D比を十分に調整しておらず、等コストの小規模単位群を超える追加利得は示していない。"
+  },
   "reservation": {
-    "claim_id": "claim-16c19eae5e50e9189d704129",
-    "worker_id": "scheduled-chat-00",
+    "claim_id": "claim-756114b706b7d2942b0f7f61",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }
