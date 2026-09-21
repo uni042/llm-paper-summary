@@ -140,7 +140,23 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         and args.github_read
     )
     pipeline_ahead_count = max(int(getattr(args, "pipeline_ahead_count", 0) or 0), 0)
-    if args.global_dependency and not independent_work and not transient_claim_wait and not transient_submission_wait:
+    discovery_precheck_result_pending = bool(getattr(args, "discovery_precheck_result_pending", False))
+    discovery_submission_result_pending = bool(getattr(args, "discovery_submission_result_pending", False))
+    discovery_evaluation_pending = bool(getattr(args, "discovery_evaluation_pending", False))
+    discovery_recovery_required = bool(getattr(args, "discovery_recovery_required", False))
+    discovery_round_in_progress = bool(
+        discovery_precheck_result_pending
+        or discovery_submission_result_pending
+        or discovery_evaluation_pending
+        or discovery_recovery_required
+    )
+    if (
+        args.global_dependency
+        and not independent_work
+        and not transient_claim_wait
+        and not transient_submission_wait
+        and not discovery_round_in_progress
+    ):
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
     hard_stop = bool(reasons)
@@ -149,7 +165,24 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         required_action = "FINALIZE"
         finalization_allowed = True
     elif work_mode == "discovery":
-        if handoff_window_active:
+        if discovery_precheck_result_pending:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_DISCOVERY_PRECHECK_RESULT"
+            finalization_allowed = False
+        elif discovery_submission_result_pending:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"
+            finalization_allowed = False
+        elif discovery_recovery_required:
+            decision = "CONTINUE"
+            required_action = "RECOVER_DISCOVERY_SUBMISSION"
+            finalization_allowed = False
+        elif discovery_evaluation_pending:
+            decision = "CONTINUE"
+            required_action = "CONTINUE_DISCOVERY_ROUND"
+            finalization_allowed = False
+        elif handoff_window_active:
+            reasons.append(handoff_reason or "handoff_window_no_new_discovery_round")
             reasons.append("handoff_window_no_new_discovery_round")
             decision = "STOP_RUN"
             required_action = "FINALIZE"
@@ -189,6 +222,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action = "CONTINUE_ASSIGNED_WORK"
             finalization_allowed = False
         elif handoff_window_active:
+            reasons.append(handoff_reason or "handoff_window_no_new_research_audit_claim")
             reasons.append("handoff_window_no_new_research_audit_claim")
             decision = "STOP_RUN"
             required_action = "FINALIZE"
@@ -255,6 +289,23 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "if_result_still_pending_wait_10_real_seconds_again; repeat_until_result_or_terminal_hard_stop"
         )
 
+    discovery_wait_action = "none"
+    discovery_wait_seconds = 0
+    if required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
+        discovery_wait_seconds = ASYNC_WAIT_POLL_SECONDS
+        discovery_wait_action = (
+            "keep_same_discovery_precheck_request; wait_10_real_seconds; refresh_latest_head_and_matching_precheck_result; "
+            "periodic_discovery_precheck_recovery_will_reprocess_orphaned_requests; "
+            "repeat_until_result_or_final_180_second_handoff"
+        )
+    elif required_action == "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT":
+        discovery_wait_seconds = ASYNC_WAIT_POLL_SECONDS
+        discovery_wait_action = (
+            "keep_same_discovery_submission; wait_10_real_seconds; refresh_latest_head_and_matching_discovery_result; "
+            "periodic_discovery_submission_recovery_will_reprocess_orphaned_submissions; "
+            "repeat_until_result_or_final_180_second_handoff"
+        )
+
     progress_notice = ""
     if required_action == "WAIT_FOR_CLAIM_RESULT":
         progress_notice = (
@@ -266,6 +317,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "1本先行分を提出済みのため、さらに次へ進む前に1本前のsubmission resultを確認します。"
             "pendingなら同じsubmissionを10秒ごとに再確認します。"
         )
+    elif required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
+        progress_notice = (
+            "開始済みDiscovery precheckのresultを待っています。残り600秒の開始禁止窓に入っても"
+            "このroundは終了させず、最終180秒までは同じrequestを10秒ごとに再確認します。"
+        )
+    elif required_action == "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT":
+        progress_notice = (
+            "開始済みDiscovery submissionのresultを待っています。残り600秒の開始禁止窓に入っても"
+            "このroundは終了させず、最終180秒までは同じsubmissionを10秒ごとに再確認します。"
+        )
 
     if required_action == "CHECK_CLAIM_STATE":
         next_action_message = "最新のclaim request/result対応を確認し、pendingなら同一request_idの待機へ進みます。"
@@ -275,6 +336,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
     elif required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
         next_action_message = progress_notice
+    elif required_action in {"WAIT_FOR_DISCOVERY_PRECHECK_RESULT", "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"}:
+        next_action_message = progress_notice
+    elif required_action == "CONTINUE_DISCOVERY_ROUND":
+        next_action_message = "成功済みprecheckの評価・正規Discovery submissionまで、開始済みroundを完了させます。"
+    elif required_action == "RECOVER_DISCOVERY_SUBMISSION":
+        next_action_message = "失敗済みDiscovery precheck/submissionのrecovery_stepsに従い、同じroundを正規経路へ戻します。"
     elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
         if transient_submission_wait and pipeline_ahead_count == 0:
             next_action_message = (
@@ -335,6 +402,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "pipeline_ahead_count": pipeline_ahead_count,
         "submission_wait_action": submission_wait_action,
         "submission_wait_seconds": submission_wait_seconds,
+        "discovery_precheck_result_pending": discovery_precheck_result_pending,
+        "discovery_submission_result_pending": discovery_submission_result_pending,
+        "discovery_evaluation_pending": discovery_evaluation_pending,
+        "discovery_recovery_required": discovery_recovery_required,
+        "discovery_round_in_progress": discovery_round_in_progress,
+        "discovery_wait_action": discovery_wait_action,
+        "discovery_wait_seconds": discovery_wait_seconds,
         "next_action_message": next_action_message,
         "progress_notice": progress_notice,
         "fallback_writable": fallback_writable,
@@ -369,7 +443,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "submission therefore becomes a barrier before the paper after next, not before the immediate next paper; hard "
             "handoff/platform/durability/read "
             "failures override ordinary continuation. The 600-second handoff window forbids new independent work but does not abort an already-started assignment; "
-            "the final 180 seconds force safe handoff. Research/Audit with zero claimable jobs waits and refreshes instead of issuing empty claims or switching modes. "
+            "the final 180 seconds force safe handoff. The 600-second window never aborts an already-started Discovery precheck/evaluation/submission/recovery. Research/Audit with zero claimable jobs waits and refreshes instead of issuing empty claims or switching modes. "
             "Discovery has no exhaustion-based ordinary early stop."
         ),
     }
@@ -395,6 +469,10 @@ def main() -> int:
     ap.add_argument("--submission-state-checked", type=yn, default=False)
     ap.add_argument("--submission-result-pending", type=yn, default=False)
     ap.add_argument("--pipeline-ahead-count", type=int, default=0)
+    ap.add_argument("--discovery-precheck-result-pending", type=yn, default=False)
+    ap.add_argument("--discovery-submission-result-pending", type=yn, default=False)
+    ap.add_argument("--discovery-evaluation-pending", type=yn, default=False)
+    ap.add_argument("--discovery-recovery-required", type=yn, default=False)
     ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
     ap.add_argument("--seconds-to-run-deadline", type=int, default=None)
