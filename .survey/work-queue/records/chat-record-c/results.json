@@ -1,69 +1,16 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ee1dbc63016bc978f29dcb47",
-  "job_id": "job-research-a5d6d7156c3ffec6",
-  "data": {
-    "headline": "DualPathは生産エージェント軌跡を用いた実機評価で、DeepSeek-V3.2 660Bのオフライン推論をBasic比最大1.87倍高速化する。オンラインではサービス品質目標を維持したまま容量をDS 27Bで1.67倍、DS 660Bで2.25倍にし、平均1.96倍を達成する。二経路読出しが最大の寄与を持ち、完全構成ではJCTをBasic比45.62%短縮する。",
-    "quantitative": [
-      {
-        "metric": "DS 660B オフライン高速化",
-        "value": "最大1.87× vs Basic"
-      },
-      {
-        "metric": "DS 27B オフライン高速化",
-        "value": "最大1.78× vs Basic"
-      },
-      {
-        "metric": "追加入力長感度でのDS 660B高速化",
-        "value": "1.82–1.99× vs Basic"
-      },
-      {
-        "metric": "P/D比感度でのDS 27B高速化",
-        "value": "平均1.64×、最大2.46× vs Basic"
-      },
-      {
-        "metric": "オンライン容量",
-        "value": "DS 27B 1.67×、DS 660B 2.25×、平均1.96×"
-      },
-      {
-        "metric": "層単位プリフィル追加後のJCT",
-        "value": "Basic比17.21%短縮"
-      },
-      {
-        "metric": "二経路読出し追加後のJCT",
-        "value": "Basic比38.19%短縮"
-      },
-      {
-        "metric": "完全DualPathのJCT",
-        "value": "Basic比45.62%短縮"
-      },
-      {
-        "metric": "ストレージNIC負荷の最大/平均比",
-        "value": "輪番1.53 → DualPath 1.18"
-      },
-      {
-        "metric": "注意層時間の最大/平均比",
-        "value": "タスク前半5%で最小1.06"
-      },
-      {
-        "metric": "大規模オフライン",
-        "value": "2P4D/2K agents 3167s → 48P96D/48K agents 3201s"
-      },
-      {
-        "metric": "大規模オンライン",
-        "value": "0.4 APS → 8.8 APS（22×）、類似遅延"
-      }
-    ],
-    "comparative_summary": "Basic 1P1DとBasic 1P2D、DualPath 1P1DとBasic 2P1Dなど、利用可能なストレージ帯域が等しい構成同士が近い性能になるため、エージェント型ワークロードではストレージ帯域が主律速であることを裏付ける。DualPathはDSモデルで各ノード80GBのDRAMバッファを使う一方、SGL(MC)設定は各ノード合計1.5TB DRAMを使用する。",
-    "why_it_works": "長文脈・短追加入力では既存KVの読出し量に対して新規計算量が小さく、プリフィル側ストレージNICだけを使う従来方式はGPUを待たせる。DualPathはデコード側の遊休ストレージNICも読出しへ参加させ、計算ネットワークの空き時間でKVをプリフィルへ戻すため、集群全体のストレージ帯域を利用できる。優先度付き転送と負荷適応スケジューリングにより、この追加通信がモデル実行や特定NICへ新たな偏りを作るのを抑える。",
-    "negative_or_tradeoffs": "利得はI/O律速時に大きく、追加入力や生成が長く計算比率が上がるとBasicとの差が縮む。デコード側DRAMバッファと追加H2DはDRAM/CNIC帯域を消費する。DS 27BではOracleより1.09〜1.85倍遅く、オンラインTPOTもOracleより高いため、小モデルでは基礎的なP-D KV転送費用が残る。現行スケジューラは一要求のKVをPE/DE両側へ分割して同時読出しせず、より細粒度な帯域利用は未解決である。",
-    "reproducibility": "DualPath固有実装は社内推論基盤への約5K行の変更として記載され、公開リポジトリは示されていない。基盤部品の3FS、FlashMLA、DeepGEMM、DeepEPは公開されているが、論文全体の再現には社内実装・生産軌跡・大規模Hopper/InfiniBand環境が必要である。"
-  },
-  "reservation": {
-    "claim_id": "claim-ee1dbc63016bc978f29dcb47",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ee1dbc63016bc978f29dcb47","job_id":"job-research-a5d6d7156c3ffec6",
+  "data":{
+    "overview":"DualPathの主結果は、エージェント型の長文脈・短追加入力で律速になるストレージ読出し帯域を、プリフィル側だけでなくデコード側まで束ねることで、GPU追加なしに実効処理量を大きく増やせることである。DeepSeek-V3.2 660Bではオフラインを最大1.87倍高速化し、オンラインでもTTFT≤4秒・TPOT≤50msを守りながら平均1.96倍の到着容量を支える。消融では二経路読出しが主要な改善源であり、単なるバッチ調整ではなくストレージ帯域の構造的偏りを除くことが効いている。",
+    "headline":"DualPathは生産エージェント軌跡を用いた実機評価で、DeepSeek-V3.2 660Bのオフライン推論をBasic比最大1.87倍高速化する。オンラインではサービス品質目標を維持したまま容量をDS 27Bで1.67倍、DS 660Bで2.25倍にし、平均1.96倍を達成する。二経路読出しが最大の寄与を持ち、完全構成ではJCTをBasic比45.62%短縮する。",
+    "key_results":[{"metric":"DS 660B オフライン高速化","value":"最大1.87× vs Basic"},{"metric":"DS 27B オフライン高速化","value":"最大1.78× vs Basic"},{"metric":"オンライン容量","value":"DS 27B 1.67×、DS 660B 2.25×、平均1.96×"},{"metric":"完全DualPathのJCT","value":"Basic比45.62%短縮"},{"metric":"ストレージNIC負荷の最大/平均比","value":"輪番1.53 → DualPath 1.18"},{"metric":"大規模オンライン","value":"0.4 APS → 8.8 APS（22×）、類似遅延"}],
+    "quantitative":[{"metric":"DS 660B オフライン高速化","value":"最大1.87× vs Basic"},{"metric":"DS 27B オフライン高速化","value":"最大1.78× vs Basic"},{"metric":"追加入力長感度でのDS 660B高速化","value":"1.82–1.99× vs Basic"},{"metric":"P/D比感度でのDS 27B高速化","value":"平均1.64×、最大2.46× vs Basic"},{"metric":"オンライン容量","value":"DS 27B 1.67×、DS 660B 2.25×、平均1.96×"},{"metric":"層単位プリフィル追加後のJCT","value":"Basic比17.21%短縮"},{"metric":"二経路読出し追加後のJCT","value":"Basic比38.19%短縮"},{"metric":"完全DualPathのJCT","value":"Basic比45.62%短縮"},{"metric":"ストレージNIC負荷の最大/平均比","value":"輪番1.53 → DualPath 1.18"},{"metric":"注意層時間の最大/平均比","value":"タスク前半5%で最小1.06"},{"metric":"大規模オフライン","value":"2P4D/2K agents 3167s → 48P96D/48K agents 3201s"},{"metric":"大規模オンライン","value":"0.4 APS → 8.8 APS（22×）、類似遅延"}],
+    "comparative_summary":"Basic 1P1DとBasic 1P2D、DualPath 1P1DとBasic 2P1Dなど、利用可能なストレージ帯域が等しい構成同士が近い性能になるため、エージェント型ワークロードではストレージ帯域が主律速であることを裏付ける。DualPathはDSモデルで各ノード80GBのDRAMバッファを使う一方、SGL(MC)設定は各ノード合計1.5TB DRAMを使用する。",
+    "why_it_works":"長文脈・短追加入力では既存KVの読出し量に対して新規計算量が小さく、プリフィル側ストレージNICだけを使う従来方式はGPUを待たせる。DualPathはデコード側の遊休ストレージNICも読出しへ参加させ、計算ネットワークの空き時間でKVをプリフィルへ戻すため、集群全体のストレージ帯域を利用できる。優先度付き転送と負荷適応スケジューリングにより、この追加通信がモデル実行や特定NICへ新たな偏りを作るのを抑える。",
+    "negative_results":"追加入力や生成が長くなるとGPU計算の比率が上がり、Basicとの差は縮小する。DS 27BではDualPathでもI/OゼロのOracleより1.09〜1.85倍遅く、小モデルのオンラインTPOTもOracleより高い。大規模構成は近線形に拡張したが、等コストの複数小規模単位を超える追加のJCT/容量利得は、並列度とP/D比を十分調整していないため示せていない。",
+    "interpretation":"改善幅が長文脈・短追加入力で大きいのは、一要求当たりの新規計算より既存KV読出しが支配的になるからである。追加入力が増えると計算律速へ寄り、生成が長いとプリフィル間隔が広がってストレージ読出し圧が下がるため二経路化の相対利得は小さくなる。P/D比を変えた実験で『使えるストレージ帯域が同じ構成は性能も近い』ことが、帯域集約が主要因であることを直接示す。",
+    "quality_impact":"DualPathはKVキャッシュの値を量子化・削除・近似せず、同じモデル計算結果を別経路で運ぶシステム最適化である。このためモデル精度・生成品質を犠牲にする近似手法ではなく、品質面は原理上損失なしである。代わりに通信経路、DRAMバッファ、QoS設定、スケジューラの複雑性を追加する。",
+    "negative_or_tradeoffs":"利得はI/O律速時に大きく、追加入力や生成が長く計算比率が上がるとBasicとの差が縮む。デコード側DRAMバッファと追加H2DはDRAM/CNIC帯域を消費する。現行スケジューラは一要求のKVをPE/DE両側へ分割して同時読出しせず、より細粒度な帯域利用は未解決である。",
+    "reproducibility":"DualPath固有実装は社内推論基盤への約5K行の変更として記載され、公開リポジトリは示されていない。基盤部品の3FS、FlashMLA、DeepGEMM、DeepEPは公開されているが、論文全体の再現には社内実装・生産軌跡・大規模Hopper/InfiniBand環境が必要である。"
+  },"reservation":{"claim_id":"claim-ee1dbc63016bc978f29dcb47","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
