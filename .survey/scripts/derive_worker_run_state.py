@@ -285,8 +285,13 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
     github_read = runtime != "github_read_unavailable"
     durable_unavailable = runtime == "durable_transports_unavailable"
     platform_limit = runtime == "platform_context_limit"
-    global_dependency = runtime == "transport_unrecoverable"
-    independent_work = _independent_work(root, work_mode, selector)
+    transport_unrecoverable = runtime == "transport_unrecoverable"
+    global_dependency = durable_unavailable or transport_unrecoverable
+    independent_work = (
+        False
+        if global_dependency
+        else _independent_work(root, work_mode, selector)
+    )
 
     args = argparse.Namespace(
         github_read=github_read,
