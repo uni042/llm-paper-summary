@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 10:06:07 JST**
+> 自動生成: **2026-09-21 10:06:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -174,7 +174,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.14778/3827998.3828047` — PolarKV: Tier Locally, Serve Globally-A KV Cache over Cloud Memory and Storage / worker `scheduled-chat-llm-paper-worker-00`
-  - claim: **09-21 10:03:11 JST** / heartbeat: **—** / lease expiry: **09-21 11:33:11 JST**
+  - claim: **09-21 10:06:23 JST** / heartbeat: **—** / lease expiry: **09-21 11:36:23 JST**
   - evidence: `.survey/work-queue/claims/job-research-b865a4d050e3e427.json`
 
 #### Audit
