@@ -12,7 +12,7 @@
   "source_url": "https://www.semanticscholar.org/paper/6db782df823d9da204a59180305aba81d47b3997",
   "paper_path": "papers/inference/99-other-inference-systems/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-serving-systems.md",
   "selection_reason": "KVLearn makes cache admission/retention cost-aware in disaggregated serving, jointly modeling reuse, recompute, network transfer and storage; reports up to 56% TTFT reduction and 53% less transfer volume.",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -36,6 +36,5 @@
     }
   ],
   "last_blocked_at": "2026-09-21T15:41:58+00:00",
-  "completed_at": "2026-09-21T15:41:58+00:00",
-  "retry_not_before": "2026-09-21T20:28:13+00:00"
+  "retry_queued_at": "2026-09-21T22:48:29+00:00"
 }

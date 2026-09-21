@@ -12,7 +12,7 @@
   "source_url": "https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2608.08878-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-llm-inference.md",
   "selection_reason": "KV cache evictionを逐次意思決定として学習し、KL divergence報酬でfull-cache出力分布を保持する。25% cache budgetでLongBench精度94.2%、最大2.1x throughputを報告し、KV cache圧縮系統に直接関連する。",
-  "status": "blocked",
+  "status": "blocked_permanent",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -21,8 +21,8 @@
   "created_at": "2026-09-20T23:10:45+00:00",
   "blocker": "Primary full text could not be safely retrieved in this invocation. The official arXiv abstract for arXiv:2608.08878 was reachable and confirms the paper metadata/abstract, but the official arXiv PDF and HTML full-text routes were inaccessible in the available retrieval environment. Workflow v10 requires reading the primary source in full, so no five-slot research record was synthesized from the abstract or third-party material.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-53b927057194e949fa1b57c5.json",
-  "blocked_attempts": 2,
-  "last_recorded_blocked_event": "2026-09-21T09:32:21+00:00",
+  "blocked_attempts": 3,
+  "last_recorded_blocked_event": "2026-09-21T19:31:49+00:00",
   "block_history": [
     {
       "attempt": 1,
@@ -33,9 +33,14 @@
       "attempt": 2,
       "blocked_at": "2026-09-21T09:32:21+00:00",
       "reason": "Primary full text could not be safely retrieved in this invocation. The official arXiv abstract for arXiv:2608.08878 was reachable, but official arXiv HTML/full-text retrieval failed in the available retrieval environment. Third-party reproductions and summaries were discoverable, but workflow v10 requires reading the primary source in full, so no five-slot research record was synthesized from them."
+    },
+    {
+      "attempt": 3,
+      "blocked_at": "2026-09-21T19:31:49+00:00",
+      "reason": "Primary full text could not be safely retrieved in this invocation. The official arXiv abstract for arXiv:2608.08878 was reachable and confirms the paper metadata/abstract, but the official arXiv PDF and HTML full-text routes were inaccessible in the available retrieval environment. Workflow v10 requires reading the primary source in full, so no five-slot research record was synthesized from the abstract or third-party material."
     }
   ],
-  "last_blocked_at": "2026-09-21T09:32:21+00:00",
-  "retry_queued_at": "2026-09-21T19:28:13+00:00",
-  "completed_at": "2026-09-21T19:31:49+00:00"
+  "last_blocked_at": "2026-09-21T19:31:49+00:00",
+  "completed_at": "2026-09-21T19:31:49+00:00",
+  "blocked_permanent_at": "2026-09-21T22:48:29+00:00"
 }
