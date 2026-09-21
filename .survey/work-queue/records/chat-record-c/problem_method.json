@@ -5,36 +5,36 @@
   "attempt_id": "attempt-885c7b91c948ae3e1ef817e0",
   "job_id": "job-research-f2c000a0ecb53008",
   "data": {
-    "problem": "LLM servingではchatの短promptから要約・code・legal documentの4K〜100K token級長promptまでが混在し、TTFT/TBT/JCTのSLOもapplicationごとに異なる。従来chunkingは長promptを分割してGPUを埋めるが、heterogeneous SLOを考慮せず、iteration latencyを悪化させる場合がある。\n\nさらにGPU computeだけを満杯にしてもKV cacheが先に枯渇するとrequestを追加できずthroughputは伸びない。長promptを同時に多く走らせるとKVCを長時間占有し、FCFSではSLOの厳しいrequestと緩いrequestが混ざってGPU利用率とSLO達成率の両方を落とす。",
-    "novelty": "AccelGenはiteration-level SLOをschedulerの中心へ置き、GPU compute token budgetとKVC容量を同時に扱う。SLOから許容forward sizeを逆算してdynamic chunkingし、長promptの同時実行数を制限してKVCを早く解放する。\n\nさらにTTFT/TBTまたはJCT SLOをiteration-level deadlineへ変換し、残り猶予でrequestを並べ替える。そのうえでGPU token容量とKVC空き容量の2次元需要を見てbatchを選び、単一resource最大化ではなく両resourceの残余を同時に小さくする。",
-    "method_overview": "入力はwaiting queue中のprompt/token-generation task、各requestのTTFT/TBTまたはJCT SLO、prompt/sequence長、GPUのpivot forward size、KVC空き容量である。schedulerはまずSLOをiteration-level remaining timeへ正規化し、urgent requestを優先しつつSLOが近いrequestを並べる。次にbatchの最厳SLOとGPU性能profileから許容token budgetを決め、長promptはそのbudgetとKVC block境界に合わせてchunk化する。\n\niteration終了後、未完了TGをschedulerへ戻し、urgent requestをbatchへ固定する。resource不足なら残り猶予が大きいrequestをpreemptし、その後GPU compute需要とKVC需要を同時に満たせるrequest/chunkを選ぶ。長promptの同時数も制限してKVCを早期解放する。形成したbatchをvLLM execution engineへ渡し、このloopを繰り返してthroughput、goodput、SLO attainment、JCT/response latencyを最適化する。",
+    "problem": "大規模言語モデルの推論提供では、対話の短い入力から要約・コード・法務文書の長い入力までが混在し、最初の字が出るまでの時間、字を続けて出す間隔、仕事全体の完了時間について、用途ごとに異なるサービス水準目標を満たす必要がある。従来の分割処理は長い入力を細かくして計算装置を埋めるが、要求ごとの締切の違いを十分に考えないため、一回の反復処理が長引いて厳しい要求を遅らせる場合がある。\n\nさらに計算量だけを満杯にしても、鍵値キャッシュの空きが先に尽きれば新しい要求を追加できず、処理量は伸びない。長い入力を同時に多数走らせるとキャッシュを長時間占有するため、到着順だけで処理する方式では厳しい要求と緩い要求が同じ組に混ざり、計算装置の利用率と期限内完了率の双方を落とす。したがって問題は、単一の資源を最大限使うことではなく、計算時間、キャッシュ容量、要求ごとの残り猶予を反復ごとに同時調整することにある。",
+    "novelty": "AccelGenの新規性は、反復単位のサービス水準目標をスケジューラの中心に置き、計算装置で処理できる字数と鍵値キャッシュ容量を同時に扱う点にある。目標から許容できる一回の処理量を逆算して長い入力を動的に分割し、長い入力の同時実行数を抑えることで、完了した要求からキャッシュを早く返却する。\n\nまた、最初の字までの時間、字間隔、仕事完了時間という異なる目標を反復単位の締切へ変換し、残り猶予に基づいて要求を並べ替える。そのうえで計算側の残容量とキャッシュ側の残容量という二種類の需要を見ながら処理組を作る。片方だけを使い切るのではなく、両方の残余を同時に小さくするため、長い入力が多い場合にも計算装置だけが空く状態や、逆にキャッシュだけが詰まる状態を避けられる。",
+    "method_overview": "入力は待機中の入力処理・生成処理、各要求のサービス水準目標、入力長と系列長、計算装置が飽和する処理量、鍵値キャッシュの空き容量である。スケジューラはまず各目標を反復単位の残り時間へ正規化し、締切に近い要求を優先しながら、残り時間が近い要求を同じ候補群へまとめる。次に、その候補群で最も厳しい目標と事前測定した計算性能から、一回の反復で許容できる字数を決める。長い入力は、その字数上限とキャッシュのブロック境界の双方に合わせて分割される。\n\n反復が終わると、まだ生成が終わっていない要求を再びスケジューラへ戻す。締切に近い要求は次の処理組へ優先的に残し、資源が不足する場合には残り猶予の大きい要求から一時退避させる。その後、各候補について計算量と新たに必要なキャッシュ量を見積もり、両方の残容量に収まる要求を選ぶ。長い入力の同時実行数も制限し、完了した要求が持っていたキャッシュを早く解放する。\n\nこの処理は、締切の管理、処理量上限の決定、長い入力の分割、要求の優先順位付け、二資源を考慮した処理組形成、実行、完了後の再評価という順序で反復される。重要なのは、各段階が独立した小技ではなく、前段で決めた残り時間と資源予算を後段が引き継ぐ一つの制御ループになっている点である。これにより、生の処理量だけでなく、期限内に完了した要求数としての実効処理量も同時に高める設計になっている。",
     "components": [
       {
-        "name": "iteration-level SLO変換",
-        "description": "userが指定するTTFT/TBTまたはjob-level JCT SLOを、各requestが現在iterationで使えるremaining timeへ変換する。入力はarrival時刻、経過時間、残りtoken/iteration見積りとSLOで、deadlineまでの余裕をschedulerが比較可能な共通尺度にする。\n\nJCT SLOしかないoffline jobもiteration-level予算へ分解するため、online/offlineを同じqueueで扱える。remaining timeが閾値へ近づいたrequestをurgentと判定し、後段のbatchingで必ず優先する。"
+        "name": "反復単位のサービス水準目標変換",
+        "description": "利用者が指定する最初の字までの時間、字間隔、または仕事全体の完了時間を、各要求が現在の反復で使える残り時間へ変換する。到着時刻、経過時間、残りの生成量や反復回数の見積りと目標値を使い、異なる種類の要求を同じ残り猶予という尺度で比較できるようにする。\n\n仕事全体の完了時間しか与えられない一括処理も反復ごとの予算へ分解するため、対話型と一括型を同じ待機列で扱える。残り時間が小さい要求は緊急と判定され、後段の処理組形成で優先される。この変換により、単に古い要求を先にするのではなく、今この反復で遅らせると目標違反へ近づく要求を識別できる。さらに残り猶予を毎回更新するので、一度決めた優先順位を固定せず、生成の進行や待ち時間の増加を次の判断へ反映できる。"
       },
       {
-        "name": "SLO保証付きtoken budget決定",
-        "description": "GPUを飽和させるpivot forward sizeをprofileし、batch内で最も厳しいiteration SLOを超えない範囲でtarget forward sizeを決める。入力はmodel/GPU profileとSLO、現在TG数で、単純固定token budgetよりSLO違反を避ける。\n\nSLOが緩いbatchではpivot付近までtokenを詰めてcompute utilizationを高め、厳しいbatchではbudgetを縮めてiteration timeを抑える。SLOが似たrequestを同時にbatchすることで、最厳SLOに全requestが引きずられる損失も減らす。"
+        "name": "目標保証付き処理量上限の決定",
+        "description": "計算装置を十分に利用できる一回の処理量を事前に測定し、処理組の中で最も厳しい反復目標を超えない範囲で、その回に処理する字数の上限を決める。入力は機種とモデルの性能測定値、現在の目標、生成中要求の数であり、常に同じ固定上限を使う方式より期限違反を避けやすい。\n\n目標が緩い処理組では飽和点付近まで仕事を詰めて計算利用率を高め、目標が厳しい処理組では一回の仕事量を縮めて反復時間を抑える。残り猶予が近い要求をまとめるため、非常に厳しい一件のために緩い要求まで過度に小さな処理量へ引きずられる損失も減る。この段階は後続の長入力分割へ直接上限を渡し、計算量を増やす判断が締切管理と矛盾しないようにする役割を持つ。"
       },
       {
-        "name": "dynamic long-prompt chunking",
-        "description": "長promptを固定長ではなく、そのiterationの残GPU token budgetとKVC block allocationに合わせて動的に切る。chunkはtarget forward sizeを満たす長さ、またはKVCをちょうど使い切る長さの短い方を選び、SLOを守りながらcomputeを埋める。\n\n長promptを一度に全処理しないため他requestのiterationを極端に延ばさず、複数iterationへ負荷を分散できる。同時に走る長prompt数を制限して、完了したrequestからKVCを早く返却させる。"
+        "name": "長い入力の動的分割",
+        "description": "長い入力を固定長で切るのではなく、その反復で残っている計算側の字数予算と、鍵値キャッシュのブロック割当の双方に合わせて動的に切る。分割片は、計算側の目標処理量を満たす長さと、利用可能なキャッシュへ安全に収まる長さを比較して決める。これにより、締切を守りながら計算装置へ十分な仕事を供給できる。\n\n長い入力を一度に全処理しないため、他の要求の一回の待ち時間を極端に延ばさず、複数回へ負荷を分散できる。同時に走る長い入力の数も抑えるため、少数の要求を早めに完了させ、その要求が占有していたキャッシュを後続へ返せる。固定分割だけでは計算側には都合がよくてもキャッシュ側に無駄が出る場合があるが、この方式は両方の残量を見て分割長を変えるため、二資源最適化の入口として働く。"
       },
       {
-        "name": "SLO優先queue ordering",
-        "description": "waiting queueを単純FCFSではなくremaining SLO timeで並べ、urgent requestを最優先する。非urgentでもremaining timeが近いrequest群を候補にすることで、同じbatch内のSLOばらつきを抑える。\n\nresource不足でpreemptionが必要な場合はremaining timeが最も大きいrequestを外し、deadlineに近いrequestを残す。これによりGPU利用率だけを最大化するschedulerよりSLO attainmentとgoodputを直接改善する。"
+        "name": "サービス水準目標を優先する待機列",
+        "description": "待機列を単純な到着順ではなく残り猶予で並べ、締切に近い要求を最優先する。まだ緊急でない要求についても残り時間が近いものを同じ候補群へ集めることで、一つの処理組に極端に異なる締切が混ざることを抑える。\n\n資源不足で一時退避が必要な場合は、残り猶予が最も大きい要求から外し、期限に近い要求を残す。これにより、計算装置の利用率だけを最大化する方式より、期限内完了率と実効処理量を直接改善する。優先順位は各反復で再計算されるため、当初は余裕があった要求も待ち時間が増えれば自然に優先度が上がる。したがって、固定優先度よりも混雑状態の変化へ追従しやすい。"
       },
       {
-        "name": "multi-resource-aware batching",
-        "description": "各候補requestについてGPU compute需要をtoken数、KVC需要を未割当block数で計算し、現在のGPU余力とKVC空きの両方へ収まるものだけを選ぶ。prompt chunkとTGではKVC需要計算が異なるため、既割当blockも考慮する。\n\n候補の中から選択後にGPU残余とKVC残余が同時に小さくなるrequestを貪欲に追加する。computeだけを埋めてKVCを余らせる、またはKVCだけを埋めてGPUが遊ぶ状態を避け、2 resourceのjoint utilizationを高める。"
+        "name": "複数資源を考慮した処理組形成",
+        "description": "各候補要求について、計算需要を処理字数、キャッシュ需要を新たに必要なブロック数として見積もり、現在の計算余力とキャッシュ空きの両方へ収まるものだけを選ぶ。入力処理の分割片と生成処理では追加キャッシュ量が異なるため、すでに割り当て済みのブロックも考慮する。\n\n候補を一件追加した後に、計算側とキャッシュ側の残余が同時に小さくなる要求を順に加える。計算だけを埋めてキャッシュを余らせる状態、またはキャッシュだけを埋めて計算装置が遊ぶ状態を避けるのが狙いである。二つの資源を同じ選択判断へ入れることで、どちらがその時点の律速要因になっても処理組を調整できる。長い入力比率が変わるとキャッシュ需要も変わるため、この再評価を反復ごとに行うことが重要になる。"
       },
       {
-        "name": "urgent保持とKVC早期解放",
-        "description": "iterationをまたぐTG requestは可能な限りbatchへ保持して完了を早め、完了時に占有KVCをまとめて解放できるようにする。urgent requestはbatchへ先に入れ、resource超過時だけ猶予の大きいrequestをpreemptする。\n\nこの方針は単純な公平性よりgoodputとresource recyclingを重視する。特に長promptが多いtraceではKVC占有期間を短縮し、後続requestを早く受け入れられるためthroughputとSLO達成の双方へ効く。"
+        "name": "緊急要求の保持とキャッシュ早期解放",
+        "description": "反復をまたぐ生成要求は可能な範囲で次の処理組へ保持して完了を早め、完了時に占有していた鍵値キャッシュをまとめて解放できるようにする。締切に近い要求は先に処理組へ入れ、資源超過が起きた場合にだけ、残り猶予が大きい要求を一時退避させる。\n\nこの方針は、すべての要求へ同じ機会を与える単純な公平性より、期限内に完了する要求数と資源の再利用速度を重視する。特に長い入力が多い負荷では、未完了要求を大量に抱えてキャッシュを薄く分けるより、完了可能な要求を前へ進めてキャッシュを返却した方が後続を早く受け入れられる。したがって、この要素は優先順位制御だけでなく、キャッシュ占有時間そのものを短くする役割を持つ。処理量改善と期限内完了率改善が同じ方向へ働くよう、完了と資源返却を結び付ける点が重要である。"
       }
     ],
-    "system_design": "AccelGenはvLLMのblock-based KV cacheとexecution engineを利用し、その前段schedulerをSLO-awareかつmulti-resource-awareへ置換する。request arrival、iteration完了、preemptionを契機にqueue priorityとbatchを再計算する。\n\nGPU saturation profileとKVC block accountingをschedulerへ入力し、dynamic chunking、urgent handling、2-resource selectionを一つのiteration loopへ統合する。"
+    "system_design": "AccelGenは既存の大規模言語モデル実行基盤が持つブロック単位の鍵値キャッシュと実行機構を利用し、その前段のスケジューラを、サービス水準目標と複数資源を同時に見る方式へ置き換える。要求到着、反復完了、一時退避を契機に、待機列の優先順位と次の処理組を再計算する。\n\n計算装置の飽和点を示す事前測定値とキャッシュのブロック使用量をスケジューラへ入力し、長入力の動的分割、緊急要求の保持、二資源を考慮した選択を一つの反復制御へ統合する。実行機構そのものやモデル重みを変更しないため、提案の中心は推論計算の近似ではなく、いつ、どの要求を、どれだけ一緒に実行するかという資源配分である。"
   },
   "reservation": {
     "claim_id": "claim-885c7b91c948ae3e1ef817e0",
