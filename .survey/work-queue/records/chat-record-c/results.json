@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c0252f3f2f32f98ad4a9fd34",
+  "attempt_id": "attempt-fb7bf71e5773348f7e7de3c0",
   "job_id": "job-research-a5d6d7156c3ffec6",
   "data": {
     "overview": "DualPathの主結果は、エージェント型の長文脈・短追加入力で律速になるストレージ読出し帯域を、プリフィル側だけでなくデコード側まで束ねることで、GPU追加なしに実効処理量を大きく増やせることである。DeepSeek-V3.2 660Bではオフラインを最大1.87倍高速化し、オンラインでもTTFT≤4秒・TPOT≤50msを守りながら平均1.96倍の到着容量を支える。消融では二経路読出しが主要な改善源であり、単なるバッチ調整ではなくストレージ帯域の構造的偏りを除くことが効いている。",
@@ -82,7 +82,7 @@
     "reproducibility": "社内基盤への約5K行の変更でDualPath固有実装は非公開。3FS等の基盤部品は公開されるが、生産軌跡と大規模環境も必要で完全再現性は限定的。"
   },
   "reservation": {
-    "claim_id": "claim-c0252f3f2f32f98ad4a9fd34",
+    "claim_id": "claim-fb7bf71e5773348f7e7de3c0",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
