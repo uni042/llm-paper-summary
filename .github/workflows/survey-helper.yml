@@ -5,8 +5,6 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/submissions/*.json'
-      - '.survey/work-queue/transport/offline-job-seed.json'
-      - '.survey/work-queue/transport/request-jobs.json'
       - '.survey/work-queue/fallback-inbox/*.json'
   workflow_dispatch:
   schedule:
@@ -96,12 +94,6 @@ jobs:
               check=True,
           )
           PY
-
-      - name: Materialize offline spillover jobs
-        run: python .survey/scripts/apply_offline_job_seed.py --root .survey
-
-      - name: Apply checkpoint-aware job requests
-        run: python .survey/scripts/apply_transport_requests.py --root .survey
 
       - name: Suppress stale duplicate research jobs
         run: python .survey/scripts/dedupe_queue.py --root .survey
