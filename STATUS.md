@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 11:18:47 JST**
+> 自動生成: **2026-09-21 11:19:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -194,7 +194,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.08081` — RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention / worker `scheduled-chat-llm-00`
-  - claim: **09-21 11:16:25 JST** / heartbeat: **—** / lease expiry: **09-21 12:46:25 JST**
+  - claim: **09-21 11:19:13 JST** / heartbeat: **—** / lease expiry: **09-21 12:49:13 JST**
   - evidence: `.survey/work-queue/claims/job-research-4e59361c33e66a27.json`
 
 #### Audit
