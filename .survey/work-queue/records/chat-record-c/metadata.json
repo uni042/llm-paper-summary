@@ -1,1 +1,61 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a00d8b41e72274b2614df863","job_id":"job-research-be16d214d5c628cd","data":{"canonical_id":"arXiv:2608.04502","arxiv_id":"2608.04502","doi":"10.48550/arXiv.2608.04502","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI"]},"title":"AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation","summary":"AFD-Ledgerは、MoE推論のAttention–FFN分離配置（AFD）が固定予算・TPOT SLO下で最適な同居配置を本当に上回るかを、ハードウェア割当と配置構成を独立に最適化して比較するオフライン分析プロビジョニング系である。軽量な役割別ハードウェア推定と、評価回数を20組に制限した探索を組み合わせ、完全列挙可能な設定では全64/121組に対し68.8〜83.5%の完全配置評価を削減しながら大域最適解を回収した。","list_summary":"AFDと同居配置を同一予算・TPOT SLOで独立最適化し、少数のハードウェア組だけを完全評価して最適配置を探索する分析プロビジョニング系。","authors":["Chengyu Qiu","Xiao Fu","Fengcun Li","Yulei Qian","Yuchen Xie","Xunliang Cai","Yingdi Shan","Yongwei Wu","Mingxing Zhang"],"published":"2026-08-05","publication":"arXiv preprint","publication_type":"Preprint","publication_status":"arXiv v1","source":"https://arxiv.org/abs/2608.04502","sources":["https://arxiv.org/abs/2608.04502","https://arxiv.org/html/2608.04502v1","https://github.com/kvcache-ai/AFD-Ledger"],"primary_url":"https://arxiv.org/abs/2608.04502","html_url":"https://arxiv.org/html/2608.04502v1","pdf_url":"https://arxiv.org/pdf/2608.04502","implementation_url":"https://github.com/kvcache-ai/AFD-Ledger","implementation":"公開リポジトリにオフライン分析プロビジョニング実装があり、論文では約5,700行（テスト除外）と報告。物理検証用には社内SGLang-FluentLLM上へLongCat 2.0向けAFD実行系を別実装し、Python/AscendCで8,000行超と報告する。","last_checked":"2026-09-22","code":"https://github.com/kvcache-ai/AFD-Ledger","hardware_evaluation":"商用カタログEはH200/H100/A100/L40S/L4/RTX PRO 6000 Server、拡張SはB200/B300と模擬役割特化デバイスを含む。物理検証はLongCat 2.0、Ascend 910C、160 cards、32K/64K/120K context。","quality_effect":"モデル重みや生成アルゴリズムを変更せず、配置候補の分析・選択を行うため生成品質への直接影響はない。主指標はTPOT SLOを満たすdecode throughputと配置選択の正しさ。","references_checked_at":"2026-09-22","references_source":"https://arxiv.org/html/2608.04502v1","references_total":0,"references":[],"lineage":"MoE serving / Attention-FFN disaggregation / analytical provisioning / hardware-aware deployment search","topics":["MoE inference","Attention-FFN disaggregation","deployment provisioning","hardware search","TPOT SLO","heterogeneous accelerators"]},"reservation":{"claim_id":"claim-a00d8b41e72274b2614df863","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-5c5cef0e8b4a937f3bb1a4ec",
+  "job_id": "job-research-f2c000a0ecb53008",
+  "data": {
+    "canonical_id": "DOI:10.1145/3832810.3832922",
+    "arxiv_id": "2503.13737",
+    "doi": "10.1145/3832810.3832922",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "title": "Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving",
+    "summary": "ICPP 2026版のAccelGenは、短長promptと異種SLOが混在するLLM servingで、SLO保証付きdynamic chunking、iteration-level SLO優先度、GPU計算とKV cacheを同時に満たすmulti-resource batchingを統合する。20K requestのtrace-driven実機評価でthroughput 1.42〜11.21倍、goodput 1.43〜13.71倍、SLO達成率37〜90%向上を報告する。",
+    "list_summary": "異種SLO下でdynamic chunkingとGPU/KV cache同時最適化batchingを行い、throughput・goodput・SLO達成を大幅改善するAccelGen。",
+    "authors": [
+      "Haiying Shen",
+      "Tanmoy Sen"
+    ],
+    "published": "2026",
+    "publication": "55th International Conference on Parallel Processing (ICPP 2026)",
+    "publication_type": "Conference Paper",
+    "publication_status": "Accepted/Programmed",
+    "source": "https://doi.org/10.1145/3832810.3832922",
+    "sources": [
+      "https://doi.org/10.1145/3832810.3832922",
+      "https://arxiv.org/abs/2503.13737",
+      "https://www.researchgate.net/publication/389946574_AccelGen_Heterogeneous_SLO-Guaranteed_High-Throughput_LLM_Inference_Serving_for_Diverse_Applications"
+    ],
+    "primary_url": "https://arxiv.org/abs/2503.13737",
+    "html_url": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.13737",
+    "implementation_url": null,
+    "implementation": "論文はvLLMを基盤にAccelGen schedulerを実装し、Sarathi-Serve、FastGen、vLLM、FasterTransformer上で再実装したORCAと比較する。公開コードURLは本文から確定できなかった。",
+    "last_checked": "2026-09-21",
+    "code": null,
+    "hardware_evaluation": "AWS p4d.24xlarge、NVIDIA A100 80GB×8、NVSwitch 600GB/s。OPT-13Bは1 GPU、OPT-175Bは8 GPUでpipeline/tensor parallelを使用し、Llama-13B/Llama-3-70Bも評価する。",
+    "quality_effect": "推論計算自体を近似せず、request/chunkのbatchingとpreemption、KV cache割当を変更するsystem手法である。モデル品質指標は主評価ではなく、throughput、goodput、SLO attainment、JCT/latencyを測る。",
+    "references_checked_at": "2026-09-21",
+    "references_source": "https://arxiv.org/abs/2503.13737",
+    "references_total": 0,
+    "references": [],
+    "lineage": "LLM serving / SLO-aware scheduling / prompt chunking / KV-cache-aware batching",
+    "topics": [
+      "LLM serving",
+      "SLO scheduling",
+      "dynamic chunking",
+      "KV cache",
+      "multi-resource batching",
+      "goodput"
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-5c5cef0e8b4a937f3bb1a4ec",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

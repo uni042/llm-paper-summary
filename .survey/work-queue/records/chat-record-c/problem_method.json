@@ -1,1 +1,44 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-a00d8b41e72274b2614df863","job_id":"job-research-be16d214d5c628cd","data":{"problem":"MoE推論でAttentionとFFNを分離するAFDは、FFNのバッチ拡大やKVキャッシュ容量増加など局所的な利点を持つが、固定予算ではFFN専用GPUが要求状態を保持できなくなる『request-bearing-capacity tax』も生む。従来研究は選んだ配置で機構を比較することが多く、同一モデル・負荷・TPOT SLO・予算・ハードウェアカタログの下で、AFDと同居配置をそれぞれ最適化したときにどちらが高スループットかを答えにくい。さらにハードウェア選択まで含めると、各Attention/FFN機種組ごとにworker配分、並列度、batch、replica、pipelineを完全探索する必要があり、列挙コストが急増する。","novelty":"AFD-Ledgerは、AFDの個別機構ではなく『共通のdeployment specification下で独立最適化した完全配置同士を比較する』ことを目的化する。軽量な役割別性能・価格推定で有望なAttention/FFN機種組を絞り、完全プロビジョニング結果をフィードバックして近傍探索し、最後に未評価の上位候補へ予算を使う二段階探索を採用する。局所的な機種指標を最終性能とみなさず、各候補について共通の分析実行モデルでSLO実現可能な最高decode throughputを計算する点が重要である。","method_overview":"入力としてモデルM、workload W、TPOT SLO τ、予算B、ハードウェアカタログH、runtime/parallelism等の共通制約Γを固定する。まず同居配置の最適解を一度求める。AFD側では各デバイスをAttention役・Expert役として代表batch（1,4,16,64）で分析し、役割別service rate、service/price、memory/priceなどを得る。安価・高service・高service/price・高memory/priceの代表デバイスを初期anchorにし、Attention/Expertの価格正規化service rateの調和平均で機種組を順位付けする。\n\n選ばれた各機種組はSearch Engineで完全プロビジョニングし、Attention/Expert worker配分、EP幅、replication、batch、pipeline depth等の合法構成を共通分析モデルで列挙する。メモリ可否、TPOT、schedule、throughputを評価し、その組の最高SLO-feasible throughputを返す。評価済み結果から高throughputかつ役割多様な組を保持し、片側デバイスだけを交換する近傍を生成して再評価する。規定round後に予算が残れば全カタログの未評価上位へ広げ、局所領域への固定を避ける。最終的に最高AFD配置と事前計算した最高同居配置を同一条件で比較する。","components":[{"name":"固定予算性能台帳","description":"AFDと同居配置を要求保持GPU数、GPU当たりresident batch、TPOTの積で分解し、局所的FFN高速化が要求保持容量の損失を返済できるかを明示する。比較対象は手選択したbaselineではなく各architectureの最適SLO-feasible配置。"},{"name":"役割別ハードウェア推定","description":"Attention/Expert役ごとにメモリ可否を確認し、代表batchで分析実行モデルを走らせ、service rateと価格・HBM容量で正規化した軽量指標を作る。これは候補順位付け専用で、配置throughputの代用にはしない。"},{"name":"多anchor初期候補生成","description":"最安、高service、高service/price、高memory/priceなど複数の代表機種を残し、両役割のservice/priceの調和平均で機種組を順位付けする。単一の『Attention向き』『FFN向き』指標への過適合を避ける。"},{"name":"feedback-driven bounded search","description":"完全プロビジョニングで得た実際の配置throughputを使い、役割多様な上位候補を保持して片側機種を交換する近傍を探索する。最後に全体順位から未評価候補を補充し、評価予算Q内で局所解への固定を緩和する。"},{"name":"共通分析プロビジョニング","description":"AFDと同居配置の双方を同一のメモリ検査、TPOT推定、schedule構築、throughput計算で評価する。AFDではworker splitとpipeline depthが追加探索変数となるが、性能モデルとdeployment specificationは共通化する。"}],"system_design":"Catalog Navigatorが軽量役割推定と候補生成・refinementを担当し、Search Engineが選ばれたハードウェア組を完全プロビジョニングする。オフラインPython実装は約5,700行で、完全列挙modeも参照用に備える。分析仮定の検証用としてLongCat 2.0上のAttention pool/Expert pool、dispatch-execute-combine、AFD scheduler、cross-pool通信、microbatch/DP-domain pipelineを備えた物理runtimeも別途実装する。"},"reservation":{"claim_id":"claim-a00d8b41e72274b2614df863","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-5c5cef0e8b4a937f3bb1a4ec",
+  "job_id": "job-research-f2c000a0ecb53008",
+  "data": {
+    "problem": "LLM servingではchatの短promptから要約・code・legal documentの4K〜100K token級長promptまでが混在し、TTFT/TBT/JCTのSLOもapplicationごとに異なる。従来chunkingは長promptを分割してGPUを埋めるが、heterogeneous SLOを考慮せず、iteration latencyを悪化させる場合がある。\n\nさらにGPU computeだけを満杯にしてもKV cacheが先に枯渇するとrequestを追加できずthroughputは伸びない。長promptを同時に多く走らせるとKVCを長時間占有し、FCFSではSLOの厳しいrequestと緩いrequestが混ざってGPU利用率とSLO達成率の両方を落とす。",
+    "novelty": "AccelGenはiteration-level SLOをschedulerの中心へ置き、GPU compute token budgetとKVC容量を同時に扱う。SLOから許容forward sizeを逆算してdynamic chunkingし、長promptの同時実行数を制限してKVCを早く解放する。\n\nさらにTTFT/TBTまたはJCT SLOをiteration-level deadlineへ変換し、残り猶予でrequestを並べ替える。そのうえでGPU token容量とKVC空き容量の2次元需要を見てbatchを選び、単一resource最大化ではなく両resourceの残余を同時に小さくする。",
+    "method_overview": "入力はwaiting queue中のprompt/token-generation task、各requestのTTFT/TBTまたはJCT SLO、prompt/sequence長、GPUのpivot forward size、KVC空き容量である。schedulerはまずSLOをiteration-level remaining timeへ正規化し、urgent requestを優先しつつSLOが近いrequestを並べる。次にbatchの最厳SLOとGPU性能profileから許容token budgetを決め、長promptはそのbudgetとKVC block境界に合わせてchunk化する。\n\niteration終了後、未完了TGをschedulerへ戻し、urgent requestをbatchへ固定する。resource不足なら残り猶予が大きいrequestをpreemptし、その後GPU compute需要とKVC需要を同時に満たせるrequest/chunkを選ぶ。長promptの同時数も制限してKVCを早期解放する。形成したbatchをvLLM execution engineへ渡し、このloopを繰り返してthroughput、goodput、SLO attainment、JCT/response latencyを最適化する。",
+    "components": [
+      {
+        "name": "iteration-level SLO変換",
+        "description": "userが指定するTTFT/TBTまたはjob-level JCT SLOを、各requestが現在iterationで使えるremaining timeへ変換する。入力はarrival時刻、経過時間、残りtoken/iteration見積りとSLOで、deadlineまでの余裕をschedulerが比較可能な共通尺度にする。\n\nJCT SLOしかないoffline jobもiteration-level予算へ分解するため、online/offlineを同じqueueで扱える。remaining timeが閾値へ近づいたrequestをurgentと判定し、後段のbatchingで必ず優先する。"
+      },
+      {
+        "name": "SLO保証付きtoken budget決定",
+        "description": "GPUを飽和させるpivot forward sizeをprofileし、batch内で最も厳しいiteration SLOを超えない範囲でtarget forward sizeを決める。入力はmodel/GPU profileとSLO、現在TG数で、単純固定token budgetよりSLO違反を避ける。\n\nSLOが緩いbatchではpivot付近までtokenを詰めてcompute utilizationを高め、厳しいbatchではbudgetを縮めてiteration timeを抑える。SLOが似たrequestを同時にbatchすることで、最厳SLOに全requestが引きずられる損失も減らす。"
+      },
+      {
+        "name": "dynamic long-prompt chunking",
+        "description": "長promptを固定長ではなく、そのiterationの残GPU token budgetとKVC block allocationに合わせて動的に切る。chunkはtarget forward sizeを満たす長さ、またはKVCをちょうど使い切る長さの短い方を選び、SLOを守りながらcomputeを埋める。\n\n長promptを一度に全処理しないため他requestのiterationを極端に延ばさず、複数iterationへ負荷を分散できる。同時に走る長prompt数を制限して、完了したrequestからKVCを早く返却させる。"
+      },
+      {
+        "name": "SLO優先queue ordering",
+        "description": "waiting queueを単純FCFSではなくremaining SLO timeで並べ、urgent requestを最優先する。非urgentでもremaining timeが近いrequest群を候補にすることで、同じbatch内のSLOばらつきを抑える。\n\nresource不足でpreemptionが必要な場合はremaining timeが最も大きいrequestを外し、deadlineに近いrequestを残す。これによりGPU利用率だけを最大化するschedulerよりSLO attainmentとgoodputを直接改善する。"
+      },
+      {
+        "name": "multi-resource-aware batching",
+        "description": "各候補requestについてGPU compute需要をtoken数、KVC需要を未割当block数で計算し、現在のGPU余力とKVC空きの両方へ収まるものだけを選ぶ。prompt chunkとTGではKVC需要計算が異なるため、既割当blockも考慮する。\n\n候補の中から選択後にGPU残余とKVC残余が同時に小さくなるrequestを貪欲に追加する。computeだけを埋めてKVCを余らせる、またはKVCだけを埋めてGPUが遊ぶ状態を避け、2 resourceのjoint utilizationを高める。"
+      },
+      {
+        "name": "urgent保持とKVC早期解放",
+        "description": "iterationをまたぐTG requestは可能な限りbatchへ保持して完了を早め、完了時に占有KVCをまとめて解放できるようにする。urgent requestはbatchへ先に入れ、resource超過時だけ猶予の大きいrequestをpreemptする。\n\nこの方針は単純な公平性よりgoodputとresource recyclingを重視する。特に長promptが多いtraceではKVC占有期間を短縮し、後続requestを早く受け入れられるためthroughputとSLO達成の双方へ効く。"
+      }
+    ],
+    "system_design": "AccelGenはvLLMのblock-based KV cacheとexecution engineを利用し、その前段schedulerをSLO-awareかつmulti-resource-awareへ置換する。request arrival、iteration完了、preemptionを契機にqueue priorityとbatchを再計算する。\n\nGPU saturation profileとKVC block accountingをschedulerへ入力し、dynamic chunking、urgent handling、2-resource selectionを一つのiteration loopへ統合する。"
+  },
+  "reservation": {
+    "claim_id": "claim-5c5cef0e8b4a937f3bb1a4ec",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
