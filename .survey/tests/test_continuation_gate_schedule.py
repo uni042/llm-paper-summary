@@ -180,6 +180,7 @@ class ContinuationGateScheduleTests(unittest.TestCase):
                 ))
                 self.assertEqual(result["decision"], "STOP_RUN")
                 self.assertTrue(result["finalization_allowed"])
+                self.assertTrue(result["hard_stop"])
                 self.assertIn("run_deadline_within_handoff_guard", result["stop_reasons"])
 
     def test_schedule_boundary_is_compatibility_fallback_when_run_deadline_missing(self):
