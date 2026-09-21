@@ -37,6 +37,12 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertNotIn("30-second", continuation)
         self.assertNotIn("30-second", finalization)
 
+    def test_worker_manual_forbids_disabling_scheduled_task_on_failure(self):
+        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
+        self.assertIn("Scheduled Task自体を一時停止・無効化してはならない", router)
+        self.assertIn("enabled状態は維持", router)
+        self.assertIn("将来runのスケジュール停止を意味しない", router)
+
     def test_final_response_requires_deterministic_permit(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
