@@ -89,6 +89,23 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
         self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["submission_wait_seconds"], 0)
+        self.assertEqual(result["submission_wait_action"], "none")
+        self.assertIn("1本だけ先送り", result["next_action_message"])
+
+    def test_pending_submission_without_claimable_work_waits_instead(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            submission_state_checked=True,
+            submission_result_pending=True,
+            pipeline_ahead_count=0,
+            independent_work=False,
+            spillover_work=False,
+            can_discover=False,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT")
+        self.assertEqual(result["submission_wait_seconds"], 10)
 
     def test_pending_previous_submission_blocks_after_one_paper_lookahead(self):
         result = mod.decide(make_args(
