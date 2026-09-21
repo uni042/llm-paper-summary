@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/completed-submission-requests/*.json'
+  schedule:
+    - cron: '9/10 * * * *'
 
 permissions:
   contents: write
@@ -36,12 +38,15 @@ jobs:
           git config user.name 'survey-completed-builder[bot]'
           git config user.email 'survey-completed-builder[bot]@users.noreply.github.com'
 
-          mapfile -t requests < <(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep '^.survey/work-queue/completed-submission-requests/.*\.json$' || true)
+          # Treat request files as a durable queue. Push handles the common fast path;
+          # the periodic run recovers requests stranded by a cancelled/failed push run.
+          mapfile -t requests < <(find .survey/work-queue/completed-submission-requests -maxdepth 1 -type f -name '*.json' -print | sort)
           if [ "${#requests[@]}" -eq 0 ]; then
-            echo 'No completed-submission request in triggering commit.'
+            echo 'No completed-submission requests exist.'
             exit 0
           fi
 
+          built=0
           for request in "${requests[@]}"; do
             request_id="$(basename "$request" .json)"
             kind="$(jq -er '.kind' "$request")"
@@ -58,8 +63,8 @@ jobs:
             fi
             output=".survey/work-queue/submissions/${kind}/${attempt_id}.json"
             if [ -e "$output" ]; then
-              echo "immutable completed descriptor already exists: $output" >&2
-              exit 1
+              echo "completed descriptor already exists; request is settled: $output"
+              continue
             fi
             args=(
               python .survey/scripts/prepare_completed_submission.py
@@ -73,7 +78,13 @@ jobs:
             if [ -n "$paper_path" ]; then args+=(--paper-path "$paper_path"); fi
             if [ -n "$expected_blob_sha" ]; then args+=(--expected-blob-sha "$expected_blob_sha"); fi
             "${args[@]}"
+            built=$((built + 1))
           done
+
+          if [ "$built" -eq 0 ]; then
+            echo 'All completed-submission requests are already settled.'
+            exit 0
+          fi
 
           git add .survey/work-queue/submissions/research .survey/work-queue/submissions/audit
           if git diff --cached --quiet; then
@@ -89,9 +100,9 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'Generated descriptor conflicts with newer main; a fresh request is required.' >&2
+              echo 'Generated descriptor conflicts with newer main; periodic recovery will retry from fresh main.' >&2
               exit 1
             fi
           done
-          echo 'Failed to publish generated completed descriptors after 5 retries.' >&2
+          echo 'Failed to publish generated completed descriptors after 5 retries; periodic recovery will retry.' >&2
           exit 1
