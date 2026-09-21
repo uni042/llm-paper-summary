@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-d175e801840388d8f1f07012",
-  "job_id": "job-research-f0b1ffeacc3b0ccd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d175e801840388d8f1f07012",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d175e801840388d8f1f07012","job_id":"job-research-f0b1ffeacc3b0ccd","data":{"canonical_id":"arXiv:2608.21836","arxiv_id":"2608.21836","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization","summary":"LLM4LLMは、単体カーネルのベンチマークで速い実装が実際のLLM推論へ組み込むと遅くなったり失敗したりする『ベンチマークから実配備への隔たり』を対象に、実モデルのプロファイリング、prefill/decodeを分けたタスク抽出、経験圧縮付き反復探索、モデル内での正しさ・遅延検証を閉ループ化する自動カーネル最適化基盤である。10種類の言語モデル推論でA100/H100の全対象を高速化し、幾何平均で3.91倍/6.98倍のend-to-end高速化を報告する。","list_summary":"実モデルをプロファイルしてphase別カーネルを探索・モデル内検証し、A100/H100でend-to-end幾何平均3.91倍/6.98倍を達成する閉ループ最適化。","authors":["Hui Zeng","Pengfei Yang","Yanxin Chen","Fusong Ju","Xinran Wei"],"authors_affiliations":"Xidian University; Zhongguancun Academy; Zhongguancun Institute of Artificial Intelligence; National Key Laboratory of Advanced Communication Networks","published":"2026-08-22","publication":"EMNLP 2026 main conference / arXiv","publication_type":"国際会議採択論文・プレプリント","publication_status":"Accepted to EMNLP 2026 main conference; arXiv v1 (2026-08-22)","lineage":"LLM-driven kernel optimization / deployment-aware inference optimization / agentic code optimization","topics":["GPUカーネル最適化","実配備最適化","エージェント探索","推論高速化","Triton"],"importance":"孤立カーネルの速度を目的関数にせず、実際の推論スクリプトとモデル内実行を最終受理条件に置くことで、キャッシュ状態・phase差・shape guard・dispatch overheadを含む実配備性能へ探索目標を直接合わせる。","implementation":"Tritonを中心に候補カーネルを生成し、コンパイル・数値検証・安全性・モデル内遅延を反復評価する公開実装。","hardware_evaluation":"NVIDIA A100-SXM4-80GBおよびH100-80GB-HBM3。Transformer、Mamba/Mamba2、RecurrentGemmaの10推論workloadとKernelBench Level 2で評価。","quality_effect":"受理パッチはモデル内correctness、runtime compatibility、shape coverageを通過する必要があり、元モデルの入出力・cache/state契約を維持する。品質ベンチマークより実行時の数値同値性を主に検証する。","source":"https://arxiv.org/abs/2608.21836","sources":["https://arxiv.org/abs/2608.21836","https://arxiv.org/pdf/2608.21836"],"code":"https://github.com/hzeng2000/LLM4LLM","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary manuscript","references_total":null},"reservation":{"claim_id":"claim-d175e801840388d8f1f07012","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
