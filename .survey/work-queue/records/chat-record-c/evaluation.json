@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-8495a743fe594851aff8c54b","job_id":"job-research-3c095c39c7faada9","data":{"hardware":"NVIDIA H200 140GBを4基使用。gpt-oss-20bのMXFP4重みを学習時にbf16へ復号する。実際のCPU/GPU間オフロード転送時間や提供スループットは測定していない。","software":"gpt-oss-20bを基盤モデルとし、修正版TRLで学習する。専門家と注意機構へランク16の低ランク適応を適用し、ルータも学習対象とする。","methodology":"学習にはNemotron Post-Training Dataset v2の10カテゴリを用い、1ステップ16プロンプト、最大入力512トークン、最大応答512トークンで学習する。評価はMATH、MMLU、MMMLUから各200問を無作為抽出し、温度0.5、Top-p 0.95、最大2048トークンで測る。許可専門家数は8または16、熟慮コストは0.02、0.03、0.04を比較する。比較対象は頻度選択、再構成誤差最小化、無作為選択、構造化Wandaで、校正には128プロンプトを使う。","scope":"実機GPU上での後学習と品質・専門家切替率の検証であり、時間的連続性を学習できることを示す概念実証である。エンドツーエンドの専門家オフロードシステム、実測転送遅延、コード生成や長文対話など広範な品質評価は範囲外である。各設定の学習は単一走行で、曲線のばらつきは複数走行間の安定性を示さない。"},"reservation":{"claim_id":"claim-8495a743fe594851aff8c54b","worker_id":"scheduled-chat-llm-paper-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-61f8cc953f4da08391077bca",
+  "job_id": "job-research-3c095c39c7faada9",
+  "data": {
+    "hardware": "NVIDIA H200 140GBを4基使用。gpt-oss-20bのMXFP4重みを学習時にbf16へ復号する。実際のCPU/GPU間オフロード転送時間や提供スループットは測定していない。",
+    "software": "gpt-oss-20bを基盤モデルとし、修正版TRLで学習する。専門家と注意機構へランク16の低ランク適応を適用し、ルータも学習対象とする。",
+    "methodology": "学習にはNemotron Post-Training Dataset v2の10カテゴリを用い、1ステップ16プロンプト、最大入力512トークン、最大応答512トークンで学習する。評価はMATH、MMLU、MMMLUから各200問を無作為抽出し、温度0.5、Top-p 0.95、最大2048トークンで測る。許可専門家数は8または16、熟慮コストは0.02、0.03、0.04を比較する。比較対象は頻度選択、再構成誤差最小化、無作為選択、構造化Wandaで、校正には128プロンプトを使う。",
+    "scope": "実機GPU上での後学習と品質・専門家切替率の検証であり、時間的連続性を学習できることを示す概念実証である。エンドツーエンドの専門家オフロードシステム、実測転送遅延、コード生成や長文対話など広範な品質評価は範囲外である。各設定の学習は単一走行で、曲線のばらつきは複数走行間の安定性を示さない。"
+  },
+  "reservation": {
+    "claim_id": "claim-61f8cc953f4da08391077bca",
+    "worker_id": "scheduled-chat-llm-paper-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
