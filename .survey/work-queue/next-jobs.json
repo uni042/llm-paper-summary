@@ -8,49 +8,21 @@
       "blocked": 2
     },
     "research": {
-      "ready": 328,
+      "ready": 327,
       "completed": 426,
       "superseded": 3,
       "deferred": 3,
       "blocked_permanent": 7,
-      "blocked": 16,
+      "blocked": 17,
       "rejected": 2
     }
   },
   "claiming": {
-    "ready_research_audit": 328,
-    "actively_claimed": 0,
-    "claimable": 328
+    "ready_research_audit": 327,
+    "actively_claimed": 1,
+    "claimable": 326
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-bfb106674c4d8bfe",
-      "type": "research",
-      "lane": null,
-      "priority": 104,
-      "canonical_id": "arXiv:2608.08878",
-      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
-      "source_url": "https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.08878-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-llm-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-f0b1ffeacc3b0ccd",
-      "type": "research",
-      "lane": null,
-      "priority": 104,
-      "canonical_id": "arXiv:2608.21836",
-      "title": "LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization",
-      "source_url": "https://www.semanticscholar.org/paper/05ce627af947fbb7b08b2b653f62974cce24b1b2",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-50400bb966b2b5a1",
       "type": "research",
@@ -136,6 +108,34 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-a88935db522d5bcc",
+      "type": "research",
+      "lane": null,
+      "priority": 100,
+      "canonical_id": "arXiv:2608.07964",
+      "title": "EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference",
+      "source_url": "https://www.semanticscholar.org/paper/d883de304a869e555e8a453279310dcf7ba68432",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.07964-easybalance-cross-layer-load-balancing-in-distributed-moe-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-c39635b6c8612e08",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "arXiv:2603.12645",
+      "title": "LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing",
+      "source_url": "https://arxiv.org/abs/2603.12645",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T08:27:06+00:00"
+  "generated_at": "2026-09-21T09:32:21+00:00"
 }

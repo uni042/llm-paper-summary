@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 17:58:38 JST**
+> 自動生成: **2026-09-21 18:32:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **328** |
-| 未claim Research job | **327** |
-| 直近24hの検証済みResearch収録 | **46** |
-| 最終検証済みResearch収録 | **09-21 17:27:05 JST（31分前）** |
+| 収録候補論文 | **327** |
+| 未claim Research job | **326** |
+| 直近24hの検証済みResearch収録 | **43** |
+| 最終検証済みResearch収録 | **09-21 17:27:05 JST（1時間5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **328** |
+| canonical_id確認済みの一意な候補論文 | **327** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **328** |
+| 非終端Research job合計 | **327** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **6** | **4** | **0** | **1** | **0** | — |
+| Research | **8** | **6** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **10** | **7** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **8** | **7** | **5** | **0** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -103,16 +103,6 @@
   - result: `.survey/work-queue/results/research/attempt-6abe896ce85b87802523af29.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6abe896ce85b87802523af29.json`
   - paper: `papers/inference/99-other-inference-systems/2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md`
-- **09-21 12:12:28 JST** [research] `DOI:10.1145/3838177.3841726` — MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson
-  - job: `.survey/work-queue/jobs/job-research-a5925137e7067bb8.json`
-  - result: `.survey/work-queue/results/research/attempt-3356d957f35728223aecac23.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3356d957f35728223aecac23.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md`
-- **09-21 12:07:26 JST** [research] `arXiv:2604.20156` — Temporally Extended Mixture-of-Experts Models
-  - job: `.survey/work-queue/jobs/job-research-3c095c39c7faada9.json`
-  - result: `.survey/work-queue/results/research/attempt-61f8cc953f4da08391077bca.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-61f8cc953f4da08391077bca.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md`
 
 ### Audit
 
@@ -174,9 +164,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.08878` — DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference / worker `scheduled-chat-30`
-  - claim: **09-21 17:28:12 JST** / heartbeat: **—** / lease expiry: **09-21 18:58:12 JST**
-  - evidence: `.survey/work-queue/claims/job-research-bfb106674c4d8bfe.json`
+- `arXiv:2608.21836` — LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization / worker `scheduled-chat-00`
+  - claim: **09-21 18:00:42 JST** / heartbeat: **—** / lease expiry: **09-21 19:30:42 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f0b1ffeacc3b0ccd.json`
 
 #### Audit
 
@@ -196,7 +186,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **328** |
+| ready | **327** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,8 +214,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **355** |
-| └ Research | **169** |
+| 成功result未照合のimmutable submission | **356** |
+| └ Research | **170** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
