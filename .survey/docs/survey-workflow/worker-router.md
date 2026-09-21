@@ -2,9 +2,9 @@
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
-ワーカーは実装リファレンス（implementation reference）や履歴互換資料（read-compatibility material）から手順を補完しない。必要な実装詳細は正規スクリプトが `[WORKER-GUIDE]`、`next_action`、`recovery_steps` として返す。不足・矛盾がある場合は旧文書へ迂回せず保守対象として扱う。実装リファレンスは保守・テスト用途に限定する。
+ワーカーは実装リファレンス（implementation reference）や履歴互換資料（read-compatibility material）から手順を補完しない。必要な実装詳細は正規スクリプトが `[WORKER-GUIDE]`、`next_action`、`recovery_steps` として返す。実装リファレンスは保守・テスト用途に限定する。
 
-**実行中にリポジトリの正規スクリプトが `[WORKER-GUIDE]` を出した場合、ワーカーはそのガイドに従うこと。** `[待機]` 中に依存する次操作へ進んだり、`[次]` を自己判断で飛ばしたり、`[手順エラー]` / `[正しい手順]` を無視して別経路へ迂回してはならない。ガイドと機械可読resultの `next_action` / `recovery_steps` が併存する場合は、両方を満たす手順を実行する。
+**実行時の具体的な操作では、正規スクリプトが返す `[WORKER-GUIDE]` / `next_action` / `recovery_steps` を最優先する。** `[待機]` 中に依存する次操作へ進んだり、`[次]` を自己判断で飛ばしたり、`[手順エラー]` / `[正しい手順]` を無視して別経路へ迂回してはならない。機械案内とこの文書が矛盾した場合は、旧経路へ逃げず**そのrunでは機械案内に従って安全に処理し、矛盾の内容・採用した機械案内・影響を最終報告でユーザーへ相談事項として明記する。** ワーカーがその場で正本の意味を独自に上書きしない。
 
 ## 1. 開始時に読む状態
 
@@ -20,7 +20,7 @@
 
 ## 2. 共通ルーター
 
-毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じ論文処理規約・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新状態から `candidate_inventory` を取得し、次の1条件だけで今回の論文作業モードを決める。
+毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じ論文処理規約・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新 `next-jobs.json` から **Research/Audit の ready 全件数**を `candidate_inventory` として取得する。`claimable` ではなく、原則 `claiming.ready_research_audit`、それが無ければ `counts.research.ready + counts.audit.ready` を使う。このrun開始時の値を固定し、次の1条件だけで今回の論文作業モードを決める。
 
 - **`candidate_inventory >= 50` → 読解（Research / Audit）**
 - **`candidate_inventory < 50` → 探索（Discovery）**
@@ -29,12 +29,12 @@ maintenance対象または08:30 JSTの専用更新条件だけは、この分岐
 
 モード決定後は、どちらのScheduled Chatから起動したかを一切条件分岐に使わない。探索なら第4節、読解なら第3節の共通手順をそのまま使う。`:00` 専用・`:30` 専用の探索手順、読解手順、overflow modeは作らない。
 
-候補数は最新の耐久状態から毎run取得し、旧runや旧STATUSの推定値を再利用しない。候補数が境界ちょうど50件なら読解を選ぶ。
+候補数は最新の耐久状態から毎run開始時に取得し、旧runや旧STATUSの推定値を再利用しない。候補数が境界ちょうど50件なら読解を選ぶ。**一度選んだモードはそのrunの終了まで固定する。** run中に候補数が50を跨いでも再ルーティングしない。次回runの開始時にあらためて最新候補数で判定する。
 
 ノルマは維持する。
 
-- **読解モード**: 今回の起動中に新規論文を最低3本、一次資料全文→5スロット→preflight→不変submission→最新mainへの耐久反映まで完了させる。3本は停止上限ではない。
-- **探索モード**: 最低4つの materially distinct なDiscovery roundを耐久保存する。4 roundは停止上限ではない。単一roundの0件・重複のみでは終了しない。
+- **読解モード**: 今回の起動中に **Research / Audit 合計で成功完了を最低3件**作る。Researchは一次資料全文→5スロット→preflight→不変submission→submission result成功→最新mainへの反映確認まで、Auditも対応する不変submission→成功result→最新mainへの反映確認までを1件の完了とする。`blocked` / `deferred` / `rejected` や提出しただけのpending状態はノルマへ数えない。3件は停止上限ではない。
+- **探索モード**: 今回のrunで最低4つの materially distinct なDiscovery roundを耐久保存する。4 roundは停止上限ではない。**候補0件のroundも、正規precheckから結果まで完了し、別軸として耐久保存されたなら1 roundに数える。新規候補が見つかっても4 roundのカウントをリセットしない。** 単一roundの0件・重複のみでは終了しない。
 
 handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Library双方への耐久保存不能などのhard stopはノルマより優先する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
 ## 2.1 正規スクリプトを直接実行できない環境のfast-lane transport
@@ -76,7 +76,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 7. Actionsと同じ基準で事前検査（preflight）する。
 8. GitHubへ保存可能なら各スロットの実blob SHAを取得し、attempt固有の不変descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ保存する。
 9. GitHub書込みがrun全体で利用不能なら、完全な5スロットpayloadをChatGPT Library `/LLM-survey-outbox/pending/` へ1論文1envelopeで保存する。
-10. 完全payloadが耐久保存されたら、前jobのGitHub Actions完了を同期障壁にせず最新queue / claim stateを取り直し、次の独立作業へ進む。
+10. 完全payloadを耐久保存して不変submissionを送った後は、**同じ論文のsubmission resultが成功し、最新 `main` で対応job / artifactの反映を確認するまで次の論文へ進まない。** pending中は同じresultを再確認し、validation失敗なら同じ論文の正規repair経路を完了する。成功反映を確認して初めて最新queue / claim stateを取り直し、次の論文を1件だけclaimする。
 
 禁止事項:
 
@@ -85,7 +85,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 - claim resultが返したbankを無視して別bankへ書かない。
 - 1本処理したことだけをrun終了理由にしない。
 
-**論文単位の処理は完全直列とする。** 1本の一次資料取得・全文読解・5スロット作成・検証・耐久保存が完了する前に、次の論文の一次資料取得や全文読解を開始しない。待ち時間に行ってよいのは、次候補の識別子・書誌・取得経路の確認など、現在のclaimやrecord bankと競合しない準備だけである。
+**論文単位の処理は完全直列とする。** 1本の一次資料取得・全文読解・5スロット作成・検証・不変submission・成功result・最新mainへの反映確認までが完了する前に、次の論文をclaimしたり、次論文の一次資料・書誌・取得経路を先取りしたりしてはならない。待ち時間に行ってよいのは、同じ論文のrepair・result確認・canonical state確認、および次論文を取得しない範囲の独立した状態整合処理だけである。
 
 ### 3.1 実運用で確立した高スループット原則
 
@@ -95,9 +95,9 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 2. **初回5スロットをvalidator下限ぎりぎりにしない。** 問題設定は「問題＋既存法で解けない理由」、method overviewは入力から出力までのend-to-end流れ、各componentは「入力・内部処理・出力・他componentとの接続」を十分に記述する。短すぎる説明によるrepair往復を減らす。
 3. **一次資料は取得できた時に一度で必要範囲を読む。** 完全なarXiv HTMLが使えるなら優先し、必要ならPDF、OpenReview/会議公式、著者・プロジェクト公式コピーへ進む。同一資料を小分けに再取得せず、手法・評価・結果・ablation・限界・関連研究までまとめて確認する。
 4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を耐久保存して次の独立jobへ進む。status-only `blocked` / `deferred` / `rejected` は、Scheduled Chatが最小の不変JSON descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ直接保存し、既存のsubmission laneに処理させる。ローカルPythonや保存前canonicalizerの実行を前提にしない。descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` を基本とし、取得済みなら `retrieval_evidence` / `blocked_at` を加えてよい。`record_bank` / `paper_path` / `record_slots` / `expected_blob_sha` その他のrecord transport fieldはstatus-only descriptorへ混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
-5. **非同期待ちを不要な同期障壁にしない。** claim/result/submissionの同じIDを保持して所定間隔で確認し、待ち時間には次候補の一次資料経路確認、identity/queue同期、既読slot整理などclaim競合を起こさない準備を行う。未完了claimを増やしたり同一requestを重複発行しない。
+5. **非同期待ちでも論文単位の直列性を崩さない。** claim/result/submissionの同じIDを保持して所定間隔で確認する。submission待ち中は次論文のclaim・一次資料取得・書誌確認へ進まず、同じ論文のrepair準備、identity/queue同期など次論文を取得しない作業だけを行う。未完了claimを増やしたり同一requestを重複発行しない。
 6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research claimは常に1件だけ保持し、完了またはstatus-only耐久保存後に次へ進む。
-7. **読解3本ノルマは維持する。** `papers_added_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。3本到達は停止上限ではなく、continuation/finalization gateが継続を要求するなら次のResearch / Auditへ進む。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
+7. **Research / Audit 合計3件ノルマは維持する。** `research_audit_completed_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。成功resultと最新main反映を確認したResearchまたはAuditだけを1件として数える。3件到達は停止上限ではなく、continuation/finalization gateが継続を要求するなら次のResearch / Auditへ進む。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
 
 ## 4. 探索（Discovery）の共通入口
 
@@ -163,7 +163,7 @@ target_unseen: 20
 
 ### 4.2 探索ノルマ
 
-探索モードでは、hard stopまたはhandoff guardがない限り、**最低4つの materially distinct なDiscovery round**を耐久保存する。4 roundは停止上限ではない。1 round完了、0件、重複のみ、単一provider障害、単一探索軸の飽和は終了理由にしない。4 round到達後も有望な次軸がある場合は継続する。
+探索モードでは、hard stopまたはhandoff guardがない限り、**今回のrunで合計4つの materially distinct なDiscovery round**を耐久保存する。カウントはrun開始時に0から始め、新規候補を発見してもリセットしない。候補0件や最終重複排除で追加0件になったroundでも、正規schema v3 precheckからsubmission/resultまで完了し、別の探索軸として耐久保存されていれば1 roundとして数える。4 roundは停止上限ではない。1 round完了、0件、重複のみ、単一provider障害、単一探索軸の飽和は終了理由にしない。4 round到達後も有望な次軸がある場合は継続する。
 
 ### 4.3 Candidate投入
 
@@ -193,9 +193,9 @@ Discovery後半は次の順序を正規経路とする。途中を手作業で�
 6. ready Research/Audit が現れたら `claim_worker_with_banks.py` の正規claim経路で**1件だけ**取得する。割当て後はclaim resultが指定したrecord bankを使い、Research処理へ進む。
 7. `research_jobs_added=0` でもrun終了理由にしない。最終重複排除や低優先度除外を確認し、必要なら別探索軸をschema v3 precheckから開始する。
 
-失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` → `claim_worker_with_banks.py` の順へ戻る。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
+失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` でcanonical stateを確認する。ただし**このrunが探索モードならResearchへ切り替えず、run開始時に固定した探索モードを維持する。** Research jobのclaimは次回以降、読解モードで行う。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
 
-引用優先runでは、後方引用の候補山が残っていても前方引用へ進む。逆に前方引用が0件でも後方引用の山は継続する。**通常検索へ進めるのは、同じrun_keyで後方引用と前方引用の両方を試した後だけ**とし、通常検索は引用グラフで空く領域を埋める用途に限定する。単一provider障害は「0件」とみなさず、同じ引用方向の別providerまたは別種論文を試す。1 Discovery roundが耐久保存まで完了したら共通ルーターへ戻り、work mixと最新状態から次の作業種別を再選択する。
+引用優先runでは、後方引用の候補山が残っていても前方引用へ進む。逆に前方引用が0件でも後方引用の山は継続する。**通常検索へ進めるのは、同じrun_keyで後方引用と前方引用の両方を試した後だけ**とし、通常検索は引用グラフで空く領域を埋める用途に限定する。単一provider障害は「0件」とみなさず、同じ引用方向の別providerまたは別種論文を試す。1 Discovery roundが耐久保存まで完了したら、**今回runの探索モードを維持したまま**次の探索軸を選ぶ。候補在庫を再取得してもrun中のモード変更には使わず、次回runの開始判定用状態としてのみ扱う。
 
 ## 5. 重複排除
 
@@ -229,7 +229,7 @@ Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと
 継続判断には `.survey/scripts/continuation_gate.py`、最終化判断には `.survey/scripts/run_finalization_gate.py` を使う。
 
 - claim/resultやsubmission/resultが次の安全な判断に必要なら、同一targetを10秒実時間間隔で再確認する。
-- 結果待ち中でも独立作業が安全にできる場合は、それを先に処理し、待機を不要な同期障壁にしない。
+- Research / Audit のsubmission result待ちは**次論文へ進むための同期障壁**である。成功resultと最新main反映を確認するまで次の論文をclaim・取得しない。待ち時間には同一論文のrepair準備や次論文を取得しない状態整合作業だけを行う。
 - candidate在庫、Library pending、fallback backlog、record bank枯渇、単一job失敗、1本完了、単一探索軸0件だけをrun終了理由にしない。
 - final responseはfinalization gateが許可した場合だけ行う。
 - 600秒handoff guardに入ったら新規独立作業を開始せず、現在成果を耐久保存して引き継ぐ。
@@ -243,7 +243,7 @@ Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと
 - `[手順エラー]` と `[正しい手順]`: その場で別経路へ迂回せず、示された復旧手順で同じ現行入口へ戻る。旧schema・manual手順・直接state編集で回避しない。
 - JSON等の機械可読出力はstdout、ワーカー向け案内はstderrで分離される。案内をJSON本文として扱わない。
 
-検証処理が `next_action` または `recovery_steps` を返した場合、それが復帰手順の正本である。
+検証処理が `next_action` または `recovery_steps` を返した場合、それがその実行時点の復帰手順の最優先指示である。この文書と矛盾して見える場合も機械案内に従い、矛盾を隠さず最終報告の相談事項へ残す。
 
 ワーカーは次を行う。
 
