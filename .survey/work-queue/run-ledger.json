@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T02:44:15.649265+00:00",
+  "updated_at": "2026-09-21T03:02:12.422134+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -31781,6 +31781,56 @@
       "paper_active_count_before": 867,
       "paper_active_count_after": 867,
       "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35556097894",
+      "first_recorded_at": "2026-09-21T03:02:12.422134+00:00",
+      "last_recorded_at": "2026-09-21T03:02:12.422134+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35556097894:1",
+          "recorded_at": "2026-09-21T03:02:12.422134+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35556097894",
+            "run_attempt": "1",
+            "source_sha": "f7b4378661ccffdc085a72b7dcefb9c6fcebacbd"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-69e7666b88522bc6",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3712285.3759903",
+          "title": "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 867,
+      "paper_active_count_after": 867,
+      "last_successful_action": "job_blocked"
     }
   ]
 }

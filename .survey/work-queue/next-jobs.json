@@ -8,9 +8,9 @@
       "blocked": 2
     },
     "research": {
-      "ready": 341,
+      "ready": 340,
       "completed": 416,
-      "blocked": 13,
+      "blocked": 14,
       "superseded": 3,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -18,20 +18,20 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 341,
-    "actively_claimed": 1,
+    "ready_research_audit": 340,
+    "actively_claimed": 0,
     "claimable": 340
   },
   "next_jobs": [
     {
-      "job_id": "job-research-69e7666b88522bc6",
+      "job_id": "job-research-c39635b6c8612e08",
       "type": "research",
       "lane": null,
       "priority": 99,
-      "canonical_id": "DOI:10.1145/3712285.3759903",
-      "title": "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching",
-      "source_url": "https://doi.org/10.1145/3712285.3759903",
-      "paper_path": "papers/inference/04-moe-offload-expert-cache/2025-diff-moe-priority-driven-differential-expert-caching.md",
+      "canonical_id": "arXiv:2603.12645",
+      "title": "LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing",
+      "source_url": "https://arxiv.org/abs/2603.12645",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T02:46:09+00:00"
+  "generated_at": "2026-09-21T03:02:06+00:00"
 }
