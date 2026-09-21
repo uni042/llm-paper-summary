@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
-"""Dispatch eligible fallback envelopes through the current workflow-v10 transport.
+"""Dispatch current fallback envelopes through the workflow-v10 transport.
 
 Research/Audit record bundles are converted directly into attempt-specific immutable
 descriptors by ``replay_record_fallback``. The CLI drains multiple record bundles per
 invocation so a temporary Library/GitHub transport outage does not take hours to recover.
-The Python ``dispatch()`` API remains single-item by default for backwards compatibility.
-Historical bundles containing the retired reusable ``chat-inbox.json`` remain readable,
-but replay never recreates that fixed transport. Non-record envelopes keep their
-single-dispatch semantics because some generic routes target mutable singleton inputs.
-
-A narrow compatibility path also recovers discovery payloads that were accidentally
-written directly into ``fallback-inbox`` without the required generic ``writes`` wrapper.
-Those payloads are normalized into the regular immutable discovery submission path and
-never overwrite a different existing submission.
+Generic envelopes keep single-dispatch semantics because some routes target mutable
+singleton inputs. Retired fixed chat-inbox and misrouted direct-discovery formats are
+not accepted.
 """
 from __future__ import annotations
 
@@ -27,7 +21,6 @@ import replay_record_fallback as record_replay
 
 DEFAULT_DISPATCH_MAX_ITEMS = 1
 DEFAULT_CLI_MAX_ITEMS = 50
-DISCOVERY_SUBMISSION_DIR = Path(".survey/work-queue/submissions")
 
 
 def move_exact(source: Path, destination_dir: Path) -> Path:
@@ -72,78 +65,7 @@ def _read_raw_object(source: Path) -> dict[str, Any]:
 
 
 def _is_record_fallback(value: dict[str, Any]) -> bool:
-    """Route both current record bundles and incomplete legacy bundles to strict replay.
-
-    A damaged historical Research/Audit envelope can retain only the retired
-    ``chat-inbox.json`` write after partial loss. Treating that as a generic fallback
-    would recreate the retired fixed transport. Strict record replay instead validates
-    the five-slot invariant and quarantines the malformed envelope.
-    """
-    if record_replay.is_record_bundle(value):
-        return True
-    if value.get("kind") not in {"research", "audit"} and value.get("origin") != "claimed_worker":
-        return False
-    for write in value.get("writes") or []:
-        if isinstance(write, dict) and write.get("path") == record_replay.CHAT_INBOX:
-            return True
-    return False
-
-
-def _is_direct_discovery_payload(value: dict[str, Any]) -> bool:
-    """Recognize only the known misrouted discovery payload shape.
-
-    This is recovery compatibility, not a new producer contract. New workers must use
-    direct workflow-v10 submissions when GitHub is writable or a proper Library fallback
-    envelope when it is not.
-    """
-    return (
-        value.get("schema_version") == 1
-        and value.get("kind") == "discovery"
-        and "writes" not in value
-        and isinstance(value.get("id"), str)
-        and bool(value.get("id"))
-        and isinstance(value.get("job_id"), str)
-        and bool(value.get("job_id"))
-        and isinstance(value.get("candidates"), list)
-        and isinstance(value.get("discovery_stats"), dict)
-    )
-
-
-def _recover_direct_discovery_payload(repo_root: Path, value: dict[str, Any]) -> list[str]:
-    envelope_id = value["id"]
-    if not ft.ENVELOPE_ID_RE.fullmatch(envelope_id):
-        raise ValueError("direct discovery id is not a safe envelope id")
-
-    candidates = value["candidates"]
-    if any(not isinstance(candidate, dict) for candidate in candidates):
-        raise ValueError("direct discovery candidates must be objects")
-
-    discovery_stats = value["discovery_stats"]
-    if not isinstance(discovery_stats.get("run_key"), str) or not discovery_stats["run_key"]:
-        raise ValueError("direct discovery discovery_stats.run_key must be a non-empty string")
-
-    submission = {
-        "schema_version": 1,
-        "job_id": value["job_id"],
-        "candidates": candidates,
-        "discovery_stats": discovery_stats,
-    }
-    content = json.dumps(submission, ensure_ascii=False, indent=2) + "\n"
-    relative_path = DISCOVERY_SUBMISSION_DIR / f"{envelope_id}.json"
-    target = repo_root / relative_path
-
-    if target.exists():
-        if target.read_text(encoding="utf-8") != content:
-            raise ValueError(f"discovery submission conflict for {relative_path.as_posix()}")
-        return []
-
-    synthetic_envelope = {
-        "schema_version": 1,
-        "id": envelope_id,
-        "kind": "discovery-recovery",
-        "writes": [{"path": relative_path.as_posix(), "content": content}],
-    }
-    return ft.apply_envelope(repo_root, synthetic_envelope)
+    return record_replay.is_record_bundle(value)
 
 
 def _append_changed(target: list[str], seen: set[str], paths: Any) -> None:
@@ -240,7 +162,7 @@ def dispatch(repo_root: Path, *, max_items: int = DEFAULT_DISPATCH_MAX_ITEMS) ->
 
             # Generic envelopes can target mutable singleton inputs. Process at most one
             # generic envelope per invocation while still allowing record bundles later
-            # in the same snapshot to drain. Direct discovery recovery shares this gate.
+            # in the same snapshot to drain.
             if generic_dispatched:
                 deferred.append(
                     {
@@ -248,21 +170,6 @@ def dispatch(repo_root: Path, *, max_items: int = DEFAULT_DISPATCH_MAX_ITEMS) ->
                         "reason": "another generic fallback was already dispatched in this invocation",
                     }
                 )
-                continue
-
-            if _is_direct_discovery_payload(raw_object):
-                changed = _recover_direct_discovery_payload(repo_root, raw_object)
-                archived = move_exact(source, archive_dir)
-                row = {
-                    "action": "dispatched",
-                    "envelope_id": raw_object["id"],
-                    "job_id": raw_object["job_id"],
-                    "changed_paths": changed,
-                    "archived": str(archived.relative_to(repo_root)),
-                }
-                processed.append(row)
-                generic_dispatched = True
-                _append_changed(changed_paths, changed_seen, changed)
                 continue
 
             envelope, canonical = ft.parse_envelope(source.read_bytes())
