@@ -31,7 +31,7 @@ class ContinuationGateWaitPolicyTests(unittest.TestCase):
             seconds_to_next_scheduled_task=None,
             seconds_to_run_deadline=3000,
             scheduled_handoff_guard_seconds=600,
-            candidate_inventory=49,
+            candidate_inventory=50,
             discovery_rounds_completed=0,
             discovery_min_rounds=4,
             discovery_exhausted=False,
