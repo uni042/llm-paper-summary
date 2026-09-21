@@ -113,7 +113,7 @@ claim requestでは `request_id` をrequestファイル名のstemと完全一致
 4. **1経路の取得失敗をwhole-run failureにしない。** 全文取得経路はワーカーの気分で増減させず、該当するものを次の順に各1回試す。(a) arXiv HTML / e-print等の公式本文、(b) arXiv公式PDF、(c) OpenReview・会議・出版社の公式full text、(d) 著者または公式project siteが配布する同一版full text。同一URL/同一経路の一時的なtool/HTTP失敗は1回だけ再試行してよい。**取得成功でも一次証拠が不足している場合は次の公式経路へ進む。** 該当する公式経路を使い切っても必要な一次証拠を十分取得できない場合だけstatus-only `blocked` を不変submissionとして耐久保存する。第三者解説・検索断片・非公式転載を全文の代用にしない。**status-onlyでもcompleted submissionと同じ1本遅延規則を使い、descriptor耐久保存後は直後の次論文を1件だけclaimしてよい。** その次へ進む前に1本前のstatus-only resultが `ok=true` の終端状態になって最新mainへ反映されたことを確認する。status-only `blocked` / `deferred` / `rejected` は、Scheduled Chatが最小の不変JSON descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ直接保存し、既存のsubmission laneに処理させる。ローカルPythonや保存前canonicalizerの実行を前提にしない。descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` を基本とし、取得済みなら `retrieval_evidence` / `blocked_at` を加えてよい。`record_bank` / `paper_path` / `record_slots` / `expected_blob_sha` その他のrecord transport fieldはstatus-only descriptorへ混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
 5. **submission待ちは1本遅延パイプラインで隠す。** 論文Nを提出した直後はN+1を1件だけclaimして全文処理・提出してよい。N+1提出後はNのresultを確認し、終端反映済みならN+2へ進む。Nがpendingなら10秒間隔で同一resultを再確認し、failureなら正規repairを優先する。未完了claimを複数保持したり、N+2まで先取りしたり、同一requestを重複発行しない。
 6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research / Auditの**未提出active claim**は常に1件だけとする。次claimは直前論文のdescriptor耐久保存後に限り許可し、descriptor-backed旧claimがまだactive表示ならclaim fast laneの正規解放に任せる。さらにその次claimは1本前のsubmission resultと最新main反映を確認した後に限る。
-7. **Research / Audit 合計3件ノルマは維持する。** `research_audit_completed_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。成功resultと最新main反映を確認したResearchまたはAuditだけを1件として数え、同一論文のResearchとAuditも別jobとしてそれぞれ1件に数える。ready Auditが存在するなら3件ブロックごとに最低1件Auditを含める。3件到達は停止上限ではなく、600秒handoff guardに入るまで同じモードで継続する。Research / Auditの作業枯渇を理由に終了できるのは、run-state resultでclaimableな次jobが0、pending claim/submission/recoveryが0、Library checkpointから回復可能な作業も0であることが導出された場合だけとし、ワーカーが「もう無さそう」と判断して終了しない。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
+7. **Research / Audit 合計3件ノルマは維持する。** `research_audit_completed_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。成功resultと最新main反映を確認したResearchまたはAuditだけを1件として数え、同一論文のResearchとAuditも別jobとしてそれぞれ1件に数える。ready Auditが存在するなら3件ブロックごとに最低1件Auditを含める。 **言い換えると、ready Auditが存在するブロックでは少なくとも1件Auditを処理する。**3件到達は停止上限ではなく、600秒handoff guardに入るまで同じモードで継続する。Research / Auditの作業枯渇を理由に終了できるのは、run-state resultでclaimableな次jobが0、pending claim/submission/recoveryが0、Library checkpointから回復可能な作業も0であることが導出された場合だけとし、ワーカーが「もう無さそう」と判断して終了しない。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
 
 ## 4. 探索（Discovery）の共通入口
 
@@ -275,6 +275,10 @@ worker_id: scheduled-chat-00 | scheduled-chat-30
 scheduled_slot: "00" | "30" | "0830"
 actual_invocation_start: <offset-aware timestamp>
 runtime_condition: none
+# runtime障害を申告する場合だけ追加:
+# runtime_condition_confirmed: true
+# runtime_condition_attempts: 2
+# runtime_condition_detail: <観測した障害と回復試行>
 ```
 
 `runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は10秒以上離した正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformからtool call/outputを拒否された事実がある場合だけ `runtime_condition_confirmed=true` としてよい。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
