@@ -919,6 +919,11 @@ def existing_represented_resolver() -> dict[str, Any]:
     return paper_identity.build_represented_resolver(records)
 
 
+def candidate_priority_value(candidate: dict) -> int:
+    """Return canonical 0-100 Candidate priority."""
+    return max(0, min(100, int(candidate.get("priority") or 50)))
+
+
 def make_research_job(c: dict, parent: str):
     key = candidate_key(c)
     if not key:
@@ -928,7 +933,7 @@ def make_research_job(c: dict, parent: str):
         "job_id": jid,
         "type": "research",
         "parent_job_id": parent,
-        "priority": int(c.get("priority") or 50),
+        "priority": candidate_priority_value(c),
         "canonical_id": c.get("canonical_id"),
         "arxiv_id": c.get("arxiv_id"),
         "doi": c.get("doi"),
@@ -938,6 +943,7 @@ def make_research_job(c: dict, parent: str):
         "source_url": c.get("source_url"),
         "paper_path": c.get("paper_path"),
         "selection_reason": c.get("reason"),
+        "priority_breakdown": c.get("priority_breakdown"),
         "status": "ready",
         "workflow_version": 10,
         "artifact_transport": "structured_record_v10",
@@ -983,13 +989,12 @@ def record_discovery_stats(
     final_duplicate_filtered_count: int = 0,
     precheck_result: dict[str, Any] | None = None,
 ) -> bool:
-    """Persist per-axis discovery yield once for a processed submission.
+    """Persist Discovery yield with precheck identity as the canonical round identity.
 
-    The immutable submission carries what the Chat worker observed before transport;
-    Actions supplies the authoritative accepted_count and final duplicate count after
-    canonical identity normalization. Survey-helper runs are serialized by workflow
-    concurrency, so this single writer prevents normal and specialist workers from
-    racing on discovery-state.json.
+    One successful precheck request is one Discovery round. A round may be split into
+    multiple immutable submissions when more than five strong candidates survive
+    evaluation; those submissions aggregate into one history row and increment the
+    per-axis round counter only once.
     """
     meta = sub.get("discovery_stats")
     if not isinstance(meta, dict):
@@ -1003,29 +1008,55 @@ def record_discovery_stats(
     source_submission = str(sub.get("_file") or meta.get("source_submission") or "").strip()
     if source_submission:
         source_submission = Path(source_submission).as_posix()
-    if source_submission and any(
-        isinstance(row, dict) and row.get("source_submission") == source_submission
-        for row in history
-    ):
-        return False
+
+    precheck_request_id = (
+        str(precheck_result.get("request_id") or "").strip()
+        if isinstance(precheck_result, dict)
+        else ""
+    )
+    round_name = str(meta.get("round") or "").strip()
+    run_key = str(meta.get("run_key") or "").strip()
+    round_identity = (
+        f"precheck:{precheck_request_id}"
+        if precheck_request_id
+        else f"legacy:{run_key}:{round_name}"
+    )
+
+    existing_index = None
+    for index, item in enumerate(history):
+        if not isinstance(item, dict):
+            continue
+        sources = list(item.get("source_submissions") or [])
+        legacy_source = item.get("source_submission")
+        if legacy_source and legacy_source not in sources:
+            sources.append(legacy_source)
+        if source_submission and source_submission in sources:
+            return False
+        if item.get("round_identity") == round_identity:
+            existing_index = index
+            break
+        if (
+            not precheck_request_id
+            and item.get("run_key") == meta.get("run_key")
+            and str(item.get("round") or "") == round_name
+        ):
+            existing_index = index
+            break
 
     submitted = sub.get("candidates") if isinstance(sub.get("candidates"), list) else []
     candidate_count = int(meta.get("candidate_count", len(submitted)) or 0)
+    if isinstance(precheck_result, dict):
+        allowed = precheck_result.get("allowed_records")
+        if isinstance(allowed, list):
+            candidate_count = max(candidate_count, len(allowed))
+        unseen = precheck_result.get("unseen_result_count")
+        if isinstance(unseen, int) and not isinstance(unseen, bool):
+            candidate_count = max(candidate_count, unseen)
     candidate_count = max(candidate_count, len(submitted), 0)
     duplicate_count = int(meta.get("duplicate_filtered_count", max(candidate_count - len(submitted), 0)) or 0)
     duplicate_count = min(max(duplicate_count, 0), candidate_count)
-    novel_count = max(candidate_count - duplicate_count, 0)
-    final_duplicate_filtered_count = min(
-        max(int(final_duplicate_filtered_count or 0), 0),
-        novel_count,
-    )
-    post_final_dedupe_count = max(novel_count - final_duplicate_filtered_count, 0)
-    accepted_count = min(max(int(accepted_count or 0), 0), post_final_dedupe_count)
-    duplicate_ratio = (duplicate_count / candidate_count) if candidate_count else 0.0
-    final_duplicate_ratio = (
-        final_duplicate_filtered_count / novel_count
-        if novel_count else 0.0
-    )
+    accepted_count = max(int(accepted_count or 0), 0)
+    final_duplicate_filtered_count = max(int(final_duplicate_filtered_count or 0), 0)
 
     provider = (
         str(precheck_result.get("provider") or "").strip()
@@ -1043,87 +1074,157 @@ def record_discovery_stats(
         else str(meta.get("citation_direction") or "").strip() or None
     )
 
-    row = {
-        "run_key": meta.get("run_key"),
-        "round": meta.get("round"),
-        "axis": axis,
-        "query_summary": meta.get("query_summary"),
-        "provider": provider or None,
-        "source_url": source_url or None,
-        "citation_direction": citation_direction,
-        "candidate_count": candidate_count,
-        "duplicate_filtered_count": duplicate_count,
-        "novel_candidate_count": novel_count,
-        "final_duplicate_filtered_count": final_duplicate_filtered_count,
-        "post_final_dedupe_count": post_final_dedupe_count,
-        "accepted_count": accepted_count,
-        "duplicate_ratio": duplicate_ratio,
-        "final_duplicate_ratio": final_duplicate_ratio,
-        "accepted_canonical_ids": list(meta.get("accepted_canonical_ids") or []),
-        "duplicate_canonical_ids": list(meta.get("duplicate_canonical_ids") or []),
-        "next_axis_hint": meta.get("next_axis_hint"),
-        "source_submission": source_submission or None,
-    }
-    history.append(row)
+    expected_submissions = max(int(meta.get("round_submission_count", 1) or 1), 1)
+    submission_index = max(int(meta.get("round_submission_index", 1) or 1), 1)
+    if submission_index > expected_submissions:
+        raise ValueError("discovery_stats.round_submission_index must be <= round_submission_count")
+
+    if existing_index is None:
+        row = {
+            "round_identity": round_identity,
+            "precheck_request_id": precheck_request_id or None,
+            "run_key": meta.get("run_key"),
+            "round": meta.get("round"),
+            "axis": axis,
+            "query_summary": meta.get("query_summary"),
+            "provider": provider or None,
+            "source_url": source_url or None,
+            "citation_direction": citation_direction,
+            "candidate_count": candidate_count,
+            "duplicate_filtered_count": duplicate_count,
+            "final_duplicate_filtered_count": final_duplicate_filtered_count,
+            "accepted_count": accepted_count,
+            "accepted_canonical_ids": list(meta.get("accepted_canonical_ids") or []),
+            "duplicate_canonical_ids": list(meta.get("duplicate_canonical_ids") or []),
+            "next_axis_hint": meta.get("next_axis_hint"),
+            "source_submission": source_submission or None,
+            "source_submissions": [source_submission] if source_submission else [],
+            "round_submission_count": expected_submissions,
+            "round_accounted": False,
+        }
+        history.append(row)
+        existing_index = len(history) - 1
+    else:
+        row = history[existing_index]
+        if str(row.get("axis") or "") != axis:
+            raise ValueError("submissions sharing one precheck round must use the same discovery axis")
+        row["candidate_count"] = max(int(row.get("candidate_count", 0) or 0), candidate_count)
+        row["duplicate_filtered_count"] = max(
+            int(row.get("duplicate_filtered_count", 0) or 0),
+            duplicate_count,
+        )
+        row["final_duplicate_filtered_count"] = int(
+            row.get("final_duplicate_filtered_count", 0) or 0
+        ) + final_duplicate_filtered_count
+        row["accepted_count"] = int(row.get("accepted_count", 0) or 0) + accepted_count
+        row["round_submission_count"] = max(
+            int(row.get("round_submission_count", 1) or 1),
+            expected_submissions,
+        )
+        sources = list(row.get("source_submissions") or [])
+        legacy_source = row.get("source_submission")
+        if legacy_source and legacy_source not in sources:
+            sources.append(legacy_source)
+        if source_submission and source_submission not in sources:
+            sources.append(source_submission)
+        row["source_submissions"] = sources
+        if meta.get("next_axis_hint") is not None:
+            row["next_axis_hint"] = meta.get("next_axis_hint")
+        row["accepted_canonical_ids"] = list(dict.fromkeys(
+            list(row.get("accepted_canonical_ids") or [])
+            + list(meta.get("accepted_canonical_ids") or [])
+        ))
+        row["duplicate_canonical_ids"] = list(dict.fromkeys(
+            list(row.get("duplicate_canonical_ids") or [])
+            + list(meta.get("duplicate_canonical_ids") or [])
+        ))
+
+    candidate_count = max(int(row.get("candidate_count", 0) or 0), 0)
+    duplicate_count = min(max(int(row.get("duplicate_filtered_count", 0) or 0), 0), candidate_count)
+    novel_count = max(candidate_count - duplicate_count, 0)
+    final_duplicate_filtered_count = min(
+        max(int(row.get("final_duplicate_filtered_count", 0) or 0), 0),
+        novel_count,
+    )
+    post_final_dedupe_count = max(novel_count - final_duplicate_filtered_count, 0)
+    accepted_count = min(max(int(row.get("accepted_count", 0) or 0), 0), post_final_dedupe_count)
+    row["novel_candidate_count"] = novel_count
+    row["final_duplicate_filtered_count"] = final_duplicate_filtered_count
+    row["post_final_dedupe_count"] = post_final_dedupe_count
+    row["accepted_count"] = accepted_count
+    row["duplicate_ratio"] = (duplicate_count / candidate_count) if candidate_count else 0.0
+    row["final_duplicate_ratio"] = (
+        final_duplicate_filtered_count / novel_count if novel_count else 0.0
+    )
+
+    source_count = len(list(row.get("source_submissions") or []))
+    round_complete = source_count >= int(row.get("round_submission_count", 1) or 1)
+    row["round_complete"] = round_complete
+    history[existing_index] = row
+
+    axes = state.get("axes") if isinstance(state.get("axes"), dict) else {}
+    summary = axes.get(axis) if isinstance(axes.get(axis), dict) else {}
+    newly_accounted = bool(round_complete and not row.get("round_accounted"))
+    if newly_accounted:
+        row["round_accounted"] = True
+        summary["last_run_key"] = meta.get("run_key")
+        summary["rounds"] = int(summary.get("rounds", 0) or 0) + 1
+        for field, value in (
+            ("candidate_count", candidate_count),
+            ("duplicate_filtered_count", duplicate_count),
+            ("novel_candidate_count", novel_count),
+            ("final_duplicate_filtered_count", final_duplicate_filtered_count),
+            ("post_final_dedupe_count", post_final_dedupe_count),
+            ("accepted_count", accepted_count),
+        ):
+            summary[field] = int(summary.get(field, 0) or 0) + value
+        total_candidates = int(summary.get("candidate_count", 0) or 0)
+        total_duplicates = int(summary.get("duplicate_filtered_count", 0) or 0)
+        total_novel = int(summary.get("novel_candidate_count", 0) or 0)
+        total_final_duplicates = int(summary.get("final_duplicate_filtered_count", 0) or 0)
+        summary["duplicate_ratio"] = (total_duplicates / total_candidates) if total_candidates else 0.0
+        summary["final_duplicate_ratio"] = (
+            total_final_duplicates / total_novel if total_novel else 0.0
+        )
+        summary["next_axis_hint"] = meta.get("next_axis_hint")
+        axes[axis] = summary
+
+        search_windows = meta.get("search_windows")
+        if search_windows is not None:
+            if not isinstance(search_windows, list) or any(not isinstance(window, dict) for window in search_windows):
+                raise ValueError("discovery_stats.search_windows must be a list of objects")
+            discovery_search_history.record_search_windows(
+                state,
+                search_windows,
+                run_key=meta.get("run_key"),
+                round_name=meta.get("round"),
+            )
+
+        if accepted_count == 0:
+            state["consecutive_empty_rounds"] = int(state.get("consecutive_empty_rounds", 0) or 0) + 1
+            state["last_empty_round_reason"] = meta.get("empty_round_reason") or (
+                "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。"
+            )
+        else:
+            state["consecutive_empty_rounds"] = 0
+            state["last_empty_round_reason"] = None
+
     limit = state.get("history_limit", 24)
     if not isinstance(limit, int) or limit < 1:
         limit = 24
     state["history_limit"] = limit
     state["history"] = history[-limit:]
-
-    axes = state.get("axes") if isinstance(state.get("axes"), dict) else {}
-    summary = axes.get(axis) if isinstance(axes.get(axis), dict) else {}
-    summary["last_run_key"] = meta.get("run_key")
-    summary["rounds"] = int(summary.get("rounds", 0) or 0) + 1
-    for field, value in (
-        ("candidate_count", candidate_count),
-        ("duplicate_filtered_count", duplicate_count),
-        ("novel_candidate_count", novel_count),
-        ("final_duplicate_filtered_count", final_duplicate_filtered_count),
-        ("post_final_dedupe_count", post_final_dedupe_count),
-        ("accepted_count", accepted_count),
-    ):
-        summary[field] = int(summary.get(field, 0) or 0) + value
-    total_candidates = int(summary.get("candidate_count", 0) or 0)
-    total_duplicates = int(summary.get("duplicate_filtered_count", 0) or 0)
-    total_novel = int(summary.get("novel_candidate_count", 0) or 0)
-    total_final_duplicates = int(summary.get("final_duplicate_filtered_count", 0) or 0)
-    summary["duplicate_ratio"] = (total_duplicates / total_candidates) if total_candidates else 0.0
-    summary["final_duplicate_ratio"] = (
-        total_final_duplicates / total_novel if total_novel else 0.0
-    )
-    summary["next_axis_hint"] = meta.get("next_axis_hint")
-    axes[axis] = summary
     state["axes"] = axes
-
-    search_windows = meta.get("search_windows")
-    if search_windows is not None:
-        if not isinstance(search_windows, list) or any(not isinstance(window, dict) for window in search_windows):
-            raise ValueError("discovery_stats.search_windows must be a list of objects")
-        discovery_search_history.record_search_windows(
-            state,
-            search_windows,
-            run_key=meta.get("run_key"),
-            round_name=meta.get("round"),
-        )
-
     state["schema_version"] = max(int(state.get("schema_version", 2) or 2), 3)
     state["updated_at"] = now()
     state["last_run_key"] = meta.get("run_key")
     state["last_round"] = meta.get("round")
-    if accepted_count == 0:
-        state["consecutive_empty_rounds"] = int(state.get("consecutive_empty_rounds", 0) or 0) + 1
-        state["last_empty_round_reason"] = meta.get("empty_round_reason") or (
-            "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。"
-        )
-    else:
-        state["consecutive_empty_rounds"] = 0
-        state["last_empty_round_reason"] = None
     state.setdefault("next_action_when_stock_zero", "discover_now")
     state.setdefault("next_action_when_round_empty", "change_axis_and_discover_again")
     state.setdefault(
         "notes",
-        "Scheduled Chat discovery state. Record per-round candidate counts, worker-side duplicate filtering, final canonical duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run.",
+        "Scheduled Chat discovery state. One successful precheck request is one round; "
+        "multiple submissions from the same precheck aggregate into that round.",
     )
     write_json(DISCOVERY_STATE, state)
     return True
@@ -1145,7 +1246,7 @@ def process_discovery(sub: dict, job: dict, st: dict, *, precheck_result: Any = 
     accepted_records: list[dict[str, Any]] = []
     added = 0
     final_duplicate_filtered_count = 0
-    for candidate in sorted(candidates, key=lambda x: int(x.get("priority") or 0), reverse=True):
+    for candidate in sorted(candidates, key=candidate_priority_value, reverse=True):
         key = candidate_key(candidate)
         tokens = paper_identity.identity_tokens(candidate)
         if not key:
@@ -1160,7 +1261,7 @@ def process_discovery(sub: dict, job: dict, st: dict, *, precheck_result: Any = 
         if tokens & seen or represented_match or local_match:
             final_duplicate_filtered_count += 1
             continue
-        if int(candidate.get("priority") or 0) < 40:
+        if candidate_priority_value(candidate) < 40:
             continue
         if make_research_job(candidate, job["job_id"]):
             added += 1
