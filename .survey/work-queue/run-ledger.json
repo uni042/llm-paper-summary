@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T14:40:53.794166+00:00",
+  "updated_at": "2026-09-21T14:43:40.405346+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -33577,6 +33577,64 @@
           "type": "research",
           "canonical_id": "DOI:10.1145/3712285.3759903",
           "title": "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 882,
+      "paper_active_count_after": 882,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35614034966",
+      "first_recorded_at": "2026-09-21T14:43:40.405346+00:00",
+      "last_recorded_at": "2026-09-21T14:43:40.405346+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 2,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35614034966:1",
+          "recorded_at": "2026-09-21T14:43:40.405346+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35614034966",
+            "run_attempt": "1",
+            "source_sha": "491d050474f381f6f7a28d817c15a5a84d52286f"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-9aee3ce953b43bc0",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3821219",
+          "title": "AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-c76afcb7233dbe74",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3832810.3832859",
+          "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
           "from": "ready",
           "to": "blocked"
         }

@@ -8,9 +8,9 @@
       "blocked": 2
     },
     "research": {
-      "ready": 330,
+      "ready": 328,
       "completed": 427,
-      "blocked": 11,
+      "blocked": 13,
       "superseded": 3,
       "deferred": 3,
       "blocked_permanent": 8,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 330,
+    "ready_research_audit": 328,
     "actively_claimed": 0,
-    "claimable": 330
+    "claimable": 328
   },
   "next_jobs": [
     {
@@ -60,34 +60,6 @@
       "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
       "source_url": "https://doi.org/10.1145/3745756.3809234",
       "paper_path": "papers/inference/99-other-inference-systems/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-c76afcb7233dbe74",
-      "type": "research",
-      "lane": null,
-      "priority": 99,
-      "canonical_id": "DOI:10.1145/3832810.3832859",
-      "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
-      "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-aacd4c06a02a-crossserve-cross-layer-scheduling-for-slo-optimization-in-multi-tenant-llm-serving.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-9aee3ce953b43bc0",
-      "type": "research",
-      "lane": null,
-      "priority": 99,
-      "canonical_id": "DOI:10.1145/3821219",
-      "title": "AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism",
-      "source_url": "https://doi.org/10.1145/3821219",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-96d0bc7068f2-adaptivekv-accelerating-kv-cache-offloading-with-a-bandwidth-adaptive-memory-allocation-mechanism.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -136,6 +108,34 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-9119a9e35c42f3f7",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00101",
+      "title": "Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching",
+      "source_url": "https://www.semanticscholar.org/paper/4c3a06228ed83adb1000cafd501c8a6726178a2b",
+      "paper_path": "papers/inference/99-other-inference-systems/2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-289804590f1b694f",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "DOI:10.1145/3832810.3832827",
+      "title": "ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape",
+      "source_url": "https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-ef0cbb7f0917-reliefserve-relieving-gpu-pressure-in-multi-model-serving-via-selective-cpu-escape.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T14:40:48+00:00"
+  "generated_at": "2026-09-21T14:43:34+00:00"
 }
