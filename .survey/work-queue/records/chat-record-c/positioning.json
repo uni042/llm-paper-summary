@@ -1,1 +1,20 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-005352244067bb246e01f37f","job_id":"job-research-3123e052604efe34","data":{"research_positioning":"CateKVは長文LLMのKVキャッシュ圧縮・疎注意系統に属する。StreamingLLM、SnapKV、PyramidKVなどのKV削除法と、Quest、ShadowKVなどの全KV保持検索法の中間に位置し、さらにDuoAttentionやRazorAttentionのヘッド分類と近い。特徴は、ヘッド内の空間的疎性だけでなく、プリフィルからデコードへ注意先が持続する逐次的一貫性を分類根拠に使う点である。","differences":"削除法は全ヘッドへ似た保持規則を適用しやすく、重要KV喪失で精度を落とす。Quest/ShadowKVは必要KVを検索するが全KVを保存するため容量を減らさない。DuoAttentionは検索ヘッドとストリーミングヘッドへ分けるが、ストリーミングパターンは初期・直近トークンを中心にし、低いフル注意ヘッド比で精度が崩れやすい。CateKVはプリフィルとデコード間の注意先一致を直接観測し、一貫ヘッドでは選択トークン、適応ヘッドでは大半のKVを保持するため、低い適応ヘッド比でも精度を維持しやすい。","limitations":"近似的KV削除なので圧縮率を上げすぎると精度が落ち、r約0.2、η約0.6付近に実験上の境界がある。固定ヘッド型を作るにはモデルごとの参照データとk・α等の調整が必要である。効率評価は単一A100と7B〜9B級モデル中心で、他GPU、分散環境、巨大MoEでの性能は直接検証していない。逐次的一貫性が極端に長い生成中も維持されるかは評価範囲外である。","implementation_status":"公式GitHubリポジトリhaoyun-jiang/CateKVで実装、環境定義、ヘッドマスク生成、RULER評価、効率測定スクリプトを公開している。ICML 2025の査読済み会議論文としてPMLRに収録済み。","relation_to_repository":"リポジトリ内のKVキャッシュ圧縮、疎注意、長文推論高速化の論文群と直接比較可能である。特にShadowKVやQuestとは競合ではなく適応ヘッド内検索として併用でき、MInferenceとはプリフィル・デコードの異なる段階を最適化する補完関係にある。","takeaway":"全注意ヘッドへ同じKV予算を与える必要はない。プリフィルで注意先が安定すると確認できるヘッドから大胆にKVを削り、動的ヘッドへ容量を残すことで、長文推論の精度・メモリ・速度の三者トレードオフを改善できる。"},"reservation":{"claim_id":"claim-005352244067bb246e01f37f","worker_id":"scheduled-chat-llm-paper-worker-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-1c06a80a4dff61d0bbd67b24",
+  "job_id": "job-research-3123e052604efe34",
+  "data": {
+    "research_positioning": "CateKVは長文LLMのKVキャッシュ圧縮・疎注意系統に属する。StreamingLLM、SnapKV、PyramidKVなどのKV削除法と、Quest、ShadowKVなどの全KV保持検索法の中間に位置し、さらにDuoAttentionやRazorAttentionのヘッド分類と近い。特徴は、ヘッド内の空間的疎性だけでなく、プリフィルからデコードへ注意先が持続する逐次的一貫性を分類根拠に使う点である。",
+    "differences": "削除法は全ヘッドへ似た保持規則を適用しやすく、重要KV喪失で精度を落とす。Quest/ShadowKVは必要KVを検索するが全KVを保存するため容量を減らさない。DuoAttentionは検索ヘッドとストリーミングヘッドへ分けるが、ストリーミングパターンは初期・直近トークンを中心にし、低いフル注意ヘッド比で精度が崩れやすい。CateKVはプリフィルとデコード間の注意先一致を直接観測し、一貫ヘッドでは選択トークン、適応ヘッドでは大半のKVを保持するため、低い適応ヘッド比でも精度を維持しやすい。",
+    "limitations": "近似的KV削除なので圧縮率を上げすぎると精度が落ち、r約0.2、η約0.6付近に実験上の境界がある。固定ヘッド型を作るにはモデルごとの参照データとk・α等の調整が必要である。効率評価は単一A100と7B〜9B級モデル中心で、他GPU、分散環境、巨大MoEでの性能は直接検証していない。逐次的一貫性が極端に長い生成中も維持されるかは評価範囲外である。",
+    "implementation_status": "公式GitHubリポジトリhaoyun-jiang/CateKVで実装、環境定義、ヘッドマスク生成、RULER評価、効率測定スクリプトを公開している。ICML 2025の査読済み会議論文としてPMLRに収録済み。",
+    "relation_to_repository": "リポジトリ内のKVキャッシュ圧縮、疎注意、長文推論高速化の論文群と直接比較可能である。特にShadowKVやQuestとは競合ではなく適応ヘッド内検索として併用でき、MInferenceとはプリフィル・デコードの異なる段階を最適化する補完関係にある。",
+    "takeaway": "全注意ヘッドへ同じKV予算を与える必要はない。プリフィルで注意先が安定すると確認できるヘッドから大胆にKVを削り、動的ヘッドへ容量を残すことで、長文推論の精度・メモリ・速度の三者トレードオフを改善できる。"
+  },
+  "reservation": {
+    "claim_id": "claim-1c06a80a4dff61d0bbd67b24",
+    "worker_id": "scheduled-chat-llm-paper-worker-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
