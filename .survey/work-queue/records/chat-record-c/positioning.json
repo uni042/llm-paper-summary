@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-1ee8f5025b9f58b95a570856",
+  "attempt_id": "attempt-2244242a4420892ce2fb1e0c",
   "job_id": "job-research-c27f3a6ec993f9ab",
   "data": {
     "limitations": "closed-form derivationはGated Delta型のtoken-dependent non-diagonal recurrenceを対象としており、任意のlinear attention/SSMへそのまま一般化できるとは示されていない。評価modelはQwen3.5 family、GPUはA100とGB10に限定される。offline profilerはmodel/GPU/parallelism/batch/KV-length/tree bucketごとにcapacityを較正する必要があり、deployment configuration変更時のcalibration costがある。AdaServeはhybrid model未対応のため著者らがSGLangへportした比較であり、原実装そのものとの比較ではない。独立したBole実装repositoryは本文に示されず、再現にはSGLang統合差分が必要になる。online評価はOpen-SWE-Traces coding-agent workload中心で、他のproduction traffic distributionsやmulti-tenant SLO条件は未検証である。",
@@ -11,7 +11,7 @@
     "research_positioning": "hybrid-attention LLM servingが主流化する局面で、従来full-attention向けに成熟したtree speculative decodingをrecurrent-state modelへ移植する際のsystem gapを埋める研究である。特に『再帰を厳密閉形式へ変換してGPU並列化』『candidate stateを因子化してcache容量を守る』『complete forwardを基準にproposal capacityを決める』という三層の結合は、speculative decoding、linear-attention kernels、state/cache management、runtime schedulingを横断する。リポジトリ上では他の推論システム系に加え、今後のhybrid/SSM serving・speculative decoding系統との比較軸になる。"
   },
   "reservation": {
-    "claim_id": "claim-1ee8f5025b9f58b95a570856",
+    "claim_id": "claim-2244242a4420892ce2fb1e0c",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
