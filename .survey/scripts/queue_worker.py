@@ -1081,6 +1081,7 @@ def record_discovery_stats(
         if isinstance(precheck_result, dict)
         else str(meta.get("citation_direction") or "").strip() or None
     )
+    seed_canonical_id = str(meta.get("seed_canonical_id") or "").strip() or None
 
     expected_submissions = max(int(meta.get("round_submission_count", 1) or 1), 1)
     submission_index = max(int(meta.get("round_submission_index", 1) or 1), 1)
@@ -1098,6 +1099,7 @@ def record_discovery_stats(
             "provider": provider or None,
             "source_url": source_url or None,
             "citation_direction": citation_direction,
+            "seed_canonical_id": seed_canonical_id,
             "candidate_count": candidate_count,
             "duplicate_filtered_count": duplicate_count,
             "final_duplicate_filtered_count": final_duplicate_filtered_count,
@@ -1146,6 +1148,11 @@ def record_discovery_stats(
         if source_submission and source_submission not in sources:
             sources.append(source_submission)
         row["source_submissions"] = sources
+        existing_seed = str(row.get("seed_canonical_id") or "").strip() or None
+        if existing_seed and seed_canonical_id and existing_seed != seed_canonical_id:
+            raise ValueError("submissions sharing one precheck round must use the same seed_canonical_id")
+        if seed_canonical_id and not existing_seed:
+            row["seed_canonical_id"] = seed_canonical_id
         if meta.get("next_axis_hint") is not None:
             row["next_axis_hint"] = meta.get("next_axis_hint")
         row["accepted_canonical_ids"] = list(dict.fromkeys(
