@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c0dd780b67cd1678ab06e0b7",
+  "attempt_id": "attempt-c15eb227583bc63610ceb386",
   "job_id": "job-research-b47f649340a3fc18",
   "data": {
     "limitations": "評価はQwen3-NextのGDNとKimi-LinearのKDAというhybrid architectureに限定され、pure linear-attention/SSMへの転移は未確認。全serving experimentがTP8で、より大きいTP degreeの負荷均衡・all-to-all costは未検証。GDNはdecayがhead粒度のためKDAより容量gainが小さく、architecture依存性が強い。DASC-WRはreplay window以前のlocal-state historyを復元しない近似であり、aggressive compressionでは追加compute/communicationが利得を相殺し得る。",
@@ -11,7 +11,7 @@
     "research_positioning": "Hybrid linear-attention servingでrecurrent state checkpointをKV cacheの付属物ではなく独立した階層メモリ資源として扱う研究。特にweight-onlyの静的寿命推定をcache representationへ接続し、logical selectionだけでなくragged physical layoutとTP rank bottleneckまで最適化した点がシステム研究として重要である。entry-level caching policy、state quantization、hierarchical KV cacheと直交して組み合わせられる。"
   },
   "reservation": {
-    "claim_id": "claim-c0dd780b67cd1678ab06e0b7",
+    "claim_id": "claim-c15eb227583bc63610ceb386",
     "worker_id": "scheduled-chat-llm-00",
     "worker_kind": "scheduled_chat"
   }

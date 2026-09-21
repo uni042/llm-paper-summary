@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c0dd780b67cd1678ab06e0b7",
+  "attempt_id": "attempt-c15eb227583bc63610ceb386",
   "job_id": "job-research-b47f649340a3fc18",
   "data": {
     "hardware": "全formal experimentはHopper世代GPUでTP8。Kimi-Linear-48B-A3B-Instruct（20 KDA + 7 full-attention layers）とQwen3-Next-80B-A3B-Instruct（36 GDN + 12 full-attention layers）を評価する。",
@@ -11,7 +11,7 @@
     "scope": "Hybrid attentionの2系統（KDA channel-grained、GDN head-grained）に限定。Wmax 16〜512/1024で圧縮と品質を走査し、TP balance、ragged layout、suffix refresh、INT8 state quantizationとの合成も評価する。pure linear attention/SSM、TP8超、他hardware世代は未検証。"
   },
   "reservation": {
-    "claim_id": "claim-c0dd780b67cd1678ab06e0b7",
+    "claim_id": "claim-c15eb227583bc63610ceb386",
     "worker_id": "scheduled-chat-llm-00",
     "worker_kind": "scheduled_chat"
   }

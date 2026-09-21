@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c0dd780b67cd1678ab06e0b7",
+  "attempt_id": "attempt-c15eb227583bc63610ceb386",
   "job_id": "job-research-b47f649340a3fc18",
   "data": {
     "overview": "保守的Wmax=16ではKimi-KDAのragged + TP-balanced checkpoint容量がdenseの2.63倍になり、RULER平均はdenseとほぼ同等を維持した。固定HBMのprefix-reuse workloadではKimi-KDAのTTFTが567.6msから326.0msへ42.6%低下し、入力throughputが33.25kから55.98k tokens/sへ68.4%向上した。より強い圧縮ではNRの精度低下が増えるが、WR suffix refreshで大部分を回復する。",
@@ -55,7 +55,7 @@
     "quality_impact": "Wmax=16ではend-task各行がdenseから1.3pt以内で、Kimi-KDAではdecay-aware DASCが15 reasoning comparisonsすべてで5-mask Random平均を上回り7件がHolm補正後も有意。強い圧縮ではNR劣化が増え、WRで精度とlatencyを交換する。"
   },
   "reservation": {
-    "claim_id": "claim-c0dd780b67cd1678ab06e0b7",
+    "claim_id": "claim-c15eb227583bc63610ceb386",
     "worker_id": "scheduled-chat-llm-00",
     "worker_kind": "scheduled_chat"
   }
