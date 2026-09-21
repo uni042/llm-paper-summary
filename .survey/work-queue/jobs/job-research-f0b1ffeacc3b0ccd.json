@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/05ce627af947fbb7b08b2b653f62974cce24b1b2",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md",
   "selection_reason": "単体kernel benchmarkと実LLM推論の差を閉ループで埋め、実モデル内validationまで含むdeployment-aware kernel最適化。推論kernel・自動最適化系統への直接的な新規性が高い。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T23:10:45+00:00"
+  "created_at": "2026-09-20T23:10:45+00:00",
+  "completed_at": "2026-09-21T00:07:44+00:00",
+  "blocker": "Primary full text could not be safely retrieved through an official source in this invocation. The official arXiv abstract was available through indexed metadata, but direct official arXiv full-text retrieval was unavailable. A third-party page mirrored substantial arXiv HTML, but the workflow requires the primary source in full, so it was not used to synthesize the five-slot record.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-c7822fb4e9c82aab492813f6.json"
 }
