@@ -19,8 +19,8 @@
   },
   "claiming": {
     "ready_research_audit": 329,
-    "actively_claimed": 0,
-    "claimable": 329
+    "actively_claimed": 1,
+    "claimable": 328
   },
   "next_jobs": [
     {
@@ -46,20 +46,6 @@
       "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
       "source_url": "https://doi.org/10.1145/3745756.3809234",
       "paper_path": "papers/inference/99-other-inference-systems/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-a748d42a4b0082c7",
-      "type": "research",
-      "lane": null,
-      "priority": 99,
-      "canonical_id": "arXiv:2606.17107",
-      "title": "Models Take Notes at Prefill: KV Cache Can Be Editable and Composable",
-      "source_url": "https://www.semanticscholar.org/paper/bad8f4a1c5b4fd2942a14c223dcd5442a18ea123",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-8f68f6b8d4d62651",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2608.15299",
+      "title": "MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation",
+      "source_url": "https://arxiv.org/abs/2608.15299",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.15299-maple-layer-wise-expert-allocation.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T04:36:27+00:00"
+  "generated_at": "2026-09-21T04:39:18+00:00"
 }
