@@ -12,15 +12,15 @@
   "source_url": "https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high-bandwidth-flash.md",
   "selection_reason": "trillion-parameter MoEを単一nodeで低concurrency servingするためHBFとDRAMの容量・帯域を分離評価。HBF transportとstate bandwidthの独立なkneeを示しflash-backed MoE推論設計へ直接寄与。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T22:11:49+00:00",
-  "blocker": "Primary full text could not be safely retrieved in this invocation. The official arXiv HTML route for arXiv:2609.15636 returned a DisabledError; fresh search exposed only abstract/metadata mirrors and third-party summaries, not a materially distinct authoritative full-text route. The abstract confirms the paper identity and cs.AR category, but workflow requires full primary-source reading, so no five-slot scientific record was synthesized from secondary material.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-38e27232290f510236f78455.json",
+  "blocker": "Primary full text remains unavailable on retry. Official arXiv HTML and PDF routes for arXiv:2609.15636 return DisabledError in this environment. Fresh search resolves the official arXiv abstract/metadata but only secondary mirrors/summaries beyond that; no complete authoritative paper body was safely retrievable. No five-slot record was synthesized from abstract or secondary summaries.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-16aad6943982261ce4a2a5d7.json",
   "blocked_attempts": 1,
   "last_recorded_blocked_event": "2026-09-21T01:11:24+00:00",
   "block_history": [
@@ -31,5 +31,6 @@
     }
   ],
   "last_blocked_at": "2026-09-21T01:11:24+00:00",
-  "retry_queued_at": "2026-09-21T07:05:25+00:00"
+  "retry_queued_at": "2026-09-21T07:05:25+00:00",
+  "completed_at": "2026-09-21T11:38:14+00:00"
 }
