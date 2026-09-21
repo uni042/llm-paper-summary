@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-a00d8b41e72274b2614df863",
-  "job_id": "job-research-be16d214d5c628cd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a00d8b41e72274b2614df863",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a00d8b41e72274b2614df863","job_id":"job-research-be16d214d5c628cd","data":{"hardware":"Catalog E: H200 SXM、H100 PCIe/SXM、A100 PCIe/SXM、L40S、L4、RTX PRO 6000 Server。Catalog SはB200/B300と模擬Attention/Expert特化点を追加。物理検証はAscend 910C 160 cards。","models":"Qwen3-235B-A22B、DeepSeek-V3.2。物理検証はLongCat 2.0。","workloads":"分析評価はDeepSeek 4K context、Qwen 1K contextを中心にTPOT SLOとH200換算予算をsweep。E-gridは各モデル18設定、S-sweepは各モデル6設定。物理LongCatは32K/64K/120K contextの3 workload。","baselines":["exhaustive hardware-pair provisioning","best independently provisioned collocated deployment","cheapest-pair ranking","fastest-role ranking","component heuristic","profile estimate only","single-anchor local refinement","reported FastAFD and MegaScale-Infer configurations for retrospective accounting"],"metrics":["SLO-feasible decode throughput","AFD-to-collocated throughput ratio","complete deployment evaluations","global-optimum recovery","physical-vs-analytical throughput-ratio error","resident concurrency","TPOT","search time/evaluation budget"],"evaluation_setup":"分析行はassignment budget Q=20、retained width w=2、expansion width x=6、最大K=3 refinement rounds。Catalog Eは64 ordered pairs、Sは121 pairs。物理検証では同一budget/workload下で分析側がAFD/同居を独立再プロビジョニングし、LongCat runtime測定とarchitecture orderingを比較する。","scope":"steady-state saturated decodeと固定budget/TPOT SLOの比較に焦点を当てる。installed hardware再利用、elasticity、failure isolationは目的外。分析モデルはkernel deficiency、scheduler latency、network contention等のruntime固有overheadを省略し、future hardwareは仮想capability pointである。"},"reservation":{"claim_id":"claim-a00d8b41e72274b2614df863","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
