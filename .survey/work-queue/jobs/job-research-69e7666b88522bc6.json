@@ -12,15 +12,15 @@
   "source_url": "https://doi.org/10.1145/3712285.3759903",
   "paper_path": "papers/inference/04-moe-offload-expert-cache/2025-diff-moe-priority-driven-differential-expert-caching.md",
   "selection_reason": "global/temporal expert localityを分離した多段GPU cacheと次層expert prefetchを組み合わせ、大batchのoffloaded MoE推論を高速化する。DeepSpeed、Pre-gated MoE、MoE-Infinity比でthroughputをそれぞれ2.74x、2.22x、1.55x改善し、Expert Cache/Prefetch系統へ直接接続する。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T12:13:37+00:00",
-  "blocker": "Primary full text remains unavailable after materially distinct retrieval attempts. The official DOI/SC bibliographic path and Qinggang Wang's author publication page confirm the SC 2025 paper, while ResearchGate explicitly reports no full text available. Fresh title/DOI searches did not surface an accessible ACM/SC or author-hosted manuscript that can be read end-to-end. Secondary summaries were not used to fabricate the required five-slot record.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-f79881d3b9e7329f0136ef26.json",
+  "blocker": "Primary full text remains unavailable after a fresh authoritative-route retry. The official SC25 schedule and Qinggang Wang author page confirm Diff-MoE and its SC 2025 publication, but neither exposed the manuscript body. Fresh title/DOI search surfaced secondary summaries only. A DBLP search snippet suggested an arXiv identifier, but direct verification showed arXiv:2505.09107 is an unrelated astronomy paper, so it was rejected as an identity mismatch. No five-slot record was synthesized from secondary material.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-ada5ca04d7ea755ed68c8a30.json",
   "blocked_attempts": 2,
   "last_recorded_blocked_event": "2026-09-21T03:02:06+00:00",
   "block_history": [
@@ -36,5 +36,6 @@
     }
   ],
   "last_blocked_at": "2026-09-21T03:02:06+00:00",
-  "retry_queued_at": "2026-09-21T14:09:55+00:00"
+  "retry_queued_at": "2026-09-21T14:09:55+00:00",
+  "completed_at": "2026-09-21T14:40:48+00:00"
 }

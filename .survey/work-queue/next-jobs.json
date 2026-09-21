@@ -8,9 +8,9 @@
       "blocked": 2
     },
     "research": {
-      "ready": 332,
+      "ready": 330,
       "completed": 427,
-      "blocked": 9,
+      "blocked": 11,
       "superseded": 3,
       "deferred": 3,
       "blocked_permanent": 8,
@@ -18,9 +18,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 332,
+    "ready_research_audit": 330,
     "actively_claimed": 0,
-    "claimable": 332
+    "claimable": 330
   },
   "next_jobs": [
     {
@@ -52,20 +52,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-69e7666b88522bc6",
-      "type": "research",
-      "lane": null,
-      "priority": 99,
-      "canonical_id": "DOI:10.1145/3712285.3759903",
-      "title": "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching",
-      "source_url": "https://doi.org/10.1145/3712285.3759903",
-      "paper_path": "papers/inference/04-moe-offload-expert-cache/2025-diff-moe-priority-driven-differential-expert-caching.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-4ad4e8ccc85f54fc",
       "type": "research",
       "lane": null,
@@ -74,20 +60,6 @@
       "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
       "source_url": "https://doi.org/10.1145/3745756.3809234",
       "paper_path": "papers/inference/99-other-inference-systems/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-331c2ec4acba72cc",
-      "type": "research",
-      "lane": null,
-      "priority": 99,
-      "canonical_id": "DOI:10.1145/3832810.3832866",
-      "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
-      "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-c24278db090c-asymflow-enabling-long-context-llm-serving-via-cpu-gpu-prefill-decode-disaggregation.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -136,6 +108,34 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-3eb9c6f535e789d0",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "arXiv:2609.16215",
+      "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+      "source_url": "https://www.semanticscholar.org/paper/7230bca60434024cc679e0d1e71a80bde5a9f3c5",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.16215-where-should-the-kv-cache-live-placement-policies-across-gpu-cpu-and-ssd-for-long-lived-sessions.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-2b08559ce4102c47",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "DOI:10.1145/3793230.3837769",
+      "title": "To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems",
+      "source_url": "https://www.semanticscholar.org/paper/6db782df823d9da204a59180305aba81d47b3997",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-serving-systems.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T14:39:10+00:00"
+  "generated_at": "2026-09-21T14:40:48+00:00"
 }
