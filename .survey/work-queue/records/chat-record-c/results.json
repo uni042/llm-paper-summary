@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-366d346973cd87c804efb287",
-  "job_id": "job-research-a748d42a4b0082c7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-366d346973cd87c804efb287",
-    "worker_id": "scheduled-chat-llm-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-366d346973cd87c804efb287","job_id":"job-research-a748d42a4b0082c7","data":{"overview":"機構解析ではフィールド自身のKVが意思決定へ与える因果寄与が1%未満で、後続メモがほぼ全てを担うことを四モデル系列で確認した。編集では追記訂正が完全再計算と同等の判断を低コストで回復し、合成では事前計算スキルのRoPE再配置が12モデルで高いlogit一致を示す。オンラインvLLMでは追記方式が98.5%の接頭辞命中率を保ち、負荷増大時に最大14.5倍の処理率と53〜398倍低いp90 TTFTを実現した。","key_results":[{"metric":"フィールドのみKVの意思決定回復","value":"Llama-3.1-8Bで-0.028、四系列でほぼ0；完全後続再計算は1.0","baseline":"完全再計算","condition":"可変フィールドの因果局所性実験","interpretation":"復号時の判断はフィールド自身より、プリフィルで後続位置へ書かれた結論メモに依存する。"},{"metric":"合成KVのlogit cosine","value":"0.90〜0.999","baseline":"完全再プリフィル","condition":"12モデルで事前計算スキルをRoPE再配置して挿入","interpretation":"位置再配置と接合だけで完全再計算に近い出力状態を維持できる。"},{"metric":"32k文脈の最初のトークンまでの時間","value":"最大13.9倍短縮","baseline":"完全再プリフィル","condition":"事前計算スキルの合成","interpretation":"長い再利用部品で二次的な再プリフィルを線形再配置へ置き換える効果が大きい。"},{"metric":"オンライン接頭辞キャッシュ命中率","value":"98.5%対1.0%","baseline":"可変値を接頭辞内へ書き込む方式","condition":"約8kトークン共有方針、オンラインvLLM","interpretation":"追記訂正は既存接頭辞ハッシュを変えず、生産用接頭辞キャッシュをほぼ維持する。"},{"metric":"オンラインp90 TTFTと処理率","value":"p90 TTFT 53〜398倍低下、飽和時処理率最大14.5倍","baseline":"接頭辞内の値を書き換えて再プリフィルする方式","condition":"Poisson到着、負荷スイープ","interpretation":"再プリフィル回避の利点は要求負荷が高いほど大きくなる。"}],"negative_results":"推論連鎖なしではフィールド自身だけのKV更新は0.00回復で無効だが、同じQwen3-8Bでも推論連鎖ありなら1.00まで回復する。因果効果上位Kの選択再計算は必要Kが8Bで約4、4Bで64超とモデル依存で既定手段にできない。滑動窓より長い単一移植チャンクはlogit cosineが約0.89へ低下し、独立部品間に真の交差参照がある場合も意思決定一致が低下する。逐語的な推論連鎖は小さなlogit差に敏感で、最終判断が一致しても途中系列は一致しない場合がある。","interpretation":"性能向上の中心は、既に計算済みの結論をKV内の再利用可能な状態として扱うことで、状態変更時の全後続再計算と再利用部品の全自己注意を避ける点にある。追記編集は既存キャッシュを壊さないためオンライン負荷で特に有利で、合成は文脈長が増えるほど再プリフィルとの差が広がる。","quality_impact":"追記訂正と統合編集・合成は意思決定一致を主指標に評価され、多くの設定で完全再計算と一致する。一方、logitや推論連鎖の完全一致を保証する手法ではなく、交差参照、長い滑動窓チャンク、純再帰状態などは適用境界として明示される。"},"reservation":{"claim_id":"claim-366d346973cd87c804efb287","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}}
