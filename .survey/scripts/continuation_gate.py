@@ -134,6 +134,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         and getattr(args, "submission_result_pending", False)
         and args.github_read
     )
+    pipeline_ahead_count = max(int(getattr(args, "pipeline_ahead_count", 0) or 0), 0)
     if args.global_dependency and not independent_work and not transient_claim_wait and not transient_submission_wait:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
@@ -169,9 +170,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "CHECK_SUBMISSION_STATE"
             finalization_allowed = False
+        elif transient_submission_wait and pipeline_ahead_count >= 1:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT"
+            finalization_allowed = False
         elif transient_submission_wait:
             decision = "CONTINUE"
-            required_action = "WAIT_FOR_SUBMISSION_RESULT"
+            required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
             finalization_allowed = False
         elif status_only_terminal or research_audit_completed_this_invocation < research_minimum_completions:
             decision = "CONTINUE"
@@ -237,10 +242,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "担当確保結果を待機しています。この処理が完了または明示的hard stopになるまで"
             "この処理中はrunを終了しません。同じrequest_idを10秒ごとに待機・再確認します。"
         )
-    elif required_action == "WAIT_FOR_SUBMISSION_RESULT":
+    elif required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
         progress_notice = (
-            "submission fast laneの結果を待機しています。この処理が完了または明示的hard stopになるまで"
-            "この処理中はrunを終了しません。同じsubmissionを10秒ごとに待機・再確認します。"
+            "1本先行分を提出済みのため、さらに次へ進む前に1本前のsubmission resultを確認します。"
+            "pendingなら同じsubmissionを10秒ごとに再確認します。"
         )
 
     if required_action == "CHECK_CLAIM_STATE":
@@ -249,7 +254,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = progress_notice
     elif required_action == "CHECK_SUBMISSION_STATE":
         next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
-    elif required_action == "WAIT_FOR_SUBMISSION_RESULT":
+    elif required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
         next_action_message = progress_notice
     elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
         next_action_message = (
@@ -295,6 +300,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "claim_wait_seconds": claim_wait_seconds,
         "submission_state_checked": submission_state_checked,
         "submission_result_pending": bool(getattr(args, "submission_result_pending", False)),
+        "pipeline_ahead_count": pipeline_ahead_count,
         "submission_wait_action": submission_wait_action,
         "submission_wait_seconds": submission_wait_seconds,
         "next_action_message": next_action_message,
@@ -315,8 +321,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
             "or discovery submission is never by itself a whole-run stop condition. Normal workers "
             "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
-            "claim/submission results are polled every 10 real seconds using the same target identity until "
-            "terminal or a canonical hard stop. Hourly Scheduled Chat workers prefer an actual-"
+            "claim results are polled every 10 real seconds using the same target identity until terminal or a canonical hard stop. "
+            "A pending Research/Audit submission permits exactly one following paper to be claimed, processed, and submitted; "
+            "after that one-paper lookahead, the previous submission result becomes the barrier before another claim. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
             "candidate_inventory is mandatory: >=50 selects Research/Audit and <50 selects Discovery. "
@@ -326,7 +333,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "Research/Audit exposes the combined three-completion quota state. After a terminal "
             "blocked/deferred/rejected result, or whenever the three-completion floor is still unmet, "
             "the required action is CLAIM_NEXT_RESEARCH_AUDIT rather than run finalization. A pending "
-            "submission remains a serial barrier before the next paper; hard "
+            "submission therefore becomes a barrier before the paper after next, not before the immediate next paper; hard "
             "handoff/platform/durability/read "
             "failures override ordinary continuation."
         ),
@@ -351,6 +358,7 @@ def main() -> int:
     ap.add_argument("--claim-result-pending", type=yn, default=False)
     ap.add_argument("--submission-state-checked", type=yn, default=False)
     ap.add_argument("--submission-result-pending", type=yn, default=False)
+    ap.add_argument("--pipeline-ahead-count", type=int, default=0)
     ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
     ap.add_argument("--seconds-to-run-deadline", type=int, default=None)
