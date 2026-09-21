@@ -84,6 +84,11 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     runtime_condition = str(value.get("runtime_condition") or "none").strip()
     if runtime_condition not in RUNTIME_CONDITIONS:
         raise ValueError("unsupported runtime_condition")
+    runtime_condition_confirmed = value.get("runtime_condition_confirmed") is True
+    runtime_condition_attempts = value.get("runtime_condition_attempts", 0)
+    if isinstance(runtime_condition_attempts, bool) or not isinstance(runtime_condition_attempts, int):
+        raise ValueError("runtime_condition_attempts must be an integer")
+    runtime_condition_detail = str(value.get("runtime_condition_detail") or "").strip()
     return {
         "schema_version": 1,
         "request_id": request_id,
@@ -93,6 +98,9 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "scheduled_slot": scheduled_slot,
         "actual_invocation_start": started_at.astimezone(dt.timezone.utc).isoformat(),
         "runtime_condition": runtime_condition,
+        "runtime_condition_confirmed": runtime_condition_confirmed,
+        "runtime_condition_attempts": max(runtime_condition_attempts, 0),
+        "runtime_condition_detail": runtime_condition_detail,
     }
 
 
@@ -168,6 +176,32 @@ def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[s
             all_worker_attempts.setdefault(attempt_id, claimed_at)
             attempts.setdefault(attempt_id, claimed_at)
 
+    # A descriptor may outlive its claim. Keep unresolved immutable submissions for
+    # this worker visible across run boundaries so pending results cannot disappear.
+    for kind in ("research", "audit"):
+        submissions = root / ".survey/work-queue/submissions" / kind
+        results = root / ".survey/work-queue/results" / kind
+        if submissions.is_dir():
+            for path in submissions.glob("*.json"):
+                descriptor = _read(path, {})
+                if not isinstance(descriptor, dict):
+                    continue
+                attempt_id = descriptor.get("attempt_id")
+                if not isinstance(attempt_id, str) or attempt_id not in all_worker_attempts:
+                    continue
+                result = _read(results / path.name, {})
+                status = str(result.get("job_status") or "").lower() if isinstance(result, dict) else ""
+                settled = bool(
+                    isinstance(result, dict)
+                    and result.get("attempt_id") == attempt_id
+                    and (
+                        status in {"completed", "blocked", "deferred", "rejected"}
+                        or (result.get("ok") is False and result.get("retryable") is not True)
+                    )
+                )
+                if not settled:
+                    attempts.setdefault(attempt_id, all_worker_attempts[attempt_id])
+
     # A carry-over claim may be submitted and released before the next run-state
     # snapshot. Recover it by exact attempt identity when its result was processed
     # during this invocation.
@@ -226,6 +260,9 @@ def _run_submission_state(
             submitted.append((claimed_at, attempt_id))
             result = _read(root / ".survey/work-queue/results" / kind / descriptor_path.name, {})
             if not isinstance(result, dict) or result.get("attempt_id") != attempt_id:
+                pending.append((claimed_at, attempt_id))
+                continue
+            if result.get("ok") is False and result.get("retryable") is True:
                 pending.append((claimed_at, attempt_id))
                 continue
             processed_at = _time(result.get("processed_at")) or claimed_at
@@ -314,6 +351,76 @@ def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
     return len(identities), selector
 
 
+def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
+    request_root = root / ".survey/work-queue/discovery-precheck/requests"
+    precheck_result_root = root / ".survey/work-queue/discovery-precheck/results"
+    submission_root = root / ".survey/work-queue/submissions"
+    result_root = root / ".survey/work-queue/results"
+
+    pending_prechecks: list[str] = []
+    evaluation_pending: list[str] = []
+    recovery_required: list[str] = []
+    successful_prechecks: dict[str, dict[str, Any]] = {}
+
+    if request_root.is_dir():
+        for path in request_root.glob("*.json"):
+            request = _read(path, {})
+            if not isinstance(request, dict) or str(request.get("run_key") or "") != run_key:
+                continue
+            result = _read(precheck_result_root / path.name, {})
+            if not isinstance(result, dict) or result.get("request_id") != path.stem:
+                pending_prechecks.append(path.stem)
+                continue
+            if result.get("ok") is True and result.get("evaluation_allowed") is True:
+                successful_prechecks[path.stem] = result
+            elif result.get("ok") is False:
+                recovery_required.append(f"precheck:{path.stem}")
+
+    submitted_prechecks: set[str] = set()
+    pending_submissions: list[str] = []
+    if submission_root.is_dir():
+        for path in submission_root.glob("*.json"):
+            submission = _read(path, {})
+            if not isinstance(submission, dict) or submission.get("operation") != "submit_discovery_round":
+                continue
+            stats = submission.get("discovery_stats") if isinstance(submission.get("discovery_stats"), dict) else {}
+            submission_run_key = str(submission.get("run_key") or stats.get("run_key") or "")
+            if submission_run_key != run_key:
+                continue
+            precheck_id = str(submission.get("precheck_request_id") or stats.get("precheck_request_id") or "")
+            if precheck_id:
+                submitted_prechecks.add(precheck_id)
+            result = _read(result_root / path.name, {})
+            if not isinstance(result, dict):
+                pending_submissions.append(path.stem)
+            elif result.get("ok") is False:
+                recovery_required.append(f"submission:{path.stem}")
+
+    state = _read(root / ".survey/work-queue/discovery-state.json", {}) or {}
+    history = state.get("history") if isinstance(state.get("history"), list) else []
+    accounted_prechecks = {
+        str(row.get("precheck_request_id") or "")
+        for row in history
+        if isinstance(row, dict)
+        and str(row.get("run_key") or "") == run_key
+        and (row.get("round_accounted") is True or row.get("round_complete") is True)
+    }
+    for request_id in successful_prechecks:
+        if request_id not in submitted_prechecks and request_id not in accounted_prechecks:
+            evaluation_pending.append(request_id)
+
+    return {
+        "discovery_precheck_result_pending": bool(pending_prechecks),
+        "pending_discovery_precheck_request_ids": sorted(pending_prechecks),
+        "discovery_submission_result_pending": bool(pending_submissions),
+        "pending_discovery_submission_ids": sorted(pending_submissions),
+        "discovery_evaluation_pending": bool(evaluation_pending),
+        "discovery_evaluation_request_ids": sorted(evaluation_pending),
+        "discovery_recovery_required": bool(recovery_required),
+        "discovery_recovery_targets": sorted(recovery_required),
+    }
+
+
 def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> bool:
     if work_mode == "discovery":
         return bool(selector.get("next_direction"))
@@ -344,15 +451,31 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
     submission = _run_submission_state(root, attempts, started_at)
     claims = _claim_state(root, request["worker_id"], started_at)
     discovery_rounds, selector = _discovery_rounds(root, request["run_key"])
+    discovery_async = _discovery_async_state(root, request["run_key"])
 
     now = dt.datetime.now(dt.timezone.utc)
     deadline = started_at + dt.timedelta(seconds=3600)
     seconds_to_deadline = max(int((deadline - now).total_seconds()), 0)
-    runtime = request["runtime_condition"]
-    # 600s is the no-new-independent-work window. Only the final 180s is an
-    # unconditional handoff condition; already-started work may continue before then.
-    if seconds_to_deadline <= 180 and runtime == "none":
+    requested_runtime = request["runtime_condition"]
+    runtime = requested_runtime
+    runtime_condition_ignored_reason = None
+    if runtime == "handoff_guard":
+        runtime = "none"
+        runtime_condition_ignored_reason = "handoff_guard_is_derived_from_deadline"
+    elif runtime in {"github_read_unavailable", "durable_transports_unavailable", "transport_unrecoverable"}:
+        if not request.get("runtime_condition_confirmed") or int(request.get("runtime_condition_attempts") or 0) < 2:
+            runtime = "none"
+            runtime_condition_ignored_reason = "transient_runtime_condition_not_confirmed_after_two_attempts"
+    elif runtime == "platform_context_limit":
+        if not request.get("runtime_condition_confirmed") or int(request.get("runtime_condition_attempts") or 0) < 1:
+            runtime = "none"
+            runtime_condition_ignored_reason = "platform_limit_not_confirmed"
+
+    # 600s is only a no-new-independent-work window. The final 180s is the
+    # unconditional handoff condition.
+    if seconds_to_deadline <= 180:
         runtime = "handoff_guard"
+        runtime_condition_ignored_reason = None
 
     github_read = runtime != "github_read_unavailable"
     durable_unavailable = runtime == "durable_transports_unavailable"
@@ -398,6 +521,10 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         discovery_min_rounds=4,
         discovery_exhausted=False,
         next_axis_available=bool(selector.get("next_direction")),
+        discovery_precheck_result_pending=discovery_async["discovery_precheck_result_pending"],
+        discovery_submission_result_pending=discovery_async["discovery_submission_result_pending"],
+        discovery_evaluation_pending=discovery_async["discovery_evaluation_pending"],
+        discovery_recovery_required=discovery_async["discovery_recovery_required"],
     )
     if work_mode == "maintenance":
         maintenance = _read(root / ".survey/work-queue/maintenance-cycle.json", {}) or {}
@@ -438,10 +565,16 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         "processed_at": now.isoformat(),
         "candidate_inventory": inventory,
         "work_mode": work_mode,
+        "runtime_condition_requested": requested_runtime,
         "runtime_condition": runtime,
+        "runtime_condition_confirmed": request.get("runtime_condition_confirmed", False),
+        "runtime_condition_attempts": request.get("runtime_condition_attempts", 0),
+        "runtime_condition_detail": request.get("runtime_condition_detail", ""),
+        "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "seconds_to_run_deadline": seconds_to_deadline,
         **claims,
         **submission,
+        **discovery_async,
         "discovery_rounds_completed": discovery_rounds,
         "discovery_selector": selector,
         "independent_work": independent_work,
@@ -454,7 +587,7 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
             "only terminal results processed during this invocation count toward its completion quota. "
             "New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. "
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
-            "runtime_condition must name a concrete observed platform/transport event."
+            "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. Discovery async state and carry-over immutable submissions remain visible across run boundaries."
         ),
     }
 
