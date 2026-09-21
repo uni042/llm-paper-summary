@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ba61af5534527f7a45c739e4",
-  "job_id": "job-research-bb3c83e7ecc75edd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ba61af5534527f7a45c739e4",
-    "worker_id": "scheduled-chat-llm-paper-worker-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ba61af5534527f7a45c739e4","job_id":"job-research-bb3c83e7ecc75edd","data":{"limitations":"オフライン解析にはL40Sで3Bモデル約44M tokensあたり約5.0〜5.5時間を要し、事前計算コストがある。主評価は1B〜3B denseモデルとJetson Orin Nanoに限られ、より大きなモデルやMoE、他の端末SoCでの一般化は未検証。ロード割合・静的/動的割合は端末容量とタスクに合わせた経験的調整が必要。4-bit量子化よりピークメモリは大きく、Qwen2.5-3BのSQuADv2のように精度でCoreInferへ負ける条件もある。","differences":"PowerInfer/PowerInfer-2は層ごとの予測器で実行時活性ニューロンを予測するが予測器自体のメモリ・計算負担があり、LLM-in-a-Flashは必要重みをフラッシュから都度取得するためI/O帯域に制約される。CoreInferはプリフィルの活性だけで計算対象を絞るため速度は上がるが全モデル常駐が必要。SelectInferはオフラインのタスク・モデル知識で常駐集合そのものを先に縮め、その中から入力適応で計算集合をさらに絞る。量子化と違いロード済み重みは全精度、枝刈りと違い再学習や永久削除を要求しない。","implementation_status":"論文はSelectInferを実装しJetson Orin Nanoで評価しているが、本文・確認済み一次資料から独立した公開コードURLは確認できなかった。","research_positioning":"端末推論の階層メモリ系と活性疎性系を接続する方式。『全モデルをどこへ置くか』だけでなく、オフラインで重要度を学習してFFN重みの常駐集合を縮め、オンラインではさらに入力依存の計算集合を選ぶ。これによりメモリ容量制約と演算帯域制約を別々の制御変数で扱う。"},"reservation":{"claim_id":"claim-ba61af5534527f7a45c739e4","worker_id":"scheduled-chat-llm-paper-worker-30","worker_kind":"scheduled_chat"}}
