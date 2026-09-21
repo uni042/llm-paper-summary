@@ -181,6 +181,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "explicit checks of the latest claim and submission states. Pending claim/submission/ACK "
             "results require 10-second real-time polling of the same target, repeated until the "
             "required result reaches terminal state or an explicit hard stop is safely handed off. "
+            "handoff_safe may be true for a pending asynchronous result only after the durable request/submission identity, "
+            "expected result path, current pending state, and exact next canonical action have been preserved for the next run. "
             "As defense in depth, normal Research/Audit finalization is independently refused while "
             "the three-success floor is unmet, and normal Discovery finalization is refused while "
             "the four-round floor is unmet, even if an incorrect STOP_RUN is supplied."
