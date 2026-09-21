@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 02:38:53 JST**
+> 自動生成: **2026-09-22 02:40:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **321** |
 | 未claim Research job | **319** |
 | 直近24hの検証済みResearch収録 | **21** |
-| 最終検証済みResearch収録 | **09-22 00:48:18 JST（1時間50分前）** |
+| 最終検証済みResearch収録 | **09-22 00:48:18 JST（1時間51分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -140,7 +140,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.19169` — SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops / worker `scheduled-chat-30`
-  - claim: **09-22 02:36:49 JST** / heartbeat: **—** / lease expiry: **09-22 04:06:49 JST**
+  - claim: **09-22 02:39:21 JST** / heartbeat: **—** / lease expiry: **09-22 04:09:21 JST**
   - evidence: `.survey/work-queue/claims/job-research-73f2d3c7c23735bb.json`
 - `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
   - claim: **09-22 02:03:42 JST** / heartbeat: **—** / lease expiry: **09-22 03:33:42 JST**
