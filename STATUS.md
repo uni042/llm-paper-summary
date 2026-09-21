@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 15:47:20 JST**
+> 自動生成: **2026-09-21 15:47:48 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **321** |
 | 未claim Research job | **319** |
 | 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-21 15:44:43 JST（2分前）** |
+| 最終検証済みResearch収録 | **09-21 15:44:43 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -175,7 +175,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2608.24938` — ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration / worker `scheduled-chat-llm-paper-30`
-  - claim: **09-21 15:45:05 JST** / heartbeat: **—** / lease expiry: **09-21 17:15:05 JST**
+  - claim: **09-21 15:47:26 JST** / heartbeat: **—** / lease expiry: **09-21 17:17:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-f837d96601e69237.json`
 - `arXiv:2608.15299` — MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation / worker `scheduled-chat-30b`
   - claim: **09-21 14:29:58 JST** / heartbeat: **09-21 15:32:52 JST** / lease expiry: **09-21 17:02:52 JST**
