@@ -23,6 +23,11 @@ def make_args(**overrides):
         ack_result_pending=False,
         hard_stop=False,
         handoff_safe=False,
+        work_mode="unknown",
+        research_audit_completed_this_invocation=0,
+        research_minimum_completions=3,
+        discovery_rounds_completed=0,
+        discovery_min_rounds=4,
     )
     data.update(overrides)
     return argparse.Namespace(**data)
@@ -118,6 +123,36 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertIn("待機", result["progress_notice"])
         self.assertIn("再確認", result["progress_notice"])
         self.assertEqual(result["next_action_message"], result["progress_notice"])
+
+    def test_research_quota_shortfall_blocks_finalization_even_with_stop_run(self):
+        result = mod.decide(make_args(
+            continuation_decision="STOP_RUN",
+            continuation_finalization_allowed=True,
+            claim_state_checked=True,
+            submission_state_checked=True,
+            work_mode="research",
+            research_audit_completed_this_invocation=0,
+            research_minimum_completions=3,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertIn("research_minimum_not_met", result["blocking_reasons"])
+        self.assertEqual(result["next_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+
+    def test_discovery_quota_shortfall_blocks_finalization_even_with_stop_run(self):
+        result = mod.decide(make_args(
+            continuation_decision="STOP_RUN",
+            continuation_finalization_allowed=True,
+            claim_state_checked=True,
+            submission_state_checked=True,
+            work_mode="discovery",
+            discovery_rounds_completed=2,
+            discovery_min_rounds=4,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertIn("discovery_minimum_not_met", result["blocking_reasons"])
+        self.assertEqual(result["next_action"], "DISCOVER_AGAIN")
 
     def test_clean_stop_run_issues_permit(self):
         result = mod.decide(make_args(
