@@ -5,28 +5,28 @@
   "attempt_id": "attempt-c0dd780b67cd1678ab06e0b7",
   "job_id": "job-research-b47f649340a3fc18",
   "data": {
-    "problem": "Hybrid linear-attention modelはfull-attention層のKV cacheに加え、linear-attention層の境界recurrent stateをprefixごとに保存しないとprefix reuseできない。recurrent stateはtoken処理でin-place更新され過去境界を保持しないため、checkpointを密に置くとHBMを急速に消費し、疎に置くと再prefill/replayが増える。従来のPagedAttentionやKV quantization/evictionはtoken-indexed KVを主対象とし、巨大なpersistent recurrent state checkpointの内部冗長性を直接扱わない。",
-    "novelty": "DASCはGDNのhead単位、KDAのchannel単位でdecayが大きく異なることを利用し、入力プロファイルなしでmodel weightからstatic retention horizon Hsを算出する。HsがWmaxを超える長寿命unitだけを保存し、layerごとの保持数が不均一でもpaddingせずragged flat-packする。さらにTP rankごとのpayload偏りをmodel-load時のhead bundle permutationとSTORE/LOAD時のvariable-split all-to-allで均衡化する。省略unitはzero-fillするNRとbounded suffix replayでlocal stateを再構成するWRを使い分ける。",
-    "method_overview": "GDNではlearned decay parameterから代表入力a=-0.3、epsilon=1e-3を用いてHs=ln(epsilon)/gを求め、KDAでも同じ考え方をchannel粒度へ適用する。offlineでHs(u)>Wmaxのunitをglobalとして固定mask化し、full-attention KVは常にexactに保持する。STORE時は選択unitのみをlayer offset付きragged bufferへ詰め、TP group全体を共有storage poolとしてrank間payloadを均等化する。LOAD時はretained unitをexact復元し、NRではlocal unitを0、WRでは各local unitのhorizonをpower-of-twoに丸め4〜Wmaxへclampし、その最大windowだけsuffixをscratch stateからreplayしてlocal unitを更新する。",
+    "problem": "ハイブリッド線形注意モデルでは、通常の全注意層が持つ鍵値キャッシュに加えて、線形注意層の境界再帰状態を接頭辞ごとに保存しなければ接頭辞再利用ができない。再帰状態はトークン処理のたびにその場で更新され、過去境界を自然には保持しない。このためチェックポイントを密に置くと高帯域メモリを急速に消費し、逆に疎に置くと再事前充填や再実行が増える。従来のページ化注意や鍵値量子化・追い出しはトークン単位の鍵値を主対象とするため、大きな永続再帰状態チェックポイントの内部にある寿命差と冗長性を直接利用できない。",
+    "novelty": "DASCは、GDNではヘッド単位、KDAではチャネル単位に減衰速度が大きく異なることを利用し、要求ごとの入力観測を行わずモデル重みだけから静的な保持地平を算出する。最大再実行窓より長く情報を保持する長寿命単位だけを永続化し、層ごとに保持数が異なる状態を最大幅へ埋めず可変長の連続領域へ格納する。さらにテンソル並列ランク間の保存量偏りを、モデル読込時のヘッド束再配置と保存・読込時の可変分割全対全通信で均衡化する。省略した短寿命単位はゼロ補完する方式と、有限長の接尾辞だけを再実行して局所状態を回復する方式を使い分ける。",
+    "method_overview": "処理は四段階で進む。第一にモデル読込時、各線形注意単位の減衰重みから、その単位の寄与が閾値以下になるまでの保持地平を静的に計算する。GDNでは代表入力を用いて減衰率から対数式でヘッドごとの地平を求め、KDAでは同じ考え方を鍵チャネル単位へ適用する。第二に保持地平が最大再実行窓を超える長寿命単位だけを保存対象として固定し、全注意層の鍵値キャッシュは変更せず正確に保持する。第三に保存時、選択された再帰状態だけを層ごとの開始位置を持つ可変長連続バッファへ詰め、テンソル並列群全体を共有保存プールとして扱ってランク間の保存量を均等化する。第四に読込時、保存済み長寿命単位をそのまま復元し、省略した短寿命単位については、追加計算を避ける方式ではゼロで初期化し、精度回復を優先する方式では各単位の保持地平を二の冪へ丸めて有限範囲に制限し、その中で必要な最大接尾辞だけを一時状態から再実行する。これにより、保存容量の削減、並列ランク間の負荷均衡、接頭辞命中時の状態再構成を一つの流れとして実現する。",
     "components": [
       {
-        "name": "Weight-derived retention horizon",
-        "description": "入力依存gateを毎request観測せず、model weight由来のdecayからunitごとの保持地平をoffline算出する。GDNはhead、KDAはkey channel粒度で選択し、Wmaxより長いunitだけ永続化する。ShareGPT 32 prefixでstatic horizonとempirical horizonのSpearman中央値はGDN 0.801、KDA 0.856。"
+        "name": "重み由来の保持地平（Weight-derived retention horizon）",
+        "description": "入力は学習済み線形注意層の減衰関連重みと最大再実行窓である。要求ごとのゲート値を観測する代わりに、モデル読込時に減衰の代表値から各単位の寄与が所定閾値まで減る時間を計算する。GDNではヘッド単位、KDAでは鍵チャネル単位で保持地平を得て、最大再実行窓を超える長寿命単位だけを永続保存対象として固定する。出力は要求に依存しない選択マスクであり、実行時プロファイリングを不要にしながら保存すべき状態量を減らす。ShareGPTの32接頭辞で静的地平と経験的地平の順位相関中央値はGDNで0.801、KDAで0.856と報告される。"
       },
       {
-        "name": "Ragged state checkpoint",
-        "description": "layerごとに異なるretained count rlだけをoffset付きflat bufferへ保存し、最大幅Rmaxに全layerを合わせるpaddingを避ける。temporal stateはFP32、convolution stateはBF16のまま保持し、圧縮率計算には非圧縮convolution stateも含める。"
+        "name": "可変長状態チェックポイント（Ragged state checkpoint）",
+        "description": "入力は前段の選択マスクと各層の再帰状態である。各層で実際に保持する単位数だけを取り出し、層ごとの開始位置を表すオフセットとともに一つの連続領域へ詰める。全層を最大保持幅へ合わせる埋め草を行わないため、論理的な単位削減がそのまま物理的な保存量削減へ結び付く。時間方向状態はFP32、畳み込み状態はBF16のまま保持し、圧縮率の計算には非圧縮の畳み込み状態も含める。出力は層ごとに長さの異なる密な保存表現であり、後段の並列配置と読込処理がこの表現を直接扱う。"
       },
       {
-        "name": "TP-balanced placement",
-        "description": "model load時にlinear-attention head bundleをrank間再配置し、STORE/LOADではTP groupを共有poolとしてvariable-split all-to-allでpacked unitを均等化する。通常のprefill/decodeには追加通信を入れず、通信をcheckpoint store/loadに限定する。"
+        "name": "テンソル並列均衡配置（TP-balanced placement）",
+        "description": "入力は各ランクが担当する線形注意単位と、可変長化後の保存量である。モデル読込時にヘッド束をランク間で再配置して恒常的な偏りを減らし、保存・読込時にはテンソル並列群全体を共有プールとみなして可変分割の全対全通信で保存単位を均等化する。これにより最も保存量の多いランクが実効容量を決める問題を抑える。通常の事前充填と復号には追加通信を入れず、追加通信をチェックポイント保存・読込境界に限定するため、通常トークン処理の経路を変えない。出力はランク間でより均等な物理配置である。"
       },
       {
-        "name": "DASC-NR / DASC-WR recovery",
-        "description": "NRは省略local unitをzero-fillして追加model computeを発生させない。WRはbounded suffixをzero-initialized scratch stateからreplayしlocal unitだけ更新する。強い圧縮で精度を回復できるがreplay latencyが増える。"
+        "name": "省略状態の回復（DASC-NR / DASC-WR recovery）",
+        "description": "入力は読込済みの長寿命状態、保存を省略した短寿命単位、必要に応じて接頭辞末尾のトークン列である。追加計算なし方式では省略単位をゼロで初期化し、保存済み単位と結合して直ちに復号へ渡す。窓再実行方式では各短寿命単位の保持地平を二の冪へ丸めて4から最大再実行窓までに制限し、必要な最大長の接尾辞だけをゼロ初期化した一時状態から再実行して短寿命単位を更新する。前者は待ち時間を最小化し、後者は強い圧縮時の精度低下を抑える。出力はいずれも次の復号処理で利用できる再構成済み再帰状態である。"
       }
     ],
-    "system_design": "選択信号、物理buffer layout、TP配置、cache-hit recoveryを一体化し、hybrid prefix cacheの『各checkpointのbytes』を削減する。entry admission/evictionを改善するMarconiやstateを再構成するReplaySSMとは直交し、既存cache managerと組み合わせられる設計である。"
+    "system_design": "この設計は、何を保存するかという論理選択、どの形で格納するかという物理配置、テンソル並列ランク間でどこへ置くかという負荷均衡、命中時に省略部分をどう復元するかという再構成を一体化する。目的は接頭辞キャッシュ一項目あたりの再帰状態バイト数を削減し、同じ高帯域メモリ容量でより多くの再利用可能な接頭辞を常駐させることである。項目単位の受入・追い出しを改善するMarconiや、状態を再構成するReplaySSMとは役割が異なるため、既存のキャッシュ管理方針と組み合わせられる。"
   },
   "reservation": {
     "claim_id": "claim-c0dd780b67cd1678ab06e0b7",
