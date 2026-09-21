@@ -21,6 +21,10 @@ def make_args(**overrides):
         submission_state_checked=False,
         submission_result_pending=False,
         ack_result_pending=False,
+        discovery_precheck_result_pending=False,
+        discovery_submission_result_pending=False,
+        discovery_evaluation_pending=False,
+        discovery_recovery_required=False,
         hard_stop=False,
         handoff_safe=False,
         work_mode="unknown",
@@ -71,6 +75,32 @@ class RunFinalizationGateTests(unittest.TestCase):
                 self.assertIn(target, result["wait_targets"])
                 self.assertFalse(result["finalization_permit"]["issued"])
                 self.assertIn("terminal", result["rule"].lower())
+
+    def test_started_discovery_round_blocks_normal_finalization(self):
+        result = mod.decide(make_args(
+            continuation_decision="STOP_RUN",
+            continuation_finalization_allowed=True,
+            claim_state_checked=True,
+            submission_state_checked=True,
+            work_mode="discovery",
+            discovery_rounds_completed=4,
+            discovery_evaluation_pending=True,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertIn("discovery_round_in_progress", result["blocking_reasons"])
+        self.assertEqual(result["next_action"], "CONTINUE_DISCOVERY_ROUND")
+
+    def test_discovery_precheck_pending_uses_fixed_wait(self):
+        result = mod.decide(make_args(
+            continuation_decision="STOP_RUN",
+            continuation_finalization_allowed=True,
+            claim_state_checked=True,
+            submission_state_checked=True,
+            discovery_precheck_result_pending=True,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertEqual(result["next_action"], "WAIT_10_SECONDS_AND_RECHECK")
+        self.assertIn("discovery_precheck_result", result["wait_targets"])
 
     def test_stop_run_without_finalization_allowed_still_cannot_finalize(self):
         result = mod.decide(make_args(
