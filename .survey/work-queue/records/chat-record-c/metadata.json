@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-a00d8b41e72274b2614df863",
-  "job_id": "job-research-be16d214d5c628cd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a00d8b41e72274b2614df863",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a00d8b41e72274b2614df863","job_id":"job-research-be16d214d5c628cd","data":{"canonical_id":"arXiv:2608.04502","arxiv_id":"2608.04502","doi":"10.48550/arXiv.2608.04502","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI"]},"title":"AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation","summary":"AFD-Ledgerは、MoE推論のAttention–FFN分離配置（AFD）が固定予算・TPOT SLO下で最適な同居配置を本当に上回るかを、ハードウェア割当と配置構成を独立に最適化して比較するオフライン分析プロビジョニング系である。軽量な役割別ハードウェア推定と、評価回数を20組に制限した探索を組み合わせ、完全列挙可能な設定では全64/121組に対し68.8〜83.5%の完全配置評価を削減しながら大域最適解を回収した。","list_summary":"AFDと同居配置を同一予算・TPOT SLOで独立最適化し、少数のハードウェア組だけを完全評価して最適配置を探索する分析プロビジョニング系。","authors":["Chengyu Qiu","Xiao Fu","Fengcun Li","Yulei Qian","Yuchen Xie","Xunliang Cai","Yingdi Shan","Yongwei Wu","Mingxing Zhang"],"published":"2026-08-05","publication":"arXiv preprint","publication_type":"Preprint","publication_status":"arXiv v1","source":"https://arxiv.org/abs/2608.04502","sources":["https://arxiv.org/abs/2608.04502","https://arxiv.org/html/2608.04502v1","https://github.com/kvcache-ai/AFD-Ledger"],"primary_url":"https://arxiv.org/abs/2608.04502","html_url":"https://arxiv.org/html/2608.04502v1","pdf_url":"https://arxiv.org/pdf/2608.04502","implementation_url":"https://github.com/kvcache-ai/AFD-Ledger","implementation":"公開リポジトリにオフライン分析プロビジョニング実装があり、論文では約5,700行（テスト除外）と報告。物理検証用には社内SGLang-FluentLLM上へLongCat 2.0向けAFD実行系を別実装し、Python/AscendCで8,000行超と報告する。","last_checked":"2026-09-22","code":"https://github.com/kvcache-ai/AFD-Ledger","hardware_evaluation":"商用カタログEはH200/H100/A100/L40S/L4/RTX PRO 6000 Server、拡張SはB200/B300と模擬役割特化デバイスを含む。物理検証はLongCat 2.0、Ascend 910C、160 cards、32K/64K/120K context。","quality_effect":"モデル重みや生成アルゴリズムを変更せず、配置候補の分析・選択を行うため生成品質への直接影響はない。主指標はTPOT SLOを満たすdecode throughputと配置選択の正しさ。","references_checked_at":"2026-09-22","references_source":"https://arxiv.org/html/2608.04502v1","references_total":0,"references":[],"lineage":"MoE serving / Attention-FFN disaggregation / analytical provisioning / hardware-aware deployment search","topics":["MoE inference","Attention-FFN disaggregation","deployment provisioning","hardware search","TPOT SLO","heterogeneous accelerators"]},"reservation":{"claim_id":"claim-a00d8b41e72274b2614df863","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
