@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-5d52c2b87a0b04401b6d04ec",
+  "attempt_id": "attempt-2965af6e9d022fa8d87518fc",
   "job_id": "job-research-3eb9c6f535e789d0",
   "data": {
     "problem": "長時間のチャット、エージェントループ、反復文書QAではセッションをまたいでKVキャッシュが蓄積し、GPU高帯域メモリだけでは保持できない。CPU主記憶やSSDへ退避すれば容量は増えるが、階層間の帯域と遅延の差が大きいため、熱いブロックをSSDから同期取得すると再計算より遅くなり得る。従来のMooncake、LMCache、FlexGen、InfiniGenなどは階層化、永続化、予測取得という機構を成立させたが、どのブロックをどの層へ置くべきかという一般的な配置判断は残る。特に再利用構造が違うワークロードを同一条件で比較せず、容量増加そのものの効果と配置規則の効果を混同すると、単にSSDを足した効果を賢いポリシーの効果と誤認する。この未分離が本研究の対象となるボトルネックである。",
@@ -29,7 +29,7 @@
     "system_design": "離散イベントシミュレータで三階層KVストレージ、アクセス駆動の昇降格、帯域競合を伴う先読み、実行時間予測器を統合する。評価はバッチ1・単一GPUを中心とし、合成チャット・エージェント・文書QA生成器の再利用構造を制御する。"
   },
   "reservation": {
-    "claim_id": "claim-5d52c2b87a0b04401b6d04ec",
+    "claim_id": "claim-2965af6e9d022fa8d87518fc",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
