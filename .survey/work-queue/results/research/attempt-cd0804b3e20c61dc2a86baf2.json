@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-cd0804b3e20c61dc2a86baf2",
+  "job_id": "job-research-b47f649340a3fc18",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-cd0804b3e20c61dc2a86baf2.json",
+  "error": "RecordValidationError: Japanese-first prose ratio is too low: 65.5% < 70% (Japanese=3724, Latin=1965)",
+  "processed_at": "2026-09-21T02:05:30+00:00",
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 65.5% < 70% (Japanese=3724, Latin=1965)"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
