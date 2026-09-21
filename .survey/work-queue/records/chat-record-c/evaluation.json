@@ -4,7 +4,33 @@
   "slot": "evaluation",
   "attempt_id": "attempt-29cb222c40356af503452ebc",
   "job_id": "job-research-d21a98f99faeb4fe",
-  "data": {},
+  "data": {
+    "hardware": "RTX 6000 Ada: AMD Ryzen Threadripper PRO 5955WX、128GB RAM、48GB GDDR6 ECC、142 SM、960GB/s。RTX PRO 6000: 24 vCPU Intel Xeon Platinum 8568Y+、120GB RAM、96GB GDDR7 ECC、188 SM、1792GB/s。両環境とも単一GPUで共有段階と下流段階を別プロセスとして同居させる。",
+    "software": "Ubuntu 22.04.5 LTS、CUDA 13.1、NVIDIA driver 590.48.01、vLLM-Omni v0.16.0。HorizonServeの空間制御にはCUDA Green Contexts、圧力観測にはPyNVMLを使用する。",
+    "methodology": "Qwen2.5-Omni、MiMo-Audio、BAGELの3パイプラインを用い、テキスト・音声・画像・動画・長文要約などの要求クラスを混在させる。到着はPoisson過程。各プロット点を15分実行し、到着率を変える負荷掃引と、総負荷を固定して長経路比率を増やす掃引を行う。比較対象は未変更vLLM-Omni、最早締切優先、NVIDIA MPS、最早締切優先とMPSの組合せ。SLOは各要求クラスの単独p95初回応答時間の5倍で統一する。",
+    "scope": "実機・単一GPU・NVIDIA環境での評価であり、3種類のオムニモデルと2種類のワークステーションGPUに範囲が限定される。クラスタ分散、他社GPU、異なるSLO倍率や非常に異なるモデル構成への一般化は直接実証していない。PyNVMLのメモリ活動値は実帯域の厳密測定値ではなく、オンライン圧力の代理信号として評価される。",
+    "datasets": [
+      "ShareGPT",
+      "LibriSpeech",
+      "Food-101",
+      "UCF-101形式の合成動画",
+      "CNN/DailyMail"
+    ],
+    "baselines": [
+      "vLLM-Omni Vanilla",
+      "EDF",
+      "MPS",
+      "EDF-MPS"
+    ],
+    "metrics": [
+      "SLO達成率",
+      "SLOを満たす実効処理量",
+      "p95初回応答遅延",
+      "共有段階TPOT",
+      "GPUメモリ活動信号",
+      "スケジューリングオーバーヘッド"
+    ]
+  },
   "reservation": {
     "claim_id": "claim-29cb222c40356af503452ebc",
     "worker_id": "scheduled-chat-llm-survey-fastlane-verify",
