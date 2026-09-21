@@ -87,20 +87,6 @@ PROFILES = {
             "入力・状態を修正後に queue_worker を再実行し、next-jobs.json が更新されてから次へ進む。",
         ],
     },
-    "claim_worker.py": {
-        "task": "ジョブ割り当て（claim）の処理",
-        "next": [
-            ".survey/work-queue/claim-results/ の該当 request result と出力 assignments を確認する。",
-            "assignment が1件ある場合だけ、その job / instructions / attempt_id / claim_id に従って処理する。",
-            "Research/Audit 完了後は5スロットを保存し、attempt固有の immutable descriptor を .survey/work-queue/submissions/research/ または audit/ に作る。",
-            "assignment が0件なら queue_worker.py で最新 queue を再取得し、別jobを手動選択しない。",
-        ],
-        "recovery": [
-            "claim request と worker_id / worker_kind / attempt_id の整合を確認する。",
-            "期限切れ・競合時は既存 claim を手修正せず、claim worker に再評価させる。",
-            "キュー状態が不明な場合は queue_worker で整合してから claim を再実行する。",
-        ],
-    },
     "claim_worker_with_banks.py": {
         "task": "ジョブ割り当てと作業バンク予約",
         "next": [
