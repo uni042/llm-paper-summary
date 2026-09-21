@@ -52,7 +52,15 @@ jobs:
             expected_blob_sha="$(jq -r '.expected_blob_sha // empty' "$request")"
 
             case "$kind" in research|audit) ;; *) echo "unsupported kind: $kind" >&2; exit 1 ;; esac
-            output=".survey/work-queue/submissions/${kind}/${request_id}.json"
+            if [ "$request_id" != "$attempt_id" ]; then
+              echo "request filename must equal attempt_id: ${request_id} != ${attempt_id}" >&2
+              exit 1
+            fi
+            output=".survey/work-queue/submissions/${kind}/${attempt_id}.json"
+            if [ -e "$output" ]; then
+              echo "immutable completed descriptor already exists: $output" >&2
+              exit 1
+            fi
             args=(
               python .survey/scripts/prepare_completed_submission.py
               --repo-root .
@@ -69,7 +77,7 @@ jobs:
 
           git add .survey/work-queue/submissions/research .survey/work-queue/submissions/audit
           if git diff --cached --quiet; then
-            echo 'Descriptors already exist unchanged.'
+            echo 'No new completed descriptors were generated.'
             exit 0
           fi
           git commit -m 'survey-submission: build validated completed descriptors'
