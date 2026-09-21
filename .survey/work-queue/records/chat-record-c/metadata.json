@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-8495a743fe594851aff8c54b",
-  "job_id": "job-research-3c095c39c7faada9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8495a743fe594851aff8c54b",
-    "worker_id": "scheduled-chat-llm-paper-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-8495a743fe594851aff8c54b","job_id":"job-research-3c095c39c7faada9","data":{"canonical_id":"arXiv:2604.20156","arxiv_id":"2604.20156","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Temporally Extended Mixture-of-Experts Models","summary":"混合専門家モデルでは各トークンで選ばれる専門家集合が頻繁に変わり、GPU外へ重みを退避する環境では読み込みのたびに待ちが生じる。本研究は専門家集合を一定期間維持する選択肢として扱い、各層の軽量制御器が現在の隠れ状態と専門家集合を見て、集合を維持するか切り替えるかを学習する。切替コストを明示した強化学習と自己蒸留を組み合わせ、gpt-oss-20bで品質を保ちながら専門家切替率を大幅に低下させ、将来のオフロードや省メモリ学習へつながる時間的連続性を実証する。","list_summary":"専門家集合を複数トークン維持する選択肢として学習し、gpt-oss-20bの切替率を50%以上から数%へ抑えてオフロード向けの時間的連続性を作る方式。","authors":["Zeyu Shen","Peter Henderson"],"authors_affiliations":"Princeton University","published":"2026-04-22","publication":"arXiv preprint","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE routing / expert offloading / temporal expert persistence","topics":["混合専門家モデル","専門家ルーティング","オフロード","時間的連続性","強化学習"],"importance":"専門家キャッシュや先読みだけで転送を隠すのではなく、モデル側のルーティング自体に専門家集合を長く維持する性質を学習させるため、オフロード時の専門家入替頻度を根本から減らせる可能性がある。","hardware_evaluation":"学習はNVIDIA H200 140GBを4基使用し、gpt-oss-20bをbf16へ復号して実施。実際のCPU/GPU間オフロード遅延を測るエンドツーエンド実装評価は行っていない。","quality_effect":"専門家集合16個では切替率を約55〜59%から約4%へ下げつつ、MATH 64.0%、MMLU 72.5%、MMMLU 59.5%を維持する。専門家集合8個では切替率はさらに抑えられるが精度低下が大きい。","source":"https://arxiv.org/abs/2604.20156","sources":["https://arxiv.org/abs/2604.20156","https://arxiv.org/html/2604.20156","https://arxiv.org/pdf/2604.20156"],"code":"https://github.com/princeton-polaris-lab/temporal-moe","implementation":"gpt-oss-20bの各混合専門家層へ独立した制御器を追加し、専門家と注意機構へ低ランク適応を施す研究実装。制御器は専門家集合表現、終了判定、価値推定、新集合選択を持つ。","last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary-reference-section","references_total":42},"reservation":{"claim_id":"claim-8495a743fe594851aff8c54b","worker_id":"scheduled-chat-llm-paper-00","worker_kind":"scheduled_chat"}}
