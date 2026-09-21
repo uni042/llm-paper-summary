@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-080d812c769b1fab8a6ef06f",
+  "job_id": "job-research-bfb106674c4d8bfe",
+  "claim_id": "claim-080d812c769b1fab8a6ef06f",
+  "worker_id": "scheduled-chat-llm-paper-00",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely retrieved in this invocation. Official arXiv full-text routes were inaccessible in the available retrieval environment. The official arXiv abstract and third-party reproductions/summaries were discoverable, but they do not satisfy the workflow requirement to read the primary source in full; no five-slot record was synthesized from them.",
+  "retrieval_evidence": [
+    "https://export.arxiv.org/pdf/2608.08878 -> not accessible via available web retrieval",
+    "https://export.arxiv.org/html/2608.08878 -> not accessible via available web retrieval",
+    "https://arxiv.org/abs/2608.08878 -> abstract metadata available only"
+  ],
+  "blocked_at": "2026-09-21T00:06:00Z"
+}
