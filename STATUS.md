@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 01:04:46 JST**
+> 自動生成: **2026-09-22 01:04:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -139,9 +139,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
-  - claim: **09-22 01:02:04 JST** / heartbeat: **—** / lease expiry: **09-22 02:32:04 JST**
-  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
+- `DOI:10.1145/3832810.3832922` — Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving / worker `scheduled-chat-00`
+  - claim: **09-22 01:04:49 JST** / heartbeat: **—** / lease expiry: **09-22 02:34:49 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f2c000a0ecb53008.json`
 
 #### Audit
 
