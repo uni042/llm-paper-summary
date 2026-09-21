@@ -40,6 +40,17 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertNotIn("30-second", continuation)
         self.assertNotIn("30-second", finalization)
 
+    def test_async_fast_lanes_have_periodic_orphan_recovery(self):
+        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
+        workflows = Path(__file__).resolve().parents[2] / ".github" / "workflows"
+        claim = (workflows / "survey-claim-fast.yml").read_text(encoding="utf-8")
+        run_state = (workflows / "survey-run-state.yml").read_text(encoding="utf-8")
+        precheck = (workflows / "discovery-precheck.yml").read_text(encoding="utf-8")
+        self.assertIn("3/10", claim)
+        self.assertIn("4/10", run_state)
+        self.assertIn("6/10", precheck)
+        self.assertIn("10分周期", router)
+
     def test_worker_manual_forbids_disabling_scheduled_task_on_failure(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         self.assertIn("Scheduled Task自体を一時停止・無効化してはならない", router)
