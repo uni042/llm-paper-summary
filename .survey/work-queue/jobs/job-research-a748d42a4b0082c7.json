@@ -12,17 +12,13 @@
   "source_url": "https://www.semanticscholar.org/paper/bad8f4a1c5b4fd2942a14c223dcd5442a18ea123",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md",
   "selection_reason": "prefill済みKVを編集・位置移動・合成して再計算を回避。online vLLMでprefix cache hit率98.5%を維持しp90 TTFTを53–398倍短縮。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T22:11:26+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
-  "validation_errors": [
-    "problem_method.method_overview must explain the end-to-end mechanism"
-  ],
-  "last_validation_failed_at": "2026-09-21T04:39:18+00:00"
+  "completed_at": "2026-09-21T04:40:58+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-f13484682295d4ae46534672.json"
 }

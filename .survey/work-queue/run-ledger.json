@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T04:36:33.245326+00:00",
+  "updated_at": "2026-09-21T04:41:04.732235+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -32370,6 +32370,56 @@
           "type": "research",
           "canonical_id": "arXiv:2608.04974",
           "title": "AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 867,
+      "paper_active_count_after": 867,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35561900046",
+      "first_recorded_at": "2026-09-21T04:41:04.732235+00:00",
+      "last_recorded_at": "2026-09-21T04:41:04.732235+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35561900046:1",
+          "recorded_at": "2026-09-21T04:41:04.732235+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35561900046",
+            "run_attempt": "1",
+            "source_sha": "4931cf38b6f48673f81abdea83018d90ec8f5cc1"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-a748d42a4b0082c7",
+          "type": "research",
+          "canonical_id": "arXiv:2606.17107",
+          "title": "Models Take Notes at Prefill: KV Cache Can Be Editable and Composable",
           "from": "ready",
           "to": "completed"
         }
