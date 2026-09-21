@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 03:33:29 JST**
+> 自動生成: **2026-09-22 03:34:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **320** |
-| 未claim Research job | **318** |
+| 未claim Research job | **319** |
 | 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-22 02:40:41 JST（52分前）** |
+| 最終検証済みResearch収録 | **09-22 02:40:41 JST（53分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **5** | **4** | **0** | **2** | **0** | — |
+| Research | **4** | **5** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **4** | **6** | **5** | **0** | **2** | **0** | **3** |
+| 合計 | **4** | **6** | **5** | **0** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -141,13 +141,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2605.08575` — Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution / worker `scheduled-chat-30`
   - claim: **09-22 02:41:13 JST** / heartbeat: **—** / lease expiry: **09-22 04:11:13 JST**
   - evidence: `.survey/work-queue/claims/job-research-5cd2beb9d9cae3d8.json`
-- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
-  - claim: **09-22 02:03:42 JST** / heartbeat: **—** / lease expiry: **09-22 03:33:42 JST**
-  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
 
 #### Audit
 
@@ -195,8 +192,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **417** |
-| └ Research | **231** |
+| 成功result未照合のimmutable submission | **418** |
+| └ Research | **232** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
