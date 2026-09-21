@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T01:10:13.329030+00:00",
+  "updated_at": "2026-09-21T01:11:29.197922+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -31185,6 +31185,56 @@
       "paper_active_count_before": 863,
       "paper_active_count_after": 863,
       "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35550050654",
+      "first_recorded_at": "2026-09-21T01:11:29.197922+00:00",
+      "last_recorded_at": "2026-09-21T01:11:29.197922+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35550050654:1",
+          "recorded_at": "2026-09-21T01:11:29.197922+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35550050654",
+            "run_attempt": "1",
+            "source_sha": "89e1e80b495e55df91215a61960db73a110d7e3c"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-03793bd297310cea",
+          "type": "research",
+          "canonical_id": "arXiv:2609.15636",
+          "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 863,
+      "paper_active_count_after": 863,
+      "last_successful_action": "job_blocked"
     }
   ]
 }
