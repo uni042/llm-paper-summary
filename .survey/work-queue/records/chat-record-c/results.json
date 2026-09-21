@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-29cb222c40356af503452ebc",
-  "job_id": "job-research-d21a98f99faeb4fe",
-  "data": {
-    "overview": "混在オムニ要求が高負荷になる領域で、HorizonServeは単純な締切順序付けやMPSより高いSLO達成率を維持した。特にQwen2.5-OmniではRTX PRO 6000の到着率0.45で71.9%に対し最良比較法14.6%、RTX 6000 Adaの到着率0.5で53.5%に対し12.7%となった。長経路比率60%でもQwen2.5-OmniとBAGELの達成率が大きく改善し、要求クラス別p95初回応答遅延も38.4〜63.7%短縮した。一方で共有段階TPOTはほぼ維持され、制御ループによる総スループット損失は両GPUで1%未満だった。",
-    "key_results": [
-      {
-        "metric": "SLO達成率",
-        "value": "71.9% 対 14.6%",
-        "baseline": "最良ベースライン",
-        "condition": "RTX PRO 6000、Qwen2.5-Omni、到着率0.45",
-        "interpretation": "高負荷時でも共有段階入場とGPU配分を共同制御することで、SLOを満たす要求の割合を約4.9倍に維持した。"
-      },
-      {
-        "metric": "SLO達成率",
-        "value": "53.5% 対 12.7%",
-        "baseline": "最良ベースライン",
-        "condition": "RTX 6000 Ada、Qwen2.5-Omni、到着率0.5",
-        "interpretation": "GPU容量が小さい側でも同様の効果が残り、単なる大容量GPU依存の改善ではない。"
-      },
-      {
-        "metric": "長経路60%時のSLO達成率",
-        "value": "Qwen2.5-Omni 70.0% 対 27.5%、BAGEL 49.0% 対 7.0%",
-        "baseline": "各条件の最良ベースライン",
-        "condition": "RTX 6000 Ada、総負荷固定、長経路要求比率60%",
-        "interpretation": "下流生成を伴う要求が増えた際に、長経路流入制御と共同実行時SM上限の組合せが下流圧力を抑える。"
-      },
-      {
-        "metric": "要求クラス別p95初回応答遅延",
-        "value": "RTX 6000 Adaで57.1%、42.1%、38.4%短縮、RTX PRO 6000で55.2%、63.7%、38.4%短縮",
-        "baseline": "各要求クラスの最良ベースライン",
-        "condition": "Qwen2.5-Omni、MiMo-Audio、BAGELの代表負荷点",
-        "interpretation": "改善が単一の容易な要求クラスへの偏りではなく、短経路と長経路の双方に及ぶ。"
-      },
-      {
-        "metric": "制御オーバーヘッド",
-        "value": "総スループット損失1%未満",
-        "baseline": "未変更vLLM-Omni",
-        "condition": "RTX 6000 AdaおよびRTX PRO 6000",
-        "interpretation": "要求注釈、キュー可視性制御、PyNVML観測、SM選択、Green Context切替を含めても、制御コストはモデル実行に比べ小さい。"
-      }
-    ],
-    "negative_results": "動機付け実験では、下流段階と共同実行中に共有段階へ120 SMを与えると、80 SM時43.3msだった短テキスト要求TTFTが94.2msへ悪化し、約118%の遅延増となった。一方でデコードTPOTは64〜80 SM付近ですでに飽和し、120 SMでは逆に悪化した。したがって共有段階へ常に全資源を与える方針は不適切である。またアブレーションでは経路ローテーションまたは帯域圧力ベースSM制御のどちらかを外すとSLO達成率が低下し、片方だけでは十分でない。",
-    "interpretation": "効果の源泉は、最早締切優先だけで現在の待ち行列を並べ替えることでも、MPSだけで同時実行することでもない。長経路の共有段階流入を制限すると後で起動する下流生成器の数が減り、帯域圧力に応じて共有段階のSM数を有効飽和域内に抑えると共同実行時の短経路遅延が減る。これらを同じ進捗・余裕度・圧力状態で閉ループ化したため、高負荷・下流偏重の両条件でSLO達成率が維持された。",
-    "quality_impact": "モデル重み、量子化精度、生成探索、出力トークン選択を変更しないサービング制御であり、近似による意味品質低下を導入しない。論文は主にシステム指標を評価しており、内容品質ベンチマークは報告していないため、品質面の主張は「モデル計算そのものを変えない」という範囲に限る。"
-  },
+  "attempt_id": "attempt-3014c2fc28c94c7bd8c38b07",
+  "job_id": "job-research-bfb106674c4d8bfe",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-29cb222c40356af503452ebc",
-    "worker_id": "scheduled-chat-llm-survey-fastlane-verify",
+    "claim_id": "claim-3014c2fc28c94c7bd8c38b07",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }
