@@ -62,14 +62,19 @@ DISCOVERY_INSTRUCTIONS = (
     "per-seed references when structured reference metadata is incomplete. Classify clear "
     "non-matches as unrelated and weak/borderline papers in the durable relevance ledgers. "
     "Normal/new keyword search is fallback only after both citation directions have been "
-    "attempted in the same run. Keep target_unseen=20 and submit at most 5 strong candidates "
-    "per submission; do not fill the list with weak papers."
+    "attempted in the same run. Keep target_unseen=20. One successful schema-v3 precheck request "
+    "is one Discovery round. Submit at most 5 strong candidates per submission; if more than 5 "
+    "strong candidates survive one precheck, split them across multiple submissions that reference "
+    "the same precheck and declare round_submission_index/round_submission_count. Do not fill the "
+    "list with weak papers."
 )
 DISCOVERY_COMPLETION = (
     "Keep alternating productive backward-reference and forward-citation windows, using "
     "recorded search-window yield to choose seeds. Do not let a non-empty reference pool "
     "block forward-citation refresh. Use normal/new search only after both citation "
-    "directions were attempted in the same run. Submit 0-5 strong candidates per submission."
+    "directions were attempted in the same run. Submit 0-5 strong candidates per submission, "
+    "but preserve every strong candidate by splitting one precheck round across multiple submissions "
+    "when needed; split submissions still count as one round."
 )
 RESEARCH_INSTRUCTIONS = (
     "Read the primary source in full. Produce a repository-quality structured research "
@@ -1102,6 +1107,7 @@ def record_discovery_stats(
             "next_axis_hint": meta.get("next_axis_hint"),
             "source_submission": source_submission or None,
             "source_submissions": [source_submission] if source_submission else [],
+            "round_submission_indices": [submission_index],
             "round_submission_count": expected_submissions,
             "round_accounted": False,
         }
@@ -1111,6 +1117,18 @@ def record_discovery_stats(
         row = history[existing_index]
         if str(row.get("axis") or "") != axis:
             raise ValueError("submissions sharing one precheck round must use the same discovery axis")
+        if str(row.get("run_key") or "") != run_key or str(row.get("round") or "") != round_name:
+            raise ValueError("submissions sharing one precheck round must use the same run_key and round")
+        prior_expected = int(row.get("round_submission_count", 1) or 1)
+        if prior_expected != expected_submissions:
+            raise ValueError("all split submissions in one precheck round must declare the same round_submission_count")
+        if row.get("round_accounted"):
+            raise ValueError("the precheck round is already complete; do not append another submission")
+        indices = [int(value) for value in list(row.get("round_submission_indices") or [])]
+        if submission_index in indices:
+            raise ValueError("round_submission_index must be unique within one precheck round")
+        indices.append(submission_index)
+        row["round_submission_indices"] = sorted(indices)
         row["candidate_count"] = max(int(row.get("candidate_count", 0) or 0), candidate_count)
         row["duplicate_filtered_count"] = max(
             int(row.get("duplicate_filtered_count", 0) or 0),
@@ -1120,10 +1138,7 @@ def record_discovery_stats(
             row.get("final_duplicate_filtered_count", 0) or 0
         ) + final_duplicate_filtered_count
         row["accepted_count"] = int(row.get("accepted_count", 0) or 0) + accepted_count
-        row["round_submission_count"] = max(
-            int(row.get("round_submission_count", 1) or 1),
-            expected_submissions,
-        )
+        row["round_submission_count"] = expected_submissions
         sources = list(row.get("source_submissions") or [])
         legacy_source = row.get("source_submission")
         if legacy_source and legacy_source not in sources:
@@ -1161,7 +1176,12 @@ def record_discovery_stats(
     )
 
     source_count = len(list(row.get("source_submissions") or []))
-    round_complete = source_count >= int(row.get("round_submission_count", 1) or 1)
+    expected_count = int(row.get("round_submission_count", 1) or 1)
+    indices = set(int(value) for value in list(row.get("round_submission_indices") or []))
+    round_complete = (
+        source_count == expected_count
+        and indices == set(range(1, expected_count + 1))
+    )
     row["round_complete"] = round_complete
     history[existing_index] = row
 
