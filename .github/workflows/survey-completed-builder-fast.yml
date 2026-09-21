@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/completed-submission-requests/*.json'
+      - '.github/workflows/survey-completed-builder-fast.yml'
   schedule:
     - cron: '9/10 * * * *'
 
@@ -31,6 +32,50 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Enforce completed request contract in worker router
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-completed-builder[bot]'
+          git config user.email 'survey-completed-builder[bot]@users.noreply.github.com'
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('.survey/docs/survey-workflow/worker-router.md')
+          text = path.read_text(encoding='utf-8')
+          replacements = {
+              "2. attempt固有descriptorを `.survey/work-queue/submissions/research/<attempt_id>.json` または `audit/<attempt_id>.json` にcommitする。**新規submissionのファイル名stemはdescriptor内の `attempt_id` と完全一致させる。** status-only `blocked` / `deferred` / `rejected` も同じsubmission laneへ送る。過去に存在する任意名descriptorは読取互換のみ残してよいが、新規生成しない。":
+              "2. `status=completed` はdescriptorを手組みせず、`.survey/work-queue/completed-submission-requests/<attempt_id>.json` にrequestをcommitする。requestのファイル名stemは `attempt_id` と完全一致させ、`kind` / `attempt_id` / `job_id` / `record_bank` と、必要なら `paper_path` / `expected_blob_sha` を持たせる。このpushまたは10分周期の `.github/workflows/survey-completed-builder-fast.yml` が `prepare_completed_submission.py` を実行し、実blob SHAを取得・検証したattempt固有descriptorを `.survey/work-queue/submissions/research/<attempt_id>.json` または `audit/<attempt_id>.json` に生成する。**completed descriptorをScheduled Chatが直接作成・更新してはならない。** status-only `blocked` / `deferred` / `rejected` だけは従来どおり最小descriptorをsubmission laneへ直接送る。過去の直接completed descriptorは読取互換のみ残し、新規生成しない。",
+              "8. GitHubへ保存可能なら各スロットの実blob SHAを取得し、attempt固有の不変descriptorを `.survey/work-queue/submissions/research/<attempt_id>.json` または `audit/<attempt_id>.json` へ保存する。新規descriptorのファイル名stemは必ず `attempt_id` と一致させる。":
+              "8. GitHubへ保存可能なら、`status=completed` はattempt固有requestを `.survey/work-queue/completed-submission-requests/<attempt_id>.json` へ保存し、completed builder fast laneに実blob SHA取得・検証済みdescriptor生成を委ねる。Scheduled Chatがcompleted descriptorを `.survey/work-queue/submissions/research/` / `audit/` へ直接保存してはならない。status-only `blocked` / `deferred` / `rejected` は第3.1節4項の最小descriptorを従来どおりsubmission laneへ直接保存する。"
+          }
+          changed = False
+          for old, new in replacements.items():
+              if old in text:
+                  text = text.replace(old, new, 1)
+                  changed = True
+              elif new not in text:
+                  raise SystemExit(f'worker-router contract anchor not found: {old[:80]}')
+          if changed:
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          if git diff --quiet -- .survey/docs/survey-workflow/worker-router.md; then
+            echo 'Worker router already enforces completed request contract.'
+          else
+            git add .survey/docs/survey-workflow/worker-router.md
+            git commit -m 'survey: require completed submission builder requests'
+            for attempt in 1 2 3 4 5; do
+              if git push origin HEAD:main; then break; fi
+              echo "Router migration push race on attempt ${attempt}; rebasing onto latest main." >&2
+              sleep $((attempt * 2))
+              git fetch origin main
+              git rebase origin/main
+            done
+            git fetch origin main
+            git reset --hard origin/main
+          fi
+
       - name: Build validated completed descriptors
         shell: bash
         run: |
@@ -40,6 +85,7 @@ jobs:
 
           # Treat request files as a durable queue. Push handles the common fast path;
           # the periodic run recovers requests stranded by a cancelled/failed push run.
+          mkdir -p .survey/work-queue/completed-submission-requests
           mapfile -t requests < <(find .survey/work-queue/completed-submission-requests -maxdepth 1 -type f -name '*.json' -print | sort)
           if [ "${#requests[@]}" -eq 0 ]; then
             echo 'No completed-submission requests exist.'
