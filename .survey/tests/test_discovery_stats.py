@@ -83,6 +83,7 @@ class DiscoveryStatsTest(unittest.TestCase):
                     "run_key": "2026-09-21T22:00:00+09:00",
                     "round": "precheck-split-round",
                     "axis": "split-round-regression",
+                    "seed_canonical_id": "arXiv:2501.00001",
                     "candidate_count": 8,
                     "duplicate_filtered_count": 0,
                     "round_submission_count": 2,
@@ -121,6 +122,7 @@ class DiscoveryStatsTest(unittest.TestCase):
                 row = state["history"][0]
                 self.assertTrue(row["round_complete"])
                 self.assertEqual(row["precheck_request_id"], "precheck-split-1")
+                self.assertEqual(row["seed_canonical_id"], "arXiv:2501.00001")
                 self.assertEqual(len(row["source_submissions"]), 2)
                 self.assertEqual(row["accepted_count"], 8)
                 self.assertEqual(state["axes"]["split-round-regression"]["rounds"], 1)
