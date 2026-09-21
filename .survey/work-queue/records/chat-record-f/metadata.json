@@ -2,11 +2,62 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-5847544755414d170b153156",
-  "job_id": "job-research-00f6a78e028bd698",
-  "data": {},
+  "attempt_id": "attempt-294715be130412f5fbdedf0c",
+  "job_id": "job-research-73f2d3c7c23735bb",
+  "data": {
+    "canonical_id": "arXiv:2609.19169",
+    "arxiv_id": "2609.19169",
+    "doi": "10.48550/arXiv.2609.19169",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": [
+        "cs.DC",
+        "eess.SY"
+      ]
+    },
+    "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+    "summary": "SiliconBenchはApple Silicon上の9種類のLLMサービング基盤を、速度だけでなく共有メモリの余裕、出力忠実度、モデル対応、複数ノード拡張まで同一の監査枠組みで比較するベンチマークである。Qwen3-0.6Bを共通基準とし、Qwen3.5-0.8BとGemma-4-E4B-itで新アーキテクチャ対応も確認する。M5 Pro 64GBではvllm-metalが並行度1→16でchat 3.65倍、agent 2.71倍へ伸び、共有メモリ使用量もほぼ一定だった。一方、明示的メモリ予算を持つ実装でも物理RAM近くまで膨張する例があり、速度・完了率だけでは運用適性を判断できない。2台M4 ProではThunderbolt 5 RDMA上のテンソル並列はdecodeを約1.28〜1.37倍へ伸ばしたが、TCP上のパイプライン並列は0.80〜0.84倍へ低下した。",
+    "list_summary": "Apple Siliconの9サービング基盤を速度・共有メモリ・忠実度・新モデル対応・複数ノードで横断監査し、vllm-metalの並行処理とRDMAテンソル並列の優位を示す。",
+    "authors": [
+      "Ranran Haoran Zhang",
+      "Aysa Xuemo Fan",
+      "David Munhá Correia",
+      "Alex Cheema",
+      "Rui Zhang"
+    ],
+    "authors_affiliations": "Penn State University; University of Illinois Urbana-Champaign; EXO Labs",
+    "published": "2026-09-12",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint (v1, 2026-09-12)",
+    "lineage": "local LLM serving / Apple Silicon / unified memory / serving benchmark / multi-node inference",
+    "topics": [
+      "Apple Silicon",
+      "LLMサービング",
+      "統合メモリ",
+      "並行推論",
+      "複数ノード推論",
+      "ベンチマーク"
+    ],
+    "importance": "ローカルLLM推論で重要な速度、メモリ余裕、出力忠実度を同時に測り、packed query・paged KV・prefill/decode混在処理、メモリ方針、RDMA分散方式の実装差を実測結果へ結び付ける。",
+    "implementation": "ベンチマークコード、各run結果、保守journalを公開。固定workloadと人間レビュー付きmaintainer agentで継続更新する研究実装。",
+    "hardware_evaluation": "主評価はApple M5 Pro 64GB。補助評価にM1 Pro/Max、2×M4 Pro Mac mini、DGX Spark GB10 128GB、忠実度参照にNVIDIA A100を使用。",
+    "quality_effect": "GMRID 8クラス分類のweighted F1をA100上vLLM参照と比較。Qwen3-0.6Bでは8実装中6実装が0-shot/5-shotとも約1.5pp以内、新しい2モデルでは評価した5実装すべてが約1.4pp以内。",
+    "source": "https://arxiv.org/abs/2609.19169",
+    "sources": [
+      "https://arxiv.org/abs/2609.19169",
+      "https://arxiv.org/html/2609.19169v1"
+    ],
+    "code": "https://github.com/WindChimeRan/SiliconBench",
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary manuscript",
+    "references_total": 38
+  },
   "reservation": {
-    "claim_id": "claim-5847544755414d170b153156",
+    "claim_id": "claim-294715be130412f5fbdedf0c",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
