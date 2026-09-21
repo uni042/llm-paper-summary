@@ -174,7 +174,7 @@ target_unseen: 20
 4. **新しいものから軽量評価する。** `allowed_records` を公開日降順で見て、対象系統への直接性を確認する。「種論文を引用している」だけでは採用理由にせず、既存系統をどの軸で更新するか（例: expert数の適応配分、expert pruning/merging、圧縮後回復、実測serving改善）をreasonに書く。
 5. **1 submissionは強い候補だけ0〜5件。** 5件を埋めるための弱い候補は入れない。候補化後は4.3〜4.4の通常経路へ合流し、Research jobを直接生成しない。
 6. **次の種論文へ進む条件を明確にする。** 1本の種論文から十分な強候補が得られたら、そのsubmissionを先に耐久保存する。続行時は同じ種論文を再度precheckしてidentity snapshotにより既候補を飛ばすか、別の種論文へ移る。複数種で同じ後続論文が出てもshared identityで重複除外させる。
-7. **探索効率を記録する。** `discovery_stats.search_windows` に種論文、引用方向 `forward`、取得件数、未収録件数、評価件数、採用件数を残す。後続runでは採用率の高かった種論文を優先し、0件が続く種論文を毎回先頭から調べ直さない。
+7. **探索効率を記録する。** 前方引用roundでは `discovery_stats.seed_canonical_id` に実際に使った種論文のcanonical IDを必ず残し、`discovery_stats.search_windows` に種論文、引用方向 `forward`、取得件数、未収録件数、評価件数、採用件数を残す。後続runでは `select_discovery_direction.py` がこの耐久履歴を使って採用率の高かった種論文を優先し、0件が続く種論文を毎回先頭から調べ直さない。repository-wide後方引用のように単一seedを持たないroundでは `seed_canonical_id` を省略してよい。
 
 この方法が特に有効なのは、既存系統が2024〜2025年の代表論文を含み、2026年の新手法がその代表論文を関連研究として引用し始めている場合である。単純なキーワード検索より、対象系統との接続根拠を保ったまま最新研究へ追従しやすい。
 
