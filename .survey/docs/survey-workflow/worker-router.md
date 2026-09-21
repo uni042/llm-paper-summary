@@ -281,6 +281,17 @@ runtime_condition: none
 
 同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、pipeline ahead、`gate.decision` / `gate.required_action` を継続判断の正本とする。同一 `run_key` の最初の成功snapshotが `candidate_inventory` / `work_mode` を固定し、後続snapshotはそれを再利用する。ワーカーは結果と矛盾するbooleanを別途推測して `continuation_gate.py` を呼ばない。
 
+`gate.hard_stop` が返る場合はその値も正本とし、ワーカーが停止理由を再分類しない。主な `required_action` は次のように解釈する。
+
+- `CLAIM_NEXT_RESEARCH_AUDIT`: 新しいResearch / Auditを1件だけclaimする。
+- `CONTINUE_ASSIGNED_WORK`: すでにactiveな同一workerの担当を継続し、新規claimを作らない。
+- `WAIT_FOR_READY_RESEARCH_AUDIT`: claim可能jobが0件なので空claimを発行せず10秒待機し、最新queue/run-stateを再確認する。Discoveryへ切り替えない。
+- `WAIT_FOR_CLAIM_RESULT` / `WAIT_FOR_PREVIOUS_SUBMISSION_RESULT`: 同一identityを10秒間隔で再確認する。
+- `DISCOVER_AGAIN`: 残り600秒より多い場合だけ新しいDiscovery roundへ進む。
+- `RUN_0830_MAINTENANCE`: 08:30専用runの非論文更新→maintenanceを続行する。通常論文処理へ入らない。
+- `FINALIZE`: `run_finalization_gate.py` で最終化許可を確認してから終了する。
+
+
 継続判断の内部実装は `.survey/scripts/continuation_gate.py`、最終化判断は `.survey/scripts/run_finalization_gate.py` を使う。Scheduled Chatからは原則run-state fast laneの導出結果を経由する。Research / Auditでは**提出直後と、1本前のsubmission resultを確認した直後**にcontinuation gateを再実行する。**`--pipeline-ahead-count` は未確認submissionの後ろで既に処理・提出した論文数を表し、通常は0か1だけを渡す。** Nを提出した直後でまだN+1を提出していなければ0、N+1を提出済みでNのresultが未確認なら1とする。提出直後に `required_action=CLAIM_NEXT_RESEARCH_AUDIT` が返った場合は、result待ちより先に次の1件をclaimする。1本先行済み、または安全にclaim可能な次jobがない状態で `required_action=WAIT_FOR_PREVIOUS_SUBMISSION_RESULT` が返った場合は、さらに次をclaimせず1本前のresultを確認する。終端確認時はそのjobの終端statusを `--last-terminal-job-status`、今回runの成功完了数を `--research-audit-completed-this-invocation` として渡す。
 
 `run_finalization_gate.py` にも今回runの `--work-mode` と最低条件カウンタを必ず渡す。Research / Auditで成功完了3件未達、またはDiscoveryで4 round未達の通常runは、仮に誤って `STOP_RUN` が渡されてもfinalization gateが拒否する。hard stop + safe handoffだけはこの最低条件より優先する。
