@@ -1,1 +1,65 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e4fcacccce96800ab6bbc123","job_id":"job-research-f837d96601e69237","data":{"canonical_id":"arXiv:2608.24938","arxiv_id":"2608.24938","doi":"10.48550/arXiv.2608.24938","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration","summary":"ExFoldは、事前充填と復号で除外されるエキスパート寄与を捨てず、無ラベル校正で求めた方向付きスカラー射影により保持エキスパートへ折り畳む再学習不要のMoE推論高速化手法である。事前充填はトークン単位の保持数、復号はバッチ単位の保持プールという異なる予算を使うが、同じ射影損失表と折り畳み演算を共有する。vLLMプラグインとTriton/CUDA系カーネルで最大1.41倍の初回トークン時間、2.45倍の出力トークン時間高速化を報告する。","list_summary":"除外エキスパートの出力を保持エキスパートへスカラー射影して、事前充填と復号を共通機構で高速化する再学習不要のExpert Folding。","authors":["Juntong Wu","Yifei Liu","Junyi Chen","Siqi Fan","Chaoran Feng","Minghao Li","Liujie Zhang","Weihang Cheng","Li Yuan"],"authors_affiliations":null,"published":"2026-08-24","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1, 2026-08-24","lineage":"MoE inference acceleration / expert sparsification / expert-set consolidation / output approximation","topics":["MoE推論","エキスパート折り畳み","事前充填高速化","復号高速化","再学習不要圧縮"],"importance":"既存手法が削除したエキスパート寄与を捨てるか暗黙近似するのに対し、出力方向の類似性と大きさの差を明示的な方向付きスカラーで補正し、計算律速の事前充填とメモリ律速の復号を同一の出力近似問題として統合する。","implementation":"vLLMへのプラグイン実装と軽量Triton/CUDA系折り畳みカーネルを提供。公式コードはTime-Rune/ExFold-MoE。","hardware_evaluation":"効率評価はNVIDIA H800、BF16、vLLM上で実施。","quality_effect":"Qwen3-30B-A3Bでは元平均69.04に対し事前充填P4で69.26、復号D32で68.97、共同P4+D64で68.50。","source":"https://arxiv.org/abs/2608.24938","sources":["https://arxiv.org/abs/2608.24938","https://arxiv.org/html/2608.24938","https://arxiv.org/pdf/2608.24938"],"code":"https://github.com/Time-Rune/ExFold-MoE","last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-e4fcacccce96800ab6bbc123","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-edfac129f344bed99e666629",
+  "job_id": "job-research-f837d96601e69237",
+  "data": {
+    "canonical_id": "arXiv:2608.24938",
+    "arxiv_id": "2608.24938",
+    "doi": "10.48550/arXiv.2608.24938",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration",
+    "summary": "ExFoldは、事前充填と復号で除外されるエキスパート寄与を捨てず、無ラベル校正で求めた方向付きスカラー射影により保持エキスパートへ折り畳む再学習不要のMoE推論高速化手法である。事前充填はトークン単位の保持数、復号はバッチ単位の保持プールという異なる予算を使うが、同じ射影損失表と折り畳み演算を共有する。vLLMプラグインとTriton/CUDA系カーネルで最大1.41倍の初回トークン時間、2.45倍の出力トークン時間高速化を報告する。",
+    "list_summary": "除外エキスパートの出力を保持エキスパートへスカラー射影して、事前充填と復号を共通機構で高速化する再学習不要のExpert Folding。",
+    "authors": [
+      "Juntong Wu",
+      "Yifei Liu",
+      "Junyi Chen",
+      "Siqi Fan",
+      "Chaoran Feng",
+      "Minghao Li",
+      "Liujie Zhang",
+      "Weihang Cheng",
+      "Li Yuan"
+    ],
+    "authors_affiliations": null,
+    "published": "2026-08-24",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint v1, 2026-08-24",
+    "lineage": "MoE inference acceleration / expert sparsification / expert-set consolidation / output approximation",
+    "topics": [
+      "MoE推論",
+      "エキスパート折り畳み",
+      "事前充填高速化",
+      "復号高速化",
+      "再学習不要圧縮"
+    ],
+    "importance": "既存手法が削除したエキスパート寄与を捨てるか暗黙近似するのに対し、出力方向の類似性と大きさの差を明示的な方向付きスカラーで補正し、計算律速の事前充填とメモリ律速の復号を同一の出力近似問題として統合する。",
+    "implementation": "vLLMへのプラグイン実装と軽量Triton/CUDA系折り畳みカーネルを提供。公式コードはTime-Rune/ExFold-MoE。",
+    "hardware_evaluation": "効率評価はNVIDIA H800、BF16、vLLM上で実施。",
+    "quality_effect": "Qwen3-30B-A3Bでは元平均69.04に対し事前充填P4で69.26、復号D32で68.97、共同P4+D64で68.50。",
+    "source": "https://arxiv.org/abs/2608.24938",
+    "sources": [
+      "https://arxiv.org/abs/2608.24938",
+      "https://arxiv.org/html/2608.24938",
+      "https://arxiv.org/pdf/2608.24938"
+    ],
+    "code": "https://github.com/Time-Rune/ExFold-MoE",
+    "last_checked": "2026-09-21",
+    "references": [],
+    "references_checked_at": "2026-09-21",
+    "references_source": "primary manuscript",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-edfac129f344bed99e666629",
+    "worker_id": "scheduled-chat-llm-paper-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
