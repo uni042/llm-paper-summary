@@ -81,6 +81,10 @@ class AuditMetadataRoutingTest(unittest.TestCase):
         self.assertEqual(created["priority_breakdown"]["lineage"], 20)
         self.assertEqual(created["priority_breakdown"]["total"], 100)
 
+    def test_explicit_zero_priority_is_not_promoted_to_default(self) -> None:
+        self.assertEqual(queue_worker.candidate_priority_value({"priority": 0}), 0)
+        self.assertEqual(queue_worker.candidate_priority_value({}), 50)
+
     def test_short_completed_artifact_is_rejected_before_write(self) -> None:
         original_root = queue_worker.ROOT
         try:
