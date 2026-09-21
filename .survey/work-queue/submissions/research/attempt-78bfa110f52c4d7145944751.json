@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-78bfa110f52c4d7145944751",
+  "job_id": "job-research-c76afcb7233dbe74",
+  "claim_id": "claim-78bfa110f52c4d7145944751",
+  "worker_id": "scheduled-chat-hourly30",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely obtained in this invocation. The DOI/ACM route was inaccessible through the available retriever, title/author searches did not surface an official full-text copy, and the ICPP 2026 official program confirms the paper but provides schedule/program metadata rather than the paper body. No five-slot scientific record was synthesized from snippets or secondary material.",
+  "retrieval_evidence": [
+    "DOI official route attempted: https://doi.org/10.1145/3832810.3832859; retriever returned inaccessible/internal error.",
+    "Official ICPP 2026 program checked: https://icpp2026.github.io/schedule/; CrossServe by Jiahe Li and Jiabin Li is listed in Session 2A, but no full paper text is exposed there.",
+    "Exact-title and title+author web searches were attempted; no materially distinct official author/project full-text copy was found in returned results."
+  ],
+  "blocked_at": "2026-09-21T03:35:00Z"
+}
