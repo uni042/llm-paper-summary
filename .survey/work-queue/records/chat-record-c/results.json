@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a945ec69230dbe8bbbb01bc4",
+  "attempt_id": "attempt-ebcba74d995fdc58a48bf0a6",
   "job_id": "job-research-c27f3a6ec993f9ab",
   "data": {
     "overview": "Boleは28のMBPP configurationsすべてでdecode throughputを改善し、幾何平均でSGLang-AR比2.74倍、最強のspeculative baseline比1.26倍となった。peakはA100でAR比3.62倍、SGLang-Tree比1.41倍、AdaServe比1.39倍、GB10でそれぞれ4.72倍、2.03倍、2.06倍。parallel recurrent verifier単体は3.4–7.7倍高速化し、factorized stateはper-node transient footprintを82–99倍削減する。online agent servingでもcache capacity回復によりTTFT/TPOTを大きく削減する。",
@@ -62,7 +62,7 @@
     "quality_impact": "Boleのtree solverは逐次Gated Delta recurrenceと代数的に厳密等価で、factorized commitもaccepted stateをlosslessに再構成する。標準speculative samplingによりtarget output distributionを変えない。性能最適化のための近似は主にhardware capacity calibrationであり、model semanticsの近似ではない。"
   },
   "reservation": {
-    "claim_id": "claim-a945ec69230dbe8bbbb01bc4",
+    "claim_id": "claim-ebcba74d995fdc58a48bf0a6",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
