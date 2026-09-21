@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-ee1dbc63016bc978f29dcb47",
+  "job_id": "job-research-a5d6d7156c3ffec6",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-ee1dbc63016bc978f29dcb47.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | results.key_results[0] missing: baseline, condition, interpretation | results.key_results[1] missing: baseline, condition, interpretation | results.key_results[2] missing: baseline, condition, interpretation | results.key_results[3] missing: baseline, condition, interpretation | results.key_results[4] missing: baseline, condition, interpretation | results.key_results[5] missing: baseline, condition, interpretation",
+  "processed_at": "2026-09-21T11:08:41+00:00",
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "results.key_results[0] missing: baseline, condition, interpretation",
+    "results.key_results[1] missing: baseline, condition, interpretation",
+    "results.key_results[2] missing: baseline, condition, interpretation",
+    "results.key_results[3] missing: baseline, condition, interpretation",
+    "results.key_results[4] missing: baseline, condition, interpretation",
+    "results.key_results[5] missing: baseline, condition, interpretation"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}

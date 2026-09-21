@@ -33,28 +33,18 @@
   "last_blocked_at": "2026-09-21T00:43:33+00:00",
   "retry_queued_at": "2026-09-21T07:05:25+00:00",
   "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: metadata.source is required | metadata.topics is required | metadata.arxiv_categories.primary is required for arXiv papers | metadata.hardware_evaluation is required | metadata.quality_effect is required | metadata.references[0] requires a normalized identity | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | evaluation.scope is required to distinguish real-hardware/simulation and generalization limits | results.key_results requires at least one quantitative result | results.overview must explain the main result and its practical meaning | results.negative_results is required; record degradation and boundary conditions | results.interpretation is required; explain why gains change across conditions | results.quality_impact is required; distinguish lossless from approximate methods | positioning.differences is required | positioning.implementation_status is required | positioning.research_positioning is required",
+  "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | results.key_results[0] missing: baseline, condition, interpretation | results.key_results[1] missing: baseline, condition, interpretation | results.key_results[2] missing: baseline, condition, interpretation | results.key_results[3] missing: baseline, condition, interpretation | results.key_results[4] missing: baseline, condition, interpretation | results.key_results[5] missing: baseline, condition, interpretation",
   "validation_errors": [
-    "metadata.source is required",
-    "metadata.topics is required",
-    "metadata.arxiv_categories.primary is required for arXiv papers",
-    "metadata.hardware_evaluation is required",
-    "metadata.quality_effect is required",
-    "metadata.references[0] requires a normalized identity",
     "problem_method.components[0].description is too short",
-    "problem_method.components[1].description is too short",
     "problem_method.components[2].description is too short",
     "problem_method.components[3].description is too short",
     "problem_method.components[4].description is too short",
-    "evaluation.scope is required to distinguish real-hardware/simulation and generalization limits",
-    "results.key_results requires at least one quantitative result",
-    "results.overview must explain the main result and its practical meaning",
-    "results.negative_results is required; record degradation and boundary conditions",
-    "results.interpretation is required; explain why gains change across conditions",
-    "results.quality_impact is required; distinguish lossless from approximate methods",
-    "positioning.differences is required",
-    "positioning.implementation_status is required",
-    "positioning.research_positioning is required"
+    "results.key_results[0] missing: baseline, condition, interpretation",
+    "results.key_results[1] missing: baseline, condition, interpretation",
+    "results.key_results[2] missing: baseline, condition, interpretation",
+    "results.key_results[3] missing: baseline, condition, interpretation",
+    "results.key_results[4] missing: baseline, condition, interpretation",
+    "results.key_results[5] missing: baseline, condition, interpretation"
   ],
-  "last_validation_failed_at": "2026-09-21T11:05:10+00:00"
+  "last_validation_failed_at": "2026-09-21T11:08:41+00:00"
 }
