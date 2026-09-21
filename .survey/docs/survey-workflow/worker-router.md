@@ -265,7 +265,7 @@ hard stopは曖昧な「安全そうでない」「難しい」「時間がか�
 
 ### 7.2 run-state fast lane
 
-通常のScheduled Chatは、継続判断用の多数のbooleanを手作業で組み立てない。`.survey/work-queue/run-state/requests/<request-id>.json` に次の最小requestを耐久保存し、`.github/workflows/survey-run-state.yml` に `.survey/scripts/derive_worker_run_state.py` を実行させる。
+通常のScheduled Chatは、継続判断用の多数のbooleanを手作業で組み立てない。`.survey/work-queue/run-state/requests/<request-id>.json` に次の最小requestを耐久保存し、`.github/workflows/survey-run-state.yml` に `.survey/scripts/derive_worker_run_state.py` を実行させる。 **各再判定snapshotでは新しい一意な `request_id` を使う。** 同じrun内では `run_key` / `worker_id` / `scheduled_slot` / `actual_invocation_start` を維持するが、resultが既に存在するrequest IDを再利用して最新状態を得ようとしてはならない。既存resultは不変snapshotである。requestが存在してresultだけ未生成の場合は新requestを作らず、同じrequest IDのresultを待って定期回収に任せる。
 
 ```yaml
 schema_version: 1
