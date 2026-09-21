@@ -33,18 +33,9 @@
   "last_blocked_at": "2026-09-21T00:43:33+00:00",
   "retry_queued_at": "2026-09-21T07:05:25+00:00",
   "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | results.key_results[0] missing: baseline, condition, interpretation | results.key_results[1] missing: baseline, condition, interpretation | results.key_results[2] missing: baseline, condition, interpretation | results.key_results[3] missing: baseline, condition, interpretation | results.key_results[4] missing: baseline, condition, interpretation | results.key_results[5] missing: baseline, condition, interpretation",
+  "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
   "validation_errors": [
-    "problem_method.components[0].description is too short",
-    "problem_method.components[2].description is too short",
-    "problem_method.components[3].description is too short",
-    "problem_method.components[4].description is too short",
-    "results.key_results[0] missing: baseline, condition, interpretation",
-    "results.key_results[1] missing: baseline, condition, interpretation",
-    "results.key_results[2] missing: baseline, condition, interpretation",
-    "results.key_results[3] missing: baseline, condition, interpretation",
-    "results.key_results[4] missing: baseline, condition, interpretation",
-    "results.key_results[5] missing: baseline, condition, interpretation"
+    "problem_method.method_overview must explain the end-to-end mechanism"
   ],
-  "last_validation_failed_at": "2026-09-21T11:08:41+00:00"
+  "last_validation_failed_at": "2026-09-21T11:11:00+00:00"
 }
