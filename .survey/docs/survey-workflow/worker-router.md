@@ -294,7 +294,7 @@ runtime_condition: none
 
 継続判断の内部実装は `.survey/scripts/continuation_gate.py`、最終化判断は `.survey/scripts/run_finalization_gate.py` を使う。Scheduled Chatからは原則run-state fast laneの導出結果を経由する。Research / Auditでは**提出直後と、1本前のsubmission resultを確認した直後**にcontinuation gateを再実行する。**`--pipeline-ahead-count` は未確認submissionの後ろで既に処理・提出した論文数を表し、通常は0か1だけを渡す。** Nを提出した直後でまだN+1を提出していなければ0、N+1を提出済みでNのresultが未確認なら1とする。提出直後に `required_action=CLAIM_NEXT_RESEARCH_AUDIT` が返った場合は、result待ちより先に次の1件をclaimする。1本先行済み、または安全にclaim可能な次jobがない状態で `required_action=WAIT_FOR_PREVIOUS_SUBMISSION_RESULT` が返った場合は、さらに次をclaimせず1本前のresultを確認する。終端確認時はそのjobの終端statusを `--last-terminal-job-status`、今回runの成功完了数を `--research-audit-completed-this-invocation` として渡す。
 
-`run_finalization_gate.py` にも今回runの `--work-mode` と最低条件カウンタを必ず渡す。Research / Auditで成功完了3件未達、またはDiscoveryで4 round未達の通常runは、仮に誤って `STOP_RUN` が渡されてもfinalization gateが拒否する。hard stop + safe handoffだけはこの最低条件より優先する。
+`run_finalization_gate.py` にも今回runの `--work-mode` と最低条件カウンタを必ず渡す。run-state resultの `gate.hard_stop` をそのまま `--hard-stop` の正本とし、ワーカーが独自に再分類しない。Research / Auditで成功完了3件未達、またはDiscoveryで4 round未達の通常runは、仮に誤って `STOP_RUN` が渡されてもfinalization gateが拒否する。hard stop + safe handoffだけはこの最低条件より優先する。pending resultを含むsafe handoffでは、request/submission identity、期待result path、現在のpending状態、次の正規操作が耐久保存済みの場合だけ `handoff_safe=true` とする。
 
 - claim/resultやsubmission/resultが次の安全な判断に必要なら、同一targetを**10秒実時間間隔**で再確認する。「所定間隔」はすべて10秒を意味し、別の待機間隔を自己判断で作らない。Research / Auditモードで最新queue上のclaim可能jobが0件なら、空のclaim requestを連打せず10秒待機して最新queueを再確認する。run中にDiscoveryへ切り替えない。
 - Research / Audit のsubmission result待ちは**直後の1本には同期障壁ではなく、その次の論文へ進むための同期障壁**である。N提出後はN+1を処理・提出してよい。N+1提出後はNの成功resultまたはstatus-only終端と最新main反映を確認するまでN+2をclaim・取得しない。failure時はNの正規repairを優先する。
