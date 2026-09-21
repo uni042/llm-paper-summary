@@ -361,6 +361,7 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
     evaluation_pending: list[str] = []
     recovery_required: list[str] = []
     successful_prechecks: dict[str, dict[str, Any]] = {}
+    submission_progress: dict[str, dict[str, Any]] = {}
 
     if request_root.is_dir():
         for path in request_root.glob("*.json"):
@@ -376,7 +377,6 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
             elif result.get("ok") is False:
                 recovery_required.append(f"precheck:{path.stem}")
 
-    submitted_prechecks: set[str] = set()
     pending_submissions: list[str] = []
     if submission_root.is_dir():
         for path in submission_root.glob("*.json"):
@@ -387,9 +387,26 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
             submission_run_key = str(submission.get("run_key") or stats.get("run_key") or "")
             if submission_run_key != run_key:
                 continue
-            precheck_id = str(submission.get("precheck_request_id") or stats.get("precheck_request_id") or "")
+            proof = submission.get("discovery_precheck") if isinstance(submission.get("discovery_precheck"), dict) else {}
+            precheck_id = str(
+                proof.get("request_id")
+                or submission.get("precheck_request_id")
+                or stats.get("precheck_request_id")
+                or ""
+            )
             if precheck_id:
-                submitted_prechecks.add(precheck_id)
+                progress = submission_progress.setdefault(
+                    precheck_id,
+                    {"expected": 1, "indices": set(), "paths": []},
+                )
+                expected = stats.get("round_submission_count", 1)
+                index = stats.get("round_submission_index", 1)
+                if isinstance(expected, int) and not isinstance(expected, bool):
+                    progress["expected"] = max(int(progress["expected"]), max(expected, 1))
+                if isinstance(index, int) and not isinstance(index, bool) and index >= 1:
+                    progress["indices"].add(index)
+                progress["paths"].append(path.stem)
+
             result = _read(result_root / path.name, {})
             if not isinstance(result, dict):
                 pending_submissions.append(path.stem)
@@ -405,8 +422,15 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
         and str(row.get("run_key") or "") == run_key
         and (row.get("round_accounted") is True or row.get("round_complete") is True)
     }
+
     for request_id in successful_prechecks:
-        if request_id not in submitted_prechecks and request_id not in accounted_prechecks:
+        if request_id in accounted_prechecks:
+            continue
+        progress = submission_progress.get(request_id)
+        if progress is None:
+            evaluation_pending.append(request_id)
+            continue
+        if len(progress["indices"]) < int(progress["expected"]):
             evaluation_pending.append(request_id)
 
     return {
