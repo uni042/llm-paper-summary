@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a0822fa7a59dd826fad3dfc3",
+  "attempt_id": "attempt-656236ce96424eaac8e4d26e",
   "job_id": "job-research-901c881ed2cc963f",
   "data": {
     "limitations": "MetaNetはactive-expert workloadを減らすが全expert poolはメモリ常駐したままで、parameter storageやpeak memoryを比例削減しない。active ratioは総FLOPsではなくrouting-level proxyで、dispatch、dense attention、同期、inter-device communicationが残るため現実のlatency改善は小さい。主MMLU評価は192 held-out queries、sampling sensitivityは2 seedsのみで信頼区間や有意差検定には不十分。adapted baselinesは元手法の厳密再現ではない。評価は主にmultiple-choiceで、open-ended generation、long-context、安全性重要タスクでのrouting patternは未検証。",
@@ -11,7 +11,7 @@
     "research_positioning": "Adaptive Expert Computation / Compression系統では、静的expert pruningや固定layer budgetの中間ではなく、タスク条件付きのlayer-wise compute allocationとして位置付く。storage圧縮ではなくrouting workload制御であり、DeepSpeed-MoE/Tutel/Lina等のsystem runtime最適化と組み合わせて初めてexpert削減を大きなend-to-end高速化へ変換できるため、アルゴリズム側の動的予算決定とシステム側の疎実行を接続する研究である。"
   },
   "reservation": {
-    "claim_id": "claim-a0822fa7a59dd826fad3dfc3",
+    "claim_id": "claim-656236ce96424eaac8e4d26e",
     "worker_id": "scheduled-chat-llm-paper-30",
     "worker_kind": "scheduled_chat"
   }

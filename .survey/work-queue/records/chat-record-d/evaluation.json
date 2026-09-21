@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a0822fa7a59dd826fad3dfc3",
+  "attempt_id": "attempt-656236ce96424eaac8e4d26e",
   "job_id": "job-research-901c881ed2cc963f",
   "data": {
     "hardware": "DeepSeek-MoE-16B-Chat主評価は3×NVIDIA RTX 4090 24GB、bfloat16、device_map=auto。論文はactive-expert比率をrouting workload proxyとして扱い、実測latencyも同一3-GPU harnessで別途報告する。",
@@ -11,7 +11,7 @@
     "scope": "主要な実証はDeepSeek-MoE-16B-Chatと学術multiple-choice benchmark（MMLU/C-Eval）で、OLMoEとGoogLeNetは転移性の補助検証。active ratioは総FLOPsではなくrouting-level proxyであり、runtime最適化なしではend-to-end latencyがexpert削減率に比例しない。"
   },
   "reservation": {
-    "claim_id": "claim-a0822fa7a59dd826fad3dfc3",
+    "claim_id": "claim-656236ce96424eaac8e4d26e",
     "worker_id": "scheduled-chat-llm-paper-30",
     "worker_kind": "scheduled_chat"
   }

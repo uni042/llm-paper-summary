@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a0822fa7a59dd826fad3dfc3",
+  "attempt_id": "attempt-656236ce96424eaac8e4d26e",
   "job_id": "job-research-901c881ed2cc963f",
   "data": {
     "overview": "DeepSeek-MoE-16B-ChatではMetaNet aggressiveが平均top-k 2.28（fixed k=6比62%削減）でMMLU 0.438、conservativeが3.61（40%削減）で0.489を得てfixed k=6の0.474を上回る。C-Eval-Fullへは再学習なしでaggressive 2.90 experts/0.386、conservative 3.61/0.452。component ablationではbudget-onlyのgate agreementが0.038まで崩れる一方、full methodは0.943を維持し、budgetとbounded priorの補完性を示す。ただし62%のexpert削減に対するlatency短縮は共通3-GPU harnessで4.9%に留まる。",
@@ -55,7 +55,7 @@
     "quality_impact": "保守設定は主MMLU runで0.489対fixed k=6の0.474。2-seed sensitivityではconservative 0.506±0.022、fixed k=6 0.505±0.030でほぼ同等、aggressiveは0.477±0.022。2 seedsのみのため統計的有意性は主張できない。"
   },
   "reservation": {
-    "claim_id": "claim-a0822fa7a59dd826fad3dfc3",
+    "claim_id": "claim-656236ce96424eaac8e4d26e",
     "worker_id": "scheduled-chat-llm-paper-30",
     "worker_kind": "scheduled_chat"
   }
