@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-scheduled-chat-30-20260921T143800Z-5e",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-c744057cd5d44d88",
+      "claim_id": "claim-c694fe5200be3ab82dd949c1",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-c694fe5200be3ab82dd949c1",
+      "claimed_at": "2026-09-21T14:38:17+00:00",
+      "expires_at": "2026-09-21T16:08:17+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-c744057cd5d44d88"
+      ],
+      "job": {
+        "job_id": "job-research-c744057cd5d44d88",
+        "type": "research",
+        "parent_job_id": "job-c44a110e87a6bd80",
+        "priority": 100,
+        "canonical_id": "DOI:10.1145/3832810.3832869",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "CARE-MoE: Correlation-Aware Expert Placement and Semantic Equivalence Routing for MoE LLM Inference on Edge Devices",
+        "source_url": "https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-9f0ddbf86051-care-moe-correlation-aware-expert-placement-and-semantic-equivalence-routing-for-moe-llm-inference-on-edge-devices.md",
+        "selection_reason": "co-activation correlationとhot/cold driftを用いるexpert placementとsemantic-equivalence routingでedge MoEのload/communicationを同時削減し2.1–5.2倍高速化。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:20:28+00:00",
+        "blocker": "Primary full text could not be safely obtained in this invocation after checking materially distinct publication/official routes. No five-slot scientific record was synthesized from abstract-only material.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-586ebbd921b376c0048f0b95.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-21T02:37:51+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-21T02:37:51+00:00",
+            "reason": "Primary full text could not be safely obtained in this invocation after checking materially distinct publication/official routes. No five-slot scientific record was synthesized from abstract-only material."
+          }
+        ],
+        "last_blocked_at": "2026-09-21T02:37:51+00:00",
+        "retry_queued_at": "2026-09-21T14:09:55+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T14:38:17+00:00",
+  "checkpoint_released": 0
+}
