@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""Convert durable research/audit fallback bundles to workflow-v10 immutable submissions.
+"""Convert current research/audit Library fallback bundles to immutable submissions.
 
-This module is the compatibility boundary for historical Library envelopes that
-contained five record slots plus the retired reusable ``chat-inbox.json`` payload.
-New fallback envelopes may omit ``chat-inbox.json`` and carry paper/claim metadata at
-the envelope root. In either case replay writes only a safe record bank and an
-attempt-specific immutable descriptor; it never recreates the reusable Chat transport.
+Fallback envelopes carry transport metadata at the envelope root and exactly one
+complete five-slot record bundle. Replay writes only a safe record bank and an
+attempt-specific immutable descriptor.
 """
 from __future__ import annotations
 
@@ -20,7 +18,6 @@ import select_record_bank
 from paper_path_resolver import resolve_paper_path
 from record_bank_config import BANK_PATH_PREFIXES, BANK_ROOTS, SLOT_NAMES
 
-CHAT_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 TERMINAL = claim_state.TERMINAL
 LIBRARY_PENDING_PREFIX = "/LLM-survey-outbox/pending/"
@@ -65,22 +62,7 @@ def _safe_paper_path(value: Any) -> str:
     return path.as_posix()
 
 
-def _legacy_chat_payload(envelope: dict[str, Any]) -> dict[str, Any] | None:
-    for write in envelope.get("writes") or []:
-        if not isinstance(write, dict) or write.get("path") != CHAT_INBOX:
-            continue
-        content = write.get("content")
-        if not isinstance(content, str):
-            raise ValueError("legacy chat-inbox content must be a JSON string")
-        value = json.loads(content)
-        if not isinstance(value, dict):
-            raise ValueError("legacy chat-inbox content must contain an object")
-        return value
-    return None
-
-
 def _metadata(envelope: dict[str, Any]) -> dict[str, Any]:
-    legacy = _legacy_chat_payload(envelope) or {}
     out: dict[str, Any] = {}
     for key in (
         "kind",
@@ -96,11 +78,7 @@ def _metadata(envelope: dict[str, Any]) -> dict[str, Any]:
         "audit_flags",
         "audit_reason",
     ):
-        root_value = envelope.get(key)
-        legacy_value = legacy.get(key)
-        if root_value is not None and legacy_value is not None and root_value != legacy_value:
-            raise ValueError(f"legacy chat-inbox {key} differs from fallback envelope")
-        value = root_value if root_value is not None else legacy_value
+        value = envelope.get(key)
         if value is not None:
             out[key] = value
     return out
