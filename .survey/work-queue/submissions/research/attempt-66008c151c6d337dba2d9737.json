@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-66008c151c6d337dba2d9737",
+  "job_id": "job-research-9aee3ce953b43bc0",
+  "claim_id": "claim-66008c151c6d337dba2d9737",
+  "worker_id": "scheduled-chat-hourly30",
+  "status": "blocked",
+  "reason": "Primary paper full text could not be safely obtained in this invocation. Exact-title/DOI searches surfaced the official implementation repository and bibliographic/abstract pages, but no accessible official paper body. The implementation artifact is useful corroborating material but cannot substitute for the required full-paper reading, so no five-slot scientific record was synthesized.",
+  "retrieval_evidence": [
+    "DOI: https://doi.org/10.1145/3821219 was searched as the primary publication identifier; returned search surfaces did not expose the full ACM paper body.",
+    "Official implementation repository found: https://github.com/TianheMICALab/AdaptiveKV; README documents the runtime predictor, allocation-ratio search, dynamic interleaving API, and kernel patch, but it is not the publication full text.",
+    "ResearchGate bibliographic page reports ACM TACO 23(3), August 2026 and offers only a request-full-text flow; exact-title searches did not return a materially distinct official author-hosted full-text copy."
+  ],
+  "blocked_at": "2026-09-21T03:36:00Z"
+}
