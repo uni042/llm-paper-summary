@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-d9517035eb54f87a58a78549",
-  "job_id": "job-research-901c881ed2cc963f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d9517035eb54f87a58a78549",
-    "worker_id": "scheduled-chat-llm-paper-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d9517035eb54f87a58a78549","job_id":"job-research-901c881ed2cc963f","data":{"hardware":"DeepSeek-MoE-16B-Chat主評価は3×NVIDIA RTX 4090 24GB、bfloat16、device_map=auto。論文はactive-expert比率をrouting workload proxyとして扱い、実測latencyも同一3-GPU harnessで別途報告する。","software":"主backboneはDeepSeek-MoE-16B-Chat（27 routed layers、各64 sparse experts、native top-k=6）でbackbone/experts/original gateを凍結しMetaNetのみ学習。MetaNetは450 episodic steps、learning rate 5e-4。比較はfixed k=1..6,12、HyperRouter-style、および同じ凍結DeepSeek harnessへ適応したAdaMoE/Dynamic MoE/Probe Pruning。","methodology":"MMLUはsubjectをtaskとし34 meta-train、11 meta-validation、12 meta-testへ固定分割。各episodeはsupport 8、query 16で、主MMLU結果は12×16=192 held-out queries。C-Eval-Fullは52 subjects、各5 development examplesをsupport、最大16 validation examplesをqueryとして計828 queries、MMLU学習済みcontrollerを更新なしで転移する。Cross-backboneではOLMoE-1B-7Bへzero-shot適用し、cross-architectureでは凍結GoogLeNetの3-of-4 branch選択をsynthetic episodic vision tasksで確認する。component/layer-position ablation、operating-point sweep、2 seeds×2 episodes/subjectのsampling sensitivityも実施する。","scope":"主要な実証はDeepSeek-MoE-16B-Chatと学術multiple-choice benchmark（MMLU/C-Eval）で、OLMoEとGoogLeNetは転移性の補助検証。active ratioは総FLOPsではなくrouting-level proxyであり、runtime最適化なしではend-to-end latencyがexpert削減率に比例しない。"},"reservation":{"claim_id":"claim-d9517035eb54f87a58a78549","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
