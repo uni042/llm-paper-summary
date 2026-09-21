@@ -4,10 +4,23 @@
   "slot": "metadata",
   "attempt_id": "attempt-b8a8b7bb8f5552157b8f356c",
   "job_id": "job-research-28c5772328ef0791",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b8a8b7bb8f5552157b8f356c",
-    "worker_id": "scheduled-chat-llm-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "DOI:10.1145/3789240.3829130", "arxiv_id": null, "doi": "10.1145/3789240.3829130", "openreview_id": null,
+    "arxiv_categories": {"primary": null, "cross_list": []},
+    "title": "TurboBus: Pooling PCIe Bandwidth for LLM Workloads via Scale-Up Fabrics",
+    "summary": "TurboBusはGPUメモリのオフロードで個々のPCIeリンクが飽和する一方、ノード全体では帯域の60%以上が遊休する問題に対し、高速なGPU間拡張ファブリックを中継路として隣接GPUの空きPCIe帯域を借りる。特権デーモンでジョブ間隔離を維持し、固定長ブロックの流水転送、ブロック単位の経路割当、双方向転送の同期実行、転送サイズを考慮した公平なスケジューリングを組み合わせる。SIGCOMM 2026の評価では、オンデマンドモデル読込の初回トークン待ち時間を最大40%削減し、鍵値キャッシュをCPUへ退避する推論の処理量を最大1.6倍、ZeRO-Offload学習を最大7%高速化した。",
+    "list_summary": "GPU間高速ファブリックを中継路として他GPUの空きPCIeリンクを借用し、モデル読込の初回トークン待ち時間を最大40%削減、鍵値退避推論を最大1.6倍高速化する。",
+    "authors": ["Xinyu Yang", "Kaiqiang Xu", "Kai Chen"], "authors_affiliations": "Hong Kong University of Science and Technology, iSING Lab",
+    "published": "2026-08-17", "publication": "ACM SIGCOMM 2026", "publication_type": "国際会議論文", "publication_status": "Published at ACM SIGCOMM 2026, August 17-21, 2026",
+    "lineage": "GPU memory offloading / PCIe bandwidth pooling / scale-up fabric / multi-tenant LLM serving",
+    "topics": ["GPUメモリオフロード", "PCIe帯域プール", "GPU間高速ファブリック", "多テナント推論", "鍵値キャッシュ退避"],
+    "importance": "従来はGPUごとに固定所有されていたPCIeリンクを、より高速なGPU間ファブリックを介してノード共有資源として扱う。モデル重み、鍵値キャッシュ、学習状態という異なるオフロード対象を同一の転送基盤で扱い、ジョブ境界を越える帯域借用と公平性まで設計した点が重要である。",
+    "implementation": "約3900行の実装で、特権デーモン、C++クライアントライブラリ、Python前段から構成される。共有メモリとCUDA IPCでデータを複製せず共有し、CUDAストリームへ非同期転送として統合する。論文本文では公開成果物リポジトリは示されない。",
+    "hardware_evaluation": "主評価は4基のV100 32GBとNVSwitch、独立したPCIe 3.0 x16リンクを持つDGX V100。さらにRTX 3090のPCIe 4.0構成と8基H800のPCIe 5.0構成でマイクロベンチマークと拡張性を確認する。",
+    "quality_effect": "モデルの数値精度を変える手法ではなく転送経路とスケジューリングを変更する。共置作業への性能影響は1%未満だが、サーバレス評価では中央値改善と引き換えに99パーセンタイル初回トークン待ち時間が最大10%悪化する場合がある。",
+    "source": "https://doi.org/10.1145/3789240.3829130",
+    "sources": ["https://home.cse.ust.hk/~kaichen/papers/turbobus-sigcomm26.pdf", "https://doi.org/10.1145/3789240.3829130", "https://conferences.sigcomm.org/sigcomm/2026/program/papers/"],
+    "code": null, "last_checked": "2026-09-21", "references": [], "references_checked_at": "2026-09-21", "references_source": "primary manuscript", "references_total": 53
+  },
+  "reservation": {"claim_id": "claim-b8a8b7bb8f5552157b8f356c", "worker_id": "scheduled-chat-llm-00", "worker_kind": "scheduled_chat"}
 }
