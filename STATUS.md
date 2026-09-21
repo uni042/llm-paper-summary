@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 22:06:13 JST**
+> 自動生成: **2026-09-21 22:32:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **324** |
 | 未claim Research job | **323** |
-| 直近24hの検証済みResearch収録 | **24** |
-| 最終検証済みResearch収録 | **09-21 17:27:05 JST（4時間39分前）** |
+| 直近24hの検証済みResearch収録 | **22** |
+| 最終検証済みResearch収録 | **09-21 17:27:05 JST（5時間5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -129,8 +129,8 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-00`
-  - claim: **09-21 22:02:17 JST** / heartbeat: **—** / lease expiry: **09-21 23:32:17 JST**
+- `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-30`
+  - claim: **09-21 22:32:48 JST** / heartbeat: **—** / lease expiry: **09-22 00:02:48 JST**
   - evidence: `.survey/work-queue/claims/job-research-c27f3a6ec993f9ab.json`
 
 #### Audit
