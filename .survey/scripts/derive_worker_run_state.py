@@ -176,6 +176,37 @@ def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[s
             all_worker_attempts.setdefault(attempt_id, claimed_at)
             attempts.setdefault(attempt_id, claimed_at)
 
+    # Even if claim-results have already been compacted, an unresolved immutable
+    # descriptor identifies its owning worker directly. Recover that pending attempt
+    # from the descriptor itself rather than making liveness depend on claim history.
+    descriptor_fallback_time = started_at - dt.timedelta(seconds=1)
+    for kind in ("research", "audit"):
+        submissions = root / ".survey/work-queue/submissions" / kind
+        results = root / ".survey/work-queue/results" / kind
+        if not submissions.is_dir():
+            continue
+        for path in submissions.glob("*.json"):
+            descriptor = _read(path, {})
+            if not isinstance(descriptor, dict) or descriptor.get("worker_id") != worker_id:
+                continue
+            attempt_id = descriptor.get("attempt_id")
+            if not isinstance(attempt_id, str) or not attempt_id:
+                continue
+            result = _read(results / path.name, {})
+            status = str(result.get("job_status") or "").lower() if isinstance(result, dict) else ""
+            settled = bool(
+                isinstance(result, dict)
+                and result.get("attempt_id") == attempt_id
+                and (
+                    status in {"completed", "blocked", "deferred", "rejected"}
+                    or (result.get("ok") is False and result.get("retryable") is not True)
+                )
+            )
+            if settled:
+                continue
+            all_worker_attempts.setdefault(attempt_id, descriptor_fallback_time)
+            attempts.setdefault(attempt_id, descriptor_fallback_time)
+
     # A descriptor may outlive its claim. Keep unresolved immutable submissions for
     # this worker visible across run boundaries so pending results cannot disappear.
     for kind in ("research", "audit"):
