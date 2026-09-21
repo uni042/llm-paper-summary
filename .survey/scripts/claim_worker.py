@@ -1,7 +1,6 @@
 """Allocate renewable repository-backed claim leases for ready research/audit jobs."""
 from __future__ import annotations
 
-import argparse
 import datetime as dt
 import hashlib
 import json
@@ -685,15 +684,8 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     }
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--repo-root", type=Path, default=Path("."))
-    args = parser.parse_args()
-    print(json.dumps(process_requests(args.repo_root), ensure_ascii=False, indent=2))
-    return 0
-
-
 if __name__ == "__main__":
-    from worker_guidance import run_guided
-
-    raise SystemExit(run_guided(main, script=__file__))
+    raise SystemExit(
+        "claim_worker.py is an internal claim-allocation core; "
+        "use claim_worker_with_banks.py --repo-root . as the worker entrypoint"
+    )
