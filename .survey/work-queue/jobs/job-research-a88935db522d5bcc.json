@@ -12,15 +12,15 @@
   "source_url": "https://www.semanticscholar.org/paper/d883de304a869e555e8a453279310dcf7ba68432",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2608.07964-easybalance-cross-layer-load-balancing-in-distributed-moe-inference.md",
   "selection_reason": "expert-device mappingを変えずcross-layer workloadを共同scheduleしてMoE imbalanceを相殺し、追加overheadほぼなしでGPU idlingを多くの設定で40%以上削減。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T22:15:20+00:00",
-  "blocker": "Primary full text could not be safely retrieved from an authoritative route in this invocation. The official arXiv result exposed abstract/metadata but the available full manuscript body was only surfaced through third-party ResearchGate/indexing pages; workflow requires reading the primary source in full and does not permit reconstructing the record from summaries. No five-slot record was synthesized.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-dbbed83f37974a7846aa84af.json",
+  "blocker": "Primary full text could not be safely retrieved through the workflow's authoritative routes in this invocation. The official arXiv abstract/metadata for arXiv:2608.07964 was reachable, but both the official arXiv HTML and official arXiv PDF full-text endpoints failed in the available retrieval runtime. No conference/publisher full text or author/project-hosted identical manuscript was established. To avoid reconstructing the five-slot record from the abstract or third-party copies, this attempt is blocked.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-a66c17d5c9022a328ccdc06e.json",
   "blocked_attempts": 1,
   "last_recorded_blocked_event": "2026-09-21T01:13:55+00:00",
   "block_history": [
@@ -31,5 +31,6 @@
     }
   ],
   "last_blocked_at": "2026-09-21T01:13:55+00:00",
-  "retry_queued_at": "2026-09-21T07:05:25+00:00"
+  "retry_queued_at": "2026-09-21T07:05:25+00:00",
+  "completed_at": "2026-09-21T14:32:08+00:00"
 }
