@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: survey-completed-builder-main
@@ -78,6 +79,8 @@ jobs:
 
       - name: Build validated completed descriptors
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           git config user.name 'survey-completed-builder[bot]'
@@ -92,6 +95,7 @@ jobs:
             exit 0
           fi
 
+          : > /tmp/built-submissions.txt
           built=0
           for request in "${requests[@]}"; do
             request_id="$(basename "$request" .json)"
@@ -124,6 +128,7 @@ jobs:
             if [ -n "$paper_path" ]; then args+=(--paper-path "$paper_path"); fi
             if [ -n "$expected_blob_sha" ]; then args+=(--expected-blob-sha "$expected_blob_sha"); fi
             "${args[@]}"
+            printf '%s\n' "$output" >> /tmp/built-submissions.txt
             built=$((built + 1))
           done
 
@@ -139,8 +144,12 @@ jobs:
           fi
           git commit -m 'survey-submission: build validated completed descriptors'
 
+          published=0
           for attempt in 1 2 3 4 5; do
-            if git push origin HEAD:main; then exit 0; fi
+            if git push origin HEAD:main; then
+              published=1
+              break
+            fi
             echo "Builder push race on attempt ${attempt}; refusing to hand-merge generated descriptors." >&2
             sleep $((attempt * 2))
             git fetch origin main
@@ -150,5 +159,18 @@ jobs:
               exit 1
             fi
           done
-          echo 'Failed to publish generated completed descriptors after 5 retries; periodic recovery will retry.' >&2
-          exit 1
+          if [ "$published" -ne 1 ]; then
+            echo 'Failed to publish generated completed descriptors after 5 retries; periodic recovery will retry.' >&2
+            exit 1
+          fi
+
+          # A push made with GITHUB_TOKEN does not recursively trigger push workflows.
+          # Explicitly dispatch each freshly published immutable descriptor; the
+          # submission lane's periodic drain remains the durable recovery path.
+          while IFS= read -r submission; do
+            [ -n "$submission" ] || continue
+            gh workflow run survey-submission-fast.yml \
+              --repo "$GITHUB_REPOSITORY" \
+              --ref main \
+              -f submission="$submission"
+          done < /tmp/built-submissions.txt
