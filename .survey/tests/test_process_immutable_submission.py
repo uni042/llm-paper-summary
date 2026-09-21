@@ -106,6 +106,7 @@ class ProcessImmutableSubmissionTests(unittest.TestCase):
 
             fake_markdown = "# Paper\n\n" + ("日本語の検証本文です。" * 80)
             with mock.patch.object(module, "render_descriptor", return_value=fake_markdown), \
+                 mock.patch.object(module.paper_quality_gate, "validate_rendered_paper"), \
                  mock.patch.object(module.queue_worker, "apply_artifact", return_value={"paper": "papers/inference/test/job-a.md"}):
                 result1 = module.process(repo, first)
                 result2 = module.process(repo, first)
@@ -181,7 +182,8 @@ class ProcessImmutableSubmissionTests(unittest.TestCase):
             })
 
             fake_markdown = "# Paper\n\n" + ("日本語の検証本文です。" * 80)
-            with mock.patch.object(module, "render_descriptor", return_value=fake_markdown):
+            with mock.patch.object(module, "render_descriptor", return_value=fake_markdown), \
+                 mock.patch.object(module.paper_quality_gate, "validate_rendered_paper"):
                 with self.assertRaisesRegex(ValueError, "Training paper entries are frozen"):
                     module.process(repo, path)
 
