@@ -8,9 +8,9 @@
       "blocked": 2
     },
     "research": {
-      "ready": 345,
+      "ready": 344,
       "completed": 415,
-      "blocked": 10,
+      "blocked": 11,
       "superseded": 3,
       "deferred": 3,
       "blocked_permanent": 7,
@@ -18,25 +18,11 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 345,
+    "ready_research_audit": 344,
     "actively_claimed": 0,
-    "claimable": 345
+    "claimable": 344
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-85f2bc3e024d7c6c",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "DOI:10.1145/3789240.3829347",
-      "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
-      "source_url": "https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-3eaac796b1c5-dynamoserve-a-distributed-tiered-memory-system-for-multi-tenant-llm-serving.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-91f6b64d7380c105",
       "type": "research",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-4ad4e8ccc85f54fc",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "arXiv:2511.11907",
+      "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
+      "source_url": "https://doi.org/10.1145/3745756.3809234",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T02:20:47+00:00"
+  "generated_at": "2026-09-21T02:34:10+00:00"
 }
