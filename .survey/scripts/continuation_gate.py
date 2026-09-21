@@ -261,6 +261,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             next_action_message = (
                 "直前jobのdescriptorは耐久保存済みです。result待ちを1本だけ先送りし、"
                 "最新queue/claim stateを再取得して次のResearch/Auditを1件claimします。"
+                "descriptor-backed旧claimがactive表示でも、新claim処理の正規解放に任せます。"
             )
         else:
             next_action_message = (
