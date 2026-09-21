@@ -292,41 +292,6 @@ def _release_durable_claims(
     return submitted_jobs
 
 
-def _normalize_legacy_scheduled_chat_leases(
-    root: Path,
-    claims: dict[str, dict[str, Any]],
-    now: dt.datetime,
-) -> tuple[int, int]:
-    """Cap pre-migration Scheduled Chat leases at 90 minutes from last activity."""
-    normalized = invalidated = 0
-    for job_id, current in list(claims.items()):
-        if current.get("worker_kind") != "scheduled_chat" or current.get("released_at"):
-            continue
-        last_activity = _as_time(current.get("heartbeat_at") or current.get("claimed_at"))
-        expires = _as_time(current.get("expires_at"))
-        if last_activity is None or expires is None:
-            continue
-        capped_expiry = last_activity + dt.timedelta(seconds=DEFAULT_LEASE_SECONDS)
-        if expires <= capped_expiry:
-            continue
-
-        claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
-        claim.setdefault("legacy_lease_original_expires_at", _iso(expires))
-        claim["expires_at"] = _iso(capped_expiry)
-        claim["legacy_lease_normalized_at"] = _iso(now)
-        expired = now >= capped_expiry
-        if expired:
-            claim["lease_invalidated_at"] = _iso(now)
-            claim["lease_invalidation_reason"] = (
-                f"legacy scheduled_chat lease exceeded {DEFAULT_LEASE_SECONDS}-second cap"
-            )
-            invalidated += 1
-        _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
-        claims[job_id] = dict(claim, active=not expired, expired=expired)
-        normalized += 1
-    return normalized, invalidated
-
-
 def _checkpoint_map(request: dict[str, Any]) -> dict[str, str]:
     return {
         str(item["job_id"]): str(item["checkpoint_ref"])
@@ -523,7 +488,6 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     claims = claim_state.current_claims(root, now)
     descriptors = _immutable_descriptors(root)
     submitted_jobs = _release_durable_claims(root, claims, descriptors, now)
-    leases_normalized, leases_invalidated = _normalize_legacy_scheduled_chat_leases(root, claims, now)
     claims = claim_state.current_claims(root, now)
     processed = reused = errors = assigned_new = assigned_recovered = assigned_reused = renewed = checkpoint_released = 0
     for path in sorted(request_root.glob("*.json")):
@@ -679,8 +643,6 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         "assigned_total_observed": assigned_new + assigned_recovered + assigned_reused,
         "renewed": renewed,
         "checkpoint_released": checkpoint_released,
-        "leases_normalized": leases_normalized,
-        "leases_invalidated": leases_invalidated,
     }
 
 
