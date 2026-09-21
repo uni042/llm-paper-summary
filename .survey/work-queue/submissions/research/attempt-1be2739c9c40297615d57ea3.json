@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-1be2739c9c40297615d57ea3",
+  "job_id": "job-research-d21a98f99faeb4fe",
+  "claim_id": "claim-1be2739c9c40297615d57ea3",
+  "worker_id": "scheduled-chat-llm-paper-00",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely retrieved in this invocation. The official arXiv HTML and PDF routes were attempted but the available web retrieval environment returned DisabledError. Search exposed the official arXiv abstract and third-party summaries, but those are insufficient for the required full-paper five-slot record, so no scientific fields were inferred from them.",
+  "retrieval_evidence": [
+    "https://arxiv.org/html/2608.01785 -> DisabledError",
+    "https://arxiv.org/pdf/2608.01785 -> DisabledError",
+    "https://arxiv.org/abs/2608.01785 -> abstract metadata available only"
+  ],
+  "blocked_at": "2026-09-21T00:04:00Z"
+}
