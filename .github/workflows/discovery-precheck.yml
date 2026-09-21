@@ -11,6 +11,8 @@ on:
         description: 'Repository-relative Discovery precheck request path'
         required: false
         type: string
+  schedule:
+    - cron: '6/10 * * * *'
 
 permissions:
   contents: write
