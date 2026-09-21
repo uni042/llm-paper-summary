@@ -226,6 +226,28 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertTrue(result["submission_result_pending"])
             self.assertIn("attempt-old", result["pending_attempt_ids"])
 
+    def test_unresolved_descriptor_survives_missing_claim_result(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/submissions/research/attempt-orphan.json",
+                {
+                    "attempt_id": "attempt-orphan",
+                    "job_id": "job-orphan",
+                    "worker_id": "scheduled-chat-00",
+                },
+            )
+            result = mod.derive(root, request())
+            self.assertTrue(result["submission_result_pending"])
+            self.assertIn("attempt-orphan", result["pending_attempt_ids"])
+
     def test_request_rejects_cross_worker_slot(self):
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "snap-1.json"
