@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6569c1c278418b9ab09d495e",
-  "job_id": "job-research-5cd2beb9d9cae3d8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6569c1c278418b9ab09d495e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6569c1c278418b9ab09d495e","job_id":"job-research-5cd2beb9d9cae3d8","data":{"limitations":"現実装はgate projectionをdenseに実行してからmaskを作るため、expert FFN全体を疎化できず理論speedupは約3×に制約される。active neuronごとのgatherは不規則memory accessを伴い、大batchのcompute-bound領域ではdense BMMよりthroughputが低い。詳細kernel評価はQwen3.5系2モデル、end-to-endは35B-A3B中心で、8モデル全てに同じ実速度利得が出ることは示していない。thresholdはmodel-specific lookup tableをengine startup時に作る必要があり、workload/model変更への運用costがある。精度は5 benchmark平均の95%保持を基準にしており、生成品質や長文脈・agent workloadへの影響は別途検証が必要。","differences":"従来のMoE高速化はrouterでactive expert数を減らすexpert skipping、expert granularity拡大、expert parallelismなどinter-expert sparsityを主に利用する。本研究はrouter選択後の各expert FFN内部のneuronをさらに省くため、それらと併用可能である。ReLU系activation sparsityやDejaVu等と異なり、SwiGLUを含む現行off-the-shelf MoEを再学習・activation変更なしで対象にする。Mixture of Neuron Experts等の分析系研究に対しては、production-grade vLLMへsparse kernelを統合しend-to-end serving速度まで評価する点が異なる。","implementation_status":"論文Appendix BにvLLMへ挿入可能なsparse MoE execution kernelの完全source codeを掲載し、supplementary materialsも提供すると記載される。vLLM development build 0.1.dev15965+g6506aec54上でTriton/PyTorchを用いて実装・評価済み。独立GitHub repositoryのURLは本文から確認できない。","research_positioning":"MoE compression/execution系統では、expert pruning・merging・routing最適化とは異なる『expert内部activation sparsity』を実システム最適化へ引き上げた研究として位置付けられる。大規模MoEほどsparsity耐性が高い観測は、expert数をさらに増やすtraining困難を避けつつ計算を削る方向を示す。GPU kernel設計としては、細粒度sparsityの理論FLOP削減とhardware-friendly dense tile実行の間を、gather+packingとbatch-size adaptive switchingで折衷している。"},"reservation":{"claim_id":"claim-6569c1c278418b9ab09d495e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
