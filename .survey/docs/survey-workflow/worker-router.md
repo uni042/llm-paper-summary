@@ -25,7 +25,9 @@ Scheduled Chatの論文ワーカーは、実行ごとに名前を作り直さず
 - 毎時 `:00`: `worker_id = scheduled-chat-00`
 - 毎時 `:30`: `worker_id = scheduled-chat-30`
 
-`worker_kind` は両方とも `scheduled_chat` とする。claim request、Library checkpoint marker、fallback envelope、最終報告でこのidentityを一貫して使う。別名・時刻埋め込み名・共通名 `scheduled-chat-llm-survey` を新規runで生成しない。これにより :00 と :30 を別worker lineageとして保ち、互いのactive claimを自分のclaimとして扱わない。
+`worker_kind` は両方とも `scheduled_chat` とする。claim request、Library checkpoint marker、fallback envelope、run-state request、最終報告でこのidentityを一貫して使う。別名・時刻埋め込み名・共通名 `scheduled-chat-llm-survey` を新規runで生成しない。これにより :00 と :30 を別worker lineageとして保ち、互いのactive claimを自分のclaimとして扱わない。
+
+各runに一意な `run_key` を1つ作り、Discovery、run-state snapshot、最終報告まで同じ値を使う。
 
 また、実際の起動時刻とは別に**予定実行枠（scheduled slot）**を開始時に確定してrun中固定する。`:00` workerは `HH:00`、`:30` workerは `HH:30` の予定枠を使う。08:30専用runの判定は実際の起動時計ではなく予定実行枠で行う。たとえば08:34に遅延起動しても予定枠が08:30なら第9節へ入り、09:30枠が08:59に早期起動した等の異常でも08:30専用runとは扱わない。
 
@@ -261,7 +263,25 @@ hard stopは曖昧な「安全そうでない」「難しい」「時間がか�
 
 `continuation_gate.py` / `run_finalization_gate.py` へ停止系入力を渡す場合も、この列挙に対応する観測事実がある時だけtrueにする。ワーカー独自の解釈で `platform_limit` / `global_dependency` / `discovery_exhausted` を立てない。
 
-継続判断には `.survey/scripts/continuation_gate.py`、最終化判断には `.survey/scripts/run_finalization_gate.py` を使う。Research / Auditでは**提出直後と、1本前のsubmission resultを確認した直後**にcontinuation gateを再実行する。**`--pipeline-ahead-count` は未確認submissionの後ろで既に処理・提出した論文数を表し、通常は0か1だけを渡す。** Nを提出した直後でまだN+1を提出していなければ0、N+1を提出済みでNのresultが未確認なら1とする。提出直後に `required_action=CLAIM_NEXT_RESEARCH_AUDIT` が返った場合は、result待ちより先に次の1件をclaimする。1本先行済み、または安全にclaim可能な次jobがない状態で `required_action=WAIT_FOR_PREVIOUS_SUBMISSION_RESULT` が返った場合は、さらに次をclaimせず1本前のresultを確認する。終端確認時はそのjobの終端statusを `--last-terminal-job-status`、今回runの成功完了数を `--research-audit-completed-this-invocation` として渡す。
+### 7.2 run-state fast lane
+
+通常のScheduled Chatは、継続判断用の多数のbooleanを手作業で組み立てない。`.survey/work-queue/run-state/requests/<request-id>.json` に次の最小requestを耐久保存し、`.github/workflows/survey-run-state.yml` に `.survey/scripts/derive_worker_run_state.py` を実行させる。
+
+```yaml
+schema_version: 1
+request_id: <filename stemと一致>
+run_key: <今回runで固定した値>
+worker_id: scheduled-chat-00 | scheduled-chat-30
+scheduled_slot: "00" | "30" | "0830"
+actual_invocation_start: <offset-aware timestamp>
+runtime_condition: none
+```
+
+`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`handoff_guard` / `github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。曖昧な理由で選ばない。
+
+同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、pipeline ahead、`gate.decision` / `gate.required_action` を継続判断の正本とする。同一 `run_key` の最初の成功snapshotが `candidate_inventory` / `work_mode` を固定し、後続snapshotはそれを再利用する。ワーカーは結果と矛盾するbooleanを別途推測して `continuation_gate.py` を呼ばない。
+
+継続判断の内部実装は `.survey/scripts/continuation_gate.py`、最終化判断は `.survey/scripts/run_finalization_gate.py` を使う。Scheduled Chatからは原則run-state fast laneの導出結果を経由する。Research / Auditでは**提出直後と、1本前のsubmission resultを確認した直後**にcontinuation gateを再実行する。**`--pipeline-ahead-count` は未確認submissionの後ろで既に処理・提出した論文数を表し、通常は0か1だけを渡す。** Nを提出した直後でまだN+1を提出していなければ0、N+1を提出済みでNのresultが未確認なら1とする。提出直後に `required_action=CLAIM_NEXT_RESEARCH_AUDIT` が返った場合は、result待ちより先に次の1件をclaimする。1本先行済み、または安全にclaim可能な次jobがない状態で `required_action=WAIT_FOR_PREVIOUS_SUBMISSION_RESULT` が返った場合は、さらに次をclaimせず1本前のresultを確認する。終端確認時はそのjobの終端statusを `--last-terminal-job-status`、今回runの成功完了数を `--research-audit-completed-this-invocation` として渡す。
 
 `run_finalization_gate.py` にも今回runの `--work-mode` と最低条件カウンタを必ず渡す。Research / Auditで成功完了3件未達、またはDiscoveryで4 round未達の通常runは、仮に誤って `STOP_RUN` が渡されてもfinalization gateが拒否する。hard stop + safe handoffだけはこの最低条件より優先する。
 
