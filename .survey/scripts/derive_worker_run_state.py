@@ -275,12 +275,20 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
 
     now = dt.datetime.now(dt.timezone.utc)
     claims = claim_state.current_claims(root, now)
-    active = [
-        job_id
-        for job_id, current in claims.items()
-        if current.get("active")
-        and current.get("worker_id") == worker_id
-    ]
+    active: list[str] = []
+    for job_id, current in claims.items():
+        if not current.get("active") or current.get("worker_id") != worker_id:
+            continue
+        attempt_id = current.get("attempt_id")
+        kind = str(current.get("kind") or "")
+        descriptor_backed = bool(
+            isinstance(attempt_id, str)
+            and attempt_id
+            and kind in {"research", "audit"}
+            and _descriptor_for_attempt(root, kind, attempt_id) is not None
+        )
+        if not descriptor_backed:
+            active.append(job_id)
     return {
         "claim_state_checked": True,
         "claim_result_pending": bool(pending_requests),
