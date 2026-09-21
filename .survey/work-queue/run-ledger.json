@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T14:32:14.912808+00:00",
+  "updated_at": "2026-09-21T14:37:05.794899+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -33369,6 +33369,56 @@
           "type": "research",
           "canonical_id": "arXiv:2608.07964",
           "title": "EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 882,
+      "paper_active_count_after": 882,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35613325091",
+      "first_recorded_at": "2026-09-21T14:37:05.794899+00:00",
+      "last_recorded_at": "2026-09-21T14:37:05.794899+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35613325091:1",
+          "recorded_at": "2026-09-21T14:37:05.794899+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35613325091",
+            "run_attempt": "1",
+            "source_sha": "7a78a4dc53639ee10606c8224d864fc2f4c3be0a"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-85f2bc3e024d7c6c",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3789240.3829347",
+          "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
           "from": "ready",
           "to": "blocked"
         }
