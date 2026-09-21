@@ -33,7 +33,7 @@ def make_args(**overrides):
         seconds_to_run_deadline=1800,
         seconds_to_next_scheduled_task=None,
         scheduled_handoff_guard_seconds=600,
-        candidate_inventory=49,
+        candidate_inventory=50,
         discovery_rounds_completed=0,
         discovery_rounds_since_last_novel=None,
         discovery_min_rounds=4,
@@ -74,7 +74,7 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertEqual(result["required_action"], "CHECK_SUBMISSION_STATE")
         self.assertIn("submission", result["next_action_message"].lower())
 
-    def test_pending_submission_with_independent_work_continues_without_finalizing(self):
+    def test_pending_submission_is_serial_barrier_even_with_independent_work(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             submission_state_checked=True,
@@ -82,10 +82,10 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
             independent_work=True,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["required_action"], "CONTINUE_WORK")
+        self.assertEqual(result["required_action"], "WAIT_FOR_SUBMISSION_RESULT")
         self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["submission_wait_seconds"], 10)
         self.assertIn("終了しません", result["next_action_message"])
-        self.assertIn("次", result["next_action_message"])
 
     def test_pending_submission_without_independent_work_waits(self):
         result = mod.decide(make_args(
