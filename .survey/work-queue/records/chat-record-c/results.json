@@ -1,1 +1,45 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-d35dd5011cf9f206c1a875f7","job_id":"job-research-b865a4d050e3e427","data":{"overview":"PolarKVの主結果は、同程度のクラウド費用と必要読込帯域を揃えた条件で、メモリだけでは容量不足、ストレージだけではI/O・分散ファイル処理が重いという両極端を避け、長文KVの作業集合が大きいほどTTFTを大きく下げることである。公開ベンチマークでは3FSに対して47〜58%、Mooncakeに対して最大58%のTTFT削減を示し、本番Coding Agentでも平均問い合わせ遅延を21.42秒から12.34秒へ短縮した。実用上は、KVを圧縮せずにクラウド資源の配置とデータ移動経路を変えるだけで、共有接頭辞再利用を大容量化できることを示す。","key_results":[{"metric":"LooGLEでのTTFT対3FS","value":"47〜53%削減","condition":"固定クラウド費用でQwen3-235B-A22BとSGLangを使用","meaning":"ストレージ中心の共有KVより、メモリ帯域とストレージ容量を組み合わせる方がプリフィル再利用を低遅延で提供できる。"},{"metric":"大きいKV作業集合でのTTFT","value":"3FSおよびMooncakeに対して41〜58%削減","condition":"LooGLEのshortdep_clozeとlongdep_qa","meaning":"作業集合が遠隔メモリ容量を超える条件で、21.4TBの容量層を持つ階層設計の効果が拡大する。"},{"metric":"LooGLE＋SCBench全体のTTFT","value":"3FS比47〜58%削減、Mooncake比3〜58%削減","condition":"公開長文ベンチマークの評価タスク","meaning":"同予算でもメモリ中心・ストレージ中心のどちらか一方より広い負荷範囲で低TTFTを維持する。"},{"metric":"本番Coding Agent問い合わせ遅延","value":"P90 49.73→24.91秒、P50 13.88→6.81秒、平均21.42→12.34秒","condition":"SGLang＋GLM-4.7、平均入力71Kトークンのオンラインカナリア展開","meaning":"合成評価だけでなく、接頭辞を継続再利用する実エージェント負荷でも大幅な遅延短縮が得られる。"}],"negative_results":"小さいshortdep_qaではMooncakeの928GB遠隔メモリが再利用KVの大部分を保持できるため、PolarKVのTTFT優位は11%まで縮む。接頭辞作業集合が小さい場合は大容量ストレージ層の価値が出にくい。またキャッシュノード障害時は該当KVを再計算するため、正しさは保つが一時的に性能が低下する。論文は同じハイブリッド設計点を持つオープンソース比較対象がないことも明示している。","quality_impact":"無損失のシステム最適化であり、KV表現を近似・枝刈り・量子化しない。保存済みKVが利用できれば元の注意状態をそのまま再利用し、キャッシュミスや障害時は通常のプリフィル計算でKVを再生成する。したがってモデル出力品質を交換条件にした高速化ではなく、影響は遅延と資源利用に限定される。","interpretation":"Mooncakeは小さい作業集合なら高速だが容量が928GBに限られ、大きい負荷で追い出しが増える。3FSは21.4TBを持つが分散ファイルシステムの処理とメモリ未活用が効く。PolarKVは同じ約1.84万CNY/月で156GBの高速メモリと21.4TBストレージを組み合わせ、局所階層移動でネットワークを節約するため、大容量負荷で差が拡大する。","ablations":"メモリのみのPolarKV構成、入力長・並行度の変更、外部キャッシュなしとの比較を通じて、共有容量と階層化の寄与を確認する。"},"reservation":{"claim_id":"claim-d35dd5011cf9f206c1a875f7","worker_id":"scheduled-chat-llm-paper-worker-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5c2c382bbce50b33c11d2e0b",
+  "job_id": "job-research-b865a4d050e3e427",
+  "data": {
+    "overview": "PolarKVの主結果は、同程度のクラウド費用と必要読込帯域を揃えた条件で、メモリだけでは容量不足、ストレージだけではI/O・分散ファイル処理が重いという両極端を避け、長文KVの作業集合が大きいほどTTFTを大きく下げることである。公開ベンチマークでは3FSに対して47〜58%、Mooncakeに対して最大58%のTTFT削減を示し、本番Coding Agentでも平均問い合わせ遅延を21.42秒から12.34秒へ短縮した。実用上は、KVを圧縮せずにクラウド資源の配置とデータ移動経路を変えるだけで、共有接頭辞再利用を大容量化できることを示す。",
+    "key_results": [
+      {
+        "metric": "LooGLEでのTTFT対3FS",
+        "value": "47〜53%削減",
+        "condition": "固定クラウド費用でQwen3-235B-A22BとSGLangを使用",
+        "meaning": "ストレージ中心の共有KVより、メモリ帯域とストレージ容量を組み合わせる方がプリフィル再利用を低遅延で提供できる。"
+      },
+      {
+        "metric": "大きいKV作業集合でのTTFT",
+        "value": "3FSおよびMooncakeに対して41〜58%削減",
+        "condition": "LooGLEのshortdep_clozeとlongdep_qa",
+        "meaning": "作業集合が遠隔メモリ容量を超える条件で、21.4TBの容量層を持つ階層設計の効果が拡大する。"
+      },
+      {
+        "metric": "LooGLE＋SCBench全体のTTFT",
+        "value": "3FS比47〜58%削減、Mooncake比3〜58%削減",
+        "condition": "公開長文ベンチマークの評価タスク",
+        "meaning": "同予算でもメモリ中心・ストレージ中心のどちらか一方より広い負荷範囲で低TTFTを維持する。"
+      },
+      {
+        "metric": "本番Coding Agent問い合わせ遅延",
+        "value": "P90 49.73→24.91秒、P50 13.88→6.81秒、平均21.42→12.34秒",
+        "condition": "SGLang＋GLM-4.7、平均入力71Kトークンのオンラインカナリア展開",
+        "meaning": "合成評価だけでなく、接頭辞を継続再利用する実エージェント負荷でも大幅な遅延短縮が得られる。"
+      }
+    ],
+    "negative_results": "小さいshortdep_qaではMooncakeの928GB遠隔メモリが再利用KVの大部分を保持できるため、PolarKVのTTFT優位は11%まで縮む。接頭辞作業集合が小さい場合は大容量ストレージ層の価値が出にくい。またキャッシュノード障害時は該当KVを再計算するため、正しさは保つが一時的に性能が低下する。論文は同じハイブリッド設計点を持つオープンソース比較対象がないことも明示している。",
+    "quality_impact": "無損失のシステム最適化であり、KV表現を近似・枝刈り・量子化しない。保存済みKVが利用できれば元の注意状態をそのまま再利用し、キャッシュミスや障害時は通常のプリフィル計算でKVを再生成する。したがってモデル出力品質を交換条件にした高速化ではなく、影響は遅延と資源利用に限定される。",
+    "interpretation": "Mooncakeは小さい作業集合なら高速だが容量が928GBに限られ、大きい負荷で追い出しが増える。3FSは21.4TBを持つが分散ファイルシステムの処理とメモリ未活用が効く。PolarKVは同じ約1.84万CNY/月で156GBの高速メモリと21.4TBストレージを組み合わせ、局所階層移動でネットワークを節約するため、大容量負荷で差が拡大する。",
+    "ablations": "メモリのみのPolarKV構成、入力長・並行度の変更、外部キャッシュなしとの比較を通じて、共有容量と階層化の寄与を確認する。"
+  },
+  "reservation": {
+    "claim_id": "claim-5c2c382bbce50b33c11d2e0b",
+    "worker_id": "scheduled-chat-llm-paper-worker-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

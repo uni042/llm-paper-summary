@@ -1,1 +1,33 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d35dd5011cf9f206c1a875f7","job_id":"job-research-b865a4d050e3e427","data":{"hardware":"全評価はAlibaba Cloudの実機で行う。GPUインスタンスは8基のNVIDIA H20 96GB GPUを搭載する。外部KV層はECS仮想マシンのDRAMとAlibaba Cloud ESSDブロックストレージを用い、分散メモリへのデータ経路はRDMAを使用する。固定費用比較では3FSが39VMと67本の320GB PL0 ESSD、Mooncakeが58VM、PolarKVが156GBメモリと21.4TBストレージを使用する。","software":"推論エンジンはvLLMとSGLangを評価し、モデル系列はDeepSeek、Qwen、GLMを含む。公開長文比較の主要条件ではSGLangとQwen3-235B-A22Bを用いる。本番事例ではSGLangとGLM-4.7を用いる。比較対象は外部KVなし、3FSを外部KVバックエンドにしたストレージ中心構成、Mooncakeの遠隔メモリ中心構成、PolarKVのメモリのみ構成である。","methodology":"合成マイクロベンチマークで入力長と並行度に対するKV読込性能を測り、LooGLEとSCBenchで実アプリケーションに近い長文接頭辞再利用を評価する。システム間比較では月額クラウド資源費を約1.84万CNYに揃え、少なくとも約12GB/sの集約KV読込帯域を用意して、単なる予算差を抑える。さらに自動運転分野の顧客Coding Agentでオンラインのカナリア展開を行い、通常運用中の問い合わせ遅延を測る。","evaluation_setup":"公開ベンチマークではLooGLEとSCBenchの代表タスクを使い、先頭トークンまでの時間、帯域、容量、月額費用を比較する。本番負荷は入力192〜160Kトークン、平均71K、平均出力423トークンで、従来256基H20クラスタの一部トラフィックをPolarKV有効クラスタへ振り分け、平均・P50・P90問い合わせ遅延を比較する。","baselines":["外部KVキャッシュなし","3FS外部KVバックエンド","Mooncake遠隔メモリKV","PolarKVメモリ層のみ"],"metrics":["先頭トークンまでの時間（TTFT）","KV読込帯域","月額クラウド資源費","メモリ・ストレージ容量","本番問い合わせ遅延の平均・P50・P90"],"scope":"シミュレーションではなくAlibaba Cloud上の実ハードウェア測定と実本番カナリア展開である。一方、料金・帯域の結合はAlibaba CloudのECSとESSD仕様に依存するため、AWSやAzureでも同様の傾向はあると論文は述べるものの、同じ最適資源比や同じ改善率が他クラウドへ直接一般化するとは限らない。またSCBenchは紙幅の都合で代表タスクのみを掲載する。","evidence":"一次資料Section 5.1〜5.5、Table 3、Figure 9〜12を確認し、ハードウェア、ソフトウェア、費用固定方法、公開データセット、本番負荷を区別して記録した。"},"reservation":{"claim_id":"claim-d35dd5011cf9f206c1a875f7","worker_id":"scheduled-chat-llm-paper-worker-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-5c2c382bbce50b33c11d2e0b",
+  "job_id": "job-research-b865a4d050e3e427",
+  "data": {
+    "hardware": "全評価はAlibaba Cloudの実機で行う。GPUインスタンスは8基のNVIDIA H20 96GB GPUを搭載する。外部KV層はECS仮想マシンのDRAMとAlibaba Cloud ESSDブロックストレージを用い、分散メモリへのデータ経路はRDMAを使用する。固定費用比較では3FSが39VMと67本の320GB PL0 ESSD、Mooncakeが58VM、PolarKVが156GBメモリと21.4TBストレージを使用する。",
+    "software": "推論エンジンはvLLMとSGLangを評価し、モデル系列はDeepSeek、Qwen、GLMを含む。公開長文比較の主要条件ではSGLangとQwen3-235B-A22Bを用いる。本番事例ではSGLangとGLM-4.7を用いる。比較対象は外部KVなし、3FSを外部KVバックエンドにしたストレージ中心構成、Mooncakeの遠隔メモリ中心構成、PolarKVのメモリのみ構成である。",
+    "methodology": "合成マイクロベンチマークで入力長と並行度に対するKV読込性能を測り、LooGLEとSCBenchで実アプリケーションに近い長文接頭辞再利用を評価する。システム間比較では月額クラウド資源費を約1.84万CNYに揃え、少なくとも約12GB/sの集約KV読込帯域を用意して、単なる予算差を抑える。さらに自動運転分野の顧客Coding Agentでオンラインのカナリア展開を行い、通常運用中の問い合わせ遅延を測る。",
+    "evaluation_setup": "公開ベンチマークではLooGLEとSCBenchの代表タスクを使い、先頭トークンまでの時間、帯域、容量、月額費用を比較する。本番負荷は入力192〜160Kトークン、平均71K、平均出力423トークンで、従来256基H20クラスタの一部トラフィックをPolarKV有効クラスタへ振り分け、平均・P50・P90問い合わせ遅延を比較する。",
+    "baselines": [
+      "外部KVキャッシュなし",
+      "3FS外部KVバックエンド",
+      "Mooncake遠隔メモリKV",
+      "PolarKVメモリ層のみ"
+    ],
+    "metrics": [
+      "先頭トークンまでの時間（TTFT）",
+      "KV読込帯域",
+      "月額クラウド資源費",
+      "メモリ・ストレージ容量",
+      "本番問い合わせ遅延の平均・P50・P90"
+    ],
+    "scope": "シミュレーションではなくAlibaba Cloud上の実ハードウェア測定と実本番カナリア展開である。一方、料金・帯域の結合はAlibaba CloudのECSとESSD仕様に依存するため、AWSやAzureでも同様の傾向はあると論文は述べるものの、同じ最適資源比や同じ改善率が他クラウドへ直接一般化するとは限らない。またSCBenchは紙幅の都合で代表タスクのみを掲載する。",
+    "evidence": "一次資料Section 5.1〜5.5、Table 3、Figure 9〜12を確認し、ハードウェア、ソフトウェア、費用固定方法、公開データセット、本番負荷を区別して記録した。"
+  },
+  "reservation": {
+    "claim_id": "claim-5c2c382bbce50b33c11d2e0b",
+    "worker_id": "scheduled-chat-llm-paper-worker-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
