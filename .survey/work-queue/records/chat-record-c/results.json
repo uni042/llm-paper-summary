@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-0fc5c336f06ee67a27316c4a",
-  "job_id": "job-research-4e59361c33e66a27",
-  "data": {
-    "overview": "RotaryQuantは、圧縮が必ずしも高速化ではなく『限られたメモリで実行可能にする交換条件』であることを明確に示す。3軸を統合した端から端までの構成ではGemma 4-26B-A4Bが5.4GBで12.85トークン毎秒、Qwen3.6-35B-A3Bが6.8GBで15.6トークン毎秒、Nemotron-H 120Bが17.2GBで14.85トークン毎秒となり、120B級を32GB予算へ十分収める。鍵値品質はQwen3で困惑度差+0.0009、Gemma 4で+0.0000、Nemotron-Hで+0.0012と小さい。Qwen3.6では32Kでも差+0.001、4K〜32Kの検索課題は100%を維持した。一方、モデルが元からメモリへ収まるGemma 4ではIsoQuantが109.8から20.6トークン毎秒へ約5.3倍遅くし、専門家退避は約1トークン毎秒まで約100倍低下させる。したがって実用上は、鍵値注意が復号時間の20%以上を占め、容量不足が実際に発生する構成でのみ有効化するべきである。",
-    "key_results": [
-      {
-        "metric": "Nemotron-H 120B端から端までの推論",
-        "value": "14.85 tok/s、17.2GBピーク",
-        "baseline": "非圧縮では消費者向け32GB予算へ収まらない",
-        "condition": "Apple M4 Max、3軸圧縮",
-        "interpretation": "120B級MoEを32GB予算で対話的速度へ持ち込む主要な実行可能性結果。"
-      },
-      {
-        "metric": "Qwen3-30B-A3B鍵値品質",
-        "value": "困惑度差+0.0009",
-        "baseline": "FP16鍵値",
-        "condition": "2048トークン、IsoQuant 3ビット",
-        "interpretation": "TurboQuantの+0.0405より約45倍小さい悪化。"
-      },
-      {
-        "metric": "長文脈品質",
-        "value": "32K困惑度差+0.001、検索100%",
-        "baseline": "既定鍵値",
-        "condition": "Qwen3.6-35B-A3B、4K〜32K",
-        "interpretation": "3ビット圧縮でも少なくとも検証範囲では長距離検索を維持する。"
-      },
-      {
-        "metric": "llama.cpp融合実装",
-        "value": "生成96.98 t/s、基準比-3.2%",
-        "baseline": "TurboQuant 100.15 t/s",
-        "condition": "3ビット融合カーネル",
-        "interpretation": "完全精度テンソル物化を消しても既存3ビット基準に近い速度。"
-      },
-      {
-        "metric": "非融合llama.cpp",
-        "value": "生成-18%、プロンプト-44%",
-        "baseline": "TurboQuant",
-        "condition": "IsoQuant非融合経路",
-        "interpretation": "280回の追加起動を避けるカーネル融合が実用性能に必須。"
-      }
-    ],
-    "negative_results": "Gemma 4がメモリへ収まる条件ではFP16鍵値109.8トークン毎秒に対しIsoQuantは20.6で約5.3倍遅い。専門家退避を有効化するとFP16鍵値1.01、IsoQuant1.05トークン毎秒まで低下し、ディスク入出力が支配する。注意残差を使った専門家先読みはLRU比で命中率を改善せず、CPU/GPU指令競合により10.6〜11.2%遅くなった。タスク認識型専門家固定も利益なし。MLX配信器は8同時クライアントで4件がHTTP 200にもかかわらず空応答となり、4クライアント時点で並列効率34%に頭打ちする。",
-    "interpretation": "価値は最大速度ではなく、重み・鍵値・専門家という異なる容量要因を順番に削り、復元用一時テンソルまで排除してピークメモリを抑えることにある。鍵値注意が復号の51〜54%を占めるGemma/Qwen系では圧縮空間計算の意味が大きいが、Nemotron-HではSSM層が鍵値を使わず注意比率14%なので利益は限定的になる。",
-    "quality_impact": "主要2K評価で困惑度差は最大+0.0012。32KのQwen3.6では差+0.001、Needle-in-a-Haystackは4K〜32Kすべて100%。逆回転を省くと困惑度が7.05から15369へ破綻するため、集約出力の逆変換は必須である。"
-  },
+  "attempt_id": "attempt-52a34989c8ae780c3bc8d7f5",
+  "job_id": "job-research-85f2bc3e024d7c6c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0fc5c336f06ee67a27316c4a",
-    "worker_id": "scheduled-chat-llm-00",
+    "claim_id": "claim-52a34989c8ae780c3bc8d7f5",
+    "worker_id": "scheduled-chat-llm-30",
     "worker_kind": "scheduled_chat"
   }
 }

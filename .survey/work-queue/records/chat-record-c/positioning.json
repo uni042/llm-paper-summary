@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0fc5c336f06ee67a27316c4a",
-  "job_id": "job-research-4e59361c33e66a27",
-  "data": {
-    "limitations": "IsoQuantはモデルが十分メモリへ収まる場合に約5.3倍の速度低下を招くため常時高速化手法ではない。MLAとRoPEが内容・位置部分空間を分離するDeepSeek-V2系は位置位相を追加回転すると壊れるため現状未対応。主要困惑度評価は2Kで、32KはQwen3.6のみ。専門家退避はディスクI/Oで約100倍遅くなり得る。MLXの簡易配信器は多クライアントで破綻し、生産配信には専用サーバが必要である。",
-    "differences": "KIVIやKVQuantなどは鍵値を低ビット保存しても注意前に完全精度へ戻すのに対し、IsoQuantは詰込み3ビットへ直接QK積と値集約を行い物化を避ける。TurboQuantやSpinQuantの密回転は128次元で16384係数・二乗計算量を要するが、Walsh–HadamardとSO(4)ブロックの構造化回転は256保存係数、1408 FMAへ削る。FlexGen系専門家退避とは直交し、RotaryQuantは重み・鍵値・専門家常駐を一つのメモリ予算へ統合する。",
-    "implementation_status": "MLX/Metal上で4カーネルの融合逐次生成、IsoQuant圧縮、LRU専門家退避を実装し、llama.cppにもGGML_TYPE_ISOQUANT3_0として移植している。本文のNeurIPSチェックリストでは完全実装を匿名補足コードアーカイブとしてApache 2.0で提供し、導入手順、ベンチマーク、コードブック生成物を含むとしている。",
-    "research_positioning": "消費者向けローカルLLM推論における階層メモリと低ビット化の接点に位置する。特に『保存を圧縮して計算時に戻す』従来型から、『圧縮されたまま計算する』実行モデルへ移すことで、鍵値容量と復元帯域を同時に削る。MoE専門家退避との統合により、SSD/ディスクを含む階層メモリ研究にも直接関係するが、退避自体は高速化ではなく容量確保の最終手段である。"
-  },
+  "attempt_id": "attempt-52a34989c8ae780c3bc8d7f5",
+  "job_id": "job-research-85f2bc3e024d7c6c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0fc5c336f06ee67a27316c4a",
-    "worker_id": "scheduled-chat-llm-00",
+    "claim_id": "claim-52a34989c8ae780c3bc8d7f5",
+    "worker_id": "scheduled-chat-llm-30",
     "worker_kind": "scheduled_chat"
   }
 }
