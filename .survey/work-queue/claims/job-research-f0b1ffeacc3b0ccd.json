@@ -1,30 +1,26 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-edddb03a59361ef75fa46b0f",
+  "claim_id": "claim-d175e801840388d8f1f07012",
   "job_id": "job-research-f0b1ffeacc3b0ccd",
-  "worker_id": "scheduled-chat-00",
+  "worker_id": "scheduled-chat-30",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-edddb03a59361ef75fa46b0f",
-  "request_id": "20260921T1758JST-00worker-01",
-  "claimed_at": "2026-09-21T09:00:42+00:00",
-  "expires_at": "2026-09-21T10:02:38+00:00",
+  "attempt_id": "attempt-d175e801840388d8f1f07012",
+  "request_id": "claim-scheduled-chat-30-20260921T202840Z-9a",
+  "claimed_at": "2026-09-21T20:28:40+00:00",
+  "expires_at": "2026-09-21T21:58:40+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-f0b1ffeacc3b0ccd"
   ],
-  "previous_claim_id": "claim-c7822fb4e9c82aab492813f6",
-  "record_bank": "d",
-  "record_bank_root": ".survey/work-queue/records/chat-record-d",
+  "previous_claim_id": "claim-edddb03a59361ef75fa46b0f",
+  "record_bank": "c",
+  "record_bank_root": ".survey/work-queue/records/chat-record-c",
   "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record-d/results.json",
-    "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
-  },
-  "released": false,
-  "invalidated": false,
-  "heartbeat_at": "2026-09-21T10:01:09+00:00",
-  "released_at": "2026-09-21T10:02:38+00:00"
+    "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-c/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+  }
 }
