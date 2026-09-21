@@ -1,1 +1,53 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1c21c5174befd135fac7ad2b","job_id":"job-research-ba5c7828e1d46d9a","data":{"canonical_id":"arXiv:2608.15533","arxiv_id":"2608.15533","doi":"10.48550/arXiv.2608.15533","title":"DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding","authors":["Junqing Lin","Jingwei Sun","Guangzhong Sun"],"list_summary":"線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。","summary":"線形注意モデルの復号では新トークンが追加する論理更新は少数ベクトルなのに、既存実装は毎回大きな密再帰状態をHBMへ書き戻す。DeltaLogは状態を密な基底と最近のコンパクト更新ログで表し、大半のステップではログ追記だけを行い、一定間隔でまとめて密状態へマージする。モデルの再帰式と重みを変えず、GDN・KDA・RWKV6で更新カーネル最大1.86倍、書込トラフィック最大7.83倍、端から端まで1.05〜1.20倍の高速化を示す。","source":"https://arxiv.org/abs/2608.15533","sources":["https://arxiv.org/html/2608.15533v1","https://arxiv.org/pdf/2608.15533"],"code":null,"publication":"arXiv preprint","publication_type":"preprint","published":"2026-08-16","publication_status":"preprint","topics":["線形注意","再帰状態","HBMトラフィック","遅延マテリアライズ"],"implementation":"TritonでGDN・KDA・RWKV6の1トークン復号カーネルを実装し、GDN/KDAをvLLMベースの試作サービングスタックへ統合。公式コードURLは本文で確認できなかった。","last_checked":"2026-09-21","arxiv_categories":{"primary":"cs.DC","cross_list":[]},"hardware_evaluation":"RTX 4090 24GBとH200 NVL 141GBでカーネル評価。端から端までのサービング評価はH200 NVL。","quality_effect":"正確な算術では密な逐次更新と代数的に同値。混合精度では蓄積順序が変わるため誤差を測定し、選択した設定は許容範囲内と確認。","references":[],"references_checked_at":"2026-09-21","references_source":"arXiv HTML v1 full reference section checked","references_total":37},"reservation":{"claim_id":"claim-1c21c5174befd135fac7ad2b","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0efd061bb6cafbfb3405b15a",
+  "job_id": "job-research-ba5c7828e1d46d9a",
+  "data": {
+    "canonical_id": "arXiv:2608.15533",
+    "arxiv_id": "2608.15533",
+    "doi": "10.48550/arXiv.2608.15533",
+    "title": "DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding",
+    "authors": [
+      "Junqing Lin",
+      "Jingwei Sun",
+      "Guangzhong Sun"
+    ],
+    "list_summary": "線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。",
+    "summary": "線形注意モデルの復号では新トークンが追加する論理更新は少数ベクトルなのに、既存実装は毎回大きな密再帰状態をHBMへ書き戻す。DeltaLogは状態を密な基底と最近のコンパクト更新ログで表し、大半のステップではログ追記だけを行い、一定間隔でまとめて密状態へマージする。モデルの再帰式と重みを変えず、GDN・KDA・RWKV6で更新カーネル最大1.86倍、書込トラフィック最大7.83倍、端から端まで1.05〜1.20倍の高速化を示す。",
+    "source": "https://arxiv.org/abs/2608.15533",
+    "sources": [
+      "https://arxiv.org/html/2608.15533v1",
+      "https://arxiv.org/pdf/2608.15533"
+    ],
+    "code": null,
+    "publication": "arXiv preprint",
+    "publication_type": "preprint",
+    "published": "2026-08-16",
+    "publication_status": "preprint",
+    "topics": [
+      "線形注意",
+      "再帰状態",
+      "HBMトラフィック",
+      "遅延マテリアライズ"
+    ],
+    "implementation": "TritonでGDN・KDA・RWKV6の1トークン復号カーネルを実装し、GDN/KDAをvLLMベースの試作サービングスタックへ統合。公式コードURLは本文で確認できなかった。",
+    "last_checked": "2026-09-21",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "hardware_evaluation": "RTX 4090 24GBとH200 NVL 141GBでカーネル評価。端から端までのサービング評価はH200 NVL。",
+    "quality_effect": "正確な算術では密な逐次更新と代数的に同値。混合精度では蓄積順序が変わるため誤差を測定し、選択した設定は許容範囲内と確認。",
+    "references": [],
+    "references_checked_at": "2026-09-21",
+    "references_source": "arXiv HTML v1 full reference section checked",
+    "references_total": 37
+  },
+  "reservation": {
+    "claim_id": "claim-0efd061bb6cafbfb3405b15a",
+    "worker_id": "scheduled-chat-llm-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

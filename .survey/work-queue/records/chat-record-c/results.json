@@ -1,1 +1,55 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1c21c5174befd135fac7ad2b","job_id":"job-research-ba5c7828e1d46d9a","data":{"overview":"DeltaLogはH200とRTX 4090の両方で三種の再帰演算子を高速化し、特に状態が大きいほど密書込回避の利点が増えた。H200 GDNの代表条件では毎トークン書込量を7.83倍削減し、総DRAM交通量も1.64倍削減した。端から端までのvLLMベース試作でも全6構成で改善し、Qwen/GDNで1.08〜1.20倍、Kimi/KDAで1.05〜1.12倍となった。","key_results":[{"metric":"FLA比カーネル高速化","value":"H200: GDN 1.34〜1.60倍、KDA 1.19〜1.60倍、RWKV6 1.52〜1.69倍；RTX4090: 最大1.86倍","baseline":"Fast Linear Attention密再帰カーネル","condition":"B=64〜512の1トークン復号","interpretation":"密状態書込が帯域律速になる広いバッチ範囲で遅延マテリアライズが有効。"},{"metric":"DRAM書込トラフィック","value":"0.230GiB/step相当から償却0.0294GiB/token、7.83倍削減","baseline":"密GDN","condition":"H200、GDN、B=128、M=8","interpretation":"高速化の主因が意図した密状態書戻し削減であることをハードウェアカウンタが確認。"},{"metric":"総DRAMトラフィック","value":"1.64倍削減","baseline":"密GDN 0.483GiB/step","condition":"H200、GDN、B=128、M=8","interpretation":"ログ再生で読込は少し増えるが、書込削減が上回る。"},{"metric":"端から端までのTPOT高速化","value":"Qwen/GDN 1.08〜1.20倍、Kimi/KDA 1.05〜1.12倍","baseline":"同一vLLMベース密再帰経路","condition":"H200、B=64/128/256、128 decode tokens","interpretation":"カーネル以外のMLPやスケジューリングを含めても利益が残る。"},{"metric":"数値誤差","value":"最大出力相対誤差 GDN 0.00303、KDA 0.00450、RWKV6 0.00376","baseline":"密参照実装","condition":"128トークン混合精度ロールアウト","interpretation":"演算順序変更による差は選択設定でBF16対応許容範囲内。"}],"negative_results":"小さい状態ではログ再生・メタデータ費用が書込削減を相殺しやすく、KDAは128MiB状態でFLA比1.02倍とほぼ同等。マージ間隔を大きくしすぎると再生ログが増えて遅延曲線はU字型になる。分割ReplayPrepはGDNでは有効だが、RWKV6のM=4では0.979〜0.980倍とわずかに悪化する。端から端までの改善は未変更のMLP、正規化、スケジューリング等によりカーネル改善より小さい。","interpretation":"再帰線形注意では固定状態でKV成長を避けても、物理的な密書込が新たな帯域律速になる。DeltaLogは論理情報量に近い小更新を通常経路にし、重い書込を償却するため、バッチ・状態が大きいほど効果が増える。演算子ごとの減衰粒度と補正経路がログ再生費用を決めるためMやReplayPrepは一律最適ではない。","quality_impact":"正確な算術では元の再帰と同値でモデル重み・式・プリフィルを変更しない。実装上は混合精度と加算順序の差があるが、全三演算子で設定した許容誤差を満たしている。"},"reservation":{"claim_id":"claim-1c21c5174befd135fac7ad2b","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-0efd061bb6cafbfb3405b15a",
+  "job_id": "job-research-ba5c7828e1d46d9a",
+  "data": {
+    "overview": "DeltaLogはH200とRTX 4090の両方で三種の再帰演算子を高速化し、特に状態が大きいほど密書込回避の利点が増えた。H200 GDNの代表条件では毎トークン書込量を7.83倍削減し、総DRAM交通量も1.64倍削減した。端から端までのvLLMベース試作でも全6構成で改善し、Qwen/GDNで1.08〜1.20倍、Kimi/KDAで1.05〜1.12倍となった。",
+    "key_results": [
+      {
+        "metric": "FLA比カーネル高速化",
+        "value": "H200: GDN 1.34〜1.60倍、KDA 1.19〜1.60倍、RWKV6 1.52〜1.69倍；RTX4090: 最大1.86倍",
+        "baseline": "Fast Linear Attention密再帰カーネル",
+        "condition": "B=64〜512の1トークン復号",
+        "interpretation": "密状態書込が帯域律速になる広いバッチ範囲で遅延マテリアライズが有効。"
+      },
+      {
+        "metric": "DRAM書込トラフィック",
+        "value": "0.230GiB/step相当から償却0.0294GiB/token、7.83倍削減",
+        "baseline": "密GDN",
+        "condition": "H200、GDN、B=128、M=8",
+        "interpretation": "高速化の主因が意図した密状態書戻し削減であることをハードウェアカウンタが確認。"
+      },
+      {
+        "metric": "総DRAMトラフィック",
+        "value": "1.64倍削減",
+        "baseline": "密GDN 0.483GiB/step",
+        "condition": "H200、GDN、B=128、M=8",
+        "interpretation": "ログ再生で読込は少し増えるが、書込削減が上回る。"
+      },
+      {
+        "metric": "端から端までのTPOT高速化",
+        "value": "Qwen/GDN 1.08〜1.20倍、Kimi/KDA 1.05〜1.12倍",
+        "baseline": "同一vLLMベース密再帰経路",
+        "condition": "H200、B=64/128/256、128 decode tokens",
+        "interpretation": "カーネル以外のMLPやスケジューリングを含めても利益が残る。"
+      },
+      {
+        "metric": "数値誤差",
+        "value": "最大出力相対誤差 GDN 0.00303、KDA 0.00450、RWKV6 0.00376",
+        "baseline": "密参照実装",
+        "condition": "128トークン混合精度ロールアウト",
+        "interpretation": "演算順序変更による差は選択設定でBF16対応許容範囲内。"
+      }
+    ],
+    "negative_results": "小さい状態ではログ再生・メタデータ費用が書込削減を相殺しやすく、KDAは128MiB状態でFLA比1.02倍とほぼ同等。マージ間隔を大きくしすぎると再生ログが増えて遅延曲線はU字型になる。分割ReplayPrepはGDNでは有効だが、RWKV6のM=4では0.979〜0.980倍とわずかに悪化する。端から端までの改善は未変更のMLP、正規化、スケジューリング等によりカーネル改善より小さい。",
+    "interpretation": "再帰線形注意では固定状態でKV成長を避けても、物理的な密書込が新たな帯域律速になる。DeltaLogは論理情報量に近い小更新を通常経路にし、重い書込を償却するため、バッチ・状態が大きいほど効果が増える。演算子ごとの減衰粒度と補正経路がログ再生費用を決めるためMやReplayPrepは一律最適ではない。",
+    "quality_impact": "正確な算術では元の再帰と同値でモデル重み・式・プリフィルを変更しない。実装上は混合精度と加算順序の差があるが、全三演算子で設定した許容誤差を満たしている。"
+  },
+  "reservation": {
+    "claim_id": "claim-0efd061bb6cafbfb3405b15a",
+    "worker_id": "scheduled-chat-llm-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
