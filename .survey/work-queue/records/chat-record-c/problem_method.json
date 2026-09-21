@@ -5,32 +5,32 @@
   "attempt_id": "attempt-f528a03c4ecc9039aaf11a0e",
   "job_id": "job-research-be16d214d5c628cd",
   "data": {
-    "problem": "MoE推論でAttentionとFFNを分離するAFDは、FFNのバッチ拡大やKVキャッシュ容量増加など局所的な利点を持つが、固定予算ではFFN専用GPUが要求状態を保持できなくなる『request-bearing-capacity tax』も生む。従来研究は選んだ配置で機構を比較することが多く、同一モデル・負荷・TPOT SLO・予算・ハードウェアカタログの下で、AFDと同居配置をそれぞれ最適化したときにどちらが高スループットかを答えにくい。さらにハードウェア選択まで含めると、各Attention/FFN機種組ごとにworker配分、並列度、batch、replica、pipelineを完全探索する必要があり、列挙コストが急増する。",
-    "novelty": "AFD-Ledgerは、AFDの個別機構ではなく『共通のdeployment specification下で独立最適化した完全配置同士を比較する』ことを目的化する。軽量な役割別性能・価格推定で有望なAttention/FFN機種組を絞り、完全プロビジョニング結果をフィードバックして近傍探索し、最後に未評価の上位候補へ予算を使う二段階探索を採用する。局所的な機種指標を最終性能とみなさず、各候補について共通の分析実行モデルでSLO実現可能な最高decode throughputを計算する点が重要である。",
-    "method_overview": "入力としてモデルM、workload W、TPOT SLO τ、予算B、ハードウェアカタログH、runtime/parallelism等の共通制約Γを固定する。まず同居配置の最適解を一度求める。AFD側では各デバイスをAttention役・Expert役として代表batch（1,4,16,64）で分析し、役割別service rate、service/price、memory/priceなどを得る。安価・高service・高service/price・高memory/priceの代表デバイスを初期anchorにし、Attention/Expertの価格正規化service rateの調和平均で機種組を順位付けする。\n\n選ばれた各機種組はSearch Engineで完全プロビジョニングし、Attention/Expert worker配分、EP幅、replication、batch、pipeline depth等の合法構成を共通分析モデルで列挙する。メモリ可否、TPOT、schedule、throughputを評価し、その組の最高SLO-feasible throughputを返す。評価済み結果から高throughputかつ役割多様な組を保持し、片側デバイスだけを交換する近傍を生成して再評価する。規定round後に予算が残れば全カタログの未評価上位へ広げ、局所領域への固定を避ける。最終的に最高AFD配置と事前計算した最高同居配置を同一条件で比較する。",
+    "problem": "MoE推論でAttentionとFFNを分離するAFDは、FFN側のバッチ拡大やAttention側のKVキャッシュ容量増加といった局所的な利点を持つ。一方、固定予算ではFFN専用GPUへ資源を割くことで、要求を直接保持して処理できるGPU数が減る容量税も生じる。従来研究は選択済み配置で機構を比較する場合が多く、同一モデル・負荷・TPOT SLO・予算・ハードウェア候補の下で、AFDと同居配置をそれぞれ最適化した場合の優劣を答えにくい。さらに機種選択まで含めると、Attention/FFN機種組ごとにworker配分、並列度、バッチ、複製数、パイプラインを完全探索する必要があり、列挙コストが急増する。",
+    "novelty": "AFD-Ledgerは、AFDの個別機構ではなく『共通の配置仕様の下で独立最適化した完全配置同士を比較する』ことを目的化する。軽量な役割別性能・価格推定で有望なAttention/FFN機種組を絞り、完全プロビジョニング結果をフィードバックして近傍探索し、最後に未評価の上位候補へ評価予算を使う二段階探索を採用する。局所的な機種指標を最終性能とみなさず、各候補について共通の分析実行モデルでSLO実現可能な最高デコードスループットを計算する点が重要である。",
+    "method_overview": "入力としてモデルM、負荷W、TPOT SLO τ、予算B、ハードウェアカタログH、実行系・並列化などの共通制約Γを固定する。まず同居配置の最適解を一度求める。AFD側では各デバイスをAttention役・Expert役として代表バッチ（1,4,16,64）で分析し、役割別サービス率、価格当たりサービス率、価格当たりメモリ量などを得る。安価・高サービス率・高価格効率・高メモリ価格効率の代表デバイスを初期アンカーにし、Attention/Expert双方の価格正規化サービス率の調和平均で機種組を順位付けする。\n\n選ばれた各機種組は探索エンジンで完全プロビジョニングし、Attention/Expertのworker配分、EP幅、複製数、バッチ、パイプライン深度などの合法構成を共通分析モデルで列挙する。メモリ可否、TPOT、スケジュール、スループットを評価し、その組の最高SLO実現可能スループットを返す。評価済み結果から高スループットかつ役割多様な組を保持し、片側デバイスだけを交換する近傍を生成して再評価する。規定ラウンド後に予算が残れば全カタログの未評価上位へ広げ、局所領域への固定を避ける。最終的に最高AFD配置と事前計算した最高同居配置を同一条件で比較する。",
     "components": [
       {
         "name": "固定予算性能台帳",
-        "description": "AFDと同居配置を要求保持GPU数、GPU当たりresident batch、TPOTの積で分解し、局所的FFN高速化が要求保持容量の損失を返済できるかを明示する。比較対象は手選択したbaselineではなく各architectureの最適SLO-feasible配置。"
+        "description": "AFDと同居配置を、要求を保持できるGPU数、GPU当たり常駐バッチ数、TPOTの積として分解して比較する。これによりFFNを分離して局所的に高速化しても、固定予算内で要求保持能力を失う損失を十分に補えるかを配置全体で判定できる。比較対象も手作業で選んだ基準構成ではなく、同一予算とSLOの下で各方式を独立に最適化した配置とする。"
       },
       {
         "name": "役割別ハードウェア推定",
-        "description": "Attention/Expert役ごとにメモリ可否を確認し、代表batchで分析実行モデルを走らせ、service rateと価格・HBM容量で正規化した軽量指標を作る。これは候補順位付け専用で、配置throughputの代用にはしない。"
+        "description": "各候補デバイスについてAttention役とExpert役を別々に扱い、まずメモリ容量上の実行可能性を確認する。その後、複数の代表バッチで分析実行モデルを評価し、サービス率、価格当たりサービス率、価格当たりメモリ量などの軽量指標を計算する。これらは高価な完全プロビジョニングを行う候補の順位付けだけに用い、最終配置のスループットそのものを代替しない。"
       },
       {
-        "name": "多anchor初期候補生成",
-        "description": "最安、高service、高service/price、高memory/priceなど複数の代表機種を残し、両役割のservice/priceの調和平均で機種組を順位付けする。単一の『Attention向き』『FFN向き』指標への過適合を避ける。"
+        "name": "複数アンカーによる初期候補生成",
+        "description": "最安、高サービス率、高価格効率、高メモリ価格効率など異なる観点の代表機種を複数残し、Attention役とExpert役の価格正規化サービス率の調和平均で機種組を順位付けする。単一指標で一つの『Attention向き』『FFN向き』機種へ決め打ちせず、異なる性能・価格特性を持つ初期点を確保することで、後段の完全評価が狭い領域だけに偏ることを抑える。"
       },
       {
-        "name": "feedback-driven bounded search",
-        "description": "完全プロビジョニングで得た実際の配置throughputを使い、役割多様な上位候補を保持して片側機種を交換する近傍を探索する。最後に全体順位から未評価候補を補充し、評価予算Q内で局所解への固定を緩和する。"
+        "name": "完全評価結果を使う有界探索",
+        "description": "候補機種組を実際に完全プロビジョニングして得た配置スループットを探索のフィードバックとして利用する。高スループットでありながら役割構成が異なる上位候補を保持し、Attention側またはExpert側の片方だけを交換した近傍を生成して追加評価する。規定ラウンド後には全体順位から未評価候補も補充し、評価回数Qという上限を守りながら局所解への固定を緩和する。"
       },
       {
-        "name": "共通分析プロビジョニング",
-        "description": "AFDと同居配置の双方を同一のメモリ検査、TPOT推定、schedule構築、throughput計算で評価する。AFDではworker splitとpipeline depthが追加探索変数となるが、性能モデルとdeployment specificationは共通化する。"
+        "name": "共通分析モデルによるプロビジョニング",
+        "description": "AFDと同居配置の双方を、同じメモリ検査、TPOT推定、スケジュール構築、スループット計算の枠組みで評価する。AFDではAttention/Expert間のworker分割やパイプライン深度など追加の探索変数を持つが、性能モデルと配置仕様は共通化される。そのため一方だけに有利な固定構成を置かず、各方式が同じ予算とSLOの中で到達できる最良配置を比較できる。"
       }
     ],
-    "system_design": "Catalog Navigatorが軽量役割推定と候補生成・refinementを担当し、Search Engineが選ばれたハードウェア組を完全プロビジョニングする。オフラインPython実装は約5,700行で、完全列挙modeも参照用に備える。分析仮定の検証用としてLongCat 2.0上のAttention pool/Expert pool、dispatch-execute-combine、AFD scheduler、cross-pool通信、microbatch/DP-domain pipelineを備えた物理runtimeも別途実装する。"
+    "system_design": "カタログナビゲータが軽量な役割別推定と候補生成・改良を担当し、探索エンジンが選ばれたハードウェア組を完全プロビジョニングする。オフラインPython実装は約5,700行で、完全列挙モードも参照用に備える。分析仮定の検証用としてLongCat 2.0上のAttention pool/Expert pool、dispatch-execute-combine、AFD scheduler、cross-pool通信、microbatch/DP-domain pipelineを備えた物理runtimeも別途実装する。"
   },
   "reservation": {
     "claim_id": "claim-f528a03c4ecc9039aaf11a0e",
