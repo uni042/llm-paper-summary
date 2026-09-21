@@ -74,6 +74,61 @@ class DiscoveryStatsTest(unittest.TestCase):
             if original_state is not None:
                 queue_worker.DISCOVERY_STATE = original_state
 
+    def test_split_submissions_from_one_precheck_count_as_one_round(self) -> None:
+        original_state = getattr(queue_worker, "DISCOVERY_STATE", None)
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                queue_worker.DISCOVERY_STATE = Path(td) / "discovery-state.json"
+                base_stats = {
+                    "run_key": "2026-09-21T22:00:00+09:00",
+                    "round": "precheck-split-round",
+                    "axis": "split-round-regression",
+                    "candidate_count": 8,
+                    "duplicate_filtered_count": 0,
+                    "round_submission_count": 2,
+                }
+                precheck = {
+                    "request_id": "precheck-split-1",
+                    "provider": "openalex",
+                    "source_url": "https://api.openalex.org/works?example=1",
+                    "allowed_records": [{} for _ in range(8)],
+                    "unseen_result_count": 8,
+                }
+                first = {
+                    "_file": "work-queue/submissions/split-01.json",
+                    "candidates": [{} for _ in range(5)],
+                    "discovery_stats": dict(base_stats, round_submission_index=1),
+                }
+                second = {
+                    "_file": "work-queue/submissions/split-02.json",
+                    "candidates": [{} for _ in range(3)],
+                    "discovery_stats": dict(base_stats, round_submission_index=2),
+                }
+
+                self.assertTrue(queue_worker.record_discovery_stats(
+                    first, accepted_count=5, precheck_result=precheck
+                ))
+                state = json.loads(queue_worker.DISCOVERY_STATE.read_text(encoding="utf-8"))
+                self.assertEqual(len(state["history"]), 1)
+                self.assertFalse(state["history"][0]["round_complete"])
+                self.assertEqual(state.get("axes", {}).get("split-round-regression"), None)
+
+                self.assertTrue(queue_worker.record_discovery_stats(
+                    second, accepted_count=3, precheck_result=precheck
+                ))
+                state = json.loads(queue_worker.DISCOVERY_STATE.read_text(encoding="utf-8"))
+                self.assertEqual(len(state["history"]), 1)
+                row = state["history"][0]
+                self.assertTrue(row["round_complete"])
+                self.assertEqual(row["precheck_request_id"], "precheck-split-1")
+                self.assertEqual(len(row["source_submissions"]), 2)
+                self.assertEqual(row["accepted_count"], 8)
+                self.assertEqual(state["axes"]["split-round-regression"]["rounds"], 1)
+                self.assertEqual(state["axes"]["split-round-regression"]["accepted_count"], 8)
+        finally:
+            if original_state is not None:
+                queue_worker.DISCOVERY_STATE = original_state
+
     def test_final_duplicate_filtering_is_recorded_separately(self) -> None:
         original_state = getattr(queue_worker, "DISCOVERY_STATE", None)
         try:
