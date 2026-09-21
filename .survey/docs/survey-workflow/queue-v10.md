@@ -21,13 +21,13 @@
 
 `claim_worker.py` は現在も `claim_worker_with_banks.py` から利用される**内部コア**であり、ワーカーが直接実行するCLI入口ではない。Research / Audit の担当確保は必ず `claim_worker_with_banks.py` から開始する。ファイル名や履歴上の存在だけを理由に内部モジュールを実行入口として選ばない。
 
-現行のLibrary退避経路と、過去形式を読むための互換処理は区別する。`fallback-inbox` から現行の不変submissionへ収束させる復旧処理は現行機構だが、旧形式そのものを新規生成する経路は互換専用である。
+Library退避経路は現行形式だけを受け付ける。`fallback-inbox` のResearch / Audit envelopeは、root-level metadataと完全な5-slot recordを持つworkflow v10形式でなければならない。固定 `chat-inbox.json` と直接投入された旧Discovery payloadの互換読取は廃止済みである。
 
 ## 正本関係
 
 ワーカー行動は `worker-router.md` と上記正規スクリプトが返す `[WORKER-GUIDE]` / `next_action` / `recovery_steps` に従う。実装契約は対応するテストで固定する。
 
-過去のschema、固定 `chat-inbox.json`、旧形式fallback、旧claim/record-bank形式などのコードが残る場合は**既存履歴の読取・救済専用**である。新規生成、新規分岐、エラー回避経路として使わない。
+廃止済みschema、固定 `chat-inbox.json`、直接投入Discovery payloadなどを実行時互換として復活させない。必要な履歴はGit履歴に残し、通常コードへ救済分岐を戻さない。
 
 ## 変更時の原則
 
