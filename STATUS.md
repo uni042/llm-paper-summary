@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 23:31:26 JST**
+> 自動生成: **2026-09-21 23:32:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **337** |
 | 未claim Research job | **336** |
 | 直近24hの検証済みResearch収録 | **23** |
-| 最終検証済みResearch収録 | **09-21 22:42:38 JST（48分前）** |
+| 最終検証済みResearch収録 | **09-21 22:42:38 JST（49分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -129,9 +129,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3789240.3829159` — DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O / worker `scheduled-chat-30`
-  - claim: **09-21 23:30:34 JST** / heartbeat: **—** / lease expiry: **09-22 01:00:34 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a5d6d7156c3ffec6.json`
+- `arXiv:2608.07964` — EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference / worker `scheduled-chat-30`
+  - claim: **09-21 23:31:40 JST** / heartbeat: **—** / lease expiry: **09-22 01:01:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a88935db522d5bcc.json`
 
 #### Audit
 
@@ -179,8 +179,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **381** |
-| └ Research | **195** |
+| 成功result未照合のimmutable submission | **382** |
+| └ Research | **196** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
