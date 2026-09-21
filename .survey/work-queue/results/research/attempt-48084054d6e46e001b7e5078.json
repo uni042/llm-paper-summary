@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-48084054d6e46e001b7e5078",
+  "job_id": "job-research-4e59361c33e66a27",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-48084054d6e46e001b7e5078.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.components[0].description is too short",
+  "processed_at": "2026-09-21T02:18:32+00:00",
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.components[0].description is too short"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
