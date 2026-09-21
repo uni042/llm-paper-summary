@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-91d5c21e800be1607a811b10",
+  "attempt_id": "attempt-973dcdd0d351c7d50a724873",
   "job_id": "job-research-3eb9c6f535e789d0",
   "data": {
     "overview": "三階層化の最大効果は賢い配置規則ではなく安価な容量そのものにあり、既定の1対8対64構成でGPU当たり同時セッション数が約73倍、セッション単価が62.04分の1になる。一方、配置方式の価値はバッチ1のスループットではなくPCIe移動量と初回トークン時間に現れ、会話では最近性、エージェントと文書QAでは再利用頻度が有利だった。実務上はSSDを高頻度アクセス層ではなく安価な容量後背地として使い、ワークロードの再利用構造に合わせて上位階層へ残す対象を選ぶべきだと示す。",
@@ -63,7 +63,7 @@
     "additional_findings": "最良方式時のCPU主記憶ヒットは会話61.87%、エージェント72.65%、文書QA68.48%。SSDヒットはエージェント6.07%、文書QA8.80%、会話0%。会話スループットは方式によらず約1307.60 tok/s。"
   },
   "reservation": {
-    "claim_id": "claim-91d5c21e800be1607a811b10",
+    "claim_id": "claim-973dcdd0d351c7d50a724873",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
