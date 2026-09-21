@@ -268,21 +268,21 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：30  
   NEOは一部要求のKVとデコード注意をCPUへ移し、GPU要求と同時に進めてCPU/GPUの完了時刻を反復ごとに揃え、VRAM不足と待ち時間を抑える方式。
 
+- **2024-10 · [EPIC: Efficient Position-Independent Caching for Serving Large Language Models](2024-2410.15332-epic-position-independent-caching.md)**  
+  実装：[✓](https://github.com/DerekHJH/epic) ・ リポジトリ内被引用：13  
+  独立事前計算した文書チャンクを位置に依存せず再利用し、連結時は各チャンク先頭の少数トークンだけを再計算して注意シンクを修正することで、CacheBlend比で最大8倍の初回トークン時間短縮と7倍のスループットを得る。
+
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。
 
-- **2024-10 · [EPIC: Efficient Position-Independent Caching for Serving Large Language Models](2024-2410.15332-epic-position-independent-caching.md)**  
-  実装：[✓](https://github.com/DerekHJH/epic) ・ リポジトリ内被引用：12  
-  独立事前計算した文書チャンクを位置に依存せず再利用し、連結時は各チャンク先頭の少数トークンだけを再計算して注意シンクを修正することで、CacheBlend比で最大8倍の初回トークン時間短縮と7倍のスループットを得る。
+- **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
+  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：11  
+  文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
 - **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
   実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：11  
   KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
-
-- **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
-  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：10  
-  文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
 - **2025-03 · [KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse](2025-2503.16525-kvshare.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -339,7 +339,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-10〜2024-09）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：48  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
@@ -351,7 +351,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   InstAttentionはKVを計算機能付きSSDへ置き、SSD内部でデコード注意を計算して、毎トークンのKV読戻しによるPCIe転送を削減する方式。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：12  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 
 - **2024-07 · [Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains](2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md)**  

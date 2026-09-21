@@ -7,7 +7,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2026-07 · [C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference](2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md)**  
-  実装：[✓](https://github.com/s7a9/C2KV) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/s7a9/C2KV) ・ リポジトリ内被引用：2  
   文書ごとに位置非依存で直接連結できる圧縮KVを学習抽出し、非prefix再利用のプリフィル削減とKV保存・転送・デコード帯域削減を同時に狙う。
 
 - **2025-12 · [MEPIC: Memory Efficient Position Independent Caching for LLM Serving](2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md)**  
@@ -43,6 +43,6 @@
 ### 4年前（2022-10〜2023-09）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：90  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：92  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 <!-- survey:auto:end -->

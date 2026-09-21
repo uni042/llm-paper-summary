@@ -21,16 +21,21 @@
   "created_at": "2026-09-20T12:13:37+00:00",
   "blocker": "Primary full text remains unavailable after materially distinct retrieval attempts. The official DOI/SC bibliographic path and Qinggang Wang's author publication page confirm the SC 2025 paper, while ResearchGate explicitly reports no full text available. Fresh title/DOI searches did not surface an accessible ACM/SC or author-hosted manuscript that can be read end-to-end. Secondary summaries were not used to fabricate the required five-slot record.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-f79881d3b9e7329f0136ef26.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-20T13:12:21+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-21T03:02:06+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-20T13:12:21+00:00",
       "reason": "Full primary text could not be safely retrieved in this run. The official DOI 10.1145/3712285.3759903 and author Qinggang Wang's HUST publication page confirm the SC 2025 paper and bibliographic record, but the accessible ResearchGate record explicitly reports that no full text is available, and web search did not surface an author-hosted or conference-hosted full manuscript that could be read end-to-end. Secondary summaries expose headline design/results, but workflow v10 requires the primary source in full, so no five-slot record was fabricated. Retry with an accessible ACM/SC or author manuscript copy."
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-21T03:02:06+00:00",
+      "reason": "Primary full text remains unavailable after materially distinct retrieval attempts. The official DOI/SC bibliographic path and Qinggang Wang's author publication page confirm the SC 2025 paper, while ResearchGate explicitly reports no full text available. Fresh title/DOI searches did not surface an accessible ACM/SC or author-hosted manuscript that can be read end-to-end. Secondary summaries were not used to fabricate the required five-slot record."
     }
   ],
-  "last_blocked_at": "2026-09-20T13:12:21+00:00",
-  "retry_queued_at": "2026-09-20T18:57:27+00:00",
-  "completed_at": "2026-09-21T03:02:06+00:00"
+  "last_blocked_at": "2026-09-21T03:02:06+00:00",
+  "completed_at": "2026-09-21T03:02:06+00:00",
+  "retry_not_before": "2026-09-21T08:05:25+00:00"
 }

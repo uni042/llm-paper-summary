@@ -27,11 +27,11 @@
 ### 2年前（2024-10〜2025-09）
 
 - **2025-03 · [eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference](2025-2503.06823-emoe.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   過去のエキスパート選択から必要エキスパートを予測・周期再利用し、タスク感度とSLOを考慮した読み込み・スケジューリングでGPUメモリを削減する。
 
 - **2025-09 · [DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance](2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   DuoServe-MoEは、密なプリフィルでは二重ストリーム転送、疎なデコードでは次層専門家をMLP予測して先読みするようフェーズ別に切替え、CPU→GPU転送待ちを隠す。
 
 ### 3年前（2023-10〜2024-09）

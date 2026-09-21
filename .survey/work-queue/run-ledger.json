@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T06:48:44.354454+00:00",
+  "updated_at": "2026-09-21T07:06:22.532558+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -32831,6 +32831,61 @@
       "paper_active_count_before": 867,
       "paper_active_count_after": 867,
       "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35571178308",
+      "first_recorded_at": "2026-09-21T07:06:22.532558+00:00",
+      "last_recorded_at": "2026-09-21T07:06:22.532558+00:00",
+      "signals": [
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 13,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35571178308:1",
+          "recorded_at": "2026-09-21T07:06:22.532558+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "35571178308",
+            "run_attempt": "1",
+            "source_sha": "56a7ace95803b46dc88677cf316874bb66534461"
+          },
+          "signals": [
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [],
+      "new_jobs": [],
+      "new_paper_ids": [
+        "DOI:10.1145/3789240.3829130",
+        "DOI:10.1145/3838177.3841726",
+        "DOI:10.1145/3838177.3841731",
+        "arXiv:2604.20156",
+        "arXiv:2606.17107",
+        "arXiv:2608.04974",
+        "arXiv:2608.08081",
+        "arXiv:2608.15533",
+        "arXiv:2608.24938",
+        "arXiv:2608.26650",
+        "arXiv:2608.30386",
+        "arXiv:2609.06076",
+        "arXiv:2609.16338"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 867,
+      "paper_active_count_after": 880,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

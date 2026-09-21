@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（30本）
+## 自動生成の論文一覧（34本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -13,7 +13,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2025-10 · [REAP the Experts: Why Pruning Prevails for One-Shot MoE compression](2025-2510.13999-reap-one-shot-moe-compression.md)**  
-  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：6  
   ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。
 
 - **2025-11 · [Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining](2025-2511.02237-opportunistic-expert-activation.md)**  
@@ -28,13 +28,17 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：2  
   Alloc-MoEは全層・全トークンの専門家実行回数を総予算として、層の重要度とルータ確信度に応じて配分し、固定Top-kより少ない計算で品質を保つ。
 
+- **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
+  実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：2  
+  バッチ内で重複して活性化するMoEエキスパートを類似する主要エキスパートへ動的に再ルーティングし、品質を保ちながら復号を最大2倍高速化する。
+
 - **2026-05 · [ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference](2026-2605.27081-remoe-router-finetuning-expert-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ReMoEはルータだけを追加学習し、直前トークンで使った専門家へ確率を寄せて再利用を増やし、端末MoEのキャッシュミスと低速階層からの重み再読込を減らす。
 
-- **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
-  実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：1  
-  バッチ内で重複して活性化するMoEエキスパートを類似する主要エキスパートへ動的に再ルーティングし、品質を保ちながら復号を最大2倍高速化する。
+- **2026-04 · [Temporally Extended Mixture-of-Experts Models](2026-2604.20156-temporally-extended-moe-expert-persistence.md)**  
+  実装：[✓](https://github.com/princeton-polaris-lab/temporal-moe) ・ リポジトリ内被引用：1  
+  専門家集合を複数トークン維持する選択肢として学習し、gpt-oss-20bの切替率を50%以上から数%へ抑えてオフロード向けの時間的連続性を作る方式。
 
 - **2025-11 · [Route Experts by Sequence, not by Token](2025-2511.06494-seqtopk-route-by-sequence.md)**  
   実装：[✓](https://github.com/Y-Research-SBU/SeqTopK) ・ リポジトリ内被引用：1  
@@ -58,6 +62,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：0  
   動的MoE推論で専門家数を減らすと出力分散と尺度が増える問題を特定し、層・次元ごとの平均と分散を学習時分布へ戻す軽量補正で、同じ専門家予算の精度を大幅に回復する。
 
+- **2026-09 · [Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment](2026-2609.06076-post-compression-adjustment-cost-normalized.md)**  
+  実装：[✓](https://github.com/AIDASLab/Post-Compression-Adjustment) ・ リポジトリ内被引用：0  
+  圧縮済みMoEを小規模調整の初期値と再定義し、3000例・1エポックの全パラメータ微調整で平均37.3%の性能差を回復するコスト正規化研究。
+
 - **2026-09 · [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](2026-2609.05228-ace.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ACEはルータ重みと専門家変換能力の事前統計を組み合わせ、Top-k内でも寄与の小さいスロットだけをトークン単位で省く。元重みとTop-1を保ち、追加学習なしでFFN計算を減らす。
@@ -65,6 +73,14 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-08 · [Share First, Route What Remains: A Unified Framework for Token-Adaptive MoE Computation](2026-2608.10392-share-first-route-what-remains.md)**  
   実装：[✓](https://github.com/existence0420/UniF-MoE) ・ リポジトリ内被引用：0  
   共有ブロックを先にトークン適応で選び、残余需要だけを可変数の専門家へ累積確率で回すUniF-MoEにより、精度を高めながら推論計算・遅延・メモリを削減する。
+
+- **2026-08 · [Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs](2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  支援集合から層別エキスパート数と弱いルーティング補正を推定し、凍結DeepSeek-MoEで平均active エキスパートを最大62%削減するタスク条件付きMetaNet。
+
+- **2026-08 · [ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration](2026-2608.24938-exfold-training-free-expert-folding.md)**  
+  実装：[✓](https://github.com/Time-Rune/ExFold-MoE) ・ リポジトリ内被引用：0  
+  除外エキスパートの出力を保持エキスパートへスカラー射影して、事前充填と復号を共通機構で高速化する再学習不要のエキスパート Folding。
 
 - **2026-07 · [TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation](2026-2607.06601-triroute-joint-adaptive-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -123,15 +139,15 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 3年前（2023-10〜2024-09）
 
 - **2024-02 · [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md)**  
-  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：40  
   本研究は校正データで冗長な専門家を恒久削除し、実行時はルータ寄与の小さい第2専門家をトークン単位で省いて、Mixtralの常駐メモリとFFN計算を減らす。
 
 - **2023-10 · [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/MC-SMoE) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/UNITES-Lab/MC-SMoE) ・ リポジトリ内被引用：19  
   MC-SMoEはルータ履歴で似た専門家を代表へ統合し、統合重みを低ランク成分と疎な残差へ圧縮して、専門家数とメモリ使用量を減らす。
 
 - **2024-06 · [AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models](2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   AdaMoEは計算しないnull専門家をTop-k候補に加え、簡単なトークンほどnullを選ばせて実FFN数を減らし、トークンごとの計算量を適応させる。
 
 - **2024-02 · [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md)**  

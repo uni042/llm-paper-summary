@@ -21,5 +21,16 @@
   "created_at": "2026-09-20T20:36:10+00:00",
   "completed_at": "2026-09-21T03:14:52+00:00",
   "blocker": "The web retrieval subsystem explicitly reported approximately one call remaining immediately before this claim was assigned. A repository-quality Research record requires reading the primary source in full and materially distinct retrieval attempts when necessary. Starting those retrievals under the explicit run-local limit would risk an incomplete or inferred five-slot record, so this attempt is durably blocked for a later run with fresh retrieval capacity.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-5199bb0beeb669d33a2cf9ca.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-5199bb0beeb669d33a2cf9ca.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-21T03:14:52+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-21T03:14:52+00:00",
+      "reason": "The web retrieval subsystem explicitly reported approximately one call remaining immediately before this claim was assigned. A repository-quality Research record requires reading the primary source in full and materially distinct retrieval attempts when necessary. Starting those retrievals under the explicit run-local limit would risk an incomplete or inferred five-slot record, so this attempt is durably blocked for a later run with fresh retrieval capacity."
+    }
+  ],
+  "last_blocked_at": "2026-09-21T03:14:52+00:00",
+  "retry_not_before": "2026-09-21T08:05:25+00:00"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 867,
+  "active_count": 880,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -552,6 +552,13 @@
       ],
       "source_hash": "890ca5b658d76acbc28358ee8e6e509d483a13f02d3d6fd2d9fabdc6fc5af7be"
     },
+    "arXiv:2604.20156": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md",
+      "identifiers": [
+        "arXiv:2604.20156"
+      ],
+      "source_hash": "6d1c7d9329bf1dbd717ba48e117feb1288fde4d55aa2cc0dc83247befc6bb8bb"
+    },
     "arXiv:2605.27081": {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md",
       "identifiers": [
@@ -605,6 +612,22 @@
       ],
       "source_hash": "9a050a8ce11d62d5900fe12c3a984f87297112f6978c2aaac880764c8ad98e1f"
     },
+    "arXiv:2608.24938": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.24938-exfold-training-free-expert-folding.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.24938",
+        "arXiv:2608.24938"
+      ],
+      "source_hash": "a7f406d208206c039ef9368d06747223bb381b14c9184e595b6dcb1beb060a0c"
+    },
+    "arXiv:2608.26650": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.26650",
+        "arXiv:2608.26650"
+      ],
+      "source_hash": "3e01c09e168144403c811144098493b2d5efac13b8c4fcf215a1f40f5065edb9"
+    },
     "arXiv:2609.00575": {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.00575-parser-residual-sparsification-output-importance.md",
       "identifiers": [
@@ -634,6 +657,14 @@
         "arXiv:2609.05228"
       ],
       "source_hash": "f715016877f0d9a5d0d70d91f8961d04f43b3e918ce8cf6f05d512270bbfa26d"
+    },
+    "arXiv:2609.06076": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.06076",
+        "arXiv:2609.06076"
+      ],
+      "source_hash": "22ab1216a8ef3cc03f62beaeeef8787eeb4d55c87e107e63c7d8e26b3ef73643"
     },
     "arXiv:2609.09241": {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md",
@@ -6003,6 +6034,14 @@
       ],
       "source_hash": "f58e45317d870a13faa38e499129eaa050d764175a79d1e4685cb94620244b3f"
     },
+    "arXiv:2606.17107": {
+      "path": "papers/inference/99-other-inference-systems/2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2606.17107",
+        "arXiv:2606.17107"
+      ],
+      "source_hash": "0a11234a25b00944fd7556a59178c9f49855d3b5916231d2e7097a0ed4328213"
+    },
     "arXiv:2606.24957": {
       "path": "papers/inference/99-other-inference-systems/2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md",
       "identifiers": [
@@ -6059,12 +6098,35 @@
       ],
       "source_hash": "c4ddabec4191a40c0965e28e276700390b545533094df4f6b97b585f648712f5"
     },
+    "arXiv:2608.04974": {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.04974-asymspec-efficient-cloud-edge-speculative-decoding-over-asymmetric-networks.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.04974",
+        "arXiv:2608.04974"
+      ],
+      "source_hash": "e91787072649e89cbdb13fe052c1915cb9103b8eeb5d201eec9b9cf62b9bb747"
+    },
+    "arXiv:2608.08081": {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md",
+      "identifiers": [
+        "arXiv:2608.08081"
+      ],
+      "source_hash": "868ffeef37162065f631f387a72a110ffbb03841c71bcf20aa8141c29ee96955"
+    },
     "arXiv:2608.08340": {
       "path": "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md",
       "identifiers": [
         "arXiv:2608.08340"
       ],
       "source_hash": "28b02e4222f97392b25cbb9958faaadec37f81788ee7bef7acb44fa687f357c7"
+    },
+    "arXiv:2608.15533": {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.15533",
+        "arXiv:2608.15533"
+      ],
+      "source_hash": "6c82febcc000e36fdae5c6d1115531b00844dcb32fec787be39aa1621b322694"
     },
     "arXiv:2608.17826": {
       "path": "papers/inference/99-other-inference-systems/2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md",
@@ -6096,6 +6158,14 @@
         "arXiv:2608.30295"
       ],
       "source_hash": "90384fd2eebc240beee2e30b0462b76730a53c3631bf064b9bb8410c7d0d9c67"
+    },
+    "arXiv:2608.30386": {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.30386-dasc-decay-aware-state-compression-for-hybrid-linear-attention-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.30386",
+        "arXiv:2608.30386"
+      ],
+      "source_hash": "f356b770ab1daf8599d6c2cffe7b2fb3970ed3403ae29e8cf8957eda36473dfd"
     },
     "arXiv:2608.30830": {
       "path": "papers/inference/99-other-inference-systems/2026-2608.30830-adaptive-kv-retention-for-llm-agents-at-human-approval-timescales.md",
@@ -6203,6 +6273,13 @@
       ],
       "source_hash": "aacb7b05222beb52e38d44deed452d4f8334eca9277cbaf352cd55ab07a34e0b"
     },
+    "arXiv:2609.16338": {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.16338-breaking-the-1-58-bit-barrier-for-ternary-llms.md",
+      "identifiers": [
+        "arXiv:2609.16338"
+      ],
+      "source_hash": "4929096397597f39fd24f1220c042102018f8b4346ccf74b7c31dee746275276"
+    },
     "arXiv:2609.16491": {
       "path": "papers/inference/99-other-inference-systems/2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md",
       "identifiers": [
@@ -6273,6 +6350,13 @@
       ],
       "source_hash": "6154b2590490e9bbdb4142b84d1d657cdd808b1e02ac2bf49c6d20f9c40ce9f6"
     },
+    "DOI:10.1145/3789240.3829130": {
+      "path": "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md",
+      "identifiers": [
+        "DOI:10.1145/3789240.3829130"
+      ],
+      "source_hash": "9a156e074b89b29b1763b86ded6bf8de5bf622014d38f81f06c16b5ebae8a29e"
+    },
     "mlforsystems-neurips2024-paper41": {
       "path": "papers/inference/99-other-inference-systems/2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md",
       "identifiers": [
@@ -6294,6 +6378,13 @@
       ],
       "source_hash": "b448a81d47acf9737874db3d0233f91f42da665d153ca6d2d90303ffd094a15d"
     },
+    "DOI:10.1145/3838177.3841731": {
+      "path": "papers/inference/99-other-inference-systems/2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md",
+      "identifiers": [
+        "DOI:10.1145/3838177.3841731"
+      ],
+      "source_hash": "183c21b8a0e8fa950b2ab76a3a8abf834b18b01e928d7b11a91cb157fc8da33e"
+    },
     "DOI:10.52202/085713-1587": {
       "path": "papers/inference/99-other-inference-systems/2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md",
       "identifiers": [
@@ -6307,6 +6398,13 @@
         "DOI:10.1145/3797905.3807846"
       ],
       "source_hash": "831180e015a26909af100c5205454173bb844c42e51a10ddd9daf73455541f22"
+    },
+    "DOI:10.1145/3838177.3841726": {
+      "path": "papers/inference/99-other-inference-systems/2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md",
+      "identifiers": [
+        "DOI:10.1145/3838177.3841726"
+      ],
+      "source_hash": "696ee18e04d2e6f495822436dcfb21bbede41b0620c69bcfa5757d5e2ea1bb7e"
     },
     "arXiv:2608.19662": {
       "path": "papers/inference/kv-cache/2608.19662.md",
@@ -6729,6 +6827,7 @@
     "arXiv:2602.07616": "arXiv:2602.07616",
     "arXiv:2603.11535": "arXiv:2603.11535",
     "arXiv:2604.08133": "arXiv:2604.08133",
+    "arXiv:2604.20156": "arXiv:2604.20156",
     "DOI:10.48550/arxiv.2605.27081": "arXiv:2605.27081",
     "arXiv:2605.27081": "arXiv:2605.27081",
     "DOI:10.48550/arxiv.2605.30876": "arXiv:2605.30876",
@@ -6740,12 +6839,18 @@
     "arXiv:2607.08601": "arXiv:2607.08601",
     "DOI:10.48550/arxiv.2608.10392": "arXiv:2608.10392",
     "arXiv:2608.10392": "arXiv:2608.10392",
+    "DOI:10.48550/arxiv.2608.24938": "arXiv:2608.24938",
+    "arXiv:2608.24938": "arXiv:2608.24938",
+    "DOI:10.48550/arxiv.2608.26650": "arXiv:2608.26650",
+    "arXiv:2608.26650": "arXiv:2608.26650",
     "DOI:10.48550/arxiv.2609.00575": "arXiv:2609.00575",
     "arXiv:2609.00575": "arXiv:2609.00575",
     "DOI:10.48550/arxiv.2609.01024": "arXiv:2609.01024",
     "arXiv:2609.01024": "arXiv:2609.01024",
     "arXiv:2609.04575": "arXiv:2609.04575",
     "arXiv:2609.05228": "arXiv:2609.05228",
+    "DOI:10.48550/arxiv.2609.06076": "arXiv:2609.06076",
+    "arXiv:2609.06076": "arXiv:2609.06076",
     "DOI:10.48550/arxiv.2609.09241": "arXiv:2609.09241",
     "arXiv:2609.09241": "arXiv:2609.09241",
     "DOI:10.1145/3694715.3695964": "arXiv:2312.12456",
@@ -7902,6 +8007,8 @@
     "arXiv:2606.00866": "arXiv:2606.00866",
     "DOI:10.48550/arxiv.2606.11916": "arXiv:2606.11916",
     "arXiv:2606.11916": "arXiv:2606.11916",
+    "DOI:10.48550/arxiv.2606.17107": "arXiv:2606.17107",
+    "arXiv:2606.17107": "arXiv:2606.17107",
     "DOI:10.48550/arxiv.2606.24957": "arXiv:2606.24957",
     "arXiv:2606.24957": "arXiv:2606.24957",
     "DOI:10.48550/arxiv.2606.28565": "arXiv:2606.28565",
@@ -7916,7 +8023,12 @@
     "arXiv:2607.29069": "arXiv:2607.29069",
     "DOI:10.48550/arxiv.2608.00101": "arXiv:2608.00101",
     "arXiv:2608.00101": "arXiv:2608.00101",
+    "DOI:10.48550/arxiv.2608.04974": "arXiv:2608.04974",
+    "arXiv:2608.04974": "arXiv:2608.04974",
+    "arXiv:2608.08081": "arXiv:2608.08081",
     "arXiv:2608.08340": "arXiv:2608.08340",
+    "DOI:10.48550/arxiv.2608.15533": "arXiv:2608.15533",
+    "arXiv:2608.15533": "arXiv:2608.15533",
     "DOI:10.48550/arxiv.2608.17826": "arXiv:2608.17826",
     "arXiv:2608.17826": "arXiv:2608.17826",
     "DOI:10.48550/arxiv.2608.25062": "arXiv:2608.25062",
@@ -7924,6 +8036,8 @@
     "arXiv:2608.26612": "arXiv:2608.26612",
     "OpenReview:u7dlwgKstN": "arXiv:2608.30295",
     "arXiv:2608.30295": "arXiv:2608.30295",
+    "DOI:10.48550/arxiv.2608.30386": "arXiv:2608.30386",
+    "arXiv:2608.30386": "arXiv:2608.30386",
     "arXiv:2608.30830": "arXiv:2608.30830",
     "arXiv:2609.03236": "arXiv:2609.03236",
     "arXiv:2609.04010": "arXiv:2609.04010",
@@ -7946,6 +8060,7 @@
     "arXiv:2609.14507": "arXiv:2609.14507",
     "arXiv:2609.14773": "arXiv:2609.14773",
     "arXiv:2609.15338": "arXiv:2609.15338",
+    "arXiv:2609.16338": "arXiv:2609.16338",
     "DOI:10.48550/arxiv.2609.16491": "arXiv:2609.16491",
     "arXiv:2609.16491": "arXiv:2609.16491",
     "DOI:10.48550/arxiv.2609.16648": "arXiv:2609.16648",
@@ -7962,11 +8077,14 @@
     "arXiv:2609.18123": "arXiv:2609.18123",
     "DOI:10.48550/arxiv.2609.18675": "arXiv:2609.18675",
     "arXiv:2609.18675": "arXiv:2609.18675",
+    "DOI:10.1145/3789240.3829130": "DOI:10.1145/3789240.3829130",
     "mlforsystems-neurips2024-paper41": "mlforsystems-neurips2024-paper41",
     "DOI:10.14778/3827998.3828047": "DOI:10.14778/3827998.3828047",
     "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html": "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
+    "DOI:10.1145/3838177.3841731": "DOI:10.1145/3838177.3841731",
     "DOI:10.52202/085713-1587": "DOI:10.52202/085713-1587",
     "DOI:10.1145/3797905.3807846": "DOI:10.1145/3797905.3807846",
+    "DOI:10.1145/3838177.3841726": "DOI:10.1145/3838177.3841726",
     "DOI:10.48550/arxiv.2608.19662": "arXiv:2608.19662",
     "arXiv:2608.19662": "arXiv:2608.19662",
     "DOI:10.48550/arxiv.2609.14643": "arXiv:2609.14643",
