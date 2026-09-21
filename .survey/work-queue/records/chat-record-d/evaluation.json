@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-787ff7b0caf98962274ac05a",
   "job_id": "job-research-3c0256304cd034ce",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-787ff7b0caf98962274ac05a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "models": ["Vicuna-7B", "Vicuna-13B", "LLaMA2-7B", "LLaMA2-13B"],
+    "benchmarks": ["Spec-Bench", "MT-Bench", "GSM8K", "Alpaca", "HumanEval"],
+    "hardware": "平均受理長は8基のNVIDIA B200を備えたサーバーで測定し、エンドツーエンド高速化はNVIDIA Jetson AGX Orinで実測する。メモリ予算のアブレーションは2GB、6GB、8GBを用いる。",
+    "baselines": ["REST", "Lookahead decoding", "Kangaroo", "Medusa", "EAGLE-self"],
+    "metrics": ["平均受理トークン長", "エンドツーエンド高速化倍率", "1トークン当たり転送バイト量", "tokens/s", "MT-Bench品質"],
+    "settings": "既定ではドラフト反復回数5、ドラフト境界LDM=3、浅い検証境界LSV=15。7Bでは代表的な8GB、13Bでは12GBのエッジメモリ予算に対応する。アダプタはShareGPT 68,000サンプルで学習し、Vicuna系は学習率1e-6、LLaMA2系は1e-5、2基のB200で13時間以内に学習した。貪欲デコードと温度0.7の緩和デコードを評価する。",
+    "quality_check": "緩和受理時にはMT-BenchをGPT-4o評価手順で測定し、受理長の増加が生成品質低下だけで得られていないかを確認する。"
+  },
+  "reservation": {"claim_id": "claim-787ff7b0caf98962274ac05a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
