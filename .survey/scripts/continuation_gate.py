@@ -55,27 +55,20 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     else:
         work_mode = explicit_work_mode
         mode_source = "explicit_work_mode"
-    legacy_papers_added = max(int(getattr(args, "papers_added_this_invocation", 0) or 0), 0)
-    completed_ra_raw = getattr(args, "research_audit_completed_this_invocation", None)
-    research_audit_completed_this_invocation = (
-        max(int(completed_ra_raw or 0), 0)
-        if completed_ra_raw is not None
-        else legacy_papers_added
+    research_audit_completed_this_invocation = max(
+        int(getattr(args, "research_audit_completed_this_invocation", 0) or 0),
+        0,
     )
-    research_minimum_papers = max(int(getattr(args, "research_minimum_papers", 3) or 3), 1)
+    research_minimum_completions = max(
+        int(getattr(args, "research_minimum_completions", 3) or 3),
+        1,
+    )
     claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
     submission_state_checked = bool(
         getattr(args, "submission_state_checked", False)
         or getattr(args, "submission_result_pending", False)
     )
     discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
-    rounds_since_last_novel_raw = getattr(args, "discovery_rounds_since_last_novel", None)
-    discovery_reset_progress_known = rounds_since_last_novel_raw is not None
-    discovery_rounds_since_last_novel = (
-        max(int(rounds_since_last_novel_raw or 0), 0)
-        if discovery_reset_progress_known
-        else 0
-    )
     discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 4) or 4), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
@@ -124,7 +117,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     independent_work = bool(
         args.independent_work
         or args.spillover_work
-        or (args.can_discover and any_durable_transport)
+        or (
+            work_mode == "discovery"
+            and args.can_discover
+            and any_durable_transport
+        )
     )
 
     transient_claim_wait = bool(claim_state_checked and args.claim_result_pending and args.github_read)
@@ -186,9 +183,22 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         elif args.probe == "failure":
             write_scope = "run_wide_github_write_unavailable"
             if fallback_writable:
-                write_action = "disable_further_github_writes_this_run; checkpoint_to_library; continue_ready_spillover_or_offline_discovery"
+                if work_mode == "research":
+                    write_action = (
+                        "disable_further_github_writes_this_run; checkpoint_current_assignment_to_library; "
+                        "do_not_start_next_paper; keep_scheduled_task_enabled"
+                    )
+                else:
+                    write_action = (
+                        "disable_further_github_writes_this_run; checkpoint_current_discovery_payload_to_library; "
+                        "continue_only_work_that_can_be_durably_preserved_without_bypassing_precheck; "
+                        "keep_scheduled_task_enabled"
+                    )
             else:
-                write_action = "disable_further_github_writes_this_run; do_not_start_uncheckpointable_new_work"
+                write_action = (
+                    "disable_further_github_writes_this_run; do_not_start_uncheckpointable_new_work; "
+                    "keep_scheduled_task_enabled"
+                )
         else:
             write_scope = "unclassified"
             write_action = "run_fixed_health_probe_once_before_classifying"
@@ -252,15 +262,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "candidate_inventory": candidate_inventory,
         "work_mode": work_mode,
         "mode_source": mode_source,
-        "papers_added_this_invocation": legacy_papers_added,
         "research_audit_completed_this_invocation": research_audit_completed_this_invocation,
-        "research_minimum_papers": research_minimum_papers,
+        "research_minimum_completions": research_minimum_completions,
         "research_quota_remaining": max(
-            research_minimum_papers - research_audit_completed_this_invocation, 0
+            research_minimum_completions - research_audit_completed_this_invocation, 0
         ),
         "discovery_rounds_completed": discovery_rounds_completed,
-        "discovery_rounds_since_last_novel": discovery_rounds_since_last_novel,
-        "discovery_reset_progress_known": discovery_reset_progress_known,
         "discovery_min_rounds": discovery_min_rounds,
         "minimum_rounds_remaining": minimum_rounds_remaining,
         "discovery_exhausted": discovery_exhausted,
@@ -299,8 +306,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
             "candidate_inventory is mandatory: >=50 selects Research/Audit and <50 selects Discovery. "
             "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
-            "Discovery's four-round floor uses total durably completed materially-distinct rounds in this invocation; "
-            "novel discoveries do not reset that count. Research/Audit exposes the combined three-completion quota "
+            "Discovery's four-round floor counts successful canonical precheck rounds in this invocation; "
+            "multiple submissions derived from one precheck still count as one round. "
+            "Research/Audit exposes the combined three-completion quota "
             "state and a pending submission remains a serial barrier before the next paper; hard "
             "handoff/platform/durability/read "
             "failures override ordinary continuation."
@@ -333,11 +341,9 @@ def main() -> int:
     ap.add_argument("--scheduled-handoff-guard-seconds", type=int, default=600)
     ap.add_argument("--candidate-inventory", type=int, default=None)
     ap.add_argument("--work-mode", choices=("auto", "research", "discovery"), default="auto")
-    ap.add_argument("--papers-added-this-invocation", type=int, default=0)
-    ap.add_argument("--research-audit-completed-this-invocation", type=int, default=None)
-    ap.add_argument("--research-minimum-papers", type=int, default=3)
+    ap.add_argument("--research-audit-completed-this-invocation", type=int, default=0)
+    ap.add_argument("--research-minimum-completions", type=int, default=3)
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
-    ap.add_argument("--discovery-rounds-since-last-novel", type=int, default=None)
     ap.add_argument("--discovery-min-rounds", type=int, default=4)
     ap.add_argument("--discovery-exhausted", type=yn, default=False)
     ap.add_argument("--next-axis-available", type=yn, default=False)
