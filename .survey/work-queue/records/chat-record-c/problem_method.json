@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-a412546d473a63a041f2ba8d","job_id":"job-research-b47f649340a3fc18","data":{"problem":"Hybrid linear-attention modelはfull-attention層のKV cacheに加え、linear-attention層の境界recurrent stateをprefixごとに保存しないとprefix reuseできない。recurrent stateはtoken処理でin-place更新され過去境界を保持しないため、checkpointを密に置くとHBMを急速に消費し、疎に置くと再prefill/replayが増える。従来のPagedAttentionやKV quantization/evictionはtoken-indexed KVを主対象とし、巨大なpersistent recurrent state checkpointの内部冗長性を直接扱わない。","novelty":"DASCはGDNのhead単位、KDAのchannel単位でdecayが大きく異なることを利用し、入力プロファイルなしでmodel weightからstatic retention horizon Hsを算出する。HsがWmaxを超える長寿命unitだけを保存し、layerごとの保持数が不均一でもpaddingせずragged flat-packする。さらにTP rankごとのpayload偏りをmodel-load時のhead bundle permutationとSTORE/LOAD時のvariable-split all-to-allで均衡化する。省略unitはzero-fillするNRとbounded suffix replayでlocal stateを再構成するWRを使い分ける。","method_overview":"GDNではlearned decay parameterから代表入力a=-0.3、epsilon=1e-3を用いてHs=ln(epsilon)/gを求め、KDAでも同じ考え方をchannel粒度へ適用する。offlineでHs(u)>Wmaxのunitをglobalとして固定mask化し、full-attention KVは常にexactに保持する。STORE時は選択unitのみをlayer offset付きragged bufferへ詰め、TP group全体を共有storage poolとしてrank間payloadを均等化する。LOAD時はretained unitをexact復元し、NRではlocal unitを0、WRでは各local unitのhorizonをpower-of-twoに丸め4〜Wmaxへclampし、その最大windowだけsuffixをscratch stateからreplayしてlocal unitを更新する。","components":[{"name":"Weight-derived retention horizon","description":"入力依存gateを毎request観測せず、model weight由来のdecayからunitごとの保持地平をoffline算出する。GDNはhead、KDAはkey channel粒度で選択し、Wmaxより長いunitだけ永続化する。ShareGPT 32 prefixでstatic horizonとempirical horizonのSpearman中央値はGDN 0.801、KDA 0.856。"},{"name":"Ragged state checkpoint","description":"layerごとに異なるretained count rlだけをoffset付きflat bufferへ保存し、最大幅Rmaxに全layerを合わせるpaddingを避ける。temporal stateはFP32、convolution stateはBF16のまま保持し、圧縮率計算には非圧縮convolution stateも含める。"},{"name":"TP-balanced placement","description":"model load時にlinear-attention head bundleをrank間再配置し、STORE/LOADではTP groupを共有poolとしてvariable-split all-to-allでpacked unitを均等化する。通常のprefill/decodeには追加通信を入れず、通信をcheckpoint store/loadに限定する。"},{"name":"DASC-NR / DASC-WR recovery","description":"NRは省略local unitをzero-fillして追加model computeを発生させない。WRはbounded suffixをzero-initialized scratch stateからreplayしlocal unitだけ更新する。強い圧縮で精度を回復できるがreplay latencyが増える。"}],"system_design":"選択信号、物理buffer layout、TP配置、cache-hit recoveryを一体化し、hybrid prefix cacheの『各checkpointのbytes』を削減する。entry admission/evictionを改善するMarconiやstateを再構成するReplaySSMとは直交し、既存cache managerと組み合わせられる設計である。"},"reservation":{"claim_id":"claim-a412546d473a63a041f2ba8d","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-c0dd780b67cd1678ab06e0b7",
+  "job_id": "job-research-b47f649340a3fc18",
+  "data": {
+    "problem": "Hybrid linear-attention modelはfull-attention層のKV cacheに加え、linear-attention層の境界recurrent stateをprefixごとに保存しないとprefix reuseできない。recurrent stateはtoken処理でin-place更新され過去境界を保持しないため、checkpointを密に置くとHBMを急速に消費し、疎に置くと再prefill/replayが増える。従来のPagedAttentionやKV quantization/evictionはtoken-indexed KVを主対象とし、巨大なpersistent recurrent state checkpointの内部冗長性を直接扱わない。",
+    "novelty": "DASCはGDNのhead単位、KDAのchannel単位でdecayが大きく異なることを利用し、入力プロファイルなしでmodel weightからstatic retention horizon Hsを算出する。HsがWmaxを超える長寿命unitだけを保存し、layerごとの保持数が不均一でもpaddingせずragged flat-packする。さらにTP rankごとのpayload偏りをmodel-load時のhead bundle permutationとSTORE/LOAD時のvariable-split all-to-allで均衡化する。省略unitはzero-fillするNRとbounded suffix replayでlocal stateを再構成するWRを使い分ける。",
+    "method_overview": "GDNではlearned decay parameterから代表入力a=-0.3、epsilon=1e-3を用いてHs=ln(epsilon)/gを求め、KDAでも同じ考え方をchannel粒度へ適用する。offlineでHs(u)>Wmaxのunitをglobalとして固定mask化し、full-attention KVは常にexactに保持する。STORE時は選択unitのみをlayer offset付きragged bufferへ詰め、TP group全体を共有storage poolとしてrank間payloadを均等化する。LOAD時はretained unitをexact復元し、NRではlocal unitを0、WRでは各local unitのhorizonをpower-of-twoに丸め4〜Wmaxへclampし、その最大windowだけsuffixをscratch stateからreplayしてlocal unitを更新する。",
+    "components": [
+      {
+        "name": "Weight-derived retention horizon",
+        "description": "入力依存gateを毎request観測せず、model weight由来のdecayからunitごとの保持地平をoffline算出する。GDNはhead、KDAはkey channel粒度で選択し、Wmaxより長いunitだけ永続化する。ShareGPT 32 prefixでstatic horizonとempirical horizonのSpearman中央値はGDN 0.801、KDA 0.856。"
+      },
+      {
+        "name": "Ragged state checkpoint",
+        "description": "layerごとに異なるretained count rlだけをoffset付きflat bufferへ保存し、最大幅Rmaxに全layerを合わせるpaddingを避ける。temporal stateはFP32、convolution stateはBF16のまま保持し、圧縮率計算には非圧縮convolution stateも含める。"
+      },
+      {
+        "name": "TP-balanced placement",
+        "description": "model load時にlinear-attention head bundleをrank間再配置し、STORE/LOADではTP groupを共有poolとしてvariable-split all-to-allでpacked unitを均等化する。通常のprefill/decodeには追加通信を入れず、通信をcheckpoint store/loadに限定する。"
+      },
+      {
+        "name": "DASC-NR / DASC-WR recovery",
+        "description": "NRは省略local unitをzero-fillして追加model computeを発生させない。WRはbounded suffixをzero-initialized scratch stateからreplayしlocal unitだけ更新する。強い圧縮で精度を回復できるがreplay latencyが増える。"
+      }
+    ],
+    "system_design": "選択信号、物理buffer layout、TP配置、cache-hit recoveryを一体化し、hybrid prefix cacheの『各checkpointのbytes』を削減する。entry admission/evictionを改善するMarconiやstateを再構成するReplaySSMとは直交し、既存cache managerと組み合わせられる設計である。"
+  },
+  "reservation": {
+    "claim_id": "claim-c0dd780b67cd1678ab06e0b7",
+    "worker_id": "scheduled-chat-llm-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

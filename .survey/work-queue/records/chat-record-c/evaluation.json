@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a412546d473a63a041f2ba8d","job_id":"job-research-b47f649340a3fc18","data":{"hardware":"全formal experimentはHopper世代GPUでTP8。Kimi-Linear-48B-A3B-Instruct（20 KDA + 7 full-attention layers）とQwen3-Next-80B-A3B-Instruct（36 GDN + 12 full-attention layers）を評価する。","software":"SGLangへDASCを実装。model weights/executionは非量子化BF16、recurrent checkpointはSGLang既定のFP32 temporal state + BF16 convolution state。基本設定はragged storageとDASC-NR。","methodology":"長文脈品質はRULER全13 subtasksを4k/8k/16kで各subtask-length N=30。end-to-endはAIME 2026 I/II、HMMT Feb 2026、IMO-AnswerBench、GPQA-Diamond、MMLU-Pro、LoCoMo。count-matched Randomを各layer/Wmaxで5 fixed masks作り、同じ圧縮量でdecay-aware rankingを比較する。matched-HBM servingはMMLU-Pro由来prefix-reuse workloadでper-rank state checkpoint budgetを固定し、3 seedsのmean TTFT/throughputを測定。DASC-WRはstrict warm/replay accuracyとfixed-slot suffix refresh costを分離評価する。","scope":"Hybrid attentionの2系統（KDA channel-grained、GDN head-grained）に限定。Wmax 16〜512/1024で圧縮と品質を走査し、TP balance、ragged layout、suffix refresh、INT8 state quantizationとの合成も評価する。pure linear attention/SSM、TP8超、他hardware世代は未検証。"},"reservation":{"claim_id":"claim-a412546d473a63a041f2ba8d","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c0dd780b67cd1678ab06e0b7",
+  "job_id": "job-research-b47f649340a3fc18",
+  "data": {
+    "hardware": "全formal experimentはHopper世代GPUでTP8。Kimi-Linear-48B-A3B-Instruct（20 KDA + 7 full-attention layers）とQwen3-Next-80B-A3B-Instruct（36 GDN + 12 full-attention layers）を評価する。",
+    "software": "SGLangへDASCを実装。model weights/executionは非量子化BF16、recurrent checkpointはSGLang既定のFP32 temporal state + BF16 convolution state。基本設定はragged storageとDASC-NR。",
+    "methodology": "長文脈品質はRULER全13 subtasksを4k/8k/16kで各subtask-length N=30。end-to-endはAIME 2026 I/II、HMMT Feb 2026、IMO-AnswerBench、GPQA-Diamond、MMLU-Pro、LoCoMo。count-matched Randomを各layer/Wmaxで5 fixed masks作り、同じ圧縮量でdecay-aware rankingを比較する。matched-HBM servingはMMLU-Pro由来prefix-reuse workloadでper-rank state checkpoint budgetを固定し、3 seedsのmean TTFT/throughputを測定。DASC-WRはstrict warm/replay accuracyとfixed-slot suffix refresh costを分離評価する。",
+    "scope": "Hybrid attentionの2系統（KDA channel-grained、GDN head-grained）に限定。Wmax 16〜512/1024で圧縮と品質を走査し、TP balance、ragged layout、suffix refresh、INT8 state quantizationとの合成も評価する。pure linear attention/SSM、TP8超、他hardware世代は未検証。"
+  },
+  "reservation": {
+    "claim_id": "claim-c0dd780b67cd1678ab06e0b7",
+    "worker_id": "scheduled-chat-llm-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
