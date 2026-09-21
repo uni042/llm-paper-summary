@@ -23,7 +23,7 @@ class CommonThresholdRoutingTests(unittest.TestCase):
         self.assertIn("candidate_inventory < 50", router)
         self.assertIn("同じ論文処理規約・同じ手順", router)
         self.assertNotIn("同じタスク・同じ手順", router)
-        self.assertIn("新規論文を最低3本", router)
+        self.assertIn("Research / Audit 合計で成功完了を最低3件", router)
         self.assertIn("最低4つの materially distinct", router)
         self.assertNotIn("読解 3 : 探索 1", router)
         self.assertNotIn("overflow research mode", router)
