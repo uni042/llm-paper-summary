@@ -56,7 +56,7 @@ Research / Auditの不変submissionも同様にfast laneを使える。
 1. 5スロットをclaim result指定のrecord bankまたは現行fallbackへ完全保存し、必要な実blob SHAを確定する。
 2. attempt固有descriptorを `.survey/work-queue/submissions/research/<unique>.json` または `audit/<unique>.json` にcommitする。status-only `blocked` / `deferred` / `rejected` も同じsubmission laneへ送る。
 3. このpushで `.github/workflows/survey-submission-fast.yml` が起動し、最新main上で正規submission processorを実行する。
-4. 同名の `.survey/work-queue/results/research/<unique>.json` または `audit/<unique>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。pending中は同一descriptorを上書きせず、正本が許す独立作業を続ける。
+4. 同名の `.survey/work-queue/results/research/<unique>.json` または `audit/<unique>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。pending中は同一descriptorを上書きせず、**同じ論文のresult確認・repair準備・canonical state確認だけを続け、次の論文へは進まない。**
 5. **1 attemptにつきcompleted descriptorは1本だけ**とする。検証失敗後に同じ `job_id / attempt_id` の `repair1`、`repair2` 等を追加して修正しない。
 6. failure resultが `content_validation`、またはjobが `repair_required=true` になった場合は、そのfailure resultがmainへ耐久保存されたことを確認した後、同じjobを `job_ids: [<job_id>]` で指定した新しいclaim requestを発行する。claim fast laneが旧claimを解放し、**新しいclaim_id / attempt_id** と回復済みrecord bankを返すので、指摘されたslotだけを一次資料に基づいて修正して新attemptのdescriptorを提出する。全文読解済み成果を捨てない。
 7. failure resultが `retryable=true` の場合は、同じattemptの別descriptorを作らない。既存の同一descriptorをsubmission laneのbounded recoveryに任せ、同じresultを再確認する。`retryable=false` かつ `repair_required` でもないstate/transport guardは、返された回復指示に従う。
