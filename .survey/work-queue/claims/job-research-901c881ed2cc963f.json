@@ -1,29 +1,26 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-a56fb97ebb61025c85c8af06",
+  "claim_id": "claim-d9517035eb54f87a58a78549",
   "job_id": "job-research-901c881ed2cc963f",
-  "worker_id": "scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-llm-paper-30",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-a56fb97ebb61025c85c8af06",
-  "request_id": "claim-20260920T133600Z-scheduled-chat-llm-survey",
-  "claimed_at": "2026-09-20T13:34:19+00:00",
-  "expires_at": "2026-09-20T13:39:47+00:00",
+  "attempt_id": "attempt-d9517035eb54f87a58a78549",
+  "request_id": "claim-20260921T063205Z-scheduled-chat-llm-paper-30",
+  "claimed_at": "2026-09-21T06:32:52+00:00",
+  "expires_at": "2026-09-21T08:02:52+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-901c881ed2cc963f"
   ],
-  "previous_claim_id": "claim-982ad17a239ebb28dac11e22",
-  "record_bank": "c",
-  "record_bank_root": ".survey/work-queue/records/chat-record-c",
+  "previous_claim_id": "claim-a56fb97ebb61025c85c8af06",
+  "record_bank": "d",
+  "record_bank_root": ".survey/work-queue/records/chat-record-d",
   "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record-c/results.json",
-    "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
-  },
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-20T13:39:47+00:00"
+    "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-d/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+  }
 }
