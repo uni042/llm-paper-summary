@@ -12,14 +12,13 @@
   "source_url": "https://www.semanticscholar.org/paper/7aa5eb3251d3bb21af97751bb7e6154eb03e9645",
   "paper_path": "papers/inference/99-other-inference-systems/2026-bd390438ab65-moe-apex-an-efficient-moe-inference-system-with-adaptive-precision-expert-offloading.md",
   "selection_reason": "Llama.cpp-based MoE offloading system combining adaptive precision, expert prefetch and cost-aware caching; reports 1.34x–9.75x decoding speedups across edge devices.",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T20:49:25+00:00",
-  "completed_at": "2026-09-21T03:37:26+00:00",
   "blocker": "Primary full text could not be safely retrieved in this invocation. Multiple official/authoritative routes confirm the publication and an ACM PDF endpoint exists, but the available retriever could not access the ACM PDF body; no official author-hosted full-text copy was surfaced. No five-slot record was synthesized from metadata or summaries.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-857ff9eb5f959a277c0786e4.json",
   "blocked_attempts": 1,
@@ -32,5 +31,5 @@
     }
   ],
   "last_blocked_at": "2026-09-21T03:37:26+00:00",
-  "retry_not_before": "2026-09-21T08:05:25+00:00"
+  "retry_queued_at": "2026-09-21T14:09:55+00:00"
 }

@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **842本**。
+収録論文: **844本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**842本**。
+推論論文：**844本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -85,5 +85,5 @@
 | [moe](moe/README.md) | 1 |
 | [scheduling](scheduling/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 102 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 104 |
 <!-- survey:auto:end -->

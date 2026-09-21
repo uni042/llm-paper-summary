@@ -12,14 +12,13 @@
   "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
   "paper_path": "papers/inference/99-other-inference-systems/2026-c24278db090c-asymflow-enabling-long-context-llm-serving-via-cpu-gpu-prefill-decode-disaggregation.md",
   "selection_reason": "Recent CPU-GPU prefill/decode disaggregated LLM serving system with shared-memory KV streaming and AMX decode; directly relevant to hierarchical memory, KV offload, and heterogeneous serving.",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T20:36:10+00:00",
-  "completed_at": "2026-09-21T03:14:52+00:00",
   "blocker": "The web retrieval subsystem explicitly reported approximately one call remaining immediately before this claim was assigned. A repository-quality Research record requires reading the primary source in full and materially distinct retrieval attempts when necessary. Starting those retrievals under the explicit run-local limit would risk an incomplete or inferred five-slot record, so this attempt is durably blocked for a later run with fresh retrieval capacity.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-5199bb0beeb669d33a2cf9ca.json",
   "blocked_attempts": 1,
@@ -32,5 +31,5 @@
     }
   ],
   "last_blocked_at": "2026-09-21T03:14:52+00:00",
-  "retry_not_before": "2026-09-21T08:05:25+00:00"
+  "retry_queued_at": "2026-09-21T14:09:55+00:00"
 }

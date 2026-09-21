@@ -8,19 +8,19 @@
       "blocked": 2
     },
     "research": {
-      "ready": 322,
+      "ready": 337,
       "completed": 427,
-      "blocked": 21,
+      "blocked": 5,
       "superseded": 3,
       "deferred": 3,
-      "blocked_permanent": 7,
+      "blocked_permanent": 8,
       "rejected": 2
     }
   },
   "claiming": {
-    "ready_research_audit": 322,
+    "ready_research_audit": 337,
     "actively_claimed": 0,
-    "claimable": 322
+    "claimable": 337
   },
   "next_jobs": [
     {
@@ -66,6 +66,48 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-85f2bc3e024d7c6c",
+      "type": "research",
+      "lane": null,
+      "priority": 100,
+      "canonical_id": "DOI:10.1145/3789240.3829347",
+      "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-3eaac796b1c5-dynamoserve-a-distributed-tiered-memory-system-for-multi-tenant-llm-serving.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-91f6b64d7380c105",
+      "type": "research",
+      "lane": null,
+      "priority": 100,
+      "canonical_id": "DOI:10.1145/3789240.3822568",
+      "title": "Replacing NVMe Staging in LLM Inference with a High-Bandwidth CXL Memory Expander with an On-Device DMA Controller",
+      "source_url": "https://www.semanticscholar.org/paper/7a2499fd38665d8205c513eb3740ddedc3675c5e",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-34514b56228c-replacing-nvme-staging-in-llm-inference-with-a-high-bandwidth-cxl-memory-expander-with-an-on-device-dma-controller.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-c744057cd5d44d88",
+      "type": "research",
+      "lane": null,
+      "priority": 100,
+      "canonical_id": "DOI:10.1145/3832810.3832869",
+      "title": "CARE-MoE: Correlation-Aware Expert Placement and Semantic Equivalence Routing for MoE LLM Inference on Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-9f0ddbf86051-care-moe-correlation-aware-expert-placement-and-semantic-equivalence-routing-for-moe-llm-inference-on-edge-devices.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-c39635b6c8612e08",
       "type": "research",
       "lane": null,
@@ -80,56 +122,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-4ad4e8ccc85f54fc",
+      "job_id": "job-research-69e7666b88522bc6",
       "type": "research",
       "lane": null,
       "priority": 99,
-      "canonical_id": "arXiv:2511.11907",
-      "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
-      "source_url": "https://doi.org/10.1145/3745756.3809234",
-      "paper_path": "papers/inference/99-other-inference-systems/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-00f6a78e028bd698",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2606.27866",
-      "title": "FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models",
-      "source_url": "https://arxiv.org/abs/2606.27866",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.27866-flexmoe-nested-intra-expert-pruning.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-f32c4d7018f358c2",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2607.08780",
-      "title": "Sticky Routing: Training MoE Models for Memory-Efficient Inference",
-      "source_url": "https://arxiv.org/abs/2607.08780",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-5cd2beb9d9cae3d8",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2605.08575",
-      "title": "Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution",
-      "source_url": "https://arxiv.org/abs/2605.08575",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08575-intra-expert-activation-sparsity.md",
+      "canonical_id": "DOI:10.1145/3712285.3759903",
+      "title": "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching",
+      "source_url": "https://doi.org/10.1145/3712285.3759903",
+      "paper_path": "papers/inference/04-moe-offload-expert-cache/2025-diff-moe-priority-driven-differential-expert-caching.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T14:03:48+00:00"
+  "generated_at": "2026-09-21T14:09:55+00:00"
 }

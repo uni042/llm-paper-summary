@@ -12,14 +12,13 @@
   "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
   "paper_path": "papers/inference/99-other-inference-systems/2026-aacd4c06a02a-crossserve-cross-layer-scheduling-for-slo-optimization-in-multi-tenant-llm-serving.md",
   "selection_reason": "Recent multi-tenant LLM serving scheduler jointly optimizing routing, adaptive micro-batching and weighted preemption with strong SLO gains on 32 GPUs.",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T20:36:10+00:00",
-  "completed_at": "2026-09-21T03:34:17+00:00",
   "blocker": "Primary full text could not be safely obtained in this invocation. The DOI/ACM route was inaccessible through the available retriever, title/author searches did not surface an official full-text copy, and the ICPP 2026 official program confirms the paper but provides schedule/program metadata rather than the paper body. No five-slot scientific record was synthesized from snippets or secondary material.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-78bfa110f52c4d7145944751.json",
   "blocked_attempts": 1,
@@ -32,5 +31,5 @@
     }
   ],
   "last_blocked_at": "2026-09-21T03:34:17+00:00",
-  "retry_not_before": "2026-09-21T08:05:25+00:00"
+  "retry_queued_at": "2026-09-21T14:09:55+00:00"
 }

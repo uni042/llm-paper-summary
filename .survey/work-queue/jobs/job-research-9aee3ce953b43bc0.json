@@ -12,14 +12,13 @@
   "source_url": "https://doi.org/10.1145/3821219",
   "paper_path": "papers/inference/99-other-inference-systems/2026-96d0bc7068f2-adaptivekv-accelerating-kv-cache-offloading-with-a-bandwidth-adaptive-memory-allocation-mechanism.md",
   "selection_reason": "Directly targets KV-cache offloading with bandwidth-adaptive memory allocation, matching the repository's hierarchical-memory and KV-offload scope.",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T20:39:10+00:00",
-  "completed_at": "2026-09-21T03:35:45+00:00",
   "blocker": "Primary paper full text could not be safely obtained in this invocation. Exact-title/DOI searches surfaced the official implementation repository and bibliographic/abstract pages, but no accessible official paper body. The implementation artifact is useful corroborating material but cannot substitute for the required full-paper reading, so no five-slot scientific record was synthesized.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-66008c151c6d337dba2d9737.json",
   "blocked_attempts": 1,
@@ -32,5 +31,5 @@
     }
   ],
   "last_blocked_at": "2026-09-21T03:35:45+00:00",
-  "retry_not_before": "2026-09-21T08:05:25+00:00"
+  "retry_queued_at": "2026-09-21T14:09:55+00:00"
 }

@@ -21,16 +21,21 @@
   "created_at": "2026-09-20T23:10:45+00:00",
   "blocker": "Primary full text could not be safely retrieved in this invocation. The official arXiv abstract for arXiv:2608.08878 was reachable, but official arXiv HTML/full-text retrieval failed in the available retrieval environment. Third-party reproductions and summaries were discoverable, but workflow v10 requires reading the primary source in full, so no five-slot research record was synthesized from them.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-3014c2fc28c94c7bd8c38b07.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-21T00:06:05+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-21T09:32:21+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-21T00:06:05+00:00",
       "reason": "Primary full text could not be safely retrieved in this invocation. Official arXiv full-text routes were inaccessible in the available retrieval environment. The official arXiv abstract and third-party reproductions/summaries were discoverable, but they do not satisfy the workflow requirement to read the primary source in full; no five-slot record was synthesized from them."
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-21T09:32:21+00:00",
+      "reason": "Primary full text could not be safely retrieved in this invocation. The official arXiv abstract for arXiv:2608.08878 was reachable, but official arXiv HTML/full-text retrieval failed in the available retrieval environment. Third-party reproductions and summaries were discoverable, but workflow v10 requires reading the primary source in full, so no five-slot research record was synthesized from them."
     }
   ],
-  "last_blocked_at": "2026-09-21T00:06:05+00:00",
-  "retry_queued_at": "2026-09-21T07:05:25+00:00",
-  "completed_at": "2026-09-21T09:32:21+00:00"
+  "last_blocked_at": "2026-09-21T09:32:21+00:00",
+  "completed_at": "2026-09-21T09:32:21+00:00",
+  "retry_not_before": "2026-09-21T15:09:55+00:00"
 }
