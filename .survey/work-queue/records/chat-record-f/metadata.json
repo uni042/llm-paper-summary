@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-6569c1c278418b9ab09d495e",
-  "job_id": "job-research-5cd2beb9d9cae3d8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6569c1c278418b9ab09d495e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6569c1c278418b9ab09d495e","job_id":"job-research-5cd2beb9d9cae3d8","data":{"canonical_id":"arXiv:2605.08575","arxiv_id":"2605.08575","doi":"10.48550/arXiv.2605.08575","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution","summary":"既存の事前学習済みMoEには、選択済みexpert内部にも大きなactivation sparsityが残ることを8モデル（1B〜400B）で示し、vLLMのfused MoE経路へthreshold-based sparse executionを統合した研究。モデル再学習や活性化関数変更なしに最大約90%のexpert内sparsityを利用し、MoE layerで最大2.5倍、end-to-endで最大1.2倍の高速化を報告する。","list_summary":"既存MoEのexpert内activation sparsityをvLLMへ統合し、再学習なしでMoE layer最大2.5倍・end-to-end最大1.2倍を実現する。","authors":["Jongseok Park","Sunga Kim","Zhenyu Gu","Ion Stoica","Alvin Cheung"],"authors_affiliations":"University of California, Berkeley; Advanced Micro Devices, Inc.","published":"2026-05-09","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-05-09)","lineage":"MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM","topics":["MoE推論","activation sparsity","vLLM","Triton","GPU sparse execution"],"importance":"inter-expert sparsityをさらに高める代わりに、既存MoEの選択済みexpert内部の冗長性を実運用推論基盤で利用する新しい最適化軸を示す。特に大規模MoEほどsparsity耐性が高く、training-freeで適用可能な点が重要。","implementation":"vLLM開発版へTriton製のcustom sparse activation kernelとfused sparse up-down projectionを組み込む。完全なkernel sourceは論文Appendix Bに掲載。","hardware_evaluation":"AMD MI355X、NVIDIA H200、NVIDIA RTX4090。Qwen3.5-35B-A3BおよびQwen3.5-122B-A10BでMoE layer性能、MI355X/H200でend-to-end性能を評価。","quality_effect":"5 benchmark平均でbaseline scoreの95%を維持する最大sparsityをcutoffと定義。Qwen3.5-35B-A3Bでは85% target sparsityまで95%基準を維持。","source":"https://arxiv.org/abs/2605.08575","sources":["https://arxiv.org/abs/2605.08575","https://arxiv.org/html/2605.08575v1"],"code":null,"last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary manuscript","references_total":56},"reservation":{"claim_id":"claim-6569c1c278418b9ab09d495e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
