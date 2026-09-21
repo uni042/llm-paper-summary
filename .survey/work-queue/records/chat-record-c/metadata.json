@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1c06a80a4dff61d0bbd67b24","job_id":"job-research-3123e052604efe34","data":{"canonical_id":"arXiv:2608.30295","arxiv_id":"2608.30295","doi":null,"openreview_id":"u7dlwgKstN","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"CateKV: On Sequential Consistency for Long-Context LLM Inference Acceleration","summary":"長文LLMのKVキャッシュでは、全ヘッドを同じ方式で圧縮すると精度を失いやすく、全KVを保持して検索するとメモリを減らせない。CateKVはプリフィルとデコードを通じて注意先が安定する逐次的一貫ヘッドと、注意分布が変化する適応ヘッドが存在することを利用する。参照データ上の変動係数スコアでヘッド型をモデル単位に固定し、一貫ヘッドではプリフィル時に選んだ少数の重要KVだけを保持、適応ヘッドでは大半のKVを保持して必要なら検索法を併用する。A100-80GB実機でRULER、LongBench、NIAHを評価し、フル注意に近い精度を維持しながら単一入力でメモリ最大2.72倍削減、デコード2.18倍高速化、バッチ推論でスループット3.96倍を達成する。","list_summary":"プリフィルからデコードまで注意先が安定するヘッドだけKVを強く削減し、動的ヘッドは大半を保持するハイブリッドKVキャッシュで、精度を保ちながら長文推論のメモリ・デコード・バッチ性能を改善する。","authors":["Haoyun Jiang","Haolin Li","Jianwei Zhang","Fei Huang","Qiang Hu","Minmin Sun","Shuai Xiao","Yong Li","Junyang Lin","Jiangchao Yao"],"authors_affiliations":"Shanghai Jiao Tong University; Alibaba Group; Fudan University","published":"2025-07-13","publication":"Proceedings of the 42nd International Conference on Machine Learning (ICML 2025), PMLR 267:27569-27585","publication_type":"Conference paper","publication_status":"Published","lineage":"KV cache compression / sparse attention / long-context inference","topics":["KVキャッシュ圧縮","長文推論","疎注意","注意ヘッド分類","デコード高速化"],"importance":"プリフィル時の注意パターンをデコード時のKV保持方針へ利用し、ヘッドごとに圧縮強度を分けることで、従来の一律削除と全保持検索のトレードオフを緩和する。","hardware_evaluation":"単一NVIDIA A100 80GB GPUで実機評価。","quality_effect":"近似的KV削減手法だが、LongBenchではKVを42%まで減らして平均精度低下0.3%以内、Llama-3の高圧縮設定でもRULER-128K -0.25点、LongBench -0.06点。","source":"https://qianghu-huber.github.io/qianghuhomepage/paper/icml.pdf","sources":["https://qianghu-huber.github.io/qianghuhomepage/paper/icml.pdf","https://proceedings.mlr.press/v267/jiang25e.html","https://arxiv.org/abs/2608.30295"],"code":"https://github.com/haoyun-jiang/CateKV","implementation":"公式GitHubでヘッドマスク生成、RULER精度評価、単一A100効率評価用スクリプトを公開。","last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-1c06a80a4dff61d0bbd67b24","worker_id":"scheduled-chat-llm-paper-worker-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-a412546d473a63a041f2ba8d",
+  "job_id": "job-research-b47f649340a3fc18",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a412546d473a63a041f2ba8d",
+    "worker_id": "scheduled-chat-llm-paper-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

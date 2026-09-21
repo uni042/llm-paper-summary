@@ -2,38 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-1c06a80a4dff61d0bbd67b24",
-  "job_id": "job-research-3123e052604efe34",
-  "data": {
-    "hardware": "全実験を単一NVIDIA A100 80GB GPUで実行する。効率評価ではフル注意が単一A100で処理可能な最大入力長を基準にし、Llama-3で500K、Phi-3で180K、Yiで650Kトークンを使用する。",
-    "software": "LLaMA-3-8B-Instruct-1048K、Phi-3-Mini-128K、Llama-3.1-8B、Yi-9B-200K、Qwen2.5-7Bを評価。比較対象はStreamingLLM、SnapKV、PyramidKV、Quest、ShadowKV、DuoAttention、フル注意。MInferenceとの統合も評価する。",
-    "methodology": "RULER 128Kの12タスク各96サンプル、LongBenchの21タスク、NIAH 20K〜1Mを使う。ヘッド識別用参照集合はRULER Variable Trackingを模した128K×100サンプルで試験集合と分離する。RULERの標準設定は適応ヘッド比r=0.4、保持率η=1.0、一貫ヘッド予算2048でKV約41%。LongBenchでは一貫ヘッド予算512でKVを42%へ削減する。効率評価は単一入力と40K固定長の最大バッチを測る。",
-    "evaluation_setup": "精度比較では削除法・ヘッド分類法とKVキャッシュサイズを揃え、検索法とは適応ヘッドに統合して計算予算を揃える。チャンクサイズが必要な方式は8に統一する。単一入力ではメモリ使用量とデコード遅延、バッチでは最大バッチサイズとスループットを測定する。",
-    "baselines": [
-      "Full Attention",
-      "StreamingLLM",
-      "SnapKV",
-      "PyramidKV",
-      "Quest",
-      "ShadowKV",
-      "DuoAttention",
-      "MInferenceとの統合"
-    ],
-    "metrics": [
-      "RULER平均精度",
-      "LongBench平均スコア",
-      "NIAH検索成功",
-      "KVキャッシュメモリ",
-      "デコード遅延",
-      "最大バッチサイズ",
-      "スループット"
-    ],
-    "scope": "実機A100単一GPUでの長文デコード評価であり、複数GPU分散推論や他GPU世代の性能は直接測っていない。対象モデルは7B〜9B級を中心とし、ヘッド分類の一般性は複数モデルで確認するが、巨大MoE等への直接一般化は未評価。",
-    "evidence": "著者公式PDFのMethod、Section 4、Appendix Bを全文確認し、Table 1〜4、Figure 5〜8の設定と結果を記録した。"
-  },
+  "attempt_id": "attempt-a412546d473a63a041f2ba8d",
+  "job_id": "job-research-b47f649340a3fc18",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-1c06a80a4dff61d0bbd67b24",
-    "worker_id": "scheduled-chat-llm-paper-worker-00",
+    "claim_id": "claim-a412546d473a63a041f2ba8d",
+    "worker_id": "scheduled-chat-llm-paper-30",
     "worker_kind": "scheduled_chat"
   }
 }
