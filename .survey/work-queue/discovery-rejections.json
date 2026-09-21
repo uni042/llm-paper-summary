@@ -7,9 +7,9 @@
   ],
   "updated_at": "scheduled-20260921T0330JST",
   "submission_count": 5,
-  "research_terminal_rejection_count": 9,
-  "rejection_observation_count": 60,
-  "rejection_record_count": 59,
+  "research_terminal_rejection_count": 10,
+  "rejection_observation_count": 61,
+  "rejection_record_count": 60,
   "ignored_without_identity": 0,
   "records": {
     "id:DOI:10.1007/978-3-031-99489-0_6": {
@@ -913,6 +913,28 @@
       "run_key": "scheduled-20260921T0330JST",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
+    },
+    "id:arXiv:2608.15299": {
+      "primary_identity": "id:arXiv:2608.15299",
+      "identity_tokens": [
+        "id:arXiv:2608.15299",
+        "title:maple moe adaptive plugandplay layerwise expert allocation",
+        "url:https://arxiv.org/abs/2608.15299"
+      ],
+      "canonical_id": "arXiv:2608.15299",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation",
+      "source_url": "https://arxiv.org/abs/2608.15299",
+      "rejection_reason": "Primary-source full text could not be safely retrieved through materially distinct official routes in this retry. The official arXiv abstract metadata was discoverable, but direct official arXiv HTML and PDF fetches both returned DisabledError in the runtime. Search also found third-party renderings/copies, but workflow policy requires full reading from a primary/official source, so no five-slot record was inferred from those materials.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-21T14:09:55+00:00",
+      "last_rejected_at": "2026-09-21T14:09:55+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-3930d1453c4e909421448ada.json",
+      "origin": "research_blocked_permanent"
     },
     "id:arXiv:2608.22613": {
       "primary_identity": "id:arXiv:2608.22613",
