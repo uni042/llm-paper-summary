@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-d9517035eb54f87a58a78549",
-  "job_id": "job-research-901c881ed2cc963f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d9517035eb54f87a58a78549",
-    "worker_id": "scheduled-chat-llm-paper-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d9517035eb54f87a58a78549","job_id":"job-research-901c881ed2cc963f","data":{"canonical_id":"arXiv:2608.26650","arxiv_id":"2608.26650","doi":"10.48550/arXiv.2608.26650","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs","summary":"MetaNetは、少数のタスク支援例から各MoE層のルーティング統計を集約し、層ごとのエキスパート保持閾値と弱い有界ルーティングバイアスを予測するタスク条件付きコントローラである。DeepSeek-MoE-16B-Chatのバックボーン・エキスパート・元ルータを凍結したまま、保守設定では平均active expertsを6.00から3.61へ40%削減しMMLU精度0.489（固定k=6は0.474）、積極設定では2.28へ62%削減して0.438を得る。MMLU学習済みコントローラはC-Eval-Fullへ再学習なしで転移し平均2.90 experts、精度0.386を示す。","list_summary":"支援集合から層別エキスパート数と弱いルーティング補正を推定し、凍結DeepSeek-MoEで平均active expertsを最大62%削減するタスク条件付きMetaNet。","authors":["Rongfeng Wang","Shichao Weng","Zhiqiang Wang","Xinyu Liu","Yang Yi","Peilong Zhou","Hongwei Tang"],"authors_affiliations":"Institute of Computing Technology, Chinese Academy of Sciences; Nanjing College, University of Chinese Academy of Sciences; Nanjing Institute of Information Superbahn; University of Chinese Academy of Sciences; School of Advanced Interdisciplinary Sciences, University of Chinese Academy of Sciences; Dobot Robotics","published":"2026-08-27","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-08-27)","lineage":"Mixture-of-Experts / adaptive expert computation / layer-wise expert allocation / task-conditioned routing","topics":["MoE推論","適応的エキスパート計算","層別エキスパート割当","メタ学習","ルーティング圧縮"],"importance":"固定top-kやオフライン層別割当では捉えられないタスク依存・深さ依存の冗長性を、凍結ルータを維持した支援集合ベースの制御として実装し、エキスパート活性化量と精度の可変運用点を提供する。","implementation":"DeepSeek-MoE-16B-Chat上でMetaNetのみを学習する研究実装。論文はコードとcontroller artifactsを公開予定としているが、本文に公開リポジトリURLは記載されていない。","hardware_evaluation":"DeepSeek主評価はNVIDIA RTX 4090 24GBを3枚、bfloat16、device_map=auto。","quality_effect":"保守設定では固定k=6以上のMMLU精度を維持しつつ40%のactive-expert削減、積極設定では62%削減と引き換えに約3.7ポイントの精度低下。","source":"https://arxiv.org/abs/2608.26650","sources":["https://arxiv.org/abs/2608.26650","https://arxiv.org/pdf/2608.26650"],"code":null,"last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary manuscript","references_total":44},"reservation":{"claim_id":"claim-d9517035eb54f87a58a78549","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
