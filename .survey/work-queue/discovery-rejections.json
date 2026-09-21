@@ -7,9 +7,9 @@
   ],
   "updated_at": "scheduled-20260921T0330JST",
   "submission_count": 5,
-  "research_terminal_rejection_count": 13,
-  "rejection_observation_count": 64,
-  "rejection_record_count": 63,
+  "research_terminal_rejection_count": 14,
+  "rejection_observation_count": 65,
+  "rejection_record_count": 64,
   "ignored_without_identity": 0,
   "records": {
     "id:DOI:10.1007/978-3-031-99489-0_6": {
@@ -209,6 +209,28 @@
       "run_key": "scheduled-20260921T0330JST",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
       "origin": "discovery_candidate_rejection"
+    },
+    "id:DOI:10.1145/3712285.3759903": {
+      "primary_identity": "id:DOI:10.1145/3712285.3759903",
+      "identity_tokens": [
+        "id:DOI:10.1145/3712285.3759903",
+        "title:diffmoe efficient batched moe inference with prioritydriven differential expert caching",
+        "url:https://doi.org/10.1145/3712285.3759903"
+      ],
+      "canonical_id": "DOI:10.1145/3712285.3759903",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching",
+      "source_url": "https://doi.org/10.1145/3712285.3759903",
+      "rejection_reason": "Primary full text remains unavailable after a fresh authoritative-route retry. The official SC25 schedule and Qinggang Wang author page confirm Diff-MoE and its SC 2025 publication, but neither exposed the manuscript body. Fresh title/DOI search surfaced secondary summaries only. A DBLP search snippet suggested an arXiv identifier, but direct verification showed arXiv:2505.09107 is an unrelated astronomy paper, so it was rejected as an identity mismatch. No five-slot record was synthesized from secondary material.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-21T19:28:13+00:00",
+      "last_rejected_at": "2026-09-21T19:28:13+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-ada5ca04d7ea755ed68c8a30.json",
+      "origin": "research_blocked_permanent"
     },
     "id:DOI:10.1145/3722215": {
       "primary_identity": "id:DOI:10.1145/3722215",
