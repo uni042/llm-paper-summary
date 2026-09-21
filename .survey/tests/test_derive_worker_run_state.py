@@ -67,7 +67,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             result = mod.derive(root, request("scheduled-chat-30", "0830"))
             self.assertEqual(result["work_mode"], "maintenance")
-            self.assertEqual(result["gate"]["stop_reasons"], ["scheduled_0830_maintenance_route"])
+            self.assertEqual(result["gate"]["decision"], "CONTINUE")
+            self.assertEqual(result["gate"]["required_action"], "RUN_0830_MAINTENANCE")
 
     def test_unavailable_durable_transports_are_hard_stop(self):
         with tempfile.TemporaryDirectory() as td:
@@ -80,9 +81,74 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             value = request()
             value["runtime_condition"] = "durable_transports_unavailable"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 2
+            value["runtime_condition_detail"] = "two failed durable transport recovery attempts"
             result = mod.derive(root, value)
             self.assertEqual(result["gate"]["decision"], "STOP_RUN")
             self.assertIn("all_remaining_work_blocked_after_fallback_consideration", result["gate"]["stop_reasons"])
+
+    def test_single_transient_runtime_failure_is_downgraded(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "github_read_unavailable"
+            value["runtime_condition_confirmed"] = False
+            value["runtime_condition_attempts"] = 1
+            result = mod.derive(root, value)
+            self.assertEqual(result["runtime_condition"], "none")
+            self.assertIsNotNone(result["runtime_condition_ignored_reason"])
+
+    def test_discovery_precheck_pending_is_tracked(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-1.json",
+                {"request_id": "pre-1", "run_key": "run-1"},
+            )
+            result = mod.derive(root, request())
+            self.assertTrue(result["discovery_precheck_result_pending"])
+            self.assertEqual(result["gate"]["required_action"], "WAIT_FOR_DISCOVERY_PRECHECK_RESULT")
+
+    def test_prior_run_unresolved_submission_remains_pending(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            old = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=2)
+            write_json(
+                root,
+                ".survey/work-queue/claim-results/old.json",
+                {
+                    "worker_id": "scheduled-chat-00",
+                    "assignments": [{"attempt_id": "attempt-old", "claimed_at": old.isoformat()}],
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/submissions/research/attempt-old.json",
+                {"attempt_id": "attempt-old", "job_id": "job-old"},
+            )
+            result = mod.derive(root, request())
+            self.assertTrue(result["submission_result_pending"])
+            self.assertIn("attempt-old", result["pending_attempt_ids"])
 
     def test_request_rejects_cross_worker_slot(self):
         with tempfile.TemporaryDirectory() as td:
