@@ -80,7 +80,7 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertEqual(result["research_minimum_completions"], 3)
         self.assertEqual(result["research_audit_completed_this_invocation"], 1)
         self.assertEqual(result["research_quota_remaining"], 2)
-        self.assertEqual(result["required_action"], "CONTINUE_WORK")
+        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
 
     def test_discovery_minimum_four_rounds_is_preserved(self):
         result = mod.decide(make_args(
