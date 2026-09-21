@@ -2,16 +2,16 @@
   "schema_version": 1,
   "workflow_version": 10,
   "ok": false,
-  "attempt_id": "attempt-c50e899082e6964d08cf60af",
+  "attempt_id": "attempt-f5d2573a29c5c9a28ddebb1d",
   "job_id": "job-research-a5d6d7156c3ffec6",
   "job_type": "research",
   "job_status": null,
   "artifact": null,
-  "submission": ".survey/work-queue/submissions/research/attempt-c50e899082e6964d08cf60af.json",
+  "submission": ".survey/work-queue/submissions/research/attempt-f5d2573a29c5c9a28ddebb1d.json",
   "error": "RuntimeError: identity delta failed: Traceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 195, in <module>\n    main()\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 183, in main\n    print(prepare(args.paper))\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 125, in prepare\n    assert_no_conflicts(record)\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 95, in assert_no_conflicts\n    raise ValueError(f\"Identifier conflict: {ident} -> {hit[0]}\")\nValueError: Identifier conflict: arXiv:2602.21548 -> arXiv:2602.21548\n",
-  "processed_at": "2026-09-21T13:45:14+00:00",
-  "failure_class": "state_or_transport_guard",
-  "retryable": false,
+  "processed_at": "2026-09-21T14:03:01+00:00",
+  "failure_class": "post_validation_processing_failure",
+  "retryable": true,
   "recovery_failures": 1,
-  "last_recovery_failed_at": "2026-09-21T13:45:14+00:00"
+  "last_recovery_failed_at": "2026-09-21T14:03:01+00:00"
 }

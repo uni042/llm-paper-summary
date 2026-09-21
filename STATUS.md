@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 23:02:43 JST**
+> 自動生成: **2026-09-21 23:03:07 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -134,9 +134,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3789240.3829159` — DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O / worker `scheduled-chat-00`
-  - claim: **09-21 23:01:21 JST** / heartbeat: **—** / lease expiry: **09-22 00:31:21 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a5d6d7156c3ffec6.json`
+- `DOI:10.1145/3806645.3807820` — Dynamo-MoE: Accelerating Sparse Large Model Inference with Dynamic Parallelization / worker `scheduled-chat-00`
+  - claim: **09-21 23:02:55 JST** / heartbeat: **—** / lease expiry: **09-22 00:32:55 JST**
+  - evidence: `.survey/work-queue/claims/job-research-43a2b5f54de86439.json`
 
 #### Audit
 

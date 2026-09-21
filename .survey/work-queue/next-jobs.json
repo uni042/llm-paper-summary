@@ -38,14 +38,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-43a2b5f54de86439",
+      "job_id": "job-research-a5d6d7156c3ffec6",
       "type": "research",
       "lane": null,
       "priority": 100,
-      "canonical_id": "DOI:10.1145/3806645.3807820",
-      "title": "Dynamo-MoE: Accelerating Sparse Large Model Inference with Dynamic Parallelization",
-      "source_url": "https://www.semanticscholar.org/paper/76e42a42cea4ff264bf70534480254d6f2099a1a",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-b781449c0bd1-dynamo-moe-accelerating-sparse-large-model-inference-with-dynamic-parallelization.md",
+      "canonical_id": "DOI:10.1145/3789240.3829159",
+      "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
+      "source_url": "https://www.semanticscholar.org/paper/fd83b6daf9fd534328820dc99a9a6f9ee5b956b8",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-3f706ddceb51-dualpath-accelerating-agentic-llm-inference-by-harvesting-disaggregated-kv-cache-storage-i-o.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T13:45:14+00:00"
+  "generated_at": "2026-09-21T14:03:02+00:00"
 }
