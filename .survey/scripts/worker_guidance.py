@@ -18,7 +18,7 @@ DEFAULT_PROFILE = {
         "次の操作を開始する前に、今回の処理が正常終了したことを確認する。",
     ],
     "recovery": [
-        "エラーになった操作を飛ばして別経路へ進まない。",
+        "エラーになった操作を飛ばして別経路へ進まない。単一操作の失敗だけでrun全体を終了しない。",
         "エラー文・入力ファイル・現在の状態を確認して入力を修正し、同じ正規スクリプトを再実行する。",
         "状態ファイルや結果ファイルを手作業で成功扱いに書き換えない。",
     ],
@@ -48,7 +48,7 @@ PROFILES = {
         "next": [
             "標準出力の recovered_count / recovered[] を確認する。",
             "recovered_count>0 の場合は各 recovered[].job_id と research_jobs_added を確認し、refresh_queue_snapshot.py で next-jobs.json を更新する。",
-            "next-jobs.json に ready Research/Audit が出たら claim_worker_with_banks.py の正規claim経路で1件だけ取得する。",
+            "next-jobs.json に ready Research/Audit が出ても固定work_modeを優先する。Research/Audit runだけclaim_worker_with_banks.pyで1件取得し、Discovery runではclaimせず探索を続ける。",
             "回収できなかったsubmissionは手編集せず、対応する result の error / next_action / recovery_steps を確認する。",
         ],
         "recovery": [
@@ -62,7 +62,7 @@ PROFILES = {
         "task": "Discovery反映後を含む次ジョブ一覧の再生成",
         "next": [
             ".survey/work-queue/next-jobs.json の counts / next_jobs を確認する。",
-            "ready Research/Audit がある場合は claim_worker_with_banks.py の正規claim経路で max_jobs=1 の割り当てを取得する。",
+            "ready Research/Audit がある場合も固定work_modeを確認する。Research/Audit runだけmax_jobs=1でclaimし、Discovery runではqueue反映確認後に探索を続ける。",
             "Research/Audit がなく candidate在庫補充が必要なら、新しい探索軸を schema v3 process_discovery_precheck.py から開始する。",
             "next-jobs.json を直接編集してResearch jobを追加・選択しない。",
         ],
@@ -311,7 +311,7 @@ def run_guided(main_func: Callable[[], Any], *, script: str | None = None) -> An
         if code == 0:
             emit_done(script)
         else:
-            emit_error(script, f"終了コード {code} で停止しました。引数または前提手順を確認してください。")
+            emit_error(script, f"この操作は終了コード {code} で失敗しました。run全体は終了せず、引数または前提手順を修復してください。")
         raise
     except BaseException as exc:
         emit_error(script, f"{type(exc).__name__}: {exc}")
@@ -320,7 +320,7 @@ def run_guided(main_func: Callable[[], Any], *, script: str | None = None) -> An
     code = _exit_code(value)
     post_ok, post_reason = _postcheck(script)
     if code != 0:
-        emit_error(script, f"終了コード {code} で停止しました。")
+        emit_error(script, f"この操作は終了コード {code} で失敗しました。run全体は終了せず正規回復を続けてください。")
     elif not post_ok:
         emit_error(script, post_reason or "結果ファイルが失敗を報告しました。")
     else:
