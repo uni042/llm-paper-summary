@@ -2,36 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-885c7b91c948ae3e1ef817e0",
-  "job_id": "job-research-f2c000a0ecb53008",
-  "data": {
-    "hardware": "AWS p4d.24xlarge、NVIDIA A100 80GB×8、NVSwitch 600GB/s。OPT-13Bは1 GPU、OPT-175Bは8 GPUでpipeline/tensor parallel degreeを8/2に設定。",
-    "models": "OPT-13B、OPT-175Bに加え評価ではLlama-13B、Llama-3-70Bも使用。model parametersとintermediate activationsはfp16。",
-    "workloads": "Alpaca 52K、ShareGPT 90K、BookCorpus 11K booksを混合し、replacement samplingで20K requestsを作成。35%をBookCorpus由来の長promptとし、arrivalはPoisson 8 requests/s、各request最大2048 generated tokens。",
-    "baselines": [
-      "ORCA",
-      "vLLM",
-      "FastGen",
-      "Sarathi-Serve",
-      "Oracle goodput scheduler",
-      "AccelGen ablations: /Chunk, /Order, /Batch"
-    ],
-    "metrics": [
-      "throughput requests/s or tokens/s",
-      "goodput",
-      "iteration-level SLO attainment",
-      "JCT SLO attainment",
-      "response latency/JCT",
-      "GPU compute utilization",
-      "KV cache utilization",
-      "scheduler overhead"
-    ],
-    "evaluation_setup": "vLLMを基盤にblock size 32 tokens。OPT-13B KVC 12GB、OPT-175Bは各GPU 33.75GB。pivot forward sizeはOPT-13B 768、OPT-175B 1280付近でGPU throughput飽和をprofileしてtoken budgetへ使用。",
-    "scope": "trace-driven real experimentsで短長promptとheterogeneous SLOを再現するが、主hardwareはA100 p4d環境でありH100等の異なるcompute/memory比は直接評価しない。workload構成、long-prompt比率、arrival rateのsensitivityは評価する。"
-  },
+  "attempt_id": "attempt-a00d8b41e72274b2614df863",
+  "job_id": "job-research-be16d214d5c628cd",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-885c7b91c948ae3e1ef817e0",
-    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-a00d8b41e72274b2614df863",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }

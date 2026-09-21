@@ -2,19 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-885c7b91c948ae3e1ef817e0",
-  "job_id": "job-research-f2c000a0ecb53008",
-  "data": {
-    "limitations": "主評価はA100 p4d環境とOPT/Llama系model、合成した20K-request traceであり、H100等のcompute/memory比やproduction固有arrival correlationへの一般化は追加検証が必要。schedulerはGPU saturation profile、KVC block accounting、SLO情報を必要とし、複雑なselection処理自体にもoverheadがある。",
-    "implementation_status": "vLLMのblock-based KV cacheとexecution engineを基盤にAccelGen schedulerを実装し、ORCA、vLLM、FastGen、Sarathi-Serveと実機比較する。公開repository URLは本文から確認できなかったが、arXiv preprint 2503.13737でalgorithmと実装条件が公開されている。",
-    "relation_to_existing": "ORCA/vLLMはcontinuous batchingとpaged KV cache、FastGen/Sarathi-Serveはprompt chunkingでGPU utilizationを改善する。AccelGenはこれらの上にheterogeneous iteration-level SLOとKVC需要をschedulerの明示的resource dimensionとして追加する。",
-    "differences": "従来chunkingは主にforward token budgetを埋めるが、AccelGenはbatchの最厳SLOからtoken budgetを変え、SLOが近いrequestをまとめる。さらにGPU token容量とKVC block容量を同時に最適化し、長promptの同時数制限とTG継続によるKVC早期解放まで含める。",
-    "research_positioning": "LLM serving scheduler研究のうち、SLO-aware scheduling、prompt chunking、KV-cache resource managementを統合する系統に位置する。offloadingやmodel compressionではなく、online batch formationによって既存GPU memoryとcomputeを効率化する。",
-    "practical_takeaway": "短promptと長promptが混在するservingでは固定token budget+FCFSだけではSLOもKVCも扱えない。requestごとのdeadlineをiteration-level priorityへ落とし、GPU computeとKV cacheを2次元resourceとしてbatchを組み、長promptを動的chunk化する設計がgoodput向上に有効である。"
-  },
+  "attempt_id": "attempt-a00d8b41e72274b2614df863",
+  "job_id": "job-research-be16d214d5c628cd",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-885c7b91c948ae3e1ef817e0",
-    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-a00d8b41e72274b2614df863",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }
