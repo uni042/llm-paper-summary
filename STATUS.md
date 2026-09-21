@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 12:47:03 JST**
+> 自動生成: **2026-09-21 13:32:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **330** |
-| 未claim Research job | **330** |
-| 直近24hの検証済みResearch収録 | **68** |
-| 最終検証済みResearch収録 | **09-21 12:44:25 JST（2分前）** |
+| 未claim Research job | **329** |
+| 直近24hの検証済みResearch収録 | **65** |
+| 最終検証済みResearch収録 | **09-21 12:44:25 JST（48分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **6** | **4** | **0** | **0** | **0** | — |
+| Research | **11** | **6** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **15** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **26** | **7** | **5** | **0** | **0** | **0** | **3** |
+| Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
+| 合計 | **11** | **7** | **5** | **0** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -120,46 +120,7 @@
 
 ### Discovery
 
-- **09-21 07:30:15 JST** job `job-02e6f104a8a47df1` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260921T0730JST-hourly00-discovery-repository-refs-01.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0730JST-hourly00-discovery-repository-refs-01.json`
-  - 探索軸: repository structured references curation
-- **09-21 07:03:32 JST** job `job-06d1d333bbd93236` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0702JST-hourly00-discovery-forward-specoffload-02.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0702JST-hourly00-discovery-forward-specoffload-02.json`
-  - 探索軸: forward citations of SpecOffload heterogeneous CPU-GPU LLM inference
-- **09-21 07:07:59 JST** job `job-d35d779262e92333` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260921T0707JST-hourly00-discovery-backward-repair-01b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0707JST-hourly00-discovery-backward-repair-01b.json`
-  - 探索軸: repository structured backward references
-- **09-21 07:11:14 JST** job `job-03c06d8367dd20c5` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260921T0708JST-hourly00-discovery-forward-sequoia-07b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0708JST-hourly00-discovery-forward-sequoia-07b.json`
-  - 探索軸: forward citations of Sequoia hardware-aware speculative decoding
-- **09-21 07:11:26 JST** job `job-d6ac1ce03302d648` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260921T0709JST-hourly00-discovery-forward-kvlink-03b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0709JST-hourly00-discovery-forward-kvlink-03b.json`
-  - 探索軸: forward citations of KVLink efficient KV cache reuse
-- **09-21 07:11:38 JST** job `job-e4f8f4196ff22878` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260921T0709JST-hourly00-discovery-forward-lmcache-04b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0709JST-hourly00-discovery-forward-lmcache-04b.json`
-  - 探索軸: forward citations of LMCache enterprise-scale KV cache layer
-- **09-21 07:11:49 JST** job `job-ccd6957cbc0e3f2b` / 候補 **5件**
-  - result: `.survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-distserve-08b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0710JST-hourly00-discovery-forward-distserve-08b.json`
-  - 探索軸: forward citations of DistServe disaggregated prefill-decode LLM serving
-- **09-21 07:12:01 JST** job `job-6f6155b9ee5b5eac` / 候補 **4件**
-  - result: `.survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-pagedattention-05b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0710JST-hourly00-discovery-forward-pagedattention-05b.json`
-  - 探索軸: forward citations of PagedAttention/vLLM memory-efficient LLM serving
-- **09-21 07:12:13 JST** job `job-6227c77115c9655a` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260921T0710JST-hourly00-discovery-forward-smoothquant-06b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0710JST-hourly00-discovery-forward-smoothquant-06b.json`
-  - 探索軸: forward citations of SmoothQuant efficient LLM inference quantization
-- **09-21 07:15:12 JST** job `job-7330f8a70eb3403a` / 候補 **0件**
-  - result: `.survey/work-queue/results/20260921T0712JST-hourly00-discovery-backward-09.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260921T0712JST-hourly00-discovery-backward-09.json`
-  - 探索軸: repository structured backward references batch 2
+- 検証済み成功なし。
 
 ### 直近タスク
 
@@ -212,8 +173,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2608.04974` — AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks / worker `scheduled-chat-llm-30`
+  - claim: **09-21 13:32:31 JST** / heartbeat: **—** / lease expiry: **09-21 15:02:31 JST**
+  - evidence: `.survey/work-queue/claims/job-research-68365ee603a68033.json`
 
 #### Audit
 
