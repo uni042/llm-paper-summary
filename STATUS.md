@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 13:47:51 JST**
+> 自動生成: **2026-09-21 13:48:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **325** |
 | 未claim Research job | **324** |
 | 直近24hの検証済みResearch収録 | **67** |
-| 最終検証済みResearch収録 | **09-21 13:40:58 JST（6分前）** |
+| 最終検証済みResearch収録 | **09-21 13:40:58 JST（7分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -175,7 +175,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.15533` — DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding / worker `scheduled-chat-llm-30`
-  - claim: **09-21 13:45:33 JST** / heartbeat: **—** / lease expiry: **09-21 15:15:33 JST**
+  - claim: **09-21 13:48:20 JST** / heartbeat: **—** / lease expiry: **09-21 15:18:20 JST**
   - evidence: `.survey/work-queue/claims/job-research-ba5c7828e1d46d9a.json`
 
 #### Audit
