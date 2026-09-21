@@ -21,16 +21,21 @@
   "created_at": "2026-09-20T20:39:10+00:00",
   "blocker": "Primary full text remains unavailable after a fresh retry. Exact-title/DOI search confirms AdaptiveKV in ACM TACO 23(3), DOI 10.1145/3821219, and exposes abstract-level metadata; ResearchGate explicitly offers only a request-full-text path. No official ACM body or author-hosted identical manuscript was accessible in the retrieval runtime. No five-slot record was synthesized from abstract-only sources.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-0c63016806fef732ff3579cd.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-21T03:35:45+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-21T14:43:34+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-21T03:35:45+00:00",
       "reason": "Primary paper full text could not be safely obtained in this invocation. Exact-title/DOI searches surfaced the official implementation repository and bibliographic/abstract pages, but no accessible official paper body. The implementation artifact is useful corroborating material but cannot substitute for the required full-paper reading, so no five-slot scientific record was synthesized."
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-21T14:43:34+00:00",
+      "reason": "Primary full text remains unavailable after a fresh retry. Exact-title/DOI search confirms AdaptiveKV in ACM TACO 23(3), DOI 10.1145/3821219, and exposes abstract-level metadata; ResearchGate explicitly offers only a request-full-text path. No official ACM body or author-hosted identical manuscript was accessible in the retrieval runtime. No five-slot record was synthesized from abstract-only sources."
     }
   ],
-  "last_blocked_at": "2026-09-21T03:35:45+00:00",
-  "retry_queued_at": "2026-09-21T14:09:55+00:00",
-  "completed_at": "2026-09-21T14:43:34+00:00"
+  "last_blocked_at": "2026-09-21T14:43:34+00:00",
+  "completed_at": "2026-09-21T14:43:34+00:00",
+  "retry_not_before": "2026-09-21T20:28:13+00:00"
 }

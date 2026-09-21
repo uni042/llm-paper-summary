@@ -12,7 +12,7 @@
   "source_url": "https://www.semanticscholar.org/paper/76e42a42cea4ff264bf70534480254d6f2099a1a",
   "paper_path": "papers/inference/99-other-inference-systems/2026-b781449c0bd1-dynamo-moe-accelerating-sparse-large-model-inference-with-dynamic-parallelization.md",
   "selection_reason": "token sorting・on-demand expert loadingとworkload-aware TP/EP切替をpipeline overlapで統合するMoE推論framework。vLLM比TTFT最大6.75倍削減、TPOT 1.59倍、throughput 1.5倍改善。",
-  "status": "blocked",
+  "status": "ready",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -36,6 +36,5 @@
     }
   ],
   "last_blocked_at": "2026-09-21T14:03:47+00:00",
-  "completed_at": "2026-09-21T14:03:47+00:00",
-  "retry_not_before": "2026-09-21T15:09:55+00:00"
+  "retry_queued_at": "2026-09-21T19:28:13+00:00"
 }
