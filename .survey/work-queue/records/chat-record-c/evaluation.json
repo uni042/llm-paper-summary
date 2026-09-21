@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0efd061bb6cafbfb3405b15a",
-  "job_id": "job-research-ba5c7828e1d46d9a",
-  "data": {
-    "hardware": "RTX 4090（24GB、1008GB/s）とH200 NVL（141GB、4.8TB/s）でカーネル評価。端から端までの評価はH200 NVL。",
-    "software": "GDN、KDA、RWKV6向けTritonカーネル。比較対象はtorch.compile、Fast Linear Attention、利用可能なGDN/KDAではvLLM密再帰カーネル。サービング試作はvLLMベースでCUDAグラフを使用。",
-    "methodology": "バッチ64/128/256/512で1トークン復号を測定し、Nsight ComputeでDRAM読書量を確認。M=2〜64のマージ間隔、状態サイズ128MiB〜1024MiB、分割再生の有無を感度分析し、128トークンの混合精度ロールアウトで数値誤差を検証。端から端まではQwen3.6-35B-A3BのGDNとKimi-Linear-48B-A3B-InstructのKDAを同一精度・バッチ・CUDAグラフ条件で128トークン生成しTPOTを比較。",
-    "scope": "最適化対象は自己回帰復号の再帰状態更新で、プリフィルは評価対象外。端から端までの統合はGDNとKDAのみでRWKV6はカーネル評価に限定される。大バッチ・大状態で書戻しが主要費用になる条件を主対象とする。"
-  },
+  "attempt_id": "attempt-9d4d602eeae0e0f4c19ccc36",
+  "job_id": "job-research-73f2d3c7c23735bb",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0efd061bb6cafbfb3405b15a",
+    "claim_id": "claim-9d4d602eeae0e0f4c19ccc36",
     "worker_id": "scheduled-chat-llm-30",
     "worker_kind": "scheduled_chat"
   }
