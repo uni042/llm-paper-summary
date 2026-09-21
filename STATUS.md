@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 22:54:37 JST**
+> 自動生成: **2026-09-21 23:01:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **323** |
 | 未claim Research job | **322** |
 | 直近24hの検証済みResearch収録 | **23** |
-| 最終検証済みResearch収録 | **09-21 22:42:38 JST（11分前）** |
+| 最終検証済みResearch収録 | **09-21 22:42:38 JST（18分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -134,8 +134,8 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3789240.3829159` — DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O / worker `scheduled-chat-30`
-  - claim: **09-21 22:43:24 JST** / heartbeat: **—** / lease expiry: **09-22 00:13:24 JST**
+- `DOI:10.1145/3789240.3829159` — DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O / worker `scheduled-chat-00`
+  - claim: **09-21 23:01:21 JST** / heartbeat: **—** / lease expiry: **09-22 00:31:21 JST**
   - evidence: `.survey/work-queue/claims/job-research-a5d6d7156c3ffec6.json`
 
 #### Audit
