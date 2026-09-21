@@ -15,7 +15,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 from paper_path_resolver import resolve_paper_path  # noqa: E402
-from record_bank_config import BANK_ROOTS, SLOT_NAMES, accepted_slot_paths  # noqa: E402
+from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 KINDS = {"research", "audit"}
@@ -241,7 +241,7 @@ def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str
             raise ValueError(f"record_slots[{index}] must declare slot={slot}")
         path_text = _safe_rel(ref.get("path"), f"record_slots[{index}].path")
         expected_path = f"{expected_root}/{slot}.json"
-        if path_text not in accepted_slot_paths(bank, slot):
+        if path_text != expected_path:
             raise ValueError(f"slot {slot} must use fixed path {expected_path}")
         blob_sha = ref.get("blob_sha")
         if not isinstance(blob_sha, str) or not re.fullmatch(r"[0-9a-f]{40}", blob_sha):
