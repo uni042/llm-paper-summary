@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 13:49:10 JST**
+> 自動生成: **2026-09-21 13:49:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **325** |
+| 収録候補論文 | **324** |
 | 未claim Research job | **324** |
-| 直近24hの検証済みResearch収録 | **67** |
-| 最終検証済みResearch収録 | **09-21 13:40:58 JST（8分前）** |
+| 直近24hの検証済みResearch収録 | **68** |
+| 最終検証済みResearch収録 | **09-21 13:49:15 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **325** |
+| canonical_id確認済みの一意な候補論文 | **324** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **325** |
+| 非終端Research job合計 | **324** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **6** | **4** | **0** | **1** | **0** | — |
+| Research | **14** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **13** | **7** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **14** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-21 13:49:15 JST** [research] `arXiv:2608.15533` — DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding
+  - job: `.survey/work-queue/jobs/job-research-ba5c7828e1d46d9a.json`
+  - result: `.survey/work-queue/results/research/attempt-0efd061bb6cafbfb3405b15a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-0efd061bb6cafbfb3405b15a.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md`
 - **09-21 13:40:58 JST** [research] `arXiv:2606.17107` — Models Take Notes at Prefill: KV Cache Can Be Editable and Composable
   - job: `.survey/work-queue/jobs/job-research-a748d42a4b0082c7.json`
   - result: `.survey/work-queue/results/research/attempt-f13484682295d4ae46534672.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-d67054767790b8a100027a66.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-d67054767790b8a100027a66.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2608.30386-dasc-decay-aware-state-compression-for-hybrid-linear-attention-serving.md`
-- **09-21 10:18:38 JST** [research] `arXiv:2608.30295` — CateKV: On Sequential Consistency for Long-Context LLM Inference Acceleration
-  - job: `.survey/work-queue/jobs/job-research-3123e052604efe34.json`
-  - result: `.survey/work-queue/results/research/attempt-1c06a80a4dff61d0bbd67b24.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-1c06a80a4dff61d0bbd67b24.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.30295-catekv-on-sequential-consistency-for-long-context-llm-inference-acceleration.md`
 
 ### Audit
 
@@ -173,10 +173,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.15533` — DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding / worker `scheduled-chat-llm-30`
-  - claim: **09-21 13:48:20 JST** / heartbeat: **—** / lease expiry: **09-21 15:18:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ba5c7828e1d46d9a.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -196,7 +194,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **325** |
+| ready | **324** |
 
 ### 候補の重複・識別情報欠損
 
@@ -216,7 +214,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **876** |
+| inference/training/survey配下の論文Markdown実体 | **877** |
 
 ### immutable submissionの未照合
 
@@ -224,8 +222,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **347** |
-| └ Research | **161** |
+| 成功result未照合のimmutable submission | **346** |
+| └ Research | **160** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
