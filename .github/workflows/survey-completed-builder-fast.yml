@@ -1,0 +1,89 @@
+name: Survey completed descriptor builder fast lane
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/completed-submission-requests/*.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-completed-builder-main
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build validated completed descriptors
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-completed-builder[bot]'
+          git config user.email 'survey-completed-builder[bot]@users.noreply.github.com'
+
+          mapfile -t requests < <(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep '^.survey/work-queue/completed-submission-requests/.*\.json$' || true)
+          if [ "${#requests[@]}" -eq 0 ]; then
+            echo 'No completed-submission request in triggering commit.'
+            exit 0
+          fi
+
+          for request in "${requests[@]}"; do
+            request_id="$(basename "$request" .json)"
+            kind="$(jq -er '.kind' "$request")"
+            attempt_id="$(jq -er '.attempt_id' "$request")"
+            job_id="$(jq -er '.job_id' "$request")"
+            record_bank="$(jq -er '.record_bank' "$request")"
+            paper_path="$(jq -r '.paper_path // empty' "$request")"
+            expected_blob_sha="$(jq -r '.expected_blob_sha // empty' "$request")"
+
+            case "$kind" in research|audit) ;; *) echo "unsupported kind: $kind" >&2; exit 1 ;; esac
+            output=".survey/work-queue/submissions/${kind}/${request_id}.json"
+            args=(
+              python .survey/scripts/prepare_completed_submission.py
+              --repo-root .
+              --kind "$kind"
+              --attempt-id "$attempt_id"
+              --job-id "$job_id"
+              --record-bank "$record_bank"
+              --output "$output"
+            )
+            if [ -n "$paper_path" ]; then args+=(--paper-path "$paper_path"); fi
+            if [ -n "$expected_blob_sha" ]; then args+=(--expected-blob-sha "$expected_blob_sha"); fi
+            "${args[@]}"
+          done
+
+          git add .survey/work-queue/submissions/research .survey/work-queue/submissions/audit
+          if git diff --cached --quiet; then
+            echo 'Descriptors already exist unchanged.'
+            exit 0
+          fi
+          git commit -m 'survey-submission: build validated completed descriptors'
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Builder push race on attempt ${attempt}; refusing to hand-merge generated descriptors." >&2
+            sleep $((attempt * 2))
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo 'Generated descriptor conflicts with newer main; a fresh request is required.' >&2
+              exit 1
+            fi
+          done
+          echo 'Failed to publish generated completed descriptors after 5 retries.' >&2
+          exit 1
