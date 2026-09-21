@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 09:33:27 JST**
+> 自動生成: **2026-09-21 09:34:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -165,7 +165,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2607.18081` — SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs / worker `scheduled-chat-llm-paper-worker-30`
-  - claim: **09-21 09:30:20 JST** / heartbeat: **—** / lease expiry: **09-21 11:00:20 JST**
+  - claim: **09-21 09:33:53 JST** / heartbeat: **—** / lease expiry: **09-21 11:03:53 JST**
   - evidence: `.survey/work-queue/claims/job-research-bb3c83e7ecc75edd.json`
 
 #### Audit
