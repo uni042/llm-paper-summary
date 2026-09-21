@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-c42378bb84cf93cfa6eb6efb",
-  "job_id": "job-research-97a84b19cac36f28",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c42378bb84cf93cfa6eb6efb",
-    "worker_id": "scheduled-chat-llm-paper-worker-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c42378bb84cf93cfa6eb6efb","job_id":"job-research-97a84b19cac36f28","data":{"hardware":"DeepSeek-V4-Flashを2台のNVIDIA DGX SparkでTP=2実行。各rankから外部Mooncake storeへ100 Gb/s RDMA接続。Mooncakeは128 GiB segment、ローカルSSDも使用。","software":"LMCacheとvLLMの固定版へBSR制御経路を実装。LMCache chunk size 256 tokens。MTP-off 167 tensors、MTP-on 170 tensors。","methodology":"まず従来whole-plan経路でW=0とし、32K/128K/256KプレフィックスについてL1容量を段階的に増やし、完全再利用が初めて成功する容量と実測L1ピークを測る。次に同一engine epoch・no-resumeのBSR sweepでW=32、L1=1 GiB、MTP-offを固定し、32768〜524032 tokensまで6点を測る。256KではW=8/16/32/64のRWS法則を確認する。524K MTP-onで異種状態を再検証し、遠隔障害、遠隔+SSD欠損、片rank障害の失敗閉鎖動作を確認する。512K SSDでは読み込み並列度1対4を比較する。成功条件は期待cached prefix、意図したtier counter、canonical output hash一致、登録状態geometry一致、両TP rank健全性。","scope":"外部KV/実行状態を保持する階層キャッシュから、長いプレフィックスをローカル実行状態へ復元する際の一時ステージング容量と安全性。","models":["DeepSeek-V4-Flash"],"datasets_benchmarks":["32K-524K token synthetic/controlled restore prefixes","512K SSD restore A/B","failure matrix"],"baselines":["pinned upstream LMCache whole-plan restoration","BSR W=8/16/32/64","SSD load concurrency 1 vs 4"],"metrics":["L1 restoration working set MiB/rank","external state GiB/rank","cached tokens","TTFT","canonical output hash","TP health","RDMA throughput"]},"reservation":{"claim_id":"claim-c42378bb84cf93cfa6eb6efb","worker_id":"scheduled-chat-llm-paper-worker-30","worker_kind":"scheduled_chat"}}
