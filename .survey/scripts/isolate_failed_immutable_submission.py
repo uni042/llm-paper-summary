@@ -177,6 +177,23 @@ def isolate(repo_root: Path, submission: Path) -> dict:
     except Exception as exc:
         return _state_failure(repo_root, submission, descriptor, exc)
 
+    # The publication quality gate is still content validation.  A failure here
+    # requires edited record prose and therefore a fresh repair claim/attempt;
+    # retrying the same immutable descriptor cannot change its exact slot blobs.
+    try:
+        processor.paper_quality_gate.validate_rendered_paper(
+            repo_root,
+            descriptor["paper_path"],
+            rendered_content,
+        )
+    except Exception as quality_exc:
+        return _isolate_validation_failure(
+            repo_root,
+            submission,
+            descriptor,
+            quality_exc,
+        )
+
     classified = _persist_failure_classification(
         repo_root,
         submission,
