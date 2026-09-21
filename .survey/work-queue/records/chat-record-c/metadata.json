@@ -4,7 +4,46 @@
   "slot": "metadata",
   "attempt_id": "attempt-29cb222c40356af503452ebc",
   "job_id": "job-research-d21a98f99faeb4fe",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2608.01785",
+    "arxiv_id": "2608.01785",
+    "doi": "10.48550/arXiv.2608.01785",
+    "title": "HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving",
+    "authors": [
+      "Yuning Zhang",
+      "Dong Yuan"
+    ],
+    "summary": "単一GPU上でテキスト・音声・画像など異なる出力経路を持つオムニモデルを同時提供すると、共有段階の待ち時間と下流生成器とのGPU資源競合が結び付き、要求種別ごとの初回応答SLOが非対称に崩れる。HorizonServeは、要求ごとの残余余裕度を用いた締切保護、短経路と長経路の共有段階ローテーション、長経路流入上限、メモリ帯域圧力に応じた共有段階SM数の上限制御を一つのフィードバックループに統合する。vLLM-Omni上の実装で、単純な締切順序付けやMPSだけでは扱えない時間方向と空間方向の干渉を同時に制御する。",
+    "source": "https://arxiv.org/abs/2608.01785",
+    "sources": [
+      "https://arxiv.org/abs/2608.01785",
+      "https://arxiv.org/html/2608.01785"
+    ],
+    "code": null,
+    "publication": "arXiv",
+    "publication_type": "preprint",
+    "published": "2026-08-03",
+    "publication_status": "arXiv v1",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "topics": [
+      "オムニモデル推論",
+      "マルチモーダル推論基盤",
+      "SLO指向スケジューリング",
+      "GPU共有",
+      "単一GPUサービング"
+    ],
+    "implementation": "vLLM-Omni v0.16.0を基盤に実装し、スケジューリング境界へ要求分類・締切情報・一時的なキュー可視性制御を挿入する。空間制御にはCUDA Green Contexts、圧力観測にはPyNVML、段階間制御状態には共有メモリを利用する。",
+    "hardware_evaluation": "実機評価。RTX 6000 Ada（48GB GDDR6 ECC、142 SM、960GB/s）とRTX PRO 6000（96GB GDDR7 ECC、188 SM、1792GB/s）の2種類の単一GPU環境を用いる。",
+    "quality_effect": "モデル重みや生成アルゴリズム自体は変更しないため、論文では出力品質の近似劣化を導入する方式ではない。評価の主眼は初回応答遅延、SLO達成率、TPOT、帯域圧力、制御オーバーヘッドであり、意味品質の改善・劣化は主評価対象ではない。",
+    "references": [],
+    "references_checked_at": "2026-09-21",
+    "references_source": "arXiv HTMLのReferences節を全文確認",
+    "references_total": 80,
+    "last_checked": "2026-09-21"
+  },
   "reservation": {
     "claim_id": "claim-29cb222c40356af503452ebc",
     "worker_id": "scheduled-chat-llm-survey-fastlane-verify",
