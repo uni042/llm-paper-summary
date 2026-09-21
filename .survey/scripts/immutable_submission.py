@@ -210,13 +210,12 @@ def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str
         reason = descriptor.get("reason")
         if not isinstance(reason, str) or not reason.strip():
             raise ValueError(f"{status} status requires a non-empty reason")
-        if any(field in descriptor for field in ("record_bank", "record_slots", "expected_blob_sha")):
+        if any(
+            field in descriptor
+            for field in ("record_bank", "record_slots", "paper_path", "expected_blob_sha")
+        ):
             raise ValueError(f"{status} is a status-only immutable descriptor; omit record transport fields")
-        paper_path = _safe_paper_path(descriptor.get("paper_path"), required=False)
-        if paper_path is not None:
-            out["paper_path"] = paper_path
-        else:
-            out.pop("paper_path", None)
+        out.pop("paper_path", None)
         out["reason"] = reason.strip()
         return out
 
