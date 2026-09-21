@@ -2,12 +2,93 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-bbde76993ff3b20c8de768b0",
-  "job_id": "job-research-50400bb966b2b5a1",
-  "data": {},
+  "attempt_id": "attempt-ee1dbc63016bc978f29dcb47",
+  "job_id": "job-research-a5d6d7156c3ffec6",
+  "data": {
+    "canonical_id": "DOI:10.1145/3789240.3829159",
+    "arxiv_id": "2602.21548",
+    "doi": "10.1145/3789240.3829159",
+    "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
+    "authors": [
+      "Yongtong Wu",
+      "Shaoyuan Chen",
+      "Rilin Huang",
+      "Yixuan Tan",
+      "Yinmin Zhong",
+      "Mingxing Zhang",
+      "Xin Jin",
+      "Panpan Huang"
+    ],
+    "summary": "DualPathは、多輪エージェント推論で再利用する巨大なKVキャッシュを外部ストレージから読む際、プリフィル側のストレージNICだけが飽和しデコード側NICが遊休する構造的な帯域偏りを解消する。従来のストレージ→プリフィル経路に加え、ストレージ→デコード→計算ネットワークRDMA→プリフィルという第二経路を設け、全ノードのストレージ帯域を一つの資源として利用する。さらに計算NICを中心にGPU入出力を統一して通信優先度を隔離し、GPU負荷・ストレージ読出し待ち・KV読出し経路を共同で調整する。生産エージェント軌跡を用いたHopper GPUクラスタ評価では、オフライン推論を最大1.87倍高速化し、オンラインではサービス品質目標を維持したまま平均1.96倍の処理容量を達成した。",
+    "published": "2026-08-17",
+    "publication": "ACM SIGCOMM 2026",
+    "publication_type": "conference",
+    "publication_status": "published",
+    "primary_category": "cs.DC",
+    "cross_list_categories": [],
+    "sources": [
+      {
+        "type": "conference_doi",
+        "url": "https://doi.org/10.1145/3789240.3829159"
+      },
+      {
+        "type": "primary_arxiv",
+        "url": "https://arxiv.org/abs/2602.21548"
+      },
+      {
+        "type": "primary_full_text",
+        "url": "https://arxiv.org/html/2602.21548v2"
+      }
+    ],
+    "implementation": {
+      "available": false,
+      "url": null,
+      "language": null,
+      "notes": "論文はDeepSeekの社内推論基盤上に約5K行の変更として実装したと記載するが、DualPath固有の公開実装URLは本文で提示していない。"
+    },
+    "code": "",
+    "last_checked": "2026-09-21",
+    "references": [
+      {
+        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+        "canonical_id": null
+      },
+      {
+        "title": "Splitwise: Efficient Generative LLM Inference Using Phase Splitting",
+        "canonical_id": null
+      },
+      {
+        "title": "LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management",
+        "canonical_id": "arXiv:2410.00428"
+      },
+      {
+        "title": "PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications",
+        "canonical_id": null
+      },
+      {
+        "title": "Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot",
+        "canonical_id": null
+      },
+      {
+        "title": "Strata: Hierarchical Context Caching for Long Context Language Model Serving",
+        "canonical_id": "arXiv:2508.18572"
+      },
+      {
+        "title": "KVPR: Efficient LLM Inference with I/O-aware KV Cache Partial Recomputation",
+        "canonical_id": null
+      },
+      {
+        "title": "TailorKV: A Hybrid Framework for Long-context Inference via Tailored KV Cache Optimization",
+        "canonical_id": null
+      }
+    ],
+    "references_checked_at": "2026-09-21",
+    "references_source": "arXiv:2602.21548v2 primary full-text reference section",
+    "references_total": 8
+  },
   "reservation": {
-    "claim_id": "claim-bbde76993ff3b20c8de768b0",
-    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-ee1dbc63016bc978f29dcb47",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }
