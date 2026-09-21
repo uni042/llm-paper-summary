@@ -51,6 +51,13 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("6/10", precheck)
         self.assertIn("10分周期", router)
 
+    def test_run_state_snapshots_require_unique_request_ids(self):
+        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
+        guidance = (SCRIPTS / "worker_guidance.py").read_text(encoding="utf-8")
+        self.assertIn("各再判定snapshotでは新しい一意な `request_id`", router)
+        self.assertIn("resultが既に存在するrequest_idを再利用", guidance)
+        self.assertIn("同じrequest_idを待機", guidance)
+
     def test_worker_manual_forbids_disabling_scheduled_task_on_failure(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         self.assertIn("Scheduled Task自体を一時停止・無効化してはならない", router)
