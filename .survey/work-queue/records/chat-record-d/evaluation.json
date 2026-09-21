@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-b27cb54145ccd14973517f2a",
-  "job_id": "job-research-3b1c7287727937a1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b27cb54145ccd14973517f2a",
-    "worker_id": "scheduled-chat-llm-paper-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b27cb54145ccd14973517f2a","job_id":"job-research-3b1c7287727937a1","data":{"hardware":"すべての圧縮後調整をNVIDIA H200 140GB×2枚で実行し、各GPUの電力、利用率、使用メモリをnvidia-smiで公称1秒間隔により計測する。自動デバイス配置では各GPU 110GiB上限。","software":"Qwen3-30B-A3B-Instruct-2507とgemma-4-26B-A4B-itを使用。圧縮法はQwen3でREAP削除とHC-SMoE統合、Gemma4でAIMER削除とM-SMoE統合。評価はlm-evaluation-harnessとvLLM、貪欲復号、温度0、乱数種42。調整はAdamW、学習率5e-5、重み減衰0、線形減衰、ウォームアップ比0.03、最大系列512、bf16。","methodology":"各圧縮法についてエキスパートパラメータ保持率50%、62.5%、75%を作り、28ベンチマークを一般推論・QA、数学、コード、思考連鎖、多肢選択の5群で評価する。調整データはC4の非空3000例、1エポック、デバイス当たりバッチ2、勾配蓄積4で実効バッチ8。目的は因果言語モデル微調整と教師知識蒸留を比較し、更新範囲はルータのみ、ルータ＋上位8/16/50エキスパート、ルータ＋全エキスパート、全パラメータ。性能は28タスクのマクロ平均と圧縮損失差の回復率、費用は有効GPU時間・GPUメモリGiB時間・GPUエネルギーで測る。追加頑健性評価ではC4を1024例へ削減し、さらに同数のOpenR1-Mathへ分布を変える。","scope":"主結果は2つの約30B級指示調整MoE、4圧縮法、3保持率に限定され、3000例という小予算での局所的回復を対象とする。28タスクは幅広いが、長期継続学習や本番配備コストそのものを測る研究ではない。行動代理指標も追加するが包括的安全性評価ではない。"},"reservation":{"claim_id":"claim-b27cb54145ccd14973517f2a","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
