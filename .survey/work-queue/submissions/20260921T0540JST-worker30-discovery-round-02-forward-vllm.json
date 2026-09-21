@@ -1,9 +1,0 @@
-{
-  "operation": "submit_discovery_round",
-  "candidates": [
-    {"title":"FairCache: Demystifying Cache-Induced Unfairness in Multi-Tenant Large Language Model Serving","source_url":"https://www.semanticscholar.org/paper/69e16a381bb1a483fb9a5e494bc895ad74bb412a","canonical_id":"DOI:10.1109/TPDS.2026.3729988","doi":"10.1109/TPDS.2026.3729988","year":2026,"published":"2026-11-01","reason":"Direct LLM serving systems contribution: jointly accounts for compute, cache memory and I/O fairness, redistributes shared-prefix prefill cost, and adds fairness-aware cache management for multi-tenant context caching.","priority":95},
-    {"title":"CALSI: Context-Aware Layer Skipping Inference for On-Device LLM Serving","source_url":"https://www.semanticscholar.org/paper/b55f24c3e3257011b8dc6ea308c4f54242ab7e53","canonical_id":"DOI:10.1109/TMC.2026.3697502","doi":"10.1109/TMC.2026.3697502","year":2026,"published":"2026-10-01","reason":"Direct on-device LLM inference system using token/context-aware layer skipping plus delayed KV-cache computation; reports up to 24.1% latency reduction on real devices.","priority":94}
-  ],
-  "discovery_stats": {"run_key":"2026-09-21T05:32:01+09:00","round":"round-02","axis":"forward citations of vLLM PagedAttention","trigger":"scheduled_worker","evaluated_count":20,"selected_count":2},
-  "discovery_precheck": {"request_id":"20260921T053201JST-worker30-forward-vllm-04","result_path":".survey/work-queue/discovery-precheck/results/20260921T053201JST-worker30-forward-vllm-04.json","receipt":"sha256:c3ad886027fd1c9a460d43d3a5a2d1dc0a06b3bba34c8ed2246d5032e4344992"}
-}

@@ -1,9 +1,0 @@
-{
-  "operation":"submit_discovery_round",
-  "candidates":[
-    {"title":"AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding","source_url":"https://arxiv.org/abs/2609.09823","canonical_id":"arXiv:2609.09823","arxiv_id":"2609.09823","year":2026,"published":"2026-09-09","reason":"Very recent GPU-PIM LLM decoding systems work that targets nonblocking execution and decode efficiency; directly relevant to heterogeneous inference acceleration.","priority":98},
-    {"title":"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference","source_url":"https://arxiv.org/abs/2609.07786","canonical_id":"arXiv:2609.07786","arxiv_id":"2609.07786","year":2026,"published":"2026-09-07","reason":"Recent adaptive cascade-routing method explicitly targeting efficient LLM inference; relevant to conditional computation and runtime routing.","priority":94}
-  ],
-  "discovery_stats":{"run_key":"2026-09-21T05:01:46+09:00","round":"round-07","axis":"OpenAlex recent speculative decoding inference serving","trigger":"scheduled_worker","evaluated_count":20,"selected_count":2},
-  "discovery_precheck":{"request_id":"20260921T0518JST-worker00-openalex-spec-10","result_path":".survey/work-queue/discovery-precheck/results/20260921T0518JST-worker00-openalex-spec-10.json","receipt":"sha256:86ca0695289d01e40203d04d5df7573b7dc45680f1f027aa113b54c266a15e74"}
-}
