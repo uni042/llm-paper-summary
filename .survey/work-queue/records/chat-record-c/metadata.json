@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-e608a3ec3c8dd0be717a2842",
-  "job_id": "job-research-a5925137e7067bb8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e608a3ec3c8dd0be717a2842",
-    "worker_id": "scheduled-chat-llm-paper-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e608a3ec3c8dd0be717a2842","job_id":"job-research-a5925137e7067bb8","data":{"canonical_id":"DOI:10.1145/3838177.3841726","arxiv_id":null,"doi":"10.1145/3838177.3841726","openreview_id":null,"title":"MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson","summary":"NVIDIA Jetsonの統合メモリでは、CPU側のロボット処理とGPU側のLLM推論が同じメモリ制御器を共有し、計算資源に余裕があっても帯域競合で実時間処理が締切を落とす。本研究はメモリ制御器圧力とロボット処理の余裕時間・締切違反を同時に監視し、危険時だけ背景LLMを短時間停止するMCSchedを提案する。Jetson Orin Nano Super上でカメラと点群処理の締切違反を大幅に減らし、LLMスループット低下を約2%以内に抑える。","list_summary":"Jetson統合メモリの隠れた帯域競合を監視し、締切危険時だけ背景LLMを一時停止してロボット処理を保護する軽量実行時スケジューラ。","authors":["Teng Mei","Chengxuan Pei","Marco Canini","Yunming Xiao"],"authors_affiliations":"The Chinese University of Hong Kong, Shenzhen; KAUST","published":"2026-09-17","publication":"APSys 2026","publication_type":"Workshop paper","publication_status":"Published","lineage":"edge LLM serving / unified-memory contention / real-time scheduling","topics":["エッジLLM","統合メモリ","メモリ制御器","実時間スケジューリング","ロボティクス"],"importance":"CPUとGPUの利用率だけでは見えない統合メモリ帯域競合を実時間LLM共存環境の第一級資源として扱い、既存LLM実装を変更せず締切保護できる。","hardware_evaluation":"Jetson Orin Nano Super。6コアArm CPU、Ampere世代GPU、8GB LPDDR5統合メモリ、理論帯域102GB/s。","quality_effect":"LLM自体の生成品質は評価せず、背景推論スループットをほぼ維持しながらロボット処理の締切違反率と末尾遅延を削減する。","source":"https://doi.org/10.1145/3838177.3841726","sources":["https://yunmingxiao.github.io/publication/26apsys-mcsched/apsys26-mcsched.pdf","https://doi.org/10.1145/3838177.3841726"],"code":null,"implementation":"ROS 2のコールバック境界から実行時間・余裕時間・締切違反を取得し、JetsonのACTMONからメモリ制御器圧力を取得する。危険時はSIGSTOP/SIGCONTでLLMプロセス群を停止・再開する試作実装。","last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary-reference-section","references_total":33},"reservation":{"claim_id":"claim-e608a3ec3c8dd0be717a2842","worker_id":"scheduled-chat-llm-paper-00","worker_kind":"scheduled_chat"}}
