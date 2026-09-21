@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 13:39:38 JST**
+> 自動生成: **2026-09-21 13:40:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -175,7 +175,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2606.17107` — Models Take Notes at Prefill: KV Cache Can Be Editable and Composable / worker `scheduled-chat-llm-30`
-  - claim: **09-21 13:37:00 JST** / heartbeat: **—** / lease expiry: **09-21 15:07:00 JST**
+  - claim: **09-21 13:39:52 JST** / heartbeat: **—** / lease expiry: **09-21 15:09:52 JST**
   - evidence: `.survey/work-queue/claims/job-research-a748d42a4b0082c7.json`
 
 #### Audit
