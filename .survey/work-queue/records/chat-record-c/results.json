@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-3746826b8b41edef9f51adf4",
-  "job_id": "job-research-b865a4d050e3e427",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3746826b8b41edef9f51adf4",
-    "worker_id": "scheduled-chat-llm-paper-worker-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-3746826b8b41edef9f51adf4","job_id":"job-research-b865a4d050e3e427","data":{"key_results":["公開LooGLE評価では、PolarKVは3FSに対してTTFTを47〜53%削減した。KV占有量が大きいshortdep_clozeとlongdep_qaでは、3FSとMooncakeの双方に対して41〜58%削減した。","LooGLEとSCBenchを合わせると、PolarKVは3FSに対してTTFTを47〜58%、Mooncakeに対して3〜58%削減した。小さいshortdep_qaではMooncakeが大部分のKVを保持できるため差は11%に縮む。","論文全体の評価ではTTFT削減は最大80%に達する。これは外部KVがプリフィル再計算を置換でき、かつPolarKVがストレージ容量とメモリ帯域を同時に使える条件で大きい。","本番Coding Agentのカナリア展開では、問い合わせ遅延がP90で49.73秒から24.91秒、P50で13.88秒から6.81秒、平均で21.42秒から12.34秒へ低下した。"],"interpretation":"小さいKV作業集合ではMooncakeの928GBメモリだけでも再利用対象を保持できるため、PolarKVの大容量ストレージ層の優位性は小さい。作業集合が大きくなるとMooncakeは容量不足で追い出しが増え、3FSは分散ファイルシステムのメタデータ・複製などの追加処理とメモリ未活用が効く。一方PolarKVは156GBの高速メモリを帯域層として使いつつ21.4TBのストレージ容量を同じ費用で確保し、階層移動をVM内へ閉じるため、大きい作業集合ほど差が拡大する。","ablations":"メモリのみのPolarKV構成との比較、異なる入力長・並行度、外部キャッシュなしとの比較により、共有キャッシュ容量と階層化の寄与を確認している。固定費用比較では帯域を約12GB/s以上に揃え、単純な資源量差だけで結果が決まらないようにしている。","limitations":["評価環境と費用モデルはAlibaba CloudのVM・ESSD仕様に強く依存し、他クラウドでは最適なメモリ対ストレージ比が変わる。","キャッシュは正しさ必須状態ではなく、障害時は再計算へ退避するため、障害が続く間の性能低下は避けられない。","公開比較には同じハイブリッド設計点を持つオープンソース外部KVシステムがなく、主比較はメモリ中心のMooncakeとストレージ中心の3FSである。","接頭辞再利用が少ない、または作業集合が小さくローカルキャッシュで十分な負荷では改善余地が小さい。"],"implementation_status":"Alibaba Cloudで独立したKVキャッシュサービスとして商用展開済み。vLLMとSGLangは既存本体を変更せず、クライアントライブラリとサービス接続設定で利用できる。"},"reservation":{"claim_id":"claim-3746826b8b41edef9f51adf4","worker_id":"scheduled-chat-llm-paper-worker-00","worker_kind":"scheduled_chat"}}
