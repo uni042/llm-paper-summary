@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T021400Z-scheduled-chat-llm-00",
+  "worker_id": "scheduled-chat-llm-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-28c5772328ef0791",
+      "claim_id": "claim-b363bc418c2e7f87eb737996",
+      "worker_id": "scheduled-chat-llm-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-b363bc418c2e7f87eb737996",
+      "claimed_at": "2026-09-21T02:13:53+00:00",
+      "expires_at": "2026-09-21T03:43:53+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-28c5772328ef0791"
+      ],
+      "job": {
+        "job_id": "job-research-28c5772328ef0791",
+        "type": "research",
+        "parent_job_id": "job-ee8845deb380e763",
+        "priority": 100,
+        "canonical_id": "DOI:10.1145/3789240.3829130",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "TurboBus: Pooling PCIe Bandwidth for LLM Workloads via Scale-Up Fabrics",
+        "source_url": "https://www.semanticscholar.org/paper/2194e3289290c79fa67dbe7fed4b4ac336726b03",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md",
+        "selection_reason": "GPU memory offloadで遊休PCIe linkをscale-up fabric越しにpoolしrelay GPU経由で共有。model loading first-token latency最大40%削減、KV-offloaded inference throughput最大1.6倍。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:17:43+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | results.overview must explain the main result and its practical meaning",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "problem_method.components[4].description is too short",
+          "results.overview must explain the main result and its practical meaning"
+        ],
+        "last_validation_failed_at": "2026-09-21T02:13:09+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-b8a8b7bb8f5552157b8f356c"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-b8a8b7bb8f5552157b8f356c.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T02:13:53+00:00",
+  "checkpoint_released": 0
+}

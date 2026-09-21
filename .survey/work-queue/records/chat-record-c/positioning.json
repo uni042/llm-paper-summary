@@ -1,10 +1,18 @@
 {
-  "schema_version": 1, "transport_version": 10, "slot": "positioning", "attempt_id": "attempt-b8a8b7bb8f5552157b8f356c", "job_id": "job-research-28c5772328ef0791",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-b363bc418c2e7f87eb737996",
+  "job_id": "job-research-28c5772328ef0791",
   "data": {
     "limitations": "効果はGPU間拡張ファブリックがPCIeより十分高速で、借用先が独立したホスト向け帯域を提供することに依存する。同じPCIe上流を共有するGPU同士では中継しても帯域は増えない。H800評価では遠隔NUMAへ跨ぐとUPIとメモリ配置で拡張性が落ちる。NCCLなどのGPU間通信はTurboBusの管理外で、これがNVLinkを飽和する場合の共同調停は未解決である。多数GPUの交換型ファブリックで中継候補を選ぶ問題、複数ノード、統合CPU-GPU、悪意ある利用者やデーモン再起動を含む生産環境の隔離・障害評価も対象外である。",
     "differences": "DeepPlan、Torpor、FaaSTubeはGPU間中継でPCIe帯域を集約するが主に同一ジョブのホストからGPUへのモデル読込に限定される。memHarvesterは階層メモリ上のページ移動を扱い、局所性とページフォルトを前提にする。TurboBusは大きな直接DMA転送を対象に、ジョブ境界を越える借用、GPUからホスト方向、双方向並行、固定ブロック流水化と公平な共有を統合する。PipeSwitchやMobiusの計算・転送重畳、鍵値圧縮や量子化、オフロード配置方針とは直交し、利用可能な物理転送帯域そのものを増やす層に位置する。",
     "implementation_status": "論文では特権デーモンと軽量クライアントを完全実装し、V100、RTX 3090、H800でマイクロベンチマーク、PipeSwitch系モデル読込、FlexGen推論、ZeRO-Offload学習へ統合して評価する。デーモン障害時には自GPUの直接cudaMemcpyへ退避する。論文本文と著者公開ページからは独立した公開コードリポジトリを確認できない。",
     "research_positioning": "LLMの階層メモリ研究のうち、何をCPUへ置くかではなく、CPUとGPUの間を通すI/O資源の静的所有を崩してノード全体で再配分する研究である。高速なGPU間ファブリックを集合通信専用網ではなく、複数の遅いPCIe出口を束ねる中継背面網として使う点が特徴で、GPUメモリオフロード、鍵値キャッシュ階層化、CPUオフロード型MoEなどの転送支配系と組み合わせる余地が大きい。"
   },
-  "reservation": {"claim_id": "claim-b8a8b7bb8f5552157b8f356c", "worker_id": "scheduled-chat-llm-00", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-b363bc418c2e7f87eb737996",
+    "worker_id": "scheduled-chat-llm-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

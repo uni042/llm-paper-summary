@@ -1,18 +1,62 @@
 {
-  "schema_version": 1, "transport_version": 10, "slot": "results", "attempt_id": "attempt-b8a8b7bb8f5552157b8f356c", "job_id": "job-research-28c5772328ef0791",
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-b363bc418c2e7f87eb737996",
+  "job_id": "job-research-28c5772328ef0791",
   "data": {
     "overview": "TurboBusはオンデマンドモデル読込で初回トークン待ち時間を最大40%削減し、理論上限との差を5%以内に抑えた。FlexGenの鍵値キャッシュ退避では同種2作業の相互中継で80%以上の反復を改善して最大50%の処理量向上、異種共置では最大1.6倍の処理量を得ながら貸し手作業の悪化を1%未満にした。ZeRO-Offload学習では4〜7%高速化した。",
     "key_results": [
-      {"metric": "オンデマンドモデル読込の初回トークン待ち時間", "value": "最大40%削減", "baseline": "通常実行", "condition": "Llama-3-8BとLlama-2-13B、1直接リンク+1中継リンクの隔離評価", "interpretation": "転送が支配的な短い入力ほど効果が大きく、全設定で理論最適値との差は5%以内だった。"},
-      {"metric": "サーバレス型モデル読込の中央値待ち時間", "value": "17%〜25%削減", "baseline": "通常実行およびPipeSwitch+DeepPlan", "condition": "複数入力長の到着負荷", "interpretation": "中央値は改善するが、99パーセンタイルでは最大10%悪化する公平性との交換がある。"},
-      {"metric": "鍵値キャッシュ退避推論の相互中継", "value": "最大50%処理量向上", "baseline": "通常FlexGen", "condition": "OPT-6.7B/13B、2GPU、100反復、鍵値キャッシュ90%をCPUへ退避", "interpretation": "両作業がPCIe負荷を持っていても突発的転送の空き時間を相互利用でき、80%以上の反復で改善した。"},
-      {"metric": "異種共置でのFlexGen処理量", "value": "最大1.6倍", "baseline": "通常FlexGen", "condition": "隣接GPUに計算支配の学習またはメモリ支配の推論を共置", "interpretation": "貸し手の空きPCIeを借り、共置作業への性能影響を1%未満に抑えた。"},
-      {"metric": "ZeRO-Offload学習反復時間", "value": "4%〜7%短縮", "baseline": "通常ZeRO-Offload", "condition": "GPT-J、Llama-2-7B、Phi-3-mini、4GPUデータ並列", "interpretation": "転送が反復時間の22〜30%なので利得は推論より小さく、理論最大改善の33〜41%を実現する。"},
-      {"metric": "ブロック単位経路割当", "value": "処理量20%向上", "baseline": "転送単位割当", "condition": "マイクロベンチマーク", "interpretation": "異なる転送の末尾ブロックを空き経路へ詰めることでリンクの穴を減らす。"}
+      {
+        "metric": "オンデマンドモデル読込の初回トークン待ち時間",
+        "value": "最大40%削減",
+        "baseline": "通常実行",
+        "condition": "Llama-3-8BとLlama-2-13B、1直接リンク+1中継リンクの隔離評価",
+        "interpretation": "転送が支配的な短い入力ほど効果が大きく、全設定で理論最適値との差は5%以内だった。"
+      },
+      {
+        "metric": "サーバレス型モデル読込の中央値待ち時間",
+        "value": "17%〜25%削減",
+        "baseline": "通常実行およびPipeSwitch+DeepPlan",
+        "condition": "複数入力長の到着負荷",
+        "interpretation": "中央値は改善するが、99パーセンタイルでは最大10%悪化する公平性との交換がある。"
+      },
+      {
+        "metric": "鍵値キャッシュ退避推論の相互中継",
+        "value": "最大50%処理量向上",
+        "baseline": "通常FlexGen",
+        "condition": "OPT-6.7B/13B、2GPU、100反復、鍵値キャッシュ90%をCPUへ退避",
+        "interpretation": "両作業がPCIe負荷を持っていても突発的転送の空き時間を相互利用でき、80%以上の反復で改善した。"
+      },
+      {
+        "metric": "異種共置でのFlexGen処理量",
+        "value": "最大1.6倍",
+        "baseline": "通常FlexGen",
+        "condition": "隣接GPUに計算支配の学習またはメモリ支配の推論を共置",
+        "interpretation": "貸し手の空きPCIeを借り、共置作業への性能影響を1%未満に抑えた。"
+      },
+      {
+        "metric": "ZeRO-Offload学習反復時間",
+        "value": "4%〜7%短縮",
+        "baseline": "通常ZeRO-Offload",
+        "condition": "GPT-J、Llama-2-7B、Phi-3-mini、4GPUデータ並列",
+        "interpretation": "転送が反復時間の22〜30%なので利得は推論より小さく、理論最大改善の33〜41%を実現する。"
+      },
+      {
+        "metric": "ブロック単位経路割当",
+        "value": "処理量20%向上",
+        "baseline": "転送単位割当",
+        "condition": "マイクロベンチマーク",
+        "interpretation": "異なる転送の末尾ブロックを空き経路へ詰めることでリンクの穴を減らす。"
+      }
     ],
     "negative_results": "サーバレス評価では中央値改善と引き換えに99パーセンタイル初回トークン待ち時間がPipeSwitch+DeepPlan比で最大10%悪化する。H800では同一NUMA内の4リンクまでホスト向け転送が単一リンク比3.6倍へほぼ線形に伸びるが、遠隔NUMAへ均等配分するとUPIとメモリ配置が律速し8リンクで約3倍へ低下する。GPU間転送がNVLinkを飽和または重要経路に置く場合は中継と競合し、統合CPU-GPU構成ではPCIe自体が主ボトルネックでないため直接の利益はない。",
     "interpretation": "最大性能値より重要なのは、個別リンクの飽和とノード全体の遊休を同時に解消できる条件を示した点である。横方向ファブリックが十分高速で、借りるPCIe上流とホストメモリ経路が独立し、貸し手のGPU間通信が律速していない場合に、静的に分断された帯域を共有資源へ変換できる。",
     "quality_impact": "モデルの推論品質や学習目的関数は変更しない。性能上の副作用として、共置作業への影響は評価条件で1%未満、同種FlexGen相互中継の少数反復では最大3トークン毎秒の低下、サーバレスの尾部待ち時間では最大10%の悪化が報告される。"
   },
-  "reservation": {"claim_id": "claim-b8a8b7bb8f5552157b8f356c", "worker_id": "scheduled-chat-llm-00", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-b363bc418c2e7f87eb737996",
+    "worker_id": "scheduled-chat-llm-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
