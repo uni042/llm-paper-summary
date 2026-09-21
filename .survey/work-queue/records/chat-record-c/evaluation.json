@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-366d346973cd87c804efb287","job_id":"job-research-a748d42a4b0082c7","data":{"hardware":"公式再現手順では主実験をRTX PRO 6000 Blackwell 96GB 1基で実施。オンラインサービングはvLLM V1、CUDA graphs、連続バッチ処理、自動接頭辞キャッシュを利用。","software":"公開Python実装と実験記録を使用。Qwen3、Llama-3.1、Gemma-2、Mistralを中心に、量子化、MoE、マルチモーダル、MLA、M-RoPE、滑動窓注意まで検証。比較には完全再計算、フィールドのみ更新、選択再計算、CacheBlend型選択、ROME、LoRA等を含む。","methodology":"機構同定は因果パッチ、後続位置スイープ、線形復号、注意ヘッド・特徴介入で行い、編集は意思決定回復率と汚染・遅延を測定。合成はlogit cosineと意思決定一致、32kまでの最初のトークンまでの時間を評価。統合エージェントは13モデル、利用者メモリはLoCoMo等で検証。オンラインvLLMでは約8kトークンの共有方針と可変フィールド、Poisson到着負荷を用いてp90 TTFT、処理率、実エンジンの接頭辞命中率を測る。","scope":"制御された合成方針課題に加え、実際のtau2-bench小売方針、長会話メモリ、画像キャッシュ、オンラインvLLMまで広く評価する。ただし純SSM・純再帰・拡散型言語モデルは対象外で、ハイブリッドSSMは注意KV部分のみ、圧縮ブロック型KVは未実装である。"},"reservation":{"claim_id":"claim-366d346973cd87c804efb287","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-f13484682295d4ae46534672",
+  "job_id": "job-research-a748d42a4b0082c7",
+  "data": {
+    "hardware": "公式再現手順では主実験をRTX PRO 6000 Blackwell 96GB 1基で実施。オンラインサービングはvLLM V1、CUDA graphs、連続バッチ処理、自動接頭辞キャッシュを利用。",
+    "software": "公開Python実装と実験記録を使用。Qwen3、Llama-3.1、Gemma-2、Mistralを中心に、量子化、MoE、マルチモーダル、MLA、M-RoPE、滑動窓注意まで検証。比較には完全再計算、フィールドのみ更新、選択再計算、CacheBlend型選択、ROME、LoRA等を含む。",
+    "methodology": "機構同定は因果パッチ、後続位置スイープ、線形復号、注意ヘッド・特徴介入で行い、編集は意思決定回復率と汚染・遅延を測定。合成はlogit cosineと意思決定一致、32kまでの最初のトークンまでの時間を評価。統合エージェントは13モデル、利用者メモリはLoCoMo等で検証。オンラインvLLMでは約8kトークンの共有方針と可変フィールド、Poisson到着負荷を用いてp90 TTFT、処理率、実エンジンの接頭辞命中率を測る。",
+    "scope": "制御された合成方針課題に加え、実際のtau2-bench小売方針、長会話メモリ、画像キャッシュ、オンラインvLLMまで広く評価する。ただし純SSM・純再帰・拡散型言語モデルは対象外で、ハイブリッドSSMは注意KV部分のみ、圧縮ブロック型KVは未実装である。"
+  },
+  "reservation": {
+    "claim_id": "claim-f13484682295d4ae46534672",
+    "worker_id": "scheduled-chat-llm-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
