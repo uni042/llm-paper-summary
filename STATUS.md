@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 03:34:16 JST**
+> 自動生成: **2026-09-22 03:34:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -142,9 +142,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.08575` — Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution / worker `scheduled-chat-30`
-  - claim: **09-22 02:41:13 JST** / heartbeat: **—** / lease expiry: **09-22 04:11:13 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5cd2beb9d9cae3d8.json`
+- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-30`
+  - claim: **09-22 03:34:22 JST** / heartbeat: **—** / lease expiry: **09-22 05:04:22 JST**
+  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
 
 #### Audit
 
