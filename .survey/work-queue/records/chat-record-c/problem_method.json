@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-bb692afcfb6c54ceb8b1fce0",
+  "attempt_id": "attempt-1ee8f5025b9f58b95a570856",
   "job_id": "job-research-c27f3a6ec993f9ab",
   "data": {
     "problem": "Qwen3.5やKimi Linearのようなハイブリッド注意LLMは、全注意層のKVキャッシュを減らすため再帰型線形注意を混在させるが、自己回帰生成自体は依然として1 tokenごとにtarget modelを呼ぶためmemory-boundである。木構造投機的復号は複数候補を一括検証できるが、従来方式はfull-attentionのappend-only KV cacheを前提とする。Gated DeltaNetの再帰状態は各nodeが親状態に依存し、proposal treeをnode単位に逐次走査する必要があるため、tree 8→64 nodesでlinear-attention部分がforward GPU時間の4%→27%へ増える。さらに採択前は各branchの状態が分岐するので全nodeの巨大状態snapshotを保持し、Qwen3.5-122B-A10B・32-node treeではbatch 8で36 GiB、batch 16で72 GiBを消費する。最適な検証token数もGPU、batch、KV長、tree形状で変わる。",
@@ -33,7 +33,7 @@
     "system_design": "Boleの要点は、線形注意kernelだけを高速化するのではなく、tree topology、recurrent-state representation、GPU resource tiling、proposal budget、continuous batching、CUDA Graph、state commitを一つのproduction pathとして共同設計したことにある。並列solverがserial recurrenceを除き、factorized stateがHBM圧力を下げ、hardware-aware budgetが余剰proposalによるcompute-bound化を防ぐため、三者が相補的にend-to-end throughputを改善する。"
   },
   "reservation": {
-    "claim_id": "claim-bb692afcfb6c54ceb8b1fce0",
+    "claim_id": "claim-1ee8f5025b9f58b95a570856",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
