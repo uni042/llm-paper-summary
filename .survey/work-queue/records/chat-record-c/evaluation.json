@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-84bb922bc721b588fbe25c96",
+  "attempt_id": "attempt-40292cf55942948afc9f4f0a",
   "job_id": "job-research-f2c000a0ecb53008",
   "data": {
     "hardware": "AWS p4d.24xlarge、NVIDIA A100 80GB×8、NVSwitch 600GB/s。OPT-13Bは1 GPU、OPT-175Bは8 GPUでpipeline/tensor parallel degreeを8/2に設定。",
@@ -30,7 +30,7 @@
     "scope": "trace-driven real experimentsで短長promptとheterogeneous SLOを再現するが、主hardwareはA100 p4d環境でありH100等の異なるcompute/memory比は直接評価しない。workload構成、long-prompt比率、arrival rateのsensitivityは評価する。"
   },
   "reservation": {
-    "claim_id": "claim-84bb922bc721b588fbe25c96",
+    "claim_id": "claim-40292cf55942948afc9f4f0a",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
