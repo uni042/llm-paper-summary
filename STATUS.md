@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 04:30:44 JST**
+> 自動生成: **2026-09-22 04:31:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -142,9 +142,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-30`
-  - claim: **09-22 03:34:22 JST** / heartbeat: **—** / lease expiry: **09-22 05:04:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
+- `arXiv:2608.08878` — DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference / worker `scheduled-chat-30`
+  - claim: **09-22 04:31:10 JST** / heartbeat: **—** / lease expiry: **09-22 06:01:10 JST**
+  - evidence: `.survey/work-queue/claims/job-research-bfb106674c4d8bfe.json`
 
 #### Audit
 
