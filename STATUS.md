@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 09:38:59 JST**
+> 自動生成: **2026-09-21 09:39:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **356** |
-| 未claim Research job | **355** |
+| 収録候補論文 | **355** |
+| 未claim Research job | **354** |
 | 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-21 09:35:21 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-21 09:35:21 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **356** |
+| canonical_id確認済みの一意な候補論文 | **355** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **356** |
+| 非終端Research job合計 | **355** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -168,9 +168,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-llm-paper-worker-30`
-  - claim: **09-21 09:38:05 JST** / heartbeat: **—** / lease expiry: **09-21 11:08:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c27f3a6ec993f9ab.json`
+- `arXiv:2608.17826` — Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State / worker `scheduled-chat-llm-paper-worker-30`
+  - claim: **09-21 09:39:06 JST** / heartbeat: **—** / lease expiry: **09-21 11:09:06 JST**
+  - evidence: `.survey/work-queue/claims/job-research-97a84b19cac36f28.json`
 
 #### Audit
 
@@ -190,7 +190,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **356** |
+| ready | **355** |
 
 ### 候補の重複・識別情報欠損
 

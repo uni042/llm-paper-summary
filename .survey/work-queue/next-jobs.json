@@ -8,49 +8,21 @@
       "blocked": 2
     },
     "research": {
-      "ready": 356,
+      "ready": 355,
       "completed": 409,
       "superseded": 3,
       "deferred": 3,
       "blocked_permanent": 7,
       "rejected": 2,
-      "blocked": 5
+      "blocked": 6
     }
   },
   "claiming": {
-    "ready_research_audit": 356,
-    "actively_claimed": 0,
-    "claimable": 356
+    "ready_research_audit": 355,
+    "actively_claimed": 1,
+    "claimable": 354
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-c27f3a6ec993f9ab",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "arXiv:2608.01651",
-      "title": "Bole: Efficient Tree Speculation for Hybrid-Attention Language Models",
-      "source_url": "https://www.semanticscholar.org/paper/c4163dfa7328f2ace39a4a5e20fbdf4f5340c585",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.01651-bole-efficient-tree-speculation-for-hybrid-attention-language-models.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-97a84b19cac36f28",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "arXiv:2608.17826",
-      "title": "Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State",
-      "source_url": "https://www.semanticscholar.org/paper/347aa172a1463ddb6e3b56ae21965f57fdfe7039",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-a5d6d7156c3ffec6",
       "type": "research",
@@ -136,6 +108,34 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-b47f649340a3fc18",
+      "type": "research",
+      "lane": null,
+      "priority": 100,
+      "canonical_id": "arXiv:2608.30386",
+      "title": "DASC: Decay-Aware State Compression for Hybrid Linear-Attention Serving",
+      "source_url": "https://www.semanticscholar.org/paper/70c8d0d5c06d8f56f6d03ad78e489e4a38a2a1a2",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.30386-dasc-decay-aware-state-compression-for-hybrid-linear-attention-serving.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-28c5772328ef0791",
+      "type": "research",
+      "lane": null,
+      "priority": 100,
+      "canonical_id": "DOI:10.1145/3789240.3829130",
+      "title": "TurboBus: Pooling PCIe Bandwidth for LLM Workloads via Scale-Up Fabrics",
+      "source_url": "https://www.semanticscholar.org/paper/2194e3289290c79fa67dbe7fed4b4ac336726b03",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T00:37:32+00:00"
+  "generated_at": "2026-09-21T00:39:17+00:00"
 }
