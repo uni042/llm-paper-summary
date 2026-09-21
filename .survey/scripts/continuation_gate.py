@@ -170,7 +170,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "CHECK_SUBMISSION_STATE"
             finalization_allowed = False
-        elif transient_submission_wait and pipeline_ahead_count >= 1:
+        elif transient_submission_wait and (pipeline_ahead_count >= 1 or not independent_work):
             decision = "CONTINUE"
             required_action = "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT"
             finalization_allowed = False
@@ -228,7 +228,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
 
     submission_wait_action = "none"
     submission_wait_seconds = 0
-    if transient_submission_wait:
+    if required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
         submission_wait_seconds = ASYNC_WAIT_POLL_SECONDS
         submission_wait_action = (
             "keep_same_submission_identity; do_not_duplicate_submission; wait_10_real_seconds; "
@@ -257,10 +257,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
         next_action_message = progress_notice
     elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
-        next_action_message = (
-            "前jobは終端しましたがrunは終了しません。最新queue/claim stateを再取得し、"
-            "同一workerの未完了claimがないことを確認して次のResearch/Auditを1件claimします。"
-        )
+        if transient_submission_wait and pipeline_ahead_count == 0:
+            next_action_message = (
+                "直前jobのdescriptorは耐久保存済みです。result待ちを1本だけ先送りし、"
+                "最新queue/claim stateを再取得して次のResearch/Auditを1件claimします。"
+            )
+        else:
+            next_action_message = (
+                "前jobは終端しましたがrunは終了しません。最新queue/claim stateを再取得し、"
+                "同一workerの未完了claimがないことを確認して次のResearch/Auditを1件claimします。"
+            )
     elif required_action == "CONTINUE_WORK":
         next_action_message = "最新queue/stateを再取得し、次の独立Research/Auditまたは許可された独立作業へ進みます。"
     elif required_action == "DISCOVER_AGAIN":
@@ -322,8 +328,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "or discovery submission is never by itself a whole-run stop condition. Normal workers "
             "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
             "claim results are polled every 10 real seconds using the same target identity until terminal or a canonical hard stop. "
-            "A pending Research/Audit submission permits exactly one following paper to be claimed, processed, and submitted; "
-            "after that one-paper lookahead, the previous submission result becomes the barrier before another claim. Hourly Scheduled Chat workers prefer an actual-"
+            "When claimable independent Research/Audit work is available, a pending submission permits exactly one following paper "
+            "to be claimed, processed, and submitted; when no such work is available, wait on the pending result instead. "
+            "After that one-paper lookahead, the previous submission result becomes the barrier before another claim. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
             "candidate_inventory is mandatory: >=50 selects Research/Audit and <50 selects Discovery. "
