@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e608a3ec3c8dd0be717a2842",
-  "job_id": "job-research-a5925137e7067bb8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e608a3ec3c8dd0be717a2842",
-    "worker_id": "scheduled-chat-llm-paper-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e608a3ec3c8dd0be717a2842","job_id":"job-research-a5925137e7067bb8","data":{"overview":"無制御でLLMを併走すると、カメラ処理の締切違反率は74.30〜85.56%、点群処理は85.71〜96.61%まで上昇した。MCSchedはカメラを1.66〜2.76%、点群を22.50〜35.00%へ低下させ、95パーセンタイル遅延もカメラ約28〜30ms、点群約46〜47msまで回復させた。一方LLMスループット低下は1.20〜1.97%に留まり、危険時だけ停止する選択的制御が前景保護と背景性能を両立することを示す。","key_results":[{"metric":"カメラ締切違反率","value":"85.56%から2.21%","baseline":"Qwen2.5無制御併走85.56%","condition":"Qwen2.5併走、MCSched適用","interpretation":"メモリ帯域競合でほぼ破綻していたカメラ周期処理を、背景LLMの短時間停止でほぼ締切内へ戻す。"},{"metric":"点群処理締切違反率","value":"96.61%から22.50%","baseline":"TinyMixtral-MoE無制御併走96.61%","condition":"TinyMixtral-MoE併走、MCSched適用","interpretation":"不規則な大量メモリアクセスを持つ点群処理でも大幅に改善するが、カメラほど完全には回復しない。"},{"metric":"LLMスループット低下","value":"1.20〜1.97%","baseline":"無制御LLM推論","condition":"三つのLLMでMCSched適用","interpretation":"前景危険時だけ有界時間停止するため、締切保護の代償を約2%以内に抑える。"}],"negative_results":"PID、LQR、計算トルク制御、MPCなど帯域依存性の低い制御処理では、メモリ圧力下でも応答時間変化が小さく、MCSchedで得られる利益は限定的である。点群処理はMCSched後も22.5〜35%の締切違反が残る。評価は単一Jetson機種に限定される。","interpretation":"統合メモリ帯域が本当の競合原因である場合、LLMを短時間止めるとCPU側ロボット処理のメモリ要求が速やかに処理されるため末尾遅延が下がる。被害側の余裕時間も条件にすることで、単に帯域利用率が高いだけの無害な期間にはLLMを止めず、スループット損失を小さくできる。","quality_impact":"LLM生成品質は測定していない。方式は推論を一時停止するだけでモデル出力計算を近似化しないため数値上のモデル品質劣化は想定しにくいが、応答時間は停止区間ぶん延びる。論文が実測した代償は1.20〜1.97%のスループット低下である。"},"reservation":{"claim_id":"claim-e608a3ec3c8dd0be717a2842","worker_id":"scheduled-chat-llm-paper-00","worker_kind":"scheduled_chat"}}
