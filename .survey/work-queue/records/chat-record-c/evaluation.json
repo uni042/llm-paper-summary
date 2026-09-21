@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e87ba9a7ec1323fe83b1d78f",
-  "job_id": "job-research-9119a9e35c42f3f7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e87ba9a7ec1323fe83b1d78f",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e87ba9a7ec1323fe83b1d78f","job_id":"job-research-9119a9e35c42f3f7","data":{"hardware":"AMD EPYC 7T83 64-core CPU×2、1TB DRAM、NVIDIA RTX 4090 24GB HBM、PCIe 4.0 x16。実験は単一GPUで行い、active CPU coreを10以下に制限して典型的consumer CPU相当を模擬する。","models":"4-bit量子化DeepSeek-V3-0324 671BとQwen3-235B-A22B。超巨大MoEでGPU cache可能expert比率がDeepSeek約3%、Qwen約6%という厳しい容量条件を含む。","workloads":"prefillはLongBench。decodeはTriviaQA、Flores-101、XSum、GSM8K、Awesome ChatGPT Prompts、HumanEvalの6領域。accuracy確認はGSM8Kから無作為5例。","baselines":["KTransformers","HybriMoE reproduced/extended to ultra-large models","SMOE without pipeline","layer-wise prefetching","static initial expert cache","SMOE-Flex"],"metrics":["TTFT","prefill speedup","decode tokens per second","cache hit rate","GPU utilization","PCIe TX/RX bandwidth","cache wait time","cache-management overhead","perplexity"],"evaluation_setup":"CUDA Graphは使用せずframework固有の改善を分離する。prefillではprompt length 400〜4000でDeepSeek-V3/Qwen3のTTFTとpipeline有無を比較する。decodeでは6 datasetでtoken-wise/layer-wise prefetch、prefetch expert数、SMOE-Flexを比較し、時間内訳とcache hit率を測る。","scope":"単一RTX 4090・低concurrencyを主対象とするconsumer-grade評価であり、複数GPUや高batch servingを直接測ってはいない。CPU coreを10以下へ制限するため実CPU全体の性能比較でもない。scalability節はmulti-GPU/NVLink環境への適用可能性を議論するが実測ではない。"},"reservation":{"claim_id":"claim-e87ba9a7ec1323fe83b1d78f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
