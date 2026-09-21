@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5c5cef0e8b4a937f3bb1a4ec",
+  "attempt_id": "attempt-84bb922bc721b588fbe25c96",
   "job_id": "job-research-f2c000a0ecb53008",
   "data": {
     "overview": "AccelGenは短長promptと異種SLOが混在する実trace条件で、SLO-aware dynamic chunkingとGPU compute/KV cacheの同時batch最適化を組み合わせ、既存serving方式よりthroughputを1.42〜11.21倍、goodputを1.43〜13.71倍へ高め、SLO attainmentを37〜90%改善する。response latencyも1.61〜12.22倍低減しOracle goodputに近づくため、単にGPU token budgetを満たすだけでなくKVC占有期間とrequest deadlineを同時に扱うことがproduction servingの実効処理能力に直結する。",
@@ -63,7 +63,7 @@
     "additional_findings": "ablationでは/Order、/Chunk、/BatchによりGPU utilizationがそれぞれ8%、28%、15%低下し、KVC utilizationは1%、7%、11%低下する。各要素はSLO、GPU、KVCという異なるbottleneckを担当する。"
   },
   "reservation": {
-    "claim_id": "claim-5c5cef0e8b4a937f3bb1a4ec",
+    "claim_id": "claim-84bb922bc721b588fbe25c96",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5c5cef0e8b4a937f3bb1a4ec",
+  "attempt_id": "attempt-84bb922bc721b588fbe25c96",
   "job_id": "job-research-f2c000a0ecb53008",
   "data": {
     "limitations": "主評価はA100 p4d環境とOPT/Llama系model、合成した20K-request traceであり、H100等のcompute/memory比やproduction固有arrival correlationへの一般化は追加検証が必要。schedulerはGPU saturation profile、KVC block accounting、SLO情報を必要とし、複雑なselection処理自体にもoverheadがある。",
@@ -13,7 +13,7 @@
     "practical_takeaway": "短promptと長promptが混在するservingでは固定token budget+FCFSだけではSLOもKVCも扱えない。requestごとのdeadlineをiteration-level priorityへ落とし、GPU computeとKV cacheを2次元resourceとしてbatchを組み、長promptを動的chunk化する設計がgoodput向上に有効である。"
   },
   "reservation": {
-    "claim_id": "claim-5c5cef0e8b4a937f3bb1a4ec",
+    "claim_id": "claim-84bb922bc721b588fbe25c96",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
