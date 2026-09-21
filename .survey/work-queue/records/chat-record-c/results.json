@@ -1,1 +1,69 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-7504b8d147f36a8ee02bc695","job_id":"job-research-c27f3a6ec993f9ab","data":{"overview":"Boleは28のMBPP configurationsすべてでdecode throughputを改善し、幾何平均でSGLang-AR比2.74倍、最強のspeculative baseline比1.26倍となった。peakはA100でAR比3.62倍、SGLang-Tree比1.41倍、AdaServe比1.39倍、GB10でそれぞれ4.72倍、2.03倍、2.06倍。parallel recurrent verifier単体は3.4–7.7倍高速化し、factorized stateはper-node transient footprintを82–99倍削減する。online agent servingでもcache capacity回復によりTTFT/TPOTを大きく削減する。","key_results":[{"metric":"MBPP decode throughput 幾何平均speedup","value":"2.74× vs SGLang-AR; 1.26× vs strongest speculative baseline","baseline":"SGLang-AR / SGLang-Tree / AdaServe","condition":"28 configurations, Qwen3.5 4B–122B-A10B, A100/GB10","interpretation":"hybrid-aware kernel/runtime designがmodel size・batch・platformを跨いで一貫して効く。"},{"metric":"最大offline speedup","value":"4.72× vs AR; 2.03× vs SGLang-Tree; 2.06× vs AdaServe on GB10","baseline":"各baseline","condition":"MBPP configurations","interpretation":"memory bandwidthが低いGB10ではstate materialization削減の寄与が特に大きい。"},{"metric":"linear-attention tree verification","value":"3.4–7.7× speedup","baseline":"SGLang-Tree serial delta-rule verifier","condition":"Qwen3.5-9B; A100/GB10; batch 1/16","interpretation":"parent-to-child critical pathを除去してnode-level parallelismをGPUへ露出する。"},{"metric":"transient state memory","value":"82–99× lower per-node footprint; 74.0–88.5% lower measured non-cache speculation overhead vs AdaServe","baseline":"full-state snapshots / AdaServe","condition":"Qwen3.5 family; A100 batch 4, 128 proposal nodes for measured overhead","interpretation":"6.26–18.58 GiBをserving cacheへ戻し、大batchやprefix reuseを可能にする。"},{"metric":"online agent latency","value":"vs AdaServe mean TTFT 61.3–73.3% reduction; mean TPOT 28.9–49.9% reduction","baseline":"AdaServe","condition":"Open-SWE-Traces; Qwen3.5-122B-A10B A100 / Qwen3.5-27B GB10","interpretation":"高速verificationだけでなくprefix-cache hit改善がqueueing/prefillにも波及する。"},{"metric":"prefix-cache hit rate","value":"90.8% A100, 92.6% GB10","baseline":"SGLang-Tree 69.7%/58.3%; AdaServe 69.3%/59.8%; AR 89.8%/93.3%","condition":"online Open-SWE-Traces","interpretation":"tree speculationを維持しながらARに近いcache residencyを回復する。"},{"metric":"ablation cumulative speedup","value":"budget: +5.3%/+10.7%; +parallel solver: 1.21×/1.30×; +factorized state: 1.59×/2.23×","baseline":"SGLang-Tree","condition":"online workload, A100/GB10","interpretation":"三要素すべてが寄与し、特にmemory-constrained GB10でfactorized stateの増分が大きい。"}],"negative_results":"効果は一様な定数倍ではない。GB10でもbatch 1ではstrongest speculative baseline比1.11–1.14倍に留まり、batch 8で1.70–2.03倍へ伸びるため、proposal parallelismとmemory pressureが小さい条件では利得が限定的である。verification budgetはplatform依存で、Qwen3.5-9B/MBPP batch 8のpeakがA100 128 total tree tokens、GB10 256 tokensとなり固定budgetはsuboptimalである。またBoleでもtree factorsやscratchは残り、speculation overhead自体がゼロになるわけではない。","interpretation":"主要な性能源は単一のkernel speedupではない。parallel solverでserial recurrenceを消し、factorized stateでHBM容量とwrite trafficを削り、budgetingでnear-free regionを越えた過剰verificationを避けることで、GPU compute headroomとmemory capacityを同時に利用する。特にagent workloadではstate memory削減がprefix-cache hitを21.1–34.3 percentage points回復し、repeated prefillを減らすためTTFTにも効く。","quality_impact":"Boleのtree solverは逐次Gated Delta recurrenceと代数的に厳密等価で、factorized commitもaccepted stateをlosslessに再構成する。標準speculative samplingによりtarget output distributionを変えない。性能最適化のための近似は主にhardware capacity calibrationであり、model semanticsの近似ではない。"},"reservation":{"claim_id":"claim-7504b8d147f36a8ee02bc695","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-bb692afcfb6c54ceb8b1fce0",
+  "job_id": "job-research-c27f3a6ec993f9ab",
+  "data": {
+    "overview": "Boleは28のMBPP configurationsすべてでdecode throughputを改善し、幾何平均でSGLang-AR比2.74倍、最強のspeculative baseline比1.26倍となった。peakはA100でAR比3.62倍、SGLang-Tree比1.41倍、AdaServe比1.39倍、GB10でそれぞれ4.72倍、2.03倍、2.06倍。parallel recurrent verifier単体は3.4–7.7倍高速化し、factorized stateはper-node transient footprintを82–99倍削減する。online agent servingでもcache capacity回復によりTTFT/TPOTを大きく削減する。",
+    "key_results": [
+      {
+        "metric": "MBPP decode throughput 幾何平均speedup",
+        "value": "2.74× vs SGLang-AR; 1.26× vs strongest speculative baseline",
+        "baseline": "SGLang-AR / SGLang-Tree / AdaServe",
+        "condition": "28 configurations, Qwen3.5 4B–122B-A10B, A100/GB10",
+        "interpretation": "hybrid-aware kernel/runtime designがmodel size・batch・platformを跨いで一貫して効く。"
+      },
+      {
+        "metric": "最大offline speedup",
+        "value": "4.72× vs AR; 2.03× vs SGLang-Tree; 2.06× vs AdaServe on GB10",
+        "baseline": "各baseline",
+        "condition": "MBPP configurations",
+        "interpretation": "memory bandwidthが低いGB10ではstate materialization削減の寄与が特に大きい。"
+      },
+      {
+        "metric": "linear-attention tree verification",
+        "value": "3.4–7.7× speedup",
+        "baseline": "SGLang-Tree serial delta-rule verifier",
+        "condition": "Qwen3.5-9B; A100/GB10; batch 1/16",
+        "interpretation": "parent-to-child critical pathを除去してnode-level parallelismをGPUへ露出する。"
+      },
+      {
+        "metric": "transient state memory",
+        "value": "82–99× lower per-node footprint; 74.0–88.5% lower measured non-cache speculation overhead vs AdaServe",
+        "baseline": "full-state snapshots / AdaServe",
+        "condition": "Qwen3.5 family; A100 batch 4, 128 proposal nodes for measured overhead",
+        "interpretation": "6.26–18.58 GiBをserving cacheへ戻し、大batchやprefix reuseを可能にする。"
+      },
+      {
+        "metric": "online agent latency",
+        "value": "vs AdaServe mean TTFT 61.3–73.3% reduction; mean TPOT 28.9–49.9% reduction",
+        "baseline": "AdaServe",
+        "condition": "Open-SWE-Traces; Qwen3.5-122B-A10B A100 / Qwen3.5-27B GB10",
+        "interpretation": "高速verificationだけでなくprefix-cache hit改善がqueueing/prefillにも波及する。"
+      },
+      {
+        "metric": "prefix-cache hit rate",
+        "value": "90.8% A100, 92.6% GB10",
+        "baseline": "SGLang-Tree 69.7%/58.3%; AdaServe 69.3%/59.8%; AR 89.8%/93.3%",
+        "condition": "online Open-SWE-Traces",
+        "interpretation": "tree speculationを維持しながらARに近いcache residencyを回復する。"
+      },
+      {
+        "metric": "ablation cumulative speedup",
+        "value": "budget: +5.3%/+10.7%; +parallel solver: 1.21×/1.30×; +factorized state: 1.59×/2.23×",
+        "baseline": "SGLang-Tree",
+        "condition": "online workload, A100/GB10",
+        "interpretation": "三要素すべてが寄与し、特にmemory-constrained GB10でfactorized stateの増分が大きい。"
+      }
+    ],
+    "negative_results": "効果は一様な定数倍ではない。GB10でもbatch 1ではstrongest speculative baseline比1.11–1.14倍に留まり、batch 8で1.70–2.03倍へ伸びるため、proposal parallelismとmemory pressureが小さい条件では利得が限定的である。verification budgetはplatform依存で、Qwen3.5-9B/MBPP batch 8のpeakがA100 128 total tree tokens、GB10 256 tokensとなり固定budgetはsuboptimalである。またBoleでもtree factorsやscratchは残り、speculation overhead自体がゼロになるわけではない。",
+    "interpretation": "主要な性能源は単一のkernel speedupではない。parallel solverでserial recurrenceを消し、factorized stateでHBM容量とwrite trafficを削り、budgetingでnear-free regionを越えた過剰verificationを避けることで、GPU compute headroomとmemory capacityを同時に利用する。特にagent workloadではstate memory削減がprefix-cache hitを21.1–34.3 percentage points回復し、repeated prefillを減らすためTTFTにも効く。",
+    "quality_impact": "Boleのtree solverは逐次Gated Delta recurrenceと代数的に厳密等価で、factorized commitもaccepted stateをlosslessに再構成する。標準speculative samplingによりtarget output distributionを変えない。性能最適化のための近似は主にhardware capacity calibrationであり、model semanticsの近似ではない。"
+  },
+  "reservation": {
+    "claim_id": "claim-bb692afcfb6c54ceb8b1fce0",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

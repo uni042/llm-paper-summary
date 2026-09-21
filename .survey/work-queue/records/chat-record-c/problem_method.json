@@ -1,1 +1,40 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-7504b8d147f36a8ee02bc695","job_id":"job-research-c27f3a6ec993f9ab","data":{"problem":"Qwen3.5やKimi Linearのようなハイブリッド注意LLMは、全注意層のKVキャッシュを減らすため再帰型線形注意を混在させるが、自己回帰生成自体は依然として1 tokenごとにtarget modelを呼ぶためmemory-boundである。木構造投機的復号は複数候補を一括検証できるが、従来方式はfull-attentionのappend-only KV cacheを前提とする。Gated DeltaNetの再帰状態は各nodeが親状態に依存し、proposal treeをnode単位に逐次走査する必要があるため、tree 8→64 nodesでlinear-attention部分がforward GPU時間の4%→27%へ増える。さらに採択前は各branchの状態が分岐するので全nodeの巨大状態snapshotを保持し、Qwen3.5-122B-A10B・32-node treeではbatch 8で36 GiB、batch 16で72 GiBを消費する。最適な検証token数もGPU、batch、KV長、tree形状で変わる。","novelty":"Boleはこの問題をalgorithm・GPU kernel・serving runtimeの三層で同時に解く。第一に、Gated Delta recurrenceをtree ancestor関係に沿った厳密な閉形式へ変換し、strictly lower-triangularなinteraction matrixの有限Neumann展開を用いて全nodeを一つのpre-tree stateから並列計算する。第二に、候補ごとのfull recurrent stateを作らずP/K/Uというtoken-scale factorだけを保持し、sampling後に採択pathのstateだけを1回のmatrix multiplicationで再構成する。第三に、完全なhybrid target forwardをhardware/configuration別にoffline profileし、通常decode latencyに対する許容範囲内のbatch-wide verification capacityを決め、draft cumulative probabilityでrequests間に割り当てる。これらをSGLangのtree speculation、CUDA Graph、state poolへ統合する。","method_overview":"各投機roundでdrafterがrequestごとのproposal treeを生成する。schedulerは事前profile済みのbatch-wide budgetを取得し、各nodeのroot-to-node累積draft probabilityで全request横断rankingしてprefix-connectedな部分木へpruneする。full-attention層は既存tree maskで処理し、recurrent linear-attention層はBoleのparallel verifierを使う。verifierはtree topologyからancestor mask等をroundごとに一度構築し、各Gated DeltaNet layerでtree-parallel convolution/gate preparation、factor construction、value-tiled closed-form solve/readoutを実行する。proposal期間中は一つのcanonical stateを不変に保ち、nodeごとにはP/K/U factorsのみ保存する。samplingで採択terminal nodeが決まると、採択path factorsからS_newを厳密再構成し、全recurrent layerのstate commitを一つのdevice launchにまとめる。","components":[{"name":"厳密なparallel tree solver","description":"Gated Delta recurrenceのpath stateを因子化し、ancestor-masked linear systemへstackする。interaction matrix Gがtree depth dに対してnilpotentになるため(I+G)^-1を有限Neumann polynomialとして厳密計算でき、node-wise recurrenceを除去する。"},{"name":"value-tiled GPU kernel","description":"value dimensionをtile化して独立CTAを増やし、key dimensionもchunk化する。G/C factorsをlayer-local scratchで共有し、有限Neumann propagationをon-chip tensor-core operationsとして実行して中間状態のHBM materializationを避ける。"},{"name":"factorized speculative state lifecycle","description":"各active request/layerにcanonical recurrent stateを1つだけ保持し、candidate branchesはP/K/U factorsで表現する。採択後にaccepted pathのみbatched GEMMで再構成し、rejected branchesはstate-cache slotもrollbackも不要にする。"},{"name":"hardware-aware batch-wide budget","description":"model/GPU/parallelism/batch/KV-length/tree bucketごとにcomplete hybrid forwardをprofileし、通常decode比(1+epsilon)以内の最大verification capacityを選ぶ。runtimeではcumulative draft probabilityでその容量をrequests間に配分する。"},{"name":"SGLang production integration","description":"variable treeをGPU上のflat-ragged forestへpackし、full-attention tree pathとBole recurrent verifierを同じtopologyで駆動する。selection、materialization、verification、sampling、commitをCUDA Graph内に保ちhost synchronization bubbleを避ける。"}],"system_design":"Boleの要点は、線形注意kernelだけを高速化するのではなく、tree topology、recurrent-state representation、GPU resource tiling、proposal budget、continuous batching、CUDA Graph、state commitを一つのproduction pathとして共同設計したことにある。並列solverがserial recurrenceを除き、factorized stateがHBM圧力を下げ、hardware-aware budgetが余剰proposalによるcompute-bound化を防ぐため、三者が相補的にend-to-end throughputを改善する。"},"reservation":{"claim_id":"claim-7504b8d147f36a8ee02bc695","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-bb692afcfb6c54ceb8b1fce0",
+  "job_id": "job-research-c27f3a6ec993f9ab",
+  "data": {
+    "problem": "Qwen3.5やKimi Linearのようなハイブリッド注意LLMは、全注意層のKVキャッシュを減らすため再帰型線形注意を混在させるが、自己回帰生成自体は依然として1 tokenごとにtarget modelを呼ぶためmemory-boundである。木構造投機的復号は複数候補を一括検証できるが、従来方式はfull-attentionのappend-only KV cacheを前提とする。Gated DeltaNetの再帰状態は各nodeが親状態に依存し、proposal treeをnode単位に逐次走査する必要があるため、tree 8→64 nodesでlinear-attention部分がforward GPU時間の4%→27%へ増える。さらに採択前は各branchの状態が分岐するので全nodeの巨大状態snapshotを保持し、Qwen3.5-122B-A10B・32-node treeではbatch 8で36 GiB、batch 16で72 GiBを消費する。最適な検証token数もGPU、batch、KV長、tree形状で変わる。",
+    "novelty": "Boleはこの問題をalgorithm・GPU kernel・serving runtimeの三層で同時に解く。第一に、Gated Delta recurrenceをtree ancestor関係に沿った厳密な閉形式へ変換し、strictly lower-triangularなinteraction matrixの有限Neumann展開を用いて全nodeを一つのpre-tree stateから並列計算する。第二に、候補ごとのfull recurrent stateを作らずP/K/Uというtoken-scale factorだけを保持し、sampling後に採択pathのstateだけを1回のmatrix multiplicationで再構成する。第三に、完全なhybrid target forwardをhardware/configuration別にoffline profileし、通常decode latencyに対する許容範囲内のbatch-wide verification capacityを決め、draft cumulative probabilityでrequests間に割り当てる。これらをSGLangのtree speculation、CUDA Graph、state poolへ統合する。",
+    "method_overview": "各投機roundでdrafterがrequestごとのproposal treeを生成する。schedulerは事前profile済みのbatch-wide budgetを取得し、各nodeのroot-to-node累積draft probabilityで全request横断rankingしてprefix-connectedな部分木へpruneする。full-attention層は既存tree maskで処理し、recurrent linear-attention層はBoleのparallel verifierを使う。verifierはtree topologyからancestor mask等をroundごとに一度構築し、各Gated DeltaNet layerでtree-parallel convolution/gate preparation、factor construction、value-tiled closed-form solve/readoutを実行する。proposal期間中は一つのcanonical stateを不変に保ち、nodeごとにはP/K/U factorsのみ保存する。samplingで採択terminal nodeが決まると、採択path factorsからS_newを厳密再構成し、全recurrent layerのstate commitを一つのdevice launchにまとめる。",
+    "components": [
+      {
+        "name": "厳密なparallel tree solver",
+        "description": "Gated Delta recurrenceのpath stateを因子化し、ancestor-masked linear systemへstackする。interaction matrix Gがtree depth dに対してnilpotentになるため(I+G)^-1を有限Neumann polynomialとして厳密計算でき、node-wise recurrenceを除去する。"
+      },
+      {
+        "name": "value-tiled GPU kernel",
+        "description": "value dimensionをtile化して独立CTAを増やし、key dimensionもchunk化する。G/C factorsをlayer-local scratchで共有し、有限Neumann propagationをon-chip tensor-core operationsとして実行して中間状態のHBM materializationを避ける。"
+      },
+      {
+        "name": "factorized speculative state lifecycle",
+        "description": "各active request/layerにcanonical recurrent stateを1つだけ保持し、candidate branchesはP/K/U factorsで表現する。採択後にaccepted pathのみbatched GEMMで再構成し、rejected branchesはstate-cache slotもrollbackも不要にする。"
+      },
+      {
+        "name": "hardware-aware batch-wide budget",
+        "description": "model/GPU/parallelism/batch/KV-length/tree bucketごとにcomplete hybrid forwardをprofileし、通常decode比(1+epsilon)以内の最大verification capacityを選ぶ。runtimeではcumulative draft probabilityでその容量をrequests間に配分する。"
+      },
+      {
+        "name": "SGLang production integration",
+        "description": "variable treeをGPU上のflat-ragged forestへpackし、full-attention tree pathとBole recurrent verifierを同じtopologyで駆動する。selection、materialization、verification、sampling、commitをCUDA Graph内に保ちhost synchronization bubbleを避ける。"
+      }
+    ],
+    "system_design": "Boleの要点は、線形注意kernelだけを高速化するのではなく、tree topology、recurrent-state representation、GPU resource tiling、proposal budget、continuous batching、CUDA Graph、state commitを一つのproduction pathとして共同設計したことにある。並列solverがserial recurrenceを除き、factorized stateがHBM圧力を下げ、hardware-aware budgetが余剰proposalによるcompute-bound化を防ぐため、三者が相補的にend-to-end throughputを改善する。"
+  },
+  "reservation": {
+    "claim_id": "claim-bb692afcfb6c54ceb8b1fce0",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
