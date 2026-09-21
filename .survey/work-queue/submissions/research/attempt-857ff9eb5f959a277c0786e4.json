@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-857ff9eb5f959a277c0786e4",
+  "job_id": "job-research-21fc15bf367ceffe",
+  "claim_id": "claim-857ff9eb5f959a277c0786e4",
+  "worker_id": "scheduled-chat-hourly30",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely retrieved in this invocation. Multiple official/authoritative routes confirm the publication and an ACM PDF endpoint exists, but the available retriever could not access the ACM PDF body; no official author-hosted full-text copy was surfaced. No five-slot record was synthesized from metadata or summaries.",
+  "retrieval_evidence": [
+    "ACM PDF endpoint confirmed as https://dl.acm.org/doi/pdf/10.1145/3779212.3790187 via an ASPLOS 2026 proceedings index, but direct retrieval returned inaccessible/internal error.",
+    "CUHK institutional research portal confirms MoE-APEX, DOI 10.1145/3779212.3790187, ASPLOS 2026, pages 1185-1200, CC BY metadata, but the returned page did not expose the paper body.",
+    "Author Xiaofeng Hou's official publication page confirms the ASPLOS 2026 paper; ResearchGate only offers request-full-text. Exact-title searches found no materially distinct official full-text route."
+  ],
+  "blocked_at": "2026-09-21T03:38:00Z"
+}
