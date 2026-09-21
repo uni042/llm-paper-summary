@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 01:08:09 JST**
+> 自動生成: **2026-09-22 01:08:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **323** |
 | 未claim Research job | **322** |
 | 直近24hの検証済みResearch収録 | **21** |
-| 最終検証済みResearch収録 | **09-22 00:48:18 JST（19分前）** |
+| 最終検証済みResearch収録 | **09-22 00:48:18 JST（20分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -140,7 +140,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.1145/3832810.3832922` — Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving / worker `scheduled-chat-00`
-  - claim: **09-22 01:06:34 JST** / heartbeat: **—** / lease expiry: **09-22 02:36:34 JST**
+  - claim: **09-22 01:08:20 JST** / heartbeat: **—** / lease expiry: **09-22 02:38:20 JST**
   - evidence: `.survey/work-queue/claims/job-research-f2c000a0ecb53008.json`
 
 #### Audit
