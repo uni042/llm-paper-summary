@@ -7,9 +7,9 @@
   ],
   "updated_at": "scheduled-20260921T0330JST",
   "submission_count": 5,
-  "research_terminal_rejection_count": 12,
-  "rejection_observation_count": 63,
-  "rejection_record_count": 62,
+  "research_terminal_rejection_count": 13,
+  "rejection_observation_count": 64,
+  "rejection_record_count": 63,
   "ignored_without_identity": 0,
   "records": {
     "id:DOI:10.1007/978-3-031-99489-0_6": {
@@ -340,6 +340,28 @@
       "axis": null,
       "run_key": null,
       "source_submission": ".survey/work-queue/submissions/research/attempt-5cf1c03ea60873ea0ec61254-duplicate-terminal.json",
+      "origin": "research_terminal_rejection"
+    },
+    "id:DOI:10.1145/3832810.3832922": {
+      "primary_identity": "id:DOI:10.1145/3832810.3832922",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832922",
+        "title:heterogeneous slo guaranteed multiresourceaware batching in llm serving",
+        "url:https://www.semanticscholar.org/paper/2ecd49d0fb5c5d53451ca6a9efde7b14fa32c650"
+      ],
+      "canonical_id": "DOI:10.1145/3832810.3832922",
+      "arxiv_id": null,
+      "doi": null,
+      "openreview_id": null,
+      "title": "Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/2ecd49d0fb5c5d53451ca6a9efde7b14fa32c650",
+      "rejection_reason": "Canonical processing for the repaired record identifies arXiv:2503.13737 as already represented by the existing AccelGen identity, producing a durable identifier conflict on prior validated submission attempt-885c7b91c948ae3e1ef817e0. Treat this queue entry as a duplicate identity rather than creating a second paper artifact.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-21T16:09:02+00:00",
+      "last_rejected_at": "2026-09-21T16:09:02+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-40292cf55942948afc9f4f0a.json",
       "origin": "research_terminal_rejection"
     },
     "id:DOI:10.20944/preprints202512.1908.v1": {
