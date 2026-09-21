@@ -18,6 +18,17 @@
 
 実際の起動時刻を1回取得し、`actual_invocation_start` として固定する。予定時刻や前回runの時刻を再利用しない。通常の時間枠は起動時刻から3600秒で、残り600秒以下では新しい独立作業を開始しない。残り180秒以下では耐久保存と安全な引き継ぎだけを行う。
 
+### 1.1 run identity と scheduled slot
+
+Scheduled Chatの論文ワーカーは、実行ごとに名前を作り直さず**固定worker identity**を使う。
+
+- 毎時 `:00`: `worker_id = scheduled-chat-00`
+- 毎時 `:30`: `worker_id = scheduled-chat-30`
+
+`worker_kind` は両方とも `scheduled_chat` とする。claim request、Library checkpoint marker、fallback envelope、最終報告でこのidentityを一貫して使う。別名・時刻埋め込み名・共通名 `scheduled-chat-llm-survey` を新規runで生成しない。これにより :00 と :30 を別worker lineageとして保ち、互いのactive claimを自分のclaimとして扱わない。
+
+また、実際の起動時刻とは別に**予定実行枠（scheduled slot）**を開始時に確定してrun中固定する。`:00` workerは `HH:00`、`:30` workerは `HH:30` の予定枠を使う。08:30専用runの判定は実際の起動時計ではなく予定実行枠で行う。たとえば08:34に遅延起動しても予定枠が08:30なら第9節へ入り、09:30枠が08:59に早期起動した等の異常でも08:30専用runとは扱わない。
+
 ## 2. 共通ルーター
 
 毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じ論文処理規約・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新 `next-jobs.json` から **Research/Audit の ready 全件数**を `candidate_inventory` として取得する。`claimable` ではなく、原則 `claiming.ready_research_audit`、それが無ければ `counts.research.ready + counts.audit.ready` を使う。このrun開始時の値を固定し、次の1条件だけで今回の論文作業モードを決める。
@@ -65,6 +76,8 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 
 **重要:** 「ローカルPython/任意コマンド実行機能がない」は、GitHub read/writeと上記fast laneが利用可能な限り `platform_limit` / hard stopではない。fast lane自体がGitHub/API/認証/Actions障害で利用不能になった場合だけ、第6節の保存障害・退避と第7節の停止判定へ進む。
 
+claim requestでは `request_id` をrequestファイル名のstemと完全一致させ、`requested_at` はUTCの `Z` または `+00:00` で保存する。`:00` は常に `worker_id: scheduled-chat-00`、`:30` は常に `worker_id: scheduled-chat-30` を使う。
+
 ## 3. 読解（Research / Audit）の共通処理ループ
 
 1. 最新queueと現在の担当確保状態（claim state）を取得する。
@@ -95,7 +108,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 1. **全文読解済み成果を捨てない。** 初回全文精読後はrecord bankと既存5スロットを再利用し、validation失敗時は指摘されたslotだけを一次資料に基づいて修復する。一次証拠が不足・変更していない限り、全文を最初から読み直さない。
 2. **初回5スロットをvalidator下限ぎりぎりにしない。** 問題設定は「問題＋既存法で解けない理由」、method overviewは入力から出力までのend-to-end流れ、各componentは「入力・内部処理・出力・他componentとの接続」を十分に記述する。短すぎる説明によるrepair往復を減らす。
 3. **一次資料は取得できた時に一度で必要範囲を読む。** 完全なarXiv HTMLが使えるなら優先し、必要ならPDF、OpenReview/会議公式、著者・プロジェクト公式コピーへ進む。同一資料を小分けに再取得せず、手法・評価・結果・ablation・限界・関連研究までまとめて確認する。
-4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を不変submissionとして耐久保存する。**status-onlyでもcompleted submissionと同じ1本遅延規則を使い、descriptor耐久保存後は直後の次論文を1件だけclaimしてよい。** その次へ進む前に1本前のstatus-only resultが `ok=true` の終端状態になって最新mainへ反映されたことを確認する。status-only `blocked` / `deferred` / `rejected` は、Scheduled Chatが最小の不変JSON descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ直接保存し、既存のsubmission laneに処理させる。ローカルPythonや保存前canonicalizerの実行を前提にしない。descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` を基本とし、取得済みなら `retrieval_evidence` / `blocked_at` を加えてよい。`record_bank` / `paper_path` / `record_slots` / `expected_blob_sha` その他のrecord transport fieldはstatus-only descriptorへ混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
+4. **1経路の取得失敗をwhole-run failureにしない。** 全文取得経路はワーカーの気分で増減させず、該当するものを次の順に各1回試す。(a) arXiv HTML / e-print等の公式本文、(b) arXiv公式PDF、(c) OpenReview・会議・出版社の公式full text、(d) 著者または公式project siteが配布する同一版full text。同一URL/同一経路の一時的なtool/HTTP失敗は1回だけ再試行してよい。該当する公式経路を使い切っても全文取得不能ならstatus-only `blocked` を不変submissionとして耐久保存する。第三者解説・検索断片・非公式転載を全文の代用にしない。**status-onlyでもcompleted submissionと同じ1本遅延規則を使い、descriptor耐久保存後は直後の次論文を1件だけclaimしてよい。** その次へ進む前に1本前のstatus-only resultが `ok=true` の終端状態になって最新mainへ反映されたことを確認する。status-only `blocked` / `deferred` / `rejected` は、Scheduled Chatが最小の不変JSON descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ直接保存し、既存のsubmission laneに処理させる。ローカルPythonや保存前canonicalizerの実行を前提にしない。descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` を基本とし、取得済みなら `retrieval_evidence` / `blocked_at` を加えてよい。`record_bank` / `paper_path` / `record_slots` / `expected_blob_sha` その他のrecord transport fieldはstatus-only descriptorへ混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
 5. **submission待ちは1本遅延パイプラインで隠す。** 論文Nを提出した直後はN+1を1件だけclaimして全文処理・提出してよい。N+1提出後はNのresultを確認し、終端反映済みならN+2へ進む。Nがpendingなら10秒間隔で同一resultを再確認し、failureなら正規repairを優先する。未完了claimを複数保持したり、N+2まで先取りしたり、同一requestを重複発行しない。
 6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research / Auditの**未提出active claim**は常に1件だけとする。次claimは直前論文のdescriptor耐久保存後に限り許可し、descriptor-backed旧claimがまだactive表示ならclaim fast laneの正規解放に任せる。さらにその次claimは1本前のsubmission resultと最新main反映を確認した後に限る。
 7. **Research / Audit 合計3件ノルマは維持する。** `research_audit_completed_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。成功resultと最新main反映を確認したResearchまたはAuditだけを1件として数え、同一論文のResearchとAuditも別jobとしてそれぞれ1件に数える。ready Auditが存在するなら3件ブロックごとに最低1件Auditを含める。3件到達は停止上限ではなく、600秒handoff guardに入るまで、または安全に実行可能な作業が尽きるまで同じモードで継続する。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
@@ -109,6 +122,7 @@ requestは `.survey/work-queue/discovery-precheck/requests/<request-id>.json` �
 ```yaml
 schema_version: 3
 operation: precheck_discovery_candidates
+request_id: <request filename stemと一致する一意ID>
 provider: openalex | semantic_scholar | openalex_references | repository_references
 source_url: <固定した検索/API URL>
 collector_id: <同一探索軸の識別子>
@@ -198,7 +212,7 @@ Discovery後半は次の順序を正規経路とする。途中を手作業で�
 
 失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` でcanonical stateを確認する。ただし**このrunが探索モードならResearchへ切り替えず、run開始時に固定した探索モードを維持する。** Research jobのclaimは次回以降、読解モードで行う。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
 
-引用優先runでは、後方引用の候補山が残っていても前方引用へ進む。逆に前方引用が0件でも後方引用の山は継続する。**通常検索へ進めるのは、同じrun_keyで後方引用と前方引用の両方を試した後だけ**とし、通常検索は引用グラフで空く領域を埋める用途に限定する。単一provider障害は「0件」とみなさず、同じ引用方向の別providerまたは別種論文を試す。1 Discovery roundが耐久保存まで完了したら、**今回runの探索モードを維持したまま**次の探索軸を選ぶ。候補在庫を再取得してもrun中のモード変更には使わず、次回runの開始判定用状態としてのみ扱う。
+引用優先runでは、後方引用の候補山が残っていても前方引用へ進む。逆に前方引用が0件でも後方引用の山は継続する。**通常検索へ進めるのは、同じrun_keyで後方引用と前方引用の両方を試した後だけ**とし、通常検索は引用グラフで空く領域を埋める用途に限定する。単一provider障害は「0件」とみなさず、同じ引用方向の別providerまたは別種論文を試す。1 Discovery roundが耐久保存まで完了したら、**今回runの探索モードを維持したまま**次の探索軸を選ぶ。次方向の決定は原則 `.survey/scripts/select_discovery_direction.py` の出力を使い、ワーカーが「なんとなく次を選ぶ」ことは禁止する。selectorは同一runで未実施の後方引用→前方引用をまず埋め、その後は過去の `accepted_count`、`novel_candidate_count`、重複率、連続0件を使ってproductiveな引用方向を優先し、同点なら直前と反対方向を選ぶ。通常検索は同一runで後方・前方の両方が耐久記録済みの場合だけ候補になる。種論文についても過去search windowにseed identityがあれば同じyield規則を使い、履歴がないseed間ではcanonical ID昇順を決定的fallbackとする。候補在庫を再取得してもrun中のモード変更には使わず、次回runの開始判定用状態としてのみ扱う。
 
 ## 5. 重複排除
 
@@ -214,6 +228,8 @@ Discovery precheckではidentity snapshotとrejection ledgerを使う。GitHub c
 2. ChatGPT Library `/LLM-survey-outbox/pending/`
 
 Google Drive、Notion、旧 `/LLM-survey-fallback/` は使わない。
+
+**record bankだけが枯渇し、GitHub read/write自体は利用可能な場合はrun-wide write障害ではない。** claim resultが `record_bank_fallback: library` を返したら、その論文の完全5-slot Research/Audit envelopeをLibrary `/LLM-survey-outbox/pending/` とcheckpoint markerへ保存する。GitHub writeが使えるなら同一run中にexact envelopeを `.survey/work-queue/fallback-inbox/` へimmutableに搬送し、`dispatch_fallback_inbox.py` / `drain_fallback_recovery.py` → immutable submission → result →最新main反映の正規publication経路へ流す。bank枯渇を理由に再精読やrun停止を行わない。成功件数へ数えるのはLibrary保存時点ではなく、canonical publication result `ok=true` と最新main反映を確認した時点だけである。
 
 GitHub write失敗時:
 
@@ -231,11 +247,25 @@ Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと
 
 ## 7. 待機・継続・終了
 
+### 7.1 hard stopの機械判定
+
+hard stopは曖昧な「安全そうでない」「難しい」「時間がかかる」では立てない。通常runでhard stopとして許可するのは次の機械的事実だけである。
+
+- 予定run deadlineまで600秒以下になったhandoff guard。
+- GitHubのcanonical stateをreadできず、同じrunで復旧確認もできない。
+- 保存対象についてGitHub direct writeとLibrary耐久保存の両方が利用不能。
+- platform/context上限が実際に発生し、継続するtool callまたは出力がプラットフォームから拒否された。
+- 正規transportが要求するGitHub Actions/API/認証が利用不能で、Libraryを含む代替耐久経路でも現在成果を安全に引き継げない。
+
+単一provider失敗、単一論文取得失敗、validation failure、record bank枯渇、claim/submission result pending、候補0件、Library backlog、Notion/補助handoffの読取不能、単に次手が分かりにくいことはhard stopではない。これらは正規回復・別provider・status-only・Library route・同一target待機・次の独立作業へ進む。
+
+`continuation_gate.py` / `run_finalization_gate.py` へ停止系入力を渡す場合も、この列挙に対応する観測事実がある時だけtrueにする。ワーカー独自の解釈で `platform_limit` / `global_dependency` / `discovery_exhausted` を立てない。
+
 継続判断には `.survey/scripts/continuation_gate.py`、最終化判断には `.survey/scripts/run_finalization_gate.py` を使う。Research / Auditでは**提出直後と、1本前のsubmission resultを確認した直後**にcontinuation gateを再実行する。**`--pipeline-ahead-count` は未確認submissionの後ろで既に処理・提出した論文数を表し、通常は0か1だけを渡す。** Nを提出した直後でまだN+1を提出していなければ0、N+1を提出済みでNのresultが未確認なら1とする。提出直後に `required_action=CLAIM_NEXT_RESEARCH_AUDIT` が返った場合は、result待ちより先に次の1件をclaimする。1本先行済み、または安全にclaim可能な次jobがない状態で `required_action=WAIT_FOR_PREVIOUS_SUBMISSION_RESULT` が返った場合は、さらに次をclaimせず1本前のresultを確認する。終端確認時はそのjobの終端statusを `--last-terminal-job-status`、今回runの成功完了数を `--research-audit-completed-this-invocation` として渡す。
 
 `run_finalization_gate.py` にも今回runの `--work-mode` と最低条件カウンタを必ず渡す。Research / Auditで成功完了3件未達、またはDiscoveryで4 round未達の通常runは、仮に誤って `STOP_RUN` が渡されてもfinalization gateが拒否する。hard stop + safe handoffだけはこの最低条件より優先する。
 
-- claim/resultやsubmission/resultが次の安全な判断に必要なら、同一targetを10秒実時間間隔で再確認する。
+- claim/resultやsubmission/resultが次の安全な判断に必要なら、同一targetを**10秒実時間間隔**で再確認する。「所定間隔」はすべて10秒を意味し、別の待機間隔を自己判断で作らない。
 - Research / Audit のsubmission result待ちは**直後の1本には同期障壁ではなく、その次の論文へ進むための同期障壁**である。N提出後はN+1を処理・提出してよい。N+1提出後はNの成功resultまたはstatus-only終端と最新main反映を確認するまでN+2をclaim・取得しない。failure時はNの正規repairを優先する。
 - candidate在庫、Library pending、fallback backlog、record bank枯渇、単一job失敗、status-only終端、1本完了、単一探索軸0件だけをrun終了理由にしない。
 - final responseはfinalization gateが許可した場合だけ行う。
@@ -267,10 +297,12 @@ Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと
 
 実行順序は固定する。
 
-1. 先に `framework-updates/**`、`llm-releases/**` と必要な `.survey/update-worker/**` の非論文更新を確認し、必要な変更を最新 `main` へ耐久反映する。
-2. 非論文更新の保存が完了した後、**runの最後の独立作業としてmaintenanceを実行する。**
-3. maintenanceは `.survey/work-queue/maintenance-cycle.json` の `maintenance_pending=true` を耐久反映して `.github/workflows/maintenance.yml` を起動し、GC、index再構築、品質・メタデータ監査、整合性確認を直列実行させる。
-4. maintenance workflowの結果を確認し、可能なら完了後の最新 `main` と `maintenance-cycle.json` を再取得して、`maintenance_pending=false` と結果状態が耐久反映されたことまで確認する。
-5. 最終報告には非論文更新点に加え、maintenanceの起動・完了状態、GC/監査/整合性確認の結果、最終main SHAを含める。
+1. 先に `framework-updates/**`、`llm-releases/**` の前回確認日時を読み、前回以降の一次資料（公式release / PR / documentation / model provider公式発表）を確認する。単なるmodel allowlist、軽微bugfix等は各READMEの掲載方針に従い除外する。
+2. 更新があれば、最新blob SHAを基準に一意な `attempt_id` を持つ `.survey/update-worker/update-payload.json` と `update-inbox.json` を作る。`.github/workflows/update-helper.yml` / `.survey/scripts/update_worker.py` の正規入口で反映し、`.survey/update-worker/result.json` の同じ `attempt_id` で `ok=true` を確認する。更新が0件でも「確認済み」を最終報告へ残す。固定update inbox/payloadを過去attemptのまま再実行しない。
+3. update result確認後に最新mainを再取得し、対象READMEの最終確認日と反映内容が一致することを確認する。ここまでを「非論文更新完了」とする。
+4. 非論文更新の保存が完了した後、**runの最後の独立作業としてmaintenanceを実行する。**
+5. maintenanceは `.survey/work-queue/maintenance-cycle.json` の `maintenance_pending=true` を耐久反映して `.github/workflows/maintenance.yml` を起動し、GC、index再構築、品質・メタデータ監査、整合性確認を直列実行させる。
+6. maintenance workflowの結果を確認し、完了後の最新 `main` と `maintenance-cycle.json` を再取得して、`maintenance_pending=false` と結果状態が耐久反映されたことまでを完了条件とする。workflowがhard stopで確認不能なら、その事実だけをhandoffしScheduled Task自体は止めない。
+7. 最終報告には非論文更新点（0件なら0件と明記）に加え、update result、maintenanceの起動・完了状態、GC/監査/整合性確認の結果、最終main SHAを含める。
 
 maintenance実行の責任は08:30 JSTの `:30` workerに集約する。通常runでは定期maintenanceを発火させず、旧run-countカウンタも実行条件に使わない。
