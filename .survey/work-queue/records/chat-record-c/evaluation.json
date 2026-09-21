@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2965af6e9d022fa8d87518fc",
+  "attempt_id": "attempt-b4eaebc08a88f0f9620f6006",
   "job_id": "job-research-3eb9c6f535e789d0",
   "data": {
     "hardware": "単一GPUを対象とする離散イベントシミュレーション。メモリ階層はGPU高帯域メモリ、CPU主記憶、SSDで構成し、既定容量比は1対8対64。実行時間はランダムフォレスト予測器で較正する。バッチ1を中心に評価し、三階層の価格仮定はそれぞれ187.50、3.50、0.08ドル/GB。",
@@ -32,7 +32,7 @@
     "scope": "実機の分散LLMサーバを直接測る評価ではなく、単一GPU・バッチ1を主対象とした較正済み離散イベントシミュレーションである。したがって容量・帯域・価格の相対傾向と配置規則の比較には使えるが、大バッチ、複数GPU、実会話trace、より高速なデコードカーネルへ数値をそのまま一般化できない。論文自身も合成ワークロードでの方式間差を上限的な分離として扱う。"
   },
   "reservation": {
-    "claim_id": "claim-2965af6e9d022fa8d87518fc",
+    "claim_id": "claim-b4eaebc08a88f0f9620f6006",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
