@@ -5,10 +5,10 @@
   "attempt_id": "attempt-d67054767790b8a100027a66",
   "job_id": "job-research-b47f649340a3fc18",
   "data": {
-    "hardware": "全formal experimentはHopper世代GPUでTP8。Kimi-Linear-48B-A3B-Instruct（20 KDA + 7 full-attention layers）とQwen3-Next-80B-A3B-Instruct（36 GDN + 12 full-attention layers）を評価する。",
-    "software": "SGLangへDASCを実装。model weights/executionは非量子化BF16、recurrent checkpointはSGLang既定のFP32 temporal state + BF16 convolution state。基本設定はragged storageとDASC-NR。",
-    "methodology": "長文脈品質はRULER全13 subtasksを4k/8k/16kで各subtask-length N=30。end-to-endはAIME 2026 I/II、HMMT Feb 2026、IMO-AnswerBench、GPQA-Diamond、MMLU-Pro、LoCoMo。count-matched Randomを各layer/Wmaxで5 fixed masks作り、同じ圧縮量でdecay-aware rankingを比較する。matched-HBM servingはMMLU-Pro由来prefix-reuse workloadでper-rank state checkpoint budgetを固定し、3 seedsのmean TTFT/throughputを測定。DASC-WRはstrict warm/replay accuracyとfixed-slot suffix refresh costを分離評価する。",
-    "scope": "Hybrid attentionの2系統（KDA channel-grained、GDN head-grained）に限定。Wmax 16〜512/1024で圧縮と品質を走査し、TP balance、ragged layout、suffix refresh、INT8 state quantizationとの合成も評価する。pure linear attention/SSM、TP8超、他hardware世代は未検証。"
+    "hardware": "正式評価はすべてHopper世代GPUを8並列のテンソル並列構成で実施する。Kimi-Linear-48B-A3B-Instruct（KDA層20個と全注意層7個）とQwen3-Next-80B-A3B-Instruct（GDN層36個と全注意層12個）を対象とする。",
+    "software": "DASCをSGLangへ実装した。モデル重みと通常実行は非量子化BF16、再帰状態の保存点はSGLang既定のFP32時間状態とBF16畳み込み状態を使う。基本設定は可変長格納と再実行なし方式である。",
+    "methodology": "長文脈品質はRULER全13課題を4千、8千、16千トークンで評価し、各課題・長さにつき30例を用いる。端から端までの品質評価にはAIME 2026 I/II、HMMT Feb 2026、IMO-AnswerBench、GPQA-Diamond、MMLU-Pro、LoCoMoを用いる。同じ圧縮量の無作為選択を各層・最大窓設定ごとに5個固定して作り、減衰認識順位付けと比較する。メモリ容量を揃えた配信評価ではMMLU-Pro由来の接頭辞再利用負荷を使い、各並列ランクの状態保存予算を固定して、3乱数種の平均初回トークン待ち時間と入力処理量を測る。窓再実行方式では厳密なウォーム・再実行品質と固定スロットの接尾辞再計算費用を分離して評価する。",
+    "scope": "ハイブリッド注意の2系統、すなわちチャネル粒度KDAとヘッド粒度GDNに限定する。最大再実行窓16から512または1024までで圧縮と品質を走査し、テンソル並列負荷均衡、可変長配置、接尾辞再計算、8ビット状態量子化との併用も評価する。純粋な線形注意や状態空間モデル、8並列を超える構成、他世代GPUは未検証である。"
   },
   "reservation": {
     "claim_id": "claim-d67054767790b8a100027a66",
