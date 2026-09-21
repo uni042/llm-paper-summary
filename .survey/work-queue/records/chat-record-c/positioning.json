@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c42378bb84cf93cfa6eb6efb","job_id":"job-research-97a84b19cac36f28","data":{"limitations":"RWSは復元用L1ステージングだけを表し、モデル重み、最終宛先KV、allocator metadata、通信buffer、他ランタイム状態を含む総メモリ上限ではない。1チャンク16,408,576 bytes/rankという係数はDeepSeek-V4-Flash MTP-off登録固有で、他モデルでは変わる。現実装は有界復元を大域ロックで直列化するため複数要求の重なりを犠牲にする。従来whole-planの512K/32 GiB測定は完了しておらず、256Kまでしか実測比較しない。正しさはcached-token、tier、hash、TP healthによる運用上の検証で形式証明ではない。復元遅延は状態サイズとともに増え、現在実装が最適速度だとは主張しない。","differences":"CachedAttention、Mooncake、LMCache、SYMPHONYは主に再利用状態をどこへ保持するか、どの階層へ配置するかを拡張する。HCache、Strata、CacheFlowは復元遅延やI/Oと計算の重なりを最適化する。BSRはそれらと異なり、外部状態を実行可能に戻す際のピーク一時ステージング容量そのものを独立資源として定義し、完全ヒット知識を維持しながらW窓へ上限化する。DirectKVのようなCPU-GPU coherent memory方式はステージング自体を消せるが、BSRは外部階層からローカル導入が必要な一般経路を対象にする。","implementation_status":"LMCache/vLLMへの実装と評価証拠を公開リポジトリStarkLeeSunny/Flexkv-doublenodeのfeature/lmcache-bounded-lzzx1系統へ固定し、論文付録に具体的なrun evidenceとdatasetファイルを列挙している。","research_positioning":"階層KVキャッシュ研究で、保持容量・復元容量・実行余白・復元スループットを別資源へ分解する設計。SSD/RDMA容量を増やすだけでは残る『復元時メモリ壁』に対し、bounded bufferという古典的技法をLLM要求意味論、異種状態群、TP failureへ適合させる制御契約を提示する。"},"reservation":{"claim_id":"claim-c42378bb84cf93cfa6eb6efb","worker_id":"scheduled-chat-llm-paper-worker-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5c745c186b2bc06f13b5cf77",
+  "job_id": "job-research-a5d6d7156c3ffec6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5c745c186b2bc06f13b5cf77",
+    "worker_id": "scheduled-chat-llm-paper-worker-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

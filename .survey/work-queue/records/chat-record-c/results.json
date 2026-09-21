@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-c42378bb84cf93cfa6eb6efb","job_id":"job-research-97a84b19cac36f28","data":{"overview":"従来whole-plan復元では外部状態1.956/7.823/15.646 GiB/rankに対し、完全再利用が初めて成功するL1 rungが2/8/16 GiBで、実測L1ピークも1.956/7.824/15.648 GiB/rankとほぼ全状態サイズに追随した。BSRではW=32のまま外部状態を1.956から31.277 GiB/rankへ約16倍増やしても、6点すべてのRWSが500.75 MiB/rankで一定だった。最大状態は生存ステージングの63.959倍。W sweepは理論式と0 byte残差で一致し、SSD並列化はRWSを変えずTTFTを2.45倍改善した。","key_results":[{"metric":"fixed-W restoration working set","value":"500.75 MiB/rank at all six sizes","baseline":"whole-plan peak grows with selected state","condition":"W=32, 32K to 524032 tokens, external state 1.956 to 31.277 GiB/rank","interpretation":"外部状態を約16倍増やしても復元一時容量は固定され、最大外部状態/生存ステージング比63.959倍。"},{"metric":"whole-plan first successful L1 rung","value":"2/8/16 GiB for 32K/128K/256K","baseline":"external state 1.956/7.823/15.646 GiB/rank","condition":"W=0 upstream path","interpretation":"従来経路の復元容量が選択状態全体へ比例することを実測。"},{"metric":"W-to-RWS law","value":"125.1875/250.375/500.75/1001.5 MiB/rank","baseline":"W=8/16/32/64 predicted by W*16,408,576 bytes/rank","condition":"256K tokens","interpretation":"4点すべて理論式と0 byte残差で一致し、Wが明示的容量ノブとして働く。"},{"metric":"SSD restore TTFT","value":"43.1 s to 17.6 s","baseline":"filesystem load concurrency 1","condition":"concurrency 4, 512K, W=32","interpretation":"2.45倍高速化しながらRWSは両条件500.75 MiB/rankで不変。"},{"metric":"failure exposure","value":"full prefix or zero external reuse","baseline":"partial exposure would violate request semantics","condition":"remote unavailable, remote+SSD absent, one-rank remote fault","interpretation":"評価した障害で部分復元状態を広告せず、canonical outputとTP=2 healthを維持。"}],"negative_results":"BSRは総転送量を減らさず、総仕事量はTheta(|S|)なので状態が長いほど復元遅延は増える。現プロトタイプは有界復元を専用ロックで直列化し、複数要求の並行復元を制限する。512Kの従来whole-plan 32 GiB点は実測しておらず推定を主比較へ使っていない。RWSはLMCache L1復元プールだけで、モデル重みや宛先KV、通信bufferを含む総プロセスメモリ一定を意味しない。","interpretation":"外部保持容量を増やすだけでは復元時ピークは解決しない。完全ヒットを情報として先に確定し、データ自体は一窓ずつ導入・解放することで容量増加を反復回数増加へ置き換えられる。要求単位コミットがこの空間最適化をTP/異種状態でも安全にする。","quality_impact":"生成品質そのものを変える方式ではなく、全成功条件でcold executionとcanonical output hash一致を要求する。障害時も不完全状態を使わず再利用0または下位完全再利用へ戻す。"},"reservation":{"claim_id":"claim-c42378bb84cf93cfa6eb6efb","worker_id":"scheduled-chat-llm-paper-worker-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5c745c186b2bc06f13b5cf77",
+  "job_id": "job-research-a5d6d7156c3ffec6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5c745c186b2bc06f13b5cf77",
+    "worker_id": "scheduled-chat-llm-paper-worker-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
