@@ -1,10 +1,18 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d473f0ab9809231abdaf6376","job_id":"job-research-68365ee603a68033",
-  "data":{
-    "hardware":"エッジ側はRTX 3090 1基、クラウド側はA100 GPU 4基。二サービスをZeroMQで接続し、Linux traffic controlとNetEmで上り/下り50/150、150/1000、250/2500 Mbpsの三条件を再現。",
-    "software":"AsymSpecは二つのPythonサービスとして実装。比較対象は標準投機的復号、CoSine、PipeInfer。通信・再バッチ化を含む端から端までの実装を評価している。",
-    "methodology":"ドラフト/対象モデル対はQwen3 4B/32B、GLM-4 9B/32B、Llama 3.1 8B/70B。作業負荷はGSM8KとHumanEval。三つの非対称回線条件を組み合わせた18動作点で出力トークンスループットを比較し、端から端までの遅延、最初のトークンまでの時間、出力トークン当たり時間も測定。Qwen3 4B/32Bでは構成要素除去、補正支持集合Kの忠実度・精度・実行時間感度も調べる。",
-    "scope":"実GPUとネットワークエミュレーションによる端から端までの評価であり、三モデル系列・二作業負荷・三回線条件を覆う。一方、物理的に離れた実商用回線そのものではなく帯域条件をNetEmで再現しており、単一要求しか準備できない場合は確認済み接頭辞パイプラインが待機を選ぶため多要求時ほどの重畳効果は得られない。"
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-882a986d727aae3614a5b429",
+  "job_id": "job-research-68365ee603a68033",
+  "data": {
+    "hardware": "エッジ側はRTX 3090 1基、クラウド側はA100 GPU 4基。二サービスをZeroMQで接続し、Linux traffic controlとNetEmで上り/下り50/150、150/1000、250/2500 Mbpsの三条件を再現。",
+    "software": "AsymSpecは二つのPythonサービスとして実装。比較対象は標準投機的復号、CoSine、PipeInfer。通信・再バッチ化を含む端から端までの実装を評価している。",
+    "methodology": "ドラフト/対象モデル対はQwen3 4B/32B、GLM-4 9B/32B、Llama 3.1 8B/70B。作業負荷はGSM8KとHumanEval。三つの非対称回線条件を組み合わせた18動作点で出力トークンスループットを比較し、端から端までの遅延、最初のトークンまでの時間、出力トークン当たり時間も測定。Qwen3 4B/32Bでは構成要素除去、補正支持集合Kの忠実度・精度・実行時間感度も調べる。",
+    "scope": "実GPUとネットワークエミュレーションによる端から端までの評価であり、三モデル系列・二作業負荷・三回線条件を覆う。一方、物理的に離れた実商用回線そのものではなく帯域条件をNetEmで再現しており、単一要求しか準備できない場合は確認済み接頭辞パイプラインが待機を選ぶため多要求時ほどの重畳効果は得られない。"
   },
-  "reservation":{"claim_id":"claim-d473f0ab9809231abdaf6376","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-882a986d727aae3614a5b429",
+    "worker_id": "scheduled-chat-llm-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
