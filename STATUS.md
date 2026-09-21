@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 20:37:28 JST**
+> 自動生成: **2026-09-21 20:38:03 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -144,9 +144,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.15636` — Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash / worker `scheduled-chat-30`
-  - claim: **09-21 20:37:08 JST** / heartbeat: **—** / lease expiry: **09-21 22:07:08 JST**
-  - evidence: `.survey/work-queue/claims/job-research-03793bd297310cea.json`
+- `DOI:10.1145/3789240.3829159` — DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O / worker `scheduled-chat-30`
+  - claim: **09-21 20:37:55 JST** / heartbeat: **—** / lease expiry: **09-21 22:07:55 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a5d6d7156c3ffec6.json`
 - `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-llm-paper-worker-30`
   - claim: **09-21 19:31:03 JST** / heartbeat: **—** / lease expiry: **09-21 21:01:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-c27f3a6ec993f9ab.json`
@@ -197,8 +197,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **368** |
-| └ Research | **182** |
+| 成功result未照合のimmutable submission | **369** |
+| └ Research | **183** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
