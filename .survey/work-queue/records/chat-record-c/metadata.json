@@ -1,18 +1,77 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-2022d5354abb12031eade572","job_id":"job-research-3eb9c6f535e789d0",
- "data":{
-  "canonical_id":"arXiv:2609.16215","arxiv_id":"2609.16215","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},
-  "title":"Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
-  "authors":["Srikanta Datta Tumkur","Jay Iyer","Mehar Simhadri","Sai Pavan Kumar","Sai Kapil Kumar","Ramesh Nampelly"],
-  "published":"2026-09-14","publication":"arXiv preprint","publication_type":"Preprint","publication_status":"arXiv v1",
-  "source":"https://arxiv.org/abs/2609.16215","sources":["https://arxiv.org/abs/2609.16215","https://arxiv.org/html/2609.16215","https://arxiv.org/pdf/2609.16215"],
-  "primary_url":"https://arxiv.org/abs/2609.16215","html_url":"https://arxiv.org/html/2609.16215","pdf_url":"https://arxiv.org/pdf/2609.16215","implementation_url":null,
-  "implementation":"論文は離散イベントシミュレータと結果生成コードを用いる実装研究で、実GPUサービング基盤への統合評価ではない。arXiv本文から公式な独立コードURLは確定できなかった。",
-  "last_checked":"2026-09-21","code":null,
-  "hardware_evaluation":"単一GPU・バッチ1を中心とするシミュレーション評価であり、GPU HBM・CPU DRAM・SSDの帯域、容量、価格と実行時間予測器をモデル化する。実機クラスタでのend-to-end計測ではない。",
-  "quality_effect":"KV内容を近似・量子化・削除する手法ではなく配置場所を変えるため、モデル出力品質は原理上保持される。論文はKV量子化とevictionを固定し、品質劣化ではなく遅延・帯域・容量・コストを評価する。",
-  "references":["arXiv:2407.00079","arXiv:2510.09665","arXiv:2303.06865","arXiv:2406.19707","arXiv:2403.19708","arXiv:2309.06180","arXiv:2405.16444","arXiv:2312.07104","arXiv:2401.14351","arXiv:2402.02750","arXiv:2401.18079","arXiv:2306.14048","arXiv:2406.10774","arXiv:2401.09670","arXiv:2311.18677","arXiv:2403.02310"],
-  "lineage":"KVキャッシュ階層メモリ / GPU・CPU・SSD配置 / 長寿命セッション","topics":["KVキャッシュ","階層メモリ","SSDオフロード","配置ポリシー","プリフェッチ","長文脈推論"]
- },
- "reservation":{"claim_id":"claim-2022d5354abb12031eade572","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-83e8749d067c97804d87f404",
+  "job_id": "job-research-3eb9c6f535e789d0",
+  "data": {
+    "canonical_id": "arXiv:2609.16215",
+    "arxiv_id": "2609.16215",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": []
+    },
+    "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+    "authors": [
+      "Srikanta Datta Tumkur",
+      "Jay Iyer",
+      "Mehar Simhadri",
+      "Sai Pavan Kumar",
+      "Sai Kapil Kumar",
+      "Ramesh Nampelly"
+    ],
+    "published": "2026-09-14",
+    "publication": "arXiv preprint",
+    "publication_type": "Preprint",
+    "publication_status": "arXiv v1",
+    "source": "https://arxiv.org/abs/2609.16215",
+    "sources": [
+      "https://arxiv.org/abs/2609.16215",
+      "https://arxiv.org/html/2609.16215",
+      "https://arxiv.org/pdf/2609.16215"
+    ],
+    "primary_url": "https://arxiv.org/abs/2609.16215",
+    "html_url": "https://arxiv.org/html/2609.16215",
+    "pdf_url": "https://arxiv.org/pdf/2609.16215",
+    "implementation_url": null,
+    "implementation": "論文は離散イベントシミュレータと結果生成コードを用いる実装研究で、実GPUサービング基盤への統合評価ではない。arXiv本文から公式な独立コードURLは確定できなかった。",
+    "last_checked": "2026-09-21",
+    "code": null,
+    "hardware_evaluation": "単一GPU・バッチ1を中心とするシミュレーション評価であり、GPU HBM・CPU DRAM・SSDの帯域、容量、価格と実行時間予測器をモデル化する。実機クラスタでのend-to-end計測ではない。",
+    "quality_effect": "KV内容を近似・量子化・削除する手法ではなく配置場所を変えるため、モデル出力品質は原理上保持される。論文はKV量子化とevictionを固定し、品質劣化ではなく遅延・帯域・容量・コストを評価する。",
+    "references": [
+      "arXiv:2407.00079",
+      "arXiv:2510.09665",
+      "arXiv:2303.06865",
+      "arXiv:2406.19707",
+      "arXiv:2403.19708",
+      "arXiv:2309.06180",
+      "arXiv:2405.16444",
+      "arXiv:2312.07104",
+      "arXiv:2401.14351",
+      "arXiv:2402.02750",
+      "arXiv:2401.18079",
+      "arXiv:2306.14048",
+      "arXiv:2406.10774",
+      "arXiv:2401.09670",
+      "arXiv:2311.18677",
+      "arXiv:2403.02310"
+    ],
+    "lineage": "KVキャッシュ階層メモリ / GPU・CPU・SSD配置 / 長寿命セッション",
+    "topics": [
+      "KVキャッシュ",
+      "階層メモリ",
+      "SSDオフロード",
+      "配置ポリシー",
+      "プリフェッチ",
+      "長文脈推論"
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-83e8749d067c97804d87f404",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
