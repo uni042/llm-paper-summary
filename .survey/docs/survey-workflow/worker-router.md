@@ -37,6 +37,29 @@ maintenance対象または08:30 JSTの専用更新条件だけは、この分岐
 - **探索モード**: 最低4つの materially distinct なDiscovery roundを耐久保存する。4 roundは停止上限ではない。単一roundの0件・重複のみでは終了しない。
 
 handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Library双方への耐久保存不能などのhard stopはノルマより優先する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
+## 2.1 正規スクリプトを直接実行できない環境のfast-lane transport
+
+Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自体は、Research / Audit / Discoveryを停止する理由ではない。GitHubへのread/writeが可能なら、**requestファイルをmainへ耐久保存し、対応するGitHub Actions fast laneに正規スクリプトを実行させ、resultファイルを読む経路**を現行の正規transportとして使う。この経路はmanual state編集ではない。
+
+Research / Auditのclaimは次の順で行う。
+
+1. 最新main HEADとclaim stateを再取得し、同一workerの未完了claimがないことを確認する。
+2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatの最小requestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1`、`job_types: ["research", "audit"]` を持つ。
+3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で `claim_worker_with_banks.py` を実行する。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
+4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を所定間隔で再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`next_action` / `instructions` を正本として以後の処理を行う。
+5. claim result待ちのためだけに別requestを発行しない。
+
+Research / Auditの不変submissionも同様にfast laneを使える。
+
+1. 5スロットをclaim result指定のrecord bankまたは現行fallbackへ完全保存し、必要な実blob SHAを確定する。
+2. attempt固有descriptorを `.survey/work-queue/submissions/research/<unique>.json` または `audit/<unique>.json` にcommitする。status-only `blocked` / `deferred` / `rejected` も同じsubmission laneへ送る。
+3. このpushで `.github/workflows/survey-submission-fast.yml` が起動し、最新main上で正規submission processorを実行する。
+4. 同名の `.survey/work-queue/results/research/<unique>.json` または `audit/<unique>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。pending中は同一descriptorを上書きせず、正本が許す独立作業を続ける。
+
+Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/discovery-precheck/requests/<request-id>.json` をmainへcommitし、`.github/workflows/discovery-precheck.yml` に `process_discovery_precheck.py` を実行させ、同名resultを読む。Discovery submissionは既存のqueue処理経路へ流し、Research jobやstateを手で生成しない。
+
+**重要:** 「ローカルPython/任意コマンド実行機能がない」は、GitHub read/writeと上記fast laneが利用可能な限り `platform_limit` / hard stopではない。fast lane自体がGitHub/API/認証/Actions障害で利用不能になった場合だけ、第6節の保存障害・退避と第7節の停止判定へ進む。
+
 ## 3. 読解（Research / Audit）の共通処理ループ
 
 1. 最新queueと現在の担当確保状態（claim state）を取得する。
