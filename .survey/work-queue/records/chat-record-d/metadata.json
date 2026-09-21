@@ -4,10 +4,26 @@
   "slot": "metadata",
   "attempt_id": "attempt-787ff7b0caf98962274ac05a",
   "job_id": "job-research-3c0256304cd034ce",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-787ff7b0caf98962274ac05a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.11186",
+    "arxiv_id": "2605.11186",
+    "doi": null,
+    "openreview_id": null,
+    "title": "CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration",
+    "authors": ["Yuning Han", "Yangchenchen Jin", "Dylan Zhao", "Jingwei Sun"],
+    "authors_affiliations": "University of Florida",
+    "published": "2026-05-11",
+    "publication": "arXiv preprint",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+    "source": "https://arxiv.org/abs/2605.11186",
+    "sources": ["https://arxiv.org/abs/2605.11186", "https://arxiv.org/pdf/2605.11186"],
+    "code": "https://github.com/ElizaFuLan/CATS.git",
+    "implementation": "著者実装が公開されている。論文はNVIDIA Jetson AGX Orin上で実機評価し、学習にはB200 GPUを使用する。",
+    "topics": ["投機的デコード", "メモリ制約推論", "エッジ推論", "重みオフロード", "フラッシュメモリ"],
+    "lineage": "memory-limited inference / speculative decoding",
+    "last_checked": "2026-09-21"
+  },
+  "reservation": {"claim_id": "claim-787ff7b0caf98962274ac05a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
