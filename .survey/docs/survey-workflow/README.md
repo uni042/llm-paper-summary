@@ -14,7 +14,7 @@ Scheduled Chat / Work のワーカー（worker）が実行判断のために読�
 - 必要な場合だけ `.survey/work-queue/state.json`
 - 論文レコード作成時だけ `.survey/templates/paper.md`
 
-正規スクリプトが `[WORKER-GUIDE]`、`next_action`、`recovery_steps` を返した場合は、その復帰手順に従います。別文書や旧経路を探して迂回しません。
+正規スクリプトが `[WORKER-GUIDE]`、`next_action`、`recovery_steps` を返した場合は、その機械案内を実行時の最優先指示として従います。`worker-router.md` と矛盾して見える場合も旧経路へ迂回せず機械案内に従い、矛盾内容を最終報告でユーザーへの相談事項として明記します。
 
 ## 保守資料の扱い
 
