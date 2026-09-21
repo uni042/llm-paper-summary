@@ -42,6 +42,19 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     )
     hard_stop = bool(args.hard_stop)
     handoff_safe = bool(args.handoff_safe)
+    work_mode = str(getattr(args, "work_mode", "unknown") or "unknown").strip().lower()
+    research_completed = max(
+        int(getattr(args, "research_audit_completed_this_invocation", 0) or 0), 0
+    )
+    research_minimum = max(
+        int(getattr(args, "research_minimum_completions", 3) or 3), 1
+    )
+    discovery_completed = max(
+        int(getattr(args, "discovery_rounds_completed", 0) or 0), 0
+    )
+    discovery_minimum = max(
+        int(getattr(args, "discovery_min_rounds", 4) or 4), 1
+    )
 
     pending = {
         "claim_result": bool(args.claim_result_pending),
@@ -71,6 +84,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     if hard_stop and not handoff_safe:
         blocking_reasons.append("hard_stop_handoff_not_safe")
 
+    if not hard_stop:
+        if work_mode == "research" and research_completed < research_minimum:
+            blocking_reasons.append("research_minimum_not_met")
+        elif work_mode == "discovery" and discovery_completed < discovery_minimum:
+            blocking_reasons.append("discovery_minimum_not_met")
+
     permit = not blocking_reasons
     if permit:
         decision = "MAY_FINALIZE"
@@ -90,6 +109,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         elif active_assignment:
             next_action = "CONTINUE_ASSIGNED_WORK"
             wait_seconds = 0
+        elif "research_minimum_not_met" in blocking_reasons:
+            next_action = "CLAIM_NEXT_RESEARCH_AUDIT"
+            wait_seconds = 0
+        elif "discovery_minimum_not_met" in blocking_reasons:
+            next_action = "DISCOVER_AGAIN"
+            wait_seconds = 0
         elif hard_stop and not handoff_safe:
             next_action = "COMPLETE_SAFE_HANDOFF_THEN_RECHECK"
             wait_seconds = 0
@@ -108,6 +133,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         )
     elif next_action == "CONTINUE_ASSIGNED_WORK":
         next_action_message = "有効なassignmentの未完了作業を続行し、耐久保存地点まで進めます。"
+    elif next_action == "CLAIM_NEXT_RESEARCH_AUDIT":
+        next_action_message = (
+            "Research/Auditの最低成功完了数に未達です。最終化せず、最新queue/claim stateから"
+            "次のResearch/Auditを1件claimします。"
+        )
+    elif next_action == "DISCOVER_AGAIN":
+        next_action_message = "Discoveryの最低ラウンド数に未達です。最終化せず、次の正規Discovery roundへ進みます。"
     elif next_action == "COMPLETE_SAFE_HANDOFF_THEN_RECHECK":
         next_action_message = "hard stopの安全なhandoffを完了し、最終化条件を再確認します。"
     elif next_action == "CONTINUE_WORK":
@@ -139,11 +171,19 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "progress_notice": progress_notice,
         "hard_stop": hard_stop,
         "handoff_safe": handoff_safe,
+        "work_mode": work_mode,
+        "research_audit_completed_this_invocation": research_completed,
+        "research_minimum_completions": research_minimum,
+        "discovery_rounds_completed": discovery_completed,
+        "discovery_min_rounds": discovery_minimum,
         "rule": (
             "Final response is forbidden without an issued permit. Normal finalization also requires "
             "explicit checks of the latest claim and submission states. Pending claim/submission/ACK "
             "results require 10-second real-time polling of the same target, repeated until the "
-            "required result reaches terminal state or an explicit hard stop is safely handed off."
+            "required result reaches terminal state or an explicit hard stop is safely handed off. "
+            "As defense in depth, normal Research/Audit finalization is independently refused while "
+            "the three-success floor is unmet, and normal Discovery finalization is refused while "
+            "the four-round floor is unmet, even if an incorrect STOP_RUN is supplied."
         ),
     }
 
@@ -161,6 +201,15 @@ def main() -> int:
     ap.add_argument("--ack-result-pending", type=yn, default=False)
     ap.add_argument("--hard-stop", type=yn, default=False)
     ap.add_argument("--handoff-safe", type=yn, default=False)
+    ap.add_argument(
+        "--work-mode",
+        choices=("unknown", "research", "discovery", "maintenance"),
+        default="unknown",
+    )
+    ap.add_argument("--research-audit-completed-this-invocation", type=int, default=0)
+    ap.add_argument("--research-minimum-completions", type=int, default=3)
+    ap.add_argument("--discovery-rounds-completed", type=int, default=0)
+    ap.add_argument("--discovery-min-rounds", type=int, default=4)
     args = ap.parse_args()
     print(json.dumps(decide(args), ensure_ascii=False, indent=2))
     return 0
