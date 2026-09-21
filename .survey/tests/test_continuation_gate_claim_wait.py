@@ -28,6 +28,7 @@ def make_args(**overrides):
         claim_result_pending=False,
         submission_state_checked=False,
         submission_result_pending=False,
+        pipeline_ahead_count=0,
         write_failed=False,
         probe="not-run",
         seconds_to_run_deadline=1800,
@@ -77,32 +78,30 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertEqual(result["required_action"], "CHECK_SUBMISSION_STATE")
         self.assertIn("submission", result["next_action_message"].lower())
 
-    def test_pending_submission_is_serial_barrier_even_with_independent_work(self):
+    def test_pending_submission_allows_exactly_one_paper_lookahead(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             submission_state_checked=True,
             submission_result_pending=True,
+            pipeline_ahead_count=0,
             independent_work=True,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["required_action"], "WAIT_FOR_SUBMISSION_RESULT")
+        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
         self.assertFalse(result["finalization_allowed"])
-        self.assertEqual(result["submission_wait_seconds"], 10)
-        self.assertIn("終了しません", result["next_action_message"])
 
-    def test_pending_submission_without_independent_work_waits(self):
+    def test_pending_previous_submission_blocks_after_one_paper_lookahead(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             submission_state_checked=True,
             submission_result_pending=True,
-            independent_work=False,
-            spillover_work=False,
-            can_discover=False,
+            pipeline_ahead_count=1,
+            independent_work=True,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["required_action"], "WAIT_FOR_SUBMISSION_RESULT")
+        self.assertEqual(result["required_action"], "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT")
         self.assertEqual(result["submission_wait_seconds"], 10)
-        self.assertIn("終了しません", result["progress_notice"])
+        self.assertIn("1本前", result["progress_notice"])
         self.assertIn("再確認", result["progress_notice"])
 
     def test_checked_clear_claim_state_under_quota_claims_next_paper(self):
