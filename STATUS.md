@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 11:13:31 JST**
+> 自動生成: **2026-09-21 11:14:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **347** |
 | 未claim Research job | **346** |
 | 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-21 11:10:02 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-21 11:10:02 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -189,7 +189,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.1145/3789240.3829130` — TurboBus: Pooling PCIe Bandwidth for LLM Workloads via Scale-Up Fabrics / worker `scheduled-chat-llm-00`
-  - claim: **09-21 11:10:38 JST** / heartbeat: **—** / lease expiry: **09-21 12:40:38 JST**
+  - claim: **09-21 11:13:53 JST** / heartbeat: **—** / lease expiry: **09-21 12:43:53 JST**
   - evidence: `.survey/work-queue/claims/job-research-28c5772328ef0791.json`
 
 #### Audit
