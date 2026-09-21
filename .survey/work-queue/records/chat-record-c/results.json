@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6abe896ce85b87802523af29",
-  "job_id": "job-research-5c8ae1bd28277ef1",
-  "data": {
-    "overview": "実測ではHBMとNVLinkの同時実行でHBM帯域が典型的に約20%低下し、PCIeではGDR writeがH2D帯域を79.8%、GDR readがD2H帯域を53.9%低下させる強い非対称性を確認した。GPUWeaverをvLLM+Mooncakeへ統合すると、1.2〜9.4GBのKV条件でPD KV転送時間を19.4–34.4%、平均TTFTを2.4–6.1%短縮した。",
-    "key_results": [
-      {
-        "metric": "H2D帯域低下",
-        "value": "25.82→5.23 GiB/s（79.8%低下）",
-        "baseline": "GDR writeなし",
-        "condition": "concurrent GDR write + H2D",
-        "interpretation": "PCIe共有区間でGDR writeがH2Dより強いサービス優先を持つ。"
-      },
-      {
-        "metric": "D2H帯域低下",
-        "value": "25.12→11.57 GiB/s（53.9%低下）",
-        "baseline": "GDR readなし",
-        "condition": "concurrent GDR read + D2H",
-        "interpretation": "逆方向でも強い競合がある。"
-      },
-      {
-        "metric": "GDR read低下",
-        "value": "約41.5%",
-        "baseline": "isolated GDR read",
-        "condition": "background D2H、message size 8KB以上",
-        "interpretation": "方向依存でD2HがGDR readを大きく抑える。"
-      },
-      {
-        "metric": "PD KV transfer flow time",
-        "value": "19.4–34.4%短縮",
-        "baseline": "default overlap",
-        "condition": "vLLM+Mooncake, Qwen3-8B, KV 1.2–9.4GB",
-        "interpretation": "背景offloadをpacingしてlatency-critical RDMAを保護できる。"
-      },
-      {
-        "metric": "平均TTFT",
-        "value": "2.4–6.1%短縮",
-        "baseline": "default overlap",
-        "condition": "同上",
-        "interpretation": "PD KV転送はTTFT経路の一部なのでend-to-end改善は転送改善より小さい。"
-      }
-    ],
-    "negative_results": "NVLinkは同時HBMアクセス下でも条件によって低下が0–1%程度に留まり、HBM側がより大きく犠牲になる暗黙優先度が観測された。GPUWeaverの現在のpolicyは単純でcontrol actionも粗く、NVLink/HBM競合に対する統合end-to-end制御は未評価。",
-    "interpretation": "主要な知見は、GPUファブリック競合が単なる総帯域不足ではなく、方向・トラフィック種別ごとの暗黙優先度を持つ点である。したがってLLM runtimeは通信を無条件に重畳するより、SLO重要度に応じて注入を制御した方がよい。",
-    "quality_impact": "生成品質の近似は導入しない。性能改善は通信スケジューリングによるもので、品質評価ではなくTTFT・転送時間・帯域を測定する。"
-  },
+  "attempt_id": "attempt-ba0e1065e16523ecf7e8c160",
+  "job_id": "job-research-2b08559ce4102c47",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-6abe896ce85b87802523af29",
+    "claim_id": "claim-ba0e1065e16523ecf7e8c160",
     "worker_id": "scheduled-chat-hourly30",
     "worker_kind": "scheduled_chat"
   }
