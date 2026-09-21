@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 15:43:24 JST**
+> 自動生成: **2026-09-21 15:43:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -175,7 +175,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.06076` — Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment / worker `scheduled-chat-llm-paper-30`
-  - claim: **09-21 15:41:45 JST** / heartbeat: **—** / lease expiry: **09-21 17:11:45 JST**
+  - claim: **09-21 15:43:29 JST** / heartbeat: **—** / lease expiry: **09-21 17:13:29 JST**
   - evidence: `.survey/work-queue/claims/job-research-3b1c7287727937a1.json`
 - `arXiv:2608.15299` — MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation / worker `scheduled-chat-30b`
   - claim: **09-21 14:29:58 JST** / heartbeat: **09-21 15:32:52 JST** / lease expiry: **09-21 17:02:52 JST**
