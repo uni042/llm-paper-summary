@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-032318afa278e3cdd42d8d99",
-  "job_id": "job-research-5c8ae1bd28277ef1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-032318afa278e3cdd42d8d99",
-    "worker_id": "scheduled-chat-hourly30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-032318afa278e3cdd42d8d99","job_id":"job-research-5c8ae1bd28277ef1","data":{"canonical_id":"DOI:10.1145/3838177.3841731","arxiv_id":null,"doi":"10.1145/3838177.3841731","openreview_id":null,"arxiv_categories":null,"title":"Unlocking Software-defined GPU Fabric Scheduling in the LLM Era","summary":"GPUWeaverは、LLM推論でPCIe・NVLink・GPUDirect RDMAが共有資源を競合する問題を、アプリケーション目標とファブリック信号を結ぶ閉ループ通信スケジューリングとして扱う。DGX-H100等で競合の非対称性を実測し、vLLM+MooncakeのQwen3-8BケースでPD KV転送時間を19.4–34.4%、平均TTFTを2.4–6.1%短縮した。","list_summary":"GPUファブリック競合を監視・通信注入制御し、vLLM+MooncakeでPD KV転送を19.4–34.4%短縮する。","authors":["Danyang Chen","Yufeng Gu","Yibo Huang","Chengxuan Pei","Peichun Hua","Yang Zhou","Yunming Xiao"],"authors_affiliations":"The Chinese University of Hong Kong, Shenzhen; University of Michigan; University of California, Davis","published":"2026-09-17","publication":"APSys 2026","publication_type":"査読付きワークショップ論文","publication_status":"Published at APSys 2026","lineage":"LLM serving / GPU fabric scheduling / KV-cache offload / disaggregated inference","topics":["GPUファブリック","PCIe競合","NVLink競合","KVキャッシュオフロード","分離推論"],"importance":"オフロードやprefill-decode分離で増える通信を単なる帯域利用ではなく、暗黙のハードウェア優先度を含む共有資源スケジューリング問題として明示化する。","implementation":"GPUWeaverの予備プロトタイプをvLLM+Mooncakeへ統合し、監視信号とオフロード遅延注入を用いる。","hardware_evaluation":"DGX-H100でHBM/NVLink競合を評価し、2サーバRDMA構成でPCIe競合を評価。統合ケースは論理2サーバ・各1GPU。","quality_effect":"モデル品質を変更する手法ではなく通信スケジューリング。評価指標は帯域、転送時間、TTFTで、生成品質への近似は導入しない。","source":"https://doi.org/10.1145/3838177.3841731","sources":["https://yunmingxiao.github.io/publication/26apsys-gpuweaver/apsys26-gpuweaver.pdf","https://doi.org/10.1145/3838177.3841731"],"code":null,"last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary manuscript","references_total":47},"reservation":{"claim_id":"claim-032318afa278e3cdd42d8d99","worker_id":"scheduled-chat-hourly30","worker_kind":"scheduled_chat"}}
