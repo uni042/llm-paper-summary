@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 12:42:21 JST**
+> 自動生成: **2026-09-21 12:42:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **333** |
 | 未claim Research job | **332** |
 | 直近24hの検証済みResearch収録 | **68** |
-| 最終検証済みResearch収録 | **09-21 12:12:28 JST（29分前）** |
+| 最終検証済みResearch収録 | **09-21 12:12:28 JST（30分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -214,7 +214,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.1145/3838177.3841731` — Unlocking Software-defined GPU Fabric Scheduling in the LLM Era / worker `scheduled-chat-hourly30`
-  - claim: **09-21 12:39:16 JST** / heartbeat: **—** / lease expiry: **09-21 14:09:16 JST**
+  - claim: **09-21 12:42:45 JST** / heartbeat: **—** / lease expiry: **09-21 14:12:45 JST**
   - evidence: `.survey/work-queue/claims/job-research-5c8ae1bd28277ef1.json`
 
 #### Audit
