@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T07:29:49.637945+00:00",
+  "updated_at": "2026-09-21T08:27:11.726514+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -32936,6 +32936,56 @@
       "paper_active_count_before": 880,
       "paper_active_count_after": 880,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35577307981",
+      "first_recorded_at": "2026-09-21T08:27:11.726514+00:00",
+      "last_recorded_at": "2026-09-21T08:27:11.726514+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35577307981:2",
+          "recorded_at": "2026-09-21T08:27:11.726514+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35577307981",
+            "run_attempt": "2",
+            "source_sha": "d989052a1e5ac1a0ab2ab4512a38ce6d6aefea3d"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-d21a98f99faeb4fe",
+          "type": "research",
+          "canonical_id": "arXiv:2608.01785",
+          "title": "HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 880,
+      "paper_active_count_after": 880,
+      "last_successful_action": "research_completed"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 17:20:48 JST**
+> 自動生成: **2026-09-21 17:27:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **329** |
+| 収録候補論文 | **328** |
 | 未claim Research job | **328** |
-| 直近24hの検証済みResearch収録 | **48** |
-| 最終検証済みResearch収録 | **09-21 15:48:38 JST（1時間32分前）** |
+| 直近24hの検証済みResearch収録 | **49** |
+| 最終検証済みResearch収録 | **09-21 17:27:05 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **329** |
+| canonical_id確認済みの一意な候補論文 | **328** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **329** |
+| 非終端Research job合計 | **328** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **10** | **6** | **4** | **0** | **1** | **0** | — |
+| Research | **11** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **10** | **7** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **11** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-21 17:27:05 JST** [research] `arXiv:2608.01785` — HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving
+  - job: `.survey/work-queue/jobs/job-research-d21a98f99faeb4fe.json`
+  - result: `.survey/work-queue/results/research/attempt-29cb222c40356af503452ebc-repair2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-29cb222c40356af503452ebc-repair2.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md`
 - **09-21 15:48:38 JST** [research] `arXiv:2608.24938` — ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration
   - job: `.survey/work-queue/jobs/job-research-f837d96601e69237.json`
   - result: `.survey/work-queue/results/research/attempt-edfac129f344bed99e666629.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-61f8cc953f4da08391077bca.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-61f8cc953f4da08391077bca.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md`
-- **09-21 11:44:12 JST** [research] `arXiv:2609.16338` — Breaking the 1.58-bit Barrier for Ternary LLMs
-  - job: `.survey/work-queue/jobs/job-research-ff7167d92a15ba4e.json`
-  - result: `.survey/work-queue/results/research/attempt-5bd7d7676a2366c6d9993181.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5bd7d7676a2366c6d9993181.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.16338-breaking-the-1-58-bit-barrier-for-ternary-llms.md`
 
 ### Audit
 
@@ -173,10 +173,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.01785` — HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving / worker `scheduled-chat-llm-survey-fastlane-verify`
-  - claim: **09-21 17:13:31 JST** / heartbeat: **—** / lease expiry: **09-21 18:43:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d21a98f99faeb4fe.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -196,7 +194,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **329** |
+| ready | **328** |
 
 ### 候補の重複・識別情報欠損
 
@@ -216,7 +214,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **880** |
+| inference/training/survey配下の論文Markdown実体 | **881** |
 
 ### immutable submissionの未照合
 
@@ -224,8 +222,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **356** |
-| └ Research | **170** |
+| 成功result未照合のimmutable submission | **355** |
+| └ Research | **169** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
