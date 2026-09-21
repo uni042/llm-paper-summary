@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 08:36:35 JST**
+> 自動生成: **2026-09-21 09:03:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **362** |
-| 未claim Research job | **362** |
+| 未claim Research job | **361** |
 | 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-20 23:48:14 JST（8時間48分前）** |
+| 最終検証済みResearch収録 | **09-20 23:48:14 JST（9時間14分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **6** | **4** | **0** | **0** | **0** | — |
+| Research | **0** | **6** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **57** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **57** | **7** | **5** | **0** | **0** | **0** | **3** |
+| 合計 | **57** | **7** | **5** | **0** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -163,8 +163,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2608.01785` — HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving / worker `scheduled-chat-llm-paper-00`
+  - claim: **09-21 09:02:50 JST** / heartbeat: **—** / lease expiry: **09-21 10:32:50 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d21a98f99faeb4fe.json`
 
 #### Audit
 
@@ -212,11 +214,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **934** |
-| └ Research | **609** |
+| 成功result未照合のimmutable submission | **302** |
+| └ Research | **116** |
 | └ Audit | **2** |
-| └ Discovery | **220** |
-| └ Other/Unknown | **103** |
+| └ Discovery | **95** |
+| └ Other/Unknown | **89** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -224,7 +226,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 
 | 指標 | 件数 |
 |---|---:|
-| completed Research/Audit jobで厳格検証未成立 | **226** |
+| completed Research/Audit jobで厳格検証未成立 | **334** |
 
 ### 整合性異常
 
