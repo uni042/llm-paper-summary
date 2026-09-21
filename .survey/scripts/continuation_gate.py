@@ -3,8 +3,9 @@
 
 The gate decides whether the whole run may stop for the common hourly paper
 worker. The :00 and :30 schedules are identical. When candidate_inventory is
-provided, candidate_inventory >= 50 selects Discovery and candidate_inventory < 50
-selects Research/Audit. Existing per-mode quotas remain progression floors.
+provided, the run-start candidate_inventory >= 50 selects Research/Audit and
+candidate_inventory < 50 selects Discovery. The selected mode is frozen for the run;
+callers must reuse the run-start routing value or pass the explicit work_mode on later checks. Existing per-mode quotas remain progression floors.
 Transport backlogs, claim-result propagation delay, and job-local failures are not
 stop conditions when repository state remains readable and no explicit hard
 condition holds.
@@ -49,12 +50,18 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 "candidate_inventory is required when work_mode=auto; "
                 "schedule labels and legacy worker kinds are not routing inputs"
             )
-        work_mode = "discovery" if candidate_inventory >= 50 else "research"
+        work_mode = "research" if candidate_inventory >= 50 else "discovery"
         mode_source = "candidate_inventory"
     else:
         work_mode = explicit_work_mode
         mode_source = "explicit_work_mode"
-    papers_added_this_invocation = max(int(getattr(args, "papers_added_this_invocation", 0) or 0), 0)
+    legacy_papers_added = max(int(getattr(args, "papers_added_this_invocation", 0) or 0), 0)
+    completed_ra_raw = getattr(args, "research_audit_completed_this_invocation", None)
+    research_audit_completed_this_invocation = (
+        max(int(completed_ra_raw or 0), 0)
+        if completed_ra_raw is not None
+        else legacy_papers_added
+    )
     research_minimum_papers = max(int(getattr(args, "research_minimum_papers", 3) or 3), 1)
     claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
     submission_state_checked = bool(
@@ -72,7 +79,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 4) or 4), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
-    minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_since_last_novel, 0)
+    minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_completed, 0)
 
     if args.platform_limit:
         reasons.append("platform_limit_reached")
@@ -135,7 +142,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         required_action = "FINALIZE"
         finalization_allowed = True
     elif work_mode == "discovery":
-        if not discovery_reset_progress_known or discovery_rounds_since_last_novel < discovery_min_rounds:
+        if discovery_rounds_completed < discovery_min_rounds:
             decision = "CONTINUE"
             required_action = "DISCOVER_AGAIN"
             finalization_allowed = False
@@ -161,7 +168,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "CHECK_SUBMISSION_STATE"
             finalization_allowed = False
-        elif transient_submission_wait and not independent_work:
+        elif transient_submission_wait:
             decision = "CONTINUE"
             required_action = "WAIT_FOR_SUBMISSION_RESULT"
             finalization_allowed = False
@@ -198,7 +205,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
 
     submission_wait_action = "none"
     submission_wait_seconds = 0
-    if transient_submission_wait and not independent_work:
+    if transient_submission_wait:
         submission_wait_seconds = ASYNC_WAIT_POLL_SECONDS
         submission_wait_action = (
             "keep_same_submission_identity; do_not_duplicate_submission; wait_10_real_seconds; "
@@ -226,11 +233,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
     elif required_action == "WAIT_FOR_SUBMISSION_RESULT":
         next_action_message = progress_notice
-    elif required_action == "CONTINUE_WORK" and transient_submission_wait:
-        next_action_message = (
-            "submission fast laneは処理中ですが、この処理中は終了しません。最新queueを再取得して"
-            "次の独立Research/Auditまたは許可された独立作業へ進みます。"
-        )
     elif required_action == "CONTINUE_WORK":
         next_action_message = "最新queue/stateを再取得し、次の独立Research/Auditまたは許可された独立作業へ進みます。"
     elif required_action == "DISCOVER_AGAIN":
@@ -250,9 +252,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "candidate_inventory": candidate_inventory,
         "work_mode": work_mode,
         "mode_source": mode_source,
-        "papers_added_this_invocation": papers_added_this_invocation,
+        "papers_added_this_invocation": legacy_papers_added,
+        "research_audit_completed_this_invocation": research_audit_completed_this_invocation,
         "research_minimum_papers": research_minimum_papers,
-        "research_quota_remaining": max(research_minimum_papers - papers_added_this_invocation, 0),
+        "research_quota_remaining": max(
+            research_minimum_papers - research_audit_completed_this_invocation, 0
+        ),
         "discovery_rounds_completed": discovery_rounds_completed,
         "discovery_rounds_since_last_novel": discovery_rounds_since_last_novel,
         "discovery_reset_progress_known": discovery_reset_progress_known,
@@ -291,10 +296,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "claim/submission results are polled every 10 real seconds using the same target identity until "
             "terminal or a canonical hard stop. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
-            "The :00 and :30 schedules are the same paper task. In automatic mode, candidate_inventory "
-            "is mandatory: >=50 selects Discovery and <50 selects Research/Audit. Schedule labels "
-            "and legacy worker kinds never select a mode. Discovery keeps its minimum-round progression floor and "
-            "Research exposes the three-paper quota state; hard handoff/platform/durability/read "
+            "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
+            "candidate_inventory is mandatory: >=50 selects Research/Audit and <50 selects Discovery. "
+            "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
+            "Discovery's four-round floor uses total durably completed materially-distinct rounds in this invocation; "
+            "novel discoveries do not reset that count. Research/Audit exposes the combined three-completion quota "
+            "state and a pending submission remains a serial barrier before the next paper; hard "
+            "handoff/platform/durability/read "
             "failures override ordinary continuation."
         ),
     }
@@ -326,6 +334,7 @@ def main() -> int:
     ap.add_argument("--candidate-inventory", type=int, default=None)
     ap.add_argument("--work-mode", choices=("auto", "research", "discovery"), default="auto")
     ap.add_argument("--papers-added-this-invocation", type=int, default=0)
+    ap.add_argument("--research-audit-completed-this-invocation", type=int, default=None)
     ap.add_argument("--research-minimum-papers", type=int, default=3)
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
     ap.add_argument("--discovery-rounds-since-last-novel", type=int, default=None)
