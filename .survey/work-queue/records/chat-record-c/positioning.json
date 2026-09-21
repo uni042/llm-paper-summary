@@ -2,19 +2,19 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-40292cf55942948afc9f4f0a",
-  "job_id": "job-research-f2c000a0ecb53008",
+  "attempt_id": "attempt-f528a03c4ecc9039aaf11a0e",
+  "job_id": "job-research-be16d214d5c628cd",
   "data": {
-    "limitations": "主評価はA100 p4d環境とOPT/Llama系model、合成した20K-request traceであり、H100等のcompute/memory比やproduction固有arrival correlationへの一般化は追加検証が必要。schedulerはGPU saturation profile、KVC block accounting、SLO情報を必要とし、複雑なselection処理自体にもoverheadがある。",
-    "implementation_status": "vLLMのblock-based KV cacheとexecution engineを基盤にAccelGen schedulerを実装し、ORCA、vLLM、FastGen、Sarathi-Serveと実機比較する。公開repository URLは本文から確認できなかったが、arXiv preprint 2503.13737でalgorithmと実装条件が公開されている。",
-    "relation_to_existing": "ORCA/vLLMはcontinuous batchingとpaged KV cache、FastGen/Sarathi-Serveはprompt chunkingでGPU utilizationを改善する。AccelGenはこれらの上にheterogeneous iteration-level SLOとKVC需要をschedulerの明示的resource dimensionとして追加する。",
-    "differences": "従来chunkingは主にforward token budgetを埋めるが、AccelGenはbatchの最厳SLOからtoken budgetを変え、SLOが近いrequestをまとめる。さらにGPU token容量とKVC block容量を同時に最適化し、長promptの同時数制限とTG継続によるKVC早期解放まで含める。",
-    "research_positioning": "LLM serving scheduler研究のうち、SLO-aware scheduling、prompt chunking、KV-cache resource managementを統合する系統に位置する。offloadingやmodel compressionではなく、online batch formationによって既存GPU memoryとcomputeを効率化する。",
-    "practical_takeaway": "短promptと長promptが混在するservingでは固定token budget+FCFSだけではSLOもKVCも扱えない。requestごとのdeadlineをiteration-level priorityへ落とし、GPU computeとKV cacheを2次元resourceとしてbatchを組み、長promptを動的chunk化する設計がgoodput向上に有効である。"
+    "limitations": "分析モデルはkernel不足、scheduler latency、network contention等のruntime固有overheadを意図的に省略し、物理検証もLongCat 2.0/Ascend 910Cの3 workloadに限られるため、6.6〜9.6%誤差は一般的confidence boundではない。bounded hardware explorationはheuristicで理論最適保証がなく、より大きなcatalogでは探索戦略の高度化が必要。future-hardware結果は仮想capability pointであり製品予測ではない。steady-state saturated decode中心で、elasticity、failure isolation、既設hardware再利用は比較対象外。",
+    "implementation_status": "オフラインAFD-LedgerはPython約5,700行（テスト除外）でhardware exploration、deployment provisioning、exhaustive reference modeを実装し、公開GitHub repositoryがある。物理検証runtimeは社内SGLang-FluentLLM上でLongCat 2.0向けにAttention/Expert pool、dispatch-combine、scheduler、cross-pool通信、microbatch/DP pipeline、Ascend operator/GEを実装し8,000行超だが、このproduction runtime自体は公開repoの主対象ではない。",
+    "relation_to_existing": "FastAFD、MegaScale-Infer、Janus、Expert-as-a-Service等のAFD研究は主にFFN execution、communication、scheduling、elasticity、failure recovery、heterogeneous placementなど配置内部の機構を改善する。Frontier等の分析/simulation研究は候補配置を実装せず評価するが、hardware poolを事前固定する場合が多い。AFD-Ledgerはhardware catalog選択そのものをprovisioningへ組み込み、AFDとcollocatedの双方を共通契約下で独立最適化する。",
+    "differences": "機構固定のA/B比較ではなく、architectureごとにhardware assignment、parallelism、batch、replication、worker organizationを最適化して比較する点が中心。hardware pair探索も単純なmemory-per-price/compute-per-priceではなく、軽量role estimate→複数anchor→完全provisioning feedback→global fallbackというbounded searchで行う。",
+    "research_positioning": "MoE servingのAttention–FFN disaggregation研究と、LLM inference analytical provisioning/design-space explorationの交点に位置する。新しいruntime高速化機構というより、AFDの利点をdeployment-level throughputへ正しく換算し、hardware/software co-design判断へつなげる評価・配置設計手法である。",
+    "practical_takeaway": "AFD導入判断では『expert GPUが速い』『attention GPUのHBMが大きい』だけを見ず、同じ予算・TPOT SLOでcollocated側も再最適化する必要がある。AFDはFFN専用workerに割いた分だけrequest-bearing capacityを失うため、batch/KV容量/TPOT/価格/worker ratioを含む完全配置で比較すべきで、異種hardwareの価値は単体性能より新しいreplica構成やworker比を可能にするかで決まる。"
   },
   "reservation": {
-    "claim_id": "claim-40292cf55942948afc9f4f0a",
-    "worker_id": "scheduled-chat-00",
+    "claim_id": "claim-f528a03c4ecc9039aaf11a0e",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }

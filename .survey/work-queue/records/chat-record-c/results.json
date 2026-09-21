@@ -2,69 +2,69 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-40292cf55942948afc9f4f0a",
-  "job_id": "job-research-f2c000a0ecb53008",
+  "attempt_id": "attempt-f528a03c4ecc9039aaf11a0e",
+  "job_id": "job-research-be16d214d5c628cd",
   "data": {
-    "overview": "AccelGenは短長promptと異種SLOが混在する実trace条件で、SLO-aware dynamic chunkingとGPU compute/KV cacheの同時batch最適化を組み合わせ、既存serving方式よりthroughputを1.42〜11.21倍、goodputを1.43〜13.71倍へ高め、SLO attainmentを37〜90%改善する。response latencyも1.61〜12.22倍低減しOracle goodputに近づくため、単にGPU token budgetを満たすだけでなくKVC占有期間とrequest deadlineを同時に扱うことがproduction servingの実効処理能力に直結する。",
-    "summary": "20K-request mixed traceでAccelGenはthroughput 1.42〜11.21×、goodput 1.43〜13.71×、SLO attainment 37〜90%向上、response latency 1.61〜12.22×低減。ablationではdynamic chunkingがthroughput/resource utilizationへ、SLO orderingがgoodput/SLOへ、multi-resource batchingが両resource利用へ寄与する。",
+    "overview": "AFD-Ledgerは完全列挙可能な5 reference caseで20組の評価だけで大域最適AFD配置を回収し、Catalog Eでは64→20、Catalog Sでは121→20と完全配置評価を68.8%/83.5%削減した。LongCat 2.0の3物理workloadでも分析と実測が同じarchitecture decisionを選び、AFD/同居throughput比の誤差は6.6〜9.6%。その上で、同種AFDは36設定中7件だけ勝ち、異種AFDは条件次第で大きく勝つが機種単体指標では最適pairを決められないことを示した。",
+    "summary": "20-pair bounded searchで64/121-pair exhaustive optimumを回収し評価回数を68.8〜83.5%削減。物理LongCat検証ではarchitecture ordering一致・throughput比誤差6.6〜9.6%。同種AFDは36設定中7件のみ勝利し、異種AFDは最大1.823×級だがbudget/SLO依存が強い。",
     "key_results": [
       {
-        "finding": "throughput改善",
-        "metric": "throughput",
-        "value": "1.42〜11.21× higher",
-        "baseline": "ORCA/vLLM/FastGen/Sarathi-Serve等",
-        "condition": "mixed short/long prompt traces",
-        "interpretation": "dynamic chunkingと2-resource batchingでGPU idleとKVC bottleneckを同時に減らす。"
+        "finding": "bounded search efficiency",
+        "metric": "complete deployment evaluations",
+        "value": "64→20 (68.8% reduction), 121→20 (83.5% reduction)",
+        "baseline": "exhaustive ordered-pair provisioning",
+        "condition": "five reference cases",
+        "interpretation": "少数候補の完全評価で全reference caseのexhaustive optimumを回収。"
       },
       {
-        "finding": "goodput改善",
-        "metric": "goodput",
-        "value": "1.43〜13.71× higher",
-        "baseline": "state-of-the-art serving approaches",
-        "condition": "heterogeneous SLO workloads",
-        "interpretation": "処理量だけでなくSLO内完了request数を大きく増やす。"
+        "finding": "physical validation",
+        "metric": "AFD-to-collocated throughput-ratio error",
+        "value": "6.6〜9.6%",
+        "baseline": "LongCat 2.0 physical runtime",
+        "condition": "32K/64K/120K, Ascend 910C, 160 cards",
+        "interpretation": "3 workloadすべてで分析と実測のarchitecture orderingが一致。"
       },
       {
-        "finding": "SLO達成改善",
-        "metric": "SLO attainment",
-        "value": "37〜90% higher",
-        "baseline": "existing schedulers",
-        "condition": "iteration/JCT SLO混在",
-        "interpretation": "remaining-time orderingとSLO-aware token budgetがdeadline violationを抑える。"
+        "finding": "homogeneous AFD",
+        "metric": "AFD-selected settings",
+        "value": "7/36",
+        "baseline": "independently optimized collocated deployment",
+        "condition": "E-grid; DeepSeek 18 + Qwen 18",
+        "interpretation": "DeepSeekは0/18、Qwenは7/18で、分離だけでは固定予算のrequest-bearing-capacity taxを返済できない場合が多い。"
       },
       {
-        "finding": "latency低減",
-        "metric": "response latency",
-        "value": "1.61〜12.22× lower",
-        "baseline": "state-of-the-art approaches",
-        "condition": "trace-driven real experiments",
-        "interpretation": "長promptの分割とKVC早期解放がqueueingを短縮する。"
+        "finding": "heterogeneous AFD examples",
+        "metric": "throughput ratio",
+        "value": "DeepSeek 1.815×; Qwen 1.823×",
+        "baseline": "best collocated deployment",
+        "condition": "representative E-catalog settings",
+        "interpretation": "安価なexpert hardwareによりbudgetをattention workerへ回し、主にresident concurrency増で勝つ。"
       },
       {
-        "finding": "chunking ablation",
-        "metric": "throughput decrease without component",
-        "value": "/Chunkで最大80%低下、/Batch 61%、/Order 35%",
-        "baseline": "full AccelGen",
-        "condition": "ablation across evaluated models",
-        "interpretation": "throughputにはdynamic chunkingの寄与が最大。"
+        "finding": "same pair sensitivity",
+        "metric": "AFD/collocated throughput ratio",
+        "value": "0.483×〜1.815×",
+        "baseline": "collocated optimum",
+        "condition": "same H200+A100 PCIe pair across budget/TPOT settings",
+        "interpretation": "hardware pairの良否はbudget/SLOと最終deployment organizationに強く依存。"
       },
       {
-        "finding": "SLO ablation",
-        "metric": "goodput decrease without component",
-        "value": "/Order 52%、/Chunk 44%、/Batch 27%低下",
-        "baseline": "full AccelGen",
-        "condition": "ablation",
-        "interpretation": "goodput/SLOにはpriority orderingが最重要で、三要素すべてが補完的。"
+        "finding": "future role-specialized hardware",
+        "metric": "throughput gain",
+        "value": "DeepSeek 16.39〜52.07×; Qwen 17.92〜31.12×",
+        "baseline": "best collocated in S catalog",
+        "condition": "simulated role-specific devices",
+        "interpretation": "単体性能より、replica数やworker ratioなど新しい配置構成を可能にする価格・能力境界の突破が支配的。"
       }
     ],
-    "negative_results": "単一resourceだけの最適化ではthroughput最大化にならず、FCFSはheterogeneous SLOを満たしにくい。長promptを過度に同時実行するとKVCを長時間占有する。AccelGen自身も/Order、/Chunk、/Batchを外すとscheduler overheadは63〜82%減るため、性能改善と複雑なonline scheduling計算のtrade-offがある。",
-    "interpretation": "LLM servingではGPU computeとKV cacheがiterationごとに別々の残容量を持つため、token数だけでbatchを埋めるとKVC側がfragmentation/占有で詰まる。SLO deadlineを優先度へ変換し、長promptを適切にchunk化しながら2次元resourceを埋めることで、raw throughputとSLO-qualified goodputを同時に改善できる。",
-    "quality_impact": "model演算やweightを近似せずschedulerだけを変更するため生成品質への直接影響はない。評価はserving performanceとSLO complianceに集中する。",
-    "additional_findings": "ablationでは/Order、/Chunk、/BatchによりGPU utilizationがそれぞれ8%、28%、15%低下し、KVC utilizationは1%、7%、11%低下する。各要素はSLO、GPU、KVCという異なるbottleneckを担当する。"
+    "negative_results": "FastAFDの報告配置を再構成すると1.404×で報告1.414×を再現する一方、双方を72 GB200/40ms条件で再プロビジョニングするとAFD 331.4K vs collocated 334.8K tokens/sで0.990×のnear tieになる。MegaScale-Infer proxyも報告構成の優位を再現するが全catalogから双方を最適化すると148.1K vs 156.3Kで0.947×。単一anchor探索は36 E-grid中10件でoptimumを逃し、4件はinfeasible selectionだった。",
+    "interpretation": "AFDの局所的なFFN効率やKV容量増だけではdeployment-level勝利を保証しない。固定予算で失われるrequest-serving GPU、batch増、TPOT変化、機種価格を同時に勘定し、AFDとcollocatedを独立最適化して初めて公平なarchitecture比較になる。",
+    "quality_impact": "生成品質を変える手法ではなく、配置設計・provisioningの選択問題を扱う。",
+    "additional_findings": "runtime overheadをAFD側へ追加したsensitivityでは約10%まで代表D/E・Q/EのAFD選択が維持され、約20%で双方ともcollocatedへ切り替わる。物理検証で観測した6.6〜9.6%誤差より小さい差はnear tieとして扱う。"
   },
   "reservation": {
-    "claim_id": "claim-40292cf55942948afc9f4f0a",
-    "worker_id": "scheduled-chat-00",
+    "claim_id": "claim-f528a03c4ecc9039aaf11a0e",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }
