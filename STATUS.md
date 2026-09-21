@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 12:13:54 JST**
+> 自動生成: **2026-09-21 12:14:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -213,9 +213,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2511.11907` — KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference / worker `scheduled-chat-llm-paper-00`
-  - claim: **09-21 12:12:58 JST** / heartbeat: **—** / lease expiry: **09-21 13:42:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-4ad4e8ccc85f54fc.json`
+- `DOI:10.1145/3832810.3832866` — AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation / worker `scheduled-chat-llm-paper-00`
+  - claim: **09-21 12:14:21 JST** / heartbeat: **—** / lease expiry: **09-21 13:44:21 JST**
+  - evidence: `.survey/work-queue/claims/job-research-331c2ec4acba72cc.json`
 
 #### Audit
 
