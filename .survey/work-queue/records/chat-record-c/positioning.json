@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d175e801840388d8f1f07012","job_id":"job-research-f0b1ffeacc3b0ccd","data":{"limitations":"現状は単一GPU推論を対象とし、tensor/pipeline parallelism、continuous batching、multi-tenant servingに伴う通信費、scheduler相互作用、batch干渉を受理条件へ含めていない。patchは観測したshape・phase regimeへ特化するため、prompt長、decode長、batching、model configurationが大きく変わると再profilingと再検証が必要である。探索自体の計算費用もあり、生成候補の質は基盤coding model、探索budget、既知implementation patternに依存する。専門attention kernelが一部shapeで優位なケースも残る。","differences":"KernelBench中心のLLM kernel agentは孤立harnessのcorrectness/latencyを主目的とするのに対し、LLM4LLMは実inference scriptからhotspotを抽出し、モデル内受理を最終目的関数にする。FlashAttentionやmamba_ssmのような専門kernel libraryとは競合というよりscopeが異なり、profilingで実workloadの支配moduleを選び、必要なら複数primitiveをまたぐmodule boundaryを生成kernelへ置換する。TVM/Ansor等の自動compiler探索とも異なり、LLM agentのepisode memoryと自然言語/コード生成能力を使いつつ、deployment feedbackで探索を閉じる。","implementation_status":"公式コードがGitHubのhzeng2000/LLM4LLMで公開されている。論文はarXiv:2608.21836 v1で、EMNLP 2026 main conference採択と記載される。A100/H100上でTriton生成kernelを実モデルへpatchする実装を評価している。","research_positioning":"LLM推論基盤の観点では、カーネル自動生成を単体演算最適化からend-to-end deployment optimizationへ接続する研究として位置付けられる。特にprefill/decode、KV/cache state、shape guard、周辺演算との局所性を最適化loopへ明示的に取り込むため、kernel generationとruntime/system optimizationの境界を埋める。モデルfamilyごとにattention、state-space mixer、recurrent coreへ探索対象を切り替えるprofiling-first方針は、固定したkernel categoryを最適化する方式との差が大きい。"},"reservation":{"claim_id":"claim-d175e801840388d8f1f07012","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-a153536b7690fbfbd5037795",
+  "job_id": "job-research-f0b1ffeacc3b0ccd",
+  "data": {
+    "limitations": "現状は単一GPU推論を対象とし、tensor/pipeline parallelism、continuous batching、multi-tenant servingに伴う通信費、scheduler相互作用、batch干渉を受理条件へ含めていない。patchは観測したshape・phase regimeへ特化するため、prompt長、decode長、batching、model configurationが大きく変わると再profilingと再検証が必要である。探索自体の計算費用もあり、生成候補の質は基盤coding model、探索budget、既知implementation patternに依存する。専門attention kernelが一部shapeで優位なケースも残る。",
+    "differences": "KernelBench中心のLLM kernel agentは孤立harnessのcorrectness/latencyを主目的とするのに対し、LLM4LLMは実inference scriptからhotspotを抽出し、モデル内受理を最終目的関数にする。FlashAttentionやmamba_ssmのような専門kernel libraryとは競合というよりscopeが異なり、profilingで実workloadの支配moduleを選び、必要なら複数primitiveをまたぐmodule boundaryを生成kernelへ置換する。TVM/Ansor等の自動compiler探索とも異なり、LLM agentのepisode memoryと自然言語/コード生成能力を使いつつ、deployment feedbackで探索を閉じる。",
+    "implementation_status": "公式コードがGitHubのhzeng2000/LLM4LLMで公開されている。論文はarXiv:2608.21836 v1で、EMNLP 2026 main conference採択と記載される。A100/H100上でTriton生成kernelを実モデルへpatchする実装を評価している。",
+    "research_positioning": "LLM推論基盤の観点では、カーネル自動生成を単体演算最適化からend-to-end deployment optimizationへ接続する研究として位置付けられる。特にprefill/decode、KV/cache state、shape guard、周辺演算との局所性を最適化loopへ明示的に取り込むため、kernel generationとruntime/system optimizationの境界を埋める。モデルfamilyごとにattention、state-space mixer、recurrent coreへ探索対象を切り替えるprofiling-first方針は、固定したkernel categoryを最適化する方式との差が大きい。"
+  },
+  "reservation": {
+    "claim_id": "claim-a153536b7690fbfbd5037795",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
