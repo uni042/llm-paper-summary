@@ -136,19 +136,11 @@ def _reclaim_inactive_dirty_banks(root: Path, active_claim_ids: set[str]) -> int
     they address the exact committed slot blobs by Git SHA rather than relying on
     the current reusable paths.
 
-    Keep coherent retained banks intact so same-job recovery can reuse them. Also
-    protect any bank referenced by the unsettled reusable transport and any bank
-    containing a reservation that still belongs to an active claim.
+    Keep coherent retained banks intact so same-job recovery can reuse them, and
+    protect any bank containing a reservation that still belongs to an active claim.
     """
-    inbox, settled = select_record_bank.current_transport(root)
-    protected_inbox_bank = None
-    if inbox and not settled:
-        protected_inbox_bank = str(inbox.get("record_bank") or "a").lower()
-
     reclaimed = 0
     for bank, relative_root in BANK_ROOTS.items():
-        if bank == protected_inbox_bank:
-            continue
         bank_root = root / relative_root
         owner_pairs: set[tuple[str, str]] = set()
         reservation_ids: set[str] = set()
@@ -308,9 +300,9 @@ def _expired_same_job_bank_candidate(
 
     This is deliberately narrower than generic bank reuse. Every fixed slot must
     still belong to the same job and one old attempt, carry the same reservation
-    claim id, and that reservation must no longer be active. A live reusable inbox
-    also protects its bank. Repair-required jobs stay on their dedicated recovery
-    path so validation failures retain the existing repair semantics.
+    claim id, and that reservation must no longer be active. Repair-required jobs
+    stay on their dedicated recovery path so validation failures retain the existing
+    repair semantics.
     """
     if _repair_job(root, claim) is not None:
         return None
@@ -318,18 +310,13 @@ def _expired_same_job_bank_candidate(
     if not job_id:
         return None
 
-    inbox, settled = select_record_bank.current_transport(root)
-    protected_inbox_bank = None
-    if inbox and not settled:
-        protected_inbox_bank = str(inbox.get("record_bank") or "a").lower()
-
     matches: list[tuple[str, dict[str, dict[str, Any]], set[str]]] = []
     state = select_record_bank.inspect(root)
     for item in state.get("banks", []):
         if not isinstance(item, dict) or item.get("state") != "occupied":
             continue
         bank = str(item.get("bank") or "").lower()
-        if bank not in BANK_ROOTS or bank in excluded or bank == protected_inbox_bank:
+        if bank not in BANK_ROOTS or bank in excluded:
             continue
 
         payloads: dict[str, dict[str, Any]] = {}
