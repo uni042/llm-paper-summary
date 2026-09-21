@@ -4,6 +4,8 @@ import datetime as dt
 import importlib.util
 import json
 import sys
+import tempfile
+import unittest
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -35,42 +37,46 @@ def request(worker_id: str = "scheduled-chat-00", slot: str = "00") -> dict:
     }
 
 
-def test_normal_route_is_derived_from_inventory(tmp_path: Path):
-    write_json(
-        tmp_path,
-        ".survey/work-queue/next-jobs.json",
-        {
-            "claiming": {"ready_research_audit": 60, "claimable": 60},
-            "counts": {"research": {"ready": 60}, "audit": {"ready": 0}},
-        },
-    )
-    write_json(tmp_path, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
-    result = mod.derive(tmp_path, request())
-    assert result["candidate_inventory"] == 60
-    assert result["work_mode"] == "research"
-    assert result["claim_state_checked"] is True
-    assert result["submission_state_checked"] is True
+class DeriveWorkerRunStateTests(unittest.TestCase):
+    def test_normal_route_is_derived_from_inventory(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {
+                    "claiming": {"ready_research_audit": 60, "claimable": 60},
+                    "counts": {"research": {"ready": 60}, "audit": {"ready": 0}},
+                },
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            result = mod.derive(root, request())
+            self.assertEqual(result["candidate_inventory"], 60)
+            self.assertEqual(result["work_mode"], "research")
+            self.assertTrue(result["claim_state_checked"])
+            self.assertTrue(result["submission_state_checked"])
+
+    def test_0830_slot_forces_maintenance_route(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 100, "claimable": 100}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            result = mod.derive(root, request("scheduled-chat-30", "0830"))
+            self.assertEqual(result["work_mode"], "maintenance")
+            self.assertEqual(result["gate"]["stop_reasons"], ["scheduled_0830_maintenance_route"])
+
+    def test_request_rejects_cross_worker_slot(self):
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "snap-1.json"
+            value = request("scheduled-chat-00", "30")
+            path.write_text(json.dumps(value), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "scheduled-chat-00"):
+                mod._normalize_request(path, value)
 
 
-def test_0830_slot_forces_maintenance_route(tmp_path: Path):
-    write_json(
-        tmp_path,
-        ".survey/work-queue/next-jobs.json",
-        {"claiming": {"ready_research_audit": 100, "claimable": 100}},
-    )
-    write_json(tmp_path, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
-    result = mod.derive(tmp_path, request("scheduled-chat-30", "0830"))
-    assert result["work_mode"] == "maintenance"
-    assert result["gate"]["stop_reasons"] == ["scheduled_0830_maintenance_route"]
-
-
-def test_request_rejects_cross_worker_slot(tmp_path: Path):
-    path = tmp_path / "snap-1.json"
-    value = request("scheduled-chat-00", "30")
-    path.write_text(json.dumps(value), encoding="utf-8")
-    try:
-        mod._normalize_request(path, value)
-    except ValueError as exc:
-        assert "scheduled-chat-00" in str(exc)
-    else:
-        raise AssertionError("cross-worker scheduled slot must be rejected")
+if __name__ == "__main__":
+    unittest.main()
