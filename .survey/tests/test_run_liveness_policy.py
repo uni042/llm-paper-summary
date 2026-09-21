@@ -22,12 +22,15 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("repeated until the", finalization)
         self.assertIn("terminal state", finalization)
 
-    def test_submission_wait_is_a_serial_paper_barrier(self):
+    def test_submission_wait_uses_one_paper_delayed_barrier(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
-        self.assertIn("submission result待ちは**次論文へ進むための同期障壁**", router)
-        self.assertIn("次の論文へは進まない", router)
+        self.assertIn("submission result待ちは**直後の1本には同期障壁ではなく、その次の論文へ進むための同期障壁**", router)
+        self.assertIn("--pipeline-ahead-count", router)
+        self.assertIn("WAIT_FOR_PREVIOUS_SUBMISSION_RESULT", continuation)
+        self.assertIn("CLAIM_NEXT_RESEARCH_AUDIT", continuation)
         self.assertIn("wait_10_real_seconds", continuation)
+        self.assertNotIn("submission result待ちは**次論文へ進むための同期障壁**", router)
 
     def test_old_30_second_contract_is_absent(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
