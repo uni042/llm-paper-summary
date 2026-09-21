@@ -76,7 +76,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 7. Actionsと同じ基準で事前検査（preflight）する。
 8. GitHubへ保存可能なら各スロットの実blob SHAを取得し、attempt固有の不変descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ保存する。
 9. GitHub書込みがrun全体で利用不能なら、完全な5スロットpayloadをChatGPT Library `/LLM-survey-outbox/pending/` へ1論文1envelopeで保存する。
-10. 完全payloadを耐久保存して不変submissionを送った後は、**同じ論文のsubmission resultが成功し、最新 `main` で対応job / artifactの反映を確認するまで次の論文へ進まない。** pending中は同じresultを再確認し、validation失敗なら同じ論文の正規repair経路を完了する。成功反映を確認して初めて最新queue / claim stateを取り直し、次の論文を1件だけclaimする。
+10. 完全payloadまたはstatus-only descriptorを耐久保存して不変submissionを送った後は、**同じ論文のsubmission resultが `ok=true` の終端状態になり、最新 `main` に対応job / artifactまたはstatus反映を確認するまで次の論文へ進まない。** pending中は同じresultを再確認し、validation失敗なら同じ論文の正規repair経路を完了する。終端反映を確認して初めて最新queue / claim stateを取り直し、次の論文を1件だけclaimする。ノルマへ数えるのはそのうち成功完了したResearch / Auditだけである。
 
 禁止事項:
 
@@ -85,7 +85,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 - claim resultが返したbankを無視して別bankへ書かない。
 - 1本処理したことだけをrun終了理由にしない。
 
-**論文単位の処理は完全直列とする。** 1本の一次資料取得・全文読解・5スロット作成・検証・不変submission・成功result・最新mainへの反映確認までが完了する前に、次の論文をclaimしたり、次論文の一次資料・書誌・取得経路を先取りしたりしてはならない。待ち時間に行ってよいのは、同じ論文のrepair・result確認・canonical state確認、および次論文を取得しない範囲の独立した状態整合処理だけである。
+**論文単位の処理は完全直列とする。** 1本について一次資料取得・全文読解・5スロット作成・検証・不変submissionまで行い、または取得不能等ならstatus-only submissionへ収束させ、そのsubmissionの `ok=true` 終端resultと最新main反映を確認する前に、次の論文をclaimしたり、次論文の一次資料・書誌・取得経路を先取りしたりしてはならない。待ち時間に行ってよいのは、同じ論文のrepair・result確認・canonical state確認、および次論文を取得しない範囲の独立した状態整合処理だけである。
 
 ### 3.1 実運用で確立した高スループット原則
 
@@ -94,9 +94,9 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 1. **全文読解済み成果を捨てない。** 初回全文精読後はrecord bankと既存5スロットを再利用し、validation失敗時は指摘されたslotだけを一次資料に基づいて修復する。一次証拠が不足・変更していない限り、全文を最初から読み直さない。
 2. **初回5スロットをvalidator下限ぎりぎりにしない。** 問題設定は「問題＋既存法で解けない理由」、method overviewは入力から出力までのend-to-end流れ、各componentは「入力・内部処理・出力・他componentとの接続」を十分に記述する。短すぎる説明によるrepair往復を減らす。
 3. **一次資料は取得できた時に一度で必要範囲を読む。** 完全なarXiv HTMLが使えるなら優先し、必要ならPDF、OpenReview/会議公式、著者・プロジェクト公式コピーへ進む。同一資料を小分けに再取得せず、手法・評価・結果・ablation・限界・関連研究までまとめて確認する。
-4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を耐久保存して次の独立jobへ進む。status-only `blocked` / `deferred` / `rejected` は、Scheduled Chatが最小の不変JSON descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ直接保存し、既存のsubmission laneに処理させる。ローカルPythonや保存前canonicalizerの実行を前提にしない。descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` を基本とし、取得済みなら `retrieval_evidence` / `blocked_at` を加えてよい。`record_bank` / `paper_path` / `record_slots` / `expected_blob_sha` その他のrecord transport fieldはstatus-only descriptorへ混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
+4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を不変submissionとして耐久保存し、対応resultが `ok=true` の終端状態になって最新mainへ反映されたことを確認してから次の論文へ進む。status-only `blocked` / `deferred` / `rejected` は、Scheduled Chatが最小の不変JSON descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ直接保存し、既存のsubmission laneに処理させる。ローカルPythonや保存前canonicalizerの実行を前提にしない。descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` を基本とし、取得済みなら `retrieval_evidence` / `blocked_at` を加えてよい。`record_bank` / `paper_path` / `record_slots` / `expected_blob_sha` その他のrecord transport fieldはstatus-only descriptorへ混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
 5. **非同期待ちでも論文単位の直列性を崩さない。** claim/result/submissionの同じIDを保持して所定間隔で確認する。submission待ち中は次論文のclaim・一次資料取得・書誌確認へ進まず、同じ論文のrepair準備、identity/queue同期など次論文を取得しない作業だけを行う。未完了claimを増やしたり同一requestを重複発行しない。
-6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research claimは常に1件だけ保持し、完了またはstatus-only耐久保存後に次へ進む。
+6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research / Audit claimは常に1件だけ保持し、成功完了またはstatus-only submissionの `ok=true` 終端resultと最新main反映を確認した後にだけ次へ進む。
 7. **Research / Audit 合計3件ノルマは維持する。** `research_audit_completed_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。成功resultと最新main反映を確認したResearchまたはAuditだけを1件として数える。3件到達は停止上限ではなく、continuation/finalization gateが継続を要求するなら次のResearch / Auditへ進む。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
 
 ## 4. 探索（Discovery）の共通入口
@@ -190,7 +190,7 @@ Discovery後半は次の順序を正規経路とする。途中を手作業で�
 3. `queue_worker.py` にsubmission処理を任せる。workerはResearch job IDを合成したり、`jobs/*.json` / `state.json` を直接書き換えたりしない。
 4. 同名の `.survey/work-queue/results/<unique>.json` を確認し、`ok=true`、`research_jobs_added`、`final_duplicate_filtered_count`、`next_action` を読む。
 5. `refresh_queue_snapshot.py` または `queue_worker.py` が更新した `.survey/work-queue/next-jobs.json` を確認する。
-6. ready Research/Audit が現れたら `claim_worker_with_banks.py` の正規claim経路で**1件だけ**取得する。割当て後はclaim resultが指定したrecord bankを使い、Research処理へ進む。
+6. ready Research/Audit が現れても、**今回runがDiscoveryならclaimしない。** `next-jobs.json` への反映だけ確認し、run開始時に固定したDiscoveryを続ける。Research / Auditのclaimは、次回run開始時の `candidate_inventory >= 50` 判定で読解モードになった場合に `claim_worker_with_banks.py` から1件だけ取得する。
 7. `research_jobs_added=0` でもrun終了理由にしない。最終重複排除や低優先度除外を確認し、必要なら別探索軸をschema v3 precheckから開始する。
 
 失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` でcanonical stateを確認する。ただし**このrunが探索モードならResearchへ切り替えず、run開始時に固定した探索モードを維持する。** Research jobのclaimは次回以降、読解モードで行う。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
