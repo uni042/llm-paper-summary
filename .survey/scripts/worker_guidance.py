@@ -118,14 +118,15 @@ PROFILES = {
         "task": "継続可否判定",
         "next": [
             "出力の decision / finalization_allowed / required_action / next_action_message を確認する。",
-            "required_action=CLAIM_NEXT_RESEARCH_AUDIT なら、status-only終端や最低成功件数未達をrun終了理由にせず、最新queue/claim stateを再取得して次のResearch/Auditを1件claimする。",
-            "decision=CONTINUE なら required_action の対象を実行し、pending target があれば同一targetを指定された間隔で再確認する。",
+            "required_action=CLAIM_NEXT_RESEARCH_AUDIT なら、status-only終端・最低成功件数未達・または1本遅延可能なsubmission pendingをrun終了理由にせず、最新queue/claim stateを再取得して次のResearch/Auditを1件claimする。",
+            "Research/Auditのsubmission pendingを判定する場合は --pipeline-ahead-count を必ず渡す。直前submissionの後ろにまだ論文を提出していなければ0、1本提出済みなら1とする。",
+            "decision=CONTINUE では required_action を最優先する。pending targetが存在しても、required_action=CLAIM_NEXT_RESEARCH_AUDIT なら先に次の1件を処理し、required_action=WAIT_FOR_PREVIOUS_SUBMISSION_RESULT / WAIT_FOR_CLAIM_RESULT の場合だけ指定間隔で再確認する。",
             "decision=STOP_RUN の場合も直接終了せず、その出力値と今回runの work_mode / 成功件数またはDiscovery round数を run_finalization_gate.py に渡す。",
             "最終応答は run_finalization_gate.py が明示的に許可するまで出さない。",
         ],
         "recovery": [
             "最新の claim 状態と submission 状態を確認してから判定をやり直す。",
-            "pending を STOP_RUN 扱いにせず、同じ対象を指定された間隔で再確認する。",
+            "submission pendingでは1本先行数を再確認し、0なら次paperのclaim、1なら前submissionの待機を選ぶ。pendingを一律の待機命令へ読み替えない。",
             "判定結果を飛ばして直接 finalization へ進まない。",
         ],
     },
