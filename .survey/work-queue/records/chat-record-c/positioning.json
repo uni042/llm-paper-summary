@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-8495a743fe594851aff8c54b",
-  "job_id": "job-research-3c095c39c7faada9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8495a743fe594851aff8c54b",
-    "worker_id": "scheduled-chat-llm-paper-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-8495a743fe594851aff8c54b","job_id":"job-research-3c095c39c7faada9","data":{"limitations":"現在の評価はルーティングの時間的連続性と品質の交換関係に限定され、実際のCPU/GPU間専門家転送を組み込んだ提供システムは構築していない。熟慮コストも実測ハードウェア遅延ではなく調整値である。各層が独立して専門家集合を切り替えるため、一括転送に適した層横断同期は未解決である。評価は三つのベンチマーク各200問で、コード生成、長文指示、自由対話を含まない。さらに自己蒸留による改善と時間的ルーティングそのものの寄与を分離する静的集合＋同一蒸留の比較実験がない。","differences":"MoE-InfinityやProMoEなどが既存ルータの専門家要求を予測してキャッシュ・先読みするのに対し、本研究はモデル側の専門家要求列そのものを時間的に滑らかにする。専門家枝刈りが不要専門家を恒久削除するのに対し、全専門家容量を保持したまま現在利用可能な集合だけを制限し、必要時には別集合へ切り替える。したがって既存のオフロード方式とは競合せず、切替回数を減らす上流のモデル変換として併用できる。","implementation_status":"著者はプロジェクトページとコードを公開しており、gpt-oss-20b上で制御器学習を実装している。論文中の実験は4基のH200で実行済み。ただし、専門家重みをCPUやストレージへ実際に退避し、切替時に転送するエンドツーエンド提供実装は将来課題である。","research_positioning":"専門家オフロード研究に対し、キャッシュ置換や先読み精度を改善するのではなく、専門家集合の滞在時間を学習によって長くする新しい軸を与える。特にSSDやCPUメモリを使う階層メモリ環境では、転送先選択の巧拙以前に転送イベント数を減らせる可能性がある。一方、実測提供性能がないため、現時点ではシステム高速化の完成方式ではなく、オフロードしやすい混合専門家モデルを作るためのモデル・システム協調設計の出発点として位置付けるのが妥当である。"},"reservation":{"claim_id":"claim-8495a743fe594851aff8c54b","worker_id":"scheduled-chat-llm-paper-00","worker_kind":"scheduled_chat"}}
