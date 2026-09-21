@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-005352244067bb246e01f37f",
-  "job_id": "job-research-3123e052604efe34",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-005352244067bb246e01f37f",
-    "worker_id": "scheduled-chat-llm-paper-worker-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-005352244067bb246e01f37f","job_id":"job-research-3123e052604efe34","data":{"overview":"CateKVは一貫ヘッドだけを強く圧縮することで、フル注意に近い長文精度を保ちながらKV容量とデコード注意計算を同時に削減する。LongBenchではKVを42%まで減らして平均低下0.3%以内、RULERでも同容量の削除法より高精度である。効率面では単一A100でLlama-3高圧縮設定がメモリ2.72倍削減、デコード2.18倍高速化、40Kバッチで最大バッチ4.33倍・スループット3.96倍となる。","key_results":[{"metric":"LongBench精度とKV容量","value":"KVを42%へ削減、5モデル平均で精度低下0.3%以内","condition":"r=0.4、η=1.0、一貫ヘッド予算512","baseline":"Full Attention 100% KV","interpretation":"適応ヘッドへ容量を残すことで、半分以上のKVを削除しても長文タスク精度をほぼ維持できる。"},{"metric":"単一入力メモリとデコード遅延","value":"Llama-3でメモリ2.72倍削減、デコード2.18倍高速化","condition":"r=0.3、η=0.7、500K入力、単一A100","baseline":"Full Attention","interpretation":"一貫ヘッドの強圧縮は容量だけでなく注意対象数も減らすため、長い入力ほどメモリとデコード時間の双方へ効く。"},{"metric":"バッチ推論スループット","value":"最大バッチ4.33倍、スループット3.96倍（229.37→909.69）","condition":"Llama-3、40K入力、r=0.3、η=0.7、単一A100","baseline":"Full Attention","interpretation":"KV容量削減で同一GPUにより多くの要求を載せられ、単要求高速化以上のスループット利得が得られる。"},{"metric":"RULER 128K平均","value":"Llama-3で84.61対84.10、Llama-3.1で84.66対84.55","condition":"KV約41%、r=0.4、η=1.0、一貫ヘッド予算2048","baseline":"Full Attention","interpretation":"同程度のKV削減を行うStreamingLLM等より精度を維持し、フル注意と同等水準に達する。"}],"negative_results":"圧縮を強めすぎると劣化する。適応ヘッド比率rは約0.2を下回ると精度が急落し、適応ヘッド保持率ηも約0.6未満で顕著な性能低下が生じる。Phi-3の汎用設定ではLongBenchが34.00から33.73、RULERが72.06から71.69へわずかに低下する。したがって全モデルで完全無損失ではなく、圧縮率と精度の境界調整が必要である。","quality_impact":"近似手法でありKVを実際に削除するため理論上は品質変化がある。ただし一貫・適応ヘッドを分けることで影響を小さくし、LongBenchではKV 42%で平均低下0.3%以内。Llama-3高圧縮設定ではRULER-128Kが84.10→83.85（-0.25）、LongBenchが31.27→31.21（-0.06）で、2.72倍メモリ削減・2.18倍高速化との交換条件を明示できる。","interpretation":"従来の一律削除は動的ヘッドから重要KVも消すが、CateKVは時間方向に安定なヘッドだけを強く削るため、同じ容量で高い注意再現率を保てる。適応ヘッドにQuest/ShadowKVを組み合わせれば計算予算を固定したまま容量も減らせる。","ablations":"rを下げるとメモリと遅延はほぼ線形に減るが約0.2以下で精度急落。ηは約0.6以上なら精度を維持しやすい。一貫ヘッド予算は1024（約0.78%）まで減らしても平均精度への影響が小さい。"},"reservation":{"claim_id":"claim-005352244067bb246e01f37f","worker_id":"scheduled-chat-llm-paper-worker-00","worker_kind":"scheduled_chat"}}
