@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-740f823080251ecc292d1b33",
-  "job_id": "job-research-3eb9c6f535e789d0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-740f823080251ecc292d1b33",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-740f823080251ecc292d1b33","job_id":"job-research-3eb9c6f535e789d0",
+ "data":{
+  "limitations":"評価は合成workload生成器に基づき、各reuse構造が対応ポリシーに有利になるよう設計されているため、実会話traceではポリシー間の差が縮む可能性があり、論文自身も分離幅を上限と位置づける。batch=1・単一GPUではdecodeがcompute-boundでfetch stallがTPOTの1%未満なので、大batchや高速decode kernelでは配置とprefetchの価値が変わり得る。sessions/GPUとcostは固定tier価格に依存する容量モデル値であり市場価格ではない。DRAM/SSD別stallはhit shareから按分した近似で直接計測ではない。KV quantizationとevictionは固定しており組合せ効果は未評価。",
+  "implementation_status":"GPU/CPU/SSD階層と配置・昇降格・prefetchを離散イベントシミュレータとして実装し、実行時間をrandom-forest predictorで較正している。結果値はCSVから生成macroとして論文へ取り込まれ、single-session対照、policy grid、cache-size/prefetch grid、固定予算frontier、SSD-depth SLO sweepを再現可能な形で分離している。ただし実GPU serving stackへのproduction実装を評価した研究ではない。",
+  "relation_to_existing":"MooncakeやLMCacheがCPU/SSDを含むKV pool、FlexGenがCPU/SSD offload、InfiniGenが予測prefetch、AttentionStore/CachedAttentionがmulti-turn KV永続化を示すのに対し、本研究は新しい転送機構そのものより『既に階層化できる前提でどの配置規則がいつ有効か』を主題にする。リポジトリのSSD/NVMe階層メモリ系統に対し、SSDを深くすれば容量は増えるがSLO上はchat/agentで再計算に勝てず、document QAのみ条件付きで成立するという境界条件を与える。",
+  "practical_takeaway":"SSDは高hit tierとしてではなく安価なcapacity backstopとして価値が大きい。batch=1の長期sessionではまずDRAM容量を厚くし、chatは安価なLRU、prefix再利用の強いdocument QAやagentはreuse-frequencyを優先する。競合リンクでのprefetchは無条件に有効ではなく、spare bandwidthが確認できる場合だけ採用すべきである。"
+ },
+ "reservation":{"claim_id":"claim-740f823080251ecc292d1b33","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
 }
