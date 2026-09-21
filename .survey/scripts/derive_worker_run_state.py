@@ -137,23 +137,57 @@ def _frozen_route(root: Path, run_key: str) -> tuple[int, str] | None:
 def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[str, dt.datetime]:
     attempts: dict[str, dt.datetime] = {}
     result_root = root / ".survey/work-queue/claim-results"
-    if not result_root.is_dir():
-        return attempts
-    for path in result_root.glob("*.json"):
-        value = _read(path, {})
-        if not isinstance(value, dict) or value.get("worker_id") != worker_id:
-            continue
-        for item in value.get("assignments") or []:
-            if not isinstance(item, dict):
+    if result_root.is_dir():
+        for path in result_root.glob("*.json"):
+            value = _read(path, {})
+            if not isinstance(value, dict) or value.get("worker_id") != worker_id:
                 continue
-            attempt_id = item.get("attempt_id")
-            claimed_at = _time(item.get("claimed_at"))
-            if isinstance(attempt_id, str) and claimed_at is not None and claimed_at >= started_at:
-                attempts[attempt_id] = claimed_at
+            for item in value.get("assignments") or []:
+                if not isinstance(item, dict):
+                    continue
+                attempt_id = item.get("attempt_id")
+                claimed_at = _time(item.get("claimed_at"))
+                if isinstance(attempt_id, str) and claimed_at is not None and claimed_at >= started_at:
+                    attempts[attempt_id] = claimed_at
+
+    # A Scheduled Chat run must resume an active unsubmitted claim from the same
+    # worker lineage even when it was claimed during the previous invocation.
+    # Count it as this invocation's work only if its terminal result is produced
+    # after actual_invocation_start (enforced in _run_submission_state).
+    now = dt.datetime.now(dt.timezone.utc)
+    for current in claim_state.current_claims(root, now).values():
+        if not isinstance(current, dict) or not current.get("active"):
+            continue
+        if current.get("worker_id") != worker_id:
+            continue
+        attempt_id = current.get("attempt_id")
+        claimed_at = _time(current.get("claimed_at")) or started_at
+        if isinstance(attempt_id, str) and attempt_id:
+            attempts.setdefault(attempt_id, claimed_at)
     return attempts
 
 
-def _run_submission_state(root: Path, attempts: dict[str, dt.datetime]) -> dict[str, Any]:
+def _descriptor_for_attempt(root: Path, kind: str, attempt_id: str) -> Path | None:
+    """Resolve the canonical <attempt_id>.json descriptor, with read-only legacy fallback."""
+    folder = root / ".survey/work-queue/submissions" / kind
+    canonical = folder / f"{attempt_id}.json"
+    if canonical.is_file():
+        return canonical
+    if not folder.is_dir():
+        return None
+    matches: list[Path] = []
+    for path in folder.glob("*.json"):
+        value = _read(path, {})
+        if isinstance(value, dict) and value.get("attempt_id") == attempt_id:
+            matches.append(path)
+    return matches[0] if len(matches) == 1 else None
+
+
+def _run_submission_state(
+    root: Path,
+    attempts: dict[str, dt.datetime],
+    started_at: dt.datetime,
+) -> dict[str, Any]:
     completed = 0
     pending: list[tuple[dt.datetime, str]] = []
     submitted: list[tuple[dt.datetime, str]] = []
@@ -162,18 +196,22 @@ def _run_submission_state(root: Path, attempts: dict[str, dt.datetime]) -> dict[
     for attempt_id, claimed_at in attempts.items():
         found_descriptor = False
         for kind in ("research", "audit"):
-            descriptor_path = root / ".survey/work-queue/submissions" / kind / f"{attempt_id}.json"
-            if not descriptor_path.is_file():
+            descriptor_path = _descriptor_for_attempt(root, kind, attempt_id)
+            if descriptor_path is None:
                 continue
             found_descriptor = True
             submitted.append((claimed_at, attempt_id))
-            result = _read(root / ".survey/work-queue/results" / kind / f"{attempt_id}.json", {})
+            result = _read(root / ".survey/work-queue/results" / kind / descriptor_path.name, {})
             if not isinstance(result, dict) or result.get("attempt_id") != attempt_id:
                 pending.append((claimed_at, attempt_id))
                 continue
             processed_at = _time(result.get("processed_at")) or claimed_at
             status = str(result.get("job_status") or "none").lower()
-            if result.get("ok") is True and status == "completed":
+            if (
+                result.get("ok") is True
+                and status == "completed"
+                and processed_at >= started_at
+            ):
                 completed += 1
             if status in {"completed", "blocked", "deferred", "rejected"}:
                 terminal.append((processed_at, status))
@@ -271,7 +309,7 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         work_mode = "research" if inventory >= 50 else "discovery"
 
     attempts = _run_attempts(root, request["worker_id"], started_at)
-    submission = _run_submission_state(root, attempts)
+    submission = _run_submission_state(root, attempts, started_at)
     claims = _claim_state(root, request["worker_id"], started_at)
     discovery_rounds, selector = _discovery_rounds(root, request["run_key"])
 
@@ -279,7 +317,9 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
     deadline = started_at + dt.timedelta(seconds=3600)
     seconds_to_deadline = max(int((deadline - now).total_seconds()), 0)
     runtime = request["runtime_condition"]
-    if seconds_to_deadline <= 600 and runtime == "none":
+    # 600s is the no-new-independent-work window. Only the final 180s is an
+    # unconditional handoff condition; already-started work may continue before then.
+    if seconds_to_deadline <= 180 and runtime == "none":
         runtime = "handoff_guard"
 
     github_read = runtime != "github_read_unavailable"
@@ -304,6 +344,7 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         platform_limit=platform_limit,
         global_dependency=global_dependency,
         independent_work=independent_work,
+        active_assignment=claims["active_assignment"],
         spillover_work=False,
         can_discover=work_mode == "discovery" and bool(selector.get("next_direction")),
         claim_state_checked=claims["claim_state_checked"],
@@ -326,17 +367,33 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         discovery_exhausted=False,
         next_axis_available=bool(selector.get("next_direction")),
     )
-    gate = (
-        {
-            "decision": "STOP_RUN",
-            "required_action": "FINALIZE",
-            "finalization_allowed": True,
-            "stop_reasons": ["scheduled_0830_maintenance_route"],
-            "work_mode": "maintenance",
-        }
-        if work_mode == "maintenance"
-        else continuation_gate.decide(args)
-    )
+    if work_mode == "maintenance":
+        maintenance = _read(root / ".survey/work-queue/maintenance-cycle.json", {}) or {}
+        completed_at = _time(maintenance.get("last_maintenance_completed_at"))
+        maintenance_complete = bool(
+            maintenance.get("maintenance_pending") is False
+            and completed_at is not None
+            and completed_at >= started_at
+        )
+        gate = (
+            {
+                "decision": "STOP_RUN",
+                "required_action": "FINALIZE",
+                "finalization_allowed": True,
+                "stop_reasons": ["scheduled_0830_maintenance_complete"],
+                "work_mode": "maintenance",
+            }
+            if maintenance_complete
+            else {
+                "decision": "CONTINUE",
+                "required_action": "RUN_0830_MAINTENANCE",
+                "finalization_allowed": False,
+                "stop_reasons": [],
+                "work_mode": "maintenance",
+            }
+        )
+    else:
+        gate = continuation_gate.decide(args)
 
     return {
         "schema_version": 1,
@@ -361,6 +418,10 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         "rule": (
             "Use this durable derived snapshot instead of manually inventing continuation-gate booleans. "
             "The first successful snapshot for run_key freezes candidate_inventory/work_mode. "
+            "Active same-worker claims from a previous invocation are resumed rather than hidden by the new start time; "
+            "only terminal results processed during this invocation count toward its completion quota. "
+            "New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. "
+            "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
             "runtime_condition must name a concrete observed platform/transport event."
         ),
     }
