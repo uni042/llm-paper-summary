@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-2890cf40ded096fabe5171f7","job_id":"job-research-73f2d3c7c23735bb","data":{"limitations":"主auditはApple M5 Pro 64GB 1台であり、古いApple GPU世代ではMetal kernel対応やmemory bandwidth差により順位が変わり得る。共通9-stack比較はQwen3-0.6Bという小モデル中心で、新しい2モデル、大規模dense/MoE、複数nodeは部分rosterに限られる。Septemberの大規模モデル追試は後発buildかつGGUF/MLXで量子化形式が異なり、各構成1回測定なのでengine差を純粋に分離できない。忠実度はGMRID単一分類taskだけで、正式なrun-to-run variance推定もない。複数nodeは2台までで、1台に収まらないモデルや3台以上のscalingを検証していない。主agent splitは10K超の超長文脈や1K超の長文生成を含まない。","differences":"従来のApple Silicon/consumer inference benchmarkが主に単一request throughputや狭いstack比較へ集中するのに対し、SiliconBenchは並行agent workload、system memory headroom、task-level fidelity、新architecture coverageを同一auditへ統合する。CUDA datacenter向けvLLM/SGLang研究のように個別scheduler技術を提案するのではなく、既存9 engineの実装選択を横断測定し、同じ機能ラベルでも実性能が異なることを示す。Bench360等のcross-hardware breadthよりApple Silicon内のserving architectureとmemory挙動を深く掘り、さらにDGX Sparkの同一engine familyを参照bridgeとして使う。分散面ではPrima.cpp等のheterogeneous cluster研究とは異なり、TB5 RDMA tensor parallelismとTCP pipeline parallelismを固定workloadで直接比較する。","implementation_status":"SiliconBenchのbenchmark code、per-run results、maintenance journalsがGitHubで公開され、論文中のmain-track結果はcommit 616aa51cへ固定されている。adapter更新はClaude Code maintainer agentが限定write範囲で提案し、人間maintainerがreviewしてから公式runを再生成する。論文はarXiv v1 (2026-09-12) のプレプリント。","research_positioning":"ローカルLLM推論基盤の評価を『速いengineはどれか』から『並行agent workloadで速度・メモリ余裕・品質を同時に維持できるか』へ拡張する実証研究である。Apple Siliconの統合メモリではKV cacheだけでなくallocator retentionやpadding、OS headroomまで運用性能へ直結することを示し、オフロード/階層メモリ研究にも実務的な評価軸を提供する。またTB5 RDMA上のtensor parallelismが有効でTCP pipelineが逆効果という結果は、家庭・desktop clusterでの分散推論設計にtransport-awareな比較が必要であることを示す。"},"reservation":{"claim_id":"claim-2890cf40ded096fabe5171f7","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-5847544755414d170b153156",
+  "job_id": "job-research-00f6a78e028bd698",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5847544755414d170b153156",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

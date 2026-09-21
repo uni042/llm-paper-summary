@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2890cf40ded096fabe5171f7","job_id":"job-research-73f2d3c7c23735bb","data":{"hardware":"主trackはApple M5 Pro 64GB、macOS 26.6。padding studyにM1 Pro 32GB/M1 Max 64GB、複数nodeに2×M4 Pro Mac mini 64GB、CUDA参照にDGX Spark GB10 128GB、忠実度参照にNVIDIA A100を使用する。M5 ProのMetal recommendedMaxWorkingSetSizeは51.84GB。","software":"Apple側9 stackはllama.cpp、ollama、mlx_lm、vllm-metal、vllm-mlx、omlx、sglang、hf_transformers、mistral.rs。主モデルQwen3-0.6B BF16、新モデルQwen3.5-0.8B/Gemma-4-E4B-it、追加でQwen3.8-27BとQwen3.6-35B-A3Bを使用。benchmark codeは公開され、main campaignの結果・prompt・adapterはcommit 616aa51cへ固定される。","methodology":"chat 100件とagent 100件をconcurrency 1/8/16でclosed-loop実行し、各level前に3 warmupを行う。temperature 0、non-thinking generationで、output throughputは完了出力token/全sweep wall time、TTFTはHTTP送信から最初のstream content/reasoningまで。失敗requestもwall timeへ含める。memoryはmetalstatで1秒ごとにsystem memoryを追跡する。忠実度はGMRID 1146件・8クラスの0-shot/5-shot weighted F1をA100 vLLM参照と比較する。大規模モデル追試はagent prompt、c=1/2/4、複数nodeはQwen3.5-35B-A3B 8-bit・512 output tokensでcontext 512/4096/16384を比較する。","scope":"主auditは1台のM5 Proと小型3モデルを中心に9 stackを横断し、速度・メモリ・忠実度・モデル対応を測る。27B/35B追試と2node比較は選抜stackのみ。DGX Sparkは速度・latency参照のみでmemory/fidelityを測らない。長文脈10K超や1K超の長文生成は主serving splitの対象外で、formalなrun-to-run variance推定も行わない。"},"reservation":{"claim_id":"claim-2890cf40ded096fabe5171f7","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-5847544755414d170b153156",
+  "job_id": "job-research-00f6a78e028bd698",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5847544755414d170b153156",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
