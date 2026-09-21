@@ -67,7 +67,7 @@ Research / Auditのclaimは次の順で行う。
 Research / Auditの不変submissionも同様にfast laneを使える。
 
 1. 5スロットをclaim result指定のrecord bankまたは現行fallbackへ完全保存し、必要な実blob SHAを確定する。
-2. attempt固有descriptorを `.survey/work-queue/submissions/research/<attempt_id>.json` または `audit/<attempt_id>.json` にcommitする。**新規submissionのファイル名stemはdescriptor内の `attempt_id` と完全一致させる。** status-only `blocked` / `deferred` / `rejected` も同じsubmission laneへ送る。過去に存在する任意名descriptorは読取互換のみ残してよいが、新規生成しない。
+2. `status=completed` はdescriptorを手組みせず、`.survey/work-queue/completed-submission-requests/<attempt_id>.json` にrequestをcommitする。requestのファイル名stemは `attempt_id` と完全一致させ、`kind` / `attempt_id` / `job_id` / `record_bank` と、必要なら `paper_path` / `expected_blob_sha` を持たせる。このpushまたは10分周期の `.github/workflows/survey-completed-builder-fast.yml` が `prepare_completed_submission.py` を実行し、実blob SHAを取得・検証したattempt固有descriptorを `.survey/work-queue/submissions/research/<attempt_id>.json` または `audit/<attempt_id>.json` に生成する。**completed descriptorをScheduled Chatが直接作成・更新してはならない。** status-only `blocked` / `deferred` / `rejected` だけは従来どおり最小descriptorをsubmission laneへ直接送る。過去の直接completed descriptorは読取互換のみ残し、新規生成しない。
 3. このpushで `.github/workflows/survey-submission-fast.yml` が起動し、最新main上で正規submission processorを実行する。
 4. 同名の `.survey/work-queue/results/research/<attempt_id>.json` または `audit/<attempt_id>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。descriptorをmainへ耐久保存した時点でそのattemptは「提出済み」とする。**提出済みならresult待ちを同期障壁にせず、次のResearch / Auditを1件だけclaimして処理してよい。** ただし後述の1本遅延確認規則に従い、さらに次へ進む前に直前提出分のresultを確認する。
 5. **1 attemptにつきcompleted descriptorは1本だけ**とする。検証失敗後に同じ `job_id / attempt_id` の `repair1`、`repair2` 等を追加して修正しない。
@@ -89,7 +89,7 @@ claim requestでは `request_id` をrequestファイル名のstemと完全一致
 5. 一次資料本文を最後まで読み、抄録や検索断片から欠落情報を推測しない。
 6. `metadata`、`problem_method`、`evaluation`、`results`、`positioning` の5スロットを完成させる。
 7. Actionsと同じ基準で事前検査（preflight）する。
-8. GitHubへ保存可能なら各スロットの実blob SHAを取得し、attempt固有の不変descriptorを `.survey/work-queue/submissions/research/<attempt_id>.json` または `audit/<attempt_id>.json` へ保存する。新規descriptorのファイル名stemは必ず `attempt_id` と一致させる。
+8. GitHubへ保存可能なら、`status=completed` はattempt固有requestを `.survey/work-queue/completed-submission-requests/<attempt_id>.json` へ保存し、completed builder fast laneに実blob SHA取得・検証済みdescriptor生成を委ねる。Scheduled Chatがcompleted descriptorを `.survey/work-queue/submissions/research/` / `audit/` へ直接保存してはならない。status-only `blocked` / `deferred` / `rejected` は第3.1節4項の最小descriptorを従来どおりsubmission laneへ直接保存する。
 9. GitHub書込みがrun全体で利用不能なら、完全な5スロットpayloadをChatGPT Library `/LLM-survey-outbox/pending/` へ1論文1envelopeで保存する。
 10. 完全payloadまたはstatus-only descriptorを耐久保存して不変submissionを送ったら、**resultを待たずに次のResearch / Auditを1件だけclaimして処理してよい。** ただしパイプラインは最大1本先行までとする。論文Nを提出→論文N+1を処理して提出→**論文Nのsubmission resultと最新main反映を必ず確認**→正常終端なら論文N+2へ進む、の順序を守る。論文NがpendingならN+2へ進まず同じresultを再確認する。論文Nがvalidation失敗・repair_required・retryable等なら、返された正規回復指示に従って論文Nを回復し、その終端反映を確認してからN+2へ進む。論文N+1のresult確認は、論文N+2を提出した後に同様に行う。status-only終端は成功件数へ数えない。hard stopまたはhandoff guardでない限りrun全体を終了しない。
 
