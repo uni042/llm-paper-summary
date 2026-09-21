@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 09:36:49 JST**
+> 自動生成: **2026-09-21 09:37:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -168,9 +168,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/TC.2026.3701443` — GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning / worker `scheduled-chat-llm-paper-worker-30`
-  - claim: **09-21 09:35:57 JST** / heartbeat: **—** / lease expiry: **09-21 11:05:57 JST**
-  - evidence: `.survey/work-queue/claims/job-research-50400bb966b2b5a1.json`
+- `arXiv:2605.11186` — CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration / worker `scheduled-chat-llm-paper-worker-30`
+  - claim: **09-21 09:36:56 JST** / heartbeat: **—** / lease expiry: **09-21 11:06:56 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3c0256304cd034ce.json`
 
 #### Audit
 
