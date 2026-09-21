@@ -51,6 +51,7 @@ class SubmissionRecoveryIsolationTests(unittest.TestCase):
                 patch.object(isolation.processor, "_verify_claim", return_value=True),
                 patch.object(isolation.processor, "render_descriptor", side_effect=render),
                 patch.object(isolation.processor, "_precheck_paper", side_effect=precheck),
+                patch.object(isolation.processor.paper_quality_gate, "validate_rendered_paper"),
             ):
                 result = isolation.isolate(repo, submission)
 
