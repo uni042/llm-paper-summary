@@ -36,5 +36,15 @@
     }
   ],
   "last_blocked_at": "2026-09-20T13:39:58+00:00",
-  "retry_queued_at": "2026-09-20T18:57:27+00:00"
+  "retry_queued_at": "2026-09-20T18:57:27+00:00",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | Japanese-first prose ratio is too low: 53.9% < 70% (Japanese=2648, Latin=2261)",
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "Japanese-first prose ratio is too low: 53.9% < 70% (Japanese=2648, Latin=2261)"
+  ],
+  "last_validation_failed_at": "2026-09-21T06:35:18+00:00"
 }
