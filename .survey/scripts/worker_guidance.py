@@ -63,7 +63,7 @@ PROFILES = {
         "next": [
             ".survey/work-queue/next-jobs.json の counts / next_jobs を確認する。",
             "ready Research/Audit がある場合も固定work_modeを確認する。Research/Audit runだけmax_jobs=1でclaimし、Discovery runではqueue反映確認後に探索を続ける。",
-            "Research/Audit がなく candidate在庫補充が必要なら、新しい探索軸を schema v3 process_discovery_precheck.py から開始する。",
+            "Research/Audit が0件でも固定work_modeを変えない。Research/Audit runは10秒待機して最新queue/run-stateを再確認し、Discovery runだけ新しい探索軸を schema v3 process_discovery_precheck.py から開始する。",
             "next-jobs.json を直接編集してResearch jobを追加・選択しない。",
         ],
         "recovery": [
@@ -78,8 +78,8 @@ PROFILES = {
             ".survey/work-queue/results/ に今回の未処理submissionと同名のresultが生成されたか確認する。",
             "submit_discovery_round result では ok=true / research_jobs_added / final_duplicate_filtered_count / next_action を確認する。",
             ".survey/work-queue/next-jobs.json の next_jobs と counts を確認する。",
-            "ready Research/Audit がある場合は claim_worker_with_banks.py の正規経路で max_jobs=1 の割り当てを取得する。",
-            "Research/Audit がなくDiscovery補充が必要なら process_discovery_precheck.py の schema v3 経路へ進む。next-jobs.json や state.json を直接編集しない。",
+            "固定work_modeを確認する。Research/Audit runでready jobがあればclaim_worker_with_banks.pyからmax_jobs=1で取得し、0件なら10秒待機して最新queue/run-stateを再確認する。Discovery runではready Research/Auditがあってもclaimしない。",
+            "Discovery runだけ、次の探索軸を process_discovery_precheck.py の schema v3 経路から開始する。next-jobs.json や state.json を直接編集しない。",
         ],
         "recovery": [
             "work-queue の jobs / submissions / state を手作業で成功扱いに変更しない。",
@@ -112,6 +112,20 @@ PROFILES = {
             "descriptors-file が正規の immutable submission descriptor 一覧を指すことを確認する。",
             "effects-dir と repo-root を確認し、途中生成物を手作業で成功扱いにしない。",
             "失敗 descriptor を修正または回復経路へ渡してから同じ batch processor を再実行する。",
+        ],
+    },
+    "derive_worker_run_state.py": {
+        "task": "Scheduled Chat run-stateの正規導出",
+        "next": [
+            "生成された run-state result の ok / work_mode / pending state / gate.required_action を確認する。",
+            "同じrun内で状態が変化して再判定する場合は、run_key / worker_id / scheduled_slot / actual_invocation_startを維持しつつ、新しい一意なrequest_idで新しいsnapshot requestを作る。",
+            "resultが既に存在するrequest_idを再利用して最新状態を得ようとしない。既存resultは不変snapshotとして扱う。",
+            "requestはあるがresultがまだ無い場合は別requestへ逃げず、同じrequest_idを待機し、periodic recoveryに回収させる。",
+        ],
+        "recovery": [
+            "ok=false resultではfailed request/resultを上書きせず証跡として残す。",
+            "入力不備を修正した新しい一意なrequest_idでsnapshot requestを作り直す。",
+            "単発のread/transport失敗をconfirmed runtime_conditionへ昇格させない。",
         ],
     },
     "continuation_gate.py": {
