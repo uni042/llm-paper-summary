@@ -65,7 +65,8 @@ DISCOVERY_INSTRUCTIONS = (
     "attempted in the same run. Keep target_unseen=20. One successful schema-v3 precheck request "
     "is one Discovery round. Submit at most 5 strong candidates per submission; if more than 5 "
     "strong candidates survive one precheck, split them across multiple submissions that reference "
-    "the same precheck and declare round_submission_index/round_submission_count. Do not fill the "
+    "the same precheck and declare round_submission_index/round_submission_count. A split round is "
+    "complete only after every declared submission has a successful durable result. Do not fill the "
     "list with weak papers."
 )
 DISCOVERY_COMPLETION = (
@@ -74,7 +75,8 @@ DISCOVERY_COMPLETION = (
     "block forward-citation refresh. Use normal/new search only after both citation "
     "directions were attempted in the same run. Submit 0-5 strong candidates per submission, "
     "but preserve every strong candidate by splitting one precheck round across multiple submissions "
-    "when needed; split submissions still count as one round."
+    "when needed; split submissions count as one round only after all declared parts succeed durably. "
+    "Do not treat Discovery exhaustion as an ordinary stop condition; continue with the selector until the handoff window."
 )
 RESEARCH_INSTRUCTIONS = (
     "Read the primary source in full. Produce a repository-quality structured research "
@@ -82,13 +84,15 @@ RESEARCH_INSTRUCTIONS = (
     "results, limitations, implementation status, and relation to existing repository "
     "lineages. Preserve publication date/status, implementation and source URLs; for an "
     "arXiv paper, record its primary and cross-list categories from arXiv. Do not infer "
-    "missing text from abstracts/search snippets. Follow workflow v10 fixed-slot "
+    "missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient "
+    "when tables, appendices, or other evidence needed for the five slots are missing; continue through the "
+    "ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot "
     "transport; do not send completed Markdown from Scheduled Chat."
 )
 RESEARCH_COMPLETION = (
     "Submit the complete workflow-v10 five-slot structured research record and source "
-    "evidence. If full text is unavailable, return blocked with retrieval evidence "
-    "instead of guessing."
+    "evidence. Return blocked with retrieval evidence only after the ordered official full-text routes "
+    "have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
 )
 AUDIT_INSTRUCTIONS = (
     "Perform a formal audit using primary sources: identity/bibliography, authors/"
