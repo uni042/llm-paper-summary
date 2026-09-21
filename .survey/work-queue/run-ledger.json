@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T02:35:43.417805+00:00",
+  "updated_at": "2026-09-21T02:37:56.881179+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -31670,6 +31670,56 @@
           "type": "research",
           "canonical_id": "DOI:10.1145/3789240.3822568",
           "title": "Replacing NVMe Staging in LLM Inference with a High-Bandwidth CXL Memory Expander with an On-Device DMA Controller",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 867,
+      "paper_active_count_after": 867,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35554751359",
+      "first_recorded_at": "2026-09-21T02:37:56.881179+00:00",
+      "last_recorded_at": "2026-09-21T02:37:56.881179+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35554751359:1",
+          "recorded_at": "2026-09-21T02:37:56.881179+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35554751359",
+            "run_attempt": "1",
+            "source_sha": "e5c62d00992c7281eba7bf322ab51712d731875d"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-c744057cd5d44d88",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3832810.3832869",
+          "title": "CARE-MoE: Correlation-Aware Expert Placement and Semantic Equivalence Routing for MoE LLM Inference on Edge Devices",
           "from": "ready",
           "to": "blocked"
         }
