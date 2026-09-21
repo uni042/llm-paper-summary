@@ -123,6 +123,82 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertTrue(result["discovery_precheck_result_pending"])
             self.assertEqual(result["gate"]["required_action"], "WAIT_FOR_DISCOVERY_PRECHECK_RESULT")
 
+    def test_successful_precheck_without_submission_is_evaluation_pending(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-1.json",
+                {"request_id": "pre-1", "run_key": "run-1"},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/pre-1.json",
+                {
+                    "request_id": "pre-1",
+                    "run_key": "run-1",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                },
+            )
+            result = mod.derive(root, request())
+            self.assertTrue(result["discovery_evaluation_pending"])
+            self.assertEqual(result["gate"]["required_action"], "CONTINUE_DISCOVERY_ROUND")
+
+    def test_split_discovery_round_missing_part_remains_in_progress(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-1.json",
+                {"request_id": "pre-1", "run_key": "run-1"},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/pre-1.json",
+                {
+                    "request_id": "pre-1",
+                    "run_key": "run-1",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/submissions/round-part-1.json",
+                {
+                    "operation": "submit_discovery_round",
+                    "discovery_precheck": {"request_id": "pre-1"},
+                    "discovery_stats": {
+                        "run_key": "run-1",
+                        "round": "round-1",
+                        "axis": "forward",
+                        "round_submission_index": 1,
+                        "round_submission_count": 2,
+                    },
+                    "candidates": [],
+                },
+            )
+            write_json(root, ".survey/work-queue/results/round-part-1.json", {"ok": True})
+            result = mod.derive(root, request())
+            self.assertTrue(result["discovery_evaluation_pending"])
+            self.assertIn("pre-1", result["discovery_evaluation_request_ids"])
+            self.assertEqual(result["gate"]["required_action"], "CONTINUE_DISCOVERY_ROUND")
+
     def test_prior_run_unresolved_submission_remains_pending(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
