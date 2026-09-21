@@ -60,7 +60,17 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "claim_result": bool(args.claim_result_pending),
         "submission_result": bool(args.submission_result_pending),
         "ack_result": bool(args.ack_result_pending),
+        "discovery_precheck_result": bool(getattr(args, "discovery_precheck_result_pending", False)),
+        "discovery_submission_result": bool(getattr(args, "discovery_submission_result_pending", False)),
     }
+    discovery_evaluation_pending = bool(getattr(args, "discovery_evaluation_pending", False))
+    discovery_recovery_required = bool(getattr(args, "discovery_recovery_required", False))
+    discovery_round_in_progress = bool(
+        pending["discovery_precheck_result"]
+        or pending["discovery_submission_result"]
+        or discovery_evaluation_pending
+        or discovery_recovery_required
+    )
     wait_targets = [name for name, is_pending in pending.items() if is_pending]
     blocking_reasons: list[str] = []
 
@@ -80,6 +90,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     pending_blocks = bool(wait_targets) and not (hard_stop and handoff_safe)
     if pending_blocks:
         blocking_reasons.extend(f"{target}_pending" for target in wait_targets)
+    if discovery_round_in_progress and not (hard_stop and handoff_safe):
+        blocking_reasons.append("discovery_round_in_progress")
 
     if hard_stop and not handoff_safe:
         blocking_reasons.append("hard_stop_handoff_not_safe")
@@ -109,6 +121,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         elif active_assignment:
             next_action = "CONTINUE_ASSIGNED_WORK"
             wait_seconds = 0
+        elif discovery_recovery_required:
+            next_action = "RECOVER_DISCOVERY_SUBMISSION"
+            wait_seconds = 0
+        elif discovery_evaluation_pending:
+            next_action = "CONTINUE_DISCOVERY_ROUND"
+            wait_seconds = 0
         elif "research_minimum_not_met" in blocking_reasons:
             next_action = "CLAIM_NEXT_RESEARCH_AUDIT"
             wait_seconds = 0
@@ -133,6 +151,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         )
     elif next_action == "CONTINUE_ASSIGNED_WORK":
         next_action_message = "有効なassignmentの未完了作業を続行し、耐久保存地点まで進めます。"
+    elif next_action == "RECOVER_DISCOVERY_SUBMISSION":
+        next_action_message = "開始済みDiscovery roundの失敗を正規recovery_stepsで回収し、最終化せず同じroundを完了させます。"
+    elif next_action == "CONTINUE_DISCOVERY_ROUND":
+        next_action_message = "成功済みDiscovery precheckの評価・submissionを完了し、開始済みroundを終端まで進めます。"
     elif next_action == "CLAIM_NEXT_RESEARCH_AUDIT":
         next_action_message = (
             "Research/Auditの最低成功完了数に未達です。最終化せず、最新queue/claim stateから"
@@ -167,6 +189,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "active_assignment_handoff_safe": active_assignment_handoff_safe,
         "claim_state_checked": claim_state_checked,
         "submission_state_checked": submission_state_checked,
+        "discovery_precheck_result_pending": pending["discovery_precheck_result"],
+        "discovery_submission_result_pending": pending["discovery_submission_result"],
+        "discovery_evaluation_pending": discovery_evaluation_pending,
+        "discovery_recovery_required": discovery_recovery_required,
+        "discovery_round_in_progress": discovery_round_in_progress,
         "next_action_message": next_action_message,
         "progress_notice": progress_notice,
         "hard_stop": hard_stop,
@@ -178,7 +205,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "discovery_min_rounds": discovery_minimum,
         "rule": (
             "Final response is forbidden without an issued permit. Normal finalization also requires "
-            "explicit checks of the latest claim and submission states. Pending claim/submission/ACK "
+            "explicit checks of the latest claim and submission states. Pending claim/submission/ACK/Discovery precheck/Discovery submission "
             "results require 10-second real-time polling of the same target, repeated until the "
             "required result reaches terminal state or an explicit hard stop is safely handed off. "
             "handoff_safe may be true for a pending asynchronous result only after the durable request/submission identity, "
@@ -201,6 +228,10 @@ def main() -> int:
     ap.add_argument("--submission-state-checked", type=yn, default=False)
     ap.add_argument("--submission-result-pending", type=yn, default=False)
     ap.add_argument("--ack-result-pending", type=yn, default=False)
+    ap.add_argument("--discovery-precheck-result-pending", type=yn, default=False)
+    ap.add_argument("--discovery-submission-result-pending", type=yn, default=False)
+    ap.add_argument("--discovery-evaluation-pending", type=yn, default=False)
+    ap.add_argument("--discovery-recovery-required", type=yn, default=False)
     ap.add_argument("--hard-stop", type=yn, default=False)
     ap.add_argument("--handoff-safe", type=yn, default=False)
     ap.add_argument(
