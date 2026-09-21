@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 22:42:34 JST**
+> 自動生成: **2026-09-21 22:42:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **324** |
+| 収録候補論文 | **323** |
 | 未claim Research job | **323** |
-| 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-21 17:27:05 JST（5時間15分前）** |
+| 直近24hの検証済みResearch収録 | **23** |
+| 最終検証済みResearch収録 | **09-21 22:42:38 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **324** |
+| canonical_id確認済みの一意な候補論文 | **323** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **324** |
+| 非終端Research job合計 | **323** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **6** | **4** | **0** | **1** | **0** | — |
+| Research | **2** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **1** | **7** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **2** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-21 22:42:38 JST** [research] `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models
+  - job: `.survey/work-queue/jobs/job-research-c27f3a6ec993f9ab.json`
+  - result: `.survey/work-queue/results/research/attempt-ebcba74d995fdc58a48bf0a6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-ebcba74d995fdc58a48bf0a6.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2608.01651-bole-efficient-tree-speculation-for-hybrid-attention-language-models.md`
 - **09-21 17:27:05 JST** [research] `arXiv:2608.01785` — HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving
   - job: `.survey/work-queue/jobs/job-research-d21a98f99faeb4fe.json`
   - result: `.survey/work-queue/results/research/attempt-29cb222c40356af503452ebc-repair2.json` (`ok=true`)
@@ -128,10 +133,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-30`
-  - claim: **09-21 22:41:25 JST** / heartbeat: **—** / lease expiry: **09-22 00:11:25 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c27f3a6ec993f9ab.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -151,7 +154,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **324** |
+| ready | **323** |
 
 ### 候補の重複・識別情報欠損
 
@@ -171,7 +174,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **881** |
+| inference/training/survey配下の論文Markdown実体 | **882** |
 
 ### immutable submissionの未照合
 
@@ -179,8 +182,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **378** |
-| └ Research | **192** |
+| 成功result未照合のimmutable submission | **377** |
+| └ Research | **191** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
