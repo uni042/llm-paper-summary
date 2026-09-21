@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-3746826b8b41edef9f51adf4",
-  "job_id": "job-research-b865a4d050e3e427",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3746826b8b41edef9f51adf4",
-    "worker_id": "scheduled-chat-llm-paper-worker-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3746826b8b41edef9f51adf4","job_id":"job-research-b865a4d050e3e427","data":{"evaluation_setup":"Alibaba Cloudの実機環境で、vLLMとSGLang、DeepSeek・Qwen・GLM系列を用いて評価する。GPUインスタンスは8基のH20 96GB GPUを搭載する。合成マイクロベンチマークに加え、長文ベンチマークLooGLEとSCBench、さらに自動運転分野の顧客が運用するCoding Agentのオンライン本番負荷を測定する。公開ベンチマークの主要比較ではQwen3-235B-A22BとSGLangを使い、外部KVプールの月額資源費を約1.84万CNYへ揃え、少なくとも約12GB/sの集約読込帯域を確保する。","baselines":["外部KVキャッシュなしの推論エンジン","3FSを外部KVバックエンドとして使うストレージ中心方式","Mooncakeの遠隔メモリ中心方式","PolarKVのメモリ層のみを使う構成"],"metrics":["先頭トークンまでの時間（TTFT）","KV読込帯域","月額クラウド資源費","メモリ・ストレージ容量","本番問い合わせ遅延の平均・P50・P90","キャッシュ再利用によるGPU必要量への影響"],"configurations":"固定費用比較では3FSが21.4TBストレージ・12.09GB/s・18,352.30 CNY/月、Mooncakeが928GBメモリ・17.98GB/s・18,413.84 CNY/月、PolarKVが156GBメモリ＋21.4TBストレージ・12.09GB/s・18,352.30 CNY/月。3FSは67本の320GB PL0 ESSDと39VMを用い、Mooncakeは58VMを用いる。","production_setup":"本番事例はSGLangとGLM-4.7を用いるCoding Agentで、入力長は192〜160Kトークン、平均入力71K、平均出力423トークン。従来クラスタは256基のH20 GPUと各GPUあたり40GBのローカルホストメモリを持ち、カナリア展開でトラフィックを分割して比較する。","evidence":"一次資料PDFのSection 5全体、特にTable 3、Figure 11、Figure 12を確認した。"},"reservation":{"claim_id":"claim-3746826b8b41edef9f51adf4","worker_id":"scheduled-chat-llm-paper-worker-00","worker_kind":"scheduled_chat"}}
