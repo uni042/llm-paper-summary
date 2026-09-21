@@ -117,9 +117,10 @@ PROFILES = {
     "continuation_gate.py": {
         "task": "継続可否判定",
         "next": [
-            "出力の decision / finalization_allowed / next_action / wait_seconds / wait_targets を確認する。",
-            "decision=CONTINUE なら next_action の対象を実行し、pending target があれば同一targetを指定された間隔で再確認する。",
-            "decision=STOP_RUN の場合も直接終了せず、その出力値を run_finalization_gate.py に渡す。",
+            "出力の decision / finalization_allowed / required_action / next_action_message を確認する。",
+            "required_action=CLAIM_NEXT_RESEARCH_AUDIT なら、status-only終端や最低成功件数未達をrun終了理由にせず、最新queue/claim stateを再取得して次のResearch/Auditを1件claimする。",
+            "decision=CONTINUE なら required_action の対象を実行し、pending target があれば同一targetを指定された間隔で再確認する。",
+            "decision=STOP_RUN の場合も直接終了せず、その出力値と今回runの work_mode / 成功件数またはDiscovery round数を run_finalization_gate.py に渡す。",
             "最終応答は run_finalization_gate.py が明示的に許可するまで出さない。",
         ],
         "recovery": [
@@ -132,12 +133,15 @@ PROFILES = {
         "task": "最終化許可判定",
         "next": [
             "出力の finalization_permit.issued / blocking_reasons / next_action / wait_targets / wait_seconds を確認する。",
-            "finalization_permit.issued=false なら wait_targets の同一 claim / submission / ACK を再確認し、状態を更新して run_finalization_gate.py を再実行する。",
+            "Research/Audit runでは --work-mode research と research_audit_completed_this_invocation / research_minimum_completions を、Discovery runでは対応round数を必ず渡す。",
+            "next_action=CLAIM_NEXT_RESEARCH_AUDIT なら最終応答を出さず、最新queue/claim stateから次のResearch/Auditを1件claimする。",
+            "finalization_permit.issued=false なら next_action / wait_targets に従って状態を進め、run_finalization_gate.py を再実行する。",
             "finalization_permit.issued=true の場合だけ最終応答へ進む。",
         ],
         "recovery": [
-            "continuation decision と finalization_allowed を再確認する。",
+            "continuation decision と finalization_allowed、およびrunのwork_modeと最低条件カウンタを再確認する。",
             "claim-state-checked / submission-state-checked を実際の最新状態確認なしに true にしない。",
+            "最低条件未達をSTOP_RUN扱いにせず、CLAIM_NEXT_RESEARCH_AUDIT / DISCOVER_AGAIN に従う。",
             "pending 対象がある場合は指定された待機・再確認を行い、gate を再実行する。",
         ],
     },
