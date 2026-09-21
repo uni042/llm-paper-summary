@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 11:39:53 JST**
+> 自動生成: **2026-09-21 11:40:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -199,7 +199,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.16338` — Breaking the 1.58-bit Barrier for Ternary LLMs / worker `scheduled-chat-llm-30`
-  - claim: **09-21 11:37:25 JST** / heartbeat: **—** / lease expiry: **09-21 13:07:25 JST**
+  - claim: **09-21 11:40:14 JST** / heartbeat: **—** / lease expiry: **09-21 13:10:14 JST**
   - evidence: `.survey/work-queue/claims/job-research-ff7167d92a15ba4e.json`
 
 #### Audit
