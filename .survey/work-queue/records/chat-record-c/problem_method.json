@@ -1,1 +1,44 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-5e39c0c2da786b1c2f7e4a97","job_id":"job-research-f2c000a0ecb53008","data":{"problem":"LLM servingではchatの短promptから要約・code・legal documentの4K〜100K token級長promptまでが混在し、TTFT/TBT/JCTのSLOもapplicationごとに異なる。従来chunkingは長promptを分割してGPUを埋めるが、heterogeneous SLOを考慮せず、iteration latencyを悪化させる場合がある。\n\nさらにGPU computeだけを満杯にしてもKV cacheが先に枯渇するとrequestを追加できずthroughputは伸びない。長promptを同時に多く走らせるとKVCを長時間占有し、FCFSではSLOの厳しいrequestと緩いrequestが混ざってGPU利用率とSLO達成率の両方を落とす。","novelty":"AccelGenはiteration-level SLOをschedulerの中心へ置き、GPU compute token budgetとKVC容量を同時に扱う。SLOから許容forward sizeを逆算してdynamic chunkingし、長promptの同時実行数を制限してKVCを早く解放する。\n\nさらにTTFT/TBTまたはJCT SLOをiteration-level deadlineへ変換し、残り猶予でrequestを並べ替える。そのうえでGPU token容量とKVC空き容量の2次元需要を見てbatchを選び、単一resource最大化ではなく両resourceの残余を同時に小さくする。","method_overview":"入力はwaiting queue中のprompt/token-generation task、各requestのTTFT/TBTまたはJCT SLO、prompt/sequence長、GPUのpivot forward size、KVC空き容量である。schedulerはまずSLOをiteration-level remaining timeへ正規化し、urgent requestを優先しつつSLOが近いrequestを並べる。次にbatchの最厳SLOとGPU性能profileから許容token budgetを決め、長promptはそのbudgetとKVC block境界に合わせてchunk化する。\n\niteration終了後、未完了TGをschedulerへ戻し、urgent requestをbatchへ固定する。resource不足なら残り猶予が大きいrequestをpreemptし、その後GPU compute需要とKVC需要を同時に満たせるrequest/chunkを選ぶ。長promptの同時数も制限してKVCを早期解放する。形成したbatchをvLLM execution engineへ渡し、このloopを繰り返してthroughput、goodput、SLO attainment、JCT/response latencyを最適化する。","components":[{"name":"iteration-level SLO変換","description":"userが指定するTTFT/TBTまたはjob-level JCT SLOを、各requestが現在iterationで使えるremaining timeへ変換する。入力はarrival時刻、経過時間、残りtoken/iteration見積りとSLOで、deadlineまでの余裕をschedulerが比較可能な共通尺度にする。\n\nJCT SLOしかないoffline jobもiteration-level予算へ分解するため、online/offlineを同じqueueで扱える。remaining timeが閾値へ近づいたrequestをurgentと判定し、後段のbatchingで必ず優先する。"},{"name":"SLO保証付きtoken budget決定","description":"GPUを飽和させるpivot forward sizeをprofileし、batch内で最も厳しいiteration SLOを超えない範囲でtarget forward sizeを決める。入力はmodel/GPU profileとSLO、現在TG数で、単純固定token budgetよりSLO違反を避ける。\n\nSLOが緩いbatchではpivot付近までtokenを詰めてcompute utilizationを高め、厳しいbatchではbudgetを縮めてiteration timeを抑える。SLOが似たrequestを同時にbatchすることで、最厳SLOに全requestが引きずられる損失も減らす。"},{"name":"dynamic long-prompt chunking","description":"長promptを固定長ではなく、そのiterationの残GPU token budgetとKVC block allocationに合わせて動的に切る。chunkはtarget forward sizeを満たす長さ、またはKVCをちょうど使い切る長さの短い方を選び、SLOを守りながらcomputeを埋める。\n\n長promptを一度に全処理しないため他requestのiterationを極端に延ばさず、複数iterationへ負荷を分散できる。同時に走る長prompt数を制限して、完了したrequestからKVCを早く返却させる。"},{"name":"SLO優先queue ordering","description":"waiting queueを単純FCFSではなくremaining SLO timeで並べ、urgent requestを最優先する。非urgentでもremaining timeが近いrequest群を候補にすることで、同じbatch内のSLOばらつきを抑える。\n\nresource不足でpreemptionが必要な場合はremaining timeが最も大きいrequestを外し、deadlineに近いrequestを残す。これによりGPU利用率だけを最大化するschedulerよりSLO attainmentとgoodputを直接改善する。"},{"name":"multi-resource-aware batching","description":"各候補requestについてGPU compute需要をtoken数、KVC需要を未割当block数で計算し、現在のGPU余力とKVC空きの両方へ収まるものだけを選ぶ。prompt chunkとTGではKVC需要計算が異なるため、既割当blockも考慮する。\n\n候補の中から選択後にGPU残余とKVC残余が同時に小さくなるrequestを貪欲に追加する。computeだけを埋めてKVCを余らせる、またはKVCだけを埋めてGPUが遊ぶ状態を避け、2 resourceのjoint utilizationを高める。"},{"name":"urgent保持とKVC早期解放","description":"iterationをまたぐTG requestは可能な限りbatchへ保持して完了を早め、完了時に占有KVCをまとめて解放できるようにする。urgent requestはbatchへ先に入れ、resource超過時だけ猶予の大きいrequestをpreemptする。\n\nこの方針は単純な公平性よりgoodputとresource recyclingを重視する。特に長promptが多いtraceではKVC占有期間を短縮し、後続requestを早く受け入れられるためthroughputとSLO達成の双方へ効く。"}],"system_design":"AccelGenはvLLMのblock-based KV cacheとexecution engineを利用し、その前段schedulerをSLO-awareかつmulti-resource-awareへ置換する。request arrival、iteration完了、preemptionを契機にqueue priorityとbatchを再計算する。\n\nGPU saturation profileとKVC block accountingをschedulerへ入力し、dynamic chunking、urgent handling、2-resource selectionを一つのiteration loopへ統合する。"},"reservation":{"claim_id":"claim-5e39c0c2da786b1c2f7e4a97","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-885c7b91c948ae3e1ef817e0",
+  "job_id": "job-research-f2c000a0ecb53008",
+  "data": {
+    "problem": "LLM servingではchatの短promptから要約・code・legal documentの4K〜100K token級長promptまでが混在し、TTFT/TBT/JCTのSLOもapplicationごとに異なる。従来chunkingは長promptを分割してGPUを埋めるが、heterogeneous SLOを考慮せず、iteration latencyを悪化させる場合がある。\n\nさらにGPU computeだけを満杯にしてもKV cacheが先に枯渇するとrequestを追加できずthroughputは伸びない。長promptを同時に多く走らせるとKVCを長時間占有し、FCFSではSLOの厳しいrequestと緩いrequestが混ざってGPU利用率とSLO達成率の両方を落とす。",
+    "novelty": "AccelGenはiteration-level SLOをschedulerの中心へ置き、GPU compute token budgetとKVC容量を同時に扱う。SLOから許容forward sizeを逆算してdynamic chunkingし、長promptの同時実行数を制限してKVCを早く解放する。\n\nさらにTTFT/TBTまたはJCT SLOをiteration-level deadlineへ変換し、残り猶予でrequestを並べ替える。そのうえでGPU token容量とKVC空き容量の2次元需要を見てbatchを選び、単一resource最大化ではなく両resourceの残余を同時に小さくする。",
+    "method_overview": "入力はwaiting queue中のprompt/token-generation task、各requestのTTFT/TBTまたはJCT SLO、prompt/sequence長、GPUのpivot forward size、KVC空き容量である。schedulerはまずSLOをiteration-level remaining timeへ正規化し、urgent requestを優先しつつSLOが近いrequestを並べる。次にbatchの最厳SLOとGPU性能profileから許容token budgetを決め、長promptはそのbudgetとKVC block境界に合わせてchunk化する。\n\niteration終了後、未完了TGをschedulerへ戻し、urgent requestをbatchへ固定する。resource不足なら残り猶予が大きいrequestをpreemptし、その後GPU compute需要とKVC需要を同時に満たせるrequest/chunkを選ぶ。長promptの同時数も制限してKVCを早期解放する。形成したbatchをvLLM execution engineへ渡し、このloopを繰り返してthroughput、goodput、SLO attainment、JCT/response latencyを最適化する。",
+    "components": [
+      {
+        "name": "iteration-level SLO変換",
+        "description": "userが指定するTTFT/TBTまたはjob-level JCT SLOを、各requestが現在iterationで使えるremaining timeへ変換する。入力はarrival時刻、経過時間、残りtoken/iteration見積りとSLOで、deadlineまでの余裕をschedulerが比較可能な共通尺度にする。\n\nJCT SLOしかないoffline jobもiteration-level予算へ分解するため、online/offlineを同じqueueで扱える。remaining timeが閾値へ近づいたrequestをurgentと判定し、後段のbatchingで必ず優先する。"
+      },
+      {
+        "name": "SLO保証付きtoken budget決定",
+        "description": "GPUを飽和させるpivot forward sizeをprofileし、batch内で最も厳しいiteration SLOを超えない範囲でtarget forward sizeを決める。入力はmodel/GPU profileとSLO、現在TG数で、単純固定token budgetよりSLO違反を避ける。\n\nSLOが緩いbatchではpivot付近までtokenを詰めてcompute utilizationを高め、厳しいbatchではbudgetを縮めてiteration timeを抑える。SLOが似たrequestを同時にbatchすることで、最厳SLOに全requestが引きずられる損失も減らす。"
+      },
+      {
+        "name": "dynamic long-prompt chunking",
+        "description": "長promptを固定長ではなく、そのiterationの残GPU token budgetとKVC block allocationに合わせて動的に切る。chunkはtarget forward sizeを満たす長さ、またはKVCをちょうど使い切る長さの短い方を選び、SLOを守りながらcomputeを埋める。\n\n長promptを一度に全処理しないため他requestのiterationを極端に延ばさず、複数iterationへ負荷を分散できる。同時に走る長prompt数を制限して、完了したrequestからKVCを早く返却させる。"
+      },
+      {
+        "name": "SLO優先queue ordering",
+        "description": "waiting queueを単純FCFSではなくremaining SLO timeで並べ、urgent requestを最優先する。非urgentでもremaining timeが近いrequest群を候補にすることで、同じbatch内のSLOばらつきを抑える。\n\nresource不足でpreemptionが必要な場合はremaining timeが最も大きいrequestを外し、deadlineに近いrequestを残す。これによりGPU利用率だけを最大化するschedulerよりSLO attainmentとgoodputを直接改善する。"
+      },
+      {
+        "name": "multi-resource-aware batching",
+        "description": "各候補requestについてGPU compute需要をtoken数、KVC需要を未割当block数で計算し、現在のGPU余力とKVC空きの両方へ収まるものだけを選ぶ。prompt chunkとTGではKVC需要計算が異なるため、既割当blockも考慮する。\n\n候補の中から選択後にGPU残余とKVC残余が同時に小さくなるrequestを貪欲に追加する。computeだけを埋めてKVCを余らせる、またはKVCだけを埋めてGPUが遊ぶ状態を避け、2 resourceのjoint utilizationを高める。"
+      },
+      {
+        "name": "urgent保持とKVC早期解放",
+        "description": "iterationをまたぐTG requestは可能な限りbatchへ保持して完了を早め、完了時に占有KVCをまとめて解放できるようにする。urgent requestはbatchへ先に入れ、resource超過時だけ猶予の大きいrequestをpreemptする。\n\nこの方針は単純な公平性よりgoodputとresource recyclingを重視する。特に長promptが多いtraceではKVC占有期間を短縮し、後続requestを早く受け入れられるためthroughputとSLO達成の双方へ効く。"
+      }
+    ],
+    "system_design": "AccelGenはvLLMのblock-based KV cacheとexecution engineを利用し、その前段schedulerをSLO-awareかつmulti-resource-awareへ置換する。request arrival、iteration完了、preemptionを契機にqueue priorityとbatchを再計算する。\n\nGPU saturation profileとKVC block accountingをschedulerへ入力し、dynamic chunking、urgent handling、2-resource selectionを一つのiteration loopへ統合する。"
+  },
+  "reservation": {
+    "claim_id": "claim-885c7b91c948ae3e1ef817e0",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

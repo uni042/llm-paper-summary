@@ -1,1 +1,61 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5e39c0c2da786b1c2f7e4a97","job_id":"job-research-f2c000a0ecb53008","data":{"canonical_id":"DOI:10.1145/3832810.3832922","arxiv_id":"2503.13737","doi":"10.1145/3832810.3832922","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving","summary":"ICPP 2026版のAccelGenは、短長promptと異種SLOが混在するLLM servingで、SLO保証付きdynamic chunking、iteration-level SLO優先度、GPU計算とKV cacheを同時に満たすmulti-resource batchingを統合する。20K requestのtrace-driven実機評価でthroughput 1.42〜11.21倍、goodput 1.43〜13.71倍、SLO達成率37〜90%向上を報告する。","list_summary":"異種SLO下でdynamic chunkingとGPU/KV cache同時最適化batchingを行い、throughput・goodput・SLO達成を大幅改善するAccelGen。","authors":["Haiying Shen","Tanmoy Sen"],"published":"2026","publication":"55th International Conference on Parallel Processing (ICPP 2026)","publication_type":"Conference Paper","publication_status":"Accepted/Programmed","source":"https://doi.org/10.1145/3832810.3832922","sources":["https://doi.org/10.1145/3832810.3832922","https://arxiv.org/abs/2503.13737","https://www.researchgate.net/publication/389946574_AccelGen_Heterogeneous_SLO-Guaranteed_High-Throughput_LLM_Inference_Serving_for_Diverse_Applications"],"primary_url":"https://arxiv.org/abs/2503.13737","html_url":null,"pdf_url":"https://arxiv.org/pdf/2503.13737","implementation_url":null,"implementation":"論文はvLLMを基盤にAccelGen schedulerを実装し、Sarathi-Serve、FastGen、vLLM、FasterTransformer上で再実装したORCAと比較する。公開コードURLは本文から確定できなかった。","last_checked":"2026-09-21","code":null,"hardware_evaluation":"AWS p4d.24xlarge、NVIDIA A100 80GB×8、NVSwitch 600GB/s。OPT-13Bは1 GPU、OPT-175Bは8 GPUでpipeline/tensor parallelを使用し、Llama-13B/Llama-3-70Bも評価する。","quality_effect":"推論計算自体を近似せず、request/chunkのbatchingとpreemption、KV cache割当を変更するsystem手法である。モデル品質指標は主評価ではなく、throughput、goodput、SLO attainment、JCT/latencyを測る。","references_checked_at":"2026-09-21","references_source":"https://arxiv.org/abs/2503.13737","references_total":0,"references":[],"lineage":"LLM serving / SLO-aware scheduling / prompt chunking / KV-cache-aware batching","topics":["LLM serving","SLO scheduling","dynamic chunking","KV cache","multi-resource batching","goodput"]},"reservation":{"claim_id":"claim-5e39c0c2da786b1c2f7e4a97","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-885c7b91c948ae3e1ef817e0",
+  "job_id": "job-research-f2c000a0ecb53008",
+  "data": {
+    "canonical_id": "DOI:10.1145/3832810.3832922",
+    "arxiv_id": "2503.13737",
+    "doi": "10.1145/3832810.3832922",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "title": "Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving",
+    "summary": "ICPP 2026版のAccelGenは、短長promptと異種SLOが混在するLLM servingで、SLO保証付きdynamic chunking、iteration-level SLO優先度、GPU計算とKV cacheを同時に満たすmulti-resource batchingを統合する。20K requestのtrace-driven実機評価でthroughput 1.42〜11.21倍、goodput 1.43〜13.71倍、SLO達成率37〜90%向上を報告する。",
+    "list_summary": "異種SLO下でdynamic chunkingとGPU/KV cache同時最適化batchingを行い、throughput・goodput・SLO達成を大幅改善するAccelGen。",
+    "authors": [
+      "Haiying Shen",
+      "Tanmoy Sen"
+    ],
+    "published": "2026",
+    "publication": "55th International Conference on Parallel Processing (ICPP 2026)",
+    "publication_type": "Conference Paper",
+    "publication_status": "Accepted/Programmed",
+    "source": "https://doi.org/10.1145/3832810.3832922",
+    "sources": [
+      "https://doi.org/10.1145/3832810.3832922",
+      "https://arxiv.org/abs/2503.13737",
+      "https://www.researchgate.net/publication/389946574_AccelGen_Heterogeneous_SLO-Guaranteed_High-Throughput_LLM_Inference_Serving_for_Diverse_Applications"
+    ],
+    "primary_url": "https://arxiv.org/abs/2503.13737",
+    "html_url": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.13737",
+    "implementation_url": null,
+    "implementation": "論文はvLLMを基盤にAccelGen schedulerを実装し、Sarathi-Serve、FastGen、vLLM、FasterTransformer上で再実装したORCAと比較する。公開コードURLは本文から確定できなかった。",
+    "last_checked": "2026-09-21",
+    "code": null,
+    "hardware_evaluation": "AWS p4d.24xlarge、NVIDIA A100 80GB×8、NVSwitch 600GB/s。OPT-13Bは1 GPU、OPT-175Bは8 GPUでpipeline/tensor parallelを使用し、Llama-13B/Llama-3-70Bも評価する。",
+    "quality_effect": "推論計算自体を近似せず、request/chunkのbatchingとpreemption、KV cache割当を変更するsystem手法である。モデル品質指標は主評価ではなく、throughput、goodput、SLO attainment、JCT/latencyを測る。",
+    "references_checked_at": "2026-09-21",
+    "references_source": "https://arxiv.org/abs/2503.13737",
+    "references_total": 0,
+    "references": [],
+    "lineage": "LLM serving / SLO-aware scheduling / prompt chunking / KV-cache-aware batching",
+    "topics": [
+      "LLM serving",
+      "SLO scheduling",
+      "dynamic chunking",
+      "KV cache",
+      "multi-resource batching",
+      "goodput"
+    ]
+  },
+  "reservation": {
+    "claim_id": "claim-885c7b91c948ae3e1ef817e0",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
