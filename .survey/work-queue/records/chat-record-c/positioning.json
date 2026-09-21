@@ -4,7 +4,12 @@
   "slot": "positioning",
   "attempt_id": "attempt-29cb222c40356af503452ebc",
   "job_id": "job-research-d21a98f99faeb4fe",
-  "data": {},
+  "data": {
+    "limitations": "評価は単一GPU上の同居実行に限定され、3種類のオムニモデルとNVIDIA RTX 6000 Ada / RTX PRO 6000のみである。SLO倍率は単独p95の5倍に固定され、異なる運用ポリシーでの感度は限定的である。PyNVMLのメモリ活動信号は達成帯域の直接測定ではなく代理指標である。さらにモデル・GPU・SLO方針が変わると、クラス別単独遅延表と固定SM掃引から作る候補列を再生成する必要があり、Qwen2.5-Omniではこのオフライン校正に30〜60分程度を要する。",
+    "differences": "従来のLLMサービングは共通テキスト生成経路のTTFT/TPOTやKV管理を中心に扱い、VLM/LMMサービングは主に入力側エンコーダとテキスト生成の連携を扱う。GPU共有機構やMPS/MIG/Green Contextsは空間共有の機構を提供するが、どの出力経路を共有段階へ入れるかは決めない。HorizonServeは、出力側に分岐する短経路・長経路というオムニモデル固有の構造を明示し、クラス別締切余裕に基づく入場制御と、下流活性・帯域圧力に基づく段階別SM上限を共同制御する点で異なる。",
+    "implementation_status": "研究プロトタイプはvLLM-Omni v0.16.0上に実装されており、既存のバッチ構築、KVキャッシュ管理、モデル実行は維持する。CUDA Green ContextsによるSM候補列を各段階プロセスで起動時に事前生成し、PyNVMLと共有メモリ監視領域で制御する。arXivページ上では公式コードURLを確認できなかったため、公開実装の有無は未確認として扱う。",
+    "research_positioning": "リポジトリ上では「その他推論システム」系統のうち、マルチモーダル／オムニモデルサービングとSLO指向GPU共有を結ぶ研究として位置付ける。特にvLLM-Omniの分散・段階分離とは異なり、単一GPU内で出力経路の入場と共有段階／下流段階の空間配分を統合するため、将来の小規模オンプレミス・ワークステーション・エッジ向けオムニモデル運用の比較基準になる。"
+  },
   "reservation": {
     "claim_id": "claim-29cb222c40356af503452ebc",
     "worker_id": "scheduled-chat-llm-survey-fastlane-verify",
