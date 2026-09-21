@@ -1,1 +1,58 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e58ebea7bf0407d48d7d69b2","job_id":"job-research-3b1c7287727937a1","data":{"canonical_id":"arXiv:2609.06076","arxiv_id":"2609.06076","doi":"10.48550/arXiv.2609.06076","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment","summary":"再学習なしの混合エキスパート圧縮で得たチェックポイントを最終成果物ではなく『圧縮済み初期値』と捉え、少量の汎用テキストで短時間の圧縮後調整を行う設計軸を体系評価する。Qwen3-30B-A3BとGemma4-26B-A4B、4圧縮法、3保持率、28ベンチマークを横断し、C4を3000例・1エポックだけ用いる全パラメータ言語モデル微調整で圧縮により失った性能差の平均37.3%を回復する。","list_summary":"圧縮済みMoEを小規模調整の初期値と再定義し、3000例・1エポックの全パラメータ微調整で平均37.3%の性能差を回復するコスト正規化研究。","authors":["Sieun Hyeon","Jaeyoung Do"],"authors_affiliations":"Department of Electrical and Computer Engineering, Seoul National University; Interdisciplinary Program in Artificial Intelligence, Seoul National University","published":"2026-09-05","publication":"EMNLP 2026 Main Conference / arXiv","publication_type":"国際会議採択論文（arXiv v1）","publication_status":"Accepted to EMNLP 2026 Main Conference; arXiv v1 submitted 2026-09-05","lineage":"MoE圧縮 / expert pruning / expert merging / post-compression adjustment","topics":["MoE圧縮","圧縮後調整","エキスパート削除","エキスパート統合","コスト正規化評価"],"importance":"再学習なし圧縮の直後性能だけで手法を比較する慣行に対し、同じ小規模データ予算と実測GPUコストの下で圧縮後の回復可能性まで含めて比較すべきことを示す。特にルータだけでなくエキスパート機能誤差と後段への誤差伝播を修正する必要性を実証する。","implementation":"著者公式実装はAIDASLab/Post-Compression-Adjustment。圧縮後調整、評価、コスト計測を含む研究実装。","hardware_evaluation":"全圧縮後調整をNVIDIA H200 140GB×2枚で統一実行。GPU利用率・メモリ占有・電力をnvidia-smiで定期計測。","quality_effect":"全パラメータ言語モデル微調整は平均スコアを圧縮直後39.01%から42.50%へ+3.49ポイント回復し、元モデル48.37%との差の37.3%を埋める。","source":"https://arxiv.org/abs/2609.06076","sources":["https://arxiv.org/abs/2609.06076","https://arxiv.org/html/2609.06076","https://arxiv.org/pdf/2609.06076"],"code":"https://github.com/AIDASLab/Post-Compression-Adjustment","last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-e58ebea7bf0407d48d7d69b2","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-820bde38d697073272d97db8",
+  "job_id": "job-research-3b1c7287727937a1",
+  "data": {
+    "canonical_id": "arXiv:2609.06076",
+    "arxiv_id": "2609.06076",
+    "doi": "10.48550/arXiv.2609.06076",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment",
+    "summary": "再学習なしの混合エキスパート圧縮で得たチェックポイントを最終成果物ではなく『圧縮済み初期値』と捉え、少量の汎用テキストで短時間の圧縮後調整を行う設計軸を体系評価する。Qwen3-30B-A3BとGemma4-26B-A4B、4圧縮法、3保持率、28ベンチマークを横断し、C4を3000例・1エポックだけ用いる全パラメータ言語モデル微調整で圧縮により失った性能差の平均37.3%を回復する。",
+    "list_summary": "圧縮済みMoEを小規模調整の初期値と再定義し、3000例・1エポックの全パラメータ微調整で平均37.3%の性能差を回復するコスト正規化研究。",
+    "authors": [
+      "Sieun Hyeon",
+      "Jaeyoung Do"
+    ],
+    "authors_affiliations": "Department of Electrical and Computer Engineering, Seoul National University; Interdisciplinary Program in Artificial Intelligence, Seoul National University",
+    "published": "2026-09-05",
+    "publication": "EMNLP 2026 Main Conference / arXiv",
+    "publication_type": "国際会議採択論文（arXiv v1）",
+    "publication_status": "Accepted to EMNLP 2026 Main Conference; arXiv v1 submitted 2026-09-05",
+    "lineage": "MoE圧縮 / expert pruning / expert merging / post-compression adjustment",
+    "topics": [
+      "MoE圧縮",
+      "圧縮後調整",
+      "エキスパート削除",
+      "エキスパート統合",
+      "コスト正規化評価"
+    ],
+    "importance": "再学習なし圧縮の直後性能だけで手法を比較する慣行に対し、同じ小規模データ予算と実測GPUコストの下で圧縮後の回復可能性まで含めて比較すべきことを示す。特にルータだけでなくエキスパート機能誤差と後段への誤差伝播を修正する必要性を実証する。",
+    "implementation": "著者公式実装はAIDASLab/Post-Compression-Adjustment。圧縮後調整、評価、コスト計測を含む研究実装。",
+    "hardware_evaluation": "全圧縮後調整をNVIDIA H200 140GB×2枚で統一実行。GPU利用率・メモリ占有・電力をnvidia-smiで定期計測。",
+    "quality_effect": "全パラメータ言語モデル微調整は平均スコアを圧縮直後39.01%から42.50%へ+3.49ポイント回復し、元モデル48.37%との差の37.3%を埋める。",
+    "source": "https://arxiv.org/abs/2609.06076",
+    "sources": [
+      "https://arxiv.org/abs/2609.06076",
+      "https://arxiv.org/html/2609.06076",
+      "https://arxiv.org/pdf/2609.06076"
+    ],
+    "code": "https://github.com/AIDASLab/Post-Compression-Adjustment",
+    "last_checked": "2026-09-21",
+    "references": [],
+    "references_checked_at": "2026-09-21",
+    "references_source": "primary manuscript",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-820bde38d697073272d97db8",
+    "worker_id": "scheduled-chat-llm-paper-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

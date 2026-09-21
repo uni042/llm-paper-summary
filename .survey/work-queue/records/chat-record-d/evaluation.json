@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e58ebea7bf0407d48d7d69b2",
+  "attempt_id": "attempt-820bde38d697073272d97db8",
   "job_id": "job-research-3b1c7287727937a1",
   "data": {
     "hardware": "すべての圧縮後調整をNVIDIA H200 140GB×2枚で実行し、各GPUの電力、利用率、使用メモリをnvidia-smiで公称1秒間隔により計測する。自動デバイス配置では各GPU 110GiB上限。",
@@ -11,7 +11,7 @@
     "scope": "主結果は2つの約30B級指示調整MoE、4圧縮法、3保持率に限定され、3000例という小予算での局所的回復を対象とする。28タスクは幅広いが、長期継続学習や本番配備コストそのものを測る研究ではない。行動代理指標も追加するが包括的安全性評価ではない。"
   },
   "reservation": {
-    "claim_id": "claim-e58ebea7bf0407d48d7d69b2",
+    "claim_id": "claim-820bde38d697073272d97db8",
     "worker_id": "scheduled-chat-llm-paper-30",
     "worker_kind": "scheduled_chat"
   }

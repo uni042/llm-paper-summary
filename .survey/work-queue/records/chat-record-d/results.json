@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-e58ebea7bf0407d48d7d69b2",
+  "attempt_id": "attempt-820bde38d697073272d97db8",
   "job_id": "job-research-3b1c7287727937a1",
   "data": {
     "overview": "全設定平均で元モデル48.37%、圧縮直後39.01%に対し、全パラメータ因果言語モデル微調整は42.50%まで回復し、+3.49ポイント、失われた差の37.3%を埋めた。次点はルータ＋全エキスパート微調整+2.31ポイント、全パラメータ知識蒸留+2.19ポイントで、同じ更新範囲なら言語モデル微調整が知識蒸留を一貫して上回る。ルータのみは+0.23ポイントに留まり、圧縮誤差がルータだけではなくエキスパート機能と後段へ伝播することを支持する。",
@@ -48,7 +48,7 @@
     "quality_impact": "小規模調整は平均性能を回復するが完全復元ではなく、37.3%の差回復に留まる。行動代理指標では有用能力とともにWMDPの危険知識やCrowS-Pairs関連の傾向も元モデル方向へ戻り得るため、回復を安全性改善と解釈してはならない。"
   },
   "reservation": {
-    "claim_id": "claim-e58ebea7bf0407d48d7d69b2",
+    "claim_id": "claim-820bde38d697073272d97db8",
     "worker_id": "scheduled-chat-llm-paper-30",
     "worker_kind": "scheduled_chat"
   }

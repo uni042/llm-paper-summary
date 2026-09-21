@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-e58ebea7bf0407d48d7d69b2",
+  "attempt_id": "attempt-820bde38d697073272d97db8",
   "job_id": "job-research-3b1c7287727937a1",
   "data": {
     "limitations": "評価はQwen3-30B-A3BとGemma4-26B-A4Bという2バックボーン、4つの代表圧縮法、3保持率に限定され、さらに大規模・異種構造のMoEへ一般化できる保証はない。調整はC4 3000例・1エポックという意図的に小さい予算で、長期学習時に知識蒸留が逆転する可能性は検証していない。費用は2×H200環境での実測であり別GPU・分散構成では順位が変わり得る。全パラメータ調整は回復量が大きいが、更新時のオプティマイザメモリとチェックポイント書込み量も大きい。行動代理指標は診断用で包括的な安全性評価ではない。",
@@ -11,7 +11,7 @@
     "research_positioning": "Adaptive Expert Computation / Compression系統では、新しい削除・統合アルゴリズムではなく『圧縮後にどれだけ安価に品質を戻せるか』を第三軸として追加する研究である。圧縮率と圧縮直後精度だけでなく、少量調整後精度と回復に必要なGPU時間・メモリ・エネルギーを含めて手法を選ぶべきだという評価規範を提示する。既存のREAP、AIMER、HC-SMoE、M-SMoE等の成果を置換せず、その実用配備パイプラインを補完する。"
   },
   "reservation": {
-    "claim_id": "claim-e58ebea7bf0407d48d7d69b2",
+    "claim_id": "claim-820bde38d697073272d97db8",
     "worker_id": "scheduled-chat-llm-paper-30",
     "worker_kind": "scheduled_chat"
   }
