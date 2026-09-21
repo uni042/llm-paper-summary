@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 01:01:52 JST**
+> 自動生成: **2026-09-22 01:02:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **323** |
 | 未claim Research job | **322** |
 | 直近24hの検証済みResearch収録 | **21** |
-| 最終検証済みResearch収録 | **09-22 00:48:18 JST（13分前）** |
+| 最終検証済みResearch収録 | **09-22 00:48:18 JST（14分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -139,9 +139,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3832810.3832922` — Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving / worker `scheduled-chat-30`
-  - claim: **09-22 00:59:52 JST** / heartbeat: **—** / lease expiry: **09-22 02:29:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f2c000a0ecb53008.json`
+- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
+  - claim: **09-22 01:02:04 JST** / heartbeat: **—** / lease expiry: **09-22 02:32:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
 
 #### Audit
 
@@ -189,8 +189,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **404** |
-| └ Research | **218** |
+| 成功result未照合のimmutable submission | **405** |
+| └ Research | **219** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
