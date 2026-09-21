@@ -1,1 +1,36 @@
-{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-032318afa278e3cdd42d8d99","job_id":"job-research-5c8ae1bd28277ef1","data":{"problem":"大規模言語モデル推論では、KVキャッシュのCPU退避、prefillとdecodeの分離、GPU間並列化、計算と通信の重畳によって、PCIe、NVLink、RDMAを同時に利用する場面が増えている。しかし既存のランタイムはGPUファブリックをbest-effortな黒箱として扱い、通信を重ねれば隠蔽できるという前提を置きやすい。実際にはNVLink用DMAとSMのHBMアクセスがL2やメモリ制御器を共有し、GPUDirect RDMAとCPU-GPU転送も同じPCIe区間を通る。しかも仲裁は方向と通信種別によって非対称で、重要なKV転送より背景オフロードが資源を奪う場合がある。従来のジョブ内部スケジューリングや粗い通信停止だけでは、複数LLMタスクのSLOと共有ファブリックの状態を対応付けて制御できない。","novelty":"GPUWeaverの新規性は、GPUファブリック利用をアプリケーションから独立した副作用ではなく明示的なスケジューリング問題として定式化し、通信フローごとの性能目標とハードウェア観測値を閉ループで結ぶ点にある。論文はまずHBMアクセス対NVLink、GPUDirect RDMA対host-device転送の競合を制御実験で分解し、暗黙の優先度を定量化する。その上で、RDMAのQoSやrate limit、CUDA転送のstream priority、chunking、launch gating、yieldなど既存ソフトウェアから操作可能なノブを統一制御面に載せ、重要フローが目標を外したときだけ背景通信を抑える。","method_overview":"GPUWeaverは大規模言語モデルアプリケーションと通信ライブラリの間に位置する軽量ランタイムである。アプリケーションはRDMA転送、collective、host-device copyなどをフローとして登録し、優先度や遅延・帯域目標を付与する。ランタイムはNVML/DCGMのPCIe・NVLinkカウンタ、NICスループット、キュー深さ、GPUメモリ帯域などの基盤信号と、要求遅延、段階遅延、転送遅延、フローbacklogなどのアプリ信号を監視する。共有ファブリックが飽和し、高優先フローが目標を満たさない場合は次の制御窓でそのフローの帯域予算を増やし、背景フローの注入をpacingする。逆に高優先フローが健全なら背景側へ帯域を戻す。RDMAではservice level、NIC QoS、rate limitingを使い、CUDAが直接帯域制御を提供しないhost-device転送ではstream priority、launch gating、chunked copy、cooperative yieldを組み合わせる。vLLM+Mooncakeケースではprefill-decode間のGPUDirect RDMA KV転送を高優先、GPUからCPUへのprefix KV offloadを背景フローとし、PD handoff窓の間だけoffload delayを調整する。前ラウンドのPCIe帯域、RDMA帯域、初回トークン待ち時間、offload backlogから次ラウンドの遅延または帯域分割を選び、重要通信の完了を早める。","components":[{"name":"競合診断と根因分解","description":"著者らは単なるend-to-end低下だけを見るのではなく、HBMアクセスとNVLink転送、GPUDirect RDMAとhost-device copyをそれぞれisolated実行とconcurrent実行で比較する。HBM/NVLinkでは128MBから4GBまで両方のサイズを独立に掃引し、どちらの処理時間が長いかで重畳時間と帯域低下がどう変わるかを測る。PCIeではGDR writeとH2D、GDR readとD2Hを方向別に分離し、共有GPU側PCIe区間でどちらが優先されるかを確認する。これにより、総帯域不足ではなくL2、メモリ制御器、PCIe仲裁領域に起因する暗黙優先度を制御対象として抽出する。"},{"name":"閉ループ通信スケジューラ","description":"ランタイムはファブリック混雑を示す基盤信号と、どのアプリケーションフローが実際に遅れているかを示す進捗信号を同時に監視する。高優先フローが遅延または帯域目標を外し、かつ共有資源が飽和している場合だけ次の制御窓で帯域予算を高優先側へ寄せる。高優先フローが健全になれば背景backlogを消化するため帯域を戻す。方策自体は固定分割、閾値規則、学習制御器のいずれでもよく、GPUWeaverはフローごとの帯域予算またはpacing決定を受け取れる共通制御層として設計される。"},{"name":"ソフトウェア可視制御ノブ","description":"ハードウェアの仲裁規則を変更できないため、GPUWeaverは共有ファブリックへ要求を投入する手前で注入率を制御する。RDMAではservice level、NIC QoS、rate limitingを使い、host-device転送ではCUDA stream priority、launch gating、転送の小分割、協調的yieldを組み合わせる。バックエンドごとに具体機構は異なるが、すべてのノブを『各フローが共有PCIe/NVLinkへどれだけ積極的に要求を入れるか』という共通量へ写像することで、アプリケーション目標に沿った優先制御を可能にする。"},{"name":"KVキャッシュオフロード統合ケース","description":"vLLMとMooncakeを統合したケースでは、prefill workerが生成したKVをdecode workerへGPUDirect RDMAで送りながら、prefix KVをCPUへ退避する。両者が同じGPU側PCIe資源を使うため、GPUWeaverはPD信号で保護窓を開き、latency-criticalなKV転送が不足すると背景offloadへより大きいdelayを入れる。KV転送が健全ならoffloadへ帯域を返す。実トレース由来のrequest shapeと1.2〜9.4GBのKV量を使い、自然重畳する既定方策と比較することで、オフロードを少し遅らせる方が全体TTFTを改善できることを示す。"}],"system_design":"設計全体は、アプリケーション意図の登録、ファブリックと進捗の観測、競合根因の判定、フロー別通信注入制御という循環で構成される。重要なのはPCIeやNVLinkのハードウェア仲裁そのものを書き換えるのではなく、既存通信ライブラリの上で投入タイミングと帯域を調整し、階層メモリの背景データ移動と分離推論のcritical pathを協調させる点である。"},"reservation":{"claim_id":"claim-032318afa278e3cdd42d8d99","worker_id":"scheduled-chat-hourly30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-6abe896ce85b87802523af29",
+  "job_id": "job-research-5c8ae1bd28277ef1",
+  "data": {
+    "problem": "大規模言語モデル推論では、KVキャッシュのCPU退避、prefillとdecodeの分離、GPU間並列化、計算と通信の重畳によって、PCIe、NVLink、RDMAを同時に利用する場面が増えている。しかし既存のランタイムはGPUファブリックをbest-effortな黒箱として扱い、通信を重ねれば隠蔽できるという前提を置きやすい。実際にはNVLink用DMAとSMのHBMアクセスがL2やメモリ制御器を共有し、GPUDirect RDMAとCPU-GPU転送も同じPCIe区間を通る。しかも仲裁は方向と通信種別によって非対称で、重要なKV転送より背景オフロードが資源を奪う場合がある。従来のジョブ内部スケジューリングや粗い通信停止だけでは、複数LLMタスクのSLOと共有ファブリックの状態を対応付けて制御できない。",
+    "novelty": "GPUWeaverの新規性は、GPUファブリック利用をアプリケーションから独立した副作用ではなく明示的なスケジューリング問題として定式化し、通信フローごとの性能目標とハードウェア観測値を閉ループで結ぶ点にある。論文はまずHBMアクセス対NVLink、GPUDirect RDMA対host-device転送の競合を制御実験で分解し、暗黙の優先度を定量化する。その上で、RDMAのQoSやrate limit、CUDA転送のstream priority、chunking、launch gating、yieldなど既存ソフトウェアから操作可能なノブを統一制御面に載せ、重要フローが目標を外したときだけ背景通信を抑える。",
+    "method_overview": "GPUWeaverは大規模言語モデルアプリケーションと通信ライブラリの間に位置する軽量ランタイムである。アプリケーションはRDMA転送、collective、host-device copyなどをフローとして登録し、優先度や遅延・帯域目標を付与する。ランタイムはNVML/DCGMのPCIe・NVLinkカウンタ、NICスループット、キュー深さ、GPUメモリ帯域などの基盤信号と、要求遅延、段階遅延、転送遅延、フローbacklogなどのアプリ信号を監視する。共有ファブリックが飽和し、高優先フローが目標を満たさない場合は次の制御窓でそのフローの帯域予算を増やし、背景フローの注入をpacingする。逆に高優先フローが健全なら背景側へ帯域を戻す。RDMAではservice level、NIC QoS、rate limitingを使い、CUDAが直接帯域制御を提供しないhost-device転送ではstream priority、launch gating、chunked copy、cooperative yieldを組み合わせる。vLLM+Mooncakeケースではprefill-decode間のGPUDirect RDMA KV転送を高優先、GPUからCPUへのprefix KV offloadを背景フローとし、PD handoff窓の間だけoffload delayを調整する。前ラウンドのPCIe帯域、RDMA帯域、初回トークン待ち時間、offload backlogから次ラウンドの遅延または帯域分割を選び、重要通信の完了を早める。",
+    "components": [
+      {
+        "name": "競合診断と根因分解",
+        "description": "著者らは単なるend-to-end低下だけを見るのではなく、HBMアクセスとNVLink転送、GPUDirect RDMAとhost-device copyをそれぞれisolated実行とconcurrent実行で比較する。HBM/NVLinkでは128MBから4GBまで両方のサイズを独立に掃引し、どちらの処理時間が長いかで重畳時間と帯域低下がどう変わるかを測る。PCIeではGDR writeとH2D、GDR readとD2Hを方向別に分離し、共有GPU側PCIe区間でどちらが優先されるかを確認する。これにより、総帯域不足ではなくL2、メモリ制御器、PCIe仲裁領域に起因する暗黙優先度を制御対象として抽出する。"
+      },
+      {
+        "name": "閉ループ通信スケジューラ",
+        "description": "ランタイムはファブリック混雑を示す基盤信号と、どのアプリケーションフローが実際に遅れているかを示す進捗信号を同時に監視する。高優先フローが遅延または帯域目標を外し、かつ共有資源が飽和している場合だけ次の制御窓で帯域予算を高優先側へ寄せる。高優先フローが健全になれば背景backlogを消化するため帯域を戻す。方策自体は固定分割、閾値規則、学習制御器のいずれでもよく、GPUWeaverはフローごとの帯域予算またはpacing決定を受け取れる共通制御層として設計される。"
+      },
+      {
+        "name": "ソフトウェア可視制御ノブ",
+        "description": "ハードウェアの仲裁規則を変更できないため、GPUWeaverは共有ファブリックへ要求を投入する手前で注入率を制御する。RDMAではservice level、NIC QoS、rate limitingを使い、host-device転送ではCUDA stream priority、launch gating、転送の小分割、協調的yieldを組み合わせる。バックエンドごとに具体機構は異なるが、すべてのノブを『各フローが共有PCIe/NVLinkへどれだけ積極的に要求を入れるか』という共通量へ写像することで、アプリケーション目標に沿った優先制御を可能にする。"
+      },
+      {
+        "name": "KVキャッシュオフロード統合ケース",
+        "description": "vLLMとMooncakeを統合したケースでは、prefill workerが生成したKVをdecode workerへGPUDirect RDMAで送りながら、prefix KVをCPUへ退避する。両者が同じGPU側PCIe資源を使うため、GPUWeaverはPD信号で保護窓を開き、latency-criticalなKV転送が不足すると背景offloadへより大きいdelayを入れる。KV転送が健全ならoffloadへ帯域を返す。実トレース由来のrequest shapeと1.2〜9.4GBのKV量を使い、自然重畳する既定方策と比較することで、オフロードを少し遅らせる方が全体TTFTを改善できることを示す。"
+      }
+    ],
+    "system_design": "設計全体は、アプリケーション意図の登録、ファブリックと進捗の観測、競合根因の判定、フロー別通信注入制御という循環で構成される。重要なのはPCIeやNVLinkのハードウェア仲裁そのものを書き換えるのではなく、既存通信ライブラリの上で投入タイミングと帯域を調整し、階層メモリの背景データ移動と分離推論のcritical pathを協調させる点である。"
+  },
+  "reservation": {
+    "claim_id": "claim-6abe896ce85b87802523af29",
+    "worker_id": "scheduled-chat-hourly30",
+    "worker_kind": "scheduled_chat"
+  }
+}

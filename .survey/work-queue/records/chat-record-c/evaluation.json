@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-032318afa278e3cdd42d8d99","job_id":"job-research-5c8ae1bd28277ef1","data":{"hardware":"HBM/NVLink競合はDGX-H100上の2 GPUで評価。PCIe競合は2サーバ構成で、Server AのGPUとRNIC、Server BからのGDR read/writeを用いる。統合ケースはprefill/decodeを論理2サーバ・各1 GPUとして評価する。","software":"CUDAのcudaMemcpyPeerAsync、cudaMemcpyAsync、GPUDirect RDMA、NVML/DCGM監視を利用。統合ケースはvLLM + Mooncake、Qwen3-8B、Codex/SWE-bench Proの実トレース由来request shape。","methodology":"HBM/NVLinkは128MB〜4GBの6×6サイズ格子でisolated HBM、isolated NVLink、concurrentを比較し帯域低下率を測る。PCIeはGDR write+H2D、GDR read+D2Hの方向別競合を測定。統合ケースではKV総量1.2〜9.4GBの複数request shapeでdefault overlapとGPUWeaverを比較し、前ラウンドのRDMA帯域とTTFTを用いて候補PCIe配分を選ぶ。","scope":"短い8ページのAPSys論文で、GPUWeaverは予備プロトタイプ。統合評価はQwen3-8B、vLLM+Mooncake、限定された2サーバ相当構成とCodex由来shapeが中心で、NVLink/HBM側へのend-to-end制御適用は将来課題。"},"reservation":{"claim_id":"claim-032318afa278e3cdd42d8d99","worker_id":"scheduled-chat-hourly30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6abe896ce85b87802523af29",
+  "job_id": "job-research-5c8ae1bd28277ef1",
+  "data": {
+    "hardware": "HBM/NVLink競合はDGX-H100上の2 GPUで評価。PCIe競合は2サーバ構成で、Server AのGPUとRNIC、Server BからのGDR read/writeを用いる。統合ケースはprefill/decodeを論理2サーバ・各1 GPUとして評価する。",
+    "software": "CUDAのcudaMemcpyPeerAsync、cudaMemcpyAsync、GPUDirect RDMA、NVML/DCGM監視を利用。統合ケースはvLLM + Mooncake、Qwen3-8B、Codex/SWE-bench Proの実トレース由来request shape。",
+    "methodology": "HBM/NVLinkは128MB〜4GBの6×6サイズ格子でisolated HBM、isolated NVLink、concurrentを比較し帯域低下率を測る。PCIeはGDR write+H2D、GDR read+D2Hの方向別競合を測定。統合ケースではKV総量1.2〜9.4GBの複数request shapeでdefault overlapとGPUWeaverを比較し、前ラウンドのRDMA帯域とTTFTを用いて候補PCIe配分を選ぶ。",
+    "scope": "短い8ページのAPSys論文で、GPUWeaverは予備プロトタイプ。統合評価はQwen3-8B、vLLM+Mooncake、限定された2サーバ相当構成とCodex由来shapeが中心で、NVLink/HBM側へのend-to-end制御適用は将来課題。"
+  },
+  "reservation": {
+    "claim_id": "claim-6abe896ce85b87802523af29",
+    "worker_id": "scheduled-chat-hourly30",
+    "worker_kind": "scheduled_chat"
+  }
+}
