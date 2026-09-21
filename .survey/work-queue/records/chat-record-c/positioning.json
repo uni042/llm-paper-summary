@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-032318afa278e3cdd42d8d99",
-  "job_id": "job-research-5c8ae1bd28277ef1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-032318afa278e3cdd42d8d99",
-    "worker_id": "scheduled-chat-hourly30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-032318afa278e3cdd42d8d99","job_id":"job-research-5c8ae1bd28277ef1","data":{"limitations":"GPUWeaverは予備的なruntimeで、現行policyは前ラウンド信号に基づく単純な帯域配分・offload delay制御である。end-to-end評価はvLLM+Mooncake、Qwen3-8B、限定されたrequest shapeと2サーバ相当構成に集中し、大規模クラスタ、多数フロー、異なるGPU世代での一般性は未確認。NVLink/HBM競合は詳細にcharacterizeするが、その経路への統合GPUWeaver制御は将来課題。","differences":"CruxやCentauri等が主に訓練・ジョブ内部の計算通信重畳をスケジュールするのに対し、GPUWeaverは複数LLMタスクが共有するPCIe/NVLink/RDMAの注入自体をアプリSLOと結び付ける。既存KVオフロードやPD分離は通信を重畳できることを前提にしがちだが、本研究はその重畳が共有ファブリック上で逆効果になり得ることを実測し、背景offloadを意図的に遅らせてcritical KV transferを保護する。","implementation_status":"APSys 2026の8ページ論文。vLLM+Mooncakeへ統合した予備プロトタイプを実機評価しているが、論文中に独立した公開コードURLは示されていない。著者公開PDFは利用可能。","research_positioning":"LLM階層メモリ研究に対して、CPU/SSDへ状態を移す『配置』だけでなく、その移動がPD転送やGPU間通信と共有するファブリックの仲裁を管理対象にする点が重要。オフロード量を増やすほどPCIe競合が顕在化するため、階層メモリ容量最適化と通信QoSを共同設計する系統へ接続する。"},"reservation":{"claim_id":"claim-032318afa278e3cdd42d8d99","worker_id":"scheduled-chat-hourly30","worker_kind":"scheduled_chat"}}
