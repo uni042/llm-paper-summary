@@ -66,14 +66,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-be16d214d5c628cd",
+      "job_id": "job-research-f2c000a0ecb53008",
       "type": "research",
       "lane": null,
       "priority": 99,
-      "canonical_id": "arXiv:2608.04502",
-      "title": "AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation",
-      "source_url": "https://www.semanticscholar.org/paper/7abcf6581731dc0e18b15305095ec0619756835d",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.04502-afd-ledger-deployment-provisioning-for-attention-ffn-disaggregation.md",
+      "canonical_id": "DOI:10.1145/3832810.3832922",
+      "title": "Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/2ecd49d0fb5c5d53451ca6a9efde7b14fa32c650",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-1e6e38eccec7-heterogeneous-slo-guaranteed-multi-resource-aware-batching-in-llm-serving.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T15:53:46+00:00"
+  "generated_at": "2026-09-21T16:02:31+00:00"
 }
