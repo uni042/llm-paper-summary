@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 04:32:25 JST**
+> 自動生成: **2026-09-22 05:28:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **324** |
 | 未claim Research job | **324** |
 | 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-22 02:40:41 JST（1時間51分前）** |
+| 最終検証済みResearch収録 | **09-22 02:40:41 JST（2時間47分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **5** | **4** | **0** | **0** | **0** | — |
+| Research | **3** | **5** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **4** | **6** | **5** | **0** | **0** | **0** | **3** |
+| 合計 | **3** | **6** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -78,11 +78,6 @@
   - result: `.survey/work-queue/results/research/attempt-8ae3e1332a9a3a51a3a2df3a.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8ae3e1332a9a3a51a3a2df3a.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.16215-where-should-the-kv-cache-live-placement-policies-across-gpu-cpu-and-ssd-for-long-lived-sessions.md`
-- **09-21 22:42:38 JST** [research] `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models
-  - job: `.survey/work-queue/jobs/job-research-c27f3a6ec993f9ab.json`
-  - result: `.survey/work-queue/results/research/attempt-ebcba74d995fdc58a48bf0a6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ebcba74d995fdc58a48bf0a6.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.01651-bole-efficient-tree-speculation-for-hybrid-attention-language-models.md`
 
 ### Audit
 
