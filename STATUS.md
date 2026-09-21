@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 13:36:16 JST**
+> 自動生成: **2026-09-21 13:36:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **330** |
+| 収録候補論文 | **329** |
 | 未claim Research job | **329** |
-| 直近24hの検証済みResearch収録 | **65** |
-| 最終検証済みResearch収録 | **09-21 12:44:25 JST（51分前）** |
+| 直近24hの検証済みResearch収録 | **66** |
+| 最終検証済みResearch収録 | **09-21 13:36:27 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **330** |
+| canonical_id確認済みの一意な候補論文 | **329** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **330** |
+| 非終端Research job合計 | **329** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **6** | **4** | **0** | **1** | **0** | — |
+| Research | **12** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **11** | **7** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **12** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-21 13:36:27 JST** [research] `arXiv:2608.04974` — AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks
+  - job: `.survey/work-queue/jobs/job-research-68365ee603a68033.json`
+  - result: `.survey/work-queue/results/research/attempt-882a986d727aae3614a5b429.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-882a986d727aae3614a5b429.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2608.04974-asymspec-efficient-cloud-edge-speculative-decoding-over-asymmetric-networks.md`
 - **09-21 12:44:25 JST** [research] `DOI:10.1145/3838177.3841731` — Unlocking Software-defined GPU Fabric Scheduling in the LLM Era
   - job: `.survey/work-queue/jobs/job-research-5c8ae1bd28277ef1.json`
   - result: `.survey/work-queue/results/research/attempt-6abe896ce85b87802523af29.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-5c2c382bbce50b33c11d2e0b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5c2c382bbce50b33c11d2e0b.json`
   - paper: `papers/inference/99-other-inference-systems/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md`
-- **09-21 09:41:44 JST** [research] `arXiv:2608.17826` — Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State
-  - job: `.survey/work-queue/jobs/job-research-97a84b19cac36f28.json`
-  - result: `.survey/work-queue/results/research/attempt-c42378bb84cf93cfa6eb6efb.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c42378bb84cf93cfa6eb6efb.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md`
 
 ### Audit
 
@@ -173,10 +173,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.04974` — AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks / worker `scheduled-chat-llm-30`
-  - claim: **09-21 13:35:28 JST** / heartbeat: **—** / lease expiry: **09-21 15:05:28 JST**
-  - evidence: `.survey/work-queue/claims/job-research-68365ee603a68033.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -196,7 +194,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **330** |
+| ready | **329** |
 
 ### 候補の重複・識別情報欠損
 
@@ -216,7 +214,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **874** |
+| inference/training/survey配下の論文Markdown実体 | **875** |
 
 ### immutable submissionの未照合
 
@@ -224,8 +222,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **342** |
-| └ Research | **156** |
+| 成功result未照合のimmutable submission | **341** |
+| └ Research | **155** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
