@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 06:32:06 JST**
+> 自動生成: **2026-09-22 07:23:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **324** |
-| 未claim Research job | **323** |
+| 未claim Research job | **324** |
 | 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-22 02:40:41 JST（3時間51分前）** |
+| 最終検証済みResearch収録 | **09-22 02:40:41 JST（4時間43分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **5** | **4** | **0** | **1** | **0** | — |
+| Research | **1** | **5** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **3** | **6** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **1** | **6** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -68,16 +68,6 @@
   - result: `.survey/work-queue/results/research/attempt-72aa5e973198ffd9d1b794da.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-72aa5e973198ffd9d1b794da.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md`
-- **09-22 00:48:18 JST** [research] `DOI:10.1109/IPDPS65963.2026.00101` — Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching
-  - job: `.survey/work-queue/jobs/job-research-9119a9e35c42f3f7.json`
-  - result: `.survey/work-queue/results/research/attempt-08537f65a567d792ab20135d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-08537f65a567d792ab20135d.json`
-  - paper: `papers/inference/99-other-inference-systems/2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md`
-- **09-22 00:39:39 JST** [research] `arXiv:2609.16215` — Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions
-  - job: `.survey/work-queue/jobs/job-research-3eb9c6f535e789d0.json`
-  - result: `.survey/work-queue/results/research/attempt-8ae3e1332a9a3a51a3a2df3a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-8ae3e1332a9a3a51a3a2df3a.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.16215-where-should-the-kv-cache-live-placement-policies-across-gpu-cpu-and-ssd-for-long-lived-sessions.md`
 
 ### Audit
 
@@ -136,10 +126,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.21836` — LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization / worker `scheduled-chat-30`
-  - claim: **09-22 05:28:40 JST** / heartbeat: **—** / lease expiry: **09-22 06:58:40 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f0b1ffeacc3b0ccd.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
