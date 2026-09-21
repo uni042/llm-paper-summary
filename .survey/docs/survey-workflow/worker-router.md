@@ -49,6 +49,8 @@ Research / Auditのclaimは次の順で行う。
 4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を所定間隔で再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`next_action` / `instructions` を正本として以後の処理を行う。
 5. claim result待ちのためだけに別requestを発行しない。
 
+**並列workerの扱い:** `max_jobs=1` と未完了claimの直列制約は**同一worker / 同一論理worker lineage内だけ**に適用する。`:00` worker、`:30` worker、その他の独立workerは、別 `worker_id` と別record bankで同時にResearch / Auditを進めてよい。他workerのactive claim、他workerのclaim request、またはclaim fast lane上で先行requestが処理中であることを理由に、このworkerのrunを停止・終了・handoffしてはならない。`.github/workflows/survey-claim-fast.yml` の `concurrency: survey-claim-main` は**claim割当commitの競合回避だけを直列化するもの**であり、論文精読そのものを全worker間で直列化するものではない。自分のrequestがfast lane待ちなら同じ `request_id` のresultを所定間隔で再確認し、割当後は返された別job / record bankで処理を続ける。他workerのclaimを自分の未完了claimとして扱わない。
+
 Research / Auditの不変submissionも同様にfast laneを使える。
 
 1. 5スロットをclaim result指定のrecord bankまたは現行fallbackへ完全保存し、必要な実blob SHAを確定する。
