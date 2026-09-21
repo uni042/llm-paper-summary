@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-a412546d473a63a041f2ba8d",
-  "job_id": "job-research-b47f649340a3fc18",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a412546d473a63a041f2ba8d",
-    "worker_id": "scheduled-chat-llm-paper-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a412546d473a63a041f2ba8d","job_id":"job-research-b47f649340a3fc18","data":{"limitations":"評価はQwen3-NextのGDNとKimi-LinearのKDAというhybrid architectureに限定され、pure linear-attention/SSMへの転移は未確認。全serving experimentがTP8で、より大きいTP degreeの負荷均衡・all-to-all costは未検証。GDNはdecayがhead粒度のためKDAより容量gainが小さく、architecture依存性が強い。DASC-WRはreplay window以前のlocal-state historyを復元しない近似であり、aggressive compressionでは追加compute/communicationが利得を相殺し得る。","differences":"PagedAttention/RadixAttentionはtoken-indexed KVのallocation/reuseを管理するが、DASCはfull-attention KVを変更せずhybrid layerのpersistent recurrent boundary state内部を圧縮する。Marconiはhybrid prefix entryのadmission/evictionをcompute-memory utilityで改善するのに対し、DASCは各entryのstate bytesを削減するため補完関係にある。ReplaySSMは最近のSSM inputを保持してstateをon-demand再構成するが、DASCは長寿命unitを直接checkpointし短寿命unitだけ省略する。KVQuant/KIVI等の量子化はvalueあたりbitsを減らす一方、DASCは保持unit数を減らし、実際にINT8と合成して8.11× capacityを示す。","implementation_status":"著者らはSGLangへDASCを実装し、ragged state pool、TP-balanced STORE/LOAD、DASC-NR/WRをHopper TP8で評価している。arXiv v1は2026-08-31提出。本文中に独立した公開実装repository URLは記載されていないため、公開コードの存在は確認済みとは扱わない。","research_positioning":"Hybrid linear-attention servingでrecurrent state checkpointをKV cacheの付属物ではなく独立した階層メモリ資源として扱う研究。特にweight-onlyの静的寿命推定をcache representationへ接続し、logical selectionだけでなくragged physical layoutとTP rank bottleneckまで最適化した点がシステム研究として重要である。entry-level caching policy、state quantization、hierarchical KV cacheと直交して組み合わせられる。"},"reservation":{"claim_id":"claim-a412546d473a63a041f2ba8d","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
