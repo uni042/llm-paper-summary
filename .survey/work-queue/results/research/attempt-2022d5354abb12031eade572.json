@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-2022d5354abb12031eade572",
+  "job_id": "job-research-3eb9c6f535e789d0",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-2022d5354abb12031eade572.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references_checked_at is required | results.key_results[0] missing: metric, baseline, condition, interpretation | results.key_results[1] missing: metric, baseline, condition, interpretation | results.key_results[2] missing: metric, baseline, condition, interpretation | results.key_results[3] missing: metric, baseline, condition, interpretation | results.key_results[4] missing: metric, baseline, condition, interpretation | results.key_results[5] missing: metric, baseline, condition, interpretation",
+  "processed_at": "2026-09-21T14:50:40+00:00",
+  "validation_errors": [
+    "metadata.references_checked_at is required",
+    "results.key_results[0] missing: metric, baseline, condition, interpretation",
+    "results.key_results[1] missing: metric, baseline, condition, interpretation",
+    "results.key_results[2] missing: metric, baseline, condition, interpretation",
+    "results.key_results[3] missing: metric, baseline, condition, interpretation",
+    "results.key_results[4] missing: metric, baseline, condition, interpretation",
+    "results.key_results[5] missing: metric, baseline, condition, interpretation"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
