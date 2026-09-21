@@ -43,7 +43,7 @@ Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自
 
 Research / Auditのclaimは次の順で行う。
 
-1. 最新main HEADとclaim stateを再取得し、同一workerの未完了claimがないことを確認する。
+1. 最新main HEADとclaim stateを再取得する。**同一workerにactiveな未提出claimがある場合は新requestを出さない。直前claimのexact attemptに対する不変descriptorがmainへ耐久保存済みなら、そのclaimがまだactive表示でも次requestを出してよい。claim fast laneは新request処理の冒頭でdescriptor-backed claimを正規解放してから新jobを割り当てる。**
 2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatの最小requestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` を持つ。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。
 3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で `claim_worker_with_banks.py` を実行する。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
 4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を所定間隔で再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`next_action` / `instructions` を正本として以後の処理を行う。
@@ -68,7 +68,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 ## 3. 読解（Research / Audit）の共通処理ループ
 
 1. 最新queueと現在の担当確保状態（claim state）を取得する。
-2. priority最上位の実行可能jobを**1件だけ**担当確保する。`max_jobs=1`。同一ワーカーが未完了claimを複数保持しない。ただし**Audit starvation防止をpriorityより優先する**。今回runの成功完了を3件ずつのブロックとして数え、ready Auditが存在するブロックでは少なくとも1件Auditを処理する。ブロック内で先に2件ともResearchを完了し、まだAuditを完了していない場合、3件目のclaim requestは `job_types: ["audit"]` に限定する。それ以外は `job_types: ["research", "audit"]` で通常priority順に選ぶ。
+2. priority最上位の実行可能jobを**1件だけ**担当確保する。`max_jobs=1`。同一ワーカーが**未提出のactive claimを複数保持しない**。提出済みdescriptorに対応する旧claimがclaim state上で一時的にactiveでも、次requestの正規処理で旧claimを解放してから新claimを作るため、これは複数論文の同時処理とは扱わない。ただし**Audit starvation防止をpriorityより優先する**。今回runの成功完了を3件ずつのブロックとして数え、ready Auditが存在するブロックでは少なくとも1件Auditを処理する。ブロック内で先に2件ともResearchを完了し、まだAuditを完了していない場合、3件目のclaim requestは `job_types: ["audit"]` に限定する。それ以外は `job_types: ["research", "audit"]` で通常priority順に選ぶ。
 3. claim result待ちなら同じ `request_id` を保持する。別requestを発行して回避しない。次の安全な判断に結果が必要な場合だけ10秒の実時間間隔で同じ対象を再確認する。
 4. claim resultの `record_bank` / `record_bank_fallback` をそのまま使う。ワーカーが別bankを選び直さない。
 5. 一次資料本文を最後まで読み、抄録や検索断片から欠落情報を推測しない。
@@ -97,7 +97,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 3. **一次資料は取得できた時に一度で必要範囲を読む。** 完全なarXiv HTMLが使えるなら優先し、必要ならPDF、OpenReview/会議公式、著者・プロジェクト公式コピーへ進む。同一資料を小分けに再取得せず、手法・評価・結果・ablation・限界・関連研究までまとめて確認する。
 4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を不変submissionとして耐久保存する。**status-onlyでもcompleted submissionと同じ1本遅延規則を使い、descriptor耐久保存後は直後の次論文を1件だけclaimしてよい。** その次へ進む前に1本前のstatus-only resultが `ok=true` の終端状態になって最新mainへ反映されたことを確認する。status-only `blocked` / `deferred` / `rejected` は、Scheduled Chatが最小の不変JSON descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ直接保存し、既存のsubmission laneに処理させる。ローカルPythonや保存前canonicalizerの実行を前提にしない。descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` を基本とし、取得済みなら `retrieval_evidence` / `blocked_at` を加えてよい。`record_bank` / `paper_path` / `record_slots` / `expected_blob_sha` その他のrecord transport fieldはstatus-only descriptorへ混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
 5. **submission待ちは1本遅延パイプラインで隠す。** 論文Nを提出した直後はN+1を1件だけclaimして全文処理・提出してよい。N+1提出後はNのresultを確認し、終端反映済みならN+2へ進む。Nがpendingなら10秒間隔で同一resultを再確認し、failureなら正規repairを優先する。未完了claimを複数保持したり、N+2まで先取りしたり、同一requestを重複発行しない。
-6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research / Auditのactive claimは常に1件だけ保持する。次claimは直前論文のdescriptor耐久保存後に限り許可し、さらにその次claimは1本前のsubmission resultと最新main反映を確認した後に限る。
+6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research / Auditの**未提出active claim**は常に1件だけとする。次claimは直前論文のdescriptor耐久保存後に限り許可し、descriptor-backed旧claimがまだactive表示ならclaim fast laneの正規解放に任せる。さらにその次claimは1本前のsubmission resultと最新main反映を確認した後に限る。
 7. **Research / Audit 合計3件ノルマは維持する。** `research_audit_completed_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。成功resultと最新main反映を確認したResearchまたはAuditだけを1件として数え、同一論文のResearchとAuditも別jobとしてそれぞれ1件に数える。ready Auditが存在するなら3件ブロックごとに最低1件Auditを含める。3件到達は停止上限ではなく、600秒handoff guardに入るまで、または安全に実行可能な作業が尽きるまで同じモードで継続する。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
 
 ## 4. 探索（Discovery）の共通入口
