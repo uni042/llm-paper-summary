@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-e9e967f6def10b1e2bab70a7",
+  "attempt_id": "attempt-ad0296845850caa3f1522ac0",
   "job_id": "job-research-a5d6d7156c3ffec6",
   "data": {
     "problem": "エージェント型LLMは数十〜数百ターンにわたり短い追加入力を長い履歴へ積み重ねるため、既計算トークンのKVキャッシュ命中率が極端に高い。論文の64K軌跡では平均157ターン、平均文脈32.7Kトークン、平均追加入力429トークンで命中率98.7%となる。プリフィル・デコード分離では命中KVを外部ストレージから読む役割がプリフィル側へ集中し、プリフィルノードのストレージNICが飽和する一方、デコード側のストレージNICは遊休する。GPU計算を増やしてもこの偏りは解けず、長文脈・短追加入力ほどGPUがKV到着待ちになる。",
@@ -33,7 +33,7 @@
     "system_design": "各GPUをプリフィル引擎またはデコード引擎に分け、各引擎に転送管理器を置く。中央スケジューラは代表引擎とのみ通信する。外部ストレージは3FS、GPU間・GPU入出力はInfiniBand RDMA、モデル実行はFlashMLA・DeepGEMM・DeepEPを組み合わせた社内推論基盤を用いる。デコード側DRAMバッファはTTFT短縮とHBM節約に寄与する一方、DRAM/CNIC帯域を追加消費する。"
   },
   "reservation": {
-    "claim_id": "claim-e9e967f6def10b1e2bab70a7",
+    "claim_id": "claim-ad0296845850caa3f1522ac0",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

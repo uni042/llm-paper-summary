@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-e9e967f6def10b1e2bab70a7",
+  "attempt_id": "attempt-ad0296845850caa3f1522ac0",
   "job_id": "job-research-a5d6d7156c3ffec6",
   "data": {
     "relation_to_repository": "KVキャッシュ階層化・プリフィル/デコード分離・ストレージ活用の交点に位置する。StrataやKVPR/TailorKVが単一経路内でデータ量や再計算を最適化し、MooncakeがDRAM中間層の命中率を高めるのに対し、DualPathは『どの引擎のストレージNICから読むか』という経路拓撲そのものを変更する。SSD/3FS等の大容量層を主に使うエージェント推論やRLロールアウトで特に重要で、既存の圧縮・再計算・DRAMキャッシュとは補完関係にある。",
@@ -50,7 +50,7 @@
     "takeaway": "DualPathの本質は、KVキャッシュを『プリフィルがストレージから読むデータ』ではなく『集群内のどのストレージNICでも読み、空いている計算網で必要GPUへ運べるデータ』として扱い直した点にある。SSD/NVMe/分散ファイルシステムをLLM推論へ使う際、容量階層だけでなくNIC配置と転送優先度まで含めて資源プール化する設計を示している。"
   },
   "reservation": {
-    "claim_id": "claim-e9e967f6def10b1e2bab70a7",
+    "claim_id": "claim-ad0296845850caa3f1522ac0",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
