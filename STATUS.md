@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 20:08:53 JST**
+> 自動生成: **2026-09-21 20:09:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **326** |
 | 未claim Research job | **324** |
 | 直近24hの検証済みResearch収録 | **33** |
-| 最終検証済みResearch収録 | **09-21 17:27:05 JST（2時間41分前）** |
+| 最終検証済みResearch収録 | **09-21 17:27:05 JST（2時間42分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -145,7 +145,7 @@
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `DOI:10.1145/3789240.3829159` — DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O / worker `scheduled-chat-00`
-  - claim: **09-21 20:05:59 JST** / heartbeat: **—** / lease expiry: **09-21 21:35:59 JST**
+  - claim: **09-21 20:09:26 JST** / heartbeat: **—** / lease expiry: **09-21 21:39:26 JST**
   - evidence: `.survey/work-queue/claims/job-research-a5d6d7156c3ffec6.json`
 - `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-llm-paper-worker-30`
   - claim: **09-21 19:31:03 JST** / heartbeat: **—** / lease expiry: **09-21 21:01:03 JST**
