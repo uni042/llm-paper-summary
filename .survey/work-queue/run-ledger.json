@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T14:43:40.405346+00:00",
+  "updated_at": "2026-09-21T15:39:44.619455+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -33646,6 +33646,56 @@
       "paper_active_count_before": 882,
       "paper_active_count_after": 882,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35620415385",
+      "first_recorded_at": "2026-09-21T15:39:44.619455+00:00",
+      "last_recorded_at": "2026-09-21T15:39:44.619455+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35620415385:1",
+          "recorded_at": "2026-09-21T15:39:44.619455+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35620415385",
+            "run_attempt": "1",
+            "source_sha": "8549876fcd56df578e9a2c605c396f8988207bf4"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-3eb9c6f535e789d0",
+          "type": "research",
+          "canonical_id": "arXiv:2609.16215",
+          "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 882,
+      "paper_active_count_after": 882,
+      "last_successful_action": "research_completed"
     }
   ]
 }
