@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-ba61af5534527f7a45c739e4",
-  "job_id": "job-research-bb3c83e7ecc75edd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ba61af5534527f7a45c739e4",
-    "worker_id": "scheduled-chat-llm-paper-worker-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ba61af5534527f7a45c739e4","job_id":"job-research-bb3c83e7ecc75edd","data":{"canonical_id":"arXiv:2607.18081","arxiv_id":"2607.18081","doi":"10.48550/arXiv.2607.18081","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs","summary":"SelectInferは、端末上のLLMで全FFN重みを常駐させるとメモリが不足し、単純な量子化や枝刈りでは精度・再学習・低精度カーネル対応の制約が生じる問題に対し、ニューロン単位でロード量と計算量を別々に制御する。オフライン解析でタスク固有ニューロンとモデル共通ニューロンを順位付けし、端末では前者を基底集合として常駐、後者を加えてメモリ上限まで選択ロードする。さらにプリフィル時の活性から入力ごとの動的ニューロンを選び、デコードではロード済み集合の一部だけを計算する。Jetson Orin Nano上でLlama3.2-1B/3BとQwen2.5-3Bを評価し、3Bモデルを実行可能なメモリへ収めつつ、4-bit量子化より高いデコード速度を示した。","list_summary":"オフラインで重要FFNニューロンを選別して必要分だけロードし、入力ごとの活性で計算対象も絞ることで、端末LLMのメモリ量と計算量を独立に調整する方式。","authors":["Huzaifa Shaaban Kabakibo","Eric Schniedermeyer","Artem Burchanow","Lin Wang"],"authors_affiliations":"Paderborn University","published":"2026-07-20","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"端末LLM・ニューロン疎性・階層メモリ推論","topics":["on-device LLM inference","selective neuron loading","activation sparsity","edge inference"],"importance":"FFNニューロンの常駐量と実行量を別の割合で制御し、再学習なしに端末メモリ・速度・精度の三者を連続的に調整できる点が重要。","hardware_evaluation":"NVIDIA Jetson Orin Nano Developer Kit（6-core Arm Cortex-A78AE、Ampere GPU 1024 CUDA cores/32 Tensor Cores、8 GB LPDDR5共有メモリ）で端末推論を測定。オフライン解析はNVIDIA L40Sで実施。","hardware_details":"Jetson Orin NanoではOS等を除く利用可能メモリが約6.5 GBで、3Bモデルの通常ロードが困難な条件を評価。","quality_effect":"70%ロード・40%計算を中心に、複数QA・翻訳・要約でCoreInfer系より高いまたは競争力のある精度を示す一方、Qwen2.5-3BのSQuADv2ではCoreInferを下回る。","source":"https://arxiv.org/abs/2607.18081","sources":["https://arxiv.org/abs/2607.18081","https://www.researchgate.net/publication/410635535_SelectInfer_Selective_Neuron_Loading_and_Computation_for_On-Device_LLMs"],"code":"","implementation":"FFNの各射影行列から選択ニューロンに対応する重みスライスだけをロードし、静的ニューロンとプリフィルで選ぶ動的ニューロンだけをデコード時に計算する。","last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-ba61af5534527f7a45c739e4","worker_id":"scheduled-chat-llm-paper-worker-30","worker_kind":"scheduled_chat"}}
