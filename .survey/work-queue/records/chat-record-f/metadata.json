@@ -2,62 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-72aa5e973198ffd9d1b794da",
-  "job_id": "job-research-73f2d3c7c23735bb",
-  "data": {
-    "canonical_id": "arXiv:2609.19169",
-    "arxiv_id": "2609.19169",
-    "doi": "10.48550/arXiv.2609.19169",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": [
-        "cs.DC",
-        "eess.SY"
-      ]
-    },
-    "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
-    "summary": "SiliconBenchはApple Silicon上の九種類の大規模言語モデル推論基盤を、速度だけでなく共有メモリの余裕、出力忠実度、モデル対応、複数機拡張まで同一の監査枠組みで比較するベンチマークである。Qwen3-0.6Bを共通基準とし、Qwen3.5-0.8BとGemma-4-E4B-itで新しいモデル構造への対応も確認する。M5 Pro 64GBではvllm-metalが並行度1から16で会話処理3.65倍、エージェント処理2.71倍へ伸び、共有メモリ使用量もほぼ一定だった。一方、明示的なメモリ予算を持つ実装でも物理メモリ容量近くまで膨張する例があり、速度と完了率だけでは運用適性を判断できない。二台のM4 ProではThunderbolt 5の遠隔直接メモリアクセスを使うテンソル並列は逐次生成を約1.28〜1.37倍へ伸ばしたが、TCP上のパイプライン並列は0.80〜0.84倍へ低下した。重要なのは、同じ『連続バッチ処理』『ページ化された鍵値キャッシュ』『メモリ上限』を掲げる基盤でも、入力列の詰め方、事前計算と逐次生成の混在方法、割当領域の保持方針によって実測挙動が大きく変わる点である。したがって本研究は、機能表ではなく実負荷で速度、待ち時間、メモリ余裕、品質を同時に測ることが、ローカル推論基盤の選択に必要だと示している。",
-    "list_summary": "Apple Siliconの九推論基盤を速度・共有メモリ・忠実度・新モデル対応・複数機で横断監査し、vllm-metalの並行処理と遠隔直接メモリアクセスを使うテンソル並列の優位を示す。",
-    "authors": [
-      "Ranran Haoran Zhang",
-      "Aysa Xuemo Fan",
-      "David Munhá Correia",
-      "Alex Cheema",
-      "Rui Zhang"
-    ],
-    "authors_affiliations": "Penn State University; University of Illinois Urbana-Champaign; EXO Labs",
-    "published": "2026-09-12",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint (v1, 2026-09-12)",
-    "lineage": "ローカル大規模言語モデル推論／Apple Silicon／統合メモリ／推論基盤比較／複数機推論",
-    "topics": [
-      "Apple Silicon",
-      "大規模言語モデル推論",
-      "統合メモリ",
-      "並行推論",
-      "複数ノード推論",
-      "ベンチマーク"
-    ],
-    "importance": "ローカル推論で重要な速度、メモリ余裕、出力忠実度を同時に測り、入力列の詰め方、ページ化鍵値キャッシュ、事前計算と逐次生成の混在処理、メモリ方針、遠隔直接メモリアクセス分散方式の実装差を実測結果へ結び付ける。",
-    "implementation": "ベンチマークコード、各実行結果、保守記録を公開している。固定した作業負荷と人間の確認を伴う保守支援エージェントで継続更新する研究実装である。",
-    "hardware_evaluation": "主評価はApple M5 Pro 64GB。補助評価にM1 Pro 32GB、M1 Max 64GB、二台のM4 Pro Mac mini 64GB、CUDA側の参照にDGX Spark GB10 128GB、忠実度参照にNVIDIA A100を使用する。",
-    "quality_effect": "GMRID八クラス分類の重み付きF1をA100上のvLLM参照と比較する。Qwen3-0.6Bでは八実装中六実装が零例示・五例示とも約1.5ポイント以内、新しい二モデルでは評価した五実装すべてが約1.4ポイント以内だった。",
-    "source": "https://arxiv.org/abs/2609.19169",
-    "sources": [
-      "https://arxiv.org/abs/2609.19169",
-      "https://arxiv.org/html/2609.19169v1"
-    ],
-    "code": "https://github.com/WindChimeRan/SiliconBench",
-    "last_checked": "2026-09-22",
-    "references": [],
-    "references_checked_at": "2026-09-22",
-    "references_source": "一次論文本文",
-    "references_total": 38
-  },
+  "attempt_id": "attempt-6569c1c278418b9ab09d495e",
+  "job_id": "job-research-5cd2beb9d9cae3d8",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-72aa5e973198ffd9d1b794da",
+    "claim_id": "claim-6569c1c278418b9ab09d495e",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-72aa5e973198ffd9d1b794da",
-  "job_id": "job-research-73f2d3c7c23735bb",
-  "data": {
-    "overview": "SiliconBenchではQwen3-0.6Bの並行負荷でvllm-metalがApple側で最も一貫してscalingし、chatはconcurrency 1→16で3.65倍、agentは2.71倍、agent c=16のTTFT中央値219msを維持した。memory面ではvllm-metalとllama.cppが負荷増加に対してほぼ平坦だった一方、明示budgetを持つsglang/vllm-mlx/mistral.rsでも物理RAM近くまで増える例があった。忠実度・完了・3モデル対応の全gateを通過したのはllama.cpp、vllm-metal、omlxの3 stackだけだった。複数nodeではRDMA tensor parallelismがdecodeを約28〜37%高速化した一方、llama.cppのTCP pipeline parallelismは16〜20%低下した。",
-    "key_results": [
-      {
-        "metric": "Qwen3-0.6B chat concurrency scaling",
-        "value": "3.65× (c=1→16)",
-        "baseline": "vllm-metal single-stream",
-        "condition": "Apple M5 Pro 64GB, BF16, chat 100 prompts",
-        "interpretation": "packed query・paged KV・mixed prefill/decodeを実装するvllm-metalが高並行度でもthroughputを伸ばす。"
-      },
-      {
-        "metric": "Qwen3-0.6B agent concurrency scaling",
-        "value": "2.71×、TTFT p50 219ms at c=16",
-        "baseline": "vllm-metal c=1",
-        "condition": "Apple M5 Pro 64GB, agent 100 prompts",
-        "interpretation": "長いagent promptでも高並行度と低いfirst-token latencyを両立した唯一のApple stack。"
-      },
-      {
-        "metric": "agent peak system memory",
-        "value": "34.7–34.9GB",
-        "baseline": "vllm-metal across concurrency levels",
-        "condition": "Qwen3-0.6B BF16, M5 Pro 64GB",
-        "interpretation": "throughput増加とほぼ一定のmemory footprintを同時に実現する。"
-      },
-      {
-        "metric": "Qwen3.5-0.8B agent throughput",
-        "value": "297.0 tok/s at c=16",
-        "baseline": "vllm-metal 76.2 tok/s at c=1",
-        "condition": "M5 Pro, 100 prompts per level",
-        "interpretation": "新しいhybrid attentionモデルでも約3.9倍へscalingし、他Apple stackを大きく上回る。"
-      },
-      {
-        "metric": "Gemma-4-E4B-it chat throughput",
-        "value": "151.8 tok/s at c=16",
-        "baseline": "vllm-metal 24.3 tok/s at c=1",
-        "condition": "M5 Pro, 100 prompts per level",
-        "interpretation": "shared-KV系の新モデルでも約6.3倍の並行scalingを示す。"
-      },
-      {
-        "metric": "2-node decode speedup",
-        "value": "mlx_lm 1.28–1.32×、EXO 1.30–1.37×、llama.cpp 0.80–0.84×",
-        "baseline": "各stack single node",
-        "condition": "Qwen3.5-35B-A3B 8-bit, 2×M4 Pro, TB5; TP/RDMA vs PP/TCP",
-        "interpretation": "複数node化ではnode数よりparallelism方式とtransportが支配的で、RDMA TPは伸びるが逐次TCP PPは逆効果。"
-      }
-    ],
-    "negative_results": "mlx_lmはQwen3-0.6B agent c=16で2/100まで崩れ、mistral.rsはc=16でcrash、hf_transformersはagentが1時間capを超えた。sglangとvllm-mlxは全要求を完了してもmemoryが高く、mistral.rsはagent c=8で59.3GBまで達し13/100のみ完了した。ollamaはQwen3-0.6B 5-shot fidelityで参照より約30pp低く、vllm-mlxは0-shotで5.0pp低い。27B/35B追試は量子化形式とbuildが揃わず、各構成1回測定なので厳密なengine間因果分離には使えない。",
-    "interpretation": "同じ『paged KV』『memory cap』『continuous batching』という機能ラベルだけでは性能やheadroomを予測できず、query packing、prefill/decode scheduling、allocator挙動、transportまで含む実装全体を実測する必要がある。特にローカルagentでは長promptの並行prefillをongoing decodeと混在させる能力がTTFTとthroughputを左右する。",
-    "quality_impact": "Qwen3-0.6Bでは8 stack中6 stackがA100 vLLM参照の0-shot/5-shot weighted F1から約1.5pp以内だったが、ollama 5-shotとvllm-mlx 0-shotは外れた。Qwen3.5/Gemma 4で評価した5 stackはすべて約1.4pp以内で、速度だけでなくtask-level fidelityを独立gateとして測る必要性を示した。"
-  },
+  "attempt_id": "attempt-6569c1c278418b9ab09d495e",
+  "job_id": "job-research-5cd2beb9d9cae3d8",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-72aa5e973198ffd9d1b794da",
+    "claim_id": "claim-6569c1c278418b9ab09d495e",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
