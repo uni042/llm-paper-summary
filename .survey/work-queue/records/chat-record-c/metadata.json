@@ -2,22 +2,36 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-b4eaebc08a88f0f9620f6006",
+  "attempt_id": "attempt-91d5c21e800be1607a811b10",
   "job_id": "job-research-3eb9c6f535e789d0",
   "data": {
     "canonical_id": "arXiv:2609.16215",
     "arxiv_id": "2609.16215",
     "doi": null,
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AI", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": []
+    },
     "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
-    "authors": ["Srikanta Datta Tumkur", "Jay Iyer", "Mehar Simhadri", "Sai Pavan Kumar", "Sai Kapil Kumar", "Ramesh Nampelly"],
+    "authors": [
+      "Srikanta Datta Tumkur",
+      "Jay Iyer",
+      "Mehar Simhadri",
+      "Sai Pavan Kumar",
+      "Sai Kapil Kumar",
+      "Ramesh Nampelly"
+    ],
     "published": "2026-09-14",
     "publication": "arXiv preprint",
     "publication_type": "Preprint",
     "publication_status": "arXiv v1",
     "source": "https://arxiv.org/abs/2609.16215",
-    "sources": ["https://arxiv.org/abs/2609.16215", "https://arxiv.org/html/2609.16215", "https://arxiv.org/pdf/2609.16215"],
+    "sources": [
+      "https://arxiv.org/abs/2609.16215",
+      "https://arxiv.org/html/2609.16215",
+      "https://arxiv.org/pdf/2609.16215"
+    ],
     "primary_url": "https://arxiv.org/abs/2609.16215",
     "html_url": "https://arxiv.org/html/2609.16215",
     "pdf_url": "https://arxiv.org/pdf/2609.16215",
@@ -32,10 +46,17 @@
     "references_total": 16,
     "references": [],
     "lineage": "KVキャッシュ階層メモリ / GPU・CPU・SSD配置 / 長寿命セッション",
-    "topics": ["KVキャッシュ", "階層メモリ", "SSDオフロード", "配置ポリシー", "プリフェッチ", "長文脈推論"]
+    "topics": [
+      "KVキャッシュ",
+      "階層メモリ",
+      "SSDオフロード",
+      "配置ポリシー",
+      "プリフェッチ",
+      "長文脈推論"
+    ]
   },
   "reservation": {
-    "claim_id": "claim-b4eaebc08a88f0f9620f6006",
+    "claim_id": "claim-91d5c21e800be1607a811b10",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
