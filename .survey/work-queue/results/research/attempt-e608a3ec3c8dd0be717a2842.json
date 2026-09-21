@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-e608a3ec3c8dd0be717a2842",
+  "job_id": "job-research-a5925137e7067bb8",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-e608a3ec3c8dd0be717a2842.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.novelty must explain the paper-specific idea | problem_method.components[0].description is too short | problem_method.components[1].description is too short",
+  "processed_at": "2026-09-21T03:10:30+00:00",
+  "validation_errors": [
+    "problem_method.novelty must explain the paper-specific idea",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
