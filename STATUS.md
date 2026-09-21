@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 23:52:55 JST**
+> 自動生成: **2026-09-21 23:53:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **6** | **4** | **0** | **1** | **1** | — |
+| Research | **1** | **6** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **1** | **7** | **5** | **0** | **1** | **1** | **3** |
+| 合計 | **1** | **7** | **5** | **0** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -128,9 +128,9 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.16215` — Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions / worker `scheduled-chat-30`
-  - claim: **09-21 23:50:54 JST** / heartbeat: **09-21 23:51:28 JST** / lease expiry: **09-22 01:21:28 JST**
+  - claim: **09-21 23:53:01 JST** / heartbeat: **—** / lease expiry: **09-22 01:23:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-3eb9c6f535e789d0.json`
 
 #### Audit
