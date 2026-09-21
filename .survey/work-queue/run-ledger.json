@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T07:06:22.532558+00:00",
+  "updated_at": "2026-09-21T07:29:49.637945+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -32886,6 +32886,56 @@
       "paper_active_count_before": 867,
       "paper_active_count_after": 880,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "unattributed:35573197945",
+      "first_recorded_at": "2026-09-21T07:29:49.637945+00:00",
+      "last_recorded_at": "2026-09-21T07:29:49.637945+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35573197945:1",
+          "recorded_at": "2026-09-21T07:29:49.637945+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35573197945",
+            "run_attempt": "1",
+            "source_sha": "86faf1a50795be543379219ddeeb3bd405d24e95"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-8f68f6b8d4d62651",
+          "type": "research",
+          "canonical_id": "arXiv:2608.15299",
+          "title": "MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 880,
+      "paper_active_count_after": 880,
+      "last_successful_action": "job_blocked"
     }
   ]
 }
