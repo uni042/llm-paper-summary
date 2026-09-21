@@ -14,7 +14,6 @@ import fallback_transport as ft  # noqa: E402
 import replay_record_fallback as record_replay  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
-LEGACY_CHAT_INBOX = record_replay.CHAT_INBOX
 
 
 def write_json(path: Path, obj: dict) -> None:
@@ -120,14 +119,22 @@ class FallbackImmutableReplayTests(unittest.TestCase):
         self.assertTrue(all(ref.get("blob_sha") for ref in descriptor["record_slots"]))
         return descriptor
 
-    def test_legacy_chat_bundle_is_converted_to_immutable_descriptor(self) -> None:
+    def test_retired_chat_inbox_only_bundle_is_quarantined(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             seed_repo(root)
+            legacy_path = ".survey/work-queue/submissions/chat-inbox.json"
             envelope = root_fields()
-            envelope["writes"] = slot_writes() + [
+            envelope.pop("kind")
+            envelope.pop("job_id")
+            envelope.pop("claim_id")
+            envelope.pop("worker_id")
+            envelope.pop("attempt_id")
+            envelope.pop("depends_on_job_ids")
+            envelope.pop("paper_path")
+            envelope["writes"] = [
                 {
-                    "path": LEGACY_CHAT_INBOX,
+                    "path": legacy_path,
                     "content": json.dumps(
                         {
                             "schema_version": 1,
@@ -139,7 +146,6 @@ class FallbackImmutableReplayTests(unittest.TestCase):
                             "kind": "research",
                             "depends_on_job_ids": ["job-r1"],
                             "paper_path": "papers/inference/test.md",
-                            "record_bank": "a",
                         },
                         ensure_ascii=False,
                     ),
@@ -149,10 +155,13 @@ class FallbackImmutableReplayTests(unittest.TestCase):
 
             result = dispatch_fallback_inbox.dispatch(root)
 
-            self.assertEqual(result["action"], "dispatched")
-            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
-            self.assert_descriptor(root)
-            self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").is_file())
+            self.assertEqual(result["processed_count"], 0)
+            self.assertEqual(result["invalid"], ["env-a.json"])
+            self.assertFalse((root / legacy_path).exists())
+            self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").is_file())
+            self.assertFalse(
+                (root / ".survey/work-queue/submissions/research/attempt-a.json").exists()
+            )
 
     def test_current_bundle_needs_no_chat_inbox_to_replay(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -165,7 +174,6 @@ class FallbackImmutableReplayTests(unittest.TestCase):
             result = dispatch_fallback_inbox.dispatch(root)
 
             self.assertEqual(result["action"], "dispatched")
-            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
             self.assert_descriptor(root)
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").is_file())
 
