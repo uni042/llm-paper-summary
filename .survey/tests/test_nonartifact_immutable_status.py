@@ -51,13 +51,12 @@ def _status_descriptor(*, status="rejected", attempt="attempt-a", job="job-a", r
         "claim_id": "claim-a",
         "worker_id": "worker-a",
         "worker_kind": "scheduled_chat",
-        "paper_path": f"papers/inference/test/{job}.md",
         "reason": reason,
     }
 
 
 class NonArtifactImmutableStatusTests(unittest.TestCase):
-    def test_rejected_blocked_and_deferred_validate_without_record_bank(self):
+    def test_rejected_blocked_and_deferred_validate_without_record_transport(self):
         module = _load(SCRIPTS / "immutable_submission.py", "immutable_nonartifact_validate")
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
@@ -67,10 +66,10 @@ class NonArtifactImmutableStatusTests(unittest.TestCase):
                     validated = module.validate_descriptor(repo, descriptor)
                     self.assertEqual(validated["status"], status)
                     self.assertEqual(validated["reason"], "source was withdrawn")
-                    self.assertNotIn("record_bank", validated)
-                    self.assertNotIn("record_slots", validated)
+                    for field in ("record_bank", "record_slots", "paper_path", "expected_blob_sha"):
+                        self.assertNotIn(field, validated)
 
-    def test_nonartifact_status_requires_reason_and_rejects_partial_record_transport(self):
+    def test_nonartifact_status_requires_reason_and_rejects_record_transport(self):
         module = _load(SCRIPTS / "immutable_submission.py", "immutable_nonartifact_invalid")
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
@@ -78,10 +77,18 @@ class NonArtifactImmutableStatusTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "reason"):
                 module.validate_descriptor(repo, missing_reason)
 
-            partial = _status_descriptor()
-            partial["record_bank"] = "a"
-            with self.assertRaisesRegex(ValueError, "status-only"):
-                module.validate_descriptor(repo, partial)
+            transport_fields = {
+                "record_bank": "a",
+                "record_slots": [],
+                "paper_path": "papers/inference/test/job-a.md",
+                "expected_blob_sha": "0" * 40,
+            }
+            for field, value in transport_fields.items():
+                with self.subTest(field=field):
+                    descriptor = _status_descriptor()
+                    descriptor[field] = value
+                    with self.assertRaisesRegex(ValueError, "status-only"):
+                        module.validate_descriptor(repo, descriptor)
 
     def test_completed_submission_still_requires_registered_bank_and_five_slots(self):
         module = _load(SCRIPTS / "immutable_submission.py", "immutable_completed_strict")
@@ -89,6 +96,7 @@ class NonArtifactImmutableStatusTests(unittest.TestCase):
             repo = Path(td)
             descriptor = _status_descriptor(status="completed")
             descriptor.pop("reason")
+            descriptor["paper_path"] = "papers/inference/test/job-a.md"
             with self.assertRaisesRegex(ValueError, "record_bank"):
                 module.validate_descriptor(repo, descriptor)
 
