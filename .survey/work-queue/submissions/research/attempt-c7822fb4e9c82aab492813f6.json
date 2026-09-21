@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-c7822fb4e9c82aab492813f6",
+  "job_id": "job-research-f0b1ffeacc3b0ccd",
+  "claim_id": "claim-c7822fb4e9c82aab492813f6",
+  "worker_id": "scheduled-chat-llm-paper-00",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely retrieved through an official source in this invocation. The official arXiv abstract was available through indexed metadata, but direct official arXiv full-text retrieval was unavailable. A third-party page mirrored substantial arXiv HTML, but the workflow requires the primary source in full, so it was not used to synthesize the five-slot record.",
+  "retrieval_evidence": [
+    "https://arxiv.org/abs/2608.21836 -> official abstract metadata available",
+    "https://arxiv.org/html/2608.21836 -> direct official full-text retrieval unavailable in current environment",
+    "third-party mirror exposed arXiv-derived text but was not accepted as primary full text"
+  ],
+  "blocked_at": "2026-09-21T00:08:00Z"
+}
