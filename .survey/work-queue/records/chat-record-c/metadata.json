@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-a412546d473a63a041f2ba8d",
-  "job_id": "job-research-b47f649340a3fc18",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a412546d473a63a041f2ba8d",
-    "worker_id": "scheduled-chat-llm-paper-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a412546d473a63a041f2ba8d","job_id":"job-research-b47f649340a3fc18","data":{"canonical_id":"arXiv:2608.30386","arxiv_id":"2608.30386","doi":"10.48550/arXiv.2608.30386","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"DASC: Decay-Aware State Compression for Hybrid Linear-Attention Serving","summary":"DASCはハイブリッド線形注意モデルのprefix cacheで、線形注意の再帰状態checkpointがHBMを圧迫する問題に対し、モデル重みから各head/channelの保持地平（retention horizon）を静的推定し、長寿命unitだけをragged配置で保存する。TP rank間のcheckpoint payloadも再配置して均衡化し、cache hit時は省略unitをzero-fillするDASC-NRか、bounded suffixを再実行して回復するDASC-WRを用いる。Kimi-KDAではWmax=16でcheckpoint容量2.63倍、固定HBM下で平均TTFTを42.6%削減し入力throughputを68.4%向上した。","list_summary":"重み由来の保持地平でKDA/GDN再帰状態を選別・ragged保存し、TP均衡化によりKimi-KDAで2.63倍のcheckpoint容量とTTFT 42.6%削減を実現する。","authors":["Yanqi Yu","Pingwei Sun","Jianchao Tan","Tao Zhang","Yuchen Xie","Xunliang Cai","Yao Liu"],"authors_affiliations":"East China Normal University; Meituan; South China University of Technology","published":"2026-08-31","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-08-31)","lineage":"hybrid linear attention serving / recurrent-state prefix caching / cache compression / tensor parallelism","topics":["線形注意","再帰状態checkpoint","prefix cache","状態圧縮","テンソル並列"],"importance":"従来のKV cache圧縮とは別に、hybrid attentionで永続化が必要なrecurrent boundary stateを一級のcache管理対象として扱い、選択・物理配置・TP負荷均衡・再構成を共同設計する。","implementation":"SGLang上に実装。論文中ではTP8、ragged checkpoint store/load、variable-split all-to-all、DASC-NR/WRを評価するが、論文本文で独立公開コードURLは示されない。","hardware_evaluation":"全実験はHopper世代GPU、TP8。Qwen3-Next-80B-A3B-InstructとKimi-Linear-48B-A3B-InstructをBF16実行し、state checkpointはFP32 temporal + BF16 convolution。","quality_effect":"保守的Wmax=16ではRULER集約精度がdense比ほぼ±0.01、end-taskも各行1.3pt以内。強い圧縮ではDASC-NR精度が低下するがDASC-WRのsuffix refreshで回復可能。","source":"https://arxiv.org/abs/2608.30386","sources":["https://arxiv.org/abs/2608.30386","https://arxiv.org/pdf/2608.30386"],"code":null,"last_checked":"2026-09-21","references":[],"references_checked_at":"2026-09-21","references_source":"primary manuscript","references_total":24},"reservation":{"claim_id":"claim-a412546d473a63a041f2ba8d","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
