@@ -1,1 +1,62 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-d9517035eb54f87a58a78549","job_id":"job-research-901c881ed2cc963f","data":{"overview":"DeepSeek-MoE-16B-ChatではMetaNet aggressiveが平均top-k 2.28（fixed k=6比62%削減）でMMLU 0.438、conservativeが3.61（40%削減）で0.489を得てfixed k=6の0.474を上回る。C-Eval-Fullへは再学習なしでaggressive 2.90 experts/0.386、conservative 3.61/0.452。component ablationではbudget-onlyのgate agreementが0.038まで崩れる一方、full methodは0.943を維持し、budgetとbounded priorの補完性を示す。ただし62%のexpert削減に対するlatency短縮は共通3-GPU harnessで4.9%に留まる。","key_results":[{"metric":"MMLU accuracy / mean top-k","value":"0.489 / 3.61 (conservative)","baseline":"fixed k=6: 0.474 / 6.00","condition":"DeepSeek-MoE-16B-Chat, 12 held-out MMLU subjects, 192 queries","interpretation":"平均active expertsを40%削減しながら主runでは固定native budget以上の精度を維持する。"},{"metric":"MMLU aggressive operating point","value":"0.438 / mean k=2.28 / active ratio 0.036","baseline":"fixed k=6: 0.474 / 6.00 / 0.094; fixed k=3: 0.417 / 3.00 / 0.047","condition":"DeepSeek-MoE-16B-Chat","interpretation":"fixed k=3より少ない平均expert数で高い精度を示し、層別配分の利点を支持する。"},{"metric":"C-Eval-Full zero-shot transfer","value":"aggressive 0.386 / k=2.90; conservative 0.452 / k=3.61","baseline":"fixed k=6: 0.444 / 6.00; fixed k=2: 0.377 / 2.00","condition":"52 subjects, 828 queries, MMLU-trained controller, no parameter update","interpretation":"タスク条件付きpolicyが別ベンチマークへ再学習なしで転移する。"},{"metric":"Cross-backbone OLMoE","value":"MMLU 0.573, C-Eval 0.375, mean k=7.52","baseline":"fixed k=8: MMLU 0.521, C-Eval 0.363","condition":"OLMoE-1B-7B zero-shot transfer","interpretation":"backbone転移は示すがkがnative 8に近く、圧縮効果の証拠は弱い。"},{"metric":"Component ablation","value":"full: acc 0.438, gate agreement 0.943, low-use 0.004","baseline":"budget-only: acc 0.375, agreement 0.038; prior-only: acc 0.484, k=12","condition":"MMLU","interpretation":"budget branch単独ではexpert選択が元gateから崩れ、prior branch単独では圧縮しないため両枝が補完的。"},{"metric":"Latency","value":"516.52 ms/query aggressive","baseline":"fixed k=6: 542.94 ms/query","condition":"common 3×RTX 4090 harness","interpretation":"mean top-k 62%削減に対しlatencyは4.9%短縮で、dispatch・dense計算・通信が残る。"}],"negative_results":"aggressive設定はMMLUでfixed k=6より約3.6〜3.7ポイント低い。shallow 9層だけの圧縮は0.396まで落ち、deep 9層の0.469より悪い。OLMoEではmean k=7.52でnative 8に近く圧縮証拠は弱い。routing sparsity 62%削減に対するend-to-end latency改善は4.9%に留まる。","interpretation":"結果は『全層一律にkを下げる』より、support routingの集中度に応じて層ごとに予算を変え、弱いpriorで元gateのexpert選択を保つことが重要だと示す。一方、active-expert削減はそのまま実時間高速化やメモリ削減を意味せず、実行基盤側の疎MoE最適化が必要である。","quality_impact":"保守設定は主MMLU runで0.489対fixed k=6の0.474。2-seed sensitivityではconservative 0.506±0.022、fixed k=6 0.505±0.030でほぼ同等、aggressiveは0.477±0.022。2 seedsのみのため統計的有意性は主張できない。"},"reservation":{"claim_id":"claim-d9517035eb54f87a58a78549","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-a0822fa7a59dd826fad3dfc3",
+  "job_id": "job-research-901c881ed2cc963f",
+  "data": {
+    "overview": "DeepSeek-MoE-16B-ChatではMetaNet aggressiveが平均top-k 2.28（fixed k=6比62%削減）でMMLU 0.438、conservativeが3.61（40%削減）で0.489を得てfixed k=6の0.474を上回る。C-Eval-Fullへは再学習なしでaggressive 2.90 experts/0.386、conservative 3.61/0.452。component ablationではbudget-onlyのgate agreementが0.038まで崩れる一方、full methodは0.943を維持し、budgetとbounded priorの補完性を示す。ただし62%のexpert削減に対するlatency短縮は共通3-GPU harnessで4.9%に留まる。",
+    "key_results": [
+      {
+        "metric": "MMLU accuracy / mean top-k",
+        "value": "0.489 / 3.61 (conservative)",
+        "baseline": "fixed k=6: 0.474 / 6.00",
+        "condition": "DeepSeek-MoE-16B-Chat, 12 held-out MMLU subjects, 192 queries",
+        "interpretation": "平均active expertsを40%削減しながら主runでは固定native budget以上の精度を維持する。"
+      },
+      {
+        "metric": "MMLU aggressive operating point",
+        "value": "0.438 / mean k=2.28 / active ratio 0.036",
+        "baseline": "fixed k=6: 0.474 / 6.00 / 0.094; fixed k=3: 0.417 / 3.00 / 0.047",
+        "condition": "DeepSeek-MoE-16B-Chat",
+        "interpretation": "fixed k=3より少ない平均expert数で高い精度を示し、層別配分の利点を支持する。"
+      },
+      {
+        "metric": "C-Eval-Full zero-shot transfer",
+        "value": "aggressive 0.386 / k=2.90; conservative 0.452 / k=3.61",
+        "baseline": "fixed k=6: 0.444 / 6.00; fixed k=2: 0.377 / 2.00",
+        "condition": "52 subjects, 828 queries, MMLU-trained controller, no parameter update",
+        "interpretation": "タスク条件付きpolicyが別ベンチマークへ再学習なしで転移する。"
+      },
+      {
+        "metric": "Cross-backbone OLMoE",
+        "value": "MMLU 0.573, C-Eval 0.375, mean k=7.52",
+        "baseline": "fixed k=8: MMLU 0.521, C-Eval 0.363",
+        "condition": "OLMoE-1B-7B zero-shot transfer",
+        "interpretation": "backbone転移は示すがkがnative 8に近く、圧縮効果の証拠は弱い。"
+      },
+      {
+        "metric": "Component ablation",
+        "value": "full: acc 0.438, gate agreement 0.943, low-use 0.004",
+        "baseline": "budget-only: acc 0.375, agreement 0.038; prior-only: acc 0.484, k=12",
+        "condition": "MMLU",
+        "interpretation": "budget branch単独ではexpert選択が元gateから崩れ、prior branch単独では圧縮しないため両枝が補完的。"
+      },
+      {
+        "metric": "Latency",
+        "value": "516.52 ms/query aggressive",
+        "baseline": "fixed k=6: 542.94 ms/query",
+        "condition": "common 3×RTX 4090 harness",
+        "interpretation": "mean top-k 62%削減に対しlatencyは4.9%短縮で、dispatch・dense計算・通信が残る。"
+      }
+    ],
+    "negative_results": "aggressive設定はMMLUでfixed k=6より約3.6〜3.7ポイント低い。shallow 9層だけの圧縮は0.396まで落ち、deep 9層の0.469より悪い。OLMoEではmean k=7.52でnative 8に近く圧縮証拠は弱い。routing sparsity 62%削減に対するend-to-end latency改善は4.9%に留まる。",
+    "interpretation": "結果は『全層一律にkを下げる』より、support routingの集中度に応じて層ごとに予算を変え、弱いpriorで元gateのexpert選択を保つことが重要だと示す。一方、active-expert削減はそのまま実時間高速化やメモリ削減を意味せず、実行基盤側の疎MoE最適化が必要である。",
+    "quality_impact": "保守設定は主MMLU runで0.489対fixed k=6の0.474。2-seed sensitivityではconservative 0.506±0.022、fixed k=6 0.505±0.030でほぼ同等、aggressiveは0.477±0.022。2 seedsのみのため統計的有意性は主張できない。"
+  },
+  "reservation": {
+    "claim_id": "claim-a0822fa7a59dd826fad3dfc3",
+    "worker_id": "scheduled-chat-llm-paper-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
