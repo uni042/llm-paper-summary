@@ -98,12 +98,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         handoff_time_source = "unknown"
         handoff_reason = None
 
-    if (
+    handoff_window_active = bool(
         effective_seconds_to_handoff is not None
         and effective_seconds_to_handoff <= handoff_guard
-        and handoff_reason is not None
-    ):
-        reasons.append(handoff_reason)
+    )
+    final_handoff_active = bool(
+        effective_seconds_to_handoff is not None
+        and effective_seconds_to_handoff <= 180
+    )
+    if final_handoff_active and handoff_reason is not None:
+        reasons.append("run_deadline_within_final_180_second_handoff_guard")
 
     if not args.github_read:
         reasons.append("github_read_unavailable_for_repo_state")
@@ -127,6 +131,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             and any_durable_transport
         )
     )
+    active_assignment = bool(getattr(args, "active_assignment", False))
 
     transient_claim_wait = bool(claim_state_checked and args.claim_result_pending and args.github_read)
     transient_submission_wait = bool(
@@ -144,15 +149,15 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         required_action = "FINALIZE"
         finalization_allowed = True
     elif work_mode == "discovery":
-        if discovery_rounds_completed < discovery_min_rounds:
-            decision = "CONTINUE"
-            required_action = "DISCOVER_AGAIN"
-            finalization_allowed = False
-        elif discovery_exhausted and not next_axis_available and not independent_work:
-            reasons.append("discovery_exhausted_after_minimum_rounds")
+        if handoff_window_active:
+            reasons.append("handoff_window_no_new_discovery_round")
             decision = "STOP_RUN"
             required_action = "FINALIZE"
             finalization_allowed = True
+        elif discovery_rounds_completed < discovery_min_rounds:
+            decision = "CONTINUE"
+            required_action = "DISCOVER_AGAIN"
+            finalization_allowed = False
         else:
             decision = "CONTINUE"
             required_action = "DISCOVER_AGAIN" if (next_axis_available or args.can_discover) else "REFRESH_AND_CONTINUE"
@@ -170,13 +175,27 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "CHECK_SUBMISSION_STATE"
             finalization_allowed = False
-        elif transient_submission_wait and (pipeline_ahead_count >= 1 or not independent_work):
-            decision = "CONTINUE"
-            required_action = "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT"
-            finalization_allowed = False
         elif transient_submission_wait:
+            if handoff_window_active or pipeline_ahead_count >= 1 or not independent_work:
+                decision = "CONTINUE"
+                required_action = "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT"
+                finalization_allowed = False
+            else:
+                decision = "CONTINUE"
+                required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
+                finalization_allowed = False
+        elif active_assignment:
             decision = "CONTINUE"
-            required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
+            required_action = "CONTINUE_ASSIGNED_WORK"
+            finalization_allowed = False
+        elif handoff_window_active:
+            reasons.append("handoff_window_no_new_research_audit_claim")
+            decision = "STOP_RUN"
+            required_action = "FINALIZE"
+            finalization_allowed = True
+        elif not independent_work:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
             finalization_allowed = False
         elif status_only_terminal or research_audit_completed_this_invocation < research_minimum_completions:
             decision = "CONTINUE"
@@ -268,6 +287,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 "前jobは終端しましたがrunは終了しません。最新queue/claim stateを再取得し、"
                 "同一workerの未完了claimがないことを確認して次のResearch/Auditを1件claimします。"
             )
+    elif required_action == "CONTINUE_ASSIGNED_WORK":
+        next_action_message = "すでに担当確保済みのResearch/Auditを継続し、提出・結果確認または正規repairまで進めます。"
+    elif required_action == "WAIT_FOR_READY_RESEARCH_AUDIT":
+        next_action_message = "現在claim可能なResearch/Auditが0件です。空のclaim requestを出さず10秒待機し、最新queueを再確認します。run中にDiscoveryへ切り替えません。"
     elif required_action == "CONTINUE_WORK":
         next_action_message = "最新queue/stateを再取得し、次の独立Research/Auditまたは許可された独立作業へ進みます。"
     elif required_action == "DISCOVER_AGAIN":
@@ -315,15 +338,15 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "fallback_writable": fallback_writable,
         "durable_transport_available": any_durable_transport,
         "independent_work_after_fallback": independent_work,
+        "active_assignment": active_assignment,
+        "handoff_window_active": handoff_window_active,
+        "final_handoff_active": final_handoff_active,
         "seconds_to_run_deadline": seconds_to_deadline,
         "seconds_to_next_scheduled_task": seconds_to_next,
         "effective_seconds_to_handoff": effective_seconds_to_handoff,
         "handoff_time_source": handoff_time_source,
         "scheduled_handoff_guard_seconds": handoff_guard,
-        "scheduled_handoff_active": bool(
-            effective_seconds_to_handoff is not None
-            and effective_seconds_to_handoff <= handoff_guard
-        ),
+        "scheduled_handoff_active": handoff_window_active,
         "rule": (
             "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
             "or discovery submission is never by itself a whole-run stop condition. Normal workers "
@@ -337,13 +360,15 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "candidate_inventory is mandatory: >=50 selects Research/Audit and <50 selects Discovery. "
             "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
             "Discovery's four-round floor counts successful canonical precheck rounds in this invocation; "
-            "multiple submissions derived from one precheck still count as one round. "
+            "multiple submissions derived from one precheck count as one round only after every declared split submission is durably successful. "
             "Research/Audit exposes the combined three-completion quota state. After a terminal "
             "blocked/deferred/rejected result, or whenever the three-completion floor is still unmet, "
             "the required action is CLAIM_NEXT_RESEARCH_AUDIT rather than run finalization. A pending "
             "submission therefore becomes a barrier before the paper after next, not before the immediate next paper; hard "
             "handoff/platform/durability/read "
-            "failures override ordinary continuation."
+            "failures override ordinary continuation. The 600-second handoff window forbids new independent work but does not abort an already-started assignment; "
+            "the final 180 seconds force safe handoff. Research/Audit with zero claimable jobs waits and refreshes instead of issuing empty claims or switching modes. "
+            "Discovery has no exhaustion-based ordinary early stop."
         ),
     }
 
@@ -360,6 +385,7 @@ def main() -> int:
     ap.add_argument("--platform-limit", type=yn, default=False)
     ap.add_argument("--global-dependency", type=yn, default=False)
     ap.add_argument("--independent-work", type=yn, default=True)
+    ap.add_argument("--active-assignment", type=yn, default=False)
     ap.add_argument("--spillover-work", type=yn, default=False)
     ap.add_argument("--can-discover", type=yn, default=True)
     ap.add_argument("--claim-state-checked", type=yn, default=False)
