@@ -1,4 +1,4 @@
-# Worker router — workflow v10.2
+# Worker router — workflow v10.3
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -60,7 +60,7 @@ Research / Auditのclaimは次の順で行う。
 2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatの最小requestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` を持つ。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。
 3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で `claim_worker_with_banks.py` を実行する。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
 4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を**10秒実時間間隔**で再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`next_action` / `instructions` を正本として以後の処理を行う。
-5. claim result待ちのためだけに別requestを発行しない。
+5. claim result待ちのためだけに別requestを発行しない。claim fast laneはpush起動に加えて**10分周期で未result requestを定期回収**するため、一時的なActions失敗・cancel・push競合でrequestだけ残っても新requestを捏造せず同じidentityの回収を待つ。
 
 **並列workerの扱い:** `max_jobs=1` と未完了claimの直列制約は**同一worker / 同一論理worker lineage内だけ**に適用する。`:00` worker、`:30` worker、その他の独立workerは、別 `worker_id` と別record bankで同時にResearch / Auditを進めてよい。他workerのactive claim、他workerのclaim request、またはclaim fast lane上で先行requestが処理中であることを理由に、このworkerのrunを停止・終了・handoffしてはならない。`.github/workflows/survey-claim-fast.yml` の `concurrency: survey-claim-main` は**claim割当commitの競合回避だけを直列化するもの**であり、論文精読そのものを全worker間で直列化するものではない。自分のrequestがfast lane待ちなら同じ `request_id` のresultを**10秒実時間間隔**で再確認し、割当後は返された別job / record bankで処理を続ける。他workerのclaimを自分の未完了claimとして扱わない。
 
@@ -74,7 +74,7 @@ Research / Auditの不変submissionも同様にfast laneを使える。
 6. failure resultが `content_validation`、またはjobが `repair_required=true` になった場合は、そのfailure resultがmainへ耐久保存されたことを確認した後、同じjobを `job_ids: [<job_id>]` で指定した新しいclaim requestを発行する。claim fast laneが旧claimを解放し、**新しいclaim_id / attempt_id** と回復済みrecord bankを返すので、指摘されたslotだけを一次資料に基づいて修正して新attemptのdescriptorを提出する。全文読解済み成果を捨てない。
 7. failure resultが `retryable=true` の場合は、同じattemptの別descriptorを作らない。既存の同一descriptorをsubmission laneのbounded recoveryに任せ、同じresultを再確認する。`retryable=false` かつ `repair_required` でもないstate/transport guardは、返された回復指示に従う。
 
-Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/discovery-precheck/requests/<request-id>.json` をmainへcommitし、`.github/workflows/discovery-precheck.yml` に `process_discovery_precheck.py` を実行させ、同名resultを読む。Discovery submissionは既存のqueue処理経路へ流し、Research jobやstateを手で生成しない。
+Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/discovery-precheck/requests/<request-id>.json` をmainへcommitし、`.github/workflows/discovery-precheck.yml` に `process_discovery_precheck.py` を実行させ、同名resultを読む。Discovery precheck laneも**10分周期で未result requestを定期回収**する。Discovery submissionは既存のqueue処理経路へ流し、Research jobやstateを手で生成しない。Discovery submissionは既存の10分周期recoveryで未完了を回収する。
 
 **重要:** 「ローカルPython/任意コマンド実行機能がない」は、GitHub read/writeと上記fast laneが利用可能な限り `platform_limit` / hard stopではない。fast lane自体がGitHub/API/認証/Actions障害で利用不能になった場合だけ、第6節の保存障害・退避と第7節の停止判定へ進む。
 
@@ -277,9 +277,9 @@ actual_invocation_start: <offset-aware timestamp>
 runtime_condition: none
 ```
 
-`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`handoff_guard` / `github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。曖昧な理由で選ばない。
+`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は10秒以上離した正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformからtool call/outputを拒否された事実がある場合だけ `runtime_condition_confirmed=true` としてよい。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
 
-同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、pipeline ahead、`gate.decision` / `gate.required_action` を継続判断の正本とする。同一 `run_key` の最初の成功snapshotが `candidate_inventory` / `work_mode` を固定し、後続snapshotはそれを再利用する。ワーカーは結果と矛盾するbooleanを別途推測して `continuation_gate.py` を呼ばない。
+同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、**Discovery precheck pending / evaluation pending / submission pending / recovery required**、pipeline ahead、`gate.decision` / `gate.required_action` を継続判断の正本とする。run-state lane自体も**10分周期で未result requestを定期回収**し、push競合は最新mainから最大5回再導出する。同一 `run_key` の最初の成功snapshotが `candidate_inventory` / `work_mode` を固定し、後続snapshotはそれを再利用する。ワーカーは結果と矛盾するbooleanを別途推測して `continuation_gate.py` を呼ばない。
 
 `gate.hard_stop` が返る場合はその値も正本とし、ワーカーが停止理由を再分類しない。主な `required_action` は次のように解釈する。
 
@@ -287,6 +287,9 @@ runtime_condition: none
 - `CONTINUE_ASSIGNED_WORK`: すでにactiveな同一workerの担当を継続し、新規claimを作らない。
 - `WAIT_FOR_READY_RESEARCH_AUDIT`: claim可能jobが0件なので空claimを発行せず10秒待機し、最新queue/run-stateを再確認する。Discoveryへ切り替えない。
 - `WAIT_FOR_CLAIM_RESULT` / `WAIT_FOR_PREVIOUS_SUBMISSION_RESULT`: 同一identityを10秒間隔で再確認する。
+- `WAIT_FOR_DISCOVERY_PRECHECK_RESULT` / `WAIT_FOR_DISCOVERY_SUBMISSION_RESULT`: 開始済みDiscovery roundとして同一identityを10秒間隔で再確認する。600秒開始禁止窓に入っても最終180秒までは待機を継続する。
+- `CONTINUE_DISCOVERY_ROUND`: 成功済みprecheckの評価・submissionなど、すでに開始済みのroundを完了する。
+- `RECOVER_DISCOVERY_SUBMISSION`: precheck/submissionの失敗を正規recovery_stepsで回収し、同じroundを終端まで進める。
 - `DISCOVER_AGAIN`: 残り600秒より多い場合だけ新しいDiscovery roundへ進む。
 - `RUN_0830_MAINTENANCE`: 08:30専用runの非論文更新→maintenanceを続行する。通常論文処理へ入らない。
 - `FINALIZE`: `run_finalization_gate.py` で最終化許可を確認してから終了する。
@@ -300,7 +303,7 @@ runtime_condition: none
 - Research / Audit のsubmission result待ちは**直後の1本には同期障壁ではなく、その次の論文へ進むための同期障壁**である。N提出後はN+1を処理・提出してよい。N+1提出後はNの成功resultまたはstatus-only終端と最新main反映を確認するまでN+2をclaim・取得しない。failure時はNの正規repairを優先する。
 - candidate在庫、Library pending、fallback backlog、record bank枯渇、単一job失敗、status-only終端、1本完了、単一探索軸0件だけをrun終了理由にしない。
 - final responseはfinalization gateが許可した場合だけ行う。
-- 残り600秒以下の開始禁止窓に入ったら新規独立作業を開始しない。開始済み作業・既発行claim・既提出submissionの確認/repairだけを継続する。残り180秒以下では新規内容作業を止め、耐久保存と安全な引き継ぎだけを行う。処理中resultが残る場合、180秒までは10秒間隔で追跡し、それでもpendingならsubmission/request identity・result path・現在状態・次に行うべき正規操作が耐久保存済みであることを確認してhandoffする。
+- 残り600秒以下の開始禁止窓に入ったら新規独立作業を開始しない。**ただし開始済みDiscovery round（precheck result待ち、成功precheckの評価中、Discovery submission result待ち、正規recovery中）もResearch/Auditの開始済み作業と同じく継続対象**であり、600秒到達だけで終了してはならない。進行中作業・必要な非同期結果確認が本当に0件のときだけ安全handoff後に終了してよい。残り180秒以下では新規内容作業を止め、耐久保存と安全な引き継ぎだけを行う。処理中resultが残る場合、180秒までは10秒間隔で追跡し、それでもpendingならsubmission/request identity・result path・現在状態・次に行うべき正規操作が耐久保存済みであることを確認してhandoffする。
 
 ## 8. 誤経路に入った場合
 
