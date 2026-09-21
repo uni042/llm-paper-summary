@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f528a03c4ecc9039aaf11a0e",
+  "attempt_id": "attempt-e53556603dd1cf35b03dc960",
   "job_id": "job-research-be16d214d5c628cd",
   "data": {
     "limitations": "分析モデルはkernel不足、scheduler latency、network contention等のruntime固有overheadを意図的に省略し、物理検証もLongCat 2.0/Ascend 910Cの3 workloadに限られるため、6.6〜9.6%誤差は一般的confidence boundではない。bounded hardware explorationはheuristicで理論最適保証がなく、より大きなcatalogでは探索戦略の高度化が必要。future-hardware結果は仮想capability pointであり製品予測ではない。steady-state saturated decode中心で、elasticity、failure isolation、既設hardware再利用は比較対象外。",
@@ -13,8 +13,8 @@
     "practical_takeaway": "AFD導入判断では『expert GPUが速い』『attention GPUのHBMが大きい』だけを見ず、同じ予算・TPOT SLOでcollocated側も再最適化する必要がある。AFDはFFN専用workerに割いた分だけrequest-bearing capacityを失うため、batch/KV容量/TPOT/価格/worker ratioを含む完全配置で比較すべきで、異種hardwareの価値は単体性能より新しいreplica構成やworker比を可能にするかで決まる。"
   },
   "reservation": {
-    "claim_id": "claim-f528a03c4ecc9039aaf11a0e",
-    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-e53556603dd1cf35b03dc960",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }
