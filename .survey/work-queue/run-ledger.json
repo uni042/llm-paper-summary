@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T15:50:03.029909+00:00",
+  "updated_at": "2026-09-21T17:32:49.003070+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -33835,6 +33835,56 @@
           "type": "research",
           "canonical_id": "DOI:10.1145/3832810.3832827",
           "title": "ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 882,
+      "paper_active_count_after": 882,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35632657556",
+      "first_recorded_at": "2026-09-21T17:32:49.003070+00:00",
+      "last_recorded_at": "2026-09-21T17:32:49.003070+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35632657556:1",
+          "recorded_at": "2026-09-21T17:32:49.003070+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35632657556",
+            "run_attempt": "1",
+            "source_sha": "dd9f11ee523167488cb4559a1f38fa215e6349cd"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-00f6a78e028bd698",
+          "type": "research",
+          "canonical_id": "arXiv:2606.27866",
+          "title": "FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models",
           "from": "ready",
           "to": "blocked"
         }
