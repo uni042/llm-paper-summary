@@ -6,6 +6,8 @@ on:
     paths:
       - '.survey/work-queue/claim-requests/*.json'
   workflow_dispatch:
+  schedule:
+    - cron: '3/10 * * * *'
 
 permissions:
   contents: write
