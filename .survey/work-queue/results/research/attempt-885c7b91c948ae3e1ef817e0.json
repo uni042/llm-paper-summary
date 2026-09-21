@@ -10,8 +10,9 @@
   "submission": ".survey/work-queue/submissions/research/attempt-885c7b91c948ae3e1ef817e0.json",
   "error": "RuntimeError: identity delta failed: Traceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 195, in <module>\n    main()\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 183, in main\n    print(prepare(args.paper))\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 125, in prepare\n    assert_no_conflicts(record)\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 95, in assert_no_conflicts\n    raise ValueError(f\"Identifier conflict: {ident} -> {hit[0]}\")\nValueError: Identifier conflict: arXiv:2503.13737 -> arXiv:2503.13737\n",
   "processed_at": "2026-09-21T16:02:30+00:00",
-  "failure_class": "post_validation_processing_failure",
-  "retryable": true,
-  "recovery_failures": 2,
-  "last_recovery_failed_at": "2026-09-21T16:04:05+00:00"
+  "failure_class": "recovery_exhausted",
+  "retryable": false,
+  "recovery_failures": 3,
+  "last_recovery_failed_at": "2026-09-21T16:04:40+00:00",
+  "last_retryable_failure_class": "post_validation_processing_failure"
 }
