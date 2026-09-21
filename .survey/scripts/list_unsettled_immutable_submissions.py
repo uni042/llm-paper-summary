@@ -112,11 +112,28 @@ def _matching_failure_is_legacy_bank_a_path_compatibility(
 
 
 def unsettled_paths(repo_root: Path) -> list[str]:
+    """List descriptors that still need processing without duplicating one attempt.
+
+    Normally one claim attempt produces one immutable descriptor. A worker may,
+    however, durably write a corrected descriptor before a previous retryable
+    descriptor for the same job/attempt has been drained. Feeding both paths to
+    the batch processor is unsafe and used to abort the whole fast lane.
+
+    Recovery rule:
+    - any exact successful result settles every descriptor for that job/attempt;
+    - when exactly one descriptor for the identity has no exact result yet, process
+      that descriptor and suppress older retryable-failure siblings for this drain;
+    - otherwise preserve the old retry rules. Truly ambiguous multiple unresolved
+      descriptors are deliberately returned together so the batch guard still fails
+      loudly instead of guessing an order.
+    """
     root = Path(repo_root).resolve()
-    out: list[str] = []
     submissions = root / ".survey/work-queue/submissions"
     results = root / ".survey/work-queue/results"
     current_claims = claim_state.current_claims(root)
+
+    grouped: dict[tuple[str, str, str], list[dict[str, Any]]] = {}
+    ungrouped: list[str] = []
 
     for kind in sorted(immutable_submission.KINDS):
         folder = submissions / kind
@@ -125,21 +142,7 @@ def unsettled_paths(repo_root: Path) -> list[str]:
             descriptor = _read(descriptor_path)
             result = _read(results / kind / descriptor_path.name)
 
-            if isinstance(descriptor, dict):
-                if immutable_submission.result_matches_identity(result, descriptor):
-                    if (
-                        _matching_failure_is_retryable(result, descriptor)
-                        or _matching_failure_is_legacy_bank_a_path_compatibility(
-                            result,
-                            descriptor,
-                            current_claims,
-                        )
-                    ):
-                        out.append(relative)
-                    # Exact success, unrelated non-retryable failure, and exhausted
-                    # bounded recovery remain settled attempts.
-                    continue
-            else:
+            if not isinstance(descriptor, dict):
                 digest = _digest(descriptor_path)
                 if (
                     digest
@@ -149,10 +152,56 @@ def unsettled_paths(repo_root: Path) -> list[str]:
                     and result.get("descriptor_sha256") == digest
                 ):
                     continue
+                ungrouped.append(relative)
+                continue
 
-            out.append(relative)
-    return out
+            job_id = descriptor.get("job_id")
+            attempt_id = descriptor.get("attempt_id")
+            if not isinstance(job_id, str) or not job_id or not isinstance(attempt_id, str) or not attempt_id:
+                ungrouped.append(relative)
+                continue
 
+            state = "pending"
+            if immutable_submission.result_matches_identity(result, descriptor):
+                if isinstance(result, dict) and result.get("ok") is True:
+                    state = "success"
+                elif (
+                    _matching_failure_is_retryable(result, descriptor)
+                    or _matching_failure_is_legacy_bank_a_path_compatibility(
+                        result,
+                        descriptor,
+                        current_claims,
+                    )
+                ):
+                    state = "retryable_failure"
+                else:
+                    state = "settled_failure"
+
+            grouped.setdefault((kind, job_id, attempt_id), []).append(
+                {"path": relative, "state": state}
+            )
+
+    out: list[str] = list(ungrouped)
+    for _identity, rows in sorted(grouped.items()):
+        if any(row["state"] == "success" for row in rows):
+            continue
+
+        pending = [row["path"] for row in rows if row["state"] == "pending"]
+        retryable = [row["path"] for row in rows if row["state"] == "retryable_failure"]
+
+        if len(pending) == 1:
+            out.append(pending[0])
+            continue
+        if len(pending) > 1:
+            out.extend(pending)
+            continue
+
+        if len(retryable) == 1:
+            out.append(retryable[0])
+        elif len(retryable) > 1:
+            out.extend(retryable)
+
+    return sorted(out)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
