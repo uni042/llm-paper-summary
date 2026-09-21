@@ -44,7 +44,7 @@ Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自
 Research / Auditのclaimは次の順で行う。
 
 1. 最新main HEADとclaim stateを再取得し、同一workerの未完了claimがないことを確認する。
-2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatの最小requestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1`、`job_types: ["research", "audit"]` を持つ。
+2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatの最小requestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` を持つ。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。
 3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で `claim_worker_with_banks.py` を実行する。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
 4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を所定間隔で再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`next_action` / `instructions` を正本として以後の処理を行う。
 5. claim result待ちのためだけに別requestを発行しない。
