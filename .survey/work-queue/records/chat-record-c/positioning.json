@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-3746826b8b41edef9f51adf4",
-  "job_id": "job-research-b865a4d050e3e427",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3746826b8b41edef9f51adf4",
-    "worker_id": "scheduled-chat-llm-paper-worker-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3746826b8b41edef9f51adf4","job_id":"job-research-b865a4d050e3e427","data":{"positioning":"MooncakeやAIBrixは主に遠隔メモリを共有KV容量として使い、3FS系はSSDを大容量KV保存先として使う。LMCacheはホストメモリを標準保存先とし外部バックエンドを接続する。PolarKVはこれらと異なり、クラウドでメモリは帯域資源、ブロックストレージは容量資源として非対称に使うことを前提化し、両者を同一VMの対応シャードへ共置する。従来の階層キャッシュが層全体を独立プールとして扱うのに対し、PolarKVは階層移動単位そのものを局所シャード対へ変える点が主要な差である。","relation_to_repository":"リポジトリ内ではKVキャッシュの階層メモリ・ストレージ活用、遠隔メモリ、SSDオフロード、推論サービング基盤の系統に属する。特にMooncake、LMCache、3FSを用いるKV保存、KVDriveなどの多階層KV管理と比較する際、クラウドの料金体系とVMネットワーク帯域を設計変数へ直接組み込んだ実運用例として位置付けられる。","novelty":"第一にクラウド資源の帯域・容量・費用の結合を実測してKVキャッシュ資源選択の指針を示す。第二にメモリとストレージを対応シャードへ分割・共置し、階層移動を同一VM内へ局所化する。第三にこの構成をRDMA分散メモリ、ESSD、メタデータ管理、接頭辞ハッシュ、局所性ルーティングと統合して商用サービスとして展開する。","complementarity":"KV圧縮・量子化・疎化はKV表現そのものを小さくするアルゴリズム側の手法であり、PolarKVはKVをどこへ保存しどう共有するかを扱うシステム側の手法である。したがって圧縮済みKVを各メモリ・ストレージ層へ格納する形で併用可能である。","takeaway":"大規模クラウドのKVキャッシュでは『高速メモリか安価なストレージか』という二択ではなく、必要帯域をメモリで、長期容量をストレージで買い、両者の移動にネットワークを使わない配置が重要である。PolarKVはその原則を実システムと本番負荷で示した。"},"reservation":{"claim_id":"claim-3746826b8b41edef9f51adf4","worker_id":"scheduled-chat-llm-paper-worker-00","worker_kind":"scheduled_chat"}}
