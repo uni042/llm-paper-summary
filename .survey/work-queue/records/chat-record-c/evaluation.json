@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b363bc418c2e7f87eb737996",
-  "job_id": "job-research-28c5772328ef0791",
-  "data": {
-    "hardware": "主試験台は4基のNVIDIA V100 32GBをNVSwitchで接続したDGX V100で、4GPUは2個の独立PCIe 3.0 x16スイッチへ分かれ、方向ごとに16GB/sのリンクを2本プールできる。世代差の確認にはRTX 3090のPCIe 4.0機と、2個のNUMA領域に4GPUずつ配置した8基H800のPCIe 5.0機も使う。",
-    "software": "TurboBusは約3900行で、約2500行のC++デーモン、約1100行のC++クライアント、約300行のPython前段からなる。NVIDIA MPSを有効化し、UNIXソケット、共有メモリ、CUDA IPC、cudaLaunchHostFuncで既存CUDAストリームへ統合する。比較対象は通常実行、PipeSwitchとDeepPlanの組合せ、FlexGen、ZeRO-Offloadなどである。",
-    "methodology": "マイクロベンチマークではブロック流水化、ブロック単位割当、双方向並行、要求優先制御、リンク数拡張とNUMA感度を個別に検証する。端から端までの評価は、オンデマンドモデル読込、鍵値キャッシュ退避推論、メモリ制約学習の3種類。モデル読込はLlama-3-8BとLlama-2-13B、鍵値退避はOPT-6.7BとOPT-13Bを用い、FlexGen既定のバッチ32、入力512、出力32、鍵値キャッシュ90%退避で100反復を測る。学習はGPT-J、Llama-2-7B、Phi-3-miniを4GPUデータ並列で実行し、実効バッチ32になるよう勾配蓄積する。理論上限は非重畳転送時間だけが利用リンク数に反比例するとしたAmdahl型モデルで算出する。",
-    "scope": "PCIe接続の複数GPUノード内で、GPU間拡張ファブリックがPCIeより十分高速な環境を対象とする。ジョブ内・ジョブ間、ホストからGPUとGPUからホストの双方を扱う。複数ノードを跨ぐ帯域プール、NVL72級の多数候補からの中継先選択、GPU間集合通信がNVLinkを飽和する場合の共同スケジューリング、統合CPU-GPUでPCIeが主経路でない構成は対象外または将来課題である。"
-  },
+  "attempt_id": "attempt-48084054d6e46e001b7e5078",
+  "job_id": "job-research-4e59361c33e66a27",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-b363bc418c2e7f87eb737996",
+    "claim_id": "claim-48084054d6e46e001b7e5078",
     "worker_id": "scheduled-chat-llm-00",
     "worker_kind": "scheduled_chat"
   }
