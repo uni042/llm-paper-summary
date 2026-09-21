@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e608a3ec3c8dd0be717a2842",
-  "job_id": "job-research-a5925137e7067bb8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e608a3ec3c8dd0be717a2842",
-    "worker_id": "scheduled-chat-llm-paper-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e608a3ec3c8dd0be717a2842","job_id":"job-research-a5925137e7067bb8","data":{"hardware":"Jetson Orin Nano Super。6コアArm CPU、Ampere世代GPU、8GB 128ビットLPDDR5統合メモリ、理論帯域102GB/s。","software":"ROS-LLMとROS 2を用い、背景LLMとしてQwen2.5、DeepSeek-R1、TinyMixtral-MoEを評価。メモリ制御器圧力はJetson ACTMON、LLM停止・再開はプロセス信号を利用する。","methodology":"カメラ前処理、点群処理を主要な帯域依存前景タスクとし、LLMを無制御で併走させた場合とMCSched適用時を比較する。締切違反率と95パーセンタイル応答遅延を前景指標、LLMスループット低下を背景側の代償として測る。別の単純CPUストリーム試験ではGPU計算負荷だけを高めた場合とメモリ制御器圧力を高めた場合を比較し、競合原因を分離する。","scope":"単一Jetson Orin Nano Super上の予備的実機評価であり、締切値は認証済みロボット安全要件ではなくセンサ周期に合わせた代表値である。非NVIDIA SoC、NPU、完全なロボット応用、閉ループ制御品質は未評価である。"},"reservation":{"claim_id":"claim-e608a3ec3c8dd0be717a2842","worker_id":"scheduled-chat-llm-paper-00","worker_kind":"scheduled_chat"}}
