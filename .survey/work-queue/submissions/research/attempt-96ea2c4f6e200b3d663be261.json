@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-96ea2c4f6e200b3d663be261",
+  "job_id": "job-research-3eb9c6f535e789d0",
+  "claim_id": "claim-96ea2c4f6e200b3d663be261",
+  "worker_id": "scheduled-chat-hourly30",
+  "status": "blocked",
+  "reason": "The arXiv primary full text could not be retrieved through the available official routes in this invocation. The arXiv HTML and export-PDF endpoints were attempted but were inaccessible to the retriever; search results exposed only abstract/metadata mirrors. Because the workflow requires full-paper reading, no five-slot record was synthesized from the abstract or third-party summaries.",
+  "retrieval_evidence": [
+    "Official arXiv HTML attempted: https://arxiv.org/html/2609.16215; retriever returned DisabledError.",
+    "Official arXiv export PDF attempted: https://export.arxiv.org/pdf/2609.16215; retriever reported the URL inaccessible.",
+    "Exact arXiv-ID/title search confirmed arXiv:2609.16215 and its abstract through indexed mirrors, but those are not a substitute for the required primary full text."
+  ],
+  "blocked_at": "2026-09-21T03:39:00Z"
+}
