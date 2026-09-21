@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-c42378bb84cf93cfa6eb6efb",
-  "job_id": "job-research-97a84b19cac36f28",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c42378bb84cf93cfa6eb6efb",
-    "worker_id": "scheduled-chat-llm-paper-worker-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-c42378bb84cf93cfa6eb6efb","job_id":"job-research-97a84b19cac36f28","data":{"canonical_id":"arXiv:2608.17826","arxiv_id":"2608.17826","doi":"10.48550/arXiv.2608.17826","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State","summary":"階層KVキャッシュは長い会話状態をSSDや遠隔メモリへ保持できても、復元時に全ヒットをローカルへ一時展開すると外部状態サイズに比例した復元作業集合（Restoration Working Set; RWS）が必要になる。BSRは完全な再利用可能プレフィックスの発見と実データ常駐を分離し、まずプローブだけで全ヒットを確定、その後最大Wチャンクの再利用窓で順次取得・GPUへ導入・解放する。要求単位のコミット規則でTPランクや異種状態群の一部だけ成功した状態を公開せず、失敗時は下位階層または再計算へ戻す。DeepSeek-V4-Flashを2台のDGX Spark、TP=2で評価し、外部状態31.277 GiB/rankでもW=32のRWSを500.75 MiB/rankへ固定した。","list_summary":"外部KV状態の全ヒットを先に把握しつつ、復元はWチャンク窓だけを順次ステージングして解放することで、長大な外部状態とローカル復元メモリを分離する方式。","authors":["Zixuan Li"],"authors_affiliations":"China Academy of Railway Sciences Corporation Limited, Beijing, China","published":"2026-08-18","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"階層KVキャッシュ・状態復元・SSD/RDMAオフロード","topics":["KV cache restoration","hierarchical memory","bounded staging","LMCache","vLLM"],"importance":"外部保存容量と復元時の一時ローカル容量を別資源として定義し、完全ヒット知識を保ったまま復元作業集合をO(W)へ制御する実装契約を示した。","hardware_evaluation":"DeepSeek-V4-Flashを2台のDGX SparkでTP=2実行。各rankは100 Gb/s RDMAで外部Mooncake storeへ接続し、ローカルSSDも下位再利用階層として使用。","hardware_details":"Mooncake storeは128 GiB segment。LMCache chunk size 256 tokens。MTP-offで167 tensors、MTP-onで170 tensors。","quality_effect":"全評価でcanonical output hash一致を要求し、遠隔・SSD・片rank障害でも完全プレフィックス再利用または外部再利用0のどちらかへ倒して部分状態を公開しない。","source":"https://arxiv.org/abs/2608.17826","sources":["https://arxiv.org/abs/2608.17826","https://arxiv.org/html/2608.17826v1"],"code":"https://github.com/StarkLeeSunny/Flexkv-doublenode","implementation":"LMCacheへprobe_only、prefetch_window_chunks、窓取得・解放、失敗ブロック無効化を追加し、vLLMへ異種メモリ割当対応の全プレフィックス無効化とforce-local再試行を追加。","last_checked":"2026-09-21","references":[{"canonical_id":"arXiv:2510.09665","arxiv_id":"2510.09665"},{"canonical_id":"arXiv:2604.25080","arxiv_id":"2604.25080"}],"references_checked_at":"2026-09-21","references_source":"primary-reference-section","references_total":8},"reservation":{"claim_id":"claim-c42378bb84cf93cfa6eb6efb","worker_id":"scheduled-chat-llm-paper-worker-30","worker_kind":"scheduled_chat"}}
