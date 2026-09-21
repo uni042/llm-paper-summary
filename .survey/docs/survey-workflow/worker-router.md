@@ -25,7 +25,7 @@
 - **`candidate_inventory >= 50` → 読解（Research / Audit）**
 - **`candidate_inventory < 50` → 探索（Discovery）**
 
-maintenance対象または08:30 JSTの専用更新条件だけは、この分岐より優先して専用経路へ入る。
+**08:30 JSTの`:30`専用runだけ**は、この分岐より優先して第9節の日次更新・maintenance経路へ入る。通常runに「maintenance対象」という別条件は設けない。
 
 モード決定後は、どちらのScheduled Chatから起動したかを一切条件分岐に使わない。探索なら第4節、読解なら第3節の共通手順をそのまま使う。`:00` 専用・`:30` 専用の探索手順、読解手順、overflow modeは作らない。
 
@@ -33,8 +33,8 @@ maintenance対象または08:30 JSTの専用更新条件だけは、この分岐
 
 ノルマは維持する。
 
-- **読解モード**: 今回の起動中に **Research / Audit 合計で成功完了を最低3件**作る。Researchは一次資料全文→5スロット→preflight→不変submission→submission result成功→最新mainへの反映確認まで、Auditも対応する不変submission→成功result→最新mainへの反映確認までを1件の完了とする。`blocked` / `deferred` / `rejected` や提出しただけのpending状態はノルマへ数えない。3件は停止上限ではない。
-- **探索モード**: 今回のrunで最低4つの materially distinct なDiscovery roundを耐久保存する。4 roundは停止上限ではない。**候補0件のroundも、正規precheckから結果まで完了し、別軸として耐久保存されたなら1 roundに数える。新規候補が見つかっても4 roundのカウントをリセットしない。** 単一roundの0件・重複のみでは終了しない。
+- **読解モード**: 今回の起動中に **Research / Audit 合計で成功完了を最低3件**作る。Research job 1件とAudit job 1件は、同じ論文に対するものでも**別々に1件ずつ**数える。Researchは一次資料全文→5スロット→preflight→不変submission→submission result成功→最新mainへの反映確認まで、Auditも対応する不変submission→成功result→最新mainへの反映確認までを1件の完了とする。`blocked` / `deferred` / `rejected` や提出しただけのpending状態はノルマへ数えない。3件は停止上限ではない。
+- **探索モード**: 今回のrunで最低4つの**成功した正規schema v3 precheck**を完了させ、そのprecheckに対応するDiscovery submission/resultまで耐久反映する。**1つのprecheck `request_id` = 1ラウンド**と数える。同じprecheckから候補を複数submissionへ分割しても1ラウンドのままであり、逆に別の成功precheckなら同じprovider・同じ探索元でも別ラウンドとして数える。候補0件の成功precheckも、0件submission/resultまで正規経路を完了すれば1ラウンドに数える。4ラウンドは停止上限ではない。
 
 handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Library双方への耐久保存不能などのhard stopはノルマより優先する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
 ## 2.1 正規スクリプトを直接実行できない環境のfast-lane transport
@@ -68,7 +68,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 ## 3. 読解（Research / Audit）の共通処理ループ
 
 1. 最新queueと現在の担当確保状態（claim state）を取得する。
-2. priority最上位の実行可能jobを**1件だけ**担当確保する。`max_jobs=1`。同一ワーカーが未完了claimを複数保持しない。
+2. priority最上位の実行可能jobを**1件だけ**担当確保する。`max_jobs=1`。同一ワーカーが未完了claimを複数保持しない。ただし**Audit starvation防止をpriorityより優先する**。今回runの成功完了を3件ずつのブロックとして数え、ready Auditが存在するブロックでは少なくとも1件Auditを処理する。ブロック内で先に2件ともResearchを完了し、まだAuditを完了していない場合、3件目のclaim requestは `job_types: ["audit"]` に限定する。それ以外は `job_types: ["research", "audit"]` で通常priority順に選ぶ。
 3. claim result待ちなら同じ `request_id` を保持する。別requestを発行して回避しない。次の安全な判断に結果が必要な場合だけ10秒の実時間間隔で同じ対象を再確認する。
 4. claim resultの `record_bank` / `record_bank_fallback` をそのまま使う。ワーカーが別bankを選び直さない。
 5. 一次資料本文を最後まで読み、抄録や検索断片から欠落情報を推測しない。
@@ -97,7 +97,7 @@ Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/di
 4. **1経路の取得失敗をwhole-run failureにしない。** materially distinctな公式経路を試し、なお全文取得不能ならstatus-only `blocked` を不変submissionとして耐久保存し、対応resultが `ok=true` の終端状態になって最新mainへ反映されたことを確認してから次の論文へ進む。status-only `blocked` / `deferred` / `rejected` は、Scheduled Chatが最小の不変JSON descriptorを `.survey/work-queue/submissions/research/` または `audit/` へ直接保存し、既存のsubmission laneに処理させる。ローカルPythonや保存前canonicalizerの実行を前提にしない。descriptorは `schema_version` / `transport_version` / `kind` / `attempt_id` / `job_id` / `claim_id` / `worker_id` / `status` / `reason` を基本とし、取得済みなら `retrieval_evidence` / `blocked_at` を加えてよい。`record_bank` / `paper_path` / `record_slots` / `expected_blob_sha` その他のrecord transport fieldはstatus-only descriptorへ混在させない。一時障害の `blocked` と、一次証拠で再試行不要と確定した `rejected` を混同しない。
 5. **非同期待ちでも論文単位の直列性を崩さない。** claim/result/submissionの同じIDを保持して所定間隔で確認する。submission待ち中は次論文のclaim・一次資料取得・書誌確認へ進まず、同じ論文のrepair準備、identity/queue同期など次論文を取得しない作業だけを行う。未完了claimを増やしたり同一requestを重複発行しない。
 6. **canonical stateを再利用する。** claim前・submission後・repair時に最新queue、identity、rejection ledger、result、record bankを使い、重複claim・重複探索・重複取得を避ける。Research / Audit claimは常に1件だけ保持し、成功完了またはstatus-only submissionの `ok=true` 終端resultと最新main反映を確認した後にだけ次へ進む。
-7. **Research / Audit 合計3件ノルマは維持する。** `research_audit_completed_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。成功resultと最新main反映を確認したResearchまたはAuditだけを1件として数える。3件到達は停止上限ではなく、continuation/finalization gateが継続を要求するなら次のResearch / Auditへ進む。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
+7. **Research / Audit 合計3件ノルマは維持する。** `research_audit_completed_this_invocation < 3` の間は、hard stopまたはhandoff guardでない限り読解を継続する。成功resultと最新main反映を確認したResearchまたはAuditだけを1件として数え、同一論文のResearchとAuditも別jobとしてそれぞれ1件に数える。ready Auditが存在するなら3件ブロックごとに最低1件Auditを含める。3件到達は停止上限ではなく、600秒handoff guardに入るまで、または安全に実行可能な作業が尽きるまで同じモードで継続する。取得枠を節約するため、再取得より既存成果の局所修復を優先する。
 
 ## 4. 探索（Discovery）の共通入口
 
@@ -163,21 +163,23 @@ target_unseen: 20
 
 ### 4.2 探索ノルマ
 
-探索モードでは、hard stopまたはhandoff guardがない限り、**今回のrunで合計4つの materially distinct なDiscovery round**を耐久保存する。カウントはrun開始時に0から始め、新規候補を発見してもリセットしない。候補0件や最終重複排除で追加0件になったroundでも、正規schema v3 precheckからsubmission/resultまで完了し、別の探索軸として耐久保存されていれば1 roundとして数える。4 roundは停止上限ではない。1 round完了、0件、重複のみ、単一provider障害、単一探索軸の飽和は終了理由にしない。4 round到達後も有望な次軸がある場合は継続する。
+探索モードでは、hard stopまたはhandoff guardがない限り、**今回のrunで成功した正規schema v3 precheckを合計4回**完了させ、それぞれをDiscovery submission/resultまで耐久反映する。ラウンドIDはprecheckの `request_id` とし、カウントはrun開始時に0から始める。1 precheckから強候補が6件以上出て `5 + 残り` の複数submissionに分割しても**1ラウンド**である。別precheckが成功すれば、同じprovider・同じ固定ソースでも別ラウンドとして数える。候補0件でも成功precheckと0件submission/resultまで完了すれば1ラウンドである。失敗・pendingのprecheckは数えない。4ラウンドは停止上限ではなく、600秒handoff guardに入るまで、または正規経路で安全に実行可能な探索が尽きるまで探索を続ける。
 
 ### 4.3 Candidate投入
 
 Discoveryは軽量評価だけを行う。title、abstract、書誌、一次資料の存在、テーマ適合性、新規性の見込みを確認し、全文精読はResearchへ送る。
 
-**Candidate priorityには、テーマ適合性・重要性だけでなく「新しさ」と「主要な査読会議・学会への採択実績」も加味する。** これらはResearchの読む順を決めるための補助点であり、テーマとの直接性や研究上の重要性を逆転させるほど過大に重み付けしない。
+**Candidate priorityは0〜100点とし、基礎評価はワーカー判断を残しつつ、既存系統との関連・新しさ・venueが実際に読む順を動かす重みを持つようにする。** 推奨計算は `priority = min(100, base + lineage + recency + venue)` とする。
 
-- **新しさ（recency）**: 公開・採択時期が新しい候補を加点する目安として、直近6か月は `+4`、6〜12か月は `+3`、12〜24か月は `+1`、それ以前は `+0` とする。基礎的重要論文は古さだけで減点・除外しない。
-- **主要会議・学会採択（major-venue acceptance）**: NeurIPS / ICML / ICLR / MLSys / OSDI / SOSP / NSDI / USENIX ATC / EuroSys / ASPLOS / ISCA / MICRO / HPCA 等、その分野で主要とみなされる査読付き会議・学会への採択が既知なら `+3` を目安に加点する。その他の信頼できる査読付きvenueへの採択が既知なら `+1` を目安とする。venue名だけで機械的に判断せず、対象分野との対応を優先する。
-- **情報不明時**: 採択状況・venueが不明なら `+0` とし、推測しない。arXivのみであること自体を減点理由にはしない。
-- **追加ネットアクセス禁止**: 新しさや採択状況の採点だけを目的として追加のWeb/APIアクセスを発生させない。schema v3 precheck、既に取得したOpenAlex / Semantic Scholar / arXiv / OpenReview /会議公式等の結果、既存metadata、一次資料中の書誌情報に含まれている範囲だけを使う。既存取得情報にない場合は未確認のまま `+0` とする。
-- candidateの `reason` には、priorityを押し上げた主要因が新しさ・主要venue採択である場合、その事実を短く残す。採択が確認できないものを「採択済み」と書かない。
+- **base: 0〜55点** — テーマ適合性、技術的重要性、得られる知見、実装・評価の有用性をまとめてワーカーが判断する。ここは固定チェックリストで機械化しない。
+- **既存系統への関連度（lineage）: 0〜20点** — 既収録論文の直接引用・被引用、明確な後継/改良/比較対象で既存系統を直接更新する候補は `+20`、同一サブテーマに明確な差分を加える候補は `+10`、広いテーマ一致だけなら `+0` を目安とする。
+- **新しさ（recency）: 0〜15点** — 直近6か月 `+15`、6〜12か月 `+10`、12〜24か月 `+5`、それ以前 `+0`。基礎的重要論文は古さだけで除外しない。
+- **査読venue: 0〜10点** — NeurIPS / ICML / ICLR / MLSys / OSDI / SOSP / NSDI / USENIX ATC / EuroSys / ASPLOS / ISCA / MICRO / HPCA 等、対象分野の主要査読venueへの採択が既知なら `+10`、その他の信頼できる査読付きvenueは `+4`、不明またはarXivのみなら `+0`。推測しない。
+- **Research投入下限**: 現行queueの正規実装に合わせ `priority >= 40` をCandidate→Research投入の下限とする。ただし40点を満たすためにbaseを水増ししない。弱い候補はborderline/unrelatedへ送る。
+- **追加ネットアクセス禁止**: priority採点だけを目的として追加のWeb/APIアクセスを発生させない。precheckや既取得metadata、一次資料中に既にある情報だけを使い、不明項目は0点とする。
+- candidateの `reason` には、lineage / recency / venueのうちpriorityを大きく押し上げた要因を短く残す。可能なら `priority_breakdown` に `base` / `lineage` / `recency` / `venue` / `total` を残す。
 
-1回のDiscovery submissionへ送るcandidateは0〜5件。**5件はrun上限ではなく1 submissionの上限**である。
+1回のDiscovery submissionへ送るcandidateは0〜5件。**5件はrun上限でもround上限でもなく、1 submissionの上限**である。1回のprecheckで評価後に強候補が6件以上残った場合は、同じprecheck result / receiptを参照した複数submissionへ `5 + 残り` で分割し、強候補をすべてCandidate化する。複数submissionに分けても探索ラウンド数は1のままとする。
 
 Discoveryのmulti-round submissionは、どちらのwork mixから探索を選んだ場合でも自己記述型（self-describing）を使い、存在しないDiscovery `job_id` を合成しない。candidate投入前に最新HEAD / identity / queueを再確認する。
 
@@ -217,8 +219,10 @@ GitHub write失敗時:
 1. 対象の最新blob SHA / repo状態を取り直し、その対象だけ1回再試行。
 2. まだ失敗する場合、そのrun最初のwrite失敗に限り `.survey/work-queue/transport/health-probe.json` を1回更新。
 3. probe成功 → 対象固有障害。影響payloadだけLibraryへcheckpointし、他のGitHub writeは継続。
-4. probe失敗 → run-wide障害。そのrunではGitHub writeを繰り返さず、Libraryへ耐久保存して作業継続。
+4. probe失敗 → run-wide障害。そのrunではGitHub writeを繰り返さない。Research / Audit中なら現在の1論文だけをLibraryへcheckpointし、GitHub上の成功resultと最新main反映を確認できないため**次の論文へ進まない**。Discovery中も正規precheck/result要件を飛ばして新ラウンドを捏造せず、既に得た成果だけをLibraryへ耐久保存する。
 5. GitHub direct writeとLibrary保存の両方が不能な場合だけ、未保存成果を増やす前に停止。
+
+**Scheduled Task自体を一時停止・無効化してはならない。** GitHub/API/Actions/Library障害、今回runのhard stop、ノルマ未達、その他の一時障害があっても、Scheduled Chat / automationのenabled状態は維持する。停止とは今回runの安全終了だけを意味し、将来runのスケジュール停止を意味しない。
 
 Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと完全5スロットを持たせる。復旧は `.survey/work-queue/fallback-inbox/<id>.json` から現行immutable submissionへ収束させる。
 
