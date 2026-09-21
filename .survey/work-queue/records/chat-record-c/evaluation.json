@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2244242a4420892ce2fb1e0c",
+  "attempt_id": "attempt-a945ec69230dbe8bbbb01bc4",
   "job_id": "job-research-c27f3a6ec993f9ab",
   "data": {
     "hardware": "A100 platformはNVLink接続NVIDIA A100 80GB SXM4×4（各312 FP16/BF16 TFLOP/s、2.04 TB/s HBM2e）。GB10 platformはNVIDIA DGX Spark / GB10 Grace Blackwell Superchip（256 FP16/BF16 TFLOP/s、128GB coherent LPDDR5x、273 GB/s）。Qwen3.5-4B/9B/27Bは各platformでTP1、Qwen3.5-122B-A10BはA100 4GPU TP4で評価する。",
@@ -11,7 +11,7 @@
     "scope": "主評価はQwen3.5 familyのGated DeltaNet型hybrid attentionで、code/dialogue/math/summarizationおよびagent workloadを対象とする。A100と帯域特性の異なるGB10、単GPUから122B TP4までを含みsystem generalityは広い。一方、他のlinear-attention recurrence、別drafter、異なるGPU世代、training workloadは評価しておらず、Boleのclosed-form algebraが直接適用できるrecurrenceに範囲が限定される。"
   },
   "reservation": {
-    "claim_id": "claim-2244242a4420892ce2fb1e0c",
+    "claim_id": "claim-a945ec69230dbe8bbbb01bc4",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
