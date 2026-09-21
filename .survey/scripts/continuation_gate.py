@@ -291,6 +291,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = "すでに担当確保済みのResearch/Auditを継続し、提出・結果確認または正規repairまで進めます。"
     elif required_action == "WAIT_FOR_READY_RESEARCH_AUDIT":
         next_action_message = "現在claim可能なResearch/Auditが0件です。空のclaim requestを出さず10秒待機し、最新queueを再確認します。run中にDiscoveryへ切り替えません。"
+        progress_notice = next_action_message
     elif required_action == "CONTINUE_WORK":
         next_action_message = "最新queue/stateを再取得し、次の独立Research/Auditまたは許可された独立作業へ進みます。"
     elif required_action == "DISCOVER_AGAIN":
@@ -306,6 +307,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "decision": decision,
         "required_action": required_action,
         "finalization_allowed": finalization_allowed,
+        "hard_stop": bool(reasons),
         "stop_reasons": reasons,
         "candidate_inventory": candidate_inventory,
         "work_mode": work_mode,
