@@ -12,23 +12,13 @@
   "source_url": "https://www.semanticscholar.org/paper/2194e3289290c79fa67dbe7fed4b4ac336726b03",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md",
   "selection_reason": "GPU memory offloadで遊休PCIe linkをscale-up fabric越しにpoolしrelay GPU経由で共有。model loading first-token latency最大40%削減、KV-offloaded inference throughput最大1.6倍。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T22:17:43+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | results.overview must explain the main result and its practical meaning",
-  "validation_errors": [
-    "problem_method.method_overview must explain the end-to-end mechanism",
-    "problem_method.components[0].description is too short",
-    "problem_method.components[1].description is too short",
-    "problem_method.components[2].description is too short",
-    "problem_method.components[3].description is too short",
-    "problem_method.components[4].description is too short",
-    "results.overview must explain the main result and its practical meaning"
-  ],
-  "last_validation_failed_at": "2026-09-21T02:13:09+00:00"
+  "completed_at": "2026-09-21T02:15:40+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-b363bc418c2e7f87eb737996.json"
 }
