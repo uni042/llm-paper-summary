@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 12:12:16 JST**
+> 自動生成: **2026-09-21 12:12:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **339** |
+| 収録候補論文 | **338** |
 | 未claim Research job | **338** |
-| 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-21 12:07:26 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **72** |
+| 最終検証済みResearch収録 | **09-21 12:12:28 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **339** |
+| canonical_id確認済みの一意な候補論文 | **338** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **339** |
+| 非終端Research job合計 | **338** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **6** | **4** | **0** | **1** | **0** | — |
+| Research | **10** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **16** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **25** | **7** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **26** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-21 12:12:28 JST** [research] `DOI:10.1145/3838177.3841726` — MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson
+  - job: `.survey/work-queue/jobs/job-research-a5925137e7067bb8.json`
+  - result: `.survey/work-queue/results/research/attempt-3356d957f35728223aecac23.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3356d957f35728223aecac23.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md`
 - **09-21 12:07:26 JST** [research] `arXiv:2604.20156` — Temporally Extended Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-3c095c39c7faada9.json`
   - result: `.survey/work-queue/results/research/attempt-61f8cc953f4da08391077bca.json` (`ok=true`)
@@ -207,10 +212,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3838177.3841726` — MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson / worker `scheduled-chat-llm-paper-00`
-  - claim: **09-21 12:11:20 JST** / heartbeat: **—** / lease expiry: **09-21 13:41:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a5925137e7067bb8.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -230,7 +233,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **339** |
+| ready | **338** |
 
 ### 候補の重複・識別情報欠損
 
@@ -250,7 +253,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **872** |
+| inference/training/survey配下の論文Markdown実体 | **873** |
 
 ### immutable submissionの未照合
 
@@ -258,8 +261,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **332** |
-| └ Research | **146** |
+| 成功result未照合のimmutable submission | **331** |
+| └ Research | **145** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
