@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-48084054d6e46e001b7e5078","job_id":"job-research-4e59361c33e66a27","data":{"hardware":"全評価は単一Apple M4 Max、128GB統合メモリ上で実施する。実験機自体は128GBだが、各モデルの実測ピーク容量を用いて16GBまたは32GBの消費者向け配置予算に収まることを検証する。","software":"主実装はMLXとMetal融合カーネル。さらにllama.cppへGGML_TYPE_ISOQUANT3_0を追加して移植性を評価する。補足資料にはIsoQuant、Metalカーネル、専門家退避、ベンチマークスクリプトを含む匿名コードアーカイブをApache 2.0で提供すると記載される。","methodology":"品質はQwen3-30B-A3B、Gemma 4-26B-A4B、Nemotron-H 120Bで2048トークン文脈の困惑度差を測り、TurboQuant 3ビットと比較する。端から端まではGemma 4-26B-A4B、Qwen3.6-35B-A3B、Nemotron-H 120Bについて生成速度、ピークメモリ、12問の品質ゲート、2時間連続生成を測る。Gemma 4では専門家退避の有無とFP16鍵値/IsoQuantを交差させ、3独立実行で分散も確認する。長文脈はQwen3.6で32KのWikiText-103困惑度と4K、8K、16K、32KのNeedle-in-a-Haystack検索を追加評価する。llama.cppではTurboQuant、融合IsoQuant、非融合IsoQuantのプロンプト・生成速度を比較する。","scope":"Apple Silicon上の消費者向け単一機器推論が中心で、学習は行わない。通常の多頭注意を主対象とし、MLAで内容空間とRoPE位置空間を分けるDeepSeek-V2系は現実装の対象外。主要困惑度評価は2Kで、32K検証はQwen3.6に限定される。生産用多クライアント配信基盤の拡張性も未解決である。"},"reservation":{"claim_id":"claim-48084054d6e46e001b7e5078","worker_id":"scheduled-chat-llm-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-0fc5c336f06ee67a27316c4a",
+  "job_id": "job-research-4e59361c33e66a27",
+  "data": {
+    "hardware": "全評価は単一Apple M4 Max、128GB統合メモリ上で実施する。実験機自体は128GBだが、各モデルの実測ピーク容量を用いて16GBまたは32GBの消費者向け配置予算に収まることを検証する。",
+    "software": "主実装はMLXとMetal融合カーネル。さらにllama.cppへGGML_TYPE_ISOQUANT3_0を追加して移植性を評価する。補足資料にはIsoQuant、Metalカーネル、専門家退避、ベンチマークスクリプトを含む匿名コードアーカイブをApache 2.0で提供すると記載される。",
+    "methodology": "品質はQwen3-30B-A3B、Gemma 4-26B-A4B、Nemotron-H 120Bで2048トークン文脈の困惑度差を測り、TurboQuant 3ビットと比較する。端から端まではGemma 4-26B-A4B、Qwen3.6-35B-A3B、Nemotron-H 120Bについて生成速度、ピークメモリ、12問の品質ゲート、2時間連続生成を測る。Gemma 4では専門家退避の有無とFP16鍵値/IsoQuantを交差させ、3独立実行で分散も確認する。長文脈はQwen3.6で32KのWikiText-103困惑度と4K、8K、16K、32KのNeedle-in-a-Haystack検索を追加評価する。llama.cppではTurboQuant、融合IsoQuant、非融合IsoQuantのプロンプト・生成速度を比較する。",
+    "scope": "Apple Silicon上の消費者向け単一機器推論が中心で、学習は行わない。通常の多頭注意を主対象とし、MLAで内容空間とRoPE位置空間を分けるDeepSeek-V2系は現実装の対象外。主要困惑度評価は2Kで、32K検証はQwen3.6に限定される。生産用多クライアント配信基盤の拡張性も未解決である。"
+  },
+  "reservation": {
+    "claim_id": "claim-0fc5c336f06ee67a27316c4a",
+    "worker_id": "scheduled-chat-llm-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
