@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 13:44:50 JST**
+> 自動生成: **2026-09-21 13:45:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **326** |
+| 収録候補論文 | **325** |
 | 未claim Research job | **325** |
 | 直近24hの検証済みResearch収録 | **67** |
-| 最終検証済みResearch収録 | **09-21 13:40:58 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-21 13:40:58 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **326** |
+| canonical_id確認済みの一意な候補論文 | **325** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **326** |
+| 非終端Research job合計 | **325** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **6** | **4** | **0** | **1** | **0** | — |
+| Research | **13** | **6** | **4** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **13** | **7** | **5** | **0** | **1** | **0** | **3** |
+| 合計 | **13** | **7** | **5** | **0** | **0** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -173,10 +173,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-llm-30`
-  - claim: **09-21 13:44:05 JST** / heartbeat: **—** / lease expiry: **09-21 15:14:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -196,7 +194,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **326** |
+| ready | **325** |
 
 ### 候補の重複・識別情報欠損
 
