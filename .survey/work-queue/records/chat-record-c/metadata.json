@@ -2,33 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-882a986d727aae3614a5b429",
-  "job_id": "job-research-68365ee603a68033",
-  "data": {
-    "canonical_id": "arXiv:2608.04974",
-    "arxiv_id": "2608.04974",
-    "doi": "10.48550/arXiv.2608.04974",
-    "title": "AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks",
-    "authors": ["Guotao Yang","Hao Chen","Rui Guo","Xinyu Li","Liang Zheng","Sheng Chen","Yitao Hu","Keqiu Li"],
-    "list_summary": "非対称回線向けの証明付き段階補正と確認済み要求間パイプラインを組み合わせ、クラウド・エッジ投機的復号の通信待ちと無効先読みを削減する。",
-    "summary": "クラウド側の大規模検証モデルとエッジ側の軽量ドラフトモデルを組み合わせる投機的復号において、上り回線が細い非対称ネットワークと、検証待ち中の同一要求先読みが生む無効計算を同時に扱う方式。通常の受理経路では候補トークンとドラフト確率だけを送信し、棄却時のみ段階的な補正情報を下り回線へ移す。さらに確認済み接頭辞を持つ独立要求だけを切り替えて処理し、未確定ブロックの子孫を生成しない。実機評価では三つのモデル対、二つの作業負荷、三つの非対称回線条件で最強比較対象に対して2.82〜28.03倍の出力トークンスループットを報告する。",
-    "source": "https://arxiv.org/abs/2608.04974",
-    "sources": ["https://arxiv.org/html/2608.04974v1","https://arxiv.org/pdf/2608.04974"],
-    "code": null,
-    "publication": "arXiv preprint",
-    "publication_type": "preprint",
-    "published": "2026-08-05",
-    "publication_status": "preprint",
-    "topics": ["投機的復号","クラウド・エッジ推論","非対称通信","要求スケジューリング"],
-    "implementation": "ZeroMQで接続した二つのPythonサービスとして実装。エッジはRTX 3090、クラウドはA100 GPU 4基で評価。公式コード公開URLは本文で確認できなかった。",
-    "last_checked": "2026-09-21",
-    "arxiv_categories": {"primary":"cs.DC","cross_list":[]},
-    "hardware_evaluation": "実機。エッジ側RTX 3090 1基、クラウド側A100 GPU 4基を使用し、Linux traffic controlとNetEmで三種類の上り・下り帯域を再現。",
-    "quality_effect": "標準の厳密補正に加えて、補正分布の全変動距離を証明可能に上限化する近似経路を持つ。要求単位の誤差予算を超える場合は提案ベースの厳密回復または完全分布へフォールバックする。",
-    "references": [],
-    "references_checked_at": "2026-09-21",
-    "references_source": "arXiv HTML v1 reference section checked in full; normalized reference identities were not separately imported in this run",
-    "references_total": 39
-  },
-  "reservation":{"claim_id":"claim-882a986d727aae3614a5b429","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-366d346973cd87c804efb287",
+  "job_id": "job-research-a748d42a4b0082c7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-366d346973cd87c804efb287",
+    "worker_id": "scheduled-chat-llm-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
