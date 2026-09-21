@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e4fcacccce96800ab6bbc123",
-  "job_id": "job-research-f837d96601e69237",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e4fcacccce96800ab6bbc123",
-    "worker_id": "scheduled-chat-llm-paper-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e4fcacccce96800ab6bbc123","job_id":"job-research-f837d96601e69237","data":{"hardware":"効率評価はNVIDIA H800 GPU、BF16で実施し、vLLM実サービス経路を用いる。","software":"主モデルQwen3-30B-A3Bに加えGLM-4.5-Air、DeepSeek-V2-Lite、Qwen3.5-35B-A3B、DeepSeek-V4-Flashで構造横断評価。vLLMプラグインとして実装し、保持集合選択と折り畳みはカスタムTriton演算子を使用する。","methodology":"校正は無ラベル32系列、各最大4096トークン、元出力ノルム重み、リッジ係数1e-3。品質はMATH500、AIME24、LiveCodeBenchV5、HumanEval+、IFEval、IFBench、GPQA-Diamond、MMLU-Pro。事前充填は直接Top-K削減、MC-MoE、MoDESと同一トークン予算で比較し、復号はREAP、SEREと比較する。事前充填のみ、復号のみ、共同高速化を分け、Qwen3では元Top-8に対してP4/P6、復号D32/D64等を評価。効率はvLLM上の初回トークン時間、出力トークン当たり時間、オフライン処理量を測定する。","scope":"主要品質結果はQwen3-30B-A3Bで、複数MoEへ横断確認する。射影は校正分布で推定した出力関係に依存し、極端に異なる分布や適切な近傍保持先がない元エキスパートでは再構成誤差が大きくなり得る。"},"reservation":{"claim_id":"claim-e4fcacccce96800ab6bbc123","worker_id":"scheduled-chat-llm-paper-30","worker_kind":"scheduled_chat"}}
