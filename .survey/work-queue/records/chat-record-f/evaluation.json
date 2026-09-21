@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-aca9c53285bc348bfc4689d8",
+  "attempt_id": "attempt-aa0974391067f03181a6541c",
   "job_id": "job-research-73f2d3c7c23735bb",
   "data": {
     "hardware": "主trackはApple M5 Pro 64GB、macOS 26.6。padding studyにM1 Pro 32GB/M1 Max 64GB、複数nodeに2×M4 Pro Mac mini 64GB、CUDA参照にDGX Spark GB10 128GB、忠実度参照にNVIDIA A100を使用する。M5 ProのMetal recommendedMaxWorkingSetSizeは51.84GB。",
@@ -11,7 +11,7 @@
     "scope": "主auditは1台のM5 Proと小型3モデルを中心に9 stackを横断し、速度・メモリ・忠実度・モデル対応を測る。27B/35B追試と2node比較は選抜stackのみ。DGX Sparkは速度・latency参照のみでmemory/fidelityを測らない。長文脈10K超や1K超の長文生成は主serving splitの対象外で、formalなrun-to-run variance推定も行わない。"
   },
   "reservation": {
-    "claim_id": "claim-aca9c53285bc348bfc4689d8",
+    "claim_id": "claim-aa0974391067f03181a6541c",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
