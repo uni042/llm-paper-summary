@@ -1,16 +1,24 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-740f823080251ecc292d1b33","job_id":"job-research-3eb9c6f535e789d0",
- "data":{
-  "summary":"階層化そのものは1:8:64の容量比でsessions/GPUを約73倍、cost/sessionを62.04倍改善するが、これは配置ポリシーではなく容量増加の効果だった。ポリシー差はbatch=1のthroughputではほぼ見えず、PCIe移動量とTTFTに現れる。chatはrecency、agent/document QAはreuse-frequencyが既定条件で最良となり、予測とprefetchは期待ほど効かなかった。",
-  "key_results":[
-   "既定1:8:64階層でsessions/GPUはchat 0.1075→7.8495（73.02×）、agent 0.0794→5.7961（73.00×）、document QA 0.0430→3.1405（73.03×）。cost/sessionは各 workload で62.04×低下した。",
-   "chatのPCIe migration trafficはrecency 27.38GBに対しreuse-frequency 62.99GBで2.30×差。agentはreuse-frequency 49.36GBでrecency系より1.60×、document QAは48.23GBで1.63×有利だった。",
-   "predictive EWMAはagent 53.16GB、document QA 48.45GBでいずれもreuse-frequencyに次ぐ2位。既存predicted-reuseはrecencyとbyte-identicalで、独立した予測ポリシーになっていなかった。",
-   "prefetchは評価gridの全cellでcausal predictorがoracle可能利得の正の割合を獲得できず、未来を知るoracleすら半数超のcellでno-prefetchより遅かった。競合リンク上の投機転送が需要fetchを遅らせるため。",
-   "固定192 blocksのcost-latency sweepではcost/1k sessionsが45,493〜381,287ドルの8.38×幅で変わる一方、P99 TTFT変動は最大でもceilingの10.1%。最安frontier点はHBM/DRAM/SSD=10/86/96。",
-   "HBM=32、DRAM=64でSSD depthを8〜1024へ増やすとsessions/GPUは10.77×増えるが、chatとagentはGPU-only P99 TTFT SLOを一度も満たさない。document QAのみSSD depth 64でSLOに到達し、最深点でもheadroomは0.000ms、mean stall 4.42ms。"
-  ],
-  "additional_findings":"winning policy時のDRAM hitはchat 61.87%、agent 72.65%、document QA 68.48%で、SSD hitはagent 6.07%、document QA 8.80%、chat 0%。decode computeは約13.2445ms/tokenでfetch stallは全workloadでTPOTの1%未満。chat throughputはpolicyによらず約1307.60 tok/sで、batch=1ではthroughputよりmigration trafficが配置品質を表す。"
- },
- "reservation":{"claim_id":"claim-740f823080251ecc292d1b33","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-2022d5354abb12031eade572",
+  "job_id": "job-research-3eb9c6f535e789d0",
+  "data": {
+    "summary": "階層化そのものは1:8:64の容量比でsessions/GPUを約73倍、cost/sessionを62.04倍改善するが、これは配置ポリシーではなく容量増加の効果だった。ポリシー差はbatch=1のthroughputではほぼ見えず、PCIe移動量とTTFTに現れる。chatはrecency、agent/document QAはreuse-frequencyが既定条件で最良となり、予測とprefetchは期待ほど効かなかった。",
+    "key_results": [
+      "既定1:8:64階層でsessions/GPUはchat 0.1075→7.8495（73.02×）、agent 0.0794→5.7961（73.00×）、document QA 0.0430→3.1405（73.03×）。cost/sessionは各 workload で62.04×低下した。",
+      "chatのPCIe migration trafficはrecency 27.38GBに対しreuse-frequency 62.99GBで2.30×差。agentはreuse-frequency 49.36GBでrecency系より1.60×、document QAは48.23GBで1.63×有利だった。",
+      "predictive EWMAはagent 53.16GB、document QA 48.45GBでいずれもreuse-frequencyに次ぐ2位。既存predicted-reuseはrecencyとbyte-identicalで、独立した予測ポリシーになっていなかった。",
+      "prefetchは評価gridの全cellでcausal predictorがoracle可能利得の正の割合を獲得できず、未来を知るoracleすら半数超のcellでno-prefetchより遅かった。競合リンク上の投機転送が需要fetchを遅らせるため。",
+      "固定192 blocksのcost-latency sweepではcost/1k sessionsが45,493〜381,287ドルの8.38×幅で変わる一方、P99 TTFT変動は最大でもceilingの10.1%。最安frontier点はHBM/DRAM/SSD=10/86/96。",
+      "HBM=32、DRAM=64でSSD depthを8〜1024へ増やすとsessions/GPUは10.77×増えるが、chatとagentはGPU-only P99 TTFT SLOを一度も満たさない。document QAのみSSD depth 64でSLOに到達し、最深点でもheadroomは0.000ms、mean stall 4.42ms。"
+    ],
+    "additional_findings": "winning policy時のDRAM hitはchat 61.87%、agent 72.65%、document QA 68.48%で、SSD hitはagent 6.07%、document QA 8.80%、chat 0%。decode computeは約13.2445ms/tokenでfetch stallは全workloadでTPOTの1%未満。chat throughputはpolicyによらず約1307.60 tok/sで、batch=1ではthroughputよりmigration trafficが配置品質を表す。"
+  },
+  "reservation": {
+    "claim_id": "claim-2022d5354abb12031eade572",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }

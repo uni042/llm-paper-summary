@@ -1,12 +1,38 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-740f823080251ecc292d1b33","job_id":"job-research-3eb9c6f535e789d0",
- "data":{
-  "hardware":"単一GPUを対象とする離散イベントシミュレーション。メモリ階層はGPU HBM、CPU DRAM、SSDで構成し、既定のtier shapeは容量比1:8:64。実行時間はrandom-forest predictorで較正する。batch=1を中心に評価し、HBM/DRAM/SSDの価格仮定はそれぞれ187.50/3.50/0.08ドル/GB。",
-  "models":"特定の実GPU上モデルをend-to-end実行する実験ではなく、KVブロックアクセスとデコード実行時間をモデル化したシミュレータ評価。論文はPagedAttention型固定ブロックを前提とし、モデル固有の量子化・KV evictionは固定して配置効果を隔離する。",
-  "workloads":"3種類。長いmulti-turn chatは最近性と成長context、agent loopは最近のcontext再訪、repeated document QAは強いprefix reuseを持つ。主要policy gridのchatは6並行session×4,000 accessで、比較用に単一24,000-access sessionも保存する。",
-  "baselines":["GPU-only（resume時に再計算）","full-CPU-offload（FlexGen型）","prefix-reuse（RadixAttention型）","recency/LRU","reuse-frequency","predicted-reuse","predictive（EWMA next-touch）"],
-  "metrics":["tier別hit rate","P99 TTFT","TPOTとfetch stall","PCIe migration traffic","sessions per GPU","throughput","cost per session","固定予算cost-latency frontier","SLOを満たすSSD depth"],
-  "evaluation_setup":"policy×workload×cache-sizeを掃引し、prefetchはnone、causal predictor、future-reading oracleを比較する。既定tier shape 1:8:64で容量・コストを比較した後、総192 blocks固定で24種類のHBM/DRAM/SSD構成を各3 workload×4 policyについて評価する。さらにHBM=32、DRAM=64、SSD=8〜1024 blocksを掃引し、GPU-only P99 TTFT（chat 16.40ms、agent 56.04ms、document QA 62.45ms）をSLOに用いる。"
- },
- "reservation":{"claim_id":"claim-740f823080251ecc292d1b33","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-2022d5354abb12031eade572",
+  "job_id": "job-research-3eb9c6f535e789d0",
+  "data": {
+    "hardware": "単一GPUを対象とする離散イベントシミュレーション。メモリ階層はGPU HBM、CPU DRAM、SSDで構成し、既定のtier shapeは容量比1:8:64。実行時間はrandom-forest predictorで較正する。batch=1を中心に評価し、HBM/DRAM/SSDの価格仮定はそれぞれ187.50/3.50/0.08ドル/GB。",
+    "models": "特定の実GPU上モデルをend-to-end実行する実験ではなく、KVブロックアクセスとデコード実行時間をモデル化したシミュレータ評価。論文はPagedAttention型固定ブロックを前提とし、モデル固有の量子化・KV evictionは固定して配置効果を隔離する。",
+    "workloads": "3種類。長いmulti-turn chatは最近性と成長context、agent loopは最近のcontext再訪、repeated document QAは強いprefix reuseを持つ。主要policy gridのchatは6並行session×4,000 accessで、比較用に単一24,000-access sessionも保存する。",
+    "baselines": [
+      "GPU-only（resume時に再計算）",
+      "full-CPU-offload（FlexGen型）",
+      "prefix-reuse（RadixAttention型）",
+      "recency/LRU",
+      "reuse-frequency",
+      "predicted-reuse",
+      "predictive（EWMA next-touch）"
+    ],
+    "metrics": [
+      "tier別hit rate",
+      "P99 TTFT",
+      "TPOTとfetch stall",
+      "PCIe migration traffic",
+      "sessions per GPU",
+      "throughput",
+      "cost per session",
+      "固定予算cost-latency frontier",
+      "SLOを満たすSSD depth"
+    ],
+    "evaluation_setup": "policy×workload×cache-sizeを掃引し、prefetchはnone、causal predictor、future-reading oracleを比較する。既定tier shape 1:8:64で容量・コストを比較した後、総192 blocks固定で24種類のHBM/DRAM/SSD構成を各3 workload×4 policyについて評価する。さらにHBM=32、DRAM=64、SSD=8〜1024 blocksを掃引し、GPU-only P99 TTFT（chat 16.40ms、agent 56.04ms、document QA 62.45ms）をSLOに用いる。"
+  },
+  "reservation": {
+    "claim_id": "claim-2022d5354abb12031eade572",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
