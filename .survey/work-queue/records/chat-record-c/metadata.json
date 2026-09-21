@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-366d346973cd87c804efb287",
-  "job_id": "job-research-a748d42a4b0082c7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-366d346973cd87c804efb287",
-    "worker_id": "scheduled-chat-llm-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-366d346973cd87c804efb287","job_id":"job-research-a748d42a4b0082c7","data":{"canonical_id":"arXiv:2606.17107","arxiv_id":"2606.17107","doi":"10.48550/arXiv.2606.17107","title":"Models Take Notes at Prefill: KV Cache Can Be Editable and Composable","authors":["Bojie Li"],"list_summary":"プリフィル済みKVキャッシュを結論メモとして捉え、追記訂正による編集とRoPE再配置による部品合成で再プリフィルを回避する。","summary":"プリフィル時にモデルが可変フィールドの結論を後続の集約トークンへ書き込み、復号時には元フィールドよりそのメモを読むことを因果介入で示す。この機構を利用し、古い結論を一行の追記訂正で上書きする編集と、事前計算したスキルのKVをRoPE位置再配置して任意文脈へ挿入する合成を提案する。オンラインvLLMでは接頭辞キャッシュ命中率98.5%を維持し、p90最初のトークンまでの時間を53〜398倍短縮した。","source":"https://arxiv.org/abs/2606.17107","sources":["https://arxiv.org/abs/2606.17107","https://github.com/19PINE-AI/programmable-kv/tree/main/paper"],"code":"https://github.com/19PINE-AI/programmable-kv","publication":"arXiv preprint","publication_type":"preprint","published":"2026-06-14","publication_status":"preprint","topics":["KVキャッシュ編集","KVキャッシュ合成","接頭辞キャッシュ","LLMサービング"],"implementation":"公式Apache-2.0実装、実験記録、論文ソースを公開。編集用EditableContext、機構解析、オンラインvLLM評価、ユーザーメモリ評価を含む。","last_checked":"2026-09-21","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"hardware_evaluation":"主実験はRTX PRO 6000 Blackwell 96GB 1基。オンラインvLLM V1エンジン、CUDA graphs、連続バッチ処理、自動接頭辞キャッシュ、Poisson到着で評価。","quality_effect":"追記訂正は完全再計算と同じ意思決定を狙う。合成は12モデルでlogit cosine 0.90〜0.999を示すが、推論連鎖の逐語一致や長い滑動窓チャンク、交差参照では差が残る。","references":[],"references_checked_at":"2026-09-21","references_source":"official paper source and arXiv full text checked","references_total":0},"reservation":{"claim_id":"claim-366d346973cd87c804efb287","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}}
