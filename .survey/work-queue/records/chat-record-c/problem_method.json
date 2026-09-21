@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-032318afa278e3cdd42d8d99",
-  "job_id": "job-research-5c8ae1bd28277ef1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-032318afa278e3cdd42d8d99",
-    "worker_id": "scheduled-chat-hourly30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-032318afa278e3cdd42d8d99","job_id":"job-research-5c8ae1bd28277ef1","data":{"problem":"LLM推論はKVオフロード、prefill-decode分離、並列化、計算通信重畳によりPCIe・NVLink・RDMAを同時利用するが、既存ランタイムはGPUファブリックをbest-effortな黒箱として扱う。その結果、NVLink DMAとSMのHBMアクセス、GPUDirect RDMAとCPU-GPU転送が同一資源を競合し、ハードウェア固有の暗黙優先度によってSLOやTTFTが悪化する。","novelty":"GPUWeaverはGPUファブリックを明示的なスケジューリング対象とし、アプリケーションが通信フローの優先度・性能目標を登録し、NVML/DCGM等のファブリック信号と要求遅延・転送遅延等のアプリ信号を監視して、通信注入率を閉ループ制御する。論文はHBM/NVLinkとPCIe/RDMAの方向依存競合を実測し、制御可能なソフトウェアノブへ結び付ける。","method_overview":"ランタイムをLLMアプリケーションと通信ライブラリの間に置き、RDMA、collective、host-device copyをフローとして登録する。PCIe/NVLink/NIC/HBM利用率とアプリ進捗を監視し、高優先フローが目標未達かつ共有ファブリック飽和なら帯域予算を増やし、健全ならbackgroundへ戻す。RDMAではservice level・NIC QoS・rate limiting、host-device転送ではstream priority、launch gating、chunked copy、cooperative yieldを利用する。vLLM+MooncakeケースではPD KV転送を保護し、背景KV offloadへ遅延を注入する。","components":[{"name":"競合診断","description":"HBMアクセス対NVLink、GPUDirect RDMA対host-device copyを分離測定し、共有仲裁領域と方向依存の暗黙優先度を特定する。"},{"name":"閉ループスケジューラ","description":"インフラ信号とアプリ信号、QoS目標を入力し、フロー別帯域予算・pacingを制御窓ごとに更新する。"},{"name":"ソフトウェア可視制御ノブ","description":"RDMAのQoS/rate limitと、CUDA転送のstream priority・gating・chunking・yieldを組み合わせ、共有ファブリックへの注入量を調整する。"},{"name":"KVオフロードケース","description":"vLLM+MooncakeでPD RDMA KV転送を高優先、GPU→CPU KV offloadを背景フローとして扱い、前ラウンドの帯域・TTFT・backlogからoffload delayを調整する。"}],"system_design":"アプリケーション意図→観測→根因判定→注入制御を一つの制御ループにし、ハードウェア仲裁自体を変更せず、その手前で通信の投入タイミングと帯域を制御する。"},"reservation":{"claim_id":"claim-032318afa278e3cdd42d8d99","worker_id":"scheduled-chat-hourly30","worker_kind":"scheduled_chat"}}
