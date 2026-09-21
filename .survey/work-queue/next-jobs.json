@@ -19,24 +19,10 @@
   },
   "claiming": {
     "ready_research_audit": 353,
-    "actively_claimed": 0,
-    "claimable": 353
+    "actively_claimed": 1,
+    "claimable": 352
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-b865a4d050e3e427",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "DOI:10.14778/3827998.3828047",
-      "title": "PolarKV: Tier Locally, Serve Globally-A KV Cache over Cloud Memory and Storage",
-      "source_url": "https://www.semanticscholar.org/paper/4c43bf9b5db42abd015e006496498ef7a013aa7a",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-03793bd297310cea",
       "type": "research",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-85f2bc3e024d7c6c",
+      "type": "research",
+      "lane": null,
+      "priority": 100,
+      "canonical_id": "DOI:10.1145/3789240.3829347",
+      "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-3eaac796b1c5-dynamoserve-a-distributed-tiered-memory-system-for-multi-tenant-llm-serving.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T00:43:33+00:00"
+  "generated_at": "2026-09-21T01:05:34+00:00"
 }
