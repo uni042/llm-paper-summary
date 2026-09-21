@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e608a3ec3c8dd0be717a2842",
-  "job_id": "job-research-a5925137e7067bb8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e608a3ec3c8dd0be717a2842",
-    "worker_id": "scheduled-chat-llm-paper-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e608a3ec3c8dd0be717a2842","job_id":"job-research-a5925137e7067bb8","data":{"limitations":"評価はJetson Orin Nano Super 1機種と代表的ROS風タスクに限定され、他社SoCやNPUを含む構成では競合特性と制御手段が異なる可能性がある。締切値も認証済み安全要件ではない。制御はプロセス単位の停止・再開で粗く、点群処理では締切違反が残る。LLM品質や完全なロボット閉ループ指標も未評価である。","differences":"CPUコア優先度やROS実行器のスケジューリングではなく、CPUとGPUが共有する統合メモリ制御器を隠れた競合資源として扱う。単純な帯域閾値制御とも異なり、メモリ圧力と前景タスクの余裕時間・締切違反を組み合わせ、実害がある時だけLLMを止める。","implementation_status":"Jetson Orin Nano SuperとROS-LLM上で動作する試作実装を評価済み。ROS 2コールバック境界の計測、ACTMON監視、SIGSTOP/SIGCONTによる外部制御で構成され、既存LLMランタイムの内部変更は不要。より細粒度なトークン群・推論段階単位制御は将来課題。","research_positioning":"エッジLLM推論基盤の研究として、計算量やモデルメモリ容量だけでなく、統合メモリ帯域を実時間SLOと結び付けて扱う系統に位置する。特にJetsonのようなCPU/GPU共有メモリ機では、LLM側のスループット最大化だけではロボット全体の安全な応答性を保証できないことを実測で示し、OS・ランタイム協調制御の必要性を明確にする。"},"reservation":{"claim_id":"claim-e608a3ec3c8dd0be717a2842","worker_id":"scheduled-chat-llm-paper-00","worker_kind":"scheduled_chat"}}
