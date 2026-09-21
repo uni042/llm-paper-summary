@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 15:48:26 JST**
+> 自動生成: **2026-09-21 15:48:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **321** |
+| 収録候補論文 | **320** |
 | 未claim Research job | **319** |
-| 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-21 15:44:43 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **53** |
+| 最終検証済みResearch収録 | **09-21 15:48:38 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **321** |
+| canonical_id確認済みの一意な候補論文 | **320** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **321** |
+| 非終端Research job合計 | **320** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **6** | **4** | **0** | **2** | **0** | — |
+| Research | **15** | **6** | **4** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **14** | **7** | **5** | **0** | **2** | **0** | **3** |
+| 合計 | **15** | **7** | **5** | **0** | **1** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -63,6 +63,11 @@
 
 ### Research
 
+- **09-21 15:48:38 JST** [research] `arXiv:2608.24938` — ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration
+  - job: `.survey/work-queue/jobs/job-research-f837d96601e69237.json`
+  - result: `.survey/work-queue/results/research/attempt-edfac129f344bed99e666629.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-edfac129f344bed99e666629.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.24938-exfold-training-free-expert-folding.md`
 - **09-21 15:44:43 JST** [research] `arXiv:2609.06076` — Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment
   - job: `.survey/work-queue/jobs/job-research-3b1c7287727937a1.json`
   - result: `.survey/work-queue/results/research/attempt-820bde38d697073272d97db8.json` (`ok=true`)
@@ -108,11 +113,6 @@
   - result: `.survey/work-queue/results/research/attempt-5bd7d7676a2366c6d9993181.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5bd7d7676a2366c6d9993181.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.16338-breaking-the-1-58-bit-barrier-for-ternary-llms.md`
-- **09-21 11:20:46 JST** [research] `arXiv:2608.08081` — RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention
-  - job: `.survey/work-queue/jobs/job-research-4e59361c33e66a27.json`
-  - result: `.survey/work-queue/results/research/attempt-0fc5c336f06ee67a27316c4a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0fc5c336f06ee67a27316c4a.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md`
 
 ### Audit
 
@@ -173,10 +173,7 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.24938` — ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration / worker `scheduled-chat-llm-paper-30`
-  - claim: **09-21 15:47:26 JST** / heartbeat: **—** / lease expiry: **09-21 17:17:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f837d96601e69237.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.15299` — MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation / worker `scheduled-chat-30b`
   - claim: **09-21 14:29:58 JST** / heartbeat: **09-21 15:32:52 JST** / lease expiry: **09-21 17:02:52 JST**
   - evidence: `.survey/work-queue/claims/job-research-8f68f6b8d4d62651.json`
@@ -199,7 +196,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **321** |
+| ready | **320** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +216,7 @@
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **879** |
+| inference/training/survey配下の論文Markdown実体 | **880** |
 
 ### immutable submissionの未照合
 
@@ -227,8 +224,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **353** |
-| └ Research | **167** |
+| 成功result未照合のimmutable submission | **352** |
+| └ Research | **166** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |

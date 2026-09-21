@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-21T06:44:46.084132+00:00",
+  "updated_at": "2026-09-21T06:48:44.354454+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -32770,6 +32770,56 @@
           "type": "research",
           "canonical_id": "arXiv:2609.06076",
           "title": "Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 867,
+      "paper_active_count_after": 867,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35570054782",
+      "first_recorded_at": "2026-09-21T06:48:44.354454+00:00",
+      "last_recorded_at": "2026-09-21T06:48:44.354454+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35570054782:1",
+          "recorded_at": "2026-09-21T06:48:44.354454+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35570054782",
+            "run_attempt": "1",
+            "source_sha": "8d48e61f2c0c1bdb4879030816fb51e4733defe9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-f837d96601e69237",
+          "type": "research",
+          "canonical_id": "arXiv:2608.24938",
+          "title": "ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration",
           "from": "ready",
           "to": "completed"
         }
