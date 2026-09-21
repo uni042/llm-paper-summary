@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 20:01:30 JST**
+> 自動生成: **2026-09-21 20:03:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **326** |
-| 未claim Research job | **323** |
+| 未claim Research job | **324** |
 | 直近24hの検証済みResearch収録 | **34** |
-| 最終検証済みResearch収録 | **09-21 17:27:05 JST（2時間34分前）** |
+| 最終検証済みResearch収録 | **09-21 17:27:05 JST（2時間35分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **6** | **4** | **0** | **3** | **0** | — |
+| Research | **4** | **6** | **4** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **4** | **7** | **5** | **0** | **3** | **0** | **3** |
+| 合計 | **4** | **7** | **5** | **0** | **2** | **0** | **3** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -143,16 +143,13 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `DOI:10.1145/3789240.3829159` — DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O / worker `scheduled-chat-00`
   - claim: **09-21 20:01:21 JST** / heartbeat: **—** / lease expiry: **09-21 21:31:21 JST**
   - evidence: `.survey/work-queue/claims/job-research-a5d6d7156c3ffec6.json`
 - `arXiv:2608.01651` — Bole: Efficient Tree Speculation for Hybrid-Attention Language Models / worker `scheduled-chat-llm-paper-worker-30`
   - claim: **09-21 19:31:03 JST** / heartbeat: **—** / lease expiry: **09-21 21:01:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-c27f3a6ec993f9ab.json`
-- `DOI:10.1109/TC.2026.3701443` — GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning / worker `scheduled-chat-30`
-  - claim: **09-21 18:32:35 JST** / heartbeat: **—** / lease expiry: **09-21 20:02:35 JST**
-  - evidence: `.survey/work-queue/claims/job-research-50400bb966b2b5a1.json`
 
 #### Audit
 
