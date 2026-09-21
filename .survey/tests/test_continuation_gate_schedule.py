@@ -28,6 +28,11 @@ def make_args(**overrides):
         claim_result_pending=False,
         submission_state_checked=True,
         submission_result_pending=False,
+        pipeline_ahead_count=0,
+        discovery_precheck_result_pending=False,
+        discovery_submission_result_pending=False,
+        discovery_evaluation_pending=False,
+        discovery_recovery_required=False,
         write_failed=False,
         probe="not-run",
         seconds_to_next_scheduled_task=None,
@@ -97,7 +102,7 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertEqual(result["minimum_rounds_remaining"], 1)
         self.assertFalse(result["finalization_allowed"])
 
-    def test_discovery_can_stop_after_four_rounds_if_exhausted(self):
+    def test_discovery_exhaustion_does_not_end_run_early(self):
         result = mod.decide(make_args(
             candidate_inventory=49,
             discovery_rounds_completed=4,
@@ -107,9 +112,9 @@ class ContinuationGateScheduleTests(unittest.TestCase):
             can_discover=False,
             seconds_to_run_deadline=2500,
         ))
-        self.assertEqual(result["decision"], "STOP_RUN")
-        self.assertTrue(result["finalization_allowed"])
-        self.assertIn("discovery_exhausted_after_minimum_rounds", result["stop_reasons"])
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["required_action"], "REFRESH_AND_CONTINUE")
 
 
     def test_explicit_mode_locks_routing_for_the_run(self):
@@ -133,7 +138,7 @@ class ContinuationGateScheduleTests(unittest.TestCase):
             can_discover=False,
             seconds_to_run_deadline=2500,
         ))
-        self.assertEqual(result["decision"], "STOP_RUN")
+        self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["minimum_rounds_remaining"], 0)
 
     def test_research_runwide_write_failure_checkpoints_without_next_paper(self):
@@ -184,6 +189,35 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         ))
         self.assertEqual(result["decision"], "STOP_RUN")
         self.assertIn("next_scheduled_task_within_handoff_guard", result["stop_reasons"])
+
+    def test_discovery_pending_precheck_survives_600_second_start_prohibition_window(self):
+        result = mod.decide(make_args(
+            candidate_inventory=49,
+            discovery_precheck_result_pending=True,
+            seconds_to_run_deadline=600,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "WAIT_FOR_DISCOVERY_PRECHECK_RESULT")
+        self.assertFalse(result["finalization_allowed"])
+
+    def test_discovery_pending_submission_survives_600_second_start_prohibition_window(self):
+        result = mod.decide(make_args(
+            candidate_inventory=49,
+            discovery_submission_result_pending=True,
+            seconds_to_run_deadline=599,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT")
+
+    def test_final_180_second_guard_can_handoff_started_discovery(self):
+        result = mod.decide(make_args(
+            candidate_inventory=49,
+            discovery_precheck_result_pending=True,
+            seconds_to_run_deadline=180,
+        ))
+        self.assertEqual(result["decision"], "STOP_RUN")
+        self.assertTrue(result["finalization_allowed"])
+        self.assertIn("run_deadline_within_final_180_second_handoff_guard", result["stop_reasons"])
 
     def test_auto_mode_requires_candidate_inventory(self):
         with self.assertRaises(ValueError):
