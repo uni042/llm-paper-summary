@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6b50588e5e9cc57491bfd0ef",
-  "job_id": "job-research-ff7167d92a15ba4e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6b50588e5e9cc57491bfd0ef",
-    "worker_id": "scheduled-chat-llm-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6b50588e5e9cc57491bfd0ef","job_id":"job-research-ff7167d92a15ba4e","data":{"overview":"29モデルのゼロ率は29.7〜51.5%で、BITCOSは26/29モデルでfive-tritより小さく最小1.485 bit/weight。メモリ律速CPU/GPUでは圧縮が実速度へ変換される一方、Lunar Lake CPUでは復号命令が律速となり2-bit baselineに敗れた。","key_results":[{"metric":"最小記号bit幅","value":"1.485 bit/weight","baseline":"five-trit 1.625 bit/weight","condition":"CAT-Q Qwen3-1.7B, zero density 51.48%","interpretation":"実際の記号分布を使えばequiprobable ternaryの1.585bit基準を下回れる。"},{"metric":"格納改善対象","value":"26/29 checkpoints","baseline":"five-trit packing","condition":"z>0.375","interpretation":"多くの実三値モデルでBITCOSが有効。"},{"metric":"CPU GEMV speedup","value":"EMR 1.14-1.28x; ARL 1.13-1.27x","baseline":"SOTA 2-bit GEMV","condition":"deployed z=0.297-0.515","interpretation":"メモリ律速環境ではweight traffic削減が実行時間へ反映。"},{"metric":"GPU GEMV speedup","value":"Arc 140V 1.04-1.14x; Arc Pro B70 1.01-1.12x","baseline":"XeTLA int2","condition":"deployed z range","interpretation":"GPUでも常に非劣化だが復号コストで理論byte比より利得は小さい。"},{"metric":"end-to-end CPU decode","value":"EMR 1.10-1.18x; ARL 1.02-1.15x","baseline":"vLLM 2-bit","condition":"7 ternary LLMs, batch 1, 256 output tokens","interpretation":"システム全体でもメモリ律速CPUに利得。"},{"metric":"end-to-end GPU decode","value":"Arc 140V 1.09-1.22x; Arc Pro B70 1.02-1.27x","baseline":"vLLM int2","condition":"7 ternary LLMs, batch 1","interpretation":"Xe2で最大27%高速化。"}],"negative_results":"Lunar Lake CPUは命令律速でBITCOSが全zero densityで2-bit GEMVより遅く、z=0.40で28.9GB/sに対し2-bitは74.7GB/s。圧縮率だけでは高速化を保証しない。評価対象の最適化実装はIntel x86/Xe2に限定され、他ISA/GPUは未評価。","interpretation":"BITCOSの価値は三値量子化の精度を変えず、既存チェックポイントに内在するゼロ偏りを帯域削減へ変換する点にある。ただし復号命令コストとのroofline上の位置で勝敗が決まる。","quality_impact":"bit-exactな格納変換なのでモデル精度への追加損失なし。"},"reservation":{"claim_id":"claim-6b50588e5e9cc57491bfd0ef","worker_id":"scheduled-chat-llm-30","worker_kind":"scheduled_chat"}}
