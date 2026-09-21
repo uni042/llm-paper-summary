@@ -8,20 +8,26 @@
 
 - ルーティング・継続判定: `.survey/scripts/continuation_gate.py`
 - 最終化判定: `.survey/scripts/run_finalization_gate.py`
-- Research / Audit の担当確保: `.survey/scripts/claim_worker_with_banks.py`
+- Research / Audit の担当確保（ワーカー実行入口）: `.survey/scripts/claim_worker_with_banks.py`
 - Discovery の固定ソース事前検査: `.survey/scripts/process_discovery_precheck.py`
 - 固定ソースのページ送り・重複排除: `.survey/scripts/discovery_search_filter.py`
 - Discovery submission の検証・Research job 化: `.survey/scripts/queue_worker.py`
 - immutable submission 処理: `.survey/scripts/process_immutable_submission.py`
-- Library fallback の復旧: `.survey/scripts/replay_record_fallback.py`
+- 現行Library退避（Library fallback）の復旧: `.survey/scripts/replay_record_fallback.py`
 - ワーカー向け案内: `.survey/scripts/worker_guidance.py`
 - 日次 maintenance: `.github/workflows/maintenance.yml`
+
+## 実行入口と内部モジュール
+
+`claim_worker.py` は現在も `claim_worker_with_banks.py` から利用される**内部コア**であり、ワーカーが直接実行するCLI入口ではない。Research / Audit の担当確保は必ず `claim_worker_with_banks.py` から開始する。ファイル名や履歴上の存在だけを理由に内部モジュールを実行入口として選ばない。
+
+現行のLibrary退避経路と、過去形式を読むための互換処理は区別する。`fallback-inbox` から現行の不変submissionへ収束させる復旧処理は現行機構だが、旧形式そのものを新規生成する経路は互換専用である。
 
 ## 正本関係
 
 ワーカー行動は `worker-router.md` と上記正規スクリプトが返す `[WORKER-GUIDE]` / `next_action` / `recovery_steps` に従う。実装契約は対応するテストで固定する。
 
-過去のschema、固定 `chat-inbox.json`、旧fallback、旧claim/record-bank形式などのコードが残る場合は**既存履歴の読取・救済専用**である。新規生成、新規分岐、エラー回避経路として使わない。
+過去のschema、固定 `chat-inbox.json`、旧形式fallback、旧claim/record-bank形式などのコードが残る場合は**既存履歴の読取・救済専用**である。新規生成、新規分岐、エラー回避経路として使わない。
 
 ## 変更時の原則
 
