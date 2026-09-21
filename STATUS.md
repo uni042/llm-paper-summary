@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 23:54:25 JST**
+> 自動生成: **2026-09-21 23:54:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **327** |
 | 未claim Research job | **326** |
 | 直近24hの検証済みResearch収録 | **19** |
-| 最終検証済みResearch収録 | **09-21 22:42:38 JST（1時間11分前）** |
+| 最終検証済みResearch収録 | **09-21 22:42:38 JST（1時間12分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -130,7 +130,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.16215` — Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions / worker `scheduled-chat-30`
-  - claim: **09-21 23:53:01 JST** / heartbeat: **—** / lease expiry: **09-22 01:23:01 JST**
+  - claim: **09-21 23:54:33 JST** / heartbeat: **—** / lease expiry: **09-22 01:24:33 JST**
   - evidence: `.survey/work-queue/claims/job-research-3eb9c6f535e789d0.json`
 
 #### Audit
