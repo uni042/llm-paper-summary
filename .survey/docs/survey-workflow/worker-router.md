@@ -194,7 +194,7 @@ GitHub write失敗時:
 
 Research/AuditのLibrary fallbackは1論文1envelopeで、root-level identityと完全5スロットを持たせる。復旧は `.survey/work-queue/fallback-inbox/<id>.json` から現行immutable submissionへ収束させる。
 
-過去形式を読み込む互換コードが内部に存在しても、ワーカーが旧形式を新規生成してはならない。
+旧fallback形式の実行時互換は持たない。古いpayloadを復活・変換するために旧schemaや固定 `chat-inbox.json` を生成せず、現行Library envelope形式だけを使う。
 
 ## 7. 待機・継続・終了
 
