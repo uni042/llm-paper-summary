@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-2890cf40ded096fabe5171f7",
+  "job_id": "job-research-73f2d3c7c23735bb",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-2890cf40ded096fabe5171f7.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | Japanese-first prose ratio is too low: 50.4% < 70% (Japanese=2806, Latin=2766)",
+  "processed_at": "2026-09-21T17:32:00+00:00",
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "Japanese-first prose ratio is too low: 50.4% < 70% (Japanese=2806, Latin=2766)"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
