@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-21 23:42:45 JST**
+> 自動生成: **2026-09-21 23:43:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -129,9 +129,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3832810.3832859` — CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving / worker `scheduled-chat-30`
-  - claim: **09-21 23:41:43 JST** / heartbeat: **—** / lease expiry: **09-22 01:11:43 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c76afcb7233dbe74.json`
+- `DOI:10.1145/3821219` — AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism / worker `scheduled-chat-30`
+  - claim: **09-21 23:42:51 JST** / heartbeat: **—** / lease expiry: **09-22 01:12:51 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9aee3ce953b43bc0.json`
 
 #### Audit
 
@@ -179,8 +179,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **390** |
-| └ Research | **204** |
+| 成功result未照合のimmutable submission | **391** |
+| └ Research | **205** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
