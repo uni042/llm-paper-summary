@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 00:46:23 JST**
+> 自動生成: **2026-09-22 00:46:54 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **325** |
 | 未claim Research job | **324** |
 | 直近24hの検証済みResearch収録 | **20** |
-| 最終検証済みResearch収録 | **09-22 00:39:39 JST（6分前）** |
+| 最終検証済みResearch収録 | **09-22 00:39:39 JST（7分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -135,7 +135,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.1109/IPDPS65963.2026.00101` — Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching / worker `scheduled-chat-30`
-  - claim: **09-22 00:42:47 JST** / heartbeat: **—** / lease expiry: **09-22 02:12:47 JST**
+  - claim: **09-22 00:46:32 JST** / heartbeat: **—** / lease expiry: **09-22 02:16:32 JST**
   - evidence: `.survey/work-queue/claims/job-research-9119a9e35c42f3f7.json`
 
 #### Audit
