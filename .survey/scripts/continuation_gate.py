@@ -240,6 +240,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action = "CONTINUE_WORK"
             finalization_allowed = False
 
+    # Reasons added by the 600-second start-prohibition branch are canonical hard
+    # stop reasons too. Recompute after routing so finalization sees the same state
+    # that worker-router.md defines.
+    hard_stop = bool(reasons)
+
     write_scope = "none"
     write_action = "normal"
     if args.write_failed:
