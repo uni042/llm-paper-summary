@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 02:31:26 JST**
+> 自動生成: **2026-09-22 02:31:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -139,9 +139,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.19169` — SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops / worker `scheduled-chat-30`
-  - claim: **09-22 02:28:52 JST** / heartbeat: **—** / lease expiry: **09-22 03:58:52 JST**
-  - evidence: `.survey/work-queue/claims/job-research-73f2d3c7c23735bb.json`
+- `arXiv:2606.27866` — FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models / worker `scheduled-chat-30`
+  - claim: **09-22 02:31:51 JST** / heartbeat: **—** / lease expiry: **09-22 04:01:51 JST**
+  - evidence: `.survey/work-queue/claims/job-research-00f6a78e028bd698.json`
 - `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
   - claim: **09-22 02:03:42 JST** / heartbeat: **—** / lease expiry: **09-22 03:33:42 JST**
   - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
@@ -192,8 +192,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **412** |
-| └ Research | **226** |
+| 成功result未照合のimmutable submission | **413** |
+| └ Research | **227** |
 | └ Audit | **2** |
 | └ Discovery | **95** |
 | └ Other/Unknown | **89** |
