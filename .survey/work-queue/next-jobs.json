@@ -8,8 +8,8 @@
       "blocked": 2
     },
     "research": {
-      "ready": 325,
-      "blocked": 10,
+      "ready": 324,
+      "blocked": 11,
       "completed": 430,
       "superseded": 3,
       "deferred": 3,
@@ -18,25 +18,11 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 325,
-    "actively_claimed": 1,
+    "ready_research_audit": 324,
+    "actively_claimed": 0,
     "claimable": 324
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-bfb106674c4d8bfe",
-      "type": "research",
-      "lane": null,
-      "priority": 104,
-      "canonical_id": "arXiv:2608.08878",
-      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
-      "source_url": "https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.08878-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-llm-inference.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-f0b1ffeacc3b0ccd",
       "type": "research",
@@ -136,6 +122,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-be16d214d5c628cd",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "arXiv:2608.04502",
+      "title": "AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation",
+      "source_url": "https://www.semanticscholar.org/paper/7abcf6581731dc0e18b15305095ec0619756835d",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.04502-afd-ledger-deployment-provisioning-for-attention-ffn-disaggregation.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T19:28:13+00:00"
+  "generated_at": "2026-09-21T19:31:49+00:00"
 }
