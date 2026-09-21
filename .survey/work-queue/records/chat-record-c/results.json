@@ -2,67 +2,87 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ebcba74d995fdc58a48bf0a6",
-  "job_id": "job-research-c27f3a6ec993f9ab",
+  "attempt_id": "attempt-c50e899082e6964d08cf60af",
+  "job_id": "job-research-a5d6d7156c3ffec6",
   "data": {
-    "overview": "Boleは28のMBPP configurationsすべてでdecode throughputを改善し、幾何平均でSGLang-AR比2.74倍、最強のspeculative baseline比1.26倍となった。peakはA100でAR比3.62倍、SGLang-Tree比1.41倍、AdaServe比1.39倍、GB10でそれぞれ4.72倍、2.03倍、2.06倍。parallel recurrent verifier単体は3.4–7.7倍高速化し、factorized stateはper-node transient footprintを82–99倍削減する。online agent servingでもcache capacity回復によりTTFT/TPOTを大きく削減する。",
+    "overview": "DualPathの主結果は、エージェント型の長文脈・短追加入力で律速になるストレージ読出し帯域を、プリフィル側だけでなくデコード側まで束ねることで、GPU追加なしに実効処理量を大きく増やせることである。DeepSeek-V3.2 660Bではオフラインを最大1.87倍高速化し、オンラインでもTTFT≤4秒・TPOT≤50msを守りながら平均1.96倍の到着容量を支える。消融では二経路読出しが主要な改善源であり、単なるバッチ調整ではなくストレージ帯域の構造的偏りを除くことが効いている。",
+    "headline": "DualPathはDS 660Bのオフライン推論をBasic比最大1.87倍高速化し、オンライン容量を平均1.96倍へ高める。",
     "key_results": [
       {
-        "metric": "MBPP decode throughput 幾何平均speedup",
-        "value": "2.74× vs SGLang-AR; 1.26× vs strongest speculative baseline",
-        "baseline": "SGLang-AR / SGLang-Tree / AdaServe",
-        "condition": "28 configurations, Qwen3.5 4B–122B-A10B, A100/GB10",
-        "interpretation": "hybrid-aware kernel/runtime designがmodel size・batch・platformを跨いで一貫して効く。"
+        "metric": "DS 660B オフライン高速化",
+        "value": "最大1.87×",
+        "baseline": "未変更の社内推論基盤Basic",
+        "condition": "DeepSeek-V3.2 660B、生産エージェント軌跡、オフライン一括ロールアウト",
+        "interpretation": "大規模MoEでも既存KV読出しが主律速となり、デコード側ストレージ帯域を加えることでJCTを大きく短縮できる。"
       },
       {
-        "metric": "最大offline speedup",
-        "value": "4.72× vs AR; 2.03× vs SGLang-Tree; 2.06× vs AdaServe on GB10",
-        "baseline": "各baseline",
-        "condition": "MBPP configurations",
-        "interpretation": "memory bandwidthが低いGB10ではstate materialization削減の寄与が特に大きい。"
+        "metric": "DS 27B オフライン高速化",
+        "value": "最大1.78×",
+        "baseline": "未変更の社内推論基盤Basic",
+        "condition": "内部DS 27B、主に1P1D、生産エージェント軌跡",
+        "interpretation": "小モデルでも二経路化は効くが、Oracleとの差が残るため総ストレージ帯域とP-D転送費用がより顕在化する。"
       },
       {
-        "metric": "linear-attention tree verification",
-        "value": "3.4–7.7× speedup",
-        "baseline": "SGLang-Tree serial delta-rule verifier",
-        "condition": "Qwen3.5-9B; A100/GB10; batch 1/16",
-        "interpretation": "parent-to-child critical pathを除去してnode-level parallelismをGPUへ露出する。"
+        "metric": "オンライン容量",
+        "value": "DS 27B 1.67×、DS 660B 2.25×、平均1.96×",
+        "baseline": "未変更の社内推論基盤Basic",
+        "condition": "ポアソン到着、TTFT≤4秒かつTPOT≤50msのサービス品質目標",
+        "interpretation": "二経路読出しは単なるオフライン高速化ではなく、遅延目標を守れる同時エージェント到着率そのものを増やす。"
       },
       {
-        "metric": "transient state memory",
-        "value": "82–99× lower per-node footprint; 74.0–88.5% lower measured non-cache speculation overhead vs AdaServe",
-        "baseline": "full-state snapshots / AdaServe",
-        "condition": "Qwen3.5 family; A100 batch 4, 128 proposal nodes for measured overhead",
-        "interpretation": "6.26–18.58 GiBをserving cacheへ戻し、大batchやprefix reuseを可能にする。"
+        "metric": "完全DualPathのJCT",
+        "value": "Basic比45.62%短縮",
+        "baseline": "Basicおよび層単位プリフィル／二経路読出しのみの段階構成",
+        "condition": "DS 660B、64K上限、1024/2048エージェントの消融",
+        "interpretation": "層単位プリフィル17.21%短縮、二経路まで38.19%短縮からさらに改善し、帯域集約に加えて負荷適応スケジューリングも必要である。"
       },
       {
-        "metric": "online agent latency",
-        "value": "vs AdaServe mean TTFT 61.3–73.3% reduction; mean TPOT 28.9–49.9% reduction",
-        "baseline": "AdaServe",
-        "condition": "Open-SWE-Traces; Qwen3.5-122B-A10B A100 / Qwen3.5-27B GB10",
-        "interpretation": "高速verificationだけでなくprefix-cache hit改善がqueueing/prefillにも波及する。"
+        "metric": "ストレージNIC負荷の最大/平均比",
+        "value": "1.53 → 1.18",
+        "baseline": "輪番スケジューリング",
+        "condition": "複数ストレージNICの短時間窓内トラフィック最大値/平均値、1.0が完全均衡",
+        "interpretation": "適応スケジューラが単に要求数を均すのではなく、実際のストレージ帯域偏りを小さくしている。"
       },
       {
-        "metric": "prefix-cache hit rate",
-        "value": "90.8% A100, 92.6% GB10",
-        "baseline": "SGLang-Tree 69.7%/58.3%; AdaServe 69.3%/59.8%; AR 89.8%/93.3%",
-        "condition": "online Open-SWE-Traces",
-        "interpretation": "tree speculationを維持しながらARに近いcache residencyを回復する。"
-      },
-      {
-        "metric": "ablation cumulative speedup",
-        "value": "budget: +5.3%/+10.7%; +parallel solver: 1.21×/1.30×; +factorized state: 1.59×/2.23×",
-        "baseline": "SGLang-Tree",
-        "condition": "online workload, A100/GB10",
-        "interpretation": "三要素すべてが寄与し、特にmemory-constrained GB10でfactorized stateの増分が大きい。"
+        "metric": "大規模オンライン",
+        "value": "0.4 APS → 8.8 APS（22×）で類似遅延",
+        "baseline": "2P4D・0.4 APSの小規模DualPath構成",
+        "condition": "44P88D、最大規模オンライン評価。TTFT 1.739s→1.847s、TPOT 0.039s→0.036s",
+        "interpretation": "GPU数と到着率を約22倍へ拡張しても遅延をほぼ維持し、中央スケジューラも10 CPUコア未満で制御面が律速にならない。"
       }
     ],
-    "negative_results": "効果は一様な定数倍ではない。GB10でもbatch 1ではstrongest speculative baseline比1.11–1.14倍に留まり、batch 8で1.70–2.03倍へ伸びるため、proposal parallelismとmemory pressureが小さい条件では利得が限定的である。verification budgetはplatform依存で、Qwen3.5-9B/MBPP batch 8のpeakがA100 128 total tree tokens、GB10 256 tokensとなり固定budgetはsuboptimalである。またBoleでもtree factorsやscratchは残り、speculation overhead自体がゼロになるわけではない。",
-    "interpretation": "主要な性能源は単一のkernel speedupではない。parallel solverでserial recurrenceを消し、factorized stateでHBM容量とwrite trafficを削り、budgetingでnear-free regionを越えた過剰verificationを避けることで、GPU compute headroomとmemory capacityを同時に利用する。特にagent workloadではstate memory削減がprefix-cache hitを21.1–34.3 percentage points回復し、repeated prefillを減らすためTTFTにも効く。",
-    "quality_impact": "Boleのtree solverは逐次Gated Delta recurrenceと代数的に厳密等価で、factorized commitもaccepted stateをlosslessに再構成する。標準speculative samplingによりtarget output distributionを変えない。性能最適化のための近似は主にhardware capacity calibrationであり、model semanticsの近似ではない。"
+    "quantitative": [
+      {
+        "metric": "DS 660B オフライン",
+        "value": "最大1.87× vs Basic"
+      },
+      {
+        "metric": "DS 27B オフライン",
+        "value": "最大1.78× vs Basic"
+      },
+      {
+        "metric": "P/D比感度",
+        "value": "平均1.64×、最大2.46×"
+      },
+      {
+        "metric": "オンライン容量",
+        "value": "1.67× / 2.25×"
+      },
+      {
+        "metric": "消融",
+        "value": "JCT 45.62%短縮"
+      }
+    ],
+    "comparative_summary": "利用可能なストレージ帯域が等しい構成同士が近い性能になり、ストレージ帯域が主律速であることを裏付ける。",
+    "why_it_works": "長文脈・短追加入力では既存KV読出し量が新規計算量より大きい。デコード側の遊休ストレージNICも読出しへ参加させ、計算網の空き時間でKVをプリフィルへ戻すため集群全体の帯域を利用できる。",
+    "negative_results": "追加入力や生成が長くなるとGPU計算比率が上がりBasicとの差は縮小する。DS 27BではOracleより1.09〜1.85倍遅い。大規模構成は近線形に拡張したが、等コストの複数小規模単位を超える追加利得は示せていない。",
+    "interpretation": "改善幅はI/O対計算比で決まる。追加入力が増えると計算律速へ寄り、生成が長いとプリフィル間隔が広がりストレージ圧が下がるため相対利得が縮む。P/D比実験は使えるストレージ帯域が性能を支配することを直接示す。",
+    "quality_impact": "KV値を量子化・削除・近似せず同じ計算結果を別経路で運ぶため、モデル品質へのアルゴリズム上の損失はない。交換条件は追加通信、DRAMバッファ、QoS設定、スケジューラ複雑性である。",
+    "negative_or_tradeoffs": "デコード側DRAMバッファと追加H2DはDRAM/CNIC帯域を消費し、一要求を両側から同時読出しする最適化は未実装である。",
+    "reproducibility": "社内基盤への約5K行の変更でDualPath固有実装は非公開。3FS等の基盤部品は公開されるが、生産軌跡と大規模環境も必要で完全再現性は限定的。"
   },
   "reservation": {
-    "claim_id": "claim-ebcba74d995fdc58a48bf0a6",
+    "claim_id": "claim-c50e899082e6964d08cf60af",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

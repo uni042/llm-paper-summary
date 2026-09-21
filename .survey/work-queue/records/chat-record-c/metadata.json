@@ -2,69 +2,84 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-ebcba74d995fdc58a48bf0a6",
-  "job_id": "job-research-c27f3a6ec993f9ab",
+  "attempt_id": "attempt-c50e899082e6964d08cf60af",
+  "job_id": "job-research-a5d6d7156c3ffec6",
   "data": {
-    "canonical_id": "arXiv:2608.01651",
-    "arxiv_id": "2608.01651",
-    "doi": "10.48550/arXiv.2608.01651",
-    "openreview_id": null,
+    "canonical_id": "DOI:10.1145/3789240.3829159",
+    "arxiv_id": "2602.21548",
+    "doi": "10.1145/3789240.3829159",
+    "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
+    "authors": [
+      "Yongtong Wu",
+      "Shaoyuan Chen",
+      "Rilin Huang",
+      "Yixuan Tan",
+      "Yinmin Zhong",
+      "Mingxing Zhang",
+      "Xin Jin",
+      "Panpan Huang"
+    ],
+    "summary": "DualPathは、多輪エージェント推論で再利用する巨大なKVキャッシュを外部ストレージから読む際、プリフィル側のストレージNICだけが飽和しデコード側NICが遊休する構造的な帯域偏りを解消する。従来のストレージ→プリフィル経路に加え、ストレージ→デコード→計算ネットワークRDMA→プリフィルという第二経路を設け、全ノードのストレージ帯域を一つの資源として利用する。さらに計算NICを中心にGPU入出力を統一して通信優先度を隔離し、GPU負荷・ストレージ読出し待ち・KV読出し経路を共同で調整する。生産エージェント軌跡を用いたHopper GPUクラスタ評価では、オフライン推論を最大1.87倍高速化し、オンラインではサービス品質目標を維持したまま平均1.96倍の処理容量を達成した。",
+    "list_summary": "プリフィル側に集中するKVキャッシュ読出しをデコード側ストレージNICにも分散し、RDMA転送と負荷適応スケジューリングで全ノードのI/O帯域を束ね、エージェント推論を最大1.87倍高速化する。",
+    "published": "2026-08-17",
+    "publication": "ACM SIGCOMM 2026",
+    "publication_type": "conference",
+    "publication_status": "published",
+    "primary_category": "cs.DC",
+    "cross_list_categories": [],
     "arxiv_categories": {
       "primary": "cs.DC",
-      "cross_list": [
-        "cs.CL",
-        "cs.LG"
-      ]
+      "cross_list": []
     },
-    "title": "Bole: Efficient Tree Speculation for Hybrid-Attention Language Models",
-    "summary": "Boleは、全注意と再帰型線形注意を混在させるハイブリッド注意LLMで木構造投機的復号を効率化するカーネル・ランタイム共同設計である。Gated DeltaNet型再帰を木全体の厳密な閉形式へ変換し、値次元タイル化GPUカーネルで全提案ノードを並列検証する。候補分岐の巨大な再帰状態を複製せずトークン規模の因子だけ保持し、採択経路のみ再構成することで一時状態メモリを82–99倍削減する。さらに完全なハイブリッドforwardを事前プロファイルしてバッチ全体の検証予算を決め、SGLangへ統合した。4モデル・A100/GB10で自己回帰比最大4.72倍、最強の木投機baseline比最大2.03倍のoffline decode throughputを達成した。",
-    "list_summary": "再帰型線形注意の木検証を厳密閉形式で並列化し、因子化状態とhardware-aware予算をSGLangへ統合して最大4.72倍のdecode throughputを実現。",
-    "authors": [
-      "Li Wang",
-      "Yi Su",
-      "Xiabao Wu",
-      "Chiran You",
-      "Yongchao Liu",
-      "Zhan Qiu",
-      "Juelu Zhang",
-      "Jiajun Zheng",
-      "Fangxin Liu",
-      "Jie Zhang",
-      "Chen Tian",
-      "Chengying Huan"
-    ],
-    "authors_affiliations": "Nanjing University; Ant Group; Shanghai Jiao Tong University; Peking University",
-    "published": "2026-08-03",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint (v1, 2026-08-03)",
-    "lineage": "speculative decoding / hybrid-attention serving / recurrent linear attention / SGLang runtime",
-    "topics": [
-      "投機的復号",
-      "ハイブリッド注意",
-      "線形注意",
-      "GPUカーネル",
-      "SGLang",
-      "状態メモリ"
-    ],
-    "importance": "Qwen3.5等のハイブリッド注意モデルでは従来の木投機検証が再帰状態の直列依存と分岐ごとの状態複製に阻まれる。Boleは再帰そのものを厳密に並列化し、状態ライフサイクルと検証予算まで共同設計することで、今後増えるhybrid LLMのproduction servingに直接効く。",
-    "implementation": "SGLang release/v0.5.12を基盤に約6.2 kLoCのPython/Tritonコードを統合した研究実装。論文はparallel verifier、CUDA Graph-native packed forest、GPU-resident state commitを記述する。独立したBoleコード公開URLは本文では示されていない。",
-    "hardware_evaluation": "4×NVIDIA A100 80GB SXM4サーバとNVIDIA DGX Spark GB10 (128GB LPDDR5x)。Qwen3.5-4B/9B/27Bを単GPU、122B-A10BをA100 TP4で評価。",
-    "quality_effect": "閉形式のtree verificationとfactorized state reconstructionは逐次Gated DeltaNet実行と代数的に厳密等価で、標準のspeculative acceptance/correction samplingによりtarget modelの出力分布を維持する。",
-    "source": "https://arxiv.org/abs/2608.01651",
+    "source": "https://doi.org/10.1145/3789240.3829159",
     "sources": [
-      "https://arxiv.org/abs/2608.01651",
-      "https://arxiv.org/pdf/2608.01651"
+      {
+        "type": "conference_doi",
+        "url": "https://doi.org/10.1145/3789240.3829159"
+      },
+      {
+        "type": "primary_arxiv",
+        "url": "https://arxiv.org/abs/2602.21548"
+      },
+      {
+        "type": "primary_full_text",
+        "url": "https://arxiv.org/html/2602.21548v2"
+      }
     ],
-    "code": null,
+    "topics": [
+      "KVキャッシュ",
+      "プリフィル・デコード分離",
+      "ストレージI/O",
+      "エージェント推論",
+      "RDMA",
+      "推論スケジューリング"
+    ],
+    "hardware_evaluation": "実機評価。各ノード8基のNVIDIA Hopper GPU、8枚の400Gbps RDMA計算NIC、1枚のストレージNIC、InfiniBand計算網、3FS分散ストレージを使用し、最大1,152 GPUまで拡張する。",
+    "quality_effect": "近似圧縮や枝刈りを行わずKV値そのものを変更しないため、モデル品質へのアルゴリズム上の劣化はない。主な交換条件は追加データ移動、DRAM/CNIC帯域、スケジューリング複雑性である。",
+    "implementation": {
+      "available": false,
+      "url": null,
+      "language": null,
+      "notes": "論文はDeepSeekの社内推論基盤上に約5K行の変更として実装したと記載するが、DualPath固有の公開実装URLは本文で提示していない。"
+    },
+    "code": "",
     "last_checked": "2026-09-21",
-    "references": [],
+    "references": [
+      {
+        "title": "LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management",
+        "canonical_id": "arXiv:2410.00428"
+      },
+      {
+        "title": "Strata: Hierarchical Context Caching for Long Context Language Model Serving",
+        "canonical_id": "arXiv:2508.18572"
+      }
+    ],
     "references_checked_at": "2026-09-21",
-    "references_source": "primary manuscript",
-    "references_total": 54
+    "references_source": "arXiv:2602.21548v2 primary full-text reference section",
+    "references_total": 2
   },
   "reservation": {
-    "claim_id": "claim-ebcba74d995fdc58a48bf0a6",
+    "claim_id": "claim-c50e899082e6964d08cf60af",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
