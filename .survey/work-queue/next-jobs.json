@@ -8,18 +8,18 @@
       "blocked": 2
     },
     "research": {
-      "ready": 299,
-      "blocked": 30,
-      "completed": 372,
+      "ready": 296,
+      "blocked": 32,
+      "completed": 373,
       "superseded": 3,
       "deferred": 3,
       "rejected": 5
     }
   },
   "claiming": {
-    "ready_research_audit": 299,
-    "actively_claimed": 0,
-    "claimable": 299
+    "ready_research_audit": 296,
+    "actively_claimed": 1,
+    "claimable": 295
   },
   "next_jobs": [
     {
@@ -79,56 +79,56 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-d522f30f5ddd350f",
+      "job_id": "job-research-784815ee56689f0c",
       "type": "research",
       "lane": null,
       "priority": 98,
-      "canonical_id": "arXiv:2510.26730",
-      "title": "ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference",
-      "source_url": "https://arxiv.org/abs/2510.26730",
-      "paper_path": "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+      "canonical_id": "DOI:10.24963/ijcai.2026/502",
+      "title": "M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/502",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-f10be2e9a7bd04f7",
+      "job_id": "job-research-04f7ad5b21bc5a49",
       "type": "research",
       "lane": null,
       "priority": 98,
-      "canonical_id": "DOI:10.24963/ijcai.2026/657",
-      "title": "DoMoE: Domain-Aware Semantic Expert Prediction for Efficient MoE Inference Under Expert Offloading",
-      "source_url": "https://doi.org/10.24963/ijcai.2026/657",
-      "paper_path": "papers/inference/03-expert-prefetch/2026-domoe-domain-aware-semantic-expert-prediction.md",
+      "canonical_id": "arXiv:2609.13612",
+      "title": "AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels",
+      "source_url": "https://arxiv.org/abs/2609.13612",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-503df587e7eb88ec",
+      "job_id": "job-research-a281208d9562176a",
       "type": "research",
       "lane": null,
       "priority": 98,
-      "canonical_id": "arXiv:2609.13486",
-      "title": "Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers",
-      "source_url": "https://arxiv.org/abs/2609.13486",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.13486-efficient-moe-retrievers-adaptive-expert-count.md",
+      "canonical_id": "arXiv:2608.08910",
+      "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2608.08910",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.08910-tied-trit-planes-constraining-ptqtp-to-a-uniform-nine-level-quantizer-with-a-persistent-folded-format-for-disk-streamed.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-411c0f7386496cf9",
+      "job_id": "job-research-3aec960c2f6f3b14",
       "type": "research",
       "lane": null,
       "priority": 98,
-      "canonical_id": "arXiv:2608.13263",
-      "title": "vToken: Token-Level Virtualization for Reclaimable KV Caches",
-      "source_url": "https://arxiv.org/abs/2608.13263",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
+      "canonical_id": "arXiv:2609.20734",
+      "title": "On-Demand Attention: Language Models Know When to Recall",
+      "source_url": "https://www.semanticscholar.org/paper/8da785252ba758eed80836daa30707f53a485ad5",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.20734-on-demand-attention-language-models-know-when-to-recall.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-22T07:11:02+00:00"
+  "generated_at": "2026-09-22T07:12:46+00:00"
 }

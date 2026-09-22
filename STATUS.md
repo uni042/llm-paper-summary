@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:12:10 JST**
+> 自動生成: **2026-09-22 16:12:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **299** |
-| 未claim Research job | **298** |
-| 直近24hの検証済みResearch収録 | **19** |
-| 最終検証済みResearch収録 | **09-22 16:11:02 JST（1分前）** |
+| 収録候補論文 | **296** |
+| 未claim Research job | **295** |
+| 直近24hの検証済みResearch収録 | **20** |
+| 最終検証済みResearch収録 | **09-22 16:12:46 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **299** |
+| canonical_id確認済みの一意な候補論文 | **296** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **299** |
+| 非終端Research job合計 | **296** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,13 +34,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **5976** |
-| 処理済み | **600** |
-| 未処理 | **5376** |
-| 収録済みとして除外 | **492** |
+| 処理済み | **601** |
+| 未処理 | **5375** |
+| 収録済みとして除外 | **493** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
-- 消化率: **10.0%**
+- 消化率: **10.1%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（7時間39分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（7時間40分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **2** | **0** | **2** | **1** | **0** | — |
+| Research | **14** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **13** | **5** | **0** | **5** | **1** | **0** | **6** |
+| 合計 | **14** | **5** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 16:12:46 JST** [research] `arXiv:2510.26730` — ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference
+  - job: `.survey/work-queue/jobs/job-research-d522f30f5ddd350f.json`
+  - result: `.survey/work-queue/results/research/attempt-eb3992a288275edbaaa96880.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-eb3992a288275edbaaa96880.json`
+  - paper: `papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md`
 - **09-22 16:11:02 JST** [research] `arXiv:2609.12550` — Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances
   - job: `.survey/work-queue/jobs/job-research-b6a722146f5922c5.json`
   - result: `.survey/work-queue/results/research/attempt-1385b427873bab2ec9caad6b.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-c4f65a2a84382bc8c1957458.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c4f65a2a84382bc8c1957458.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md`
-- **09-22 12:09:14 JST** [research] `arXiv:2602.07265` — XShare: Collaborative in-Batch Expert Sharing for Faster MoE Inference
-  - job: `.survey/work-queue/jobs/job-research-a4cc548ec9dfc021.json`
-  - result: `.survey/work-queue/results/research/attempt-6aabd8efa261970bb7aabb74.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-6aabd8efa261970bb7aabb74.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2602.07265-xshare-inbatch-expert-sharing.md`
 
 ### Audit
 
@@ -146,9 +146,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research（最新Research/Audit run）
 
 - 最新観測run: **2026-09-22 15:30 JST** / worker `scheduled-chat-30`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **2件**
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-838569c6f399cb046e74080e.json` (job `job-research-f10be2e9a7bd04f7`)
-- **個別result未照合** `.survey/work-queue/submissions/research/attempt-e8a4a4cd78c4e22236c35816.json` (job `job-research-503df587e7eb88ec`)
+- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-838569c6f399cb046e74080e.json` (job `job-research-f10be2e9a7bd04f7`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-838569c6f399cb046e74080e.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-e8a4a4cd78c4e22236c35816.json` (job `job-research-503df587e7eb88ec`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-e8a4a4cd78c4e22236c35816.json` (`ok=true`)
 
 #### Audit（最新Research/Audit run）
 
@@ -201,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **299** |
+| ready | **296** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **899** |
+| inference/training/survey配下の論文Markdown実体 | **900** |
 
 ### immutable submissionの未照合
 
