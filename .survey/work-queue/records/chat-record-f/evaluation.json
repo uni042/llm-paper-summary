@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f71c9e148c6dfbb3490291b5",
-  "job_id": "job-research-2738618c3feb4d82",
-  "data": {
-    "hardware": "MiX、MXINT4/MXFP4、NVFP4等のPEをTSMC 28nm CMOSで実装・合成し、面積と電力を比較する。Artifact AppendixではSynopsys Design CompilerとVCS、28nm標準セルライブラリを用いる15種類のシストリック配列、量子化器、K-smootherのRTL評価を説明する。精度評価は14BまでRTX A6000 48GB、32B/72BではB200 180GBを想定する。",
-    "software": "Python 3.10、PyTorch 2.3.0/CUDA 12.1、Transformers 4.57.6等で量子化と精度評価を行う。ハードウェア側はSystemVerilog RTL、Design Compiler、VCS、SAIF電力評価を使用し、解析モデルはNumPy/Matplotlibで合成面積・電力とワークロードを結合する。",
-    "methodology": "Qwen2-VL、LLaVA-OneVision、MiniCPM-Vを中心にChartQA、TextVQA、VizWiz、OCRBench、MMMU、SEED-Bench-2+の6ベンチマークを評価し、FP16、INT8、MXINT4、MXFP4、NVFP4、MXFP4+、AMXFP4、Focus等と比較する。Qwen2.5-VL 3B/7B/32B/72Bで規模一般化、Llama-3.1-8B、Mistral-7B、Qwen2.5-7B/14Bでテキスト専用一般化も検証する。VLM較正はCOCO由来128画像、LLM較正はPile 2,048区間。速度は等面積条件でPE数を面積比に合わせ、計算サイクルとDRAMサイクルの大きい方を層遅延とする。",
-    "scope": "速度・エネルギーの主要値は実チップ実測ではなく、28nm RTL合成と解析モデルを組み合わせた評価である。長いデコードはDRAM帯域律速となり、PE面積削減による速度差が小さくなる。MiXはVLMの大きな動的範囲へ最適化され、テキスト専用LLMではNVFP4に劣るタスクがある。32B/72Bの再現にはB200級GPUと大容量システムRAMが必要で、ハードウェア再現には商用Synopsys環境と28nmライブラリが必要である。"
-  },
-  "reservation": {"claim_id": "claim-f71c9e148c6dfbb3490291b5", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-da7c57db65a5157307b9a864",
+  "job_id": "job-research-82ca57f0d331b40f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-da7c57db65a5157307b9a864",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

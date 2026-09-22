@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f71c9e148c6dfbb3490291b5",
-  "job_id": "job-research-2738618c3feb4d82",
-  "data": {
-    "overview": "4.5-bit級のMiX-INT4g16はVLM精度でNVFP4と同等以上を維持しながら、より単純なシフト中心PEを実現する。Qwen2-VLでは平均69.3%対NVFP4 69.7%とほぼ同等、MiniCPM-Vでは1.9ポイント、LLaVA-OneVisionでは0.6ポイント上回る。PEでは同等4.5bit級NVFP4より面積効率25%、電力効率15%向上する。等面積の端から端までの評価ではMiXはFocusに対してモデル・ベンチマークにより2.3〜4.5倍高速化、1.4〜2.9倍省エネルギーを示す。",
-    "key_results": [
-      {"metric": "VLM平均精度", "value": "Qwen2-VL 69.3%、MiniCPM-V 61.9%、LLaVA-OneVisionでNVFP4比+0.6pt", "baseline": "NVFP4", "condition": "MiX-INT4g16、4.5-bit級、6 VLMベンチマーク", "interpretation": "共有指数を要素別指数へ反転しても低ビット精度を維持し、VLMではNVFP4と同等以上になる。"},
-      {"metric": "PE効率", "value": "NVFP4比で面積効率+25%、電力効率+15%", "baseline": "NVFP4 PE", "condition": "TSMC 28nm、同じ4.5-bit有効ビット幅級", "interpretation": "要素積の乗算器をシフト加算へ置換した代数的単純化がPPAへ直接反映される。"},
-      {"metric": "等面積速度", "value": "MiX-INT4g16平均9.77倍/8.09倍、MiX-INT4 11.29倍/8.72倍対FP16", "baseline": "FP16", "condition": "LLaVA-OneVision-7B / MiniCPM-V-2.6、6ベンチマーク", "interpretation": "短い生成では小型PEを多く配置できる利得が大きい。"},
-      {"metric": "端から端までのエネルギー", "value": "MiX-INT4でFP16比約0.152倍/0.178倍", "baseline": "FP16", "condition": "LLaVA-OneVision / MiniCPM-V", "interpretation": "4bit級圧縮によるDRAMエネルギー削減と乗算器除去によるコア削減が重なる。"},
-      {"metric": "モデル規模一般化", "value": "FP16との差 8.0→4.1→2.4→2.3pt", "baseline": "FP16", "condition": "Qwen2.5-VL 3B/7B/32B/72B、MiX-INT4g16", "interpretation": "モデル規模が大きいほど量子化精度差が縮まり、7B以上ではNVFP4を0.2〜2.4pt上回る。"},
-      {"metric": "静的K平均", "value": "動的平均との差1pt未満", "baseline": "全系列を毎回再計算する動的K平均", "condition": "Qwen2-VL / MiniCPM-V、複数4bit形式", "interpretation": "デコード中のKey再読込・再量子化を避けても精度崩壊しない。"}
-    ],
-    "negative_results": "MiXの利得は万能ではない。テキスト専用LLMではNVFP4より弱く、Mistral/Qwen2.5の推論タスクで1.3〜1.7ポイント程度平均的に劣り、ARC-Challengeでは3〜4ポイント差が出る一方、WinoGrandeでは逆に有利になる。長いMMMU生成では全4bit形式がDRAM帯域律速となり、PE面積差による速度向上は約3.8倍のメモリ上限へ収束する。また主要な速度・エネルギーは実シリコン測定ではなく合成＋解析モデルであり、標準セルライブラリにより絶対値は変わる。",
-    "interpretation": "MiXの本質は、VLMで支配的な外れ値耐性とハードウェア単純化を同じ表現変更で同時に得ることにある。従来MXは外れ値対策を追加スケールや高精度化で補うためPEが複雑化するが、MiXは指数を各要素へ移して共有仮数を因数分解可能にする。このため精度改善がPEコスト増ではなく、むしろ乗算器削減と両立する。",
-    "quality_impact": "VLMではNVFP4と同等以上の精度を保つが、FP16との差は残り、特に小型モデルで大きい。モデル規模増加に伴い差は縮む。テキスト専用では精度依存性が強いため、MiXを一般LLM量子化の無条件な置換とみなすべきではない。"
-  },
-  "reservation": {"claim_id": "claim-f71c9e148c6dfbb3490291b5", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-da7c57db65a5157307b9a864",
+  "job_id": "job-research-82ca57f0d331b40f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-da7c57db65a5157307b9a864",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
