@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2508.18376",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2508.18376-dualsparse-moe.md",
   "selection_reason": "post-training expert partitioningでtensor-level sparsityを増やしつつneuron-level sparsityと再構成を協調させる二重sparsity圧縮。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T10:59:57+00:00"
+  "created_at": "2026-09-20T10:59:57+00:00",
+  "completed_at": "2026-09-22T14:18:37+00:00",
+  "blocker": "The primary arXiv metadata/abstract is available, but both primary PDF retrieval attempts failed in this invocation. Secondary mirrors expose partial/full summaries, but workflow v10 forbids producing the five-slot record from secondary material. Retry when the primary arXiv PDF/HTML can be read to the end.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-c8bcd18e9d8e56ee3be62d21.json"
 }
