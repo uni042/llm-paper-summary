@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 20:57:23 JST**
+> 自動生成: **2026-09-22 21:07:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **277** |
+| 収録候補論文 | **276** |
 | 未claim Research job | **275** |
-| 直近24hの検証済みResearch収録 | **27** |
-| 最終検証済みResearch収録 | **09-22 20:35:03 JST（22分前）** |
+| 直近24hの検証済みResearch収録 | **28** |
+| 最終検証済みResearch収録 | **09-22 21:07:42 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **277** |
+| canonical_id確認済みの一意な候補論文 | **276** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **277** |
+| 非終端Research job合計 | **276** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（12時間24分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（12時間35分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **2** | **0** | **0** | **2** | **0** | — |
+| Research | **16** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **15** | **5** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **16** | **5** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 21:07:42 JST** [research] `arXiv:2608.19920` — Learning how to Forget: Fine-tuning for Long-Context Sparse Attention
+  - job: `.survey/work-queue/jobs/job-research-b0919b5b9aea285a.json`
+  - result: `.survey/work-queue/results/research/attempt-d1d3b3caeff62a011e27f971.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-d1d3b3caeff62a011e27f971.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md`
 - **09-22 20:35:03 JST** [research] `arXiv:2608.21541` — Beyond Sparse Weights: When Is Attention Compressible?
   - job: `.survey/work-queue/jobs/job-research-6a21e987e314dd70.json`
   - result: `.survey/work-queue/results/research/attempt-e1881183879733d0f0a4eb0e.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-eb3992a288275edbaaa96880.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-eb3992a288275edbaaa96880.json`
   - paper: `papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md`
-- **09-22 16:11:02 JST** [research] `arXiv:2609.12550` — Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances
-  - job: `.survey/work-queue/jobs/job-research-b6a722146f5922c5.json`
-  - result: `.survey/work-queue/results/research/attempt-1385b427873bab2ec9caad6b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-1385b427873bab2ec9caad6b.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md`
 
 ### Audit
 
@@ -180,13 +180,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.17109` — Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs / worker `scheduled-chat-30`
   - claim: **09-22 20:35:43 JST** / heartbeat: **—** / lease expiry: **09-22 22:05:43 JST**
   - evidence: `.survey/work-queue/claims/job-research-c449ea471528f1b0.json`
-- `arXiv:2608.19920` — Learning how to Forget: Fine-tuning for Long-Context Sparse Attention / worker `scheduled-chat-00`
-  - claim: **09-22 20:05:39 JST** / heartbeat: **—** / lease expiry: **09-22 21:35:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b0919b5b9aea285a.json`
 
 #### Audit
 
@@ -206,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **277** |
+| ready | **276** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **908** |
+| inference/training/survey配下の論文Markdown実体 | **909** |
 
 ### immutable submissionの未照合
 
