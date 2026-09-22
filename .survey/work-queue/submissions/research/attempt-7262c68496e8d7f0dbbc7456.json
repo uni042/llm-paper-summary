@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-7262c68496e8d7f0dbbc7456",
+  "job_id": "job-research-af2d156c40ee16cb",
+  "claim_id": "claim-7262c68496e8d7f0dbbc7456",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "一次論文本文を最後まで取得できず、抄録・検索断片・ポスターから欠落内容を推測して5スロットを完成させることを避けるため。ACM DOI本文は取得時に403、著者公式ページの論文リンクも同じACM DOIへ到達。著者公式のSIGCOMM 2026ポスター全文は取得でき、手法・評価概要は確認できたが、論文本文の代替にはしない。ResearchGateはfull text unavailableと表示。",
+  "retrieval_evidence": [
+    "DOI/ACM primary paper: https://doi.org/10.1145/3789240.3830285 -> dl.acm.org; fetch returned HTTP 403",
+    "Author official publication page: https://charleshan24.github.io/CharlesHan.github.io/; paper PDF link resolves to the same ACM DOI endpoint",
+    "Author official poster PDF: https://charleshan24.github.io/CharlesHan.github.io/media/PRED-MoE_SIGCOMM_2026_Poster.pdf; accessible and read in full, but it is a poster rather than the paper",
+    "ResearchGate publication record reports no full-text available"
+  ],
+  "blocked_at": "2026-09-22T16:03:00+00:00"
+}
