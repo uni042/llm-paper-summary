@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-3e9870d1ea6c812acfc6fb72",
-  "job_id": "job-research-0088fb887d51af7d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e9870d1ea6c812acfc6fb72",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3e9870d1ea6c812acfc6fb72","job_id":"job-research-0088fb887d51af7d","data":{"hardware":"全実験を4×80GB NVIDIA A100で実施。効率評価はbatch size 8でlm-evaluation-harnessを用い、Mixtral-8x7BとDeepSeek-MoE-16Bについて推論時間とGPUメモリを測定する。","software":"Mixtral-8x7B/8x22B、DeepSeek-MoE-16B、Qwen2-57B-14Aを対象とする。データ中心方式はC4から128サンプルを用い、モデル中心方式はデータ不要。学習型統合係数だけはSGD、学習率1e-3、50 epoch、128サンプルを3:1分割して最適化する。評価はLanguage Model Evaluation Harness。","methodology":"Mixtralは各層8専門家を6または4へ削減し、DeepSeek/Qwenは64専門家から48等へ削減する。比較対象はルータ誘導統合、訪問回数誘導枝刈り、損失に基づく列挙法で、全方式の下流微調整を無効化してタスク非依存条件を揃える。主要タスクはMMLU、BoolQ、OpenBookQA、RTEで、MMLUはhumanities/social science/STEM/otherの4群を別表示する。アブレーションとしてCKA/重み表現、サンプル数128〜512、入力拡張、均等/最大/学習統合、ルータ統合の有無、貪欲列挙との比較を行う。","scope":"一般言語タスクでのタスク非依存圧縮を主対象とし、Mixtral、共有専門家を持つDeepSeek、密モデル由来初期化を持つQwenという異なるMoE設計で一般性を確認する。評価は圧縮後精度だけでなく推論時間とGPUメモリまで含む一方、生成品質、長文脈、量子化との併用、CPU/NVMeオフロード環境は対象外である。"},"reservation":{"claim_id":"claim-3e9870d1ea6c812acfc6fb72","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
