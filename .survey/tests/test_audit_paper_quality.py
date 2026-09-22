@@ -116,6 +116,7 @@ class MethodHeadingCompatibilityTests(unittest.TestCase):
             "入力を観測して必要なエキスパートを選び、選択結果を次段へ渡す。"
             "選択には現在の負荷とメモリ量を使い、失敗時は通常経路へ戻す。"
             "この説明は一段落だが、入力・処理・出力と失敗時の挙動を十分に説明する。"
+            "さらに、判断結果が次段の配置と転送量へどう影響するかまで記述し、構成要素単体でも十分な説明量を持たせる。"
         )
         self.assertGreaterEqual(len(detailed), AUDIT.DEFAULT_MIN_COMPONENT_PROSE_CHARS)
         self.assertTrue(AUDIT.method_component_has_enough_detail([detailed], 2))
