@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-50b11451c81409b86f90c5e0","job_id":"job-research-3b95bafdcf04b501","data":{"limitations":"HERALDはblock diffusion LLM固有の『同一block内で重要KVが安定する』性質へ依存するため、通常の自己回帰LLMへそのまま適用できない。代表[MASK]クエリは全query選択の近似であり、MAGEより大きい疎KV予算を必要とする。CPU側完全KV走査をAVX-512で高速化しているため、CPU計算性能やメモリ帯域が低い環境ではretrievalが遅くなる。PCIe転送をデノイズの背後へ隠す設計なので、Tが小さい場合やGPU側デノイズが短い場合は重畳余地が減る。主な具体評価は単一H100＋Xeonの構成と少数のblock dLLMに集中しており、複数GPU、異なるCPU世代、CXL/NVLink-C2C等の相互接続への一般化は未検証である。","differences":"InfiniGenなど自己回帰向けKVオフロードは各tokenで変化するqueryに応じて重要KVを繰り返し選択・転送するのに対し、HERALDはblock内T回のデノイズで同じ疎KV集合を再利用し、PCIe転送をblock当たり1回へする。MAGEはblock dLLMの疎注意としてall-[MASK] blockから重要KVを選択・再利用するが、HERALDは完全KVがCPU DRAMにあるオフロード環境を対象に、CPU選択計算の削減、draft lookahead、二重buffer/streamを加えてthroughputを狙う。PagedAttention系はGPU内KV配置・断片化を主に扱うのに対し、HERALDはCPU DRAMを容量層として使い、GPUにはworking setのみを置く。単純なCPU offloadは容量を増やしてもPCIeが律速になるが、HERALDはアクセス頻度そのものをblock粒度へ変えることで律速を外す。","implementation_status":"論文はarXiv v2（2026-08-03）のプレプリント。SGLang拡張、FlashInfer、AVX-512 C++ CPU kernel、pinned-memory経由の非同期転送を用いた実システムをH100/Xeon上で評価している。今回確認した一次資料・検索結果から公式公開コードURLは確定できなかったため、code欄は推測で補完していない。","research_positioning":"階層メモリ型LLM推論の観点では、HERALDはCPU DRAMを単なる退避先ではなく、完全KVの常駐層兼selection compute層として使う点が重要である。GPUは高帯域だが小容量、CPUは大容量だが相対的に低演算・低接続帯域という非対称性を、block diffusionのselection/denoising非対称性へ対応付けている。既存のKV offload、sparse attention、prefetch、double bufferingを組み合わせるだけでなく、モデルの生成アルゴリズムが作る時間的再利用をI/O schedulingへ取り込む例であり、CPU/SSD/CXLを含む将来の階層メモリ推論にも一般化可能な設計パターンを示す。"},"reservation":{"claim_id":"claim-50b11451c81409b86f90c5e0","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-17c1ab36b2599622f5e4d206",
+  "job_id": "job-research-ed6cf42bc92106fc",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-17c1ab36b2599622f5e4d206",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
