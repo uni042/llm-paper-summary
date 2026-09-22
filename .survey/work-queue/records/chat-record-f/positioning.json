@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ff7e9c58f4c5f78412ef8d98",
-  "job_id": "job-research-baad806afa0723b4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ff7e9c58f4c5f78412ef8d98",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ff7e9c58f4c5f78412ef8d98","job_id":"job-research-baad806afa0723b4","data":{"limitations":"基盤とワーカーはQwen3-14B中心で、異なるアーキテクチャや異種モデル間でKVを直接交換できることは示していない。非逐次キャッシュを解釈するため専用後学習が必要で、無学習版は大幅に品質が落ちる。評価は9ベンチマークであり、非常に複雑な構造化DAGや大規模実運用トラフィック、長期間変化するエージェント構成は未検証。GAIAやコード出力のように明示テキスト自体が証拠として有用な場合は標準直列化が優れることがある。完全軌跡を渡すほど品質が上がる例もあるがKV量と遅延が増える。著者も現時点で全エージェント枠組みのテキスト通信を置換できる段階ではないと述べ、より広いツール利用・分岐構造・合成目的への後学習拡大を今後の課題とする。","differences":"APE、CacheBlend、KVLINKなどのRAG向け並列キャッシュ再利用は、独立文書断片を最終質問へ利用することが中心で、部分再計算・注意補正・linking tokenなどにより逐次符号化へ近づける。Parallel-Synthesisの枝は文書断片ではなく、各ワーカー固有の指示・推論・ツール観測を経て生成された意味的にまとまったエージェント出力であり、合成器は検索だけでなく比較・判断・推論を行う。KVComm等の潜在通信研究が一対一または逐次転送を主に扱うのに対し、本研究は複数独立枝が一つの合成器へ収束する多対一DAGを対象にする。Graph-KVのような構造バイアス研究とも近いが、既存ワーカー生成済みKVを再利用して再プリフィルを消す配備上の狙いが明確である。","implementation_status":"論文はarXiv:2606.14672v1（2026-06-12）。Qwen3-14B上で位置再符号化、キャッシュ写像、合成器LoRAを実装し、5×A100 80GBで後学習した実験系を報告する。一次本文で公式公開コードURLは確認できなかった。","research_positioning":"LLMエージェント基盤、KVキャッシュ再利用、潜在通信の交点に位置する。推論基盤の観点では、KVを同一要求内の復号高速化だけでなく、並列ワーカー間で再利用可能な中間成果物へ拡張する研究である。DAG型エージェント実行が増えるほど、枝の文字列化と再プリフィルは構造的な重複になるため、キャッシュを枝間インターフェースとして扱う設計はエージェント向けサービング基盤の新しい最適化軸になる。"},"reservation":{"claim_id":"claim-ff7e9c58f4c5f78412ef8d98","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
