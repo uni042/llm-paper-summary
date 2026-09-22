@@ -39,7 +39,7 @@ jobs:
           git config user.name 'survey-run-state[bot]'
           git config user.email 'survey-run-state[bot]@users.noreply.github.com'
 
-          for attempt in 1 2 3 4 5; do
+          for attempt in $(seq 1 12); do
             git fetch origin main
             git reset --hard origin/main
 
@@ -57,8 +57,11 @@ jobs:
             fi
 
             echo "Run-state push race on attempt ${attempt}; recomputing unsettled requests from latest main."
-            sleep $((attempt * 2))
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            jitter=$(( RANDOM % 6 ))
+            sleep $((backoff + jitter))
           done
 
-          echo 'Failed to publish run-state results after 5 retries; periodic recovery will retry unsettled requests.' >&2
+          echo 'Failed to publish run-state results after 12 retries; periodic recovery will retry unsettled requests.' >&2
           exit 1
