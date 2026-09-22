@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a0e4b37dc8dd9e879f5d1060",
+  "attempt_id": "attempt-6aabd8efa261970bb7aabb74",
   "job_id": "job-research-a4cc548ec9dfc021",
   "data": {
     "hardware": "通常の専門家混合バッチ推論、複数GPUの専門家並列、GPT-OSS 120Bを用いた投機的デコーディングを含む実運用寄りの設定で評価する。専門家並列評価ではGPUごとのピーク専門家負荷を主要指標とする。",
@@ -11,7 +11,7 @@
     "scope": "主対象はメモリ入出力律速の自己回帰デコードであり、事前充填の最適化は中心ではない。モデルを再学習できない配備に適する一方、ルーター得点が専門家の重要度を十分表すという仮定に依存し、専門家予算を強く絞った際には品質との交換関係が残る。"
   },
   "reservation": {
-    "claim_id": "claim-a0e4b37dc8dd9e879f5d1060",
+    "claim_id": "claim-6aabd8efa261970bb7aabb74",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
