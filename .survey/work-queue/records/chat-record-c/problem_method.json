@@ -5,32 +5,16 @@
   "attempt_id": "attempt-b5919b99883e66617c28776a",
   "job_id": "job-research-5cd2beb9d9cae3d8",
   "data": {
-    "problem": "MoEはtokenごとに一部expertだけを選ぶinter-expert sparsityで計算量を抑えるが、expert数を増やして粒度を細かくするほどexpert collapse、load imbalance、representation collapse、expert当たりgradient更新減少などtraining上の問題が強くなる。一方、選択されたexpertのFFN内部にも入力ごとに寄与の小さいneuronが多数存在するが、近年のSwiGLU系MoEでそのsparsityがどこまで利用可能か、また高度に最適化されたvLLMの実運用MoE経路で実速度向上につながるかは十分検証されていなかった。",
-    "novelty": "既存のoff-the-shelf MoE 8モデル（1B〜400B）を再学習せずに調査し、active expert内部で最大約90%のactivation sparsityを精度を大きく落とさず利用できることを示す。さらにvLLMのrouter/dispatch/combineやexpert parallelismを保ったままrouted expert実行だけへsparse codepathを追加し、単なる研究用maskingではなくGPU上の実速度向上まで示した。shared expert neuronの重要度がrouted expertより高いこと、モデル規模とともにsparsity耐性が増すことも体系的に分析する。",
-    "method_overview": "まず各active expertのpost-activation出力を絶対値で順位付けし、小さいneuronを0化して5 benchmark平均精度を測り、baseline平均の95%を維持できる最大sparsityをmodel cutoffとする。実装ではshared expert、router、dispatch、combineを変更せずrouted expert経路のみを対象にする。gate projectionはdense BMMで先に計算し、起動時に作るmodel-specific lookup tableからtarget sparsityに対応するthresholdを得る。custom Triton activation kernelがthreshold未満のneuronをsingle-passでmaskしactive indexを連続bufferへ集約する。そのindexでup/down weight vectorだけをgatherしてshared memory上にpacked dense matrixを作り、up projection・activation乗算・down projectionを融合したsparse kernelで実行する。graph capture互換のためindex bufferをpaddingし64-neuron tile単位でlaunchする。大batchではdense BMMが有利になるためengine startup時に転換batch sizeをprofileし、実行stepごとにsparse/dense pathを切り替える。",
+    "problem": "混合エキスパートモデルはトークンごとに一部のエキスパートだけを選ぶことで計算量を抑える。しかしエキスパート数を増やして粒度を細かくすると、特定エキスパートへの偏り、負荷不均衡、表現の均質化、エキスパート当たりの勾配更新減少など学習上の問題が強くなる。一方、選択済みエキスパートのフィードフォワード網内部にも入力ごとに寄与の小さいニューロンが多数存在する。近年のSwiGLU系モデルでこの内部疎性をどこまで利用できるか、さらに高度に最適化されたvLLMの実運用経路で実速度向上へ変換できるかが課題である。",
+    "novelty": "既存の学習済み混合エキスパートモデル八種類を再学習せず調査し、選択済みエキスパート内部で最大約九割の活性値疎性を精度を大きく落とさず利用できることを示す。さらにvLLMのルータ、振り分け、結合、エキスパート並列を維持したまま、ルーティングされたエキスパートの内部実行だけへ疎な処理経路を追加する。単なるマスクによる演算量削減ではなく、GPU上の実測高速化まで結び付ける点が特徴である。共有エキスパートのニューロンはルーティング対象より重要度が高いこと、モデル規模が大きいほど疎化耐性が増すことも分析する。",
+    "method_overview": "入力は既存の学習済み混合エキスパートモデル、要求された疎化率、実行時バッチサイズであり、出力は精度許容範囲内でニューロン計算を省いたエキスパート出力である。まず各エキスパートの活性化後出力を絶対値で順位付けし、寄与の小さいニューロンをゼロ化する。五つの評価課題の平均精度が元モデル平均の九五パーセントを維持できる最大疎化率をモデルごとの上限として測る。実行系では共有エキスパート、ルータ、トークン振り分け、結果結合を変更せず、ルーティング対象エキスパート内部だけを疎な経路へ差し替える。\n\n推論時は最初のゲート射影を密なバッチ行列積で計算し、起動時に作成したモデル別参照表から目標疎化率に対応する閾値を得る。専用のTriton活性化カーネルが絶対値の小さいニューロンを一回の走査でマスクし、残ったニューロン番号を連続バッファへ集約する。その番号に対応する上向き射影と下向き射影の重みだけを読み出して共有メモリ上に詰め、上向き射影、活性値との積、下向き射影を融合した疎カーネルで処理する。グラフ捕捉との互換性を保つため番号バッファを固定長へ埋め、六四ニューロン単位で起動する。大きなバッチでは密な行列積の方が効率的になるため、起動時に転換点を測定し、各推論段階で疎経路と既存の密経路を切り替える。",
     "components": [
-      {
-        "name": "既存MoEのexpert内sparsity測定",
-        "description": "8種類のMoEでpost-activationの小さいneuronをzero化し、ARC-Challenge/Easy、HellaSwag、WinoGrande、TruthfulQA-mc2の平均scoreがbaselineの95%を維持する最大sparsityを測る。shared expertあり/なしを分け、規模・expert種別・neuron重要度を分析する。"
-      },
-      {
-        "name": "threshold-based sparse activation kernel",
-        "description": "dense gate projection後のactivationにmodel-specific thresholdを適用し、絶対値がthreshold未満のneuronをTriton kernel内でmaskする。top-k sortのO(n log n)ではなくsingle-pass O(n)でmaskを作り、active neuron indexを連続bufferへ集約する。"
-      },
-      {
-        "name": "fused sparse up-down projection",
-        "description": "active indexに対応するup/down weight vectorのみをbatched vector loadでgatherし、shared memory上でpacked dense matrixとして扱う。up projection、activationとの積、down projectionを連続して処理し、inactive neuronの主要計算を省く。"
-      },
-      {
-        "name": "graph互換とbatch-size適応切替",
-        "description": "CUDA/HIP Graph互換性のためactive-index bufferをfull neuron sizeへpaddingし、64-neuron tile単位でkernelを固定launchする。小〜中batchではsparse path、大batchのcompute-bound領域ではdense vLLM pathへ切り替え、sparse gatherのthroughput低下を回避する。"
-      }
+      {"name": "既存モデルのエキスパート内疎性測定", "description": "八種類の混合エキスパートモデルについて、ルータが選択したエキスパートの活性化後出力を観測し、絶対値が小さいニューロンから段階的にゼロ化する。ARC-Challenge、ARC-Easy、HellaSwag、WinoGrande、TruthfulQA-mc2の五課題で平均点を測り、元モデル平均の九五パーセントを維持できる最大疎化率をモデル上限と定義する。\n\nこの測定はエキスパートそのものを削除するのではなく、選択されたエキスパート内部でその入力に寄与しにくい中間ニューロンを対象にする。共有エキスパートの有無、モデル規模、エキスパート種別ごとに結果を分け、共有エキスパートはルーティング対象より疎化に敏感であることや、大規模モデルほど内部疎性を利用しやすい傾向を確認する。これにより実行系でどこを疎化対象にすべきかを決める。"},
+      {"name": "閾値による疎な活性化カーネル", "description": "密なゲート射影を計算した直後の活性値に、モデルと目標疎化率から決まる閾値を適用する。絶対値が閾値未満のニューロンを専用Tritonカーネル内で無効化し、残ったニューロン番号を連続した作業バッファへ書き込む。全要素を並べ替えて上位要素を選ぶ方法ではなく、一回の走査で判定するため選別自体の追加費用を抑える。\n\n閾値は起動時に作成するモデル別参照表から取得するため、推論要求ごとに高価な順位付けを行う必要がない。ここで生成した番号列が次の疎な射影処理への入力となる。疎化率が高くても選別処理が支配的にならないよう、マスク生成と番号収集を同じ流れで行い、後段が連続した番号列を直接利用できる形へ整える。"},
+      {"name": "融合した疎な上下射影", "description": "活性化カーネルが残したニューロン番号を使い、対応する上向き射影と下向き射影の重みベクトルだけをまとめて読み出す。読み出した重みは共有メモリ上で詰め直し、疎な不規則構造を小さな密行列として扱える形にする。これにより無効化したニューロンに対応する主要な行列積を実行せずに済む。\n\n詰め直した重みに対する上向き射影、活性値との要素積、下向き射影を一つの連続したカーネル経路へ融合する。単にゼロを掛けるだけでは密な行列積の計算量が残るが、必要な重みだけを集めてから計算するため実演算そのものを削減できる。一方で重み収集は不規則なメモリアクセスを生むため、後述のバッチサイズ適応切替と組み合わせて損益を制御する。"},
+      {"name": "グラフ互換とバッチサイズ適応切替", "description": "CUDAまたはHIPのグラフ捕捉と互換にするため、活性ニューロン番号のバッファを最大ニューロン数まで固定長に埋め、六四ニューロン単位のタイルでカーネルを起動する。入力ごとに可変長の動的起動へすると既存vLLMの実行最適化を壊すため、外形を固定したまま内部で有効要素だけを処理する。\n\n小から中程度のバッチでは省いたニューロン計算が重み収集の追加費用を上回るため疎経路を使う。大きなバッチでは密なバッチ行列積がGPUを効率よく使い、疎な重み収集が逆に律速になるため既存の密経路へ戻す。転換バッチサイズはエンジン起動時に測定し、各推論段階で自動選択することで、疎化が不利な領域まで強制適用しない。"}
     ],
-    "system_design": "既存vLLMのexpert-batched MoE pipelineを維持し、routed expert内部だけをactivation-aware sparse executionへ差し替える設計である。dense gate projection→threshold mask/index生成→gather-based fused sparse up/downという順序で処理し、expert parallelism、kernel fusion、CUDA/HIP Graphなど既存最適化との互換性を残す。shared expertは精度寄与が大きく並列実行のため疎化対象外とする。"
+    "system_design": "既存vLLMのエキスパート一括処理の流れを維持し、ルーティング対象エキスパート内部だけを活性値に応じた疎実行へ差し替える。処理順は密なゲート射影、閾値によるマスクと番号生成、必要重みの収集、融合した疎な上下射影であり、ルータやトークン振り分け、結果結合は従来経路をそのまま利用する。\n\nエキスパート並列、カーネル融合、CUDA/HIPグラフなど既存の最適化との互換性を残すことを設計条件とする。共有エキスパートは精度への寄与が大きく、ルーティング対象と並列に実行されるため疎化対象外とする。疎経路が有利なバッチ領域だけで利用することで、研究用の演算量削減を実運用のスループット改善へ変換する。"
   },
-  "reservation": {
-    "claim_id": "claim-b5919b99883e66617c28776a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-b5919b99883e66617c28776a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
