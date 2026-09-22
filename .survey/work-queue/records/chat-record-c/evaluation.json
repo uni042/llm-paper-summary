@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a153536b7690fbfbd5037795",
-  "job_id": "job-research-f0b1ffeacc3b0ccd",
-  "data": {
-    "hardware": "NVIDIA A100-SXM4-80GBとH100-80GB-HBM3を使用する。実モデル評価はQwen3-4B/32B、Llama-2-7B/13B、Mamba 130M/2.8B、Mamba2 130M/2.7B、RecurrentGemma-2B/9Bの10 workload。KernelBench Level 2でも両GPUを評価する。",
-    "software": "出発点はPyTorch eager実行。生成候補は主にTritonで、Transformer attentionではFlashAttention系、Mambaではmamba_ssmとcausal-conv1dを強いscope-matched baselineとして比較する。公開コードはhzeng2000/LLM4LLM。",
-    "methodology": "対象inference scriptそのものを使って候補を抽出・モデルへ挿入し、全報告patchについてmodel-integrated correctnessを通した後にlatencyを測定する。主要指標はtarget workloadのend-to-end latencyとeager比speedup。Transformerはprompt長P=512〜4096とdecode長D=1〜32、Mamba系はP=32〜512等の代表regimeでattention/mixer scopeも比較する。KernelBench Level 2ではPass、Fast1、Fast2、算術平均・幾何平均speedupを分けて報告する。",
-    "scope": "単一GPUの推論最適化を対象とし、Transformerだけでなくstate-space modelとrecurrent modelまで含めてprofiling-first設計を検証する。分散推論、continuous batching、multi-tenant serving、通信・scheduler干渉は対象外で、観測したshape/phaseと大きく異なるworkloadでは再profilingと再受理が必要である。"
-  },
+  "attempt_id": "attempt-992613f3c0bf7bcde1b5d5ce",
+  "job_id": "job-research-50400bb966b2b5a1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a153536b7690fbfbd5037795",
+    "claim_id": "claim-992613f3c0bf7bcde1b5d5ce",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
