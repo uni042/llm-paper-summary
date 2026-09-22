@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ac17b6b84524962e53346559",
-  "job_id": "job-research-3bf50f659a80056e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ac17b6b84524962e53346559",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ac17b6b84524962e53346559","job_id":"job-research-3bf50f659a80056e","data":{"relation_to_repository":"本リポジトリのAdaptive Expert Computation / Compression系統では、REAPのような専門家枝刈り、HC-SMoE等の専門家統合、量子化・低ランク化などと並ぶ。REAMはREAPの重要度指標を捨てず、削除判断を『重要専門家を代表として残し、低重要度専門家をそこへ吸収する』判断へ変換するため、枝刈りと統合の直接的な橋渡しになる。","difference_from_reap":"REAPは重要度の低い専門家を除去して専門家数を減らす。REAMは同じ方向の重要度を代表選択に使いつつ、除去対象の重みを近い代表へ統合する。したがって校正データで低頻度だった専門能力を完全に消すリスクを緩和する代わりに、統合時の機能干渉と作成コストを負う。","difference_from_merging":"従来の統合は重み類似度や活性類似度だけで群を作ることがある。REAMはルータが実際に専門家へ与える確信度を類似度へ組み込み、重要度上位を代表として固定する。また活性・重みの両方を使うニューロン整列と、層ごとの活性再取得を組み合わせる。","practical_implication":"GPUメモリやCPU/SSDオフロードが支配的なMoE推論では、専門家数そのものを事前に減らせれば常駐・転送対象の重みを減らせる。ただし本論文はストレージ階層や専門家キャッシュを直接最適化する方式ではない。REAMで圧縮したモデルをMoE-Infinity型オフロードや専門家キャッシュと組み合わせる場合、専門家集合の縮小がキャッシュ命中率・転送量へどう波及するかは別途実測が必要である。","strengths":["枝刈りと統合を同じ重要度枠組みで比較しやすい","複数の大規模MoEで評価","校正データ混合比を振ってMC/GENのパレート前線を分析","構成要素のアブレーションと表現ランクの代理指標分析を含む"],"limitations":["校正データ分布への感度が高い","圧縮率が高いほど専門家統合による干渉が増える","圧縮作成時に層ごとの前向き再計算と整列処理が必要","推論システム全体の遅延・スループット改善は別問題"],"implementation_status":"SamsungSAILMontreal/reamとして公開実装がある。","source_evidence":["arXiv:2604.04356","https://github.com/SamsungSAILMontreal/ream"]},"reservation":{"claim_id":"claim-ac17b6b84524962e53346559","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
