@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-scheduled-chat-00-20260922T063700Z-4e2b8c",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-ca56f81ba7248b99",
+      "claim_id": "claim-c92a29674a67b32c44dc512a",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-c92a29674a67b32c44dc512a",
+      "claimed_at": "2026-09-22T06:36:37+00:00",
+      "expires_at": "2026-09-22T08:06:37+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-ca56f81ba7248b99"
+      ],
+      "job": {
+        "job_id": "job-research-ca56f81ba7248b99",
+        "type": "research",
+        "parent_job_id": "job-e907b81ce8de63df",
+        "priority": 98,
+        "canonical_id": "arXiv:2609.09823",
+        "arxiv_id": "2609.09823",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.09823",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md",
+        "selection_reason": "Very recent GPU-PIM LLM decoding systems work that targets nonblocking execution and decode efficiency; directly relevant to heterogeneous inference acceleration.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:21:37+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T06:36:37+00:00",
+  "checkpoint_released": 0
+}
