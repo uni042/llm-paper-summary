@@ -1,4 +1,46 @@
 {
-"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d81c86740a5ce02099e0f3ff","job_id":"job-research-1b89c86f687054e4",
-"data":{"conditions":"主要評価はMixtral 8x7B、Mixtral 8x7B-Instruct、Mixtral 8x22B、DeepSeek-MoE-16B、Qwen2-57B-14Aの五モデル。校正にはC4から128サンプルを使用し、層内重要度αと層間重要度βを3対1の更新比、学習率5e-3、コサイン学習率、10エポック、バッチ16で学習する。実験はNVIDIA A800 GPU四枚で実施。Mixtralでは25%と50%のエキスパート削減を中心に比較する。","datasets":["MMLU","BoolQ","OpenBookQA","RTE","ARC-Challenge","ARC-Easy","HellaSwag","WinoGrande","GSM8K"],"baselines":["M-SMoE","Expert Trimming","NAEE","S-MoE","MC-MoE"],"metrics":["ゼロショット課題精度と平均精度","元モデル性能保持率","エキスパート削減率","推論高速化倍率","GPUメモリ比","削減探索時間","ピークメモリ","メモリ時間積"],"ablations":"Mixtral 8x7Bで層内重要度αのみ、層間重要度βのみ、固定β、複数のα対β更新比、完全版を比較する。完全版は25%/50%削減で平均63.8/59.9、αのみ61.6/56.7、βのみ61.3/57.6。更新比3対1の固定構成63.3/59.2より、学習可能な完全版が高い。校正サンプル数32〜1024も比較し、128サンプルが最高63.8。C4とMATHを使ったGSM8K校正比較でもNAEEを上回る。","hardware":"NVIDIA GeForce A800 GPU ×4","calibration":"C4 128 samples by default; additional C4/MATH and sample-count sensitivity studies."},
-"reservation":{"claim_id":"claim-d81c86740a5ce02099e0f3ff","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-30089bb883f49403e1bb3ff8",
+  "job_id": "job-research-1b89c86f687054e4",
+  "data": {
+    "conditions": "主要評価はMixtral 8x7B、Mixtral 8x7B-Instruct、Mixtral 8x22B、DeepSeek-MoE-16B、Qwen2-57B-14Aの五モデル。校正にはC4から128サンプルを使用し、層内重要度αと層間重要度βを3対1の更新比、学習率5e-3、コサイン学習率、10エポック、バッチ16で学習する。実験はNVIDIA A800 GPU四枚で実施。Mixtralでは25%と50%のエキスパート削減を中心に比較する。",
+    "datasets": [
+      "MMLU",
+      "BoolQ",
+      "OpenBookQA",
+      "RTE",
+      "ARC-Challenge",
+      "ARC-Easy",
+      "HellaSwag",
+      "WinoGrande",
+      "GSM8K"
+    ],
+    "baselines": [
+      "M-SMoE",
+      "Expert Trimming",
+      "NAEE",
+      "S-MoE",
+      "MC-MoE"
+    ],
+    "metrics": [
+      "ゼロショット課題精度と平均精度",
+      "元モデル性能保持率",
+      "エキスパート削減率",
+      "推論高速化倍率",
+      "GPUメモリ比",
+      "削減探索時間",
+      "ピークメモリ",
+      "メモリ時間積"
+    ],
+    "ablations": "Mixtral 8x7Bで層内重要度αのみ、層間重要度βのみ、固定β、複数のα対β更新比、完全版を比較する。完全版は25%/50%削減で平均63.8/59.9、αのみ61.6/56.7、βのみ61.3/57.6。更新比3対1の固定構成63.3/59.2より、学習可能な完全版が高い。校正サンプル数32〜1024も比較し、128サンプルが最高63.8。C4とMATHを使ったGSM8K校正比較でもNAEEを上回る。",
+    "hardware": "NVIDIA GeForce A800 GPU ×4",
+    "calibration": "C4 128 samples by default; additional C4/MATH and sample-count sensitivity studies."
+  },
+  "reservation": {
+    "claim_id": "claim-30089bb883f49403e1bb3ff8",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-scheduled-chat-00-20260922T021700Z-8d1a62",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-1b89c86f687054e4",
+      "claim_id": "claim-30089bb883f49403e1bb3ff8",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-30089bb883f49403e1bb3ff8",
+      "claimed_at": "2026-09-22T02:17:23+00:00",
+      "expires_at": "2026-09-22T03:47:23+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-1b89c86f687054e4"
+      ],
+      "job": {
+        "job_id": "job-research-1b89c86f687054e4",
+        "type": "research",
+        "parent_job_id": "job-6baaa199325a8201",
+        "priority": 98,
+        "canonical_id": "arXiv:2509.16105",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning",
+        "source_url": "https://arxiv.org/abs/2509.16105",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md",
+        "selection_reason": "layerごとのexpert redundancy差に応じてpruning率を微分可能に適応させるnon-uniform compression。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T10:54:09+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: metadata.canonical_id is required | metadata.source is required | metadata.sources is required | metadata.publication is required | metadata.topics is required | metadata.implementation is required | metadata.last_checked is required | metadata.code is required; use null when no official URL was confirmed | metadata.publication_type is required | metadata.publication_status is required | metadata.hardware_evaluation is required | metadata.quality_effect is required | metadata.references is required; use [] after checking a reference section with no normalized identifiers | problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | evaluation.scope is required to distinguish real-hardware/simulation and generalization limits | results.key_results requires at least one quantitative result | results.overview must explain the main result and its practical meaning | results.negative_results is required; record degradation and boundary conditions | results.interpretation is required; explain why gains change across conditions | results.quality_impact is required; distinguish lossless from approximate methods",
+        "validation_errors": [
+          "metadata.canonical_id is required",
+          "metadata.source is required",
+          "metadata.sources is required",
+          "metadata.publication is required",
+          "metadata.topics is required",
+          "metadata.implementation is required",
+          "metadata.last_checked is required",
+          "metadata.code is required; use null when no official URL was confirmed",
+          "metadata.publication_type is required",
+          "metadata.publication_status is required",
+          "metadata.hardware_evaluation is required",
+          "metadata.quality_effect is required",
+          "metadata.references is required; use [] after checking a reference section with no normalized identifiers",
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "evaluation.scope is required to distinguish real-hardware/simulation and generalization limits",
+          "results.key_results requires at least one quantitative result",
+          "results.overview must explain the main result and its practical meaning",
+          "results.negative_results is required; record degradation and boundary conditions",
+          "results.interpretation is required; explain why gains change across conditions",
+          "results.quality_impact is required; distinguish lossless from approximate methods"
+        ],
+        "last_validation_failed_at": "2026-09-22T02:17:12+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-d81c86740a5ce02099e0f3ff"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-d81c86740a5ce02099e0f3ff.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T02:17:23+00:00",
+  "checkpoint_released": 0
+}
