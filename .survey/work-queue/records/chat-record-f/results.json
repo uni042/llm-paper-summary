@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
   "job_id": "job-research-b0919b5b9aea285a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d1d3b3caeff62a011e27f971",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "64k/128kのHELMETでは全タスクで一様な勝利ではないが、推論時と同じ疎注意方策で微調整したモデルは、短い答えを要求する分類・検索系タスクで系列並列学習モデルの顕著な出力崩壊を防ぐ。128k・S=1024ではTREC coarseでus 96.0〜96.4に対しsp 23.2〜77.6、NLUでus 79.8〜90.0に対しsp 28.6〜74.0、CLINC150でus 94.0〜97.4に対しsp 61.6〜68.0を示す。JSON KVでは方策によりus 49〜50に達する一方、spは0〜1である。",
+    "key_results": [
+      {"metric":"TREC coarse accuracy","value":"96.0〜96.4","baseline":"sequence-parallel trained model under sparse inference: 23.2〜77.6","condition":"128k、S=1024、slr/h2ono/h2oor","interpretation":"推論時の忘却規則へ学習時から適応すると分類出力が安定する。"},
+      {"metric":"NLU accuracy","value":"79.8〜90.0","baseline":"sp: 28.6〜74.0","condition":"128k、S=1024","interpretation":"疎注意共適応が完全注意学習からの分布ずれを緩和する。"},
+      {"metric":"CLINC150 accuracy","value":"94.0〜97.4","baseline":"sp: 61.6〜68.0","condition":"128k、S=1024","interpretation":"複数KV方策で大きな改善が再現される。"},
+      {"metric":"InfiniteBench QA accuracy","value":"26.6〜36.8","baseline":"sp: 2.2〜3.3","condition":"128k、S=1024","interpretation":"長文脈QAでも方策内学習が大幅に有利。"},
+      {"metric":"JSON KV SubEM","value":"49〜50（slr/h2ono）","baseline":"sp: 0〜1","condition":"128k、S=1024","interpretation":"32-token UUID検索で、完全注意学習後の疎化ではほぼ失敗するケースを回復する。"},
+      {"metric":"NaturalQuestions SubEM","value":"最大62.0","baseline":"同条件sp最大72.8","condition":"64k、H2O、S=1024","interpretation":"全データセットでusが勝つわけではなく、NQではspが優位な構成もある。"}
+    ],
+    "negative_results": "NaturalQuestionsとHotpotQAでは系列並列学習が優位な構成が多く、TriviaQAでは微調整なしが強いなど、Table 1の4 QAデータセットは混合結果である。H2O変種間の順位も一貫せず、original H2OはJSON KVで特に悪い。したがって『疎注意で学習すれば常に精度が上がる』とは結論できない。",
+    "interpretation": "大差が出る主要因として、spモデルは完全注意なら学習した短い出力を生成できるのに、推論時に未経験のKV evictionを課すと不要に長い数値列や無意味な出力を生成する。usは学習時から同じ短期記憶制約を経験するため停止挙動まで適応する。SubEMのように正解文字列を含めば出力長を罰しない指標ではこの失敗が隠れるため、タスク指標の解釈にも注意が必要である。",
+    "quality_impact": "精度効果は方策・タスク依存だが、推論条件と学習条件を一致させることが重要というシステム上の証拠が強い。疎注意は単なるメモリ削減ではなく、モデルが適応すべき計算・記憶環境として扱われる。"
+  },
+  "reservation": {"claim_id": "claim-d1d3b3caeff62a011e27f971", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
