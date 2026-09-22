@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-3e9870d1ea6c812acfc6fb72","job_id":"job-research-0088fb887d51af7d","data":{"overview":"提案法はMixtral、DeepSeek、Qwenで主要なタスク非依存枝刈り比較法を概ね上回る。Mixtral-8x7Bを8→6専門家へ削減したデータ中心方式は平均62.4で列挙法59.9、訪問回数方式54.1を上回り、8→4でも54.5で列挙法50.8を上回る。Mixtral-8x22Bではモデル中心方式が6/4専門家で67.6/62.6となり、列挙法66.2/59.6を上回る。効率面ではMixtral 8→6で推論時間281→241秒、GPUメモリ125→104GBとなる。","key_results":[{"metric":"Mixtral-8x7B 6専門家の平均性能","value":"62.4","baseline":"Enumerate 59.9、Router-guided 57.8、Count-guided 54.1、原モデル66.0","condition":"data-centric, 8→6 experts/layer, MMLU群+BoolQ+OpenBookQA+RTE平均","interpretation":"原モデルとの差を3.6ポイントに抑えつつ全比較圧縮法を上回る。"},{"metric":"Mixtral-8x22B 6専門家の平均性能","value":"67.6","baseline":"Enumerate 66.2、Count-guided 63.3、原モデル70.4","condition":"model-centric surrogate-weight strategy, 8→6 experts/layer","interpretation":"小較正集合への過適合を避けるモデル中心表現が大規模モデルで有効。"},{"metric":"DeepSeek-MoE-16B圧縮後平均","value":"50.9%","baseline":"full modelとの差3.1ポイント","condition":"data-centric, non-shared experts 64→48","interpretation":"共有専門家を持つ細粒度MoEでも約1/3削減後の性能を維持する。"},{"metric":"Mixtral効率改善","value":"1.17× speedup, GPU memory -16.8%","baseline":"8 experts: 281s, 125GB","condition":"6 experts: 241s, 104GB, batch size 8, MMLU, 4×A100 80GB","interpretation":"専門家数削減が実際の推論時間とGPU常駐量の双方に効く。"},{"metric":"DeepSeek効率改善","value":"inference time -15.5%, GPU memory -14.1%","baseline":"64 experts: 457s, 64GB","condition":"48 experts: 386s, 55GB","interpretation":"専門家数の多いMoEでも物理削減が実効コストを下げる。"}],"negative_results":"データ中心方式は小さな較正集合への過適合があり、Mixtral-8x22Bではモデル中心方式より弱い。DeepSeekは共有専門家と独立初期化により非共有専門家がより多様で、Qwenより類似専門家を安全に削りにくい。学習型統合係数はわずかな性能改善を得られる場合があるが、50 epochの最適化コストを伴う。層ごとの冗長性は異なるのに主方式では同じ専門家数へ削減する。","interpretation":"専門家の訪問回数よりも『同じ入力をどう変換するか』という知識類似性を使うことで、対象タスクを知らなくても冗長専門家を見つけやすい。さらに専門家だけでなくルータを統合することで、統合後の知識へトークンを導く経路も保存される。モデル規模によってデータ中心/モデル中心の優劣が変わる点は、単一の類似度指標が万能ではないことも示す。","quality_impact":"25%程度の削減では比較的損失が小さいが、50%削減ではMixtral-8x7B平均が66.0から54.5まで低下する。したがって本手法は無損失圧縮ではなく、同じ削減率で既存法より品質を保つ方式である。"},"reservation":{"claim_id":"claim-3e9870d1ea6c812acfc6fb72","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-c38aefc50c08da92ba7b2ee0",
+  "job_id": "job-research-e434f2731ff9316c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c38aefc50c08da92ba7b2ee0",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3e9870d1ea6c812acfc6fb72","job_id":"job-research-0088fb887d51af7d","data":{"canonical_id":"arXiv:2407.09590","arxiv_id":"2407.09590","doi":"10.18653/v1/2025.findings-acl.4","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.LG"]},"title":"Diversifying the Expert Knowledge for Task-Agnostic Pruning in Sparse Mixture-of-Experts","summary":"本研究は、疎な専門家混合（MoE）で全専門家を保持するメモリ負担に対し、事前学習中に生じた専門家知識の冗長性を利用するタスク非依存枝刈りを提案する。共有入力に対する専門家表現を中心化カーネル整合度（CKA）等で比較して類似専門家をグループ化し、専門家重みとルータ重みを同時に統合する。Mixtral-8x7Bを8→6専門家へ削減したデータ中心方式は4評価群平均62.4で列挙法59.9を上回り、実機では1.17倍高速化とGPUメモリ16.8%削減を報告する。Findings of ACL 2025採択。","list_summary":"共有入力上の専門家知識類似度で冗長専門家をグループ化し、専門家とルータを同時統合することで、タスク非依存にMoEのメモリと推論時間を削減する。","authors":["Zeliang Zhang","Xiaodong Liu","Hao Cheng","Chenliang Xu","Jianfeng Gao"],"authors_affiliations":"University of Rochester; Microsoft Research","published":"2024-07-12","publication":"Findings of ACL 2025","publication_type":"国際会議論文","publication_status":"Published in Findings of the Association for Computational Linguistics: ACL 2025, pages 86–102","lineage":"MoE compression / task-agnostic expert pruning / expert merging / representation similarity","topics":["MoE圧縮","専門家枝刈り","専門家統合","CKA","タスク非依存圧縮"],"importance":"ルータ訪問頻度だけで専門家重要度を測るのではなく、同一入力に対する専門家知識の類似性を直接比較し、削除ではなく統合で知識を残す。データ中心方式とデータ不要のモデル中心方式を同じ枠組みで示す点も実運用上重要である。","implementation":"論文はデータ中心方式としてCKA、モデル中心方式としてベクトル化重みまたは局所線形性に基づく代理重みを用いる。統合係数は最大頻度、均等平均、学習方式を比較。","hardware_evaluation":"全実験は4×80GB NVIDIA A100で実施。Mixtral、DeepSeek-MoE、Qwenを評価し、推論時間とGPUメモリも計測。","quality_effect":"Mixtral 8x7B/8x22B、DeepSeek-MoE-16B、Qwen2-57B-14Aで主要比較法を概ね上回るが、圧縮率とモデル構造により最適な表現・統合方式は異なる。","source":"https://arxiv.org/abs/2407.09590","sources":["https://arxiv.org/abs/2407.09590","https://aclanthology.org/2025.findings-acl.4/"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":49},"reservation":{"claim_id":"claim-3e9870d1ea6c812acfc6fb72","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c38aefc50c08da92ba7b2ee0",
+  "job_id": "job-research-e434f2731ff9316c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c38aefc50c08da92ba7b2ee0",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
