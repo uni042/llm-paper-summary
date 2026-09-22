@@ -2,13 +2,17 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-da608a41f05d014b86a258e4",
-  "job_id": "job-research-f59af449638fc64c",
+  "attempt_id": "attempt-0da4ffa5fe5ff7d5bcb1563d",
+  "job_id": "job-research-a4042c7c7ed57c9a",
   "data": {
-    "hardware": "主実験はMixtral-8×7B BaseとMixtral-8×7B Instructを用いる。MoE Lotteryのタスク非依存微調整はNVIDIA A100を8基使用し、バッチサイズ8で実施する。論文は50%エキスパート削減時のメモリ使用量を密モデル比0.55倍、推論高速化を1.27倍と報告する。",
-    "software": "Hugging Faceから取得したMixtralチェックポイントへMC-Suiteの16重要度指標、単発枝刈り、反復枝刈り、MoE Lotteryのestimate-prune-finetune手順を適用する。微調整はAdamWとコサイン学習率スケジューラを用い、最大学習率1e-6、各ラウンドで最適化器をリセットする。",
-    "methodology": "重要度推定の較正にはC4 validationから256サンプル、最大系列長2048を使う。削減率は12.5%から75%まで12.5%刻みで評価し、反復方式では各ラウンドに各32層から1エキスパートずつ合計32個を削る。C4パープレキシティで重要度指標と単発・反復・Lotteryを比較し、下流ではMMLU、WinoGrande、CommonsenseQA、ARC-Easy、BoolQなどをゼロショット、少数例提示、教師あり指示微調整条件で評価する。Lottery微調整トークン数は初回0.2Mから倍増させ、付録では0.25M〜2.27Mの感度を測る。",
-    "scope": "主対象はMixtral-8×7B系列であり、異なるMoE設計への一般化は限定的である。勾配系・活性値系の指標は較正データ上の前向き・後向き計算を必要とし、利用頻度だけの指標より圧縮前処理費が高い。Lotteryは完全な訓練不要ではあるが追加微調整を必要とするため、純粋な訓練なし枝刈りより計算費が増える。50%以上の高削減率での性能回復は指示追従支援に依存し、用途やデータが変わると同程度に回復する保証はない。"
+    "hardware": "全実験はNVIDIA A100 80GB GPUを32基備えたクラスタで実施する。対象モデルはDeepSeek-V2-Liteで、標準FFN 1層とMoE FFN 26層、各MoE層64エキスパートを持つ構成、およびQwen1.5-MoE-A2.7Bで、MoE FFN 24層、各層60エキスパートの構成である。",
+    "software": "C-PRUNEを学習済みDeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bへ適用し、比較対象としてランダム枝刈り、Seer Prune、Group&Mergeを用いる。クラスタリング比較では階層的クラスタリングとK-meansを比較する。著者は実装コードを公開している。",
+    "methodology": "主評価はMMLUのコンピュータ科学・数学・ビジネス、GSM8K、HumanEvalを用い、未枝刈りモデルを基準とする。表1では総枝刈り率20%でDeepSeekを15.7Bから13.0B、ルーティング対象64から52へ、Qwenを14.3Bから11.8B、60から48へ縮小して各比較方式と評価する。追加分析では層内枝刈り率と全体枝刈り率、タスク特化とタスク非依存、数学用圧縮をコードへ転用するなどの領域間転移、層内・全体に残すエキスパート数の配分、階層的クラスタリング対K-meansを比較する。",
+    "scope": "評価モデルは比較的小規模な2種類のMoEに限られ、論文自身も大規模MoEでの実運用スケーラビリティを未検証とする。MMLU、GSM8K、HumanEvalを中心とするため領域範囲も限定的で、より新しいMoE枝刈り法との比較も不足している。タスク特化方式なので較正データと対象領域の選び方が結果へ影響し、別領域へそのまま転用すると性能が落ちる場合がある。"
   },
-  "reservation": {"claim_id": "claim-da608a41f05d014b86a258e4", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-0da4ffa5fe5ff7d5bcb1563d",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
