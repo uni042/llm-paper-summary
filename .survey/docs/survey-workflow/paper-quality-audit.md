@@ -28,6 +28,14 @@ python .survey/scripts/audit_overview_results.py \
 
 GitHub Actionsの `.github/workflows/paper-quality-audit.yml` も同じ監査を行い、結果はrepositoryへ固定保存せず7日間のworkflow artifactとして保持する。
 
+## 品質基準の固定
+
+論文品質の機械基準は、2026-09-12から2026-09-21の間に安定運用されていた `.survey/scripts/audit_paper_quality.py` の基準を固定基準とする。具体的には、UTF-8 4,500 bytes、説明文2,200文字、説明10段落、手法4段落、主要機構が3個以上ある場合は各2段落、日本語比率70%未満FAIL・80%未満WARN、裸の英語専門語0件、既存の構造化手法相当判定を維持する。品質計測から除外する節も当時の集合（一次資料、参考文献、References、更新履歴、監査メモ）を正本とし、書誌情報は当時どおり計測対象に残す。
+
+この固定基準は、repository-wide監査、`paper_quality_gate.py` を使うsubmission processor、`research_quality_preflight.py` の提出前preflightで共通利用する。提出前preflightは独自の機械閾値を持たず、同じ `audit_paper_quality.py` の既定値をそのまま使う。セルフレビューやexact blob照合は提出前に同じ品質を確認するための手順であり、新しい品質閾値を追加するものではない。
+
+今後、品質基準そのものを自動的に強化・緩和・追加・削除しない。変更してよいのは、想定外挙動、解析バグ、移行・互換バグなどを直し、**修正前と同じ品質基準の意味を保つ場合だけ**とする。基準変更が必要に見える場合は実装せず報告し、ユーザーの明示指示を待つ。
+
 ## 既定の機械判定
 
 - UTF-8ファイルサイズ: 4,500 bytes以上
@@ -106,4 +114,4 @@ python -m unittest discover -s .survey/tests -p 'test_*quality.py'
 python -m unittest discover -s .survey/tests -p 'test_render_paper_metadata.py'
 ```
 
-意味的な品質基準の正本は常に `.survey/templates/paper.md` と本運用文書。機械閾値、一覧文生成、代表結果判定、英語専門語規則を変更する場合は、checker・renderer・回帰試験を同時に更新する。
+意味的な品質基準の正本は常に `.survey/templates/paper.md` と本運用文書。上記の固定基準は、想定外挙動・解析バグ・移行/互換バグの修正、またはユーザーの明示指示がある場合を除いて変更しない。バグ修正時も基準の意味を変えず、repository-wide監査・提出前preflight・submission processorの3経路が同じ基準を使うことを既存回帰試験で確認する。
