@@ -4,17 +4,19 @@ import json
 import sys
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(SCRIPTS))
 
 import blocked_retry  # noqa: E402
 
 
 UTC = timezone.utc
+AT = datetime(2026, 9, 1, 8, 0, tzinfo=UTC)
 
 
 class ResearchBlockedRetryPolicyTest(unittest.TestCase):
@@ -26,153 +28,183 @@ class ResearchBlockedRetryPolicyTest(unittest.TestCase):
     def _read_job(self, path: Path) -> dict:
         return json.loads(path.read_text(encoding="utf-8"))
 
-    def test_three_distinct_block_events_promote_research_job_to_permanent(self) -> None:
+    def _seed_blocked(self, jobs_dir: Path, **extra) -> Path:
+        job = {
+            "job_id": "job-research-test",
+            "type": "research",
+            "status": "blocked",
+            "completed_at": AT.isoformat(),
+            "blocker": "primary source temporarily unavailable",
+        }
+        job.update(extra)
+        return self._write_job(jobs_dir, job)
+
+    def test_new_block_event_schedules_retry_seven_days_later(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             jobs_dir = root / "work-queue" / "jobs"
             jobs_dir.mkdir(parents=True)
-            path = self._write_job(
-                jobs_dir,
-                {
-                    "job_id": "job-research-test",
-                    "type": "research",
-                    "status": "blocked",
-                    "completed_at": "2026-09-12T08:00:00+00:00",
-                    "blocker": "primary source temporarily unavailable",
-                },
-            )
+            path = self._seed_blocked(jobs_dir)
 
-            blocked_retry.process_blocked_research_jobs(root, datetime(2026, 9, 12, 8, 1, tzinfo=UTC))
+            result = blocked_retry.process_blocked_research_jobs(root, AT)
             job = self._read_job(path)
+
+            self.assertEqual(result["new_block_events"], 1)
             self.assertEqual(job["status"], "blocked")
             self.assertEqual(job["blocked_attempts"], 1)
-            self.assertEqual(len(job["block_history"]), 1)
-            self.assertEqual(job["block_history"][0]["reason"], "primary source temporarily unavailable")
-            self.assertIn("retry_not_before", job)
-
-            blocked_retry.process_blocked_research_jobs(root, datetime(2026, 9, 12, 9, 2, tzinfo=UTC))
-            job = self._read_job(path)
-            self.assertEqual(job["status"], "ready")
-            self.assertEqual(job["blocked_attempts"], 1)
-            self.assertEqual(len(job["block_history"]), 1)
-            self.assertNotIn("retry_not_before", job)
-            self.assertIn("retry_queued_at", job)
-
-            job.update(
-                status="blocked",
-                completed_at="2026-09-12T10:00:00+00:00",
-                blocker="upstream returned 503",
+            self.assertEqual(
+                blocked_retry.parse_time(job["retry_not_before"]),
+                AT + timedelta(days=7),
             )
-            self._write_job(jobs_dir, job)
-            blocked_retry.process_blocked_research_jobs(root, datetime(2026, 9, 12, 10, 1, tzinfo=UTC))
-            job = self._read_job(path)
-            self.assertEqual(job["status"], "blocked")
-            self.assertEqual(job["blocked_attempts"], 2)
-            self.assertEqual(len(job["block_history"]), 2)
+            self.assertNotIn("blocked_permanent_at", job)
+            self.assertFalse(job.get("blocked_retry_dormant", False))
 
-            blocked_retry.process_blocked_research_jobs(root, datetime(2026, 9, 12, 11, 2, tzinfo=UTC))
-            job = self._read_job(path)
-            self.assertEqual(job["status"], "ready")
-
-            job.update(
-                status="blocked",
-                completed_at="2026-09-12T12:00:00+00:00",
-                blocker="primary source still unavailable",
-            )
-            self._write_job(jobs_dir, job)
-            blocked_retry.process_blocked_research_jobs(root, datetime(2026, 9, 12, 12, 1, tzinfo=UTC))
-            job = self._read_job(path)
-            self.assertEqual(job["status"], "blocked_permanent")
-            self.assertEqual(job["blocked_attempts"], 3)
-            self.assertEqual(len(job["block_history"]), 3)
-            self.assertNotIn("retry_not_before", job)
-            self.assertIn("blocked_permanent_at", job)
-
-    def test_same_block_event_is_not_double_counted_before_retry(self) -> None:
+    def test_job_is_not_requeued_before_seven_day_cooldown(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             jobs_dir = root / "work-queue" / "jobs"
             jobs_dir.mkdir(parents=True)
-            path = self._write_job(
-                jobs_dir,
-                {
-                    "job_id": "job-research-test",
-                    "type": "research",
-                    "status": "blocked",
-                    "completed_at": "2026-09-12T08:00:00+00:00",
-                    "blocker": "temporary fetch failure",
-                },
-            )
-
-            blocked_retry.process_blocked_research_jobs(root, datetime(2026, 9, 12, 8, 1, tzinfo=UTC))
-            blocked_retry.process_blocked_research_jobs(root, datetime(2026, 9, 12, 8, 30, tzinfo=UTC))
-
-            job = self._read_job(path)
-            self.assertEqual(job["status"], "blocked")
-            self.assertEqual(job["blocked_attempts"], 1)
-            self.assertEqual(len(job["block_history"]), 1)
-
-    def test_due_blocked_research_job_is_requeued_without_losing_history(self) -> None:
-        with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
-            jobs_dir = root / "work-queue" / "jobs"
-            jobs_dir.mkdir(parents=True)
-            path = self._write_job(
-                jobs_dir,
-                {
-                    "job_id": "job-research-test",
-                    "type": "research",
-                    "status": "blocked",
-                    "blocked_attempts": 1,
-                    "blocker": "temporary fetch failure",
-                    "block_history": [
-                        {
-                            "attempt": 1,
-                            "blocked_at": "2026-09-12T08:00:00+00:00",
-                            "reason": "temporary fetch failure",
-                        }
-                    ],
-                    "last_recorded_blocked_event": "2026-09-12T08:00:00+00:00",
-                    "retry_not_before": "2026-09-12T09:00:00+00:00",
-                },
-            )
+            path = self._seed_blocked(jobs_dir)
+            blocked_retry.process_blocked_research_jobs(root, AT)
 
             result = blocked_retry.process_blocked_research_jobs(
-                root, datetime(2026, 9, 12, 9, 0, 1, tzinfo=UTC)
+                root, AT + timedelta(days=6, hours=23, minutes=59)
             )
+            job = self._read_job(path)
+
+            self.assertEqual(result["requeued"], 0)
+            self.assertEqual(job["status"], "blocked")
+
+    def test_due_blocked_research_job_is_requeued_after_seven_days(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs_dir = root / "work-queue" / "jobs"
+            jobs_dir.mkdir(parents=True)
+            path = self._seed_blocked(jobs_dir)
+            blocked_retry.process_blocked_research_jobs(root, AT)
+
+            result = blocked_retry.process_blocked_research_jobs(root, AT + timedelta(days=7))
+            job = self._read_job(path)
 
             self.assertEqual(result["requeued"], 1)
-            job = self._read_job(path)
             self.assertEqual(job["status"], "ready")
             self.assertEqual(job["blocked_attempts"], 1)
-            self.assertEqual(len(job["block_history"]), 1)
             self.assertNotIn("retry_not_before", job)
             self.assertIn("retry_queued_at", job)
 
-    def test_legacy_blocked_job_at_or_over_limit_becomes_permanent(self) -> None:
+    def test_same_block_event_is_not_double_counted(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             jobs_dir = root / "work-queue" / "jobs"
             jobs_dir.mkdir(parents=True)
-            path = self._write_job(
-                jobs_dir,
-                {
-                    "job_id": "job-research-test",
-                    "type": "research",
-                    "status": "blocked",
-                    "blocked_attempts": 3,
-                    "blocker": "repeated source failure",
-                },
-            )
+            path = self._seed_blocked(jobs_dir)
 
-            result = blocked_retry.process_blocked_research_jobs(
-                root, datetime(2026, 9, 12, 12, 0, 0, tzinfo=UTC)
-            )
-
-            self.assertEqual(result["permanent"], 1)
+            blocked_retry.process_blocked_research_jobs(root, AT)
+            blocked_retry.process_blocked_research_jobs(root, AT + timedelta(hours=1))
             job = self._read_job(path)
-            self.assertEqual(job["status"], "blocked_permanent")
-            self.assertIn("blocked_permanent_at", job)
+
+            self.assertEqual(job["blocked_attempts"], 1)
+            self.assertEqual(len(job["block_history"]), 1)
+
+    def test_fifth_failure_after_28_days_becomes_dormant_not_permanent(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs_dir = root / "work-queue" / "jobs"
+            jobs_dir.mkdir(parents=True)
+            current = AT + timedelta(days=28)
+            history = [
+                {
+                    "attempt": i + 1,
+                    "blocked_at": (AT + timedelta(days=7 * i)).isoformat(),
+                    "reason": "primary source temporarily unavailable",
+                }
+                for i in range(4)
+            ]
+            path = self._seed_blocked(
+                jobs_dir,
+                completed_at=current.isoformat(),
+                blocked_attempts=4,
+                block_history=history,
+                first_blocked_at=AT.isoformat(),
+                last_recorded_blocked_event=history[-1]["blocked_at"],
+                last_blocked_at=history[-1]["blocked_at"],
+            )
+
+            result = blocked_retry.process_blocked_research_jobs(root, current)
+            job = self._read_job(path)
+
+            self.assertEqual(job["blocked_attempts"], 5)
+            self.assertEqual(job["status"], "blocked")
+            self.assertTrue(job["blocked_retry_dormant"])
+            self.assertEqual(job["blocked_retry_state"], "dormant")
+            self.assertIn("blocked_dormant_at", job)
+            self.assertNotIn("retry_not_before", job)
+            self.assertNotIn("blocked_permanent_at", job)
+            self.assertEqual(result["dormant"], 1)
+            self.assertEqual(result["permanent"], 0)
+
+    def test_fifth_failure_before_28_days_stays_retryable(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs_dir = root / "work-queue" / "jobs"
+            jobs_dir.mkdir(parents=True)
+            current = AT + timedelta(days=20)
+            history = [
+                {
+                    "attempt": i + 1,
+                    "blocked_at": (AT + timedelta(days=5 * i)).isoformat(),
+                    "reason": "primary source temporarily unavailable",
+                }
+                for i in range(4)
+            ]
+            path = self._seed_blocked(
+                jobs_dir,
+                completed_at=current.isoformat(),
+                blocked_attempts=4,
+                block_history=history,
+                first_blocked_at=AT.isoformat(),
+                last_recorded_blocked_event=history[-1]["blocked_at"],
+                last_blocked_at=history[-1]["blocked_at"],
+            )
+
+            blocked_retry.process_blocked_research_jobs(root, current)
+            job = self._read_job(path)
+
+            self.assertEqual(job["blocked_attempts"], 5)
+            self.assertFalse(job.get("blocked_retry_dormant", False))
+            self.assertEqual(
+                blocked_retry.parse_time(job["retry_not_before"]),
+                current + timedelta(days=7),
+            )
+            self.assertNotIn("blocked_permanent_at", job)
+
+    def test_dormant_job_is_not_periodically_requeued(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs_dir = root / "work-queue" / "jobs"
+            jobs_dir.mkdir(parents=True)
+            path = self._seed_blocked(
+                jobs_dir,
+                blocked_attempts=5,
+                blocked_retry_dormant=True,
+                blocked_retry_state="dormant",
+                blocked_dormant_at=AT.isoformat(),
+            )
+
+            result = blocked_retry.process_blocked_research_jobs(root, AT + timedelta(days=60))
+            job = self._read_job(path)
+
+            self.assertEqual(result["requeued"], 0)
+            self.assertEqual(result["changed"], 0)
+            self.assertEqual(job["status"], "blocked")
+            self.assertTrue(job["blocked_retry_dormant"])
+
+    def test_router_keeps_flexible_primary_source_retrieval_policy(self) -> None:
+        text = (ROOT / ".survey/docs/survey-workflow/worker-router.md").read_text(encoding="utf-8")
+        self.assertIn("固定された4経路を各1回だけ試して打ち切る方式は使わない", text)
+        self.assertIn("blocked Researchは原則7日後に再確認", text)
+        self.assertIn("取得失敗だけを永久除外理由にしない", text)
+        self.assertNotIn("全文取得経路はワーカーの気分で増減させず", text)
 
 
 if __name__ == "__main__":
