@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-be85a6eae28ccf3a322cb511",
-  "job_id": "job-research-a61328ecbdf05053",
-  "data": {
-    "overview": "HEAPrはmoderateな剪定で元モデルのzero-shot精度をほぼ維持する。DeepSeekMoE-16B-Baseでは元の平均accuracy 0.56に対し20%剪定後も0.56、Qwen1.5-MoE-A2.7B-Chatでは0.54から25%剪定で0.53、Qwen2-57B-A14Bでは0.59から40%剪定でも0.59を維持する。Qwen3-30B-A3Bでは25%剪定で0.62から0.59へ0.03低下する。DeepSeekMoE-16B-Baseの圧縮率0.4未満ではbaseline accuracyの93%を保持しつつFLOPsを約20%削減し、40%剪定時のatomic expert方式は21% FLOPs reductionを得るのに対しexpert-level剪定は0%だった。",
-    "key_results": [
-      {"metric": "DeepSeekMoE-16B-Base平均accuracy", "value": "0.56 → 0.56", "baseline": "未剪定モデル", "condition": "20% atomic expert pruning、7 zero-shot tasks", "interpretation": "20%圧縮では平均精度を維持し、NAEE 0.53、MoE-I2 0.50、MoE-SVD/D2-MoE 0.54を上回る。"},
-      {"metric": "Qwen2-57B-A14B平均accuracy", "value": "0.59 → 0.59", "baseline": "未剪定モデル", "condition": "40% atomic expert pruning、7 zero-shot tasks", "interpretation": "高い40%剪定でも平均値を維持し、同ratioのNAEE 0.55、MoE-I2 0.51、D2-MoE 0.58を上回る。"},
-      {"metric": "Qwen3-30B-A3B平均accuracy", "value": "0.62 → 0.59", "baseline": "未剪定モデル", "condition": "25% atomic expert pruning", "interpretation": "比較的新しいMoEでもmoderate pruningの品質低下を0.03に抑える。50%では0.48まで低下し、圧縮限界も示す。"},
-      {"metric": "DeepSeekMoE-16B-Base FLOPs reduction", "value": "約20%（圧縮率0.4未満の領域）", "baseline": "未剪定モデル", "condition": "Figure 2、WikiText-2 calibration", "interpretation": "中間次元を直接削るため、active expert数が変わらないexpert-level pruningより実計算量を減らせる。40%剪定のTable 3ではatomic expert 21%に対しexpert-levelは0%。"},
-      {"metric": "CAMERA-P比較", "value": "+1.2 average accuracy", "baseline": "CAMERA-P", "condition": "DeepSeekMoE-16B-Base、20% pruning、acc_norm", "interpretation": "同じatomic granularityでもoutput magnitude heuristicより二次情報に基づくimportanceが有効。HEAPrをlayer-wiseに限定しても+0.5。"},
-      {"metric": "剪定準備コスト", "value": "6分/44GB（DeepSeekMoE-16B）、20分/91GB（Qwen2-57B）", "baseline": "D2-MoEは30分/53GB、90分/127GB", "condition": "128 calibration samples", "interpretation": "NAEEより重いが、decomposition系D2-MoEより大幅に短時間で、二次情報を現実的な計算量へ縮約している。"}
-    ],
-    "negative_results": "圧縮率を上げると品質は明確に低下する。Qwen1.5-MoE-A2.7B-Chatは50%で平均0.48、Qwen3-30B-A3Bも50%で0.48となり、moderate ratioでのnear-losslessという主張を極端な圧縮へ一般化できない。DeepSeekMoE-16B-Baseでも90%圧縮ではbaseline accuracyの約38%しか残らない。二次importanceはhigher-order termを無視した近似なので実際のloss増加値そのものを正確に予測するわけではなく、論文もrankingの整合性を目的としている。また剪定準備コストはNAEEより大きく、DeepSeekで44GB対27GB、Qwen2で91GB対60GBを使う。",
-    "interpretation": "結果はHEAPrの価値が単に『細かく削る』ことだけではないことを示す。atomic expert単位にしてもlayer-wise rankingよりglobal rankingの方がDeepSeek 20%で60.03→60.68、Qwen1.5 25%で52.52→53.59と改善しており、output-space二次importanceが層をまたいで比較可能な尺度として機能している。さらにexpert-levelで同じimportanceを合算して剪定するとFLOPs削減が0%なのに対しatomic-levelは20%剪定で8%、40%で21%削減でき、構造化粒度そのものがhardware効率へ直結する。",
-    "quality_impact": "moderate pruningでは品質保持が強いが、50%以上ではモデル依存の低下が大きい。calibration corpusをWikiText-2からC4へ変えてもDeepSeek 20%の平均accuracyは大きく変わらず、sample数を1→32→128→256へ増やすと性能が改善する傾向を示すため、importance推定はcorpus選択より統計量の十分さに敏感と読める。ただし下流生成品質やmultilingual性能は未評価である。"
-  },
-  "reservation": {"claim_id": "claim-be85a6eae28ccf3a322cb511", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-f1e008f8fdda71bd88025432",
+  "job_id": "job-research-97e05693104abe69",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f1e008f8fdda71bd88025432",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }

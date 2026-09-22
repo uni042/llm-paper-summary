@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-be85a6eae28ccf3a322cb511",
-  "job_id": "job-research-a61328ecbdf05053",
-  "data": {
-    "limitations": "HEAPrはpost-training pruningとして強いが、主評価は4種類の公開MoEと英語中心の7 zero-shot benchmarkに限られる。実際のserving throughputやtoken latencyを複数GPU・複数batch条件で測ったend-to-end system評価はなく、FLOPs reductionがそのまま実時間speedupになるかはhardware kernel実装に依存する。importanceは二次Taylor近似とFisher informationを用い、higher-order termを無視するためloss増加の絶対値予測ではなくranking近似である。128 calibration sequenceで良好だが、sample数が少ないほど性能が落ちる傾向があり、calibration costを完全には無視できない。50%級の剪定ではQwen1.5/Qwen3で平均accuracyが0.48まで落ち、near-losslessはmoderate ratioに限定される。論文自身もfuture workとしてより広いmodel scaleでの実験とpruning後のparameter compensationを挙げている。",
-    "differences": "NAEEやMoE-I2のexpert droppingはexpert単位で削除するため、粒度が粗くspecialized knowledgeをまとめて失う可能性がある。MC-SMoE/HC-SMoE等のmergingはexpert similarityの推定とparameter融合を必要とし、衝突が生じる。Sub-MoE、D2-MoE、MoE-SVDは共有subspaceやlow-rank decompositionを使うため追加の分解・融合計算が重い。HEAPrはexpertを中間次元ごとのatomic expertへ分解して直接構造化削除し、再学習やmergeを行わない。CAMERA-Pもatomic expertを扱うが、calibration上のoutput magnitudeを用いるlocal heuristicであり、層をまたいだ尺度の整合性が弱い。HEAPrはloss curvatureを反映する二次importanceをoutput spaceで計算し、global rankingを可能にする点が異なる。unstructured weight pruningと比べると粒度は粗いが、dense matrixの中間幅を縮めるためhardware上で利用しやすい。",
-    "implementation_status": "公式実装はGitHubのLLIKKE/HEAPrで公開され、論文の再現性声明ではcodeとcomputational environmentで得たcheckpointを提供するとしている。ICLR 2026 conference paperとして出版済みで、単なるarXiv proposalではない。アルゴリズムは標準forward/backwardと構造化weight slicingで実装でき、追加trainable parameterやtunable hyperparameterを導入しない。",
-    "research_positioning": "リポジトリのAdaptive Expert Computation / Compression系統では、HEAPrはexpert cacheやdynamic routingではなく、静的なMoE parameter footprintを事前に削る圧縮手法に位置する。特にexpert pruning/mergingから一段細かいatomic expert granularityへ移しつつ、二次情報をoutput spaceへ圧縮することで実用計算量へ落とした点が重要である。MoEのmemory bottleneckに対し、offloadやcacheで『必要時に運ぶ』のではなく、低寄与の中間次元を恒久的に除去してresident parameterそのものを減らす補完的アプローチである。Qwen2-57Bで40%剪定後も平均accuracy 0.59を維持する結果は、大規模MoEをローカル・resource-constrained環境へ載せる前処理としても関心が高い。一方、実際のmemory容量削減・throughputは量子化、expert placement、kernel形状との組合せで決まるため、serving systemとの共同評価が次の課題になる。"
-  },
-  "reservation": {"claim_id": "claim-be85a6eae28ccf3a322cb511", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-f1e008f8fdda71bd88025432",
+  "job_id": "job-research-97e05693104abe69",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f1e008f8fdda71bd88025432",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
