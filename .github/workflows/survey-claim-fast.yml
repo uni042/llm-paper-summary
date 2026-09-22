@@ -52,7 +52,7 @@ jobs:
           git config user.name 'survey-claim[bot]'
           git config user.email 'survey-claim[bot]@users.noreply.github.com'
 
-          for attempt in 1 2 3 4 5; do
+          for attempt in $(seq 1 12); do
             git fetch origin main
             git reset --hard origin/main
 
@@ -80,8 +80,11 @@ jobs:
             fi
 
             echo "Claim push race on attempt ${attempt}; recomputing from latest main."
-            sleep $((attempt * 2))
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            jitter=$(( RANDOM % 6 ))
+            sleep $((backoff + jitter))
           done
 
-          echo 'Failed to publish claim results after 5 retries.' >&2
+          echo 'Failed to publish claim results after 12 retries.' >&2
           exit 1
