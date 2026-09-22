@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6b68d1581746099c18d8092e","job_id":"job-research-23b60cfb5b252b01","data":{"canonical_id":"arXiv:2606.10703","arxiv_id":"2606.10703","doi":"10.48550/arXiv.2606.10703","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"From Observation to Intervention: A Causal Audit of Expert Importance in Mixture-of-Experts Models","summary":"MoE圧縮で利用頻度、活性化ノルム、平均ルーティング重み、活性化標準偏差といった集団統計を専門家重要度の代理にする妥当性を、トークン単位の専門家除去介入で直接検証した研究。OLMoE、Qwen1.5-MoE、DeepSeek-V2-Liteの3モデル、4指標×5層の60条件で、補正後に因果的重要度を予測した観測指標は0件で、効果量はすべてCohenのd=0.23未満だった。一方、同じ標本数のトークン別ルーティング重み対照ではOLMoE最終MoE層だけd=+0.231、95%信頼区間[+0.09,+0.37]、p=0.0013を検出し、検出力不足ではなく集団統計から個別介入効果を推論すること自体の問題を示す。","list_summary":"3種の高冗長MoEで観測的なルーティング統計と専門家除去の因果効果を直接照合し、60条件すべてで重要度予測が成立せず、既存剪定の成功は主に初期層の冗長性で説明できると示した。","authors":["Leonard Engmann","Christian Medeiros Adriano","Holger Giese"],"authors_affiliations":"Hasso Plattner Institute, University of Potsdam, Germany","published":"2026-06-16","publication":"ICML 2026 Workshop on Philosophy of Science Meets Machine Learning (PhilML)","publication_type":"ワークショップ論文","publication_status":"Accepted, non-archival; not part of ICML proceedings","lineage":"MoE expert pruning / causal interpretability / expert importance metrics","topics":["MoE剪定","専門家重要度","介入監査","ルーティング統計","冗長性"],"importance":"利用頻度や活性化ノルムをそのまま剪定重要度とみなす圧縮研究の前提を、観測ではなく実際の専門家除去で監査する。剪定候補ランキングの評価基準そのものを問い直す比較基盤として重要。","implementation":"全コードとデータを公式GitHubで公開。","hardware_evaluation":"3つの公開高冗長MoEをWikiText-2でトークン単位に介入評価する。","quality_effect":"観測4指標は60条件で補正後有意な正の効果を示さず、初期〜中層では8活性専門家中7個を除去してもOLMoE平均損失増加が0.083 nat未満。","source":"https://arxiv.org/abs/2606.10703","sources":["https://arxiv.org/pdf/2606.10703","https://github.com/callmeloui/observational_metrics"],"code":"https://github.com/callmeloui/observational_metrics","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-6b68d1581746099c18d8092e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-7262c68496e8d7f0dbbc7456",
+  "job_id": "job-research-af2d156c40ee16cb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7262c68496e8d7f0dbbc7456",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

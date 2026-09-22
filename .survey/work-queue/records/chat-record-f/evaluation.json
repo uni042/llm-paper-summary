@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6b68d1581746099c18d8092e","job_id":"job-research-23b60cfb5b252b01","data":{"hardware":[],"software":[],"model":["OLMoE-1B-7B-0924: 16層、64専門家、上位8件","Qwen1.5-MoE-A2.7B: 24層、60 routed＋1 shared、上位4件","DeepSeek-V2-Lite: 27層、64 routed＋2 shared、上位6件"],"datasets":["WikiText-2 test split"],"baselines":["トークン固有ルーティング重み対照","累積専門家除去による冗長性対照"],"settings":[{"name":"監査条件","description":"4観測指標×5代表層×3モデルの60条件。各条件n=200トークンで最高指標専門家と最低指標専門家を単独除去する。"},{"name":"統計判定","description":"対応t検定とWilcoxon符号順位検定の両方を要求し、モデル内20条件にBonferroni補正して有意水準0.0025。Cohenのdと95%信頼区間を報告する。"},{"name":"ルーティング重み対照","description":"各トークン自身のゲート重みをランキングに使い、同じn=200・同じ5層・同じ検定で検出力を確認。補正水準は0.01。"},{"name":"累積除去","description":"OLMoEの6層でn=500、活性8専門家中k=1〜7個を累積除去し、平均次トークン損失変化を測定する。"}],"correctness":"観測指標の有効性を『高指標専門家を消した方が低指標専門家を消すより損失増分が大きい』という事前定義へ固定し、二つの統計検定が不一致ならノイズ扱いする。トークン固有重み対照が同じ標本数で有意信号を回収するため、全観測指標のnullを単純な検出力不足だけでは説明できない。","methodology":"集団統計を事前計算し、実際の活性専門家内で高低を比較する介入監査。主指標は次トークン負の対数尤度変化で、補助指標として残差ストリーム変位ノルムを使う。層深度、モデル設計、活性率の異なる3モデルで再現性を確認する。","scope":"高冗長MoEにおけるトークン単位・一専門家除去の監査であり、全モデルを一括剪定して微調整回復する実運用パイプラインを直接否定する実験ではない。低冗長なSwitch型やMixtralで観測指標が再び有効になるかは未検証。"},"reservation":{"claim_id":"claim-6b68d1581746099c18d8092e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-7262c68496e8d7f0dbbc7456",
+  "job_id": "job-research-af2d156c40ee16cb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7262c68496e8d7f0dbbc7456",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
