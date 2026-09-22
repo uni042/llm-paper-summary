@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T17:20:58.828663+00:00",
+  "updated_at": "2026-09-22T17:22:51.485967+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -39038,6 +39038,56 @@
           "type": "research",
           "canonical_id": "arXiv:2607.28069",
           "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35760263218",
+      "first_recorded_at": "2026-09-22T17:22:51.485967+00:00",
+      "last_recorded_at": "2026-09-22T17:22:51.485967+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35760263218:1",
+          "recorded_at": "2026-09-22T17:22:51.485967+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35760263218",
+            "run_attempt": "1",
+            "source_sha": "466adbbc8f3b2203c46321a7149b8fb99def38d6"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-7a81d607f9538816",
+          "type": "research",
+          "canonical_id": "arXiv:2608.25053",
+          "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",
           "from": "ready",
           "to": "blocked"
         }
