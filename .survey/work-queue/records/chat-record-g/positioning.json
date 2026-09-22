@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ecdae1d537fddfff8ce020e5","job_id":"job-research-9cbcbbb853ae3588","data":{"limitations":"第一に、実験規模はTransformer-XL 4層、BERT/RoBERTa base相当を拡幅した設定で、現在の数十億〜数千億パラメータMoEへのスケール検証ではない。BERT/RoBERTa事前学習も計算資源制約から10^5 steps・BooksCorpus中心で、公式事前学習より小さい。\n\n第二に、利得は十分なモデル容量で現れる。2層Transformer-XLやexpert数8以下など小容量では密Dropoutが優れる場合があり、SMoE化自体が普遍的に有利ではない。第三に、固定ランダム経路選択は学習可能ルータの柔軟な負荷分散を捨てるため、分散配置でexpert負荷や通信量を制御する問題は未解決である。\n\n第四に、推論評価はFLOPsと小規模GPU計測が中心で、エキスパート並列通信、GPU間all-to-all、CPU/NVMeオフロード、重み転送量、実サービスのtail latencyは扱わない。自己スリム化の計算量ノブが物理メモリ階層でそのまま効率化につながるかは別途検証が必要である。","differences":"Switch Transformerなどの学習型SMoEはルータ重みを最適化し、負荷均衡損失などで崩壊を抑える。本手法はルータ重みを最初から固定し、前段表現の変化だけで固定境界への割当を間接適応させるため、ルータ学習の不安定性と特定kへの過適合を避ける。\n\nTHORは各反復で完全ランダムにexpertを選び、予測の不一致をKL整合性損失で抑える。そのため2回の順伝播が必要で、expert間を似せる圧力が冗長性を増やし得る。SMoE-Dropoutは固定ランダム関数なので推論は決定論的で、整合性損失を必要としない。\n\n通常のDropoutがニューロンをBernoulliで落とし推論時に全て戻すのに対し、本手法はMLPの構造化expert単位を入力依存で落とし、推論時にもkを選べる。k漸増により複数容量を一つの学習軌跡で経験させる点が、単なるexpert dropoutとの違いである。","implementation_status":"公式コードとモデルは https://github.com/VITA-Group/Random-MoE-as-Dropout で公開されている。論文はTransformer-XL、BERT、RoBERTaについて具体的なoptimizer、学習率、batch、steps、GPU条件を記載し、Concrete DropoutやDropBlockの実装条件も付録で示す。\n\n方式は既存TransformerのMLP分割、固定ランダムルータ、top-k、kスケジュールという単純な部品で構成され、特別なカーネルを要求しない。ただし公式実装は研究用学習コードであり、vLLM/SGLang等の現代的サービング基盤へ統合された実装ではない。","research_positioning":"本研究はMoEの専門化を『より賢いルータ』で実現する流れに対し、ランダム固定ルータを正則化器として使う逆方向の設計を提示する。特に、推論時の活性expert数を学習時の固定kから解放する自己スリム化性は、資源可変推論という観点で後続の適応計算研究に接続する。\n\n階層メモリ・オフロードの観点では、kを下げれば1 tokenで必要なexpert集合を減らせるため、GPUに載せるexpert数や転送要求を減らす潜在的な制御ノブになる。一方、固定ランダムルータは局所性やexpert再利用を直接最適化しないので、キャッシュヒット率やCPU/SSD転送の改善を保証しない。\n\nしたがって本リポジトリでは、MoEオフロードそのものではなく『一つの学習済みモデルを複数の活性容量で使えるよう訓練する』系統の基礎として重要である。後続のsticky routing、expert pruning/replacing、動的expert予算制御と比較すると、学習時から容量可変性を埋め込む早期のアプローチとして位置付けられる。"},"reservation":{"claim_id":"claim-ecdae1d537fddfff8ce020e5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-a204eb86cb07493ddb9445d1",
+  "job_id": "job-research-90efe86d98d87f0b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a204eb86cb07493ddb9445d1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ecdae1d537fddfff8ce020e5","job_id":"job-research-9cbcbbb853ae3588","data":{"canonical_id":"arXiv:2303.01610","arxiv_id":"2303.01610","doi":"10.48550/arXiv.2303.01610","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers","summary":"SMoE-Dropoutは、TransformerのMLPを複数エキスパートへ分割し、ランダム初期化後に固定した経路選択器で上位k個を選び、学習の進行とともにkを線形に増やす。学習可能な経路選択器が特定kへ過適合する問題を避け、推論・下流微調整時に利用資源に応じて活性エキスパート数を変えても性能が滑らかに向上する自己スリム化性を得る。Transformer-XL/BERT/RoBERTaで密学習より最大21%/37%/25%の学習時間を削減し、半数エキスパート実行では追加23〜34%の推論FLOPs削減を得る。BERTのASDiv-A/MAWPS/SVAMPでは密学習比+1.03/+0.78/+1.09ポイント。","list_summary":"固定ランダム経路選択器と学習中の活性エキスパート数漸増により、1回の事前学習から推論資源に応じて容量を可変化できる自己スリム化SMoEを作る。","authors":["Tianlong Chen","Zhenyu Zhang","Ajay Jaiswal","Shiwei Liu","Zhangyang Wang"],"authors_affiliations":"VITA Group, University of Texas at Austin","published":"2023-03-02","publication":"arXiv:2303.01610v1","publication_type":"Preprint","publication_status":"Preprint","lineage":"Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization","topics":["混合エキスパート","ランダム経路選択","自己スリム化","条件付き計算","暗黙的正則化"],"importance":"学習済み経路選択器を高性能化するのではなく、経路選択器を固定して表現側を適応させ、さらに学習中に活性エキスパート数を変化させることで、推論時のk変更耐性を直接学習する点が特徴。大規模MoEの動的資源制約に対し、推論時に活性容量を変更できる設計思想を早期に示した。","hardware_evaluation":"時間計測はTransformer-XLでRTX A6000 1枚・batch 22、BERT/RoBERTaでV100 8枚・batch 64。","quality_effect":"同一パラメータ数の密学習に対し、全エキスパート使用時のBPCはTransformer-XL 1.1623→1.1486、BERT 7.6546→7.6293、RoBERTa 8.0903→6.5491。下流でも複数タスクで改善。","source":"https://arxiv.org/abs/2303.01610","sources":["https://arxiv.org/abs/2303.01610","https://arxiv.org/html/2303.01610v1","https://github.com/VITA-Group/Random-MoE-as-Dropout"],"code":"https://github.com/VITA-Group/Random-MoE-as-Dropout","implementation":"著者公式コードとモデルが公開されている。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary arXiv manuscript","references_total":0},"reservation":{"claim_id":"claim-ecdae1d537fddfff8ce020e5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-a204eb86cb07493ddb9445d1",
+  "job_id": "job-research-90efe86d98d87f0b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a204eb86cb07493ddb9445d1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

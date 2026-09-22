@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-00-20260922T144620Z-b73e12",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-90efe86d98d87f0b",
+      "claim_id": "claim-a204eb86cb07493ddb9445d1",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-a204eb86cb07493ddb9445d1",
+      "claimed_at": "2026-09-22T14:47:41+00:00",
+      "expires_at": "2026-09-22T16:17:41+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-90efe86d98d87f0b"
+      ],
+      "job": {
+        "job_id": "job-research-90efe86d98d87f0b",
+        "type": "research",
+        "parent_job_id": "job-f47be01be52256f8",
+        "priority": 97,
+        "canonical_id": "arXiv:2407.00945",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs",
+        "source_url": "https://arxiv.org/abs/2407.00945",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2024-2407.00945-efficient-expert-pruning.md",
+        "selection_reason": "gradient-free evolutionary searchで総expert数とactive expert数の両方を削減し、memory削減と推論加速を同時に狙う直接的expert pruning。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T11:38:13+00:00"
+      },
+      "record_bank": "g",
+      "record_bank_root": ".survey/work-queue/records/chat-record-g",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-g/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-g/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-g/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-g/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-g/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T14:47:41+00:00",
+  "checkpoint_released": 0
+}
