@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-40b553eeb725cfefaa1a1d5f-r2",
+  "kind": "research",
+  "attempt_id": "attempt-40b553eeb725cfefaa1a1d5f",
+  "job_id": "job-research-548d7e4cd563f6b8",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md",
+  "ok": false,
+  "preflight_passed": false,
+  "repair_required": false,
+  "decision": "FIX_PREFLIGHT_REQUEST",
+  "error": "PreflightRequestError: self_review is required",
+  "checked_at": "2026-09-22T09:02:24+00:00",
+  "next_action": "Fix the preflight request contract. Do not create a completed-submission request until a new preflight result has preflight_passed=true."
+}
