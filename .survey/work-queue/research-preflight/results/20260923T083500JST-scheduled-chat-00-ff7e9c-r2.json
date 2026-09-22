@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T083500JST-scheduled-chat-00-ff7e9c-r2",
+  "kind": "research",
+  "attempt_id": "attempt-ff7e9c58f4c5f78412ef8d98",
+  "job_id": "job-research-baad806afa0723b4",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.14672-towards-direct-latent-space-synthesis-for-parallel-branches-in-llm-agent-workflows.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:064b862fc6a1564d4ac93cf47f53bce40dbe152d3156f5e494388f327f48c63f",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "3e335cec90e66cf1b46ae293c439584de0c7c247"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "e72c0076f3d2aa36e952e7149d4cefaa7486016c"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "7d04bfcd1ad4de4651acedf0901dd378fee69f78"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "0d5ab66adcf879952fae31c78b96a2851f96ff28"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "2a139a58f22b1c631d3148218007189b8ff98475"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2606.14672-towards-direct-latent-space-synthesis-for-parallel-branches-in-llm-agent-workflows.md",
+    "status": "PASS",
+    "file_bytes": 22318,
+    "prose_chars": 5767,
+    "paragraphs": 31,
+    "method_paragraphs": 14,
+    "method_components": 7,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9374887407674293,
+    "japanese_chars": 5204,
+    "latin_chars": 347,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": []
+  },
+  "checked_at": "2026-09-22T23:18:24+00:00",
+  "next_action": "Create .survey/work-queue/completed-submission-requests/<attempt_id>.json and set preflight_result to this exact result path. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}
