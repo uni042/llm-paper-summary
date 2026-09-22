@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-98e2f1fac5c29a094f21cbf1",
-  "job_id": "job-research-0492476ca3ab6ea2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-98e2f1fac5c29a094f21cbf1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-98e2f1fac5c29a094f21cbf1","job_id":"job-research-0492476ca3ab6ea2","data":{"overview":"TENPは専門家を丸ごと削る比較法より、同じ総パラメータ水準で品質と活性パラメータの双方を改善する。DeepSeek-V2-Liteでルーティング専門家60%保持時、TENPは活性パラメータ63.76%、5課題平均51.98%で完全モデル52.98%から約1点の低下に留まり、EASY-EP 46.18%を5.8点上回る。Qwen1.5-MoEでは同条件で59.06%となり完全モデル61.16%に近い。均一幅ENPの実機測定ではQwenの静的GPUメモリを32.95GBから16.37GBへ半減し、総スループットを1.47倍にする。","key_results":[{"metric":"DeepSeek-V2-Lite 60%専門家保持の平均精度","value":"51.98%","baseline":"完全モデル52.98%、EASY-EP 46.18%","condition":"活性ルーティング専門家パラメータ63.76%、GSM8K/MBPP/HumanEval/ARC-E/ARC-C平均","interpretation":"元ルーティングを保持しながら内部幅を縮めることで約1点の平均低下に抑える。"},{"metric":"DeepSeekコード生成","value":"MBPP 45.7、HumanEval 29.9","baseline":"完全モデル43.2、26.2","condition":"60%専門家保持TENP","interpretation":"圧縮後でもコード課題では完全モデルをそれぞれ2.5点、3.7点上回る。"},{"metric":"Qwen1.5-MoE 60%専門家保持平均","value":"59.06%","baseline":"完全モデル61.16%、EASY-EP 48.02%","condition":"活性パラメータ61.38%","interpretation":"専門家丸ごと剪定より大幅に品質を保持する。"},{"metric":"A100静的GPUメモリ","value":"16.37GB","baseline":"完全モデル32.95GB、専門家剪定18.55GB","condition":"Qwen、50%パラメータ、均一幅ENP","interpretation":"構造的中間幅縮小により同パラメータ比の専門家剪定よりさらにメモリを減らす。"},{"metric":"A100総トークンスループット","value":"8191.94 token/s、1.47倍","baseline":"完全モデル5583.51 token/s、専門家剪定7885.88 token/s","condition":"Qwen、50%パラメータ、単一A100-SXM-80GB、均一幅ENP","interpretation":"活性パラメータも減るためparameter memory削減だけでなく実スループットへ利得が出る。"},{"metric":"アブレーション平均","value":"TENP 55.78%","baseline":"Only EP 48.90%、ENP-L2 48.65%、ENP-COS 51.00%、台形expert選択ランダム49.15%","condition":"DeepSeek系アブレーション、60%規模","interpretation":"重要専門家、射影長ニューロン評価、台形容量配置の組合せが必要。"}],"negative_results":"高い剪定率では推論課題の性能低下が残り、Qwenの30%専門家保持TENPは平均43.00%で完全モデル61.16%を大きく下回る。DeepSeekの30%保持でも39.72%対52.98%である。均一幅ENPは実装容易だがTENPより品質が低い条件があり、逆にTENPは異サイズ専門家対応の推論基盤改修を必要とする。極端な大規模MoEでは未評価である。","interpretation":"専門家削除では残存専門家の選択頻度が大きく変わり、深層ほどルーティング差が増えて層出力誤差が累積する。TENPは専門家識別子を消さないため選択頻度をほぼ元のまま維持し、深層へ多く容量を残すことで誤差増幅を抑える。射影長は単なるニューロン出力ノルムより最終専門家出力への整合した寄与を測るため、同じ構造疎性でも品質が高い。","quality_impact":"近似圧縮であり損失なしではない。疎性が強いほどGSM8Kなど難しい推論課題が低下する一方、冗長成分除去が正則化のように働く条件ではコード生成や高保持率で完全モデルを上回る。利用時は総パラメータ比Eと実活性パラメータ比Aを別々に確認する必要がある。"},"reservation":{"claim_id":"claim-98e2f1fac5c29a094f21cbf1","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
