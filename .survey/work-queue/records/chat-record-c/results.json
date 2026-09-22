@@ -2,60 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5a4f5cc9eab9d57bce8f13d8",
-  "job_id": "job-research-f59af449638fc64c",
+  "attempt_id": "attempt-87c159714bb65416bb0f37de",
+  "job_id": "job-research-92d92d3583bf57da",
   "data": {
-    "overview": "MC-Suiteでは活性値・勾配を使う指標が強く、Mixtral-8×7B Instructの50%削減で最小活性値ノルムはC4パープレキシティ9.99、最小勾配エントロピー10.45となり、ランダム単発15.21を大きく上回る。Baseモデルでは50%削減時、最小活性値ノルムの単発14.74に対し反復10.44、MoE Lottery 9.76まで改善する。75%削減でも同指標は30.59→17.39→13.05と改善し、重要度再推定と少量微調整の寄与が削減率の上昇ほど大きくなる。",
+    "overview": "Turing-20B-A2Bは平均約2B活性でQwen3-8B Baseを総合平均で上回り、Qwen3.5-9B Baseへ近い能力を示す。Quantile Routing統制実験では同じ平均8 expertsのLoss-Free Routingより8ベンチマーク中7件で高く、初期学習中の最大負荷違反も低い。配置時の容量制約付きTuring MoEは16K〜256Kプリフィルで通常dropless top-kより平均1.53倍高速化するが、能力面ではMMLU 79.03→76.34、CMMLU 75.38→70.48、GSM8K 90.22→88.93など一部低下する。",
     "key_results": [
       {
-        "metric": "50%削減時C4パープレキシティ",
-        "value": "Min-EAN 9.99",
-        "baseline": "元Instruct 7.82、ランダム単発15.21、Max-RWN 10.70、Max-ETS 10.43、Min-EGE 10.45",
-        "condition": "Mixtral-8×7B Instruct、MoE Lottery",
-        "interpretation": "入力依存の活性値とモデル内部状態を併用する重要度が、利用頻度や重みだけより削除対象を選びやすい。"
+        "metric": "Quantile Routing初期学習性能",
+        "value": "8ベンチマーク中7件でLoss-Free Routingを上回る",
+        "baseline": "固定8 expertsのLoss-Free Routing",
+        "condition": "同一構成・約100B training tokens・平均8 routed experts",
+        "interpretation": "平均計算量を増やさずトークンごとにexpert数を変えることで計算予算をより有効に配分する。"
       },
       {
-        "metric": "75%削減時の枝刈り戦略比較",
-        "value": "Min-EAN: 単発30.59、反復17.39、MoE Lottery 13.05",
-        "baseline": "未削減Base 7.44",
-        "condition": "Mixtral-8×7B Base、C4",
-        "interpretation": "削除後に重要度を再計算するだけでも大幅改善し、各段階の軽量微調整を加えるとさらに劣化を抑える。"
+        "metric": "ARC-C",
+        "value": "27.12",
+        "baseline": "Loss-Free 23.73",
+        "condition": "routing ablation",
+        "interpretation": "動的計算配分の明確な改善例。"
       },
       {
-        "metric": "50%削減時MMLUゼロショット",
-        "value": "MoE Lottery 47.13",
-        "baseline": "未削減60.01、反復45.63、単発13.55",
-        "condition": "Min-EAN",
-        "interpretation": "単発枝刈りは25%付近から急崩壊するが、反復と補正で高削減率でもランダム推測を大きく上回る。"
+        "metric": "MBPP",
+        "value": "18.78",
+        "baseline": "Loss-Free 14.81",
+        "condition": "routing ablation",
+        "interpretation": "同じ平均expert予算でもコード能力が高い。"
       },
       {
-        "metric": "75%削減時WinoGrandeゼロショット",
-        "value": "MoE Lottery 50.74",
-        "baseline": "未削減56.59、反復50.35、単発24.63",
-        "condition": "Min-EAN",
-        "interpretation": "75%削減でも反復方式は能力をかなり残し、Lottery補正がわずかに上積みする。"
+        "metric": "MoEプリフィル速度",
+        "value": "平均1.53倍高速化",
+        "baseline": "optimized dropless top-k fused-expert execution",
+        "condition": "単一GPU、16K〜256K、Quantile Routing＋CF=1.25",
+        "interpretation": "最大expert負荷を上限化すると長文ほど実行経路が規則化し、融合カーネルの待ちを減らせる。"
       },
       {
-        "metric": "50%削減時システム効率",
-        "value": "メモリ0.55倍、1.27倍高速化",
-        "baseline": "未削減Mixtral",
-        "condition": "総エキスパート疎性50%",
-        "interpretation": "エキスパート数削減が重み常駐量を直接減らし、単なる品質研究ではなく配置可能性と速度にも効く。"
+        "metric": "容量制約のMMLU",
+        "value": "76.34",
+        "baseline": "dropless 79.03",
+        "condition": "GSM8K RL step 399、CF=1.25",
+        "interpretation": "速度向上には小さいが測定可能な能力低下が伴う。"
       },
       {
-        "metric": "Lottery微調整量",
-        "value": "約1Mトークンで利得がほぼ飽和",
-        "baseline": "0.25M〜2.27Mトークン",
-        "condition": "75%削減Mixtral Base/Instruct",
-        "interpretation": "枝刈り後補正に完全な再学習は不要で、比較的小さな次トークン予測学習で主要な回復が得られる。"
+        "metric": "容量制約のGPQA",
+        "value": "34.34",
+        "baseline": "dropless 31.31",
+        "condition": "同一RL比較",
+        "interpretation": "容量制約は全ベンチマークを一様に悪化させるわけではなく、一部推論課題では改善する。"
       }
     ],
-    "negative_results": "単発枝刈りは高削減率で極端に不安定で、Min-EANでもBaseの75%削減でC4パープレキシティ30.59まで悪化する。全層から重要度順に非一様削除すると一部層だけ高疎性となるボトルネックが生じ、微調整の利得とシャーディング容易性が下がった。InstructモデルではBaseよりタスク非依存微調整の利得が小さく、著者は指示微調整前にエキスパート削減する方が望ましいと示唆する。ゼロショット下流性能は50%以上で依然低下するため、少数例提示や指示微調整による外部支援なしに元性能を維持するわけではない。",
-    "interpretation": "エキスパート重要度は固定属性ではなく、他のエキスパートを削ると変化する。したがって一度のランキングで大量削除するより、削除→再評価を繰り返す方が残存構成に適応できる。軽量微調整は削除対象そのものを大きく変えるというより、ルータ負荷の偏りと部分ネットワークのサブ最適状態を修正する役割が強い。また圧縮後に指示支援で下流性能が戻る結果は、知識が完全消失したというより知識を課題形式へ引き出す能力が傷んだことを示唆する。",
-    "quality_impact": "50%削減はメモリと速度に明確な利点を持つが、品質保持には重要度指標、反復再評価、補正学習の組合せが重要である。特にゼロショット評価だけを見ると能力損失を過大評価する可能性があり、少数例提示や指示微調整を同条件で与えた比較では圧縮モデルが大きく回復し、BoolQやARC-Easyでは元モデルを上回る場合もある。"
+    "negative_results": "Quantile RoutingはGSM8Kの初期学習比較だけLoss-Free Routingに負け、20.02対21.68である。容量制約はMMLU、CMMLU、MMLU-Pro、GSM8Kを低下させ、効率化が無損失ではない。1.53倍は単一GPUのMoEモジュール測定で、expert-parallel all-to-allやattentionを含む全モデル速度ではない。技術報告はbaseモデル中心で、物理AIの閉ループタスクやマルチモーダルVLA性能を直接示していない。",
+    "interpretation": "固定top-kでは各トークンへ同じ計算量を配る一方、Quantile Routingは各expertの受入率を分位点で揃えることで負荷均衡を維持しつつ、トークン単位の計算量だけを可変にする。これにより平均FLOPsを変えず難しい文脈へ計算を寄せられる。配置時は平均均衡だけでは瞬間的な最大負荷を防げないため容量上限を追加し、モデル品質との交換条件で実行時間の尾を削る。",
+    "quality_impact": "動的top-k自体は同一平均予算で多くのベンチマークを改善するが、容量超過割当を落とす配置最適化は一部能力を犠牲にする。共有expertが全tokenを処理するため最低限のFFN経路は残るものの、強い専門expertへの割当が容量で落ちる場合は品質低下が起こりうる。"
   },
   "reservation": {
-    "claim_id": "claim-5a4f5cc9eab9d57bce8f13d8",
+    "claim_id": "claim-87c159714bb65416bb0f37de",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

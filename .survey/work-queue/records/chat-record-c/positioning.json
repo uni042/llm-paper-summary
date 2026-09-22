@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5a4f5cc9eab9d57bce8f13d8",
-  "job_id": "job-research-f59af449638fc64c",
+  "attempt_id": "attempt-87c159714bb65416bb0f37de",
+  "job_id": "job-research-92d92d3583bf57da",
   "data": {
-    "limitations": "評価の中心がMixtral-8×7B Base/Instructに偏るため、細粒度エキスパートや共有エキスパートを持つ別系統MoEで同じ指標順位が成立するかは未検証である。MC-Suiteの勾配・活性値指標は較正データと追加計算を必要とし、完全なデータ不要圧縮ではない。MoE Lotteryは約1Mトークンで主要利得が飽和するとはいえ8基A100で微調整を要し、即時圧縮用途では負担になる。指示追従損失という解釈は複数ベンチマークで支持されるが、少数例提示やSFTで性能が戻ることは事前学習知識が完全保存されていることの直接証明ではない。",
-    "differences": "従来の利用頻度、トークン再構成損失、重み類似度など単一指標の枝刈りに対し、MC-Suiteは16指標を同一条件で比較して何を測るべきか自体を研究対象にする。また既存の単発枝刈りに対して、削除後のモデルで重要度を再推定する反復方式を明示的に比較し、さらにタスク非依存の短い微調整を組み合わせる。C-PRUNEのように類似エキスパートをクラスタ構造からまとめる研究とは補完的で、こちらは『誰を削るか』のスコア設計と『削った後をどう直すか』を広く比較するベンチマーク・手順研究である。",
-    "implementation_status": "論文はMC-Suite各指標の数式とMoE Lotteryの反復手順、学習設定を再現可能な粒度で記載する。主設定はC4 validation 256サンプル、最大系列長2048、12.5%単位の反復削減、AdamW、最大学習率1e-6、8基A100である。本文中に公開コードURLは確認できなかったため、実装公開状況は未確認とする。",
-    "research_positioning": "MoE圧縮の実務では、重みをCPU/SSDへ退避して全エキスパートを保持する方式と、不要エキスパート自体を削って常駐集合を小さくする方式がある。本研究は後者の選択基準を体系化し、50%削減でメモリ0.55倍という直接的な容量効果を示す。階層メモリ研究への接続では、MC-Suiteの重要度を削除の二値判断だけでなく、GPU常駐・CPU待機・SSD退避の優先順位へ転用できる可能性がある。また重要度が削除後に変わるという反復枝刈りの観測は、実行時キャッシュでも配置変更後に人気度・重要度を再評価すべきことを示唆する。"
+    "limitations": "主な限界は、報告がbase language model中心で、著者自身がSFT、RL、マルチターン、長文コード、ソフトウェア工学、エージェント、マルチモーダル統合を今後の課題としている点である。物理AI向け設計を掲げるが、自動運転やロボットの閉ループ指標はこの報告では評価しない。容量制約の速度測定は単一GPUローカルMoEで、分散expert parallel通信を含まない。また容量制約付きQuantile Routing全体とdropless top-kを比較するため、速度差を各要素へ厳密分解できない。",
+    "differences": "通常top-kは各tokenに固定k個を割り当て、Loss-Free Routingなどは固定kのままexpert負荷を補正する。Quantile Routingはexpertごとのscore閾値で選択するためtokenごとのk自体が変わり、各expertの受入分位点を揃えることで負荷分散と平均k制御を同時に得る。Expert Choiceのようにexpert側がtokenを選ぶ方式に近い負荷規則性を持ちながら、tokenごとの可変計算を直接実現する。さらにtrainingではdropless、deployment prefillだけcapacity制約という段階別設計を採る。",
+    "implementation_status": "Xpengの技術報告として20Bモデルを実際に512 H800で学習し、H800上の長文推論と単一GPU融合MoEカーネルを評価している。Appendixではtoken-expert割当をexpert順にsortしoffsetを作り、第一射影＋gated activation、第二射影、routing weight scaling、scatter-addを融合実行する経路を説明する。一般公開コードURLは本文で確認できない。",
+    "research_positioning": "動的エキスパート計算の研究として、tokenごとに必要計算量を変えるadaptive computationを実モデル規模へ落とし込んだ例である。オフロードやexpert cacheとの関係では、固定top-kより瞬間選択数が変動するため単純な『毎token k個』前提のprefetchは難しくなる一方、expert固有閾値とload統計が将来需要予測の追加信号になる。容量制約はGPU上の最悪expert負荷を抑えるだけでなく、CPU/SSDからのexpert転送数に上限を設ける階層メモリ設計とも接続できる。平均計算予算と最悪負荷を別々に制御する考え方が重要である。"
   },
   "reservation": {
-    "claim_id": "claim-5a4f5cc9eab9d57bce8f13d8",
+    "claim_id": "claim-87c159714bb65416bb0f37de",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
