@@ -141,6 +141,52 @@ def record_new_block_event(job: dict, reference_time: datetime) -> bool:
     return True
 
 
+def legacy_permanent_retry_time(job: dict, reference_time: datetime) -> datetime:
+    history = job.get("block_history")
+    if isinstance(history, list):
+        for item in reversed(history):
+            if not isinstance(item, dict):
+                continue
+            blocked_at = parse_time(item.get("blocked_at"))
+            if blocked_at is not None:
+                return blocked_at + timedelta(seconds=RETRY_DELAY_SECONDS)
+    for key in ("last_blocked_at", "completed_at", "blocked_permanent_at"):
+        blocked_at = parse_time(job.get(key))
+        if blocked_at is not None:
+            return blocked_at + timedelta(seconds=RETRY_DELAY_SECONDS)
+    return reference_time + timedelta(seconds=RETRY_DELAY_SECONDS)
+
+
+def migrate_legacy_blocked_permanent(job: dict, reference_time: datetime) -> bool:
+    """Undo the retired automatic permanent-block policy.
+
+    blocked_permanent was produced by the old three-strike retrieval policy.
+    Retrieval unavailability is now temporary evidence only; explicit evidence-based
+    terminal exclusions use rejected instead.
+    """
+    if job.get("type") != "research" or job.get("status") != "blocked_permanent":
+        return False
+
+    job["status"] = "blocked"
+    job["legacy_blocked_permanent_migrated_at"] = iso(reference_time)
+    job.pop("blocked_permanent_at", None)
+    job.pop("retry_queued_at", None)
+
+    if should_suspend_periodic_retry(job, reference_time):
+        mark_retry_dormant(job, reference_time)
+        return True
+
+    retry_at = legacy_permanent_retry_time(job, reference_time)
+    if retry_at <= reference_time:
+        job["status"] = "ready"
+        job["retry_queued_at"] = iso(reference_time)
+        job.pop("retry_not_before", None)
+        job.pop("completed_at", None)
+    else:
+        job["retry_not_before"] = iso(retry_at)
+    return True
+
+
 def maybe_requeue(job: dict, reference_time: datetime) -> bool:
     if job.get("blocked_retry_dormant") is True or job.get("blocked_retry_state") == "dormant":
         return False
@@ -170,6 +216,7 @@ def process_blocked_research_jobs(root: Path, reference_time: datetime | None = 
         "new_block_events": 0,
         "requeued": 0,
         "dormant": 0,
+        "legacy_permanent_migrated": 0,
         # Kept for compatibility with dashboards/callers. This policy never
         # auto-promotes a retrieval failure to permanent exclusion.
         "permanent": 0,
@@ -178,7 +225,22 @@ def process_blocked_research_jobs(root: Path, reference_time: datetime | None = 
 
     for path in sorted(jobs_dir.glob("*.json")):
         job = read_json(path)
-        if job.get("type") != "research" or job.get("status") != "blocked":
+        if job.get("type") != "research":
+            continue
+
+        if job.get("status") == "blocked_permanent":
+            result["observed"] += 1
+            if migrate_legacy_blocked_permanent(job, reference_time):
+                result["legacy_permanent_migrated"] += 1
+                result["changed"] += 1
+                if job.get("blocked_retry_dormant") is True:
+                    result["dormant"] += 1
+                elif job.get("status") == "ready":
+                    result["requeued"] += 1
+                write_json(path, job)
+            continue
+
+        if job.get("status") != "blocked":
             continue
         result["observed"] += 1
 
