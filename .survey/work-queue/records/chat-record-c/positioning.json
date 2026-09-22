@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-91633015dfa64bbba8318e58",
+  "attempt_id": "attempt-8b19bb819058a3cdcb56577f",
   "job_id": "job-research-a4cc548ec9dfc021",
   "data": {
     "limitations": "ルーター得点の信頼性を代理目的の前提に置くため、ゲート得点と真の専門家寄与がずれるモデルや領域では選択品質が落ち得る。専門家予算を固定して集合を絞るため、バッチ内要求が極端に異質な場合や各トークンが固有専門家を必要とする場合は共有余地が小さい。主対象はメモリ帯域律速の自己回帰デコードであり、事前充填や演算律速環境の利得は限定的である。再学習不要という利点と引き換えに、モデル自体を共有ルーティングへ適応させる学習時手法ほど強い構造変化は行わない。",
@@ -11,7 +11,7 @@
     "research_positioning": "専門家混合サービングで専門家キャッシュやオフロードを工夫する研究が『選ばれた専門家をどう運ぶか』を主に扱うのに対し、XShareはその前段で『バッチ全体として何種類の専門家を選ぶか』を減らす。したがって専門家キャッシュ、GPU/CPUオフロード、専門家並列配置と補完関係にあり、特にメモリ制約下の推論では転送対象集合そのものを縮小する上流最適化として位置付けられる。"
   },
   "reservation": {
-    "claim_id": "claim-91633015dfa64bbba8318e58",
+    "claim_id": "claim-8b19bb819058a3cdcb56577f",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
