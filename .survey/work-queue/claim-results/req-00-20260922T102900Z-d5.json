@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-00-20260922T102900Z-d5",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-199b831b6808fd50",
+      "claim_id": "claim-1b188ce32f47e9723ddc14cd",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-1b188ce32f47e9723ddc14cd",
+      "claimed_at": "2026-09-22T10:28:41+00:00",
+      "expires_at": "2026-09-22T11:58:41+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-199b831b6808fd50"
+      ],
+      "job": {
+        "job_id": "job-research-199b831b6808fd50",
+        "type": "research",
+        "parent_job_id": "job-1849ac829790a8ce",
+        "priority": 98,
+        "canonical_id": "arXiv:2608.28293",
+        "arxiv_id": "2608.28293",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "A Probabilistic Interpretation of KV Cache Eviction",
+        "source_url": "https://www.semanticscholar.org/paper/24e2f8cf4d4c7f435ad762c9d2760eb67530b9e3",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md",
+        "selection_reason": "KV evictionを確率的expectation estimationとして形式化し、decode-time correctionを導入。既存heuristicをbiased estimatorとして統一的に解釈し同一compression budgetでtask robustnessを改善。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:17:31+00:00"
+      },
+      "record_bank": "f",
+      "record_bank_root": ".survey/work-queue/records/chat-record-f",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-f/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T10:28:41+00:00",
+  "checkpoint_released": 0
+}
