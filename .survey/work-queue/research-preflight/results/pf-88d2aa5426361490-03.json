@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-88d2aa5426361490-03",
+  "kind": "research",
+  "attempt_id": "attempt-88d2aa5426361490104919b5",
+  "job_id": "job-research-3611857c9c7fea67",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:5c3dedb0e9ae5bd2e30f133eef6b9476f28f88f203c956ad1f34c7b3353ca9ef",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "1d01a941e73758e847b751e9c027e831c344c4a5"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "3fb033186985416659f7e2de6bce27cd22c99193"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "9b8efea693ca256cf72309ee0f8f080a09bacb18"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "ec003492b9619928ab03e792b9f9f591de0bba21"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "b600dcb1d466aa48134bb8e774c1898cac2fad39"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "Japanese-first prose ratio is too low: 68.2% < 70% (Japanese=5450, Latin=2545)"
+  ],
+  "checked_at": "2026-09-22T22:11:35+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
