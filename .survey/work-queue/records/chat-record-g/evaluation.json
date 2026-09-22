@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-c1740060a24d308914998762",
-  "job_id": "job-research-c92e15d6ba5edb8d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c1740060a24d308914998762",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c1740060a24d308914998762","job_id":"job-research-c92e15d6ba5edb8d","data":{"hardware":"本文はモデル枝刈り後の精度保持を主評価とし、GPU型式や推論スループットは主要評価項目として報告しない。対象モデルはMixtral-8x22B、DeepSeek-MoE-16B、GPT-OSS-20Bが主要3モデルで、付録にMixtral-8x7BとQwen-MoEを含む。","software":"比較対象はrouter-guided、count-guided Expert Trimming、loss-based Enumerate、DEK。全手法で追加fine-tuningを無効化し、task-agnosticなone-shot pruningとして比較する。Mixtral-8x22Bは56層・各層8 experts・token当たり2 experts、DeepSeek-MoE-16Bは27 MoE層・64 private+2 shared experts・token当たりprivate 6+shared 2、GPT-OSS-20Bは24 MoE層・各層32 experts・token当たり4 experts。","methodology":"主要評価では各層2 expertsまたは4 expertsを削る局所法と同じ総削減数をGRAPEへ与え、GRAPEだけ層ごとの削減数を冗長性に応じて変える。Mixtral/DeepSeekは最終回答を直接生成し、GPT-OSSは既定reasoning style・reasoning effort mediumを使う。GPT-OSSのMMLUは計算費用のためランダム1000例、Mixtral/DeepSeekのMMLUとその他データセットは完全評価集合を使う。指標はMMLUのHumanities/Social Science/STEM/Other、BoolQ、OpenBookQA、RTEとその平均。付録では元モデル精度に対するretained performanceをMixtral-8x7B/Qwen-MoEで報告する。","scope":"主評価は同一総枝刈り予算下の精度保持であり、実メモリGB、実推論速度、枝刈り処理時間、枝刈り後再学習の回復能力は中心評価ではない。類似度指標はCKAやMSE等を許す一般形として説明される。DeepSeek-MoEでは層冗長性が極端に偏ると全体枝刈りがモデル崩壊を起こし得ることを結論で明示しており、全体配分が常に安全という主張ではない。"},"reservation":{"claim_id":"claim-c1740060a24d308914998762","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
