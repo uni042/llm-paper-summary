@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-b75922391156a97f6cc44521",
-  "job_id": "job-research-f3d9c2c6da00178e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b75922391156a97f6cc44521",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b75922391156a97f6cc44521","job_id":"job-research-f3d9c2c6da00178e","data":{"hardware":"Qwen1.5-MoE-A2.7Bの主実験は4×NVIDIA V100、Mixtral 8x7Bは8×NVIDIA A100。付録の実行時間・メモリ比較ではMixtralを8×V100、Qwenを4×V100で測定し、DeepSeek-MoE-16B-Baseでは単一A100上で統合処理10分以内と報告する。","software":"対象はQwen1.5-MoE-A2.7B-ChatとMixtral 8x7Bを中心に、付録でDeepSeek-MoE-16B-Baseも評価。較正はC4から32系列×2048トークンを構成し、追加でMATHとCodeQAを使用。比較対象はO-prune、S-prune、F-prune、M-SMoE、K-means、一回型グルーピング等。評価はEleutherAI Language Model Evaluation Harnessの8タスクを用いる。","methodology":"Qwenでは各層60専門家を45または30へ、Mixtralでは8専門家を6または4へ統合し、25%/50%削減を比較する。ARC-Challenge、ARC-Easy、BoolQ、HellaSwag、MMLU、OpenBookQA、RTE、Winograndeのゼロショット精度平均を主要指標とする。O-pruneはQwenで全組合せが非現実的なため各層1万候補をサンプリングする。クラスタリングの切り分けとして連結法、類似度、K-means初期化、一回型グルーピング、統合方式、較正データを個別にアブレーションする。付録ではMedMCQA、DeepSeek-MoE、より高い削減率、実行時間・メモリ、クラスタ品質指標も追加する。","scope":"主張の中心は再学習なし・タスク非依存の専門家統合であり、Qwen/Mixtralの一般言語ゼロショット性能と追加ドメインで検証する。推論レイテンシ自体の大幅改善よりも総パラメータ・モデルメモリ削減が主効果で、Mixtralは46.7B/87.49GBから4専門家構成24.2B/45.49GB、Qwenは14.3B/27.04GBから30専門家構成8.1B/15.44GBへ減る。"},"reservation":{"claim_id":"claim-b75922391156a97f6cc44521","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
