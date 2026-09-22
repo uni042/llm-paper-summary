@@ -2,60 +2,68 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-b5919b99883e66617c28776a",
-  "job_id": "job-research-5cd2beb9d9cae3d8",
+  "attempt_id": "attempt-40775da1ed5102aa9d7b9a44",
+  "job_id": "job-research-be16d214d5c628cd",
   "data": {
-    "canonical_id": "arXiv:2605.08575",
-    "arxiv_id": "2605.08575",
-    "doi": "10.48550/arXiv.2605.08575",
+    "canonical_id": "arXiv:2608.04502",
+    "arxiv_id": "2608.04502",
+    "doi": "10.48550/arXiv.2608.04502",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.LG",
+      "primary": "cs.DC",
       "cross_list": [
         "cs.AI"
       ]
     },
-    "title": "Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution",
-    "summary": "既存の事前学習済みMoEには、選択済みexpert内部にも大きなactivation sparsityが残ることを8モデル（1B〜400B）で示し、vLLMのfused MoE経路へthreshold-based sparse executionを統合した研究。モデル再学習や活性化関数変更なしに最大約90%のexpert内sparsityを利用し、MoE layerで最大2.5倍、end-to-endで最大1.2倍の高速化を報告する。",
-    "list_summary": "既存MoEのexpert内activation sparsityをvLLMへ統合し、再学習なしでMoE layer最大2.5倍・end-to-end最大1.2倍を実現する。",
+    "title": "AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation",
+    "summary": "AFD-Ledgerは、MoE推論のAttention–FFN分離配置（AFD）が固定予算・TPOT SLO下で最適な同居配置を本当に上回るかを、ハードウェア割当と配置構成を独立に最適化して比較するオフライン分析プロビジョニング系である。軽量な役割別ハードウェア推定と、評価回数を20組に制限した探索を組み合わせ、完全列挙可能な設定では全64/121組に対し68.8〜83.5%の完全配置評価を削減しながら大域最適解を回収した。",
+    "list_summary": "AFDと同居配置を同一予算・TPOT SLOで独立最適化し、少数のハードウェア組だけを完全評価して最適配置を探索する分析プロビジョニング系。",
     "authors": [
-      "Jongseok Park",
-      "Sunga Kim",
-      "Zhenyu Gu",
-      "Ion Stoica",
-      "Alvin Cheung"
+      "Chengyu Qiu",
+      "Xiao Fu",
+      "Fengcun Li",
+      "Yulei Qian",
+      "Yuchen Xie",
+      "Xunliang Cai",
+      "Yingdi Shan",
+      "Yongwei Wu",
+      "Mingxing Zhang"
     ],
-    "authors_affiliations": "University of California, Berkeley; Advanced Micro Devices, Inc.",
-    "published": "2026-05-09",
-    "publication": "arXiv",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint (v1, 2026-05-09)",
-    "lineage": "MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM",
-    "topics": [
-      "MoE推論",
-      "activation sparsity",
-      "vLLM",
-      "Triton",
-      "GPU sparse execution"
-    ],
-    "importance": "inter-expert sparsityをさらに高める代わりに、既存MoEの選択済みexpert内部の冗長性を実運用推論基盤で利用する新しい最適化軸を示す。特に大規模MoEほどsparsity耐性が高く、training-freeで適用可能な点が重要。",
-    "implementation": "vLLM開発版へTriton製のcustom sparse activation kernelとfused sparse up-down projectionを組み込む。完全なkernel sourceは論文Appendix Bに掲載。",
-    "hardware_evaluation": "AMD MI355X、NVIDIA H200、NVIDIA RTX4090。Qwen3.5-35B-A3BおよびQwen3.5-122B-A10BでMoE layer性能、MI355X/H200でend-to-end性能を評価。",
-    "quality_effect": "5 benchmark平均でbaseline scoreの95%を維持する最大sparsityをcutoffと定義。Qwen3.5-35B-A3Bでは85% target sparsityまで95%基準を維持。",
-    "source": "https://arxiv.org/abs/2605.08575",
+    "published": "2026-08-05",
+    "publication": "arXiv preprint",
+    "publication_type": "Preprint",
+    "publication_status": "arXiv v1",
+    "source": "https://arxiv.org/abs/2608.04502",
     "sources": [
-      "https://arxiv.org/abs/2605.08575",
-      "https://arxiv.org/html/2605.08575v1"
+      "https://arxiv.org/abs/2608.04502",
+      "https://arxiv.org/html/2608.04502v1",
+      "https://github.com/kvcache-ai/AFD-Ledger"
     ],
-    "code": null,
+    "primary_url": "https://arxiv.org/abs/2608.04502",
+    "html_url": "https://arxiv.org/html/2608.04502v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.04502",
+    "implementation_url": "https://github.com/kvcache-ai/AFD-Ledger",
+    "implementation": "公開リポジトリにオフライン分析プロビジョニング実装があり、論文では約5,700行（テスト除外）と報告。物理検証用には社内SGLang-FluentLLM上へLongCat 2.0向けAFD実行系を別実装し、Python/AscendCで8,000行超と報告する。",
     "last_checked": "2026-09-22",
-    "references": [],
+    "code": "https://github.com/kvcache-ai/AFD-Ledger",
+    "hardware_evaluation": "商用カタログEはH200/H100/A100/L40S/L4/RTX PRO 6000 Server、拡張SはB200/B300と模擬役割特化デバイスを含む。物理検証はLongCat 2.0、Ascend 910C、160 cards、32K/64K/120K context。",
+    "quality_effect": "モデル重みや生成アルゴリズムを変更せず、配置候補の分析・選択を行うため生成品質への直接影響はない。主指標はTPOT SLOを満たすdecode throughputと配置選択の正しさ。",
     "references_checked_at": "2026-09-22",
-    "references_source": "primary manuscript",
-    "references_total": 56
+    "references_source": "https://arxiv.org/html/2608.04502v1",
+    "references_total": 0,
+    "references": [],
+    "lineage": "MoE serving / Attention-FFN disaggregation / analytical provisioning / hardware-aware deployment search",
+    "topics": [
+      "MoE inference",
+      "Attention-FFN disaggregation",
+      "deployment provisioning",
+      "hardware search",
+      "TPOT SLO",
+      "heterogeneous accelerators"
+    ]
   },
   "reservation": {
-    "claim_id": "claim-b5919b99883e66617c28776a",
+    "claim_id": "claim-40775da1ed5102aa9d7b9a44",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
