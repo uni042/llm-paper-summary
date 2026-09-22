@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "update-20260920-0830",
+  "attempt_id": "update-20260923-0830-scheduled-chat-30",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/README.md",
-    "framework-updates/inference-engines/sglang/README.md",
+    "framework-updates/inference-engines/vllm/README.md",
     "llm-releases/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
     "framework-updates/README.md",
-    "framework-updates/inference-engines/sglang/README.md",
+    "framework-updates/inference-engines/vllm/README.md",
     "llm-releases/README.md"
   ],
-  "summary": "2026-09-20の08:30 update route: vLLM Kimi-K3 routed-expert quantization、SGLang Ascend A5向けKimi-K3 W4A8 MoE/DSpark/prefill最適化を追加。主要LLM正式公開は9月17日以降にトップ表更新対象なし。"
+  "summary": "2026-09-23の08:30 update route: vLLM v0.30.0のFast Start、HiSparse、Model Runner V2、Qwen3.8/Kimi K3最適化等を追加。主要LLM正式公開は9月20日以降にトップ表更新対象なし。"
 }

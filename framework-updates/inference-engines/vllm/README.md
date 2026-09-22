@@ -30,6 +30,10 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 以下の更新履歴は、**memory階層、分離serving、MoE通信、量子化、投機的デコード、GPU kernel**がどこまで実用範囲を広げたかを追う。
 
+## 2026-09-23
+
+- **v0.30.0 — released 2026-09-22 UTC**: 762 commits / 315 contributorsを含む大型release。主な更新は、post-quantized / TP-sharded weightをGPU常駐daemonに保持し再起動時にCUDA IPCでmapする**Fast Start**（`--load-format ipc_cache`、FP4・multi-node TP対応）、sparse-MLA decodeのKV pageをpinned host memoryへspillしGPU hot bufferでtop-k missを処理する**HiSparse**、Model Runner V2のdual-batch overlap・pipeline parallel下のMTP/EAGLE3/DFlash/DSpark・オンライン受理推定によるadaptive verification、Qwen3.8-Flash-NextのQSA/PLE/FP8 indexer最適化、Kimi K3のKDA/MLA kernel改善、PCP+DCP・Elastic EP・Mooncake/NIXL系の大規模serving拡張。release noteではModel Runner V2のCUDA Graph captureがH200で**12s→2s**、engine initが**28.9s→8.2s**、Kimi K3のgrouped FP8 MLA cache insertionはsmall batchで**4〜6倍**、mixed-batch KDA gather/scatter除去はE2E throughput **+5.2〜7.7%**と報告。[v0.30.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.30.0)
+
 ## 2026-09-17
 
 - **DeepSeek-V4.1向けFlashMLA Mega Attention + NVFP4圧縮KV cache — merged 2026-09-16 UTC**: Q RoPE、sparse attention、inverse RoPE、FP8 castをmega-attention kernelへ融合し、NVFP4 compressed KV recordを追加。SM100の対応topologyでは既定backendとなる。NVFP4 recordは従来のFP8系recordより約45%小さく、単一GB300・CUDA Graph有効のdecode microbenchmarkではTP1で最大約**1.45倍**。TP2〜TP8は概ね同等で、prefill性能は未測定。GPQA / GSM8Kのend-to-end比較ではaccuracy差はsampling noise内。[PR #56935](https://github.com/vllm-project/vllm/pull/56935)

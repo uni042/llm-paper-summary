@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-20**
+- フレームワーク差分の最終確認: **2026-09-23**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-20の差分確認では、公式リリースと開発元リポジトリを基準に9月17日以降のvLLMにおけるKimi-K3 routed-expert量子化、SGLangにおけるAscend A5向けKimi-K3 serving最適化、および主要LLMの正式公開を再確認した。
+この2つは分けて扱う。2026-09-23の差分確認では、公式リリースと開発元リポジトリを基準に9月20日以降の主要更新を再確認し、vLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化などを追加した。主要LLMの正式公開はトップ表更新対象なし。
 
 ## 現在の機能マップ
 
@@ -65,6 +65,16 @@
 ---
 
 ## 最新更新
+
+### 2026-09-23
+
+#### vLLM
+
+- **v0.30.0 — released 2026-09-22 UTC**
+
+  762 commits / 315 contributorsを含む大型release。GPU上に量子化・TP shard済みweightを保持してengine再起動時にCUDA IPCで再利用するFast Start、sparse-MLA decodeでKV pageをpinned host memoryへ退避するHiSparse、Model Runner V2のdual-batch overlap / speculative decoding拡張、Qwen3.8-Flash-NextとKimi K3のkernel最適化、large-scale serving・量子化経路の拡張がまとまって入った。
+
+  一次資料: https://github.com/vllm-project/vllm/releases/tag/v0.30.0
 
 ### 2026-09-20
 
