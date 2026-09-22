@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ddb3060fbfec2233d78a5ab4",
-  "job_id": "job-research-a4cc548ec9dfc021",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ddb3060fbfec2233d78a5ab4",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ddb3060fbfec2233d78a5ab4","job_id":"job-research-a4cc548ec9dfc021","data":{"limitations":"router score reliabilityをproxyの前提に置くため、gating scoreと真のexpert寄与がずれるモデル・domainでは選択品質が落ち得る。expert budgetを固定して集合を絞るため、batch内requestが極端に異質な場合や各tokenが固有expertを必要とする場合は共有余地が小さい。主対象はmemory-bandwidth-boundなdecodeであり、prefillやcompute-bound環境の利得は限定的である。再学習不要という利点と引き換えに、モデル自体を共有routingへ適応させるtraining-time手法ほど強い構造変化は行わない。","differences":"static expert pruningやDiEP/MoE-Prunerはモデル全体からexpert/weightを恒久削減し、しばしばcalibration・distillation・retrainingを伴うのに対し、XShareはbatchごとに一時的なexpert集合を変える。Dynamic Skippingは各token独立のscore比でexpertを飛ばすがbatch unionを直接最適化しない。LYNX-Latはbatch-awareに低頻度expertを落とすが、XShareは選択頻度ではなくrouter score総和を効用として重要度を保持する。concurrentなopportunistic expert activationはtokenごとのtop-k'からshared poolを作るのに対し、XShareはbatch utility自体を最適化する。","implementation_status":"arXiv v1 (2026-02-06) のプレプリント。論文は通常batch、speculative decoding、expert parallel向けの具体的algorithm/pseudocodeを提示し、再学習なしの推論時方式として評価する。arXivページ上では公式code URLは明示されていない。","research_positioning":"MoE servingでexpert cache/offloadを工夫する研究が『選ばれたexpertをどう運ぶか』を主に扱うのに対し、XShareはその前段で『batch全体として何種類のexpertを選ぶか』を減らす。したがってexpert caching、GPU/CPU offload、expert parallel placementと補完関係にあり、特にmemory-limited inferenceでは転送対象集合そのものを縮小する上流最適化として位置付けられる。"},"reservation":{"claim_id":"claim-ddb3060fbfec2233d78a5ab4","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
