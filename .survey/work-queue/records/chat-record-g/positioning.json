@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-71174da29a72754d44fbffa1",
   "job_id": "job-research-f43aa8f1dfa7e573",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-71174da29a72754d44fbffa1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "BEAMは追加後学習を必要とし、既存checkpointへ推論時だけ挿す無訓練手法ではない。疎性を強くすると品質は低下するため、用途ごとにβと許容性能低下を選ぶ必要がある。訓練時にはSTEの学習信号を確保するためTop-K候補を計算し、計算削減の主利得は推論時に得る。主な実システム評価は単一GPU中心で、expert parallelを使う複数GPU・複数ノード環境におけるall-to-all通信、expert load imbalance、通信と計算の重なりへの影響は未検証である。共有専門家を持つモデルではrouted expertを全て落としてもshared expert計算が残るため、達成可能な速度向上はモデル構造に依存する。またmask router自体の追加parameterと微小なrouting overheadがある。",
+    "differences": "MoE-Dynamicなどの累積確率方式はrouting weight順にexpertを追加するためTop-1を必ず実行し、高順位expertを飛ばして低順位だけ残すことができない。AdaMoEはnull expertを構造へ加えて計算不要経路を作るが、BEAMは既存Top-K候補へ独立二値maskを掛けるためexpert構造を置換しない。単純Top-K pruningは低weight expertを固定規則で落とすだけで高疎性時に品質が崩れやすい。BEAMはtask gradientでtokenごとの必要性を学習し、主routerのselection/load-balancingとmask routerのsparsityを分離する。expert pruningのようにモデル全体からexpertを恒久削除する方式とも異なり、同じexpertでもtoken・layer・prefill/decode状態に応じて実行可否が変わる。",
+    "implementation_status": "著者実装はTime-Rune/BEAMとして公開され、vLLMへcustom CUDA kernelを統合する。mask_route_kernelでmask logitに基づきexpert indexを除外し、moe_align_block_size_kernelが除外expertをblock alignment対象から外すことで実FFN計算を省略する。したがって論文のシステム主張はFLOPs推定だけではなく実装されたdecode/throughput測定に基づく。",
+    "research_positioning": "Adaptive Expert Computation / Compression系の中でも、expertそのものを圧縮・統合・キャッシュするのではなく『各tokenで既存expertを実行する必要があるか』を学習するconditional computationである。特に平均活性expert数1未満を許す点は、MoE layer skippingとexpert routingの中間に位置する。CPU/SSD offloadやexpert cacheと組み合わせる場合、BEAMが予測する実行maskをprefetch・resident expert選択へ利用すれば、不要expertの転送まで抑えられる可能性がある一方、mask判定後に初めて必要expertが確定するためprefetch timingとの協調が課題になる。"
+  },
+  "reservation": {"claim_id": "claim-71174da29a72754d44fbffa1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
