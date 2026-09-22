@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-a2e5fb73d91123b2b7515fb2",
-  "job_id": "job-research-bc95233f6a664ba4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a2e5fb73d91123b2b7515fb2",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a2e5fb73d91123b2b7515fb2","job_id":"job-research-bc95233f6a664ba4","data":{"hardware":["PCIe接続NVIDIA A6000 48GB GPU、単一ノード","4 GPU中心、8/16 GPU専門家並列も評価"],"software":["Triton","torch.distributed all_to_all_single","vLLM","HuggingFace","MegaBlocks","Tutel","PyTorch FSDP","DeepSpeed"],"model":["OLMoE-1B-7B","Qwen1.5-MoE-A2.7B","DeepSeek-MoE"],"datasets":["Alpaca fine-tuning","Winogrande","WSC","PIQA","RACE","MathQA","RTE","23-benchmark appendix suite"],"baselines":["vLLM","HuggingFace","MegaBlocks block-sparse/grouped GeMM","Tutel","PyTorch FSDP","DeepSpeed","standard SFT/top-k routing"],"correctness":"専門家再配置のみの構成は計算結果を厳密に維持する。協調剪定は標準SFTと同じデータで微調整し、複数NLP課題のaccuracy/F1/EMで品質を比較する。","settings":["BF16 parameter/activation、atomic_addはFP32","prefillは最大2^14 prompt tokens","decode代表設定はprompt 12,800 tokens、batch 512","trainingはsequence length 512、1k iterations平均","2-device pruningを主な品質・速度折衷点として使用"],"methodology":"三つのMoEで、標準framework、Occult配置のみ、1-GPU/2-GPU協調剪定を比較する。品質は6主要課題と付録23課題、速度はprefill・decode・trainingのwall-clock latencyで測る。通信複雑度C_Tと実時間の相関も確認し、配置変更と剪定がどれだけ内部協調を増やすかを分析する。","scope":"PCIe接続A6000単一ノードで通信律速な専門家並列。NVLink/NVSwitch大規模クラスタへの一般化は直接評価されない。","workloads":["long-prompt prefilling","large-batch decoding","MoE module fine-tuning"],"metrics":["wall-clock latency","speedup","accuracy/F1/exact match","token replica communication budget C_T","intra/inter collaboration ratio","最大batch size"],"reproducibility":"モデル、GPU、精度、主要workload条件、配置アルゴリズム、カーネル擬似コード、23課題結果を記載しコード公開。"}}
