@@ -12,22 +12,13 @@
   "source_url": "https://arxiv.org/abs/2609.09823",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md",
   "selection_reason": "Very recent GPU-PIM LLM decoding systems work that targets nonblocking execution and decode efficiency; directly relevant to heterogeneous inference acceleration.",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T20:21:37+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | Japanese-first prose ratio is too low: 42.7% < 70% (Japanese=1561, Latin=2096)",
-  "validation_errors": [
-    "problem_method.method_overview must explain the end-to-end mechanism",
-    "problem_method.components[0].description is too short",
-    "problem_method.components[1].description is too short",
-    "problem_method.components[2].description is too short",
-    "problem_method.components[3].description is too short",
-    "Japanese-first prose ratio is too low: 42.7% < 70% (Japanese=1561, Latin=2096)"
-  ],
-  "last_validation_failed_at": "2026-09-22T06:39:17+00:00"
+  "completed_at": "2026-09-22T07:05:00+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-65c28b59ac08b3e1cf0adad9.json"
 }
