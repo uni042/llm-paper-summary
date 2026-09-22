@@ -1,5 +1,33 @@
 {
-"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d176f3e35d1e1d54e70ae28c","job_id":"job-research-1922ded1807d40e6",
-"data":{"hardware":"CPUおよびGPUで実測推論速度を評価。論文は25%のフィードフォワード層パラメータ使用時にCPU約2倍、GPU約1.2倍を報告。","software":"公開MoEfication実装を使用。均衡K平均法、グラフ分割、類似度選択、多層パーセプトロン選択を比較。","model":"T5-Small 60M、T5-Base 200M、T5-Large 700M、T5-XLarge 3B、およびBERT系モデル。","datasets":["SST-2","MNLI-matched","RACE","GLUE追加タスク","SQuAD"],"baselines":["変換前の密モデル","ランダム専門家分割","ランダム専門家選択","groundtruth専門家選択"],"correctness":"元モデル性能に対する保持率と各タスク指標を測定し、条件付き使用率を10〜30%へ下げた際の品質劣化を評価。","methodology":"T5ではReLU活性の自然な疎性を利用し、専門家当たり32ニューロン、モデル規模に応じ64〜512専門家を構成する。T5の下流微調整はAdam、学習率1e-6、バッチ64、3エポック。専門家構成法と選択法を組み合わせ、選択専門家割合を変えて性能・FLOPS・実測速度を比較する。","scope":"実モデル・実タスクによる評価であり、T5/BERT系の自然言語処理を中心とする。CPUでは疎化が速度へ反映されやすい一方、GPUでは小さな専門家計算の並列化効率とルーティング費用により理論FLOPS削減ほど高速化しない。"},
-"reservation":{"claim_id":"claim-d176f3e35d1e1d54e70ae28c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-3bb5f476d210f19b5b746d7c",
+  "job_id": "job-research-1922ded1807d40e6",
+  "data": {
+    "hardware": "CPUおよびGPUで実測推論速度を評価。論文は25%のフィードフォワード層パラメータ使用時にCPU約2倍、GPU約1.2倍を報告。",
+    "software": "公開MoEfication実装を使用。均衡K平均法、グラフ分割、類似度選択、多層パーセプトロン選択を比較。",
+    "model": "T5-Small 60M、T5-Base 200M、T5-Large 700M、T5-XLarge 3B、およびBERT系モデル。",
+    "datasets": [
+      "SST-2",
+      "MNLI-matched",
+      "RACE",
+      "GLUE追加タスク",
+      "SQuAD"
+    ],
+    "baselines": [
+      "変換前の密モデル",
+      "ランダム専門家分割",
+      "ランダム専門家選択",
+      "groundtruth専門家選択"
+    ],
+    "correctness": "元モデル性能に対する保持率と各タスク指標を測定し、条件付き使用率を10〜30%へ下げた際の品質劣化を評価。",
+    "methodology": "T5ではReLU活性の自然な疎性を利用し、専門家当たり32ニューロン、モデル規模に応じ64〜512専門家を構成する。T5の下流微調整はAdam、学習率1e-6、バッチ64、3エポック。専門家構成法と選択法を組み合わせ、選択専門家割合を変えて性能・FLOPS・実測速度を比較する。",
+    "scope": "実モデル・実タスクによる評価であり、T5/BERT系の自然言語処理を中心とする。CPUでは疎化が速度へ反映されやすい一方、GPUでは小さな専門家計算の並列化効率とルーティング費用により理論FLOPS削減ほど高速化しない。"
+  },
+  "reservation": {
+    "claim_id": "claim-3bb5f476d210f19b5b746d7c",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }

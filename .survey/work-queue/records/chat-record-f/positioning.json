@@ -1,8 +1,22 @@
 {
-"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d176f3e35d1e1d54e70ae28c","job_id":"job-research-1922ded1807d40e6",
-"data":{"limitations":"効果はReLU型フィードフォワード層の自然な厳密ゼロ活性に強く依存し、GeLU型BERTでは活性関数置換と追加適応が必要である。GPUでは理論FLOPS削減がそのまま実時間へ反映されず、専門家計算を効率よく並列化する実行系が必要になる。また専門家構成用の共活性化統計やルーター学習にもオフライン処理が必要で、最新の大規模デコーダ専用LLMでの評価ではない。",
-"differences":["Switch TransformerやGShardのようにMoEを最初から事前学習するのではなく、既存の密Transformerを同じパラメータ集合のままMoEへ変換する。","静的枝刈りのようにニューロンを恒久削除せず、入力ごとに異なる専門家を選ぶことでモデル容量を保持したまま実行計算だけを減らす。","層単位の動的推論より細粒度なフィードフォワード層ニューロン群を条件付き実行する。"],
-"implementation_status":"著者による公開実装がGitHubのthunlp/MoEficationで提供されている。論文はT5/BERT系で専門家分割とルーティングを実装し、CPU/GPU実測まで報告する。",
-"research_positioning":"Adaptive Expert Computation / Compression系統では、密モデル内部の自然な活性疎性を専門家構造として顕在化させるdense-to-MoEの前駆的研究に位置づく。後続の専門家枝刈りが既存MoEから不要専門家を減らすのに対し、本研究は逆方向に密FFNを専門家へ分解して入力依存実行を可能にするため、専門家構成・ルーティング・疎実行の基礎比較として重要である。"},
-"reservation":{"claim_id":"claim-d176f3e35d1e1d54e70ae28c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-3bb5f476d210f19b5b746d7c",
+  "job_id": "job-research-1922ded1807d40e6",
+  "data": {
+    "limitations": "効果はReLU型フィードフォワード層の自然な厳密ゼロ活性に強く依存し、GeLU型BERTでは活性関数置換と追加適応が必要である。GPUでは理論FLOPS削減がそのまま実時間へ反映されず、専門家計算を効率よく並列化する実行系が必要になる。また専門家構成用の共活性化統計やルーター学習にもオフライン処理が必要で、最新の大規模デコーダ専用LLMでの評価ではない。",
+    "differences": [
+      "Switch TransformerやGShardのようにMoEを最初から事前学習するのではなく、既存の密Transformerを同じパラメータ集合のままMoEへ変換する。",
+      "静的枝刈りのようにニューロンを恒久削除せず、入力ごとに異なる専門家を選ぶことでモデル容量を保持したまま実行計算だけを減らす。",
+      "層単位の動的推論より細粒度なフィードフォワード層ニューロン群を条件付き実行する。"
+    ],
+    "implementation_status": "著者による公開実装がGitHubのthunlp/MoEficationで提供されている。論文はT5/BERT系で専門家分割とルーティングを実装し、CPU/GPU実測まで報告する。",
+    "research_positioning": "Adaptive Expert Computation / Compression系統では、密モデル内部の自然な活性疎性を専門家構造として顕在化させるdense-to-MoEの前駆的研究に位置づく。後続の専門家枝刈りが既存MoEから不要専門家を減らすのに対し、本研究は逆方向に密FFNを専門家へ分解して入力依存実行を可能にするため、専門家構成・ルーティング・疎実行の基礎比較として重要である。"
+  },
+  "reservation": {
+    "claim_id": "claim-3bb5f476d210f19b5b746d7c",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
