@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-a302801e2f42ef7601d7976c",
-  "job_id": "job-research-aa3e3c19262a245a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a302801e2f42ef7601d7976c",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a302801e2f42ef7601d7976c","job_id":"job-research-aa3e3c19262a245a","data":{"overview":"提案する反復探索は、18モデル・4スマートフォンのシミュレーションでオフラインJoint-Gurobi比の平均正規化遅延1.01〜1.04倍、最悪1.05〜1.11倍、実機エンドツーエンド測定で平均1.00〜1.04倍、最悪1.10〜1.29倍を達成した。OnePlus 11実測では中央値1.02倍、90パーセンタイル1.09倍で、スケジュール専用・分割専用・固定展開DAGより一貫して共同最適化へ近い。遅延予測はモデル初期化時間の4.0〜12.9%、探索を含む総オーバーヘッドは平均37.4%で、固定モデルなら初期化時に一度計算して再利用できる範囲に収まる。","key_results":[{"metric":"実機平均正規化遅延","value":"1.00〜1.04倍","baseline":"Joint-Gurobi=1.00","condition":"18モデル、4スマートフォン、提案反復探索","interpretation":"配備時に実行可能な探索でオフライン共同最適化の大部分を再現する。"},{"metric":"実機最悪正規化遅延","value":"1.10〜1.29倍","baseline":"Joint-Gurobi=1.00","condition":"18モデル、4スマートフォン","interpretation":"平均だけでなくモデルごとの最悪差も比較的小さい。"},{"metric":"OnePlus 11分布","value":"中央値1.02倍、90パーセンタイル1.09倍","baseline":"Joint-Gurobi=1.00","condition":"実測エンドツーエンド遅延","interpretation":"特定モデルだけの改善ではなく分布全体で共同最適化へ近い。"},{"metric":"分割専用の実機平均","value":"1.12〜1.37倍、最悪はOnePlus 11で2.92倍","baseline":"Joint-Gurobi=1.00","condition":"局所最小遅延分割","interpretation":"局所的に演算子を速くしてもディスパッチ費用と他演算子との競合で全体を悪化させ得る。"},{"metric":"総配備時オーバーヘッド","value":"モデル初期化時間の平均37.4%","baseline":"TFLiteモデル初期化時間","condition":"OnePlus 11、遅延予測+反復探索","interpretation":"単一推論よりは大きいが、固定計画を後続要求で再利用する初期化時処理として実用範囲を狙える。"},{"metric":"段階化アブレーション","value":"段階化あり1.03/10.8秒、なし1.14/24.7秒","baseline":"OnePlus 11正規化遅延/デスクトップ探索費用","condition":"30秒探索上限","interpretation":"段階化は計算量を減らすだけでなく限られた予算内で有用な更新を多く試せるため品質も改善する。"}],"negative_results":"単純な分割は実機で不安定で、OnePlus 11では分割専用法の最悪値がJoint-Gurobiの2.92倍まで悪化する。段階化を外すと探索空間が広がるにもかかわらず探索費用が10.8秒から24.7秒へ増え、正規化遅延も1.03から1.14へ悪化する。端末間でスケジュールを使い回すと、似たSnapdragon 8系同士では最大約5%増に収まるが、性能比の異なる端末間では最大1.41倍まで悪化する。","interpretation":"性能向上の本質は分割数を増やすことではなく、現在のDAG並列性とデバイス競合を見ながら必要な演算子だけを分割することにある。反復探索は無分割から始め、全体メイクスパンを改善する更新だけを受理するため、実機の同期・ディスパッチ費用がある状況でも過剰分割を避けやすい。","quality_impact":"モデルの予測精度そのものは変更せず、同一モデルの実行計画だけを最適化するため、評価対象の品質指標は推論レイテンシである。固定形状・同一演算を保つ範囲では数値精度を犠牲にする近似計算は導入していない。"},"reservation":{"claim_id":"claim-a302801e2f42ef7601d7976c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
