@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-0435bf18257a114df581ef2f","job_id":"job-research-3c62e3c72b715377","data":{"limitations":"主要評価は単一RTX A6000とDeepSeek-MoE-16Bに集中し、複数GPU、NVMe/SSD階層、異なるMoEアーキテクチャへの一般化は未実証。3.45倍のADEPT TPOTはイベント駆動シミュレーション投影で、比較先HF Accelerateは実機測定なので完全な実測同士ではない。領域priorは既知5領域の事前データを必要とし、誤分類時はprefill hit rateが平均26%相対低下する。Kを小さくしすぎるとモデル精度も大幅低下する。Random Forestは非定常routingへの適応をオンライン学習せず、将来課題としてRL/NN predictorを挙げる。","differences":"単純On-Demandはrouter要求後にexpertを転送するためメモリ最小化と引き換えにI/O stallが大きい。LRU/LFUは過去利用だけでresident setを管理するのに対し、ADEPTはprompt domainでprefill開始前のexpert集合を決め、decodeでは次利用を明示予測して転送を計算へ重ねる。MoE-Infinity-style lookaheadのgating中心先読みと比べても、domain-aware prefillとtemporal/spatial localityを組み合わせることで構造化領域のhit-rate利得が大きい。FlexGen等の一般offloadが層/テンソル配置を扱うのに対し、本手法はMoE expertのrouting sparsityとdomain specializationを直接利用する。","implementation_status":"DeepSeek-MoE-16Bのactivation trace収集、domain heatmap、GTE系埋込みmedoid、Random Forest predictor、OrderedDict LRU cache、event-driven simulatorまで実装・設定が本文に記載される。論文はソフトウェア登録手続中のためcore algorithmsとsimulator configurationsを本文で詳述する代わりにfull public code releaseはまだ行わないと明記している。したがってアルゴリズムは再実装可能な程度に説明されるが、著者公式コードをそのまま再実行する再現性は現時点でない。","research_positioning":"本リポジトリの重点であるMoE expert cache/offload系統に直接属する。特徴は階層メモリの置換規則だけでなく、モデルroutingの意味的・時間的予測をI/O schedulerへ接続した点にある。CPU→GPU expert transferを次token計算と重ねる設計は、将来CPU/DRAMだけでなくSSD/NVMeを下位階層に追加した場合にもprefetch lead timeとcache admissionの問題へ一般化できる。\n\n一方、現評価はCPU-GPU二階層でありSSD帯域・direct storage・expert圧縮・複数GPU配置は扱わない。今後はdomain priorをexpert placementの長期予測、Random Forestを短期prefetch予測として二時間尺度に分け、NVMe→DRAM→GPUの三階層で各段階のlead timeを変える方向が既存のexpert cache研究との差別化候補になる。"},"reservation":{"claim_id":"claim-0435bf18257a114df581ef2f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-82a9eef63b857ccffc7b3a86",
+  "job_id": "job-research-9fc5a1ad8ad0b2d8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-82a9eef63b857ccffc7b3a86",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
