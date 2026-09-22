@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:38:47 JST**
+> 自動生成: **2026-09-22 16:39:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **291** |
 | 未claim Research job | **289** |
 | 直近24hの検証済みResearch収録 | **23** |
-| 最終検証済みResearch収録 | **09-22 16:38:18 JST（29秒前）** |
+| 最終検証済みResearch収録 | **09-22 16:38:18 JST（54秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **2** | **0** | **0** | **2** | **1** | — |
+| Research | **17** | **1** | **0** | **1** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **17** | **5** | **0** | **3** | **2** | **1** | **6** |
+| 合計 | **17** | **4** | **0** | **4** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -145,16 +145,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-22 15:30 JST** / worker `scheduled-chat-30`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-838569c6f399cb046e74080e.json` (job `job-research-f10be2e9a7bd04f7`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-838569c6f399cb046e74080e.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-e8a4a4cd78c4e22236c35816.json` (job `job-research-503df587e7eb88ec`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-e8a4a4cd78c4e22236c35816.json` (`ok=true`)
+- 最新観測run: **2026-09-22 16:30 JST** / worker `scheduled-chat-30`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **1件**
+- **個別result未照合** `.survey/work-queue/submissions/research/attempt-403f9fa49f0449fd38977755.json` (job `job-research-f2e323416158860a`)
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-22 15:30 JST** / worker `scheduled-chat-30`
+- 最新観測run: **2026-09-22 16:30 JST** / worker `scheduled-chat-30`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -234,8 +231,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **291** |
-| └ Research | **219** |
+| 成功result未照合のimmutable submission | **292** |
+| └ Research | **220** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
