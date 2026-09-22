@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T06:24:54.928288+00:00",
+  "updated_at": "2026-09-22T06:25:52.960250+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -35739,6 +35739,56 @@
       "paper_active_count_before": 886,
       "paper_active_count_after": 897,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "unattributed:35694699156",
+      "first_recorded_at": "2026-09-22T06:25:52.960250+00:00",
+      "last_recorded_at": "2026-09-22T06:25:52.960250+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35694699156:1",
+          "recorded_at": "2026-09-22T06:25:52.960250+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35694699156",
+            "run_attempt": "1",
+            "source_sha": "4202f0873efd9893d6652fedfd66c39e114c2a93"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-11ed8db2a9d8a3d3",
+          "type": "research",
+          "canonical_id": "arXiv:2604.10603",
+          "title": "MoEITS: A Green AI approach for simplifying MoE-LLMs",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 897,
+      "paper_active_count_after": 897,
+      "last_successful_action": "job_blocked"
     }
   ]
 }
