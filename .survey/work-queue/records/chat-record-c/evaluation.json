@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f9afab963f7542abadb69271",
-  "job_id": "job-research-784815ee56689f0c",
-  "data": {
-    "hardware": "LLaMA-2-7BはNVIDIA RTX 4090 24GB、LLaMA-2-13BはNVIDIA A100 40GBの単一GPUで評価する。LoRA rankは8・16・32・64を使用し、鍵値キャッシュとアダプタはS-LoRA由来の統合メモリ上で同じページ単位に管理する。",
-    "software": "PyTorch 2.1、CUDA 11.8。基盤はLLaMA-2-7B/13Bで、比較対象はvLLM、Punica、S-LoRA。生成長予測器はLLaMA-3.2-1B共有骨格とモデル別LoRA・分類ヘッドを用いる。整数線形計画はCPU上の既製ソルバで非同期実行し、GPUデコードと重ねる。",
-    "methodology": "負荷はLMSYS-Chat-1Mから会話を取り、25モデルへLoRAアダプタを巡回対応させる。到着パターンはChatbot Arena由来の対話記録から作り、指定要求率と試験時間へ線形スケールする。エンドツーエンド比較では20個のLoRAモデルを同時提供し、要求率4〜24 requests/sで平均トークン遅延、処理量、初回トークン時間を測る。予測器比較はLMSYS-Chat-1MとShareGPTで要求率24 requests/s、30秒試験を行い、共有BERT、モデル別BERT、モデル別LLaMA予測器を比較する。スケジューラ単体ではFCFS、S-LoRA方式、SJF、MeSSを比較し、回復方式はA100上のLLaMA-2-13Bで系列長ごとの再計算とCPU退避費用を測る。",
-    "scope": "実機の単一GPUサービング評価であり、シミュレーションではない。主張できる範囲はLLaMA-2-7B/13B、RTX 4090/A100、複数LoRAの単一GPU提供である。複数GPU・分散クラスタ、テンソル並列、より大規模な現行モデルは未評価。生成長予測はデータ分布に依存し、整数線形計画もオンラインでは待ち行列上位64件へ制限するため、全要求に対する大域最適性は評価対象外である。"
-  },
-  "reservation": {"claim_id": "claim-f9afab963f7542abadb69271", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-5a6b79194b89b2767dbbcb5d",
+  "job_id": "job-research-04f7ad5b21bc5a49",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5a6b79194b89b2767dbbcb5d",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

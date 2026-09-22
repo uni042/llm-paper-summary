@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f9afab963f7542abadb69271",
-  "job_id": "job-research-784815ee56689f0c",
-  "data": {
-    "overview": "20個のLoRAモデルを同時提供する実機評価で、M-LoRAはvLLM、Punica、S-LoRAのすべてに対して平均トークン遅延、処理量、初回トークン時間を改善した。最大の改善はPunica比で平均トークン遅延87.5%削減、S-LoRA比で処理量1.7倍である。効果は単なる長さ順ではなく、鍵値キャッシュとアダプタ量を同時に制約するMeSSに由来し、スケジューラ単体でもSJFより最大1.12倍の処理量を示す。",
-    "key_results": [
-      {"metric": "平均トークン遅延", "value": "Punica比87.5%削減", "baseline": "Punica", "condition": "20 LoRA同時提供、LLaMA-2-7B/13B実機評価", "interpretation": "エンドツーエンド比較で最大の遅延改善。vLLM比74.6%、S-LoRA比85.6%削減も報告する。"},
-      {"metric": "処理量", "value": "最大1.7倍", "baseline": "S-LoRA", "condition": "20 LoRA同時提供、要求率4〜24 requests/s", "interpretation": "vLLM比1.4倍、Punica比1.6倍で、メモリ認識バッチ選択が並行度へ反映された。"},
-      {"metric": "初回トークン時間", "value": "Punica比81.1%削減", "baseline": "Punica", "condition": "同一エンドツーエンド負荷", "interpretation": "vLLM比57.4%、S-LoRA比79.2%削減し、待ち行列短縮が初回応答へ現れた。"},
-      {"metric": "MeSSスケジューラ処理量", "value": "FCFS比1.64倍、S-LoRA方式比1.89倍、SJF比1.12倍", "baseline": "FCFS / S-LoRA scheduling / SJF", "condition": "LLaMA-2-7B、要求率変化", "interpretation": "生成長だけを見るSJFを上回り、アダプタ量を含むメモリモデルの寄与を示す。"},
-      {"metric": "生成長区間予測精度", "value": "LMSYS 62.9%、ShareGPT 58.3%", "baseline": "共有BERT 47.2% / 45.4%", "condition": "要求率24 requests/s、30秒", "interpretation": "共有骨格＋モデル別LoRAがモデル間の生成長分布差を捉える。"},
-      {"metric": "待ち行列遅延", "value": "vLLM比60.5%、S-LoRA比80.2%削減", "baseline": "vLLM / S-LoRA", "condition": "要求率変化", "interpretation": "長要求による先頭ブロッキングとアダプタ偏重を緩和した。"}
-    ],
-    "negative_results": "生成長予測は完全ではなく、LMSYS-Chat-1Mでも区間精度は62.9%、ShareGPTでは58.3%に留まる。過小予測では通常経路のメモリ予約が不足するため回復処理が必要で、再計算またはCPUとの鍵値キャッシュ転送という追加費用が発生する。整数線形計画も候補数が16、32、64、128、256件へ増えると11.05、18.86、32.73、71.41、194.52msへ伸びるため、オンラインでは上位64件へ制限している。",
-    "interpretation": "主要な利得は、短い要求を優先するだけでなく、選択要求が共有するアダプタ集合と、各要求が終了するにつれて解放される鍵値キャッシュを同じメモリ制約へ入れることから生じる。予測器は完全ではないが、過小予測を回復経路へ分離するため、予測精度を100%へ近づけることより、十分な長さ情報でより良いバッチを組むことを重視している。",
-    "quality_impact": "近似的な生成やトークン削除を行う方式ではなく、予測長を超えた要求も打ち切らず再スケジュールする。再計算またはCPU退避・復帰で鍵値状態を回復して生成を続けるため、スケジューリング最適化自体は出力品質を意図的に下げない。ただし論文は生成品質ベンチマークを主要指標としておらず、品質無損失を独立した精度実験で定量証明しているわけではない。"
-  },
-  "reservation": {"claim_id": "claim-f9afab963f7542abadb69271", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-5a6b79194b89b2767dbbcb5d",
+  "job_id": "job-research-04f7ad5b21bc5a49",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5a6b79194b89b2767dbbcb5d",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

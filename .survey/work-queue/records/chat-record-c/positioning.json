@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f9afab963f7542abadb69271",
-  "job_id": "job-research-784815ee56689f0c",
-  "data": {
-    "limitations": "単一GPU評価であり、テンソル並列や複数ノードでのアダプタ配置・通信は対象外。評価モデルはLLaMA-2-7B/13Bで、より大規模な現行モデルや非常に長い文脈でのソルバ・メモリ挙動は未評価である。生成長予測は5区間分類で分布変化時に誤差が増える可能性があり、過小予測では再計算またはCPUとの鍵値キャッシュ転送費用が残る。整数線形計画は待ち行列上位64件だけを対象にするため、全待ち要求に対する大域最適スケジュールを毎回解く方式ではない。公開コードの一次URLも論文本文から確認できない。",
-    "differences": "Punicaは複数LoRAをまとめるBGMVカーネル、S-LoRAは鍵値キャッシュとアダプタの統合メモリおよびアダプタ優先、一般的な長さ予測スケジューラは予測出力長による短要求優先を中心とする。M-LoRAはこれらと異なり、要求の予測残長からデコード中の鍵値キャッシュのピーク量を計算し、同じバッチが必要とするアダプタ集合のメモリ量を加えた制約で同時実行要求を選ぶ。さらにモデルごとの生成長分布差を共有骨格＋モデル別LoRAで表し、予測誤りを再計算・CPU退避の費用モデル付き回復へ接続する。",
-    "implementation_status": "S-LoRAの統合メモリを基盤として実装し、RTX 4090とA100でエンドツーエンド評価済み。CPU上の整数線形計画ソルバをGPUデコードと非同期実行し、LLaMA-3.2-1B共有骨格の生成長予測器と回復処理を統合している。論文中に一般公開コードURLは示されていない。",
-    "research_positioning": "M-LoRAはLoRA行列積カーネル自体の高速化ではなく、単一GPU上で多数のLoRA要求をどの組合せで同時実行するかを、鍵値キャッシュと追加パラメータのメモリ競合まで含めて決める推論基盤研究である。限られたGPUメモリでキャッシュとモデル差分が競合する状況に対し、静的な領域分割ではなく将来メモリ需要を予測して同時実行集合を変える点が重要である。CPU/SSD/NVMeを含む階層メモリ研究へも、何をどこへ置くかだけでなく、どの要求を同時に走らせるかを容量制約へ組み込む設計例として接続できる。"
-  },
-  "reservation": {"claim_id": "claim-f9afab963f7542abadb69271", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-5a6b79194b89b2767dbbcb5d",
+  "job_id": "job-research-04f7ad5b21bc5a49",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5a6b79194b89b2767dbbcb5d",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
