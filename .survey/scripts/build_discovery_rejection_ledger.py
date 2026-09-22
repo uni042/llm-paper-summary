@@ -2,10 +2,11 @@
 """Build the durable Discovery rejection ledger.
 
 Immutable Discovery submissions remain the source of candidate-evaluation rejections.
-Terminal Research decisions are also folded into the same identity-indexed ledger so a
-paper that has already been durably rejected, or became permanently blocked after the
-retry policy, is not rediscovered and sent through Research again. Transient ``blocked``
-and ``deferred`` Research jobs are deliberately excluded because they remain retryable.
+Evidence-based terminal Research rejections are also folded into the same identity-indexed
+ledger so a paper that has already been durably rejected is not rediscovered and sent
+through Research again. Retrieval-unavailable ``blocked``, legacy ``blocked_permanent``,
+and ``deferred`` Research jobs are deliberately excluded because source retrieval
+failure is retryable evidence rather than a permanent rejection.
 """
 from __future__ import annotations
 
@@ -23,7 +24,7 @@ SOURCES = [
     SOURCE,
     "terminal_research_rejections",
 ]
-TERMINAL_RESEARCH_REJECTION_STATUSES = {"rejected", "blocked_permanent"}
+TERMINAL_RESEARCH_REJECTION_STATUSES = {"rejected"}
 
 
 def _read_json(path: Path) -> Any:
@@ -53,7 +54,7 @@ def _timestamp(payload: dict[str, Any]) -> str:
 
 
 def _job_rejection_timestamp(job: dict[str, Any]) -> str:
-    for field in ("blocked_permanent_at", "completed_at", "last_blocked_at"):
+    for field in ("completed_at", "last_blocked_at"):
         value = job.get(field)
         if isinstance(value, str) and value.strip():
             return value.strip()
@@ -72,8 +73,6 @@ def _job_rejection_reason(job: dict[str, Any]) -> str:
             reason = event.get("reason")
             if isinstance(reason, str) and reason.strip():
                 return reason.strip()
-    if job.get("status") == "blocked_permanent":
-        return "primary evidence remained unavailable after the configured retry policy"
     return "research evaluation rejected"
 
 
@@ -205,11 +204,7 @@ def build_ledger(root: Path, output: Path | None = None) -> dict[str, Any]:
             source_submission = job.get("status_submission")
             if not isinstance(source_submission, str) or not source_submission.strip():
                 source_submission = _source_label(root, path)
-            origin = (
-                "research_terminal_rejection"
-                if status == "rejected"
-                else "research_blocked_permanent"
-            )
+            origin = "research_terminal_rejection"
             recorded = _record_rejection(
                 records,
                 job,
