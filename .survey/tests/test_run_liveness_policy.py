@@ -37,16 +37,17 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("MONITOR_CLAIM_FAST_LANE", guidance)
         self.assertIn("Pending claim results also require productive fast-lane monitoring", finalization)
 
-    def test_submission_wait_uses_two_paper_delayed_barrier(self):
+    def test_submission_pending_never_blocks_new_research_claims(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
-        self.assertIn("submission result待ちは**直後の2本には同期障壁ではなく、3本目の先行（Nから見たN+3）へ進むための同期障壁**", router)
-        self.assertIn("--pipeline-ahead-count", router)
-        self.assertIn("WAIT_FOR_PREVIOUS_SUBMISSION_RESULT", continuation)
+        self.assertIn("submission result待ちは**新しい論文claimの同期障壁にしない**", router)
+        self.assertIn("pipeline_ahead_count", router)
+        self.assertIn("観測用テレメトリ", router)
         self.assertIn("CLAIM_NEXT_RESEARCH_AUDIT", continuation)
-        self.assertIn("wait_10_real_seconds", continuation)
-        self.assertIn("MAX_PIPELINE_AHEAD_COUNT = 2", continuation)
-        self.assertNotIn("submission result待ちは**直後の1本には同期障壁", router)
+        self.assertIn("MONITOR_SUBMISSION_RESULTS", continuation)
+        self.assertNotIn("WAIT_FOR_PREVIOUS_SUBMISSION_RESULT", continuation)
+        self.assertNotIn("MAX_PIPELINE_AHEAD_COUNT", continuation)
+        self.assertNotIn("最大2本先行", router)
 
     def test_old_30_second_contract_is_absent(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
