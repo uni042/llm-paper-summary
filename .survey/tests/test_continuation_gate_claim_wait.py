@@ -26,6 +26,8 @@ def make_args(**overrides):
         can_discover=True,
         claim_state_checked=False,
         claim_result_pending=False,
+        claim_result_pending_age_seconds=0,
+        claim_monitor_window_seconds=60,
         submission_state_checked=False,
         submission_result_pending=False,
         pipeline_ahead_count=0,
@@ -61,17 +63,32 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertFalse(result["claim_state_checked"])
         self.assertIn("claim", result["next_action_message"].lower())
 
-    def test_checked_pending_claim_requires_wait_loop(self):
+    def test_fresh_pending_claim_uses_active_monitoring_cycle(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             claim_result_pending=True,
+            claim_result_pending_age_seconds=22,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "MONITOR_CLAIM_FAST_LANE")
+        self.assertEqual(result["claim_wait_seconds"], 10)
+        self.assertIn("inspect_survey_claim_fast_actions_run", result["claim_wait_action"])
+        self.assertIn("unsettled_submissions", result["claim_wait_action"])
+        self.assertTrue(result["claim_state_checked"])
+        self.assertIn("60秒未満", result["next_action_message"])
+
+    def test_old_pending_claim_keeps_same_request_and_checks_transport_health(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            claim_result_pending=True,
+            claim_result_pending_age_seconds=60,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["required_action"], "WAIT_FOR_CLAIM_RESULT")
         self.assertEqual(result["claim_wait_seconds"], 10)
         self.assertIn("keep_same_request_id", result["claim_wait_action"])
-        self.assertTrue(result["claim_state_checked"])
-        self.assertIn("終了しません", result["next_action_message"])
+        self.assertIn("transport_health", result["claim_wait_action"])
+        self.assertIn("新しいrequestは発行せず", result["next_action_message"])
 
     def test_unchecked_submission_state_requires_refresh(self):
         result = mod.decide(make_args(
