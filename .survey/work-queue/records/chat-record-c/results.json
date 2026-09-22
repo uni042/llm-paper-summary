@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e14662bfa3410aa2e2cc050b",
-  "job_id": "job-research-c324e0325a4a2def",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e14662bfa3410aa2e2cc050b",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e14662bfa3410aa2e2cc050b","job_id":"job-research-c324e0325a4a2def",
+ "data":{"overview":"高並行度では長ドラフトの受理長増加だけを追うDFlashが検証計算で失速するのに対し、D-cutは低効用suffixを削ることで平均AR比speedupを1.26倍から1.65倍へ改善する。concurrency 32の6モデル×5データセットではdraft 16構成で30組中29組のthroughputを改善し、MoEでは最大3.0倍のAR比高速化を示す。","key_results":[{"metric":"平均speedup","value":"1.26倍→1.65倍","baseline":"unpruned DFlash long draft","condition":"高concurrency、dense/MoE横断","interpretation":"長いdraftの追加MATより、棄却候補のverification cost削減がbatched servingでは重要。"},{"metric":"改善したmodel-dataset組","value":"29/30","baseline":"DFlash (16)","condition":"concurrency 32、6 target×5 benchmark","interpretation":"特定モデルだけでなく広い構成で可変depth pruningが有効。"},{"metric":"MoE最大speedup","value":"3.0倍","baseline":"autoregressive decoding","condition":"MoE target、高concurrency","interpretation":"target verificationが高価なMoEで検証予算削減の利得が大きい。"},{"metric":"verification compute削減","value":"23.7〜38.3%","baseline":"unpruned verification","condition":"runtime-adaptive selection","interpretation":"selector overheadより大きくtarget側計算を削減する。"},{"metric":"selector overhead","value":"0.55〜0.58 ms/step、全stepの2.2〜3.4%","baseline":"D-cutなし","condition":"評価環境","interpretation":"モデルサイズに依存しない軽量な選択処理である。"},{"metric":"confidenceの受理予測性","value":"Spearman 0.579〜0.770、AUROC 0.957〜0.972","baseline":"実際のaccept/reject","condition":"GSM8K/HumanEval/MT-Bench等","interpretation":"draft confidenceをglobal budget配分の順位proxyとして使う根拠を与える。"}],"negative_results":"固定の長ドラフトはMATが高くても高concurrencyでは遅くなり得る。Llama-3.1-8B/GSM8KではDFlash(16)がMAT 4.46でもAR比throughputを十分伸ばせず、dense構成ではbatch 64でAR未満へ落ちる例がある。また可変shape verificationは既存のstatic CUDA GraphやSpec-V2型CPU-GPU overlapと相性が悪く、実装統合コストが残る。","interpretation":"D-cutの結果は、batched speculative decodingの最適化目標をMAT単独から『受理見込みのあるtoken数／実測verification cost』へ変える必要を示す。H20のようなcompute-limited環境では積極的pruning、H800のような追加verificationが安い環境では保守的pruningを自動選択できる点が固定depthとの差である。","quality_impact":"training-freeかつtarget output distributionを保持するlossless手法。確率的proposalでは因果的選択規則が必要で、効率上のbudget最適性と分布正確性を分離して扱う。"},
+ "reservation":{"claim_id":"claim-e14662bfa3410aa2e2cc050b","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
 }
