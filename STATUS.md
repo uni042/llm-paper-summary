@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 13:44:44 JST**
+> 自動生成: **2026-09-22 13:45:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **309** |
 | 未claim Research job | **307** |
 | 直近24hの検証済みResearch収録 | **15** |
-| 最終検証済みResearch収録 | **09-22 13:40:13 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-22 13:40:13 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -164,7 +164,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2110.01786` — MoEfication: Transformer Feed-forward Layers are Mixtures of Experts / worker `scheduled-chat-30`
-  - claim: **09-22 13:41:02 JST** / heartbeat: **—** / lease expiry: **09-22 15:11:02 JST**
+  - claim: **09-22 13:44:57 JST** / heartbeat: **—** / lease expiry: **09-22 15:14:57 JST**
   - evidence: `.survey/work-queue/claims/job-research-1922ded1807d40e6.json`
 - `arXiv:2212.09811` — Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model / worker `scheduled-chat-00`
   - claim: **09-22 13:01:22 JST** / heartbeat: **—** / lease expiry: **09-22 14:31:22 JST**
