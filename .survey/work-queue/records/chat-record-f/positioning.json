@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-40b553eeb725cfefaa1a1d5f",
-  "job_id": "job-research-548d7e4cd563f6b8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-40b553eeb725cfefaa1a1d5f",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-40b553eeb725cfefaa1a1d5f","job_id":"job-research-548d7e4cd563f6b8","data":{"limitations":"評価traceは研究室内の同意参加者によるcoding assistant利用が中心で、異なる企業規模・agent/tool ecosystemへの一般化は未確立。predictorは過去trace分布を前提とし、repositoryやtool利用が変化するdistribution driftでは定期再学習が必要。SGLangとは直接end-to-end比較していない。prefix-aware schedulingは新規/低reuse requestのP99 latencyを悪化させ、fairnessとのtrade-offがある。CPU scheduler overheadも増加する。主評価はQwen2.5-Coder-32Bと2×H200であり、異なるGPU memory容量・PCIe/NVLink構成や大規模clusterでの効果は追加検証が必要。","differences":"vLLM/SGLang/MooncakeのLRUは過去recencyのみを見るのに対し、CacheWiseはtool metadataからfuture reuse順序を予測する。InferCeptはsession-local moving averageでtool durationを推定するがtool種別・引数・経過時間を区別しない。SGLangのprefix-aware schedulingは独立request間の共有prefixも対象とする既存技術だが、CacheWiseは長時間closed-loop agent sessionでのthrashing回避へ適用し、predictive evictionと組み合わせる。LMCache/Mooncake等のtiered KV storageはevicted KVの置き場所・移動を最適化する一方、CacheWiseはeviction自体を減らすため補完的である。Pie/Autellixのようなagent-serving統合方式と違いagent frameworkを変更しない。","implementation_status":"vLLM上に約2,500行のPythonでprototypeを実装し、batch schedulerとKVCache managerを拡張。CATracesはGitHubで公開。arXiv v1（2026-06-15）のプレプリントで、論文本文は実H200環境とCPU offload構成を含む評価を報告する。","research_positioning":"LLM inferenceのKV管理をrequest-centricからsession-centricへ移す研究。特にエージェント推論ではtool実行が次のLLM request到着を規定するため、serving systemがtool metadataをmemory reuse predictionへ利用できることを示した。階層メモリ/SSD offload系に対しては、帯域最適化の前段でtransfer demandそのものを2–2.6倍減らす可能性があり、KV tiering・prefetch・cache placement研究と組み合わせやすい。"},"reservation":{"claim_id":"claim-40b553eeb725cfefaa1a1d5f","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}

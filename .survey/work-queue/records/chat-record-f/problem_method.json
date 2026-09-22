@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-40b553eeb725cfefaa1a1d5f",
-  "job_id": "job-research-548d7e4cd563f6b8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-40b553eeb725cfefaa1a1d5f",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-40b553eeb725cfefaa1a1d5f","job_id":"job-research-548d7e4cd563f6b8","data":{"problem":"実世界のコーディングエージェントは、1つのユーザー課題からLLM生成とtool実行を多数回反復する閉ループsessionを形成する。CATracesではtool完了起点のrequestが中央値でuser起点の約20倍、session時間は中央値36分・tailで2.6時間超、chatbotよりprefill/decode token比が約21倍高い。各turnは増大するprefixを再利用するためKVCacheの価値が高いが、vLLM等のFCFSは複数sessionを交互にadmitしてworking setを広げ、LRUはtoolがまもなく戻るsessionと長時間戻らないsessionを区別できず、HBM圧迫時に再利用直前のKVを追い出して再計算/転送を増やす。","novelty":"CacheWiseはagent frameworkを変更せずserving側だけで、(1) XPU上に既存prefixが多いrequestを優先するprefix-aware schedulingと、(2) tool_name/tool_argsおよび経過時間からtime-to-next-reuseの相対順序を推定するpredictive KVCache evictionを組み合わせる。予測は正確な将来時刻そのものではなく、Belady型に『最も遠く再利用されるsession』を順位付けできればよいという設計で、tool引数をTF-IDF＋KMeansで細粒度cluster化する。session-level metadataをKV blockへ保持し、agent非依存に再利用予測を行う点が中核である。","method_overview":"schedulerは各requestが追加確保すべきKV block数a_i(t)=d_i-k_i(t)を計算し、a_iが小さい順にdispatchしてresident prefixを最大限再利用する。eviction側は各sessionのtool call metadata m=(tool_name,tool_args)と生成時刻T_iから、経過時間を条件とした残りtool実行時間E[tau_i(t)]を過去trace分布で推定し、再利用が遠いblockを優先的にevictする。tool名だけでは分散が大きいため引数を最大5000語彙のTF-IDF vectorへ変換してKMeans clusterごとの実行時間分布を使う。vLLMのunreferenced blockを予測値priority付きheapへ入れ、予測の陳腐化を避けるため3 engine iterationごとにheapを再構築する。","components":[{"name":"CATraces workload characterization","description":"実利用者のcoding assistant traceを収集し、長いclosed-loop session、増大するprefix、tool種別/引数に依存するinter-request時間を定量化。serving目標をrequest latencyだけでなくsession completion timeへ置く根拠を示す。"},{"name":"Prefix-aware request scheduling","description":"resident KV prefixとのoverlapが大きく追加block数a_i(t)が小さいrequestを優先する。FCFSによるworking-set拡大とKV thrashingを抑え、shortest-job-firstに近いadmissionとなる。"},{"name":"Predictive KVCache eviction","description":"tool metadataから次回reuseまでの残り時間を条件付き分布で推定し、再利用が最も遠いsessionのblockからevictする。絶対値よりsession間の順位を重視する。"},{"name":"Argument-aware lightweight predictor","description":"tool argumentをTF-IDF化しKMeans cluster別にduration分布を学習する。tool名だけの推定より細粒度で、C100まで粒度を上げるとsession completion timeが最大19%改善。"}],"system_design":"既存vLLMのbatch schedulerとKVCache block managerを拡張し、blockにtool_name/tool_args/T_iを付加する。unreferenced blockはprediction priority heapで管理し、同一session metadataを共有するblockでは予測を再利用する。agent側変更なしで導入でき、DRAM/SSD/remote memoryへのtiered KV offloadとも競合せず、eviction頻度とtier間transfer量を減らす上位管理層として機能する。"},"reservation":{"claim_id":"claim-40b553eeb725cfefaa1a1d5f","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
