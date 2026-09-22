@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-38b916ecb638cccfa682047a",
-  "job_id": "job-research-46274ac71a8fbd8d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-38b916ecb638cccfa682047a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-38b916ecb638cccfa682047a","job_id":"job-research-46274ac71a8fbd8d","data":{"hardware":"全実験はNVIDIA H100 GPUで実施。D2-MoEはQwen3-235B-A22B、DeepSeek-V3-0324、Kimi-K2-Instructでは単一8×H100機でもbackward計算が重すぎるため比較不能と報告。","software":"MoBE変換はAdam、学習率0.07。公式実装は論文脚注のGitHub inclusionAI/MoBE。既存fused-MoE kernelではfactorizationを複数回呼ぶ必要がある。","methodology":"Ling-Lite-Chat、DeepSeek-V2-Lite-Chat、Qwen3-30B-A3B、Qwen3-235B-A22B、DeepSeek-V3-0324、Kimi-K2-Instructの6モデルを評価。比較はMoLAEとD2-MoE。MoBE/MoLAEはdata-free、D2-MoEはtulu-v3-sft-mixtureをcalibrationに使用。15ベンチマークはARC-C、IFEval、GPQA、BBH、MMLU、CEval、CMMLU、Math、GSM8K、AIME24/25、MBPP、HumanEval、MultiPL-E、LiveCodeBench-v5。AIMEは各問16回生成の平均。再構成MSE、平均Accuracy、活性化関数、Z-score有無も比較する。","scope":"主評価は圧縮後のモデル品質とweight再構成誤差で、実サービングのtokens/sやレイテンシは測定しない。MoBE†は活性化expert数も変更するため、総parameter圧縮だけのMoBEと分けて評価される。大モデルではD2-MoEが計算資源上比較できず、全手法の直接比較範囲は限定される。"},"reservation":{"claim_id":"claim-38b916ecb638cccfa682047a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
