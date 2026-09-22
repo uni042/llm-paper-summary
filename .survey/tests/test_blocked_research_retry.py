@@ -178,6 +178,76 @@ class ResearchBlockedRetryPolicyTest(unittest.TestCase):
             )
             self.assertNotIn("blocked_permanent_at", job)
 
+    def test_legacy_blocked_permanent_is_restored_to_retryable_blocked(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs_dir = root / "work-queue" / "jobs"
+            jobs_dir.mkdir(parents=True)
+            last_block = AT + timedelta(days=2)
+            path = self._seed_blocked(
+                jobs_dir,
+                status="blocked_permanent",
+                completed_at=last_block.isoformat(),
+                blocked_attempts=3,
+                block_history=[
+                    {
+                        "attempt": i + 1,
+                        "blocked_at": (AT + timedelta(days=i)).isoformat(),
+                        "reason": "primary source temporarily unavailable",
+                    }
+                    for i in range(3)
+                ],
+                first_blocked_at=AT.isoformat(),
+                last_blocked_at=last_block.isoformat(),
+                blocked_permanent_at=last_block.isoformat(),
+            )
+
+            result = blocked_retry.process_blocked_research_jobs(root, AT + timedelta(days=3))
+            job = self._read_job(path)
+
+            self.assertEqual(result["legacy_permanent_migrated"], 1)
+            self.assertEqual(result["permanent"], 0)
+            self.assertEqual(job["status"], "blocked")
+            self.assertIn("legacy_blocked_permanent_migrated_at", job)
+            self.assertNotIn("blocked_permanent_at", job)
+            self.assertEqual(
+                blocked_retry.parse_time(job["retry_not_before"]),
+                last_block + timedelta(days=7),
+            )
+
+    def test_due_legacy_blocked_permanent_is_requeued_immediately(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs_dir = root / "work-queue" / "jobs"
+            jobs_dir.mkdir(parents=True)
+            last_block = AT
+            path = self._seed_blocked(
+                jobs_dir,
+                status="blocked_permanent",
+                completed_at=last_block.isoformat(),
+                blocked_attempts=3,
+                block_history=[
+                    {
+                        "attempt": i + 1,
+                        "blocked_at": (AT - timedelta(days=2 - i)).isoformat(),
+                        "reason": "primary source temporarily unavailable",
+                    }
+                    for i in range(3)
+                ],
+                first_blocked_at=(AT - timedelta(days=2)).isoformat(),
+                last_blocked_at=last_block.isoformat(),
+                blocked_permanent_at=last_block.isoformat(),
+            )
+
+            result = blocked_retry.process_blocked_research_jobs(root, AT + timedelta(days=8))
+            job = self._read_job(path)
+
+            self.assertEqual(result["legacy_permanent_migrated"], 1)
+            self.assertEqual(result["requeued"], 1)
+            self.assertEqual(job["status"], "ready")
+            self.assertNotIn("blocked_permanent_at", job)
+            self.assertNotIn("retry_not_before", job)
+
     def test_dormant_job_is_not_periodically_requeued(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
