@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-e14662bfa3410aa2e2cc050b",
-  "job_id": "job-research-c324e0325a4a2def",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e14662bfa3410aa2e2cc050b",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-e14662bfa3410aa2e2cc050b","job_id":"job-research-c324e0325a4a2def",
+ "data":{"problem":"DFlashのようなブロック並列ドラフタは複数将来トークンをほぼ一定時間で生成できるため単一要求では長いドラフトが有利だが、高並行度では各要求のD個の候補をターゲットモデルがまとめて検証する計算量が急増する。受理長は要求・ステップ・データセットごとに大きく異なるため、全要求を同じ深さまで検証すると低信頼suffixの多くが棄却される。特に計算律速GPUや大バッチでは長ドラフトDFlashが通常の自己回帰復号より遅くなる。","novelty":"D-cutは各要求を独立に固定深さで切るのではなく、バッチ内の全候補を一つの検証予算で競わせる。各位置までのドラフタ信頼度のprefix積を受理確率proxyとして全要求横断で順位付けし、単調性により各要求では必ず連続prefixだけを残す。さらにMATだけでなく実環境で測った投機ステップ時間を目的関数へ入れ、GPU、モデル構造、並列方式、バッチサイズに応じて予算比率を動的に変える。","method_overview":"各投機ステップでドラフタは要求ごとにD個の候補と位置別信頼度を出す。D-cutは位置kまでの信頼度積をスコアとし、バッチ全体から高スコア候補を選ぶ。prefix積は深さとともに非増加なので、global top-Kを取っても要求内部に穴が開かず、各要求は深さの異なる連続prefixになる。\n\n起動時には候補予算比率ごとの投機ステップ時間をdummy入力で測定して表にする。実行時は候補予算ごとに信頼度から期待MATを推定し、MATをプロファイル済み実行時間で割った効用を比較して最適予算を選ぶ。選択したprefixを密なverification batchへpackしてターゲットモデルへ渡す。","components":[{"name":"バッチ横断信頼度枝刈り","description":"各要求iの深さkの候補に、そこまでのdraft confidenceの積を与え、受理がその位置まで到達する見込みを近似する。全要求の候補を同じ尺度で順位付けするため、受理見込みの低い要求の深いsuffixから、有望な要求の深いprefixへ検証計算を移せる。\n\nスコアが深さ方向に単調減少するため、上位候補を選んでも中間位置を飛ばすことがなく、可変深さを扱いつつ密なbatch packingへ落とせる。最低限のbonus tokenは各要求に保持する。"},{"name":"実行時適応予算選択","description":"検証トークンを増やすコストはGPUやモデルで大きく異なる。論文ではbatch 16で深さ4から16へ増やすとH20では約20ms増える一方、H800では約1msしか増えない例を示し、固定深さが環境間で最適にならないことを示す。\n\nD-cutは起動時に離散的な予算比率ごとのend-to-end投機ステップ時間を測り、実行時に期待MAT/実測時間を最大化する予算を選ぶ。モデルサイズに依存しないselectorの追加時間は約0.55〜0.58ms/stepと報告される。"},{"name":"losslessな因果的選択","description":"greedy proposalをtarget-onlyで検証する場合、枝刈りは並列に評価する位置数を変えるだけなので出力分布を変えない。一方、確率的proposalとrejection samplingでは、候補自身の確率を使ってその候補を残すか決めると非先読み条件を破りbiasが生じる。\n\nこのため確率的設定ではスコアを1位置ずらし、現在位置の保持判断を過去だけに依存させる。因果的early stoppingまたは履歴ベース予算決定により分布正確性を保つ。"}],"system_design":"D-cutはドラフタやターゲットモデルを再訓練せず、scheduler/verification経路に置く。長いDFlash blockを生成した後、global ranking、予算選択、可変prefix packingを行ってからtarget verificationを実行する。既存の静的CUDA GraphやCPU-GPU overlapは可変shapeと衝突し得るため、実運用エンジン側のco-designが必要である。"},
+ "reservation":{"claim_id":"claim-e14662bfa3410aa2e2cc050b","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
 }
