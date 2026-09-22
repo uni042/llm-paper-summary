@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T10:41:52+00:00",
   "completed_at": "2026-09-22T13:17:57+00:00",
   "blocker": "The primary arXiv PDF was retrieved and read through the method section, but the automation web-retrieval call budget was exhausted before the full 28-page primary source could be read to the end. The workflow forbids completing a research record from a partial read or abstract alone. Retry this paper in a later invocation and read the same primary PDF to the end before creating the five-slot record.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-55659afde31ffef33110b7a9.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-55659afde31ffef33110b7a9.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T13:17:57+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T13:17:57+00:00",
+      "reason": "The primary arXiv PDF was retrieved and read through the method section, but the automation web-retrieval call budget was exhausted before the full 28-page primary source could be read to the end. The workflow forbids completing a research record from a partial read or abstract alone. Retry this paper in a later invocation and read the same primary PDF to the end before creating the five-slot record."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T13:17:57+00:00",
+  "last_blocked_at": "2026-09-22T13:17:57+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

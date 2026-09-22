@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T10:59:45+00:00",
   "completed_at": "2026-09-22T14:10:56+00:00",
   "blocker": "The primary arXiv abstract page is available, but the primary full-text HTML/PDF could not be retrieved in this invocation. Search surfaced secondary full-text summaries, but workflow v10 forbids constructing the five-slot research record from secondary summaries or the abstract. Retry this paper in a later invocation when the primary full text can be read to the end.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-fc5b7d76e4c2ccfdd465afca.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-fc5b7d76e4c2ccfdd465afca.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T14:10:56+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T14:10:56+00:00",
+      "reason": "The primary arXiv abstract page is available, but the primary full-text HTML/PDF could not be retrieved in this invocation. Search surfaced secondary full-text summaries, but workflow v10 forbids constructing the five-slot research record from secondary summaries or the abstract. Retry this paper in a later invocation when the primary full text can be read to the end."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T14:10:56+00:00",
+  "last_blocked_at": "2026-09-22T14:10:56+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

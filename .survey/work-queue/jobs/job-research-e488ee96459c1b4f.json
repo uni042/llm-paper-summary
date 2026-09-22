@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T11:54:57+00:00",
   "completed_at": "2026-09-22T15:43:21+00:00",
   "blocker": "Primary-source full text could not be retrieved reliably in this run. The arXiv PDF endpoint was unavailable to the worker; the arXiv abstract page and distinct indexed mirrors exposed metadata/abstract only. Per worker-router, no five-slot record was inferred from abstract/search snippets.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-f9b1303eb0dbce6b902842b6.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-f9b1303eb0dbce6b902842b6.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T15:43:21+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T15:43:21+00:00",
+      "reason": "Primary-source full text could not be retrieved reliably in this run. The arXiv PDF endpoint was unavailable to the worker; the arXiv abstract page and distinct indexed mirrors exposed metadata/abstract only. Per worker-router, no five-slot record was inferred from abstract/search snippets."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T15:43:21+00:00",
+  "last_blocked_at": "2026-09-22T15:43:21+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

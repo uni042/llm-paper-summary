@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T10:37:23+00:00",
   "completed_at": "2026-09-22T12:50:47+00:00",
   "blocker": "Primary-source full-text retrieval could not be completed in this invocation. Direct arXiv HTML retrieval was rejected by the available web path. The workflow forbids reconstructing the paper from title, abstract, or secondary material, so no research record was inferred. Retry this same paper in a later invocation with a working primary full-text route.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-f2ef9574c98b3d2c8344437c.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-f2ef9574c98b3d2c8344437c.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T12:50:47+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T12:50:47+00:00",
+      "reason": "Primary-source full-text retrieval could not be completed in this invocation. Direct arXiv HTML retrieval was rejected by the available web path. The workflow forbids reconstructing the paper from title, abstract, or secondary material, so no research record was inferred. Retry this same paper in a later invocation with a working primary full-text route."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T12:50:47+00:00",
+  "last_blocked_at": "2026-09-22T12:50:47+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

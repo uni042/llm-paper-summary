@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T10:24:57+00:00",
   "completed_at": "2026-09-22T12:50:47+00:00",
   "blocker": "Primary-source full-text retrieval could not be completed in this invocation. Direct arXiv abstract and HTML fetches were rejected by the web retrieval path; web search exposed the arXiv abstract and third-party summaries but not a verified primary full text, and container-side direct arXiv retrieval failed because external DNS/network access is unavailable. The paper was therefore not inferred from abstract or secondary summaries. Retry this same paper in a later invocation with a working primary full-text route.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-a7b827dd3ec3e848ee83f4c2.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-a7b827dd3ec3e848ee83f4c2.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T12:50:47+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T12:50:47+00:00",
+      "reason": "Primary-source full-text retrieval could not be completed in this invocation. Direct arXiv abstract and HTML fetches were rejected by the web retrieval path; web search exposed the arXiv abstract and third-party summaries but not a verified primary full text, and container-side direct arXiv retrieval failed because external DNS/network access is unavailable. The paper was therefore not inferred from abstract or secondary summaries. Retry this same paper in a later invocation with a working primary full-text route."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T12:50:47+00:00",
+  "last_blocked_at": "2026-09-22T12:50:47+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

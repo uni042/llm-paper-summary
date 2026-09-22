@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T10:37:29+00:00",
   "completed_at": "2026-09-22T12:50:47+00:00",
   "blocker": "Primary-source full-text retrieval could not be completed in this invocation. The available direct arXiv/ar5iv full-text routes were unavailable, and the workflow forbids inferring a complete record from abstracts or secondary summaries. Retry this same paper in a later invocation with a working primary full-text route.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-40acdc06647a7c0373363960.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-40acdc06647a7c0373363960.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T12:50:47+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T12:50:47+00:00",
+      "reason": "Primary-source full-text retrieval could not be completed in this invocation. The available direct arXiv/ar5iv full-text routes were unavailable, and the workflow forbids inferring a complete record from abstracts or secondary summaries. Retry this same paper in a later invocation with a working primary full-text route."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T12:50:47+00:00",
+  "last_blocked_at": "2026-09-22T12:50:47+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

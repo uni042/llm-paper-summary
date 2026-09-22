@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T21:04:17+00:00",
   "completed_at": "2026-09-22T17:04:16+00:00",
   "blocker": "Primary PDF download for arXiv:2608.28911 was attempted first as required, but the fetch path returned DisabledError. Library search found no cached full primary PDF. Primary arXiv HTML fallback was then attempted and also returned DisabledError. No research content was inferred from secondary snippets.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-79e5f1bb5c89a9d7a83c30ec.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-79e5f1bb5c89a9d7a83c30ec.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T17:04:16+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T17:04:16+00:00",
+      "reason": "Primary PDF download for arXiv:2608.28911 was attempted first as required, but the fetch path returned DisabledError. Library search found no cached full primary PDF. Primary arXiv HTML fallback was then attempted and also returned DisabledError. No research content was inferred from secondary snippets."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T17:04:16+00:00",
+  "last_blocked_at": "2026-09-22T17:04:16+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

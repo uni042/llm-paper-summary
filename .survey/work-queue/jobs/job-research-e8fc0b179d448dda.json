@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T22:11:26+00:00",
   "completed_at": "2026-09-22T17:20:52+00:00",
   "blocker": "Library search found no cached full primary PDF. Direct arXiv PDF and HTML retrieval were attempted but the primary full-text endpoints were unavailable in this run. The arXiv abstract and official implementation metadata were reachable, and secondary full-text summaries exist, but workflow requires reading the primary source in full, so no structured research record was inferred from secondary text.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-61820d4128366b34d1c14d50.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-61820d4128366b34d1c14d50.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T17:20:52+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T17:20:52+00:00",
+      "reason": "Library search found no cached full primary PDF. Direct arXiv PDF and HTML retrieval were attempted but the primary full-text endpoints were unavailable in this run. The arXiv abstract and official implementation metadata were reachable, and secondary full-text summaries exist, but workflow requires reading the primary source in full, so no structured research record was inferred from secondary text."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T17:20:52+00:00",
+  "last_blocked_at": "2026-09-22T17:20:52+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

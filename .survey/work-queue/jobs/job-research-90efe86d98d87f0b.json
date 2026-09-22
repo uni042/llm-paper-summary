@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T11:38:13+00:00",
   "completed_at": "2026-09-22T14:49:13+00:00",
   "blocker": "Primary arXiv HTML was retrieved and read through the main conclusion, but the automation web retrieval budget was exhausted before the remaining appendices could be read to the end. The workflow forbids producing a completed research record without full primary-source reading; retry from the primary source in a later run.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-a204eb86cb07493ddb9445d1.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-a204eb86cb07493ddb9445d1.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T14:49:13+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T14:49:13+00:00",
+      "reason": "Primary arXiv HTML was retrieved and read through the main conclusion, but the automation web retrieval budget was exhausted before the remaining appendices could be read to the end. The workflow forbids producing a completed research record without full primary-source reading; retry from the primary source in a later run."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T14:49:13+00:00",
+  "last_blocked_at": "2026-09-22T14:49:13+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

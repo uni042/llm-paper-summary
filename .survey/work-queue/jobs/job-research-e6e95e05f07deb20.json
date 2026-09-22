@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T10:19:13+00:00",
   "completed_at": "2026-09-22T17:29:58+00:00",
   "blocker": "Library search found no cached full primary PDF. Direct arXiv PDF download failed. A CC-BY full-text mirror exposed the primary paper text and was read through the formulation/method sections, but the available retrieval budget could not expose the remaining evaluation/limitations sections to the worker in this run. Secondary summaries were not used to fill missing primary-source evidence, so the five-slot record was not produced.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-1c66e86fb01d69f8806768c4.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-1c66e86fb01d69f8806768c4.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T17:29:58+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T17:29:58+00:00",
+      "reason": "Library search found no cached full primary PDF. Direct arXiv PDF download failed. A CC-BY full-text mirror exposed the primary paper text and was read through the formulation/method sections, but the available retrieval budget could not expose the remaining evaluation/limitations sections to the worker in this run. Secondary summaries were not used to fill missing primary-source evidence, so the five-slot record was not produced."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T17:29:58+00:00",
+  "last_blocked_at": "2026-09-22T17:29:58+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 04:50:52 JST**
+> 自動生成: **2026-09-23 04:59:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **207** |
-| 未claim Research job | **206** |
+| 未claim Research job | **205** |
 | 直近24hの検証済みResearch収録 | **66** |
-| 最終検証済みResearch収録 | **09-23 04:50:46 JST（6秒前）** |
+| 最終検証済みResearch収録 | **09-23 04:50:46 JST（8分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -33,14 +33,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6046** |
-| 処理済み | **624** |
-| 未処理 | **5422** |
-| 収録済みとして除外 | **516** |
+| 構造化references総候補 | **6204** |
+| 処理済み | **623** |
+| 未処理 | **5581** |
+| 収録済みとして除外 | **515** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
-- 消化率: **10.3%**
+- 消化率: **10.0%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（20時間18分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（20時間26分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **28** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **27** | **1** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **28** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **27** | **4** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -178,7 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2608.08627` — UniMoMo: Expert Merging-Based MoE Acceleration for Large Recommendation Models / worker `scheduled-chat-30`
+  - claim: **09-23 04:52:36 JST** / heartbeat: **—** / lease expiry: **09-23 06:22:36 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3611857c9c7fea67.json`
 - `arXiv:2512.14531` — VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse / worker `scheduled-chat-00`
   - claim: **09-23 04:17:29 JST** / heartbeat: **—** / lease expiry: **09-23 05:47:29 JST**
   - evidence: `.survey/work-queue/claims/job-research-6e36f8b25c1d84c6.json`

@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T11:38:21+00:00",
   "completed_at": "2026-09-22T16:03:58+00:00",
   "blocker": "前runからのactive claimを再開。著者・研究機関配布の一次PDFが存在することは確認できたが、この実行環境ではPDF本体を完全ダウンロードしてLibraryへ保存する経路を確立できず、従来フォールバックでも一次本文全文を最後まで検証できなかった。前runで手法・JTOM・実験部の途中まで読解済みだが、未確認箇所を抄録・検索断片から推測して5スロットを完成させないため一時blockedとする。",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-c38aefc50c08da92ba7b2ee0.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-c38aefc50c08da92ba7b2ee0.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T16:03:58+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T16:03:58+00:00",
+      "reason": "前runからのactive claimを再開。著者・研究機関配布の一次PDFが存在することは確認できたが、この実行環境ではPDF本体を完全ダウンロードしてLibraryへ保存する経路を確立できず、従来フォールバックでも一次本文全文を最後まで検証できなかった。前runで手法・JTOM・実験部の途中まで読解済みだが、未確認箇所を抄録・検索断片から推測して5スロットを完成させないため一時blockedとする。"
+    }
+  ],
+  "first_blocked_at": "2026-09-22T16:03:58+00:00",
+  "last_blocked_at": "2026-09-22T16:03:58+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
 }
