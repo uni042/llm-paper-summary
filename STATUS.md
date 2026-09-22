@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:23:53 JST**
+> 自動生成: **2026-09-22 16:24:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -181,9 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.20734` — On-Demand Attention: Language Models Know When to Recall / worker `scheduled-chat-00`
-  - claim: **09-22 16:23:01 JST** / heartbeat: **—** / lease expiry: **09-22 17:53:01 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3aec960c2f6f3b14.json`
+- `DOI:10.1145/3832810.3832865` — WAQ-LLM: Optimizing Multi-Instance LLM Deployment via Workload-Aware Queueing Model / worker `scheduled-chat-00`
+  - claim: **09-22 16:24:04 JST** / heartbeat: **—** / lease expiry: **09-22 17:54:04 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c0195175e0338a33.json`
 
 #### Audit
 
@@ -231,8 +231,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **288** |
-| └ Research | **216** |
+| 成功result未照合のimmutable submission | **289** |
+| └ Research | **217** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
