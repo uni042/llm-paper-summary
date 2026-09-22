@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-302229314470f55acb21a513",
-  "job_id": "job-research-6723d600d731caca",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-302229314470f55acb21a513",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-302229314470f55acb21a513","job_id":"job-research-6723d600d731caca","data":{"canonical_id":"arXiv:2509.06346","arxiv_id":"2509.06346","doi":"10.48550/arXiv.2509.06346","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"Ban&Pick: Enhancing Performance and Efficiency of MoE-LLMs via Smarter Routing","summary":"Ban&Pickは、fine-grained MoEの事前学習ルータが早期収束と負荷均衡制約により重要専門家を十分使わず、同時に固定Top-kが低寄与専門家を余分に実行する問題を推論時だけで補正する。Pickはドメイン高頻度専門家から除去時の出力KL変化でkey expertを選び、router上位2k以内に現れた場合だけ選択へ昇格する。Banは層ごとのpruning感度とtokenごとのrouting-weight集中度を合成してTop-kを3〜8で動的変更する。Qwen3-30B-A3BではBan&PickがAIME2024 80.67→84.66、GPQA-Diamond 65.66→68.18へ改善しつつ平均active expert 8→4.83、vLLMで1.25倍高速化する。","list_summary":"重要専門家をKL影響度でPickし、層・token感度に応じて冗長専門家をBanする学習不要のMoE推論時routing補正。","authors":["Yuanteng Chen","Peisong Wang","Yuantian Shao","Nanxin Zeng","Chang Xu","Jian Cheng"],"authors_affiliations":"Institute of Automation, Chinese Academy of Sciences; University of Chinese Academy of Sciences; Zhongguancun Academy; University of Sydney; Nanjing University of Science and Technology","published":"2025-09-08","publication":"Findings of EMNLP 2026; arXiv:2509.06346 v3, revised 2026-08-26","publication_type":"Conference paper","publication_status":"EMNLP 2026 Findings","lineage":"MoE routing / key expert enhancement / dynamic expert pruning / inference acceleration","topics":["MoE","ルーティング","専門家枝刈り","推論高速化","Qwen3","DeepSeek"],"importance":"重みを圧縮・再学習せずrouter選択だけをpost-trainingで変え、性能向上とactive expert削減を同時に得る。専門家cache/offloadとは直交し、実行する専門家数そのものを減らす前段最適化として組み合わせやすい。","hardware_evaluation":"vLLM 0.9.1で実推論時間を測定。Qwen3-30B-A3BはBanで平均Top-k 8→4.82、1.25倍、Ban&Pickで4.83・1.25倍。Qwen3-235B-A22BはBan&Pick 4.79・1.26倍。","quality_effect":"Qwen3-30B-A3BのBan&PickはAIME2024 80.67→84.66、Math-500 95.20→95.80、GPQA-Diamond 65.66→68.18、MMLU-Pro 63.95→64.51、LiveCodeBench 91.75→92.85、HumanEval+ 71.34→72.56。","source":"https://arxiv.org/abs/2509.06346","sources":["https://arxiv.org/abs/2509.06346","https://arxiv.org/pdf/2509.06346"],"code":null,"implementation":"学習不要・plug-and-play。MathQA等の校正データでkey expertと層感度を事前推定し、推論時はrouter候補範囲とtoken routing-weight比から選択を補正する。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-paper-reference-section","references_total":0},"reservation":{"claim_id":"claim-302229314470f55acb21a513","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
