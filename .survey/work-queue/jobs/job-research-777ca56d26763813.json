@@ -12,11 +12,13 @@
   "source_url": "https://arxiv.org/abs/2502.04416",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2502.04416-analytical-ffn-to-moe-restructuring.md",
   "selection_reason": "dense FFNのactivation patternからshared/routed expertsとrouterを解析的に構築し、大規模retrainingなしでsparse MoEへ変換する。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T11:03:59+00:00"
+  "created_at": "2026-09-20T11:03:59+00:00",
+  "completed_at": "2026-09-22T14:30:09+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-6632d1664daf09912489991a.json"
 }

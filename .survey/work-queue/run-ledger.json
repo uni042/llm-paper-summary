@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T14:20:35.232511+00:00",
+  "updated_at": "2026-09-22T14:30:15.749432+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -37891,6 +37891,56 @@
       "paper_active_count_before": 908,
       "paper_active_count_after": 908,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35740632593",
+      "first_recorded_at": "2026-09-22T14:30:15.749432+00:00",
+      "last_recorded_at": "2026-09-22T14:30:15.749432+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35740632593:1",
+          "recorded_at": "2026-09-22T14:30:15.749432+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35740632593",
+            "run_attempt": "1",
+            "source_sha": "67699e76d32ad03ed077ad5c79ef10297d1497ae"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-777ca56d26763813",
+          "type": "research",
+          "canonical_id": "arXiv:2502.04416",
+          "title": "Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "research_completed"
     }
   ]
 }
