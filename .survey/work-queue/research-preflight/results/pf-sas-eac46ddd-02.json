@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-sas-eac46ddd-02",
+  "kind": "research",
+  "attempt_id": "attempt-eac46ddd3cb449fe8b2c0320",
+  "job_id": "job-research-6542fa570cf353a1",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:c20a84ddd301f5877778e03819f1fd3ae0e543110ce008c2f4331a292deba7c4",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "b311e00ae487eb4441d13c3c511a40e9840c12aa"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "c368b54795934f2fd6d027e2e4411a80f6c02ff2"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "6ece9c52714056701a4513d8a095ccf9e166d39f"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "222eb297d2856d77bb8a5f3f99117867119f2aff"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "1042b0d8d3570fea27944978a6a816239c7e932d"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[1].description is too short"
+  ],
+  "checked_at": "2026-09-22T07:35:14+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
