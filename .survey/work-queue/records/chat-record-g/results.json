@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-78929a6ba475ed2b2f05a50c",
-  "job_id": "job-research-f28b959eef987bac",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-78929a6ba475ed2b2f05a50c",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-78929a6ba475ed2b2f05a50c","job_id":"job-research-f28b959eef987bac","data":{"overview":"SMEPilotは三つのSME対応CPUとLlama-3.2-3B、Qwen3-4B、Qwen3-30B-A3Bで、llama.cpp CPU比のエンドツーエンド速度を最大3.94倍へ改善した。プリフィルは1.13〜5.42倍、デコードは最大3.48倍で、M4 ProのプリフィルFFNは4.10〜4.44 TFLOP/s、GGML CPU比6.06〜7.43倍、Apple Accelerate/KleidiAI SME比1.30〜1.67倍を示す。注意はFlashAttention CPU比1.56〜3.50倍、デコード注意は1.32〜4.75倍。Qwen3-4B/Ruler-4Kではエネルギーを482.813Jから233.931Jへ削減した。","key_results":[{"metric":"エンドツーエンド速度向上","value":"最大3.94倍","baseline":"llama.cpp CPU","condition":"三CPU、三モデル、Ruler/GSM8K/LongWriter構成","interpretation":"演算子単体だけでなく実アプリケーション全体でSME協調実行の利得を確認。"},{"metric":"プリフィル速度向上","value":"1.13〜5.42倍","baseline":"llama.cpp CPU","condition":"エンドツーエンドのプリフィル段","interpretation":"大きな行列が計算律速になりSME+CPU混合が効きやすい。"},{"metric":"デコード速度向上","value":"最大3.48倍","baseline":"llama.cpp CPU","condition":"エンドツーエンドのデコード段","interpretation":"小バッチはCPUに残し、算術強度が上がる形状だけSMEへ移す動的配置が有効。"},{"metric":"M4 ProプリフィルFFN","value":"4.10〜4.44 TFLOP/s、GGML比6.06〜7.43倍、SME単独系比1.30〜1.67倍","baseline":"GGML CPU、Apple Accelerate、KleidiAI SME","condition":"プリフィル長512〜8192、B×3072×8192 GEMM","interpretation":"SME単独より通常CPUコアも同時利用するタイル分割が追加利得を生む。"},{"metric":"注意速度向上","value":"プリフィル1.56〜3.50倍、デコード1.32〜4.75倍","baseline":"FlashAttention CPU","condition":"M4 Pro、形状/トークン幅を掃引","interpretation":"行列段とベクトル段の異種パイプラインが注意の時間的バブルを削減する。"},{"metric":"エンドツーエンドエネルギー","value":"482.813±23.213J → 233.931±2.751J","baseline":"llama.cpp → SMEPilot","condition":"M4 Pro、Qwen3-4B、Ruler-4K、各n=3","interpretation":"平均電力も26.050Wから22.611Wへ下がり、短い実行時間と合わせて約0.485倍のエネルギー。"}],"negative_results":"バッチ1〜2のGSM8Kでは演算子がメモリ律速なのでSMEPilotは基準と同程度で、SMEを使っても大きな利得がない。MoEではトークンが複数エキスパートへ分散して各エキスパートの実効バッチが小さくなり、行列がメモリ律速へ寄るため一部タスクの速度向上が密モデルより小さい。タイル分割を外すとGEMM遅延1.46倍、注意パイプラインを外すとプリフィル注意2.07倍、臨界経路上で素朴に配置変換するとデコードGEMVが0.52msから1.71msへ悪化する。","interpretation":"SMEの高い行列ピークそのものより、形状ごとに共有帯域の律速点を見極めてCPU/SME/混合を切り替えることが重要である。大きいプリフィルは両計算資源を同時利用し、小さいデコードはCPUへ残し、中間の尾根越え領域だけSMEへ移すことで、SMEを万能なCPU置換として使う失敗を避ける。","quality_impact":"モデル演算を近似化する手法ではなく、実行先・分割・配置を変更するため、論文は生成品質低下との交換ではなく同一モデルの性能・エネルギーを評価する。Qwen3-30B-A3Bのみ端末メモリ制約から4ビット重み量子化を評価設定として使用する。"},"reservation":{"claim_id":"claim-78929a6ba475ed2b2f05a50c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
