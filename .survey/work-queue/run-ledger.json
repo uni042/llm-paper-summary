@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T04:46:37.934802+00:00",
+  "updated_at": "2026-09-22T04:52:59.651694+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -35425,6 +35425,56 @@
           "type": "research",
           "canonical_id": "arXiv:2110.01786",
           "title": "MoEfication: Transformer Feed-forward Layers are Mixtures of Experts",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 886,
+      "paper_active_count_after": 886,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35688538242",
+      "first_recorded_at": "2026-09-22T04:52:59.651694+00:00",
+      "last_recorded_at": "2026-09-22T04:52:59.651694+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35688538242:1",
+          "recorded_at": "2026-09-22T04:52:59.651694+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35688538242",
+            "run_attempt": "1",
+            "source_sha": "7ee09f0706d15cc611a9b6bd5c4aa64cd2f94fd5"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-9de329d10383e26b",
+          "type": "research",
+          "canonical_id": "arXiv:2202.09368",
+          "title": "Mixture-of-Experts with Expert Choice Routing",
           "from": "ready",
           "to": "completed"
         }
