@@ -1,13 +1,4 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-f1e008f8fdda71bd88025432",
-  "job_id": "job-research-97e05693104abe69",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f1e008f8fdda71bd88025432",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-f1e008f8fdda71bd88025432","job_id":"job-research-97e05693104abe69",
+ "data":{"overview":"DERNは3系統すべてで再学習不要の比較法を上回り、とくに高剪定率で削除側知識の回収効果が大きい。Mixtralは8→6エキスパートで平均80.88から80.04と0.84低下に抑え、8→4でも70.79でNAEE 65.69を5.10上回る。Qwen2は57.4Bから45.1Bへ縮小して85.73対元86.14、33.3Bでも83.56を保つ。DeepSeekは14.5B構成で元59.91を上回る60.22だが、12.7Bでは55.50へ低下し、専門化の強いエキスパートでは高圧縮が難しい。Mixtral 6エキスパートではメモリ25%削減、処理量18%増加を精度ほぼ維持で実現する。","key_results":[{"metric":"Mixtral 6/8エキスパート平均性能","value":"80.04","baseline":"元モデル80.88、NAEE 77.25","condition":"35.4B、共通知識・MMLU評価","interpretation":"25%のエキスパート削減でも元モデルとの差を0.84に抑える。"},{"metric":"Mixtral 4/8エキスパート平均性能","value":"70.79","baseline":"NAEE 65.69、M-SMoE 42.49、LLM-Pruner 55.34","condition":"24.2B、50%エキスパート削減","interpretation":"高圧縮でNAEEを5.10上回り、セグメント再結合の効果が大きい。"},{"metric":"Qwen2 32/64エキスパート平均性能","value":"83.56","baseline":"元86.14、NAEE 70.71","condition":"33.3B、約42%パラメータ削減","interpretation":"エキスパート数半減でも元性能の大半を保持する。"},{"metric":"Mixtral推論処理量","value":"7962.9→9395.0→10990.3 token/s","baseline":"8エキスパート","condition":"8→6→4、C4 1024 samples、64並列、vLLM","interpretation":"最大約38%向上。エキスパート減少で1エキスパート当たりの行列積が大きくなりGPU効率が上がる。"},{"metric":"Mixtralメモリと初回応答時間","value":"88.7→66.0→45.0GB、3349.5→2850.0→2443.8ms","baseline":"8エキスパート","condition":"6/4エキスパートへ圧縮","interpretation":"圧縮が実メモリと初回応答遅延の双方へ反映される。"}],"negative_results":"DeepSeek-MoEではエキスパート間のニューロン類似度が低く、高剪定率ほど性能低下が顕著になる。64→48エキスパートでは平均59.91から55.50へ落ちる。著者は専門化が強く交換可能性が低いことを原因候補として示す。またセグメントを無差別に再利用しても性能は上がらず、類似度閾値が低すぎると意味不整合が混入する。逆に閾値が高すぎると再利用不足になる。","interpretation":"DERNの利得は『削除した知識を全部混ぜる』ことではなく、互換なニューロン構造だけを選択し、重要度を保ったクラスタ中心へ圧縮することから生じる。類似度閾値は約0.6付近が良く、ゲート成分を類似度へ入れない方がわずかに良い。乱数初期化は平均63.89から48.61へ大きく悪化し、重要度重みを外すと62.69へ下がるため、再構成の初期化と重み付けも主要因である。","quality_impact":"6/8 Mixtralや48/64 Qwen2では元モデルとの差が小さい一方、50%級や専門化の強いDeepSeekでは低下する。したがって再学習不要でも常に無損失ではなく、セグメント互換性が十分なモデル・圧縮率で品質保持が強い方式と解釈すべきである。"},
+ "reservation":{"claim_id":"claim-f1e008f8fdda71bd88025432","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
