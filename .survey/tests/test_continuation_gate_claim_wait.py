@@ -112,9 +112,9 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertFalse(result["finalization_allowed"])
         self.assertEqual(result["submission_wait_seconds"], 0)
         self.assertEqual(result["submission_wait_action"], "none")
-        self.assertIn("最大2本先行", result["next_action_message"])
+        self.assertIn("同期障壁にしません", result["next_action_message"])
 
-    def test_pending_submission_without_claimable_work_waits_instead(self):
+    def test_pending_submission_without_claimable_work_waits_for_ready_work(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             submission_state_checked=True,
@@ -125,36 +125,37 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
             can_discover=False,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["required_action"], "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT")
-        self.assertEqual(result["submission_wait_seconds"], 10)
-
-    def test_pending_previous_submission_allows_second_paper_lookahead(self):
-        result = mod.decide(make_args(
-            claim_state_checked=True,
-            submission_state_checked=True,
-            submission_result_pending=True,
-            pipeline_ahead_count=1,
-            independent_work=True,
-        ))
-        self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+        self.assertEqual(result["required_action"], "WAIT_FOR_READY_RESEARCH_AUDIT")
         self.assertEqual(result["submission_wait_seconds"], 0)
-        self.assertIn("最大2本先行", result["next_action_message"])
 
-    def test_pending_previous_submission_blocks_after_two_paper_lookahead(self):
+    def test_pending_submission_keeps_claiming_regardless_of_pipeline_depth(self):
+        for pipeline_ahead_count in (1, 2, 5, 20):
+            with self.subTest(pipeline_ahead_count=pipeline_ahead_count):
+                result = mod.decide(make_args(
+                    claim_state_checked=True,
+                    submission_state_checked=True,
+                    submission_result_pending=True,
+                    pipeline_ahead_count=pipeline_ahead_count,
+                    independent_work=True,
+                ))
+                self.assertEqual(result["decision"], "CONTINUE")
+                self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+                self.assertEqual(result["submission_wait_seconds"], 0)
+                self.assertIn("同期障壁にしません", result["next_action_message"])
+
+    def test_pending_submission_in_600_second_window_monitors_results_without_new_claim(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             submission_state_checked=True,
             submission_result_pending=True,
-            pipeline_ahead_count=2,
+            pipeline_ahead_count=99,
             independent_work=True,
+            seconds_to_run_deadline=600,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["required_action"], "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT")
+        self.assertEqual(result["required_action"], "MONITOR_SUBMISSION_RESULTS")
         self.assertEqual(result["submission_wait_seconds"], 10)
-        self.assertIn("最大2本", result["progress_notice"])
-        self.assertIn("最古", result["progress_notice"])
-        self.assertIn("再確認", result["progress_notice"])
+        self.assertIn("do_not_start_new_paper_in_handoff_window", result["submission_wait_action"])
 
     def test_checked_clear_claim_state_under_quota_claims_next_paper(self):
         result = mod.decide(make_args(
