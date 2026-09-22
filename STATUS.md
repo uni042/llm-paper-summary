@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 19:29:14 JST**
+> 自動生成: **2026-09-22 20:04:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **279** |
-| 未claim Research job | **278** |
-| 直近24hの検証済みResearch収録 | **25** |
-| 最終検証済みResearch収録 | **09-22 19:19:23 JST（9分前）** |
+| 収録候補論文 | **278** |
+| 未claim Research job | **277** |
+| 直近24hの検証済みResearch収録 | **26** |
+| 最終検証済みResearch収録 | **09-22 20:04:36 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **279** |
+| canonical_id確認済みの一意な候補論文 | **278** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **279** |
+| 非終端Research job合計 | **278** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -33,14 +33,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **5979** |
+| 構造化references総候補 | **6023** |
 | 処理済み | **603** |
-| 未処理 | **5376** |
+| 未処理 | **5420** |
 | 収録済みとして除外 | **495** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
-- 消化率: **10.1%**
+- 消化率: **10.0%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（10時間56分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（11時間32分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **2** | **0** | **0** | **1** | **0** | — |
+| Research | **14** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **16** | **5** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **14** | **5** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 20:04:36 JST** [research] `arXiv:2608.28293` — A Probabilistic Interpretation of KV Cache Eviction
+  - job: `.survey/work-queue/jobs/job-research-199b831b6808fd50.json`
+  - result: `.survey/work-queue/results/research/attempt-1b188ce32f47e9723ddc14cd.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1b188ce32f47e9723ddc14cd.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md`
 - **09-22 19:19:23 JST** [research] `arXiv:2606.16824` — CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents
   - job: `.survey/work-queue/jobs/job-research-548d7e4cd563f6b8.json`
   - result: `.survey/work-queue/results/research/attempt-40b553eeb725cfefaa1a1d5f.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-65c28b59ac08b3e1cf0adad9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-65c28b59ac08b3e1cf0adad9.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md`
-- **09-22 15:21:54 JST** [research] `arXiv:2608.30567` — TuringLLM: Efficiently Scaling Foundation Models Toward Physical AI
-  - job: `.survey/work-queue/jobs/job-research-92d92d3583bf57da.json`
-  - result: `.survey/work-queue/results/research/attempt-87c159714bb65416bb0f37de.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-87c159714bb65416bb0f37de.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md`
 
 ### Audit
 
@@ -181,9 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.28293` — A Probabilistic Interpretation of KV Cache Eviction / worker `scheduled-chat-00`
-  - claim: **09-22 19:28:41 JST** / heartbeat: **—** / lease expiry: **09-22 20:58:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-199b831b6808fd50.json`
+- `arXiv:2608.21541` — Beyond Sparse Weights: When Is Attention Compressible? / worker `scheduled-chat-30`
+  - claim: **09-22 19:32:03 JST** / heartbeat: **—** / lease expiry: **09-22 21:02:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6a21e987e314dd70.json`
 
 #### Audit
 
@@ -203,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **279** |
+| ready | **278** |
 
 ### 候補の重複・識別情報欠損
 
@@ -223,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **906** |
+| inference/training/survey配下の論文Markdown実体 | **907** |
 
 ### immutable submissionの未照合
 
