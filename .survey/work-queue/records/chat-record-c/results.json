@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1385b427873bab2ec9caad6b",
-  "job_id": "job-research-b6a722146f5922c5",
-  "data": {
-    "overview": "完全Qwen 88 promptsではW2/W3/W4の平均ΔNLLが0.9437/0.1832/0.0513、中央値0.8514/0.1387/0.0241。τ=0.1513ではstatic W4が1.000倍、request-agnostic budget-aware mixtureが1.253倍、FWPが1.284倍、restricted true-loss orderingが1.303倍。したがってstatic W4からの0.284増分の大半0.253は異種instanceの予算配分そのものが生み、FWP固有の上積みは0.031 points、request-agnostic比2.5%である。",
-    "key_results": [
-      {
-        "metric": "W2/W3/W4 mean ΔNLL",
-        "value": "0.9437 / 0.1832 / 0.0513",
-        "baseline": "reference checkpoint",
-        "condition": "Qwen3-30B-A3B、88 prompts、全6,144 expert blocks量子化",
-        "interpretation": "低bitほど平均劣化は大きいがrequest間ばらつきがあり、routing余地がある。"
-      },
-      {
-        "metric": "FWP allocation multiplier",
-        "value": "1.284×",
-        "baseline": "static W4 1.000×",
-        "condition": "τ=0.1513、offline fixed population",
-        "interpretation": "28.4%全体をFWP効果と解釈してはいけず、request-specific FWP上積みは2.5% relative。"
-      },
-      {
-        "metric": "Request-agnostic mixture",
-        "value": "1.253×",
-        "baseline": "static W4 1.000×",
-        "condition": "同一品質予算",
-        "interpretation": "異種instanceを品質予算内で混ぜるだけでheadline改善の大半が得られる。"
-      },
-      {
-        "metric": "Prompt-only W2→W3 risk prediction",
-        "value": "Spearman 0.586 / AUROC 0.747",
-        "baseline": "cross-instance FWP",
-        "condition": "reference prompt statistic",
-        "interpretation": "有用だが中程度の信号であり直接品質測定ではない。"
-      },
-      {
-        "metric": "Prefix FWP Spearman",
-        "value": "0.238/0.505/0.593/0.765/0.999",
-        "baseline": "64/128/256/512/1024 tokens",
-        "condition": "64 extended prompts",
-        "interpretation": "短いprefixでは予測が弱くlength-aware abstentionが必要。"
-      },
-      {
-        "metric": "2×A100 endpoint output throughput",
-        "value": "W2 3270±33, W3 2591±11, W4 2334±17 tokens/s",
-        "baseline": "同一endpoint protocol",
-        "condition": "216 requests×5, prefix caching off",
-        "interpretation": "bitwidthごとのcapacity orderingを実測するが1.284×とは別プロトコル。"
-      }
-    ],
-    "negative_results": "static W3の1.333×、W2の2.000×、capacity-proportional 1.564×はいずれもτ=0.1513の平均品質予算を違反する。held-out 50/50 calibration splitsのbudget complianceは約35〜50%に留まり、deployment-level risk guaranteeはない。live prototypeも同一総資源replica比較を欠く。",
-    "interpretation": "この研究の中心的な結果は、量子化instanceの性能差そのものより、request-level品質脆弱性の不均一性を利用すると固定pool内で低bit instanceをより多く使える点にある。ただしFWPの追加価値は全体gainの一部で、provisioning最適化やreplica追加との比較は未解決である。",
-    "quality_impact": "品質制約を平均ΔNLLとして明示的に入れるため、低bitへ送る割合を増やしてもpopulation平均予算を守る設計。ただしheld-out complianceが弱く、短promptではFWP相関も低いため、実配備では保守的fallbackと信頼区間が必要。"
-  },
+  "attempt_id": "attempt-8c54038c20ea594a74bf7519",
+  "job_id": "job-research-411c0f7386496cf9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-1385b427873bab2ec9caad6b",
+    "claim_id": "claim-8c54038c20ea594a74bf7519",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
