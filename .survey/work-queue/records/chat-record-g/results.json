@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-01556e847caec9153595855e",
-  "job_id": "job-research-c449ea471528f1b0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01556e847caec9153595855e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-01556e847caec9153595855e","job_id":"job-research-c449ea471528f1b0","data":{"overview":"完全接頭辞reuseはwarm-cache TTFTを長文脈ほど大きく短縮し、8K QAでは486msから30msへ約16倍改善する。一方、held-out GSM8Kでは160-token時にnative 54.4 EMからreuse 49.8 EMへ-4.6pp低下し95% CI [-8.8,-0.4]。320-tokenでは差-3.0、第二seedでは-0.8へ縮むため、品質同等性も一貫した損失幅も確立していない。二分岐peakは8Kで12%低下するがprefix storageは0% aliasで、物理共有によるmemory savingではない。","key_results":[{"metric":"GSM8K exact match","value":"49.8%","baseline":"native 54.4%","condition":"held-out n=500, 160-token cap, full-prefix reuse","interpretation":"reuse-native差-4.6pp、paired 95% CI [-8.8,-0.4]でこの設定ではnative優位。"},{"metric":"GSM8K exact match","value":"56.4%","baseline":"native 59.4%","condition":"same held-out n=500, 320-token cap","interpretation":"差は-3.0ppへ縮みCIは0を含む。budget変更がpenaltyを有意に変えたとは言えない。"},{"metric":"second-seed GSM8K reuse penalty","value":"-0.8pp","baseline":"native seed2 53.8%","condition":"160-token cap","interpretation":"CI [-5.0,+3.2]。二seedで損失幅は確定しない。"},{"metric":"QA 2K token F1","value":"62.8","baseline":"native 69.4","condition":"n=300 full-prefix reuse","interpretation":"差-6.6、CI [-10.5,-2.7]。"},{"metric":"QA 8K token F1","value":"67.9","baseline":"native 72.5","condition":"n=200 full-prefix reuse","interpretation":"差-4.5、CI [-9.3,+0.1]。"},{"metric":"8K warm-cache TTFT","value":"30 ms","baseline":"native 486 ms","condition":"QA 8K; one-time base prefill 417 ms excluded","interpretation":"約16倍改善するが、単発全処理時間の16倍改善ではない。"},{"metric":"8K two-branch peak memory","value":"6.98 GB","baseline":"native 7.92 GB","condition":"QA+math, n=20, 32 generated tokens","interpretation":"12%低下するがprefix storage aliasは0%で物理共有効果ではない。"}],"negative_results":"takeover boundaryは非単調で、部分再計算に一般的優位は示されない。GSM8K overlapping sampleではearly +2.2、question -3.8、full-prefix -1.0pp対nativeで、各差の不確実性が大きい。closed-form ridge KV translatorも直接reuseを上回らず追加matrix multiplyを要する。specialist-dependence contrastもすべて0を含む。preliminary aLoRA比較はactivation correctness未検証で解釈不能。","interpretation":"最も確かな利点は共有base cacheが既に存在する場合のTTFT削減であり、長いcontextほど効く。品質は小幅悪化の点推定が多いがgeneration capとseedで幅が変わり、非劣性は証明されていない。memoryについては論理reuseと物理sharingを分ける必要があり、現実装の12% peak低下をpersistent shared-cache savingと解釈してはいけない。","quality_impact":"標準LoRAを変更せずbase KVを再利用できる可能性は示すが、品質同等性の保証ではない。導入判断ではtask別paired評価と長文脈条件、generation budgetを固定して確認する必要がある。"},"reservation":{"claim_id":"claim-01556e847caec9153595855e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
