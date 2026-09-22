@@ -134,6 +134,14 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     active_assignment = bool(getattr(args, "active_assignment", False))
 
     transient_claim_wait = bool(claim_state_checked and args.claim_result_pending and args.github_read)
+    claim_result_pending_age_seconds = max(
+        int(getattr(args, "claim_result_pending_age_seconds", 0) or 0),
+        0,
+    )
+    claim_monitor_window_seconds = max(
+        int(getattr(args, "claim_monitor_window_seconds", 60) or 60),
+        ASYNC_WAIT_POLL_SECONDS,
+    )
     transient_submission_wait = bool(
         submission_state_checked
         and getattr(args, "submission_result_pending", False)
@@ -202,7 +210,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             finalization_allowed = False
         elif transient_claim_wait:
             decision = "CONTINUE"
-            required_action = "WAIT_FOR_CLAIM_RESULT"
+            required_action = (
+                "MONITOR_CLAIM_FAST_LANE"
+                if claim_result_pending_age_seconds < claim_monitor_window_seconds
+                else "WAIT_FOR_CLAIM_RESULT"
+            )
             finalization_allowed = False
         elif not submission_state_checked:
             decision = "CONTINUE"
@@ -278,11 +290,20 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     claim_wait_seconds = 0
     if transient_claim_wait:
         claim_wait_seconds = ASYNC_WAIT_POLL_SECONDS
-        claim_wait_action = (
-            "keep_same_request_id; do_not_issue_another_claim; wait_10_real_seconds; "
-            "refresh_latest_head_and_matching_claim_result; if_available_check_survey_claim_fast; "
-            "if_result_still_pending_wait_10_real_seconds_again; repeat_until_result_or_terminal_hard_stop"
-        )
+        if required_action == "MONITOR_CLAIM_FAST_LANE":
+            claim_wait_action = (
+                "keep_same_request_id; do_not_issue_another_claim; inspect_survey_claim_fast_actions_run_for_request_commit; "
+                "inspect_run_job_or_steps_if_queued_or_in_progress; inspect_same_worker_unsettled_submissions_retryable_repairs_and_active_claim_consistency; "
+                "wait_10_real_seconds; refresh_latest_head_and_matching_claim_result; "
+                "repeat_monitor_cycle_while_request_age_under_60_seconds_or_until_result_or_terminal_hard_stop"
+            )
+        else:
+            claim_wait_action = (
+                "keep_same_request_id; do_not_issue_another_claim; inspect_survey_claim_fast_actions_status_and_same_worker_transport_health; "
+                "wait_10_real_seconds; refresh_latest_head_and_matching_claim_result; "
+                "if_actions_failed_or_cancelled_follow_canonical_recovery_without_new_request; "
+                "repeat_until_result_or_terminal_hard_stop"
+            )
 
     submission_wait_action = "none"
     submission_wait_seconds = 0
@@ -312,10 +333,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         )
 
     progress_notice = ""
-    if required_action == "WAIT_FOR_CLAIM_RESULT":
+    if required_action == "MONITOR_CLAIM_FAST_LANE":
         progress_notice = (
-            "担当確保結果を待機しています。この処理が完了または明示的hard stopになるまで"
-            "この処理中はrunを終了しません。同じrequest_idを10秒ごとに待機・再確認します。"
+            "担当確保結果の生成待ちです。待機中はSurvey claim fast laneのActions状態、job/step、"
+            "同一workerの未解決submission・retryable repair・active claim整合を確認し、"
+            "10秒後に最新mainと同じrequest_idのresultを再確認します。60秒未満はこの監視サイクルを継続し、runを終了しません。"
+        )
+    elif required_action == "WAIT_FOR_CLAIM_RESULT":
+        progress_notice = (
+            "担当確保結果が60秒以上pendingです。新しいrequestは発行せず、Survey claim fast laneのActions状態と"
+            "同一workerのtransport healthを確認してから、同じrequest_idを10秒ごとに再確認します。"
         )
     elif required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
         progress_notice = (
@@ -334,8 +361,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         )
 
     if required_action == "CHECK_CLAIM_STATE":
-        next_action_message = "最新のclaim request/result対応を確認し、pendingなら同一request_idの待機へ進みます。"
-    elif required_action == "WAIT_FOR_CLAIM_RESULT":
+        next_action_message = "最新のclaim request/result対応を確認し、pendingなら同一request_idの監視サイクルへ進みます。"
+    elif required_action in {"MONITOR_CLAIM_FAST_LANE", "WAIT_FOR_CLAIM_RESULT"}:
         next_action_message = progress_notice
     elif required_action == "CHECK_SUBMISSION_STATE":
         next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
@@ -399,6 +426,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "write_failure_scope": write_scope,
         "write_action": write_action,
         "claim_state_checked": claim_state_checked,
+        "claim_result_pending_age_seconds": claim_result_pending_age_seconds,
+        "claim_monitor_window_seconds": claim_monitor_window_seconds,
         "claim_result_pending": bool(args.claim_result_pending),
         "claim_wait_action": claim_wait_action,
         "claim_wait_seconds": claim_wait_seconds,
@@ -471,6 +500,8 @@ def main() -> int:
     ap.add_argument("--can-discover", type=yn, default=True)
     ap.add_argument("--claim-state-checked", type=yn, default=False)
     ap.add_argument("--claim-result-pending", type=yn, default=False)
+    ap.add_argument("--claim-result-pending-age-seconds", type=int, default=0)
+    ap.add_argument("--claim-monitor-window-seconds", type=int, default=60)
     ap.add_argument("--submission-state-checked", type=yn, default=False)
     ap.add_argument("--submission-result-pending", type=yn, default=False)
     ap.add_argument("--pipeline-ahead-count", type=int, default=0)
