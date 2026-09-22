@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-153fefa22e4198ce4ffc522b","job_id":"job-research-0bfa5a31fda6f9e8","data":{"overview":"Unified KV Poolingは128K級長文脈で全3モデルのTTFTを10秒未満へ抑え、既存LMCache系列に対して最大約4.1倍の短縮を示す。LLaMA 3.1-8Bでは128Kで5.6秒、GPT-OSS-20Bでは5.2秒、Qwen3-30B-A3Bでは9.8秒。blocked I/OはGPT-OSS-20BでLMCache比23.2倍、Qwen3-30B-A3Bで17.9倍低減し、直列device利用とfilesystem overheadの双方を外すことが効く。","key_results":[{"metric":"128K TTFT / LLaMA 3.1-8B","value":"5.6 s","baseline":"LMCache比約2.9倍、LMCache+LP比約2.6倍、LMCache+LP+AsyncKV比約2.1倍短縮","condition":"128K context","interpretation":"複数memory/SSDの並列帯域とfilesystem bypassを統合すると、長文脈でも10秒要件内へ入る。"},{"metric":"128K TTFT / GPT-OSS-20B","value":"5.2 s","baseline":"LMCache比約4.1倍、LMCache+LP比約3.7倍、LMCache+LP+AsyncKV比約3.3倍短縮","condition":"128K context","interpretation":"主結果中で最大のTTFT改善を示す。"},{"metric":"128K TTFT / Qwen3-30B-A3B","value":"9.8 s","baseline":"LMCache比約3.7倍、LMCache+LP比約3.5倍、LMCache+LP+AsyncKV比約3.1倍短縮","condition":"128K context","interpretation":"MoEモデルでも10秒未満を維持し、KV storage path最適化がモデル構造を跨いで効く。"},{"metric":"Blocked I/O / LLaMA 3.1-8B","value":"0.6 s","baseline":"LMCache比約7.8倍、LMCache+LP比約2.7倍、LMCache+LP+AsyncKV比約1.7倍低減","condition":"長文脈主設定","interpretation":"GPU待機の主要因だったstorage retrievalを直接縮める。"},{"metric":"Blocked I/O / GPT-OSS-20B","value":"最大約23.2倍低減","baseline":"LMCache比23.2倍、LMCache+LP比19.9倍、LMCache+LP+AsyncKV比19.2倍","condition":"長文脈主設定","interpretation":"filesystem bypassとmulti-device parallelismの効果が特に大きい。"},{"metric":"制御overhead","value":"84 ms未満、TTFTの約0.8%以下","baseline":"提案機構なし","condition":"context増大時を含む","interpretation":"GLT/allocator/device coordinationの追加コストは主なTTFT利得に比べ小さい。"}],"negative_results":"SPDK pollingはkernel interruptを避けて低遅延化する代わりにCPU利用率を増やし、実装では専用CPU coreを割り当てる。pooling metadataとcoordination overheadは文脈長とともに増えるが84ms未満に留まる。提案はSSD容量そのものやKV footprintを減らさないため、容量不足には圧縮・量子化・host offload等との併用が必要。","interpretation":"既存のKV offloadではSSD性能そのものよりsoftware pathとdevice利用率が支配的ボトルネックになり得る。複数deviceを帯域比例で同時利用し、既知KV objectに一般filesystemを介さないことで、SSDを単なる大容量tierから実効帯域を集約できるserving資源へ変える。","quality_impact":"KV値・モデル重み・attention計算を変更しないため、精度を犠牲にする圧縮ではなくI/O latencyのみを最適化する。"},"reservation":{"claim_id":"claim-153fefa22e4198ce4ffc522b","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-0a0d6780ed5f101d3d0cb73c",
+  "job_id": "job-research-6b0e82ae0c927a9a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0a0d6780ed5f101d3d0cb73c",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-153fefa22e4198ce4ffc522b","job_id":"job-research-0bfa5a31fda6f9e8","data":{"canonical_id":"arXiv:2606.14779","arxiv_id":"2606.14779","doi":"10.48550/arXiv.2606.14779","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"Unified KV Pooling to Accelerate Long-Context LLM Serving","summary":"長文脈LLMではGPUから退避したKVキャッシュの再取得がホストメモリとSSDの直列I/O経路に集中し、128K文脈でTTFTが約30.7秒まで増大する。さらにSSD再取得時間の84%をカーネルファイルシステム処理が占める。Unified KV Poolingは複数のホストメモリモジュールとSSDを帯域幅比で束ねた単一論理プールとして扱い、KV orchestratorがKV断片を帯域比例で配置して並列にoffload/retrieveする。SSD側ではKV-passthroughがSPDKを用いてユーザー空間からLBAを直接読み書きし、ファイルシステムを迂回する。LLaMA 3.1-8B、GPT-OSS-20B、Qwen3-30B-A3Bで長文脈TTFTを既存法比最大約4.1倍短縮し、全設定を10秒未満にし、blocked I/Oを最大23.2倍削減した。","list_summary":"複数RAM/SSDを帯域幅比例の単一KVプールとして並列利用し、SPDK直アクセスでファイルシステムを迂回して長文脈KV再取得を高速化する。","authors":["Minchul Kang","Changyong Shin","Jinwoo Jeong","Jaerim Park","Woohyun Kim","Bonyul Gu","Dongwoo Kang","Gyeongsik Yang","Chuck Yoo"],"authors_affiliations":"Korea University; KT Corporation","published":"2026-06-10","publication":"arXiv:2606.14779v1","publication_type":"Preprint","publication_status":"Preprint","lineage":"KV cache offloading / hierarchical memory / SSD-backed long-context serving","topics":["KVキャッシュ","長文脈推論","SSDオフロード","SPDK","階層メモリ","並列I/O"],"importance":"KV圧縮ではなく、既存のホストメモリ/SSD階層を単一の帯域集約資源として使う配置とデータパス最適化でTTFTを改善し、SSD活用型LLM推論に直接関係する。","hardware_evaluation":"複数ホストメモリモジュールと複数SSDを持つサーバ上で、GPU推論とRAM/SSD KV offloadを評価。本文はSPDK polling専用CPU coreを用いる。","quality_effect":"KV内容やモデル重みを変更せず、KV配置・取得経路のみを変更するためモデル品質を変えないシステム最適化として評価される。","source":"https://arxiv.org/abs/2606.14779","sources":["https://arxiv.org/abs/2606.14779","https://arxiv.org/pdf/2606.14779"],"code":null,"implementation":"既存LLM servingのKV offload経路へKV orchestrator、GLT、bandwidth-aware allocator、SPDKベースKV-passthroughを実装。公開コードURLは一次本文から確認できない。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary-paper","references_total":0},"reservation":{"claim_id":"claim-153fefa22e4198ce4ffc522b","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0a0d6780ed5f101d3d0cb73c",
+  "job_id": "job-research-6b0e82ae0c927a9a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0a0d6780ed5f101d3d0cb73c",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
