@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-4d7a0c3e035c923b869769ba",
-  "job_id": "job-research-b8b352e984bc0e9d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4d7a0c3e035c923b869769ba",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-4d7a0c3e035c923b869769ba","job_id":"job-research-b8b352e984bc0e9d","data":{"limitations":"第一に、最終GroveMoEの中間学習コーパスには長い思考連鎖（long-CoT）データが不足しており、著者自身がQwen3-30B-A3B-2507のような強い基盤推論能力を持つモデルとの能力差を認めている。第二に、事後学習は拒否サンプリング中心で、強化学習を統合していないため、最終能力には学習手法側の改善余地がある。第三に、実装効率は理論計算量に追いついていない。現行SGLangでは通常専門家と随伴専門家を汎用fused-moeで別々に処理するため各層2回のカーネル呼び出しとなり、Qwen3-30B-A3Bより推論が約30%遅い。第四に、グループ割当は固定であり、どの専門家同士を同じ群に置くかをデータから最適化する仕組みは示していない。第五に、最終Inst性能は構造、中間学習400Bトークン、合成データを含む教師あり微調整の複合結果であり、全てをGrove構造単独の効果と解釈できない。","differences":"DynMoEやReMoEはルータ側で活性専門家数を可変化し、計算上限を管理する追加機構が必要なのに対し、GroveMoEは通常の上位k個ルーティングを維持し、選ばれた専門家の群重複から追加随伴専門家数を決める。MoE++やAdaMoEの空専門家・ゼロ計算専門家による可変計算とも異なり、Groveは実計算を担う小型共有専門家を追加して総容量そのものを増やす。Sparse UpcyclingやDrop-Upcyclingが密モデルからMoEへの変換を主題とするのに対し、本研究は既存MoEチェックポイントを異種専門家構造へ拡張する。通常のshared expertを全トークンで常時活性化する方式とも異なり、随伴専門家は通常専門家群の選択に従って一部だけ活性化される。","implementation_status":"公式コードはGitHubのinclusionAI/GroveMoEで公開され、GroveMoE-Base/Instの33Bモデルを対象とする。論文はarXiv v1のプレプリント。配備はSGLangの汎用fused-moeを利用して動作するが、著者は通常専門家と随伴専門家を一つの演算で処理する専用統合カーネルを今後の主要改善点としている。したがってアルゴリズムとモデルは実装済みだが、推論カーネルは最適化途上である。","research_positioning":"リポジトリ内では適応的専門家計算・圧縮系統に位置付けられる。特に『難しいトークンほど多くの計算を使う』動的MoE研究と、『既存チェックポイントを再利用して容量を増やす』アップサイクル研究の交点にある。推論システム観点では、理論上は3.14〜3.28Bの狭い活性範囲で33B総容量を扱える一方、実カーネルでは30%の速度低下が残るため、モデル構造上の疎性と実装上の効率が一致しない具体例でもある。専門家キャッシュやCPU/SSDオフロードを扱う研究に対しては直接のメモリ階層手法ではないが、トークンごとの活性専門家構成と活性パラメータ量を変えるため、将来の専門家配置・キャッシュ設計では通常専門家と共有随伴専門家の異なる再利用頻度を考慮する必要がある。"},"reservation":{"claim_id":"claim-4d7a0c3e035c923b869769ba","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
