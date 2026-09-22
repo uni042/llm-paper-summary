@@ -36,8 +36,7 @@ def descriptor_fingerprint(descriptor: dict) -> str:
     return "sha256:" + hashlib.sha256(payload).hexdigest()
 
 
-def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path) -> dict:
-    """Require a passing self-preflight for the exact descriptor/slot blobs."""
+def _load_preflight_result(repo: Path, preflight_result: Path) -> dict:
     repo = repo.resolve()
     path = Path(preflight_result)
     if not path.is_absolute():
@@ -55,6 +54,29 @@ def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path
         raise ValueError(f"preflight result is unreadable: {relative}") from exc
     if not isinstance(result, dict):
         raise ValueError("preflight result must be a JSON object")
+    return result
+
+
+def _expected_blob_sha_from_preflight(repo: Path, preflight_result: Path, fallback: str | None) -> str | None:
+    """Use the exact preflight-bound paper guard when the result records it.
+
+    Older preflight results did not persist this field, so only those legacy
+    results may fall back to the completed-request value.
+    """
+    result = _load_preflight_result(repo, preflight_result)
+    if "expected_blob_sha" not in result:
+        return fallback
+    value = result.get("expected_blob_sha")
+    if value in (None, ""):
+        return None
+    if not isinstance(value, str) or not re.fullmatch(r"[0-9a-f]{40}", value):
+        raise ValueError("preflight expected_blob_sha must be a 40-character lowercase Git SHA or null")
+    return value
+
+
+def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path) -> dict:
+    """Require a passing self-preflight for the exact descriptor/slot blobs."""
+    result = _load_preflight_result(repo, preflight_result)
     if result.get("operation") != "research_quality_preflight":
         raise ValueError("preflight result operation mismatch")
     if result.get("ok") is not True or result.get("preflight_passed") is not True:
@@ -108,6 +130,11 @@ def main() -> int:
     parser.add_argument("--preflight-result", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
+    expected_blob_sha = _expected_blob_sha_from_preflight(
+        args.repo_root,
+        args.preflight_result,
+        args.expected_blob_sha,
+    )
     descriptor = build(
         args.repo_root,
         kind=args.kind,
@@ -115,7 +142,7 @@ def main() -> int:
         job_id=args.job_id,
         record_bank=args.record_bank,
         paper_path=args.paper_path,
-        expected_blob_sha=args.expected_blob_sha,
+        expected_blob_sha=expected_blob_sha,
     )
     verify_preflight_result(args.repo_root, descriptor, args.preflight_result)
     args.output.parent.mkdir(parents=True, exist_ok=True)
