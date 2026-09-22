@@ -13,7 +13,7 @@ authors:
 - Weijia Shi
 - Baokang Zhao
 authors_affiliations: National University of Defense Technology
-published: '2026'
+published: '2026-08'
 publication: Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-26), Main Track, pp. 5101-5109
 publication_type: Conference
 publication_status: Published
