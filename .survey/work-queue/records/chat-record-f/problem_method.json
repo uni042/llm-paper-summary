@@ -1,13 +1,15 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-05dcd349efb11788a6f85507",
-  "job_id": "job-research-c15907d33f78f8cd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-05dcd349efb11788a6f85507",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-05dcd349efb11788a6f85507","job_id":"job-research-c15907d33f78f8cd","data":{
+    "problem":"既存の基盤モデル評価は、LM Evaluation HarnessやHELMのように能力・精度を測る系統と、MLPerfや個別デバイス研究のように性能を測る系統へ分断されている。組み込み・エッジ配備では精度だけでなく遅延、消費電力、エネルギー、ピークメモリが同時に制約になるが、NVML、RAPL、jtop、Apple powermetrics、Raspberry Pi PMICなど計測APIと意味が異なり、結果をそのまま比較できない。\n\nさらにLLM、VLM、時系列基盤モデルでは推論の時間構造が異なる。LLMはprefillと逐次decode、VLMはvision encoderと生成、TSFMは固定窓の単一forwardであり、単一の総レイテンシだけではボトルネックを説明できない。モデル×量子化×推論系×デバイスの組合せも急増するため、実測結果を配備制約へ接続する統一ワークフローが必要である。",
+    "novelty":"HoliBenchは、異種ハードウェア計測を共通の物理量へ正規化するプラットフォーム抽象化層（Platform Abstraction Layer; PAL）、モダリティ別の時間分解、実測設計空間、制約付き構成選択を一体化する。単なるベンチマーク表ではなく、一度取得したプロファイルを別タスクや複数モデル配備の予測へ再利用することを設計目標にしている。\n\n特に単体モデルの測定が順次共存実行で合成可能かをCARLA上のVLM+LLMパイプラインで検証し、選択構成では予測レイテンシ1.2%、電力2.5%以内を達成した。また量子化の効果がモデルサイズ、低精度kernel、GPUクラスで反転することを示し、ハードウェア仕様だけでなく実際の実行経路を測る必要性を定量化した。",
+    "method_overview":"利用者はモデル、量子化、タスク、対象デバイス、推論エンジンをHydra/YAMLで指定する。モダリティdriverがLLM・VLM・TSFMごとのload/predict/unloadを統一し、各プラットフォームprofilerがstart/sample/stop契約で電力・メモリ・利用率を取得する。Profiling Context Managerがwarmup後の推論窓とtelemetry threadを同期し、アイドル区間の混入を防ぐ。\n\n瞬時電力を返すデバイスでは推論窓で積分し、累積energy counterでは開始終了差分を取る。さらにモデルload後・推論前のidle powerを差し引いた正味推論エネルギーと、総システム電力に基づくgross energyを分離する。ピークメモリは配備可否のhard constraintとして扱い、平均メモリは共存負荷の指標にする。\n\n測定後はモデル・量子化・backend・deviceごとのprofile tableを作り、まずメモリやモダリティ不一致などhard constraintで候補を除外する。その後、精度・遅延・エネルギーの正規化値を重み付き効用へまとめるプラガブルsolverで順位付けする。実装例は整数線形計画（Integer Linear Programming; ILP）で、Flask UIから制約と重みを変更できる。",
+    "components":[
+      {"name":"プラットフォーム抽象化層","description":"各device profilerはstart/sample/stopの共通interfaceを持ち、利用可能性predicateに応じて実行時に選ばれる。NVML、jtop、powermetrics、PMICなど異なる計測源を共通のenergy、power、memory、utilizationへ変換し、デバイス追加時にorchestratorを変更しない。\n\n計測scope自体がGPU、SoC、boardで異なる点は消せないため、PALは絶対的同値性を主張せず、積分、idle subtraction、時間整合の意味を統一する。これにより異なるplatform APIの値を少なくとも同じ算出規則で比較できる。"},
+      {"name":"時間整合とエネルギー帰属","description":"warmup結果を捨てた後、Profiling Context Managerが全telemetry threadを推論開始・終了に同期させる。瞬時powerは時間積分、累積counterは差分でenergyへ変換し、sampling intervalはLLM/VLM 100ms、TSFM 10msと workload durationに合わせる。\n\nモデルload後のidle powerを別途測り、gross energyからidle baselineの積分値を引いてnet inference energyを算出する。grossは運用上の電力予算、netはデバイス間の限界計算コスト比較という異なる用途へ使い分ける。"},
+      {"name":"モダリティ別推論時間モデル","description":"LLMはprefillとautoregressive decodeを分け、TTFTとdecode throughputを記録する。VLMはvision encodingとlanguage decodeを分解し、TSFMはKV cacheを持たない単一forwardとして扱う。\n\nこのphase decompositionにより、単体profileから未測定の25-token生成などへdecode時間を補間できる。複数モデルpipelineでも各phaseの時間と平均powerを時間加重して合成する基礎になる。"},
+      {"name":"推論backend・量子化横断driver","description":"native forwardに加え、vLLM、SGLang、HuggingFace、MLX、OpenVINO、TensorRT、Ollama、ONNXなどを共通driver契約へ収める。backend固有libraryは遅延importし、scenario終了後にmodelをunloadして次構成のmemory feasibilityを保つ。\n\n量子化はFP16、INT8、INT4を対象とし、主characterizationではbitsandbytes weight-onlyを使う。圧縮率から速度向上を仮定せず、各device上の実kernel経路を直接profileする点が重要である。"},
+      {"name":"制約付き構成選択","description":"profile tableからまずVRAM不足やモダリティ不一致を除外し、特にpeak memoryは他指標と交換しないhard constraintにする。残った候補だけをsolverへ渡すため、実行不能構成が高いaccuracyで選ばれることを防ぐ。\n\n代表solverは精度、latency、energyの正規化指標へ利用者weightを付けた効用を最大化するILPである。solver interface自体は交換可能で、greedyやrandom searchも利用でき、Flask UIが制約と設計空間を可視化する。"}
+    ],
+    "system_design":"全体は設定・orchestration、モダリティdriver、platform profiler、profile aggregation、configuration selectorの層に分かれる。benchmark suiteは有効なmodel×scenario×device×quantizationを順次実行し、pre-flight memory checkで実行不能構成を除外し、各runのsummaryを統一CSVへ集約する。\n\naccuracy側はタスクごとにdataset、入力整形、metricをscenarioとして分離し、open-ended taskにはQwen2.5-32B-Instructによるoffline judgeも用意する。性能測定とtask semanticsを分離することで、同じhardware instrumentationをLLM・VLM・TSFMへ再利用する。"
+  },"reservation":{"claim_id":"claim-05dcd349efb11788a6f85507","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
