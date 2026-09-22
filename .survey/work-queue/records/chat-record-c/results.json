@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-cb84a638146b933040620510",
-  "job_id": "job-research-6f4aa4cc9993f8fd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-cb84a638146b933040620510",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-cb84a638146b933040620510","job_id":"job-research-6f4aa4cc9993f8fd","data":{"overview":"提案法は追加微調整なしでNLLB-200の専門家を80%削除し、単一32GB V100へ収める。53言語の最終テストでは言語別固定層枝刈りの平均chrF++が35.46で、完全54.5Bモデル35.74との差は0.28、3.3B密モデル34.64を0.82上回る。速度面では1 GPU枝刈り版が172語/秒で、4 GPU完全版156語/秒と同程度以上となり、4 GPU枝刈り版は299語/秒まで向上する。専門家集合の類似度は同じ出力言語のデコーダで68〜87%、異なる出力言語では13〜39%となり、言語固有専門家の存在を支持する。","key_results":[{"metric":"専門家削減率","value":"最大80%","baseline":"NLLB-200 54.5B全専門家","condition":"追加微調整なし、言語別重要度枝刈り","interpretation":"複数GPUを必要とする専門家重みの大半を対象言語では省ける。"},{"metric":"53言語平均chrF++","value":"35.46","baseline":"完全54.5B: 35.74、3.3B密モデル: 34.64","condition":"80%枝刈り、言語別、重要度指標、単一GPU","interpretation":"完全モデルとの差0.28に抑えながら密モデルより0.82高い。"},{"metric":"推論速度","value":"1 GPU枝刈り172語/秒、4 GPU枝刈り299語/秒","baseline":"完全54.5Bは4 GPU 156語/秒、8 GPU 195語/秒","condition":"FLORES valid、29言語→英語","interpretation":"メモリ削減だけでなく、4 GPUでは完全モデル比約1.9倍、単一GPUでも4 GPU完全版に近い速度を得る。"},{"metric":"デコーダ専門家類似度","value":"同一出力言語68〜87%、異なる出力言語13〜39%","baseline":"75%枝刈り時の選択専門家集合","condition":"Jaccard類似度","interpretation":"デコーダ専門家が出力言語に強く依存することを示す。"},{"metric":"75%枝刈り平均chrF++","value":"重要度+全体しきい値35.09","baseline":"完全モデル35.07","condition":"30言語、言語対統計","interpretation":"適切な専門家選択なら75%削減でも平均品質を維持できるが、実装上は層別固定方式の方が扱いやすい。"}],"negative_results":"全言語共通の枝刈りは言語別・言語対別より品質が低く、80%枝刈りでは密モデルを下回る場合がある。全体しきい値方式は層ごとの保持数が可変で再構築が必要なうえ、高枝刈り率で過剰生成に敏感である。80%時のspBLEU低下は全体しきい値で1.75、固定層別で0.53と差があり、枝刈り後に翻訳が反復・言い換え・軽い幻覚を続ける例が観測された。","interpretation":"効果の核心は、混合専門家モデルの総容量すべてが一つの言語対に必要ではないことを実測し、その偏りを配備時のメモリ削減へ変換した点にある。エンコーダは入力言語表現を広く担うため比較的多く残し、デコーダは出力言語に強く特化するためより積極的に削れる。言語別統計は言語対別と同等品質ながら構成数を抑えられ、実運用上の折衷となる。","quality_impact":"chrF++では80%枝刈りでも完全モデルとの差が小さいが、spBLEUでは過剰生成の影響がより大きく見える。著者らは翻訳自体は初め正しくても、その後に反復や言い換えが続く稀な失敗を確認しており、単一指標だけで無損失と解釈すべきではない。"},"reservation":{"claim_id":"claim-cb84a638146b933040620510","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
