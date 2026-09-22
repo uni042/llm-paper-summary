@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1338966144636293379a0970","job_id":"job-research-d4390f65b198912f","data":{"overview":"Mixtral-8x7Bの50%非構造化疎性ではMoE-PrunerのWikiText perplexityは4.68で、SparseGPT 4.99、Wanda 4.97より低い。9 zero-shot平均は元69.16に対しMoE-Pruner 67.23、SparseGPT 66.27、Wanda 65.90。1000 C4 samplesでexpert-wise distillationすると68.40まで回復し、元性能の約99%を保持する。2:4 sparsityでもMixtral-8x7B perplexity 5.88でSparseGPT 7.09、Wanda 6.98を上回る。Mixtral-8x22B 50%では3.64でSparseGPT 4.19、Wanda 3.97。校正2 samplesでもperplexity 4.95を維持し、高pruning ratioではWandaが70%で破綻する一方MoE-Prunerはより安定する。","key_results":[{"metric":"Mixtral-8x7B WikiText perplexity","value":"4.68 at 50% sparsity","baseline":"SparseGPT 4.99; Wanda 4.97; pretrained 3.84","condition":"128 C4 calibration sequences; one-shot unstructured pruning","interpretation":"router weightを重要度へ入れるだけでdense-LLM pruning baselinesより再構成品質を改善する。"},{"metric":"9-task zero-shot average before distillation","value":"67.23","baseline":"pretrained 69.16; SparseGPT 66.27; Wanda 65.90","condition":"Mixtral-8x7B, 50% unstructured sparsity","interpretation":"retrainingなしでも既存one-shot pruningより性能低下を小さくする。"},{"metric":"9-task zero-shot average after expert-wise KD","value":"68.40 (~99% of 69.16 original)","baseline":"pruned MoE-Pruner 67.23","condition":"1000 C4 samples; 3 epochs; expert-wise MSE + CE","interpretation":"少量蒸留で枝刈りによる性能差の大半を回復する。"},{"metric":"2:4 semi-structured perplexity","value":"5.88","baseline":"SparseGPT 7.09; Wanda 6.98","condition":"Mixtral-8x7B","interpretation":"hardware-friendly N:M sparsityでもrouter-aware metricの利点が残る。"},{"metric":"Mixtral-8x22B 50% perplexity","value":"3.64","baseline":"SparseGPT 4.19; Wanda 3.97; pretrained 2.83","condition":"base model, 50% sparsity","interpretation":"モデル規模が大きい場合にも既存法との差を維持する。"}],"negative_results":"one-shot pruning単独では元Mixtral-8x7Bのzero-shot平均69.16から67.23へ低下し、50% sparsityで完全な無損失圧縮ではない。WikiText perplexityも3.84から4.68へ悪化する。高疎性では全方式が難しく、蒸留には16 H100を用いるfull-parameter fine-tuningが必要なため、headlineの99%保持は完全なtraining-free結果ではない。","interpretation":"MoE-Prunerはexpertを丸ごと削るのではなく、routerが実際に重要視するtoken-expert経路をweight importanceへ反映して各expert内部を疎化する。upcycling由来でexpert利用が均衡したMixtralではこの粒度が適しており、router情報はactivation normだけでは区別できないexpertごとの寄与を補う。distillationは圧縮法そのものとは別の回復段階として扱う必要がある。","quality_impact":"50% sparsityでzero-shot性能を約97.2%保持し、蒸留後は約98.9%まで回復する。2:4や高pruning ratioでもbaselineより安定するが、実タスク品質はMixtralと9 zero-shot tasks中心であり、長文脈やgeneration preferenceなどは未評価。"},"reservation":{"claim_id":"claim-1338966144636293379a0970","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-5f92f084b6b64d222787df20",
+  "job_id": "job-research-3611857c9c7fea67",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5f92f084b6b64d222787df20",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
