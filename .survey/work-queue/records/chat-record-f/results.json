@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6cd2c2eb6d8d0d8116429b11","job_id":"job-research-9b33865bddc54a07","data":{"overview":"GateProはscratch pretrainingの100B-token初期から改善を示し、CTでもSeed-MoE-0.7B/7B総合51.92→52.55、1.3B/13Bで63.95→64.88へ改善する。OLMoE-1B/7Bでも400B tokens時に総合61.8→62.5。expert utilization分析では128-expert Layer 7でunused expertsを20まで減らすのにbalance loss併用GateProは約1000 steps、baselineは約2000 stepsで、Layer 14でも約1500対3000 stepsとなる。","key_results":[{"metric":"0.7B/7B MMLU-Pro @100B","value":"16.9%","baseline":"14.1%","condition":"scratch pretraining","interpretation":"学習初期から+2.8pt。"},{"metric":"0.7B/7B GSM8K @500B","value":"45.0%","baseline":"43.0%","condition":"scratch pretraining","interpretation":"長期training後も+2.0pt。"},{"metric":"1.3B/13B MMLU-Pro @1.2T","value":"31.6%","baseline":"30.6%","condition":"scratch pretraining","interpretation":"scaleを上げても+1.0pt。"},{"metric":"0.7B/7B CT overall","value":"52.55%","baseline":"51.92%","condition":"MMLU-Pro/MMLU/BBH/HellaSwag/GSM8K/MBPP","interpretation":"+0.63pt。GSM8Kは63.3→65.2。"},{"metric":"1.3B/13B CT overall","value":"64.88%","baseline":"63.95%","condition":"same six benchmarks","interpretation":"+0.93pt。GSM8K 77.7→79.7、MBPP 56.4→58.3。"},{"metric":"OLMoE overall @400B","value":"62.5%","baseline":"61.8%","condition":"OLMoE-1B/7B original architecture","interpretation":"別MoE architectureでも+0.7pt。"},{"metric":"unused expert activation, Layer 14","value":"約1500 stepsで128→20","baseline":"約3000 steps","condition":"balance lossあり、128 experts","interpretation":"深層でexpert activationを約2倍速く進める。"}],"negative_results":"改善は全指標で一様ではない。0.7B/7B CTではMMLUが62.2から62.1へ0.1pt低下し、HellaSwagは66.4で同値、1.3B/13B CTのBBHも62.5で同値である。主な品質差は0.4〜2pt程度で、seed分散や統計的有意性は本文で十分報告されない。またGateProはexpert実行数k自体を減らさないため、推論FLOPs削減手法ではない。","interpretation":"効果はload balanceだけでなく、似たgate方向を持つexpertの共選択を局所的に抑えることで、学習初期からより多くのexpertへ異なるtokenを流し、specialization形成を速める点にある。balance lossとの併用でさらにunused expertが早く減るため両者は補完的である。hot-swap後にも一部改善が残ることは、単なる瞬間的logit補正ではなくtraining dynamicsを変えることを支持する。","quality_impact":"全体平均は一貫して小幅改善するが、個別taskには同値・微減もある。性能向上の代わりに追加parameterや追加expert forwardを導入しない点が実務上の利点である。"},"reservation":{"claim_id":"claim-6cd2c2eb6d8d0d8116429b11","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-900cad5c6178df049a8d9dec",
+  "job_id": "job-research-6e36f8b25c1d84c6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-900cad5c6178df049a8d9dec",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6cd2c2eb6d8d0d8116429b11","job_id":"job-research-9b33865bddc54a07","data":{"canonical_id":"arXiv:2510.13079","arxiv_id":"2510.13079","doi":"10.48550/arXiv.2510.13079","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models","summary":"GateProは、MoEで機能的に似た専門家が同時選択される冗長性を、追加学習パラメータなしで抑えるルーティング機構である。各層のゲート重み行列から専門家間余弦類似度を計算し、各専門家の最類似相手との局所競争で現在トークンへのゲートlogitが弱い側へ負のペナルティを与えてからtop-kを選ぶ。Seed-MoE 7B/13B級、OLMoE、128/256 experts、100B〜1.2T tokensで評価し、継続学習では7B級総合51.92→52.55、13B級63.95→64.88、OLMoE 61.8→62.5を報告する。","list_summary":"ゲート重みが最も似る専門家同士をトークンごとに局所競争させ、追加パラメータなしで冗長な同時活性化を抑えて専門家多様性とモデル品質を改善する。","authors":["Chen Zheng","Yuhang Cai","Deyi Liu","Jin Ma","Yiyuan Ma","Yuan Yang","Jing Liu","Yutao Zeng","Xun Zhou","Siyuan Qiao"],"authors_affiliations":"ByteDance Seed; UC Berkeley","published":"2025-10-15","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv:2510.13079v1","lineage":"適応的専門家計算 / MoE routing / expert diversity / parameter-free optimization","topics":["専門家選択多様性","局所競争","ゲート類似度","MoEルーティング","負荷分散","学習効率"],"importance":"既存のload-balancing lossがtoken配分だけを均すのに対し、同時選択されるexpertの機能重複を直接抑え、特に学習初期・深層で未使用expertの活性化を速める。追加parameterがなく学習途中で有効/無効を切替可能。","implementation":"標準top-k routerへゲート類似度とlogit penaltyを追加するだけ。類似度行列はO(N^2 d)、tokenごとの競争はO(N)。公式コードURLは一次PDFでは確認できない。","hardware_evaluation":"Seed-MoE-0.7B/7B、1.3B/13Bを64 GPUs（8 nodes）で学習。FSDPとFlashAttentionを使用。OLMoE-1B/7Bでも評価。","quality_effect":"pretraining/CT/OLMoEで概ね改善するが全指標単調改善ではなく、7B CTのMMLUは62.2→62.1、HellaSwagは66.4で同値。","source":"https://arxiv.org/abs/2510.13079","sources":["https://arxiv.org/abs/2510.13079","https://arxiv.org/pdf/2510.13079"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"arXiv v1一次PDF参考文献節","references_total":39},"reservation":{"claim_id":"claim-6cd2c2eb6d8d0d8116429b11","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-900cad5c6178df049a8d9dec",
+  "job_id": "job-research-6e36f8b25c1d84c6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-900cad5c6178df049a8d9dec",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
