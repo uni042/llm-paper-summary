@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-3e625f867ada30709f9d971c",
+  "job_id": "job-research-52d0317097624bef",
+  "status": "blocked",
+  "reason": "Primary-source full-text retrieval was attempted through arXiv and the available public preprint mirror. The arXiv HTML/PDF endpoints were unavailable to the retrieval environment, while ResearchGate exposed the full preprint but its extracted body text was font-encoded/garbled across the method and evaluation sections, preventing reliable full-paper reading. Search results and model/code pages were usable only as supporting metadata/abstract evidence. Per workflow, no five-slot record was reconstructed from secondary summaries or unreadable extraction; retry when a clean primary-source rendering is available."
+}
