@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-b333e241d03a39da290b4df3",
+  "job_id": "job-research-a88935db522d5bcc",
+  "claim_id": "claim-b333e241d03a39da290b4df3",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely retrieved through the authoritative routes on this retry. Official arXiv HTML/PDF endpoints for arXiv:2608.07964 return DisabledError. The authors' official EasyInfra repository confirms ICML 2026 acceptance and links OpenReview id skvrwTDx3m, but both the OpenReview forum and PDF routes are blocked by browser verification in this environment. No five-slot record was reconstructed from third-party copies.",
+  "blocked_at": "2026-09-22T00:36:30Z",
+  "retrieval_evidence": [
+    "Official arXiv HTML and PDF routes returned DisabledError.",
+    "Author repository yize-wu/EasyInfra links the ICML 2026 OpenReview record skvrwTDx3m.",
+    "OpenReview forum and PDF routes redirected to browser verification and did not expose the manuscript body."
+  ]
+}
