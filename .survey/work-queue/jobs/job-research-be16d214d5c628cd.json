@@ -33,6 +33,9 @@
   "last_blocked_at": "2026-09-21T04:45:02+00:00",
   "retry_queued_at": "2026-09-21T14:09:55+00:00",
   "repair_required": true,
-  "validation_error": "ValueError: paper quality gate failed: 手法構成要素#1 の段落数 1 < 2; 手法構成要素#2 の段落数 1 < 2; 手法構成要素#3 の段落数 1 < 2; 手法構成要素#4 の段落数 1 < 2; 手法構成要素#5 の段落数 1 < 2; 手法構成要素#6 の段落数 1 < 2; 手法構成要素#7 の段落数 1 < 2",
-  "last_validation_failed_at": "2026-09-22T02:06:37+00:00"
+  "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
+  "last_validation_failed_at": "2026-09-22T02:08:48+00:00",
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism"
+  ]
 }
