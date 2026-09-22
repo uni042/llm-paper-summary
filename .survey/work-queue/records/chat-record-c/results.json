@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-62c5be1e09a4975e14d818b4",
+  "attempt_id": "attempt-af6c1579f2d7e80730528c3f",
   "job_id": "job-research-a4042c7c7ed57c9a",
   "data": {
     "overview": "20%枝刈り時、C-PRUNEは両モデルでランダム枝刈り、Seer Prune、Group&Mergeより高い総合性能を保つ。DeepSeek-V2-Liteでは15.7Bから13.0Bへ縮小してMMLU平均45.58から44.94と小幅低下に留まり、数学は32.21から33.56へ上がる。一方でGSM8Kは30.94から26.45、HumanEvalは32.30から18.90へ低下する。Qwen1.5-MoE-A2.7Bでは14.3Bから11.8Bへ縮小し、MMLU平均40.06、GSM8K 39.40、HumanEval 32.90で、未枝刈り47.16平均からは低下するが比較方式の平均30.45以下を上回る。",
@@ -55,7 +55,7 @@
     "quality_impact": "パラメータ容量は確実に減るが、推論品質の保持度はモデルとタスクで異なる。DeepSeekのMMLUではほぼ維持できる一方、コード生成やQwenの数学推論では明確な低下がある。したがって本方式は無損失圧縮ではなく、領域ごとの性能許容幅を測りながら適用する構造的枝刈りである。"
   },
   "reservation": {
-    "claim_id": "claim-62c5be1e09a4975e14d818b4",
+    "claim_id": "claim-af6c1579f2d7e80730528c3f",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
