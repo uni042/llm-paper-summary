@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ac17b6b84524962e53346559","job_id":"job-research-3bf50f659a80056e","data":{"hardware":"主評価はモデル精度と圧縮設定の比較であり、専用推論ハードウェア上のエンドツーエンド速度を主要指標にはしていない。大規模MoEを実際に圧縮して下流課題を評価する実験で、シミュレーションだけの評価ではない。","software":"公開実装はSamsungSAILMontreal/ream。専門家重要度計算、ルータ依存類似度、ハンガリー法によるニューロン整列、層ごとの逐次統合を実装する。","methodology":"Qwen3-30B-A3B-Instruct-2507、Qwen3-Next-80B-A3B、GLM-4.5-Airなど複数のMoEを対象に、元モデル、REAP、HC-SMoEなどの枝刈り・統合方式と比較する。代表的な設定では128専門家を96または64専門家へ削減相当まで統合する。校正データは一般文C4、数学、コードThe-Stack-Smolの比率を10通り変え、選択式質問応答をMC、数学・コード等の生成課題をGENとして集約する。MCとGENを同時に見るパレート前線とハイパーボリューム、校正比率とのPearson相関、平均プレロジット表現の数値ランクとの相関も分析する。アブレーションでは重要度を単純頻度へ置換した場合や、ルータ確信度を類似度から外した場合を比較する。","scope":"実機上の大規模モデル圧縮と下流評価だが、結論は評価したMoE、専門家削減率、校正データ混合に依存する。専門家数を減らすことで重み容量は減るものの、GPU遅延、スループット、CPU/SSDオフロード量、専門家キャッシュ命中率を直接測るシステム評価ではない。校正データが実運用分布と異なる場合の一般化には注意が必要で、特にMCとGENで最適混合比が異なる。"},"reservation":{"claim_id":"claim-ac17b6b84524962e53346559","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c1687a55baa06d3477e9780a",
+  "job_id": "job-research-af08dd730875cebb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c1687a55baa06d3477e9780a",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ac17b6b84524962e53346559","job_id":"job-research-3bf50f659a80056e","data":{"overview":"REAMは専門家を削除せず代表へ統合することで、特に25%削減相当の96専門家条件で元モデルに近い性能を維持する。Qwen3-30B-A3Bでは代表条件のGENが69.8で元モデル70.9との差1.1点、Qwen3-Next-80B-A3Bでは校正条件によってGEN 72.9で元モデル72.9に並ぶ例がある。一方、圧縮後性能は校正データの一般文・数学・コード比率へ強く依存し、MCとGENの最適点は一致しない。実務上は単一平均値だけで圧縮設定を決めず、用途に応じたパレート前線上の設定を選ぶ必要がある。","key_results":[{"metric":"Qwen3-30B-A3B生成課題集約値","value":"69.8","baseline":"元モデル70.9","condition":"128専門家から96専門家へ削減相当のREAM統合、代表的校正条件","interpretation":"25%専門家削減相当でも生成性能低下を1.1点に抑える例を示す。"},{"metric":"Qwen3-Next-80B-A3B生成課題集約値","value":"72.9","baseline":"元モデル72.9","condition":"96専門家相当、コード寄りを含む適切な校正混合","interpretation":"大規模MoEでも校正条件が合えば元モデル並みの生成性能を保つ例がある。"},{"metric":"C4比率とMC性能の相関","value":"REAM r=0.95、REAP r=0.96","baseline":"10種類の校正混合比","condition":"96専門家条件の校正データ分析","interpretation":"一般文校正を増やすほど選択式課題を保持しやすい。"},{"metric":"C4比率とGEN性能の相関","value":"REAM r=-0.82","baseline":"10種類の校正混合比","condition":"96専門家条件","interpretation":"MCを良くする一般文寄り校正が生成課題を悪化させうるため、用途間トレードオフがある。"},{"metric":"重要度アブレーション","value":"平均性能 -8.7点","baseline":"完全版REAM","condition":"重要度を単純な専門家利用頻度へ置換","interpretation":"どの専門家を代表として保護するかの重要度設計が性能保持の主要因である。"},{"metric":"ルータ重み付き類似度アブレーション","value":"GEN -11.5点","baseline":"完全版REAM","condition":"類似度からルータ確信度による重み付けを除去","interpretation":"実際の利用文脈を反映した専門家類似度が統合先選択に重要である。"},{"metric":"プレロジット数値ランクと平均性能の相関","value":"r=0.95","baseline":"10種類の校正混合比","condition":"REAM、96専門家条件","interpretation":"全下流課題を毎回測らず圧縮設定を選ぶ代理指標候補になる。"}],"negative_results":"校正データの一般文比率を増やすとMCは改善しやすい一方でGENは悪化し、単一の校正構成が全用途で最良にはならない。64専門家まで減らす50%削減相当では96専門家条件より情報干渉が増え、元モデルとの差が広がる。統合処理は枝刈りより複雑で、層ごとの再前向き計算とニューロン整列を必要とする。","interpretation":"REAMの利点は単なる平均統合ではなく、重要度上位を代表として守り、ルータが実際に使う文脈を反映した類似度で低重要度専門家を割り当て、ニューロン対応を整列し、前段圧縮後の分布ずれを次層へ反映する一連の設計から生じる。校正データ構成が代表選択と統合関係を変えるため、圧縮は用途非依存の一回処理ではなく、想定課題分布に合わせて調整する必要がある。","quality_impact":"REAMは近似圧縮であり無損失方式ではない。25%削減相当では元モデルに近い品質を保つ例があるが、圧縮率や校正分布によって低下する。専門家数削減はメモリ容量削減につながる一方、推論システム全体の速度改善は本評価から直接保証されない。"},"reservation":{"claim_id":"claim-ac17b6b84524962e53346559","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-c1687a55baa06d3477e9780a",
+  "job_id": "job-research-af08dd730875cebb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c1687a55baa06d3477e9780a",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
