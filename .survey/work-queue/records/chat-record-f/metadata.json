@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-36efead2bf26ee8e78c0fbce",
   "job_id": "job-research-92d92d3583bf57da",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-36efead2bf26ee8e78c0fbce",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2608.30567",
+    "arxiv_id": "2608.30567",
+    "doi": "10.48550/arXiv.2608.30567",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AI", "cross_list": []},
+    "title": "TuringLLM: Efficiently Scaling Foundation Models Toward Physical AI",
+    "summary": "Turing-20B-A2Bは総20BパラメータのMoEで、トークンごとに必要なエキスパート数を変える分位点ルーティング（Quantile Routing）により平均約8個、約2Bパラメータだけを活性化する。各エキスパート固有のスコア閾値を負荷統計から更新し、平均計算量を固定しながら難しいトークンへ多く、予測しやすいトークンへ少ない計算を配る。配置時のプリフィルでは各エキスパート容量を上限化して最も高スコアの割当だけを残し、長文入力での実行ばらつきを抑える。さらに20層のLightning Attentionと4層の全注意を組み合わせ、128Kネイティブ文脈、YaRNで512Kまで拡張する。",
+    "list_summary": "平均約8エキスパートの計算予算を保ったままトークンごとに動的top-kを変え、分位点追跡で負荷分散し、プリフィル容量制約で長文MoE実行を規則化する20B-A2Bモデル。",
+    "authors": ["Foundation Model Team, Xpeng Inc."],
+    "authors_affiliations": "Xpeng Inc.",
+    "published": "2026-08-31",
+    "publication": "Technical Report; arXiv:2608.30567 v1, 2026-08-31",
+    "publication_type": "Technical Report",
+    "publication_status": "Preprint",
+    "lineage": "dynamic top-k MoE routing / load-balanced routing / long-context hybrid attention / physical AI foundation models",
+    "topics": ["MoE", "動的top-k", "Quantile Routing", "負荷分散", "容量制約", "長文脈", "Lightning Attention"],
+    "importance": "固定top-kを外して同じ平均エキスパート予算をトークン難度に応じて再配分し、学習時の負荷分散と配置時の実行規則性を同じMoE設計で両立した実モデル例である。",
+    "hardware_evaluation": "主学習は512基のNVIDIA H800で約22日。推論効率評価もH800を用い、MoEモジュールの16K〜256Kプリフィルを単一GPUローカル実行で比較する。",
+    "quality_effect": "Quantile Routingは同じ平均8エキスパート予算のLoss-Free Routingより8ベンチマーク中7件で高い初期学習性能。容量係数1.25のプリフィル制約は一部能力を低下させるが、MoEモジュール平均1.53倍高速化との交換条件になる。",
+    "source": "https://arxiv.org/abs/2608.30567",
+    "sources": ["https://arxiv.org/abs/2608.30567", "https://arxiv.org/pdf/2608.30567"],
+    "code": "",
+    "implementation": "技術報告はQuantile Routing、容量制約付きプリフィル、融合MoE実行の詳細を記載するが、本文で一般公開コードURLは確認できない。",
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary-reference-section",
+    "references_total": 54
+  },
+  "reservation": {"claim_id": "claim-36efead2bf26ee8e78c0fbce", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
