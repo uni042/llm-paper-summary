@@ -9,65 +9,30 @@
     "arxiv_id": "2206.00277",
     "doi": null,
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.AI"
-      ]
-    },
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.AI"]},
     "title": "Task-Specific Expert Pruning for Sparse Mixture-of-Experts",
     "summary": "大規模な混合専門家モデルは事前学習では容量増加の恩恵が大きい一方、個別の下流タスクでは一部専門家しか大きく寄与せず、推論時の専門家並列と装置間通信が無駄になりやすい。本研究は微調整を複数の訓練窓へ分け、各窓でルーターのゲート値から専門家の熟達度を蓄積し、低い専門家を段階的に削除する。微調整の半分までに各混合専門家層を1専門家へ縮小し、残り半分を選ばれた専門家の最適化へ使う。6種類の下流タスクで混合専門家事前学習の利得を99.3%保持し、MNLIで約2倍、SQuADで1.28倍の推論高速化を報告する。",
     "list_summary": "下流タスク微調整中のゲート寄与から専門家を段階的に1つまで削り、混合専門家事前学習の利得をほぼ保った密モデルへ変換する方式。",
-    "authors": [
-      "Tianyu Chen",
-      "Shaohan Huang",
-      "Yuan Xie",
-      "Binxing Jiao",
-      "Daxin Jiang",
-      "Haoyi Zhou",
-      "Jianxin Li",
-      "Furu Wei"
-    ],
+    "authors": ["Tianyu Chen", "Shaohan Huang", "Yuan Xie", "Binxing Jiao", "Daxin Jiang", "Haoyi Zhou", "Jianxin Li", "Furu Wei"],
     "authors_affiliations": "Beihang University; Institute of Acoustics, Chinese Academy of Sciences; Microsoft Research; Microsoft STCA",
     "published": "2022-06-02",
     "publication": "arXiv:2206.00277v2",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "MoE inference / task-specific expert pruning / sparse-to-dense conversion",
-    "topics": [
-      "混合専門家モデル",
-      "専門家枝刈り",
-      "微調整",
-      "推論高速化",
-      "疎密変換"
-    ],
+    "topics": ["混合専門家モデル", "専門家枝刈り", "微調整", "推論高速化", "疎密変換"],
     "importance": "タスク固有の専門家寄与を微調整中に測定し、各混合専門家層を単一専門家まで縮小して専門家並列通信を除去する初期の直接的枝刈り研究。",
     "hardware_evaluation": "推論速度をNVIDIA V100 32GBでMNLIとSQuADについて測定。",
     "quality_effect": "GLUE平均は密モデル85.32、全専門家MoE 86.80、提案eager pruning 86.16。SQuAD2.0 F1は79.77、80.59、80.40。6種類のタスク全体でMoE利得の99.3%を保持すると報告。",
     "source": "https://arxiv.org/abs/2206.00277",
-    "sources": [
-      "https://arxiv.org/abs/2206.00277",
-      "https://arxiv.org/pdf/2206.00277"
-    ],
+    "sources": ["https://arxiv.org/abs/2206.00277", "https://arxiv.org/pdf/2206.00277"],
     "code": "",
     "implementation": "Switch Transformer base型の事前学習モデルを用い、各MoE層32専門家から微調整中に動的しきい値で削除し、半分の訓練時点で1専門家へ強制確定する一回通過型微調整。",
     "last_checked": "2026-09-22",
-    "references": [
-      "arXiv:2112.10684",
-      "arXiv:2204.09179",
-      "arXiv:2204.08396",
-      "BERT",
-      "GShard",
-      "Switch Transformer",
-      "arXiv:2110.01786"
-    ],
+    "references": [],
     "references_checked_at": "2026-09-22",
     "references_source": "primary-reference-section",
     "references_total": 35
   },
-  "reservation": {
-    "claim_id": "claim-386d871abade4a6686fd7869",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-386d871abade4a6686fd7869", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
