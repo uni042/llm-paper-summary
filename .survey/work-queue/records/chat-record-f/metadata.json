@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e0aa79e0bd81154b33f04a71","job_id":"job-research-98b9431cd6bf114a","data":{"canonical_id":"arXiv:2510.14436","arxiv_id":"2510.14436","doi":"10.48550/arXiv.2510.14436","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"MergeMoE: Efficient Compression of MoE Models via Expert Output Merging","summary":"MergeMoEは、従来のエキスパート統合をパラメータ平均ではなく『元のMoE出力を圧縮後出力で近似する問題』として再定式化する。クラスタ割当行列と出力混合行列を順伝播へ挿入した等価表現を導き、使用頻度による重み付けが近似誤差の下界を最小化することを示す。さらにSwiGLU内部の次元圧縮行列のうち線形に解ける部分を較正入力から最小二乗の閉形式で求め、残りは類似エキスパートの重み付き平均とする。Qwen3-30B-A3Bを25Bへ圧縮した場合、7課題中6課題で比較法最高となり、Qwen1.5 14B→10BではM-SMoEに対してWinoGrande +1.50、HellaSwag +2.71、SQuAD +1.41、MRPC +2.45ポイントを得る。","list_summary":"エキスパート統合を出力近似問題として行列表現し、使用頻度重みの理論最適性と最小二乗による内部圧縮行列を組み合わせて、同圧縮率の既存統合法を改善する。","authors":["Ruijie Miao","Yilun Yao","Zihan Wang","Zhiming Wang","Bairen Yi","Lingjun Liu","Yikai Zhao","Tong Yang"],"authors_affiliations":"Peking University; ByteDance","published":"2025-10-16","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1 (2025-10-16)","lineage":"MoE compression / expert merging / output approximation / least-squares compression","topics":["MoE圧縮","エキスパート統合","出力近似","最小二乗法","構造化圧縮"],"importance":"経験則だったエキスパート平均をMoE出力近似として数理化し、どの誤差がクラスタリング由来でどの誤差が統合内部の次元圧縮由来かを分離する。既存M-SMoEの使用頻度重みに理論根拠を与えつつ、閉形式の圧縮行列で残差を減らす。","implementation":"各層で使用頻度上位をクラスタ中心とし、上向き・ゲート行列の連結類似度で割当。クラスタ内は相対使用頻度で平均し、較正入力から最小二乗で下向き側圧縮行列を計算する。共有エキスパートとは独立にrouted expertだけ圧縮可能。","hardware_evaluation":"統合処理は単一NVIDIA H20 96GB、評価は2×NVIDIA H20。Qwen1.5では多数層を圧縮しても統合処理は1分以内。","quality_effect":"Qwen3 30B→25B、Qwen1.5 14B→10B、DeepSeekMoE 16B→12Bで同圧縮率のAverage、ZipIt、M-SMoEを概ね上回る。ただし較正sampleが32未満ではWinoGrandeがほぼランダム水準へ崩れる。","source":"https://arxiv.org/abs/2510.14436","sources":["https://arxiv.org/abs/2510.14436","https://arxiv.org/pdf/2510.14436"],"code":null,"last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary manuscript references section","references_total":35},"reservation":{"claim_id":"claim-e0aa79e0bd81154b33f04a71","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-dae1b1b9e1312a1993ce5350",
+  "job_id": "job-research-6728332ce11cd1ed",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dae1b1b9e1312a1993ce5350",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

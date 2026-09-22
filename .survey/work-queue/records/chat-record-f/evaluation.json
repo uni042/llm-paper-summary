@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e0aa79e0bd81154b33f04a71","job_id":"job-research-98b9431cd6bf114a","data":{"hardware":"統合処理は単一NVIDIA H20 96GB、下流評価は2基のNVIDIA H20で実施する。Qwen1.5の時間測定では128入力sampleを用い、対象層で60 expertを30へ減らす設定を複数層へ適用しても全処理は1分以内。","software":"対象モデルはDeepSeekMoE、Qwen1.5-MoE-A2.7B、Qwen3-30B-A3B。DCLMを用いて下流性能を評価し、主比較はM-SMoE、加えてAverageとZipItをMoE expert mergingへ適用する。Qwen3ではactive parameterが近いQwen3-4B、Qwen1.5では1.8B/4B dense modelも参照する。","methodology":"7課題はMRPC、WinoGrande、SQuAD、HellaSwag、PIQA、ARC-Easy、ARC-Challengeで、付録ではIFEvalも評価する。比較法間で同じ層、同じ圧縮率、同じ入力sample数を使う。Qwen3は30B→25B、Qwen1.5は14B→10B、DeepSeekMoEは16B→12Bの代表設定を比較する。追加実験では圧縮層数と各層expert削減数を別々に変え、較正sample数28〜128の感度、単一dataset由来sampleによる他datasetへの一般化、クラスタ誤差と統合誤差の分離ablationを行う。","scope":"複数MoE familyと7課題で同圧縮率比較を行い、単一GPU上の圧縮時間も測る。一方、論文の主眼は圧縮後の精度で、推論時の実メモリ容量・token/s・latencyのend-to-end測定は中心評価ではない。理論ではルータlogitとexpert outputの独立性など近似仮定を置き、T2/T3の非線形共同最適化は解かず重み付き平均に留める。"},"reservation":{"claim_id":"claim-e0aa79e0bd81154b33f04a71","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-dae1b1b9e1312a1993ce5350",
+  "job_id": "job-research-6728332ce11cd1ed",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dae1b1b9e1312a1993ce5350",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

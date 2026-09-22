@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e0aa79e0bd81154b33f04a71","job_id":"job-research-98b9431cd6bf114a","data":{"limitations":"理論上の使用頻度重み最適性はルータlogitとエキスパート出力の独立性、および十分多数のsampleで期待値を扱う仮定に依存する。SwiGLU内部のT2/T3は非線形性と要素積のため閉形式で最適化できず、既存の重み付き平均を残しているので全体最適解ではない。実際、統合誤差を人工的に除いたablationは通常MergeMoEよりなお高性能で改善余地がある。最小二乗T1はsample数に敏感で、32未満では性能が崩れる。主評価は精度中心で、圧縮後の実メモリ・推論処理量・遅延を体系的に測ったserving評価はない。","differences":"M-SMoEはクラスタ内の各重み行列を使用頻度で直接平均するが、MergeMoEは同じ操作を出力混合行列Bと中間次元圧縮T1/T2/T3の特殊ケースとして解釈する。その上でT1を較正sampleに対する最小二乗で置き換え、M-SMoEに残る出力近似誤差を減らす。DERNがexpert内部をニューロン級segmentへ分解して別expertへ再配置するのに対し、MergeMoEはexpert単位のcluster構造を維持しながら『何を平均すべきか』を出力保存の観点から最適化する。HEAPrのような剪定方式が低重要度単位を削除するのとも異なり、元expert群の出力を少数expertで近似する知識統合系統である。","implementation_status":"arXiv v1のプレプリント。一次PDFには公式code URLの記載が確認できないため、公開実装ありとは扱わない。圧縮処理は単一H20 96GBで実行され、Qwen1.5の代表設定ではM-SMoEより複雑でも1分以内に完了する。共有expertを持つMoEでもrouted expertが独立していればその部分だけへ適用できると説明される。","research_positioning":"Adaptive Expert Computation / Compression系統では、MergeMoEはexpert mergingの理論化を担う。M-SMoEで経験的だったクラスタリングと頻度重みを出力行列近似へ写像し、圧縮誤差をクラスタ由来と内部次元圧縮由来に分解するため、後続手法がどこを最適化すべきかを明確にする基準点になる。実務上は追加訓練を伴わず、単一GPUで短時間に大規模MoEを縮小できる一方、安定した最小二乗推定に十分な較正sampleが必要である。量子化やexpert offloadとは直交し、事前にresident parameterを減らした上で階層メモリや配置最適化と組み合わせられる。"},"reservation":{"claim_id":"claim-e0aa79e0bd81154b33f04a71","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-dae1b1b9e1312a1993ce5350",
+  "job_id": "job-research-6728332ce11cd1ed",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dae1b1b9e1312a1993ce5350",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
