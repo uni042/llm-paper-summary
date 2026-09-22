@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-e8a4a4cd78c4e22236c35816",
+  "job_id": "job-research-503df587e7eb88ec",
+  "claim_id": "claim-e8a4a4cd78c4e22236c35816",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "arXivの書誌・抄録・分類は取得できたが、この実行環境ではarXiv PDF/HTML本文を取得できない。論文タイトル・arXiv ID・著者名・所属を用いて著者配布版、公式project、公式実装等の別一次資料経路を探索したが、検証可能な本文へ到達できなかった。第三者ミラー/要約は本文の代用にせず、一時blockedとする。",
+  "retrieval_evidence": [
+    "https://arxiv.org/abs/2609.13486 — 書誌・抄録を取得、primary cs.IR / cross-list cs.CLを確認",
+    "https://arxiv.org/pdf/2609.13486 — この実行環境では本文取得不能",
+    "論文タイトル・arXiv ID・著者名で公式project/GitHub/著者配布版を探索したが一次資料全文へ到達できず",
+    "第三者ミラーには抄録・要約が存在するが5スロット根拠には不使用"
+  ],
+  "blocked_at": "2026-09-22T06:36:00Z"
+}
