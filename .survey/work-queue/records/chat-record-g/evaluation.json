@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e1881183879733d0f0a4eb0e",
-  "job_id": "job-research-6a21e987e314dd70",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e1881183879733d0f0a4eb0e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e1881183879733d0f0a4eb0e","job_id":"job-research-6a21e987e314dd70","data":{"hardware":"Production evaluationは96GB NVIDIA RTX PRO 6000で実施し、全監査対象実験で205.70 GPU-hours、one/two-GPU構成を合算して160.13 powered instance-hoursを使用する。packed-cache物理メモリ評価も同環境で行い、64K Llamaのfull cacheとCertKV 10×を比較する。","software":"PyTorch 2.8.0+cu128、Transformers 4.57.6、bfloat16を使用し、attention-row logitsはfp32で再計算する。table generatorとconfigurationはSHA-256で追跡され、anonymous code releaseに完全なenvironment exportを含める予定と記載される。","methodology":"LongBench-v2は503件すべてのaligned multiple-choice examplesを用い、Llama-3.1-8B、Qwen3-8B、Mistral-7Bで2×/4×/10×のmatched KV budgetを評価する。baselineはSnapKV、StreamingLLM、PyramidKV、Ada-KV。inference seed 42、bootstrap seed 0、B=5000で95% intervalを算出し、36 planned paired comparisonsをHolm補正する。RULERは16K〜128Kの9 model-length設定で、method間は同一sampleを共有しtask-level bootstrapを用いる。理論検証ではLlama-3.1-8B/70B、Qwen3-8B、gpt-oss-20B、Mistral-7Bを4K〜128Kで測定し、Gemma-2-9B 4Kをdescriptive controlとする。追加でtail statistic、allocator、summary、safeguardのone-factor ablation、40 GovReport文書を使うcomponent attribution、64K packed-cache物理容量を評価する。","scope":"主張は『普遍的に最高の圧縮法』ではなく、exact budgetを守るvalue-aware設計が宣言したbaseline gridでcompetitiveであること。LongBench-v2の差でHolm補正後に明確だったのはLlama 2×対PyramidKVのみで、RULER 128Kもbootstrap uncertaintyが広い。future-queryに対するtail summaryは理論上のunconditional certificateではなくobservation-window approximationである。packed prototypeはmemory accountingを検証するが、latency gainや同一budgetの他方式に対するmemory優位は示していない。"},"reservation":{"claim_id":"claim-e1881183879733d0f0a4eb0e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
