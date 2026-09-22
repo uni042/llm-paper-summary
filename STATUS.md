@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:25:09 JST**
+> 自動生成: **2026-09-22 16:28:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **295** |
 | 未claim Research job | **294** |
 | 直近24hの検証済みResearch収録 | **21** |
-| 最終検証済みResearch収録 | **09-22 16:20:36 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-22 16:20:36 JST（8分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（7時間52分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（7時間56分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -181,9 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3832810.3832865` — WAQ-LLM: Optimizing Multi-Instance LLM Deployment via Workload-Aware Queueing Model / worker `scheduled-chat-00`
-  - claim: **09-22 16:24:04 JST** / heartbeat: **—** / lease expiry: **09-22 17:54:04 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c0195175e0338a33.json`
+- `arXiv:2606.21633` — HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval / worker `scheduled-chat-00`
+  - claim: **09-22 16:28:14 JST** / heartbeat: **—** / lease expiry: **09-22 17:58:14 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3b95bafdcf04b501.json`
 
 #### Audit
 
