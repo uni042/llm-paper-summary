@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-5be0f6527b55aa80672c5522",
-  "job_id": "job-research-015600d4d42febc5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5be0f6527b55aa80672c5522",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-5be0f6527b55aa80672c5522","job_id":"job-research-015600d4d42febc5","data":{"overview":"約50%の専門家圧縮で、LorExpertsは専門家数128のQwen3-30B-A3BとGemma-4-26B-A4Bにおいて単一共有成分D2-MoEより大幅に低いパープレキシティと高い知識・推論精度を示す。Qwen3では柔らかな共活性版の約40.6%圧縮がMMLU 54.9、PPL 11.99、Gemmaでは約41.4%圧縮がMMLU 54.6、PPL 13.32となる。枝刈りFreq-PruneはGemmaのPPLや一部常識指標で優位なため全指標で勝つわけではない。BTExpertsは品質改善ではなく、共選択専門家が代表を共有する場合の理論計算を約1.9倍削減する構成である。","key_results":[{"metric":"Qwen3の圧縮品質","value":"M_soft約40.6%圧縮: PPL 11.99、MMLU 54.9、ARC-C 39.1","baseline":"非圧縮 PPL 8.50・MMLU 77.8・ARC-C 52.6、D2-MoE PPL 23.58・MMLU 45.7・ARC-C 40.8","condition":"Qwen3-30B-A3B、WikiText-103とLM Evaluation Harness","interpretation":"非圧縮との差は残るが、単一共有成分分解よりPPLとMMLUを大きく改善し、多専門家で局所代表が有効である。"},{"metric":"Gemmaの圧縮品質","value":"M_soft約41.4%圧縮: PPL 13.32、MMLU 54.6、ARC-C 50.1","baseline":"非圧縮 PPL約7.15・MMLU 74.3・ARC-C 64.5、D2-MoE PPL 21.59・MMLU 39.0・ARC-C 37.4","condition":"Gemma-4-26B-A4B","interpretation":"D2-MoEより知識・推論能力を保持するが、Freq-PruneのPPL 11.57や一部常識指標には及ばず、全面的優位ではない。"},{"metric":"高頻度専門家保護の効果","value":"Qwen3 MMLU 42.4→53.7","baseline":"WS-FrobからWS-Frob+protK8","condition":"約50%専門家圧縮","interpretation":"頻繁に選ばれる専門家を完全精度で保護する非対称予算が品質保持に大きく寄与する。"},{"metric":"ルーティング集中度","value":"上位64/128専門家が平均94.5%のルーティング訪問を吸収","baseline":"一様なら50%","condition":"Qwen3-30B-A3B、5層、WikiText-2","interpretation":"半数程度の高頻度専門家を完全精度側へ寄せる予算配分に実測根拠がある。"},{"metric":"BTExperts理論計算削減","value":"約1.9倍","baseline":"上位2専門家を二つの完全行列積で計算","condition":"Mixtral-8x7B gate projection、rank 64、共選択専門家が同一代表を共有","interpretation":"代表行列積を一回へ償却できるが、共選択が同一クラスタに入る場合だけ有効で実測速度ではない。"},{"metric":"閉形式因子当てはめ","value":"因子当てはめ段階で約100倍少ない計算","baseline":"約500回の反復勾配更新","condition":"活性二次モーメントで白色化後に一回の一般化SVD","interpretation":"同じランク制約最適解を解析的に得られるため、校正の支配的な反復処理を大幅に短縮できる。"}],"negative_results":"BTExpertsの木構造は圧縮品質そのものを改善せず、Mixtral-8x7Bの7.5倍圧縮では再構成調整後のPPL差が木0.099、平坦0.098と雑音範囲である。GemmaではFreq-PruneがLorExpertsより低いPPLと高いWinoGrande/PIQAを示す条件があり、LorExpertsは全指標を支配しない。単一共有成分D2-MoEは専門家数が増えるほど悪化し、局所代表の必要性を裏付ける。","interpretation":"利点の中心は『似た重みを一つへ統合する』ことではなく、ルータが作る機能的コミュニティを圧縮単位にして、頻繁に使う代表へ容量を集中しつつ全専門家のアドレスを残すことにある。重み類似度と共活性は特に上向き・下向き射影でほぼ無相関なため、機能的に関連する専門家が重み空間で近いとは限らない。","quality_impact":"約40〜50%専門家圧縮でも非圧縮モデルとの差は大きく残るため無損失圧縮ではない。一方、同じ圧縮帯のD2-MoEや多くの統合・枝刈り方式より知識・推論指標を保持する。実運用では圧縮率を固定せず、論文が示す滑らかな圧縮品質前線から許容品質に応じて代表数と補正ランクを選ぶ必要がある。"},"reservation":{"claim_id":"claim-5be0f6527b55aa80672c5522","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
