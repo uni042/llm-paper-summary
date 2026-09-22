@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-368a0410c57e77f90db3d7c3","job_id":"job-research-2c335f8cbb6722b2","data":{"limitations":"回復可能な情報はドラフターが完全文脈から抽出できる範囲と、圧縮検証器が保持する基礎情報に制約される。0.6B以下のドラフターは不十分で、クロスファミリーでは語彙・ロジット空間の明示整列が必要である。検証器ロジットへのアクセスが必須なのでテキスト出力だけの商用APIには適用できない。主評価は温度0の決定的生成で、確率サンプリングへCDAを拡張する理論・実証は今後の課題。マルチモーダル回復はcaption/OCR等の変換品質にも左右される。エージェント全体の遅延にはツール実行やネットワークI/Oがあり、LLM推論短縮がそのまま全体速度向上になるとは限らない。","differences":"標準SD/EAGLE系はドラフターと検証器が同じ文脈を読み、完全文脈なら精度は保てても検証器コストを削れない。SCDは同じ圧縮文脈内のモデル容量差をロジット差で扱うため、圧縮で消えた情報を復元できない。RAPIDは短文脈ドラフターが完全文脈検証器を補助する逆向き非対称で、精度は高いが検証器の完全文脈コストを払う。AsymSpecは完全文脈ドラフター→圧縮文脈検証器という逆配置と、同一ドラフターの交差文脈差a-bを組み合わせ、圧縮検証器の速度を維持しながら精度を回復する。TriForce/MagicDec等の長文脈推測復号はKVや階層ドラフトを工夫するが、文脈情報自体を非対称に転送する目的ではない。","implementation_status":"論文はvLLMの推測復号経路にAsymSpecを実装し、Qwen3-32B/4B/1.7B/0.6B、Qwen3-VL-2B、Llama-3.3-70B/Llama-3.2-3Bで評価している。クロスモーダル版では画像をVLドラフターprefillへ渡し、視覚エンコーダ出力を要求単位でキャッシュするパッチを含む。論文は再現用ログと実装詳細を付録に記すが、一次資料本文から公開GitHubリポジトリURLは確認できなかったためコード公開済みとは断定しない。","research_positioning":"長文脈・エージェント推論の効率化を、KV削減や単純なプロンプト圧縮だけでなく『大モデルと小モデルに異なる情報量を見せる』計算配置問題として捉える研究である。特に検証器のprefillコストを減らしつつ、小型ドラフターを情報回復用サイドチャネルとして使うため、推測復号と文脈圧縮の境界に位置する。階層メモリの観点では、大型モデル側の長いKV/入力を常時保持せず、小型側だけが豊富な文脈を保持する設計として、CPU/SSDへのKV退避や文脈キャッシュと組み合わせる余地がある。ただし本論文自体はSSD/NVMeオフロードを評価しておらず、その接続は将来のシステム設計上の示唆に留まる。"},"reservation":{"claim_id":"claim-368a0410c57e77f90db3d7c3","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-f0e6afec5cf9246016c6a451",
+  "job_id": "job-research-e7435b966cd8c5e7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f0e6afec5cf9246016c6a451",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-368a0410c57e77f90db3d7c3","job_id":"job-research-2c335f8cbb6722b2","data":{"hardware":"論文は実測スループットを単一アクセラレータ上の完全文脈Ceiling比として報告し、Qwen3-32B検証器とQwen3系列ドラフターをvLLMで実行する。クロスファミリー評価ではLlama-3.3-70B-InstructとLlama-3.2-3B-Instructも使用する。本文の主結果説明では特定GPU型の記載は確認できないため、GPU型は推測しない。","software":"vLLMを拡張した推測復号実装。主検証器Qwen3-32B、テキストドラフターQwen3-0.6B/1.7B/4B（主設定4B、API-Bankでは1.7B）、マルチモーダルQwen3-VL-2B-Instruct。bf16、greedy decoding、Qwen3 thinking無効、主設定K=2、β=1.0、γ=0.5。","methodology":"能力評価はLongBenchのhotpotQA/2WikiMQA/MuSiQue各200件、MultiChallenge 271件、API-Bank Method A 200件、MathVista 587件。エンドツーエンドはGAIA 165件とSimpleQA 500件をsmolagentsで評価する。検証器だけに圧縮入力を与え、LongBenchは8.1倍圧縮要約、MultiChallengeは過去ターン要約で7.6倍、API-BankはAPI名・署名のみで7.4倍、MathVistaはcaption+OCR、GAIA/SimpleQAはReAct文脈を各ターン圧縮する。比較は圧縮のみFloor、完全文脈Ceiling、標準SD、SCD、逆非対称RAPID。精度に加え、Ceiling比の実測トークンスループットとprefill FLOPsを測り、K、β、γ、発散尺度、圧縮器、ドラフターサイズ、モデル系列をアブレーションする。","scope":"利得は圧縮で重要情報が失われる場合に大きく、MultiChallengeのようにFloorとCeiling差が約3点しかない近損失圧縮では改善しない。greedy生成を対象とし、独自の受理・融合により厳密なターゲット分布保存はしない。大規模検証器のロジットへアクセスできることが必要で、生成テキストしか返さない閉鎖APIには適用できない。エンドツーエンドの壁時計時間にはツール・ネットワークI/Oも含まれるため、AsymSpecが直接最適化するのはLLM推論部分である。"},"reservation":{"claim_id":"claim-368a0410c57e77f90db3d7c3","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-f0e6afec5cf9246016c6a451",
+  "job_id": "job-research-e7435b966cd8c5e7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f0e6afec5cf9246016c6a451",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
