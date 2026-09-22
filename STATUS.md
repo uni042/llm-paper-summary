@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 21:57:08 JST**
+> 自動生成: **2026-09-22 22:11:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **263** |
-| 未claim Research job | **261** |
-| 直近24hの検証済みResearch収録 | **36** |
-| 最終検証済みResearch収録 | **09-22 21:57:01 JST（7秒前）** |
+| 収録候補論文 | **262** |
+| 未claim Research job | **260** |
+| 直近24hの検証済みResearch収録 | **37** |
+| 最終検証済みResearch収録 | **09-22 22:11:05 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **263** |
+| canonical_id確認済みの一意な候補論文 | **262** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **263** |
+| 非終端Research job合計 | **262** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,13 +34,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **607** |
-| 未処理 | **5439** |
-| 収録済みとして除外 | **499** |
+| 処理済み | **608** |
+| 未処理 | **5438** |
+| 収録済みとして除外 | **500** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
-- 消化率: **10.0%**
+- 消化率: **10.1%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（13時間24分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（13時間38分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **2** | **0** | **0** | **2** | **0** | — |
+| Research | **19** | **2** | **0** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **20** | **5** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **19** | **5** | **0** | **3** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 22:11:05 JST** [research] `arXiv:2506.23266` — Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging
+  - job: `.survey/work-queue/jobs/job-research-1c695c55b9711b2f.json`
+  - result: `.survey/work-queue/results/research/attempt-1256251da35a70a67b7c0223.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1256251da35a70a67b7c0223.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2506.23266-sub-moe-subspace-expert-merging.md`
 - **09-22 21:57:01 JST** [research] `arXiv:2606.00079` — BitsMoE: Efficient Spectral Energy-Guided Bit Allocation for MoE LLM Quantization
   - job: `.survey/work-queue/jobs/job-research-47be6c5f34f13438.json`
   - result: `.survey/work-queue/results/research/attempt-d67f024461753c90c6dd6c10.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-d1d3b3caeff62a011e27f971.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-d1d3b3caeff62a011e27f971.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md`
-- **09-22 20:35:03 JST** [research] `arXiv:2608.21541` — Beyond Sparse Weights: When Is Attention Compressible?
-  - job: `.survey/work-queue/jobs/job-research-6a21e987e314dd70.json`
-  - result: `.survey/work-queue/results/research/attempt-e1881183879733d0f0a4eb0e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e1881183879733d0f0a4eb0e.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md`
 
 ### Audit
 
@@ -180,13 +180,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- `arXiv:2510.02345` — Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression / worker `scheduled-chat-00`
+  - claim: **09-22 22:08:05 JST** / heartbeat: **—** / lease expiry: **09-22 23:38:05 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ff0b776f31e2fc4b.json`
 - `arXiv:2604.04356` — REAM: Merging Improves Pruning of Experts in LLMs / worker `scheduled-chat-30`
-  - claim: **09-22 21:56:50 JST** / heartbeat: **—** / lease expiry: **09-22 23:26:50 JST**
+  - claim: **09-22 21:56:50 JST** / heartbeat: **09-22 22:00:46 JST** / lease expiry: **09-22 23:30:46 JST**
   - evidence: `.survey/work-queue/claims/job-research-3bf50f659a80056e.json`
-- `arXiv:2506.23266` — Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging / worker `scheduled-chat-00`
-  - claim: **09-22 21:53:37 JST** / heartbeat: **—** / lease expiry: **09-22 23:23:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1c695c55b9711b2f.json`
 
 #### Audit
 
@@ -206,7 +206,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **263** |
+| ready | **262** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,7 +226,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **917** |
+| inference/training/survey配下の論文Markdown実体 | **918** |
 
 ### immutable submissionの未照合
 
@@ -234,8 +234,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **307** |
-| └ Research | **235** |
+| 成功result未照合のimmutable submission | **308** |
+| └ Research | **236** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
