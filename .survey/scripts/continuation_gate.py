@@ -220,6 +220,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "CHECK_SUBMISSION_STATE"
             finalization_allowed = False
+        elif active_assignment:
+            decision = "CONTINUE"
+            required_action = "CONTINUE_ASSIGNED_WORK"
+            finalization_allowed = False
         elif transient_submission_wait:
             decision = "CONTINUE"
             if handoff_window_active:
@@ -228,10 +232,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
             else:
                 required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
-            finalization_allowed = False
-        elif active_assignment:
-            decision = "CONTINUE"
-            required_action = "CONTINUE_ASSIGNED_WORK"
             finalization_allowed = False
         elif handoff_window_active:
             reasons.append(handoff_reason or "handoff_window_no_new_research_audit_claim")
