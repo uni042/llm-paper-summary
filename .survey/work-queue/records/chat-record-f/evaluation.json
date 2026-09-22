@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-a0ecf191f05aa48e02bfda2f",
-  "job_id": "job-research-71cfe275bb4fcca4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a0ecf191f05aa48e02bfda2f",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a0ecf191f05aa48e02bfda2f","job_id":"job-research-71cfe275bb4fcca4","data":{"hardware":["NVIDIA GeForce RTX 4090 for expert loading and computation latency measurements"],"software":[],"model":["Switch-base-8, 8 experts, Top-1","Mixtral-8x7B, 8 experts, Top-2","GPT-OSS-20B, 32 experts, Top-4"],"datasets":["XSum","CommonsenseQA","GSM8K","Microsoft GeoLife GPS trajectory dataset for user-helper geometry"],"baselines":["Ideal Top-K","Practical Top-K","WDMoE","AdaptMoE","Uniform slot-level transmission under fast fading"],"settings":[{"name":"model-task pairs","description":"Switch-base-8はXSumでTop-1、Mixtral-8×7BはCommonsenseQAでTop-2、GPT-OSS-20BはGSM8KでTop-4を基準に評価し、異なるexpert数とrouting sparsityで一般性を確認する。"},{"name":"wireless environment","description":"helper送信電力38dBm、path-loss factor 4、antenna factor 1、noise PSD -174dBm/Hz。small-scale fadingは平均1・shape 2のGamma分布。GeoLife GPS軌跡を最大150m service areaへ写像してuser-helper距離を生成する。"},{"name":"slow fading operating points","description":"後段system-parameter評価では層ごとの最大許容偏差をSwitch-base-8で200、Mixtralで1.5、GPT-OSSで30に設定。既定bandwidth/time limitはそれぞれ1MHz/0.7s、2MHz/0.074s、0.8MHz/0.35s。"},{"name":"accuracy-energy tradeoff","description":"maximum tolerable per-layer deviationを掃引し、task accuracyとaverage energy consumption per tokenを比較する。Ideal Top-Kは通信失敗なしのaccuracy上限、Practical Top-Kは実channelとlatency deadlineを反映する。"},{"name":"fast fading","description":"層内channelをtime slotsへ分割し、提案adaptive bit allocationとuniform allocationを比較。expert selectionとtransmission adaptationの双方がenergyへ与える効果を検証する。"}],"correctness":"Proposition 1のlayer-output deviation boundを実測偏差と比較し、Switch-base-8ではTop-1ゆえほぼ重なり、Mixtral-8×7BとGPT-OSS-20Bでも実測を上回りつつ近接することを確認する。offline calibrated expert-pair mismatchとonline gating scoreを組み合わせた推定も実測偏差へ近接し、選択制約の代理値として妥当性を検証する。","methodology":"理論上界のtightness、3種類のMoE/タスクにおけるaccuracy-energy tradeoff、bandwidthとlayer latency制約への感度、slow/fast fading双方、fast fadingでのadaptive対uniform transmissionを段階的に評価する。expert load/compute時間はRTX 4090で測定し、wireless部分は実GPS由来距離と確率fadingによるsimulationである。","scope":"実機無線ネットワーク上のend-to-end deploymentではなく、GPUで測ったexpert処理時間と無線通信モデルを組み合わせたsimulation中心。単一userと各layerで1 expert execution unitを持つhelperを基本仮定とし、multi-user contentionや同一node複数GPUの共同schedulerは主評価外。"},"reservation":{"claim_id":"claim-a0ecf191f05aa48e02bfda2f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
