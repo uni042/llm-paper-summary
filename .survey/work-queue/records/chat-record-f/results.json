@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-219bac9027693490a638aa72","job_id":"job-research-ff0b776f31e2fc4b","data":{"overview":"E=32,G=8のFull構成は188MパラメータでGLUE 83.5、10.2k token/s、負荷変動係数0.12。Switch-Top2は875M、85.1、8.9k、0.36で、品質を1.6点下げる代わりにパラメータを約78.5%削減しthroughputを約14.6%上げる。WikiText-103ではPPL 26.8、8.5k token/s、19.2GBに対しSwitchは24.5、7.2k、33.1GB。Offloadは16.5GB、Quantは15.7GBまでpeak memoryを下げる。","key_results":[{"metric":"GLUE Full","value":"83.5","baseline":"Switch-Top2 85.1、MoE-Lite 84.7、Dense 83.8","condition":"12-layer d_model=768, E=32,G=8","interpretation":"最高品質ではないが大幅な容量・システム効率改善と引き換えに品質低下を小さく保つ。"},{"metric":"Total parameters","value":"188M","baseline":"Switch-Top2 875M、MoE-Lite 295M","condition":"E=32,G=8","interpretation":"Switch比約78.5%削減で、論文の約80%削減主張に対応する。"},{"metric":"GLUE throughput / load balance","value":"10.2k token/s / 0.12","baseline":"Switch 8.9k / 0.36","condition":"2×A100","interpretation":"throughput約14.6%向上、負荷変動は約3分の1。"},{"metric":"WikiText-103 memory","value":"19.2GB、offload 16.5GB、quant 15.7GB","baseline":"Switch 33.1GB、Dense 15.4GB","condition":"E=32","interpretation":"offload・量子化でdenseに近いpeak memoryへ接近する。"},{"metric":"Dynamic vs static clustering","value":"83.5 GLUE / 10.2k / load 0.12 / A2A 6.5GB","baseline":"Static 82.0 / 9.0k / 0.22 / 7.8GB","condition":"同一構造比較","interpretation":"周期的再編が品質・速度・均衡・通信を同時に改善する。"},{"metric":"Long-context WikiHop 16k","value":"72.0 / 3.0k token/s / 333ms / 95GB","baseline":"Switch 73.2 / 1.5k / 667ms / 165GB","condition":"E=128,G=16","interpretation":"品質差1.2点でthroughput 2倍、latency半減、memory約42%減。"}],"negative_results":"Full構成のGLUE 83.5はSwitch 85.1、Expert-Choice 85.0、MoE-Lite 84.7、D²-MoE 84.1を下回る。WikiText-103 PPL 26.8もSwitch 24.5、MoE-Lite 25.1より悪い。Quant構成はPPL 27.5まで悪化する。総追加overheadは9.0%で、その大半6.0%が残差量子化。NVMe offloadはmemoryを減らす一方throughputを8.5kから8.2kへ下げる。","interpretation":"本手法の価値は単一品質指標のSOTAではなく、同じクラスタ構造を負荷均衡、パラメータ共有、通信局所化、階層メモリ管理へ再利用する共同設計にある。アブレーションではonline clustering除去でGLUE 81.7・load 0.37、low-rank除去でthroughput 6.9k、hierarchical routing除去で9.1k・load 0.28となり、各部品が異なるボトルネックを担う。","quality_impact":"容量・速度・memoryの改善と引き換えにSwitch比でGLUE 1.6点、WikiText PPL 2.3の品質差が残る。長文ではSwitchに近い品質を維持しつつ速度・latency・memoryを大幅改善するため、メモリ制約環境でtrade-offが有利になる。"},"reservation":{"claim_id":"claim-219bac9027693490a638aa72","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-302229314470f55acb21a513",
+  "job_id": "job-research-6723d600d731caca",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-302229314470f55acb21a513",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

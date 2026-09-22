@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-219bac9027693490a638aa72","job_id":"job-research-ff0b776f31e2fc4b","data":{"limitations":"中心評価は12層d_model=768の独自規模モデルで、Qwen3やDeepSeek級の既存大規模MoEを直接変換した検証ではない。Switch-Top2よりGLUE・WikiText品質が劣るため『品質を維持』は効率trade-off込みで解釈すべきである。動的クラスタリングは学習中の構造再編を前提とし、既学習checkpointへ完全なpost-training処理として適用できるとは示していない。NVMeの機種・帯域・queue depth等のI/O条件も詳細不足で、offload結果の再現性評価には追加情報が必要。","differences":"Sub-MoEは校正後に類似専門家を共有部分空間でmergeして専門家数を減らすのに対し、本手法は学習中にクラスタを周期更新し、専門家自体は共有基底＋個別低ランク残差として残す。HOBBIT等のexpert cache/offloadは固定専門家構造のままメモリ移動を最適化するが、本手法はルーティング群とoffload単位を同じ動的クラスタへ揃える。MoE-Lightning等の通信最適化とも異なり、通信だけでなくパラメータ冗長・負荷均衡まで構造側から変更する。","implementation_status":"公開GitHubコードあり。論文v4は2026-07-21。既定2×A100実験、オンラインK-means++再クラスタリング、rank-16 residual、hierarchical routing、FP16 base/INT4 residual、NVMe offload/prefetchを記述する。","research_positioning":"この研究はMoEのモデル圧縮とシステム最適化の境界に位置する。専門家を独立した不変単位として扱わず、動的クラスタを共有パラメータ、ルーティング、通信、メモリ移動の共通単位にする点が特徴である。これにより、モデル側の冗長性削減がそのままシステム側の局所性改善へつながるよう設計している。\n\n共有基底＋低ランク残差は、専門家を完全mergeするSub-MoEよりspecializationを残しやすい一方、学習中に構造変更を受け入れる必要がある。群内基底計算を再利用し、残差だけを専門家固有にするため、parameter sharingと低ランク適応をMoEへ組み込んだ形とみなせる。rank-16で再構成誤差1.5%未満という結果は共有可能性を支えるが、大規模既学習MoEで同じrankが十分かは未検証である。\n\n階層ルーティングは専門家探索量だけでなくexpert-parallel通信fanoutを減らす。E=128,G=16,K=8なら比較対象を128から24へ縮め、all-to-all量も6.5GBまで削減する。この設計はexpert placementやtopology-aware routingと組み合わせる余地があり、クラスタをdevice配置単位へ合わせればさらに通信局所性を利用できる。\n\n階層メモリ研究との接点は特に強い。非活性クラスタをNVMeへ退避し、EMA選択履歴からL=2先をprefetchするため、専門家予測cacheの一種でもある。ただし論文はSSD/NVMe帯域・レイテンシ・prefetch hit rateを詳細に分解しておらず、I/O schedulingやexpert cache研究と比較するには不足がある。今後はクラスタ単位と専門家単位の二階層cache、PCIe/NVMe帯域を含む実機モデル、miss penaltyを考慮した予測器が自然な拡張になる。\n\n品質面ではSwitchより若干劣るため、純粋な精度改善論文ではなくresource-constrained deployment向けのPareto改善として扱うのが適切である。長文WikiHopでは品質差1.2点でthroughput 2倍、latency半減、memory 165→95GBという結果があり、通信とメモリが支配的になる長文・多専門家条件ほど構造共同設計の価値が出る可能性を示す。"},"reservation":{"claim_id":"claim-219bac9027693490a638aa72","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-302229314470f55acb21a513",
+  "job_id": "job-research-6723d600d731caca",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-302229314470f55acb21a513",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
