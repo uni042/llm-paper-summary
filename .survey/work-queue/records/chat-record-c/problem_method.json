@@ -4,10 +4,17 @@
   "slot": "problem_method",
   "attempt_id": "attempt-25785b20de2ab8ad4e83e84f",
   "job_id": "job-research-b6a722146f5922c5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-25785b20de2ab8ad4e83e84f",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "MoEを低bit量子化するとメモリと処理能力を改善できる一方、品質劣化は要求ごとに大きく異なる。W2/W3/W4等の複数インスタンスを既に常駐させても、単純に低bitへ送れば品質予算を破り、高bit固定では容量を無駄にする。さらにインスタンスの生成・replica数変更は遅い配置判断であり、要求到着ごとの高速ルーティングと同じ時間尺度では扱えない。",
+    "novelty": "配置済み固定プールを外生入力として、要求単位の量子化脆弱性をpromptだけから推定し、class平均品質予算とendpoint容量を同時に満たす内側ルーティング問題を明示的に分離する。FWPはrouter norm由来のexpert fragilityでtoken NLLを重み付けし、参照インスタンスprefillから候補インスタンスのΔNLLへ校正する。線形計画の双対からcapacity priceとquality priceを含む符号付きreduced rewardを導く。",
+    "method_overview": "各量子化構成aはrouting epoch中固定され、replica数・メモリ常駐・再構成は外側のprovisioning問題に置く。要求xではrouter gateからexpert affinity ρe(x)を観測し、expert固有fragility係数と組み合わせて量子化リスクをモデル化する。実運用信号FWPはprompt tokenごとに、活性expertの平均router normの逆数をrequest内で正規化した重みwiを作り、参照インスタンスのtoken NLLを重み付き平均する。offline calibrationがFWP、prefix length、class featuresを候補インスタンスΔNLLへ変換する。window-level LPはserved tokensを最大化しつつ需要、各instance capacity、class平均の符号付きquality-risk制約を課す。双対価格πaとνgから各request-instanceのreduced rewardを計算し、最適価格とprimal-feasible tie allocationの下でLP最適解とKKT整合する。",
+    "components": [
+      {"name": "二時間尺度の固定プール定式化", "description": "replica構成と量子化instanceの常駐は遅いprovisioning、要求dispatchは速いroutingとして分離する。ルータはonlineでweight loadやreplica生成を行わない。"},
+      {"name": "Fragility-Weighted Perplexity", "description": "router normが小さい脆弱expertに関係するprompt tokenを大きく重み付けしたNLLを参照instanceで計算し、request-specific quantization riskの特徴量にする。"},
+      {"name": "品質予算付きwindow LP", "description": "class需要、instance capacity、平均ΔNLL予算を制約としてserved tokensを最大化する。品質係数はΔNLL-τの符号付き値で、予算以下の割当が予算超過割当を平均上相殺できる。"},
+      {"name": "双対価格ルーティング", "description": "capacity priceとclass quality priceを使うreduced rewardで各instanceを比較する。最適価格とprimal最適比率でtieを処理した場合のみKKT整合を主張し、任意greedy tieへ保証を拡張しない。"}
+    ],
+    "system_design": "参照instanceでprompt prefillしてFWPを得た後、別targetを選んだ場合は量子化instance間でKVを原則再利用できないためtarget側でもprefillを実施・課金する。価格更新はcontrol windowごと、requestごとの3-instance score比較はCPUでマイクロ秒級。"
+  },
+  "reservation": {"claim_id": "claim-25785b20de2ab8ad4e83e84f", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
