@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-386d871abade4a6686fd7869",
+  "attempt_id": "attempt-e2cb9c7e6843f61eff66a9dd",
   "job_id": "job-research-80e5caed751c8e16",
   "data": {
     "problem": "疎な混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで一部の専門家だけを活性化することで、事前学習時の計算量を抑えながらパラメータ容量を増やせる。しかし個別の下流タスクは事前学習より目的とデータ分布が狭く、全専門家が同程度に有用とは限らない。それにもかかわらず従来の微調整と推論では大規模な専門家集合をそのまま保持し、専門家並列、複数GPUへの配置、装置間通信を要求するため、限られた性能利得のために配備コストを負う。単純に専門家を事前に固定して削れば、どの専門家が対象タスクへ転移可能な知識を持つかを判断できず精度を失う。著者らはMNLI、CoLA、SQuADなどで専門家寄与が長い裾を持ち、支配的な専門家がタスクごとに異なることを観測し、微調整そのものを利用して最も専門的な専門家を選択できるかを問題設定とする。",
@@ -28,5 +28,9 @@
     ],
     "system_design": "大容量MoEを事前学習資産として維持しつつ、下流タスクごとの微調整を専門家選択器として使う。前半は複数専門家からタスク適性を観測しながら候補を絞り、後半は確定した専門家へ計算を集中するため、別の蒸留工程や二回目の微調整を追加せずに配備モデルを縮小する。"
   },
-  "reservation": {"claim_id": "claim-386d871abade4a6686fd7869", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-e2cb9c7e6843f61eff66a9dd",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
