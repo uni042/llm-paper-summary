@@ -2,9 +2,13 @@
 """Retry policy for temporarily blocked research jobs.
 
 GitHub Actions is the queue/state writer. This helper observes research jobs that
-queue_worker marked as ``blocked``, counts each distinct blocked event once, and
-requeues the job after a cooldown. Repeated blocking is promoted to
-``blocked_permanent`` so a bad source cannot loop forever.
+queue_worker marked as blocked, counts each distinct blocked event once, and
+requeues retrieval failures after a seven-day cooldown.
+
+Primary-source retrieval failure is not a permanent-exclusion signal. After five
+distinct blocked events spanning at least 28 days, automatic periodic retries are
+suspended by keeping the job blocked with a durable dormant marker. The job is
+not promoted to blocked_permanent or rejected by this helper.
 """
 from __future__ import annotations
 
@@ -15,8 +19,13 @@ from pathlib import Path
 from typing import Any
 
 
-MAX_BLOCKED_ATTEMPTS = 3
-RETRY_DELAY_SECONDS = 3600
+RETRY_DELAY_SECONDS = 7 * 24 * 60 * 60
+DORMANT_AFTER_ATTEMPTS = 5
+DORMANT_MIN_AGE_SECONDS = 28 * 24 * 60 * 60
+
+# Backward-compatible name for callers/tests that imported the old constant.
+# Reaching this number no longer means permanent exclusion.
+MAX_BLOCKED_ATTEMPTS = DORMANT_AFTER_ATTEMPTS
 
 
 def utc_now() -> datetime:
@@ -60,13 +69,41 @@ def blocked_event_id(job: dict) -> str:
     return "legacy:" + str(job.get("blocker") or job.get("job_id") or "unknown")
 
 
-def promote_permanent(job: dict, reference_time: datetime) -> None:
-    job["status"] = "blocked_permanent"
-    job["blocked_permanent_at"] = iso(reference_time)
+def first_blocked_time(job: dict) -> datetime | None:
+    history = job.get("block_history")
+    if isinstance(history, list):
+        for item in history:
+            if not isinstance(item, dict):
+                continue
+            value = parse_time(item.get("blocked_at"))
+            if value is not None:
+                return value
+    for key in ("first_blocked_at", "last_blocked_at", "blocked_at", "completed_at"):
+        value = parse_time(job.get(key))
+        if value is not None:
+            return value
+    return None
+
+
+def should_suspend_periodic_retry(job: dict, reference_time: datetime) -> bool:
+    attempts = int(job.get("blocked_attempts", 0) or 0)
+    if attempts < DORMANT_AFTER_ATTEMPTS:
+        return False
+    first = first_blocked_time(job)
+    if first is None:
+        return False
+    return (reference_time - first).total_seconds() >= DORMANT_MIN_AGE_SECONDS
+
+
+def mark_retry_dormant(job: dict, reference_time: datetime) -> None:
+    job["status"] = "blocked"
+    job["blocked_retry_dormant"] = True
+    job["blocked_retry_state"] = "dormant"
+    job["blocked_dormant_at"] = iso(reference_time)
     job.pop("retry_not_before", None)
     job.pop("retry_queued_at", None)
-    if not job.get("completed_at"):
-        job["completed_at"] = iso(reference_time)
+    # Temporary retrieval failure must not retain an automatic permanent marker.
+    job.pop("blocked_permanent_at", None)
 
 
 def record_new_block_event(job: dict, reference_time: datetime) -> bool:
@@ -80,28 +117,36 @@ def record_new_block_event(job: dict, reference_time: datetime) -> bool:
     history = job.get("block_history")
     if not isinstance(history, list):
         history = []
+    blocked_at = str(job.get("completed_at") or job.get("blocked_at") or iso(reference_time))
     history.append(
         {
             "attempt": attempts,
-            "blocked_at": str(job.get("completed_at") or job.get("blocked_at") or iso(reference_time)),
+            "blocked_at": blocked_at,
             "reason": job.get("blocker"),
         }
     )
     job["block_history"] = history
-    job["last_blocked_at"] = history[-1]["blocked_at"]
+    if not job.get("first_blocked_at"):
+        job["first_blocked_at"] = blocked_at
+    job["last_blocked_at"] = blocked_at
     job.pop("retry_queued_at", None)
+    job.pop("blocked_retry_dormant", None)
+    job.pop("blocked_retry_state", None)
+    job.pop("blocked_dormant_at", None)
 
-    if attempts >= MAX_BLOCKED_ATTEMPTS:
-        promote_permanent(job, reference_time)
+    if should_suspend_periodic_retry(job, reference_time):
+        mark_retry_dormant(job, reference_time)
     else:
         job["retry_not_before"] = iso(reference_time + timedelta(seconds=RETRY_DELAY_SECONDS))
     return True
 
 
 def maybe_requeue(job: dict, reference_time: datetime) -> bool:
-    attempts = int(job.get("blocked_attempts", 0) or 0)
-    if attempts >= MAX_BLOCKED_ATTEMPTS:
-        promote_permanent(job, reference_time)
+    if job.get("blocked_retry_dormant") is True or job.get("blocked_retry_state") == "dormant":
+        return False
+
+    if should_suspend_periodic_retry(job, reference_time):
+        mark_retry_dormant(job, reference_time)
         return True
 
     retry_not_before = parse_time(job.get("retry_not_before"))
@@ -124,6 +169,9 @@ def process_blocked_research_jobs(root: Path, reference_time: datetime | None = 
         "observed": 0,
         "new_block_events": 0,
         "requeued": 0,
+        "dormant": 0,
+        # Kept for compatibility with dashboards/callers. This policy never
+        # auto-promotes a retrieval failure to permanent exclusion.
         "permanent": 0,
         "changed": 0,
     }
@@ -134,28 +182,26 @@ def process_blocked_research_jobs(root: Path, reference_time: datetime | None = 
             continue
         result["observed"] += 1
 
-        before_status = job.get("status")
+        if job.get("blocked_retry_dormant") is True or job.get("blocked_retry_state") == "dormant":
+            continue
+
         changed = False
 
-        attempts = int(job.get("blocked_attempts", 0) or 0)
-        if attempts >= MAX_BLOCKED_ATTEMPTS:
-            promote_permanent(job, reference_time)
+        is_new_event = record_new_block_event(job, reference_time)
+        if is_new_event:
             changed = True
-        else:
-            is_new_event = record_new_block_event(job, reference_time)
-            if is_new_event:
-                changed = True
-                result["new_block_events"] += 1
-            elif maybe_requeue(job, reference_time):
-                changed = True
+            result["new_block_events"] += 1
+        elif maybe_requeue(job, reference_time):
+            changed = True
 
         if not changed:
             continue
 
-        if before_status != "blocked_permanent" and job.get("status") == "blocked_permanent":
-            result["permanent"] += 1
+        if job.get("blocked_retry_dormant") is True:
+            result["dormant"] += 1
         elif job.get("status") == "ready":
             result["requeued"] += 1
+
         result["changed"] += 1
         write_json(path, job)
 
