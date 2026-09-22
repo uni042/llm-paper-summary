@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6b68d1581746099c18d8092e",
-  "job_id": "job-research-23b60cfb5b252b01",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6b68d1581746099c18d8092e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6b68d1581746099c18d8092e","job_id":"job-research-23b60cfb5b252b01","data":{"overview":"4観測指標×5層×3モデルの60条件で、補正後の二重検定を通過して因果的重要度を予測した指標は0件で、効果量はすべてCohenのd=0.23未満だった。同じnのトークン固有ルーティング重み対照ではOLMoE最終MoE層だけd=+0.231、95%信頼区間[+0.09,+0.37]、p=0.0013が補正後有意となった。累積除去ではOLMoEの層0〜9で活性8専門家中7個を消しても平均損失増分が0.083 nat未満だが、最終層15では2個除去で+0.155、7個で+0.431 natへ増え、初期層の高冗長性がランキング差を隠すことを示す。","key_results":[{"metric":"観測指標の因果予測","value":"60条件中、補正後有意な正の条件は0件；全効果量|d|<0.23","baseline":"利用頻度、活性化ノルム、活性時平均重み、活性化標準偏差","condition":"3モデル×5層×4指標、各n=200","interpretation":"集団ルーティング統計はトークン単位の専門家除去影響を安定して順位付けできない。"},{"metric":"トークン固有重み対照","value":"OLMoE層15でd=+0.231、95% CI [+0.09,+0.37]、p=0.0013","baseline":"同じn=200の観測指標監査","condition":"OLMoE最終MoE層","interpretation":"同一監査が信号を検出できるため、観測指標nullを検出力不足だけでは説明できない。"},{"metric":"初期〜中層冗長性","value":"層0〜9で8活性専門家中7個除去しても平均損失増分<+0.083 nat","baseline":"除去なし","condition":"OLMoE、各層・kでn=500","interpretation":"ほぼどの選択でも害が小さいため、異なる剪定ランキングが同程度に成功して見える。"},{"metric":"最終層の感度","value":"層15で2個除去+0.155 nat、7個除去+0.431 nat","baseline":"除去なし","condition":"OLMoE","interpretation":"深層では冗長性が崩れ、トークン固有重要度が実際の機能差として現れる。"},{"metric":"残差変位の深度増加","value":"OLMoE平均gap norm 0.0041（層0）→0.1697（層15）、約41倍","baseline":"単一専門家除去","condition":"OLMoE","interpretation":"最終層の介入は内部表現を大きく動かすが、Qwenでも類似増加があり、これだけではOLMoE固有信号を説明できない。"}],"negative_results":[{"name":"活性化ノルムも失敗","description":"既存研究で強い剪定基準とされた活性化ノルムも全モデル・全層で|d|≤0.157、Bonferroni補正後有意なし。"},{"name":"一般化範囲","description":"3モデルはいずれも高冗長で、低冗長MoEへ同じnullを一般化できない。"}],"interpretation":"既存の指標誘導剪定が実用上成功しても、それは指標が本当に不要専門家を同定した証拠ではない。少なくとも高冗長領域では、初期層の多くの専門家除去が元々ほぼ無害なため、指標とランダム選択の差が小さくなる。","quality_impact":"論文は剪定パイプライン全体の失敗を主張せず、集団観測統計からトークン別介入重要度を推論する機構的説明を否定する。微調整後のglobal pruning性能とは区別が必要。"},"reservation":{"claim_id":"claim-6b68d1581746099c18d8092e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
