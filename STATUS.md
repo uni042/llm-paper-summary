@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 17:30:16 JST**
+> 自動生成: **2026-09-22 17:33:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **285** |
-| 未claim Research job | **285** |
+| 未claim Research job | **284** |
 | 直近24hの検証済みResearch収録 | **24** |
-| 最終検証済みResearch収録 | **09-22 17:10:31 JST（19分前）** |
+| 最終検証済みResearch収録 | **09-22 17:10:31 JST（23分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（8時間57分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（9時間1分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **16** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **17** | **4** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **16** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -178,8 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2607.14647` — D-cut: Adaptive Verification Depth Pruning for Batched Speculative Decoding / worker `scheduled-chat-30`
+  - claim: **09-22 17:30:39 JST** / heartbeat: **—** / lease expiry: **09-22 19:00:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c324e0325a4a2def.json`
 
 #### Audit
 
@@ -227,8 +229,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **295** |
-| └ Research | **223** |
+| 成功result未照合のimmutable submission | **296** |
+| └ Research | **224** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
