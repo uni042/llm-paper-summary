@@ -8,18 +8,19 @@
       "blocked": 2
     },
     "research": {
-      "ready": 334,
+      "ready": 333,
       "completed": 358,
       "superseded": 3,
       "deferred": 3,
       "blocked_permanent": 9,
-      "rejected": 5
+      "rejected": 5,
+      "blocked": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 334,
+    "ready_research_audit": 333,
     "actively_claimed": 0,
-    "claimable": 334
+    "claimable": 333
   },
   "next_jobs": [
     {
@@ -31,18 +32,8 @@
       "title": "LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization",
       "source_url": "https://www.semanticscholar.org/paper/05ce627af947fbb7b08b2b653f62974cce24b1b2",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-50400bb966b2b5a1",
-      "type": "research",
-      "lane": null,
-      "priority": 103,
-      "canonical_id": "DOI:10.1109/TC.2026.3701443",
-      "title": "GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning",
-      "source_url": "https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-22f3548ed6ae-gacer-m-granularity-aware-and-memory-centric-coordination-for-multi-tenant-deep-learning.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -55,6 +46,8 @@
       "title": "CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration",
       "source_url": "https://www.semanticscholar.org/paper/ad9aa60fd80a2289926806b0fc37ffc107020653",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -67,6 +60,8 @@
       "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
       "source_url": "https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high-bandwidth-flash.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -79,6 +74,8 @@
       "title": "Dynamo-MoE: Accelerating Sparse Large Model Inference with Dynamic Parallelization",
       "source_url": "https://www.semanticscholar.org/paper/76e42a42cea4ff264bf70534480254d6f2099a1a",
       "paper_path": "papers/inference/99-other-inference-systems/2026-b781449c0bd1-dynamo-moe-accelerating-sparse-large-model-inference-with-dynamic-parallelization.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -91,6 +88,8 @@
       "title": "EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference",
       "source_url": "https://www.semanticscholar.org/paper/d883de304a869e555e8a453279310dcf7ba68432",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2608.07964-easybalance-cross-layer-load-balancing-in-distributed-moe-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -103,6 +102,8 @@
       "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
       "source_url": "https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241",
       "paper_path": "papers/inference/99-other-inference-systems/2026-3eaac796b1c5-dynamoserve-a-distributed-tiered-memory-system-for-multi-tenant-llm-serving.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -115,6 +116,22 @@
       "title": "Replacing NVMe Staging in LLM Inference with a High-Bandwidth CXL Memory Expander with an On-Device DMA Controller",
       "source_url": "https://www.semanticscholar.org/paper/7a2499fd38665d8205c513eb3740ddedc3675c5e",
       "paper_path": "papers/inference/99-other-inference-systems/2026-34514b56228c-replacing-nvme-staging-in-llm-inference-with-a-high-bandwidth-cxl-memory-expander-with-an-on-device-dma-controller.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-c744057cd5d44d88",
+      "type": "research",
+      "lane": null,
+      "priority": 100,
+      "canonical_id": "DOI:10.1145/3832810.3832869",
+      "title": "CARE-MoE: Correlation-Aware Expert Placement and Semantic Equivalence Routing for MoE LLM Inference on Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-9f0ddbf86051-care-moe-correlation-aware-expert-placement-and-semantic-equivalence-routing-for-moe-llm-inference-on-edge-devices.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -127,9 +144,11 @@
       "title": null,
       "source_url": null,
       "paper_path": null,
+      "workflow_version": 10,
+      "artifact_transport": null,
       "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-21T23:32:20+00:00"
+  "generated_at": "2026-09-22T00:28:13+00:00"
 }
