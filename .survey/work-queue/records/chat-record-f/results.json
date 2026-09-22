@@ -2,22 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f437cb4dac9732a5ed37dd62",
-  "job_id": "job-research-791dd06c8f3ceecf",
-  "data": {
-    "overview": "ZEDAはQwen3-30B-A3Bで平均精度74.2を維持しつつ平均ゼロ専門家活性率51.2%、GLM-4.7-Flashで71.8と53.0%を達成する。元モデルとの差はそれぞれ0.7点で、AdaMoEやDynamic Skippingより平均性能が高い。8192トークン・単一H200の実測ではプリフィルとデコードの双方でおおむね約20%高速化し、専門家FFN計算の半減が端末間性能へ反映される。",
-    "key_results": [
-      {"metric": "Qwen平均精度とゼロ専門家活性率", "value": "74.2、51.2%", "baseline": "元Qwen 74.9・0%、AdaMoE 54.8・51.9%、Dynamic Skipping 68.1・43.8%", "condition": "11ベンチマーク、Qwen3-30B-A3B", "interpretation": "専門家計算を約半減しながら元モデルとの差を0.7点に抑え、同程度の計算削減を狙う動的方式より能力保持が良い。"},
-      {"metric": "GLM平均精度とゼロ専門家活性率", "value": "71.8、53.0%", "baseline": "元GLM 72.5・0%、AdaMoE 57.1・47.0%、Dynamic Skipping 67.8・37.5%", "condition": "11ベンチマーク、GLM-4.7-Flash", "interpretation": "異なる専門家構成でも約半分の通常専門家実行を省き、元モデルとの差を0.7点に抑える。"},
-      {"metric": "適応学習時間", "value": "Qwen 30.12時間、GLM 61.37時間", "baseline": "8×NVIDIA H200", "condition": "60Kプロンプト、SFT→OPD", "interpretation": "再事前学習ではなく数十時間規模の後処理で動的MoEへ変換できる。"},
-      {"metric": "8192系列長の実測高速化", "value": "Qwenプリフィル1.18倍・デコード1.19倍、GLMプリフィル1.26倍・デコード1.19倍", "baseline": "各元MoE", "condition": "単一H200、SGLang、最大同時実行32", "interpretation": "専門家FFNの半減が全体では約20%前後の高速化になる。"},
-      {"metric": "二段階蒸留アブレーション", "value": "SFT→OPD平均74.2", "baseline": "SFTのみ73.6、OPDのみ72.9", "condition": "Qwen3-30B-A3B", "interpretation": "先にSFTで新ルーティングを安定化し、その後OPDで学生分布上のずれを詰める順序が有効。"},
-      {"metric": "群補助損失の効果", "value": "w=1で数学平均82.2、w=2で81.0", "baseline": "通常専門家単位補助損失59.5、元モデル82.8", "condition": "Qwen、SFT設定、α=0.1", "interpretation": "通常専門家間を均一化せず群間だけを制御することで既存の専門化を保持する。"},
-      {"metric": "分布外評価", "value": "Qwen 76.2・r_ZE 47.2%、GLM 72.9・r_ZE 50.0%", "baseline": "元Qwen 76.7、元GLM 76.1", "condition": "MMLU-ReduxとGPQA-Diamond", "interpretation": "Qwenでは分布外能力をほぼ維持するが、GLMでは特にGPQA側を含む低下が大きく、完全な無損失ではない。"}
-    ],
-    "negative_results": "単純に通常専門家の活性数を半減するNETは完全版ZEDAより性能が低く、動的ルーティングの適応が必要である。OPDだけで開始すると平均72.9でSFT→OPDの74.2を下回る。ゼロ専門家選択後に残存通常専門家の確率を再正規化すると平均71.6となり、非再正規化73.3より悪化する。コピー専門家は同程度の活性率でも数学平均20.7まで崩れ、ゼロ専門家81.0に大差を付けられる。通常の専門家単位補助損失も数学平均59.5まで低下する。",
-    "interpretation": "ZEDAの利得は単なる専門家数削減ではなく、完成済みルータの相対構造をなるべく保存したまま『計算しない選択肢』を追加し、元モデル自身を教師として新しい選択肢の使い方だけを学び直す点にある。教師と学生の分布差が大きいトークンほどゼロ専門家率が下がる観測は、自己蒸留損失が必要な局所で群補助損失を上回り、より多くの通常専門家を残すという機構と整合する。",
-    "quality_impact": "平均精度低下は主11ベンチマークで両モデルとも0.7点だが、個別タスクと分布外では差がある。Qwenでは元74.9から74.2、GLMでは72.5から71.8。分布外のGLMは76.1から72.9へ低下するため、専門家計算半減と能力保持の交換条件はモデル・領域ごとに検証が必要である。"
-  },
-  "reservation": {"claim_id": "claim-f437cb4dac9732a5ed37dd62", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a7b827dd3ec3e848ee83f4c2",
+  "job_id": "job-research-a46b5d827d3949cf",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a7b827dd3ec3e848ee83f4c2",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

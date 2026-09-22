@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f437cb4dac9732a5ed37dd62",
-  "job_id": "job-research-791dd06c8f3ceecf",
-  "data": {
-    "limitations": "論文自身が挙げる制約は、30B級より大きいMoEを計算資源上評価できていないこと、長期エージェント型タスクを扱っていないこと、系列長が伸びるほど高速化率が低下することである。8192トークンでも約20%の高速化は残るが、注意機構など専門家以外の計算割合が増えるため、専門家FFNを半減しても全体速度は半減しない。また適応には8×H200で30〜61時間を要し、完全に学習不要な推論時スキップではない。分布外GLMでは平均76.1から72.9へ低下しており、能力保持はモデルごとに再検証が必要である。",
-    "differences": "AdaMoEやMoE++などが動的専門家活性化を学習段階から組み込むのに対し、ZEDAは既に後学習まで終えた静的MoEを出発点とする。専門家枝刈り・統合・圧縮がモデル容量や専門家表現を恒久的に変更するのに対し、ZEDAは通常専門家を残したままゼロ計算候補をルータへ追加し、トークンごとに通常専門家の実行数を変える。単純な推論時スキップと違い、元モデルを教師に二段階で適応して能力損失を回復する。通常の負荷均衡をそのまま使わず、通常群内の既存専門化を保持する群補助損失を使う点も特徴である。",
-    "implementation_status": "著者はGitHubでZEDA実装を公開している。論文はslime、SGLang、Megatronを使用し、Qwen3-30B-A3BとGLM-4.7-Flashで実測する。ゼロ専門家は無パラメータで出力0、通常専門家の重みは保持し、新しいルータ行だけを既存分布に合わせて初期化する。推論ではゼロ専門家に割り当てられた上位K枠のFFNを省略するため、専用の新しい専門家演算そのものは不要である。",
-    "research_positioning": "Adaptive Expert Computation / Compression系統では、ZEDAは『完成済みMoEを後処理で可変計算化する』位置にある。専門家キャッシュやCPU/SSDオフロードの観点では、平均通常専門家活性数を半減できれば各トークンで必要な専門家重み転送回数も減らせる可能性があり、帯域制約サービングとの組み合わせが重要になる。ただし論文の実測は単一GPU中心で、専門家をCPU・NVMeから動的に供給する階層メモリ環境のI/O削減量は直接評価していない。将来はゼロ専門家率を計算だけでなく専門家プリフェッチ、キャッシュ保持、転送優先度へ結び付ける比較対象になる。"
-  },
-  "reservation": {"claim_id": "claim-f437cb4dac9732a5ed37dd62", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a7b827dd3ec3e848ee83f4c2",
+  "job_id": "job-research-a46b5d827d3949cf",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a7b827dd3ec3e848ee83f4c2",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

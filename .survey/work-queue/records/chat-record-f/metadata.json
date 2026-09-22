@@ -2,26 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f437cb4dac9732a5ed37dd62",
-  "job_id": "job-research-791dd06c8f3ceecf",
-  "data": {
-    "canonical_id": "arXiv:2605.18643", "arxiv_id": "2605.18643", "doi": "10.48550/arXiv.2605.18643", "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.AI", "cs.CL"]},
-    "title": "Post-Trained MoE Can Skip Half Experts via Self-Distillation",
-    "summary": "ZEDAは、学習済みの静的な専門家混合（Mixture-of-Experts; MoE）を再事前学習せず、入力ごとに計算量が変わる動的MoEへ変換する後処理法である。各MoE層へ出力が常にゼロの無パラメータ専門家を追加し、元モデルを固定教師とする教師あり微調整とオンポリシー蒸留の二段階自己蒸留、通常専門家群とゼロ専門家群の間だけを均衡させる群補助損失を組み合わせる。Qwen3-30B-A3BとGLM-4.7-Flashで通常専門家計算を半分超削減しながら平均精度低下を小さく抑え、8192トークンでは約1.2倍の実測高速化を得る。",
-    "list_summary": "ゼロ出力専門家の挿入と二段階自己蒸留で既存MoEを動的化し、専門家計算を半減しつつ約1.2倍高速化する後処理法ZEDA。",
-    "authors": ["Xingtai Lv", "Li Sheng", "Kaiyan Zhang", "Yichen You", "Siyan Gao", "Xueheng Luo", "Yuxin Zuo", "Yuchen Fan", "Junlin Yang", "Ganqu Cui", "Bingning Wang", "Fan Yang", "Youbang Sun", "Ning Ding", "Bowen Zhou"],
-    "authors_affiliations": "Frontis.AI; Kuaishou Technology; Shanghai AI Lab; WeChat AIほか（arXiv HTMLの著者欄に一部所属表示）",
-    "published": "2026-05-18", "publication": "arXiv:2605.18643 v2, 2026-06-08", "publication_type": "Preprint", "publication_status": "Preprint",
-    "lineage": "動的MoE / 適応的専門家計算 / 後処理による専門家スキップ / 自己蒸留",
-    "topics": ["専門家混合", "動的専門家活性化", "ゼロ専門家", "自己蒸留", "オンポリシー蒸留", "推論高速化"],
-    "importance": "既に高価な事前学習・後学習を終えたMoEを対象に、再事前学習なしで可変計算へ移行できる点が重要である。専門家圧縮や枝刈りのように専門家そのものを削除するのではなく、トークン単位でゼロ専門家を選ばせるため、計算量を入力依存に変えられる。",
-    "hardware_evaluation": "適応学習時間はNVIDIA H200を8基使用し、Qwen3-30B-A3Bで30.12時間、GLM-4.7-Flashで61.37時間。推論効率はSGLang、最大同時実行32、単一H200で測定する。",
-    "quality_effect": "Qwen3-30B-A3Bでは元モデル平均74.9に対しZEDA 74.2、GLM-4.7-Flashでは72.5に対し71.8で、平均ゼロ専門家活性率はそれぞれ51.2%と53.0%。",
-    "source": "https://arxiv.org/abs/2605.18643", "sources": ["https://arxiv.org/abs/2605.18643", "https://arxiv.org/html/2605.18643v2", "https://arxiv.org/pdf/2605.18643", "https://github.com/TsinghuaC3I/ZEDA"],
-    "code": "https://github.com/TsinghuaC3I/ZEDA",
-    "implementation": "著者コードを公開。実験はslime、SGLang、Megatronを用い、既存MoEの通常専門家パラメータを維持したままルータ候補へゼロ専門家を追加して二段階蒸留する。",
-    "last_checked": "2026-09-22", "references": [], "references_checked_at": "2026-09-22", "references_source": "primary-paper-reference-section", "references_total": 0
-  },
-  "reservation": {"claim_id": "claim-f437cb4dac9732a5ed37dd62", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a7b827dd3ec3e848ee83f4c2",
+  "job_id": "job-research-a46b5d827d3949cf",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a7b827dd3ec3e848ee83f4c2",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
