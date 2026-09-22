@@ -8,19 +8,19 @@
       "blocked": 2
     },
     "research": {
-      "ready": 332,
+      "ready": 330,
       "completed": 359,
+      "blocked": 3,
       "superseded": 3,
       "deferred": 3,
       "blocked_permanent": 9,
-      "rejected": 5,
-      "blocked": 1
+      "rejected": 5
     }
   },
   "claiming": {
-    "ready_research_audit": 332,
+    "ready_research_audit": 330,
     "actively_claimed": 0,
-    "claimable": 332
+    "claimable": 330
   },
   "next_jobs": [
     {
@@ -32,34 +32,6 @@
       "title": "CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration",
       "source_url": "https://www.semanticscholar.org/paper/ad9aa60fd80a2289926806b0fc37ffc107020653",
       "paper_path": "papers/inference/99-other-inference-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-03793bd297310cea",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "arXiv:2609.15636",
-      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
-      "source_url": "https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high-bandwidth-flash.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-43a2b5f54de86439",
-      "type": "research",
-      "lane": null,
-      "priority": 100,
-      "canonical_id": "DOI:10.1145/3806645.3807820",
-      "title": "Dynamo-MoE: Accelerating Sparse Large Model Inference with Dynamic Parallelization",
-      "source_url": "https://www.semanticscholar.org/paper/76e42a42cea4ff264bf70534480254d6f2099a1a",
-      "paper_path": "papers/inference/99-other-inference-systems/2026-b781449c0bd1-dynamo-moe-accelerating-sparse-large-model-inference-with-dynamic-parallelization.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -136,6 +108,34 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-4ad4e8ccc85f54fc",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "arXiv:2511.11907",
+      "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
+      "source_url": "https://doi.org/10.1145/3745756.3809234",
+      "paper_path": "papers/inference/99-other-inference-systems/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-331c2ec4acba72cc",
+      "type": "research",
+      "lane": null,
+      "priority": 99,
+      "canonical_id": "DOI:10.1145/3832810.3832866",
+      "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
+      "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-c24278db090c-asymflow-enabling-long-context-llm-serving-via-cpu-gpu-prefill-decode-disaggregation.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -150,5 +150,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-22T00:32:19+00:00"
+  "generated_at": "2026-09-22T00:34:12+00:00"
 }
