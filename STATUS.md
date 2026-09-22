@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 07:40:46 JST**
+> 自動生成: **2026-09-23 07:44:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **196** |
-| 未claim Research job | **195** |
-| 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-23 07:40:43 JST（3秒前）** |
+| 収録候補論文 | **195** |
+| 未claim Research job | **193** |
+| 直近24hの検証済みResearch収録 | **75** |
+| 最終検証済みResearch収録 | **09-23 07:44:31 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **196** |
+| canonical_id確認済みの一意な候補論文 | **195** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **196** |
+| 非終端Research job合計 | **195** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（23時間8分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（23時間12分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **23** | **2** | **0** | **0** | **1** | **0** | — |
+| Research | **23** | **2** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **23** | **5** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **23** | **5** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 07:44:31 JST** [research] `DOI:10.1109/ACCESS.2026.3665697` — Two-Stage Expert Offloading for Domain-Aware MoE Inference
+  - job: `.survey/work-queue/jobs/job-research-3c62e3c72b715377.json`
+  - result: `.survey/work-queue/results/research/attempt-0435bf18257a114df581ef2f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-0435bf18257a114df581ef2f.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-dacc3922b5b4-two-stage-expert-offloading-for-domain-aware-moe-inference.md`
 - **09-23 07:40:43 JST** [research] `arXiv:2606.16332` — SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions
   - job: `.survey/work-queue/jobs/job-research-f28b959eef987bac.json`
   - result: `.survey/work-queue/results/research/attempt-78929a6ba475ed2b2f05a50c.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-1338966144636293379a0970.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-1338966144636293379a0970.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md`
-- **09-23 04:44:47 JST** [research] `arXiv:2604.06542` — Does a Global Perspective Help Prune Sparse MoEs Elegantly?
-  - job: `.survey/work-queue/jobs/job-research-c92e15d6ba5edb8d.json`
-  - result: `.survey/work-queue/results/research/attempt-c1740060a24d308914998762.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c1740060a24d308914998762.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2604.06542-global-perspective-moe-pruning.md`
 
 ### Audit
 
@@ -180,7 +180,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.19207` — MeshKV: A Network-on-Chip KV Cache Fabric for Scalable Transformer Decoding Accelerators / worker `scheduled-chat-30`
+  - claim: **09-23 07:44:12 JST** / heartbeat: **—** / lease expiry: **09-23 09:14:12 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9fc5a1ad8ad0b2d8.json`
 - `arXiv:2606.25426` — Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX / worker `scheduled-chat-00`
   - claim: **09-23 07:37:08 JST** / heartbeat: **—** / lease expiry: **09-23 09:07:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-06d45370eceff021.json`
@@ -203,7 +206,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **196** |
+| ready | **195** |
 
 ### 候補の重複・識別情報欠損
 
@@ -223,7 +226,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **959** |
+| inference/training/survey配下の論文Markdown実体 | **960** |
 
 ### immutable submissionの未照合
 
