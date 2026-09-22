@@ -12,15 +12,15 @@
   "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
   "paper_path": "papers/inference/99-other-inference-systems/2026-aacd4c06a02a-crossserve-cross-layer-scheduling-for-slo-optimization-in-multi-tenant-llm-serving.md",
   "selection_reason": "Recent multi-tenant LLM serving scheduler jointly optimizing routing, adaptive micro-batching and weighted preemption with strong SLO gains on 32 GPUs.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T20:36:10+00:00",
-  "blocker": "Primary full text remains unavailable. The official ICPP 2026 schedule confirms CrossServe, while ACM citation metadata gives DOI 10.1145/3832810.3832859 with an online-publication date of 2026-09-28, later than this run. Fresh title search found no arXiv or author-hosted identical manuscript. No five-slot record was synthesized from program metadata or snippets.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-3d6758672654eefba0bf8a1a.json",
+  "blocker": "Fresh exact-title/DOI retrieval still did not surface the primary manuscript. Official ICPP 2026 program confirms CrossServe; ACM citation context identifies DOI 10.1145/3832810.3832859, pages 187-196, with online publication dated 2026-09-28, after this run. No arXiv or author-hosted identical manuscript was found, so no five-slot record was synthesized.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-bf7e22e49844095d409735c6.json",
   "blocked_attempts": 2,
   "last_recorded_blocked_event": "2026-09-21T14:43:34+00:00",
   "block_history": [
@@ -36,5 +36,6 @@
     }
   ],
   "last_blocked_at": "2026-09-21T14:43:34+00:00",
-  "retry_queued_at": "2026-09-21T22:48:29+00:00"
+  "retry_queued_at": "2026-09-21T22:48:29+00:00",
+  "completed_at": "2026-09-22T01:33:37+00:00"
 }
