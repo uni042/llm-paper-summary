@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ff7e9c58f4c5f78412ef8d98","job_id":"job-research-baad806afa0723b4","data":{"canonical_id":"arXiv:2606.14672","arxiv_id":"2606.14672","doi":"10.48550/arXiv.2606.14672","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows","summary":"Parallel-Synthesisは、並列ワーカーが生成済みのKVキャッシュをテキストへ戻して再プリフィルせず、位置再符号化、学習可能なキャッシュ写像、合成器LoRAを介して下流合成器へ直接渡す枠組みである。Qwen3-14Bを用いた数学、科学QA、コード、GAIA、データベース診断の9データセットで、標準のテキスト直列化と同等以上を7件で達成し、合成器の最初のトークンまでの時間を2.5〜11倍短縮する。","list_summary":"並列エージェントの生成済みKVを位置再符号化・キャッシュ写像・合成器LoRAで直接統合し、再プリフィルを省いて9課題中7課題で品質を維持・改善しつつ最初のトークンまでを2.5〜11倍高速化する。","authors":["Shikun Liu","Mufei Li","Dongqi Fu","Haoyu Wang","Yinglong Xia","Hong Li","Hong Yan","Pan Li"],"authors_affiliations":"Georgia Institute of Technology; Meta","published":"2026-06-12","publication":"arXiv:2606.14672v1","publication_type":"プレプリント","publication_status":"Preprint v1","lineage":"agent serving / KV-cache reuse / latent communication / DAG workflows","topics":["マルチエージェント","KVキャッシュ再利用","潜在通信","並列合成","プリフィル削減"],"importance":"エージェント間通信をテキスト列ではなく実行済みKV状態として扱い、並列DAGの構造を保ったまま合流するため、長い並列ワーカー出力の再符号化コストを直接削減する。","implementation":"Qwen3-14Bを基盤に、RoPE位置再符号化、層・ワーカー別アフィンキャッシュ写像、rank-16 LoRAを実装し、5×A100 80GBで後学習。","hardware_evaluation":"後学習は5×NVIDIA A100 80GB。評価はQwen3-14Bを中心に9データセット、通常3ワーカー、MARBLEは5ワーカー。","quality_effect":"標準テキスト直列化と比べ9データセット中7件で同等以上、残り2件は小幅低下。明示テキストが有利な証拠中心課題も残る。","source":"https://arxiv.org/abs/2606.14672","sources":["https://arxiv.org/abs/2606.14672","https://arxiv.org/pdf/2606.14672"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript; structured reference extraction not performed","references_total":0},"reservation":{"claim_id":"claim-ff7e9c58f4c5f78412ef8d98","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-9db3517b66d3bd9f441cee8c",
+  "job_id": "job-research-324d91b08021a955",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9db3517b66d3bd9f441cee8c",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

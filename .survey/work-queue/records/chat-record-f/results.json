@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ff7e9c58f4c5f78412ef8d98","job_id":"job-research-baad806afa0723b4","data":{"overview":"Parallel-Synthesisは標準テキスト直列化と比べ9データセット中7件で同等以上となり、AIME 2025、GSM8K、HumanEvalPlus、GPQA、MedQA、MARBLEなどで競争力を示す。合成器が長いワーカー出力を再プリフィルしないため、5課題で最初のトークンまでの時間を一貫して短縮し、2.5〜11倍の高速化を得る。CacheBlendに対しても再計算率0.15の条件で平均約2倍高速で、下流品質も高い。","key_results":[{"metric":"9データセット品質","value":"7/9でText-Serializationと同等以上","baseline":"同じworker outputsをテキスト連結するText-Serialization","condition":"Qwen3-14B、通常3 workers、MARBLE 5 workers","interpretation":"KV直接合成でも広い課題で標準テキスト合成の品質を概ね維持する。"},{"metric":"AIME 2025 accuracy","value":"46.67% vs 23.33%","baseline":"Text-Serialization","condition":"数学推論","interpretation":"推論軌跡の潜在状態統合が単なる速度最適化に留まらず品質向上する例。"},{"metric":"GPQA accuracy","value":"52.02% vs 50.00%","baseline":"Text-Serialization","condition":"科学QA","interpretation":"科学推論でもテキスト再提示なしに競争力を保つ。"},{"metric":"GAIA / MARBLE","value":"GAIA L1 23/53 vs 24/53、L2 19/86 vs 22/86、L3 2/26 vs 2/26、MARBLE 36/100 vs 33/100","baseline":"Text-Serialization","condition":"multi-turn agentic tasks","interpretation":"証拠中心GAIAでは小幅低下する一方、複数診断枝を統合するMARBLEでは改善する。"},{"metric":"TTFT speedup","value":"2.5×–11×","baseline":"Text-Serialization","condition":"AIME 2024、HumanEvalPlus、GPQA、GAIA L1、MARBLE。cache transform時間込み","interpretation":"枝出力の再プリフィル除去効果が長いworker trajectoryほど大きい。"},{"metric":"通信粒度 ablation","value":"GAIA L1 final 23/53, 0.3769s; full trajectory 26/53, 0.6847s","baseline":"Text-Serialization final 24/53,1.0510s; full 26/53,3.5383s","condition":"GAIA Level 1","interpretation":"完全軌跡は品質を上げるがKV長を増やすため、最終出力のみが既定の品質効率折衷。"}],"negative_results":"無学習で直接キャッシュを使う構成はAIME 2024 10.00、HumanEvalPlus 38.41、GPQA 15.15と弱く、推論時補正だけでは不十分。第1系統の後に第2系統を逐次学習するとAIME 36.67、HumanEvalPlus 76.22、MARBLE 25/100となり、独立学習後の統合checkpoint 63.33、90.85、36/100より悪い。GAIAではテキスト直列化がL1/L2でわずかに優れ、MBPPPlusでもParallel-Synthesis 80.42に対しText 81.75で、明示証拠が重要な課題ではテキスト表現の利点が残る。","interpretation":"結果はKVキャッシュを単なる再利用対象ではなく、エージェント間の潜在通信媒体として後学習すれば、DAG合流の再プリフィルを省けることを示す。特に中間推論や不一致を統合する課題では多数決を8/9課題で上回り、単純な最終回答集約ではなく軌跡情報を利用している。一方、キャッシュ形式への適応学習が必須で、任意モデル間の無変換共有ではない。","quality_impact":"品質は全課題で無損失ではない。9件中7件は標準テキスト合成と同等以上だが、GAIAやMBPPPlusで小幅低下する。完全軌跡を渡すとGAIA L1で26/53まで回復する一方TTFTが増えるため、品質と効率の明示的な折衷がある。"},"reservation":{"claim_id":"claim-ff7e9c58f4c5f78412ef8d98","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-9db3517b66d3bd9f441cee8c",
+  "job_id": "job-research-324d91b08021a955",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9db3517b66d3bd9f441cee8c",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
