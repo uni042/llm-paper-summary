@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/425c61cd261a06e425849f3f96364ce6a8ab8ed0",
   "paper_path": "papers/inference/99-other-inference-systems/2020-2026.00101-step-adaptive-spatio-temporal-expert-prefetching-for-low-latency-and-memory-efficient-moe-inference.md",
   "selection_reason": "Direct MoE inference framework combining layer-wise expert allocation, predictive prefetch and token-aware windows; reports up to 3.12x speedup under constrained memory.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T20:49:25+00:00"
+  "created_at": "2026-09-20T20:49:25+00:00",
+  "completed_at": "2026-09-22T07:38:18+00:00",
+  "blocker": "Primary-source full text could not be retrieved in this Scheduled Chat environment. The IEEE full-text endpoint for DOI 10.1109/ISCA66397.2026.00101 was inaccessible; available sources exposed bibliographic metadata and abstract-level summaries only. Per workflow, no research record was inferred from snippets. Retrieval evidence: IEEE article/PDF endpoint identified via DOI/arnumber 11617726 but full document access failed; ISCA 2026 program confirms title/authors/session; bibliographic sources confirm ISCA 2026 pages 1336-1350 and DOI.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-17c1ab36b2599622f5e4d206.json"
 }

@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/adc66da23cd03d90f351c1db39703742f0ec85d9",
   "paper_path": "papers/inference/99-other-inference-systems/2026-80e75f6f533b-congestion-aware-serving-of-agentic-llm-applications.md",
   "selection_reason": "Agentic LLM serving framework that adapts test-time compute to backend congestion; reports 77% tail-latency reduction versus static vLLM with bounded accuracy loss.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T20:55:15+00:00"
+  "created_at": "2026-09-20T20:55:15+00:00",
+  "completed_at": "2026-09-22T07:38:18+00:00",
+  "blocker": "Primary-source full text for DOI 10.1145/3838177.3841735 could not be retrieved. Author publication pages provide bibliographic metadata and abstract-level results (CALM-MAS; 77% tail-latency reduction with accuracy degradation bounded to 6.1 percentage points), but no accessible paper PDF/full manuscript was exposed in this environment. Per workflow, no detailed research record was inferred from the abstract or secondary snippets.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-5a8ee7c3c066394790be7cf4.json"
 }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:38:05 JST**
+> 自動生成: **2026-09-22 16:38:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **295** |
-| 未claim Research job | **293** |
-| 直近24hの検証済みResearch収録 | **21** |
-| 最終検証済みResearch収録 | **09-22 16:20:36 JST（17分前）** |
+| 収録候補論文 | **291** |
+| 未claim Research job | **290** |
+| 直近24hの検証済みResearch収録 | **23** |
+| 最終検証済みResearch収録 | **09-22 16:38:18 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **295** |
+| canonical_id確認済みの一意な候補論文 | **291** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **295** |
+| 非終端Research job合計 | **291** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **2** | **0** | **0** | **2** | **0** | — |
+| Research | **17** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **15** | **5** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **17** | **5** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 16:38:18 JST** [research] `arXiv:2606.21633` — HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval
+  - job: `.survey/work-queue/jobs/job-research-3b95bafdcf04b501.json`
+  - result: `.survey/work-queue/results/research/attempt-50b11451c81409b86f90c5e0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-50b11451c81409b86f90c5e0.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md`
+- **09-22 16:38:18 JST** [research] `arXiv:2609.13141` — SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking
+  - job: `.survey/work-queue/jobs/job-research-6542fa570cf353a1.json`
+  - result: `.survey/work-queue/results/research/attempt-eac46ddd3cb449fe8b2c0320.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-eac46ddd3cb449fe8b2c0320.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md`
 - **09-22 16:20:36 JST** [research] `DOI:10.24963/ijcai.2026/502` — M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU
   - job: `.survey/work-queue/jobs/job-research-784815ee56689f0c.json`
   - result: `.survey/work-queue/results/research/attempt-f9afab963f7542abadb69271.json` (`ok=true`)
@@ -122,16 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-cc1db5f81bd8a1c088514f31.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-cc1db5f81bd8a1c088514f31.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2504.07807-cluster-driven-expert-pruning.md`
-- **09-22 13:52:54 JST** [research] `arXiv:2202.09368` — Mixture-of-Experts with Expert Choice Routing
-  - job: `.survey/work-queue/jobs/job-research-9de329d10383e26b.json`
-  - result: `.survey/work-queue/results/research/attempt-afcf905bd317f0527a7a08a2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-afcf905bd317f0527a7a08a2.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md`
-- **09-22 13:46:31 JST** [research] `arXiv:2110.01786` — MoEfication: Transformer Feed-forward Layers are Mixtures of Experts
-  - job: `.survey/work-queue/jobs/job-research-1922ded1807d40e6.json`
-  - result: `.survey/work-queue/results/research/attempt-3bb5f476d210f19b5b746d7c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3bb5f476d210f19b5b746d7c.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md`
 
 ### Audit
 
@@ -180,13 +180,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.19758` — FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving / worker `scheduled-chat-00`
   - claim: **09-22 16:36:40 JST** / heartbeat: **—** / lease expiry: **09-22 18:06:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-6ca9e5aa49540dd5.json`
-- `arXiv:2609.13141` — SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking / worker `scheduled-chat-30`
-  - claim: **09-22 16:32:06 JST** / heartbeat: **—** / lease expiry: **09-22 18:02:06 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6542fa570cf353a1.json`
 
 #### Audit
 
@@ -206,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **295** |
+| ready | **291** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **901** |
+| inference/training/survey配下の論文Markdown実体 | **903** |
 
 ### immutable submissionの未照合
 
@@ -234,8 +231,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **293** |
-| └ Research | **221** |
+| 成功result未照合のimmutable submission | **291** |
+| └ Research | **219** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
