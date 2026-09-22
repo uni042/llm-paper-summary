@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 04:38:11 JST**
+> 自動生成: **2026-09-23 04:44:54 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **209** |
-| 未claim Research job | **208** |
-| 直近24hの検証済みResearch収録 | **64** |
-| 最終検証済みResearch収録 | **09-23 04:38:07 JST（4秒前）** |
+| 収録候補論文 | **208** |
+| 未claim Research job | **207** |
+| 直近24hの検証済みResearch収録 | **65** |
+| 最終検証済みResearch収録 | **09-23 04:44:47 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **209** |
+| canonical_id確認済みの一意な候補論文 | **208** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **209** |
+| 非終端Research job合計 | **208** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **622** |
-| 未処理 | **5424** |
-| 収録済みとして除外 | **514** |
+| 処理済み | **623** |
+| 未処理 | **5423** |
+| 収録済みとして除外 | **515** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（20時間5分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（20時間12分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 04:44:47 JST** [research] `arXiv:2604.06542` — Does a Global Perspective Help Prune Sparse MoEs Elegantly?
+  - job: `.survey/work-queue/jobs/job-research-c92e15d6ba5edb8d.json`
+  - result: `.survey/work-queue/results/research/attempt-c1740060a24d308914998762.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-c1740060a24d308914998762.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2604.06542-global-perspective-moe-pruning.md`
 - **09-23 04:38:07 JST** [research] `arXiv:2508.07785` — Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts
   - job: `.survey/work-queue/jobs/job-research-b8b352e984bc0e9d.json`
   - result: `.survey/work-queue/results/research/attempt-4d7a0c3e035c923b869769ba.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-89bc3cc25133486a66c2d95b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-89bc3cc25133486a66c2d95b.json`
   - paper: `papers/inference/99-other-inference-systems/2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md`
-- **09-23 02:17:32 JST** [research] `arXiv:2609.19683` — MiX: Micro-Inverted-Scaling for End-to-End Low-Bit Vision-Language Model Acceleration
-  - job: `.survey/work-queue/jobs/job-research-2738618c3feb4d82.json`
-  - result: `.survey/work-queue/results/research/attempt-f71c9e148c6dfbb3490291b5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f71c9e148c6dfbb3490291b5.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md`
 
 ### Audit
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **209** |
+| ready | **208** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **949** |
+| inference/training/survey配下の論文Markdown実体 | **950** |
 
 ### immutable submissionの未照合
 
