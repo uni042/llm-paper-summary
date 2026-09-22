@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-a503dd59d7e7b9e3cfd8340e",
-  "job_id": "job-research-3218c42781ec549d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a503dd59d7e7b9e3cfd8340e",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a503dd59d7e7b9e3cfd8340e","job_id":"job-research-3218c42781ec549d","data":{"overview":"T5系MoEではTanbrがGLUE平均75.43を達成し、RL 74.95、Switch 74.41、Soft 75.10、Nucb 74.14を上回る。微調整時間はRL/Switch比で約40%短く、オンライン推論ではバッチ当たり時間をRL/Switch比65%、token-level Smear比ほぼ99%削減し、統合モデルだけをロードすることでメモリを20〜25%削減する。BERT系オンライン学習では5,000枠後、固定分布で最大9%、動的分布で5〜10%のaccuracy改善を示す。","key_results":[{"metric":"T5系GLUE平均","value":"75.43","baseline":"RL 74.95; Switch 74.41; Soft 75.10; Nucb 74.14","condition":"8 GLUE tasks, 8 experts/layer, A100 40GB","interpretation":"単一統合専門家でも比較法以上の平均品質を維持する。"},{"metric":"推論時間削減","value":"65%","baseline":"RL / Switch","condition":"T5-based MoE, batch inference after fine-tuning","interpretation":"時間枠ごとに統合を一度だけ行い、推論時は単一expert相当を実行する効果。"},{"metric":"Smear比推論時間削減","value":"約99%","baseline":"token-level Smear","condition":"T5-based MoE","interpretation":"tokenごとのparameter mergingを避ける差が大きい。"},{"metric":"推論メモリ削減","value":"20〜25%","baseline":"比較routing methods","condition":"T5-based MoE online inference","interpretation":"full MoEではなくmerged modelのみロードする。"},{"metric":"BERT系オンラインaccuracy改善","value":"固定分布で最大9%、動的分布で5〜10%","baseline":"RegMean/Fisher/Average/Nucb等","condition":"5,000 online-learning slots後","interpretation":"変動するtask distributionへの適応効果が動的条件で特に現れる。"},{"metric":"routing decision latency","value":"192 expertsでも0.4 ms未満","baseline":"expert counts 4〜192","condition":"20 feasible leavesを探索するscalability evaluation","interpretation":"expert数増加で更新stepは増えるが実際の1決定遅延は小さい。"},{"metric":"理論リグレット","value":"O(d~ sqrt(T log T))","baseline":"prior neural-bandit regret order","condition":"論文のsmoothness/NTK等の仮定下","interpretation":"連続な統合重み空間でもサブ線形リグレットを維持する。"}],"negative_results":"Tanbrは初期に候補重みが少ないため、T5微調整・BERTオンライン学習とも開始直後は比較法より損失または報酬が悪い。木が細分化されるにつれて逆転する。小さい平滑度ρは初期ランダム探索を短縮するが最終性能を下げ、大きいρは探索を改善する代わりに初期期間を長くする。微調整中は複数expertのloss gradientを保持するためTanbr/NucbのメモリはRL/Switchより約10%多い。Smearは微調整計算量が約20倍、メモリが他法より179%多い。","interpretation":"主なシステム利得は、専門家知識を時間枠単位で一つのFFNへ統合してから推論することで、full MoE residencyと複数expert executionを回避する点にある。被覆木は連続空間探索の候補数を抑え、ニューラルUCBは非線形な品質応答へ適応する。品質改善は小さいが、速度・メモリ削減と同時に達成されている。","quality_impact":"T5 GLUEでは平均品質を維持・微増するが全タスクで一様に勝つわけではなく、RTEではRL 65.3に対しTanbr 63.8など負ける項目もある。初期オンライン探索期にも一時的な品質低下があるため、即時安定性より長期適応を重視する方式である。"},"reservation":{"claim_id":"claim-a503dd59d7e7b9e3cfd8340e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
