@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1256251da35a70a67b7c0223","job_id":"job-research-1c695c55b9711b2f","data":{"overview":"Sub-MoEは4モデル・複数圧縮率で枝刈りと既存統合を一貫して上回る。Mixtral-8x7Bは6専門家で平均精度0.64、4専門家で0.58を保ち、HC-SMoEはそれぞれ0.61、0.51。Qwen3-30B-A3Bは128→64専門家で0.57を保つ一方HC-SMoEは0.38。Sub-MoE†は追加の専門家内圧縮でもMC-SMoEより大幅に低いパープレキシティを維持し、圧縮率増加に伴いスループットを最大120.9 token/sへ高める。","key_results":[{"metric":"Mixtral 8→6 平均精度","value":"0.64","baseline":"Original 0.67、HC-SMoE 0.61、frequency-prune 0.59","condition":"8 reasoning/understanding tasks","interpretation":"25%専門家削減で元性能の大半を保持する。"},{"metric":"Mixtral 8→4 平均精度","value":"0.58","baseline":"HC-SMoE 0.51、output-prune 0.39、frequency-prune 0.38","condition":"50% expert-count reduction","interpretation":"高圧縮ほど共有部分空間整列の利点が大きい。"},{"metric":"Qwen3-30B-A3B 128→64 平均精度","value":"0.57","baseline":"Original 0.69、HC-SMoE 0.38","condition":"50% expert-count reduction","interpretation":"多数専門家MoEでも統合崩壊を抑える。"},{"metric":"DeepSeek-MoE-16B 64→32 平均精度","value":"0.49","baseline":"Original 0.57、HC-SMoE 0.46","condition":"50% expert-count reduction","interpretation":"異なるMoE設計にも改善が再現する。"},{"metric":"Union SVDアブレーション","value":"平均0.64、C4 PPL 8.54","baseline":"Vanilla SVD 平均0.58、C4 10.67","condition":"Mixtral 8→6","interpretation":"共有Uを合同分解で求めること自体が主要寄与。"},{"metric":"Sub-MoE† runtime","value":"120.9 token/s","baseline":"Original Mixtral 8x7B 87.7 token/s","condition":"Mixtral 6x7B、30% intra-expert compression、8×H800","interpretation":"専門家内部圧縮が実スループット向上へつながる。"}],"negative_results":"Mixtralを4専門家よりさらに減らすと性能低下が不均衡に大きくなり、論文は4専門家付近を実用下限とみなす。校正サンプル32ではWikiText-2 PPL 8.69、C4 23.89と悪く、128まで増やすと5.16/8.54へ改善するため校正データ依存がある。3層共同クラスタリングは平均0.53で2層0.64より悪化し、広くまとめれば良いわけではない。","interpretation":"改善の中心は、機能的に似た専門家を選ぶことと、合同SVDで共通座標系へ写してから専門家固有成分だけを統合することの組合せにある。単純平均より頻度重み付けが良く、独立SVDよりUnion SVDが良いというアブレーションがこの因果を支持する。","quality_impact":"Mixtralでは8→6でメモリ24%削減に対し精度低下約6%、8→4でメモリ48%削減に対し精度低下約13%。Sub-MoE†は追加圧縮で品質を段階的に犠牲にしつつ1.1〜1.3倍のスループット向上を得る。"},"reservation":{"claim_id":"claim-1256251da35a70a67b7c0223","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-219bac9027693490a638aa72",
+  "job_id": "job-research-ff0b776f31e2fc4b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-219bac9027693490a638aa72",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1256251da35a70a67b7c0223","job_id":"job-research-1c695c55b9711b2f","data":{"hardware":"全実験はNVIDIA H800 GPU 8枚。ランタイム表も8×H800でtokens/secを測定する。","software":"公開著者リポジトリはsiruihan2024/Sub-MoE。論文は追加学習なしの圧縮を主評価し、Sub-MoE†+FTのみ回復学習の追加効果も評価する。","methodology":"Mixtral-8x7B、Qwen1.5-MoE-A2.7B-Chat、Qwen3-30B-A3B、DeepSeek-MoE-16Bを対象とする。校正はWikiText-2から128サンプル、各2048トークン。専門家出力類似度＋K-meansを既定クラスタリング、ルータ活性頻度によるV統合を既定とする。言語モデリングはWikiText-2、PTB、C4のパープレキシティ、推論・理解はARC-c/e、BoolQ、HellaSwag、MMLU、OpenBookQA、RTE、WinoGrandeの精度を評価する。比較はfrequency-prune、output-prune、MC-SMoE、HC-SMoE。アブレーションではクラスタリング層数、類似度指標、クラスタリング法、Union SVD、V統合法、校正サンプル数を分解評価する。","scope":"標準Sub-MoEは専門家数削減、Sub-MoE†は追加の専門家内低ランク圧縮を扱う。校正データが必要で、データフリーではない。主要表はゼロショット精度とパープレキシティであり、長文生成品質や学習後の全能力を網羅しない。Qwen3の本文表は30B-A3Bを用いる一方、導入部には235B-A22B表記があり、評価表を正本として解釈する。"},"reservation":{"claim_id":"claim-1256251da35a70a67b7c0223","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-219bac9027693490a638aa72",
+  "job_id": "job-research-ff0b776f31e2fc4b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-219bac9027693490a638aa72",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

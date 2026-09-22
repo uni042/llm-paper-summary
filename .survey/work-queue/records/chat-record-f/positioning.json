@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-1256251da35a70a67b7c0223","job_id":"job-research-1c695c55b9711b2f","data":{"limitations":"校正データが必須で、クラスタリングと活性頻度推定は対象ドメインの代表性に依存する。論文自身もデータフリー化を今後の課題とする。合同SVDは大規模専門家重みを一時的に扱う前処理コストを伴い、動的ルーティングそのものや専門家オフロード通信を直接最適化しない。専門家数を4未満へ削るMixtral設定では性能劣化が急増する。","differences":"MC-SMoEは類似ルーティング方針、HC-SMoEは階層クラスタリングを使うが、基本的には元重み空間で専門家を融合する。Sub-MoEは専門家群を合同SVDし、共有Uで表現空間を揃えた後にVだけを統合する点が本質的に異なる。枝刈り系SEER-MoE、NAEE、MoE-I2と違って専門家知識を丸ごと捨てず、標準版は回復学習も要求しない。","implementation_status":"著者公開リポジトリあり。AAAI 2026採択・公開済み。論文の既定実験は128×2048 tokenのWikiText-2校正、expert-output cosine、K-means、frequency-based V merging。","research_positioning":"Sub-MoEはMoE圧縮の中でも専門家削減を『どの専門家を捨てるか』ではなく『どの専門家を同じ共有部分空間で一つへ畳み込めるか』として扱うexpert-merging系統に位置する。低い専門家間類似度を直接平均の失敗原因として明示し、表現整列を統合前段に置く点が主要な差別化である。\n\n適応クラスタリングはルータ統計だけでなく専門家の実出力を比較するため、パラメータが異なっても機能が近い専門家を見つけられる。さらに複数層を共同で扱うことで、層ごとの冗長性差を全体圧縮率へ反映する。ただし3層共同では悪化しており、クラスタリング範囲自体もハイパーパラメータである。\n\n合同SVDは同一クラスタの専門家へ共有Uを与え、専門家固有情報をVへ分離する。この設計は共有成分＋差分を抽出するMoE圧縮と近いが、Sub-MoEでは共有座標系を作ることが目的で、Vの活性頻度重み付き融合によって専門家数そのものを減らす。Union SVDが独立SVDを大きく上回るアブレーションは、この整列が単なる低ランク化以上の役割を持つことを示す。\n\nシステム上は専門家数削減が常駐パラメータと計算量を同時に減らすため、CPU/SSDオフロードや専門家キャッシュとは代替・併用の両方が考えられる。先にSub-MoEで専門家集合を縮小すれば、オフロード対象数と転送量を減らせる一方、動的アクセス局所性やI/Oスケジューリングは別問題として残る。\n\nSub-MoE†は活性依存切り詰めSVDを追加し、専門家数削減と専門家内部圧縮を接続する。これによりメモリ削減だけでなく8×H800上のスループット向上も確認するが、実装評価は特定GPU環境であり、CPU/SSD階層メモリや単一GPU環境で同じ速度比になるとは限らない。"},"reservation":{"claim_id":"claim-1256251da35a70a67b7c0223","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-219bac9027693490a638aa72",
+  "job_id": "job-research-ff0b776f31e2fc4b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-219bac9027693490a638aa72",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
