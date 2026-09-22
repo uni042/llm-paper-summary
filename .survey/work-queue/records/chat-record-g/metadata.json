@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-d08192b6c02e47b87507ca6b",
   "job_id": "job-research-81731225ea65410f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d08192b6c02e47b87507ca6b",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2306.03745",
+    "arxiv_id": "2306.03745",
+    "doi": "10.48550/arXiv.2306.03745",
+    "openreview_id": "7I199lc54z",
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+    "title": "Soft Merging of Experts with Adaptive Routing",
+    "summary": "離散的なエキスパート選択に必要な勾配推定を避けるため、入力ごとの経路選択確率で全エキスパートのパラメータを加重平均し、その都度1個の合成エキスパートを構築して入力を1回だけ通すSMEARを提案する。経路選択器、パラメータ平均、合成エキスパートの順伝播がすべて微分可能なので標準的な誤差逆伝播で端から端まで学習できる。T5.1.1 Base上のGLUEでは平均81.6、ResNet18上のDomainNetでは62.0を達成し、教師情報を使うタグ経路選択をそれぞれ2.7、0.6ポイント上回る。出力を全エキスパートで計算するアンサンブルと異なり、活性値の順伝播は合成した1エキスパートだけなので推論速度は離散適応経路選択とほぼ同等である。",
+    "list_summary": "経路選択確率でエキスパート重みを入力ごとに合成して離散選択を消し、標準的な誤差逆伝播のまま適応的な専門化と単一エキスパート相当の活性計算を両立する。",
+    "authors": ["Mohammed Muqeeth", "Haokun Liu", "Colin Raffel"],
+    "authors_affiliations": "University of North Carolina at Chapel Hill; University of Toronto; Vector Institute",
+    "published": "2023-06-06",
+    "publication": "Transactions on Machine Learning Research (TMLR), 2024; arXiv:2306.03745v2",
+    "publication_type": "Journal article",
+    "publication_status": "Published",
+    "lineage": "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+    "topics": ["混合エキスパート", "微分可能経路選択", "パラメータ合成", "条件付き計算", "モジュール学習"],
+    "importance": "SMEARは、離散的な上位k選択をどう近似微分するかではなく、選択そのものをパラメータ空間の連続補間へ置き換える。これによりREINFORCE、直通型Gumbel-Softmax、上位kなどの勾配推定誤差を除きつつ、全エキスパート出力を計算するアンサンブルの計算増も避ける。現代の大規模MoE推論の直接的なオフロード手法ではないが、経路選択とエキスパート専門化を安定に学ぶ設計として、後続の適応的MoEやエキスパート合成系を理解する基礎になる。",
+    "hardware_evaluation": "全モデルは48GB A6000で学習し、アンサンブル法だけ80GB A100を使用。T5-GLUEは各実験約108時間、ResNet-DomainNetは約11時間。",
+    "quality_effect": "T5-GLUE平均81.6でタグ経路選択78.5、REINFORCE 80.0、パラメータ一致単一エキスパート80.2を上回る。DomainNetは62.0でタグ61.4、Soft MoE 60.5、パラメータ一致単一エキスパート60.8を上回る。",
+    "source": "https://arxiv.org/abs/2306.03745",
+    "sources": ["https://arxiv.org/abs/2306.03745", "https://arxiv.org/html/2306.03745v2", "https://github.com/r-three/smear", "https://openreview.net/forum?id=7I199lc54z"],
+    "code": "https://github.com/r-three/smear",
+    "implementation": "著者公式コードが公開されている。T5-GLUEとResNet-DomainNetのエキスパートをアダプタとして挿入し、入力ごとの経路選択確率からエキスパート重みを合成する実装を評価している。",
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary arXiv manuscript",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-d08192b6c02e47b87507ca6b", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
