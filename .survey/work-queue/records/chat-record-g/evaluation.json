@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-ac17b6b84524962e53346559",
-  "job_id": "job-research-3bf50f659a80056e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ac17b6b84524962e53346559",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ac17b6b84524962e53346559","job_id":"job-research-3bf50f659a80056e","data":{"models":["Qwen3-30B-A3B-Instruct-2507","Qwen3-Next-80B-A3B","GLM-4.5-Air"],"benchmarks":{"multiple_choice":"複数の選択式質問応答課題をMC集約値として評価。","generative":"数学・コードなどの生成課題をGEN集約値として評価。"},"baselines":["REAP（専門家枝刈り）","HC-SMoE（階層型専門家統合）","頻度ベース等の枝刈り・統合比較対象","元の非圧縮モデル"],"compression_settings":"代表的な比較では128専門家を96または64専門家へ削減相当の統合を行い、校正データの一般文・数学・コード比率を10通り変える。96専門家は25%削減相当、64専門家は50%削減相当。","calibration":"一般文C4、数学データ、コードのThe-Stack-Smolを混合し、混合比が圧縮後のMC/GEN性能へ与える影響を測定。","metrics":["MC集約値","GEN集約値","MC×GENのパレート前線とハイパーボリューム","校正データ比率と下流性能のPearson相関","平均プレロジット表現の数値ランクと平均性能の相関"],"ablation":"重要度を単純な利用頻度へ置換、ルータ確信度を外した類似度などを比較し、どの構成要素が性能保持に寄与するかを検証する。","evidence_note":"評価の中心は圧縮後の精度保持と校正データ依存性であり、エンドツーエンド推論速度の優位性を主要結論としては扱わない。"},"reservation":{"claim_id":"claim-ac17b6b84524962e53346559","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
