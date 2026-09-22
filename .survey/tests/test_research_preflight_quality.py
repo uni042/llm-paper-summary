@@ -73,6 +73,18 @@ class ResearchPreflightQualityTests(unittest.TestCase):
             warnings=list(warnings or []),
         )
 
+    def test_preflight_reuses_repository_quality_defaults(self):
+        args = self.module.paper_quality_gate._default_args()
+        quality = self.module.paper_quality_gate.quality
+        self.assertEqual(args.min_bytes, quality.DEFAULT_MIN_BYTES)
+        self.assertEqual(args.min_prose_chars, quality.DEFAULT_MIN_PROSE_CHARS)
+        self.assertEqual(args.min_paragraphs, quality.DEFAULT_MIN_PARAGRAPHS)
+        self.assertEqual(args.min_method_paragraphs, quality.DEFAULT_MIN_METHOD_PARAGRAPHS)
+        self.assertEqual(args.min_component_paragraphs, quality.DEFAULT_MIN_COMPONENT_PARAGRAPHS)
+        self.assertEqual(args.min_japanese_ratio, quality.DEFAULT_MIN_JAPANESE_RATIO)
+        self.assertEqual(args.warn_japanese_ratio, quality.DEFAULT_WARN_JAPANESE_RATIO)
+        self.assertNotIn("書誌情報", quality.EXCLUDED_SECTIONS)
+
     def test_self_review_requires_every_item(self):
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "attempt-a-q1.json"
