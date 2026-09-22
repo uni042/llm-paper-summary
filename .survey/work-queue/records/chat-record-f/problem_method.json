@@ -4,10 +4,17 @@
   "slot": "problem_method",
   "attempt_id": "attempt-be85a6eae28ccf3a322cb511",
   "job_id": "job-research-a61328ecbdf05053",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-be85a6eae28ccf3a322cb511",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "MoEは推論時に一部expertだけをactivateするため計算量は抑えられるが、全expert parameterは依然として保持する必要がある。論文はDeepSeek-V3を例に、1推論で37B parameterしかactivateしなくても671B parameter全体を保存する必要があり、MoE layerが総parameterの97%以上を占め得る点をmemory bottleneckとして置く。既存のexpert droppingはexpert全体を消すため粒度が粗く、calibration setへの過適合やspecialized knowledgeの喪失が起きやすい。expert mergingはsimilarity推定とparameter衝突が問題で、decomposition系もSVD等の追加計算を要する。反対にunstructured pruningは細粒度でもhardware上の実効加速につながりにくい。したがって、FFNの行列演算構造を保ったままexpert-levelより細かく削除でき、しかも再学習なしで重要度を高精度に推定できる構造化単位が必要になる。",
+    "novelty": "HEAPrはgated FFNの中間次元1要素に対応するWupとWgateの行、およびWdownの対応列をひとまとまりのatomic expertとして定義し、expertをatomic expert出力の和として扱う。これにより中間次元を直接縮める構造化剪定になる。重要度にはOptimal Brain Surgeon型の二次近似を使うが、巨大なparameter Hessianを構築しない。異なるatomic expert間のcross-Hessianが0になる構造を利用してblock化し、さらに剪定制約をparameter spaceからatomic expert output spaceへ移す。負の対数尤度ではFisher informationをexpected Hessianの近似として使い、同一expert内のatomic expertはlossに対するoutput gradientを共有するため、gradient covariance matrixをexpertごとに1枚だけ保持できる。最終的に全層のatomic expertを同じloss増加尺度でglobal rankingできる点が、単なるactivation magnitude方式との差である。",
+    "method_overview": "まず小さなcalibration setをモデルへ通し、各expertへrouteされたtoken集合を集める。第1段階では1回のbackwardでexpert outputに対するloss gradientを取得し、そのouter productをtoken上で平均してexpertごとのgradient covarianceを構成する。第2段階ではforwardで各atomic expert固有のoutputを計算し、そのoutputをgradient covarianceで二次形式評価して、剪定時の期待loss増加を近似するimportance scoreを得る。scoreが小さいほど除去の影響が小さいと判断する。同じexpert内ではcovarianceを共有するのでatomic expertごとに二次行列を持たない。全MoE layerのscoreを一括でglobal rankingし、指定ratioの下位atomic expertを削除する。削除はWup/Wgateの対応行とWdownの対応列を除去する構造化操作なので、残存expertの中間次元が縮み、expert全体を落とす場合と異なりactive expert数を保ったままFLOPsを減らせる。",
+    "components": [
+      {"name": "Atomic expert分解", "description": "各gated FFN expertを中間次元ごとの最小構造単位へ分解する。atomic expert jはWupとWgateのj番目の行、およびWdownのj番目の列からなり、expert outputはこれらの和になる。剪定しても他のatomic expertの行列構造を壊さないため、unstructured sparsityを導入せず中間幅そのものを縮小できる。"},
+      {"name": "二次情報の出力空間化", "description": "expert parameter全体のHessianはO((3 d_model d_inter)^2)規模で現実的でない。atomic expert間の交差二階微分が0という性質でまずblock化し、さらにatomic expertを0出力へする制約をJacobianで線形化してoutput spaceへ移す。Fisher information近似を使うことでimportanceをatomic outputとgradient covarianceの二次形式として計算でき、保持量をexpert当たりO(d_model^2)へ落とす。"},
+      {"name": "共有gradient covariance", "description": "同一expertを構成するatomic expertは加算でexpert outputを作るため、lossから見た各atomic outputのgradientが同一になる。この性質を利用し、atomic expertごとにcovarianceを保存せずexpert単位で1枚を共有する。小さなcalibration setに対する1回のbackwardで必要な二次統計を集約できる。"},
+      {"name": "全層global rankingと構造化削除", "description": "importanceはモデル全体のloss増加を近似する尺度なのでlayerごとに正規化せず全atomic expertを比較する。global rankingの下位r%を全MoE layer横断で削除する。実験ではlayer-wise版よりglobal版が一貫して高い平均精度を示し、layerごとに最適な剪定率が大きく異なることも確認されている。"}
+    ],
+    "system_design": "HEAPrはpost-trainingの構造化MoE圧縮として、calibration→gradient covariance収集→atomic output収集→global ranking→行列次元削減の順に処理する。必要な統計取得は2回のforwardと1回のbackwardで完結し、追加fine-tuningやdistillationを前提としない。二次情報を精度のために利用しつつ、その保存・計算をoutput spaceへ縮約することで、coarseなexpert pruningとhardware非効率なweight sparsificationの中間を狙う設計である。"
+  },
+  "reservation": {"claim_id": "claim-be85a6eae28ccf3a322cb511", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
