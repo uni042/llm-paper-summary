@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2609.16503",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.16503-adade-dynamic-expert-deactivation.md",
   "selection_reason": "Dense FFNをMoE化し、router usageからexpert retention maskを動的更新して不要expertを無効化する。固定pruningではなく学習中にdeactivation量を適応させる直接的compression手法。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T11:54:57+00:00"
+  "created_at": "2026-09-20T11:54:57+00:00",
+  "completed_at": "2026-09-22T15:43:21+00:00",
+  "blocker": "Primary-source full text could not be retrieved reliably in this run. The arXiv PDF endpoint was unavailable to the worker; the arXiv abstract page and distinct indexed mirrors exposed metadata/abstract only. Per worker-router, no five-slot record was inferred from abstract/search snippets.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-f9b1303eb0dbce6b902842b6.json"
 }

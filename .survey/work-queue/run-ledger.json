@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T15:40:31.310823+00:00",
+  "updated_at": "2026-09-22T15:43:27.097438+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -38241,6 +38241,56 @@
       "paper_active_count_before": 908,
       "paper_active_count_after": 908,
       "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35749174271",
+      "first_recorded_at": "2026-09-22T15:43:27.097438+00:00",
+      "last_recorded_at": "2026-09-22T15:43:27.097438+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35749174271:1",
+          "recorded_at": "2026-09-22T15:43:27.097438+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35749174271",
+            "run_attempt": "1",
+            "source_sha": "89e119844689863162fc033401f5c0e36dca82b9"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-e488ee96459c1b4f",
+          "type": "research",
+          "canonical_id": "arXiv:2609.16503",
+          "title": "Dense to MoE Adaptation for Compact Vision Language Action Policies",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "job_blocked"
     }
   ]
 }
