@@ -22,6 +22,21 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("repeated until the", finalization)
         self.assertIn("terminal state", finalization)
 
+    def test_claim_wait_is_productive_fast_lane_monitoring(self):
+        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
+        continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
+        guidance = (SCRIPTS / "worker_guidance.py").read_text(encoding="utf-8")
+        finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
+
+        self.assertIn("MONITOR_CLAIM_FAST_LANE", router)
+        self.assertIn("request commitから60秒未満", router)
+        self.assertIn("Actions run", router)
+        self.assertIn("MONITOR_CLAIM_FAST_LANE", continuation)
+        self.assertIn("claim_result_pending_age_seconds", continuation)
+        self.assertIn("inspect_survey_claim_fast_actions_run_for_request_commit", continuation)
+        self.assertIn("MONITOR_CLAIM_FAST_LANE", guidance)
+        self.assertIn("Pending claim results also require productive fast-lane monitoring", finalization)
+
     def test_submission_wait_uses_one_paper_delayed_barrier(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
