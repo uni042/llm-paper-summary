@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-a2e5fb73d91123b2b7515fb2",
-  "job_id": "job-research-bc95233f6a664ba4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a2e5fb73d91123b2b7515fb2",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a2e5fb73d91123b2b7515fb2","job_id":"job-research-bc95233f6a664ba4","data":{"overview":"Occultは通信複製数を実時間と強く相関する指標として減らし、配置のみでも約20%削減、協調剪定でさらに理論下限へ近づける。OLMoEの2^14-token prefillでは2-GPU剪定構成がTutel比8.66倍、MegaBlocks比1.70倍、vLLM比1.86倍。Qwen-MoEではvLLM比1.60倍、DeepSeek-MoEでは1.51倍。学習batch 8ではMegaBlocks比1.54倍、FSDP比2.65倍、DeepSpeed比約9倍、Tutel比約20倍。","key_results":[{"metric":"OLMoE prefill speedup","value":"1.86× vs vLLM; 1.70× vs MegaBlocks; 8.66× vs Tutel","baseline":"各framework","condition":"2^14 prompt tokens, 2-device pruning, 4 A6000","interpretation":"通信律速の長文prefillで大幅高速化。"},{"metric":"Qwen-MoE prefill speedup","value":"1.60× vs vLLM; 2.74× vs Tutel","baseline":"vLLM/Tutel","condition":"2^14 tokens","interpretation":"異なるrouting構成でも効果。"},{"metric":"DeepSeek-MoE prefill speedup","value":"1.51× vs vLLM; 5.64× vs Tutel","baseline":"vLLM/Tutel","condition":"2^14 tokens","interpretation":"shared-expert系でも通信削減が有効。"},{"metric":"training speedup batch 8","value":"1.54× MegaBlocks; 2.65× FSDP; ~9× DeepSpeed; ~20× Tutel","baseline":"training frameworks","condition":"sequence 512, 4 GPUs","interpretation":"通信と中間memory削減が学習にも効く。"},{"metric":"communication budget example","value":"E[C_T] 3.68→3.02 placement→1.98 2-GPU prune→1.0 1-GPU prune","baseline":"trivial Occult","condition":"OLMoE example","interpretation":"通信複製数低下がlatency 15.93s→12.53→9.22→5.82sと対応。"}],"negative_results":"1-GPUまで協調を制限すると最高速度になる一方、複数benchmarkで品質が低下する。小batch decodeでは通信が支配的でないため高速化は限定される。またQwen/DeepSeekの一部prefill比較ではMegaBlocksに対する記載値が1未満であり、すべてのbaselineを常に上回るわけではない。","interpretation":"MoE通信量は単なる選択expert数ではなく、同一tokenの選択expertが何台のGPUへ跨るかで決まる。共活性情報を配置とroutingへ反映し、通信テンソル自体もその構造に合わせて圧縮することで、モデル品質を保ちながら実時間を下げられる。","quality_impact":"2-GPU協調剪定は標準SFTと同等または上回る課題が多く、類似度置換がrouter-score置換より一貫して良い傾向。1-GPU制約は品質低下が明確で、速度・品質の調整つまみとしてGPU許可数を使える。"}}
