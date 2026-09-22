@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T02:12:02.914505+00:00",
+  "updated_at": "2026-09-22T02:12:55.171615+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -34836,6 +34836,56 @@
       "paper_active_count_before": 886,
       "paper_active_count_after": 886,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35678620274",
+      "first_recorded_at": "2026-09-22T02:12:55.171615+00:00",
+      "last_recorded_at": "2026-09-22T02:12:55.171615+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35678620274:1",
+          "recorded_at": "2026-09-22T02:12:55.171615+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35678620274",
+            "run_attempt": "1",
+            "source_sha": "db3f85e9680249ac7e25e93a772ccbe7f6ff14a9"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-5cd2beb9d9cae3d8",
+          "type": "research",
+          "canonical_id": "arXiv:2605.08575",
+          "title": "Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 886,
+      "paper_active_count_after": 886,
+      "last_successful_action": "research_completed"
     }
   ]
 }

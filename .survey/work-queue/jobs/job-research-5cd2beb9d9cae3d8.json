@@ -12,7 +12,7 @@
   "source_url": "https://arxiv.org/abs/2605.08575",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08575-intra-expert-activation-sparsity.md",
   "selection_reason": "既存pretrained MoE内部にあるintra-expert activation sparsityを利用し、expert粒度の外側だけでなく内部計算も削減する。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -32,14 +32,6 @@
   ],
   "last_blocked_at": "2026-09-20T14:49:17+00:00",
   "retry_queued_at": "2026-09-20T18:57:27+00:00",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | Japanese-first prose ratio is too low: 51.3% < 70% (Japanese=2485, Latin=2359)",
-  "validation_errors": [
-    "problem_method.components[0].description is too short",
-    "problem_method.components[1].description is too short",
-    "problem_method.components[2].description is too short",
-    "problem_method.components[3].description is too short",
-    "Japanese-first prose ratio is too low: 51.3% < 70% (Japanese=2485, Latin=2359)"
-  ],
-  "last_validation_failed_at": "2026-09-21T18:34:10+00:00"
+  "completed_at": "2026-09-22T02:12:51+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-b5919b99883e66617c28776a.json"
 }
