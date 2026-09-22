@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a503dd59d7e7b9e3cfd8340e","job_id":"job-research-3218c42781ec549d","data":{"hardware":"NVIDIA A100 40GB。主評価は各FFN層を8専門家MoE化したT5系約10億パラメータとBERT系約6.6億パラメータ。スケーラビリティでは専門家数4〜192を変化させる。","software":"PyTorch。Tanbrの主設定候補は平滑度ρ∈{0.3,0.5,0.7,0.9}、正則化λ=1、探索係数υ=1、学習率η∈{1e-4,1e-3,1e-2,1e-1}、ニューラルネット幅64・深さ2、統合専門家数上限B=8。","methodology":"GLUEのMNLI、QNLI、RTE、SST-2、MRPC、QQP、STS-B、CoLAの8タスクを80/20で学習・検証分割し、batch sizeと最大系列長を128にする。CoLAはMatthews相関、STS-BはPearson/Spearman平均、他はaccuracyで評価する。T5系はpost-layer normalizationによる統合時パラメータシフトへ適応するため正規化層を10,000 step微調整しながらルータを学習し、その後モデルとルータを固定してオンライン推論を測る。BERT系はpre-layer normalizationの頑健性を利用し、モデル微調整なしで推論時の観測accuracyを報酬として5,000 time slotsオンライン学習した後、固定・動的タスク分布を評価する。比較対象はRL、Switch、token-level Smear、ランダム候補ニューラルUCB、RegMean、Fisher、単純平均など。","scope":"品質、微調整時間・メモリ、バッチ推論時間・メモリ、オンライン収束、固定/動的タスク分布、4〜192 expertsのrouting overhead、ρと学習率の感度を評価する。主モデルはいずれも研究用T5/BERT系MoEで、Mixtral等の現代的な数十〜数百B級生成LLMや複数GPU分散all-to-all、実ネットワーク上のエッジ配置は直接評価していない。"},"reservation":{"claim_id":"claim-a503dd59d7e7b9e3cfd8340e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6cd2c2eb6d8d0d8116429b11",
+  "job_id": "job-research-9b33865bddc54a07",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6cd2c2eb6d8d0d8116429b11",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

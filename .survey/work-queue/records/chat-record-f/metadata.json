@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a503dd59d7e7b9e3cfd8340e","job_id":"job-research-3218c42781ec549d","data":{"canonical_id":"arXiv:2509.19781","arxiv_id":"2509.19781","doi":"10.48550/arXiv.2509.19781","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Faster, Smaller, and Smarter: Task-Aware Expert Merging for Online MoE Inference","summary":"Tanbrは、明示的なタスクタグが得られないオンライン専門家混合モデル（MoE）推論で、時間枠ごとのタスク分布を文脈として専門家の重み付き統合を学ぶ木構造適応ニューラルバンディットルータである。連続・多次元の統合重み空間を二分木で段階的に細分化し、ニューラル上側信頼限界で候補を選ぶ。T5/BERT系MoEとGLUE 8タスク、A100 40GBで評価し、T5系ではRL/Switch比でバッチ推論時間を65%削減、メモリを20〜25%削減し、BERT系オンライン学習では固定分布で最大9%、動的分布で5〜10%の精度改善を報告する。","list_summary":"タスクタグなしのオンラインMoEでタスク分布を文脈に連続な専門家統合重みを木構造ニューラルバンディットで探索し、単一統合専門家により推論時間とメモリを削減する。","authors":["Ziyi Han","Xutong Liu","Ruiting Zhou","Xiangxiang Dai","John C.S. Lui"],"authors_affiliations":"The Chinese University of Hong Kong; University of Washington; Southeast University","published":"2025-09-23","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv:2509.19781v2 (2026-01-23)。初版は2025-09。","lineage":"適応的専門家計算 / 専門家統合 / オンラインMoE推論 / ニューラルバンディット","topics":["専門家統合","タスクレベルルーティング","オンライン推論","ニューラルバンディット","連続意思決定","エッジ推論"],"importance":"専門家を都度複数実行する代わりに、時間枠ごとのワークロードへ適応した単一統合専門家を生成し、モデル常駐量・実行量・ルーティング頻度を同時に下げる。連続重み探索に理論的リグレット保証を与える点も特徴。","implementation":"論文はアルゴリズム、探索木、ニューラルUCB、PyTorch評価設定を詳述するが、一次資料から公式公開コードURLは確認できない。","hardware_evaluation":"NVIDIA A100 40GB。T5系約1.0B、BERT系約660M、各MoE層8 expertsを主評価し、4〜192 expertsのスケーラビリティも測定。","quality_effect":"T5系GLUE平均75.43でRL 74.95、Switch 74.41、Soft 75.10、Nucb 74.14を上回る。BERT系オンラインでは初期探索期は劣るが木細分化後に改善する。","source":"https://arxiv.org/abs/2509.19781","sources":["https://arxiv.org/abs/2509.19781","https://arxiv.org/pdf/2509.19781"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"arXiv v2一次PDF参考文献節","references_total":51},"reservation":{"claim_id":"claim-a503dd59d7e7b9e3cfd8340e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-6cd2c2eb6d8d0d8116429b11",
+  "job_id": "job-research-9b33865bddc54a07",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6cd2c2eb6d8d0d8116429b11",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
