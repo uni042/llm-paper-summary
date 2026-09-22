@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 21:15:34 JST**
+> 自動生成: **2026-09-22 21:21:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **275** |
-| 未claim Research job | **274** |
-| 直近24hの検証済みResearch収録 | **29** |
-| 最終検証済みResearch収録 | **09-22 21:15:30 JST（4秒前）** |
+| 収録候補論文 | **274** |
+| 未claim Research job | **273** |
+| 直近24hの検証済みResearch収録 | **30** |
+| 最終検証済みResearch収録 | **09-22 21:21:24 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **275** |
+| canonical_id確認済みの一意な候補論文 | **274** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **275** |
+| 非終端Research job合計 | **274** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **603** |
-| 未処理 | **5443** |
-| 収録済みとして除外 | **495** |
+| 処理済み | **604** |
+| 未処理 | **5442** |
+| 収録済みとして除外 | **496** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（12時間42分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（12時間48分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **2** | **0** | **0** | **1** | **0** | — |
+| Research | **15** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **16** | **5** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **15** | **5** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 21:21:24 JST** [research] `arXiv:2310.08461` — DistillSpec: Improving Speculative Decoding via Knowledge Distillation
+  - job: `.survey/work-queue/jobs/job-research-2310f02f05cacc23.json`
+  - result: `.survey/work-queue/results/research/attempt-1b51079a73bb2f6ad0213381.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1b51079a73bb2f6ad0213381.json`
+  - paper: `papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md`
 - **09-22 21:15:30 JST** [research] `arXiv:2609.12412` — HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications
   - job: `.survey/work-queue/jobs/job-research-c15907d33f78f8cd.json`
   - result: `.survey/work-queue/results/research/attempt-05dcd349efb11788a6f85507.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-eac46ddd3cb449fe8b2c0320.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-eac46ddd3cb449fe8b2c0320.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md`
-- **09-22 16:20:36 JST** [research] `DOI:10.24963/ijcai.2026/502` — M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU
-  - job: `.survey/work-queue/jobs/job-research-784815ee56689f0c.json`
-  - result: `.survey/work-queue/results/research/attempt-f9afab963f7542abadb69271.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f9afab963f7542abadb69271.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md`
 
 ### Audit
 
@@ -203,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **275** |
+| ready | **274** |
 
 ### 候補の重複・識別情報欠損
 
@@ -223,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **910** |
+| inference/training/survey配下の論文Markdown実体 | **911** |
 
 ### immutable submissionの未照合
 
