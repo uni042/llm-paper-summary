@@ -4,10 +4,18 @@
   "slot": "evaluation",
   "attempt_id": "attempt-900cad5c6178df049a8d9dec",
   "job_id": "job-research-6e36f8b25c1d84c6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-900cad5c6178df049a8d9dec",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "hardware": ["主要本文・付録でGPU型やノード数は明記されていない"],
+    "software": ["OLMo2ベース実装","OLMES zero-shot評価","著者VersatileFFN実装"],
+    "model": ["354.71M: hidden 1024, 15 layers","720.81M: hidden 1536, 15 layers","1.21B: hidden 2048, 15 layers","SwiGLU + RMSNorm, OLMo2 tokenizer 50,280"],
+    "datasets": ["FineWeb-Edu 40B tokens","FineWeb-Edu 70B tokens","FineWeb-Edu 100B tokens","PIQA","HellaSwag","OpenBookQA","SciQ","ARC-Easy","ARC-Challenge","CommonsenseQA","Winogrande"],
+    "baselines": ["同規模dense Base","8実専門家・Top-2 MoE","2-Loop","4-Loop","6-Loop"],
+    "correctness": "8つの標準NLPベンチマークをOLMESでゼロショット評価し、平均accuracyとtraining lossを比較する。パラメータ効率比較では総パラメータ数とFFN FLOPsを併記する。",
+    "settings": ["354M/720M/1.21Bを40B/70B/100B tokensで事前学習","主要比較はpretrained checkpointから同一corpusを1 epoch継続事前学習","sequence length 4096","AdamW, weight decay 0.1, gradient clipping 1.0","5% warmup後cosine decayでpeakの10%まで減衰","global batch 1.5M/1M/0.5M tokens","peak LR 5e-4/4e-4/3e-4","MoE/VersatileFFNのload-balancing loss係数1e-5","主設定 width 8-choose-2, depth Lmax=4"],
+    "methodology": "各規模でBase、実専門家MoE、固定k-Loop、VersatileFFNを同じ学習条件で比較する。354Mでは専門家数・活性数と最大ループ数をsweepし、8-choose-2と4 loopsを主設定に選ぶ。FLOPsは1 token input/1 token outputのFFN計算量として算出し、VersatileFFNはARC-c上の平均ループ数と最大ループ未満の割合を用いて実際の動的実行量を推定する。さらに各構成要素のablation、継続事前学習なしのfrom-scratch比較、層別ループ数とトークン別ゲート傾向を解析する。",
+    "scope": "小～中規模のOLMo2型decoder LLMでの事前学習・継続事前学習評価。大規模商用モデル、実サービングのwall-clock latency、GPUメモリ実測は主要評価対象ではない。",
+    "workloads": ["言語モデル事前学習","ゼロショット常識・科学QA","動的トークン別再帰","仮想MoE routing"],
+    "metrics": ["training loss","8-task average accuracy","task別accuracy","parameter count","FFN FLOPs","平均予測ループ数"],
+    "reproducibility": "データ量、モデル寸法、層数、optimizer、batch、LR、sequence length、主なrouter/loop設定を記載し、著者コードも公開されている。一方、主要本文・付録ではGPU型や総学習時間は確認できない。"
   }
 }
