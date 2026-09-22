@@ -4,10 +4,17 @@
   "slot": "problem_method",
   "attempt_id": "attempt-c92a29674a67b32c44dc512a",
   "job_id": "job-research-ca56f81ba7248b99",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c92a29674a67b32c44dc512a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "長文decodeでは毎tokenで増大するKV cacheを読み直すためattentionがHBM bandwidth boundになる。BLASSTのようなpost-QK sparse attentionはV/PVを省けてもdrop判定前に全KをGPUへ読み、90% sparsityでも残るK+V trafficの約91%がKになる。一方、current-query PIM filterはKをGPUへ出さずに済むが、現在query→PIM score→mask→GPU attentionという直列依存を作り、PIMがcritical pathへ入る。",
+    "novelty": "maskを現在queryから作るのではなく、前stepまでに監査したBLASST margin履歴から厳密に因果的に予測し、current token開始前にsurvivor maskを用意する。GPUはsurvivorだけを処理し、PIMは同時にglobally omitted blockのQKを計算して予測dropを全監査する。監査はcurrent outputを修復せずfuture predictorを更新するため、PIMをcurrent-token dependency graphから外す。",
+    "method_overview": "各(layer, KV head, block) cellについて過去の監査marginからEMA平均・二次モーメント、age、2-bit Schmitt counter等の状態を持ち、5個のknobでdropを予測する。block 0等はforce keepし、predicted survivorsのunionだけGPUがfetchしてQK/online softmax/PVを実行する。複数headのunion内に残ったpredicted-drop cellはGPU maximaから監査でき、union外blockはHBM-PIMがQKしてblock maximaを返す。stack controllerがblock順に両観測をmergeしてfull-cache BLASST marginを再構成し、EMA状態へfoldして次step maskをeager生成する。operating pointはSCBOでfalse-drop budget以下のdrop recall最大化としてoffline探索する。",
+    "components": [
+      {"name": "因果的margin predictor", "description": "直前までの監査済みBLASST marginをEMA等で追跡し、current QK前にdrop verdictを出す。89.2%の隣接step verdict persistenceを利用する。"},
+      {"name": "GPU survivor path", "description": "予測survivorだけK/Vをfetchし、survivor BLASSTでさらに絞りながらQK・softmax・PVをGPUで実行する。predicted dropのK trafficをcurrent stepから除く。"},
+      {"name": "PIM complement audit", "description": "GPU union外の全predicted-drop blockをnear-bank PIMが並行QKし、GPU側で観測できるdrop cellと合わせて全省略cellのmarginを再構成する。"},
+      {"name": "SCBO operating-point search", "description": "5つの離散・連続knobをfalse-drop率制約付きblack-box optimizationとして探索し、empirical budget内でdrop recall最大の点を固定する。"}
+    ],
+    "system_design": "AttAcc由来HBM-PIMのbank-level GEMVを5 HBM3 stacksへ置き、predictor state/audit result/KVをshared HBMに保持する。GPUとPIMは別linkを介さずshared HBM経由でcontrollerと連携し、PIM auditはGPU survivor attentionと同時実行する。"
+  },
+  "reservation": {"claim_id": "claim-c92a29674a67b32c44dc512a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
