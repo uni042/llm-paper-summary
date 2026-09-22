@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 11:02:46 JST**
+> 自動生成: **2026-09-22 11:03:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **322** |
 | 未claim Research job | **321** |
 | 直近24hの検証済みResearch収録 | **19** |
-| 最終検証済みResearch収録 | **09-22 09:32:19 JST（1時間30分前）** |
+| 最終検証済みResearch収録 | **09-22 09:32:19 JST（1時間31分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -115,9 +115,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3832810.3832827` — ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape / worker `scheduled-chat-00`
-  - claim: **09-22 11:02:24 JST** / heartbeat: **—** / lease expiry: **09-22 12:32:24 JST**
-  - evidence: `.survey/work-queue/claims/job-research-289804590f1b694f.json`
+- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
+  - claim: **09-22 11:03:15 JST** / heartbeat: **—** / lease expiry: **09-22 12:33:15 JST**
+  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
 
 #### Audit
 
@@ -165,8 +165,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **235** |
-| └ Research | **163** |
+| 成功result未照合のimmutable submission | **236** |
+| └ Research | **164** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
