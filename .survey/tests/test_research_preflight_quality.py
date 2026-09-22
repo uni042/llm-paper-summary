@@ -83,7 +83,7 @@ class ResearchPreflightQualityTests(unittest.TestCase):
         self.assertEqual(args.min_component_paragraphs, quality.DEFAULT_MIN_COMPONENT_PARAGRAPHS)
         self.assertEqual(args.min_japanese_ratio, quality.DEFAULT_MIN_JAPANESE_RATIO)
         self.assertEqual(args.warn_japanese_ratio, quality.DEFAULT_WARN_JAPANESE_RATIO)
-        self.assertNotIn("書誌情報", quality.EXCLUDED_SECTIONS)
+        self.assertIn("書誌情報", quality.EXCLUDED_SECTIONS)
 
     def test_self_review_requires_every_item(self):
         with tempfile.TemporaryDirectory() as td:
