@@ -60,7 +60,8 @@ Research / Auditのclaimは次の順で行う。
 2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatの最小requestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` を持つ。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。
 3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で `claim_worker_with_banks.py` を実行する。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
 4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を**10秒実時間間隔**で再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`next_action` / `instructions` を正本として以後の処理を行う。
-5. claim result待ちのためだけに別requestを発行しない。claim fast laneはpush起動に加えて**10分周期で未result requestを定期回収**するため、一時的なActions失敗・cancel・push競合でrequestだけ残っても新requestを捏造せず同じidentityの回収を待つ。
+5. **claim result待ちは受動待機にしない。** request commitから60秒未満は `MONITOR_CLAIM_FAST_LANE` として、同じrequestを起動した `Survey claim fast lane` のActions runを確認し、`queued` / `in_progress` ならjob/step状態を確認する。並行して同一workerの未解決submission、`retryable` / repair待ち、active claim整合だけを軽く監査し、10秒後に最新 `main` と同じ `request_id` のresultを再確認する。この監視サイクル中に別claimを発行したり、割当未確定の次論文本文を先読みしてはならない。
+6. request ageが60秒以上でも別requestを発行しない。Actionsが `failed` / `cancelled` なら同じrequestの正規回復へ進み、`queued` / `in_progress` / success後の反映待ちなら同一identityの監視を継続する。claim fast laneはpush起動に加えて**10分周期で未result requestを定期回収**するため、一時的なActions失敗・cancel・push競合でrequestだけ残っても新requestを捏造しない。
 
 **並列workerの扱い:** `max_jobs=1` と未完了claimの直列制約は**同一worker / 同一論理worker lineage内だけ**に適用する。`:00` worker、`:30` worker、その他の独立workerは、別 `worker_id` と別record bankで同時にResearch / Auditを進めてよい。他workerのactive claim、他workerのclaim request、またはclaim fast lane上で先行requestが処理中であることを理由に、このworkerのrunを停止・終了・handoffしてはならない。`.github/workflows/survey-claim-fast.yml` の `concurrency: survey-claim-main` は**claim割当commitの競合回避だけを直列化するもの**であり、論文精読そのものを全worker間で直列化するものではない。自分のrequestがfast lane待ちなら同じ `request_id` のresultを**10秒実時間間隔**で再確認し、割当後は返された別job / record bankで処理を続ける。他workerのclaimを自分の未完了claimとして扱わない。
 
@@ -84,7 +85,7 @@ claim requestでは `request_id` をrequestファイル名のstemと完全一致
 
 1. 最新queueと現在の担当確保状態（claim state）を取得する。
 2. priority最上位の実行可能jobを**1件だけ**担当確保する。`max_jobs=1`。同一ワーカーが**未提出のactive claimを複数保持しない**。提出済みdescriptorに対応する旧claimがclaim state上で一時的にactiveでも、次requestの正規処理で旧claimを解放してから新claimを作るため、これは複数論文の同時処理とは扱わない。ただし**Audit starvation防止をpriorityより優先する**。今回runの成功完了を3件ずつのブロックとして数える。判定は**各claim requestを出す直前の最新queue**で行う。ブロック内で先に2件ともResearchを成功完了し、まだAuditを完了しておらず、その時点でready Auditが1件以上存在する場合だけ3件目のclaim requestを `job_types: ["audit"]` に限定する。ブロック開始時にAuditが存在していても3件目時点で他workerに取得されready Auditが0なら待たず、`job_types: ["research", "audit"]` の通常priority順へ戻る。それ以外も通常priority順に選ぶ。
-3. claim result待ちなら同じ `request_id` を保持する。別requestを発行して回避しない。次の安全な判断に結果が必要な場合だけ10秒の実時間間隔で同じ対象を再確認する。
+3. claim result待ちなら同じ `request_id` を保持する。別requestを発行して回避しない。**request ageが60秒未満ならActions run/job/stepと同一worker transport状態の監視を1サイクル行ってから10秒後に同じ対象を再確認する。** 60秒以降も受動的に終了せず、Actions状態と正規回復可否を確認しながら同一requestを追跡する。
 4. claim resultの `record_bank` / `record_bank_fallback` をそのまま使う。ワーカーが別bankを選び直さない。
 5. 一次資料本文を最後まで読み、抄録や検索断片から欠落情報を推測しない。
 6. `metadata`、`problem_method`、`evaluation`、`results`、`positioning` の5スロットを完成させる。
@@ -290,7 +291,9 @@ runtime_condition: none
 - `CLAIM_NEXT_RESEARCH_AUDIT`: 新しいResearch / Auditを1件だけclaimする。
 - `CONTINUE_ASSIGNED_WORK`: すでにactiveな同一workerの担当を継続し、新規claimを作らない。
 - `WAIT_FOR_READY_RESEARCH_AUDIT`: claim可能jobが0件なので空claimを発行せず10秒待機し、最新queue/run-stateを再確認する。Discoveryへ切り替えない。
-- `WAIT_FOR_CLAIM_RESULT` / `WAIT_FOR_PREVIOUS_SUBMISSION_RESULT`: 同一identityを10秒間隔で再確認する。
+- `MONITOR_CLAIM_FAST_LANE`: claim requestから60秒未満の監視フェーズ。同じrequestを起動したSurvey claim fast laneのActions run/job/step、同一workerの未解決submission・retryable repair・active claim整合を確認し、10秒後に最新main/resultを再確認する。新claim・次論文先読みは禁止。
+- `WAIT_FOR_CLAIM_RESULT`: 60秒以上pendingのclaimを同一identityのまま追跡する。Actions失敗/cancelなら正規回復、処理中なら10秒後再確認する。pendingだけを理由にrunを終了しない。
+- `WAIT_FOR_PREVIOUS_SUBMISSION_RESULT`: 同一submission identityを10秒間隔で再確認する。
 - `WAIT_FOR_DISCOVERY_PRECHECK_RESULT` / `WAIT_FOR_DISCOVERY_SUBMISSION_RESULT`: 開始済みDiscovery roundとして同一identityを10秒間隔で再確認する。600秒開始禁止窓に入っても最終180秒までは待機を継続する。
 - `CONTINUE_DISCOVERY_ROUND`: 成功済みprecheckの評価・submissionなど、すでに開始済みのroundを完了する。
 - `RECOVER_DISCOVERY_SUBMISSION`: precheck/submissionの失敗を正規recovery_stepsで回収し、同じroundを終端まで進める。
@@ -303,7 +306,7 @@ runtime_condition: none
 
 `run_finalization_gate.py` にも今回runの `--work-mode` と最低条件カウンタを必ず渡す。run-state resultの `gate.hard_stop` をそのまま `--hard-stop` の正本とし、ワーカーが独自に再分類しない。Research / Auditで成功完了3件未達、またはDiscoveryで4 round未達の通常runは、仮に誤って `STOP_RUN` が渡されてもfinalization gateが拒否する。hard stop + safe handoffだけはこの最低条件より優先する。pending resultを含むsafe handoffでは、request/submission identity、期待result path、現在のpending状態、次の正規操作が耐久保存済みの場合だけ `handoff_safe=true` とする。
 
-- claim/resultやsubmission/resultが次の安全な判断に必要なら、同一targetを**10秒実時間間隔**で再確認する。「所定間隔」はすべて10秒を意味し、別の待機間隔を自己判断で作らない。Research / Auditモードで最新queue上のclaim可能jobが0件なら、空のclaim requestを連打せず10秒待機して最新queueを再確認する。run中にDiscoveryへ切り替えない。
+- claim/resultやsubmission/resultが次の安全な判断に必要なら、同一targetを**10秒実時間間隔**で再確認する。「所定間隔」はすべて10秒を意味し、別の待機間隔を自己判断で作らない。**claim result待ちでは各10秒区間を空白時間にせず、Actions run/job/step確認と同一worker transport監査を挟む。** Research / Auditモードで最新queue上のclaim可能jobが0件なら、空のclaim requestを連打せず10秒待機して最新queueを再確認する。run中にDiscoveryへ切り替えない。
 - Research / Audit のsubmission result待ちは**直後の1本には同期障壁ではなく、その次の論文へ進むための同期障壁**である。N提出後はN+1を処理・提出してよい。N+1提出後はNの成功resultまたはstatus-only終端と最新main反映を確認するまでN+2をclaim・取得しない。failure時はNの正規repairを優先する。
 - candidate在庫、Library pending、fallback backlog、record bank枯渇、単一job失敗、status-only終端、1本完了、単一探索軸0件だけをrun終了理由にしない。
 - final responseはfinalization gateが許可した場合だけ行う。
