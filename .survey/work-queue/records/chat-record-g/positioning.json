@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a302801e2f42ef7601d7976c","job_id":"job-research-aa3e3c19262a245a","data":{"limitations":"固定形状・静的DAG・バッチ1を前提とするため、自己回帰LLMや動的MoEのようにトークンごとに実行グラフや負荷が変わる推論へそのまま適用できない。評価はCNN 18モデルで、ViTは適用可能性を述べるのみ。CPU/GPU統合メモリとOpenCL細粒度共有仮想メモリを前提に明示的データコピー費用を省くため、離散GPUや分散端末では通信モデルを追加する必要がある。遅延予測誤差の包括的な感度評価はなく、異なる端末へ計画を転用すると最大1.41倍へ悪化する。大域最適保証・近似保証もない。NPU/DSP、動的バッチ、エネルギー、熱制約は将来課題である。","differences":"HEFTなど従来の異種DAGスケジューラは演算子を不可分としてデバイス割当と順序だけを決める。CoDL系のモバイルCPU-GPU協調実行は演算子内部を分割して局所遅延を下げるが、他の準備済み演算子との競合をグラフ全体で評価しない。Expanded-DAGは先に分割計画を固定してからスケジュールするため、スケジュール結果に応じて分割を変えられない。最も近いHeSPは分割とスケジュールを共同で扱うが、主に密行列タスクとGPUサーバ/CPUエッジのオフラインシミュレーションを対象とする。本論文はモバイルDNNの具体的なチャネル・空間分割を探索次元に入れ、モデル初期化時に動かせる探索費用へ抑えた点が差分である。","implementation_status":"反復スケジューラ、依存同期ランタイム、GBDT遅延予測器の実装構成は具体的に記述され、C++ Androidバイナリ、TFLite 2.17.0 GPU delegate、XNNPACKを用いた4実機評価まで行われている。GPU同期カーネルを含む実行方式と擬似コードも付録に示される。ただし一次資料中に著者公式の専用公開コードリポジトリURLは確認できず、公開再現実装が提供済みとは扱わない。","research_positioning":"本リポジトリの推論システム観点では、単一演算子のCPU/GPU分割を『局所カーネル最適化』として閉じず、DAG全体の資源競合と共同最適化する系統に位置付く。特に端末ごとの性能比を遅延予測器で吸収し、配備時に実行計画を再生成する設計は、異種ハードウェアへの適応という点で有用である。一方で現在の固定DAG前提はLLM推論へ直接つながらず、LLMへ展開するにはトークン単位の動的グラフ、KVキャッシュ帯域、バッチ形成、MoEルーティング、NPUなどを含むオンライン再スケジューリングが必要になる。したがって現時点ではLLM専用手法ではなく、将来のオンデバイスLLM異種実行を考えるためのスケジューリング基盤として読むのが妥当である。"},"reservation":{"claim_id":"claim-a302801e2f42ef7601d7976c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-78929a6ba475ed2b2f05a50c",
+  "job_id": "job-research-f28b959eef987bac",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-78929a6ba475ed2b2f05a50c",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
