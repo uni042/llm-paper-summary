@@ -1,13 +1,18 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-05dcd349efb11788a6f85507",
-  "job_id": "job-research-c15907d33f78f8cd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-05dcd349efb11788a6f85507",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-05dcd349efb11788a6f85507","job_id":"job-research-c15907d33f78f8cd","data":{
+    "overview":"HoliBenchの実測は、配備性能がモデルサイズや量子化bit数だけでは決まらないことを示す。A5000のsummarizationではaccuracy約80%以降のenergy cost/accuracy pointが低精度域より1桁以上大きく、同程度accuracyでもenergyは最大12倍差がある。INT4はRTX 3070の4Bモデルで54〜60% latency削減する一方、小型モデルやA5000、Orinではdequantization overheadで悪化する。backendもA5000ではvLLMが1.8〜16倍高速化するが、Orinの2B以上では逆に遅くなる。CARLAの共存pipelineでは単体profileから選んだ構成が予測latency 1.2%、power 2.5%以内で動作した。",
+    "key_results":[
+      {"metric":"accuracy-energy Pareto","value":"約80% accuracy以降でenergy/accuracy-pointが低域の10倍超、同等accuracyで最大12倍energy差","baseline":"A5000上の15 LLM configuration","condition":"summarization task、net inference energy","interpretation":"accuracy単独ではdeployment costを識別できず、hardware-in-the-loop energy計測が必要。"},
+      {"metric":"RTX 3070 INT4 latency","value":"4Bモデルで54〜60%削減、小型sub-1Bでは43〜131%増加","baseline":"FP16","condition":"HuggingFace + bitsandbytes weight-only INT4","interpretation":"量子化benefitはmodel sizeとmemory-bandwidth飽和の有無で反転する。"},
+      {"metric":"A5000上Qwen3-4B INT4","value":"48% slowdown","baseline":"FP16；同モデルはRTX 3070で54% speedup","condition":"Ampere世代2 GPU、bitsandbytes INT4","interpretation":"同じGPU世代でもprofessional/consumerでkernel最適化経路が異なり、仕様表だけでは速度を予測できない。"},
+      {"metric":"Jetson Orin上Qwen3-0.6B INT4","value":"478% latency penalty","baseline":"FP16","condition":"Jetson AGX Orin、HuggingFace + bitsandbytes","interpretation":"低bit化がedge deviceで常に高速というheuristicを強く否定する。"},
+      {"metric":"cross-backend energy-latency linearity","value":"vLLM/TensorRT-LLM/SGLangでR²>0.98、HuggingFaceで0.82〜0.86","baseline":"複数backend","condition":"代表LLM、A5000/Orin","interpretation":"平均powerがdevice主導という傾向はbackendを跨いでも維持される。"},
+      {"metric":"vLLM latency","value":"A5000で全モデル1.8〜16倍speedup；Orinでは2B以上がslowdown、Llama-3.2-3Bは2.8倍遅い","baseline":"HuggingFace","condition":"135M〜4B代表LLM","interpretation":"serving向けpaged KV/scheduling overheadは低throughput edge条件で償却されず、backend選択もdevice依存。"},
+      {"metric":"multi-model profile prediction","value":"latency error 1.2%、power error 2.5%","baseline":"standalone profileからの予測","condition":"Jetson AGX Orin、Qwen2.5-VL-3B + SmolLM2-1.7B、CARLA 10分、順次共存","interpretation":"静的memory配置・順次実行では単体profileをpipeline探索へ再利用できる。"},
+      {"metric":"CARLA deadline compliance","value":"solver選択88.8%が1.6秒以内、全cycle 1.8秒以内","baseline":"accuracy-greedyは全cycleで1.6秒超、平均1896ms、worst 2849ms、32.0W","condition":"1.6秒deadline、30W budget","interpretation":"accuracy-only選択はlatencyとpowerの両constraintを破る。"}
+    ],
+    "negative_results":"量子化は多数構成で高速化せず、A5000では全tested modelが遅くなり、OrinのQwen3-0.6Bでは478%のlatency penaltyとなる。accuracy-greedyなCARLA構成は全cycleでdeadlineを破り、24%のframeでPaLIGemmaが想定外に冗長出力を生成してprediction errorを+16.8%へ悪化させた。profile composabilityはconcurrent executionやdynamic batchingでは未検証であり、同じ合成性を一般化できない。",
+    "interpretation":"主要な結論は、FM deploymentがhardware-software co-design問題だという点にある。低bit、model size、backend名だけではlatency/energyを決められず、実際のkernel経路とmemory subsystemを含めたprofileが必要になる。一方、適切にphase分解したstandalone profileは、順次共存という条件下では未測定pipelineのcost推定へ再利用でき、全組合せを実機profileする費用を減らせる。",
+    "quality_impact":"HoliBench自体は学習品質を改善する手法ではなく、accuracyをdeployment costと同時に扱う評価・選択基盤である。高accuracy構成がenergyやdeadlineで劣る例を示し、qualityを維持するための最小cost構成や、constraint内で最大qualityを得る構成を選べる。"
+  },"reservation":{"claim_id":"claim-05dcd349efb11788a6f85507","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
