@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-c7fc5d8a2ddc77f17046a7e2",
-  "job_id": "job-research-20085e82ab231044",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c7fc5d8a2ddc77f17046a7e2",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c7fc5d8a2ddc77f17046a7e2","job_id":"job-research-20085e82ab231044","data":{"limitations":"評価対象はMixtral-8x7B系列だけで、DeepSeek系や多数expertを持つ新しいMoEへの一般化は未検証である。task-specific training dataからcalibration setを作るため、十分なdomain dataが無い用途や複数domainを一つのpruned checkpointで扱う場合の性能は不明である。GPU型、compression wall time、実memory容量、end-to-end latency/throughputを報告していないため、parameter削減が実servingで何倍の速度・memory節約になるかは本論文だけでは定量化できない。さらにKとtop-mはtask/sparsityごとに調整され、calibration設計への感度がある。","differences":"activation-based expert pruningはrouting probabilityやactivation normなど各expertの局所統計で順位付けし、perturbation-based方式はexpertを外した再構成差を測るが計算が重い。MoE Pathfinderは両者を捨てず、reconstruction由来node scoreとrouting/activation由来edge scoreへ分解し、cross-layer path weightとして統合する。\n\n既存の多くが各layerへ同じpruning ratioを課すのに対し、top path上expertのunionから残存集合を決めるためlayer別expert数が自動的に変わる。dynamic expert selectionのようにruntimeでtokenごとのKを変える方式とも異なり、offlineでexpert parameterそのものを削除してmemory footprintも減らす。expert mergingのように複数expert weightを混ぜないため、残したexpertのspecializationはそのまま維持する。","implementation_status":"著者公式GitHub xicyang/MoE-Pruningが公開されている。論文の手順はcalibration clustering、routing/activation収集、expert perturbation score、weighted graph構築、dynamic programming top-m path selection、expert mask生成、parameter/router row pruningから成る。評価にはEleutherAI LM Evaluation Harnessを使用する。","research_positioning":"Adaptive Expert Computation / Compressionのうち、runtime activation数を減らす手法ではなく、task-aware structural expert pruningに位置する。重要単位を単独expertからcross-layer trajectoryへ引き上げる点が特徴で、PathMoEのようなtrajectory分析とも接続する。\n\nオフロード/階層memoryの観点では、不要expertを恒久削除できればGPU resident setだけでなくCPU/SSDに置くexpert総量も減るため、offload traffic削減の前処理として利用できる。一方、domainごとに別pruned modelを作る設計なので、多tenant servingでdomainが頻繁に変わる場合はexpert cacheやdynamic routingの方が柔軟であり、両者の使い分けが重要になる。"},"reservation":{"claim_id":"claim-c7fc5d8a2ddc77f17046a7e2","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
