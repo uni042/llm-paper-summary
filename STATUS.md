@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 01:51:21 JST**
+> 自動生成: **2026-09-23 01:51:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **230** |
-| 未claim Research job | **229** |
+| 未claim Research job | **228** |
 | 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-23 01:51:15 JST（6秒前）** |
+| 最終検証済みResearch収録 | **09-23 01:51:15 JST（42秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（17時間18分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（17時間19分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **32** | **2** | **0** | **0** | **1** | **1** | — |
+| Research | **32** | **2** | **0** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **32** | **5** | **0** | **3** | **1** | **1** | **6** |
+| 合計 | **32** | **5** | **0** | **3** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -180,7 +180,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
+- `arXiv:2609.08231` — SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans / worker `scheduled-chat-30`
+  - claim: **09-23 01:51:37 JST** / heartbeat: **—** / lease expiry: **09-23 03:21:37 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0d6b250579950fce.json`
 - `arXiv:2609.06161` — All for 1-Bit: Towards Genuine 1-Bit Post-Training Quantization for LLMs / worker `scheduled-chat-00`
   - claim: **09-23 01:13:12 JST** / heartbeat: **09-23 01:38:00 JST** / lease expiry: **09-23 03:08:00 JST**
   - evidence: `.survey/work-queue/claims/job-research-630ecabf6127702e.json`
