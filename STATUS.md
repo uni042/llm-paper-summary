@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:19:25 JST**
+> 自動生成: **2026-09-22 16:20:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **296** |
 | 未claim Research job | **295** |
 | 直近24hの検証済みResearch収録 | **20** |
-| 最終検証済みResearch収録 | **09-22 16:12:46 JST（6分前）** |
+| 最終検証済みResearch収録 | **09-22 16:12:46 JST（7分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（7時間46分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（7時間47分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -181,9 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.13612` — AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels / worker `scheduled-chat-00`
-  - claim: **09-22 16:18:15 JST** / heartbeat: **—** / lease expiry: **09-22 17:48:15 JST**
-  - evidence: `.survey/work-queue/claims/job-research-04f7ad5b21bc5a49.json`
+- `arXiv:2608.08910` — Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving / worker `scheduled-chat-00`
+  - claim: **09-22 16:19:54 JST** / heartbeat: **—** / lease expiry: **09-22 17:49:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a281208d9562176a.json`
 
 #### Audit
 
@@ -231,8 +231,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **287** |
-| └ Research | **215** |
+| 成功result未照合のimmutable submission | **288** |
+| └ Research | **216** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
