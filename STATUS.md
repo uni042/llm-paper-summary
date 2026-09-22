@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 21:43:17 JST**
+> 自動生成: **2026-09-22 21:50:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **271** |
-| 未claim Research job | **269** |
-| 直近24hの検証済みResearch収録 | **33** |
-| 最終検証済みResearch収録 | **09-22 21:43:11 JST（6秒前）** |
+| 収録候補論文 | **265** |
+| 未claim Research job | **263** |
+| 直近24hの検証済みResearch収録 | **35** |
+| 最終検証済みResearch収録 | **09-22 21:50:47 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **271** |
+| canonical_id確認済みの一意な候補論文 | **265** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **271** |
+| 非終端Research job合計 | **265** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **606** |
-| 未処理 | **5440** |
-| 収録済みとして除外 | **498** |
+| 処理済み | **607** |
+| 未処理 | **5439** |
+| 収録済みとして除外 | **499** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（13時間10分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（13時間18分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **2** | **0** | **0** | **2** | **1** | — |
+| Research | **19** | **2** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **17** | **5** | **0** | **3** | **2** | **1** | **6** |
+| 合計 | **19** | **5** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 21:50:47 JST** [research] `arXiv:2512.13996` — DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training
+  - job: `.survey/work-queue/jobs/job-research-2ff1a5b6cca233ad.json`
+  - result: `.survey/work-queue/results/research/attempt-40cf549b16c4f0ae9055ebc1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-40cf549b16c4f0ae9055ebc1.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md`
+- **09-22 21:50:47 JST** [research] `arXiv:2608.07814` — Shape Mutating Expert Compression:LorExperts and BTExperts
+  - job: `.survey/work-queue/jobs/job-research-015600d4d42febc5.json`
+  - result: `.survey/work-queue/results/research/attempt-5be0f6527b55aa80672c5522.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5be0f6527b55aa80672c5522.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md`
 - **09-22 21:43:11 JST** [research] `arXiv:2605.18643` — Post-Trained MoE Can Skip Half Experts via Self-Distillation
   - job: `.survey/work-queue/jobs/job-research-791dd06c8f3ceecf.json`
   - result: `.survey/work-queue/results/research/attempt-f437cb4dac9732a5ed37dd62.json` (`ok=true`)
@@ -122,16 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-1b188ce32f47e9723ddc14cd.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-1b188ce32f47e9723ddc14cd.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md`
-- **09-22 19:19:23 JST** [research] `arXiv:2606.16824` — CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents
-  - job: `.survey/work-queue/jobs/job-research-548d7e4cd563f6b8.json`
-  - result: `.survey/work-queue/results/research/attempt-40b553eeb725cfefaa1a1d5f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-40b553eeb725cfefaa1a1d5f.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md`
-- **09-22 17:10:31 JST** [research] `arXiv:2605.07719` — An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference
-  - job: `.survey/work-queue/jobs/job-research-10bf8d55e9caa5c4.json`
-  - result: `.survey/work-queue/results/research/attempt-59dc9473086573b3d534c617.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-59dc9473086573b3d534c617.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2605.07719-an-efficient-hybrid-sparse-attention-with-cpu-gpu-parallelism-for-long-context-inference.md`
 
 ### Audit
 
@@ -180,13 +180,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2608.07814` — Shape Mutating Expert Compression:LorExperts and BTExperts / worker `scheduled-chat-30`
-  - claim: **09-22 21:39:10 JST** / heartbeat: **09-22 21:42:53 JST** / lease expiry: **09-22 23:12:53 JST**
-  - evidence: `.survey/work-queue/claims/job-research-015600d4d42febc5.json`
-- `arXiv:2608.07890` — Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models / worker `scheduled-chat-00`
-  - claim: **09-22 21:42:53 JST** / heartbeat: **—** / lease expiry: **09-22 23:12:53 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a46b5d827d3949cf.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2606.18304` — Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression / worker `scheduled-chat-00`
+  - claim: **09-22 21:50:34 JST** / heartbeat: **—** / lease expiry: **09-22 23:20:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-236ebf569c3b4b83.json`
+- `arXiv:2606.00079` — BitsMoE: Efficient Spectral Energy-Guided Bit Allocation for MoE LLM Quantization / worker `scheduled-chat-30`
+  - claim: **09-22 21:50:34 JST** / heartbeat: **—** / lease expiry: **09-22 23:20:34 JST**
+  - evidence: `.survey/work-queue/claims/job-research-47be6c5f34f13438.json`
 
 #### Audit
 
@@ -206,7 +206,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **271** |
+| ready | **265** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,7 +226,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **914** |
+| inference/training/survey配下の論文Markdown実体 | **916** |
 
 ### immutable submissionの未照合
 
@@ -234,8 +234,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **302** |
-| └ Research | **230** |
+| 成功result未照合のimmutable submission | **306** |
+| └ Research | **234** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 

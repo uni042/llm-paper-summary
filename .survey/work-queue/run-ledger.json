@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T12:43:17.600738+00:00",
+  "updated_at": "2026-09-22T12:50:53.710171+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -37049,6 +37049,98 @@
       "paper_active_count_before": 908,
       "paper_active_count_after": 908,
       "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35729519437",
+      "first_recorded_at": "2026-09-22T12:50:53.710171+00:00",
+      "last_recorded_at": "2026-09-22T12:50:53.710171+00:00",
+      "signals": [
+        "research_completed",
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 2,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 4,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35729519437:1",
+          "recorded_at": "2026-09-22T12:50:53.710171+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35729519437",
+            "run_attempt": "1",
+            "source_sha": "f690e64188c291526b71960839746368abd05432"
+          },
+          "signals": [
+            "research_completed",
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-015600d4d42febc5",
+          "type": "research",
+          "canonical_id": "arXiv:2608.07814",
+          "title": "Shape Mutating Expert Compression:LorExperts and BTExperts",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2ff1a5b6cca233ad",
+          "type": "research",
+          "canonical_id": "arXiv:2512.13996",
+          "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-4f82275d6e43a833",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15716",
+          "title": "How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-a46b5d827d3949cf",
+          "type": "research",
+          "canonical_id": "arXiv:2608.07890",
+          "title": "Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-c9d463d074add88d",
+          "type": "research",
+          "canonical_id": "arXiv:2509.26520",
+          "title": "Training Matryoshka Mixture-of-Experts for Elastic Inference-Time Expert Utilization",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-da9c51c7772aea61",
+          "type": "research",
+          "canonical_id": "arXiv:2606.01509",
+          "title": "ProbMoE: Differentiable Probabilistic Routing for Mixture-of-Experts",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "job_blocked"
     }
   ]
 }

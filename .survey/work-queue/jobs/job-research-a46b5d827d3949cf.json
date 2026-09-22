@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2608.07890",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.07890-router-sensitivity-prunable-experts.md",
   "selection_reason": "router-only lightweight adaptationで生じるrouter norm変化をexpert重要度としてone-shot pruningに使う。Mixtralでexpert半減時にmemory 49%減・per-token latency 37%減を報告し、理論的pruning signalを低コスト適応で実用化する点がCompression系統に有用。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T10:24:57+00:00"
+  "created_at": "2026-09-20T10:24:57+00:00",
+  "completed_at": "2026-09-22T12:50:47+00:00",
+  "blocker": "Primary-source full-text retrieval could not be completed in this invocation. Direct arXiv abstract and HTML fetches were rejected by the web retrieval path; web search exposed the arXiv abstract and third-party summaries but not a verified primary full text, and container-side direct arXiv retrieval failed because external DNS/network access is unavailable. The paper was therefore not inferred from abstract or secondary summaries. Retry this same paper in a later invocation with a working primary full-text route.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-a7b827dd3ec3e848ee83f4c2.json"
 }
