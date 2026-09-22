@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 897,
+  "active_count": 906,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -618,7 +618,7 @@
       "identifiers": [
         "arXiv:2604.20156"
       ],
-      "source_hash": "0b6eb32f1b591610bd7ab7eaf92fbb3da47ad1e6d60d5b775179c7b26c3ca914"
+      "source_hash": "5f55cd334eb674e3fb24e9623bf5d931310e12fe4f49deb9dfadd4cd1b3e125e"
     },
     "arXiv:2605.08575": {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08575-intra-expert-activation-sparsity.md",
@@ -927,6 +927,14 @@
         "arXiv:2509.23638"
       ],
       "source_hash": "eda10c91d3f3ebb77a179ef08395512b049a8cdc0a4433d23ac599714f5648ab"
+    },
+    "arXiv:2510.26730": {
+      "path": "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2510.26730",
+        "arXiv:2510.26730"
+      ],
+      "source_hash": "4139d3dccbac765f8bccbafc4626e7e176601242781d458a48c7baa6757c36b0"
     },
     "arXiv:2512.03927": {
       "path": "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
@@ -6055,6 +6063,14 @@
       ],
       "source_hash": "664c61e4b256674a45e71be6c232232249653fd2b4d7ab47b5f2aba5addb32ef"
     },
+    "arXiv:2605.07719": {
+      "path": "papers/inference/99-other-inference-systems/2026-2605.07719-an-efficient-hybrid-sparse-attention-with-cpu-gpu-parallelism-for-long-context-inference.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2605.07719",
+        "arXiv:2605.07719"
+      ],
+      "source_hash": "ace524a7839ffea1e0bb0afa4ce1099c6e519aa1e21ce924cc0c1721af93917b"
+    },
     "arXiv:2605.19893": {
       "path": "papers/inference/99-other-inference-systems/2026-2605.19893-specsa-sparse-speculative-verification.md",
       "identifiers": [
@@ -6118,6 +6134,13 @@
       ],
       "source_hash": "f58e45317d870a13faa38e499129eaa050d764175a79d1e4685cb94620244b3f"
     },
+    "arXiv:2606.16824": {
+      "path": "papers/inference/99-other-inference-systems/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md",
+      "identifiers": [
+        "arXiv:2606.16824"
+      ],
+      "source_hash": "3c5c10b450d7af63c3f873e649beb9367ffedc16c013acf8a99e2ecadcca4dfa"
+    },
     "arXiv:2606.17107": {
       "path": "papers/inference/99-other-inference-systems/2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md",
       "identifiers": [
@@ -6125,6 +6148,14 @@
         "arXiv:2606.17107"
       ],
       "source_hash": "0a11234a25b00944fd7556a59178c9f49855d3b5916231d2e7097a0ed4328213"
+    },
+    "arXiv:2606.21633": {
+      "path": "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2606.21633",
+        "arXiv:2606.21633"
+      ],
+      "source_hash": "f872cf7f0636356a93ce8dcaa34f900ac538ae10826e28a725533e496451487c"
     },
     "arXiv:2606.24957": {
       "path": "papers/inference/99-other-inference-systems/2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md",
@@ -6244,6 +6275,14 @@
       ],
       "source_hash": "b3ed9b087da84dada35dabfb83623d5607f36212d0e504f0f882bde5a0398702"
     },
+    "arXiv:2608.19758": {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.19758",
+        "arXiv:2608.19758"
+      ],
+      "source_hash": "61e5cf9df80334b6826283b97fdad30e1bef7e93834d3ed6fcb9ef9080b4360a"
+    },
     "arXiv:2608.21836": {
       "path": "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md",
       "identifiers": [
@@ -6334,6 +6373,14 @@
       ],
       "source_hash": "26c213eb1e14af3dbca17a060f97ff92b493fe4be2cd06de43af7a77f18d0234"
     },
+    "arXiv:2609.09823": {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.09823",
+        "arXiv:2609.09823"
+      ],
+      "source_hash": "304eb59ceb60c5e3dd76843f351bc1abad356c4afe7f85f63b4f907c2138773f"
+    },
     "arXiv:2609.12208": {
       "path": "papers/inference/99-other-inference-systems/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md",
       "identifiers": [
@@ -6341,6 +6388,14 @@
         "arXiv:2609.12208"
       ],
       "source_hash": "a227b43e38dd52d1eeb6c587746a7c222fac111cb8348df265f7abdfb0a4151a"
+    },
+    "arXiv:2609.12550": {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.12550",
+        "arXiv:2609.12550"
+      ],
+      "source_hash": "7814a651a770b657183db4cdc9f87fcc543346717b9aa60cdf25311d9f85bb75"
     },
     "arXiv:2609.12551": {
       "path": "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md",
@@ -6357,6 +6412,13 @@
         "arXiv:2609.12923"
       ],
       "source_hash": "6af936d99f9e3466accf7202aa2093e82812aad9cc635e9745128520a2610903"
+    },
+    "arXiv:2609.13141": {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md",
+      "identifiers": [
+        "arXiv:2609.13141"
+      ],
+      "source_hash": "b67d3f103973f1801042d948459931e16a32aa4646f0388e147f224d564ad817"
     },
     "arXiv:2609.14138": {
       "path": "papers/inference/99-other-inference-systems/2026-2609.14138-limbo-lifelong-inference-time-memory-and-budget-optimization-for-llm-agents.md",
@@ -6514,6 +6576,13 @@
         "DOI:10.1145/3838177.3841731"
       ],
       "source_hash": "183c21b8a0e8fa950b2ab76a3a8abf834b18b01e928d7b11a91cb157fc8da33e"
+    },
+    "DOI:10.24963/ijcai.2026/502": {
+      "path": "papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md",
+      "identifiers": [
+        "DOI:10.24963/ijcai.2026/502"
+      ],
+      "source_hash": "800cc211950abcd8197fdc0da257962a140f3203b2f13a9f462a2f6ec78a77cd"
     },
     "DOI:10.52202/085713-1587": {
       "path": "papers/inference/99-other-inference-systems/2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md",
@@ -7039,6 +7108,8 @@
     "arXiv:2502.12224": "arXiv:2502.12224",
     "DOI:10.1145/3797905.3807834": "arXiv:2509.23638",
     "arXiv:2509.23638": "arXiv:2509.23638",
+    "DOI:10.48550/arxiv.2510.26730": "arXiv:2510.26730",
+    "arXiv:2510.26730": "arXiv:2510.26730",
     "arXiv:2512.03927": "arXiv:2512.03927",
     "arXiv:2603.19289": "arXiv:2603.19289",
     "arXiv:2607.24787": "arXiv:2607.24787",
@@ -8140,6 +8211,8 @@
     "DOI:10.18653/v1/2026.findings-acl.2106": "arXiv:2604.18655",
     "arXiv:2604.18655": "arXiv:2604.18655",
     "arXiv:2604.25777": "arXiv:2604.25777",
+    "DOI:10.48550/arxiv.2605.07719": "arXiv:2605.07719",
+    "arXiv:2605.07719": "arXiv:2605.07719",
     "arXiv:2605.19893": "arXiv:2605.19893",
     "DOI:10.48550/arxiv.2605.20706": "arXiv:2605.20706",
     "arXiv:2605.20706": "arXiv:2605.20706",
@@ -8155,8 +8228,11 @@
     "arXiv:2606.00866": "arXiv:2606.00866",
     "DOI:10.48550/arxiv.2606.11916": "arXiv:2606.11916",
     "arXiv:2606.11916": "arXiv:2606.11916",
+    "arXiv:2606.16824": "arXiv:2606.16824",
     "DOI:10.48550/arxiv.2606.17107": "arXiv:2606.17107",
     "arXiv:2606.17107": "arXiv:2606.17107",
+    "DOI:10.48550/arxiv.2606.21633": "arXiv:2606.21633",
+    "arXiv:2606.21633": "arXiv:2606.21633",
     "DOI:10.48550/arxiv.2606.24957": "arXiv:2606.24957",
     "arXiv:2606.24957": "arXiv:2606.24957",
     "DOI:10.48550/arxiv.2606.28565": "arXiv:2606.28565",
@@ -8185,6 +8261,8 @@
     "arXiv:2608.15533": "arXiv:2608.15533",
     "DOI:10.48550/arxiv.2608.17826": "arXiv:2608.17826",
     "arXiv:2608.17826": "arXiv:2608.17826",
+    "DOI:10.48550/arxiv.2608.19758": "arXiv:2608.19758",
+    "arXiv:2608.19758": "arXiv:2608.19758",
     "arXiv:2608.21836": "arXiv:2608.21836",
     "DOI:10.48550/arxiv.2608.25062": "arXiv:2608.25062",
     "arXiv:2608.25062": "arXiv:2608.25062",
@@ -8203,12 +8281,17 @@
     "arXiv:2609.07816": "arXiv:2609.07816",
     "DOI:10.1145/3774906.3802783": "arXiv:2609.09662",
     "arXiv:2609.09662": "arXiv:2609.09662",
+    "DOI:10.48550/arxiv.2609.09823": "arXiv:2609.09823",
+    "arXiv:2609.09823": "arXiv:2609.09823",
     "DOI:10.48550/arxiv.2609.12208": "arXiv:2609.12208",
     "arXiv:2609.12208": "arXiv:2609.12208",
+    "DOI:10.48550/arxiv.2609.12550": "arXiv:2609.12550",
+    "arXiv:2609.12550": "arXiv:2609.12550",
     "DOI:10.48550/arxiv.2609.12551": "arXiv:2609.12551",
     "arXiv:2609.12551": "arXiv:2609.12551",
     "DOI:10.48550/arxiv.2609.12923": "arXiv:2609.12923",
     "arXiv:2609.12923": "arXiv:2609.12923",
+    "arXiv:2609.13141": "arXiv:2609.13141",
     "DOI:10.48550/arxiv.2609.14138": "arXiv:2609.14138",
     "arXiv:2609.14138": "arXiv:2609.14138",
     "DOI:10.48550/arxiv.2609.14507": "arXiv:2609.14507",
@@ -8240,6 +8323,7 @@
     "DOI:10.14778/3827998.3828047": "DOI:10.14778/3827998.3828047",
     "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html": "URL:https://proceedings.mlsys.org/paper_files/paper/2026/hash/bbb7506579431a85861a05fff048d3e1-Abstract-Conference.html",
     "DOI:10.1145/3838177.3841731": "DOI:10.1145/3838177.3841731",
+    "DOI:10.24963/ijcai.2026/502": "DOI:10.24963/ijcai.2026/502",
     "DOI:10.52202/085713-1587": "DOI:10.52202/085713-1587",
     "DOI:10.1145/3797905.3807846": "DOI:10.1145/3797905.3807846",
     "DOI:10.1145/3838177.3841726": "DOI:10.1145/3838177.3841726",

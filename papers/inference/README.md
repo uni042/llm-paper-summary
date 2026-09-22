@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **859本**。
+収録論文: **868本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**859本**。
+推論論文：**868本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -37,7 +37,7 @@
 | [02-moe-expert-placement-caching](02-moe-expert-placement-caching/README.md) | 2 |
 | [02-moe-inference](02-moe-inference/README.md) | 1 |
 | [02-moe-offload](02-moe-offload/README.md) | 2 |
-| [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |
+| [03-expert-prefetch](03-expert-prefetch/README.md) | 15 |
 | [03-hierarchical-memory](03-hierarchical-memory/README.md) | 2 |
 | [03-kv-cache](03-kv-cache/README.md) | 3 |
 | [03-moe-expert-offload](03-moe-expert-offload/README.md) | 4 |
@@ -85,5 +85,5 @@
 | [moe](moe/README.md) | 1 |
 | [scheduling](scheduling/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 109 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 117 |
 <!-- survey:auto:end -->
