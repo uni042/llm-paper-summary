@@ -10,19 +10,9 @@ on:
       - '.survey/scripts/reference_pool.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
-  push:
-    branches: [main]
-    paths:
-      - '.survey/work-queue/**'
-      - '.survey/scripts/build_status_dashboard.py'
-      - '.survey/scripts/render_status_dashboard.py'
-      - '.survey/scripts/render_status_dashboard_core.py'
-      - '.survey/scripts/reference_pool.py'
-      - '.survey/tests/test_status*.py'
-      - '.github/workflows/status-dashboard.yml'
-  # Commits pushed by another workflow with GITHUB_TOKEN do not emit a new push
-  # workflow event. Periodic refresh closes that observability gap for helper/recovery
-  # commits while the renderer still derives every value from durable evidence.
+  # STATUS.md publication is intentionally decoupled from queue pushes so the
+  # dashboard does not amplify main-branch write contention. Pull requests still
+  # validate rendering; publication is periodic or explicitly dispatched.
   schedule:
     - cron: '7/10 * * * *'
   workflow_dispatch:
@@ -51,7 +41,6 @@ jobs:
 
   publish:
     if: >-
-      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
       github.event_name == 'schedule' ||
       github.event_name == 'workflow_dispatch'
     needs: validate
