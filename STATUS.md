@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 21:07:49 JST**
+> 自動生成: **2026-09-22 21:15:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **276** |
-| 未claim Research job | **275** |
-| 直近24hの検証済みResearch収録 | **28** |
-| 最終検証済みResearch収録 | **09-22 21:07:42 JST（7秒前）** |
+| 収録候補論文 | **275** |
+| 未claim Research job | **274** |
+| 直近24hの検証済みResearch収録 | **29** |
+| 最終検証済みResearch収録 | **09-22 21:15:30 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **276** |
+| canonical_id確認済みの一意な候補論文 | **275** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **276** |
+| 非終端Research job合計 | **275** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（12時間35分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（12時間42分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 21:15:30 JST** [research] `arXiv:2609.12412` — HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications
+  - job: `.survey/work-queue/jobs/job-research-c15907d33f78f8cd.json`
+  - result: `.survey/work-queue/results/research/attempt-05dcd349efb11788a6f85507.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-05dcd349efb11788a6f85507.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md`
 - **09-22 21:07:42 JST** [research] `arXiv:2608.19920` — Learning how to Forget: Fine-tuning for Long-Context Sparse Attention
   - job: `.survey/work-queue/jobs/job-research-b0919b5b9aea285a.json`
   - result: `.survey/work-queue/results/research/attempt-d1d3b3caeff62a011e27f971.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-f9afab963f7542abadb69271.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f9afab963f7542abadb69271.json`
   - paper: `papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md`
-- **09-22 16:12:46 JST** [research] `arXiv:2510.26730` — ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference
-  - job: `.survey/work-queue/jobs/job-research-d522f30f5ddd350f.json`
-  - result: `.survey/work-queue/results/research/attempt-eb3992a288275edbaaa96880.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-eb3992a288275edbaaa96880.json`
-  - paper: `papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md`
 
 ### Audit
 
@@ -203,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **276** |
+| ready | **275** |
 
 ### 候補の重複・識別情報欠損
 
@@ -223,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **909** |
+| inference/training/survey配下の論文Markdown実体 | **910** |
 
 ### immutable submissionの未照合
 
