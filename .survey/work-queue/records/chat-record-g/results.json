@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-95a58c9a93fe71f7a995bfe2",
-  "job_id": "job-research-74a266f79fc28554",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-95a58c9a93fe71f7a995bfe2",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-95a58c9a93fe71f7a995bfe2","job_id":"job-research-74a266f79fc28554","data":{"overview":"ConceptMoEはcompute-matched標準MoEに対し、12B/24B言語事前学習で総合平均を35.6→36.4、50.0→50.9へ改善した。60B VLMではtext平均33.5→34.4、long-context 49.4→51.7、multimodal 53.6→54.2。90B CTではtop11-loop8がOpenBench 40.9→46.4（+5.5）、from-scratchは47.3。300B級Hopper推論ではR=2効率構成が長系列prefill最大175.1%、decode最大117.1%高速化する。","key_results":[{"metric":"12B language OpenBench average","value":"36.4","baseline":"MoE-A0.5B-12B 35.6","condition":"243B training tokens, same total parameters and average FLOPs","interpretation":"適応概念圧縮と計算再配分で+0.8点。固定chunkは34.2まで低下する。"},{"metric":"24B language OpenBench average","value":"50.9","baseline":"MoE-A1B-24B 50.0","condition":"559B training tokens, same total parameters and average FLOPs","interpretation":"+0.9点。R=2系はbaselineを上回るがR=4では47.7へ悪化する。"},{"metric":"60B long-context average","value":"51.7","baseline":"MoE-A2.5B-60B 49.4","condition":"R≈2 dual-modality compression","interpretation":"+2.3点。LC reasoningは10.3→17.1、understandingは40.9→45.1だがsummary/Q&Aは63.7→59.0。"},{"metric":"90B CT OpenBench overall","value":"46.4","baseline":"MoE 40.9","condition":"ConceptMoE-top11-loop8, R=1.5, compute/parameter matched","interpretation":"+5.5点。reasoning +8.3、math +12.2、code +6.4。from-scratchは47.3。"},{"metric":"R=2 prefill speedup","value":"最大175.1%","baseline":"MoE-A10B-300B","condition":"ConceptMoE-1L-top24-R2, Hopper, sequence up to 1024K","interpretation":"系列が長いほど注意行列削減の利得が拡大する。"},{"metric":"R=2 decoding speedup","value":"最大117.1%","baseline":"MoE-A10B-300B","condition":"ConceptMoE-1L-top24-R2, Hopper, batch 256, KV up to 64K","interpretation":"KV短縮がdecodeのメモリ・注意コストを削減する。"}],"negative_results":"圧縮率R=4ではOpenBench平均47.7となりbaseline 50.0およびR=2の50.8を下回り、reasoning 51.3対56.8、math 46.3対50.0と過圧縮の悪影響が明確。VLMでもlocation 82.2→81.9、image Q&A 61.4→58.0、chart text 34.7→33.6と細粒度視覚課題が低下する。線形boundary routerはtraining lossを0.003改善する一方downstream平均34.4でcosine router 36.4を下回り、joint decoding除去もtraining lossは0.002改善するが平均35.1へ低下する。","interpretation":"利益はtoken数を単に減らすことではなく、意味的冗長度に合わせた動的chunkingと、節約計算をconcept処理へ戻す設計の組合せから生じる。長文脈では系列短縮が注意行列とKVの両方へ直接効く。CTでは層ループへの再配分がexpert数だけ増やすtop15より有効で、既存MoEを大きく壊さず導入できる。","quality_impact":"R=1.5〜2ではcompute-matched条件で平均品質を維持または改善するが無損失圧縮ではない。タスク依存の細粒度情報損失とR=4の明確な劣化があり、自然な意味冗長度に合わせた圧縮率調整が必要。"},"reservation":{"claim_id":"claim-95a58c9a93fe71f7a995bfe2","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
