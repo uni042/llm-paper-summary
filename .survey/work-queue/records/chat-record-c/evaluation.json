@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-353fe5bf8013fb3f531d243b",
   "job_id": "job-research-d522f30f5ddd350f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-353fe5bf8013fb3f531d243b",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "NVIDIA A6000（論文表記64 GB/s）、NVIDIA H20（128 GB/s）、Ascend 910B（128 GB/s）の3プラットフォーム。比較説明ではRTX 4090、A100等の帯域差も動機分析に用いる。全プラットフォームで利用可能GPUメモリを20GBに制限し、メモリ制約下のエキスパートswapを再現する。",
+    "software": "ExpertFlowはPython/CUDAとTransformersで実装し、専用CUDA streamでGPU-DRAM転送、別threadで転送・ブロック状態を管理、continuous batchingを使用する。対象モデルはDeepSeek-V2-Lite、Qwen1.5-MoE-A2.7B、Qwen2系で、Qwen2.0は4-bit量子化。比較はTransformers baseline、ProMoE、Yandexのpre-gate方式。",
+    "methodology": "ShareGPTから要求長ごとに±5%でグループ化し各群最大50サンプルを選ぶ。prompt長8〜1024のデータでDeepSeek、Qwen1.5、Qwen2の待機＋キャッシュミス遅延をbaselineと比較する。予測精度はA6000上で長さの異なる410 requestsを使い、事前ゲートおよびProMoE系予測とstep sizeごとに比較する。二段LRUとキャッシュ認識ルーティングについても個別に有効性を評価し、異なるGPU帯域と入力規模で適応Sの挙動を見る。",
+    "scope": "主指標は待機時間、キャッシュミス遅延、エキスパート予測精度であり、モデル品質・生成品質の広範なベンチマークは行わない。Ascend 910BはINT4非対応のためQwen2.0を20GB制限下で実行できず欠測。H20とA6000の比較では著者自身が帯域対計算比による説明を仮説として述べており、完全な因果分解ではない。論文は12ページのarXiv v1で、公開コードによる第三者再現は確認できない。"
+  },
+  "reservation": {"claim_id": "claim-353fe5bf8013fb3f531d243b", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
