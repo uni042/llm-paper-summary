@@ -1,21 +1,13 @@
 {
-  "schema_version": 1,"transport_version": 10,"slot": "metadata","attempt_id": "attempt-dc0f658e4e197063cb9471e1","job_id": "job-research-886ba13cf71588b2",
-  "data": {
-    "canonical_id":"arXiv:2609.07237","arxiv_id":"2609.07237","doi":"10.48550/arXiv.2609.07237","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},
-    "title":"CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
-    "summary":"CEDARは、長文プリフィルの動的疎注意で選外チャンクを完全に捨てるとルーティング漏れを回復できず、固定密度では簡単な問い合わせにも曖昧な問い合わせにも同じ計算量を使う問題を扱う。全チャンクを長さ補正付き鍵・値要約で残し、チャンク内分散から推定した出力誤差が大きい部分だけ正確なトークン注意へ展開する。要約と正確なトークンを一つのソフトマックス正規化で統合し、展開時は要約を置換するため二重計上しない。凍結Llama-3.1-8B-Instructで、平均正確密度6.18%時にRULER 87.1を保ちながら128K注意カーネルを密注意比3.02倍高速化する。",
-    "list_summary":"選外チャンクも要約経路で全域可視性を残し、鍵・値分散に基づく誤差上界で必要なチャンクだけ正確注意へ展開して、128Kで約3倍のカーネル高速化と品質回復を両立する疎注意方式。",
-    "authors":["Siyu Li","Dong Wang","Jie Zhou","Wei Li","Yang Xu","Sijie Song"],
-    "authors_affiliations":"Shanghai University; East China Normal University; Jiangsu Ocean University",
-    "published":"2026-09-07","publication":"arXiv preprint arXiv:2609.07237v1","publication_type":"Preprint","publication_status":"Preprint",
-    "lineage":"long-context inference / dynamic sparse attention / hierarchical attention / post-hoc attention acceleration",
-    "topics":["長文推論","動的疎注意","残差要約","誤差上界","可変計算量","プリフィル高速化"],
-    "importance":"疎注意の評価を選択再現率だけでなく、選外チャンクが注意出力へ与える近似誤差へ拡張し、全域を安価な要約で残しながら問い合わせごとに正確計算量を変える。既存モデルを再学習せず後付けできる点も推論基盤向けに重要である。",
-    "hardware_evaluation":"効率評価はNVIDIA A100 40GBを1基使用し、BF16注意状態、バッチサイズ1、32K〜128K文脈で測定する。モデルは4ビット重みのLlama-3.1-8B-Instruct。",
-    "quality_effect":"近似注意なので品質との交換条件があるが、選外チャンクをゼロ化せず要約で残すことで同程度の正確トークン密度の硬い疎注意より品質低下を大幅に回復する。",
-    "source":"https://arxiv.org/abs/2609.07237","sources":["https://arxiv.org/abs/2609.07237","https://arxiv.org/html/2609.07237v1","https://arxiv.org/pdf/2609.07237"],"code":null,
-    "implementation":"凍結TransformerのQ/K/V射影とRoPE後、注意バックエンド前へ挿入する。64トークン問い合わせブロック、意味チャンク要約、誤差優先度、可変正確予算、オンラインソフトマックス統合カーネルを実装する。",
-    "last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-reference-section","references_total":0
-  },
-  "reservation":{"claim_id":"claim-dc0f658e4e197063cb9471e1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0c2e3f57b64fd03e93d22174",
+  "job_id": "job-research-ac9697814e87a74c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0c2e3f57b64fd03e93d22174",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }

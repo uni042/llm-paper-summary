@@ -1,17 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-dc0f658e4e197063cb9471e1","job_id":"job-research-886ba13cf71588b2",
- "data":{
-  "overview":"平均正確密度6.18%のCEDARはLongBench 37.0、RULER 87.1、NIAH 7.7を得て、同密度DHSAの36.7、79.3、7.3から特にRULERを7.8点回復する。密FA2のRULER 89.3へ近づきながら128Kカーネルは3.02倍高速で、ピークメモリも21.8GBから11.5GBへ減る。12%級ではCEDARがRULER 89.5で密注意89.3に並び、2.15倍高速。合成再構成では同じ正確チャンク数の硬い削除に対し誤差を98.5〜99.7%削減する。",
-  "key_results":[
-   {"metric":"RULERと128Kカーネル速度","value":"RULER 87.1、3.02倍高速","baseline":"密FA2 89.3・1.00倍、DHSA 79.3・3.42倍","condition":"平均正確密度6.18%、Llama-3.1-8B-Instruct、A100 40GB、128K","interpretation":"硬い疎注意が失う長距離証拠の多くを要約残差が回復しつつ、密注意の約3分の1のカーネル時間に抑える。"},
-   {"metric":"128K注意カーネル遅延","value":"224.0ms","baseline":"密FA2 676.4ms、DHSA 197.7ms、Block-Sparse 190.5ms","condition":"ルーティングと要約構築込み、A100 40GB","interpretation":"残差要約のためDHSAより約13%の追加費があるが、密注意比では3.02倍高速を維持する。"},
-   {"metric":"ピークメモリ","value":"11.5GB","baseline":"密FA2 21.8GB、DHSA 11.2GB","condition":"128K、約6.25%級の正確密度","interpretation":"要約メタデータの追加はあるが、密注意のトークン級状態を大幅に減らし、DHSAに近いメモリ量を保つ。"},
-   {"metric":"合成注意の再構成誤差削減","value":"98.5〜99.7%削減","baseline":"同じ正確チャンク数で選外を完全削除する硬いDHSA","condition":"チャンク内ノイズ0.15、正確チャンク2〜16","interpretation":"内部一貫性のある選外チャンクは単一K/V要約でも注意出力への寄与を高精度に保持できる。"},
-   {"metric":"可変正確密度","value":"検索4.8%〜多段推論9.4%","baseline":"固定密度ルーティング","condition":"同一誤差閾値","interpretation":"問い合わせの曖昧さに応じて計算量を増減し、簡単な検索へ過剰な正確計算を割り当てない。"}
-  ],
-  "negative_results":"CEDARは硬いDHSAより要約構築と要約ソフトマックス分の追加費があり、128KではDHSA 197.7msに対し224.0msで約13%遅い。2要約/チャンクへ増やすとRULERは87.6、再構成誤差0.067へ改善する一方、速度は2.71倍まで落ちる。合成実験ではチャンク内ノイズが大きいほど要約利得が弱まる。現稿の増分デコード拡張には専用カーネルとキャッシュ管理が必要で、主張の中心はプリフィルである。",
-  "interpretation":"最大の品質寄与は残差要約である。約6.25%設定で要約を外すとRULERが87.1から79.3、再構成誤差が0.083から0.612へ悪化する。分散優先度を外すとRULER 84.9、可変予算を外すと85.3、意味境界を外すと83.8で、いずれも補完的に効く。したがってCEDARの利点は単に上位チャンク選択を改善したことではなく、選外領域を低費用で残し、その近似誤差を計算予算へ変換した点にある。",
-  "quality_impact":"密注意と完全一致する方式ではないが、硬い疎注意より品質を保つために選外チャンクを要約で近似する。約12%級ではLongBench 37.2、RULER 89.5、NIAH 7.8で密注意35.7、89.3、7.7と同等以上の集計値を示す一方、128Kで2.15倍高速である。"
- },
- "reservation":{"claim_id":"claim-dc0f658e4e197063cb9471e1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-0c2e3f57b64fd03e93d22174",
+  "job_id": "job-research-ac9697814e87a74c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0c2e3f57b64fd03e93d22174",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
