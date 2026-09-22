@@ -12,15 +12,15 @@
   "source_url": "https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80",
   "paper_path": "papers/inference/99-other-inference-systems/2026-ef0cbb7f0917-reliefserve-relieving-gpu-pressure-in-multi-model-serving-via-selective-cpu-escape.md",
   "selection_reason": "GPU過負荷時に一部modelをCPUへescapeさせるmulti-model serving system。12-server実験で平均latency最大27.05%削減、goodput 39.74%向上。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "created_at": "2026-09-20T22:12:01+00:00",
-  "blocker": "Primary paper full text could not be safely obtained in this invocation. Fresh searches verified the authors' official ReliefServe publication entry and the official ICPP 2026 program, but neither exposed the manuscript/PDF; no materially distinct accessible official full-text route was found. No five-slot record was synthesized from metadata or third-party summaries.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-d842e88abd878f5c2ee2bcca.json",
+  "blocker": "Primary paper full text could not be safely obtained in this invocation. Fresh exact-title and DOI searches verified the authors' official publication pages and the official ICPP 2026 program, but neither exposes the ReliefServe manuscript/PDF; no accessible official primary full-text route was found. No five-slot record was synthesized from metadata or summaries.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-f5c32165fd425052e10dbf7d.json",
   "blocked_attempts": 2,
   "last_recorded_blocked_event": "2026-09-21T15:49:57+00:00",
   "block_history": [
@@ -36,5 +36,6 @@
     }
   ],
   "last_blocked_at": "2026-09-21T15:49:57+00:00",
-  "retry_queued_at": "2026-09-21T22:48:29+00:00"
+  "retry_queued_at": "2026-09-21T22:48:29+00:00",
+  "completed_at": "2026-09-22T02:03:28+00:00"
 }
