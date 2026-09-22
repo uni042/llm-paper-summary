@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-fec4b42510381cc0bbc4dd6e",
-  "job_id": "job-research-0d6b250579950fce",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-fec4b42510381cc0bbc4dd6e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-fec4b42510381cc0bbc4dd6e","job_id":"job-research-0d6b250579950fce","data":{"canonical_id":"arXiv:2609.08231","arxiv_id":"2609.08231","doi":"10.48550/arXiv.2609.08231","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans","summary":"SemBridgeは、CUDA/NCCLとCANN/HCCLのようにネイティブ通信器を共有できない異種実行系の境界で、配置情報だけでは『遠隔消費者が何を観測できれば正しいか』が決まらない問題を扱う。来歴、代替可能性、完了、権限、需要、ネイティブ領域局所性を型付き契約へまとめ、決定的lowererでバックエンド中立通信計画へ変換し、記号チェッカで実行前検証する。2ホスト1GbEの容量スピルオーバー環境では、送信元でtoken投影する計画が結果通信量を99.97%以上削減し、Dense/MoE/MiniMaxで8.92〜80.20%スループットを向上した。","list_summary":"異種CUDA/NCCL–CANN/HCCL境界で消費者が必要とする観測結果を型付き契約へコンパイルし、不要な全logit転送をtoken投影へ縮約して結果通信を99.97%以上削減する通信計画器。","authors":["Genlang Chen","Junyi Zhu","Yuanshan Lin"],"authors_affiliations":"NingboTech University; Dalian Ocean University","published":"2026-09-08","publication":"arXiv preprint arXiv:2609.08231v1","publication_type":"Preprint","publication_status":"Preprint","lineage":"heterogeneous distributed inference / collective communication / cross-stack serving / communication compilation","topics":["異種アクセラレータ","通信計画","NCCL/HCCL","分散テンソル","結果投影","MoEサービング"],"importance":"配置とcollectiveの間に消費者観測という意味層を置き、全テンソル転送が不要な境界で通信量・起動回数を安全に削減する。NVIDIA/Ascend混在や容量スピルオーバーの推論基盤に直接関係する。","hardware_evaluation":"CUDA/NCCLとCANN/HCCLを跨ぐ2ホスト構成、4 A100 + 4 Ascendを含む混在実行、1GbE容量スピルオーバー測定。Qwen3-14B MLP sliceでも実通信とビット一致を確認。","quality_effect":"計画は要求された消費者観測と参照実行の同値性を記号検査するため、許される投影範囲で結果意味を保つ。token-only要求では全logitではなく最終token IDだけを境界越しに送る。","source":"https://arxiv.org/abs/2609.08231","sources":["https://arxiv.org/abs/2609.08231","https://arxiv.org/html/2609.08231v1","https://arxiv.org/pdf/2609.08231"],"code":null,"implementation":"型付き境界契約、決定的lowerer、バックエンド中立IR、記号チェッカ、CUDA/NCCL–CANN/HCCL実行器を実装。full-logit、source projection、owner-token、representative、exact-shard、partial-completion計画を扱う。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-fec4b42510381cc0bbc4dd6e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
