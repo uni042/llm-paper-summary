@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-546bf32315ae41457b812520","job_id":"job-research-06d45370eceff021","data":{"hardware":"単一Apple M1 T8103を使用。4 P-core（公称最大3.228 GHz）と4 E-coreを持ち、各クラスタにAMXブロックが1基ある構成を対象とする。全測定は同一個体で行われ、silicon間ばらつきは未評価。AMX単一スレッドload-free FMA32は熱状態により約900〜1600 GFLOPSの幅があるため、比較比率は同一process/invocation内で形成して熱変動を相殺する。","software":"macOS Tahoe 26.5.1、Apple clang 21.0.0、-O3。比較対象はAccelerateのcblas_sgemm、BNNSMatMul、BNNS fully-connected filter、BNNS Graph、外部参照としてOpenBLAS 0.3.33 NEON。エンドツーエンド評価ではllama.cppのggml-blasにshimを挿入し、TinyLlama-1.1B fp32 GGUF 4.1 GiBを同一binaryで切替評価する。","methodology":"S=128、M=128固定でGPT-2-style H=2048、TinyLlama-1.1B H=2048、Llama-7B H=4096のQKV、FFN up/down、LM head計12形状を評価する。各構成は11回の独立binary invocationの中央値で、各invocation内はwarm-up後15回以上を測定する。数値一致は出力全体を997または1023要素の互いに素なstrideでサンプルしmax-abs-diff=0を確認する。マイクロベンチでload/FMA issue、thread数、panel幅を切り分け、per-core occupancy probeでP/Eクラスタ利用を直接確認する。prefill GEMM sequenceは各層のQ/K/V、attention output、FFN up/downと最後のLM headを順に実行し、SDPAは除外する。llama.cppでは128-token prefillを20反復しcold first iterationを除外する。","scope":"主張はM1のfp32、主にS=128のcompute-bound prefillに限定される。decodeのM=1 GEMV、量子化ggml経路、fp16、M4以降のSMEは対象外。llama.cpp統合では128トークンで1.44倍だが256トークンでは1.10倍、512トークンでは0.82倍へ逆転し、長いprefillでは活性転置コストとAccelerateのlarge-M scalingが優位になる。M1〜M3のAMX issue特性には一般化可能性がある一方、multi-cluster M2 Pro/Max/UltraやSME-based M4ではパネル粒度とaggregate ceilingを再測定する必要がある。"},"reservation":{"claim_id":"claim-546bf32315ae41457b812520","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-f455389f915cff8f429e2fb1",
+  "job_id": "job-research-cd4bfdc72f5fe696",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f455389f915cff8f429e2fb1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

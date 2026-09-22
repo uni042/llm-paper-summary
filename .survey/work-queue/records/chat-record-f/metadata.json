@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-546bf32315ae41457b812520","job_id":"job-research-06d45370eceff021","data":{"canonical_id":"arXiv:2606.25426","arxiv_id":"2606.25426","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.PF","cross_list":[]},"title":"Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX","summary":"Apple M1のLLMプリフィル用単精度行列積（SGEMM）を直接AMXで実装し、内側ループ自体はロード発行律速で改善余地が小さいことを実測した上で、細粒度の列パネル並列化による第2 AMXブロック活用と定数重みの事前パッキングを組み合わせる。12種類のプリフィルGEMMで提案カーネルはすべてビット完全一致を保ち、BNNSMatMul比幾何平均1.58倍、BNNS Graph比1.17倍、cblas_sgemm比約2倍を達成し、llama.cppの128トークンプリフィルでは291から420 token/sへ1.44倍高速化した。","list_summary":"M1 AMXの内側ループがロード発行律速であることを切り分け、細粒度パネルで第2 AMXブロックを使い、重み事前パッキングを併用してllama.cppの128トークンfp32プリフィルを1.44倍高速化する。","authors":["Deyvik Bhan"],"authors_affiliations":"Georgia Institute of Technology","published":"2026-06-24","publication":"arXiv:2606.25426v1","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"on-device LLM inference / Apple Silicon / GEMM kernel optimization","topics":["Apple AMX","LLMプリフィル","SGEMM","重み事前パッキング","マルチスレッド","llama.cpp"],"importance":"カーネル内部の命令並べ替えではなく、アクセラレータ占有とモデルロード時の重み変換という配備層の設計がM1プリフィル性能を支配することを、負の結果を含む実測で示す。","implementation":"直接AMX命令を用いるfp32カーネル、マイクロベンチ、llama.cpp置換shimを公開。","hardware_evaluation":"Apple M1 T8103（4 P-core + 4 E-core）、macOS Tahoe 26.5.1、Apple clang 21.0.0 -O3。","quality_effect":"提案カーネルは評価した12形状でAccelerate sgemmに対しmax-abs-diff=0のビット完全一致。BNNS Graphは12形状中3形状のみfp32完全一致で、残りは最大1.4e-3の誤差を伴う低精度経路。","source":"https://arxiv.org/abs/2606.25426","sources":["https://arxiv.org/abs/2606.25426","https://arxiv.org/pdf/2606.25426"],"code":"https://github.com/dbhan08/inferc","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":18},"reservation":{"claim_id":"claim-546bf32315ae41457b812520","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-f455389f915cff8f429e2fb1",
+  "job_id": "job-research-cd4bfdc72f5fe696",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f455389f915cff8f429e2fb1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

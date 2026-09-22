@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-546bf32315ae41457b812520","job_id":"job-research-06d45370eceff021","data":{"limitations":"評価は単一M1 T8103、fp32、主にS=128プリフィルに限定され、個体差やM2/M3実機、multi-cluster M2 Pro/Max/Ultra、M4以降のSMEは直接評価していない。decodeのM=1 GEMVはmemory-bandwidth-boundで対象外。量子化ggml経路はdequantizationとmatmulが融合されており、提案fp32カーネルでは置換できない。BNNS Graphは低精度を許せばより高いthroughputを持つ余地があり、fp16 AMXもfp32のおよそ2倍の理論上限を持つが未実装。重み事前パックは再利用されるserving sessionでのみ償却され、単発GEMMでは優位性がない。llama.cppの実装はactivation transposeを各callで払い、GCD threadとllama.cpp operator poolが競合するためisolated kernelより約57 ms余計にかかる。実測優位は128-token prefill中心で、512-tokenでは0.82倍に逆転する。","differences":"M4 Pro向けMpGEMMはSMEのmulti-vector load等でmicrokernel内部のload bottleneckを改善してAccelerate比1.23倍を得るのに対し、本研究はAMXではload/FMA issue競合が内側ループ改善を封じると示し、外側の2-block schedulingとweight pre-packへ最適化点を移す。ZhouのM2 AMX GEMMはmasked outer productとoverlapping tileでscratch bufferを避けるが、本研究はその手法を採用せずGoto–BLIS blockingと配備レベルの再利用を評価する。XNNPACK/oneDNN/BNNS Graphにもweight pre-packing自体は既知だが、本研究はM=128のLLM shapeでAccelerateが2つのレバーを取りこぼすことをshape別に測定し、per-core occupancyで第2 block未使用を直接確認する点が異なる。Bare-Metal Tensor VirtualizationはNEONでAMXをblack box扱いするのに対し、本研究はreverse-engineered AMX instructionを直接発行する。","implementation_status":"実装、bench/amx配下のmicrobenchmark、per-core occupancy probe、llama.cpp shim、再現手順をGitHubのdbhan08/infercで公開している。直接AMX encodingはcorsix/amx等のreverse-engineered referenceを用いるためApple公式ISAではない。論文はarXiv:2606.25426v1（2026-06-24）のプレプリント。","research_positioning":"オンデバイスLLM推論と低レベルkernel最適化の境界に位置するが、主要な示唆はシステム側にある。LLMの定数重みという再利用性をmodel-load phaseへ持ち上げ、task granularityで物理accelerator occupancyを制御することで、既にissue limitに達したmicrokernelを変更せずend-to-end throughputを改善する。したがって『命令最適化』よりも『モデルライフサイクルに合わせたpackingとheterogeneous cluster scheduling』の事例として、CPU/Apple Silicon推論基盤、operator specialization、on-device servingの系統に接続する。"},"reservation":{"claim_id":"claim-546bf32315ae41457b812520","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-f455389f915cff8f429e2fb1",
+  "job_id": "job-research-cd4bfdc72f5fe696",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f455389f915cff8f429e2fb1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
