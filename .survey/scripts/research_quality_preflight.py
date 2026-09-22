@@ -15,6 +15,7 @@ HERE = Path(__file__).resolve().parent
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
+import immutable_submission  # noqa: E402
 import paper_quality_gate  # noqa: E402
 import prepare_completed_submission  # noqa: E402
 import process_immutable_submission  # noqa: E402
@@ -117,7 +118,18 @@ def _identity(request: dict[str, Any]) -> dict[str, Any]:
         "job_id": request.get("job_id"),
         "record_bank": request.get("record_bank"),
         "paper_path": request.get("paper_path"),
+        "expected_blob_sha": request.get("expected_blob_sha"),
     }
+
+
+def _canonical_expected_blob_sha(repo_root: Path, paper_path: str | None) -> str | None:
+    """Derive optimistic-concurrency identity from the actual paper, never from a slot SHA."""
+    if not paper_path:
+        return None
+    paper = repo_root / paper_path
+    if not paper.is_file():
+        return None
+    return immutable_submission.git_blob_sha(paper.read_bytes())
 
 
 def _repair_result(
@@ -157,6 +169,9 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
         request_path = repo_root / request_path
     request = _validate_request(request_path)
 
+    # Resolve the canonical paper path first without trusting a worker-supplied
+    # expected_blob_sha. That field is an optimistic-concurrency guard for an
+    # already-published paper; it must never be copied from a record-slot blob.
     descriptor = prepare_completed_submission.build(
         repo_root,
         kind=request["kind"],
@@ -164,9 +179,22 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
         job_id=request["job_id"],
         record_bank=request["record_bank"],
         paper_path=request.get("paper_path"),
-        expected_blob_sha=request.get("expected_blob_sha"),
+        expected_blob_sha=None,
     )
     request["paper_path"] = descriptor["paper_path"]
+    request["expected_blob_sha"] = _canonical_expected_blob_sha(
+        repo_root, descriptor["paper_path"]
+    )
+    if request["expected_blob_sha"] is not None:
+        descriptor = prepare_completed_submission.build(
+            repo_root,
+            kind=request["kind"],
+            attempt_id=request["attempt_id"],
+            job_id=request["job_id"],
+            record_bank=request["record_bank"],
+            paper_path=descriptor["paper_path"],
+            expected_blob_sha=request["expected_blob_sha"],
+        )
 
     try:
         rendered = process_immutable_submission.render_descriptor(repo_root, descriptor)
