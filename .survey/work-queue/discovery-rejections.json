@@ -1002,6 +1002,28 @@
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
     },
+    "id:arXiv:2608.08878": {
+      "primary_identity": "id:arXiv:2608.08878",
+      "identity_tokens": [
+        "id:arXiv:2608.08878",
+        "title:distillcache klguided adaptive kvcache eviction for memoryefficient llm inference",
+        "url:https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8"
+      ],
+      "canonical_id": "arXiv:2608.08878",
+      "arxiv_id": "2608.08878",
+      "doi": null,
+      "openreview_id": null,
+      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8",
+      "rejection_reason": "Primary full text could not be safely retrieved in this invocation. The official arXiv abstract for arXiv:2608.08878 was reachable and confirms the paper metadata/abstract, but the official arXiv PDF and HTML full-text routes were inaccessible in the available retrieval environment. Workflow v10 requires reading the primary source in full, so no five-slot research record was synthesized from the abstract or third-party material.",
+      "rejection_count": 1,
+      "first_rejected_at": "2026-09-21T22:48:29+00:00",
+      "last_rejected_at": "2026-09-21T22:48:29+00:00",
+      "axis": null,
+      "run_key": null,
+      "source_submission": ".survey/work-queue/submissions/research/attempt-53b927057194e949fa1b57c5.json",
+      "origin": "research_blocked_permanent"
+    },
     "id:arXiv:2608.15299": {
       "primary_identity": "id:arXiv:2608.15299",
       "identity_tokens": [
@@ -1243,28 +1265,6 @@
       "run_key": "scheduled-20260921T0330JST",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
       "origin": "discovery_candidate_rejection"
-    },
-    "id:arXiv:2609.10861": {
-      "primary_identity": "id:arXiv:2609.10861",
-      "identity_tokens": [
-        "id:arXiv:2609.10861",
-        "title:reach controllermanaged longspan ecc for hbm ai inference",
-        "url:https://arxiv.org/abs/2609.10861"
-      ],
-      "canonical_id": "arXiv:2609.10861",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "REACH: Controller-Managed Long-Span ECC for HBM AI Inference",
-      "source_url": "https://arxiv.org/abs/2609.10861",
-      "rejection_reason": "Primary-source full-text retrieval remains unavailable for current arXiv:2609.10861v1 in this execution. The arXiv abstract/search result is accessible and confirms the current identity and abstract-level metrics, but direct current-version arXiv HTML fetch returned a cache-miss error and no full 53-page manuscript was retrievable. Retrieval retried at https://arxiv.org/abs/2609.10861 and https://arxiv.org/html/2609.10861. The older related arXiv:2512.18152 reports materially different results and is not substituted. Per workflow v10, no five-slot record is inferred from abstract/search snippets; retry when the current primary full text is retrievable.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-14T18:38:12+00:00",
-      "last_rejected_at": "2026-09-14T18:38:12+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-cca7e7bbfc9f8b8d085149eb.json",
-      "origin": "research_blocked_permanent"
     },
     "id:arXiv:2609.11799": {
       "primary_identity": "id:arXiv:2609.11799",
