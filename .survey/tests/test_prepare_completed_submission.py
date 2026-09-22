@@ -17,6 +17,36 @@ def _load(path, name):
 
 
 class PrepareCompletedSubmissionTests(unittest.TestCase):
+    def test_preflight_expected_blob_sha_overrides_completed_request_value(self):
+        module = _load(SCRIPT, "prepare_completed_submission_expected_test")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            result = repo / ".survey/work-queue/research-preflight/results/pf.json"
+            result.parent.mkdir(parents=True)
+            result.write_text(json.dumps({"expected_blob_sha": None}), encoding="utf-8")
+            self.assertIsNone(
+                module._expected_blob_sha_from_preflight(repo, result, "1" * 40)
+            )
+            result.write_text(
+                json.dumps({"expected_blob_sha": "2" * 40}), encoding="utf-8"
+            )
+            self.assertEqual(
+                module._expected_blob_sha_from_preflight(repo, result, "1" * 40),
+                "2" * 40,
+            )
+
+    def test_legacy_preflight_can_fall_back_to_completed_request_value(self):
+        module = _load(SCRIPT, "prepare_completed_submission_legacy_test")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            result = repo / ".survey/work-queue/research-preflight/results/pf.json"
+            result.parent.mkdir(parents=True)
+            result.write_text(json.dumps({"ok": True}), encoding="utf-8")
+            self.assertEqual(
+                module._expected_blob_sha_from_preflight(repo, result, "3" * 40),
+                "3" * 40,
+            )
+
     def test_builder_emits_valid_ordered_slot_refs(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
