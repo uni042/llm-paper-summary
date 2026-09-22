@@ -4,10 +4,37 @@
   "slot": "metadata",
   "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
   "job_id": "job-research-b0919b5b9aea285a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d1d3b3caeff62a011e27f971",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2608.19920",
+    "arxiv_id": "2608.19920",
+    "doi": "10.48550/arXiv.2608.19920",
+    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
+    "title": "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+    "summary": "長文脈推論で固定長のKVキャッシュを使う疎注意（sparse attention）はメモリを文脈長から切り離せる一方、完全注意で学習したモデルを推論時だけ疎化すると、学習時と推論時の記憶条件が食い違う。本研究は任意のKVキャッシュ方策を学習時から組み込み、方策決定を再生ログへ固定し、二重の活性化チェックポイント、CPU退避、KVキャッシュ更新の差分符号化を組み合わせることで、推論時と同程度のGPUメモリで長文脈微調整を可能にする。Qwen3-4B-Instruct-2507を64k/128k文脈で評価し、特に短い正解を要求する複数HELMETタスクで系列並列学習より大幅に高い精度を示す。H2Oについても正規化スコアと高速SDPA連携を実装し、KeysAndValuesとして公開する。",
+    "list_summary": "任意のKVキャッシュ方策を学習中に再現し、二重チェックポイントとKV差分符号化で推論級メモリの長文脈疎注意微調整を実現する。",
+    "authors": ["Matthias Seeger", "Zeyu Zhang", "Vihang Patil", "Konstantinos Benidis", "Sebastian Schelter"],
+    "authors_affiliations": "Amazon Web Services; University of Amsterdam; Amazon; Technical University Berlin",
+    "published": "2026-08-20",
+    "publication": "arXiv:2608.19920v1",
+    "publication_type": "preprint",
+    "publication_status": "arXiv preprint",
+    "publication_version": "v1",
+    "topics": ["長文脈微調整", "疎注意", "KVキャッシュ", "H2O", "活性化チェックポイント", "CPUオフロード"],
+    "importance": "KVキャッシュ圧縮を推論専用の後付け最適化ではなく、モデルが圧縮方策へ共適応する学習条件として扱う。任意方策に対してGPUメモリを文脈長から実質的に切り離すため、長文脈学習と階層メモリ研究を直接つなぐ。",
+    "hardware_evaluation": "実機評価",
+    "hardware_details": "主評価は4台のNVIDIA A100 40GB。手法自体は4Bモデルの勾配計算を単一A100 40GB級で実行可能と説明し、4GPUは主に分散データ並列で有効バッチを増やすために使用。",
+    "quality_effect": "同じKVキャッシュ方策を学習時にも適用することで、完全注意学習後に推論だけ疎化した際の出力崩壊を抑える。タスク依存で混合結果もあり、全タスクで一様に改善するわけではない。",
+    "source": "https://arxiv.org/abs/2608.19920",
+    "sources": ["https://arxiv.org/abs/2608.19920", "https://github.com/awslabs/keys_values"],
+    "code": "https://github.com/awslabs/keys_values",
+    "implementation": "KeysAndValuesで疎注意推論・微調整、H2O派生方策、FlashInfer SDPAと組み合わせるTriton実装を提供。",
+    "implementation_status": "公式オープンソース実装あり。",
+    "evaluation_type": "64k/128k長文脈HELMET評価と学習・推論システム評価",
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary arXiv full text",
+    "references_total": 80
+  },
+  "reservation": {"claim_id": "claim-d1d3b3caeff62a011e27f971", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
