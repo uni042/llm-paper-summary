@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "rs-00-20260922T142815Z-6c4d21-05",
+  "run_key": "run-00-20260922T142815Z-6c4d21",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-22T23:28:15+09:00",
+  "runtime_condition": "platform_context_limit",
+  "runtime_condition_confirmed": true,
+  "runtime_condition_attempts": 1,
+  "runtime_condition_detail": "While reading primary arXiv HTML for attempt-a204eb86cb07493ddb9445d1, web retrieval returned the paper through the main conclusion but then rejected further continuation with 'Too many tokens / called web.run too many times'. GitHub read/write remained available. The current attempt was durably submitted as transient blocked rather than inferring unread appendix content."
+}
