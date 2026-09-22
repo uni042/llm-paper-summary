@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-1338966144636293379a0970",
-  "job_id": "job-research-d4390f65b198912f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1338966144636293379a0970",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1338966144636293379a0970","job_id":"job-research-d4390f65b198912f","data":{"canonical_id":"arXiv:2410.12013","arxiv_id":"2410.12013","doi":"10.48550/arXiv.2410.12013","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.AI","cs.LG"]},"title":"MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router","summary":"MoE-PrunerはMixtralのような混合専門家モデルで重み枝刈りを行う際、重み絶対値と入力活性だけでなく、各トークンを専門家へ割り当てる正規化ルータ重みを重要度へ掛ける一回限りの枝刈り法である。128本のC4校正系列だけで各専門家の出力ニューロンごとに低重要度重みを削り、50%非構造化疎性のMixtral-8x7BでWikiText perplexity 4.68、9 zero-shot平均67.23を達成する。さらに非枝刈りモデルを教師として対応専門家出力をMSE整合するexpert-wise knowledge distillationを行うと平均68.40となり、元モデル69.16の約99%を保持する。","list_summary":"重み・入力活性・ルータ重みを組み合わせたMoE専用重要度でexpert weightsをone-shot枝刈りし、expert-wise蒸留で50%疎性でも元性能の約99%まで回復する。","authors":["Yanyue Xie","Zhi Zhang","Ding Zhou","Cong Xie","Ziang Song","Xin Liu","Yanzhi Wang","Xue Lin","An Xu"],"authors_affiliations":"Northeastern University; ByteDance Inc.","published":"2024-10-15","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1 (2024-10-15)","lineage":"MoE weight pruning / router-aware compression / post-training pruning / knowledge distillation","topics":["混合専門家モデル","重み枝刈り","ルータ情報","知識蒸留","非構造化疎性"],"importance":"MoEのルータ重みを重み重要度へ直接組み込み、dense LLM向けWanda/SparseGPTをMoEのtoken-expert利用度へ適応させる。","implementation":"layer-wise reconstruction型のone-shot pruning。蒸留はLlama-Factoryで実装しfull-parameter fine-tuningを行う。","hardware_evaluation":"one-shot pruningは単一NVIDIA H100 80GB。knowledge distillationは2 servers × 8 H100 80GB、3 epochs。","quality_effect":"50% sparsityで蒸留前67.23、蒸留後68.40、元69.16。高疎性ではWandaより安定するが枝刈り単独では性能低下が残る。","source":"https://arxiv.org/abs/2410.12013","sources":["https://arxiv.org/abs/2410.12013","https://arxiv.org/html/2410.12013v1"],"code":null,"last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary manuscript","references_total":58},"reservation":{"claim_id":"claim-1338966144636293379a0970","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
