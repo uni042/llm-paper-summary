@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-fec4b42510381cc0bbc4dd6e","job_id":"job-research-0d6b250579950fce","data":{"hardware":"CUDA/NCCLとCANN/HCCLを跨ぐ2ホストの異種アクセラレータ環境を用い、容量スピルオーバー実験は1GbEリンクで測定する。評価には4 NVIDIA A100 + 4 Ascendを含む混在構成とQwen3-14B MLP sliceの実通信検証が含まれる。","software":"型付きcontract、deterministic lowerer、backend-neutral IR、symbolic checker、plan-parametric CUDA/NCCL–CANN/HCCL runtimeを実装。full-logit、projected-token、owner-tokenに加えrepresentative、exact-shard、partial-completion計画を扱う。","methodology":"意味論評価では独立layout-only plannerに72構造遷移を処理させ、完全obligationを何件確立できるかを比較する。byte-only minimizerには通信量だけを減らす候補を生成させ、symbolic checkerが意味違反を拒否できるか確認する。共有IRのbounded familyではchecker合格プログラム69,322件を列挙するoracleとproduction lowererを比較し、計画選択の最適性を検証する。\n\n実機では9個の実境界edgeに対してobservation-aware planを生成し、startup数とpayload bytesを比較する。CUDA/CANN live runでlog-probability、token-only、owner-scoped要求からfull-logit reconstruction、source projection、owner-token deliveryを導出・実行する。2ホスト1GbEの容量スピルオーバーでDense、MoE、MiniMax workloadのthroughputを測り、MiniMaxはconcurrency 1、8、16でfresh-processのAB/BA restart pairを18組比較する。Qwen3-14B MLP sliceではactivation shardのbitwise一致とrow-parallel partialのHCCL完了を確認する。","scope":"最大通信削減はtoken-only要求で全語彙logitを境界越しに送る必要がない場合に生じる。log-probabilityや確率samplingで完全logit surfaceが必要ならsource projectionは使えず利得が縮む。1GbEは帯域制約が強い評価であり、高速相互接続ではpayload削減の時間利得は小さくなり得る。評価トポロジは2ホスト規模で、より大きい混在クラスタの制御・障害・輻輳は未評価。"},"reservation":{"claim_id":"claim-fec4b42510381cc0bbc4dd6e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-79e5f1bb5c89a9d7a83c30ec",
+  "job_id": "job-research-38cf98b68843d7c7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-79e5f1bb5c89a9d7a83c30ec",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
