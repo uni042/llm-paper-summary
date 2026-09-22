@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-01556e847caec9153595855e",
-  "job_id": "job-research-c449ea471528f1b0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01556e847caec9153595855e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-01556e847caec9153595855e","job_id":"job-research-c449ea471528f1b0","data":{"hardware":"NVIDIA Blackwell GPU。Qwen3-1.7Bをbf16で実行し、単一要求とQA+math二分岐のpeak allocationを測定。","software":"transformers 5.5、peft 0.20、torch 2.11、bf16、greedy decoding。","methodology":"Qwen3-1.7B backboneにattention q/k/v/o対象のLoRA rank=16、alpha=32を学習。HotpotQA QA specialistとGSM8K math specialistを用いる。native、early、question、full-prefixのtakeover boundaryを同一prompt・greedy decodeで比較する。品質はQA token F1とGSM8K final numeric exact match、同一example差を10,000-resample paired bootstrap 95% CIで評価。主generation capは160 tokens、GSM8Kでは320-token診断と第二seedも追加。servingは約655/2K/8K contextでwarm-cache TTFT、completion latency、single-request peak、base/specialist prefillを測り、二分岐ではstorage aliasも検査する。","scope":"既学習の標準LoRA adapterを再学習せず、同一backboneのbase-computed prefix KVを直接再利用する場合の品質・境界・遅延・物理メモリのtradeoff。","benchmarks":["GSM8K","HotpotQA supplied-context QA","2K QA","8K QA"],"models":["Qwen3-1.7B"],"baselines":["native specialist prefill","base-only","partial takeover boundaries","closed-form ridge KV translator","preliminary Activated LoRA"],"configuration":"GSM8K held-outはtest[580:1080] n=500、境界sweepはoverlapping test[80:580] n=500。QAは700-token supplied context n=500、2K n=300、8K n=200。二分岐memoryはn=20、各32 generated tokens。reuse TTFTはone-time base prefillを除外しspecialist final-token forwardを含む。"},"reservation":{"claim_id":"claim-01556e847caec9153595855e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
