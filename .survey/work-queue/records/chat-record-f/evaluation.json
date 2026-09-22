@@ -1,13 +1,8 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-05dcd349efb11788a6f85507",
-  "job_id": "job-research-c15907d33f78f8cd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-05dcd349efb11788a6f85507",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-05dcd349efb11788a6f85507","job_id":"job-research-c15907d33f78f8cd","data":{
+    "hardware":"7 platform: Raspberry Pi 5 (BCM2712 ARM, 8GB, PMIC)、Jetson AGX Orin (Ampere GPU+ARM, 64GB, jtop)、RTX 3070 (Ampere, 8GB, NVML)、RTX 5070 (Blackwell, 12GB, NVML)、RTX A5000 (Ampere, 24GB, NVML)、Mac Mini M2 Pro (16GB unified memory, powermetrics)、Mac Mini M4 Pro (24GB unified memory, powermetrics)。device/edge/workstation/cloudの4 tierを跨ぐ。",
+    "software":"HoliBenchは約15k行のPythonで、Hydra設定、HuggingFaceを中心としたnative path、vLLM、SGLang、TensorRT-LLM等の複数backend、bitsandbytes INT8/INT4、Flask UI、ILP solverを使用する。公開コードはbeesfleas/HoliBench。",
+    "methodology":"20モデルをLLM、VLM、TSFMから選び、最大FP16/INT8/INT4の3精度、7 device、30超taskで測定する。各model-device-quantization設定につき100 sampleをsingle-query sequential inferenceで実行する。LLM/VLMは100ms、TSFMは10ms間隔でpower samplingし、warmupを除外する。LLM taskはWikiann、GoEmotions、SST-2、IMDB、AG News、CNN/DM、WMT16、HumanEval、WikiText-2、C4等、VLMはCIFAR-100、ImageNet、VQAv2、DocVQA等、TSFMはNAB、GIFT-EVAL、M3 Monthlyを使う。accuracy pipelineは重複taskでEleutherAI Model Evaluation Harnessと照合する。backend一般化では135M〜4Bの代表LLMをA5000とOrin上でHuggingFace、vLLM、TensorRT-LLM、SGLangへ再profileする。multi-model case studyはJetson AGX Orin 64GB上のCARLA Town03でVLM+LLMを10分間共存・順次実行し、1 cycle 1.6秒、30Wの制約を課す。",
+    "scope":"主characterizationはsingle-query sequential inferenceで、concurrent executionやdynamic batchingを一般的に検証するものではない。profile composabilityの実機検証はJetson AGX Orin 1台、HuggingFace backend、順次共存実行に限定される。LLM-as-a-judgeは人手ratingや第二judgeとのcalibrationを行っていない。telemetry APIの測定scopeはGPU/SoC/boardで異なり、PALは意味・積分方法を揃えるが物理的に同一測定点へ変換するものではない。"
+  },"reservation":{"claim_id":"claim-05dcd349efb11788a6f85507","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
