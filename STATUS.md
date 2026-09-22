@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 21:31:31 JST**
+> 自動生成: **2026-09-22 21:39:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **273** |
-| 未claim Research job | **272** |
-| 直近24hの検証済みResearch収録 | **31** |
-| 最終検証済みResearch収録 | **09-22 21:31:26 JST（5秒前）** |
+| 収録候補論文 | **272** |
+| 未claim Research job | **270** |
+| 直近24hの検証済みResearch収録 | **32** |
+| 最終検証済みResearch収録 | **09-22 21:39:31 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **273** |
+| canonical_id確認済みの一意な候補論文 | **272** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **273** |
+| 非終端Research job合計 | **272** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（12時間58分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（13時間7分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **2** | **0** | **0** | **1** | **0** | — |
+| Research | **16** | **2** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **15** | **5** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **16** | **5** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 21:39:31 JST** [research] `arXiv:2609.17109` — Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs
+  - job: `.survey/work-queue/jobs/job-research-c449ea471528f1b0.json`
+  - result: `.survey/work-queue/results/research/attempt-01556e847caec9153595855e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-01556e847caec9153595855e.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.17109-shared-prefix-kv-reuse-across-standard-lora-adapters-quality-and-serving-tradeoffs.md`
 - **09-22 21:31:26 JST** [research] `arXiv:2306.03078` — SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression
   - job: `.survey/work-queue/jobs/job-research-303634fb993a11eb.json`
   - result: `.survey/work-queue/results/research/attempt-4e9fe196315c28d707c9b275.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-f8a196fb851ca2c1095b5a40.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f8a196fb851ca2c1095b5a40.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md`
-- **09-22 16:38:18 JST** [research] `arXiv:2606.21633` — HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval
-  - job: `.survey/work-queue/jobs/job-research-3b95bafdcf04b501.json`
-  - result: `.survey/work-queue/results/research/attempt-50b11451c81409b86f90c5e0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-50b11451c81409b86f90c5e0.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md`
 
 ### Audit
 
@@ -180,10 +180,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.17109` — Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs / worker `scheduled-chat-30`
-  - claim: **09-22 20:35:43 JST** / heartbeat: **—** / lease expiry: **09-22 22:05:43 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c449ea471528f1b0.json`
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2608.07814` — Shape Mutating Expert Compression:LorExperts and BTExperts / worker `scheduled-chat-30`
+  - claim: **09-22 21:39:10 JST** / heartbeat: **—** / lease expiry: **09-22 23:09:10 JST**
+  - evidence: `.survey/work-queue/claims/job-research-015600d4d42febc5.json`
+- `arXiv:2605.18643` — Post-Trained MoE Can Skip Half Experts via Self-Distillation / worker `scheduled-chat-00`
+  - claim: **09-22 21:32:20 JST** / heartbeat: **—** / lease expiry: **09-22 23:02:20 JST**
+  - evidence: `.survey/work-queue/claims/job-research-791dd06c8f3ceecf.json`
 
 #### Audit
 
@@ -203,7 +206,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **273** |
+| ready | **272** |
 
 ### 候補の重複・識別情報欠損
 
@@ -223,7 +226,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **912** |
+| inference/training/survey配下の論文Markdown実体 | **913** |
 
 ### immutable submissionの未照合
 
