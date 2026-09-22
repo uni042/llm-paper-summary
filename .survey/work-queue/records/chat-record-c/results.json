@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a952d761aa795578010684ab",
+  "attempt_id": "attempt-42013615115b482f0803bc29",
   "job_id": "job-research-1b89c86f687054e4",
   "data": {
     "overview": "DiEPは層ごとの冗長性差を学習して削減予算を非一様に配ることで、固定率・層内探索型の比較法より高い精度を維持する。Mixtral 8x7Bではエキスパートを半数削除して平均59.9となり、元モデル65.1の約92%を保持する。Mixtral 8x22Bでは半数削除でも62.9で元モデル67.0の約94%を保持する。探索自体もMixtral 8x7Bで0.23時間とNAEEの1.31時間より大幅に短い。",
@@ -55,7 +55,7 @@
     "quality_impact": "近似手法であり品質劣化を許容してメモリ・計算量を削減する。削減率25%ではMixtral 8x7B-Instructの平均が66.4から65.8と0.6ポイント低下に留まる一方、50%では63.0まで下がる。要求品質に応じて削減率を選ぶ必要がある。"
   },
   "reservation": {
-    "claim_id": "claim-a952d761aa795578010684ab",
+    "claim_id": "claim-42013615115b482f0803bc29",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
