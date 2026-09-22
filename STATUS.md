@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 04:12:35 JST**
+> 自動生成: **2026-09-23 04:16:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **211** |
+| 収録候補論文 | **210** |
 | 未claim Research job | **210** |
-| 直近24hの検証済みResearch収録 | **62** |
-| 最終検証済みResearch収録 | **09-23 04:12:31 JST（4秒前）** |
+| 直近24hの検証済みResearch収録 | **63** |
+| 最終検証済みResearch収録 | **09-23 04:16:37 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **211** |
+| canonical_id確認済みの一意な候補論文 | **210** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **211** |
+| 非終端Research job合計 | **210** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（19時間40分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（19時間44分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **29** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **27** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **29** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **27** | **4** | **0** | **3** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 04:16:37 JST** [research] `arXiv:2510.13079` — GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models
+  - job: `.survey/work-queue/jobs/job-research-9b33865bddc54a07.json`
+  - result: `.survey/work-queue/results/research/attempt-6cd2c2eb6d8d0d8116429b11.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-6cd2c2eb6d8d0d8116429b11.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md`
 - **09-23 04:12:31 JST** [research] `arXiv:2509.19781` — Faster, Smaller, and Smarter: Task-Aware Expert Merging for Online MoE Inference
   - job: `.survey/work-queue/jobs/job-research-3218c42781ec549d.json`
   - result: `.survey/work-queue/results/research/attempt-a503dd59d7e7b9e3cfd8340e.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-fec4b42510381cc0bbc4dd6e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-fec4b42510381cc0bbc4dd6e.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.08231-sembridge-compiling-consumer-observations-into-cross-stack-communication-plans.md`
-- **09-23 01:51:15 JST** [research] `DOI:10.24963/ijcai.2026/568` — SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL
-  - job: `.survey/work-queue/jobs/job-research-07f0e94c3c687e36.json`
-  - result: `.survey/work-queue/results/research/attempt-326b3f3f66e611a32551fa41.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-326b3f3f66e611a32551fa41.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md`
 
 ### Audit
 
@@ -178,10 +178,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2510.13079` — GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models / worker `scheduled-chat-00`
-  - claim: **09-23 04:12:20 JST** / heartbeat: **—** / lease expiry: **09-23 05:42:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9b33865bddc54a07.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +199,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **211** |
+| ready | **210** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +219,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **947** |
+| inference/training/survey配下の論文Markdown実体 | **948** |
 
 ### immutable submissionの未照合
 
