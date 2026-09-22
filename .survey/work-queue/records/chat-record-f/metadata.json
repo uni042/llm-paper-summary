@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-f0e6afec5cf9246016c6a451",
   "job_id": "job-research-e7435b966cd8c5e7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f0e6afec5cf9246016c6a451",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2512.18194",
+    "arxiv_id": "2512.18194",
+    "doi": "10.48550/arXiv.2512.18194",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+    "summary": "TraCTは、プリフィルとデコードを分離するLLMサービングでKVキャッシュ転送がRDMAネットワークの律速になる問題に対し、CXL Type-3共有メモリをラック全体のKV転送路とプレフィックスキャッシュの双方に使う。GPUとCXL間の直接DMAでNIC経路を外し、非コヒーレントCXL上では2層ロック、明示的キャッシュラインフラッシュ、オフセット参照の共有アロケータ／オブジェクトストアで同期・可視性・ポインタ共有を解決する。Dynamo/vLLMへ統合した実機評価では、RDMA・DRAM系基準に対し平均TTFTを最大9.83倍、P99を最大6.2倍短縮し、ピークスループットを最大1.6倍向上した。",
+    "list_summary": "CXL Type-3共有メモリをGPU直結KV転送路とラック全体のプレフィックスキャッシュに統合し、RDMAのNICホップを除去して平均TTFTを最大9.83倍短縮する分離LLMサービング基盤。",
+    "authors": ["Dongha Yoon", "Younghoon Min", "Hoshik Kim", "Sam H. Noh", "Jongryool Kim"],
+    "authors_affiliations": "Virginia Tech; SK hynix America",
+    "published": "2025-12-20",
+    "publication": "arXiv preprint arXiv:2512.18194; Virginia Tech thesis repository also hosts the work",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "disaggregated LLM serving / KV cache transfer / CXL shared memory / hierarchical memory",
+    "topics": ["分離LLMサービング", "CXL共有メモリ", "KVキャッシュ", "GPU-CXL DMA", "プレフィックスキャッシュ", "階層メモリ"],
+    "importance": "分離推論のKV移送をネットワーク通信問題として最適化するのではなく、ラック内共有メモリへ置き換え、転送と再利用を同じCXLデータ面へ統合した点が重要である。特にCPU/GPU/共有メモリ間の階層化と、非コヒーレント大容量メモリを推論基盤へ使う設計の実機例になる。",
+    "hardware_evaluation": "CXL Type-3共有メモリを複数LLMサーバから利用する実機ラック規模構成で評価し、GPU-CXL DMAによるKV転送をRDMA系経路と比較する。論文は実CXLハードウェア上での動作を主張し、入力長1500〜6000トークンの静的試験とプレフィックス再利用を含む合成負荷を用いる。",
+    "quality_effect": "モデル重みや生成アルゴリズムを変更せずKVの保存・移送経路を置換するシステム方式であり、生成品質を直接変えない。主な影響はTTFT、P99遅延、ピークスループット、ネットワーク競合感度である。",
+    "source": "https://arxiv.org/abs/2512.18194",
+    "sources": ["https://arxiv.org/abs/2512.18194", "https://arxiv.org/pdf/2512.18194", "https://hdl.handle.net/10919/143438"],
+    "code": "https://github.com/ai-dynamo/dynamo",
+    "implementation": "TraCTはDynamo上のvLLM推論経路へCXL共有メモリライブラリと外部KVキャッシュ機構を統合する。GPU-CXL DMA、共有アロケータ、オフセットベースのオブジェクトストア、プレフィックス索引、2層ロック、ソフトウェア管理の可視性制御を実装する。",
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary-reference-section",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-f0e6afec5cf9246016c6a451", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
