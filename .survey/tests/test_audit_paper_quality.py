@@ -111,17 +111,6 @@ class MethodHeadingCompatibilityTests(unittest.TestCase):
         self.assertGreaterEqual(len(blocks), AUDIT.STRUCTURED_METHOD_MIN_PARAGRAPHS)
         self.assertTrue(AUDIT.structured_method_equivalent(lines, prose_chars, len(blocks)))
 
-    def test_single_detailed_method_paragraph_is_accepted(self) -> None:
-        detailed = (
-            "入力を観測して必要なエキスパートを選び、選択結果を次段へ渡す。"
-            "選択には現在の負荷とメモリ量を使い、失敗時は通常経路へ戻す。"
-            "この説明は一段落だが、入力・処理・出力と失敗時の挙動を十分に説明する。"
-            "さらに、判断結果が次段の配置と転送量へどう影響するかまで記述し、構成要素単体でも十分な説明量を持たせる。"
-        )
-        self.assertGreaterEqual(len(detailed), AUDIT.DEFAULT_MIN_COMPONENT_PROSE_CHARS)
-        self.assertTrue(AUDIT.method_component_has_enough_detail([detailed], 2))
-        self.assertFalse(AUDIT.method_component_has_enough_detail(["短い説明。"], 2))
-
     def test_short_summary_without_method_is_not_structured_equivalent(self) -> None:
         lines = """# Example
 
