@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e14662bfa3410aa2e2cc050b",
-  "job_id": "job-research-c324e0325a4a2def",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e14662bfa3410aa2e2cc050b",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e14662bfa3410aa2e2cc050b","job_id":"job-research-c324e0325a4a2def",
+ "data":{"hardware":"H20とH800を含むGPU環境。検証深さに対するlatency curveを実測し、GPU世代・モデル構造・並列方式・batch sizeの差を評価する。","software":"DFlash系block-parallel speculative decodingを基盤にD-cut selectorと可変verification packingを追加。","methodology":"denseとMoEの6 target modelを用い、主にconcurrency 32を中心として複数batch size・benchmarkで自己回帰復号、DFlashのdraft length 8/16、D-cut 8/16を比較する。モデルはLlama-3.1-8B、Qwen3-4B、Qwen3-8B、Qwen3.5-27B、Qwen3.5-35B-A3B、Hy3-295B-A21B。benchmarkはMath500、MT-Bench、MBPP等を含む5種。指標はAR比throughput/speedup、mean accepted tokens、verification latency、selector overhead、verification compute削減率。confidenceと実受理の関係もSpearman相関・AUROCで検証する。","scope":"高並行度のbatched speculative decoding。単一要求の最大受理長ではなく、batch全体のtarget verification computeを最適化する。dense/MoE双方を対象にする。","benchmarks":["Math500","MT-Bench","MBPP","GSM8K","HumanEval"],"models":["Llama-3.1-8B","Qwen3-4B","Qwen3-8B","Qwen3.5-27B","Qwen3.5-35B-A3B","Hy3-295B-A21B"],"baselines":["autoregressive decoding","DFlash (draft 8)","DFlash (draft 16)"],"configuration":"DFlashの標準長ドラフトではD=15候補＋bonus tokenを扱う。D-cutは全batch位置から離散予算比率を選び、各要求には連続prefixを残す。主要比較はconcurrency 32。"},
+ "reservation":{"claim_id":"claim-e14662bfa3410aa2e2cc050b","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
 }
