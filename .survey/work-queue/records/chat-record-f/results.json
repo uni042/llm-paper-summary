@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-40b553eeb725cfefaa1a1d5f","job_id":"job-research-548d7e4cd563f6b8","data":{"overview":"高負荷（N>10）でCacheWiseはvLLM/InferCeptに対しsession completion timeを2.7–3.5倍短縮し、token goodputを1.64–2倍、request throughputを1.5–2倍改善した。KV block evictionと推定transfer volumeは2–2.6倍削減する。prefix-aware scheduling単独でも大きな改善があり、その上でpredictive evictionが追加の1.2–1.6倍goodput改善と1.7–2倍session短縮を与える。実CPU offload構成ではvLLM比session completion time約1.19倍短縮で、再計算構成より利得は小さい。","key_results":[{"metric":"Session completion time","value":"2.7–3.5× lower","baseline":"vLLM / InferCept","condition":"N>10 concurrent coding-agent sessions","interpretation":"閉ループsession全体のuser-facing完了時間を大幅に短縮する。"},{"metric":"Token goodput","value":"1.64–2× higher","baseline":"vLLM / InferCept","condition":"N>10","interpretation":"KV再計算を減らし有用token処理率を上げる。"},{"metric":"KVCache evictions / transfer volume","value":"2–2.6× reduction","baseline":"vLLM / InferCept","condition":"high-load CATraces replay","interpretation":"tiered storage利用時にも下位memoryとの転送圧力を直接削減する。"},{"metric":"Predictive eviction ablation","value":"1.2–1.6× goodput; 1.7–2× lower session completion time","baseline":"prefix-aware vLLM / InferCept","condition":"scheduling policyをprefix-awareに固定","interpretation":"改善がschedulerだけでなくreuse predictionにも由来する。"},{"metric":"Prefix-aware scheduling ablation","value":"goodput 1.38–1.64× (N=30), 1.6–1.7× (N=40); session time 1.8–2.35× / 1.85–2.66× lower","baseline":"各FCFS variant","condition":"N=30/40","interpretation":"agent workloadではresident prefix優先だけでも強い効果を持つ。"},{"metric":"Physical CPU offload","value":"~1.19× lower session completion time","baseline":"vLLM","condition":"N=30, GPU↔CPU DRAM transfer","interpretation":"PCIe転送は再計算より安いため絶対利得は縮むが、offload系にも有効。"}],"negative_results":"prefix-aware schedulingはhistoryの少ない新規requestを後回しにするため高負荷でP99 request latencyが悪化する。CacheWiseのCPU scheduling overheadはvLLM比約2.4–3倍で、N=40では0.33sから0.99sへ増える。ただしGPU model executionは16.6sから11.2sへ減りnetでは約4.7s/request改善する。実offload時はeviction penaltyが再計算より小さいためsession改善は約1.19倍に縮小する。","interpretation":"主要な効果は、agent sessionの未来のreuseをtool executionという外部状態から推測し、admissionとevictionを同じsession-level目的へ揃えたことにある。特に階層memory研究との関係では、CacheWiseはoffload engineを高速化するのではなく、そもそもtier間へ移動させるKV量を減らすため補完性が高い。","quality_impact":"モデル出力品質を近似で落とす方式ではなくserving policyのみを変更する。代償は公平性/tail latencyとCPU scheduler costであり、session completionを重視するagent workloadに適したtrade-offである。"},"reservation":{"claim_id":"claim-40b553eeb725cfefaa1a1d5f","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-714eaa3772fb0eedb52aa450",
+  "job_id": "job-research-ceb9b2d0b0c9c441",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-714eaa3772fb0eedb52aa450",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

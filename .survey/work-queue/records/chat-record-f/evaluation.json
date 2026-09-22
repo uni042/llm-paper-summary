@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-40b553eeb725cfefaa1a1d5f","job_id":"job-research-548d7e4cd563f6b8","data":{"hardware":"2×NVIDIA H200 GPU（TP=2、合計282GB GPU memory）とAMD EPYC 9534 64-core CPU。chunked-prefillを有効化し、1 chunk最大512 tokens。KV offload実験ではGPU↔CPU DRAMをPCIeで実転送する。","software":"Qwen2.5-Coder-32B-Instruct、vLLMベースCacheWise prototype。比較はvLLM（FCFS＋block LRU）、InferCept（FCFS＋session-local moving-average eviction）、および各baselineへprefix-aware schedulingを加えたablation、ground-truth tool latencyを使うCacheWise*。","methodology":"CATracesからsessionをrandomに80% predictor training、残りをdeterministic replay評価へ用いる。N個の独立coding-agent sessionを単一serving instanceへ同時投入し全session完了まで実行、load Nを増加させて複数回反復する。metricsはtoken goodput、request throughput/latency、tool実行時間を除くsession completion time、evictionに伴うKV transfer volume。human idleはsession boundaryとして扱う。","scope":"実世界coding-agent traceに基づくserving効率の評価で、主モデルはQwen2.5-Coder-32B-Instruct、主hardwareは2×H200。低loadではmemory contentionが小さく差が出ず、高loadで効果が顕在化する。SGLangとは直接比較せずprefix-aware baseline ablationで近い要素を評価する。trace distribution driftへの再学習必要性、他agent workload・hardware・modelへの一般化は今後の検証余地がある。"},"reservation":{"claim_id":"claim-40b553eeb725cfefaa1a1d5f","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-714eaa3772fb0eedb52aa450",
+  "job_id": "job-research-ceb9b2d0b0c9c441",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-714eaa3772fb0eedb52aa450",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
