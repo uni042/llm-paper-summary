@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-3e9870d1ea6c812acfc6fb72",
-  "job_id": "job-research-0088fb887d51af7d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e9870d1ea6c812acfc6fb72",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3e9870d1ea6c812acfc6fb72","job_id":"job-research-0088fb887d51af7d","data":{"limitations":"最適な専門家表現と統合戦略がモデルごとに異なる理由は十分解明されていない。大規模Mixtralでは小較正集合を使うデータ中心方式が過適合し、DeepSeekでは共有専門家と独立初期化により非共有専門家の冗長性が低く、同じ削減率でも品質低下が大きくなる。学習型統合係数は追加性能を得られる場合があるが最適化コストが高い。さらに各層の冗長性が異なるにもかかわらず、主実験は各層を同じ残存専門家数へ削減する。量子化・オフロードとの併用、長文脈生成、実サービスでの通信・バッチ条件は評価していない。","differences":"Task-Specific Expert Pruningのような従来法は下流タスクの専門家訪問情報を利用するため、未知タスクへ共通の圧縮モデルを作りにくい。Expert Trimming等の頻度方式はタスク非依存化できても、訪問回数が少ない専門家を直接削除して固有知識を失う。列挙法は再構成損失を用いて強い組合せを探せるが、64専門家級では探索コストが急増する。本研究は専門家出力または重みから知識類似性を作り、似た専門家を削除ではなく統合し、対応ルータまで同時に統合する点で異なる。HC-SMoEの階層クラスタリング系とは、CKA/重み表現と専門家グラフ分割を用い、データ中心・モデル中心の二経路を明示する点が特徴である。","implementation_status":"Findings of ACL 2025に査読済み論文として掲載。実験は4×A100 80GBでMixtral-8x7B/8x22B、DeepSeek-MoE-16B、Qwen2-57B-14Aまで実施され、疑似コードと複数の実装戦略を付録に記載する。論文本文はコード公開予定と述べるが、今回確認した一次資料中に確実な公式コードURLは記載されていないためURLは推測していない。","research_positioning":"MoE圧縮研究の中で、専門家重要度をルータ統計だけで測る枝刈りから、専門家の機能・知識類似性を直接測るクラスタ統合へ移る流れの代表例である。モデル中心方式は較正データ不要であり、学習データを持たない公開MoEの後処理にも適用しやすい。専門家とルータの共同統合、層ごとの冗長性観測、実効メモリ・速度評価を含むため、後続のクラスタ駆動枝刈りやMoE専門家圧縮の比較基準として重要である。"},"reservation":{"claim_id":"claim-3e9870d1ea6c812acfc6fb72","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
