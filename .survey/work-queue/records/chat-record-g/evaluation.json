@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d08192b6c02e47b87507ca6b",
   "job_id": "job-research-81731225ea65410f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d08192b6c02e47b87507ca6b",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "全モデルは原則48GB A6000で学習し、出力アンサンブルだけ80GB A100を使用する。T5-GLUEの各実験は約108時間、ResNet-DomainNetは約11時間。T5-GLUEでSMEARを含む各手法の学習時メモリは約30GBで、論文はSMEARによる顕著な追加メモリを観測していない。",
+    "software": "著者公式実装は https://github.com/r-three/smear 。論文は各入力例向けに合成エキスパートを準備し、PyTorchのtorch.bmmでバッチ並列実行すると説明する。T5側はHyperformer由来のコードを利用し、ResNet-DomainNet側は著者実装である。",
+    "methodology": "言語側はT5.1.1 BaseをGLUEの8データセットで多タスク微調整する。事前学習済み重みは層正規化を除き凍結し、60個の経路選択ブロックそれぞれに8エキスパートを置く。600kステップ、学習率3×10^-4、2kウォームアップ、バッチ128、AdamWで学習する。評価時は各例を各データセットの全プロンプトテンプレートで評価し、5回の実行平均と標準偏差を報告する。\n\n画像側はImageNet事前学習済みResNet18をDomainNetの6領域で多タスク微調整し、8残差層群の後へ各6エキスパートを置く。100kステップ、バッチ128、学習率10^-3、ウォームアップなし、Adamを用いる。比較対象は単一エキスパートの計算量一致・パラメータ数一致、Adamix、ハッシュ経路選択、タグ経路選択、Latent Skills、上位k、直通型Gumbel-Softmax、REINFORCE、DSelect-k、Soft MoE、全エキスパート出力アンサンブルである。\n\nタグ経路選択はタスク・領域メタデータを使える強い教師的基準であり、T5ではRTEとMNLIの共有が有利という事前知見を反映する。SMEARはこの教師情報を受け取らず入力表現から経路選択分布を学ぶ。主指標はT5-GLUEの各タスク指標をまとめた平均値とDomainNetの最終精度で、さらに1秒当たり処理例数を測って性能と推論速度を同時比較する。\n\n除去実験ではエキスパートドロップアウトを検証し、SMEARはT5-GLUEで80.2から83.1へ2.9ポイント改善する一方、DomainNetでは62.0のままである。エキスパート数を2倍のT5 16個、DomainNet 12個にした容量拡張も試し、T5では有意改善なし、DomainNetでは0.8ポイント改善を得る。",
+    "scope": "評価は自然言語のT5と画像のResNetという異なるアーキテクチャ・モダリティを含み、単なる精度だけでなく実測推論速度、メモリ、専門化の可視化まで扱う点が強い。SMEARが教師タグ経路選択と複数の勾配推定法を同一設定で上回るため、『離散選択の勾配推定が適応経路選択の弱点になり得る』という仮説を直接検証している。\n\nただし両設定とも大規模言語モデルの事前学習ではなく、事前学習済み基盤へ比較的小さなアダプタ型エキスパートを追加する微調整である。通信を伴う分散MoE、エキスパート並列、CPU・SSD退避、トークン単位経路選択の実サービングは評価していない。したがって大規模MoE推論基盤での速度・メモリ利得は未検証である。"
+  },
+  "reservation": {"claim_id": "claim-d08192b6c02e47b87507ca6b", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
