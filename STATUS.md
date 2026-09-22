@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 04:16:43 JST**
+> 自動生成: **2026-09-23 04:38:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **210** |
-| 未claim Research job | **210** |
-| 直近24hの検証済みResearch収録 | **63** |
-| 最終検証済みResearch収録 | **09-23 04:16:37 JST（6秒前）** |
+| 収録候補論文 | **209** |
+| 未claim Research job | **208** |
+| 直近24hの検証済みResearch収録 | **64** |
+| 最終検証済みResearch収録 | **09-23 04:38:07 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **210** |
+| canonical_id確認済みの一意な候補論文 | **209** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **210** |
+| 非終端Research job合計 | **209** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **621** |
-| 未処理 | **5425** |
-| 収録済みとして除外 | **513** |
+| 処理済み | **622** |
+| 未処理 | **5424** |
+| 収録済みとして除外 | **514** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（19時間44分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（20時間5分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **28** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **27** | **4** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **28** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 04:38:07 JST** [research] `arXiv:2508.07785` — Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts
+  - job: `.survey/work-queue/jobs/job-research-b8b352e984bc0e9d.json`
+  - result: `.survey/work-queue/results/research/attempt-4d7a0c3e035c923b869769ba.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-4d7a0c3e035c923b869769ba.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md`
 - **09-23 04:16:37 JST** [research] `arXiv:2510.13079` — GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-9b33865bddc54a07.json`
   - result: `.survey/work-queue/results/research/attempt-6cd2c2eb6d8d0d8116429b11.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-f71c9e148c6dfbb3490291b5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-f71c9e148c6dfbb3490291b5.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md`
-- **09-23 01:56:16 JST** [research] `arXiv:2609.08231` — SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans
-  - job: `.survey/work-queue/jobs/job-research-0d6b250579950fce.json`
-  - result: `.survey/work-queue/results/research/attempt-fec4b42510381cc0bbc4dd6e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-fec4b42510381cc0bbc4dd6e.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.08231-sembridge-compiling-consumer-observations-into-cross-stack-communication-plans.md`
 
 ### Audit
 
@@ -178,8 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2512.14531` — VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse / worker `scheduled-chat-00`
+  - claim: **09-23 04:17:29 JST** / heartbeat: **—** / lease expiry: **09-23 05:47:29 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6e36f8b25c1d84c6.json`
 
 #### Audit
 
@@ -199,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **210** |
+| ready | **209** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **948** |
+| inference/training/survey配下の論文Markdown実体 | **949** |
 
 ### immutable submissionの未照合
 
