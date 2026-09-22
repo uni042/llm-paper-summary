@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-71174da29a72754d44fbffa1",
   "job_id": "job-research-f43aa8f1dfa7e573",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-71174da29a72754d44fbffa1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "BEAMは、品質を大きく崩さない中程度の疎性から平均活性専門家数1未満の極端な領域まで滑らかな計算量・品質曲線を示す。論文の代表設定では元モデル性能の98%以上を保持しながらMoE層FLOPsを最大85%削減し、CUDA統合した実推論でデコード最大2.5倍、スループット最大1.4倍を報告する。Qwen1.5-MoEでは元のK=4に対し平均活性専門家数を約半分にして98%以上を保持し、さらにAvg-K=0.56付近でも約95%を維持する。",
+    "key_results": [
+      {"metric": "元モデル性能保持", "value": ">98%", "baseline": "original fixed Top-K MoE", "condition": "実用的なBEAM疎性設定、3種類のMoEで評価", "interpretation": "専門家数をtoken-adaptiveに減らしても、適切なβでは元能力の大部分を保持できる。"},
+      {"metric": "MoE層FLOPs削減", "value": "最大85%", "baseline": "fixed Top-K MoE", "condition": "高疎性BEAM設定", "interpretation": "二値マスクにより不要なexpert FFNそのものを省略できる。"},
+      {"metric": "デコード高速化", "value": "最大2.5倍", "baseline": "standard MoE inference", "condition": "custom CUDA kernelを統合したvLLM", "interpretation": "理論FLOPsだけでなく実際のdecode latencyへ計算削減が反映される。"},
+      {"metric": "スループット", "value": "最大1.4倍", "baseline": "standard vLLM MoE inference", "condition": "BEAM CUDA integration", "interpretation": "動的なexpert skipがrequest処理能力の改善にもつながる。"},
+      {"metric": "Qwen1.5-MoEの高疎性", "value": "Avg-K≈0.56で約95%性能保持", "baseline": "original K=4", "condition": "aggressive sparsity setting", "interpretation": "平均活性数が1未満でも実用的な能力が残り、ゼロ専門家活性化が頻繁に起こり得ることを示す。"},
+      {"metric": "Top-K順位別mask傾向", "value": "Top-1約0.43、Top-8約0.53のmask確率", "baseline": "MoE-DynamicはTop-1をほぼ削除できず下位ほど強くmask", "condition": "Qwen3-30B-A3Bの比較可能な疎性設定", "interpretation": "routing weight順位だけではexpert必要性を十分表せず、BEAMが高順位expertもtoken依存で削れることを示す。"}
+    ],
+    "negative_results": "疎性を強めれば品質低下は残り、BEAMは無損失手法ではない。soft sigmoid gateを学習して推論時だけhard化するアブレーションはtrain-inference mismatchで大きく品質を落とし、binary forwardとSTEの必要性を示す。主router自体を疎性制御へ置き換えるDynMoE系もpost-training条件では不安定で、DeepSeekV2-Liteの例では平均精度が大幅に崩れる。共有専門家が多いモデルではrouted expertを削っても共有expert計算が残るため、Qwen3のような非共有構成より実速度向上が制約される。",
+    "interpretation": "結果の重要点は単純な『低weight expertを削る』ことではなく、routing順位とexpert必要性が一致しないという観測である。BEAMは主routerのTop-K候補集合を尊重しつつ、別のmask routerが各候補を独立に判定するため、高順位expertを落として低順位expertを残す選択も表現できる。βを上げると疎性を直接強められ、元モデルに近い品質域から極端なzero-activation域まで一つの学習形式で制御できる。",
+    "quality_impact": "二値expert skipはモデル出力を変更し得るためexact-equivalentではない。一方、元Top-K挙動からゼロ初期化で開始し、task lossと疎性lossを同時に最適化することで、代表的な速度設定では元性能98%以上を維持する。用途では必要な品質保持率に応じてβを選ぶ必要がある。"
+  },
+  "reservation": {"claim_id": "claim-71174da29a72754d44fbffa1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
