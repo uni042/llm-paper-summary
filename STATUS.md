@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:35:03 JST**
+> 自動生成: **2026-09-22 16:37:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **295** |
 | 未claim Research job | **293** |
 | 直近24hの検証済みResearch収録 | **21** |
-| 最終検証済みResearch収録 | **09-22 16:20:36 JST（14分前）** |
+| 最終検証済みResearch収録 | **09-22 16:20:36 JST（16分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（8時間2分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（8時間4分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -181,9 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.1109/ISCA66397.2026.00101` — STEP: Adaptive Spatio-Temporal Expert Prefetching for Low-Latency and Memory-Efficient MoE Inference / worker `scheduled-chat-00`
-  - claim: **09-22 16:34:45 JST** / heartbeat: **—** / lease expiry: **09-22 18:04:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ed6cf42bc92106fc.json`
+- `arXiv:2608.19758` — FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving / worker `scheduled-chat-00`
+  - claim: **09-22 16:36:40 JST** / heartbeat: **—** / lease expiry: **09-22 18:06:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6ca9e5aa49540dd5.json`
 - `arXiv:2609.13141` — SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking / worker `scheduled-chat-30`
   - claim: **09-22 16:32:06 JST** / heartbeat: **—** / lease expiry: **09-22 18:02:06 JST**
   - evidence: `.survey/work-queue/claims/job-research-6542fa570cf353a1.json`
@@ -234,8 +234,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **290** |
-| └ Research | **218** |
+| 成功result未照合のimmutable submission | **292** |
+| └ Research | **220** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
