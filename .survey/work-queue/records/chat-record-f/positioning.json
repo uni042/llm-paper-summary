@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-36efead2bf26ee8e78c0fbce",
   "job_id": "job-research-92d92d3583bf57da",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-36efead2bf26ee8e78c0fbce",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主な限界は、報告がbase language model中心で、著者自身がSFT、RL、マルチターン、長文コード、ソフトウェア工学、エージェント、マルチモーダル統合を今後の課題としている点である。物理AI向け設計を掲げるが、自動運転やロボットの閉ループ指標はこの報告では評価しない。容量制約の速度測定は単一GPUローカルMoEで、分散expert parallel通信を含まない。また容量制約付きQuantile Routing全体とdropless top-kを比較するため、速度差を各要素へ厳密分解できない。",
+    "differences": "通常top-kは各tokenに固定k個を割り当て、Loss-Free Routingなどは固定kのままexpert負荷を補正する。Quantile Routingはexpertごとのscore閾値で選択するためtokenごとのk自体が変わり、各expertの受入分位点を揃えることで負荷分散と平均k制御を同時に得る。Expert Choiceのようにexpert側がtokenを選ぶ方式に近い負荷規則性を持ちながら、tokenごとの可変計算を直接実現する。さらにtrainingではdropless、deployment prefillだけcapacity制約という段階別設計を採る。",
+    "implementation_status": "Xpengの技術報告として20Bモデルを実際に512 H800で学習し、H800上の長文推論と単一GPU融合MoEカーネルを評価している。Appendixではtoken-expert割当をexpert順にsortしoffsetを作り、第一射影＋gated activation、第二射影、routing weight scaling、scatter-addを融合実行する経路を説明する。一般公開コードURLは本文で確認できない。",
+    "research_positioning": "動的エキスパート計算の研究として、tokenごとに必要計算量を変えるadaptive computationを実モデル規模へ落とし込んだ例である。オフロードやexpert cacheとの関係では、固定top-kより瞬間選択数が変動するため単純な『毎token k個』前提のprefetchは難しくなる一方、expert固有閾値とload統計が将来需要予測の追加信号になる。容量制約はGPU上の最悪expert負荷を抑えるだけでなく、CPU/SSDからのexpert転送数に上限を設ける階層メモリ設計とも接続できる。平均計算予算と最悪負荷を別々に制御する考え方が重要である。"
+  },
+  "reservation": {"claim_id": "claim-36efead2bf26ee8e78c0fbce", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
