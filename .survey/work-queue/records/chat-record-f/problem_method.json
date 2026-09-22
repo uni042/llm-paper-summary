@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-546bf32315ae41457b812520",
-  "job_id": "job-research-06d45370eceff021",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-546bf32315ae41457b812520",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-546bf32315ae41457b812520","job_id":"job-research-06d45370eceff021","data":{"problem":"Apple Silicon CPUでLLMをプリフィルすると、Transformer各層のQ/K/V射影、attention出力射影、FFN上下射影などのfp32 SGEMMが主要計算になる。標準のAccelerateはM1〜M3ではAMXへディスパッチするが、形状非依存の汎用入口であり、M=128のLLMプリフィル形状に特化した資源利用や定数重み再利用を必ずしも行わない。既存研究はM4のSMEや一般的なMシリーズ特性を扱うものが多く、M1 AMXでAccelerateとの差が内側ループの命令効率なのか、並列配置・パッキングなど外側の配備設計なのかが分離されていなかった。","novelty":"本研究の新規性は、単に手書きAMXカーネルが速いと示すのではなく、M1の性能差をマイクロアーキテクチャ、スレッド配置、重みライフサイクルの3層へ分解して原因帰属した点にある。ロードなしFMA32は約1525 GFLOPSだが、オペランドロードを1つでも混在させると単一スレッドは約610〜680 GFLOPS帯へ落ち、タイル形状、paired load、ロード数、依存関係、phase batchingを変えても抜けない。したがって内側ループ最適化ではなく、列パネルを細かくしてP/Eクラスタ双方のAMXブロックへ仕事を供給することと、定数重みをモデルロード時に一度だけパックすることを主要レバーと特定する。","method_overview":"カーネルはGoto–BLIS型3段キャッシュブロッキングをM1へ適応する。Aは一度転置してAt[K,M]とし、BはKc×Ncの連続パネルへパックする。AMX外積高Mr=16、4個のZ bankを使う幅Nr=64を採用し、各k反復でAの16要素をYへ、Bの64要素を4個のXレジスタへロードし、4本のFMA32を4 bankへ発行する。Kブロックを跨ぐ際はCから部分和をZへ戻し、各反復後にZをCへ保存して状態漏れを防ぐ。定数Bはモデルロード時に一度パックし、推論呼出しではパック済みパネルを再利用する。オフライン探索でNc∈{64,128,192,256,384,512}、Kc∈{256,512,1024,2048}を比較し、全12形状でビット一致するNc=64,Kc=2048を共通設定とする。","components":[{"name":"ロード発行律速の切り分け","description":"キャッシュ常駐マイクロベンチでFMA32のみとロード混在を比較する。FMAのみ約1525 GFLOPSに対し、ロード混在は約610〜680 GFLOPSへ低下し、paired load、32×32/16×64タイル、依存なしロード、4反復phase batchでも改善しない。これにより内側ループ再配置の余地を定量的に閉じる。"},{"name":"3段キャッシュブロッキングと4-way ILP","description":"Mr=16,Nr=64で4個のAMX Z bankを並列利用し、Bを連続パネル化する。Kcごとの部分和はLDZ/STZで明示的に継承し、skip-Zは最初のpc,kkだけに限定して数値ドリフトを防ぐ。"},{"name":"細粒度列パネル並列化","description":"Nc=64では多数の列パネルがGrand Central Dispatchへ露出し、4 P-core側だけでなく4 E-core側の第2 AMXブロックも利用する。粗いNc=512ではP-cluster側に偏る。per-core occupancy probeでAccelerateのE-cluster residencyが0.00なのに対し提案カーネルは1.9〜2.5 core相当を使うことを確認する。"},{"name":"定数重み事前パッキング","description":"LLM重みBはセッション中不変なので、モデルロード時に[K,Nc]形式へ一度だけ変換し、各プリフィル呼出しの再パックを除去する。これがN>K形状で主要な勝因となり、さらにKc=2048の深いブロックを実用化してZ再ロード回数を減らす。"},{"name":"負の結果による設計空間の限定","description":"未パックoperand streamingは0.15〜0.5倍、マイクロカーネル再構成は改善なし、明示thread count固定はnoise内、M方向2次元分割は低速化、software prefetchも効果なし。最終的に効くノブをパネル幅と重み事前パックへ絞る。"}],"system_design":"モデルロード時にfp32重みをAMX向けパネルへ事前変換し、プリフィル時には入力活性をAt形式へ転置してNc=64単位の仕事をGCDへ投入する。各work itemはKc=2048でAMXの4 bankを使う直接カーネルを実行する。細粒度タスク化が2個のAMXブロックを埋め、事前パックが呼出しごとの大規模B変換を消す。llama.cpp統合では定数fp32 weightのcblas_sgemm(NoTrans,Trans)だけを置換し、attention scoreや小形状は既存cblasへフォールバックするため、変更範囲をプリフィル重み行列積へ限定している。"},"reservation":{"claim_id":"claim-546bf32315ae41457b812520","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
