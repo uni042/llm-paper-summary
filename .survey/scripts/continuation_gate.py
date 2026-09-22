@@ -295,7 +295,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 "keep_same_request_id; do_not_issue_another_claim; inspect_survey_claim_fast_actions_run_for_request_commit; "
                 "inspect_run_job_or_steps_if_queued_or_in_progress; inspect_same_worker_unsettled_submissions_retryable_repairs_and_active_claim_consistency; "
                 "wait_10_real_seconds; refresh_latest_head_and_matching_claim_result; "
-                "repeat_monitor_cycle_while_request_age_under_60_seconds_or_until_result_or_terminal_hard_stop"
+                "repeat_monitor_cycle_while_request_age_under_60_seconds; "
+                "repeat_until_result_or_terminal_hard_stop"
             )
         else:
             claim_wait_action = (
