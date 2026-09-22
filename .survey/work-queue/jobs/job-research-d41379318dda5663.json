@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2609.08663",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.08663-moemb-adaptive-computation.md",
   "selection_reason": "MoE embeddingでtraining-based/inference-only双方のadaptive computation戦略を体系評価し、task complexityに応じたexpert compute削減を直接扱う。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T11:55:28+00:00"
+  "created_at": "2026-09-20T11:55:28+00:00",
+  "completed_at": "2026-09-22T06:30:58+00:00",
+  "blocker": "一次資料全文を十分取得できない。arXiv書誌・抄録と分類は取得できたが、この実行環境ではarXiv PDF/HTML本文取得が失敗した。タイトル・arXiv ID・著者名から別の一次資料経路と公式実装/著者配布版を探索したが、本文を検証可能な公式ホストへ到達できなかった。第三者の詳細な精読・要約は見つかったが、5スロットの一次根拠には使用しない。",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-c8c9387071b6e430d2613a33.json"
 }
