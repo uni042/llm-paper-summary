@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-50b11451c81409b86f90c5e0",
-  "job_id": "job-research-3b95bafdcf04b501",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-50b11451c81409b86f90c5e0",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-50b11451c81409b86f90c5e0","job_id":"job-research-3b95bafdcf04b501","data":{"hardware":"主評価環境はIntel Xeon Platinum 8481C、936GB CPU DRAM、NVIDIA H100 SXM 80GB HBMをPCIe 4.0 x16で接続した単一GPUサーバ。CPU側の完全KV走査とGPU側デノイズを同時実行できる異種計算環境で、CPU DRAM容量とPCIe帯域を明示的に利用する。","software":"SGLangを拡張したサービング実装を用い、GPU注意はFlashInfer、CPU選択はC++のAVX-512 intrinsicsで最適化する。評価対象は少なくともLLaDA 2.0-mini 16BとSDAR-8B-Chat。比較対象はGPU HBMに全KVを置くdense GPU-only、ブロック拡散向けMAGE-Offload、自己回帰向けInfiniGenを適応したオフロード方式。","methodology":"LongBenchの4タスクで5%を中心とする疎KV予算の品質をdense実行と比較し、16K/32K長文脈で最大バッチを含むdecode throughputを測定する。代表クエリ化、ドラフトlookahead、デノイズstep数のablationによりCPU選択削減と重畳効果を分離する。KV予算を変えた精度比較ではMAGE-Offloadや適応InfiniGenも含め、単なる処理量だけでなく疎選択による品質劣化を確認する。最新版概要では3つのblock dLLMと5つの長文脈タスクへの拡張評価も報告されているが、ここで転記する具体値は一次資料で明示されたLLaDA/SDAR条件を中心とする。","scope":"評価はblock diffusion LLM servingに限定され、自己回帰LLMそのものの高速化を目的としない。利点は長文脈、大きいKV、十分なデノイズstep数、CPU側のAVX-512計算能力とPCIe 4.0帯域を持つ環境で最大化する。CPUが弱い、PCIeが遅い、Tが小さい、あるいはGPU HBMだけで十分な短文脈では相対的優位が縮小し得る。"},"reservation":{"claim_id":"claim-50b11451c81409b86f90c5e0","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
