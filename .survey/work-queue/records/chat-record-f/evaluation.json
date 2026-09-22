@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-40f2100aeb26ce98eb0d15a5",
-  "job_id": "job-research-b921c5addc92d695",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-40f2100aeb26ce98eb0d15a5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-40f2100aeb26ce98eb0d15a5","job_id":"job-research-b921c5addc92d695","data":{"hardware":["GPU型・ノード構成は主要HTML本文で確認できない"],"software":["lm-eval","EvalScope","Super-Experts-Profilling tool"],"model":["Qwen3-30B-A3B / Base / Instruct / Thinking","DeepSeek-R1","DeepSeek-V2-Lite / Chat","Mixtral-8x7B / Instruct"],"datasets":["C4 calibration","WikiText-2","C-Eval","GSM8K","HumanEval","ARC-c/e","BoolQ","HellaSwag","MMLU","OpenBookQA","PIQA","WinoGrande","GPQA-Diamond","MATH-500","AIME 2024/2025","LiveCodeBench","Pile-of-Law","MedDialog"],"baselines":["original model","同数expertのglobal random pruning","SEと同一layer内のlayer-controlled random pruning","final-layer outlier expert pruning"],"correctness":"同数expertを削るrandom controlを5回平均し、SE pruning固有の性能崩壊をcapacity reductionから分離する。reasoningモデルでは各technical reportに合わせたgeneration設定を用いる。","settings":["C4 100 samples × 2K tokensでMA/SE解析","SE条件: down_proj最大出力>P99.5かつglobal maxの10%以上、MA形成層内","non-reasoningはlm-eval","reasoningはEvalScope","GPQA-Diamond 5-shot","cross-domain/OoDでSE位置安定性を確認"],"methodology":"Qwen、DeepSeek、Mixtralの異なるMoE設計でSEをprofilingし、base/post-trained間と複数domain間で位置を比較する。SEだけをdynamic pruningして非推論9タスクとreasoning/codingを評価し、random controlと比較する。さらにrouter score、down_proj outlier、massive activation、attention mapを層方向に追跡し、attention sink decay rateで機構破壊を定量化する。threshold sensitivityとheavy-tail fittingも実施する。","scope":"expert-level compression safetyとMoE内部機構の分析。新しい圧縮率・推論速度そのものを競う研究ではなく、圧縮対象選択で保護すべきexpertを特定する。","workloads":["MoE calibration","expert dynamic pruning","non-reasoning benchmark","reasoning/math/coding","cross-domain/OoD analysis"],"metrics":["task average accuracy/Pass@1","WikiText perplexity","SE count/proportion","down_proj maximum activation","attention sink decay rate","router score distribution"],"reproducibility":"SE profiling algorithm、閾値、モデル、dataset、評価framework、主要設定を記載し、profiling codeを公開。GPU型は主要HTML本文で確認できない。"}}
