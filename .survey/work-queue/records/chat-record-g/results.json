@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-0435bf18257a114df581ef2f",
-  "job_id": "job-research-3c62e3c72b715377",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0435bf18257a114df581ef2f",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0435bf18257a114df581ef2f","job_id":"job-research-3c62e3c72b715377","data":{"overview":"ADEPTはプリフィル領域分類でmacro Top-1 97.2%、expert hit rate 95.9%を得て、デコードのRandom Forest予測ではTop-6平均83.3%（単純基準48.8%）へ改善する。イベント駆動シミュレーションではI/O waitを50%削減し、20GB A6000上の実測HF Accelerateオンデマンド基準TPOT約3797msに対しADEPTの投影TPOTは1100msで3.45倍。全expert常駐約38GBに対しピークresident expertは各層約43/64で約67%、すなわち33%ピークメモリ削減。予測・cache管理の層当たり費用は約20マイクロ秒である。","key_results":[{"metric":"I/O wait","value":"50%削減","baseline":"On-Demand offloading","condition":"A6000特性のevent-driven simulation","interpretation":"次expertを計算と重ねて先読みすることでPCIe待ちを半減。"},{"metric":"TPOT","value":"3797ms → 1100ms、3.45倍","baseline":"20GB A6000のHF Accelerate標準offloading実測baselineに対するADEPT simulation projection","condition":"DeepSeek-MoE-16B","interpretation":"主要速度値は実測対実測ではなく実測baselineと投影ADEPTの比較である点に注意。"},{"metric":"ピークexpert memory","value":"全常駐比67%、33%削減","baseline":"全64 experts resident ≈38GB","condition":"peak ≈43 experts/layer","interpretation":"オンデマンドより多くcacheする代わりに全常駐より大幅にVRAMを削減。"},{"metric":"デコードTop-6予測精度","value":"48.8% → 83.3%","baseline":"naive frequency/recent baseline","condition":"5 domains、K=6","interpretation":"時間・層間・領域信号の統合で先読みhit率を大幅改善。"},{"metric":"プリフィルdomain分類/hit","value":"Top-1 97.2%、hit 95.9%","baseline":"5-domain macro average","condition":"medoid similarity","interpretation":"軽量なprompt領域推定でも初期resident expert集合を高精度に絞れる。"},{"metric":"予測器・cache overhead","value":"約20µs/layer、RF約10µs/token","baseline":"MoE layer compute 10〜100ms","condition":"実装複雑度評価","interpretation":"先読み判断費は層計算より三桁小さい。"}],"negative_results":"active expert budgetを64から32へ半減するとresident parameter poolは50%減るがfull-capacity accuracyの保持は63%にとどまり、K=16では約65 percentage-pointの大幅劣化が起きるため、メモリ削減を無制限に進められない。Creativeは領域分離が強く、分類精度95%、prefill hit 94%で技術領域より低い。異なる領域のexpert priorを誤って使うと平均でin-domain prefill hit rateの74%しか保持できず、domain classification errorは一次の感度要因である。","interpretation":"MoE offloadingではプリフィルとデコードの統計性が違う。プリフィルはprompt全体の意味からexpert集合を事前に狭めることがピークメモリへ効き、デコードは直近expert・層間相関・領域の短期局所性から次の転送を計算と重ねることがI/O待ちへ効く。二段を分離することで一つのcache policyへ両課題を押し込むより良いメモリ/遅延折衷を得る。","quality_impact":"最終TPOT比較では出力品質はbaselineと同一と報告する一方、プリフィルexpert budgetを過度に絞ると下流精度が落ちることも明示される。したがって領域別short-listは性能だけでなくcoverageを95%質量基準で確保し、Kを極端に小さくしないことが必要。"},"reservation":{"claim_id":"claim-0435bf18257a114df581ef2f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
