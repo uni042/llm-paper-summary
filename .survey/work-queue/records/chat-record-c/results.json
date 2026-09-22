@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8ea91e1c5b13559f11f48a08",
+  "attempt_id": "attempt-f4daf58b89f6ce40e07a2ba4",
   "job_id": "job-research-f0b1ffeacc3b0ccd",
   "data": {
     "overview": "LLM4LLMは評価した10種類の言語モデル推論すべてでPyTorch eagerよりend-to-end latencyを改善し、A100/H100の幾何平均speedupは3.91倍/6.98倍だった。Transformerでは約1.79〜3.03倍(A100)、1.92〜3.78倍(H100)の安定した改善、Mamba系では最大22.37倍/32.79倍、RecurrentGemmaでは最大1.83倍/10.74倍を示す。KernelBench Level 2でもA100でPass 100%、GeoMean 2.745倍、H100でPass 99%、GeoMean 2.628倍を得た。",
@@ -48,7 +48,7 @@
     "quality_impact": "すべての報告patchはモデル統合後のcorrectness gateを通過している。手法は数値誤差、安全性、shape guard、phase/cache/state契約を受理条件に含めるが、生成品質や下流task accuracyの大規模な再評価を主目的とはしていない。"
   },
   "reservation": {
-    "claim_id": "claim-8ea91e1c5b13559f11f48a08",
+    "claim_id": "claim-f4daf58b89f6ce40e07a2ba4",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
