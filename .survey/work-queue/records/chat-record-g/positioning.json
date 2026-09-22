@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6632d1664daf09912489991a",
-  "job_id": "job-research-777ca56d26763813",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6632d1664daf09912489991a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6632d1664daf09912489991a","job_id":"job-research-777ca56d26763813","data":{"limitations":"activation profilingはtarget domainを代表するcalibration dataほど良く、domain mismatchの影響は残る。discrete sparse routingによりgeneration varianceが増え、single-sample品質が低下するがself-consistencyで緩和できる。評価は英語benchmarkとdecoder-only Llama/Qwen中心で、多言語、encoder-decoder、state-spaceへの一般化は未検証。","differences":"MoEfication/G-MoEficationはneuronをparameter/graphでclusterし学習routerを使う。LLaMA-MoE系はdense FFNをexpert分割後、7B〜200B tokenのcontinual trainingで回復する。本手法はactivation frequencyの二峰性を明示的に利用して高頻度neuronをsharedへ隔離し、routed clusterの代表neuronからrouterを直接構成するためtraining budgetを数桁削減する。","implementation_status":"公式GitHub https://github.com/JarvisPei/CMoE 。Transformers/PyTorchでactivation profiling、balanced assignment、analytical router、LoRA scaling、adaptive load-balanceを実装する。","research_positioning":"既存dense checkpointをsparse MoEへ低コスト変換する系統であり、モデル圧縮というよりconditional computationを後付けする手法。expert内部へ再帰適用できるため既存MoEにも有効で、WINA等neuron sparsity、量子化、KV-cache圧縮と直交する。階層MoEはexpert単位のoffload/cacheとexpert内部のsub-expert計算削減を組み合わせる余地があり、GPU/CPU階層メモリ研究とも接続しやすい。"},"reservation":{"claim_id":"claim-6632d1664daf09912489991a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
