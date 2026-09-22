@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T12:39:35.902808+00:00",
+  "updated_at": "2026-09-22T12:43:17.600738+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -36988,6 +36988,56 @@
           "type": "research",
           "canonical_id": "arXiv:2609.17109",
           "title": "Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35728738257",
+      "first_recorded_at": "2026-09-22T12:43:17.600738+00:00",
+      "last_recorded_at": "2026-09-22T12:43:17.600738+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35728738257:1",
+          "recorded_at": "2026-09-22T12:43:17.600738+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35728738257",
+            "run_attempt": "1",
+            "source_sha": "eeaa5fb77c26c2d99df2a1c93fa7f7d3edf540df"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-791dd06c8f3ceecf",
+          "type": "research",
+          "canonical_id": "arXiv:2605.18643",
+          "title": "Post-Trained MoE Can Skip Half Experts via Self-Distillation",
           "from": "ready",
           "to": "completed"
         }
