@@ -1,13 +1,18 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-59dc9473086573b3d534c617",
-  "job_id": "job-research-10bf8d55e9caa5c4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-59dc9473086573b3d534c617",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-59dc9473086573b3d534c617","job_id":"job-research-10bf8d55e9caa5c4",
+ "data":{
+  "overview":"Fluxionは完全注意とほぼ同じ品質を維持しながら、固定の疎ハイブリッド構成より長文復号を大幅に高速化する。速度差は文脈長とバッチサイズの増加で拡大し、Qwenでは32K・バッチ4の1.9倍から128K・バッチ4の3.4倍へ伸びる。Llamaでは測定条件全体で2.5〜3.7倍、Qwenでは1.9〜3.4倍の出力トークン時間短縮を示す。",
+  "key_results":[
+   {"metric":"出力トークン当たり時間短縮","value":"2.5〜3.7倍","baseline":"固定疎ハイブリッド構成 blk=16, bgt=0.05","condition":"Llama-3.1-8B-Instruct、RULER、複数バッチ・文脈長","interpretation":"ヘッド別予算・粒度最適化とCPU・GPU協調が固定構成を一貫して上回る。"},
+   {"metric":"出力トークン当たり時間短縮","value":"1.9〜3.4倍","baseline":"固定疎ハイブリッド構成 blk=16, bgt=0.05","condition":"Qwen2.5-7B-Instruct、RULER、32K〜128K","interpretation":"文脈が長いほど注意が復号時間に占める割合が増え、Fluxionの利得も大きくなる。"},
+   {"metric":"LongBench平均差","value":"Qwen -0.13、Llama +0.02点","baseline":"完全注意","condition":"14タスク平均","interpretation":"実タスク平均では品質差がほぼない。"},
+   {"metric":"L-Eval平均差","value":"Qwen -0.24、Llama -0.26点","baseline":"完全注意","condition":"13開放型タスク平均","interpretation":"開放型生成は疎近似にやや敏感だが平均劣化は小さい。"},
+   {"metric":"RULER平均精度","value":"Qwen 72.53、Llama 85.03","baseline":"完全注意 74.07、85.81","condition":"8K〜128K、13タスク","interpretation":"固定疎構成の最良値72.41、84.55も上回り、長さを跨いだ動的構成の有効性を示す。"},
+   {"metric":"GPU遊休率","value":"70.65%から45.78%へ低下","baseline":"Fluxion最適化なしのハイブリッド構成","condition":"代表的なQwen、32K文脈設定","interpretation":"CPU側疎注意待ちをGPU側仕事で埋める協調実行が異種資源利用率を改善する。"}
+  ],
+  "negative_results":"完全注意と同一ではなく、RULERではQwen平均が1.54点、Llama平均が0.78点低い。QwenのLongBenchではLCCが完全注意比-2.03点など局所文脈に敏感な一部タスクで低下が大きい。固定2%予算は高速でも品質が悪く、事前分析では5%から2%へ下げると一部検索タスク精度が約半減するため、単純な予算削減だけでは代替できない。",
+  "interpretation":"高速化の源泉は三つある。ストリーミングヘッドをCPU検索から外して不要な仕事を消すこと、検索ヘッドごとに粒度と予算を変えてメタデータ走査とKV走査の総量を減らすこと、CPUとGPUを固定役割にせず共有キューで重ねてGPU遊休を減らすことである。混合長バッチでもLlamaの中央値速度向上は16K〜64Kで約2.3倍、32K〜128Kで約2.6倍へ増え、長文ほど効果が強い。",
+  "quality_impact":"近似疎注意のため品質保証は統計的評価に基づく。LongBenchとL-Evalでは平均差が0.26点以内だが、RULERではモデルにより0.78〜1.54点低下し、個別タスク差も存在する。"
+ },
+ "reservation":{"claim_id":"claim-59dc9473086573b3d534c617","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }

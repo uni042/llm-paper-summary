@@ -1,13 +1,13 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-59dc9473086573b3d534c617",
-  "job_id": "job-research-10bf8d55e9caa5c4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-59dc9473086573b3d534c617",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-59dc9473086573b3d534c617","job_id":"job-research-10bf8d55e9caa5c4",
+ "data":{
+  "hardware":"AMD EPYC 7V13 CPU、24コア、220GBホストメモリ、推定57GB/sメモリ帯域とNVIDIA A100 80GB。CPU・GPU間はPCIe 4.0、理論32GB/s。20 CPUコアを疎注意計算へ割り当てる。",
+  "software":"Hugging Face Transformersの既存演算子を基盤に、CPUはFBGEMM・AVX-512・OpenMP、GPUはCUDAストリーム、FlashDecoding、上位k選択カーネル、統合仮想アドレス方式を用いる。",
+  "methodology":"Llama-3.1-8B-InstructとQwen2.5-7B-Instructを評価する。品質はLongBenchの重複除外後14タスク、L-Evalの開放型13タスク、RULERの13タスクを使い、合計40タスク。LongBenchは8K超、L-Evalは3K超の事例を用い、RULERは8K、16K、32K、64K、128Kで各タスク100事例を合成する。効率評価は長さを制御できるRULERを使い、固定長バッチと混合長バッチを測る。基準は同じCPU・GPUハイブリッド経路からFluxion最適化だけを外した構成で、先頭64トークンと直近256トークンをGPUに保持し、Quest方式のメタデータを共通利用する。固定構成としてブロック長16/32、KV予算2%/5%を比較する。品質指標はRULER精度、LongBenchとL-EvalのF1/ROUGE、効率指標は出力トークン当たり時間。",
+  "scope":"CPU常駐KVを持つ復号処理を対象とした単一ノード実機評価。主要な速度主張はA100とEPYC、PCIe 4.0の組合せに依存する。予測器訓練にLongBench V2を使うため同データセットで品質を報告せず、別のLongBench・L-Eval・RULERで評価する。",
+  "benchmarks":["LongBench","L-Eval","RULER"],"models":["Llama-3.1-8B-Instruct","Qwen2.5-7B-Instruct"],
+  "baselines":["FULL","w/o Fluxion (blk=16,bgt=0.05)","w/o Fluxion (blk=16,bgt=0.02)","w/o Fluxion (blk=32,bgt=0.05)","w/o Fluxion (blk=32,bgt=0.02)"],
+  "configuration":"GPU常駐既定KVは先頭64トークン＋直近256トークン。検索粒度候補は16、32、64、128トークン。"
+ },
+ "reservation":{"claim_id":"claim-59dc9473086573b3d534c617","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }

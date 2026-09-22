@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-59dc9473086573b3d534c617",
-  "job_id": "job-research-10bf8d55e9caa5c4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-59dc9473086573b3d534c617",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-59dc9473086573b3d534c617","job_id":"job-research-10bf8d55e9caa5c4",
+ "data":{
+  "limitations":"主要評価はA100 80GBとAMD EPYC 7V13、PCIe 4.0の単一構成であり、CPUメモリ帯域やPCIe帯域、GPU世代が変わるとCPU経路とGPU経路の相対速度も変わる。予測器は対象モデルごとにオフライン教師データを作って訓練するため、完全な訓練不要方式ではなく、モデル追加時の準備費用がある。品質は平均では完全注意に近いが、RULERや一部コード・要約タスクでは低下が残る。CPU常駐KVを前提にした復号最適化なので、KV全体がGPUへ収まる短文脈や事前充填支配のワークロードでは同じ利得を期待できない。",
+  "differences":"Questなど従来のブロック疎注意は関連ブロックの選択方式を中心に扱うのに対し、FluxionはCPU常駐KVで上位k選択と疎注意がCPUボトルネックになる点を起点にする。HGCAやRetrievalAttentionのようなCPU・GPUハイブリッド方式に対しては、GPU常駐集合とCPU疎注意の固定分担ではなく、ヘッド属性とアクセス量に応じてCPUとGPUへ検索タスクを動的に振り分ける。KTransformers系のCPU・GPU協調と同じ異種資源利用の問題意識を持つが、対象はMoEエキスパートではなくCPU常駐KV上の長文注意である。",
+  "implementation_status":"論文では約2K行Python＋3K行C++/CUDAの実装を報告し、FBGEMM、AVX-512、OpenMP、複数CUDAストリーム、UVA、CUDA Graphsを利用する。公式コード公開URLは確認できなかったため、再現性は論文記載の実装詳細に依存する。",
+  "research_positioning":"本リポジトリの重点であるCPU/SSD/NVMeオフロード・階層メモリ系統に直接関係する。FluxionはKVをCPUへ置く容量拡張自体ではなく、その状態で復号時に必要なKVをどの粒度・予算で読むか、CPUとGPUのどちらで処理するかを最適化する。したがってKVキャッシュオフロードや分離型事前充填・復号システムの上位に置ける実行最適化であり、PCIe帯域だけでなくCPUメモリ帯域とGPU遊休を同時に扱う点が重要である。SSDまで含む多段階階層や先読みは本論文の対象外だが、CPU常駐層での選択量を削減するため、より下位のSSD/NVMe階層からの昇格量を抑える設計と補完可能である。"
+ },
+ "reservation":{"claim_id":"claim-59dc9473086573b3d534c617","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
