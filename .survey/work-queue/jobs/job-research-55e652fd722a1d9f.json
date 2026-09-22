@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/f25ba2c420a573830f2b4b2f30dd2fcc3adffeb2",
   "paper_path": "papers/inference/99-other-inference-systems/2026-de817f8d0333-co-optimizing-request-scheduling-and-kv-caching-for-edge-llm-serving.md",
   "selection_reason": "multinode edge LLM servingでblock-level KV cachingとrequest schedulingを共同最適化し、平均TTFTを最大54.02%削減。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T22:11:49+00:00"
+  "created_at": "2026-09-20T22:11:49+00:00",
+  "completed_at": "2026-09-22T09:33:54+00:00",
+  "blocker": "Primary full text was unavailable in this invocation. The IEEE DOI paper metadata/abstract could be verified, but accessible records either offered paid delivery or explicitly reported no full text and a request-PDF flow. Per workflow, no structured scientific record was synthesized from abstract or secondary material.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-fb73ed3108593d95cd494336.json"
 }
