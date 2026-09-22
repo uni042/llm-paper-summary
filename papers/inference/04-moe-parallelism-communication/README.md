@@ -3,7 +3,7 @@
 この系統では、混合専門家モデル（Mixture of Experts; MoE）の専門家配置、並列化、チップ間・ノード間通信、負荷分散を扱う推論システム研究を整理する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（23本）
+## 自動生成の論文一覧（24本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -105,4 +105,8 @@
 - **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
+
+- **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
+  実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：1  
+  共活性化する専門家を同一GPUへ集約し、再索引付き疎行列積と協調剪定でトークン複製を減らすことで、MoEの全対全通信を削減し学習・推論を1.5倍超高速化する。
 <!-- survey:auto:end -->

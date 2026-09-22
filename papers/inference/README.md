@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **913本**。
+収録論文: **922本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,12 +25,12 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**913本**。
+推論論文：**922本**。
 
 | 系統 | 本数 |
 |---|---:|
 | [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 55 |
-| [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 75 |
+| [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 78 |
 | [02-cpu-offload](02-cpu-offload/README.md) | 3 |
 | [02-hardware-accelerators](02-hardware-accelerators/README.md) | 8 |
 | [02-memory-offload](02-memory-offload/README.md) | 1 |
@@ -49,7 +49,7 @@
 | [04-moe-expert-offload-caching](04-moe-expert-offload-caching/README.md) | 3 |
 | [04-moe-offload-expert-cache](04-moe-offload-expert-cache/README.md) | 1 |
 | [04-moe-offload-routing](04-moe-offload-routing/README.md) | 1 |
-| [04-moe-parallelism-communication](04-moe-parallelism-communication/README.md) | 23 |
+| [04-moe-parallelism-communication](04-moe-parallelism-communication/README.md) | 24 |
 | [05-kv-cache](05-kv-cache/README.md) | 1 |
 | [05-kv-cache-compression-quantization](05-kv-cache-compression-quantization/README.md) | 4 |
 | [05-kv-cache-memory-management](05-kv-cache-memory-management/README.md) | 8 |
@@ -85,5 +85,5 @@
 | [moe](moe/README.md) | 1 |
 | [scheduling](scheduling/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 131 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 136 |
 <!-- survey:auto:end -->
