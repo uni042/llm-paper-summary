@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T06:18:22.676747+00:00",
+  "updated_at": "2026-09-22T06:19:24.585179+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -35575,6 +35575,56 @@
           "type": "research",
           "canonical_id": "arXiv:2212.09811",
           "title": "Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 886,
+      "paper_active_count_after": 886,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35694286656",
+      "first_recorded_at": "2026-09-22T06:19:24.585179+00:00",
+      "last_recorded_at": "2026-09-22T06:19:24.585179+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35694286656:1",
+          "recorded_at": "2026-09-22T06:19:24.585179+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35694286656",
+            "run_attempt": "1",
+            "source_sha": "26ae436e43f6af57ab2dd293a4da955915794c5a"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-f59af449638fc64c",
+          "type": "research",
+          "canonical_id": "arXiv:2504.05586",
+          "title": "Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations",
           "from": "ready",
           "to": "completed"
         }
