@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-a302801e2f42ef76-02",
+  "kind": "research",
+  "attempt_id": "attempt-a302801e2f42ef7601d7976c",
+  "job_id": "job-research-aa3e3c19262a245a",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:a06c2d0e4f930f140f247b1af81249f51cebfe76f3249e3f79717b0d6f19f0f1",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "6a2eaaa68ea81f9213747caabb1fb6847b5dfed0"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "780aaf5f25301885a7394d0da7a50d1954f557a0"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "6b5c91730905ab49de9352c01fa8e7e688e4f053"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "59994a47421efe4855f75ef2f108523233aee080"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "edee9a3c28f3952e38ea72f4f9b7b8216a3833a6"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T22:33:20+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md",
+    "status": "FAIL",
+    "file_bytes": 23528,
+    "prose_chars": 5684,
+    "paragraphs": 21,
+    "method_paragraphs": 8,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9618929457639135,
+    "japanese_chars": 5427,
+    "latin_chars": 215,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}
