@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-09-22T11:50:28.787213+00:00",
-  "status": "passed",
+  "source_commit": "post-maintenance-working-tree",
+  "checked_at": "2026-09-22T23:30:50.413983+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 7863,
-  "checked_file_count": 7863,
+  "inventory_file_count": 8706,
+  "checked_file_count": 8706,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -25,6 +25,12 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 557,
-  "findings": []
+  "external_url_count": 584,
+  "findings": [
+    {
+      "code": "paper_invalid_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md",
+      "detail": "published must use YYYY-MM or YYYY-MM-DD"
+    }
+  ]
 }
