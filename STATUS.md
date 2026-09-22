@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 04:44:54 JST**
+> 自動生成: **2026-09-23 04:50:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **208** |
-| 未claim Research job | **207** |
-| 直近24hの検証済みResearch収録 | **65** |
-| 最終検証済みResearch収録 | **09-23 04:44:47 JST（7秒前）** |
+| 収録候補論文 | **207** |
+| 未claim Research job | **206** |
+| 直近24hの検証済みResearch収録 | **66** |
+| 最終検証済みResearch収録 | **09-23 04:50:46 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **208** |
+| canonical_id確認済みの一意な候補論文 | **207** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **208** |
+| 非終端Research job合計 | **207** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **623** |
-| 未処理 | **5423** |
-| 収録済みとして除外 | **515** |
+| 処理済み | **624** |
+| 未処理 | **5422** |
+| 収録済みとして除外 | **516** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（20時間12分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（20時間18分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 04:50:46 JST** [research] `arXiv:2410.12013` — MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router
+  - job: `.survey/work-queue/jobs/job-research-d4390f65b198912f.json`
+  - result: `.survey/work-queue/results/research/attempt-1338966144636293379a0970.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1338966144636293379a0970.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md`
 - **09-23 04:44:47 JST** [research] `arXiv:2604.06542` — Does a Global Perspective Help Prune Sparse MoEs Elegantly?
   - job: `.survey/work-queue/jobs/job-research-c92e15d6ba5edb8d.json`
   - result: `.survey/work-queue/results/research/attempt-c1740060a24d308914998762.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-71174da29a72754d44fbffa1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-71174da29a72754d44fbffa1.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2605.14438-beam-binary-expert-activation-masking.md`
-- **09-23 02:29:02 JST** [research] `DOI:10.1145/3838177.3841737` — FaultSense: Fault Localization in Large-Scale Mixture-of-Experts Model Serving Infrastructure
-  - job: `.survey/work-queue/jobs/job-research-435dfcefc35588f8.json`
-  - result: `.survey/work-queue/results/research/attempt-89bc3cc25133486a66c2d95b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-89bc3cc25133486a66c2d95b.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md`
 
 ### Audit
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **208** |
+| ready | **207** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **950** |
+| inference/training/survey配下の論文Markdown実体 | **951** |
 
 ### immutable submissionの未照合
 
