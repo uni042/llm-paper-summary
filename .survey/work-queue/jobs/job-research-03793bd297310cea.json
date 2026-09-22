@@ -12,7 +12,7 @@
   "source_url": "https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high-bandwidth-flash.md",
   "selection_reason": "trillion-parameter MoEを単一nodeで低concurrency servingするためHBFとDRAMの容量・帯域を分離評価。HBF transportとstate bandwidthの独立なkneeを示しflash-backed MoE推論設計へ直接寄与。",
-  "status": "blocked_permanent",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -42,5 +42,6 @@
   ],
   "last_blocked_at": "2026-09-22T00:34:12+00:00",
   "completed_at": "2026-09-22T00:34:12+00:00",
-  "blocked_permanent_at": "2026-09-22T01:18:06+00:00"
+  "legacy_blocked_permanent_migrated_at": "2026-09-22T01:54:55+00:00",
+  "retry_not_before": "2026-09-29T00:34:12+00:00"
 }

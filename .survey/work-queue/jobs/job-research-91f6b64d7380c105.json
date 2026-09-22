@@ -12,7 +12,7 @@
   "source_url": "https://www.semanticscholar.org/paper/7a2499fd38665d8205c513eb3740ddedc3675c5e",
   "paper_path": "papers/inference/99-other-inference-systems/2026-34514b56228c-replacing-nvme-staging-in-llm-inference-with-a-high-bandwidth-cxl-memory-expander-with-an-on-device-dma-controller.md",
   "selection_reason": "NVMe stagingをon-device DMA付きCXL memory expanderへ置換しGPU HBMとのPCIe P2PをNIXL backendで実装。51GB/s read・33GB/s writeを実測しSSD階層との比較に直接有用。",
-  "status": "blocked_permanent",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -42,5 +42,6 @@
   ],
   "last_blocked_at": "2026-09-22T00:37:49+00:00",
   "completed_at": "2026-09-22T00:37:49+00:00",
-  "blocked_permanent_at": "2026-09-22T01:18:06+00:00"
+  "legacy_blocked_permanent_migrated_at": "2026-09-22T01:54:55+00:00",
+  "retry_not_before": "2026-09-29T00:37:49+00:00"
 }

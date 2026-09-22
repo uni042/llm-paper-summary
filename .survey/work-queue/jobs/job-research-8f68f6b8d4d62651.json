@@ -12,7 +12,7 @@
   "source_url": "https://arxiv.org/abs/2608.15299",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.15299-maple-layer-wise-expert-allocation.md",
   "selection_reason": "MAPLEはpretrained MoEの重みを変えず、layer sensitivityからexpert budgetを非一様配分するplug-and-play方式。75% expert budgetで品質を維持・改善し、SGLang実装でsingle-GPU latency 32.2%減・throughput 47.4%増を報告しており、適応的expert数配分の実測系として価値が高い。",
-  "status": "blocked_permanent",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -42,5 +42,6 @@
   ],
   "last_blocked_at": "2026-09-21T07:29:44+00:00",
   "completed_at": "2026-09-21T07:29:44+00:00",
-  "blocked_permanent_at": "2026-09-21T14:09:55+00:00"
+  "legacy_blocked_permanent_migrated_at": "2026-09-22T01:54:55+00:00",
+  "retry_not_before": "2026-09-28T07:29:44+00:00"
 }

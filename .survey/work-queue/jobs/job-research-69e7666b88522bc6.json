@@ -12,7 +12,7 @@
   "source_url": "https://doi.org/10.1145/3712285.3759903",
   "paper_path": "papers/inference/04-moe-offload-expert-cache/2025-diff-moe-priority-driven-differential-expert-caching.md",
   "selection_reason": "global/temporal expert localityを分離した多段GPU cacheと次層expert prefetchを組み合わせ、大batchのoffloaded MoE推論を高速化する。DeepSpeed、Pre-gated MoE、MoE-Infinity比でthroughputをそれぞれ2.74x、2.22x、1.55x改善し、Expert Cache/Prefetch系統へ直接接続する。",
-  "status": "blocked_permanent",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -42,5 +42,6 @@
   ],
   "last_blocked_at": "2026-09-21T14:40:48+00:00",
   "completed_at": "2026-09-21T14:40:48+00:00",
-  "blocked_permanent_at": "2026-09-21T19:28:13+00:00"
+  "legacy_blocked_permanent_migrated_at": "2026-09-22T01:54:55+00:00",
+  "retry_not_before": "2026-09-28T14:40:48+00:00"
 }
