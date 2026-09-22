@@ -2,11 +2,45 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e9bcee25866460c4fb852a0b",
-  "job_id": "job-research-8e7748dc329cd36d",
-  "data": {},
+  "attempt_id": "attempt-a952d761aa795578010684ab",
+  "job_id": "job-research-1b89c86f687054e4",
+  "data": {
+    "scope": "実ハードウェア上のモデル圧縮・推論評価。Mixtral 8x7B、Mixtral 8x7B-Instruct、Mixtral 8x22B、DeepSeek-MoE-16B、Qwen2-57B-14AをNVIDIA A800 GPU四枚で評価する。主にゼロショット言語課題と削減探索資源、推論速度・GPUメモリを測定し、DeepSeek V3やQwen2.5-Max級、マルチモーダルMoEへの一般化は未検証。",
+    "conditions": "校正にはC4から128サンプルを使用し、層内重要度αと層間重要度βを3対1の更新比、学習率5e-3、コサイン学習率、10エポック、バッチ16で学習する。Mixtralでは25%と50%のエキスパート削減を中心に比較する。",
+    "datasets": [
+      "MMLU",
+      "BoolQ",
+      "OpenBookQA",
+      "RTE",
+      "ARC-Challenge",
+      "ARC-Easy",
+      "HellaSwag",
+      "WinoGrande",
+      "GSM8K"
+    ],
+    "baselines": [
+      "M-SMoE",
+      "Expert Trimming",
+      "NAEE",
+      "S-MoE",
+      "MC-MoE"
+    ],
+    "metrics": [
+      "ゼロショット課題精度と平均精度",
+      "元モデル性能保持率",
+      "エキスパート削減率",
+      "推論高速化倍率",
+      "GPUメモリ比",
+      "削減探索時間",
+      "ピークメモリ",
+      "メモリ時間積"
+    ],
+    "ablations": "Mixtral 8x7Bでαのみ、βのみ、固定β、複数のα対β更新比、完全版を比較。完全版は25%/50%削減で平均63.8/59.9、αのみ61.6/56.7、βのみ61.3/57.6。校正サンプル数32〜1024では128が最高63.8。",
+    "hardware": "NVIDIA GeForce A800 GPU ×4",
+    "calibration": "C4 128サンプルを標準とし、C4/MATHおよびサンプル数感度も評価。"
+  },
   "reservation": {
-    "claim_id": "claim-e9bcee25866460c4fb852a0b",
+    "claim_id": "claim-a952d761aa795578010684ab",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
