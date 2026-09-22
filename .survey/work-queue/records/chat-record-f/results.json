@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-900cad5c6178df049a8d9dec",
   "job_id": "job-research-6e36f8b25c1d84c6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-900cad5c6178df049a8d9dec",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "overview": "VersatileFFNは全3規模でBaseを大幅に上回り、実専門家MoEや固定Loopより高い8タスク平均accuracyを得た。354Mでは52.33%でBase 47.98%、MoE 51.48%、4-Loop 51.98%。720Mでは57.03%でBase 53.83%、MoE 55.87%、6-Loop 56.55%。1.21Bでは60.47%でBase 56.74%、MoE 59.65%、4-Loop 60.09%。追加専門家を持つMoEと異なり総パラメータはBaseと同等で、固定深さ再帰よりFLOPsを抑える。",
+    "key_results": [
+      {"metric":"8-task average accuracy","value":"60.47%","baseline":"Base 56.74%; MoE 59.65%; 4-Loop 60.09%; 6-Loop 60.05%","condition":"1.21B, 100B-token corpus, continued pre-training","interpretation":"同一パラメータ再利用と適応計算の組合せが最大規模でも比較方式を上回る。"},
+      {"metric":"parameter count","value":"1.21B","baseline":"MoE 1.97B","condition":"1.21B scale","interpretation":"MoE比で約0.76B、約39%少ない総パラメータでより高い平均accuracyを得る。"},
+      {"metric":"FFN FLOPs","value":"4.69G","baseline":"4-Loop 6.04G; 6-Loop 9.06G","condition":"1.21B; VersatileFFNはARC-c実行統計から算出","interpretation":"固定回数再帰より動的深さで計算を節約する。"},
+      {"metric":"354M average accuracy","value":"52.33%","baseline":"Base 47.98%; MoE 51.48%; 4-Loop 51.98%","condition":"354M, 40B tokens","interpretation":"小規模でも幅・深さ融合が単独経路を上回る。"},
+      {"metric":"354M FFN FLOPs","value":"1.24G","baseline":"4-Loop 1.50G; 6-Loop 2.25G; Base 0.38G","condition":"ARC-c実行統計","interpretation":"Baseより計算は増えるが固定再帰より少ない計算で高accuracyを得る。"},
+      {"metric":"ablation accuracy","value":"width only 50.98%; depth only 51.35%; width+depth 52.10%; +difficulty gating 52.33%","baseline":"Base 47.98%","condition":"354M, 40B tokens","interpretation":"二経路が相補的で、難易度認識融合にも追加利得がある。"},
+      {"metric":"from-scratch average accuracy","value":"51.14%","baseline":"Base 47.98%; MoE 50.90%; 4-Loop 50.81%","condition":"354M, continued pre-trainingなし","interpretation":"継続事前学習だけに依存せず、初期学習からも利得がある。"}
+    ],
+    "negative_results": "再帰を増やせば単調に精度が上がるわけではない。354Mでは6 loopsがloss 2.615と4 loopsの2.617より低い一方、平均accuracyは51.61%で4 loopsの52.33%を下回る。幅経路も8-choose-4や16-choose-4へ活性容量を増やしても52.22%、51.72%となり8-choose-2の52.33%を超えない。VersatileFFNはBaseよりFLOPsが増え、逐次再帰のwall-clock効果は主要表で直接測定していない。",
+    "interpretation": "結果は、メモリ制約下ではパラメータを増やす代わりに既存FFNを異なる計算経路で再利用する余地があることを示す。特に固定k-Loopより少ない平均計算で精度が高く、実専門家MoEより少ない重みで精度が高いことから、幅と深さをトークン難易度で配分する設計が単なる計算量増加以上の効果を持つ。",
+    "quality_impact": "圧縮による品質保持ではなく、同一パラメータ予算でBaseより品質を上げる設計。代償は追加FLOPsと再帰による逐次性であり、実レイテンシ・電力・メモリ帯域の評価は不足する。"
   }
 }
