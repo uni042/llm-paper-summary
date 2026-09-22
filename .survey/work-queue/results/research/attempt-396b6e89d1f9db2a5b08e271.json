@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-396b6e89d1f9db2a5b08e271",
+  "job_id": "job-research-1b89c86f687054e4",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-396b6e89d1f9db2a5b08e271.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references_source is required | results.key_results[0] missing: baseline, condition, interpretation | results.key_results[1] missing: baseline, condition, interpretation | results.key_results[2] missing: baseline, condition, interpretation | results.key_results[3] missing: baseline, condition, interpretation | results.key_results[4] missing: baseline, condition, interpretation | results.key_results[5] missing: baseline, condition, interpretation",
+  "processed_at": "2026-09-22T02:21:12+00:00",
+  "validation_errors": [
+    "metadata.references_source is required",
+    "results.key_results[0] missing: baseline, condition, interpretation",
+    "results.key_results[1] missing: baseline, condition, interpretation",
+    "results.key_results[2] missing: baseline, condition, interpretation",
+    "results.key_results[3] missing: baseline, condition, interpretation",
+    "results.key_results[4] missing: baseline, condition, interpretation",
+    "results.key_results[5] missing: baseline, condition, interpretation"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
