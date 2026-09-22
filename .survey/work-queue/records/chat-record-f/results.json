@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-59b2c2e42440417a9356ca54",
-  "job_id": "job-research-a4042c7c7ed57c9a",
-  "data": {
-    "overview": "20%枝刈り時、C-PRUNEは両モデルでランダム枝刈り、Seer Prune、Group&Mergeより高い総合性能を保つ。DeepSeek-V2-Liteでは15.7Bから13.0Bへ縮小してMMLU平均45.58から44.94と小幅低下に留まり、数学は32.21から33.56へ上がる。一方でGSM8Kは30.94から26.45、HumanEvalは32.30から18.90へ低下する。Qwen1.5-MoE-A2.7Bでは14.3Bから11.8Bへ縮小し、MMLU平均40.06、GSM8K 39.40、HumanEval 32.90で、未枝刈り47.16平均からは低下するが比較方式の平均30.45以下を上回る。",
-    "key_results": [
-      {"metric": "DeepSeek-V2-Lite 20%枝刈り時のMMLU平均", "value": "44.94", "baseline": "未枝刈り45.58、Group&Merge 32.03、Seer Prune 28.76、ランダム16.28", "condition": "15.7B→13.0B、ルーティング対象64→52", "interpretation": "層内・層間の類似構造を使うことで、同じ20%削減でも単純な重要度・統合方式よりMMLU能力を大幅に保持する。"},
-      {"metric": "Qwen1.5-MoE-A2.7B 20%枝刈り時の全指標平均", "value": "38.75", "baseline": "未枝刈り47.16、Group&Merge 30.45、Seer Prune 22.20、ランダム12.15", "condition": "14.3B→11.8B、ルーティング対象60→48", "interpretation": "異なるMoE構造でも比較方式より性能保持が良く、クラスタ単位圧縮が特定アーキテクチャだけに依存しないことを示す。"},
-      {"metric": "DeepSeekコンピュータ科学MMLU", "value": "51.50", "baseline": "未枝刈り53.00、Group&Merge 33.50", "condition": "20%枝刈り", "interpretation": "技術領域では層ごとの知識配置が強く、層適応型枝刈りが有効という分析と整合する。"},
-      {"metric": "DeepSeek数学MMLU", "value": "33.56", "baseline": "未枝刈り32.21", "condition": "20%枝刈り", "interpretation": "冗長エキスパート除去が必ずしも単調な品質低下を生むわけではなく、対象領域ではわずかな改善も観測される。"},
-      {"metric": "クラスタリング方式の平均", "value": "階層的クラスタリング0.449、K-means 0.405", "baseline": "K-means", "condition": "数学、コンピュータ科学、経済の高校・大学水準", "interpretation": "固定クラスタ数を仮定するK-meansより、類似度に沿って段階的に統合する方式がエキスパート冗長性の不均一さへ適合する。"},
-      {"metric": "推奨枝刈り構成", "value": "全体比0.1〜0.2、層内比およそ0.2", "baseline": "複数の層内・全体比", "condition": "領域別MMLU分析", "interpretation": "強すぎる全体枝刈りより中程度の層内削減と少量の全体削減の組合せが性能と圧縮の均衡を取りやすい。"}
-    ],
-    "negative_results": "圧縮後も品質低下は残る。DeepSeekではHumanEvalが32.30から18.90へ、Qwenでは49.40から32.90へ低下し、QwenのGSM8Kも53.58から39.40へ落ちる。タスク特化枝刈りを別領域へ移すと、数学向け方式をコードへ、コード向け方式を数学へ転用した場合に性能が大きく下がる。残すエキスパート数も均等な12/12が常に最良ではなく、数学は12/6、コンピュータ科学は12/18が良いなど領域依存性が強い。論文中には15.7Bから13.0Bへの変化を42.3%圧縮と記す箇所があるが、表1の総枝刈り率20%および単純なパラメータ差約17%と整合しないため、この42.3%値は慎重に扱う必要がある。",
-    "interpretation": "主結果は、MoEのエキスパート価値が独立でも全層一様でもないことを示す。似たエキスパートを先に群として捉えることで、同じ削減数でも機能的に重複した部分を優先して縮小できる。ただし領域ごとに残すべき層とクラスタが変わるため、万能な固定圧縮設定ではなく対象タスクに合わせた較正が必要である。",
-    "quality_impact": "パラメータ容量は確実に減るが、推論品質の保持度はモデルとタスクで異なる。DeepSeekのMMLUではほぼ維持できる一方、コード生成やQwenの数学推論では明確な低下がある。したがって本方式は無損失圧縮ではなく、領域ごとの性能許容幅を測りながら適用する構造的枝刈りである。"
-  },
-  "reservation": {"claim_id": "claim-59b2c2e42440417a9356ca54", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-da608a41f05d014b86a258e4",
+  "job_id": "job-research-f59af449638fc64c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-da608a41f05d014b86a258e4",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
