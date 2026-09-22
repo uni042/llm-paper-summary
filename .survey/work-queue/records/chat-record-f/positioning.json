@@ -1,13 +1,8 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-05dcd349efb11788a6f85507",
-  "job_id": "job-research-c15907d33f78f8cd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-05dcd349efb11788a6f85507",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-05dcd349efb11788a6f85507","job_id":"job-research-c15907d33f78f8cd","data":{
+    "limitations":"複数モデルの合成性検証はJetson AGX Orin 1台、HuggingFace Transformers、順次共存実行に限定される。concurrent execution、dynamic batching、optimized runtime上のmulti-model composabilityは今後の課題である。LLM-as-a-judgeはhuman ratingや第二judgeで校正されていない。PALはintegration、idle subtraction、temporal alignmentを統一するが、NVMLのGPU電力、SoC/board電力など元telemetryの測定scope自体を同一にはできない。MLX supportも未実装で、M2 Macの結果はnative最適化不足の影響を受ける。agent workloadで一般的なlarge batchやprefix cache hit rateの横断分析も未完成である。",
+    "differences":"LM Evaluation Harness/HELMがcapability中心、MLPerfが固定suiteのthroughput/latency中心、MELT等が特定device/backendのcharacterization中心なのに対し、HoliBenchはaccuracy・latency・energy・memoryを同じprofile tableへ統合し、deviceからGPU serverまで共通の測定意味で扱う。さらに結果を表示するだけでなくhard constraint pruningとsolverへ接続し、deployment configurationを直接選ぶ。単体profileのphase decompositionを未測定multi-model pipelineへ再利用し、実機CARLAで予測誤差を検証した点も単純なbenchmark suiteとの差である。",
+    "implementation_status":"著者はbeesfleas/HoliBenchとしてopen-source公開している。約15k行のPythonで、Hydra experiment configuration、platform profiler registry、LLM/VLM/TSFM driver、HuggingFace/vLLM/SGLang/TensorRT等のbackend、bitsandbytes quantization、CSV aggregation、Flask UI、ILP solverを含む。新deviceはprofiler class、新taskはscenario、新backendはdriver contractを実装する構成で、orchestration本体を変更せず拡張する設計である。",
+    "research_positioning":"推論システム研究では、量子化・backend・hardwareを個別最適化する研究を、同じdeployment objectiveで比較するための実験基盤として位置付けられる。特に『INT4なら速い』『vLLMなら速い』という抽象レベルの主張がdevice条件で逆転することを定量化しており、ローカルLLMのruntime選択やhardware-aware schedulingに直接関連する。階層メモリやoffload研究との接点では、peak memoryをhard feasibility constraintとしてenergy/latencyと分離して扱う設計が有用で、CPU/SSD offloadを新しいbackend/device configurationとして加えれば、容量を満たす代わりにtransfer latencyとenergyを支払う方式を同じprofile tableで比較できる。今後のmulti-model concurrencyやprefix-cache分析は、KV cache共有・memory bandwidth contention・expert/cache placementを含む研究へ拡張しやすい。"
+  },"reservation":{"claim_id":"claim-05dcd349efb11788a6f85507","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
