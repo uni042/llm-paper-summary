@@ -1,56 +1,56 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20260920-0830",
+  "attempt_id": "update-20260923-0830-scheduled-chat-30",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "3ad4c3b059635d66834aa5e1830584326f3f4771",
+      "expected_blob_sha": "284aa9f6a34363185880e2e22a430e6fc2dd8be4",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-09-17**",
-          "new": "- フレームワーク差分の最終確認: **2026-09-20**"
+          "old": "- フレームワーク差分の最終確認: **2026-09-20**",
+          "new": "- フレームワーク差分の最終確認: **2026-09-23**"
         },
         {
           "op": "replace_once",
-          "old": "この2つは分けて扱う。2026-09-17の差分確認では、公式リリースと開発元リポジトリを基準に9月15日以降のDeepSeek-V4.1向け圧縮KV・attention融合、FP4 indexer kernel融合、および主要LLMの正式公開を再確認した。",
-          "new": "この2つは分けて扱う。2026-09-20の差分確認では、公式リリースと開発元リポジトリを基準に9月17日以降のvLLMにおけるKimi-K3 routed-expert量子化、SGLangにおけるAscend A5向けKimi-K3 serving最適化、および主要LLMの正式公開を再確認した。"
+          "old": "この2つは分けて扱う。2026-09-20の差分確認では、公式リリースと開発元リポジトリを基準に9月17日以降のvLLMにおけるKimi-K3 routed-expert量子化、SGLangにおけるAscend A5向けKimi-K3 serving最適化、および主要LLMの正式公開を再確認した。",
+          "new": "この2つは分けて扱う。2026-09-23の差分確認では、公式リリースと開発元リポジトリを基準に9月20日以降の主要更新を再確認し、vLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化などを追加した。主要LLMの正式公開はトップ表更新対象なし。"
         },
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-09-17\n",
-          "text": "### 2026-09-20\n\n#### vLLM\n\n- **Kimi-K3 routed expert量子化を追加 — merged 2026-09-18 UTC**\n\n  Kimi-K3のMoE routed expertに量子化経路を追加し、`RedHatAI/Kimi-K3-NVFP4-REAP25`で検証した。routed expert側のweight footprintと帯域削減を狙う更新で、PR自体には対応するend-to-end速度比較は提示されていない。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/57430\n\n#### SGLang\n\n- **Ascend A5向けKimi-K3 servingを追加し、圧縮W4A8 MoE・shared-expert dual-stream等を統合 — merged 2026-09-18 UTC**\n\n  compressed W4A8 MXFP4 MoE、shared expertのfine-grained dual-stream、fused QKVG projection、in-situ MX quantization、K3 MLA向けKV NZ、DSpark MTP向けFIA v2、prefill向けchunk KDA kernel等をまとめて導入した。4-node / TP32 / EP32、128K input・1K output・DSpark block 7の提示条件ではmean TTFT 5604.54 ms、mean TPOT 23.02 ms、throughput 47 tok/s。GSM8K 200問ではaccuracy 0.98。\n\n  一次資料: https://github.com/sgl-project/sglang/pull/39589\n\n"
+          "anchor": "### 2026-09-20\n",
+          "text": "### 2026-09-23\n\n#### vLLM\n\n- **v0.30.0 — released 2026-09-22 UTC**\n\n  762 commits / 315 contributorsを含む大型release。GPU上に量子化・TP shard済みweightを保持してengine再起動時にCUDA IPCで再利用するFast Start、sparse-MLA decodeでKV pageをpinned host memoryへ退避するHiSparse、Model Runner V2のdual-batch overlap / speculative decoding拡張、Qwen3.8-Flash-NextとKimi K3のkernel最適化、large-scale serving・量子化経路の拡張がまとまって入った。\n\n  一次資料: https://github.com/vllm-project/vllm/releases/tag/v0.30.0\n\n"
         }
       ]
     },
     {
-      "path": "framework-updates/inference-engines/sglang/README.md",
-      "expected_blob_sha": "94956c1131ea0d6077bd4ea6a992e84e926b5e73",
+      "path": "framework-updates/inference-engines/vllm/README.md",
+      "expected_blob_sha": "3089e31f58dcdc2e69a31e848bd86b742b65a519",
       "edits": [
         {
           "op": "insert_before_once",
           "anchor": "## 2026-09-17\n",
-          "text": "## 2026-09-20\n\n- **Ascend A5向けKimi-K3 servingを追加・MoE/DSpark/prefill経路をまとめて最適化 — merged 2026-09-18 UTC**: compressed W4A8 MXFP4 MoE、shared expertのfine-grained dual-streamと専用TP size、fused QKVG projection、in-situ MX quantization、K3 MLA向けKV NZ、MTP branch向けFIA v2、prefill branch向けchunk KDA kernel、DSpark P/D分離修正を導入。4-node・TP32/EP32・128K input/1K output・DSpark block 7の提示条件ではmean TTFT **5604.54 ms**、mean TPOT **23.02 ms**、throughput **47 tok/s**。GSM8K 200問ではaccuracy **0.98**。比較対象を揃えたbefore/after速度差はPRにないため、改善率は未確定。[PR #39589](https://github.com/sgl-project/sglang/pull/39589)\n\n"
+          "text": "## 2026-09-23\n\n- **v0.30.0 — released 2026-09-22 UTC**: 762 commits / 315 contributorsを含む大型release。主な更新は、post-quantized / TP-sharded weightをGPU常駐daemonに保持し再起動時にCUDA IPCでmapする**Fast Start**（`--load-format ipc_cache`、FP4・multi-node TP対応）、sparse-MLA decodeのKV pageをpinned host memoryへspillしGPU hot bufferでtop-k missを処理する**HiSparse**、Model Runner V2のdual-batch overlap・pipeline parallel下のMTP/EAGLE3/DFlash/DSpark・オンライン受理推定によるadaptive verification、Qwen3.8-Flash-NextのQSA/PLE/FP8 indexer最適化、Kimi K3のKDA/MLA kernel改善、PCP+DCP・Elastic EP・Mooncake/NIXL系の大規模serving拡張。release noteではModel Runner V2のCUDA Graph captureがH200で**12s→2s**、engine initが**28.9s→8.2s**、Kimi K3のgrouped FP8 MLA cache insertionはsmall batchで**4〜6倍**、mixed-batch KDA gather/scatter除去はE2E throughput **+5.2〜7.7%**と報告。[v0.30.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.30.0)\n\n"
         }
       ]
     },
     {
       "path": "llm-releases/README.md",
-      "expected_blob_sha": "336a8d985db3f1f7215014826e5e1944eed751d6",
+      "expected_blob_sha": "c73462aadd9125fec3a3399aef5f7d02c803fb3a",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-09-17**",
-          "new": "- リリース情報の最終確認: **2026-09-20**"
+          "old": "- リリース情報の最終確認: **2026-09-20**",
+          "new": "- リリース情報の最終確認: **2026-09-23**"
         },
         {
           "op": "replace_once",
-          "old": "2026-09-17に主要提供元の公式公開を再確認した。Googleは9月15日にLive API向けのGemini 3.8 LiveとGemini 3.8 Live Extended Thinkingを一般提供（GA）した。トップ表は各model familyの最新リリースを示す。",
-          "new": "2026-09-20に主要提供元の公式公開を再確認した。9月17日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。"
+          "old": "2026-09-20に主要提供元の公式公開を再確認した。9月17日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。",
+          "new": "2026-09-23に主要提供元の公式公開を再確認した。9月20日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。"
         }
       ]
     }
   ],
-  "summary": "2026-09-20の08:30 update route: vLLM Kimi-K3 routed-expert quantization、SGLang Ascend A5向けKimi-K3 W4A8 MoE/DSpark/prefill最適化を追加。主要LLM正式公開は9月17日以降にトップ表更新対象なし。"
+  "summary": "2026-09-23の08:30 update route: vLLM v0.30.0のFast Start、HiSparse、Model Runner V2、Qwen3.8/Kimi K3最適化等を追加。主要LLM正式公開は9月20日以降にトップ表更新対象なし。"
 }
