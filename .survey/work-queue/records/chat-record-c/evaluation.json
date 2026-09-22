@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-ddb3060fbfec2233d78a5ab4",
-  "job_id": "job-research-a4cc548ec9dfc021",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ddb3060fbfec2233d78a5ab4",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ddb3060fbfec2233d78a5ab4","job_id":"job-research-a4cc548ec9dfc021","data":{"hardware":"通常のMoE batch inference、複数GPUのexpert parallel、GPT-OSS 120Bを用いたspeculative decodingを含む実運用寄りの設定で評価する。expert-parallel評価ではGPUごとのpeak expert loadを主要指標とする。","software":"pre-trained MoEのrouter scoreをそのまま利用し、モデルのretraining/fine-tuningなしで推論時にexpert集合を変更する。通常batch用greedy selection、speculative decoding用hierarchical selection、expert-parallel-aware selectionを比較する。","methodology":"expert budgetを変えながらaccuracyと活性expert数のtrade-offを測り、通常batchではactivated expertsとend-to-end output tokens/s、speculative decodingではthroughput、expert parallelでは最大GPU expert loadを評価する。異なるdataset由来requestを同一batchへ混ぜたheterogeneous settingでも頑健性を確認する。関連比較としてtoken-level dynamic skipping、LYNX系batch-aware policy、共有pool型のconcurrent workとの差を議論する。","scope":"decode phaseのmemory-I/O-bound MoE servingが中心で、prefill最適化は主対象ではない。モデルを再学習できないdeploymentに適する一方、router scoreがexpert importanceを十分表すという仮定に依存し、budgetを強く絞った際の品質とのtrade-offが残る。"},"reservation":{"claim_id":"claim-ddb3060fbfec2233d78a5ab4","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
