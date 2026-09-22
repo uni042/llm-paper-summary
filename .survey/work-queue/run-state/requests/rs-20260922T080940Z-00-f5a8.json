@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "rs-20260922T080940Z-00-f5a8",
+  "run_key": "run-20260922T075839Z-scheduled-chat-00-a7f3",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-22T16:58:39+09:00",
+  "runtime_condition": "platform_context_limit",
+  "runtime_condition_confirmed": true,
+  "runtime_condition_attempts": 1,
+  "runtime_condition_detail": "Primary-source retrieval for the third claimed paper became unavailable because the web retrieval tool rejected further calls with an explicit per-run call-limit error. Container-side direct network retrieval was also attempted and failed with DNS/network unavailable. The third claim was durably submitted as blocked rather than inferred from snippets. GitHub read/write remained available."
+}
