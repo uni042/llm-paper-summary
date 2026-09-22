@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T14:35:49.415461+00:00",
+  "updated_at": "2026-09-22T14:45:47.377474+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -37980,6 +37980,56 @@
           "type": "research",
           "canonical_id": "arXiv:2306.03745",
           "title": "Soft Merging of Experts with Adaptive Routing",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35742528057",
+      "first_recorded_at": "2026-09-22T14:45:47.377474+00:00",
+      "last_recorded_at": "2026-09-22T14:45:47.377474+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35742528057:1",
+          "recorded_at": "2026-09-22T14:45:47.377474+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35742528057",
+            "run_attempt": "1",
+            "source_sha": "dda0ddeb6fc974e083d48032df30f67f5044bf6b"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-9cbcbbb853ae3588",
+          "type": "research",
+          "canonical_id": "arXiv:2303.01610",
+          "title": "Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers",
           "from": "ready",
           "to": "completed"
         }
