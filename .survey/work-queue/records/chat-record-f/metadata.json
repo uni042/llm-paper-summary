@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-9c01e88ab057d7d61e082fe7",
-  "job_id": "job-research-9de329d10383e26b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9c01e88ab057d7d61e082fe7",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-9c01e88ab057d7d61e082fe7","job_id":"job-research-9de329d10383e26b","data":{"canonical_id":"arXiv:2202.09368","arxiv_id":"2202.09368","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"Mixture-of-Experts with Expert Choice Routing","summary":"従来の混合専門家モデルでは各トークンが固定数の上位専門家を選ぶため、専門家間の負荷不均衡、トークン落ち、全トークンへの一律計算配分が生じる。本研究は選択方向を反転し、各専門家が親和度の高い固定数のトークンを選ぶExpert Choice Routingを提案する。各専門家の処理量を構造的に一定にしつつ、各トークンが受ける専門家数は可変になる。8B/64専門家モデルでGShard top-2より同一perplexityへの収束が2倍超速く、同等計算量でGLUE/SuperGLUE 11タスクの性能を改善し、8B/64EはT5 11B密モデルを11タスク中7タスクで上回る。","list_summary":"専門家側が固定容量ぶんの上位トークンを選ぶことで完全な負荷均衡とトークンごとの可変計算量を同時に実現するMoEルーティング。","authors":["Yanqi Zhou","Tao Lei","Hanxiao Liu","Nan Du","Yanping Huang","Vincent Zhao","Andrew Dai","Zhifeng Chen","Quoc Le","James Laudon"],"authors_affiliations":"Google, Mountain View, CA, USA","published":"2022-02-18","publication":"NeurIPS 2022 / arXiv:2202.09368v2","publication_type":"Conference paper","publication_status":"Published","lineage":"MoE routing / expert choice / heterogeneous conditional computation","topics":["混合専門家モデル","専門家選択","負荷分散","条件付き計算","可変計算量"],"importance":"トークン選択型MoEを専門家選択型へ反転し、負荷均衡を補助損失ではなくルーティング構造で保証すると同時に、トークンごとの専門家数を可変化した代表的研究。","hardware_evaluation":"最大8B/64Eモデルを512 TPU v4で学習し、GSPMDの2次元シャーディングを使用。","quality_effect":"同一計算量でSwitch top-1/GShard top-2より下流性能を改善し、8B/64EはT5 11B密モデルを11タスク中7タスクで上回る。","source":"https://arxiv.org/abs/2202.09368","sources":["https://arxiv.org/abs/2202.09368","https://arxiv.org/pdf/2202.09368"],"code":null,"implementation":"Transformerの一部FFNをMoEへ置換し、softmax親和度行列をトークン軸でtop-kする専門家選択ルーターをTPU上で実装。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"arXiv PDF reference section","references_total":0},"reservation":{"claim_id":"claim-9c01e88ab057d7d61e082fe7","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
