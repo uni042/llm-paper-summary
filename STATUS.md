@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 03:11:21 JST**
+> 自動生成: **2026-09-23 03:20:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **222** |
-| 未claim Research job | **221** |
-| 直近24hの検証済みResearch収録 | **57** |
-| 最終検証済みResearch収録 | **09-23 03:11:17 JST（4秒前）** |
+| 収録候補論文 | **221** |
+| 未claim Research job | **220** |
+| 直近24hの検証済みResearch収録 | **58** |
+| 最終検証済みResearch収録 | **09-23 03:20:32 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **222** |
+| canonical_id確認済みの一意な候補論文 | **221** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **222** |
+| 非終端Research job合計 | **221** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **620** |
-| 未処理 | **5426** |
-| 収録済みとして除外 | **512** |
+| 処理済み | **621** |
+| 未処理 | **5425** |
+| 収録済みとして除外 | **513** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（18時間38分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（18時間48分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 03:20:32 JST** [research] `arXiv:2512.18425` — MoE Pathfinder: Trajectory-driven Expert Pruning
+  - job: `.survey/work-queue/jobs/job-research-20085e82ab231044.json`
+  - result: `.survey/work-queue/results/research/attempt-c7fc5d8a2ddc77f17046a7e2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-c7fc5d8a2ddc77f17046a7e2.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md`
 - **09-23 03:11:17 JST** [research] `arXiv:2605.14438` — BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE
   - job: `.survey/work-queue/jobs/job-research-f43aa8f1dfa7e573.json`
   - result: `.survey/work-queue/results/research/attempt-71174da29a72754d44fbffa1.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-6b68d1581746099c18d8092e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6b68d1581746099c18d8092e.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2606.10703-causal-audit-expert-importance.md`
-- **09-23 00:50:46 JST** [research] `arXiv:2603.23888` — SiftMoE: Similarity-Aware Energy-Efficient Expert Selection for Wireless Distributed MoE Inference
-  - job: `.survey/work-queue/jobs/job-research-71cfe275bb4fcca4.json`
-  - result: `.survey/work-queue/results/research/attempt-a0ecf191f05aa48e02bfda2f.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a0ecf191f05aa48e02bfda2f.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2603.23888-siftmoe-similarity-aware-expert-selection.md`
 
 ### Audit
 
@@ -209,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **222** |
+| ready | **221** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,7 +229,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **942** |
+| inference/training/survey配下の論文Markdown実体 | **943** |
 
 ### immutable submissionの未照合
 
