@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 04:59:31 JST**
+> 自動生成: **2026-09-23 05:11:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **207** |
+| 収録候補論文 | **206** |
 | 未claim Research job | **205** |
-| 直近24hの検証済みResearch収録 | **66** |
-| 最終検証済みResearch収録 | **09-23 04:50:46 JST（8分前）** |
+| 直近24hの検証済みResearch収録 | **67** |
+| 最終検証済みResearch収録 | **09-23 05:11:31 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **207** |
+| canonical_id確認済みの一意な候補論文 | **206** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **207** |
+| 非終端Research job合計 | **206** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（20時間26分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（20時間39分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **1** | **0** | **0** | **2** | **0** | — |
+| Research | **27** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **27** | **4** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **27** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 05:11:31 JST** [research] `arXiv:2512.14531` — VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse
+  - job: `.survey/work-queue/jobs/job-research-6e36f8b25c1d84c6.json`
+  - result: `.survey/work-queue/results/research/attempt-900cad5c6178df049a8d9dec.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-900cad5c6178df049a8d9dec.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md`
 - **09-23 04:50:46 JST** [research] `arXiv:2410.12013` — MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router
   - job: `.survey/work-queue/jobs/job-research-d4390f65b198912f.json`
   - result: `.survey/work-queue/results/research/attempt-1338966144636293379a0970.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-c7fc5d8a2ddc77f17046a7e2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c7fc5d8a2ddc77f17046a7e2.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md`
-- **09-23 03:11:17 JST** [research] `arXiv:2605.14438` — BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE
-  - job: `.survey/work-queue/jobs/job-research-f43aa8f1dfa7e573.json`
-  - result: `.survey/work-queue/results/research/attempt-71174da29a72754d44fbffa1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-71174da29a72754d44fbffa1.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2605.14438-beam-binary-expert-activation-masking.md`
 
 ### Audit
 
@@ -178,13 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.08627` — UniMoMo: Expert Merging-Based MoE Acceleration for Large Recommendation Models / worker `scheduled-chat-30`
   - claim: **09-23 04:52:36 JST** / heartbeat: **—** / lease expiry: **09-23 06:22:36 JST**
   - evidence: `.survey/work-queue/claims/job-research-3611857c9c7fea67.json`
-- `arXiv:2512.14531` — VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse / worker `scheduled-chat-00`
-  - claim: **09-23 04:17:29 JST** / heartbeat: **—** / lease expiry: **09-23 05:47:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6e36f8b25c1d84c6.json`
 
 #### Audit
 
@@ -204,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **207** |
+| ready | **206** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **951** |
+| inference/training/survey配下の論文Markdown実体 | **952** |
 
 ### immutable submissionの未照合
 
