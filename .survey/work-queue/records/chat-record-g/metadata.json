@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-6632d1664daf09912489991a",
-  "job_id": "job-research-777ca56d26763813",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6632d1664daf09912489991a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6632d1664daf09912489991a","job_id":"job-research-777ca56d26763813","data":{"canonical_id":"arXiv:2502.04416","arxiv_id":"2502.04416","doi":"10.48550/arXiv.2502.04416","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis","summary":"dense FFNのactivation patternを少量calibrationで解析し、高頻度neuronを常時active shared expert、条件付きneuronをrouted expertへ分離するpost-training FFN-to-MoE変換法。co-activationでrouted expertをbalanced clusteringし、各clusterの代表neuron重みからrouterを解析的に構成するため、大規模continual trainingを不要にする。Llama-2/Qwenで25% sparsity時に既存MoE化法を上回り、Llama-2 7BでFLOPs 16.6%削減・throughput 14.8%向上、Qwen2.5-72Bのcompute-bound 32k contextで最大1.17× speedupを報告する。","list_summary":"FFN activation統計からshared/routed expertとrouterを解析的に構築し、数分の変換＋少量fine-tuningでdense/MoEを階層的sparse MoEへ変換する。","authors":["Zehua Pei","Hui-Ling Zhen","Lancheng Zou","Xianzhi Yu","Wulong Liu","Sinno Jialin Pan","Mingxuan Yuan","Bei Yu"],"authors_affiliations":"The Chinese University of Hong Kong; Huawei Technologies Co., Ltd","published":"2025-02-07","publication":"arXiv:2502.04416v3 (23 Apr 2026)","publication_type":"Preprint","publication_status":"Preprint","lineage":"dense-to-MoE restructuring / activation sparsity / analytical routing / hierarchical MoE","topics":["FFN-to-MoE変換","activation sparsity","解析router","shared expert","階層sparsity"],"importance":"200B/7B token級continual trainingを使う従来dense-to-MoE変換に対し、8 calibration例と解析的構築で即時利用可能なsparse構造を作る。既存MoE expertへ再帰適用でき、neuron-level sparsityとも加算的に併用可能。","hardware_evaluation":"Hugging Face Transformers/PyTorch。Llama-2 7Bの構築4.5分、2k-sample LoRA込み46分。Qwen2.5-72Bでmemory/compute-bound、4k/32k contextのindustrial speedupを測定。","quality_effect":"25% sparsityでLlama-2 7B MMLU 44.02%、training-freeでも42.50%。Qwen3-30BではPIQA 80.23%、HellaSwag 80.71%。sparse routingの生成varianceはself-consistencyで大きく回復。","source":"https://arxiv.org/abs/2502.04416","sources":["https://arxiv.org/abs/2502.04416","https://arxiv.org/pdf/2502.04416","https://github.com/JarvisPei/CMoE"],"code":"https://github.com/JarvisPei/CMoE","implementation":"公式コードを論文脚注で公開。activation profiling、balanced assignment、analytical router、optional LoRA/load balancingを実装。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary arXiv manuscript","references_total":43},"reservation":{"claim_id":"claim-6632d1664daf09912489991a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
