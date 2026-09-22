@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 21:21:30 JST**
+> 自動生成: **2026-09-22 21:31:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **274** |
-| 未claim Research job | **273** |
-| 直近24hの検証済みResearch収録 | **30** |
-| 最終検証済みResearch収録 | **09-22 21:21:24 JST（6秒前）** |
+| 収録候補論文 | **273** |
+| 未claim Research job | **272** |
+| 直近24hの検証済みResearch収録 | **31** |
+| 最終検証済みResearch収録 | **09-22 21:31:26 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **274** |
+| canonical_id確認済みの一意な候補論文 | **273** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **274** |
+| 非終端Research job合計 | **273** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **604** |
-| 未処理 | **5442** |
-| 収録済みとして除外 | **496** |
+| 処理済み | **605** |
+| 未処理 | **5441** |
+| 収録済みとして除外 | **497** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（12時間48分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（12時間58分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 21:31:26 JST** [research] `arXiv:2306.03078` — SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression
+  - job: `.survey/work-queue/jobs/job-research-303634fb993a11eb.json`
+  - result: `.survey/work-queue/results/research/attempt-4e9fe196315c28d707c9b275.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-4e9fe196315c28d707c9b275.json`
+  - paper: `papers/inference/99-other-inference-systems/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md`
 - **09-22 21:21:24 JST** [research] `arXiv:2310.08461` — DistillSpec: Improving Speculative Decoding via Knowledge Distillation
   - job: `.survey/work-queue/jobs/job-research-2310f02f05cacc23.json`
   - result: `.survey/work-queue/results/research/attempt-1b51079a73bb2f6ad0213381.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-50b11451c81409b86f90c5e0.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-50b11451c81409b86f90c5e0.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md`
-- **09-22 16:38:18 JST** [research] `arXiv:2609.13141` — SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking
-  - job: `.survey/work-queue/jobs/job-research-6542fa570cf353a1.json`
-  - result: `.survey/work-queue/results/research/attempt-eac46ddd3cb449fe8b2c0320.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-eac46ddd3cb449fe8b2c0320.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md`
 
 ### Audit
 
@@ -203,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **274** |
+| ready | **273** |
 
 ### 候補の重複・識別情報欠損
 
@@ -223,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **911** |
+| inference/training/survey配下の論文Markdown実体 | **912** |
 
 ### immutable submissionの未照合
 
