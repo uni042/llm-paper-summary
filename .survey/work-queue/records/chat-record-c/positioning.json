@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e14662bfa3410aa2e2cc050b",
-  "job_id": "job-research-c324e0325a4a2def",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e14662bfa3410aa2e2cc050b",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e14662bfa3410aa2e2cc050b","job_id":"job-research-c324e0325a4a2def",
+ "data":{"limitations":"D-cutの可変depthはverification batch shapeをstepごとに変えるため、static CUDA Graph captureやCPU-GPU overlapを強く前提とする既存serving engineではそのまま統合しにくい。確率的rejection sampling向けの因果的early stoppingは分布正確性を保つ一方、効用曲線が単峰でない場合に最適budgetを逃す可能性がある。confidenceは主に順位proxyとして使われ、完全な確率校正を前提としていない。MoEモデル間で利得差がある理由もattention layout等の仮説に留まる部分がある。","differences":"従来の投機的復号はdraft modelの高速化やMAT向上を主目的にし、DFlashはblock-parallel draftingでdraft latencyを長さから切り離す。D-cutはdrafter自体を改善せず、その長draftを高concurrencyで全て検証することが新しい律速になる点を対象にする。要求ごとの固定depthや単純thresholdではなく、batch全体でbudgetを共有し、hardware-profiled costまで目的関数に入れる点が特徴である。","implementation_status":"training-freeでtarget model変更不要。DFlash pipelineへglobal confidence ranking、runtime cost table、dynamic packingを追加する。論文時点で公式コードURLは確認できず、可変shapeを効率的に扱うserving engine統合は今後の実装課題。","research_positioning":"本リポジトリでは推論基盤・投機的復号のscheduler/verification最適化に位置する。特にMoE推論では1 verification token当たりのtarget computeが大きく、expert parallelismや通信最適化だけでなく『そもそも検証するtokenを減らす』上位スケジューリングとして補完的である。GPU世代・並列方式ごとのコストを起動時プロファイルする設計は、異種環境で固定heuristicを避ける実運用指向の例でもある。"},
+ "reservation":{"claim_id":"claim-e14662bfa3410aa2e2cc050b","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
 }
