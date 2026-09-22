@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f5c314d89cd56f681a67f89f",
+  "attempt_id": "attempt-62c5be1e09a4975e14d818b4",
   "job_id": "job-research-a4042c7c7ed57c9a",
   "data": {
     "hardware": "全実験はNVIDIA A100 80GB GPUを32基備えたクラスタで実施する。対象モデルはDeepSeek-V2-Liteで、標準FFN 1層とMoE FFN 26層、各MoE層64エキスパートを持つ構成、およびQwen1.5-MoE-A2.7Bで、MoE FFN 24層、各層60エキスパートの構成である。",
@@ -11,7 +11,7 @@
     "scope": "評価モデルは比較的小規模な2種類のMoEに限られ、論文自身も大規模MoEでの実運用スケーラビリティを未検証とする。MMLU、GSM8K、HumanEvalを中心とするため領域範囲も限定的で、より新しいMoE枝刈り法との比較も不足している。タスク特化方式なので較正データと対象領域の選び方が結果へ影響し、別領域へそのまま転用すると性能が落ちる場合がある。"
   },
   "reservation": {
-    "claim_id": "claim-f5c314d89cd56f681a67f89f",
+    "claim_id": "claim-62c5be1e09a4975e14d818b4",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
