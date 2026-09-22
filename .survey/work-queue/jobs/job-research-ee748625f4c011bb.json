@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/d26fb643c9c194cb4d34bd660b031a61d5f72f5d",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2609.15810-vc-attention-value-smoothing-and-softmax-casting-for-low-bit-attention.md",
   "selection_reason": "低bit attentionのValue外れ値と高精度softmax律速を同時に扱い、V-SmoothとFP8 probability castを融合。B200/B300/H200等でFlashAttention-4比1.46–1.59倍、workstationで2.3–3.6倍のkernel高速化を報告し、量子化kernel系統への直接性が高い。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T21:10:56+00:00"
+  "created_at": "2026-09-20T21:10:56+00:00",
+  "completed_at": "2026-09-22T08:11:03+00:00",
+  "blocker": "Primary-source retrieval could not be completed in this invocation because the web retrieval tool rejected further calls after its per-run call limit was reached. The arXiv paper was not read in full, so no research record was inferred from title/selection snippets. Container-side direct retrieval was also tested earlier in this invocation and failed due unavailable DNS/network access. Retry this same paper in a later invocation with fresh source-retrieval capacity.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-60dd204b55168985dd756768.json"
 }
