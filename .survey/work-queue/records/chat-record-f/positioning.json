@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-eac46ddd3cb449fe8b2c0320",
-  "job_id": "job-research-6542fa570cf353a1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-eac46ddd3cb449fe8b2c0320",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-eac46ddd3cb449fe8b2c0320","job_id":"job-research-6542fa570cf353a1","data":{"limitations":"SASの主post-training selectorはOpenR1-Math由来の数学reasoningデータで学習されるため、LongBench/BFCL/VitaBenchへの転移結果は良好でも、より広いdomain shiftを保証しない。block-level summaryはneedle-likeな局所情報を落とし得て、RULER 64K/128Kで大きな劣化が確認される。prefillはdenseのため高速化対象は主にdecodeであり、短いgenerationやprefill支配workloadでは利得が小さい。極長文脈ではselector scoringとTop-K rankingが支配的になり、attention疎化だけではend-to-end latencyが比例して下がらない。continued-pretraining実験はselector構成とbackbone学習条件が主post-training設定と異なるため、直接同じ主張として統合できない。","differences":"SeerAttention-Rなどの学習型疎注意はhard Top-Kで最終lossからselectorへの勾配が切れるため、dense attention distributionのlayer-wise distillationをsupervisionにする。SASはattention softmax内部の連続log gateを介してlanguage-modeling lossをselectorへ直接流し、固定budget下のprediction utilityを最適化する。Quest等のtraining-free query-aware sparsityはheuristicな類似度・検索規則でblockを選ぶのに対し、SASはquery-dependent rankingを学習する。sliding-windowは局所性を固定仮定するが、SASは離れたhistorical blockも選択できる。HiLS-Attentionのような階層疎注意と比べても、SASの中心はselector supervisionを最終予測lossへ統合する単純なgating formulationにある。","implementation_status":"2026-09-11提出のarXivプレプリント。Triton fused kernel、SGLang、paged KV cache、FlashInfer sparse decodingを用いた実装を評価し、Tencent-Hunyuan/Simple-Attention-Sparsificationとしてコード公開先が示されている。研究prototypeではあるが、単なるsimulationではなく実serving stackへ統合してdecode latencyを測定している。","research_positioning":"長文脈LLM推論研究では、SASはKV圧縮やCPU/SSD offloadではなく『GPU上でどのhistorical KVを実際に読むか』を学習で減らす系統に属する。階層メモリ手法と競合するというより補完関係にあり、offload/cache層が保持するKV集合の中から各queryで読むworking setをさらに絞れる可能性がある。特に、proxy metricのattention massではなくend-task lossでrankingを学ぶ考え方は、MoE expert cacheやKV retrievalなど固定I/O budget下の選択問題にも一般化可能な設計原理である。一方、極長文脈でrouting自体がボトルネック化する結果は、疎化後にはselector計算・Top-K・metadata accessを含む制御経路の最適化が次のシステム課題になることを示す。"},"reservation":{"claim_id":"claim-eac46ddd3cb449fe8b2c0320","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
