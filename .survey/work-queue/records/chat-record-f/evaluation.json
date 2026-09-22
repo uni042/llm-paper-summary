@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-c67963f1064ecc2790db5b2d",
-  "job_id": "job-research-51f4efd90b7a5e12",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c67963f1064ecc2790db5b2d",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c67963f1064ecc2790db5b2d","job_id":"job-research-51f4efd90b7a5e12","data":{"hardware":"全primary measurementsは単一NVIDIA RTX 5070、12,227 MiB VRAM、約31GB system RAM、Windows。calibration memory上限は実用約10.98 GiB。","software":"Python 3.10.11、CUDA 12.8、PyTorch、Transformers、Datasets、lm-evaluation-harness。packed executionはprototype Triton kernelを使用。","methodology":"Qwen3-8Bの252線形projectionを64 calibration samples、2048 tokens、seed 0、percdamp 0.01で変換。PPLはWikiText-2、C4、PTB。能力はARC-Challenge/Easy、BoolQ、HellaSwag、LAMBADA-openai、MMLU、PIQA、WinoGrandeをzero-shot各n=500で評価し、choice taskはchance/majority floorを除いたretentionを計算する。4Bも同条件で再評価。packing前後PPL、artifact size、runtime VRAM/token rate、4096×2560 GEMV microbenchmarkを測る。","scope":"1 seed、各task 500 samples、calibrationは主にWikiText-2、scale比較は4Bと8Bの2点のみ。量子化対象はlinear projectionだけでembedding、LM head、norm、activation、KV cacheは高精度。kernelはprototypeでproduction qualityではなく、同一protocolで全ternary PTQ手法との比較もない。"},"reservation":{"claim_id":"claim-c67963f1064ecc2790db5b2d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
