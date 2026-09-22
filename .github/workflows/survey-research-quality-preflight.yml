@@ -54,7 +54,7 @@ jobs:
           git config user.email 'survey-research-preflight[bot]@users.noreply.github.com'
           mkdir -p .survey/work-queue/research-preflight/requests .survey/work-queue/research-preflight/results
 
-          for attempt in 1 2 3 4 5; do
+          for attempt in $(seq 1 12); do
             git fetch origin main
             git reset --hard origin/main
 
@@ -93,7 +93,10 @@ jobs:
             fi
 
             echo "Quality preflight push race on attempt ${attempt}; recomputing from latest main."
-            sleep $((attempt * 2))
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            jitter=$(( RANDOM % 6 ))
+            sleep $((backoff + jitter))
           done
 
           echo 'Failed to publish Research/Audit quality preflight results after retries.' >&2
