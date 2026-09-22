@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 08:31:07 JST**
+> 自動生成: **2026-09-22 09:27:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **334** |
-| 未claim Research job | **334** |
+| 未claim Research job | **333** |
 | 直近24hの検証済みResearch収録 | **22** |
-| 最終検証済みResearch収録 | **09-22 02:40:41 JST（5時間50分前）** |
+| 最終検証済みResearch収録 | **09-22 02:40:41 JST（6時間47分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,12 +50,12 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **5** | **4** | **0** | **0** | **0** | — |
+| Research | **0** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **0** | **1** | **1** | **0** | **0** | **0** | **3** |
-| 合計 | **1** | **6** | **5** | **0** | **0** | **0** | **3** |
+| Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **0** | **4** | **0** | **3** | **1** | **0** | **6** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -63,11 +63,7 @@
 
 ### Research
 
-- **09-22 02:40:41 JST** [research] `arXiv:2609.19169` — SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops
-  - job: `.survey/work-queue/jobs/job-research-73f2d3c7c23735bb.json`
-  - result: `.survey/work-queue/results/research/attempt-72aa5e973198ffd9d1b794da.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-72aa5e973198ffd9d1b794da.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md`
+- 検証済み完了なし。
 
 ### Audit
 
@@ -82,29 +78,9 @@
 #### Research (:30)
 
 - 最新観測run: **2026-09-20 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **5件** / 検証済み成功: **4件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **成功** `arXiv:2602.07616` — SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models
-  - job: `.survey/work-queue/jobs/job-research-ff5accb2a519d706.json`
-  - result: `.survey/work-queue/results/research/attempt-4198d6e57abb83d655f6b5bb.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4198d6e57abb83d655f6b5bb.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md`
-- **成功** `arXiv:2509.21892` — Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts
-  - job: `.survey/work-queue/jobs/job-research-7878dfa1090aac77.json`
-  - result: `.survey/work-queue/results/research/attempt-524e1ba9cb57a926cc0c9550.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-524e1ba9cb57a926cc0c9550.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.21892-elastic-moe-inference-time-scalability.md`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-68ada84df4d15e6b33fe96ec.json` (job `job-research-f32c4d7018f358c2`, failure_class `state_or_transport_guard`)
   - result: `.survey/work-queue/results/research/attempt-68ada84df4d15e6b33fe96ec.json` (`ok=false`)
-- **成功** `arXiv:2510.13999` — REAP the Experts: Why Pruning Prevails for One-Shot MoE compression
-  - job: `.survey/work-queue/jobs/job-research-2dff89406766fc1d.json`
-  - result: `.survey/work-queue/results/research/attempt-8eee4a640ec2d03e43ea9f98.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-8eee4a640ec2d03e43ea9f98.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md`
-- **成功** `arXiv:2511.06494` — Route Experts by Sequence, not by Token
-  - job: `.survey/work-queue/jobs/job-research-e203c47aded67247.json`
-  - result: `.survey/work-queue/results/research/attempt-c9fddc3f170c1ce1924365e6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c9fddc3f170c1ce1924365e6.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md`
 
 #### Audit (:30)
 
@@ -114,20 +90,30 @@
 
 #### Discovery (:00)
 
-- 最新観測run: **2026-09-21 07:26 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **3件**
-- 探索軸: repository structured references curation
-- round `hourly00-repository-refs-01` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260921T0730JST-hourly00-discovery-repository-refs-01.json`
-  - 探索軸: repository structured references curation
-  - 個別result照合: あり / `.survey/work-queue/results/20260921T0730JST-hourly00-discovery-repository-refs-01.json` (`ok=true`)
+- 最新観測run: **2026-09-21 05:58 JST**
+- 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **6件**
+- 探索軸: repository-wide structured references for LLM inference systems / forward citations of Elastic MoE for inference-time expert scaling / forward citations of MoE-Infinity offloading-efficient MoE serving
+- round `hourly00-backward-01` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-21T05-58-48+09-00-hourly00-backward-01.json`
+  - 探索軸: repository-wide structured references for LLM inference systems
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `hourly00-forward-elasticmoe-02` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-21T05-58-48+09-00-hourly00-forward-elasticmoe-02.json`
+  - 探索軸: forward citations of Elastic MoE for inference-time expert scaling
+  - 個別result照合: なし（immutable round記録は確認済み）
+- round `hourly00-forward-moeinfinity-03` / 候補 **4件**
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-21T05-58-48+09-00-hourly00-forward-moeinfinity-03.json`
+  - 探索軸: forward citations of MoE-Infinity offloading-efficient MoE serving
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `DOI:10.1109/TC.2026.3701443` — GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning / worker `scheduled-chat-30`
+  - claim: **09-22 09:27:41 JST** / heartbeat: **—** / lease expiry: **09-22 10:57:41 JST**
+  - evidence: `.survey/work-queue/claims/job-research-50400bb966b2b5a1.json`
 
 #### Audit
 
@@ -175,11 +161,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **422** |
-| └ Research | **236** |
+| 成功result未照合のimmutable submission | **222** |
+| └ Research | **150** |
 | └ Audit | **2** |
-| └ Discovery | **95** |
-| └ Other/Unknown | **89** |
+| └ Discovery | **70** |
 
 ### 厳格検証が未成立のcompleted job
 
@@ -187,7 +172,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 
 | 指標 | 件数 |
 |---|---:|
-| completed Research/Audit jobで厳格検証未成立 | **334** |
+| completed Research/Audit jobで厳格検証未成立 | **336** |
 
 ### 整合性異常
 
