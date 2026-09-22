@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 00:43:27 JST**
+> 自動生成: **2026-09-23 00:50:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **242** |
-| 未claim Research job | **240** |
+| 収録候補論文 | **241** |
+| 未claim Research job | **239** |
 | 直近24hの検証済みResearch収録 | **49** |
-| 最終検証済みResearch収録 | **09-23 00:40:25 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-23 00:50:46 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **242** |
+| canonical_id確認済みの一意な候補論文 | **241** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **242** |
+| 非終端Research job合計 | **241** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,13 +34,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6046** |
-| 処理済み | **619** |
-| 未処理 | **5427** |
-| 収録済みとして除外 | **511** |
+| 処理済み | **620** |
+| 未処理 | **5426** |
+| 収録済みとして除外 | **512** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
-- 消化率: **10.2%**
+- 消化率: **10.3%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（16時間10分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（16時間18分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **27** | **1** | **0** | **0** | **2** | **0** | — |
+| Research | **28** | **1** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **27** | **4** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **28** | **4** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 00:50:46 JST** [research] `arXiv:2603.23888` — SiftMoE: Similarity-Aware Energy-Efficient Expert Selection for Wireless Distributed MoE Inference
+  - job: `.survey/work-queue/jobs/job-research-71cfe275bb4fcca4.json`
+  - result: `.survey/work-queue/results/research/attempt-a0ecf191f05aa48e02bfda2f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-a0ecf191f05aa48e02bfda2f.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2603.23888-siftmoe-similarity-aware-expert-selection.md`
 - **09-23 00:40:25 JST** [research] `arXiv:2503.15798` — Mixture of Lookup Experts
   - job: `.survey/work-queue/jobs/job-research-6728332ce11cd1ed.json`
   - result: `.survey/work-queue/results/research/attempt-8dee355b3271b922b97af132.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-e0aa79e0bd81154b33f04a71.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-e0aa79e0bd81154b33f04a71.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.14436-mergemoe-output-merging.md`
-- **09-22 22:46:38 JST** [research] `arXiv:2509.10377` — Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs
-  - job: `.survey/work-queue/jobs/job-research-97e05693104abe69.json`
-  - result: `.survey/work-queue/results/research/attempt-f1e008f8fdda71bd88025432.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-f1e008f8fdda71bd88025432.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md`
 
 ### Audit
 
@@ -179,9 +179,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2603.23888` — SiftMoE: Similarity-Aware Energy-Efficient Expert Selection for Wireless Distributed MoE Inference / worker `scheduled-chat-30`
-  - claim: **09-23 00:42:58 JST** / heartbeat: **—** / lease expiry: **09-23 02:12:58 JST**
-  - evidence: `.survey/work-queue/claims/job-research-71cfe275bb4fcca4.json`
+- `arXiv:2606.10703` — From Observation to Intervention: A Causal Audit of Expert Importance in Mixture-of-Experts Models / worker `scheduled-chat-30`
+  - claim: **09-23 00:50:39 JST** / heartbeat: **—** / lease expiry: **09-23 02:20:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-23b60cfb5b252b01.json`
 - `DOI:10.1109/TON.2026.3704584` — Efficient Mixture-of-Experts Model Inference at the Edge via Adaptive Expert Merging / worker `scheduled-chat-00`
   - claim: **09-23 00:16:29 JST** / heartbeat: **—** / lease expiry: **09-23 01:46:29 JST**
   - evidence: `.survey/work-queue/claims/job-research-e434f2731ff9316c.json`
@@ -204,7 +204,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **242** |
+| ready | **241** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +224,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **932** |
+| inference/training/survey配下の論文Markdown実体 | **933** |
 
 ### immutable submissionの未照合
 
