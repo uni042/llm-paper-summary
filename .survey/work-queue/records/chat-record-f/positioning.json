@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-89bc3cc25133486a66c2d95b","job_id":"job-research-435dfcefc35588f8","data":{"limitations":"評価の中心である25〜325 GPUの局所化は80-core Xeon上の完全グラフシミュレーションであり、大規模実GPUクラスタの故障注入ではない。実機評価は4 GPU・1Gbps Ethernetに限られ、NVLink/NVSwitchやInfiniBandを含む本番規模の共有障害、複雑な物理トポロジ、複数同時ボトルネックでの精度は未確認である。プローブ件数は約20倍減るが、一プローブが複数通信を含むため総通信バイトやGPU時間で正規化した比較はない。さらにαに対する偽陽性・偽陰性、短時間ソフトウェア障害、router imbalance、KVキャッシュミスは範囲外である。","differences":"DCGM、switch log、PCIe/NVLink counter、kernel trace等を使うインフラ診断は詳細な根本原因へ到達できる一方、特権権限と基盤チームの協力を要する。FaultSenseはそれを置換せず、TTFT/TBTに近いアプリケーション可視信号だけで迅速に『退避するGPU・迂回する経路』を得る前段診断を提供する。単純なpairwise pingはモデルのexpert computeとall-to-allの結合を再現せず、本番モデルへのtest promptはほぼ全GPUを通って局所化不能になる。FaultSenseは単一MoE層と決定論的ルータにより、この二方式の間を埋める。","implementation_status":"論文はOLMoE-1B-7Bから作った単一層プローブを実装し、vLLM 0.21.0とRay 2.55.1上でDeepSeek-MoE-16B-Chatと同居させる実機試作まで評価している。大域被覆と適応ドリルダウンのアルゴリズムも擬似コードとして公開される。一方、一次PDFとMicrosoft Research公開ページには著者公式コードリポジトリURLが記載されておらず、公開実装は今回確認できなかった。","research_positioning":"MoE serving研究では専門家配置、負荷分散、all-to-all高速化が通常性能最適化の主題だが、FaultSenseは同じexpert parallelismを信頼性・診断へ利用する。大規模MoEでは一GPUの遅延が同期集合通信を介して全要求へ波及するため、専門家キャッシュや配置最適化だけでは灰色故障時のSLOを守れない。FaultSenseはモデル層のルーティング制御をクラスタ診断へ接続する補完的な系統であり、故障局所化後にreplica再構成、expert再配置、通信経路迂回、負荷移動を発火させる制御入力として使える。"},"reservation":{"claim_id":"claim-89bc3cc25133486a66c2d95b","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ce7eea3edeb1ceb08c6763d4",
+  "job_id": "job-research-384393fce738e0be",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ce7eea3edeb1ceb08c6763d4",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

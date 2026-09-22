@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-89bc3cc25133486a66c2d95b","job_id":"job-research-435dfcefc35588f8","data":{"overview":"FaultSenseは疎なグレー障害を前提に、診断試験数をreplicaの全GPU対総当たりから大幅に減らす。300 GPUでは大域被覆だけで総当たりより22倍超少ないプローブとなり、第2段階を含む総数でも約20倍削減する。25〜325 GPU、1/2/4同時故障のシミュレーションでは全故障を局所化した。4 GPU実機ではプローブモデルのGPU当たりVRAMが1 GPU時1,820MBから4 GPU時834MBへ低下し、本番DeepSeek-MoE-16B-Chat 5 RPSに最大10 RPSの診断を重畳してもTTFT増加は最大約1%、TBTはほぼ増えなかった。","key_results":[{"metric":"総診断プローブ数","value":"約20倍削減","baseline":"全GPU対を個別に検査する総当たり方式","condition":"最大325 GPU、k=8、d=1/2/4のGPUまたは通信経路故障シミュレーション","interpretation":"大域被覆で正常部品を一括除外し、ドリルダウンを疑惑群だけへ限定するため、全辺を個別試験する必要がない。"},{"metric":"第1段階プローブ数","value":"300 GPUで22倍超削減","baseline":"n(n-1)/2のpairwise検査","condition":"完全グラフ、k=4/8","interpretation":"一プローブがk頂点と内部全辺を同時に覆うグループ検査の効果を示す。"},{"metric":"故障局所化","value":"シミュレーションで全故障を局所化","baseline":"注入した真のGPU/通信経路故障","condition":"25〜325 GPU、d=1/2/4、頂点・辺・混合故障","interpretation":"試験数削減が単なるサンプリングではなく、全辺被覆と適応再検査を維持している。"},{"metric":"プローブモデルVRAM","value":"1 GPU 1,820MB → 4 GPU 834MB/GPU","baseline":"単一GPU配置","condition":"4 GPU expert parallelism実機","interpretation":"専門家を分散するとGPU当たり診断モデル常駐量が減り、より大規模replicaではさらに小さくなると予測される。"},{"metric":"本番干渉","value":"TTFT増加最大約1%、TBTほぼ不変","baseline":"診断0 RPS","condition":"DeepSeek-MoE-16B-Chat 5 RPS、本番4 GPU、診断0〜10 RPS","interpretation":"単一層プローブは本番と同居しても少なくとも小規模試験ではユーザー遅延への影響が小さい。"}],"negative_results":"大規模GPU実機での局所化精度は未評価であり、論文自身が将来課題としている。通信コストで正規化した総当たり方式との比較もなく、一つのFaultSenseプローブが複数pairwise operationを実行する点をプローブ件数だけでは完全に表せない。相対閾値α、負荷、故障数に対する偽陽性・偽陰性率の体系的評価も未実施で、短い混雑は疑惑フラグを発生させうる。","interpretation":"MoEの疎ルータは通常は負荷分散対象だが、FaultSenseでは『どのGPUを通すか選べる』診断制御面として利用される。単独のネットワークpingやGPU計算テストより本番MoEの計算通信結合を忠実に通しつつ、全モデルを使うテストより経路を限定できる。この二つの性質がアプリケーション層だけでの局所化を可能にする。","quality_impact":"診断方式なのでモデルの生成品質や重みを変更しない。影響は診断トラフィックによる性能干渉であり、4 GPU試験では10 RPSまでのプローブ追加でTTFT最大約1%、TBTほぼ不変だった。ただし大規模本番環境で同じ干渉率になることは未検証。"},"reservation":{"claim_id":"claim-89bc3cc25133486a66c2d95b","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-ce7eea3edeb1ceb08c6763d4",
+  "job_id": "job-research-384393fce738e0be",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ce7eea3edeb1ceb08c6763d4",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
