@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-87c159714bb65416bb0f37de",
-  "job_id": "job-research-92d92d3583bf57da",
-  "data": {
-    "hardware": "主事前学習は512基のNVIDIA H800で約22日。図1の32Kプリフィル遅延と長文スケーリングもH800 FP16で測定する。MoEモジュールの容量制約評価は単一GPUローカル実行で、16K、32K、64K、128K、256Kを比較し、expert-parallelのall-to-all通信は含めない。",
-    "software": "Turing-20B-A2Bは24層、総20B、平均活性約2B。256 routed experts、共有expert 1、平均約8 routed experts。Quantile Routingと容量係数1.25、20層Lightning Attention＋4層full attention、Dynamic Tanhを採用する。比較にはQwen3/Qwen3.5系、ルーティング統制実験ではLoss-Free Routingを使う。",
-    "methodology": "一般能力は知識、推論、数学・STEMの複数ベンチマーク、長文はRULER 8K〜128Kで評価する。Quantile Routingの統制実験は同一アーキテクチャ・データ・初期値・最適化で約100Bトークン学習し、平均8 expertsを固定したLoss-Free Routingと比較する。容量制約はGSM8Kだけで強化学習した同一設定のdropless対CF=1.25をstep 399で比較し、別に同一モデル寸法・入力・精度・コンパイル条件の融合MoEカーネルでプリフィル遅延を測る。",
-    "scope": "技術報告はbase language model中心で、SFT/RL後の広い対話・エージェント能力は未検証。容量制約速度評価は単一GPUのMoEモジュールであり、分散expert-parallel通信やモデル全体のエンドツーエンド遅延を測っていない。容量制約とQuantile Routingを組み合わせた完全設計をtop-k baselineと比較するため、1.53倍のうち容量係数単独の寄与は分離されていない。物理AI用途への適合は設計動機と応用計画が中心で、マルチモーダル閉ループ性能そのものは今後の課題である。"
-  },
+  "attempt_id": "attempt-f69ade789f2e4b767fc19eaf",
+  "job_id": "job-research-11ed8db2a9d8a3d3",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-87c159714bb65416bb0f37de",
+    "claim_id": "claim-f69ade789f2e4b767fc19eaf",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
