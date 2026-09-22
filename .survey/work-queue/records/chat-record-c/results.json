@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ddb3060fbfec2233d78a5ab4",
-  "job_id": "job-research-a4cc548ec9dfc021",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ddb3060fbfec2233d78a5ab4",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ddb3060fbfec2233d78a5ab4","job_id":"job-research-a4cc548ec9dfc021","data":{"overview":"XShareは通常batchで活性expert数を最大30%減らし、精度低下を概ね1%以内に保ちながらend-to-end output tokens/sを最大13%改善する。speculative decodingでは同一request内tokenのexpert preference相関を使うhierarchical selectionによりGPT-OSS 120Bで最大14% throughput向上を報告する。expert parallelではpeak GPU loadを25.6から8.6 expertsへ削減し、約3倍の改善を示す。","key_results":[{"metric":"activated experts","value":"最大30%削減","baseline":"standard top-k routing","condition":"通常batch、batch-aware expert budget","interpretation":"token単位の疎性だけでは抑えられないbatch unionを直接縮小する。"},{"metric":"end-to-end OTPS","value":"最大13%向上","baseline":"standard MoE inference","condition":"通常batch、accuracy drop約1%以内","interpretation":"expert weightのmemory I/O削減が実際のdecode throughputへ反映される。"},{"metric":"speculative decoding throughput","value":"最大14%向上","baseline":"通常のspeculative MoE routing","condition":"GPT-OSS 120B、speculative length 3、hierarchical correlation-aware selection","interpretation":"speculative token間のexpert preference共有を利用すると投機に伴うexpert explosionを抑えられる。"},{"metric":"expert-parallel peak GPU load","value":"25.6 → 8.6 experts","baseline":"通常routing","condition":"GPU-aware selection","interpretation":"最大GPU負荷を約3分の1にし、expert placement由来のload imbalanceを緩和する。"},{"metric":"speculative-token expert overlap","value":"独立tokenの約2〜3倍","baseline":"same/different datasetの独立token","condition":"consecutive speculative tokens","interpretation":"request階層でexpert集合を共有する設計の根拠となる。"}],"negative_results":"expert budgetを削りすぎるとrouterが本来選んだexpertを使えず品質低下が生じるため、速度向上は無制限ではない。proxy objectiveはrouter gating scoreがexpert importanceを正しく表す仮定に依存する。またprefillは元々多数tokenを同時処理しexpert活性が高いため、主な利益はautoregressive decodeに限定される。","interpretation":"MoEの『1 tokenあたりk experts』という計算疎性と、『batch全体で何種類のexpert重みをロードするか』というmemory-I/O疎性は別問題である。XShareは後者を明示的に最適化し、batch構成そのものを利用して既存routerの選択を協調させる。","quality_impact":"通常batchでは最大13% OTPS改善をaccuracy drop約1%以内で示し、speculative decodingでは品質を統計的ノイズ内に保つ設定で最大14% throughput向上を報告する。強いbudget制限では品質とのtrade-offがある。"},"reservation":{"claim_id":"claim-ddb3060fbfec2233d78a5ab4","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
