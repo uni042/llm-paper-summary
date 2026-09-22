@@ -1,13 +1,7 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-1b51079a73bb2f6ad0213381",
-  "job_id": "job-research-2310f02f05cacc23",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1b51079a73bb2f6ad0213381",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1b51079a73bb2f6ad0213381","job_id":"job-research-2310f02f05cacc23","data":{
+"canonical_id":"arXiv:2310.08461","arxiv_id":"2310.08461","doi":"10.48550/arXiv.2310.08461","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.LG"]},"title":"DistillSpec: Improving Speculative Decoding via Knowledge Distillation",
+"summary":"ディスティルスペックは、投機的デコードで小型ドラフトモデルの候補が大型ターゲットモデルに棄却されると高速化が失われる問題に対し、白箱知識蒸留で両者の次トークン分布を意図的に整合させる。通常の蒸留が小型モデル単体の課題性能を高めることを主目的にするのに対し、本手法は投機的デコードの受理率とブロック効率を直接改善する。ドラフト自身が生成したオンポリシーデータを低費用な学習分布として使い、課題と生成方式に応じて分布間距離を選ぶ。標準投機的デコードに対して多様な課題で一〇〜四六パーセントの追加高速化を示し、別課題への転移でも平均二六パーセント改善する。複数サイズのモデルがある場合は、まず大型モデルから中型ターゲットを蒸留し、さらに小型ドラフトを整合させて投機的デコードする二段構成により、品質をほぼ維持しながら通常生成比で六・四〜一〇・七倍の遅延短縮を示す。",
+"list_summary":"ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。",
+"authors":["Yongchao Zhou","Kaifeng Lyu","Ankit Singh Rawat","Aditya Krishna Menon","Afshin Rostamizadeh","Sanjiv Kumar","Jean-François Kagy","Rishabh Agarwal"],"authors_affiliations":"Google Research; University of Toronto; Google DeepMind; Princeton University; Mila","published":"2023-10-12","publication":"arXiv:2310.08461v2, 2024-03-31","publication_type":"Preprint","publication_status":"arXiv preprint","lineage":"投機的デコード / 知識蒸留 / ドラフトモデル整合","topics":["投機的デコード","知識蒸留","ドラフトモデル","受理率","ブロック効率","品質遅延トレードオフ"],"importance":"投機的デコードの速度をサービング機構だけでなくドラフト学習側から改善し、ドラフト単体品質とターゲット整合性が別目的であることを実験的に示す。","hardware_evaluation":"実遅延はターゲットとドラフトを同一のティーピーユー第四世代装置に置き、モデル並列なし、バッチ一、五百例を三反復して平均する。","quality_effect":"損失なし投機的デコードではターゲット分布を厳密に維持する。緩和付き方式では許容度を調整し、品質低下と遅延短縮を連続的に交換する。","source":"https://arxiv.org/abs/2310.08461","sources":["https://arxiv.org/abs/2310.08461","https://arxiv.org/html/2310.08461"],"code":null,"implementation":"論文はドラフト蒸留と投機的サンプリングのアルゴリズム、学習設定、実測条件を詳述するが、本文から公式公開コードの所在は確認できない。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary arXiv full text","references_total":0
+},"reservation":{"claim_id":"claim-1b51079a73bb2f6ad0213381","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
