@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-scheduled-chat-30-20260922T051500Z-5",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-a4042c7c7ed57c9a",
+      "claim_id": "claim-7f686c4eee862a3a94cbda91",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-7f686c4eee862a3a94cbda91",
+      "claimed_at": "2026-09-22T05:07:13+00:00",
+      "expires_at": "2026-09-22T06:37:13+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-a4042c7c7ed57c9a"
+      ],
+      "job": {
+        "job_id": "job-research-a4042c7c7ed57c9a",
+        "type": "research",
+        "parent_job_id": "job-f47be01be52256f8",
+        "priority": 98,
+        "canonical_id": "arXiv:2504.07807",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Cluster-Driven Expert Pruning for Mixture-of-Experts Large Language Models",
+        "source_url": "https://arxiv.org/abs/2504.07807",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2504.07807-cluster-driven-expert-pruning.md",
+        "selection_reason": "layer内の機能的に類似したexpertをcluster化し、layer横断で冗長clusterを削るadaptive task-specific compression。expert redundancy利用を体系化する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T11:38:13+00:00",
+        "repair_required": true,
+        "validation_error": "ValueError: paper quality gate failed: 手法構成要素#1 の段落数 1 < 2; 手法構成要素#2 の段落数 1 < 2; 手法構成要素#3 の段落数 1 < 2; 手法構成要素#4 の段落数 1 < 2; 手法構成要素#5 の段落数 1 < 2; 手法構成要素#6 の段落数 1 < 2",
+        "last_validation_failed_at": "2026-09-22T05:05:39+00:00"
+      },
+      "record_bank": "f",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-0da4ffa5fe5ff7d5bcb1563d"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-0da4ffa5fe5ff7d5bcb1563d.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-f",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-f/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T05:07:13+00:00",
+  "checkpoint_released": 0
+}
