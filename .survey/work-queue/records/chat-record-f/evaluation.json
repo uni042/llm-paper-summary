@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-eac46ddd3cb449fe8b2c0320","job_id":"job-research-6542fa570cf353a1","data":{"hardware":"長文脈decodeの単一GPU実測を含むが、確認できた一次資料メタデータからGPU型番は確定できないため未記載。システム評価ではSGLang/FlashInferを用い、極長文脈までselectorとattentionの時間内訳を測る。","software":"主なpost-training backboneはQwen3-4B、Qwen3-8B、Qwen3-14B。selector学習用にOpenR1-Math-220Kから約93.7K例を用い、最大32,768 token、1 epochで学習する。block sizeは64 token。比較対象はdense attentionと、dense attention分布を蒸留する学習型疎注意SeerAttention-Rを中心に、長文脈評価では関連するtraining-free/階層疎注意とも比較する。実装はTriton、SGLang、paged KV cache、FlashInferを利用する。","methodology":"推論能力はMATH500、GPQA-Diamond、AIME24、AIME25でQwen3 4B/8B/14Bと複数のattention budget（主に1024/2048/4096 token）を比較する。長文脈転移はLongBench、agentic転移はBFCL Multi-TurnとVitaBenchで、数学データだけで学習した同じselectorをtask-specific再学習なしに評価する。設計ablationではinner/outer gating、softmax/sigmoid/unnormalized gate、continuous/straight-through hard gate、sparse/full-scope trainingを分離する。さらにOLMo3-7Bから約50B token・13,000 stepsのcontinued pretraining実験を行い、backbone共同学習への拡張性を検証する。極長文脈のRULERとdecode latency内訳で精度限界とselector/Top-K overheadも測る。","scope":"主張の中心は既存dense LLMへselectorをpost-trainしてdecode時のhistorical attentionをblock単位で疎化する設定である。prefillはdenseのままなのでend-to-end serving全体を一律に高速化する方式ではない。selectorは主に数学reasoningデータで学習され、LongBench/agenticへの転移は確認される一方、64K/128Kのneedle-like retrievalではblock summaryの情報損失が顕著。continued-pretraining結果は別selector構成・backbone共同学習を含む予備的拡張として解釈すべきである。"},"reservation":{"claim_id":"claim-eac46ddd3cb449fe8b2c0320","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-403f9fa49f0449fd38977755",
+  "job_id": "job-research-f2e323416158860a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-403f9fa49f0449fd38977755",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
