@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T12:50:53.710171+00:00",
+  "updated_at": "2026-09-22T12:52:02.101628+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -37130,6 +37130,56 @@
           "type": "research",
           "canonical_id": "arXiv:2606.01509",
           "title": "ProbMoE: Differentiable Probabilistic Routing for Mixture-of-Experts",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35729695250",
+      "first_recorded_at": "2026-09-22T12:52:02.101628+00:00",
+      "last_recorded_at": "2026-09-22T12:52:02.101628+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35729695250:1",
+          "recorded_at": "2026-09-22T12:52:02.101628+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35729695250",
+            "run_attempt": "1",
+            "source_sha": "4a4d4ed44d10d04d9b918cafb5f3850c6a0e844e"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-236ebf569c3b4b83",
+          "type": "research",
+          "canonical_id": "arXiv:2606.18304",
+          "title": "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression",
           "from": "ready",
           "to": "blocked"
         }
