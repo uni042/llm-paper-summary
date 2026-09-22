@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4e9fe196315c28d707c9b275","job_id":"job-research-303634fb993a11eb","data":{"canonical_id":"arXiv:2306.03078","arxiv_id":"2306.03078","doi":"10.48550/arXiv.2306.03078","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.LG"]},"title":"SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression","summary":"エスピーキューアールは、大規模言語モデルを三〜四ビットへ量子化すると一部の高感度重みが誤差を支配して品質が落ちる問題に対し、九十九パーセント以上の通常重みを低ビット化し、少数の外れ値だけを十六ビットで疎に保持する混合表現を提案する。小さな量子化群を使いながら、その尺度と零点自体も二段目で低ビット量子化して付帯情報を圧縮する。キャリブレーション入力から層出力誤差への感度を推定し、量子化中に外れ値を動的に分離する。ラマとファルコンで十六ビット基準から困惑度差一パーセント以内を平均四・七一ビット以下で達成し、最適化カーネルでは単一エー一〇〇上の一語ずつ生成を十六ビット基準より約二〇〜三〇パーセント高速化する。","list_summary":"高感度な少数重みだけを十六ビット疎表現に逃がし、残りと量子化尺度を三〜四ビット化してほぼ無損失圧縮する混合重み表現。","authors":["Tim Dettmers","Ruslan Svirschevski","Vage Egiazarian","Denis Kuznedelev","Elias Frantar","Saleh Ashkboos","Alexander Borzunov","Torsten Hoefler","Dan Alistarh"],"authors_affiliations":"University of Washington; HSE University; Yandex; Skoltech; IST Austria; ETH Zurich; NeuralMagic","published":"2023-06-05","publication":"arXiv:2306.03078v1","publication_type":"Preprint","publication_status":"arXiv preprint","lineage":"大規模言語モデル重み量子化 / 混合精度 / 疎量子化","topics":["重み量子化","混合精度","外れ値","後学習量子化","疎行列","推論高速化"],"importance":"低ビット量子化誤差を平均的な重みではなく少数の高感度重みへ局在させ、疎高精度成分と密低ビット成分を分離する設計を確立した。","hardware_evaluation":"圧縮処理は最大六百五十億モデルでエヌビディア・エー一〇〇約四・五時間、エー六〇〇〇約六時間。推論速度は単一エー一〇〇、バッチ一で測定。","quality_effect":"平均四・六〜四・七ビット級で十六ビット基準から困惑度相対差一パーセント以内を狙い、約四ビットでも既存後学習量子化より誤差を大幅に減らす。","source":"https://arxiv.org/abs/2306.03078","sources":["https://arxiv.org/abs/2306.03078","https://arxiv.org/html/2306.03078","https://github.com/Vahe1994/SpQR"],"code":"https://github.com/Vahe1994/SpQR","implementation":"重み符号化と実行時復号、圧縮疎行形式の外れ値処理、低ビット密行列積を組み合わせた画像処理装置向け実装を公開。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary arXiv full text","references_total":0},"reservation":{"claim_id":"claim-4e9fe196315c28d707c9b275","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-f437cb4dac9732a5ed37dd62",
+  "job_id": "job-research-791dd06c8f3ceecf",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f437cb4dac9732a5ed37dd62",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
