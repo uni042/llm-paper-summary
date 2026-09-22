@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 14:02:53 JST**
+> 自動生成: **2026-09-22 14:03:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **307** |
 | 未claim Research job | **305** |
 | 直近24hの検証済みResearch収録 | **16** |
-| 最終検証済みResearch収録 | **09-22 13:52:54 JST（9分前）** |
+| 最終検証済みResearch収録 | **09-22 13:52:54 JST（10分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（5時間30分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（5時間31分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -173,9 +173,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.05586` — Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations / worker `scheduled-chat-30`
-  - claim: **09-22 14:00:46 JST** / heartbeat: **—** / lease expiry: **09-22 15:30:46 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f59af449638fc64c.json`
+- `arXiv:2504.07807` — Cluster-Driven Expert Pruning for Mixture-of-Experts Large Language Models / worker `scheduled-chat-30`
+  - claim: **09-22 14:03:29 JST** / heartbeat: **—** / lease expiry: **09-22 15:33:29 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a4042c7c7ed57c9a.json`
 - `arXiv:2212.09811` — Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model / worker `scheduled-chat-00`
   - claim: **09-22 13:01:22 JST** / heartbeat: **—** / lease expiry: **09-22 14:31:22 JST**
   - evidence: `.survey/work-queue/claims/job-research-6f4aa4cc9993f8fd.json`
@@ -226,8 +226,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **265** |
-| └ Research | **193** |
+| 成功result未照合のimmutable submission | **266** |
+| └ Research | **194** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
