@@ -1,1 +1,63 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ddb3060fbfec2233d78a5ab4","job_id":"job-research-a4cc548ec9dfc021","data":{"canonical_id":"arXiv:2602.07265","arxiv_id":"2602.07265","doi":"10.48550/arXiv.2602.07265","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"XShare: Collaborative in-Batch Expert Sharing for Faster MoE Inference","summary":"XShareは、専門家混合（MoE）推論でバッチ化や投機的デコーディングにより各トークンの疎なルーティング集合の和集合が膨張し、多数の専門家重みをメモリから読む問題を、バッチ全体のゲート得点を使う動的専門家選択として解く。再学習なしで各層の専門家集合を制限し、通常バッチで活性専門家を最大30%削減、専門家並列でGPU当たりピーク負荷を約3倍削減、投機的デコーディングで最大14%のスループット向上を報告する。","list_summary":"バッチ全体のルーター得点を集約して専門家集合を動的共有し、再学習なしで専門家混合推論の活性数・GPU負荷・投機デコード性能を改善する。","authors":["Daniil Vankov","Nikita Ivkin","Kyle Ulrich","Xiang Song","Ashish Khetan","George Karypis"],"authors_affiliations":"論文本文の著者所属に従う","published":"2026-02-06","publication":"arXiv","publication_type":"プレプリント","publication_status":"プレプリント v1（2026-02-06）","lineage":"専門家混合推論 / バッチ対応専門家選択 / 専門家並列 / 投機的デコーディング","topics":["専門家混合推論","バッチ対応専門家選択","専門家並列","投機的デコーディング","動的枝刈り"],"importance":"トークン単位の疎性がバッチでは失われるという実運用上のメモリ入出力問題を直接対象とし、通常バッチ・専門家並列・投機的デコーディングを同じバッチ効用の考え方で扱う。","implementation":"推論時にルーター得点を集約して専門家集合を選ぶ方式で、再学習・微調整を必要としない。","hardware_evaluation":"専門家混合推論の通常バッチ、複数GPUの専門家並列配置、GPT-OSS 120Bを含む投機的デコーディング設定で評価。","quality_effect":"専門家予算を削減しつつ精度低下を概ね1%以内に抑える設定を評価し、投機的デコードでは統計的ノイズ内の品質を報告する。","source":"https://arxiv.org/abs/2602.07265","sources":["https://arxiv.org/abs/2602.07265","https://arxiv.org/html/2602.07265"],"code":null,"last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"一次論文本文","references_total":0},"reservation":{"claim_id":"claim-ddb3060fbfec2233d78a5ab4","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-91633015dfa64bbba8318e58",
+  "job_id": "job-research-a4cc548ec9dfc021",
+  "data": {
+    "canonical_id": "arXiv:2602.07265",
+    "arxiv_id": "2602.07265",
+    "doi": "10.48550/arXiv.2602.07265",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "XShare: Collaborative in-Batch Expert Sharing for Faster MoE Inference",
+    "summary": "XShareは、専門家混合（MoE）推論でバッチ化や投機的デコーディングにより各トークンの疎なルーティング集合の和集合が膨張し、多数の専門家重みをメモリから読む問題を、バッチ全体のゲート得点を使う動的専門家選択として解く。再学習なしで各層の専門家集合を制限し、通常バッチで活性専門家を最大30%削減、専門家並列でGPU当たりピーク負荷を約3倍削減、投機的デコーディングで最大14%のスループット向上を報告する。",
+    "list_summary": "バッチ全体のルーター得点を集約して専門家集合を動的共有し、再学習なしで専門家混合推論の活性数・GPU負荷・投機デコード性能を改善する。",
+    "authors": [
+      "Daniil Vankov",
+      "Nikita Ivkin",
+      "Kyle Ulrich",
+      "Xiang Song",
+      "Ashish Khetan",
+      "George Karypis"
+    ],
+    "authors_affiliations": "論文本文の著者所属に従う",
+    "published": "2026-02-06",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "プレプリント v1（2026-02-06）",
+    "lineage": "専門家混合推論 / バッチ対応専門家選択 / 専門家並列 / 投機的デコーディング",
+    "topics": [
+      "専門家混合推論",
+      "バッチ対応専門家選択",
+      "専門家並列",
+      "投機的デコーディング",
+      "動的枝刈り"
+    ],
+    "importance": "トークン単位の疎性がバッチでは失われるという実運用上のメモリ入出力問題を直接対象とし、通常バッチ・専門家並列・投機的デコーディングを同じバッチ効用の考え方で扱う。",
+    "implementation": "推論時にルーター得点を集約して専門家集合を選ぶ方式で、再学習・微調整を必要としない。",
+    "hardware_evaluation": "専門家混合推論の通常バッチ、複数GPUの専門家並列配置、GPT-OSS 120Bを含む投機的デコーディング設定で評価。",
+    "quality_effect": "専門家予算を削減しつつ精度低下を概ね1%以内に抑える設定を評価し、投機的デコードでは統計的ノイズ内の品質を報告する。",
+    "source": "https://arxiv.org/abs/2602.07265",
+    "sources": [
+      "https://arxiv.org/abs/2602.07265",
+      "https://arxiv.org/html/2602.07265"
+    ],
+    "code": null,
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "一次論文本文",
+    "references_total": 0
+  },
+  "reservation": {
+    "claim_id": "claim-91633015dfa64bbba8318e58",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
