@@ -1,13 +1,4 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-f1e008f8fdda71bd88025432",
-  "job_id": "job-research-97e05693104abe69",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f1e008f8fdda71bd88025432",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-f1e008f8fdda71bd88025432","job_id":"job-research-97e05693104abe69",
+ "data":{"canonical_id":"arXiv:2509.10377","arxiv_id":"2509.10377","doi":"10.48550/arXiv.2509.10377","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs","summary":"DERNは疎な混合エキスパートのメモリ削減に対し、低重要度エキスパートを単純に捨てず、その内部をゲート・上向き・下向き射影の対応ベクトルからなるニューロン級セグメントへ分解して知識を回収する。ルータ統計で残すエキスパートを決め、削除側セグメントを局所構造類似度で互換な残存エキスパートへ選択的に移し、球面重み付きk平均で再び所定幅へ圧縮する。再学習なしでMixtral、Qwen2、DeepSeek-MoEを圧縮し、Mixtralを8から6エキスパートへ減らした場合は平均80.88から80.04を維持しつつメモリを88.7GBから66.0GBへ、処理量を7962.9から9395.0 token/sへ改善した。","list_summary":"低重要度エキスパートを削除後、内部ニューロンをセグメントとして互換な残存エキスパートへ再配置・クラスタ統合し、再学習なしで知識を回収するMoE圧縮法。","authors":["Yixiao Zhou","Ziyu Zhao","Dongzhou Cheng","Zhiliang Wu","Jie Gui","Yi Yang","Fei Wu","Yu Cheng","Hehe Fan"],"authors_affiliations":"Zhejiang University; Shanghai Innovation Institute; Southeast University; Shanghai AI Laboratory; The Chinese University of Hong Kong","published":"2025-09-12","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1; manuscript notes acceptance to EMNLP 2025 in external metadata but primary PDF front matter is arXiv v1","lineage":"MoE compression / expert pruning / neuron-level recombination / expert reconstruction","topics":["MoE圧縮","エキスパート剪定","ニューロン再結合","再学習不要圧縮","推論メモリ削減"],"importance":"エキスパート全体の平均化で生じるニューロン配置ずれと意味衝突を、最小機能セグメントへの分解と選択的移送で回避する。剪定後の知識回収と実測推論効率を同時に扱う点が重要。","implementation":"3段階の後処理圧縮。128本のC4較正系列からルータ統計を集め、セグメント類似度計算と球面重み付きk平均で再構成する。追加学習は不要。","hardware_evaluation":"全実験は2×NVIDIA H100。推論効率はvLLM、C4 1,024 samples、64並列でMixtralを測定。","quality_effect":"Mixtral 6/8 expertで平均80.04対元80.88、4/8で70.79。Qwen2は45.1Bで85.73対元86.14、33.3Bでも83.56。DeepSeekは高圧縮ほど劣化が大きい。","source":"https://arxiv.org/abs/2509.10377","sources":["https://arxiv.org/abs/2509.10377","https://arxiv.org/pdf/2509.10377"],"code":null,"last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary manuscript references section","references_total":44},
+ "reservation":{"claim_id":"claim-f1e008f8fdda71bd88025432","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
