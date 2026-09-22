@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f4ffcfe74b4d2743285b717b",
+  "attempt_id": "attempt-1d2aa8910242a0393fe3536a",
   "job_id": "job-research-be16d214d5c628cd",
   "data": {
     "overview": "AFD-Ledgerは完全列挙可能な5 reference caseで20組の評価だけで大域最適AFD配置を回収し、Catalog Eでは64→20、Catalog Sでは121→20と完全配置評価を68.8%/83.5%削減した。LongCat 2.0の3物理workloadでも分析と実測が同じarchitecture decisionを選び、AFD/同居throughput比の誤差は6.6〜9.6%。その上で、同種AFDは36設定中7件だけ勝ち、異種AFDは条件次第で大きく勝つが機種単体指標では最適pairを決められないことを示した。",
@@ -63,7 +63,7 @@
     "additional_findings": "runtime overheadをAFD側へ追加したsensitivityでは約10%まで代表D/E・Q/EのAFD選択が維持され、約20%で双方ともcollocatedへ切り替わる。物理検証で観測した6.6〜9.6%誤差より小さい差はnear tieとして扱う。"
   },
   "reservation": {
-    "claim_id": "claim-f4ffcfe74b4d2743285b717b",
+    "claim_id": "claim-1d2aa8910242a0393fe3536a",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
