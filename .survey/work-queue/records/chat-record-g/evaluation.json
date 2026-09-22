@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-d67f024461753c90c6dd6c10",
-  "job_id": "job-research-47be6c5f34f13438",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d67f024461753c90c6dd6c10",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d67f024461753c90c6dd6c10","job_id":"job-research-47be6c5f34f13438","data":{"hardware":"品質・量子化処理はNVIDIA A100-PCIe-80GB、オンライン推論はNVIDIA A6000。推論条件はbatch 1、prefill 256、generation 128。","software":"整数線形計画はGurobi Optimizer。7タスクはlm-evaluation-harness 0.4.9.1。公開実装はGitHub zjiayu064/BitsMoE。","methodology":"DeepSeek-V2-Lite、Qwen3-30B-A3B-Base、Qwen3-Next-80B-A3B-Instruct、Qwen1.5-MoE-A2.7B、Mixtral-8x7B-v0.1を対象に、MoE専門家重みだけを量子化し注意層はFP16で共通に保つ。GPTQ、HQQ、MoEQuant、MiLoと比較し、全方式group size 128。GPTQとBitsMoEはC4 1024サンプルで校正する。C4 PPLとHellaSwag、MathQA、MMLU、OpenBookQA、WinoGrande、HumanEval、GSM8Kを評価し、2/3ビット中心にBitsMoEは1.4〜1.8ビットも測る。アブレーションは独立SVD、共有基底量子化、FP16共有基底＋均一ビット、完全な適応ビットを同一実効2ビット予算で比較する。","scope":"量子化対象はMoE専門家重みだけで、注意層、活性、KVキャッシュは未圧縮。整数計画は成分間量子化誤差を対角近似し、下向き射影にも経験的代理重要度を使う。層・射影間の上位ビット予算は均等で、層感度まで最適化していない。"},"reservation":{"claim_id":"claim-d67f024461753c90c6dd6c10","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
