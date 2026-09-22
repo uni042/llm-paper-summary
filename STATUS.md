@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 05:11:38 JST**
+> 自動生成: **2026-09-23 05:17:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **206** |
-| 未claim Research job | **205** |
-| 直近24hの検証済みResearch収録 | **67** |
-| 最終検証済みResearch収録 | **09-23 05:11:31 JST（7秒前）** |
+| 収録候補論文 | **205** |
+| 未claim Research job | **204** |
+| 直近24hの検証済みResearch収録 | **68** |
+| 最終検証済みResearch収録 | **09-23 05:17:34 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **206** |
+| canonical_id確認済みの一意な候補論文 | **205** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **206** |
+| 非終端Research job合計 | **205** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,13 +34,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6204** |
-| 処理済み | **623** |
-| 未処理 | **5581** |
-| 収録済みとして除外 | **515** |
+| 処理済み | **624** |
+| 未処理 | **5580** |
+| 収録済みとして除外 | **516** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
-- 消化率: **10.0%**
+- 消化率: **10.1%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（20時間39分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（20時間45分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 05:17:34 JST** [research] `arXiv:2507.23279` — Unveiling Super Experts in Mixture-of-Experts Large Language Models
+  - job: `.survey/work-queue/jobs/job-research-b921c5addc92d695.json`
+  - result: `.survey/work-queue/results/research/attempt-40f2100aeb26ce98eb0d15a5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-40f2100aeb26ce98eb0d15a5.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md`
 - **09-23 05:11:31 JST** [research] `arXiv:2512.14531` — VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse
   - job: `.survey/work-queue/jobs/job-research-6e36f8b25c1d84c6.json`
   - result: `.survey/work-queue/results/research/attempt-900cad5c6178df049a8d9dec.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-98e2f1fac5c29a094f21cbf1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-98e2f1fac5c29a094f21cbf1.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2606.09885-tenp-trapezoidal-expert-neuron-pruning.md`
-- **09-23 03:20:32 JST** [research] `arXiv:2512.18425` — MoE Pathfinder: Trajectory-driven Expert Pruning
-  - job: `.survey/work-queue/jobs/job-research-20085e82ab231044.json`
-  - result: `.survey/work-queue/results/research/attempt-c7fc5d8a2ddc77f17046a7e2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c7fc5d8a2ddc77f17046a7e2.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md`
 
 ### Audit
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **206** |
+| ready | **205** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **952** |
+| inference/training/survey配下の論文Markdown実体 | **953** |
 
 ### immutable submissionの未照合
 
