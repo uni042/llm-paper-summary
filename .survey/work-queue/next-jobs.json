@@ -8,8 +8,8 @@
       "blocked": 2
     },
     "research": {
-      "ready": 316,
-      "blocked": 23,
+      "ready": 315,
+      "blocked": 24,
       "completed": 362,
       "superseded": 3,
       "deferred": 3,
@@ -17,9 +17,9 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 316,
+    "ready_research_audit": 315,
     "actively_claimed": 0,
-    "claimable": 316
+    "claimable": 315
   },
   "next_jobs": [
     {
@@ -79,20 +79,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-031ae3bbff44f455",
-      "type": "research",
-      "lane": null,
-      "priority": 98,
-      "canonical_id": "arXiv:2603.19172",
-      "title": "DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge",
-      "source_url": "https://arxiv.org/abs/2603.19172",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.19172-dymoe-dynamic-mixed-precision.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-0752468d0c493a74",
       "type": "research",
       "lane": null,
@@ -135,6 +121,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-4dc1463f3235b886",
+      "type": "research",
+      "lane": null,
+      "priority": 98,
+      "canonical_id": "arXiv:2603.18492",
+      "title": "AIMER: Calibration-Free Task-Agnostic MoE Expert Pruning",
+      "source_url": "https://arxiv.org/abs/2603.18492",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.18492-aimer-calibration-free-pruning.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-22T02:30:28+00:00"
+  "generated_at": "2026-09-22T02:31:46+00:00"
 }
