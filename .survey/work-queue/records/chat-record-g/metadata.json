@@ -21,16 +21,16 @@
     "lineage": "adaptive expert computation / dynamic MoE routing / expert sparsification",
     "topics": ["MoE", "動的ルーティング", "専門家疎性", "二値マスク", "直通推定量", "vLLM", "CUDA"],
     "importance": "専門家選択と疎性制御を分離し、ルーティング順位に依存せずTop-K内の任意専門家を削除でき、ゼロ専門家活性化も許す点が既存の累積確率型動的ルーティングと異なる。",
+    "hardware_evaluation": "著者はcustom CUDA kernelをvLLMへ統合し、Qwen1.5-MoE-A2.7B、DeepSeekV2-Lite、Qwen3-30B-A3Bを含むMoEで実推論を評価する。主なシステム測定は単一GPU環境で、MoE層FLOPs、デコード時間、スループット、プリフィル時間を比較する。",
     "quality_effect": "疎性係数に応じて品質と計算量を連続的に交換する損失型高速化であり、完全な出力同値性は保証しない。論文は実用設定で元モデル性能の98%以上を保持する構成を報告する。",
     "source": "https://arxiv.org/abs/2605.14438",
     "sources": ["https://arxiv.org/abs/2605.14438", "https://arxiv.org/pdf/2605.14438", "https://github.com/Time-Rune/BEAM"],
     "code": "https://github.com/Time-Rune/BEAM",
     "implementation": "vLLMのMoEルーティングへcustom CUDA kernelを統合し、mask_route_kernelで除外対象を標識し、moe_align_block_size_kernelでマスク済み専門家を実FFN計算から除外する。",
-    "last_checked": "2026-09-23"
+    "last_checked": "2026-09-23",
+    "references": [],
+    "references_checked_at": "2026-09-23",
+    "references_source": "primary-reference-section; normalized identifiers not recorded in this worker slot"
   },
-  "reservation": {
-    "claim_id": "claim-71174da29a72754d44fbffa1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-71174da29a72754d44fbffa1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
