@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 09:35:34 JST**
+> 自動生成: **2026-09-22 09:36:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -115,9 +115,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.07964` — EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference / worker `scheduled-chat-30`
-  - claim: **09-22 09:34:46 JST** / heartbeat: **—** / lease expiry: **09-22 11:04:46 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a88935db522d5bcc.json`
+- `DOI:10.1145/3789240.3829347` — DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving / worker `scheduled-chat-30`
+  - claim: **09-22 09:35:41 JST** / heartbeat: **—** / lease expiry: **09-22 11:05:41 JST**
+  - evidence: `.survey/work-queue/claims/job-research-85f2bc3e024d7c6c.json`
 
 #### Audit
 
@@ -165,8 +165,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **228** |
-| └ Research | **156** |
+| 成功result未照合のimmutable submission | **229** |
+| └ Research | **157** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
