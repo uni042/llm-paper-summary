@@ -1,20 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-59dc9473086573b3d534c617","job_id":"job-research-10bf8d55e9caa5c4",
-  "data":{
-    "canonical_id":"arXiv:2605.07719","arxiv_id":"2605.07719","doi":"10.48550/arXiv.2605.07719","arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI","cs.PF"]},
-    "title":"An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference",
-    "summary":"Fluxionは、長文復号でKVキャッシュをCPUメモリへ置く構成を対象に、CPU側の疎注意だけを高速化するのではなく、出力寄与に基づくKV予算配分、ヘッド別の選択粒度・予算決定、CPUとGPUの動的協調実行を同時に最適化する。41次元特徴から0.112Mパラメータの予測器がストリーミングヘッドと検索ヘッドを判別し、検索ヘッドではブロック粒度と必要予算の関係を予測する。CPUとGPUは共有優先度キューから検索タスクを取り、CPU上の疎注意とCPUメモリからGPUへKVを運ぶ経路を動的に使い分ける。A100とAMD EPYCの実機で、最強の固定疎ハイブリッド基準に対しLlamaで2.5〜3.7倍、Qwenで1.9〜3.4倍の出力トークン時間短縮を示し、LongBenchとL-Evalの平均品質差は完全注意に対して最大0.26点に留める。",
-    "list_summary":"CPU常駐KV向けに出力寄与ベース予算配分とCPU・GPU協調疎注意を統合し、長文復号を最大3.7倍高速化する。",
-    "authors":["Feiyu Yao","Zhixiong Niu","Xiaqing Li","Yongqiang Xiong","Juan Fang","Qian Wang"],
-    "authors_affiliations":"Beijing University of Technology／Microsoft Research／Beijing Jiaotong University",
-    "published":"2026-05-08","publication":"arXiv:2605.07719v1","publication_type":"preprint","publication_status":"arXiv preprint","publication_version":"v1",
-    "topics":["CPU-GPUハイブリッド推論","KVキャッシュオフロード","疎注意","長文復号","異種デバイススケジューリング"],
-    "importance":"CPU常駐KVキャッシュを前提に、転送量・CPU疎注意・GPU遊休を一体で扱うため、階層メモリ／オフロード系統と疎注意系統を直接接続する研究である。",
-    "hardware_evaluation":"実機評価","hardware_details":"AMD EPYC 7V13、24 CPUコア、220GBホストメモリ、推定57GB/sメモリ帯域、NVIDIA A100 80GB、PCIe 4.0理論32GB/s。20 CPUコアを疎注意計算に使用。",
-    "quality_effect":"近似疎注意。LongBench平均差は完全注意比Qwen -0.13、Llama +0.02、L-Evalは-0.24/-0.26。RULER平均はQwen -1.54、Llama -0.78。",
-    "source":"https://arxiv.org/abs/2605.07719","sources":["https://arxiv.org/abs/2605.07719","https://arxiv.org/pdf/2605.07719"],"code":null,
-    "implementation":"約2K行のPythonと3K行のC++/CUDAで実装。CPUはFBGEMM、AVX-512、OpenMP、GPUは複数CUDAストリーム、FlashDecoding、Top-Kカーネル、UVAを利用する。","implementation_status":"論文中で実装詳細あり。公式コードURLは確認できず。","evaluation_type":"実機エンドツーエンド復号評価と品質評価","last_checked":"2026-09-22",
-    "references":[],"references_checked_at":"2026-09-22","references_source":"arXiv PDF reference section","references_total":55
-  },
-  "reservation":{"claim_id":"claim-59dc9473086573b3d534c617","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-60dd204b55168985dd756768",
+  "job_id": "job-research-ee748625f4c011bb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-60dd204b55168985dd756768",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
