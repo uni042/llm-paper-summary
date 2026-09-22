@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-f69ade789f2e4b767fc19eaf",
+  "job_id": "job-research-11ed8db2a9d8a3d3",
+  "claim_id": "claim-f69ade789f2e4b767fc19eaf",
+  "worker_id": "scheduled-chat-00",
+  "status": "blocked",
+  "reason": "一次資料全文を十分取得できない。arXiv書誌・抄録は取得できたがHTML本文取得は失敗し、著者公式GitHubリポジトリも確認したものの論文本文は収録されていない。第三者PDF/要約は見つかったが、5スロットの本文根拠には使用しない。",
+  "retrieval_evidence": [
+    "https://arxiv.org/abs/2604.10603 — 書誌・抄録のみ取得",
+    "https://arxiv.org/html/2604.10603 — この実行環境では本文取得失敗",
+    "https://github.com/luisbalru/MoEITS — 著者公式実装を確認、リポジトリ直下に論文本文なし",
+    "University of Granada/著者配布版を題名・著者名で探索したが本文へ到達できず"
+  ],
+  "blocked_at": "2026-09-22T06:24:30Z"
+}
