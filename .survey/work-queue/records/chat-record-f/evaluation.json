@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-f437cb4dac9732a5ed37dd62",
   "job_id": "job-research-791dd06c8f3ceecf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f437cb4dac9732a5ed37dd62",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "適応学習時間はNVIDIA H200×8で測定し、Qwen3-30B-A3Bは30.12時間、GLM-4.7-Flashは61.37時間。推論効率は単一H200、最大同時実行32で測定する。論文は実験基盤としてH200とH20を記載する。",
+    "software": "自己蒸留・学習基盤としてslimeとMegatron、推論基盤としてSGLangを使用する。著者実装はTsinghuaC3I/ZEDAとして公開されている。元MoEを固定教師とし、学生側へゼロ専門家を追加する。",
+    "methodology": "Qwen3-30B-A3BとGLM-4.7-Flashを対象に、数学5種、コード4種、指示追従2種の計11ベンチマークで評価する。生成設定は温度0.6、top-p=0.95、top-k=20、最大38K。AIMEはavg@32、コード4種はavg@8、その他はavg@1。比較対象はAdaMoE、Dynamic Skipping、通常専門家数を単純半減するNET、SFTのみなど。推論は8192系列長、学習データから無作為抽出した256例、入出力トークン総数を方式間で揃え、単一H200でプリフィルとデコードのスループットを測る。分布外評価としてMMLU-ReduxとGPQA-Diamondも実施する。",
+    "scope": "主モデルは30B級の2種類に限られ、より大規模なMoEは計算資源制約で未評価。エージェント型の長期タスクも対象外である。速度向上は系列長が伸びるほど低下し、Qwenのプリフィルは2048で1.21倍から8192で1.18倍、デコードは1.25倍から1.19倍へ低下する。"
+  },
+  "reservation": {"claim_id": "claim-f437cb4dac9732a5ed37dd62", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
