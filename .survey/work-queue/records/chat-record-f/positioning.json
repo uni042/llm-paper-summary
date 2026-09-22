@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-302229314470f55acb21a513","job_id":"job-research-6723d600d731caca","data":{"limitations":"router早期収束とbalance lossがkey expert under-utilizationを生むという説明は観察的で、事前学習を条件制御して因果分離した証明ではない。key expertはdomain calibrationから選ぶため、未見domainやdistribution shiftでは再校正が必要になり得る。Pick候補探索は専門家ごとの除去推論を伴い、expert数・layer数が大きいモデルでは校正コストが増える。BanのK_min=3やλは経験的で、別MoE設計への普遍性は未証明。","differences":"EAC-MoE等のexpert pruning/compressionがweightや専門家集合を恒久的に変えるのに対し、Banはtoken×layerごとに実行数を変えるだけで専門家自体を削除しない。DESはrouting weight比だけ、ODPはkey-token保護を加えるが、Banは事前計測したlayer sensitivityと実行時token sensitivityを組み合わせる。Pickはfrequencyだけでなく除去時logit KLでkey expertを選び、Top-2k範囲制約でrouter判断を部分的に尊重する。","implementation_status":"EMNLP 2026 Findings。学習不要で既存DeepSeek/Qwen3 checkpointへ適用し、vLLM 0.9.1でspeedupを実測。論文は26ページv3。専用コードURLはarXiv本文から確認できなかったため未記載。","research_positioning":"Ban&PickはMoE推論最適化の中でも、weight圧縮やmemory placementより前段の『どの専門家を実行するか』をpost-trainingで再最適化する手法に位置する。fine-grained MoEの専門家多様性を維持したまま、事前学習時の安定性優先routerを推論目的へ補正する点が特徴である。\n\nPickはexpert importanceを利用頻度だけで測らず、除去時の出力分布KLという機能的影響度を使う。これはexpert pruningのsaliency評価と近いが、重要expertを残すだけでなく、routerが見逃したtokenで積極的に選択へ昇格させる点が異なる。Top-2k範囲制約により、domain-level importanceとtoken-level router relevanceを二段で組み合わせる。\n\nBanは固定Top-kをlayer×tokenの二次元で可変化する。低感度中間層やrouting weightが上位へ集中したtokenでは3付近まで削り、高感度層・均等weight tokenでは8に近づける。この考え方はadaptive computationとして直接的で、expert cacheのmiss削減やoffload転送量削減にも波及する。実行expertが減ればGPUに必要なexpert fetchも減るため、階層メモリ方式と補完関係にある。\n\nシステム面ではvLLMで1.22〜1.27倍の実速度向上を示す点が重要で、FLOPsだけの理論削減ではない。一方、論文はexpert cache、PCIe/NVMe転送、tensor/expert parallel通信を分解していないため、速度向上がcompute-boundでない環境へそのまま移るとは限らない。offload型推論ではBanがexpert demand distributionを変えるため、cache policyとの共同最適化が次の研究候補になる。\n\nSub-MoEのような恒久的expert mergeとは直交する。Sub-MoEで専門家集合を縮めた後にBanでtokenごとのactive数を変える、あるいはBanのlayer sensitivityをmerge率配分へ利用するなどの組合せが考えられる。Pickは重要expertを明示するため、重要expertだけGPU常駐させるpriority cacheやprefetch policyへのsignalとしても利用可能である。"},"reservation":{"claim_id":"claim-302229314470f55acb21a513","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-55659afde31ffef33110b7a9",
+  "job_id": "job-research-f6f44c938a31a9f9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-55659afde31ffef33110b7a9",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

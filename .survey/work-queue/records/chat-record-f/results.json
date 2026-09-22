@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-302229314470f55acb21a513","job_id":"job-research-6723d600d731caca","data":{"overview":"Pick単独は四モデルで既存routing補正baselineを上回り、Qwen3-30BではAIME2024 80.67→85.33、GPQA 65.66→69.19、HumanEval+ 71.34→75.61。Ban単独はQwen3-30Bで平均active expertを8→4.82に減らし1.25倍高速化しつつAIME 80.00、GPQA 64.65へ小幅低下に抑える。両者を組み合わせると4.83 experts/token、1.25倍でAIME 84.66、GPQA 68.18となり、速度向上と精度向上を同時に得る。","key_results":[{"metric":"Qwen3-30B Pick AIME2024","value":"85.33","baseline":"80.67","condition":"Pick only, 5-run AIME2024","interpretation":"key expert強化だけで+4.66pt。"},{"metric":"Qwen3-30B Ban","value":"Avg-Topk 4.82 / speedup 1.25x","baseline":"Topk 8 / 1.00x","condition":"vLLM 0.9.1","interpretation":"約40%少ないexpert実行が実速度向上へ反映。"},{"metric":"Qwen3-30B Ban&Pick","value":"AIME 84.66 / GPQA 68.18 / 1.25x","baseline":"80.67 / 65.66 / 1.00x","condition":"Avg-Topk 4.83","interpretation":"精度と速度を同時改善。"},{"metric":"Qwen3-235B Ban&Pick","value":"AIME 86.67 / GPQA 72.73 / 1.26x","baseline":"84.67 / 71.21 / 1.00x","condition":"Avg-Topk 4.79 vs 8","interpretation":"235B級でも改善が再現。"},{"metric":"Ban vs DES on Qwen3-30B GPQA","value":"64.65","baseline":"DES 56.06、ODP 60.10、original 65.66","condition":"約5 experts/token","interpretation":"同程度の削減速度で精度損失を大幅抑制。"},{"metric":"DeepSeek-V2.5 Ban&Pick","value":"AIME 26.00 / GPQA 47.98 / 1.23x","baseline":"23.33 / 47.47 / 1.00x","condition":"Avg-Topk 3.99 vs 6","interpretation":"Qwen3以外でも速度＋性能改善。"}],"negative_results":"Pickのforced replacementはrouter適合性を無視してAIME2024やMath-500を悪化させ、無条件介入が危険。Ban単独ではHumanEval+などpruning-sensitive taskで低下が残り、Qwen3-235Bでは78.05→75.61。DeepSeek-V2-Lite Ban&PickのHumanEval+も50.61→50.00でわずかに低下する。K_minを3未満にするとcollapseする経験的制約がある。","interpretation":"高頻度専門家すべてが重要ではなく、除去時KLが大きい少数だけが性能へ強く寄与する。一方、固定Top-kの下位expertはtoken・layerによって冗長性が大きく異なる。PickとBanは同じrouter出力を『不足している重要expertの補強』と『余分なexpertの削減』という反対方向から補正するため、組合せでPareto改善が得られる。","quality_impact":"Ban単独は速度重視で小幅精度低下、Pick単独は精度重視、Ban&Pickは両者の中間。Qwen3-30Bでは六指標すべてがbaseline以上になり1.25倍速度も維持するが、全モデル・全taskで無損失ではない。"},"reservation":{"claim_id":"claim-302229314470f55acb21a513","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-55659afde31ffef33110b7a9",
+  "job_id": "job-research-f6f44c938a31a9f9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-55659afde31ffef33110b7a9",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

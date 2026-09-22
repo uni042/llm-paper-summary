@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-302229314470f55acb21a513","job_id":"job-research-6723d600d731caca","data":{"hardware":"推論速度はvLLM 0.9.1 backendで全dataset総推論時間から相対speedupを算出。対象はDeepSeek-V2-Lite-Chat 16B、DeepSeek-V2.5-1210 236B、Qwen3-30B-A3B、Qwen3-235B-A22B。","software":"vLLM 0.9.1。Pick/Banはweight更新なしのrouting補正。key expert探索とlayer sensitivityにはMathQA等の校正sampleを使用する。","methodology":"数学はAIME2024を5回平均とMath-500、general reasoningはGPQA-DiamondとMMLU-Pro、codeはLiveCodeBenchとHumanEval+を評価する。DeepSeek-V2-LiteのみAIMEの代わりにGSM8Kを含む。PickはDynamic routing調整やTips/Rice等と比較し、BanはDynamic Expert Skip（DES）とOnline Dynamic Pruning（ODP）を比較する。Ban表では平均active experts/token、各benchmark精度、vLLM speedupを同時に報告し、Ban&Pickはbaselineとの総合trade-offを評価する。","scope":"key expertはdomain calibrationに依存し、未知domainで同じexpert集合が最適とは限らない。Pickの因果説明はrouter早期収束＋balance lossという観察に基づくが、論文自身が完全なpretraining再実験による因果分離は行っていないと認める。BanはK_min=3未満でcollapseする経験則を持ち、全fine-grained MoEで同じ閾値が成立する保証はない。"},"reservation":{"claim_id":"claim-302229314470f55acb21a513","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-55659afde31ffef33110b7a9",
+  "job_id": "job-research-f6f44c938a31a9f9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-55659afde31ffef33110b7a9",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
