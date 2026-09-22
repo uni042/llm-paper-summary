@@ -1,13 +1,21 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-d176f3e35d1e1d54e70ae28c",
-  "job_id": "job-research-1922ded1807d40e6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d176f3e35d1e1d54e70ae28c",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d176f3e35d1e1d54e70ae28c","job_id":"job-research-1922ded1807d40e6",
+  "data":{
+    "canonical_id":"arXiv:2110.01786","arxiv_id":"2110.01786","doi":"10.18653/v1/2022.findings-acl.71","openreview_id":null,
+    "arxiv_categories":{"primary":"cs.CL","cross_list":[]},
+    "title":"MoEfication: Transformer Feed-forward Layers are Mixtures of Experts",
+    "summary":"Transformerのフィードフォワード層では入力ごとに活性化するニューロンがごく一部であるという観測から、既存の密なフィードフォワード層を同じパラメータのまま機能的な専門家群へ分割し、入力ごとに必要な専門家だけを選ぶMoEficationを提案する。共活性化グラフ分割またはパラメータクラスタリングで専門家を構成し、類似度または小型多層パーセプトロンでルーティングする。T5とBERT系の複数タスクでフィードフォワード層パラメータの10〜30%だけを条件付き使用しながら元性能の95%以上を維持し、25%使用時にCPUで約2倍、GPUで約1.2倍の高速化を報告する。",
+    "list_summary":"密なTransformerのフィードフォワード層を共活性化するニューロン単位で専門家化し、入力ごとに一部だけを実行する疎推論方式。",
+    "authors":["Zhengyan Zhang","Yankai Lin","Zhiyuan Liu","Peng Li","Maosong Sun","Jie Zhou"],
+    "authors_affiliations":"Tsinghua University; WeChat AI, Tencent Inc.; Beijing Academy of Artificial Intelligence",
+    "published":"2022-05-22","publication":"Findings of ACL 2022, pp. 877-890","publication_type":"Conference paper","publication_status":"Published",
+    "lineage":"dense-to-MoE conversion / conditional FFN computation / expert routing","topics":["混合専門家モデル","条件付き計算","フィードフォワード層","動的推論","モデル高速化"],
+    "importance":"事前学習済み密Transformerを再事前学習せず機能的専門家へ変換し、自然な活性疎性を推論計算削減へ直接利用する代表的なdense-to-MoE研究。",
+    "hardware_evaluation":"CPUとGPUの実測推論時間を比較し、フィードフォワード層パラメータ25%使用時にCPU約2倍、GPU約1.2倍の高速化を報告。",
+    "quality_effect":"T5/BERT系の複数下流タスクでフィードフォワード層パラメータの10〜30%を条件付き使用しながら元モデル性能の95%以上を維持。",
+    "source":"https://aclanthology.org/2022.findings-acl.71/","sources":["https://aclanthology.org/2022.findings-acl.71/","https://aclanthology.org/2022.findings-acl.71.pdf","https://arxiv.org/abs/2110.01786"],
+    "code":"https://github.com/thunlp/MoEfication","implementation":"公開実装あり。フィードフォワード層の専門家分割、ルーター学習、条件付き専門家実行を提供。","last_checked":"2026-09-22",
+    "references":[],"references_checked_at":"2026-09-22","references_source":"ACL Anthology PDF reference section","references_total":0
+  },
+  "reservation":{"claim_id":"claim-d176f3e35d1e1d54e70ae28c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
 }
