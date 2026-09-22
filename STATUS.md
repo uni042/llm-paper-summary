@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 09:33:23 JST**
+> 自動生成: **2026-09-22 09:34:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -115,9 +115,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.15636` — Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash / worker `scheduled-chat-30`
-  - claim: **09-22 09:33:11 JST** / heartbeat: **—** / lease expiry: **09-22 11:03:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-03793bd297310cea.json`
+- `DOI:10.1145/3806645.3807820` — Dynamo-MoE: Accelerating Sparse Large Model Inference with Dynamic Parallelization / worker `scheduled-chat-30`
+  - claim: **09-22 09:33:54 JST** / heartbeat: **—** / lease expiry: **09-22 11:03:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-43a2b5f54de86439.json`
 
 #### Audit
 
@@ -165,8 +165,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **225** |
-| └ Research | **153** |
+| 成功result未照合のimmutable submission | **226** |
+| └ Research | **154** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
