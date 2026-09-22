@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 11:10:46 JST**
+> 自動生成: **2026-09-22 11:11:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -115,9 +115,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.27866` — FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models / worker `scheduled-chat-00`
-  - claim: **09-22 11:10:26 JST** / heartbeat: **—** / lease expiry: **09-22 12:40:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-00f6a78e028bd698.json`
+- `arXiv:2605.08575` — Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution / worker `scheduled-chat-00`
+  - claim: **09-22 11:11:11 JST** / heartbeat: **—** / lease expiry: **09-22 12:41:11 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5cd2beb9d9cae3d8.json`
 
 #### Audit
 
