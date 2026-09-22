@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6632d1664daf09912489991a",
-  "job_id": "job-research-777ca56d26763813",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6632d1664daf09912489991a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6632d1664daf09912489991a","job_id":"job-research-777ca56d26763813","data":{"overview":"25% sparsityで4モデルすべての5 zero-shot taskにおいて既存MoE restructuringを上回る。Llama-2 7Bではtraining-free MMLU 42.50%でfine-tuned LLaMA-MoE-v2の38.02%を超え、2k fine-tuning後44.02%。Llama-2 7BでFLOPs -16.6%、throughput +14.8%、Qwen3-30B hierarchical適用でFLOPs -18.5%、throughput +14.3%。Qwen2.5-72B compute-bound 32k contextでは最大1.17× speedup。","key_results":[{"metric":"Llama-2 7B MMLU-5shot","value":"44.02%","baseline":"EMoE 43.11%、LLaMA-MoE-v2 38.02%","condition":"25% sparsity、2k fine-tuning","interpretation":"activation-based groupingとanalytical routerが少量dataでも高い品質を保つ。"},{"metric":"Training-free MMLU","value":"42.50%","baseline":"LLaMA-MoE-v2 fine-tuned 38.02%","condition":"Llama-2 7B、25% sparsity","interpretation":"routerを解析的に初期化するだけで強いbaselineになる。"},{"metric":"Llama-2 7B throughput","value":"52.7 tok/s (+14.8%)","baseline":"dense 45.9 tok/s","condition":"25% sparsity","interpretation":"FLOPs -16.6%が実throughput改善へつながる。"},{"metric":"Qwen3-30B-A3B hierarchical throughput","value":"1.36 tok/s (+14.3%)","baseline":"1.19 tok/s","condition":"既存MoE expert内部へ再帰適用","interpretation":"dense-to-MoEだけでなく既存MoEにも追加sparsityを導入可能。"},{"metric":"Qwen2.5-72B industrial speedup","value":"1.17×","baseline":"dense","condition":"S1A5E8、compute-bound、32k context","interpretation":"長context・compute-boundで最大利得。"},{"metric":"WINA併用 throughput","value":"55.97 tok/s (+22.0%)","baseline":"dense 45.88 tok/s","condition":"Llama-2 7B","interpretation":"expert-levelとneuron-level sparsityが加算的。"}],"negative_results":"25% sparsityのsingle-sampleではdenseより品質低下が残り、Llama-2 7BのPIQA/ARC-E/ARC-C平均はdense 66.51に対し60.59。sparse routingはgeneration varianceを増やす。ただし5-sample self-consistencyで65.31まで回復し、Qwen3では68.59→75.50とdense 76.19へ接近する。calibration domain依存も完全には消えない。","interpretation":"性能の大半はfine-tuningではなく構造選択から来る。analytical routerへの置換だけで既存clustering法が+2〜6pt、さらにactivation clustering＋shared expertで+5〜7pt改善し、両要素が独立寄与する。","quality_impact":"25% FFN sparsityでもdenseとの差は残るが、従来MoE化より大幅に小さい。低sparsity 12.5%ではLlama-2 7B PPLがdense 5.27に対し5.25とわずかに改善する条件もある。"},"reservation":{"claim_id":"claim-6632d1664daf09912489991a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
