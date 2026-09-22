@@ -1,13 +1,4 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-f1e008f8fdda71bd88025432",
-  "job_id": "job-research-97e05693104abe69",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f1e008f8fdda71bd88025432",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-f1e008f8fdda71bd88025432","job_id":"job-research-97e05693104abe69",
+ "data":{"hardware":"全実験は2基のNVIDIA H100で実施する。推論効率測定はMixtralについてvLLMを用い、C4から1,024サンプル、64並列でメモリ使用量、毎秒トークン数、最初のトークンまでの時間を比較する。","software":"対象はMixtral-8×7B-Instruct、Qwen2-57B-A14B-Instruct、DeepSeek-MoE-16B-Chat。評価プロンプトと判定はOpenCompassに従い、推論はvLLM。比較はNAEE、M-SMoE、LLM-PrunerのTaylor版で、再学習不要条件を揃えるためM-SMoEのエキスパート内部圧縮は無効化する。","methodology":"較正にはC4から無作為抽出した128系列を使い、各系列は2048トークン。Mixtralは8個から6個・4個、Qwen2は64個から48個・32個、DeepSeekは64個から56個・48個へ各層のエキスパート数を減らす。BoolQ、PIQA、HellaSwag、ARC-Easy、ARC-Challenge、OpenBookQA、WinoGrandeをゼロショット生成で評価し、MMLUは少数例提示で評価する。回答は命令調整済みモデルが直接生成し、テンプレート文字列照合で正誤判定する。さらにセグメント再配置閾値、類似度に使う射影成分、クラスタ初期化、重要度重み付けを個別に除去・変更して寄与を検証する。","scope":"3系統のMoEと複数圧縮率を同じ再学習不要条件で比較し、精度だけでなくH100上の実推論メモリ・処理量・初回応答遅延も測る。一方、効率実測は主にMixtralであり、Qwen2やDeepSeekの推論速度が同じ比率で改善するとは限らない。DeepSeekではエキスパート間類似度が低く、高剪定率で性能低下が大きいため、構造特化したモデルへの一般化限界も明示される。"},
+ "reservation":{"claim_id":"claim-f1e008f8fdda71bd88025432","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
