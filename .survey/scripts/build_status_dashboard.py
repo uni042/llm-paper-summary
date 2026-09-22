@@ -429,6 +429,11 @@ def _active_claims(
         status = str(job["payload"].get("status") or "").lower()
         if status in TERMINAL_STATUSES:
             continue
+        if claim.get("invalidated") is True or claim.get("released") is True:
+            continue
+        released_at = _parse_dt(claim.get("released_at"))
+        if released_at is not None and released_at <= now:
+            continue
         expires_at = _parse_dt(claim.get("expires_at"))
         if expires_at is None or expires_at <= now:
             continue
