@@ -2,26 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8dee355b3271b922b97af132",
-  "job_id": "job-research-6728332ce11cd1ed",
-  "data": {
-    "overview": "MoLEは同じ推論時活性パラメータとVRAM条件でDenseより高い平均精度を示し、同学習パラメータ量のMoEとの5組比較でも4組で平均精度が上回る。通信量の差が特に大きく、MoLE-16Eでは160M/410M規模でtoken当たり転送がMoEの約1/1500〜1/2000になる。410M規模のV100評価ではMoLEの復号遅延はDenseに近く、batch増加時にもほぼ増えない一方、expert-offload MoEは転送expert数とともに遅延が増える。",
-    "key_results": [
-      {"metric": "token当たり転送量", "value": "0.15M / 0.39M values", "baseline": "MoE-34E: 57M / 201M parameters", "condition": "MoLE-16E at 160M / 410M activated scale", "interpretation": "約1/1500および約1/2000の転送量で、重み転送を出力ベクトル取得へ置換する効果を示す。"},
-      {"metric": "410M average zero-shot accuracy", "value": "MoLE-4E 44.6; MoLE-16E 45.7", "baseline": "Dense 41.8; MoE-10E 43.9; MoE-34E 46.6", "condition": "8 benchmarks, same 410M activated/in-VRAM parameter budget", "interpretation": "Denseを明確に上回り、同training-parameter pairではMoLE-4EがMoE-10Eを上回る一方、16E対34EではMoEが上回る。"},
-      {"metric": "1B average zero-shot accuracy", "value": "MoLE-4E 47.4", "baseline": "Dense 44.3; MoE-10E 46.6", "condition": "1B activated/in-VRAM parameters", "interpretation": "同じ推論計算・VRAM条件でDenseとMoEの双方を上回る。"},
-      {"metric": "architecture ablation", "value": "MoE 40.3 → full activation 41.8 → reconfiguration 41.5 → embedding input 40.8", "baseline": "160M activated family", "condition": "8-task average", "interpretation": "embedding入力化で0.7点落ちるが、全expert活性化による約1.5点の利得が補い、再パラメータ化自体は40.8を維持する。"},
-      {"metric": "LUT quantization", "value": "NF4 0.9GB/18KB and avg 40.9; NF3 0.7GB/14KB and avg 40.5", "baseline": "FP16 3.5GB/72KB and avg 40.8", "condition": "160M MoLE-4E", "interpretation": "検索表容量と転送量を約25.3%/19.5%へ縮めても平均精度低下は小さい。"},
-      {"metric": "V100 decoding latency trend", "value": "MoLE remains close to Dense across batch 1/8/32", "baseline": "expert-offloaded MoE latency rises strongly with batch size", "condition": "410M activated, input length 512, PCIe loading modeled at 16GB/s", "interpretation": "バッチで選択expert集合が広がる従来offloadと異なり、MoLEは転送する出力サイズが固定的に小さい。"}
-    ],
-    "negative_results": [
-      {"name": "storage expansion", "description": "MoLEの検索表は比較対象MoEのoffloaded expert重みより2.4〜7.4倍大きくなる場合があり、VRAM/帯域削減と引き換えにストレージ容量を使う。"},
-      {"name": "expert-width saturation", "description": "160M MoLE-16Eでrouted expert hidden dimensionをd→4dに増やすと改善するが16dでは飽和し、学習時expertを無制限に大きくしても固定サイズLUTの知識量は増え続けない。"},
-      {"name": "auxiliary losses hurt", "description": "LM lossのみの平均41.9に対しload-balance追加41.7、さらにz-loss追加40.6で、通常MoE向け補助損失はMoLEでは逆効果。"},
-      {"name": "context restriction", "description": "ルーテッドexpertは語彙埋め込みしか見ないため直接の文脈特徴を失う。文脈性はrouter、shared expert、後続attentionで補う設計であり、この制約が再パラメータ化の代償。"}
-    ],
-    "interpretation": "MoLEの中心的な利得は、疎なexpertをより賢くprefetchすることではなく、推論時expertを計算対象から事前計算済みデータへ変換して転送単位そのものを変える点にある。品質は全expert活性化と共有FFNで補い、VRAMと帯域の節約を大容量ストレージへ交換する。",
-    "quality_impact": "通常MoE checkpointの後処理ではなくMoLE構造で再学習する必要がある。評価ではDenseを上回りMoEに概ね匹敵するが、全ての同容量比較でMoEを上回るわけではない。LUT量子化は小さな品質変動を伴う。"
-  },
-  "reservation": {"claim_id": "claim-8dee355b3271b922b97af132", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-f9b1303eb0dbce6b902842b6",
+  "job_id": "job-research-e488ee96459c1b4f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f9b1303eb0dbce6b902842b6",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }

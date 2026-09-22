@@ -2,27 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8dee355b3271b922b97af132",
-  "job_id": "job-research-6728332ce11cd1ed",
-  "data": {
-    "differences": [
-      "MoE-Infinityや一般的expert offloadingは既存expert重みをCPU/SSDへ置いて選択後に必要分をGPUへ戻すのに対し、MoLEはモデル構造を学習時から変更し、推論前にexpert出力を検索表化して重み転送自体をなくす。",
-      "prefetch/cache replacement系は次に必要なexpertを予測して重み転送を隠すが、MoLEは予測を必要とせず入力IDに対応する小さな出力だけを取得するため、batchでexpert集合が広がる問題にも影響されにくい。",
-      "通常MoEのrouted expertは中間特徴を入力として文脈依存変換を行うが、MoLEのrouted expertは語彙埋め込みへ入力を制限する。代わりにrouterとshared FFNが文脈特徴を保持し、全routed expertを混合する。",
-      "モデル圧縮やexpert pruningは容量そのものを削るのに対し、MoLEは学習時容量を保持・拡大しながら推論時のexpert計算を検索へ変える。検索表はむしろ元expertより大きくなり得るため、容量削減ではなくメモリ階層の再配置である。",
-      "MoE++のzero-computation expertが計算不要なexpertをアーキテクチャへ導入する方向なのに対し、MoLEは学習可能なFFN expertを語彙有限入力にすることで学習後に全出力を具体的なLUTへ畳み込む。"
-    ],
-    "limitations": [
-      "既存の事前学習済みMoEをそのまま変換する方式ではなく、expert入力をembeddingへ変更したMoLEとして学習する必要がある。",
-      "LUTはoffloaded MoE expert重みより2.4〜7.4倍大きくなる場合があり、低速・安価な大容量ストレージを前提にVRAM/通信量と容量を交換する。",
-      "routed expert自身は入力IDしか見ず直接の文脈情報を持たないため、文脈依存能力をrouter、shared expert、後続attentionへ依存する。",
-      "主評価は160M〜1B activated parameterの独自学習モデルであり、数十B〜数百B級の現行MoEへのスケーリングは実証していない。",
-      "効率評価はV100上の計算とPCIe最大帯域16GB/sを使ったexpert loading latency推定を組み合わせており、NVMe/SSDやネットワークストレージからのend-to-end実測ではない。",
-      "検索表の量子化は有望だがNF4/NF3の簡単なpost-training実験に留まり、圧縮・I/O layout・cache・prefetchの共同最適化は今後の課題。"
-    ],
-    "implementation_status": "ICML 2025 / PMLR 267掲載。公式GitHub JieShibo/MoLEで学習・推論モデル、re-parameterization、LUT offloading demo、checkpointを公開している。論文付録には学習時と推論時のPyTorch風pseudocodeがあり、推論側はLookupTable(input_ids)をnon_blockingでdeviceへ移してrouter weightで混合する。",
-    "research_positioning": "Adaptive Expert Computation / Compressionと階層メモリ活用の交点に位置する。従来のexpert cache/prefetchが『どの重みをいつ運ぶか』を最適化するのに対し、MoLEは『重みを運ばず事前計算済み出力を運ぶ』へ表現を変更する。SSD/NVMe活用の観点では、ランダムな巨大expert weight I/Oをtoken-ID keyedな小粒度lookupへ変える設計例として重要だが、LUT自体の巨大化と実ストレージI/O評価不足が残る。",
-    "audit_notes": "arXiv:2503.15798v2 / ICML 2025本文をAbstractからConclusion、Appendix pseudocode・hyperparametersまで通読。Table 1の複雑度、Table 2のモデル構成、Table 3の8-task結果と転送量、Table 4〜7のablation、Table 8のLUT量子化、Figure 3のV100 latency条件を確認した。MoE latencyはPCIe帯域からの推定を含むため実測storage latencyとして表現しない。"
-  },
-  "reservation": {"claim_id": "claim-8dee355b3271b922b97af132", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-f9b1303eb0dbce6b902842b6",
+  "job_id": "job-research-e488ee96459c1b4f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-f9b1303eb0dbce6b902842b6",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
