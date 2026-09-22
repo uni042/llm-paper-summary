@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-95a58c9a93fe71f7a995bfe2","job_id":"job-research-74a266f79fc28554","data":{"limitations":"圧縮はlosslessではなく、R=4ではreasoning/mathを含む性能がbaseline未満へ低下する。VLMでは画像tokenを逐次概念化するため空間関係が重要なlocation、image Q&A、chart textで低下が見られる。主要なcompute matchingはattention-map FLOPsを除外するため、厳密な総実行FLOPsはConceptMoEの方が小さく、純粋な同一実時間コスト比較ではない。推論速度評価はHopper中心で、分散MoE servingのall-to-all、expert load balance、通信ボトルネックは検証していない。CTで大きな+5.5点を得る構成は8-layer loopingも併用しており、改善全量をchunking単独へ帰属できない。","differences":"H-Netやbyte-level adaptive chunkingと異なり、通常token表現を維持し、MoEの活性化expert数を計算量調整ノブとして総パラメータと平均FLOPsを同時に揃える。DLCMなどconcept modelとの比較では、ConceptMoEは圧縮後にモデル規模を単純増加させず公平なcompute/parameter matchingを重視する。固定token mergingや固定chunkと異なり、learnable cosine boundaryでsample/tokenごとの情報密度に適応する。MoE++等のexplicit token-level expert skippingがtokenを残したまま活性化計算を変えるのに対し、ConceptMoEは系列長自体を縮めるためattention mapとKV cacheも削減する。","implementation_status":"ByteDance SeedによるarXiv v1。公式GitHubコードページが論文に記載され、付録にChunkModule、DechunkModule、STE、ConceptMoE forwardのPyTorch形式コードを掲載する。300B級構成のHopper実測があり、単なる理論FLOPs評価に留まらない。","research_positioning":"Adaptive Expert Computation / Compression系の中でも、expertそのものをprune/cache/skipするのではなく、expertへ到達するtoken系列を意味単位へ適応圧縮する方向。MoEの疎性を『総パラメータを固定したまま節約FLOPsを再投資する機構』として使うため、token compressionとexpert computationの接点に位置する。長文脈ではKV cacheとattention map削減が直接的なシステム利点となり、既存MoEのCT変換経路も示す。","audit_notes":"arXiv:2601.21420v1をAbstract、Introduction、Related Work、Approach 3.1-3.5、Experiments 4.1-4.6、Conclusion、Appendix A benchmark一覧、Appendix B実装例まで確認。R=4のnegative result、VLM細粒度課題低下、attention-map FLOPs除外条件、CT layer-loop交絡を保持した。"},"reservation":{"claim_id":"claim-95a58c9a93fe71f7a995bfe2","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-4d7a0c3e035c923b869769ba",
+  "job_id": "job-research-b8b352e984bc0e9d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4d7a0c3e035c923b869769ba",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

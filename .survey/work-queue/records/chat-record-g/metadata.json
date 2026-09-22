@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-95a58c9a93fe71f7a995bfe2","job_id":"job-research-74a266f79fc28554","data":{"canonical_id":"arXiv:2601.21420","arxiv_id":"2601.21420","doi":"10.48550/arXiv.2601.21420","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation","summary":"ConceptMoEは、隣接トークンの意味類似度から学習可能な境界を決め、予測容易な連続トークンを概念表現へ動的圧縮して計算量を暗黙に再配分する専門家混合モデル（MoE）である。圧縮で節約した計算を活性化専門家数・中間層ループ・隠れ幅へ戻し、総パラメータ数とトークン当たり演算量を標準MoEと揃えて比較する。言語事前学習、600億パラメータ級視覚言語モデル、900億級継続学習変換、3000億級推論で評価し、長文脈平均+2.3点、継続学習変換+5.5点、圧縮率2で事前充填最大175.1%、復号最大117.1%の速度向上を報告する。","list_summary":"意味類似トークンを概念へ適応圧縮し、同一パラメータ・同一平均演算量下で節約計算を専門家混合モデルへ再配分して性能と長文脈推論効率を同時改善する。","authors":["Zihao Huang","Jundong Zhou","Xingwei Qu","Qiyang Min","Ge Zhang"],"authors_affiliations":"ByteDance Seed","published":"2026-01-29","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv:2601.21420v1","lineage":"適応的専門家計算 / トークン圧縮 / 概念レベル処理 / 専門家混合モデル","topics":["適応トークン圧縮","概念表現","専門家混合モデル","計算再配分","KVキャッシュ削減","長文脈推論"],"importance":"トークン削減の利益を単なる演算量削減ではなく、同一総パラメータ・同一平均演算量条件で専門家計算へ再配分し、概念レベル処理そのものの効果を分離して評価する。","implementation":"公式ConceptMoEコードページを公開。論文付録にはPyTorch形式のチャンク化・復元・直通推定量の実装例を掲載し、Hopper GPU上で3000億級構成の実測推論を評価する。","hardware_evaluation":"3000億級推論速度はHopper GPU。事前学習・視覚言語・継続学習は120億/240億/600億/900億総パラメータ構成で評価。","quality_effect":"圧縮率1.5〜2では多くの評価で改善する一方、圧縮率4では平均47.7と標準MoE 50.0を下回り、過圧縮が推論・数学能力を損なう。","source":"https://arxiv.org/abs/2601.21420","sources":["https://arxiv.org/abs/2601.21420","https://arxiv.org/pdf/2601.21420","https://github.com/ZihaoHuang-notabot/ConceptMoE"],"code":"https://github.com/ZihaoHuang-notabot/ConceptMoE","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"一次PDFの参考文献節を確認。正規化対象識別子は今回レコードへ追加せず。","references_total":42},"reservation":{"claim_id":"claim-95a58c9a93fe71f7a995bfe2","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-4d7a0c3e035c923b869769ba",
+  "job_id": "job-research-b8b352e984bc0e9d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4d7a0c3e035c923b869769ba",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
