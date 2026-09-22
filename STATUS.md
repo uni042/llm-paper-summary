@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 13:50:26 JST**
+> 自動生成: **2026-09-22 13:51:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **308** |
 | 未claim Research job | **306** |
 | 直近24hの検証済みResearch収録 | **15** |
-| 最終検証済みResearch収録 | **09-22 13:46:31 JST（3分前）** |
+| 最終検証済みResearch収録 | **09-22 13:46:31 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（5時間17分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（5時間18分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -169,7 +169,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
 - `arXiv:2202.09368` — Mixture-of-Experts with Expert Choice Routing / worker `scheduled-chat-30`
-  - claim: **09-22 13:47:16 JST** / heartbeat: **—** / lease expiry: **09-22 15:17:16 JST**
+  - claim: **09-22 13:50:59 JST** / heartbeat: **—** / lease expiry: **09-22 15:20:59 JST**
   - evidence: `.survey/work-queue/claims/job-research-9de329d10383e26b.json`
 - `arXiv:2212.09811` — Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model / worker `scheduled-chat-00`
   - claim: **09-22 13:01:22 JST** / heartbeat: **—** / lease expiry: **09-22 14:31:22 JST**
