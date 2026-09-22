@@ -1,1 +1,91 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ef87eb9152e0438c1196729d","job_id":"job-research-80e5caed751c8e16","data":{"canonical_id":"arXiv:2206.00277","arxiv_id":"2206.00277","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"Task-Specific Expert Pruning for Sparse Mixture-of-Experts","summary":"大規模な混合専門家モデルは事前学習では容量増加の恩恵が大きい一方、個別の下流タスクでは一部専門家しか大きく寄与せず、推論時の専門家並列と装置間通信が無駄になりやすい。本研究は微調整を複数の訓練窓へ分け、各窓でルーターのゲート値から専門家の熟達度を蓄積し、低い専門家を段階的に削除する。微調整の半分までに各混合専門家層を1専門家へ縮小し、残り半分を選ばれた専門家の最適化へ使う。6種類の下流タスクで混合専門家事前学習の利得を99.3%保持し、MNLIで約2倍、SQuADで1.28倍の推論高速化を報告する。","list_summary":"下流タスク微調整中のゲート寄与から専門家を段階的に1つまで削り、混合専門家事前学習の利得をほぼ保った密モデルへ変換する方式。","authors":["Tianyu Chen","Shaohan Huang","Yuan Xie","Binxing Jiao","Daxin Jiang","Haoyi Zhou","Jianxin Li","Furu Wei"],"authors_affiliations":"Beihang University; Institute of Acoustics, Chinese Academy of Sciences; Microsoft Research; Microsoft STCA","published":"2022-06-02","publication":"arXiv:2206.00277v2","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE inference / task-specific expert pruning / sparse-to-dense conversion","topics":["混合専門家モデル","専門家枝刈り","微調整","推論高速化","疎密変換"],"importance":"タスク固有の専門家寄与を微調整中に測定し、各混合専門家層を単一専門家まで縮小して専門家並列通信を除去する初期の直接的枝刈り研究。","hardware_evaluation":"推論速度をNVIDIA V100 32GBでMNLIとSQuADについて測定。","quality_effect":"GLUE平均は密モデル85.32、全専門家MoE 86.80、提案eager pruning 86.16。SQuAD2.0 F1は79.77、80.59、80.40。6種類のタスク全体でMoE利得の99.3%を保持すると報告。","source":"https://arxiv.org/abs/2206.00277","sources":["https://arxiv.org/abs/2206.00277","https://arxiv.org/pdf/2206.00277"],"code":"","implementation":"Switch Transformer base型の事前学習モデルを用い、各MoE層32専門家から微調整中に動的しきい値で削除し、半分の訓練時点で1専門家へ強制確定する一回通過型微調整。","last_checked":"2026-09-22","references":["arXiv:2112.10684","arXiv:2204.09179","arXiv:2204.08396","BERT","GShard","Switch Transformer","arXiv:2110.01786"],"references_checked_at":"2026-09-22","references_source":"primary-reference-section","references_total":35},"reservation":{"claim_id":"claim-ef87eb9152e0438c1196729d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-d3a6734ec62678ea8cb1d272",
+  "job_id": "job-research-6f4aa4cc9993f8fd",
+  "data": {
+    "canonical_id": "arXiv:2212.09811",
+    "arxiv_id": "2212.09811",
+    "doi": "10.18653/v1/2023.acl-long.198",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    "title": "Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model",
+    "summary": "54.5BパラメータのNLLB-200混合専門家モデルは推論だけで少なくとも4枚の32GB GPUを必要とする。本研究は翻訳時のゲート統計から各専門家の重要度を測り、言語または言語対ごとに不要な専門家を枝刈りする。重要度は第1候補として選ばれる頻度とゲート確信度を組み合わせ、層ごとに残す専門家を決める。エンコーダ側を多く残す3:1配分が有効で、80%の専門家を削除しても翻訳品質低下を小さく抑え、単一32GB GPUで推論可能にする。さらに選択専門家の類似度分析から、特にデコーダで言語固有性が現れることを示す。",
+    "list_summary": "翻訳時ゲート統計で言語別に重要な専門家を選び、NLLB-200の専門家を最大80%枝刈りして単一32GB GPU推論を可能にする方式。",
+    "authors": [
+      "Yeskendir Koishekenov",
+      "Alexandre Berard",
+      "Vassilina Nikoulina"
+    ],
+    "authors_affiliations": "NAVER LABS Europe; University of Amsterdam",
+    "published": "2023-07-09",
+    "publication": "ACL 2023, Volume 1: Long Papers",
+    "publication_type": "Conference paper",
+    "publication_status": "Published",
+    "lineage": "MoE inference / expert pruning / language-specific expert specialization",
+    "topics": [
+      "混合専門家モデル",
+      "専門家枝刈り",
+      "多言語機械翻訳",
+      "推論メモリ",
+      "言語固有専門家"
+    ],
+    "importance": "巨大な混合専門家モデルを追加微調整なしで言語別に縮小し、専門家並列用の複数GPUを単一GPUへ減らせることを実機評価した初期の代表例。",
+    "hardware_evaluation": "NLLB-200 54.5BをV100 32GBで評価。完全モデルは4〜8 GPU、80%枝刈り版は1 GPUでも測定し、4 GPU構成でも速度比較を実施。",
+    "quality_effect": "53言語のテストで80%言語別枝刈りは平均chrF++ 35.46、完全54.5Bは35.74、3.3B密モデルは34.64。全202言語・40,602方向でも評価。高枝刈り率では稀な過剰生成や幻覚が生じ、spBLEUの低下がchrF++より大きい。",
+    "source": "https://aclanthology.org/2023.acl-long.198/",
+    "sources": [
+      "https://aclanthology.org/2023.acl-long.198/",
+      "https://aclanthology.org/2023.acl-long.198.pdf",
+      "https://arxiv.org/abs/2212.09811"
+    ],
+    "code": "https://github.com/naver/nllb-pruning",
+    "implementation": "公式実装は言語対ごとの専門家IDとゲート統計を公開し、NLLB-200をCPU上で読み込んで不要専門家をGPUへ載せない形で枝刈りできる。推奨設定は80%固定層別・言語別・エンコーダ対デコーダ3:1。",
+    "last_checked": "2026-09-22",
+    "references": [
+      "arXiv:1903.00089",
+      "arXiv:2211.01324",
+      "arXiv:2206.00277",
+      "arXiv:1911.02116",
+      "arXiv:2207.04672",
+      "arXiv:1901.02860",
+      "GLaM",
+      "arXiv:2209.01667",
+      "Switch Transformer",
+      "arXiv:2210.15257",
+      "arXiv:2210.05709",
+      "arXiv:2109.10465",
+      "arXiv:2105.14940",
+      "arXiv:2110.03742",
+      "arXiv:2006.16668",
+      "arXiv:2210.11621",
+      "arXiv:2205.10828",
+      "arXiv:2206.02770",
+      "arXiv:2104.10350",
+      "arXiv:1701.06538",
+      "arXiv:1906.02243",
+      "arXiv:2008.00401",
+      "Attention Is All You Need",
+      "arXiv:1905.09418",
+      "arXiv:2203.00555",
+      "arXiv:2105.03036",
+      "arXiv:2004.11867",
+      "arXiv:2202.08906"
+    ],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary-reference-section",
+    "references_total": 40
+  },
+  "reservation": {
+    "claim_id": "claim-d3a6734ec62678ea8cb1d272",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

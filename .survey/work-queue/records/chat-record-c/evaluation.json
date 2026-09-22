@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ef87eb9152e0438c1196729d","job_id":"job-research-80e5caed751c8e16","data":{"hardware":"推論速度はNVIDIA V100 32GBで測定し、MNLIとSQuADについて全専門家MoE、枝刈り単一専門家モデル、密モデルを比較する。","software":"Switch Transformer base型を用い、4番目と8番目のTransformerブロックに各32専門家のMoE層を配置する。密比較モデルはMoE層以外を同一構成とする。","methodology":"MoEと密モデルをBooksCorpusと英語Wikipedia上のマスク言語モデル目的で125kステップ事前学習し、その後GLUEとSQuAD2.0で微調整する。GLUEはWNLIを除き、主表では小規模RTEも除外する。標準密微調整、標準MoE微調整、二回通過方式、段階枝刈り、前半で1専門家へ確定するeager枝刈りを比較し、ヒット率とゲート値ベース熟達度、訓練窓長、削除しきい値、最終確定時刻を切り分ける。","scope":"英語理解のGLUE各タスクとSQuAD2.0で、文単位分類・類似度・自然言語推論・質問応答を含む6種類のタスク型を評価する。一方、評価モデルは独自事前学習したSwitch-base規模であり、兆パラメータ級MoEや生成型LLMでの品質・メモリ削減は直接測定していない。"},"reservation":{"claim_id":"claim-ef87eb9152e0438c1196729d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d3a6734ec62678ea8cb1d272",
+  "job_id": "job-research-6f4aa4cc9993f8fd",
+  "data": {
+    "hardware": "推論速度評価は32GB NVIDIA V100を使用。完全54.5B混合専門家モデルは4枚および8枚、80%枝刈り版は1枚および4枚で測定する。単一GPU枝刈り構成は各エンコーダ混合専門家層36専門家、各デコーダ層12専門家を保持する。",
+    "software": "NLLB-200 54.5B混合専門家モデルと3.3B密モデルを比較。公開nllb-pruning実装はTransformers、Accelerate、Datasets、Hugging Face Hub、SacreBLEUを利用する。翻訳品質はchrF++とFLORES-200用SentencePieceでトークン化するspBLEUを測定する。",
+    "methodology": "FLORES-200 devでゲート統計を収集し、30言語の中間実験で枝刈り指標・枝刈り方式・保持率・エンコーダ対デコーダ比を比較する。最終評価は53言語のdevtestと、202言語すべての40,602翻訳方向で実施する。30言語集合は高資源・低資源・超低資源を各10言語含み14言語族を覆う。最終の202言語統計は各言語方向からランダム25文対を使い、計算短縮のため教師強制で収集する。推論速度は29言語から英語へのFLORES valid翻訳で平均語/秒と時間を測る。",
+    "scope": "評価対象はNLLB-200という単一の多言語機械翻訳用混合専門家モデルであり、一般LLMや別のルーティング方式への直接一般化は検証していない。一方、言語数は202、最終翻訳方向は40,602と広く、資源量別の品質と単一GPU実機推論まで確認している。"
+  },
+  "reservation": {
+    "claim_id": "claim-d3a6734ec62678ea8cb1d272",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
