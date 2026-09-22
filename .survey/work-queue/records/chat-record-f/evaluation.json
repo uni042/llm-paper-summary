@@ -4,10 +4,22 @@
   "slot": "evaluation",
   "attempt_id": "attempt-8dee355b3271b922b97af132",
   "job_id": "job-research-6728332ce11cd1ed",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8dee355b3271b922b97af132",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": ["NVIDIA V100 GPU for decoding latency", "PCIe bandwidth modeled at V100 maximum 16GB/s"],
+    "software": ["Hugging Face Transformers", "lm-evaluation-harness", "bf16 training configuration"],
+    "model": ["Dense 160M/410M/1B activated-parameter baselines", "MoE-10E and MoE-34E", "MoLE-4E and MoLE-16E"],
+    "datasets": ["100B-token subset of deduplicated Pile for training", "ARC-Challenge", "ARC-Easy", "BoolQ", "HellaSwag", "PIQA", "RACE", "SIQA", "LAMBADA"],
+    "baselines": ["Dense Transformer following Pythia setup", "top-2 MoE with expert offloading", "MoE architecture ablations", "FP16 LUT", "NF4 LUT", "NF3 LUT"],
+    "settings": [
+      {"name": "training scale", "description": "160M、410M、1Bの推論時活性パラメータ規模。全モデルをdeduplicated Pileの100B tokensで学習し、GPT-NeoX/Pythia tokenizer、語彙50kを使用。"},
+      {"name": "quality evaluation", "description": "8ベンチマークをlm-evaluation-harnessでzero-shot accuracy評価。Dense、同学習パラメータ量のMoE/MoLE、および構造・損失・expert数/幅のablationを比較。"},
+      {"name": "VRAM matching", "description": "MoEは非expert重みと活性expertだけをVRAMへ置き残りをoffload、MoLEは検索表をoffloadし他の重みをVRAMへ置くことで、同じactivated-parameter dense modelとVRAM使用量を揃える。"},
+      {"name": "latency", "description": "410M activated-parameterモデル、V100、入力長512、batch 1/8/32。MoEの転送時間は16GB/sの最大PCIe帯域から推定し、直前stepの一部expertをVRAMに保持する。"},
+      {"name": "LUT quantization", "description": "160M MoLE-4EのFP16検索表をNF4/NF3へpost-training quantizationし、容量・転送量と8タスク平均精度を比較。"}
+    ],
+    "correctness": "FFNから検索表への再パラメータ化自体は、語彙埋め込みを入力とするルーテッドFFNについて全語彙出力を事前計算するため同じ入力IDに対して同値である。一方、通常MoEからMoLEへの構造変更は別モデルの学習を必要とし、既存MoE checkpointをそのまま変換する方式ではない。NF4/NF3量子化は損失を伴う。",
+    "methodology": "同じ推論時活性パラメータ/FLOPs/VRAM予算を軸にDense、MoE、MoLEを比較し、性能は8 zero-shot tasks、通信量はtoken当たり転送パラメータ数、効率はV100復号遅延で評価する。さらに補助損失、expert幅、expert数、構造変更の段階的ablation、検索表量子化を行う。",
+    "scope": "小〜中規模の独自学習モデルで、MoLEの品質・転送量・単一V100上の復号遅延を示す。MoE転送遅延の一部はPCIe最大帯域からの推定であり、実ディスク/NVMe、ネットワークストレージ、大規模現行MoE、複数GPUの実測は主評価に含まれない。"
+  },
+  "reservation": {"claim_id": "claim-8dee355b3271b922b97af132", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
