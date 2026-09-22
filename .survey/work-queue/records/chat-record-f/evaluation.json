@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e2cb9c7e6843f61eff66a9dd",
+  "attempt_id": "attempt-5b672b17c47b70a14002843a",
   "job_id": "job-research-80e5caed751c8e16",
   "data": {
     "hardware": "推論速度はNVIDIA V100 32GBで測定し、MNLIとSQuADについて全専門家MoE、枝刈り単一専門家モデル、密モデルを比較する。",
@@ -11,7 +11,7 @@
     "scope": "英語理解のGLUE各タスクとSQuAD2.0で、文単位分類・類似度・自然言語推論・質問応答を含む6種類のタスク型を評価する。一方、評価モデルは独自事前学習したSwitch-base規模であり、兆パラメータ級MoEや生成型LLMでの品質・メモリ削減は直接測定していない。"
   },
   "reservation": {
-    "claim_id": "claim-e2cb9c7e6843f61eff66a9dd",
+    "claim_id": "claim-5b672b17c47b70a14002843a",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
