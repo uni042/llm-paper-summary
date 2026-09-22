@@ -69,6 +69,7 @@ Web/PDF取得のplatform上限はrunを途中終了させる実害があるた�
 - claim後、同じ論文について既に利用可能な**一次PDF全文**がChatGPT Library等の耐久ファイル領域に存在するかをcanonical ID / arXiv ID / DOI / titleで確認できる場合は、Webへ再取得しに行く前にそれを再利用する。論文identityが一致し、欠落ページのない一次資料であることを確認する。
 - 一次PDFをWebから取得する必要がある場合は、抄録ページ→HTML各節→PDF各ページのような細切れ取得を常用せず、利用可能なら**完全なPDFを1回取得して以後は同じローカル/Libraryコピーを読む**経路を優先する。全文取得後の5スロット作成、preflight修復、submission failure修復、次runでのactive claim再開でも、同一版のPDFを再取得しない。
 - 完全な一次PDFを取得でき、Libraryへの耐久保存が利用可能なら、再利用価値が高いものはLibrary側の論文一次資料キャッシュへ保存してよい。保存時は少なくともcanonical IDまたはarXiv ID/DOI、一次資料URL、取得時刻、判別可能なら版番号を対応付け、別論文・別版を誤再利用しない。二次資料や検索断片を一次PDFキャッシュとして保存しない。
+- **Library上の一次PDFは恒久保存しない。** active claim、preflight修復、submission/repair待ち、handoff後の再開などで同一PDFを再利用する必要がある間だけ一時キャッシュとして保持する。その論文について成功result＋main反映が確定した、または `blocked` / `deferred` / `rejected` 等の終端状態が耐久反映され、未完了repair・再提出・handoff再開で当該PDFを使う必要がなくなった時点で、そのrun中に保存したLibrary PDFを削除する。削除前に別workerや未完了attemptが同じPDF identityを再利用中でないことを確認する。
 - PDF/HTMLの同じ内容を複数providerから重複取得しない。現在の一次経路が実際に不完全・取得不能・破損・版不一致の場合だけ代替経路へ切り替える。
 - 修復ループでは、品質検査が要求する箇所だけを既取得の全文から再確認し、論文全体をWebから取り直さない。
 - Discovery中は候補identityと採否判断に全文PDFが不要なら取得しない。Research/Auditとしてclaimされた時点で初めて全文取得する。
