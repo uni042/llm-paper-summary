@@ -54,6 +54,14 @@ handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Li
 
 Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自体は、Research / Audit / Discoveryを停止する理由ではない。GitHubへのread/writeが可能なら、**requestファイルをmainへ耐久保存し、対応するGitHub Actions fast laneに正規スクリプトを実行させ、resultファイルを読む経路**を現行の正規transportとして使う。この経路はmanual state編集ではない。
 
+### 2.2 main writeのcommit集約
+
+Scheduled ChatからGitHubへ直接耐久保存する場合、**同一論文・同一論理段階で、途中にActions起動や別workerからの可視化を必要としない複数ファイル更新は1回のcommitへ集約する。** 特にResearch / Auditの5スロットは、内容が完成してセルフレビュー可能になった時点でまとめて保存し、metadata / method / evaluation / results / positioningを1ファイルずつ別commitにしてmainを進めない。利用可能なGitHub transportが複数ファイルを1commitで更新できる場合はGit dataのtree/commit等の原子的な複数ファイル更新を優先する。
+
+ただし、次の**耐久境界はまとめて潰さない**。claim request、Research quality preflight request、completed-submission request、immutable submission、run-state requestなど、commit自体がActions起動・正規結果生成・handoff identity確定のトリガーになる境界は、それぞれ必要な順序を守って独立に耐久化する。別attempt、別論文、別workerのpayloadを無関係に1commitへ束ねない。
+
+GitHub transportが1ファイル単位のwriteしか提供しない場合は、存在しない原子更新を捏造せず、その環境で可能な最小commit数に留める。commit集約のために品質チェック・preflight・submission順序を変更してはならない。
+
 Research / Auditのclaimは次の順で行う。
 
 1. 最新main HEADとclaim stateを再取得する。**同一workerにactiveな未提出claimがある場合は新requestを出さない。直前claimのexact attemptに対する不変descriptorがmainへ耐久保存済みなら、そのclaimがまだactive表示でも次requestを出してよい。claim fast laneは新request処理の冒頭でdescriptor-backed claimを正規解放してから新jobを割り当てる。**
@@ -291,7 +299,7 @@ runtime_condition: none
 
 `runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は10秒以上離した正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformからtool call/outputを拒否された事実がある場合だけ `runtime_condition_confirmed=true` としてよい。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
 
-同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、**Discovery precheck pending / evaluation pending / submission pending / recovery required**、pipeline ahead、`gate.decision` / `gate.required_action` を継続判断の正本とする。run-state lane自体も**10分周期で未result requestを定期回収**し、push競合は最新mainから最大5回再導出する。同一 `run_key` の最初の成功snapshotが `candidate_inventory` / `work_mode` を固定し、後続snapshotはそれを再利用する。ワーカーは結果と矛盾するbooleanを別途推測して `continuation_gate.py` を呼ばない。
+同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、**Discovery precheck pending / evaluation pending / submission pending / recovery required**、pipeline ahead、`gate.decision` / `gate.required_action` を継続判断の正本とする。run-state lane自体も**10分周期で未result requestを定期回収**し、push競合は最新mainから最大12回再導出し、各再試行は上限付きバックオフ＋ジッタで衝突位相をずらす。同一 `run_key` の最初の成功snapshotが `candidate_inventory` / `work_mode` を固定し、後続snapshotはそれを再利用する。ワーカーは結果と矛盾するbooleanを別途推測して `continuation_gate.py` を呼ばない。
 
 `gate.hard_stop` が返る場合はその値も正本とし、ワーカーが停止理由を再分類しない。主な `required_action` は次のように解釈する。
 
