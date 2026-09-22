@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-65c28b59ac08b3e1cf0adad9",
-  "job_id": "job-research-ca56f81ba7248b99",
+  "attempt_id": "attempt-eb3992a288275edbaaa96880",
+  "job_id": "job-research-d522f30f5ddd350f",
   "data": {
-    "hardware": "性能モデルはNVIDIA H100 80GB HBM3、3.35 TB/s、989 TFLOPS BF16と、5個の16GB HBM3 stackにAttAcc bank-level GEMV PIM（各stack外部670 GB/s、内部9倍）を組み合わせる。energyはAttAcc dynamic energy tableのみ。品質runはA100 BF16。",
-    "software": "Llama-3.1-8B-InstructとQwen3-8BをDense、Quest、BLASST、AMENDで比較。AMEND software pathとauditを実際にquality runで実行し、そのtraceをAttAcc-based simulatorへreplayする。core emulation/simulator codeは公開。",
-    "methodology": "LongBenchは各model 16 tasks、3,750 inputs。RULERは各model/context 13 tasks、1,300 examplesでLlama 8K/16K/32K/64K、Qwen 32K。block size 16、BLASST/AMEND TSF=64。AMENDは各settingから50 examplesでSCBO 10 rounds×10 candidatesを探索しtarget false-drop 2%以下でdrop recall最大点を選ぶ。性能はLlama RULER traceをbatch 8でreplayしDense正規化のper-token decode timeとdynamic energyを測る。",
-    "scope": "GPU-PIM性能はtrace-driven simulationであり実HBM-PIM silicon実測ではない。GPU/PIM lane間のbandwidth contentionをモデル化せず、energyはdynamicのみ。32Kでbatch>16はH100 post-weight 67 GiB capacityを超えるためbatch 32〜128の感度分析はcost-model extrapolation。false-dropはcurrent tokenでは修復不能で、品質はoffline選定したoperating pointに依存する。"
+    "hardware": "NVIDIA A6000（論文表記64 GB/s）、NVIDIA H20（128 GB/s）、Ascend 910B（128 GB/s）の3プラットフォーム。比較説明ではRTX 4090、A100等の帯域差も動機分析に用いる。全プラットフォームで利用可能GPUメモリを20GBに制限し、メモリ制約下のエキスパートswapを再現する。",
+    "software": "ExpertFlowはPython/CUDAとTransformersで実装し、専用CUDA streamでGPU-DRAM転送、別threadで転送・ブロック状態を管理、continuous batchingを使用する。対象モデルはDeepSeek-V2-Lite、Qwen1.5-MoE-A2.7B、Qwen2系で、Qwen2.0は4-bit量子化。比較はTransformers baseline、ProMoE、Yandexのpre-gate方式。",
+    "methodology": "ShareGPTから要求長ごとに±5%でグループ化し各群最大50サンプルを選ぶ。prompt長8〜1024のデータでDeepSeek、Qwen1.5、Qwen2の待機＋キャッシュミス遅延をbaselineと比較する。予測精度はA6000上で長さの異なる410 requestsを使い、事前ゲートおよびProMoE系予測とstep sizeごとに比較する。二段LRUとキャッシュ認識ルーティングについても個別に有効性を評価し、異なるGPU帯域と入力規模で適応Sの挙動を見る。",
+    "scope": "主指標は待機時間、キャッシュミス遅延、エキスパート予測精度であり、モデル品質・生成品質の広範なベンチマークは行わない。Ascend 910BはINT4非対応のためQwen2.0を20GB制限下で実行できず欠測。H20とA6000の比較では著者自身が帯域対計算比による説明を仮説として述べており、完全な因果分解ではない。論文は12ページのarXiv v1で、公開コードによる第三者再現は確認できない。"
   },
   "reservation": {
-    "claim_id": "claim-65c28b59ac08b3e1cf0adad9",
+    "claim_id": "claim-eb3992a288275edbaaa96880",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
