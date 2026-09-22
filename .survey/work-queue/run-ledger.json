@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T23:12:33.630132+00:00",
+  "updated_at": "2026-09-22T23:13:24.291710+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -40700,6 +40700,56 @@
           "type": "research",
           "canonical_id": "arXiv:2609.12075",
           "title": "Efficient Vision-Language-Action Management and Serving for Robot Factories",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 960,
+      "paper_active_count_after": 960,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35796337797",
+      "first_recorded_at": "2026-09-22T23:13:24.291710+00:00",
+      "last_recorded_at": "2026-09-22T23:13:24.291710+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35796337797:1",
+          "recorded_at": "2026-09-22T23:13:24.291710+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35796337797",
+            "run_attempt": "1",
+            "source_sha": "658b130504f03ae51bc802a96b07ba34d5ae6d21"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-25a675a94380dcd5",
+          "type": "research",
+          "canonical_id": "arXiv:2605.19775",
+          "title": "Understanding Inference Scaling for LLMS: Bottlenecks, Trade-Offs, and Performance Principles",
           "from": "ready",
           "to": "blocked"
         }
