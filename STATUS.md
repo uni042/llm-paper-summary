@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 15:33:13 JST**
+> 自動生成: **2026-09-22 15:34:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **301** |
-| 未claim Research job | **299** |
+| 未claim Research job | **300** |
 | 直近24hの検証済みResearch収録 | **20** |
-| 最終検証済みResearch収録 | **09-22 15:21:54 JST（11分前）** |
+| 最終検証済みResearch収録 | **09-22 15:21:54 JST（12分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（7時間0分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（7時間1分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **2** | **0** | **2** | **2** | **0** | — |
+| Research | **11** | **2** | **0** | **2** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **11** | **5** | **0** | **5** | **2** | **0** | **6** |
+| 合計 | **11** | **5** | **0** | **5** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -178,13 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.13486` — Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers / worker `scheduled-chat-30`
-  - claim: **09-22 15:31:41 JST** / heartbeat: **—** / lease expiry: **09-22 17:01:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-503df587e7eb88ec.json`
-- `arXiv:2510.26730` — ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference / worker `scheduled-chat-00`
-  - claim: **09-22 15:30:20 JST** / heartbeat: **—** / lease expiry: **09-22 17:00:20 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d522f30f5ddd350f.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.12550` — Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances / worker `scheduled-chat-00`
+  - claim: **09-22 15:33:51 JST** / heartbeat: **—** / lease expiry: **09-22 17:03:51 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b6a722146f5922c5.json`
 
 #### Audit
 
