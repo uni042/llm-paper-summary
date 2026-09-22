@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-1b188ce32f47e9723ddc14cd-r3",
+  "kind": "research",
+  "attempt_id": "attempt-1b188ce32f47e9723ddc14cd",
+  "job_id": "job-research-199b831b6808fd50",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:b20a15550640c402f8747f132d9bb5a7c004a28d7c8913a0e7c51e59432b28c1",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "34b68153a6dbcb59e2bb5fc0b32ccaa32b963254"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "af285ab2d418ede45acf5173f69a2d4c6797b5dc"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "7e4ecec24c82592e97abad373e537c9576453081"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "910bc733d5bb10d75dfea0299c04e251f36daef3"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "a25043a04d919573d6fefce58eecc92ca8c60458"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[4].description is too short",
+    "problem_method.components[5].description is too short"
+  ],
+  "checked_at": "2026-09-22T10:32:48+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
