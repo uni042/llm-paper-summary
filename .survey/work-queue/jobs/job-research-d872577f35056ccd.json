@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2405.14297",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2024-2405.14297-dynmoe-auto-tuning.md",
   "selection_reason": "各tokenがactivateするexpert数を自動決定し、training中のexpert数もadaptiveに調整するfoundational dynamic MoE。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T11:03:59+00:00"
+  "created_at": "2026-09-20T11:03:59+00:00",
+  "completed_at": "2026-09-22T03:13:43+00:00",
+  "blocker": "Primary full text could not be retrieved in this invocation. Official arXiv full text and alternate full-paper rendering were inaccessible in the current retrieval environment. Per workflow, no structured record was synthesized from abstract-only evidence.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-bfa8cf590d28a92deda4a59b.json"
 }

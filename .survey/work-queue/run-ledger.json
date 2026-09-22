@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T03:12:28.793602+00:00",
+  "updated_at": "2026-09-22T03:13:49.555208+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -35275,6 +35275,56 @@
           "type": "research",
           "canonical_id": "arXiv:2603.18492",
           "title": "AIMER: Calibration-Free Task-Agnostic MoE Expert Pruning",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 886,
+      "paper_active_count_after": 886,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35682359027",
+      "first_recorded_at": "2026-09-22T03:13:49.555208+00:00",
+      "last_recorded_at": "2026-09-22T03:13:49.555208+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35682359027:1",
+          "recorded_at": "2026-09-22T03:13:49.555208+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35682359027",
+            "run_attempt": "1",
+            "source_sha": "25a318879bee3bed979a3a523bf77b5f7eb95115"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-d872577f35056ccd",
+          "type": "research",
+          "canonical_id": "arXiv:2405.14297",
+          "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models",
           "from": "ready",
           "to": "blocked"
         }
