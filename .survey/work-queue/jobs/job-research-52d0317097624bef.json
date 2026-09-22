@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/508b0bb474c86faf305f38ae7db6c9af532e2886",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2607.06763-trees-from-marginals-autoregressive-drafting-with-factorized-priors.md",
   "selection_reason": "factorized drafterのtop-K marginalからproposal treeを構築するWeaverとGated Delta Net向けrollback-free tree verification CUDA kernelをSGLangへ実装し、自己回帰比4.37倍高速化。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T22:11:14+00:00"
+  "created_at": "2026-09-20T22:11:14+00:00",
+  "completed_at": "2026-09-22T08:30:13+00:00",
+  "blocker": "Primary-source full-text retrieval was attempted through arXiv and the available public preprint mirror. The arXiv HTML/PDF endpoints were unavailable to the retrieval environment, while ResearchGate exposed the full preprint but its extracted body text was font-encoded/garbled across the method and evaluation sections, preventing reliable full-paper reading. Search results and model/code pages were usable only as supporting metadata/abstract evidence. Per workflow, no five-slot record was reconstructed from secondary summaries or unreadable extraction; retry when a clean primary-source rendering is available.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-3e625f867ada30709f9d971c.json"
 }
