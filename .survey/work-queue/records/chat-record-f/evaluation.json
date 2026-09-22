@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f0e6afec5cf9246016c6a451",
-  "job_id": "job-research-e7435b966cd8c5e7",
-  "data": {
-    "hardware": "実CXL Type-3共有メモリを複数サーバから利用するラック規模テストベッドで評価する。KVペイロードはGPUとCXL間を直接DMAし、ネットワーク側のRDMA転送と比較する。論文は非コヒーレントな大容量CXLデバイスを対象とし、ハードウェアアトミックや全領域コヒーレンシを前提にしない点を実装条件としている。",
-    "software": "NVIDIA Dynamo系の分離LLM推論基盤とvLLMのKV管理経路へTraCTを統合する。比較対象にはRDMA転送を行うNIXL系構成と、DRAM／ネットワークを介するLMCache系KVキャッシュを含む。TraCT側はGPU-CXL DMA、共有メモリアロケータ、オフセット型オブジェクトストア、プレフィックス索引、2層ロック、明示的キャッシュラインフラッシュを提供する。",
-    "methodology": "評価は、まずプレフィックスキャッシュを無効にしてCXLを純粋なKV転送媒体として測り、入力長1500〜6000トークンでTTFT分布と負荷時の転送挙動をRDMA基準と比較する。次にプレフィックスキャッシュを有効にし、静的・合成負荷で平均TTFT、P99遅延、ピーク要求スループットを測る。これにより、GPU-CXL DMAそのものの利得と、ラック全体キャッシュで再計算・再転送を避ける利得を分離して観察する。入力が長いほどKV量が増えるため、転送経路差がTTFTへどう拡大するかも確認する。論文の総括値はRDMAおよびDRAMベースのキャッシング基準に対する最大改善として報告される。",
-    "scope": "評価はラック内CXL共有メモリが利用可能な環境を対象とし、CXLファブリックを跨げない複数ラック構成や広域ネットワークは直接の対象外である。利得はKV量、プレフィックス再利用率、ネットワーク競合、CXL帯域の関係に依存する。現行CXL Type-3の制約をソフトウェアで補うため、将来ハードウェアがノード間アトミックや強いコヒーレンシを提供する場合には同期設計の費用構造が変わり得る。またCXL帯域自体が極端に大きなモデル・高要求率で新たな律速になる可能性があり、TraCTはネットワークを除去してもKV移送量そのものをゼロにはしない。"
-  },
-  "reservation": {"claim_id": "claim-f0e6afec5cf9246016c6a451", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-dc0f658e4e197063cb9471e1",
+  "job_id": "job-research-886ba13cf71588b2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dc0f658e4e197063cb9471e1",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }

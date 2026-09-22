@@ -2,19 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f0e6afec5cf9246016c6a451",
-  "job_id": "job-research-e7435b966cd8c5e7",
-  "data": {
-    "overview": "TraCTは、RDMAおよびDRAMベースのKVキャッシュ基準に対し、平均TTFTを最大9.83倍短縮し、P99遅延を最大6.2倍短縮、ピークスループットを最大1.6倍向上する。キャッシュを無効にした転送単体試験でもCXL経路はNIXL/RDMAよりTTFT分布を短く安定させ、入力が1500から6000トークンへ伸びてKV量が増えるほど差が明瞭になる。キャッシュ有効時は、共有CXL上に既存KVがあるヒット要求についてプリフィル側のKV再生成・再書込みを避けられるため、単なる高速転送以上の改善が得られる。",
-    "key_results": [
-      {"metric": "平均TTFT", "value": "最大9.83倍短縮", "baseline": "RDMAおよびDRAMベースのKVキャッシュ構成（LMCache/NIXL系）", "condition": "静的・合成負荷、CXL共有プレフィックスキャッシュを含むTraCT", "interpretation": "NICキューとネットワーク転送を外すことに加え、キャッシュヒットKVの再生成・再書込みを避ける効果が平均応答開始時間へ現れる。"},
-      {"metric": "P99遅延", "value": "最大6.2倍短縮", "baseline": "RDMA系基準", "condition": "高並行・バーストを含む評価", "interpretation": "PCIe/CXLベースの共有メモリ経路はネットワーク競合による変動を受けにくく、CDFの裾を短くして応答予測性を改善する。"},
-      {"metric": "ピークスループット", "value": "最大1.6倍向上", "baseline": "RDMAおよびDRAMベースのキャッシング基準", "condition": "プレフィックスキャッシュ有効の合成負荷", "interpretation": "ラック内共有キャッシュのヒットをネットワーク転送なしで再利用し、プリフィル計算とKV移送の双方を減らすことで処理可能要求率を引き上げる。"},
-      {"metric": "キャッシュ無効時のTTFT分布", "value": "TraCTが一貫して低遅延で、長入力ほど差が拡大", "baseline": "NIXL/RDMA", "condition": "入力長1500〜6000トークン、プレフィックスキャッシュ無効", "interpretation": "キャッシュ再利用を除いてもGPU-CXL DMA自体がRDMAのNIC・ホストバッファ・ネットワーク処理費を回避することを示す。"}
-    ],
-    "negative_results": "TraCTの利得は無条件ではない。キャッシュ無効の転送単体ではスループットがRDMA系と同程度になる領域があり、CXL化だけで全ての計算律速を解消するわけではない。プレフィックス再利用が低い負荷では共有キャッシュによる再計算回避の寄与も小さくなる。さらに現行CXLはノード間アトミックと全領域コヒーレンシを欠くため、2層ロックと明示的フラッシュというソフトウェア費用が必要である。大規模モデル・高要求率ではCXLリンク帯域が新たな律速になる可能性があり、ラック外では依然としてRDMA等のネットワーク経路が必要になる。",
-    "interpretation": "結果は、分離LLMサービングのKV問題が単なるネットワーク帯域不足ではなく、転送経路とキャッシュ配置を別々に設計していることにも由来することを示す。CXLを両者の共通データ面にすると、ミス時はGPU-CXL DMAでネットワークを回避し、ヒット時はそもそも別ノードへKVを運ぶ必要がない。平均だけでなくP99が大きく改善する点は、ネットワーク競合・キュー変動をKVクリティカルパスから除いた効果を支持する。一方、CXLは容量階層として追加されるため、帯域と同期費用を含めた階層メモリ設計が重要になる。",
-    "quality_impact": "TraCTはモデルの重み、注意計算の意味、サンプリング方式を変更しない。再利用するKVも同じモデル計算で生成されたブロックであり、方式の目的は配置と移送の変更である。そのため生成精度を近似で犠牲にする圧縮方式とは異なり、主なトレードオフはハードウェア要件、共有メモリ容量、同期費用、帯域である。"
-  },
-  "reservation": {"claim_id": "claim-f0e6afec5cf9246016c6a451", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-dc0f658e4e197063cb9471e1",
+  "job_id": "job-research-886ba13cf71588b2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dc0f658e4e197063cb9471e1",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
