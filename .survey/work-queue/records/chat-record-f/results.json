@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e0aa79e0bd81154b33f04a71",
-  "job_id": "job-research-98b9431cd6bf114a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e0aa79e0bd81154b33f04a71",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e0aa79e0bd81154b33f04a71","job_id":"job-research-98b9431cd6bf114a","data":{"overview":"MergeMoEは同じ圧縮率・同じ対象層でM-SMoE、Average、ZipItを概ね上回る。Qwen3 30B→25Bでは7課題中6課題で比較法最高となり、元モデルとの差もWinoGrande、PIQA、MRPCで0.6ポイント未満。Qwen1.5 14B→10BではM-SMoE比でWinoGrande +1.50、HellaSwag +2.71、SQuAD +1.41、MRPC +2.45ポイント。DeepSeekMoE 16B→12BでもM-SMoE比ARC-Easy +1.13、HellaSwag +1.16を得る。圧縮誤差を理想的に除いたablationとの差は比較的小さく、最小二乗補正が統合誤差をかなり抑えている。","key_results":[{"metric":"Qwen3-30B-A3B圧縮後性能","value":"25Bで7課題中6課題が比較法最高","baseline":"M-SMoE、Average、ZipIt","condition":"30B→25B、同圧縮層・同圧縮率","interpretation":"WinoGrandeのみM-SMoEに0.23差で2位、他は最高。元モデルとの差も複数課題で0.6未満。"},{"metric":"Qwen1.5 WinoGrande","value":"70.48","baseline":"M-SMoE 68.98","condition":"14B→10B","interpretation":"同容量で+1.50ポイント。"},{"metric":"Qwen1.5 HellaSwag","value":"71.58","baseline":"M-SMoE 68.87","condition":"14B→10B","interpretation":"+2.71ポイントで、出力近似最適化の代表的改善。"},{"metric":"Qwen1.5 MRPC","value":"74.75","baseline":"M-SMoE 72.30","condition":"14B→10B","interpretation":"+2.45ポイント。4B dense model 62.99も上回る。"},{"metric":"DeepSeekMoE HellaSwag","value":"75.32","baseline":"M-SMoE 74.16、ZipIt 72.61","condition":"16B→12B","interpretation":"M-SMoE比+1.16、ZipIt比+2.71。"},{"metric":"較正sample閾値","value":"32未満でほぼ失敗、36以上で急回復","baseline":"WinoGrande二択のランダム水準約50%","condition":"Qwen1.5、同じ圧縮設定","interpretation":"最小二乗行列T1の安定推定には一定量以上の入力観測が必要。"}],"negative_results":"MergeMoEはM-SMoEより圧縮前処理が遅く、最小二乗と追加行列計算を要する。ただし実験範囲では単一H20で1分以内。sample数が32未満ではQwen1.5/WinoGrande性能がランダム推測付近まで崩れ、少量sampleに強い方式ではない。また圧縮率を上げるほど性能は低下し、とくに一層あたりのexpert数を大きく減らす方が、多くの層を穏やかに圧縮するより悪影響が大きい。","interpretation":"主要改善は、経験的パラメータ平均を出力近似へ置き換え、線形に解けるT1だけでもデータ依存の閉形式最適化を入れたことから来る。クラスタを保ったまま統合誤差を除いた理想条件ではQwen1.5 WinoGrande 71.27に対し通常MergeMoE 70.48であり、残差はあるが差は0.79。理論解析が示す二種類の誤差分解と実験ablationが整合する。","quality_impact":"圧縮後性能は多くの課題で元モデルに近いが完全無損失ではない。Qwen3 ARC-Challengeは元67.49から63.48、Qwen1.5 ARC-Challengeは50.60から42.06へ低下するなど課題依存差がある。単一dataset由来の16K tokenで統合しても他課題への性能低下は比較的小さく、一定のdataset横断一般化は確認される。"},"reservation":{"claim_id":"claim-e0aa79e0bd81154b33f04a71","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
