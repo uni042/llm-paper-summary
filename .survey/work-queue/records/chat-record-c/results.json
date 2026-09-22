@@ -2,21 +2,61 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c92a29674a67b32c44dc512a",
-  "job_id": "job-research-ca56f81ba7248b99",
+  "attempt_id": "attempt-bf3c6b8d3b26eeee3e65ab1f",
+  "job_id": "job-research-b6a722146f5922c5",
   "data": {
-    "overview": "AMENDはLongBenchでDenseとの差がLlama +0.07、Qwen -0.04 average points、RULER平均85.13でDense 85.30、BLASST 85.58に近い品質を維持する。H100+HBM3-PIM simulationのbatch 8では8K→64Kでend-to-end speedupが1.40→3.63倍、dynamic energyがDense比0.72→0.34へ低下する。attention pathは8K/16K/32K/64Kで8.39/9.82/11.27/10.89倍高速化し、PIM auditのserial latencyは0。",
+    "overview": "完全Qwen 88 promptsではW2/W3/W4の平均ΔNLLが0.9437/0.1832/0.0513、中央値0.8514/0.1387/0.0241。τ=0.1513ではstatic W4が1.000倍、request-agnostic budget-aware mixtureが1.253倍、FWPが1.284倍、restricted true-loss orderingが1.303倍。したがってstatic W4からの0.284増分の大半0.253は異種instanceの予算配分そのものが生み、FWP固有の上積みは0.031 points、request-agnostic比2.5%である。",
     "key_results": [
-      {"metric": "End-to-end decode speedup", "value": "1.40×〜3.63×", "baseline": "Dense", "condition": "Llama RULER, batch 8, 8K〜64K, H100+HBM3-PIM simulation", "interpretation": "contextが長くattention比率が32%→80%へ増えるほど重畳効果が大きい。"},
-      {"metric": "Dynamic decode energy", "value": "28.14%〜66.39%削減", "baseline": "Dense", "condition": "8K〜64K", "interpretation": "64Kでnormalized energy 0.34。"},
-      {"metric": "Attention-path speedup", "value": "8.39× / 9.82× / 11.27× / 10.89×", "baseline": "Dense", "condition": "8K/16K/32K/64K", "interpretation": "32Kで最大11.27×、Quest-PIM最大7.05×を上回る。"},
-      {"metric": "LongBench average", "value": "Llama 49.76, Qwen 49.37", "baseline": "Dense 49.69 / 49.41", "condition": "16 tasks", "interpretation": "平均品質はDenseから±0.1程度。"},
-      {"metric": "RULER average", "value": "85.13", "baseline": "Dense 85.30, BLASST 85.58, Quest 78.66", "condition": "Llama 8K〜64K + Qwen 32K", "interpretation": "BLASST比0.45 point内、Quest比+6.47 points。"},
-      {"metric": "Audit feedback false-drop", "value": "0.028 vs 0.087", "baseline": "audit fold off", "condition": "10 LongBench gov_report examples", "interpretation": "complement auditでfalse-dropを68%削減。"}
+      {
+        "metric": "W2/W3/W4 mean ΔNLL",
+        "value": "0.9437 / 0.1832 / 0.0513",
+        "baseline": "reference checkpoint",
+        "condition": "Qwen3-30B-A3B、88 prompts、全6,144 expert blocks量子化",
+        "interpretation": "低bitほど平均劣化は大きいがrequest間ばらつきがあり、routing余地がある。"
+      },
+      {
+        "metric": "FWP allocation multiplier",
+        "value": "1.284×",
+        "baseline": "static W4 1.000×",
+        "condition": "τ=0.1513、offline fixed population",
+        "interpretation": "28.4%全体をFWP効果と解釈してはいけず、request-specific FWP上積みは2.5% relative。"
+      },
+      {
+        "metric": "Request-agnostic mixture",
+        "value": "1.253×",
+        "baseline": "static W4 1.000×",
+        "condition": "同一品質予算",
+        "interpretation": "異種instanceを品質予算内で混ぜるだけでheadline改善の大半が得られる。"
+      },
+      {
+        "metric": "Prompt-only W2→W3 risk prediction",
+        "value": "Spearman 0.586 / AUROC 0.747",
+        "baseline": "cross-instance FWP",
+        "condition": "reference prompt statistic",
+        "interpretation": "有用だが中程度の信号であり直接品質測定ではない。"
+      },
+      {
+        "metric": "Prefix FWP Spearman",
+        "value": "0.238/0.505/0.593/0.765/0.999",
+        "baseline": "64/128/256/512/1024 tokens",
+        "condition": "64 extended prompts",
+        "interpretation": "短いprefixでは予測が弱くlength-aware abstentionが必要。"
+      },
+      {
+        "metric": "2×A100 endpoint output throughput",
+        "value": "W2 3270±33, W3 2591±11, W4 2334±17 tokens/s",
+        "baseline": "同一endpoint protocol",
+        "condition": "216 requests×5, prefix caching off",
+        "interpretation": "bitwidthごとのcapacity orderingを実測するが1.284×とは別プロトコル。"
+      }
     ],
-    "negative_results": "target false-dropを5e-2超へ緩めると品質が急落し、8e-2ではRULER score 0.335まで落ちる。batch 64以降はPIM auditが完全に隠れず、32Kでbatch 64に22.5 μs/token、128に49.2 μs/tokenのstallが露出し、batch128ではAMEND 5.86×とQuest-PIM 5.89×で逆転する。",
-    "interpretation": "重要なのはPIMをcurrent-token selectorとして直列に置かず、future decisionの監査器として使うことである。GPUがsurvivorを処理する時間をPIM auditで埋められる範囲ではcritical pathからPIMを消せるが、batch増加でaudit量が重畳余地を超えると優位が飽和する。",
-    "quality_impact": "2% target FDRの選定点ではLongBench/RULER品質はDense/BLASSTに近い。一方、予測dropはcurrent tokenで不可逆なのでfalse-drop budgetを攻めすぎると品質崩壊が明確に起きる。"
+    "negative_results": "static W3の1.333×、W2の2.000×、capacity-proportional 1.564×はいずれもτ=0.1513の平均品質予算を違反する。held-out 50/50 calibration splitsのbudget complianceは約35〜50%に留まり、deployment-level risk guaranteeはない。live prototypeも同一総資源replica比較を欠く。",
+    "interpretation": "この研究の中心的な結果は、量子化instanceの性能差そのものより、request-level品質脆弱性の不均一性を利用すると固定pool内で低bit instanceをより多く使える点にある。ただしFWPの追加価値は全体gainの一部で、provisioning最適化やreplica追加との比較は未解決である。",
+    "quality_impact": "品質制約を平均ΔNLLとして明示的に入れるため、低bitへ送る割合を増やしてもpopulation平均予算を守る設計。ただしheld-out complianceが弱く、短promptではFWP相関も低いため、実配備では保守的fallbackと信頼区間が必要。"
   },
-  "reservation": {"claim_id": "claim-c92a29674a67b32c44dc512a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bf3c6b8d3b26eeee3e65ab1f",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

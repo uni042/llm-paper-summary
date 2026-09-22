@@ -2,13 +2,17 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c92a29674a67b32c44dc512a",
-  "job_id": "job-research-ca56f81ba7248b99",
+  "attempt_id": "attempt-bf3c6b8d3b26eeee3e65ab1f",
+  "job_id": "job-research-b6a722146f5922c5",
   "data": {
-    "hardware": "性能モデルはNVIDIA H100 80GB HBM3、3.35 TB/s、989 TFLOPS BF16と、5個の16GB HBM3 stackにAttAcc bank-level GEMV PIM（各stack外部670 GB/s、内部9倍）を組み合わせる。energyはAttAcc dynamic energy tableのみ。品質runはA100 BF16。",
-    "software": "Llama-3.1-8B-InstructとQwen3-8BをDense、Quest、BLASST、AMENDで比較。AMEND software pathとauditを実際にquality runで実行し、そのtraceをAttAcc-based simulatorへreplayする。core emulation/simulator codeは公開。",
-    "methodology": "LongBenchは各model 16 tasks、3,750 inputs。RULERは各model/context 13 tasks、1,300 examplesでLlama 8K/16K/32K/64K、Qwen 32K。block size 16、BLASST/AMEND TSF=64。AMENDは各settingから50 examplesでSCBO 10 rounds×10 candidatesを探索しtarget false-drop 2%以下でdrop recall最大点を選ぶ。性能はLlama RULER traceをbatch 8でreplayしDense正規化のper-token decode timeとdynamic energyを測る。",
-    "scope": "GPU-PIM性能はtrace-driven simulationであり実HBM-PIM silicon実測ではない。GPU/PIM lane間のbandwidth contentionをモデル化せず、energyはdynamicのみ。32Kでbatch>16はH100 post-weight 67 GiB capacityを超えるためbatch 32〜128の感度分析はcost-model extrapolation。false-dropはcurrent tokenでは修復不能で、品質はoffline選定したoperating pointに依存する。"
+    "hardware": "完全品質評価はQwen3-30B-A3Bの全6,144 expert blocksをHQQでW2/W3/W4化した固定プール。parameter memory見積りはW4 18.06 GiB、W2/W3/W4 pool 44.05 GiB、3×W4 54.17 GiB、BF16 56.87 GiB。別capacity実験は同一2×A100 endpointで216 requestsを5回反復する。",
+    "software": "量子化はHQQ。完全Qwen populationはshort QA、code、long-contextを含む88 prompts。DeepSeek-V2-Liteは4層のsampled expert診断のみで、完全instanceのcross-architecture主張には使わない。",
+    "methodology": "88 Qwen promptsで各W2/W3/W4のrequest-level平均NLL増分をreference checkpoint比で測定する。共通品質予算τ=mean(W4 ΔNLL)+0.10=0.1513を設定し、static、capacity-proportional、request-agnostic budget-aware、sequence length、activation frequency、FWP、restricted true-loss orderingを同じpopulationで比較する。prompt-only FWPはreference instanceからW3 riskを予測し、prefix 64/128/256/512/1024 token別相関とheld-out calibration complianceを測る。",
+    "scope": "1.284倍は実測live throughputではなく、固定populationと解析的instance multiplierに基づくoffline model-based allocation値。endpoint throughput実験は別checkpoint/protocolでありheadlineと混合しない。live prototypeは3 serving GPUsに別INT3 scorer GPUを使い、同一総資源のreplica fleet比較をしていないためend-to-end優位を主張しない。"
   },
-  "reservation": {"claim_id": "claim-c92a29674a67b32c44dc512a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bf3c6b8d3b26eeee3e65ab1f",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

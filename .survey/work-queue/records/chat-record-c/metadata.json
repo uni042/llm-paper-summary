@@ -2,37 +2,59 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-c92a29674a67b32c44dc512a",
-  "job_id": "job-research-ca56f81ba7248b99",
+  "attempt_id": "attempt-bf3c6b8d3b26eeee3e65ab1f",
+  "job_id": "job-research-b6a722146f5922c5",
   "data": {
-    "canonical_id": "arXiv:2609.09823",
-    "arxiv_id": "2609.09823",
-    "doi": "10.48550/arXiv.2609.09823",
+    "canonical_id": "arXiv:2609.12550",
+    "arxiv_id": "2609.12550",
+    "doi": "10.48550/arXiv.2609.12550",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
-    "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
-    "summary": "AMENDは長文LLMデコードのKV cache帯域ボトルネックに対し、現在queryのQK計算後に疎ブロックを決める従来法や、現在queryをPIMへ渡してからmaskを得る直列PIM filterを避けるGPU-PIM協調attentionである。過去stepで監査済みのBLASST marginから次stepのdrop verdictを因果予測し、GPUは予測survivorだけを即時処理する。同時にHBM近傍PIMがGPUから省いたcomplementのQKを監査し、controllerが両観測を統合して予測状態と次maskを更新する。Llama-3.1-8B-Instruct/Qwen3-8BのLongBench/RULERで品質をほぼ維持し、H100+HBM3-PIM simulationのbatch 8、8K〜64Kで1.40〜3.63倍end-to-end decode speedup、28〜66% dynamic energy削減を報告する。",
-    "list_summary": "過去stepの監査済みattention marginで次maskを先行予測し、GPU survivor計算とHBM-PIM complement監査を並列化してK trafficと直列PIM待ちを同時に除く長文decode設計。",
-    "authors": ["Zuxiong Tan", "Will Wei-Jen Wang", "Wei Shao", "Ali Karkehabadi", "Houman Homayoun", "Avesta Sasan"],
-    "authors_affiliations": "University of California, Davis",
-    "published": "2026-09-09",
-    "publication": "arXiv:2609.09823 v1, 2026-09-09",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "long-context sparse attention / KV-cache bandwidth reduction / GPU-PIM heterogeneous decoding / predictive attention masks",
-    "topics": ["long-context inference", "sparse attention", "KV cache", "PIM", "HBM", "causal prediction", "GPU-PIM"],
-    "importance": "現在tokenの結果にPIMを直列依存させず、未来maskの監査専用にPIMを回すことでGPUとメモリ内計算を真に重ねる。階層・異種メモリでI/Oをcritical pathから外す設計原理として重要。",
-    "hardware_evaluation": "H100 80GB HBM3、3.35 TB/s、989 TFLOPS BF16をGPUモデルとし、5×16GB HBM3 stackにAttAcc由来bank-level GEMV PIMを配置。品質実行はA100 BF16、性能はtrace-driven simulation。",
-    "quality_effect": "LongBench平均はLlama Dense 49.69対AMEND 49.76、Qwen Dense 49.41対AMEND 49.37。RULER平均Dense 85.30対AMEND 85.13。",
-    "source": "https://arxiv.org/abs/2609.09823",
-    "sources": ["https://arxiv.org/abs/2609.09823", "https://arxiv.org/pdf/2609.09823", "https://github.com/Miketan1/AMEND_code"],
-    "code": "https://github.com/Miketan1/AMEND_code",
-    "implementation": "AMEND attention emulationとtrace-based GPU/PIM simulatorのcore codeをMITで公開。Qwen3-1.7B、LongBench、AttAccの外部入力を用いる再現手順をREADMEに記載。",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+    "summary": "同一MoE基盤モデルから事前生成した複数量子化インスタンスを固定プールとして常駐させ、要求ごとの量子化耐性を予測して、品質劣化予算と各インスタンス容量を守りながら高スループット側へ振り分ける手法。要求時の参照インスタンスprefillから脆弱性重み付きパープレキシティ（FWP）を計算し、候補インスタンスのΔNLLへ校正する。固定窓の線形計画と双対価格から要求単位スコアを導出する。Qwen3-30B-A3Bの全6,144 expert blocksをW2/W3/W4量子化した88 promptsで、FWP割当は品質予算τ=0.1513の下で1.284倍のオフラインモデル化乗数を達成した。",
+    "list_summary": "固定常駐したW2/W3/W4 MoEインスタンス間で、prompt時FWPから要求別量子化リスクを推定し、品質予算付きLPで高スループット側へ配分する要求ルーティング。",
+    "authors": [
+      "Zhenghong Huang",
+      "Hongfan Wu",
+      "Jiheng Zhang"
+    ],
+    "authors_affiliations": "The Hong Kong University of Science and Technology (HKUST)",
+    "published": "2026-09-11",
+    "publication": "arXiv:2609.12550 v1; EMNLP 2026 main track accepted",
+    "publication_type": "Conference paper / Preprint",
+    "publication_status": "Accepted",
+    "lineage": "MoE quantization / heterogeneous model-instance routing / quality-aware serving / risk calibration",
+    "topics": [
+      "MoE",
+      "quantization",
+      "request routing",
+      "FWP",
+      "quality constraint",
+      "linear programming",
+      "serving"
+    ],
+    "importance": "量子化を一律なモデル選択ではなく要求別の品質リスクとして扱い、既に常駐する複数量子化インスタンスのメモリ・容量制約と結び付ける。圧縮モデルを階層化して使い分ける推論システム設計に直接関連する。",
+    "hardware_evaluation": "完全品質評価はQwen3-30B-A3BのW2/W3/W4全expert量子化。別のendpoint capacity実験は同一2×A100構成で216 requestsを5反復。",
+    "quality_effect": "完全Qwen 88 promptsで平均ΔNLLはW2=0.9437、W3=0.1832、W4=0.0513。品質予算τ=0.1513でFWP割当の平均ΔNLLは0.151。",
+    "source": "https://arxiv.org/abs/2609.12550",
+    "sources": [
+      "https://arxiv.org/abs/2609.12550",
+      "https://arxiv.org/pdf/2609.12550"
+    ],
+    "code": "",
+    "implementation": "完全オンライン双対価格コントローラの本番配備は未実施。論文はオフライン割当とcomponent timingを主評価する。",
     "last_checked": "2026-09-22",
     "references": [],
     "references_checked_at": "2026-09-22",
     "references_source": "primary-reference-section",
-    "references_total": 0
+    "references_total": 52
   },
-  "reservation": {"claim_id": "claim-c92a29674a67b32c44dc512a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bf3c6b8d3b26eeee3e65ab1f",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
