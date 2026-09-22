@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-d67f024461753c90c6dd6c10","job_id":"job-research-47be6c5f34f13438","data":{"canonical_id":"arXiv:2606.00079","arxiv_id":"2606.00079","doi":"10.48550/arXiv.2606.00079","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"BitsMoE: Efficient Spectral Energy-Guided Bit Allocation for MoE LLM Quantization","summary":"BitsMoEは、MoEの全専門家を常駐させるメモリ負荷を超低ビット量子化で減らす際、専門家・層単位の粗いビット配分では重要な重み方向を保護できない問題に対し、同一層の専門家を共有スペクトル基底と専門家固有スペクトル因子へ分解する。共有基底はFP16で保持し、固有因子の各スペクトル成分を活性化依存再構成誤差で評価して、固定予算下の整数線形計画で0〜16ビットを割り当てる。Qwen3-30B-A3Bの実効2ビットでは平均精度61.91、GSM8K 75.51を達成し、GPTQ比で量子化12.3倍高速、復号1.76倍高速と報告する。","list_summary":"共有スペクトル基底をFP16保持し、専門家固有成分へ活性・スペクトルエネルギー依存でビットを整数最適配分する超低ビットMoE量子化。","authors":["Jiayu Zhao","Zihan Teng","Minhao Fan","Tianrui Ma","Wentao Ren","Song Chen","Weichen Liu"],"authors_affiliations":"University of Science and Technology of China; Nanyang Technological University","published":"2026-05-22","publication":"arXiv:2606.00079 v1, 2026-05-22","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE量子化 / 混合精度 / 共有スペクトル基底 / 活性依存ビット配分","topics":["MoE","量子化","混合精度","スペクトル分解","整数線形計画","推論高速化"],"importance":"MoE固有の専門家間共有構造を量子化座標系そのものへ取り込み、ビット配分単位を層・専門家・線形ブロックからスペクトル成分まで細粒度化する。2ビット以下で推論品質と実カーネル効率を同時評価している点が実装系サーベイに重要。","hardware_evaluation":"量子化評価はNVIDIA A100-PCIe-80GB、オンライン推論はA6000。Qwen3-30B-A3Bの2ビットで復号5.71 token/s、FP16 3.07に対し1.86倍、TTFT 1.51秒対2.35秒、MoE重み54.00GBから8.58GBへ6.29倍削減。","quality_effect":"Qwen3-30B-A3Bの実効2ビットで平均61.91、GSM8K 75.51。GPTQは平均34.08、GSM8K 4.32、MoEQuantは52.21/49.36。1.4ビットでも平均47.46、GSM8K 52.62を保持する。","source":"https://arxiv.org/abs/2606.00079","sources":["https://arxiv.org/abs/2606.00079","https://arxiv.org/html/2606.00079","https://arxiv.org/pdf/2606.00079"],"code":"https://github.com/zjiayu064/BitsMoE","implementation":"公開コードあり。共有基底分解、1024 C4校正、Gurobiによる成分別ビット配分、量子化因子を完全重みへ再構成せずGEMM内で展開する推論を含む。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-paper-reference-section","references_total":0},"reservation":{"claim_id":"claim-d67f024461753c90c6dd6c10","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-ac17b6b84524962e53346559",
+  "job_id": "job-research-3bf50f659a80056e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ac17b6b84524962e53346559",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

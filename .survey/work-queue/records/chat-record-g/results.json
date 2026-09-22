@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-d67f024461753c90c6dd6c10","job_id":"job-research-47be6c5f34f13438","data":{"overview":"Qwen3-30B-A3B-Baseの実効2ビットでBitsMoEは7タスク平均61.91、GSM8K 75.51となり、GPTQの34.08/4.32、MoEQuantの52.21/49.36を上回る。1.4ビットでも平均47.46、GSM8K 52.62。A6000推論ではQwen3-30Bの復号5.71 token/sでFP16比1.86倍、TTFT 1.51秒、MoE重み54.00GBから8.58GBへ削減する。","key_results":[{"metric":"Qwen3-30B 2-bit平均精度","value":"61.91%","baseline":"GPTQ 34.08、MoEQuant 52.21、HQQ 39.51、MiLo 37.44","condition":"MoE weights only、7 downstream tasks","interpretation":"超低ビットで粗粒度量子化より品質保持が大きい。"},{"metric":"Qwen3-30B GSM8K","value":"75.51%","baseline":"GPTQ 4.32、MoEQuant 49.36","condition":"effective 2.0-bit","interpretation":"推論能力の崩壊を大幅に抑える。"},{"metric":"sub-2-bit","value":"1.4-bitで平均47.46、GSM8K 52.62","baseline":"2.0-bitで61.91/75.51","condition":"Qwen3-30B-A3B-Base","interpretation":"成分削除を含む配分で2ビット未満まで滑らかに容量を削れる。"},{"metric":"復号速度","value":"5.71 token/s、FP16比1.86倍","baseline":"FP16 3.07、GPTQ 3.25","condition":"Qwen3-30B、A6000、batch1、prefill256、generation128","interpretation":"共有基底投影を含めても実カーネルで速度利得が残る。"},{"metric":"MoE重みメモリ","value":"8.58GB、6.29倍削減","baseline":"FP16 MoE 54.00GB","condition":"Qwen3-30B","interpretation":"専門家常駐容量を大幅に削減する。"},{"metric":"アブレーション平均","value":"完全版61.91","baseline":"FP16共有基底＋均一ビット43.92、量子化共有基底21.46","condition":"Qwen3-30B、実効2-bit","interpretation":"共有基底を高精度保持することと成分別適応ビットの双方が必要。"}],"negative_results":"共有基底自体を2ビット量子化するQS/UniBitはQwen3-30B平均21.46まで崩れ、共有情報の保護が必須。PPLは全モデル・条件で常に最低ではない。整数計画の損失は成分間相互作用を捨てた局所代理であり、全モデル出力損失の直接最適化ではない。","interpretation":"品質改善は単なるSVD低ランク化ではなく、共有情報を高精度で隔離した上で、残りの専門家固有方向へ『どの方向に何ビット使うか』を最適化することから生じる。0ビットも候補に入れるため量子化とスペクトル枝刈りを同一予算問題として扱える。","quality_impact":"2ビット級で特に推論・コード能力の保持が強い一方、共有基底のFP16容量は残るため実効ビット計算ではその固定費を含める必要がある。注意層やKVキャッシュは別手法との併用対象である。"},"reservation":{"claim_id":"claim-d67f024461753c90c6dd6c10","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-ac17b6b84524962e53346559",
+  "job_id": "job-research-3bf50f659a80056e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ac17b6b84524962e53346559",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
