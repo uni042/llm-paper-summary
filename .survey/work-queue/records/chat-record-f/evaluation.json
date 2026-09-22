@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-ff7e9c58f4c5f78412ef8d98",
-  "job_id": "job-research-baad806afa0723b4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ff7e9c58f4c5f78412ef8d98",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ff7e9c58f4c5f78412ef8d98","job_id":"job-research-baad806afa0723b4","data":{"hardware":"後学習はNVIDIA A100 80GBを5基使用する。第1系統は数日、第2系統は1日未満の学習時間と報告される。推論評価の基盤はQwen3-14Bで、通常3本の並列ワーカー、固定サブタスクを持つMARBLE Databaseのみ5ワーカーを用いる。","software":"Qwen3-14Bを凍結基盤とし、注意のq/k/v/o射影へrank 16、alpha 32、dropout 0.0のLoRAを適用する。キャッシュ写像とLoRAをAdamW、学習率1e-4、weight decay 0で共同最適化する。比較はSingle、Voting、標準Text-Serialization、APE、CacheBlend（再計算率0.15）、KVLINK。","methodology":"評価は学習データと重ならない9データセット。数学はAIME 2024/2025とGSM8K、科学QAはGPQAとMedQA、コードはHumanEval-PlusとMBPP-Plus、エージェント課題はGAIAとMARBLE Databaseを使う。GAIAは公開validation、最大5 tool step。生成上限は通常4096、AIMEは6000。品質は各ベンチマークのaccuracyまたは正答数、効率は合成器の最初のトークンまでの時間を測り、Parallel-Synthesisでは位置再符号化とキャッシュ写像の時間も含める。アブレーションでは無学習、第1/第2学習系統、逐次学習、統合checkpoint、LoRAのみ、完全構成、および最終出力・各ターン出力・完全軌跡の通信粒度を比較する。","scope":"同一Qwen3-14B系列の並列ワーカー出力を多対一で合成する設定が中心で、異種モデル間KV互換、非常に複雑な構造化DAG、広範な実運用トラフィックは未検証。著者自身も全エージェント枠組みでテキスト通信を置換できる段階ではないとする。明示的な検索結果やコード出力など、テキスト表現が明瞭な証拠中心課題ではテキスト直列化が依然有利な場合がある。"},"reservation":{"claim_id":"claim-ff7e9c58f4c5f78412ef8d98","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
