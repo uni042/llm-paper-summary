@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-a302801e2f42ef7601d7976c",
-  "job_id": "job-research-aa3e3c19262a245a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a302801e2f42ef7601d7976c",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-a302801e2f42ef7601d7976c","job_id":"job-research-aa3e3c19262a245a","data":{"hardware":"OnePlus 11（Snapdragon 8 Gen 2、Adreno 740）、Motorola Edge Plus 2022（Snapdragon 8 Gen 1、Adreno 730）、Pixel 4（Snapdragon 855、Adreno 640）、Pixel 5（Snapdragon 765G、Adreno 620）の4端末。各端末でGPU、CPU大コア群、CPU中コア群を論理デバイスとして扱う。オフラインGurobi比較はIntel Core i7-14700K、64GBメモリ、28 CPUスレッドのデスクトップで実施する。","software":"反復スケジューラはC++、-O3でAndroidネイティブバイナリ化。実行ランタイムはTensorFlow Lite 2.17.0を基礎に、GPUはOpenCL版TFLite GPU delegate、CPUはXNNPACKを利用する。オフラインシミュレーションはPython、Gurobiはgurobipy。GBDT遅延予測器はオフライン学習後にCコードへ変換して端末上で利用する。","methodology":"評価対象はInception系、SqueezeNet系、PeleeNet、HRNet系を含む18個の固定形状CNNで、入力解像度224×224、バッチ1。シミュレーションでは各端末の演算子遅延予測を使い、完全共同最適化のJoint-Gurobiを1.00として、単一GPU/CPU、局所最小遅延の分割専用、HEFT等のスケジュール専用、固定分割を展開したDAG、貪欲な分割認識HEFT、提案反復探索を比較する。Gurobiは各段階300秒上限。実測では生成されたスケジュールを4実機上のランタイムで実行し、GPUディスパッチとCPU-GPU同期を含むエンドツーエンド遅延を測る。既定探索は段階最大20演算子、各反復5候補演算子、各演算子10候補分割、最大分割数3、HEFTでスケジュール再構築。さらに段階化、最大分割数、スケジュールヒューリスティック、段階ごとの探索時間制限をアブレーションし、別端末で作ったスケジュールを転用する感度も調べる。","scope":"静的DAG、固定テンソル形状、バッチ1、統合CPU-GPUメモリを持つモバイル端末が対象。主評価はCNNで、固定形状ViTへは適用可能と議論するが実測していない。自己回帰LLMや動的MoEはトークン・入力ごとに計算量が変わり固定実行計画を再利用できないため対象外。動的バッチ、離散GPUや分散機器の明示的通信費、NPU/DSP、エネルギー、熱制約も扱わない。遅延予測誤差の包括的感度実験はなく、端末間転用実験を間接的な証拠としている。"},"reservation":{"claim_id":"claim-a302801e2f42ef7601d7976c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
