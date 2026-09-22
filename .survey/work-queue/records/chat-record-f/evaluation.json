@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-59b2c2e42440417a9356ca54",
   "job_id": "job-research-a4042c7c7ed57c9a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-59b2c2e42440417a9356ca54",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "全実験はNVIDIA A100 80GB GPUを32基備えたクラスタで実施する。対象モデルはDeepSeek-V2-Liteで、標準FFN 1層とMoE FFN 26層、各MoE層64エキスパートを持つ構成、およびQwen1.5-MoE-A2.7Bで、MoE FFN 24層、各層60エキスパートの構成である。",
+    "software": "C-PRUNEを学習済みDeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bへ適用し、比較対象としてランダム枝刈り、Seer Prune、Group&Mergeを用いる。クラスタリング比較では階層的クラスタリングとK-meansを比較する。著者は実装コードを公開している。",
+    "methodology": "主評価はMMLUのコンピュータ科学・数学・ビジネス、GSM8K、HumanEvalを用い、未枝刈りモデルを基準とする。表1では総枝刈り率20%でDeepSeekを15.7Bから13.0B、ルーティング対象64から52へ、Qwenを14.3Bから11.8B、60から48へ縮小して各比較方式と評価する。追加分析では層内枝刈り率と全体枝刈り率、タスク特化とタスク非依存、数学用圧縮をコードへ転用するなどの領域間転移、層内・全体に残すエキスパート数の配分、階層的クラスタリング対K-meansを比較する。",
+    "scope": "評価モデルは比較的小規模な2種類のMoEに限られ、論文自身も大規模MoEでの実運用スケーラビリティを未検証とする。MMLU、GSM8K、HumanEvalを中心とするため領域範囲も限定的で、より新しいMoE枝刈り法との比較も不足している。タスク特化方式なので較正データと対象領域の選び方が結果へ影響し、別領域へそのまま転用すると性能が落ちる場合がある。"
+  },
+  "reservation": {"claim_id": "claim-59b2c2e42440417a9356ca54", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
