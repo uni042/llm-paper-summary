@@ -120,7 +120,7 @@ PROFILES = {
             "生成された run-state result の ok / work_mode / pending state / gate.required_action を確認する。",
             "同じrun内で状態が変化して再判定する場合は、run_key / worker_id / scheduled_slot / actual_invocation_startを維持しつつ、新しい一意なrequest_idで新しいsnapshot requestを作る。",
             "resultが既に存在するrequest_idを再利用して最新状態を得ようとしない。既存resultは不変snapshotとして扱う。",
-            "requestはあるがresultがまだ無い場合は別requestへ逃げない。claim pendingでは request age と gate.required_action を確認し、最初の60秒は MONITOR_CLAIM_FAST_LANE としてActions run/job/step、同一workerの未解決submission・retryable repair・active claim整合を確認してから同じrequest_idを10秒後に再確認する。",
+            "requestはあるがresultがまだ無い場合は別requestへ逃げず、同じrequest_idを待機・追跡する。claim pendingでは request age と gate.required_action を確認し、最初の60秒は MONITOR_CLAIM_FAST_LANE としてActions run/job/step、同一workerの未解決submission・retryable repair・active claim整合を確認してから同じrequest_idを10秒後に再確認する。",
         ],
         "recovery": [
             "ok=false resultではfailed request/resultを上書きせず証跡として残す。",
