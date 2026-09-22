@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 09:36:00 JST**
+> 自動生成: **2026-09-22 09:36:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **330** |
-| 未claim Research job | **329** |
+| 収録候補論文 | **328** |
+| 未claim Research job | **328** |
 | 直近24hの検証済みResearch収録 | **22** |
 | 最終検証済みResearch収録 | **09-22 09:32:19 JST（3分前）** |
 | 整合性異常 | **0** |
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **330** |
+| canonical_id確認済みの一意な候補論文 | **328** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **330** |
+| 非終端Research job合計 | **328** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,10 +50,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **1** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **1** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **1** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **1** | **4** | **0** | **3** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -114,10 +114,8 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3789240.3829347` — DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving / worker `scheduled-chat-30`
-  - claim: **09-22 09:35:41 JST** / heartbeat: **—** / lease expiry: **09-22 11:05:41 JST**
-  - evidence: `.survey/work-queue/claims/job-research-85f2bc3e024d7c6c.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -137,7 +135,7 @@
 
 | status | 件数 |
 |---|---:|
-| ready | **330** |
+| ready | **328** |
 
 ### 候補の重複・識別情報欠損
 
