@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-f1e008f8fdda71bd88025432-r1",
+  "kind": "research",
+  "attempt_id": "attempt-f1e008f8fdda71bd88025432",
+  "job_id": "job-research-97e05693104abe69",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:3062e0c6e513d1b80c6d6b621259c152cc7d638443f3300dfb9ab06e05516cbc",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "1761cc3796a46d285fde54ba4629486b4396816b"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "7806b128ddb49e09b7be6d8614ccc9d69a507d01"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "f7bd4022a6f5f173fe84fe5f36cbf5e732d8aea1"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "7dbd85f09a43a19a2f1a15a02ab061e93d7d2e57"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "03d3347709dcfd91a839f75f819ba968fe569d86"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[0].description is too short"
+  ],
+  "checked_at": "2026-09-22T13:44:27+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
