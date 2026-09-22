@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-a503dd59d7e7b9e3cfd8340e",
-  "job_id": "job-research-3218c42781ec549d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a503dd59d7e7b9e3cfd8340e",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a503dd59d7e7b9e3cfd8340e","job_id":"job-research-3218c42781ec549d","data":{"limitations":"評価モデルはT5/BERT系の約10億/6.6億パラメータMoEで、現在の大規模生成MoEを直接評価していない。専門家統合は同一構造FFNを前提とし、構造差がある場合は別途weight permutation alignmentを想定する。タスク分布は監視器で得られる前提で、その推定誤差や急激な分布変化の影響を独立には評価していない。T5系ではオンライン利用前に正規化層を10,000 step微調整する必要があり、完全training-freeではない。木探索は初期候補が粗いため開始直後の性能が低く、ρ・学習率の調整も必要。A100単体中心で、分散MoEの通信、expert parallelism、実際のエッジネットワーク帯域・電力制約は未評価。","differences":"Token-SMoEやSwitchのように入力ごとに複数専門家を選んで実行するのではなく、Tanbrは時間枠単位で専門家パラメータを一つへ統合し、その後は単一FFNとして実行する。Smearのようなtoken-level soft mergingはtokenごとに統合するため高価だが、Tanbrはtask distribution単位で一度だけ統合する。Task-MoE/Task-Mergingは明示task tagへ依存する一方、Tanbrは履歴から推定した分布を使う。RegMean/Fisher/平均など静的model mergingと異なり、オンライン報酬で統合重みを更新する。通常の離散ニューラルバンディットに対して、被覆木を介して連続K次元重み空間を適応的に離散化する。","implementation_status":"arXiv v2のアルゴリズム記述とPyTorch/A100評価は詳細だが、一次資料中に公式コード公開URLは確認できない。理論証明は付録まで掲載され、連続空間の候補数上界とリグレット解析を含む。","research_positioning":"Adaptive Expert Computation / Compression系では、expert pruningやcache/offloadではなく、ワークロードに応じて複数expertを一つのparameter setへオンライン統合する系統に位置する。resident expert数と実行expert数を同時に減らせるため、resource-constrained deploymentと親和性がある。一方でtokenごとの難易度適応ではなく時間枠のtask mixtureを単位とするので、細粒度routing研究とは補完関係にある。","audit_notes":"arXiv:2509.19781v2のIntroduction、Related Work、System Model、Problem Formulation、Algorithm Design、理論解析、Performance Evaluation、Conclusion、Appendixの証明、Referencesまで確認。T5/BERTのnormalization差、初期探索劣化、微調整時メモリ増、個別GLUEでの非一様な勝敗、A100/モデル規模の境界を保持した。"},"reservation":{"claim_id":"claim-a503dd59d7e7b9e3cfd8340e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
