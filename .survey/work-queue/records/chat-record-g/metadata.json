@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-5be0f6527b55aa80672c5522",
-  "job_id": "job-research-015600d4d42febc5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5be0f6527b55aa80672c5522",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-5be0f6527b55aa80672c5522","job_id":"job-research-015600d4d42febc5","data":{"canonical_id":"arXiv:2608.07814","arxiv_id":"2608.07814","doi":"10.48550/arXiv.2608.07814","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Shape Mutating Expert Compression: LorExperts and BTExperts","summary":"LorExpertsは、専門家混合（MoE）の専門家重みが互いにほぼ直交するため単一共有成分では専門家数の増加に耐えにくい問題に対し、ルータの共活性構造で専門家を局所クラスタへ分け、各クラスタの高頻度専門家を完全精度の代表として保持し、残りをニューロン整列後の低ランク補正として表す圧縮法である。全専門家と既存ルータを残したまま約50%の専門家圧縮を狙い、Qwen3-30B-A3BとGemma-4-26B-A4Bで単一共有成分分解D2-MoEより品質保持を改善する。BTExpertsは同じ代表計算を共選択専門家間で償却する木構造で、圧縮品質向上ではなく推論計算共有を目的とする。","list_summary":"共活性クラスタごとに完全精度代表を残し他専門家を整列済み低ランク補正化、ルータを維持したまま約50%圧縮するLorExpertsと計算共有用BTExperts。","authors":["Inesh Chakrabarti","Sourjya Roy","Bowen Bao","Thiago Crepaldi","Spandan Tiwari","Ashish Sirasao"],"authors_affiliations":"Advanced Micro Devices (AMD)","published":"2026-08-07","publication":"arXiv:2608.07814 v1, 2026-08-07","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE専門家圧縮 / ルータ維持型低ランク分解 / 専門家共活性クラスタリング / 推論計算償却","topics":["専門家混合","専門家圧縮","低ランク分解","共活性クラスタリング","ニューロン整列","ルータ維持","推論高速化"],"importance":"単一共有成分と全専門家の低ランク差分という従来方式が、多数のほぼ直交した専門家で崩れる原因を分析し、共有成分をクラスタ単位の局所代表へ変えることで専門家数128の現代MoEへ適用範囲を広げる。枝刈り・統合と異なり専門家アドレスとルータを変更しないため、既存モデルを後処理で圧縮する系統に直接関係する。","hardware_evaluation":"論文本文はQwen3-30B-A3BとGemma-4-26B-A4Bで約50%専門家圧縮を評価するが、主要表ではGPU型や絶対推論時間を報告せず、BTExpertsは主に理論FLOPsとHBM読出し削減を示す。","quality_effect":"Qwen3では約40.6%圧縮のM_soft版がMMLU 54.9、ARC-C 39.1、PPL 11.99で、D2-MoEの45.7、40.8、23.58に対して特にPPLとMMLUを改善する。Gemmaでは約41.4%圧縮のM_soft版がMMLU 54.6、ARC-C 50.1、PPL 13.32で、D2-MoEの39.0、37.4、21.59を上回る一方、Freq-Pruneが一部常識指標やPPLで優位なため全指標での支配ではない。","source":"https://arxiv.org/abs/2608.07814","sources":["https://arxiv.org/abs/2608.07814","https://arxiv.org/html/2608.07814","https://arxiv.org/pdf/2608.07814"],"code":null,"implementation":"ルータ計測、頻度初期化k-medoids、ニューロン置換整列、ランク64の切詰めSVD、低ランク因子の出力再構成調整からなる研究実装。公開コードURLは本文から確認できない。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-paper-reference-section","references_total":0},"reservation":{"claim_id":"claim-5be0f6527b55aa80672c5522","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
