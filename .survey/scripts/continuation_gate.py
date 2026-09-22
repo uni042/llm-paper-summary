@@ -21,6 +21,7 @@ import json
 
 
 ASYNC_WAIT_POLL_SECONDS = 10
+MAX_PIPELINE_AHEAD_COUNT = 2
 
 
 def yn(value: str) -> bool:
@@ -221,7 +222,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action = "CHECK_SUBMISSION_STATE"
             finalization_allowed = False
         elif transient_submission_wait:
-            if handoff_window_active or pipeline_ahead_count >= 1 or not independent_work:
+            if handoff_window_active or pipeline_ahead_count >= MAX_PIPELINE_AHEAD_COUNT or not independent_work:
                 decision = "CONTINUE"
                 required_action = "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT"
                 finalization_allowed = False
@@ -347,7 +348,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         )
     elif required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
         progress_notice = (
-            "1本先行分を提出済みのため、さらに次へ進む前に1本前のsubmission resultを確認します。"
+            "最大2本の先行枠を使い切っているため、さらに次へ進む前に最古の未確定submission resultを確認します。"
             "pendingなら同じsubmissionを10秒ごとに再確認します。"
         )
     elif required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
@@ -376,9 +377,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif required_action == "RECOVER_DISCOVERY_SUBMISSION":
         next_action_message = "失敗済みDiscovery precheck/submissionのrecovery_stepsに従い、同じroundを正規経路へ戻します。"
     elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
-        if transient_submission_wait and pipeline_ahead_count == 0:
+        if transient_submission_wait and pipeline_ahead_count < MAX_PIPELINE_AHEAD_COUNT:
             next_action_message = (
-                "直前jobのdescriptorは耐久保存済みです。result待ちを1本だけ先送りし、"
+                "直前jobのdescriptorは耐久保存済みです。result待ちは最大2本先行まで許可されるため、"
                 "最新queue/claim stateを再取得して次のResearch/Auditを1件claimします。"
                 "descriptor-backed旧claimがactive表示でも、新claim処理の正規解放に任せます。"
             )
