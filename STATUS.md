@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:13:09 JST**
+> 自動生成: **2026-09-22 16:13:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **296** |
 | 未claim Research job | **295** |
 | 直近24hの検証済みResearch収録 | **20** |
-| 最終検証済みResearch収録 | **09-22 16:12:46 JST（23秒前）** |
+| 最終検証済みResearch収録 | **09-22 16:12:46 JST（1分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（7時間40分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（7時間41分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -181,9 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.13263` — vToken: Token-Level Virtualization for Reclaimable KV Caches / worker `scheduled-chat-00`
-  - claim: **09-22 16:11:19 JST** / heartbeat: **—** / lease expiry: **09-22 17:41:19 JST**
-  - evidence: `.survey/work-queue/claims/job-research-411c0f7386496cf9.json`
+- `DOI:10.24963/ijcai.2026/502` — M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU / worker `scheduled-chat-00`
+  - claim: **09-22 16:13:49 JST** / heartbeat: **—** / lease expiry: **09-22 17:43:49 JST**
+  - evidence: `.survey/work-queue/claims/job-research-784815ee56689f0c.json`
 
 #### Audit
 
