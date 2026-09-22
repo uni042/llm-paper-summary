@@ -327,9 +327,10 @@ def _run_submission_state(
 
 
 def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[str, Any]:
-    pending_requests: list[str] = []
+    pending_requests: list[tuple[dt.datetime, str]] = []
     request_root = root / ".survey/work-queue/claim-requests"
     result_root = root / ".survey/work-queue/claim-results"
+    now = dt.datetime.now(dt.timezone.utc)
     if request_root.is_dir():
         for path in request_root.glob("*.json"):
             value = _read(path, {})
@@ -339,9 +340,15 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
             if requested is None or requested < started_at:
                 continue
             if not (result_root / path.name).is_file():
-                pending_requests.append(path.stem)
+                pending_requests.append((requested, path.stem))
 
-    now = dt.datetime.now(dt.timezone.utc)
+    pending_request_ages = {
+        request_id: max(int((now - requested).total_seconds()), 0)
+        for requested, request_id in pending_requests
+    }
+    pending_request_ids = [request_id for _, request_id in sorted(pending_requests)]
+    oldest_pending_age = max(pending_request_ages.values(), default=0)
+
     claims = claim_state.current_claims(root, now)
     active: list[str] = []
     for job_id, current in claims.items():
@@ -360,7 +367,10 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
     return {
         "claim_state_checked": True,
         "claim_result_pending": bool(pending_requests),
-        "pending_claim_request_ids": sorted(pending_requests),
+        "pending_claim_request_ids": pending_request_ids,
+        "pending_claim_request_ages_seconds": pending_request_ages,
+        "claim_result_pending_age_seconds": oldest_pending_age,
+        "claim_monitor_window_seconds": 60,
         "active_assignment": bool(active),
         "active_job_ids": sorted(active),
     }
@@ -559,6 +569,8 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         can_discover=work_mode == "discovery" and bool(selector.get("next_direction")),
         claim_state_checked=claims["claim_state_checked"],
         claim_result_pending=claims["claim_result_pending"],
+        claim_result_pending_age_seconds=claims["claim_result_pending_age_seconds"],
+        claim_monitor_window_seconds=claims["claim_monitor_window_seconds"],
         submission_state_checked=submission["submission_state_checked"],
         submission_result_pending=submission["submission_result_pending"],
         pipeline_ahead_count=submission["pipeline_ahead_count"],
@@ -642,7 +654,9 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
             "only terminal results processed during this invocation count toward its completion quota. "
             "New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. "
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
-            "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. Discovery async state and carry-over immutable submissions remain visible across run boundaries."
+            "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
+            "A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. "
+            "Discovery async state and carry-over immutable submissions remain visible across run boundaries."
         ),
     }
 
