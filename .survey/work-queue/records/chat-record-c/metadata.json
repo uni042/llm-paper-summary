@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-e14662bfa3410aa2e2cc050b",
-  "job_id": "job-research-c324e0325a4a2def",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e14662bfa3410aa2e2cc050b",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e14662bfa3410aa2e2cc050b","job_id":"job-research-c324e0325a4a2def",
+ "data":{"canonical_id":"arXiv:2607.14647","arxiv_id":"2607.14647","doi":"10.48550/arXiv.2607.14647","arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"D-cut: Adaptive Verification Depth Pruning for Batched Speculative Decoding","summary":"D-cutは、高並行度の投機的復号で長いドラフトを一律に検証すると棄却トークンへ計算を浪費する問題に対し、バッチ全体で検証予算を共有し、ドラフタ信頼度から各要求の有望な連続prefixへ予算を再配分する訓練不要の手法である。さらに起動時にGPU・モデル・並列方式ごとの投機ステップ実行時間をプロファイルし、期待MATと実測コストの比から検証量を動的選択する。高並行度でDFlashの平均高速化を1.26倍から1.65倍へ改善し、MoEでは自己回帰復号比最大3.0倍を報告する。","list_summary":"バッチ横断の信頼度順位付けと実測コストモデルで投機検証深さを動的削減し、高並行度の平均高速化を1.26倍から1.65倍へ改善する。","authors":["Tianyu Liu","Yuhao Shen","Rui Cen","Junhan Shi","Jiebin Zhang","Guangshuo Qin","Hong Liu","Song Liu","Guanghua Yu","Jianchen Zhu"],"authors_affiliations":"Tencent Hunyuan","published":"2026-07-16","publication":"arXiv:2607.14647v1","publication_type":"preprint","publication_status":"arXiv preprint","publication_version":"v1","topics":["投機的復号","バッチ推論","検証枝刈り","実行時コストモデル","MoE推論"],"importance":"単一要求の受理長最大化ではなく、高並行度でのターゲットモデル検証計算を共有資源として扱うため、投機的復号を実運用サービングへ拡張するシステム最適化として重要である。","hardware_evaluation":"実機評価","hardware_details":"H20とH800を含むGPU環境で検証コストのハードウェア依存性を測定し、モデル・並列方式・バッチサイズ別に起動時プロファイルを用いる。","quality_effect":"ターゲットモデルの出力分布を保持するlossless設計。確率的proposalでは非先読み条件を満たすためスコアを1位置ずらす因果的選択を用いる。","source":"https://arxiv.org/abs/2607.14647","sources":["https://arxiv.org/abs/2607.14647","https://www.researchgate.net/publication/410300599_D-cut_Adaptive_Verification_Depth_Pruning_for_Batched_Speculative_Decoding"],"code":null,"implementation":"DFlash系のブロック並列ドラフタ上に、バッチ横断prefix選択、起動時コスト表、動的packingを追加する。","implementation_status":"論文でアルゴリズムと実装評価あり。公式コードURLは確認できず。","evaluation_type":"実機エンドツーエンドthroughput・speedup・MAT・verification cost評価","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary preprint full text","references_total":null},
+ "reservation":{"claim_id":"claim-e14662bfa3410aa2e2cc050b","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
 }
