@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-bf3c6b8d3b26eeee3e65ab1f",
-  "job_id": "job-research-b6a722146f5922c5",
+  "attempt_id": "attempt-6cab193563e41b501052a680",
+  "job_id": "job-research-d522f30f5ddd350f",
   "data": {
-    "limitations": "固定W2/W3/W4 poolがfleet全体として最適かは扱わず、replica数・instance composition・reconfigurationは外側provisioningへ残す。1.284倍はoffline model-based multiplierでlive throughputではない。prompt-only FWPは短prefixで相関が低く、held-out品質予算遵守も約35〜50%に留まる。別targetへrouteすると参照prefillのKVを再利用できずsecond prefillが必要で、そのqueue delayやRPCを含む完全end-to-end評価はない。",
-    "differences": "RouteLLM等が異なる基盤モデル間を品質・コストでrouteするのに対し、本手法は同一MoE基盤の異なる量子化instance間をrouteする。expert-wise quantization研究が一つの圧縮構成を作るのに対し、複数完成instanceを常駐させrequest fragilityに応じて使い分ける。MoE placement/EPLBとは時間尺度を分け、expert配置をonline actionにせず固定poolのendpoint容量として受け取る。",
-    "implementation_status": "完全Qwen instanceの品質測定、A100 endpoint capacity、FWP instrumentation、CPU LPとrequest score timingまで実装評価されている。FWP overheadは512/1024-token reference prefillで3.1%/4.9%、4-class CPU LPはp50/p95/p99で1.47/1.52/1.57 ms、3-instance score比較は1.63 μs/request。ただし完全online dual-price controllerの本番配備保証はない。",
-    "research_positioning": "圧縮率の異なるモデルコピーをメモリ階層の『常駐tier』として扱い、要求ごとに品質リスクを見て容量配分する方向を示す。SSD/CPU/GPU階層のexpert offloadとは粒度が異なるが、slow provisioningとfast routingを分離する考え方は共通し、将来はinstance compositionを外側で最適化しつつ内側でrequest-aware routeする二階層制御へ接続できる。量子化MoEの品質ばらつきをserving schedulerへ直接持ち込む点が既存compression系統との差分である。"
+    "limitations": "評価はarXiv v1のシステム実験に限られ、公開コードによる再現性は確認できない。20GBという人工的なGPUメモリ上限で評価しており、より大容量GPUやNVLink/NVSwitch、複数GPU expert-parallel環境へ結果がそのまま移るとは限らない。Ascend 910BではQwen2.0が欠測し、モデル品質指標も主評価ではない。RandomForest予測器は事前収集した活性ログに依存するため、モデル更新や大きな分布変化時の再学習コスト・劣化も追加検証が必要である。",
+    "differences": "ProMoE等の積極的キャッシュは将来必要なエキスパートを予測して事前取得するが、ExpertFlowは先読み層数S自体を帯域・計算・入力特性とstall/overfetchフィードバックで動かす。単純pre-gateに対しては、トークン意味と過去層活性を加えた学習予測器で偏差を補正する。一般的な単一LRUに対しては近未来利用をhigh tierへ隔離し、さらにキャッシュミス時にはキャッシュ済みトークンを先行実行してI/Oを隠すため、予測・配置・実行順序を一体化している。",
+    "implementation_status": "Python/CUDAとTransformersで実装され、専用CUDA stream、メモリブロック管理、転送監視thread、continuous batchingを含む実システムとしてA6000/H20/Ascend 910Bで評価されている。一方、arXiv本文から一般公開コードURLは確認できない。",
+    "research_positioning": "エキスパート事前取得研究の中でも、何を事前取得するかだけでなく『何層先まで見るか』をハードウェアとワークロードへ適応させる制御問題として扱う点が重要である。CPU/SSD/NVMeまで含む階層メモリへ拡張する場合も、各階層の帯域・レイテンシに応じて先読み距離を変える発想を転用できる。二段LRUの近未来需要分離とキャッシュ認識実行順序はexpert cache設計に直接接続し、固定prefetch horizonを使う既存系統に対する明確な差分となる。"
   },
   "reservation": {
-    "claim_id": "claim-bf3c6b8d3b26eeee3e65ab1f",
+    "claim_id": "claim-6cab193563e41b501052a680",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
