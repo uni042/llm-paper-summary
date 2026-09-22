@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-6cd2c2eb6d8d0d8116429b11",
-  "job_id": "job-research-9b33865bddc54a07",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6cd2c2eb6d8d0d8116429b11",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6cd2c2eb6d8d0d8116429b11","job_id":"job-research-9b33865bddc54a07","data":{"hardware":"Seed-MoE学習は8 nodes・計64 GPUs。FSDPとFlashAttentionを使用。GPU型番は一次資料の該当節では明示されない。","software":"標準top-k MoEへGateProを追加。top-kはk=6。penalty λは典型的に10^-4。分散学習はFSDP、attentionはFlashAttention。","methodology":"Seed-MoE-0.7B/7Bと1.3B/13Bを同一training configurationでscratchから比較し、100B tokensの初期から0.7B/7Bは500B、1.3B/13Bは1.2Tまで複数checkpointを追跡する。MMLU-Pro、MMLU、BBH、HellaSwag、GSM8K、MBPPの6 benchmarkを評価し、continuous training段階も比較する。さらにOLMoE-1B/7Bの元構成を変更せず400B tokensで比較し、128/256 expert設定でlayer別zero-token count、gate cosine similarity、average angle、spectral entropyを分析する。balance loss有無とGatePro有無の4条件、training途中だけ有効化するhot-swap/legacy effectも調べる。","scope":"training-time routing diversityと下流品質の因果仮説を複数scale、expert pool、training phase、別architectureで検証する。一方、主張はtraining改善であり、実推論latency、GPU memory、distributed expert-parallel communicationの速度評価は行っていない。Seed-MoEは内部系モデルで、公開再現性はOLMoE実験が中心になる。"},"reservation":{"claim_id":"claim-6cd2c2eb6d8d0d8116429b11","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
