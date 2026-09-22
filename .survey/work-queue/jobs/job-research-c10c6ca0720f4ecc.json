@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2602.09316",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.09316-rfid-moe-heterogeneous-svd-compression.md",
   "selection_reason": "routing frequencyとeffective rankを融合してexpert groupごとのSVD rankを非一様配分するpost-training compression。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T10:59:45+00:00"
+  "created_at": "2026-09-20T10:59:45+00:00",
+  "completed_at": "2026-09-22T14:10:56+00:00",
+  "blocker": "The primary arXiv abstract page is available, but the primary full-text HTML/PDF could not be retrieved in this invocation. Search surfaced secondary full-text summaries, but workflow v10 forbids constructing the five-slot research record from secondary summaries or the abstract. Retry this paper in a later invocation when the primary full text can be read to the end.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-fc5b7d76e4c2ccfdd465afca.json"
 }
