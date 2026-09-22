@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-652b4887db3b2c4e5e9c3c1a",
-  "job_id": "job-research-6f4aa4cc9993f8fd",
+  "attempt_id": "attempt-f5c314d89cd56f681a67f89f",
+  "job_id": "job-research-a4042c7c7ed57c9a",
   "data": {
-    "hardware": "推論速度評価は32GB NVIDIA V100を使用。完全54.5B混合専門家モデルは4枚および8枚、80%枝刈り版は1枚および4枚で測定する。単一GPU枝刈り構成は各エンコーダ混合専門家層36専門家、各デコーダ層12専門家を保持する。",
-    "software": "NLLB-200 54.5B混合専門家モデルと3.3B密モデルを比較。公開nllb-pruning実装はTransformers、Accelerate、Datasets、Hugging Face Hub、SacreBLEUを利用する。翻訳品質はchrF++とFLORES-200用SentencePieceでトークン化するspBLEUを測定する。",
-    "methodology": "FLORES-200 devでゲート統計を収集し、30言語の中間実験で枝刈り指標・枝刈り方式・保持率・エンコーダ対デコーダ比を比較する。最終評価は53言語のdevtestと、202言語すべての40,602翻訳方向で実施する。30言語集合は高資源・低資源・超低資源を各10言語含み14言語族を覆う。最終の202言語統計は各言語方向からランダム25文対を使い、計算短縮のため教師強制で収集する。推論速度は29言語から英語へのFLORES valid翻訳で平均語/秒と時間を測る。",
-    "scope": "評価対象はNLLB-200という単一の多言語機械翻訳用混合専門家モデルであり、一般LLMや別のルーティング方式への直接一般化は検証していない。一方、言語数は202、最終翻訳方向は40,602と広く、資源量別の品質と単一GPU実機推論まで確認している。"
+    "hardware": "全実験はNVIDIA A100 80GB GPUを32基備えたクラスタで実施する。対象モデルはDeepSeek-V2-Liteで、標準FFN 1層とMoE FFN 26層、各MoE層64エキスパートを持つ構成、およびQwen1.5-MoE-A2.7Bで、MoE FFN 24層、各層60エキスパートの構成である。",
+    "software": "C-PRUNEを学習済みDeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bへ適用し、比較対象としてランダム枝刈り、Seer Prune、Group&Mergeを用いる。クラスタリング比較では階層的クラスタリングとK-meansを比較する。著者は実装コードを公開している。",
+    "methodology": "主評価はMMLUのコンピュータ科学・数学・ビジネス、GSM8K、HumanEvalを用い、未枝刈りモデルを基準とする。表1では総枝刈り率20%でDeepSeekを15.7Bから13.0B、ルーティング対象64から52へ、Qwenを14.3Bから11.8B、60から48へ縮小して各比較方式と評価する。追加分析では層内枝刈り率と全体枝刈り率、タスク特化とタスク非依存、数学用圧縮をコードへ転用するなどの領域間転移、層内・全体に残すエキスパート数の配分、階層的クラスタリング対K-meansを比較する。",
+    "scope": "評価モデルは比較的小規模な2種類のMoEに限られ、論文自身も大規模MoEでの実運用スケーラビリティを未検証とする。MMLU、GSM8K、HumanEvalを中心とするため領域範囲も限定的で、より新しいMoE枝刈り法との比較も不足している。タスク特化方式なので較正データと対象領域の選び方が結果へ影響し、別領域へそのまま転用すると性能が落ちる場合がある。"
   },
   "reservation": {
-    "claim_id": "claim-652b4887db3b2c4e5e9c3c1a",
+    "claim_id": "claim-f5c314d89cd56f681a67f89f",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
