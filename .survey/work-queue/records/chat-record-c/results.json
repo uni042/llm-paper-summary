@@ -2,11 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-992613f3c0bf7bcde1b5d5ce",
-  "job_id": "job-research-50400bb966b2b5a1",
-  "data": {},
+  "attempt_id": "attempt-9e9eaa528a25ba74b46d1d5f",
+  "job_id": "job-research-f0b1ffeacc3b0ccd",
+  "data": {
+    "overview": "LLM4LLMは評価した10種類の言語モデル推論すべてでPyTorch eagerよりend-to-end latencyを改善し、A100/H100の幾何平均speedupは3.91倍/6.98倍だった。Transformerでは約1.79〜3.03倍(A100)、1.92〜3.78倍(H100)の安定した改善、Mamba系では最大22.37倍/32.79倍、RecurrentGemmaでは最大1.83倍/10.74倍を示す。KernelBench Level 2でもA100でPass 100%、GeoMean 2.745倍、H100でPass 99%、GeoMean 2.628倍を得た。",
+    "key_results": [
+      {
+        "metric": "10 workload end-to-end幾何平均speedup",
+        "value": "3.91× (A100), 6.98× (H100)",
+        "baseline": "PyTorch eager",
+        "condition": "Transformer/Mamba/Mamba2/RecurrentGemmaの実推論workload",
+        "interpretation": "孤立kernelではなく実モデルへpatchした後でも全対象で高速化した。"
+      },
+      {
+        "metric": "Qwen3-4B end-to-end latency",
+        "value": "693.9→229.0 ms (3.03×) A100; 380.2→100.7 ms (3.78×) H100",
+        "baseline": "PyTorch eager",
+        "condition": "target inference workload",
+        "interpretation": "Transformer系でも既存attention最適化がある中でend-to-end改善が残る。"
+      },
+      {
+        "metric": "Mamba 130M end-to-end speedup",
+        "value": "22.37× A100; 32.79× H100",
+        "baseline": "PyTorch eager",
+        "condition": "mixer-dominated workload",
+        "interpretation": "profilingによりattention以外の支配的moduleを選ぶ利点が大きい。"
+      },
+      {
+        "metric": "RecurrentGemma-9B end-to-end speedup",
+        "value": "1.24× A100; 7.55× H100",
+        "baseline": "PyTorch eager",
+        "condition": "RGLRU recurrent coreを含むworkload",
+        "interpretation": "同一モデルでもhardware contextで受理patchの効果が大きく変わる。"
+      },
+      {
+        "metric": "KernelBench Level 2",
+        "value": "A100: Pass 100%, Fast1 97%, Fast2 39%, GeoMean 2.745×; H100: Pass 99%, Fast1 95%, Fast2 41%, GeoMean 2.628×",
+        "baseline": "PyTorch eager / published kernel-agent systems",
+        "condition": "full Level-2 split",
+        "interpretation": "実配備重視の設計でも孤立kernel生成能力を維持している。"
+      }
+    ],
+    "negative_results": "scope-matched attention比較ではFlashAttention等の専門実装が一部prompt/decode shapeで優位なままで、生成kernelが常に専門kernelを上回るわけではない。単一GPUと代表inference scriptを前提とし、分散parallelism、continuous batching、multi-tenant環境は未評価である。探索コストも無視できず、patchを多数の推論呼び出しや関連model instanceで再利用できる場合に特に有利とされる。",
+    "interpretation": "主要な示唆はkernel単体の最高speedupより『実際に置換するmodule boundaryとruntime contextを探索・受理条件へ含めること』にある。Transformerではattention周辺、Mambaではmixer、RecurrentGemmaではRGLRUと、model familyごとにprofilingが異なる最適化対象を選び、phase/state契約を保つpatchだけを採用することでproxy benchmarkの誤順位を避ける。",
+    "quality_impact": "すべての報告patchはモデル統合後のcorrectness gateを通過している。手法は数値誤差、安全性、shape guard、phase/cache/state契約を受理条件に含めるが、生成品質や下流task accuracyの大規模な再評価を主目的とはしていない。"
+  },
   "reservation": {
-    "claim_id": "claim-992613f3c0bf7bcde1b5d5ce",
+    "claim_id": "claim-9e9eaa528a25ba74b46d1d5f",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
