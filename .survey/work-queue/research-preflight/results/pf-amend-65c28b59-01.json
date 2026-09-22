@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-amend-65c28b59-01",
+  "kind": "research",
+  "attempt_id": "attempt-65c28b59ac08b3e1cf0adad9",
+  "job_id": "job-research-ca56f81ba7248b99",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:3b8550a775c5aecce63cdc07c9c65433d789222743246abedf088e3764bf9818",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-c/metadata.json",
+      "blob_sha": "e14b95350e72bca0a7be712c191f77261ebc4202"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-c/problem_method.json",
+      "blob_sha": "d2c9ea785fad72b552e3b4e1498961fa7018ed70"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-c/evaluation.json",
+      "blob_sha": "03cc038bae245ba00af7613a79569115490df58c"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-c/results.json",
+      "blob_sha": "7fb682dff5d4d9ec6819ec9328aa2bbcb09ee20e"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-c/positioning.json",
+      "blob_sha": "fade6b44da690270d30bd7de5590c4e8badfddcb"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short"
+  ],
+  "checked_at": "2026-09-22T07:01:23+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
