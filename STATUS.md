@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 16:17:48 JST**
+> 自動生成: **2026-09-22 16:18:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（7時間45分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（7時間46分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -181,9 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.24963/ijcai.2026/502` — M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU / worker `scheduled-chat-00`
-  - claim: **09-22 16:13:49 JST** / heartbeat: **—** / lease expiry: **09-22 17:43:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-784815ee56689f0c.json`
+- `arXiv:2609.13612` — AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels / worker `scheduled-chat-00`
+  - claim: **09-22 16:18:15 JST** / heartbeat: **—** / lease expiry: **09-22 17:48:15 JST**
+  - evidence: `.survey/work-queue/claims/job-research-04f7ad5b21bc5a49.json`
 
 #### Audit
 
@@ -231,8 +231,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **286** |
-| └ Research | **214** |
+| 成功result未照合のimmutable submission | **287** |
+| └ Research | **215** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
