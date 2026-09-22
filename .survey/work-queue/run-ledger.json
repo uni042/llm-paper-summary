@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T15:10:47.185877+00:00",
+  "updated_at": "2026-09-22T15:16:40.604248+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -38130,6 +38130,56 @@
           "type": "research",
           "canonical_id": "arXiv:2410.08589",
           "title": "Retraining-Free Merging of Sparse MoE via Hierarchical Clustering",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35746117370",
+      "first_recorded_at": "2026-09-22T15:16:40.604248+00:00",
+      "last_recorded_at": "2026-09-22T15:16:40.604248+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35746117370:1",
+          "recorded_at": "2026-09-22T15:16:40.604248+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35746117370",
+            "run_attempt": "1",
+            "source_sha": "7848a46c13f406b62355cb44fcc7c9012757c83c"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-0088fb887d51af7d",
+          "type": "research",
+          "canonical_id": "arXiv:2407.09590",
+          "title": "Diversifying the Expert Knowledge for Task-Agnostic Pruning in Sparse Mixture-of-Experts",
           "from": "ready",
           "to": "completed"
         }
