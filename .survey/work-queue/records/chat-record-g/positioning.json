@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-1338966144636293379a0970",
-  "job_id": "job-research-d4390f65b198912f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1338966144636293379a0970",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-1338966144636293379a0970","job_id":"job-research-d4390f65b198912f","data":{"limitations":"評価対象の枝刈り品質はMixtral-8x7B/22Bに集中しており、routing特性が大きく異なるscratch-trained MoEへ同じweight-pruning metricが最適とは示していない。著者自身の分析でもscratch MoEはexpert utilizationが不均衡で、whole-expert pruningが適する可能性を指摘する。非構造化50% sparsityはweight数を減らしても一般GPUで自動的に速度向上するとは限らず、実hardware accelerationには2:4など対応形式が必要である。99%性能保持にはexpert-wise distillationが必要で、2 servers×8 H100のfull-parameter fine-tuningを使うためone-shot段階の低コスト性とは分けて考える必要がある。将来課題としてchannel/expert structured pruningへの拡張を挙げる。","differences":"SparseGPTはinverse Hessianとremaining weightsの更新を用いるO(d_hidden^3)系のone-shot法、Wandaは|W|×activation normを使うweight-update-freeなO(d_hidden^2)法である。MoE-PrunerはWanda型metricへnormalized router weightを掛け、tokenがどのexpertへどの強さでroutingされたかをimportanceへ反映する。whole-expert pruning/mergingがexpert単位で容量を落とすのに対し、本手法はexpert数とrouter構造を保持したまま各expert内部を疎化する。expert-wise KDも最終logitだけでなく対応expert outputsを直接MSE整合する点が通常distillationと異なる。","implementation_status":"arXiv v1プレプリント。one-shot pruning algorithmは擬似コードと計算量を明示し、unstructuredおよび2:4 extensionを実験する。distillationはLlama-Factoryで実装したと記載されるが、本文から専用公式repository URLは確認できない。実験hardwareとtraining条件は明示され再現条件は比較的具体的。","research_positioning":"適応的専門家計算・圧縮系統では、expert selection自体を変える研究ではなく、既存routerを『importance oracle』としてexpert weight pruningへ利用する研究に位置付けられる。専門家キャッシュやCPU/SSD offloadingは全weightを保持してplacementを変えるのに対し、MoE-Prunerはweightを恒久的に0化して静的メモリ量を減らす。GRAPEのような後続のwhole-expert global pruningとは粒度が異なり、両者は層/専門家単位削減とexpert内部weight削減として補完的である。2:4形式はGPU sparse tensor coresへ直接接続できるため、モデル圧縮と実行kernel効率の接点も持つ。"},"reservation":{"claim_id":"claim-1338966144636293379a0970","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
