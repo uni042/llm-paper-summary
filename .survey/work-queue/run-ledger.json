@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T13:15:52.996075+00:00",
+  "updated_at": "2026-09-22T13:18:02.557198+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -37441,6 +37441,56 @@
       "paper_active_count_before": 908,
       "paper_active_count_after": 908,
       "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35732527109",
+      "first_recorded_at": "2026-09-22T13:18:02.557198+00:00",
+      "last_recorded_at": "2026-09-22T13:18:02.557198+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35732527109:1",
+          "recorded_at": "2026-09-22T13:18:02.557198+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35732527109",
+            "run_attempt": "1",
+            "source_sha": "8b03b03adc5e64732d8c3d9d726660ec513f53f9"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-f6f44c938a31a9f9",
+          "type": "research",
+          "canonical_id": "arXiv:2602.11192",
+          "title": "MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "job_blocked"
     }
   ]
 }
