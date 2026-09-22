@@ -5,28 +5,28 @@
   "attempt_id": "attempt-65c28b59ac08b3e1cf0adad9",
   "job_id": "job-research-ca56f81ba7248b99",
   "data": {
-    "problem": "長文decodeでは毎tokenで増大するKV cacheを読み直すためattentionがHBM bandwidth boundになる。BLASSTのようなpost-QK sparse attentionはV/PVを省けてもdrop判定前に全KをGPUへ読み、90% sparsityでも残るK+V trafficの約91%がKになる。一方、current-query PIM filterはKをGPUへ出さずに済むが、現在query→PIM score→mask→GPU attentionという直列依存を作り、PIMがcritical pathへ入る。",
-    "novelty": "maskを現在queryから作るのではなく、前stepまでに監査したBLASST margin履歴から厳密に因果的に予測し、current token開始前にsurvivor maskを用意する。GPUはsurvivorだけを処理し、PIMは同時にglobally omitted blockのQKを計算して予測dropを全監査する。監査はcurrent outputを修復せずfuture predictorを更新するため、PIMをcurrent-token dependency graphから外す。",
-    "method_overview": "各(layer, KV head, block) cellについて過去の監査marginからEMA平均・二次モーメント、age、2-bit Schmitt counter等の状態を持ち、5個のknobでdropを予測する。block 0等はforce keepし、predicted survivorsのunionだけGPUがfetchしてQK/online softmax/PVを実行する。複数headのunion内に残ったpredicted-drop cellはGPU maximaから監査でき、union外blockはHBM-PIMがQKしてblock maximaを返す。stack controllerがblock順に両観測をmergeしてfull-cache BLASST marginを再構成し、EMA状態へfoldして次step maskをeager生成する。operating pointはSCBOでfalse-drop budget以下のdrop recall最大化としてoffline探索する。",
+    "problem": "長文デコードでは、トークン生成のたびに増大するキー・バリューキャッシュを読み直すため、注意機構が高帯域メモリの帯域律速になりやすい。BLASSTのように現在のクエリ・キー積を計算した後で疎ブロックを決める方式は、値側の計算を省けても判定前に全キーをGPUへ運ぶ必要がある。論文の分析では90%の疎性でも残存するキー・値転送量の約91%をキー転送が占める。一方、現在クエリをメモリ内計算へ送り、その結果でマスクを決める方式はキー転送を抑えられるものの、現在クエリ、メモリ内計算、マスク決定、GPU注意計算という直列依存を作り、メモリ内計算を現在トークンのクリティカルパスへ入れてしまう。",
+    "novelty": "AMENDは現在クエリからその場でマスクを作らず、前ステップまでに監査したBLASSTマージン履歴から次ステップの棄却判定を因果的に先行予測する。これにより現在トークン開始前に生存ブロックのマスクを用意し、GPUは予測生存ブロックだけを直ちに処理できる。同時に高帯域メモリ近傍のメモリ内計算器がGPUから完全に省いた補集合ブロックのクエリ・キー積を計算して、予測棄却を監査する。監査結果は現在出力を後から修復するためではなく、次ステップ用予測器を更新するために使うため、監査処理を現在トークンの依存グラフから外せる点が中心的な新規性である。",
+    "method_overview": "処理は予測、GPU実行、補集合監査、状態更新、次マスク生成の順で閉じた循環を構成する。まず各層・各キー値ヘッド・各ブロックの組について、過去に完全監査されたBLASSTマージンの指数移動平均、二次モーメント、経過時間、2ビットのヒステリシスカウンタなどの状態から、現在ステップで安全に棄却できるかを予測する。先頭ブロックなど安全上保持すべき対象は強制保持し、複数ヘッドで必要となる予測生存ブロックの和集合だけをGPUへ読み込む。GPUはこの和集合上でクエリ・キー積、オンラインソフトマックス、値との積を実行し、和集合内に存在する予測棄却セルについても観測値を得る。これと並行して、高帯域メモリ内の近傍計算器が和集合の外にある全予測棄却ブロックを走査してクエリ・キー積とブロック最大値を求める。スタック側制御器はGPU側とメモリ内計算側の観測をブロック順に統合し、全キャッシュを評価した場合のBLASSTマージンを再構成する。その監査済みマージンを予測状態へ折り込み、次トークン開始前に次の生存マスクを先行生成する。この循環により、GPUは現在ステップで不要と予測したキー・値転送を避けつつ、棄却した全領域を別経路で毎回再観測できる。予測器の5個の調整値は、誤棄却率の予算を制約として棄却再現率を最大化する制約付きベイズ最適化でオフライン探索し、実行時には固定した動作点を用いる。",
     "components": [
       {
-        "name": "因果的margin predictor",
-        "description": "直前までの監査済みBLASST marginをEMA等で追跡し、current QK前にdrop verdictを出す。89.2%の隣接step verdict persistenceを利用する。"
+        "name": "因果的マージン予測器",
+        "description": "各ブロックについて、直前までに監査済みのBLASSTマージンを指数移動平均と二次モーメントで追跡し、観測からの経過時間や2ビットのヒステリシス状態も併用して、現在のクエリ・キー積を計算する前に棄却判定を出す。論文が観測した隣接ステップ間の判定持続性89.2%を利用する一方、監査で毎ステップ状態を更新するため、過去の予測を無期限に信頼する方式にはしない。強制保持対象を設けることで、予測器が不確かな領域まで一律に省略することも避ける。"
       },
       {
-        "name": "GPU survivor path",
-        "description": "予測survivorだけK/Vをfetchし、survivor BLASSTでさらに絞りながらQK・softmax・PVをGPUで実行する。predicted dropのK trafficをcurrent stepから除く。"
+        "name": "GPU生存ブロック経路",
+        "description": "複数ヘッドで予測された生存ブロックの和集合だけについてキーと値をGPUへ読み込み、その範囲でクエリ・キー積、疎注意判定、オンラインソフトマックス、値との積を実行する。これにより予測棄却されたブロックのキー転送を現在ステップのGPU経路から取り除く。和集合に他ヘッドの都合で読み込まれたブロックでは、予測棄却セルの最大値もGPU上で得られるため、その観測を監査情報として再利用し、同じブロックをメモリ内計算側で重複処理する必要を減らす。"
       },
       {
-        "name": "PIM complement audit",
-        "description": "GPU union外の全predicted-drop blockをnear-bank PIMが並行QKし、GPU側で観測できるdrop cellと合わせて全省略cellのmarginを再構成する。"
+        "name": "メモリ内計算による補集合監査",
+        "description": "GPUの生存ブロック和集合から完全に外れた予測棄却ブロックは、高帯域メモリのバンク近傍計算器がGPUの注意計算と並行してクエリ・キー積を求め、ブロック最大値を返す。GPU側で既に観測できた棄却セルとこの補集合観測を合わせることで、GPUが読み込まなかった領域を含む全予測棄却セルを毎ステップ監査できる。重要なのは、この監査結果を現在トークンの出力待ち条件にせず、次ステップの予測状態更新へだけ使うことで、メモリ内計算の遅延を現在トークンの直列待ち時間から外している点である。"
       },
       {
-        "name": "SCBO operating-point search",
-        "description": "5つの離散・連続knobをfalse-drop率制約付きblack-box optimizationとして探索し、empirical budget内でdrop recall最大の点を固定する。"
+        "name": "制約付き動作点探索",
+        "description": "予測器が持つ5個の離散・連続調整値は、誤って保持すべきブロックを棄却する割合を所定の予算以下に抑えることを制約とし、その範囲で棄却対象をどれだけ回収できるかを最大化するブラックボックス最適化として探索する。論文では制約付きベイズ最適化を用いて経験的な安全予算を満たす動作点をオフラインで決め、実行時に探索処理を持ち込まない。したがって実行時の高速化経路と品質制約の調整処理を分離できる。"
       }
     ],
-    "system_design": "AttAcc由来HBM-PIMのbank-level GEMVを5 HBM3 stacksへ置き、predictor state/audit result/KVをshared HBMに保持する。GPUとPIMは別linkを介さずshared HBM経由でcontrollerと連携し、PIM auditはGPU survivor attentionと同時実行する。"
+    "system_design": "システムはAttAcc由来のバンク単位行列ベクトル積を行うメモリ内計算器を5基のHBM3スタックへ配置し、キー・バリューキャッシュ、予測器状態、監査結果を共有高帯域メモリ上に保持する。GPUとメモリ内計算器は別のホスト往復経路で逐次通信するのではなく、共有メモリとスタック制御器を介して役割を分担する。GPUが生存ブロックの注意計算を進めている間にメモリ内計算器が補集合を監査し、両者の結果を制御器が統合して次ステップのマスクを先行生成する構成にすることで、キー転送削減と監査の完全性を両立させる。"
   },
   "reservation": {
     "claim_id": "claim-65c28b59ac08b3e1cf0adad9",
