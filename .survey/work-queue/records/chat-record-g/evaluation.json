@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-c7fc5d8a2ddc77f17046a7e2",
-  "job_id": "job-research-20085e82ab231044",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c7fc5d8a2ddc77f17046a7e2",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c7fc5d8a2ddc77f17046a7e2","job_id":"job-research-20085e82ab231044","data":{"hardware":"GPU型・CPU構成・memory容量は一次資料で明記されていない。対象モデルはMixtral-8x7BとMixtral-8x7B-Instructで、いずれも32 Transformer layer、hidden dimension 4096、各MoE blockに8 expert、token当たり2 expert活性化である。","software":"モデルは公式Hugging Face repositoryから取得し、精度評価にはEleutherAI LM Evaluation Harnessを使用する。著者コードはxicyang/MoE-Pruningとして公開されている。","models":["Mixtral-8x7B","Mixtral-8x7B-Instruct"],"workloads":["MMLU","HellaSwag","WinoGrande","ARC","GSM8K","MedQA"],"baselines":["Full model","Random expert pruning","Merge-then-compress","hierarchical expert merging","Sub-MoE","unified MoE compression","Not All Experts Are Equal","activation-based pruning","STUN","cluster-driven pruning","domain-specific pruning"],"methodology":"主評価では6 taskそれぞれのtraining setからk-means representative calibrationを作り、Mixtral base/Instructを25%または50% expert sparsityへ剪定してaccuracyを測る。50% sparsityではm=1、25%ではm=500としてpath coverageを調整する。Table 3ではMixtral-8x7Bを50% sparsityに統一して既存merging/pruning方式と比較し、一部は著者が再現した値を明示する。ablationではtransition intensityとimportance scoreを片方ずつ1へ固定して寄与を分離し、calibration cluster数Kの感度、layer/task別expert selection frequencyも分析する。","scope":"評価はMixtral系2モデルと6個のQA/knowledge/reasoning benchmarkに限定される。GPU型、wall-clock compression time、実際の推論latency・throughput・peak memory削減量は報告されず、主指標は剪定後accuracyである。task-specific calibrationでexpert集合を固定するため、未知domainへ同一pruned checkpointを持ち出した一般化は直接検証していない。"},"reservation":{"claim_id":"claim-c7fc5d8a2ddc77f17046a7e2","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
