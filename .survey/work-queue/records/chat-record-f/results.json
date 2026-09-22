@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-36efead2bf26ee8e78c0fbce",
   "job_id": "job-research-92d92d3583bf57da",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-36efead2bf26ee8e78c0fbce",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "Turing-20B-A2Bは平均約2B活性でQwen3-8B Baseを総合平均で上回り、Qwen3.5-9B Baseへ近い能力を示す。Quantile Routing統制実験では同じ平均8 expertsのLoss-Free Routingより8ベンチマーク中7件で高く、初期学習中の最大負荷違反も低い。配置時の容量制約付きTuring MoEは16K〜256Kプリフィルで通常dropless top-kより平均1.53倍高速化するが、能力面ではMMLU 79.03→76.34、CMMLU 75.38→70.48、GSM8K 90.22→88.93など一部低下する。",
+    "key_results": [
+      {"metric": "Quantile Routing初期学習性能", "value": "8ベンチマーク中7件でLoss-Free Routingを上回る", "baseline": "固定8 expertsのLoss-Free Routing", "condition": "同一構成・約100B training tokens・平均8 routed experts", "interpretation": "平均計算量を増やさずトークンごとにexpert数を変えることで計算予算をより有効に配分する。"},
+      {"metric": "ARC-C", "value": "27.12", "baseline": "Loss-Free 23.73", "condition": "routing ablation", "interpretation": "動的計算配分の明確な改善例。"},
+      {"metric": "MBPP", "value": "18.78", "baseline": "Loss-Free 14.81", "condition": "routing ablation", "interpretation": "同じ平均expert予算でもコード能力が高い。"},
+      {"metric": "MoEプリフィル速度", "value": "平均1.53倍高速化", "baseline": "optimized dropless top-k fused-expert execution", "condition": "単一GPU、16K〜256K、Quantile Routing＋CF=1.25", "interpretation": "最大expert負荷を上限化すると長文ほど実行経路が規則化し、融合カーネルの待ちを減らせる。"},
+      {"metric": "容量制約のMMLU", "value": "76.34", "baseline": "dropless 79.03", "condition": "GSM8K RL step 399、CF=1.25", "interpretation": "速度向上には小さいが測定可能な能力低下が伴う。"},
+      {"metric": "容量制約のGPQA", "value": "34.34", "baseline": "dropless 31.31", "condition": "同一RL比較", "interpretation": "容量制約は全ベンチマークを一様に悪化させるわけではなく、一部推論課題では改善する。"}
+    ],
+    "negative_results": "Quantile RoutingはGSM8Kの初期学習比較だけLoss-Free Routingに負け、20.02対21.68である。容量制約はMMLU、CMMLU、MMLU-Pro、GSM8Kを低下させ、効率化が無損失ではない。1.53倍は単一GPUのMoEモジュール測定で、expert-parallel all-to-allやattentionを含む全モデル速度ではない。技術報告はbaseモデル中心で、物理AIの閉ループタスクやマルチモーダルVLA性能を直接示していない。",
+    "interpretation": "固定top-kでは各トークンへ同じ計算量を配る一方、Quantile Routingは各expertの受入率を分位点で揃えることで負荷均衡を維持しつつ、トークン単位の計算量だけを可変にする。これにより平均FLOPsを変えず難しい文脈へ計算を寄せられる。配置時は平均均衡だけでは瞬間的な最大負荷を防げないため容量上限を追加し、モデル品質との交換条件で実行時間の尾を削る。",
+    "quality_impact": "動的top-k自体は同一平均予算で多くのベンチマークを改善するが、容量超過割当を落とす配置最適化は一部能力を犠牲にする。共有expertが全tokenを処理するため最低限のFFN経路は残るものの、強い専門expertへの割当が容量で落ちる場合は品質低下が起こりうる。"
+  },
+  "reservation": {"claim_id": "claim-36efead2bf26ee8e78c0fbce", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
