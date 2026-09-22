@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b75922391156a97f6cc44521","job_id":"job-research-f3d9c2c6da00178e","data":{"overview":"HC-SMoEは25%専門家削減でQwen/Mixtralとも原モデルとの8タスク平均差を3%未満に抑え、50%削減でも比較手法に対して高い性能を維持する。Qwen 60→30では平均0.5223でF-prune 0.4528、S-prune 0.4309、M-SMoE 0.3221を上回る。Mixtral 8→4では0.5729でO-prune 0.5728と同等、他の枝刈り・統合手法を上回る。クラスタリングのアブレーションでは平均専門家出力＋平均連結の組合せが強く、K-meansの初期値感度やルータlogit依存を回避する効果が確認される。","key_results":[{"metric":"Qwen 25%専門家削減の8タスク平均","value":"0.5716","baseline":"原モデル0.6008、O-prune 0.5374、F-prune 0.5502、S-prune 0.5240、M-SMoE 0.5350","condition":"Qwen1.5-MoE-A2.7B-Chat, 60→45 experts/layer, average-link HC-SMoE","interpretation":"約3ポイント以内の絶対差で原モデル性能を保持し、全比較圧縮法を上回る。"},{"metric":"Qwen 50%専門家削減の8タスク平均","value":"0.5223","baseline":"原モデル0.6008、最良比較F-prune 0.4528","condition":"60→30 experts/layer","interpretation":"高削減率で性能低下はあるが、最良比較法を6.95ポイント上回る。"},{"metric":"Mixtral 25%専門家削減の8タスク平均","value":"0.6425","baseline":"原モデル0.6748、O-prune 0.6363","condition":"Mixtral 8x7B, 8→6 experts/layer","interpretation":"原モデルとの差は約3.2ポイントで、主要比較法の中で最高。BoolQでは0.8554で原モデル0.8505も上回る。"},{"metric":"Mixtral 50%専門家削減の8タスク平均","value":"0.5729","baseline":"O-prune 0.5728、F-prune 0.5487、S-prune 0.4062、M-SMoE 0.3251","condition":"8→4 experts/layer","interpretation":"O-pruneとほぼ同等だが、組合せ探索を必要とせず階層クラスタリングでスケールする。"},{"metric":"モデルメモリ削減","value":"Mixtral 87.49GB→45.49GB、Qwen 27.04GB→15.44GB","baseline":"元の8/60 expert構成","condition":"50% expert reduction","interpretation":"専門家総数を直接減らすため常駐メモリをほぼ半減できる。"}],"negative_results":"圧縮率を50%まで上げると原モデルとの差は明確に残り、Qwen平均は0.6008から0.5223、Mixtralは0.6748から0.5729へ低下する。HC-SMoE自体の圧縮処理は単純なF/S-pruneより重く、付録ではMixtralで約111〜112秒・138GB、Qwenで290〜323秒を要する。平均専門家出力の収集には較正データとモデル実行が必要で、完全なデータ不要圧縮ではない。","interpretation":"結果は『どの重み平均則を使うか』より『機能的に近い専門家を正しく同じクラスタへ入れるか』が性能保持に重要であることを支持する。専門家出力を類似度に使うことで、タスク依存ルータ統計を避けながらクラスタ品質を高め、再学習なしのMoE圧縮を専門家数の多いモデルへ拡張している。","quality_impact":"25%削減では品質損失が小さく、一部タスクでは原モデルを上回るが、50%以上では絶対性能低下が無視できない。付録のQwen 60→15（75%削減相当）でもHC-SMoEは比較法より高い0.4493を保つものの原モデル0.6008との差は拡大するため、メモリ節約と品質のトレードオフが残る。"},"reservation":{"claim_id":"claim-b75922391156a97f6cc44521","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-3e9870d1ea6c812acfc6fb72",
+  "job_id": "job-research-0088fb887d51af7d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3e9870d1ea6c812acfc6fb72",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

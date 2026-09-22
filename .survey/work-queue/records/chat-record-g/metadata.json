@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-b75922391156a97f6cc44521","job_id":"job-research-f3d9c2c6da00178e","data":{"canonical_id":"arXiv:2410.08589","arxiv_id":"2410.08589","doi":"10.48550/arXiv.2410.08589","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Retraining-Free Merging of Sparse MoE via Hierarchical Clustering","summary":"HC-SMoEは、疎な専門家混合（Sparse Mixture-of-Experts; SMoE）の全専門家パラメータを保持するメモリ負担を、再学習なし・タスク非依存で削減する専門家統合手法である。較正データ上の平均専門家出力を機能表現として階層的クラスタリングし、同一クラスタ内の専門家を利用頻度で重み付けして統合する。Qwen1.5-MoE-A2.7Bでは専門家50%削減後も8タスク平均0.5223を維持し、最良の比較対象F-prune 0.4528を上回る。Mixtral 8x7Bでも50%削減時0.5729でO-prune 0.5728と同等以上を示し、ICML 2025で発表された。","list_summary":"専門家の平均出力を用いる階層的クラスタリングと頻度重み付き統合により、再学習なしでQwen/Mixtralの専門家を最大50%削減しつつ比較手法より高い性能保持を示す。","authors":["I-Chun Chen","Hsu-Shen Liu","Wei-Fang Sun","Chen-Hao Chao","Yen-Chang Hsu","Chun-Yi Lee"],"authors_affiliations":"National Tsing Hua University; NVIDIA AI Technology Center; University of Toronto; Samsung Research America; National Taiwan University","published":"2024-10-11","publication":"ICML 2025 / PMLR 267","publication_type":"国際会議論文","publication_status":"Published at the 42nd International Conference on Machine Learning (ICML 2025); arXiv v4 2025-10-26","lineage":"MoE compression / expert merging / hierarchical clustering / retraining-free compression","topics":["MoE圧縮","専門家統合","階層的クラスタリング","再学習不要","メモリ削減"],"importance":"ルータ統計ではなく専門家出力を直接機能表現としてクラスタリングし、専門家数が多いQwenでも組合せ探索を避けて多項式時間で統合する。推論時の総パラメータ常駐量を直接削減するため、MoEのメモリ制約に対する実装上の価値が高い。","implementation":"公式実装はGitHub wazenmai/HC-SMoEで公開。較正データから専門家平均出力を収集し、平均連結法の階層的クラスタリングと頻度重み付きパラメータ統合を行う。","hardware_evaluation":"Qwen実験は4×NVIDIA V100、Mixtral実験は8×NVIDIA A100。付録でHC-SMoE自体の実行時間・メモリも測定。","quality_effect":"25%削減では原モデルとの差を平均3%未満に抑え、50%削減でもQwenで比較手法を大きく上回る。削減率を上げると絶対性能低下は残る。","source":"https://arxiv.org/abs/2410.08589","sources":["https://arxiv.org/abs/2410.08589","https://arxiv.org/pdf/2410.08589"],"code":"https://github.com/wazenmai/HC-SMoE","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-b75922391156a97f6cc44521","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-3e9870d1ea6c812acfc6fb72",
+  "job_id": "job-research-0088fb887d51af7d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3e9870d1ea6c812acfc6fb72",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
