@@ -2,64 +2,62 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-6cab193563e41b501052a680",
-  "job_id": "job-research-d522f30f5ddd350f",
+  "attempt_id": "attempt-65c28b59ac08b3e1cf0adad9",
+  "job_id": "job-research-ca56f81ba7248b99",
   "data": {
-    "canonical_id": "arXiv:2510.26730",
-    "arxiv_id": "2510.26730",
-    "doi": "10.48550/arXiv.2510.26730",
+    "canonical_id": "arXiv:2609.09823",
+    "arxiv_id": "2609.09823",
+    "doi": "10.48550/arXiv.2609.09823",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.AI",
-        "cs.PF"
-      ]
+      "primary": "cs.AR",
+      "cross_list": []
     },
-    "title": "ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference",
-    "summary": "ExpertFlowはGPUメモリ制約下のMoE推論で、固定の先読み層数に依存するエキスパート事前取得を、ハードウェア帯域・エキスパート寸法・層計算時間・実行時待機状況に応じて動的に調整する実行時システムである。現在層の事前ゲート出力だけでなく、トークンIDと過去層のエキスパート活性履歴を用いる軽量予測器で将来層の必要エキスパートを補正し、二段LRUキャッシュとキャッシュ認識ルーティングを組み合わせて転送待ちを計算と重ねる。A6000、H20、Ascend 910B上でDeepSeek-V2-Lite、Qwen1.5、Qwen2.0を評価し、待機＋キャッシュミス遅延を平均98.5%削減した。",
-    "list_summary": "固定先読み幅を帯域・入力・待機フィードバックで動的化し、予測器・二段LRU・キャッシュ認識ルーティングを協調させてMoEエキスパート転送待ちを隠蔽する実行時システム。",
+    "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+    "summary": "AMENDは長文LLMデコードのKV cache帯域ボトルネックに対し、現在queryのQK計算後に疎ブロックを決める従来法や、現在queryをPIMへ渡してからmaskを得る直列PIM filterを避けるGPU-PIM協調attentionである。過去stepで監査済みのBLASST marginから次stepのdrop verdictを因果予測し、GPUは予測survivorだけを即時処理する。同時にHBM近傍PIMがGPUから省いたcomplementのQKを監査し、controllerが両観測を統合して予測状態と次maskを更新する。Llama-3.1-8B-Instruct/Qwen3-8BのLongBench/RULERで品質をほぼ維持し、H100+HBM3-PIM simulationのbatch 8、8K〜64Kで1.40〜3.63倍end-to-end decode speedup、28〜66% dynamic energy削減を報告する。",
+    "list_summary": "過去stepの監査済みattention marginで次maskを先行予測し、GPU survivor計算とHBM-PIM complement監査を並列化してK trafficと直列PIM待ちを同時に除く長文decode設計。",
     "authors": [
-      "Zixu Shen",
-      "Kexin Chu",
-      "Yifan Zhang",
-      "Dawei Xiang",
-      "Runxin Wu",
-      "Wei Zhang"
+      "Zuxiong Tan",
+      "Will Wei-Jen Wang",
+      "Wei Shao",
+      "Ali Karkehabadi",
+      "Houman Homayoun",
+      "Avesta Sasan"
     ],
-    "authors_affiliations": "arXiv版は匿名投稿形式の本文で所属を開示していない。",
-    "published": "2025-10-30",
-    "publication": "arXiv:2510.26730 v1, 2025-10-30",
+    "authors_affiliations": "University of California, Davis",
+    "published": "2026-09-09",
+    "publication": "arXiv:2609.09823 v1, 2026-09-09",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
-    "lineage": "MoE expert offloading / cross-layer expert prediction / adaptive prefetch / expert cache management / cache-aware routing",
+    "lineage": "long-context sparse attention / KV-cache bandwidth reduction / GPU-PIM heterogeneous decoding / predictive attention masks",
     "topics": [
-      "MoE",
-      "expert offloading",
-      "adaptive prefetch",
-      "cross-layer prediction",
-      "two-level LRU",
-      "cache-aware routing",
-      "memory-constrained inference"
+      "long-context inference",
+      "sparse attention",
+      "KV cache",
+      "PIM",
+      "HBM",
+      "causal prediction",
+      "GPU-PIM"
     ],
-    "importance": "エキスパート事前取得の先読み幅を固定値ではなく通信・計算比と実行時フィードバックから制御し、予測・キャッシュ・ルーティングを一つの閉ループに統合している点が、階層メモリ型MoE推論のスケジューリング設計に直接関係する。",
-    "hardware_evaluation": "NVIDIA A6000（64 GB/s）、NVIDIA H20（128 GB/s）、Ascend 910B（128 GB/s）で評価。GPUメモリを20GBに制限し、ShareGPT由来の要求を用いる。",
-    "quality_effect": "主評価は推論システム性能で、モデル品質ベンチマークの改善を主張するものではない。予測精度は事前ゲート法より平均21.79%、最大30.36%改善し、誤予測による不要転送を抑える。",
-    "source": "https://arxiv.org/abs/2510.26730",
+    "importance": "現在tokenの結果にPIMを直列依存させず、未来maskの監査専用にPIMを回すことでGPUとメモリ内計算を真に重ねる。階層・異種メモリでI/Oをcritical pathから外す設計原理として重要。",
+    "hardware_evaluation": "H100 80GB HBM3、3.35 TB/s、989 TFLOPS BF16をGPUモデルとし、5×16GB HBM3 stackにAttAcc由来bank-level GEMV PIMを配置。品質実行はA100 BF16、性能はtrace-driven simulation。",
+    "quality_effect": "LongBench平均はLlama Dense 49.69対AMEND 49.76、Qwen Dense 49.41対AMEND 49.37。RULER平均Dense 85.30対AMEND 85.13。",
+    "source": "https://arxiv.org/abs/2609.09823",
     "sources": [
-      "https://arxiv.org/abs/2510.26730",
-      "https://arxiv.org/pdf/2510.26730"
+      "https://arxiv.org/abs/2609.09823",
+      "https://arxiv.org/pdf/2609.09823",
+      "https://github.com/Miketan1/AMEND_code"
     ],
-    "code": "",
-    "implementation": "Python/CUDAとTransformersで実装。本文中に一般公開コードリポジトリは確認できない。",
+    "code": "https://github.com/Miketan1/AMEND_code",
+    "implementation": "AMEND attention emulationとtrace-based GPU/PIM simulatorのcore codeをMITで公開。Qwen3-1.7B、LongBench、AttAccの外部入力を用いる再現手順をREADMEに記載。",
     "last_checked": "2026-09-22",
     "references": [],
     "references_checked_at": "2026-09-22",
-    "references_source": "primary-paper-fulltext",
+    "references_source": "primary-reference-section",
     "references_total": 0
   },
   "reservation": {
-    "claim_id": "claim-6cab193563e41b501052a680",
+    "claim_id": "claim-65c28b59ac08b3e1cf0adad9",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

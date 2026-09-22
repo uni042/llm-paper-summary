@@ -2,19 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-6cab193563e41b501052a680",
-  "job_id": "job-research-d522f30f5ddd350f",
+  "attempt_id": "attempt-65c28b59ac08b3e1cf0adad9",
+  "job_id": "job-research-ca56f81ba7248b99",
   "data": {
-    "problem": "GPUメモリへ全エキスパートを常駐できない混合エキスパート推論では、各層で選ばれたエキスパートをホスト側メモリからGPUへ移すため、計算が転送完了を待つ。既存の層横断事前取得は何層先まで読むかを固定値にすることが多いが、必要な先読み距離は転送帯域、エキスパート寸法、層の計算時間、バッチ規模、入力トークンの意味多様性で変わる。先読みが短いと必要エキスパートが間に合わず待機が露出し、長すぎると遠い層ほど予測誤差が増え、不要な転送が帯域とGPUメモリを消費して、本当に近く使うエキスパートを追い出す。したがって固定値では、同じモデルでもハードウェアや入力が変わるたびに通信隠蔽と予測精度の釣り合いが崩れる。",
-    "novelty": "ExpertFlowは先読み距離そのものを実行時制御対象にし、予想活性エキスパート数、エキスパート寸法、通信帯域、層計算時間から初期値を求めた後、実際の待機と過剰事前取得を観測して増減する。さらに現在層の事前ゲート出力だけを未来層へ外挿せず、トークン意味情報と過去層の活性履歴を加えた学習予測器で偏差を補正する。予測結果を二段階の再利用度別キャッシュへ結び付け、最後にキャッシュ済みエキスパートだけで進められるトークンを先に計算するため、先読み制御、予測、配置、実行順序が一つの閉ループになる。",
-    "method_overview": "一つの反復が始まると、まずバッチ内トークン埋め込みの累積距離から入力の意味多様性を測り、事前ゲート確率を大きい順に足し上げて、所定の累積確率を覆うために必要な候補エキスパート数を推定する。この候補数と一エキスパートの転送量、実測通信帯域から将来必要になる転送時間を見積もり、それを一層の計算時間で割って、転送を計算の背後へ隠すために何層前から読み始めるべきかという先読み距離を決める。次に、現在層の事前ゲート出力、トークン識別情報、過去層で実際に活性化したエキスパート履歴を入力とする軽量予測器が、将来層で必要になるエキスパートを推定する。予測したエキスパートは専用転送流で非同期にGPUへ読み込む。実行中に必要エキスパートがまだ到着して計算が止まれば待機カウンタを増やし、閾値に達した時点で先読み距離を一段広げる。逆に転送が常に早すぎて不要な先行読み込みが増える場合は過剰取得カウンタから距離を一段縮める。GPU側では近い将来または直近に使うエキスパートを高優先度LRU、再利用見込みが低いものを低優先度LRUへ分け、容量不足時は低優先度側から追い出す。最後に、必要エキスパートがすでにGPUへ存在するトークンを先に実行し、未到着エキスパートを待つトークンを後ろへ回す。これにより、入力から必要転送量を見積もる段階、将来需要を予測する段階、非同期転送する段階、キャッシュを保護する段階、残る待機を実行順序で隠す段階が連続して動作し、観測した待機結果が次の先読み距離へ戻される。",
+    "problem": "長文decodeでは毎tokenで増大するKV cacheを読み直すためattentionがHBM bandwidth boundになる。BLASSTのようなpost-QK sparse attentionはV/PVを省けてもdrop判定前に全KをGPUへ読み、90% sparsityでも残るK+V trafficの約91%がKになる。一方、current-query PIM filterはKをGPUへ出さずに済むが、現在query→PIM score→mask→GPU attentionという直列依存を作り、PIMがcritical pathへ入る。",
+    "novelty": "maskを現在queryから作るのではなく、前stepまでに監査したBLASST margin履歴から厳密に因果的に予測し、current token開始前にsurvivor maskを用意する。GPUはsurvivorだけを処理し、PIMは同時にglobally omitted blockのQKを計算して予測dropを全監査する。監査はcurrent outputを修復せずfuture predictorを更新するため、PIMをcurrent-token dependency graphから外す。",
+    "method_overview": "各(layer, KV head, block) cellについて過去の監査marginからEMA平均・二次モーメント、age、2-bit Schmitt counter等の状態を持ち、5個のknobでdropを予測する。block 0等はforce keepし、predicted survivorsのunionだけGPUがfetchしてQK/online softmax/PVを実行する。複数headのunion内に残ったpredicted-drop cellはGPU maximaから監査でき、union外blockはHBM-PIMがQKしてblock maximaを返す。stack controllerがblock順に両観測をmergeしてfull-cache BLASST marginを再構成し、EMA状態へfoldして次step maskをeager生成する。operating pointはSCBOでfalse-drop budget以下のdrop recall最大化としてoffline探索する。",
     "components": [
-      {"name": "適応型先読み距離制御", "description": "予想活性エキスパート数と一エキスパートの転送量から必要通信量を求め、実測帯域で転送時間へ変換し、層計算時間との比から先読み距離を初期化する。その後、必要データ未到着による待機が繰り返されれば距離を一層広げ、転送が過度に早く不要な先行取得が続けば一層縮める。固定距離をハードウェアごとに手調整するのではなく、実行中の観測で通信と計算の比へ追従する。"},
-      {"name": "層横断ハイブリッド予測器", "description": "現在層の事前ゲート出力だけでは遠い層ほど予測精度が低下するため、トークン識別情報から得る意味特徴と、過去層で実際に選ばれたエキスパート履歴を追加する。軽量なランダムフォレスト回帰器をCPUで動かし、事前ゲート予測と実活性の偏差を学習して将来層の候補を補正する。既に同じ特徴の予測がキャッシュされていれば再利用し、利用できない場合もルータ上位候補へ安全に戻れる。"},
-      {"name": "二段階LRUエキスパートキャッシュ", "description": "直近に利用した、または動的先読み窓の中で近く利用すると予測されたエキスパートを高優先度領域へ置き、再利用見込みが低いものを低優先度領域へ置く。容量不足時は低優先度側から先に追い出すため、遠い将来を見越した事前取得が、次の数層で確実に必要になるエキスパートを押し出すことを防ぐ。先読み距離が変化すると将来利用判定も更新され、制御器とキャッシュ方針が連動する。"},
-      {"name": "キャッシュ認識トークンルーティング", "description": "予測を外したエキスパートは専用転送流でGPUへ読み込むが、その完了をバッチ全体が同期して待たない。必要エキスパートがすべてGPUにあるトークンを先に計算し、キャッシュミスを含むトークンを後ろへ回すことで、残る入出力時間を別トークンの計算と重ねる。したがって予測精度が完全でなくても、キャッシュ状態を実行順序へ反映して露出待機をさらに削減できる。"}
+      {
+        "name": "因果的margin predictor",
+        "description": "直前までの監査済みBLASST marginをEMA等で追跡し、current QK前にdrop verdictを出す。89.2%の隣接step verdict persistenceを利用する。"
+      },
+      {
+        "name": "GPU survivor path",
+        "description": "予測survivorだけK/Vをfetchし、survivor BLASSTでさらに絞りながらQK・softmax・PVをGPUで実行する。predicted dropのK trafficをcurrent stepから除く。"
+      },
+      {
+        "name": "PIM complement audit",
+        "description": "GPU union外の全predicted-drop blockをnear-bank PIMが並行QKし、GPU側で観測できるdrop cellと合わせて全省略cellのmarginを再構成する。"
+      },
+      {
+        "name": "SCBO operating-point search",
+        "description": "5つの離散・連続knobをfalse-drop率制約付きblack-box optimizationとして探索し、empirical budget内でdrop recall最大の点を固定する。"
+      }
     ],
-    "system_design": "Transformers上の混合エキスパート推論へPythonとCUDAで実装し、GPU高帯域メモリとホストDRAMをブロック単位で管理する。データ転送には専用CUDAストリームを使い、別スレッドが転送進捗とメモリブロック状態を追跡する。連続バッチ処理を有効にし、先読み制御器が帯域・層時間・待機を観測し、予測器が将来需要を出し、二段キャッシュが近未来需要を保護し、キャッシュ認識ルーティングが残る転送待ちを別トークン計算で覆う。"
+    "system_design": "AttAcc由来HBM-PIMのbank-level GEMVを5 HBM3 stacksへ置き、predictor state/audit result/KVをshared HBMに保持する。GPUとPIMは別linkを介さずshared HBM経由でcontrollerと連携し、PIM auditはGPU survivor attentionと同時実行する。"
   },
-  "reservation": {"claim_id": "claim-6cab193563e41b501052a680", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-65c28b59ac08b3e1cf0adad9",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
