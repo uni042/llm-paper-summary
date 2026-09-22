@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-f9afab963f7542abadb69271",
   "job_id": "job-research-784815ee56689f0c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f9afab963f7542abadb69271",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "setup": "実機評価はLLaMA-2-7BをRTX 4090 24GB、LLaMA-2-13BをA100 40GBで実施し、PyTorch 2.1とCUDA 11.8を使用する。各基盤モデルにrank 8・16・32・64の複数LoRAアダプタを用意する。負荷はLMSYS-Chat-1Mから会話を取り、25モデルへLoRAアダプタを巡回対応させて人気の偏りを表現する。到着時刻はChatbot Arena由来の対話記録を基にし、指定要求率と試験時間へ線形スケールする。",
+    "baselines": ["vLLM: PagedAttentionと固定的なアダプタ・鍵値キャッシュ領域、先着順スケジューリング", "Punica: 複数LoRA向けBGMVカーネルと先着順スケジューリング", "S-LoRA: 鍵値キャッシュとアダプタの統合メモリ管理、GPU常駐アダプタを優先する方式", "SJF: 予測出力長による短要求優先。スケジューラ単体比較で使用"],
+    "metrics": ["平均トークン遅延", "処理量（requests/s）", "初回トークン時間", "待ち行列遅延", "生成長予測精度", "回復処理時間", "LoRA数増加時の処理量"],
+    "conditions": "エンドツーエンド比較では20個のLoRAモデルを同時提供し、要求率を4〜24 requests/sで変化させる。生成長予測器比較ではLMSYS-Chat-1MとShareGPTを用い、要求率24 requests/s、30秒試験で共有BERT、モデル別BERT、モデル別LLaMA-3.2-1Bを比較する。回復方式はA100上のLLaMA-2-13Bで系列長を変えて再計算とCPU退避の費用を測定する。",
+    "fairness": "vLLM・Punica・S-LoRAと同じ基盤モデル、GPU、到着負荷で比較する。スケジューラの寄与を見る実験ではFCFS、S-LoRA方式、予測長SJF、MeSSを分離比較する。整数線形計画はCPUで非同期実行し、待ち行列上位64件へ制限して30ms未満を狙い、通常35〜40msのデコード反復と重ねる。",
+    "limitations_of_evaluation": "評価は単一GPU上のLLaMA-2-7B/13Bと合成した多LoRA到着負荷が中心で、複数GPU・分散クラスタの通信や、より大規模な現行モデルは測定していない。生成長予測器の精度はデータ分布に依存し、整数線形計画も候補64件へ切るため、待ち行列全体に対する厳密最適解ではない。"
+  },
+  "reservation": {"claim_id": "claim-f9afab963f7542abadb69271", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
