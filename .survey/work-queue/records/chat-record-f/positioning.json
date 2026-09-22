@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-326b3f3f66e611a32551fa41",
-  "job_id": "job-research-07f0e94c3c687e36",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-326b3f3f66e611a32551fa41",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-326b3f3f66e611a32551fa41","job_id":"job-research-07f0e94c3c687e36","data":{"limitations":"トレース駆動テストベッドでの評価であり、異なるクラウド起動時間、GPU性能、ネットワーク、料金体系へ移すと状態・報酬・行動写像の再調整が必要になり得る。SAC方策の学習安定性は特徴量と学習率へ敏感で、状態特徴を削ると振動が増える。Scale-outの分単位遅延をモデル化する一方、実運用の障害、モデル複数種、テナント間優先度などは主評価外。Connection Drainingは安全な縮退を行うが、頻繁な増減そのものを完全には抑えず、著者もthrashing抑制を将来課題とする。","differences":"Kubernetes HPAはCPU/メモリ利用率中心で、DecodeがKVメモリ飽和しているのに演算利用率が低い状態を見抜けない。HeteroScaleはDecode tokens/s等を信号に既定比率でPrefill/Decodeを同期伸縮するため、片側だけのボトルネックで余計な他方資源を増やし得る。SplitScalingは単一DRL方策の二次元行動で両プールを独立制御し、状態に負荷構造と内部キューを含める。\n\nDistServe、Splitwise、Mooncake等はPD分離そのものやKV転送を最適化するが、SplitScalingはその上のクラスタ制御面で時間変動するPD資源比を扱う。さらに新資源を増やすだけでなく、グローバルキューの遅延束縛で起動後すぐ既存バックログを再配置する点が、通常のオートスケーラとの差になる。","implementation_status":"Splitwise由来の分離推論環境にScheduler、SAC Controller、Scaling Managerを実装し、コードをhttps://github.com/Onlytonight/SplitScalingで公開。BurstGPTトレースを元タイムスタンプと入出力長で再生する。Controllerの推論はマイクロ秒級、スケール実行は分単位であり、制御器自身の計算オーバーヘッドは小さいと報告する。","research_positioning":"分離LLMサービングの最適化をGPU内カーネルやKV転送だけでなく、時間変動するPrefill/Decode資源比のオンライン制御へ拡張する研究である。特にPrompt-to-Response比の変化を明示的に扱うため、同じRPSでも計算律速とメモリ律速の比率が変わる現実的な負荷を対象にする。\n\nオフロード・階層メモリ研究との接点はDecode側のKV容量圧力を状態として捉え、必要な資源を動的に増やす点にある。将来CPU/CXL/SSD KV階層を導入した場合も、各階層の待ち・容量・帯域を状態へ追加し、GPU追加とオフロードのどちらでSLOを守るかを制御する上位ポリシーへ発展できる。"},"reservation":{"claim_id":"claim-326b3f3f66e611a32551fa41","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
