@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-cb84a638146b933040620510",
-  "job_id": "job-research-6f4aa4cc9993f8fd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-cb84a638146b933040620510",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-cb84a638146b933040620510","job_id":"job-research-6f4aa4cc9993f8fd","data":{"hardware":"推論速度評価は32GB NVIDIA V100を使用。完全54.5B混合専門家モデルは4枚および8枚、80%枝刈り版は1枚および4枚で測定する。単一GPU枝刈り構成は各エンコーダ混合専門家層36専門家、各デコーダ層12専門家を保持する。","software":"NLLB-200 54.5B混合専門家モデルと3.3B密モデルを比較。公開nllb-pruning実装はTransformers、Accelerate、Datasets、Hugging Face Hub、SacreBLEUを利用する。翻訳品質はchrF++とFLORES-200用SentencePieceでトークン化するspBLEUを測定する。","methodology":"FLORES-200 devでゲート統計を収集し、30言語の中間実験で枝刈り指標・枝刈り方式・保持率・エンコーダ対デコーダ比を比較する。最終評価は53言語のdevtestと、202言語すべての40,602翻訳方向で実施する。30言語集合は高資源・低資源・超低資源を各10言語含み14言語族を覆う。最終の202言語統計は各言語方向からランダム25文対を使い、計算短縮のため教師強制で収集する。推論速度は29言語から英語へのFLORES valid翻訳で平均語/秒と時間を測る。","scope":"評価対象はNLLB-200という単一の多言語機械翻訳用混合専門家モデルであり、一般LLMや別のルーティング方式への直接一般化は検証していない。一方、言語数は202、最終翻訳方向は40,602と広く、資源量別の品質と単一GPU実機推論まで確認している。"},"reservation":{"claim_id":"claim-cb84a638146b933040620510","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
