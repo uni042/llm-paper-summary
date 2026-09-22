@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-549cc32a266805db6baff1b7",
+  "attempt_id": "attempt-f4ffcfe74b4d2743285b717b",
   "job_id": "job-research-be16d214d5c628cd",
   "data": {
     "hardware": "Catalog E: H200 SXM、H100 PCIe/SXM、A100 PCIe/SXM、L40S、L4、RTX PRO 6000 Server。Catalog SはB200/B300と模擬Attention/Expert特化点を追加。物理検証はAscend 910C 160 cards。",
@@ -32,7 +32,7 @@
     "scope": "steady-state saturated decodeと固定budget/TPOT SLOの比較に焦点を当てる。installed hardware再利用、elasticity、failure isolationは目的外。分析モデルはkernel deficiency、scheduler latency、network contention等のruntime固有overheadを省略し、future hardwareは仮想capability pointである。"
   },
   "reservation": {
-    "claim_id": "claim-549cc32a266805db6baff1b7",
+    "claim_id": "claim-f4ffcfe74b4d2743285b717b",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
