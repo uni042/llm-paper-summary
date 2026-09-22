@@ -25,7 +25,7 @@ except ModuleNotFoundError as exc:
 
 _GENERIC_SURVEY_WORKERS = {"scheduled-chat-llm-survey"}
 _CURRENT_SCHEDULED_WORKERS = {"scheduled-chat-00": "00", "scheduled-chat-30": "30"}
-_CURRENT_RUN_KEY_RE = re.compile(r"^scheduled-chat-(?:00|30)-(?P<stamp>\\d{8}T\\d{6})Z$")
+_CURRENT_RUN_KEY_RE = re.compile(r"^scheduled-chat-(?:00|30)-(?P<stamp>\d{8}T\d{6})Z$")
 _ORIGINAL_COLLECT_SUBMISSIONS = _core.evidence._collect_submissions
 _ORIGINAL_DIRECT_EVIDENCE_METRICS = _core._direct_evidence_metrics
 _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS = _core._render_direct_metric_details
