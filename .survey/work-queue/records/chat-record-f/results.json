@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-40f2100aeb26ce98eb0d15a5",
-  "job_id": "job-research-b921c5addc92d695",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-40f2100aeb26ce98eb0d15a5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-40f2100aeb26ce98eb0d15a5","job_id":"job-research-b921c5addc92d695","data":{"overview":"SEは調査したMoEすべてで0.5%未満だが、同数random expertとは桁違いの重要性を持つ。Qwen3-30B-A3Bは6144中3 SEをpruneすると非推論平均70.22→55.00、Wiki PPL 8.70→59.86。DeepSeek-V2-Liteは60.27→43.90、Mixtralは67.84→49.38。一方random pruningは平均をほぼ変えない。reasoningではさらに極端で、DeepSeek-R1の10 SE pruningで平均75.64→1.81、Qwen3 thinkingで69.37→4.02となりAIME等のPass@1が0になる。","key_results":[{"metric":"Qwen3-30B-A3B SE sparsity","value":"3 / 6144 experts = 0.05%","baseline":"全expert","condition":"C4 profiling","interpretation":"極端に少数のexpertだけがSE条件を満たす。"},{"metric":"Qwen3 non-reasoning average","value":"70.22→55.00, 21.68% drop","baseline":"random 70.36; LC random 70.21","condition":"3 SE dynamic pruning, 9 tasks","interpretation":"同数random削除ではなくSE固有のcriticality。"},{"metric":"DeepSeek-V2-Lite average","value":"60.27→43.90, 27.17% drop","baseline":"random 60.30","condition":"2 SE pruning","interpretation":"異なるMoE設計でも再現。"},{"metric":"Mixtral average","value":"67.84→49.38, 27.21% drop","baseline":"random 67.82","condition":"1 SE pruning","interpretation":"1/256 expertだけでも大幅崩壊。"},{"metric":"DeepSeek-R1 reasoning average","value":"75.64→1.81, 97.61% drop","baseline":"random 75.53","condition":"10/15677 SE pruning","interpretation":"reasoning能力がほぼ消失。"},{"metric":"Qwen3 thinking average","value":"69.37→4.02, 93.62% drop","baseline":"random 69.33","condition":"3 SE pruning","interpretation":"AIME24/25とHumanEval Pass@1が0。"},{"metric":"attention sink decay","value":"約90%以上","baseline":"pruning前sink attention","condition":"Qwen3-30B-A3B, C4","interpretation":"SE pruningがattention sink機構をほぼ消す。"}],"negative_results":"最終層にも極端なactivation outlierを持つexpertは存在するが、massive activation形成に寄与しないため初期層SEほどcriticalではない。SE位置はdomainやpost-trainingでほぼ変わらず、頻度依存の単純なdataset-specific現象ではない。研究はSEを保護した圧縮法そのものの最終compression ratio/latency改善までは提示しない。","interpretation":"expert importanceは滑らかな連続分布として扱えず、少数のSEがMoE内部のsystematic outlierとattention sinkを支える構造的役割を持つ。したがってexpert pruning/merging/quantizationではSEを別クラスとして保護し、それ以外のexpertで圧縮率を稼ぐ設計が必要になる。","quality_impact":"SE圧縮の品質損失は削除率から予想できないほど大きい。0.05% expert削除でQwen3 reasoning平均が93.62%低下するため、compression safety上のhard constraint候補である。"}}
