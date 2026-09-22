@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-9a2c0141760202bf19379f9a","job_id":"job-research-ce081c207f1ded58","data":{"limitations":"共有プールは最大5ユーザーで、生体埋め込みは事前抽出済み、下流QAはLoCoMoの固定質問である。実運用で重要な生体なりすまし、リプレイ、テンプレート盗難、センサー雑音、経時変化、大規模ユーザー索引、分散キャッシュ間の認可一貫性は扱わない。認証器の誤拒否はOwner品質低下へ、誤受理はNon-ownerへの記憶露出へ直接つながり、CasiaM_460/700では非所有者成功率6%が残る。効率表の具体的ハードウェア構成も明記されていない。専用公開コードURLは一次資料で確認できない。","differences":"PagedAttention、Mooncake、TokenCake、DualPathなどはKVの配置・ページング・オフロード・I/Oを最適化し、KVCOMMやTokenDanceは文脈・エージェント間のKV再利用を増やす。一方Bio-MemArtは、再利用可能なKVが既に存在する前提で『現在の物理ユーザーがその記憶を使ってよいか』を意味検索より先に判定する。MemArtとは記憶表現と検索・再利用経路を共有し、生体テンプレートと認可候補集合だけを追加するため、システム高速化手法というよりKV記憶のアクセス制御拡張である。","implementation_status":"式と処理順は再現可能な粒度で記述され、KVブロックへの生体テンプレート追加、コサイン類似度、正負分布からのしきい値推定、認可候補集合、既存MemArt検索への接続が明示される。Qwen2.5-3B-Instructと事前抽出生体埋め込みを使用する。ただし著者公式の専用コードリポジトリは一次資料中に示されず、公開実装済みとは扱わない。","research_positioning":"KVキャッシュ研究が推論時一時状態から長期エージェント記憶へ広がると、容量・帯域・再利用率だけでなく記憶の所有権がシステム要件になる。Bio-MemArtはこの境界を明確に扱う初期例で、既存のKVオフロード、階層メモリ、プレフィックスキャッシュと直交的に組み合わせられる。今後は生体テンプレート自体を保護する暗号化・取消可能表現、認可メタデータをCPU/SSD/NVMe階層へ安全に伝播する設計、多数ユーザーでの照合索引、誤受理コストを含むキャッシュ配置最適化がシステム研究として重要になる。"},"reservation":{"claim_id":"claim-9a2c0141760202bf19379f9a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-0686f88e90fa51aa74f2c5d1",
+  "job_id": "job-research-c4a93ea297e613d5",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0686f88e90fa51aa74f2c5d1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

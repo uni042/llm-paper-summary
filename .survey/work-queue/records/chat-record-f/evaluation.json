@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-9a2c0141760202bf19379f9a","job_id":"job-research-ce081c207f1ded58","data":{"hardware":"一次資料HTMLでは応答時間を計測しているが、具体的なGPU・CPU型番やメモリ容量は記載されていない。したがって応答時間を特定ハードウェア一般の性能値として外挿しない。","software":"全実験は特記がない限りQwen2.5-3B-Instructを用い、長期記憶はMemArt構成を維持する。顔・掌紋は事前抽出済み埋め込みを使用し、生体側は認可埋め込みだけを供給する。保存、圧縮、検索、推論設定は原MemArtと同一に保つ。","methodology":"長期対話QAはLoCoMoのMulti-Hop、Temporal、Single-Hopを使用する。共有記憶プールは最大5ユーザーで、各生体ベンチマークから5身份をLoCoMoの5ユーザーへ一対一対応させ、各ユーザーに1生体テンプレートと独立KV記憶区画を与える。同じ保存履歴・対象ユーザー・質問に対し、Owner条件では登録本人のプローブ、Non-owner条件では別の登録者のプローブだけを変える。これによりQA差を生体ゲートが許可した記憶集合の差として読む。顔はAgeDB-30、CALFW、CFP-FF、CFP-FP、CPLFW、LFW、VGG2-FPの7ベンチマーク、掌紋はCasiaMの460/700/850nm、IITD、MSのBlue/Green/NIR/Red、PolyU、Tongjiの10プロトコルを用いる。各ベンチマークで一致・不一致ペアからしきい値を校正し、その値をLoCoMo試験で固定する。QA指標はunigram F1とBLEU-1、認証はOwner/Non-owner成功率とその下流QA差、効率はプレフィルトークン、検索時間、生体照合オーバーヘッド、応答時間、生成トークンを測る。効率比較は10会話から各5問の非敵対的質問、計50例で生成上限20トークンとし、完全文脈、MemArt、Bio-MemArtを比較する。","scope":"評価は最大5ユーザーの制御された共有プール、LoCoMo固定質問、生体埋め込みが事前抽出された条件である。能動的な生体なりすまし、テンプレート漏えい、リプレイ攻撃、センサー品質劣化、ユーザー数が大規模な場合の照合コスト、分散KVストアでの認可整合性は評価していない。また応答時間のハードウェア詳細がないため、システム性能の絶対値よりプレフィルトークン削減とMemArtとの差を中心に読むべきである。"},"reservation":{"claim_id":"claim-9a2c0141760202bf19379f9a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-0686f88e90fa51aa74f2c5d1",
+  "job_id": "job-research-c4a93ea297e613d5",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0686f88e90fa51aa74f2c5d1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
