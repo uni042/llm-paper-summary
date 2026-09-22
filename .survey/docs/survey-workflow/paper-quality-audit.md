@@ -98,6 +98,8 @@ workflow v10の研究レコードは `results.overview` と `results.key_results
 
 Research / Auditの新規completed publicationは、submission processorへ渡す前に2段階の提出前検査を必須とする。
 
+これらの機械基準は事前公開された執筆要件であり、preflightで初めて判明する隠し条件として扱わない。ワーカーは執筆前に上記の固定基準を確認し、一次資料から十分に説明できる場合は、本文量・段落数・手法説明などを最低値ぴったりではなく**少し余裕を持って**作る。安全余裕（safety margin）の目的は、レンダリング後の計測差、品質計測から除外される領域、表記揺れなどによる境界上の不必要なFAILを減らすことであり、固定品質基準の変更ではない。余裕を作るための水増し、重複記述、根拠のない推測は禁止し、追加分も一次資料に基づく有用な説明にする。
+
 1. **ワーカー自身の意味品質セルフレビュー**: 一次資料との整合、推測の混入、概要・一覧文の固有性、代表結果、end-to-end手法、評価条件・baseline、結果の条件と解釈、限界・既存研究との差を5スロット上で読み返す。不十分な項目はrecord bankへ確定保存する前に直す。
 2. **exact blob preflight**: セルフレビュー済み5スロットをrecord bankへ保存した後、`.survey/work-queue/research-preflight/requests/` から `research_quality_preflight.py` を実行する。ここでは `assemble_research_record.py` の構造化validation、正規renderer、`paper_quality_gate.py` の機械品質基準をsubmission processorと同じ順で適用する。
 
