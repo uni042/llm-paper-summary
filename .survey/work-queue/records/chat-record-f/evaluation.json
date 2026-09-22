@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-be85a6eae28ccf3a322cb511",
   "job_id": "job-research-a61328ecbdf05053",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-be85a6eae28ccf3a322cb511",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "4種類のMoE、DeepSeekMoE-16B-Base、Qwen1.5-MoE-A2.7B-Chat、Qwen2-57B-A14B、Qwen3-30B-A3Bを評価する。剪定処理自体の計算コストはDeepSeekMoE-16B-BaseでHEAPr 44 TFLOPs・6分・peak 44GB、Qwen2-57B-A14Bで123 TFLOPs・20分・peak 91GBと報告される。比較のNAEEはそれぞれ2分/27GB、8分/60GBと軽い一方、D2-MoEは30分/53GB、90分/127GBでHEAPrより重い。",
+    "software": "評価はLM-Evaluation-Harness 0.4.7を使用し、OpenBookQA、ARC-Easy、WinoGrande、HellaSwag、ARC-Challenge、PIQA、MathQAの7 zero-shot taskでaccuracyを測る。言語モデル品質の補助指標としてWikiText-2とPTBのperplexityも報告する。公式実装はGitHubで公開され、論文の再現性声明ではcodeとcomputational environment由来checkpointを公開している。",
+    "methodology": "calibrationはWikiText-2全体を連結・tokenizeし2048-token sequenceへ分割した後、random.seed(0)で128 sequenceを抽出する。全Table 1結果はこの128 sequenceでimportanceを推定して得る。比較対象はexpert droppingのNAEE/MoE-I2、expert mergingのMC-SMoE/HC-SMoE、expert decompositionのSub-MoE/D2-MoE/MoE-SVDで、原論文の結果を優先し、欠損かつ公式codeがある場合のみ著者らが再実行する。DeepSeekMoE-16B-Baseでは20%/40%、Qwen1.5とQwen3では25%/50%、Qwen2では40%剪定を比較する。さらにCAMERA-Pとのatomic expert比較、global対layer-wise、atomic対expert粒度、calibration corpusとsample数、0.1〜0.9の圧縮境界をablationする。",
+    "scope": "評価は4つの公開MoE familyと7つのzero-shot taskにまたがり、複数の剪定ratioと比較手法を含むため、単一モデルの事例より広い。一方、主要なquality評価は英語の標準zero-shot benchmarkとperplexityであり、生成品質、長文脈、code、multilingual、安全性などは直接測っていない。runtime評価は剪定準備のGPU timeとmemory、および理論FLOPs削減が中心で、実際のend-to-end token/s、latency、GPU kernel効率をモデル横断で測ったserving benchmarkではない。"
+  },
+  "reservation": {"claim_id": "claim-be85a6eae28ccf3a322cb511", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
