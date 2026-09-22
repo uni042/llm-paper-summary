@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 11:10:17 JST**
+> 自動生成: **2026-09-22 11:10:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **321** |
 | 未claim Research job | **320** |
 | 直近24hの検証済みResearch収録 | **18** |
-| 最終検証済みResearch収録 | **09-22 09:32:19 JST（1時間37分前）** |
+| 最終検証済みResearch収録 | **09-22 09:32:19 JST（1時間38分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -115,9 +115,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
-  - claim: **09-22 11:08:57 JST** / heartbeat: **—** / lease expiry: **09-22 12:38:57 JST**
-  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
+- `arXiv:2606.27866` — FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models / worker `scheduled-chat-00`
+  - claim: **09-22 11:10:26 JST** / heartbeat: **—** / lease expiry: **09-22 12:40:26 JST**
+  - evidence: `.survey/work-queue/claims/job-research-00f6a78e028bd698.json`
 
 #### Audit
 
@@ -165,8 +165,8 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **240** |
-| └ Research | **168** |
+| 成功result未照合のimmutable submission | **241** |
+| └ Research | **169** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
