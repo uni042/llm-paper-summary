@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-16cac5f54e2362f364831d2c",
-  "job_id": "job-research-6f4aa4cc9993f8fd",
+  "attempt_id": "attempt-5a4f5cc9eab9d57bce8f13d8",
+  "job_id": "job-research-f59af449638fc64c",
   "data": {
-    "hardware": "推論速度評価は32GB NVIDIA V100を使用。完全54.5B混合専門家モデルは4枚および8枚、80%枝刈り版は1枚および4枚で測定する。単一GPU枝刈り構成は各エンコーダ混合専門家層36専門家、各デコーダ層12専門家を保持する。",
-    "software": "NLLB-200 54.5B混合専門家モデルと3.3B密モデルを比較。公開nllb-pruning実装はTransformers、Accelerate、Datasets、Hugging Face Hub、SacreBLEUを利用する。翻訳品質はchrF++とFLORES-200用SentencePieceでトークン化するspBLEUを測定する。",
-    "methodology": "FLORES-200 devでゲート統計を収集し、30言語の中間実験で枝刈り指標・枝刈り方式・保持率・エンコーダ対デコーダ比を比較する。最終評価は53言語のdevtestと、202言語すべての40,602翻訳方向で実施する。30言語集合は高資源・低資源・超低資源を各10言語含み14言語族を覆う。最終の202言語統計は各言語方向からランダム25文対を使い、計算短縮のため教師強制で収集する。推論速度は29言語から英語へのFLORES valid翻訳で平均語/秒と時間を測る。",
-    "scope": "評価対象はNLLB-200という単一の多言語機械翻訳用混合専門家モデルであり、一般LLMや別のルーティング方式への直接一般化は検証していない。一方、言語数は202、最終翻訳方向は40,602と広く、資源量別の品質と単一GPU実機推論まで確認している。"
+    "hardware": "主実験はMixtral-8×7B BaseとMixtral-8×7B Instructを用いる。MoE Lotteryのタスク非依存微調整はNVIDIA A100を8基使用し、バッチサイズ8で実施する。論文は50%エキスパート削減時のメモリ使用量を密モデル比0.55倍、推論高速化を1.27倍と報告する。",
+    "software": "Hugging Faceから取得したMixtralチェックポイントへMC-Suiteの16重要度指標、単発枝刈り、反復枝刈り、MoE Lotteryのestimate-prune-finetune手順を適用する。微調整はAdamWとコサイン学習率スケジューラを用い、最大学習率1e-6、各ラウンドで最適化器をリセットする。",
+    "methodology": "重要度推定の較正にはC4 validationから256サンプル、最大系列長2048を使う。削減率は12.5%から75%まで12.5%刻みで評価し、反復方式では各ラウンドに各32層から1エキスパートずつ合計32個を削る。C4パープレキシティで重要度指標と単発・反復・Lotteryを比較し、下流ではMMLU、WinoGrande、CommonsenseQA、ARC-Easy、BoolQなどをゼロショット、少数例提示、教師あり指示微調整条件で評価する。Lottery微調整トークン数は初回0.2Mから倍増させ、付録では0.25M〜2.27Mの感度を測る。",
+    "scope": "主対象はMixtral-8×7B系列であり、異なるMoE設計への一般化は限定的である。勾配系・活性値系の指標は較正データ上の前向き・後向き計算を必要とし、利用頻度だけの指標より圧縮前処理費が高い。Lotteryは完全な訓練不要ではあるが追加微調整を必要とするため、純粋な訓練なし枝刈りより計算費が増える。50%以上の高削減率での性能回復は指示追従支援に依存し、用途やデータが変わると同程度に回復する保証はない。"
   },
   "reservation": {
-    "claim_id": "claim-16cac5f54e2362f364831d2c",
+    "claim_id": "claim-5a4f5cc9eab9d57bce8f13d8",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
