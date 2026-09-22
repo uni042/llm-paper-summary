@@ -2,22 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c1687a55baa06d3477e9780a",
-  "job_id": "job-research-af08dd730875cebb",
-  "data": {
-    "overview": "DESは複数のMoE方策モデルと2種類のプロセス報酬モデルで、固定活性化数のTTSより多くの条件で高いAccuracy/Precisionを示す。Qwen3-30B-A3B-Instruct＋Qwen2.5-Math-PRM-7B、N=32ではMATH500 93.2%、AIME24 86.67%、AIME25 70.0%、HumanEval 94.51%、LiveBench reasoning 91.5%。DeepSeek-V2-Lite-Chat＋Qwen PRM、N=64ではGSM8K 82.8%、MATH500 41.8%、HumanEval 47.56%となり、Best-of-N/BeamSearch/DVTSを大きく上回る条件がある。生成トークン数はベースラインと同程度で、平均活性化エキスパート数も既定8を超えない。",
-    "key_results": [
-      {"metric": "Qwen3 MATH500 Accuracy", "value": "93.20%", "baseline": "Best-of-N 92.40%、BeamSearch 93.00%、DVTS 87.40%", "condition": "Qwen3-30B-A3B-Instruct、Qwen2.5-Math-PRM-7B、N=32", "interpretation": "同じロールアウト予算で構造的探索軸を加えることで小幅ながら最高精度を得る。"},
-      {"metric": "Qwen3 HumanEval Accuracy", "value": "94.51%", "baseline": "Best-of-N 92.07%、BeamSearch 89.02%、DVTS 93.90%", "condition": "Qwen3-30B-A3B-Instruct、N=32", "interpretation": "数学だけでなくコード生成でも構成探索の利得が確認される。"},
-      {"metric": "DeepSeek-V2-Lite GSM8K Accuracy", "value": "82.80%", "baseline": "Best-of-N 68.80%、BeamSearch 69.39%、DVTS 72.60%", "condition": "DeepSeek-V2-Lite-Chat、Qwen2.5-Math-PRM-7B、N=64", "interpretation": "小型MoEでは活性化数の違いによる相補性が大きな改善へつながる条件がある。"},
-      {"metric": "DeepSeek-V2-Lite MATH500 Accuracy", "value": "41.80%", "baseline": "Best-of-N 30.40%、BeamSearch 35.80%、DVTS 34.00%", "condition": "DeepSeek-V2-Lite-Chat、Qwen PRM、N=64", "interpretation": "難しい数学でも通常のbeam型探索より高い正答率を示す。"},
-      {"metric": "異なる検証器でのDeepSeek-V2-Lite GSM8K Accuracy", "value": "87.60%", "baseline": "Best-of-N 68.80%、BeamSearch 67.60%、DVTS 71.00%", "condition": "Llama3.1-8B-PRM-Deepseek-Data、N=64", "interpretation": "改善が単一のQwen PRMに限定されない。"},
-      {"metric": "Dynamic MoE単独アブレーション", "value": "N=128でMATH500 31.0%", "baseline": "固定活性化数BeamSearch 27.4%", "condition": "OLMoE-1B-7B-Instruct、Llama3.1 PRM", "interpretation": "構成継承を外して活性化数探索だけを加えても、高計算予算で+3.6ポイント改善する。"},
-      {"metric": "Qwen3 MATH500生成トークン数", "value": "33.9k", "baseline": "Best-of-N 32.9k、BeamSearch 33.9k、DVTS 22.7k", "condition": "N=32", "interpretation": "少なくともBest-of-N/BeamSearchと近い生成量で精度改善しており、単純な長文化だけでは説明しにくい。"}
-    ],
-    "negative_results": "DESが全モデル・全ベンチマークで常に最高ではない。Qwen3のLiveCodeBenchではDES 33.59%に対してBeamSearch 37.40%、Ling-liteのAIME25ではDES 16.33%に対してBest-of-N/DVTS 23.33%、Ling-liteのLiveCodeBenchではDES 19.84%でBeamSearchと同値かつDVTS 20.61%を下回る。OLMoEのSVAMPではDES 83.67%に対してBeamSearch 84.67%である。また外部検証器が必須で、検証器が誤ると探索も誤った構成へ集中する。",
-    "interpretation": "結果は『より多くのエキスパートを使えば良い』という説明を支持しない。初期活性化範囲をずらすと平均活性化数はその範囲の平均に追随し、主設定では既定8を超えない。Dynamic MoE単独でも改善し、構成継承を加えるとpass@NとAccuracyがさらに上がるため、構造的多様性の導入と有望構成への計算集中の双方が寄与していると解釈できる。",
-    "quality_impact": "DESはモデル重みを変更せず推論時探索だけを変えるため、品質改善は個々の単一生成を恒常的に高品質化するというより、固定予算内で正解候補へ到達する確率と最終選択品質を上げる形で現れる。検証器品質への依存は残る。"
-  },
-  "reservation": {"claim_id": "claim-c1687a55baa06d3477e9780a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-fc5b7d76e4c2ccfdd465afca",
+  "job_id": "job-research-c10c6ca0720f4ecc",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-fc5b7d76e4c2ccfdd465afca",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

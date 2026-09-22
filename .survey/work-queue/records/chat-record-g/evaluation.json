@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c1687a55baa06d3477e9780a",
-  "job_id": "job-research-af08dd730875cebb",
-  "data": {
-    "hardware": "全実験はNVIDIA RTX A6000 GPU 4枚で実施。論文はGPUメモリ容量やテンソル並列の詳細をモデル別には報告していない。",
-    "software": "方策モデルはvLLMで提供し、報酬モデルはTransformersで提供。Dynamic MoEとして推論時の活性化エキスパート数を制御する。コードは採択後公開予定と付録に記載され、公開リポジトリURLは本文中にない。",
-    "methodology": "方策モデルはQwen3-30B-A3B、Ling-lite-1.5、OLMoE-1B-7B-Instruct、DeepSeek-V2-Lite-Chatの4種類。検証器はQwen2.5-Math-PRM-7BとLlama3.1-8B-PRM-Deepseek-Data。数学はMATH500、AIME24、AIME25を中心に、小型モデルではGSM8KとSVAMPも使用。コードはHumanEvalとLiveCodeBench v6-lite、知識推論はLiveBench reasoningを0-shotで評価する。主設定はN=32ロールアウト、M=N/4、T=10、温度0.8、初期活性化数4〜11。小型モデル追加実験はN=64。比較対象はBest-of-N、Beam Search、DVTSで、Accuracy、候補中の正答率Precision、平均生成トークン数を報告する。Dynamic MoE単独、構成継承、初期活性化範囲、異なる計算予算、異なる検証器をアブレーションする。",
-    "scope": "評価は推論・コード・知識ベンチマークに集中し、実サービングのスループット、レイテンシ、KVキャッシュ量、PCIe/NVLink通信量などシステム指標は直接測っていない。『追加コストなし』は主に同じロールアウト予算、同程度の生成トークン数、平均活性化数が既定値以下という観点で論じられる。学習済みMoEで活性化数を変更しても破綻しにくいことが前提であり、denseモデルには直接適用できない。"
-  },
-  "reservation": {"claim_id": "claim-c1687a55baa06d3477e9780a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-fc5b7d76e4c2ccfdd465afca",
+  "job_id": "job-research-c10c6ca0720f4ecc",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-fc5b7d76e4c2ccfdd465afca",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

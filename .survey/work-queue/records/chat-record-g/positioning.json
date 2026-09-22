@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c1687a55baa06d3477e9780a",
-  "job_id": "job-research-af08dd730875cebb",
-  "data": {
-    "limitations": "外部のプロセス報酬モデルまたは検証器が必要で、その評価誤差が探索経路と最終回答の双方へ伝播する。活性化数を学習時設定から変えても性能が急落しないMoEであることも前提で、denseモデルやtop-k変更に敏感なMoEへはそのまま適用できない。評価は4枚のRTX A6000上のベンチマーク中心で、実サービングの同時要求、メモリ圧、通信、エネルギーは測定していない。コードは論文中で採択後公開予定とされ、現時点の再現性は実装詳細記述に依存する。また一部ベンチマークではBeamSearchやDVTSを下回るため、DESが常に最適な探索戦略ではない。",
-    "differences": "Best-of-Nや通常Beam Searchは同一モデル構成のまま出力サンプリングだけで探索多様性を作る。DVTSは探索木を複数の独立部分木へ分割して出力側の多様性を増やす。DESはこれらと異なり、MoE内部の活性化エキスパート数を探索状態へ含め、モデルの計算経路そのものを変える。既存の動的MoE研究が入力難易度などに応じて計算量やroutingを適応させるのに対し、DESは正解集合の相補性を利用するTTS目的で複数構成を明示的に探索する。構成継承により、毎ステップ一様に全kを試す方式より有望構成へ計算を集中する点も特徴である。",
-    "implementation_status": "論文実験ではvLLM上でMoE方策モデルを提供し、推論時に活性化数kを変更して探索する。報酬モデルはTransformersで提供。N=32、M=N/4、T=10、k=4〜11、温度0.8など主要設定は付録に記載されている。一方、付録のライセンス節にはコードは採択後公開するとあり、一次資料から公開GitHubリポジトリは確認できないため、公開実装済みとは扱わない。",
-    "research_positioning": "MoE推論研究では、従来はroutingを計算量削減、負荷分散、専門化、エキスパート配置・オフロードの観点から扱うことが多い。DESは同じ構造自由度を『推論品質を上げる探索軸』として使う点で異なる。特にエキスパート数ごとに正解問題集合がずれるという観察は、MoEのrouting/configurationをテスト時適応計算へ利用する系統につながる。システム研究の観点では、異なるkが計算・メモリ・通信負荷も変えるため、将来は検証器報酬だけでなくGPUメモリ圧、expert cache hit率、CPU/SSDオフロード費用を状態へ含め、品質と階層メモリコストを同時最適化する拡張が考えられる。"
-  },
-  "reservation": {"claim_id": "claim-c1687a55baa06d3477e9780a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-fc5b7d76e4c2ccfdd465afca",
+  "job_id": "job-research-c10c6ca0720f4ecc",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-fc5b7d76e4c2ccfdd465afca",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
