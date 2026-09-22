@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e1881183879733d0f0a4eb0e",
-  "job_id": "job-research-6a21e987e314dd70",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e1881183879733d0f0a4eb0e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e1881183879733d0f0a4eb0e","job_id":"job-research-6a21e987e314dd70","data":{"limitations":"第一に、CertKVのsynthetic tail KVはfixed-row tail factorizationから着想するが、将来queryのattention weightは追放時に未知であり、future-query fidelityのcertificateではない。第二に、LongBench-v2の有意差は限定的で、36比較のHolm補正後に決定的なのはLlama 2×対PyramidKVのみである。RULER 128Kもbootstrap intervalが広い。第三に、one-factor ablationは局所的なpoint estimate差を示すだけでadjusted contrastは決定的でなく、各設計要素の因果的優位は強く確立していない。第四に、packed prototypeはphysical memory accountingを実証するが、decode latency、throughput、同一budgetの他圧縮法に対するmemory差は評価していない。第五に、短文脈score profileの長文脈外挿は失敗しており、deploymentではcontext lengthごとのstability確認が必要。第六に、anonymous code release予定とは記載されるが本文中に公開repository URLは示されていない。","differences":"SnapKVはobservation-window scoreで重要tokenを選ぶが、CertKVはそのscoreを使いつつ追放tailのvalue dispersionを測り、head間budgetを再配分する。Ada-KVもhead間budget allocationを行うが、CertKVはtail valueの要約困難度を目的量とし、さらにheadごと1 synthetic KV pairを明示的に保存する。StreamingLLMのsink+windowやPyramidKVのlayer/head構造的budgetとは異なり、CertKVは固定row理論からtail aggregateの必要性を導く。WeightedKV/D2O/KeepKV等のmerging系と近いが、summaryを無料にせずlive slotとして課金し、exact physical budgetを前面に出す点が特徴。","implementation_status":"arXiv v1プレプリント。PyTorch 2.8.0+cu128、Transformers 4.57.6でproduction evaluationを実施し、table/configurationをSHA-256で追跡している。論文はanonymous code releaseに完全environment exportを含めるとするが、確認時点で本文に公開GitHub URLはない。64K Llamaのpacked-cache prototypeまで実装され、persistent KVとdecode peak memoryを実測している。","research_positioning":"KV cache compression研究において、既存のselector競争より一段上の『何をもってcompressibleと呼べるか』を整理する理論・設計論として位置付けられる。H2O/SnapKV/StreamingLLM等がattention scoreや局所構造から保持tokenを決めるのに対し、本研究はcount sparsityだけではcoverageを保証せず、coverageだけでもvalue-dependent output fidelityを保証せず、output fidelityもtask utilityを保証しないと明示する。その上でCertKVを理論の具体化として提示し、value-aware allocationとtail summaryをexact budgetへ組み込む。したがって今後のKV圧縮法を評価する際、compression ratioだけでなくmass coverage、value tail、cross-length stability、task contract、hidden summary memoryを監査する基準を提供する。"},"reservation":{"claim_id":"claim-e1881183879733d0f0a4eb0e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
