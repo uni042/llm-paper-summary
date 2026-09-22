@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2407.00945",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2024-2407.00945-efficient-expert-pruning.md",
   "selection_reason": "gradient-free evolutionary searchで総expert数とactive expert数の両方を削減し、memory削減と推論加速を同時に狙う直接的expert pruning。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T11:38:13+00:00"
+  "created_at": "2026-09-20T11:38:13+00:00",
+  "completed_at": "2026-09-22T14:49:13+00:00",
+  "blocker": "Primary arXiv HTML was retrieved and read through the main conclusion, but the automation web retrieval budget was exhausted before the remaining appendices could be read to the end. The workflow forbids producing a completed research record without full primary-source reading; retry from the primary source in a later run.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-a204eb86cb07493ddb9445d1.json"
 }
