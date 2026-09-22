@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-a0ecf191f05aa48e02bfda2f",
-  "job_id": "job-research-71cfe275bb4fcca4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a0ecf191f05aa48e02bfda2f",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a0ecf191f05aa48e02bfda2f","job_id":"job-research-71cfe275bb4fcca4","data":{"differences":["通常Top-Kはgate scoreだけでexpertを決めるが、SiftMoEはwireless channelと通信energyをselection objectiveへ直接入れ、同じTop-K候補をreplacement/skipしてよいかをaccuracy boundで制約する。","WDMoEはgating score累積やlatencyに基づくadaptive activationを行うが、SiftMoEはexpert-pair functional similarityをoffline calibrationし、置換誤差をrouting weightと結び付けて理論的に評価する。","AdaptMoEなどwireless-aware selectionはexpert importanceとlatency/bandwidthを組み合わせるが、SiftMoEはlayer-wise selection errorのcross-layer propagationまで上界化し、global output deviation requirementをlayer budgetへ変換する。","expert cache/prefetch/offloadingは選ばれたexpert weightをどこからいつ運ぶかを最適化するのに対し、SiftMoEは高cost expertそのものをsimilar expertへ置換またはskipして通信要求を消す。","slow fadingだけでなくfast fadingを扱い、expert assignment後にdynamic programmingでinstantaneous channelへ送信bitsを適応させる点がwireless distributed MoE特有の拡張。"],"limitations":["wireless部分は実GPS由来距離を使うもののsimulationであり、実無線edge cluster上のend-to-end energy/latency測定ではない。","基本モデルはsingle userで、multi-userが同じwireless/computation resourceを競合する場合は今後の課題。","各edge nodeが各MoE layerで一つのexpert execution unitを持つone-to-one expert-node mappingを基本仮定とする。複数GPUはlogical helperとして拡張可能だが、共有linkやcompute contentionを完全には扱わない。","offline expert-pair mismatchはcalibration distributionが推論時に近いことへ依存し、model更新や大きなdistribution shiftではrecalibrationが必要。","expert replacement/skipはlayer単位のexpert選択に限定され、entire MoE layer skippingやより大きなstructural compressionは扱わない。","qualityはdeviation budgetとのtradeoffであり、energy削減を強めるほどaccuracy degradationが増える。"],"implementation_status":"arXiv v2の理論・algorithm・simulation研究。本文で公式実装repositoryの公開は確認できない。expert loading/computation latencyはRTX 4090で実測し、selection algorithmsとfast-fading bit allocationは数式・擬似的手順として記述される。","research_positioning":"Adaptive Expert Computation / Compression系では、expert redundancyを利用して実行expert集合を変える研究に属する。特にSiftMoEはexpert similarityを単なるmemory/load削減へ使うのではなく、wireless edgeでhidden-state communicationを削る目的へ接続する。階層メモリ研究との関係では、CPU/GPU間weight movementを直接最適化する方式ではないが、remote expert executionとlocal expert loadingのどちらが安いかをlatency/energy modelで比較し、通信・計算・memory placementを跨いだexpert selectionとして位置付けられる。","audit_notes":"arXiv:2603.23888v2の17ページをAbstractからConclusion、Appendix proofsまで通読。system model、Proposition 1、Theorem 1、slow-fading single/multi-token optimization、fast-fading surrogateとDP、Section VIの3 model-task pair評価、Fig.3〜12、limitations/future workを確認した。グラフから未記載の厳密数値を推測せず、本文で明示された傾向と設定値だけを記録した。"},"reservation":{"claim_id":"claim-a0ecf191f05aa48e02bfda2f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
