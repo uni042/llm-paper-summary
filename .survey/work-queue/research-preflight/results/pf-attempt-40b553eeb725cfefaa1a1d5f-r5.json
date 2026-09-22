@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-40b553eeb725cfefaa1a1d5f-r5",
+  "kind": "research",
+  "attempt_id": "attempt-40b553eeb725cfefaa1a1d5f",
+  "job_id": "job-research-548d7e4cd563f6b8",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:899e7efe4e457753aa18387520d9643fe42a31a17d571bf3f29ce029ee6d243f",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "5eb6f6d9e816bd6bc7810ec6ad4fe18e27f85477"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "beadf337c75f2ef31e7106d0853ee1185abb294c"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "526215409ed381354121a5c8b23788d1d8a21f95"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "d17dd14dac67b420748bde8a5c92af08952d0541"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "b9889359b751e3c0c7e67b0f4bf9cc89f823453f"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T09:04:33+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md",
+    "status": "FAIL",
+    "file_bytes": 20848,
+    "prose_chars": 5828,
+    "paragraphs": 20,
+    "method_paragraphs": 6,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7473666326877336,
+    "japanese_chars": 4399,
+    "latin_chars": 1487,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 74.7% < 警告基準 80.0%"
+    ]
+  }
+}
