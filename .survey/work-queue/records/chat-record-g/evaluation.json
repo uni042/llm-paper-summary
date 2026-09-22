@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-1338966144636293379a0970",
-  "job_id": "job-research-d4390f65b198912f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1338966144636293379a0970",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1338966144636293379a0970","job_id":"job-research-d4390f65b198912f","data":{"hardware":"one-shot pruning実験は単一NVIDIA H100 80GBで実行。expert-wise knowledge distillationは2 servers、各8×NVIDIA H100 80GB、合計16 GPUを使用する。蒸留は1000 C4 samplesで約1時間と報告される。","software":"Mixtral-8x7B/8x22Bのbase/instructを評価。one-shot校正は全手法で同じC4 128 sequences。baselineはSparseGPTとWanda。distillationはLlama-Factoryへ実装し、pruned modelを初期値としてsparsity maskを維持するfull-parameter fine-tuningを3 epochs、learning rate 2e-5、cosine schedulerで行う。","methodology":"言語モデル品質はWikiText validation perplexityとEleutherAI LM Harnessの9 zero-shot tasks、ARC-easy/challenge、BoolQ、HellaSwag、MMLU、OpenBookQA、PIQA、RTE、WinoGrandeで測る。主実験は50% unstructured sparsityと2:4 semi-structured sparsity。校正sample数2〜256のablationとpruning ratio 10〜70%のablationも実施する。蒸留ではC4 subsetをtraining dataとして、元pretrained MoEをteacher、pruned modelをstudentにする。","scope":"主結果はMixtral系に限定される。router利用度分析ではQwen1.5-MoE、DeepSeek-V2/Lite、MiniCPM-MoE、OLMoEなども比較するが、pruning品質の詳細表はMixtral-8x7B/22B中心。one-shot枝刈りは再学習なしだが、99%性能保持というheadlineはexpert-wise distillation後であり、枝刈り単独の結果と区別が必要。実サービスのlatency/throughputよりperplexityとaccuracyを中心に評価する。"},"reservation":{"claim_id":"claim-1338966144636293379a0970","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
