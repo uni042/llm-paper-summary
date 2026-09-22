@@ -1,13 +1,13 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-88d2aa5426361490104919b5",
-  "job_id": "job-research-3611857c9c7fea67",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-88d2aa5426361490104919b5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-88d2aa5426361490104919b5","job_id":"job-research-3611857c9c7fea67","data":{
+"problem":"推薦向け疎MoEは各tokenで少数expertだけを活性化するが、学習済みcheckpoint自体は全expert bankを保持し、routerも全expertに対して選択を行う。既存のrouting最適化やsparse kernelは実行を効率化しても保存expert数を減らさず、学習済み推薦checkpointを明示的なserving budgetへ縮小する問題を解かない。単純なparameter distanceでは推薦状態に対するexpertの実際の応答類似性を捉えられず、output similarityだけでも高頻度expertを壊したときの下流影響を評価できない。したがって、推薦分布上の機能的互換性とrouting exposureを同時に考慮し、指定expert数までbankを縮約しながら標準MoE形式を保つ必要がある。",
+"novelty":"UniMoMoはcheckpoint変換を、校正データ条件付きの制約付きグラフ粗視化（constrained graph coarsening）として定式化する。全expertを同じ未ラベル推薦状態へ通して出力平均と等方分散を集約し、対称化KL距離からexpert affinity graphを作る。一方、元routerのsoft routing massから正規化entropy deficitを求め、トラフィックが集中する層ほど多くの高利用expertを保護する。cluster作成後はrouting massでSwiGLU重みを融合し、非線形性による中間活性ずれを最小二乗写像で補正してdown projectionへ折り込む。router行はcluster内算術平均で初期化し、短い教師ありadaptation後も通常のtop-k MoEとして動作する。",
+"method_overview":"各MoE層について最大20 calibration batchから有効hidden stateを収集する。元routerのtop-k決定からexpertごとの確率重み付きrouting mass uを集計すると同時に、routerを迂回して全expertを同じ入力集合へ評価し、expert outputの平均vector μとscalar variance vを蓄積する。expert i,jの等方Gaussian要約間のKLを双方向平均して距離Dijとし、sij=1/(1+Dij)をgraph edge affinityとする。routing massを確率化したpからnormalized entropy deficit Sを計算し、γ=γmin+(γmax-γmin)S^β、K=ceil(γE)で保護expert数を決める。報告設定はγmin=0.1、γmax=0.4、β=1。singleton clusterからaverage-link affinity最大の許容pairをgreedyにmergeし、protected同士のmergeとprotected expertの反復変更を抑制する。target countと制約が衝突したstepだけ保護を一時解除する。各clusterではrouting massでup/gate/down projectionを平均し、元expertのtraffic-weighted中間活性Qと融合expertの中間活性Pの間でT=P†Qを解き、down projectionへTをfoldする。router rowは元行の算術centroidとする。全層置換後、同一学習例・同一予算で短時間fine-tuningしvalidation NDCG@10で選択する。",
+"components":[
+{"name":"共有入力上の機能的expert profiling","description":"parameter distanceの代わりに、各層の全expertを同一のN個の校正hidden stateへ通し、出力の平均vectorとscalar varianceを逐次集約する。共有入力を使うことで、expertごとに異なるrouted input distributionの差とexpert関数そのものの差を分離する。full covarianceはO(E d^2) storageになるため、平均と等方分散だけを保持してO(E d)に抑える。2つのGaussian要約間の非対称KLを双方向平均してDijを作り、1/(1+Dij)へ写像したaffinityでmerge候補を順位付けする。global thresholdは不要で、graphは『どのexpert群が推薦状態上で似た挙動をするか』を表す。"},
+{"name":"routing exposureに応じた層適応保護","description":"元routerが選択expertへ割り当てたsoft routing weightを全校正tokenで合計し、expert exposure uを作る。これを正規化した分布pのentropyからS=1-H(p)/log Eを計算し、routingが偏るほどprotected fractionを0.1から0.4へ増やす。最大uのK expertを保護し、protected同士をmergeせず、protected singletonが一度unprotected clusterを吸収した後は候補から外す。これにより高traffic expertが繰り返し再構成されることを防ぐ。一方、target countへ到達不能なstepだけ制約を一時解除するため、保護はhard infeasible constraintではなくdeterministic priorityとして働く。"},
+{"name":"average-link graph coarsening","description":"各expertをsingleton clusterとして開始し、cluster A,B間のscoreを全member pair affinityの平均とする。許容pairのうちscore最大をgreedyに統合し、指定M clusterまで反復する。single-linkのchainingやcomplete-linkの外れpair感度を避けつつ、固定checkpointと校正streamに対してexpert indexでtie-breakすることで決定的なpartitionを得る。実装はgraph Laplacianやspectral preservationを使う厳密なspectral coarseningではなく、推薦状態上のfunctional affinityをedge weightにしたgreedy coarseningである。"},
+{"name":"利用量重み付きSwiGLU再構成と最小二乗補正","description":"cluster内expertのup、gate、down projectionをrouting mass比でparameter-averageするだけでは、SwiGLUの非線形性により『重みを平均してから活性化』と『各expertを活性化してから平均』が一致しない。そこで元expertのtraffic-weighted intermediate activation Qを校正データから作り、融合したup/gateが生成するPに対してMoore-Penrose pseudoinverseでT=P†Qを求める。この線形補正をmerged down projectionへfoldするため、forward時の追加operatorは発生しない。論文は最終output errorをactivation fitting residualとsource down-projection dispersionの2項で上界化し、近似誤差の由来も明示する。"},
+{"name":"標準MoEとしてのcheckpoint export","description":"clusterごとに元router rowの算術平均を取り、E行routerをM行へ縮小する。校正trafficをgroupingとrouter初期化の双方へ二重利用しないため、router rowはtraffic-weightedではなくneutralなcentroidとする。その後compressed router、merged experts、残りbackboneを同一supervised adaptation budgetでfine-tuneする。オンライン時にはaffinity graph、entropy、least-squares mapを一切保持せず、M expertに対する通常top-k routingだけを行う。このため圧縮固有runtime moduleなしで既存expert kernelへ投入でき、8→4/top-2や8→2/top-1など複数serving budgetを同じ変換枠組みで作れる。"}],
+"system_design":"圧縮処理はofflineで、1層の全expert profilingがO(N E d h)、affinity graph構築がO(E^2 d)、素朴なaverage-link更新が最大O(E^3)。各出力clusterのdense pseudoinverseはO(N h^2+h^3)である。推論時はgraphや補正演算子を残さず、router scoringとstorageがEからMへ減る。標準8→4/top-2ではactivated-expert arithmeticの漸近次数は元と同じだがrouter destinationとexpert bankが縮小し、aggressive 8→2/top-1ではactivated-expert arithmeticも減る。"
+},"reservation":{"claim_id":"claim-88d2aa5426361490104919b5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
