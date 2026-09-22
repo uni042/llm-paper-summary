@@ -9,45 +9,23 @@
     "arxiv_id": "2609.09823",
     "doi": "10.48550/arXiv.2609.09823",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AR",
-      "cross_list": []
-    },
+    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
     "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
     "summary": "AMENDは長文LLMデコードのKV cache帯域ボトルネックに対し、現在queryのQK計算後に疎ブロックを決める従来法や、現在queryをPIMへ渡してからmaskを得る直列PIM filterを避けるGPU-PIM協調attentionである。過去stepで監査済みのBLASST marginから次stepのdrop verdictを因果予測し、GPUは予測survivorだけを即時処理する。同時にHBM近傍PIMがGPUから省いたcomplementのQKを監査し、controllerが両観測を統合して予測状態と次maskを更新する。Llama-3.1-8B-Instruct/Qwen3-8BのLongBench/RULERで品質をほぼ維持し、H100+HBM3-PIM simulationのbatch 8、8K〜64Kで1.40〜3.63倍end-to-end decode speedup、28〜66% dynamic energy削減を報告する。",
-    "list_summary": "過去stepの監査済みattention marginで次maskを先行予測し、GPU survivor計算とHBM-PIM complement監査を並列化してK trafficと直列PIM待ちを同時に除く長文decode設計。",
-    "authors": [
-      "Zuxiong Tan",
-      "Will Wei-Jen Wang",
-      "Wei Shao",
-      "Ali Karkehabadi",
-      "Houman Homayoun",
-      "Avesta Sasan"
-    ],
+    "list_summary": "過去ステップで監査した注意マージンから次の生存ブロックを先行予測し、GPUの生存ブロック計算と高帯域メモリ内計算による補集合監査を並列化して、キー転送と直列待ちを同時に削減する長文デコード設計。",
+    "authors": ["Zuxiong Tan", "Will Wei-Jen Wang", "Wei Shao", "Ali Karkehabadi", "Houman Homayoun", "Avesta Sasan"],
     "authors_affiliations": "University of California, Davis",
     "published": "2026-09-09",
     "publication": "arXiv:2609.09823 v1, 2026-09-09",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "long-context sparse attention / KV-cache bandwidth reduction / GPU-PIM heterogeneous decoding / predictive attention masks",
-    "topics": [
-      "long-context inference",
-      "sparse attention",
-      "KV cache",
-      "PIM",
-      "HBM",
-      "causal prediction",
-      "GPU-PIM"
-    ],
+    "topics": ["long-context inference", "sparse attention", "KV cache", "PIM", "HBM", "causal prediction", "GPU-PIM"],
     "importance": "現在tokenの結果にPIMを直列依存させず、未来maskの監査専用にPIMを回すことでGPUとメモリ内計算を真に重ねる。階層・異種メモリでI/Oをcritical pathから外す設計原理として重要。",
     "hardware_evaluation": "H100 80GB HBM3、3.35 TB/s、989 TFLOPS BF16をGPUモデルとし、5×16GB HBM3 stackにAttAcc由来bank-level GEMV PIMを配置。品質実行はA100 BF16、性能はtrace-driven simulation。",
     "quality_effect": "LongBench平均はLlama Dense 49.69対AMEND 49.76、Qwen Dense 49.41対AMEND 49.37。RULER平均Dense 85.30対AMEND 85.13。",
     "source": "https://arxiv.org/abs/2609.09823",
-    "sources": [
-      "https://arxiv.org/abs/2609.09823",
-      "https://arxiv.org/pdf/2609.09823",
-      "https://github.com/Miketan1/AMEND_code"
-    ],
+    "sources": ["https://arxiv.org/abs/2609.09823", "https://arxiv.org/pdf/2609.09823", "https://github.com/Miketan1/AMEND_code"],
     "code": "https://github.com/Miketan1/AMEND_code",
     "implementation": "AMEND attention emulationとtrace-based GPU/PIM simulatorのcore codeをMITで公開。Qwen3-1.7B、LongBench、AttAccの外部入力を用いる再現手順をREADMEに記載。",
     "last_checked": "2026-09-22",
@@ -56,9 +34,5 @@
     "references_source": "primary-reference-section",
     "references_total": 0
   },
-  "reservation": {
-    "claim_id": "claim-65c28b59ac08b3e1cf0adad9",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-65c28b59ac08b3e1cf0adad9", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
