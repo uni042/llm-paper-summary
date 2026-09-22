@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-ef87eb9152e0438c1196729d",
+  "job_id": "job-research-80e5caed751c8e16",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-ef87eb9152e0438c1196729d.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references[0] must be an object | problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+  "processed_at": "2026-09-22T03:38:33+00:00",
+  "validation_errors": [
+    "metadata.references[0] must be an object",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}
