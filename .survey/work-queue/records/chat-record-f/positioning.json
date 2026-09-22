@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
-  "job_id": "job-research-b0919b5b9aea285a",
-  "data": {
-    "limitations": "評価は主にQwen3-4B-Instruct-2507一モデルで、LoRA微調整に限定される。QA系では系列並列学習が勝つ構成も多く、最適KV方策はタスク依存でH2O変種の順位も確定していない。CPUオフロードと再計算を多用するためメモリは抑えられても計算・転送量は増え、疎注意自体の推論遅延もvLLM等の高度に最適化された完全注意基盤にまだ劣る。保存テンソルフックの照合失敗は正しさを壊さないがメモリ節約量を減らす。今後は疎注意と文脈並列の併用、kernel fusion、multi-stream非同期CPUオフロードが課題として挙げられる。",
-    "differences": "LongLoRAなどは学習用の特定疎パターンを使うが、推論時の任意KV eviction方策へモデルを直接共適応させる仕組みではない。NSA/DSAは疎構造をモデル設計へ組み込み事前学習から使う必要があり、方策選択の柔軟性が低い。系列・文脈並列は完全KVを複数GPUへ分散するため文脈長に応じたハードウェア増加が必要である。本手法は固定長KVキャッシュそのものを学習時に使い、方策非依存の差分圧縮で自動微分を成立させる点が異なる。OOMBもチャンク処理とCPU利用を行うが、疎注意変種ごとの専用CUDA処理が必要なのに対し、本手法はPyTorchの保存テンソル機構で方策依存性を切り離す。",
-    "implementation_status": "公式KeysAndValuesライブラリが公開され、論文の疎注意推論・微調整とH2O系実装を提供する。H2O向けにはFlashInfer SDPAと併用するTritonコードで注意重み和を得る。研究プロトタイプを越えた公開実装だが、vLLM/SGLang級の低遅延統合にはSDPAカーネル側の機能追加や非同期オフロードが必要と論文自身が指摘する。",
-    "research_positioning": "本リポジトリの階層メモリ・KVキャッシュ圧縮・長文脈推論系統に対し、推論時のメモリ方策を学習側まで貫通させる橋渡しに位置する。特にCPUをチェックポイント保管層として使い、GPUには現在セルと固定長KVだけを置く設計は、CPU/GPU階層メモリ研究と直接関係する。また、圧縮方策の精度評価を『既存モデルに後付けした時』だけでなく『その方策へモデルを共適応させた時』にも行う必要を示すため、今後のKV eviction・量子化・SSD/CPUオフロード研究の評価設計にも影響する。"
-  },
-  "reservation": {"claim_id": "claim-d1d3b3caeff62a011e27f971", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-05dcd349efb11788a6f85507",
+  "job_id": "job-research-c15907d33f78f8cd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-05dcd349efb11788a6f85507",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

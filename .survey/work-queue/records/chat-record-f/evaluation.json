@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
-  "job_id": "job-research-b0919b5b9aea285a",
-  "data": {
-    "hardware": "4×NVIDIA A100 40GBを主評価に使用。論文は4Bモデルの勾配計算自体は単一A100 40GB級で可能とし、4GPUは分散データ並列でバッチを増やすために使う。",
-    "software": "KeysAndValues、PyTorch、torchao 8-bit KV量子化、FlashInfer SDPA、Triton、比較側はMS-SWIFT、DeepSpeed ZeRO-3 offload、FlashAttention、Liger kernels。",
-    "methodology": "Qwen3-4B-Instruct-2507をAdamW、学習率5e-4、最大5 epochでLoRAのみ微調整する。LoRA rank=16、alpha=16で全linear blockを対象とする。64k/128kのHELMET長文脈タスクを用い、完全注意を系列並列で学習するspと、推論時と同じ疎注意方策を入れて学習するusを比較する。usはNC=32768、S=1024または2048、KVをtorchaoで8-bit量子化し、4GPUの分散データ並列で有効batch 8とする。last-recent、smart last-recent、H2O、normalized H2O、original H2Oを評価し、held-out validation lossでcheckpointを選択する。",
-    "scope": "長文脈64k/128kでの疎注意微調整。主眼は同一KV方策で学習・推論する共適応の効果と、任意方策を扱える学習システムの実現可能性。",
-    "benchmarks": ["HELMET NaturalQuestions", "HELMET TriviaQA", "HELMET HotpotQA", "HELMET PopQA", "HELMET TREC coarse", "HELMET NLU", "HELMET CLINC150", "HELMET InfiniteBench QA", "HELMET InfiniteBench MC", "HELMET JSON KV"],
-    "models": ["Qwen3-4B-Instruct-2507"],
-    "baselines": ["sequence-parallel fine-tuning with exact attention", "base checkpoint without fine-tuning", "exact-attention inference"],
-    "configuration": "NC=32768、S=1024/2048。S=2048ではcell multiplier alpha=1、S=1024ではalpha=0.75。spは64kで2GPU、128kで4GPUが文脈を分担し、gradient accumulationでeffective batch 8。usは各GPUが疎注意系列を処理してDDPでbatchを増やす。"
-  },
-  "reservation": {"claim_id": "claim-d1d3b3caeff62a011e27f971", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-05dcd349efb11788a6f85507",
+  "job_id": "job-research-c15907d33f78f8cd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-05dcd349efb11788a6f85507",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
