@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/eac99489e90aa20cb13cb7d63f53c9014b797164",
   "paper_path": "papers/inference/99-other-inference-systems/2026-0e42e21dd7f9-balancing-and-beyond-communication-centric-optimizations-in-expert-parallelism.md",
   "selection_reason": "EPICは実運用MoE推論のexpert parallelismで、性能認識型expert migration・runtime activation・topology-adaptive transport・細粒度compute/communication overlapを統合する。約1万GPU規模のonline inferenceで通信時間最大40%、token latency最大21%削減を報告し、MoE serving基盤への直接性が非常に高い。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T21:11:09+00:00"
+  "created_at": "2026-09-20T21:11:09+00:00",
+  "completed_at": "2026-09-22T08:29:27+00:00",
+  "blocker": "Primary-source full text could not be retrieved in this invocation. The canonical ACM PDF endpoint for DOI 10.1145/3789240.3829201 returned HTTP 403, and fresh title/DOI searches found bibliographic records, the SIGCOMM program/abstract, and secondary summaries but no accessible primary full text. ResearchGate explicitly reports no full text available. Per workflow, no five-slot research record was inferred from the abstract or secondary summaries; retry this same paper when primary full text is retrievable.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-ea9d4b84a65b2d853a324ad1.json"
 }
