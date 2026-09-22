@@ -1,13 +1,7 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-88d2aa5426361490104919b5",
-  "job_id": "job-research-3611857c9c7fea67",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-88d2aa5426361490104919b5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-88d2aa5426361490104919b5","job_id":"job-research-3611857c9c7fea67","data":{
+"hardware":"推論レイテンシはNVIDIA A100 80GB GPU 1枚、BF16、batch size 256で測定。20回warm-up後、80回のsynchronized forwardを計時する。圧縮前後は同一dataset・同一depth上で比較する。",
+"software":"RankMixerを主backboneとし、sequence length 16、hidden size 128、FFN multiplier 4、dropout 0.1、各MoE blockに8 experts、top-2 routing。UniMoMo圧縮後も標準top-k MoEで、affinity graphやentropy計算、least-squares operatorはonline pathに残さない。専用公開code URLは一次資料で確認できない。",
+"methodology":"主評価はAmazon Beauty、KuaiRec、TenRec。user historyをtimestamp順に並べ、最後2 interactionをvalidation/test、それ以前の各prefixをtraining exampleにする。trainingはunseen negativeを1つsampleし、評価はpositive対99 negativesでHR@10、NDCG@10、AUCを測る。全手法でsplitとcandidate listを共有し、各実験5 seedのmeanを報告。RankMixerは2/4/6 MoE blocksを評価し、標準圧縮は8→4/top-2、aggressive設定は8→2/top-1。元学習はAdamW lr=1e-3、weight decay=1e-6、batch 512、最大20 epochs、patience 3。圧縮profilingは20 unlabeled training batches、全圧縮baselineのadaptationはAdamW lr=5e-4、最大5 epochsで同一training examplesとcheckpoint selectionを使う。matched baselineはMergeMoEで、Origin MoEとのsource-relative品質とlatencyを比較する。Amazon Beautyではsignal ablation、expert count 2/4/8、block depth 2/4/6/8も検証。AppendixではMamba4Rec、TransAct、TWIN、SDIMの4 backbonesとMicroVideo、KuaiVideo、Ebnerdでportabilityを確認する。",
+"scope":"主張できる範囲は、8-source-expert RankMixer、2〜6 MoE blocks、sampled ranking、single A100 inference、および付録の4推薦backboneへのportabilityである。実運用のmulti-GPU、CPU/SSD offload、concurrent serving、energy、長期traffic driftは評価していない。圧縮partitionは代表的calibration trafficに依存し、そこに現れないrare behaviorはaffinityにもexposureにも反映されない。8→2ではprotected countがtargetを超える場合にstepwise protection relaxationを使うため、hard protectionの証拠にはならない。"
+},"reservation":{"claim_id":"claim-88d2aa5426361490104919b5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
