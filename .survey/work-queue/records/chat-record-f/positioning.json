@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-c67963f1064ecc2790db5b2d",
-  "job_id": "job-research-51f4efd90b7a5e12",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c67963f1064ecc2790db5b2d",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c67963f1064ecc2790db5b2d","job_id":"job-research-51f4efd90b7a5e12","data":{"limitations":"1 seed、各task n=500、WikiText-2中心calibration、4B/8Bの2 scaleだけでありscaling lawは主張できない。量子化対象はlinear projectionのみでembedding、LM head、norm、activation、KV cacheは高精度。local FP16 baselineはpublished TWLAと7.9%差がある。packed kernelはprototypeで1形状ではcuBLASより4.6倍遅く、全hardware・batch・shapeでのserving cost低減は未証明。全競合ternary PTQとのidentical-protocol比較もない。","differences":"BitNet/b1.58はnative low-bit trainingだが本研究は既存Qwen3をpost-training conversionする。GPTQ/AWQ/OmniQuantは一般PTQ、PTQTP/CAT-Q/TWLAはternary PTQ algorithmを扱うのに対し、本報告はTWLA weight-side componentsを利用して8B scale-up、外部reproduction、matched 4B比較、actual packing、direct executionまでsystem-levelに追う。AQLM等のsub-3-bit研究と同様にserializationを重視するが、adaptive ternary supportをquantizer stateからlosslessに保存する点を実証する。","implementation_status":"OneBit AI technical report、arXiv v1。Windows上の単一RTX 5070でconversion/evaluationし、packed direct executionまで実装済み。prototype Triton GEMVは動作するがproduction optimization前。","research_positioning":"低ビットLLMの研究でしばしば混同される『理論bit幅』『実checkpoint size』『runtime memory』『実行速度』を分離して測る配備系研究として重要。特に12GB GPUでQwen3-8Bを7.35 GiBで直接実行できることはconsumer GPU向けlocal inferenceに直結するが、次の主要課題はpacked kernelをcuBLAS級へ近づけるhardware-aware optimizationである。"},"reservation":{"claim_id":"claim-c67963f1064ecc2790db5b2d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
