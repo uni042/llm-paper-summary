@@ -7,9 +7,9 @@
   ],
   "updated_at": "scheduled-20260921T0330JST",
   "submission_count": 5,
-  "research_terminal_rejection_count": 14,
-  "rejection_observation_count": 65,
-  "rejection_record_count": 64,
+  "research_terminal_rejection_count": 5,
+  "rejection_observation_count": 56,
+  "rejection_record_count": 55,
   "ignored_without_identity": 0,
   "records": {
     "id:DOI:10.1007/978-3-031-99489-0_6": {
@@ -100,94 +100,6 @@
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
       "origin": "discovery_candidate_rejection"
     },
-    "id:DOI:10.1109/hpca68181.2026.11408592": {
-      "primary_identity": "id:DOI:10.1109/hpca68181.2026.11408592",
-      "identity_tokens": [
-        "id:DOI:10.1109/hpca68181.2026.11408592",
-        "title:pimphony overcoming bandwidth and capacity inefficiency in pimbased longcontext llm inference system",
-        "url:https://ieeexplore.ieee.org/document/11408592"
-      ],
-      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408592",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System",
-      "source_url": "https://ieeexplore.ieee.org/document/11408592/",
-      "rejection_reason": "Primary full text could not be safely obtained through an official primary route in this retry. The official arXiv abstract page for arXiv:2412.20166 was successfully retrieved and confirms the current PIMphony title, authors, 21-page HPCA 2026 acceptance, cs.AR primary category with cs.AI cross-list, and official PDF/HTML/source links. The official arXiv HTML route failed in this runtime (DisabledError); the official PDF route was rejected because the 14,364,622-byte document exceeded the retrieval limit; and the official TeX source route was rejected as unsupported application/gzip. A complete ar5iv rendering was reachable and inspected only as route evidence, but because it is not an official primary-source endpoint and appears to expose an older LoL-PIM version, it was not used to construct a five-slot record. No scientific details were inferred from partial or secondary text.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-19T10:04:33+00:00",
-      "last_rejected_at": "2026-09-19T10:04:33+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-83b77a5cbef20d42a5d9940d.json",
-      "origin": "research_blocked_permanent"
-    },
-    "id:DOI:10.1109/isca66397.2026.00098": {
-      "primary_identity": "id:DOI:10.1109/isca66397.2026.00098",
-      "identity_tokens": [
-        "id:DOI:10.1109/isca66397.2026.00098",
-        "title:tetris efficient longcontext llm serving with chunkwise dynamic sequence parallelism",
-        "url:https://doi.org/10.1109/ISCA66397.2026.00098"
-      ],
-      "canonical_id": "DOI:10.1109/ISCA66397.2026.00098",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "Tetris: Efficient Long-context LLM Serving with Chunkwise Dynamic Sequence Parallelism",
-      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00098",
-      "rejection_reason": "Primary full text remains unavailable in this retry after materially distinct official routes. The official IEEE DOI resolves to IEEE Xplore document 11617445, but the runtime receives only the JavaScript/robot-verification gate rather than article text. The same-work arXiv record arXiv:2511.06247 is reachable on the official arXiv abstract endpoint and confirms the title lineage, authors, abstract and quantitative headline results, but arXiv explicitly marks the preprint withdrawn to align with the affiliated organization's internal publication policies, provides no PDF for the current version, and the official HTML route returns 404. Because the peer-reviewed ISCA article full text was not retrieved and the arXiv preprint is withdrawn/unavailable, no five-slot scientific record was generated from the abstract or secondary material.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-19T10:04:33+00:00",
-      "last_rejected_at": "2026-09-19T10:04:33+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-c4322b286efe70010b6b1d91.json",
-      "origin": "research_blocked_permanent"
-    },
-    "id:DOI:10.1109/lca.2026.3660969": {
-      "primary_identity": "id:DOI:10.1109/lca.2026.3660969",
-      "identity_tokens": [
-        "id:DOI:10.1109/lca.2026.3660969",
-        "title:h3 hybrid architecture using high bandwidth memory and high bandwidth flash for costefficient llm inference",
-        "url:https://doi.org/10.1109/LCA.2026.3660969"
-      ],
-      "canonical_id": "DOI:10.1109/LCA.2026.3660969",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference",
-      "source_url": "https://doi.org/10.1109/LCA.2026.3660969",
-      "rejection_reason": "一次資料全文をこの再試行でも取得できなかった。DOI 10.1109/LCA.2026.3660969 と既知のIEEE Xplore公式PDF経路を再確認したが、この実行環境では本文へ到達できない。題名・DOI・著者による既知の別公式経路にも同一論文全文はなく、後続一次論文や二次解説はH3本文の代替証拠として使用しない。全文未読のまま抄録由来の最大2.69倍等から5-slotを推測せず、再試行可能なblockedとして耐久保存する。",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-19T10:04:33+00:00",
-      "last_rejected_at": "2026-09-19T10:04:33+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-ee3e717815b7d022412e5e87.json",
-      "origin": "research_blocked_permanent"
-    },
-    "id:DOI:10.1109/lca.2026.3703982": {
-      "primary_identity": "id:DOI:10.1109/lca.2026.3703982",
-      "identity_tokens": [
-        "id:DOI:10.1109/lca.2026.3703982",
-        "title:hbmhbfcentric memory pooling architecture with custom base die for terabytescale llm inference",
-        "url:https://ieeexplore.ieee.org/document/11568525"
-      ],
-      "canonical_id": "DOI:10.1109/LCA.2026.3703982",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "HBM-HBF-Centric Memory Pooling Architecture With Custom Base Die for Terabyte-Scale LLM Inference",
-      "source_url": "https://ieeexplore.ieee.org/document/11568525/",
-      "rejection_reason": "一次資料全文をこの再試行でも取得できなかった。IEEE DOI 10.1109/LCA.2026.3703982 はこの実行環境から直接取得できず、既知のIEEE Xplore document 11568525にも全文経路を確立できなかった。著者所属KAISTの公式セミナーページでは同研究題目『HBM–HBF Centric Memory Pooling Architecture with Custom Base Die for Transformer-Based LLM Inference』の講演とHBF技術概要を確認したが、査読論文本文そのものではないため5-slotの根拠には使用しなかった。複数回の公式経路再試行後も本文未取得のため、抄録・講演概要・二次資料から科学的内容を推測せずblockedとして保存する。",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-19T10:04:33+00:00",
-      "last_rejected_at": "2026-09-19T10:04:33+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-11067fab859094f25d88d7c5.json",
-      "origin": "research_blocked_permanent"
-    },
     "id:DOI:10.1145/3695053.3731032": {
       "primary_identity": "id:DOI:10.1145/3695053.3731032",
       "identity_tokens": [
@@ -209,28 +121,6 @@
       "run_key": "scheduled-20260921T0330JST",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-40-00+09-00-worker30-storage-02.json",
       "origin": "discovery_candidate_rejection"
-    },
-    "id:DOI:10.1145/3712285.3759903": {
-      "primary_identity": "id:DOI:10.1145/3712285.3759903",
-      "identity_tokens": [
-        "id:DOI:10.1145/3712285.3759903",
-        "title:diffmoe efficient batched moe inference with prioritydriven differential expert caching",
-        "url:https://doi.org/10.1145/3712285.3759903"
-      ],
-      "canonical_id": "DOI:10.1145/3712285.3759903",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching",
-      "source_url": "https://doi.org/10.1145/3712285.3759903",
-      "rejection_reason": "Primary full text remains unavailable after a fresh authoritative-route retry. The official SC25 schedule and Qinggang Wang author page confirm Diff-MoE and its SC 2025 publication, but neither exposed the manuscript body. Fresh title/DOI search surfaced secondary summaries only. A DBLP search snippet suggested an arXiv identifier, but direct verification showed arXiv:2505.09107 is an unrelated astronomy paper, so it was rejected as an identity mismatch. No five-slot record was synthesized from secondary material.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-21T19:28:13+00:00",
-      "last_rejected_at": "2026-09-21T19:28:13+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-ada5ca04d7ea755ed68c8a30.json",
-      "origin": "research_blocked_permanent"
     },
     "id:DOI:10.1145/3722215": {
       "primary_identity": "id:DOI:10.1145/3722215",
@@ -1002,72 +892,6 @@
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-42-00+09-00-worker30-cxl-03.json",
       "origin": "discovery_candidate_rejection"
     },
-    "id:arXiv:2608.08878": {
-      "primary_identity": "id:arXiv:2608.08878",
-      "identity_tokens": [
-        "id:arXiv:2608.08878",
-        "title:distillcache klguided adaptive kvcache eviction for memoryefficient llm inference",
-        "url:https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8"
-      ],
-      "canonical_id": "arXiv:2608.08878",
-      "arxiv_id": "2608.08878",
-      "doi": null,
-      "openreview_id": null,
-      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
-      "source_url": "https://www.semanticscholar.org/paper/aef485f2607e7a7c65aacb458166e545bb7625e8",
-      "rejection_reason": "Primary full text could not be safely retrieved in this invocation. The official arXiv abstract for arXiv:2608.08878 was reachable and confirms the paper metadata/abstract, but the official arXiv PDF and HTML full-text routes were inaccessible in the available retrieval environment. Workflow v10 requires reading the primary source in full, so no five-slot research record was synthesized from the abstract or third-party material.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-21T22:48:29+00:00",
-      "last_rejected_at": "2026-09-21T22:48:29+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-53b927057194e949fa1b57c5.json",
-      "origin": "research_blocked_permanent"
-    },
-    "id:arXiv:2608.15299": {
-      "primary_identity": "id:arXiv:2608.15299",
-      "identity_tokens": [
-        "id:arXiv:2608.15299",
-        "title:maple moe adaptive plugandplay layerwise expert allocation",
-        "url:https://arxiv.org/abs/2608.15299"
-      ],
-      "canonical_id": "arXiv:2608.15299",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation",
-      "source_url": "https://arxiv.org/abs/2608.15299",
-      "rejection_reason": "Primary-source full text could not be safely retrieved through materially distinct official routes in this retry. The official arXiv abstract metadata was discoverable, but direct official arXiv HTML and PDF fetches both returned DisabledError in the runtime. Search also found third-party renderings/copies, but workflow policy requires full reading from a primary/official source, so no five-slot record was inferred from those materials.",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-21T14:09:55+00:00",
-      "last_rejected_at": "2026-09-21T14:09:55+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-3930d1453c4e909421448ada.json",
-      "origin": "research_blocked_permanent"
-    },
-    "id:arXiv:2608.22613": {
-      "primary_identity": "id:arXiv:2608.22613",
-      "identity_tokens": [
-        "id:arXiv:2608.22613",
-        "title:nova technologyarchitecture codesign of nearmemory processing for attentionssmmoe hybrid llm inference",
-        "url:https://arxiv.org/abs/2608.22613"
-      ],
-      "canonical_id": "arXiv:2608.22613",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "NOVA: Technology-Architecture Co-Design of Near-Memory Processing for Attention-SSM-MoE Hybrid LLM Inference",
-      "source_url": "https://arxiv.org/abs/2608.22613",
-      "rejection_reason": "blocked retryとして一次資料経路を再確認した。検索サービス経由ではarXiv公式abstract（arXiv:2608.22613）の書誌・抄録を取得できたが、この実行環境ではarXiv公式PDF/HTMLの全文を安全に取得できなかった。著者・研究プロジェクトの同一論文公式全文コピーも検索で確認できず、得られたalphaXiv・AIDB・Moonlight等は二次資料のため科学的内容の補完には使用していない。過去2 attemptとは別runで再試行したが一次資料全文未取得のため、今回も一時的blockedとして耐久保存し、5-slotは生成しない。blocked_permanentへの遷移可否は正本のretry policyとActions側判定に委ねる。",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-18T04:00:36+00:00",
-      "last_rejected_at": "2026-09-18T04:00:36+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-b0e2c7ec2fd69933c27ee41a.json",
-      "origin": "research_blocked_permanent"
-    },
     "id:arXiv:2608.27865": {
       "primary_identity": "id:arXiv:2608.27865",
       "identity_tokens": [
@@ -1397,28 +1221,6 @@
       "run_key": "scheduled-20260921T0330JST",
       "source_submission": ".survey/work-queue/submissions/discovery/2026-09-21T03-43-00+09-00-worker30-speculative-04.json",
       "origin": "discovery_candidate_rejection"
-    },
-    "id:arXiv:2609.14850": {
-      "primary_identity": "id:arXiv:2609.14850",
-      "identity_tokens": [
-        "id:arXiv:2609.14850",
-        "title:selforchestrating language models leveraging semantic dependence for efficient inference",
-        "url:https://arxiv.org/abs/2609.14850"
-      ],
-      "canonical_id": "arXiv:2609.14850",
-      "arxiv_id": null,
-      "doi": null,
-      "openreview_id": null,
-      "title": "Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference",
-      "source_url": "https://arxiv.org/abs/2609.14850",
-      "rejection_reason": "今回runではarXiv:2609.14850の公式abstractは取得できたが、公式HTML全文の直接取得はDisabledErrorで失敗した。別の公式一次経路としてMIT EECS/CSAILの博士論文発表ページを確認し、さらに論文を構成するPASTA（arXiv:2502.11517）とPlanned Diffusion（arXiv:2510.18087）の公式一次資料情報も確認できた。しかし博士論文本文全体、とくにThinking in Placeを含む全章・評価表・limitations・referencesを一次資料として最後まで安全に取得できていない。部分資料や二次資料から未確認の5-slotを推測生成しないため、このattemptは一時的blockedとして耐久保存する。永久除外にはせず、次回はarXiv公式HTML/PDFまたはMITの正式な学位論文全文経路が利用可能なrunで再試行する。",
-      "rejection_count": 1,
-      "first_rejected_at": "2026-09-18T11:04:30+00:00",
-      "last_rejected_at": "2026-09-18T11:04:30+00:00",
-      "axis": null,
-      "run_key": null,
-      "source_submission": ".survey/work-queue/submissions/research/attempt-89f83eec45aa0f2c99d9a95d.json",
-      "origin": "research_blocked_permanent"
     }
   }
 }
