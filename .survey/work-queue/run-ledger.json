@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T01:33:43.683215+00:00",
+  "updated_at": "2026-09-22T01:34:52.776318+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -34489,6 +34489,56 @@
           "type": "research",
           "canonical_id": "DOI:10.1145/3832810.3832859",
           "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 886,
+      "paper_active_count_after": 886,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35676263905",
+      "first_recorded_at": "2026-09-22T01:34:52.776318+00:00",
+      "last_recorded_at": "2026-09-22T01:34:52.776318+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35676263905:1",
+          "recorded_at": "2026-09-22T01:34:52.776318+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35676263905",
+            "run_attempt": "1",
+            "source_sha": "f5b3faeb07ab6c0c8ea608bccdd13dfc7a648a8a"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-9aee3ce953b43bc0",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3821219",
+          "title": "AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism",
           "from": "ready",
           "to": "blocked"
         }
