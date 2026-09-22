@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-amend-65c28b59-03",
+  "kind": "research",
+  "attempt_id": "attempt-65c28b59ac08b3e1cf0adad9",
+  "job_id": "job-research-ca56f81ba7248b99",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:6be5b92f746b8e3cfd7151d8bf1fa0bf33df87a71a861cf8076612282d21270e",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-c/metadata.json",
+      "blob_sha": "578cffc339bfef9cdea927cd1a6d71ac2e483cc5"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-c/problem_method.json",
+      "blob_sha": "8cdd0467aacb3881da2b0246473253fcff40cacf"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-c/evaluation.json",
+      "blob_sha": "03cc038bae245ba00af7613a79569115490df58c"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-c/results.json",
+      "blob_sha": "7fb682dff5d4d9ec6819ec9328aa2bbcb09ee20e"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-c/positioning.json",
+      "blob_sha": "fade6b44da690270d30bd7de5590c4e8badfddcb"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T07:03:04+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md",
+    "status": "FAIL",
+    "file_bytes": 19946,
+    "prose_chars": 5711,
+    "paragraphs": 24,
+    "method_paragraphs": 10,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7600909607731666,
+    "japanese_chars": 4011,
+    "latin_chars": 1266,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 76.0% < 警告基準 80.0%"
+    ]
+  }
+}
