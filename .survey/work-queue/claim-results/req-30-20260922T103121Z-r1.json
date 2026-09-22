@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-30-20260922T103121Z-r1",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-6a21e987e314dd70",
+      "claim_id": "claim-e1881183879733d0f0a4eb0e",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-e1881183879733d0f0a4eb0e",
+      "claimed_at": "2026-09-22T10:32:03+00:00",
+      "expires_at": "2026-09-22T12:02:03+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-6a21e987e314dd70"
+      ],
+      "job": {
+        "job_id": "job-research-6a21e987e314dd70",
+        "type": "research",
+        "parent_job_id": "job-1849ac829790a8ce",
+        "priority": 98,
+        "canonical_id": "arXiv:2608.21541",
+        "arxiv_id": "2608.21541",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Beyond Sparse Weights: When Is Attention Compressible?",
+        "source_url": "https://www.semanticscholar.org/paper/33b03facc184393c55f5656d43a5bfdeaedace56",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md",
+        "selection_reason": "attention mapの見かけのsparsityではなくmass/value/future query/taskからKV compressibilityを整理し、tail-summary slotを持つCertKVを提案。packed Llama prototypeで10倍cache budget。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:17:31+00:00"
+      },
+      "record_bank": "g",
+      "record_bank_root": ".survey/work-queue/records/chat-record-g",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-g/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-g/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-g/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-g/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-g/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T10:32:03+00:00",
+  "checkpoint_released": 0
+}
