@@ -1,13 +1,10 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-dc0f658e4e197063cb9471e1",
-  "job_id": "job-research-886ba13cf71588b2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-dc0f658e4e197063cb9471e1",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-dc0f658e4e197063cb9471e1","job_id":"job-research-886ba13cf71588b2",
+ "data":{
+  "hardware":"効率評価はNVIDIA A100 40GBを1基、バッチサイズ1、BF16注意状態で行い、文脈長32K、64K、128Kを測る。モデル重みは4ビット量子化されたLlama-3.1-8B-Instructを凍結して使用する。",
+  "software":"CEDARは凍結Transformerの注意部へ後付けし、64トークン問い合わせブロック、意味チャンク境界、接頭辞統計、誤差優先ルータ、CSR型正確チャンク列、融合オンラインソフトマックスカーネルを用いる。比較対象は密なFlashAttention 2、MInference、Block-Sparse、DHSA。品質はLongBench、RULER、Needle-in-a-Haystackで評価する。",
+  "methodology":"主比較ではCEDARの誤差閾値を、DHSAの正確トークン密度6.25%と12.5%におおむね一致するよう校正する。校正は128件の保留長文プロンプトで行い、η候補0.02、0.04、0.08、0.16から選び、その後は下流データセットで固定する。タスクラベルやテスト例は校正に使わない。カーネル遅延には境界予測、要約縮約、ルーティング、融合注意を含める。\n\n機構確認では64チャンク×32トークン、64次元K/Vの合成クラスタ注意を作り、チャンク内ノイズ0.05、0.15、0.30を変える。硬いDHSAとCEDARで同じ数の正確チャンクを展開し、10乱数種×128問い合わせの密注意出力に対する相対再構成誤差を測る。アブレーションでは残差要約、分散優先度、可変予算、意味境界を個別に除去し、2要約/チャンクも比較する。",
+  "scope":"主評価はプリフィル注意カーネルであり、論文が述べる増分デコード拡張は現稿の主要性能主張ではない。単一A100、バッチ1のカーネル測定なので、多利用者サービング全体の端から端までのスループットやCPU・通信待ちを直接表すものではない。要約が有効という前提はチャンク内部の意味的一貫性に依存し、チャンク内分散が大きいほど合成実験でも利得が弱まる。要約経路は硬い疎注意より追加計算を持つため、同密度DHSAより128Kで約13%遅い。"
+ },
+ "reservation":{"claim_id":"claim-dc0f658e4e197063cb9471e1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
 }
