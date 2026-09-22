@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-42013615115b482f0803bc29",
+  "attempt_id": "attempt-6de20ea36381d00ca19a50de",
   "job_id": "job-research-1b89c86f687054e4",
   "data": {
     "limitations": "主要実験はMixtral、DeepSeek-MoE-16B、Qwen2-57B-14Aまでで、DeepSeek V3やQwen2.5-Maxのようなさらに大規模な混合エキスパートモデルでは計算資源上の理由から検証していない。また対象は言語モデルであり、視覚言語などマルチモーダルな混合エキスパートへの有効性は未検証である。\n\n微分可能探索は少量校正データと再構成正則化に依存し、最適化は付録の仮定下で一次停留点への収束を保証するが、大域最適な削減構造を保証するものではない。適応スキップも上位二エキスパートを主に想定した規則で、より多くのエキスパートを同時活性化するモデルでは閾値設計や速度利得が変わり得る。",
@@ -13,7 +13,7 @@
     "practical_takeaway": "同じ削減率を全層へ機械的に適用するより、少量の校正データで層内・層間重要度を学び、総エキスパート予算を層間で再配分する方が高削減率で性能を保ちやすい。Mixtral 8x7Bでは半数削減でも平均59.9を保ち、探索自体もNAEEより大幅に短い。実運用では構造削減でメモリを減らした後、類似度補正付きスキップを追加して速度をさらに上げる構成が考えられる。"
   },
   "reservation": {
-    "claim_id": "claim-42013615115b482f0803bc29",
+    "claim_id": "claim-6de20ea36381d00ca19a50de",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
