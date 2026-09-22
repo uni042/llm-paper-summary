@@ -111,6 +111,16 @@ class MethodHeadingCompatibilityTests(unittest.TestCase):
         self.assertGreaterEqual(len(blocks), AUDIT.STRUCTURED_METHOD_MIN_PARAGRAPHS)
         self.assertTrue(AUDIT.structured_method_equivalent(lines, prose_chars, len(blocks)))
 
+    def test_single_detailed_method_paragraph_is_accepted(self) -> None:
+        detailed = (
+            "入力を観測して必要なエキスパートを選び、選択結果を次段へ渡す。"
+            "選択には現在の負荷とメモリ量を使い、失敗時は通常経路へ戻す。"
+            "この説明は一段落だが、入力・処理・出力と失敗時の挙動を十分に説明する。"
+        )
+        self.assertGreaterEqual(len(detailed), AUDIT.DEFAULT_MIN_COMPONENT_PROSE_CHARS)
+        self.assertTrue(AUDIT.method_component_has_enough_detail([detailed], 2))
+        self.assertFalse(AUDIT.method_component_has_enough_detail(["短い説明。"], 2))
+
     def test_short_summary_without_method_is_not_structured_equivalent(self) -> None:
         lines = """# Example
 
@@ -125,6 +135,21 @@ class MethodHeadingCompatibilityTests(unittest.TestCase):
         blocks, _, _ = AUDIT.prose_blocks(lines)
         prose_chars = sum(len(x) for x in blocks)
         self.assertFalse(AUDIT.structured_method_equivalent(lines, prose_chars, len(blocks)))
+
+
+class LanguageRatioScopeTests(unittest.TestCase):
+    def test_bibliographic_section_is_excluded_from_language_ratio(self) -> None:
+        lines = """# Example
+
+## 書誌情報
+- **著者・所属**: Institute of Computing Technology, Example University
+
+## 概要
+本文は日本語で手法の目的と処理内容を説明する。
+""".splitlines()
+        prose = AUDIT.prose_text_for_ratio(lines)
+        self.assertNotIn("Institute of Computing Technology", prose)
+        self.assertIn("本文は日本語", prose)
 
 
 if __name__ == "__main__":
