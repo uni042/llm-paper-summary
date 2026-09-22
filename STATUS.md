@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 11:44:26 JST**
+> 自動生成: **2026-09-22 12:01:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **314** |
 | 未claim Research job | **313** |
 | 直近24hの検証済みResearch収録 | **18** |
-| 最終検証済みResearch収録 | **09-22 11:30:28 JST（13分前）** |
+| 最終検証済みResearch収録 | **09-22 11:30:28 JST（30分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -130,8 +130,8 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.07265` — XShare: Collaborative in-Batch Expert Sharing for Faster MoE Inference / worker `scheduled-chat-30`
-  - claim: **09-22 11:34:00 JST** / heartbeat: **—** / lease expiry: **09-22 13:04:00 JST**
+- `arXiv:2602.07265` — XShare: Collaborative in-Batch Expert Sharing for Faster MoE Inference / worker `scheduled-chat-00`
+  - claim: **09-22 12:01:07 JST** / heartbeat: **—** / lease expiry: **09-22 13:31:07 JST**
   - evidence: `.survey/work-queue/claims/job-research-a4cc548ec9dfc021.json`
 
 #### Audit
