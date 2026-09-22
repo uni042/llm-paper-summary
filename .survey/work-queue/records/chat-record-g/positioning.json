@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-38b916ecb638cccfa682047a",
-  "job_id": "job-research-46274ac71a8fbd8d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-38b916ecb638cccfa682047a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-38b916ecb638cccfa682047a","job_id":"job-research-46274ac71a8fbd8d","data":{"limitations":"MoBEは元モデルに対して小さいながら精度低下が残り、著者らはfull-network knowledge distillationを改善案とする。変換には各層の大規模行列をAdam最適化する計算が必要で、完全な即時変換ではない。最大のシステム課題は、現在のoptimized fused-MoE kernelではfactorizationを複数回呼び出して模擬するため実行効率が悪いことで、専用mega-kernelが必要と明記される。","differences":"expert pruning/mergingはexpert単位で削除・統合し専門知識を失う可能性がある。D2-MoEはshared weightとexpert deltaへ分けdeltaをSVD圧縮し、MoLAEはgroup内でshared latent matrixを使う。MoBEは層全体のexpertが共有する複数basisを持ち、expert固有A_iと係数αでbasisを組み合わせるため、単一shared subspaceより柔軟に共通構造と個別構造を分離する。","implementation_status":"論文脚注で公式GitHub https://github.com/inclusionAI/MoBE を公開。変換Algorithm、Adam最適化、活性化関数、Z-score、MoBE†を記述している。ただし高性能推論には専用mega-kernelが未実装という制約が本文Limitationsにある。","research_positioning":"MoEのメモリ問題に対し、expertをCPU/SSDへoffloadするのではなく、GPUへ置く総重み自体を圧縮する系統。expert間共通性をbasisとして明示的に共有するため、expert cache/offloadと直交して併用できる。圧縮で常駐サイズを減らした上で残るexpertを階層メモリ配置すれば、PCIe/NVMe転送量とGPU VRAMの双方を下げられる可能性がある。特に1T級Kimi-K2まで実証した点は大規模MoE servingの基盤技術として重要である。"},"reservation":{"claim_id":"claim-38b916ecb638cccfa682047a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
