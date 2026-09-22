@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-95a58c9a93fe71f7a995bfe2",
-  "job_id": "job-research-74a266f79fc28554",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-95a58c9a93fe71f7a995bfe2",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-95a58c9a93fe71f7a995bfe2","job_id":"job-research-74a266f79fc28554","data":{"hardware":"モデル能力評価は総パラメータ12B/24Bの小規模言語MoE、60Bのvision-language MoE、90Bの継続学習変換を含む。推論速度はMoE-A10B-300BをbaselineとしてHopper GPU上で測定し、prefillは4K〜1024K系列、decodeはbatch size 256でKV長4K〜64Kを評価する。","software":"AdamWとcosine learning-rate decayを使用。共通設定はbaselineがtoken当たり8 experts活性化、ConceptMoEの補助損失λ=0.03、境界ノイズτ=6（約4% token flip）。公式コードページと付録のPyTorch形式Chunk/Dechunk/STE実装がある。","methodology":"12B/24Bでは243B/559B tokens、TPP=400で事前学習し、R=16/9でhidden widthとMoE計算を再配分する。60B VLMは500B text pretraining後、NaViTを統合して32K系列で200B tokens継続学習し、text/image両方をR≈2で圧縮する。90B CTでは700B-token pretrained MoEから変換し、32Kで400B、128Kで40B、さらに3B SFTを行いR=1.5、top15またはtop11+8-layer loopを比較する。全主要比較は総パラメータと平均token FLOPs（attention map計算を除く）を一致させる。OpenBench、long-context、multimodal、in-house benchmarkと構造ablationを評価する。","scope":"概念圧縮の効果を複数規模・modalities・from-scratch/CTで検証し、300B級で実測推論速度も測る。一方、FLOPs matchingはattention-map計算を除外するためConceptMoE側が実際にはその分少ない計算となる。VLMではlocation、image Q&A、chart textの一部が低下し、R=4の過圧縮は明確に性能を損なう。Hopper以外の推論hardwareや分散servingの通信・expert load balanceは主要評価ではない。"},"reservation":{"claim_id":"claim-95a58c9a93fe71f7a995bfe2","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
