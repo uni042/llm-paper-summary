@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-c92a29674a67b32c44dc512a",
   "job_id": "job-research-ca56f81ba7248b99",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c92a29674a67b32c44dc512a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主性能はAttAcc-based simulationで実HBM-PIM hardware測定ではなく、GPU/PIM bandwidth contentionも除外する。predicted dropはcurrent tokenで不可逆なため、false-drop制御が品質安全性の核心であり、offline calibration分布から外れる場合の保証はない。batchが大きいとaudit workがGPU survivor時間を超えてstallが露出し、batch128ではQuest-PIMとほぼ同等になる。",
+    "differences": "BLASSTはcurrent QK後にdropするためK trafficを省けず、Quest/BLASST-PIMはcurrent queryからmaskを作るPIM stageがserial critical pathになる。AMENDは過去marginからnext maskを作るためcurrent stepのGPU K fetch前にdropでき、PIMはcurrent outputを決めず省略complementの監査だけを並列実行する。GVR/PRRのcurrent-step verify/repairとも異なり、監査結果はfuture predictorだけを更新する。",
+    "implementation_status": "attention emulationとtrace-based GPU/PIM simulationのcore codeがGitHubでMIT公開され、Qwen3-1.7B、LongBench、AttAcc commitを指定した再現手順がある。quality pathは実software execution、hardware mappingはsimulation。",
+    "research_positioning": "異種計算資源の使い分けという観点では、遅い/補助的なPIM処理を現在tokenの必須依存から外し、未来状態の監査へ回す『非同期監査』設計が特徴である。SSD/CPU offloadでも、現在stepのcritical fetchを補助層の完了待ちにせず、先行予測したworking setを高速層で処理し、低速層を将来予測の検証・補正に使う構造へ一般化できる。KV cache階層メモリ研究との接続が強い。"
+  },
+  "reservation": {"claim_id": "claim-c92a29674a67b32c44dc512a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
