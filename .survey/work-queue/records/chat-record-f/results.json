@@ -1,17 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-88d2aa5426361490104919b5","job_id":"job-research-3611857c9c7fea67","data":{
-"overview":"UniMoMoの標準8→4/top-2 checkpointは、Amazon Beauty、KuaiRec、TenRecの2/4/6-block計9設定でOrigin MoE比NDCG@10 99.92〜102.30%を維持し、A100で1.28〜1.63倍高速化した。aggressive 8→2/top-1は98.36〜104.24%で1.47〜2.21倍。6-block主表ではAmazon Beauty 0.2686 NDCG/3.127ms、KuaiRec 0.6963/4.210ms、TenRec 0.5987/7.451msで、対応するOrigin MoEは0.2649/4.833ms、0.6893/6.860ms、0.5938/9.566ms。MergeMoEとのmatched comparisonではNDCG@10を各0.0004、0.0028、0.0051上回る。",
-"key_results":[
-{"metric":"9 dataset-depth pairsの8→4 source-relative NDCG@10","value":"99.92%〜102.30%","baseline":"Origin MoE=100%","condition":"Amazon Beauty / KuaiRec / TenRec、2/4/6 MoE blocks、5-run mean","interpretation":"標準4-expert checkpointはserving bankを半減しつつ元checkpointのranking qualityをほぼ維持する。"},
-{"metric":"8→4 measured speedup","value":"1.28×〜1.63×","baseline":"同dataset・同depthのOrigin MoE","condition":"A100 80GB、BF16、batch 256、20 warm-up + 80 timed forward","interpretation":"online専用moduleを追加せず、縮小したexpert bank/router shapeから実測latency改善を得る。"},
-{"metric":"8→2/top-1 endpoint","value":"NDCG比98.36%〜104.24%、speedup 1.47×〜2.21×","baseline":"Origin MoE","condition":"aggressive serving budget","interpretation":"品質低下リスクと引き換えにactivated expert arithmeticも減らし、より大きな速度改善を選べる。"},
-{"metric":"Amazon Beauty 6-block","value":"NDCG@10 0.2686、HR@10 0.4445、AUC 0.6785、20.25M params、3.127ms","baseline":"Origin 0.2649/0.4391/0.6778、24.97M、4.833ms; MergeMoE NDCG 0.2682、3.108ms","condition":"8→4/top-2","interpretation":"matched MergeMoEと同じserving shape・adaptation budgetでわずかに高いranking quality。"},
-{"metric":"KuaiRec 6-block","value":"NDCG@10 0.6963、HR@10 0.9677、AUC 0.9796、6.10M、4.210ms","baseline":"Origin 0.6893/0.9659/0.9793、10.82M、6.860ms; MergeMoE NDCG 0.6935","condition":"8→4/top-2","interpretation":"expert-bank縮小でparameterとlatencyを下げながらmean ranking qualityを維持・改善する。"},
-{"metric":"TenRec 6-block","value":"NDCG@10 0.5987、HR@10 0.7802、AUC 0.8985、157.82M、7.451ms","baseline":"Origin 0.5938/0.7692/0.8966、162.54M、9.566ms; MergeMoE NDCG 0.5936、8.668ms","condition":"8→4/top-2","interpretation":"item embeddingが総parameterを支配してparameter差が小さく見える条件でもMoE path縮小によりlatencyは改善する。"},
-{"metric":"signal ablation","value":"full 0.2686 NDCG / 0.4445 HR","baseline":"behavior+exposureなし 0.2662 / 0.4401","condition":"Amazon Beauty、8→4/top-2、同一reconstruction/data/adaptation","interpretation":"functional affinityとexposure constraintを合わせたpartitionがsweep内で最高meanを示すが、著者は統計的優越とは主張しない。"},
-{"metric":"4-expert vs 8-expert sensitivity","value":"latency -40.36%、NDCG retention 99.37%","baseline":"8 experts","condition":"Amazon Beauty","interpretation":"4 expertsが品質とlatencyのbalanced default。2 expertsへさらに減らすとlatency -15.77%だがNDCG -1.68%。"},
-{"metric":"追加4 backbones portability","value":"24/24 metricsで1位、strongest alternative比+0.51〜+1.37pt","baseline":"Vanilla/DSelect-k/GShard/Expert Choice/MoSの最良値","condition":"Mamba4Rec, TransAct, TWIN, SDIM × MicroVideo/KuaiVideo/Ebnerd","interpretation":"matched compression証拠ではないが、推薦backboneを跨ぐ適用可能性を補強する。"}],
-"negative_results":"4-expertのmatched MergeMoEに対するNDCG gainはAmazon Beauty +0.0004、KuaiRec +0.0028、TenRec +0.0051と小さく、論文自身も統計的優越とは主張しない。4-expertは8-expertに対しAmazon BeautyでNDCGを0.2703から0.2686へわずかに落とす。2-expertでは4-expert比NDCGが1.68%低下する。routing massはrare but useful expertを直接識別できず、calibration streamに現れないbehaviorは保護できない。",
-"interpretation":"主な価値は、圧縮そのものがranking qualityを改善すると主張することではなく、明示serving budgetごとに標準MoE checkpointを作り、同じonline kernelで品質・storage・router destination・latencyのtrade-offを選べる点にある。100%を超えるsource-relative NDCGは固定supervised adaptationを含むためcompression単独の改善とは解釈しない。",
-"quality_impact":"標準8→4では元モデル品質をほぼ保持するのが中心で、aggressive 8→2では条件によって小幅な品質低下を受け入れて速度を増す。matched baselineとの差は小さいため、品質優越よりdeployment conversionの実用性を重視すべき結果である。"
-},"reservation":{"claim_id":"claim-88d2aa5426361490104919b5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-26d9f483bb0b2b6799913b3e",
+  "job_id": "job-research-0d7416aaa0ab7962",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-26d9f483bb0b2b6799913b3e",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
