@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f8a196fb851ca2c1095b5a40",
-  "job_id": "job-research-6ca9e5aa49540dd5",
-  "data": {
-    "hardware": "演算子単体はNVIDIA H20 GPU 1基で測定。サービングはH20を4基用い、テンソル並列4・データ並列なしのSGLangサーバ1インスタンスで測定する。",
-    "software": "CUDA 12.9、ドライバ535.161.08、PyTorch 2.9.1、CUTLASS 4.3、SGLang 0.5.10。復号側の注意バックエンドは全構成でFA3/4系密注意に固定する。",
-    "methodology": "RULERとLongBenchをLlama-3.1-8B-Instruct、Qwen3-4B-Instruct-2507、Qwen3-30B-A3B-Instruct-2507で評価する。比較対象は完全注意、MInference、FlexPrefill、XAttention、従来版FlashPrefill、FlashAttention-2、同じワープ特化実行基盤を持つFA3/4整合の密カーネル。全モデルでブロック長128、シンク256、局所窓512、α=0.1を共通使用し、モデル別調整はしない。演算子速度は4K〜128Kで測り、SGLangではバッチ1〜16の初回トークン時間を各条件30回反復する。さらに4K〜128Kの混合プロンプトをポアソン到着させる開ループ評価、8K・16Kのチャンク事前充填、平均補正除去、しきい値掃引、HPC-Opsの疎注意カーネルとの比較を行う。",
-    "scope": "実機上の長文事前充填とサービング評価であり、主要な速度主張はHopper世代のH20に限定される。精度評価は3モデルとRULER・LongBenchに限定され、復号は疎化していない。したがって他GPU世代、短文脈、長い思考生成など異なる分布への一般化は直接実証されていない。",
-    "benchmarks": ["RULER", "LongBench", "needle-in-a-haystack serving workload"],
-    "models": ["Llama-3.1-8B-Instruct", "Qwen3-4B-Instruct-2507", "Qwen3-30B-A3B-Instruct-2507"],
-    "baselines": ["Full Attention", "MInference", "FlexPrefill", "XAttention", "FlashPrefill", "FlashAttention-2", "FA3/4-aligned dense kernel", "HPC-Ops BSA"],
-    "configuration": "選択ブロック128トークン、クエリタイル128行、物理キータイル64列、シンク256トークン、局所窓512トークン、α=0.1。"
-  },
-  "reservation": {"claim_id": "claim-f8a196fb851ca2c1095b5a40", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-59dc9473086573b3d534c617",
+  "job_id": "job-research-10bf8d55e9caa5c4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-59dc9473086573b3d534c617",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

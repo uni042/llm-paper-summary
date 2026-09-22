@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f8a196fb851ca2c1095b5a40",
-  "job_id": "job-research-6ca9e5aa49540dd5",
-  "data": {
-    "limitations": "評価GPUはNVIDIA H20に集中しており、A100やH100、Blackwellなど別世代で同じ倍率が得られるとは示していない。精度評価もLlama-3.1-8BとQwen3系2モデル、RULERとLongBenchに限られ、ブロック内の得点偏差と値の共分散が大きい分布や長い思考生成で平均補正が同程度に機能する保証はない。復号段階は疎化せず密注意へ戻るため、生成側が支配的な負荷では効果が限定される。チャンク事前充填では選択をチャンクごとにやり直すため利得が低下し、8Kより16Kの方が有利である。平均補正は誤差境界の議論を持つが厳密な完全注意ではなく、極端な分布に対する普遍的な品質保証ではない。",
-    "differences": "従来版FlashPrefillは瞬時のパターン探索と最大値基準しきい値で選択費用を抑えたが、強い疎化で捨てた確率質量を補償せず、FlashAttention-2型カーネルと連続KV配置に依存した。V2は平均補正で精度劣化を抑え、FA3/4系のHopper向け非同期パイプラインへ疎走査を移植し、FP8・ページ化KV・可変長・連続バッチまで対応する。MInference、FlexPrefill、XAttentionなどの訓練不要疎注意と比べても、選択規則だけでなく実運用カーネルとサーバ統合を主題に含む。HPC-Opsの疎注意カーネルに対しては、KVヘッド単位の圧縮索引、数均等分割、融合平均補正、BF16対応を加え、64K FP8で6〜7%低いカーネル待ち時間を報告する。",
-    "implementation_status": "著者の公式GitHub実装が公開されている。論文ではCUTLASS/CuTeベースのHopper向けカーネル、FP8経路、ページ化KVアドレス、SGLang注意バックエンド統合まで実装・評価済みとされる。実証環境はCUDA 12.9、PyTorch 2.9.1、CUTLASS 4.3、SGLang 0.5.10である。",
-    "research_positioning": "訓練不要の動的疎注意と高性能LLMサービングの境界を埋めるシステム研究として位置付けられる。特に、疎注意研究でありがちな理論演算量や単体カーネルだけの改善ではなく、捨てたソフトマックス質量の品質補償、Hopperの実行機構、ページ化KVキャッシュ、連続バッチ、開ループ到着まで同じ設計を追跡している点が重要である。リポジトリ上では長文事前充填高速化、疎注意、SGLang/vLLM系サービング基盤の系統に接続し、KVオフロードや階層メモリとは直接競合せず補完的である。保持するKV自体をSSDやCPUへ移す手法ではなく、GPU上で実際に読む注意ブロックを減らすため、メモリ階層化と組み合わせた場合には転送要求量を減らせる可能性があるが、その組合せは本論文では評価していない。"
-  },
-  "reservation": {"claim_id": "claim-f8a196fb851ca2c1095b5a40", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-59dc9473086573b3d534c617",
+  "job_id": "job-research-10bf8d55e9caa5c4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-59dc9473086573b3d534c617",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
