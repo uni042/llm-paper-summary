@@ -1,0 +1,100 @@
+name: Survey research quality preflight
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/research-preflight/requests/*.json'
+      - '.survey/scripts/research_quality_preflight.py'
+      - '.survey/scripts/paper_quality_gate.py'
+      - '.survey/scripts/prepare_completed_submission.py'
+      - '.github/workflows/survey-research-quality-preflight.yml'
+  workflow_dispatch:
+    inputs:
+      request:
+        description: 'Repository-relative Research/Audit quality preflight request path'
+        required: false
+        type: string
+  schedule:
+    - cron: '8/10 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-research-quality-preflight-main
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Process unsettled quality preflight requests
+        shell: bash
+        env:
+          MANUAL_REQUEST: ${{ inputs.request }}
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-research-preflight[bot]'
+          git config user.email 'survey-research-preflight[bot]@users.noreply.github.com'
+          mkdir -p .survey/work-queue/research-preflight/requests .survey/work-queue/research-preflight/results
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            mapfile -t requests < <(
+              find .survey/work-queue/research-preflight/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
+            )
+            if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
+              requests=("$MANUAL_REQUEST")
+            fi
+
+            processed=0
+            for request in "${requests[@]:-}"; do
+              [ -n "$request" ] || continue
+              case "$request" in
+                .survey/work-queue/research-preflight/requests/*.json) ;;
+                *) echo "Unsupported quality preflight request path: $request" >&2; exit 2 ;;
+              esac
+              name="$(basename "$request")"
+              result=".survey/work-queue/research-preflight/results/$name"
+              if [ -f "$result" ]; then
+                continue
+              fi
+              python .survey/scripts/research_quality_preflight.py                 --repo-root .                 --request "$request"                 --result "$result"
+              processed=$((processed + 1))
+            done
+
+            if [ "$processed" -eq 0 ]; then
+              echo 'No unsettled Research/Audit quality preflight requests remain.'
+              exit 0
+            fi
+
+            git add .survey/work-queue/research-preflight/results
+            git commit -m 'survey: publish research quality preflight results'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Quality preflight push race on attempt ${attempt}; recomputing from latest main."
+            sleep $((attempt * 2))
+          done
+
+          echo 'Failed to publish Research/Audit quality preflight results after retries.' >&2
+          exit 1

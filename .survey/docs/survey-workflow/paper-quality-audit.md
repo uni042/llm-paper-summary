@@ -86,6 +86,19 @@ workflow v10の研究レコードは `results.overview` と `results.key_results
 
 `metadata.summary` は単体ページの説明材料、`metadata.list_summary` は一覧専用短文として役割を分離する。長いsummaryを機械的に切ってlist summaryへ代用しない。
 
+## 公開前セルフチェックとexact blob preflight
+
+Research / Auditの新規completed publicationは、submission processorへ渡す前に2段階の提出前検査を必須とする。
+
+1. **ワーカー自身の意味品質セルフレビュー**: 一次資料との整合、推測の混入、概要・一覧文の固有性、代表結果、end-to-end手法、評価条件・baseline、結果の条件と解釈、限界・既存研究との差を5スロット上で読み返す。不十分な項目はrecord bankへ確定保存する前に直す。
+2. **exact blob preflight**: セルフレビュー済み5スロットをrecord bankへ保存した後、`.survey/work-queue/research-preflight/requests/` から `research_quality_preflight.py` を実行する。ここでは `assemble_research_record.py` の構造化validation、正規renderer、`paper_quality_gate.py` の機械品質基準をsubmission processorと同じ順で適用する。
+
+preflightがFAILならcompleted-submission requestは作らない。resultの全指摘をslotへ戻して修正し、新しいpreflight requestで再検査する。PASS/WARNで `preflight_passed=true` になったresultだけをcompleted requestの `preflight_result` から参照できる。
+
+合格resultには、その時点のvalidated descriptor全体のSHA-256 fingerprintと5スロットのGit blob SHAを保存する。completed descriptor builderは現在のdescriptorを再構築してfingerprintを照合するため、**preflight合格後に1文字でもslotが変われば古い合格resultは使えない**。この場合は再preflightが必要になる。
+
+submission processor側のquality gateは削除せず、防御的な二重検査として残す。通常運用では品質不足をsubmission failureにしてからrepairするのではなく、提出前preflightで修正してから公開へ進める。
+
 ## 回帰試験
 
 ```bash

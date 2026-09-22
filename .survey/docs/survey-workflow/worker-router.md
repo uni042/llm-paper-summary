@@ -46,7 +46,7 @@ Scheduled Chatの論文ワーカーは、実行ごとに名前を作り直さず
 
 ノルマは維持する。
 
-- **読解モード**: 今回の起動中に **Research / Audit 合計で成功完了を最低3件**作る。Research job 1件とAudit job 1件は、同じ論文に対するものでも**別々に1件ずつ**数える。Researchは一次資料全文→5スロット→preflight→不変submission→submission result成功→最新mainへの反映確認まで、Auditも対応する不変submission→成功result→最新mainへの反映確認までを1件の完了とする。`blocked` / `deferred` / `rejected` や提出しただけのpending状態はノルマへ数えない。3件は停止上限ではない。
+- **読解モード**: 今回の起動中に **Research / Audit 合計で成功完了を最低3件**作る。Research job 1件とAudit job 1件は、同じ論文に対するものでも**別々に1件ずつ**数える。Researchは一次資料全文→5スロット→ワーカー自身のセルフレビュー→exact blob preflight合格→不変submission→submission result成功→最新mainへの反映確認まで、Auditも同じ提出前ゲート→不変submission→成功result→最新mainへの反映確認までを1件の完了とする。`blocked` / `deferred` / `rejected` や提出しただけのpending状態はノルマへ数えない。3件は停止上限ではない。
 - **探索モード**: 今回のrunで最低4つの**成功した正規schema v3 precheck**を完了させ、そのprecheckに対応するDiscovery submission/resultまで耐久反映する。**1つのprecheck `request_id` = 1ラウンド**と数える。同じprecheckから候補を複数submissionへ分割しても1ラウンドのままであり、逆に別の成功precheckなら同じprovider・同じ探索元でも別ラウンドとして数える。候補0件の成功precheckも、0件submission/resultまで正規経路を完了すれば1ラウンドに数える。4ラウンドは停止上限ではない。
 
 handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Library双方への耐久保存不能などのhard stopはノルマより優先する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
@@ -65,15 +65,19 @@ Research / Auditのclaimは次の順で行う。
 
 **並列workerの扱い:** `max_jobs=1` と未完了claimの直列制約は**同一worker / 同一論理worker lineage内だけ**に適用する。`:00` worker、`:30` worker、その他の独立workerは、別 `worker_id` と別record bankで同時にResearch / Auditを進めてよい。他workerのactive claim、他workerのclaim request、またはclaim fast lane上で先行requestが処理中であることを理由に、このworkerのrunを停止・終了・handoffしてはならない。`.github/workflows/survey-claim-fast.yml` の `concurrency: survey-claim-main` は**claim割当commitの競合回避だけを直列化するもの**であり、論文精読そのものを全worker間で直列化するものではない。自分のrequestがfast lane待ちなら同じ `request_id` のresultを**10秒実時間間隔**で再確認し、割当後は返された別job / record bankで処理を続ける。他workerのclaimを自分の未完了claimとして扱わない。
 
-Research / Auditの不変submissionも同様にfast laneを使える。
+Research / Auditのcompleted submissionは、**ワーカー自身のセルフレビュー + exact blob preflight** を通してからfast laneへ送る。
 
-1. 5スロットをclaim result指定のrecord bankまたは現行fallbackへ完全保存し、必要な実blob SHAを確定する。
-2. `status=completed` はdescriptorを手組みせず、`.survey/work-queue/completed-submission-requests/<attempt_id>.json` にrequestをcommitする。requestのファイル名stemは `attempt_id` と完全一致させ、`kind` / `attempt_id` / `job_id` / `record_bank` と、必要なら `paper_path` / `expected_blob_sha` を持たせる。このpushまたは10分周期の `.github/workflows/survey-completed-builder-fast.yml` が `prepare_completed_submission.py` を実行し、実blob SHAを取得・検証したattempt固有descriptorを `.survey/work-queue/submissions/research/<attempt_id>.json` または `audit/<attempt_id>.json` に生成する。**completed descriptorをScheduled Chatが直接作成・更新してはならない。** status-only `blocked` / `deferred` / `rejected` だけは従来どおり最小descriptorをsubmission laneへ直接送る。過去の直接completed descriptorは読取互換のみ残し、新規生成しない。
-3. このpushで `.github/workflows/survey-submission-fast.yml` が起動し、最新main上で正規submission processorを実行する。
-4. 同名の `.survey/work-queue/results/research/<attempt_id>.json` または `audit/<attempt_id>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。descriptorをmainへ耐久保存した時点でそのattemptは「提出済み」とする。**提出済みならresult待ちを同期障壁にせず、同一workerで未提出active claimを1件に保ったまま、後続Research / Auditを順次claimして最大2本先行まで処理・提出してよい。** 最古の未確定submissionから見て後続提出が2本に達したら、それ以上進む前に最古resultを確認する。
-5. **1 attemptにつきcompleted descriptorは1本だけ**とする。検証失敗後に同じ `job_id / attempt_id` の `repair1`、`repair2` 等を追加して修正しない。
-6. failure resultが `content_validation`、またはjobが `repair_required=true` になった場合は、そのfailure resultがmainへ耐久保存されたことを確認した後、同じjobを `job_ids: [<job_id>]` で指定した新しいclaim requestを発行する。claim fast laneが旧claimを解放し、**新しいclaim_id / attempt_id** と回復済みrecord bankを返すので、指摘されたslotだけを一次資料に基づいて修正して新attemptのdescriptorを提出する。全文読解済み成果を捨てない。
-7. failure resultが `retryable=true` の場合は、同じattemptの別descriptorを作らない。既存の同一descriptorをsubmission laneのbounded recoveryに任せ、同じresultを再確認する。`retryable=false` かつ `repair_required` でもないstate/transport guardは、返された回復指示に従う。
+1. 5スロットの内容を作り終えた時点で、まだcompleted requestを出さず、ワーカー自身が一次資料と照合して意味品質を再確認する。少なくとも「一次資料を最後まで読んだ」「推測で穴埋めしていない」「概要と一覧文で固有の貢献と代表結果が分かる」「end-to-endの手法機構が説明されている」「評価条件・baseline・結果条件が明示されている」「限界と既存研究との差が具体的」の各項目を再点検する。
+2. セルフレビュー後の5スロットだけをclaim result指定のrecord bankまたは現行fallbackへ完全保存する。次に一意な `request_id` を作り、`.survey/work-queue/research-preflight/requests/<request_id>.json` へ `schema_version: 1`、`operation: research_quality_preflight`、`request_id`、`kind`、`attempt_id`、`job_id`、`record_bank`、必要なら `paper_path` / `expected_blob_sha` と `self_review` を保存する。`self_review` は `primary_source_read_to_end`、`no_unverified_inference`、`summary_and_list_summary_specific`、`headline_result_grounded`、`method_end_to_end_explained`、`evaluation_conditions_and_baselines_explicit`、`results_conditions_and_interpretation_explicit`、`limitations_and_positioning_specific` の8項目をすべて `true` にする。事実として満たしていない項目を形式的にtrueにしてはならない。同じ内容を再検査するときも既存request/resultは書き換えず、新しい `request_id` を使う。
+3. `.github/workflows/survey-research-quality-preflight.yml` が `research_quality_preflight.py` を実行し、実blob SHAから**submission processorと同じ構造化record validation・renderer・paper quality gate**を走らせる。同名resultを `.survey/work-queue/research-preflight/results/<request_id>.json` へ返す。preflight待ちは10秒実時間間隔で同一resultを追跡し、別論文へ逃げない。
+4. resultが `preflight_passed=false` ならcompleted requestを作らない。`validation_errors` / `quality.failures` を全部確認し、指摘されたslotだけを一次資料に基づいて修正してから、新しい `request_id` でセルフレビューとpreflightをやり直す。これはsubmission failureではなく**提出前の通常修正ループ**であり、run終了理由にしない。
+5. resultが `preflight_passed=true` になった場合だけ、`status=completed` requestを `.survey/work-queue/completed-submission-requests/<attempt_id>.json` にcommitする。このrequestは従来の `kind` / `attempt_id` / `job_id` / `record_bank` 等に加えて、合格resultのrepository-relative pathを `preflight_result` として必ず持つ。
+6. `.github/workflows/survey-completed-builder-fast.yml` はcompleted descriptor生成前に `preflight_result` を検証し、preflight時のdescriptor fingerprintと現在の5スロットblob SHAが1つでも違えば拒否する。したがって**合格後にslotを変更した場合は必ず再preflight**する。Scheduled Chatがcompleted descriptorを直接作成・更新してはならない。
+7. builderが生成したdescriptorのpushで `.github/workflows/survey-submission-fast.yml` が起動し、最新main上で正規submission processorを実行する。processor側のquality gateは防御的な二重検査として残す。
+8. 同名の `.survey/work-queue/results/research/<attempt_id>.json` または `audit/<attempt_id>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。descriptorをmainへ耐久保存した時点でそのattemptは「提出済み」とする。**提出済みならresult待ちを同期障壁にせず、同一workerで未提出active claimを1件に保ったまま、後続Research / Auditを順次claimして最大2本先行まで処理・提出してよい。** 最古の未確定submissionから見て後続提出が2本に達したら、それ以上進む前に最古resultを確認する。
+9. **1 attemptにつきcompleted descriptorは1本だけ**とする。preflight中の修正は同じattemptのrecord bankを直して新しいpreflight requestを作るが、completed descriptor生成後に同じ `job_id / attempt_id` の `repair1`、`repair2` 等を追加して修正しない。
+10. 防御的なsubmission側検査でなお `content_validation` / `repair_required` になった場合だけ、そのfailure resultがmainへ耐久保存されたことを確認した後、同じjobを `job_ids: [<job_id>]` で指定した新しいclaim requestへ回す。新しいclaim_id / attempt_idで指摘slotを修正し、**再びセルフレビュー→preflightから**やり直す。全文読解済み成果は捨てない。
+11. failure resultが `retryable=true` の場合は、同じattemptの別descriptorを作らない。既存の同一descriptorをsubmission laneのbounded recoveryに任せ、同じresultを再確認する。`retryable=false` かつ `repair_required` でもないstate/transport guardは、返された回復指示に従う。
 
 Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/discovery-precheck/requests/<request-id>.json` をmainへcommitし、`.github/workflows/discovery-precheck.yml` に `process_discovery_precheck.py` を実行させ、同名resultを読む。Discovery precheck laneも**10分周期で未result requestを定期回収**する。Discovery submissionは既存のqueue処理経路へ流し、Research jobやstateを手で生成しない。Discovery submissionは既存の10分周期recoveryで未完了を回収する。
 
@@ -89,10 +93,11 @@ claim requestでは `request_id` をrequestファイル名のstemと完全一致
 4. claim resultの `record_bank` / `record_bank_fallback` をそのまま使う。ワーカーが別bankを選び直さない。
 5. 一次資料本文を最後まで読み、抄録や検索断片から欠落情報を推測しない。
 6. `metadata`、`problem_method`、`evaluation`、`results`、`positioning` の5スロットを完成させる。
-7. Actionsと同じ基準で事前検査（preflight）する。
-8. GitHubへ保存可能なら、`status=completed` はattempt固有requestを `.survey/work-queue/completed-submission-requests/<attempt_id>.json` へ保存し、completed builder fast laneに実blob SHA取得・検証済みdescriptor生成を委ねる。Scheduled Chatがcompleted descriptorを `.survey/work-queue/submissions/research/` / `audit/` へ直接保存してはならない。status-only `blocked` / `deferred` / `rejected` は第3.1節4項の最小descriptorを従来どおりsubmission laneへ直接保存する。
-9. GitHub書込みがrun全体で利用不能なら、完全な5スロットpayloadをChatGPT Library `/LLM-survey-outbox/pending/` へ1論文1envelopeで保存する。
-10. 完全payloadまたはstatus-only descriptorを耐久保存して不変submissionを送ったら、**resultを待たずに次のResearch / Auditを1件ずつclaimして処理してよい。** パイプラインは**最大2本先行**までとする。論文Nを提出→論文N+1を処理して提出→論文N+2を処理して提出→**論文Nのsubmission resultと最新main反映を確認**→確認後に論文N+3へ進む、の順序を守る。論文Nが単純pendingまたは`retryable`な正規再処理待ちでも、descriptorと回復対象identityが耐久保存済みならN+2までは進めてよい。Nが`validation`失敗・`repair_required`なら返された`recovery_steps`に従い回復要求を耐久保存し、その回復を非同期レーンへ渡したうえでN+2までは進めてよい。**ただし最古の未確定submissionから見て後続提出が2本に達したら、最古resultまたはその正規repair状態を確認・前進させるまでN+3をclaimしない。** 回復要求自体を耐久保存できていないfailureは先行許可に使わない。status-only終端は成功件数へ数えない。hard stopまたはhandoff guardでない限りrun全体を終了しない。
+7. **GitHub上の公開paperへ出す前にワーカー自身で意味品質をセルフレビューする。** 一次資料との整合、概要・一覧文の固有性、代表結果、end-to-end手法、評価条件/baseline、結果の条件と解釈、限界・関連差を読み返し、不十分ならこの段階で5スロットを修正する。単にチェック項目をtrueにするだけで済ませない。
+8. セルフレビュー済み5スロットをrecord bankへ耐久保存し、第2.1節の `research-preflight` laneでActionsと同じ構造化validation + renderer + paper quality gateを実行する。`preflight_passed=false` なら**completed requestを出さず**、返された全指摘を修正して新しいpreflight requestで再検査する。合格後にslotを変更した場合も再検査する。
+9. `preflight_passed=true` のexact resultを得た場合だけ、`status=completed` requestを `.survey/work-queue/completed-submission-requests/<attempt_id>.json` へ保存する。requestには合格result pathの `preflight_result` を必須で入れ、completed builder fast laneにexact blob fingerprintの再照合とdescriptor生成を委ねる。Scheduled Chatがcompleted descriptorを直接保存してはならない。status-only `blocked` / `deferred` / `rejected` は第3.1節4項の最小descriptorを従来どおりsubmission laneへ直接保存する。
+10. GitHub書込みがrun全体で利用不能なら、完全な5スロットpayloadをChatGPT Library `/LLM-survey-outbox/pending/` へ1論文1envelopeで保存する。
+11. 完全payloadまたはstatus-only descriptorを耐久保存して不変submissionを送ったら、**resultを待たずに次のResearch / Auditを1件ずつclaimして処理してよい。** パイプラインは**最大2本先行**までとする。論文Nを提出→論文N+1を処理して提出→論文N+2を処理して提出→**論文Nのsubmission resultと最新main反映を確認**→確認後に論文N+3へ進む、の順序を守る。論文Nが単純pendingまたは`retryable`な正規再処理待ちでも、descriptorと回復対象identityが耐久保存済みならN+2までは進めてよい。Nが`validation`失敗・`repair_required`なら返された`recovery_steps`に従い回復要求を耐久保存し、その回復を非同期レーンへ渡したうえでN+2までは進めてよい。**ただし最古の未確定submissionから見て後続提出が2本に達したら、最古resultまたはその正規repair状態を確認・前進させるまでN+3をclaimしない。** 回復要求自体を耐久保存できていないfailureは先行許可に使わない。status-only終端は成功件数へ数えない。hard stopまたはhandoff guardでない限りrun全体を終了しない。
 
 禁止事項:
 

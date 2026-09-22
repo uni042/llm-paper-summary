@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import subprocess
 import sys
@@ -22,6 +23,51 @@ def _blob_sha(repo: Path, rel: str) -> str:
     if result.returncode != 0 or len(sha) != 40:
         raise ValueError(f"record slot must be committed before submission: {rel}")
     return sha
+
+
+def descriptor_fingerprint(descriptor: dict) -> str:
+    """Return a stable digest for the exact validated descriptor candidate."""
+    payload = json.dumps(
+        descriptor,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return "sha256:" + hashlib.sha256(payload).hexdigest()
+
+
+def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path) -> dict:
+    """Require a passing self-preflight for the exact descriptor/slot blobs."""
+    repo = repo.resolve()
+    path = Path(preflight_result)
+    if not path.is_absolute():
+        path = repo / path
+    path = path.resolve()
+    try:
+        relative = path.relative_to(repo).as_posix()
+    except ValueError as exc:
+        raise ValueError("preflight result must stay within repository") from exc
+    if not relative.startswith(".survey/work-queue/research-preflight/results/") or path.suffix != ".json":
+        raise ValueError("preflight result must live under research-preflight/results")
+    try:
+        result = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, UnicodeError) as exc:
+        raise ValueError(f"preflight result is unreadable: {relative}") from exc
+    if not isinstance(result, dict):
+        raise ValueError("preflight result must be a JSON object")
+    if result.get("operation") != "research_quality_preflight":
+        raise ValueError("preflight result operation mismatch")
+    if result.get("ok") is not True or result.get("preflight_passed") is not True:
+        raise ValueError("preflight has not passed; repair the record and run a new preflight")
+    for field in ("kind", "attempt_id", "job_id", "record_bank", "paper_path"):
+        if result.get(field) != descriptor.get(field):
+            raise ValueError(f"preflight result {field} does not match completed descriptor")
+    expected = descriptor_fingerprint(descriptor)
+    if result.get("descriptor_sha256") != expected:
+        raise ValueError("preflight result is stale: record slots or descriptor fields changed after the check")
+    if result.get("record_slots") != descriptor.get("record_slots"):
+        raise ValueError("preflight result is stale: record slot blobs changed after the check")
+    return result
 
 
 def build(repo: Path, *, kind: str, attempt_id: str, job_id: str, record_bank: str, paper_path: str | None = None, expected_blob_sha: str | None = None) -> dict:
@@ -59,13 +105,27 @@ def main() -> int:
     parser.add_argument("--record-bank", required=True)
     parser.add_argument("--paper-path")
     parser.add_argument("--expected-blob-sha")
+    parser.add_argument("--preflight-result", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    descriptor = build(args.repo_root, kind=args.kind, attempt_id=args.attempt_id, job_id=args.job_id, record_bank=args.record_bank, paper_path=args.paper_path, expected_blob_sha=args.expected_blob_sha)
+    descriptor = build(
+        args.repo_root,
+        kind=args.kind,
+        attempt_id=args.attempt_id,
+        job_id=args.job_id,
+        record_bank=args.record_bank,
+        paper_path=args.paper_path,
+        expected_blob_sha=args.expected_blob_sha,
+    )
+    verify_preflight_result(args.repo_root, descriptor, args.preflight_result)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(descriptor, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("[WORKER-GUIDE] completed descriptor validated and written; commit this exact output without manual edits")
-    print(json.dumps({"ok": True, "next_action": "commit_exact_descriptor_then_wait_for_submission_result", "output": str(args.output)}, ensure_ascii=False))
+    print("[WORKER-GUIDE] exact-blob quality preflight verified; completed descriptor validated and written")
+    print(json.dumps({
+        "ok": True,
+        "next_action": "commit_exact_descriptor_then_wait_for_submission_result",
+        "output": str(args.output),
+    }, ensure_ascii=False))
     return 0
 
 

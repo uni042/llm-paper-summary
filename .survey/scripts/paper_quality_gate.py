@@ -21,12 +21,13 @@ def _default_args() -> argparse.Namespace:
     )
 
 
-def validate_rendered_paper(repo_root: Path, paper_path: str, content: str) -> quality.PaperResult:
-    """Validate one not-yet-published Markdown artifact with maintenance criteria.
+def inspect_rendered_paper(repo_root: Path, paper_path: str, content: str) -> quality.PaperResult:
+    """Inspect one not-yet-published Markdown artifact without raising on FAIL.
 
     The candidate is written only to a temporary file under the repository so
     ``audit_file`` can reuse the exact maintenance implementation. The target
-    paper is never touched here.
+    paper is never touched here. The non-raising form lets worker preflight
+    return every quality finding before an immutable submission exists.
     """
     repo_root = Path(repo_root).resolve()
     tmp_root = repo_root / ".survey" / ".quality-gate-tmp"
@@ -45,8 +46,6 @@ def validate_rendered_paper(repo_root: Path, paper_path: str, content: str) -> q
             tmp_path = Path(fh.name)
         result = quality.audit_file(tmp_path, repo_root, _default_args())
         result.path = paper_path
-        if result.status == "FAIL":
-            raise ValueError("paper quality gate failed: " + "; ".join(result.failures))
         return result
     finally:
         if tmp_path is not None:
@@ -55,3 +54,11 @@ def validate_rendered_paper(repo_root: Path, paper_path: str, content: str) -> q
             tmp_root.rmdir()
         except OSError:
             pass
+
+
+def validate_rendered_paper(repo_root: Path, paper_path: str, content: str) -> quality.PaperResult:
+    """Validate one not-yet-published artifact and raise when it fails."""
+    result = inspect_rendered_paper(repo_root, paper_path, content)
+    if result.status == "FAIL":
+        raise ValueError("paper quality gate failed: " + "; ".join(result.failures))
+    return result

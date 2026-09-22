@@ -9,9 +9,13 @@ on:
       - ".survey/scripts/list_summary.py"
       - ".survey/scripts/render_paper.py"
       - ".survey/scripts/japanese_style.py"
+      - ".survey/scripts/paper_quality_gate.py"
+      - ".survey/scripts/prepare_completed_submission.py"
+      - ".survey/scripts/research_quality_preflight.py"
       - ".survey/templates/paper.md"
       - ".survey/docs/survey-workflow/paper-quality-audit.md"
       - ".survey/tests/test_audit_paper_quality.py"
+      - ".survey/tests/test_research_preflight_quality.py"
       - ".survey/tests/test_list_summary_quality.py"
       - ".survey/tests/test_overview_result_quality.py"
       - ".survey/tests/test_render_paper_metadata.py"
@@ -19,6 +23,8 @@ on:
       - "papers/training/**/*.md"
       - "papers/survey/**/*.md"
       - ".github/workflows/paper-quality-audit.yml"
+      - ".github/workflows/survey-research-quality-preflight.yml"
+      - ".github/workflows/survey-completed-builder-fast.yml"
   workflow_dispatch:
 
 permissions:
