@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-38b916ecb638cccfa682047a","job_id":"job-research-46274ac71a8fbd8d","data":{"canonical_id":"arXiv:2508.05257","arxiv_id":"2508.05257","doi":"10.48550/arXiv.2508.05257","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"MoBE: Mixture-of-Basis-Experts for Compressing MoE-based LLMs","summary":"MoBEは巨大MoEの総パラメータによるGPUメモリ負担を減らすため、各expertのup/gate行列をexpert固有の小さな変換行列Aと、同一層で共有する少数のbasis行列Bの線形結合へ再パラメータ化するpost-training圧縮法である。元重みとの再構成誤差をAdamで最小化し、down行列は知識保持のため未圧縮とする。Qwen3-235B、DeepSeek-V3、Kimi-K2などで総パラメータを24〜30%削減しつつ平均性能を約98%まで維持し、MoLAEやD2-MoEより再構成誤差と下流精度を改善する。","list_summary":"expert固有の小行列と層共有basis行列の組合せでup/gate重みを再構成し、巨大MoEをdata-freeに24〜30%圧縮しながら性能低下を1〜2%程度へ抑える。","authors":["Xiaodong Chen","Mingming Ha","Zhenzhong Lan","Jing Zhang","Jianguo Li"],"authors_affiliations":"Inclusion AI; Renmin University of China; Westlake University","published":"2025-08-07","publication":"arXiv preprint arXiv:2508.05257v1","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE compression / expert matrix decomposition / shared basis reparameterization","topics":["MoE圧縮","低ランク分解","共有basis","GPUメモリ削減","post-training圧縮"],"importance":"expertごとに独立低ランク近似する方式より、expert間の共通構造を層共有basisへ集約しつつexpert固有変換を残す。trillion-scale MoEでも適用でき、D2-MoEが8×H100で処理困難なモデルまで圧縮対象を広げる。","hardware_evaluation":"全実験はH100 GPU。D2-MoEはQwen3-235B、DeepSeek-V3、Kimi-K2では単一8×H100機でもbackward計算が困難として比較対象外。","quality_effect":"15ベンチマーク平均でQwen3-235Bは81.5→80.9、DeepSeek-V3は79.3→78.0、Kimi-K2は82.4→81.1と、24〜30%圧縮で低下を小さく抑える。","source":"https://arxiv.org/abs/2508.05257","sources":["https://arxiv.org/abs/2508.05257","https://arxiv.org/pdf/2508.05257","https://github.com/inclusionAI/MoBE"],"code":"https://github.com/inclusionAI/MoBE","implementation":"公式GitHubを論文脚注で公開。変換は各MoE層のup/gateをAdamで再構成最適化し、downはコピーする。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary arXiv manuscript","references_total":45},"reservation":{"claim_id":"claim-38b916ecb638cccfa682047a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c8bcd18e9d8e56ee3be62d21",
+  "job_id": "job-research-982ce40a75ecacf7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c8bcd18e9d8e56ee3be62d21",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

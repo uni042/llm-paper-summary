@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-38b916ecb638cccfa682047a","job_id":"job-research-46274ac71a8fbd8d","data":{"overview":"MoBEは15ベンチマーク平均で、Ling 16%圧縮時58.6%（元59.7）、DeepSeek-V2-Lite 15%時36.9%（元38.0）、Qwen3-30B 24%時75.8%（元78.6）、Qwen3-235B 24%時80.9%（元81.5）、DeepSeek-V3 30%時78.0%（元79.3）、Kimi-K2 24%時81.1%（元82.4）を維持する。MoLAE/D2-MoEより同等以上の圧縮率で平均精度が高く、再構成MSEも大幅に低い。","key_results":[{"metric":"Qwen3-235B 15-task平均Accuracy","value":"80.9% at 24% compression","baseline":"元81.5%、MoLAE 73.2%","condition":"Qwen3-235B-A22B-2507","interpretation":"巨大MoEでも元性能の約99%を維持し、shared basisがexpert間共通構造を有効利用する。"},{"metric":"DeepSeek-V3平均Accuracy","value":"78.0% at 30% compression","baseline":"元79.3%、MoLAE 73.1%","condition":"DeepSeek-V3-0324","interpretation":"30%総parameter削減でも低下1.3ポイント。"},{"metric":"Kimi-K2平均Accuracy","value":"81.1% at 24% compression","baseline":"元82.4%、MoLAE 76.6%","condition":"Kimi-K2-Instruct","interpretation":"1T級でも性能保持率が高い。"},{"metric":"Qwen3-30B平均Accuracy","value":"75.8% at 24% compression","baseline":"元78.6%、D2-MoE 66.4%、MoLAE 67.5%","condition":"Qwen3-30B-A3B-2507","interpretation":"同圧縮率のSVD系baselineを8ポイント以上上回る。"},{"metric":"平均性能低下","value":"約1.4ポイント","baseline":"未圧縮MoE","condition":"6モデルのMoBE","interpretation":"総parameter圧縮による品質損失を小さく抑える。"},{"metric":"MoBE†平均性能低下","value":"約0.5ポイント","baseline":"未圧縮MoE","condition":"活性化expert数も削減","interpretation":"activation parameter削減はtotal parameter圧縮より品質維持が容易。"}],"negative_results":"圧縮後も元モデルより平均約1.4ポイント低下し完全なlosslessではない。MoBEのfactorizationはA_i追加によりactivation parameterを増やし得るため、MoBE†では活性化expert数を減らして相殺する。現行fused-MoE kernelではfactorization実行に複数kernel呼出しが必要で非効率。D2-MoEは巨大3モデルで8×H100でも適用困難なため直接比較できない。","interpretation":"純粋な低rank分解ではexpertのeffective rankが圧縮成立rankを超えるため情報損失が大きい。MoBEは大きなB側をexpert間で共有し、A_iで個別性を残すことで、rankを過度に切り詰めず総重みを減らす。Z-scoreと双極性活性化が再構成最適化を安定化する。","quality_impact":"24〜30%級のtotal parameter削減でQwen3-235B、DeepSeek-V3、Kimi-K2は元平均Accuracyの約98〜99%を保持する。一方、個別taskでは低下幅が異なり、特に数学など難しいtaskでは圧縮影響が残る。"},"reservation":{"claim_id":"claim-38b916ecb638cccfa682047a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-c8bcd18e9d8e56ee3be62d21",
+  "job_id": "job-research-982ce40a75ecacf7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c8bcd18e9d8e56ee3be62d21",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
