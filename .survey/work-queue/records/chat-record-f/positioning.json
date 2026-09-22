@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-f71c9e148c6dfbb3490291b5",
   "job_id": "job-research-2738618c3feb4d82",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-f71c9e148c6dfbb3490291b5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "第一に、速度・エネルギーの主要評価はTSMC 28nm向けRTL合成と解析モデルであり、製造チップ上の測定ではない。長いデコードではDRAM帯域が支配し、MiXの小型PEを増やしても速度は約3.8倍の4bitメモリ転送上限へ収束する。第二に、VLM向けの動的範囲耐性を重視した表現なので、テキスト専用LLMではNVFP4に劣るタスクがあり、精度重視の用途へ一律適用できない。第三に、32B/72B精度再現にはB200 180GBや最大約500GBのシステムRAM、RTL再現には商用Synopsys環境と28nm標準セルライブラリが必要で、完全再現の設備要件が高い。",
+    "differences": "MXFP4やMXINT4がブロック共有指数を使うのに対し、MiXは共有仮数と要素別指数差へ役割を反転する。NVFP4はFP8ブロックスケールとFP32テンソルスケールの階層を使うが、MiXはより単純なシフト中心データパスを狙う。MXFP4+やAMXFP4は外れ値精度を改善する代わりに拡張仮数や複数FP8スケールでPEを大きくする。MicroScopiQは外れ値へ高精度を割り当て、別要素のビットを回収するため不規則な多精度処理を必要とする。Focusは視覚トークン削減で計算を減らすが重みビット幅とFP16演算器は残るため、MiXとは直交的である。",
+    "implementation_status": "Artifact Appendixは、精度評価コード、各ベンチマークのYAML設定、SystemVerilog RTL、15種類のシストリック配列テストベンチ、Design Compiler/SAIFスクリプト、面積・電力解析モデルまでを含む再現パッケージを説明する。各RTLテストベンチはブロック内積の正しさをPASSで検証し、解析モデルは精度JSONと合成CSVから速度・エネルギー図を再生成する。ただし今回確認したarXiv本文には公開リポジトリURLが明示されていないため、コード公開先は未確認とする。",
+    "research_positioning": "低ビット推論研究の中でも、量子化アルゴリズムだけでなく数値形式とPEマイクロアーキテクチャを同時設計する系統に位置する。特にVLMではKVキャッシュと活性も含めた端から端までの低ビット化が必要であり、重みのみ圧縮するLLM向け方式よりメモリ帯域削減への直接性が高い。階層メモリ・オンデバイス推論の観点では、4bit級への圧縮でDRAMトラフィックを減らすためCPU/SSDオフロードの必要帯域も下げ得る一方、長文デコードでは依然DRAM帯域律速が残るという結果が、計算圧縮とメモリ階層最適化を併用すべき境界を示す。"
+  },
+  "reservation": {"claim_id": "claim-f71c9e148c6dfbb3490291b5", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
