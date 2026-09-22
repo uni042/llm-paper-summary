@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 11:14:19 JST**
+> 自動生成: **2026-09-22 11:14:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **319** |
 | 未claim Research job | **318** |
 | 直近24hの検証済みResearch収録 | **19** |
-| 最終検証済みResearch収録 | **09-22 11:12:51 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-22 11:12:51 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -120,9 +120,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
-  - claim: **09-22 11:13:02 JST** / heartbeat: **—** / lease expiry: **09-22 12:43:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
+- `arXiv:2509.16105` — DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning / worker `scheduled-chat-00`
+  - claim: **09-22 11:14:43 JST** / heartbeat: **—** / lease expiry: **09-22 12:44:43 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1b89c86f687054e4.json`
 
 #### Audit
 
