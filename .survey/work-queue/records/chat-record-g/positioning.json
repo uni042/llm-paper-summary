@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-98e2f1fac5c29a094f21cbf1","job_id":"job-research-0492476ca3ab6ea2","data":{"limitations":"最大規模の実験は付録のQwen3-Next-80B-A3B-Instructまでで、DeepSeek-V3.2級の極端に大きなMoEは未評価である。著者も大規模モデルで冗長性が増える可能性を述べるに留まり、実証は今後の課題とする。TENPは専門家ごと・層ごとに異なる中間幅を作るため、vLLMやSGLangの標準実装ではそのまま動かず推論基盤改修が必要である。Table 5の実スループットは均一幅ENPであり、TENPそのものの可変幅実装の速度は直接測っていない。","differences":"SEER-MoEやEASY-EPなどの専門家剪定は重要度の低い専門家を丸ごと削るため総パラメータは減るが、元ルータの選択先を消してルーティング分布を変える。TENPは専門家を存在させたまま内部ニューロンを削るため、ルータの専門家識別子と接続構造を保つ。\n\nWanda等の非構造重み剪定と違い、up/gate行とdown列を同じ中間次元単位で切る構造剪定なので小さい密行列として計算できる。expert mergingのように専門家間の重みを混ぜず、動的expert skippingのように実行時だけ計算を省くのでもなく、静的メモリと活性計算幅を同時に減らす。台形配分は深層ほど容量を多く残す点で一律剪定とも異なる。","implementation_status":"著者公式コードURLは一次資料から確認できなかった。アルゴリズムはPyTorchのbroadcast行列積で全ニューロンの射影重要度を1回の順伝播から計算できる形で付録Algorithm 1に記載される。均一幅ENPは既存推論基盤で配備可能、TENPは異サイズ専門家への対応を推論基盤へ追加する必要がある。","research_positioning":"Adaptive Expert Computation / Compression系では、専門家単位圧縮とニューロン単位構造剪定を橋渡しする方式である。専門家キャッシュやCPU/SSDオフロードと比べると、TENPは転送対象そのものを小さくできるため、専門家重みのGPU転送量と下位階層容量の双方を減らす前処理になり得る。\n\n特に元ルーティングを維持する性質は、routing predictionを利用するexpert prefetchと相性がよい。専門家削除方式では剪定後にrouting distributionが変わって既存予測統計が崩れ得るが、TENPでは専門家選択頻度がほぼ維持されるため、圧縮前の遷移統計を階層メモリ配置へ再利用しやすい可能性がある。"},"reservation":{"claim_id":"claim-98e2f1fac5c29a094f21cbf1","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-6177199413e331d8e6eb7fb4",
+  "job_id": "job-research-421dd0de61905752",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6177199413e331d8e6eb7fb4",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-98e2f1fac5c29a094f21cbf1","job_id":"job-research-0492476ca3ab6ea2","data":{"canonical_id":"arXiv:2606.09885","arxiv_id":"2606.09885","doi":"10.18653/v1/2026.findings-acl.1049","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["stat.ML"]},"title":"TENP: Trapezoidal Expert Neuron Pruning For Mixture-of-Experts","summary":"TENPは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を丸ごと削ってルーティング構造を壊す代わりに、重要専門家を保持し、重要度の低い専門家内部の中間ニューロンを構造的に剪定する。浅層を強く、深層を弱く剪定する台形型パラメータ配分と、出力大きさ・入力方向変化を組み合わせた専門家重要度、各ニューロン出力の最終専門家出力への射影長を用いる。DeepSeek-V2-Liteではルーティング専門家を60%保持、平均活性パラメータ63.76%で平均51.98%と完全モデル52.98%から約1点低下に抑え、Qwenでは50%パラメータ時にA100上の静的メモリを32.95GBから16.37GBへ削減し総スループットを1.47倍にする。","list_summary":"重要専門家と元ルーティングを残しつつ、浅層ほど強く専門家内部ニューロンを構造剪定する台形型MoE圧縮。","authors":["Jiangyang He","Shaolin Zhu","Deyi Xiong"],"authors_affiliations":"TJUNLP Lab, School of Computer Science and Technology, Tianjin University, China","published":"2026-07-02","publication":"Findings of the Association for Computational Linguistics: ACL 2026, pp. 20911–20925","publication_type":"conference proceedings","publication_status":"Published","lineage":"adaptive expert computation / expert-neuron pruning / structured MoE compression","topics":["MoE","専門家ニューロン剪定","構造剪定","台形疎性","ルーティング保持","メモリ削減"],"importance":"専門家単位の粗い削除と非構造重み剪定の中間として、専門家をルーティング可能なまま内部幅だけ縮小し、実装可能な構造疎性と元ルーティング保持を両立する。","hardware_evaluation":"Qwen1.5-MoE-A2.7BとDeepSeek-V2-Liteを主評価し、付録でQwen3-Next-80B-A3B-Instructも評価する。静的メモリとスループットは単一NVIDIA A100-SXM-80GB GPUで測定する。","quality_effect":"近似圧縮で出力同値性は保証しない。DeepSeek-V2-Liteの60%専門家保持条件では平均51.98%で完全モデル52.98%との差は約1点。コード生成ではMBPP 45.7対43.2、HumanEval 29.9対26.2と完全モデルを上回る。","source":"https://aclanthology.org/2026.findings-acl.1049/","sources":["https://aclanthology.org/2026.findings-acl.1049/","https://aclanthology.org/2026.findings-acl.1049.pdf","https://arxiv.org/abs/2606.09885"],"code":null,"implementation":"専門家内のSwiGLU中間次元について、gate/up行とdown列を同じ添字で残す構造剪定。均一幅のENPは既存推論基盤で実行可能だが、専門家・層ごとに幅が異なるTENPはvLLMやSGLang側で異サイズ専門家への対応が必要と著者が述べる。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"ACL 2026 primary reference section; identifiers not normalized in this run","references_total":0},"reservation":{"claim_id":"claim-98e2f1fac5c29a094f21cbf1","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-6177199413e331d8e6eb7fb4",
+  "job_id": "job-research-421dd0de61905752",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6177199413e331d8e6eb7fb4",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

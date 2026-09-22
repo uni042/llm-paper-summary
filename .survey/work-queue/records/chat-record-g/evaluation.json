@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-98e2f1fac5c29a094f21cbf1","job_id":"job-research-0492476ca3ab6ea2","data":{"hardware":"主な品質評価はQwen1.5-MoE-A2.7B（14B、24層、各層60ルーティング専門家＋4共有専門家、Top-4）とDeepSeek-V2-Lite（16B、27層、2層目以降64ルーティング専門家＋2共有専門家、Top-6）。付録でQwen3-Next-80B-A3B-Instructも評価する。メモリ・スループット測定は単一NVIDIA A100-SXM-80GB GPU。","software":"品質評価は標準的な少数ショット設定で3回平均。TENPは可変幅専門家を生むためvLLM/SGLang等の推論基盤に異サイズ専門家対応が必要だが、全専門家を同幅へ縮めるENPは既存推論基盤を変更せず配備できると著者は述べる。","models":["Qwen1.5-MoE-A2.7B","DeepSeek-V2-Lite","Qwen3-Next-80B-A3B-Instruct"],"workloads":["GSM8K 8-shot","MBPP 3-shot","HumanEval 0-shot","ARC-Easy 25-shot","ARC-Challenge 25-shot","MMLU generalization"],"baselines":["Full model","Random expert pruning","SEER-MoE Frequency","SEER-MoE Gating Score","EASY-EP","Only expert pruning","ENP-L2","ENP-COS"],"methodology":"ルーティング専門家保持率30%と60%を中心に、完全モデル・ランダム・頻度・ゲーティング得点・EASY-EPと比較する。Eは残存ルーティング専門家総パラメータ比、Aは実際に活性化されるルーティング専門家パラメータ比として、品質だけでなく実計算幅も区別する。アブレーションでは重要専門家選択、台形配分、ニューロン射影重要度をランダム化またはL2重要度へ置換する。さらにルーティング選択頻度、層出力誤差、領域外一般化、A100静的メモリ・入出力スループット、較正標本数を評価する。","scope":"極端に大規模なDeepSeek-V3.2級MoEは未評価で、著者自身が今後の課題とする。TENPの可変専門家幅は現行vLLM/SGLangへ変更を要し、論文の実スループット表は均一幅ENPで測った値である点を区別する必要がある。品質はQwen/DeepSeek系と限られた推論・コード・科学QAに集中する。"},"reservation":{"claim_id":"claim-98e2f1fac5c29a094f21cbf1","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-6177199413e331d8e6eb7fb4",
+  "job_id": "job-research-421dd0de61905752",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6177199413e331d8e6eb7fb4",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
