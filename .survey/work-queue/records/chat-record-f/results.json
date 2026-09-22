@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-9a2c0141760202bf19379f9a",
-  "job_id": "job-research-ce081c207f1ded58",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9a2c0141760202bf19379f9a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-9a2c0141760202bf19379f9a","job_id":"job-research-ce081c207f1ded58","data":{"overview":"Bio-MemArtは全顔ベンチマーク平均でOwner認証成功率95.71%、Non-owner 0.86%、掌紋で97.60%と2.00%を報告する。LoCoMoではOwnerのF1/BLEU-1がNon-ownerを一貫して上回る。効率評価50問では平均プレフィルトークンが完全文脈18,781.96、MemArt 35.42、Bio-MemArt 28.57、平均応答時間は3.6881、2.2092、1.8743で、認証ゲートを追加してもKV記憶の低プレフィル領域を維持した。","key_results":[{"metric":"顔ベンチマーク平均認証成功率","value":"Owner 95.71%、Non-owner 0.86%","baseline":"7顔ベンチマーク平均","condition":"ベンチマーク別固定しきい値","interpretation":"正規ユーザーを高率で通しつつ非所有者の記憶アクセスを低く抑える。"},{"metric":"掌紋ベンチマーク平均認証成功率","value":"Owner 97.60%、Non-owner 2.00%","baseline":"10掌紋プロトコル平均","condition":"ベンチマーク別固定しきい値","interpretation":"別モダリティでも本人性優先ゲートが機能するが、CasiaM_460/700ではNon-owner 6%まで上がる。"},{"metric":"LFW downstream QA","value":"Owner平均F1/BLEU-1 23.54/17.70、Non-owner 5.31/4.16","baseline":"同一LoCoMo質問・履歴","condition":"顔LFW、Owner対Non-owner","interpretation":"生体ゲートで対象ユーザー記憶を除くと個人記憶依存QAが大きく低下する。"},{"metric":"CPLFW downstream QA","value":"Owner 19.81/14.92、Non-owner 5.31/4.16","baseline":"LFW Owner 23.54/17.70","condition":"姿勢変動が難しい顔ベンチマーク","interpretation":"Owner受理率86%への低下が正規ユーザーの記憶QA低下として現れる。"},{"metric":"平均プレフィルトークン","value":"Bio-MemArt 28.57","baseline":"MemArt 35.42、完全文脈18,781.96","condition":"50 LoCoMo質問、Qwen2.5-3B-Instruct、生成上限20","interpretation":"認可を前段に加えてもKVキャッシュ記憶の低プレフィル動作を維持する。"},{"metric":"平均応答時間","value":"Bio-MemArt 1.8743、MemArt 2.2092、完全文脈3.6881","baseline":"同じ50質問","condition":"論文記載の軽量効率比較","interpretation":"少なくとも報告条件では生体ゲートがKV記憶の応答時間優位を壊していない。"}],"negative_results":"生体認証は完全ではない。顔ではCPLFWのOwner成功率が86%まで低下し、正規ユーザーのQAも下がる。掌紋CasiaM_460とCasiaM_700ではNon-owner成功率が6%で、MS_Blue、PolyU、Tongjiの0%より分離が弱い。したがってBio-MemArtは暗号学的な完全隔離を保証せず、生体認証器の誤拒否・誤受理をそのままKV記憶可用性と漏えいリスクへ伝播させる。","interpretation":"結果の中心は言語モデル品質の改善ではなく、同じ質問と記憶内容で認可されたユーザーだけが個人KV記憶を使えるようにすることにある。ベンチマーク間で同じQA行が出ても、生体しきい値と受理率が異なるため同等の認証性能を意味しない。","quality_impact":"Owner条件では個人記憶に基づくQAを維持し、Non-ownerでは意図的にQAを低下させる。これは品質劣化ではなくアクセス制御の目的動作だが、誤拒否率が高い生体条件では正規ユーザー品質も低下する。"},"reservation":{"claim_id":"claim-9a2c0141760202bf19379f9a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
