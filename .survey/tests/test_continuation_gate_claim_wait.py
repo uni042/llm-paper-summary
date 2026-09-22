@@ -157,6 +157,19 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertEqual(result["submission_wait_seconds"], 10)
         self.assertIn("do_not_start_new_paper_in_handoff_window", result["submission_wait_action"])
 
+    def test_active_assignment_stays_serial_even_with_pending_submissions(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            submission_state_checked=True,
+            submission_result_pending=True,
+            pipeline_ahead_count=50,
+            independent_work=True,
+            active_assignment=True,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "CONTINUE_ASSIGNED_WORK")
+        self.assertEqual(result["submission_wait_seconds"], 0)
+
     def test_checked_clear_claim_state_under_quota_claims_next_paper(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
