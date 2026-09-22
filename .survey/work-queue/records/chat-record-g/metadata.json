@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6632d1664daf09912489991a","job_id":"job-research-777ca56d26763813","data":{"canonical_id":"arXiv:2502.04416","arxiv_id":"2502.04416","doi":"10.48550/arXiv.2502.04416","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis","summary":"密な前向きネットワークの活性化パターンを少量の較正データで解析し、高頻度ニューロンを常時実行する共有エキスパート、条件付きニューロンを経路選択エキスパートへ分離する後処理型の混合エキスパート変換法である。共活性に基づいて経路選択側を均等クラスタリングし、各クラスタの代表ニューロンが元から持つ重みから経路選択器を解析的に構成するため、大規模な継続学習を不要にする。Llama-2とQwenで25%疎性時に既存変換法を上回り、Llama-2 7Bで浮動小数点演算16.6%削減・毎秒トークン数14.8%向上、Qwen2.5-72Bの計算律速・3万2千文脈で最大1.17倍高速化を報告する。","list_summary":"ニューロン活性統計から共有・経路選択エキスパートと経路選択器を解析的に構築し、数分の変換と少量微調整で既存の密モデルまたはMoEへ階層的な疎計算を後付けする。","authors":["Zehua Pei","Hui-Ling Zhen","Lancheng Zou","Xianzhi Yu","Wulong Liu","Sinno Jialin Pan","Mingxuan Yuan","Bei Yu"],"authors_affiliations":"The Chinese University of Hong Kong; Huawei Technologies Co., Ltd","published":"2025-02-07","publication":"arXiv:2502.04416v3 (23 Apr 2026)","publication_type":"Preprint","publication_status":"Preprint","lineage":"dense-to-MoE restructuring / activation sparsity / analytical routing / hierarchical MoE","topics":["FFNからMoEへの変換","活性化疎性","解析的経路選択","共有エキスパート","階層疎性"],"importance":"従来の密モデルから混合エキスパートへの変換では、分割後の品質回復に70億〜2000億トークン規模の継続学習を使う例がある。本手法はわずか8個の較正例から、ほぼ常時必要なニューロンと入力依存のニューロンを区別し、元重みから直接経路選択器まで作るため、構造変換そのものはLlama-2 7Bで4.5分に収まる。さらに既存MoEの各エキスパート内部へ同じ変換を再帰適用でき、すでに疎なモデルへ追加の細粒度疎性を導入できる。ニューロン単位の活性化疎性とも加算的に併用できるため、モデル構造を作り直す大規模学習と推論時の条件付き計算の間を埋める実用的な位置にある。","hardware_evaluation":"Llama-2 7Bでは構造構築4.5分、2048例の低ランク適応まで含め46分。Qwen2.5-72Bではメモリ律速・計算律速を分け、4千および3万2千文脈長で実推論速度を測定する。","quality_effect":"25%疎性でLlama-2 7BのMMLUは44.02%、微調整なしでも42.50%。Qwen3-30BではPIQA 80.23%、HellaSwag 80.71%。疎経路選択で増える生成分散は5回生成の多数決で大幅に回復し、Qwen3の三課題平均では密モデルとの差がほぼ消える。","source":"https://arxiv.org/abs/2502.04416","sources":["https://arxiv.org/abs/2502.04416","https://arxiv.org/pdf/2502.04416","https://github.com/JarvisPei/CMoE"],"code":"https://github.com/JarvisPei/CMoE","implementation":"公式コードを論文脚注で公開。活性化収集、均等割当、代表ニューロン抽出、解析的経路選択器、任意の低ランク適応と負荷均衡を実装する。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary arXiv manuscript","references_total":43},"reservation":{"claim_id":"claim-6632d1664daf09912489991a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-d08192b6c02e47b87507ca6b",
+  "job_id": "job-research-81731225ea65410f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d08192b6c02e47b87507ca6b",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

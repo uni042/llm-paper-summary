@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6632d1664daf09912489991a","job_id":"job-research-777ca56d26763813","data":{"hardware":"評価対象はLlama-2 7B/70B、Qwen2.5-7B、Qwen3-30B-A3Bで、さらにQwen2.5-72Bを実配備速度の評価に用いる。論文はメモリ律速と計算律速の両条件、4千および3万2千文脈長を分けて測定し、計算律速・長文脈の条件で最大1.17倍の推論高速化を報告する。個別のGPU型番は実験設定の本文では明記されないため、型番を推測して補わない。","software":"実装基盤はHugging Face TransformersとPyTorchで、公式コードは https://github.com/JarvisPei/CMoE である。モデルの重みを再学習してMoEを一から作るのではなく、既存FFNの活性化を記録して構造を組み替える後処理を中心とする。解析的構築だけでも利用でき、品質をさらに上げる場合のみ低ランク適応（Low-Rank Adaptation; LoRA）と経路選択器の倍率調整を追加する。","methodology":"較正段階ではWikiText-2から8例を取り、各例2048トークンを使う。各トークンで絶対値が大きい上位10ニューロンを活性とみなし、ニューロンごとの活性化頻度と共活性パターンを作る。通常設定は前向きネットワークの25%疎性で、8個の総エキスパートのうち3個を共有、残る経路選択エキスパートから3個を実行するS3A3E8構成である。したがって一回の入力ではFFNニューロンの75%を計算する。\n\n任意の軽量微調整ではWikiText-2の2048例を1周だけ使い、LoRAの階数8、倍率32、Adamのβ1=0.9、β2=0.95を設定する。経路選択倍率の学習率は0.001、LoRA側は5.95×10^-5、負荷均衡バイアスの更新幅は0.001である。比較対象は静的構造枝刈りのSliceGPTとSLEB、密モデルからMoEへ変換するLLaMA-MoE、LLaMA-MoE-v2、EMoEで、全MoE系比較は同じ8エキスパートと2048例の微調整予算へ揃える。静的枝刈りは注意機構も削るため20%削減を使い、FFNだけ25%疎化する本方式と実効削減量を近づける。\n\n品質評価はPIQA、WinoGrande、ARC-Easy、ARC-Challenge、HellaSwagのゼロショットを4モデルで測り、Llama-2 7BではさらにMMLU 5-shot、HumanEval pass@1、GSM8K 8-shot、WikiText-2/C4 perplexityを調べる。構築データ量、較正元、クラスタリング方式、経路選択器、共有エキスパート、疎性率、エキスパート構成、自己整合性を個別に変える除去実験も行う。システム評価では浮動小数点演算量、積和演算量、毎秒トークン数、構築時間、長文脈時の実速度を測り、理論削減と実速度の両方を確認する。","scope":"評価の強みは、精度だけでなく構築費用と実推論速度を同じ論文内で測っている点である。Llama-2 7Bでは構造変換4.5分、微調整込み46分で、LLaMA-MoE-v1/v2の2000億/70億トークン規模の継続学習と桁違いに軽い。一方で英語ベンチマークとデコーダ専用Transformerが中心であり、多言語や別アーキテクチャへそのまま一般化できる証拠はない。\n\nまた疎経路選択は生成分散を増やすため、単一生成の精度だけを見ると密モデルとの差が比較的大きい。論文は5回生成の多数決で差が大幅に縮むことを示すが、その品質回復には複数生成の追加計算が伴う。したがって配備判断では、一回推論の速度、複数生成を含む最終品質、要求される遅延上限を分けて評価する必要がある。"},"reservation":{"claim_id":"claim-6632d1664daf09912489991a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d08192b6c02e47b87507ca6b",
+  "job_id": "job-research-81731225ea65410f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d08192b6c02e47b87507ca6b",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
