@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260922T083120Z-30-c7e4",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-c324e0325a4a2def",
+      "claim_id": "claim-e14662bfa3410aa2e2cc050b",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-e14662bfa3410aa2e2cc050b",
+      "claimed_at": "2026-09-22T08:30:39+00:00",
+      "expires_at": "2026-09-22T10:00:39+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-c324e0325a4a2def"
+      ],
+      "job": {
+        "job_id": "job-research-c324e0325a4a2def",
+        "type": "research",
+        "parent_job_id": "job-03c06d8367dd20c5",
+        "priority": 98,
+        "canonical_id": "arXiv:2607.14647",
+        "arxiv_id": "2607.14647",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "D-cut: Adaptive Verification Depth Pruning for Batched Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/75307316ba4eb1158607ba9c12a7f8b7abfb702e",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2607.14647-d-cut-adaptive-verification-depth-pruning-for-batched-speculative-decoding.md",
+        "selection_reason": "高concurrency投機的復号でbatch横断のverification budgetをacceptance確率とruntime cost modelに基づき配分。MoEを含む評価で平均speedup 1.26→1.65倍、最大3倍。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:11:14+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T08:30:39+00:00",
+  "checkpoint_released": 0
+}
