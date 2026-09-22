@@ -120,7 +120,7 @@ class DiscoveryRoundStatusTests(unittest.TestCase):
             text = _load_renderer(repo).build_dashboard(
                 repo, now=datetime(2026, 9, 15, 11, 14, tzinfo=timezone.utc)
             )
-            discovery = text.split("#### Discovery (:00)", 1)[1].split("### 現在処理中", 1)[0]
+            discovery = text.split("#### Discovery（最新Discovery run）", 1)[1].split("### 現在処理中", 1)[0]
 
             self.assertIn("耐久探索round: **3件**", discovery)
             self.assertIn("個別result照合: **1件**", discovery)
@@ -155,7 +155,7 @@ class DiscoveryRoundStatusTests(unittest.TestCase):
             text = _load_renderer(repo).build_dashboard(
                 repo, now=datetime(2026, 9, 15, 11, 14, tzinfo=timezone.utc)
             )
-            discovery = text.split("#### Discovery (:00)", 1)[1].split("### 現在処理中", 1)[0]
+            discovery = text.split("#### Discovery（最新Discovery run）", 1)[1].split("### 現在処理中", 1)[0]
             self.assertIn("耐久探索round: **1件**", discovery)
             self.assertIn("round識別子重複submission: **1件**", discovery)
 

@@ -6,6 +6,8 @@ on:
       - '.survey/work-queue/**'
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard.py'
+      - '.survey/scripts/render_status_dashboard_core.py'
+      - '.survey/scripts/reference_pool.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
   push:
@@ -14,6 +16,8 @@ on:
       - '.survey/work-queue/**'
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard.py'
+      - '.survey/scripts/render_status_dashboard_core.py'
+      - '.survey/scripts/reference_pool.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
   # Commits pushed by another workflow with GITHUB_TOKEN do not emit a new push
@@ -38,6 +42,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install dashboard runtime dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML
       - name: Direct-evidence dashboard regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_status*.py'
       - name: Render dashboard in check mode
@@ -58,6 +64,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install dashboard runtime dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML
       - name: Refresh STATUS.md from direct durable evidence
         shell: bash
         run: |

@@ -190,6 +190,28 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             self.assertNotIn("Already Done", current)
             self.assertIn("生存そのものまでは証明しない", current)
 
+    def test_active_work_excludes_claim_with_released_at_even_if_lease_is_future(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _write_json(repo / ".survey/work-queue/jobs/job-released.json", {
+                "job_id": "job-released", "type": "research",
+                "title": "Released Work", "status": "ready",
+            })
+            _write_json(repo / ".survey/work-queue/claims/job-released.json", {
+                "job_id": "job-released", "worker_id": "scheduled-chat-00",
+                "claimed_at": "2026-09-15T09:30:00+00:00",
+                "released_at": "2026-09-15T09:40:00+00:00",
+                "released": False,
+                "expires_at": "2026-09-15T11:00:00+00:00",
+            })
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+            )
+            current = text.split("### 現在処理中", 1)[1]
+            self.assertIn("未失効かつ非terminal jobのclaim: **0件**", current)
+            self.assertNotIn("Released Work", current)
+
+
     def test_summary_splits_research_audit_discovery_and_moves_evidence_below(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)

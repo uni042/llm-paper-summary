@@ -45,29 +45,21 @@ def _candidate_count(submissions: list[dict[str, Any]]) -> int:
 
 
 def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
-    """Read the latest durable repository-reference precheck progress snapshot."""
-    rows: list[tuple[datetime, dict[str, Any]]] = []
-    root = repo_root / ".survey/work-queue/discovery-precheck/results"
-    for _, payload in evidence._iter_json(root):
-        if payload.get("ok") is not True:
-            continue
-        if str(payload.get("provider") or "") not in {"repository_references", "repository_reference_pool"}:
-            continue
-        progress = payload.get("provider_progress")
-        if not isinstance(progress, dict):
-            continue
-        observed_at = evidence._parse_dt(payload.get("progress_observed_at"))
-        if observed_at is None:
-            observed_at = datetime.min.replace(tzinfo=timezone.utc)
-        rows.append((observed_at, progress))
+    """Recompute structured-reference progress from current canonical inputs.
 
-    if not rows:
+    The latest Discovery precheck result is a historical snapshot. STATUS is a
+    current dashboard, so derive these counts from the paper records plus the
+    durable unrelated/borderline ledgers every time the dashboard is rendered.
+    """
+    try:
+        import reference_pool
+        pool = reference_pool.build_reference_pool(repo_root)
+    except Exception as exc:
         return {
             "available": False,
-            "error": "repository-reference progress snapshot has not been generated yet",
+            "error": f"live reference-pool recomputation failed: {type(exc).__name__}: {exc}",
         }
 
-    _, progress = max(rows, key=lambda row: row[0])
     required = (
         "reference_total_count",
         "reference_processed_count",
@@ -76,21 +68,22 @@ def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
         "reference_unrelated_count",
         "reference_borderline_count",
     )
-    if any(key not in progress for key in required):
+    if any(key not in pool for key in required):
         return {
             "available": False,
-            "error": "latest repository-reference progress snapshot is incomplete",
+            "error": "live reference-pool recomputation returned incomplete counts",
         }
     return {
         "available": True,
-        "total": int(progress["reference_total_count"]),
-        "processed": int(progress["reference_processed_count"]),
-        "remaining": int(progress["reference_remaining_count"]),
-        "represented": int(progress["reference_represented_count"]),
-        "unrelated": int(progress["reference_unrelated_count"]),
-        "borderline": int(progress["reference_borderline_count"]),
+        "source": "live_recompute",
+        "total": int(pool["reference_total_count"]),
+        "processed": int(pool["reference_processed_count"]),
+        "remaining": int(pool["reference_remaining_count"]),
+        "represented": int(pool["reference_represented_count"]),
+        "unrelated": int(pool["reference_unrelated_count"]),
+        "borderline": int(pool["reference_borderline_count"]),
+        "paper_count": int(pool.get("paper_count") or 0),
     }
-
 
 def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]:
     lines = ["## 構造化references探索状況", ""]
@@ -118,10 +111,77 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
         "",
         f"- 消化率: **{ratio:.1f}%**",
         "- 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。",
-        "- 探索時にpaper実体と無関係/微妙台帳から再計算した値を、schema-v3 precheck resultへ耐久保存して表示します。",
+        "- STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。",
         "",
     ])
     return lines
+
+def _maintenance_status(repo_root: Path) -> dict[str, Any]:
+    """Read the maintenance workflow's durable canonical state."""
+    path = repo_root / ".survey/work-queue/maintenance-cycle.json"
+    payload = evidence._load_json(path)
+    if not payload:
+        return {"available": False, "path": path}
+    return {
+        "available": True,
+        "path": path,
+        "pending": payload.get("maintenance_pending"),
+        "completed_at": evidence._parse_dt(payload.get("last_maintenance_completed_at")),
+        "status": payload.get("last_maintenance_status"),
+        "consistency_status": payload.get("last_consistency_status"),
+        "health_status": payload.get("last_health_status"),
+        "health_errors": int(payload.get("last_health_errors") or 0),
+        "health_warnings": int(payload.get("last_health_warnings") or 0),
+        "metadata_status": payload.get("last_metadata_status"),
+        "metadata_incomplete": int(payload.get("last_metadata_incomplete") or 0),
+        "gc_deleted": int(payload.get("last_gc_deleted") or 0),
+        "queue_snapshot_repaired": payload.get("last_queue_snapshot_repaired"),
+        "index_repairs": int(payload.get("last_index_repairs") or 0),
+        "quality_regressions": int(payload.get("last_quality_regressions") or 0),
+    }
+
+
+def _render_maintenance_status(status: dict[str, Any], now: datetime) -> list[str]:
+    lines = ["## 日次メンテナンス状態", ""]
+    if status.get("available") is not True:
+        lines.extend([
+            "- `.survey/work-queue/maintenance-cycle.json` を読み取れません。",
+            "",
+        ])
+        return lines
+
+    completed_at = status.get("completed_at")
+    if completed_at is None:
+        completed_text = "—"
+    else:
+        completed_text = (
+            f"{evidence._fmt_time(completed_at)}（{evidence._fmt_age(now, completed_at)}）"
+        )
+    pending = status.get("pending")
+    pending_text = "true" if pending is True else "false" if pending is False else "—"
+    repaired = status.get("queue_snapshot_repaired")
+    repaired_text = "true" if repaired is True else "false" if repaired is False else "—"
+    lines.extend([
+        "| 指標 | 現在値 |",
+        "|---|---:|",
+        f"| maintenance pending | **{pending_text}** |",
+        f"| 最終maintenance完了 | **{completed_text}** |",
+        f"| 最終maintenance status | **{status.get('status') or '—'}** |",
+        f"| consistency | **{status.get('consistency_status') or '—'}** |",
+        f"| health | **{status.get('health_status') or '—'}** |",
+        f"| health errors / warnings | **{status.get('health_errors', 0)} / {status.get('health_warnings', 0)}** |",
+        f"| metadata | **{status.get('metadata_status') or '—'}** |",
+        f"| metadata incomplete | **{status.get('metadata_incomplete', 0)}** |",
+        f"| GC削除件数 | **{status.get('gc_deleted', 0)}** |",
+        f"| queue snapshot repaired | **{repaired_text}** |",
+        f"| index repairs | **{status.get('index_repairs', 0)}** |",
+        f"| quality regressions | **{status.get('quality_regressions', 0)}** |",
+        "",
+        "maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。",
+        "",
+    ])
+    return lines
+
 
 def _durable_candidate_backlog(jobs: dict[str, dict[str, Any]]) -> dict[str, int]:
     """Count current research candidates only from durable job records.
@@ -605,7 +665,7 @@ def _render_latest_paper_kind(
     result_by_submission: dict[Path, dict[str, Any]],
 ) -> list[str]:
     label = LABELS[kind]
-    lines = [f"#### {label} (:30)", ""]
+    lines = [f"#### {label}（最新Research/Audit run）", ""]
     selected = [row for row in submissions if row["kind"] == kind]
     if paper_run_time is None:
         lines.append("- worker時刻を復元できるimmutable submissionは確認できません。")
@@ -665,6 +725,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     active = evidence._active_claims(repo_root, jobs, now)
     candidate_backlog = _durable_candidate_backlog(jobs)
     reference_progress = _structured_reference_progress(repo_root)
+    maintenance_status = _maintenance_status(repo_root)
     direct_metrics = _direct_evidence_metrics(
         repo_root,
         jobs=jobs,
@@ -762,6 +823,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "`canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。",
         "",
         *_render_structured_reference_progress(reference_progress),
+        *_render_maintenance_status(maintenance_status, now),
         "## 件数サマリー",
         "",
         f"直近{evidence.RECENT_HOURS}時間、最新run、現在処理中を種類別に分けています。実体の証拠は下部にまとめています。",
@@ -855,7 +917,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         )
     )
 
-    lines += ["", "#### Discovery (:00)", ""]
+    lines += ["", "#### Discovery（最新Discovery run）", ""]
     if discovery_run_time is None:
         lines.append("- `discovery_stats.run_key` を持つimmutable discovery submissionは確認できません。")
     else:
@@ -927,7 +989,8 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、未解決の対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submission、および同一attempt/job/submissionへ対応する `content_validation` の再試行不可終端却下resultがあるsubmissionは、対応job欠損だけでは現在の異常にしません。",
         "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
         "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
-        "- **構造化references探索状況**: schema-v3 repository-reference precheck resultに耐久保存されたprovider進捗を表示します。値自体は探索時にpaper実体と無関係/微妙台帳から再計算されます。",
+        "- **構造化references探索状況**: STATUS生成時に `reference_pool.build_reference_pool()` を実行し、paper実体と無関係/微妙台帳から現在値を直接再計算します。過去のprecheck snapshotは件数表示に使いません。",
+        "- **日次メンテナンス**: `.survey/work-queue/maintenance-cycle.json` をmaintenance workflowの耐久正本として表示します。通常jobの件数からmaintenance状態を推定しません。",
         "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
         "- **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。",
         "",
