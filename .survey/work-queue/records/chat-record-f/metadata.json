@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-eac46ddd3cb449fe8b2c0320",
-  "job_id": "job-research-6542fa570cf353a1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-eac46ddd3cb449fe8b2c0320",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-eac46ddd3cb449fe8b2c0320","job_id":"job-research-6542fa570cf353a1","data":{"canonical_id":"arXiv:2609.13141","arxiv_id":"2609.13141","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking","summary":"SASは、長文脈LLMの疎注意で用いるコンテキスト選択器を、密注意分布の蒸留ではなく言語モデル損失から直接学習する手法である。選択器の連続スコアを正規化したゲートとして注意ソフトマックス内部へ対数加算し、固定Top-K予算下で最終予測に有用なブロック順位を誤差逆伝播で最適化する。Qwen3 4B/8B/14Bを凍結して約9.37万件の数学データで1エポック学習した評価では、特に小さい注意予算でSeerAttention-Rを上回り、Qwen3-4B・2048トークン予算でMATH500 93.47、GPQA-Diamond 54.86、AIME24 68.85、AIME25 56.38を達成した。Triton融合カーネルとSGLang/FlashInfer統合も実装する。","list_summary":"言語モデル損失を注意ソフトマックス内の連続ゲートへ直接流してコンテキスト順位を学習し、固定Top-K疎注意の精度と長文脈decode効率を改善する。","authors":["Zhiwei Li","Lei Zhu","Hao Gu","Xiang Hu","Yan Wang","Haitao Mi","Sirui Han","Leo Liang","Zhijiang Guo"],"authors_affiliations":"TencentおよびHong Kong University of Science and Technology系の著者による。個別所属対応は一次資料から未転記。","published":"2026-09-11","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (submitted 2026-09-11; source updated 2026-09-14)","lineage":"sparse attention / learned context ranking / long-context LLM inference","topics":["疎注意","長文脈推論","コンテキスト順位付け","Triton","SGLang"],"importance":"既存の学習型疎注意が密注意重みの再現を代理目的にしていたのに対し、実際の固定注意予算下で予測へ寄与する順位を次トークン損失から直接学ぶ点が重要である。アルゴリズムだけでなく融合カーネルとサービング経路まで示し、精度と実行効率を同じ設計で扱う。","implementation":"FlashAttention型タイル計算へゲート加算と選択マスクを融合したTritonカーネルを実装。推論はSGLang、paged KV cache、FlashInfer sparse decodingへ統合し、prefillはdense、decodeでTop-Kブロック選択を使う。","hardware_evaluation":"単一GPUで長文脈decode速度を評価しているが、確認できた一次資料メタデータではGPU型番の明記を確定できないため推測しない。","quality_effect":"小さい注意予算でSeerAttention-Rに対する改善が大きく、2048トークン予算のQwen3-4BではGPQA-Diamond 54.86対49.94、AIME24 68.85対55.83。LongBenchでもQwen3-14B・4096予算で56.2とdense 56.6に近い。一方RULER 64K/128Kではブロック要約による局所情報欠落が顕著。","source":"https://arxiv.org/abs/2609.13141","sources":["https://arxiv.org/abs/2609.13141"],"code":"https://github.com/Tencent-Hunyuan/Simple-Attention-Sparsification","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary manuscript; bibliography not transcribed into structured record","references_total":0},"reservation":{"claim_id":"claim-eac46ddd3cb449fe8b2c0320","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
