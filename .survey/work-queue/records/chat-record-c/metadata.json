@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-353fe5bf8013fb3f531d243b",
   "job_id": "job-research-d522f30f5ddd350f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-353fe5bf8013fb3f531d243b",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2510.26730",
+    "arxiv_id": "2510.26730",
+    "doi": "10.48550/arXiv.2510.26730",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI", "cs.PF"]},
+    "title": "ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference",
+    "summary": "ExpertFlowはGPUメモリ制約下のMoE推論で、固定の先読み層数に依存するエキスパート事前取得を、ハードウェア帯域・エキスパート寸法・層計算時間・実行時待機状況に応じて動的に調整する実行時システムである。現在層の事前ゲート出力だけでなく、トークンIDと過去層のエキスパート活性履歴を用いる軽量予測器で将来層の必要エキスパートを補正し、二段LRUキャッシュとキャッシュ認識ルーティングを組み合わせて転送待ちを計算と重ねる。A6000、H20、Ascend 910B上でDeepSeek-V2-Lite、Qwen1.5、Qwen2.0を評価し、待機＋キャッシュミス遅延を平均98.5%削減した。",
+    "list_summary": "固定先読み幅を帯域・入力・待機フィードバックで動的化し、予測器・二段LRU・キャッシュ認識ルーティングを協調させてMoEエキスパート転送待ちを隠蔽する実行時システム。",
+    "authors": ["Zixu Shen", "Kexin Chu", "Yifan Zhang", "Dawei Xiang", "Runxin Wu", "Wei Zhang"],
+    "authors_affiliations": "arXiv版は匿名投稿形式の本文で所属を開示していない。",
+    "published": "2025-10-30",
+    "publication": "arXiv:2510.26730 v1, 2025-10-30",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "MoE expert offloading / cross-layer expert prediction / adaptive prefetch / expert cache management / cache-aware routing",
+    "topics": ["MoE", "expert offloading", "adaptive prefetch", "cross-layer prediction", "two-level LRU", "cache-aware routing", "memory-constrained inference"],
+    "importance": "エキスパート事前取得の先読み幅を固定値ではなく通信・計算比と実行時フィードバックから制御し、予測・キャッシュ・ルーティングを一つの閉ループに統合している点が、階層メモリ型MoE推論のスケジューリング設計に直接関係する。",
+    "hardware_evaluation": "NVIDIA A6000（64 GB/s）、NVIDIA H20（128 GB/s）、Ascend 910B（128 GB/s）で評価。GPUメモリを20GBに制限し、ShareGPT由来の要求を用いる。",
+    "quality_effect": "主評価は推論システム性能で、モデル品質ベンチマークの改善を主張するものではない。予測精度は事前ゲート法より平均21.79%、最大30.36%改善し、誤予測による不要転送を抑える。",
+    "source": "https://arxiv.org/abs/2510.26730",
+    "sources": ["https://arxiv.org/abs/2510.26730", "https://arxiv.org/pdf/2510.26730"],
+    "code": "",
+    "implementation": "Python/CUDAとTransformersで実装。本文中に一般公開コードリポジトリは確認できない。",
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary-paper-fulltext",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-353fe5bf8013fb3f531d243b", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
