@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6de20ea36381d00ca19a50de",
-  "job_id": "job-research-1b89c86f687054e4",
-  "data": {
-    "overview": "DiEPは層ごとの冗長性差を学習して削減予算を非一様に配ることで、固定率・層内探索型の比較法より高い精度を維持する。Mixtral 8x7Bではエキスパートを半数削除して平均59.9となり、元モデル65.1の約92%を保持する。Mixtral 8x22Bでは半数削除でも62.9で元モデル67.0の約94%を保持する。探索自体もMixtral 8x7Bで0.23時間とNAEEの1.31時間より大幅に短い。",
-    "key_results": [
-      {
-        "metric": "Mixtral 8x7B平均精度",
-        "value": "25%削減63.8、50%削減59.9",
-        "baseline": "元モデル65.1、S-MoE 50%削減55.9",
-        "condition": "Mixtral 8x7B、C4 128校正、ゼロショット平均",
-        "interpretation": "半数削減でも元性能の約92%を保ち、固定・統計ベース削減より高削減率で劣化が小さい。"
-      },
-      {
-        "metric": "Mixtral 8x22B平均精度",
-        "value": "50%削減62.9",
-        "baseline": "元モデル67.0、S-MoE 61.3、NAEE 59.7",
-        "condition": "Mixtral 8x22B、50%エキスパート削減",
-        "interpretation": "大きいMixtralでも非一様削減が有効で元性能の約94%を保持する。"
-      },
-      {
-        "metric": "MMLU改善幅",
-        "value": "最大+7.1ポイント",
-        "baseline": "既存エキスパート削減法",
-        "condition": "Mixtral 8x7B、高削減率条件",
-        "interpretation": "層ごとの冗長性差を考慮する利点が高圧縮領域で大きくなる。"
-      },
-      {
-        "metric": "削減探索時間",
-        "value": "0.23時間",
-        "baseline": "NAEE 1.31時間、MC-MoE 0.31時間",
-        "condition": "Mixtral 8x7B、A800×4",
-        "interpretation": "離散組合せ探索を連続重要度学習へ置き換えることで探索費用を大幅に削減する。"
-      },
-      {
-        "metric": "削減探索メモリ時間積",
-        "value": "31.97 GB·h",
-        "baseline": "NAEE 124.58 GB·h、MC-MoE 108.00 GB·h",
-        "condition": "Mixtral 8x7B削減探索",
-        "interpretation": "探索時間とピークメモリの双方を抑え、圧縮前処理自体の資源費を低減する。"
-      },
-      {
-        "metric": "DeepSeek-MoE-16B推論",
-        "value": "平均53.6、1.13倍高速、GPU比0.89",
-        "baseline": "元モデル平均56.2、速度1.00、GPU比1.00",
-        "condition": "12.5%構造削減と適応エキスパートスキップ併用",
-        "interpretation": "構造削減後にも入力依存の第二エキスパート省略余地が残り、品質低下と引き換えに追加速度利得を得る。"
-      }
-    ],
-    "negative_results": "損失なしではない。Mixtral 8x7Bの平均精度は元モデル65.1から25%削減で63.8、50%削減で59.9へ低下する。DeepSeek-MoE-16Bでも元モデル56.2に対し12.5%削減+スキップは53.6となる。大規模なDeepSeek V3/Qwen2.5-MaxやマルチモーダルMoEは未評価。",
-    "interpretation": "高削減率ほど固定層別方式との差が広がるのは、層ごとの冗長性が均一でなく、重要な浅層を保護しつつ冗長な深層へ削減を寄せられるためと解釈できる。探索時間が短いのは、全組合せを列挙せず連続重要度を勾配で学習してから一度の全体順位で離散化するためである。",
-    "quality_impact": "近似手法であり品質劣化を許容してメモリ・計算量を削減する。削減率25%ではMixtral 8x7B-Instructの平均が66.4から65.8と0.6ポイント低下に留まる一方、50%では63.0まで下がる。要求品質に応じて削減率を選ぶ必要がある。"
-  },
+  "attempt_id": "attempt-84e9f439e080d1904fe9bde3",
+  "job_id": "job-research-031ae3bbff44f455",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-6de20ea36381d00ca19a50de",
+    "claim_id": "claim-84e9f439e080d1904fe9bde3",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
