@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 07:35:15 JST**
+> 自動生成: **2026-09-23 07:37:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **199** |
-| 未claim Research job | **197** |
-| 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-23 07:30:32 JST（4分前）** |
+| 収録候補論文 | **198** |
+| 未claim Research job | **196** |
+| 直近24hの検証済みResearch収録 | **72** |
+| 最終検証済みResearch収録 | **09-23 07:37:28 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **199** |
+| canonical_id確認済みの一意な候補論文 | **198** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **199** |
+| 非終端Research job合計 | **198** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（23時間2分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（23時間5分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **2** | **0** | **0** | **2** | **0** | — |
+| Research | **21** | **2** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **20** | **5** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **21** | **5** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 07:37:28 JST** [research] `arXiv:2609.14213` — Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution
+  - job: `.survey/work-queue/jobs/job-research-aa3e3c19262a245a.json`
+  - result: `.survey/work-queue/results/research/attempt-a302801e2f42ef7601d7976c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-a302801e2f42ef7601d7976c.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md`
 - **09-23 07:30:32 JST** [research] `arXiv:2609.08566` — BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents
   - job: `.survey/work-queue/jobs/job-research-ce081c207f1ded58.json`
   - result: `.survey/work-queue/results/research/attempt-9a2c0141760202bf19379f9a.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-6cd2c2eb6d8d0d8116429b11.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-6cd2c2eb6d8d0d8116429b11.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md`
-- **09-23 04:12:31 JST** [research] `arXiv:2509.19781` — Faster, Smaller, and Smarter: Task-Aware Expert Merging for Online MoE Inference
-  - job: `.survey/work-queue/jobs/job-research-3218c42781ec549d.json`
-  - result: `.survey/work-queue/results/research/attempt-a503dd59d7e7b9e3cfd8340e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a503dd59d7e7b9e3cfd8340e.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.19781-task-aware-expert-merging-online.md`
 
 ### Audit
 
@@ -181,12 +181,12 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.1007/s10462-026-11651-1` — I/o for LLM inference: a survey of storage and memory bottlenecks / worker `scheduled-chat-00`
-  - claim: **09-23 07:31:45 JST** / heartbeat: **—** / lease expiry: **09-23 09:01:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-15688dbb0cd11f1c.json`
-- `arXiv:2609.14213` — Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution / worker `scheduled-chat-30`
-  - claim: **09-23 07:29:12 JST** / heartbeat: **—** / lease expiry: **09-23 08:59:12 JST**
-  - evidence: `.survey/work-queue/claims/job-research-aa3e3c19262a245a.json`
+- `arXiv:2606.25426` — Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX / worker `scheduled-chat-00`
+  - claim: **09-23 07:37:08 JST** / heartbeat: **—** / lease expiry: **09-23 09:07:08 JST**
+  - evidence: `.survey/work-queue/claims/job-research-06d45370eceff021.json`
+- `arXiv:2606.16332` — SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions / worker `scheduled-chat-30`
+  - claim: **09-23 07:36:18 JST** / heartbeat: **—** / lease expiry: **09-23 09:06:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f28b959eef987bac.json`
 
 #### Audit
 
@@ -206,7 +206,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **199** |
+| ready | **198** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,7 +226,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **956** |
+| inference/training/survey配下の論文Markdown実体 | **957** |
 
 ### immutable submissionの未照合
 
@@ -234,8 +234,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **335** |
-| └ Research | **263** |
+| 成功result未照合のimmutable submission | **336** |
+| └ Research | **264** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
