@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-40cf549b16c4f0ae9055ebc1","job_id":"job-research-2ff1a5b6cca233ad","data":{"hardware":"主要比較は同じ平均活性パラメータ・FLOPsとなるMoE構成で品質と活性数を比較する。論文は分散同期負荷を議論するが、主要結果で特定GPUの推論速度倍率を前面には出していない。","software":"NLPはGPT-NeoX-20B tokenizer、系列長2048、DCLM-Baselineを使用する。評価は13データセットにまたがり、CVでは0.9B活性/3.4B総パラメータのDiT MoEを2兆pixel tokenで訓練する。公開コードURLは本文から確認できない。","methodology":"主NLPモデルはDense-1.3BとMoE-1.3B-6.9B-64E8Aで、100B DCLMトークンを事前学習し、固定Top-k、固定閾値Top-p、DTop-pを比較する。推論評価はSVAMP、MMLU、ARC-Easy/Challenge、COPA、PIQA、HellaSwag、WinoGrande、LAMBADA、BoolQ、AGIEval三種の計13ベンチマーク。スケーリングでは32E4A、64E8A、128E16A、総専門家容量、0.4B/1.3B/2.4Bモデル、100B/300Bトークンを変える。CVでは0.9B活性/3.4B総パラメータ64E8A DiTを評価する。アブレーションは比例積分制御器と動的ルーティング正規化、補助損失、制御係数を分離する。","scope":"本手法は事前学習時にルーティングを形成する方式で、既学習MoEへ無学習で後付けする方法ではない。主要ベースラインはトークン選択型Top-kと固定Top-pに絞られ、ゼロ計算専門家などの直交方式は比較外。実配信ではトークンごとの専門家数変動が専門家並列の負荷不均衡を生み得るため、平均FLOPs一致だけで実時間一致は保証されない。"},"reservation":{"claim_id":"claim-40cf549b16c4f0ae9055ebc1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-e4f4adb1c27332d4e598f4a2",
+  "job_id": "job-research-236ebf569c3b4b83",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e4f4adb1c27332d4e598f4a2",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

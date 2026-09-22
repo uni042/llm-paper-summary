@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-40cf549b16c4f0ae9055ebc1","job_id":"job-research-2ff1a5b6cca233ad","data":{"overview":"100Bトークンで学習したMoE-1.3B-6.9B-64E8Aでは13ベンチマーク平均がDTop-p 50.9、Top-k 49.0、固定Top-p 49.3となり、同じ平均FLOPsでDTop-pがTop-kを1.9点上回る。活性専門家数は訓練・検証とも目標へ早期収束し、標準偏差は約1で、固定Top-pの約4より安定する。浅層は約1専門家まで減らす一方、深層ではTop-kより多く使う層間再配分が観測される。","key_results":[{"metric":"13ベンチマーク平均","value":"50.9","baseline":"Top-k 49.0、固定Top-p 49.3、Dense 45.1","condition":"MoE-1.3B-6.9B-64E8A、100B DCLM tokens、同平均FLOPs","interpretation":"可変専門家数を予算制御したまま固定kより平均1.9点改善する。"},{"metric":"SVAMP","value":"16.0","baseline":"Top-k 10.3、固定Top-p 8.3","condition":"5-shot、64E8A","interpretation":"複雑な記号・算術問題で追加専門家を割り当てる利点が大きい。"},{"metric":"専門家粒度128E16A平均","value":"51.4","baseline":"Top-k 49.3","condition":"1.3B active / 6.9B total、100B tokens","interpretation":"専門家粒度が細かいほど動的選択の利得が維持・拡大する。"},{"metric":"活性数安定性","value":"標準偏差約1","baseline":"固定Top-p約4","condition":"訓練・検証活性専門家数","interpretation":"比例積分制御により可変性を残しつつ予算変動を大幅に抑える。"},{"metric":"予算収束","value":"最初の約1B tokensで目標へ安定","baseline":"固定Top-pは訓練終盤近くまで目標へ収束しない","condition":"64E8A、100B token訓練","interpretation":"閾値を訓練進行に合わせて自動調整し、固定閾値の漂流を抑える。"}],"negative_results":"固定Top-pは閾値0.40でTop-kをわずかに上回るが多くの期間で12超の専門家を使い、閾値0.35でも8超を使いながら性能はTop-k程度で、計算予算との比較が不利になる。層別DTop-pは層ごとの予算追従を改善する一方、全体閾値版より検証性能がわずかに低い。ルータZ損失は分布を平坦化して閾値を下げ、性能に逆効果となる。","interpretation":"DTop-pの利得は単純に平均専門家数を増やした結果ではなく、同じ平均予算を簡単なトークン・浅層から難しいトークン・深層へ移すことにある。制御器が予算を担当し、層別正規化が配分自由度を担当する分業により、動的ルーティングと予測可能な計算量を両立する。","quality_impact":"13ベンチマークすべてで勝つわけではなくPIQAや一部AGIEvalではTop-kを下回るが、平均では改善する。平均FLOPs一致は実時間一致を保証せず、専門家並列の負荷不均衡や通信を含む配信評価が別途必要である。"},"reservation":{"claim_id":"claim-40cf549b16c4f0ae9055ebc1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-e4f4adb1c27332d4e598f4a2",
+  "job_id": "job-research-236ebf569c3b4b83",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e4f4adb1c27332d4e598f4a2",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

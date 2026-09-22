@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-40cf549b16c4f0ae9055ebc1","job_id":"job-research-2ff1a5b6cca233ad","data":{"canonical_id":"arXiv:2512.13996","arxiv_id":"2512.13996","doi":"10.48550/arXiv.2512.13996","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":[]},"title":"DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training","summary":"DTop-pは、固定個数の専門家を選ぶTop-kではトークン難度や層ごとの計算需要を反映できず、固定閾値Top-pでは平均活性専門家数が訓練中に暴れて計算予算を制御できない問題に対し、比例積分制御器でTop-p確率閾値を逐次調整して平均活性数を目標へ追従させる動的MoEである。さらに層別のルータ正規化尺度を学習し、一つの全体計算予算の下で浅層は少数、深層は多数の専門家を使えるようにする。100Bトークンで学習した1.3B活性/6.9B総パラメータMoEでは13ベンチマーク平均50.9でTop-kの49.0を上回り、平均FLOPsを一致させる。","list_summary":"比例積分制御でTop-p閾値を動かして平均専門家数を予算へ追従させ、層別正規化でトークン・深さごとに計算を再配分する事前学習MoE。","authors":["Can Jin","Hongwu Peng","Mingcan Xiang","Qixin Zhang","Xiangchi Yuan","Amit Hasan","Ohi Dibua","Yifan Gong","Yan Kang","Dimitris N. Metaxas"],"authors_affiliations":"Rutgers University; Adobe Research; UMass Amherst; Nanyang Technological University; Georgia Institute of Technology","published":"2026-06-01","publication":"arXiv:2512.13996 v3, 2026-06-01","publication_type":"Preprint","publication_status":"Preprint","lineage":"動的MoE / Top-pルーティング / 計算予算制御 / 適応的専門家計算 / 事前学習","topics":["専門家混合","動的ルーティング","Top-p","比例積分制御","層別計算配分","事前学習"],"importance":"トークンごとに専門家数を変える動的ルーティングを、平均FLOPsが予測不能になる欠点から切り離し、制御理論で明示的な専門家予算へ追従させる。推論後処理ではなく事前学習中から適応計算を形成し、全体予算と層別自由度を同時に扱う点が重要である。","hardware_evaluation":"本文は大規模事前学習と分散同期の議論を行うが、主要結果の焦点は同一平均FLOPsでの品質と活性数追従であり、特定GPU上の推論速度倍率を主要指標としていない。","quality_effect":"MoE-1.3B-6.9B-64E8Aを100Bトークン学習した13ベンチマーク平均はDTop-p 50.9、Top-k 49.0、固定Top-p 49.3。64E8Aから128E16Aへ細粒度化した条件でもDTop-p 51.4、Top-k 49.3となる。","source":"https://arxiv.org/abs/2512.13996","sources":["https://arxiv.org/abs/2512.13996","https://arxiv.org/html/2512.13996","https://arxiv.org/pdf/2512.13996"],"code":null,"implementation":"各バッチの平均活性専門家数から正規化誤差を計算し、比例項と積分項で次バッチの累積確率閾値を更新する。層ごとの学習可能な温度尺度で正規化済みルータlogitを鋭化・平坦化する。公開コードURLは本文から確認できない。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-paper-reference-section","references_total":0},"reservation":{"claim_id":"claim-40cf549b16c4f0ae9055ebc1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-e4f4adb1c27332d4e598f4a2",
+  "job_id": "job-research-236ebf569c3b4b83",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e4f4adb1c27332d4e598f4a2",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
