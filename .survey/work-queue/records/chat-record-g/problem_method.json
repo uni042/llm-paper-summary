@@ -1,17 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-71174da29a72754d44fbffa1","job_id":"job-research-f43aa8f1dfa7e573",
- "data":{
-  "problem":"標準的な混合専門家モデル（Mixture-of-Experts; MoE）は各トークンで主ルータの上位K専門家を固定数実行する。この設計では、句読点やテンプレートトークンのように少ない専門家で十分な入力にも、推論・知識処理を多く要するトークンと同じ計算予算を与える。既存の動的方式は高疎性で品質や実装性に課題が残る。\n\nBEAMは、既存Top-Kが選んだ候補の『どれが不要か』だけを別機構で学び、専門家選択と計算量制御を分離する。累積確率方式の順位制約や最低1専門家制約を避け、主ルータ自体へ疎性目的を混ぜたときの負荷分散との勾配競合も避ける。",
-  "novelty":"BEAMの中心は、既存主ルータを変更せず、各MoE層へ単一線形層のマスクルータを並列追加する点にある。マスクルータはトークン表現から各専門家の連続マスク値を出し、閾値0.5で二値化してTop-K候補へ掛ける。\n\n二値化は微分不能なので直通推定量（Straight-Through Estimator; STE）でタスク損失の勾配を流し、同時に連続マスク値のL1平均を疎性正則化として加える。Top-1を必ず残す制約もなく、全候補をマスクするゼロ活性化も可能で、実測ではTop-K順位とマスク確率の相関が弱い。",
-  "method_overview":"処理の入口では、各MoE層へ入ったトークンの隠れ状態xを既存の主ルータRへ与え、全専門家のルーティングlogitを計算する。そこから上位K候補T_Kを選び、候補内softmaxで通常のrouting weight gを得る。同時に同じxを追加の線形mask router W_mへ与え、sigmoid(W_m x)で各専門家の連続mask値m_hatを生成する。m_hatを閾値τ=0.5で0/1のmへ変換し、g_hat=g⊙mとしてTop-K候補のうち実際に残すexpertをtoken単位で決定する。\n\n学習ではこのhard maskをforwardで使いながら、非微分な閾値には直通推定量（Straight-Through Estimator; STE）を適用して言語モデル損失の勾配をmask routerへ戻す。さらにTop-K内m_hatのL1平均L_regを加え、L=L_lm+αL_bal+βL_regとして疎性を直接最適化する。W_mはゼロ初期化し、開始時は元のTop-K挙動を再現する。推論では学習済みbinary maskをrouting結果へ適用し、vLLMのmask_route_kernelとmoe_align_block_size_kernelがmasked expertをexpert FFN/GEMMの実行集合から外すため、mask生成から実計算削減までが一つの経路でつながる。",
-  "components":[
-   {"name":"主ルータとマスクルータの分離","description":"主ルータは従来どおり全expertのrouting logitを作ってTop-K候補を選び、既存の負荷分散目的も維持する。追加mask routerは同じtoken hidden stateを入力に、選ばれた候補を実際に計算すべきかだけを独立に判断する。主routerのexpert選択能力を再学習で置換せず、元checkpointのspecializationを利用したまま冗長計算だけを対象にする。\n\nこの分離により、全expertへ負荷を分散したい勾配と実行expert数を減らしたい勾配が一つのrouting scoreを奪い合う状況を避ける。さらに元routerの順位をexpert必要性そのものとは見なさないため、routing weightが高いTop-1を削って下位候補を残すtoken依存選択も表現できる。論文の順位別mask分析でBEAMのmask率がTop-1から下位まで比較的平坦なのは、この独立判定の効果を示す。"},
-   {"name":"二値マスクと直通推定量","description":"mask routerのsigmoid出力を閾値0.5でhard binary maskへ変換し、forwardでは真の0/1でTop-K重みを遮断する。\n\n閾値関数はほぼ微分不能なので、backwardでは直通推定量（Straight-Through Estimator; STE）で二値化を恒等写像のように近似し、言語モデル損失からmask routerへexpert有用性の勾配を返す。学習時からhard maskを使い、soft gateを推論時だけhard化する不一致を避ける。"},
-   {"name":"疎性正則化","description":"Top-K候補に対応する連続mask値m_hatのL1平均をL_regとし、総損失をL_lm+αL_bal+βL_regとして最適化する。言語モデル損失L_lmは予測に寄与するexpertを保持する方向へmaskを押し、L_regは候補mask全体を0へ近づける。負荷分散損失L_balは従来の主router側へ残すので、expert selectionとsparsity controlの役割を分けたまま同時学習できる。\n\n正則化はbinary maskそのものではなく連続m_hatへ直接掛かるため、STEで近似したtask gradientとは別に安定した疎性勾配を与える。βを大きくすると削除圧力が強まり、βを小さくすると元性能を優先する。この単一係数によりarchitectureやTop-Kを作り直さず、元性能98%以上を狙う領域から平均活性expert数1未満の極端な疎性まで連続的に制御できる。"},
-   {"name":"ゼロ専門家活性化","description":"累積確率型routingと違ってTop-1を必須にせず、Top-K候補をすべてmaskできる。shared expertを持つモデルではrouted expertが0でもshared経路は残り、shared expertのないモデルではMoE FFNの寄与が0になってresidual経路だけを通る。\n\nこの自由度により平均活性expert数1未満まで到達でき、単純なTop-1/Top-2切替では除去できない計算を削る。token/layer分析では構造的tokenや冗長度の高い位置ほど少数expertへ寄り、一律pruningではなく入力依存の条件付き計算となる。"},
-   {"name":"vLLM CUDA統合","description":"推論ではmask_route_kernelがbinary maskに従って削除expertのindexを除外値へ変換し、後段のmoe_align_block_size_kernelがそれらをexpert blockへ割り当てない。重みを0にするだけでなくmasked expertのFFN計算を物理的に省略する。\n\nmask routerは単一線形層なので追加費を抑えつつ、既存vLLMのMoEデータフローへ局所的に組み込める。この実装によりFLOPs削減を実decode latency最大2.5倍とthroughput最大1.4倍の改善へ接続する。"}
-  ],
-  "system_design":"BEAMは各MoE層に軽量mask router parameterを追加して後学習し、attention、KV cache、既存expert FFN、主routerは維持する。runtimeでは主routerのTop-K selectionとmask routerを同一token stateから並列計算し、binary maskで候補集合を圧縮してからvLLMのexpert alignmentへ送る。\n\ntoken・layer・prefill/decode位置ごとに残るexpert数が変わるため、冗長な位置では計算を強く削り、情報量の大きいtokenでは多く残せる。学習ではgradient確保のためTop-K expert計算を保持する一方、deploymentではCUDA側でmasked expertを実行しない。"
- },
- "reservation":{"claim_id":"claim-71174da29a72754d44fbffa1","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "problem_method",
+  "attempt_id": "attempt-c7fc5d8a2ddc77f17046a7e2",
+  "job_id": "job-research-20085e82ab231044",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c7fc5d8a2ddc77f17046a7e2",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

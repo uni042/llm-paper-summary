@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-71174da29a72754d44fbffa1",
-  "job_id": "job-research-f43aa8f1dfa7e573",
-  "data": {
-    "canonical_id": "arXiv:2605.14438", "arxiv_id": "2605.14438", "doi": "10.48550/arXiv.2605.14438", "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AI", "cross_list": []},
-    "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
-    "summary": "BEAMは、混合専門家モデル（Mixture-of-Experts; MoE）の固定Top-Kルーティングが全トークンへ同じ専門家数を割り当てるため冗長計算を生む問題に対し、既存の主ルータを保持したまま軽量なマスクルータを追加し、Top-K候補ごとにトークン適応の二値保持・削除を学習する。離散マスクは直通推定量（Straight-Through Estimator; STE）で学習し、L1型疎性正則化で実行専門家数を直接抑える。推論時はvLLMのCUDA経路でマスク済み専門家を実計算から除外する。3種類のMoEで元性能の98%以上を保つ設定を示し、MoE層FLOPsを最大85%削減、デコード最大2.5倍、スループット最大1.4倍を報告する。",
-    "list_summary": "固定Top-K候補を学習二値マスクでトークンごとに削り、vLLM CUDA実装で実際の専門家計算を省略する動的MoEルーティング。",
-    "authors": ["Juntong Wu", "Jialiang Cheng", "Qishen Yin", "Yue Dai", "Yuliang Yan", "Fuyu Lv", "Ou Dan", "Li Yuan"],
-    "published": "2026-05-14", "publication": "arXiv:2605.14438v1, submitted 2026-05-14", "publication_type": "arXiv preprint", "publication_status": "Preprint",
-    "lineage": "adaptive expert computation / dynamic MoE routing / expert sparsification",
-    "topics": ["MoE", "動的ルーティング", "専門家疎性", "二値マスク", "直通推定量", "vLLM", "CUDA"],
-    "importance": "専門家選択と疎性制御を分離し、ルーティング順位に依存せずTop-K内の任意専門家を削除でき、ゼロ専門家活性化も許す点が既存の累積確率型動的ルーティングと異なる。",
-    "hardware_evaluation": "著者はcustom CUDA kernelをvLLMへ統合し、Qwen1.5-MoE-A2.7B、DeepSeekV2-Lite、Qwen3-30B-A3Bを含むMoEで実推論を評価する。主なシステム測定は単一GPU環境で、MoE層FLOPs、デコード時間、スループット、プリフィル時間を比較する。",
-    "quality_effect": "疎性係数に応じて品質と計算量を連続的に交換する損失型高速化であり、完全な出力同値性は保証しない。論文は実用設定で元モデル性能の98%以上を保持する構成を報告する。",
-    "source": "https://arxiv.org/abs/2605.14438", "sources": ["https://arxiv.org/abs/2605.14438", "https://arxiv.org/pdf/2605.14438", "https://github.com/Time-Rune/BEAM"], "code": "https://github.com/Time-Rune/BEAM",
-    "implementation": "vLLMのMoEルーティングへcustom CUDA kernelを統合し、mask_route_kernelで除外対象を標識し、moe_align_block_size_kernelでマスク済み専門家を実FFN計算から除外する。",
-    "last_checked": "2026-09-23", "references": [], "references_checked_at": "2026-09-23", "references_source": "primary-reference-section; normalized identifiers not recorded in this worker slot", "references_total": 0
-  },
-  "reservation": {"claim_id": "claim-71174da29a72754d44fbffa1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-c7fc5d8a2ddc77f17046a7e2",
+  "job_id": "job-research-20085e82ab231044",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c7fc5d8a2ddc77f17046a7e2",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
