@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-78929a6ba475ed2b2f05a50c","job_id":"job-research-f28b959eef987bac","data":{"canonical_id":"arXiv:2606.16332","arxiv_id":"2606.16332","doi":"10.48550/arXiv.2606.16332","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI","cs.PF"]},"title":"SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions","summary":"Armのスケーラブル行列拡張（SME）をLLM推論へ単純適用すると、CPUコアと共有するメモリ帯域、非線形ベクトル処理、データ配置変換のため性能が頭打ちになる問題を扱う。SMEPilotはCPUのみ・SMEのみ・両者協調の複数計算上限を持つルーフラインモデルで演算子形状ごとの実行先を決め、計算律速の行列演算ではタイル単位でCPUとSMEへ分割し、注意ではSME向き行列段とCPU向きベクトル段をパイプライン化し、重みとKVキャッシュのSME向け配置を再利用する。Llama-3.2-3B、Qwen3-4B、Qwen3-30B-A3BをApple M4 Pro、MediaTek Dimensity 9500、KunPeng 920で評価し、llama.cpp比でエンドツーエンド最大3.94倍、プリフィル1.13〜5.42倍、デコード最大3.48倍を達成する。","list_summary":"CPU内のSMEと通常コアを共有帯域込みのルーフラインで使い分け、タイル分割・注意パイプライン・配置再利用によりLLM推論をllama.cpp比最大3.94倍高速化する。","authors":["Feiyang Chen","Haibo Chen"],"authors_affiliations":"IPADS, Shanghai Jiao Tong University","published":"2026-06-15","publication":"arXiv:2606.16332v1","publication_type":"Preprint","publication_status":"arXiv v1、2026-06-15。","lineage":"CPU推論、行列拡張、異種実行、ルーフライン最適化","topics":["LLM推論","CPU推論","Arm SME","異種実行","ルーフラインモデル","KVキャッシュ"],"importance":"GPU以外のCPU内行列アクセラレータを単なるカーネル置換ではなく、通常CPUコアと協調する異種資源として扱い、演算子形状・推論段階ごとに実行方針を変える実装まで示した点が重要である。","hardware_evaluation":"Apple M4 Pro、MediaTek Dimensity 9500、SME対応KunPeng 920 72F8 Server CPU。M4 Proは10性能コア、Dimensityは8性能コア、KunPeng比較は10スレッドを使用。","quality_effect":"モデル品質を変える近似ではなく実行方式の変更。主要性能はllama.cpp比エンドツーエンド最大3.94倍。","source":"https://arxiv.org/abs/2606.16332","sources":["https://arxiv.org/abs/2606.16332","https://www.researchgate.net/publication/407115245_SMEPilot_Characterizing_and_Optimizing_LLM_Inference_with_Scalable_Matrix_Extensions"],"code":null,"implementation":"C/C++で実装。SMEカーネルはKleidiAIの最適化アセンブリマイクロカーネルとArm C Language ExtensionsのSME組込み関数を使用。著者公式コードURLは一次資料で確認できない。","last_checked":"2026-09-23","references":[{"canonical_id":"arXiv:2512.21473","title":"Demystifying ARM SME to Optimize General Matrix Multiplications"}],"references_checked_at":"2026-09-23","references_source":"同一arXiv v1の全文参考文献節を確認","references_total":43,"audit_notes":"arXiv公式HTML/PDF取得はこの実行環境で拒否されたため、DOI 10.48550/arXiv.2606.16332、題名、著者、v1表記が一致するCC BY 4.0のPublic Full-textミラーを用い、本文冒頭から結論・参考文献まで同一版として通読した。"},"reservation":{"claim_id":"claim-78929a6ba475ed2b2f05a50c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0435bf18257a114df581ef2f",
+  "job_id": "job-research-3c62e3c72b715377",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0435bf18257a114df581ef2f",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

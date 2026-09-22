@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-78929a6ba475ed2b2f05a50c","job_id":"job-research-f28b959eef987bac","data":{"limitations":"評価はArm SME/SME2を持つApple、MediaTek、KunPengの三CPUに限られ、x86のAMX等へ同じ閾値やタイル分割則がそのまま移るとは限らない。ルーフラインは共有帯域と計算上限を中心にしたモデルで、実際のキャッシュ競合やSME命令を発行するCPUコアとの干渉を完全に隔離できない。著者自身も現行SMEはベクトル/GEMV、配置変換、CPUコアとの分離に改善余地があると述べる。GPU/NPUとの共同実行、デバイス転送費、より広いメモリ配置は扱わない。公式公開コードURLも一次資料で確認できないため再現性は実装記述に依存する。","differences":"従来のSME研究はGEMMなど個別カーネルのピーク性能とタイル配置を最適化するのに対し、SMEPilotはLLM全体でSMEをいつ使わないかまで含めて決める。llama.cppのような通常CPU推論やKleidiAI/Apple AccelerateのSME単独行列カーネルに対し、SMEPilotはCPUとSMEの計算能力が加算可能だが帯域は共有される点をモデル化し、演算子形状ごとにCPUのみ・SMEのみ・混合を切り替える。またFlashAttention CPUとの比較では、注意を一つのCPU演算として最適化するのではなく、SME向き行列段とCPU向きベクトル段をタイル間で重ねる。","implementation_status":"C/C++の実動推論エンジンを実装し、KleidiAIのアセンブリマイクロカーネルとACLE SME組込み関数を利用して、スマートフォン級SoC、PC級M4 Pro、サーバ級KunPengで実機評価している。オフライン計測器、オンライン計画器、タイル分割、注意パイプライン、重み/KV配置管理まで実装評価されている。一方、論文本文には著者公式の公開コードリポジトリURLがなく、第三者が同一実装を取得できる状態は確認できない。","research_positioning":"LLM推論基盤の観点では、SMEPilotはGPUオフロードではなくCPU内部の異種計算資源編成に位置する。重要なのは『アクセラレータがあれば全演算を移す』のではなく、算術強度と共有メモリ帯域から実行先を要求ごとに決める点であり、CPU/NPU/GPUや統合メモリ環境の共同推論にも一般化し得る設計原理である。\n\nMoEでは各エキスパートへ分散した結果、実効バッチが小さくなってSME利得が減るという観測も、エキスパート配置・バッチ形成・CPUオフロード研究と接続する。将来GPU/NPUまで含める場合は、本稿の計算上限だけでなく転送費、メモリ配置、KVキャッシュ、エキスパート常駐を同じ計画器へ組み込む必要があり、階層メモリ研究との接点が大きい。"},"reservation":{"claim_id":"claim-78929a6ba475ed2b2f05a50c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-0435bf18257a114df581ef2f",
+  "job_id": "job-research-3c62e3c72b715377",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0435bf18257a114df581ef2f",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

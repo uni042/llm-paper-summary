@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-78929a6ba475ed2b2f05a50c","job_id":"job-research-f28b959eef987bac","data":{"hardware":"Apple M4 Pro CPU、MediaTek Dimensity 9500、SME対応KunPeng 920 72F8 Server CPU。M4 ProとDimensityでは性能コア数に合わせてそれぞれ10、8スレッド、KunPengは公平比較のため10スレッド。M4 Pro上ではSME/CPUの計算量・帯域特性、消費電力、GPU比較も測定する。","software":"SMEPilotはC/C++。SMEカーネルはArm KleidiAIの最適化アセンブリマイクロカーネルとArm C Language Extensions SME組込み関数を利用。主要エンドツーエンド基準は各プラットフォームのllama.cpp既定CPUバックエンド。演算子比較にはApple Accelerate、GGML CPU、Arm KleidiAI SME、FlashAttention CPU、素朴なSME注意を用いる。","methodology":"モデルは密なLlama-3.2-3B、Qwen3-4BとMoEのQwen3-30B-A3Bで、30B-A3Bは端末メモリへ収めるため4ビット重み量子化を使う。タスクはRuler-4K/8K長文QA（平均プリフィル3324/7338、デコード4トークン）、GSM8K数学QA（平均プリフィル92、デコード100）、LongWriter-6K長文生成（平均プリフィル339、デコード5424）。系列長またはバッチを掃引し、プリフィルとデコードのエンドツーエンド遅延をllama.cppと比較する。M4 ProではFFN GEMM、注意、デコードFFN、デコード注意を演算子別に測り、タイル分割・注意パイプライン・配置認識を一つずつ外すアブレーションを行う。Qwen3-4B/Ruler-4KではmacOS powermetricsでシステム電力とエネルギーを測定し、Llama-3.2-3B/GSM8KではM4 Pro統合GPUとも比較する。","scope":"Arm SME/SME2を持つCPU上のLLM推論が対象。CPU通常コアとSMEは共有キャッシュ・メモリ帯域を持つという前提でモデル化する。評価は三CPU世代、三モデル、三実用タスクを含むが、NVIDIA/AMD GPUサーバやx86行列拡張、NPUとの共同実行は対象外。GPU/NPUとのより広い配置、転送費・メモリ配置を含む計画は将来課題である。"},"reservation":{"claim_id":"claim-78929a6ba475ed2b2f05a50c","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-0435bf18257a114df581ef2f",
+  "job_id": "job-research-3c62e3c72b715377",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0435bf18257a114df581ef2f",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
