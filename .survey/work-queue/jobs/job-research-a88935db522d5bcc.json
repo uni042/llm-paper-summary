@@ -12,7 +12,7 @@
   "source_url": "https://www.semanticscholar.org/paper/d883de304a869e555e8a453279310dcf7ba68432",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2608.07964-easybalance-cross-layer-load-balancing-in-distributed-moe-inference.md",
   "selection_reason": "expert-device mappingを変えずcross-layer workloadを共同scheduleしてMoE imbalanceを相殺し、追加overheadほぼなしでGPU idlingを多くの設定で40%以上削減。",
-  "status": "blocked",
+  "status": "blocked_permanent",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -21,8 +21,8 @@
   "created_at": "2026-09-20T22:15:20+00:00",
   "blocker": "Primary full text could not be safely retrieved through the authoritative routes on this retry. Official arXiv HTML/PDF endpoints for arXiv:2608.07964 return DisabledError. The authors' official EasyInfra repository confirms ICML 2026 acceptance and links OpenReview id skvrwTDx3m, but both the OpenReview forum and PDF routes are blocked by browser verification in this environment. No five-slot record was reconstructed from third-party copies.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-b333e241d03a39da290b4df3.json",
-  "blocked_attempts": 2,
-  "last_recorded_blocked_event": "2026-09-21T14:32:08+00:00",
+  "blocked_attempts": 3,
+  "last_recorded_blocked_event": "2026-09-22T00:36:05+00:00",
   "block_history": [
     {
       "attempt": 1,
@@ -33,9 +33,14 @@
       "attempt": 2,
       "blocked_at": "2026-09-21T14:32:08+00:00",
       "reason": "Primary full text could not be safely retrieved through the workflow's authoritative routes in this invocation. The official arXiv abstract/metadata for arXiv:2608.07964 was reachable, but both the official arXiv HTML and official arXiv PDF full-text endpoints failed in the available retrieval runtime. No conference/publisher full text or author/project-hosted identical manuscript was established. To avoid reconstructing the five-slot record from the abstract or third-party copies, this attempt is blocked."
+    },
+    {
+      "attempt": 3,
+      "blocked_at": "2026-09-22T00:36:05+00:00",
+      "reason": "Primary full text could not be safely retrieved through the authoritative routes on this retry. Official arXiv HTML/PDF endpoints for arXiv:2608.07964 return DisabledError. The authors' official EasyInfra repository confirms ICML 2026 acceptance and links OpenReview id skvrwTDx3m, but both the OpenReview forum and PDF routes are blocked by browser verification in this environment. No five-slot record was reconstructed from third-party copies."
     }
   ],
-  "last_blocked_at": "2026-09-21T14:32:08+00:00",
-  "retry_queued_at": "2026-09-21T22:48:29+00:00",
-  "completed_at": "2026-09-22T00:36:05+00:00"
+  "last_blocked_at": "2026-09-22T00:36:05+00:00",
+  "completed_at": "2026-09-22T00:36:05+00:00",
+  "blocked_permanent_at": "2026-09-22T01:18:06+00:00"
 }

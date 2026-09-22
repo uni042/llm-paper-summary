@@ -12,7 +12,7 @@
   "source_url": "https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae",
   "paper_path": "papers/inference/99-other-inference-systems/2026-22f3548ed6ae-gacer-m-granularity-aware-and-memory-centric-coordination-for-multi-tenant-deep-learning.md",
   "selection_reason": "生成AIを含む動的メモリ成長下で、operator分割による空間共有とmemory-driven temporal coordinationを統合し、OOM安全性を保ちながら1.33x容量・1.4x aggregate throughputを報告。GPU multi-tenant serving・メモリ管理系統に強く関連する。",
-  "status": "blocked",
+  "status": "blocked_permanent",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -21,8 +21,8 @@
   "created_at": "2026-09-20T23:10:57+00:00",
   "blocker": "Primary full text remains unavailable after the required official retrieval routes were retried. DOI 10.1109/TC.2026.3701443 is identifiable, but no accessible IEEE/publisher full text, author/official-project full text, or other official full-text copy could be retrieved. Search-accessible pages expose bibliographic metadata/abstract only; no five-slot record was synthesized from abstracts or secondary material.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-992613f3c0bf7bcde1b5d5ce.json",
-  "blocked_attempts": 2,
-  "last_recorded_blocked_event": "2026-09-21T11:29:00+00:00",
+  "blocked_attempts": 3,
+  "last_recorded_blocked_event": "2026-09-22T00:28:13+00:00",
   "block_history": [
     {
       "attempt": 1,
@@ -33,9 +33,14 @@
       "attempt": 2,
       "blocked_at": "2026-09-21T11:29:00+00:00",
       "reason": "Primary full text remains unavailable after a fresh retry. The IEEE article is identifiable by DOI 10.1109/TC.2026.3701443, but accessible search routes expose only bibliographic metadata/abstract; ResearchGate explicitly reports no full text available and offers only an author request. No five-slot research record was synthesized from abstract or secondary material."
+    },
+    {
+      "attempt": 3,
+      "blocked_at": "2026-09-22T00:28:13+00:00",
+      "reason": "Primary full text remains unavailable after the required official retrieval routes were retried. DOI 10.1109/TC.2026.3701443 is identifiable, but no accessible IEEE/publisher full text, author/official-project full text, or other official full-text copy could be retrieved. Search-accessible pages expose bibliographic metadata/abstract only; no five-slot record was synthesized from abstracts or secondary material."
     }
   ],
-  "last_blocked_at": "2026-09-21T11:29:00+00:00",
-  "retry_queued_at": "2026-09-21T19:28:13+00:00",
-  "completed_at": "2026-09-22T00:28:13+00:00"
+  "last_blocked_at": "2026-09-22T00:28:13+00:00",
+  "completed_at": "2026-09-22T00:28:13+00:00",
+  "blocked_permanent_at": "2026-09-22T01:18:06+00:00"
 }
