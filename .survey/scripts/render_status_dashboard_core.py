@@ -13,7 +13,6 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 import build_status_dashboard as evidence
-import reference_pool
 
 
 KINDS = ("research", "audit", "discovery")
@@ -53,6 +52,7 @@ def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
     durable unrelated/borderline ledgers every time the dashboard is rendered.
     """
     try:
+        import reference_pool
         pool = reference_pool.build_reference_pool(repo_root)
     except Exception as exc:
         return {
