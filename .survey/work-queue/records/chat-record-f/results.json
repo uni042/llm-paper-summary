@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1b188ce32f47e9723ddc14cd","job_id":"job-research-199b831b6808fd50","data":{"overview":"理論面ではKVEVICTIONがNP完全であることを示し、確率的追放＋自己正規化重要度補正の誤差を標本数mに対してバイアスO(1/m)、分散O(1/m)で制御する。実験では確率的追放と補正がLongBench/RULERの低〜中圧縮域で既存top-k法と同等以上の平均性能を示し、特にπmin-hがLlama3.2-3BとQwen3-4B、複数datasetにまたがるpairwise win scoreで最も頑健な順位を示す。目標圧縮率と実効圧縮率の差も極小である。","key_results":[{"metric":"計算量理論","value":"KVEVICTIONはNP-complete","baseline":"PARTITIONからの帰着","condition":"d=1, r=1/2, ε=0を含む簡略化設定","interpretation":"追放時点の注意出力保存ですら厳密最適化が困難であり、将来復号を含む実問題では近似推定が必要になる。"},{"metric":"補正推定量の誤差次数","value":"bias O(1/m), variance O(1/m)","baseline":"top-kはvariance 0だがbiasはunbounded","condition":"supportを覆う提案分布πからm標本を用いる自己正規化重要度サンプリング","interpretation":"標本数を増やすことで分散とバイアスの双方を減らせる一方、決定論的top-kの固定バイアスを回避する。"},{"metric":"タスク間頑健性","value":"πmin-hが比較方式中で最良のpairwise win ranking","baseline":"H2O, K-norm, SnapKV, StreamingLLM, TOVAおよび他の確率提案","condition":"Llama3.2-3B/Qwen3-4B, LongBench/RULER, 複数compression ratio","interpretation":"平均scoreだけでなく、特定taskでヒューリスティックが破綻するリスクを減らすことが提案法の主な利点。"},{"metric":"目標圧縮率追従","value":"target r=0.1/0.3/0.5/0.7/0.9に対し平均effective rは概ね±0.0005以内","baseline":"設定したglobal target compression ratio","condition":"Llama3, RULER; 4提案分布","interpretation":"復元抽出でユニーク要素数が確率的に変わっても、期待保持数からmを選ぶことで予算を高精度に制御できる。"},{"metric":"平均品質","value":"低〜中圧縮域で既存state-of-the-artと同等以上","baseline":"5種のtop-k KV eviction","condition":"LongBench/RULER weighted total score","interpretation":"補正の追加は単なる理論改善ではなく、同じ圧縮budgetで実用的な品質を維持する。"}],"negative_results":"確率的推定はtop-kと異なり分散を導入するため、標本数が少ない高圧縮域では必ずしも優位ではない。Figure 3では補正法の利点が特に低〜中圧縮域で強く、十分な標本がない領域では分散増大が効く。また評価は実サービングthroughputではなく生成品質中心で、重要度補正の演算オーバーヘッドが実運用の速度利益をどこまで相殺するかは未測定である。","interpretation":"この研究の価値は新しい単一ヒューリスティックのscoreを提案することより、既存scoreを提案分布として再利用し、追放時の選択と復号時の補正を一つの推定問題として扱える点にある。KV圧縮では保持集合だけでなく、捨てた確率質量が後続softmaxの正規化へ与える影響を明示的に扱う必要があることを示す。","quality_impact":"πmin-h等は平均品質を保ちながらtaskごとの極端な失敗を減らす方向に働く。ただし高圧縮率では標本不足による分散が増えるため、常にtop-kを上回るわけではなく、bias-variance trade-offを圧縮率に応じて選ぶ必要がある。"},"reservation":{"claim_id":"claim-1b188ce32f47e9723ddc14cd","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
+  "job_id": "job-research-b0919b5b9aea285a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d1d3b3caeff62a011e27f971",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

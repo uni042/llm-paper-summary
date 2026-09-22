@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-1b188ce32f47e9723ddc14cd","job_id":"job-research-199b831b6808fd50","data":{"limitations":"第一に、確率的追放は分散を導入するため、保持budgetが小さく標本数mが少ない高圧縮域ではtop-kより不安定になり得る。第二に、LongBenchは3 splitかつ3000 token未満、RULERは130例の部分集合であり、超長文脈や多様な生成タスクへの一般化は未確定である。第三に、モデルはLlama3.2-3BとQwen3-4Bに限られ、大規模モデルや異なる注意構造での評価がない。第四に、補正演算、標本回数・提案確率の追加metadata、乱数生成がサービングthroughputやkernel効率へ与える実測コストを報告していない。第五に、理論的な漸近補正は追放後の各層で生じる誤差伝播を完全に消す保証ではなく、有限標本でbias-variance trade-offが残る。","differences":"StreamingLLM、SnapKV、TOVA、H2O、K-normなどはscoreを計算して上位要素を決定論的に保持するのに対し、本研究はscoreを未正規化提案分布として解釈して標本化する。これにより保持集合自体に分散が入る代わりに、復号時に重要度重みを使って追放済み確率質量を推定できる。H2Oのような既存scoreはπH2Oとしてそのまま確率化可能であり、既存法を完全に置換するのではなく補正可能な推定器へ持ち上げる。さらにπmin系はvalueノルムを利用して期待値推定の分散最小化を狙い、πmin-hは過去queryを調和priorで統合する。従来研究が『どれを捨てるか』を主問題としたのに対し、本研究は『捨てた後にどう正規化誤差を補正するか』までを追放アルゴリズムの一部とする。","implementation_status":"arXiv v1プレプリント。著者所属UCLAの一次PDFが公開されている。評価はKVPress v0.5.3上で既存5方式と比較しており、論文の実験詳細にはA6000/A5000環境が記載される。独立した公開コードURLは本文確認範囲では特定できなかったためcode欄は未記載とした。","research_positioning":"KVキャッシュ圧縮研究の中では、メモリ管理やkernel最適化ではなく追放品質の理論化に重点を置く。特に『Pitfalls of KV Cache Compression』が示したtask/instruction依存の品質劣化に対し、ヒューリスティックの固定バイアスという統計的説明と復号時補正を与える後続方向と位置付けられる。キャッシュ予算を削るシステム研究に、推定理論のbias-variance観点を導入し、既存scoreを再利用できるため、SnapKV/H2O系の実装と組み合わせやすい。一方、実サービング速度の検証は今後のシステム側課題として残る。"},"reservation":{"claim_id":"claim-1b188ce32f47e9723ddc14cd","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
+  "job_id": "job-research-b0919b5b9aea285a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d1d3b3caeff62a011e27f971",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

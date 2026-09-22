@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1b188ce32f47e9723ddc14cd","job_id":"job-research-199b831b6808fd50","data":{"hardware":"実験はNVIDIA RTX A6000 48GBを2枚、RTX A5000 24GBを8枚用いて実施する。著者らはLongBench/RULERの各例が24GB GPU 1枚でも約3〜5秒で実行可能と記載しており、提案法自体は大容量データセンターGPUを必須としない。","software":"KVPress v0.5.3の評価パイプラインとSnapKV、TOVA、H2O、StreamingLLM、K-norm実装を利用し、提案するπmin、πmin-h、πH2O、πH2O-hと復号時補正を追加する。モデルはLlama3.2-3BとQwen3-4B。","methodology":"LongBenchはHotpotQA、QASPER、TriviaQAのうちcontext promptが3000 token未満の全例、RULERは計算量制約から130例の部分集合を評価する。圧縮率rを変え、各split固有のscorerを用いた平均total scoreと、各方式が他方式に勝つ割合を示すpairwise win scoreを比較する。提案法はhead単位で固定圧縮率にせず、全KV cacheの平均圧縮率が目標rになるよう標本数を選ぶ。追加実験で目標圧縮率と実効圧縮率の一致、重要度サンプリング温度、head/layerごとの適応配分を検証する。","scope":"評価は3B〜4B級モデル、LongBenchの3 splitとRULER部分集合に限定される。主張の中心は同一圧縮budgetでの品質とタスク間頑健性であり、実サービングのtokens/s、同時実行数、ピークKVメモリ削減量、追加補正kernelの実測遅延は主要評価ではない。理論結果は一般的な注意headに対するが、実験的な一般化範囲はこの2モデルと評価集合に限られる。"},"reservation":{"claim_id":"claim-1b188ce32f47e9723ddc14cd","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
+  "job_id": "job-research-b0919b5b9aea285a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d1d3b3caeff62a011e27f971",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

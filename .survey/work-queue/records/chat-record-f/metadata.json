@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1b188ce32f47e9723ddc14cd","job_id":"job-research-199b831b6808fd50","data":{"canonical_id":"arXiv:2608.28293","arxiv_id":"2608.28293","doi":"10.48550/arXiv.2608.28293","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.AI"]},"title":"A Probabilistic Interpretation of KV Cache Eviction","summary":"KVキャッシュ追放を注意出力の期待値推定として定式化し、最適な追放集合の決定がNP完全であることを示したうえで、確率的サンプリングと自己正規化重要度サンプリングによる復号時補正を導入する。既存のtop-k型追放をゼロ分散だが非有界バイアスを持つ推定量として統一的に解釈し、Llama3.2-3BとQwen3-4BをLongBench/RULERで評価して、同一圧縮率で競争力を保ちながらタスク間頑健性を改善する。","list_summary":"KV追放を期待値推定として定式化し、確率的追放＋復号時重要度補正で既存top-kのバイアスを抑えタスク間頑健性を高める。","authors":["Renato Geh","Alex Chen","Daniel Israel","Aditya Grover","Guy Van den Broeck"],"authors_affiliations":"University of California, Los Angeles","published":"2026-08-28","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-08-28)","lineage":"KV cache compression / KV eviction / probabilistic inference / importance sampling","topics":["KVキャッシュ追放","長文脈推論","重要度サンプリング","注意機構","キャッシュ圧縮"],"importance":"経験則中心だったKV追放に計算量・バイアス・分散の形式的枠組みを与え、追放後に失われた確率質量を復号時に補正する設計空間を示す。","implementation":"KVPress v0.5.3上でSnapKV、TOVA、H2O、StreamingLLM、K-normと比較する研究実装。確率的提案分布とIMPORTANCEATTENTION補正を追加。","hardware_evaluation":"NVIDIA RTX A6000 48GB×2およびRTX A5000 24GB×8。各LongBench/RULER例は24GB GPUでも約3〜5秒で実行可能と報告。","quality_effect":"同一圧縮率で平均性能を競争力ある水準に保ちつつ、固定top-kヒューリスティックが特定タスクで起こす破綻を減らすことを主眼とする。","source":"https://arxiv.org/abs/2608.28293","sources":["https://arxiv.org/abs/2608.28293","https://starai.cs.ucla.edu/papers/GehArxiv26.pdf"],"code":null,"last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary manuscript","references_total":30},"reservation":{"claim_id":"claim-1b188ce32f47e9723ddc14cd","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
+  "job_id": "job-research-b0919b5b9aea285a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d1d3b3caeff62a011e27f971",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
