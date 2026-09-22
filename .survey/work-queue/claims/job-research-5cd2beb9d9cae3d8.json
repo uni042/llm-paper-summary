@@ -1,29 +1,31 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-6569c1c278418b9ab09d495e",
+  "claim_id": "claim-b5919b99883e66617c28776a",
   "job_id": "job-research-5cd2beb9d9cae3d8",
-  "worker_id": "scheduled-chat-30",
+  "worker_id": "scheduled-chat-00",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-6569c1c278418b9ab09d495e",
-  "request_id": "claim-scheduled-chat-30-20260921T174100Z-7h",
-  "claimed_at": "2026-09-21T17:41:13+00:00",
-  "expires_at": "2026-09-21T18:34:22+00:00",
+  "attempt_id": "attempt-b5919b99883e66617c28776a",
+  "request_id": "claim-scheduled-chat-00-20260922T021200Z-7a3d21",
+  "claimed_at": "2026-09-22T02:11:11+00:00",
+  "expires_at": "2026-09-22T03:41:11+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-5cd2beb9d9cae3d8"
   ],
-  "previous_claim_id": "claim-7f1cfa62b8748ba1f034c4fa",
-  "record_bank": "f",
-  "record_bank_root": ".survey/work-queue/records/chat-record-f",
+  "previous_claim_id": "claim-6569c1c278418b9ab09d495e",
+  "record_bank": "c",
+  "record_bank_recovery": "repair-required-immutable-descriptor",
+  "record_bank_recovery_attempt_ids": [
+    "attempt-6569c1c278418b9ab09d495e"
+  ],
+  "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-6569c1c278418b9ab09d495e.json",
+  "record_bank_root": ".survey/work-queue/records/chat-record-c",
   "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record-f/results.json",
-    "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
-  },
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-21T18:34:22+00:00"
+    "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-c/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+  }
 }

@@ -2,11 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c09ccd78929d065b1168ff55",
-  "job_id": "job-research-00f6a78e028bd698",
-  "data": {},
+  "attempt_id": "attempt-b5919b99883e66617c28776a",
+  "job_id": "job-research-5cd2beb9d9cae3d8",
+  "data": {
+    "overview": "8モデルの調査ではモデル規模が大きいほどexpert内activation sparsityへの耐性が高く、Granite-1B-A400Mのcutoff 26.5%に対しLlama-4-Maverickは90.8%に達する。Qwen3.5-35B-A3B/122B-A10Bの実装評価では85〜87%付近でMoE layerを最大1.5〜2.5倍高速化し、Qwen3.5-35B-A3Bのend-to-endではH200で最大1.2倍、MI355Xで最大1.1倍を達成する。",
+    "key_results": [
+      {
+        "metric": "最大sparsity cutoff",
+        "value": "90.8%",
+        "baseline": "unmodified model average benchmark score",
+        "condition": "Llama-4-Maverick、baseline平均scoreの95%維持基準",
+        "interpretation": "大規模MoEほど選択expert内部に大きな冗長性が残ることを示す。"
+      },
+      {
+        "metric": "MoE layer speedup",
+        "value": "最大2.5×",
+        "baseline": "dense vLLM MoE execution",
+        "condition": "Qwen3.5-122B-A10B、RTX4090、85〜87%級sparsity、batch size 16〜128付近",
+        "interpretation": "資源制約が強く大規模なworkloadほどgather-based sparse executionの利得が大きい。"
+      },
+      {
+        "metric": "Qwen3.5-35B-A3B MI355X layer speedup",
+        "value": "1.55× at 85% target; 1.8× at 87% target",
+        "baseline": "dense 0.354 ms",
+        "condition": "batch size 128。85%時0.229 ms、87%時0.197 ms",
+        "interpretation": "95%精度維持cutoff付近でも実測高速化が得られる。"
+      },
+      {
+        "metric": "end-to-end speedup",
+        "value": "最大1.20× H200、最大1.10× MI355X",
+        "baseline": "dense vLLM",
+        "condition": "Qwen3.5-35B-A3B、85% target sparsity、dense/sparse batch-size switching有効",
+        "interpretation": "MoE layer高速化はAmdahl則で希釈されるがserving全体でも有意な改善を残す。"
+      },
+      {
+        "metric": "near-zero activation比率",
+        "value": "54.85%",
+        "baseline": "unmasked activation",
+        "condition": "Qwen3.5-35B-A3B expert 0 layer 0、WikiText-2 2048 samples、-0.003〜0.003 bin",
+        "interpretation": "SwiGLUでも多数のneuronが実質的に寄与しない長尾分布を持つ。"
+      }
+    ],
+    "negative_results": "60% target sparsityではQwen3.5-35B-A3B/MI355X/batch128で0.92×とdenseより遅く、sparsityだけでは高速化を保証しない。小batchではkernel launch等の固定overhead、大batchではdense BMMの高throughputが優位になる。dense gate projectionを必ず先に計算するためsparse化できるのは主にup/downの約2/3で、理論上の上限は約3×。shared expertはneuron重要度が高く、疎化しても並列実行のため性能利得が小さい。",
+    "interpretation": "本研究はMoEの粗粒度routing sparsityと、選択expert内部の細粒度activation sparsityを直交する最適化軸として組み合わせる。最大の価値はsparsity比率そのものではなく、既存vLLMのgraph/expert-parallel実行と共存するkernel経路を作り、精度・GPU効率・batch依存性まで含めてend-to-endで成立条件を示した点にある。",
+    "quality_impact": "Qwen3.5-35B-A3Bではdense平均accuracy 70.9%に対し85% targetで67.5%（約95.2%保持）、87% targetでは65.7%まで低下する。threshold maskingの実sparsityはtargetから±3 percentage points以内で、85% targetまではbaseline平均scoreの95%基準を維持する。"
+  },
   "reservation": {
-    "claim_id": "claim-c09ccd78929d065b1168ff55",
+    "claim_id": "claim-b5919b99883e66617c28776a",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }

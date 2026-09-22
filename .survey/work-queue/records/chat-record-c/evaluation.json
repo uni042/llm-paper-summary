@@ -2,11 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c09ccd78929d065b1168ff55",
-  "job_id": "job-research-00f6a78e028bd698",
-  "data": {},
+  "attempt_id": "attempt-b5919b99883e66617c28776a",
+  "job_id": "job-research-5cd2beb9d9cae3d8",
+  "data": {
+    "hardware": "MoE layer microbenchmarkはAMD MI355X、NVIDIA H200、NVIDIA RTX4090を使用。Qwen3.5-35B-A3BとQwen3.5-122B-A10Bを評価し、end-to-endはMI355XとH200上のQwen3.5-35B-A3Bを中心に測定する。",
+    "software": "vLLM development build 0.1.dev15965+g6506aec54へTriton製sparse activation kernelとfused sparse up-down projectionを統合。精度評価はlm-eval-harnessをvLLM backendで用いる。比較対象は同じvLLMのoriginal dense MoE execution。",
+    "methodology": "sparsity特性はGranite-1B-A400M、OLMoE-1B-7B、DeepSeek-V2-Lite、GPT-OSS-20B、Qwen3.5-35B-A3B/122B-A10B/397B-A17B、Llama-4-Maverickの8モデルをARC-Challenge、ARC-Easy、HellaSwag、WinoGrande、TruthfulQA-mc2で評価し、baseline平均scoreの95%を維持する最大total activation sparsityをcutoffとする。性能はWikiText-2入力で最初のMoE layerを100回実行し96% confidence interval付きで測定。target sparsity 60/70/80/85/87%を比較する。end-to-endではinput/output token数とrequest数を変え、startup profileでdense/sparse自動切替を有効化する。",
+    "scope": "activation sparsityの存在は1B〜400Bの8 MoEへ広く確認する一方、kernel性能の詳細評価は主にQwen3.5-35B-A3B/122B-A10B、end-to-endは35B-A3Bに集中する。GPU実装はgather-basedで、CPUや他accelerator、training時の効果は対象外。"
+  },
   "reservation": {
-    "claim_id": "claim-c09ccd78929d065b1168ff55",
+    "claim_id": "claim-b5919b99883e66617c28776a",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
