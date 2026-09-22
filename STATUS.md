@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 15:39:32 JST**
+> 自動生成: **2026-09-22 15:40:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **301** |
 | 未claim Research job | **300** |
 | 直近24hの検証済みResearch収録 | **19** |
-| 最終検証済みResearch収録 | **09-22 15:21:54 JST（17分前）** |
+| 最終検証済みResearch収録 | **09-22 15:21:54 JST（18分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（7時間6分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（7時間7分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -179,9 +179,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2609.09823` — AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding / worker `scheduled-chat-00`
-  - claim: **09-22 15:36:37 JST** / heartbeat: **—** / lease expiry: **09-22 17:06:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ca56f81ba7248b99.json`
+- `arXiv:2609.12550` — Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances / worker `scheduled-chat-00`
+  - claim: **09-22 15:40:07 JST** / heartbeat: **—** / lease expiry: **09-22 17:10:07 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b6a722146f5922c5.json`
 
 #### Audit
 
