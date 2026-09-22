@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-219bac9027693490a638aa72",
-  "job_id": "job-research-ff0b776f31e2fc4b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-219bac9027693490a638aa72",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-219bac9027693490a638aa72","job_id":"job-research-ff0b776f31e2fc4b","data":{"hardware":"全モデルは2×NVIDIA A100 GPUで学習。システム評価はthroughput、GPU peak memory、expert load coefficient of variation、all-to-all通信量を測定する。","software":"AdamW学習。既定12-layer Transformer、d_model=768、E=32、G=8、rank=16、recluster T=100、similarity fusion α=0.7。公開コードはszdtzpj/Breaking_the_moe_trilemma。","methodology":"品質評価はGLUE開発セットでMNLI-m accuracy、QQP F1、SST-2 accuracyとGLUE平均、WikiText-103でPPLを用いる。比較はactivated parameter規模を合わせたDense Transformer、Switch-Top2、Expert-Choice、MoE-Lite、D²-MoE。Full、Offloading、Quantizationの各構成を測る。アブレーションではonline clustering、low-rank compression、hierarchical routingを一つずつ外し、static clusteringとdynamic clusteringも比較する。追加でC4/Pile pretraining後のMMLU・HumanEval、HotpotQA 8kとWikiHop 16kの長文性能・throughput・latency・memoryを評価する。","scope":"中心実験は12層d_model=768の比較的小規模Transformerであり、公開フロンティアMoEそのものを圧縮した結果ではない。品質はSwitch-Top2よりGLUEで1.6点、WikiText PPLで2.3悪い一方、パラメータ・速度・メモリ・負荷均衡を同時改善するtrade-off評価である。NVMe offloadのストレージ機種、帯域、I/O latency詳細は本文表に十分記載されず、異なる階層メモリ環境への速度外挿には注意が必要。"},"reservation":{"claim_id":"claim-219bac9027693490a638aa72","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
