@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-herald-50b11451-02",
+  "kind": "research",
+  "attempt_id": "attempt-50b11451c81409b86f90c5e0",
+  "job_id": "job-research-3b95bafdcf04b501",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:c2439cf98cc07f3b1d1d1a30438d0c5942865198330151d882be3ad97b326722",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-c/metadata.json",
+      "blob_sha": "acc84a2122c17a56e4098fd8ed1bcf7ee701b16c"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-c/problem_method.json",
+      "blob_sha": "0d0ca9692b740454376fb6cddc1d1d3f2ce5d3c3"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-c/evaluation.json",
+      "blob_sha": "79eb5be2d0b38a3a8c84b6c329d0cd1884923760"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-c/results.json",
+      "blob_sha": "6b8c309d5e2123d33d8cbcef2c72fc50f666d334"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-c/positioning.json",
+      "blob_sha": "4c6652dca224b7111fa4e7204c563aee23df06ba"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T07:32:00+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md",
+    "status": "FAIL",
+    "file_bytes": 21786,
+    "prose_chars": 6282,
+    "paragraphs": 27,
+    "method_paragraphs": 13,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7933088106498511,
+    "japanese_chars": 4529,
+    "latin_chars": 1180,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 79.3% < 警告基準 80.0%"
+    ]
+  }
+}
