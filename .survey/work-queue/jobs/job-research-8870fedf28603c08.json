@@ -12,11 +12,14 @@
   "source_url": "https://doi.org/10.1016/j.knosys.2026.116244",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-rs-moe-coupled-expert-compression.md",
   "selection_reason": "activation peakを使ってexpert間を協調分解するcoupled compressionで、独立圧縮とは異なる設計軸を持つ。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T10:37:35+00:00"
+  "created_at": "2026-09-20T10:37:35+00:00",
+  "completed_at": "2026-09-22T18:46:26+00:00",
+  "blocker": "No reusable primary PDF/full-text copy for this DOI was found in the Library cache, and the current run has exhausted its external paper-retrieval budget after earlier full-text work. Completing the record from metadata or snippets would violate the full-primary-source requirement.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-52fdb7c45a3c9f701ff82032.json"
 }

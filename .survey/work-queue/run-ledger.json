@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T18:38:06.951023+00:00",
+  "updated_at": "2026-09-22T18:46:33.436226+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -39446,6 +39446,74 @@
           "type": "research",
           "canonical_id": "arXiv:2605.28207",
           "title": "Pruning and Distilling Mixture-of-Experts into Dense Language Models",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35769252497",
+      "first_recorded_at": "2026-09-22T18:46:33.436226+00:00",
+      "last_recorded_at": "2026-09-22T18:46:33.436226+00:00",
+      "signals": [
+        "research_completed",
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 2,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35769252497:1",
+          "recorded_at": "2026-09-22T18:46:33.436226+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35769252497",
+            "run_attempt": "1",
+            "source_sha": "71162035b96a09bc6ebc1c3150d5d6197ca3ba79"
+          },
+          "signals": [
+            "research_completed",
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-0d71a76b50bb4e7f",
+          "type": "research",
+          "canonical_id": "arXiv:2505.17639",
+          "title": "PreMoE: Proactive Inference for Efficient Mixture-of-Experts",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-458a8d0f006d0310",
+          "type": "research",
+          "canonical_id": "arXiv:2605.13997",
+          "title": "HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-8870fedf28603c08",
+          "type": "research",
+          "canonical_id": "DOI:10.1016/j.knosys.2026.116244",
+          "title": "RS-MoE: Coupled expert compression via activation-peak guided collaborative decomposition",
           "from": "ready",
           "to": "blocked"
         }
