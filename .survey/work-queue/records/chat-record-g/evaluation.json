@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-153fefa22e4198ce4ffc522b",
-  "job_id": "job-research-0bfa5a31fda6f9e8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-153fefa22e4198ce4ffc522b",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-153fefa22e4198ce4ffc522b","job_id":"job-research-0bfa5a31fda6f9e8","data":{"hardware":"複数host-memory moduleと複数NVMe SSDを備えたGPU serverで評価し、SSD direct I/OはSPDKを使用する。SPDK completion pollingには専用CPU coreを割り当てる。論文の主張はdevice数と帯域を横断したpooling効果を測る。","software":"LMCache系KV offloadingを比較基盤とし、layerwise pipelining (LP) と asynchronous KV loading (AsyncKV) を段階的baselineとして比較。提案系はKV orchestrator、GLT、bandwidth-aware allocator、SPDK KV-passthroughをserving pathへ統合する。","methodology":"LLaMA 3.1-8B、GPT-OSS-20B、Qwen3-30B-A3Bを用い、主に16K〜128Kの長文脈でTTFTとblocked I/O timeを測定する。baselineはLMCache、LMCache+LP、LMCache+LP+AsyncKV。主評価はfull unified KV pooling、orchestrator-only、passthrough-onlyの比較を含み、複数device並列化とfilesystem bypassの寄与を分離する。さらにpool metadata/coordination overheadを測り、長文脈でも84ms未満かつTTFTの約0.8%以下であることを確認する。","scope":"対象はKVをhost-memory/SSDへoffloadして後でretrieveする長文脈servingであり、KV圧縮・量子化・モデル精度改善は扱わない。SPDK pollingはCPU利用率を増やし専用coreを必要とする。複数tenantがstorage bandwidthを競合する条件は主要評価外で、user-level interruptやhybrid pollingは将来課題。"},"reservation":{"claim_id":"claim-153fefa22e4198ce4ffc522b","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
