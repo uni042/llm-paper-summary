@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-89bc3cc25133486a66c2d95b",
-  "job_id": "job-research-435dfcefc35588f8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-89bc3cc25133486a66c2d95b",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-89bc3cc25133486a66c2d95b","job_id":"job-research-435dfcefc35588f8","data":{"hardware":"大規模性は80-core Intel Xeonサーバ上の完全グラフシミュレーションで評価し、replica規模を25〜325 GPUへ変化させる。実機は4台の別ホストにRTX A5000×3とRTX 4500 Ada×1（各24GB VRAM）を配置し、1Gbps Ethernetで接続する。","software":"実機MoE servingはvLLM 0.21.0とRay 2.55.1を使用する。プローブはOLMoE-1B-7Bの最初のMoE層を残し、自己注意出力をゼロ化、ゲートを恒等化した試作。干渉評価の本番モデルはDeepSeek-MoE-16B-Chat。","methodology":"シミュレーションではn=25〜325、プローブサイズk∈{4,8}、同時故障d∈{1,2,4}を用い、GPU頂点・通信辺または双方へ一様ランダムに故障を注入する。第1段階・第2段階・合計のプローブ数を、全GPU対を一つずつ調べる総当たり検査と比較し、全故障を正しく局所化できたかも確認する。実機ではプローブモデルのGPU当たりVRAMを1〜4 GPUで測定し、本番モデルを5 RPSで継続運転しながら診断プローブを0〜10 RPSへ増やしてTTFT/TBT干渉を測る。","scope":"大規模GPU数での局所化精度は実クラスタではなくシミュレーションであり、実機は4 GPU・1Gbps Ethernetに限定される。プローブ一回が複数pairwise operationを含むため通信量正規化した比較は未実施。対象は持続的なGPU/通信経路グレー障害で、KVキャッシュミスやrouter imbalanceなど短時間ソフトウェア障害、物理NIC/NVSwitch等の根本原因解析は範囲外。"},"reservation":{"claim_id":"claim-89bc3cc25133486a66c2d95b","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
