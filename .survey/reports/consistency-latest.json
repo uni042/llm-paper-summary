@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-09-22T06:47:06.413547+00:00",
-  "status": "passed",
+  "checked_at": "2026-09-22T10:51:10.338214+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 7542,
-  "checked_file_count": 7542,
+  "inventory_file_count": 7823,
+  "checked_file_count": 7823,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -25,6 +25,12 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 550,
-  "findings": []
+  "external_url_count": 554,
+  "findings": [
+    {
+      "code": "paper_invalid_metadata",
+      "path": "papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md",
+      "detail": "published must use YYYY-MM or YYYY-MM-DD"
+    }
+  ]
 }
