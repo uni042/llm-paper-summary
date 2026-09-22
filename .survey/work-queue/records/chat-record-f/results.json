@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-a0ecf191f05aa48e02bfda2f","job_id":"job-research-71cfe275bb4fcca4","data":{"overview":"SiftMoEの主要結果は、Switch-base-8とXSum、Mixtral-8×7BとCommonsenseQA、GPT-OSS-20BとGSM8Kの3構成すべてで、許容偏差を調整することで精度低下を制御しながら通信エネルギーを削減し、上位K件方式、WDMoE、AdaptMoEより良好な精度・エネルギー交換関係を得たことである。低速フェージングでは帯域と層遅延制約を変えても一貫して低エネルギーで、高速フェージングでは瞬時通信路に応じる適応送信が均等送信よりさらにエネルギーを下げる。","key_results":[{"metric":"精度・エネルギー交換関係","value":"3構成すべてでSiftMoEの交換曲線が上位K件方式、WDMoE、AdaptMoEより良好","baseline":"実用上位K件方式、WDMoE、AdaptMoE","condition":"3つのモデル・タスク組合せ、低速フェージング","interpretation":"機能類似度を使った置換と省略により、同程度のタスク精度で通信エネルギーを下げるか、同程度のエネルギーで高い精度を得る領域を作る。"},{"metric":"許容偏差に対するエネルギー傾向","value":"層ごとの最大許容偏差を増やすほどトークン当たり平均エネルギーが単調に低下","baseline":"上位K件ルーティング","condition":"3つのモデル・タスク組合せ","interpretation":"精度予算を明示的に緩めるほど高コスト専門家を置換・省略でき、予測可能な品質・エネルギー制御になる。"},{"metric":"偏差推定の検証","value":"理論上界は実測偏差を上回りつつ近接し、オフライン・オンライン併用推定も実測を近く追跡","baseline":"実測した層出力偏差","condition":"Switch-base-8、Mixtral-8×7B、GPT-OSS-20B","interpretation":"事前較正した専門家対不一致と現在のゲート重みを組み合わせる軽量推定が、過度に保守的でない精度制約として機能する。"},{"metric":"システム制約への頑健性","value":"試験した帯域幅と層時間制限の範囲で比較手法より低エネルギーを維持","baseline":"上位K件方式、WDMoE、AdaptMoE","condition":"3構成の低速フェージング","interpretation":"単一の通信路設定だけでなく、帯域不足や遅延制約の変化に対して優位性が維持される。"},{"metric":"高速フェージング送信","value":"時刻別の適応送信は均等なビット配分より一貫して低エネルギー","baseline":"均等送信","condition":"高速フェージング、3構成","interpretation":"専門家選択だけでなく良好な瞬時通信路へ送信を寄せることで追加のエネルギー削減を得る。"},{"metric":"専門家読み込みの設計動機","value":"専門家読み込み約27.35ミリ秒に対し、上り約6.55ミリ秒＋下り約1.31ミリ秒","baseline":"Mixtral-8×7B専門家のPCIe Gen4読み込みと4096次元BF16隠れ状態の無線転送","condition":"A100読み込み値、上り10Mbps、下り50Mbpsの代表設定","interpretation":"エッジ環境では巨大な専門家重みを端末へ読み込むより、隠れ状態を専門家所在地へ送る方が短時間になり得る。"}],"negative_results":[{"name":"精度との交換が必要","description":"許容偏差を増やすとエネルギーは下がるがタスク精度も徐々に低下する。無損失圧縮ではなく、明示した偏差予算で劣化を制御する方式である。"},{"name":"無線評価はシミュレーション中心","description":"無線エネルギーと遅延は通信路モデルとGPS由来距離を用いたシミュレーションで、実際の複数ノード無線クラスタ上の端から端までのエネルギー測定ではない。"},{"name":"較正分布への依存","description":"専門家対の不一致量は較正分布が推論時分布に近いことを前提とし、モデル更新や大きな分布変化では再較正が必要になる。"}],"interpretation":"SiftMoEはゲート得点だけで専門家重要度を決めず、選択変更が出力へ与える理論誤差と、その専門家へ到達する通信費を同じ最適化へ入れる。専門家の冗長性を通信資源へ交換するため、キャッシュやオフロードとは異なる『どの専門家を実行するか自体を通信路に合わせて変える』系統である。","quality_impact":"小さな偏差予算では理想上位K件方式に近い精度を維持し、中程度の範囲では実際の通信失敗を含む実用上位K件方式を上回る。大きな予算では精度低下が増えるため、検証データで運用点を選ぶことを論文は推奨する。"},"reservation":{"claim_id":"claim-a0ecf191f05aa48e02bfda2f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-6b68d1581746099c18d8092e",
+  "job_id": "job-research-23b60cfb5b252b01",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6b68d1581746099c18d8092e",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

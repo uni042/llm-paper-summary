@@ -1,5 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a0ecf191f05aa48e02bfda2f","job_id":"job-research-71cfe275bb4fcca4",
-  "data":{"canonical_id":"arXiv:2603.23888","arxiv_id":"2603.23888","doi":"10.48550/arXiv.2603.23888","openreview_id":null,"arxiv_categories":{"primary":"cs.IT","cross_list":[]},"title":"SiftMoE: Similarity-Aware Energy-Efficient Expert Selection for Wireless Distributed MoE Inference","summary":"SiftMoEは、無線エッジに分散配置したMoEで通常のTop-Kルーティングが通信路状態を無視して高い通信エネルギーと遅延を招く問題に対し、エキスパート間の機能類似度とルーティング重みから置換・スキップによる出力偏差を理論的に上界化し、その誤差予算と遅延制約の下で通信エネルギーを最小化するエキスパート選択法である。低速フェージングでは単一トークン復号と複数トークン事前充填を最適化し、高速フェージングでは決定論的な期待エネルギー代理問題と動的計画法による時刻別送信量制御を組み合わせる。Switch-base-8/XSum、Mixtral-8×7B/CommonsenseQA、GPT-OSS-20B/GSM8Kの全組合せで、Top-K、WDMoE、AdaptMoEより良好な精度・エネルギー交換関係と低い通信エネルギーを示す。","list_summary":"エキスパートの機能類似度から置換・スキップ時の誤差上界を求め、無線路状態・遅延・精度制約を同時に扱う最適化で、分散MoE推論の通信エネルギーをTop-K系手法より削減する。","authors":["Qian Chen","Xianhao Chen","Kaibin Huang"],"authors_affiliations":"Department of Electrical and Computer Engineering, The University of Hong Kong","published":"2026-03-25","publication":"arXiv preprint","publication_type":"プレプリント","publication_status":"arXiv:2603.23888v2, 25 Aug 2026","lineage":"wireless distributed MoE / adaptive expert selection / expert replacement and skipping / communication-aware inference","topics":["MoE推論","エキスパート選択","無線分散推論","通信エネルギー","エキスパート類似度"],"importance":"MoEのエキスパート選択をモデル内部のルータ精度だけでなく通信路・遅延・エネルギーと結合し、置換とスキップの精度影響を理論上界で制約へ落とす。分散・階層メモリ系の推論最適化を無線エッジへ拡張する系統として重要。","implementation":"論文はアルゴリズム、理論解析、シミュレーション設定を公開するが、本文で公式コード公開は確認できない。","hardware_evaluation":"エキスパートのロード時間と計算時間はNVIDIA GeForce RTX 4090で測定し、無線側はMicrosoft GeoLife GPS軌跡を使った最大150mのサービス領域とGammaフェージングでシミュレーションする。","quality_effect":"層ごとの許容偏差を小さくすると理想Top-Kに近い精度を保ち、許容偏差を増やすほどエネルギーを単調に削減する。3モデル・3データセットでTop-K/WDMoE/AdaptMoEより良好な精度・エネルギー交換関係を報告。","source":"https://arxiv.org/abs/2603.23888","sources":["https://arxiv.org/pdf/2603.23888"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"arXiv primary manuscript","references_total":0},
-  "reservation":{"claim_id":"claim-a0ecf191f05aa48e02bfda2f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-6b68d1581746099c18d8092e",
+  "job_id": "job-research-23b60cfb5b252b01",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6b68d1581746099c18d8092e",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
