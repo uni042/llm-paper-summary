@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 07:30:36 JST**
+> 自動生成: **2026-09-23 07:35:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **200** |
-| 未claim Research job | **198** |
+| 収録候補論文 | **199** |
+| 未claim Research job | **197** |
 | 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-23 07:30:32 JST（4秒前）** |
+| 最終検証済みResearch収録 | **09-23 07:30:32 JST（4分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **200** |
+| canonical_id確認済みの一意な候補論文 | **199** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **200** |
+| 非終端Research job合計 | **199** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（22時間58分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（23時間2分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **1** | **0** | **0** | **2** | **0** | — |
+| Research | **20** | **2** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **20** | **4** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **20** | **5** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -146,7 +146,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research（最新Research/Audit run）
 
 - 最新観測run: **2026-09-23 07:00 JST** / worker `scheduled-chat-00`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-0686f88e90fa51aa74f2c5d1.json` (job `job-research-c4a93ea297e613d5`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-0686f88e90fa51aa74f2c5d1.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-26d9f483bb0b2b6799913b3e.json` (job `job-research-0d7416aaa0ab7962`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-26d9f483bb0b2b6799913b3e.json` (`ok=true`)
 
@@ -179,9 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3832810.3832894` — Cross-Layer Performance Analysis of Single-GPU Large Language Model Inference / worker `scheduled-chat-00`
-  - claim: **09-23 07:30:23 JST** / heartbeat: **—** / lease expiry: **09-23 09:00:23 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c4a93ea297e613d5.json`
+- `DOI:10.1007/s10462-026-11651-1` — I/o for LLM inference: a survey of storage and memory bottlenecks / worker `scheduled-chat-00`
+  - claim: **09-23 07:31:45 JST** / heartbeat: **—** / lease expiry: **09-23 09:01:45 JST**
+  - evidence: `.survey/work-queue/claims/job-research-15688dbb0cd11f1c.json`
 - `arXiv:2609.14213` — Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution / worker `scheduled-chat-30`
   - claim: **09-23 07:29:12 JST** / heartbeat: **—** / lease expiry: **09-23 08:59:12 JST**
   - evidence: `.survey/work-queue/claims/job-research-aa3e3c19262a245a.json`
@@ -204,7 +206,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **200** |
+| ready | **199** |
 
 ### 候補の重複・識別情報欠損
 
@@ -232,8 +234,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **334** |
-| └ Research | **262** |
+| 成功result未照合のimmutable submission | **335** |
+| └ Research | **263** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
