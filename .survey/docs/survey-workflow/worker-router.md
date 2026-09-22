@@ -312,6 +312,24 @@ runtime_condition: none
 - final responseはfinalization gateが許可した場合だけ行う。
 - 残り600秒以下の開始禁止窓に入ったら新規独立作業を開始しない。**ただし開始済みDiscovery round（precheck result待ち、成功precheckの評価中、Discovery submission result待ち、正規recovery中）もResearch/Auditの開始済み作業と同じく継続対象**であり、600秒到達だけで終了してはならない。進行中作業・必要な非同期結果確認が本当に0件のときだけ安全handoff後に終了してよい。残り180秒以下では新規内容作業を止め、耐久保存と安全な引き継ぎだけを行う。処理中resultが残る場合、180秒までは10秒間隔で追跡し、それでもpendingならsubmission/request identity・result path・現在状態・次に行うべき正規操作が耐久保存済みであることを確認してhandoffする。
 
+### 7.3 実行環境・transport障害の診断記録
+
+Scheduled Chatで操作不能・platform limit・transport障害を理由に継続不能またはhandoffする場合、単に「操作できない」「GitHub操作を継続できない」と記録してはならない。**失敗した具体的な操作を、再現可能な粒度で必ず記録する。** 通常チャットとScheduled Chatでは利用可能なtool/transportが異なり得るため、リポジトリ回帰と実行環境差を切り分けられる情報を残す。
+
+最低限、次をrun-stateの `runtime_condition_detail`、耐久handoff、最終報告のうち保存可能な箇所へ記録する。
+
+- 失敗した段階（例: HEAD読取、worker-router読取、claim request write、Actions確認、result読取、record bank write、completed-submission request write、submission result確認）。
+- **実際に試した操作/transport**（GitHub read、GitHub write、Actions read、Library write等）。利用可能なtool名を推測で列挙せず、実際に呼び出した操作だけを記録する。
+- 対象repository/path/request_id/attempt_id等のidentity。秘密情報・認証情報は記録しない。
+- 観測したエラー種別と、可能なら短いerror message / status。エラーが返る前にplatform側でtool call自体を拒否した場合はその事実を明記する。
+- 正規回復として何を何回試したか、その結果。
+- **直前まで成功していた操作**。たとえばHEADとworker-routerのreadは成功したがwriteだけ失敗した場合、それを明示する。
+- 「未試行」「利用不能」「試行して失敗」を区別する。利用可能な正規transportを試していない状態で `transport_unrecoverable` と結論しない。
+
+GitHub read/writeの一部だけが失敗した場合は、第6節のprobeと正規回復を行い、read成功をwrite成功と同一視しない。逆にwrite失敗をGitHub全体のread不能とも扱わない。Scheduled Chat固有の能力差が疑われる場合も、観測事実だけを記録し、リポジトリ変更が原因だと推測してhard stopにしない。
+
+hard stop / safe handoffに入る場合の最終報告には、少なくとも **`failed_operation`、`last_successful_operation`、`recovery_attempts`、`observed_error`** に相当する4情報を人間が読める形で含める。これらを特定できない場合は「不明」と明記し、曖昧な一般文へ置き換えない。
+
 ## 8. 誤経路に入った場合
 
 実行可能スクリプトが標準エラー出力（stderr）へ出す `[WORKER-GUIDE]` は、そのコマンド実行中の**必須行動指示**である。ワーカーは表示された順番に従い、ガイドが明示した完了条件を満たす前に次段へ進まない。
