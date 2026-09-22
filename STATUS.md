@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 11:22:47 JST**
+> 自動生成: **2026-09-22 11:23:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -125,9 +125,9 @@
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2509.16105` — DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning / worker `scheduled-chat-00`
-  - claim: **09-22 11:21:24 JST** / heartbeat: **—** / lease expiry: **09-22 12:51:24 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1b89c86f687054e4.json`
+- `arXiv:2511.04805` — PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Sparse Expert Merging and Bit-packed inference / worker `scheduled-chat-00`
+  - claim: **09-22 11:22:52 JST** / heartbeat: **—** / lease expiry: **09-22 12:52:52 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8e7748dc329cd36d.json`
 
 #### Audit
 

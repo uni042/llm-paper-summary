@@ -79,14 +79,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-8e7748dc329cd36d",
+      "job_id": "job-research-1b89c86f687054e4",
       "type": "research",
       "lane": null,
       "priority": 98,
-      "canonical_id": "arXiv:2511.04805",
-      "title": "PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Sparse Expert Merging and Bit-packed inference",
-      "source_url": "https://arxiv.org/abs/2511.04805",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.04805-puzzlemoe-sparse-merging-bitpacked.md",
+      "canonical_id": "arXiv:2509.16105",
+      "title": "DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning",
+      "source_url": "https://arxiv.org/abs/2509.16105",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-22T02:15:09+00:00"
+  "generated_at": "2026-09-22T02:22:55+00:00"
 }
