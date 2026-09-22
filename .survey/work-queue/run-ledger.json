@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T16:04:02.780668+00:00",
+  "updated_at": "2026-09-22T16:05:09.516238+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -38480,6 +38480,56 @@
           "type": "research",
           "canonical_id": "DOI:10.1109/TON.2026.3704584",
           "title": "Efficient Mixture-of-Experts Model Inference at the Edge via Adaptive Expert Merging",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35751669075",
+      "first_recorded_at": "2026-09-22T16:05:09.516238+00:00",
+      "last_recorded_at": "2026-09-22T16:05:09.516238+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35751669075:1",
+          "recorded_at": "2026-09-22T16:05:09.516238+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35751669075",
+            "run_attempt": "1",
+            "source_sha": "90772b92f34f7bdf72d84c21993840318eaa9374"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-cf624ab39be56123",
+          "type": "research",
+          "canonical_id": "arXiv:2609.03949",
+          "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Sparse-Attention Signal in a Vestigial Branch",
           "from": "ready",
           "to": "blocked"
         }
