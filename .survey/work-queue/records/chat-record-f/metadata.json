@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-326b3f3f66e611a32551fa41",
-  "job_id": "job-research-07f0e94c3c687e36",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-326b3f3f66e611a32551fa41",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-326b3f3f66e611a32551fa41","job_id":"job-research-07f0e94c3c687e36","data":{"canonical_id":"DOI:10.24963/ijcai.2026/568","arxiv_id":null,"doi":"10.24963/ijcai.2026/568","openreview_id":null,"arxiv_categories":{"primary":null,"cross_list":[]},"title":"SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL","summary":"SplitScalingは、プリフィル・デコード分離LLMサービングで到着率と入出力トークン比が同時に変動する二重バーストに対し、両プールを独立に増減する深層強化学習型オートスケーラと、起動直後の新ノードへ待機要求を即時再割当する仕組みを組み合わせる。BurstGPTのAzure実負荷トレース再生でSLOを維持しつつ、最適静的構成比で25.2%、HeteroScale比で28.3%計算資源コストを削減した。","list_summary":"プリフィル／デコード各プールを深層強化学習で独立伸縮し、新規ノードへ待機要求を即時再割当して、バースト負荷下でSLOを守りながら静的構成比25.2%の計算コストを削減する。","authors":["Wei Xiao","Xuefeng Huang","Weijia Shi","Baokang Zhao"],"authors_affiliations":"National University of Defense Technology","published":"2026","publication":"Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-26), Main Track, pp. 5101-5109","publication_type":"Conference","publication_status":"Published","lineage":"disaggregated prefill-decode serving / autoscaling / scheduling / reinforcement learning","topics":["分離LLMサービング","オートスケーリング","深層強化学習","プリフィル・デコード","バースト負荷","SLO"],"importance":"分離推論で固定PD比を前提にせず、負荷構造を観測して各プールを独立制御する点と、スケールアウト遅延中のキュー滞留を再スケジューリングで直接解消する点が重要。","hardware_evaluation":"Splitwiseベースの高忠実度シミュレーション／テストベッドでAzure OpenAI由来BurstGPTトレースを元時刻・入出力長のまま再生し、Prompt/Tokenインスタンス数を資源量として評価。","quality_effect":"モデル出力品質は変更せず、TTFT/TBT/E2EのSLO達成、キュー待ち、インスタンス数、計算コストを制御対象とする。","source":"https://www.ijcai.org/proceedings/2026/568","sources":["https://www.ijcai.org/proceedings/2026/568","https://www.ijcai.org/proceedings/2026/0568.pdf"],"code":"https://github.com/Onlytonight/SplitScaling","implementation":"Splitwise系分離構成にAtomic Scheduler、SACベースScaling Controller、Scaling Managerを実装。状態にはRPS変化、キュー、拒否、各プール規模、バックログ、平均トークン長等を含む。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-326b3f3f66e611a32551fa41","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
