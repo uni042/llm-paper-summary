@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 02:04:21 JST**
+> 自動生成: **2026-09-23 02:17:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **228** |
-| 未claim Research job | **228** |
-| 直近24hの検証済みResearch収録 | **55** |
-| 最終検証済みResearch収録 | **09-23 01:56:16 JST（8分前）** |
+| 収録候補論文 | **227** |
+| 未claim Research job | **226** |
+| 直近24hの検証済みResearch収録 | **56** |
+| 最終検証済みResearch収録 | **09-23 02:17:32 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **228** |
+| canonical_id確認済みの一意な候補論文 | **227** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **228** |
+| 非終端Research job合計 | **227** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（17時間31分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（17時間45分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **33** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **33** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **33** | **4** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **33** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 02:17:32 JST** [research] `arXiv:2609.19683` — MiX: Micro-Inverted-Scaling for End-to-End Low-Bit Vision-Language Model Acceleration
+  - job: `.survey/work-queue/jobs/job-research-2738618c3feb4d82.json`
+  - result: `.survey/work-queue/results/research/attempt-f71c9e148c6dfbb3490291b5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-f71c9e148c6dfbb3490291b5.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md`
 - **09-23 01:56:16 JST** [research] `arXiv:2609.08231` — SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans
   - job: `.survey/work-queue/jobs/job-research-0d6b250579950fce.json`
   - result: `.survey/work-queue/results/research/attempt-fec4b42510381cc0bbc4dd6e.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-3e9870d1ea6c812acfc6fb72.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3e9870d1ea6c812acfc6fb72.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md`
-- **09-23 00:10:43 JST** [research] `arXiv:2410.08589` — Retraining-Free Merging of Sparse MoE via Hierarchical Clustering
-  - job: `.survey/work-queue/jobs/job-research-f3d9c2c6da00178e.json`
-  - result: `.survey/work-queue/results/research/attempt-b75922391156a97f6cc44521.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b75922391156a97f6cc44521.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md`
 
 ### Audit
 
@@ -178,8 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `DOI:10.1145/3745756.3809243` — VLMCache: Efficient On-Device Vision-Language Model Inference / worker `scheduled-chat-00`
+  - claim: **09-23 02:17:18 JST** / heartbeat: **—** / lease expiry: **09-23 03:47:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-82ca57f0d331b40f.json`
 
 #### Audit
 
@@ -199,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **228** |
+| ready | **227** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **939** |
+| inference/training/survey配下の論文Markdown実体 | **940** |
 
 ### immutable submissionの未照合
 
