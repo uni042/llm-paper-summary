@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T14:30:15.749432+00:00",
+  "updated_at": "2026-09-22T14:35:49.415461+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -37930,6 +37930,56 @@
           "type": "research",
           "canonical_id": "arXiv:2502.04416",
           "title": "Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35741289993",
+      "first_recorded_at": "2026-09-22T14:35:49.415461+00:00",
+      "last_recorded_at": "2026-09-22T14:35:49.415461+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35741289993:1",
+          "recorded_at": "2026-09-22T14:35:49.415461+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35741289993",
+            "run_attempt": "1",
+            "source_sha": "8779e55ae43d5c5271c76338b4668bccfa16b286"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-81731225ea65410f",
+          "type": "research",
+          "canonical_id": "arXiv:2306.03745",
+          "title": "Soft Merging of Experts with Adaptive Routing",
           "from": "ready",
           "to": "completed"
         }
