@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-838569c6f399cb046e74080e",
+  "job_id": "job-research-f10be2e9a7bd04f7",
+  "claim_id": "claim-838569c6f399cb046e74080e",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "IJCAI 2026公式詳細ページから書誌・抄録・主要主張は取得できたが、この実行環境ではリンク先PDF本文を取得できず、タイトル・DOI・著者名による別の一次資料経路探索でも公式preprint・著者配布版・公式実装に到達できなかった。検索結果や第三者要約から欠落する手法・評価条件を推測せず、一次資料全文不足として一時blockedにする。",
+  "retrieval_evidence": [
+    "https://www.ijcai.org/proceedings/2026/657 — IJCAI公式の書誌・抄録・ページ5901-5909を取得",
+    "https://doi.org/10.24963/ijcai.2026/657 — IJCAI公式詳細ページへ解決",
+    "IJCAI公式PDFリンク — この実行環境では本文取得不能",
+    "論文タイトル・DOI・著者名でpreprint/GitHub/著者配布版を探索したが検証可能な一次資料全文へ到達できず"
+  ],
+  "blocked_at": "2026-09-22T06:34:00Z"
+}
