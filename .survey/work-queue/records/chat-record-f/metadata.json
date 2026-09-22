@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-1256251da35a70a67b7c0223",
-  "job_id": "job-research-1c695c55b9711b2f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1256251da35a70a67b7c0223",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1256251da35a70a67b7c0223","job_id":"job-research-1c695c55b9711b2f","data":{"canonical_id":"arXiv:2506.23266","arxiv_id":"2506.23266","doi":"10.1609/aaai.v40i27.39464","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging","summary":"Sub-MoEは、専門家統合で異なる専門家の重みを直接平均するとパラメータ衝突が起きる問題に対し、機能的に似た専門家を適応クラスタリングし、同一群の重みを連結して特異値分解（SVD）する。共有直交基底Uと専門家固有Vへ揃えた後、Vだけをルータ活性頻度で重み付き統合し、UΣVで再構成する。Mixtral-8x7Bでは8→6専門家で平均精度0.64、8→4で0.58を維持し、4専門家時のHC-SMoE 0.51を上回る。拡張Sub-MoE†は活性依存の切り詰めSVDで専門家内部も圧縮し、最大約1.3倍のスループット向上を示す。","list_summary":"機能類似度クラスタリングと共有部分空間SVDでMoE専門家を整列し、活性頻度重み付きV統合でパラメータ衝突を抑える学習不要の専門家統合。","authors":["Lujun Li","Qiyuan Zhu","Jiacheng Wang","Xiaoyu Qin","Wei Li","Hao Gu","Sirui Han","Yike Guo"],"authors_affiliations":"Hong Kong University of Science and Technology; Xi'an Jiaotong University; Tsinghua University; University of Birmingham","published":"2025-06-29","publication":"AAAI 2026, Proceedings of the AAAI Conference on Artificial Intelligence 40(27), 22994-23002","publication_type":"Conference paper","publication_status":"AAAI 2026 published","lineage":"MoE圧縮 / expert merging / subspace alignment / SVD / adaptive clustering","topics":["MoE","専門家統合","モデル圧縮","特異値分解","クラスタリング","推論効率化"],"importance":"専門家統合の失敗要因を低い専門家間類似度によるパラメータ衝突として捉え、直接重み平均ではなく共有部分空間で整列してから統合する。専門家数削減と専門家内部圧縮を一つの枠組みに接続し、Qwen3を含む複数MoEで検証しているためMoE圧縮系統の重要な比較点になる。","hardware_evaluation":"全実験はNVIDIA H800 GPU 8枚。Sub-MoE†のランタイム表ではMixtral 8x7B原型87.7 token/sに対し、6専門家・30%専門家内圧縮で120.9 token/s。","quality_effect":"Mixtral-8x7Bの平均精度は原型0.67、6専門家Sub-MoE 0.64、4専門家0.58。4専門家HC-SMoEは0.51。Qwen3-30B-A3Bでは128専門家原型0.69、64専門家Sub-MoE 0.57、HC-SMoE 0.38。","source":"https://arxiv.org/abs/2506.23266","sources":["https://arxiv.org/abs/2506.23266","https://arxiv.org/html/2506.23266","https://doi.org/10.1609/aaai.v40i27.39464"],"code":"https://github.com/siruihan2024/Sub-MoE","implementation":"著者公開リポジトリあり。論文は追加学習・探索を要求しない統合手法として提示するが、クラスタリングと頻度推定には校正データを使用する。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-paper-reference-section","references_total":0},"reservation":{"claim_id":"claim-1256251da35a70a67b7c0223","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
