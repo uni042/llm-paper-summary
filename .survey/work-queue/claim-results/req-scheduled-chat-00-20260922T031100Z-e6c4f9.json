@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-scheduled-chat-00-20260922T031100Z-e6c4f9",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-4dc1463f3235b886",
+      "claim_id": "claim-a952bf0b515b043bf649c82d",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-a952bf0b515b043bf649c82d",
+      "claimed_at": "2026-09-22T03:11:39+00:00",
+      "expires_at": "2026-09-22T04:41:39+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-4dc1463f3235b886"
+      ],
+      "job": {
+        "job_id": "job-research-4dc1463f3235b886",
+        "type": "research",
+        "parent_job_id": "job-34ad3eabafff29f2",
+        "priority": 98,
+        "canonical_id": "arXiv:2603.18492",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "AIMER: Calibration-Free Task-Agnostic MoE Expert Pruning",
+        "source_url": "https://arxiv.org/abs/2603.18492",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.18492-aimer-calibration-free-pruning.md",
+        "selection_reason": "calibration dataを使わずweight concentrationからexpert redundancyを評価し、task-agnostic expert pruningの前処理コストとdata sensitivityを解消する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T11:01:14+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T03:11:39+00:00",
+  "checkpoint_released": 0
+}
