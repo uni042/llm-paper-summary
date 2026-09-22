@@ -21,7 +21,6 @@ import json
 
 
 ASYNC_WAIT_POLL_SECONDS = 10
-MAX_PIPELINE_AHEAD_COUNT = 2
 
 
 def yn(value: str) -> bool:
@@ -222,14 +221,14 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action = "CHECK_SUBMISSION_STATE"
             finalization_allowed = False
         elif transient_submission_wait:
-            if handoff_window_active or pipeline_ahead_count >= MAX_PIPELINE_AHEAD_COUNT or not independent_work:
-                decision = "CONTINUE"
-                required_action = "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT"
-                finalization_allowed = False
-            else:
-                decision = "CONTINUE"
+            decision = "CONTINUE"
+            if handoff_window_active:
+                required_action = "MONITOR_SUBMISSION_RESULTS"
+            elif independent_work:
                 required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
-                finalization_allowed = False
+            else:
+                required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
+            finalization_allowed = False
         elif active_assignment:
             decision = "CONTINUE"
             required_action = "CONTINUE_ASSIGNED_WORK"
@@ -309,12 +308,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
 
     submission_wait_action = "none"
     submission_wait_seconds = 0
-    if required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
+    if required_action == "MONITOR_SUBMISSION_RESULTS":
         submission_wait_seconds = ASYNC_WAIT_POLL_SECONDS
         submission_wait_action = (
-            "keep_same_submission_identity; do_not_duplicate_submission; wait_10_real_seconds; "
-            "refresh_latest_head_and_matching_submission_result; if_available_check_survey_submission_fast; "
-            "if_result_still_pending_wait_10_real_seconds_again; repeat_until_result_or_terminal_hard_stop"
+            "do_not_start_new_paper_in_handoff_window; keep_all_pending_submission_identities; "
+            "wait_10_real_seconds; refresh_latest_head_and_pending_submission_results; "
+            "follow_each_result_next_action_or_recovery_steps; repeat_until_result_or_final_180_second_handoff"
         )
 
     discovery_wait_action = "none"
@@ -346,10 +345,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "担当確保結果が60秒以上pendingです。新しいrequestは発行せず、Survey claim fast laneのActions状態と"
             "同一workerのtransport healthを確認してから、同じrequest_idを10秒ごとに再確認します。"
         )
-    elif required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
+    elif required_action == "MONITOR_SUBMISSION_RESULTS":
         progress_notice = (
-            "最大2本の先行枠を使い切っているため、さらに次へ進む前に最古の未確定submission resultを確認します。"
-            "pendingなら同じsubmissionを10秒ごとに再確認します。"
+            "残り600秒以下の開始禁止窓に入っているため新しい論文は開始しません。"
+            "既存の未確定submission resultを10秒ごとに確認し、返されたnext_action / recovery_stepsに従います。"
         )
     elif required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
         progress_notice = (
@@ -368,7 +367,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = progress_notice
     elif required_action == "CHECK_SUBMISSION_STATE":
         next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
-    elif required_action == "WAIT_FOR_PREVIOUS_SUBMISSION_RESULT":
+    elif required_action == "MONITOR_SUBMISSION_RESULTS":
         next_action_message = progress_notice
     elif required_action in {"WAIT_FOR_DISCOVERY_PRECHECK_RESULT", "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"}:
         next_action_message = progress_notice
@@ -377,10 +376,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif required_action == "RECOVER_DISCOVERY_SUBMISSION":
         next_action_message = "失敗済みDiscovery precheck/submissionのrecovery_stepsに従い、同じroundを正規経路へ戻します。"
     elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
-        if transient_submission_wait and pipeline_ahead_count < MAX_PIPELINE_AHEAD_COUNT:
+        if transient_submission_wait:
             next_action_message = (
-                "直前jobのdescriptorは耐久保存済みです。result待ちは最大2本先行まで許可されるため、"
-                "最新queue/claim stateを再取得して次のResearch/Auditを1件claimします。"
+                "既提出descriptorと未確定resultは耐久追跡対象として残しますが、submission result待ちは新規claimの同期障壁にしません。"
+                "最新queue/claim stateを再取得して次のResearch/Auditを1件claimし、論文処理を継続します。"
                 "descriptor-backed旧claimがactive表示でも、新claim処理の正規解放に任せます。"
             )
         else:
@@ -464,9 +463,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "or discovery submission is never by itself a whole-run stop condition. Normal workers "
             "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
             "claim results are polled every 10 real seconds using the same target identity until terminal or a canonical hard stop. "
-            "When claimable independent Research/Audit work is available, a pending submission permits up to two following papers "
-            "to be claimed, processed, and submitted sequentially; when no such work is available, wait on the pending result instead. "
-            "After that two-paper lookahead, the oldest pending submission result becomes the barrier before another claim. Hourly Scheduled Chat workers prefer an actual-"
+            "When claimable independent Research/Audit work is available, pending submission results never block another paper claim. "
+            "Workers continue claiming and processing one paper at a time while all submitted attempts remain durably tracked. "
+            "Submission results are monitored concurrently and become a foreground wait only when the 600-second no-new-work window begins or no Research/Audit job is claimable. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
             "candidate_inventory is mandatory: >=50 selects Research/Audit and <50 selects Discovery. "
@@ -476,7 +475,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "Research/Audit exposes the combined three-completion quota state. After a terminal "
             "blocked/deferred/rejected result, or whenever the three-completion floor is still unmet, "
             "the required action is CLAIM_NEXT_RESEARCH_AUDIT rather than run finalization. A pending "
-            "submission therefore becomes a barrier only after two later papers have been submitted, not before those two lookahead papers; hard "
+            "submission therefore does not become a claim barrier while new Research/Audit work remains claimable; hard "
             "handoff/platform/durability/read "
             "failures override ordinary continuation. The 600-second handoff window forbids new independent work but does not abort an already-started assignment; "
             "the final 180 seconds force safe handoff. The 600-second window never aborts an already-started Discovery precheck/evaluation/submission/recovery. Research/Audit with zero claimable jobs waits and refreshes instead of issuing empty claims or switching modes. "
