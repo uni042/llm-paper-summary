@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-dc7db7c86b3fd5772a9b4c86",
+  "job_id": "job-research-85f2bc3e024d7c6c",
+  "claim_id": "claim-dc7db7c86b3fd5772a9b4c86",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely obtained on this retry. The ACM DOI/publication identity and author publication listing are available, but no retrievable ACM, arXiv, author-hosted, or official project full manuscript was returned. Secondary indexes expose only metadata/abstract and were not used to synthesize the five-slot record.",
+  "blocked_at": "2026-09-22T00:38:30Z",
+  "retrieval_evidence": [
+    "Fresh title/DOI search confirmed SIGCOMM/MOSAIC 2026 publication metadata.",
+    "Author publication page confirms the paper but did not expose the manuscript body through the available route.",
+    "ResearchGate and secondary indexes did not provide an authoritative retrievable full text."
+  ]
+}
