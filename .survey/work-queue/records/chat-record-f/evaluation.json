@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4a6861f35cc58610c3fb4b0c","job_id":"job-research-15688dbb0cd11f1c","data":{"hardware":"中心例はNVIDIA H100 SXMで、HBM3 80GB・3.35TB/s、L2 50MB・約12TB/s、SM共有メモリ最大228KB/SM、CPU DDR5 512GB–2TB・300–400GB/s、PCIe Gen5 x16 64GB/s、NVLink 4.0 900GB/s双方向、NVMe SSD 2–8TB・7–14GB/sを階層として比較する。世代比較にはV100、H100、B200を用い、エッジではRTX 4090とApple M4 Max/M3 Ultraの統合メモリも扱う。","software":"特定エンジンの単一ベンチマークではなく、vLLM/PagedAttention、FlashAttention、TensorRT-LLM、SGLang、Orca、量子化・KV圧縮・投機的復号など既存文献をW/K/Aへ再整理する。伴走ツールllm-io-profilerはモデル設定からバイト量、交差バッチ、ルーフラインを計算する。","methodology":"サーベイ評価は二層ある。第一は文献・ハードウェア仕様に基づく統一的I/O分類で、自己回帰デコードの重み、KV、活性をバイト式へ落とし、ルーフラインの算術強度とridge pointへ写像する。第二はLlama-3 70BをH100単体、B=32、文脈4,096で動かす想定の解析ウォーターフォールである。FP16基準からINT4重み、INT4 KV、2:4疎性、投機的復号を順に追加し、各段階のW、K、支配流、推定TPOTを同じ式で再計算する。論文自身が明記する通り、ウォーターフォール値はproduction runの実測ではなく、Section 2.4のbyte-count equationsと付録の算術から得るfirst-order projectionである。実効HBM帯域はH100ピーク3.35TB/sの80%に当たる2.68TB/sを用いる。交差バッチB*はW/Kseqで導出し、精度と文脈長を変えて感度を見る。既存技法の精度差や速度値は各引用文献の代表値であり、サーベイが同一環境で再測定したものではない。","scope":"新規の統一実験キャンペーンではなく、既存文献と解析式をまとめるサーベイである。したがって12倍I/O削減やTPOT推定をエンジン実測の速度向上と同一視しない。カーネル起動、実効帯域低下、スケジューリング、通信重複、要求分布、投機的復号の受理率変動などで実性能はずれる。著者は推定モデルの検証限界を認め、I/O-aware benchmark不足自体をオープン課題に挙げる。"},"reservation":{"claim_id":"claim-4a6861f35cc58610c3fb4b0c","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-546bf32315ae41457b812520",
+  "job_id": "job-research-06d45370eceff021",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-546bf32315ae41457b812520",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

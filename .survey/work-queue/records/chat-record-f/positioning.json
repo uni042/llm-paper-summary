@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-4a6861f35cc58610c3fb4b0c","job_id":"job-research-15688dbb0cd11f1c","data":{"limitations":"サーベイの合成解析はH100/Llama-3 70Bを中心とする解析モデルで、ウォーターフォールのW、K、TPOTはproduction measurementではない。実際のエンジンではカーネル起動、帯域利用率、要求混在、並列通信、投機的復号受理率、キャッシュ局所性がずれる。既存手法の品質・速度値も各原論文の条件が異なり、統一再実験ではない。SSD/NVMe、CXL、PIM、統合メモリについてもハードウェア世代とソフトウェア成熟度の差が大きい。著者自身がI/O-aware benchmark不足を未解決問題として挙げる。","differences":"一般的な効率化サーベイが量子化、KVキャッシュ、サービング、ハードウェアを技法別に章立てするのに対し、本稿はすべてをW/K/Aというデータ流とメモリ階層へ再配置する。FlexGenやPowerInfer、MoE-Infinityのようなオフロード研究は個別のCPU/GPU/SSD配置を最適化するが、本稿はそれらを『低速階層へどの流れを何バイト移すか』で比較する診断側の枠組みである。PagedAttentionやFlashAttentionのようなメモリ管理・カーネル技法も、同じバイト移動削減として量子化と接続する。","implementation_status":"論文は伴走ツールを公開し、モデル設定からW/K/A、交差バッチ、ルーフライン、I/Oウォーターフォールを再現できるとしている。本文はZenodo DOI 10.5281/zenodo.18780115を示し、GitHub上にはllm-io-profilerが公開されている。GPUプロファイルにはV100〜B200、RTX 4090、Apple M4 Max/M3 Ultraが含まれる。","research_positioning":"オフロード・階層メモリ研究に対して特に有用なのは、HBM→CPU DRAM→SSD/NVMeの容量増加と帯域低下を同じモデルで扱い、重み・KV・活性のどれを下位階層へ置くかを分離する点である。MoEでは全エキスパートの総容量と一トークンの活性エキスパートI/Oが異なるため、expert cachingを入力依存・非定常なオンライン最適化問題として未解決課題に挙げる。\n\n研究上は、エキスパートのホット集合予測、SSD/NVMe先読み、CXLプール、KVオフロードを別々に評価するより、現在のW/K/Aと階層帯域から『どの流れをどの階層へ逃がすと次に何が律速になるか』を予測する基準として使える。特にローカルLLMやエッジでは統合メモリによりPCIe境界が消えるため、離散GPU向けオフロード則がそのまま通用しない点も今後の比較軸になる。"},"reservation":{"claim_id":"claim-4a6861f35cc58610c3fb4b0c","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-546bf32315ae41457b812520",
+  "job_id": "job-research-06d45370eceff021",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-546bf32315ae41457b812520",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

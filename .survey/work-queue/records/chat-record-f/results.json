@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4a6861f35cc58610c3fb4b0c","job_id":"job-research-15688dbb0cd11f1c","data":{"overview":"中心的な定量結論は、LLMデコードでは一つの最適化を適用すると次の支配I/Oが移動することである。H100上Llama-3 70B、4K文脈ではFP16重み141GBに対しKVは約1.3GB/系列で、W=KとなるB*≈108。重みをINT4へ落とすとW=35GBでB*≈27となりKV律速化しやすくなり、KVもINT4へするとKseq≈0.33GBでB*≈106へ戻る。B=32のウォーターフォールではFP16基準183GB/step・推定68msから複数最適化を積み、約12倍の累積I/O削減を解析的に示す。","key_results":[{"metric":"H100 FP16/BF16 ridge point","value":"約295 FLOP/byte","baseline":"π≈990 TFLOP/s、β≈3.35 TB/s","condition":"H100 SXM","interpretation":"I≈1の単一系列デコードはピーク計算性能から非常に遠い帯域律速領域にある。"},{"metric":"Llama-3 70B FP16重みI/O","value":"約141 GB/step","baseline":"70.6B parameters ×2 bytes","condition":"FP16、自己回帰デコード","interpretation":"小バッチ・短文脈では重み読みが支配しやすい。"},{"metric":"4K文脈KVサイズ","value":"約1.3 GB/sequence","baseline":"80 layers, 8 GQA KV heads, head dim 128, FP16","condition":"Llama-3 70B、s=4096","interpretation":"バッチ増加でKが線形増加し、Wとの交差を決める。"},{"metric":"W=K交差バッチB*","value":"FP16/FP16≈108、INT4 weight/FP16 KV≈27、INT4/INT4≈106、INT4+2:4/INT4≈53","baseline":"Llama-3 70B, 4K","condition":"精度・疎性を段階変更","interpretation":"片側だけ圧縮すると別I/Oが支配化し、最適化順序が変わる。"},{"metric":"長文脈でのB*","value":"INT4 weight/FP16 KVで32K≈3、128K<1","baseline":"4Kで≈27","condition":"Llama-3 70B","interpretation":"十分長い文脈では単一系列でもKV律速になり得る。"},{"metric":"解析ウォーターフォール基準","value":"W=141GB, K=42GB, total=183GB, estimated TPOT=68ms","baseline":"FP16","condition":"H100, B=32, s=4096, βeff=2.68TB/s","interpretation":"後続最適化を比較する解析基準。"},{"metric":"累積I/O削減","value":"約12×","baseline":"FP16 baseline","condition":"INT4 weights + INT4 KV + 2:4 sparsity + speculative decoding","interpretation":"最適化は合成できるが、支配流はWとKの間を振動し、最終的に計算律速へ近づく。"}],"negative_results":"高速化技法の効果は単純加算できない。重みINT4化はWを4分の1にする一方でKVを次の律速にし、KVだけ圧縮すれば再び重み側が支配する。CPU DRAMやSSDへのオフロードも容量は増やすが、H100 HBM 3.35TB/sに対しPCIe Gen5 x16は64GB/s、NVMeは7–14GB/sであり、毎トークン低速階層から読む設計は帯域崖を受ける。ウォーターフォールのTPOTは解析推定であり、カーネル起動・実効帯域・スケジューリングを含む実測ではない。","interpretation":"『どの最適化が最強か』ではなく、現在のW/K/Aのうちどれが支配しているかを先に計算し、その流れへ効く技法を選び、適用後に再診断することが主張である。SSD/NVMeやCPUオフロードも、常駐容量の拡張だけで評価せず、低速階層へのアクセス頻度、先読み可能性、ホット集合サイズと組み合わせて判断する必要がある。","quality_impact":"サーベイの解析は主に性能・I/Oであり、量子化やKV削除のモデル品質は引用研究の代表値に依存する。著者は低ビット化や削除を進めれば精度・文脈忠実度との交換条件が生じることを整理し、同一I/O流の追加圧縮ほど限界効用が小さくなるとする。"},"reservation":{"claim_id":"claim-4a6861f35cc58610c3fb4b0c","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-546bf32315ae41457b812520",
+  "job_id": "job-research-06d45370eceff021",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-546bf32315ae41457b812520",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
