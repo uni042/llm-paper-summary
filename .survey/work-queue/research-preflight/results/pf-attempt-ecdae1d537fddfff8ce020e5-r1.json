@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-ecdae1d537fddfff8ce020e5-r1",
+  "kind": "research",
+  "attempt_id": "attempt-ecdae1d537fddfff8ce020e5",
+  "job_id": "job-research-9cbcbbb853ae3588",
+  "record_bank": "g",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:da0b0ca827d6c9738bc86bdb964b251d28503ea1b2427cd48fdb57fed57a515b",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "3cbbe26df0c08dbf541e46caa1de0391d2de3d9f"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "4073f972b5eafb39f9e31929cde35c84ea7ece9e"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "f8406e97d28b34c36a97f5d5a7db3ef7abf39045"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "9545f88240d97c4cf64369a0c72595f3e6a90290"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "d6c93e679b6d2ea2e31fee34fbf01ce4eae33c03"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "problem_method.components[5].description is too short",
+    "problem_method.components[6].description is too short",
+    "problem_method.components[7].description is too short"
+  ],
+  "checked_at": "2026-09-22T14:42:14+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
