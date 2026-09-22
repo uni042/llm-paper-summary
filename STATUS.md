@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 17:33:37 JST**
+> 自動生成: **2026-09-22 17:35:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **285** |
 | 未claim Research job | **284** |
 | 直近24hの検証済みResearch収録 | **24** |
-| 最終検証済みResearch収録 | **09-22 17:10:31 JST（23分前）** |
+| 最終検証済みResearch収録 | **09-22 17:10:31 JST（25分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（9時間1分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（9時間3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -145,14 +145,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-22 16:30 JST** / worker `scheduled-chat-30`
+- 最新観測run: **2026-09-22 17:30 JST** / worker `scheduled-chat-30`
 - immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-403f9fa49f0449fd38977755.json` (job `job-research-f2e323416158860a`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-403f9fa49f0449fd38977755.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-f50b208d004918b4a57f5f6f.json` (job `job-research-96b3d1e9f6fc49b7`, failure_class `state_or_transport_guard`)
+  - result: `.survey/work-queue/results/research/attempt-f50b208d004918b4a57f5f6f.json` (`ok=false`)
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-22 16:30 JST** / worker `scheduled-chat-30`
+- 最新観測run: **2026-09-22 17:30 JST** / worker `scheduled-chat-30`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -179,9 +179,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.14647` — D-cut: Adaptive Verification Depth Pruning for Batched Speculative Decoding / worker `scheduled-chat-30`
-  - claim: **09-22 17:30:39 JST** / heartbeat: **—** / lease expiry: **09-22 19:00:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c324e0325a4a2def.json`
+- `arXiv:2608.07458` — CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG / worker `scheduled-chat-30`
+  - claim: **09-22 17:34:42 JST** / heartbeat: **—** / lease expiry: **09-22 19:04:42 JST**
+  - evidence: `.survey/work-queue/claims/job-research-96b3d1e9f6fc49b7.json`
 
 #### Audit
 
@@ -229,8 +229,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **296** |
-| └ Research | **224** |
+| 成功result未照合のimmutable submission | **297** |
+| └ Research | **225** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
