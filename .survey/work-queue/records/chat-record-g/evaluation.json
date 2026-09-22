@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-71174da29a72754d44fbffa1",
   "job_id": "job-research-f43aa8f1dfa7e573",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-71174da29a72754d44fbffa1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "論文は実際の推論高速化をcustom CUDA kernelを組み込んだvLLMで測定し、単なる理論FLOPs比較に留めない。評価は単一GPU中心で、共有専門家を持つモデルと持たないモデルの双方を含める。",
+    "software": "vLLMへBEAM専用CUDA処理を統合する。mask_route_kernelでマスク済みexpertを除外し、moe_align_block_size_kernelがそれらをexpert FFN実行から外す。学習は既存MoEへ軽量mask routerを追加した後学習で行い、Tulu 3 SFT Mixtureを用いた教師あり微調整を基礎に比較する。",
+    "models": ["Qwen1.5-MoE-A2.7B", "DeepSeekV2-Lite", "Qwen3-30B-A3B"],
+    "baselines": ["Original fixed Top-K MoE", "SFT baseline", "Top-K pruning", "MoE-Dynamic", "AdaMoE", "DynMoE", "soft-mask ablation"],
+    "methodology": "3種類のMoEアーキテクチャで疎性係数βを変え、平均活性専門家数とタスク性能のトレードオフを比較する。品質比較では元モデル/SFTに対する保持率と複数下流ベンチマーク平均を見て、高疎性領域でTop-K pruningや既存dynamic routingが崩れるかを検証する。システム評価ではCUDA統合後のMoE層FLOPs、デコード時間、スループット、プリフィル指標を測る。さらにmask位置のTop-K順位依存性、token種類・layer・prefill/decode別の活性化パターン、binary/soft mask、router統合方式などを分析・アブレーションする。",
+    "scope": "BEAMは後学習を必要とする損失型高速化であり、未学習モデルへそのまま適用する無損失推論最適化ではない。主な実測は3種類のMoEと単一GPU推論で、分散expert-parallel環境の通信削減・負荷偏り・複数GPUスケジューリングは直接評価していない。速度利得はモデルの共有専門家比率や元のTop-K、疎性設定に依存する。"
+  },
+  "reservation": {"claim_id": "claim-71174da29a72754d44fbffa1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
