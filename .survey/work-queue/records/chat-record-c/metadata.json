@@ -2,64 +2,58 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-eb3992a288275edbaaa96880",
-  "job_id": "job-research-d522f30f5ddd350f",
+  "attempt_id": "attempt-1385b427873bab2ec9caad6b",
+  "job_id": "job-research-b6a722146f5922c5",
   "data": {
-    "canonical_id": "arXiv:2510.26730",
-    "arxiv_id": "2510.26730",
-    "doi": "10.48550/arXiv.2510.26730",
+    "canonical_id": "arXiv:2609.12550",
+    "arxiv_id": "2609.12550",
+    "doi": "10.48550/arXiv.2609.12550",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.AI",
-        "cs.PF"
-      ]
+      "primary": "cs.LG",
+      "cross_list": []
     },
-    "title": "ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference",
-    "summary": "ExpertFlowはGPUメモリ制約下のMoE推論で、固定の先読み層数に依存するエキスパート事前取得を、ハードウェア帯域・エキスパート寸法・層計算時間・実行時待機状況に応じて動的に調整する実行時システムである。現在層の事前ゲート出力だけでなく、トークンIDと過去層のエキスパート活性履歴を用いる軽量予測器で将来層の必要エキスパートを補正し、二段LRUキャッシュとキャッシュ認識ルーティングを組み合わせて転送待ちを計算と重ねる。A6000、H20、Ascend 910B上でDeepSeek-V2-Lite、Qwen1.5、Qwen2.0を評価し、待機＋キャッシュミス遅延を平均98.5%削減した。",
-    "list_summary": "固定先読み幅を帯域・入力・待機フィードバックで動的化し、予測器・二段LRU・キャッシュ認識ルーティングを協調させてMoEエキスパート転送待ちを隠蔽する実行時システム。",
+    "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+    "summary": "同一MoE基盤モデルから事前生成した複数量子化インスタンスを固定プールとして常駐させ、要求ごとの量子化耐性を予測して、品質劣化予算と各インスタンス容量を守りながら高スループット側へ振り分ける手法。要求時の参照インスタンスprefillから脆弱性重み付きパープレキシティ（FWP）を計算し、候補インスタンスのΔNLLへ校正する。固定窓の線形計画と双対価格から要求単位スコアを導出する。Qwen3-30B-A3Bの全6,144 expert blocksをW2/W3/W4量子化した88 promptsで、FWP割当は品質予算τ=0.1513の下で1.284倍のオフラインモデル化乗数を達成した。",
+    "list_summary": "固定常駐したW2/W3/W4 MoEインスタンス間で、prompt時FWPから要求別量子化リスクを推定し、品質予算付きLPで高スループット側へ配分する要求ルーティング。",
     "authors": [
-      "Zixu Shen",
-      "Kexin Chu",
-      "Yifan Zhang",
-      "Dawei Xiang",
-      "Runxin Wu",
-      "Wei Zhang"
+      "Zhenghong Huang",
+      "Hongfan Wu",
+      "Jiheng Zhang"
     ],
-    "authors_affiliations": "arXiv版は匿名投稿形式の本文で所属を開示していない。",
-    "published": "2025-10-30",
-    "publication": "arXiv:2510.26730 v1, 2025-10-30",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "MoE expert offloading / cross-layer expert prediction / adaptive prefetch / expert cache management / cache-aware routing",
+    "authors_affiliations": "The Hong Kong University of Science and Technology (HKUST)",
+    "published": "2026-09-11",
+    "publication": "arXiv:2609.12550 v1; EMNLP 2026 main track accepted",
+    "publication_type": "Conference paper / Preprint",
+    "publication_status": "Accepted",
+    "lineage": "MoE quantization / heterogeneous model-instance routing / quality-aware serving / risk calibration",
     "topics": [
       "MoE",
-      "expert offloading",
-      "adaptive prefetch",
-      "cross-layer prediction",
-      "two-level LRU",
-      "cache-aware routing",
-      "memory-constrained inference"
+      "quantization",
+      "request routing",
+      "FWP",
+      "quality constraint",
+      "linear programming",
+      "serving"
     ],
-    "importance": "エキスパート事前取得の先読み幅を固定値ではなく通信・計算比と実行時フィードバックから制御し、予測・キャッシュ・ルーティングを一つの閉ループに統合している点が、階層メモリ型MoE推論のスケジューリング設計に直接関係する。",
-    "hardware_evaluation": "NVIDIA A6000（64 GB/s）、NVIDIA H20（128 GB/s）、Ascend 910B（128 GB/s）で評価。GPUメモリを20GBに制限し、ShareGPT由来の要求を用いる。",
-    "quality_effect": "主評価は推論システム性能で、モデル品質ベンチマークの改善を主張するものではない。予測精度は事前ゲート法より平均21.79%、最大30.36%改善し、誤予測による不要転送を抑える。",
-    "source": "https://arxiv.org/abs/2510.26730",
+    "importance": "量子化を一律なモデル選択ではなく要求別の品質リスクとして扱い、既に常駐する複数量子化インスタンスのメモリ・容量制約と結び付ける。圧縮モデルを階層化して使い分ける推論システム設計に直接関連する。",
+    "hardware_evaluation": "完全品質評価はQwen3-30B-A3BのW2/W3/W4全expert量子化。別のendpoint capacity実験は同一2×A100構成で216 requestsを5反復。",
+    "quality_effect": "完全Qwen 88 promptsで平均ΔNLLはW2=0.9437、W3=0.1832、W4=0.0513。品質予算τ=0.1513でFWP割当の平均ΔNLLは0.151。",
+    "source": "https://arxiv.org/abs/2609.12550",
     "sources": [
-      "https://arxiv.org/abs/2510.26730",
-      "https://arxiv.org/pdf/2510.26730"
+      "https://arxiv.org/abs/2609.12550",
+      "https://arxiv.org/pdf/2609.12550"
     ],
     "code": "",
-    "implementation": "Python/CUDAとTransformersで実装。本文中に一般公開コードリポジトリは確認できない。",
+    "implementation": "完全オンライン双対価格コントローラの本番配備は未実施。論文はオフライン割当とcomponent timingを主評価する。",
     "last_checked": "2026-09-22",
     "references": [],
     "references_checked_at": "2026-09-22",
-    "references_source": "primary-paper-fulltext",
-    "references_total": 0
+    "references_source": "primary-reference-section",
+    "references_total": 52
   },
   "reservation": {
-    "claim_id": "claim-eb3992a288275edbaaa96880",
+    "claim_id": "claim-1385b427873bab2ec9caad6b",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
