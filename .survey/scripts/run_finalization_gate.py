@@ -145,10 +145,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif next_action == "CHECK_SUBMISSION_STATE":
         next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
     elif next_action == "WAIT_10_SECONDS_AND_RECHECK":
-        next_action_message = (
-            "必要な非同期結果が処理中です。この処理が完了または明示的hard stopになるまで"
-            "この処理中はrunを終了しません。同じ対象を10秒ごとに待機・再確認します。"
-        )
+        if pending["claim_result"]:
+            next_action_message = (
+                "claim resultが処理中です。受動待機だけで終了せず、同じrequestを起動したSurvey claim fast laneの"
+                "Actions状態、job/step、同一workerのtransport healthを確認してから10秒後に同じrequest_idを再確認します。"
+            )
+        else:
+            next_action_message = (
+                "必要な非同期結果が処理中です。この処理が完了または明示的hard stopになるまで"
+                "この処理中はrunを終了しません。同じ対象を10秒ごとに待機・再確認します。"
+            )
     elif next_action == "CONTINUE_ASSIGNED_WORK":
         next_action_message = "有効なassignmentの未完了作業を続行し、耐久保存地点まで進めます。"
     elif next_action == "RECOVER_DISCOVERY_SUBMISSION":
@@ -208,6 +214,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "explicit checks of the latest claim and submission states. Pending claim/submission/ACK/Discovery precheck/Discovery submission "
             "results require 10-second real-time polling of the same target, repeated until the "
             "required result reaches terminal state or an explicit hard stop is safely handed off. "
+            "Pending claim results also require productive fast-lane monitoring (Actions/job/step and same-worker transport health) between polls. "
             "handoff_safe may be true for a pending asynchronous result only after the durable request/submission identity, "
             "expected result path, current pending state, and exact next canonical action have been preserved for the next run. "
             "As defense in depth, normal Research/Audit finalization is independently refused while "
