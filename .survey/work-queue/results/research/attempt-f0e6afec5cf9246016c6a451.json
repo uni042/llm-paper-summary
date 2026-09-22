@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-f0e6afec5cf9246016c6a451",
+  "job_id": "job-research-e7435b966cd8c5e7",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-f0e6afec5cf9246016c6a451.json",
+  "error": "RuntimeError: identity delta failed: Traceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 195, in <module>\n    main()\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 183, in main\n    print(prepare(args.paper))\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 125, in prepare\n    assert_no_conflicts(record)\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 84, in assert_no_conflicts\n    raise ValueError(f\"Canonical ID already points to another path: {cid}\")\nValueError: Canonical ID already points to another path: arXiv:2512.18194\n",
+  "processed_at": "2026-09-22T16:38:10+00:00",
+  "failure_class": "post_validation_processing_failure",
+  "retryable": true,
+  "recovery_failures": 1,
+  "last_recovery_failed_at": "2026-09-22T16:38:10+00:00"
+}

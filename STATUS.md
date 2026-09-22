@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 01:14:25 JST**
+> 自動生成: **2026-09-23 01:38:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **234** |
 | 未claim Research job | **232** |
 | 直近24hの検証済みResearch収録 | **52** |
-| 最終検証済みResearch収録 | **09-23 01:12:36 JST（1分前）** |
+| 最終検証済みResearch収録 | **09-23 01:12:36 JST（25分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（16時間41分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（17時間5分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **31** | **2** | **0** | **0** | **2** | **0** | — |
+| Research | **30** | **2** | **0** | **0** | **2** | **1** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **31** | **5** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **30** | **5** | **0** | **3** | **2** | **1** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -180,13 +180,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
 - `arXiv:2609.06161` — All for 1-Bit: Towards Genuine 1-Bit Post-Training Quantization for LLMs / worker `scheduled-chat-00`
-  - claim: **09-23 01:13:12 JST** / heartbeat: **—** / lease expiry: **09-23 02:43:12 JST**
+  - claim: **09-23 01:13:12 JST** / heartbeat: **09-23 01:38:00 JST** / lease expiry: **09-23 03:08:00 JST**
   - evidence: `.survey/work-queue/claims/job-research-630ecabf6127702e.json`
-- `OpenAlex:W7165293849` — Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale / worker `scheduled-chat-30`
-  - claim: **09-23 01:10:28 JST** / heartbeat: **—** / lease expiry: **09-23 02:40:28 JST**
-  - evidence: `.survey/work-queue/claims/job-research-e7435b966cd8c5e7.json`
+- `arXiv:2609.07237` — CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention / worker `scheduled-chat-30`
+  - claim: **09-23 01:38:00 JST** / heartbeat: **—** / lease expiry: **09-23 03:08:00 JST**
+  - evidence: `.survey/work-queue/claims/job-research-886ba13cf71588b2.json`
 
 #### Audit
 
@@ -234,8 +234,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **317** |
-| └ Research | **245** |
+| 成功result未照合のimmutable submission | **318** |
+| └ Research | **246** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
