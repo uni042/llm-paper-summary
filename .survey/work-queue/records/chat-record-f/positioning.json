@@ -1,1 +1,18 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6569c1c278418b9ab09d495e","job_id":"job-research-5cd2beb9d9cae3d8","data":{"limitations":"現実装はgate projectionをdenseに実行してからmaskを作るため、expert FFN全体を疎化できず理論speedupは約3×に制約される。active neuronごとのgatherは不規則memory accessを伴い、大batchのcompute-bound領域ではdense BMMよりthroughputが低い。詳細kernel評価はQwen3.5系2モデル、end-to-endは35B-A3B中心で、8モデル全てに同じ実速度利得が出ることは示していない。thresholdはmodel-specific lookup tableをengine startup時に作る必要があり、workload/model変更への運用costがある。精度は5 benchmark平均の95%保持を基準にしており、生成品質や長文脈・agent workloadへの影響は別途検証が必要。","differences":"従来のMoE高速化はrouterでactive expert数を減らすexpert skipping、expert granularity拡大、expert parallelismなどinter-expert sparsityを主に利用する。本研究はrouter選択後の各expert FFN内部のneuronをさらに省くため、それらと併用可能である。ReLU系activation sparsityやDejaVu等と異なり、SwiGLUを含む現行off-the-shelf MoEを再学習・activation変更なしで対象にする。Mixture of Neuron Experts等の分析系研究に対しては、production-grade vLLMへsparse kernelを統合しend-to-end serving速度まで評価する点が異なる。","implementation_status":"論文Appendix BにvLLMへ挿入可能なsparse MoE execution kernelの完全source codeを掲載し、supplementary materialsも提供すると記載される。vLLM development build 0.1.dev15965+g6506aec54上でTriton/PyTorchを用いて実装・評価済み。独立GitHub repositoryのURLは本文から確認できない。","research_positioning":"MoE compression/execution系統では、expert pruning・merging・routing最適化とは異なる『expert内部activation sparsity』を実システム最適化へ引き上げた研究として位置付けられる。大規模MoEほどsparsity耐性が高い観測は、expert数をさらに増やすtraining困難を避けつつ計算を削る方向を示す。GPU kernel設計としては、細粒度sparsityの理論FLOP削減とhardware-friendly dense tile実行の間を、gather+packingとbatch-size adaptive switchingで折衷している。"},"reservation":{"claim_id":"claim-6569c1c278418b9ab09d495e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-386d871abade4a6686fd7869",
+  "job_id": "job-research-80e5caed751c8e16",
+  "data": {
+    "limitations": "実験はSwitch-base相当の比較的小規模モデルをBooksCorpusと英語Wikipediaで事前学習した設定に限られ、現在の大規模生成LLMや多数層・多数専門家MoEで同じ専門家特化が成立するかは未検証である。枝刈りは下流タスクごとに微調整を必要とするため、タスクが頻繁に変わる汎用サービングではモデル複製や管理コストが増える。最終的に各層1専門家へ固定するため、入力ごとの条件付き計算能力は失われ、分布外入力や複数タスク混在時の頑健性は評価されていない。推論速度評価もV100上のMNLI/SQuAD中心で、メモリ量や多様なハードウェアでの詳細測定は限定的である。",
+    "differences": "知識蒸留でMoE出力を別の密モデルへ移す方式と異なり、MoE内部に既に存在する専門家を直接選んで残すため教師推論や別モデル学習を要しない。NLLB-200の言語別枝刈りのように微調整なしでゲート統計から配備時に選ぶ方式とも異なり、本研究は微調整中に専門家を徐々に削り、残存専門家をタスクへ追加適応させる。動的オフロード・専門家キャッシュ方式が要求ごとに多数専門家を保持したまま転送を最適化するのに対し、本方式はタスクごとに容量自体を単一専門家へ縮小する。",
+    "implementation_status": "論文中に独立した公式コードURLの明記は確認できない。手法はSwitch Transformer base型で実装され、各MoE層32専門家、125kステップ事前学習後のGLUE/SQuAD微調整で評価されている。arXiv v2のプレプリントとして公開。",
+    "research_positioning": "専門家圧縮研究の中でも、専門家の『タスク適性』を微調整過程から推定し、疎モデルをタスク固有の密モデルへ変換する枝刈り系統に位置する。後続の専門家削減・統合研究に対して、通信を完全に除去できる強い圧縮端点と、選択時期が品質へ与える影響を示す基準になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-386d871abade4a6686fd7869",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
