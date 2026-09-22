@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-6632d1664daf09912489991a-r1",
+  "kind": "research",
+  "attempt_id": "attempt-6632d1664daf09912489991a",
+  "job_id": "job-research-777ca56d26763813",
+  "record_bank": "g",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2502.04416-analytical-ffn-to-moe-restructuring.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:144f495011ac7983067adcbd93da3d569559fd64d55d18edd0be8302f8fa2dc8",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "2c29bf84a8ad6be76c9e0eade2e9588b8a203362"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "b4574e6fe9416221098caa1e91db4ccf9ed81d99"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "df0dd423009109d6d6901aef1ec08ddeeb9ce395"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "6af32c0a2c2fc297fa7d48f3a9642134d7622297"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "ce5084f7f17581f5f9dc8205da3691957e06f216"
+    }
+  ],
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 47.0% < 70% (Japanese=2309, Latin=2603)"
+  ],
+  "checked_at": "2026-09-22T14:23:40+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
