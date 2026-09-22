@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3f2821d83831a58e9fb2986d","job_id":"job-research-458a8d0f006d0310","data":{"limitations":"HodgeCoverは学習不要圧縮に限定され、圧縮後に残る最後のperplexity差を微調整・知識蒸留で回復する処理は対象外である。計画段階では全ペア障壁と候補三つ組障壁の計算が支配的で、35B級でも一回限りのオフラインコストが発生する。単体複体は圧縮率間でキャッシュできるが、モデルごとの初回計画は必要である。評価対象はOLMoEとQwen 3.5系列の言語MoE 3モデルで、マルチモーダルMoEや強化学習後学習モデルは未評価。高次構造は2-complexの三角形までで、四つ組以上の高次simplexが追加利益を持つかは検証していない。","differences":"REAPは専門家出力サリエンシー、REAMはサリエンシー付き統合、MC-SMoEはルーティング類似度、STUNは構造剪定後にWandaを組み合わせるが、いずれも専門家間の判断を基本的にペア関係へ還元する。HodgeCoverはペアKL障壁に三つ組障壁を加えた単体2-複体を作り、辺信号の調和核を明示的に分離して生存集合の被覆目的へ使う点が異なる。\n\nTriplet-Penaltyやhypergraph型アブレーションも三つ組情報自体は使うが、前者はsum-of-pairs的なsoft penalty、後者はhard vetoへ集約する。HodgeCoverは勾配・カール・調和を分離し、調和critical edgeとtriplet-critical triangleを同時にsoft coverageする。Qwen 35Bの66%でTriplet-Penaltyより約5.8点、No-Triangleより11.5点高いことから、単にtriplet入力を追加しただけでは説明できない。","implementation_status":"論文はAlgorithm 1として各層の完全なHodgeCover手順を提示する。三角形候補は中央値以下のペア障壁グラフの3-cliqueから最大500個、τ*は80点filtrationでβ1最大化、貪欲被覆は1−1/e近似保証を持つ。第2段Wandaは公開実装を変更せず利用する。一次資料から専用HodgeCoverコードの公開URLは確認できなかったため、実装状況はアルゴリズム記載あり・公式コード未確認として扱う。","research_positioning":"Adaptive Expert Computation / Compression系では、HodgeCoverはexpert pruning/mergingの『どの専門家を残すか』を高次トポロジーへ拡張する選択法である。専門家キャッシュやCPU/SSDオフロードは全専門家を保持しつつ配置・転送を最適化するのに対し、本手法はオフラインに専門家数そのものを減らすため直交的で、圧縮後の小さいexpert poolを階層メモリへ配置する前処理として組み合わせられる。\n\n特に高圧縮率でのみ顕在化しやすい三つ組障害を検出するため、単純なrouting frequencyやpairwise similarityに基づくexpert cache統合・merge判断の補助信号にもなり得る。一方で障壁計算はオフラインに多数の短いforward passを必要とするため、頻繁にexpert集合が変化するオンライン適応より、固定チェックポイントを一度圧縮して長期配備する用途に適する。"},"reservation":{"claim_id":"claim-3f2821d83831a58e9fb2986d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-52fdb7c45a3c9f701ff82032",
+  "job_id": "job-research-8870fedf28603c08",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-52fdb7c45a3c9f701ff82032",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

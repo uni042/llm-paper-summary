@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3f2821d83831a58e9fb2986d","job_id":"job-research-458a8d0f006d0310","data":{"canonical_id":"arXiv:2605.13997","arxiv_id":"2605.13997","doi":"10.48550/arXiv.2605.13997","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts","summary":"HodgeCoverは、専門家間のペア類似度だけでは検出できない『3専門家は各ペアでは統合可能でも3者同時では不可』という高次の統合障害を、単体複体上のホッジ分解（Hodge decomposition）で調和成分として抽出し、専門家選択へ直接利用する学習不要MoE圧縮法である。KL統合障壁から辺と三角形を構成し、調和的に重要な辺と三つ組を被覆する単調劣モジュラ目的を貪欲最大化して生存専門家を選ぶ。Qwen 3.5-35B-A3Bの66%削減ではHodgeCover単体が9課題平均66.7%、Hodge分解を使わないTriplet-Penaltyの60.9%を5.8ポイント上回り、Wanda併用版は3モデルの高圧縮領域で強いフロンティアを形成する。","list_summary":"専門家ペアだけでは見えない三つ組の統合障害をホッジ調和成分として抽出し、重要な辺・三角形を被覆するよう生存専門家を選ぶ学習不要MoE圧縮。","authors":["Tao Zhong","Dongzhe Zheng","Christine Allen-Blanchette"],"authors_affiliations":"Princeton University","published":"2026-05-13","publication":"arXiv:2605.13997v1, 2026-05-13","publication_type":"arXiv preprint","publication_status":"Preprint","lineage":"adaptive expert computation / learning-free MoE compression / expert pruning and merging / topological selection","topics":["MoE","専門家剪定","専門家統合","ホッジ分解","単体複体","劣モジュラ被覆","Wanda"],"importance":"従来の学習不要MoE圧縮がペア単位の重要度・類似度へ還元していた選択問題に対し、三つ組で初めて現れる非可約な統合障害を明示的にモデル化し、トポロジー診断を実際の専門家選択目的へ変換した点が重要である。","hardware_evaluation":"OLMoE-1B-7B、Qwen 3.5-35B-A3B、Qwen 3.5-122B-A10Bを33%・66%専門家削減で評価。計画時間は障壁計算が支配し、単体複体は圧縮率間でキャッシュする。","quality_effect":"近似圧縮であり、学習不要のため完全品質回復は保証しない。Qwen 3.5-35B-A3Bの66%削減でHodgeCoverはDS-Avg 66.7、Triplet-Penalty 60.9、Hodge No-Triangle 55.2。","source":"https://arxiv.org/abs/2605.13997","sources":["https://arxiv.org/abs/2605.13997","https://www.researchgate.net/publication/404890880_HodgeCover_Higher-Order_Topological_Coverage_Drives_Compression_of_Sparse_Mixture-of-Experts"],"code":null,"implementation":"各MoE層でペアKL障壁と最大500個の候補三角形の三つ組障壁を計算し、1-ホッジラプラシアンを構成して調和成分を射影する。生存専門家は劣モジュラ被覆を貪欲最大化し、非生存専門家のルーティングを調和障壁で補正した距離により生存専門家へリダイレクトする。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary full-text reference section not normalized in this run","references_total":0},"reservation":{"claim_id":"claim-3f2821d83831a58e9fb2986d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-52fdb7c45a3c9f701ff82032",
+  "job_id": "job-research-8870fedf28603c08",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-52fdb7c45a3c9f701ff82032",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

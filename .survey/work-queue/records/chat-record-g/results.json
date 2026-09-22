@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-3f2821d83831a58e9fb2986d","job_id":"job-research-458a8d0f006d0310","data":{"overview":"HodgeCoverは33%の中程度削減では既存の強い学習不要法と競合し、66%の高削減率で高次構造を使う利点が明確になる。Qwen 3.5-35B-A3Bの66%専門家削減では純粋HodgeCoverがWikiText perplexity 15.13、C4 18.86、9課題平均66.7を達成し、同じ三つ組情報をHodge分解せずsoft penalty化したTriplet-Penaltyの60.9を5.8ポイント上回る。三角形項を外したHodge No-Triangleは55.2まで低下し、hardなTriplet-Hypergraphは36.2へ崩れる。ハイブリッドHodgeCover+Wandaは全モデル・全削減率セルでC4 perplexity最良、66%ではWikiTextも全モデル最良となる。","key_results":[{"metric":"Qwen 3.5-35B-A3B 66%削減 DS-Avg","value":"66.7%","baseline":"Triplet-Penalty 60.9%、Greedy-Barrier 60.7%、Hodge No-Triangle 55.2%、Triplet-Hypergraph 36.2%","condition":"純粋な専門家削減、9下流課題平均","interpretation":"同じ三つ組情報でもHodge調和分解とsoft coverageを使うことが高圧縮品質に寄与する。"},{"metric":"Qwen 3.5-35B-A3B 66%削減 perplexity","value":"WikiText 15.13、C4 18.86","baseline":"Triplet-Penalty C4 18.77、Hodge No-Triangle WikiText 21.34/C4 28.34","condition":"純粋HodgeCoverアブレーション","interpretation":"Triplet-PenaltyとはC4 perplexityがほぼ同じでもDS-Avgで約5.8点差があり、単純な言語モデル損失だけでは高次構造保持の下流効果を捉え切れない。"},{"metric":"Hodge分解除去の影響","value":"約-5.7 pp DS-Avg","baseline":"HodgeCover 66.7% vs Triplet-Penalty 60.9%","condition":"Qwen 3.5-35B-A3B、66%削減","interpretation":"三つ組を入力するだけでなく、調和核へ分離する処理自体がload-bearingである。"},{"metric":"三角形項除去の影響","value":"-11.5 pp DS-Avg","baseline":"HodgeCover 66.7% vs Hodge No-Triangle 55.2%","condition":"Qwen 3.5-35B-A3B、66%削減","interpretation":"調和辺だけでなくtriplet-critical triangleの被覆も必要。"},{"metric":"OLMoE-1B-7B ハイブリッド例","value":"C4 21.18、DS-Avg 48.6%","baseline":"STUN+Wanda C4 31.01、DS-Avg 45.1%","condition":"Table 1の高圧縮ハイブリッドセル","interpretation":"専門家軸のHodge選択とWanda重み軸を組み合わせることで高圧縮側の品質フロンティアを改善する。"},{"metric":"推論スループット差","value":"REAP+Wandaとの差6%以内","baseline":"REAP+Wanda","condition":"66%高圧縮、付録systems characterization","interpretation":"高次トポロジー計算は主にオフライン計画段階であり、推論時の大きな追加オーバーヘッドにはならない。"}],"negative_results":"学習不要圧縮なので未圧縮品質を完全には回復せず、著者は残るperplexity差を詰めるには微調整または知識蒸留が必要と明記する。計画段階は障壁計算が支配し、特に多数専門家の全ペアと候補三つ組の評価にオフラインコストがかかる。中程度の33%削減では既存法との差が狭い条件もあり、利点は主に高圧縮領域で現れる。","interpretation":"ペア統合障壁だけでは循環的な高次障害を局所スコアへ還元できない。HodgeCoverは調和核を通じてその残差を明示し、重要辺・三角形を同時に覆う生存集合を選ぶため、特定成分だけを過剰保持する比較法より元MoEの構造信号をバランス良く残す。Qwen 3.5-122Bの66%でもHodgeCoverに対する各Hodge成分の保持偏りと下流性能差が対応し、高次構造を選択目的へ入れることが高圧縮時に効くという説明を支持する。","quality_impact":"近似圧縮であり品質同値ではない。33%と66%では後者ほど劣化が大きいが、HodgeCoverは高圧縮時の劣化を比較法より抑える。perplexityだけでなく9課題平均を併記する必要があり、特にHodge分解アブレーションではC4 perplexityが近くても下流精度差が大きい。"},"reservation":{"claim_id":"claim-3f2821d83831a58e9fb2986d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-52fdb7c45a3c9f701ff82032",
+  "job_id": "job-research-8870fedf28603c08",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-52fdb7c45a3c9f701ff82032",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

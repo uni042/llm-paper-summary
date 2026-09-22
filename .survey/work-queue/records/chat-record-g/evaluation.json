@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-3f2821d83831a58e9fb2986d","job_id":"job-research-458a8d0f006d0310","data":{"hardware":"3つの公開疎MoEを評価する。OLMoE-1B-7Bは16 MoE層・各64専門家・Top-2、Qwen 3.5-35B-A3Bは40 MoE層・各256専門家、Qwen 3.5-122B-A10Bは48 MoE層・各256専門家。計画段階の実行時間と推論スループットも付録で測定する。","software":"LM Evaluation Harnessで下流9課題を評価し、WikiText-103とC4のperplexityも測る。ハイブリッド第2段は公開Wanda実装を変更せず使用する。HodgeCoverの単体複体・障壁計算は圧縮率間でキャッシュされる。","models":["OLMoE-1B-7B","Qwen 3.5-35B-A3B","Qwen 3.5-122B-A10B"],"workloads":["WikiText-103 perplexity","C4 perplexity","ARC-Challenge","ARC-Easy","BoolQ","HellaSwag","MMLU","PIQA","TruthfulQA","WinoGrande","GSM8K"],"baselines":["REAP","REAM","MC-SMoE","STUN+Wanda","Random","Greedy-Barrier","Triplet-Penalty","Triplet-Hypergraph","Hodge No-Triangle"],"methodology":"各モデルを専門家数33%削減と66%削減で比較する。REAP/REAMとHodgeCoverは公平性のため一様な層別専門家予算を使い、較正にはC4-train 2,048 tokensを使用する。純粋な専門家削減軸ではREAP、REAM、MC-SMoE等と比較し、ハイブリッド軸ではHodgeCover+WandaとSTUN+Wanda等を比較する。主指標はWikiText-103/C4 perplexityと9課題の非加重平均DS-Avg。アブレーションでは三角形項の有無、Hodge分解の有無、soft triplet penalty、hard hypergraph vetoを分離し、高次入力そのものではなく調和分解が寄与しているかを検証する。","scope":"評価は言語MoE 3モデルに限定され、マルチモーダルMoEや強化学習後学習チェックポイントは未評価。学習不要という条件を維持するため、微調整や知識蒸留による最終品質回復は主パイプラインに含めない。計画時間はペア・三つ組障壁計算が支配するため、圧縮モデル生成前のオフラインコストが必要である。"},"reservation":{"claim_id":"claim-3f2821d83831a58e9fb2986d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-52fdb7c45a3c9f701ff82032",
+  "job_id": "job-research-8870fedf28603c08",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-52fdb7c45a3c9f701ff82032",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
