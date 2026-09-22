@@ -2,14 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-900cad5c6178df049a8d9dec",
-  "job_id": "job-research-6e36f8b25c1d84c6",
-  "data": {
-    "limitations": "評価規模は最大1.21Bであり、数十B～数百Bの実運用LLMへ同じルーティング・再帰特性がスケールするかは未検証。主要結果はaccuracy、loss、理論/統計FLOPs中心で、実GPU上のtoken/s、TTFT、電力、HBM帯域、kernel効率を直接比較していない。深さ経路は本質的に逐次依存を持つため、FLOPs削減がwall-clock latency削減へそのまま変換されるとは限らない。GPU型や学習時間も主要本文・付録では確認できない。難易度は予測ループ数から内生的に定義されるため、難易度推定自体の校正や誤配分の詳細分析は限定的。",
-    "differences": "通常MoEは複数の独立専門家重みを保持し、活性計算だけを疎化するのに対し、VersatileFFNは単一FFNのhidden部分空間を仮想専門家として切り出すため専門家の物理的メモリ増加を避ける。Mixture-of-DepthsやMixture-of-Recurrenceなどの動的深さ系に対しては、深さだけでなく幅方向の仮想専門化を同時に利用し、同じloop predictorの出力を二経路の融合にも使う。剪定・量子化とは異なり既存モデルを近似圧縮するのではなく、同一パラメータ予算で計算再利用により能力を増やすことを狙う。",
-    "implementation_status": "著者公式コードがHuawei Noah's Ark Labのnoah-researchリポジトリ内VersatileFFNとして公開されている。論文実装はOLMo2を基盤とし、推論では離散早期終了と条件付き並列実行を提案する。",
-    "research_positioning": "適応的専門家計算・圧縮系統の中でも、重みオフロードや専門家キャッシュではなく『専門家を物理的に増やさない』方向のメモリ効率化。compute-heavy/memory-light設計として、メモリ容量が主制約で演算余力がある環境に適する。再帰計算と仮想MoEを同一FFN上で統合するため、MoE圧縮と動的計算深さの境界に位置する。",
-    "relation_to_existing_repository": "Adaptive Expert Computation / Compression系のexpert pruning、merging、shared-expert、dynamic routing研究と直接比較できる。既存MoEの専門家をCPU/SSDへ退避する方式とは異なり、そもそものresident weight集合を増やさないためI/O負荷を回避できる可能性がある。一方で逐次再帰が増えるため、GPU演算が十分余っているがVRAM/DRAM/SSD帯域が制約となるローカル推論で特に興味深い。今後はllama.cpp等で仮想expert sliceとloop predictorを融合kernel化し、FLOPsではなく実token/s・電力・メモリ帯域で評価する価値がある。",
-    "audit_required": false
+  "attempt_id": "attempt-40f2100aeb26ce98eb0d15a5",
+  "job_id": "job-research-b921c5addc92d695",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-40f2100aeb26ce98eb0d15a5",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
   }
 }
