@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-30089bb883f49403e1bb3ff8",
+  "job_id": "job-research-1b89c86f687054e4",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-30089bb883f49403e1bb3ff8.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references_checked_at is required | results.key_results[0] must be an object | results.key_results[1] must be an object | results.key_results[2] must be an object | results.key_results[3] must be an object | results.key_results[4] must be an object | results.key_results[5] must be an object",
+  "processed_at": "2026-09-22T02:19:39+00:00",
+  "validation_errors": [
+    "metadata.references_checked_at is required",
+    "results.key_results[0] must be an object",
+    "results.key_results[1] must be an object",
+    "results.key_results[2] must be an object",
+    "results.key_results[3] must be an object",
+    "results.key_results[4] must be an object",
+    "results.key_results[5] must be an object"
+  ],
+  "failure_class": "content_validation",
+  "retryable": false
+}

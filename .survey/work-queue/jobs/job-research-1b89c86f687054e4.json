@@ -20,29 +20,15 @@
   "schema_version": 1,
   "created_at": "2026-09-20T10:54:09+00:00",
   "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: metadata.canonical_id is required | metadata.source is required | metadata.sources is required | metadata.publication is required | metadata.topics is required | metadata.implementation is required | metadata.last_checked is required | metadata.code is required; use null when no official URL was confirmed | metadata.publication_type is required | metadata.publication_status is required | metadata.hardware_evaluation is required | metadata.quality_effect is required | metadata.references is required; use [] after checking a reference section with no normalized identifiers | problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | evaluation.scope is required to distinguish real-hardware/simulation and generalization limits | results.key_results requires at least one quantitative result | results.overview must explain the main result and its practical meaning | results.negative_results is required; record degradation and boundary conditions | results.interpretation is required; explain why gains change across conditions | results.quality_impact is required; distinguish lossless from approximate methods",
+  "validation_error": "RecordValidationError: structured record validation failed: metadata.references_checked_at is required | results.key_results[0] must be an object | results.key_results[1] must be an object | results.key_results[2] must be an object | results.key_results[3] must be an object | results.key_results[4] must be an object | results.key_results[5] must be an object",
   "validation_errors": [
-    "metadata.canonical_id is required",
-    "metadata.source is required",
-    "metadata.sources is required",
-    "metadata.publication is required",
-    "metadata.topics is required",
-    "metadata.implementation is required",
-    "metadata.last_checked is required",
-    "metadata.code is required; use null when no official URL was confirmed",
-    "metadata.publication_type is required",
-    "metadata.publication_status is required",
-    "metadata.hardware_evaluation is required",
-    "metadata.quality_effect is required",
-    "metadata.references is required; use [] after checking a reference section with no normalized identifiers",
-    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
-    "problem_method.method_overview must explain the end-to-end mechanism",
-    "evaluation.scope is required to distinguish real-hardware/simulation and generalization limits",
-    "results.key_results requires at least one quantitative result",
-    "results.overview must explain the main result and its practical meaning",
-    "results.negative_results is required; record degradation and boundary conditions",
-    "results.interpretation is required; explain why gains change across conditions",
-    "results.quality_impact is required; distinguish lossless from approximate methods"
+    "metadata.references_checked_at is required",
+    "results.key_results[0] must be an object",
+    "results.key_results[1] must be an object",
+    "results.key_results[2] must be an object",
+    "results.key_results[3] must be an object",
+    "results.key_results[4] must be an object",
+    "results.key_results[5] must be an object"
   ],
-  "last_validation_failed_at": "2026-09-22T02:17:12+00:00"
+  "last_validation_failed_at": "2026-09-22T02:19:39+00:00"
 }
