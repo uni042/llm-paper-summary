@@ -5,14 +5,10 @@
   "attempt_id": "attempt-b5919b99883e66617c28776a",
   "job_id": "job-research-5cd2beb9d9cae3d8",
   "data": {
-    "limitations": "現実装はgate projectionをdenseに実行してからmaskを作るため、expert FFN全体を疎化できず理論speedupは約3×に制約される。active neuronごとのgatherは不規則memory accessを伴い、大batchのcompute-bound領域ではdense BMMよりthroughputが低い。詳細kernel評価はQwen3.5系2モデル、end-to-endは35B-A3B中心で、8モデル全てに同じ実速度利得が出ることは示していない。thresholdはmodel-specific lookup tableをengine startup時に作る必要があり、workload/model変更への運用costがある。精度は5 benchmark平均の95%保持を基準にしており、生成品質や長文脈・agent workloadへの影響は別途検証が必要。",
-    "differences": "従来のMoE高速化はrouterでactive expert数を減らすexpert skipping、expert granularity拡大、expert parallelismなどinter-expert sparsityを主に利用する。本研究はrouter選択後の各expert FFN内部のneuronをさらに省くため、それらと併用可能である。ReLU系activation sparsityやDejaVu等と異なり、SwiGLUを含む現行off-the-shelf MoEを再学習・activation変更なしで対象にする。Mixture of Neuron Experts等の分析系研究に対しては、production-grade vLLMへsparse kernelを統合しend-to-end serving速度まで評価する点が異なる。",
-    "implementation_status": "論文Appendix BにvLLMへ挿入可能なsparse MoE execution kernelの完全source codeを掲載し、supplementary materialsも提供すると記載される。vLLM development build 0.1.dev15965+g6506aec54上でTriton/PyTorchを用いて実装・評価済み。独立GitHub repositoryのURLは本文から確認できない。",
-    "research_positioning": "MoE compression/execution系統では、expert pruning・merging・routing最適化とは異なる『expert内部activation sparsity』を実システム最適化へ引き上げた研究として位置付けられる。大規模MoEほどsparsity耐性が高い観測は、expert数をさらに増やすtraining困難を避けつつ計算を削る方向を示す。GPU kernel設計としては、細粒度sparsityの理論FLOP削減とhardware-friendly dense tile実行の間を、gather+packingとbatch-size adaptive switchingで折衷している。"
+    "limitations": "現実装はゲート射影を密に実行してからマスクを作るため、エキスパートのフィードフォワード網全体を疎化できず、理論上の高速化には上限がある。活性ニューロンごとの重み収集は不規則なメモリアクセスを伴い、大きなバッチで演算律速になる領域では密なバッチ行列積より処理量が低くなる。詳細なカーネル評価はQwen3.5系の二モデル、端から端までの評価は35B-A3B中心であり、調査した八モデルすべてに同じ実速度利得が出ることまでは示していない。\n\n閾値はモデルごとの参照表をエンジン起動時に作る必要があり、モデルや運用条件が変わる場合には再校正費用が生じる。精度基準も五つの評価課題の平均点が元モデルの九五パーセントを維持することなので、自由生成の品質、長文脈、エージェント型処理など別種の負荷に対する影響は追加検証が必要である。",
+    "differences": "従来の混合エキスパート高速化は、ルータで選択するエキスパート数を減らすスキップ、エキスパート粒度の変更、エキスパート並列など、エキスパート間の疎性を主に利用する。本研究はルータが選択した後の各エキスパート内部でニューロン計算をさらに省くため、それらの方式と原理的に併用できる。\n\nReLU系の活性値疎性を前提とする方式と異なり、SwiGLUを含む現行の学習済みモデルを再学習せず、活性化関数も変更せずに対象とする。分析だけでマスクを適用する研究に対しては、実運用向けvLLMへ疎なGPUカーネルを統合し、既存のルータや並列化を維持したまま端から端までのサービング速度を評価する点が異なる。",
+    "implementation_status": "論文付録にはvLLMへ挿入できる疎な混合エキスパート実行カーネルの完全なソースコードを掲載し、補足資料も提供すると記載されている。評価実装はvLLMの開発版を基盤とし、TritonとPyTorchを用いてGPU上で実装・測定されている。独立した公開GitHubリポジトリのURLは本文から確認できない。\n\n実装上は既存のルータ、トークン振り分け、結果結合、エキスパート並列を残し、ルーティング対象エキスパート内部の活性化と上下射影だけを置き換える。そのため論文の主張は理論的な演算量削減だけでなく、既存推論基盤へ統合した際の追加費用を含む実測結果で検証されている。",
+    "research_positioning": "混合エキスパートの圧縮・実行系統では、エキスパート削除、統合、ルーティング最適化とは異なる『エキスパート内部の活性値疎性』を実システム最適化へ引き上げた研究として位置付けられる。大規模モデルほど疎化耐性が高いという観測は、エキスパート数をさらに増やして学習を難しくする代わりに、既存エキスパート内部の不要計算を入力ごとに省く方向を示す。\n\nGPUカーネル設計の観点では、細粒度な疎性による理論演算削減と、GPUが得意とする規則的な密タイル計算の間を、必要重みの収集と詰め直し、さらにバッチサイズに応じた疎経路・密経路の切替で折衷している。したがってモデル圧縮だけでなく、疎なモデル構造を実ハードウェア上の処理量改善へ変換する推論システム研究としても重要である。"
   },
-  "reservation": {
-    "claim_id": "claim-b5919b99883e66617c28776a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-b5919b99883e66617c28776a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
