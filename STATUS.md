@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 15:17:59 JST**
+> 自動生成: **2026-09-22 15:18:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **306** |
-| 未claim Research job | **305** |
-| 直近24hの検証済みResearch収録 | **17** |
-| 最終検証済みResearch収録 | **09-22 15:15:10 JST（2分前）** |
+| 収録候補論文 | **305** |
+| 未claim Research job | **304** |
+| 直近24hの検証済みResearch収録 | **18** |
+| 最終検証済みResearch収録 | **09-22 15:18:16 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **306** |
+| canonical_id確認済みの一意な候補論文 | **305** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **306** |
+| 非終端Research job合計 | **305** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -33,10 +33,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **5911** |
-| 処理済み | **595** |
-| 未処理 | **5316** |
-| 収録済みとして除外 | **487** |
+| 構造化references総候補 | **5921** |
+| 処理済み | **597** |
+| 未処理 | **5324** |
+| 収録済みとして除外 | **489** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **3** | **0** | **0** | **1** | **0** | — |
+| Research | **10** | **3** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **9** | **6** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **10** | **6** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 15:18:16 JST** [research] `arXiv:2212.09811` — Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model
+  - job: `.survey/work-queue/jobs/job-research-6f4aa4cc9993f8fd.json`
+  - result: `.survey/work-queue/results/research/attempt-16cac5f54e2362f364831d2c.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-16cac5f54e2362f364831d2c.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md`
 - **09-22 15:15:10 JST** [research] `arXiv:2504.07807` — Cluster-Driven Expert Pruning for Mixture-of-Experts Large Language Models
   - job: `.survey/work-queue/jobs/job-research-a4042c7c7ed57c9a.json`
   - result: `.survey/work-queue/results/research/attempt-cc1db5f81bd8a1c088514f31.json` (`ok=true`)
@@ -178,9 +183,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2212.09811` — Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model / worker `scheduled-chat-00`
-  - claim: **09-22 15:16:05 JST** / heartbeat: **—** / lease expiry: **09-22 16:46:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-6f4aa4cc9993f8fd.json`
+- `arXiv:2504.05586` — Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations / worker `scheduled-chat-00`
+  - claim: **09-22 15:18:09 JST** / heartbeat: **—** / lease expiry: **09-22 16:48:09 JST**
+  - evidence: `.survey/work-queue/claims/job-research-f59af449638fc64c.json`
 
 #### Audit
 
@@ -200,7 +205,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **306** |
+| ready | **305** |
 
 ### 候補の重複・識別情報欠損
 
@@ -220,7 +225,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **894** |
+| inference/training/survey配下の論文Markdown実体 | **895** |
 
 ### immutable submissionの未照合
 
@@ -228,8 +233,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **276** |
-| └ Research | **204** |
+| 成功result未照合のimmutable submission | **275** |
+| └ Research | **203** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
