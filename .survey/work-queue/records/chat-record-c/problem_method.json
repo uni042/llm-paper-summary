@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-9e9eaa528a25ba74b46d1d5f",
+  "attempt_id": "attempt-8ea91e1c5b13559f11f48a08",
   "job_id": "job-research-f0b1ffeacc3b0ccd",
   "data": {
     "problem": "大規模言語モデルによるGPUカーネル生成は、単体の試験環境で正しさと速度を評価してきた。しかし実モデルへ統合すると、前段演算が残したキャッシュ、メモリ割当状態、形状条件、呼出し処理、KVキャッシュ、事前充填と逐次生成の意味差が加わる。このため単体で1.65倍だった候補がモデル内では0.69倍、端から端まででは0.84倍になる例や、単体では顕在化しない範囲外アクセス、事前充填専用の高速経路が逐次生成では使えない問題が生じる。従来の代理ベンチマークだけでは、実配備で本当に速く安全な候補を選べない。",
@@ -29,7 +29,7 @@
     "system_design": "対象推論スクリプト、実モデル計測、段階別課題抽出、経験誘導探索、配備時受理、最適化済み配備を閉ループ化する。モデル内検証の結果は探索へ戻され、処理条件が変われば再計測する。したがって生成カーネル単体ではなく、周辺演算やキャッシュ状態を含む実配備状況そのものを最適化環境として扱う設計である。"
   },
   "reservation": {
-    "claim_id": "claim-9e9eaa528a25ba74b46d1d5f",
+    "claim_id": "claim-8ea91e1c5b13559f11f48a08",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
