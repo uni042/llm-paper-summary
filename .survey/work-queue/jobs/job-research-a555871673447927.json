@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T21:11:09+00:00",
   "completed_at": "2026-09-22T08:29:27+00:00",
   "blocker": "Primary-source full text could not be retrieved in this invocation. The canonical ACM PDF endpoint for DOI 10.1145/3789240.3829201 returned HTTP 403, and fresh title/DOI searches found bibliographic records, the SIGCOMM program/abstract, and secondary summaries but no accessible primary full text. ResearchGate explicitly reports no full text available. Per workflow, no five-slot research record was inferred from the abstract or secondary summaries; retry this same paper when primary full text is retrievable.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-ea9d4b84a65b2d853a324ad1.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-ea9d4b84a65b2d853a324ad1.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T08:29:27+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T08:29:27+00:00",
+      "reason": "Primary-source full text could not be retrieved in this invocation. The canonical ACM PDF endpoint for DOI 10.1145/3789240.3829201 returned HTTP 403, and fresh title/DOI searches found bibliographic records, the SIGCOMM program/abstract, and secondary summaries but no accessible primary full text. ResearchGate explicitly reports no full text available. Per workflow, no five-slot research record was inferred from the abstract or secondary summaries; retry this same paper when primary full text is retrievable."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T08:29:27+00:00",
+  "last_blocked_at": "2026-09-22T08:29:27+00:00",
+  "retry_not_before": "2026-09-29T11:57:16+00:00"
 }

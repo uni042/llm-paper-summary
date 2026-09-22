@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T22:12:13+00:00",
   "completed_at": "2026-09-22T10:29:08+00:00",
   "blocker": "Primary arXiv abstract metadata was discoverable, but the primary arXiv full-text/HTML routes were unavailable to this invocation. Secondary mirrors exposed detailed derived text, but workflow requires reading the primary source in full and forbids synthesizing the record from secondary material. No unverified five-slot record was produced.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-32ac40905164328636c42caa.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-32ac40905164328636c42caa.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T10:29:08+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T10:29:08+00:00",
+      "reason": "Primary arXiv abstract metadata was discoverable, but the primary arXiv full-text/HTML routes were unavailable to this invocation. Secondary mirrors exposed detailed derived text, but workflow requires reading the primary source in full and forbids synthesizing the record from secondary material. No unverified five-slot record was produced."
+    }
+  ],
+  "first_blocked_at": "2026-09-22T10:29:08+00:00",
+  "last_blocked_at": "2026-09-22T10:29:08+00:00",
+  "retry_not_before": "2026-09-29T11:57:16+00:00"
 }
