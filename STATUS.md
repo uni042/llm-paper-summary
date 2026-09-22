@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 11:05:01 JST**
+> 自動生成: **2026-09-22 11:05:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -116,7 +116,7 @@
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.04502` — AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation / worker `scheduled-chat-00`
-  - claim: **09-22 11:03:15 JST** / heartbeat: **—** / lease expiry: **09-22 12:33:15 JST**
+  - claim: **09-22 11:05:08 JST** / heartbeat: **—** / lease expiry: **09-22 12:35:08 JST**
   - evidence: `.survey/work-queue/claims/job-research-be16d214d5c628cd.json`
 
 #### Audit
