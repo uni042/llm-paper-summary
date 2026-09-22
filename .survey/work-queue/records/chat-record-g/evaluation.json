@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-ecdae1d537fddfff8ce020e5",
-  "job_id": "job-research-9cbcbbb853ae3588",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ecdae1d537fddfff8ce020e5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ecdae1d537fddfff8ce020e5","job_id":"job-research-9cbcbbb853ae3588","data":{"hardware":"時間計測はTransformer-XLをRTX A6000 1枚・batch 22、BERT/RoBERTaをV100 8枚・batch 64で実施する。","software":"公式コードとモデルは https://github.com/VITA-Group/Random-MoE-as-Dropout で公開。BERT/RoBERTaはHugging Face系設定、Transformer-XLは公式設定を基準とする。","methodology":"事前学習はTransformer-XLをenwik8、BERTとRoBERTaをBooksCorpusで行う。Transformer-XLは4層・幅256・FFN 8192・8 heads、Adam、初期学習率2.5×10^-4、cosine減衰、batch 22、4×10^5 steps。BERT/RoBERTaは12層・幅768で、BERTはFFN 6144、RoBERTaは3072。BERTはAdamW、初期5×10^-5、batch 64、10^5 steps、RoBERTaも10^5 steps。\n\n比較はDense+Dropout、Concrete Dropout、DropBlock、学習型SMoE、THOR。事前学習品質はBPC、効率はiteration時間と単一sample推論FLOPsで測る。全手法を同一総パラメータ数で比較し、SMoE系はk=N/2とk=Nを評価する。\n\n下流はSST-2、CSQA、ASDiv-A、MAWPS、SVAMP。Transformer-XLはSST-2で学習率10^-4・batch64、BERT/RoBERTaは推論課題で2×10^-5・batch64、すべて3 epochs。SMoE系は下流データの一回の順伝播でエキスパート投票数を集計し、予算に合う上位エキスパートを選んで密微調整する。\n\n除去実験はモデル深さ2/4/8/12、エキスパート数2/4/8/16、固定ランダム・完全ランダム・hash経路選択、k漸増の有無、SMoE挿入層位置、単一エキスパート蒸留、HotpotQAまで含む。","scope":"3種類のTransformer、事前学習と5下流ベンチマーク、計算量・学習時間、容量スイープ、複数の除去実験を含むため、自己スリム化性と正則化効果を多面的に検証している。\n\n一方、モデル規模は現在の大規模言語モデルより小さく、事前学習データ・stepsも公式BERT/RoBERTaより縮小される。著者自身が計算資源制約を明記しており、巨大MoEでのエキスパート並列通信、ネットワーク帯域、重みオフロード、実サービス遅延は評価対象外である。"},"reservation":{"claim_id":"claim-ecdae1d537fddfff8ce020e5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
