@@ -128,7 +128,7 @@ class MethodHeadingCompatibilityTests(unittest.TestCase):
 
 
 class LanguageRatioScopeTests(unittest.TestCase):
-    def test_bibliographic_section_is_excluded_from_language_ratio(self) -> None:
+    def test_bibliographic_section_remains_in_stable_language_ratio_scope(self) -> None:
         lines = """# Example
 
 ## 書誌情報
@@ -138,7 +138,7 @@ class LanguageRatioScopeTests(unittest.TestCase):
 本文は日本語で手法の目的と処理内容を説明する。
 """.splitlines()
         prose = AUDIT.prose_text_for_ratio(lines)
-        self.assertNotIn("Institute of Computing Technology", prose)
+        self.assertIn("Institute of Computing Technology", prose)
         self.assertIn("本文は日本語", prose)
 
 
