@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-88d2aa5426361490104919b5",
   "job_id": "job-research-3611857c9c7fea67",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-88d2aa5426361490104919b5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2608.08627",
+    "arxiv_id": "2608.08627",
+    "doi": "10.48550/arXiv.2608.08627",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AI", "cross_list": []},
+    "title": "UniMoMo: Expert Merging-Based MoE Acceleration for Large Recommendation Models",
+    "summary": "UniMoMoは、学習済み推薦向け混合エキスパート（Mixture-of-Experts; MoE）を、指定された配備時エキスパート数へ変換する事後圧縮法である。未ラベル校正データ上で全エキスパートを同一入力に通し、出力平均・分散から機能的類似度グラフを構成する。同時にルータの確率重み付き利用量から層ごとの偏りを測り、高トラフィックなエキスパートを反復マージから保護する。グラフ粗視化後は利用量重み付きでSwiGLU重みを融合し、非線形活性のずれを最小二乗写像で補正してdown projectionへ畳み込む。最終モデルは縮小routerを持つ通常のtop-k MoEで、専用オンライン演算子を追加しない。Amazon Beauty、KuaiRec、TenRecの2/4/6ブロック設定で8→4圧縮は元モデル比NDCG@10 99.92〜102.30%、A100上1.28〜1.63倍高速化を示した。",
+    "list_summary": "推薦MoEの機能的類似度とrouting exposureを同じ校正ストリームから推定し、重要expertを保護しつつgraph coarseningで8→4/2へ縮約する事後圧縮。",
+    "authors": ["Lei Xin","Bin Gu","Peize Li","Zitong Wang","Jianbo Zhao","Changjiang Jiang","Yanyue Xie","Chao Huang","Xuyang Zhao","Zunhai Su","Fanhu Zeng","Zhenglun Kong"],
+    "authors_affiliations": "Kuaishou Technology; Hohai University; Wuhan University; ByteDance Seed; Alibaba/Ant Group; ByteDance Douyin; The University of Hong Kong; Harvard University; Independent Researcher",
+    "published": "2026-08-09",
+    "publication": "arXiv preprint arXiv:2608.08627v1",
+    "publication_type": "Preprint",
+    "publication_status": "arXiv preprint。本文ヘッダはConference'17のテンプレート表記であり、特定会議への採択証拠として扱わない。",
+    "lineage": "Adaptive Expert Computation / Compression / expert merging / recommendation MoE",
+    "topics": ["MoE圧縮","expert merging","graph coarsening","推薦システム","routing exposure","post-training compression"],
+    "importance": "従来のexpert mergingを単なるパラメータ距離や出力類似度だけで決めず、推薦トラフィック上の機能的互換性とrouting exposureを一つの予算付きpartition問題へ統合する。圧縮後も標準top-k MoEのままなので、オンライン専用モジュールなしで複数serving budgetへcheckpointを輸出できる点が実運用上重要である。",
+    "hardware_evaluation": "レイテンシ評価はNVIDIA A100 80GB 1枚、BF16、batch size 256。20 warm-up後に80回の同期forwardを計測。",
+    "quality_effect": "8→4では9つのdataset-depth組でOrigin MoE比NDCG@10 99.92〜102.30%、速度1.28〜1.63倍。8→2/top-1では98.36〜104.24%、1.47〜2.21倍。Amazon Beautyの8→4ではNDCG@10 0.2686対Origin 0.2649、latency 3.127ms対4.833ms。",
+    "source": "https://arxiv.org/abs/2608.08627",
+    "sources": ["https://arxiv.org/abs/2608.08627","https://arxiv.org/pdf/2608.08627"],
+    "code": null,
+    "implementation": "本文は校正・graph coarsening・最小二乗補正・router縮約の実装手順を詳述するが、一次資料中に専用公開コードURLは確認できない。圧縮後は標準top-k routingと既存expert kernelを利用する。",
+    "last_checked": "2026-09-23",
+    "references": ["arXiv:2510.14436","arXiv:2410.08589","arXiv:2507.00390","arXiv:2512.18425","arXiv:2511.04805"],
+    "references_checked_at": "2026-09-23",
+    "references_source": "arXiv v1 PDF bibliography",
+    "references_total": 70
+  },
+  "reservation": {"claim_id":"claim-88d2aa5426361490104919b5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
