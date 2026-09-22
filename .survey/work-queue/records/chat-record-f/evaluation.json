@@ -2,29 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-afcf905bd317f0527a7a08a2",
-  "job_id": "job-research-9de329d10383e26b",
-  "data": {
-    "hardware": "最大8B/64Eモデルを512 TPU v4で学習し、GSPMD 2次元シャーディングを使用。",
-    "software": "Transformer MoE。専門家選択、Switch top-1、GShard top-2を同一活性計算量条件で比較。",
-    "model": "0.1B級で16/32/64/128専門家を比較し、最大8B活性規模・64専門家、総143BパラメータのMoEを評価。",
-    "datasets": [
-      "GLaM由来1.6兆トークン事前学習コーパス",
-      "GLUE",
-      "SuperGLUE"
-    ],
-    "baselines": [
-      "Switch Transformer top-1",
-      "GShard top-2",
-      "T5 11B dense",
-      "Hash Layer"
-    ],
-    "correctness": "事前学習perplexity、同一perplexity到達ステップ、GLUE/SuperGLUE 11タスクの微調整性能、容量係数と専門家数のアブレーションで評価。",
-    "methodology": "最大系列長1024、Adafactor、最初の10K stepは一定学習率、その後逆平方根減衰、SentencePiece 256K語彙。Expert Choiceは原則c=2としてGShard top-2と活性パラメータ量を揃え、専門家数16〜128へのスケーリング、c=1への削減、トークン当たり専門家数上限制約を比較する。",
-    "scope": "大規模TPU事前学習と11下流タスクを含む実機評価。主眼は訓練収束と微調整性能で、自己回帰生成の小バッチ推論レイテンシを直接最適化・評価する研究ではない。"
-  },
+  "attempt_id": "attempt-59b2c2e42440417a9356ca54",
+  "job_id": "job-research-a4042c7c7ed57c9a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-afcf905bd317f0527a7a08a2",
+    "claim_id": "claim-59b2c2e42440417a9356ca54",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
