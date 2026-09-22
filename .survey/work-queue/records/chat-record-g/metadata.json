@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-ac17b6b84524962e53346559",
-  "job_id": "job-research-3bf50f659a80056e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ac17b6b84524962e53346559",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ac17b6b84524962e53346559","job_id":"job-research-3bf50f659a80056e","data":{"canonical_id":"arXiv:2604.04356","arxiv_id":"2604.04356","doi":"10.48550/arXiv.2604.04356","openreview_id":null,"arxiv_categories":{"primary":"cs.AI","cross_list":["cs.CL","cs.LG","cs.PF"]},"title":"REAM: Merging Improves Pruning of Experts in LLMs","summary":"REAMは、混合専門家モデル（Mixture of Experts; MoE）のメモリ削減で専門家を単純に削除すると校正データ外の知識まで失う問題に対し、重要な専門家を代表として残し、重要度の低い専門家を近い代表へ統合する。ルータの出力と専門家活性を使って類似度を測り、ニューロン対応を整列して重みを統合し、各MoE層の圧縮後に次層用の活性を取り直す逐次処理を採用する。Qwen3-30B-A3B、Qwen3-Next-80B-A3B、GLM-4.5-Airで評価し、専門家を25%削減相当まで統合した条件では生成課題で元モデルに近い性能を保つ例を示す。校正データの一般文・数学・コード比率が選択式課題と生成課題の性能を大きく左右することも明らかにした。","list_summary":"重要専門家を代表として保護し、低重要度専門家をルータ・活性依存の類似度で統合するMoE圧縮。校正データ構成による選択式／生成性能のトレードオフも分析する。","authors":["Saurav Jha","Maryam Hashemzadeh","Ali Saheb Pasand","Ali Parviz","Min-Joong Lee","Boris Knyazev"],"authors_affiliations":"Samsung AI Lab Montreal / Mila（論文・公開ページ記載に基づく）","published":"2026-04-06","publication":"arXiv:2604.04356, 2026","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE圧縮 / 専門家統合 / 専門家枝刈り / REAP後継","topics":["MoE","専門家統合","専門家枝刈り","モデル圧縮","ルーティング","校正データ"],"importance":"専門家を捨てる枝刈りと単純平均型の統合の中間として、重要専門家を保持しながら低重要度専門家の情報を吸収する構成を示す。圧縮率だけでなく、校正データの構成が下流性能の方向性を変える点を系統的に評価しており、MoE圧縮の運用条件を考える上で重要。","hardware_evaluation":"公開本文で複数の大規模MoEを評価しているが、この記録ではハードウェア速度の主張を中心にせず、専門家数削減と精度保持を主要評価として扱う。","quality_effect":"Qwen3-30B-A3Bでは128専門家から96専門家への統合時、生成課題集約値69.8に対して元モデル70.9。Qwen3-Next-80B-A3Bでは校正条件によって生成課題集約値72.9で元モデル72.9に並ぶ例を報告する。","source":"https://arxiv.org/abs/2604.04356","sources":["https://arxiv.org/abs/2604.04356","https://arxiv.org/pdf/2604.04356"],"code":"https://github.com/SamsungSAILMontreal/ream","implementation":"公開コードあり。専門家重要度、ルータ重み付き類似度、ハンガリー法によるニューロン整列、層ごとの逐次統合を含む。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary-paper-reference-section","references_total":0},"reservation":{"claim_id":"claim-ac17b6b84524962e53346559","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
