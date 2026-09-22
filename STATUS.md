@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 14:03:38 JST**
+> 自動生成: **2026-09-22 14:05:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文 | **307** |
 | 未claim Research job | **305** |
 | 直近24hの検証済みResearch収録 | **16** |
-| 最終検証済みResearch収録 | **09-22 13:52:54 JST（10分前）** |
+| 最終検証済みResearch収録 | **09-22 13:52:54 JST（12分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（5時間31分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（5時間32分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -173,9 +173,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2504.07807` — Cluster-Driven Expert Pruning for Mixture-of-Experts Large Language Models / worker `scheduled-chat-30`
-  - claim: **09-22 14:03:29 JST** / heartbeat: **—** / lease expiry: **09-22 15:33:29 JST**
-  - evidence: `.survey/work-queue/claims/job-research-a4042c7c7ed57c9a.json`
+- `arXiv:2608.30567` — TuringLLM: Efficiently Scaling Foundation Models Toward Physical AI / worker `scheduled-chat-30`
+  - claim: **09-22 14:04:57 JST** / heartbeat: **—** / lease expiry: **09-22 15:34:57 JST**
+  - evidence: `.survey/work-queue/claims/job-research-92d92d3583bf57da.json`
 - `arXiv:2212.09811` — Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model / worker `scheduled-chat-00`
   - claim: **09-22 13:01:22 JST** / heartbeat: **—** / lease expiry: **09-22 14:31:22 JST**
   - evidence: `.survey/work-queue/claims/job-research-6f4aa4cc9993f8fd.json`
@@ -226,8 +226,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **266** |
-| └ Research | **194** |
+| 成功result未照合のimmutable submission | **267** |
+| └ Research | **195** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
