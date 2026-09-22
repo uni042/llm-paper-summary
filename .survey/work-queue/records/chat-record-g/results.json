@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-c1740060a24d308914998762","job_id":"job-research-c92e15d6ba5edb8d","data":{"overview":"同一総枝刈り予算で、GRAPEは主要3モデルの2-expert/4-expert設定すべてで平均精度の最良値を報告する。Mixtral-8x22Bでは平均68.2/62.6で、最強局所基準67.0/61.1に対して相対1.79%/2.45%改善する。DeepSeek-MoEでは49.8/49.5で最強局所基準に対し1.84%/1.43%、GPT-OSSでは90.3/89.5で0.44%/0.45%改善する。主要3モデル・各枝刈り設定を通した最強局所法からの改善は平均1.40%、最大2.45%。付録のMixtral-8x7BとQwen-MoEでも全体貪欲法が最高または最高近傍の保持率を示す。","key_results":[{"metric":"主要3モデルの最強局所法に対する平均改善","value":"+1.40% average; up to +2.45%","baseline":"strongest local pruning baseline at same total pruning budget","condition":"Mixtral-8x22B, DeepSeek-MoE, GPT-OSS; 2e/4e pruning settings","interpretation":"層ごとの削減数を非一様化するだけで同じ総専門家数削減時の精度保持を改善する。"},{"metric":"Mixtral-8x22B average accuracy","value":"68.2 / 62.6 (2e / 4e)","baseline":"DEK 67.0 / 61.1","condition":"same total budget; no fine-tuning","interpretation":"枝刈りが強い4eで相対改善が2.45%へ拡大し、一様削除の弱点が強い圧縮で顕在化する。"},{"metric":"DeepSeek-MoE average accuracy","value":"49.8 / 49.5","baseline":"strongest local 48.9 / 48.8","condition":"2e / 4e equivalent global budgets","interpretation":"改善幅は小さいが両設定で一貫して上回る。"},{"metric":"GPT-OSS average accuracy","value":"90.3 / 89.5","baseline":"strongest local 89.9 / 89.1","condition":"MMLU random 1000; reasoning effort medium","interpretation":"元モデル平均90.0に近い精度を保ち、2e設定では表上元平均をわずかに上回る。"}],"negative_results":"全体貪欲枝刈りは層冗長性が極端に偏る場合に削除を特定層へ集中させ、モデルを崩壊させ得る。著者はDeepSeek-MoEの実験をこの限界の例として挙げ、エントロピー保護を導入しても全体配分問題が完全には解決しないことを認める。また改善幅はモデル依存で、GPT-OSSでは最強局所法との差が0.44〜0.45%と小さい。","interpretation":"結果は『どの専門家を削るか』だけでなく『どの層から何個削るか』が独立に重要であることを示す。局所法の専門家選択基準をそのまま強化するのではなく、層間予算配分を全体冗長性へ合わせることで、同じメモリ削減量でも重要層の過剰削除を避けられる。エントロピーは性能そのものを直接最適化する指標ではなく、極端な層集中を防ぐ安全弁として機能する。","quality_impact":"追加fine-tuningを全手法で無効化した比較なので、精度差は再学習による回復ではなく枝刈り選択の違いを反映する。一方、評価は標準QA/知識ベンチマーク中心で、長文脈、生成品質、実サービス負荷での品質影響は未評価。"},"reservation":{"claim_id":"claim-c1740060a24d308914998762","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-1338966144636293379a0970",
+  "job_id": "job-research-d4390f65b198912f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1338966144636293379a0970",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
