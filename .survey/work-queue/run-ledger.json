@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T16:51:21.321868+00:00",
+  "updated_at": "2026-09-22T16:56:22.754426+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -38838,6 +38838,56 @@
           "type": "research",
           "canonical_id": "DOI:10.24963/ijcai.2026/568",
           "title": "SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35757360567",
+      "first_recorded_at": "2026-09-22T16:56:22.754426+00:00",
+      "last_recorded_at": "2026-09-22T16:56:22.754426+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35757360567:1",
+          "recorded_at": "2026-09-22T16:56:22.754426+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35757360567",
+            "run_attempt": "1",
+            "source_sha": "0fd64c6acc94c023aa4b2ef9c36a8769694fa58c"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-0d6b250579950fce",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08231",
+          "title": "SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans",
           "from": "ready",
           "to": "completed"
         }

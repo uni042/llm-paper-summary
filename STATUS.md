@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 01:51:57 JST**
+> 自動生成: **2026-09-23 01:56:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **230** |
+| 収録候補論文 | **229** |
 | 未claim Research job | **228** |
-| 直近24hの検証済みResearch収録 | **54** |
-| 最終検証済みResearch収録 | **09-23 01:51:15 JST（42秒前）** |
+| 直近24hの検証済みResearch収録 | **55** |
+| 最終検証済みResearch収録 | **09-23 01:56:16 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **230** |
+| canonical_id確認済みの一意な候補論文 | **229** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **230** |
+| 非終端Research job合計 | **229** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（17時間19分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（17時間23分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **32** | **2** | **0** | **0** | **2** | **1** | — |
+| Research | **33** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **32** | **5** | **0** | **3** | **2** | **1** | **6** |
+| 合計 | **33** | **5** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 01:56:16 JST** [research] `arXiv:2609.08231` — SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans
+  - job: `.survey/work-queue/jobs/job-research-0d6b250579950fce.json`
+  - result: `.survey/work-queue/results/research/attempt-fec4b42510381cc0bbc4dd6e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-fec4b42510381cc0bbc4dd6e.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.08231-sembridge-compiling-consumer-observations-into-cross-stack-communication-plans.md`
 - **09-23 01:51:15 JST** [research] `DOI:10.24963/ijcai.2026/568` — SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL
   - job: `.survey/work-queue/jobs/job-research-07f0e94c3c687e36.json`
   - result: `.survey/work-queue/results/research/attempt-326b3f3f66e611a32551fa41.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-b75922391156a97f6cc44521.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b75922391156a97f6cc44521.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md`
-- **09-22 23:45:43 JST** [research] `arXiv:2303.01610` — Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers
-  - job: `.survey/work-queue/jobs/job-research-9cbcbbb853ae3588.json`
-  - result: `.survey/work-queue/results/research/attempt-ecdae1d537fddfff8ce020e5.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ecdae1d537fddfff8ce020e5.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md`
 
 ### Audit
 
@@ -180,10 +180,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.08231` — SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans / worker `scheduled-chat-30`
-  - claim: **09-23 01:51:37 JST** / heartbeat: **—** / lease expiry: **09-23 03:21:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0d6b250579950fce.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.06161` — All for 1-Bit: Towards Genuine 1-Bit Post-Training Quantization for LLMs / worker `scheduled-chat-00`
   - claim: **09-23 01:13:12 JST** / heartbeat: **09-23 01:38:00 JST** / lease expiry: **09-23 03:08:00 JST**
   - evidence: `.survey/work-queue/claims/job-research-630ecabf6127702e.json`
@@ -206,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **230** |
+| ready | **229** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **938** |
+| inference/training/survey配下の論文Markdown実体 | **939** |
 
 ### immutable submissionの未照合
 
