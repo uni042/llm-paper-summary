@@ -1,4 +1,50 @@
 {
-"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-396b6e89d1f9db2a5b08e271","job_id":"job-research-1b89c86f687054e4",
-"data":{"overview":"DiEPは層ごとの冗長性差を学習して削減予算を非一様に配ることで、固定率・層内探索型の比較法より高い精度を維持する。Mixtral 8x7Bではエキスパートを半数削除して平均59.9となり、元モデル65.1の約92%を保持する。Mixtral 8x22Bでは半数削除でも62.9で元モデル67.0の約94%を保持する。探索自体もMixtral 8x7Bで0.23時間とNAEEの1.31時間より大幅に短い。","key_results":[{"metric":"Mixtral 8x7B平均精度","value":"25%削減63.8、50%削減59.9","comparison":"元モデル65.1。50%削減で約92%保持。"},{"metric":"Mixtral 8x22B平均精度","value":"50%削減62.9","comparison":"元モデル67.0の約94%保持。"},{"metric":"MMLU改善幅","value":"最大+7.1ポイント","comparison":"既存エキスパート削減法に対する最大改善。"},{"metric":"削減探索時間","value":"0.23時間","comparison":"NAEE 1.31時間に対し約5.7倍高速。"},{"metric":"削減探索メモリ時間積","value":"31.97 GB·h","comparison":"NAEEより74%、MC-MoEより70%低い。"},{"metric":"DeepSeek-MoE-16B推論","value":"12.5%削減+スキップで平均53.6、1.13倍高速、GPU比0.89","comparison":"元モデル平均56.2に対し95%以上を保持。"}],"negative_results":"損失なしではない。Mixtral 8x7Bの平均精度は元モデル65.1から25%削減で63.8、50%削減で59.9へ低下する。DeepSeek-MoE-16Bでも元モデル56.2に対し12.5%削減+スキップは53.6となる。大規模なDeepSeek V3/Qwen2.5-MaxやマルチモーダルMoEは未評価。","interpretation":"高削減率ほど固定層別方式との差が広がるのは、層ごとの冗長性が均一でなく、重要な浅層を保護しつつ冗長な深層へ削減を寄せられるためと解釈できる。探索時間が短いのは、全組合せを列挙せず連続重要度を勾配で学習してから一度の全体順位で離散化するためである。","quality_impact":"近似手法であり品質劣化を許容してメモリ・計算量を削減する。削減率25%ではMixtral 8x7B-Instructの平均が66.4から65.8と0.6ポイント低下に留まる一方、50%では63.0まで下がる。要求品質に応じて削減率を選ぶ必要がある。"},
-"reservation":{"claim_id":"claim-396b6e89d1f9db2a5b08e271","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-9d3f197e913a0495fbc539d1",
+  "job_id": "job-research-1b89c86f687054e4",
+  "data": {
+    "overview": "DiEPは層ごとの冗長性差を学習して削減予算を非一様に配ることで、固定率・層内探索型の比較法より高い精度を維持する。Mixtral 8x7Bではエキスパートを半数削除して平均59.9となり、元モデル65.1の約92%を保持する。Mixtral 8x22Bでは半数削除でも62.9で元モデル67.0の約94%を保持する。探索自体もMixtral 8x7Bで0.23時間とNAEEの1.31時間より大幅に短い。",
+    "key_results": [
+      {
+        "metric": "Mixtral 8x7B平均精度",
+        "value": "25%削減63.8、50%削減59.9",
+        "comparison": "元モデル65.1。50%削減で約92%保持。"
+      },
+      {
+        "metric": "Mixtral 8x22B平均精度",
+        "value": "50%削減62.9",
+        "comparison": "元モデル67.0の約94%保持。"
+      },
+      {
+        "metric": "MMLU改善幅",
+        "value": "最大+7.1ポイント",
+        "comparison": "既存エキスパート削減法に対する最大改善。"
+      },
+      {
+        "metric": "削減探索時間",
+        "value": "0.23時間",
+        "comparison": "NAEE 1.31時間に対し約5.7倍高速。"
+      },
+      {
+        "metric": "削減探索メモリ時間積",
+        "value": "31.97 GB·h",
+        "comparison": "NAEEより74%、MC-MoEより70%低い。"
+      },
+      {
+        "metric": "DeepSeek-MoE-16B推論",
+        "value": "12.5%削減+スキップで平均53.6、1.13倍高速、GPU比0.89",
+        "comparison": "元モデル平均56.2に対し95%以上を保持。"
+      }
+    ],
+    "negative_results": "損失なしではない。Mixtral 8x7Bの平均精度は元モデル65.1から25%削減で63.8、50%削減で59.9へ低下する。DeepSeek-MoE-16Bでも元モデル56.2に対し12.5%削減+スキップは53.6となる。大規模なDeepSeek V3/Qwen2.5-MaxやマルチモーダルMoEは未評価。",
+    "interpretation": "高削減率ほど固定層別方式との差が広がるのは、層ごとの冗長性が均一でなく、重要な浅層を保護しつつ冗長な深層へ削減を寄せられるためと解釈できる。探索時間が短いのは、全組合せを列挙せず連続重要度を勾配で学習してから一度の全体順位で離散化するためである。",
+    "quality_impact": "近似手法であり品質劣化を許容してメモリ・計算量を削減する。削減率25%ではMixtral 8x7B-Instructの平均が66.4から65.8と0.6ポイント低下に留まる一方、50%では63.0まで下がる。要求品質に応じて削減率を選ぶ必要がある。"
+  },
+  "reservation": {
+    "claim_id": "claim-9d3f197e913a0495fbc539d1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

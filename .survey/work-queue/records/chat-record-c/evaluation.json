@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-396b6e89d1f9db2a5b08e271",
+  "attempt_id": "attempt-9d3f197e913a0495fbc539d1",
   "job_id": "job-research-1b89c86f687054e4",
   "data": {
     "scope": "実ハードウェア上のモデル圧縮・推論評価。Mixtral 8x7B、Mixtral 8x7B-Instruct、Mixtral 8x22B、DeepSeek-MoE-16B、Qwen2-57B-14AをNVIDIA A800 GPU四枚で評価する。主にゼロショット言語課題と削減探索資源、推論速度・GPUメモリを測定し、DeepSeek V3やQwen2.5-Max級、マルチモーダルMoEへの一般化は未検証。",
@@ -40,7 +40,7 @@
     "calibration": "C4 128サンプルを標準とし、C4/MATHおよびサンプル数感度も評価。"
   },
   "reservation": {
-    "claim_id": "claim-396b6e89d1f9db2a5b08e271",
+    "claim_id": "claim-9d3f197e913a0495fbc539d1",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
