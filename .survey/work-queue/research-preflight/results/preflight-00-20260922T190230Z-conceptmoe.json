@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-00-20260922T190230Z-conceptmoe",
+  "kind": "research",
+  "attempt_id": "attempt-95a58c9a93fe71f7a995bfe2",
+  "job_id": "job-research-74a266f79fc28554",
+  "record_bank": "g",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2601.21420-conceptmoe-token-concept-compression.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:5f5966193e71d6a73f7d3dd8fe996d90a1ab8e9fcf5d0b6ff101a0bfe0a94cdb",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "1ae0da02a2430d7d363021ee3ad2495f24ba6eb9"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "161c18d19699bec3f3a79b1c0e72c3ec96899503"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "4d401d2b7b266509dc4c1e42df581e2658c0f4a6"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "9694442b3fd4cf6589a9fdc6895cda5a3650113f"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "e733ab40ad170e69d140e0e543c5540867ff5824"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references is required; use [] after checking a reference section with no normalized identifiers",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "Japanese-first prose ratio is too low: 65.3% < 70% (Japanese=2795, Latin=1485)"
+  ],
+  "checked_at": "2026-09-22T19:02:15+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
