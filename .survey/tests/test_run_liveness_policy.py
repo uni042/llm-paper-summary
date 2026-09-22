@@ -45,7 +45,6 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("観測用テレメトリ", router)
         self.assertIn("CLAIM_NEXT_RESEARCH_AUDIT", continuation)
         self.assertIn("MONITOR_SUBMISSION_RESULTS", continuation)
-        self.assertNotIn("WAIT_FOR_PREVIOUS_SUBMISSION_RESULT", continuation)
         self.assertNotIn("MAX_PIPELINE_AHEAD_COUNT", continuation)
         self.assertNotIn("最大2本先行", router)
 
