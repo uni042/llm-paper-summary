@@ -195,7 +195,7 @@ class DiscoveryRejectionLedgerTest(unittest.TestCase):
         self.assertEqual(result["results"], [])
         self.assertEqual(result["rejection_ledger_filtered_count"], 1)
 
-    def test_transient_block_is_not_added_but_blocked_permanent_is(self) -> None:
+    def test_retrieval_blocks_are_not_added_even_with_legacy_permanent_status(self) -> None:
         self._write_job(
             "job-research-blocked.json",
             {
@@ -216,9 +216,9 @@ class DiscoveryRejectionLedgerTest(unittest.TestCase):
                 "type": "research",
                 "status": "blocked_permanent",
                 "canonical_id": "arXiv:2609.98882",
-                "title": "Permanently Unavailable Source",
+                "title": "Legacy Retrieval Block",
                 "source_url": "https://arxiv.org/abs/2609.98882",
-                "blocker": "primary source remained unavailable after retry policy",
+                "blocker": "primary source remained unavailable after retired retry policy",
                 "blocked_attempts": 3,
                 "blocked_permanent_at": "2026-09-17T05:20:00+00:00",
             },
@@ -226,12 +226,11 @@ class DiscoveryRejectionLedgerTest(unittest.TestCase):
 
         summary = build_discovery_rejection_ledger.build_ledger(self.root)
 
-        self.assertEqual(summary["rejection_record_count"], 1)
+        self.assertEqual(summary["rejection_record_count"], 0)
+        self.assertEqual(summary["research_terminal_rejection_count"], 0)
         ledger = json.loads((self.queue / "discovery-rejections.json").read_text(encoding="utf-8"))
         self.assertNotIn("id:arXiv:2609.98881", ledger["records"])
-        row = ledger["records"]["id:arXiv:2609.98882"]
-        self.assertEqual(row["origin"], "research_blocked_permanent")
-        self.assertEqual(row["rejection_reason"], "primary source remained unavailable after retry policy")
+        self.assertNotIn("id:arXiv:2609.98882", ledger["records"])
 
 
 if __name__ == "__main__":
