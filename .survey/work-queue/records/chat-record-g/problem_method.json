@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-95a58c9a93fe71f7a995bfe2",
-  "job_id": "job-research-74a266f79fc28554",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-95a58c9a93fe71f7a995bfe2",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-95a58c9a93fe71f7a995bfe2","job_id":"job-research-74a266f79fc28554","data":{"problem":"標準LLMは各トークンへほぼ一様な計算を割り当てるが、自然言語には容易に予測できる連続部分と推論上重要な部分が混在する。固定長マージや規則ベース圧縮は情報密度に適応せず、byte-level動的chunkingは入力表現変更や総パラメータ増加が比較を交絡させる。単純にトークン数を減らしたモデルを深く・広くすると、改善が概念処理によるのか追加パラメータによるのか分離できない。ConceptMoEは、総パラメータ数と平均トークン当たりFLOPsを同一に保ったまま、意味的冗長部分だけを圧縮し、節約計算を重要な概念処理へ戻せる設計を狙う。","novelty":"学習可能な隣接トークン類似度でchunk境界を動的決定し、概念モデルへ入る系列を目標比率Rで短縮する。MoEでは総専門家数と活性化専門家数を独立に調整できるため、圧縮で節約した計算を活性化専門家数、概念モデル層ループ、隠れ幅へ再配分し、総パラメータと平均FLOPsを標準MoEに一致させられる。これにより概念レベル処理の効果を比較しつつ、注意行列計算とKVキャッシュ削減は残る。さらにEMA型dechunk、概念とトークンを共同利用するdecoder QKV、境界ノイズを組み合わせ、既存MoEからの継続学習変換も可能にする。","method_overview":"入力を浅いMoE encoder Eで処理し、Chunkモジュールが線形変換後の隣接hidden stateのcosine similarityから境界確率pを算出する。p>=0.5を境界とし、連続トークンをsumまたは末尾token表現でconceptへ集約する。補助損失はboundary/non-boundaryを2 expertのように扱い、デバイス全体の境界頻度を目標圧縮率1/Rへ誘導するため、sample間でも難易度に応じた計算配分が可能になる。Concept model Cが短縮系列を処理し、DeChunkでは境界確率によるEMAを施したconceptを元token位置へ戻してencoder表現へ加える。浅いdecoder Dの最後の注意層ではconcept由来Q/K/V射影をtoken由来射影へ加える共同復号を行う。訓練時は低信頼境界をBernoulliで反転して分布移動時の過圧縮を抑える。","components":[{"name":"適応Chunkモジュール","description":"隣接tokenのlearnable Q/K射影後cosine similarityから境界確率を作り、意味変化が大きい位置を境界として残す。固定長chunkと異なり、予測容易な区間を大きくまとめ、情報密度が高い区間を細かく保つ。"},{"name":"圧縮率補助損失と境界ノイズ","description":"boundary/non-boundaryの平均確率と選択頻度を用いたMoE風補助損失で目標Rを制御する。統計をdevice全sampleで集約するためsample-level計算配分が可能。Bernoulli境界反転は評価分布移動による境界確率0.5近傍の崩れと過圧縮を抑える。"},{"name":"EMA DeChunkと共同復号","description":"概念境界確率を用いて隣接conceptをEMA混合してからtoken位置へ展開し、encoder表現へ加える。decoderではconcept情報を追加Q/K/V射影としてtoken注意へ直接注入し、短いdecoderでも概念計算の情報を各token予測へ利用する。"},{"name":"計算再配分","description":"圧縮で減ったconcept-model FLOPsを、活性化expert増加、層ループ+expert増加、またはhidden width+expert計算へ戻す。総パラメータ数と平均FLOPsをbaselineへ合わせながら、注意行列は最大R^2倍、KV cacheは最大R倍削減できる。"}],"system_design":"E→Chunk→C→DeChunk→Dの5段構成。主計算を担うCだけ短縮系列で動かし、E/Dを浅く保つ。MoEの疎活性化を計算量調整ノブとして使うことで、token圧縮による計算削減とモデル能力比較を切り離す。既存MoE変換ではchunk/dechunkと最後4層の追加QKVだけを加え、追加QKVをゼロ初期化して継続学習開始時の挙動変化を抑える。"},"reservation":{"claim_id":"claim-95a58c9a93fe71f7a995bfe2","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
