@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e1881183879733d0f0a4eb0e","job_id":"job-research-6a21e987e314dd70","data":{"canonical_id":"arXiv:2608.21541","arxiv_id":"2608.21541","doi":"10.48550/arXiv.2608.21541","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Beyond Sparse Weights: When Is Attention Compressible?","summary":"注意重みが疎に見えることとKVキャッシュが圧縮可能であることを分離し、大きな重みの個数、確率質量の被覆、注意出力の忠実度、タスク有用性の間に一般には含意がないことを理論・実験で示す。全順位のスコア差、追放値ベクトルの加重和、タスク目標がそれぞれ不足する条件であると整理し、この知見からSnapKVの観測窓スコア、値ベクトル分散に基づくヘッド間予算配分、ヘッドごと1個の末尾要約KVを組み合わせた学習不要のCertKVを提案する。LongBench-v2、RULER、実パッキング実装で物理スロット予算の厳密な遵守を検証する。","list_summary":"疎な注意マップだけではKV圧縮を正当化できないことを理論化し、値分散配分と末尾要約を厳密な物理予算で実装するCertKVを提案。","authors":["Chiwun Yang","Xiaoyu Li"],"authors_affiliations":"City University of Hong Kong; University of New South Wales","published":"2026-08-21","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-08-21)","lineage":"KVキャッシュ圧縮 / 注意疎性 / 値ベクトル考慮型追放 / 厳密予算キャッシュ設計","topics":["KVキャッシュ圧縮","注意疎性","長文脈推論","値ベクトル考慮型配分","末尾要約"],"importance":"KV圧縮の根拠として頻用される『注意が疎だから捨てられる』という議論を、質量被覆・出力忠実度・タスク有用性の3段階で切り分け、システム設計へ接続した点が重要。","implementation":"CertKVはSnapKVの観測窓スコアを基礎に、追放末尾の値ベクトル分散によるヘッド別予算配分と、ヘッドごと1個の合成KV対を追加する学習不要方式。64K Llamaの実パッキング試作も評価する。","hardware_evaluation":"主評価は96GB NVIDIA RTX PRO 6000で実施。全実験205.70 GPU時間、電源投入インスタンス時間160.13時間。","quality_effect":"LongBench-v2の9設定中7設定で圧縮方式の上位2点推定値に入り、128K RULERでも主要な圧縮方式群と同等圏。統計的に普遍的優位を主張せず、競争力のある動作点として位置付ける。","source":"https://arxiv.org/abs/2608.21541","sources":["https://arxiv.org/abs/2608.21541","https://arxiv.org/pdf/2608.21541"],"code":null,"last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"一次論文本文（参考文献一覧は個別構造化未実施）","references_total":0},"reservation":{"claim_id":"claim-e1881183879733d0f0a4eb0e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-01556e847caec9153595855e",
+  "job_id": "job-research-c449ea471528f1b0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-01556e847caec9153595855e",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
