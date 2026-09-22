@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-40b553eeb725cfefaa1a1d5f-r4",
+  "kind": "research",
+  "attempt_id": "attempt-40b553eeb725cfefaa1a1d5f",
+  "job_id": "job-research-548d7e4cd563f6b8",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:616ab9859f21ae6d811496917bc819d7e268fb2c7eae32fd8ee3372674bbd625",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "5eb6f6d9e816bd6bc7810ec6ad4fe18e27f85477"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "d4c0cb702890898cb8930a930e02a4baabf68722"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "526215409ed381354121a5c8b23788d1d8a21f95"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "d17dd14dac67b420748bde8a5c92af08952d0541"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "b9889359b751e3c0c7e67b0f4bf9cc89f823453f"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "Japanese-first prose ratio is too low: 69.6% < 70% (Japanese=3232, Latin=1412)"
+  ],
+  "checked_at": "2026-09-22T09:03:44+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
