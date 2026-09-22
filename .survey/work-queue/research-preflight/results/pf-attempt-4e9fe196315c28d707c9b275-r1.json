@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-4e9fe196315c28d707c9b275-r1",
+  "kind": "research",
+  "attempt_id": "attempt-4e9fe196315c28d707c9b275",
+  "job_id": "job-research-303634fb993a11eb",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:a6f638e883847ea41f45f3d7be1f3da4a041e43f9c00fbdcc8ac09b87c5173a9",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "a0d70be6f63163c475220c2bbaa1b613634b4818"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "249dfdbfccf72dbcecc842b3a9b924ba0f670abe"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "1d1278232b4f23fdf332ee4c6226598e9b401037"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "eda1766cc5fa2e7f1a20cc186f875221d57c433d"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "ad60e06f9360c78da03ba21f243c5c23e9f674fd"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short"
+  ],
+  "checked_at": "2026-09-22T12:25:49+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
