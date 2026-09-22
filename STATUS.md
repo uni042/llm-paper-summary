@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 22:18:02 JST**
+> 自動生成: **2026-09-22 22:40:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **258** |
-| 未claim Research job | **258** |
-| 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-22 22:15:46 JST（2分前）** |
+| 収録候補論文 | **257** |
+| 未claim Research job | **257** |
+| 直近24hの検証済みResearch収録 | **41** |
+| 最終検証済みResearch収録 | **09-22 22:40:21 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **258** |
+| canonical_id確認済みの一意な候補論文 | **257** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **258** |
+| 非終端Research job合計 | **257** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（13時間45分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（14時間7分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **2** | **0** | **0** | **0** | **0** | — |
+| Research | **19** | **2** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **21** | **5** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **19** | **5** | **0** | **3** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 22:40:21 JST** [research] `arXiv:2509.22299` — HEAPr: Hessian-based Efficient Atomic Expert Pruning in Output Space
+  - job: `.survey/work-queue/jobs/job-research-a61328ecbdf05053.json`
+  - result: `.survey/work-queue/results/research/attempt-be85a6eae28ccf3a322cb511.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-be85a6eae28ccf3a322cb511.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.22299-heapr-atomic-expert-pruning.md`
 - **09-22 22:15:46 JST** [research] `arXiv:2509.06346` — Ban&Pick: Enhancing Performance and Efficiency of MoE-LLMs via Smarter Routing
   - job: `.survey/work-queue/jobs/job-research-6723d600d731caca.json`
   - result: `.survey/work-queue/results/research/attempt-302229314470f55acb21a513.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-01556e847caec9153595855e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-01556e847caec9153595855e.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.17109-shared-prefix-kv-reuse-across-standard-lora-adapters-quality-and-serving-tradeoffs.md`
-- **09-22 21:31:26 JST** [research] `arXiv:2306.03078` — SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression
-  - job: `.survey/work-queue/jobs/job-research-303634fb993a11eb.json`
-  - result: `.survey/work-queue/results/research/attempt-4e9fe196315c28d707c9b275.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4e9fe196315c28d707c9b275.json`
-  - paper: `papers/inference/99-other-inference-systems/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md`
 
 ### Audit
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **258** |
+| ready | **257** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **921** |
+| inference/training/survey配下の論文Markdown実体 | **922** |
 
 ### immutable submissionの未照合
 
