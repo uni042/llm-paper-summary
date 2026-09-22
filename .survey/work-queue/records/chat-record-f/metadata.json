@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-c67963f1064ecc2790db5b2d",
-  "job_id": "job-research-51f4efd90b7a5e12",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c67963f1064ecc2790db5b2d",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-c67963f1064ecc2790db5b2d","job_id":"job-research-51f4efd90b7a5e12","data":{"canonical_id":"arXiv:2609.09240","arxiv_id":"2609.09240","doi":"10.48550/arXiv.2609.09240","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution","summary":"Qwen3-8Bの252個の線形射影をKOTMS、E2M-ATQ、GPTQ補償で適応的約1.64 bit/weightへ後量子化し、能力保持、実ファイル圧縮、直接packed実行まで一貫して検証する技術報告。8課題のchance-corrected retentionは78.5%でmatched 4Bより8.9点高く、16.9 GBの記録checkpointを8.24 GiBへほぼ無損失にpackし、RTX 5070 12GB上で7.35 GiB・15.52 token/sの直接実行を実現する。一方prototype GEMVは同形状FP16 cuBLASより4.6倍遅く、速度優位は未確立。","list_summary":"Qwen3-8Bを適応的約1.64 bit/weightへ後量子化し、78.5%の補正済み能力保持、8.24 GiBの無損失packed artifact、RTX 5070上15.52 token/s・7.35 GiBの直接実行まで検証する。","authors":["Anirudh Malik","Poojith Devan","M Sparsh Mehra"],"authors_affiliations":"OneBit AI","published":"2026-09-08","publication":"arXiv:2609.09240v1 / OneBit AI Technical Research Report","publication_type":"技術報告・プレプリント","publication_status":"v1","lineage":"post-training quantization / ternary LLM / packed inference","topics":["三値量子化","Qwen3-8B","GPTQ","低ビット推論","packed kernel"],"importance":"数値上の1.58-bit表現だけでなく、能力保持、実際のserialization、12GB級GPUでの直接packed executionを分離測定し、低ビット化を配備可能性まで追跡する。","implementation":"Windows、Python 3.10.11、CUDA 12.8、PyTorch/Transformers。packed runtimeはTriton prototype。","hardware_evaluation":"単一NVIDIA RTX 5070 12,227 MiB VRAM、約31GB system RAM。","quality_effect":"8課題平均accuracy 72.4%→64.6%、chance-corrected retention 78.5%。3 corpus perplexity ratio平均1.361×。","source":"https://arxiv.org/abs/2609.09240","sources":["https://arxiv.org/abs/2609.09240","https://arxiv.org/pdf/2609.09240"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":13},"reservation":{"claim_id":"claim-c67963f1064ecc2790db5b2d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
