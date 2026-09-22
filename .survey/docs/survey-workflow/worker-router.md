@@ -62,6 +62,20 @@ Scheduled ChatからGitHubへ直接耐久保存する場合、**同一論文・�
 
 GitHub transportが1ファイル単位のwriteしか提供しない場合は、存在しない原子更新を捏造せず、その環境で可能な最小commit数に留める。commit集約のために品質チェック・preflight・submission順序を変更してはならない。
 
+### 2.3 一次資料取得回数の節約と再利用
+
+Web/PDF取得のplatform上限はrunを途中終了させる実害があるため、Research / Auditでは**一次資料の全文読解要件を維持したまま、外部取得回数を可能な限り減らす。** 取得回数を節約するために抄録・検索断片・二次資料だけでResearchを完成させてはならない。
+
+- claim後、同じ論文について既に利用可能な**一次PDF全文**がChatGPT Library等の耐久ファイル領域に存在するかをcanonical ID / arXiv ID / DOI / titleで確認できる場合は、Webへ再取得しに行く前にそれを再利用する。論文identityが一致し、欠落ページのない一次資料であることを確認する。
+- 一次PDFをWebから取得する必要がある場合は、抄録ページ→HTML各節→PDF各ページのような細切れ取得を常用せず、利用可能なら**完全なPDFを1回取得して以後は同じローカル/Libraryコピーを読む**経路を優先する。全文取得後の5スロット作成、preflight修復、submission failure修復、次runでのactive claim再開でも、同一版のPDFを再取得しない。
+- 完全な一次PDFを取得でき、Libraryへの耐久保存が利用可能なら、再利用価値が高いものはLibrary側の論文一次資料キャッシュへ保存してよい。保存時は少なくともcanonical IDまたはarXiv ID/DOI、一次資料URL、取得時刻、判別可能なら版番号を対応付け、別論文・別版を誤再利用しない。二次資料や検索断片を一次PDFキャッシュとして保存しない。
+- PDF/HTMLの同じ内容を複数providerから重複取得しない。現在の一次経路が実際に不完全・取得不能・破損・版不一致の場合だけ代替経路へ切り替える。
+- 修復ループでは、品質検査が要求する箇所だけを既取得の全文から再確認し、論文全体をWebから取り直さない。
+- Discovery中は候補identityと採否判断に全文PDFが不要なら取得しない。Research/Auditとしてclaimされた時点で初めて全文取得する。
+- 取得節約によって出典確認、全文読解、一次資料優先、品質基準を弱めてはならない。必要な一次情報がキャッシュにもWebにも無い場合は推測せず、正規のblocked/deferred経路を使う。
+
+**ノルマを達成したrunの最終報告には、取得上限を避けるために実際に使った工夫を短く記載する。** 例: 「Library上の既取得PDFを再利用」「PDFを1回だけ取得して修復でも再利用」「同一論文の再ダウンロードを回避」「Discoveryで不要な全文取得を省略」。取得回数や再利用回数を正確に数えられる場合は併記し、計測できない場合は推測値を作らず、実施した工夫だけを報告する。ノルマ未達時も取得上限が原因または近因なら、どの取得が上限に寄与したかを障害診断へ残す。
+
 Research / Auditのclaimは次の順で行う。
 
 1. 最新main HEADとclaim stateを再取得する。**同一workerにactiveな未提出claimがある場合は新requestを出さない。直前claimのexact attemptに対する不変descriptorがmainへ耐久保存済みなら、そのclaimがまだactive表示でも次requestを出してよい。claim fast laneは新request処理の冒頭でdescriptor-backed claimを正規解放してから新jobを割り当てる。**
