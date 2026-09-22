@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-ddb3060fbfec2233d78a5ab4",
-  "job_id": "job-research-a4cc548ec9dfc021",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ddb3060fbfec2233d78a5ab4",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-ddb3060fbfec2233d78a5ab4","job_id":"job-research-a4cc548ec9dfc021","data":{"problem":"Sparse MoEは各トークンが少数expertだけを使うためFLOPsは小さいが、production servingでは複数requestのbatchingとspeculative decodingにより、バッチ全体で見るexpert集合が急増する。DeepSeek-R1の例ではN=256,k=8でbatch 8なら約57 expert、batch 32なら約163 expertが期待され、decodeがmemory-bandwidth-boundなため、低利用率のexpertでも重みをロードするI/Oが支配的になる。既存のstatic pruningは再学習や固定構成を要し、token-level skippingはバッチ構成を見ない。LYNXはbatch-awareだがexpertの選択頻度中心でrouter score上の重要度を十分反映しない。","novelty":"XShareはexpert選択を各token独立ではなくbatch全体の最適化として定式化し、各層でexpert jの効用をバッチ内router scoreの総和として定義する。このproxyはmodularで、固定budget下では得点上位expertをgreedyに選ぶ解が最適になる。実用版は各tokenのtop-k0を必ず残すwarm-up、batch utilityによる集合選択、選択集合内でtokenごとのtop-kへ戻すrefinementを組み合わせる。さらにspeculative tokenのrequest内相関を使うhierarchical selectionと、GPUごとの最大expert loadを抑えるexpert-parallel-aware selectionへ拡張する。","method_overview":"各MoE層で全tokenのrouter scoreをexpert別に集約し、固定expert budgetまで高効用expertを選ぶ。まず各tokenの最上位expertをwarm-up集合へ入れて個々の品質を保護し、残りをbatch-level scoreで補う。最後に各tokenは選択済み集合の中から本来のtop-k数を選ぶため、計算疎性を維持しつつバッチ全体でロードするexpert種類数を減らす。speculative decodingでは同一requestの候補tokenが似たexpertを好む性質を利用し、requestごとの小集合を作ってからbatch集合へ統合する。expert parallelではGPU別expert配置を考慮し、最大GPU負荷を抑えるよう選択する。","components":[{"name":"Batch-level modular utility","description":"層lのexpert jについてbatch内gating scoreを合計し、選択集合Sの効用をその和で定義する。modularityにより固定cardinality budgetではscore順選択がproxy問題の最適解になる。"},{"name":"Warm-up + greedy + refinement","description":"各tokenのtop-k0を初期集合へ含め、batch utilityで残りbudgetを埋め、最後に選択集合内でtokenごとのtop-kを再選択する。再学習なしでbatchごとに動的適応する。"},{"name":"Speculative-decoding-aware hierarchical selection","description":"同一request内のspeculative tokenはexpert preferenceの重なりが独立tokenより2〜3倍大きいという観察を使い、request単位で小さなexpert集合を作ってからbatch集合へ統合する。"},{"name":"Expert-parallel-aware selection","description":"expertのGPU配置を制約へ入れ、各GPUから選ぶexpert数を制御して最大per-GPU loadを削減する。通信・ロードのstragglerを抑えることを狙う。"}],"system_design":"XShareはモデル重みを変更せずrouter出力後のexpert selection policyだけを差し替えるinference-time方式である。batching、speculative decoding、expert parallelというserving側の実運用条件に応じて同じbatch-aware思想を別の選択アルゴリズムへ具体化する。"},"reservation":{"claim_id":"claim-ddb3060fbfec2233d78a5ab4","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
