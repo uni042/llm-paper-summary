@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 06:40:28 JST**
+> 自動生成: **2026-09-23 07:17:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **203** |
-| 未claim Research job | **202** |
-| 直近24hの検証済みResearch収録 | **69** |
-| 最終検証済みResearch収録 | **09-23 05:22:23 JST（1時間18分前）** |
+| 収録候補論文 | **202** |
+| 未claim Research job | **201** |
+| 直近24hの検証済みResearch収録 | **70** |
+| 最終検証済みResearch収録 | **09-23 07:17:27 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **203** |
+| canonical_id確認済みの一意な候補論文 | **202** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **203** |
+| 非終端Research job合計 | **202** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（22時間7分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（22時間44分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **19** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **22** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **19** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 07:17:27 JST** [research] `arXiv:2608.08627` — UniMoMo: Expert Merging-Based MoE Acceleration for Large Recommendation Models
+  - job: `.survey/work-queue/jobs/job-research-3611857c9c7fea67.json`
+  - result: `.survey/work-queue/results/research/attempt-88d2aa5426361490104919b5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-88d2aa5426361490104919b5.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md`
 - **09-23 05:22:23 JST** [research] `arXiv:2505.13345` — Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference
   - job: `.survey/work-queue/jobs/job-research-bc95233f6a664ba4.json`
   - result: `.survey/work-queue/results/research/attempt-a2e5fb73d91123b2b7515fb2.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-95a58c9a93fe71f7a995bfe2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-95a58c9a93fe71f7a995bfe2.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2601.21420-conceptmoe-token-concept-compression.md`
-- **09-23 03:46:27 JST** [research] `arXiv:2605.13997` — HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts
-  - job: `.survey/work-queue/jobs/job-research-458a8d0f006d0310.json`
-  - result: `.survey/work-queue/results/research/attempt-3f2821d83831a58e9fb2986d.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3f2821d83831a58e9fb2986d.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2605.13997-hodgecover-topological-compression.md`
 
 ### Audit
 
@@ -180,7 +180,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2608.23841` — Pipeline-Native Transformers: Co-Designing Model Architecture and CPU Inference for Bandwidth-Efficient Autoregressive Decode / worker `scheduled-chat-00`
-  - claim: **09-23 05:26:27 JST** / heartbeat: **—** / lease expiry: **09-23 06:56:27 JST**
+  - claim: **09-23 07:17:01 JST** / heartbeat: **—** / lease expiry: **09-23 08:47:01 JST**
   - evidence: `.survey/work-queue/claims/job-research-0d7416aaa0ab7962.json`
 
 #### Audit
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **203** |
+| ready | **202** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **954** |
+| inference/training/survey配下の論文Markdown実体 | **955** |
 
 ### immutable submissionの未照合
 

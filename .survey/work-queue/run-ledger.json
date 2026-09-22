@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T20:27:37.555357+00:00",
+  "updated_at": "2026-09-22T22:17:33.315184+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -40160,6 +40160,56 @@
       "paper_active_count_before": 951,
       "paper_active_count_after": 951,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35791438847",
+      "first_recorded_at": "2026-09-22T22:17:33.315184+00:00",
+      "last_recorded_at": "2026-09-22T22:17:33.315184+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35791438847:1",
+          "recorded_at": "2026-09-22T22:17:33.315184+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35791438847",
+            "run_attempt": "1",
+            "source_sha": "f9c834b8092d2a3bd4e80a878c76dee8da4f95cf"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-3611857c9c7fea67",
+          "type": "research",
+          "canonical_id": "arXiv:2608.08627",
+          "title": "UniMoMo: Expert Merging-Based MoE Acceleration for Large Recommendation Models",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 951,
+      "paper_active_count_after": 951,
+      "last_successful_action": "research_completed"
     }
   ]
 }
