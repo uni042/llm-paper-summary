@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/a8ad278ee75a875f56e632252c1b7c23b0033e32",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2606.13126-minipic-flexible-position-independent-caching-in-100loc.md",
   "selection_reason": "vLLMに100行未満のcore変更で位置非依存KV cache再利用を導入しCPU offloadとも統合。prefill throughput 49%向上、cached-span TTFT最大2桁短縮。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T22:11:38+00:00"
+  "created_at": "2026-09-20T22:11:38+00:00",
+  "completed_at": "2026-09-22T09:31:38+00:00",
+  "blocker": "Primary full text was unavailable in this invocation. The official arXiv abstract was discoverable, but both the arXiv abstract open and PDF open routes were disabled by the available retrieval transport; only abstract/search-index and third-party review text could be retrieved. Per workflow, no five-slot scientific record was synthesized from secondary material.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-1676031a0252447c163dfc04.json"
 }

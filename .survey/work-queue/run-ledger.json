@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T08:30:15.997469+00:00",
+  "updated_at": "2026-09-22T09:31:41.311247+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -36422,6 +36422,56 @@
           "type": "research",
           "canonical_id": "arXiv:2607.06763",
           "title": "Trees from Marginals: Autoregressive drafting with factorized priors",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 897,
+      "paper_active_count_after": 897,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35710824599",
+      "first_recorded_at": "2026-09-22T09:31:41.311247+00:00",
+      "last_recorded_at": "2026-09-22T09:31:41.311247+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35710824599:1",
+          "recorded_at": "2026-09-22T09:31:41.311247+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35710824599",
+            "run_attempt": "1",
+            "source_sha": "c235b00201ffc67d7a08bade28e3aca0bc590c71"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-bec5c755173b872c",
+          "type": "research",
+          "canonical_id": "arXiv:2606.13126",
+          "title": "MiniPIC: Flexible Position-Independent Caching in <100LOC",
           "from": "ready",
           "to": "blocked"
         }
