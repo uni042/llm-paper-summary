@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-5be0f6527b55aa80672c5522",
-  "job_id": "job-research-015600d4d42febc5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5be0f6527b55aa80672c5522",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5be0f6527b55aa80672c5522","job_id":"job-research-015600d4d42febc5","data":{"hardware":"主要圧縮品質表ではGPU型や絶対推論時間を報告していない。BTExpertsの推論効率は理論FLOPsと高帯域メモリ読出しの削減として評価し、Mixtral-8x7Bの上向き射影を具体例にする。したがって実ハードウェア上の端末間高速化は未確定である。","software":"Qwen3-30B-A3BとGemma-4-26B-A4Bを圧縮対象にし、評価はLM Evaluation Harnessを使用する。クラスタリングは頻度初期化k-medoids、ニューロン対応はJonker–Volgenant法、残差はランク64の切詰めSVDで初期化する。公開コードURLは本文から確認できない。","methodology":"約50%専門家圧縮でQwen3-30B-A3BとGemma-4-26B-A4Bを評価し、WikiText-103のパープレキシティ、MMLU、ARC-C、HellaSwag、WinoGrande、PIQAを測る。比較対象は統合M-SMoE・HC-SMoE、枝刈りFreq-Prune・REAP、単一共有成分低ランク分解D2-MoEで、圧縮率を概ね一致させる。LorExpertsは重み距離、保護専門家付き重み距離、共活性NPMI、複数領域の柔らかな共活性合意を比較する。Qwen3では共活性版の圧縮率を0から約50%まで掃引し品質前線も測る。BTExpertsはMixtral-8x7Bで平坦分解と木構造を同じ7.5倍圧縮で比較し、再構成調整後のパープレキシティ差が0.099対0.098とほぼ同等であることを確認した上で、木構造を品質改善ではなく計算共有として評価する。","scope":"主結果は二つのMoEモデル、約50%までの専門家圧縮、識別・多肢選択中心の評価に限られる。生成ベンチマーク、高圧縮率、完全なモデル全体運用点、実カーネルでのBTExperts速度は今後の課題である。代表選択用の利用率は校正データ領域に依存し、コードや数学の希少専門家は一般ウェブの頻度だけでは過小評価され得る。"},"reservation":{"claim_id":"claim-5be0f6527b55aa80672c5522","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
