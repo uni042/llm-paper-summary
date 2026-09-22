@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8b19bb819058a3cdcb56577f",
+  "attempt_id": "attempt-a0e4b37dc8dd9e879f5d1060",
   "job_id": "job-research-a4cc548ec9dfc021",
   "data": {
     "overview": "XShareは通常バッチで活性専門家数を最大30%減らし、精度低下を概ね1%以内に保ちながら終端間の出力トークン毎秒を最大13%改善する。投機的デコーディングでは同一要求内トークンの専門家選好相関を使う階層選択によりGPT-OSS 120Bで最大14%のスループット向上を報告する。専門家並列ではピークGPU負荷を25.6個から8.6個へ削減し、約3倍の改善を示す。",
@@ -48,7 +48,7 @@
     "quality_impact": "通常バッチでは最大13%のスループット改善を精度低下約1%以内で示し、投機的デコーディングでは品質を統計的ノイズ内に保つ設定で最大14%の向上を報告する。強い専門家予算制限では品質との交換関係がある。"
   },
   "reservation": {
-    "claim_id": "claim-8b19bb819058a3cdcb56577f",
+    "claim_id": "claim-a0e4b37dc8dd9e879f5d1060",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
