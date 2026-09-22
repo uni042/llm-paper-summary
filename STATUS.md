@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 04:06:59 JST**
+> 自動生成: **2026-09-23 04:10:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **213** |
-| 未claim Research job | **213** |
+| 収録候補論文 | **212** |
+| 未claim Research job | **211** |
 | 直近24hの検証済みResearch収録 | **61** |
-| 最終検証済みResearch収録 | **09-23 04:06:54 JST（5秒前）** |
+| 最終検証済みResearch収録 | **09-23 04:06:54 JST（3分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **213** |
+| canonical_id確認済みの一意な候補論文 | **212** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **213** |
+| 非終端Research job合計 | **212** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（19時間34分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（19時間37分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **29** | **5** | **0** | **0** | **0** | **0** | — |
+| Research | **29** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **29** | **8** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **29** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -145,22 +145,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-23 03:00 JST** / worker `scheduled-chat-00`
-- immutable submission: **5件** / 検証済み成功: **0件** / result照合済み非成功: **5件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-1efa60058b1289154a08080b.json` (job `job-research-0d71a76b50bb4e7f`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-1efa60058b1289154a08080b.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-52fdb7c45a3c9f701ff82032.json` (job `job-research-8870fedf28603c08`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-52fdb7c45a3c9f701ff82032.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-599dcf2d38dac9ac3c3b4546.json` (job `job-research-5148d8543770a0e1`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-599dcf2d38dac9ac3c3b4546.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-6177199413e331d8e6eb7fb4.json` (job `job-research-421dd0de61905752`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-6177199413e331d8e6eb7fb4.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-65d6967ef4453d25474d6081.json` (job `job-research-508a7c3cdd7cd3ab`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-65d6967ef4453d25474d6081.json` (`ok=true`)
+- 最新観測run: **2026-09-23 04:00 JST** / worker `scheduled-chat-00`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-b9523ed098074392111e4480.json` (job `job-research-384393fce738e0be`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-b9523ed098074392111e4480.json` (`ok=true`)
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-23 03:00 JST** / worker `scheduled-chat-00`
+- 最新観測run: **2026-09-23 04:00 JST** / worker `scheduled-chat-00`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -186,8 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2509.19781` — Faster, Smaller, and Smarter: Task-Aware Expert Merging for Online MoE Inference / worker `scheduled-chat-00`
+  - claim: **09-23 04:08:26 JST** / heartbeat: **—** / lease expiry: **09-23 05:38:26 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3218c42781ec549d.json`
 
 #### Audit
 
@@ -207,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **213** |
+| ready | **212** |
 
 ### 候補の重複・識別情報欠損
 
@@ -235,8 +229,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **331** |
-| └ Research | **259** |
+| 成功result未照合のimmutable submission | **332** |
+| └ Research | **260** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
