@@ -1,13 +1,7 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-88d2aa5426361490104919b5",
-  "job_id": "job-research-3611857c9c7fea67",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-88d2aa5426361490104919b5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-88d2aa5426361490104919b5","job_id":"job-research-3611857c9c7fea67","data":{
+"limitations":"評価の中心はRankMixerの8-source-expert checkpoint、2〜6 MoE blocks、sampled ranking、single A100であり、大規模生成LLMやmulti-GPU expert parallel servingへの直接証拠ではない。partitionはrepresentative calibration trafficに依存し、低頻度だが重要なexpert behaviorが校正streamに現れなければfunctional affinityにもrouting exposureにも反映されない。8→2ではprotected countがtargetを上回る場合にstepwise fallbackで保護を一時解除するため、強いhard-protection保証はない。matched MergeMoEとの差は小さく統計的有意差を主張していない。online latencyはbatch 256のA100測定で、concurrent request、通信、energy、CPU/SSD offloadは未評価。専用公開実装URLも一次資料で確認できない。",
+"differences":"HC-SMoEのようなoutput-based hierarchical clusteringやMergeMoEのrouting statistics＋least-squares reconstructionと同じexpert merging系統に属するが、UniMoMoは推薦distribution上のshared-input functional affinityとrouting exposureを同一calibration streamから作り、expert-budgeted constrained partitionとして統合する点が異なる。parameter pruning/quantizationはexpert identityを保ったままweightsを削減するのに対し、本手法はexpert bank自体をE→Mへ縮小する。routing/kernels系のMegaBlocksやScatterMoEはtrained bankを維持して実行効率を上げるが、UniMoMoはcheckpointを別serving budgetへ変換する。圧縮後に専用routingやlookup moduleを残さず標準top-k MoEへ戻す点もdeployment上の差である。",
+"implementation_status":"論文は最大20 calibration batchesのcapture、全expert shared-state evaluation、mean/scalar-variance accumulation、symmetric-KL affinity、entropy-deficit protection、average-link greedy coarsening、traffic-weighted SwiGLU fusion、pseudoinverse correction、router-row centroid、短時間full-model adaptationまで具体化している。圧縮後は既存top-k routing/expert kernelで実行可能。ただし一次資料中に著者公式code repository URLはなく、公開再現実装済みとは扱わない。",
+"research_positioning":"Adaptive Expert Computation / Compression系では、expert pruning、merging、replacementが『どのexpert容量を残すか』を扱い、cache/offload系は『どのexpertをどの階層へ置くか』を扱う。UniMoMoは前者の中でも、推薦trafficを用いてfunctional redundancyとimportance exposureを同時に推定するcheckpoint-level compressionである。特に、複数serving budgetへ同じtrained checkpointを変換し、onlineでは標準MoEのままという性質は、expert cacheやCPU/SSD offloadと直交的に組み合わせられる。将来は、routing exposureだけでなくexpert load cost、cache residency、I/O latencyをcoarsening costへ含めることで、容量削減と階層メモリ配置を共同最適化する方向へ接続できる。"
+},"reservation":{"claim_id":"claim-88d2aa5426361490104919b5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
