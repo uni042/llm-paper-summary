@@ -1,4 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-f1e008f8fdda71bd88025432","job_id":"job-research-97e05693104abe69",
- "data":{"limitations":"セグメント互換性は重みベクトルのコサイン類似度で測るため、パラメータ空間で近いことが実際の機能整合性を完全に保証するわけではない。論文自身も、DeepSeek-MoEのように専門化が強くエキスパート間類似度が低いモデルでは高剪定率の性能低下が大きいと認めている。推論効率の実測はMixtral中心で、Qwen2やDeepSeekのカーネル効率・処理量は未提示である。類似度閾値やクラスタ処理が必要なため単純なexpert droppingより前処理は複雑であり、モデルごとに適切な再配置量が異なる可能性もある。","differences":"NAEEは重要度の低いエキスパートを選んで削除するが、その内部知識を回収しない。M-SMoEなどのエキスパート統合は削除側と残存側をエキスパート全体の粒度で平均し、ニューロン位置のずれや意味衝突を受けやすい。DERNは同じくエキスパート数を減らしつつ、削除側を中間次元ごとの機能セグメントへ分解し、互換な残存エキスパートへ個別に移してからクラスタで再圧縮する。HEAPrのようなatomic expert pruningが低寄与単位を恒久削除するのに対し、DERNは低重要度エキスパートを落としつつ、その内部の有用単位を別エキスパートへ再配置して知識を救済する点が異なる。","implementation_status":"論文はarXiv v1として公開され、全実験は2×H100、推論はvLLMで実測されている。一次PDFには公式コードURLの記載が見当たらないため、実装公開は確認済みとは扱わない。手法自体は追加学習不要で、較正データからルータ統計と重み類似度を計算し、クラスタリングで新しいエキスパート重みを生成する後処理方式である。","research_positioning":"Adaptive Expert Computation / Compression系統では、DERNは静的なエキスパート数削減と知識再配置を組み合わせる圧縮法に位置する。単純剪定より品質保持を強め、全体統合より細粒度なニューロン構造を利用するため、expert-level compressionとatomic/neuron-level compressionの橋渡しになる。実測でMixtralのメモリを88.7GBから66.0GBへ減らしながら平均性能を80.88から80.04に保ち、処理量も18%増やしているため、モデル容量だけでなくserving効率へつながる圧縮として価値がある。一方、専門化が強いDeepSeekでは交換可能なセグメントが少なく、どのMoEでも同じ再結合戦略が最適とは限らない。"},
- "reservation":{"claim_id":"claim-f1e008f8fdda71bd88025432","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-e0aa79e0bd81154b33f04a71",
+  "job_id": "job-research-98b9431cd6bf114a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e0aa79e0bd81154b33f04a71",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
