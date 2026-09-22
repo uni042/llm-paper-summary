@@ -105,6 +105,68 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["runtime_condition"], "none")
             self.assertIsNotNone(result["runtime_condition_ignored_reason"])
 
+    def test_fresh_pending_claim_exposes_age_and_monitor_action(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            requested_at = dt.datetime.now(dt.timezone.utc) - dt.timedelta(seconds=20)
+            write_json(
+                root,
+                ".survey/work-queue/claim-requests/claim-pending.json",
+                {
+                    "schema_version": 1,
+                    "request_id": "claim-pending",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "requested_at": requested_at.isoformat(),
+                    "max_jobs": 1,
+                    "job_types": ["research", "audit"],
+                },
+            )
+            result = mod.derive(root, value)
+            self.assertTrue(result["claim_result_pending"])
+            self.assertIn("claim-pending", result["pending_claim_request_ids"])
+            self.assertGreaterEqual(result["claim_result_pending_age_seconds"], 0)
+            self.assertLess(result["claim_result_pending_age_seconds"], 60)
+            self.assertEqual(result["claim_monitor_window_seconds"], 60)
+            self.assertEqual(result["gate"]["required_action"], "MONITOR_CLAIM_FAST_LANE")
+
+    def test_old_pending_claim_falls_back_to_long_wait_monitoring(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            start = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=3)
+            value["actual_invocation_start"] = start.isoformat()
+            requested_at = dt.datetime.now(dt.timezone.utc) - dt.timedelta(seconds=75)
+            write_json(
+                root,
+                ".survey/work-queue/claim-requests/claim-old.json",
+                {
+                    "schema_version": 1,
+                    "request_id": "claim-old",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "requested_at": requested_at.isoformat(),
+                    "max_jobs": 1,
+                    "job_types": ["research", "audit"],
+                },
+            )
+            result = mod.derive(root, value)
+            self.assertGreaterEqual(result["claim_result_pending_age_seconds"], 60)
+            self.assertEqual(result["gate"]["required_action"], "WAIT_FOR_CLAIM_RESULT")
+
     def test_discovery_precheck_pending_is_tracked(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
