@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T07:38:22.807963+00:00",
+  "updated_at": "2026-09-22T07:41:02.117147+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -36122,6 +36122,56 @@
           "type": "research",
           "canonical_id": "DOI:10.1109/ISCA66397.2026.00101",
           "title": "STEP: Adaptive Spatio-Temporal Expert Prefetching for Low-Latency and Memory-Efficient MoE Inference",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 897,
+      "paper_active_count_after": 897,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35700670267",
+      "first_recorded_at": "2026-09-22T07:41:02.117147+00:00",
+      "last_recorded_at": "2026-09-22T07:41:02.117147+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35700670267:1",
+          "recorded_at": "2026-09-22T07:41:02.117147+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35700670267",
+            "run_attempt": "1",
+            "source_sha": "81047a1986cc1082ea923c6c3297eedf00b19695"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-f2e323416158860a",
+          "type": "research",
+          "canonical_id": "arXiv:2608.15584",
+          "title": "GraniKV: Asymmetric Granularity KV-Cache Paging for Multi-Agent Systems with Long Shared Prefix",
           "from": "ready",
           "to": "blocked"
         }
