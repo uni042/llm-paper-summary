@@ -2,58 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f4daf58b89f6ce40e07a2ba4",
-  "job_id": "job-research-f0b1ffeacc3b0ccd",
-  "data": {
-    "canonical_id": "arXiv:2608.21836",
-    "arxiv_id": "2608.21836",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.AI",
-      "cross_list": []
-    },
-    "title": "LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization",
-    "summary": "LLM4LLMは、単体カーネル試験で高速な実装が実際の大規模言語モデル推論へ組み込むと遅くなったり失敗したりする、試験環境と実配備環境の隔たりを対象とする。実モデルの計測、事前充填と逐次生成を分けた課題抽出、経験圧縮付き反復探索、モデル内での正しさと遅延の検証を閉ループ化する自動カーネル最適化基盤である。10種類の言語モデル推論でA100とH100の全対象を高速化し、幾何平均で3.91倍と6.98倍の端から端までの高速化を報告する。",
-    "list_summary": "実モデルを計測して段階別カーネルを探索し、モデル内検証まで閉ループ化してA100/H100で幾何平均3.91倍/6.98倍の端から端までの高速化を達成する。",
-    "authors": [
-      "Hui Zeng",
-      "Pengfei Yang",
-      "Yanxin Chen",
-      "Fusong Ju",
-      "Xinran Wei"
-    ],
-    "authors_affiliations": "Xidian University; Zhongguancun Academy; Zhongguancun Institute of Artificial Intelligence; National Key Laboratory of Advanced Communication Networks",
-    "published": "2026-08-22",
-    "publication": "EMNLP 2026 main conference / arXiv",
-    "publication_type": "国際会議採択論文・プレプリント",
-    "publication_status": "EMNLP 2026本会議採択、arXiv初版は2026-08-22",
-    "lineage": "大規模言語モデルによるカーネル最適化、配備状況を考慮した推論最適化、エージェント型コード最適化",
-    "topics": [
-      "GPUカーネル最適化",
-      "実配備最適化",
-      "エージェント探索",
-      "推論高速化",
-      "Triton"
-    ],
-    "importance": "孤立カーネルの速度を目的関数にせず、実際の推論スクリプトとモデル内実行を最終受理条件に置く。これによりキャッシュ状態、段階差、形状条件、呼出し費用を含む実配備性能へ探索目標を直接合わせる。",
-    "implementation": "Tritonを中心に候補カーネルを生成し、コンパイル、数値検証、安全性、モデル内遅延を反復評価する公開実装。",
-    "hardware_evaluation": "NVIDIA A100-SXM4-80GBおよびH100-80GB-HBM3。Transformer、Mamba/Mamba2、RecurrentGemmaの10推論処理とKernelBench Level 2で評価。",
-    "quality_effect": "受理する修正はモデル内の正しさ、実行時互換性、形状範囲を通過する必要があり、元モデルの入出力とキャッシュ・状態の契約を維持する。品質ベンチマークより実行時の数値同値性を主に検証する。",
-    "source": "https://arxiv.org/abs/2608.21836",
-    "sources": [
-      "https://arxiv.org/abs/2608.21836",
-      "https://arxiv.org/pdf/2608.21836"
-    ],
-    "code": "https://github.com/hzeng2000/LLM4LLM",
-    "last_checked": "2026-09-22",
-    "references": [],
-    "references_checked_at": "2026-09-22",
-    "references_source": "一次論文本文",
-    "references_total": 0
-  },
+  "attempt_id": "attempt-128dff1441cde63257b906e0",
+  "job_id": "job-research-03793bd297310cea",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-f4daf58b89f6ce40e07a2ba4",
+    "claim_id": "claim-128dff1441cde63257b906e0",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
