@@ -37,7 +37,7 @@ STRUCTURED_METHOD_MIN_PROSE_CHARS = 4000
 STRUCTURED_METHOD_MIN_PARAGRAPHS = 20
 STRUCTURED_METHOD_MIN_H2_SECTIONS = 3
 
-EXCLUDED_SECTIONS = {"書誌情報", "一次資料", "参考文献", "References", "更新履歴", "監査メモ"}
+EXCLUDED_SECTIONS = {"一次資料", "参考文献", "References", "更新履歴", "監査メモ"}
 NON_METHOD_H2_PREFIXES = (
     "概要",
     "背景",
