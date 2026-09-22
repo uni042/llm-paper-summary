@@ -94,6 +94,63 @@ class ResearchPreflightQualityTests(unittest.TestCase):
             with self.assertRaisesRegex(self.module.PreflightRequestError, "self_review"):
                 self.module._validate_request(path)
 
+    def test_new_paper_drops_worker_supplied_expected_blob_sha(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            request = repo / "attempt-a-q1.json"
+            payload = self._request(request)
+            payload["expected_blob_sha"] = "1" * 40
+            request.write_text(json.dumps(payload), encoding="utf-8")
+            descriptor = self._descriptor()
+            with mock.patch.object(
+                self.module.prepare_completed_submission, "build", return_value=descriptor
+            ) as build_mock, \
+                 mock.patch.object(self.module.process_immutable_submission, "render_descriptor", return_value="# Paper\n\n本文"), \
+                 mock.patch.object(self.module.process_immutable_submission, "_precheck_paper"), \
+                 mock.patch.object(
+                     self.module.paper_quality_gate,
+                     "inspect_rendered_paper",
+                     return_value=self._quality("PASS"),
+                 ):
+                result = self.module.process_request(repo, request)
+            self.assertTrue(result["preflight_passed"])
+            self.assertIsNone(result["expected_blob_sha"])
+            self.assertIsNone(build_mock.call_args.kwargs["expected_blob_sha"])
+
+    def test_existing_paper_derives_expected_blob_sha_from_actual_paper(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            paper = repo / "papers/inference/test/a.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text("# Existing paper\n", encoding="utf-8")
+            request = repo / "attempt-a-q1.json"
+            payload = self._request(request)
+            payload["expected_blob_sha"] = "1" * 40
+            request.write_text(json.dumps(payload), encoding="utf-8")
+            descriptor = self._descriptor()
+            expected = self.module.immutable_submission.git_blob_sha(paper.read_bytes())
+
+            def build_side_effect(*args, **kwargs):
+                out = dict(descriptor)
+                if kwargs.get("expected_blob_sha"):
+                    out["expected_blob_sha"] = kwargs["expected_blob_sha"]
+                return out
+
+            with mock.patch.object(
+                self.module.prepare_completed_submission, "build", side_effect=build_side_effect
+            ) as build_mock, \
+                 mock.patch.object(self.module.process_immutable_submission, "render_descriptor", return_value="# Paper\n\n本文"), \
+                 mock.patch.object(self.module.process_immutable_submission, "_precheck_paper"), \
+                 mock.patch.object(
+                     self.module.paper_quality_gate,
+                     "inspect_rendered_paper",
+                     return_value=self._quality("PASS"),
+                 ):
+                result = self.module.process_request(repo, request)
+            self.assertEqual(result["expected_blob_sha"], expected)
+            self.assertEqual(build_mock.call_count, 2)
+            self.assertEqual(build_mock.call_args.kwargs["expected_blob_sha"], expected)
+
     def test_quality_failure_becomes_repair_state_before_submission(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
