@@ -1,14 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-05dcd349efb11788a6f85507","job_id":"job-research-c15907d33f78f8cd","data":{
-    "canonical_id":"arXiv:2609.12412","arxiv_id":"2609.12412","doi":"10.48550/arXiv.2609.12412","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.LG","cs.PF"]},
-    "title":"HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
-    "summary":"HoliBenchは、基盤モデルの精度だけを測る評価と、デバイス固有の性能・電力計測が分断されている問題に対し、LLM・VLM・時系列基盤モデルを単一の測定契約で横断評価するオープンソース基盤である。プラットフォーム抽象化層がNVML、jtop、powermetrics、Raspberry Pi PMICなど異種計測を時間整合し、総エネルギーとアイドル差引き後の正味推論エネルギー、レイテンシ、メモリを統一する。20モデル、7デバイス、FP16/INT8/INT4、8推論バックエンド、30超タスクを測定し、量子化高速化がハードウェアとランタイム依存で逆転すること、平均推論電力が主にデバイスで決まること、単体プロファイルから順次共存パイプラインを高精度に予測できることを示す。",
-    "list_summary":"20モデル×7デバイス×3量子化×8推論系を精度・遅延・電力・メモリで統一測定し、実測プロファイルから制約付き配備構成まで選ぶ基盤。",
-    "authors":["Inesh Chakrabarti","Zejun Xiong","Pragya Sharma","Mani Srivastava"],"authors_affiliations":"University of California, Los Angeles (UCLA)","published":"2026-09-11","publication":"arXiv:2609.12412v1","publication_type":"Preprint","publication_status":"arXiv preprint",
-    "lineage":"foundation-model deployment benchmarking / hardware-aware inference profiling / edge AI","topics":["基盤モデル配備","エッジ推論","電力計測","量子化","推論バックエンド","制約付き構成選択","CPS/IoT"],
-    "importance":"モデル精度、推論系、量子化、デバイス、電力・遅延を同一の実測設計空間へ統合する。特に低ビット化が常に高速化するという前提を実機横断で否定し、ローカルLLMや階層メモリ研究でハードウェア依存最適化を比較するための基盤になる。",
-    "hardware_evaluation":"Raspberry Pi 5 8GB、Jetson AGX Orin 64GB、RTX 3070 8GB、RTX 5070 12GB、RTX A5000 24GB、Mac Mini M2 Pro 16GB、Mac Mini M4 Pro 24GBの7系統。",
-    "quality_effect":"配備構成の選択を精度単独ではなく遅延・電力・メモリと共同で評価する。量子化や推論バックエンドによる精度・性能のトレードオフを実測するが、モデル自体の学習手法ではない。",
-    "source":"https://arxiv.org/abs/2609.12412","sources":["https://arxiv.org/abs/2609.12412","https://arxiv.org/html/2609.12412","https://github.com/beesfleas/HoliBench"],"code":"https://github.com/beesfleas/HoliBench","implementation":"約15k行のPython。Hydra設定、プラットフォーム別profiler、LLM/VLM/TSFM driver、複数推論backend、Flask構成選択UI、ILP solverを含む。","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary arXiv full text","references_total":0
-  },"reservation":{"claim_id":"claim-05dcd349efb11788a6f85507","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-1b51079a73bb2f6ad0213381",
+  "job_id": "job-research-2310f02f05cacc23",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1b51079a73bb2f6ad0213381",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
