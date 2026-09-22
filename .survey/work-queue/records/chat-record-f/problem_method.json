@@ -1,19 +1,15 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-900cad5c6178df049a8d9dec",
-  "job_id": "job-research-6e36f8b25c1d84c6",
+  "schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-900cad5c6178df049a8d9dec","job_id":"job-research-6e36f8b25c1d84c6",
   "data": {
-    "problem": "LLMの性能向上をパラメータ数の増加に頼ると重みメモリが急増し、MoEも推論時の活性計算量は疎でも全専門家の重みを保持する必要がある。量子化や剪定は既存モデルを圧縮するため基底モデルの表現能力上限を越えにくい。一方、単純な再帰FFNはパラメータを増やさないが、全トークンへ固定回数の反復を課すとFLOPsと逐次レイテンシが増える。そこで同一パラメータを幅と深さの双方で使い回し、トークン難易度に応じて計算の形を変える必要がある。",
-    "novelty": "一つのFFNを、hidden次元の構造化部分空間から作る複数の仮想専門家として幅方向に再利用すると同時に、FFN全体を反復適用して深さ方向にも再利用する。さらに深さ制御器が予測する期待ループ数をトークン難易度の代理変数とし、幅経路と深さ経路の融合係数を追加学習器なしで決める。物理的な専門家パラメータを増やさずMoE的な専門化と再帰的な追加計算を同じ重みから得る点が中心的差分である。",
-    "method_overview": "自己注意後のhidden stateを二経路へ送る。幅経路ではFFNの中間次元をN個の非重複strided sliceへ分け、各sliceを仮想専門家としてTop-k routerで疎選択する。深さ経路ではFFN全体を最大Lmax回再帰適用し、W_loopがトークンごとのループ数分布を予測する。学習時はGumbel-Softmaxと直通推定量（Straight-Through Estimator; STE）で離散選択を微分可能化し、推論時はargmaxで反復回数を確定する。期待ループ数E[L]からlambda=(Lmax-E[L])/Lmaxを作り、Y=lambda Y_width+(1-lambda)Y_depthとして融合する。",
-    "components": [
-      {"name":"幅可変仮想専門家","description":"共有FFNのhidden次元からN個の構造化sliceを作り、投影重みと出力重みで同じindexを使う。N×d_expert≤d_hiddenを満たし、専門家ごとの物理的な重み複製を避ける。Top-k routerと負荷分散補助損失でトークンごとに少数sliceだけを活性化する。"},
-      {"name":"深さ可変再帰FFN","description":"共有FFN全体をH^(l)=F(H^(l-1))として反復する。W_loopが最大Lmaxまでの回数分布を出し、学習時はGumbel-SoftmaxとSTE、推論時はargmaxを用いるため、難しいトークンだけ反復を増やせる。"},
-      {"name":"難易度認識融合","description":"ループ分布の期待値E[L]を難易度とみなし、E[L]が小さい容易なトークンほど幅経路の比率を上げ、E[L]が大きいトークンほど深さ経路を重視する。別の難易度教師や追加判定器を必要としない。"},
-      {"name":"推論時最適化","description":"深さ経路は予測回数で離散早期終了し、それ以降の再帰を実行しない。lambda=0なら幅経路を完全に枝刈りし、それ以外は幅・深さを並列実行してハードウェア利用率を高める。"}
+    "problem":"LLMの性能向上をパラメータ数の増加に頼ると、全重みをHBM/DRAMへ保持するメモリ費用が急増する。疎な混合専門家（Mixture-of-Experts; MoE）は1トークン当たりの活性計算を抑えても、多数の独立専門家重み自体は保持するためメモリ容量問題を残す。剪定・量子化・低ランク化は既存の大モデルを近似して保存量を減らす方式であり、元アーキテクチャの表現能力上限を越える仕組みではない。逆に単純な再帰FFNは重みを増やさないが、全トークンへ同じ回数の逐次反復を課すと、容易なトークンにも不要なFLOPsとレイテンシを使う。従って必要なのは、固定パラメータ予算のまま重みを複数の機能へ再利用し、各トークンの難しさに応じて並列的な幅と逐次的な深さのどちらへ計算を振るかを変える機構である。",
+    "novelty":"一つのFFNを、hidden次元の構造化部分空間から作る複数の仮想専門家として幅方向に再利用すると同時に、FFN全体を反復適用して深さ方向にも再利用する。さらに深さ制御器が予測する期待ループ数をトークン難易度の代理変数とし、幅経路と深さ経路の融合係数を追加の難易度教師なしで決める。物理的な専門家パラメータを増やさずMoE的な専門化と再帰的な追加計算を同じW_proj/W_outから得る点が中心的差分である。",
+    "method_overview":"各Transformer層では自己注意と残差・正規化を従来通り実行し、その後のFFN部分だけをVersatileFFNへ置換する。まず同じpost-attention hidden stateを幅経路と深さ経路へ入力する。幅経路は共有FFNの中間次元をN個の構造化sliceへ割り当て、Top-k routerがトークンごとに少数の仮想専門家を選び、その出力を確率加重和する。深さ経路は共有FFN全体を最大Lmax回まで再帰適用し、W_loopが各トークンに必要な反復回数の分布を予測する。学習時はGumbel-Softmaxと直通推定量（Straight-Through Estimator; STE）で離散回数選択を微分可能化し、推論時はargmaxで反復回数を確定してその回数で早期終了する。最後にループ分布の期待値E[L]を難易度信号とし、lambda=(Lmax-E[L])/Lmaxで幅経路の重みを決め、Y=lambda Y_width+(1-lambda)Y_depthとして融合する。これにより容易なトークンは並列化しやすい幅経路、難しいトークンは反復的な深さ経路へ計算を自動配分する。",
+    "components":[
+      {"name":"幅可変仮想専門家","description":"共有FFNの中間次元d_hiddenを専門家ごとのd_expert幅で切り出し、N×d_expert≤d_hiddenを満たすようstrided slicingする。投影重みW_projと出力重みW_outで同じindex集合を使うため、一つのFFN内部の対応した部分空間が一つの仮想専門家になる。専門家間で新しい重み行列を複製せず、Top-k routerが各トークンに必要なsliceだけを選択する。Softmax routingと負荷分散補助損失を用いて専門家崩壊を防ぎ、物理MoEの専門化を固定重み予算内で模倣する。"},
+      {"name":"深さ可変再帰FFN","description":"幅経路のsliceとは異なり、W_proj/W_out全体を使う標準FFN FをH^(l)=F(H^(l-1))として繰り返す。W_loopはトークン表現から1～Lmax回の確率分布を出力し、学習時はGumbel-Softmaxの温度を5.0から0.1へannealしつつSTEで離散forwardと連続gradientを両立する。推論ではargmaxで予測した回数だけ逐次実行するため、固定4-Loop/6-Loopのように全トークンへ最大計算量を課さない。"},
+      {"name":"難易度認識融合","description":"loop predictorの分布からE[L]=Σl·l·p_lを計算し、必要な反復深さそのものをトークン難易度の代理信号にする。lambda=(Lmax-E[L])/Lmaxなので、期待ループ数が小さい容易なトークンではlambdaが1へ近づき幅経路を強くし、期待ループ数が大きい難しいトークンではlambdaが0へ近づき深さ経路を強くする。同じ制御信号を反復回数決定と経路融合へ再利用するため、別の難易度分類器を追加しない。"},
+      {"name":"推論時最適化","description":"推論ではsoftな中間状態加重和をやめ、予測された離散回数hat_lに到達した時点で深さ経路を終了する離散早期終了を使う。またlambda=0なら幅経路の寄与が無いため仮想専門家計算を完全に枝刈りする。lambda>0のときは幅経路と深さ経路を可能な限り並列実行し、再帰の逐次性だけでハードウェア利用率が落ちるのを緩和する。"}
     ],
-    "system_design": "標準Transformerの自己注意は変更せず、各層のFFNをVersatileFFNへ置換する。幅・深さの両経路はW_proj/W_outを共有し、追加パラメータはrouterとloop predictorが中心で無視できる程度とされる。主設定は幅8専門家中Top-2、深さ最大4ループ。"
+    "system_design":"標準Transformerの自己注意は変更せず、各層のFFNをVersatileFFNへ置換する。幅・深さの両経路は同じW_proj/W_outを共有し、追加パラメータは幅routerとloop predictorが中心で総パラメータに対して無視できる程度とされる。主実験は幅8専門家中Top-2、深さ最大4ループで、354Mの設定探索では8-choose-2が幅単独の最高accuracy、4 loopsが固定再帰のaccuracyと計算量の最良バランスだった。"
   }
 }
