@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-01556e847caec9153595855e","job_id":"job-research-c449ea471528f1b0","data":{"canonical_id":"arXiv:2609.17109","arxiv_id":"2609.17109","doi":"10.48550/arXiv.2609.17109","arxiv_categories":{"primary":"cs.AI","cross_list":["cs.CL"]},"title":"Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs","summary":"同じ長文脈を複数の標準LoRA専門家が処理する際、基盤モデルで共有接頭辞を一度だけ事前充填し、そのKVを既学習LoRAへそのまま再利用できるかをQwen3-1.7Bで検証する。完全接頭辞再利用は8Kで暖機済み初回トークン時間を486msから30msへ約16倍短縮した一方、GSM8Kの保持評価では160トークン予算で正解率が54.4%から49.8%へ低下した。境界の部分再計算に一貫した利点はなく、リッジ回帰KV変換器も直接再利用を上回らない。二分岐ピークメモリは8Kで12%低下したが、実装上KVストレージは物理共有されず、共有キャッシュによるメモリ節約は未達である。","list_summary":"既学習の標準LoRA間で基盤モデル接頭辞KVを直接再利用し、8K暖機済み初回トークン時間約16倍と小さいが不確実な品質低下、物理共有未実装という実運用上の境界を測定する。","authors":["Dushyant Rajput"],"authors_affiliations":"論文本文・arXivページで所属を確認できず。","published":"2026-09-15","publication":"arXiv:2609.17109v1","publication_type":"preprint","publication_status":"arXiv preprint","publication_version":"v1","topics":["LoRA配信","KVキャッシュ再利用","接頭辞キャッシュ","複数アダプタ配信","初回トークン時間","共有文脈"],"importance":"再学習済み互換アダプタではなく、すでに学習済みの標準LoRAを変更せずに接頭辞KVを再利用する現実的なケースを、品質差の信頼区間と物理メモリ実測まで含めて評価する。","hardware_evaluation":"実機評価","hardware_details":"NVIDIA Blackwell GPU。Qwen3-1.7Bをbf16で評価し、単一要求とQA・算術二分岐のピーク割当を測定。","quality_effect":"完全接頭辞再利用はGSM8Kの未使用評価集合で160トークン時-4.6 EM、320トークン時-3.0 EM、第二学習seedで-0.8 EM。点推定はいずれも通常推論優位だが一貫した損失幅や品質同等性は確立していない。","source":"https://arxiv.org/abs/2609.17109","sources":["https://arxiv.org/abs/2609.17109"],"code":null,"implementation":"transformers 5.5、peft 0.20、torch 2.11で標準LoRAの基盤KV直接再利用、境界切替、リッジ回帰KV変換、メモリ・遅延計測を実装。公開コードURLは論文から確認できない。","implementation_status":"研究用評価実装。永続的な物理共有KVストレージは未実装。","evaluation_type":"HotpotQA・GSM8K品質評価、境界比較、暖機済み初回トークン時間、完了遅延、単一・二分岐ピークメモリ評価","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"arXiv一次資料全文","references_total":0},"reservation":{"claim_id":"claim-01556e847caec9153595855e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-5be0f6527b55aa80672c5522",
+  "job_id": "job-research-015600d4d42febc5",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5be0f6527b55aa80672c5522",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
