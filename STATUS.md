@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 02:22:51 JST**
+> 自動生成: **2026-09-23 02:29:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **225** |
-| 未claim Research job | **225** |
-| 直近24hの検証済みResearch収録 | **56** |
-| 最終検証済みResearch収録 | **09-23 02:17:32 JST（5分前）** |
+| 収録候補論文 | **224** |
+| 未claim Research job | **222** |
+| 直近24hの検証済みResearch収録 | **57** |
+| 最終検証済みResearch収録 | **09-23 02:29:02 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **225** |
+| canonical_id確認済みの一意な候補論文 | **224** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **225** |
+| 非終端Research job合計 | **224** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（17時間50分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（17時間56分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **33** | **4** | **0** | **0** | **0** | **0** | — |
+| Research | **34** | **4** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **33** | **7** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **34** | **7** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 02:29:02 JST** [research] `DOI:10.1145/3838177.3841737` — FaultSense: Fault Localization in Large-Scale Mixture-of-Experts Model Serving Infrastructure
+  - job: `.survey/work-queue/jobs/job-research-435dfcefc35588f8.json`
+  - result: `.survey/work-queue/results/research/attempt-89bc3cc25133486a66c2d95b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-89bc3cc25133486a66c2d95b.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md`
 - **09-23 02:17:32 JST** [research] `arXiv:2609.19683` — MiX: Micro-Inverted-Scaling for End-to-End Low-Bit Vision-Language Model Acceleration
   - job: `.survey/work-queue/jobs/job-research-2738618c3feb4d82.json`
   - result: `.survey/work-queue/results/research/attempt-f71c9e148c6dfbb3490291b5.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-8dee355b3271b922b97af132.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-8dee355b3271b922b97af132.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md`
-- **09-23 00:16:35 JST** [research] `arXiv:2407.09590` — Diversifying the Expert Knowledge for Task-Agnostic Pruning in Sparse Mixture-of-Experts
-  - job: `.survey/work-queue/jobs/job-research-0088fb887d51af7d.json`
-  - result: `.survey/work-queue/results/research/attempt-3e9870d1ea6c812acfc6fb72.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3e9870d1ea6c812acfc6fb72.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md`
 
 ### Audit
 
@@ -184,8 +184,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2605.29350` — ConMoE: Expert-Pool Consolidation via Prototype Reassignment for MoE Compression / worker `scheduled-chat-00`
+  - claim: **09-23 02:28:54 JST** / heartbeat: **—** / lease expiry: **09-23 03:58:54 JST**
+  - evidence: `.survey/work-queue/claims/job-research-e6e95e05f07deb20.json`
+- `arXiv:2609.08135` — KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization / worker `scheduled-chat-30`
+  - claim: **09-23 02:28:31 JST** / heartbeat: **—** / lease expiry: **09-23 03:58:31 JST**
+  - evidence: `.survey/work-queue/claims/job-research-384393fce738e0be.json`
 
 #### Audit
 
@@ -205,7 +210,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **225** |
+| ready | **224** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +230,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **940** |
+| inference/training/survey配下の論文Markdown実体 | **941** |
 
 ### immutable submissionの未照合
 
