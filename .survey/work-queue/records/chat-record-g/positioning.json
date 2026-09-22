@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-153fefa22e4198ce4ffc522b",
-  "job_id": "job-research-0bfa5a31fda6f9e8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-153fefa22e4198ce4ffc522b",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-153fefa22e4198ce4ffc522b","job_id":"job-research-0bfa5a31fda6f9e8","data":{"limitations":"KV footprint自体は減らさず、十分なhost-memory/SSD容量が前提である。SPDK pollingはCPU coreを継続消費し、user-level interruptやhybrid pollingによる改善余地がある。複数tenantが同一pool帯域を競合する場合の公平性・QoSは主要評価外である。性能は複数memory/SSDを備えるserver構成に依存し、単一device環境ではpoolingによる帯域集約利得が小さい。","differences":"LMCacheはKV再利用・offload層を提供するが、既存経路では特定host-memory/SSDへの直列アクセスが残る。Layerwise pipeliningやAsyncKVはI/OとGPU計算のoverlapを増やすのに対し、Unified KV PoolingはI/Oそのものを複数deviceへ分散し、さらにSPDKでfilesystemを除去する。KV圧縮・量子化・eviction系とは直交し、KVの情報量を変えずstorage hierarchyのdata pathを高速化する点が異なる。","implementation_status":"KV orchestrator、GLT、bandwidth-aware allocator、SPDKベースSSD_Direct_Store/Retrieveを実装し、LLaMA 3.1-8B、GPT-OSS-20B、Qwen3-30B-A3Bで実機評価している。本文から公開コードURLは確認できない。","research_positioning":"CPU/SSD/NVMeを使う階層メモリ型LLM推論の中でも、SSDを単なる容量拡張ではなく複数deviceのaggregate bandwidthとして扱う研究に位置する。特にexpert/KV offloadで問題になる『PCIe/NVMeは速いのにsoftware stackと単一queueで詰まる』問題へ、帯域比例placementとuser-space direct I/Oを組み合わせる設計例を示す。KV圧縮と併用すれば転送量削減と経路高速化を重ねられるため、SSD活用型推論基盤との関連が強い。"},"reservation":{"claim_id":"claim-153fefa22e4198ce4ffc522b","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
