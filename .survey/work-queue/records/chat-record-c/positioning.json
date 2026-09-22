@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-353fe5bf8013fb3f531d243b",
-  "job_id": "job-research-d522f30f5ddd350f",
-  "data": {
-    "limitations": "評価はarXiv v1のシステム実験に限られ、公開コードによる再現性は確認できない。20GBという人工的なGPUメモリ上限で評価しており、より大容量GPUやNVLink/NVSwitch、複数GPU expert-parallel環境へ結果がそのまま移るとは限らない。Ascend 910BではQwen2.0が欠測し、モデル品質指標も主評価ではない。RandomForest予測器は事前収集した活性ログに依存するため、モデル更新や大きな分布変化時の再学習コスト・劣化も追加検証が必要である。",
-    "differences": "ProMoE等の積極的キャッシュは将来必要なエキスパートを予測して事前取得するが、ExpertFlowは先読み層数S自体を帯域・計算・入力特性とstall/overfetchフィードバックで動かす。単純pre-gateに対しては、トークン意味と過去層活性を加えた学習予測器で偏差を補正する。一般的な単一LRUに対しては近未来利用をhigh tierへ隔離し、さらにキャッシュミス時にはキャッシュ済みトークンを先行実行してI/Oを隠すため、予測・配置・実行順序を一体化している。",
-    "implementation_status": "Python/CUDAとTransformersで実装され、専用CUDA stream、メモリブロック管理、転送監視thread、continuous batchingを含む実システムとしてA6000/H20/Ascend 910Bで評価されている。一方、arXiv本文から一般公開コードURLは確認できない。",
-    "research_positioning": "エキスパート事前取得研究の中でも、何を事前取得するかだけでなく『何層先まで見るか』をハードウェアとワークロードへ適応させる制御問題として扱う点が重要である。CPU/SSD/NVMeまで含む階層メモリへ拡張する場合も、各階層の帯域・レイテンシに応じて先読み距離を変える発想を転用できる。二段LRUの近未来需要分離とキャッシュ認識実行順序はexpert cache設計に直接接続し、固定prefetch horizonを使う既存系統に対する明確な差分となる。"
-  },
-  "reservation": {"claim_id": "claim-353fe5bf8013fb3f531d243b", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-25785b20de2ab8ad4e83e84f",
+  "job_id": "job-research-b6a722146f5922c5",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-25785b20de2ab8ad4e83e84f",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
