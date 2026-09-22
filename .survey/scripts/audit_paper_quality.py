@@ -28,6 +28,7 @@ DEFAULT_MIN_PROSE_CHARS = 2200
 DEFAULT_MIN_PARAGRAPHS = 10
 DEFAULT_MIN_METHOD_PARAGRAPHS = 4
 DEFAULT_MIN_COMPONENT_PARAGRAPHS = 2
+DEFAULT_MIN_COMPONENT_PROSE_CHARS = 120
 
 # A long, well-structured summary may explain the mechanism through several
 # descriptive H2 sections instead of placing all prose below one literal
@@ -37,7 +38,7 @@ STRUCTURED_METHOD_MIN_PROSE_CHARS = 4000
 STRUCTURED_METHOD_MIN_PARAGRAPHS = 20
 STRUCTURED_METHOD_MIN_H2_SECTIONS = 3
 
-EXCLUDED_SECTIONS = {"一次資料", "参考文献", "References", "更新履歴", "監査メモ"}
+EXCLUDED_SECTIONS = {"書誌情報", "一次資料", "参考文献", "References", "更新履歴", "監査メモ"}
 NON_METHOD_H2_PREFIXES = (
     "概要",
     "背景",
@@ -305,6 +306,14 @@ def structured_method_equivalent(
     return len(method_like_h2) >= STRUCTURED_METHOD_MIN_H2_SECTIONS
 
 
+def method_component_has_enough_detail(paragraphs: list[str], min_paragraphs: int) -> bool:
+    """Accept either multiple paragraphs or one sufficiently detailed component."""
+    return (
+        len(paragraphs) >= min_paragraphs
+        or sum(len(paragraph) for paragraph in paragraphs) >= DEFAULT_MIN_COMPONENT_PROSE_CHARS
+    )
+
+
 def find_bare_english_terms(raw_lines: list[str]) -> list[TermHit]:
     hits: dict[str, list[int]] = {}
     for lineno, line, _, _ in iter_body_lines(raw_lines):
@@ -363,10 +372,14 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace) -> PaperRe
             failures.append(f"手法段落数 {len(method_blocks)} < {args.min_method_paragraphs}")
         if len(method_components) >= 3:
             for component_id, paragraphs in sorted(method_components.items()):
-                if len(paragraphs) < args.min_component_paragraphs:
+                if not method_component_has_enough_detail(
+                    paragraphs, args.min_component_paragraphs
+                ):
+                    component_chars = sum(len(paragraph) for paragraph in paragraphs)
                     failures.append(
-                        f"手法構成要素#{component_id} の段落数 {len(paragraphs)} "
-                        f"< {args.min_component_paragraphs}"
+                        f"手法構成要素#{component_id} の説明量が不足 "
+                        f"(段落数 {len(paragraphs)} < {args.min_component_paragraphs} かつ "
+                        f"説明文 {component_chars} < {DEFAULT_MIN_COMPONENT_PROSE_CHARS}文字)"
                     )
     elif has_structured_equivalent:
         method_detection = "structured-equivalent"
