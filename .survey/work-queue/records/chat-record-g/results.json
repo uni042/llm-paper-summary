@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ecdae1d537fddfff8ce020e5",
-  "job_id": "job-research-9cbcbbb853ae3588",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ecdae1d537fddfff8ce020e5",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ecdae1d537fddfff8ce020e5","job_id":"job-research-9cbcbbb853ae3588","data":{"overview":"同一総パラメータ数でSMoE-Dropoutは3 backboneすべての事前学習BPCを密Dropoutより改善し、学習時間を最大21%/37%/25%削減する。半数エキスパートでは全容量実行に対し追加23〜34%の推論FLOPs削減を得る。下流ではBERTのASDiv-A/MAWPS/SVAMPが密基準55.27/80.47/34.24から56.30/81.25/35.33へ改善し、Transformer-XL SST-2は81.94→82.41。","key_results":[{"metric":"Transformer-XL BPC","value":"1.1486","baseline":"Dense Dropout 1.1623; learned SMoE 1.1896","condition":"enwik8, k=N","interpretation":"全容量でも表現崩壊せず密学習を上回る。"},{"metric":"BERT BPC","value":"7.6293","baseline":"Dense 7.6546; learned SMoE 7.7537","condition":"BooksCorpus, k=N","interpretation":"固定ランダム経路選択とk漸増が学習型SMoEより良い。"},{"metric":"RoBERTa BPC","value":"6.5491","baseline":"Dense 8.0903; learned SMoE 8.4291","condition":"BooksCorpus, k=N","interpretation":"3 backbone中最大の品質差。"},{"metric":"学習時間削減","value":"最大21% / 37% / 25%","baseline":"各Dense training","condition":"Transformer-XL / BERT / RoBERTa","interpretation":"疎活性化が訓練効率へ反映。"},{"metric":"半数expert推論FLOPs削減","value":"追加23〜34%","baseline":"k=N full expert execution","condition":"k=N/2","interpretation":"自己スリム化により品質を大きく崩さず計算量を選択可能。"},{"metric":"BERT reasoning改善","value":"+1.03 / +0.78 / +1.09 points","baseline":"Dense Dropout","condition":"ASDiv-A / MAWPS / SVAMP, k=N","interpretation":"事前学習の正則化効果が下流推論へ転移。"},{"metric":"Transformer-XL SST-2","value":"82.41%","baseline":"Dense 81.94%","condition":"k=N","interpretation":"下流分類でも全容量が有効。"},{"metric":"単一expert蒸留 SST-2","value":"82.01%","baseline":"Dense 81.25; THOR 80.76; SMoE 80.12","condition":"同じ小型single-expert student","interpretation":"学習済み表現が蒸留しやすい。"}],"negative_results":"小容量では常に優位ではない。Transformer-XL 2層やexpert数8以下では密DropoutがSMoE-Dropoutを上回る場合があり、十分な過剰容量が利得条件である。固定ランダム経路選択だけでも不十分で、k漸増を無効化すると全容量でBPCが悪化して自己スリム化性が消える。","interpretation":"性能向上は『良い経路選択器を学習する』ことより、固定されたランダム分割を構造化Dropoutとして使い、異なる活性容量を学習中に経験させることから生じる。追加実験では学習型SMoEへk漸増だけ入れても改善するが、k=16で再び劣化し、固定ランダム経路選択との組合せが最も広い容量範囲で安定する。","quality_impact":"全容量で密モデルを上回り、半容量でも多くの条件で近いBPCを維持するため、単純な計算削減だけでなく過剰容量の正則化として品質向上を示す。ただし利得は大容量側で顕著であり、小容量モデルでは密学習が有利な領域が残る。"},"reservation":{"claim_id":"claim-ecdae1d537fddfff8ce020e5","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
