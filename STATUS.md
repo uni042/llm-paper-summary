@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 12:13:55 JST**
+> 自動生成: **2026-09-22 12:32:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **310** |
-| 未claim Research job | **310** |
+| 未claim Research job | **309** |
 | 直近24hの検証済みResearch収録 | **17** |
-| 最終検証済みResearch収録 | **09-22 12:09:14 JST（4分前）** |
+| 最終検証済みResearch収録 | **09-22 12:09:14 JST（23分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -31,18 +31,27 @@
 
 ## 構造化references探索状況
 
-| 指標 | 件数 |
-|---|---:|
-| 構造化references総候補 | **5785** |
-| 処理済み | **583** |
-| 未処理 | **5202** |
-| 収録済みとして除外 | **475** |
-| 無関係として除外 | **48** |
-| 微妙として除外 | **60** |
+- 構造化references探索の進捗スナップショットはまだありません。
+- 診断: live reference-pool recomputation failed: ModuleNotFoundError: No module named 'yaml'
 
-- 消化率: **10.1%**
-- 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
-- 探索時にpaper実体と無関係/微妙台帳から再計算した値を、schema-v3 precheck resultへ耐久保存して表示します。
+## 日次メンテナンス状態
+
+| 指標 | 現在値 |
+|---|---:|
+| maintenance pending | **false** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（4時間0分前）** |
+| 最終maintenance status | **issues_found** |
+| consistency | **passed** |
+| health | **issues_found** |
+| health errors / warnings | **1 / 0** |
+| metadata | **passed** |
+| metadata incomplete | **0** |
+| GC削除件数 | **2108** |
+| queue snapshot repaired | **true** |
+| index repairs | **0** |
+| quality regressions | **17** |
+
+maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
 ## 件数サマリー
 
@@ -50,10 +59,10 @@
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **5** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **5** | **3** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **5** | **4** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **5** | **6** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -99,20 +108,24 @@
 
 ### 直近タスク
 
-#### Research (:30)
+#### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-20 23:30 JST** / worker `scheduled-chat-llm-survey`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-68ada84df4d15e6b33fe96ec.json` (job `job-research-f32c4d7018f358c2`, failure_class `state_or_transport_guard`)
-  - result: `.survey/work-queue/results/research/attempt-68ada84df4d15e6b33fe96ec.json` (`ok=false`)
+- 最新観測run: **2026-09-22 12:00 JST** / worker `scheduled-chat-00`
+- immutable submission: **3件** / 検証済み成功: **0件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-9ef1f6cf62d391bce3de73b6.json` (job `job-research-f4f109c7c5f9fc6f`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-9ef1f6cf62d391bce3de73b6.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-a952bf0b515b043bf649c82d.json` (job `job-research-4dc1463f3235b886`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-a952bf0b515b043bf649c82d.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-bfa8cf590d28a92deda4a59b.json` (job `job-research-d872577f35056ccd`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-bfa8cf590d28a92deda4a59b.json` (`ok=true`)
 
-#### Audit (:30)
+#### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-20 23:30 JST** / worker `scheduled-chat-llm-survey`
+- 最新観測run: **2026-09-22 12:00 JST** / worker `scheduled-chat-00`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
-#### Discovery (:00)
+#### Discovery（最新Discovery run）
 
 - 最新観測run: **2026-09-21 05:58 JST**
 - 耐久探索round: **3件** / immutable submission: **3件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **3件** / 候補: **6件**
@@ -134,8 +147,10 @@
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2212.09811` — Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model / worker `scheduled-chat-30`
+  - claim: **09-22 12:32:43 JST** / heartbeat: **—** / lease expiry: **09-22 14:02:43 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6f4aa4cc9993f8fd.json`
 
 #### Audit
 
@@ -221,7 +236,8 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 - **整合性異常**: completed Research jobが宣言したpaper実体の欠損、未解決の対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submission、および同一attempt/job/submissionへ対応する `content_validation` の再試行不可終端却下resultがあるsubmissionは、対応job欠損だけでは現在の異常にしません。
 - **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。
 - **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。
-- **構造化references探索状況**: schema-v3 repository-reference precheck resultに耐久保存されたprovider進捗を表示します。値自体は探索時にpaper実体と無関係/微妙台帳から再計算されます。
+- **構造化references探索状況**: STATUS生成時に `reference_pool.build_reference_pool()` を実行し、paper実体と無関係/微妙台帳から現在値を直接再計算します。過去のprecheck snapshotは件数表示に使いません。
+- **日次メンテナンス**: `.survey/work-queue/maintenance-cycle.json` をmaintenance workflowの耐久正本として表示します。通常jobの件数からmaintenance状態を推定しません。
 - **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。
 - **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。
 
