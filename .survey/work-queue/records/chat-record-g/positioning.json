@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-c1740060a24d308914998762",
-  "job_id": "job-research-c92e15d6ba5edb8d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c1740060a24d308914998762",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c1740060a24d308914998762","job_id":"job-research-c92e15d6ba5edb8d","data":{"limitations":"GRAPEの中心仮定は専門家間類似度が枝刈り可能な冗長性を適切に表すことであり、著者はより適切なMoE層冗長性指標の設計を今後課題として明記する。層間冗長性が極端に偏るDeepSeek-MoEのような場合、全体貪欲法は特定層へ枝刈りを集中させてモデル崩壊を起こし得る。エントロピー凍結と再開は集中を緩和するが、性能を直接保証する制約ではない。評価は追加fine-tuningなしのtask-agnostic pruningに限定され、枝刈り後再学習との組合せ、量子化との組合せ、実メモリ削減GBや推論速度は詳細に評価されない。GPT-OSSのMMLUは計算費用から1000例サンプルであり、完全MMLUではない。","differences":"router-guided法はルータ情報から似た専門家を各層内で統合し、count-guided法は訪問頻度、Enumerateは校正集合上の損失、DEKは出力表現類似性で専門家を選ぶが、評価時はいずれも各層から同数を削る。GRAPEは専門家対の類似性利用に加え、層ごとの残存冗長性を比較して削減数そのものを変える点が本質的に異なる。DEKなどの局所類似度手法と競合するだけでなく、その上位に置く予算配分戦略として解釈できる。単純なglobal greedyとの差は、残存専門家の層分布エントロピーで削除集中を検出し、層凍結・全層凍結時restartを入れる点にある。","implementation_status":"論文はarXivプレプリント。アルゴリズムは類似度行列計算、層別残存冗長度、クラスタ統合、エントロピー閾値、freeze/restartからなるone-shot手順として擬似コードが公開されている。本文からは公式コードURLを確認できないためcodeは未記載とした。評価は複数の公開MoEモデルへ適用し、追加fine-tuningなしで実行される。","research_positioning":"適応的専門家計算・圧縮の中でも、専門家単位の重要度推定より一段上の『層間予算配分』を主題にした研究である。既存のexpert pruning/mergingが局所層内の候補選択を精緻化してきたのに対し、GRAPEはモデル全体の冗長性分布を利用してメモリ予算を非一様化する。専門家キャッシュや階層メモリ研究とは重みを移動するのではなく恒久的に専門家数を減らす点で異なるが、メモリ制約下でどの層の専門家容量を残すべきかという配置問題に近い。将来的には層別キャッシュ容量やSSD/CPU常駐専門家数を決める際にも、層ごとの冗長性・重要性が一様でないという観察が設計指針になり得る。"},"reservation":{"claim_id":"claim-c1740060a24d308914998762","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
