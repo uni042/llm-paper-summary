@@ -1,1 +1,52 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-9c01e88ab057d7d61e082fe7","job_id":"job-research-9de329d10383e26b","data":{"overview":"容量係数2でGShard top-2と活性計算量を揃えたExpert Choiceは、同じ評価perplexityへ半分未満のステップで到達し、GShard側の1 stepも約20%遅いため訓練収束時間を2倍超改善した。0.1B級では専門家数16〜128で一貫してtop-2を上回り、8B/64EでもGLUE/SuperGLUEの下流性能を改善する。さらに容量係数1へ下げてもtop-1を上回り、8B/64EはT5 11B密モデルを11タスク中7タスクで上回る。","key_results":[{"metric":"訓練収束","value":"2倍超高速","baseline":"GShard top-2","condition":"Expert Choice c=2、同一活性計算量","interpretation":"同一perplexityへ半分未満のstepで到達し、負荷均衡によるstep時間改善も加わる。"},{"metric":"GShard step時間","value":"約20%遅い","baseline":"Expert Choice c=2","condition":"同等計算量の比較","interpretation":"token-choiceの負荷不均衡が最混雑専門家にstep時間を支配させる。"},{"metric":"8B/64E下流比較","value":"11タスク中7タスクで上回る","baseline":"T5 11B dense","condition":"GLUE/SuperGLUE選択11タスク","interpretation":"疎な専門家選択モデルがより小さい活性計算量でも大規模密モデルを複数タスクで上回る。"},{"metric":"100M/64E平均下流スコア","value":"84.0","baseline":"Switch top-1 78.4、GShard top-2 82.2","condition":"GLUE/SuperGLUE 11タスク平均","interpretation":"同一規模で専門家選択が固定token-choiceより高い微調整性能を示す。"}],"negative_results":["トークン当たり専門家数を上限制約すると、自由な可変割当より性能が低下し、異質性が利得の一部であることを示す。","容量係数を2から1へ下げるとperplexityは悪化するが、それでもtop-1 gatingより良好。","専門家選択はバッチ内トークン集合に対して各専門家がtop-kを取るため、自己回帰・小バッチ推論では訓練時と同じ利点が直接得られるとは限らない。"],"interpretation":"高速収束は、各専門家が必ず同じ数のトークンを受け取って過負荷・未学習を避けることと、トークンごとの専門家数を固定せず重要度に応じて計算を再配分することの双方に由来する。専門家数を増やしても負荷が均等なので追加容量を利用しやすい。","quality_impact":"計算量削減だけを目的とした近似ではなく、同一活性計算量でtoken-choiceより品質を改善するルーティング変更である。ただし容量係数を下げれば品質とのトレードオフが生じる。"},"reservation":{"claim_id":"claim-9c01e88ab057d7d61e082fe7","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-afcf905bd317f0527a7a08a2",
+  "job_id": "job-research-9de329d10383e26b",
+  "data": {
+    "overview": "容量係数2でGShard top-2と活性計算量を揃えたExpert Choiceは、同じ評価perplexityへ半分未満のステップで到達し、GShard側の1 stepも約20%遅いため訓練収束時間を2倍超改善した。0.1B級では専門家数16〜128で一貫してtop-2を上回り、8B/64EでもGLUE/SuperGLUEの下流性能を改善する。さらに容量係数1へ下げてもtop-1を上回り、8B/64EはT5 11B密モデルを11タスク中7タスクで上回る。",
+    "key_results": [
+      {
+        "metric": "訓練収束",
+        "value": "2倍超高速",
+        "baseline": "GShard top-2",
+        "condition": "Expert Choice c=2、同一活性計算量",
+        "interpretation": "同一perplexityへ半分未満のstepで到達し、負荷均衡によるstep時間改善も加わる。"
+      },
+      {
+        "metric": "GShard step時間",
+        "value": "約20%遅い",
+        "baseline": "Expert Choice c=2",
+        "condition": "同等計算量の比較",
+        "interpretation": "token-choiceの負荷不均衡が最混雑専門家にstep時間を支配させる。"
+      },
+      {
+        "metric": "8B/64E下流比較",
+        "value": "11タスク中7タスクで上回る",
+        "baseline": "T5 11B dense",
+        "condition": "GLUE/SuperGLUE選択11タスク",
+        "interpretation": "疎な専門家選択モデルがより小さい活性計算量でも大規模密モデルを複数タスクで上回る。"
+      },
+      {
+        "metric": "100M/64E平均下流スコア",
+        "value": "84.0",
+        "baseline": "Switch top-1 78.4、GShard top-2 82.2",
+        "condition": "GLUE/SuperGLUE 11タスク平均",
+        "interpretation": "同一規模で専門家選択が固定token-choiceより高い微調整性能を示す。"
+      }
+    ],
+    "negative_results": [
+      "トークン当たり専門家数を上限制約すると、自由な可変割当より性能が低下し、異質性が利得の一部であることを示す。",
+      "容量係数を2から1へ下げるとperplexityは悪化するが、それでもtop-1 gatingより良好。",
+      "専門家選択はバッチ内トークン集合に対して各専門家がtop-kを取るため、自己回帰・小バッチ推論では訓練時と同じ利点が直接得られるとは限らない。"
+    ],
+    "interpretation": "高速収束は、各専門家が必ず同じ数のトークンを受け取って過負荷・未学習を避けることと、トークンごとの専門家数を固定せず重要度に応じて計算を再配分することの双方に由来する。専門家数を増やしても負荷が均等なので追加容量を利用しやすい。",
+    "quality_impact": "計算量削減だけを目的とした近似ではなく、同一活性計算量でtoken-choiceより品質を改善するルーティング変更である。ただし容量係数を下げれば品質とのトレードオフが生じる。"
+  },
+  "reservation": {
+    "claim_id": "claim-afcf905bd317f0527a7a08a2",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

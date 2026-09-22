@@ -1,1 +1,22 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-9c01e88ab057d7d61e082fe7","job_id":"job-research-9de329d10383e26b","data":{"limitations":"各専門家がバッチ内の上位トークンを選ぶため、十分なトークン集合を同時に扱える大規模訓練に特に適する。自己回帰生成や小バッチ推論では候補トークン集合が小さく、同じ負荷均衡・異質割当の利点がそのまま成立するとは限らない。また全専門家パラメータを保持するMoEなのでメモリ容量問題自体は解消せず、最大評価は512 TPU v4を使う大規模環境である。","differences":["Switch/GShardは各トークンが固定数専門家を選ぶのに対し、Expert Choiceは各専門家が固定数トークンを選ぶ。","補助負荷分散損失で均衡を促すのではなく、専門家バケット容量を固定して完全均衡を構造的に保証する。","各トークンの専門家数を固定せず、平均計算量だけを容量係数で固定するため入力ごとの可変計算を実現する。"],"implementation_status":"Googleの大規模TPU環境で0.1B級から8B/64Eまで実装・評価。論文中にルーティング、shuffle/unshuffle、einsum専門家計算、GSPMD分散の具体設計が示されるが、公式コードURLは確認できなかった。","research_positioning":"Adaptive Expert Computation系統で、専門家数を入力ごとに可変化する初期の代表例。専門家枝刈りやキャッシュのように保存専門家集合を減らすのではなく、ルーティング方向を反転して『どのトークンへどれだけ専門家計算を配るか』を適応化する。後続の可変top-k、予算制約ルーティング、重要度依存計算の比較基準になる。"},"reservation":{"claim_id":"claim-9c01e88ab057d7d61e082fe7","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-afcf905bd317f0527a7a08a2",
+  "job_id": "job-research-9de329d10383e26b",
+  "data": {
+    "limitations": "各専門家がバッチ内の上位トークンを選ぶため、十分なトークン集合を同時に扱える大規模訓練に特に適する。自己回帰生成や小バッチ推論では候補トークン集合が小さく、同じ負荷均衡・異質割当の利点がそのまま成立するとは限らない。また全専門家パラメータを保持するMoEなのでメモリ容量問題自体は解消せず、最大評価は512 TPU v4を使う大規模環境である。",
+    "differences": [
+      "Switch/GShardは各トークンが固定数専門家を選ぶのに対し、Expert Choiceは各専門家が固定数トークンを選ぶ。",
+      "補助負荷分散損失で均衡を促すのではなく、専門家バケット容量を固定して完全均衡を構造的に保証する。",
+      "各トークンの専門家数を固定せず、平均計算量だけを容量係数で固定するため入力ごとの可変計算を実現する。"
+    ],
+    "implementation_status": "Googleの大規模TPU環境で0.1B級から8B/64Eまで実装・評価。論文中にルーティング、shuffle/unshuffle、einsum専門家計算、GSPMD分散の具体設計が示されるが、公式コードURLは確認できなかった。",
+    "research_positioning": "Adaptive Expert Computation系統で、専門家数を入力ごとに可変化する初期の代表例。専門家枝刈りやキャッシュのように保存専門家集合を減らすのではなく、ルーティング方向を反転して『どのトークンへどれだけ専門家計算を配るか』を適応化する。後続の可変top-k、予算制約ルーティング、重要度依存計算の比較基準になる。"
+  },
+  "reservation": {
+    "claim_id": "claim-afcf905bd317f0527a7a08a2",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
