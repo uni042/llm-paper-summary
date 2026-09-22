@@ -61,12 +61,12 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 6年前（2020-10〜2021-09）
 
 - **2021-09 · [Scalable and Efficient MoE Training for Multitask Multilingual Models](2021-2109.10465-scalable-efficient-moe-training.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：12  
   専門家並列とZeRO/CPUオフロード等の多次元並列を統合してMoEを3.5兆パラメータ超へ拡張し、ランダムトークン選択や専門家枝刈りで学習・推論効率も改善するDeepSpeed MoE。
 
 ### 7年前（2019-10〜2020-09）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
-  実装：✓ ・ リポジトリ内被引用：57  
+  実装：✓ ・ リポジトリ内被引用：66  
   疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。
 <!-- survey:auto:end -->

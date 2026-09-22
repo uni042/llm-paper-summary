@@ -21,8 +21,8 @@
   "created_at": "2026-09-20T10:37:35+00:00",
   "blocker": "Primary full text could not be safely obtained through authoritative routes in this invocation. Official arXiv metadata was retrievable, but the official arXiv HTML route returned DisabledError; fresh search surfaced detailed third-party renderings but no author-, project-, conference-, or publisher-hosted identical full text was established. No five-slot record was synthesized from secondary material.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-c09ccd78929d065b1168ff55.json",
-  "blocked_attempts": 2,
-  "last_recorded_blocked_event": "2026-09-21T17:32:43+00:00",
+  "blocked_attempts": 3,
+  "last_recorded_blocked_event": "2026-09-22T02:11:57+00:00",
   "block_history": [
     {
       "attempt": 1,
@@ -33,9 +33,15 @@
       "attempt": 2,
       "blocked_at": "2026-09-21T17:32:43+00:00",
       "reason": "Primary full text could not be safely obtained through the authoritative retrieval routes in this attempt. The official arXiv HTML route failed twice with DisabledError and the official arXiv PDF route also failed twice with DisabledError. A targeted search found third-party renderings, but no author-, project-, conference-, or publisher-hosted identical full text was established, so no five-slot record was inferred from secondary material."
+    },
+    {
+      "attempt": 3,
+      "blocked_at": "2026-09-22T02:11:57+00:00",
+      "reason": "Primary full text could not be safely obtained through authoritative routes in this invocation. Official arXiv metadata was retrievable, but the official arXiv HTML route returned DisabledError; fresh search surfaced detailed third-party renderings but no author-, project-, conference-, or publisher-hosted identical full text was established. No five-slot record was synthesized from secondary material."
     }
   ],
-  "last_blocked_at": "2026-09-21T17:32:43+00:00",
-  "retry_queued_at": "2026-09-21T22:48:29+00:00",
-  "completed_at": "2026-09-22T02:11:57+00:00"
+  "last_blocked_at": "2026-09-22T02:11:57+00:00",
+  "completed_at": "2026-09-22T02:11:57+00:00",
+  "first_blocked_at": "2026-09-22T02:11:57+00:00",
+  "retry_not_before": "2026-09-29T06:23:46+00:00"
 }
