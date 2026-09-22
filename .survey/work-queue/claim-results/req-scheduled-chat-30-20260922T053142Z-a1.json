@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "request_id": "claim-scheduled-chat-30-20260922T051500Z-5",
+  "request_id": "req-scheduled-chat-30-20260922T053142Z-a1",
   "worker_id": "scheduled-chat-30",
   "worker_kind": "scheduled_chat",
   "ok": true,
@@ -48,18 +48,10 @@
       "record_bank_recovery_attempt_ids": [
         "attempt-0da4ffa5fe5ff7d5bcb1563d"
       ],
-      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-0da4ffa5fe5ff7d5bcb1563d.json",
-      "record_bank_root": ".survey/work-queue/records/chat-record-f",
-      "record_slot_paths": {
-        "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
-        "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
-        "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
-        "results": ".survey/work-queue/records/chat-record-f/results.json",
-        "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
-      }
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-0da4ffa5fe5ff7d5bcb1563d.json"
     }
   ],
-  "processed_at": "2026-09-22T05:07:13+00:00",
-  "checkpoint_released": 0,
-  "heartbeat_at": "2026-09-22T05:32:25+00:00"
+  "processed_at": "2026-09-22T05:32:25+00:00",
+  "reason": "resumed active unsubmitted claim",
+  "checkpoint_released": 0
 }
