@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c4f65a2a84382bc8c1957458",
-  "job_id": "job-research-80e5caed751c8e16",
-  "data": {
-    "hardware": "推論速度はNVIDIA V100 32GBで測定し、MNLIとSQuADについて全専門家MoE、枝刈り単一専門家モデル、密モデルを比較する。",
-    "software": "Switch Transformer base型を用い、4番目と8番目のTransformerブロックに各32専門家のMoE層を配置する。密比較モデルはMoE層以外を同一構成とする。",
-    "methodology": "MoEと密モデルをBooksCorpusと英語Wikipedia上のマスク言語モデル目的で125kステップ事前学習し、その後GLUEとSQuAD2.0で微調整する。GLUEはWNLIを除き、主表では小規模RTEも除外する。標準密微調整、標準MoE微調整、二回通過方式、段階枝刈り、前半で1専門家へ確定するeager枝刈りを比較し、ヒット率とゲート値ベース熟達度、訓練窓長、削除しきい値、最終確定時刻を切り分ける。",
-    "scope": "英語理解のGLUE各タスクとSQuAD2.0で、文単位分類・類似度・自然言語推論・質問応答を含む6種類のタスク型を評価する。一方、評価モデルは独自事前学習したSwitch-base規模であり、兆パラメータ級MoEや生成型LLMでの品質・メモリ削減は直接測定していない。"
-  },
+  "attempt_id": "attempt-d176f3e35d1e1d54e70ae28c",
+  "job_id": "job-research-1922ded1807d40e6",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c4f65a2a84382bc8c1957458",
+    "claim_id": "claim-d176f3e35d1e1d54e70ae28c",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }

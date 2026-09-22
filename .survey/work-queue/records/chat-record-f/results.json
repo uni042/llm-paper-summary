@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c4f65a2a84382bc8c1957458",
-  "job_id": "job-research-80e5caed751c8e16",
-  "data": {
-    "overview": "前半で単一専門家へ確定するeager枝刈りは、GLUE平均86.16を達成し、密事前学習モデル85.32を0.84上回り、全32専門家MoEの86.80に近い。SQuAD2.0ではF1 80.40、完全MoE 80.59、密モデル79.77である。著者らは6種類のタスクでMoE事前学習の利得の99.3%を保持すると集約する。推論速度は全専門家MoEに対してMNLIで約2倍、SQuADで1.28倍となり、装置間専門家通信を除去できる。",
-    "key_results": [
-      {
-        "metric": "GLUE平均",
-        "value": "86.16",
-        "baseline": "全専門家MoE 86.80、密モデル85.32",
-        "condition": "eager task-specific pruning",
-        "interpretation": "単一専門家まで削ってもMoE事前学習利得の大半を保持する。"
-      },
-      {
-        "metric": "SQuAD2.0 F1 / EM",
-        "value": "80.40 / 77.55",
-        "baseline": "全専門家MoE 80.59 / 77.85、密モデル79.77 / 77.23",
-        "condition": "eager pruning",
-        "interpretation": "トークン単位QAでも密モデルを上回り完全MoEに近い。"
-      },
-      {
-        "metric": "推論高速化",
-        "value": "MNLI約2×、SQuAD 1.28×",
-        "baseline": "32専門家MoE微調整モデル",
-        "condition": "V100 32GB、単一専門家化",
-        "interpretation": "専門家並列の装置間通信をなくすことで配備効率を改善する。"
-      },
-      {
-        "metric": "MoE利得保持率",
-        "value": "99.3%",
-        "baseline": "密モデルから全専門家MoEへの性能利得",
-        "condition": "6種類の下流タスク",
-        "interpretation": "大容量MoEの事前学習利得を配備時の小モデルへ移せることを示す。"
-      }
-    ],
-    "negative_results": "最終専門家の確定を遅らせるstaged pruningはGLUE平均84.63で密モデル85.32を下回り、選択専門家を十分に単独最適化する時間がない。二回通過方式も必ず改善せず、eager dropでは二回目が過学習を招き平均0.58低下した。ヒット率だけの専門家選択はゲート重みを使うalpha scoreより多くのタスクで劣る。枝刈り後モデルは全専門家通信を除くが、追加MoE由来構造のため純粋な密モデルの推論速度の約80%に留まる。",
-    "interpretation": "重要なのは単に低利用専門家を消すことではなく、専門家選択と残存専門家の適応に訓練時間をどう配るかである。前半に複数専門家を観測して誤選択を避けつつ、中間点で決定して後半を1専門家へ集中することで、事前学習時の容量利得と推論時の密な実行効率を両立する。",
-    "quality_impact": "全専門家MoEとの差は残るが、密事前学習モデルより一貫して高い設定が多い。特にeager方式がstaged方式より良く、枝刈り判断の時刻が最終品質へ直接影響する。"
-  },
+  "attempt_id": "attempt-d176f3e35d1e1d54e70ae28c",
+  "job_id": "job-research-1922ded1807d40e6",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c4f65a2a84382bc8c1957458",
+    "claim_id": "claim-d176f3e35d1e1d54e70ae28c",
     "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
