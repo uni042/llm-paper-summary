@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-0435bf18257a114df581ef2f",
-  "job_id": "job-research-3c62e3c72b715377",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0435bf18257a114df581ef2f",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0435bf18257a114df581ef2f","job_id":"job-research-3c62e3c72b715377","data":{"hardware":"単一NVIDIA RTX A6000。実世界基準検証では20GB GPU memory limitを課してheavy offloadingを強制。expert weightsはCPU側からGPUへ転送する。","software":"DeepSeek-MoE-16B。GPU cacheはPython OrderedDict、Random Forest predictor。実世界の標準offloading基準にHuggingFace Accelerateを使用し、LRU、LFU、On-Demand、MoE-Infinity-style lookaheadとも比較。コア実装の完全公開コードはソフトウェア登録手続中のため未公開。","methodology":"Code Alpaca、MathQA、Financial PhraseBank等からCode、Math、Science、Creative、Businessの5領域を構成し、DeepSeek-MoE-16Bのtoken-level expert activation tracesを収集する。訓練ログは合計830万超で、27 expert layers、各64 experts、router top-k=6。プリフィルではdomain Top-1 accuracy、expert hit rate、active expert budget Kを変えた下流精度を評価する。デコードではFrequency、temporal、spatial、domain signalの段階的ablationとTop-k予測精度・hit rateを測る。主要I/O結果はA6000特性を反映したevent-driven simulatorで評価し、20GB制約のHF Accelerate実測baselineを用いてADEPTの投影TPOTと比較する。Full Expert Loading、On-Demand Offloading、Locality-Aware Cachingのメモリ・遅延も比較する。","scope":"単一GPUのDeepSeek-MoE-16Bが中心で、領域分布を事前構築できる推論を対象とする。主要3.45倍値のADEPT側TPOTはsimulation projectionであり、HF Accelerate基準自体は実測。複数GPU/モデル並列、非定常な未知領域、より大規模な別MoEでの一般化は未検証。"},"reservation":{"claim_id":"claim-0435bf18257a114df581ef2f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
