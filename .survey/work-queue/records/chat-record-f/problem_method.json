@@ -1,13 +1,6 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-a0ecf191f05aa48e02bfda2f",
-  "job_id": "job-research-71cfe275bb4fcca4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a0ecf191f05aa48e02bfda2f",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-a0ecf191f05aa48e02bfda2f","job_id":"job-research-71cfe275bb4fcca4",
+"data":{"problem":"無線分散MoEではエキスパートがユーザー端末と複数の近傍ヘルパーへ分散され、ルータが選んだ遠隔エキスパートへ隠れ状態を送信し出力を戻す必要がある。通常Top-Kはゲート得点だけで選ぶため、通信路が悪いヘルパーを選んでエネルギーと遅延を増やす。既存のスキップ・置換法も通信路を考慮しないか、ヒューリスティックな得点・類似度に依存し、置換やスキップが最終出力へ与える誤差を理論的に制御できない。","novelty":"SiftMoEは、選択済みTop-Kエキスパートを機能的に類似する別エキスパートへ置換する場合と完全にスキップする場合の層出力偏差を、ルーティング重みとエキスパート出力差から上界化する。その局所偏差が後段で増幅される効果まで解析し、最終精度要求を層別偏差予算へ変換する。これを無線通信エネルギー最小化問題へ組み込み、低速・高速フェージングの双方で通信路に応じたエキスパート選択を行う。","method_overview":"各MoE層ではユーザー側で注意機構とゲートを実行し、通常Top-Kが選ぶ候補とゲート重みを得る。事前に較正データで各層のエキスパート対について出力不一致を測定してO(LN²)のスカラー表へ保存し、オンラインでは現在トークンのゲート重みとこの表だけから、候補エキスパートを別の類似エキスパートへ置換またはスキップした場合の偏差を軽量に推定する。\n\n理論解析では各層の選択誤差が後段の感度係数で増幅されて最終出力偏差へ累積する上界を導く。これにより全体の精度要求を層ごとの最大許容偏差へ落とし、各層で許容範囲内の置換・スキップだけを候補とする。ゲート重みが小さいエキスパートほど影響が小さく、十分類似した代替先が無い場合は無理に置換するよりスキップの方が上界を小さくできる。\n\n低速フェージングでは通信路が層処理中ほぼ一定とみなし、ローカル実行のロード・計算エネルギーと遠隔ヘルパーへの上り送信、ロード・計算、下り返送を含む層エネルギーを最小化する。単一トークン復号と複数トークン事前充填に対して、偏差予算と層遅延制約を満たす最適なexpert assignmentを求める。高速フェージングでは上り区間を時間スロットへ分け、期待通信エネルギーの決定論的代理問題でexpert selectionを決めた後、瞬時チャネルに応じた送信bit数を動的計画法で割り当てる。",
+"components":[{"name":"オフライン類似度較正","description":"各層の順序付きエキスパート対について、較正データ上で元エキスパートと代替エキスパートの出力差を事前計測し、O(LN²)個のスカラーとして保存する。\n\n推論時には重い2エキスパート同時計算をせず、現在のゲート重みとの乗算・加算・比較だけで置換誤差を推定できる。モデル更新や入力分布が大きく変化しない限り表を再利用する前提で、オンライン選択の軽量性を確保する。"},{"name":"置換・スキップ誤差上界","description":"Top-Kで選ばれたexpert iをφ(i)へ置換した場合、層出力偏差をゲート重みg_iと両expert出力差の積の和で上界化する。スキップはゼロ出力への置換として扱え、類似代替が十分近いときだけreplacementが有利になる。\n\nさらに層ごとの偏差が後段expertの感度係数で増幅される累積上界を導き、浅い層の誤差がより重大になり得ることを明示する。この解析から最終品質制約を層別の偏差budgetへ変換する。"},{"name":"低速フェージング最適選択","description":"各expertがユーザーまたは一つのhelperに対応するモデルで、local expertはGPU loadとcompute、remote expertはuplink、helper load/compute、downlinkの時間とenergyを持つ。\n\nチャネルが層内で一定なら、層ごとのlatencyと偏差budgetを制約としてtotal energyを最小化するexpert selection問題を解く。single-token decodingとmulti-token prefillingを別に扱い、後者では複数tokenのhelper loadをまとめて通信・計算する効果も最適化へ含める。"},{"name":"高速フェージング適応送信","description":"層内でもchannel gainが変わる場合、uplinkを等時間slotへ分割し、expert selectionとslot別bit allocationを共同で扱う。直接の確率最適化は難しいため、期待逆channel gainを用いた決定論的energy surrogateで外側のexpert selectionを低速フェージングと同型にする。\n\nexpert assignment後は、各helperへ残るbit数と瞬時channelを状態にしたdynamic programmingで各slotの送信bit数を決める。良好なchannel realizationへ送信を寄せることでuniform allocationより期待energyを下げる。"}],
+"system_design":"ユーザー端末は入力、層間表現、最終結果を保持し、attentionとgateをローカル実行する。各層でSiftMoEがTop-K候補を偏差budget内で置換・skipして実行先を決め、localならexpertをGPUへloadして計算、remoteならhidden stateをhelperへuploadしexpert計算後のoutputをdownloadする。expert loadingはuplinkと並行可能とする。論文例ではMixtral-8×7B expertのA100 PCIe Gen4 loadが約27.35msなのに対し、4096次元BF16 hidden stateの10Mbps uplinkが約6.55ms、50Mbps downlinkが約1.31msであり、edgeでは重み移動よりhidden-state通信を選ぶ余地がある。"},
+"reservation":{"claim_id":"claim-a0ecf191f05aa48e02bfda2f","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
