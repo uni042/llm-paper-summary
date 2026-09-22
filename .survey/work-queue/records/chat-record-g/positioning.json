@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-b75922391156a97f6cc44521",
-  "job_id": "job-research-f3d9c2c6da00178e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b75922391156a97f6cc44521",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b75922391156a97f6cc44521","job_id":"job-research-f3d9c2c6da00178e","data":{"limitations":"HC-SMoEは再学習不要だが、専門家出力と利用頻度を得るため較正データでモデルを走らせる必要があり、完全なデータフリー手法ではない。主実験の静的グルーピングは全層で同じ専門家数を残すため、層ごとの冗長性差を最大限には利用しない。ルータの再学習・較正を行わず対応先だけを統合専門家へ写像するため、強い圧縮で生じるルータと新専門家の不整合を積極的に補正しない。50%削減ではQwen/Mixtralとも原モデルから明確な品質低下があり、圧縮処理時の一時メモリもMixtralで138GBと大きい。評価は主にQwen1.5-MoEとMixtral、追加でDeepSeek-MoEに限られ、より細粒度な多数専門家MoEや生成品質・実運用レイテンシへの一般化は追加検証が必要である。","differences":"O-pruneは元モデル出力差が小さい専門家部分集合を探索するため、専門家数が多いと組合せ爆発する。S/F-pruneはルータscoreや頻度で専門家を丸ごと削除し、削除専門家の知識を失う。M-SMoEは専門家を統合するが、優勢専門家選択やグルーピングに活性頻度・ルータlogitを使うためタスク依存性が強い。HC-SMoEは全専門家の知識を統合対象に残し、平均専門家出力を機能表現として決定論的な階層クラスタリングを行う点が異なる。K-means系に対しては初期中心依存を避け、各併合後にクラスタ間距離を再評価する。","implementation_status":"公式実装が https://github.com/wazenmai/HC-SMoE で公開され、論文はICML 2025（PMLR 267）採択・公開済み。Qwen/Mixtral/DeepSeek-MoEで実機評価されており、概念提案だけでなく再学習なしの実際の圧縮パイプラインとして検証されている。","research_positioning":"MoE推論のメモリ問題に対して、量子化やCPU/NVMeオフロードではなく『専門家集合そのものを統合してモデル常駐量を減らす』系統に位置する。特に専門家の機能類似性を出力空間で測る設計は、ルータ統計ベースの枝刈り・統合よりタスク非依存性を高める方向であり、expert redundancyを利用する圧縮研究の基準点になる。一方、後続のrouter calibration系研究から見ると、専門家変更後もルータを固定する設計は改善余地を残す。"},"reservation":{"claim_id":"claim-b75922391156a97f6cc44521","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
