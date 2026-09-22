@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-c1687a55baa06d3477e9780a",
   "job_id": "job-research-af08dd730875cebb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c1687a55baa06d3477e9780a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2509.22572",
+    "arxiv_id": "2509.22572",
+    "doi": "10.48550/arXiv.2509.22572",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AI", "cross_list": []},
+    "title": "Dynamic Experts Search: Enhancing Reasoning in Mixture-of-Experts LLMs at Test Time",
+    "summary": "Dynamic Experts Search（DES）は、混合エキスパート（Mixture-of-Experts; MoE）モデルで推論時に活性化するエキスパート数を探索変数として扱うテスト時スケーリング（Test-Time Scaling; TTS）手法である。異なる活性化数は平均精度を大きく変えない一方、正解できる問題集合が相補的になるという観察を利用する。Dynamic MoEで各ロールアウトの活性化数を変更し、Expert Configuration Inheritanceで同一推論軌跡内の活性化数を固定することで、検証器が高報酬の構成を自然に残す。Qwen3-30B-A3B、Ling-lite-1.5、OLMoE、DeepSeek-V2-Liteを用いた数学・コード・知識推論で、同程度の生成トークン数のBest-of-N、Beam Search、DVTSより概ね高い精度を示す。",
+    "list_summary": "MoEの活性化エキスパート数をTTSの探索軸に加え、推論軌跡ごとに構成を継承して同程度の計算量で推論多様性と正解率を高める。",
+    "authors": ["Yixuan Han", "Fan Ma", "Ruijie Quan", "Yi Yang"],
+    "authors_affiliations": "Zhejiang University; Nanyang Technological University",
+    "published": "2025-09-26",
+    "publication": "arXiv preprint arXiv:2509.22572v1; appendix states ICLR 2026 submission",
+    "publication_type": "Preprint / conference submission",
+    "publication_status": "ICLR 2026 submissionと本文付録に記載。採択確認なし。",
+    "lineage": "Mixture-of-Experts / test-time scaling / verifier-guided search / adaptive expert activation",
+    "topics": ["MoE推論", "テスト時スケーリング", "推論探索", "動的エキスパート活性化", "プロセス報酬モデル"],
+    "importance": "通常のTTSが温度サンプリングなど出力側の多様性だけを使うのに対し、MoE内部の疎計算構造を推論時探索空間へ取り込む。エキスパート数を増やし続けるのではなく、同じロールアウト予算の中で構成多様性を作る点が、適応的MoE推論の新しい利用法として重要である。",
+    "hardware_evaluation": "全実験はNVIDIA RTX A6000 GPU 4枚。方策モデルはvLLM、報酬モデルはTransformersで提供。主設定はN=32ロールアウト、M=N/4、最大10推論ステップ、温度0.8、初期活性化数4〜11。",
+    "quality_effect": "Qwen3-30B-A3B-InstructではMATH500 93.2%、AIME24 86.67%、AIME25 70.0%、HumanEval 94.51%、LiveBench reasoning 91.5%などを報告。小規模MoEでも複数ベンチマークで改善するが、一部の個別ベンチマークでは全ベースラインを上回らない。",
+    "source": "https://arxiv.org/abs/2509.22572",
+    "sources": ["https://arxiv.org/abs/2509.22572", "https://arxiv.org/html/2509.22572"],
+    "code": null,
+    "implementation": "論文はvLLM上で方策モデルを提供し、活性化エキスパート数を推論時に変更する実装を使用。付録ではコードは採択後に公開予定と記載しており、本文から公開実装URLは確認できない。",
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary arXiv manuscript",
+    "references_total": 54
+  },
+  "reservation": {"claim_id": "claim-c1687a55baa06d3477e9780a", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
