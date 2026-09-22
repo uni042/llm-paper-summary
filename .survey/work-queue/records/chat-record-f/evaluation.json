@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-326b3f3f66e611a32551fa41","job_id":"job-research-07f0e94c3c687e36","data":{"hardware":"Splitwiseベースで分離Prefill/Decodeインスタンスプールを再現する高忠実度テストベッド／シミュレーションを用い、稼働Prompt/Tokenインスタンス数とmachine-hoursを資源コストとして評価する。起動時のVM、コンテナ、モデル重みロード遅延もシステムモデルへ含む。","software":"制御器はSoft Actor-Critic。SchedulerはグローバルキューとJoint Allocationを実装し、Scaling Managerはscale-out、connection draining付きscale-inを管理する。コードは著者GitHubで公開。","methodology":"Microsoft Azure OpenAI GPTサービス由来のBurstGPT実運用トレースを使用し、元の到着タイムスタンプをそのまま再生して到着間隔分布を維持し、各要求の入力・出力トークン長も記録値を使用する。比較対象は、全PD構成をオフライン総当たりしてSLOを満たす最小資源構成を選ぶOptimal Static Ratioと、Decode tokens/sを信号に既定比率で両プールを同期伸縮するHeteroScale。\n\nDRL状態特徴の除去アブレーションと学習率感度を調べ、7×10^-4を安定性との均衡点として選ぶ。報酬の資源コスト重みwcとSLO重みwsも変え、wc=0.4、ws=0.6を採用。極端なバースト負荷でP99 TTFT slowdown、平均キュー待ち、キュートークン、平均インスタンス数を比較し、さらにTrace Aだけで学習した方策を異なるTrace Bへ追加学習なしで適用してゼロショット一般化を評価する。","scope":"評価はトレース駆動のSplitwise系環境であり、全てのクラウド実運用要因を含む実サービスA/B試験ではない。強化学習方策は状態特徴、報酬重み、スケール起動遅延モデルに依存し、異なるGPU世代・ネットワーク・課金単位では再調整が必要になり得る。論文自身も将来課題として頻繁なスケール切替によるthrashingと重み再ロード・エネルギー浪費の抑制を挙げる。"},"reservation":{"claim_id":"claim-326b3f3f66e611a32551fa41","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-fec4b42510381cc0bbc4dd6e",
+  "job_id": "job-research-0d6b250579950fce",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-fec4b42510381cc0bbc4dd6e",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

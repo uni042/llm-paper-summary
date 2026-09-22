@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-326b3f3f66e611a32551fa41","job_id":"job-research-07f0e94c3c687e36","data":{"overview":"極端バースト負荷でSplitScalingは平均22.44インスタンスを使用し、Optimal Staticの30.00、HeteroScaleの31.28より少ない資源でSLOを維持する。計算コストは静的比から25.2%、HeteroScaleから28.3%削減し、平均キュー待ちは14.20msで、静的17.15ms、HeteroScale 96.38msを下回る。P99 TTFT slowdownは1.94で、HeteroScaleの8.59を大幅に抑える。別Trace Bへのゼロショットでも平均インスタンス数を静的比22%、HeteroScale比29.8%削減し、P99 slowdown 1.25を維持した。","key_results":[{"metric":"計算資源コスト","value":"25.2% / 28.3%削減","baseline":"Optimal Static Ratio / HeteroScale","condition":"BurstGPT由来の極端バースト負荷、同一SLO制約","interpretation":"PDプールを独立伸縮することで固定比や同期比率の遊休資源を削減する。"},{"metric":"P99 TTFT slowdown","value":"1.94","baseline":"Static 2.43、HeteroScale 8.59","condition":"極端バースト負荷","interpretation":"再スケジューリングと独立伸縮が長いキュー滞留を抑え、裾遅延を安定化する。"},{"metric":"平均キュー待ち","value":"14.20ms","baseline":"Static 17.15ms、HeteroScale 96.38ms","condition":"極端バースト負荷","interpretation":"新規／解放ノードへグローバルキューから即時再割当する効果を示す。"},{"metric":"ゼロショット平均インスタンス数","value":"Static比22%、HeteroScale比29.8%削減","baseline":"Trace B上の両基準","condition":"Trace Aのみで学習しTrace Bへ追加学習なし","interpretation":"特定時系列を記憶するだけでなくPD負荷の非線形構造をある程度一般化している。"}],"negative_results":"資源費を強くし過ぎるwcでは積極的な縮退によりSLO違反が増え、SLO重みを強くし過ぎると資源冗長が増える。状態特徴ではInstance Backlog、Temporal Info、Arrival Intensity等を外すと学習報酬が振動・低下する。高い学習率1e-3は初期学習が速いが劣った方策へ陥りやすい。論文は頻繁なスケール切替によるthrashingを未解決の将来課題とする。","interpretation":"効果はDRLだけではなく、資源決定と要求束縛を分離したScheduler設計との組合せから生じる。スケールアウト判断が正しくても旧ローカルキューへ要求が固定されれば起動遅延中のSLO違反を救えないため、グローバルキューと即時再割当が新資源をバックログへ直結する。","quality_impact":"生成品質を近似する方式ではなく、同一モデルのサービング資源と要求配置を変える。品質側の制約はTTFT/TBT/E2E SLOであり、モデル精度そのものは変更しない。"},"reservation":{"claim_id":"claim-326b3f3f66e611a32551fa41","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-fec4b42510381cc0bbc4dd6e",
+  "job_id": "job-research-0d6b250579950fce",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-fec4b42510381cc0bbc4dd6e",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
