@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4d7a0c3e035c923b869769ba","job_id":"job-research-b8b352e984bc0e9d","data":{"overview":"GroveMoEはQwen3-30B-A3B-Baseの30B総・3B活性から33B総へ容量を増やしつつ、最終g=64構成の活性量を3.14〜3.28B、平均3.26Bに抑える。50Bトークンの構造探索では同じ50B学習の通常MoE平均69.59に対しg=64で70.54となった。400Bトークンで学習したGroveMoE-BaseはQwen3-30B-A3B-Baseに対しMATH 59.75→64.82、HumanEval+ 83.54→85.98、MBPP+ 71.96→76.19などを改善する。事後学習済みGroveMoE-Instは比較した非推論公開モデル群に対し、MATH-500 94.60、AIME24 54.58、AIME25 44.38、GPQA-Diamond 61.30、HumanEval+ 90.24を報告する。一方、汎用SGLang実装の推論速度はQwen3-30B-A3Bより約30%遅く、理論上の活性パラメータ増加上限約10%を大きく超える。","key_results":[{"metric":"活性パラメータ量","value":"3.14〜3.28B、平均3.26B","baseline":"Qwen3-30B-A3B-Base: 3B activated / 30B total","condition":"GroveMoE 33B, g=64, h=128","interpretation":"総容量を約3B増やしながら追加活性量を小さく抑え、トークンごとに活性随伴専門家数を変える。"},{"metric":"50B構造探索の8ベンチマーク平均","value":"70.54","baseline":"同じ50B学習の通常MoE 69.59","condition":"g=64,h=128; 33B total; avg activated 3.26B","interpretation":"小さい追加活性量でも通常MoEの継続学習を上回る平均性能を示す。"},{"metric":"GroveMoE-Base MATH","value":"64.82","baseline":"Qwen3-30B-A3B-Base 59.75","condition":"400B-token mid-training","interpretation":"追加容量が数学・複雑推論の改善に寄与するという中心主張を支える。"},{"metric":"GroveMoE-Inst AIME24 / AIME25","value":"54.58 / 44.38","baseline":"Qwen3-30B-A3B Non-Thinking 28.33 / 21.67","condition":"non-reasoning instruction-tuned comparison; AIME 16 samples/question","interpretation":"同じQwen3系MoE基盤に対し事後学習後の数学性能差が大きい。"},{"metric":"現行SGLang推論速度","value":"約30% slower","baseline":"Qwen3-30B-A3B","condition":"generic fused-moeをGroveMoE layerあたり2 kernel calls","interpretation":"活性パラメータ増加の理論上限約10%より実測遅延が大きく、専用統合カーネルが必要。"}],"negative_results":"構造探索では計算節約を大きくするg=16が平均性能で最良ではない。g=64の平均70.54に対しg=32は70.06、g=16は70.30で、g=16は平均活性3.93Bまで増える一方、一般・符号生成の一部でg=64に劣る。lambda=0.20も平均70.19で、lambda=0.05の70.75より低い。配備面では現行SGLang実装が基準より約30%遅く、構造上の計算効率がそのまま実時間性能になっていない。","interpretation":"GroveMoEの利点は可変専門家数を直接学習するのではなく、固定上位k個選択の群構造から追加計算量を派生させる点にある。これにより既存MoEルータとの互換性と計算上限の予測可能性を保てる。ただしモデル品質の改善には400B中間学習と事後学習も含まれるため、最終Instモデルの全改善を構造だけに帰属させるべきではない。50B構造探索と同一事後学習比較が構造寄与を補強する。","quality_impact":"Baseの同一評価ではQwen3-30B-A3B-Baseから数学・符号生成を中心に改善し、Instでは広いベンチマークで強い。著者は長い思考連鎖データ不足と強化学習未使用を限界として挙げており、より強い推論モデルとの能力差が残る可能性を認める。"},"reservation":{"claim_id":"claim-4d7a0c3e035c923b869769ba","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-c1740060a24d308914998762",
+  "job_id": "job-research-c92e15d6ba5edb8d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c1740060a24d308914998762",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

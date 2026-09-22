@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4d7a0c3e035c923b869769ba","job_id":"job-research-b8b352e984bc0e9d","data":{"canonical_id":"arXiv:2508.07785","arxiv_id":"2508.07785","doi":"10.48550/arXiv.2508.07785","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts","summary":"Grove MoEは、均一サイズの専門家を固定個数だけ選ぶ従来の混合専門家モデル（Mixture of Experts; MoE）に対し、専門家をグループ化して各グループに小型の随伴専門家（adjugate expert）を共有させる。選択された通常専門家が同一グループに属する場合は随伴専門家の計算を一度だけ共有するため、通常の上位k個ルーティングを変更せず、トークンごとに追加計算量を動的に変えられる。Qwen3-30B-A3B-Baseを中間学習と事後学習でアップサイクルし、総33B・活性3.14〜3.28BのGroveMoE-Base/Instを構築した。GroveMoE-Instは非推論設定でMATH-500 94.60、AIME24 54.58、AIME25 44.38など比較対象を上回る一方、現行SGLang実装では二重カーネル呼び出しのためQwen3-30B-A3Bより推論が約30%遅い。","list_summary":"専門家群ごとに小型の随伴専門家を共有して通常の上位k個ルーティングのまま計算量を動的化し、33B総パラメータ・3.14〜3.28B活性のGroveMoEを構築する。","authors":["Haoyuan Wu","Haoxing Chen","Xiaodong Chen","Zhanchao Zhou","Tieyuan Chen","Yihong Zhuang","Guoshan Lu","Zenan Huang","Junbo Zhao","Lin Liu","Zhenzhong Lan","Bei Yu","Jianguo Li"],"authors_affiliations":"Inclusion AI; The Chinese University of Hong Kong; Renmin University of China; Zhejiang University; Shanghai Jiao Tong University; Westlake University","published":"2025-08-11","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2025-08-11)","lineage":"Mixture-of-Experts / dynamic expert activation / heterogeneous experts / sparse upcycling","topics":["混合専門家モデル","動的計算配分","随伴専門家","アップサイクル","負荷分散"],"importance":"専門家数を可変にする専用ルータではなく、既存の上位k個ルーティングと互換な共有随伴専門家によって活性計算量をトークン依存にする点が重要。","implementation":"公式GroveMoE実装を公開。SGLangの汎用fused-moeカーネルを用いる現行実装では各層2回のカーネル呼び出しが必要。","hardware_evaluation":"論文は学習・評価設定とモデル比較を報告するが、HTML本文ではGPU型式の詳細を主要評価表に明記していない。推論速度はSGLang実装でQwen3-30B-A3Bと比較。","quality_effect":"同じ中間学習条件で通常MoEより平均ベンチマークを改善し、事後学習後も一般・数学・符号生成で高い性能を報告する。","source":"https://arxiv.org/abs/2508.07785","sources":["https://arxiv.org/abs/2508.07785","https://arxiv.org/html/2508.07785v1"],"code":"https://github.com/inclusionAI/GroveMoE","last_checked":"2026-09-22","references":[],"references_checked_at":"2026-09-22","references_source":"primary manuscript","references_total":57},"reservation":{"claim_id":"claim-4d7a0c3e035c923b869769ba","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-c1740060a24d308914998762",
+  "job_id": "job-research-c92e15d6ba5edb8d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c1740060a24d308914998762",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

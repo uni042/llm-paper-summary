@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4d7a0c3e035c923b869769ba","job_id":"job-research-b8b352e984bc0e9d","data":{"hardware":"主要表はモデル品質と活性パラメータ数を中心に報告し、HTML本文では学習GPU型式・台数を明示していない。推論配備評価はSGLang実装上でQwen3-30B-A3Bと速度比較し、汎用fused-moeカーネルを各Grove MoE層で2回呼ぶ実装上のオーバーヘッドを測定する。","software":"基盤モデルはQwen3-30B-A3B-Base。GroveMoE-Baseは400Bトークンの中間学習、GroveMoE-Instはその後の教師あり微調整で構築する。中間学習はAdamW、beta1=0.9、beta2=0.95、weight decay 0.1、gradient clipping 1.0、最大系列長8192、batch 16M tokens、学習率1e-4から5e-5のcosine decay。最終構成はg=64、h=128、lambda=0.05。事後学習はAdamWで5e-6から1e-6へ減衰する。","methodology":"構造探索ではQwen3-30B-A3B-Baseを基準に50Bトークンを用い、g=64/32/16と随伴中間次元h=128/256/512を比較する。別実験でlambda=0.20/0.10/0.05を比較し、MMLU、CMMLU、SuperGPQA、GSM8K、MATH、GPQA-Diamond、HumanEval+、MBPP+の平均を評価する。最終Baseモデルは一般6種、数学・STEM3種、符号生成4種の計13ベンチマークでMistral-Small-3.1、Gemma3-27B、Qwen2.5-32B、Qwen3-30B-A3B、Llama4-Scoutと同一評価パイプラインで比較する。Instモデルは一般・整合・数学/STEM・符号生成/エージェントの多数ベンチマークで同規模・より大規模な公開モデルと比較する。AIMEは各問題16サンプル、GPQA-Diamondは8サンプル平均を使い、非推論モデルの最大出力長は16Kに制限する。","scope":"主張は、異種サイズ専門家による動的計算配分の有効性、Qwen3 MoEからのアップサイクル、Base/Instの品質、活性パラメータ効率、および現行配備実装の速度差を対象とする。構造探索は50Bトークン、最終中間学習は400Bトークン。品質表は広範だが、実GPU上のトークン毎秒やメモリ使用量の詳細なカーネル比較は限定的で、現行SGLang速度評価は最適化済み専用カーネルではない。"},"reservation":{"claim_id":"claim-4d7a0c3e035c923b869769ba","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c1740060a24d308914998762",
+  "job_id": "job-research-c92e15d6ba5edb8d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c1740060a24d308914998762",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
