@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d3a6734ec62678ea8cb1d272",
+  "attempt_id": "attempt-62001365f825db950090067f",
   "job_id": "job-research-6f4aa4cc9993f8fd",
   "data": {
     "overview": "提案法は追加微調整なしでNLLB-200の専門家を80%削除し、単一32GB V100へ収める。53言語の最終テストでは言語別固定層枝刈りの平均chrF++が35.46で、完全54.5Bモデル35.74との差は0.28、3.3B密モデル34.64を0.82上回る。速度面では1 GPU枝刈り版が172語/秒で、4 GPU完全版156語/秒と同程度以上となり、4 GPU枝刈り版は299語/秒まで向上する。専門家集合の類似度は同じ出力言語のデコーダで68〜87%、異なる出力言語では13〜39%となり、言語固有専門家の存在を支持する。",
@@ -48,8 +48,8 @@
     "quality_impact": "chrF++では80%枝刈りでも完全モデルとの差が小さいが、spBLEUでは過剰生成の影響がより大きく見える。著者らは翻訳自体は初め正しくても、その後に反復や言い換えが続く稀な失敗を確認しており、単一指標だけで無損失と解釈すべきではない。"
   },
   "reservation": {
-    "claim_id": "claim-d3a6734ec62678ea8cb1d272",
-    "worker_id": "scheduled-chat-00",
+    "claim_id": "claim-62001365f825db950090067f",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }

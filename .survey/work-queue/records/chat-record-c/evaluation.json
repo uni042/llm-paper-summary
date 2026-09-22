@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d3a6734ec62678ea8cb1d272",
+  "attempt_id": "attempt-62001365f825db950090067f",
   "job_id": "job-research-6f4aa4cc9993f8fd",
   "data": {
     "hardware": "推論速度評価は32GB NVIDIA V100を使用。完全54.5B混合専門家モデルは4枚および8枚、80%枝刈り版は1枚および4枚で測定する。単一GPU枝刈り構成は各エンコーダ混合専門家層36専門家、各デコーダ層12専門家を保持する。",
@@ -11,8 +11,8 @@
     "scope": "評価対象はNLLB-200という単一の多言語機械翻訳用混合専門家モデルであり、一般LLMや別のルーティング方式への直接一般化は検証していない。一方、言語数は202、最終翻訳方向は40,602と広く、資源量別の品質と単一GPU実機推論まで確認している。"
   },
   "reservation": {
-    "claim_id": "claim-d3a6734ec62678ea8cb1d272",
-    "worker_id": "scheduled-chat-00",
+    "claim_id": "claim-62001365f825db950090067f",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }
