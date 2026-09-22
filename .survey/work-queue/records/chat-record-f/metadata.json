@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-da608a41f05d014b86a258e4",
   "job_id": "job-research-f59af449638fc64c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-da608a41f05d014b86a258e4",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2504.05586",
+    "arxiv_id": "2504.05586",
+    "doi": "10.48550/arXiv.2504.05586",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+    "title": "Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations",
+    "summary": "本論文は、疎活性混合専門家モデル（Sparse Mixture of Experts; SMoE）でどのエキスパートを削るべきかを、重み、推論時挙動、活性値、勾配という4視点から体系比較するMC-Suiteを提案する。単発で重要度を測ってまとめて削る方式だけでなく、12.5%ずつ削るたびに重要度を再計算する反復枝刈りと、各段階で少量の次トークン予測学習を挟むMoE Lottery Subnetworkを評価する。活性値ノルムや勾配エントロピーが有力な重要度指標で、50%以上のエキスパート削減でも反復再評価と軽量微調整により性能低下を大きく抑えられる。また枝刈りで主に損なわれるのは事前学習知識そのものより指示追従能力だという仮説を、少数例提示と教師あり指示微調整で性能が回復することから検証する。",
+    "list_summary": "MoEエキスパート重要度を4視点・16指標で比較し、反復再評価＋軽量微調整なら50%以上削減でも性能を保ちやすく、指示追従能力の回復が鍵と示す。",
+    "authors": ["Ajay Jaiswal", "Jianyu Wang", "Yixiao Li", "Pingzhi Li", "Tianlong Chen", "Zhangyang Wang", "Chong Wang", "Ruoming Pang", "Xianzhi Du"],
+    "authors_affiliations": "The University of Texas at Austin; Apple; University of North Carolina at Chapel Hill",
+    "published": "2025-04-10",
+    "publication": "arXiv preprint arXiv:2504.05586 v2, 2025-04-10",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction",
+    "topics": ["MoE", "エキスパート枝刈り", "重要度推定", "反復枝刈り", "負荷分散", "指示追従"],
+    "importance": "エキスパート削減研究を単一の重要度指標比較に留めず、重要度の再評価、枝刈り後補正、失われる能力の診断まで一つの実験系で整理し、実務的なMoE圧縮手順を示す。",
+    "hardware_evaluation": "Mixtral-8×7B Base/Instructを主対象とし、MoE Lottery微調整は8基のNVIDIA A100を使用する。",
+    "quality_effect": "50%削減でメモリ使用量0.55倍、1.27倍高速化を報告する一方、補正なしの単発枝刈りでは下流性能が急落する。反復再評価と軽量微調整、さらに指示追従支援を加えることで高い削減率でも性能を回復できる。",
+    "source": "https://arxiv.org/abs/2504.05586",
+    "sources": ["https://arxiv.org/abs/2504.05586", "https://arxiv.org/pdf/2504.05586"],
+    "code": "",
+    "implementation": "論文本文ではMC-Suiteの各重要度指標と反復estimate-prune-finetune手順を詳細化しているが、本文から公開コードURLは確認できない。",
+    "last_checked": "2026-09-22",
+    "references": [],
+    "references_checked_at": "2026-09-22",
+    "references_source": "primary-reference-section",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-da608a41f05d014b86a258e4", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
