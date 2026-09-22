@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-6cd2c2eb6d8d0d8116429b11",
-  "job_id": "job-research-9b33865bddc54a07",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6cd2c2eb6d8d0d8116429b11",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-6cd2c2eb6d8d0d8116429b11","job_id":"job-research-9b33865bddc54a07","data":{"limitations":"GateProはtop-kのk自体を減らさず、選択集合のdiversityを変えるtraining手法なので、推論時のexpert FLOPs・weight trafficを直接削減しない。類似性proxyはrouter weight cosineであり、FFNの実出力機能が常にこの幾何と一致する保証はない。各expertが一つの最類似siblingだけと競争するため、多数expertがcluster状に冗長な場合のglobal optimumは扱わない。Seed-MoE評価のGPU型番、複数seedの分散、統計的有意性、公式コード公開は一次資料で十分示されない。主要改善は多くが1〜2pt程度で個別taskには微減・同値がある。","differences":"Switch型load-balancing lossはexpertごとのtoken数を均すが、GateProは同一tokenで似たexpertが共選択されることを直接抑える。DeepSeek-V3型loss-free balancingはexpert biasを動的調整してloadを均すのに対し、GateProはgate vector similarityから局所competitionを作る。DSelect-kや最小費用流routingのような新しいdifferentiable selectorや重いoptimizationを導入せず、既存top-kの直前でlogitを修正する。expert pruning/merging/skippingと異なりmodel capacityやactive kを減らさず、training時にspecializationを改善する。","implementation_status":"ByteDance Seed/UC BerkeleyのarXiv v1。アルゴリズムはrouter weight cosine、sibling map、定数penalty、既存top-kのみで実装可能で、追加learnable parameterはない。公式code repositoryは一次PDFでは確認できない。OLMoEへの適用でarchitecture portabilityを部分検証する。","research_positioning":"Adaptive Expert Computation / Compression系の前段に位置するexpert-selection品質改善法。推論時にexpert数を削る研究とは直接競合せず、より多様なexpert specializationを学習しておくことで、将来のpruning、merging、cache-aware routing、adaptive-kが利用できるexpert poolの質を上げる可能性がある。特にdeep layerでactivation delayが大きいという観測は、layer-aware expert管理研究にも関連する。","audit_notes":"arXiv:2510.13079v1をIntroduction、Related Work、Approach、scratch/CT/OLMoE experiments、128/256-expert utilization、gating similarity、Conclusion、hot-swap legacy-effect appendix、metric definitions、Referencesまで確認。個別taskの微減/同値、推論計算削減ではない点、再現性境界を保持した。"},"reservation":{"claim_id":"claim-6cd2c2eb6d8d0d8116429b11","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
