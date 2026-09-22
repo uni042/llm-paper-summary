@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-fec4b42510381cc0bbc4dd6e",
-  "job_id": "job-research-0d6b250579950fce",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-fec4b42510381cc0bbc4dd6e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-fec4b42510381cc0bbc4dd6e","job_id":"job-research-0d6b250579950fce","data":{"overview":"SemBridgeは9個の実境界edge全てで通信startupを削減し、結果edge 3件ではpayload bytesも削減する。2ホスト1GbE容量スピルオーバーではsource projectionが結果通信量を99.97%以上削減し、Dense、MoE、MiniMax workloadでthroughputを8.92〜80.20%向上する。MiniMaxのconcurrency 1/8/16を含む18 restart pair全てでsource projectionが有利。layout-only plannerは72遷移中54件しか完全obligationを確立できず、byte-only minimizerの意味違反40候補はcheckerが全て拒否した。","key_results":[{"metric":"結果通信量","value":"99.97%以上削減","baseline":"full-logit reconstruction","condition":"token-only source projection、2ホスト1GbE容量スピルオーバー","interpretation":"語彙logit全体ではなくproducer側で計算したint32 token IDだけを境界越しに送る効果。"},{"metric":"throughput","value":"8.92〜80.20%向上","baseline":"full-result transfer","condition":"Dense、MoE、MiniMax workload、2ホスト1GbE","interpretation":"結果payloadが支配的な異種境界では意味に応じたprojectionが実スループットへ直結する。"},{"metric":"MiniMax paired runs","value":"18/18組でsource projectionが有利","baseline":"full-logit plan","condition":"concurrency 1、8、16、fresh-process AB/BA restart pairs","interpretation":"単一実行の偶然ではなく複数再起動・並行度で方向が一貫する。"},{"metric":"意味検証","value":"byte-onlyの不正40候補を40/40拒否","baseline":"通信量のみ最小化する候補生成","condition":"symbolic checker","interpretation":"byte削減だけでは破る可能性があるcompletionやauthority等を事前検査できる。"}],"negative_results":"layout情報だけでは72構造遷移中54件しか完全なdelivery obligationを確定できず、consumer demand等の意味情報が必要だった。token-only以外で完全logitやlog-probabilityが要求される場合は大幅なsource projectionを適用できない。通信削減の最大速度効果は1GbEという低帯域境界で測られており、高帯域相互接続では転送時間削減の割合が縮む可能性がある。","interpretation":"結果は『配置が同じなら通信も同じ』ではなく、最終消費者が観測するsurfaceによって必要通信量が大きく変わることを示す。意味契約とcheckerを先に置けば、token投影やowner限定deliveryのような既知最適化を個別hackではなく、同一の安全なlowering問題として扱える。","quality_impact":"consumer observationを参照実行と比較し、要求surface、value、completion、provenance、authorityの同値性を満たす計画だけを許可する。したがって通信量削減は要求意味を弱めない範囲に限定される。"},"reservation":{"claim_id":"claim-fec4b42510381cc0bbc4dd6e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
