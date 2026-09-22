@@ -20,6 +20,9 @@
   "schema_version": 1,
   "created_at": "2026-09-20T11:04:06+00:00",
   "repair_required": true,
-  "validation_error": "ValueError: paper quality gate failed: 手法構成要素#1 の段落数 1 < 2; 手法構成要素#2 の段落数 1 < 2; 手法構成要素#3 の段落数 1 < 2; 手法構成要素#4 の段落数 1 < 2; 手法構成要素#5 の段落数 1 < 2; 手法構成要素#6 の段落数 1 < 2",
-  "last_validation_failed_at": "2026-09-22T04:34:24+00:00"
+  "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
+  "last_validation_failed_at": "2026-09-22T04:36:18+00:00",
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism"
+  ]
 }
