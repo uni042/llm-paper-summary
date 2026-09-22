@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-22 22:12:49 JST**
+> 自動生成: **2026-09-22 22:13:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **261** |
-| 未claim Research job | **260** |
-| 直近24hの検証済みResearch収録 | **38** |
-| 最終検証済みResearch収録 | **09-22 22:12:42 JST（7秒前）** |
+| 収録候補論文 | **260** |
+| 未claim Research job | **259** |
+| 直近24hの検証済みResearch収録 | **39** |
+| 最終検証済みResearch収録 | **09-22 22:13:20 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **261** |
+| canonical_id確認済みの一意な候補論文 | **260** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **261** |
+| 非終端Research job合計 | **260** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **2** | **0** | **0** | **1** | **0** | — |
+| Research | **20** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **19** | **5** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **20** | **5** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-22 22:13:20 JST** [research] `arXiv:2510.02345` — Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression
+  - job: `.survey/work-queue/jobs/job-research-ff0b776f31e2fc4b.json`
+  - result: `.survey/work-queue/results/research/attempt-219bac9027693490a638aa72.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-219bac9027693490a638aa72.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md`
 - **09-22 22:12:42 JST** [research] `arXiv:2604.04356` — REAM: Merging Improves Pruning of Experts in LLMs
   - job: `.survey/work-queue/jobs/job-research-3bf50f659a80056e.json`
   - result: `.survey/work-queue/results/research/attempt-ac17b6b84524962e53346559.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-1b51079a73bb2f6ad0213381.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-1b51079a73bb2f6ad0213381.json`
   - paper: `papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md`
-- **09-22 21:15:30 JST** [research] `arXiv:2609.12412` — HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications
-  - job: `.survey/work-queue/jobs/job-research-c15907d33f78f8cd.json`
-  - result: `.survey/work-queue/results/research/attempt-05dcd349efb11788a6f85507.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-05dcd349efb11788a6f85507.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md`
 
 ### Audit
 
@@ -203,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **261** |
+| ready | **260** |
 
 ### 候補の重複・識別情報欠損
 
@@ -223,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **919** |
+| inference/training/survey配下の論文Markdown実体 | **920** |
 
 ### immutable submissionの未照合
 
@@ -231,8 +231,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **308** |
-| └ Research | **236** |
+| 成功result未照合のimmutable submission | **307** |
+| └ Research | **235** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 

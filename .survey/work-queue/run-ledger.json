@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T13:12:49.201621+00:00",
+  "updated_at": "2026-09-22T13:13:23.713647+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -37330,6 +37330,56 @@
           "type": "research",
           "canonical_id": "arXiv:2604.04356",
           "title": "REAM: Merging Improves Pruning of Experts in LLMs",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 908,
+      "paper_active_count_after": 908,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35731871732",
+      "first_recorded_at": "2026-09-22T13:13:23.713647+00:00",
+      "last_recorded_at": "2026-09-22T13:13:23.713647+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35731871732:1",
+          "recorded_at": "2026-09-22T13:13:23.713647+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35731871732",
+            "run_attempt": "1",
+            "source_sha": "9409e1db3e993ee4131722aace59b2215f345d49"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-ff0b776f31e2fc4b",
+          "type": "research",
+          "canonical_id": "arXiv:2510.02345",
+          "title": "Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression",
           "from": "ready",
           "to": "completed"
         }
