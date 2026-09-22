@@ -127,13 +127,16 @@ jobs:
           git commit -m 'survey-submission: build validated completed descriptors'
 
           published=0
-          for attempt in 1 2 3 4 5; do
+          for attempt in $(seq 1 12); do
             if git push origin HEAD:main; then
               published=1
               break
             fi
             echo "Builder push race on attempt ${attempt}; refusing to hand-merge generated descriptors." >&2
-            sleep $((attempt * 2))
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            jitter=$(( RANDOM % 6 ))
+            sleep $((backoff + jitter))
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
@@ -142,7 +145,7 @@ jobs:
             fi
           done
           if [ "$published" -ne 1 ]; then
-            echo 'Failed to publish generated completed descriptors after 5 retries; periodic recovery will retry.' >&2
+            echo 'Failed to publish generated completed descriptors after 12 retries; periodic recovery will retry.' >&2
             exit 1
           fi
 
