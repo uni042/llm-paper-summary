@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-01556e847caec9153595855e",
-  "job_id": "job-research-c449ea471528f1b0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01556e847caec9153595855e",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-01556e847caec9153595855e","job_id":"job-research-c449ea471528f1b0","data":{"limitations":"一つの小規模backbone Qwen3-1.7Bと二つのtask specialistだけの評価で、二seedではseed variabilityを推定できない。held-out GSM8Kの-4.6ppは160-token capの影響を一部含み、320-tokenではCIが0を含むためbudget-independentな損失は未確定。境界sweepの500例は過去development sliceと重複し独立確認ではない。HotpotQA supplied-contextは700 token truncationでanswer-bearing textが落ちる可能性を監査していない。aLoRA比較はactivation correctness未検証。最重要の実装制約として、二branchのprefix KVはstorageを物理共有せず、persistent shared-cache memory savingは未実装である。","differences":"通常prefix cachingは同一modelの同一prefixを再利用するが、本研究は同一backbone上の異なる標準LoRA specialistへbase-computed KVを跨いで使う。Activated LoRAはadapterをinvocation後だけ発火させcache互換を設計・学習時から確保するのに対し、本研究は既学習standard LoRAを変更しない。Cross-model KV transferやCacheBridgeは異サイズmodel間のKV空間変換を対象とするが、同一backbone LoRAではmappingなし直接reuseを中心にし、ridge translatorは負の結果となる。ForkKVのようなcopy-on-write物理共有系とは異なり、本実装は論理reuseのみでstorage sharingを実現しない。","implementation_status":"transformers/peft/torch上の研究評価実装で、base prefix KV直接reuse、boundary sweep、ridge translator、TTFT/memory計測を実施。実際のserving benefitとしてwarm-cache TTFTは確認されるが、generation時cache concatenationがprefixをbranchごとにcopyする。paged cache等によるpersistent shared storageは今後の実装課題。公開コードURLは論文から確認できない。","research_positioning":"本リポジトリのKVキャッシュ再利用・multi-LoRA serving系統では、cache-compatible adapterを新規学習する方式と、既存standard LoRAをそのまま運用する方式の間を埋める実証研究に位置する。特に『prefill computeを再利用できる』ことと『KV memoryを一コピーへ共有できる』ことを明確に分離した点は、serving systemの評価設計に重要である。8Kでwarm-cache TTFT約16倍という計算側の利点があっても、物理sharing未実装ならmemory capacity問題は残るため、今後はpaged KV、copy-on-write、adapter-aware cache管理と組み合わせて品質・latency・memoryを同時評価する必要がある。"},"reservation":{"claim_id":"claim-01556e847caec9153595855e","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
