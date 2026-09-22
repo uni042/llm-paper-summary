@@ -1,4 +1,4 @@
-# Worker router — workflow v10.3
+# Worker router — workflow v10.4
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -70,7 +70,7 @@ Research / Auditの不変submissionも同様にfast laneを使える。
 1. 5スロットをclaim result指定のrecord bankまたは現行fallbackへ完全保存し、必要な実blob SHAを確定する。
 2. `status=completed` はdescriptorを手組みせず、`.survey/work-queue/completed-submission-requests/<attempt_id>.json` にrequestをcommitする。requestのファイル名stemは `attempt_id` と完全一致させ、`kind` / `attempt_id` / `job_id` / `record_bank` と、必要なら `paper_path` / `expected_blob_sha` を持たせる。このpushまたは10分周期の `.github/workflows/survey-completed-builder-fast.yml` が `prepare_completed_submission.py` を実行し、実blob SHAを取得・検証したattempt固有descriptorを `.survey/work-queue/submissions/research/<attempt_id>.json` または `audit/<attempt_id>.json` に生成する。**completed descriptorをScheduled Chatが直接作成・更新してはならない。** status-only `blocked` / `deferred` / `rejected` だけは従来どおり最小descriptorをsubmission laneへ直接送る。過去の直接completed descriptorは読取互換のみ残し、新規生成しない。
 3. このpushで `.github/workflows/survey-submission-fast.yml` が起動し、最新main上で正規submission processorを実行する。
-4. 同名の `.survey/work-queue/results/research/<attempt_id>.json` または `audit/<attempt_id>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。descriptorをmainへ耐久保存した時点でそのattemptは「提出済み」とする。**提出済みならresult待ちを同期障壁にせず、次のResearch / Auditを1件だけclaimして処理してよい。** ただし後述の1本遅延確認規則に従い、さらに次へ進む前に直前提出分のresultを確認する。
+4. 同名の `.survey/work-queue/results/research/<attempt_id>.json` または `audit/<attempt_id>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。descriptorをmainへ耐久保存した時点でそのattemptは「提出済み」とする。**提出済みならresult待ちを同期障壁にせず、同一workerで未提出active claimを1件に保ったまま、後続Research / Auditを順次claimして最大2本先行まで処理・提出してよい。** 最古の未確定submissionから見て後続提出が2本に達したら、それ以上進む前に最古resultを確認する。
 5. **1 attemptにつきcompleted descriptorは1本だけ**とする。検証失敗後に同じ `job_id / attempt_id` の `repair1`、`repair2` 等を追加して修正しない。
 6. failure resultが `content_validation`、またはjobが `repair_required=true` になった場合は、そのfailure resultがmainへ耐久保存されたことを確認した後、同じjobを `job_ids: [<job_id>]` で指定した新しいclaim requestを発行する。claim fast laneが旧claimを解放し、**新しいclaim_id / attempt_id** と回復済みrecord bankを返すので、指摘されたslotだけを一次資料に基づいて修正して新attemptのdescriptorを提出する。全文読解済み成果を捨てない。
 7. failure resultが `retryable=true` の場合は、同じattemptの別descriptorを作らない。既存の同一descriptorをsubmission laneのbounded recoveryに任せ、同じresultを再確認する。`retryable=false` かつ `repair_required` でもないstate/transport guardは、返された回復指示に従う。
@@ -92,7 +92,7 @@ claim requestでは `request_id` をrequestファイル名のstemと完全一致
 7. Actionsと同じ基準で事前検査（preflight）する。
 8. GitHubへ保存可能なら、`status=completed` はattempt固有requestを `.survey/work-queue/completed-submission-requests/<attempt_id>.json` へ保存し、completed builder fast laneに実blob SHA取得・検証済みdescriptor生成を委ねる。Scheduled Chatがcompleted descriptorを `.survey/work-queue/submissions/research/` / `audit/` へ直接保存してはならない。status-only `blocked` / `deferred` / `rejected` は第3.1節4項の最小descriptorを従来どおりsubmission laneへ直接保存する。
 9. GitHub書込みがrun全体で利用不能なら、完全な5スロットpayloadをChatGPT Library `/LLM-survey-outbox/pending/` へ1論文1envelopeで保存する。
-10. 完全payloadまたはstatus-only descriptorを耐久保存して不変submissionを送ったら、**resultを待たずに次のResearch / Auditを1件だけclaimして処理してよい。** ただしパイプラインは最大1本先行までとする。論文Nを提出→論文N+1を処理して提出→**論文Nのsubmission resultと最新main反映を必ず確認**→正常終端なら論文N+2へ進む、の順序を守る。論文NがpendingならN+2へ進まず同じresultを再確認する。論文Nがvalidation失敗・repair_required・retryable等なら、返された正規回復指示に従って論文Nを回復し、その終端反映を確認してからN+2へ進む。論文N+1のresult確認は、論文N+2を提出した後に同様に行う。status-only終端は成功件数へ数えない。hard stopまたはhandoff guardでない限りrun全体を終了しない。
+10. 完全payloadまたはstatus-only descriptorを耐久保存して不変submissionを送ったら、**resultを待たずに次のResearch / Auditを1件ずつclaimして処理してよい。** パイプラインは**最大2本先行**までとする。論文Nを提出→論文N+1を処理して提出→論文N+2を処理して提出→**論文Nのsubmission resultと最新main反映を確認**→確認後に論文N+3へ進む、の順序を守る。論文Nが単純pendingまたは`retryable`な正規再処理待ちでも、descriptorと回復対象identityが耐久保存済みならN+2までは進めてよい。Nが`validation`失敗・`repair_required`なら返された`recovery_steps`に従い回復要求を耐久保存し、その回復を非同期レーンへ渡したうえでN+2までは進めてよい。**ただし最古の未確定submissionから見て後続提出が2本に達したら、最古resultまたはその正規repair状態を確認・前進させるまでN+3をclaimしない。** 回復要求自体を耐久保存できていないfailureは先行許可に使わない。status-only終端は成功件数へ数えない。hard stopまたはhandoff guardでない限りrun全体を終了しない。
 
 禁止事項:
 
@@ -302,12 +302,12 @@ runtime_condition: none
 - `FINALIZE`: `run_finalization_gate.py` で最終化許可を確認してから終了する。
 
 
-継続判断の内部実装は `.survey/scripts/continuation_gate.py`、最終化判断は `.survey/scripts/run_finalization_gate.py` を使う。Scheduled Chatからは原則run-state fast laneの導出結果を経由する。Research / Auditでは**提出直後と、1本前のsubmission resultを確認した直後**にcontinuation gateを再実行する。**`--pipeline-ahead-count` は未確認submissionの後ろで既に処理・提出した論文数を表し、通常は0か1だけを渡す。** Nを提出した直後でまだN+1を提出していなければ0、N+1を提出済みでNのresultが未確認なら1とする。提出直後に `required_action=CLAIM_NEXT_RESEARCH_AUDIT` が返った場合は、result待ちより先に次の1件をclaimする。1本先行済み、または安全にclaim可能な次jobがない状態で `required_action=WAIT_FOR_PREVIOUS_SUBMISSION_RESULT` が返った場合は、さらに次をclaimせず1本前のresultを確認する。終端確認時はそのjobの終端statusを `--last-terminal-job-status`、今回runの成功完了数を `--research-audit-completed-this-invocation` として渡す。
+継続判断の内部実装は `.survey/scripts/continuation_gate.py`、最終化判断は `.survey/scripts/run_finalization_gate.py` を使う。Scheduled Chatからは原則run-state fast laneの導出結果を経由する。Research / Auditでは**提出直後と、最古の未確定submission resultまたはrepair状態を確認した直後**にcontinuation gateを再実行する。**`--pipeline-ahead-count` は最古の未確認submissionの後ろで既に処理・提出した論文数を表し、通常は0〜2を渡す。** Nを提出した直後でまだN+1を提出していなければ0、N+1提出済みなら1、N+2提出済みでNが未確定なら2とする。提出直後に `required_action=CLAIM_NEXT_RESEARCH_AUDIT` が返った場合は、result待ちより先に次の1件をclaimする。`pipeline-ahead-count < 2` ならpending / retryable / 耐久済みrepair待ちでも次の1件へ進める。2本先行済み、または安全にclaim可能な次jobがない状態で `required_action=WAIT_FOR_PREVIOUS_SUBMISSION_RESULT` が返った場合は、さらに次をclaimせず最古の未確定resultまたはrepair状態を確認する。終端確認時はそのjobの終端statusを `--last-terminal-job-status`、今回runの成功完了数を `--research-audit-completed-this-invocation` として渡す。
 
 `run_finalization_gate.py` にも今回runの `--work-mode` と最低条件カウンタを必ず渡す。run-state resultの `gate.hard_stop` をそのまま `--hard-stop` の正本とし、ワーカーが独自に再分類しない。Research / Auditで成功完了3件未達、またはDiscoveryで4 round未達の通常runは、仮に誤って `STOP_RUN` が渡されてもfinalization gateが拒否する。hard stop + safe handoffだけはこの最低条件より優先する。pending resultを含むsafe handoffでは、request/submission identity、期待result path、現在のpending状態、次の正規操作が耐久保存済みの場合だけ `handoff_safe=true` とする。
 
 - claim/resultやsubmission/resultが次の安全な判断に必要なら、同一targetを**10秒実時間間隔**で再確認する。「所定間隔」はすべて10秒を意味し、別の待機間隔を自己判断で作らない。**claim result待ちでは各10秒区間を空白時間にせず、Actions run/job/step確認と同一worker transport監査を挟む。** Research / Auditモードで最新queue上のclaim可能jobが0件なら、空のclaim requestを連打せず10秒待機して最新queueを再確認する。run中にDiscoveryへ切り替えない。
-- Research / Audit のsubmission result待ちは**直後の1本には同期障壁ではなく、その次の論文へ進むための同期障壁**である。N提出後はN+1を処理・提出してよい。N+1提出後はNの成功resultまたはstatus-only終端と最新main反映を確認するまでN+2をclaim・取得しない。failure時はNの正規repairを優先する。
+- Research / Audit のsubmission result待ちは**直後の2本には同期障壁ではなく、3本目の先行（Nから見たN+3）へ進むための同期障壁**である。N提出後はN+1、N+2まで順次処理・提出してよい。N+2提出後はNの成功result、status-only終端、または耐久保存済み正規repairの前進を確認するまでN+3をclaim・取得しない。failure時も未保存のまま放置せず、`recovery_steps`に従う回復要求を耐久化してから先行枠を使う。
 - candidate在庫、Library pending、fallback backlog、record bank枯渇、単一job失敗、status-only終端、1本完了、単一探索軸0件だけをrun終了理由にしない。
 - final responseはfinalization gateが許可した場合だけ行う。
 - 残り600秒以下の開始禁止窓に入ったら新規独立作業を開始しない。**ただし開始済みDiscovery round（precheck result待ち、成功precheckの評価中、Discovery submission result待ち、正規recovery中）もResearch/Auditの開始済み作業と同じく継続対象**であり、600秒到達だけで終了してはならない。進行中作業・必要な非同期結果確認が本当に0件のときだけ安全handoff後に終了してよい。残り180秒以下では新規内容作業を止め、耐久保存と安全な引き継ぎだけを行う。処理中resultが残る場合、180秒までは10秒間隔で追跡し、それでもpendingならsubmission/request identity・result path・現在状態・次に行うべき正規操作が耐久保存済みであることを確認してhandoffする。
