@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-a0ecf191f05aa48e-02",
+  "kind": "research",
+  "attempt_id": "attempt-a0ecf191f05aa48e02bfda2f",
+  "job_id": "job-research-71cfe275bb4fcca4",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.23888-siftmoe-similarity-aware-expert-selection.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:af3eaeb0914fed8ec3d7a0ad0052ebaec783116778f00e7f2003485906541c47",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "66f402cb325ced3210e2800000ed6d54bcf6366b"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "02b45e07cac782469cd7d57e7ebf15a93e2394b4"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "5adb24bedd1abc7ae322de7149343d66d1685aa5"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "19765317e26596a2332c3cd1e95c9c781ac7ba05"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "210ca3d04ef7a4104e4fa3c04364b39ae3680337"
+    }
+  ],
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 61.6% < 70% (Japanese=5438, Latin=3383)"
+  ],
+  "checked_at": "2026-09-22T15:47:00+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
