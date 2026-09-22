@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-6632d1664daf09912489991a",
-  "job_id": "job-research-777ca56d26763813",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6632d1664daf09912489991a",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6632d1664daf09912489991a","job_id":"job-research-777ca56d26763813","data":{"hardware":"Llama-2 7B/70B、Qwen2.5-7B、Qwen3-30B-A3Bで品質評価し、Qwen2.5-72Bでmemory-bound/compute-bound inference speedupを測定。具体GPU型は本文該当節で明記されない。","software":"Hugging Face Transformers、PyTorch。公式コードは https://github.com/JarvisPei/CMoE 。","methodology":"calibrationはWikiText-2から8例×2048 tokens、Ka=10。optional fine-tuningはWikiText-2 2,048 samples、1 epoch、LoRA rank8/alpha32、Adam β1=0.9 β2=0.95、router scaling LR 0.001、LoRA LR 5.95e-5。標準は25% sparsityのS3A3E8。比較はSliceGPT/SLEB、LLaMA-MoE v1/v2、EMoE。PIQA、WinoGrande、ARC-E/C、HellaSwagに加えMMLU-5shot、HumanEval pass@1、GSM8K-8shot、WikiText/C4 PPLを評価。FLOPs、MACs、tokens/s、構築時間、context別speedup、self-consistencyも測定。","scope":"英語benchmarkとdecoder-only Llama/Qwenが中心。calibration source/sizeへのrobustnessは検証するが、多言語、encoder-decoder、state-spaceは未評価。sparse routing由来のgeneration varianceがあり、single-sample品質とself-consistency品質を分けて解釈する必要がある。"},"reservation":{"claim_id":"claim-6632d1664daf09912489991a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
