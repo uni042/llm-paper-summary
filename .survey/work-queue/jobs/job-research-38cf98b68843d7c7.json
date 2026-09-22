@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/d3f7b7e4211810aede1fbf47e1b342071445dacb",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2608.28911-semkv-semantic-mixed-precision-kv-cache-quantization-guided-by-the-quality-cliff-for-long-context-llm-inference.md",
   "selection_reason": "長文脈LLMのKV量子化で品質崖を実測し、その上側の隣接精度を混合するSemKVを提案。全トークン保持のまま6.0倍、量子化器変更時7.9倍の保存量削減を報告しており、KV圧縮系統への直接性が高い。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T21:04:17+00:00"
+  "created_at": "2026-09-20T21:04:17+00:00",
+  "completed_at": "2026-09-22T17:04:16+00:00",
+  "blocker": "Primary PDF download for arXiv:2608.28911 was attempted first as required, but the fetch path returned DisabledError. Library search found no cached full primary PDF. Primary arXiv HTML fallback was then attempted and also returned DisabledError. No research content was inferred from secondary snippets.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-79e5f1bb5c89a9d7a83c30ec.json"
 }
