@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-a2e5fb73d91123b2b7515fb2","job_id":"job-research-bc95233f6a664ba4","data":{"limitations":"実験は単一ノードのPCIe接続A6000が中心で、NVLink/NVSwitchやInfiniBandを持つ大規模クラスタでは通信と計算の比率が変わる。専門家配置は較正データの共活性統計に依存し、domain shiftで協調構造が変化する場合の再profiling頻度は十分検証されていない。協調剪定は微調整を必要とし、既存checkpointへ完全なpost-training plug-inとして適用する場合は配置のみの効果に限られる。1-GPU制約は品質を明確に損なう。","differences":"TutelやMegaBlocksが主に通信実装・疎行列積を高速化するのに対し、Occultは『同一tokenで共活性化するexpertを同じdeviceへ寄せる』という協調グラフを通信量の根本要因として扱う。配置再スケジュールだけでexactnessを保つ経路と、routing自体を変えてさらに通信を減らす近似経路を同一systemに統合する。","implementation_status":"著者公式GitHubでコード公開。Triton製のBRIM-guided sparse matrix multiplication、torch.distributed all_to_all_single、expert placementとcollaboration pruningを実装。","research_positioning":"MoE parallelism/communication系のalgorithm-system co-design。expert compressionのようにweight容量を削るのではなく、co-activation局所性を利用してtoken communication volumeと中間tensor memoryを削る。","relation_to_existing_repository":"expert placement、routing locality、expert offload/cacheと強く関連する。CPU/SSD offload環境でも共活性expertを同じ階層・同じGPUへまとめれば、一つのtoken処理で複数deviceやstorage tierへ跨る回数を減らせる可能性がある。特にprefetch/cache policyへpairwise collaboration graphを組み込む拡張が考えられる。","audit_required":false}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-dcccc1ab08c3632dc84e3e6e",
+  "job_id": "job-research-ed2755beb06dc43b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dcccc1ab08c3632dc84e3e6e",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

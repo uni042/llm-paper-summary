@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-a2e5fb73d91123b2b7515fb2","job_id":"job-research-bc95233f6a664ba4","data":{"canonical_id":"arXiv:2505.13345","arxiv_id":"2505.13345","doi":"10.48550/arXiv.2505.13345","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference","summary":"Occultは専門家並列MoEの全対全通信を、同じトークンで共活性化する専門家同士の協調として捉え直す。共活性専門家を同一GPUへ置けばトークン複製を一つにまとめ、計算後もローカル集約できる。双方向再索引行列と疎行列積カーネルでこの圧縮通信を実装し、協調頻度から専門家配置を再スケジュールする。さらにルータ得点または専門家類似度に基づく協調剪定で、選択先GPU数を制限して通信量を下げる。A6000上でOLMoE、Qwen-MoE、DeepSeek-MoEを評価し、長文prefillではvLLM比1.51～1.86倍、学習ではMegaBlocks比1.54倍、FSDP比2.65倍などの高速化を示す。","list_summary":"共活性化する専門家を同一GPUへ集約し、再索引付き疎行列積と協調剪定でトークン複製を減らすことで、MoEの全対全通信を削減し学習・推論を1.5倍超高速化する。","authors":["Shuqing Luo","Pingzhi Li","Jie Peng","Hanrui Wang","Yang (Katie) Zhao","Yu (Kevin) Cao","Yu Cheng","Tianlong Chen"],"authors_affiliations":"UNC Chapel Hill; UCLA; University of Minnesota Twin Cities; CUHK","published":"2025-05-19","publication":"arXiv:2505.13345v1","publication_type":"プレプリント","publication_status":"arXiv v1。本文キーワードにICML表記。","lineage":"moe-parallelism-communication","topics":["専門家並列","全対全通信","専門家配置","協調剪定","疎行列積","MoE学習・推論"],"importance":"高。通信削減をカーネル、配置、ルーティング制約の三層で統合し、実GPUの壁時計時間で学習・prefill・decodeを評価する。","hardware_evaluation":"PCIe接続NVIDIA A6000 48GBを単一ノードで使用。4 GPU中心に8/16-way expert parallelも評価。","hardware_details":"NVIDIA A6000 48GB HBM、PCIe接続、BF16、atomic_addのみFP32。","quality_effect":"2-GPU協調剪定は標準SFTと同等以上の品質を多くの課題で維持。1-GPU制約は品質低下が大きい。","storage_targets":["GPU間通信量","通信テンソル複製","HBM中間テンソル"],"bottlenecks":["all-to-all通信が大規模学習時間の40%以上","top-kによるtoken複製","動的routingで固定expert配置が非最適"],"evidence_locations":["§2.1–2.4","§3.1–3.3","§4.1–4.3","Appendix A–B"],"source":"https://arxiv.org/abs/2505.13345","sources":["https://arxiv.org/abs/2505.13345","https://arxiv.org/html/2505.13345"],"code":"https://github.com/UNITES-Lab/Occult","implementation":"TritonでBRIM-guided sparse matrix multiplicationとMoE基本操作を実装。公開コードあり。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"arXiv HTML本文・付録Bまで確認。","references_total":52}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-dcccc1ab08c3632dc84e3e6e",
+  "job_id": "job-research-ed2755beb06dc43b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dcccc1ab08c3632dc84e3e6e",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
