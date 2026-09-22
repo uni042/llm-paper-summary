@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-01556e847caec9153595855e-r1",
+  "kind": "research",
+  "attempt_id": "attempt-01556e847caec9153595855e",
+  "job_id": "job-research-c449ea471528f1b0",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17109-shared-prefix-kv-reuse-across-standard-lora-adapters-quality-and-serving-tradeoffs.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:d6bb675599049cf5b0443aefc9b7056e7bfd7e707aa9167a1618d65fa5b761e7",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "009ea94d4ff1ffe9245298dd0be43aee61d345e1"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "0f4f3e7929d0a21a6ba9f391cd6ac92c713083d1"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "2dc74042abfdc974b3ba283db1a7cf46551eec4e"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "dcd7cf1b7619e5571788465317395f89dcc3b3bc"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "66efa4483e79fca50f8fc19c83ffb2bf44dabddb"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "Japanese-first prose ratio is too low: 53.0% < 70% (Japanese=3780, Latin=3347)"
+  ],
+  "checked_at": "2026-09-22T11:38:04+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
