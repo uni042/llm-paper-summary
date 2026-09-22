@@ -185,19 +185,36 @@ jobs:
           fi
 
           recover_derived_snapshot_conflict() {
+            local run_ledger='.survey/work-queue/run-ledger.json'
             mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
-            if [ "${#conflicts[@]}" -ne 1 ] || [ "${conflicts[0]:-}" != "$DERIVED_SNAPSHOT" ]; then
-              echo 'Rebase conflict touches durable/non-derived state; refusing automatic resolution.' >&2
-              printf 'Unmerged paths: %s\n' "${conflicts[*]:-none}" >&2
-              if git rev-parse --verify -q REBASE_HEAD >/dev/null; then
-                git rebase --abort || true
-              fi
-              return 1
+
+            if [ "${#conflicts[@]}" -eq 0 ]; then
+              return 0
             fi
 
-            echo "Resolving derived snapshot conflict in ${DERIVED_SNAPSHOT} from latest main."
-            git checkout --ours -- "$DERIVED_SNAPSHOT"
-            git add "$DERIVED_SNAPSHOT"
+            for conflict in "${conflicts[@]}"; do
+              case "$conflict" in
+                "$DERIVED_SNAPSHOT"|"$run_ledger") ;;
+                *)
+                  echo 'Rebase conflict touches durable/non-derived state; refusing automatic resolution.' >&2
+                  printf 'Unmerged paths: %s\n' "${conflicts[*]:-none}" >&2
+                  if git rev-parse --verify -q REBASE_HEAD >/dev/null; then
+                    git rebase --abort || true
+                  fi
+                  return 1
+                  ;;
+              esac
+            done
+
+            echo 'Resolving derived queue snapshot / append-only run-ledger conflicts from latest main.'
+            # During rebase, --ours is the freshly fetched origin/main side. Keep
+            # concurrent authoritative state rather than overwriting it with this
+            # helper run's stale derived snapshot or ledger append. The durable job
+            # mutations from this helper commit remain in the rebased commit.
+            for conflict in "${conflicts[@]}"; do
+              git checkout --ours -- "$conflict"
+              git add "$conflict"
+            done
             if git diff --cached --quiet; then
               git rebase --skip
             else
