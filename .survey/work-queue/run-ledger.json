@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T04:40:18.964296+00:00",
+  "updated_at": "2026-09-22T04:46:37.934802+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -35375,6 +35375,56 @@
           "type": "research",
           "canonical_id": "arXiv:2206.00277",
           "title": "Task-Specific Expert Pruning for Sparse Mixture-of-Experts",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 886,
+      "paper_active_count_after": 886,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35688142006",
+      "first_recorded_at": "2026-09-22T04:46:37.934802+00:00",
+      "last_recorded_at": "2026-09-22T04:46:37.934802+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35688142006:1",
+          "recorded_at": "2026-09-22T04:46:37.934802+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35688142006",
+            "run_attempt": "1",
+            "source_sha": "e2b119489205755cb3f77c58b53ef82bb36a1771"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-1922ded1807d40e6",
+          "type": "research",
+          "canonical_id": "arXiv:2110.01786",
+          "title": "MoEfication: Transformer Feed-forward Layers are Mixtures of Experts",
           "from": "ready",
           "to": "completed"
         }
