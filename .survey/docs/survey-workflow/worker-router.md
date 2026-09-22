@@ -67,6 +67,8 @@ Research / Auditのclaimは次の順で行う。
 
 Research / Auditのcompleted submissionは、**ワーカー自身のセルフレビュー + exact blob preflight** を通してからfast laneへ送る。
 
+**品質基準は固定する。** 提出前preflight、submission processor、repository-wide品質監査は `.survey/docs/survey-workflow/paper-quality-audit.md` に固定された同一基準を使う。ワーカーや監査タスクが品質閾値・要求項目・本文量・手法要件を独自に強化・緩和してはならない。変更は想定外挙動、解析バグ、移行/互換バグの修正に限る。`書誌情報` の著者名・所属等を品質計測から除外する扱いは、本文品質への英語メタデータ混入を防ぐ既知バグ修正として固定基準に含める。
+
 1. 5スロットの内容を作り終えた時点で、まだcompleted requestを出さず、ワーカー自身が一次資料と照合して意味品質を再確認する。少なくとも「一次資料を最後まで読んだ」「推測で穴埋めしていない」「概要と一覧文で固有の貢献と代表結果が分かる」「end-to-endの手法機構が説明されている」「評価条件・baseline・結果条件が明示されている」「限界と既存研究との差が具体的」の各項目を再点検する。
 2. セルフレビュー後の5スロットだけをclaim result指定のrecord bankまたは現行fallbackへ完全保存する。次に一意な `request_id` を作り、`.survey/work-queue/research-preflight/requests/<request_id>.json` へ `schema_version: 1`、`operation: research_quality_preflight`、`request_id`、`kind`、`attempt_id`、`job_id`、`record_bank`、必要なら `paper_path` / `expected_blob_sha` と `self_review` を保存する。`self_review` は `primary_source_read_to_end`、`no_unverified_inference`、`summary_and_list_summary_specific`、`headline_result_grounded`、`method_end_to_end_explained`、`evaluation_conditions_and_baselines_explicit`、`results_conditions_and_interpretation_explicit`、`limitations_and_positioning_specific` の8項目をすべて `true` にする。事実として満たしていない項目を形式的にtrueにしてはならない。同じ内容を再検査するときも既存request/resultは書き換えず、新しい `request_id` を使う。
 3. `.github/workflows/survey-research-quality-preflight.yml` が `research_quality_preflight.py` を実行し、実blob SHAから**submission processorと同じ構造化record validation・renderer・paper quality gate**を走らせる。同名resultを `.survey/work-queue/research-preflight/results/<request_id>.json` へ返す。preflight待ちは10秒実時間間隔で同一resultを追跡し、別論文へ逃げない。
