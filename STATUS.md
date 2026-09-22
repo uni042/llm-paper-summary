@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 03:46:33 JST**
+> 自動生成: **2026-09-23 04:06:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **214** |
-| 未claim Research job | **212** |
-| 直近24hの検証済みResearch収録 | **60** |
-| 最終検証済みResearch収録 | **09-23 03:46:27 JST（6秒前）** |
+| 収録候補論文 | **213** |
+| 未claim Research job | **213** |
+| 直近24hの検証済みResearch収録 | **61** |
+| 最終検証済みResearch収録 | **09-23 04:06:54 JST（5秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **214** |
+| canonical_id確認済みの一意な候補論文 | **213** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **214** |
+| 非終端Research job合計 | **213** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-22 08:32:35 JST（19時間13分前）** |
+| 最終maintenance完了 | **09-22 08:32:35 JST（19時間34分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **31** | **5** | **0** | **0** | **2** | **0** | — |
+| Research | **29** | **5** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **31** | **8** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **29** | **8** | **0** | **3** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 04:06:54 JST** [research] `arXiv:2601.21420` — ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation
+  - job: `.survey/work-queue/jobs/job-research-74a266f79fc28554.json`
+  - result: `.survey/work-queue/results/research/attempt-95a58c9a93fe71f7a995bfe2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-95a58c9a93fe71f7a995bfe2.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2601.21420-conceptmoe-token-concept-compression.md`
 - **09-23 03:46:27 JST** [research] `arXiv:2605.13997` — HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts
   - job: `.survey/work-queue/jobs/job-research-458a8d0f006d0310.json`
   - result: `.survey/work-queue/results/research/attempt-3f2821d83831a58e9fb2986d.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-dc0f658e4e197063cb9471e1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-dc0f658e4e197063cb9471e1.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.07237-cedar-error-bounded-residual-routing-for-efficient-long-context-attention.md`
-- **09-23 01:12:36 JST** [research] `arXiv:2606.14779` — Unified KV Pooling to Accelerate Long-Context LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-0bfa5a31fda6f9e8.json`
-  - result: `.survey/work-queue/results/research/attempt-153fefa22e4198ce4ffc522b.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-153fefa22e4198ce4ffc522b.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.14779-unified-kv-pooling-to-accelerate-long-context-llm-serving.md`
 
 ### Audit
 
@@ -186,13 +186,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2601.21420` — ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation / worker `scheduled-chat-00`
-  - claim: **09-23 03:46:11 JST** / heartbeat: **—** / lease expiry: **09-23 05:16:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-74a266f79fc28554.json`
-- `arXiv:2609.08135` — KBBQ: A Predictive Noise Law and the Limits of Spectrum Flattening in FP4 Quantization / worker `scheduled-chat-30`
-  - claim: **09-23 02:28:31 JST** / heartbeat: **09-23 02:30:45 JST** / lease expiry: **09-23 04:00:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-384393fce738e0be.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -212,7 +207,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **214** |
+| ready | **213** |
 
 ### 候補の重複・識別情報欠損
 
@@ -232,7 +227,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **945** |
+| inference/training/survey配下の論文Markdown実体 | **946** |
 
 ### immutable submissionの未照合
 
