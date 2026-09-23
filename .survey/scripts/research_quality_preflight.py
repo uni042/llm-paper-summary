@@ -195,6 +195,10 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
         record_bank=request["record_bank"],
         paper_path=request.get("paper_path"),
         expected_blob_sha=None,
+        worker_id=request.get("worker_id"),
+        run_key=request.get("run_key"),
+        scheduled_slot=request.get("scheduled_slot"),
+        actual_invocation_start=request.get("actual_invocation_start"),
     )
     request["paper_path"] = descriptor["paper_path"]
     request["expected_blob_sha"] = _canonical_expected_blob_sha(
@@ -209,6 +213,10 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
             record_bank=request["record_bank"],
             paper_path=descriptor["paper_path"],
             expected_blob_sha=request["expected_blob_sha"],
+            worker_id=request.get("worker_id"),
+            run_key=request.get("run_key"),
+            scheduled_slot=request.get("scheduled_slot"),
+            actual_invocation_start=request.get("actual_invocation_start"),
         )
 
     try:
