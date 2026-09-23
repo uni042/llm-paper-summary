@@ -78,6 +78,7 @@ def seed_request(root: Path, *, lease_seconds: int = 5400):
         "worker_kind": "scheduled_chat",
         "requested_at": "2026-09-13T03:00:00+00:00",
         "max_jobs": 1,
+        "claim_window": 1,
         "lease_seconds": lease_seconds,
         "job_types": ["research"],
     })
