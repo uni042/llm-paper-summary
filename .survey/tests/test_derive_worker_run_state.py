@@ -392,7 +392,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
                 mod._normalize_request(path, value)
 
 
-    def test_active_foreground_exposes_three_standby_slots_and_requests_nonblocking_refill(self):
+    def test_active_foreground_exposes_variable_standby_slots_and_requests_nonblocking_refill(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             value = request()
@@ -429,8 +429,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             result = mod.derive(root, value)
             self.assertTrue(result["active_assignment"])
             self.assertEqual(result["active_claim_count"], 1)
-            self.assertEqual(result["claim_window"], 4)
-            self.assertEqual(result["claim_window_remaining"], 3)
+            self.assertEqual(result["claim_window"], mod.SCHEDULED_CHAT_CLAIM_WINDOW)
+            self.assertEqual(result["claim_window_remaining"], mod.SCHEDULED_CHAT_CLAIM_WINDOW - 1)
             self.assertEqual(result["foreground_job_id"], "job-active")
             self.assertEqual(result["standby_job_ids"], [])
             self.assertEqual(
