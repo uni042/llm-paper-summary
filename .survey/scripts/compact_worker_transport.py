@@ -140,6 +140,67 @@ def compact_preflight(root: Path, apply: bool, min_age_seconds: int, now: dt.dat
     return moved, skipped
 
 
+def _claim_assignment_settled(root: Path, assignment: dict[str, Any]) -> bool:
+    job_id = str(assignment.get("job_id") or "")
+    attempt_id = str(assignment.get("attempt_id") or "")
+    kind = str(assignment.get("kind") or assignment.get("job_type") or "")
+    if not job_id:
+        return False
+    job = _read(root / HOT / "jobs" / f"{job_id}.json", {})
+    if isinstance(job, dict) and str(job.get("status") or "").lower() in {"completed", "blocked", "deferred", "rejected"}:
+        return True
+    if kind not in {"research", "audit"} or not attempt_id:
+        return False
+    descriptor_path = root / HOT / "submissions" / kind / f"{attempt_id}.json"
+    descriptor = _read(descriptor_path, {})
+    if not isinstance(descriptor, dict) or descriptor.get("attempt_id") != attempt_id or descriptor.get("job_id") != job_id:
+        return False
+    result = _read(root / HOT / "results" / kind / descriptor_path.name, {})
+    if not isinstance(result, dict) or result.get("attempt_id") != attempt_id or result.get("job_id") != job_id:
+        return False
+    if result.get("ok") is False and result.get("retryable") is True:
+        return False
+    return str(result.get("job_status") or "").lower() in {"completed", "blocked", "deferred", "rejected"}
+
+
+def compact_claim_transport(root: Path, apply: bool, min_age_seconds: int, now: dt.datetime) -> tuple[list[str], list[dict[str, str]]]:
+    moved, skipped = [], []
+    req_root = root / HOT / "claim-requests"
+    res_root = root / HOT / "claim-results"
+    if not req_root.is_dir():
+        return moved, skipped
+    for request_path in sorted(req_root.glob("*.json")):
+        result_path = res_root / request_path.name
+        request = _read(request_path, {})
+        result = _read(result_path, {})
+        if not isinstance(request, dict) or not isinstance(result, dict):
+            continue
+        if request.get("request_id") != request_path.stem or result.get("request_id") not in {None, request_path.stem}:
+            continue
+        if not _old_enough(result.get("processed_at"), now, min_age_seconds):
+            continue
+        assignments = result.get("assignments")
+        if not isinstance(assignments, list):
+            continue
+        if any(not isinstance(item, dict) or not _claim_assignment_settled(root, item) for item in assignments):
+            skipped.append({"path": request_path.relative_to(root).as_posix(), "reason": "claim_assignment_not_terminal"})
+            continue
+        pairs = [
+            (request_path, Path("claim-requests") / request_path.name),
+            (result_path, Path("claim-results") / result_path.name),
+        ]
+        if any((root / ARCHIVE / rel).exists() and (root / ARCHIVE / rel).read_bytes() != src.read_bytes() for src, rel in pairs):
+            skipped.append({"path": request_path.relative_to(root).as_posix(), "reason": "archive_conflict"})
+            continue
+        for source, rel in pairs:
+            ok, reason = _move(root, source, rel, apply)
+            if ok:
+                moved.append(source.relative_to(root).as_posix())
+            else:
+                skipped.append({"path": source.relative_to(root).as_posix(), "reason": reason})
+    return moved, skipped
+
+
 def compact_run_state(root: Path, apply: bool, min_age_seconds: int, now: dt.datetime) -> tuple[list[str], list[dict[str, str]]]:
     moved, skipped = [], []
     req_root = root / HOT / "run-state" / "requests"
@@ -193,6 +254,7 @@ def compact(root: Path, *, apply: bool, min_age_seconds: int = 7200) -> dict[str
     skipped: list[dict[str, str]] = []
     for fn, args in (
         (compact_completed_requests, (root, apply)),
+        (compact_claim_transport, (root, apply, min_age_seconds, now)),
         (compact_preflight, (root, apply, min_age_seconds, now)),
         (compact_run_state, (root, apply, min_age_seconds, now)),
     ):
