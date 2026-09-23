@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-1cdc9fc5138a75e71558bf84",
-  "job_id": "job-research-2377e2a4770cb727",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1cdc9fc5138a75e71558bf84",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1cdc9fc5138a75e71558bf84","job_id":"job-research-2377e2a4770cb727",
+  "data":{"canonical_id":"arXiv:2511.18314","arxiv_id":"2511.18314","doi":"10.48550/arXiv.2511.18314","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert","summary":"マルチモーダル混合専門家モデルで全トークンに固定数の専門家を割り当てる非効率を、意味的重要度に応じた可変専門家数で解消する。軽量重要度推定器が各トークンの重要度を出し、実専門家と計算を省略する仮想専門家からなる可変スロットへ変換する。総スロット数と仮想比率に上限を設け計算予算を制御する。画像・動画では実専門家活性を40%削減してほぼ同等性能、OCR・自然言語では10%削減で性能をほぼ維持する。","list_summary":"トークン重要度から実専門家と仮想専門家の可変スロットを割り当て、固定Top-Kより細粒度にマルチモーダルMoEの計算予算を配分する。","authors":["Yuting Gao","Lan Wang","Hengyuan Zhao","Linjiang Huang","Si Liu","Qingpei Guo"],"authors_affiliations":"AntGroup; Beijing University of Aeronautics and Astronautics","published":"2025-11-23","publication":"CVPR Findings 2026, pp. 9205-9214; arXiv:2511.18314v1 submitted 2025-11-23","publication_type":"Conference Findings","publication_status":"Published","lineage":"multimodal mixture-of-experts / dynamic expert allocation / budget-aware routing","topics":["混合専門家","動的ルーティング","マルチモーダルLLM","計算予算","トークン重要度","仮想専門家"],"importance":"固定Top-Kの専門家数を単に減らすのではなく、意味的重要度に応じて増減させつつ仮想専門家で計算量を制御し、情報密度が大きく異なる画像・動画・音声・テキストを一つの予算制御枠組みで扱う。","hardware_evaluation":"一次論文本文で確認できる主評価はモデル構成・学習データ・活性専門家数を中心に報告しており、検証した本文範囲ではGPU/アクセラレータ機種や台数を主要評価条件として明示していない。","quality_effect":"計算削減と性能維持の両立を直接評価する。平均活性専門家数8.0から7.2への10%削減では各モダリティ平均がほぼ維持され、画像・動画では4.8までの40%削減でも性能低下が小さい一方、OCR/NLPは7未満で低下が目立つ。","source":"https://arxiv.org/abs/2511.18314","sources":["https://arxiv.org/abs/2511.18314","https://arxiv.org/pdf/2511.18314","https://openaccess.thecvf.com/content/CVPR2026F/html/Gao_AnyExperts_On-Demand_Expert_Allocation_for_Multimodal_Language_Models_with_Mixture_CVPRF_2026_paper.html","https://www.researchgate.net/publication/397934752_AnyExperts_On-Demand_Expert_Allocation_for_Multimodal_Language_Models_with_Mixture_of_Expert"],"code":null,"implementation":"Ling-mini-2.0を基礎に256実専門家、可変8〜12スロット、64個の仮想専門家コピー、最大仮想比率20%を設定し、重要度推定MLPと重要度補正ルータ、補助損失を追加する。公開コードURLは論文本文で確認できない。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary-reference-section","references_total":43},
+  "reservation":{"claim_id":"claim-1cdc9fc5138a75e71558bf84","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
