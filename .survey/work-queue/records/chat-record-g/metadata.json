@@ -4,7 +4,86 @@
   "slot": "metadata",
   "attempt_id": "attempt-9e32a6c39b70b1ce1c5e9f53",
   "job_id": "job-research-566a14b0b6e022f7",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2609.15627",
+    "arxiv_id": "2609.15627",
+    "doi": "10.48550/arXiv.2609.15627",
+    "openreview_id": null,
+    "title": "DeepSeek-V4-Flash on AMD gfx90a: Correctness Recovery and Inference Performance Engineering",
+    "summary": "本報告は、ネイティブなFP4行列演算器を持たないAMD Instinct MI250（gfx90a／CDNA2）上でDeepSeek-V4-FlashをSGLangに載せ、正しさの回復と推論性能の改善を段階的に行った実装・測定研究である。単にカーネルを高速化するのではなく、W2出力列の並び替え誤り、E8M0スケール配置、テンソル並列時の注意機構用sink対応、mHC係数精度などを固定入力の数値オラクルで修復した上で、FP4展開、活性量子化、専門家整列、通信、注意機構の重複計算をCDNA2向けに最適化する。最終の単一TP8/EP1構成では、同時実行数1の常駐復号で88.63出力トークン/秒、同32で1041.78、同64で1327.10を測定し、同時実行数16の事前充填は約8K、16K、32K入力でそれぞれ10413.87、10263.02、9966.84入力トークン/秒となった。ただし、これらは1M論理KV容量を割り当てた構成の測定であり、100万トークンを実際に埋めた品質・性能試験や普遍的なビット一致を示すものではない。",
+    "list_summary": "MI250上のDeepSeek-V4-Flashで数値不具合を修復し、CDNA2向けカーネル・通信・事前充填最適化によりTP8復号をC64で1327.10トークン/秒まで実測した。",
+    "authors": [
+      "Siming Huang"
+    ],
+    "authors_affiliations": "HKUST(GZ), Guangzhou, China",
+    "published": "2026-09-14",
+    "publication": "arXiv:2609.15627v2",
+    "publication_type": "技術報告・プレプリント",
+    "publication_status": "2026-09-20改訂のarXiv v2。PPoPP用テンプレートを用いた2026年9月の技術報告であり、本文は査読済み採録を主張していない。",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AR",
+        "cs.PF"
+      ]
+    },
+    "lineage": "heterogeneous-accelerator-inference",
+    "topics": [
+      "大規模言語モデル推論",
+      "AMD MI250",
+      "混合エキスパート",
+      "低精度量子化",
+      "テンソル並列",
+      "カーネル最適化",
+      "推論正当性"
+    ],
+    "source": "https://arxiv.org/abs/2609.15627",
+    "sources": [
+      "https://arxiv.org/abs/2609.15627",
+      "https://arxiv.org/html/2609.15627v2",
+      "https://arxiv.org/pdf/2609.15627"
+    ],
+    "code": null,
+    "implementation": "SGLangを基盤に、AIter、Composable Kernel、HIP、Tritonを組み合わせたMI250向け実装を評価している。実験環境ではSGLang、AIter、Composable Kernelにローカル変更があり、実行HEADは147ce11b25として記録される。本文の付録は証拠ディレクトリ、依存コミット、作業ツリーのハッシュ、278件の正式測定ファイルと92件の試験ファイルを保持すると説明するが、論文本文からこの変更一式を取得できる著者公式公開コードURLは確認できない。",
+    "hardware_evaluation": "実機評価。Supermicro A+ Server AS-4124GQ-TNMI、AMD EPYC 7763×2、DDR4-2933 1TiB、AMD Instinct MI250の8 GCD（各GCD約64GiB HBM）を1つのTP8/EP1モデルインスタンスとして使用する。",
+    "quality_effect": "高速化と正当性確認を分離して評価している。固定入力のカーネル・層・モデル検査を通している一方、全入力でのビット一致、バッチ不変性、100万トークン文脈の品質は証明していない。16K入力の同時実行数16では16要求中2要求の先頭トークンが3ラウンド間で変化し、普遍的決定性の主張を明示的に避けている。",
+    "last_checked": "2026-09-23",
+    "references": [
+      {
+        "canonical_id": "arXiv:2607.05147",
+        "arxiv_id": "2607.05147",
+        "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation"
+      },
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437",
+        "title": "DeepSeek-V3 Technical Report"
+      },
+      {
+        "canonical_id": "arXiv:2606.19348",
+        "arxiv_id": "2606.19348",
+        "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence"
+      },
+      {
+        "canonical_id": "arXiv:2211.15841",
+        "arxiv_id": "2211.15841",
+        "title": "MegaBlocks: Efficient Sparse Training with Mixture-of-Experts"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      },
+      {
+        "canonical_id": "arXiv:2312.07104",
+        "arxiv_id": "2312.07104",
+        "title": "SGLang: Efficient Execution of Structured Language Model Programs"
+      }
+    ],
+    "references_checked_at": "2026-09-23",
+    "references_source": "一次資料のReferences節",
+    "references_total": 11
+  },
   "reservation": {
     "claim_id": "claim-9e32a6c39b70b1ce1c5e9f53",
     "worker_id": "scheduled-chat-30",
