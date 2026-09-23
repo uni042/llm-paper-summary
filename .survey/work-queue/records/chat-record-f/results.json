@@ -2,26 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
-  "job_id": "job-research-61e38612a8457ae4",
-  "data": {
-    "overview": "MoDESの優位性は高いエキスパート省略率で特に大きい。Kimiでは83%省略でも元モデル平均性能の96.25%、Qwen3-VL-MoE-30B-A3Bでは88%省略でも97.33%を保持する。Qwen3-VLの同条件ではMC-MoEが86.66%、DiEPが85.30%であり、MoDESは10ポイント以上高い。実行可能境界探索は単純な二次元総当たりとほぼ同じ品質を保ちながら約45倍高速である。単一H200の実測でも、事前充填は最大2.16倍、復号は最大1.26倍の速度向上を報告する。",
-    "key_results": [
-      {"metric": "Qwen3-VLの88%省略時の正規化平均性能", "value": "97.33%", "baseline": "MC-MoE 86.66%、DiEP 85.30%、NAEE 80.60%、固定k=1は60.11%", "condition": "Qwen3-VL-MoE-30B-A3B-Instruct、画像・動画を合わせた13ベンチマーク", "interpretation": "ルータが本来選ぶエキスパート計算の約12%だけを残す厳しい条件でも、MC-MoEより10.67ポイント高く元モデル性能を保持する。"},
-      {"metric": "Kimiの83%省略時の正規化平均性能", "value": "96.25%", "baseline": "MC-MoE 88.32%、DiEP 87.58%、NAEE 82.81%、固定k=1は71.60%", "condition": "Kimi-VL-A3B-Instruct、13ベンチマーク", "interpretation": "高省略率で既存法の性能が崩れる領域でも、元モデルとの差を約3.75%に抑える。"},
-      {"metric": "Kimiの50%省略時の正規化平均性能", "value": "99.91%", "baseline": "DiEP 98.17%、MC-MoE 97.69%", "condition": "Kimi-VL-A3B-Instruct", "interpretation": "中程度の省略率では元モデル平均性能をほぼ維持し、既存の動的省略法も上回る。"},
-      {"metric": "実行可能境界探索の高速化", "value": "単純総当たり比で約45倍", "baseline": "二つの閾値100×100を評価するO(ND²)探索", "condition": "20〜30B級MoEマルチモーダルモデル、8基のH200", "interpretation": "Kimiの83%省略では単純探索96.24%に対して境界探索96.25%で、品質をほぼ変えず較正探索を大幅に短縮する。多くの20〜30Bモデルで較正と探索は20分から4時間未満。"},
-      {"metric": "単一GPUの実推論速度", "value": "事前充填は最大2.16倍、復号は最大1.26倍", "baseline": "エキスパートを省略しない元モデル", "condition": "単一H200、Kimi 83%省略またはQwen3-VL 88%省略、事前充填バッチ8、復号系列長1024", "interpretation": "計算量削減が実時間短縮へつながる一方、復号はメモリ帯域律速で画像トークンもなく、事前充填ほど伸びない。"},
-      {"metric": "量子化Qwen3-VLの性能保持", "value": "元モデルの94.43%", "baseline": "2.5ビット相当のMC-MoE単独は89.58%", "condition": "Qwen3-VL、75%エキスパート省略と混合精度の重み量子化を併用", "interpretation": "エキスパート省略と重みのみ量子化を同時に適用しても、既存量子化方式より高い平均性能を保てる。"},
-      {"metric": "構成要素アブレーション", "value": "DMT+GMLGはChartQA 84.20、MME 2162、MMBench 81.44、LongVideoBench 62.60、VideoMMMU 47.11", "baseline": "単一閾値は76.74、1956、65.48、54.67、40.33。DMTのみは82.94、2081、79.42、61.16、45.08", "condition": "Kimi-VL-A3B-Instruct、83%省略", "interpretation": "モダリティ別閾値だけでも大幅に改善し、さらに層重要度補正を加えると全5指標が上がるため、二つの機構が相補的に働く。"}
-    ],
-    "negative_results": [
-      {"name": "復号の高速化は限定的", "description": "事前充填では約2倍以上まで伸びる一方、復号は最大約1.26倍にとどまる。復号段階はメモリ帯域律速になりやすく、生成中はテキストトークンだけなので、画像トークンで観察された高いエキスパート冗長性を利用できないことが理由として説明される。"},
-      {"name": "オフライン準備は必要", "description": "再学習不要ではあるが、1024件の代表的なマルチモーダル標本で各層のKL感度を測り、二つの閾値を探索する必要がある。多くの20〜30B級モデルでは8基H200で20分から4時間未満だが、完全な較正不要方式ではない。"},
-      {"name": "高速カーネル実装は未完成", "description": "公式リポジトリでは高速CUDA版MoE層が未実装項目として残る。したがってエキスパート計算の理論削減率と、利用する推論基盤で得られる壁時計速度向上は一致するとは限らない。"}
-    ],
-    "interpretation": "結果は、単純にルータ確率へ一つの閾値を置くより、どの層で計算を残すべきかという大域感度と、画像・テキストのどちらへ省略予算を多く配るべきかというモダリティ差を分けて扱う方が、高い省略率で品質崩壊を防げることを示す。特に88%省略のQwen3-VLで既存法との差が10ポイントを超えるため、低省略率だけで成立する微小な最適化ではない。",
-    "quality_impact": "近似計算なので損失はあり得るが、論文が揃えた同一省略率では既存エキスパート省略法より一貫して高い性能保持を示す。中程度の50%省略ではKimiで99.91%、高い83〜88%省略でも96〜97%台を保持する。"
-  },
-  "reservation": {"claim_id": "claim-0640a4e19fcd3a04140f52b1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-4507d6e7a694d747a350c3a0",
+  "job_id": "job-research-e36fdfcc83960d96",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4507d6e7a694d747a350c3a0",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
