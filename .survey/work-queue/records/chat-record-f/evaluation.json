@@ -2,42 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ff6c2afd7fe3644b99148c7f",
-  "job_id": "job-research-17efeee08a231d8b",
-  "data": {
-    "hardware": "較正用ロールアウト生成と枝刈りはモデルごとにNVIDIA H100 GPU 1基を用いたと本文に記載。評価対象モデルはDeepSeek-R1-Distill-Qwen 1.5B/7B/14B。一般化試験ではQwen3 1.7B/8B/14BとDeepSeek-R1-Distill-Llama-8Bも使用。",
-    "software": "枝刈り器はSparseGPT、Wanda、ALPS。生成はbfloat16で、評価時の温度0.6、top-p 0.95、最大生成長32,768。乱数シード42をモデル規模・枝刈り器・較正方式で固定。",
-    "model": [
-      "DeepSeek-R1-Distill-Qwen 1.5B",
-      "DeepSeek-R1-Distill-Qwen 7B",
-      "DeepSeek-R1-Distill-Qwen 14B",
-      "Qwen3 1.7B/8B/14B",
-      "DeepSeek-R1-Distill-Llama-8B"
-    ],
-    "datasets": [
-      "OpenR1-Math-220k：128個の正答・誤答較正対を構成",
-      "MATH500：acc@1",
-      "LiveCodeBench：pass@16",
-      "AIME 2025：acc@1"
-    ],
-    "baselines": [
-      "C4一般文書での較正",
-      "RAC：モデル自身の思考過程を使う較正",
-      "SSGR：難易度や長さで自己生成推論を選ぶ較正",
-      "枝刈り前の密モデル"
-    ],
-    "correctness": "各較正方式を同じモデル、疎化率、生成条件で比較し、精度に標準誤差を併記する。AIME 2025は30問しかなく標準誤差が大きいことを本文自身が注意点として扱う。内部表現の再構成誤差、最大生成長の98%以上まで走り続ける崩壊率、平均生成長も併用して、単なる正解率だけでなく停止挙動の保存を確認する。",
-    "settings": [
-      "主要比較はSparseGPT、Wanda、ALPSで40%と50%の非構造疎化。",
-      "OBC-Pruneの較正対は128問題、各問題16ロールアウト、ロールアウト温度0.8。既定値はβ=2、γ=0.5、ε=0.1。",
-      "疎化率感度ではDeepSeek-R1-Distill-Qwen 1.5B/7Bを10%から90%まで10ポイント刻みで評価し、MATH500精度5%を崩壊基準とする。",
-      "ハイパーパラメータ感度は1.5B・SparseGPT・40%疎化・MATH500でβ、γ、εを1つずつ変更。構成要素除去も同じ条件で実施。"
-    ],
-    "methodology": "主評価は実機上の学習後枝刈りであり、シミュレーションではない。精度と評価実行時間を同時に測り、40%/50%疎化で枝刈り器を3種類変えて較正方式の一般性を調べる。さらに内部状態の相対二乗誤差で密モデルへの忠実度を測り、生成長と崩壊率で「枝刈り後に考え続けて停止できない」現象を評価する。追加のQwen3とLlama系モデル、疎化率掃引、ハイパーパラメータ感度、構成要素除去で一般化と原因を補強する。",
-    "scope": "結果は主に数学・コード・競技数学ベンチマークと、特定のDeepSeek-R1蒸留モデルに基づく。Qwen3とLlama系への追加試験はあるが、巨大な70B級モデル、会話・長文・ツール利用、構造化枝刈り、量子化との同時適用は直接評価していない。較正の文単位介入には追加順伝播が必要で、その較正計算コスト自体を詳細なスケーリング分析として分離評価していない。疎化率が70〜80%を超える領域では全方式が崩壊へ近づくため、較正だけで極端な容量削減を解決するものではない。"
-  },
+  "attempt_id": "attempt-11a2387004457060d2b83f8f",
+  "job_id": "job-research-2752e3b1e763b7d9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ff6c2afd7fe3644b99148c7f",
+    "claim_id": "claim-11a2387004457060d2b83f8f",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
