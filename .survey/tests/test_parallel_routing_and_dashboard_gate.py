@@ -19,9 +19,10 @@ LEGACY_RENDER = "build_status_dashboard.py --repo-root . --output STATUS.md"
 class CommonThresholdRoutingTests(unittest.TestCase):
     def test_canonical_router_uses_candidate_inventory_not_schedule_identity(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        self.assertIn("candidate_inventory >= 50", router)
-        self.assertIn("candidate_inventory < 50", router)
+        self.assertIn("candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD", router)
+        self.assertIn("candidate_inventory < RESEARCH_DISCOVERY_THRESHOLD", router)
         self.assertIn("同じ論文処理規約・同じ手順", router)
+        self.assertIn("288件", router)
         self.assertNotIn("同じタスク・同じ手順", router)
         self.assertIn("Research / Audit 合計で成功完了を最低3件", router)
         self.assertIn("成功した正規schema v3 precheck", router)
