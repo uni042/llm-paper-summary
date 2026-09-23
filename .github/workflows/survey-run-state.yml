@@ -44,7 +44,8 @@ jobs:
             git reset --hard origin/main
 
             python .survey/scripts/derive_worker_run_state.py --repo-root .
-            git add .survey/work-queue/run-state/results
+            python .survey/scripts/compact_worker_hot_queue.py --repo-root . --apply
+            git add -A .survey/work-queue/run-state
 
             if git diff --cached --quiet; then
               echo 'Run-state requests already settled.'
