@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T12:25:00.945318+00:00",
+  "updated_at": "2026-09-23T12:58:49.332416+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -43384,6 +43384,56 @@
           "type": "research",
           "canonical_id": "arXiv:2609.15627",
           "title": "DeepSeek-V4-Flash on AMD gfx90a: Correctness Recovery and Inference Performance Engineering",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 999,
+      "paper_active_count_after": 999,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35863876356",
+      "first_recorded_at": "2026-09-23T12:58:49.332416+00:00",
+      "last_recorded_at": "2026-09-23T12:58:49.332416+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35863876356:1",
+          "recorded_at": "2026-09-23T12:58:49.332416+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35863876356",
+            "run_attempt": "1",
+            "source_sha": "a3e21fc36a3bb52073604e6d68a930662cd3a95c"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-6882c5cf191305a1",
+          "type": "research",
+          "canonical_id": "arXiv:2408.12757",
+          "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
           "from": "ready",
           "to": "completed"
         }
