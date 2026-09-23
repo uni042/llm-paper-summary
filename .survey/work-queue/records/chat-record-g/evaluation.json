@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-921f188aa26d60b7af5ae872","job_id":"job-research-2c92c0a3b8a6da0e","data":{"hardware":"大規模事前学習のGPU型・台数は本文に明記されない。学習はデータ並列のみと記載され、大域的負荷分散ではデータ並列群間でルーティング頻度をall-reduceする。","software":"OLMoE系アーキテクチャを基礎に、pre-norm、QK-norm除去、共有専門家を採用。公式コードはallenai/EMO。微調整は標準Hugging Face設定で1エポック、batch 32、learning rate 5e-5。","model":["EMO 1B-active / 14B-total, 128 experts, Top-8","matched Regular MoE 1B-active / 14B-total","OLMoE baseline","130B-token Dense baseline","130B-token 32-expert Regular MoE"],"datasets":["OLMoE pretraining corpus: 1T tokens + 50B linear annealing","130B-token ablation training","MMLU / MMLU-Pro domain groups","GSM8K","MC9 nine multiple-choice tasks","Gen5 five generation tasks","WebOrganizer 20M-document specialization analysis"],"baselines":["通常MoE（同一アーキテクチャ・データ）","OLMoE 5T-token model","ランダム専門家選択","Easy-EP専門家選択","メモリ一致Dense @8 / Reg. MoE @32","ModuleFormer再現","EMO-anneal"],"correctness":"全モデル評価では活性パラメータ1Bとデータ混合をそろえる。選択利用ではMMLU/MMLU-Proを領域単位に分け、検証集合で専門家を選択して同一領域のテストを評価する。MMLU/MMLU-Proは40%を選択・微調整用、60%を評価用に分割し、catch-allのotherは集約値から除外する。専門家選択法、検証例数、微調整有無、130B再現で頑健性を確認する。","settings":["主モデルは127 routed + 1 shared、Top-8、1T+50Bトークン。","学習率4e-3、負荷分散係数1e-1をアブレーション後に採用。","文書プールサイズdはTop-kから全ルーティング専門家数まで動的に標本化。","選択利用では保持専門家数128/64/32/16/8を比較。","意味分析はWebOrganizer 20M文書24領域、トークンクラスタ分析は12K文書の先頭100トークン。"],"methodology":"全専門家を使う通常性能と、領域ごとに専門家を削った選択利用性能を分離して評価する。選択利用はルータ平均とEasy-EPの双方、微調整あり/なし、1Tと130B学習規模で比較する。さらにルーティング表現をPCA・正規化・クラスタリングして専門化の粒度を調べ、WebOrganizerの人手領域間で専門家活性ベクトルのコサイン類似度を測る。学習安定性、共有専門家、動的d、学習率、正規化方式、アニーリングだけでの後付けモジュール化もアブレーションする。","scope":"主張は領域が比較的一貫した下流課題での選択利用に強い。一般的なotherカテゴリでは小さなEMO部分集合がメモリ一致の専用小型モデルを下回る。GPU実メモリ削減量やサービングスループットを直接測ったシステム評価ではなく、専門家重みを保持しないことによるメモリ削減可能性を精度曲線で示す。"},"reservation":{"claim_id":"claim-921f188aa26d60b7af5ae872","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-88d4b2308d0d8596f4fd6ce4",
+  "job_id": "job-research-cb87e313d4b1653f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-88d4b2308d0d8596f4fd6ce4",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

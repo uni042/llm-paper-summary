@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-921f188aa26d60b7af5ae872","job_id":"job-research-2c92c0a3b8a6da0e","data":{"overview":"全専門家利用時、EMOは通常MoEと概ね同等の汎用性能を保つ。1T学習ではMMLU 42.8対42.4、MC9 63.1対63.9、Gen5 57.9対59.7、MMLU-Pro 18.5対19.3、GSM8K 12.0対13.9で、モジュール制約による大幅な全体性能崩壊はない。差が大きいのは選択利用で、通常MoEは保持専門家を減らすと急落する一方、EMOは32専門家（25%）で約1ポイント、16専門家（12.5%）で約3ポイントの絶対低下に抑える。130B学習でも32/8専門家部分集合がメモリ一致で最初から学習したReg. MoE @32 / Dense @8と同等以上の領域別性能を示す。","key_results":[{"metric":"MMLU full-model accuracy","value":"42.8","baseline":"Regular MoE 42.4","condition":"1T-token, 1B-active/14B-total","interpretation":"文書単位制約を入れても全専門家利用時のMMLU性能を維持する。"},{"metric":"選択利用の絶対性能低下","value":"約1ポイント（32/128 experts）、約3ポイント（16/128 experts）","baseline":"通常MoEは約10/15ポイント低下","condition":"MMLU/MMLU-Pro領域別、1T学習","interpretation":"総専門家重みを75〜87.5%減らす予算でも領域性能を大きく維持する。"},{"metric":"130B-token MMLU inference","value":"EMO 32 experts 37.0、8 experts 33.7","baseline":"full EMO 38.1; Reg MoE@32 35.9; Dense@8 33.0","condition":"微調整なし","interpretation":"部分集合が同程度のメモリ予算で最初から学習した小型モデルに匹敵または上回る。"},{"metric":"領域活性コサイン類似度","value":"EMOは多くの領域対で<0.4、通常MoEは>0.6","baseline":"Regular MoE","condition":"WebOrganizer 20M documents, 24 domains","interpretation":"選択利用の頑健性が意味領域ごとのルーティング分離と整合する。"},{"metric":"EMO-anneal vs from-scratch EMO","value":"16 experts MMLU 35.4 vs 39.9","baseline":"EMO-anneal","condition":"1T standard MoE + 50B modular anneal","interpretation":"後付けでもモジュール性は生じるが、事前学習全体で制約する方が強い。"}],"negative_results":[{"name":"catch-all領域では小部分集合が弱い","description":"MMLU/MMLU-Proのotherのような広い混合領域では、32/8専門家EMOがメモリ一致で最初から学習したReg MoE@32/Dense@8を下回る。"},{"name":"全モデル性能で常勝ではない","description":"1T設定のMC9、Gen5、MMLU-Pro、GSM8Kでは通常MoEがEMOをわずかに上回り、モジュール性は無料の品質向上ではない。"},{"name":"後付けアニーリングは不十分","description":"通常MoEを最後の50Bトークンだけ文書プール制約でアニーリングしても改善するが、最初からEMOとして学習したモデルに多くの条件で劣る。"}],"interpretation":"EMOの利点はトークン当たり活性計算をさらに減らすことではなく、同一領域で使う専門家集合を局所化し、不要専門家の重みをロードしなくてよい構造を学習することにある。通常MoEでは専門家が句読点や前置詞など低水準特徴へ分散するため領域ごとの切り出しが難しい。文書単位の共通候補集合がこの圧力を意味的まとまりへ変え、少数例から選んだ専門家だけでも性能を保つ。","quality_impact":"近似的な部分モデル利用であり、全モデルと完全同一出力は保証しない。32/16専門家では領域別性能低下を小さくできるが、8専門家や一般領域では低下が大きくなり得る。用途ごとに許容精度とメモリ予算を選ぶ必要がある。"},"reservation":{"claim_id":"claim-921f188aa26d60b7af5ae872","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-88d4b2308d0d8596f4fd6ce4",
+  "job_id": "job-research-cb87e313d4b1653f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-88d4b2308d0d8596f4fd6ce4",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
