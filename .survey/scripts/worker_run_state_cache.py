@@ -279,10 +279,13 @@ def _recompute_submission(run: dict[str, Any]) -> None:
     completed = []
     terminal = []
     retryable = []
+    repair_required = []
     for value in ordered:
         processed = parse_time(value.get("processed_at"))
         if value.get("retryable") is True:
             retryable.append(value)
+        if value.get("repair_required") is True:
+            repair_required.append(value)
         if value.get("completed") is True and processed is not None and processed >= start:
             completed.append(value)
         status = str(value.get("job_status") or "none").lower()
@@ -290,9 +293,7 @@ def _recompute_submission(run: dict[str, Any]) -> None:
             terminal.append((processed, status))
     pipeline_ahead = 0
     if pending:
-        earliest = min(
-            ordered.index(value) for value in pending
-        )
+        earliest = min(ordered.index(value) for value in pending)
         pipeline_ahead = max(len(ordered) - earliest - 1, 0)
     terminal.sort()
     run["submission"] = {
@@ -305,14 +306,20 @@ def _recompute_submission(run: dict[str, Any]) -> None:
         "pending_attempt_ids": [str(value.get("attempt_id")) for value in pending],
         "completed_attempt_ids": [str(value.get("attempt_id")) for value in completed],
         "retryable_attempt_ids": [str(value.get("attempt_id")) for value in retryable],
+        "repair_required_attempt_ids": [str(value.get("attempt_id")) for value in repair_required],
     }
 
-
 def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, list[str]]:
+    """Apply descriptor/result deltas to cached runs with fail-safe invalidation.
+
+    The durable fact clock is advanced *before* cache mutation. If cache updating then
+    fails, get_run() rejects the older cache generation and the next derivation falls
+    back to canonical durable facts instead of trusting stale state.
+    """
     root = root.resolve()
     touched: dict[str, set[str]] = {}
     loaded: dict[str, dict[str, Any]] = {}
-    changed_workers: set[str] = set()
+    parsed: list[tuple[Path, dict[str, Any], str, str, list[str]]] = []
 
     def cache_for(worker_id: str) -> dict[str, Any] | None:
         if worker_id not in loaded:
@@ -321,6 +328,7 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
                 loaded[worker_id] = value
         return loaded.get(worker_id)
 
+    affected_workers: set[str] = set()
     for raw_path in descriptor_paths:
         path = raw_path if raw_path.is_absolute() else root / raw_path
         descriptor = _read(path, {})
@@ -345,13 +353,25 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
                     for run in cache.get("runs", {}).values()
                 ):
                     candidate_workers.append(worker_id)
+        if candidate_workers:
+            parsed.append((path, descriptor, attempt_id, job_id, candidate_workers))
+            affected_workers.update(candidate_workers)
 
+    clock_generations = (
+        bump_fact_clock(root, affected_workers, "immutable-submission")
+        if affected_workers
+        else {}
+    )
+    changed_workers: set[str] = set()
+
+    for path, descriptor, attempt_id, job_id, candidate_workers in parsed:
+        identity = _descriptor_identity(descriptor)
+        result = _result_for_descriptor(root, path, descriptor)
         for worker_id in candidate_workers:
             cache = cache_for(worker_id)
             if cache is None:
                 continue
             runs = cache.get("runs") if isinstance(cache.get("runs"), dict) else {}
-            result = _result_for_descriptor(root, path, descriptor)
             for run_key, run in runs.items():
                 if not isinstance(run, dict) or run.get("cache_valid") is not True:
                     continue
@@ -377,6 +397,7 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
                 if result is None:
                     fact["pending"] = True
                     fact["retryable"] = False
+                    fact["repair_required"] = False
                     fact.pop("processed_at", None)
                     fact.pop("job_status", None)
                     fact.pop("completed", None)
@@ -386,7 +407,10 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
                     fact["processed_at"] = result.get("processed_at")
                     fact["job_status"] = status
                     fact["retryable"] = retryable
-                    fact["pending"] = bool(retryable or status not in TERMINAL)
+                    fact["repair_required"] = result.get("repair_required") is True
+                    # Preserve established semantics: only a missing result or an
+                    # explicitly retryable result is submission-result pending.
+                    fact["pending"] = retryable
                     fact["completed"] = bool(result.get("ok") is True and status == "completed")
                 attempts[attempt_id] = fact
                 after = json.dumps(fact, sort_keys=True, ensure_ascii=False)
@@ -394,7 +418,6 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
                     touched.setdefault(worker_id, set()).add(run_key)
                     changed_workers.add(worker_id)
 
-    clock_generations = bump_fact_clock(root, changed_workers, "immutable-submission") if changed_workers else {}
     for worker_id in changed_workers:
         cache = loaded[worker_id]
         generation = int(cache.get("generation", 0)) + 1
@@ -415,7 +438,9 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
             run["generation"] = generation
             run["rebuilt_from_canonical"] = False
         cache["generation"] = generation
-        cache["fact_generation"] = clock_generations.get(worker_id, fact_generation(root, worker_id))
+        cache["fact_generation"] = clock_generations.get(
+            worker_id, fact_generation(root, worker_id)
+        )
         _save_cache(root, cache)
 
     return {worker: sorted(keys) for worker, keys in touched.items()}
