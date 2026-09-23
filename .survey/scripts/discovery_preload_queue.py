@@ -21,6 +21,7 @@ from typing import Any
 from urllib.parse import parse_qs, urlparse
 
 import worker_identity
+from record_bank_config import BANK_IDS, BANK_ROOTS, bank_for_sequence
 
 QUEUE_ROOT = Path(".survey/work-queue/discovery-preload")
 ENTRIES = QUEUE_ROOT / "entries"
@@ -367,7 +368,15 @@ def _next_cursor_for_entry(root: Path, entry: dict[str, Any]) -> tuple[bool, str
     return True, cursor
 
 
-def _make_entry(spec: dict[str, Any], *, bucket: int, sequence: int, initial_cursor: str | None, now: dt.datetime) -> dict[str, Any]:
+def _make_entry(
+    spec: dict[str, Any],
+    *,
+    bucket: int,
+    sequence: int,
+    initial_cursor: str | None,
+    stock_bank: str,
+    now: dt.datetime,
+) -> dict[str, Any]:
     source_key = str(spec["source_key"])
     token = json.dumps(
         {
@@ -375,6 +384,7 @@ def _make_entry(spec: dict[str, Any], *, bucket: int, sequence: int, initial_cur
             "bucket": bucket,
             "sequence": sequence,
             "initial_cursor": initial_cursor,
+            "stock_bank": stock_bank,
         },
         sort_keys=True,
         separators=(",", ":"),
@@ -398,6 +408,8 @@ def _make_entry(spec: dict[str, Any], *, bucket: int, sequence: int, initial_cur
         "page_size": DEFAULT_PAGE_SIZE,
         "max_pages": DEFAULT_MAX_PAGES,
         "precheck_request_id": request_id,
+        "stock_bank": stock_bank,
+        "stock_lane": "discovery",
         "created_at": now.isoformat(),
     }
 
@@ -419,6 +431,8 @@ def _request_for_entry(entry: dict[str, Any]) -> dict[str, Any]:
         "initial_cursor": entry.get("initial_cursor"),
         "preload_seed": True,
         "preload_id": preload_id,
+        "stock_bank": entry.get("stock_bank"),
+        "stock_lane": "discovery",
     }
 
 
@@ -474,6 +488,15 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         row for row in entries if _status(root, row, now) in {"READY", "PRECHECKED"}
     ]
     available = len(available_rows)
+    bank_available = {
+        bank: sum(
+            1
+            for row in available_rows
+            if str(row.get("stock_bank") or "").lower() == bank
+        )
+        for bank in BANK_IDS
+    }
+    bank_deficits = [bank for bank in BANK_IDS if bank_available.get(bank, 0) <= 0]
     direction_available = {
         direction: sum(
             1
@@ -487,7 +510,12 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         direction: max(direction_targets.get(direction, 0) - direction_available.get(direction, 0), 0)
         for direction in ("backward", "forward", "normal")
     }
-    needed = max(target - available, sum(direction_deficits.values()), 0)
+    needed = max(
+        target - available,
+        sum(direction_deficits.values()),
+        len(bank_deficits),
+        0,
+    )
     budget = min(needed, max(max_new, 0))
     if budget == 0:
         return {
@@ -495,6 +523,9 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
             "available": available,
             "direction_available": direction_available,
             "direction_targets": direction_targets,
+            "bank_available": bank_available,
+            "bank_target": len(BANK_IDS),
+            "bank_deficits": bank_deficits,
             "created": [],
             "expired_claims": expired,
             "garbage_collected": garbage_collected,
@@ -503,6 +534,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
     bucket = _refresh_bucket(now)
     specs = _prioritize_specs(_source_specs(root), direction_deficits)
     created: list[str] = []
+    missing_banks = list(bank_deficits)
     made_progress = True
 
     while len(created) < budget and made_progress:
@@ -536,11 +568,31 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                 sequence = int(latest.get("sequence", 0)) + 1
                 initial_cursor = next_cursor
 
+            if missing_banks:
+                stock_bank = missing_banks.pop(0)
+            else:
+                # Once every bank has a Discovery window, spread any deliberate
+                # overfill evenly in the same canonical bank order.
+                stock_bank = min(
+                    BANK_IDS,
+                    key=lambda bank: (
+                        bank_available.get(bank, 0)
+                        + sum(
+                            1
+                            for preload_id in created
+                            if str(
+                                _read(root / ENTRIES / f"{preload_id}.json", {}).get("stock_bank") or ""
+                            ).lower() == bank
+                        ),
+                        BANK_IDS.index(bank),
+                    ),
+                )
             entry = _make_entry(
                 spec,
                 bucket=bucket,
                 sequence=sequence,
                 initial_cursor=initial_cursor,
+                stock_bank=stock_bank,
                 now=now,
             )
             entry_path = root / ENTRIES / f"{entry['preload_id']}.json"
@@ -560,6 +612,9 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         "available_before": available,
         "direction_available_before": direction_available,
         "direction_targets": direction_targets,
+        "bank_available_before": bank_available,
+        "bank_target": len(BANK_IDS),
+        "bank_deficits_before": bank_deficits,
         "created": created,
         "created_count": len(created),
         "expired_claims": expired,
@@ -601,6 +656,8 @@ def available_preloads(
                 "max_pages": entry.get("max_pages"),
                 "preload_result_path": _result_path(entry).as_posix(),
                 "preload_unseen_result_count": result.get("unseen_result_count"),
+                "stock_bank": entry.get("stock_bank"),
+                "stock_lane": "discovery",
                 "created_at": entry.get("created_at"),
             }
         )
@@ -637,6 +694,11 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
     for field in ("provider", "source_url", "axis"):
         if str(request.get(field) or "") != str(entry.get(field) or ""):
             raise ValueError(f"Discovery preload {field} does not match the entry")
+    entry_stock_bank = str(entry.get("stock_bank") or "").lower()
+    if entry_stock_bank in BANK_ROOTS:
+        request_stock_bank = str(request.get("stock_bank") or "").lower()
+        if request_stock_bank != entry_stock_bank:
+            raise ValueError("Discovery preload stock_bank does not match the entry")
     if request.get("initial_cursor") != entry.get("initial_cursor"):
         raise ValueError("Discovery preload initial_cursor does not match the entry")
     if int(request.get("page_size") or 0) != int(entry.get("page_size") or 0):
