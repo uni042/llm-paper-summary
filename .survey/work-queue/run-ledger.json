@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T08:20:06.232276+00:00",
+  "updated_at": "2026-09-23T08:25:45.934882+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -42348,6 +42348,56 @@
           "type": "research",
           "canonical_id": "DOI:10.4108/eetiot.13349",
           "title": "Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 971,
+      "paper_active_count_after": 971,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35837027486",
+      "first_recorded_at": "2026-09-23T08:25:45.934882+00:00",
+      "last_recorded_at": "2026-09-23T08:25:45.934882+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35837027486:1",
+          "recorded_at": "2026-09-23T08:25:45.934882+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35837027486",
+            "run_attempt": "1",
+            "source_sha": "b7881e5ce51f5ef2d4de7004891f801607395fd6"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-4f3d063490df512a",
+          "type": "research",
+          "canonical_id": "arXiv:2609.15039",
+          "title": "SpliTEE: Improving LLM Inference on Trusted Hardware with Differentially Private GPU Outsourcing",
           "from": "ready",
           "to": "completed"
         }
