@@ -50,18 +50,18 @@ def hot_banked_claims(window: int) -> int:
 
 
 def refill_threshold(window: int) -> int:
-    """Trigger refill early enough to preserve the hot bank-ready slice.
+    """Trigger refill while half of the hot bank-ready slice is still available.
 
-    For the default 12-paper inventory with a four-paper hot slice, refill begins at
-    nine remaining assignments. That means the refill/bank-promotion request starts
-    while one previously hot paper is still available, rather than after all four
-    hot assignments have been consumed.
+    With the default 12-paper inventory and four hot banked claims, refill begins at
+    ten remaining assignments: two hot papers are still immediately runnable while
+    the asynchronous claim/bank promotion catches up.
     """
     window = normalize_window(window)
     hot = hot_banked_claims(window)
     if window <= 1:
         return 0
-    return max(1, window - hot + 1)
+    refill_after = max(1, hot // 2)
+    return max(1, window - refill_after)
 
 
 def should_refill(
