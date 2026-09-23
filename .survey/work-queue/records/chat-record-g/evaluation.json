@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b7b0e81277b66329080b1c40","job_id":"job-research-8699aa3a6604cb58","data":{"hardware":"NLG訓練はMicrosoft Azure ND A100上の128×NVIDIA A100。推論は最大256×A100で107B〜2T MoEを評価。","software":"DeepSpeed、Azure HPC環境、NCCL、Mellanox OFED、SHARP、CUDA。推論通信ではMicrosoft SCCLとカスタムCUDAデータレイアウト変換も使用。","model":["Dense NLG 350M/1.3B/6.7B","Standard MoE 350M+MoE-128 13B / 1.3B+MoE-128 52B","PR-MoE 4B/31B","PR-MoE+MoS 3.5B/27B","Inference scale models 107.7B/349B/1.0649T/2.024T"],"datasets":["MT-NLG pretraining corpus 300B tokens","LAMBADA","PIQA","BoolQ","RACE-h","TriviaQA","WebQuestions"],"baselines":["quality-equivalent dense NLG models","Standard-MoE","distributed PyTorch with tensor-slicing and expert parallelism","full-duration KD","Top2-MoE / Half-MoE ablations"],"correctness":"dense/MoE訓練は同一300B tokensで比較し、ゼロショット6タスクと検証lossで品質を確認する。推論では同じMoE構成をPyTorch分散実装とDeepSpeedで比較し、GPU数・モデルサイズを変えて遅延とGPU当たり/総スループットを測る。密モデルとの品質同等性は小規模では実測、大規模1.5T対175Bではスケーリング仮定を含む。","settings":["NLG training: 128 A100, sequence length 2K, 300B tokens, top-1 gating","PR-MoE: lower layers fewer experts, final layers increased expert count, residual fixed MLP branch","MoS: 24→21 layers, staged KD stopped around 400K steps","Inference: up to 256 A100; expert parallelism up to 128, tensor-slicing according to non-expert size","52B MoE scaling test: 8–64 GPUs against PyTorch baseline"],"methodology":"モデル品質・訓練コスト、アーキテクチャ圧縮、蒸留、分散推論を段階的に評価する。推論は52BでGPU scalingを調べた後、107B〜2Tへ拡大し、PR-MoE/MoSによる必要GPU数と遅延の削減、品質同等denseとのコスト比較を行う。","scope":"2022年時点のA100クラスタとtop-1 MoEを中心とする。CPU/SSDオフロードや現代の小バッチ単一GPU推論は対象外。trillion-scale denseとの品質同等性の一部は小規模実験からのスケーリング仮定であり実測品質比較ではない。"},"reservation":{"claim_id":"claim-b7b0e81277b66329080b1c40","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-041d58979c001abd8a8d2892",
+  "job_id": "job-research-676eb3c59785d737",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-041d58979c001abd8a8d2892",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
