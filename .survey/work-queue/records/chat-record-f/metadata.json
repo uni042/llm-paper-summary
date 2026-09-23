@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4221ae4eae4238e95de8fb44","job_id":"job-research-8dfa4bfad6e4a344","data":{"canonical_id":"arXiv:2603.12831","arxiv_id":"2603.12831","doi":"10.1145/3802107","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking","summary":"OmniServeは、遅延制約の厳しいサービスとベストエフォートサービスを同じLLMクラスタへ収容しながら、CPUとGPUを非同期協調させる推論システムである。GPUメモリから溢れた低優先度要求の注意計算だけをCPUへ逃がし、その結果を同じトークン反復ですぐ待たず、後続反復の同一層にある密計算へ層単位で相乗りさせる。モジュール別の遅延モデルで高優先度要求の初回トークン時間と出力トークン時間を予測し、CPUから戻った要求を何件GPUへ混ぜられるかを層ごとに制御する。4基A100とCPUサーバ群の評価で、既存方式に対し高優先度のSLO達成率を最大1.48倍、低優先度のデコードスループットを最大9.85倍改善した。","list_summary":"CPUへ逃がした低優先度要求の注意計算を非同期化し、後続GPU密計算へ層単位で相乗りさせることで、SLOを守りながら低優先度スループットを最大9.85倍にする。","authors":["Zizhao Mo","Junlin Chen","Huanle Xu","Chengzhong Xu"],"authors_affiliations":"University of Macau, Macau SAR, China。一次論文著者欄に基づく。","published":"2026-03-17","publication":"Proceedings of the ACM on Management of Data, Vol. 4, No. 3, SIGMOD 2026, Article 230, June 2026","publication_type":"Conference/Journal Proceedings","publication_status":"Published","lineage":"LLM serving / CPU-GPU heterogeneous inference / SLO-aware scheduling / KV-cache offloading","topics":["LLM推論","CPU-GPU協調","注意計算オフロード","SLO制御","層単位バッチング","ハイブリッド負荷"],"importance":"GPUだけのメモリ予約では解けない高優先度・低優先度混載の計算干渉を、CPUへ注意計算だけを逃がしつつGPUを待たせない非同期データフローで解く。CPUメモリをKVキャッシュ容量として使いながら、密計算は高速なGPUへ残す分業が特徴である。","hardware_evaluation":"主環境はA100 80GB×4のGPUサーバ1台とIntel Xeon Gold 6342・400GB RAMのCPUサーバ4台、既定100Gbps RoCE。10Gbps LANも評価。Yi-34Bは2-way TP、Llama-2-70Bは4-way TP、BF16。","quality_effect":"モデル品質を近似・圧縮する手法ではなく、同一モデルの実行配置とスケジューリングを変えるため生成品質は原理上変更しない。評価対象はTTFT/TPOTのSLO達成率とトークン生成スループットである。","source":"https://arxiv.org/abs/2603.12831","sources":["https://arxiv.org/abs/2603.12831","https://arxiv.org/pdf/2603.12831","https://doi.org/10.1145/3802107"],"code":null,"implementation":"vLLMを基盤にプロトタイプを実装し、CPU注意計算はOpenMPとAVX、分散CPU側はRay、GPU側キューはCUDA IPCとMPSを利用する。一次論文中に独立した公開コードURLは確認できない。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary-reference-section","references_total":64},"reservation":{"claim_id":"claim-4221ae4eae4238e95de8fb44","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-65be149fc066a960d4993312",
+  "job_id": "job-research-9d4382735e8b7ada",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-65be149fc066a960d4993312",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
