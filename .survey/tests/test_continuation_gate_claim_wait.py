@@ -173,6 +173,9 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
             pipeline_ahead_count=50,
             independent_work=True,
             active_assignment=True,
+            active_claim_count=4,
+            claim_window=4,
+            claim_window_remaining=0,
         ))
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["required_action"], "CONTINUE_ASSIGNED_WORK")
