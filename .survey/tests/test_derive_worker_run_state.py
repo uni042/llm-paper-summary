@@ -360,6 +360,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             second = mod.derive(root, second_request)
             self.assertEqual(second["state_source"], "incremental_cache")
             self.assertEqual(second["research_audit_completed_this_invocation"], 1)
+            self.assertGreater(first["history_files_scanned"], second["history_files_scanned"])
+            self.assertEqual(second["history_files_scanned"], 0)
 
             cache_path = mod.worker_run_index.cache_path(root, value)
             cache_path.unlink()
