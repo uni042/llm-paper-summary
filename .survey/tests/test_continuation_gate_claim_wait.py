@@ -204,7 +204,7 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertTrue(result["status_only_terminal"])
         self.assertFalse(result["finalization_allowed"])
 
-    def test_completed_terminal_after_quota_floor_allows_general_continuation(self):
+    def test_completed_terminal_after_quota_floor_claims_next_paper(self):
         result = mod.decide(make_args(
             claim_state_checked=True,
             claim_result_pending=False,
@@ -213,8 +213,9 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
             last_terminal_job_status="completed",
         ))
         self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["required_action"], "CONTINUE_WORK")
+        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
         self.assertFalse(result["status_only_terminal"])
+        self.assertFalse(result["finalization_allowed"])
 
 
 if __name__ == "__main__":
