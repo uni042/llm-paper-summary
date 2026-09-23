@@ -488,6 +488,13 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         for spec in specs:
             if len(created) >= budget:
                 break
+            direction = str(spec.get("citation_direction") or "")
+            base_slots_remaining = max(target - (available + len(created)), 0)
+            if base_slots_remaining <= 0 and direction_deficits.get(direction, 0) <= 0:
+                # Once the total target is full, only create deliberate
+                # backward/forward floor repairs. Never grow the queue in an
+                # unrelated direction just because another direction is short.
+                continue
             latest = _latest_for_source(root, entries, str(spec["source_key"]), bucket)
             if latest is None:
                 sequence = 0
@@ -514,6 +521,8 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
             _write(request_path, _request_for_entry(entry))
             entries.append(entry)
             created.append(entry["preload_id"])
+            if direction_deficits.get(direction, 0) > 0:
+                direction_deficits[direction] -= 1
             made_progress = True
 
     return {
