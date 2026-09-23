@@ -110,6 +110,12 @@ def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
     preload_id = request.get("preload_id")
     preload_seed = request.get("preload_seed") is True
     worker_id = str(request.get("worker_id") or "").strip()
+    stock_bank = str(request.get("stock_bank") or "").strip().lower() or None
+    stock_lane = str(request.get("stock_lane") or "").strip().lower() or None
+    if stock_bank is not None and stock_bank not in discovery_preload_queue.BANK_ROOTS:
+        raise DiscoveryPrecheckRequestError("stock_bank must name a canonical bank")
+    if stock_lane not in {None, "discovery"}:
+        raise DiscoveryPrecheckRequestError("stock_lane must be discovery when present")
     if preload_id is not None:
         preload_id = _safe_id(preload_id, "preload_id")
         if not preload_seed and not worker_id:
@@ -128,6 +134,8 @@ def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
             "preload_id": preload_id,
             "preload_seed": preload_seed,
             "worker_id": worker_id or None,
+            "stock_bank": stock_bank,
+            "stock_lane": "discovery" if stock_bank is not None else stock_lane,
         }
     )
     return out
@@ -259,6 +267,8 @@ def _process_v3(
             "snapshot_source_commit": source_commit,
             "allowed_identity_tokens": [row["identity_tokens"] for row in allowed],
             "preload_id": request.get("preload_id"),
+            "stock_bank": request.get("stock_bank"),
+            "stock_lane": request.get("stock_lane"),
             "preload_cache_used": preload_cache_used,
         }
     )
@@ -305,6 +315,8 @@ def _process_v3(
         "provider_progress": collected.get("provider_progress"),
         "progress_observed_at": datetime.now(timezone.utc).isoformat(),
         "preload_id": request.get("preload_id"),
+        "stock_bank": request.get("stock_bank"),
+        "stock_lane": request.get("stock_lane"),
         "preload_seed": bool(request.get("preload_seed")),
         "preload_cache_used": preload_cache_used,
         "preload_cached_pages_used": preload_cached_pages_used,
