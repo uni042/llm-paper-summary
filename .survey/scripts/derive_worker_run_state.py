@@ -738,8 +738,11 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     }
 
 
-def process_pending(root: Path) -> dict[str, int]:
+def process_pending(root: Path) -> dict[str, Any]:
     root = root.resolve()
+    bootstrap = {"rebuilt": 0, "failures": []}
+    if any(run_state_cache.load_cache(root, worker_id) is None for worker_id in ALLOWED_WORKERS):
+        bootstrap = rebuild_caches(root)
     request_root = root / REQUESTS
     result_root = root / RESULTS
     request_root.mkdir(parents=True, exist_ok=True)
@@ -770,7 +773,7 @@ def process_pending(root: Path) -> dict[str, int]:
         if result.get("ok") is True:
             run_state_cache.write_latest_pointer(root, target, result)
         processed += 1
-    return {"processed": processed, "errors": errors, "reused": reused}
+    return {"processed": processed, "errors": errors, "reused": reused, "cache_bootstrap_rebuilt": bootstrap.get("rebuilt", 0), "cache_bootstrap_failures": bootstrap.get("failures", [])}
 
 
 def _descriptor_paths(path: Path) -> list[Path]:
