@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-2bf3de3b255ebab0e493ae1d",
-  "job_id": "job-research-3d00beb8c812c5e7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2bf3de3b255ebab0e493ae1d",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2bf3de3b255ebab0e493ae1d","job_id":"job-research-3d00beb8c812c5e7","data":{"hardware":"主検証はRTX 5090（170 SM、32GB GDDR7、1792GB/s、96MB L2）。追加検証はH100、H200、B200。RTX 5090は通常SM 2580MHz・memory 14000MHz固定、Llama3層評価は1.80GHz設定。H100は1.5GHz、B200は1.08GHz。simulation hostはCore i9-14900K/64GB DDR5、multithread scalingはEPYC 9115。","software":"FlashGPU-sim実行駆動サイクル精度simulator。Triton生成GEMM/FlashAttention/Llama3 layerと公式architecture-optimized FlashAttention-2/3/4を使用。実機cycleはNVIDIA Nsight Computeで取得し、Triton出力はPyTorch参照と機能照合する。","methodology":"primitiveではTMA bandwidth、mma.sync throughput、H200 DSM latency/bandwidthを測る。RTX 5090ではDeepBench由来GEMM 40構成、FlashAttention 15構成の計55、Llama3-8B prefill/decode一層16 kernel launchを評価。H100ではFA-2/FA-3各16構成、B200ではFA-4 28構成を測り、合計131 workload configurationでhardware cycle対simulation cycleの平均絶対百分率誤差を算出する。parallel simulationは6個のinference GEMMを1/2/4/8/16 host threadで反復しcycle determinismも確認する。","scope":"cycle精度は高いが完全なGPU full-system modelではなく、memory systemは較正service rateとhashに依存する。PTXを解釈するため実機SASSとの差を静的reorderingで補正しており、compiler schedulingの完全再現ではない。offline Triton captureはreference outputとautotuningを得られない。multi-GPU/NVLinkは将来課題で、現在の主対象は単一GPU kernel execution。"},"reservation":{"claim_id":"claim-2bf3de3b255ebab0e493ae1d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
