@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-7af9f4a6ae8010bb",
+  "type": "research",
+  "parent_job_id": "job-93d32edecc4deebb",
+  "priority": 75,
+  "canonical_id": "arXiv:2510.12872",
+  "arxiv_id": "2510.12872",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems",
+  "source_url": "https://www.semanticscholar.org/paper/471de4fab0885f45dffb717512741128775bcbaa",
+  "paper_path": null,
+  "selection_reason": "multi-agent間のprefix差を補正してcross-context KV reuseを70%以上にしTTFTを最大7.8倍高速化するため、分散・再利用KV cache系統に新しい比較軸を加える。",
+  "priority_breakdown": {
+    "base": 50,
+    "lineage": 15,
+    "recency": 10,
+    "venue": 0,
+    "total": 75
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T22:42:24+00:00"
+}

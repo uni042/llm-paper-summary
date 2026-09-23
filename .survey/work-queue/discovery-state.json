@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T22:39:48+00:00",
+  "updated_at": "2026-09-23T22:42:24+00:00",
   "last_run_key": "s30-20260924t073303-6a2f1c",
-  "last_round": "disc-s30-6a2f1c-r2",
+  "last_round": "disc-s30-6a2f1c-r3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,31 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T04:00:00+09:00",
-      "round": "specialist-serving-engine-6",
-      "axis": "serving engine・dynamic batching・distributed KV/attention・adapter/personalized serving",
-      "query_summary": "continuous batching、GPU memory allocator、serving engine/kernel、CUDA graph、KV injectionへ検索窓を移動。vAttention、MELL、AlignedServe、FastDecode、Helix、vLLM/PagedAttention等をidentity snapshotで評価前に除外し、provider検索窓終了時に残った5件を評価して採用した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2405.04437",
-        "arXiv:2501.06709",
-        "arXiv:2605.23389",
-        "arXiv:2403.11421",
-        "arXiv:2406.01566",
-        "arXiv:2309.06180"
-      ],
-      "next_axis_hint": "candidate inventory再評価後、50超ならoverflow research、50以下なら引用関係/隣接systemsへ探索継続",
-      "source_submission": "work-queue/submissions/20260917T0400JST-discovery-specialist-serving-engine-6.json"
-    },
     {
       "run_key": "2026-09-17T04:00:00+09:00",
       "round": "specialist-speculative-systems-5",
@@ -8871,6 +8846,45 @@
       "duplicate_ratio": 0.8,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:disc-s30-6a2f1c-r3",
+      "precheck_request_id": "disc-s30-6a2f1c-r3",
+      "run_key": "s30-20260924t073303-6a2f1c",
+      "round": "disc-s30-6a2f1c-r3",
+      "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+      "query_summary": "LMCache前方引用20件からcontext reuse、KV transform coding、head-aware階層offload、multi-agent KV reuseの4件を採用。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2510.09665",
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 6,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 4,
+      "accepted_canonical_ids": [
+        "arXiv:2511.03475",
+        "arXiv:2511.01815",
+        "arXiv:2511.00868",
+        "arXiv:2510.12872"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260923T224145Z-scheduled-chat-30-6a2f1c-r3.json",
+      "source_submissions": [
+        "work-queue/submissions/20260923T224145Z-scheduled-chat-30-6a2f1c-r3.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 14,
+      "post_final_dedupe_count": 14,
+      "duplicate_ratio": 0.3,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16566,15 +16580,15 @@
       "next_axis_hint": null
     },
     "forward citations of LMCache enterprise-scale KV cache layer": {
-      "last_run_key": "scheduled-chat-30-20260924T032918-9f2c7a",
-      "rounds": 3,
-      "candidate_count": 45,
-      "duplicate_filtered_count": 20,
-      "novel_candidate_count": 25,
+      "last_run_key": "s30-20260924t073303-6a2f1c",
+      "rounds": 4,
+      "candidate_count": 65,
+      "duplicate_filtered_count": 26,
+      "novel_candidate_count": 39,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 25,
-      "accepted_count": 10,
-      "duplicate_ratio": 0.4444444444444444,
+      "post_final_dedupe_count": 39,
+      "accepted_count": 14,
+      "duplicate_ratio": 0.4,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
@@ -17970,6 +17984,29 @@
       "cooldown": false,
       "last_run_key": "s30-20260924t073303-6a2f1c",
       "last_round": "disc-s30-6a2f1c-r2"
+    },
+    "window-466be5aa33108d844f79": {
+      "topic": "lmcache forward citations",
+      "source": "semantic_scholar",
+      "date_range": "2025-2026",
+      "category": "kv-cache-memory-tiering",
+      "citation_direction": "forward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-466be5aa33108d844f79",
+      "scan_count": 1,
+      "raw_result_count": 27,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 6,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 4,
+      "last_position": "cursor-120-to-end",
+      "unseen_rate": 0.7407407407407407,
+      "duplicate_rate": 0.2222222222222222,
+      "candidate_acceptance_rate": 0.2,
+      "cooldown": false,
+      "last_run_key": "s30-20260924t073303-6a2f1c",
+      "last_round": "disc-s30-6a2f1c-r3"
     }
   },
   "recent_search_windows": [
@@ -19232,6 +19269,27 @@
       "duplicate_rate": 0.4,
       "candidate_acceptance_rate": 0.2,
       "last_position": "cursor-200-to-240"
+    },
+    {
+      "topic": "lmcache forward citations",
+      "source": "semantic_scholar",
+      "date_range": "2025-2026",
+      "category": "kv-cache-memory-tiering",
+      "citation_direction": "forward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-466be5aa33108d844f79",
+      "run_key": "s30-20260924t073303-6a2f1c",
+      "round": "disc-s30-6a2f1c-r3",
+      "raw_result_count": 27,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 6,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 4,
+      "unseen_rate": 0.7407407407407407,
+      "duplicate_rate": 0.2222222222222222,
+      "candidate_acceptance_rate": 0.2,
+      "last_position": "cursor-120-to-end"
     }
   ],
   "search_window_history_limit": 96,
