@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-20T23:10:57+00:00",
-  "last_run_key": "20260921T0802JST-auto",
-  "last_round": "auto-forward-vllm-04-retry",
+  "updated_at": "2026-09-23T14:26:18+00:00",
+  "last_run_key": "adhoc-20260923T232013JST-worker-923191",
+  "last_round": "adhoc-20260923T232013JST-worker-923191-backward-01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,25 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-backward-megascale-17",
-      "axis": "CrossPool backward reference・MoE disaggregated expert parallelism基盤",
-      "query_summary": "CrossPoolの参考文献を辿り、PagedAttention/MuxServe等の既知基盤と比較してMegaScale-Inferがrepository未収録であることを確認した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.75,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "PagedAttention:SOSP23",
-        "DistServe:OSDI24",
-        "MuxServe:ICML24"
-      ],
-      "next_axis_hint": "新規発見で枯渇判定を再リセット。Tarragon等MegaScale-Infer後続、最新MoE resilience、OS/storage、network、新着を再一巡する",
-      "source_submission": "work-queue/submissions/20260916T1951JST-discovery-specialist-backward-megascale-17.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-moe-resilience-18",
@@ -8091,6 +8072,44 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": null,
       "source_submission": "work-queue/submissions/20260921T0808JST-auto-discovery-forward-vllm-04-retry.json"
+    },
+    {
+      "round_identity": "precheck:adhoc-20260923T232013JST-worker-923191-backward-01",
+      "precheck_request_id": "adhoc-20260923T232013JST-worker-923191-backward-01",
+      "run_key": "adhoc-20260923T232013JST-worker-923191",
+      "round": "adhoc-20260923T232013JST-worker-923191-backward-01",
+      "axis": "repository-wide structured references for LLM inference systems",
+      "query_summary": "repository_references schema v3で固定sourceから100件を走査し、precheckが未評価20件を許可。一次資料のtitle/abstractを軽量確認し、推論システムへの直接性が高い4件をResearch候補化した。",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 4,
+      "accepted_canonical_ids": [
+        "arXiv:2406.02500",
+        "arXiv:2409.10516",
+        "arXiv:2404.14527",
+        "arXiv:2310.01889"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "same-run forward citation refresh",
+      "source_submission": "work-queue/submissions/adhoc-20260923T232013JST-worker-923191-backward-01.json",
+      "source_submissions": [
+        "work-queue/submissions/adhoc-20260923T232013JST-worker-923191-backward-01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -15422,17 +15441,17 @@
       "next_axis_hint": null
     },
     "repository-wide structured references for LLM inference systems": {
-      "last_run_key": "2026-09-21T05:58:48+09:00",
-      "rounds": 2,
-      "candidate_count": 5,
+      "last_run_key": "adhoc-20260923T232013JST-worker-923191",
+      "rounds": 3,
+      "candidate_count": 25,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
+      "novel_candidate_count": 25,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
+      "post_final_dedupe_count": 25,
+      "accepted_count": 9,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
-      "next_axis_hint": null
+      "next_axis_hint": "same-run forward citation refresh"
     },
     "forward citations of FlashAttention for recent attention kernels and serving systems": {
       "last_run_key": "2026-09-21T05:29:37+09:00",
@@ -16764,6 +16783,29 @@
       "cooldown": false,
       "last_run_key": "manual-user-adaptive-max-2026-09-20-backrefs",
       "last_round": "adaptive-max-r27-foundational-routing"
+    },
+    "window-04e36e1566c19f9e7ebc": {
+      "topic": "structured-references",
+      "source": "repository_references",
+      "date_range": "repository-wide",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "structured-reference-curation",
+      "search_window_key": "window-04e36e1566c19f9e7ebc",
+      "scan_count": 1,
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 21,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 4,
+      "last_position": "offset-0",
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.21,
+      "candidate_acceptance_rate": 0.2,
+      "cooldown": false,
+      "last_run_key": "adhoc-20260923T232013JST-worker-923191",
+      "last_round": "adhoc-20260923T232013JST-worker-923191-backward-01"
     }
   },
   "recent_search_windows": [
@@ -17585,6 +17627,27 @@
       "duplicate_rate": 0.0,
       "candidate_acceptance_rate": 1.0,
       "last_position": "prechecked result"
+    },
+    {
+      "topic": "structured-references",
+      "source": "repository_references",
+      "date_range": "repository-wide",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "structured-reference-curation",
+      "search_window_key": "window-04e36e1566c19f9e7ebc",
+      "run_key": "adhoc-20260923T232013JST-worker-923191",
+      "round": "adhoc-20260923T232013JST-worker-923191-backward-01",
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 21,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 4,
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.21,
+      "candidate_acceptance_rate": 0.2,
+      "last_position": "offset-0"
     }
   ],
   "search_window_history_limit": 96,

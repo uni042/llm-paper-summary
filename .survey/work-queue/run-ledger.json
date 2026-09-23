@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T13:07:57.746942+00:00",
+  "updated_at": "2026-09-23T14:29:50.674486+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -43561,6 +43561,98 @@
       "paper_active_count_before": 999,
       "paper_active_count_after": 999,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35874082498",
+      "first_recorded_at": "2026-09-23T14:29:50.674486+00:00",
+      "last_recorded_at": "2026-09-23T14:29:50.674486+00:00",
+      "signals": [
+        "discovery_or_queue_expanded",
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 5,
+        "new_papers": 3,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35874082498:1",
+          "recorded_at": "2026-09-23T14:29:50.674486+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35874082498",
+            "run_attempt": "1",
+            "source_sha": "c3ba4de34eb72ee74cf6d62652fda5029d7b0226"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-44092107b584686b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-44092107b584686b",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0fd0f07b72fe524f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2406.02500",
+          "title": "Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques"
+        },
+        {
+          "job_id": "job-research-60b244663bfce823",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2310.01889",
+          "title": "Ring Attention with Blockwise Transformers for Near-Infinite Context"
+        },
+        {
+          "job_id": "job-research-a4d88d866ebe5f04",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2404.14527",
+          "title": "Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity"
+        },
+        {
+          "job_id": "job-research-fd4788affcd524bb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2409.10516",
+          "title": "RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval"
+        }
+      ],
+      "new_paper_ids": [
+        "DOI:10.1145/3651890.3672274",
+        "arXiv:2408.12757",
+        "arXiv:2609.15627"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 999,
+      "paper_active_count_after": 1002,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

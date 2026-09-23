@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 22:07:57 JST**
+> 自動生成: **2026-09-23 23:29:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **135** |
-| 未claim Research job | **111** |
-| 直近24hの検証済みResearch収録 | **85** |
-| 最終検証済みResearch収録 | **09-23 22:05:03 JST（2分前）** |
+| 収録候補論文 | **139** |
+| 未claim Research job | **118** |
+| 直近24hの検証済みResearch収録 | **76** |
+| 最終検証済みResearch収録 | **09-23 22:05:03 JST（1時間24分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **135** |
+| canonical_id確認済みの一意な候補論文 | **139** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **135** |
+| 非終端Research job合計 | **139** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -33,14 +33,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6674** |
+| 構造化references総候補 | **6698** |
 | 処理済み | **651** |
-| 未処理 | **6023** |
+| 未処理 | **6047** |
 | 収録済みとして除外 | **543** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
-- 消化率: **9.8%**
+- 消化率: **9.7%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（13時間37分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（14時間59分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **1** | **0** | **0** | **24** | **4** | — |
+| Research | **14** | **1** | **0** | **0** | **21** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **19** | **4** | **0** | **3** | **24** | **4** | **6** |
+| 合計 | **14** | **4** | **0** | **3** | **21** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -178,7 +178,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **24件** / 直近15分heartbeat: **4件**
+- 未失効かつ非terminal jobのclaim: **21件** / 直近15分heartbeat: **0件**
 - `arXiv:2410.10819` — DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads / worker `shared-preload-pool`
   - claim: **09-23 22:07:40 JST** / heartbeat: **—** / lease expiry: **09-24 10:07:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-53de425c7cce08ac.json`
@@ -228,7 +228,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **135** |
+| ready | **139** |
 
 ### 候補の重複・識別情報欠損
 
@@ -256,10 +256,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **271** |
+| 成功result未照合のimmutable submission | **272** |
 | └ Research | **199** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
+| └ Other/Unknown | **1** |
 
 ### 厳格検証が未成立のcompleted job
 
