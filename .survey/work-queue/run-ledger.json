@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T13:05:10.602233+00:00",
+  "updated_at": "2026-09-23T13:07:57.746942+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -43495,6 +43495,72 @@
       "paper_active_count_before": 999,
       "paper_active_count_after": 999,
       "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35864739166",
+      "first_recorded_at": "2026-09-23T13:07:57.746942+00:00",
+      "last_recorded_at": "2026-09-23T13:07:57.746942+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 3,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35864739166:1",
+          "recorded_at": "2026-09-23T13:07:57.746942+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35864739166",
+            "run_attempt": "1",
+            "source_sha": "a20d271b2e97694cbe98cd8fadbb64d9eb787ed3"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-0e84e93a7c48f41f",
+          "type": "research",
+          "canonical_id": "arXiv:2405.04532",
+          "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-c0742ec707ffbbe8",
+          "type": "research",
+          "canonical_id": "arXiv:2405.14636",
+          "title": "PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-cd6b2c0b1a74df08",
+          "type": "research",
+          "canonical_id": "arXiv:2608.24063",
+          "title": "VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 999,
+      "paper_active_count_after": 999,
+      "last_successful_action": "job_blocked"
     }
   ]
 }

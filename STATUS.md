@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 22:05:10 JST**
+> 自動生成: **2026-09-23 22:07:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **138** |
-| 未claim Research job | **115** |
+| 収録候補論文 | **135** |
+| 未claim Research job | **111** |
 | 直近24hの検証済みResearch収録 | **85** |
-| 最終検証済みResearch収録 | **09-23 22:05:03 JST（7秒前）** |
+| 最終検証済みResearch収録 | **09-23 22:05:03 JST（2分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **138** |
+| canonical_id確認済みの一意な候補論文 | **135** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **138** |
+| 非終端Research job合計 | **135** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（13時間34分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（13時間37分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **20** | **2** | **0** | **0** | **23** | **3** | — |
+| Research | **19** | **1** | **0** | **0** | **24** | **4** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **20** | **5** | **0** | **3** | **23** | **3** | **6** |
+| 合計 | **19** | **4** | **0** | **3** | **24** | **4** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -145,16 +145,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-23 20:30 JST** / worker `scheduled-chat-30`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-5511cbb4903900b0c855af47.json` (job `job-research-3fc10bf916cdbe80`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-5511cbb4903900b0c855af47.json` (`ok=true`)
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-d5123e9f182a092d0234c413.json` (job `job-research-f573726edf32cd0b`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-d5123e9f182a092d0234c413.json` (`ok=true`)
+- 最新観測run: **2026-09-23 22:00 JST** / worker `scheduled-chat-00`
+- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-573272b1624939b93a0bdb83.json` (job `job-research-c0742ec707ffbbe8`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-573272b1624939b93a0bdb83.json` (`ok=true`)
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-23 20:30 JST** / worker `scheduled-chat-30`
+- 最新観測run: **2026-09-23 22:00 JST** / worker `scheduled-chat-00`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -180,37 +178,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **23件** / 直近15分heartbeat: **3件**
+- 未失効かつ非terminal jobのclaim: **24件** / 直近15分heartbeat: **4件**
+- `arXiv:2410.10819` — DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads / worker `shared-preload-pool`
+  - claim: **09-23 22:07:40 JST** / heartbeat: **—** / lease expiry: **09-24 10:07:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-53de425c7cce08ac.json`
+- `arXiv:2602.13692` — ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System / worker `shared-preload-pool`
+  - claim: **09-23 22:07:40 JST** / heartbeat: **—** / lease expiry: **09-24 10:07:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-64becbe5cce3752e.json`
+- `arXiv:2609.07108` — Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training / worker `shared-preload-pool`
+  - claim: **09-23 22:07:40 JST** / heartbeat: **—** / lease expiry: **09-24 10:07:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-89b223c1a441edfc.json`
+- `arXiv:2608.12114` — The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks / worker `shared-preload-pool`
+  - claim: **09-23 22:07:40 JST** / heartbeat: **—** / lease expiry: **09-24 10:07:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9d57d4c95ee33e52.json`
+- `arXiv:2511.19480` — Exploiting the Experts: Unauthorized Compression in MoE-LLMs / worker `scheduled-chat-00`
+  - claim: **09-23 22:07:39 JST** / heartbeat: **09-23 22:07:39 JST** / lease expiry: **09-23 23:37:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-372c7ba23950bd0c.json`
+- `DOI:10.1007/s44196-026-01236-9` — Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models / worker `scheduled-chat-00`
+  - claim: **09-23 22:07:39 JST** / heartbeat: **09-23 22:07:39 JST** / lease expiry: **09-23 23:37:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-75eff2262d950b6f.json`
+- `arXiv:2510.03151` — Mixture of Many Zero-Compute Experts: A High-Rate Quantization Theory Perspective / worker `scheduled-chat-00`
+  - claim: **09-23 22:07:39 JST** / heartbeat: **09-23 22:07:39 JST** / lease expiry: **09-23 23:37:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b3cb99418924d14e.json`
+- `arXiv:2607.01444` — On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain / worker `scheduled-chat-00`
+  - claim: **09-23 22:07:39 JST** / heartbeat: **09-23 22:07:39 JST** / lease expiry: **09-23 23:37:39 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d5b6de209d3bfef0.json`
 - `DOI:10.1016/j.neunet.2026.109617` — MoEP: Compact and efficient sparsity with modular expert paths / worker `shared-preload-pool`
   - claim: **09-23 22:01:32 JST** / heartbeat: **—** / lease expiry: **09-24 10:01:32 JST**
   - evidence: `.survey/work-queue/claims/job-research-62f6ca15b903420d.json`
-- `arXiv:2405.04532` — QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving / worker `scheduled-chat-00`
-  - claim: **09-23 21:48:47 JST** / heartbeat: **09-23 22:01:31 JST** / lease expiry: **09-23 23:31:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0e84e93a7c48f41f.json`
-- `arXiv:2405.14636` — PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services / worker `scheduled-chat-00`
-  - claim: **09-23 22:01:31 JST** / heartbeat: **09-23 22:01:31 JST** / lease expiry: **09-23 23:31:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c0742ec707ffbbe8.json`
-- `arXiv:2608.24063` — VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference / worker `scheduled-chat-00`
-  - claim: **09-23 21:48:47 JST** / heartbeat: **09-23 22:01:31 JST** / lease expiry: **09-23 23:31:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-cd6b2c0b1a74df08.json`
 - `arXiv:2603.10087` — Pooling Engram Conditional Memory in Large Language Models using CXL / worker `shared-preload-pool`
   - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
   - evidence: `.survey/work-queue/claims/job-research-1e9597cecaf6ec3b.json`
-- `arXiv:2511.19480` — Exploiting the Experts: Unauthorized Compression in MoE-LLMs / worker `shared-preload-pool`
-  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-372c7ba23950bd0c.json`
-- `arXiv:2112.05682` — Self-attention Does Not Need O(n²) Memory / worker `shared-preload-pool`
-  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3c41560bf93206f5.json`
-- `DOI:10.1109/ICEIC69189.2026.11386441` — Toward Efficient Deployment of Mixture of Experts Models: Quantization and Compression Analysis / worker `shared-preload-pool`
-  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3ccfe94f6e9f9715.json`
-- `arXiv:2602.06154` — MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models / worker `shared-preload-pool`
-  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-441084dd13b83186.json`
-- `DOI:10.1007/s44196-026-01236-9` — Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models / worker `shared-preload-pool`
-  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-75eff2262d950b6f.json`
 
 #### Audit
 
@@ -230,7 +228,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **138** |
+| ready | **135** |
 
 ### 候補の重複・識別情報欠損
 
@@ -258,8 +256,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **268** |
-| └ Research | **196** |
+| 成功result未照合のimmutable submission | **271** |
+| └ Research | **199** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 

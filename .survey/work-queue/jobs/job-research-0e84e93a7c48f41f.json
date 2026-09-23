@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2405.04532",
   "paper_path": "papers/inference/08-quantization-kernels/2024-2405.04532-qserve.md",
   "selection_reason": "Quantization-and-system co-design for cloud LLM serving with W4A8KV4 execution, fused kernels, and strong throughput/cost results.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-19T18:48:26+00:00"
+  "created_at": "2026-09-19T18:48:26+00:00",
+  "completed_at": "2026-09-23T13:07:54+00:00",
+  "blocker": "Primary full text could not be retrieved in this invocation. The arXiv HTML/PDF retrieval paths failed while the arXiv abstract, author project page, and public implementation confirm the paper identity and headline results. Per workflow, no five-slot research record was synthesized from the abstract, project README, search snippets, or secondary summaries without reading the primary manuscript in full.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-preload-9b48aa2ca1aada8eedb3e04d.json"
 }
