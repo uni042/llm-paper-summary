@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-0273ce1913f64a15a590f7e2",
-  "job_id": "job-research-52c9fc70a4b38892",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0273ce1913f64a15a590f7e2",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-0273ce1913f64a15a590f7e2","job_id":"job-research-52c9fc70a4b38892","data":{"canonical_id":"arXiv:2607.28097","arxiv_id":"2607.28097","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference","summary":"疎な専門家混合モデルでは、数学的には同値な専門家出力の加算順序でも有限精度丸めにより内部状態が変わり、後段ルータや自己回帰生成の分岐へ伝播しうる。本研究はDeepSeek-V4-Flashのネイティブ実行系で専門家集合・ゲート・入力状態を固定し、専門家項の表現精度と累算精度だけを変える4方式を制御比較する。単一層の全順列、永続的な層別順序、状態再構成介入を組み合わせ、局所的な数値差が層状態、ルーティング、トークン列へ伝わる因果経路を追跡する。BF16項をFP32で累算するC方式だけは評価した192軌跡でネイティブ経路とビット一致し、数値互換性には項表現、累算精度、加算順序を一体の契約として規定すべきだと示す。","list_summary":"疎MoEの専門家加算順序だけで内部状態と生成文が分岐しうることを全順列・状態再構成で実証し、BF16項＋FP32累算を評価範囲の安定な互換契約として特定する。","authors":["Tianyang Zhu"],"authors_affiliations":"Independent Researcher","published":"2026-07-30","publication":"arXiv:2607.28097v1","publication_type":"プレプリント","publication_status":"v1","lineage":"MoE数値再現性・決定論的推論・実行時互換性","topics":["MoE","浮動小数点加算","数値再現性","決定論的推論","実行時適合性"],"importance":"MoE高速化で専門家の配送や結合順序を変えるとき、演算グラフと重みが同じでも加算の実装意味論が生成挙動を変えうることを、単なる出力差ではなく内部状態境界まで追跡して示した点が重要である。","implementation":"ColibriのDeepSeek-V4-Flashネイティブ非DSpark経路を計測・介入可能に拡張。CPUで専門家重みをストリームし、各トークン6専門家の6!=720順列を列挙する。","hardware_evaluation":"AMD Ryzen AI MAX+ 395、16コア32スレッド、128GiB、Windows 11。搭載Radeon 8060Sは評価経路では未使用。","quality_effect":"数値差は必ず即時トークン差になるわけではなく、同じトークンを出したまま永続状態に残り数段後に可視化しうる。","source":"https://arxiv.org/abs/2607.28097","sources":["https://arxiv.org/abs/2607.28097","https://arxiv.org/html/2607.28097","https://arxiv.org/pdf/2607.28097"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"一次論文の参考文献節を確認済み。正規識別子追加なし","references_total":15},"reservation":{"claim_id":"claim-0273ce1913f64a15a590f7e2","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
