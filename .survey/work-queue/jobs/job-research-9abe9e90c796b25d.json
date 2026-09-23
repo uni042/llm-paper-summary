@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-9abe9e90c796b25d",
+  "type": "research",
+  "parent_job_id": "job-943e1b013164e7ce",
+  "priority": 90,
+  "canonical_id": "arXiv:2207.00032",
+  "arxiv_id": "2207.00032",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "DeepSpeed- Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale",
+  "source_url": "https://www.semanticscholar.org/paper/c022f75b00d795c6297d6a9ea948856ea4d365a1",
+  "paper_path": null,
+  "selection_reason": "CPU/NVMe/GPU階層メモリを使う大規模Transformer推論基盤で、オフロード・異種メモリ・推論システムというリポジトリ重点系統へ直接接続する基礎的なシステム論文。",
+  "priority_breakdown": {
+    "base": 50,
+    "lineage": 30,
+    "recency": 0,
+    "venue": 10,
+    "total": 90
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T18:33:53+00:00"
+}
