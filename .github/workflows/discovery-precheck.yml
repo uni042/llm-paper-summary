@@ -159,6 +159,11 @@ jobs:
               .survey/work-queue/discovery-precheck/requests \
               .survey/work-queue/discovery-precheck/results \
               .survey/work-queue/discovery-preload
+            while IFS= read -r -d '' discovery_slot; do
+              git add -- "$discovery_slot"
+            done < <(
+              find .survey/work-queue/records -type f -name 'discovery-preload.json' -print0
+            )
 
             if git diff --cached --quiet; then
               echo 'No Discovery precheck changes to publish.'
