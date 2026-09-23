@@ -307,7 +307,12 @@ def advance(repo: Path, *, mode: str = "all") -> dict[str, Any]:
     for key in ("generated_requests", "built_descriptors", "already_settled", "request_conflicts", "quarantined"):
         summary[key] = sorted(set(summary[key]))
     descriptor_paths = [Path(path) for path in summary["built_descriptors"]]
-    summary["run_state_cache_touched"] = worker_run_state_cache.observe_descriptors(repo, descriptor_paths) if descriptor_paths else {}
+    summary["run_state_cache_touched"] = {}
+    if descriptor_paths:
+        try:
+            summary["run_state_cache_touched"] = worker_run_state_cache.observe_descriptors(repo, descriptor_paths)
+        except Exception as exc:
+            summary["run_state_cache_warning"] = f"{type(exc).__name__}: {exc}"
     summary["next_action"] = "dispatch_submission_drain_once" if summary["built_descriptors"] else "no_new_descriptor"
     return summary
 
