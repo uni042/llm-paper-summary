@@ -14,6 +14,7 @@ import hashlib
 import json
 import re
 import sys
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -33,6 +34,11 @@ SCHEMA_VERSION = 3
 DEFAULT_TARGET_UNSEEN = discovery_search_filter.DEFAULT_PREFETCH_UNSEEN
 MAX_TARGET_UNSEEN = 100
 MAX_PAGES = 100
+
+# Batch precheck threads may share one checkout. Preload adoption mutates claim/bank
+# sidecars, so serialize only that short critical section while provider retrieval
+# and identity filtering remain parallel.
+PRELOAD_CLAIM_LOCK = threading.Lock()
 
 
 class DiscoveryPrecheckRequestError(ValueError):
@@ -195,10 +201,11 @@ def _process_v3(
     preload_cached_pages_used = 0
 
     if request.get("preload_id") and not request.get("preload_seed"):
-        preload_entry, preload_source_result = discovery_preload_queue.claim_and_load(
-            repo_root,
-            request,
-        )
+        with PRELOAD_CLAIM_LOCK:
+            preload_entry, preload_source_result = discovery_preload_queue.claim_and_load(
+                repo_root,
+                request,
+            )
         served_cached_page = False
 
         def fetch_page(cursor: str | None) -> dict[str, Any]:

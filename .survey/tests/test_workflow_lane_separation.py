@@ -62,6 +62,24 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         self.assertIn(".survey/work-queue/results/audit", text)
         self.assertIn("Immutable submission failure result was persisted to main.", text)
 
+
+    def test_discovery_precheck_foreground_uses_four_way_batch_and_single_writer(self):
+        text = self._text("discovery-precheck.yml")
+        self.assertIn("DISCOVERY_PRECHECK_PARALLELISM: '4'", text)
+        self.assertIn("process_discovery_precheck_batch.py", text)
+        self.assertIn('--parallelism "$DISCOVERY_PRECHECK_PARALLELISM"', text)
+        self.assertIn("discovery-preload-background-main", text)
+        self.assertIn("git commit -m 'survey: publish discovery precheck results and preload stock'", text)
+        self.assertIn("git push origin HEAD:main", text)
+
+        batch = (ROOT / ".survey/scripts/process_discovery_precheck_batch.py").read_text(encoding="utf-8")
+        self.assertIn("DEFAULT_PARALLELISM = 4", batch)
+        self.assertIn("ThreadPoolExecutor", batch)
+
+        processor = (ROOT / ".survey/scripts/process_discovery_precheck.py").read_text(encoding="utf-8")
+        self.assertIn("PRELOAD_CLAIM_LOCK = threading.Lock()", processor)
+        self.assertIn("with PRELOAD_CLAIM_LOCK:", processor)
+
     def test_background_helper_no_longer_owns_claim_or_immutable_submission_triggers(self):
         text = self._text("survey-helper.yml")
         self.assertIn("group: survey-background-main", text)

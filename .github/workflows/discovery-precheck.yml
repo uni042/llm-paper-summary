@@ -29,6 +29,8 @@ jobs:
   precheck:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      DISCOVERY_PRECHECK_PARALLELISM: '4'
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -49,11 +51,15 @@ jobs:
           python -m py_compile \
             .survey/scripts/discovery_preload_queue.py \
             .survey/scripts/process_discovery_precheck.py \
+            .survey/scripts/process_discovery_precheck_batch.py \
             .survey/scripts/derive_worker_run_state.py \
             .survey/scripts/queue_worker.py
           python -m unittest discover \
             -s .survey/tests \
             -p 'test_discovery_preload_queue.py'
+          python -m unittest discover \
+            -s .survey/tests \
+            -p 'test_discovery_precheck_batch.py'
 
       - name: Process unsettled Discovery precheck requests
         shell: bash
@@ -121,54 +127,78 @@ jobs:
               find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
             )
 
+            : > /tmp/discovery-foreground-requests.txt
+            : > /tmp/discovery-preload-requests.txt
+
             if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
-              requests=("$MANUAL_REQUEST")
+              case "$MANUAL_REQUEST" in
+                .survey/work-queue/discovery-precheck/requests/*.json) ;;
+                *) echo "Unsupported precheck request path: $MANUAL_REQUEST" >&2; exit 2 ;;
+              esac
+              name="$(basename "$MANUAL_REQUEST")"
+              result=".survey/work-queue/discovery-precheck/results/$name"
+              if [ ! -f "$result" ]; then
+                case "$name" in
+                  preload-*.json) printf '%s\n' "$MANUAL_REQUEST" >> /tmp/discovery-preload-requests.txt ;;
+                  *) printf '%s\n' "$MANUAL_REQUEST" >> /tmp/discovery-foreground-requests.txt ;;
+                esac
+              fi
             else
-              requests=()
-              # Foreground push runs publish worker results immediately and leave
-              # speculative preload requests to the separate scheduled lane.
               for request in "${all_requests[@]:-}"; do
                 [ -n "$request" ] || continue
-                case "$(basename "$request")" in
-                  preload-*.json) ;;
-                  *) requests+=("$request") ;;
+                name="$(basename "$request")"
+                result=".survey/work-queue/discovery-precheck/results/$name"
+                [ ! -f "$result" ] || continue
+                case "$name" in
+                  preload-*.json)
+                    if [ "$GITHUB_EVENT_NAME" != "push" ]; then
+                      printf '%s\n' "$request" >> /tmp/discovery-preload-requests.txt
+                    fi
+                    ;;
+                  *) printf '%s\n' "$request" >> /tmp/discovery-foreground-requests.txt ;;
                 esac
               done
-              if [ "$GITHUB_EVENT_NAME" != "push" ]; then
-                for request in "${all_requests[@]:-}"; do
-                  [ -n "$request" ] || continue
-                  case "$(basename "$request")" in
-                    preload-*.json) requests+=("$request") ;;
-                  esac
-                done
-              fi
             fi
 
             processed=0
             foreground_failures=0
             preload_failures=0
-            for request in "${requests[@]:-}"; do
+
+            # Foreground worker prechecks are independent after the shared identity
+            # snapshot is built. Run up to four concurrently; the batch processor
+            # serializes only the short preload claim/bank mutation section.
+            if [ -s /tmp/discovery-foreground-requests.txt ]; then
+              set +e
+              python .survey/scripts/process_discovery_precheck_batch.py \
+                --repo-root . \
+                --requests-file /tmp/discovery-foreground-requests.txt \
+                --snapshot-dir /tmp/discovery-identities \
+                --rejection-ledger /tmp/discovery-rejections.json \
+                --parallelism "$DISCOVERY_PRECHECK_PARALLELISM"
+              batch_rc=$?
+              set -e
+              if [ "$batch_rc" -eq 1 ]; then
+                foreground_failures=1
+              elif [ "$batch_rc" -ne 0 ]; then
+                echo 'Fatal Discovery precheck batch failure; refusing partial publish.' >&2
+                exit "$batch_rc"
+              fi
+              batch_count="$(grep -cve '^[[:space:]]*$' /tmp/discovery-foreground-requests.txt || true)"
+              processed=$((processed + batch_count))
+            fi
+
+            # Speculative preload refreshes remain on their separate background lane
+            # and are intentionally paced/serialized to avoid provider bursts.
+            while IFS= read -r request; do
               [ -n "$request" ] || continue
-              case "$request" in
-                .survey/work-queue/discovery-precheck/requests/*.json) ;;
-                *) echo "Unsupported precheck request path: $request" >&2; exit 2 ;;
-              esac
               name="$(basename "$request")"
               result=".survey/work-queue/discovery-precheck/results/$name"
-              if [ -f "$result" ]; then
-                continue
-              fi
 
-              # Preload traffic must not burst Semantic Scholar hard enough to
-              # starve foreground workers. Ordinary worker requests stay unpaced;
-              # the provider adapter still handles any returned 429 explicitly.
-              if [[ "$name" == preload-*.json ]]; then
-                provider="$(
-                  python -c 'import json,sys; from pathlib import Path; p=Path(sys.argv[1]); value=json.loads(p.read_text(encoding="utf-8")); print(str(value.get("provider") or "").strip().casefold())' "$request"
-                )"
-                if [ "$provider" = "semantic_scholar" ]; then
-                  sleep 2
-                fi
+              provider="$(
+                python -c 'import json,sys; from pathlib import Path; p=Path(sys.argv[1]); value=json.loads(p.read_text(encoding="utf-8")); print(str(value.get("provider") or "").strip().casefold())' "$request"
+              )"
+              if [ "$provider" = "semantic_scholar" ]; then
+                sleep 2
               fi
 
               mkdir -p "$(dirname "$result")"
@@ -180,13 +210,10 @@ jobs:
                 --repo-root .; then
                 :
               else
-                case "$name" in
-                  preload-*.json) preload_failures=1 ;;
-                  *) foreground_failures=1 ;;
-                esac
+                preload_failures=1
               fi
               processed=$((processed + 1))
-            done
+            done < /tmp/discovery-preload-requests.txt
 
             # Claims release only the Discovery sidecar, so refill those hot
             # slots again in the same workflow instead of leaving them empty until
