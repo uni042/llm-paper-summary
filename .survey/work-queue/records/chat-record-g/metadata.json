@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3e602a0f4e7177d85de6b301","job_id":"job-research-b8145b0c5f2892c4","data":{"canonical_id":"arXiv:2609.19880","arxiv_id":"2609.19880","doi":"10.48550/arXiv.2609.19880","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"D-Quant: Driftable Entropy Coding for KV Cache Quantization","summary":"D-Quantは、KVキャッシュの量子化値が前処理後に強い非一様分布を持つ点を利用し、固定幅符号ではなく範囲非対称数体系（range Asymmetric Numeral Systems; rANS）によるエントロピー符号化を使う量子化方式である。可変長符号をそのまま使うと注意カーネルの固定ストライドアクセスを壊すため、各トークンのKey/Valueストリームを固定サイズ容器へ格納し、予算超過時だけ高コスト記号を近傍の低コスト記号へ移すドリフト機構を導入する。Qwen3-8BとLlama-3.1-8B-Instructで2.26 bit/value時にBF16へ近い長文性能を維持し、H20実機でKVメモリ最大約7倍削減、メモリ制約下の最大実行可能バッチ比較でデコードスループット最大3.5倍を報告する。","list_summary":"固定サイズ容器と長さ制約付きドリフトを組み合わせ、エントロピー符号化KVキャッシュを注意カーネル内で直接並列復号できる形にした低ビット量子化方式。","authors":["Yi Su","Hong Liu","Guanghua Yu","Jianchen Zhu"],"authors_affiliations":"Tencent","published":"2026-09-17","publication":"arXiv:2609.19880v1","publication_type":"プレプリント","publication_status":"Preprint v1 (2026-09-17)","lineage":"KV cache quantization / entropy coding / long-context serving / attention kernel co-design","topics":["KVキャッシュ量子化","エントロピー符号化","rANS","長文推論","GPUカーネル","メモリ帯域"],"importance":"固定幅量子化のビット幅と再構成レベル数の結合を外しつつ、可変長符号の不規則アクセスというシステム上の欠点を固定サイズ容器で解消する。量子化アルゴリズムだけでなく復号・注意計算を一体化したカーネルまで評価しているため、KV圧縮と推論基盤の接点として重要。","implementation":"専用GPU符号化・復号カーネルを実装し、復号値をBF16 KVへ実体化せず注意計算へ直接融合する。論文本文にはwarp単位encoder、token中心decoder、rANS table設計と疑似コードを記載。","hardware_evaluation":"NVIDIA H20 96GB。効率評価はQwen3-8Bを単一H20で実測し、実際の圧縮KVキャッシュを使用。","quality_effect":"2.26 bit/valueでQwen3-8B/Llama-3.1-8BのRULER平均86.50/88.94に対しBF16は87.31/89.69。圧縮は近似であり完全無損失ではないが、長文で比較低ビット方式よりBF16に近い。","source":"https://arxiv.org/abs/2609.19880","sources":["https://arxiv.org/abs/2609.19880","https://arxiv.org/html/2609.19880"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary arXiv manuscript reference section","references_total":36},"reservation":{"claim_id":"claim-3e602a0f4e7177d85de6b301","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-ee97c1c62e37d96ca0e0e94f",
+  "job_id": "job-research-f1b591a1f05fa2ad",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ee97c1c62e37d96ca0e0e94f",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

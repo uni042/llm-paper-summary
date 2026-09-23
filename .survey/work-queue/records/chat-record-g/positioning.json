@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3e602a0f4e7177d85de6b301","job_id":"job-research-b8145b0c5f2892c4","data":{"limitations":"評価はQwen3-8BとLlama-3.1-8B-Instructの2モデル、主にNVIDIA H20 96GB単一GPUに限定され、異なるGPU世代、大規模GQA/MQAモデル、複数GPUや分離prefill/decode環境での一般性は未検証である。entropy decodeは追加computeを要しsmall batchではBF16より遅い。最大3.5倍throughputは同一batchのkernel speedupではなく、圧縮で最大実行可能batchが増えるcapacity効果を含む。Qwen3-8Bの64K/128Kはstatic YaRN外挿を含む。公式code repositoryはarXiv本文・ページから確認できず、専用kernelの再現には論文のalgorithm記述からの実装が必要である。","differences":"KIVI、KVQuant、QuaRot、OScaR等は量子化粒度、rotation、outlier処理、低bit gridを改善するが、最終symbol representationは固定幅が中心で、bit幅とlevel数の結合が残る。CacheGenやSplitZipはentropy/lossless compressionをKV転送へ使い、attention前に展開できる通信経路を主対象とする。D-Quantは圧縮KVをresident formatとして保持し、fixed-size containerとdriftでrandom access可能な規則layoutを保証したままattention kernel内で直接decodeする。したがって『より良いquantizer』だけでなく『entropy-coded KVを実行時memory formatにする』点が差である。","implementation_status":"arXiv v1のプレプリント。論文ではwarp単位encoder、token-centric rANS decoder、attention contractionへのdequantization融合を実装し、NVIDIA H20 96GBでend-to-end memory/throughputを測定している。Appendix Aにencoding/decoding pseudocodeを掲載する一方、arXivページおよび本文で公式code URLは確認できない。","research_positioning":"KV cache quantization系とserving kernel co-design系の中間に位置する。OScaR等がpreprocessingとquantization accuracyを押し下げる方向なのに対し、D-Quantはcoding formatをentropy codeへ変更してrate-distortion効率を上げ、その可変長性をfixed containerとkernel設計で吸収する。CacheGen/SplitZipのようなKV compression/transfer研究に対しては、転送後に展開するのではなく圧縮状態からattentionへ直接入るresident representationへ踏み込む。CPU/SSD/NVMe階層memory研究とは直接統合していないが、tokenごとの固定長containerはI/O alignmentやcache block管理と相性がよく、将来の階層KV offloadとの接続余地が大きい。"},"reservation":{"claim_id":"claim-3e602a0f4e7177d85de6b301","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ee97c1c62e37d96ca0e0e94f",
+  "job_id": "job-research-f1b591a1f05fa2ad",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ee97c1c62e37d96ca0e0e94f",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
