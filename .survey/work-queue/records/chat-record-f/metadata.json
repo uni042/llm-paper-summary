@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-9105373f954fe3246d7dc7ab",
-  "job_id": "job-research-4f3d063490df512a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9105373f954fe3246d7dc7ab",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-9105373f954fe3246d7dc7ab","job_id":"job-research-4f3d063490df512a","data":{"canonical_id":"arXiv:2609.15039","arxiv_id":"2609.15039","doi":"10.48550/arXiv.2609.15039","openreview_id":null,"arxiv_categories":{"primary":"cs.CR","cross_list":["cs.AI","cs.LG"]},"title":"SpliTEE: Improving LLM Inference on Trusted Hardware with Differentially Private GPU Outsourcing","summary":"SpliTEEは、信頼実行環境（TEE）内のCPUだけでは遅いLLM推論を、線形演算だけ非信頼GPUへ委譲して高速化する分割推論方式である。GPUへ見せる中間表現には演算ごとの大域感度から校正したガウス差分プライバシー雑音を加え、TEE内で事前計算済み補正を引く。Intel TDX、Llama-3.2-3B、Qwen3-4Bで実装し、800生成トークンではLlamaでTDX 53.28秒に対しEP1 23.90秒、Qwenで約83秒に対し約35秒、暗号方式Slalomより最大約15秒高速と報告する。","list_summary":"TEE内のLLM線形演算を差分プライバシーで保護してGPUへ委譲し、プロンプト漏洩を抑えつつCPU-only TDX推論を約2倍高速化する。","authors":["Shashie Dilhara Batan Arachchige","Robin Carpentier","Hassan Jameel Asghar","Dali Kaafar"],"authors_affiliations":"School of Computing, Macquarie University","published":"2026-09-14","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1 (2026-09-14)","lineage":"confidential inference / trusted execution environment / split inference / differential privacy","topics":["信頼実行環境","差分プライバシー","GPUオフロード","分割推論","プロンプト復元攻撃"],"importance":"暗号化・有限体量子化を用いるSlalom系の分割推論を、浮動小数点のまま動く差分プライバシー保護へ置換し、Transformer主要演算の大域感度と数値誤差上界まで与える。","implementation":"Intel TDX仮想機械とRTX PRO 4500 Blackwellを用いた公開実装。QEMU IVSHMEMでTEEとGPU worker間の共有メモリ通信を実装。","hardware_evaluation":"Intel Xeon Silver 4514Y、117GB RAM、TDX guest 32 vCPU/93GB、NVIDIA RTX PRO 4500 Blackwell 32GB。Ubuntu 24.04。","quality_effect":"雑音はGPUへ送る入力だけに加えTEEで補正するためモデル自体は原計算へ戻るが、浮動小数点の雑音相殺誤差が残る。epsilonを調整して精度・プライバシーを交換する。","source":"https://arxiv.org/abs/2609.15039","sources":["https://arxiv.org/abs/2609.15039","https://arxiv.org/pdf/2609.15039"],"code":"https://github.com/DPVault/SpliTEE","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":41},"reservation":{"claim_id":"claim-9105373f954fe3246d7dc7ab","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
