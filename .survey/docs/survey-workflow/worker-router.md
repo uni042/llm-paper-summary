@@ -344,7 +344,7 @@ submission processorがimmutable resultをmainへ反映した直後、descriptor
 
 増分cacheは `.survey/work-queue/run-state/cache/` に置く**高速化用index**であり正本ではない。active/carry-over attempt、pending/retryable submission、current invocation成功件数、last terminal status、pipeline ahead等を保持するが、正規claim/submission/resultと食い違う場合はcanonical durable stateを優先してcacheを破棄・再構築する。current invocation成功件数は従来どおりresultの `processed_at >= actual_invocation_start` で数え、claim時刻では数えない。maintenanceでは全run-state履歴を走査して最新worker runのcacheをcanonical factsから再構築できる。
 
-settled transportはhot queueの全件走査を避けるため段階的に `archive/` へ退避してよい。退避対象は正規result/descriptorとのattempt identity一致を確認したcompleted-submission request、result一致済みpreflight request、result一致済みrun-state request、十分に時間が経過しdescriptor反映済みのpassing preflight resultに限る。**unresolved / pending / retryable / repair対象、active claim、immutable submission/result、run-state resultそのものは退避しない。** archive失敗・cache更新失敗は論文処理を失敗扱いにせず、hot状態またはcanonical再構築経路を残す。
+settled transportはhot queueの全件走査を避けるため段階的に `archive/` へ退避してよい。退避対象は正規result/descriptorとのattempt identity一致を確認したcompleted-submission request、allocator result一致済みclaim request、result一致済みpreflight request、result一致済みrun-state request、十分に時間が経過しdescriptor反映済みのpassing preflight resultに限る。claim resultとclaim recordはactive/carry-over identityの耐久事実として残す。**unresolved / pending / retryable / repair対象、active claim、immutable submission/result、run-state resultそのものは退避しない。** archive失敗・cache更新失敗は論文処理を失敗扱いにせず、hot状態またはcanonical再構築経路を残す。
 
 `gate.hard_stop` が返る場合はその値も正本とし、ワーカーが停止理由を再分類しない。主な `required_action` は次のように解釈する。
 
