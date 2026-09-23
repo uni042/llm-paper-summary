@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 09:44:29 JST**
+> 自動生成: **2026-09-23 09:49:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **186** |
-| 未claim Research job | **186** |
-| 直近24hの検証済みResearch収録 | **79** |
-| 最終検証済みResearch収録 | **09-23 09:44:26 JST（3秒前）** |
+| 収録候補論文 | **185** |
+| 未claim Research job | **185** |
+| 直近24hの検証済みResearch収録 | **80** |
+| 最終検証済みResearch収録 | **09-23 09:49:27 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **186** |
+| canonical_id確認済みの一意な候補論文 | **185** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **186** |
+| 非終端Research job合計 | **185** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（1時間13分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（1時間18分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 09:49:27 JST** [research] `arXiv:2609.15311` — FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads
+  - job: `.survey/work-queue/jobs/job-research-3d00beb8c812c5e7.json`
+  - result: `.survey/work-queue/results/research/attempt-2bf3de3b255ebab0e493ae1d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-2bf3de3b255ebab0e493ae1d.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md`
 - **09-23 09:44:26 JST** [research] `arXiv:2607.28097` — From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference
   - job: `.survey/work-queue/jobs/job-research-52c9fc70a4b38892.json`
   - result: `.survey/work-queue/results/research/attempt-0273ce1913f64a15a590f7e2.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-a302801e2f42ef7601d7976c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a302801e2f42ef7601d7976c.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md`
-- **09-23 07:30:32 JST** [research] `arXiv:2609.08566` — BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents
-  - job: `.survey/work-queue/jobs/job-research-ce081c207f1ded58.json`
-  - result: `.survey/work-queue/results/research/attempt-9a2c0141760202bf19379f9a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-9a2c0141760202bf19379f9a.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.08566-bio-memart-biometric-aware-kv-cache-memory-for-multi-user-llm-agents.md`
 
 ### Audit
 
@@ -205,7 +205,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **186** |
+| ready | **185** |
 
 ### 候補の重複・識別情報欠損
 
@@ -225,7 +225,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **965** |
+| inference/training/survey配下の論文Markdown実体 | **966** |
 
 ### immutable submissionの未照合
 
