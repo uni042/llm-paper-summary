@@ -1,38 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T18:34:21+00:00",
+  "updated_at": "2026-09-23T18:37:15+00:00",
   "last_run_key": "scheduled-chat-30-20260924T032918-9f2c7a",
-  "last_round": "disc-s30-032918-r3",
+  "last_round": "disc-s30-032918-r4-retry",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T03:00:00+09:00",
-      "round": "specialist-cross-dc-2",
-      "axis": "GPU runtime・collective communication・heterogeneous memory・cross-datacenter disaggregation",
-      "query_summary": "前roundのKV/context軸から移り、collective communication、GPU runtime、heterogeneous memory、networked/disaggregated servingの検索窓をずらして探索。既知候補の多くは最新identity snapshotで既収録/既投入だった。未評価かつsystem-level contributionが明確だったPDDを一次arXiv情報で評価し採用した。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2603.17435",
-        "arXiv:2607.28150",
-        "arXiv:2606.16135",
-        "arXiv:2607.16892"
-      ],
-      "next_axis_hint": "既収録重要serving論文のforward citation、DBMS/storage由来のcache/prefetch、またはMoE expert I/O schedulingへ移る",
-      "source_submission": "work-queue/submissions/20260917T0307JST-discovery-specialist-cross-dc-2.json"
-    },
     {
       "run_key": "2026-09-17T04:00:00+09:00",
       "round": "specialist-flash-memory-hardware-1",
@@ -8823,6 +8800,43 @@
       "duplicate_ratio": 0.65,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:disc-s30-032918-r4-retry",
+      "precheck_request_id": "disc-s30-032918-r4-retry",
+      "run_key": "scheduled-chat-30-20260924T032918-9f2c7a",
+      "round": "disc-s30-032918-r4-retry",
+      "axis": "forward citations of Splitwise for disaggregated LLM serving (rate-limit retry)",
+      "query_summary": "Splitwiseの前方引用をrate-limit後に正規再試行し、20件の未収録候補から最新の分離型servingおよびMoE decodingデータフロー候補を選別。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2311.18677/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [
+        "arXiv:2609.24639",
+        "arXiv:2609.21137"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260923T183700Z-scheduled-chat-30-r4.json",
+      "source_submissions": [
+        "work-queue/submissions/20260923T183700Z-scheduled-chat-30-r4.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16776,6 +16790,19 @@
       "duplicate_ratio": 0.65,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
+    },
+    "forward citations of Splitwise for disaggregated LLM serving (rate-limit retry)": {
+      "last_run_key": "scheduled-chat-30-20260924T032918-9f2c7a",
+      "rounds": 1,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -17768,6 +17795,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-30-20260924T032918-9f2c7a",
       "last_round": "disc-s30-032918-r3"
+    },
+    "window-61a5c3c522fe1823ed1b": {
+      "topic": "splitwise forward citations",
+      "source": "semantic_scholar",
+      "date_range": "2026",
+      "category": "disaggregated-serving",
+      "citation_direction": "forward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-61a5c3c522fe1823ed1b",
+      "scan_count": 1,
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 71,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 2,
+      "last_position": "offset-0",
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.71,
+      "candidate_acceptance_rate": 0.1,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-30-20260924T032918-9f2c7a",
+      "last_round": "disc-s30-032918-r4-retry"
     }
   },
   "recent_search_windows": [
@@ -18902,6 +18952,27 @@
       "candidate_accepted_count": 2,
       "unseen_rate": 0.4166666666666667,
       "duplicate_rate": 0.2708333333333333,
+      "candidate_acceptance_rate": 0.1,
+      "last_position": "offset-0"
+    },
+    {
+      "topic": "splitwise forward citations",
+      "source": "semantic_scholar",
+      "date_range": "2026",
+      "category": "disaggregated-serving",
+      "citation_direction": "forward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-61a5c3c522fe1823ed1b",
+      "run_key": "scheduled-chat-30-20260924T032918-9f2c7a",
+      "round": "disc-s30-032918-r4-retry",
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 71,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 2,
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.71,
       "candidate_acceptance_rate": 0.1,
       "last_position": "offset-0"
     }
