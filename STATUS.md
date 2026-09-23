@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 17:34:24 JST**
+> 自動生成: **2026-09-23 18:07:54 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **157** |
+| 収録候補論文 | **156** |
 | 未claim Research job | **155** |
-| 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-23 17:31:13 JST（3分前）** |
+| 直近24hの検証済みResearch収録 | **85** |
+| 最終検証済みResearch収録 | **09-23 18:07:47 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **157** |
+| canonical_id確認済みの一意な候補論文 | **156** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **157** |
+| 非終端Research job合計 | **156** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（9時間3分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（9時間37分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **18** | **2** | **0** | **0** | **2** | **0** | — |
+| Research | **19** | **2** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **18** | **5** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **19** | **5** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 18:07:47 JST** [research] `arXiv:2609.19880` — D-Quant: Driftable Entropy Coding for KV Cache Quantization
+  - job: `.survey/work-queue/jobs/job-research-b8145b0c5f2892c4.json`
+  - result: `.survey/work-queue/results/research/attempt-3e602a0f4e7177d85de6b301.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-3e602a0f4e7177d85de6b301.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.19880-d-quant-driftable-entropy-coding-for-kv-cache-quantization.md`
 - **09-23 17:31:13 JST** [research] `arXiv:2601.13631` — ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management
   - job: `.survey/work-queue/jobs/job-research-62c06a71da7d8bc0.json`
   - result: `.survey/work-queue/results/research/attempt-64f95f13e8bf245cb090a9d9.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-b7b0e81277b66329080b1c40.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b7b0e81277b66329080b1c40.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md`
-- **09-23 14:41:11 JST** [research] `arXiv:2510.16138` — Expert Merging in Sparse Mixture of Experts with Nash Bargaining
-  - job: `.survey/work-queue/jobs/job-research-04494ef5a577c4fb.json`
-  - result: `.survey/work-queue/results/research/attempt-c3d771ab5950563d5d332246.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-c3d771ab5950563d5d332246.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md`
 
 ### Audit
 
@@ -180,13 +180,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.1145/3832810.3832886` — IHS-LM: Intra-batch Hybrid Scheduling and Layer Migration for VLM Pipeline Inference Acceleration on Edge Devices / worker `scheduled-chat-30`
   - claim: **09-23 17:34:14 JST** / heartbeat: **—** / lease expiry: **09-23 19:04:14 JST**
   - evidence: `.survey/work-queue/claims/job-research-69b42673d686f6f1.json`
-- `arXiv:2609.19880` — D-Quant: Driftable Entropy Coding for KV Cache Quantization / worker `scheduled-chat-00`
-  - claim: **09-23 17:32:35 JST** / heartbeat: **—** / lease expiry: **09-23 19:02:35 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b8145b0c5f2892c4.json`
 
 #### Audit
 
@@ -206,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **157** |
+| ready | **156** |
 
 ### 候補の重複・識別情報欠損
 
@@ -226,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **989** |
+| inference/training/survey配下の論文Markdown実体 | **990** |
 
 ### immutable submissionの未照合
 
