@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ffa0b1baa60976c86cf81af0",
-  "job_id": "job-research-1330e1d7068cf379",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ffa0b1baa60976c86cf81af0",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ffa0b1baa60976c86cf81af0","job_id":"job-research-1330e1d7068cf379","data":{"overview":"120B tokenの同一KD予算では、剪定checkpoint初期化が平均73.45でrandom initialization 61.66を11.79点上回り、80A3B teacher 82.68の86.5%を回復した。expert compressionを24A2B→6A1Bで400B token続けると、frequency/soft logits/REAPやpruning/mergingの差は小さく、partial-preservationはMMLU-Pro 42.62→44.05、GSM8K 71.08→74.18など多くの主要指標を改善した。23A2Bのloss比較ではMTP KDを含むfull objectiveがMMLU 75.67、EvalPlus 69.30等を達成する。400B tokenではone-stage MMLU 75.86に対しdepth-first 77.39、MMLU-Redux 75.41→78.01となり、段階的剪定が優位だった。","key_results":[{"metric":"剪定初期化の平均スコア","value":"73.45","baseline":"Random Init + KD 61.66","condition":"23A2B相当target, 120B tokens, KD","interpretation":"同一構造・学習予算でもpretrained weight継承が+11.79点。"},{"metric":"teacher性能保持","value":"86.5%","baseline":"Qwen3-Next-80A3B average 82.68","condition":"Pruned + KD average 73.45, 約3.4× smaller","interpretation":"構造化剪定が有用な初期表現を保持する。"},{"metric":"partial-preservation GSM8K","value":"74.18","baseline":"同じsoft-logits/router-weight mergingでpreserveなし71.08","condition":"expert compression後400B continual pretraining","interpretation":"全統合より重要expertを半分そのまま残す方が回復しやすい。"},{"metric":"progressive MMLU","value":"77.39","baseline":"one-stage 75.86","condition":"Depth-first 40B+360B vs one-stage 400B","interpretation":"同一token予算でも段階的architecture transitionが有利。"},{"metric":"MTP KD speculative acceptance","value":"HumanEval acc_4 8.24%","baseline":"MTP Loss 4.09%","condition":"pretraining stage","interpretation":"multi-token teacher supervisionが長いdraft acceptanceを改善。"}],"negative_results":"400B token継続後は一回限りのexpert pruning/merging方式に万能な勝者がなく、指標ごとに順位が入れ替わる。LM loss追加はMMLU 74.16→74.93、MMLU-Pro 50.97→51.44を改善する一方、GSM8Kは84.27→82.98、MMLU-Reduxは75.85→74.69と低下する。progressive scheduleも全benchmarkで一律に勝つわけではなく、depth-firstはMMLU等で強いがBBH 70.70はone-stage 73.97より低い。より細かくstageを増やしても追加のbenchmark gainは得られない。","interpretation":"最も重要な知見は、圧縮直後のone-shot rankingだけでは長期pretraining後の優劣を予測しにくい点である。初期checkpointの情報を保持し、構造変化を段階化し、teacher分布とground truthを併用する方が、expert選択指標の微差より最終性能へ強く効く。MTP KDは通常のbackbone回復に加えてspeculative decoding適性も改善する。","quality_impact":"最終SlimQwenは23A2Bで、one-stage 400Bに対してdepth-first 40B+360BはMMLU 77.39、MMLU-Pro 53.22、MMLU-Redux 78.01、CMMLU 83.01を達成する。teacher 80A3Bには及ばないが、総パラメータを約4倍圧縮しながら幅広い能力を維持する。"},"reservation":{"claim_id":"claim-ffa0b1baa60976c86cf81af0","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
