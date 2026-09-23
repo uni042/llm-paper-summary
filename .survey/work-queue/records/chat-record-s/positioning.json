@@ -1,13 +1,19 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-e320c142c976a89229191f7e",
-  "job_id": "job-research-958b0ab5aeb9819d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-e320c142c976a89229191f7e",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+ "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-e320c142c976a89229191f7e","job_id":"job-research-958b0ab5aeb9819d",
+ "data":{
+  "differences":[
+   {"name":"GPUメモリ向けKV圧縮との差","description":"H2OやKV量子化は実行中のKV容量を減らしテンソルとして直接利用できる形を保つのに対し、CacheGenはネットワーク転送時だけ使うビットストリームへ変換し、受信後にKVテンソルへ戻す。"},
+   {"name":"テキスト文脈圧縮との差","description":"LLMLingua等が入力token自体を削ってprefill量を減らすのに対し、CacheGenは再利用済みKVを送る経路を圧縮する。両者は併用でき、本文でも追加3.3〜4.2倍のKVサイズ削減を示す。"},
+   {"name":"高速GPU間KV転送との差","description":"NVLink等の高速相互接続を前提とするKV移送研究と異なり、CacheGenは通常クラウドサーバ間のsingle-digit Gbps級リンクで転送遅延が支配的になる状況を主対象とする。"}
+  ],
+  "limitations":[
+   {"name":"文脈再利用の前提","description":"実運用で文脈がどの程度再利用されるかを示す産業traceが乏しく、本文の動機付けは一部anecdotal。検索結果のように揮発性の高い文脈ではキャッシュ再利用機会が少ない。"},
+   {"name":"ハードウェア範囲","description":"実機評価はA40 GPU中心で、より高性能なGPUやOPT-175B級の超大型モデルは未評価。計算性能とネットワーク帯域の比が変わればtext-prefill基準との優劣も変化する。"},
+   {"name":"品質評価範囲","description":"QA、会話履歴、perplexityを評価するが、story generation等の自由文生成は品質尺度が難しいため広範には評価していない。"},
+   {"name":"周辺KV管理は対象外","description":"どのストレージ媒体に置くか、キャッシュ置換方針、KV位置探索などは主設計の外で、他研究との統合課題として残る。"}
+  ],
+  "implementation_status":"著者の公開コードがあり、PyTorch 2.0/CUDA 12.0でPython約2K行、CUDA約1K行。HuggingFace Transformersにcalculate_kv/generate_with_kvを実装し、LangChainにも統合している。研究プロトタイプとして再現可能だが、論文評価のネットワーク条件・A40構成と異なる環境では再評価が必要。",
+  "research_positioning":"本リポジトリのKVキャッシュ系統では、PagedAttentionのようなGPU内メモリ管理、H2O等の保持token削減、KIVI/Gear等の実行時KV量子化とは異なり、CacheGenは『再利用KVをストレージ／別サーバからどう運ぶか』を主問題にする。長文脈RAGや会話履歴再利用ではKVをGPUに常駐できず、CPU・ストレージ・別ホストへ退避するため、オフロード先からの復帰経路にネットワーク／I/O帯域の律速が生じる。CacheGenはその転送表現を圧縮し、帯域変動へ適応するため、KVオフロード・階層メモリ研究と直接接続する。\n\n特に後続のKV offload、remote KV cache、disaggregated servingでは、KVの配置・転送スケジューリングだけでなく転送byte数自体を削る軸として位置付けられる。一方、CacheGen単体はSSD/NVMeのI/O schedulingやcache placementを最適化しないため、ストレージ階層の管理方式とは補完関係にある。"
+ },
+ "reservation":{"claim_id":"claim-preload-e320c142c976a89229191f7e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
 }
