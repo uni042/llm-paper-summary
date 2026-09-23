@@ -15,6 +15,7 @@ if str(SCRIPTS) not in sys.path:
 
 import discovery_preload_queue as preload  # noqa: E402
 import process_discovery_precheck as precheck  # noqa: E402
+from record_bank_config import BANK_IDS, BANK_ROOTS  # noqa: E402
 
 
 def write_json(path: Path, value: object) -> None:
@@ -104,6 +105,47 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
             self.assertEqual(request["page_size"], 20)
             self.assertEqual(request["target_unseen"], 20)
             self.assertTrue(request["run_key"].startswith("preload:"))
+            self.assertEqual(request["stock_bank"], entry["stock_bank"])
+            self.assertEqual(request["stock_lane"], "discovery")
+        self.assertEqual(
+            {row["stock_bank"] for row in entries},
+            set(BANK_IDS[:2]),
+        )
+
+    def test_bank_deficit_refill_continues_after_total_target_is_full(self) -> None:
+        first = preload.top_up(self.root, target=1, max_new=1)
+        self.assertEqual(first["created_count"], 1)
+        entry = preload._entries(self.root)[0]
+        self.assertEqual(entry["stock_bank"], BANK_IDS[0])
+        write_json(
+            self.root / preload._result_path(entry),
+            {
+                "schema_version": 3,
+                "operation": "precheck_discovery_candidates",
+                "ok": True,
+                "evaluation_allowed": True,
+                "decision": "READY_FOR_EVALUATION",
+                "request_id": entry["precheck_request_id"],
+                "run_key": f"preload:{entry['preload_id']}",
+                "axis": entry["axis"],
+                "provider": entry["provider"],
+                "source_url": entry["source_url"],
+                "unseen_result_count": 20,
+                "results": [],
+                "allowed_records": [],
+                "next_cursor": "20",
+                "provider_exhausted": False,
+            },
+        )
+
+        second = preload.top_up(self.root, target=1, max_new=1)
+        self.assertEqual(second["available_before"], 1)
+        self.assertEqual(second["created_count"], 1)
+        entries = preload._entries(self.root)
+        self.assertEqual(
+            {row["stock_bank"] for row in entries},
+            set(BANK_IDS[:2]),
+        )
 
     def test_failed_preload_does_not_count_as_stock_and_is_replaced(self) -> None:
         first = preload.top_up(self.root, target=1, max_new=1)
@@ -141,6 +183,8 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
             "axis": entry["axis"],
             "initial_cursor": entry["initial_cursor"],
             "page_size": entry["page_size"],
+            "stock_bank": entry["stock_bank"],
+            "stock_lane": "discovery",
         }
         preload.claim_and_load(self.root, request)
 
@@ -206,6 +250,8 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
             "preload_id": entry["preload_id"],
             "preload_seed": False,
             "worker_id": "worker-7",
+            "stock_bank": entry["stock_bank"],
+            "stock_lane": "discovery",
         }
         snapshot = self.root / "snapshot"
         write_json(snapshot / "_manifest.json", {"source_commit": "abc123"})
@@ -256,6 +302,8 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
         self.assertEqual(result["preload_live_pages_fetched"], 0)
         self.assertEqual(result["run_key"], "real-run")
         self.assertEqual(result["preload_id"], entry["preload_id"])
+        self.assertEqual(result["stock_bank"], entry["stock_bank"])
+        self.assertEqual(result["stock_lane"], "discovery")
 
 
 if __name__ == "__main__":
