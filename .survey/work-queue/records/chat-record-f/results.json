@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-1205cc442808cb1df99b7f86",
-  "job_id": "job-research-41c5d2a7e72d6309",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1205cc442808cb1df99b7f86",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-1205cc442808cb1df99b7f86","job_id":"job-research-41c5d2a7e72d6309","data":{"overview":"完全ヒット境界の修正と比較条件固定により、9-length直列試験の64-token生成一致は34/36から36/36へ改善した。内部計測runでもtransfer-page、effective-tail、delayed-saveの検査を通過した。さらに3つの合成テンプレートを2つのfresh containerで実行した72組の256-token継続がすべて一致した。120要求の性能試験でも出力一致を維持し、CPUキャッシュ再ロードは修正済みcold recomputationに対してTTFTを46–64%、総要求時間を1.9–7.0%短縮した。","key_results":[{"metric":"64-token生成一致","value":"36/36","baseline":"修正前34/36","condition":"9入力長の直列ワークロード、各4生成","interpretation":"strict-prefix境界修正で観測された生成不一致を解消。"},{"metric":"256-token継続一致","value":"72/72","baseline":"修正済みrecomputation control","condition":"3 synthetic templates、2 fresh-container runs","interpretation":"短い再現試験だけでなく長い継続と再起動を跨いでも一致を維持。"},{"metric":"TTFT短縮","value":"46–64%","baseline":"modified cold recomputation","condition":"120要求の直列性能試験中の測定trial","interpretation":"正しさを維持したCPU reloadがprefill再計算を省き、初回tokenまでの時間を大幅に削減。"},{"metric":"総要求時間短縮","value":"1.9–7.0%","baseline":"modified cold recomputation","condition":"同一性能試験","interpretation":"decodeを含む全体ではTTFTほど差が大きくないが、end-to-endでも改善。"},{"metric":"内部復旧検査","value":"pass","baseline":"期待されるtransfer/effective-tail/save条件","condition":"instrumented run","interpretation":"出力一致だけでなく復旧内部状態の経路も意図通りであることを確認。"}],"negative_results":"修正前の完全ヒット復旧では36生成中2生成が対照と一致せず、外部キャッシュ転送成功だけでは正しさを保証できなかった。総要求時間の改善幅は1.9–7.0%で、TTFT改善46–64%より小さい。論文は並行負荷でのthroughput向上、一般的決定性、意味的タスク品質、GPUメモリ容量を超えるキャパシティ効果を示していない。","interpretation":"外部キャッシュ最適化では『何バイト戻せたか』より『モデルとスケジューラが同じ論理境界から再開するか』が先に満たすべき不変条件である。ハイブリッド状態モデルではKVだけを前提とした完全ヒット判定が危険で、1-tokenのaccounting差でも生成分岐につながる。性能面ではprefill回避がTTFTへ強く効く一方、decodeを含む総時間では効果が希釈される。","quality_impact":"修正後は評価範囲のtoken-ID列を対照と完全一致させたため、観測範囲ではキャッシュ高速化による生成変化を排除できた。ただしこれは限定構成での数値一致であり、モデル一般の品質同等性を証明するものではない。"},"reservation":{"claim_id":"claim-1205cc442808cb1df99b7f86","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
