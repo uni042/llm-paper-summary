@@ -52,10 +52,11 @@ class FastLaneTriggerSemanticsTests(unittest.TestCase):
             })
             self.assertEqual(select_record_bank.pending_immutable_bank_owners(root), {})
 
-    def test_claim_fast_push_trigger_is_request_only(self):
+    def test_claim_fast_push_trigger_is_claim_transport_only(self):
         text = (ROOT / ".github/workflows/survey-claim-fast.yml").read_text(encoding="utf-8")
         trigger = text.split("  workflow_dispatch:", 1)[0]
         self.assertIn(".survey/work-queue/claim-requests/*.json", trigger)
+        self.assertIn(".survey/work-queue/direct-takes/research/*.json", trigger)
         self.assertNotIn(".survey/scripts/", trigger)
         self.assertNotIn(".github/workflows/survey-claim-fast.yml", trigger)
 
