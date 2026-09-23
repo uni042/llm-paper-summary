@@ -10,8 +10,10 @@ from __future__ import annotations
 import json
 import re
 import sys
+import time
 from pathlib import Path
 from typing import Any, Callable
+from urllib.error import HTTPError
 from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
@@ -20,6 +22,9 @@ import reference_pool
 DEFAULT_FIELDS = "title,url,year,authors,externalIds,publicationDate,abstract"
 S2_API_HOST = "api.semanticscholar.org"
 S2_WEB_HOSTS = {"www.semanticscholar.org", "semanticscholar.org"}
+S2_MAX_RATE_LIMIT_RETRIES = 4
+S2_RATE_LIMIT_BASE_SECONDS = 2.0
+S2_RATE_LIMIT_MAX_SECONDS = 30.0
 
 
 class DiscoveryProviderError(RuntimeError):
@@ -99,12 +104,31 @@ def _normalize_semantic_scholar_source(source_url: str) -> str:
     )
 
 
+def _semantic_scholar_retry_delay(exc: HTTPError, attempt: int) -> float:
+    retry_after = None
+    headers = getattr(exc, "headers", None)
+    if headers is not None:
+        value = headers.get("Retry-After")
+        if value is not None:
+            try:
+                retry_after = float(str(value).strip())
+            except (TypeError, ValueError):
+                retry_after = None
+    if retry_after is not None and retry_after >= 0:
+        return min(retry_after, S2_RATE_LIMIT_MAX_SECONDS)
+    return min(
+        S2_RATE_LIMIT_BASE_SECONDS * (2 ** max(attempt, 0)),
+        S2_RATE_LIMIT_MAX_SECONDS,
+    )
+
+
 def semantic_scholar_fetcher(
     source_url: str,
     *,
     page_size: int = 100,
     timeout: int = 30,
     opener: Callable[..., Any] = urlopen,
+    sleeper: Callable[[float], Any] = time.sleep,
 ) -> Callable[[str | None], dict[str, Any]]:
     """Build a page fetcher for one fixed Semantic Scholar result set."""
     if page_size <= 0 or page_size > 100:
@@ -143,11 +167,33 @@ def semantic_scholar_fetcher(
                 "User-Agent": "llm-paper-summary-discovery/1.0",
             },
         )
-        try:
-            with opener(req, timeout=timeout) as response:
-                payload = json.loads(response.read().decode("utf-8"))
-        except Exception as exc:
-            raise DiscoveryProviderError(f"Semantic Scholar page fetch failed at offset {offset}: {exc}") from exc
+        payload = None
+        for attempt in range(S2_MAX_RATE_LIMIT_RETRIES + 1):
+            try:
+                with opener(req, timeout=timeout) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+                break
+            except HTTPError as exc:
+                if exc.code != 429 or attempt >= S2_MAX_RATE_LIMIT_RETRIES:
+                    raise DiscoveryProviderError(
+                        f"Semantic Scholar page fetch failed at offset {offset}: {exc}"
+                    ) from exc
+                delay = _semantic_scholar_retry_delay(exc, attempt)
+                print(
+                    "[WORKER-GUIDE][Discovery] Semantic Scholar rate limited "
+                    f"at offset {offset}; retry {attempt + 1}/{S2_MAX_RATE_LIMIT_RETRIES} "
+                    f"after {delay:.1f}s.",
+                    file=sys.stderr,
+                )
+                sleeper(delay)
+            except Exception as exc:
+                raise DiscoveryProviderError(
+                    f"Semantic Scholar page fetch failed at offset {offset}: {exc}"
+                ) from exc
+        if payload is None:
+            raise DiscoveryProviderError(
+                f"Semantic Scholar page fetch failed at offset {offset}: rate-limit retries exhausted"
+            )
         if not isinstance(payload, dict) or not isinstance(payload.get("data"), list):
             raise DiscoveryProviderError("Semantic Scholar response is missing data[]")
 
