@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-54c192f36494effc75698854","job_id":"job-research-c7bef3f1698aa85a","data":{"overview":"LAMPSは標準vLLMとINFERCEPTに対して、とくに要求到着率が高くAPI呼び出しが複数ある条件で先頭待ち阻害を大きく減らした。論文全体ではINFERCEPT比で平均エンドツーエンド遅延を27〜85%、初回トークン時間を4〜96%改善すると報告する。GPT-J 6Bでは複数API・到着率3でINFERCEPT比TTFT 95.93%減、遅延63.32%減、ToolBench・到着率3でTTFT 87.04%減、遅延27.24%減。Vicuna 13BでもToolBench・到着率3でTTFT 75.46%、遅延62.61%減となる。一方、低負荷単一APIでは差が小さく、ToolBenchでは遅延改善と引き換えにスループットがわずかに低下する。","key_results":[{"metric":"平均エンドツーエンド遅延","value":"27〜85%改善","baseline":"INFERCEPT","condition":"評価したAPI拡張要求・到着率の範囲","interpretation":"KV処理方式と要求順位を統合すると高負荷時の先頭待ち阻害を抑えられる。"},{"metric":"平均TTFT","value":"4〜96%改善","baseline":"INFERCEPT","condition":"評価したAPI拡張要求・到着率の範囲","interpretation":"低メモリ時間積要求を優先する効果は負荷上昇時に大きい。"},{"metric":"GPT-J 6B Multi-API","value":"TTFT 95.93%減、遅延63.32%減","baseline":"INFERCEPT","condition":"要求到着率3","interpretation":"複数APIでFCFSの先頭待ち阻害が強い条件ほど効果が顕著。"},{"metric":"Vicuna 13B ToolBench","value":"TTFT 75.46%減、遅延62.61%減","baseline":"INFERCEPT","condition":"要求到着率3","interpretation":"予測が必要な実ツールデータでも大幅な遅延改善を維持。"},{"metric":"Multi-API throughput","value":"最大50.23%向上","baseline":"INFERCEPT","condition":"Vicuna 13B、高到着率側","interpretation":"遅延最適化でも一部条件では完了要求数も増える。"}],"negative_results":"GPT-J 6Bの単一API・到着率3ではINFERCEPT比で平均TTFTは4.61%改善する一方、平均エンドツーエンド遅延は0.78%悪化し、低負荷では優位性が小さい。高負荷では低メモリ要求優先によりP99遅延・TTFTの増加率が大きくなり飢餓の影響が現れる。ToolBenchでは多くの要求が2048トークンを超え、遅延は大幅改善する一方でスループットがわずかに低下する。予測誤差を30〜50%へ増やすと高到着率で中央値遅延が増え、スループットも低下する。","interpretation":"アブレーションではAPI処理方式予測だけをvLLMへ追加しFCFSを維持した構成はINFERCEPTに近いかやや悪く、主要な改善はメモリ時間積スケジューリングを追加した段階で生じる。ただしその順位を計算するには事前の処理方式予測が必要で、両者は直列に依存する。飢餓閾値100は末尾遅延とスループットの均衡点として選ばれている。","quality_impact":"生成品質やモデル精度を変更する手法ではなく、評価指標はサービング性能中心である。予測器のToolBench精度はAcc-5が68.5%、Acc-15が78.3%、MAE 3.06で、200語以下に限るとMAE 1.366。A100上の予測時間は入力当たり平均13.7msである。"},"reservation":{"claim_id":"claim-54c192f36494effc75698854","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-bcdd660e4bafb23e846f2ec8",
+  "job_id": "job-research-c732ba9bb46aaf3a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bcdd660e4bafb23e846f2ec8",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-54c192f36494effc75698854","job_id":"job-research-c7bef3f1698aa85a","data":{"limitations":"評価はGPT-J 6BとVicuna 13B、単一のA100サーバ環境、INFERCEPT系データとToolBenchに限られる。API種別ごとの時間・応答長を履歴平均で推定する前提は、負荷変動や外部障害でAPI時間分布が急変する実運用では崩れ得る。複数API要求をAPIごとの区間へ分解するため、要求全体のAPI列と累積KVメモリを共同最適化していない。低メモリ時間積要求を優先することで高負荷時の末尾遅延が悪化し得るため飢餓防止が必要で、ToolBenchでは遅延改善と引き換えにスループット低下も観測される。論文は将来課題として予測精度向上、複数APIの累積メモリ考慮、複数LLMへの負荷分散を挙げる。","differences":"vLLMはPagedAttentionでKVメモリを効率化するが、API呼び出しを含む要求を特別に順位付けせず、API復帰要求を新規要求として扱う。INFERCEPTはAPI到達時に保持・破棄・退避を動的選択してメモリ浪費を減らすが、要求順序はFCFSのままである。通常のSJF/SRPTや出力長予測型スケジューラはAPI待機時間とKV処理方式を順位へ含めない。LAMPSは処理開始前にAPI方式を予測し、その方式に応じたメモリ使用量×時間を共通順位値として反復単位スケジューラへ入れる点が異なる。FastServe等のプリエンプティブ方式と比べても、頻繁なプリエンプションではなく将来のメモリ占有を予測して先に順序を整える。","implementation_status":"arXiv v2の研究実装で、vLLM上にLAMPSを構築してA100実機で評価している。論文本文から専用公開コードリポジトリは確認できない。予測器はOPT-125Mと線形分類器で構成され、ToolBenchではA100上で平均13.7ms/入力の予測時間を報告する。","research_positioning":"LLMサービングの中でも、LAMPSはKVキャッシュ管理と要求スケジューリングの境界をAPI拡張要求へ広げる研究である。INFERCEPTのAPI待機メモリ管理を出発点に、出力長予測型スケジューリングの考え方を結び付け、メモリ時間積という尺度で処理方式と順位を統合する。CPU/SSDへの大規模モデル重みオフロードそのものではないが、KVキャッシュの保持・再計算・CPU退避をオンライン選択するため、階層メモリ型サービングやエージェント/ツール利用ワークロードのスケジューラ設計と直接関係する。API待機が一般化する複合AIシステムでは、計算時間だけでなく『資源をどれだけ長く占有するか』を順位へ入れる設計例として重要である。"},"reservation":{"claim_id":"claim-54c192f36494effc75698854","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-bcdd660e4bafb23e846f2ec8",
+  "job_id": "job-research-c732ba9bb46aaf3a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bcdd660e4bafb23e846f2ec8",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-54c192f36494effc75698854","job_id":"job-research-c7bef3f1698aa85a","data":{"hardware":"AMD EPYC 7313 CPU×2（各16コア、合計64スレッド）、RAM 503GB、NVLink接続のNVIDIA A100 80GB×2。INFERCEPT相当条件を模擬するため各GPUの最大使用量を40GBへ制限。","software":"vLLMを基盤にLAMPSを実装。対象モデルはGPT-J 6BとVicuna 13B。ToolBenchの出力長予測にはOPT-125Mの最終トークン埋め込みと50ビン線形分類器を用い、学習/検証を80/20分割。ToolBenchのみ順位スコア更新間隔を10反復とし、飢餓防止閾値は100反復。","methodology":"単一API、複数APIを含むINFERCEPT由来データとToolBenchを用い、要求到着率を変えながら平均・P99のエンドツーエンド遅延、初回トークン時間、スループットを測定する。比較対象は標準vLLMとINFERCEPT。GPT-J 6BとVicuna 13Bの双方で評価し、固定到着率5のデータセット間比較、Vicuna 13Bのスループット、飢餓閾値感度、構成要素アブレーション、予測誤差5/10/30/50%のガウス注入、予測精度と推論時間も調べる。","scope":"INFERCEPT系データは算術、質問応答、複数段チャット、仮想環境などを含み、ToolBenchは49カテゴリ・16,000超の実APIを含むツール利用データである。ただし評価は2種類の6B/13BモデルとA100環境に限られ、複数GPUノード間ネットワーク、より大規模モデル、実運用で非定常なAPI障害やAPI料金、複数LLMへのルーティングは直接評価していない。"},"reservation":{"claim_id":"claim-54c192f36494effc75698854","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-bcdd660e4bafb23e846f2ec8",
+  "job_id": "job-research-c732ba9bb46aaf3a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bcdd660e4bafb23e846f2ec8",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
