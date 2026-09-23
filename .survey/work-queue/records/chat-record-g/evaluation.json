@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e3c59442daeee9dcbcd01db3",
-  "job_id": "job-research-165ae8125699de70",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e3c59442daeee9dcbcd01db3",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e3c59442daeee9dcbcd01db3","job_id":"job-research-165ae8125699de70","data":{"hardware":"cycle-accurate simulationはNVIDIA B200相当GPU（FP16 2250 TFLOPS、HBM-PIM bandwidth 8.0 TB/s、8 HBM-PIM stacks、NVLink片方向900 GB/s/0.8µs）とHBM3E-PIMをmodel化。PIM利用でcapacityはGPU当たり192GBから96GB相当。GPT-OSSは4 GPU、Qwen3.5は8 GPU、Qwen3は1 GPU。","software":"Ramulator 2.0でDRAM/PIM commandをcycle-accurate simulationし、DuplexのGPU performance modelを利用。PIMはNeuPIMs型dual row buffer等を含む。モデルはGPT-OSS-120B、Qwen3.5-397B-A17B、Qwen3-30B-A3B。activation/parameterは原則bfloat16。","methodology":"HH-RLHFとMATH-500のreal request traceから実モデルrouting distributionを収集し、batch size最大256を評価。比較はGPU-Only、attentionのみPIMでexpertはGPUのNoExp、全expert PIMのAllExp、static threshold型PIMoE、Sieve。全方式でattention offloadやKV-cache channel distribution等の非MoE最適化とhardware条件を揃え、expert schedulingだけを変える。主指標はGPU当たりthroughputとuser当たりgenerated tokens/sで表すinteractivityのPareto frontier。decode-onlyを主評価し、colocated prefill/decodeも別評価する。","scope":"実機HBM-PIM prototypeではなくcycle-accurate simulator評価であり、結果は想定B200+HBM3E-PIM構成とtiming modelの妥当性に依存する。主対象はdecode中心のservingだが、colocated prefill/decode stress testも含む。"},"reservation":{"claim_id":"claim-e3c59442daeee9dcbcd01db3","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}

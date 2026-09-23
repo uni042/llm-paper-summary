@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-e3c59442daeee9dcbcd01db3",
-  "job_id": "job-research-165ae8125699de70",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e3c59442daeee9dcbcd01db3",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e3c59442daeee9dcbcd01db3","job_id":"job-research-165ae8125699de70","data":{"canonical_id":"arXiv:2605.11277","arxiv_id":"2605.11277","doi":"10.48550/arXiv.2605.11277","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models","summary":"Sieveは、現代MoEで少数の人気expertと多数の低頻度expertに二極化するtoken割当を利用し、各expertを実行時にGPUまたはHBM-PIMへ動的配分する推論基盤である。通信、GPU計算、off-chip帯域、PIM実行を同時に見積もる軽量schedulerと、GPU/PIM/通信を重畳するruntimeを組み合わせる。cycle-accurate simulationではPIMoE等に対しQwen3.5-397B-A17BとGPT-OSS-120Bで約1.3倍、Qwen3-30B-A3Bで最大1.6倍のthroughput/interactivity改善を示す。","list_summary":"実行時expert人気度からGPU/PIM配置を動的決定し、通信とattention負荷まで含めてMoE推論のthroughput・interactivityを最大1.6倍改善する。","authors":["Jungwoo Kim","Rubens Lacouture","Genghan Zhang","Gina Sohn","Qizheng Zhang","Swapnil Gandhi","Christos Kozyrakis","Kunle Olukotun"],"authors_affiliations":"Stanford University; NVIDIA (Christos Kozyrakis)","published":"2026-05-11","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-05-11)","lineage":"MoE inference / PIM / heterogeneous scheduling / expert placement","topics":["MoE推論","PIM","動的expert配置","HBM-PIM","GPU-PIM協調"],"importance":"expertごとのarithmetic intensityが実行時に大きく変わる現代MoEでは固定offload規則が破綻することを示し、expert placementを通信・attention・GPU/PIM負荷の共同最適化問題として扱う。","implementation":"Ramulator 2.0とDuplexに基づくcycle-accurate simulator。runtime schedulerはB200上で約20µsと報告。既存PIM command interfaceの変更を要求しない。","hardware_evaluation":"NVIDIA B200相当GPUとHBM3E-PIMをsimulation。GPT-OSSは4 GPU、Qwen3.5は8 GPU、Qwen3は1 GPU。","quality_effect":"モデル品質は変更せず同一MoE計算をGPU/PIM間で配置するsystem optimization。評価は性能simulation中心。","source":"https://arxiv.org/abs/2605.11277","sources":["https://arxiv.org/abs/2605.11277","https://arxiv.org/html/2605.11277v1"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-e3c59442daeee9dcbcd01db3","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}

@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-e3c59442daeee9dcbcd01db3",
-  "job_id": "job-research-165ae8125699de70",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e3c59442daeee9dcbcd01db3",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e3c59442daeee9dcbcd01db3","job_id":"job-research-165ae8125699de70","data":{"limitations":"評価はRamulator 2.0/Duplexによるcycle-accurate simulationで、実HBM-PIM搭載B200 system上のend-to-end実測ではない。PIM processing unitがHBM容量を半減させる想定やNVLink/HBM timing、GPU performance modelに結果が依存する。対象はGPT-OSS/Qwen3.5/Qwen3の3モデルで、将来router分布やhardware balanceが変われば最適partitionも変わる。decode-onlyが主評価で、colocated prefill/decodeはstress testを行うもののproduction schedulerとの統合やfailure behaviorは限定的である。","differences":"NoExpはattentionだけをPIMへ置きexpertをGPU固定、AllExpはexpertをPIM固定、PIMoEはexpert token数と局所GPU/PIM時間に基づくstatic/coarse thresholdを使う。Sieveは各batchのglobal token countからpartitionを毎回再計算し、attention PIM時間とexpert-parallel inter-GPU通信を目的関数へ含める。またPIMoEのchannel-level expert parallelismではなくchannel全体のtensor parallelismを使い、expert人気偏りをPIM utilizationから切り離す。","implementation_status":"研究prototypeはsoftware-only scheduling/runtime設計で、新PIM commandやhardware modificationを要求しない。評価実装はRamulator 2.0+Duplex simulatorで、custom GPU kernelからruntime address/tensor sizeに応じてPIM commandを発行する設計をmodel化する。公開実機runtime codeの記載は確認できない。","research_positioning":"MoE expert placement/offload研究とPIM-based LLM servingの交点に位置する。従来のexpert cacheやCPU/GPU offloadがmemory hierarchy上のresident setを扱うのに対し、SieveはHBM-PIM内にweightが存在する状況で『どのcompute substrateでそのexpertを実行するか』をruntimeに決める。expert popularity、arithmetic intensity、network、attention contentionを共同最適化するため、将来のheterogeneous MoE serving scheduler設計に直接関連する。"},"reservation":{"claim_id":"claim-e3c59442daeee9dcbcd01db3","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
