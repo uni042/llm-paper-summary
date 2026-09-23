@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 19:52:00 JST**
+> 自動生成: **2026-09-23 19:57:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **147** |
-| 未claim Research job | **146** |
-| 直近24hの検証済みResearch収録 | **92** |
-| 最終検証済みResearch収録 | **09-23 19:51:56 JST（4秒前）** |
+| 収録候補論文 | **146** |
+| 未claim Research job | **145** |
+| 直近24hの検証済みResearch収録 | **93** |
+| 最終検証済みResearch収録 | **09-23 19:57:05 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **147** |
+| canonical_id確認済みの一意な候補論文 | **146** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **147** |
+| 非終端Research job合計 | **146** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（11時間21分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（11時間26分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **24** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **25** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **24** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **25** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 19:57:05 JST** [research] `arXiv:2606.21712` — BatchGen: An Architecture for Scalable and Efficient Batch Inference
+  - job: `.survey/work-queue/jobs/job-research-ded5355ef64410a7.json`
+  - result: `.survey/work-queue/results/research/attempt-04e285682c3e9ed7b0782532.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-04e285682c3e9ed7b0782532.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2606.21712-batchgen-an-architecture-for-scalable-and-efficient-batch-inference.md`
 - **09-23 19:51:56 JST** [research] `arXiv:2606.01502` — Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics
   - job: `.survey/work-queue/jobs/job-research-37a03b603cf5e34b.json`
   - result: `.survey/work-queue/results/research/attempt-df98f0a4232c714053b0bc18.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-3e602a0f4e7177d85de6b301.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-3e602a0f4e7177d85de6b301.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.19880-d-quant-driftable-entropy-coding-for-kv-cache-quantization.md`
-- **09-23 17:31:13 JST** [research] `arXiv:2601.13631` — ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management
-  - job: `.survey/work-queue/jobs/job-research-62c06a71da7d8bc0.json`
-  - result: `.survey/work-queue/results/research/attempt-64f95f13e8bf245cb090a9d9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-64f95f13e8bf245cb090a9d9.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2601.13631-contiguouskv-accelerating-llm-prefill-with-granularity-aligned-kv-cache-management.md`
 
 ### Audit
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **147** |
+| ready | **146** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **998** |
+| inference/training/survey配下の論文Markdown実体 | **999** |
 
 ### immutable submissionの未照合
 
