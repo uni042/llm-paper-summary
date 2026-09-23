@@ -39,6 +39,7 @@ CLAIM_LEASE_SECONDS = 90 * 60
 REFRESH_BUCKET_SECONDS = 6 * 60 * 60
 PRELOAD_MAX_AGE_SECONDS = REFRESH_BUCKET_SECONDS
 ARTIFACT_RETENTION_SECONDS = 24 * 60 * 60
+MAX_FAILED_ATTEMPTS_PER_SOURCE_BUCKET = 2
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -331,6 +332,22 @@ def _latest_for_source(
     return matches[-1]
 
 
+def _failed_attempts_for_source_bucket(
+    root: Path,
+    entries: list[dict[str, Any]],
+    source_key: str,
+    bucket: int,
+) -> int:
+    now = _utcnow()
+    return sum(
+        1
+        for row in entries
+        if str(row.get("source_key") or "") == source_key
+        and int(row.get("refresh_bucket", -1)) == bucket
+        and _status(root, row, now) == "FAILED"
+    )
+
+
 def _next_cursor_for_entry(root: Path, entry: dict[str, Any]) -> tuple[bool, str | None]:
     result = _read(root / _result_path(entry), {})
     if not isinstance(result, dict) or not result:
@@ -495,11 +512,19 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                 # backward/forward floor repairs. Never grow the queue in an
                 # unrelated direction just because another direction is short.
                 continue
-            latest = _latest_for_source(root, entries, str(spec["source_key"]), bucket)
+            source_key = str(spec["source_key"])
+            latest = _latest_for_source(root, entries, source_key, bucket)
             if latest is None:
                 sequence = 0
                 initial_cursor = None
             else:
+                latest_status = _status(root, latest, now)
+                if (
+                    latest_status == "FAILED"
+                    and _failed_attempts_for_source_bucket(root, entries, source_key, bucket)
+                    >= MAX_FAILED_ATTEMPTS_PER_SOURCE_BUCKET
+                ):
+                    continue
                 can_continue, next_cursor = _next_cursor_for_entry(root, latest)
                 if not can_continue:
                     continue
