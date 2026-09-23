@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-c702d1e87d96e29f00644312",
-  "job_id": "job-research-c9fd7d4e4bda09de",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c702d1e87d96e29f00644312",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c702d1e87d96e29f00644312","job_id":"job-research-c9fd7d4e4bda09de","data":{"hardware":"物理削除後のGPUメモリをvLLMで測定。未削除GPT-OSSは重みVRAM38.99GiB、固定1GiB KVキャッシュ込み常駐VRAM41.70GiB。","software":"vLLMへPyTorchフックを追加してルータ重みを収集。物理削除ではモデル設定とルータパラメータを保持専門家数へ合わせて更新。","model":["GPT-OSS-20B: 24 MoE layers, 32 experts/layer, top-4","Qwen3-30B-A3B: 128 experts/layer, top-8","TranslateGemma-4B","NLLB-200-3.3B"],"datasets":["FLoRes-200 dev calibration / devtest","WMT24++","JRC-Acquis","KFTT","ArzEn-MultiGenre","BanglaSTEM"],"baselines":["Routing-mass + uniform allocation","REAP + uniform","Koishekenov + uniform","random + uniform","inverted routing-mass","inverse-dynamic allocation","TranslateGemma-4B","NLLB-200-3.3B"],"correctness":"削減・学習条件の探索はFLoRes devtest固定128例を5乱数seedで平均。選択モデルはFLoRes devtest全1012例、WMT24++、領域別データで再評価する。生成失敗はxCOMET 0として扱い失敗率も報告。","settings":["主校正言語: German, Japanese, Bengali, Egyptian Arabic。","未見評価言語: Russian, Spanish, Mandarin。","GPT-OSSはE=32,K=4、Qwen3はE=128,K=8。","回復蒸留は10k synthetic English→X examples。","50/62.5/68.75/75/81.25/87.5% expert dropを主要比較。"],"methodology":"専門家順位法と層別容量配分を別々にアブレーションし、両者を反転する対照も置く。翻訳品質はxCOMET、生成崩壊はエラー率、一般化は未見言語・領域外データ・逆方向で評価する。最後に物理削除モデルのチェックポイント、重みVRAM、常駐VRAMを実測する。","scope":"翻訳方向は英語を始点または終点とするものに限定。校正はFLoRes dev中心。人手大規模評価はなく自動xCOMETが主。非翻訳能力は評価しない。低資源のエジプト・アラビア語とベンガル語では回復が弱い。"},"reservation":{"claim_id":"claim-c702d1e87d96e29f00644312","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}

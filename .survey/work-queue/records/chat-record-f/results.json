@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-c702d1e87d96e29f00644312",
-  "job_id": "job-research-c9fd7d4e4bda09de",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c702d1e87d96e29f00644312",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-c702d1e87d96e29f00644312","job_id":"job-research-c9fd7d4e4bda09de","data":{"overview":"再学習なしでも翻訳に不要な専門家を大量に除ける。GPT-OSSの50%専門家削除では20.9Bから11.3Bへ縮小し、FLoRes平均xCOMETは0.942から0.930、WMT24++は0.830から0.812で低下は0.012/0.018に留まる。68.75%削除では低下が0.082/0.096へ急増するが、1万件の系列蒸留で0.904/0.786まで回復する。75%削除＋蒸留は6.6Bで0.902/0.789、87.5%削除＋蒸留は4.2Bで0.871/0.747を維持する。物理削除により75%削除時の重みVRAMは38.99から12.29GiB、常駐VRAMは41.70から14.97GiBへ減る。","key_results":[{"metric":"50% expert drop without retraining","value":"FLoRes 0.930, WMT24++ 0.812","baseline":"unpruned 0.942 / 0.830","condition":"GPT-OSS multilingual En→X calibration","interpretation":"専門家半数を削除しても平均品質低下は0.012/0.018。"},{"metric":"75% expert drop with 10k distillation","value":"FLoRes 0.902, WMT24++ 0.789","baseline":"unpruned 0.942 / 0.830","condition":"6.6B parameters","interpretation":"短い回復学習で4分の1の専門家集合から元品質に近い翻訳器を得る。"},{"metric":"87.5% expert drop with recovery","value":"FLoRes 0.871, WMT24++ 0.747","baseline":"raw pruned model has 100% generation errors","condition":"4.2B parameters","interpretation":"極端な削減でも残存専門家を再適応させれば実用的翻訳が戻る。"},{"metric":"75% expert drop memory","value":"weight VRAM 12.29GiB, resident 14.97GiB","baseline":"38.99GiB / 41.70GiB","condition":"physical GPT-OSS pruning","interpretation":"重みVRAM68.5%、常駐VRAM64.1%の実削減。"},{"metric":"expert selection ablation at 50%","value":"GPT-OSS/Qwen3 bidirectional xCOMET 0.864/0.844","baseline":"Koishekenov 0.850/0.804; REAP 0.801/0.801","condition":"routing-mass + dynamic allocation","interpretation":"単純ルーティング質量と動的配分の組合せが50%削減で強い。"}],"negative_results":[{"name":"高削減率の崖","description":"再学習なしでは50%超から品質が急落し、68.75%でFLoRes/WMT24++低下0.082/0.096、87.5%では生成エラー100%に達する。"},{"name":"モデル依存の順位法","description":"GPT-OSSではルーティング質量が強いが、Qwen3の高削減率ではKoishekenovやREAPが上回る条件があり、単一重要度指標を普遍化できない。"},{"name":"低資源言語の回復差","description":"エジプト・アラビア語とベンガル語では75%削減後の回復が高資源言語ほど完全でなく、平均値だけでは不均衡を隠す。"}],"interpretation":"翻訳で必要な専門家は言語ごとに完全分離しておらず大きな共有核を持つ。4言語で選んだ集合が未見3言語と逆方向へ転移し、保持集合の重なりもランダム期待を上回る。高削減率の失敗は翻訳知識そのものの消失だけでなく、出力形式や推論終了などタスク実行安定性の崩壊が大きく、短い蒸留で回復できることがそれを示唆する。","quality_impact":"50%物理削除はほぼ無損失に近いが、75%では回復学習が必要で元モデルとの差は残る。87.5%では特に英語→対象言語の低下が大きい。用途ごとに容量と翻訳方向・言語別品質のトレードオフを確認する必要がある。"},"reservation":{"claim_id":"claim-c702d1e87d96e29f00644312","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
