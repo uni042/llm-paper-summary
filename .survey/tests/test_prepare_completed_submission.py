@@ -47,6 +47,21 @@ class PrepareCompletedSubmissionTests(unittest.TestCase):
                 "3" * 40,
             )
 
+    def test_archived_preflight_result_is_read_compatible(self):
+        module = _load(SCRIPT, "prepare_completed_submission_archive_test")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            archived = repo / ".survey/work-queue/research-preflight/archive/results/pf.json"
+            archived.parent.mkdir(parents=True)
+            archived.write_text(
+                json.dumps({"expected_blob_sha": "4" * 40}), encoding="utf-8"
+            )
+            original = repo / ".survey/work-queue/research-preflight/results/pf.json"
+            self.assertEqual(
+                module._expected_blob_sha_from_preflight(repo, original, None),
+                "4" * 40,
+            )
+
     def test_builder_emits_valid_ordered_slot_refs(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
@@ -55,7 +70,7 @@ class PrepareCompletedSubmissionTests(unittest.TestCase):
             subprocess.run(["git", "config", "user.name", "test"], cwd=repo, check=True)
             scripts = repo / ".survey/scripts"
             scripts.mkdir(parents=True)
-            for name in ("immutable_submission.py", "record_bank_config.py", "paper_path_resolver.py", "prepare_completed_submission.py"):
+            for name in ("immutable_submission.py", "record_bank_config.py", "paper_path_resolver.py", "worker_run_index.py", "prepare_completed_submission.py"):
                 (scripts / name).write_text((SCRIPTS / name).read_text(encoding="utf-8"), encoding="utf-8")
             module = _load(scripts / "prepare_completed_submission.py", "prepare_completed_submission_test")
             root = repo / ".survey/work-queue/records/chat-record"
