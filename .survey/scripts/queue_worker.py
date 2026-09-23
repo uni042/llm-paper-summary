@@ -23,6 +23,7 @@ sys.path.insert(0, str(HERE))
 import paper_identity  # noqa: E402
 import survey  # noqa: E402
 import claim_state  # noqa: E402
+import discovery_preload_queue  # noqa: E402
 import discovery_search_history  # noqa: E402
 import represented_paper_index  # noqa: E402
 
@@ -796,6 +797,11 @@ def validate_discovery_precheck(sub: dict) -> dict[str, Any] | None:
         raise _precheck_guidance("Discovery precheck run_key does not match this Discovery round.")
     if str(result.get("axis") or "") != str(meta.get("axis") or ""):
         raise _precheck_guidance("Discovery precheck axis does not match this Discovery round.")
+    if result.get("preload_seed") is True:
+        raise _precheck_guidance(
+            "A background Discovery preload seed result cannot authorize a submission directly. "
+            "Adopt it through a new run-specific schema-v3 precheck request first."
+        )
 
     if _citation_first_required(sub):
         _validate_citation_first_route(sub, result, meta)
@@ -1086,6 +1092,11 @@ def record_discovery_stats(
         else str(meta.get("citation_direction") or "").strip() or None
     )
     seed_canonical_id = str(meta.get("seed_canonical_id") or "").strip() or None
+    preload_id = (
+        str(precheck_result.get("preload_id") or "").strip() or None
+        if isinstance(precheck_result, dict) and precheck_result.get("preload_seed") is not True
+        else None
+    )
 
     expected_submissions = max(int(meta.get("round_submission_count", 1) or 1), 1)
     submission_index = max(int(meta.get("round_submission_index", 1) or 1), 1)
@@ -1104,6 +1115,7 @@ def record_discovery_stats(
             "source_url": source_url or None,
             "citation_direction": citation_direction,
             "seed_canonical_id": seed_canonical_id,
+            "preload_id": preload_id,
             "candidate_count": candidate_count,
             "duplicate_filtered_count": duplicate_count,
             "final_duplicate_filtered_count": final_duplicate_filtered_count,
@@ -1157,6 +1169,9 @@ def record_discovery_stats(
             raise ValueError("submissions sharing one precheck round must use the same seed_canonical_id")
         if seed_canonical_id and not existing_seed:
             row["seed_canonical_id"] = seed_canonical_id
+        existing_preload = str(row.get("preload_id") or "").strip() or None
+        if existing_preload != preload_id:
+            raise ValueError("submissions sharing one precheck round must use the same Discovery preload identity")
         if meta.get("next_axis_hint") is not None:
             row["next_axis_hint"] = meta.get("next_axis_hint")
         row["accepted_canonical_ids"] = list(dict.fromkeys(
@@ -1261,6 +1276,13 @@ def record_discovery_stats(
         "multiple submissions from the same precheck aggregate into that round.",
     )
     write_json(DISCOVERY_STATE, state)
+    if newly_accounted and preload_id:
+        discovery_preload_queue.mark_ingested(
+            ROOT.parent,
+            preload_id=preload_id,
+            run_key=run_key,
+            source_submission=source_submission or None,
+        )
     return True
 
 

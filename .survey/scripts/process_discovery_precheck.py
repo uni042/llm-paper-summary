@@ -23,6 +23,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 import discovery_provider_adapter  # noqa: E402
+import discovery_preload_queue  # noqa: E402
 import discovery_search_filter  # noqa: E402
 import paper_identity  # noqa: E402
 
@@ -105,6 +106,17 @@ def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
     initial_cursor = request.get("initial_cursor")
     if initial_cursor is not None and not isinstance(initial_cursor, str):
         raise DiscoveryPrecheckRequestError("initial_cursor must be a string or null")
+
+    preload_id = request.get("preload_id")
+    preload_seed = request.get("preload_seed") is True
+    worker_id = str(request.get("worker_id") or "").strip()
+    if preload_id is not None:
+        preload_id = _safe_id(preload_id, "preload_id")
+        if not preload_seed and not worker_id:
+            raise DiscoveryPrecheckRequestError(
+                "worker_id is required when adopting a Discovery preload"
+            )
+
     out.update(
         {
             "schema_version": 3,
@@ -113,6 +125,9 @@ def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
             "page_size": page_size,
             "max_pages": max_pages,
             "initial_cursor": initial_cursor,
+            "preload_id": preload_id,
+            "preload_seed": preload_seed,
+            "worker_id": worker_id or None,
         }
     )
     return out
@@ -156,12 +171,69 @@ def _process_v3(
     *,
     snapshot_dir: Path,
     rejection_ledger_path: Path,
+    repo_root: Path,
 ) -> dict[str, Any]:
-    fetch_page = discovery_provider_adapter.make_fetcher(
-        request["provider"],
-        request["source_url"],
-        page_size=request["page_size"],
-    )
+    live_fetch_page = None
+
+    def get_live_fetch_page():
+        nonlocal live_fetch_page
+        if live_fetch_page is None:
+            live_fetch_page = discovery_provider_adapter.make_fetcher(
+                request["provider"],
+                request["source_url"],
+                page_size=request["page_size"],
+            )
+        return live_fetch_page
+
+    preload_entry: dict[str, Any] | None = None
+    preload_source_result: dict[str, Any] | None = None
+    preload_cache_used = False
+    preload_cached_pages_used = 0
+
+    if request.get("preload_id") and not request.get("preload_seed"):
+        preload_entry, preload_source_result = discovery_preload_queue.claim_and_load(
+            repo_root,
+            request,
+        )
+        served_cached_page = False
+
+        def fetch_page(cursor: str | None) -> dict[str, Any]:
+            nonlocal served_cached_page, preload_cache_used, preload_cached_pages_used
+            if not served_cached_page and cursor == request.get("initial_cursor"):
+                served_cached_page = True
+                preload_cache_used = True
+                preload_cached_pages_used = 1
+                records = preload_source_result.get("results")
+                if not isinstance(records, list):
+                    raise DiscoveryPrecheckRequestError(
+                        "Discovery preload result is missing results[]"
+                    )
+                next_cursor = preload_source_result.get("next_cursor")
+                if next_cursor is not None and not isinstance(next_cursor, str):
+                    raise DiscoveryPrecheckRequestError(
+                        "Discovery preload result has invalid next_cursor"
+                    )
+                # repository_references is a local, dynamic pool whose positional
+                # cursor can shift after papers/ledgers change. If the cached page
+                # is no longer enough, restart the live local scan at index 0;
+                # cross-page identity filtering removes overlap without skipping
+                # candidates that moved ahead of the old cursor.
+                if str(request.get("provider") or "").casefold() in {
+                    "repository_references",
+                    "repository_reference_pool",
+                }:
+                    next_cursor = "0"
+                return {
+                    "records": records,
+                    "next_cursor": next_cursor,
+                    "page_url": f"preload://{request['preload_id']}",
+                    "position": cursor,
+                    "provider_progress": preload_source_result.get("provider_progress"),
+                }
+            return get_live_fetch_page()(cursor)
+    else:
+        fetch_page = get_live_fetch_page()
+
     collected = discovery_search_filter.collect_until_unseen(
         fetch_page,
         snapshot_dir=snapshot_dir,
@@ -186,6 +258,8 @@ def _process_v3(
             "pages_fetched": collected["pages_fetched"],
             "snapshot_source_commit": source_commit,
             "allowed_identity_tokens": [row["identity_tokens"] for row in allowed],
+            "preload_id": request.get("preload_id"),
+            "preload_cache_used": preload_cache_used,
         }
     )
     if collected["target_reached"]:
@@ -230,14 +304,34 @@ def _process_v3(
         "unseen_result_count": collected["unseen_result_count"],
         "provider_progress": collected.get("provider_progress"),
         "progress_observed_at": datetime.now(timezone.utc).isoformat(),
+        "preload_id": request.get("preload_id"),
+        "preload_seed": bool(request.get("preload_seed")),
+        "preload_cache_used": preload_cache_used,
+        "preload_cached_pages_used": preload_cached_pages_used,
+        "preload_live_pages_fetched": max(
+            int(collected["pages_fetched"]) - preload_cached_pages_used,
+            0,
+        ),
+        "preload_source_request_id": (
+            preload_source_result.get("request_id")
+            if isinstance(preload_source_result, dict)
+            else None
+        ),
         "results": results,
         "allowed_records": allowed,
         "receipt": receipt,
         "next_action": (
+            (
+                "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; "
+                "the cached records were re-filtered against this run's current identity snapshot and any "
+                "shortfall was topped up from the same fixed source. "
+            )
+            if preload_cache_used
+            else
             "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination "
-            "within the single fixed source_url result set. Evaluate only results[] and reference this "
-            "result_path/receipt from submit_discovery_round."
-        ),
+            "within the single fixed source_url result set. "
+        )
+        + "Evaluate only results[] and reference this result_path/receipt from submit_discovery_round.",
     }
 
 
@@ -246,6 +340,7 @@ def process_request(
     *,
     snapshot_dir: Path,
     rejection_ledger_path: Path,
+    repo_root: Path = Path("."),
 ) -> dict[str, Any]:
     request_path = Path(request_path)
     request = _validate_request(_read_object(request_path))
@@ -255,6 +350,7 @@ def process_request(
         request,
         snapshot_dir=snapshot_dir,
         rejection_ledger_path=rejection_ledger_path,
+        repo_root=Path(repo_root),
     )
 
 
@@ -274,6 +370,7 @@ def failure_result(request_path: Path, exc: Exception) -> dict[str, Any]:
         "collector_id": request.get("collector_id"),
         "run_key": request.get("run_key"),
         "axis": request.get("axis"),
+        "preload_id": request.get("preload_id"),
         "error": f"{type(exc).__name__}: {exc}",
         "evaluation_allowed": False,
         "decision": "FIX_REQUEST",
@@ -297,6 +394,7 @@ def main() -> int:
     parser.add_argument("--result", type=Path, required=True)
     parser.add_argument("--snapshot-dir", type=Path, required=True)
     parser.add_argument("--rejection-ledger", type=Path, required=True)
+    parser.add_argument("--repo-root", type=Path, default=Path("."))
     args = parser.parse_args()
 
     try:
@@ -304,6 +402,7 @@ def main() -> int:
             args.request,
             snapshot_dir=args.snapshot_dir,
             rejection_ledger_path=args.rejection_ledger,
+            repo_root=args.repo_root,
         )
         rc = 0
     except Exception as exc:

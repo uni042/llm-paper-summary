@@ -40,6 +40,17 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
+      - name: Validate Discovery preload helpers
+        run: |
+          python -m py_compile \
+            .survey/scripts/discovery_preload_queue.py \
+            .survey/scripts/process_discovery_precheck.py \
+            .survey/scripts/derive_worker_run_state.py \
+            .survey/scripts/queue_worker.py
+          python -m unittest discover \
+            -s .survey/tests \
+            -p 'test_discovery_preload_queue.py'
+
       - name: Process unsettled Discovery precheck requests
         shell: bash
         env:
@@ -55,6 +66,14 @@ jobs:
 
             rm -rf /tmp/discovery-identities
             rm -f /tmp/discovery-rejections.json
+
+            # Keep a background stock of pre-run Discovery windows. New worker
+            # requests are still processed before these preload requests below.
+            if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; then
+              python .survey/scripts/discovery_preload_queue.py \
+                --repo-root . top-up --target 32 --max-new 8 \
+                | tee /tmp/discovery-preload-topup.json
+            fi
             python .survey/scripts/build_discovery_identity_snapshot.py \
               --root .survey \
               --output /tmp/discovery-identities \
@@ -63,16 +82,33 @@ jobs:
               --root .survey \
               --output /tmp/discovery-rejections.json
 
-            mapfile -t requests < <(
+            mapfile -t all_requests < <(
               find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
             )
 
             if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
               requests=("$MANUAL_REQUEST")
+            else
+              # A real worker must never wait behind speculative preload traffic.
+              requests=()
+              for request in "${all_requests[@]:-}"; do
+                [ -n "$request" ] || continue
+                case "$(basename "$request")" in
+                  preload-*.json) ;;
+                  *) requests+=("$request") ;;
+                esac
+              done
+              for request in "${all_requests[@]:-}"; do
+                [ -n "$request" ] || continue
+                case "$(basename "$request")" in
+                  preload-*.json) requests+=("$request") ;;
+                esac
+              done
             fi
 
             processed=0
-            failures=0
+            foreground_failures=0
+            preload_failures=0
             for request in "${requests[@]:-}"; do
               [ -n "$request" ] || continue
               case "$request" in
@@ -89,25 +125,40 @@ jobs:
                 --request "$request" \
                 --result "$result" \
                 --snapshot-dir /tmp/discovery-identities \
-                --rejection-ledger /tmp/discovery-rejections.json; then
+                --rejection-ledger /tmp/discovery-rejections.json \
+                --repo-root .; then
                 :
               else
-                failures=1
+                case "$name" in
+                  preload-*.json) preload_failures=1 ;;
+                  *) foreground_failures=1 ;;
+                esac
               fi
               processed=$((processed + 1))
             done
 
-            if [ "$processed" -eq 0 ]; then
-              echo 'No unsettled Discovery precheck requests remain.'
+            if [ "$processed" -eq 0 ] && git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+              echo 'No unsettled Discovery precheck requests or preload queue changes remain.'
               exit 0
             fi
 
-            git add .survey/work-queue/discovery-precheck/results
-            git commit -m 'survey: publish discovery precheck results'
+            git add \
+              .survey/work-queue/discovery-precheck/requests \
+              .survey/work-queue/discovery-precheck/results \
+              .survey/work-queue/discovery-preload
+
+            if git diff --cached --quiet; then
+              echo 'No Discovery precheck changes to publish.'
+              exit 0
+            fi
+            git commit -m 'survey: publish discovery precheck results and preload stock'
 
             if git push origin HEAD:main; then
-              if [ "$failures" -ne 0 ]; then
-                echo 'One or more precheck failures were persisted with recovery guidance.' >&2
+              if [ "$preload_failures" -ne 0 ]; then
+                echo 'One or more background preload failures were persisted; foreground Discovery remains usable.' >&2
+              fi
+              if [ "$foreground_failures" -ne 0 ]; then
+                echo 'One or more foreground precheck failures were persisted with recovery guidance.' >&2
                 exit 1
               fi
               exit 0
