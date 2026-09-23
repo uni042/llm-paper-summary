@@ -221,9 +221,8 @@ def compact_run_state(root: Path, apply: bool, min_age_seconds: int, now: dt.dat
             value = _read(path, {})
             if isinstance(value, dict) and isinstance(value.get("result_path"), str):
                 protected.add(value["result_path"])
-    if not req_root.is_dir():
-        return moved, skipped
-    for request_path in sorted(req_root.glob("*.json")):
+    request_paths = sorted(req_root.glob("*.json")) if req_root.is_dir() else []
+    for request_path in request_paths:
         result_path = res_root / request_path.name
         result_rel = result_path.relative_to(root).as_posix()
         request = _read(request_path, {})
