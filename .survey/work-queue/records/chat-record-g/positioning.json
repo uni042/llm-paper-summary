@@ -4,7 +4,35 @@
   "slot": "positioning",
   "attempt_id": "attempt-9e32a6c39b70b1ce1c5e9f53",
   "job_id": "job-research-566a14b0b6e022f7",
-  "data": {},
+  "data": {
+    "limitations": [
+      "1,048,576トークンの論理KV容量は割り当て済みだが、100万トークンを実際に埋めた継続スループット、入場、品質、正確なメモリピークは未検証。",
+      "現在の正式測定と条件を揃えたTP4対TP8比較がなく、テンソル並列数の増加そのものによる倍率は推定できない。",
+      "現在構成に対するstrict DSparkのfresh matched regressionがなく、歴史的1127.48/1142.26トークン/秒を最新native-AR値と割って投機的復号の速度向上とみなせない。",
+      "16K入力のC16で先頭トークンの反復性が崩れる例があり、固定順還元後もバッチ不変性や普遍的数値等価性は未証明。",
+      "新規形状の初回コンパイルでは4 build合計約23.1秒に関連する遅延が観測され、warm状態の常駐性能だけではcold TTFTを代表できない。",
+      "実験済みのローカル変更一式を取得できる著者公式公開コードURLを本文から確認できず、完全再現には記録された依存コミットとdirty pathの証拠が必要。"
+    ],
+    "differences": "vLLMやSGLangのような一般サービング基盤、MegaBlocksのようなMoE訓練方式、DSparkのような投機的復号方式を置き換える研究ではない。既存SGLangの抽象を保ちつつ、FP4保存のDeepSeek-V4-FlashをCDNA2世代へ持ち込んだときに現れる数値配置、wave64、小M専門家、集合通信、大規模事前充填の具体的障害を修復する。特に『速いが誤っていた経路』を失敗として取り消し、現在正式行列・歴史的ablation・投機的結果を別証拠として管理する点が、単純な性能ポートやカーネルmicrobenchmarkとの差である。",
+    "implementation_status": "実機で動作するSGLang系実装と再現用測定資産が存在し、最新の正式測定はTP8/EP1で完走している。ベンチマーク終了後はサービスを停止しており、現在稼働中の公開endpointは主張していない。SGLang、AIter、Composable Kernelにローカル変更が含まれ、付録は実行HEAD、依存commit、dirty path、測定archiveのhashを保持すると述べる。著者公式の公開リポジトリURLは本文から確認できないため、公開実装としては未確認扱いとする。",
+    "research_positioning": "異種・旧世代GPUで最新大規模言語モデルを動かす推論基盤研究のうち、ハードウェア固有の正当性回復と性能工学を結ぶ事例研究に位置づく。オフロードや専門家キャッシュを直接提案する論文ではないが、専門家ごとの小行列、低精度保存形式、通信同期、形状特化がMoE推論の実効性能を決めることを具体的な失敗例とともに示すため、AMD系推論基盤や低精度MoEカーネルの系統を補強する。特に保存精度と実行演算形式を分離し、正当性を固定オラクルで回復した後に速度を測る手順は、量子化・異種アクセラレータ最適化の監査基準として有用である。",
+    "related_work": [
+      "SGLang",
+      "vLLM / PagedAttention",
+      "DeepSeek-V3 / DeepSeek-V4",
+      "MegaBlocks",
+      "DSpark",
+      "AMD AIter / Composable Kernel"
+    ],
+    "evidence_locations": [
+      "§2 Related systems",
+      "§10.3 Correctness hierarchy",
+      "§11 Rejected or reverted directions",
+      "§13 Remaining risks and next steps",
+      "§14 Conclusion",
+      "Appendix C Evidence provenance and open gaps"
+    ]
+  },
   "reservation": {
     "claim_id": "claim-9e32a6c39b70b1ce1c5e9f53",
     "worker_id": "scheduled-chat-30",
