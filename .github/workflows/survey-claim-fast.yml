@@ -62,6 +62,37 @@ jobs:
             python .survey/scripts/repair_claim_bank_recovery.py --repo-root .
             python .survey/scripts/enrich_claim_record_routes.py --repo-root .
 
+            git diff --name-only -- .survey/work-queue/claim-results               | grep '^.survey/work-queue/claim-results/.*\.json\
+              .survey/work-queue/claim-requests \
+              .survey/work-queue/jobs \
+              .survey/work-queue/claims \
+              .survey/work-queue/claim-results \
+              .survey/work-queue/records
+
+            if git diff --cached --quiet; then
+              echo 'Claim state already settled.'
+              exit 0
+            fi
+
+            git commit -m 'survey-claim: allocate one-job claims and reserve banks'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Claim push race on attempt ${attempt}; recomputing from latest main."
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            jitter=$(( RANDOM % 6 ))
+            sleep $((backoff + jitter))
+          done
+
+          echo 'Failed to publish claim results after 12 retries.' >&2
+          exit 1
+               > /tmp/changed-claim-results.txt || true
+            if [ -s /tmp/changed-claim-results.txt ]; then
+              python .survey/scripts/derive_worker_run_state.py                 --repo-root .                 --claim-results-file /tmp/changed-claim-results.txt                 || echo 'Incremental run-state claim cache update failed; fact clock will force canonical fallback.'
+            fi
+
             git add \
               .survey/work-queue/claim-requests \
               .survey/work-queue/jobs \
