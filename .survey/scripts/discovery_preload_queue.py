@@ -830,17 +830,6 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
     if str(preload_result.get("run_key") or "") != f"preload:{preload_id}":
         raise ValueError("Discovery preload result identity is inconsistent")
 
-    discovery_bank = _bank_for_preload(root, preload_id)
-    requested_bank = str(request.get("discovery_bank") or "").lower().strip() or None
-    if discovery_bank is None:
-        raise ValueError("Discovery preload is not present in any dual-purpose bank sidecar")
-    if requested_bank is not None and requested_bank != discovery_bank:
-        raise ValueError("Discovery preload bank does not match the run-state assignment")
-    requested_slot_path = str(request.get("discovery_slot_path") or "").strip() or None
-    expected_slot_path = discovery_slot_path(discovery_bank)
-    if requested_slot_path is not None and requested_slot_path != expected_slot_path:
-        raise ValueError("Discovery preload slot path does not match the bank assignment")
-
     now = _utcnow()
     claim_path = root / _claim_path(preload_id)
     current = _active_claim(root, preload_id, now)
@@ -852,6 +841,19 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
         )
         if not same:
             raise ValueError("Discovery preload entry is actively claimed by another worker")
+        discovery_bank = str(current.get("discovery_bank") or "").lower().strip() or None
+    else:
+        discovery_bank = _bank_for_preload(root, preload_id)
+
+    requested_bank = str(request.get("discovery_bank") or "").lower().strip() or None
+    if discovery_bank is None or discovery_bank not in BANK_IDS:
+        raise ValueError("Discovery preload is not assigned to a valid dual-purpose bank")
+    if requested_bank is not None and requested_bank != discovery_bank:
+        raise ValueError("Discovery preload bank does not match the run-state assignment")
+    requested_slot_path = str(request.get("discovery_slot_path") or "").strip() or None
+    expected_slot_path = discovery_slot_path(discovery_bank)
+    if requested_slot_path is not None and requested_slot_path != expected_slot_path:
+        raise ValueError("Discovery preload slot path does not match the bank assignment")
     lease_expires = now + dt.timedelta(seconds=CLAIM_LEASE_SECONDS)
     claim = {
         "schema_version": 1,
