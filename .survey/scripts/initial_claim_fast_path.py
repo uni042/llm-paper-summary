@@ -2,11 +2,12 @@
 """Minimal initial-claim path that adopts already-preloaded Research/Audit claims.
 
 This path is intentionally narrow. It is used only for the first claim request of a
-run-state invocation when the shared preload FIFO already contains enough coherent,
-bank-reserved claims to fill the requested variable claim window. Any condition that
-would require queue-wide repair, direct allocation, checkpoint reconciliation, or
-bank recovery declines the fast path before mutation so the canonical claim path can
-handle it.
+run-state invocation when the shared preload FIFO already contains enough coherent
+logical paper claims to fill the requested variable claim window. Shared preload
+entries need no record bank. After FIFO adoption, only the leading hot slice is
+bank-ready. Any condition that would require queue-wide repair, direct allocation,
+checkpoint reconciliation, or bank recovery declines the fast path before mutation
+so the canonical claim path can handle it.
 """
 from __future__ import annotations
 
@@ -20,6 +21,7 @@ from typing import Any
 import claim_state
 import claim_window_policy
 import claim_worker
+import claim_worker_with_banks
 import derive_worker_run_state
 import shared_preload_pool
 from record_bank_config import BANK_ROOTS, SLOT_NAMES, canonical_slot_paths
@@ -139,8 +141,6 @@ def _select_candidates(
             raise InitialClaimFastPathUnavailable(f"preloaded dependency state changed: {job_id}")
         if str(current.get("kind") or "") != str(job.get("type") or ""):
             raise InitialClaimFastPathUnavailable(f"preloaded job type changed: {job_id}")
-        if not _reservation_is_clean(root, current):
-            raise InitialClaimFastPathUnavailable(f"preloaded record bank is not a clean reservation: {job_id}")
         selected.append(current)
         jobs_by_id[job_id] = job
         if len(selected) >= target:
@@ -204,8 +204,20 @@ def process(repo_root: Path, request_path: Path, at: Any = None) -> dict[str, An
             f"prevalidated FIFO adoption changed during mutation: expected={selected_ids} actual={adopted_ids}"
         )
 
+    bank_reconciliation = claim_worker_with_banks.reserve_new_claim_banks(
+        root,
+        new_claim_ids=set(),
+        at=now,
+    )
+    adopted = [
+        _read(root / ".survey/work-queue/claims" / f"{job_id}.json")
+        for job_id in selected_ids
+    ]
+    if not all(isinstance(claim, dict) for claim in adopted):
+        raise RuntimeError("adopted claim disappeared during hot-bank reconciliation")
     for claim in adopted:
-        _retag_reservation(root, claim)
+        if claim.get("record_bank"):
+            _retag_reservation(root, claim)
 
     assignments = [
         claim_worker._assignment(jobs_by_id[str(claim["job_id"])], claim)
@@ -234,7 +246,8 @@ def process(repo_root: Path, request_path: Path, at: Any = None) -> dict[str, An
         "standby_job_ids": standby_job_ids,
         "shared_pool_adopted_count": len(adopted),
         "reason": "scheduled_chat_initial_preload_fast_path",
-        "allocation_path": "preloaded_fifo_adopt_only",
+        "allocation_path": "preloaded_fifo_adopt_plus_hot_bank_slice",
+        "hot_banked_claim_target": claim_window_policy.hot_banked_claims(int(request["claim_window"])),
     }
     _write(result_path, result_payload)
     state_update = _apply_run_state_delta(root, result_path)
@@ -247,6 +260,7 @@ def process(repo_root: Path, request_path: Path, at: Any = None) -> dict[str, An
         "standby_job_ids": standby_job_ids,
         "changed_claim_results": [result_path.relative_to(root).as_posix()],
         "run_state_update": state_update,
+        "bank_reconciliation": bank_reconciliation,
     }
 
 
