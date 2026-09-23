@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 18:11:51 JST**
+> 自動生成: **2026-09-23 18:34:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **155** |
+| 収録候補論文 | **154** |
 | 未claim Research job | **154** |
-| 直近24hの検証済みResearch収録 | **85** |
-| 最終検証済みResearch収録 | **09-23 18:07:47 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **86** |
+| 最終検証済みResearch収録 | **09-23 18:34:37 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **155** |
+| canonical_id確認済みの一意な候補論文 | **154** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **155** |
+| 非終端Research job合計 | **154** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（9時間41分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（10時間3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **20** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **19** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **20** | **4** | **0** | **3** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 18:34:37 JST** [research] `DOI:10.1145/3832810.3832886` — IHS-LM: Intra-batch Hybrid Scheduling and Layer Migration for VLM Pipeline Inference Acceleration on Edge Devices
+  - job: `.survey/work-queue/jobs/job-research-69b42673d686f6f1.json`
+  - result: `.survey/work-queue/results/research/attempt-e9383c5ed3b356c7078986c9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e9383c5ed3b356c7078986c9.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-9b405eddeda4-ihs-lm-intra-batch-hybrid-scheduling-and-layer-migration-for-vlm-pipeline-inference-acceleration-on-edge-devices.md`
 - **09-23 18:07:47 JST** [research] `arXiv:2609.19880` — D-Quant: Driftable Entropy Coding for KV Cache Quantization
   - job: `.survey/work-queue/jobs/job-research-b8145b0c5f2892c4.json`
   - result: `.survey/work-queue/results/research/attempt-3e602a0f4e7177d85de6b301.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-a05675288077a249ad02f491.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-a05675288077a249ad02f491.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.04454-phase-aware-expert-merging.md`
-- **09-23 14:44:33 JST** [research] `arXiv:2201.05596` — DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale
-  - job: `.survey/work-queue/jobs/job-research-8699aa3a6604cb58.json`
-  - result: `.survey/work-queue/results/research/attempt-b7b0e81277b66329080b1c40.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b7b0e81277b66329080b1c40.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md`
 
 ### Audit
 
@@ -178,10 +178,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.1145/3832810.3832886` — IHS-LM: Intra-batch Hybrid Scheduling and Layer Migration for VLM Pipeline Inference Acceleration on Edge Devices / worker `scheduled-chat-30`
-  - claim: **09-23 17:34:14 JST** / heartbeat: **—** / lease expiry: **09-23 19:04:14 JST**
-  - evidence: `.survey/work-queue/claims/job-research-69b42673d686f6f1.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +199,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **155** |
+| ready | **154** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +219,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **990** |
+| inference/training/survey配下の論文Markdown実体 | **991** |
 
 ### immutable submissionの未照合
 
