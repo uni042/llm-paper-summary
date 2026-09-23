@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c67963f1064ecc2790db5b2d","job_id":"job-research-51f4efd90b7a5e12","data":{"hardware":"主要測定はすべて単一のNVIDIA RTX 5070で行い、画像処理装置（GPU）記憶は12,227 MiB、システムメモリは約31GB、OSはWindowsである。較正時の実用的なGPU記憶上限は約10.98 GiBとした。","software":"Python 3.10.11、CUDA 12.8、PyTorch、Transformers、Datasets、lm-evaluation-harnessを使用する。圧縮状態からの直接実行には試作段階のTriton計算核を用いる。","methodology":"Qwen3-8Bの252個の線形射影を、較正64例、系列長2048トークン、乱数種0、減衰係数0.01で変換する。困惑度はWikiText-2、C4、PTBで測定する。能力評価はARC-Challenge、ARC-Easy、BoolQ、HellaSwag、LAMBADA-openai、MMLU、PIQA、WinoGrandeの8課題をゼロショットで各500例評価し、選択式課題では偶然正解または多数派正解の床を差し引いた能力保持率も算出する。4Bモデルも同じ条件で再評価する。さらに圧縮保存の前後で困惑度と保存量を比較し、実行時GPU記憶、毎秒トークン数、4096×2560行列ベクトル積の微小ベンチマークを測る。","scope":"乱数種は1つ、各課題500例、較正文は主にWikiText-2で、規模比較も4Bと8Bの2点に限られる。量子化対象は線形射影だけで、埋め込み、出力頭、正規化、活性値、鍵値キャッシュは高精度のままである。計算核は試作段階で製品水準ではなく、すべての競合する三値後量子化法を同一手順で比較した評価もない。"},"reservation":{"claim_id":"claim-c67963f1064ecc2790db5b2d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-0273ce1913f64a15a590f7e2",
+  "job_id": "job-research-52c9fc70a4b38892",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0273ce1913f64a15a590f7e2",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

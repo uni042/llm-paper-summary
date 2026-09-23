@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-c67963f1064ecc2790db5b2d","job_id":"job-research-51f4efd90b7a5e12","data":{"overview":"公開TWLAの変換後ゼロショット平均62.05に対し再現値は62.00で、外部再現条件を通過した。8課題平均正答率は高精度版72.4%から64.6%へ7.8点低下するが、偶然正解の床を除いた能力保持率は78.5%で、同条件4Bの69.6%より8.9点高い。格子対応の圧縮保存では16.9GBの保存物を8.24GiBへ縮小し、困惑度をほぼ維持した。圧縮状態からの直接実行はRTX 5070上で7.35GiB、15.52 token/sだが、試作行列ベクトル積核はFP16 cuBLASより4.6倍遅い。","key_results":[{"metric":"TWLA再現条件","value":"変換後ゼロショット62.00、公開値62.05","baseline":"公開TWLA Qwen3-8B","condition":"公開手法の再現確認","interpretation":"変換後の絶対得点を0.05点差で再現した。ただし手元FP16のWikiText-2困惑度は公開値と7.9%異なるため、比率改善は主張しない。"},{"metric":"8課題の能力","value":"64.6%、FP16は72.4%、補正済み保持率78.5%","baseline":"手元Qwen3-8B FP16","condition":"ゼロショット、各500例","interpretation":"強い後量子化後も相当量の能力を保持するが、MMLUなど知識依存課題の低下が大きい。"},{"metric":"4B対8Bの同条件保持率","value":"69.6%→78.5%、+8.9点","baseline":"同一手順Qwen3-4B","condition":"減衰係数0.01、各500例","interpretation":"8Bは8課題中6課題で高い。ただし2規模・1乱数種なので規模則ではない。"},{"metric":"複数コーパス困惑度","value":"平均比1.361倍、WikiText-2 1.318倍、C4 1.393倍、PTB 1.371倍","baseline":"FP16","condition":"3コーパス","interpretation":"較正コーパスだけでなく分布外でも品質低下を確認した。"},{"metric":"圧縮保存物","value":"16.9GB→8.24GiB","baseline":"低ビット値をFP16で保持した保存物","condition":"格子対応保存","interpretation":"WikiText-2困惑度差0.000085、PTB差0.000996で実質無損失。"},{"metric":"圧縮状態からの直接実行","value":"15.52 token/s、7.35GiB","baseline":"従来のCPU退避経路 約1.48 token/s","condition":"RTX 5070 12GB","interpretation":"退避なしの直接実行を実証するが、約10.49倍をFP16に対する高速化とは解釈しない。"},{"metric":"圧縮GEMV微小ベンチマーク","value":"0.2082ms、FP16 cuBLASは0.0451ms","baseline":"FP16 cuBLAS","condition":"4096×2560","interpretation":"試作圧縮核は4.6倍遅く、計算核最適化が主要なシステム上の残課題である。"}],"negative_results":"手元FP16のWikiText-2基準値が公開値と7.9%異なるため、変換後/FP16比の直接比較は不適切である。FP16再構成重みから単純な格子を後付け推定すると相対誤差50.5%、困惑度約18,477となり、量子化後に保存形式を復元する方法は破綻する。試作圧縮GEMVはFP16 cuBLASより4.6倍遅い。PIQAとHellaSwagでは同条件8Bの保持率が4Bより低い。","interpretation":"大きい事前学習モデルほど強い離散化に頑健という仮説には2点比較で支持があるが、一般則とはいえない。配備には表現上のビット数だけでなく、量子化器の内部状態に沿った保存形式と圧縮状態を直接読む計算核が必要である。本研究は『直接実行できるか』を解決した一方、『高精度実装より高速か』は未解決と切り分ける。","quality_impact":"平均正答率は7.8点低下し、困惑度は平均1.361倍となる。文脈理解や常識寄りの課題は比較的保持される一方、MMLUやARC-Challengeなど知識依存課題の低下が大きい。"},"reservation":{"claim_id":"claim-c67963f1064ecc2790db5b2d","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-0273ce1913f64a15a590f7e2",
+  "job_id": "job-research-52c9fc70a4b38892",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0273ce1913f64a15a590f7e2",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
