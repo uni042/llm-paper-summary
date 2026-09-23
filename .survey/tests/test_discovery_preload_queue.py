@@ -112,8 +112,8 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
             set(BANK_IDS[:2]),
         )
 
-    def test_bank_deficit_refill_continues_after_total_target_is_full(self) -> None:
-        first = preload.top_up(self.root, target=1, max_new=1)
+    def test_bank_coverage_refills_in_canonical_order(self) -> None:
+        first = preload.top_up(self.root, target=2, max_new=1)
         self.assertEqual(first["created_count"], 1)
         entry = preload._entries(self.root)[0]
         self.assertEqual(entry["stock_bank"], BANK_IDS[0])
@@ -138,7 +138,7 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
             },
         )
 
-        second = preload.top_up(self.root, target=1, max_new=1)
+        second = preload.top_up(self.root, target=2, max_new=1)
         self.assertEqual(second["available_before"], 1)
         self.assertEqual(second["created_count"], 1)
         entries = preload._entries(self.root)
