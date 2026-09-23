@@ -2,44 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-11a2387004457060d2b83f8f",
-  "job_id": "job-research-2752e3b1e763b7d9",
-  "data": {
-    "hardware": "主要精度実験のGPU構成は本文に明示されない。オーバーヘッド評価は8×NVIDIA A800-80G、テンソル並列8、vLLMで実施。代表条件では入力長1024、バッチ8、出力長1024。付録では入力長256/512/1024、バッチ1〜32、出力長256/512/1024を掃引する。",
-    "software": "推論基盤はvLLM、評価枠組みはLightEval。通常温度トークン標本化はT=0.7、top-p=0.8、top-k=20、高温度はT=1.3、top-p=0.98、top-k制限なし。Expert-Sampleはk_keep=floor(k/2)+1、τ=1.0、r=4kを共通既定値として通常温度標本化へ追加する。",
-    "model": [
-      "Qwen3-30B-A3B-Instruct",
-      "GPT-OSS-20B (low think-budget)",
-      "Ling-Lite-1.5",
-      "Qwen3-Next-80B-A3B-Instruct",
-      "予備分析のみ: DeepSeek-V2-Lite-Chat"
-    ],
-    "datasets": [
-      "AIME-120：2022〜2025の120問、pass@nと難易度別安定性・多様性",
-      "GPQA-Diamond：知識推論、pass@nと検証選択",
-      "LiveCodeBench-V6-Lite：コード生成pass@n",
-      "AIME 2024 / AIME 2025 / HMMT 2025 / MATH-500-Hard / GPQA-Diamond：32候補のBest-of-N・重み付き多数決",
-      "WikiText-2：スループット測定用入力"
-    ],
-    "baselines": [
-      "通常温度トークン標本化",
-      "高温度トークン標本化",
-      "エントロピー動的温度標本化(EDT)",
-      "Best-of-Nのみ / Best-of-N + Expert-Sample",
-      "重み付き多数決のみ / 重み付き多数決 + Expert-Sample"
-    ],
-    "correctness": "pass@nでは候補数nを2,4,8,16,32,64と増やして正答を少なくとも1つ含む確率を比較する。AIME-120の安定性検証では5試行のうち4回以上正解する問題を既解集合、残りのうち32試行で1回以上正解するものを中間集合、0回を困難集合に分ける。中間集合は報酬モデルでBest-of-N、困難集合はDeepSeek-R1判定器で推論経路類似度を測り多様性へ変換する。判定器は3回反復とGPT-4o、Claude-Sonnet-4.6への交換でも相対順位を確認する。",
-    "settings": [
-      "主要pass@n評価は4モデル×AIME-120/GPQA-Diamond/LiveCodeBench-V6-Liteの12条件。",
-      "検証選択は各問題32応答。AIME 2024/2025とHMMT 2025は問題数が少ないため5独立試行の平均。",
-      "Best-of-NではQwen2.5-Math-PRM-7BとLlama3.1-8B-PRM-Deepseek-Data等の報酬モデルを使用し、重み付き多数決では回答群ごとの平均報酬を使う。",
-      "ハイパーパラメータ付録ではk_keep、τ、rを広く掃引し、既解集合の安定性と不確定集合の探索性能を別々に確認。"
-    ],
-    "methodology": "まず専門家数削減とルータ得点分布を調べ、「単発品質を担う頭部」と「多様性へ寄与する尾部」という仮説を立てる。その後、AIME-120の難易度分割で安定性・検証後精度・推論経路多様性・正答到達率を個別に測る。主評価では候補数を増やしたpass@n曲線を4モデル3課題で比較し、候補生成の改善が最終回答選択へ移るかをBest-of-Nと重み付き多数決で確認する。最後に実機vLLMスループットと判定器頑健性、パラメータ感度を測り、品質改善が大きな経路当たり実行時負荷や特定判定器だけに依存しないことを検証する。",
-    "scope": "結果は細粒度MoEに限定され、DenseモデルやMixtral型の少数専門家MoEへ同じ頭部・尾部境界が成立することは示していない。pass@n改善には複数候補の生成費用が必要で、経路当たりオーバーヘッドが小さくても総推論費用は候補数に比例する。主要精度実験のハードウェア詳細は明示されず、実機スループットはA800環境での評価である。困難集合の多様性はLLM判定器に依存するが、複数判定器で相対傾向を再確認している。"
-  },
+  "attempt_id": "attempt-d924da91e59e26de1e7c5529",
+  "job_id": "job-research-81939bee41b7da9c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-11a2387004457060d2b83f8f",
+    "claim_id": "claim-d924da91e59e26de1e7c5529",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
