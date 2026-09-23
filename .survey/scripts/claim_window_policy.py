@@ -21,11 +21,11 @@ MAX_CLAIM_WINDOW = 24
 # current 32 banks for ordinary hot work, leaving the rest for repair/exception use.
 HOT_BANKED_CLAIMS = 4
 
-# Keep one additional hot-window worth of shared paper stock beyond the six complete
-# worker inventories. This stock is logical only and consumes no record bank.
+# Keep a second complete six-worker inventory in the shared pool. In Research mode
+# the routing threshold guarantees enough candidate depth for this without coupling
+# the paper stock to record-bank capacity.
 SHARED_PRELOAD_TARGET = (
-    DEFAULT_CLAIM_WINDOW * EXPECTED_PARALLEL_WORKERS
-    + HOT_BANKED_CLAIMS * EXPECTED_PARALLEL_WORKERS
+    DEFAULT_CLAIM_WINDOW * EXPECTED_PARALLEL_WORKERS * 2
 )
 
 # Switch to Discovery before Research stock gets close to one full six-worker load.
