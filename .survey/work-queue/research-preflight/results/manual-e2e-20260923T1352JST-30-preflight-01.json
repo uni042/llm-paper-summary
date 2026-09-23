@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "manual-e2e-20260923T1352JST-30-preflight-01",
+  "kind": "research",
+  "attempt_id": "attempt-5a4e9ada9818faf9d38935ab",
+  "job_id": "job-research-71e43b4e5ff698a1",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.10933-deco-end-side-sparse-moe.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "manual-e2e-20260923T1352JST-30",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-23T04:52:00+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:461bf755c462e8fea82ee55f6be2d1f76c60d34edc937fb815cce4f3ee94cc73",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "490dcd7ef566df70a7abdcee13923b31f525a685"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "77c2c39aa4e95891229c545fddf01ce2614a6c6c"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "fcf7123141ef266bf2fbb2aea98c56654e839889"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "b3b078100804c47b051b0dfcfe49fedbfbcda4ec"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "b873e67b9e2db1a2cd0b0f4f5b27c69d30da0e00"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-23T05:03:52+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.10933-deco-end-side-sparse-moe.md",
+    "status": "FAIL",
+    "file_bytes": 27049,
+    "prose_chars": 4871,
+    "paragraphs": 17,
+    "method_paragraphs": 6,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9498432601880877,
+    "japanese_chars": 5757,
+    "latin_chars": 304,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}
