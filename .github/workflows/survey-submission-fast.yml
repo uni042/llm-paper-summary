@@ -100,16 +100,16 @@ jobs:
               exit "$batch_rc"
             fi
 
-            : > /tmp/submission-results.txt
-            while IFS= read -r descriptor; do
-              [ -n "$descriptor" ] || continue
-              kind="$(basename "$(dirname "$descriptor")")"
-              name="$(basename "$descriptor")"
-              result=".survey/work-queue/results/$kind/$name"
-              if [ -f "$result" ]; then
-                printf '%s\n' "$result" >> /tmp/submission-results.txt
-              fi
-            done < /tmp/immutable-submissions.txt
+            python - <<'PY' > /tmp/submission-results.txt
+            from pathlib import Path
+            for raw in Path("/tmp/immutable-submissions.txt").read_text(encoding="utf-8").splitlines():
+                descriptor = raw.strip()
+                if not descriptor:
+                    continue
+                result = Path(descriptor.replace("/submissions/", "/results/", 1))
+                if result.is_file():
+                    print(result.as_posix())
+            PY
 
             # Descriptor/result deltas update the advisory cache and, when a canonical
             # cache already exists for that exact invocation, emit a normal derived
