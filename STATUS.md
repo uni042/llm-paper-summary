@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 21:19:56 JST**
+> 自動生成: **2026-09-23 21:25:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **141** |
+| 収録候補論文 | **140** |
 | 未claim Research job | **137** |
 | 直近24hの検証済みResearch収録 | **89** |
-| 最終検証済みResearch収録 | **09-23 19:57:05 JST（1時間22分前）** |
+| 最終検証済みResearch収録 | **09-23 21:24:54 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **141** |
+| canonical_id確認済みの一意な候補論文 | **140** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **141** |
+| 非終端Research job合計 | **140** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（12時間49分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（12時間54分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **2** | **0** | **0** | **4** | **3** | — |
+| Research | **18** | **2** | **0** | **0** | **3** | **2** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **17** | **5** | **0** | **3** | **4** | **3** | **6** |
+| 合計 | **18** | **5** | **0** | **3** | **3** | **2** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 21:24:54 JST** [research] `arXiv:2609.15627` — DeepSeek-V4-Flash on AMD gfx90a: Correctness Recovery and Inference Performance Engineering
+  - job: `.survey/work-queue/jobs/job-research-566a14b0b6e022f7.json`
+  - result: `.survey/work-queue/results/research/attempt-9e32a6c39b70b1ce1c5e9f53.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-9e32a6c39b70b1ce1c5e9f53.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.15627-deepseek-v4-flash-on-amd-gfx90a-correctness-recovery-and-inference-performance-engineering.md`
 - **09-23 19:57:05 JST** [research] `arXiv:2606.21712` — BatchGen: An Architecture for Scalable and Efficient Batch Inference
   - job: `.survey/work-queue/jobs/job-research-ded5355ef64410a7.json`
   - result: `.survey/work-queue/results/research/attempt-04e285682c3e9ed7b0782532.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-e9383c5ed3b356c7078986c9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-e9383c5ed3b356c7078986c9.json`
   - paper: `papers/inference/99-other-inference-systems/2026-9b405eddeda4-ihs-lm-intra-batch-hybrid-scheduling-and-layer-migration-for-vlm-pipeline-inference-acceleration-on-edge-devices.md`
-- **09-23 18:07:47 JST** [research] `arXiv:2609.19880` — D-Quant: Driftable Entropy Coding for KV Cache Quantization
-  - job: `.survey/work-queue/jobs/job-research-b8145b0c5f2892c4.json`
-  - result: `.survey/work-queue/results/research/attempt-3e602a0f4e7177d85de6b301.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3e602a0f4e7177d85de6b301.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.19880-d-quant-driftable-entropy-coding-for-kv-cache-quantization.md`
 
 ### Audit
 
@@ -180,13 +180,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **3件**
+- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **2件**
 - `arXiv:2607.04164` — BrownoutMoE: Structure-Aware Expert Grouping for Efficient and Accurate LLM Web-based Services / worker `scheduled-chat-30`
   - claim: **09-23 21:16:15 JST** / heartbeat: **—** / lease expiry: **09-23 22:46:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-1a48a3083b0b1499.json`
-- `arXiv:2609.15627` — DeepSeek-V4-Flash on AMD gfx90a: Correctness Recovery and Inference Performance Engineering / worker `scheduled-chat-30`
-  - claim: **09-23 21:11:37 JST** / heartbeat: **09-23 21:16:15 JST** / lease expiry: **09-23 22:46:15 JST**
-  - evidence: `.survey/work-queue/claims/job-research-566a14b0b6e022f7.json`
 - `arXiv:2508.17137` — MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices / worker `scheduled-chat-30`
   - claim: **09-23 21:11:37 JST** / heartbeat: **09-23 21:16:15 JST** / lease expiry: **09-23 22:46:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-b22af651ef4f551f.json`
@@ -212,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **141** |
+| ready | **140** |
 
 ### 候補の重複・識別情報欠損
 
@@ -232,7 +229,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **999** |
+| inference/training/survey配下の論文Markdown実体 | **1000** |
 
 ### immutable submissionの未照合
 
