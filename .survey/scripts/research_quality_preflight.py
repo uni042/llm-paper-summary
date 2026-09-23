@@ -72,7 +72,9 @@ def _run_identity(request: dict[str, Any]) -> dict[str, Any]:
     worker_id = str(request.get("worker_id") or "").strip()
     if worker_id not in ALLOWED_WORKERS:
         raise PreflightRequestError("worker_id must be scheduled-chat-00 or scheduled-chat-30")
-    run_key = _safe_id(request.get("run_key"), "run_key")
+    run_key = str(request.get("run_key") or "").strip()
+    if not run_key or len(run_key) > 512:
+        raise PreflightRequestError("run_key must be a non-empty string up to 512 characters")
     scheduled_slot = str(request.get("scheduled_slot") or "").strip()
     if scheduled_slot not in ALLOWED_WORKERS[worker_id]:
         raise PreflightRequestError("scheduled_slot does not match worker_id")
