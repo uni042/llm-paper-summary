@@ -1,33 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T14:46:19+00:00",
-  "last_run_key": "adhoc-20260923T233300JST-worker-923331",
-  "last_round": "adhoc-20260923T233300JST-worker-923331-forward-02",
+  "updated_at": "2026-09-23T14:51:56+00:00",
+  "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+  "last_round": "20260923T233115JST-scheduled-chat-30-fwd-r4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "provider exhausted with zero citations",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-agent-moe-22",
-      "axis": "MoE dual-phase prefetch・cross-model KV reuse・agent serving simulation",
-      "query_summary": "2025-2026のMoE prefetch、multi-adapter KV reuse、agent serving evaluation infrastructureを探索し、repository未収録の3件を選定した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 3,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.4,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135",
-        "arXiv:2608.14624"
-      ],
-      "next_axis_hint": "canonical state反映を待たず独立探索を続けつつ、次のモード判定時にcandidate inventoryを再取得する",
-      "source_submission": "work-queue/submissions/20260916T2006JST-discovery-specialist-agent-moe-22.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-agent-runtime-23",
@@ -8202,6 +8184,39 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260923T233115JST-scheduled-chat-30-fwd-r4",
+      "precheck_request_id": "20260923T233115JST-scheduled-chat-30-fwd-r4",
+      "run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+      "round": "20260923T233115JST-scheduled-chat-30-fwd-r4",
+      "axis": "forward citations of ExactMoE memory-efficient W4A16 inference",
+      "query_summary": "ExactMoEを種論文にSemantic Scholarの前方引用を固定ソースで確認したが、引用論文は0件だった。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2608.15383/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2608.15383",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "citation-first pair complete; continue with next selector direction/window",
+      "source_submission": "work-queue/submissions/20260923T233115JST-scheduled-chat-30-fwd-r4.json",
+      "source_submissions": [
+        "work-queue/submissions/20260923T233115JST-scheduled-chat-30-fwd-r4.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16090,6 +16105,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
+    },
+    "forward citations of ExactMoE memory-efficient W4A16 inference": {
+      "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "citation-first pair complete; continue with next selector direction/window"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -16921,6 +16949,29 @@
       "cooldown": false,
       "last_run_key": "adhoc-20260923T233300JST-worker-923331",
       "last_round": "adhoc-20260923T233300JST-worker-923331-forward-02"
+    },
+    "window-632ee8bd7daa341d50a7": {
+      "topic": "exactmoe",
+      "source": "semantic_scholar",
+      "date_range": "all",
+      "category": "moe-inference",
+      "citation_direction": "forward",
+      "query_family": "forward-citation-refresh",
+      "search_window_key": "window-632ee8bd7daa341d50a7",
+      "scan_count": 1,
+      "raw_result_count": 0,
+      "unseen_result_count": 0,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 0,
+      "candidate_accepted_count": 0,
+      "last_position": "offset-0",
+      "unseen_rate": 0.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.0,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+      "last_round": "20260923T233115JST-scheduled-chat-30-fwd-r4"
     }
   },
   "recent_search_windows": [
@@ -17846,6 +17897,27 @@
       "unseen_rate": 0.2,
       "duplicate_rate": 0.0,
       "candidate_acceptance_rate": 0.5,
+      "last_position": "offset-0"
+    },
+    {
+      "topic": "exactmoe",
+      "source": "semantic_scholar",
+      "date_range": "all",
+      "category": "moe-inference",
+      "citation_direction": "forward",
+      "query_family": "forward-citation-refresh",
+      "search_window_key": "window-632ee8bd7daa341d50a7",
+      "run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+      "round": "20260923T233115JST-scheduled-chat-30-fwd-r4",
+      "raw_result_count": 0,
+      "unseen_result_count": 0,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 0,
+      "candidate_accepted_count": 0,
+      "unseen_rate": 0.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.0,
       "last_position": "offset-0"
     }
   ],
