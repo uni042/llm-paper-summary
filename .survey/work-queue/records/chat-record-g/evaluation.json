@@ -2,56 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-1af943d29bb42540aa6313f9",
-  "job_id": "job-research-6d95aed6ee156af5",
-  "data": {
-    "hardware": "推論効率はNVIDIA A800-40G上でMolmoE-1B-7Bを用いて測定。全方式で報告メモリは32.95GB。学習GPUの総台数は一次資料に明記されない。",
-    "software": "ネイティブMoEを利用し、MolmoE-1B-7B（64専門家・固定基準Top-8）、DeepSeek-VL2-Tiny-1B-3B（64専門家・固定基準Top-6）、追加一般化評価としてOLMoE-1B-7B（64専門家・Top-8）を使用。公式リポジトリはあるがコード本体は未公開。",
-    "model": [
-      "MolmoE-1B-7B (64Top8)",
-      "DeepSeek-VL2-Tiny-1B-3B (64Top6)",
-      "OLMoE-1B-7B (64Top8, appendix generalization)"
-    ],
-    "datasets": [
-      "LLaVA-1.5-558k（学習）",
-      "MMBench",
-      "POPE",
-      "ScienceQA",
-      "TextVQA",
-      "GQA",
-      "MM-Vet",
-      "MMMU",
-      "AI2D",
-      "InfoVQA",
-      "MMStar",
-      "RealWorldQA",
-      "OCRBench",
-      "VQAv2",
-      "MME",
-      "MMLU",
-      "BigBench",
-      "GSM-8K",
-      "HumanEval"
-    ],
-    "baselines": [
-      "各バックボーンの固定Top-k/Top-(k-1...)",
-      "DYNMoE",
-      "Top-p dynamic routing",
-      "AdaMoE",
-      "MoE++"
-    ],
-    "correctness": "動的方式間では同じネイティブMoEバックボーンを使い、専門家本体は固定してルータと方式固有モジュールだけを学習する。固定Top-k系列とも同じバックボーン上で平均専門家数・活性パラメータと平均性能を併記し、計算削減と品質低下を同時に比較する。",
-    "settings": [
-      "すべての方式をLLaVA-1.5-558kで1エポック学習し、学習率1e-4、コサインスケジュール、重み減衰0、5000ステップ、1 GPU当たりバッチ16、最大テキスト長2048、FP16。",
-      "負荷分散損失係数0.001、単調性損失係数1.0。単調性マージンは1.2×(H(x_i)-H(x_j))。",
-      "専門家数範囲はMolmoEで1〜8、DeepSeek-VL2-Tinyで1〜6。整数専門家数はsoft期待値を丸め、学習時はストレートスルー推定器を使用。",
-      "効率表はA800-40Gで平均活性専門家数、パラメータ、GPUメモリ、GFLOPs/トークン、トークン/秒、秒/サンプルを測定。"
-    ],
-    "methodology": "主要評価は6つの視覚言語ベンチマークでGeMoE、固定Top-k、4種の既存動的ルーティングを比較する。次にA800-40Gで実測推論効率を測り、単調性損失とエントロピー相関のアブレーション、損失重み感度、層別専門家数、専門家負荷を分析する。付録では8つの追加視覚言語評価と、OLMoE-1B-7B上のMMLU・BigBench・GSM-8K・HumanEvalで言語モデルへの一般化も確認する。",
-    "scope": "直接の主実証はネイティブMoE型の視覚言語モデル2種を後段微調整したケースであり、事前学習段階からGeMoEを用いる効果は未検証である。実測速度はMolmoE-1B-7BとA800-40Gの組み合わせであり、他GPUや分散エキスパート並列、CPU/SSDオフロードで同じ速度比になるとは限らない。OLMoEでLLM一般化を示すが1モデル・4ベンチマークに限られる。"
-  },
+  "attempt_id": "attempt-12e4c076f1788c06010c4a7a",
+  "job_id": "job-research-acb3c365d16a91ad",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-1af943d29bb42540aa6313f9",
+    "claim_id": "claim-12e4c076f1788c06010c4a7a",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
