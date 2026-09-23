@@ -644,7 +644,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             inventory, work_mode = frozen
         else:
             inventory = _candidate_inventory(root)
-            work_mode = "research" if inventory >= 50 else "discovery"
+            work_mode = "research" if inventory >= claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD else "discovery"
 
         attempts = _run_attempts(root, request["worker_id"], started_at)
         submission = _run_submission_state(root, attempts, started_at)
