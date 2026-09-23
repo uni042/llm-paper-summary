@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-01b29ed73471ef21eb33ce79",
   "job_id": "job-research-f719eedd6807af4c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01b29ed73471ef21eb33ce79",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価基盤はGoogle TPU v4とPaLMへ強く最適化されており、GPU/NVLinkへ分割原理が一般化するとしても同一実装での直接検証はない。FasterTransformer比較はA100 16〜32基とTPU v4 64基、Megatron 530BとPaLM 540Bという異なるhardware/architectureを含むため、MFUで正規化しても純粋なsoftware比較ではない。540Bでは分割性向上のためhead paddingで18Bパラメータを追加している。int8はweight-onlyでactivation量子化は未実装であり、大batch compute-bound領域の改善余地が残る。dense modelのFLOP数と通信量は根本的制約として残り、著者自身もsparsity、MoE、adaptive computation、通信圧縮を次の方向として挙げる。",
+    "differences": "FasterTransformerやDeepSpeed Inferenceがtensor/pipeline parallelismやCPU/NVMe offloadを含む実装基盤を提供するのに対し、本研究は用途条件から通信量を解析して最適partitioningを選ぶ設計原理を前面に出す。Alpaのような一般的な自動parallelism探索とも異なり、black-box探索ではなくモデルサイズ・batch・context・chip topologyから直感的かつ解析的に候補を導く。さらにPaLM固有のmultiquery attentionとparallel attention/FFNを推論配置へ共同設計し、KV cache容量・帯域とcollective回数まで含めたphase-aware最適化を示す。",
+    "implementation_status": "JAX/XLA/T5X系の実運用推論コード上で実装され、最大256 TPU v4で測定されている。Looped CollectiveEinsum、async CollectivePermute、tensor layout、sampling、activation関数、incremental prefill、AQT int8重みを統合している。一方、論文に対応する独立した再現用repositoryは明記されておらず、Google内部/基盤依存部分が多いため、第三者が論文だけから完全再現する難度は高い。",
+    "research_positioning": "現在のLLM serving研究で一般化したprefill/decode分離、memory-bound decodeとcompute-bound prefillの区別、KV cache帯域、tensor parallel通信という性能モデルを早い段階で体系化した基礎的システム論文である。特に『最適配置はbatch token数で変わる』という解析と、MQAの論理的KV削減をbatch shardingによる物理的なHBM削減へ結びつけた点が重要である。CPU/SSD/NVMe offload系との関係では、本論文は主にHBM内とchip間通信を扱うため階層memoryそのものは対象外だが、重み/KVのどちらが帯域支配かをphase・batch・contextで判定する考え方は、offload先・prefetch量・KV tieringを選ぶ際の基礎モデルとして直接つながる。"
+  },
+  "reservation": {"claim_id": "claim-01b29ed73471ef21eb33ce79", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
