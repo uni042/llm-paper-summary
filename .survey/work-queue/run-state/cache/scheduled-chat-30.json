@@ -1,6 +1,6 @@
 {
-  "fact_generation": 9,
-  "generation": 19,
+  "fact_generation": 10,
+  "generation": 20,
   "runs": {
     "manual-e2e-20260923T1352JST-30": {
       "actual_invocation_start": "2026-09-23T04:52:00+00:00",
@@ -870,10 +870,13 @@
         "attempt-b7b0e81277b66329080b1c40": {
           "attempt_id": "attempt-b7b0e81277b66329080b1c40",
           "claimed_at": "2026-09-23T05:42:03+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-b7b0e81277b66329080b1c40.json",
           "job_id": "job-research-8699aa3a6604cb58",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-23T05:44:33+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "scheduled-chat-30-20260923T052815Z",
@@ -911,24 +914,23 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T05:29:14.886388+00:00",
-      "generation": 19,
+      "generation": 20,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-30-20260923T052815Z",
       "scheduled_slot": "30",
       "submission": {
         "completed_attempt_ids": [
           "attempt-88d4b2308d0d8596f4fd6ce4",
-          "attempt-c3d771ab5950563d5d332246"
-        ],
-        "last_terminal_job_status": "completed",
-        "pending_attempt_ids": [
+          "attempt-c3d771ab5950563d5d332246",
           "attempt-b7b0e81277b66329080b1c40"
         ],
+        "last_terminal_job_status": "completed",
+        "pending_attempt_ids": [],
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 2,
+        "research_audit_completed_this_invocation": 3,
         "retryable_attempt_ids": [],
-        "submission_result_pending": true,
+        "submission_result_pending": false,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
           "attempt-88d4b2308d0d8596f4fd6ce4",
@@ -1034,6 +1036,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T05:44:14.093080+00:00",
+  "updated_at": "2026-09-23T05:44:34.040608+00:00",
   "worker_id": "scheduled-chat-30"
 }
