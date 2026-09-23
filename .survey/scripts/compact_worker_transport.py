@@ -244,6 +244,32 @@ def compact_run_state(root: Path, apply: bool, min_age_seconds: int, now: dt.dat
                 moved.append(source.relative_to(root).as_posix())
             else:
                 skipped.append({"path": source.relative_to(root).as_posix(), "reason": reason})
+    # Submission-driven snapshots have no request file. Keep the newest pointer
+    # target hot, but move old successful auto snapshots out of the fast lane.
+    if res_root.is_dir():
+        for result_path in sorted(res_root.glob("auto-*.json")):
+            result_rel = result_path.relative_to(root).as_posix()
+            if result_rel in protected:
+                continue
+            result = _read(result_path, {})
+            if not isinstance(result, dict) or result.get("ok") is not True:
+                continue
+            if result.get("auto_generated") is not True:
+                continue
+            if not _old_enough(result.get("processed_at"), now, min_age_seconds):
+                continue
+            worker_id = result.get("worker_id")
+            run_key = result.get("run_key")
+            attempt_start = result.get("actual_invocation_start")
+            if worker_id not in {"scheduled-chat-00", "scheduled-chat-30"} or not isinstance(run_key, str) or not run_key or _time(attempt_start) is None:
+                skipped.append({"path": result_rel, "reason": "invalid_auto_snapshot_identity"})
+                continue
+            ok, reason = _move(root, result_path, Path("run-state/results") / result_path.name, apply)
+            if ok:
+                moved.append(result_rel)
+            else:
+                skipped.append({"path": result_rel, "reason": reason})
+
     return moved, skipped
 
 
