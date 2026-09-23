@@ -37,6 +37,8 @@ DEFAULT_PAGE_SIZE = 20
 DEFAULT_MAX_PAGES = 25
 CLAIM_LEASE_SECONDS = 90 * 60
 REFRESH_BUCKET_SECONDS = 6 * 60 * 60
+PRELOAD_MAX_AGE_SECONDS = REFRESH_BUCKET_SECONDS
+ARTIFACT_RETENTION_SECONDS = 24 * 60 * 60
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -143,6 +145,11 @@ def _status(root: Path, entry: dict[str, Any], now: dt.datetime) -> str:
         return "INGESTED"
     if _active_claim(root, preload_id, now) is not None:
         return "CLAIMED"
+    created_at = _parse_time(entry.get("created_at"))
+    if created_at is None:
+        return "INVALID"
+    if (now - created_at).total_seconds() > PRELOAD_MAX_AGE_SECONDS:
+        return "STALE"
     result_path = root / _result_path(entry)
     result = _read(result_path, {})
     if isinstance(result, dict) and result:
@@ -260,14 +267,51 @@ def _expire_stale_claims(root: Path, now: dt.datetime) -> list[str]:
         if expires is not None and expires > now:
             continue
         preload_id = path.stem
-        if (root / _ingested_path(preload_id)).is_file():
-            continue
         try:
             path.unlink()
             expired.append(preload_id)
         except OSError:
             pass
     return expired
+
+
+def _gc_old_artifacts(root: Path, now: dt.datetime) -> list[str]:
+    """Remove preload-only transport artifacts after their bounded retention window.
+
+    A real run-specific precheck result is the durable submission proof. Background
+    preload seed requests/results are acceleration artifacts and may be removed once
+    they are old enough that their refresh bucket cannot be reused.
+    """
+    removed: list[str] = []
+    for entry in _entries(root):
+        preload_id = str(entry.get("preload_id") or "")
+        created_at = _parse_time(entry.get("created_at"))
+        if not preload_id or created_at is None:
+            continue
+        if (now - created_at).total_seconds() <= ARTIFACT_RETENTION_SECONDS:
+            continue
+        if _active_claim(root, preload_id, now) is not None:
+            continue
+        request_id = str(entry.get("precheck_request_id") or "")
+        paths = [
+            root / ENTRIES / f"{preload_id}.json",
+            root / CLAIMS / f"{preload_id}.json",
+            root / INGESTED / f"{preload_id}.json",
+        ]
+        if request_id:
+            paths.extend(
+                [
+                    root / PRECHECK_REQUESTS / f"{request_id}.json",
+                    root / PRECHECK_RESULTS / f"{request_id}.json",
+                ]
+            )
+        for path in paths:
+            try:
+                path.unlink()
+            except FileNotFoundError:
+                pass
+        removed.append(preload_id)
+    return removed
 
 
 def _latest_for_source(
@@ -365,6 +409,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
     root = root.resolve()
     now = _utcnow()
     expired = _expire_stale_claims(root, now)
+    garbage_collected = _gc_old_artifacts(root, now)
     entries = _entries(root)
     statuses = {_status(root, row, now) for row in entries}
     del statuses  # status set is only a cheap validation side effect
@@ -381,6 +426,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
             "available": available,
             "created": [],
             "expired_claims": expired,
+            "garbage_collected": garbage_collected,
         }
 
     bucket = _refresh_bucket(now)
@@ -427,6 +473,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         "created": created,
         "created_count": len(created),
         "expired_claims": expired,
+        "garbage_collected": garbage_collected,
     }
 
 
@@ -562,6 +609,10 @@ def mark_ingested(root: Path, *, preload_id: str, run_key: str, source_submissio
             "ingested_at": _utcnow().isoformat(),
         },
     )
+    try:
+        (root / _claim_path(preload_id)).unlink()
+    except FileNotFoundError:
+        pass
     return True
 
 
