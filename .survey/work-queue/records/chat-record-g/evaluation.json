@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-041d58979c001abd8a8d2892",
-  "job_id": "job-research-676eb3c59785d737",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-041d58979c001abd8a8d2892",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-041d58979c001abd8a8d2892","job_id":"job-research-676eb3c59785d737","data":{"hardware":"training evidenceは54M–150M級proxy modelsを中心とし、複数workerの同期roundとcontrolled WANを模擬して評価する。networkは主に1–10 Gbps、約50 ms latency級の条件を扱う。100B級構成は32 workers等を仮定したsystem modelで評価され、full-scale empirical pre-trainingではない。","software":"decoder-only TransformerにRoPE、Peri-LN、sigmoid MoE routing、fine-grained expertsを組み込み、distributed optimizerとしてLocalAdamWとDiLoCo adaptationを比較する。hyperparameter scalingにはmuP/CompletePを用い、learning rateはscale間で約0.01付近をtransferする一方、O_e、shuffle cadence T、local steps Kはscaleごとに調整する。","methodology":"主評価軸はvalidation perplexity、communication volume、per-site memory、training throughput、routing entropy/stability。M、O_e、Kを変え、full replica O_e=Mからdisjoint O_e=1までを比較する。54M proxyでは約1.34B tokens規模のC4 validation perplexityを報告し、LocalAdamWとDiLoCo、worker数、local-step数の影響を測る。skip-tokenはghost expert比率を変えてthroughputを実測する。system modelではDDPおよびfull-replica low-communication baselineに対する通信量とWAN bandwidth別wall-clockを投影する。","scope":"実証trainingはproxy scaleであり、13B/100B級の結論はsystem model projectionが中心。dataはstatic i.i.d.、workersはhomogeneous、protocolはsynchronousという制約がある。time-varying WAN jitter、asymmetric links、persistent stragglers、heterogeneous accelerators、downstream reasoning benchmarkは直接評価されていない。"},"reservation":{"claim_id":"claim-041d58979c001abd8a8d2892","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
