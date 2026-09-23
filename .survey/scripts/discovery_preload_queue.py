@@ -423,12 +423,17 @@ def _request_for_entry(entry: dict[str, Any]) -> dict[str, Any]:
 
 
 def _direction_floor_targets(target: int) -> dict[str, int]:
-    """Reserve roughly one third each for backward and forward citation stock."""
+    """Reserve citation stock plus a small normal-search fallback buffer."""
     target = max(int(target), 0)
     if target <= 1:
-        return {"backward": target, "forward": 0}
-    floor = max(target // 3, 1)
-    return {"backward": floor, "forward": floor}
+        return {"backward": target, "forward": 0, "normal": 0}
+    citation_floor = max(target // 3, 1)
+    normal_floor = target // 8
+    return {
+        "backward": citation_floor,
+        "forward": citation_floor,
+        "normal": normal_floor,
+    }
 
 
 def _prioritize_specs(
@@ -438,13 +443,13 @@ def _prioritize_specs(
     """Interleave citation directions while either reserved floor is deficient."""
     groups = {
         direction: [row for row in specs if row.get("citation_direction") == direction]
-        for direction in ("backward", "forward")
+        for direction in ("backward", "forward", "normal")
     }
     prioritized: list[dict[str, Any]] = []
     used: set[str] = set()
     max_len = max((len(rows) for rows in groups.values()), default=0)
     for index in range(max_len):
-        for direction in ("backward", "forward"):
+        for direction in ("backward", "forward", "normal"):
             if deficits.get(direction, 0) <= 0:
                 continue
             rows = groups[direction]
@@ -480,7 +485,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
     direction_targets = _direction_floor_targets(target)
     direction_deficits = {
         direction: max(direction_targets.get(direction, 0) - direction_available.get(direction, 0), 0)
-        for direction in ("backward", "forward")
+        for direction in ("backward", "forward", "normal")
     }
     needed = max(target - available, sum(direction_deficits.values()), 0)
     budget = min(needed, max(max_new, 0))
