@@ -43,7 +43,7 @@
     "positioning"
   ],
   "policy": {
-    "purpose": "direct GitHub transport staging only",
+    "purpose": "dual-purpose Research/Audit staging with independent Research and Discovery preload sidecars",
     "fallback_backlog_occupies_bank": false,
     "reuse_after_durable_outbox_checkpoint": true,
     "bank_exhaustion_is_not_run_stop_when_any_fallback_writable": true,
@@ -53,7 +53,10 @@
     "canonical_bank_count": 32,
     "dual_purpose_banks": true,
     "discovery_preload_per_bank": 1,
-    "discovery_and_research_slots_are_independent": true
+    "discovery_and_research_slots_are_independent": true,
+    "research_preload_per_bank": "variable_fifo_shard",
+    "research_preload_assignment": "pool_order_round_robin"
   },
-  "discovery_slot": "discovery-preload"
+  "discovery_slot": "discovery-preload",
+  "research_preload_slot": "research-preload"
 }

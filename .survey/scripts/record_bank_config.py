@@ -29,6 +29,7 @@ BANK_ROOTS = {str(k).lower(): str(v) for k, v in REGISTRY["banks"].items()}
 BANK_IDS = tuple(BANK_ROOTS)
 SLOT_NAMES = tuple(str(slot) for slot in REGISTRY["slots"])
 DISCOVERY_SLOT_NAME = str(REGISTRY.get("discovery_slot") or "discovery-preload")
+RESEARCH_PRELOAD_SLOT_NAME = str(REGISTRY.get("research_preload_slot") or "research-preload")
 
 # Historical workflow-v10 bundles used ``chat-record-a`` for bank A before the
 # canonical root was renamed to ``chat-record``. This is read compatibility only:
@@ -58,6 +59,27 @@ def discovery_slot_path(bank: str) -> str:
     bank = bank.lower()
     bank_root(bank)
     return f"{bank_root(bank)}/{DISCOVERY_SLOT_NAME}.json"
+
+
+def research_preload_slot_path(bank: str) -> str:
+    """Return the independent Research preload sidecar path for one dual-purpose bank."""
+    bank = bank.lower()
+    bank_root(bank)
+    return f"{bank_root(bank)}/{RESEARCH_PRELOAD_SLOT_NAME}.json"
+
+
+def bank_for_sequence(sequence: int) -> str:
+    """Shard logical preload stock round-robin across canonical bank identities."""
+    if isinstance(sequence, bool) or not isinstance(sequence, int) or sequence < 0:
+        raise ValueError("bank stock sequence must be a non-negative integer")
+    return BANK_IDS[sequence % len(BANK_IDS)]
+
+
+def bank_index(bank: str) -> int:
+    bank = str(bank or "").lower()
+    if bank not in BANK_ROOTS:
+        raise ValueError(f"unknown record bank: {bank}")
+    return BANK_IDS.index(bank)
 
 
 def canonical_slot_paths(bank: str) -> dict[str, str]:

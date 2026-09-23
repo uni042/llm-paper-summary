@@ -15,7 +15,14 @@ import claim_window_policy
 import claim_worker_with_banks
 import select_record_bank
 import shared_preload_pool
-from record_bank_config import BANK_ROOTS, SLOT_NAMES
+from record_bank_config import (
+    BANK_IDS,
+    BANK_ROOTS,
+    RESEARCH_PRELOAD_SLOT_NAME,
+    SLOT_NAMES,
+    discovery_slot_path,
+    research_preload_slot_path,
+)
 
 AT = datetime(2026, 9, 23, 12, 0, tzinfo=timezone.utc)
 
@@ -101,6 +108,25 @@ class SharedPreloadPoolTests(unittest.TestCase):
             self.assertEqual(len(waiting), 144)
             self.assertEqual([row["pool_order"] for row in waiting], list(range(144)))
             self.assertTrue(all("record_bank" not in row for row in waiting))
+            self.assertTrue(all(row.get("stock_lane") == "research" for row in waiting))
+            self.assertEqual({row.get("stock_bank") for row in waiting}, set(BANK_IDS))
+            self.assertEqual(summary["shared_pool_research_stock_banks"], len(BANK_IDS))
+            self.assertEqual(summary["shared_pool_research_sidecar_banks"], len(BANK_IDS))
+            self.assertEqual(summary["shared_pool_research_stock_items"], 144)
+
+            sidecar_items = 0
+            per_bank_counts = []
+            for bank in BANK_IDS:
+                sidecar = json.loads(
+                    (root / research_preload_slot_path(bank)).read_text(encoding="utf-8")
+                )
+                self.assertEqual(sidecar["slot"], RESEARCH_PRELOAD_SLOT_NAME)
+                self.assertEqual(sidecar["bank"], bank)
+                self.assertTrue(sidecar["items"])
+                per_bank_counts.append(len(sidecar["items"]))
+                sidecar_items += len(sidecar["items"])
+            self.assertEqual(sidecar_items, 144)
+            self.assertTrue(all(count in {4, 5} for count in per_bank_counts))
 
             bank_state = select_record_bank.inspect(root)
             free_or_reusable = [
@@ -108,6 +134,40 @@ class SharedPreloadPoolTests(unittest.TestCase):
                 if row["state"] in {"free", "reusable"}
             ]
             self.assertEqual(len(free_or_reusable), len(BANK_ROOTS))
+
+    def test_research_sidecar_does_not_touch_discovery_sidecar(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_banks(root)
+            sentinel_bank = BANK_IDS[0]
+            sentinel = {
+                "schema_version": 1,
+                "transport_version": 10,
+                "slot": "discovery-preload",
+                "preload_id": "preload-discovery-sentinel",
+                "data": {"provider": "openalex", "kept": True},
+            }
+            write_json(root / discovery_slot_path(sentinel_bank), sentinel)
+            for index in range(170):
+                seed_job(root, index)
+
+            claim_worker_with_banks.process_requests(
+                root,
+                at=AT,
+                maintain_shared_pool=True,
+            )
+
+            self.assertEqual(
+                json.loads(
+                    (root / discovery_slot_path(sentinel_bank)).read_text(encoding="utf-8")
+                ),
+                sentinel,
+            )
+            research_sidecar = json.loads(
+                (root / research_preload_slot_path(sentinel_bank)).read_text(encoding="utf-8")
+            )
+            self.assertEqual(research_sidecar["bank"], sentinel_bank)
+            self.assertTrue(research_sidecar["items"])
 
     def test_six_workers_hold_twelve_each_but_only_four_hot_claims_use_banks(self):
         with tempfile.TemporaryDirectory() as td:
@@ -145,6 +205,9 @@ class SharedPreloadPoolTests(unittest.TestCase):
                 cold = result["assignments"][claim_window_policy.HOT_BANKED_CLAIMS:]
                 self.assertTrue(all(isinstance(row.get("record_bank"), str) for row in hot))
                 self.assertTrue(all("record_bank" not in row for row in cold))
+                self.assertTrue(all(row.get("stock_lane") == "research" for row in result["assignments"]))
+                self.assertTrue(all(row.get("stock_bank") in BANK_ROOTS for row in result["assignments"]))
+                self.assertTrue(all(row.get("record_bank") == row.get("stock_bank") for row in hot))
                 observed.extend(row["job_id"] for row in result["assignments"])
                 banked.extend(row["record_bank"] for row in hot)
 
