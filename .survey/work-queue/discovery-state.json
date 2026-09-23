@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T14:42:29+00:00",
+  "updated_at": "2026-09-23T14:46:19+00:00",
   "last_run_key": "adhoc-20260923T233300JST-worker-923331",
-  "last_round": "adhoc-20260923T233300JST-worker-923331-backward-01",
+  "last_round": "adhoc-20260923T233300JST-worker-923331-forward-02",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-older-omissions-21",
-      "axis": "2025重要未収録・CXL KV・multi-GPU MoE・edge expert streaming",
-      "query_summary": "2025年の重要システム論文をCXL memory、MoE load balance、edge expert loadingの3系統で再走査し、repository code searchで未収録の3件を選定した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 3,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.4,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2504.02263",
-        "arXiv:2407.00079"
-      ],
-      "next_axis_hint": "canonical candidate inventory反映を確認し、overflow threshold到達時はresearchへ切り替える",
-      "source_submission": "work-queue/submissions/20260916T2002JST-discovery-specialist-older-omissions-21.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-agent-moe-22",
@@ -8174,6 +8156,52 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.05,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:adhoc-20260923T233300JST-worker-923331-forward-02",
+      "precheck_request_id": "adhoc-20260923T233300JST-worker-923331-forward-02",
+      "run_key": "adhoc-20260923T233300JST-worker-923331",
+      "round": "adhoc-20260923T233300JST-worker-923331-forward-02",
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "query_summary": "FlexGenのSemantic Scholar前方引用を固定sourceで100件走査し、precheckが既存identity/rejectionを除外して未評価20件を許可。KV/SSD/NVMe、MoE、servingへ直接寄与する強候補10件を2分割でResearch候補化した。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2303.06865",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 10,
+      "accepted_canonical_ids": [
+        "arXiv:2608.04074",
+        "DOI:10.1109/IMNS67862.2026.11655252",
+        "DOI:10.1109/NVMSA71223.2026.11658877",
+        "arXiv:2609.26061",
+        "arXiv:2607.29591",
+        "arXiv:2607.24260",
+        "arXiv:2607.29076",
+        "arXiv:2608.18147",
+        "DOI:10.1016/j.parco.2026.103216",
+        "arXiv:2609.17564"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "selector after durable forward round",
+      "source_submission": "work-queue/submissions/adhoc-20260923T233300JST-worker-923331-forward-02-part1.json",
+      "source_submissions": [
+        "work-queue/submissions/adhoc-20260923T233300JST-worker-923331-forward-02-part1.json",
+        "work-queue/submissions/adhoc-20260923T233300JST-worker-923331-forward-02-part2.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -15960,14 +15988,14 @@
       "next_axis_hint": null
     },
     "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
-      "last_run_key": "adhoc-20260923T232013JST-worker-923191",
-      "rounds": 2,
-      "candidate_count": 25,
+      "last_run_key": "adhoc-20260923T233300JST-worker-923331",
+      "rounds": 3,
+      "candidate_count": 45,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 25,
+      "novel_candidate_count": 45,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 25,
-      "accepted_count": 15,
+      "post_final_dedupe_count": 45,
+      "accepted_count": 25,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "selector after durable forward round"
@@ -16879,20 +16907,20 @@
       "citation_direction": "forward",
       "query_family": "*",
       "search_window_key": "window-4307f4d54979e103a426",
-      "scan_count": 1,
-      "raw_result_count": 100,
-      "unseen_result_count": 20,
+      "scan_count": 2,
+      "raw_result_count": 200,
+      "unseen_result_count": 40,
       "duplicate_filtered_count": 62,
       "rejection_filtered_count": 1,
-      "candidate_evaluation_count": 20,
-      "candidate_accepted_count": 10,
+      "candidate_evaluation_count": 40,
+      "candidate_accepted_count": 20,
       "last_position": "offset-0",
       "unseen_rate": 0.2,
-      "duplicate_rate": 0.62,
+      "duplicate_rate": 0.31,
       "candidate_acceptance_rate": 0.5,
       "cooldown": false,
-      "last_run_key": "adhoc-20260923T232013JST-worker-923191",
-      "last_round": "adhoc-20260923T232013JST-worker-923191-forward-02"
+      "last_run_key": "adhoc-20260923T233300JST-worker-923331",
+      "last_round": "adhoc-20260923T233300JST-worker-923331-forward-02"
     }
   },
   "recent_search_windows": [
@@ -17797,6 +17825,27 @@
       "unseen_rate": 0.2,
       "duplicate_rate": 0.25,
       "candidate_acceptance_rate": 0.15,
+      "last_position": "offset-0"
+    },
+    {
+      "topic": "flexgen forward citations",
+      "source": "semantic_scholar",
+      "date_range": "fixed citation result set",
+      "category": "inference-systems",
+      "citation_direction": "forward",
+      "query_family": "*",
+      "search_window_key": "window-4307f4d54979e103a426",
+      "run_key": "adhoc-20260923T233300JST-worker-923331",
+      "round": "adhoc-20260923T233300JST-worker-923331-forward-02",
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 10,
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.5,
       "last_position": "offset-0"
     }
   ],
