@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-3b0b8499edf3a5b73b2ca7f6","job_id":"job-research-88a9229b2587f714","data":{"overview":"α=4のLatentMoEは16B/2B-activeで効率型が基準validation lossを維持し、精度型は基準より低いlossを達成する。95B/8B-activeでも同傾向が再現され、精度型は基準とほぼ同じtotal/active parametersで全報告下流指標を改善した。効率型はactive parametersを8.47Bから5.62Bへ削減しながら多くの指標で基準同等以上となる。hybrid Mamba-Attention MoEでも1T token学習後に精度型が全タスクで基準を上回り、効率型は大幅に少ないFLOPで同等以上の精度を示す。","key_results":[{"metric":"95B MMLU Pro","value":"34.91","baseline":"標準MoE 29.26","condition":"ℓ-MoE_acc、94.8B total/8.44B active、300B token","interpretation":"総/active parameterをほぼ維持したまま大幅な精度改善。"},{"metric":"95B MMLU","value":"62.23","baseline":"58.95","condition":"ℓ-MoE_acc、α=4","interpretation":"潜在化とN/K再投資が一般知識指標でも改善。"},{"metric":"95B Code平均","value":"41.50","baseline":"40.33","condition":"HumanEval/HumanEval+/MBPP/MBPP+平均","interpretation":"コード能力も同等推論規模で向上。"},{"metric":"95B active parameters","value":"5.62B","baseline":"8.47B","condition":"ℓ-MoE_eff、94.8B total","interpretation":"効率型は約34%少ないactive parametersでMMLU Pro 34.75、MMLU 61.06、Code 40.68を達成。"},{"metric":"潜在圧縮率","value":"α=4まで品質維持","baseline":"16B/2B-active標準MoE","condition":"ℓ-MoE_effのcompression sweep","interpretation":"以後の大規模実験で4倍潜在圧縮を採用する根拠。"},{"metric":"GB200通信/compute時間比","value":"約9","baseline":"Qwen3-235B-A22B、EP=64のモデル解析","condition":"throughput-oriented compute-bound regime","interpretation":"大バッチではall-to-all通信が主要ボトルネックとなり、潜在dispatchの価値を示す。"}],"negative_results":"dを4倍圧縮した16Bモデルで総expert数Nを増やさない場合は品質が大きく悪化し、単純な低次元化だけでは不十分だった。ℓを課題固有の有効ランクr_eff未満へ下げると情報損失が避けられず、圧縮率を無制限に高められない。95Bの効率型ではMath 63.61、Commonsense 73.72で基準64.39、74.32をわずかに下回るため、低active-cost化は全指標で無損失ではない。","interpretation":"主要な設計上の意味は、MoEでNを増やすこと自体はactive computeや通信を直接増やさず、Kとexpert表現次元の積が実行コストを強く決める点にある。d→ℓで得た帯域・通信余力をN/Kへ再配分することで、同じ資源予算の中で専門化組合せを増やせる。accuracy/FLOPだけでなくaccuracy/parameterを見ることで、低遅延配備のHBM・通信制約も設計目標へ入る。","quality_impact":"精度型は同等parameter/inference costで品質向上を狙い、効率型は基準品質近傍を保ってactive computeを下げる。圧縮単独では品質低下するが、N scalingがそれを回復し、さらにK scalingまで行うと基準を超える。"},"reservation":{"claim_id":"claim-3b0b8499edf3a5b73b2ca7f6","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-c5fb805067e99d4f2b7cd63c",
+  "job_id": "job-research-063776a1a2b53b94",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c5fb805067e99d4f2b7cd63c",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

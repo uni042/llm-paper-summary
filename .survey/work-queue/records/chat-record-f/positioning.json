@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-3b0b8499edf3a5b73b2ca7f6","job_id":"job-research-88a9229b2587f714","data":{"limitations":"最適な潜在次元ℓは課題の有効特徴ランクr_effに依存し、α=4は評価したモデル・データで経験的に安全だった値であって普遍定数ではない。システムモデルはGB200、NVLink、FP4/BF16 traffic、均一expert loadを仮定し、別ハードウェアや不均衡routingでは最適なN/K/ℓが変わる。95B評価は300B token時点の表を中心にし、hybridのみ1T tokenまで示す。効率型は一部Math/Commonsenseで基準をわずかに下回る。","differences":"DeepSeekMoE等のgranular MoEは多数expertと疎活性化でFLOP効率を高めるが、expert自体は元hidden dimension dで動く。LatentMoEはroutingされたexpert経路だけを共有潜在空間ℓへ移し、通信表現とexpert重み寸法を同時に縮める。低ランク化を単なるparameter削減で終わらせず、余った予算をNとKへ再投資する点が中心である。accuracy/FLOPに加えaccuracy/parameterを設計目標とし、HBM帯域・all-to-all通信・sharding overheadを明示的に扱う。","implementation_status":"LatentMoEは論文上の試作に留まらず、NVIDIA Nemotron-3 SuperおよびUltraへ採用されたと著者らが報告している。論文はTransformer 95Bとhybrid 73Bまで同一原理を検証する。一次arXivページから独立したコードリポジトリURLは確認できなかったため、公開実装URLは記録しない。","research_positioning":"MoE研究の中ではexpert pruning/cache/offloadではなく、expert計算表現そのものを低次元化してハードウェア費用曲線を変えるarchitecture–system co-designに位置する。特にメモリ階層研究との接点が強く、低遅延MoEではFLOPよりHBM weight loadingが律速になるという定量分析は、expert cacheやCPU/NVMe offloadで何を削減すべきかの基準になる。LatentMoEは1 expert当たりの転送サイズを1/αへ縮めるため、同じHBM/cache容量により多くのexpertを常駐させられる可能性がある。一方、Nをα倍するため総expert数は増え、階層配置やcache replacementとの協調設計は今後の論点となる。"},"reservation":{"claim_id":"claim-3b0b8499edf3a5b73b2ca7f6","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-c5fb805067e99d4f2b7cd63c",
+  "job_id": "job-research-063776a1a2b53b94",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c5fb805067e99d4f2b7cd63c",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
