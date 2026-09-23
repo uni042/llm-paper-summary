@@ -612,6 +612,10 @@ def _migrate_active_unbanked_claims(
         current = claims[job_id]
         if not current.get("active") or current.get("claim_id") in new_claim_ids:
             continue
+        if current.get("worker_kind") == "scheduled_chat" or shared_preload_pool.is_pool_claim(current):
+            # Scheduled cold inventory and shared paper stock are intentionally
+            # unbanked; the hot-slice allocator below promotes them when needed.
+            continue
         if str(current.get("record_bank") or "").lower() in BANK_ROOTS:
             continue
         if current.get("record_bank_fallback") == "library":
@@ -650,6 +654,8 @@ def reserve_new_claim_banks(
     }
     reclaimed = _reclaim_expired_empty_reservations(root, active_ids)
     reclaimed_inactive_dirty = _reclaim_inactive_dirty_banks(root, active_ids)
+    hot_claim_ids = _hot_scheduled_claim_ids(claims)
+    released_logical = _release_logical_only_reservations(root, claims, hot_claim_ids)
     migrated_unbanked = _migrate_active_unbanked_claims(root, claims, new_claim_ids)
     reserved = reused = recovered = recovered_from_descriptor = recovered_expired = fallback = 0
 
@@ -661,7 +667,15 @@ def reserve_new_claim_banks(
 
     for job_id in sorted(claims):
         current = claims[job_id]
-        if not current.get("active") or current.get("claim_id") not in new_claim_ids:
+        if not current.get("active"):
+            continue
+        claim_id = str(current.get("claim_id") or "")
+        if shared_preload_pool.is_pool_claim(current):
+            continue
+        if current.get("worker_kind") == "scheduled_chat":
+            if claim_id not in hot_claim_ids:
+                continue
+        elif claim_id not in new_claim_ids:
             continue
         claim_path = root / ".survey/work-queue/claims" / f"{job_id}.json"
         claim = _read(claim_path)
@@ -756,6 +770,8 @@ def reserve_new_claim_banks(
         "fallback": fallback,
         "reclaimed": reclaimed,
         "reclaimed_inactive_dirty": reclaimed_inactive_dirty,
+        "released_logical": released_logical,
+        "hot_scheduled_claims": len(hot_claim_ids),
         "migrated_unbanked": migrated_unbanked,
     }
 
