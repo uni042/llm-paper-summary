@@ -14,8 +14,11 @@ import list_unsettled_immutable_submissions  # noqa: E402
 from record_bank_config import (  # noqa: E402
     BANK_ROOTS,
     DISCOVERY_SLOT_NAME,
+    RESEARCH_PRELOAD_SLOT_NAME,
     SLOT_NAMES,
+    bank_for_sequence,
     discovery_slot_path,
+    research_preload_slot_path,
 )
 
 
@@ -88,6 +91,7 @@ class RecordBankRoutingContractTests(unittest.TestCase):
         self.assertEqual(BANK_ROOTS["af"], ".survey/work-queue/records/chat-record-af")
         self.assertEqual(len(set(BANK_ROOTS.values())), 32)
         self.assertEqual(DISCOVERY_SLOT_NAME, "discovery-preload")
+        self.assertEqual(RESEARCH_PRELOAD_SLOT_NAME, "research-preload")
         self.assertEqual(
             discovery_slot_path("a"),
             ".survey/work-queue/records/chat-record/discovery-preload.json",
@@ -96,6 +100,15 @@ class RecordBankRoutingContractTests(unittest.TestCase):
             discovery_slot_path("af"),
             ".survey/work-queue/records/chat-record-af/discovery-preload.json",
         )
+        self.assertEqual(
+            research_preload_slot_path("a"),
+            ".survey/work-queue/records/chat-record/research-preload.json",
+        )
+        self.assertEqual(
+            research_preload_slot_path("af"),
+            ".survey/work-queue/records/chat-record-af/research-preload.json",
+        )
+        self.assertEqual([bank_for_sequence(i) for i in range(34)], list(BANK_ROOTS) + ["a", "b"])
 
     def test_bank_a_legacy_slot_paths_remain_read_compatible(self):
         """Already-durable workflow-v10 descriptors using old bank-A paths must recover."""
