@@ -1,6 +1,6 @@
 {
-  "fact_generation": 23,
-  "generation": 34,
+  "fact_generation": 24,
+  "generation": 35,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
@@ -601,12 +601,15 @@
         "attempt-c5fb805067e99d4f2b7cd63c": {
           "attempt_id": "attempt-c5fb805067e99d4f2b7cd63c",
           "claimed_at": "2026-09-23T07:06:32+00:00",
+          "completed": false,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-c5fb805067e99d4f2b7cd63c.json",
           "job_id": "job-research-063776a1a2b53b94",
+          "job_status": "none",
           "kind": "research",
           "pending": true,
+          "processed_at": "2026-09-23T07:10:43+00:00",
           "repair_required": false,
-          "retryable": false,
+          "retryable": true,
           "run_key": "scheduled-chat-00-20260923T070124Z",
           "submitted": true,
           "worker_id": "scheduled-chat-00"
@@ -626,7 +629,7 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T07:01:59.931496+00:00",
-      "generation": 34,
+      "generation": 35,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-00-20260923T070124Z",
       "scheduled_slot": "00",
@@ -641,7 +644,9 @@
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
         "research_audit_completed_this_invocation": 1,
-        "retryable_attempt_ids": [],
+        "retryable_attempt_ids": [
+          "attempt-c5fb805067e99d4f2b7cd63c"
+        ],
         "submission_result_pending": true,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
@@ -1104,6 +1109,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T07:10:24.098262+00:00",
+  "updated_at": "2026-09-23T07:10:43.572279+00:00",
   "worker_id": "scheduled-chat-00"
 }

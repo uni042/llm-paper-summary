@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 16:05:34 JST**
+> 自動生成: **2026-09-23 16:10:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **166** |
-| 未claim Research job | **165** |
+| 未claim Research job | **164** |
 | 直近24hの検証済みResearch収録 | **85** |
-| 最終検証済みResearch収録 | **09-23 16:05:31 JST（3秒前）** |
+| 最終検証済みResearch収録 | **09-23 16:05:31 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（7時間34分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（7時間39分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **16** | **1** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **17** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **16** | **4** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -178,7 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
+- `arXiv:2604.19835` — Expert Upcycling: Shifting the Compute-Efficient Frontier of Mixture-of-Experts / worker `scheduled-chat-00`
+  - claim: **09-23 16:06:32 JST** / heartbeat: **—** / lease expiry: **09-23 17:36:32 JST**
+  - evidence: `.survey/work-queue/claims/job-research-063776a1a2b53b94.json`
 - `arXiv:2606.19025` — FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs / worker `scheduled-chat-30`
   - claim: **09-23 15:32:46 JST** / heartbeat: **—** / lease expiry: **09-23 17:02:46 JST**
   - evidence: `.survey/work-queue/claims/job-research-676eb3c59785d737.json`
@@ -229,8 +232,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **256** |
-| └ Research | **184** |
+| 成功result未照合のimmutable submission | **257** |
+| └ Research | **185** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
