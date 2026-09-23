@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "OpenReview:02f3mUtqnM",
+      "arxiv_id": "2404.14618",
+      "doi": "10.48550/arxiv.2404.14618",
+      "title": "Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing",
+      "source_url": "https://openreview.net/forum?id=02f3mUtqnM",
+      "priority": 88,
+      "priority_breakdown": {"base": 55, "lineage": 20, "recency": 5, "venue": 8, "total": 88},
+      "reason": "ICLR 2024 work on quality-aware routing between small and large models; directly relevant to heterogeneous multi-model serving, edge/cloud inference, and cost-aware request routing, with up to 40% fewer large-model calls reported without quality loss."
+    },
+    {
+      "canonical_id": "arXiv:2211.10017",
+      "arxiv_id": "2211.10017",
+      "title": "Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production",
+      "source_url": "https://arxiv.org/abs/2211.10017",
+      "priority": 78,
+      "priority_breakdown": {"base": 53, "lineage": 20, "recency": 0, "venue": 5, "total": 78},
+      "reason": "Foundational production-oriented MoE inference optimization work combining sparse-model serving and expert-weight quantization; reports up to 26x throughput speedup and roughly 8x model-size reduction, directly filling the MoE quantization/serving lineage."
+    },
+    {
+      "canonical_id": "arXiv:2010.13887",
+      "arxiv_id": "2010.13887",
+      "title": "LightSeq: A High Performance Inference Library for Sequence Processing and Generation",
+      "source_url": "https://arxiv.org/abs/2010.13887",
+      "priority": 72,
+      "priority_breakdown": {"base": 47, "lineage": 20, "recency": 0, "venue": 5, "total": 72},
+      "reason": "Early high-performance Transformer inference library with GPU kernel and memory optimizations; useful historical systems baseline for serving/runtime lineages, reporting up to 14x speedup over TensorFlow and 1.4x over FasterTransformer."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "20260924T020210JST-scheduled-chat-00-backward-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T020210JST-scheduled-chat-00-backward-r1.json",
+    "receipt": "sha256:cab8f7c7e51869435883538064c4dd9235376674f9a5dc77aa8717902190b404"
+  },
+  "discovery_stats": {
+    "run_key": "20260924T020210JST-scheduled-chat-00",
+    "round": "20260924T020210JST-scheduled-chat-00-backward-r1",
+    "axis": "preload-backward-structured-references",
+    "query_summary": "Backward-reference curation from the repository structured-reference pool; evaluated the canonical schema-v3 allowed records and selected high-value inference/serving omissions.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": ["OpenReview:02f3mUtqnM", "arXiv:2211.10017", "arXiv:2010.13887"],
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}
