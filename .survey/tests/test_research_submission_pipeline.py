@@ -82,6 +82,59 @@ class ResearchSubmissionPipelineTests(unittest.TestCase):
             self.assertEqual(json.loads(request.read_text(encoding="utf-8"))["generated_by"], "research-preflight-pipeline")
             self.assertEqual(summary["next_action"], "dispatch_submission_drain_once")
 
+    def test_run_identity_propagates_from_preflight_to_audit_request(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            result = repo / ".survey/work-queue/research-preflight/results/pf-run.json"
+            identity = {
+                "worker_id": "scheduled-chat-30",
+                "run_key": "run-identity",
+                "scheduled_slot": "30",
+                "actual_invocation_start": "2026-09-23T02:30:00+00:00",
+            }
+            _write(result, {
+                "operation": "research_quality_preflight",
+                "ok": True,
+                "preflight_passed": True,
+                "checked_at": "2026-09-23T02:35:00+00:00",
+                "kind": "research",
+                "attempt_id": "attempt-run",
+                "job_id": "job-run",
+                "record_bank": "a",
+                "paper_path": "papers/inference/run.md",
+                **identity,
+            })
+
+            seen = {}
+            def build(payload_repo, payload):
+                seen.update(payload)
+                return {
+                    "schema_version": 1,
+                    "transport_version": 10,
+                    "kind": "research",
+                    "attempt_id": "attempt-run",
+                    "job_id": "job-run",
+                    "status": "completed",
+                    **identity,
+                }
+
+            with mock.patch.object(self.module, "_build_descriptor_from_payload", side_effect=build):
+                summary = self.module.advance(repo, mode="preflight")
+
+            self.assertEqual(summary["built_descriptors"], [
+                ".survey/work-queue/submissions/research/attempt-run.json"
+            ])
+            for field, expected in identity.items():
+                self.assertEqual(seen[field], expected)
+            generated = json.loads(
+                (
+                    repo
+                    / ".survey/work-queue/completed-submission-requests/attempt-run.json"
+                ).read_text(encoding="utf-8")
+            )
+            for field, expected in identity.items():
+                self.assertEqual(generated[field], expected)
+
     def test_settled_legacy_request_without_preflight_is_not_quarantined(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
