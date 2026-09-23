@@ -1,4 +1,4 @@
-# Worker router — workflow v10.10
+# Worker router — workflow v10.11
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -87,16 +87,18 @@ Research / Auditのclaimは次の順で行う。
 
 ### 3.x 可変claim window（foreground 1 + standby N）
 
-#### record bankから独立した共有paper preload FIFO
+#### 二重用途バンク（dual-purpose bank）上の共有paper preload FIFO
 
-Research / Auditの事前装填はworkerごとの固定本数ではなく、全Scheduled Chat / worker-Nで共有するFIFO poolを使う。**論文の玉（logical paper stock）とrecord bankは別資源**とし、共有poolの待機claimはbankを予約しない。共有pool目標は `claim_window_policy.py` から導出し、現在は **12件/worker × 6 worker × 2セット = 144件**（workerへadopt済みを含む）である。6 workerが各12件を保持しても72件の共有待機余力を残せる。record bank数を増減してもpaper preload数を直接連動させない。
+A〜AFの32個のcanonical bankは、**Research preload / Discovery preload / Research-Audit hot stagingの3面を同時に持つ二重用途バンク**として扱う。各bankには従来の5つのResearch/Audit record slotに加えて、再構築可能な `research-preload.json` と独立した `discovery-preload.json` を置く。3面は互いに上書きせず、同じbankが読解用在庫と探索用在庫を同時に保持できる。
+
+Research / Auditの事前装填はworkerごとの固定本数ではなく、全Scheduled Chat / worker-Nで共有するFIFO poolを使う。claim stateを正本とし、`research-preload.json` はその派生インデックスである。共有pool目標は `claim_window_policy.py` から導出し、現在は **12件/worker × 6 worker × 2セット = 144件**（workerへadopt済みを含む）。各Research claimは `pool_order` をcanonical bank順へround-robinして `stock_bank` / `stock_lane=research` を持ち、通常144件なら32bankすべてへ4〜5件ずつ読解用在庫を分散する。cold Research stockは5 record slotを予約しないため、全bankへ読解用在庫を置いてもhot staging容量は先食いしない。
 
 - 共有poolのclaimは特定workerに固定しない。Scheduled Chat requestが来た時点で、そのrequestのjob type / 明示job_id条件を満たす最古のpool claimから不足window分をadoptする。
-- adoptはclaim fast laneの正規割当処理内で行い、既存のsurvey-claim-main concurrencyとpush-race再計算を使う。同時・不規則に複数workerがrequestを出しても、同一claim / jobを2 workerへ渡してはならない。record bankはadoptとは別にhot sliceへだけ割り当てる。
+- adoptはclaim fast laneの正規割当処理内で行い、既存のsurvey-claim-main concurrencyとpush-race再計算を使う。同時・不規則に複数workerがrequestを出しても、同一claim / jobを2 workerへ渡してはならない。adopt後も `stock_bank` は維持する。record slotを使うのはhot sliceだけで、hot化時はまず同じ `stock_bank` の5スロットを使い、そこが他Research stagingで使用中の場合だけ別のfree/reusable bankへ退避する。
 - pool内の順番はpool_orderで固定する。一度装填済みの論文を後から到着した高priority論文で追い越させない。新しい補充論文は常にpool末尾へ追加する。
 - workerへadoptした後は、そのworker内のpipeline_orderの末尾へ接続する。したがって既存standbyを飛び越さず、foreground終端時は従来どおり最古standbyが昇格する。
 - pool目標は待機poolだけの本数ではない。現在144件のうち6 workerが各12件をadopt済みなら72件がworker在庫、残り72件が共有待機となる。workerごとのwindowは共有poolの専有枠ではなく、pool不足時は取得可能な範囲だけadoptし、正規direct allocationへ進む。
-- worker数や起動順に固定laneを割り当ててはならない。特定workerが長期間起動しなくても、そのworker専用バンクに論文が滞留しない構造を維持する。
+- worker数や起動順に固定laneを割り当ててはならない。`stock_bank` はworker専用bankではなくResearch FIFOのシャードである。特定workerが長期間起動しなくても論文が滞留せず、どのworkerも任意bankのResearch/Discovery在庫を利用できる構造を維持する。
 - pool claimのjobがreadyでなくなった、terminalになった、または耐久submissionで処理済みになった場合はpoolから解放する。pool leaseは保守runで必要時だけ更新し、lease更新を理由に順番を変更しない。
 - Audit-only等でrequestのjob type条件に合わない先頭claimはそのrequestでは飛ばしてよいが、claim自体のpool_orderは変更しない。通常のResearch/Audit混合workerからは再びFIFO対象となる。
 - 共有poolが一時的に空の場合は従来の直接allocationへ安全にフォールバックしてよい。pool不足やbank不足だけをrun停止理由にしない。
@@ -109,7 +111,7 @@ Scheduled Chat / worker-NのResearch / Auditは、**同時に精読する論文�
 - 既に補充claim requestがpendingなら重複requestを出さない。返ったresultでwindowを更新し、foregroundは変えない。
 - 残り600秒以下では新しいstandby補充claimを発行しない。ただし600秒窓へ入る前に発行済みのclaimは既発行claimとして扱い、foreground終端時にstandbyへ昇格して処理を継続してよい。残り180秒以下の最終handoff規則は従来どおり優先する。
 - claim allocatorは同一Scheduled Chat workerのactive claimを `pipeline_order` で並べ、最小をforeground、それ以降をstandbyとする。旧claimに `pipeline_order` が無い場合は正規allocatorが移行時に順序を付与する。
-- 各claimには従来どおり独立したattemptを割り当てるが、record bankは**hot sliceだけ**へ遅延割当する。cold standbyがhot sliceへ昇格する際はclaim fast laneのbank reconciliationでbankを付与する。bank不足時は既存Library fallbackを使い、bank不足だけをrun停止理由にしない。
+- 各claimには従来どおり独立したattemptを割り当てる。全Research claimは読解用 `stock_bank` を持つが、5つのrecord slotを予約するのは**hot sliceだけ**である。cold standbyがhot sliceへ昇格する際はclaim fast laneのbank reconciliationでまず `stock_bank` をrecord bankとして使い、使用中なら別bankへ割り当てる。bank不足時は既存Library fallbackを使い、bank不足だけをrun停止理由にしない。
 - `claim_window` は1〜24の範囲で変更可能で、既定値は正規 `claim_window_policy.py` から導出する（現在は12）。通常hot bank幅は4件で、6 worker同時稼働なら通常bank使用は最大24件となり、32 bank中8件をrepair・例外用に残す。精読並列度 `max_jobs=1` は変えない。
 
 
@@ -226,7 +228,7 @@ target_unseen: 20
 
 ### 4.0 探索の事前装填待ち行列（Discovery preload queue）
 
-Discoveryは、run開始後に外部APIの取得を始める待ち時間を減らすため、論文読解側のpaper preloadとは独立した**探索事前装填待ち行列（Discovery preload queue）**を持つ。ただし物理バンク自体は分離しない。workflow-v10の32 record bankはすべて**二重用途バンク（dual-purpose bank）**とし、各バンクは従来のResearch/Audit用5スロットに加えて独立した `discovery-preload.json` を1スロット持つ。読解面と探索面は同じバンクIDを共有するが、互いのスロットを上書きしない。
+Discoveryは、run開始後に外部APIの取得を始める待ち時間を減らすため、Research paper preloadとは独立した**探索事前装填待ち行列（Discovery preload queue）**を持つ。ただし物理バンク自体は分離しない。workflow-v10の32 record bankはすべて二重用途バンクで、各bankは **`research-preload.json` + `discovery-preload.json` + Research/Audit用5スロット**を同時に持つ。読解面と探索面は同じbank IDを共有するが、それぞれ独立したsidecar/slotなので互いを上書きしない。
 
 - `.github/workflows/discovery-precheck.yml` は通常のschema v3事前検査（precheck）回収と同時に、`.survey/scripts/discovery_preload_queue.py` で32バンクの探索面へ探索窓を先行装填する。標準目標は**利用可能32窓**、1回の補充上限は8窓、1窓は `target_unseen=20` / `page_size=20` とする。32窓は32個の `discovery-preload.json` と1対1で対応し、Research/Audit用5スロットがoccupiedでも同じバンクの探索面は利用できる。逆に探索面がoccupiedでもResearch/Auditのbank予約を妨げない。
 - 探索元は耐久済み `discovery-state.json` の実績から選び、後方引用・前方引用を優先する。構造化referencesの後方引用は常に補充候補とし、実績のある前方引用seedを複数保持する。利用可能在庫が片方向へ偏らないよう、可変targetの約1/3ずつを後方引用・前方引用の最低在庫、約1/8を通常検索の小さな予備在庫として扱い、残りを実績順の余剰枠にする。通常検索のpreloadは、引用2方向を実run内で完了した後のgap-fill用在庫としてのみ扱う。
