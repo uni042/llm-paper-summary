@@ -436,6 +436,12 @@ def _request_for_entry(entry: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _stock_bank_targets(target: int) -> tuple[str, ...]:
+    """Return the canonical banks that must carry one Discovery window."""
+    target = max(int(target), 0)
+    return BANK_IDS[: min(target, len(BANK_IDS))]
+
+
 def _direction_floor_targets(target: int) -> dict[str, int]:
     """Reserve citation stock plus a small normal-search fallback buffer."""
     target = max(int(target), 0)
@@ -488,6 +494,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         row for row in entries if _status(root, row, now) in {"READY", "PRECHECKED"}
     ]
     available = len(available_rows)
+    target_banks = _stock_bank_targets(target)
     bank_available = {
         bank: sum(
             1
@@ -496,7 +503,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         )
         for bank in BANK_IDS
     }
-    bank_deficits = [bank for bank in BANK_IDS if bank_available.get(bank, 0) <= 0]
+    bank_deficits = [bank for bank in target_banks if bank_available.get(bank, 0) <= 0]
     direction_available = {
         direction: sum(
             1
@@ -524,7 +531,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
             "direction_available": direction_available,
             "direction_targets": direction_targets,
             "bank_available": bank_available,
-            "bank_target": len(BANK_IDS),
+            "bank_target": len(target_banks),
             "bank_deficits": bank_deficits,
             "created": [],
             "expired_claims": expired,
@@ -612,7 +619,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         "direction_available_before": direction_available,
         "direction_targets": direction_targets,
         "bank_available_before": bank_available,
-        "bank_target": len(BANK_IDS),
+        "bank_target": len(target_banks),
         "bank_deficits_before": bank_deficits,
         "created": created,
         "created_count": len(created),
