@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-54c192f36494effc75698854",
-  "job_id": "job-research-c7bef3f1698aa85a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-54c192f36494effc75698854",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-54c192f36494effc75698854","job_id":"job-research-c7bef3f1698aa85a","data":{"canonical_id":"arXiv:2410.18248","arxiv_id":"2410.18248","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"Fast Inference for Augmented Large Language Models","summary":"LAMPSは、外部API呼び出しを挟む拡張LLM要求について、API待機中のKVキャッシュ処理と要求スケジューリングを別々に決める従来方式を統合する推論フレームワークである。出力長とAPI時間を予測し、保持・破棄再計算・CPU退避のうちメモリ時間積の浪費が小さい方式を事前選択したうえで、その予測メモリ時間積を要求優先度として反復単位で並べ替える。vLLM上に実装し、GPT-J 6BとVicuna 13B、INFERCEPT系データとToolBenchで評価した結果、INFERCEPT比で平均エンドツーエンド遅延を27〜85%、初回トークン時間を4〜96%改善し、高負荷ほど先頭待ち阻害の削減効果が大きい。","list_summary":"API待機時のKV処理方式を予測してメモリ時間積で要求を順位付けし、拡張LLM推論の遅延をINFERCEPT比27〜85%削減する。","authors":["Rana Shahout","Cong Liang","Shiji Xin","Qianru Lao","Yong Cui","Minlan Yu","Michael Mitzenmacher"],"authors_affiliations":"Harvard University; Tsinghua University","published":"2024-10-23","publication":"arXiv:2410.18248v2","publication_type":"プレプリント","publication_status":"arXiv preprint, v2 (2024-10-25)","lineage":"augmented LLM serving / KV cache management / predictive scheduling / vLLM","topics":["拡張LLM推論","KVキャッシュ","予測スケジューリング","API呼び出し","vLLM"],"importance":"API呼び出しで実行が中断する要求に対し、KVキャッシュの保持方式と要求順序をメモリ占有量×時間という共通尺度へ落とし込み、先頭待ち阻害を抑えるサービング研究。","implementation":"vLLM上にLAMPSを実装。出力長予測にはOPT-125Mの最終トークン埋め込みと50クラス線形分類器を用いる。","hardware_evaluation":"AMD EPYC 7313×2、RAM 503GB、NVIDIA A100 80GB×2（各GPUを40GB上限に制限、NVLink接続）。","quality_effect":"モデル品質そのものを変更する手法ではない。主なトレードオフは低メモリ要求優先による高負荷時の末尾遅延増加と、ToolBenchでのわずかなスループット低下。","source":"https://arxiv.org/abs/2410.18248","sources":["https://arxiv.org/abs/2410.18248","https://arxiv.org/html/2410.18248v2"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"arXiv v2 full text","references_total":null},"reservation":{"claim_id":"claim-54c192f36494effc75698854","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
