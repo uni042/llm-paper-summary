@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:46:28+00:00",
-  "last_run_key": "adhoc-20260924T014100JST-worker-915241",
-  "last_round": "20260924T014100JST-worker-915241-backward-r1",
+  "updated_at": "2026-09-23T16:52:10+00:00",
+  "last_run_key": "adhoc-20260924T014906JST-worker-915242",
+  "last_round": "adhoc-20260924T014906JST-worker-915242-backward-take-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,40 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-collective-10",
-      "axis": "collective communication圧縮・tensor/expert parallel通信",
-      "query_summary": "model residencyから通信基盤へ軸を移し、application変更なしでcollective communicationを圧縮するin-GPU libraryを探索した。training専用HetCCL/NTPは対象外とした。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "探索空間の主要独立軸を一巡したため、直近新着の追加スイープで未発見があるか確認する",
-      "source_submission": "work-queue/submissions/20260916T2042JST-discovery-specialist-collective-10.json"
-    },
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-exhaust-cxl-11",
-      "axis": "CXL・shared KV memory再スイープ",
-      "query_summary": "CXL KV memoryを再スイープしたが、Photonic-CXL、TraCT、BOOST等は既知・既処理で、新規に強い未収録候補は確認できなかった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.27187",
-        "arXiv:2512.18194",
-        "arXiv:2609.13592"
-      ],
-      "next_axis_hint": "SSD/NVMe KVとGPU-direct storageを再スイープする",
-      "source_submission": "work-queue/submissions/20260916T2046JST-discovery-specialist-exhaust-cxl-11.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-exhaust-ssd-12",
@@ -8459,6 +8425,84 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.05,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T014100JST-worker-915241-forward-r2",
+      "precheck_request_id": "20260924T014100JST-worker-915241-forward-r2",
+      "run_key": "adhoc-20260924T014100JST-worker-915241",
+      "round": "20260924T014100JST-worker-915241-forward-r2",
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "query_summary": "Forward citations of FlexGen from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot and topped up from the same fixed source.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2303.06865",
+      "preload_id": "preload-58840fc1518d4b88beb9",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "DOI:10.1109/INFOCOM59046.2026.11571450",
+        "DOI:10.1109/INFOCOM59046.2026.11571463",
+        "DOI:10.1109/INFOCOM59046.2026.11571717",
+        "DOI:10.1109/TCAD.2025.3624135",
+        "arXiv:2605.25550"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014100JST-worker-915241-forward-r2-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014100JST-worker-915241-forward-r2-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:adhoc-20260924T014906JST-worker-915242-backward-take-1",
+      "precheck_request_id": "adhoc-20260924T014906JST-worker-915242-backward-take-1",
+      "run_key": "adhoc-20260924T014906JST-worker-915242",
+      "round": "adhoc-20260924T014906JST-worker-915242-backward-take-1",
+      "axis": "preload-backward-structured-references",
+      "query_summary": "Repository-wide structured backward references from the claimed PRECHECKED preload window, re-filtered against this run's current identity snapshot.",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-6226f2514485d40bd922",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 1,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [
+        "OpenReview:mZn2Xyh9Ec",
+        "arXiv:2402.02082",
+        "arXiv:2402.05109"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014906JST-worker-915242-backward-r1-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014906JST-worker-915242-backward-r1-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 19,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.05,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16245,15 +16289,15 @@
       "next_axis_hint": null
     },
     "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
-      "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
-      "rounds": 6,
-      "candidate_count": 105,
+      "last_run_key": "adhoc-20260924T014100JST-worker-915241",
+      "rounds": 7,
+      "candidate_count": 125,
       "duplicate_filtered_count": 13,
-      "novel_candidate_count": 92,
+      "novel_candidate_count": 112,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 92,
-      "accepted_count": 40,
-      "duplicate_ratio": 0.12380952380952381,
+      "post_final_dedupe_count": 112,
+      "accepted_count": 45,
+      "duplicate_ratio": 0.104,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
@@ -16375,16 +16419,16 @@
       "next_axis_hint": "continue selector with another productive seed or backward-reference window"
     },
     "preload-backward-structured-references": {
-      "last_run_key": "adhoc-20260924T014100JST-worker-915241",
-      "rounds": 3,
-      "candidate_count": 60,
+      "last_run_key": "adhoc-20260924T014906JST-worker-915242",
+      "rounds": 4,
+      "candidate_count": 80,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 60,
-      "final_duplicate_filtered_count": 1,
-      "post_final_dedupe_count": 59,
-      "accepted_count": 11,
+      "novel_candidate_count": 80,
+      "final_duplicate_filtered_count": 2,
+      "post_final_dedupe_count": 78,
+      "accepted_count": 13,
       "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.016666666666666666,
+      "final_duplicate_ratio": 0.025,
       "next_axis_hint": null
     }
   },
