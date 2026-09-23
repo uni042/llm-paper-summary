@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-bcdd660e4bafb23e846f2ec8",
-  "job_id": "job-research-c732ba9bb46aaf3a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bcdd660e4bafb23e846f2ec8",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-bcdd660e4bafb23e846f2ec8","job_id":"job-research-c732ba9bb46aaf3a","data":{"overview":"OmniMoE 6.4B-A1.7Bは7つのzero-shotベンチマーク平均50.9%で、DeepSeekMoE 50.2%、PEER 48.9%を上回った。理由付け・コードを含む拡張評価でも平均42.5でDeepSeekMoE 40.5、PEER 27.0を上回り、8×A100で約14.2k tok/sとDense 14.8k tok/sに近い。200M backboneの4,096 token条件では、同程度の活性パラメータ数でPEER 73ms、DeepSeekMoE 102msに対しOmniMoE 6.7msとなり、それぞれ10.9倍、15.2倍高速である。アブレーションでは専門家中心スケジューリングを外すと遅延24.8倍、メモリ417.7倍となり、システム高速化の主要因であることが示される。","key_results":[{"metric":"7 zero-shot平均精度","value":"50.9%","baseline":"DeepSeekMoE 50.2%, PEER 48.9%","condition":"6.4B総パラメータ・1.7B活性構成","interpretation":"粗粒度・細粒度双方のMoEより同等活性予算で高品質。"},{"metric":"推論遅延","value":"6.7 ms","baseline":"PEER 73 ms, DeepSeekMoE 102 ms","condition":"200M backbone, 4,096 tokens, 活性パラメータ約28M","interpretation":"PEER比10.9倍、DeepSeekMoE比15.2倍高速。"},{"metric":"理由付け系平均","value":"42.5","baseline":"DeepSeekMoE 40.5, PEER 27.0","condition":"6.4B-A1.7B fine-tuned evaluation","interpretation":"共有Dense MLPが細粒度専門家だけでは弱い推論能力を補完。"},{"metric":"end-to-end throughput","value":"約14.2k tok/s","baseline":"Dense 14.8k, DeepSeekMoE 13.4k, PEER 11.6k, PKM 7.9k tok/s","condition":"40 parallel requests, ~512 input, ~8192 output, 8×A100","interpretation":"細粒度MoEでもDenseに近いGPU効率。"},{"metric":"Expert-Centric Scheduling ablation","value":"遅延24.8×、メモリ417.7×","baseline":"full OmniMoE=1.0×","condition":"token-centric executionへ戻した場合","interpretation":"散在HBMアクセス再構成が高速化の中心。"}],"negative_results":"共有Dense MLPを外すと遅延は0.86倍、メモリ0.98倍と軽くなる一方、perplexityは1.2倍、knowledge性能0.91倍、reasoning性能0.79倍へ悪化する。Cartesian Product Routerを通常dense routerへ戻すと遅延30.6倍、メモリ337.5倍、perplexity1.4倍となり、expert usageは100%から4%へ崩壊、unevennessも0.24から0.77へ悪化する。現実装はNVIDIA向けTriton kernel依存で、6.4B超のスケールは未検証。","interpretation":"OmniMoEの改善は単一要素ではなく、共有Dense MLPが一般意味・推論能力を支え、Atomic Expertが長尾知識を細粒度に活性化し、Cartesian Product Routerが巨大専門家空間の探索を可能にし、Expert-Centric Schedulingがその選択結果をGPU効率の高い密演算へ変換する役割分担から生じる。とくに品質を変えずにスケジューリングを外しただけで遅延が24.8倍になるため、モデル構造と実行系の協調が不可欠である。","quality_impact":"速度改善と引き換えに品質を落とす方式ではなく、7 zero-shot平均50.9%、拡張理由付け平均42.5で比較MoEを上回る。枝別解析では事実エンティティ・希少語はAtomic Expert側、一般機能語・推論接続は共有MLP側が優勢で、二経路の機能分担が確認されている。"},"reservation":{"claim_id":"claim-bcdd660e4bafb23e846f2ec8","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
