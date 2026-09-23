@@ -907,9 +907,14 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
         root,
         after_result_paths - before_result_paths,
     )
+    research_sidecars = shared_preload_pool.sync_research_bank_sidecars(
+        root,
+        claim_state.current_claims(root, now),
+    )
     return {
         **result,
         **{f"banks_{key}": value for key, value in bank_result.items()},
+        **{f"research_stock_{key}": value for key, value in research_sidecars.items()},
         "banks_retagged_adopted_pool": retagged,
         "banks_refreshed_new_claim_results": refreshed_results,
     }
@@ -930,9 +935,14 @@ def maintain_shared_pool(repo_root: Path, at: Any = None) -> dict[str, int]:
         new_claim_ids=set(),
         at=now,
     )
+    research_sidecars = shared_preload_pool.sync_research_bank_sidecars(
+        root,
+        claim_state.current_claims(root, now),
+    )
     return {
         **{f"shared_pool_{key}": value for key, value in result.items()},
         **{f"banks_{key}": value for key, value in bank_result.items()},
+        **{f"research_stock_{key}": value for key, value in research_sidecars.items()},
     }
 
 
