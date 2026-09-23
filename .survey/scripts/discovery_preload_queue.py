@@ -21,6 +21,7 @@ from typing import Any
 from urllib.parse import parse_qs, urlparse
 
 import worker_identity
+from record_bank_config import BANK_IDS, DISCOVERY_SLOT_NAME, discovery_slot_path
 
 QUEUE_ROOT = Path(".survey/work-queue/discovery-preload")
 ENTRIES = QUEUE_ROOT / "entries"
@@ -163,6 +164,142 @@ def _status(root: Path, entry: dict[str, Any], now: dt.datetime) -> str:
     if request.is_file():
         return "READY"
     return "INVALID"
+
+
+def _empty_bank_payload() -> dict[str, Any]:
+    return {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": DISCOVERY_SLOT_NAME,
+        "preload_id": None,
+        "data": {},
+    }
+
+
+def _bank_slot_path(root: Path, bank: str) -> Path:
+    return root / discovery_slot_path(bank)
+
+
+def _bank_payload(root: Path, bank: str) -> dict[str, Any]:
+    value = _read(_bank_slot_path(root, bank), {})
+    return value if isinstance(value, dict) else {}
+
+
+def _write_bank_binding(root: Path, bank: str, entry: dict[str, Any]) -> None:
+    _write(
+        _bank_slot_path(root, bank),
+        {
+            "schema_version": 1,
+            "transport_version": 10,
+            "slot": DISCOVERY_SLOT_NAME,
+            "preload_id": entry["preload_id"],
+            "data": {
+                "precheck_request_id": entry.get("precheck_request_id"),
+                "citation_direction": entry.get("citation_direction"),
+                "provider": entry.get("provider"),
+                "source_url": entry.get("source_url"),
+                "axis": entry.get("axis"),
+                "seed_canonical_id": entry.get("seed_canonical_id"),
+                "created_at": entry.get("created_at"),
+            },
+        },
+    )
+
+
+def _clear_bank_binding(root: Path, bank: str, *, expected_preload_id: str | None = None) -> bool:
+    current = _bank_payload(root, bank)
+    current_id = str(current.get("preload_id") or "").strip() or None
+    if expected_preload_id is not None and current_id != expected_preload_id:
+        return False
+    if current_id is None and current.get("slot") == DISCOVERY_SLOT_NAME:
+        return False
+    _write(_bank_slot_path(root, bank), _empty_bank_payload())
+    return True
+
+
+def _read_bank_bindings(root: Path) -> dict[str, str]:
+    """Return preload_id -> bank for currently materialized Discovery sidecars."""
+    out: dict[str, str] = {}
+    for bank in BANK_IDS:
+        value = _bank_payload(root, bank)
+        if value.get("slot") != DISCOVERY_SLOT_NAME:
+            continue
+        preload_id = str(value.get("preload_id") or "").strip()
+        if preload_id and preload_id not in out:
+            out[preload_id] = bank
+    return out
+
+
+def _sync_bank_bindings(
+    root: Path,
+    entries: list[dict[str, Any]],
+    now: dt.datetime,
+) -> tuple[dict[str, str], list[str], int]:
+    """Repair the Discovery hot sidecars without touching Research/Audit record slots.
+
+    READY/PRECHECKED entries occupy one Discovery sidecar each. CLAIMED entries are
+    deliberately detached: the durable claim/result already preserves their cached
+    window, so the physical bank can immediately preload the next Discovery window.
+    """
+    entry_by_id = {
+        str(row.get("preload_id")): row
+        for row in entries
+        if isinstance(row, dict) and row.get("preload_id")
+    }
+    bindings: dict[str, str] = {}
+    free: list[str] = []
+    changed = 0
+
+    for bank in BANK_IDS:
+        payload = _bank_payload(root, bank)
+        preload_id = str(payload.get("preload_id") or "").strip()
+        entry = entry_by_id.get(preload_id) if preload_id else None
+        if (
+            entry is not None
+            and payload.get("slot") == DISCOVERY_SLOT_NAME
+            and _status(root, entry, now) in {"READY", "PRECHECKED"}
+            and preload_id not in bindings
+        ):
+            bindings[preload_id] = bank
+            continue
+        if preload_id or payload.get("slot") != DISCOVERY_SLOT_NAME:
+            if _clear_bank_binding(root, bank):
+                changed += 1
+        free.append(bank)
+
+    status_rank = {"PRECHECKED": 0, "READY": 1}
+    unbound = []
+    for entry in entries:
+        preload_id = str(entry.get("preload_id") or "")
+        if not preload_id or preload_id in bindings:
+            continue
+        status = _status(root, entry, now)
+        if status not in status_rank:
+            continue
+        unbound.append((status_rank[status], str(entry.get("created_at") or ""), preload_id, entry))
+    unbound.sort(key=lambda row: (row[0], row[1], row[2]))
+
+    still_free = list(free)
+    for _, _, preload_id, entry in unbound:
+        if not still_free:
+            break
+        preferred = str(entry.get("discovery_bank") or "").lower()
+        if preferred in still_free:
+            bank = preferred
+            still_free.remove(bank)
+        else:
+            bank = still_free.pop(0)
+        _write_bank_binding(root, bank, entry)
+        bindings[preload_id] = bank
+        changed += 1
+
+    bound_banks = set(bindings.values())
+    final_free = [bank for bank in BANK_IDS if bank not in bound_banks]
+    return bindings, final_free, changed
+
+
+def _bank_for_preload(root: Path, preload_id: str) -> str | None:
+    return _read_bank_bindings(root).get(str(preload_id or "").strip())
 
 
 def _source_specs(root: Path) -> list[dict[str, Any]]:
