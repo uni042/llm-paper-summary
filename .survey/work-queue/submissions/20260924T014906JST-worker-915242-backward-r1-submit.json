@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "worker-915242",
+  "candidates": [
+    {
+      "canonical_id": "OpenReview:mZn2Xyh9Ec",
+      "openreview_id": "mZn2Xyh9Ec",
+      "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+      "source_url": "https://openreview.net/forum?id=mZn2Xyh9Ec",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 0,
+        "venue": 10,
+        "total": 85
+      },
+      "reason": "FlashAttention-2 is a foundational exact-attention inference kernel with direct links from multiple repository KV-cache and serving lineages; it improves attention parallelism and work partitioning and is an ICLR paper."
+    },
+    {
+      "canonical_id": "arXiv:2402.02082",
+      "arxiv_id": "2402.02082",
+      "title": "GliDe with a CaPE: A Low-Hassle Method to Accelerate Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2402.02082",
+      "priority": 70,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 0,
+        "venue": 0,
+        "total": 70
+      },
+      "reason": "GliDe with a CaPE directly targets speculative decoding acceleration and is repeatedly connected to the repository's speculative-decoding lineage, making it a strong systems-relevant omission."
+    },
+    {
+      "canonical_id": "arXiv:2402.05109",
+      "arxiv_id": "2402.05109",
+      "title": "Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding",
+      "source_url": "https://arxiv.org/abs/2402.05109",
+      "priority": 70,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 0,
+        "venue": 0,
+        "total": 70
+      },
+      "reason": "Hydra improves draft-head speculative decoding by introducing sequential dependency between draft heads, directly extending the repository's Medusa/EAGLE/speculative-decoding lineage."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "adhoc-20260924T014906JST-worker-915242-backward-take-1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/adhoc-20260924T014906JST-worker-915242-backward-take-1.json",
+    "receipt": "sha256:9022643e6cdad5a5f4eb93a655240b04866ed83322b75d7aa511f56faf061cc5"
+  },
+  "discovery_stats": {
+    "run_key": "adhoc-20260924T014906JST-worker-915242",
+    "round": "adhoc-20260924T014906JST-worker-915242-backward-take-1",
+    "axis": "preload-backward-structured-references",
+    "query_summary": "Repository-wide structured backward references from the claimed PRECHECKED preload window, re-filtered against this run's current identity snapshot.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "OpenReview:mZn2Xyh9Ec",
+      "arXiv:2402.02082",
+      "arXiv:2402.05109"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}
