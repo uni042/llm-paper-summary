@@ -5,9 +5,11 @@ The pool is worker-agnostic. It owns ready jobs only until a real Scheduled Chat
 request atomically adopts the oldest eligible entries. The global inventory target
 counts both waiting pool claims and already-adopted Scheduled Chat claims.
 
-Paper preload is deliberately independent from record-bank capacity. Waiting pool
-claims are logical paper stock only: they do not reserve record banks. Banks are
-assigned later to the leading hot slice of each worker's adopted inventory.
+Paper preload is sharded across the same 32 dual-purpose bank identities used by
+Discovery. Each active Research/Audit inventory claim carries stock_bank and is
+mirrored into that bank's research-preload.json sidecar. The sidecar is a rebuildable
+index only: waiting/cold claims still do not reserve the bank's five record slots.
+Hot record staging prefers the claim's stock bank and may fall back to another bank.
 
 All mutation happens inside the existing claim fast path. GitHub Actions serializes
 that path with the survey-claim-main concurrency group, and push-race retries rerun
@@ -24,6 +26,13 @@ from typing import Any
 
 import claim_state
 import claim_window_policy
+from record_bank_config import (
+    BANK_IDS,
+    BANK_ROOTS,
+    RESEARCH_PRELOAD_SLOT_NAME,
+    bank_for_sequence,
+    research_preload_slot_path,
+)
 
 POOL_WORKER_ID = "shared-preload-pool"
 POOL_WORKER_KIND = "work"
@@ -46,6 +55,65 @@ def _write(path: Path, value: Any) -> None:
         tmp.write(text)
         temp_name = tmp.name
     Path(temp_name).replace(path)
+
+
+def _research_sidecar_payload(bank: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
+    items = []
+    for value in sorted(rows, key=_pool_order):
+        items.append(
+            {
+                "job_id": value.get("job_id"),
+                "claim_id": value.get("claim_id"),
+                "attempt_id": value.get("attempt_id"),
+                "kind": value.get("kind"),
+                "pool_order": value.get("pool_order"),
+                "preloaded_at": value.get("preloaded_at") or value.get("claimed_at"),
+                "worker_id": value.get("worker_id"),
+                "worker_kind": value.get("worker_kind"),
+                "preload_pool": value.get("preload_pool") is True,
+                "pipeline_order": value.get("pipeline_order"),
+            }
+        )
+    return {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": RESEARCH_PRELOAD_SLOT_NAME,
+        "bank": bank,
+        "derived_from": "canonical active claim state",
+        "items": items,
+    }
+
+
+def sync_research_bank_sidecars(
+    repo_root: Path,
+    claims: dict[str, dict[str, Any]],
+) -> dict[str, int]:
+    """Rebuild every bank's Research preload sidecar from canonical active claims."""
+    root = Path(repo_root)
+    rows_by_bank: dict[str, list[dict[str, Any]]] = {bank: [] for bank in BANK_IDS}
+    for value in claims.values():
+        if not _inventory_claim(value):
+            continue
+        bank = str(value.get("stock_bank") or "").lower()
+        if bank in rows_by_bank:
+            rows_by_bank[bank].append(value)
+
+    populated = 0
+    item_count = 0
+    for bank in BANK_IDS:
+        rows = rows_by_bank[bank]
+        if rows:
+            populated += 1
+            item_count += len(rows)
+        _write(
+            root / research_preload_slot_path(bank),
+            _research_sidecar_payload(bank, rows),
+        )
+    return {
+        "research_sidecar_banks": len(BANK_IDS),
+        "research_stock_banks": populated,
+        "research_stock_items": item_count,
+    }
 
 
 def is_pool_claim(value: dict[str, Any]) -> bool:
@@ -139,6 +207,7 @@ def adopt(
         _write(Path(repo_root) / ".survey/work-queue/claims" / f"{job_id}.json", claim)
         claims[job_id] = dict(claim, active=True, expired=False)
         adopted.append(claim)
+    sync_research_bank_sidecars(repo_root, claims)
     return adopted
 
 
@@ -176,10 +245,27 @@ def maintain(
             continue
 
         expires = claim_state.parse_time(current.get("expires_at"))
-        if expires is None or (expires - now).total_seconds() <= POOL_RENEW_BEFORE_SECONDS:
+        order = current.get("pool_order")
+        desired_stock_bank = (
+            bank_for_sequence(int(order))
+            if isinstance(order, int) and not isinstance(order, bool) and int(order) >= 0
+            else None
+        )
+        route_missing = (
+            desired_stock_bank is not None
+            and str(current.get("stock_bank") or "").lower() != desired_stock_bank
+        )
+        if (
+            expires is None
+            or (expires - now).total_seconds() <= POOL_RENEW_BEFORE_SECONDS
+            or route_missing
+        ):
             claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
             claim["expires_at"] = _iso(now + dt.timedelta(seconds=POOL_LEASE_SECONDS))
             claim["heartbeat_at"] = _iso(now)
+            if desired_stock_bank is not None:
+                claim["stock_bank"] = desired_stock_bank
+                claim["stock_lane"] = "research"
             _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
             claims[job_id] = dict(claim, active=True, expired=False)
             renewed += 1
@@ -253,6 +339,8 @@ def maintain(
             "depends_on_job_ids": dependencies,
             "preload_pool": True,
             "pool_order": order,
+            "stock_bank": bank_for_sequence(order),
+            "stock_lane": "research",
             "claim_source": "shared_preload_pool",
         }
         if previous and previous.get("claim_id") != claim_id:
@@ -266,6 +354,7 @@ def maintain(
         1 for value in claims.values()
         if value.get("active") and is_pool_claim(value)
     )
+    sidecars = sync_research_bank_sidecars(root, claims)
     return {
         "target": int(target),
         "created": created,
@@ -273,5 +362,7 @@ def maintain(
         "released": released,
         "inventory_active": inventory_active,
         "pool_waiting": pool_waiting,
+        **sidecars,
+        "research_stock_bank_target": len(BANK_IDS),
         "shortfall": max(int(target) - inventory_active, 0),
     }
