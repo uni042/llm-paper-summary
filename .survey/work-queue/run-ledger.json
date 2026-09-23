@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T10:57:12.487853+00:00",
+  "updated_at": "2026-09-23T11:01:39.978888+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -43067,6 +43067,64 @@
       "paper_active_count_before": 971,
       "paper_active_count_after": 971,
       "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35852064973",
+      "first_recorded_at": "2026-09-23T11:01:39.978888+00:00",
+      "last_recorded_at": "2026-09-23T11:01:39.978888+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 2,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35852064973:1",
+          "recorded_at": "2026-09-23T11:01:39.978888+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35852064973",
+            "run_attempt": "1",
+            "source_sha": "408e114bed38061d5437315a519a30b876c2cdde"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-2ebe76509c0b20ac",
+          "type": "research",
+          "canonical_id": "arXiv:2609.13682",
+          "title": "LayerRoute: Adaptive Layer-Skipping with LoRA-Preserved Quality for Efficient LLM Inference",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-b5c12e0015184a80",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/icassp55912.2026.11465104",
+          "title": "Parsimony, Order and Balance: Principles for Compressing Mixture-of-Experts Models",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 971,
+      "paper_active_count_after": 971,
+      "last_successful_action": "job_blocked"
     }
   ]
 }

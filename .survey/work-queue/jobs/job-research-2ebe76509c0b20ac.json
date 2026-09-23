@@ -12,11 +12,14 @@
   "source_url": "https://arxiv.org/abs/2609.13682",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2609.13682-layerroute-adaptive-layer-skipping-with-lora-preserved-quality-for-efficient-llm-inference.md",
   "selection_reason": "Very recent adaptive-computation inference work using layer skipping with quality preservation; directly aligned with efficient LLM inference.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T19:52:49+00:00"
+  "created_at": "2026-09-20T19:52:49+00:00",
+  "completed_at": "2026-09-23T11:01:33+00:00",
+  "blocker": "Primary full text unavailable in this invocation. The official arXiv abstract was retrieved and identified, but both direct official arXiv abstract/PDF open routes returned DisabledError in the available full-text retrieval path. Per workflow, no research record was synthesized from the abstract/search snippet alone.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-3da1ea51b0473920687e505f.json"
 }
