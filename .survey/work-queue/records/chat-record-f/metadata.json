@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-1205cc442808cb1df99b7f86",
-  "job_id": "job-research-41c5d2a7e72d6309",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1205cc442808cb1df99b7f86",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-1205cc442808cb1df99b7f86","job_id":"job-research-41c5d2a7e72d6309","data":{"canonical_id":"arXiv:2609.15030","arxiv_id":"2609.15030","doi":"10.48550/arXiv.2609.15030","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI","cs.LG","cs.PF"]},"title":"Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache","summary":"ハイブリッド状態を持つGLM-5.3-Flashで、外部キャッシュ転送自体は成功してもスケジューラが完全ヒット時に1トークン少なく計上し、復元状態と実行境界が不一致になる問題を実機検証した研究。厳密プレフィックス参照で境界を揃え、共有計算補正、チェックポイント・スケジューリング整合、rankごとのカーネル設定固定を組み合わせて数値比較可能な条件を構築した。9長さの直列試験で64-token生成の一致を34/36から36/36へ改善し、追加72本の256-token継続と120要求の性能試験でも出力一致を維持した。CPU再ロードは修正済みcold recomputation比でTTFTを46–64%、総要求時間を1.9–7.0%短縮した。","list_summary":"GLM-5.3-Flash＋vLLM＋LMCacheの完全キャッシュヒット境界ずれを厳密プレフィックス復旧で修正し、出力同一性を保ったCPUキャッシュ再ロードのTTFT短縮を実証。","authors":["Frank Li"],"authors_affiliations":"一次資料著者欄に基づく。所属詳細は本レコードでは未転記。","published":"2026-09-14","publication":"arXiv:2609.15030v1, submitted 2026-09-14","publication_type":"Preprint","publication_status":"Preprint","lineage":"external KV cache / hybrid-state recovery / vLLM / LMCache / GLM","topics":["KV cache","LMCache","vLLM","GLM-5.3-Flash","hybrid state","cache recovery","TTFT"],"importance":"外部KVキャッシュの転送成功だけではハイブリッドモデルの正しい再開を保証できないことを、実際の45層GLMと既存サービング基盤の統合で示し、復旧境界の整合性を性能最適化より先に検証すべきことを具体化した。","hardware_evaluation":"RedHatAI/GLM-5.3-Flash-NVFP4を4-way tensor parallelismで実行。CPU側LMCache再ロードとGPU上の修正済みcold recomputationを直列ワークロードで比較。","quality_effect":"厳密プレフィックス境界と比較条件の固定後、64-token生成36/36、追加256-token継続72/72、性能試験120要求で出力一致を確認。ただし一般的決定性やタスク品質同等性までは主張しない。","source":"https://arxiv.org/abs/2609.15030","sources":["https://arxiv.org/abs/2609.15030","https://arxiv.org/pdf/2609.15030"],"code":null,"implementation":"vLLMとLMCacheを用いた統合修正・計測。独立した公開コードURLは一次資料で確認できない。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-1205cc442808cb1df99b7f86","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
