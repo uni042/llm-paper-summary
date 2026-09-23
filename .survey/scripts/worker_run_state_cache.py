@@ -234,6 +234,135 @@ def update_claims(root: Path, request: dict[str, Any], claims: dict[str, Any]) -
     _save_cache(root, cache)
     return generation
 
+def _claim_result_identity(value: dict[str, Any]) -> dict[str, Any] | None:
+    worker_id = value.get("worker_id")
+    run_key = value.get("run_key")
+    slot = value.get("scheduled_slot")
+    start = value.get("actual_invocation_start")
+    if worker_id not in ALLOWED_WORKERS or not isinstance(run_key, str) or not run_key:
+        return None
+    if slot not in {"00", "30", "0830"} or parse_time(start) is None:
+        return None
+    if worker_id == "scheduled-chat-00" and slot != "00":
+        return None
+    if worker_id == "scheduled-chat-30" and slot not in {"30", "0830"}:
+        return None
+    return {
+        "worker_id": worker_id,
+        "run_key": run_key,
+        "scheduled_slot": slot,
+        "actual_invocation_start": start,
+    }
+
+
+def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, list[str]]:
+    root = root.resolve()
+    loaded: dict[str, dict[str, Any]] = {}
+    parsed: list[tuple[dict[str, Any], dict[str, Any]]] = []
+    affected_workers: set[str] = set()
+
+    for raw_path in result_paths:
+        path = raw_path if raw_path.is_absolute() else root / raw_path
+        value = _read(path, {})
+        if not isinstance(value, dict) or value.get("ok") is not True:
+            continue
+        identity = _claim_result_identity(value)
+        if identity is None:
+            continue
+        worker_id = identity["worker_id"]
+        cache = loaded.get(worker_id)
+        if cache is None:
+            cache = load_cache(root, worker_id)
+            if cache is not None:
+                loaded[worker_id] = cache
+        if cache is None:
+            continue
+        run = cache.get("runs", {}).get(identity["run_key"])
+        if not isinstance(run, dict) or run.get("cache_valid") is not True:
+            continue
+        if any(run.get(field) != identity.get(field) for field in ("worker_id", "run_key", "scheduled_slot", "actual_invocation_start")):
+            continue
+        parsed.append((value, identity))
+        affected_workers.add(worker_id)
+
+    if not parsed:
+        return {}
+
+    clock_generations = bump_fact_clock(root, affected_workers, "claim-result")
+    touched: dict[str, set[str]] = {}
+    for value, identity in parsed:
+        worker_id = identity["worker_id"]
+        run_key = identity["run_key"]
+        cache = loaded[worker_id]
+        run = cache["runs"][run_key]
+        claims = dict(run.get("claims") or {})
+        request_id = str(value.get("request_id") or "")
+
+        pending_ids = [
+            str(item)
+            for item in claims.get("pending_claim_request_ids") or []
+            if str(item) != request_id
+        ]
+        pending_ages = dict(claims.get("pending_claim_request_ages_seconds") or {})
+        pending_ages.pop(request_id, None)
+        pending_requested = dict(claims.get("pending_claim_requested_at") or {})
+        pending_requested.pop(request_id, None)
+
+        assignments = [
+            item for item in (value.get("assignments") or []) if isinstance(item, dict)
+        ]
+        active_jobs = sorted({
+            str(item.get("job_id"))
+            for item in assignments
+            if isinstance(item.get("job_id"), str) and item.get("job_id")
+        })
+        claims.update({
+            "claim_state_checked": True,
+            "claim_result_pending": bool(pending_ids),
+            "pending_claim_request_ids": pending_ids,
+            "pending_claim_request_ages_seconds": pending_ages,
+            "pending_claim_requested_at": pending_requested,
+            "claim_result_pending_age_seconds": max(pending_ages.values(), default=0),
+            "claim_monitor_window_seconds": int(claims.get("claim_monitor_window_seconds", 60) or 60),
+            "active_assignment": bool(active_jobs),
+            "active_job_ids": active_jobs,
+        })
+        run["claims"] = claims
+
+        attempts = run.setdefault("attempts", {})
+        if not isinstance(attempts, dict):
+            attempts = {}
+            run["attempts"] = attempts
+        for item in assignments:
+            attempt_id = item.get("attempt_id")
+            if not isinstance(attempt_id, str) or not attempt_id:
+                continue
+            fact = dict(attempts.get(attempt_id) or {})
+            fact.update({
+                "attempt_id": attempt_id,
+                "job_id": item.get("job_id"),
+                "kind": item.get("kind"),
+                "claimed_at": item.get("claimed_at"),
+                "submitted": bool(fact.get("submitted")),
+                "worker_id": worker_id,
+                "run_key": run_key,
+            })
+            attempts[attempt_id] = fact
+        touched.setdefault(worker_id, set()).add(run_key)
+
+    for worker_id, run_keys in touched.items():
+        cache = loaded[worker_id]
+        generation = int(cache.get("generation", 0)) + 1
+        for run_key in run_keys:
+            cache["runs"][run_key]["generation"] = generation
+            cache["runs"][run_key]["rebuilt_from_canonical"] = False
+        cache["generation"] = generation
+        cache["fact_generation"] = clock_generations.get(worker_id, fact_generation(root, worker_id))
+        _save_cache(root, cache)
+
+    return {worker: sorted(run_keys) for worker, run_keys in touched.items()}
+
+
 def _descriptor_identity(descriptor: dict[str, Any]) -> dict[str, Any] | None:
     worker_id = descriptor.get("worker_id")
     run_key = descriptor.get("run_key")
