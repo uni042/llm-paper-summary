@@ -140,6 +140,13 @@ def _attempt_id(claim_id: str) -> str:
     return "attempt-" + claim_id.removeprefix("claim-")
 
 
+def fallback_stock_bank(job_id: str) -> str:
+    """Assign direct-allocation Research stock deterministically when FIFO stock is empty."""
+    material = str(job_id or "").strip().encode("utf-8")
+    digest = int(hashlib.sha256(material).hexdigest()[:16], 16)
+    return bank_for_sequence(digest)
+
+
 def _inventory_claim(value: dict[str, Any]) -> bool:
     if not value.get("active") or str(value.get("kind") or "") not in CLAIM_TYPES:
         return False
