@@ -281,6 +281,10 @@ def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, lis
                 loaded[worker_id] = cache
         if cache is None:
             continue
+        cached_fact_generation = cache.get("fact_generation", -1)
+        if not isinstance(cached_fact_generation, int) or cached_fact_generation != fact_generation(root, worker_id):
+            invalidate_only.add(worker_id)
+            continue
         run = cache.get("runs", {}).get(identity["run_key"])
         if not isinstance(run, dict) or run.get("cache_valid") is not True:
             continue
@@ -464,7 +468,9 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
         if worker_id not in loaded:
             value = load_cache(root, worker_id)
             if value is not None:
-                loaded[worker_id] = value
+                cached_fact_generation = value.get("fact_generation", -1)
+                if isinstance(cached_fact_generation, int) and cached_fact_generation == fact_generation(root, worker_id):
+                    loaded[worker_id] = value
         return loaded.get(worker_id)
 
     affected_workers: set[str] = set()
