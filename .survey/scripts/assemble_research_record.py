@@ -89,6 +89,24 @@ def prose_chars(value: Any) -> int:
     return 0
 
 
+def _protect_parenthetical_formal_names(text: str) -> tuple[str, list[str]]:
+    """Protect allowed formal English names in parentheses after Japanese prose."""
+    protected: list[str] = []
+
+    def repl(match: re.Match[str]) -> str:
+        protected.append(match.group(0))
+        return f"__FORMAL_NAME_{len(protected) - 1}__"
+
+    pattern = re.compile(rf"(?<=[{JP_CLASS}])(?:（[^（）]*[A-Za-z][^（）]*）|\([^()]*[A-Za-z][^()]*\))")
+    return pattern.sub(repl, text), protected
+
+
+def _restore_parenthetical_formal_names(text: str, protected: list[str]) -> str:
+    for index, original in enumerate(protected):
+        text = text.replace(f"__FORMAL_NAME_{index}__", original)
+    return text
+
+
 def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
     """Normalize ordinary English prose terms before final validation/rendering."""
     protected_keys = {
@@ -103,11 +121,11 @@ def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
     if isinstance(value, str):
         if value.startswith(("http://", "https://")):
             return value
-        text = value
+        text, protected = _protect_parenthetical_formal_names(value)
         for canonical, pattern in TERM_PATTERNS.items():
             preferred = PREFERRED_TERMS[canonical][0].split("／", 1)[0]
             text = pattern.sub(preferred, text)
-        return text
+        return _restore_parenthetical_formal_names(text, protected)
     if isinstance(value, list):
         return [normalize_preferred_terms(item, key=key) for item in value]
     if isinstance(value, dict):
