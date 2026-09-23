@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 10:03:45 JST**
+> 自動生成: **2026-09-23 10:09:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **184** |
-| 未claim Research job | **182** |
-| 直近24hの検証済みResearch収録 | **80** |
-| 最終検証済みResearch収録 | **09-23 09:49:27 JST（14分前）** |
+| 収録候補論文 | **183** |
+| 未claim Research job | **181** |
+| 直近24hの検証済みResearch収録 | **81** |
+| 最終検証済みResearch収録 | **09-23 10:09:20 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **184** |
+| canonical_id確認済みの一意な候補論文 | **183** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **184** |
+| 非終端Research job合計 | **183** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6344** |
-| 処理済み | **630** |
-| 未処理 | **5714** |
-| 収録済みとして除外 | **522** |
+| 処理済み | **631** |
+| 未処理 | **5713** |
+| 収録済みとして除外 | **523** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（1時間32分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（1時間38分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 10:09:20 JST** [research] `arXiv:2211.05102` — Efficiently Scaling Transformer Inference
+  - job: `.survey/work-queue/jobs/job-research-f719eedd6807af4c.json`
+  - result: `.survey/work-queue/results/research/attempt-01b29ed73471ef21eb33ce79.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-01b29ed73471ef21eb33ce79.json`
+  - paper: `papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md`
 - **09-23 09:49:27 JST** [research] `arXiv:2609.15311` — FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads
   - job: `.survey/work-queue/jobs/job-research-3d00beb8c812c5e7.json`
   - result: `.survey/work-queue/results/research/attempt-2bf3de3b255ebab0e493ae1d.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-4a6861f35cc58610c3fb4b0c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-4a6861f35cc58610c3fb4b0c.json`
   - paper: `papers/inference/99-other-inference-systems/2026-5e022a2789e7-i-o-for-llm-inference-a-survey-of-storage-and-memory-bottlenecks.md`
-- **09-23 07:37:28 JST** [research] `arXiv:2609.14213` — Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution
-  - job: `.survey/work-queue/jobs/job-research-aa3e3c19262a245a.json`
-  - result: `.survey/work-queue/results/research/attempt-a302801e2f42ef7601d7976c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a302801e2f42ef7601d7976c.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md`
 
 ### Audit
 
@@ -179,9 +179,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2211.05102` — Efficiently Scaling Transformer Inference / worker `scheduled-chat-00`
-  - claim: **09-23 10:03:07 JST** / heartbeat: **—** / lease expiry: **09-23 11:33:07 JST**
-  - evidence: `.survey/work-queue/claims/job-research-f719eedd6807af4c.json`
+- `arXiv:2511.18314` — AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert / worker `scheduled-chat-00`
+  - claim: **09-23 10:09:02 JST** / heartbeat: **—** / lease expiry: **09-23 11:39:02 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2377e2a4770cb727.json`
 - `arXiv:2609.17890` — OBC-Prune: Outcome-Based Calibration for Large Reasoning Model Pruning / worker `scheduled-chat-30`
   - claim: **09-23 09:50:04 JST** / heartbeat: **—** / lease expiry: **09-23 11:20:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-17efeee08a231d8b.json`
@@ -204,7 +204,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **184** |
+| ready | **183** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +224,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **966** |
+| inference/training/survey配下の論文Markdown実体 | **967** |
 
 ### immutable submissionの未照合
 
