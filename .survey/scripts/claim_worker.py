@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 import claim_state
+import claim_window_policy
 import immutable_submission
 import shared_preload_pool
 import worker_identity
@@ -18,8 +19,8 @@ SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 WORKER_KINDS = {"scheduled_chat", "work"}
 JOB_TYPES = {"research", "audit"}
 DEFAULT_MAX_JOBS = 1
-SCHEDULED_CHAT_CLAIM_WINDOW = 4
-MAX_SCHEDULED_CHAT_CLAIM_WINDOW = 10
+SCHEDULED_CHAT_CLAIM_WINDOW = claim_window_policy.DEFAULT_CLAIM_WINDOW
+MAX_SCHEDULED_CHAT_CLAIM_WINDOW = claim_window_policy.MAX_CLAIM_WINDOW
 DEFAULT_LEASE_SECONDS = 5400
 MIN_LEASE_SECONDS = 300
 MAX_LEASE_SECONDS = 43200
@@ -806,6 +807,7 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
         if request["worker_kind"] == "scheduled_chat":
             result_payload.update({
                 "claim_window": int(request["claim_window"]),
+                "claim_refill_threshold": claim_window_policy.refill_threshold(int(request["claim_window"])),
                 "active_claim_count": len(assignments),
                 "claim_window_remaining": max(int(request["claim_window"]) - len(assignments), 0),
                 "foreground_job_id": foreground_job_id,
