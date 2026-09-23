@@ -100,6 +100,23 @@ def _clear_failure(repo: Path, stage: str, source: Path, attempt_id: str | None 
         path.unlink()
 
 
+def _existing_attempt_ids(repo: Path) -> set[str]:
+    attempts: set[str] = set()
+    for kind in ("research", "audit"):
+        root = repo / SUBMISSIONS / kind
+        if not root.is_dir():
+            continue
+        for path in root.glob("*.json"):
+            try:
+                value = _read_object(path)
+            except Exception:
+                continue
+            attempt_id = value.get("attempt_id")
+            if isinstance(attempt_id, str) and SAFE_ID_RE.fullmatch(attempt_id):
+                attempts.add(attempt_id)
+    return attempts
+
+
 def _normalize_completed_payload(path: Path, value: dict[str, Any]) -> dict[str, Any]:
     kind = value.get("kind")
     if kind not in {"research", "audit"}:
@@ -194,6 +211,7 @@ def materialize_passed_preflights(repo: Path, summary: dict[str, Any]) -> None:
     root = repo / PREFLIGHT_RESULTS
     if not root.is_dir():
         return
+    settled_attempts = _existing_attempt_ids(repo)
     latest: dict[str, tuple[str, Path, dict[str, Any]]] = {}
     for path in sorted(root.glob("*.json")):
         try:
@@ -211,6 +229,13 @@ def materialize_passed_preflights(repo: Path, summary: dict[str, Any]) -> None:
             latest[attempt_id] = (rank[0], path, result)
 
     for attempt_id, (_, result_path, result) in sorted(latest.items()):
+        if attempt_id in settled_attempts:
+            summary["already_settled"].append(attempt_id)
+            _clear_failure(repo, "preflight", result_path, attempt_id)
+            request_path = repo / COMPLETED_REQUESTS / f"{attempt_id}.json"
+            if request_path.exists():
+                _clear_failure(repo, "request", request_path)
+            continue
         try:
             rel_result = result_path.relative_to(repo).as_posix()
             payload = _payload_from_passed_preflight(Path(rel_result), result)
@@ -228,6 +253,7 @@ def materialize_passed_preflights(repo: Path, summary: dict[str, Any]) -> None:
                 summary["request_conflicts"].append(request_path.relative_to(repo).as_posix())
             if _write_descriptor(repo, payload, descriptor):
                 summary["built_descriptors"].append(output.relative_to(repo).as_posix())
+            settled_attempts.add(attempt_id)
             _clear_failure(repo, "preflight", result_path, attempt_id)
         except Exception as exc:
             failure = _record_failure(repo, stage="preflight", source=result_path, exc=exc, attempt_id=attempt_id)
@@ -238,7 +264,12 @@ def drain_completed_requests(repo: Path, summary: dict[str, Any]) -> None:
     root = repo / COMPLETED_REQUESTS
     if not root.is_dir():
         return
+    settled_attempts = _existing_attempt_ids(repo)
     for request_path in sorted(root.glob("*.json")):
+        if request_path.stem in settled_attempts:
+            summary["already_settled"].append(request_path.stem)
+            _clear_failure(repo, "request", request_path)
+            continue
         attempt_id: str | None = None
         try:
             payload = _normalize_completed_payload(request_path, _read_object(request_path))
@@ -251,6 +282,7 @@ def drain_completed_requests(repo: Path, summary: dict[str, Any]) -> None:
             descriptor = _build_descriptor_from_payload(repo, payload)
             if _write_descriptor(repo, payload, descriptor):
                 summary["built_descriptors"].append(output.relative_to(repo).as_posix())
+            settled_attempts.add(attempt_id)
             _clear_failure(repo, "request", request_path, attempt_id)
         except Exception as exc:
             failure = _record_failure(repo, stage="request", source=request_path, exc=exc, attempt_id=attempt_id)

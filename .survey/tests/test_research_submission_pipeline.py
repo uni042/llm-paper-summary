@@ -82,6 +82,33 @@ class ResearchSubmissionPipelineTests(unittest.TestCase):
             self.assertEqual(json.loads(request.read_text(encoding="utf-8"))["generated_by"], "research-preflight-pipeline")
             self.assertEqual(summary["next_action"], "dispatch_submission_drain_once")
 
+    def test_settled_legacy_request_without_preflight_is_not_quarantined(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            request = repo / ".survey/work-queue/completed-submission-requests/attempt-old.json"
+            _write(request, {
+                "kind": "research",
+                "attempt_id": "attempt-old",
+                "job_id": "job-old",
+                "record_bank": "a",
+            })
+            legacy = repo / ".survey/work-queue/submissions/research/legacy-name.json"
+            _write(legacy, {
+                "kind": "research",
+                "attempt_id": "attempt-old",
+                "job_id": "job-old",
+                "status": "completed",
+            })
+            failure = repo / ".survey/work-queue/completed-submission-failures/request-attempt-old.json"
+            _write(failure, {"error": "old false positive"})
+
+            summary = self.module.advance(repo, mode="completed")
+
+            self.assertEqual(summary["quarantined"], [])
+            self.assertIn("attempt-old", summary["already_settled"])
+            self.assertFalse(failure.exists())
+            self.assertFalse((repo / ".survey/work-queue/submissions/research/attempt-old.json").exists())
+
     def test_failed_preflight_does_not_materialize_descriptor(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
