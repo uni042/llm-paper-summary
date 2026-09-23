@@ -15,6 +15,7 @@ from typing import Any
 
 CACHE_ROOT = Path(".survey/work-queue/run-state/cache")
 LATEST_ROOT = Path(".survey/work-queue/run-state/latest")
+FACT_CLOCK = Path(".survey/work-queue/run-state/fact-clock.json")
 ALLOWED_WORKERS = {"scheduled-chat-00", "scheduled-chat-30"}
 TERMINAL = {"completed", "blocked", "deferred", "rejected"}
 
@@ -45,6 +46,46 @@ def _write(path: Path, value: Any) -> bool:
         return False
     path.write_text(text, encoding="utf-8")
     return True
+
+
+def _fact_clock(root: Path) -> dict[str, Any]:
+    value = _read(root / FACT_CLOCK, {})
+    if not isinstance(value, dict) or value.get("schema_version") != 1:
+        value = {"schema_version": 1, "workers": {}}
+    if not isinstance(value.get("workers"), dict):
+        value["workers"] = {}
+    return value
+
+
+def fact_generation(root: Path, worker_id: str) -> int:
+    clock = _fact_clock(root)
+    row = clock.get("workers", {}).get(worker_id)
+    if not isinstance(row, dict):
+        return 0
+    return int(row.get("generation", 0) or 0)
+
+
+def bump_fact_clock(root: Path, worker_ids: set[str], reason: str) -> dict[str, int]:
+    clock = _fact_clock(root)
+    workers = clock.setdefault("workers", {})
+    now = dt.datetime.now(dt.timezone.utc).isoformat()
+    out: dict[str, int] = {}
+    for worker_id in sorted(worker_ids):
+        if worker_id not in ALLOWED_WORKERS:
+            continue
+        row = workers.get(worker_id)
+        if not isinstance(row, dict):
+            row = {}
+        generation = int(row.get("generation", 0) or 0) + 1
+        workers[worker_id] = {
+            "generation": generation,
+            "updated_at": now,
+            "reason": reason,
+        }
+        out[worker_id] = generation
+    if out:
+        _write(root / FACT_CLOCK, clock)
+    return out
 
 
 def cache_path(root: Path, worker_id: str) -> Path:
@@ -107,6 +148,8 @@ def get_run(root: Path, request: dict[str, Any]) -> dict[str, Any] | None:
             return None
     if run.get("cache_valid") is not True:
         return None
+    if int(cache.get("fact_generation", -1) or -1) != fact_generation(root, worker_id):
+        return None
     if not isinstance(run.get("claims"), dict) or not isinstance(run.get("submission"), dict):
         return None
     return run
@@ -164,6 +207,7 @@ def store_canonical_snapshot(
         run["first_cached_at"] = dt.datetime.now(dt.timezone.utc).isoformat()
     runs[request["run_key"]] = run
     cache["generation"] = generation
+    cache["fact_generation"] = fact_generation(root, worker_id)
     _prune_runs(cache)
     _save_cache(root, cache)
     return generation
@@ -179,13 +223,14 @@ def update_claims(root: Path, request: dict[str, Any], claims: dict[str, Any]) -
         return None
     if run.get("claims") == claims:
         return int(run.get("generation", cache.get("generation", 0)))
+    clock = bump_fact_clock(root, {worker_id}, "claim-state")
     generation = int(cache.get("generation", 0)) + 1
     run["claims"] = dict(claims)
     run["generation"] = generation
     cache["generation"] = generation
+    cache["fact_generation"] = clock.get(worker_id, fact_generation(root, worker_id))
     _save_cache(root, cache)
     return generation
-
 
 def _descriptor_identity(descriptor: dict[str, Any]) -> dict[str, Any] | None:
     worker_id = descriptor.get("worker_id")
@@ -329,6 +374,7 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
                 touched.setdefault(worker_id, set()).add(run_key)
                 changed_workers.add(worker_id)
 
+    clock_generations = bump_fact_clock(root, changed_workers, "immutable-submission") if changed_workers else {}
     for worker_id in changed_workers:
         cache = loaded[worker_id]
         generation = int(cache.get("generation", 0)) + 1
@@ -349,6 +395,7 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
             run["generation"] = generation
             run["rebuilt_from_canonical"] = False
         cache["generation"] = generation
+        cache["fact_generation"] = clock_generations.get(worker_id, fact_generation(root, worker_id))
         _save_cache(root, cache)
 
     return {worker: sorted(keys) for worker, keys in touched.items()}
