@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-a05675288077a249ad02f491",
   "job_id": "job-research-f752e824c189724b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a05675288077a249ad02f491",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2608.04454",
+    "arxiv_id": "2608.04454",
+    "doi": "10.48550/arXiv.2608.04454",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.CV", "cross_list": ["cs.LG"]},
+    "title": "Beyond Global Routing Aggregation: Phase-Aware Expert Merging for MoE Vision-Language Models",
+    "summary": "RoleMergeは、MoE視覚言語モデルの学習不要エキスパート統合で、画像文脈・質問・回答デコードを一括したルーティング統計が画像トークン数に支配される問題を扱う。各フェーズを等重みに正規化したルーティング役割プロファイル（Routing Role Profile; RRP）を構築し、エキスパートとフェーズ間の情報損失と回答デコード時の衝突調整を用いて統合対象を選ぶ。エキスパート本体とルータ出力を同じ群内重みで統合し、再学習なしにストレージとメモリを削減する。3モデル・6タスク・3保持率で既存統合法を上回り、Qwen3-VL-30B-A3B-Instructの保持率0.5では比較手法比最大9.6%の相対マクロ平均改善を示す。",
+    "list_summary": "画像・質問・回答のフェーズ別ルーティング役割を保持してMoE-VLMエキスパートを学習不要で統合するRoleMerge。",
+    "authors": ["Hongyu Zhang", "Cheng Yan", "Xiang Xia", "Wuyang Zhang"],
+    "authors_affiliations": "一次資料本文の著者欄に基づく。所属の詳細は本レコードでは未転記。",
+    "published": "2026-08-05",
+    "publication": "arXiv:2608.04454v1, submitted 2026-08-05",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "MoE compression / training-free expert merging / multimodal MoE routing",
+    "topics": ["MoE-VLM", "エキスパート統合", "フェーズ条件付きルーティング", "Routing Role Profile", "学習不要圧縮", "回答デコード"],
+    "importance": "従来の全トークン集約を、推論フェーズを条件としたエキスパート役割へ置き換え、マルチモーダルMoE圧縮で回答生成に重要な専門化を保持する基準を導入した点が重要。",
+    "hardware_evaluation": "3つのMoE-VLMで評価し、保持率0.50/0.625/0.75を比較。システム評価では圧縮によるGPUメモリ、最初のトークンまでの時間、エンドツーエンド遅延も測定する。",
+    "quality_effect": "学習や量子化ではなくエキスパート数を削減するため、品質影響は統合によるルーティング役割喪失に由来する。RoleMergeは特に回答デコードで使われるエキスパートの区別を残すことで性能低下を抑える。",
+    "source": "https://arxiv.org/abs/2608.04454",
+    "sources": ["https://arxiv.org/abs/2608.04454", "https://arxiv.org/html/2608.04454", "https://arxiv.org/pdf/2608.04454"],
+    "code": null,
+    "implementation": "論文は学習不要の統合手順と再現用実装詳細を記述する。公開コードURLは一次資料から確認できなかったため記録しない。",
+    "last_checked": "2026-09-23",
+    "references": [],
+    "references_checked_at": "2026-09-23",
+    "references_source": "primary-reference-section",
+    "references_total": 0
+  },
+  "reservation": {"claim_id": "claim-a05675288077a249ad02f491", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
