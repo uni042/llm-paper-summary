@@ -81,7 +81,7 @@ Web/PDF取得のplatform上限はrunを途中終了させる実害があるた�
 Research / Auditのclaimは次の順で行う。
 
 1. 最新main HEADとclaim stateを再取得する。**同一workerにactiveな未提出claimがある場合は新requestを出さない。直前claimのexact attemptに対する不変descriptorがmainへ耐久保存済みなら、そのclaimがまだactive表示でも次requestを出してよい。claim fast laneは新request処理の冒頭でdescriptor-backed claimを正規解放してから新jobを割り当てる。**
-2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatのrequestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` に加え、今回runで固定した **`run_key`、`scheduled_slot`、`actual_invocation_start`** を持つ。これら3項目はclaim resultへ耐久伝播し、worker別増分run-state cacheをclaim結果だけで更新するために使う。旧requestで3項目が無いものは引き続き処理するが、その場合は該当workerのcacheを安全側に無効化し、次のrun-state導出をcanonical factsから再構築する。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。
+2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatのrequestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` に加え、今回runで固定した **`run_key`、`scheduled_slot`、`actual_invocation_start`** を持つ。これら3項目はclaim resultへ耐久伝播し、worker別増分run-state cacheをclaim結果だけで更新するために使う。旧requestで3項目が無いものは引き続き処理するが、その場合は該当workerのcacheを安全側に無効化し、次のrun-state導出をcanonical factsから再構築する。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。 **`requested_at` は必ずUTCで、末尾を `Z` または `+00:00` とする。JST等の `+09:00` をそのまま入れてはならない。** `actual_invocation_start` はoffset-aware timestampなら受理され正規化されるが、claim requestの `requested_at` だけは実装契約としてUTC限定である。例: `2026-09-23T04:52:00+00:00`。
 3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で `claim_worker_with_banks.py` を実行する。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
 4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を確認する。未生成なら固定時間sleepや定周期pollingへ入らず、第7.0節の待機ミクロタスクを1件処理してから同じresultを再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`next_action` / `instructions` を正本として以後の処理を行う。
 5. **claim result待ちは受動待機にしない。** request commitから60秒未満は `MONITOR_CLAIM_FAST_LANE` として、同じrequestを起動した `Survey claim fast lane` のActions runを確認し、`queued` / `in_progress` ならjob/step状態を確認する。並行して同一workerの未解決submission、`retryable` / repair待ち、active claim整合だけを軽く監査し、第7.0節の待機ミクロタスクを1件処理してから最新 `main` と同じ `request_id` のresultを再確認する。この作業サイクル中に別claimを発行したり、割当未確定の次論文本文を先読みしてはならない。
@@ -89,8 +89,30 @@ Research / Auditのclaimは次の順で行う。
 
 **並列workerの扱い:** `max_jobs=1` と未完了claimの直列制約は**同一worker / 同一論理worker lineage内だけ**に適用する。`:00` worker、`:30` worker、その他の独立workerは、別 `worker_id` と別record bankで同時にResearch / Auditを進めてよい。他workerのactive claim、他workerのclaim request、またはclaim fast lane上で先行requestが処理中であることを理由に、このworkerのrunを停止・終了・handoffしてはならない。`.github/workflows/survey-claim-fast.yml` の `concurrency: survey-claim-main` は**claim割当commitの競合回避だけを直列化するもの**であり、論文精読そのものを全worker間で直列化するものではない。自分のrequestがfast lane待ちなら第7.0節の待機ミクロタスクを挟みながら同じ `request_id` のresultを再確認し、割当後は返された別job / record bankで処理を続ける。他workerのclaimを自分の未完了claimとして扱わない。
 
-Research / Auditのcompleted submissionは、**ワーカー自身のセルフレビュー + exact blob preflight** を通してからfast laneへ送る。
+Research / Auditのcompleted submissionは、**ワーカー自身の意味品質セルフレビュー + 同期軽量セルフチェック + exact blob preflight** を通してからfast laneへ送る。
 
+**非同期preflightへ送る前の同期軽量セルフチェックを必須とする。** 目的は品質基準を追加することではなく、固定済みの構造・段落・説明量不足をActions往復の前に見つけることにある。ローカル/Work等でrepository Pythonを直接実行できる場合は、5スロット保存後に次を実行する。
+
+```bash
+python .survey/scripts/research_quality_selfcheck.py \
+  --kind <research|audit> \
+  --attempt-id <attempt_id> \
+  --job-id <job_id> \
+  --record-bank <bank> \
+  --paper-path <paper_path>
+```
+
+このスクリプトは `prepare_completed_submission.py`、正規renderer、`paper_quality_gate.py` をそのまま再利用し、request/result/submission/queue stateを作らない。**`selfcheck_passed=true` になるまで非同期research-preflight requestを作らない。** FAILなら一次資料に基づいて指摘されたslotだけを直し、同期セルフチェックを再実行する。
+
+Scheduled Chat等でrepository Pythonを直接起動できない場合も、このセルフチェック自体を省略しない。5スロットをpreflightへ送る前に、少なくとも次を**手元のslot内容だけで同期確認**する。
+
+- `metadata.summary` は180文字以上、`metadata.list_summary` は45〜180文字程度で「具体的に何をしたか」を含む。
+- `problem_method.problem` は250文字以上、`novelty` は180文字以上、`method_overview` は500文字以上を構造化validationの最低条件として満たす。
+- `components` は2個以上、各 `description` は240文字以上。さらに正規renderer後の手法H3が3個以上になる通常ケースでは、**「手法のあらまし」、各component、「全体のデータ／制御の流れ」を含む各手法構成要素を2説明段落以上**にする。1段落へ長文を詰め込んで文字数だけ満たさない。
+- 評価条件、比較対象、実機/シミュレーションのscope、代表結果、負の結果・境界条件、品質影響、限界、既存研究との差を空欄にしない。`results.overview` は180文字以上、`key_results` は最低1件を持つ。
+- 固定の公開品質基準であるUTF-8 4,500 bytes、説明文2,200文字、説明10段落、手法4段落、日本語比率70%以上、裸の英語専門語0件を十分な安全余裕付きで満たすよう確認する。厳密なrender後計測は後段のexact blob preflightが最終判定する。
+
+同期セルフチェックは**最適化用の前段**であり、exact blob preflightを置き換えない。セルフチェック合格後も必ず新しいresearch-preflight requestを作り、Git blob SHAとdescriptor fingerprintを含む正規PASSを得てから提出へ進む。
 **品質基準は固定する。** 提出前preflight、submission processor、repository-wide品質監査は `.survey/docs/survey-workflow/paper-quality-audit.md` に固定された同一基準を使う。ワーカーや監査タスクが品質閾値・要求項目・本文量・手法要件を独自に強化・緩和してはならない。変更は想定外挙動、解析バグ、移行/互換バグの修正に限る。`書誌情報` の著者名・所属等を品質計測から除外する扱いは、本文品質への英語メタデータ混入を防ぐ既知バグ修正として固定基準に含める。
 
 **品質検査は隠しテストではない。** Research / Auditは5スロットの執筆前に同文書の公開済み固定基準を確認し、一次資料に十分な根拠がある限り、本文量・説明段落数・手法説明などを最低閾値ぎりぎりではなく**少し余裕を持って**作成する。これはレンダリング後の計測差、除外領域、表記揺れ等で不要なpreflight FAILが生じるのを避けるための安全余裕（safety margin）であり、品質閾値そのものを引き上げる指示ではない。文字数稼ぎの冗長化、同内容の重複、一次資料にない推測で余裕を作ってはならず、情報密度と従来の説明品質を維持する。
