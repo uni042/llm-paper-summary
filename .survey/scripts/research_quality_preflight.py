@@ -19,11 +19,12 @@ import immutable_submission  # noqa: E402
 import paper_quality_gate  # noqa: E402
 import prepare_completed_submission  # noqa: E402
 import process_immutable_submission  # noqa: E402
+import worker_identity  # noqa: E402
 
 SCHEMA_VERSION = 1
 OPERATION = "research_quality_preflight"
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
-ALLOWED_WORKERS = {"scheduled-chat-00": {"00"}, "scheduled-chat-30": {"30", "0830"}}
+ALLOWED_WORKERS = worker_identity.FIXED_SCHEDULED_WORKER_SLOTS
 RUN_IDENTITY_FIELDS = ("worker_id", "run_key", "scheduled_slot", "actual_invocation_start")
 SELF_REVIEW_KEYS = (
     "primary_source_read_to_end",
@@ -70,13 +71,13 @@ def _run_identity(request: dict[str, Any]) -> dict[str, Any]:
     if missing:
         raise PreflightRequestError("Scheduled Chat run identity must be complete: " + ", ".join(missing))
     worker_id = str(request.get("worker_id") or "").strip()
-    if worker_id not in ALLOWED_WORKERS:
-        raise PreflightRequestError("worker_id must be scheduled-chat-00 or scheduled-chat-30")
+    if not worker_identity.is_supported_worker_id(worker_id):
+        raise PreflightRequestError("worker_id must be scheduled-chat-00, scheduled-chat-30, or worker-N")
     run_key = str(request.get("run_key") or "").strip()
     if not run_key or len(run_key) > 512:
         raise PreflightRequestError("run_key must be a non-empty string up to 512 characters")
     scheduled_slot = str(request.get("scheduled_slot") or "").strip()
-    if scheduled_slot not in ALLOWED_WORKERS[worker_id]:
+    if not worker_identity.identity_slot_valid(worker_id, scheduled_slot):
         raise PreflightRequestError("scheduled_slot does not match worker_id")
     start = str(request.get("actual_invocation_start") or "").strip()
     try:

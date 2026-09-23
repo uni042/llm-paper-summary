@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Auto-allocate the initial Research/Audit claim window from a fresh run-state snapshot.
 
-Only the initial allocation of a Scheduled Chat invocation is eligible. The claim
-allocator expands this request into one foreground plus prefetched standby claims.
+The initial allocation of a fixed Scheduled Chat invocation or an ad-hoc worker-N
+invocation is eligible. The claim allocator expands this request into one foreground
+plus prefetched standby claims.
 Later window refills keep using the normal worker decision point so Audit starvation
 and per-paper continuation semantics remain unchanged.
 """
@@ -17,6 +18,7 @@ from typing import Any
 
 import claim_fast_path
 import claim_state
+import worker_identity
 
 CLAIM_REQUESTS = Path(".survey/work-queue/claim-requests")
 CLAIM_RESULTS = Path(".survey/work-queue/claim-results")
@@ -85,7 +87,8 @@ def _eligible(result: dict[str, Any]) -> bool:
         result.get("ok") is True
         and result.get("snapshot_origin") == "request-fast-lane"
         and result.get("work_mode") == "research"
-        and result.get("scheduled_slot") in {"00", "30"}
+        and worker_identity.identity_slot_valid(result.get("worker_id"), result.get("scheduled_slot"))
+        and result.get("scheduled_slot") != "0830"
         and gate.get("required_action") == "CLAIM_NEXT_RESEARCH_AUDIT"
         and result.get("active_assignment") is False
         and result.get("claim_result_pending") is False

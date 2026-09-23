@@ -20,14 +20,17 @@
 
 ### 1.1 run identity と scheduled slot
 
-Scheduled Chatの論文ワーカーは、実行ごとに名前を作り直さず**固定worker identity**を使う。
+通常のScheduled Chat論文ワーカーは、実行ごとに名前を作り直さず**固定worker identity**を使う。
 
-- 毎時 `:00`: `worker_id = scheduled-chat-00`
-- 毎時 `:30`: `worker_id = scheduled-chat-30`
+- 毎時 `:00`: `worker_id = scheduled-chat-00`, `scheduled_slot = 00`
+- 毎時 `:30`: `worker_id = scheduled-chat-30`, `scheduled_slot = 30`
+- 08:30専用run: `worker_id = scheduled-chat-30`, `scheduled_slot = 0830`
 
-`worker_kind` は両方とも `scheduled_chat` とする。claim request、Library checkpoint marker、fallback envelope、run-state request、最終報告でこのidentityを一貫して使う。別名・時刻埋め込み名・共通名 `scheduled-chat-llm-survey` を新規runで生成しない。これにより :00 と :30 を別worker lineageとして保ち、互いのactive claimを自分のclaimとして扱わない。
+これに加えて、単発・臨時ワーカーは **`worker-N`（Nは0〜999999の数字）** を正式identityとして使用できる。単発ワーカーは `scheduled_slot = adhoc` とし、claim / 共有preload FIFO / Research-Audit品質preflight / immutable submission / run-stateの同じ正規経路へ参加する。`worker-N` を `:00` / `:30` / `0830` と偽装してはならず、08:30 maintenanceも担当しない。同時稼働する単発ワーカー同士では異なるNを使い、同一Nを再利用する場合はそのworkerの未完了claimを引き継ぐものとして扱う。
 
-各runに一意な `run_key` を1つ作り、Discovery、run-state snapshot、最終報告まで同じ値を使う。
+`worker_kind` は固定Scheduled Chatと `worker-N` の両方でtransport互換上 `scheduled_chat` とする。claim request、Library checkpoint marker、fallback envelope、run-state request、最終報告でこのidentityを一貫して使う。別名・時刻埋め込み名・共通名 `scheduled-chat-llm-survey` を新規runで生成しない。これにより各worker lineageを分離し、互いのactive claimを自分のclaimとして扱わない。
+
+各runに一意な `run_key` を1つ作り、Discovery、run-state snapshot、最終報告まで同じ値を使う。`worker-N` も必ずrun-state requestを作り、固定2workerと同じ継続判定を使用する。
 
 また、実際の起動時刻とは別に**予定実行枠（scheduled slot）**を開始時に確定してrun中固定する。`:00` workerは `HH:00`、`:30` workerは `HH:30` の予定枠を使う。08:30専用runの判定は実際の起動時計ではなく予定実行枠で行う。たとえば08:34に遅延起動しても予定枠が08:30なら第9節へ入り、09:30枠が08:59に早期起動した等の異常でも08:30専用runとは扱わない。
 

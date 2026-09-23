@@ -22,14 +22,11 @@ from typing import Any
 import claim_state
 import continuation_gate
 import select_discovery_direction
+import worker_identity
 import worker_run_state_cache as run_state_cache
 
 REQUESTS = Path(".survey/work-queue/run-state/requests")
 RESULTS = Path(".survey/work-queue/run-state/results")
-ALLOWED_WORKERS = {
-    "scheduled-chat-00": "00",
-    "scheduled-chat-30": "30",
-}
 READ_COUNT = 0
 SCHEDULED_CHAT_CLAIM_WINDOW = 4
 
@@ -74,14 +71,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         raise ValueError("request_id must be non-empty and match filename stem")
     worker_id = str(value.get("worker_id") or "").strip()
     scheduled_slot = str(value.get("scheduled_slot") or "").strip()
-    if worker_id not in ALLOWED_WORKERS:
-        raise ValueError("worker_id must be scheduled-chat-00 or scheduled-chat-30")
-    if scheduled_slot not in {"00", "30", "0830"}:
-        raise ValueError("scheduled_slot must be 00, 30, or 0830")
-    if worker_id == "scheduled-chat-00" and scheduled_slot != "00":
-        raise ValueError("scheduled-chat-00 must use scheduled_slot=00")
-    if worker_id == "scheduled-chat-30" and scheduled_slot not in {"30", "0830"}:
-        raise ValueError("scheduled-chat-30 must use scheduled_slot=30 or 0830")
+    worker_identity.validate_identity_slot(worker_id, scheduled_slot)
     run_key = str(value.get("run_key") or "").strip()
     if not run_key:
         raise ValueError("run_key is required")

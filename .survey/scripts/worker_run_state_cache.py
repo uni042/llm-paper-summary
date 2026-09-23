@@ -13,10 +13,12 @@ import json
 from pathlib import Path
 from typing import Any
 
+import worker_identity
+
 CACHE_ROOT = Path(".survey/work-queue/run-state/cache")
 LATEST_ROOT = Path(".survey/work-queue/run-state/latest")
 FACT_CLOCK = Path(".survey/work-queue/run-state/fact-clock.json")
-ALLOWED_WORKERS = {"scheduled-chat-00", "scheduled-chat-30"}
+ALLOWED_WORKERS = set(worker_identity.FIXED_SCHEDULED_WORKER_SLOTS)
 TERMINAL = {"completed", "blocked", "deferred", "rejected"}
 SCHEDULED_CHAT_CLAIM_WINDOW = 4
 
@@ -58,6 +60,22 @@ def _fact_clock(root: Path) -> dict[str, Any]:
     return value
 
 
+def _known_worker_ids(root: Path) -> list[str]:
+    ids = set(ALLOWED_WORKERS)
+    cache_root = root / CACHE_ROOT
+    if cache_root.is_dir():
+        ids.update(
+            path.stem for path in cache_root.glob("*.json")
+            if worker_identity.is_supported_worker_id(path.stem)
+        )
+    clock = _fact_clock(root)
+    ids.update(
+        str(worker_id) for worker_id in clock.get("workers", {})
+        if worker_identity.is_supported_worker_id(worker_id)
+    )
+    return sorted(ids)
+
+
 def fact_generation(root: Path, worker_id: str) -> int:
     clock = _fact_clock(root)
     row = clock.get("workers", {}).get(worker_id)
@@ -72,7 +90,7 @@ def bump_fact_clock(root: Path, worker_ids: set[str], reason: str) -> dict[str, 
     now = dt.datetime.now(dt.timezone.utc).isoformat()
     out: dict[str, int] = {}
     for worker_id in sorted(worker_ids):
-        if worker_id not in ALLOWED_WORKERS:
+        if not worker_identity.is_supported_worker_id(worker_id):
             continue
         row = workers.get(worker_id)
         if not isinstance(row, dict):
@@ -94,7 +112,7 @@ def cache_path(root: Path, worker_id: str) -> Path:
 
 
 def load_cache(root: Path, worker_id: str) -> dict[str, Any] | None:
-    if worker_id not in ALLOWED_WORKERS:
+    if not worker_identity.is_supported_worker_id(worker_id):
         return None
     value = _read(cache_path(root, worker_id), {})
     if not isinstance(value, dict):
@@ -118,7 +136,7 @@ def _new_cache(worker_id: str) -> dict[str, Any]:
 
 def _save_cache(root: Path, cache: dict[str, Any]) -> bool:
     worker_id = str(cache.get("worker_id") or "")
-    if worker_id not in ALLOWED_WORKERS:
+    if not worker_identity.is_supported_worker_id(worker_id):
         raise ValueError("unsupported worker cache")
     path = cache_path(root, worker_id)
     existing = load_cache(root, worker_id)
@@ -240,13 +258,9 @@ def _claim_result_identity(value: dict[str, Any]) -> dict[str, Any] | None:
     run_key = value.get("run_key")
     slot = value.get("scheduled_slot")
     start = value.get("actual_invocation_start")
-    if worker_id not in ALLOWED_WORKERS or not isinstance(run_key, str) or not run_key:
+    if not worker_identity.is_supported_worker_id(worker_id) or not isinstance(run_key, str) or not run_key:
         return None
-    if slot not in {"00", "30", "0830"} or parse_time(start) is None:
-        return None
-    if worker_id == "scheduled-chat-00" and slot != "00":
-        return None
-    if worker_id == "scheduled-chat-30" and slot not in {"30", "0830"}:
+    if not worker_identity.identity_slot_valid(worker_id, slot) or parse_time(start) is None:
         return None
     return {
         "worker_id": worker_id,
@@ -287,7 +301,7 @@ def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, lis
         identity = _claim_result_identity(value)
         if identity is None:
             legacy_worker = value.get("worker_id")
-            if legacy_worker in ALLOWED_WORKERS and load_cache(root, legacy_worker) is not None:
+            if worker_identity.is_supported_worker_id(legacy_worker) and load_cache(root, str(legacy_worker)) is not None:
                 invalidate_only.add(str(legacy_worker))
             continue
         worker_id = identity["worker_id"]
@@ -406,13 +420,9 @@ def _descriptor_identity(descriptor: dict[str, Any]) -> dict[str, Any] | None:
     run_key = descriptor.get("run_key")
     slot = descriptor.get("scheduled_slot")
     start = descriptor.get("actual_invocation_start")
-    if worker_id not in ALLOWED_WORKERS or not isinstance(run_key, str) or not run_key:
+    if not worker_identity.is_supported_worker_id(worker_id) or not isinstance(run_key, str) or not run_key:
         return None
-    if slot not in {"00", "30", "0830"} or parse_time(start) is None:
-        return None
-    if worker_id == "scheduled-chat-00" and slot != "00":
-        return None
-    if worker_id == "scheduled-chat-30" and slot not in {"30", "0830"}:
+    if not worker_identity.identity_slot_valid(worker_id, slot) or parse_time(start) is None:
         return None
     return {
         "worker_id": worker_id,
@@ -515,7 +525,7 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
             if cache_for(worker_id) is not None:
                 candidate_workers = [worker_id]
         else:
-            for worker_id in sorted(ALLOWED_WORKERS):
+            for worker_id in _known_worker_ids(root):
                 cache = cache_for(worker_id)
                 if cache is None:
                     continue
@@ -655,7 +665,7 @@ def auto_result_id(worker_id: str, run_key: str, generation: int) -> str:
 
 def write_latest_pointer(root: Path, result_path: Path, result: dict[str, Any]) -> bool:
     worker_id = str(result.get("worker_id") or "")
-    if worker_id not in ALLOWED_WORKERS:
+    if not worker_identity.is_supported_worker_id(worker_id):
         return False
     path = root / LATEST_ROOT / f"{worker_id}.json"
     current = _read(path, {})
