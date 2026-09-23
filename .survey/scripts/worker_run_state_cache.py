@@ -486,7 +486,9 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
         identity = _descriptor_identity(descriptor)
         candidate_workers: list[str] = []
         if identity is not None:
-            candidate_workers = [identity["worker_id"]]
+            worker_id = identity["worker_id"]
+            if cache_for(worker_id) is not None:
+                candidate_workers = [worker_id]
         else:
             for worker_id in sorted(ALLOWED_WORKERS):
                 cache = cache_for(worker_id)
