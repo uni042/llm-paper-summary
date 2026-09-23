@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-b1a52303c9877f76cd4ddc7e",
-  "job_id": "job-research-d69ddf3864beda69",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b1a52303c9877f76cd4ddc7e",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-b1a52303c9877f76cd4ddc7e","job_id":"job-research-d69ddf3864beda69","data":{"canonical_id":"DOI:10.4108/eetiot.13349","arxiv_id":null,"doi":"10.4108/eetiot.13349","openreview_id":null,"title":"Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving","summary":"Janusは、マルチクラウドでプリフィルとデコードを分離するLLMサービングにおいて、KVキャッシュ転送を固定処理ではなくスケジューリング変数として扱うオンラインスケジューラである。prefix-aware配置、デコード先、migrate/recompute/hybrid/selectiveの4種KV輸送、長期コスト制御、プールサイズ調整を統合し、96 pod・512 GPU相当のトレース駆動シミュレーションで強いマルチクラウド基準に対し中央値TTFT 3.8倍、P99 TTFT 4.6倍、goodput 2.1倍、コスト38%削減を報告する。","list_summary":"プリフィル/デコード配置とKV輸送方式を共同最適化し、異種マルチクラウドLLMサービングのTTFT・goodput・コストを同時改善する。","authors":["K. B. Aruna","V. Kaliraj","L. Sudha","V. Sureka"],"authors_affiliations":"R.M.D. Engineering College, Tamil Nadu, India","published":"2026-08-12","publication":"EAI Endorsed Transactions on Internet of Things","publication_type":"査読済み論文","publication_status":"Received 2026-06-05; accepted 2026-08-02; published 2026-08-12","lineage":"disaggregated LLM serving / KV-cache routing / multi-cloud scheduling / prefix-cache locality","topics":["プリフィル・デコード分離","KVキャッシュ転送","マルチクラウド推論","prefix-aware routing","Lyapunov最適化"],"importance":"単一クラスタ内の高速RDMAを前提にした従来の分離サービングから、WAN帯域・スポット価格・異種GPU・データ所在地制約を含むマルチクラウドへ問題を拡張し、KV輸送方式そのものを第一級の意思決定にした点が重要である。","implementation":"17.1K行の制御プレーン試作、vLLMデータプレーン拡張、離散事象シミュレータを実装。公開コードあり。","hardware_evaluation":"単一podの実測マイクロベンチマークでモデル係数を校正し、96 pod・512 GPU、AWS/GCP/Azure、6 regionの離散事象シミュレーションで評価。物理マルチクラウド実配備は未実施。","quality_effect":"モデル出力品質を近似する手法ではなく、配置・転送・容量制御を変えるサービングシステム研究。主な品質軸はSLO、TTFT、goodput、コスト、再利用率。","source":"https://doi.org/10.4108/eetiot.13349","sources":["https://publications.eai.eu/index.php/IoT/article/view/13349","https://publications.eai.eu/index.php/IoT/article/download/13349/4240/35587"],"code":"https://github.com/arunakbofficial-tech/Janus","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":62},"reservation":{"claim_id":"claim-b1a52303c9877f76cd4ddc7e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
