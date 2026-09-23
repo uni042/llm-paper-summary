@@ -807,6 +807,7 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
         if request["worker_kind"] == "scheduled_chat":
             result_payload.update({
                 "claim_window": int(request["claim_window"]),
+                "hot_banked_claim_target": claim_window_policy.hot_banked_claims(int(request["claim_window"])),
                 "claim_refill_threshold": claim_window_policy.refill_threshold(int(request["claim_window"])),
                 "active_claim_count": len(assignments),
                 "claim_window_remaining": max(int(request["claim_window"]) - len(assignments), 0),
