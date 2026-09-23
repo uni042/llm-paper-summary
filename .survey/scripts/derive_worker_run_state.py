@@ -615,6 +615,11 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         work_mode = str(cached["work_mode"])
         submission = dict(cached["submission"])
         claims = cached_claims or {}
+        if claims != cached.get("claims"):
+            # Persist cheap canonical reconciliation so a missed descriptor delta
+            # cannot leave the durable performance cache advertising a terminal job
+            # as active on every later snapshot.
+            run_state_cache.update_claims(root, request, claims)
     else:
         frozen = _frozen_route(root, request["run_key"])
         if request["scheduled_slot"] == "0830":
