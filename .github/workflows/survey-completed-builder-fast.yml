@@ -92,7 +92,9 @@ jobs:
               .survey/work-queue/submissions/audit \
               .survey/work-queue/run-state/cache \
               .survey/work-queue/run-state/fact-clock.json \
-              .survey/work-queue/archive/transport
+              .survey/work-queue/archive/transport \
+              .survey/work-queue/claim-requests \
+              .survey/work-queue/claim-results
 
             if git diff --cached --quiet; then
               echo 'No new completed descriptors or isolation records to publish.'
