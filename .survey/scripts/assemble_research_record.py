@@ -14,6 +14,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from japanese_style import (  # noqa: E402
     DEFAULT_MIN_JAPANESE_RATIO,
+    JP_CLASS,
     PREFERRED_TERMS,
     TERM_PATTERNS,
     find_bare_english,
