@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-64f95f13e8bf245cb090a9d9","job_id":"job-research-62c06a71da7d8bc0","data":{"limitations":"比較対象のIMPRESSとAttentionStoreが公開されていないため、baselineは論文記述に基づく再実装であり、原実装との性能差が残り得る。scheduler-aware optimizationも一般的preemptive環境へ合わせるため無効化されている。評価は単一A800、単一NVMe、Qwen2.5 7B〜32B、短い出力のNLU workload中心で、multi-GPU・remote storage・高並行serving・長decodeでの効果は未確定。\n\nContiguousChunkはsemantic pruningなのでfull KVに対するaccuracy lossを完全には消せず、budgetが大きいほど既存方式との差も縮む。cross-layer重要index類似性が低いmodel/workloadではspeculative prefetchのhit率が下がる可能性がある。","differences":"IMPRESSは重要KVを選択してSSD trafficを減らすが、selectionは細粒度なのにstorageは64-token等の粗いblockで管理するためread amplificationが残る。ContiguousKVはselection、storage、transfer、cacheを同一ContiguousChunkへ揃え、この不一致そのものを除去する。\n\nAttentionStore等のfull-KV offloadに対しては、semantic pruningで読む量を削減する。H2O/StreamingLLM/SnapKV等のtoken pruningに対しては、連続chunkでsemantic coherenceを保ち、さらにstorage layoutとprefetchまで共同設計する。vLLM/SGLangのdecode KV pagingやDistServe/Mooncakeのprefill-decode disaggregationとは主対象が異なり、shared-prefix Re-PrefillのSSD I/O最適化として相補的である。","implementation_status":"arXiv v1、2026-01-20公開。FlexGenを基盤にInferenceEngineとCacheManagerを実装し、Qwen2.5対応、H2O/ChunkKV統合、二段prefetch、attention cacheを評価。論文本文ではContiguousKV固有の公開repository URLは確認できない。","research_positioning":"階層メモリ型LLM推論の中でも、SSD/CPUへ退避したpersistent prefix KVを再利用するRe-Prefillに焦点を絞る。CPU/GPU offload量の削減だけでなく、SSDのI/O request粒度とKV pruningのsemantic粒度を共同設計する点でstorage-aware inferenceの代表例となる。\n\n特にユーザーが重視するSSD/NVMe活用、prefetch、I/O scheduling、KV cache hierarchyの交点にあり、今後LMCacheやMooncake系の分離KV転送と組み合わせる場合にも、どの粒度で永続化・先読みするかという設計原理を提供する。"},"reservation":{"claim_id":"claim-64f95f13e8bf245cb090a9d9","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-7f37dbbf1fcc0bcb540d428a",
+  "job_id": "job-research-1ae2d7d06d592402",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7f37dbbf1fcc0bcb540d428a",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

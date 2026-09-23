@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-64f95f13e8bf245cb090a9d9","job_id":"job-research-62c06a71da7d8bc0","data":{"hardware":"2×Intel Xeon Platinum 8370C（合計64 core）、128GB DRAM、NVIDIA A800 80GB HBM2e、4TB Samsung 990 Pro NVMe SSD。SSD peak read実測約7.45GB/s、GPU接続PCIe 4.0 x16双方向約32GB/s。全baselineで利用可能GPU memory 10GB、CPU memory 24GBに制限。","software":"FlexGenを基盤にContiguousKVを実装し、Qwen2.5-7B/14B/32Bを評価。比較はAttentionStore+LRU、AttentionStore+H2O+LFU、IMPRESSを論文記述から再実装。SemChunk=16 token、Period=8 layers、SubPeriod=4 layers、baseline chunk=64 tokens、random seed 42。","methodology":"SST-2、SubJ、TREC、RTEをfew-shot prompt generationとして使用し、shared prefix長は約3.8K〜6K token。KV budget ratio 5/10/25/50%でaccuracy、平均TTFT、P95 TTFTを測定する。prefixはtraining categoryから正規分布に従ってsampleし、全baselineでGPU/CPU cacheをwarm-upしてから比較する。ablationではQwen2.5-14B/32B、RTE/SST-2、25% budgetでprefetchとattention cacheを個別に除去する。","scope":"実SSD/A800上で7B〜32Bを評価し、I/O階層の実機効果を測る。一方、baseline実装は原著が非公開のため著者らによる再実装であり、scheduler-aware optimizationを無効化している。評価workloadは短い出力のNLU task中心で、長いdecodeを含むend-to-end servingやmulti-GPU clusterは主対象外。"},"reservation":{"claim_id":"claim-64f95f13e8bf245cb090a9d9","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-7f37dbbf1fcc0bcb540d428a",
+  "job_id": "job-research-1ae2d7d06d592402",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7f37dbbf1fcc0bcb540d428a",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

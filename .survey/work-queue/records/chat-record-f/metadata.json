@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-64f95f13e8bf245cb090a9d9","job_id":"job-research-62c06a71da7d8bc0","data":{"canonical_id":"arXiv:2601.13631","arxiv_id":"2601.13631","doi":"10.48550/arXiv.2601.13631","openreview_id":null,"arxiv_categories":{"primary":"cs.OS","cross_list":[]},"title":"ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management","summary":"ContiguousKVは、共有prefix KVをSSD等へ退避するLLMで、意味的KV pruningの細粒度とストレージI/Oの粗い固定blockの不一致が生むread amplification、および重要KV判定→load→計算の直列依存を解消するRe-Prefill最適化システムである。ContiguousChunkをpruning・保存・転送・cacheの共通粒度にし、layer間の重要chunk類似性を使う二段prefetchとattention-guided cacheを組み合わせる。Qwen2.5 7B/14B/32BでIMPRESS比最大3.85倍のTTFT短縮を報告する。","list_summary":"KV pruningとI/Oの粒度をContiguousChunkへ統一し、二段非同期prefetchでSSD KV読み込みを計算と重ねてRe-Prefillを最大3.85倍高速化する。","authors":["Jing Zou","Shangyu Wu","Hancong Duan","Qiao Li","Chun Jason Xue"],"authors_affiliations":"UESTC; Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)","published":"2026-01-20","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint v1 (2026-01-20)","lineage":"KV-cache offloading / prefix caching / storage-aware inference / prefill optimization","topics":["KVキャッシュ","SSDオフロード","Re-Prefill","非同期prefetch","read amplification"],"importance":"KV pruningのアルゴリズム粒度とSSD I/O粒度を同じ抽象へ揃えることで、既存offloading systemのread amplificationをシステム側から除去し、さらにcross-layer localityをI/O-compute pipelineへ利用する点が重要。","implementation":"公開FlexGenを基盤にInferenceEngineとCacheManagerを拡張し、Qwen2.5、H2O、ChunkKVを統合。GPU/CPU prefetch bufferは10GB budget中0.2/0.4GB。","hardware_evaluation":"2×Intel Xeon Platinum 8370C（計64 cores）、128GB DRAM、NVIDIA A800 80GB HBM2e、Samsung 990 Pro NVMe 4TB（実測read 7.45GB/s）、PCIe 4.0 x16（双方向約32GB/s）。","quality_effect":"ContiguousChunk単位のsemantic pruningを行うためfull KVより一部精度低下し得るが、IMPRESS/H2O系より高いaccuracyを報告。Qwen2.5-32BではAS+LRU比最大2.94%低下。","source":"https://arxiv.org/abs/2601.13631","sources":["https://arxiv.org/abs/2601.13631","https://arxiv.org/pdf/2601.13631"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":53},"reservation":{"claim_id":"claim-64f95f13e8bf245cb090a9d9","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-7f37dbbf1fcc0bcb540d428a",
+  "job_id": "job-research-1ae2d7d06d592402",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7f37dbbf1fcc0bcb540d428a",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
