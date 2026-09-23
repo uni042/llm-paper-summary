@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 19:39:45 JST**
+> 自動生成: **2026-09-23 19:47:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **149** |
-| 未claim Research job | **147** |
-| 直近24hの検証済みResearch収録 | **90** |
-| 最終検証済みResearch収録 | **09-23 19:16:28 JST（23分前）** |
+| 収録候補論文 | **148** |
+| 未claim Research job | **146** |
+| 直近24hの検証済みResearch収録 | **91** |
+| 最終検証済みResearch収録 | **09-23 19:47:46 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **149** |
+| canonical_id確認済みの一意な候補論文 | **148** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **149** |
+| 非終端Research job合計 | **148** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（11時間8分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（11時間17分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **22** | **1** | **0** | **0** | **2** | **0** | — |
+| Research | **23** | **1** | **0** | **0** | **2** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **22** | **4** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **23** | **4** | **0** | **3** | **2** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 19:47:46 JST** [research] `arXiv:2605.11277` — Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models
+  - job: `.survey/work-queue/jobs/job-research-165ae8125699de70.json`
+  - result: `.survey/work-queue/results/research/attempt-e3c59442daeee9dcbcd01db3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-e3c59442daeee9dcbcd01db3.json`
+  - paper: `papers/inference/04-offload-heterogeneous/2026-2605.11277-sieve-dynamic-expert-aware-pim.md`
 - **09-23 19:16:28 JST** [research] `arXiv:2509.14900` — FURINA: Free from Unmergeable Router via LINear Aggregation of mixed experts
   - job: `.survey/work-queue/jobs/job-research-e36fdfcc83960d96.json`
   - result: `.survey/work-queue/results/research/attempt-4507d6e7a694d747a350c3a0.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-9105373f954fe3246d7dc7ab.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-9105373f954fe3246d7dc7ab.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.15039-splitee-improving-llm-inference-on-trusted-hardware-with-differentially-private-gpu-outsourcing.md`
-- **09-23 17:19:59 JST** [research] `DOI:10.4108/eetiot.13349` — Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving
-  - job: `.survey/work-queue/jobs/job-research-d69ddf3864beda69.json`
-  - result: `.survey/work-queue/results/research/attempt-b1a52303c9877f76cd4ddc7e.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b1a52303c9877f76cd4ddc7e.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-98d01325c44c-janus-joint-prefill-decode-disaggregation-with-kv-cache-aware-multi-cloud-routing-for-edge-adjacent-llm-serving.md`
 
 ### Audit
 
@@ -179,9 +179,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.11277` — Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models / worker `scheduled-chat-30`
-  - claim: **09-23 19:39:26 JST** / heartbeat: **—** / lease expiry: **09-23 21:09:26 JST**
-  - evidence: `.survey/work-queue/claims/job-research-165ae8125699de70.json`
+- `arXiv:2606.01502` — Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics / worker `scheduled-chat-30`
+  - claim: **09-23 19:47:40 JST** / heartbeat: **—** / lease expiry: **09-23 21:17:40 JST**
+  - evidence: `.survey/work-queue/claims/job-research-37a03b603cf5e34b.json`
 - `DOI:10.1109/icassp55912.2026.11465104` — Parsimony, Order and Balance: Principles for Compressing Mixture-of-Experts Models / worker `scheduled-chat-00`
   - claim: **09-23 19:16:00 JST** / heartbeat: **—** / lease expiry: **09-23 20:46:00 JST**
   - evidence: `.survey/work-queue/claims/job-research-b5c12e0015184a80.json`
@@ -204,7 +204,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **149** |
+| ready | **148** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +224,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **996** |
+| inference/training/survey配下の論文Markdown実体 | **997** |
 
 ### immutable submissionの未照合
 
