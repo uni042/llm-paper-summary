@@ -1,40 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T22:42:24+00:00",
+  "updated_at": "2026-09-23T22:45:34+00:00",
   "last_run_key": "s30-20260924t073303-6a2f1c",
-  "last_round": "disc-s30-6a2f1c-r3",
+  "last_round": "disc-s30-6a2f1c-r4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T04:00:00+09:00",
-      "round": "specialist-speculative-systems-5",
-      "axis": "speculative decodingのmemory/runtime/distributed serving・communication co-design",
-      "query_summary": "speculative decoding serving system、distributed/edge、memory constrained、GPU runtimeへ検索窓を移動。SpecEdge、DSD、MemSpec、SPIRe、LLM-42等の既収録をidentity snapshotで事前除外し、provider検索窓終了時に残った6件を評価して5件採用、1件をmodel-method寄りとしてrejected_candidatesへ記録した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2510.11331",
-        "arXiv:2608.10362",
-        "arXiv:2504.06419",
-        "arXiv:2511.21669",
-        "arXiv:2601.17768",
-        "arXiv:2505.17052"
-      ],
-      "next_axis_hint": "serving engine/kernel implementation、continuous batching、GPU memory allocatorまたはframework-derived researchへ移る",
-      "source_submission": "work-queue/submissions/20260917T0400JST-discovery-specialist-speculative-systems-5.json"
-    },
     {
       "run_key": "2026-09-17T05:00:00+09:00",
       "round": "specialist-moe-kv-sharding-1",
@@ -8885,6 +8860,45 @@
       "duplicate_ratio": 0.3,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:disc-s30-6a2f1c-r4",
+      "precheck_request_id": "disc-s30-6a2f1c-r4",
+      "run_key": "s30-20260924t073303-6a2f1c",
+      "round": "disc-s30-6a2f1c-r4",
+      "axis": "forward citations of LMCache enterprise-scale KV cache layer earlier window",
+      "query_summary": "LMCache前方引用の早いwindowを100件走査し、20未収録候補からmemory-tier simulation、heterogeneous PD、interaction-aware KV prefetch、adaptive KV cachingを採用。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2510.09665",
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [
+        "DOI:10.1145/3789240.3822569",
+        "arXiv:2606.29708",
+        "arXiv:2606.22983",
+        "arXiv:2606.21238"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260923T224500Z-scheduled-chat-30-6a2f1c-r4.json",
+      "source_submissions": [
+        "work-queue/submissions/20260923T224500Z-scheduled-chat-30-6a2f1c-r4.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16877,6 +16891,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
+    },
+    "forward citations of LMCache enterprise-scale KV cache layer earlier window": {
+      "last_run_key": "s30-20260924t073303-6a2f1c",
+      "rounds": 1,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "novel_candidate_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -18007,6 +18034,29 @@
       "cooldown": false,
       "last_run_key": "s30-20260924t073303-6a2f1c",
       "last_round": "disc-s30-6a2f1c-r3"
+    },
+    "window-536c048c75481f5bb98d": {
+      "topic": "lmcache forward citations earlier window",
+      "source": "semantic_scholar",
+      "date_range": "2026",
+      "category": "kv-cache-memory-tiering",
+      "citation_direction": "forward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-536c048c75481f5bb98d",
+      "scan_count": 1,
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 74,
+      "rejection_filtered_count": 2,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 4,
+      "last_position": "cursor-0-to-100",
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.74,
+      "candidate_acceptance_rate": 0.2,
+      "cooldown": false,
+      "last_run_key": "s30-20260924t073303-6a2f1c",
+      "last_round": "disc-s30-6a2f1c-r4"
     }
   },
   "recent_search_windows": [
@@ -19290,6 +19340,27 @@
       "duplicate_rate": 0.2222222222222222,
       "candidate_acceptance_rate": 0.2,
       "last_position": "cursor-120-to-end"
+    },
+    {
+      "topic": "lmcache forward citations earlier window",
+      "source": "semantic_scholar",
+      "date_range": "2026",
+      "category": "kv-cache-memory-tiering",
+      "citation_direction": "forward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-536c048c75481f5bb98d",
+      "run_key": "s30-20260924t073303-6a2f1c",
+      "round": "disc-s30-6a2f1c-r4",
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 74,
+      "rejection_filtered_count": 2,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 4,
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.74,
+      "candidate_acceptance_rate": 0.2,
+      "last_position": "cursor-0-to-100"
     }
   ],
   "search_window_history_limit": 96,
