@@ -2,27 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4507d6e7a694d747a350c3a0",
-  "job_id": "job-research-e36fdfcc83960d96",
-  "data": {
-    "overview": "主要7タスクを3モデルで平均すると、FURINAは83.6で標準LoRA 78.8を4.8ポイント上回り、MixLoRA 83.1、LoRAMoE 83.5、MoLA 83.4と同等以上である。LoRA+またはrsLoRAを組み合わせると平均85.1〜85.2まで伸びる。推論前に完全マージできるため、Llama3.2-3BのvLLM測定では標準LoRAと同じ初回トークン約10ms、100出力トークンまで約800msであり、論文図では非マージMoE-LoRAに対して最大約1.5倍の速度向上を要約する。",
-    "key_results": [
-      {"metric": "3モデル・主要7タスク平均", "value": "FURINA 83.6", "baseline": "LoRA 78.8、DoRA 77.1、MixLoRA 83.1、LoRAMoE 83.5、MoLA 83.4", "condition": "OpenChat-8B、Llama3.2-3B、Qwen2-7B。LoRA/DoRAは総ランク128、MoE系はランク16×8エキスパート相当", "interpretation": "標準LoRAより4.8ポイント高く、ルータ型MoE-LoRAと同等以上の学習容量を完全マージ可能な形で得る。"},
-      {"metric": "モデル別平均", "value": "OpenChat-8B 85.3、Llama3.2-3B 79.7、Qwen2-7B 85.9", "baseline": "LoRAは80.6、77.4、78.5。LoRAMoEは86.1、79.1、85.3", "condition": "主要7タスク", "interpretation": "OpenChatではLoRAMoEに0.8ポイント劣る一方、LlamaとQwenでは上回り、全体平均で最高になる。"},
-      {"metric": "LoRA派生法との組合せ", "value": "FURINA+LoRA+ 85.1、FURINA+rsLoRA 85.2", "baseline": "FURINA 83.6、SLIM 84.2、LoRAMoE 83.5", "condition": "3モデル平均", "interpretation": "自己ルーティング機構はLoRAの学習安定化・学習率改良と併用でき、単独FURINAからさらに約1.5〜1.6ポイント伸びる。"},
-      {"metric": "vLLM推論遅延", "value": "初回トークン約10ms、総遅延約800ms", "baseline": "マージ済みLoRAも約10ms/800ms。MoE-PEFT上のMixLoRA約550ms/9000ms、LoRAMoE約450ms/6000ms、MoLA約700ms/14500ms、SLIM約650ms/17000ms", "condition": "Llama3.2-3B、入力100トークン・出力100トークン、各5回平均。非マージMoE-LoRAはvLLMでは評価不能", "interpretation": "FURINA固有の推論時分岐を消せるため、配備時は標準LoRA相当の計算グラフになる。絶対値は推論基盤が異なる比較も含むため注意が必要。"},
-      {"metric": "主要モジュールのアブレーション", "value": "75.9→方向正規化79.3→共有エキスパート80.2→共有大きさ80.7→選択損失81.0", "baseline": "全要素なし75.9", "condition": "Qwen2-7BとLlama3.2-3B、HellaSwagを除く主要ベンチマーク平均", "interpretation": "最大寄与は方向・大きさの分離で+3.4ポイント。共有知識と尺度共有、選択損失も段階的に上積みする。"},
-      {"metric": "GSM8K", "value": "FURINA 65.1 / 53.4 / 65.7", "baseline": "LoRA 61.1 / 47.8 / 62.5", "condition": "OpenChat-8B / Llama3.2-3B / Qwen2-7B、1000ステップ微調整", "interpretation": "常識QAだけでなく数学推論でも3モデル全てLoRAを上回る。"},
-      {"metric": "ホールドアウト忘却", "value": "FURINAの相対性能低下2.0%", "baseline": "LoRA 10.1%、FURINA+rsLoRA 3.7%、FURINA+LoRA+ 3.1%", "condition": "Llama3.2-3BをOBQAで微調整し、GSM8KとMMLUで評価", "interpretation": "共有エキスパートと複数方向の学習により、標準LoRAより事前能力を保持する結果が出る。"},
-      {"metric": "ルータを単純削除する対照", "value": "SLIMを直接マージすると37.4", "baseline": "元モデル67.5、SLIM 79.2、FURINA 79.7", "condition": "Llama3.2-3B平均性能", "interpretation": "既存MoE-LoRAのルータを後から消して平均マージするだけでは41.8ポイント低下し、FURINAは学習段階からマージ可能な自己ルーティングを設計する必要性を示す。"}
-    ],
-    "negative_results": [
-      {"name": "共有エキスパートなしでは性能低下", "description": "共有なしFURINAは3モデル平均81.1で、共有あり83.6より2.5ポイント低い。完全な自己ルーティングだけでは全エキスパート出力が小さくなる入力があり、共通知識を常時担う線形経路が重要になる。"},
-      {"name": "共有エキスパートを増やしすぎても悪化", "description": "OBQA/CSQAの感度実験では共有エキスパート1個で十分で、それ以上増やすと専門化する自己ルーティング側が減り、通常LoRAへ近づいて性能が落ちる傾向を報告する。"},
-      {"name": "選択損失係数は両極端で不利", "description": "αが大きすぎるとMoEの上位選択パターン模倣へ過度に集中して学習容量を制限し、小さすぎると専門化を誘導できない。10^-2〜10^-3付近が良い折衷とされる。"}
-    ],
-    "interpretation": "FURINAの価値は、推論時にMoEを高速実行することより、MoE的な複数専門方向を学習時だけ使い、その効果を最終的に一つの線形更新へ焼き込む点にある。標準LoRAより明確に高い平均性能を得ながら、マージ後の配備形態は標準LoRAと同じになる。",
-    "quality_impact": "完全マージ後はFURINA固有の近似選択を行わないため、推論速度のために追加の品質劣化を導入する方式ではない。主な品質差は学習設計から生じ、報告値では標準LoRAを上回り、既存MoE-LoRAと競合する。"
-  },
-  "reservation": {"claim_id": "claim-4507d6e7a694d747a350c3a0", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-c9c3df4f5d4289282e6eb938",
+  "job_id": "job-research-b5c12e0015184a80",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c9c3df4f5d4289282e6eb938",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4507d6e7a694d747a350c3a0",
-  "job_id": "job-research-e36fdfcc83960d96",
-  "data": {
-    "hardware": ["NVIDIA GPUを使用。本文では型番を明示しない"],
-    "software": ["vLLM + EvalScope：マージ可能方式の配備評価", "MoE-PEFT：非マージMoE-LoRAを含む比較", "EvalScope：GSM8K・HumanEval評価"],
-    "model": ["Qwen2-7B", "OpenChat-8B", "Llama3.2-3B"],
-    "datasets": ["主要7タスク：CommonsenseQA、HellaSwag、WinoGrande、ARC-Challenge、ARC-Easy、OpenBookQA、BoolQ", "追加推論：GSM8K、HumanEval", "保持性：OBQAで微調整後にGSM8KとMMLUをホールドアウト評価", "HumanEval用学習：CodeAlpaca"],
-    "baselines": ["LoRA", "DoRA", "MixLoRA", "LoRAMoE", "MoLA", "SLIM", "FURINA共有エキスパートなし", "標準MoE-LoRAからルータだけを直接除去してマージする対照"],
-    "settings": [
-      {"name": "主要微調整設定", "description": "MixLoRAの設定に合わせ、学習率2×10^-4、各LoRAエキスパートのランク16、総エキスパート8、標準MoEでの活性数K=2を使う。FURINAも総数8を維持し、そのうち1個を共有エキスパートにする。LoRAとDoRAの公平な総パラメータ比較ではランク128を用いる。"},
-      {"name": "主要タスク評価", "description": "Qwen2-7B、OpenChat-8B、Llama3.2-3Bの3モデルについて7ベンチマークを評価し、各モデル平均と3モデル平均を比較する。マージ可能方式と非マージ方式で推論基盤が異なる点は表中で区別される。"},
-      {"name": "推論時間", "description": "Llama3.2-3Bで入力系列100トークン、出力系列100トークンに固定し、各条件を5回実行して平均する。初回トークン時間と全出力までの総遅延を測る。マージ済みLoRA、DoRA、FURINAはvLLMで測定できるが、ルータ型MoE-LoRAは構造上マージできないためvLLM欄は評価不能となる。"},
-      {"name": "LoRA派生法との互換性", "description": "LoRA+ではBとAの学習率比を5.0とし、rsLoRAもFURINAへ組み合わせる。自己ルーティング設計が別のLoRA最適化と競合しないかを3モデル平均で確認する。"},
-      {"name": "追加推論タスク", "description": "GSM8KとHumanEvalでは主要実験と同じ基本ハイパーパラメータを使い、全モデルを1000ステップ微調整する。HumanEvalはCodeAlpacaで学習しPass@1を用いる。EvalScope設定は最大生成2048、温度0、0-shot。"}
-    ],
-    "correctness": "FURINAのマージは、学習済み線形エキスパート更新の係数をB行列へ吸収して連結する代数的再パラメータ化であり、推論時の近似枝刈りではない。論文は『情報損失なく』複数LoRAを単一LoRA・基盤へ統合できると定式化する。品質評価は主にタスク正答率・平均性能で行う。",
-    "methodology": "3種類のLLM、7主要ベンチマーク、LoRA/DoRAと複数MoE-LoRA比較、LoRA+・rsLoRA互換性、主要構成要素アブレーション、共有エキスパート数と損失係数感度、GSM8K/HumanEval、ホールドアウト忘却、推論遅延、ルータだけを直接消す失敗対照まで含む。推論時間は5回平均で、マージ済み配備と非マージ配備を別基盤で測る。",
-    "scope": "FURINAが示すゼロ追加推論費用は、学習後に完全マージした状態でFURINA固有のルータ・分岐が残らないという意味である。学習時には複数LoRAエキスパートと選択損失の追加費用が存在する。またGPU型番が本文で明示されず、異なる推論基盤間の絶対遅延をそのままハードウェア公平比較とみなすべきではない。"
-  },
-  "reservation": {"claim_id": "claim-4507d6e7a694d747a350c3a0", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-c9c3df4f5d4289282e6eb938",
+  "job_id": "job-research-b5c12e0015184a80",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c9c3df4f5d4289282e6eb938",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
