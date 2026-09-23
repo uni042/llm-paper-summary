@@ -51,11 +51,13 @@ jobs:
           python .survey/scripts/recover_discovery_submissions.py --root .survey
           python .survey/scripts/refresh_queue_snapshot.py --repo-root .
 
-          git add \
+          git add -A \
             .survey/work-queue/jobs \
             .survey/work-queue/results \
             .survey/work-queue/state.json \
             .survey/work-queue/discovery-state.json \
+            .survey/work-queue/discovery-preload \
+            .survey/work-queue/records \
             "$DERIVED_SNAPSHOT"
 
           if git diff --cached --quiet; then
