@@ -117,4 +117,4 @@ python -m unittest discover -s .survey/tests -p 'test_*quality.py'
 python -m unittest discover -s .survey/tests -p 'test_render_paper_metadata.py'
 ```
 
-意味的な品質基準の正本は常に `.survey/templates/paper.md` と本運用文書。上記の固定基準は、想定外挙動・解析バグ・移行/互換バグの修正、またはユーザーの明示指示がある場合を除いて変更しない。バグ修正時も基準の意味を変えず、repository-wide監査・提出前preflight・submission processorの3経路が同じ基準を使うことを既存回帰試験で確認する。
+意味的な品質基準の正本は常に `.survey/templates/paper.md` と本運用文書。上記の固定基準は、想定外挙動・解析バグ・移行/互換バグの修正、またはユーザーの明示指示がある場合を除いて変更しない。バグ修正時も基準の意味を変えず、同期軽量セルフチェック・repository-wide監査・提出前preflight・submission processorの4経路が同じ基準を使うことを既存回帰試験で確認する。
