@@ -293,6 +293,7 @@ def _run_submission_state(
     completed = 0
     completed_ids: list[str] = []
     retryable_ids: list[str] = []
+    repair_required_ids: list[str] = []
     pending: list[tuple[dt.datetime, str]] = []
     submitted: list[tuple[dt.datetime, str]] = []
     terminal: list[tuple[dt.datetime, str]] = []
@@ -337,13 +338,14 @@ def _run_submission_state(
                 continue
             processed_at = _time(result.get("processed_at")) or claimed_at
             status = str(result.get("job_status") or "none").lower()
-            fact["pending"] = status not in {"completed", "blocked", "deferred", "rejected"}
+            fact["pending"] = False
             fact["retryable"] = False
+            fact["repair_required"] = result.get("repair_required") is True
             fact["processed_at"] = processed_at.astimezone(dt.timezone.utc).isoformat()
             fact["job_status"] = status
             fact["completed"] = bool(result.get("ok") is True and status == "completed")
-            if fact["pending"]:
-                pending.append((claimed_at, attempt_id))
+            if fact["repair_required"]:
+                repair_required_ids.append(attempt_id)
             if fact["completed"] and processed_at >= started_at:
                 completed += 1
                 completed_ids.append(attempt_id)
@@ -369,6 +371,7 @@ def _run_submission_state(
         "pending_attempt_ids": [attempt for _, attempt in sorted(pending)],
         "completed_attempt_ids": sorted(set(completed_ids)),
         "retryable_attempt_ids": sorted(set(retryable_ids)),
+        "repair_required_attempt_ids": sorted(set(repair_required_ids)),
         "attempt_facts": facts,
     }
 
