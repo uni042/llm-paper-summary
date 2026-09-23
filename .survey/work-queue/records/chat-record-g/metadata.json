@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-e3c59442daeee9dcbcd01db3","job_id":"job-research-165ae8125699de70","data":{"canonical_id":"arXiv:2605.11277","arxiv_id":"2605.11277","doi":"10.48550/arXiv.2605.11277","openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models","summary":"Sieveは、現代の混合専門家モデルで少数の人気専門家と多数の低頻度専門家に二極化するトークン割当を利用し、各専門家を実行時に画像処理装置または高帯域メモリ内演算へ動的配分する推論基盤である。通信、画像処理装置の計算、メモリ帯域、メモリ内演算を同時に見積もる軽量な配置器と、それらを重畳する実行系を組み合わせる。サイクル精密シミュレーションでは従来方式に対し、大規模二モデルで約1.3倍、小規模構成で最大1.6倍の処理量・対話速度改善を示す。","list_summary":"実行時の専門家人気度から画像処理装置とメモリ内演算の配置を動的決定し、通信と注意機構の負荷まで含めて混合専門家推論を最大1.6倍高速化する。","authors":["Jungwoo Kim","Rubens Lacouture","Genghan Zhang","Gina Sohn","Qizheng Zhang","Swapnil Gandhi","Christos Kozyrakis","Kunle Olukotun"],"authors_affiliations":"Stanford University; NVIDIA (Christos Kozyrakis)","published":"2026-05-11","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-05-11)","lineage":"Mixture-of-Experts inference / processing-in-memory / heterogeneous scheduling / expert placement","topics":["混合専門家推論","メモリ内演算","動的専門家配置","高帯域メモリ","異種演算協調"],"importance":"専門家ごとの算術強度が実行時の割当トークン数によって大きく変わるため、固定的な退避規則では画像処理装置かメモリ内演算器のどちらかが遊休化することを示した。通信時間、注意機構が消費するメモリ内演算時間、重み読み出し、専門家計算を同じ律速時間として比較し、その瞬間の人気専門家だけを画像処理装置へ戻す。このため、専門家数が増えて活性率が低下する新しい混合専門家モデルほど、静的配置より動的配置の必要性が高まることを具体的に示す。特に、低頻度専門家が大多数を占める一方で少数の人気専門家だけが密な行列積になるという二極化を、異種演算器の役割分担へ直接結び付けた点が重要である。","implementation":"ラムレータ2.0とデュプレックスに基づくサイクル精密シミュレータ。実行時配置器はB200上で約20マイクロ秒と報告され、既存のメモリ内演算命令体系の変更を要求しない。","hardware_evaluation":"B200相当の画像処理装置と高帯域メモリ内演算をシミュレーションし、大規模モデルでは4台または8台、小規模モデルでは1台を評価する。","quality_effect":"モデルの数値計算自体は近似せず、同じ専門家計算を二種類の演算場所へ割り当てるシステム最適化である。評価の中心は推論性能である。","source":"https://arxiv.org/abs/2605.11277","sources":["https://arxiv.org/abs/2605.11277","https://arxiv.org/html/2605.11277v1"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-e3c59442daeee9dcbcd01db3","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-df98f0a4232c714053b0bc18",
+  "job_id": "job-research-37a03b603cf5e34b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-df98f0a4232c714053b0bc18",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

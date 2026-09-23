@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e3c59442daeee9dcbcd01db3","job_id":"job-research-165ae8125699de70","data":{"overview":"Sieveはbatch増大でpopular expertが増えるとGPUへ移し、small batchではPIM中心に保つことでstatic配置の飽和を避ける。Qwen3.5ではB=256でPIMoE比1.26倍、GPT-OSSではB>=32でthroughput 1.11〜1.17倍、interactivity最大1.25倍。全体ParetoではQwen3.5/GPT-OSSで約1.3倍、single-GPU Qwen3で最大1.6倍のthroughput/interactivity改善を報告する。colocated prefill/decodeでもNoExp比最大2.4倍を示す。","key_results":[{"metric":"Qwen3.5 throughput/interactivity","value":"最大約1.3×、B=256でPIMoE比1.26×","baseline":"PIMoE/NoExp/AllExp","condition":"8×B200相当+HBM-PIM","interpretation":"attention負荷とnetwork communicationを同時考慮するdynamic placementがhigh loadで効く。"},{"metric":"GPT-OSS throughput","value":"1.11–1.17× at B>=32; interactivity最大1.25×","baseline":"PIMoE","condition":"4×B200相当+HBM-PIM","interpretation":"moderate/large batchでcompute-bound expertをGPUへ戻しPIM bottleneckを抑える。"},{"metric":"Qwen3 single-GPU","value":"最大1.6× throughput/interactivity","baseline":"PIMoE","condition":"1×B200相当+HBM-PIM","interpretation":"inter-GPU通信がなくてもattention PIM overheadを考慮するschedulerが有効。"},{"metric":"colocated prefill/decode","value":"NoExp比2.4× at B=16、2.3× at B=32","baseline":"NoExp","condition":"Qwen3 mixed prefill/decode stress test","interpretation":"prefillでcompute-bound expertが増えてもPIMへ固定せずGPUへ逃がせる。"},{"metric":"scheduler overhead","value":"約20µs/layer scheduling","baseline":"なし","condition":"B200上DeepSeek-R1規模expert count、未最適化kernel","interpretation":"runtime critical pathに置ける軽量性を示す。"}],"negative_results":"small batchでは大半expertがmemory-boundなためAllExp/PIMoEとSieveの差は小さい。PIMoEやAllExpはbatch増加・prefill混在でcompute-bound expertをPIMへ残して性能が悪化する。Sieve自身もHBM-PIM hardwareが存在する前提で、評価はsimulationであるため実機software overheadや未model化要因は残る。","interpretation":"性能差は単に『低頻度expertをPIMへ置く』ことではなく、attentionが既に占有するPIM時間とexpert-parallel communicationを含めたend-to-end bottleneckを動的に均衡させることから生じる。PIM channel tensor parallelismもexpert popularity skewによるchannel imbalanceを除く。","quality_impact":"同一expert計算を配置変更するためmodel output品質を近似しない。主なtrade-offはPIM processing unitがHBM容量を消費するhardware modelとruntime scheduling/communication overheadである。"},"reservation":{"claim_id":"claim-e3c59442daeee9dcbcd01db3","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-df98f0a4232c714053b0bc18",
+  "job_id": "job-research-37a03b603cf5e34b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-df98f0a4232c714053b0bc18",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
