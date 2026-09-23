@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-2bf3de3b255ebab0e493ae1d","job_id":"job-research-3d00beb8c812c5e7","data":{"canonical_id":"arXiv:2609.15311","arxiv_id":"2609.15311","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":[]},"title":"FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads","summary":"HopperやBlackwell世代のAIカーネルは、非同期一括データ転送、細粒度同期、新世代テンソルコア、分散共有メモリを組み合わせるが、既存の公開GPUシミュレータは主にAmpere以前で止まり、この実行構造を扱えない。FlashGPU-simはGPGPU-Simを実行駆動・サイクル精度のまま拡張し、TMA、mbarrier、wgmma、tcgen05/TMEM、DSMを実測マイクロベンチで較正する。Tritonカーネルを捕捉して単体再生する前処理系、PTX命令並べ替え、決定的なマルチスレッド化も加える。RTX 5090、H100、B200の131構成でサイクル平均絶対百分率誤差5.24%、16ホストスレッドで7.86倍のシミュレーション高速化を達成する。","list_summary":"Hopper/Blackwellの非同期GPU機構とTriton AIカーネルを実行駆動で再現し、131構成でサイクル誤差5.24%、16スレッドで7.86倍高速化した現代GPUシミュレータ。","authors":["Siying Yu","Yixun Hong","Guozhi Qiu","Jingci Liu","Feng Gu","Chenbo Geng","Zhengrong Wang","Chen Zhang","Bei Yu"],"authors_affiliations":"Chinese University of Hong Kong; Zhejiang University; Shanghai Jiao Tong University","published":"2026-09-14","publication":"arXiv:2609.15311v1","publication_type":"プレプリント","publication_status":"v1","lineage":"GPUシミュレーション・AIカーネル・ハードウェア/ソフトウェア協調設計","topics":["GPUシミュレーション","Triton","非同期実行","Tensor Core","Hopper","Blackwell"],"importance":"現行AI推論で重要な非同期パイプラインを操作可能なサイクル精度モデルへ戻し、実機プロファイルだけではできない将来アーキテクチャのwhat-if評価を可能にする。","implementation":"GPGPU-Sim派生の実行駆動シミュレータ。PTX解釈、Triton捕捉・再生、静的PTX並べ替え、SM/GPC単位OpenMP並列、決定的メモリ仲裁を実装。","hardware_evaluation":"RTX 5090を主較正対象とし、H100/H200/B200でも検証。シミュレータ実行はCore i9-14900K、並列性能測定はEPYC 9115。","quality_effect":"機能出力ではなくサイクル予測精度が主評価。Triton再生では参照出力を保存し機能正当性も確認する。","source":"https://arxiv.org/abs/2609.15311","sources":["https://arxiv.org/abs/2609.15311","https://arxiv.org/html/2609.15311","https://github.com/FlashGPU-Sim/FlashGPU-Sim"],"code":"https://github.com/FlashGPU-Sim/FlashGPU-Sim","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"一次論文参考文献節を確認済み。正規識別子追加なし","references_total":47},"reservation":{"claim_id":"claim-2bf3de3b255ebab0e493ae1d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-b566bffcc6a9ed43ccc30673",
+  "job_id": "job-research-17efeee08a231d8b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b566bffcc6a9ed43ccc30673",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

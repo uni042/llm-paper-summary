@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-2bf3de3b255ebab0e493ae1d","job_id":"job-research-3d00beb8c812c5e7","data":{"overview":"RTX 5090、H100、B200の131 workload構成でcycle-level平均絶対百分率誤差は全体5.24%。RTX 5090のGEMM 40構成は4.6%、FlashAttention 15構成は5.0%、Llama3-8B一層はprefill総cycle -3.9%、decode -3.8%。H100はFA-2 6.68%、FA-3 8.12%、B200 FA-4は4.72%で28/28構成が10%以内。host並列化は16 threadで7.86倍。H100設計探索ではFA-2のissueと実行を理想queueで分離すると532459→372740 cycleへ約30%短縮し、FA-3の380648 cycleに近づいた。","key_results":[{"metric":"全体cycle予測精度","value":"MAPE 5.24%","baseline":"実GPU hardware cycles","condition":"RTX 5090/H100/B200、131 workload configurations","interpretation":"Triton生成kernelとarchitecture最適化FlashAttentionを跨いで一桁%台のcycle誤差を維持する。"},{"metric":"RTX 5090 kernel精度","value":"GEMM MAPE 4.6%、FlashAttention 5.0%、48/55構成が10%以内","baseline":"ncu実測cycle","condition":"GEMM 40 + FA 15","interpretation":"compute-boundとmemory/async-heavy kernelの双方を同じmodelで追従する。"},{"metric":"Llama3-8B layer","value":"prefill -3.9%、decode -3.8%、16 launch MAPE 3.5%","baseline":"RTX 5090 ncu","condition":"標準Llama3-8B一層、prefill B2/S128、decode B256/KV128","interpretation":"単一kernelだけでなく異種operator列でもcycle精度を保つ。"},{"metric":"Hopper/Blackwell FlashAttention","value":"H100 FA-2 6.68%、FA-3 8.12%、B200 FA-4 4.72%","baseline":"実機cycle","condition":"16+16+28 configurations","interpretation":"mma.sync、wgmma、tcgen05/TMEMという異なるtensor pathを跨いで検証。"},{"metric":"multi-thread simulation speedup","value":"2/4/8/16 threadで1.80/3.35/5.53/7.86倍","baseline":"single-thread simulation","condition":"6 inference-serving GEMM","interpretation":"決定的cycle結果を保ちながら1時間のsimulationを約7.6分へ短縮。"},{"metric":"H100非同期設計探索","value":"FA-2 532459 cycle→理想async queue 372740 cycle、約30%減","baseline":"FA-2、FA-3は380648 cycle","condition":"B64,H16,S512,D128 causal","interpretation":"peak computeを変えずissueとback-endを粗粒度に分離するだけでFA-3級へ近づき、非同期化のarchitecture効果をwhat-ifで示す。"}],"negative_results":"PTX並べ替えを無効にしたFA-4の小構成2件では誤差が40%を超えるが、有効化で約6%以内まで改善する。compilerが消すregister-pack命令を除くだけではwarp命令数8.84%減に対してcycleは2.19%しか減らず、命令数一致だけでは精度が出ない。DSMの単方向remote load/store帯域は約10.8〜11.9%差と他のDSM項目より大きい。","interpretation":"現代AI kernelでは非同期engine、barrier、tensor pipeline、compiler schedulingの相互作用が性能を決めるため、古い同期的GPU modelや固定traceではarchitecture変更の効果を誤る可能性がある。FlashGPU-simは実行駆動でhardware-side eventを進めるため、TMA完了時刻やbarrier解放時刻を変えた設計探索でも後続実行を再決定できる。","quality_impact":"モデル推論品質ではなくsimulator timing fidelityが対象。Triton online captureは実GPU出力をreferenceとして保存し再生結果の機能一致を検査する。"},"reservation":{"claim_id":"claim-2bf3de3b255ebab0e493ae1d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-b566bffcc6a9ed43ccc30673",
+  "job_id": "job-research-17efeee08a231d8b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b566bffcc6a9ed43ccc30673",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
