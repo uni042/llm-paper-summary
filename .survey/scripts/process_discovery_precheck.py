@@ -383,6 +383,8 @@ def failure_result(request_path: Path, exc: Exception) -> dict[str, Any]:
         "run_key": request.get("run_key"),
         "axis": request.get("axis"),
         "preload_id": request.get("preload_id"),
+        "stock_bank": request.get("stock_bank"),
+        "stock_lane": request.get("stock_lane"),
         "error": f"{type(exc).__name__}: {exc}",
         "evaluation_allowed": False,
         "decision": "FIX_REQUEST",
