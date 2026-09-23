@@ -1,4 +1,4 @@
-# Worker router — workflow v10.9
+# Worker router — workflow v10.10
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -224,6 +224,20 @@ axis: <探索軸>
 target_unseen: 20
 ```
 
+### 4.0 探索の事前装填待ち行列（Discovery preload queue）
+
+Discoveryは、run開始後に外部APIの取得を始める待ち時間を減らすため、論文読解側のpaper preloadとは独立した**探索事前装填待ち行列（Discovery preload queue）**を持つ。これはResearch/Auditのpaper preload FIFOやrecord bankとは別資源であり、候補論文そのものをResearchへ予約する仕組みではない。
+
+- `.github/workflows/discovery-precheck.yml` は通常のschema v3事前検査（precheck）回収と同時に、`.survey/scripts/discovery_preload_queue.py` で探索窓を先行装填する。標準目標は**利用可能32窓**、1回の補充上限は8窓、1窓は `target_unseen=20` / `page_size=20` とする。値を変える場合はワーカー手順へ別の固定値を複製せず、同スクリプトとworkflowを同時に更新する。
+- 探索元は耐久済み `discovery-state.json` の実績から選び、後方引用・前方引用を優先する。構造化referencesの後方引用は常に補充候補とし、実績のある前方引用seedを複数保持する。通常検索のpreloadは、引用2方向を実run内で完了した後のgap-fill用在庫としてのみ扱う。
+- preloadの論理状態は **READY → PRECHECKED → CLAIMED → INGESTED** とする。READYは先行precheck requestが耐久化済み、PRECHECKEDはworkflow生成resultが利用可能、CLAIMEDは実runが担当確保（claim）済み、INGESTEDはそのrun固有roundのDiscovery submission/resultが正規に耐久反映済みであることを表す。状態は共有JSONを上書きせず、entry / claim / ingestedの独立耐久ファイルから導出する。
+- 担当確保（claim）はDiscovery precheckの直列化領域内で行い、同じpreloadを2 workerへ同時に渡さない。claim leaseは90分で、未完了のまま期限切れになったclaimは補充処理で解放して再利用可能にする。CLAIMED中の窓は利用可能32窓の在庫へ数えず、バックグラウンド補充で後続窓を先に用意する。
+- run-state resultの `discovery_selector.next_direction` が今回の正規探索方向を決め、同方向のPRECHECKED在庫があれば `discovery_preload` に最古の1窓を返す。**preloadはselectorを上書きしない。** 同runで後方→前方の必須順序や通常検索解禁条件は従来どおりである。
+- `discovery_preload` が非nullなら、新しいrun固有schema v3 requestを作り、そこから返された `provider` / `source_url` / `axis` / `initial_cursor` / `page_size` / `max_pages` / `target_unseen` をそのまま使い、追加で今回の `worker_id` と `preload_id` を保存する。`run_key` は**必ず今回runの値**にする。preload側の `run_key=preload:...` をコピーしない。
+- 実run用 `process_discovery_precheck.py` は、先行取得済み20件を現在のidentity snapshot / rejection ledgerで**再フィルタ**する。20件残れば外部providerへ追加アクセスせず、その場で今回run固有の正式precheck result / receiptを生成する。既収録化などで20件未満になった場合だけ、同じ固定 `source_url` の保存済み `next_cursor` から不足分を補充する。
+- バックグラウンドpreload result自体をDiscovery submissionの証明として参照してはならない。submissionが参照できるのは、今回runの `run_key` / `axis` で再検査されたworkflow生成resultだけである。queue workerも `preload_seed=true` のresultからの直接submissionを拒否する。
+- 同方向の利用可能preloadが無い、claim競合で先行窓を取れなかった、preloadが破損している等の場合は停止しない。最新run-stateを再取得し、別の同方向preloadがあればそれを使い、無ければselectorが返した固定ソースを従来のschema v3経路で直接precheckする。preload不足をrun終了理由にしない。
+
 `target_unseen` の既定値は20。precheck側の `discovery_provider_adapter.py` と `collect_until_unseen()` が**同じ検索結果をページ送り**し、各ページで既収録・既候補・既却下・ページ間重複を除外する。ワーカーが2ページ目以降を個別に手作業で継ぎ足す必要はない。
 
 評価に使ってよい候補は、schema v3 resultが `evaluation_allowed=true` として返した `allowed_records` だけである。precheck resultが未完了なら、旧schemaへ逃げずに同じ現行経路を完了させる。
@@ -418,7 +432,7 @@ runtime_condition: none
 - `WAIT_FOR_DISCOVERY_PRECHECK_RESULT` / `WAIT_FOR_DISCOVERY_SUBMISSION_RESULT`: 開始済みDiscovery roundとして、第7.0節の待機ミクロタスクを1件処理するたびに同一identityを再確認する。600秒開始禁止窓に入っても最終180秒まではこの作業サイクルを継続する。
 - `CONTINUE_DISCOVERY_ROUND`: 成功済みprecheckの評価・submissionなど、すでに開始済みのroundを完了する。
 - `RECOVER_DISCOVERY_SUBMISSION`: precheck/submissionの失敗を正規recovery_stepsで回収し、同じroundを終端まで進める。
-- `DISCOVER_AGAIN`: 残り600秒より多い場合だけ新しいDiscovery roundへ進む。
+- `DISCOVER_AGAIN`: 残り600秒より多い場合だけ新しいDiscovery roundへ進む。run-stateの `discovery_selector.next_direction` を正本とし、同方向の `discovery_preload` が返っていれば先にその事前装填窓をrun固有schema v3 requestとしてadoptする。利用可能preloadが無ければ従来の固定ソースprecheckへ即時フォールバックし、preload待ちで停止しない。
 - `RUN_0830_MAINTENANCE`: 08:30専用runの非論文更新→maintenanceを続行する。通常論文処理へ入らない。
 - `FINALIZE`: `run_finalization_gate.py` で最終化許可を確認してから終了する。
 
