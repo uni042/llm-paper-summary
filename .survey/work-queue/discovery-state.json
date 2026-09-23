@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:04:25+00:00",
+  "updated_at": "2026-09-23T16:11:13+00:00",
   "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
-  "last_round": "worker-240052-20260924T0103JST-forward-02",
+  "last_round": "worker-240052-20260924T0109JST-forward-03",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,23 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-semantic-kv-3",
-      "axis": "Semantic Retrieval Head・layer-aware KV圧縮",
-      "query_summary": "GPU内部prefetchから容量削減へ軸を変え、head semanticsとlayer-wise errorを使うKV圧縮を探索した。MetaKVは既知候補として除外し、CompressKVを未収録候補として確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.07966"
-      ],
-      "next_axis_hint": "KVから離れ、MoEのexpert replication・speculative executionによる帯域削減へ移す",
-      "source_submission": "work-queue/submissions/20260916T2014JST-discovery-specialist-semantic-kv-3.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-moe-spec-replication-4",
@@ -8294,6 +8277,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:worker-240052-20260924T0109JST-forward-03",
+      "precheck_request_id": "worker-240052-20260924T0109JST-forward-03",
+      "run_key": "adhoc-20260924T005200+09-00-worker-240052",
+      "round": "worker-240052-20260924T0109JST-forward-03",
+      "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+      "query_summary": "Fixed forward-citation window for AWQ from bank g preload, re-filtered against the current identity snapshot.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-0d0f5d3198f3331ccd94",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2609.25624",
+        "arXiv:2609.25916",
+        "arXiv:2609.21672",
+        "arXiv:2609.21450",
+        "arXiv:2609.23585"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/worker-240052-20260924T0111JST-forward-03.json",
+      "source_submissions": [
+        "work-queue/submissions/worker-240052-20260924T0111JST-forward-03.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16106,14 +16129,14 @@
       "next_axis_hint": null
     },
     "forward citations of AWQ weight quantization and inference kernels retry": {
-      "last_run_key": "2026-09-21T06:58:37+09:00",
-      "rounds": 1,
-      "candidate_count": 5,
+      "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
+      "rounds": 2,
+      "candidate_count": 25,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
+      "novel_candidate_count": 25,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
+      "post_final_dedupe_count": 25,
+      "accepted_count": 10,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
