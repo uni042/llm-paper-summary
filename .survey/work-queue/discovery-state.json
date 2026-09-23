@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:11:13+00:00",
+  "updated_at": "2026-09-23T16:15:06+00:00",
   "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
-  "last_round": "worker-240052-20260924T0109JST-forward-03",
+  "last_round": "worker-240052-20260924T0113JST-forward-04",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-moe-spec-replication-4",
-      "axis": "MoE self-assisted speculative decoding・expert replication",
-      "query_summary": "KV系からMoEへ軸を変更し、offloaded expertの帯域削減とhot expert競合の解消を狙う研究を探索した。DALIとCoX-MoEは過去探索で既知のため除外した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2602.03495",
-        "arXiv:2605.17889"
-      ],
-      "next_axis_hint": "非GPUアクセラレータ・many-core/HPC向けLLM runtimeとメモリ帯域最適化へ展開する",
-      "source_submission": "work-queue/submissions/20260916T2017JST-discovery-specialist-moe-spec-replication-4.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-manycore-runtime-5",
@@ -8317,6 +8299,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:worker-240052-20260924T0113JST-forward-04",
+      "precheck_request_id": "worker-240052-20260924T0113JST-forward-04",
+      "run_key": "adhoc-20260924T005200+09-00-worker-240052",
+      "round": "worker-240052-20260924T0113JST-forward-04",
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "query_summary": "Fixed forward-citation window for FlexGen from bank h preload, re-filtered against the current identity snapshot with one provider page used to restore 20 unseen records.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-4209ec55082f9f929285",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2606.24033",
+        "arXiv:2607.16248",
+        "arXiv:2606.30560",
+        "DOI:10.1109/ICWS72778.2026.00129",
+        "DOI:10.1109/ICWS72778.2026.00157"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/worker-240052-20260924T0114JST-forward-04.json",
+      "source_submissions": [
+        "work-queue/submissions/worker-240052-20260924T0114JST-forward-04.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16104,13 +16126,13 @@
     },
     "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
       "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
-      "rounds": 4,
-      "candidate_count": 65,
+      "rounds": 5,
+      "candidate_count": 85,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 65,
+      "novel_candidate_count": 85,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 65,
-      "accepted_count": 30,
+      "post_final_dedupe_count": 85,
+      "accepted_count": 35,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
