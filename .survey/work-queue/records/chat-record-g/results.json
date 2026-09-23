@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-01b29ed73471ef21eb33ce79",
   "job_id": "job-research-f719eedd6807af4c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01b29ed73471ef21eb33ce79",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "解析モデルに沿ってprefillとdecodeで配置を切り替えることで、PaLM 540B/64 TPU v4は低遅延decodeでint8重み28.5ms/token、large-batch prefillで76% MFUを達成する。2D weight-stationaryはchip数増加時の通信スケーリングで1Dより優れ、大batch prefillではweight-gatheredが優位へ反転する。batch-sharded multiquery attentionはKV cache複製を避け、64-chip PaLM 540Bで最大contextをmultihead比約32倍へ伸ばす。parallel attention/FFNはserial版よりdecode step latencyを14%削減し、FasterTransformer比較でも64-way tensor parallelismで44% MFUを維持する。",
+    "key_results": [
+      {"metric": "PaLM 540B低遅延decode", "value": "28.5 ms/token", "baseline": "bfloat16重み36.9 ms/token", "condition": "64 TPU v4、batch 64、context 2048、int8重み", "interpretation": "低batchでは重み読出しが支配的なため、int8化がmemory timeを減らし約23% latencyを改善する。"},
+      {"metric": "大batch prefill MFU", "value": "76% MFU", "baseline": "2D weight-stationaryより高batchで優位", "condition": "PaLM 540B、64 TPU v4、context 2048、最大512 sequence相当、XYZ weight-gathered", "interpretation": "batch token数が増えるとactivation通信を減らすweight-gatheredの平方根型通信スケーリングが効き、通信overheadがほぼ無視できる領域へ入る。"},
+      {"metric": "最大context長", "value": "batch 128で43,000、batch 512で10,700 tokens", "baseline": "multiheadは1320/330、baseline multiqueryは660/165", "condition": "PaLM 540B、64 chips、総memoryの30%をKV cacheへ予約", "interpretation": "batch軸分割multiquery attentionが単一K/V headのchip間複製を避け、multihead比で約32倍長いcontextを収容する。"},
+      {"metric": "長文脈decodeのattention比率", "value": "全runtimeの8〜31%", "baseline": "multihead/baseline MQAは長contextでKV loadが急増", "condition": "optimized MQA、batch 512で8192 tokensまたはbatch 128で32768 tokens", "interpretation": "KV cache帯域を抑えることで、非常に長いcontextでもattentionが全推論時間を完全には支配しない。"},
+      {"metric": "parallel Transformer block", "value": "serial版よりdecode step latency 14%低減", "baseline": "serial attention→FFN", "condition": "PaLM 540B、64 chips、batch 512、2D weight-stationary", "interpretation": "projection融合とcollective回数削減がactivation通信を減らす。"},
+      {"metric": "低水準通信最適化", "value": "約1.4倍高速化", "baseline": "単純なcompiler partition/schedule実装", "condition": "Looped CollectiveEinsum variant、collective-matmul明示対応など", "interpretation": "解析上の配置だけでなく通信と計算の重畳が実効性能に必要で、一部weight-gathered配置はこの最適化なしではmemory不足になる。"},
+      {"metric": "FasterTransformer比較の高並列MFU", "value": "64-wayで44% MFU", "baseline": "FasterTransformer TP32最大33%、TP16最大46%", "condition": "Megatron 530B/PaLM 540B級、60 input + 20 output benchmark、異種hardware間はMFUで正規化", "interpretation": "2D weight-stationaryとTPU v4の大きな高速interconnect domainにより、従来tensor parallelismより高いchip数まで通信律速を遅らせる。"}
+    ],
+    "negative_results": "単一配置は全領域で最適ではない。weight-gatheredは低batchでは重み通信が高く非効率で、decodeでは2D weight-stationaryへ戻す必要がある。multiquery attentionの利点も短いcontextではFFN時間が支配するため小さい。int8重みは低batchのmemory-bound領域では効くが、大batchではbfloat16 matmulのcompute timeが支配し、費用差が小さくなる。FasterTransformer比較ではhardwareとmodel architectureが一致せず、MQAの優位も短context benchmarkでは目立たない。dense Transformerは最終的にFLOP数とchip間通信量に制約される。",
+    "interpretation": "重要なのは『最大chip数で同じtensor parallelismを使う』のではなく、推論phaseとbatch token数によって支配コストが変わるため配置も変えることである。decodeは逐次・小batchなので重みを動かさずactivationを通信する方がよく、prefillは大量tokenを並列処理するのでactivation通信を減らすため重みを収集する方がよい。長文脈ではKV cacheが別の支配項となり、MQAの容量削減をbatch shardingで実際のHBM帯域削減へ結びつける必要がある。このphase-aware設計がlatency/throughput Pareto frontierを押し広げる。",
+    "quality_impact": "推論のpartitioningと通信scheduleはモデルの数値計算を等価に保つ設計で、生成品質を意図的に変更しない。int8重み量子化について著者はnoticeable quality lossなしとするが、本論文の中心は品質benchmarkではなくシステム性能であり、詳細なタスク別品質表は主評価ではない。"
+  },
+  "reservation": {"claim_id": "claim-01b29ed73471ef21eb33ce79", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
