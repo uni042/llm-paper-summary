@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T14:29:50.674486+00:00",
+  "updated_at": "2026-09-23T14:36:30.437208+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -43653,6 +43653,99 @@
       "paper_active_count_before": 999,
       "paper_active_count_after": 1002,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "unattributed:35875118622",
+      "first_recorded_at": "2026-09-23T14:36:30.437208+00:00",
+      "last_recorded_at": "2026-09-23T14:36:30.437208+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 6,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35875118622:1",
+          "recorded_at": "2026-09-23T14:36:30.437208+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35875118622",
+            "run_attempt": "1",
+            "source_sha": "5ea790367510458d5d5e000d1eaa200f70a31d26"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-fade740081d93e79",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-fade740081d93e79",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0729262d447a8308",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.23816",
+          "title": "SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference"
+        },
+        {
+          "job_id": "job-research-1932d6ac89ddfafb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.26333",
+          "title": "Disaggregated Quantization: Specializing LLM Prefill and Decode"
+        },
+        {
+          "job_id": "job-research-396b5a1af9f8a040",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.25405",
+          "title": "Efficient Iterative Retrieval with Heterogeneous Batching"
+        },
+        {
+          "job_id": "job-research-bfeff3910941fa95",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.25537",
+          "title": "Compressing Long Context into Answer-Aligned Memory Embeddings for LLM Inference"
+        },
+        {
+          "job_id": "job-research-e55d5c0ff4de9aea",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.26219",
+          "title": "PatchKV: Efficient KV Cache Recovery for Dynamically Edited LLM Contexts"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1002,
+      "paper_active_count_after": 1002,
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

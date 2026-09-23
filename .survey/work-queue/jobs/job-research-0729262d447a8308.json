@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-0729262d447a8308",
+  "type": "research",
+  "parent_job_id": "job-fade740081d93e79",
+  "priority": 90,
+  "canonical_id": "arXiv:2609.23816",
+  "arxiv_id": "2609.23816",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference",
+  "source_url": "https://arxiv.org/abs/2609.23816",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+  "selection_reason": "HBMとHigh-Bandwidth Flashを単一KV階層として扱い、flash物理特性にsparse attentionを協調設計する。SSD/flash階層メモリと長文脈KV系統への直接差分が大きい。",
+  "priority_breakdown": {
+    "base": 55,
+    "lineage": 20,
+    "recency": 15,
+    "venue": 0,
+    "total": 90
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T14:35:02+00:00"
+}
