@@ -87,6 +87,22 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertEqual(result["research_quota_remaining"], 2)
         self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
 
+    def test_research_keeps_claiming_after_minimum_floor(self):
+        for completed in (3, 4, 7):
+            with self.subTest(completed=completed):
+                result = mod.decide(make_args(
+                    candidate_inventory=50,
+                    work_mode="research",
+                    independent_work=True,
+                    research_audit_completed_this_invocation=completed,
+                    seconds_to_run_deadline=2500,
+                ))
+                self.assertEqual(result["decision"], "CONTINUE")
+                self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+                self.assertFalse(result["finalization_allowed"])
+                self.assertEqual(result["research_quota_remaining"], 0)
+
+
     def test_discovery_minimum_four_rounds_is_preserved(self):
         result = mod.decide(make_args(
             candidate_inventory=49,
