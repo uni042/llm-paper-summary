@@ -888,11 +888,68 @@ def auto_snapshot_from_descriptors(root: Path, descriptors_file: Path) -> dict[s
 def apply_claim_result_deltas(root: Path, results_file: Path) -> dict[str, Any]:
     root = root.resolve()
     paths = _descriptor_paths(results_file)
+
+    # Capture run identity directly from each newly written claim result before
+    # touching the cache. This lets the claim fast lane publish a fresh run-state
+    # snapshot even when the cache is missing or deliberately invalidated.
+    expected_runs: dict[tuple[str, str], dict[str, Any]] = {}
+    for raw_path in paths:
+        path = raw_path if raw_path.is_absolute() else root / raw_path
+        value = _read(path, {})
+        if not isinstance(value, dict) or value.get("ok") is not True:
+            continue
+        worker_id = str(value.get("worker_id") or "")
+        run_key = str(value.get("run_key") or "")
+        scheduled_slot = str(value.get("scheduled_slot") or "")
+        started_at = _time(value.get("actual_invocation_start"))
+        if worker_id not in ALLOWED_WORKERS or not run_key or started_at is None:
+            continue
+        if worker_id == "scheduled-chat-00" and scheduled_slot != "00":
+            continue
+        if worker_id == "scheduled-chat-30" and scheduled_slot not in {"30", "0830"}:
+            continue
+        expected_runs[(worker_id, run_key)] = {
+            "schema_version": 1,
+            "request_id": "auto-claim-pending",
+            "run_key": run_key,
+            "worker_id": worker_id,
+            "worker_kind": "scheduled_chat",
+            "scheduled_slot": scheduled_slot,
+            "actual_invocation_start": started_at.astimezone(dt.timezone.utc).isoformat(),
+            "runtime_condition": "none",
+            "runtime_condition_confirmed": False,
+            "runtime_condition_attempts": 0,
+            "runtime_condition_detail": "",
+        }
+
     touched = run_state_cache.observe_claim_results(root, paths)
+    generated: list[str] = []
+    canonical_fallback_runs: list[str] = []
+
+    for (worker_id, run_key), fallback_request in sorted(expected_runs.items()):
+        request = run_state_cache.cached_request(root, worker_id, run_key)
+        if request is None:
+            request = fallback_request
+            canonical_fallback_runs.append(f"{worker_id}:{run_key}")
+
+        result = derive(root, request)
+        generation = run_state_cache.generation_for(root, worker_id, run_key)
+        request_id = run_state_cache.auto_result_id(worker_id, run_key, generation)
+        result["request_id"] = request_id
+        result["snapshot_generation"] = generation
+        result["snapshot_origin"] = "claim-fast-lane"
+        result["auto_generated"] = True
+        target = root / RESULTS / f"{request_id}.json"
+        _write(target, result)
+        run_state_cache.write_latest_pointer(root, target, result)
+        generated.append(target.relative_to(root).as_posix())
+
     return {
         "observed_claim_results": len(paths),
         "touched_runs": sum(len(items) for items in touched.values()),
         "workers": touched,
+        "generated_results": generated,
+        "canonical_fallback_runs": canonical_fallback_runs,
     }
 
 def rebuild_caches(root: Path) -> dict[str, Any]:
