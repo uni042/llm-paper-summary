@@ -107,9 +107,8 @@ def compact_preflight(root: Path, apply: bool, min_age_seconds: int, now: dt.dat
     moved, skipped = [], []
     req_root = root / HOT / "research-preflight" / "requests"
     res_root = root / HOT / "research-preflight" / "results"
-    if not req_root.is_dir():
-        return moved, skipped
-    for request_path in sorted(req_root.glob("*.json")):
+    request_paths = sorted(req_root.glob("*.json")) if req_root.is_dir() else []
+    for request_path in request_paths:
         result_path = res_root / request_path.name
         request = _read(request_path, {})
         result = _read(result_path, {})
