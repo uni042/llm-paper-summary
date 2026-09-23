@@ -4,7 +4,10 @@ on:
   push:
     branches: [main]
     paths:
-      - '.survey/work-queue/submissions/*.json'
+      # Root-level Discovery submissions are handled immediately by
+      # survey-discovery-recovery.yml. Keeping them off this heavier helper
+      # prevents both workflows from contending for survey-background-main
+      # on every Discovery round; the scheduled helper still provides recovery.
       - '.survey/work-queue/transport/offline-job-seed.json'
       - '.survey/work-queue/transport/request-jobs.json'
       - '.survey/work-queue/fallback-inbox/*.json'
