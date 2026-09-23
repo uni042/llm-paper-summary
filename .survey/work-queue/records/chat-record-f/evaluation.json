@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-9105373f954fe3246d7dc7ab",
-  "job_id": "job-research-4f3d063490df512a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9105373f954fe3246d7dc7ab",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-9105373f954fe3246d7dc7ab","job_id":"job-research-4f3d063490df512a","data":{"hardware":"単一物理機にIntel Xeon Silver 4514Y 16物理core、約117GB system memory、NVIDIA RTX PRO 4500 Blackwell 32GBを搭載。Intel TDX guestは32 vCPU、約93GB memory。host/guestともUbuntu 24.04。","software":"Llama-3.2-3B-InstructとQwen3-4B-Instructを評価。TDX guestとhost GPU worker間はQEMU IVSHMEMで共有メモリ通信する。比較用にCPU、full-TDX、GPU、雑音なしsplit T3、固定epsilon EP#、epsilon=1/sqrt(n) EPN、Slalom適応版を実装する。Slalomはq=10,485,767、input/weight 8-bit量子化。","methodology":"速度評価はDatabricks Dollyから平均約100-tokenの45 promptを選び、batch 15を3 batch、100/200/400/800 tokenを生成して同じprompt集合の平均推論時間を測る。品質評価は100〜250-tokenの100 promptからgreedyで200 tokenを生成し、GPU出力を基準にexact match、token match、BLEU、ROUGE-L、semantic similarityを測定。epsilonは0.5/1/5/10/15とEPNを評価する。復元攻撃はDollyの未見500 prompt、100〜300 tokenでtoken precision/recall/F1とsemantic similarityを測る。","scope":"実機TDX+GPUでend-to-end性能とprivacy attackを評価している点は強いが、単一機・2モデル・honest-but-curious GPUが中心で、悪意あるGPUの結果改ざん、side channel、分散GPUや大規模モデルは対象外。noise bankの事前計算・保存費用もオンライン時間とは別に扱う。"},"reservation":{"claim_id":"claim-9105373f954fe3246d7dc7ab","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
