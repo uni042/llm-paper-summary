@@ -2,10 +2,12 @@
 """Allocate queue claims and atomically reserve workflow-v10 record banks.
 
 The existing claim allocator remains authoritative for job ownership. This wrapper
-runs inside the serialized ``survey-claim-main`` lane and adds a record-bank
-reservation only to claims allocated by the current invocation. A reservation is
-encoded as five coherent empty slot envelopes, so existing bank inspection/fallback
-code sees the bank as occupied before a worker starts writing research content.
+runs inside the serialized ``survey-claim-main`` lane and adds record-bank
+reservations only where immediate write readiness is useful. Scheduled-chat workers
+may own a deeper logical paper inventory, but only the leading hot slice is banked.
+Shared preload-pool claims are never banked. A bank reservation is encoded as five
+coherent empty slot envelopes, so existing inspection/fallback code still sees a
+hot assignment as occupied before a worker starts writing research content.
 
 Pre-reservation active claims that still lack persisted bank routing are migrated to
 the durable Library fallback. This retires the rollout-era global fence: one legacy
@@ -23,9 +25,11 @@ from pathlib import Path
 from typing import Any
 
 import claim_state
+import claim_window_policy
 import claim_worker
 import immutable_submission
 import select_record_bank
+import shared_preload_pool
 from record_bank_config import BANK_ROOTS, SLOT_NAMES, canonical_slot_paths
 
 
@@ -466,6 +470,126 @@ def _persist_assignment_bank(root: Path, claim: dict[str, Any], bank: str | None
                 changed = True
     if changed:
         _write(result_path, result)
+
+
+def _persist_assignment_unbanked(root: Path, claim: dict[str, Any]) -> None:
+    """Remove bank/fallback routing from one logical-only scheduled assignment."""
+    request_id = claim.get("request_id")
+    if not isinstance(request_id, str) or not request_id:
+        return
+    result_path = root / ".survey/work-queue/claim-results" / f"{request_id}.json"
+    result = _read(result_path)
+    if not isinstance(result, dict):
+        return
+    assignments = result.get("assignments")
+    if not isinstance(assignments, list):
+        return
+    changed = False
+    for item in assignments:
+        if not isinstance(item, dict):
+            continue
+        if item.get("job_id") != claim.get("job_id") or item.get("claim_id") != claim.get("claim_id"):
+            continue
+        for key in ("record_bank", "record_bank_fallback", "record_bank_root", "record_slot_paths"):
+            if key in item:
+                item.pop(key, None)
+                changed = True
+    if changed:
+        _write(result_path, result)
+
+
+def _hot_scheduled_claim_ids(claims: dict[str, dict[str, Any]]) -> set[str]:
+    """Return the leading bank-ready slice for every scheduled-chat worker lineage."""
+    by_worker: dict[str, list[dict[str, Any]]] = {}
+    for current in claims.values():
+        if not current.get("active") or current.get("worker_kind") != "scheduled_chat":
+            continue
+        worker_id = str(current.get("worker_id") or "")
+        claim_id = str(current.get("claim_id") or "")
+        if not worker_id or not claim_id:
+            continue
+        by_worker.setdefault(worker_id, []).append(current)
+
+    hot: set[str] = set()
+    for rows in by_worker.values():
+        rows.sort(key=claim_worker._pipeline_sort_key)
+        for current in rows[:claim_window_policy.HOT_BANKED_CLAIMS]:
+            claim_id = current.get("claim_id")
+            if isinstance(claim_id, str) and claim_id:
+                hot.add(claim_id)
+    return hot
+
+
+def _release_logical_only_reservations(
+    root: Path,
+    claims: dict[str, dict[str, Any]],
+    hot_claim_ids: set[str],
+) -> int:
+    """Free untouched banks held by preload/cold scheduled claims.
+
+    Dataful banks are never reclaimed here. They remain on the existing recovery
+    paths because written research must not be discarded merely because pipeline
+    position changed.
+    """
+    released = 0
+    for job_id, current in list(claims.items()):
+        if not current.get("active"):
+            continue
+        claim_id = str(current.get("claim_id") or "")
+        logical_only = shared_preload_pool.is_pool_claim(current) or (
+            current.get("worker_kind") == "scheduled_chat"
+            and claim_id
+            and claim_id not in hot_claim_ids
+        )
+        if not logical_only:
+            continue
+        bank = str(current.get("record_bank") or "").lower()
+        if bank not in BANK_ROOTS:
+            # Logical-only claims should not carry Library fallback either.
+            if current.get("worker_kind") == "scheduled_chat" and current.get("record_bank_fallback") == "library":
+                claim_path = root / ".survey/work-queue/claims" / f"{job_id}.json"
+                claim = _read(claim_path)
+                if isinstance(claim, dict) and claim.get("claim_id") == claim_id:
+                    claim.pop("record_bank_fallback", None)
+                    claim.pop("record_bank", None)
+                    _apply_route_fields(claim, None)
+                    _write(claim_path, claim)
+                    _persist_assignment_unbanked(root, claim)
+                    current.pop("record_bank_fallback", None)
+                    current.pop("record_bank", None)
+            continue
+
+        clean = True
+        for slot in SLOT_NAMES:
+            payload = _read(root / BANK_ROOTS[bank] / f"{slot}.json")
+            reservation = payload.get("reservation") if isinstance(payload, dict) else None
+            if not (
+                isinstance(payload, dict)
+                and payload.get("data") == {}
+                and isinstance(reservation, dict)
+                and reservation.get("claim_id") == claim_id
+            ):
+                clean = False
+                break
+        if not clean:
+            continue
+
+        for slot in SLOT_NAMES:
+            _write(root / BANK_ROOTS[bank] / f"{slot}.json", _placeholder_payload(slot))
+
+        claim_path = root / ".survey/work-queue/claims" / f"{job_id}.json"
+        claim = _read(claim_path)
+        if isinstance(claim, dict) and claim.get("claim_id") == claim_id:
+            for key in ("record_bank", "record_bank_fallback", "record_bank_root", "record_slot_paths"):
+                claim.pop(key, None)
+            claim["record_bank_release"] = "logical-inventory-not-hot"
+            _write(claim_path, claim)
+            _persist_assignment_unbanked(root, claim)
+        for key in ("record_bank", "record_bank_fallback", "record_bank_root", "record_slot_paths"):
+            current.pop(key, None)
+        current["record_bank_release"] = "logical-inventory-not-hot"
+        released += 1
+    return released
 
 
 def _persist_library_fallback(root: Path, claim: dict[str, Any]) -> None:
