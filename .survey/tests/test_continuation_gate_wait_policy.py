@@ -11,7 +11,7 @@ spec.loader.exec_module(mod)
 
 
 class ContinuationGateWaitPolicyTests(unittest.TestCase):
-    def test_pending_claim_exposes_fixed_10_second_recheck_contract(self):
+    def test_pending_claim_exposes_productive_recheck_contract(self):
         args = argparse.Namespace(
             github_read=True,
             github_write=True,
@@ -39,8 +39,8 @@ class ContinuationGateWaitPolicyTests(unittest.TestCase):
         )
         result = mod.decide(args)
         self.assertEqual(result["decision"], "CONTINUE")
-        self.assertEqual(result["claim_wait_seconds"], 10)
-        self.assertIn("wait_10_real_seconds", result["claim_wait_action"])
+        self.assertEqual(result["claim_wait_seconds"], 0)
+        self.assertTrue(result["productive_wait_required"])\n        self.assertFalse(result["productive_wait_polling"])\n        self.assertIn("run_one_wait_microtask", result["claim_wait_action"])
         self.assertIn("repeat_until_result_or_terminal_hard_stop", result["claim_wait_action"])
 
 
