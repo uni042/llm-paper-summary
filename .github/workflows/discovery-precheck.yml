@@ -126,16 +126,7 @@ jobs:
               # the provider adapter still handles any returned 429 explicitly.
               if [[ "$name" == preload-*.json ]]; then
                 provider="$(
-                  python - "$request" <<'PY'
-import json
-import sys
-from pathlib import Path
-try:
-    value = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
-except Exception:
-    value = {}
-print(str(value.get("provider") or "").strip().casefold())
-PY
+                  python -c 'import json,sys; from pathlib import Path; p=Path(sys.argv[1]); value=json.loads(p.read_text(encoding="utf-8")); print(str(value.get("provider") or "").strip().casefold())' "$request"
                 )"
                 if [ "$provider" = "semantic_scholar" ]; then
                   sleep 2
