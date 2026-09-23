@@ -1,0 +1,826 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260924T014100JST-worker-915241-forward-r5",
+  "collector_id": "direct-20260924T014100JST-worker-915241-forward-r5",
+  "run_key": "adhoc-20260924T014100JST-worker-915241",
+  "axis": "forward citations of H2O KV cache eviction and efficient inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "140",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5d244e61c80682d7e2148a76c050cd81e4ec34b3",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T17:01:27.382491+00:00",
+  "preload_id": "preload-08f3e27e3e8e1451c6c0",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-08f3e27e3e8e1451c6c0",
+  "results": [
+    {
+      "title": "How Query Visibility Changes KV-Cache Compression Rankings: A Matched-Budget Audit",
+      "source_url": "https://www.semanticscholar.org/paper/1e5242ca16ea8e55f3972e4db0c79ef779124794",
+      "year": 2026,
+      "published": "2026-07-11",
+      "abstract": "KV-cache compression methods are predominantly evaluated with the query appended to the context before compression -- a query-aware protocol. Yet the economic case for a compressed KV cache is reuse: compress a document once, answer many future questions against it. In that deployment, compression must happen query-agnostic -- before any question is seen. We present a matched-budget audit of six published compression methods against three trivial baselines on three open 7-9B models (144,300 paired evaluations on RULER-8192; 40,800 on LongBench; 50,000-resample paired bootstrap throughout). Everything is held fixed -- model, compression ratio, instances, decoding -- except the scoring rule. Three findings. (1) Query visibility changes the rankings: under the agnostic protocol, of the five audited methods that share a common attention backend, only KeyDiff beats a best-of-3 trivial baseline consistently (31 of 36 cells), and the most widely deployed method, SnapKV, loses to\"keep the start and the recent window\"on average (-0.066). (2) The per-method drop between the two protocols is ordered consistently with how visible the question is to each method's scoring signal, legible in its source code: from Delta=+0.198 for SnapKV (the question sits inside its 64-token observation window) down to Delta=+0.011 for KeyDiff (its score contains no query term at all).",
+      "canonical_id": "arXiv:2607.11942",
+      "arxiv_id": "2607.11942",
+      "authors": [
+        "Da-Ming Luo",
+        "C. Liang",
+        "Jun-Yu Xuan"
+      ]
+    },
+    {
+      "title": "COBS: Cumulant Order Block Sparse Attention",
+      "source_url": "https://www.semanticscholar.org/paper/a88707dd19a4a66685ea61b7f394af0dae53f2fd",
+      "year": 2026,
+      "published": "2026-07-10",
+      "abstract": "Block sparse attention is a hardware friendly way to alleviate the key-value (KV) cache read bottleneck in large language models (LLMs). However, it is not prevalent among leading open-weight LLMs, which rely instead on dense attention or fine-grained selection, thereby motivating our analysis. We study DeepSeek's Native Sparse Attention (NSA) as a representative method, whose three-branch design lets us isolate block selection, the most challenging and consequential stage. We formalize selection and reduce it to ranking blocks by a single quantity, the attention mass: the sum of a block's attention scores. We show that if selection retrieves the blocks with the largest attention mass, block sparse attention can match the quality of dense attention. However, computing the exact attention mass requires reading every key, so the problem of block selection ultimately reduces to approximating this mass from a compact summary instead of the full keys. Via a cumulant expansion, we show why existing methods falter: their selection strategies attempt to estimate the attention mass, but are confined to a first-order approximation. Therefore, we propose COBS (Cumulant Order Block Sparse Attention), an attention method that builds on NSA, incorporating a novel selector that stores a compressed second-order statistic per block. On the 32k RULER long-context retrieval benchmark, COBS raises the NSA baseline's mean score from 0.2999 to 0.8195, approaching dense attention at 0.9040 and closing about 86% of the gap, while using only 1.21x the KV cache read traffic of the NSA baseline and 15.15x less read traffic than dense. The same model preserves short-context behavior and attains lower position-wise negative log-likelihood (NLL) than dense attention in our comparison.",
+      "canonical_id": "arXiv:2607.09052",
+      "arxiv_id": "2607.09052",
+      "authors": [
+        "Alexander Tian",
+        "Aditya Ghai",
+        "S. Neelam",
+        "Zaal Vasania",
+        "Akshay Mishra"
+      ]
+    },
+    {
+      "title": "Attention Degradation, Function Token Anchoring, and the Limits of Attention-Based Intervention in Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/411afc41629f9920dcb6f070a2b56a03d897a2a4",
+      "year": 2026,
+      "published": "2026-07-09",
+      "abstract": "Mean cross-positional attention degradation is widely reported in transformer interpretability, yet whether it causally limits contextual retrieval remains untested. We present six coordinated experiments across GPT-2, LLaMA-3.2-1B/3B, OPT-1.3B, and distilgpt2. We first characterise short-term (5-100 token) attention degradation, finding a universal exponential-then-plateau pattern whose rate is inversely correlated with depth, with distinct layer-wise entropy signatures per architecture. Function token anchoring proves architecture-dependent: OPT-1.3B (absolute positional encoding) shows distance-dependent preposition specificity, GPT-2 shows uniform non-specific dependence, and LLaMA (RoPE) shows reversal at long distances. Strategic comma insertion at clause boundaries causally reduces prediction degradation in the 40-80 token range, with the benefit tied to syntactic boundary alignment rather than token density. We then test the mechanism causally: Relay-Aware Attention (RAA), which biases attention logits toward function token positions, verifiably increases attention mass by 16-24% yet yields null effects on GPT-2 and LLaMA-1B, preliminary harm on LLaMA-3B, and a mixed effect on OPT-1.3B that nets to approximately zero. Multi-fact retrieval probes further show that degradation rate does not predict retrieval accuracy across models. We conclude that mean attention degradation is largely descriptive rather than prescriptive: function tokens contribute through what their hidden states compute, not through the attention they receive -- with implications for interpretability methodology and attention-score-based inference optimisations such as KV-cache eviction.",
+      "canonical_id": "arXiv:2607.20524",
+      "arxiv_id": "2607.20524",
+      "authors": [
+        "Sagar Dangal",
+        "Manoj Shakya"
+      ]
+    },
+    {
+      "title": "Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/dbc9f876b920b233a2ce9d99a060fdc776e3e228",
+      "year": 2026,
+      "published": "2026-07-08",
+      "abstract": "The key-value (KV) cache dominates the memory cost of long-context autoregressive inference, and a growing body of work compresses it through quantization, eviction, or offloading. We study a complementary question: once a position's KV state has been quantized to codebook indices, how should the resulting symbol stream be stored, and can the storage layer do more than store? A family of contractive iterated-map codes that serialize a symbol sequence into a sequence of low-dimensional real vectors is revisited, and it is shown that they form a natural archive format for a quantized KV cache with the following features. The method provides exactly the access pattern a growing cache requires. It is lossless, it runs in linear time, and supports O(1) random access and O(1) amortized append. A controlled study of the quantizer feeding this archive is conducted on GPT-2 with 1024-token contexts. Keeping a small exact window (4 attention sinks plus 32 recent tokens) and archiving the rest, per-head residual vector quantization reduces the archived cache by 36-54x relative to an fp16 cache at a perplexity cost of 11-15%, and we quantify a sharp key/value asymmetry - quantizing keys is roughly 4x more damaging than quantizing values, consistent with prior low-bit KV work - and use it to allocate bits in a hybrid scheme. Finally, we show the archive is simultaneously a search index: approximate substring queries execute directly on the stored vectors, and matched context is decoded from the matched vector without ever materializing the surrounding text. We further characterize the archive's operating range: truncating stored points yields a lossy regime whose distortion we localize, and probability-weighting the maps recovers arithmetic coding, exposing a trade-off between rate efficiency, random access, and memory. We release all code; every number reproduces on a laptop CPU.",
+      "canonical_id": "arXiv:2607.07144",
+      "arxiv_id": "2607.07144",
+      "authors": [
+        "Vladimir V. Gusev"
+      ]
+    },
+    {
+      "title": "Compress the Cache, Not the Speech Embedding: KV Compression for Efficient Speech LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/7ea7acb33dec93f59390fa7334d6f8d8e433ebac",
+      "year": 2026,
+      "published": "2026-07-07",
+      "abstract": "Speech large language models (Speech LLMs) typically encode speech into sequences far longer than text, creating a major efficiency bottleneck during autoregressive decoding. A common remedy is to compress the speech sequence at the adapter level to remove temporal redundancy before it enters the LLM; however, such early downsampling risks discarding fine-grained information that cannot be recovered. We propose SpeechKV, which applies a learned pooling to the KV cache of speech tokens inside the LLM. This design allows the LLM to fuse speech and text internally while directly accelerating decoding. Trained on 71K hours of speech data, SpeechKV compresses the speech to approximately text-level granularity yet maintains performance on par with or even slightly better than the uncompressed baseline, with relative gains of 6.6% on out-of-domain entity recognition and 2.3% on OpenASR, while delivering at least 1.49 times decoding speedup that scales with audio length.",
+      "canonical_id": "arXiv:2607.06827",
+      "arxiv_id": "2607.06827",
+      "authors": [
+        "Ke-Han Lu",
+        "Keqi Deng",
+        "Ruchao Fan",
+        "Rui Zhao",
+        "Jinyu Li"
+      ]
+    },
+    {
+      "title": "Generative AI at the Edge: A Comprehensive Survey of Architectures, Hardware and Applications",
+      "source_url": "https://www.semanticscholar.org/paper/761b09ba3102f8756c1b93c0fa12ad8312f9f0c0",
+      "year": 2026,
+      "published": "2026-07-07",
+      "abstract": "Generative Artificial Intelligence (GenAI) leverages generative models, including Diffusion models and Foundation Models (FMs) such as Large Language Models (LLMs), to generate new data. GenAI has attracted growing attention as it enables applications such as text generation, image synthesis, and multimodal reasoning. However, deploying such GenAI models on resource-constrained edge devices poses key challenges. Edge devices typically have limited computational power and strict energy budgets. They also face the memory-wall problem, where the cost of moving data between memory and compute units exceeds the cost of computation itself. This survey provides a comprehensive overview of techniques that enable GenAI deployment at the edge, covering software optimizations, hardware innovations, and system-level frameworks. While all three categories are discussed, particular emphasis is given to hardware-focused approaches. We review recent hardware studies and classify them into three main levels: computation, memory, and scheduling, with eight finer-grained subcategories that capture the mainstream hardware techniques. Many of these are hardware–software co-design strategies that align GenAI workloads with edge resource constraints. By synthesizing state-of-the-art solutions and identifying open challenges, this survey outlines a roadmap for building efficient GenAI systems at the edge.",
+      "canonical_id": "DOI:10.1145/3829079",
+      "doi": "10.1145/3829079",
+      "authors": [
+        "Mozhgan Navardi",
+        "Yuzhe Fu",
+        "Yueqian Lin",
+        "Hai Li",
+        "Yiran Chen",
+        "T. Mohsenin"
+      ]
+    },
+    {
+      "title": "KVpop - Key-Value Cache Compression with Predictive Online Pruning",
+      "source_url": "https://www.semanticscholar.org/paper/ac7ed322fd7d9bd3c63d65808e2df18100b2f173",
+      "year": 2026,
+      "published": "2026-07-06",
+      "abstract": "Key-value (KV) cache growth is a major bottleneck in autoregressive decoding, as memory and bandwidth scale linearly with context length. Existing KV eviction methods often rely on static heuristics or proxy scores, which poorly track future token utility and cause brittle eviction as relevance shifts. To address this, we introduce KVpop, which learns a fixed-budget KV eviction policy by directly supervising the keep-or-drop decision. The scorer is trained against a novel future-attention target, computed efficiently without materializing dense attention maps. We further introduce a delayed memory-based scorer that, uniquely among learned eviction methods, defers scoring for a fixed number of steps to exploit near-future context. On AIME and HMMT mathematical reasoning, KVpop retains 98% of full-attention performance on Qwen3-4B at 75% KV cache compression and 97% at 88% compression, consistently outperforming established eviction baselines. Qwen3-8B shows even stronger results, reaching near-full teacher performance. These results show that supervising eviction with future-attention signals cuts memory costs while maintaining quality.",
+      "canonical_id": "arXiv:2607.05061",
+      "arxiv_id": "2607.05061",
+      "authors": [
+        "Lukas Hauzenberger",
+        "N. Schmidinger",
+        "A. Hartl",
+        "David Stap",
+        "Thomas Schmied",
+        "Sebastian Bock",
+        "Günter Klambauer",
+        "Sepp Hochreiter"
+      ]
+    },
+    {
+      "title": "Uncertainty-gated selection for block-sparse attention",
+      "source_url": "https://www.semanticscholar.org/paper/e160d63ad098ca82680e4af816c822cba8e70a0a",
+      "year": 2026,
+      "published": "2026-07-04",
+      "abstract": "Block-sparse attention scales long-context language models by replacing the O(N^2) softmax with a per-query top-k selection over key blocks. This cutoff is myopic: when the k-th and (k+1)-th blocks are nearly tied in score, the selector commits without spending extra budget, and a dropped block carrying answer evidence is unrecoverable downstream. We propose a value-of-information router that measures, for each query, how decisively the top-k cut was made, and doubles the kept set for the queries where that gap is smallest; the rule is backbone-agnostic and stacks with existing block-scoring methods such as Quest. On LongBench-v2 medium at n=215 (the entire dataset subset), router-on-Quest reaches paired recall 0.75 vs. top-k 0.47 -- +28 pp over the SSA-style baseline (McNemar p<0.01) -- and lands within 2 pp of dense on RULER NIAH multikey at the same context. The lift reproduces on four models from three architectures (Qwen2.5, Mistral-Nemo, Qwen3.6). At 128K, the router preserves 0.81 and 0.89 of dense accuracy on Qwen2.5-7B-1M and Qwen3.6 (vs. SSA-style top-k at 0.09 on the former) while the fused selection-plus-kernel pipeline runs at 0.62x and 0.80x dense wall time.",
+      "canonical_id": "arXiv:2607.07724",
+      "arxiv_id": "2607.07724",
+      "authors": [
+        "Thomas Rossi"
+      ]
+    },
+    {
+      "title": "HyperVAttention: Efficient Sparse Attention with Spatio-Temporal Clustering for Video Diffusion",
+      "source_url": "https://www.semanticscholar.org/paper/1688dc82818d920adf32bf9be2b9cc3dd85f79e1",
+      "year": 2026,
+      "published": "2026-07-03",
+      "abstract": "Video Diffusion Transformers (VDiTs) have demonstrated significant capabilities in high-fidelity video generation. However, their ability to produce long-duration videos is fundamentally constrained by the quadratic complexity of the self-attention mechanism. Recent clustering-based sparse attention methods improve the quality-speed trade-off by grouping semantically similar tokens, but their practical efficiency remains limited by two bottlenecks: substantial clustering overhead and low CTA utilization caused by irregular cluster-induced blocks. We propose HyperVAttention (HVA), a training-free sparse attention framework that addresses both bottlenecks jointly. To reduce clustering overhead, we introduce 3D local-window clustering, which exploits the spatio-temporal locality of video tokens to restrict centroid search to fixed local neighborhoods, and implement it with a custom Triton kernel for efficient execution. We further propose a hybrid clustering strategy that performs full clustering only at anchor steps and updates only subset tokens at intermediate steps, leveraging the temporal stability of cluster assignments across denoising steps. To improve CTA utilization, we present hardware-aware cluster merging that minimizes CTA-aligned execution cost through parallel agglomerative merging, improving block density and approximation fidelity by utilizing idle tile capacity. Together, these components reduce clustering overhead, avoid redundant updates, and better align sparse attention with the fixed tile structure of modern GPU kernels. Experiments on Text-to-Video generation show that HVA establishes a new Pareto frontier for training-free sparse attention in video diffusion, reducing end-to-end latency by up to $2.13\\times$ while improving fidelity over existing training-free sparse attention baselines.",
+      "canonical_id": "arXiv:2607.03012",
+      "arxiv_id": "2607.03012",
+      "authors": [
+        "Dongyeun Lee",
+        "A. Zandieh",
+        "V. Mirrokni",
+        "Junmo Kim",
+        "Insu Han"
+      ]
+    },
+    {
+      "title": "Metronome: Bound the Cache, Keep the Beat for Real-Time Interaction Model Serving",
+      "source_url": "https://www.semanticscholar.org/paper/465e5218ee566b5c88341777bbfa4b7b94ee7cc6",
+      "year": 2026,
+      "published": "2026-07-02",
+      "abstract": "Real-time interaction models -- Moshi, MiniCPM-o, Qwen-Omni -- turn serving into a periodic real-time task: on every frame a session ingests streaming audio and must respond by a recurring wall-clock deadline, while its KV cache grows monotonically and stays pinned for the whole conversation. This regime hides a dangerous failure mode. On a real full-duplex stack, sustained load does not degrade serving gracefully: it falls off a cliff, jumping in one step from milliseconds per frame to a stalled engine when accumulated session state exhausts the KV pool. The collapse is metastable -- identical five-minute runs collapse or survive on run-to-run variance -- and silent: latency and deadline-miss metrics read healthy throughout. We show one move restores both stability and observability: bound each session's resident state, and latency starts telling the truth. Metronome's in-engine KV window eliminates the collapse (0/20 vs. 14/20 runs across two batches) and turns per-frame latency into a monotone load signal, on which an online admission controller discovers the schedulable concurrency; without the window, the identical controller over-admits into the wall. A first-order model predicts the collapse time within a few percent on the headline model, and a quality probe validates the bound's design by ablation: the window alone is quality-free in turn-based decoding, and its few pinned attention-sink tokens are what keep free-running generation healthy. Everything is measured end-to-end on real audio, across four interaction models on one GPU.",
+      "canonical_id": "arXiv:2607.02640",
+      "arxiv_id": "2607.02640",
+      "authors": [
+        "Jiaying Meng",
+        "Bojie Li"
+      ]
+    },
+    {
+      "title": "TransformKV: Optimizing Multi-Turn Conversational Services in LLMs via KV Cache Transformation",
+      "source_url": "https://www.semanticscholar.org/paper/2e845a50571456152f70c7d03765cdaa223c527a",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Multi-turn conversational systems based on large language models are increasingly being integrated into web platforms and applied across a wide range of domains. However, these systems typically combine the user’s current query with contextual information from previous interactions, resulting in continuously expanding input prompts. This leads to a significant increase in time-to-first-token (TTFT), causing intolerable delays in web response times. To address this issue, we introduce TransformKV, which maximizes the reuse of the KV cache from previous conversations rather than recomputing, thereby reducing TTFT latency. TransformKV first identifies the specific locations that require transformation to maximize the reuse of the KV cache with minimal operations. It then efficiently transforms the KV cache for a subset of tokens by recomputing only the KV cache that impact semantics. Additionally, TransformKV further reduces TTFT latency by performing only QKV computations in certain layers while skipping other computations that contribute less to overall performance. Experimental results demonstrate that in multi-turn conversation tasks, TransformKV can reduce inference latency by up to 30%, achieving up to a 1.8<inline-formula><tex-math notation=\"LaTeX\">$\\mathbf{\\times}$</tex-math><alternatives><mml:math><mml:mrow><mml:mo>×</mml:mo></mml:mrow></mml:math><graphic position=\"float\" orientation=\"portrait\" xlink:href=\"chen-ieq1-3678524.gif\"/></alternatives></inline-formula> improvement in performance compared to similar approaches. Notably, as the context window size increases, the performance gains become even more pronounced.",
+      "canonical_id": "DOI:10.1109/TC.2026.3678524",
+      "doi": "10.1109/TC.2026.3678524",
+      "authors": [
+        "Jiahang Zhou",
+        "Zhiyuan Fang",
+        "Yusheng Qin",
+        "Wuhui Chen",
+        "Tao Zhang",
+        "Chuan-Fu Zhang",
+        "Zibin Zheng"
+      ]
+    },
+    {
+      "title": "Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption",
+      "source_url": "https://www.semanticscholar.org/paper/a417d19312b5673a20ce4902b06d476b71ff5c73",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Autoregressive (AR) streaming models have emerged as a powerful paradigm for long video generation. However, the linearly growing Key-Value (KV) cache poses a significant bottleneck, leading to memory overload and degraded inference throughput. A common compression method is to drop redundant KV tokens, which often breaks long-range dependencies, resulting in temporal flickering and identity loss. In this paper, we propose Instance-Specific Parametric Absorption (ISPA), a novel framework that shifts the KV cache compression from discarding to distilling. The core idea is to transit a subset of layers from Full-Attention (F-Layers) to memory-efficient Local-Attention (L-Layers) by\"absorbing\"historical context into the model's weights. Specifically, during a brief warmup phase, ISPA monitors the output discrepancy between global and local attention. At the transition point, we solve a closed-form least-squares problem to compute an instance-specific weight modulation that compensates for the missing history. Experiments across architectures (1.3B to 14B) demonstrate that ISPA can remove up to 50\\% of the KV cache with near-lossless visual quality. We hope this perspective encourages future work to explore parametric memory consolidation beyond external token-level cache management for streaming generative models.",
+      "canonical_id": "arXiv:2607.00712",
+      "arxiv_id": "2607.00712",
+      "authors": [
+        "Xiaomeng Fu",
+        "Jia Li",
+        "Yi-Ming Hu",
+        "Yong Wang",
+        "Hayden Kwok-Hay So",
+        "Jiao Dai",
+        "Xiangxiang Chu",
+        "Jizhong Han"
+      ]
+    },
+    {
+      "title": "Logit-Contribution Scoring Identifies Non-Literal Retrieval Heads",
+      "source_url": "https://www.semanticscholar.org/paper/3534e9ab0fa88eb7cf7b00f28c9eb32c009024f1",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "In long-context use, large language models frequently synthesize answers from the meaning of a relevant context span rather than literally copy-pasting them. Identifying which attention heads perform this synthesis matters for interpreting long-context model behavior. Yet existing detectors miss these heads by construction: they reward heads whose attended token matches the generated token, a literal-copy criterion that captures where a head reads but not what it writes through its output-value (OV) circuit, the very mechanism that carries non-literal retrieval. We introduce Logit-Contribution Scoring (LOCOS), a write-aware detector that scores each head by the projection of its OV-circuit output onto the answer-token unembedding direction, contrasting needle and off-needle source positions in a single forward pass. Across three model families (Qwen3, Gemma-3, OLMo-3.1), mean-ablating the top LOCOS heads on the NoLiMa non-literal retrieval benchmark collapses ROUGE-L at lower head counts than prior attention-based detections; on Qwen3-8B, ablating 50 heads drives ROUGE-L from 0.401 to 0.000 while the strongest baseline still retains 0.292. The selected heads are retrieval-specific: parametric recall and arithmetic reasoning stay at baseline under the same ablation. On Qwen3-8B, the same ablation also drops MuSiQue from 0.55 to 0.08 and BABI-Long from 0.62 to 0.20, while a random-heads control stays within 0.05 of baseline.",
+      "canonical_id": "arXiv:2607.01002",
+      "arxiv_id": "2607.01002",
+      "authors": [
+        "Aryo Pradipta Gema",
+        "Beatrice Alex",
+        "Pasquale Minervini"
+      ]
+    },
+    {
+      "title": "Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/0af67064afccf99a3180167e230c858d9291f1df",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Multi-agent latent reasoning composes agents'KV-caches into one context for a final agent. Prior work (Agent Primitives) does this by concatenating caches along the sequence axis with RoPE re-encoding, which we call BagMerge. BagMerge is non-commutative, and the best input ordering is unpredictable, shifting with the regime, the latent-step budget, and the model scale. We make this exchange a convergent replicated state. First, CanonicalMerge fixes the layout by content: ordering caches by mean K-norm at a middle layer renders the merged cache byte-identical under any input permutation, verified algorithmically (arity N<=5) and bit-for-bit on real Qwen3-1.7B and 4B state. Second, we separate the replicated state from decode-time layout: the state is a set of content-addressed latent fragments whose merge is set union, a state-based CvRDT (commutative, associative, idempotent, absorbing), and CanonicalMerge is its deterministic render. Because the render is byte-equivalent, every N=2 accuracy number carries over unchanged and re-delivered duplicates are absorbed rather than re-concatenated. On a partitioned-reasoning benchmark, CanonicalMerge matches the best BagMerge ordering in every regime-by-budget-by-ordering cell without knowing which order is best, trading a small, statistically insignificant accuracy margin for an unconditional structural guarantee. The behaviour transfers to real multi-document QA (HotpotQA), while the closest training-free output-fusion baseline (PackLLM) loses by 45 points at matched budget, placing cache-level merging in a regime distinct from output-level fusion. Finally, at k>2 the approach transports and colocates latent traces but does not by itself compose them, which we characterize to motivate future work.",
+      "canonical_id": "arXiv:2607.01308",
+      "arxiv_id": "2607.01308",
+      "authors": [
+        "Carlos Baquero",
+        "Lu'is Brito"
+      ]
+    },
+    {
+      "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+      "source_url": "https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+      "doi": "10.1016/j.inffus.2026.104630",
+      "authors": [
+        "Sicong Liu",
+        "Wei-Ye Wu",
+        "Xiangrui Xu",
+        "Teng Li",
+        "Bowen Pang",
+        "Wentao Zhou",
+        "Bin Guo",
+        "Zhiwen Yu"
+      ]
+    },
+    {
+      "title": "A Survey on Optimization Techniques for On-Device Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/a54ac6be03a8742be402874d8d34f812732b9f33",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large Language Models (LLMs) have brought transformative advancements to natural language processing. However, their massive computational and memory requirements—stemming from tens of billions of parameters—make deployment on resource-constrained edge devices such as mobile phones and embedded systems highly challenging. Consequently, extensive research efforts have focused on enabling efficient on-device LLM inference. This paper provides an in-depth survey of two major inference acceleration techniques for on-device LLMs: KV cache optimization and speculative decoding. We present the core principles, representative studies, and performance characteristics of each approach. Furthermore, we discuss open challenges and future research directions, aiming to contribute to the advancement of efficient on-device LLM systems.",
+      "canonical_id": "DOI:10.1109/ICUFN69619.2026.11628507",
+      "doi": "10.1109/ICUFN69619.2026.11628507",
+      "authors": [
+        "Mingyu Jo",
+        "Sangoh Park"
+      ]
+    },
+    {
+      "title": "Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching",
+      "source_url": "https://www.semanticscholar.org/paper/1c22d85c33f4432c053b4f2c28d53cb6012b16bc",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Modern large language model (LLM) inference suffers from severe Time-To-First-Token (TTFT) bottlenecks. Existing prefix KV caching mechanisms are inherently stateless, forcing a trade-off between cross-chunk attention accuracy and online recomputation overhead. To address this issue, we propose Pegasus, a novel stateful prefix KV caching system that aims to achieve full-context attention accuracy while avoiding costly recomputation. To handle the exponential growth of context states under limited memory capacity, Pegasus employs a Recursive Path-Pruning Caching (RPPC) algorithm to selectively cache high-value states based on access frequency, memory footprint, and asymmetric latency benefit. In addition, Pegasus introduces a transition-based KV management mechanism to mitigate cache-miss overhead. By exploiting the sparsity of state-dependent KV variations, it replaces expensive attention recomputation and I/O-intensive tensor reloading with lightweight sparse state transitions. Extensive experiments show that Pegasus improves end-to-end serving throughput by 45.9% on average, reduces TTFT by up to 78.5%, and lowers cache-miss recovery overhead by more than 72%.",
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00017",
+      "doi": "10.1109/JCC72984.2026.00017",
+      "authors": [
+        "Fahao Chen",
+        "Peng Li",
+        "Dongxiao Yu",
+        "Song Guo"
+      ]
+    },
+    {
+      "title": "ERA: Entropy-Guided Visual Token Pruning with Rectified Attention for Efficient MLLMs",
+      "source_url": "https://www.semanticscholar.org/paper/3153a8f86eecb8c9dd8220f12efc4d409ad1608e",
+      "year": 2026,
+      "published": "2026-06-30",
+      "abstract": "Multimodal Large Language Models (MLLMs) incur prohibitive inference costs due to long visual token sequences. Training-free visual token reduction provides an efficient solution. However, existing methods distort attention distributions, giving rise to a phenomenon we term Attention Logit Collapse. To address this issue, we propose ERA, an Entropy-guided visual token pruning framework with Rectified Attention for efficient MLLMs. Specifically, ERA comprises three crucial components: Dual-view Entropy Pruning (DEP), Bias-aware Token Recycling (BTR), and Logit-preserving Attention Rectification (LAR). First, DEP identifies representative anchor tokens by jointly modeling visual diversity and head-wise saliency. BTR then recycles pruned tokens into their corresponding anchors while estimating a cluster-level logit bias. Building upon this, LAR injects the estimated bias into attention logits, effectively rectifying the collapse induced by token reduction. Together, these components preserve visual evidence even under aggressive compression, enabling robust performance across single-image, multi-image, and video settings on a wide range of MLLMs. Beyond delivering practical acceleration, ERA establishes logit-preserving visual token pruning as a principled framework for efficient MLLMs, unifying theoretical foundation, algorithmic design, and practical deployment. The code is at https://github.com/924973292/ERA.",
+      "canonical_id": "arXiv:2606.31982",
+      "arxiv_id": "2606.31982",
+      "authors": [
+        "Yuhao Wang",
+        "Mu Qiao",
+        "Haiwen Diao",
+        "Yunzhi Zhuge",
+        "Ping-Ping Zhang",
+        "Xindong Zhang",
+        "Lei Zhang",
+        "Huchuan Lu"
+      ]
+    },
+    {
+      "title": "RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/5cce67db69d4923f1af0fb2a1642ef0f12a29b03",
+      "year": 2026,
+      "published": "2026-06-30",
+      "abstract": "Long-context Large Language Model inference is severely bottlenecked by the massive Key-Value (KV) cache, yet existing sparse attention methods often suffer from static fixed-budget (Top-k) retrieval or rely on proxy scores that are computationally expensive and biased. To address these limitations, we propose RaBitQCache, a novel sparse attention framework that utilizes randomized rotated binary quantization and high-throughput binary-INT4 arithmetic to efficiently estimate attention weights. Our proxy score serves as an unbiased estimator with a proven error bound, enabling adaptive Top-p retrieval that dynamically adjusts the token budget based on actual attention sparsity. We further implement a hardware-aware system with asynchronous pipelining and lazy updates to mask overhead. Evaluations demonstrate that RaBitQCache significantly accelerates inference and reduces memory I/O while preserving generation quality compared to state-of-the-art baselines. Code is available at https://github.com/Sakuraaa0/RaBitQCache.git.",
+      "canonical_id": "arXiv:2606.31519",
+      "arxiv_id": "2606.31519",
+      "authors": [
+        "Wenhao Li",
+        "Jin-Hao Dong",
+        "Hailin Zhang",
+        "Wenhang Shi",
+        "Wei Lu",
+        "Xiao-Yong Du"
+      ]
+    },
+    {
+      "title": "Coverage-Driven KV Cache Eviction for Efficient and Improved Inference of LLM",
+      "source_url": "https://www.semanticscholar.org/paper/93185b5b968fc6542ee18791249bb662915ef919",
+      "year": 2026,
+      "published": "2026-06-28",
+      "abstract": "Large language models (LLMs) excel at complex tasks like question answering and summarization, thanks to their ability to handle long-context inputs. However, deploying LLMs is costly, not only due to the high computational demands of quadratic complexity of self-attention and auto-regressive generation, but also because of the significant memory overhead required for storing the key-value (KV) cache during inference. To reduce the memory cost, existing KV-cache eviction strategies leverage the sparsity in attention to selectively store a subset of tokens. While reducing the memory footprint, such approaches show a considerable drop in performance, especially in tasks that require long-context reasoning. We identify that the drop in performance is linked to a reduction in the coverage of unique tokens. Additionally, we theoretically show that reduced coverage limits the mutual information between inputs and outputs, thereby impairing predictive accuracy. To this end, we introduce K-VEC, a novel coverage-aware KV-cache eviction strategy that prioritizes token coverage while evicting tokens in the cache. K-VEC introduces a cross-head and a cross-layer coverage module to enhance token retention across attention heads and model layers, mitigating performance degradation caused by low coverage. Evaluated on 16 LongBench subsets, K-VEC exhibit up to 10.35 points improvement over the existing methods under the same eviction rate and memory constraint. Comprehensive evaluations validate the effectiveness of our approach and demonstrate its potential for efficient LLM deployment in resource-constrained settings.",
+      "canonical_id": "arXiv:2606.29563",
+      "arxiv_id": "2606.29563",
+      "authors": [
+        "Shuvendu Roy",
+        "Mengyao Zhai",
+        "Hossein Hajimirsadeghi",
+        "Golnoosh Samei"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.11942",
+      "identity_tokens": [
+        "id:arXiv:2607.11942",
+        "title:how query visibility changes kvcache compression rankings a matchedbudget audit",
+        "url:https://www.semanticscholar.org/paper/1e5242ca16ea8e55f3972e4db0c79ef779124794"
+      ],
+      "record": {
+        "title": "How Query Visibility Changes KV-Cache Compression Rankings: A Matched-Budget Audit",
+        "source_url": "https://www.semanticscholar.org/paper/1e5242ca16ea8e55f3972e4db0c79ef779124794",
+        "year": 2026,
+        "published": "2026-07-11",
+        "abstract": "KV-cache compression methods are predominantly evaluated with the query appended to the context before compression -- a query-aware protocol. Yet the economic case for a compressed KV cache is reuse: compress a document once, answer many future questions against it. In that deployment, compression must happen query-agnostic -- before any question is seen. We present a matched-budget audit of six published compression methods against three trivial baselines on three open 7-9B models (144,300 paired evaluations on RULER-8192; 40,800 on LongBench; 50,000-resample paired bootstrap throughout). Everything is held fixed -- model, compression ratio, instances, decoding -- except the scoring rule. Three findings. (1) Query visibility changes the rankings: under the agnostic protocol, of the five audited methods that share a common attention backend, only KeyDiff beats a best-of-3 trivial baseline consistently (31 of 36 cells), and the most widely deployed method, SnapKV, loses to\"keep the start and the recent window\"on average (-0.066). (2) The per-method drop between the two protocols is ordered consistently with how visible the question is to each method's scoring signal, legible in its source code: from Delta=+0.198 for SnapKV (the question sits inside its 64-token observation window) down to Delta=+0.011 for KeyDiff (its score contains no query term at all).",
+        "canonical_id": "arXiv:2607.11942",
+        "arxiv_id": "2607.11942",
+        "authors": [
+          "Da-Ming Luo",
+          "C. Liang",
+          "Jun-Yu Xuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09052",
+      "identity_tokens": [
+        "id:arXiv:2607.09052",
+        "title:cobs cumulant order block sparse attention",
+        "url:https://www.semanticscholar.org/paper/a88707dd19a4a66685ea61b7f394af0dae53f2fd"
+      ],
+      "record": {
+        "title": "COBS: Cumulant Order Block Sparse Attention",
+        "source_url": "https://www.semanticscholar.org/paper/a88707dd19a4a66685ea61b7f394af0dae53f2fd",
+        "year": 2026,
+        "published": "2026-07-10",
+        "abstract": "Block sparse attention is a hardware friendly way to alleviate the key-value (KV) cache read bottleneck in large language models (LLMs). However, it is not prevalent among leading open-weight LLMs, which rely instead on dense attention or fine-grained selection, thereby motivating our analysis. We study DeepSeek's Native Sparse Attention (NSA) as a representative method, whose three-branch design lets us isolate block selection, the most challenging and consequential stage. We formalize selection and reduce it to ranking blocks by a single quantity, the attention mass: the sum of a block's attention scores. We show that if selection retrieves the blocks with the largest attention mass, block sparse attention can match the quality of dense attention. However, computing the exact attention mass requires reading every key, so the problem of block selection ultimately reduces to approximating this mass from a compact summary instead of the full keys. Via a cumulant expansion, we show why existing methods falter: their selection strategies attempt to estimate the attention mass, but are confined to a first-order approximation. Therefore, we propose COBS (Cumulant Order Block Sparse Attention), an attention method that builds on NSA, incorporating a novel selector that stores a compressed second-order statistic per block. On the 32k RULER long-context retrieval benchmark, COBS raises the NSA baseline's mean score from 0.2999 to 0.8195, approaching dense attention at 0.9040 and closing about 86% of the gap, while using only 1.21x the KV cache read traffic of the NSA baseline and 15.15x less read traffic than dense. The same model preserves short-context behavior and attains lower position-wise negative log-likelihood (NLL) than dense attention in our comparison.",
+        "canonical_id": "arXiv:2607.09052",
+        "arxiv_id": "2607.09052",
+        "authors": [
+          "Alexander Tian",
+          "Aditya Ghai",
+          "S. Neelam",
+          "Zaal Vasania",
+          "Akshay Mishra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.20524",
+      "identity_tokens": [
+        "id:arXiv:2607.20524",
+        "title:attention degradation function token anchoring and the limits of attentionbased intervention in large language models",
+        "url:https://www.semanticscholar.org/paper/411afc41629f9920dcb6f070a2b56a03d897a2a4"
+      ],
+      "record": {
+        "title": "Attention Degradation, Function Token Anchoring, and the Limits of Attention-Based Intervention in Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/411afc41629f9920dcb6f070a2b56a03d897a2a4",
+        "year": 2026,
+        "published": "2026-07-09",
+        "abstract": "Mean cross-positional attention degradation is widely reported in transformer interpretability, yet whether it causally limits contextual retrieval remains untested. We present six coordinated experiments across GPT-2, LLaMA-3.2-1B/3B, OPT-1.3B, and distilgpt2. We first characterise short-term (5-100 token) attention degradation, finding a universal exponential-then-plateau pattern whose rate is inversely correlated with depth, with distinct layer-wise entropy signatures per architecture. Function token anchoring proves architecture-dependent: OPT-1.3B (absolute positional encoding) shows distance-dependent preposition specificity, GPT-2 shows uniform non-specific dependence, and LLaMA (RoPE) shows reversal at long distances. Strategic comma insertion at clause boundaries causally reduces prediction degradation in the 40-80 token range, with the benefit tied to syntactic boundary alignment rather than token density. We then test the mechanism causally: Relay-Aware Attention (RAA), which biases attention logits toward function token positions, verifiably increases attention mass by 16-24% yet yields null effects on GPT-2 and LLaMA-1B, preliminary harm on LLaMA-3B, and a mixed effect on OPT-1.3B that nets to approximately zero. Multi-fact retrieval probes further show that degradation rate does not predict retrieval accuracy across models. We conclude that mean attention degradation is largely descriptive rather than prescriptive: function tokens contribute through what their hidden states compute, not through the attention they receive -- with implications for interpretability methodology and attention-score-based inference optimisations such as KV-cache eviction.",
+        "canonical_id": "arXiv:2607.20524",
+        "arxiv_id": "2607.20524",
+        "authors": [
+          "Sagar Dangal",
+          "Manoj Shakya"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.07144",
+      "identity_tokens": [
+        "id:arXiv:2607.07144",
+        "title:fractal kvcache archives lossless symbolic storage with inplace retrieval for longcontext llm inference",
+        "url:https://www.semanticscholar.org/paper/dbc9f876b920b233a2ce9d99a060fdc776e3e228"
+      ],
+      "record": {
+        "title": "Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/dbc9f876b920b233a2ce9d99a060fdc776e3e228",
+        "year": 2026,
+        "published": "2026-07-08",
+        "abstract": "The key-value (KV) cache dominates the memory cost of long-context autoregressive inference, and a growing body of work compresses it through quantization, eviction, or offloading. We study a complementary question: once a position's KV state has been quantized to codebook indices, how should the resulting symbol stream be stored, and can the storage layer do more than store? A family of contractive iterated-map codes that serialize a symbol sequence into a sequence of low-dimensional real vectors is revisited, and it is shown that they form a natural archive format for a quantized KV cache with the following features. The method provides exactly the access pattern a growing cache requires. It is lossless, it runs in linear time, and supports O(1) random access and O(1) amortized append. A controlled study of the quantizer feeding this archive is conducted on GPT-2 with 1024-token contexts. Keeping a small exact window (4 attention sinks plus 32 recent tokens) and archiving the rest, per-head residual vector quantization reduces the archived cache by 36-54x relative to an fp16 cache at a perplexity cost of 11-15%, and we quantify a sharp key/value asymmetry - quantizing keys is roughly 4x more damaging than quantizing values, consistent with prior low-bit KV work - and use it to allocate bits in a hybrid scheme. Finally, we show the archive is simultaneously a search index: approximate substring queries execute directly on the stored vectors, and matched context is decoded from the matched vector without ever materializing the surrounding text. We further characterize the archive's operating range: truncating stored points yields a lossy regime whose distortion we localize, and probability-weighting the maps recovers arithmetic coding, exposing a trade-off between rate efficiency, random access, and memory. We release all code; every number reproduces on a laptop CPU.",
+        "canonical_id": "arXiv:2607.07144",
+        "arxiv_id": "2607.07144",
+        "authors": [
+          "Vladimir V. Gusev"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.06827",
+      "identity_tokens": [
+        "id:arXiv:2607.06827",
+        "title:compress the cache not the speech embedding kv compression for efficient speech llms",
+        "url:https://www.semanticscholar.org/paper/7ea7acb33dec93f59390fa7334d6f8d8e433ebac"
+      ],
+      "record": {
+        "title": "Compress the Cache, Not the Speech Embedding: KV Compression for Efficient Speech LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/7ea7acb33dec93f59390fa7334d6f8d8e433ebac",
+        "year": 2026,
+        "published": "2026-07-07",
+        "abstract": "Speech large language models (Speech LLMs) typically encode speech into sequences far longer than text, creating a major efficiency bottleneck during autoregressive decoding. A common remedy is to compress the speech sequence at the adapter level to remove temporal redundancy before it enters the LLM; however, such early downsampling risks discarding fine-grained information that cannot be recovered. We propose SpeechKV, which applies a learned pooling to the KV cache of speech tokens inside the LLM. This design allows the LLM to fuse speech and text internally while directly accelerating decoding. Trained on 71K hours of speech data, SpeechKV compresses the speech to approximately text-level granularity yet maintains performance on par with or even slightly better than the uncompressed baseline, with relative gains of 6.6% on out-of-domain entity recognition and 2.3% on OpenASR, while delivering at least 1.49 times decoding speedup that scales with audio length.",
+        "canonical_id": "arXiv:2607.06827",
+        "arxiv_id": "2607.06827",
+        "authors": [
+          "Ke-Han Lu",
+          "Keqi Deng",
+          "Ruchao Fan",
+          "Rui Zhao",
+          "Jinyu Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3829079",
+      "identity_tokens": [
+        "id:DOI:10.1145/3829079",
+        "title:generative ai at the edge a comprehensive survey of architectures hardware and applications",
+        "url:https://www.semanticscholar.org/paper/761b09ba3102f8756c1b93c0fa12ad8312f9f0c0"
+      ],
+      "record": {
+        "title": "Generative AI at the Edge: A Comprehensive Survey of Architectures, Hardware and Applications",
+        "source_url": "https://www.semanticscholar.org/paper/761b09ba3102f8756c1b93c0fa12ad8312f9f0c0",
+        "year": 2026,
+        "published": "2026-07-07",
+        "abstract": "Generative Artificial Intelligence (GenAI) leverages generative models, including Diffusion models and Foundation Models (FMs) such as Large Language Models (LLMs), to generate new data. GenAI has attracted growing attention as it enables applications such as text generation, image synthesis, and multimodal reasoning. However, deploying such GenAI models on resource-constrained edge devices poses key challenges. Edge devices typically have limited computational power and strict energy budgets. They also face the memory-wall problem, where the cost of moving data between memory and compute units exceeds the cost of computation itself. This survey provides a comprehensive overview of techniques that enable GenAI deployment at the edge, covering software optimizations, hardware innovations, and system-level frameworks. While all three categories are discussed, particular emphasis is given to hardware-focused approaches. We review recent hardware studies and classify them into three main levels: computation, memory, and scheduling, with eight finer-grained subcategories that capture the mainstream hardware techniques. Many of these are hardware–software co-design strategies that align GenAI workloads with edge resource constraints. By synthesizing state-of-the-art solutions and identifying open challenges, this survey outlines a roadmap for building efficient GenAI systems at the edge.",
+        "canonical_id": "DOI:10.1145/3829079",
+        "doi": "10.1145/3829079",
+        "authors": [
+          "Mozhgan Navardi",
+          "Yuzhe Fu",
+          "Yueqian Lin",
+          "Hai Li",
+          "Yiran Chen",
+          "T. Mohsenin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.05061",
+      "identity_tokens": [
+        "id:arXiv:2607.05061",
+        "title:kvpop keyvalue cache compression with predictive online pruning",
+        "url:https://www.semanticscholar.org/paper/ac7ed322fd7d9bd3c63d65808e2df18100b2f173"
+      ],
+      "record": {
+        "title": "KVpop - Key-Value Cache Compression with Predictive Online Pruning",
+        "source_url": "https://www.semanticscholar.org/paper/ac7ed322fd7d9bd3c63d65808e2df18100b2f173",
+        "year": 2026,
+        "published": "2026-07-06",
+        "abstract": "Key-value (KV) cache growth is a major bottleneck in autoregressive decoding, as memory and bandwidth scale linearly with context length. Existing KV eviction methods often rely on static heuristics or proxy scores, which poorly track future token utility and cause brittle eviction as relevance shifts. To address this, we introduce KVpop, which learns a fixed-budget KV eviction policy by directly supervising the keep-or-drop decision. The scorer is trained against a novel future-attention target, computed efficiently without materializing dense attention maps. We further introduce a delayed memory-based scorer that, uniquely among learned eviction methods, defers scoring for a fixed number of steps to exploit near-future context. On AIME and HMMT mathematical reasoning, KVpop retains 98% of full-attention performance on Qwen3-4B at 75% KV cache compression and 97% at 88% compression, consistently outperforming established eviction baselines. Qwen3-8B shows even stronger results, reaching near-full teacher performance. These results show that supervising eviction with future-attention signals cuts memory costs while maintaining quality.",
+        "canonical_id": "arXiv:2607.05061",
+        "arxiv_id": "2607.05061",
+        "authors": [
+          "Lukas Hauzenberger",
+          "N. Schmidinger",
+          "A. Hartl",
+          "David Stap",
+          "Thomas Schmied",
+          "Sebastian Bock",
+          "Günter Klambauer",
+          "Sepp Hochreiter"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.07724",
+      "identity_tokens": [
+        "id:arXiv:2607.07724",
+        "title:uncertaintygated selection for blocksparse attention",
+        "url:https://www.semanticscholar.org/paper/e160d63ad098ca82680e4af816c822cba8e70a0a"
+      ],
+      "record": {
+        "title": "Uncertainty-gated selection for block-sparse attention",
+        "source_url": "https://www.semanticscholar.org/paper/e160d63ad098ca82680e4af816c822cba8e70a0a",
+        "year": 2026,
+        "published": "2026-07-04",
+        "abstract": "Block-sparse attention scales long-context language models by replacing the O(N^2) softmax with a per-query top-k selection over key blocks. This cutoff is myopic: when the k-th and (k+1)-th blocks are nearly tied in score, the selector commits without spending extra budget, and a dropped block carrying answer evidence is unrecoverable downstream. We propose a value-of-information router that measures, for each query, how decisively the top-k cut was made, and doubles the kept set for the queries where that gap is smallest; the rule is backbone-agnostic and stacks with existing block-scoring methods such as Quest. On LongBench-v2 medium at n=215 (the entire dataset subset), router-on-Quest reaches paired recall 0.75 vs. top-k 0.47 -- +28 pp over the SSA-style baseline (McNemar p<0.01) -- and lands within 2 pp of dense on RULER NIAH multikey at the same context. The lift reproduces on four models from three architectures (Qwen2.5, Mistral-Nemo, Qwen3.6). At 128K, the router preserves 0.81 and 0.89 of dense accuracy on Qwen2.5-7B-1M and Qwen3.6 (vs. SSA-style top-k at 0.09 on the former) while the fused selection-plus-kernel pipeline runs at 0.62x and 0.80x dense wall time.",
+        "canonical_id": "arXiv:2607.07724",
+        "arxiv_id": "2607.07724",
+        "authors": [
+          "Thomas Rossi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.03012",
+      "identity_tokens": [
+        "id:arXiv:2607.03012",
+        "title:hypervattention efficient sparse attention with spatiotemporal clustering for video diffusion",
+        "url:https://www.semanticscholar.org/paper/1688dc82818d920adf32bf9be2b9cc3dd85f79e1"
+      ],
+      "record": {
+        "title": "HyperVAttention: Efficient Sparse Attention with Spatio-Temporal Clustering for Video Diffusion",
+        "source_url": "https://www.semanticscholar.org/paper/1688dc82818d920adf32bf9be2b9cc3dd85f79e1",
+        "year": 2026,
+        "published": "2026-07-03",
+        "abstract": "Video Diffusion Transformers (VDiTs) have demonstrated significant capabilities in high-fidelity video generation. However, their ability to produce long-duration videos is fundamentally constrained by the quadratic complexity of the self-attention mechanism. Recent clustering-based sparse attention methods improve the quality-speed trade-off by grouping semantically similar tokens, but their practical efficiency remains limited by two bottlenecks: substantial clustering overhead and low CTA utilization caused by irregular cluster-induced blocks. We propose HyperVAttention (HVA), a training-free sparse attention framework that addresses both bottlenecks jointly. To reduce clustering overhead, we introduce 3D local-window clustering, which exploits the spatio-temporal locality of video tokens to restrict centroid search to fixed local neighborhoods, and implement it with a custom Triton kernel for efficient execution. We further propose a hybrid clustering strategy that performs full clustering only at anchor steps and updates only subset tokens at intermediate steps, leveraging the temporal stability of cluster assignments across denoising steps. To improve CTA utilization, we present hardware-aware cluster merging that minimizes CTA-aligned execution cost through parallel agglomerative merging, improving block density and approximation fidelity by utilizing idle tile capacity. Together, these components reduce clustering overhead, avoid redundant updates, and better align sparse attention with the fixed tile structure of modern GPU kernels. Experiments on Text-to-Video generation show that HVA establishes a new Pareto frontier for training-free sparse attention in video diffusion, reducing end-to-end latency by up to $2.13\\times$ while improving fidelity over existing training-free sparse attention baselines.",
+        "canonical_id": "arXiv:2607.03012",
+        "arxiv_id": "2607.03012",
+        "authors": [
+          "Dongyeun Lee",
+          "A. Zandieh",
+          "V. Mirrokni",
+          "Junmo Kim",
+          "Insu Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02640",
+      "identity_tokens": [
+        "id:arXiv:2607.02640",
+        "title:metronome bound the cache keep the beat for realtime interaction model serving",
+        "url:https://www.semanticscholar.org/paper/465e5218ee566b5c88341777bbfa4b7b94ee7cc6"
+      ],
+      "record": {
+        "title": "Metronome: Bound the Cache, Keep the Beat for Real-Time Interaction Model Serving",
+        "source_url": "https://www.semanticscholar.org/paper/465e5218ee566b5c88341777bbfa4b7b94ee7cc6",
+        "year": 2026,
+        "published": "2026-07-02",
+        "abstract": "Real-time interaction models -- Moshi, MiniCPM-o, Qwen-Omni -- turn serving into a periodic real-time task: on every frame a session ingests streaming audio and must respond by a recurring wall-clock deadline, while its KV cache grows monotonically and stays pinned for the whole conversation. This regime hides a dangerous failure mode. On a real full-duplex stack, sustained load does not degrade serving gracefully: it falls off a cliff, jumping in one step from milliseconds per frame to a stalled engine when accumulated session state exhausts the KV pool. The collapse is metastable -- identical five-minute runs collapse or survive on run-to-run variance -- and silent: latency and deadline-miss metrics read healthy throughout. We show one move restores both stability and observability: bound each session's resident state, and latency starts telling the truth. Metronome's in-engine KV window eliminates the collapse (0/20 vs. 14/20 runs across two batches) and turns per-frame latency into a monotone load signal, on which an online admission controller discovers the schedulable concurrency; without the window, the identical controller over-admits into the wall. A first-order model predicts the collapse time within a few percent on the headline model, and a quality probe validates the bound's design by ablation: the window alone is quality-free in turn-based decoding, and its few pinned attention-sink tokens are what keep free-running generation healthy. Everything is measured end-to-end on real audio, across four interaction models on one GPU.",
+        "canonical_id": "arXiv:2607.02640",
+        "arxiv_id": "2607.02640",
+        "authors": [
+          "Jiaying Meng",
+          "Bojie Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2026.3678524",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2026.3678524",
+        "title:transformkv optimizing multiturn conversational services in llms via kv cache transformation",
+        "url:https://www.semanticscholar.org/paper/2e845a50571456152f70c7d03765cdaa223c527a"
+      ],
+      "record": {
+        "title": "TransformKV: Optimizing Multi-Turn Conversational Services in LLMs via KV Cache Transformation",
+        "source_url": "https://www.semanticscholar.org/paper/2e845a50571456152f70c7d03765cdaa223c527a",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Multi-turn conversational systems based on large language models are increasingly being integrated into web platforms and applied across a wide range of domains. However, these systems typically combine the user’s current query with contextual information from previous interactions, resulting in continuously expanding input prompts. This leads to a significant increase in time-to-first-token (TTFT), causing intolerable delays in web response times. To address this issue, we introduce TransformKV, which maximizes the reuse of the KV cache from previous conversations rather than recomputing, thereby reducing TTFT latency. TransformKV first identifies the specific locations that require transformation to maximize the reuse of the KV cache with minimal operations. It then efficiently transforms the KV cache for a subset of tokens by recomputing only the KV cache that impact semantics. Additionally, TransformKV further reduces TTFT latency by performing only QKV computations in certain layers while skipping other computations that contribute less to overall performance. Experimental results demonstrate that in multi-turn conversation tasks, TransformKV can reduce inference latency by up to 30%, achieving up to a 1.8<inline-formula><tex-math notation=\"LaTeX\">$\\mathbf{\\times}$</tex-math><alternatives><mml:math><mml:mrow><mml:mo>×</mml:mo></mml:mrow></mml:math><graphic position=\"float\" orientation=\"portrait\" xlink:href=\"chen-ieq1-3678524.gif\"/></alternatives></inline-formula> improvement in performance compared to similar approaches. Notably, as the context window size increases, the performance gains become even more pronounced.",
+        "canonical_id": "DOI:10.1109/TC.2026.3678524",
+        "doi": "10.1109/TC.2026.3678524",
+        "authors": [
+          "Jiahang Zhou",
+          "Zhiyuan Fang",
+          "Yusheng Qin",
+          "Wuhui Chen",
+          "Tao Zhang",
+          "Chuan-Fu Zhang",
+          "Zibin Zheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.00712",
+      "identity_tokens": [
+        "id:arXiv:2607.00712",
+        "title:towards memoryefficient autoregressive video generation via instancespecific parametric absorption",
+        "url:https://www.semanticscholar.org/paper/a417d19312b5673a20ce4902b06d476b71ff5c73"
+      ],
+      "record": {
+        "title": "Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption",
+        "source_url": "https://www.semanticscholar.org/paper/a417d19312b5673a20ce4902b06d476b71ff5c73",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Autoregressive (AR) streaming models have emerged as a powerful paradigm for long video generation. However, the linearly growing Key-Value (KV) cache poses a significant bottleneck, leading to memory overload and degraded inference throughput. A common compression method is to drop redundant KV tokens, which often breaks long-range dependencies, resulting in temporal flickering and identity loss. In this paper, we propose Instance-Specific Parametric Absorption (ISPA), a novel framework that shifts the KV cache compression from discarding to distilling. The core idea is to transit a subset of layers from Full-Attention (F-Layers) to memory-efficient Local-Attention (L-Layers) by\"absorbing\"historical context into the model's weights. Specifically, during a brief warmup phase, ISPA monitors the output discrepancy between global and local attention. At the transition point, we solve a closed-form least-squares problem to compute an instance-specific weight modulation that compensates for the missing history. Experiments across architectures (1.3B to 14B) demonstrate that ISPA can remove up to 50\\% of the KV cache with near-lossless visual quality. We hope this perspective encourages future work to explore parametric memory consolidation beyond external token-level cache management for streaming generative models.",
+        "canonical_id": "arXiv:2607.00712",
+        "arxiv_id": "2607.00712",
+        "authors": [
+          "Xiaomeng Fu",
+          "Jia Li",
+          "Yi-Ming Hu",
+          "Yong Wang",
+          "Hayden Kwok-Hay So",
+          "Jiao Dai",
+          "Xiangxiang Chu",
+          "Jizhong Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01002",
+      "identity_tokens": [
+        "id:arXiv:2607.01002",
+        "title:logitcontribution scoring identifies nonliteral retrieval heads",
+        "url:https://www.semanticscholar.org/paper/3534e9ab0fa88eb7cf7b00f28c9eb32c009024f1"
+      ],
+      "record": {
+        "title": "Logit-Contribution Scoring Identifies Non-Literal Retrieval Heads",
+        "source_url": "https://www.semanticscholar.org/paper/3534e9ab0fa88eb7cf7b00f28c9eb32c009024f1",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "In long-context use, large language models frequently synthesize answers from the meaning of a relevant context span rather than literally copy-pasting them. Identifying which attention heads perform this synthesis matters for interpreting long-context model behavior. Yet existing detectors miss these heads by construction: they reward heads whose attended token matches the generated token, a literal-copy criterion that captures where a head reads but not what it writes through its output-value (OV) circuit, the very mechanism that carries non-literal retrieval. We introduce Logit-Contribution Scoring (LOCOS), a write-aware detector that scores each head by the projection of its OV-circuit output onto the answer-token unembedding direction, contrasting needle and off-needle source positions in a single forward pass. Across three model families (Qwen3, Gemma-3, OLMo-3.1), mean-ablating the top LOCOS heads on the NoLiMa non-literal retrieval benchmark collapses ROUGE-L at lower head counts than prior attention-based detections; on Qwen3-8B, ablating 50 heads drives ROUGE-L from 0.401 to 0.000 while the strongest baseline still retains 0.292. The selected heads are retrieval-specific: parametric recall and arithmetic reasoning stay at baseline under the same ablation. On Qwen3-8B, the same ablation also drops MuSiQue from 0.55 to 0.08 and BABI-Long from 0.62 to 0.20, while a random-heads control stays within 0.05 of baseline.",
+        "canonical_id": "arXiv:2607.01002",
+        "arxiv_id": "2607.01002",
+        "authors": [
+          "Aryo Pradipta Gema",
+          "Beatrice Alex",
+          "Pasquale Minervini"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01308",
+      "identity_tokens": [
+        "id:arXiv:2607.01308",
+        "title:cache merging as a convergent replicated state for multiagent latent reasoning",
+        "url:https://www.semanticscholar.org/paper/0af67064afccf99a3180167e230c858d9291f1df"
+      ],
+      "record": {
+        "title": "Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/0af67064afccf99a3180167e230c858d9291f1df",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Multi-agent latent reasoning composes agents'KV-caches into one context for a final agent. Prior work (Agent Primitives) does this by concatenating caches along the sequence axis with RoPE re-encoding, which we call BagMerge. BagMerge is non-commutative, and the best input ordering is unpredictable, shifting with the regime, the latent-step budget, and the model scale. We make this exchange a convergent replicated state. First, CanonicalMerge fixes the layout by content: ordering caches by mean K-norm at a middle layer renders the merged cache byte-identical under any input permutation, verified algorithmically (arity N<=5) and bit-for-bit on real Qwen3-1.7B and 4B state. Second, we separate the replicated state from decode-time layout: the state is a set of content-addressed latent fragments whose merge is set union, a state-based CvRDT (commutative, associative, idempotent, absorbing), and CanonicalMerge is its deterministic render. Because the render is byte-equivalent, every N=2 accuracy number carries over unchanged and re-delivered duplicates are absorbed rather than re-concatenated. On a partitioned-reasoning benchmark, CanonicalMerge matches the best BagMerge ordering in every regime-by-budget-by-ordering cell without knowing which order is best, trading a small, statistically insignificant accuracy margin for an unconditional structural guarantee. The behaviour transfers to real multi-document QA (HotpotQA), while the closest training-free output-fusion baseline (PackLLM) loses by 45 points at matched budget, placing cache-level merging in a regime distinct from output-level fusion. Finally, at k>2 the approach transports and colocates latent traces but does not by itself compose them, which we characterize to motivate future work.",
+        "canonical_id": "arXiv:2607.01308",
+        "arxiv_id": "2607.01308",
+        "authors": [
+          "Carlos Baquero",
+          "Lu'is Brito"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.inffus.2026.104630",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.inffus.2026.104630",
+        "title:agentic mobile ai systems from posthoc optimization to runtimeelastic realization",
+        "url:https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b"
+      ],
+      "record": {
+        "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+        "source_url": "https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+        "doi": "10.1016/j.inffus.2026.104630",
+        "authors": [
+          "Sicong Liu",
+          "Wei-Ye Wu",
+          "Xiangrui Xu",
+          "Teng Li",
+          "Bowen Pang",
+          "Wentao Zhou",
+          "Bin Guo",
+          "Zhiwen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icufn69619.2026.11628507",
+      "identity_tokens": [
+        "id:DOI:10.1109/icufn69619.2026.11628507",
+        "title:a survey on optimization techniques for ondevice large language model inference",
+        "url:https://www.semanticscholar.org/paper/a54ac6be03a8742be402874d8d34f812732b9f33"
+      ],
+      "record": {
+        "title": "A Survey on Optimization Techniques for On-Device Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/a54ac6be03a8742be402874d8d34f812732b9f33",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large Language Models (LLMs) have brought transformative advancements to natural language processing. However, their massive computational and memory requirements—stemming from tens of billions of parameters—make deployment on resource-constrained edge devices such as mobile phones and embedded systems highly challenging. Consequently, extensive research efforts have focused on enabling efficient on-device LLM inference. This paper provides an in-depth survey of two major inference acceleration techniques for on-device LLMs: KV cache optimization and speculative decoding. We present the core principles, representative studies, and performance characteristics of each approach. Furthermore, we discuss open challenges and future research directions, aiming to contribute to the advancement of efficient on-device LLM systems.",
+        "canonical_id": "DOI:10.1109/ICUFN69619.2026.11628507",
+        "doi": "10.1109/ICUFN69619.2026.11628507",
+        "authors": [
+          "Mingyu Jo",
+          "Sangoh Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jcc72984.2026.00017",
+      "identity_tokens": [
+        "id:DOI:10.1109/jcc72984.2026.00017",
+        "title:pegasus accelerating large language model inference with stateful prefix caching",
+        "url:https://www.semanticscholar.org/paper/1c22d85c33f4432c053b4f2c28d53cb6012b16bc"
+      ],
+      "record": {
+        "title": "Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching",
+        "source_url": "https://www.semanticscholar.org/paper/1c22d85c33f4432c053b4f2c28d53cb6012b16bc",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Modern large language model (LLM) inference suffers from severe Time-To-First-Token (TTFT) bottlenecks. Existing prefix KV caching mechanisms are inherently stateless, forcing a trade-off between cross-chunk attention accuracy and online recomputation overhead. To address this issue, we propose Pegasus, a novel stateful prefix KV caching system that aims to achieve full-context attention accuracy while avoiding costly recomputation. To handle the exponential growth of context states under limited memory capacity, Pegasus employs a Recursive Path-Pruning Caching (RPPC) algorithm to selectively cache high-value states based on access frequency, memory footprint, and asymmetric latency benefit. In addition, Pegasus introduces a transition-based KV management mechanism to mitigate cache-miss overhead. By exploiting the sparsity of state-dependent KV variations, it replaces expensive attention recomputation and I/O-intensive tensor reloading with lightweight sparse state transitions. Extensive experiments show that Pegasus improves end-to-end serving throughput by 45.9% on average, reduces TTFT by up to 78.5%, and lowers cache-miss recovery overhead by more than 72%.",
+        "canonical_id": "DOI:10.1109/JCC72984.2026.00017",
+        "doi": "10.1109/JCC72984.2026.00017",
+        "authors": [
+          "Fahao Chen",
+          "Peng Li",
+          "Dongxiao Yu",
+          "Song Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.31982",
+      "identity_tokens": [
+        "id:arXiv:2606.31982",
+        "title:era entropyguided visual token pruning with rectified attention for efficient mllms",
+        "url:https://www.semanticscholar.org/paper/3153a8f86eecb8c9dd8220f12efc4d409ad1608e"
+      ],
+      "record": {
+        "title": "ERA: Entropy-Guided Visual Token Pruning with Rectified Attention for Efficient MLLMs",
+        "source_url": "https://www.semanticscholar.org/paper/3153a8f86eecb8c9dd8220f12efc4d409ad1608e",
+        "year": 2026,
+        "published": "2026-06-30",
+        "abstract": "Multimodal Large Language Models (MLLMs) incur prohibitive inference costs due to long visual token sequences. Training-free visual token reduction provides an efficient solution. However, existing methods distort attention distributions, giving rise to a phenomenon we term Attention Logit Collapse. To address this issue, we propose ERA, an Entropy-guided visual token pruning framework with Rectified Attention for efficient MLLMs. Specifically, ERA comprises three crucial components: Dual-view Entropy Pruning (DEP), Bias-aware Token Recycling (BTR), and Logit-preserving Attention Rectification (LAR). First, DEP identifies representative anchor tokens by jointly modeling visual diversity and head-wise saliency. BTR then recycles pruned tokens into their corresponding anchors while estimating a cluster-level logit bias. Building upon this, LAR injects the estimated bias into attention logits, effectively rectifying the collapse induced by token reduction. Together, these components preserve visual evidence even under aggressive compression, enabling robust performance across single-image, multi-image, and video settings on a wide range of MLLMs. Beyond delivering practical acceleration, ERA establishes logit-preserving visual token pruning as a principled framework for efficient MLLMs, unifying theoretical foundation, algorithmic design, and practical deployment. The code is at https://github.com/924973292/ERA.",
+        "canonical_id": "arXiv:2606.31982",
+        "arxiv_id": "2606.31982",
+        "authors": [
+          "Yuhao Wang",
+          "Mu Qiao",
+          "Haiwen Diao",
+          "Yunzhi Zhuge",
+          "Ping-Ping Zhang",
+          "Xindong Zhang",
+          "Lei Zhang",
+          "Huchuan Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.31519",
+      "identity_tokens": [
+        "id:arXiv:2606.31519",
+        "title:rabitqcache rotated binary quantization for kvcache in long context llm inference",
+        "url:https://www.semanticscholar.org/paper/5cce67db69d4923f1af0fb2a1642ef0f12a29b03"
+      ],
+      "record": {
+        "title": "RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/5cce67db69d4923f1af0fb2a1642ef0f12a29b03",
+        "year": 2026,
+        "published": "2026-06-30",
+        "abstract": "Long-context Large Language Model inference is severely bottlenecked by the massive Key-Value (KV) cache, yet existing sparse attention methods often suffer from static fixed-budget (Top-k) retrieval or rely on proxy scores that are computationally expensive and biased. To address these limitations, we propose RaBitQCache, a novel sparse attention framework that utilizes randomized rotated binary quantization and high-throughput binary-INT4 arithmetic to efficiently estimate attention weights. Our proxy score serves as an unbiased estimator with a proven error bound, enabling adaptive Top-p retrieval that dynamically adjusts the token budget based on actual attention sparsity. We further implement a hardware-aware system with asynchronous pipelining and lazy updates to mask overhead. Evaluations demonstrate that RaBitQCache significantly accelerates inference and reduces memory I/O while preserving generation quality compared to state-of-the-art baselines. Code is available at https://github.com/Sakuraaa0/RaBitQCache.git.",
+        "canonical_id": "arXiv:2606.31519",
+        "arxiv_id": "2606.31519",
+        "authors": [
+          "Wenhao Li",
+          "Jin-Hao Dong",
+          "Hailin Zhang",
+          "Wenhang Shi",
+          "Wei Lu",
+          "Xiao-Yong Du"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.29563",
+      "identity_tokens": [
+        "id:arXiv:2606.29563",
+        "title:coveragedriven kv cache eviction for efficient and improved inference of llm",
+        "url:https://www.semanticscholar.org/paper/93185b5b968fc6542ee18791249bb662915ef919"
+      ],
+      "record": {
+        "title": "Coverage-Driven KV Cache Eviction for Efficient and Improved Inference of LLM",
+        "source_url": "https://www.semanticscholar.org/paper/93185b5b968fc6542ee18791249bb662915ef919",
+        "year": 2026,
+        "published": "2026-06-28",
+        "abstract": "Large language models (LLMs) excel at complex tasks like question answering and summarization, thanks to their ability to handle long-context inputs. However, deploying LLMs is costly, not only due to the high computational demands of quadratic complexity of self-attention and auto-regressive generation, but also because of the significant memory overhead required for storing the key-value (KV) cache during inference. To reduce the memory cost, existing KV-cache eviction strategies leverage the sparsity in attention to selectively store a subset of tokens. While reducing the memory footprint, such approaches show a considerable drop in performance, especially in tasks that require long-context reasoning. We identify that the drop in performance is linked to a reduction in the coverage of unique tokens. Additionally, we theoretically show that reduced coverage limits the mutual information between inputs and outputs, thereby impairing predictive accuracy. To this end, we introduce K-VEC, a novel coverage-aware KV-cache eviction strategy that prioritizes token coverage while evicting tokens in the cache. K-VEC introduces a cross-head and a cross-layer coverage module to enhance token retention across attention heads and model layers, mitigating performance degradation caused by low coverage. Evaluated on 16 LongBench subsets, K-VEC exhibit up to 10.35 points improvement over the existing methods under the same eviction rate and memory constraint. Comprehensive evaluations validate the effectiveness of our approach and demonstrate its potential for efficient LLM deployment in resource-constrained settings.",
+        "canonical_id": "arXiv:2606.29563",
+        "arxiv_id": "2606.29563",
+        "authors": [
+          "Shuvendu Roy",
+          "Mengyao Zhai",
+          "Hossein Hajimirsadeghi",
+          "Golnoosh Samei"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:837b288dd9d38a2a52bb2374169ba59e9b8225cb0f2ed9eaa0b6f71875572268",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
