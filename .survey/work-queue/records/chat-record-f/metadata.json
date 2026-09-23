@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-4507d6e7a694d747a350c3a0",
   "job_id": "job-research-e36fdfcc83960d96",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4507d6e7a694d747a350c3a0",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2509.14900",
+    "arxiv_id": "2509.14900",
+    "doi": "10.48550/arXiv.2509.14900",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
+    "title": "FURINA: Free from Unmergeable Router via LINear Aggregation of mixed experts",
+    "summary": "FURINAは、MoEとLoRAを組み合わせた既存のパラメータ効率的微調整法が、入力依存の離散ルータを持つため学習後にエキスパートを基盤モデルへ統合できず、推論時にも専用MoE実行系と追加遅延を必要とする問題を扱う。LoRA更新を方向と大きさへ分離し、全エキスパートで共有する学習可能な大きさベクトルと、上位エキスパートへの活性集中を促す選択損失を導入することで、出力ノルム自体に入力との適合度を表現させる自己ルーティングを実現する。学習後は全エキスパートを線形集約して単一LoRA、さらに基盤重みへ完全統合でき、標準LoRAと同等の推論遅延でMoE-LoRA級の性能を狙う。",
+    "list_summary": "離散ルータを出力ノルムによる自己ルーティングへ置換し、学習時はMoE-LoRAの容量を使いながら推論前に全エキスパートを単一LoRA・基盤重みへ完全統合する方式。",
+    "authors": ["Jiayi Han", "Liang Du", "Yinda Chen", "Xiao Kang", "Weiyang Ding", "Donghong Han"],
+    "authors_affiliations": "Inspur Genersoft / Inspur Group; Tencent Interactive Entertainment Group; Shandong University; Fudan University; Northeastern University, China",
+    "published": "2025-09-18",
+    "publication": "arXiv:2509.14900。2025-09-18初版、2025-09-25改訂v2。",
+    "publication_type": "Preprint",
+    "publication_status": "arXiv preprint",
+    "lineage": "MoE-LoRA / パラメータ効率的微調整 / マージ可能アダプタ / ルータ不要自己ルーティング",
+    "topics": ["MoE-LoRA", "LoRA", "パラメータ効率的微調整", "自己ルーティング", "線形再パラメータ化", "vLLM互換推論"],
+    "importance": "MoE-LoRAの表現容量と標準LoRAの完全マージ可能性を両立させる設計を提示する。3モデルの7主要ベンチマーク平均で標準LoRA 78.8に対しFURINA 83.6を得ながら、Llama3.2-3BのvLLM推論では初回トークン約10ms・100出力トークンまで約800msと標準LoRA相当である。",
+    "hardware_evaluation": "実験はNVIDIA GPU上で実施したと記載されるが、本文ではGPU型番を明示しない。推論時間はLlama3.2-3Bで入力100トークン・出力100トークンを固定し、各条件を5回繰り返して平均する。マージ可能方式はvLLM+EvalScope、非マージMoE-LoRAはMoE-PEFTでも測定する。",
+    "quality_effect": "推論時にMoEエキスパートを動的選択するのではなく、学習後の線形再パラメータ化で全更新を基盤へ統合するため、マージ後にFURINA固有の近似や実行時省略はない。品質面では7主要タスク平均83.6でLoRA 78.8を上回り、MixLoRA 83.1、LoRAMoE 83.5、MoLA 83.4と同等以上を報告する。",
+    "source": "https://arxiv.org/abs/2509.14900",
+    "sources": ["https://arxiv.org/abs/2509.14900", "https://arxiv.org/html/2509.14900v2", "https://arxiv.org/pdf/2509.14900"],
+    "code": null,
+    "implementation": "v2本文は『publication時に実装を公開予定』と記載しており、2026-09-23時点の確認では一次ソースから公式コードURLを確認できなかった。手法自体は学習後に標準LoRAまたは基盤重みへ統合でき、vLLMで通常のマージ済みモデルとして評価されている。",
+    "last_checked": "2026-09-23",
+    "references": ["arXiv:2407.10671"],
+    "references_checked_at": "2026-09-23",
+    "references_source": "primary-reference-section",
+    "references_total": 1
+  },
+  "reservation": {"claim_id": "claim-4507d6e7a694d747a350c3a0", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
