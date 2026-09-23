@@ -100,6 +100,31 @@ jobs:
               exit "$batch_rc"
             fi
 
+            : > /tmp/submission-results.txt
+            while IFS= read -r descriptor; do
+              [ -n "$descriptor" ] || continue
+              kind="$(basename "$(dirname "$descriptor")")"
+              name="$(basename "$descriptor")"
+              result=".survey/work-queue/results/$kind/$name"
+              if [ -f "$result" ]; then
+                printf '%s\n' "$result" >> /tmp/submission-results.txt
+              fi
+            done < /tmp/immutable-submissions.txt
+
+            # Descriptor/result deltas update the advisory cache and, when a canonical
+            # cache already exists for that exact invocation, emit a normal derived
+            # run-state result through the existing continuation/finalization gates.
+            python .survey/scripts/update_worker_run_index.py \
+              --repo-root . \
+              --descriptors-file /tmp/immutable-submissions.txt \
+              --results-file /tmp/submission-results.txt \
+              --auto-snapshot \
+              --manifest /tmp/run-index-results.json
+            python .survey/scripts/compact_worker_hot_queue.py \
+              --repo-root . \
+              --apply \
+              --preflight-result-retention-hours 2
+
             python .survey/scripts/normalize_required_metadata.py --repo-root . --apply
             python .survey/scripts/record_run_ledger.py record --repo-root . --snapshot /tmp/submission-fast-baseline.json
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
@@ -112,6 +137,9 @@ jobs:
               .survey/work-queue/jobs \
               .survey/work-queue/results/research \
               .survey/work-queue/results/audit \
+              .survey/work-queue/run-state \
+              .survey/work-queue/completed-submission-requests \
+              .survey/work-queue/research-preflight \
               .survey/work-queue/run-ledger.json \
               .survey/work-queue/state.json \
               .survey/work-queue/next-jobs.json \
