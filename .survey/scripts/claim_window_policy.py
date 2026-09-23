@@ -1,19 +1,38 @@
 #!/usr/bin/env python3
-"""Central policy for Research/Audit claim-window buffering.
+"""Central policy for Research/Audit paper inventory and hot bank buffering.
 
-Only one paper is read at a time. The claim window controls how many assignments
-are reserved ahead of foreground work. Refill uses a low-watermark so a burst of
-quick blocked/deferred papers can be absorbed without making claim-result latency
-a foreground barrier.
+Paper ownership and record-bank capacity are intentionally separate layers:
+- a worker may own a deeper logical paper inventory;
+- only the leading hot slice needs record banks immediately;
+- the shared paper preload pool is sized independently from record-bank count.
+
+This keeps allocation latency low without turning every standby paper into a bank
+reservation.
 """
 from __future__ import annotations
 
-DEFAULT_CLAIM_WINDOW = 8
-MAX_CLAIM_WINDOW = 10
-REFILL_NUMERATOR = 1
-REFILL_DENOMINATOR = 2
-SHARED_POOL_HEADROOM_NUMERATOR = 1
-SHARED_POOL_HEADROOM_DENOMINATOR = 4
+EXPECTED_PARALLEL_WORKERS = 6
+
+# Logical paper inventory held by each worker. Only the foreground is read at once.
+DEFAULT_CLAIM_WINDOW = 12
+MAX_CLAIM_WINDOW = 24
+
+# Leading assignments kept bank-ready. Six workers therefore use at most 24 of the
+# current 32 banks for ordinary hot work, leaving the rest for repair/exception use.
+HOT_BANKED_CLAIMS = 4
+
+# Keep one additional hot-window worth of shared paper stock beyond the six complete
+# worker inventories. This stock is logical only and consumes no record bank.
+SHARED_PRELOAD_TARGET = (
+    DEFAULT_CLAIM_WINDOW * EXPECTED_PARALLEL_WORKERS
+    + HOT_BANKED_CLAIMS * EXPECTED_PARALLEL_WORKERS
+)
+
+# Switch to Discovery before Research stock gets close to one full six-worker load.
+# User policy: four times the inventory six workers can comfortably hold.
+RESEARCH_DISCOVERY_THRESHOLD = (
+    DEFAULT_CLAIM_WINDOW * EXPECTED_PARALLEL_WORKERS * 4
+)
 
 
 def normalize_window(value: int) -> int:
@@ -24,13 +43,25 @@ def normalize_window(value: int) -> int:
     return value
 
 
-def refill_threshold(window: int) -> int:
-    """Return the active-claim low-watermark that triggers one asynchronous refill."""
+def hot_banked_claims(window: int) -> int:
+    """Return how many leading assignments should be immediately bank-ready."""
     window = normalize_window(window)
+    return min(HOT_BANKED_CLAIMS, window)
+
+
+def refill_threshold(window: int) -> int:
+    """Trigger refill early enough to preserve the hot bank-ready slice.
+
+    For the default 12-paper inventory with a four-paper hot slice, refill begins at
+    nine remaining assignments. That means the refill/bank-promotion request starts
+    while one previously hot paper is still available, rather than after all four
+    hot assignments have been consumed.
+    """
+    window = normalize_window(window)
+    hot = hot_banked_claims(window)
     if window <= 1:
         return 0
-    threshold = (window * REFILL_NUMERATOR) // REFILL_DENOMINATOR
-    return max(1, min(threshold, window - 1))
+    return max(1, window - hot + 1)
 
 
 def should_refill(
@@ -47,14 +78,6 @@ def should_refill(
     return 0 < count < window and count <= mark
 
 
-def shared_pool_target(bank_count: int) -> int:
-    """Derive normal preload capacity while retaining proportional repair headroom."""
-    count = max(int(bank_count), 0)
-    if count <= 1:
-        return 0
-    headroom = max(
-        1,
-        (count * SHARED_POOL_HEADROOM_NUMERATOR + SHARED_POOL_HEADROOM_DENOMINATOR - 1)
-        // SHARED_POOL_HEADROOM_DENOMINATOR,
-    )
-    return max(count - headroom, 0)
+def shared_pool_target() -> int:
+    """Return the logical preload target; this is deliberately bank-independent."""
+    return SHARED_PRELOAD_TARGET
