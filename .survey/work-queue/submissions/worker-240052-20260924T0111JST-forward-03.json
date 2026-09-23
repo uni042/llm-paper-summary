@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "worker-240052",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.25624",
+      "arxiv_id": "2609.25624",
+      "title": "Accelerating the Mitigation of LLM Inference Nondeterminism Across GPU Architectures",
+      "source_url": "https://www.semanticscholar.org/paper/ea2c23ddf00fe3566381be04dc14534f81ba4c2a",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 85
+      },
+      "reason": "Cross-GPU reproducible LLM inference is implemented with fixed-configuration fused-upcast GEMM kernels and reports 1.17–3.1x end-to-end speedups over the prior deterministic approach, making it directly relevant to inference kernels and runtime reproducibility."
+    },
+    {
+      "canonical_id": "arXiv:2609.25916",
+      "arxiv_id": "2609.25916",
+      "title": "Beyond Scalar Sensitivity: Activation-Aware Mixed-Precision LLM Quantization with Cross-Layer Refinement",
+      "source_url": "https://www.semanticscholar.org/paper/21bd7e3b09e4e1b7a72197bcca5e270539335449",
+      "priority": 78,
+      "priority_breakdown": {
+        "base": 48,
+        "lineage": 15,
+        "recency": 15,
+        "venue": 0,
+        "total": 78
+      },
+      "reason": "CASA directly addresses mixed-precision bit allocation for LLM deployment, replacing scalar sensitivity with activation-aware Hessian structure and cross-layer refinement, especially for sub-3-bit inference."
+    },
+    {
+      "canonical_id": "arXiv:2609.21672",
+      "arxiv_id": "2609.21672",
+      "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/6a5dbd9fa51ed94d2de8cafc0ca37a8e39ef73a0",
+      "priority": 76,
+      "priority_breakdown": {
+        "base": 46,
+        "lineage": 15,
+        "recency": 15,
+        "venue": 0,
+        "total": 76
+      },
+      "reason": "L0-MoE targets inference acceleration by converting dense computation into lightweight sparse expert computation and reports up to 2.5x speedup, aligning with adaptive expert computation and MoE efficiency lineages."
+    },
+    {
+      "canonical_id": "arXiv:2609.21450",
+      "arxiv_id": "2609.21450",
+      "title": "Understanding LLM Quantization through Activation-Guided Compensation and Orthogonal Residuals",
+      "source_url": "https://www.semanticscholar.org/paper/4bc350d63aeade610b2ffccc236935ac34647a3d",
+      "priority": 70,
+      "priority_breakdown": {
+        "base": 45,
+        "lineage": 10,
+        "recency": 15,
+        "venue": 0,
+        "total": 70
+      },
+      "reason": "The work provides a deployment-relevant decomposition for aggressive W4A4 post-training quantization and derives practical rotation/scaling guidance validated across eight Llama and Mistral models."
+    },
+    {
+      "canonical_id": "arXiv:2609.23585",
+      "arxiv_id": "2609.23585",
+      "title": "Global Ranks Survive, Selected Heads Shift: BOS-Sink Topology under 4-bit Weight-Only Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/f992275cced1c153a71a0ad630ebbff2f1ddefa1",
+      "priority": 67,
+      "priority_breakdown": {
+        "base": 42,
+        "lineage": 10,
+        "recency": 15,
+        "venue": 0,
+        "total": 67
+      },
+      "reason": "This paper studies whether sink-aware inference policies remain valid after 4-bit PTQ and includes Jetson Orin NX measurements, providing concrete deployment guidance for quantized attention/KV-management policies."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "worker-240052-20260924T0109JST-forward-03",
+    "result_path": ".survey/work-queue/discovery-precheck/results/worker-240052-20260924T0109JST-forward-03.json",
+    "receipt": "sha256:8afbc0acffeea211f1b4efb6f0befb8ee3f101b493d6b4b7cd408429cd5f35e2"
+  },
+  "discovery_stats": {
+    "run_key": "adhoc-20260924T005200+09-00-worker-240052",
+    "round": "worker-240052-20260924T0109JST-forward-03",
+    "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+    "query_summary": "Fixed forward-citation window for AWQ from bank g preload, re-filtered against the current identity snapshot.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "arXiv:2609.25624",
+      "arXiv:2609.25916",
+      "arXiv:2609.21672",
+      "arXiv:2609.21450",
+      "arXiv:2609.23585"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}
