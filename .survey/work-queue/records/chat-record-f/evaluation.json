@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-4221ae4eae4238e95de8fb44",
-  "job_id": "job-research-8dfa4bfad6e4a344",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4221ae4eae4238e95de8fb44",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4221ae4eae4238e95de8fb44","job_id":"job-research-8dfa4bfad6e4a344","data":{"hardware":"既定テストベッドはA100 80GB×4を搭載したGPUサーバ1台とCPU専用サーバ4台。各サーバはIntel Xeon Gold 6342と利用可能RAM 400GBを持ち、GPUサーバ内CPUも注意計算へ参加する。既定ネットワークは100Gbps RoCEで、10Gbps LANも評価する。単一GPUサーバ構成とGPU1台群＋CPU4台群の双方を測る。","software":"vLLMを基盤にスケジューラを書き換え、CPU注意計算はOpenMPとAVX、分散CPUはRay、GPUメモリ上の入出力キューはCUDA IPCとMPSを使う。Yi-34Bは2-wayテンソル並列、Llama-2-70Bは4-wayテンソル並列、CPU/GPUともBF16。遅延モデルはsklearnの線形回帰で構築する。","methodology":"LSはShareGPT由来の会話長分布を用い、既定ではPoisson到着。BEはLongBench-v2（平均入出力8952/136、最大12K）とDailyMails（平均1964/397）を使い、Azure公開トレース由来で平均182.6要求/分を再生する。各実験は30分。LSはTTFTとTPOTのSLO達成率、BEはプリフィル・デコードのトークン生成スループットを評価する。既定SLOはYi-34BでTTFT 2秒/TPOT 0.2秒、Llama-70Bで3秒/0.25秒。到着率、SLO閾値、バースト、CPU台数、ネットワーク帯域、分離推論構成を変えて評価する。","baselines":"Llumnix＋CPU側vLLMを、GPUメモリ予約型のハイブリッド負荷基準として使用する。NEOはCPUへ注意計算を移すCPU-GPU基準で、公平性のためSLO制御を追加する。Sarathi-ServeはGPUのみでLSを常に優先するため、CPU利用によるSLO劣化がないSLO上限基準として扱う。","scope":"評価モデルはYi-34BとLlama-2-70B、GPUはA100世代、CPUはXeon Gold 6342であり、H100/B200やAMX前提の新CPUではCPU/GPU比が変わりうる。CPU注意が有利なのはGPUがモデル全重みを保持でき、主な不足がBE KVキャッシュ容量と注意帯域である設定である。論文は複数優先度への拡張を議論するが、実験の中心はLS/BEの二段階優先度である。"},"reservation":{"claim_id":"claim-4221ae4eae4238e95de8fb44","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
