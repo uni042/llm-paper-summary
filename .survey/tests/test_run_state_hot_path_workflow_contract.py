@@ -34,6 +34,13 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn("for attempt in $(seq 1 12)", preflight)
         self.assertIn("for attempt in $(seq 1 12)", builder)
 
+    def test_claim_lane_updates_incremental_cache_without_schedule_change(self):
+        text = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
+        self.assertIn("--claim-results-file /tmp/changed-claim-results.txt", text)
+        self.assertIn(".survey/work-queue/run-state", text)
+        self.assertIn("cron: '3/10 * * * *'", text)
+        self.assertIn("for attempt in $(seq 1 12)", text)
+
 
 if __name__ == "__main__":
     unittest.main()
