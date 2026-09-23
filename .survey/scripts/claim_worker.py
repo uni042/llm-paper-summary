@@ -786,7 +786,6 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         assigned_new += len(new_assignments)
         processed += 1
     return {
-        "processed": processed,    return {
         "processed": processed,
         "reused": reused,
         "errors": errors,
