@@ -46,95 +46,55 @@ jobs:
 
           git config user.name 'survey-discovery-recovery[bot]'
           git config user.email 'survey-discovery-recovery[bot]@users.noreply.github.com'
-          git fetch origin main
-          git reset --hard origin/main
 
-          python .survey/scripts/recover_discovery_submissions.py --root .survey
-          python .survey/scripts/refresh_queue_snapshot.py --repo-root .
-          python .survey/scripts/hot_dispatch.py --repo-root . refresh > /tmp/hot-dispatch.json
-
-          git add -A \
-            .survey/work-queue/jobs \
-            .survey/work-queue/results \
-            .survey/work-queue/state.json \
-            .survey/work-queue/discovery-state.json \
-            .survey/work-queue/discovery-preload \
-            .survey/work-queue/records \
-            .survey/work-queue/hot-dispatch.json \
-            "$DERIVED_SNAPSHOT"
-
-          if git diff --cached --quiet; then
-            echo 'No stale Discovery submissions require recovery.'
-            exit 0
-          fi
-
-          git commit -m 'survey-discovery-recovery: replay stale discovery payloads'
-
-          recover_derived_snapshot_conflict() {
-            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
-
-            if [ "${#conflicts[@]}" -eq 0 ]; then
-              return 0
-            fi
-
-            for conflict in "${conflicts[@]}"; do
-              case "$conflict" in
-                "$DERIVED_SNAPSHOT"|"$DERIVED_HOT_DISPATCH") ;;
-                *)
-                  echo 'Rebase conflict touches durable/non-derived state; refusing automatic resolution.' >&2
-                  printf 'Unmerged paths: %s\n' "${conflicts[*]:-none}" >&2
-                  if git rev-parse --verify -q REBASE_HEAD >/dev/null; then
-                    git rebase --abort || true
-                  fi
-                  return 1
-                  ;;
-              esac
-            done
-
-            echo 'Resolving rebuildable queue snapshot / hot-dispatch conflicts from latest main.'
-            # Both files are rebuildable indexes. Keep the freshly fetched main
-            # version during rebase, then regenerate them from the rebased
-            # durable jobs/state before publication.
-            for conflict in "${conflicts[@]}"; do
-              git checkout --ours -- "$conflict"
-              git add "$conflict"
-            done
-            if git diff --cached --quiet; then
-              git rebase --skip
-            else
-              GIT_EDITOR=true git rebase --continue
-            fi
-          }
-
-          refresh_derived_snapshot() {
-            python .survey/scripts/refresh_queue_snapshot.py --repo-root .
-            python .survey/scripts/hot_dispatch.py --repo-root . refresh > /tmp/hot-dispatch-after-rebase.json
-            if git diff --quiet -- "$DERIVED_SNAPSHOT" "$DERIVED_HOT_DISPATCH"; then
-              return 0
-            fi
-
-            git add "$DERIVED_SNAPSHOT" "$DERIVED_HOT_DISPATCH"
-            if [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ]; then
-              git commit -m 'survey-discovery-recovery: refresh derived indexes after rebase'
-            else
-              git commit --amend --no-edit
-            fi
-          }
-
-          for attempt in 1 2 3 4 5; do
+          # Discovery completion can reserve the next prepared bank. Recompute the
+          # whole recovery/advance transaction after a push race so a preload that
+          # another worker took meanwhile is never published as a double claim.
+          for attempt in $(seq 1 12); do
             git fetch origin main
-            if ! git rebase origin/main; then
-              recover_derived_snapshot_conflict || exit 1
-            fi
-            refresh_derived_snapshot
+            git reset --hard origin/main
 
+            python .survey/scripts/recover_discovery_submissions.py --root .survey \
+              > /tmp/discovery-recovery.json
+            cat /tmp/discovery-recovery.json
+
+            python .survey/scripts/auto_advance_discovery.py \
+              --repo-root . \
+              --recovery-report /tmp/discovery-recovery.json \
+              > /tmp/discovery-auto-advance.json
+            cat /tmp/discovery-auto-advance.json
+
+            python .survey/scripts/refresh_queue_snapshot.py --repo-root .
+            python .survey/scripts/hot_dispatch.py --repo-root . refresh > /tmp/hot-dispatch.json
+
+            git add -A \
+              .survey/work-queue/jobs \
+              .survey/work-queue/results \
+              .survey/work-queue/state.json \
+              .survey/work-queue/discovery-state.json \
+              .survey/work-queue/discovery-preload \
+              .survey/work-queue/discovery-precheck \
+              .survey/work-queue/direct-take-results/discovery \
+              .survey/work-queue/run-state \
+              .survey/work-queue/records \
+              .survey/work-queue/hot-dispatch.json \
+              "$DERIVED_SNAPSHOT"
+
+            if git diff --cached --quiet; then
+              echo 'Discovery recovery and next-bank advancement are already settled.'
+              exit 0
+            fi
+
+            git commit -m 'survey-discovery-recovery: settle rounds and advance prepared bank'
             if git push origin HEAD:main; then
               exit 0
             fi
 
-            echo "Discovery recovery push race on attempt ${attempt}; rebasing the prepared recovery commit."
-            sleep $((attempt * 2))
+            echo "Discovery recovery push race on attempt ${attempt}; recomputing from latest main."
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            sleep "$backoff"
           done
 
-          echo 'Failed to publish Discovery recovery after 5 non-fast-forward recovery attempts.' >&2
+          echo 'Failed to publish Discovery recovery after 12 recomputation attempts.' >&2
           exit 1

@@ -32,6 +32,18 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn("periodic recovery will retry unsettled requests", text)
         self.assertIn("cron: '4/10 * * * *'", text)
 
+    def test_discovery_recovery_auto_advances_prepared_bank_with_push_race_recompute(self):
+        text = (WORKFLOWS / "survey-discovery-recovery.yml").read_text(encoding="utf-8")
+        self.assertIn("for attempt in $(seq 1 12)", text)
+        self.assertIn("git reset --hard origin/main", text)
+        self.assertIn("auto_advance_discovery.py", text)
+        self.assertIn("--recovery-report /tmp/discovery-recovery.json", text)
+        self.assertIn(".survey/work-queue/discovery-precheck", text)
+        self.assertIn(".survey/work-queue/run-state", text)
+        self.assertIn(".survey/work-queue/direct-take-results/discovery", text)
+        self.assertIn("recomputing from latest main", text)
+        self.assertNotIn("git rebase origin/main", text)
+
     def test_preflight_and_descriptor_materialization_keep_periodic_recovery(self):
         preflight = (WORKFLOWS / "survey-research-quality-preflight.yml").read_text(encoding="utf-8")
         builder = (WORKFLOWS / "survey-completed-builder-fast.yml").read_text(encoding="utf-8")

@@ -264,6 +264,8 @@ Discoveryは、run開始後に外部APIの取得を始める待ち時間を減�
 
 正式な採否確定・Candidate submissionに使ってよい候補は、schema v3 resultが `evaluation_allowed=true` として返した `allowed_records` だけである。第2.0.1節のDiscovery direct takeではpreload resultのrecordsを**暫定的に先行評価**してよいが、正式precheck完了後に `allowed_records` との積集合へ必ず絞り、除外された候補をsubmissionへ送らない。direct take以外でprecheck resultが未完了なら、旧schemaへ逃げずに同じ現行経路を完了させる。
 
+**2ラウンド目以降のprepared-bank即時継続:** Discovery submission/resultが成功して `discovery-state.json` へroundが反映されると、`survey-discovery-recovery` は同じcommit内で今回runのcontinuation gateを再導出する。残り600秒より多く、`required_action=DISCOVER_AGAIN` で、selector方向にPRECHECKED preloadがあれば、最古の1窓をcreate-only相当で排他的にclaimし、`auto-next-discovery-*` のrun固有schema v3 precheck requestまで自動materializeする。同時に `.survey/work-queue/run-state/results/auto-discovery-advance-*.json` と `run-state/latest/<worker_id>.json` を更新し、`auto_next_discovery.work_start_allowed=true` を付ける。workerは同一 `run_key / scheduled_slot / actual_invocation_start` のこのsnapshotが見えたら、追加run-state requestや別preload takeを作らず、指定された `discovery_bank / discovery_slot_path` のpreload resultを使って次roundの軽量評価へ直行する。正式precheckがpendingでも先行評価はよいが、submissionは `formal_precheck_result_path` が `ok=true / evaluation_allowed=true` になるまで禁止し、最終候補を正式 `allowed_records` との積集合へ絞る。該当方向のPRECHECKED bankが無い場合も同じfast laneが最新run-state snapshotを残すので、その `DISCOVER_AGAIN` に従って固定ソースprecheckへ即時フォールバックする。push競合時は最新mainからround反映とbank選択を再計算し、他workerが先に取ったbankを二重claimしない。
+
 ### 4.1 探索方法
 
 探索は**引用グラフ優先（citation-first）**とし、既存の収録論文に直接つながる2方向を主経路にする。どちらも同じschema v3 precheck、identity/rejection重複排除、固定ソースページ送りを使う。
