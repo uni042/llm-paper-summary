@@ -105,6 +105,28 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
             self.assertEqual(request["target_unseen"], 20)
             self.assertTrue(request["run_key"].startswith("preload:"))
 
+    def test_failed_preload_does_not_count_as_stock_and_is_replaced(self) -> None:
+        first = preload.top_up(self.root, target=1, max_new=1)
+        self.assertEqual(first["created_count"], 1)
+        entry = preload._entries(self.root)[0]
+        write_json(
+            self.root / preload._result_path(entry),
+            {
+                "schema_version": 3,
+                "operation": "precheck_discovery_candidates",
+                "ok": False,
+                "request_id": entry["precheck_request_id"],
+                "run_key": f"preload:{entry['preload_id']}",
+                "error": "synthetic transient provider failure",
+            },
+        )
+        self.assertEqual(preload._status(self.root, entry, dt.datetime.now(dt.timezone.utc)), "FAILED")
+
+        second = preload.top_up(self.root, target=1, max_new=1)
+        self.assertEqual(second["available_before"], 0)
+        self.assertEqual(second["created_count"], 1)
+        self.assertNotEqual(second["created"][0], entry["preload_id"])
+
     def test_claim_is_exclusive_then_expired_claim_is_reusable(self) -> None:
         entry = self._prepare_forward_result()
         available = preload.pick_available(self.root, direction="forward")
