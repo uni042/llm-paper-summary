@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 18:41:22 JST**
+> 自動生成: **2026-09-23 18:45:34 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **153** |
-| 未claim Research job | **153** |
-| 直近24hの検証済みResearch収録 | **87** |
-| 最終検証済みResearch収録 | **09-23 18:41:19 JST（3秒前）** |
+| 収録候補論文 | **152** |
+| 未claim Research job | **152** |
+| 直近24hの検証済みResearch収録 | **88** |
+| 最終検証済みResearch収録 | **09-23 18:45:27 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **153** |
+| canonical_id確認済みの一意な候補論文 | **152** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **153** |
+| 非終端Research job合計 | **152** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（10時間10分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（10時間14分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **21** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **22** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **21** | **4** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **22** | **4** | **0** | **3** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 18:45:27 JST** [research] `arXiv:2602.05711` — OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale
+  - job: `.survey/work-queue/jobs/job-research-c732ba9bb46aaf3a.json`
+  - result: `.survey/work-queue/results/research/attempt-bcdd660e4bafb23e846f2ec8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-bcdd660e4bafb23e846f2ec8.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md`
 - **09-23 18:41:19 JST** [research] `arXiv:2410.18248` — Fast Inference for Augmented Large Language Models
   - job: `.survey/work-queue/jobs/job-research-c7bef3f1698aa85a.json`
   - result: `.survey/work-queue/results/research/attempt-54c192f36494effc75698854.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-4221ae4eae4238e95de8fb44.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-4221ae4eae4238e95de8fb44.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2603.12831-serving-hybrid-llm-loads-with-slo-guarantees-using-cpu-gpu-attention-piggybacking.md`
-- **09-23 16:05:31 JST** [research] `arXiv:2601.18089` — LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts
-  - job: `.survey/work-queue/jobs/job-research-88a9229b2587f714.json`
-  - result: `.survey/work-queue/results/research/attempt-3b0b8499edf3a5b73b2ca7f6.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-3b0b8499edf3a5b73b2ca7f6.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md`
 
 ### Audit
 
@@ -199,7 +199,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **153** |
+| ready | **152** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +219,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **992** |
+| inference/training/survey配下の論文Markdown実体 | **993** |
 
 ### immutable submissionの未照合
 
