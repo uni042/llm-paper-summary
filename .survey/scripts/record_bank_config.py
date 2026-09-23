@@ -59,6 +59,25 @@ def canonical_slot_paths(bank: str) -> dict[str, str]:
     return {slot: slot_path(bank, slot) for slot in SLOT_NAMES}
 
 
+def bank_for_sequence(sequence: int) -> str:
+    """Deterministically shard logical preload stock across the canonical banks.
+
+    Research and Discovery use the same bank order but independent lanes. A bank
+    may therefore hold Research preload ownership and Discovery preload ownership
+    at the same time without either lane consuming the other's payload.
+    """
+    if isinstance(sequence, bool) or not isinstance(sequence, int) or sequence < 0:
+        raise ValueError("bank stock sequence must be a non-negative integer")
+    return BANK_IDS[sequence % len(BANK_IDS)]
+
+
+def bank_index(bank: str) -> int:
+    bank = str(bank or "").lower()
+    if bank not in BANK_ROOTS:
+        raise ValueError(f"unknown record bank: {bank}")
+    return BANK_IDS.index(bank)
+
+
 def accepted_slot_paths(bank: str, slot: str) -> tuple[str, ...]:
     """Return canonical path plus narrowly-scoped historical read aliases."""
     canonical = slot_path(bank, slot)
