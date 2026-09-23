@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-b1a52303c9877f76cd4ddc7e",
-  "job_id": "job-research-d69ddf3864beda69",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b1a52303c9877f76cd4ddc7e",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-b1a52303c9877f76cd4ddc7e","job_id":"job-research-d69ddf3864beda69","data":{"problem":"プリフィルとデコードを別GPUプールへ分離すると各段階の計算特性に合わせて最適化できるが、両段階を結ぶKVキャッシュは要求ごとに数百MiB〜数GiBとなる。単一クラスタでは高速RDMAで転送できる一方、マルチクラウドではWANが2〜12 Gb/s程度まで落ち、GPU種類、地域、スポット価格、egress料金も変動する。そのため最安デコード先へ単純に移すとKV転送がTTFTを支配し、prefix cache所有者だけを優先すると負荷集中、価格だけを見ると再利用率低下が起きる。Janusはprefill配置、decode配置、KVのmigrate/recompute/部分転送、長期費用、容量調整を同時に扱う問題として定式化する。","novelty":"新規性はKV輸送をサービングの固定機構ではなく要求単位の最適化変数へ昇格させ、prefix再利用とマルチクラウド価格・帯域を一つのオンライン制御系に結合した点にある。オフライン問題のNP困難性を踏まえ、S1 prefix-aware prefill配置、S2 KV-aware decode/transport選択、S3 Lyapunov drift-plus-penalty長期制御、S4低頻度pool sizingへ分解する。KV輸送は全量移送M、再計算R、層単位hybrid H-k、prefix転送+suffix再計算Σを比較し、H-kには層分割の閉形式最適解を与える。","method_overview":"要求nについて、まず分散radix indexから再利用可能prefixと所有poolを得る。S1はprefix再利用価値を単調劣モジュラ目的として容量・適合性制約下でprefill poolを選び、実装greedyは容量余裕時1/2、異種KV容量制約時1/3の保証を持つ。S2は選んだprefill poolから互換decode poolごとに4種KV輸送の遅延Λ、ドル費用Ψ、仮想queue混雑価格を計算し、Λ+VΨ+Qδを最小化する。hybridでは1層転送時間aと再計算時間bを並行させ、k*=Nlayers*b/(a+b)近傍の整数を評価する。S3はSLO違反用virtual queueを更新し、Lyapunov drift-plus-penaltyで短期遅延と長期費用を調整する。S4は30秒周期で予測利用率、queue、tail riskからpool replica数を増減する。","components":[{"name":"S1: prefix-aware prefill配置","description":"分散radix indexで各要求の最長再利用prefixを追跡し、prefix reuseを単調劣モジュラ集合関数として扱う。GPU/KV容量とモデル互換性を満たしながら再利用量を最大化し、配置不能時は互換poolの最小コスト先へfallbackする。"},{"name":"S2: KV-aware decodeと輸送選択","description":"各decode候補について全量migrate、decode側recompute、層単位hybrid、prefix選択転送の遅延・egress費・GPU再計算費を比較する。WAN goodputとprompt長に応じて純移送と再計算の優劣が反転するため要求単位で選ぶ。"},{"name":"Hybrid layer pipeline","description":"転送するk層と再計算する残り層を独立streamで重ね、理想遅延max(ka,(N-k)b)を最小化する閉形式分割を導出する。整数化ではfloor/ceilを評価し、fill/drainのmax(a,b)を実現可能遅延上界へ加える。"},{"name":"S3/S4 長期制御","description":"SLO違反をvirtual queueへ写像し、価格重みVで遅延と費用のPareto点を制御する。さらに30秒周期で需要予測、利用率、queue、tail-risk inflatorから各poolのreplica数を調整し、region GPU上限内へclipする。"}],"system_design":"Raft協調制御プレーンがAWS/GCP/Azureの異種prefill/decode pool、分散radix index、価格・帯域telemetryを管理する。データプレーンではKV転送と再計算をCUDA/DMA streamで重畳し、TP構成が異なるpool間では転送中にre-shardする。要求のデータ所在地制約もdecode候補選別へ入る。"},"reservation":{"claim_id":"claim-b1a52303c9877f76cd4ddc7e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
