@@ -153,9 +153,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         if refill_threshold_raw is None
         else max(0, min(int(refill_threshold_raw), claim_window - 1))
     )
-    claim_window_remaining = max(
-        int(getattr(args, "claim_window_remaining", claim_window - active_claim_count) or 0),
-        0,
+    claim_window_remaining_raw = getattr(args, "claim_window_remaining", None)
+    claim_window_remaining = (
+        max(claim_window - active_claim_count, 0)
+        if claim_window_remaining_raw is None
+        else max(int(claim_window_remaining_raw), 0)
     )
     claim_refill_needed = claim_window_policy.should_refill(
         active_claim_count,
@@ -573,7 +575,7 @@ def main() -> int:
     ap.add_argument("--active-claim-count", type=int, default=0)
     ap.add_argument("--claim-window", type=int, default=claim_window_policy.DEFAULT_CLAIM_WINDOW)
     ap.add_argument("--claim-refill-threshold", type=int, default=None)
-    ap.add_argument("--claim-window-remaining", type=int, default=claim_window_policy.DEFAULT_CLAIM_WINDOW)
+    ap.add_argument("--claim-window-remaining", type=int, default=None)
     ap.add_argument("--spillover-work", type=yn, default=False)
     ap.add_argument("--can-discover", type=yn, default=True)
     ap.add_argument("--claim-state-checked", type=yn, default=False)
