@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-e9383c5ed3b356c7078986c9",
-  "job_id": "job-research-69b42673d686f6f1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e9383c5ed3b356c7078986c9",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-e9383c5ed3b356c7078986c9","job_id":"job-research-69b42673d686f6f1","data":{"overview":"IHS-LMは高負荷時のbatch内skewと帯域変動時のstage間skewを別モジュールで抑え、統合時にSarathi-Serve+DynaPipeのbaselineより平均推論遅延を最大17.5%削減した。Qwen2.5-VL-32BではGYU/VizWizで328/342 ms/token、Yi-VL-34Bでは352/361 ms/tokenとなり、いずれもbaselineと各単独ablationを上回る。IHS単体は到着率5 req/sでTTFTを24.3秒から18.9秒へ下げ、TPOTを約20%削減する。BAMLMは50Mbpsへ劣化した条件でQwen2.5-VL-32Bを341 ms/token、Yi-VL-34Bを367 ms/tokenまで改善するが、候補層の冗長常駐によりGPUメモリは増加する。","key_results":[{"metric":"統合平均推論遅延","value":"最大17.5%削減","baseline":"Sarathi-Serve + DynaPipe","condition":"高負荷・異種帯域、GYU-DET/VizWiz-VQA、Qwen2.5-VL-32B/Yi-VL-34B","interpretation":"batch内とstage間の二種類の不均衡を同時に扱う効果を示す。"},{"metric":"Qwen2.5-VL-32B AIL","value":"328 ms/token (GYU), 342 ms/token (VizWiz)","baseline":"376 / 392 ms/token","condition":"full IHS-LM","interpretation":"IHSなし341/356、BAMLMなし358/371よりも統合構成が速い。"},{"metric":"Yi-VL-34B AIL","value":"352 ms/token (GYU), 361 ms/token (VizWiz)","baseline":"427 / 434 ms/token","condition":"full IHS-LM","interpretation":"両データセットで最小遅延。"},{"metric":"高負荷TTFT","value":"18.9 s","baseline":"Sarathi-Serve 24.3 s","condition":"Qwen2.5-VL-32B, 100Mbps, Poisson 5 req/s","interpretation":"KV容量とtoken backlogを用いるIHSがprefillによるdecode阻害を抑える。"},{"metric":"BAMLM 50Mbps AIL","value":"341 ms/token (Qwen2.5-VL-32B), 367 ms/token (Yi-VL-34B)","baseline":"DynaPipe 376/427、LinguaLinked 365/396 ms/token (GYU)","condition":"100Mbpsから約50Mbpsへ中間linkを劣化","interpretation":"帯域感知と細粒度境界層切替が通信由来のstage imbalanceに有効。"}],"negative_results":"BAMLMは候補境界層を隣接端末へ冗長常駐させるため、Qwen2.5-VL-32Bではbaseline約84.8〜84.6GBに対しIHS-LM約89.5〜89.3GB、Yi-VL-34Bでは87.1〜87.2GBに対し約89.9〜89.8GBへピークGPUメモリが増える。gamma=0.05では軽微な帯域変動にも反応して不要な移行が増え、gamma=0.20では50Mbps級の劣化でも移行が発火せずbubbleが蓄積するため、閾値選択に感度がある。","interpretation":"性能向上は単なる層再配置だけではなく、IHSが短時間のrequest/token変動を、BAMLMがより長い時間尺度のlink変動を処理する役割分担から生じる。ablationでどちらか一方を外すと遅延が悪化するため、二つの制御ループは補完的である。一方、物理重み転送を避ける代わりに冗長メモリを予約するため、速度とGPU容量の明確なtrade-offがある。","quality_impact":"モデル重み・architectureを変更しないため精度は概ね維持される。Qwen2.5-VL-32Bのfull IHS-LMはGYU/VizWizで75.2/76.1%、Yi-VL-34Bは77.5/78.3%。baselineとの差は小さく、主な代償は品質低下ではなく冗長層によるメモリ増加である。"},"reservation":{"claim_id":"claim-e9383c5ed3b356c7078986c9","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
