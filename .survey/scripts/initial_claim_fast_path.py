@@ -118,7 +118,7 @@ def _select_candidates(
     selected: list[dict[str, Any]] = []
     jobs_by_id: dict[str, dict[str, Any]] = {}
 
-    for current in shared_preload_pool.waiting_claims(claims):
+    for current in shared_preload_pool.waiting_claims(claims, repo_root=root):
         job_id = str(current.get("job_id") or "")
         if not job_id:
             continue
