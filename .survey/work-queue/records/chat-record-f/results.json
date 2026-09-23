@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-b1a52303c9877f76cd4ddc7e",
-  "job_id": "job-research-d69ddf3864beda69",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b1a52303c9877f76cd4ddc7e",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b1a52303c9877f76cd4ddc7e","job_id":"job-research-d69ddf3864beda69","data":{"overview":"Janusは強いmulti-cloud baselineに対し、Llama-3-70Bで中央値TTFTを3.8倍、P99を4.6倍改善し、goodputを2.1倍、reuse-captureを71%へ高め、費用を38%削減したと報告する。prefix locality、WAN帯域、spot priceを共同最適化する効果は障害やburstでも維持され、12〜192 podへの拡張時もscheduler latencyは0.6から1.4msへ緩やかに増える。","key_results":[{"metric":"TTFT改善","value":"median 3.8×, P99 4.6×","baseline":"Mooncake-MC","condition":"Llama-3-70B, 96-pod/512-GPU multi-cloud simulation","interpretation":"KV輸送とprefix配置を共同選択することでtail latencyも大幅に改善する。"},{"metric":"goodput","value":"2.1×","baseline":"strongest constructed multi-cloud baseline","condition":"trace-driven simulation","interpretation":"SLOを満たす処理量が増える。"},{"metric":"reuse-capture","value":"71%","baseline":"Mooncake-MCの約1.5×、round-robinの約9×","condition":"multi-tenant assistant trace","interpretation":"単なるprefix-hit機会ではなく、配置によって実際に再利用できたprefix token量が増える。"},{"metric":"cost reduction","value":"38%","baseline":"strongest multi-cloud baseline","condition":"volatile spot prices and heterogeneous clouds","interpretation":"価格裁定をKV状態移動コストと同時に評価することで、遅延悪化を避けながら費用を下げる。"},{"metric":"hybrid transport","value":"560 ms vs migrate 1792 ms / recompute 806 ms","baseline":"pure transport policies","condition":"cold decode pool, 8K prompt, calibrated model","interpretation":"25層転送・55層再計算の分割で、全量移送より3.2倍、全再計算より1.4倍短いモデル推定遅延となる。"},{"metric":"oracle proximity","value":"89.4% of oracle cost, 92.1% of oracle TTFT","baseline":"offline LP-relaxation oracle with future knowledge","condition":"simulation traces","interpretation":"オンライン分解の損失が評価traceでは約11%範囲に収まる。"}],"negative_results":"主要結果は実クラウド横断配備ではなく、単一pod実測で校正したシミュレータによる。HybridのCUDA/DMA重畳も実行timeline上は可能とするが、nsys/ncuでの実測重畳効率は未検証。長文脈ではWAN全量migrateが不可能になる領域があり、最適方策は帯域とcache warmnessに強く依存する。region failure時もJanusのP99 spikeは47秒まで上がるため障害影響自体は消えない。","interpretation":"Janusの結果は『最適なKV輸送方式は一つではない』ことを定量化している。12 Gb/s級WANと16K promptでは移送と再計算が拮抗し、2.5 Gb/sでは再計算、100 Gb/s intra-regionでは移送が優位になるため、prefix localityとqueueを含め要求ごとに方策を切り替える価値がある。","quality_impact":"生成品質を変更する圧縮・近似法ではないため、主な影響は応答遅延、SLO達成率、費用、再利用率。recomputeも同一モデルprefillを再実行する設計で、論文はモデル精度劣化を主要論点としていない。"},"reservation":{"claim_id":"claim-b1a52303c9877f76cd4ddc7e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
