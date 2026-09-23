@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-2bf3de3b255ebab0e493ae1d",
-  "job_id": "job-research-3d00beb8c812c5e7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2bf3de3b255ebab0e493ae1d",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-2bf3de3b255ebab0e493ae1d","job_id":"job-research-3d00beb8c812c5e7","data":{"limitations":"FlashGPU-simはPTX実行駆動であり、実機SASSの命令融合・削除・scheduler判断を完全再現するものではない。静的reorderingで主要な順序差を補正するが、FA-4の例が示すようにこの補正なしでは小規模・低並列kernelの誤差が大きい。memory subsystemもarchitecture別service rateとIPOLY hashを較正したmodelで、gem5 memory統合は今後の課題。単一GPUが中心でNVLinkを含むmulti-GPUは未対応。offline Triton modeは実機reference outputとautotune profileを得られず、online captureは対象実GPUを必要とする。cycle精度は131構成で検証されたが、任意kernelや将来architectureへの同精度を保証しない。","differences":"GPGPU-Simは実行駆動だが公開modelがVolta中心、Accel-SimはSASS traceによりAmpereまで扱える一方、固定traceはTMA完了やbarrier解放の時刻をarchitecture変更に応じて実行流へ反映しにくい。FlashGPU-simはPTXを動的実行してhardware-side asynchronous eventを内部で進めるため、what-if変更後の制御流を再決定できる。ASTRA-SIM等は分散システム、Timeloop/MAESTRO等はaccelerator mappingという上位抽象度を扱うのに対し、本研究はmodern NVIDIA GPU kernelのcore-level cycle timingを対象とする。さらにTritonを直接captureすることで手書きmicrobenchmarkだけでなくvLLM/SGLang等にも近いcompiler-generated operatorを入力にできる。","implementation_status":"コードは公開GitHubリポジトリFlashGPU-Sim/FlashGPU-Simで提供される。GPGPU-Sim拡張、TMA/mbarrier/tensor/DSM model、architecture configuration、TritonTrace capture、standalone harness、PTX reordering、OpenMP parallel simulationを実装済み。artifact appendixにはDocker利用、software dependency、実験workflow、期待結果が記載され、RTX 5090/H100/H200/B200でvalidationを実施している。multi-GPU/NVLinkとgem5 memory subsystem統合はongoing work。","research_positioning":"LLM推論システム研究ではFlashAttention、fused MoE、量子化GEMMなどのkernelがHopper/Blackwellの非同期機構へ強く依存し、vLLMやSGLangの性能上限もこうしたkernel挙動に左右される。FlashGPU-simはこれらを『実機で測る』だけでなく、TMA帯域、barrier、tensor issue、DSM、front-end/back-end decouplingを変更して未来のGPU設計を試せる基盤として価値がある。H100のFA-2を理想async queue化するだけで約30%短縮しFA-3へ近づく例は、software pipelineの観測からhardware primitiveの設計仮説へ踏み込めることを示す。一方、LLM serving全体のschedulerやnetworkを直接modelするものではないため、vLLM/SGLangレベルのsystem simulatorとは補完関係であり、kernel/SM microarchitecture層を高精度に埋める役割と見るのが適切である。"},"reservation":{"claim_id":"claim-2bf3de3b255ebab0e493ae1d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
