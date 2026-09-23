@@ -4,10 +4,24 @@
   "slot": "results",
   "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
   "job_id": "job-research-61e38612a8457ae4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0640a4e19fcd3a04140f52b1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "MoDESの利点は高skip率で顕著で、Kimiでは83% expert skippingでも元モデル平均性能の96.25%、Qwen3-VL-MoE-30B-A3Bでは88% skippingでも97.33%を保持する。Qwen3-VLの同条件でMC-MoEは86.66%、DiEPは85.30%。frontier searchはnaive searchとほぼ同等の品質を保ちつつ約45倍高速で、実H200測定でもprefill約2倍、decode約1.2倍の高速化を示す。",
+    "key_results": [
+      {"metric": "Qwen3-VL normalized average performance @88% skip", "value": "97.33%", "baseline": "MC-MoE 86.66%; DiEP 85.30%; NAEE 80.60%; fixed k=1 60.11%", "condition": "Qwen3-VL-MoE-30B-A3B-Instruct, 13 benchmarks", "interpretation": "MC-MoE比+10.67 percentage points while executing roughly 12% of routed experts."},
+      {"metric": "Kimi normalized average performance @83% skip", "value": "96.25%", "baseline": "MC-MoE 88.32%; DiEP 87.58%; NAEE 82.81%; fixed k=1 71.60%", "condition": "Kimi-VL-A3B-Instruct, 13 benchmarks", "interpretation": "高skip率でもfull modelに近い平均性能を保持。"},
+      {"metric": "Kimi normalized average performance @50% skip", "value": "99.91%", "baseline": "DiEP 98.17%; MC-MoE 97.69%", "condition": "Kimi-VL-A3B-Instruct", "interpretation": "moderate skipでも既存法を上回る。"},
+      {"metric": "Frontier-search acceleration", "value": "about 45× faster", "baseline": "naive O(ND^2) grid search", "condition": "20–30B MoE MLLMs on 8×H200", "interpretation": "calibration+searchは多くの20–30Bモデルで20分〜4時間未満。Kimi 83%ではnaive 96.24% vs frontier 96.25%と品質差は実質なし。"},
+      {"metric": "Practical inference speed", "value": "up to 2.16× prefill and 1.26× decode", "baseline": "original unskipped model", "condition": "single H200; Kimi 83% / Qwen3-VL 88%; prefill batch 8, decode length 1024", "interpretation": "decodeはmemory-boundかつtext tokenのみのためspeedupが小さい。"},
+      {"metric": "Quantized Qwen3-VL retention", "value": "94.43% of original performance", "baseline": "2.5-bit MC-MoE 89.58%", "condition": "Qwen3-VL, 75% expert skipping with mixed-precision expert quantization", "interpretation": "expert skippingとweight-only quantizationを併用可能。"},
+      {"metric": "Component ablation @83% Kimi skip", "value": "DMT+GMLG: ChartQA 84.20, MME 2162, MMBench 81.44, LVB 62.60, VMMMU 47.11", "baseline": "thresholding: 76.74/1956/65.48/54.67/40.33; DMT only: 82.94/2081/79.42/61.16/45.08", "condition": "Kimi-VL-A3B-Instruct", "interpretation": "modality-specific thresholdとglobal layer modulationの双方が寄与し、高skip率ほど差が拡大。"}
+    ],
+    "negative_results": [
+      {"name": "decode speedup is limited", "description": "prefillの約2×に対しdecodeは約1.2×。decodeがmemory-boundで、生成時はtext tokenだけのためvision側の高い冗長性を利用できない。"},
+      {"name": "offline preparation is nontrivial", "description": "training-freeだが、1024 sampleでlayer KL calibrationとthreshold searchが必要。20–30B級で20分〜4時間未満、特定InternVL GPT-OSS構成ではnaive attentionのためさらに遅い。"},
+      {"name": "runtime kernel work remains", "description": "公式repositoryではFast CUDA implementation for MoE layersがTODO。"}
+    ],
+    "interpretation": "MoDESは単にrouter probabilityをthresholdするのでなく、層重要度とmodality別冗長性を明示的に分離してskip budgetを配分することで、aggressive expert skipping時の品質崩壊を抑える。",
+    "quality_impact": "Lossyだが、報告されたmatched skip ratioでは既存expert-skipping法より大幅に高い性能保持を示す。"
+  },
+  "reservation": {"claim_id": "claim-0640a4e19fcd3a04140f52b1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
