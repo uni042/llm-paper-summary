@@ -4,10 +4,12 @@
   "slot": "evaluation",
   "attempt_id": "attempt-3e602a0f4e7177d85de6b301",
   "job_id": "job-research-b8145b0c5f2892c4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e602a0f4e7177d85de6b301",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "品質・長文評価とシステム効率評価はいずれもNVIDIA H20 96GB GPUを使用する。効率評価はQwen3-8Bを単一H20で実測し、実際の圧縮KVキャッシュを保持した状態で測定する。",
+    "software": "Qwen3-8BとLlama-3.1-8B-Instructを対象とし、BF16 FlashAttention-2を全精度基準とする。比較対象はKIVI、QuaRot、TurboQuant、OScaR。公式実装・推奨設定を可能な限り用い、量子化比較ではKIVI/QuaRot/OScaRが非対称INT2、TurboQuantがKeyにLloyd–Max、Valueにアフィン量子化を用いる。",
+    "methodology": "RULERを4K、8K、16K、32K、64K、128Kの6長さで評価し、各タスク・各長さ100サンプルを平均する。LongBench-Eは英語subsetをgreedy decodingで評価する。Qwen3-8Bは学習時40K文脈のため64K/128Kでstatic YaRNを共通適用する。D-Quant既定設定はKey 331 byte・Value 231 byte、8/6レベル、1024値/トークンの単一group、α=1.4、直近128 tokenをBF16保持し、平均2.26 bit/value。効率は8K promptでbatchを増やすdecode throughput/peak memoryと、batch 1・1K promptから64KまでdecodeするKV memoryを測る。",
+    "baselines": "KIVI 2.25、QuaRot 2.25、TurboQuant 2.19、OScaR 2.26 bit/valueで、scaleやzero point等のmetadata込み。KIVI/QuaRot/TurboQuantは直近128 token、OScaRは256 tokenをBF16 residual windowとして保持する。付録では同一前処理・grouping・storageで固定幅符号と直接比較し、27 LongBench-E文書/モデル、2048-token context後の256位置に対するtoken-wise forward KLを20,000回paired bootstrapで評価する。",
+    "scope": "2種類の8BモデルとH20単一GPUが中心で、異なるGPU世代・大規模モデル・複数GPU serving・実サービス負荷は直接評価していない。エントロピー復号は小batchではBF16より計算負荷が高く、3.5倍throughputは各方式が到達できる最大実行可能batchを比較したメモリ制約下の値である。Qwen3-8Bの64K/128KはYaRN外挿を含む。"
+  },
+  "reservation": {"claim_id": "claim-3e602a0f4e7177d85de6b301", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }

@@ -4,10 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-3e602a0f4e7177d85de6b301",
   "job_id": "job-research-b8145b0c5f2892c4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e602a0f4e7177d85de6b301",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "related_work": "KIVI、KVQuant、QuaRot、OScaRなどは外れ値処理、回転、粒度設計、低ビット量子化そのものを改善するが、最終記号表現は基本的に固定幅である。CacheGenやSplitZipはエントロピー/圧縮をKV転送へ使うが、注意計算前に復号できる通信経路が主対象である。D-Quantは圧縮されたKVを常駐表現として保持し、注意カーネルが直接復号して消費する点で系統が異なる。",
+    "difference": "主要な差は、量子化レベル数とbit幅をエントロピー符号化で分離しながら、可変長表現を固定サイズ容器へ強制するドリフト機構にある。固定幅方式のように全値のprecisionを一律に落とさず、予算超過に寄与する少数記号だけを近傍へ移す。さらに確率モデルを標準正規分布から解析的に作り、復号結果をBF16 KVとして実体化せず注意演算へ融合するため、圧縮率だけでなく実行系の規則性まで設計対象に含める。",
+    "repository_relation": "リポジトリ内ではKVキャッシュ量子化・長文推論メモリ削減の系統と、メモリ帯域を意識した推論カーネル/servingの系統を接続する論文として位置付けられる。特にOScaR等の低ビットKV量子化に対しては、前処理の改善ではなく符号形式そのものを変える補完的方向である。CacheGen/SplitZip等のKV圧縮・転送系に対しては、圧縮状態から注意計算へ直接入る常駐KV表現という差がある。",
+    "strengths": "2.26 bit/valueという同程度のstorageで複数低ビットbaselineを上回り、128Kまでの長文品質、実KVメモリ、実H20 throughputを一つの評価でつないでいる。付録では前処理を揃えた固定幅比較と符号機構の実測分布解析を行い、改善要因をエントロピー符号化とdriftへ切り分けている。",
+    "weaknesses": "GPU・モデル多様性が狭く、エントロピー復号の追加計算が小batchで不利という明確な交換条件がある。3.5倍throughputは圧縮による最大batch増加を利用した結果で、同一batchで常に高速という意味ではない。複数GPU・分離prefill/decode・CPU/NVMeオフロードとの相互作用は未評価である。",
+    "future_work": "異なるGPU世代と大規模GQA/MQAモデルへの移植、複数GPU servingやKV転送との統合、動的batchでの損益分岐点、Key/Value予算のオンライン適応、SSD/CPU階層キャッシュと固定サイズ容器を組み合わせたI/O整列、他のエントロピー符号器やvector quantizationとの比較が次の検証点になる。",
+    "source_evidence": ["arXiv:2609.19880v1 full HTML, sections 1-6", "Appendix A-C including encoder/decoder algorithms and matched-storage analysis"]
+  },
+  "reservation": {"claim_id": "claim-3e602a0f4e7177d85de6b301", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }

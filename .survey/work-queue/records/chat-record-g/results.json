@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-3e602a0f4e7177d85de6b301",
   "job_id": "job-research-b8145b0c5f2892c4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3e602a0f4e7177d85de6b301",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "key_results": [
+      "2.26 bit/valueのRULER平均はQwen3-8Bで86.50、Llama-3.1-8Bで88.94。BF16はそれぞれ87.31、89.69で、低ビット比較群より全体に近い。",
+      "128K RULERではQwen3-8Bが70.92、Llama-3.1-8Bが74.65。比較群の最高値はそれぞれ57.14、66.15で、文脈長が伸びるほど差が拡大する。",
+      "さらに1.96 bit/valueへ下げてもRULER平均はQwen3-8B 85.21、Llama-3.1-8B 87.26で、評価した固定幅系比較手法を上回る。",
+      "8K promptの効率試験ではBF16がbatch 64でメモリ不足になる一方、D-Quantはbatch 128でpeak 49.4 GiB。1K promptから64Kまでdecodeする試験ではKVキャッシュ容量を約7倍削減する。",
+      "各方式の最大実行可能batchではD-Quant 563.6 token/s、BF16 159.5 token/sで最大3.5倍のdecode throughput。小batchではエントロピー復号計算のためD-Quantの方が遅い。",
+      "同一前処理・同一storageの付録比較ではD-Quantが固定幅符号のforward KL divergenceを概ね半減し、同等divergenceへ達する固定幅方式はQwen3-8Bで追加0.234 bit/value、Llama-3.1-8Bで追加0.267 bit/valueを要する。",
+      "解析的確率モデルと実測分布の差はKey 0.0045、Value 0.0039 bit/value。全KV記号のうちドリフトで変更されるのはKey 0.75%、Value 5.00%だけで、変更幅は最大1再構成レベルだった。"
+    ],
+    "ablation": "Qwen3-8B・RULER 128Kの解析では、同じ2.26 bit/valueでもKey 8レベル・Value 6レベルが良好な動作点で、それ以上にalphabetを増やすと容器制約を満たすためのdrift頻度が増え性能が悪化する。容器予算を増やすほどBF16へ単調に近づく。また同じ総予算ではKeyへやや多く配る方が有利だが、過度にKeyへ偏らせるとValue側の表現不足で精度が落ちる。",
+    "mechanism_evidence": "前処理観察ではKeyへHadamard回転と平均除去を適用するとNMSEが0.48%まで低下し、標準正規由来モデルの余分な符号率は5e-4 bit/valueまで縮む。残るエントロピー符号化利得はKey 0.72、Value 0.86 bit/valueで、較正不要の分布モデルでも非一様性を十分利用できる根拠を示す。",
+    "limitations": "評価モデルは8B級2種類、ハードウェアはH20中心で一般化範囲は限定的。エントロピー復号には追加計算があり小batchではBF16より遅い。最大3.5倍は同一batchでの純粋なカーネル高速化ではなく、圧縮によってより大きなbatchを載せられる容量効果を含む。長文Qwen評価の64K/128KはYaRN外挿を使う。公式コード公開はarXivページから確認できず、再現性は論文記載のカーネル詳細に依存する。"
+  },
+  "reservation": {"claim_id": "claim-3e602a0f4e7177d85de6b301", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
