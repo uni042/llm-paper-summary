@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 19:47:53 JST**
+> 自動生成: **2026-09-23 19:52:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **148** |
+| 収録候補論文 | **147** |
 | 未claim Research job | **146** |
-| 直近24hの検証済みResearch収録 | **91** |
-| 最終検証済みResearch収録 | **09-23 19:47:46 JST（7秒前）** |
+| 直近24hの検証済みResearch収録 | **92** |
+| 最終検証済みResearch収録 | **09-23 19:51:56 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **148** |
+| canonical_id確認済みの一意な候補論文 | **147** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **148** |
+| 非終端Research job合計 | **147** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6434** |
-| 処理済み | **644** |
-| 未処理 | **5790** |
-| 収録済みとして除外 | **536** |
+| 処理済み | **645** |
+| 未処理 | **5789** |
+| 収録済みとして除外 | **537** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（11時間17分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（11時間21分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **23** | **1** | **0** | **0** | **2** | **0** | — |
+| Research | **24** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **23** | **4** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **24** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 19:51:56 JST** [research] `arXiv:2606.01502` — Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics
+  - job: `.survey/work-queue/jobs/job-research-37a03b603cf5e34b.json`
+  - result: `.survey/work-queue/results/research/attempt-df98f0a4232c714053b0bc18.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-df98f0a4232c714053b0bc18.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md`
 - **09-23 19:47:46 JST** [research] `arXiv:2605.11277` — Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models
   - job: `.survey/work-queue/jobs/job-research-165ae8125699de70.json`
   - result: `.survey/work-queue/results/research/attempt-e3c59442daeee9dcbcd01db3.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-64f95f13e8bf245cb090a9d9.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-64f95f13e8bf245cb090a9d9.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2601.13631-contiguouskv-accelerating-llm-prefill-with-granularity-aligned-kv-cache-management.md`
-- **09-23 17:25:39 JST** [research] `arXiv:2609.15039` — SpliTEE: Improving LLM Inference on Trusted Hardware with Differentially Private GPU Outsourcing
-  - job: `.survey/work-queue/jobs/job-research-4f3d063490df512a.json`
-  - result: `.survey/work-queue/results/research/attempt-9105373f954fe3246d7dc7ab.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-9105373f954fe3246d7dc7ab.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.15039-splitee-improving-llm-inference-on-trusted-hardware-with-differentially-private-gpu-outsourcing.md`
 
 ### Audit
 
@@ -178,10 +178,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.01502` — Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics / worker `scheduled-chat-30`
-  - claim: **09-23 19:47:40 JST** / heartbeat: **—** / lease expiry: **09-23 21:17:40 JST**
-  - evidence: `.survey/work-queue/claims/job-research-37a03b603cf5e34b.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `DOI:10.1109/icassp55912.2026.11465104` — Parsimony, Order and Balance: Principles for Compressing Mixture-of-Experts Models / worker `scheduled-chat-00`
   - claim: **09-23 19:16:00 JST** / heartbeat: **—** / lease expiry: **09-23 20:46:00 JST**
   - evidence: `.survey/work-queue/claims/job-research-b5c12e0015184a80.json`
@@ -204,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **148** |
+| ready | **147** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **997** |
+| inference/training/survey配下の論文Markdown実体 | **998** |
 
 ### immutable submissionの未照合
 

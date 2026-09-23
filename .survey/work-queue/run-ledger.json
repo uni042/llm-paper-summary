@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T10:47:52.969847+00:00",
+  "updated_at": "2026-09-23T10:52:00.266504+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -42956,6 +42956,56 @@
           "type": "research",
           "canonical_id": "arXiv:2605.11277",
           "title": "Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 971,
+      "paper_active_count_after": 971,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35851197012",
+      "first_recorded_at": "2026-09-23T10:52:00.266504+00:00",
+      "last_recorded_at": "2026-09-23T10:52:00.266504+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35851197012:1",
+          "recorded_at": "2026-09-23T10:52:00.266504+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35851197012",
+            "run_attempt": "1",
+            "source_sha": "1a0df9099bb6cafcbb6cefdc42fe16d77212d504"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-37a03b603cf5e34b",
+          "type": "research",
+          "canonical_id": "arXiv:2606.01502",
+          "title": "Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics",
           "from": "ready",
           "to": "completed"
         }

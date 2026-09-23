@@ -10,8 +10,9 @@
   "submission": ".survey/work-queue/submissions/research/attempt-aa2e141ac0afee3ab981b64b.json",
   "error": "ValueError: new Training paper entries are frozen; do not create a new papers/training/** artifact",
   "processed_at": "2026-09-23T10:39:39+00:00",
-  "failure_class": "post_validation_processing_failure",
-  "retryable": true,
-  "recovery_failures": 2,
-  "last_recovery_failed_at": "2026-09-23T10:47:46+00:00"
+  "failure_class": "recovery_exhausted",
+  "retryable": false,
+  "recovery_failures": 3,
+  "last_recovery_failed_at": "2026-09-23T10:51:56+00:00",
+  "last_retryable_failure_class": "post_validation_processing_failure"
 }
