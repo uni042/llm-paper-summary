@@ -346,6 +346,105 @@ class IncrementalRunStateTests(unittest.TestCase):
             result = derive.derive(root, req)
             self.assertEqual(result["run_state_source"], "canonical_rebuild")
 
+    def test_claim_result_delta_updates_active_assignment_without_canonical_scan(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            base_state(root)
+            start = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=2)
+            req = request("scheduled-chat-00", "run-claim-delta", start)
+            first = derive.derive(root, req)
+            self.assertEqual(first["run_state_source"], "canonical_rebuild")
+            claim_result = write_json(
+                root,
+                ".survey/work-queue/claim-results/claim-delta.json",
+                {
+                    "schema_version": 1,
+                    "request_id": "claim-delta",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "run_key": "run-claim-delta",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": start.isoformat(),
+                    "ok": True,
+                    "assignments": [
+                        {
+                            "attempt_id": "attempt-delta",
+                            "job_id": "job-delta",
+                            "kind": "research",
+                            "claimed_at": (start + dt.timedelta(seconds=10)).isoformat(),
+                        }
+                    ],
+                    "processed_at": (start + dt.timedelta(seconds=10)).isoformat(),
+                },
+            )
+            manifest = root / "claim-results.txt"
+            manifest.write_text(claim_result.relative_to(root).as_posix() + "\n", encoding="utf-8")
+            summary = derive.apply_claim_result_deltas(root, manifest)
+            self.assertEqual(summary["touched_runs"], 1)
+            updated = derive.derive(root, req)
+            self.assertEqual(updated["run_state_source"], "incremental_cache")
+            self.assertTrue(updated["active_assignment"])
+            self.assertEqual(updated["active_job_ids"], ["job-delta"])
+            self.assertLess(updated["run_state_files_read"], first["run_state_files_read"])
+
+    def test_legacy_claim_result_invalidates_cache_instead_of_reviving_old_state(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            base_state(root)
+            start = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=2)
+            req = request("scheduled-chat-00", "run-legacy-claim", start)
+            derive.derive(root, req)
+            before_clock = cache.fact_generation(root, "scheduled-chat-00")
+            legacy = write_json(
+                root,
+                ".survey/work-queue/claim-results/legacy.json",
+                {
+                    "schema_version": 1,
+                    "request_id": "legacy",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "ok": True,
+                    "assignments": [],
+                    "processed_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+                },
+            )
+            touched = cache.observe_claim_results(root, [legacy])
+            self.assertEqual(touched, {})
+            self.assertGreater(cache.fact_generation(root, "scheduled-chat-00"), before_clock)
+            rebuilt = derive.derive(root, req)
+            self.assertEqual(rebuilt["run_state_source"], "canonical_rebuild")
+
+    def test_submission_auto_snapshot_without_existing_route_cache_falls_back_safely(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            base_state(root)
+            start = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=2)
+            identity = {
+                "worker_id": "scheduled-chat-00",
+                "run_key": "run-no-cache",
+                "scheduled_slot": "00",
+                "actual_invocation_start": start.isoformat(),
+            }
+            descriptor = add_attempt(
+                root,
+                worker="scheduled-chat-00",
+                request_id="claim-no-cache",
+                attempt_id="attempt-no-cache",
+                job_id="job-no-cache",
+                claimed_at=start + dt.timedelta(seconds=10),
+                result={
+                    "ok": True,
+                    "job_status": "completed",
+                    "processed_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+                },
+                descriptor_identity=identity,
+            )
+            manifest = root / "descriptors.txt"
+            manifest.write_text(descriptor.relative_to(root).as_posix() + "\n", encoding="utf-8")
+            summary = derive.auto_snapshot_from_descriptors(root, manifest)
+            self.assertEqual(summary["generated_results"], [])
+            self.assertIn("scheduled-chat-00:run-no-cache", summary["fallback_required"])
+
 
 if __name__ == "__main__":
     unittest.main()
