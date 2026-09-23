@@ -869,12 +869,19 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
     claim_path = root / _claim_path(preload_id)
     current = _active_claim(root, preload_id, now)
     if current is not None:
-        same = (
+        same_worker_run = (
             str(current.get("worker_id") or "") == worker_id
             and str(current.get("run_key") or "") == run_key
-            and str(current.get("request_id") or "") == request_id
         )
-        if not same:
+        same_request = str(current.get("request_id") or "") == request_id
+        direct_handoff = bool(
+            same_worker_run
+            and (
+                current.get("direct_take") is True
+                or current.get("operation") == "direct_take_discovery"
+            )
+        )
+        if not (same_worker_run and (same_request or direct_handoff)):
             raise ValueError("Discovery preload entry is actively claimed by another worker")
         discovery_bank = str(current.get("discovery_bank") or "").lower().strip() or None
     else:
