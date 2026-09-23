@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-22T23:20:46.447985+00:00",
+  "updated_at": "2026-09-23T00:40:06.192392+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -40911,6 +40911,56 @@
       "paper_active_count_before": 960,
       "paper_active_count_after": 960,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35803023092",
+      "first_recorded_at": "2026-09-23T00:40:06.192392+00:00",
+      "last_recorded_at": "2026-09-23T00:40:06.192392+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35803023092:1",
+          "recorded_at": "2026-09-23T00:40:06.192392+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35803023092",
+            "run_attempt": "1",
+            "source_sha": "cde30b8672bf0e7fdf10eda8d1bf9fe1892f58d6"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-9fc5a1ad8ad0b2d8",
+          "type": "research",
+          "canonical_id": "arXiv:2609.19207",
+          "title": "MeshKV: A Network-on-Chip KV Cache Fabric for Scalable Transformer Decoding Accelerators",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 962,
+      "paper_active_count_after": 962,
+      "last_successful_action": "research_completed"
     }
   ]
 }
