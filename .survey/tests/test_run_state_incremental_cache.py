@@ -113,6 +113,18 @@ class IncrementalRunStateTests(unittest.TestCase):
             root = Path(td)
             base_state(root)
             start = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=2)
+            # Controlled large-history fixture: canonical reconstruction must inspect
+            # these unrelated durable claim results, while the cache hit must not.
+            for index in range(1000):
+                write_json(
+                    root,
+                    f".survey/work-queue/claim-results/history-{index:04d}.json",
+                    {
+                        "worker_id": "other-worker",
+                        "processed_at": (start - dt.timedelta(days=1)).isoformat(),
+                        "assignments": [],
+                    },
+                )
             add_attempt(
                 root,
                 worker="scheduled-chat-00",
@@ -133,6 +145,14 @@ class IncrementalRunStateTests(unittest.TestCase):
             self.assertEqual(second["run_state_source"], "incremental_cache")
             self.assertEqual(second["research_audit_completed_this_invocation"], 1)
             self.assertLess(second["run_state_files_read"], first["run_state_files_read"])
+            print(
+                "RUN_STATE_BENCH "
+                f"history_claim_results=1001 "
+                f"canonical_files={first['run_state_files_read']} "
+                f"cache_files={second['run_state_files_read']} "
+                f"canonical_ms={first['run_state_derive_ms']} "
+                f"cache_ms={second['run_state_derive_ms']}"
+            )
 
             (root / ".survey/work-queue/run-state/cache/scheduled-chat-00.json").unlink()
             rebuilt = derive.derive(root, req)
