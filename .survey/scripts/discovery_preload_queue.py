@@ -302,6 +302,34 @@ def _bank_for_preload(root: Path, preload_id: str) -> str | None:
     return _read_bank_bindings(root).get(str(preload_id or "").strip())
 
 
+def _restore_bank_binding(root: Path, entry: dict[str, Any]) -> str | None:
+    """Rebind one reusable PRECHECKED entry after an expired claim.
+
+    Prefer its former physical bank when that Discovery sidecar is empty, otherwise
+    use the first empty Discovery sidecar. Research/Audit slots are never inspected
+    or modified here because the two planes are independent.
+    """
+    preload_id = str(entry.get("preload_id") or "")
+    if not preload_id:
+        return None
+    current = _bank_for_preload(root, preload_id)
+    if current:
+        return current
+
+    preferred = str(entry.get("discovery_bank") or "").lower()
+    candidates = list(BANK_IDS)
+    if preferred in BANK_IDS:
+        candidates.remove(preferred)
+        candidates.insert(0, preferred)
+    for bank in candidates:
+        payload = _bank_payload(root, bank)
+        if str(payload.get("preload_id") or "").strip():
+            continue
+        _write_bank_binding(root, bank, entry)
+        return bank
+    return None
+
+
 def _source_specs(root: Path) -> list[dict[str, Any]]:
     state = _read(root / DISCOVERY_STATE, {}) or {}
     history = state.get("history") if isinstance(state.get("history"), list) else []
@@ -844,6 +872,8 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
         discovery_bank = str(current.get("discovery_bank") or "").lower().strip() or None
     else:
         discovery_bank = _bank_for_preload(root, preload_id)
+        if discovery_bank is None and _status(root, entry, now) == "PRECHECKED":
+            discovery_bank = _restore_bank_binding(root, entry)
 
     requested_bank = str(request.get("discovery_bank") or "").lower().strip() or None
     if discovery_bank is None or discovery_bank not in BANK_IDS:
