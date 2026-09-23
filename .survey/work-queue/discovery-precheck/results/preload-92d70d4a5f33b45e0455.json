@@ -1,0 +1,884 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-92d70d4a5f33b45e0455",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-92d70d4a5f33b45e0455",
+  "axis": "forward citations of DeepSpeed-MoE large-scale MoE inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2201.05596/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": "60",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "29e23316e7ec5f7a6f0283cb43a56c488b8e7649",
+  "raw_search_result_count": 60,
+  "retrieval_duplicate_filtered_count": 27,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T23:12:44.953800+00:00",
+  "preload_id": "preload-92d70d4a5f33b45e0455",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 3,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Efficient Mixture-of-Experts Training With Pipelining Optimization",
+      "source_url": "https://www.semanticscholar.org/paper/65240291ce082d0f4bf57616e11b4aee3cc9cffe",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Sparsely activated Mixture-of-Experts (MoE) has emerged as a key technique to expand the size of Transformer-based large language models (LLMs) while maintaining low computational costs. However, MoE layers require to route the input data to distributed devices, incurring significant communication latency. Existing studies have primarily focused on alleviating this problem by overlapping computation and communication tasks within a single MoE layer, which fails to achieve sufficient overlap and results in limited performance gains. In this work, we introduce an orthogonal partitioning dimension from existing task-parallel methods by leveraging the autoregressive nature of causal Transformer-based LLMs, <italic>i.e.</italic> partitioning tasks along the sequence dimension. This provides more flexible and efficient overlaps among tasks from both non-MoE and MoE layers. To this end, we propose an efficient MoE training approach, SP-MoE, with two innovative designs. 1) It incorporates non-MoE layers into the overlapping with not only the current MoE layer but also the preceding MoE layer, thereby facilitating more efficient training; 2) It identifies the optimal combination of pipeline degrees for non-MoE and MoE layers and devises the best scheduling plans for load-imbalanced non-MoE and uniform MoE layers to achieve the goal of minimizing the total training latency. Furthermore, we extend our algorithm to incorporate pipeline parallelism (PP) for training larger MoE models, which introduces peer-to-peer (P2P) communications between adjacent PP stages. To mitigate this problem, we propose S3P-MoE with two optimizations: 1) it partitions P2P communication into chunks and each P2P chunk is transmitted immediately to be overlapped with expert computation; 2) it allows the subsequent PP stage to commence upon receiving the corresponding P2P chunk. Moreover, we refine our algorithm to jointly optimize pipeline degrees for both MoE and non-MoE layers, as well as P2P communication, to minimize overall training latency. Extensive experiments demonstrate that SP-MoE and S3P-MoE effectively identify optimal pipeline degrees, reducing training time by up to <inline-formula><tex-math notation=\"LaTeX\">$34.3\\%$</tex-math><alternatives><mml:math><mml:mn>34.3</mml:mn><mml:mi mathvariant=\"normal\">%</mml:mi></mml:math><inline-graphic xlink:href=\"shi-ieq1-3702749.gif\"/></alternatives></inline-formula> and <inline-formula><tex-math notation=\"LaTeX\">$30.61\\%$</tex-math><alternatives><mml:math><mml:mn>30.61</mml:mn><mml:mi mathvariant=\"normal\">%</mml:mi></mml:math><inline-graphic xlink:href=\"shi-ieq2-3702749.gif\"/></alternatives></inline-formula>, respectively, compared to state-of-the-art methods.",
+      "canonical_id": "DOI:10.1109/TC.2026.3702749",
+      "doi": "10.1109/TC.2026.3702749",
+      "authors": [
+        "Ne Wang",
+        "Wen-Jing Lin",
+        "Lin Zhang",
+        "Shao-Huai Shi",
+        "Rui-Ting Zhou",
+        "Bo Li"
+      ]
+    },
+    {
+      "title": "Flattening Every Memory Peak in Long-Context Mixture-of-Experts Training",
+      "source_url": "https://www.semanticscholar.org/paper/1935271e421a048f0a4c843a7f8aca792c6f46a4",
+      "year": 2026,
+      "published": "2026-09-13",
+      "abstract": "Training a Mixture-of-Experts (MoE) model at long context or large batch size fails as soon as any one component's peak allocation exceeds device memory, so the target is every peak at once, not the average footprint. Four are left unbounded by the parallelism plans in common use, and each grows differently: expert dispatch with the routing matrix, the vocabulary projection with tokens times vocabulary, gradient checkpoint boundaries with depth times sequence length, and optimizer state with parameter count. Which one runs out first changes with the model, the context length, and the device count, so lowering the largest only exposes the next. We bound all four with schedules whose GPU working set is fixed at launch: PipelinedLLEP extends least-loaded expert parallelism with a cap on the tokens each source contributes to a dispatch chunk, Ring-DTP circulates activations or weight shards around a ring at the vocabulary projection and folds each block of logits into an online log-sum-exp, Selective checkpoint offload (SCO) keeps the one long-lived tensor of each checkpoint boundary in CPU memory, and OffloadStreamAdamW turns the serial CPU Adam update of optimizer offload into a bucket pipeline. All four change only the order and granularity of computation and data movement, so the loss and gradients stay exact. In matched component tests, they cut the MoE dispatch peak by up to $59.3\\%$ without losing throughput, the vocabulary projection peak by $86.6\\%$, and the offloaded optimizer step by $2.05\\times$ faster. Composed on MoE models from 120B to 667B parameters, they train at 1M context length, $8$--$32\\times$ the reach of a tuned FSDP2 baseline, and up to $10.4\\times$ its throughput.",
+      "canonical_id": "arXiv:2609.14306",
+      "arxiv_id": "2609.14306",
+      "authors": [
+        "Shrey Pandit",
+        "Xuan-Phi Nguyen",
+        "Yiran Zhao",
+        "Shafiq Joty"
+      ]
+    },
+    {
+      "title": "TerraceMoE: A Cost Model for Hierarchical MoE All-to-All Communication",
+      "source_url": "https://www.semanticscholar.org/paper/13f1bc747cae737513c3f4d315a86b8dc872b267",
+      "year": 2026,
+      "published": "2026-08-28",
+      "abstract": "Hierarchical two-hop dispatch can reduce slow-fabric traffic in expert-parallel Mixture-of-Experts training, but it adds a second collective and an arrival-side operator chain. We present a cost model for screening that trade at the communication-call level, bounded by validation gates that withdraw a capability in code when they fail rather than reporting a caveat. At a reference geometry with 16 groups of 8 ranks, $q=3$, $H=2048$, and 4096 tokens per rank, the corrected effective breakeven hierarchy ratio is 3.98 for the measured PyTorch arrival chain, 1.49 for a hypothetical fused target, and 1.10 at zero implementation overhead. These are ratio-only sensitivity results, not deployment predictions: platform A measures 1.03, platform B has no separated fast/slow measurement, and neither machine measured here reaches the hierarchical regime. Four communication-level corpora pass their gates; a drift probe and the step-level gate fail. The latter failure is enforced in code, so we make no training-throughput prediction. The enabling routing constraint fixes per-token fan-out and per-selected-group quota, while aggregate per-peer counts remain data-dependent. Its measured validation-loss cost is small but nonzero (+0.0034 nats); downstream equivalence is reported with incomplete estimator provenance and is therefore not independently reconstructible from the artifact. Code, calibration constants and the validation gates are at https://github.com/weich97/TerraceMoE-simulator.",
+      "canonical_id": "arXiv:2608.27874",
+      "arxiv_id": "2608.27874",
+      "authors": [
+        "Weicheng Xue",
+        "Bingqiang Wang",
+        "Li Yuan",
+        "Huihui Zhou",
+        "Yong-Hong Tian"
+      ]
+    },
+    {
+      "title": "Completion-Path Credits: Multi-Resource Control for Scale-Up Fabrics",
+      "source_url": "https://www.semanticscholar.org/paper/12dd561426aae0eff2c61ff40a1b965774695320",
+      "year": 2026,
+      "published": "2026-08-18",
+      "abstract": "Scale-up fabrics connecting GPUs and AI accelerators carry tensor transfers together with remote reads, writes, atomics, and notifications over shared target-side receiver resources. Byte-denominated credits protect link buffers and streaming HBM traffic, but poorly represent small operations dominated by Atomic execution or response injection. This paper presents SemaCredit, a receiver controller that admits each remote-memory operation against a vector of target-resource demands and returns each component when its corresponding HBM, Atomic, or response stage completes. In a deterministic event simulator with multipath queues, eight HBM partitions, a serialized Atomic engine, and a response engine, SemaCredit matches a strong per-resource byte baseline on HBM-hotspot traffic while reducing small-operation P99 latency by 52.4% under Atomic contention and 10.2% under response incast. Application-shaped mixes show 57.7% and 14.5% P99 latency improvements for AllReduce-shaped and remote-read-shaped traffic while matching byte credits on HBM-dominated MoE traffic.",
+      "canonical_id": "arXiv:2608.17523",
+      "arxiv_id": "2608.17523",
+      "authors": [
+        "Fan Yang",
+        "Jiaqi Liu",
+        "Tao Jiang",
+        "Zhan Wang"
+      ]
+    },
+    {
+      "title": "Trigger the Straggler: Load Hijack on Mixture-of-Experts LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/92056caa34e7758f98b43f6bea30bf008a7017f2",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Expert parallelism (EP) is a common strategy for serving large Mixture-of-Experts (MoE) models across multiple GPUs by distributing experts among devices. Router decisions then determine both which experts process each token and which GPUs execute the resulting work. This procedure exposes a supply-chain attack surface in the serving schedule. We introduce Load Hijack, in which a malicious model provider modifies only a checkpoint's router weights, distributes the poisoned checkpoint, and retains a private trigger. When the trigger appears, the poisoned router concentrates token-to-expert assignments on experts co-located on one GPU. The resulting load makes that GPU a straggler and forces peer devices to wait, while routing on ordinary inputs remains near the clean reference. We find this conditional behavior difficult to achieve because an objective that rewards target-expert use on triggered inputs can also bias ordinary-input routing toward the same experts. To resolve this conflict, Load Hijack employs a three-stage optimization procedure that produces strong trigger-dependent concentration while keeping ordinary-input routing close to the clean reference. Across three MoE families and four corpora, Load Hijack directs 92.3% to 95.6% of triggered token assignments to the target experts. In live EP serving, triggered traffic produces 1.43x the time-to-first-token and 0.86x the throughput measured under ordinary traffic. These results show that poisoned routers can act as trigger-controlled device schedulers and motivate checkpoint audits of routing and runtime load.",
+      "canonical_id": "arXiv:2608.10614",
+      "arxiv_id": "2608.10614",
+      "authors": [
+        "Rui Zhang",
+        "Wenbo Jiang",
+        "Hongwei Li",
+        "Zi-Han Wang",
+        "Chaoshun Zuo",
+        "Jian-Fei Sun",
+        "Guo-Wen Xu"
+      ]
+    },
+    {
+      "title": "TAOT: Topology-Aware Optimal Transport for Dynamic Expert Replica Placement in MoE Training",
+      "source_url": "https://www.semanticscholar.org/paper/3bf53cac915fb5016ee6ece6d8ce31150944d3d9",
+      "year": 2026,
+      "published": "2026-08-04",
+      "abstract": "Mixture-of-Experts (MoE) has become a key architecture for scaling large language models (LLMs), yet its dynamic routing causes severe load imbalance in expert-parallel training. Existing dynamic-replica methods copy hot experts onto idle ranks to share computation, but they optimize load balance alone and ignore the cost of moving expert weights across a multi-node topology, so the resulting cross-node communication can outweigh the balancing gain and inflate training cost. We present TAOT, a topology-aware optimal transport method for dynamic expert-replica placement. TAOT models the overload on hot ranks and the spare capacity on lightly loaded ranks as a balanced entropy-regularized optimal transport problem with a communication-cost matrix, solves it with Sinkhorn-Knopp iterations to produce rank-level flow hints, and combines integer replica matching with token assignment into an executable schedule. At the system level, it overlaps guest-weight transfer with home-expert computation to hide the communication overhead. Experiments show TAOT achieves a 1.43x end-to-end MoE training speedup, reaches balance quality competitive with or better than existing state-of-the-art methods, and attains the lowest weighted expert-communication cost across all configurations, with up to a 74% reduction.",
+      "canonical_id": "arXiv:2608.03676",
+      "arxiv_id": "2608.03676",
+      "authors": [
+        "Ling-Yun Zhang",
+        "Henghua Zhang",
+        "Shilei Gu",
+        "Kaixiang Mo",
+        "Shuai Han",
+        "Shiyong Li",
+        "Yanpeng Wang",
+        "Dou Shen"
+      ]
+    },
+    {
+      "title": "Relax Within, Balance Across: Geometry-Guided Load Balancing for Vision-Language Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/d9b234dd4e14142d32d1ebbf4856e3a058bc7ea4",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Vision-language MoE batches contain different numbers of image and text tokens. Image resolution, image count, tiling, and prompt length all change this token mix. We call the standard token-level Switch auxiliary loss Std-Aux. Std-Aux balances only the mixed load, so large image and text load errors can cancel at one mix. On our main model, the same trained router shows more than a fivefold change in load imbalance across image resolutions. We hold the image and text load profiles fixed and derive the exact load curve as the token mix varies. The image-text load gap controls sensitivity to the token mix. Physical preprocessing can also change the conditional profiles. The fixed-profile law excludes such changes. To design a remedy, we examine the router input structure. Image and text occupy distinct regions, while visual tokens group strongly by source image. The modality boundary motivates separate image and text terms. The image boundary motivates one equal-weight routing instance per image. ReBA, or Relax Within, Balance Across, implements both choices. Across four split backbones, ReBA lowers load on every reported benchmark input while keeping mean task accuracy comparable to Std-Aux. ReBA also lowers average load over the tested range and worst physical load under resolution and tiling shifts. Code is available at https://github.com/ZiangWu-77/ReBA.",
+      "canonical_id": "arXiv:2608.00574",
+      "arxiv_id": "2608.00574",
+      "authors": [
+        "Ziang Wu",
+        "Peng Jin",
+        "Qishen Yin",
+        "Munan Ning",
+        "Hao Li",
+        "Peizhen Zhang",
+        "Li Yuan"
+      ]
+    },
+    {
+      "title": "MSFT-Net: Mixture Semantic-Agnostic Manipulation Trace Enhanced Architecture for Robust Image Manipulation Localization",
+      "source_url": "https://www.semanticscholar.org/paper/55cfc06a666b2c115736d1089a6518cb2fc6f7ea",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Since the proliferation of image manipulation methods, effective image manipulation localization (IML) in scenarios with post-processing operations gradually becomes a core challenge. For a long time, IML either relies on strongly semantically related features, resulting in semantic relevance bias in the localization results, or only uses a single semantic-agnostic space feature, which is unable to maintain effective localization capabilities after image post-processing operations. Inspired by this, we propose a novel mixture semantic-agnostic manipulation trace robust localization network (MSFT-Net), which specifically utilizes mixture semantic-agnostic information to achieve effective and robust IML. The MSFT-Net introduces two new modules, the mixture shared manipulation trace enhancement module (MISE) and the Multiscale Feature Association Module (FAM). MISE dynamically links multiple semantic-agnostic feature extractors using a sparsity-enhanced mixture of shared experts, enabling the extraction of diverse manipulation features for accurate localization. Furthermore, keeping the high resolution of the localization features is very important in the mask prediction stage. Therefore, FAM outputs high-resolution fused manipulation features by using the correlation of features at the same level and the spatial context information from different levels. This further improves the effectiveness of IML in post-processing scenarios. Comprehensive experiments on five datasets demonstrate that our model significantly improves both in localization accuracy (average F1 score and IoU increasing by over 9.9% and 4.0%) and robustness. The codes will be made available.",
+      "canonical_id": "DOI:10.1109/TCSVT.2026.3679352",
+      "doi": "10.1109/TCSVT.2026.3679352",
+      "authors": [
+        "Jiayi Liu",
+        "Deng-Pan Ye",
+        "Yun-Ming Zhang",
+        "Jia-Cheng Deng",
+        "Ziyi Liu",
+        "Yueyun Shang",
+        "Zhihong Tian"
+      ]
+    },
+    {
+      "title": "MSBR-KT: knowledge tracing via multifaceted structured-bias routing",
+      "source_url": "https://www.semanticscholar.org/paper/eef06f94b4999afbfa84bd28f0ede886c6eb8e34",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Knowledge tracing (KT) aims to model the evolution of students’ latent knowledge states from historical interaction sequences for accurate prediction of future responses. Modeling knowledge evolution entails the joint consideration of multiple interrelated signals, including temporal dynamics, content semantics, and behavior-driven transitions. However, current KT approaches still face bottlenecks in context-adaptive multi-source fusion and the modeling of time-varying knowledge dynamics. Moreover, relying on a single shared prediction layer may limit both prediction accuracy and flexibility in heterogeneous learning contexts, thereby reducing overall performance. To address these issues, we propose a novel knowledge tracing framework built on multifaceted structured-bias routing, called MSBR-KT. To begin with, the proposed framework constructs learnable structured-bias matrices to capture time-decay patterns, semantic relationships among questions and knowledge concepts, and transition dependencies induced by correctness signals. Furthermore, a bias routing mechanism adaptively integrates these biases within multi-head attention by allocating context-dependent strengths, which results in stage-aware tracking of students’ evolving knowledge states through selective attention to the most relevant historical interactions. Ultimately, a routing-aware mixture-of-experts prediction layer is incorporated, with mixing coefficients derived from the routing distributions, to improve context-adaptive evidence aggregation at the prediction stage. Experiments on three benchmark datasets show that the proposed framework achieves the best AUC on all datasets while maintaining competitive ACC and RMSE performance, demonstrating reliable and robust predictive performance compared with existing state-of-the-art methods.",
+      "canonical_id": "DOI:10.1007/s44443-026-01029-2",
+      "doi": "10.1007/s44443-026-01029-2",
+      "authors": [
+        "Fei Ma",
+        "Yu Jiang",
+        "Huabing Li",
+        "Fei-Xia Yang"
+      ]
+    },
+    {
+      "title": "Synergistic mixed-precision quantization for MoE LLMs: Integrating cooperative shapley attribution with profiling-few fuzzy rule interpolation",
+      "source_url": "https://www.semanticscholar.org/paper/ba19ec482ca2ae2b3ca06590b3e9fae0603a9c73",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.ins.2026.124025",
+      "doi": "10.1016/j.ins.2026.124025",
+      "authors": [
+        "Hua-Chen Qi",
+        "Ruiyu Zhuo",
+        "Bowen Shi",
+        "Fei Chao",
+        "Xiang Chang",
+        "C. Shang",
+        "Qiang Shen"
+      ]
+    },
+    {
+      "title": "AbAgKer: a unified semi-supervised framework for antigen-antibody binding affinity and kinetics prediction",
+      "source_url": "https://www.semanticscholar.org/paper/b033852bbaf54fbfa40bdd75f3689e6e1632f064",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Abstract Motivation The rapid advancement of generative artificial intelligence has enabled the high-throughput design of therapeutic antibody candidates. However, the precise evaluation of these candidates remains a significant challenge due to the scarcity of high-quality activity data and the structural flexibility of antibody complementarity-determining regions (CDRs). Results To address these challenges, we propose AbAgKer, an antibody screening model leveraging pre-trained representations and biological prior guidance for antigen-antibody affinity and kinetics prediction. Specifically, we design a biological prior-guided feature fusion framework that integrates pseudo-structural epitope knowledge and CDR-specific attention mechanisms via a mixture-of-experts architecture to effectively capture complex binding landscapes. To mitigate data scarcity, we employ a semi-supervised learning strategy for data self-distillation, which significantly enhances affinity prediction performance. Additionally, we demonstrate that the interaction representations learned by AbAgKer can be effectively transferred to the data-scarce task of predicting dissociation rates via few-shot learning. Extensive experiments demonstrate that AbAgKer outperforms baseline models and exhibits strong generalization capabilities in antibody screening and drug residence time analysis. Availability and implementation The source code and dataset are available at https://github.com/CSUBioGroup/AbAgKer and https://doi.org/10.5281/zenodo.19691211.",
+      "canonical_id": "DOI:10.1093/bioinformatics/btag606",
+      "doi": "10.1093/bioinformatics/btag606",
+      "authors": [
+        "G. Luo",
+        "Junkai Wang",
+        "Sizhe Zhang",
+        "Zhi-Lin Zhu",
+        "Zhangli Lu",
+        "Min Li"
+      ]
+    },
+    {
+      "title": "WaterMoE: Expert-Routing-based Watermarking for High Fidelity and Efficiency",
+      "source_url": "https://www.semanticscholar.org/paper/23805af0321ea8d43e9ac53859638eb7119bc00c",
+      "year": 2026,
+      "published": "2026-07-14",
+      "abstract": "Large language models (LLMs) have achieved remarkable success but raise growing concerns about content provenance and misuse, motivating the need for reliable watermarking techniques. However, these techniques have rarely been adopted in practice mainly for two reasons: i) severely degraded model performance, and ii) additional inference overhead. To confirm the problem, we construct a comprehensive benchmark spanning different generation tasks to systematically evaluate 9 representative watermarking methods. We found almost all existing methods are designed for text fluency, but not for restricted and complicated tasks, and their overhead prevents them from deployment in latency-critical systems. To address i) and ii), we propose an LLM watermarking scheme \\textit{WaterMoE} for the growingly popular Mixture-of-Experts (MoE) LLMs. WaterMoE embeds watermarking signals through controlled perturbation into the expert selection at each router, which accumulates to token selection shift at the final output. In contrast to watermarking as a post-processing token-sampling approach, WaterMoE embeds watermark within the inference loop incurring negligible quality degradation and computational overhead. Extensive experiments demonstrate that our method achieves a fidelity performance close to the unwatermarked and consistently outperforms state-of-the-art watermarking methods on the benchmark, with up to $4\\times$ speedup, incurring merely 1\\% additional inference latency compared to native generation. The results demonstrate the capability of WaterMoE to be deployed in real-world tasks.",
+      "canonical_id": "arXiv:2607.13099",
+      "arxiv_id": "2607.13099",
+      "authors": [
+        "Ze-Wen Sun",
+        "Qian Jiang",
+        "Si-Yuan Sheng",
+        "Li-Yao Xiang"
+      ]
+    },
+    {
+      "title": "UniEP: Unified Expert-Parallel MegaKernel MoE for LLM Training",
+      "source_url": "https://www.semanticscholar.org/paper/1f375d7d57023ccd860290ee3acfb94ca0889728",
+      "year": 2026,
+      "published": "2026-07-13",
+      "abstract": "As LLM training grows increasingly resource-intensive and expert parallelism (EP) becomes essential for scaling MoE models, EP optimizations are widely adopted in production frameworks like Megatron-LM. Existing solutions often rely on ad-hoc, complex kernels that lack adaptability across diverse optimization configurations and frequently neglect numerical stability, failing to meet the strict precision requirements of large-scale training. In this paper, we introduce UniEP, a novel system that unifies diverse EP optimization strategies into a cohesive abstraction. UniEP fuses the MoE communication and computation into MegaKernels, effectively transforming complex architectural tuning into a unified parameter search space for automated adaptability. Crucially, UniEP incorporates a deterministic token ordering mechanism that guarantees numerical consistency with sequential execution, even under aggressive overlap schedules. We evaluate UniEP on GPU clusters equipped with NVIDIA Hopper GPUs. Our results demonstrate that UniEP achieves 1.03 × -1.38 × speedups over state-of-the-art work, effectively mitigating communication bottlenecks while maintaining the rigorous accuracy standards required for production LLM training.",
+      "canonical_id": "DOI:10.1145/3806645.3807818",
+      "doi": "10.1145/3806645.3807818",
+      "authors": [
+        "Size Zheng",
+        "Xuegui Zheng",
+        "Li-Wen Chang",
+        "Ji-Dong Zhai"
+      ]
+    },
+    {
+      "title": "On the Design of Mixture-of-Experts for Dynamic Gaussian Splatting",
+      "source_url": "https://www.semanticscholar.org/paper/4eff6c1765d39f73b5420ec9183d178b8f6216af",
+      "year": 2026,
+      "published": "2026-07-09",
+      "abstract": "Dynamic scene reconstruction remains challenging due to the heterogeneous and spatially varying nature of real-world motion. Although recent 3D Gaussian Splatting methods have introduced diverse deformation formulations for dynamic novel view synthesis, each method typically relies on a single deformation model within its representation, which limits robustness across diverse dynamic scenarios. In this work, we study a fundamental problem-multi-deformation modeling for dynamic 3D Gaussian representations-under two distinct integration constraints that differ in when and how multiple deformation experts interact during training. From a Mixture-of-Experts (MoE) perspective, we view multi-deformation modeling as the problem of combining multiple specialized deformation models within a unified 3D representation. We first introduce Mixture of Deformation Experts (MoDE), which integrates multiple deformation experts directly into the deformable Gaussian Splatting pipeline through joint optimization. In MoDE, experts operate on a shared canonical Gaussian representation, enabling multi-deformation modeling without introducing additional training stages or modifying the original optimization schedule. In contrast, we further present Mixture of Experts for Dynamic Gaussian Splatting (MoE-GS) under a different integration constraint, where deformation experts are optimized independently and combined through a separate routing stage. As a result, expert interaction occurs over non-canonical Gaussian representations after individual optimization. Together, these two approaches provide alternative strategies for multi-deformation modeling, clarifying how integration constraints shape the design and behavior of deformation experts in dynamic 3D Gaussian representations. Our code is available at: https://github.com/cvsp-lab/MoE-GS-studio.",
+      "canonical_id": "arXiv:2607.08250",
+      "arxiv_id": "2607.08250",
+      "authors": [
+        "In-hwan Jin",
+        "Hyeongju Mun",
+        "Joonsoo Kim",
+        "Kug-jin Yun",
+        "Kyeongbo Kong"
+      ]
+    },
+    {
+      "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+      "source_url": "https://www.semanticscholar.org/paper/5da1eaa0da5f14c5133b44466a979e282b87ac32",
+      "year": 2026,
+      "published": "2026-07-07",
+      "abstract": "The deployment of Mixture-of-Experts (MoE) models on production high-bandwidth superpods, such as NVIDIA's NVL72/576 and Huawei's CloudMatrix384, introduces critical challenges beyond raw interconnect bandwidth. While these systems provide unified global address spaces and high-bandwidth fabrics, their full potential for sparse MoE communication is hindered by three fundamental bottlenecks: (1) Strict execution serialization imposed by coarse-grained Bulk Synchronous Parallel (BSP) orchestration of interdependent communication phases; (2) Prohibitive synchronization overhead that fails to scale alongside high interconnect bandwidth; and (3) Severe load imbalance resulting from distance-agnostic scheduling of irregular token traffic. To eliminate these bottlenecks, we introduce UBEP (Unified-Bus Expert Parallelism), a production-ready communication library that rethinks MoE's All-to-All primitives for modern superpod architectures. Through large-scale experiments, UBEP reduces All-to-All latency by up to 52.4% and MoE inference Time Per Output Token (TPOT) by up to 11.1%.",
+      "canonical_id": "arXiv:2607.06202",
+      "arxiv_id": "2607.06202",
+      "authors": [
+        "Yi-Peng Liu",
+        "Chang Liu",
+        "Sitan Shen",
+        "Jiaqi Zheng",
+        "Ming-Fan Li",
+        "Yu-Yang Yang",
+        "Guan-Hua Li",
+        "Yu-Quan Zhang",
+        "Yimeng Xu",
+        "Zhongzhe Hu",
+        "Zhi-Yuan Huang",
+        "Qi-Hang Duan",
+        "Jun-Sheng Wang",
+        "Wen-Kai Ling",
+        "Bao-Chun Yang",
+        "Xianzhi Yu",
+        "Han Bao",
+        "Yi-Jie Chen",
+        "Guihai Chen"
+      ]
+    },
+    {
+      "title": "Skew-aware Adaptive All-to-allv Algorithms for Dynamic Deep Learning Workloads",
+      "source_url": "https://www.semanticscholar.org/paper/726c13798e0511936ed24e4adde904b981831114",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "All-to-allv is a commonly used collective and can be a significant performance bottleneck in high performance computing and distributed deep learning (DL) workloads. DL workloads, in particular, have significantly skewed distributions of data sizes exchanged between processes, dynamic changes in communication, and large message sizes. These make optimizing the all-to-allv communication challenging. In this work, we present SABRE, a Skew-aware All-to-allv library for Balancing irREgular communication on GPU-based clusters. SABRE is designed to achieve good performance under both highly-skewed and lightly-skewed communication patterns. It selects different optimization strategies in these regimes to reduce all-to-allv communication time on modern GPU clusters. We implement and evaluate SABRE on the Perlmutter system at NERSC, and demonstrate performance speedups in real workloads through communication imbalance detection, adaptive algorithm selection, careful backend selection, and memory management optimizations. Our library achieves up to 2.4 × speedup over Cray MPICH and NCCL in microbenchmark experiments, and improves mixture of experts model training time by up to 1.8 × compared with the default PyTorch implementation.",
+      "canonical_id": "DOI:10.1145/3797905.3800541",
+      "doi": "10.1145/3797905.3800541",
+      "authors": [
+        "Cunyang Wei",
+        "A. Bhatele"
+      ]
+    },
+    {
+      "title": "Closing the Efficiency Gap: AI Datacenter Co-design Roadmap for Scalable Training of LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/b496ab5ec06d755b24406e9f953ef71b93fadf87",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "The massive compute, memory, and networking needs for LLM training necessitate a fundamental rethinking of datacenter architectures to ensure scalability, efficiency, and cost-effectiveness. In particular, the design of the network fabric for AI datacenters for emerging LLMs (such as MoEs) remains a crucial and challenging open question, spanning technology choices (that determine the size of the high-bandwidth domain), topology, and software optimizations (collective algorithms and overlap strategies). This necessitates an agile framework to traverse the co-design space. This work introduces Calculon-MoE, a tool that jointly explores FLOPS, HBM bandwidth and capacity, multiple network topologies (Two-tiered vs. FullFlat optical), the size of scale-up domain, and popular parallelism/optimization strategies used in LLMs. Our validation studies demonstrate that our LLM/MoE runtime predictions are within 10% of real-world measurements. Using Calculon-MoE, we conduct a suite of case studies to develop an actionable roadmap for data centers. For example, the results point to the promise of Fullflat network architectures, which provide uniform high-bandwidth, low-latency connectivity between all nodes and demonstrate their positive impacts on performance and scalability. We also quantify the benefits of overlapping compute and communication, hardware-accelerated collectives, widening the scale-up domain, and higher memory bandwidth and capacity. Our study spans both sparse (mixture of experts) and dense transformer-based LLMs, revealing how system design and optimization choices affect system efficiency and overall throughput in both cases.",
+      "canonical_id": "DOI:10.1145/3797905.3807839",
+      "doi": "10.1145/3797905.3807839",
+      "authors": [
+        "Jesmin Jahan Tithi",
+        "Hanjiang Wu",
+        "Joongun Park",
+        "Avishaii Abuhatzera",
+        "Fabrizio Petrini",
+        "Tushar Krishna"
+      ]
+    },
+    {
+      "title": "HPMD: Enabling Hybrid Parallelism with Multi-Dimensional Adaptive DNN Training",
+      "source_url": "https://www.semanticscholar.org/paper/12a34aa25ff0f80fd27a1586362745cb27d14cd2",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "Traditional distributed DNN training assumes static configurations, fixing the global batch size, GPU allocation, and parallelism strategy. Recent adaptive DNN training techniques dynamically adjust individual dimensions to improve efficiency. However, they fail to support joint, multi-dimensional adaptation under hybrid parallelism (HP) due to fundamental system challenges. We propose a system called HPMD, Hybrid Parallelism for Multi-Dimensional adaptive DNN training, which jointly adapts the global batch size, GPU allocation, and parallelism strategies to optimize time and cost. HPMD introduces two techniques for constraint-free parallelism configurations with adaptive batching, Compute-and-Gather, which mitigates memory overhead, and Micro-batch Gradient Similarity, which supports flexible HP configurations. Furthermore, HPMD provides a systematic method to select a Pareto-optimal configuration that balances the trade-off between time and cost. Our experimental results with large-scale DNN models show that HPMD achieves significant improvements over state-of-the-art adaptive batching approaches while preserving convergence.",
+      "canonical_id": "DOI:10.1145/3797905.3800533",
+      "doi": "10.1145/3797905.3800533",
+      "authors": [
+        "Gyeongchan Yun",
+        "Young-ri Choi"
+      ]
+    },
+    {
+      "title": "Taming Dynamic Diffusion LLM Inference through Virtual Static Execution",
+      "source_url": "https://www.semanticscholar.org/paper/205ada57842c4a4bbfc8370bbf0a216fb671b7da",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "Diffusion-based Large Language Models (DLLMs) promise high-efficiency text generation by refining all tokens in parallel via dense matrix operations. However, this non-autoregressive paradigm introduces a significant challenge: workload dynamism. The number of active tokens fluctuates unpredictably at every denoising step, creating a fundamental conflict with modern deep learning compilers that rely on static tensor shapes for optimization. Consequently, existing serving systems face a dilemma: either incur severe latency spikes due to frequent re-compilation or suffer from low GPU utilization caused by excessive padding. We present Prism, a serving system that reconciles this conflict through a novel paradigm called Virtual Static Execution. Prism abstracts the highly dynamic diffusion workload into a predictable, static execution flow transparent to the compiler. We achieve this via three techniques: (1) Spatial Regularization: We discretize the dynamic token space into a compact set of fixed Physical Buckets, maximizing kernel reuse while minimizing compilation overhead. (2) Temporal Stabilization: We decouple logical diffusion steps from physical execution using a budget-aware scheduler, smoothing out bursty workloads and enabling computation-communication overlap. (3) Compute Optimization: We introduce specialized kernels that selectively bypass padding data, ensuring that the regularization overhead does not translate into wasted compute. Evaluated on LLaDA-8B and Mixture-of-Experts (MoE) models, Prism outperforms state-of-the-art baselines by 5.8 × in throughput and reduces median latency by 70%.",
+      "canonical_id": "DOI:10.1145/3797905.3800520",
+      "doi": "10.1145/3797905.3800520",
+      "authors": [
+        "Jia-Nian Zhu",
+        "Hang Wu",
+        "Ying-Hui Li",
+        "Haojie Wang",
+        "Rui-Xuan Li",
+        "Ji-Dong Zhai"
+      ]
+    },
+    {
+      "title": "Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models",
+      "source_url": "https://www.semanticscholar.org/paper/62677754f98a7d87b52cdc01ae1cd5501a9d939f",
+      "year": 2026,
+      "published": "2026-07-02",
+      "abstract": "This paper showcases a memory-efficient training stack for Mixture-of-Experts (MoE) models. It is a training paradigm that combines and specializes various existing and novel parallelism techniques at different layers and stages of the Mixture-of-Experts (MoE) model training pipeline. It leverages these techniques to achieve maximal efficiency given the physical constraints of CPU, CPU memory, GPU HBM memory, and the CPU-GPU, GPU-GPU, and node-node communication bandwidth of the GPU cluster. It also contains a novel strategy for the optimizer step to achieve high throughput and memory efficiency, enabling practitioners to conduct lossless pre-training/fine-tuning of trillion-parameter scale models, at a million context length, with just under 12 8x H200 GPU nodes, with state-of-the-art throughput and memory efficiency. In our experiments, MoP delivers 4.7x--8.2x higher per-GPU throughput than a strongly-tuned FSDP2 baseline (with the gap widening at larger scale) and sustains training at context lengths up to 1M tokens, where the baseline runs out of memory beyond 64--128K.",
+      "canonical_id": "arXiv:2607.01844",
+      "arxiv_id": "2607.01844",
+      "authors": [
+        "Xuan-Phi Nguyen",
+        "Shrey Pandit",
+        "Yiran Zhao",
+        "Semih Yavuz",
+        "Silvio Savarese",
+        "Shafiq Joty"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2026.3702749",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2026.3702749",
+        "title:efficient mixtureofexperts training with pipelining optimization",
+        "url:https://www.semanticscholar.org/paper/65240291ce082d0f4bf57616e11b4aee3cc9cffe"
+      ],
+      "record": {
+        "title": "Efficient Mixture-of-Experts Training With Pipelining Optimization",
+        "source_url": "https://www.semanticscholar.org/paper/65240291ce082d0f4bf57616e11b4aee3cc9cffe",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Sparsely activated Mixture-of-Experts (MoE) has emerged as a key technique to expand the size of Transformer-based large language models (LLMs) while maintaining low computational costs. However, MoE layers require to route the input data to distributed devices, incurring significant communication latency. Existing studies have primarily focused on alleviating this problem by overlapping computation and communication tasks within a single MoE layer, which fails to achieve sufficient overlap and results in limited performance gains. In this work, we introduce an orthogonal partitioning dimension from existing task-parallel methods by leveraging the autoregressive nature of causal Transformer-based LLMs, <italic>i.e.</italic> partitioning tasks along the sequence dimension. This provides more flexible and efficient overlaps among tasks from both non-MoE and MoE layers. To this end, we propose an efficient MoE training approach, SP-MoE, with two innovative designs. 1) It incorporates non-MoE layers into the overlapping with not only the current MoE layer but also the preceding MoE layer, thereby facilitating more efficient training; 2) It identifies the optimal combination of pipeline degrees for non-MoE and MoE layers and devises the best scheduling plans for load-imbalanced non-MoE and uniform MoE layers to achieve the goal of minimizing the total training latency. Furthermore, we extend our algorithm to incorporate pipeline parallelism (PP) for training larger MoE models, which introduces peer-to-peer (P2P) communications between adjacent PP stages. To mitigate this problem, we propose S3P-MoE with two optimizations: 1) it partitions P2P communication into chunks and each P2P chunk is transmitted immediately to be overlapped with expert computation; 2) it allows the subsequent PP stage to commence upon receiving the corresponding P2P chunk. Moreover, we refine our algorithm to jointly optimize pipeline degrees for both MoE and non-MoE layers, as well as P2P communication, to minimize overall training latency. Extensive experiments demonstrate that SP-MoE and S3P-MoE effectively identify optimal pipeline degrees, reducing training time by up to <inline-formula><tex-math notation=\"LaTeX\">$34.3\\%$</tex-math><alternatives><mml:math><mml:mn>34.3</mml:mn><mml:mi mathvariant=\"normal\">%</mml:mi></mml:math><inline-graphic xlink:href=\"shi-ieq1-3702749.gif\"/></alternatives></inline-formula> and <inline-formula><tex-math notation=\"LaTeX\">$30.61\\%$</tex-math><alternatives><mml:math><mml:mn>30.61</mml:mn><mml:mi mathvariant=\"normal\">%</mml:mi></mml:math><inline-graphic xlink:href=\"shi-ieq2-3702749.gif\"/></alternatives></inline-formula>, respectively, compared to state-of-the-art methods.",
+        "canonical_id": "DOI:10.1109/TC.2026.3702749",
+        "doi": "10.1109/TC.2026.3702749",
+        "authors": [
+          "Ne Wang",
+          "Wen-Jing Lin",
+          "Lin Zhang",
+          "Shao-Huai Shi",
+          "Rui-Ting Zhou",
+          "Bo Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14306",
+      "identity_tokens": [
+        "id:arXiv:2609.14306",
+        "title:flattening every memory peak in longcontext mixtureofexperts training",
+        "url:https://www.semanticscholar.org/paper/1935271e421a048f0a4c843a7f8aca792c6f46a4"
+      ],
+      "record": {
+        "title": "Flattening Every Memory Peak in Long-Context Mixture-of-Experts Training",
+        "source_url": "https://www.semanticscholar.org/paper/1935271e421a048f0a4c843a7f8aca792c6f46a4",
+        "year": 2026,
+        "published": "2026-09-13",
+        "abstract": "Training a Mixture-of-Experts (MoE) model at long context or large batch size fails as soon as any one component's peak allocation exceeds device memory, so the target is every peak at once, not the average footprint. Four are left unbounded by the parallelism plans in common use, and each grows differently: expert dispatch with the routing matrix, the vocabulary projection with tokens times vocabulary, gradient checkpoint boundaries with depth times sequence length, and optimizer state with parameter count. Which one runs out first changes with the model, the context length, and the device count, so lowering the largest only exposes the next. We bound all four with schedules whose GPU working set is fixed at launch: PipelinedLLEP extends least-loaded expert parallelism with a cap on the tokens each source contributes to a dispatch chunk, Ring-DTP circulates activations or weight shards around a ring at the vocabulary projection and folds each block of logits into an online log-sum-exp, Selective checkpoint offload (SCO) keeps the one long-lived tensor of each checkpoint boundary in CPU memory, and OffloadStreamAdamW turns the serial CPU Adam update of optimizer offload into a bucket pipeline. All four change only the order and granularity of computation and data movement, so the loss and gradients stay exact. In matched component tests, they cut the MoE dispatch peak by up to $59.3\\%$ without losing throughput, the vocabulary projection peak by $86.6\\%$, and the offloaded optimizer step by $2.05\\times$ faster. Composed on MoE models from 120B to 667B parameters, they train at 1M context length, $8$--$32\\times$ the reach of a tuned FSDP2 baseline, and up to $10.4\\times$ its throughput.",
+        "canonical_id": "arXiv:2609.14306",
+        "arxiv_id": "2609.14306",
+        "authors": [
+          "Shrey Pandit",
+          "Xuan-Phi Nguyen",
+          "Yiran Zhao",
+          "Shafiq Joty"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27874",
+      "identity_tokens": [
+        "id:arXiv:2608.27874",
+        "title:terracemoe a cost model for hierarchical moe alltoall communication",
+        "url:https://www.semanticscholar.org/paper/13f1bc747cae737513c3f4d315a86b8dc872b267"
+      ],
+      "record": {
+        "title": "TerraceMoE: A Cost Model for Hierarchical MoE All-to-All Communication",
+        "source_url": "https://www.semanticscholar.org/paper/13f1bc747cae737513c3f4d315a86b8dc872b267",
+        "year": 2026,
+        "published": "2026-08-28",
+        "abstract": "Hierarchical two-hop dispatch can reduce slow-fabric traffic in expert-parallel Mixture-of-Experts training, but it adds a second collective and an arrival-side operator chain. We present a cost model for screening that trade at the communication-call level, bounded by validation gates that withdraw a capability in code when they fail rather than reporting a caveat. At a reference geometry with 16 groups of 8 ranks, $q=3$, $H=2048$, and 4096 tokens per rank, the corrected effective breakeven hierarchy ratio is 3.98 for the measured PyTorch arrival chain, 1.49 for a hypothetical fused target, and 1.10 at zero implementation overhead. These are ratio-only sensitivity results, not deployment predictions: platform A measures 1.03, platform B has no separated fast/slow measurement, and neither machine measured here reaches the hierarchical regime. Four communication-level corpora pass their gates; a drift probe and the step-level gate fail. The latter failure is enforced in code, so we make no training-throughput prediction. The enabling routing constraint fixes per-token fan-out and per-selected-group quota, while aggregate per-peer counts remain data-dependent. Its measured validation-loss cost is small but nonzero (+0.0034 nats); downstream equivalence is reported with incomplete estimator provenance and is therefore not independently reconstructible from the artifact. Code, calibration constants and the validation gates are at https://github.com/weich97/TerraceMoE-simulator.",
+        "canonical_id": "arXiv:2608.27874",
+        "arxiv_id": "2608.27874",
+        "authors": [
+          "Weicheng Xue",
+          "Bingqiang Wang",
+          "Li Yuan",
+          "Huihui Zhou",
+          "Yong-Hong Tian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.17523",
+      "identity_tokens": [
+        "id:arXiv:2608.17523",
+        "title:completionpath credits multiresource control for scaleup fabrics",
+        "url:https://www.semanticscholar.org/paper/12dd561426aae0eff2c61ff40a1b965774695320"
+      ],
+      "record": {
+        "title": "Completion-Path Credits: Multi-Resource Control for Scale-Up Fabrics",
+        "source_url": "https://www.semanticscholar.org/paper/12dd561426aae0eff2c61ff40a1b965774695320",
+        "year": 2026,
+        "published": "2026-08-18",
+        "abstract": "Scale-up fabrics connecting GPUs and AI accelerators carry tensor transfers together with remote reads, writes, atomics, and notifications over shared target-side receiver resources. Byte-denominated credits protect link buffers and streaming HBM traffic, but poorly represent small operations dominated by Atomic execution or response injection. This paper presents SemaCredit, a receiver controller that admits each remote-memory operation against a vector of target-resource demands and returns each component when its corresponding HBM, Atomic, or response stage completes. In a deterministic event simulator with multipath queues, eight HBM partitions, a serialized Atomic engine, and a response engine, SemaCredit matches a strong per-resource byte baseline on HBM-hotspot traffic while reducing small-operation P99 latency by 52.4% under Atomic contention and 10.2% under response incast. Application-shaped mixes show 57.7% and 14.5% P99 latency improvements for AllReduce-shaped and remote-read-shaped traffic while matching byte credits on HBM-dominated MoE traffic.",
+        "canonical_id": "arXiv:2608.17523",
+        "arxiv_id": "2608.17523",
+        "authors": [
+          "Fan Yang",
+          "Jiaqi Liu",
+          "Tao Jiang",
+          "Zhan Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.10614",
+      "identity_tokens": [
+        "id:arXiv:2608.10614",
+        "title:trigger the straggler load hijack on mixtureofexperts llms",
+        "url:https://www.semanticscholar.org/paper/92056caa34e7758f98b43f6bea30bf008a7017f2"
+      ],
+      "record": {
+        "title": "Trigger the Straggler: Load Hijack on Mixture-of-Experts LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/92056caa34e7758f98b43f6bea30bf008a7017f2",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Expert parallelism (EP) is a common strategy for serving large Mixture-of-Experts (MoE) models across multiple GPUs by distributing experts among devices. Router decisions then determine both which experts process each token and which GPUs execute the resulting work. This procedure exposes a supply-chain attack surface in the serving schedule. We introduce Load Hijack, in which a malicious model provider modifies only a checkpoint's router weights, distributes the poisoned checkpoint, and retains a private trigger. When the trigger appears, the poisoned router concentrates token-to-expert assignments on experts co-located on one GPU. The resulting load makes that GPU a straggler and forces peer devices to wait, while routing on ordinary inputs remains near the clean reference. We find this conditional behavior difficult to achieve because an objective that rewards target-expert use on triggered inputs can also bias ordinary-input routing toward the same experts. To resolve this conflict, Load Hijack employs a three-stage optimization procedure that produces strong trigger-dependent concentration while keeping ordinary-input routing close to the clean reference. Across three MoE families and four corpora, Load Hijack directs 92.3% to 95.6% of triggered token assignments to the target experts. In live EP serving, triggered traffic produces 1.43x the time-to-first-token and 0.86x the throughput measured under ordinary traffic. These results show that poisoned routers can act as trigger-controlled device schedulers and motivate checkpoint audits of routing and runtime load.",
+        "canonical_id": "arXiv:2608.10614",
+        "arxiv_id": "2608.10614",
+        "authors": [
+          "Rui Zhang",
+          "Wenbo Jiang",
+          "Hongwei Li",
+          "Zi-Han Wang",
+          "Chaoshun Zuo",
+          "Jian-Fei Sun",
+          "Guo-Wen Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03676",
+      "identity_tokens": [
+        "id:arXiv:2608.03676",
+        "title:taot topologyaware optimal transport for dynamic expert replica placement in moe training",
+        "url:https://www.semanticscholar.org/paper/3bf53cac915fb5016ee6ece6d8ce31150944d3d9"
+      ],
+      "record": {
+        "title": "TAOT: Topology-Aware Optimal Transport for Dynamic Expert Replica Placement in MoE Training",
+        "source_url": "https://www.semanticscholar.org/paper/3bf53cac915fb5016ee6ece6d8ce31150944d3d9",
+        "year": 2026,
+        "published": "2026-08-04",
+        "abstract": "Mixture-of-Experts (MoE) has become a key architecture for scaling large language models (LLMs), yet its dynamic routing causes severe load imbalance in expert-parallel training. Existing dynamic-replica methods copy hot experts onto idle ranks to share computation, but they optimize load balance alone and ignore the cost of moving expert weights across a multi-node topology, so the resulting cross-node communication can outweigh the balancing gain and inflate training cost. We present TAOT, a topology-aware optimal transport method for dynamic expert-replica placement. TAOT models the overload on hot ranks and the spare capacity on lightly loaded ranks as a balanced entropy-regularized optimal transport problem with a communication-cost matrix, solves it with Sinkhorn-Knopp iterations to produce rank-level flow hints, and combines integer replica matching with token assignment into an executable schedule. At the system level, it overlaps guest-weight transfer with home-expert computation to hide the communication overhead. Experiments show TAOT achieves a 1.43x end-to-end MoE training speedup, reaches balance quality competitive with or better than existing state-of-the-art methods, and attains the lowest weighted expert-communication cost across all configurations, with up to a 74% reduction.",
+        "canonical_id": "arXiv:2608.03676",
+        "arxiv_id": "2608.03676",
+        "authors": [
+          "Ling-Yun Zhang",
+          "Henghua Zhang",
+          "Shilei Gu",
+          "Kaixiang Mo",
+          "Shuai Han",
+          "Shiyong Li",
+          "Yanpeng Wang",
+          "Dou Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00574",
+      "identity_tokens": [
+        "id:arXiv:2608.00574",
+        "title:relax within balance across geometryguided load balancing for visionlanguage mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/d9b234dd4e14142d32d1ebbf4856e3a058bc7ea4"
+      ],
+      "record": {
+        "title": "Relax Within, Balance Across: Geometry-Guided Load Balancing for Vision-Language Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/d9b234dd4e14142d32d1ebbf4856e3a058bc7ea4",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Vision-language MoE batches contain different numbers of image and text tokens. Image resolution, image count, tiling, and prompt length all change this token mix. We call the standard token-level Switch auxiliary loss Std-Aux. Std-Aux balances only the mixed load, so large image and text load errors can cancel at one mix. On our main model, the same trained router shows more than a fivefold change in load imbalance across image resolutions. We hold the image and text load profiles fixed and derive the exact load curve as the token mix varies. The image-text load gap controls sensitivity to the token mix. Physical preprocessing can also change the conditional profiles. The fixed-profile law excludes such changes. To design a remedy, we examine the router input structure. Image and text occupy distinct regions, while visual tokens group strongly by source image. The modality boundary motivates separate image and text terms. The image boundary motivates one equal-weight routing instance per image. ReBA, or Relax Within, Balance Across, implements both choices. Across four split backbones, ReBA lowers load on every reported benchmark input while keeping mean task accuracy comparable to Std-Aux. ReBA also lowers average load over the tested range and worst physical load under resolution and tiling shifts. Code is available at https://github.com/ZiangWu-77/ReBA.",
+        "canonical_id": "arXiv:2608.00574",
+        "arxiv_id": "2608.00574",
+        "authors": [
+          "Ziang Wu",
+          "Peng Jin",
+          "Qishen Yin",
+          "Munan Ning",
+          "Hao Li",
+          "Peizhen Zhang",
+          "Li Yuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcsvt.2026.3679352",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcsvt.2026.3679352",
+        "title:msftnet mixture semanticagnostic manipulation trace enhanced architecture for robust image manipulation localization",
+        "url:https://www.semanticscholar.org/paper/55cfc06a666b2c115736d1089a6518cb2fc6f7ea"
+      ],
+      "record": {
+        "title": "MSFT-Net: Mixture Semantic-Agnostic Manipulation Trace Enhanced Architecture for Robust Image Manipulation Localization",
+        "source_url": "https://www.semanticscholar.org/paper/55cfc06a666b2c115736d1089a6518cb2fc6f7ea",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Since the proliferation of image manipulation methods, effective image manipulation localization (IML) in scenarios with post-processing operations gradually becomes a core challenge. For a long time, IML either relies on strongly semantically related features, resulting in semantic relevance bias in the localization results, or only uses a single semantic-agnostic space feature, which is unable to maintain effective localization capabilities after image post-processing operations. Inspired by this, we propose a novel mixture semantic-agnostic manipulation trace robust localization network (MSFT-Net), which specifically utilizes mixture semantic-agnostic information to achieve effective and robust IML. The MSFT-Net introduces two new modules, the mixture shared manipulation trace enhancement module (MISE) and the Multiscale Feature Association Module (FAM). MISE dynamically links multiple semantic-agnostic feature extractors using a sparsity-enhanced mixture of shared experts, enabling the extraction of diverse manipulation features for accurate localization. Furthermore, keeping the high resolution of the localization features is very important in the mask prediction stage. Therefore, FAM outputs high-resolution fused manipulation features by using the correlation of features at the same level and the spatial context information from different levels. This further improves the effectiveness of IML in post-processing scenarios. Comprehensive experiments on five datasets demonstrate that our model significantly improves both in localization accuracy (average F1 score and IoU increasing by over 9.9% and 4.0%) and robustness. The codes will be made available.",
+        "canonical_id": "DOI:10.1109/TCSVT.2026.3679352",
+        "doi": "10.1109/TCSVT.2026.3679352",
+        "authors": [
+          "Jiayi Liu",
+          "Deng-Pan Ye",
+          "Yun-Ming Zhang",
+          "Jia-Cheng Deng",
+          "Ziyi Liu",
+          "Yueyun Shang",
+          "Zhihong Tian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s44443-026-01029-2",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44443-026-01029-2",
+        "title:msbrkt knowledge tracing via multifaceted structuredbias routing",
+        "url:https://www.semanticscholar.org/paper/eef06f94b4999afbfa84bd28f0ede886c6eb8e34"
+      ],
+      "record": {
+        "title": "MSBR-KT: knowledge tracing via multifaceted structured-bias routing",
+        "source_url": "https://www.semanticscholar.org/paper/eef06f94b4999afbfa84bd28f0ede886c6eb8e34",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Knowledge tracing (KT) aims to model the evolution of students’ latent knowledge states from historical interaction sequences for accurate prediction of future responses. Modeling knowledge evolution entails the joint consideration of multiple interrelated signals, including temporal dynamics, content semantics, and behavior-driven transitions. However, current KT approaches still face bottlenecks in context-adaptive multi-source fusion and the modeling of time-varying knowledge dynamics. Moreover, relying on a single shared prediction layer may limit both prediction accuracy and flexibility in heterogeneous learning contexts, thereby reducing overall performance. To address these issues, we propose a novel knowledge tracing framework built on multifaceted structured-bias routing, called MSBR-KT. To begin with, the proposed framework constructs learnable structured-bias matrices to capture time-decay patterns, semantic relationships among questions and knowledge concepts, and transition dependencies induced by correctness signals. Furthermore, a bias routing mechanism adaptively integrates these biases within multi-head attention by allocating context-dependent strengths, which results in stage-aware tracking of students’ evolving knowledge states through selective attention to the most relevant historical interactions. Ultimately, a routing-aware mixture-of-experts prediction layer is incorporated, with mixing coefficients derived from the routing distributions, to improve context-adaptive evidence aggregation at the prediction stage. Experiments on three benchmark datasets show that the proposed framework achieves the best AUC on all datasets while maintaining competitive ACC and RMSE performance, demonstrating reliable and robust predictive performance compared with existing state-of-the-art methods.",
+        "canonical_id": "DOI:10.1007/s44443-026-01029-2",
+        "doi": "10.1007/s44443-026-01029-2",
+        "authors": [
+          "Fei Ma",
+          "Yu Jiang",
+          "Huabing Li",
+          "Fei-Xia Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.ins.2026.124025",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.ins.2026.124025",
+        "title:synergistic mixedprecision quantization for moe llms integrating cooperative shapley attribution with profilingfew fuzzy rule interpolation",
+        "url:https://www.semanticscholar.org/paper/ba19ec482ca2ae2b3ca06590b3e9fae0603a9c73"
+      ],
+      "record": {
+        "title": "Synergistic mixed-precision quantization for MoE LLMs: Integrating cooperative shapley attribution with profiling-few fuzzy rule interpolation",
+        "source_url": "https://www.semanticscholar.org/paper/ba19ec482ca2ae2b3ca06590b3e9fae0603a9c73",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.ins.2026.124025",
+        "doi": "10.1016/j.ins.2026.124025",
+        "authors": [
+          "Hua-Chen Qi",
+          "Ruiyu Zhuo",
+          "Bowen Shi",
+          "Fei Chao",
+          "Xiang Chang",
+          "C. Shang",
+          "Qiang Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1093/bioinformatics/btag606",
+      "identity_tokens": [
+        "id:DOI:10.1093/bioinformatics/btag606",
+        "title:abagker a unified semisupervised framework for antigenantibody binding affinity and kinetics prediction",
+        "url:https://www.semanticscholar.org/paper/b033852bbaf54fbfa40bdd75f3689e6e1632f064"
+      ],
+      "record": {
+        "title": "AbAgKer: a unified semi-supervised framework for antigen-antibody binding affinity and kinetics prediction",
+        "source_url": "https://www.semanticscholar.org/paper/b033852bbaf54fbfa40bdd75f3689e6e1632f064",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Abstract Motivation The rapid advancement of generative artificial intelligence has enabled the high-throughput design of therapeutic antibody candidates. However, the precise evaluation of these candidates remains a significant challenge due to the scarcity of high-quality activity data and the structural flexibility of antibody complementarity-determining regions (CDRs). Results To address these challenges, we propose AbAgKer, an antibody screening model leveraging pre-trained representations and biological prior guidance for antigen-antibody affinity and kinetics prediction. Specifically, we design a biological prior-guided feature fusion framework that integrates pseudo-structural epitope knowledge and CDR-specific attention mechanisms via a mixture-of-experts architecture to effectively capture complex binding landscapes. To mitigate data scarcity, we employ a semi-supervised learning strategy for data self-distillation, which significantly enhances affinity prediction performance. Additionally, we demonstrate that the interaction representations learned by AbAgKer can be effectively transferred to the data-scarce task of predicting dissociation rates via few-shot learning. Extensive experiments demonstrate that AbAgKer outperforms baseline models and exhibits strong generalization capabilities in antibody screening and drug residence time analysis. Availability and implementation The source code and dataset are available at https://github.com/CSUBioGroup/AbAgKer and https://doi.org/10.5281/zenodo.19691211.",
+        "canonical_id": "DOI:10.1093/bioinformatics/btag606",
+        "doi": "10.1093/bioinformatics/btag606",
+        "authors": [
+          "G. Luo",
+          "Junkai Wang",
+          "Sizhe Zhang",
+          "Zhi-Lin Zhu",
+          "Zhangli Lu",
+          "Min Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.13099",
+      "identity_tokens": [
+        "id:arXiv:2607.13099",
+        "title:watermoe expertroutingbased watermarking for high fidelity and efficiency",
+        "url:https://www.semanticscholar.org/paper/23805af0321ea8d43e9ac53859638eb7119bc00c"
+      ],
+      "record": {
+        "title": "WaterMoE: Expert-Routing-based Watermarking for High Fidelity and Efficiency",
+        "source_url": "https://www.semanticscholar.org/paper/23805af0321ea8d43e9ac53859638eb7119bc00c",
+        "year": 2026,
+        "published": "2026-07-14",
+        "abstract": "Large language models (LLMs) have achieved remarkable success but raise growing concerns about content provenance and misuse, motivating the need for reliable watermarking techniques. However, these techniques have rarely been adopted in practice mainly for two reasons: i) severely degraded model performance, and ii) additional inference overhead. To confirm the problem, we construct a comprehensive benchmark spanning different generation tasks to systematically evaluate 9 representative watermarking methods. We found almost all existing methods are designed for text fluency, but not for restricted and complicated tasks, and their overhead prevents them from deployment in latency-critical systems. To address i) and ii), we propose an LLM watermarking scheme \\textit{WaterMoE} for the growingly popular Mixture-of-Experts (MoE) LLMs. WaterMoE embeds watermarking signals through controlled perturbation into the expert selection at each router, which accumulates to token selection shift at the final output. In contrast to watermarking as a post-processing token-sampling approach, WaterMoE embeds watermark within the inference loop incurring negligible quality degradation and computational overhead. Extensive experiments demonstrate that our method achieves a fidelity performance close to the unwatermarked and consistently outperforms state-of-the-art watermarking methods on the benchmark, with up to $4\\times$ speedup, incurring merely 1\\% additional inference latency compared to native generation. The results demonstrate the capability of WaterMoE to be deployed in real-world tasks.",
+        "canonical_id": "arXiv:2607.13099",
+        "arxiv_id": "2607.13099",
+        "authors": [
+          "Ze-Wen Sun",
+          "Qian Jiang",
+          "Si-Yuan Sheng",
+          "Li-Yao Xiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3806645.3807818",
+      "identity_tokens": [
+        "id:DOI:10.1145/3806645.3807818",
+        "title:uniep unified expertparallel megakernel moe for llm training",
+        "url:https://www.semanticscholar.org/paper/1f375d7d57023ccd860290ee3acfb94ca0889728"
+      ],
+      "record": {
+        "title": "UniEP: Unified Expert-Parallel MegaKernel MoE for LLM Training",
+        "source_url": "https://www.semanticscholar.org/paper/1f375d7d57023ccd860290ee3acfb94ca0889728",
+        "year": 2026,
+        "published": "2026-07-13",
+        "abstract": "As LLM training grows increasingly resource-intensive and expert parallelism (EP) becomes essential for scaling MoE models, EP optimizations are widely adopted in production frameworks like Megatron-LM. Existing solutions often rely on ad-hoc, complex kernels that lack adaptability across diverse optimization configurations and frequently neglect numerical stability, failing to meet the strict precision requirements of large-scale training. In this paper, we introduce UniEP, a novel system that unifies diverse EP optimization strategies into a cohesive abstraction. UniEP fuses the MoE communication and computation into MegaKernels, effectively transforming complex architectural tuning into a unified parameter search space for automated adaptability. Crucially, UniEP incorporates a deterministic token ordering mechanism that guarantees numerical consistency with sequential execution, even under aggressive overlap schedules. We evaluate UniEP on GPU clusters equipped with NVIDIA Hopper GPUs. Our results demonstrate that UniEP achieves 1.03 × -1.38 × speedups over state-of-the-art work, effectively mitigating communication bottlenecks while maintaining the rigorous accuracy standards required for production LLM training.",
+        "canonical_id": "DOI:10.1145/3806645.3807818",
+        "doi": "10.1145/3806645.3807818",
+        "authors": [
+          "Size Zheng",
+          "Xuegui Zheng",
+          "Li-Wen Chang",
+          "Ji-Dong Zhai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.08250",
+      "identity_tokens": [
+        "id:arXiv:2607.08250",
+        "title:on the design of mixtureofexperts for dynamic gaussian splatting",
+        "url:https://www.semanticscholar.org/paper/4eff6c1765d39f73b5420ec9183d178b8f6216af"
+      ],
+      "record": {
+        "title": "On the Design of Mixture-of-Experts for Dynamic Gaussian Splatting",
+        "source_url": "https://www.semanticscholar.org/paper/4eff6c1765d39f73b5420ec9183d178b8f6216af",
+        "year": 2026,
+        "published": "2026-07-09",
+        "abstract": "Dynamic scene reconstruction remains challenging due to the heterogeneous and spatially varying nature of real-world motion. Although recent 3D Gaussian Splatting methods have introduced diverse deformation formulations for dynamic novel view synthesis, each method typically relies on a single deformation model within its representation, which limits robustness across diverse dynamic scenarios. In this work, we study a fundamental problem-multi-deformation modeling for dynamic 3D Gaussian representations-under two distinct integration constraints that differ in when and how multiple deformation experts interact during training. From a Mixture-of-Experts (MoE) perspective, we view multi-deformation modeling as the problem of combining multiple specialized deformation models within a unified 3D representation. We first introduce Mixture of Deformation Experts (MoDE), which integrates multiple deformation experts directly into the deformable Gaussian Splatting pipeline through joint optimization. In MoDE, experts operate on a shared canonical Gaussian representation, enabling multi-deformation modeling without introducing additional training stages or modifying the original optimization schedule. In contrast, we further present Mixture of Experts for Dynamic Gaussian Splatting (MoE-GS) under a different integration constraint, where deformation experts are optimized independently and combined through a separate routing stage. As a result, expert interaction occurs over non-canonical Gaussian representations after individual optimization. Together, these two approaches provide alternative strategies for multi-deformation modeling, clarifying how integration constraints shape the design and behavior of deformation experts in dynamic 3D Gaussian representations. Our code is available at: https://github.com/cvsp-lab/MoE-GS-studio.",
+        "canonical_id": "arXiv:2607.08250",
+        "arxiv_id": "2607.08250",
+        "authors": [
+          "In-hwan Jin",
+          "Hyeongju Mun",
+          "Joonsoo Kim",
+          "Kug-jin Yun",
+          "Kyeongbo Kong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.06202",
+      "identity_tokens": [
+        "id:arXiv:2607.06202",
+        "title:ubep rearchitecting expert parallelism communication library for production superpods",
+        "url:https://www.semanticscholar.org/paper/5da1eaa0da5f14c5133b44466a979e282b87ac32"
+      ],
+      "record": {
+        "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+        "source_url": "https://www.semanticscholar.org/paper/5da1eaa0da5f14c5133b44466a979e282b87ac32",
+        "year": 2026,
+        "published": "2026-07-07",
+        "abstract": "The deployment of Mixture-of-Experts (MoE) models on production high-bandwidth superpods, such as NVIDIA's NVL72/576 and Huawei's CloudMatrix384, introduces critical challenges beyond raw interconnect bandwidth. While these systems provide unified global address spaces and high-bandwidth fabrics, their full potential for sparse MoE communication is hindered by three fundamental bottlenecks: (1) Strict execution serialization imposed by coarse-grained Bulk Synchronous Parallel (BSP) orchestration of interdependent communication phases; (2) Prohibitive synchronization overhead that fails to scale alongside high interconnect bandwidth; and (3) Severe load imbalance resulting from distance-agnostic scheduling of irregular token traffic. To eliminate these bottlenecks, we introduce UBEP (Unified-Bus Expert Parallelism), a production-ready communication library that rethinks MoE's All-to-All primitives for modern superpod architectures. Through large-scale experiments, UBEP reduces All-to-All latency by up to 52.4% and MoE inference Time Per Output Token (TPOT) by up to 11.1%.",
+        "canonical_id": "arXiv:2607.06202",
+        "arxiv_id": "2607.06202",
+        "authors": [
+          "Yi-Peng Liu",
+          "Chang Liu",
+          "Sitan Shen",
+          "Jiaqi Zheng",
+          "Ming-Fan Li",
+          "Yu-Yang Yang",
+          "Guan-Hua Li",
+          "Yu-Quan Zhang",
+          "Yimeng Xu",
+          "Zhongzhe Hu",
+          "Zhi-Yuan Huang",
+          "Qi-Hang Duan",
+          "Jun-Sheng Wang",
+          "Wen-Kai Ling",
+          "Bao-Chun Yang",
+          "Xianzhi Yu",
+          "Han Bao",
+          "Yi-Jie Chen",
+          "Guihai Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3797905.3800541",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3800541",
+        "title:skewaware adaptive alltoallv algorithms for dynamic deep learning workloads",
+        "url:https://www.semanticscholar.org/paper/726c13798e0511936ed24e4adde904b981831114"
+      ],
+      "record": {
+        "title": "Skew-aware Adaptive All-to-allv Algorithms for Dynamic Deep Learning Workloads",
+        "source_url": "https://www.semanticscholar.org/paper/726c13798e0511936ed24e4adde904b981831114",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "All-to-allv is a commonly used collective and can be a significant performance bottleneck in high performance computing and distributed deep learning (DL) workloads. DL workloads, in particular, have significantly skewed distributions of data sizes exchanged between processes, dynamic changes in communication, and large message sizes. These make optimizing the all-to-allv communication challenging. In this work, we present SABRE, a Skew-aware All-to-allv library for Balancing irREgular communication on GPU-based clusters. SABRE is designed to achieve good performance under both highly-skewed and lightly-skewed communication patterns. It selects different optimization strategies in these regimes to reduce all-to-allv communication time on modern GPU clusters. We implement and evaluate SABRE on the Perlmutter system at NERSC, and demonstrate performance speedups in real workloads through communication imbalance detection, adaptive algorithm selection, careful backend selection, and memory management optimizations. Our library achieves up to 2.4 × speedup over Cray MPICH and NCCL in microbenchmark experiments, and improves mixture of experts model training time by up to 1.8 × compared with the default PyTorch implementation.",
+        "canonical_id": "DOI:10.1145/3797905.3800541",
+        "doi": "10.1145/3797905.3800541",
+        "authors": [
+          "Cunyang Wei",
+          "A. Bhatele"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3797905.3807839",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3807839",
+        "title:closing the efficiency gap ai datacenter codesign roadmap for scalable training of llms",
+        "url:https://www.semanticscholar.org/paper/b496ab5ec06d755b24406e9f953ef71b93fadf87"
+      ],
+      "record": {
+        "title": "Closing the Efficiency Gap: AI Datacenter Co-design Roadmap for Scalable Training of LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/b496ab5ec06d755b24406e9f953ef71b93fadf87",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "The massive compute, memory, and networking needs for LLM training necessitate a fundamental rethinking of datacenter architectures to ensure scalability, efficiency, and cost-effectiveness. In particular, the design of the network fabric for AI datacenters for emerging LLMs (such as MoEs) remains a crucial and challenging open question, spanning technology choices (that determine the size of the high-bandwidth domain), topology, and software optimizations (collective algorithms and overlap strategies). This necessitates an agile framework to traverse the co-design space. This work introduces Calculon-MoE, a tool that jointly explores FLOPS, HBM bandwidth and capacity, multiple network topologies (Two-tiered vs. FullFlat optical), the size of scale-up domain, and popular parallelism/optimization strategies used in LLMs. Our validation studies demonstrate that our LLM/MoE runtime predictions are within 10% of real-world measurements. Using Calculon-MoE, we conduct a suite of case studies to develop an actionable roadmap for data centers. For example, the results point to the promise of Fullflat network architectures, which provide uniform high-bandwidth, low-latency connectivity between all nodes and demonstrate their positive impacts on performance and scalability. We also quantify the benefits of overlapping compute and communication, hardware-accelerated collectives, widening the scale-up domain, and higher memory bandwidth and capacity. Our study spans both sparse (mixture of experts) and dense transformer-based LLMs, revealing how system design and optimization choices affect system efficiency and overall throughput in both cases.",
+        "canonical_id": "DOI:10.1145/3797905.3807839",
+        "doi": "10.1145/3797905.3807839",
+        "authors": [
+          "Jesmin Jahan Tithi",
+          "Hanjiang Wu",
+          "Joongun Park",
+          "Avishaii Abuhatzera",
+          "Fabrizio Petrini",
+          "Tushar Krishna"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3797905.3800533",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3800533",
+        "title:hpmd enabling hybrid parallelism with multidimensional adaptive dnn training",
+        "url:https://www.semanticscholar.org/paper/12a34aa25ff0f80fd27a1586362745cb27d14cd2"
+      ],
+      "record": {
+        "title": "HPMD: Enabling Hybrid Parallelism with Multi-Dimensional Adaptive DNN Training",
+        "source_url": "https://www.semanticscholar.org/paper/12a34aa25ff0f80fd27a1586362745cb27d14cd2",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "Traditional distributed DNN training assumes static configurations, fixing the global batch size, GPU allocation, and parallelism strategy. Recent adaptive DNN training techniques dynamically adjust individual dimensions to improve efficiency. However, they fail to support joint, multi-dimensional adaptation under hybrid parallelism (HP) due to fundamental system challenges. We propose a system called HPMD, Hybrid Parallelism for Multi-Dimensional adaptive DNN training, which jointly adapts the global batch size, GPU allocation, and parallelism strategies to optimize time and cost. HPMD introduces two techniques for constraint-free parallelism configurations with adaptive batching, Compute-and-Gather, which mitigates memory overhead, and Micro-batch Gradient Similarity, which supports flexible HP configurations. Furthermore, HPMD provides a systematic method to select a Pareto-optimal configuration that balances the trade-off between time and cost. Our experimental results with large-scale DNN models show that HPMD achieves significant improvements over state-of-the-art adaptive batching approaches while preserving convergence.",
+        "canonical_id": "DOI:10.1145/3797905.3800533",
+        "doi": "10.1145/3797905.3800533",
+        "authors": [
+          "Gyeongchan Yun",
+          "Young-ri Choi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3797905.3800520",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3800520",
+        "title:taming dynamic diffusion llm inference through virtual static execution",
+        "url:https://www.semanticscholar.org/paper/205ada57842c4a4bbfc8370bbf0a216fb671b7da"
+      ],
+      "record": {
+        "title": "Taming Dynamic Diffusion LLM Inference through Virtual Static Execution",
+        "source_url": "https://www.semanticscholar.org/paper/205ada57842c4a4bbfc8370bbf0a216fb671b7da",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "Diffusion-based Large Language Models (DLLMs) promise high-efficiency text generation by refining all tokens in parallel via dense matrix operations. However, this non-autoregressive paradigm introduces a significant challenge: workload dynamism. The number of active tokens fluctuates unpredictably at every denoising step, creating a fundamental conflict with modern deep learning compilers that rely on static tensor shapes for optimization. Consequently, existing serving systems face a dilemma: either incur severe latency spikes due to frequent re-compilation or suffer from low GPU utilization caused by excessive padding. We present Prism, a serving system that reconciles this conflict through a novel paradigm called Virtual Static Execution. Prism abstracts the highly dynamic diffusion workload into a predictable, static execution flow transparent to the compiler. We achieve this via three techniques: (1) Spatial Regularization: We discretize the dynamic token space into a compact set of fixed Physical Buckets, maximizing kernel reuse while minimizing compilation overhead. (2) Temporal Stabilization: We decouple logical diffusion steps from physical execution using a budget-aware scheduler, smoothing out bursty workloads and enabling computation-communication overlap. (3) Compute Optimization: We introduce specialized kernels that selectively bypass padding data, ensuring that the regularization overhead does not translate into wasted compute. Evaluated on LLaDA-8B and Mixture-of-Experts (MoE) models, Prism outperforms state-of-the-art baselines by 5.8 × in throughput and reduces median latency by 70%.",
+        "canonical_id": "DOI:10.1145/3797905.3800520",
+        "doi": "10.1145/3797905.3800520",
+        "authors": [
+          "Jia-Nian Zhu",
+          "Hang Wu",
+          "Ying-Hui Li",
+          "Haojie Wang",
+          "Rui-Xuan Li",
+          "Ji-Dong Zhai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01844",
+      "identity_tokens": [
+        "id:arXiv:2607.01844",
+        "title:mixtureofparallelisms towards memoryefficient training stack for mixtureofexperts models",
+        "url:https://www.semanticscholar.org/paper/62677754f98a7d87b52cdc01ae1cd5501a9d939f"
+      ],
+      "record": {
+        "title": "Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models",
+        "source_url": "https://www.semanticscholar.org/paper/62677754f98a7d87b52cdc01ae1cd5501a9d939f",
+        "year": 2026,
+        "published": "2026-07-02",
+        "abstract": "This paper showcases a memory-efficient training stack for Mixture-of-Experts (MoE) models. It is a training paradigm that combines and specializes various existing and novel parallelism techniques at different layers and stages of the Mixture-of-Experts (MoE) model training pipeline. It leverages these techniques to achieve maximal efficiency given the physical constraints of CPU, CPU memory, GPU HBM memory, and the CPU-GPU, GPU-GPU, and node-node communication bandwidth of the GPU cluster. It also contains a novel strategy for the optimizer step to achieve high throughput and memory efficiency, enabling practitioners to conduct lossless pre-training/fine-tuning of trillion-parameter scale models, at a million context length, with just under 12 8x H200 GPU nodes, with state-of-the-art throughput and memory efficiency. In our experiments, MoP delivers 4.7x--8.2x higher per-GPU throughput than a strongly-tuned FSDP2 baseline (with the gap widening at larger scale) and sustains training at context lengths up to 1M tokens, where the baseline runs out of memory beyond 64--128K.",
+        "canonical_id": "arXiv:2607.01844",
+        "arxiv_id": "2607.01844",
+        "authors": [
+          "Xuan-Phi Nguyen",
+          "Shrey Pandit",
+          "Yiran Zhao",
+          "Semih Yavuz",
+          "Silvio Savarese",
+          "Shafiq Joty"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:6d413b1116a9636a4d16cedb19296bebc157664edc6b40aeab18b9c1bc043f44",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
