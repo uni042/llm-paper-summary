@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Central policy for Research/Audit paper inventory and hot bank buffering.
+"""Central policy for Research/Audit inventory and dual-mode bank buffering.
 
-Paper ownership and record-bank capacity are intentionally separate layers:
-- a worker may own a deeper logical paper inventory;
-- only the leading hot slice needs record banks immediately;
-- the shared paper preload pool is sized independently from record-bank count.
+Each canonical bank has two independent stock lanes:
+- Research lane: logical preloaded paper ownership, sharded round-robin by pool order;
+- Discovery lane: a prechecked search window, maintained independently.
 
-This keeps allocation latency low without turning every standby paper into a bank
-reservation.
+The five writable Research record slots are a third, hot staging resource inside
+the same bank identity. Cold Research stock does not reserve those slots. A worker
+may own a deeper logical paper inventory while only the leading hot slice consumes
+record-slot capacity.
 """
 from __future__ import annotations
 
