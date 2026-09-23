@@ -4,10 +4,18 @@
   "slot": "problem_method",
   "attempt_id": "attempt-01b29ed73471ef21eb33ce79",
   "job_id": "job-research-f719eedd6807af4c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-01b29ed73471ef21eb33ce79",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "数百Bパラメータの自己回帰Transformerは、重みが単一アクセラレータへ収まらず、各デコードstepで巨大な重みとKVキャッシュをHBMから読み、さらにモデル並列通信を行う必要がある。学習と違い生成はtokenごとに逐次依存するため並列性が低く、低遅延化のためchip数を増やすほど通信が支配的になる。一方、大規模バッチや長い文脈ではKVキャッシュの容量・帯域が重み以上のボトルネックになりうる。したがって、単一の固定分割方式では低遅延デコードと高スループットプリフィルを同時に最適化できず、モデル規模、batch token数、文脈長、chip数に応じて通信・メモリ・計算の支配項を見極める必要がある。",
+    "novelty": "本研究はTPU v4の3Dトーラス上でTransformerのテンソル配置を明示的にモデル化し、重み固定配置と重み収集配置の通信量を解析して、batch token数に応じて最適配置が切り替わることを導く。小バッチではactivationを通信して重みを各chipに固定する2D weight-stationaryが有利だが、大バッチでは重みをall-gatherしてactivation通信を減らすweight-gatheredが有利になる。またPaLMのmultiquery attentionでは単一K/V headをhead軸で複製すると利点を失うため、デコード時にbatch軸へshardし、KVキャッシュを各chipへ分散する。さらにparallel attention/FFNとLooped CollectiveEinsumを組み合わせ、通信量だけでなく実装上の重畳まで含めて最適化する。",
+    "method_overview": "まず推論をprefillとdecodeに分離し、latency、throughput、model FLOPS utilization（MFU）を指標とする。Nパラメータdecoder-onlyモデルでは非attention matmulが概ねtoken当たり2N FLOPsを要し、低batchでは重み読出し、高batch・長文脈ではKV読出しが支配する。feedforwardではTPUトーラスのX/Y/Z軸にtensor次元を割り当て、1D/2D weight-stationaryとX/XY/XYZ weight-gatheredを比較する。weight-gatheredの通信は重み側がNに比例、activation側が1/Nに比例するため、最適な収集chip数はbatch token数の平方根に比例し、batch増加時にはweight-gatheredへ切り替える。attentionではmultiquery attentionのK/V headが1本しかないため、decodeではbatch軸shardingを使ってKV cacheを分散し、Q/K/Vの小さい現在token tensorだけall-to-allする。prefillでは多数queryが同じK/Vを再利用するのでhead軸shardingを使う。parallel attention/FFNはlayernormとcollective回数を減らし、低水準ではLooped CollectiveEinsumでall-gather/reduce-scatterとmatmulを重ねる。最後にAQTで重みをint8化し、モデルサイズ・batch・chip数をsweepして用途別Pareto frontierを構成する。",
+    "components": [
+      {"name": "2D重み固定配置", "description": "低batchのdecodeでは巨大な重みを毎step通信するより各chipに分割固定し、小さいactivationをcollectiveする方が安い。1D分割はchip数増加で通信が頭打ちになりやすいため、TPU v4の複数物理軸へモデル次元とFFN次元を分ける2D配置を使う。64-wayまで拡張してもFasterTransformerの高並列tensor parallelismよりMFU低下を抑え、decodeの基本配置として採用する。"},
+      {"name": "重み収集配置", "description": "prefillのようにbatch token数BLが大きいとactivation通信量が増えるため、重みの一部をall-gatherしてactivationをより局所化する。X、XY、XYZ方向へ収集する段階的配置を用意し、通信モデルから収集chip数Nを選ぶ。weight-stationaryの通信がBLへ線形に増えるのに対し、最適weight-gatheredは平方根スケーリングとなるため、大batchで優位になる。実装はweight-stationaryと同じ保存layoutから即座に切替可能に設計される。"},
+      {"name": "バッチ分割multiquery attention", "description": "multiquery attentionは全query headで単一K/V headを共有してKV cacheをhead数分縮小するが、head軸分割では単一K/Vを全chipへ複製して帯域利得を失う。decodeではbatch軸へ分割し、各chipが自分のsequence群のKV cacheだけを保持する。現在stepのQ/K/VはKV cacheより桁違いに小さいのでall-to-all通信の費用を払ってもKV読出し削減が勝る。prefillではK/V読出しが多数queryへ償却されるためhead軸分割へ戻す。"},
+      {"name": "parallel attention/FFNと通信計算重畳", "description": "PaLMのparallel Transformer blockではattentionとFFNを同じlayernorm済み入力から並列計算して加算する。layernormが1回になり、入力・出力projectionを融合でき、さらにFFN/head並列に必要なall-reduceをlayer当たり2回から1回へ減らす。Looped CollectiveEinsumではcollectiveをmatmulへ分解・融合して通信と計算を重ね、複数variantをlatency/throughputやtorus軸数に合わせる。著者らは単純なcompiler partition/schedule実装から約1.4倍改善した。"},
+      {"name": "int8重み量子化", "description": "AQTを使って16-bit重みをint8へ変換し、低batchで支配的な重みHBM読出しとweight-gathered通信を削減する。matmul自体はbfloat16のままなので、大batchで計算支配になるとint8の費用削減は小さくなる。活性量子化は未実装で、著者は大batch計算とweight-stationaryのactivation通信をさらに減らす余地として挙げる。"}
+    ],
+    "system_design": "用途ごとにprefillとdecodeを別々に最適化する。低遅延構成ではprefillをbatch 1、decodeをbatch 32〜64程度にして、decodeは2D weight-stationary＋batch-sharded MQA＋int8重みを使う。高スループット構成ではprefillを大batchにしXYZ weight-gatheredへ切り替え、decodeは2D weight-stationaryを維持する。実装はJAX/XLA/T5X系を基盤に、TPU v4の3Dトーラスを明示してcollectiveとeinsumを融合し、モデル・batch・chip数の条件から解析的に候補配置を選ぶ。"
+  },
+  "reservation": {"claim_id": "claim-01b29ed73471ef21eb33ce79", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
