@@ -693,11 +693,31 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
     }
 
 
+def maintain_shared_pool(repo_root: Path, at: Any = None) -> dict[str, int]:
+    """Top up the global FIFO inventory and reserve banks for newly loaded claims."""
+    root = Path(repo_root).resolve()
+    now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
+    before_claim_ids = _active_claim_ids(root, now)
+    result = claim_worker.maintain_shared_pool(root, at=now)
+    after_claim_ids = _active_claim_ids(root, now)
+    bank_result = reserve_new_claim_banks(
+        root,
+        new_claim_ids=after_claim_ids - before_claim_ids,
+        at=now,
+    )
+    return {
+        **{f"shared_pool_{key}": value for key, value in result.items()},
+        **{f"banks_{key}": value for key, value in bank_result.items()},
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", default=".")
     args = parser.parse_args()
-    result = process_requests(Path(args.repo_root), maintain_shared_pool=True)
+    root = Path(args.repo_root)
+    result = process_requests(root)
+    result.update(maintain_shared_pool(root))
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
     return 0
 
