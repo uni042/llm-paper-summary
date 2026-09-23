@@ -5,25 +5,6 @@
     "backward": [],
     "forward": [
       {
-        "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
-        "citation_direction": "forward",
-        "created_at": "2026-09-23T16:38:07.830529+00:00",
-        "discovery_bank": "a",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record/discovery-preload.json",
-        "initial_cursor": "200",
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-1b9644d0210dfa775f88",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-1b9644d0210dfa775f88.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": null,
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-1b9644d0210dfa775f88.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-1b9644d0210dfa775f88.json",
-        "target_unseen": 20
-      },
-      {
         "axis": "forward citations of LMCache enterprise-scale KV cache layer",
         "citation_direction": "forward",
         "created_at": "2026-09-23T16:43:16.570256+00:00",
@@ -307,11 +288,30 @@
         "take_path": ".survey/work-queue/discovery-preload/claims/preload-0a3980c16b4f474043e8.json",
         "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-0a3980c16b4f474043e8.json",
         "target_unseen": 20
+      },
+      {
+        "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2406.13233",
+        "citation_direction": "forward",
+        "created_at": "2026-09-23T17:15:29.421097+00:00",
+        "discovery_bank": "ad",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-ad/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-d8e0be865a4ce9342689",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-d8e0be865a4ce9342689.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": null,
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2406.13233/citations",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-d8e0be865a4ce9342689.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-d8e0be865a4ce9342689.json",
+        "target_unseen": 20
       }
     ],
     "normal": []
   },
-  "generated_at": "2026-09-23T22:36:26+00:00",
+  "generated_at": "2026-09-23T22:38:48+00:00",
   "research": [
     {
       "attempt_id": "attempt-preload-413779e41c2b5b98bb543b9f",
