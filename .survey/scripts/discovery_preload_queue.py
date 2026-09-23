@@ -426,7 +426,9 @@ def available_preloads(
 ) -> list[dict[str, Any]]:
     root = root.resolve()
     now = _utcnow()
-    _expire_stale_claims(root, now)
+    # Availability reads are intentionally side-effect free. Expired claims are
+    # treated as unclaimed by _active_claim(); top_up/maintenance removes their
+    # stale marker files.
     rows: list[dict[str, Any]] = []
     for entry in _entries(root):
         if _status(root, entry, now) != "PRECHECKED":
