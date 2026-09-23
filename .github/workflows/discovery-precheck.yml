@@ -17,8 +17,11 @@ on:
 permissions:
   contents: write
 
+# Foreground worker checks must not queue behind speculative preload refreshes.
+# Scheduled preload maintenance uses a separate writer lane; both lanes retain
+# push-race recomputation before publishing durable state.
 concurrency:
-  group: discovery-precheck-main
+  group: ${{ github.event_name == 'schedule' && 'discovery-preload-background-main' || 'discovery-precheck-main' }}
   cancel-in-progress: false
 
 jobs:
@@ -64,6 +67,31 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            # A push caused only by generated preload requests must not occupy
+            # the foreground worker lane. Scheduled maintenance owns preload
+            # execution; push runs settle only unresolved real-worker requests.
+            if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+              foreground_pending=0
+              while IFS= read -r request; do
+                [ -n "$request" ] || continue
+                name="$(basename "$request")"
+                case "$name" in
+                  preload-*.json) continue ;;
+                esac
+                result=".survey/work-queue/discovery-precheck/results/$name"
+                if [ ! -f "$result" ]; then
+                  foreground_pending=1
+                  break
+                fi
+              done < <(
+                find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
+              )
+              if [ "$foreground_pending" -eq 0 ]; then
+                echo 'No unresolved foreground Discovery precheck request on this push; preload work is deferred to scheduled maintenance.'
+                exit 0
+              fi
+            fi
+
             rm -rf /tmp/discovery-identities
             rm -f /tmp/discovery-rejections.json
 
@@ -89,8 +117,9 @@ jobs:
             if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
               requests=("$MANUAL_REQUEST")
             else
-              # A real worker must never wait behind speculative preload traffic.
               requests=()
+              # Foreground push runs publish worker results immediately and leave
+              # speculative preload requests to the separate scheduled lane.
               for request in "${all_requests[@]:-}"; do
                 [ -n "$request" ] || continue
                 case "$(basename "$request")" in
@@ -98,12 +127,14 @@ jobs:
                   *) requests+=("$request") ;;
                 esac
               done
-              for request in "${all_requests[@]:-}"; do
-                [ -n "$request" ] || continue
-                case "$(basename "$request")" in
-                  preload-*.json) requests+=("$request") ;;
-                esac
-              done
+              if [ "$GITHUB_EVENT_NAME" != "push" ]; then
+                for request in "${all_requests[@]:-}"; do
+                  [ -n "$request" ] || continue
+                  case "$(basename "$request")" in
+                    preload-*.json) requests+=("$request") ;;
+                  esac
+                done
+              fi
             fi
 
             processed=0
