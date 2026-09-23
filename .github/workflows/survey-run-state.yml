@@ -56,7 +56,9 @@ jobs:
               .survey/work-queue/run-state \
               .survey/work-queue/archive/transport \
               .survey/work-queue/claim-requests \
-              .survey/work-queue/claim-results
+              .survey/work-queue/claim-results \
+              .survey/work-queue/completed-submission-requests \
+              .survey/work-queue/research-preflight
 
             if git diff --cached --quiet; then
               echo 'Run-state requests already settled.'
