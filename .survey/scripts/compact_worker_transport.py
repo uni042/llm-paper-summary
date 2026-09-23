@@ -13,6 +13,8 @@ import shutil
 from pathlib import Path
 from typing import Any
 
+import worker_identity
+
 HOT = Path(".survey/work-queue")
 ARCHIVE = HOT / "archive" / "transport"
 
@@ -269,7 +271,14 @@ def compact_run_state(root: Path, apply: bool, min_age_seconds: int, now: dt.dat
             worker_id = result.get("worker_id")
             run_key = result.get("run_key")
             attempt_start = result.get("actual_invocation_start")
-            if worker_id not in {"scheduled-chat-00", "scheduled-chat-30"} or not isinstance(run_key, str) or not run_key or _time(attempt_start) is None:
+            scheduled_slot = result.get("scheduled_slot")
+            if (
+                not worker_identity.is_supported_worker_id(worker_id)
+                or not worker_identity.identity_slot_valid(worker_id, scheduled_slot)
+                or not isinstance(run_key, str)
+                or not run_key
+                or _time(attempt_start) is None
+            ):
                 skipped.append({"path": result_rel, "reason": "invalid_auto_snapshot_identity"})
                 continue
             ok, reason = _move(root, result_path, Path("run-state/results") / result_path.name, apply)

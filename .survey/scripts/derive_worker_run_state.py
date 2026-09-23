@@ -22,14 +22,11 @@ from typing import Any
 import claim_state
 import continuation_gate
 import select_discovery_direction
+import worker_identity
 import worker_run_state_cache as run_state_cache
 
 REQUESTS = Path(".survey/work-queue/run-state/requests")
 RESULTS = Path(".survey/work-queue/run-state/results")
-ALLOWED_WORKERS = {
-    "scheduled-chat-00": "00",
-    "scheduled-chat-30": "30",
-}
 READ_COUNT = 0
 SCHEDULED_CHAT_CLAIM_WINDOW = 4
 
@@ -74,14 +71,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         raise ValueError("request_id must be non-empty and match filename stem")
     worker_id = str(value.get("worker_id") or "").strip()
     scheduled_slot = str(value.get("scheduled_slot") or "").strip()
-    if worker_id not in ALLOWED_WORKERS:
-        raise ValueError("worker_id must be scheduled-chat-00 or scheduled-chat-30")
-    if scheduled_slot not in {"00", "30", "0830"}:
-        raise ValueError("scheduled_slot must be 00, 30, or 0830")
-    if worker_id == "scheduled-chat-00" and scheduled_slot != "00":
-        raise ValueError("scheduled-chat-00 must use scheduled_slot=00")
-    if worker_id == "scheduled-chat-30" and scheduled_slot not in {"30", "0830"}:
-        raise ValueError("scheduled-chat-30 must use scheduled_slot=30 or 0830")
+    worker_identity.validate_identity_slot(worker_id, scheduled_slot)
     run_key = str(value.get("run_key") or "").strip()
     if not run_key:
         raise ValueError("run_key is required")
@@ -828,7 +818,10 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
 def process_pending(root: Path) -> dict[str, Any]:
     root = root.resolve()
     bootstrap = {"rebuilt": 0, "failures": []}
-    if any(run_state_cache.load_cache(root, worker_id) is None for worker_id in ALLOWED_WORKERS):
+    if any(
+        run_state_cache.load_cache(root, worker_id) is None
+        for worker_id in worker_identity.FIXED_SCHEDULED_WORKER_SLOTS
+    ):
         bootstrap = rebuild_caches(root)
     request_root = root / REQUESTS
     result_root = root / RESULTS
@@ -954,11 +947,12 @@ def apply_claim_result_deltas(root: Path, results_file: Path) -> dict[str, Any]:
         run_key = str(value.get("run_key") or "")
         scheduled_slot = str(value.get("scheduled_slot") or "")
         started_at = _time(value.get("actual_invocation_start"))
-        if worker_id not in ALLOWED_WORKERS or not run_key or started_at is None:
-            continue
-        if worker_id == "scheduled-chat-00" and scheduled_slot != "00":
-            continue
-        if worker_id == "scheduled-chat-30" and scheduled_slot not in {"30", "0830"}:
+        if (
+            not worker_identity.is_supported_worker_id(worker_id)
+            or not worker_identity.identity_slot_valid(worker_id, scheduled_slot)
+            or not run_key
+            or started_at is None
+        ):
             continue
         expected_runs[(worker_id, run_key)] = {
             "schema_version": 1,
@@ -1021,7 +1015,12 @@ def rebuild_caches(root: Path) -> dict[str, Any]:
             run_key = str(value.get("run_key") or "")
             slot = str(value.get("scheduled_slot") or "")
             start = value.get("actual_invocation_start")
-            if worker_id not in ALLOWED_WORKERS or not run_key or slot not in {"00", "30", "0830"} or _time(start) is None:
+            if (
+                not worker_identity.is_supported_worker_id(worker_id)
+                or not worker_identity.identity_slot_valid(worker_id, slot)
+                or not run_key
+                or _time(start) is None
+            ):
                 continue
             key = (worker_id, run_key)
             current = rows.get(key)
@@ -1035,10 +1034,10 @@ def rebuild_caches(root: Path) -> dict[str, Any]:
     )
     rebuilt = 0
     failures: list[str] = []
-    per_worker = {worker: 0 for worker in ALLOWED_WORKERS}
+    per_worker: dict[str, int] = {}
     for value in ordered:
         worker_id = str(value["worker_id"])
-        if per_worker[worker_id] >= 8:
+        if per_worker.get(worker_id, 0) >= 8:
             continue
         request = {
             "schema_version": 1,
@@ -1059,7 +1058,7 @@ def rebuild_caches(root: Path) -> dict[str, Any]:
             failures.append(f"{worker_id}:{request['run_key']}:{type(exc).__name__}:{exc}")
             continue
         rebuilt += 1
-        per_worker[worker_id] += 1
+        per_worker[worker_id] = per_worker.get(worker_id, 0) + 1
     return {"rebuilt": rebuilt, "failures": failures}
 
 

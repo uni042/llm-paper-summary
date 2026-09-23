@@ -12,6 +12,7 @@ from typing import Any
 import claim_state
 import immutable_submission
 import shared_preload_pool
+import worker_identity
 
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 WORKER_KINDS = {"scheduled_chat", "work"}
@@ -26,7 +27,7 @@ MAX_CHECKPOINTED_JOBS = 128
 MAX_REQUESTED_JOB_IDS = 128
 LIBRARY_CHECKPOINT_PREFIX = "/LLM-survey-outbox/pending/"
 RUN_IDENTITY_FIELDS = ("run_key", "scheduled_slot", "actual_invocation_start")
-SCHEDULED_CHAT_SLOTS = {"scheduled-chat-00": {"00"}, "scheduled-chat-30": {"30", "0830"}}
+SCHEDULED_CHAT_SLOTS = worker_identity.FIXED_SCHEDULED_WORKER_SLOTS
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -112,8 +113,8 @@ def _normalize_run_identity(raw: dict[str, Any], *, worker_id: str, worker_kind:
     present = [field for field in RUN_IDENTITY_FIELDS if raw.get(field) not in (None, "")]
     if not present:
         return {}
-    if worker_kind != "scheduled_chat" or worker_id not in SCHEDULED_CHAT_SLOTS:
-        raise ValueError("run identity fields are supported only for fixed Scheduled Chat workers")
+    if worker_kind != "scheduled_chat" or not worker_identity.is_supported_worker_id(worker_id):
+        raise ValueError("run identity fields are supported only for scheduled-chat-00, scheduled-chat-30, or worker-N")
     missing = [field for field in RUN_IDENTITY_FIELDS if raw.get(field) in (None, "")]
     if missing:
         raise ValueError("Scheduled Chat run identity must be complete: " + ", ".join(missing))
@@ -121,8 +122,7 @@ def _normalize_run_identity(raw: dict[str, Any], *, worker_id: str, worker_kind:
     if not run_key or len(run_key) > 512:
         raise ValueError("run_key must be a non-empty string up to 512 characters")
     scheduled_slot = str(raw.get("scheduled_slot") or "").strip()
-    if scheduled_slot not in SCHEDULED_CHAT_SLOTS[worker_id]:
-        raise ValueError("scheduled_slot does not match worker_id")
+    worker_identity.validate_identity_slot(worker_id, scheduled_slot)
     start_raw = str(raw.get("actual_invocation_start") or "").strip()
     start = _as_time(start_raw)
     if start is None:
