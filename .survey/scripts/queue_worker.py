@@ -1097,6 +1097,14 @@ def record_discovery_stats(
         if isinstance(precheck_result, dict) and precheck_result.get("preload_seed") is not True
         else None
     )
+    stock_bank = (
+        str(precheck_result.get("stock_bank") or "").strip().lower() or None
+        if isinstance(precheck_result, dict) and precheck_result.get("preload_seed") is not True
+        else None
+    )
+    if stock_bank not in discovery_preload_queue.BANK_ROOTS:
+        stock_bank = None
+    stock_lane = "discovery" if stock_bank is not None else None
 
     expected_submissions = max(int(meta.get("round_submission_count", 1) or 1), 1)
     submission_index = max(int(meta.get("round_submission_index", 1) or 1), 1)
@@ -1116,6 +1124,8 @@ def record_discovery_stats(
             "citation_direction": citation_direction,
             "seed_canonical_id": seed_canonical_id,
             "preload_id": preload_id,
+            "stock_bank": stock_bank,
+            "stock_lane": stock_lane,
             "candidate_count": candidate_count,
             "duplicate_filtered_count": duplicate_count,
             "final_duplicate_filtered_count": final_duplicate_filtered_count,
@@ -1172,6 +1182,9 @@ def record_discovery_stats(
         existing_preload = str(row.get("preload_id") or "").strip() or None
         if existing_preload != preload_id:
             raise ValueError("submissions sharing one precheck round must use the same Discovery preload identity")
+        existing_stock_bank = str(row.get("stock_bank") or "").strip().lower() or None
+        if existing_stock_bank != stock_bank:
+            raise ValueError("submissions sharing one precheck round must use the same Discovery stock bank")
         if meta.get("next_axis_hint") is not None:
             row["next_axis_hint"] = meta.get("next_axis_hint")
         row["accepted_canonical_ids"] = list(dict.fromkeys(
