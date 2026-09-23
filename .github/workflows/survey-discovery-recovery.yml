@@ -42,6 +42,7 @@ jobs:
         run: |
           set -euo pipefail
           DERIVED_SNAPSHOT='.survey/work-queue/next-jobs.json'
+          DERIVED_HOT_DISPATCH='.survey/work-queue/hot-dispatch.json'
 
           git config user.name 'survey-discovery-recovery[bot]'
           git config user.email 'survey-discovery-recovery[bot]@users.noreply.github.com'
@@ -71,18 +72,33 @@ jobs:
 
           recover_derived_snapshot_conflict() {
             mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
-            if [ "${#conflicts[@]}" -ne 1 ] || [ "${conflicts[0]:-}" != "$DERIVED_SNAPSHOT" ]; then
-              echo 'Rebase conflict touches durable/non-derived state; refusing automatic resolution.' >&2
-              printf 'Unmerged paths: %s\n' "${conflicts[*]:-none}" >&2
-              if git rev-parse --verify -q REBASE_HEAD >/dev/null; then
-                git rebase --abort || true
-              fi
-              return 1
+
+            if [ "${#conflicts[@]}" -eq 0 ]; then
+              return 0
             fi
 
-            echo "Resolving derived snapshot conflict in ${DERIVED_SNAPSHOT} from latest main."
-            git checkout --ours -- "$DERIVED_SNAPSHOT"
-            git add "$DERIVED_SNAPSHOT"
+            for conflict in "${conflicts[@]}"; do
+              case "$conflict" in
+                "$DERIVED_SNAPSHOT"|"$DERIVED_HOT_DISPATCH") ;;
+                *)
+                  echo 'Rebase conflict touches durable/non-derived state; refusing automatic resolution.' >&2
+                  printf 'Unmerged paths: %s\n' "${conflicts[*]:-none}" >&2
+                  if git rev-parse --verify -q REBASE_HEAD >/dev/null; then
+                    git rebase --abort || true
+                  fi
+                  return 1
+                  ;;
+              esac
+            done
+
+            echo 'Resolving rebuildable queue snapshot / hot-dispatch conflicts from latest main.'
+            # Both files are rebuildable indexes. Keep the freshly fetched main
+            # version during rebase, then regenerate them from the rebased
+            # durable jobs/state before publication.
+            for conflict in "${conflicts[@]}"; do
+              git checkout --ours -- "$conflict"
+              git add "$conflict"
+            done
             if git diff --cached --quiet; then
               git rebase --skip
             else
@@ -92,13 +108,14 @@ jobs:
 
           refresh_derived_snapshot() {
             python .survey/scripts/refresh_queue_snapshot.py --repo-root .
-            if git diff --quiet -- "$DERIVED_SNAPSHOT"; then
+            python .survey/scripts/hot_dispatch.py --repo-root . refresh > /tmp/hot-dispatch-after-rebase.json
+            if git diff --quiet -- "$DERIVED_SNAPSHOT" "$DERIVED_HOT_DISPATCH"; then
               return 0
             fi
 
-            git add "$DERIVED_SNAPSHOT"
+            git add "$DERIVED_SNAPSHOT" "$DERIVED_HOT_DISPATCH"
             if [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ]; then
-              git commit -m 'survey-discovery-recovery: refresh derived queue snapshot after rebase'
+              git commit -m 'survey-discovery-recovery: refresh derived indexes after rebase'
             else
               git commit --amend --no-edit
             fi
