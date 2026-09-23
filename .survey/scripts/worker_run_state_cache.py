@@ -149,7 +149,8 @@ def get_run(root: Path, request: dict[str, Any]) -> dict[str, Any] | None:
             return None
     if run.get("cache_valid") is not True:
         return None
-    if int(cache.get("fact_generation", -1) or -1) != fact_generation(root, worker_id):
+    cached_fact_generation = cache.get("fact_generation", -1)
+    if not isinstance(cached_fact_generation, int) or cached_fact_generation != fact_generation(root, worker_id):
         return None
     if not isinstance(run.get("claims"), dict) or not isinstance(run.get("submission"), dict):
         return None
