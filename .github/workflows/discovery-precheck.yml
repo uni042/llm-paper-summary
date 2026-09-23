@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/discovery-precheck/requests/*.json'
+      - '.survey/work-queue/discovery-preload/claims/*.json'
+      - '.survey/scripts/hot_dispatch.py'
   workflow_dispatch:
     inputs:
       request:
@@ -66,6 +68,12 @@ jobs:
           for attempt in $(seq 1 12); do
             git fetch origin main
             git reset --hard origin/main
+
+            # A direct preload claim is already exclusive and lets the worker start
+            # evaluating cached candidates immediately. Materialize its formal
+            # run-specific schema-v3 request behind that foreground work.
+            python .survey/scripts/hot_dispatch.py --repo-root . materialize-discovery \
+              | tee /tmp/direct-discovery-materialize.json
 
             # A push caused only by generated preload requests must not occupy
             # the foreground worker lane. Scheduled maintenance owns preload
@@ -191,6 +199,11 @@ jobs:
                 | tee /tmp/discovery-preload-post-topup.json
             fi
 
+            python .survey/scripts/hot_dispatch.py --repo-root . finalize-discovery \
+              | tee /tmp/direct-discovery-finalize.json
+            python .survey/scripts/hot_dispatch.py --repo-root . refresh \
+              > /tmp/hot-dispatch.json
+
             if [ "$processed" -eq 0 ] && git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
               echo 'No unsettled Discovery precheck requests or preload queue changes remain.'
               exit 0
@@ -199,11 +212,14 @@ jobs:
             git add \
               .survey/work-queue/discovery-precheck/requests \
               .survey/work-queue/discovery-precheck/results \
-              .survey/work-queue/discovery-preload
-            while IFS= read -r -d '' discovery_slot; do
-              git add -- "$discovery_slot"
+              .survey/work-queue/discovery-preload \
+              .survey/work-queue/direct-take-results \
+              .survey/work-queue/hot-dispatch.json
+            while IFS= read -r -d '' preload_slot; do
+              git add -- "$preload_slot"
             done < <(
-              find .survey/work-queue/records -type f -name 'discovery-preload.json' -print0
+              find .survey/work-queue/records -type f \
+                \( -name 'discovery-preload.json' -o -name 'research-preload.json' \) -print0
             )
 
             if git diff --cached --quiet; then
