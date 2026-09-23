@@ -4,7 +4,30 @@
   "slot": "evaluation",
   "attempt_id": "attempt-9e32a6c39b70b1ce1c5e9f53",
   "job_id": "job-research-566a14b0b6e022f7",
-  "data": {},
+  "data": {
+    "hardware": "Supermicro A+ Server AS-4124GQ-TNMI、AMD EPYC 7763×2（SMT有効）、DDR4-2933 1TiB、AMD Instinct MI250の8 GCD。各GCDは約64GiB HBMで、4枚のdual-GCDアクセラレータを1つのTP8/EP1インスタンスとして用いる。",
+    "software": "Python 3.12.13、PyTorch 2.12.0a0+git78258b9、Triton 3.7.1+git0263a6a6.rocm7.14.0、Transformers 5.12.1、Tokenizers 0.22.2、HIP compiler 7.15.26333、AMD clang 23。SGLang、AIter、Composable Kernelにはローカル変更がある。正式な再測定は実行HEAD 147ce11b25。",
+    "methodology": "2026-09-18のfresh-process測定で、同一プロセス内に同時実行数1、2、4、8、16、32、64のセルを直列投入し、各形状の明示warmup後に3ラウンド測定する。事前充填は8191–8192トークンの公開ソース入力と新規cache saltを使い、出力は1トークン。復号は511–512トークン入力、greedy、natural EOS、最大2048出力トークン。各正式ラウンドは全要求が常駐する共通区間を合計30秒以上確保する。事前充填率、常駐復号率、要求wave全体のHTTP復号率を分離し、ABBA比較ではA1→B1→B2→A2の順を用いる。",
+    "workloads": "主評価は公開ソース由来の入力。8K級入力の同時実行数1–64に加え、同時実行数16で約8K、16K、32K入力の長さ掃引を実施する。C64事前充填は総入力約52.4万トークンだが、同時入場は最大16要求であり、64本が同時に大規模事前充填カーネルへ入る意味ではない。",
+    "baselines": "現在の正式表は同一TP8構成内の同時実行数ごとの絶対値を示す。歴史的比較として、修正済みTP4/EP4+MoriのBS1は14.2–15.0トークン/秒、TP4/EP1参照は約20.14トークン/秒、過去のpeer-read全還元導入付近は約25.54→60.20トークン/秒を記録するが、異なるチェックポイントをまたぐため累積改善率として扱わない。現在のTP4対TP8の厳密な対応行列は存在しない。",
+    "metrics": [
+      "事前充填入力トークン/秒",
+      "常駐復号出力トークン/秒",
+      "wave全体HTTP出力トークン/秒",
+      "TTFT",
+      "カーネル遅延",
+      "最大絶対誤差・relative L2・cosine similarity",
+      "Top-K membership/order",
+      "出力token IDと固定semantic sentinel"
+    ],
+    "scope": "実機MI250上の単一ノードTP8/EP1推論に限定した評価であり、他のAMD世代、NVIDIA GPU、複数ノード、専門家並列A2Aの一般化を直接測定していない。1,048,576トークンの論理KV容量は割り当てたが、実際に100万トークンを占有する品質・性能評価は行っていない。正式行列はネイティブ自回帰であり、歴史的な投機的復号の数値を混在させない。",
+    "evidence_locations": [
+      "§8 Current TP8 native-AR results",
+      "§8.1 Accepted large-prefill configuration and longer inputs",
+      "§9 Historical speculative decoding",
+      "§10 Measurement methodology"
+    ]
+  },
   "reservation": {
     "claim_id": "claim-9e32a6c39b70b1ce1c5e9f53",
     "worker_id": "scheduled-chat-30",
