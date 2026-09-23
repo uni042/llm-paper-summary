@@ -4,7 +4,73 @@
   "slot": "results",
   "attempt_id": "attempt-d924da91e59e26de1e7c5529",
   "job_id": "job-research-81939bee41b7da9c",
-  "data": {},
+  "data": {
+    "overview": "REFLEXは既定Fixed TC top-8に対し、4課題平均でLLaDA-MoEの選択専門家・トークン対を15.5%、LLaDA2.0-miniを14.3%削減しながら、平均品質をそれぞれ+1.20ポイント、+1.28ポイント改善した。LLaDA-MoEではMath500が39.2→41.8で対数25.3M→21.5M、HumanEvalが52.4→54.3で9.8M→9.0Mとなる。LLaDA2.0-miniでもMath500 23.0→24.8、HumanEval 34.8→38.4と改善しつつ対数を20%、7%減らす。一方でLLaDA2.0-miniのGSM8Kは83.8→82.3へ1.5ポイント低下し、AvgK削減に伴いNFEが11.6%増えたため実際の対数削減も10%に縮む。アブレーションではRRBが計算削減を担い、FGER/FPSが同じ予算内の配置を改善するという役割分担が確認される。",
+    "key_results": [
+      {
+        "metric": "4課題平均の品質・専門家計算",
+        "value": "選択専門家・トークン対15.5%削減、平均品質+1.20ポイント",
+        "baseline": "Fixed TC top-8",
+        "condition": "LLaDA-MoE 7B、GSM8K/Math500/MBPP/HumanEval平均",
+        "interpretation": "一律に専門家数を減らすのではなく洗練状態へ配分したことで、平均計算量を下げながら平均品質も上げた。"
+      },
+      {
+        "metric": "4課題平均の品質・専門家計算",
+        "value": "選択専門家・トークン対14.3%削減、平均品質+1.28ポイント",
+        "baseline": "Fixed TC top-8",
+        "condition": "LLaDA2.0-mini 16B、4課題平均",
+        "interpretation": "別のMoE型DLMでも同方向の交換条件が得られ、方式がLLaDA-MoE固有ではないことを示す。"
+      },
+      {
+        "metric": "Math500 accuracy",
+        "value": "39.2→41.8、選択対25.3M→21.5M（15%削減）",
+        "baseline": "Fixed TC top-8",
+        "condition": "LLaDA-MoE 7B、4-shot",
+        "interpretation": "専門家計算を減らしながら2.6ポイント改善し、主結果の中でも品質と計算削減を同時に示す代表例である。"
+      },
+      {
+        "metric": "HumanEval pass@1",
+        "value": "34.8→38.4、選択対9.6M→8.9M（7%削減）",
+        "baseline": "Fixed TC top-8",
+        "condition": "LLaDA2.0-mini 16B、0-shot",
+        "interpretation": "コード生成でも専門家計算削減と3.6ポイントの品質改善を同時に達成する。"
+      },
+      {
+        "metric": "RRB割当位置の重要性",
+        "value": "Math500 40.2→36.5±1.9、HumanEval 55.5→46.7±2.5",
+        "baseline": "RRB Only",
+        "condition": "同じ専門家数分布を位置間でランダム再配置したRole-Shuffled RRB",
+        "interpretation": "総予算や専門家数分布だけでなく、ブロック相対役割へ対応させることが品質保持に必要である。"
+      },
+      {
+        "metric": "FPS信号アブレーション",
+        "value": "Math500 41.8、HumanEval 54.3",
+        "baseline": "信頼度のみ/不確実性のみ/前線のみ/進捗のみ",
+        "condition": "LLaDA-MoE、同じ活性ブロック予算・再配分量",
+        "interpretation": "コミット近接性と進捗不足の積が、単一信号より同一計算量で高い品質を得る。"
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "LLaDA2.0-miniのGSM8Kでは品質低下",
+        "description": "Fixed TC top-8の83.8からREFLEXは82.3へ1.5ポイント低下する。AvgKは19.5%下がるがNFEが11.6%増えるため、選択対の削減も10%に留まる。配分変更が生成軌道を変える境界例である。"
+      },
+      {
+        "name": "選択対削減はエンドツーエンド高速化を意味しない",
+        "description": "選択専門家・トークン対はルーティング専門家線形層の割当計算を表すが、注意、ルータ、共有専門家、固有専門家ロード、メモリ通信、ディスパッチ、カーネル効率を含まない。論文は実測レイテンシ短縮を主張していない。"
+      },
+      {
+        "name": "FGER単独では計算量をほぼ減らさない",
+        "description": "FGER OnlyはAvgK 8前後でFixed TC top-8とほぼ同じ選択対数のまま品質を一部改善する。計算削減は主にRRBが担い、FGERは配分品質を担うため、片方だけではREFLEX全体の交換条件にならない。"
+      },
+      {
+        "name": "ハイパーパラメータに対する品質は課題依存",
+        "description": "wcf、vref、τ、qを変えてもAvgKと選択対数は安定するが、HumanEvalとMath500の品質は設定に応じて動く。著者は課題別最適化せず共通既定値を使うが、品質が完全に不変ではない。"
+      }
+    ],
+    "interpretation": "REFLEXの利得は、平均専門家数を単純に下げたからではなく、反復拡散の構造に合わせて削減位置を選び、そのうえで活性ブロック内の限られた予算を進捗の悪いコミット前線へ寄せたことから生じる。RRBの割当を同じ分布のままシャッフルすると品質が大きく落ちるため、位置と計算量の対応が重要である。またFPSの単一要因アブレーションより積の得点が高いことから、「決まりそう」と「進んでいない」の両方を満たす位置へ重点配分する設計が効く。一方、生成軌道が変わってNFEが増える場合はAvgK削減が実計算削減へそのまま変換されないため、可変専門家方式は1順伝播内のkだけで評価してはいけない。",
+    "quality_impact": "近似的な可変計算法であり、既定top-8と出力を一致させるものではない。平均では品質を維持・改善するが個別課題では低下例がある。したがって実運用では対象DLM・課題分布で品質回帰を確認し、AvgKではなく生成軌道を含む選択対数、さらに可能なら実測遅延まで確認する必要がある。"
+  },
   "reservation": {
     "claim_id": "claim-d924da91e59e26de1e7c5529",
     "worker_id": "scheduled-chat-00",

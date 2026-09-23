@@ -4,7 +4,38 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d924da91e59e26de1e7c5529",
   "job_id": "job-research-81939bee41b7da9c",
-  "data": {},
+  "data": {
+    "hardware": "全実験はNVIDIA A100 80GB GPU上で実施。GPU枚数や相互接続構成は本文では明示されない。",
+    "software": "評価はlm-evaluation-harnessを使用。全方式を温度0の決定論的復号で比較し、生成長256、ブロック長32、コミット閾値θ=0.9を共通に設定する。",
+    "model": [
+      "LLaDA-MoE 7B",
+      "LLaDA2.0-mini 16B"
+    ],
+    "datasets": [
+      "GSM8K 5-shot：accuracy",
+      "Math500 4-shot：accuracy / math-verify",
+      "MBPP 3-shot：pass@1",
+      "HumanEval 0-shot：pass@1"
+    ],
+    "baselines": [
+      "Fixed TC top-8：既定固定トークン選択",
+      "Fixed TC top-4：低計算量の一律固定",
+      "Budgeted TC：目標AvgK 6/7",
+      "Top-p：累積ルータ質量による可変専門家数",
+      "DTop-p：全体疎化制約下で閾値を動的制御",
+      "Expert-Threshold Routing：個別ルータ重み閾値",
+      "EC-DLM-style：既定token-choiceのままデノイズ後半へ4→12専門家と増やす時間スケジュール"
+    ],
+    "correctness": "同じモデル、復号条件、生成長、ブロック長で比較し、品質と専門家計算を同時に報告する。計算量はAvgKだけでなく選択専門家・トークン対を使用し、デノイズ順伝播回数NFEの変化も反映する。付録ではこの対数が固定モデル内のルーティング専門家線形層FLOPsに比例することを示す一方、注意・ルータ・共有専門家・通信等を含むエンドツーエンドFLOPs/遅延ではないと明示する。",
+    "settings": [
+      "REFLEXのRRBはKbase=8、δrole=4。活性・近傍、距離2、距離3以上へそれぞれ12、8、4専門家を初期配分する。",
+      "FGERはδcur=2、q=0.25。FPSはvref=0.01、τ=0.05。wcfはLLaDA-MoE 0.30、LLaDA2.0-mini 0.25。",
+      "Budgeted TCはAvgK 6/7を低/高設定にする。Top-p、DTop-p、Expert-ThresholdはAvgK 6前後と8前後に較正。",
+      "EC-DLM-styleは既定token-choiceルータのままデノイズ進行に応じて専門家数を4から12へ増やす比較であり、EC-DLM自体のexpert-choice再現ではない。"
+    ],
+    "methodology": "Q1では既定top-8とtop-4に対して品質と選択対数の交換条件を比較する。Q2では予算型・閾値型・時間スケジュール型の可変専門家方式と比較し、4課題平均の品質変化と計算削減をパレート図で確認する。Q3ではRRBのみ、FGERのみ、両方を分離し、付録でRRBの割当位置をシャッフルした対照と、FPSを単一信号へ置き換えた対照を同一計算量で評価する。Q4ではwcf、vref、τ、qを1つずつ変え、AvgKと選択対をほぼ固定したまま品質感度を確認する。",
+    "scope": "評価対象は2つのMoE型DLMと4ベンチマークで、自己回帰MoE、Dense DLM、大規模100B本体、長文会話やツール利用は直接評価しない。指標は主に割り当てられたルーティング専門家計算であり、エンドツーエンド遅延、メモリ帯域、ロードする固有専門家数、通信、電力は測っていない。全MoE層で同じ位置別kを使うため、層深度ごとの専門家特化は未利用である。"
+  },
   "reservation": {
     "claim_id": "claim-d924da91e59e26de1e7c5529",
     "worker_id": "scheduled-chat-00",

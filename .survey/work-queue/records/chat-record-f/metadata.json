@@ -4,7 +4,115 @@
   "slot": "metadata",
   "attempt_id": "attempt-d924da91e59e26de1e7c5529",
   "job_id": "job-research-81939bee41b7da9c",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2608.01784",
+    "arxiv_id": "2608.01784",
+    "doi": "10.48550/arXiv.2608.01784",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": [
+        "cs.CL"
+      ]
+    },
+    "title": "REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models",
+    "summary": "混合専門家（Mixture-of-Experts; MoE）を用いる拡散言語モデルでは、1回のデノイズ順伝播で複数位置を同時に再評価するため、すでにほぼ確定した位置と追加修正が必要な位置が同時に存在する。それにもかかわらず既定のトークン選択ルーティングは全位置へ同じ専門家数を割り当てる。本研究のREFLEXは、専門家の順位を決める既定ルータを変更せず、「各位置に何個の専門家を割り当てるか」だけを洗練状態に応じて再編する学習不要方式である。粗粒度では現在の活性ブロックからの相対距離により専門家予算を増減する洗練役割予算配分（Refinement-Role Budgeting; RRB）を用い、細粒度ではコミット閾値への近さと信頼度の進みの遅さを組み合わせた前線進捗得点（Frontier-Progress Score; FPS）で活性ブロック内の予算を再配分する。LLaDA-MoE 7BとLLaDA2.0-mini 16BをGSM8K、Math500、MBPP、HumanEvalで評価し、既定top-8に比べて選択専門家・トークン対を平均約15%削減しながら、多くの条件で品質を維持または改善した。4課題平均ではLLaDA-MoEで15.5%削減しつつ品質+1.20ポイント、LLaDA2.0-miniで14.3%削減しつつ+1.28ポイントとなる。",
+    "list_summary": "拡散言語モデルの各位置の洗練状態に応じて専門家数を再配分し、既定ルータの順位を保ったまま平均約15%の専門家計算を削減しつつ品質を維持・改善する。",
+    "authors": [
+      "Xiang Xia",
+      "Cheng Yan",
+      "Yiming Zhang",
+      "Jiazheng Liu",
+      "Hongyu Zhang",
+      "Wuyang Zhang"
+    ],
+    "authors_affiliations": "University of Science and Technology of China, Hefei, China",
+    "published": "2026-08-03",
+    "publication": "arXiv:2608.01784v1",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint",
+    "publication_version": "v1",
+    "lineage": "diffusion language models / mixture-of-experts inference / adaptive expert allocation / refinement-aware routing",
+    "topics": [
+      "拡散言語モデル",
+      "混合専門家",
+      "専門家予算配分",
+      "動的ルーティング",
+      "推論計算削減",
+      "LLaDA-MoE",
+      "LLaDA2.0"
+    ],
+    "importance": "自己回帰MoE向けの可変専門家数方式をそのまま拡散言語モデルへ移すのではなく、同一順伝播内で共存する位置ごとの洗練状態を計算配分の単位として扱う。専門家の種類や順位を変えず、専門家数だけを構造的役割と進捗で調整するため、既定ルータや既存モデルを再学習せずに適用できる。専門家キャッシュ・オフロード・融合ディスパッチと直交する上流の計算量制御として有用である。",
+    "hardware_evaluation": "全実験はNVIDIA A100 80GB GPU上で実施。LLaDA-MoE 7BとLLaDA2.0-mini 16Bをlm-evaluation-harnessで温度0の決定論的復号により評価し、生成長256、ブロック長32、コミット閾値0.9を共通条件とする。",
+    "quality_effect": "厳密等価ではなく、位置ごとの有効専門家数を変える近似的な計算削減である。既定top-8より平均専門家計算を減らしながら4課題平均品質は両モデルで上昇するが、LLaDA2.0-miniのGSM8Kでは専門家・トークン対を10%減らす一方で精度が83.8から82.3へ1.5ポイント低下する境界例がある。",
+    "source": "https://arxiv.org/abs/2608.01784",
+    "sources": [
+      "https://arxiv.org/abs/2608.01784",
+      "https://arxiv.org/pdf/2608.01784"
+    ],
+    "code": null,
+    "implementation": "既定トークン選択ルータの専門家順位はそのまま使い、各デノイズ順伝播で位置ごとの選択専門家数kのみを決める。RRBは活性ブロックからの相対距離dに応じてKbase+δrole、Kbase、Kbase−δroleの3段階で初期予算を設定し、FGERは活性ブロック内でFPSにより上位・中位・下位群へ分け、同じ総予算を保ったまま±δcurを移す。論文本文・付録に式と既定値はあるが、著者公式コードURLは一次資料中で確認できない。",
+    "implementation_status": "学習不要でルータ順位を変更しないため、推論ループ側に専門家数割当器を追加する構成で再現できる。RRBとFGERの式、比較法、主要ハイパーパラメータは公開されるが、一次資料に公式実装URLは見当たらない。",
+    "evaluation_type": "実機GPU上での品質・割当計算量・アブレーション・感度評価。品質はaccuracy/pass@1、計算量は平均選択専門家数AvgKと1標本当たりの選択専門家・トークン対で測る。",
+    "last_checked": "2026-09-23",
+    "references": [
+      {
+        "canonical_id": "arXiv:2108.07732",
+        "arxiv_id": "2108.07732"
+      },
+      {
+        "canonical_id": "arXiv:2512.15745",
+        "arxiv_id": "2512.15745"
+      },
+      {
+        "canonical_id": "arXiv:2107.03374",
+        "arxiv_id": "2107.03374"
+      },
+      {
+        "canonical_id": "arXiv:2605.20179",
+        "arxiv_id": "2605.20179"
+      },
+      {
+        "canonical_id": "arXiv:2110.14168",
+        "arxiv_id": "2110.14168"
+      },
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "arxiv_id": "2401.04088"
+      },
+      {
+        "canonical_id": "arXiv:2605.30876",
+        "arxiv_id": "2605.30876"
+      },
+      {
+        "canonical_id": "arXiv:2511.06494",
+        "arxiv_id": "2511.06494"
+      },
+      {
+        "canonical_id": "arXiv:2508.15487",
+        "arxiv_id": "2508.15487"
+      },
+      {
+        "canonical_id": "arXiv:2604.01622",
+        "arxiv_id": "2604.01622"
+      },
+      {
+        "canonical_id": "arXiv:2509.24389",
+        "arxiv_id": "2509.24389"
+      },
+      {
+        "canonical_id": "arXiv:2508.02193",
+        "arxiv_id": "2508.02193"
+      },
+      {
+        "canonical_id": "arXiv:2603.11535",
+        "arxiv_id": "2603.11535"
+      }
+    ],
+    "references_checked_at": "2026-09-23",
+    "references_source": "primary manuscript reference section, PDF pp.8-9",
+    "references_total": 35
+  },
   "reservation": {
     "claim_id": "claim-d924da91e59e26de1e7c5529",
     "worker_id": "scheduled-chat-00",
