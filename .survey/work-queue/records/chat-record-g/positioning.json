@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-921f188aa26d60b7af5ae872",
-  "job_id": "job-research-2c92c0a3b8a6da0e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-921f188aa26d60b7af5ae872",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-921f188aa26d60b7af5ae872","job_id":"job-research-2c92c0a3b8a6da0e","data":{"limitations":[{"name":"実サービング性能を直接測っていない","description":"専門家重みを減らせることは示すが、GPU VRAM実測、PCIe/SSD転送、スループット、遅延、バッチング効率を主要評価として報告しない。システム上の速度改善量は別途検証が必要。"},{"name":"広い混合領域では局所化が弱い","description":"MMLU/MMLU-Proのotherでは小さなEMO部分集合がメモリ一致の専用小型モデルを下回る。領域が意味的にまとまっていることが選択利用の重要条件である。"},{"name":"大規模事前学習のハードウェア詳細が限定的","description":"1T+50Bトークンの事前学習を行うがGPU型・台数・総GPU時間は本文で明示されず、EMO制約の訓練コスト増を厳密に比較しにくい。"},{"name":"モジュール化は事前学習から入れる方が強い","description":"既存MoEへ50BトークンだけEMO目的を適用するEMO-annealでも改善するが、最初からEMOとして学習したモデルに劣る。"}],"differences":[{"name":"通常MoEとの差","description":"通常MoEは各トークンが全専門家から独立選択する。EMOは文書ごとに候補集合を共有させ、意味領域単位で専門家利用を局所化する。活性Top-k計算量は同程度だが、領域配備時に必要な総重みメモリを減らせる。"},{"name":"後処理の専門家枝刈りとの差","description":"Easy-EP等で学習済み通常MoEから重要専門家を探すだけでは小部分集合の崩壊を防げない。EMOは部分集合として使える性質を事前学習中に形成し、選択法自体には比較的鈍感である。"},{"name":"BTX/FlexOlmo型の領域定義との差","description":"人手で数学・コード等の領域を決めて別専門家を学習するのではなく、文書境界のみから専門家群を自己組織化するため、固定された領域分類への依存を減らす。"},{"name":"ModuleFormerとの差","description":"目的は近いが、EMOは文書共有プールという直接的制約を用い、通常MoEとの同条件比較と12.5%までの選択利用を示す。著者再現ではModuleFormerは40%未満の専門家保持で大きく劣化したと報告する。"}],"implementation_status":"公式のallenai/EMOコードとモデルコレクションが公開されている。既存MoEルータへ文書単位平均、Top-d候補マスク、動的d、大域的負荷分散を追加する。推論時の領域専門家選択は平均ルータ確率またはEasy-EPで実施でき、少量の検証例で上位専門家だけを残す。","research_positioning":"MoE推論のメモリ問題に対し、CPU/SSDへのオフロードや実行時専門家キャッシュではなく、モデル自体を領域ごとに切り出せるよう事前学習する上流設計である。専門家キャッシュは必要な専門家集合が時間的に変動する前提だが、EMOは特定領域サービスでは集合を事前固定して不要重みをロードしない構成を可能にする。オフロード・専門家配置・階層メモリと競合せず、必要集合そのものを縮める補完技術として位置づく。","evidence_locations":["PDF pp.1-5: 問題設定、文書共有プール、動的d、大域的負荷分散","PDF pp.6-10: 全モデル性能、選択利用、専門化解析、結論","PDF pp.16-18: 学習安定性、共有専門家、学習率・正規化アブレーション","PDF pp.19-21: 130B実験、少数例選択、otherカテゴリ、EMO-anneal","PDF pp.22-25: 生成例と評価プロトコル"]},"reservation":{"claim_id":"claim-921f188aa26d60b7af5ae872","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
