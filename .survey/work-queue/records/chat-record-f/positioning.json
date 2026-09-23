@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-b1a52303c9877f76cd4ddc7e",
-  "job_id": "job-research-d69ddf3864beda69",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b1a52303c9877f76cd4ddc7e",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b1a52303c9877f76cd4ddc7e","job_id":"job-research-d69ddf3864beda69","data":{"limitations":"end-to-end評価は96 pod/512 GPU相当の離散事象シミュレーションであり、実際のAWS/GCP/Azureをまたぐ物理展開でのネットワークjitter、API制御遅延、障害相関、spot eviction挙動は未検証である。モデル係数は単一pod実測で校正しているが、Hybridのtransfer/recompute overlap効率はhardware traceで未確認。分散radix indexはgossipによりstaleになり得る。理論保証は分解されたpolicy classと明示仮定の範囲で、offline全体最適とのdecomposition gapが残る。proprietary raw assistant traceは公開されず、統計一致synthetic traceで再現する。","differences":"DistServe、Splitwise、Mooncake、MemServeなどはprefill/decode分離やKV共有を主に単一クラスタ・高速fabric内で扱うのに対し、Janusはcross-cloud WANの帯域・egress料金・spot価格を明示的に目的へ入れる。Prefill-as-a-Serviceのようなcross-datacenter研究よりも、KVを送るか再計算するか、どの層/部分だけ送るかをdecode配置と同時に選ぶ点が広い。Llumnix等の動的schedulerと比べても、prefix所有位置と4種KV輸送を長期Lyapunov制御へ統合する点が特徴である。","implementation_status":"査読済みEAI論文として2026-08-12公開。17.1K行の制御プレーン、vLLM拡張、simulator、baseline shim、synthetic trace、calibration harness、plot scriptsをGitHubで公開している。物理マルチクラウド実証はfuture work。","research_positioning":"LLM推論基盤の中では、プリフィル・デコード分離、KVキャッシュ階層/転送、prefix-aware routing、異種GPU scheduling、multi-cloud cost optimizationの交点に位置する。特にKV cacheを『移送される状態』から『移送・再計算・部分移送を選択できる制御対象』へ変えたことで、Mooncake/KVDirect/LMCache系のKV-centric servingとSkyPilot/Helix系の異種・multi-cloud配置を接続する研究として整理できる。"},"reservation":{"claim_id":"claim-b1a52303c9877f76cd4ddc7e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
