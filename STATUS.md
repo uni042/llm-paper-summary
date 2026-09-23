@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 21:15:03 JST**
+> 自動生成: **2026-09-23 21:19:56 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,9 +12,9 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **141** |
-| 未claim Research job | **138** |
-| 直近24hの検証済みResearch収録 | **90** |
-| 最終検証済みResearch収録 | **09-23 19:57:05 JST（1時間17分前）** |
+| 未claim Research job | **137** |
+| 直近24hの検証済みResearch収録 | **89** |
+| 最終検証済みResearch収録 | **09-23 19:57:05 JST（1時間22分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（12時間44分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（12時間49分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **2** | **0** | **0** | **3** | **0** | — |
+| Research | **17** | **2** | **0** | **0** | **4** | **3** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **17** | **5** | **0** | **3** | **3** | **0** | **6** |
+| 合計 | **17** | **5** | **0** | **3** | **4** | **3** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -180,15 +180,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **3件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **4件** / 直近15分heartbeat: **3件**
+- `arXiv:2607.04164` — BrownoutMoE: Structure-Aware Expert Grouping for Efficient and Accurate LLM Web-based Services / worker `scheduled-chat-30`
+  - claim: **09-23 21:16:15 JST** / heartbeat: **—** / lease expiry: **09-23 22:46:15 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1a48a3083b0b1499.json`
 - `arXiv:2609.15627` — DeepSeek-V4-Flash on AMD gfx90a: Correctness Recovery and Inference Performance Engineering / worker `scheduled-chat-30`
-  - claim: **09-23 21:11:37 JST** / heartbeat: **—** / lease expiry: **09-23 22:41:37 JST**
+  - claim: **09-23 21:11:37 JST** / heartbeat: **09-23 21:16:15 JST** / lease expiry: **09-23 22:46:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-566a14b0b6e022f7.json`
 - `arXiv:2508.17137` — MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices / worker `scheduled-chat-30`
-  - claim: **09-23 21:11:37 JST** / heartbeat: **—** / lease expiry: **09-23 22:41:37 JST**
+  - claim: **09-23 21:11:37 JST** / heartbeat: **09-23 21:16:15 JST** / lease expiry: **09-23 22:46:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-b22af651ef4f551f.json`
 - `arXiv:2609.13846` — Affinity-Aware Sharding for Delayed Tensor Parallelism / worker `scheduled-chat-30`
-  - claim: **09-23 21:11:37 JST** / heartbeat: **—** / lease expiry: **09-23 22:41:37 JST**
+  - claim: **09-23 21:11:37 JST** / heartbeat: **09-23 21:16:15 JST** / lease expiry: **09-23 22:46:15 JST**
   - evidence: `.survey/work-queue/claims/job-research-e6152c2a3998faa6.json`
 
 #### Audit
