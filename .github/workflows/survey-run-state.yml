@@ -54,7 +54,7 @@ jobs:
               || echo 'Transport compaction failed; run-state publication continues and maintenance will retry.'
             git add -A \
               .survey/work-queue/run-state \
-              .survey/work-queue/archive/transport \
+              .survey/work-queue/archive \
               .survey/work-queue/claim-requests \
               .survey/work-queue/claim-results \
               .survey/work-queue/completed-submission-requests \
