@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 23:36:32 JST**
+> 自動生成: **2026-09-23 23:39:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **144** |
-| 未claim Research job | **123** |
+| 収録候補論文 | **149** |
+| 未claim Research job | **132** |
 | 直近24hの検証済みResearch収録 | **74** |
-| 最終検証済みResearch収録 | **09-23 22:05:03 JST（1時間31分前）** |
+| 最終検証済みResearch収録 | **09-23 22:05:03 JST（1時間34分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **144** |
+| canonical_id確認済みの一意な候補論文 | **149** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **144** |
+| 非終端Research job合計 | **149** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（15時間5分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（15時間8分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **13** | **1** | **0** | **0** | **21** | **0** | — |
+| Research | **13** | **1** | **0** | **0** | **17** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **13** | **4** | **0** | **3** | **21** | **0** | **6** |
+| 合計 | **13** | **4** | **0** | **3** | **17** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -178,7 +178,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **21件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **17件** / 直近15分heartbeat: **0件**
 - `arXiv:2410.10819` — DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads / worker `shared-preload-pool`
   - claim: **09-23 22:07:40 JST** / heartbeat: **—** / lease expiry: **09-24 10:07:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-53de425c7cce08ac.json`
@@ -191,24 +191,24 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `arXiv:2608.12114` — The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks / worker `shared-preload-pool`
   - claim: **09-23 22:07:40 JST** / heartbeat: **—** / lease expiry: **09-24 10:07:40 JST**
   - evidence: `.survey/work-queue/claims/job-research-9d57d4c95ee33e52.json`
-- `arXiv:2511.19480` — Exploiting the Experts: Unauthorized Compression in MoE-LLMs / worker `scheduled-chat-00`
-  - claim: **09-23 22:07:39 JST** / heartbeat: **09-23 22:07:39 JST** / lease expiry: **09-23 23:37:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-372c7ba23950bd0c.json`
-- `DOI:10.1007/s44196-026-01236-9` — Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models / worker `scheduled-chat-00`
-  - claim: **09-23 22:07:39 JST** / heartbeat: **09-23 22:07:39 JST** / lease expiry: **09-23 23:37:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-75eff2262d950b6f.json`
-- `arXiv:2510.03151` — Mixture of Many Zero-Compute Experts: A High-Rate Quantization Theory Perspective / worker `scheduled-chat-00`
-  - claim: **09-23 22:07:39 JST** / heartbeat: **09-23 22:07:39 JST** / lease expiry: **09-23 23:37:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b3cb99418924d14e.json`
-- `arXiv:2607.01444` — On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain / worker `scheduled-chat-00`
-  - claim: **09-23 22:07:39 JST** / heartbeat: **09-23 22:07:39 JST** / lease expiry: **09-23 23:37:39 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d5b6de209d3bfef0.json`
 - `DOI:10.1016/j.neunet.2026.109617` — MoEP: Compact and efficient sparsity with modular expert paths / worker `shared-preload-pool`
   - claim: **09-23 22:01:32 JST** / heartbeat: **—** / lease expiry: **09-24 10:01:32 JST**
   - evidence: `.survey/work-queue/claims/job-research-62f6ca15b903420d.json`
 - `arXiv:2603.10087` — Pooling Engram Conditional Memory in Large Language Models using CXL / worker `shared-preload-pool`
   - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
   - evidence: `.survey/work-queue/claims/job-research-1e9597cecaf6ec3b.json`
+- `arXiv:2112.05682` — Self-attention Does Not Need O(n²) Memory / worker `shared-preload-pool`
+  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3c41560bf93206f5.json`
+- `DOI:10.1109/ICEIC69189.2026.11386441` — Toward Efficient Deployment of Mixture of Experts Models: Quantization and Compression Analysis / worker `shared-preload-pool`
+  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3ccfe94f6e9f9715.json`
+- `arXiv:2602.06154` — MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models / worker `shared-preload-pool`
+  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
+  - evidence: `.survey/work-queue/claims/job-research-441084dd13b83186.json`
+- `arXiv:2407.15891` — RazorAttention: Efficient KV Cache Compression Through Retrieval Heads / worker `shared-preload-pool`
+  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8336bf916cc1d939.json`
 
 #### Audit
 
@@ -228,7 +228,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **144** |
+| ready | **149** |
 
 ### 候補の重複・識別情報欠損
 
@@ -256,11 +256,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **275** |
+| 成功result未照合のimmutable submission | **276** |
 | └ Research | **199** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
-| └ Other/Unknown | **4** |
+| └ Other/Unknown | **5** |
 
 ### 厳格検証が未成立のcompleted job
 

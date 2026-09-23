@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T14:35:02+00:00",
+  "updated_at": "2026-09-23T14:37:26+00:00",
   "last_run_key": "adhoc-20260923T232013JST-worker-923191",
   "last_round": "adhoc-20260923T232013JST-worker-923191-forward-02",
   "paper_stock_zero_count": 3,
@@ -8108,30 +8108,37 @@
       "candidate_count": 20,
       "duplicate_filtered_count": 0,
       "final_duplicate_filtered_count": 0,
-      "accepted_count": 5,
+      "accepted_count": 10,
       "accepted_canonical_ids": [
         "arXiv:2609.26333",
         "arXiv:2609.23816",
         "arXiv:2609.26219",
         "arXiv:2609.25537",
-        "arXiv:2609.25405"
+        "arXiv:2609.25405",
+        "DOI:10.1145/3770855.3817626",
+        "DOI:10.1145/3830086",
+        "arXiv:2609.24417",
+        "arXiv:2608.04991",
+        "arXiv:2608.05926"
       ],
       "duplicate_canonical_ids": [],
       "next_axis_hint": "selector after durable forward round",
       "source_submission": "work-queue/submissions/adhoc-20260923T232013JST-worker-923191-forward-02-part1.json",
       "source_submissions": [
-        "work-queue/submissions/adhoc-20260923T232013JST-worker-923191-forward-02-part1.json"
+        "work-queue/submissions/adhoc-20260923T232013JST-worker-923191-forward-02-part1.json",
+        "work-queue/submissions/adhoc-20260923T232013JST-worker-923191-forward-02-part2.json"
       ],
       "round_submission_indices": [
-        1
+        1,
+        2
       ],
       "round_submission_count": 2,
-      "round_accounted": false,
+      "round_accounted": true,
       "novel_candidate_count": 20,
       "post_final_dedupe_count": 20,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
-      "round_complete": false
+      "round_complete": true
     }
   ],
   "axes": {
@@ -15918,17 +15925,17 @@
       "next_axis_hint": null
     },
     "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
-      "last_run_key": "2026-09-21T06:58:37+09:00",
-      "rounds": 1,
-      "candidate_count": 5,
+      "last_run_key": "adhoc-20260923T232013JST-worker-923191",
+      "rounds": 2,
+      "candidate_count": 25,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
+      "novel_candidate_count": 25,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
+      "post_final_dedupe_count": 25,
+      "accepted_count": 15,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
-      "next_axis_hint": null
+      "next_axis_hint": "selector after durable forward round"
     },
     "forward citations of SGLang structured generation serving runtime": {
       "last_run_key": "2026-09-21T06:58:37+09:00",
@@ -16828,6 +16835,29 @@
       "cooldown": false,
       "last_run_key": "adhoc-20260923T232013JST-worker-923191",
       "last_round": "adhoc-20260923T232013JST-worker-923191-backward-01"
+    },
+    "window-4307f4d54979e103a426": {
+      "topic": "flexgen forward citations",
+      "source": "semantic_scholar",
+      "date_range": "fixed citation result set",
+      "category": "inference-systems",
+      "citation_direction": "forward",
+      "query_family": "*",
+      "search_window_key": "window-4307f4d54979e103a426",
+      "scan_count": 1,
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 62,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 10,
+      "last_position": "offset-0",
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.62,
+      "candidate_acceptance_rate": 0.5,
+      "cooldown": false,
+      "last_run_key": "adhoc-20260923T232013JST-worker-923191",
+      "last_round": "adhoc-20260923T232013JST-worker-923191-forward-02"
     }
   },
   "recent_search_windows": [
@@ -17669,6 +17699,27 @@
       "unseen_rate": 0.2,
       "duplicate_rate": 0.21,
       "candidate_acceptance_rate": 0.2,
+      "last_position": "offset-0"
+    },
+    {
+      "topic": "flexgen forward citations",
+      "source": "semantic_scholar",
+      "date_range": "fixed citation result set",
+      "category": "inference-systems",
+      "citation_direction": "forward",
+      "query_family": "*",
+      "search_window_key": "window-4307f4d54979e103a426",
+      "run_key": "adhoc-20260923T232013JST-worker-923191",
+      "round": "adhoc-20260923T232013JST-worker-923191-forward-02",
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 62,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 10,
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.62,
+      "candidate_acceptance_rate": 0.5,
       "last_position": "offset-0"
     }
   ],

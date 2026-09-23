@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T14:36:30.437208+00:00",
+  "updated_at": "2026-09-23T14:39:13.818751+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -43738,6 +43738,99 @@
           "type": "research",
           "canonical_id": "arXiv:2609.26219",
           "title": "PatchKV: Efficient KV Cache Recovery for Dynamically Edited LLM Contexts"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1002,
+      "paper_active_count_after": 1002,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "unattributed:35875217246",
+      "first_recorded_at": "2026-09-23T14:39:13.818751+00:00",
+      "last_recorded_at": "2026-09-23T14:39:13.818751+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 6,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35875217246:1",
+          "recorded_at": "2026-09-23T14:39:13.818751+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "35875217246",
+            "run_attempt": "1",
+            "source_sha": "0471cc28c95fb500a6c1965e504ada5d1af00423"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-8b0d5631f169970a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": null,
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-8b0d5631f169970a",
+          "status": "completed",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-4685ed9e609bff78",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.24417",
+          "title": "ARM: Attention with Routed-Memory for Learnable Sparse Control"
+        },
+        {
+          "job_id": "job-research-6be480b73a6003b5",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3770855.3817626",
+          "title": "OrionInfer: Low-Overhead Parallelism Switching and Live Migration for Efficient LLM Serving"
+        },
+        {
+          "job_id": "job-research-a2179107ad5ddbe2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.04991",
+          "title": "RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference"
+        },
+        {
+          "job_id": "job-research-b2d6c9e259c39ab3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.05926",
+          "title": "BALANCE: Hybrid Autoregressive-Speculative LLM Inference at the Network Edge"
+        },
+        {
+          "job_id": "job-research-b374f59330145700",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3830086",
+          "title": "CELLServe: An SLO-Aware and Cost Efficient LLMs Serving System for Serverless Computing Environments"
         }
       ],
       "new_paper_ids": [],
