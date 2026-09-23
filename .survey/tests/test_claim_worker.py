@@ -228,7 +228,7 @@ class ClaimWorkerTests(unittest.TestCase):
     def test_scheduled_chat_claim_window_preclaims_default_window_and_refills_without_idle_gap(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
-            for index in range(12):
+            for index in range(16):
                 job(root, f"job-r{index}", priority=100 - index)
             request(
                 root,
@@ -241,21 +241,21 @@ class ClaimWorkerTests(unittest.TestCase):
             first = json.loads(
                 (root / ".survey/work-queue/claim-results/req-window-1.json").read_text()
             )
-            self.assertEqual(first["claim_window"], 8)
-            self.assertEqual(first["claim_refill_threshold"], 4)
-            self.assertEqual(first["active_claim_count"], 8)
+            self.assertEqual(first["claim_window"], 12)
+            self.assertEqual(first["claim_refill_threshold"], 10)
+            self.assertEqual(first["active_claim_count"], 12)
             self.assertEqual(
                 [item["job_id"] for item in first["assignments"]],
-                [f"job-r{index}" for index in range(8)],
+                [f"job-r{index}" for index in range(12)],
             )
             self.assertEqual(
                 [item["pipeline_role"] for item in first["assignments"]],
-                ["foreground"] + ["standby"] * 7,
+                ["foreground"] + ["standby"] * 11,
             )
             self.assertEqual(first["foreground_job_id"], "job-r0")
-            self.assertEqual(first["standby_job_ids"], [f"job-r{index}" for index in range(1, 8)])
+            self.assertEqual(first["standby_job_ids"], [f"job-r{index}" for index in range(1, 12)])
 
-            for index in range(4):
+            for index in range(2):
                 done_path = root / f".survey/work-queue/jobs/job-r{index}.json"
                 done = json.loads(done_path.read_text())
                 done["status"] = "completed"
@@ -272,14 +272,14 @@ class ClaimWorkerTests(unittest.TestCase):
             second = json.loads(
                 (root / ".survey/work-queue/claim-results/req-window-2.json").read_text()
             )
-            self.assertEqual(second["active_claim_count"], 8)
-            self.assertEqual(second["claim_refill_threshold"], 4)
+            self.assertEqual(second["active_claim_count"], 12)
+            self.assertEqual(second["claim_refill_threshold"], 10)
             self.assertEqual(
                 [item["job_id"] for item in second["assignments"]],
-                [f"job-r{index}" for index in range(4, 12)],
+                [f"job-r{index}" for index in range(2, 14)],
             )
-            self.assertEqual(second["foreground_job_id"], "job-r4")
-            self.assertEqual(second["standby_job_ids"], [f"job-r{index}" for index in range(5, 12)])
+            self.assertEqual(second["foreground_job_id"], "job-r2")
+            self.assertEqual(second["standby_job_ids"], [f"job-r{index}" for index in range(3, 14)])
             self.assertEqual(second["assignments"][0]["pipeline_role"], "foreground")
             self.assertEqual(second["assignments"][-1]["pipeline_role"], "standby")
 
