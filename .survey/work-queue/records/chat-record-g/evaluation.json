@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-01b29ed73471ef21eb33ce79",
-  "job_id": "job-research-f719eedd6807af4c",
-  "data": {
-    "hardware": "PaLM 8B、62B、540Bを最大256基のTPU v4で測定する。TPU v4 1基はbfloat16行列演算275 TFLOPS、HBM 32 GiB・1200 GB/s、3Dトーラス相互接続270 GB/s。PaLM 540Bの主要構成は64基で、分割性を高めるためattention headを48から64へpaddingし18Bパラメータ増、約3% MFUコストを許容する。",
-    "software": "JAXとXLAを基盤に、元の高水準実装はT5X由来。通信とeinsumを重ねるLooped CollectiveEinsum、非同期CollectivePermuteを使う複数variant、tensor layout最適化、top-k/top-p sampling、Softmax/Swish、incremental prefillを実装する。重みint8化にはAQTを使用する。比較対象としてFasterTransformerのMegatron-Turing NLG 530Bベンチマークを用いる。",
-    "methodology": "推論をprefillとautoregressive decodeに分け、latency、throughput、MFU、chip-seconds/tokenで評価する。feedforwardでは1D/2D weight-stationaryとX/XY/XYZ weight-gatheredをbatch token数とchip数に対して比較し、attentionではmultihead、head-sharded multiquery、batch-sharded multiqueryを比較する。PaLM 540Bではcontext 2048を中心にbatchとchip数をsweepしてPareto frontierを作る。MQA評価では8-layer版でcontext長によるlatencyを比較し、全118-layerモデルのKV cache容量から最大contextを算出する。parallel/serial attention-FFNを比較し、FasterTransformerとは異なるhardwareをMFUで正規化して比較する。",
-    "scope": "主評価はTPU v4とPaLMアーキテクチャに集中する。著者は分割原理がNVLinkを含む他topologyへ一般化可能と論じるが、GPU上で同一実装を直接再評価してはいない。FasterTransformer比較はA100 16〜32基対TPU v4 64基でhardwareとモデルarchitectureが異なるため、絶対latencyだけで純粋な実装差を断定できない。int8は重みのみでactivation量子化は未実装。dense TransformerではFLOP数と通信量そのものが最終的な上限として残る。"
-  },
-  "reservation": {"claim_id": "claim-01b29ed73471ef21eb33ce79", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-1cdc9fc5138a75e71558bf84",
+  "job_id": "job-research-2377e2a4770cb727",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1cdc9fc5138a75e71558bf84",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
