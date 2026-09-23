@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T0939JST-scheduled-chat-30-a731c4-03",
+  "kind": "research",
+  "attempt_id": "attempt-b2bab9973d68ecd4f1cace12",
+  "job_id": "job-research-9fc5a1ad8ad0b2d8",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.19207-meshkv-a-network-on-chip-kv-cache-fabric-for-scalable-transformer-decoding-accelerators.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:bbe772412e12b989cd0dec47e7e26cf9628cdac846ab82252e23e8597f61af99",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "0f96d61d03ed8b187cc8517b5e227d3b80a8e7ba"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "a735e48afdac9eb9384fdc0e4635a9a33f2e0fcc"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "affb62f190f44c5eb0b5cc52e0aa1c48f95312c4"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "37a9f1d8260bc1f8a8c08cd37125f7d67b051ee1"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "6eebb4dfc168d7789cb7210143dd1704c08527e4"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-23T00:36:31+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2609.19207-meshkv-a-network-on-chip-kv-cache-fabric-for-scalable-transformer-decoding-accelerators.md",
+    "status": "FAIL",
+    "file_bytes": 19668,
+    "prose_chars": 5813,
+    "paragraphs": 19,
+    "method_paragraphs": 5,
+    "method_components": 5,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7564667560835409,
+    "japanese_chars": 3948,
+    "latin_chars": 1271,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 75.6% < 警告基準 80.0%"
+    ]
+  }
+}
