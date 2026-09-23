@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 00:36:15 JST**
+> 自動生成: **2026-09-24 01:00:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **163** |
-| 未claim Research job | **36** |
-| 直近24hの検証済みResearch収録 | **71** |
-| 最終検証済みResearch収録 | **09-23 22:05:03 JST（2時間31分前）** |
+| 収録候補論文 | **165** |
+| 未claim Research job | **38** |
+| 直近24hの検証済みResearch収録 | **68** |
+| 最終検証済みResearch収録 | **09-23 22:05:03 JST（2時間55分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **163** |
+| canonical_id確認済みの一意な候補論文 | **165** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **163** |
+| 非終端Research job合計 | **165** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（16時間5分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（16時間29分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **11** | **1** | **0** | **0** | **127** | **0** | — |
+| Research | **8** | **1** | **0** | **0** | **127** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **11** | **4** | **0** | **3** | **127** | **0** | **6** |
+| 合計 | **8** | **4** | **0** | **3** | **127** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -122,16 +122,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-0640a4e19fcd3a04140f52b1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-0640a4e19fcd3a04140f52b1.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2511.15690-modes-dynamic-expert-skipping.md`
-- **09-23 18:51:27 JST** [research] `arXiv:2605.08738` — SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training
-  - job: `.survey/work-queue/jobs/job-research-1330e1d7068cf379.json`
-  - result: `.survey/work-queue/results/research/attempt-ffa0b1baa60976c86cf81af0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-ffa0b1baa60976c86cf81af0.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md`
-- **09-23 18:45:27 JST** [research] `arXiv:2602.05711` — OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale
-  - job: `.survey/work-queue/jobs/job-research-c732ba9bb46aaf3a.json`
-  - result: `.survey/work-queue/results/research/attempt-bcdd660e4bafb23e846f2ec8.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-bcdd660e4bafb23e846f2ec8.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md`
 
 ### Audit
 
@@ -228,7 +218,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **163** |
+| ready | **165** |
 
 ### 候補の重複・識別情報欠損
 
@@ -256,11 +246,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **283** |
+| 成功result未照合のimmutable submission | **284** |
 | └ Research | **199** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
-| └ Other/Unknown | **12** |
+| └ Other/Unknown | **13** |
 
 ### 厳格検証が未成立のcompleted job
 

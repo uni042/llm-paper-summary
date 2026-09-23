@@ -1,32 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T14:55:24+00:00",
-  "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
-  "last_round": "20260923T233115JST-scheduled-chat-30-fwd-r5",
+  "updated_at": "2026-09-23T15:58:42+00:00",
+  "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
+  "last_round": "worker-240052-20260924T0054JST-backward-01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "provider exhausted with zero citations",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-superchip-slo-1",
-      "axis": "Superchip統合メモリ・SLO-aware KV rotation",
-      "query_summary": "CXL/SSDとは異なるCPU-GPU高帯域結合メモリを使うLLM servingを探索し、SuperInferを未収録候補として確認した。Photonic-CXL等の既知候補は反復しなかった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.27187"
-      ],
-      "next_axis_hint": "HBM/L2内部のKV prefetchとattention kernelの帯域隠蔽へ軸を移す",
-      "source_submission": "work-queue/submissions/20260916T2008JST-discovery-specialist-superchip-slo-1.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-kv-prefetch-2",
@@ -8251,6 +8234,43 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:worker-240052-20260924T0054JST-backward-01",
+      "precheck_request_id": "worker-240052-20260924T0054JST-backward-01",
+      "run_key": "adhoc-20260924T005200+09-00-worker-240052",
+      "round": "worker-240052-20260924T0054JST-backward-01",
+      "axis": "preload-backward-structured-references",
+      "query_summary": "Repository-wide structured backward references, using a preloaded fixed-source window re-filtered for this run.",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-ef3e2eec7e7a23984246",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [
+        "arXiv:2308.13137",
+        "arXiv:2305.17888"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/worker-240052-20260924T0056JST-backward-01.json",
+      "source_submissions": [
+        "work-queue/submissions/worker-240052-20260924T0056JST-backward-01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16165,6 +16185,19 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "continue selector with another productive seed or backward-reference window"
+    },
+    "preload-backward-structured-references": {
+      "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
+      "rounds": 1,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 20,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
