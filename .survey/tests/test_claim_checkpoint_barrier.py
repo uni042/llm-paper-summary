@@ -84,7 +84,12 @@ class ClaimCheckpointBarrierTests(unittest.TestCase):
             seed_request(root, "req-first")
             claim_worker.process_requests(root, at=AT)
             first = json.loads((root / ".survey/work-queue/claim-results/req-first.json").read_text())
-            self.assertEqual([item["job_id"] for item in first["assignments"]], ["job-checkpointed"])
+            self.assertEqual(
+                [item["job_id"] for item in first["assignments"]],
+                ["job-checkpointed", "job-next"],
+            )
+            self.assertEqual(first["foreground_job_id"], "job-checkpointed")
+            self.assertEqual(first["standby_job_ids"], ["job-next"])
 
             checkpoint_ref = "/LLM-survey-outbox/pending/punica.json"
             seed_request(
