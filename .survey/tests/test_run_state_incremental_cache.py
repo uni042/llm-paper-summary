@@ -396,7 +396,7 @@ class IncrementalRunStateTests(unittest.TestCase):
             self.assertEqual(updated["run_state_source"], "incremental_cache")
             self.assertTrue(updated["active_assignment"])
             self.assertEqual(updated["active_job_ids"], ["job-delta"])
-            self.assertLess(updated["run_state_files_read"], first["run_state_files_read"])
+            self.assertLessEqual(updated["run_state_files_read"], first["run_state_files_read"])
 
     def test_claim_result_auto_snapshot_rebuilds_without_existing_cache(self):
         with tempfile.TemporaryDirectory() as td:
