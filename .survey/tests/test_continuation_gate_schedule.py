@@ -58,11 +58,11 @@ def make_args(**overrides):
 class ContinuationGateScheduleTests(unittest.TestCase):
     def test_inventory_alone_selects_mode(self):
         discovery = mod.decide(make_args(
-            candidate_inventory=49,
+            candidate_inventory=287,
             seconds_to_run_deadline=3600,
         ))
         research = mod.decide(make_args(
-            candidate_inventory=50,
+            candidate_inventory=288,
             seconds_to_run_deadline=3600,
         ))
         self.assertEqual(discovery["work_mode"], "discovery")
@@ -71,17 +71,17 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         self.assertEqual(research["work_mode"], "research")
         self.assertEqual(research["mode_source"], "candidate_inventory")
 
-    def test_threshold_boundary_50_is_research(self):
+    def test_threshold_boundary_288_is_research(self):
         result = mod.decide(make_args(
-            candidate_inventory=50,
+            candidate_inventory=288,
             seconds_to_run_deadline=3500,
         ))
         self.assertEqual(result["work_mode"], "research")
         self.assertEqual(result["research_quota_remaining"], 3)
 
-    def test_inventory_at_least_50_is_research_and_exposes_combined_quota(self):
+    def test_inventory_at_least_threshold_is_research_and_exposes_combined_quota(self):
         result = mod.decide(make_args(
-            candidate_inventory=50,
+            candidate_inventory=288,
             research_audit_completed_this_invocation=1,
             seconds_to_run_deadline=3500,
         ))
