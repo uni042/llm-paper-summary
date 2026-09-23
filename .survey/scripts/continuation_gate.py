@@ -222,17 +222,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "CHECK_CLAIM_STATE"
             finalization_allowed = False
-        elif not submission_state_checked:
-            decision = "CONTINUE"
-            required_action = "CHECK_SUBMISSION_STATE"
-            finalization_allowed = False
         elif active_assignment:
             decision = "CONTINUE"
-            if (
+            if transient_claim_wait:
+                required_action = "CONTINUE_ASSIGNED_WORK"
+            elif not submission_state_checked:
+                required_action = "CHECK_SUBMISSION_STATE"
+            elif (
                 not handoff_window_active
                 and independent_work
                 and claim_window_remaining > 0
-                and not transient_claim_wait
             ):
                 required_action = "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY"
             else:
@@ -245,6 +244,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 if claim_result_pending_age_seconds < claim_monitor_window_seconds
                 else "WAIT_FOR_CLAIM_RESULT"
             )
+            finalization_allowed = False
+        elif not submission_state_checked:
+            decision = "CONTINUE"
+            required_action = "CHECK_SUBMISSION_STATE"
             finalization_allowed = False
         elif transient_submission_wait:
             decision = "CONTINUE"
@@ -270,7 +273,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
             finalization_allowed = False
 
-    # Reasons added by the 600-second start-prohibition branch are canonical hard
     # Reasons added by the 600-second start-prohibition branch are canonical hard
     # stop reasons too. Recompute after routing so finalization sees the same state
     # that worker-router.md defines.
