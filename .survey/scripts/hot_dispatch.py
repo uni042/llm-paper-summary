@@ -465,7 +465,10 @@ def finalize_research_takes(repo_root: Path) -> dict[str, Any]:
 
 
 def _normalize_direct_discovery_claim(path: Path, value: Any) -> dict[str, Any]:
-    if not isinstance(value, dict) or value.get("direct_take") is not True:
+    if not isinstance(value, dict) or not (
+        value.get("direct_take") is True
+        or value.get("operation") == "direct_take_discovery"
+    ):
         raise ValueError("not a direct Discovery take")
     preload_id = str(value.get("preload_id") or "")
     if not preload_id or path.stem != preload_id:
@@ -477,8 +480,10 @@ def _normalize_direct_discovery_claim(path: Path, value: Any) -> dict[str, Any]:
     if not run_key or run_key.startswith("preload:"):
         raise ValueError("real run_key is required")
     request_id = _safe_request_id(value.get("request_id"))
-    claimed = claim_state.parse_time(value.get("claimed_at"))
+    claimed = claim_state.parse_time(value.get("claimed_at") or value.get("requested_at"))
     expires = claim_state.parse_time(value.get("lease_expires_at"))
+    if claimed is not None and expires is None:
+        expires = claimed + dt.timedelta(seconds=discovery_preload_queue.CLAIM_LEASE_SECONDS)
     if claimed is None or expires is None or expires <= _utcnow():
         raise ValueError("direct Discovery claim lease is missing or expired")
     inventory = value.get("candidate_inventory_at_start")
@@ -505,7 +510,10 @@ def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
 
     for path in sorted(claim_root.glob("*.json")) if claim_root.is_dir() else []:
         raw = _read(path, {})
-        if not isinstance(raw, dict) or raw.get("direct_take") is not True:
+        if not isinstance(raw, dict) or not (
+            raw.get("direct_take") is True
+            or raw.get("operation") == "direct_take_discovery"
+        ):
             continue
         direct_result = result_root / path.name
         try:
