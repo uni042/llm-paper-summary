@@ -78,6 +78,47 @@ class HotQueueCompactionTests(unittest.TestCase):
             self.assertTrue((root / ".survey/work-queue/run-state/results/snap-1.json").is_file())
             self.assertTrue((root / ".survey/work-queue/run-state/requests/snap-pending.json").is_file())
 
+    def test_settled_claim_request_moves_but_result_and_active_claim_stay(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            request = {
+                "schema_version": 1,
+                "request_id": "claim-1",
+                "worker_id": "scheduled-chat-00",
+            }
+            write_json(root, ".survey/work-queue/claim-requests/claim-1.json", request)
+            write_json(
+                root,
+                ".survey/work-queue/claim-results/claim-1.json",
+                {
+                    **request,
+                    "ok": True,
+                    "processed_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+                    "assignments": [
+                        {
+                            "job_id": "job-a",
+                            "attempt_id": "attempt-a",
+                            "worker_id": "scheduled-chat-00",
+                        }
+                    ],
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/claims/job-a.json",
+                {
+                    "job_id": "job-a",
+                    "attempt_id": "attempt-a",
+                    "worker_id": "scheduled-chat-00",
+                },
+            )
+            mod.compact(root, apply=True)
+            self.assertTrue(
+                (root / ".survey/work-queue/claim-requests/archive/claim-1.json").is_file()
+            )
+            self.assertTrue((root / ".survey/work-queue/claim-results/claim-1.json").is_file())
+            self.assertTrue((root / ".survey/work-queue/claims/job-a.json").is_file())
+
     def test_preflight_pass_archives_only_after_descriptor_and_retention(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
