@@ -1,6 +1,6 @@
 {
-  "candidate_inventory": 259,
-  "direct_start_allowed": true,
+  "candidate_inventory": 264,
+  "direct_start_allowed": false,
   "discovery": {
     "backward": [
       {
@@ -24,25 +24,6 @@
       }
     ],
     "forward": [
-      {
-        "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
-        "citation_direction": "forward",
-        "created_at": "2026-09-23T15:33:10.162957+00:00",
-        "discovery_bank": "ad",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-ad/discovery-preload.json",
-        "initial_cursor": "200",
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-51916ebd5326dfce4e38",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-51916ebd5326dfce4e38.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": "arXiv:2303.06865",
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-51916ebd5326dfce4e38.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-51916ebd5326dfce4e38.json",
-        "target_unseen": 20
-      },
       {
         "axis": "forward citations of AWQ weight quantization and inference kernels retry",
         "citation_direction": "forward",
@@ -218,7 +199,7 @@
       }
     ]
   },
-  "generated_at": "2026-09-23T17:13:22+00:00",
+  "generated_at": "2026-09-23T17:14:25+00:00",
   "research": [
     {
       "attempt_id": "attempt-preload-413779e41c2b5b98bb543b9f",

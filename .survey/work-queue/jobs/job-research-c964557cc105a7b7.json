@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-c964557cc105a7b7",
+  "type": "research",
+  "parent_job_id": "job-fa54883fbacd4f51",
+  "priority": 96,
+  "canonical_id": "arXiv:2608.14498",
+  "arxiv_id": "2608.14498",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+  "source_url": "https://www.semanticscholar.org/paper/5e242025eb9b1fec5a9cbaa2354ec9a9205d4fe0",
+  "paper_path": null,
+  "selection_reason": "Phase-aware memory management and cross-TP weight sharing for VLM RL post-training; on 32 H800s reports 1.23-1.30x over serial colocation and 1.57-2.24x over disaggregation.",
+  "priority_breakdown": {
+    "base": 58,
+    "lineage": 20,
+    "recency": 15,
+    "venue": 3,
+    "total": 96
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T17:14:23+00:00"
+}
