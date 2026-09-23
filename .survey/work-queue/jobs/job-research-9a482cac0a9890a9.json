@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/3f71f011292d4504aa0b754cb9854b3140cba51b",
   "paper_path": "papers/inference/99-other-inference-systems/2026-d935ef5e0c55-efficient-llm-coserving-at-the-edge-via-resource-aware-cooperative-scheduling.md",
   "selection_reason": "Offloading-based edge LLM coserving system that schedules around PCIe bandwidth and CPU/GPU utilization; reports up to 27.4% higher offline throughput without harming high-priority latency.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T20:55:09+00:00"
+  "created_at": "2026-09-20T20:55:09+00:00",
+  "completed_at": "2026-09-23T08:34:17+00:00",
+  "blocker": "Primary full text could not be safely retrieved in this run. Searches resolved the authoritative DOI 10.1109/JIOT.2026.3718029 and bibliographic/abstract records describing RACS, but no complete author- or publisher-hosted manuscript body was accessible. The available records expose only abstract-level method and headline evaluation details, which are insufficient for the required full-text Research workflow. No five-slot record was reconstructed from abstracts or third-party summaries.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-f29b470d00d0f149840b88da.json"
 }
