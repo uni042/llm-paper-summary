@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:59:31+00:00",
-  "last_run_key": "adhoc-20260924T014100JST-worker-915241",
-  "last_round": "20260924T014100JST-worker-915241-forward-r4",
+  "updated_at": "2026-09-23T17:02:50+00:00",
+  "last_run_key": "adhoc-20260924T014906JST-worker-915242",
+  "last_round": "adhoc-20260924T014906JST-worker-915242-forward-take-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,44 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T00:00:00+09:00",
-      "round": "specialist-agent-kv-runtime-3",
-      "axis": "agent-aware KV cache・agent serving runtime・hardware-aware simulation",
-      "query_summary": "agentic servingのtool/result cache、interruption、state residencyへ探索を進め、agent実行遷移を使うKV cache管理、agent-aware runtime abstraction、HBM/DRAM/CXL residencyを再現するsimulatorを評価した。3件ともdefault branch code searchでarXiv ID/タイトルの既存表現を検出しなかった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はmulti-tenant fairness/admission control、agent interruption中のKV state退避、tool-call gapを利用したprefetch/offloadへ展開する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260917T0001-agent-kv-runtime-3.json"
-    },
-    {
-      "run_key": "2026-09-17T00:00:00+09:00",
-      "round": "specialist-agent-serving-2",
-      "axis": "agent sandbox scheduling・agentic workload serving characterization",
-      "query_summary": "前roundのnext-axis hintに従い、2609新着agent sandbox memory周辺からmulti-tenant agent servingへ展開した。2609.11294 AgentZipは最新queueですでにResearch readyのため重複除外し、未収録と確認できたSpecBoxとAgentSysBenchを提出した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.3333333333333333,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.11294"
-      ],
-      "next_axis_hint": "次はagentic servingのtool/result cache、interruption/resume、CPU-memory/SSD state offloadとGPU inferenceの協調へ展開する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260917T0001-agent-serving-2.json"
-    },
     {
       "run_key": "2026-09-17T00:00:00+09:00",
       "round": "specialist-tool-gap-kv-4",
@@ -8589,6 +8551,86 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T014100JST-worker-915241-forward-r5",
+      "precheck_request_id": "20260924T014100JST-worker-915241-forward-r5",
+      "run_key": "adhoc-20260924T014100JST-worker-915241",
+      "round": "20260924T014100JST-worker-915241-forward-r5",
+      "axis": "forward citations of H2O KV cache eviction and efficient inference",
+      "query_summary": "Later forward-citation window of H2O from the claimed Semantic Scholar preload, re-filtered against the current identity snapshot.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2306.14048",
+      "preload_id": "preload-08f3e27e3e8e1451c6c0",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2607.02640",
+        "arXiv:2607.05061",
+        "DOI:10.1109/TC.2026.3678524",
+        "arXiv:2606.31519",
+        "arXiv:2607.07144"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014100JST-worker-915241-forward-r5-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014100JST-worker-915241-forward-r5-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:adhoc-20260924T014906JST-worker-915242-forward-take-4",
+      "precheck_request_id": "adhoc-20260924T014906JST-worker-915242-forward-take-4",
+      "run_key": "adhoc-20260924T014906JST-worker-915242",
+      "round": "adhoc-20260924T014906JST-worker-915242-forward-take-4",
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "query_summary": "Forward citations of FlexGen from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot and topped up from the same fixed source.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2303.06865",
+      "preload_id": "preload-08bc73efbc2b865af33a",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2605.16786",
+        "arXiv:2605.13319",
+        "DOI:10.1109/CCGrid68966.2026.00023",
+        "DOI:10.1109/CVIDL70130.2026.11637503",
+        "arXiv:2605.15508"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014906JST-worker-915242-forward-r4-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014906JST-worker-915242-forward-r4-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16363,27 +16405,27 @@
     },
     "forward citations of H2O KV cache eviction and efficient inference": {
       "last_run_key": "adhoc-20260924T014100JST-worker-915241",
-      "rounds": 3,
-      "candidate_count": 45,
+      "rounds": 4,
+      "candidate_count": 65,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 45,
+      "novel_candidate_count": 65,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 45,
-      "accepted_count": 15,
+      "post_final_dedupe_count": 65,
+      "accepted_count": 20,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
     "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
-      "last_run_key": "adhoc-20260924T014100JST-worker-915241",
-      "rounds": 7,
-      "candidate_count": 125,
+      "last_run_key": "adhoc-20260924T014906JST-worker-915242",
+      "rounds": 8,
+      "candidate_count": 145,
       "duplicate_filtered_count": 13,
-      "novel_candidate_count": 112,
+      "novel_candidate_count": 132,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 112,
-      "accepted_count": 45,
-      "duplicate_ratio": 0.104,
+      "post_final_dedupe_count": 132,
+      "accepted_count": 50,
+      "duplicate_ratio": 0.0896551724137931,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
