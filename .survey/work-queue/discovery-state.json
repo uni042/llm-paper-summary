@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T17:06:15+00:00",
+  "updated_at": "2026-09-23T17:08:03+00:00",
   "last_run_key": "20260924T020210JST-scheduled-chat-00",
-  "last_round": "20260924T020210JST-scheduled-chat-00-backward-r1",
+  "last_round": "20260924T020210JST-scheduled-chat-00-forward-r2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T00:00:00+09:00",
-      "round": "specialist-network-scheduling-6",
-      "axis": "multi-stage network flow scheduling・prefill deflection・KV transfer contention",
-      "query_summary": "KV storage/reuse軸の次に、disaggregated servingでTTFTを支配するnetwork flow contentionとprefill/decode資源非対称へ移動した。arXiv一次ページを確認し、投入直前にdefault branch code searchで両arXiv IDが0件であることを確認した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はGPU fabric/NVLink/PCIe topology-aware placement、collective scheduling、remote KV admissionへ展開する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260917T0058-network-scheduling-6.json"
-    },
     {
       "run_key": "2026-09-17T02:00:00+09:00",
       "round": "specialist-offload-specdecode-1",
@@ -8671,6 +8653,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T020210JST-scheduled-chat-00-direct-forward-2",
+      "precheck_request_id": "20260924T020210JST-scheduled-chat-00-direct-forward-2",
+      "run_key": "20260924T020210JST-scheduled-chat-00",
+      "round": "20260924T020210JST-scheduled-chat-00-forward-r2",
+      "axis": "forward citations of KVLink efficient KV cache reuse",
+      "query_summary": "Forward-citation preload for KVLink, formally re-filtered by schema-v3 precheck; selected recent high-value KV-cache, routing, RAG-cache, and agentic-serving systems.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2502.16002",
+      "preload_id": "preload-279710d2459727616545",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2602.11688",
+        "arXiv:2602.06502",
+        "arXiv:2602.01519",
+        "arXiv:2601.12904",
+        "arXiv:2509.21301"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T020210JST-scheduled-chat-00-forward-r2-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T020210JST-scheduled-chat-00-forward-r2-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16353,14 +16375,14 @@
       "next_axis_hint": null
     },
     "forward citations of KVLink efficient KV cache reuse": {
-      "last_run_key": "adhoc-20260924T014100JST-worker-915241",
-      "rounds": 2,
-      "candidate_count": 25,
+      "last_run_key": "20260924T020210JST-scheduled-chat-00",
+      "rounds": 3,
+      "candidate_count": 45,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 25,
+      "novel_candidate_count": 45,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 25,
-      "accepted_count": 10,
+      "post_final_dedupe_count": 45,
+      "accepted_count": 15,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
