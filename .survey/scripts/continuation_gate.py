@@ -3,8 +3,9 @@
 
 The gate decides whether the whole run may stop for the common hourly paper
 worker. The :00 and :30 schedules are identical. When candidate_inventory is
-provided, the run-start candidate_inventory >= 50 selects Research/Audit and
-candidate_inventory < 50 selects Discovery. The selected mode is frozen for the run;
+provided, the run-start candidate_inventory is compared with the generalized
+RESEARCH_DISCOVERY_THRESHOLD from claim_window_policy. The selected mode is frozen
+for the run;
 callers must reuse the run-start routing value or pass the explicit work_mode on later checks. Existing per-mode quotas remain progression floors.
 Transport backlogs, claim-result propagation delay, and job-local failures are not
 stop conditions when repository state remains readable and no explicit hard
@@ -537,7 +538,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "pending claim/result identities are kept stable; instead of sleeping or fixed-interval polling, the worker runs one bounded wait microtask and then rechecks the same target until terminal or a canonical hard stop. "
             "When claimable independent Research/Audit work is available, pending submission results never block another paper claim. "
             f"Workers process only one foreground paper at a time, while the configurable claim window defaults to {claim_window_policy.DEFAULT_CLAIM_WINDOW} active claims. "
-            f"A refill is triggered at the generalized low-watermark (normally half the window; current threshold {claim_refill_threshold}) and fills back toward the target window. "
+            f"A refill is triggered while half of the hot bank-ready slice remains (current threshold {claim_refill_threshold}) and fills back toward the target window. "
             "A standby-refill claim result never blocks an already active foreground paper. When foreground becomes terminal, the oldest standby becomes foreground immediately. "
             "All submitted attempts remain durably tracked. "
             "Submission results are monitored concurrently and become a foreground wait only when the 600-second no-new-work window begins or no Research/Audit job is claimable. Hourly Scheduled Chat workers prefer an actual-"
