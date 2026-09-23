@@ -483,6 +483,8 @@ def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
         "actual_invocation_start",
         "pipeline_order",
         "pool_order",
+        "stock_bank",
+        "stock_lane",
         "preloaded_at",
         "preload_pool_adopted_at",
     ):
