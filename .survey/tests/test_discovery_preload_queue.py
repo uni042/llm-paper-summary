@@ -147,6 +147,39 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
             set(BANK_IDS[:2]),
         )
 
+    def test_default_target_places_discovery_stock_in_all_32_banks(self) -> None:
+        state_path = self.root / preload.DISCOVERY_STATE
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+        history = list(state.get("history") or [])
+        for index in range(30):
+            history.append(
+                {
+                    "run_key": f"normal-{index}",
+                    "round": f"normal-{index}",
+                    "axis": f"normal search {index}",
+                    "provider": "openalex",
+                    "source_url": (
+                        "https://api.openalex.org/works?"
+                        f"search=dual-mode-bank-{index}&sort=publication_date:desc"
+                    ),
+                    "citation_direction": "normal",
+                    "candidate_count": 20,
+                    "novel_candidate_count": 15,
+                    "accepted_count": 1,
+                    "round_accounted": True,
+                }
+            )
+        state["history"] = history
+        write_json(state_path, state)
+
+        result = preload.top_up(self.root, target=32, max_new=32)
+        self.assertEqual(result["created_count"], 32)
+        entries = preload._entries(self.root)
+        self.assertEqual(len(entries), 32)
+        self.assertEqual({row["stock_bank"] for row in entries}, set(BANK_IDS))
+        self.assertTrue(all(row["stock_lane"] == "discovery" for row in entries))
+        self.assertEqual(result["bank_target"], 32)
+
     def test_failed_preload_does_not_count_as_stock_and_is_replaced(self) -> None:
         first = preload.top_up(self.root, target=1, max_new=1)
         self.assertEqual(first["created_count"], 1)
