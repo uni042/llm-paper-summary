@@ -24,6 +24,7 @@ def load(name: str):
 preflight = load("research_quality_preflight")
 pipeline = load("advance_research_submission_pipeline")
 processor = load("process_immutable_submission")
+claim_worker = load("claim_worker")
 
 
 class RunIdentityTransportTests(unittest.TestCase):
@@ -108,6 +109,42 @@ class RunIdentityTransportTests(unittest.TestCase):
         )
         for field in ("worker_id", "run_key", "scheduled_slot", "actual_invocation_start"):
             self.assertEqual(result[field], descriptor[field])
+
+    def test_claim_request_carries_complete_run_identity_but_legacy_remains_readable(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            path = root / "claim-a.json"
+            start = dt.datetime.now(dt.timezone(dt.timedelta(hours=9)))
+            payload = {
+                "schema_version": 1,
+                "request_id": "claim-a",
+                "worker_id": "scheduled-chat-00",
+                "worker_kind": "scheduled_chat",
+                "requested_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
+                "max_jobs": 1,
+                "job_types": ["research", "audit"],
+                "run_key": "run-claim-a",
+                "scheduled_slot": "00",
+                "actual_invocation_start": start.isoformat(),
+            }
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            normalized = claim_worker._normalize_request(path, payload)
+            self.assertEqual(normalized["run_key"], "run-claim-a")
+            self.assertEqual(normalized["scheduled_slot"], "00")
+            self.assertTrue(normalized["actual_invocation_start"].endswith("+00:00"))
+
+            legacy = dict(payload)
+            for field in ("run_key", "scheduled_slot", "actual_invocation_start"):
+                legacy.pop(field)
+            path.write_text(json.dumps(legacy), encoding="utf-8")
+            normalized_legacy = claim_worker._normalize_request(path, legacy)
+            self.assertNotIn("run_key", normalized_legacy)
+
+            partial = dict(legacy)
+            partial["run_key"] = "run-partial"
+            path.write_text(json.dumps(partial), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "complete"):
+                claim_worker._normalize_request(path, partial)
 
 
 if __name__ == "__main__":
