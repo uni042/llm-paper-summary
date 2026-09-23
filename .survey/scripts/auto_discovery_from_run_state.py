@@ -74,6 +74,7 @@ def _eligible(result: dict[str, Any]) -> bool:
     return bool(
         result.get("ok") is True
         and result.get("snapshot_origin") == "request-fast-lane"
+        and result.get("route_source") != "hot_dispatch_direct_start"
         and result.get("work_mode") == "discovery"
         and worker_identity.identity_slot_valid(result.get("worker_id"), result.get("scheduled_slot"))
         and result.get("scheduled_slot") != "0830"
