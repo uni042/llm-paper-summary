@@ -25,6 +25,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 import prepare_completed_submission  # noqa: E402
+import worker_run_state_cache  # noqa: E402
 
 PREFLIGHT_RESULTS = Path(".survey/work-queue/research-preflight/results")
 COMPLETED_REQUESTS = Path(".survey/work-queue/completed-submission-requests")
@@ -305,6 +306,8 @@ def advance(repo: Path, *, mode: str = "all") -> dict[str, Any]:
         drain_completed_requests(repo, summary)
     for key in ("generated_requests", "built_descriptors", "already_settled", "request_conflicts", "quarantined"):
         summary[key] = sorted(set(summary[key]))
+    descriptor_paths = [Path(path) for path in summary["built_descriptors"]]
+    summary["run_state_cache_touched"] = worker_run_state_cache.observe_descriptors(repo, descriptor_paths) if descriptor_paths else {}
     summary["next_action"] = "dispatch_submission_drain_once" if summary["built_descriptors"] else "no_new_descriptor"
     return summary
 
