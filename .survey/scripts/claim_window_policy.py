@@ -80,5 +80,5 @@ def should_refill(
 
 
 def shared_pool_target() -> int:
-    """Return the logical preload target; this is deliberately bank-independent."""
+    """Return the Research preload target distributed across canonical bank lanes."""
     return SHARED_PRELOAD_TARGET
