@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-3b0b8499edf3a5b73b2ca7f6",
-  "job_id": "job-research-88a9229b2587f714",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3b0b8499edf3a5b73b2ca7f6",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-3b0b8499edf3a5b73b2ca7f6","job_id":"job-research-88a9229b2587f714","data":{"canonical_id":"arXiv:2601.18089","arxiv_id":"2601.18089","doi":"10.48550/arXiv.2601.18089","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts","summary":"LatentMoEは、MoEの推論効率をaccuracy/FLOPだけでなくaccuracy/parameterでも最適化するハードウェア・ソフトウェア協調設計である。入力を共有低次元潜在空間へ射影してからルーティング先エキスパートを実行し、エキスパート重みロードと全対全通信をd/ℓ倍削減する。その余剰を総エキスパート数Nと活性エキスパート数Kの同率拡大へ再投資し、ほぼ同じ推論コストで組合せ専門化と非線形容量を増やす。16B/2B-activeから95B/8B-active、さらに73B hybrid Mamba-Attention MoEまで検証し、4倍圧縮で効率型は基準性能を維持しつつactive parametersを削減、精度型は同等パラメータで全主要下流指標を改善した。","list_summary":"MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストをN/K拡大へ再投資してaccuracy/FLOPとaccuracy/parameterを同時改善する設計。","authors":["Venmugil Elango","Nidhi Bhatia","Roger Waleffe","Rasoul Shafipour","Tomer Asida","Abhinav Khattar","Nave Assaf","Maximilian Golub","Joey Guman","Tiyasa Mitra","Ritchie Zhao","Ritika Borkar","Ran Zilberstein","Mostofa Patwary","Mohammad Shoeybi","Bita Rouhani"],"authors_affiliations":"一次資料著者欄に基づく。所属詳細は本レコードでは未転記。","published":"2026-01-26","publication":"arXiv:2601.18089v1, submitted 2026-01-26","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE architecture / hardware-software co-design / latent expert computation / Nemotron-3","topics":["MoE","潜在空間","メモリ帯域","all-to-all通信","expert parallelism","accuracy per FLOP","accuracy per parameter"],"importance":"疎活性化MoEの効率を計算量だけでなく総パラメータ・HBM帯域・通信まで含めて再設計し、Nemotron-3 Super/Ultraへ採用された実運用系統のアーキテクチャ原理を示す。","hardware_evaluation":"Qwen3-235B-A22Bを例にNVIDIA GB200 NVL72をモデル化し、FP4 10 PFLOP/s、HBM 8 TB/s、NVLink片方向900 GB/s、EP=64を仮定。学習評価は16B/2B-active、95B/8B-active、73B/8B-active hybridで実施。","quality_effect":"潜在次元ℓを下げ過ぎると固有特徴ランクを下回り品質が崩れるため、実験ではα=d/ℓ=4まで品質維持を確認。Nをα倍し、精度型ではKもα倍することで圧縮による学習・表現損失を補う。","source":"https://arxiv.org/abs/2601.18089","sources":["https://arxiv.org/abs/2601.18089","https://arxiv.org/html/2601.18089","https://arxiv.org/pdf/2601.18089"],"code":null,"implementation":"論文の設計はNemotron-3 Super/Ultraへ採用済み。一次arXivページで独立した公開コードURLは確認できない。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary-reference-section","references_total":0},"reservation":{"claim_id":"claim-3b0b8499edf3a5b73b2ca7f6","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
