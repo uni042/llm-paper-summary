@@ -17,6 +17,7 @@ from typing import Any
 import apply_library_checkpoint_barriers
 import claim_worker_with_banks
 import derive_worker_run_state
+import hot_dispatch
 import normalize_research_paper_paths
 import repair_claim_bank_recovery
 
@@ -106,6 +107,7 @@ def process(repo_root: Path) -> dict[str, Any]:
         normalization["skipped"] = False
 
     barriers = apply_library_checkpoint_barriers.apply(root)
+    direct_takes = hot_dispatch.process_research_takes(root)
     allocation = claim_worker_with_banks.process_requests(root)
     allocation.update(claim_worker_with_banks.maintain_shared_pool(root))
     changed = _changed_results(root, before)
@@ -132,12 +134,22 @@ def process(repo_root: Path) -> dict[str, Any]:
         finally:
             changed_file.unlink(missing_ok=True)
 
+    direct_finalize = hot_dispatch.finalize_research_takes(root)
+    hot_index = hot_dispatch.refresh(root)
+
     return {
         "ok": True,
         "normalization": normalization,
         "checkpoint_barriers": barriers,
+        "direct_takes": direct_takes,
         "allocation": allocation,
         "repair": repair,
+        "direct_take_finalize": direct_finalize,
+        "hot_dispatch": {
+            "candidate_inventory": hot_index.get("candidate_inventory"),
+            "suggested_work_mode": hot_index.get("suggested_work_mode"),
+            "research_packets": len(hot_index.get("research") or []),
+        },
         "changed_claim_results": [path.as_posix() for path in changed],
         "run_state_update": state_update,
     }
