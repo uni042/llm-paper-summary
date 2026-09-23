@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-ffa0b1baa60976c86cf81af0",
-  "job_id": "job-research-1330e1d7068cf379",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ffa0b1baa60976c86cf81af0",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-ffa0b1baa60976c86cf81af0","job_id":"job-research-1330e1d7068cf379","data":{"limitations":"主要結果はQwen3-Next系80A3B teacherと特定の23A2B/6A1B targetを中心にしており、Mixtral、DeepSeek等の異なるMoE topologyへ同じrecipeがそのまま一般化するかは未検証である。partial-preservationで目標expertの半分を完全保持する50%比率は単純で対称な設計選択で、論文自身も最適比率を理論的に導いていない。400B token規模まで学習するとexpert圧縮法の差が縮むが、より短い回復予算ではone-shot方式差が重要になる可能性がある。段階的剪定は同じtoken数でも複数checkpoint・再構成工程を必要とし、運用複雑性は増える。本文主要節では具体的training hardwareが明示されず、圧縮工程自体のwall-clock/energy削減量も中心評価ではない。","differences":"Minitron等のdense圧縮はdepth/widthを扱うがMoE固有のexpert軸を持たない。REAPやexpert dropping研究はone-shot性能や限定的回復を重視するのに対し、SlimQwenは400B tokenの継続事前学習後まで比較し、初期のexpert選択法差が縮むことを示す。SlimMoEはexpert intermediate dimension縮小とdistillationを扱うが、本研究はdepth・hidden width・expert countを同時に縮め、partial-preservation mergingとprogressive architecture scheduleを組み合わせる。さらにpure KDを既定とせずLM loss混合とMTP KDを比較する点が異なる。","implementation_status":"Qwen Team中心のarXiv v2研究。Maestro training framework上で80A3B hybrid MoEを120B/400B token継続事前学習し、depth-first progressive modelをSlimQwenと命名して23A2Bへ圧縮している。論文本文からSlimQwen専用の公開code/model URLは確認できない。","research_positioning":"Adaptive Expert Computation / Compression系統では、推論時にexpertをcache/offloadするのではなく、事前学習済みMoEそのものを恒久的に小型化して総weight footprintと活性計算量を下げる系統に位置する。特に『どのexpertを捨てるか』のone-shot精度より、長期continued pretrainingの初期値とarchitecture transitionが重要という結果は、expert pruning評価を短期benchmarkだけで判断しない根拠になる。ローカル・メモリ制約環境では80A3B級を23A2Bへ落とす方向性が直接有用だが、圧縮モデル作成には120B〜400B token級の再学習費が必要で、実行時offload技術とは補完関係にある。"},"reservation":{"claim_id":"claim-ffa0b1baa60976c86cf81af0","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
