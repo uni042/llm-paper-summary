@@ -1,4 +1,4 @@
-# Worker router — workflow v10.7
+# Worker router — workflow v10.8
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -46,7 +46,7 @@ Scheduled Chatの論文ワーカーは、実行ごとに名前を作り直さず
 
 ノルマは維持する。
 
-- **読解モード**: 今回の起動中に **Research / Audit 合計で成功完了を最低3件**作る。Research job 1件とAudit job 1件は、同じ論文に対するものでも**別々に1件ずつ**数える。Researchは一次資料全文→5スロット→ワーカー自身のセルフレビュー→exact blob preflight合格→不変submission→submission result成功→最新mainへの反映確認まで、Auditも同じ提出前ゲート→不変submission→成功result→最新mainへの反映確認までを1件の完了とする。`blocked` / `deferred` / `rejected` や提出しただけのpending状態はノルマへ数えない。3件は停止上限ではない。
+- **読解モード**: 今回の起動中に **Research / Audit 合計で成功完了を最低3件**作る。Research job 1件とAudit job 1件は、同じ論文に対するものでも**別々に1件ずつ**数える。Researchは一次資料全文→5スロット→ワーカー自身のセルフレビュー→exact blob preflight合格→不変submission→submission result成功→最新mainへの反映確認まで、Auditも同じ提出前ゲート→不変submission→成功result→最新mainへの反映確認までを1件の完了とする。`blocked` / `deferred` / `rejected` や提出しただけのpending状態はノルマへ数えない。3件は停止上限ではない。最低3件を達成した後も、残り600秒の新規開始禁止窓に入るまでは、claim可能なResearch / Auditがある限り機械案内は `CLAIM_NEXT_RESEARCH_AUDIT` を返し、次の1件をclaimして同じ読解モードを継続する。曖昧な `CONTINUE_WORK` を最低件数達成後の停止・待機理由として扱わない。
 - **探索モード**: 今回のrunで最低4つの**成功した正規schema v3 precheck**を完了させ、そのprecheckに対応するDiscovery submission/resultまで耐久反映する。**1つのprecheck `request_id` = 1ラウンド**と数える。同じprecheckから候補を複数submissionへ分割しても1ラウンドのままであり、逆に別の成功precheckなら同じprovider・同じ探索元でも別ラウンドとして数える。候補0件の成功precheckも、0件submission/resultまで正規経路を完了すれば1ラウンドに数える。4ラウンドは停止上限ではない。
 
 handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Library双方への耐久保存不能などのhard stopはノルマより優先する。件数を満たすために弱い候補を採用したり、読解品質を下げたりしない。
