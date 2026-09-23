@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-b2bab9973d68ecd4f1cace12",
-  "job_id": "job-research-9fc5a1ad8ad0b2d8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b2bab9973d68ecd4f1cace12",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b2bab9973d68ecd4f1cace12","job_id":"job-research-9fc5a1ad8ad0b2d8","data":{"overview":"T=32K,B=1でLLaMA-2-7Bの相互接続trafficはCENT=1.00に対しSHARED 0.81、TaKV-only 0.66、full MeshKV 0.42となり58%削減する。Mistral-7Bは0.40。LLaMA-2-7Bのbisection KV bandwidth utilizationはT=32KでCENT 19%、SHARED 29%、TaKV-only 41%、MeshKV 61%となりSHARED比約2.1倍。T=32Kのdecode throughputはB=1で1.35倍、B=8で1.90倍。link energyはCENT比48%減、SRAM energyは7%増、net energy/tokenは17%減。","key_results":[{"metric":"normalized interconnect traffic","value":"LLaMA-2-7B 0.42、Mistral-7B 0.40","baseline":"CENT=1.00","condition":"T=32K,B=1","interpretation":"LLaMAで58%、Mistralで60%のtraffic削減。TaKV-onlyは0.66/0.63で、multicastが追加削減を担う。"},{"metric":"bisection KV bandwidth utilization","value":"61%","baseline":"CENT 19%、SHARED 29%、TaKV-only 41%","condition":"LLaMA-2-7B,T=32K","interpretation":"SHARED比約2.1倍で、back-pressure周期をuseful KV transferへ転換する。"},{"metric":"decode throughput","value":"B=1で1.35倍、B=8で1.90倍","baseline":"CENT","condition":"LLaMA-2-7B,T=32K","interpretation":"batch増加時は複数streamが同一segment multicast treeを共有し利得が拡大する。"},{"metric":"energy/token","value":"net 17%減、link 48%減、SRAM 7%増","baseline":"CENT","condition":"T=32K","interpretation":"分散bank readのSRAM増を通信energy削減が上回る。"},{"metric":"ablation - Mare","value":"throughput 0.62倍、traffic 1.55倍","baseline":"full MeshKV=1.00","condition":"T=32K,B=8,LLaMA-2-7B","interpretation":"multicast無効化が最大の退行で、Mareが主要寄与。"},{"metric":"ablation - Pad / dedup / TaKV","value":"-Pad 0.78倍、-bloom/dedup 0.82倍、-TaKV 0.88倍 throughput","baseline":"full MeshKV=1.00","condition":"同上","interpretation":"通信重畳・重複抑制・配置分散はいずれも独立に効く。"}],"negative_results":"16×4 meshではmulticast treeが長くなりCENT比speedupは1.4倍に低下し、8×8の1.9倍より弱い。分散bank化でSRAM energyは7%増える。U280の16GiB KV slabはHBM 8GBだけに収まらずDDR4併用が必要で、URAMはblock resident storeではなくstreaming windowに留まる。","interpretation":"主要な利得は平均hopを単純に短縮することではなく、home分散で最大注入負荷を下げ、head間の同一KV要求をmulticastへまとめ、残るRTTをattention pipelineに隠すことから生じる。特にMareを外した退行が最大で、長文脈・multi-streamほどcommunication-aware designの効果が大きい。","quality_impact":"attentionの数学的結果を近似・圧縮する方式ではないため、モデル精度低下を対価とする手法ではない。主なtrade-offはrouter/URAM資源、SRAM energy、mesh aspect ratio、制御複雑性である。"},"reservation":{"claim_id":"claim-b2bab9973d68ecd4f1cace12","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
