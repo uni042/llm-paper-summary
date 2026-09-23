@@ -19,6 +19,7 @@ import immutable_submission  # noqa: E402
 import paper_quality_gate  # noqa: E402
 import prepare_completed_submission  # noqa: E402
 import process_immutable_submission  # noqa: E402
+import worker_run_index  # noqa: E402
 
 SCHEMA_VERSION = 1
 OPERATION = "research_quality_preflight"
@@ -105,11 +106,21 @@ def _validate_request(path: Path) -> dict[str, Any]:
             if not isinstance(value, str):
                 raise PreflightRequestError(f"{field} must be a string when present")
             out[field] = value
+
+    # New Scheduled Chat requests carry the exact invocation identity so GitHub can
+    # update the correct run-state after submission. Legacy requests may omit all
+    # four fields and remain fully read-compatible.
+    try:
+        run_identity = worker_run_index.normalize_identity(request, required=False)
+    except ValueError as exc:
+        raise PreflightRequestError(str(exc)) from exc
+    if run_identity is not None:
+        out.update(run_identity)
     return out
 
 
 def _identity(request: dict[str, Any]) -> dict[str, Any]:
-    return {
+    out = {
         "schema_version": SCHEMA_VERSION,
         "operation": OPERATION,
         "request_id": request.get("request_id"),
@@ -120,6 +131,10 @@ def _identity(request: dict[str, Any]) -> dict[str, Any]:
         "paper_path": request.get("paper_path"),
         "expected_blob_sha": request.get("expected_blob_sha"),
     }
+    for field in worker_run_index.RUN_FIELDS:
+        if request.get(field) not in (None, ""):
+            out[field] = request.get(field)
+    return out
 
 
 def _canonical_expected_blob_sha(repo_root: Path, paper_path: str | None) -> str | None:
