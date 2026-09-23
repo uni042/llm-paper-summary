@@ -88,6 +88,46 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     if isinstance(runtime_condition_attempts, bool) or not isinstance(runtime_condition_attempts, int):
         raise ValueError("runtime_condition_attempts must be an integer")
     runtime_condition_detail = str(value.get("runtime_condition_detail") or "").strip()
+
+    direct_inventory = value.get("candidate_inventory_at_start")
+    direct_mode = str(value.get("work_mode_at_start") or "").strip()
+    direct_threshold = value.get("research_discovery_threshold")
+    direct_generated_at = str(value.get("hot_dispatch_generated_at") or "").strip()
+    direct_present = any(
+        item not in (None, "")
+        for item in (direct_inventory, direct_mode, direct_threshold, direct_generated_at)
+    )
+    direct_route: dict[str, Any] = {}
+    if direct_present:
+        if (
+            isinstance(direct_inventory, bool)
+            or not isinstance(direct_inventory, int)
+            or direct_inventory < 0
+        ):
+            raise ValueError("candidate_inventory_at_start must be a non-negative integer")
+        if direct_mode not in {"research", "discovery"}:
+            raise ValueError("work_mode_at_start must be research or discovery")
+        if (
+            isinstance(direct_threshold, bool)
+            or not isinstance(direct_threshold, int)
+            or direct_threshold != claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
+        ):
+            raise ValueError("research_discovery_threshold does not match the current policy")
+        expected_mode = "research" if direct_inventory >= direct_threshold else "discovery"
+        if direct_mode != expected_mode:
+            raise ValueError("direct work_mode_at_start is inconsistent with candidate_inventory_at_start")
+        if scheduled_slot == "0830":
+            raise ValueError("08:30 maintenance cannot use a direct paper-work route")
+        generated = _time(direct_generated_at)
+        if generated is None:
+            raise ValueError("hot_dispatch_generated_at must be an offset-aware timestamp")
+        direct_route = {
+            "candidate_inventory_at_start": direct_inventory,
+            "work_mode_at_start": direct_mode,
+            "research_discovery_threshold": direct_threshold,
+            "hot_dispatch_generated_at": generated.astimezone(dt.timezone.utc).isoformat(),
+        }
+
     return {
         "schema_version": 1,
         "request_id": request_id,
@@ -100,6 +140,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "runtime_condition_confirmed": runtime_condition_confirmed,
         "runtime_condition_attempts": max(runtime_condition_attempts, 0),
         "runtime_condition_detail": runtime_condition_detail,
+        **direct_route,
     }
 
 
@@ -627,6 +668,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     if cached is not None and cached_claims is None:
         cached = None
     cache_hit = cached is not None
+    route_source = "incremental_cache" if cached is not None else "canonical_inventory"
     if cached is not None:
         inventory = int(cached["candidate_inventory"])
         work_mode = str(cached["work_mode"])
@@ -639,14 +681,27 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             run_state_cache.update_claims(root, request, claims)
     else:
         frozen = _frozen_route(root, request["run_key"])
+        direct_inventory = request.get("candidate_inventory_at_start")
+        direct_mode = request.get("work_mode_at_start")
         if request["scheduled_slot"] == "0830":
             inventory = _candidate_inventory(root) if frozen is None else frozen[0]
             work_mode = "maintenance"
+            route_source = "maintenance"
         elif frozen is not None:
             inventory, work_mode = frozen
+            route_source = "frozen_run_state"
+        elif (
+            isinstance(direct_inventory, int)
+            and not isinstance(direct_inventory, bool)
+            and direct_mode in {"research", "discovery"}
+        ):
+            inventory = int(direct_inventory)
+            work_mode = str(direct_mode)
+            route_source = "hot_dispatch_direct_start"
         else:
             inventory = _candidate_inventory(root)
             work_mode = "research" if inventory >= claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD else "discovery"
+            route_source = "canonical_inventory"
 
         attempts = _run_attempts(root, request["worker_id"], started_at)
         submission = _run_submission_state(root, attempts, started_at)
@@ -801,6 +856,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "processed_at": now.isoformat(),
         "candidate_inventory": inventory,
         "work_mode": work_mode,
+        "route_source": route_source,
         "runtime_condition_requested": requested_runtime,
         "runtime_condition": runtime,
         "runtime_condition_confirmed": request.get("runtime_condition_confirmed", False),
