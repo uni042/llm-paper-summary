@@ -376,6 +376,12 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertFalse(result["active_assignment"])
             self.assertEqual(result["active_job_ids"], [])
             self.assertEqual(result["gate"]["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+            repaired_cache = json.loads(
+                (root / ".survey/work-queue/run-state/cache/scheduled-chat-00.json").read_text(encoding="utf-8")
+            )
+            repaired_claims = repaired_cache["runs"]["run-1"]["claims"]
+            self.assertFalse(repaired_claims["active_assignment"])
+            self.assertEqual(repaired_claims["active_job_ids"], [])
 
     def test_request_rejects_cross_worker_slot(self):
         with tempfile.TemporaryDirectory() as td:
