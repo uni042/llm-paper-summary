@@ -17,11 +17,14 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn("request fast lane will recover", text)
         self.assertIn("cron: '7/10 * * * *'", text)
 
-    def test_run_state_lane_recomputes_after_push_races_and_has_periodic_recovery(self):
+    def test_run_state_lane_recomputes_and_auto_allocates_only_the_initial_claim(self):
         text = (WORKFLOWS / "survey-run-state.yml").read_text(encoding="utf-8")
         self.assertIn("for attempt in $(seq 1 12)", text)
         self.assertIn("git fetch origin main", text)
         self.assertIn("git reset --hard origin/main", text)
+        self.assertIn("auto_claim_from_run_state.py", text)
+        self.assertIn("changed-run-state-results.txt", text)
+        self.assertIn("group: survey-claim-main", text)
         self.assertIn("recomputing unsettled requests from latest main", text)
         self.assertIn("periodic recovery will retry unsettled requests", text)
         self.assertIn("cron: '4/10 * * * *'", text)
@@ -34,11 +37,12 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn("for attempt in $(seq 1 12)", preflight)
         self.assertIn("for attempt in $(seq 1 12)", builder)
 
-    def test_claim_lane_updates_incremental_cache_without_schedule_change(self):
+    def test_claim_lane_uses_shared_fast_path_without_schedule_change(self):
         text = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
-        self.assertIn("--claim-results-file /tmp/changed-claim-results.txt", text)
-        self.assertIn("git ls-files --others --exclude-standard -- .survey/work-queue/claim-results", text)
+        self.assertIn("claim_fast_path.py", text)
+        self.assertNotIn("py_compile", text)
         self.assertIn(".survey/work-queue/run-state", text)
+        self.assertIn("group: survey-claim-main", text)
         self.assertIn("cron: '3/10 * * * *'", text)
         self.assertIn("for attempt in $(seq 1 12)", text)
 

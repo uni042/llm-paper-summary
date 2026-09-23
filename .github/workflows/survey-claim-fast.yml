@@ -32,22 +32,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate claim fast-path syntax
-        run: |
-          python -m py_compile \
-            .survey/scripts/claim_state.py \
-            .survey/scripts/claim_worker.py \
-            .survey/scripts/claim_worker_with_banks.py \
-            .survey/scripts/repair_claim_bank_recovery.py \
-            .survey/scripts/enrich_claim_record_routes.py \
-            .survey/scripts/apply_library_checkpoint_barriers.py \
-            .survey/scripts/normalize_research_paper_paths.py \
-            .survey/scripts/select_record_bank.py \
-            .survey/scripts/record_bank_config.py \
-            .survey/scripts/derive_worker_run_state.py \
-            .survey/scripts/worker_run_state_cache.py
-
-      - name: Allocate claims and reserve record banks
+      - name: Allocate claims through the shared fast path
         shell: bash
         run: |
           set -euo pipefail
@@ -58,25 +43,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
-            python .survey/scripts/normalize_research_paper_paths.py --repo-root . --apply
-            python .survey/scripts/apply_library_checkpoint_barriers.py --repo-root .
-            python .survey/scripts/claim_worker_with_banks.py --repo-root .
-            python .survey/scripts/repair_claim_bank_recovery.py --repo-root .
-            python .survey/scripts/enrich_claim_record_routes.py --repo-root .
-
-            {
-              git diff --name-only -- .survey/work-queue/claim-results
-              git ls-files --others --exclude-standard -- .survey/work-queue/claim-results
-            } \
-              | grep '^.survey/work-queue/claim-results/.*\.json$' \
-              | sort -u \
-              > /tmp/changed-claim-results.txt || true
-            if [ -s /tmp/changed-claim-results.txt ]; then
-              python .survey/scripts/derive_worker_run_state.py \
-                --repo-root . \
-                --claim-results-file /tmp/changed-claim-results.txt \
-                || echo 'Incremental run-state claim cache update failed; fact clock will force canonical fallback.'
-            fi
+            python .survey/scripts/claim_fast_path.py --repo-root .
 
             git add \
               .survey/work-queue/claim-requests \

@@ -1,4 +1,4 @@
-# Worker router — workflow v10.8
+# Worker router — workflow v10.9
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -80,9 +80,11 @@ Web/PDF取得のplatform上限はrunを途中終了させる実害があるた�
 
 Research / Auditのclaimは次の順で行う。
 
+**初回claimの高速経路:** 通常run開始時のrun-state request resultが `work_mode=research`、`gate.required_action=CLAIM_NEXT_RESEARCH_AUDIT` を返し、同一runにまだclaim request/result・active assignment・submissionが存在せず、残り600秒より多い場合は、`.github/workflows/survey-run-state.yml` が**同じActions実行・同じcommit内で初回claimだけを自動生成・割当してよい。** このとき元のrun-state resultに `auto_initial_claim` が付与され、そこに `request_id` / `result_path` / statusが記録される。workerは `auto_initial_claim.status=allocated` ならそのclaim resultを正本として直ちに担当論文へ進み、同じrunの手動claim requestを重複発行しない。自動初回claimが対象外・失敗・未生成の場合だけ以下の通常claim手順へ戻る。この自動化は**初回1件だけ**に限定し、2件目以降はAudit starvation判定を含む通常のclaim前判断を維持する。
+
 1. 最新main HEADとclaim stateを再取得する。**同一workerにactiveな未提出claimがある場合は新requestを出さない。直前claimのexact attemptに対する不変descriptorがmainへ耐久保存済みなら、そのclaimがまだactive表示でも次requestを出してよい。claim fast laneは新request処理の冒頭でdescriptor-backed claimを正規解放してから新jobを割り当てる。**
 2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatのrequestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` に加え、今回runで固定した **`run_key`、`scheduled_slot`、`actual_invocation_start`** を持つ。これら3項目はclaim resultへ耐久伝播し、worker別増分run-state cacheをclaim結果だけで更新するために使う。旧requestで3項目が無いものは引き続き処理するが、その場合は該当workerのcacheを安全側に無効化し、次のrun-state導出をcanonical factsから再構築する。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。 **`requested_at` は必ずUTCで、末尾を `Z` または `+00:00` とする。JST等の `+09:00` をそのまま入れてはならない。** `actual_invocation_start` はoffset-aware timestampなら受理され正規化されるが、claim requestの `requested_at` だけは実装契約としてUTC限定である。例: `2026-09-23T04:52:00+00:00`。
-3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で `claim_worker_with_banks.py` を実行する。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
+3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で共通 `claim_fast_path.py` を実行する。通常allocationとbank予約は `claim_worker_with_banks.py` を使い、Library checkpoint barrierは割当前に維持する。repair用の重い回復走査は新規assignmentがrepair対象のときだけ実行し、canonical record routeはbank予約時にclaim/resultへ直接書く。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
 4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を確認する。未生成なら固定時間sleepや定周期pollingへ入らず、第7.0節の待機ミクロタスクを1件処理してから同じresultを再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`next_action` / `instructions` を正本として以後の処理を行う。
 5. **claim result待ちは受動待機にしない。** request commitから60秒未満は `MONITOR_CLAIM_FAST_LANE` として、同じrequestを起動した `Survey claim fast lane` のActions runを確認し、`queued` / `in_progress` ならjob/step状態を確認する。並行して同一workerの未解決submission、`retryable` / repair待ち、active claim整合だけを軽く監査し、第7.0節の待機ミクロタスクを1件処理してから最新 `main` と同じ `request_id` のresultを再確認する。この作業サイクル中に別claimを発行したり、割当未確定の次論文本文を先読みしてはならない。
 6. request ageが60秒以上でも別requestを発行しない。Actionsが `failed` / `cancelled` なら同じrequestの正規回復へ進み、`queued` / `in_progress` / success後の反映待ちなら同一identityの監視を継続する。claim fast laneはpush起動に加えて**10分周期で未result requestを定期回収**するため、一時的なActions失敗・cancel・push競合でrequestだけ残っても新requestを捏造しない。
@@ -343,6 +345,8 @@ hard stopは曖昧な「安全そうでない」「難しい」「時間がか�
 ### 7.2 run-state fast lane
 
 run-stateは **request駆動snapshotとsubmission駆動の自動snapshotを同じ正規result schemaで扱う。** run開始時・runtime_condition申告時・自動導出不能時は従来どおりrequest fast laneを使う。一方、Research / Auditのsubmission処理で同一run identityと固定routeを安全に特定できる場合は、submission処理直後にGitHub側で正規snapshotを生成し、workerによる追加run-state request writeを省略してよい。自動snapshotもcontinuation gate / finalization gateを必ず通り、resultが存在すること自体でgateを迂回してはならない。
+
+**run開始時の初回claim連結:** request駆動snapshotがResearch / Auditを選び、`CLAIM_NEXT_RESEARCH_AUDIT` かつ同一runにclaim transport・active assignment・submissionがまだ無い場合、run-state laneは同じserialized claim domain内で `auto_claim_from_run_state.py` → `claim_fast_path.py` を続けて実行し、初回claim request・bank予約・claim result・claim後の自動run-state snapshotを**同じmain commit**に耐久反映してよい。これによりworkerがrun-state resultを読んでから別のclaim Actionsを起動する往復を省く。run-state laneとstandalone claim laneはともに `concurrency: survey-claim-main` を使い、claim ownershipの競合回避を維持する。対象は初回claimだけであり、既存claim transportが1件でもあるrun、carry-over active claim、08:30 maintenance、Discovery、残り600秒以下では自動claimしない。2件目以降は通常のclaim経路へ戻す。
 
 通常のScheduled Chatは、継続判断用の多数のbooleanを手作業で組み立てない。`.survey/work-queue/run-state/requests/<request-id>.json` に次の最小requestを耐久保存し、`.github/workflows/survey-run-state.yml` に `.survey/scripts/derive_worker_run_state.py` を実行させる。 **各再判定snapshotでは新しい一意な `request_id` を使う。** 同じrun内では `run_key` / `worker_id` / `scheduled_slot` / `actual_invocation_start` を維持するが、resultが既に存在するrequest IDを再利用して最新状態を得ようとしてはならない。既存resultは不変snapshotである。requestが存在してresultだけ未生成の場合は新requestを作らず、同じrequest IDのresultを待って定期回収に任せる。
 

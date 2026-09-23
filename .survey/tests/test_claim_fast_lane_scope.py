@@ -4,20 +4,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).parents[2]
 WORKFLOW = ROOT / ".github" / "workflows" / "survey-claim-fast.yml"
+FAST_PATH = ROOT / ".survey" / "scripts" / "claim_fast_path.py"
 
 
 class ClaimFastLaneScopeTests(unittest.TestCase):
-    def test_fast_lane_keeps_claim_safety_steps(self):
-        text = WORKFLOW.read_text(encoding="utf-8")
-        for script in (
-            "normalize_research_paper_paths.py",
-            "apply_library_checkpoint_barriers.py",
-            "claim_worker_with_banks.py",
-            "repair_claim_bank_recovery.py",
-            "enrich_claim_record_routes.py",
-        ):
-            with self.subTest(script=script):
-                self.assertIn(script, text)
+    def test_fast_lane_uses_shared_claim_path_and_skips_redundant_hot_path_steps(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        helper = FAST_PATH.read_text(encoding="utf-8")
+        self.assertIn("claim_fast_path.py", workflow)
+        self.assertNotIn("py_compile", workflow)
+        self.assertNotIn("enrich_claim_record_routes.py", workflow)
+        self.assertNotIn("repair_claim_bank_recovery.py", workflow)
+        self.assertIn("apply_library_checkpoint_barriers", helper)
+        self.assertIn("claim_worker_with_banks", helper)
+        self.assertIn("_repair_needed", helper)
+        self.assertIn("repair_claim_bank_recovery", helper)
 
     def test_fast_lane_excludes_dashboard_and_status_work(self):
         text = WORKFLOW.read_text(encoding="utf-8")

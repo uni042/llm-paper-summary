@@ -26,7 +26,7 @@ import claim_state
 import claim_worker
 import immutable_submission
 import select_record_bank
-from record_bank_config import BANK_ROOTS, SLOT_NAMES
+from record_bank_config import BANK_ROOTS, SLOT_NAMES, canonical_slot_paths
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -59,6 +59,31 @@ def _active_claim_ids(root: Path, now: dt.datetime) -> set[str]:
         for claim in claim_state.current_claims(root, now).values()
         if claim.get("active") and claim.get("claim_id")
     }
+
+
+def _apply_route_fields(target: dict[str, Any], bank: str | None) -> bool:
+    """Attach canonical physical record paths without a repository-wide enrichment pass."""
+    changed = False
+    normalized = str(bank or "").lower()
+    if normalized in BANK_ROOTS:
+        desired = {
+            "record_bank": normalized,
+            "record_bank_root": BANK_ROOTS[normalized],
+            "record_slot_paths": canonical_slot_paths(normalized),
+        }
+        for key, value in desired.items():
+            if target.get(key) != value:
+                target[key] = value
+                changed = True
+        if "record_bank_fallback" in target:
+            target.pop("record_bank_fallback", None)
+            changed = True
+    else:
+        for key in ("record_bank_root", "record_slot_paths"):
+            if key in target:
+                target.pop(key, None)
+                changed = True
+    return changed
 
 
 def _reservation_payload(slot: str, claim: dict[str, Any]) -> dict[str, Any]:
@@ -394,6 +419,7 @@ def _recover_bank_payloads(
 
     claim["record_bank"] = bank
     claim.pop("record_bank_fallback", None)
+    _apply_route_fields(claim, bank)
     claim["record_bank_recovery"] = recovery_kind
     claim["record_bank_recovery_attempt_ids"] = sorted(previous_attempts)
     if source_submission:
@@ -428,6 +454,8 @@ def _persist_assignment_bank(root: Path, claim: dict[str, Any], bank: str | None
         elif bank is not None and "record_bank_fallback" in item:
             item.pop("record_bank_fallback", None)
             changed = True
+        if _apply_route_fields(item, bank):
+            changed = True
         for key in (
             "record_bank_recovery",
             "record_bank_recovery_attempt_ids",
@@ -444,6 +472,7 @@ def _persist_library_fallback(root: Path, claim: dict[str, Any]) -> None:
     claim_path = root / ".survey/work-queue/claims" / f"{claim['job_id']}.json"
     claim["record_bank"] = None
     claim["record_bank_fallback"] = "library"
+    _apply_route_fields(claim, None)
     _write(claim_path, claim)
     _persist_assignment_bank(root, claim, None)
 
@@ -470,6 +499,7 @@ def _migrate_active_unbanked_claims(
             continue
         claim["record_bank"] = None
         claim["record_bank_fallback"] = "library"
+        _apply_route_fields(claim, None)
         claim["record_bank_migration"] = "legacy-unbanked-to-library"
         _write(claim_path, claim)
         _persist_assignment_bank(root, claim, None)
@@ -519,6 +549,8 @@ def reserve_new_claim_banks(
         existing = str(claim.get("record_bank") or "").lower()
         if existing in BANK_ROOTS:
             reused += 1
+            if _apply_route_fields(claim, existing):
+                _write(claim_path, claim)
             _persist_assignment_bank(root, claim, existing)
             continue
 
@@ -584,6 +616,7 @@ def reserve_new_claim_banks(
 
         claim["record_bank"] = bank
         claim.pop("record_bank_fallback", None)
+        _apply_route_fields(claim, bank)
         _reserve_bank(root, bank, claim)
         _write(claim_path, claim)
         _persist_assignment_bank(root, claim, bank)

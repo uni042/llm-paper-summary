@@ -114,6 +114,15 @@ class ClaimBankReservationTests(unittest.TestCase):
             claim_b = json.loads((root / ".survey/work-queue/claims/job-r2.json").read_text())
             self.assertEqual(claim_a["record_bank"], bank_a)
             self.assertEqual(claim_b["record_bank"], bank_b)
+            for claim, result, bank_id in (
+                (claim_a, result_a, bank_a),
+                (claim_b, result_b, bank_b),
+            ):
+                assignment = result["assignments"][0]
+                self.assertEqual(claim["record_bank_root"], BANK_ROOTS[bank_id])
+                self.assertEqual(assignment["record_bank_root"], BANK_ROOTS[bank_id])
+                self.assertEqual(set(claim["record_slot_paths"]), set(SLOT_NAMES))
+                self.assertEqual(claim["record_slot_paths"], assignment["record_slot_paths"])
 
     def test_existing_unbanked_active_claim_is_migrated_to_library_without_global_fence(self):
         with tempfile.TemporaryDirectory() as td:

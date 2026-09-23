@@ -14,8 +14,10 @@ on:
 permissions:
   contents: write
 
+# Initial Research/Audit claims are allocated in this workflow. Share the same
+# serialization domain as the standalone claim lane so queue ownership remains atomic.
 concurrency:
-  group: survey-run-state-main
+  group: survey-claim-main
   cancel-in-progress: false
 
 jobs:
@@ -34,7 +36,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Derive and publish run-state results with race recovery
+      - name: Derive state and allocate an eligible initial claim in one lane
         shell: bash
         run: |
           set -euo pipefail
@@ -46,17 +48,36 @@ jobs:
             git reset --hard origin/main
 
             python .survey/scripts/derive_worker_run_state.py --repo-root .
+
+            {
+              git diff --name-only -- .survey/work-queue/run-state/results
+              git ls-files --others --exclude-standard -- .survey/work-queue/run-state/results
+            } \
+              | grep '^.survey/work-queue/run-state/results/.*\.json$' \
+              | sort -u \
+              > /tmp/changed-run-state-results.txt || true
+
+            if [ -s /tmp/changed-run-state-results.txt ]; then
+              python .survey/scripts/auto_claim_from_run_state.py \
+                --repo-root . \
+                --run-state-results-file /tmp/changed-run-state-results.txt
+            fi
+
             python .survey/scripts/compact_worker_transport.py \
               --repo-root . \
               --apply \
               --min-age-seconds 7200 \
               --report /tmp/transport-compact.json \
               || echo 'Transport compaction failed; run-state publication continues and maintenance will retry.'
+
             git add -A \
               .survey/work-queue/run-state \
               .survey/work-queue/archive \
               .survey/work-queue/claim-requests \
               .survey/work-queue/claim-results \
+              .survey/work-queue/claims \
+              .survey/work-queue/jobs \
+              .survey/work-queue/records \
               .survey/work-queue/completed-submission-requests \
               .survey/work-queue/research-preflight
 
@@ -65,7 +86,7 @@ jobs:
               exit 0
             fi
 
-            git commit -m 'survey-run-state: derive worker continuation state'
+            git commit -m 'survey-run-state: derive state and allocate initial claim'
             if git push origin HEAD:main; then
               exit 0
             fi
