@@ -310,6 +310,185 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertTrue(result["submission_result_pending"])
             self.assertIn("attempt-orphan", result["pending_attempt_ids"])
 
+    def test_incremental_cache_rebuilds_after_deletion_without_changing_success_count(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            start = dt.datetime.fromisoformat(value["actual_invocation_start"])
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/claim-results/claim-1.json",
+                {
+                    "worker_id": "scheduled-chat-00",
+                    "assignments": [
+                        {
+                            "attempt_id": "attempt-a",
+                            "claimed_at": (start + dt.timedelta(seconds=1)).isoformat(),
+                        }
+                    ],
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/submissions/research/attempt-a.json",
+                {"attempt_id": "attempt-a", "job_id": "job-a"},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/results/research/attempt-a.json",
+                {
+                    "attempt_id": "attempt-a",
+                    "job_id": "job-a",
+                    "ok": True,
+                    "job_status": "completed",
+                    "processed_at": (start + dt.timedelta(seconds=10)).isoformat(),
+                },
+            )
+
+            first = mod.derive(root, value)
+            self.assertEqual(first["state_source"], "canonical_rebuild")
+            self.assertEqual(first["research_audit_completed_this_invocation"], 1)
+
+            second_request = dict(value)
+            second_request["request_id"] = "snap-2"
+            second = mod.derive(root, second_request)
+            self.assertEqual(second["state_source"], "incremental_cache")
+            self.assertEqual(second["research_audit_completed_this_invocation"], 1)
+
+            cache_path = mod.worker_run_index.cache_path(root, value)
+            cache_path.unlink()
+            third_request = dict(value)
+            third_request["request_id"] = "snap-3"
+            third = mod.derive(root, third_request)
+            self.assertEqual(third["state_source"], "canonical_rebuild")
+            self.assertEqual(third["research_audit_completed_this_invocation"], 1)
+
+    def test_retryable_submission_remains_pending_in_cache(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            start = dt.datetime.fromisoformat(value["actual_invocation_start"])
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/claim-results/claim-1.json",
+                {
+                    "worker_id": "scheduled-chat-00",
+                    "assignments": [
+                        {"attempt_id": "attempt-r", "claimed_at": start.isoformat()}
+                    ],
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/submissions/research/attempt-r.json",
+                {"attempt_id": "attempt-r", "job_id": "job-r"},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/results/research/attempt-r.json",
+                {
+                    "attempt_id": "attempt-r",
+                    "job_id": "job-r",
+                    "ok": False,
+                    "retryable": True,
+                    "processed_at": (start + dt.timedelta(seconds=5)).isoformat(),
+                },
+            )
+            first = mod.derive(root, value)
+            self.assertTrue(first["submission_result_pending"])
+            self.assertIn("attempt-r", first["retryable_attempt_ids"])
+            second_request = dict(value)
+            second_request["request_id"] = "snap-retry-2"
+            second = mod.derive(root, second_request)
+            self.assertEqual(second["state_source"], "incremental_cache")
+            self.assertTrue(second["submission_result_pending"])
+            self.assertIn("attempt-r", second["retryable_attempt_ids"])
+
+    def test_automatic_snapshot_uses_same_gate_and_exact_run_identity(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            start = dt.datetime.fromisoformat(value["actual_invocation_start"])
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/claim-results/claim-1.json",
+                {
+                    "worker_id": value["worker_id"],
+                    "assignments": [
+                        {"attempt_id": "attempt-auto", "claimed_at": start.isoformat()}
+                    ],
+                },
+            )
+            # First canonical snapshot creates the advisory cache.
+            mod.derive(root, value)
+            identity = {
+                "worker_id": value["worker_id"],
+                "run_key": value["run_key"],
+                "scheduled_slot": value["scheduled_slot"],
+                "actual_invocation_start": value["actual_invocation_start"],
+            }
+            descriptor = {
+                "attempt_id": "attempt-auto",
+                "job_id": "job-auto",
+                "kind": "research",
+                **identity,
+            }
+            descriptor_path = root / ".survey/work-queue/submissions/research/attempt-auto.json"
+            write_json(root, descriptor_path.relative_to(root).as_posix(), descriptor)
+            mod.worker_run_index.apply_descriptor(root, descriptor_path)
+            result_path = root / ".survey/work-queue/results/research/attempt-auto.json"
+            write_json(
+                root,
+                result_path.relative_to(root).as_posix(),
+                {
+                    "attempt_id": "attempt-auto",
+                    "job_id": "job-auto",
+                    "job_type": "research",
+                    "ok": True,
+                    "job_status": "completed",
+                    "processed_at": (start + dt.timedelta(seconds=20)).isoformat(),
+                },
+            )
+            mod.worker_run_index.apply_result(root, result_path)
+            output = mod.emit_automatic_snapshot(
+                root,
+                identity,
+                source_events=[result_path.relative_to(root).as_posix()],
+            )
+            self.assertIsNotNone(output)
+            auto = json.loads((root / output).read_text(encoding="utf-8"))
+            self.assertEqual(auto["snapshot_origin"], "submission_auto")
+            self.assertEqual(auto["worker_id"], value["worker_id"])
+            self.assertEqual(auto["run_key"], value["run_key"])
+            self.assertEqual(auto["research_audit_completed_this_invocation"], 1)
+            self.assertIn(auto["gate"]["decision"], {"CONTINUE", "STOP_RUN"})
+            latest = json.loads(
+                (
+                    root
+                    / ".survey/work-queue/run-state/latest/scheduled-chat-00.json"
+                ).read_text(encoding="utf-8")
+            )
+            self.assertEqual(latest["run_key"], value["run_key"])
+            self.assertEqual(latest["result_path"], output)
+
     def test_request_rejects_cross_worker_slot(self):
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "snap-1.json"
