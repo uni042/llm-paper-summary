@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a05675288077a249ad02f491",
-  "job_id": "job-research-f752e824c189724b",
-  "data": {
-    "hardware": "DeepSeek-VL2-Tiny、DeepSeek-VL2-Small、Qwen3-VL-30B-A3B-Instructの3つのMoE視覚言語モデルを対象に、エキスパート保持率ρ=0.50、0.625、0.75を評価する。圧縮後の実用効果としてシリアライズ済みモデル容量、推論時GPUメモリ、最初のトークンまでの時間（Time To First Token; TTFT）、エンドツーエンド遅延も測る。",
-    "software": "既学習モデルからフェーズ別ルーティング統計を収集し、RoleMergeでエキスパートと対応ルータ出力を統合する。比較対象にはルーティング・パラメータ・出力類似性などを用いる既存の学習不要MoE統合手法を含む。圧縮後も視覚エンコーダ、注意機構、共有パラメータ、デコードインターフェースは固定する。",
-    "methodology": "6タスクのマクロ平均を中心に、同じエキスパート保持率で完全モデルからどれだけ性能を維持できるかを比較する。DeepSeek-VL2-Tinyの表ではInfo、MMU、OCR、ARC、PIQA、Winoの6指標を用いる。Qwen3-VLを含む3モデルで保持率を3段階に変え、RoleMergeと比較手法を同条件で評価する。構成要素アブレーションではフェーズ条件付き役割、回答衝突調整、キャリブレーション設定の寄与を検証し、回答キャリア回復度（Answer-Carrier Recoverability; ACR）で回答デコードに使われるエキスパート区別の保持も診断する。",
-    "scope": "対象は推論フェーズを画像文脈・質問・回答に分解できるMoE-VLMで、学習不要のエキスパート統合による保存量削減が主眼である。群間役割距離は単連結の貪欲統合であり、群全体の情報損失を毎回最適化するものでも、全体最適な群分けを保証するものでもない。RRPはキャリブレーション集合上のルーティング挙動から得るため、未知分布で普遍的な意味役割を保証しない。"
-  },
-  "reservation": {"claim_id": "claim-a05675288077a249ad02f491", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-3b0b8499edf3a5b73b2ca7f6",
+  "job_id": "job-research-88a9229b2587f714",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3b0b8499edf3a5b73b2ca7f6",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }

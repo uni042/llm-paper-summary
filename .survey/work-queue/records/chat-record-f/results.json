@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a05675288077a249ad02f491",
-  "job_id": "job-research-f752e824c189724b",
-  "data": {
-    "overview": "RoleMergeは3モデル・6タスク・3保持率で、同じエキスパート数を残す比較統合手法より完全モデルの性能を一貫して多く保持する。保持率0.50ではDeepSeek-VL2-Tinyで最良比較法に対してマクロ平均2.7%の相対改善、Qwen3-VL-30B-A3B-Instructで9.6%の相対改善を示す。Qwen3-VLでは保持率0.50で完全モデルのマクロ平均85.5%、0.75で96.2%を保持する。圧縮は品質だけでなく保存・実行資源にも効き、30B Qwen構成ではシリアライズ容量を約62GBから40GBへ削減し、GPUメモリ増分を32%以上削減、TTFTを最大32.1%改善し、エンドツーエンド遅延も約15%短縮する。",
-    "key_results": [
-      {"metric": "6タスク・マクロ平均の相対改善", "value": "最大9.6%", "baseline": "同一保持率で最良の比較エキスパート統合法", "condition": "Qwen3-VL-30B-A3B-Instruct、ρ=0.50", "interpretation": "全体ルーティング集約よりフェーズ条件付き役割を使う統合相性判定が、半数までエキスパートを減らす強い圧縮で特に有効。"},
-      {"metric": "完全モデル性能保持率", "value": "85.5%（ρ=0.50）、96.2%（ρ=0.75）", "baseline": "未圧縮Qwen3-VL-30B-A3B-Instruct=100%", "condition": "6タスク・マクロ平均", "interpretation": "保持エキスパートを増やすと完全モデルへ近づき、RoleMergeは強圧縮でも大部分の性能を維持する。"},
-      {"metric": "DeepSeek-VL2-Tinyでの比較法比改善", "value": "2.7%相対改善", "baseline": "ρ=0.50で最良の比較統合法", "condition": "6タスク・マクロ平均", "interpretation": "効果はQwen3-VLだけに限定されず、別のMoE-VLM系列でも確認される。"},
-      {"metric": "シリアライズ済みモデル容量", "value": "約62GB→40GB", "baseline": "未統合Qwen3-VL-30B級構成", "condition": "エキスパート統合後", "interpretation": "疎活性化では減らなかった全エキスパート保存量を、物理的統合によって削減できる。"},
-      {"metric": "推論時GPUメモリ増分", "value": "32%以上削減", "baseline": "未圧縮モデル", "condition": "評価した圧縮構成", "interpretation": "ストレージ削減が実行時メモリ削減にもつながる。"},
-      {"metric": "最初のトークンまでの時間", "value": "最大32.1%改善", "baseline": "未圧縮モデル", "condition": "システム評価", "interpretation": "モデル・エキスパート状態の縮小がプリフィル開始までを含む初期応答遅延にも寄与する。"}
-    ],
-    "negative_results": "RoleMergeは圧縮損失を消すものではなく、Qwen3-VLのρ=0.50では完全モデルのマクロ平均に対して85.5%まで低下する。群間距離は単連結で局所的に最も近いエキスパート対を利用するため、多エキスパート群の真の群レベル情報損失とは一致せず、貪欲手順は大域最適を保証しない。RRPと回答衝突統計はキャリブレーションデータ依存であり、フェーズ構成や利用分布が大きく変わる配備先では役割推定がずれる可能性がある。",
-    "interpretation": "結果は、MoE-VLM圧縮では『どのエキスパートが全体で似ているか』より『画像・質問・回答のどの局面で似た役割を担うか』を保持する方が重要であることを支持する。特に回答デコードは利用エキスパートが集中するため、全体統計では小さく見える回答時の差を明示的に守ることが強圧縮時の性能維持につながる。",
-    "quality_impact": "再学習を行わずエキスパートとルータを物理統合するため、品質低下は主に異なる専門役割を同一エキスパートへ潰すことから生じる。RoleMergeはフェーズ別RRPと回答衝突調整でその損失を減らすが、保持率を下げれば完全モデルとの差は残る。"
-  },
-  "reservation": {"claim_id": "claim-a05675288077a249ad02f491", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-3b0b8499edf3a5b73b2ca7f6",
+  "job_id": "job-research-88a9229b2587f714",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3b0b8499edf3a5b73b2ca7f6",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
