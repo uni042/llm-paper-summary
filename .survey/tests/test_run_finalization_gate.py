@@ -56,7 +56,7 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertFalse(result["finalization_permit"]["issued"])
         self.assertIn("active_assignment_requires_work", result["blocking_reasons"])
 
-    def test_each_async_pending_state_requires_10_second_wait_loop(self):
+    def test_each_async_pending_state_requires_productive_wait_loop(self):
         cases = (
             ("claim_result_pending", "claim_result"),
             ("submission_result_pending", "submission_result"),
@@ -70,8 +70,11 @@ class RunFinalizationGateTests(unittest.TestCase):
                     **{field: True},
                 ))
                 self.assertEqual(result["decision"], "MUST_CONTINUE")
-                self.assertEqual(result["wait_seconds"], 10)
-                self.assertEqual(result["next_action"], "WAIT_10_SECONDS_AND_RECHECK")
+                self.assertEqual(result["wait_seconds"], 0)
+                self.assertEqual(result["next_action"], "RUN_WAIT_MICROTASK_AND_RECHECK")
+                self.assertTrue(result["productive_wait_required"])
+                self.assertFalse(result["productive_wait_polling"])
+                self.assertTrue(result["wait_microtasks"])
                 self.assertIn(target, result["wait_targets"])
                 self.assertFalse(result["finalization_permit"]["issued"])
                 self.assertIn("terminal", result["rule"].lower())
@@ -99,7 +102,9 @@ class RunFinalizationGateTests(unittest.TestCase):
             discovery_precheck_result_pending=True,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
-        self.assertEqual(result["next_action"], "WAIT_10_SECONDS_AND_RECHECK")
+        self.assertEqual(result["next_action"], "RUN_WAIT_MICROTASK_AND_RECHECK")
+        self.assertEqual(result["wait_seconds"], 0)
+        self.assertTrue(result["productive_wait_required"])
         self.assertIn("discovery_precheck_result", result["wait_targets"])
 
     def test_stop_run_without_finalization_allowed_still_cannot_finalize(self):
@@ -147,10 +152,12 @@ class RunFinalizationGateTests(unittest.TestCase):
             submission_result_pending=True,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
-        self.assertEqual(result["next_action"], "WAIT_10_SECONDS_AND_RECHECK")
+        self.assertEqual(result["next_action"], "RUN_WAIT_MICROTASK_AND_RECHECK")
+        self.assertEqual(result["wait_seconds"], 0)
         self.assertFalse(result["finalization_permit"]["issued"])
-        self.assertIn("終了しません", result["progress_notice"])
-        self.assertIn("待機", result["progress_notice"])
+        self.assertTrue(result["productive_wait_required"])
+        self.assertIn("runを終了せず", result["progress_notice"])
+        self.assertIn("ミクロタスク", result["progress_notice"])
         self.assertIn("再確認", result["progress_notice"])
         self.assertEqual(result["next_action_message"], result["progress_notice"])
 
