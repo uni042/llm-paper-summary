@@ -48,8 +48,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
 
         self.assertIn("唯一の人間向け正本", readme)
         self.assertIn("手順書ではなく入力データ", readme)
-        self.assertIn("candidate_inventory >= 50", router)
-        self.assertIn("candidate_inventory < 50", router)
+        self.assertIn("candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD", router)
+        self.assertIn("candidate_inventory < RESEARCH_DISCOVERY_THRESHOLD", router)
         self.assertNotIn("overflow research mode", router)
         self.assertIn("schema_version: 3", router)
         self.assertIn("target_unseen: 20", router)
