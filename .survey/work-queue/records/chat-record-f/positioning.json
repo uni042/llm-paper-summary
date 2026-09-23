@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c702d1e87d96e29f00644312","job_id":"job-research-c9fd7d4e4bda09de","data":{"limitations":[{"name":"英語中心の方向","description":"評価は英語→他言語または他言語→英語に限定され、非英語言語間の直接翻訳で同じ共有部分ネットワークが成立するか不明。"},{"name":"校正データの限定","description":"専門家重要度はFLoRes devで決める。領域外データには一般化したが、より多様な校正集合ならさらに頑健になる可能性がある。"},{"name":"自動評価中心","description":"xCOMETを大規模比較の主指標とし、サンプル目視は行うが大規模人手評価はない。自動指標が意味保存を完全には保証しない。"},{"name":"非翻訳能力は未評価","description":"抽出した翻訳部分モデルが一般知識、推論、道具利用など元モデルの他能力をどれだけ失うかは測らない。"},{"name":"言語間で回復差","description":"75%削減後の回復はエジプト・アラビア語とベンガル語で弱く、全言語一様なnear-baselineを保証しない。"}],"differences":[{"name":"マスク型expert pruningとの差","description":"専門家をルータ候補から外すだけでなく重みとルータ次元を物理削除し、チェックポイントとGPUメモリの実削減を測る。"},{"name":"全層均等枝刈りとの差","description":"言語と英語のルーティング分布差を層ごとに測り、言語処理が強い先頭・末尾へ容量を多く残して中間層を強く削る。"},{"name":"REAPとの差","description":"出力ベクトルの大きな専門家より、翻訳中に頻繁かつ高ルータ重みで使われる仕事馬専門家を重視する。GPT-OSSではこの単純指標が強い。"},{"name":"専用翻訳モデルとの差","description":"翻訳専用に最初から事前学習するのではなく、巨大汎用MoEの既存能力から部分ネットワークを抽出する。短い回復学習だけで大規模事前学習の翻訳能力を再利用する。"}],"implementation_status":"vLLMでのルータ統計収集、層別容量算出、専門家物理削除、全パラメータ回復学習、実VRAM測定まで実施済み。本文から公開コードURLは確認できない。","research_positioning":"Adaptive Expert Computation / Compression系統では、特定タスクの専門家集合を静的に抽出して総重みメモリを削る代表例である。動的キャッシュやCPU/SSDオフロードが汎用モデル全体を保持したまま転送を最適化するのに対し、本手法は翻訳サービスでは不要な専門家を事前に捨てる。50%削除を再学習なし、75%削除を短い蒸留付きで成立させ、実VRAMまで測るため、タスク固定環境ではオフロード前段のモデル縮約として直接利用価値がある。","evidence_locations":["PDF pp.2-4: routing-mass, calibration, dynamic layer capacity, pruning and recovery","PDF pp.4-7: ablations, multilingual/OOD generalization, recovery results and memory footprint","PDF pp.7-9: shared translation subnetwork interpretation, controls, limitations","PDF pp.18-25: Qwen3 replication, cross-language and direction transfer","PDF pp.27-29: recovery tables and retained-expert overlap"]},"reservation":{"claim_id":"claim-c702d1e87d96e29f00644312","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-a83757e9b9d779faf47881b5",
+  "job_id": "job-research-eed4801f6d21f8d7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a83757e9b9d779faf47881b5",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
