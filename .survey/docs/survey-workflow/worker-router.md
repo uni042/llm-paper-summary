@@ -38,14 +38,16 @@
 
 毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じ論文処理規約・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新 `next-jobs.json` から **Research/Audit の ready 全件数**を `candidate_inventory` として取得する。`claimable` ではなく、原則 `claiming.ready_research_audit`、それが無ければ `counts.research.ready + counts.audit.ready` を使う。このrun開始時の値を固定し、次の1条件だけで今回の論文作業モードを決める。
 
-- **`candidate_inventory >= 50` → 読解（Research / Audit）**
-- **`candidate_inventory < 50` → 探索（Discovery）**
+- **`candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD` → 読解（Research / Audit）**
+- **`candidate_inventory < RESEARCH_DISCOVERY_THRESHOLD` → 探索（Discovery）**
+
+閾値は `.survey/scripts/claim_window_policy.py` の正規policyから導出する。現在は、**各workerの論理在庫12件 × 想定同時worker 6 × 4 = 288件**である。worker数・在庫幅を変更するときは閾値だけを別に手修正せず、同policyから連動させる。
 
 **08:30 JSTの`:30`専用runだけ**は、この分岐より優先して第9節の日次更新・maintenance経路へ入る。通常runに「maintenance対象」という別条件は設けない。
 
 モード決定後は、どちらのScheduled Chatから起動したかを一切条件分岐に使わない。探索なら第4節、読解なら第3節の共通手順をそのまま使う。`:00` 専用・`:30` 専用の探索手順、読解手順、overflow modeは作らない。
 
-候補数は最新の耐久状態から毎run開始時に取得し、旧runや旧STATUSの推定値を再利用しない。候補数が境界ちょうど50件なら読解を選ぶ。**一度選んだモードはそのrunの終了まで固定する。** run中に候補数が50を跨いでも再ルーティングしない。次回runの開始時にあらためて最新候補数で判定する。
+候補数は最新の耐久状態から毎run開始時に取得し、旧runや旧STATUSの推定値を再利用しない。候補数が現在の境界ちょうど288件なら読解を選ぶ。**一度選んだモードはそのrunの終了まで固定する。** run中に候補数が閾値を跨いでも再ルーティングしない。次回runの開始時にあらためて最新候補数で判定する。
 
 ノルマは維持する。
 
@@ -85,33 +87,33 @@ Research / Auditのclaimは次の順で行う。
 
 ### 3.x 可変claim window（foreground 1 + standby N）
 
-#### record bank数から導出する共有preload FIFO
+#### record bankから独立した共有paper preload FIFO
 
-Research / Auditの事前装填はworkerごとの固定本数ではなく、全Scheduled Chat / worker-Nで共有するFIFO poolを使う。共有poolの目標在庫はrecord bank数から一般化して導出し、**現在は32 bankの75% = 24件を通常preload、25% = 8 bankをrepair・競合・一時的な例外claimの余白**とする。bank registryを増減した場合は同じ比率でpool目標も追従し、24という固定値を別箇所へ埋め込まない。正規claim fast laneは10分周期の回収時を含め、共有pool待機claimと各workerへadopt済みactive claimの合計をこの目標へ補充する。
+Research / Auditの事前装填はworkerごとの固定本数ではなく、全Scheduled Chat / worker-Nで共有するFIFO poolを使う。**論文の玉（logical paper stock）とrecord bankは別資源**とし、共有poolの待機claimはbankを予約しない。共有pool目標は `claim_window_policy.py` から導出し、現在は **12件/worker × 6 worker × 2セット = 144件**（workerへadopt済みを含む）である。6 workerが各12件を保持しても72件の共有待機余力を残せる。record bank数を増減してもpaper preload数を直接連動させない。
 
 - 共有poolのclaimは特定workerに固定しない。Scheduled Chat requestが来た時点で、そのrequestのjob type / 明示job_id条件を満たす最古のpool claimから不足window分をadoptする。
-- adoptはclaim fast laneの正規割当処理内で行い、既存のsurvey-claim-main concurrencyとpush-race再計算を使う。同時・不規則に複数workerがrequestを出しても、同一claim / job / record bankを2 workerへ渡してはならない。
+- adoptはclaim fast laneの正規割当処理内で行い、既存のsurvey-claim-main concurrencyとpush-race再計算を使う。同時・不規則に複数workerがrequestを出しても、同一claim / jobを2 workerへ渡してはならない。record bankはadoptとは別にhot sliceへだけ割り当てる。
 - pool内の順番はpool_orderで固定する。一度装填済みの論文を後から到着した高priority論文で追い越させない。新しい補充論文は常にpool末尾へ追加する。
 - workerへadoptした後は、そのworker内のpipeline_orderの末尾へ接続する。したがって既存standbyを飛び越さず、foreground終端時は従来どおり最古standbyが昇格する。
-- pool目標は待機poolだけの本数ではない。現在の24件を例に、3 workerが既定window 8件を保持中なら24件すべてadopt済みとなり共有待機は0件でよい。workerごとのwindowは共有poolの専有枠ではなく、pool不足時は取得可能な範囲だけadoptし、正規direct allocation / fallbackへ進む。
+- pool目標は待機poolだけの本数ではない。現在144件のうち6 workerが各12件をadopt済みなら72件がworker在庫、残り72件が共有待機となる。workerごとのwindowは共有poolの専有枠ではなく、pool不足時は取得可能な範囲だけadoptし、正規direct allocationへ進む。
 - worker数や起動順に固定laneを割り当ててはならない。特定workerが長期間起動しなくても、そのworker専用バンクに論文が滞留しない構造を維持する。
 - pool claimのjobがreadyでなくなった、terminalになった、または耐久submissionで処理済みになった場合はpoolから解放する。pool leaseは保守runで必要時だけ更新し、lease更新を理由に順番を変更しない。
 - Audit-only等でrequestのjob type条件に合わない先頭claimはそのrequestでは飛ばしてよいが、claim自体のpool_orderは変更しない。通常のResearch/Audit混合workerからは再びFIFO対象となる。
 - 共有poolが一時的に空の場合は従来の直接allocationへ安全にフォールバックしてよい。pool不足やbank不足だけをrun停止理由にしない。
 
-Scheduled Chat / worker-NのResearch / Auditは、**同時に精読する論文は常に1件**のまま、担当確保だけを可変長windowで先行させる。既定は `claim_window=8`、つまり **foreground 1件 + standby最大7件** とするが、8という値は正規claim-window policyの設定値であり、worker手順へ固定ロジックとして複製しない。`max_jobs=1` は精読並列度を表し、claim windowの大きさを表さない。
+Scheduled Chat / worker-NのResearch / Auditは、**同時に精読する論文は常に1件**のまま、担当確保だけを可変長windowで先行させる。既定は `claim_window=12`、つまり **foreground 1件 + standby最大11件** とする。12は `claim_window_policy.py` の設定値であり、worker手順へ固定ロジックとして複製しない。`max_jobs=1` は精読並列度を表し、claim windowの大きさを表さない。
 
-- claim resultの `pipeline_role=foreground` / `pipeline_position=1` の1件だけを本文読解・5スロット作成対象にする。`standby` は担当権とrecord bankだけを先に確保し、foregroundになるまで本文を先読みしない。
+- claim resultの `pipeline_role=foreground` / `pipeline_position=1` の1件だけを本文読解・5スロット作成対象にする。`standby` は担当権だけを先に確保し、foregroundになるまで本文を先読みしない。**先頭4件だけをhot inventoryとしてrecord bank予約済みに保ち、5件目以降のcold standbyはbankを消費しない。**
 - foregroundが `completed` / `blocked` / `deferred` / `rejected`、またはimmutable descriptor生成により現在claimから外れたら、**既確保standbyの先頭を即座に次foregroundとして開始する。ここで新しいclaim resultを待たない。**
-- standby補充は毎回1件減るたびには行わず、**active claim数が正規policyの低水位（既定はclaim windowの1/2、window 8なら4件）以下**になった時点で行う。残り600秒より多くclaim可能jobがあるなら、補充用claim requestを1件だけ発行し、1回の割当で可能な限りwindow目標まで戻す。windowを6や10等へ変更した場合も低水位は同じpolicyから導出し、個別に「3件」「4件」等を埋め込まない。**補充result待ちはforeground読解の同期障壁にしない。** pending中もforegroundの全文読解・記録作成を続ける。
+- standby補充はhot 4件を使い切ってから始めない。正規policyは**hot sliceの半分を消費した時点**で補充を開始し、現在のwindow 12ではactive 10件以下が低水位となる。これにより通常はbank-readyな2件を残したまま非同期claim/bank昇格を走らせる。残り600秒より多くclaim可能jobがあるなら補充用claim requestを1件だけ発行し、可能な限りwindow 12へ戻す。windowを変更した場合も低水位は同policyから導出する。**補充result待ちはforeground読解の同期障壁にせず、既にhotなforeground/standbyの処理を続ける。**
 - 既に補充claim requestがpendingなら重複requestを出さない。返ったresultでwindowを更新し、foregroundは変えない。
 - 残り600秒以下では新しいstandby補充claimを発行しない。ただし600秒窓へ入る前に発行済みのclaimは既発行claimとして扱い、foreground終端時にstandbyへ昇格して処理を継続してよい。残り180秒以下の最終handoff規則は従来どおり優先する。
 - claim allocatorは同一Scheduled Chat workerのactive claimを `pipeline_order` で並べ、最小をforeground、それ以降をstandbyとする。旧claimに `pipeline_order` が無い場合は正規allocatorが移行時に順序を付与する。
-- 各claimには従来どおり独立したattemptとrecord bankを割り当てる。bank不足時は既存Library fallbackを使い、bank不足だけをrun停止理由にしない。
-- `claim_window` は1〜10の範囲で変更可能で、既定値は正規 `claim_window_policy.py` から導出する（現在は8）。worker側へ固定値を複製せず、値を変えるときも精読並列度 `max_jobs=1` は変えない。
+- 各claimには従来どおり独立したattemptを割り当てるが、record bankは**hot sliceだけ**へ遅延割当する。cold standbyがhot sliceへ昇格する際はclaim fast laneのbank reconciliationでbankを付与する。bank不足時は既存Library fallbackを使い、bank不足だけをrun停止理由にしない。
+- `claim_window` は1〜24の範囲で変更可能で、既定値は正規 `claim_window_policy.py` から導出する（現在は12）。通常hot bank幅は4件で、6 worker同時稼働なら通常bank使用は最大24件となり、32 bank中8件をrepair・例外用に残す。精読並列度 `max_jobs=1` は変えない。
 
 
-**初回claimの高速経路:** 通常run開始時のrun-state request resultが `work_mode=research`、`gate.required_action=CLAIM_NEXT_RESEARCH_AUDIT` を返し、同一runにまだclaim request/result・active assignment・submissionが存在せず、残り600秒より多い場合は、`.github/workflows/survey-run-state.yml` が**同じActions実行・同じcommit内で初回claimだけを自動生成・割当してよい。** このとき元のrun-state resultに `auto_initial_claim` が付与され、そこに `request_id` / `result_path` / statusが記録される。workerは `auto_initial_claim.status=allocated` ならそのclaim resultを正本として直ちに担当論文へ進み、同じrunの手動claim requestを重複発行しない。自動初回claimが対象外・失敗・未生成の場合だけ以下の通常claim手順へ戻る。この自動化は**各runの初回claim request 1回だけ**に限定するが、そのrequestが確保するassignment数は固定しない。run-state resultの `claim_window` を正本として foreground 1件 + standby N件を可変数で確保する。共有preload FIFOに必要数の整合した予約済みclaimがある通常ケースでは、それらのadopt・record bank予約所有者の更新・claim result生成だけを行う軽量経路を使い、pool不足、repair、bank不整合、複数初回requestの同時回収などでは従来の `claim_fast_path.py` へ安全にフォールバックする。2回目以降のclaim requestはAudit starvation判定を含む通常のclaim前判断を維持する。
+**初回claimの高速経路:** 通常run開始時のrun-state request resultが `work_mode=research`、`gate.required_action=CLAIM_NEXT_RESEARCH_AUDIT` を返し、同一runにまだclaim request/result・active assignment・submissionが存在せず、残り600秒より多い場合は、`.github/workflows/survey-run-state.yml` が**同じActions実行・同じcommit内で初回claimだけを自動生成・割当してよい。** このとき元のrun-state resultに `auto_initial_claim` が付与され、そこに `request_id` / `result_path` / statusが記録される。workerは `auto_initial_claim.status=allocated` ならそのclaim resultを正本として直ちに担当論文へ進み、同じrunの手動claim requestを重複発行しない。自動初回claimが対象外・失敗・未生成の場合だけ以下の通常claim手順へ戻る。この自動化は**各runの初回claim request 1回だけ**に限定するが、そのrequestが確保するassignment数は固定しない。run-state resultの `claim_window` を正本として foreground 1件 + standby N件を可変数で確保する。共有preload FIFOに必要数の整合したlogical claimがある通常ケースでは、それらを一括adoptし、**先頭4件だけをbank-ready化して**claim resultを生成する軽量経路を使う。12件すべてへbank予約を作らないため、深い在庫化後も初回allocationの速度を維持する。pool不足、repair、bank不整合、複数初回requestの同時回収などでは従来の `claim_fast_path.py` へ安全にフォールバックする。2回目以降のclaim requestはAudit starvation判定を含む通常のclaim前判断を維持する。
 
 1. 最新main HEADとclaim stateを再取得する。**同一workerにactiveな未提出claimがある場合は新requestを出さない。直前claimのexact attemptに対する不変descriptorがmainへ耐久保存済みなら、そのclaimがまだactive表示でも次requestを出してよい。claim fast laneは新request処理の冒頭でdescriptor-backed claimを正規解放してから新jobを割り当てる。**
 2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatのrequestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` に加え、今回runで固定した **`run_key`、`scheduled_slot`、`actual_invocation_start`** を持つ。これら3項目はclaim resultへ耐久伝播し、worker別増分run-state cacheをclaim結果だけで更新するために使う。旧requestで3項目が無いものは引き続き処理するが、その場合は該当workerのcacheを安全側に無効化し、次のrun-state導出をcanonical factsから再構築する。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。 **`requested_at` は必ずUTCで、末尾を `Z` または `+00:00` とする。JST等の `+09:00` をそのまま入れてはならない。** `actual_invocation_start` はoffset-aware timestampなら受理され正規化されるが、claim requestの `requested_at` だけは実装契約としてUTC限定である。例: `2026-09-23T04:52:00+00:00`。
@@ -298,7 +300,7 @@ Discovery後半は次の順序を正規経路とする。途中を手作業で�
 3. `queue_worker.py` にsubmission処理を任せる。workerはResearch job IDを合成したり、`jobs/*.json` / `state.json` を直接書き換えたりしない。
 4. 同名の `.survey/work-queue/results/<unique>.json` を確認し、`ok=true`、`research_jobs_added`、`final_duplicate_filtered_count`、`next_action` を読む。
 5. `refresh_queue_snapshot.py` または `queue_worker.py` が更新した `.survey/work-queue/next-jobs.json` を確認する。
-6. ready Research/Audit が現れても、**今回runがDiscoveryならclaimしない。** `next-jobs.json` への反映だけ確認し、run開始時に固定したDiscoveryを続ける。Research / Auditのclaimは、次回run開始時の `candidate_inventory >= 50` 判定で読解モードになった場合に `claim_worker_with_banks.py` から1件だけ取得する。
+6. ready Research/Audit が現れても、**今回runがDiscoveryならclaimしない。** `next-jobs.json` への反映だけ確認し、run開始時に固定したDiscoveryを続ける。Research / Auditのclaimは、次回run開始時の `candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD` 判定で読解モードになった場合に `claim_worker_with_banks.py` から1件だけ取得する。
 7. `research_jobs_added=0` でもrun終了理由にしない。最終重複排除や低優先度除外を確認し、必要なら別探索軸をschema v3 precheckから開始する。
 
 失敗submissionの回収には `recover_discovery_submissions.py` を使う。回収後は `refresh_queue_snapshot.py` → `next-jobs.json` でcanonical stateを確認する。ただし**このrunが探索モードならResearchへ切り替えず、run開始時に固定した探索モードを維持する。** Research jobのclaimは次回以降、読解モードで行う。失敗済みsubmissionを上書きしたり、synthetic `job_id` を作って回避してはならない。
