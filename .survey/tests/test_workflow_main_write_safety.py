@@ -26,14 +26,17 @@ class MainWriterWorkflowSafetyTests(unittest.TestCase):
 
         self.assertEqual([], offenders)
 
-    def test_discovery_recovery_rebases_prepared_commit_after_push_race(self):
+    def test_discovery_recovery_recomputes_bank_selection_after_push_race(self):
         text = (WORKFLOWS / "survey-discovery-recovery.yml").read_text(encoding="utf-8")
 
-        # A push race must preserve the already computed recovery commit instead of
-        # discarding it and recomputing from origin/main on every retry.
-        self.assertIn("git rebase origin/main", text)
-        self.assertIn("git rebase --abort || true", text)
-        self.assertNotIn("Resetting to latest main and retrying.", text)
+        # Discovery recovery may reserve the next PRECHECKED bank. A push race must
+        # therefore discard the stale local selection and recompute from latest main
+        # so a bank taken by another worker cannot be published as a double claim.
+        self.assertIn("for attempt in $(seq 1 12)", text)
+        self.assertIn("git reset --hard origin/main", text)
+        self.assertIn("auto_advance_discovery.py", text)
+        self.assertIn("recomputing from latest main", text)
+        self.assertNotIn("git rebase origin/main", text)
 
 
 if __name__ == "__main__":
