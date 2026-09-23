@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T17:02:50+00:00",
-  "last_run_key": "adhoc-20260924T014906JST-worker-915242",
-  "last_round": "adhoc-20260924T014906JST-worker-915242-forward-take-4",
+  "updated_at": "2026-09-23T17:06:15+00:00",
+  "last_run_key": "20260924T020210JST-scheduled-chat-00",
+  "last_round": "20260924T020210JST-scheduled-chat-00-backward-r1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,44 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T00:00:00+09:00",
-      "round": "specialist-tool-gap-kv-4",
-      "axis": "tool-call gap KV residency・出力長不確実性KV reservation",
-      "query_summary": "agent interruption/tool-call gap中のKV state保持と、uncertain output length下のKV reservation/admissionへ探索軸を移した。SwiftCache等の既知候補は除外し、default branch code searchで未収録と確認した2件を提出した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.3333333333333333,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135"
-      ],
-      "next_axis_hint": "次はmulti-tenant fairness、preemption/recomputation回避、KV reservationとprefix reuseを統合するadmission controlへ展開する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260917T0001-tool-gap-kv-4.json"
-    },
-    {
-      "run_key": "2026-09-17T00:00:00+09:00",
-      "round": "specialist-kv-storage-benchmark-5",
-      "axis": "cross-context KV reuse benchmark・dynamic KV budgeting・NVMe-direct KV offload",
-      "query_summary": "直前runでagent tool-gap/KV reservationまで探索済みのため、cross-context/checkpoint KV reuse、reasoning中のdynamic KV capacity、NVMe-direct storage pathへ軸を変更した。arXiv一次ページで内容を確認し、投入直前にdefault branchのGitHub code searchで各arXiv IDが0件であることを再確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "次はmulti-stage network flow scheduling、KV transfer contention、CXL/PCIe fabric上のcache placementへ展開する",
-      "source_submission": "work-queue/submissions/discovery-specialist-20260917T0058-kv-storage-benchmark-5.json"
-    },
     {
       "run_key": "2026-09-17T00:00:00+09:00",
       "round": "specialist-network-scheduling-6",
@@ -8631,6 +8593,84 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T014100JST-worker-915241-forward-r6",
+      "precheck_request_id": "20260924T014100JST-worker-915241-forward-r6",
+      "run_key": "adhoc-20260924T014100JST-worker-915241",
+      "round": "20260924T014100JST-worker-915241-forward-r6",
+      "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+      "query_summary": "Forward citations of LMCache from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2510.09665",
+      "preload_id": "preload-2100b6b78dc6a2313c9a",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2604.26968",
+        "DOI:10.1109/ICC59461.2026.11587970",
+        "arXiv:2606.01065",
+        "arXiv:2606.00946",
+        "arXiv:2601.19139"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014100JST-worker-915241-forward-r6-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014100JST-worker-915241-forward-r6-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T020210JST-scheduled-chat-00-backward-r1",
+      "precheck_request_id": "20260924T020210JST-scheduled-chat-00-backward-r1",
+      "run_key": "20260924T020210JST-scheduled-chat-00",
+      "round": "20260924T020210JST-scheduled-chat-00-backward-r1",
+      "axis": "preload-backward-structured-references",
+      "query_summary": "Backward-reference curation from the repository structured-reference pool; evaluated the canonical schema-v3 allowed records and selected high-value inference/serving omissions.",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-fc83ee7da7a72c0df27b",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [
+        "OpenReview:02f3mUtqnM",
+        "arXiv:2211.10017",
+        "arXiv:2010.13887"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T020210JST-scheduled-chat-00-backward-r1-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T020210JST-scheduled-chat-00-backward-r1-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16326,14 +16366,14 @@
       "next_axis_hint": null
     },
     "forward citations of LMCache enterprise-scale KV cache layer": {
-      "last_run_key": "2026-09-21T06:58:37+09:00",
-      "rounds": 1,
-      "candidate_count": 5,
+      "last_run_key": "adhoc-20260924T014100JST-worker-915241",
+      "rounds": 2,
+      "candidate_count": 25,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
+      "novel_candidate_count": 25,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
+      "post_final_dedupe_count": 25,
+      "accepted_count": 10,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
@@ -16547,16 +16587,16 @@
       "next_axis_hint": "continue selector with another productive seed or backward-reference window"
     },
     "preload-backward-structured-references": {
-      "last_run_key": "adhoc-20260924T014906JST-worker-915242",
-      "rounds": 4,
-      "candidate_count": 80,
+      "last_run_key": "20260924T020210JST-scheduled-chat-00",
+      "rounds": 5,
+      "candidate_count": 100,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 80,
+      "novel_candidate_count": 100,
       "final_duplicate_filtered_count": 2,
-      "post_final_dedupe_count": 78,
-      "accepted_count": 13,
+      "post_final_dedupe_count": 98,
+      "accepted_count": 16,
       "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.025,
+      "final_duplicate_ratio": 0.02,
       "next_axis_hint": null
     }
   },
