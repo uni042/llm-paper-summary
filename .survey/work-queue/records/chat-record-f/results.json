@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-0273ce1913f64a15a590f7e2",
-  "job_id": "job-research-52c9fc70a4b38892",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0273ce1913f64a15a590f7e2",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-0273ce1913f64a15a590f7e2","job_id":"job-research-52c9fc70a4b38892","data":{"overview":"単一層の『why the sheep』分岐ではAの720順列が720個の異なるpost-mHC状態から10種類の継続文へ、Bの360構造クラスが360状態から11種類の継続文へ圧縮された。永続実験ではP32、A、Bが各192/192軌跡でネイティブルートと異なり、Cだけは192/192でMoE、post-mHC、次ルータ、言語モデル状態までビット一致した。B分岐の端点再構成では層内339状態・344ルート、跨トークン301状態・301永続状態・301ルートを完全再現し、微小な集約差が同一トークン境界を越えて後で可視化できることを示した。","key_results":[{"metric":"単一層A方式の分岐","value":"720順列→720異なるpost-mHC状態→10継続文","baseline":"ネイティブ参照","condition":"why the sheep、層5、8トークン","interpretation":"局所数値状態は多数に分かれても可視テキストは少数の吸引域へまとまる。"},{"metric":"単一層B方式の分岐","value":"720生順列→360厳密構造クラス→360状態→11継続文","baseline":"ネイティブ参照","condition":"同上","interpretation":"最初の2項交換対称性を除いても有限精度加算順序だけで複数の決定的継続へ分岐する。"},{"metric":"post-mHC端点再構成","value":"339/339後続状態、344/344ルート、生成文が完全一致","baseline":"実際のB class 135分岐","condition":"層5・位置3でFP32端点差をネイティブ実行へ注入","interpretation":"同一prefixと永続状態のもとではpost-mHC端点が測定範囲の層内後続軌跡を決める十分な境界になる。"},{"metric":"全永続状態端点再構成","value":"43/43層をFP64差分で復元、その後301/301 post-mHC、301/301永続状態、301/301ルートが一致","baseline":"B class 135分岐","condition":"位置3生成境界、5883008個FP32値、7後続decode入力","interpretation":"同じ次入力トークンでも数値差が永続状態を介して跨トークンで残ることを介入で確認した。"},{"metric":"50プロンプト探索的幅確認","value":"文面分離は8トークン12/50、16トークン24/50、32トークン36/50","baseline":"ネイティブ参照対B最大差分枝","condition":"25英語+25中国語の固定集合","interpretation":"短い生成では見えない差が生成長とともに可視化しうる。ただし発生確率ではない。"},{"metric":"永続集約方式のネイティブ互換性","value":"Cはルート0/192差、トークン0/192差。P32/A/Bはルート各192/192差、トークン差161/192・178/192・172/192","baseline":"production native reference","condition":"3プロンプト×64層別順序、8トークン","interpretation":"高精度項P32でも互換にはならず、ネイティブBF16項表現を保ちFP32で累算するCだけが評価範囲で安定した。"}],"negative_results":"P32は専門家項を高精度化するがネイティブ項の意味論自体を変えるため互換参照にはならず、192/192でルート差が出た。永続状態のFP32差分は43層中10層しかビット復元できず、正確な介入にはFP64差分が必要だった。ルート差はP32/A/Bで飽和してもトークン差は192未満で、内部経路差が必ず可視出力差になるわけではない。","interpretation":"結果は『低精度は不安定だから全部高精度にする』という単純な結論ではない。互換性には専門家項をどの形式で生成するか、専門家間累算をどの精度で行うか、部分和をどの順序で結合するかの3点を同時に固定する必要がある。Cの結果はBF16項＋FP32累算がこのチェックポイントと観測状態でネイティブ互換かつ順序不変だったことを示すが、普遍的な厳密和や全ハードウェアでの保証ではない。","quality_impact":"同じ貪欲トークンを数段出していても内部永続状態は既に分岐しうるため、出力文字列だけの回帰試験ではバックエンド互換性を過大評価する可能性がある。"},"reservation":{"claim_id":"claim-0273ce1913f64a15a590f7e2","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
