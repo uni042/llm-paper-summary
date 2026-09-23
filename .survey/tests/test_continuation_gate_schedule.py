@@ -22,6 +22,10 @@ def make_args(**overrides):
         platform_limit=False,
         global_dependency=False,
         independent_work=True,
+        active_assignment=False,
+        active_claim_count=0,
+        claim_window=4,
+        claim_window_remaining=4,
         spillover_work=False,
         can_discover=True,
         claim_state_checked=True,
@@ -240,6 +244,36 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             mod.decide(make_args(candidate_inventory=None))
 
+
+    def test_active_foreground_continues_while_standby_refill_result_is_pending(self):
+        result = mod.decide(make_args(
+            candidate_inventory=80,
+            work_mode="research",
+            active_assignment=True,
+            active_claim_count=2,
+            claim_window=4,
+            claim_window_remaining=2,
+            claim_result_pending=True,
+            claim_result_pending_age_seconds=15,
+            seconds_to_run_deadline=2500,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "CONTINUE_ASSIGNED_WORK")
+        self.assertFalse(result["finalization_allowed"])
+        self.assertEqual(result["claim_wait_action"], "none")
+
+    def test_active_foreground_requests_refill_when_window_is_not_full(self):
+        result = mod.decide(make_args(
+            candidate_inventory=80,
+            work_mode="research",
+            active_assignment=True,
+            active_claim_count=1,
+            claim_window=4,
+            claim_window_remaining=3,
+            claim_result_pending=False,
+            seconds_to_run_deadline=2500,
+        ))
+        self.assertEqual(result["required_action"], "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY")
 
 if __name__ == "__main__":
     unittest.main()

@@ -225,5 +225,60 @@ class ClaimWorkerTests(unittest.TestCase):
             self.assertEqual([item["job_id"] for item in after["assignments"]], ["job-r0"])
 
 
+    def test_scheduled_chat_claim_window_preclaims_four_and_refills_without_idle_gap(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            for index in range(5):
+                job(root, f"job-r{index}", priority=100 - index)
+            request(
+                root,
+                "req-window-1",
+                worker="scheduled-chat-00",
+                worker_kind="scheduled_chat",
+                lease=5400,
+            )
+            claim_worker.process_requests(root, at=AT)
+            first = json.loads(
+                (root / ".survey/work-queue/claim-results/req-window-1.json").read_text()
+            )
+            self.assertEqual(first["claim_window"], 4)
+            self.assertEqual(first["active_claim_count"], 4)
+            self.assertEqual(
+                [item["job_id"] for item in first["assignments"]],
+                ["job-r0", "job-r1", "job-r2", "job-r3"],
+            )
+            self.assertEqual(
+                [item["pipeline_role"] for item in first["assignments"]],
+                ["foreground", "standby", "standby", "standby"],
+            )
+            self.assertEqual(first["foreground_job_id"], "job-r0")
+            self.assertEqual(first["standby_job_ids"], ["job-r1", "job-r2", "job-r3"])
+
+            done_path = root / ".survey/work-queue/jobs/job-r0.json"
+            done = json.loads(done_path.read_text())
+            done["status"] = "completed"
+            write_json(done_path, done)
+
+            request(
+                root,
+                "req-window-2",
+                worker="scheduled-chat-00",
+                worker_kind="scheduled_chat",
+                lease=5400,
+            )
+            claim_worker.process_requests(root, at=AT + timedelta(seconds=1))
+            second = json.loads(
+                (root / ".survey/work-queue/claim-results/req-window-2.json").read_text()
+            )
+            self.assertEqual(second["active_claim_count"], 4)
+            self.assertEqual(
+                [item["job_id"] for item in second["assignments"]],
+                ["job-r1", "job-r2", "job-r3", "job-r4"],
+            )
+            self.assertEqual(second["foreground_job_id"], "job-r1")
+            self.assertEqual(second["standby_job_ids"], ["job-r2", "job-r3", "job-r4"])
+            self.assertEqual(second["assignments"][0]["pipeline_role"], "foreground")
+            self.assertEqual(second["assignments"][-1]["pipeline_role"], "standby")
+
 if __name__ == "__main__":
     unittest.main()

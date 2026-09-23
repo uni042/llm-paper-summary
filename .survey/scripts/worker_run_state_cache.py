@@ -18,6 +18,7 @@ LATEST_ROOT = Path(".survey/work-queue/run-state/latest")
 FACT_CLOCK = Path(".survey/work-queue/run-state/fact-clock.json")
 ALLOWED_WORKERS = {"scheduled-chat-00", "scheduled-chat-30"}
 TERMINAL = {"completed", "blocked", "deferred", "rejected"}
+SCHEDULED_CHAT_CLAIM_WINDOW = 4
 
 
 def parse_time(value: Any) -> dt.datetime | None:
@@ -255,6 +256,22 @@ def _claim_result_identity(value: dict[str, Any]) -> dict[str, Any] | None:
     }
 
 
+def _apply_claim_window_fields(
+    claims: dict[str, Any],
+    active_jobs: list[str],
+    *,
+    claim_window: int | None = None,
+) -> None:
+    window = max(int(claim_window or claims.get("claim_window") or SCHEDULED_CHAT_CLAIM_WINDOW), 1)
+    claims["active_job_ids"] = list(active_jobs)
+    claims["active_assignment"] = bool(active_jobs)
+    claims["active_claim_count"] = len(active_jobs)
+    claims["claim_window"] = window
+    claims["claim_window_remaining"] = max(window - len(active_jobs), 0)
+    claims["foreground_job_id"] = active_jobs[0] if active_jobs else None
+    claims["standby_job_ids"] = active_jobs[1:]
+
+
 def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, list[str]]:
     root = root.resolve()
     loaded: dict[str, dict[str, Any]] = {}
@@ -324,11 +341,16 @@ def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, lis
         assignments = [
             item for item in (value.get("assignments") or []) if isinstance(item, dict)
         ]
-        active_jobs = sorted({
-            str(item.get("job_id"))
-            for item in assignments
-            if isinstance(item.get("job_id"), str) and item.get("job_id")
-        })
+        assignments.sort(key=lambda item: (
+            int(item.get("pipeline_position") or 1_000_000_000),
+            str(item.get("claimed_at") or ""),
+            str(item.get("job_id") or ""),
+        ))
+        active_jobs: list[str] = []
+        for item in assignments:
+            job_id = item.get("job_id")
+            if isinstance(job_id, str) and job_id and job_id not in active_jobs:
+                active_jobs.append(job_id)
         claims.update({
             "claim_state_checked": True,
             "claim_result_pending": bool(pending_ids),
@@ -337,9 +359,12 @@ def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, lis
             "pending_claim_requested_at": pending_requested,
             "claim_result_pending_age_seconds": max(pending_ages.values(), default=0),
             "claim_monitor_window_seconds": int(claims.get("claim_monitor_window_seconds", 60) or 60),
-            "active_assignment": bool(active_jobs),
-            "active_job_ids": active_jobs,
         })
+        _apply_claim_window_fields(
+            claims,
+            active_jobs,
+            claim_window=int(value.get("claim_window") or SCHEDULED_CHAT_CLAIM_WINDOW),
+        )
         run["claims"] = claims
 
         attempts = run.setdefault("attempts", {})
@@ -578,8 +603,7 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
                 if isinstance(fact, dict) and fact.get("submitted")
             }
             active_jobs = [job for job in active_jobs if job not in submitted_jobs]
-            claims["active_job_ids"] = sorted(active_jobs)
-            claims["active_assignment"] = bool(active_jobs)
+            _apply_claim_window_fields(claims, active_jobs)
             run["claims"] = claims
             _recompute_submission(run)
             run["generation"] = generation

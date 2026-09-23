@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Auto-allocate the first Research/Audit claim from a fresh run-state snapshot.
+"""Auto-allocate the initial Research/Audit claim window from a fresh run-state snapshot.
 
-Only the initial claim of a Scheduled Chat invocation is eligible. Later claims keep
-using the normal worker decision point so Audit starvation and per-paper continuation
-semantics remain unchanged.
+Only the initial allocation of a Scheduled Chat invocation is eligible. The claim
+allocator expands this request into one foreground plus prefetched standby claims.
+Later window refills keep using the normal worker decision point so Audit starvation
+and per-paper continuation semantics remain unchanged.
 """
 from __future__ import annotations
 
@@ -112,6 +113,7 @@ def _claim_request(result: dict[str, Any], request_id: str) -> dict[str, Any]:
         "worker_kind": "scheduled_chat",
         "requested_at": now,
         "max_jobs": 1,
+        "claim_window": 4,
         "job_types": ["research", "audit"],
         "run_key": result["run_key"],
         "scheduled_slot": result["scheduled_slot"],

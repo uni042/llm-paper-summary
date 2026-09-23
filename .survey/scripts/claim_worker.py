@@ -16,6 +16,8 @@ SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 WORKER_KINDS = {"scheduled_chat", "work"}
 JOB_TYPES = {"research", "audit"}
 DEFAULT_MAX_JOBS = 1
+SCHEDULED_CHAT_CLAIM_WINDOW = 4
+MAX_SCHEDULED_CHAT_CLAIM_WINDOW = 10
 DEFAULT_LEASE_SECONDS = 5400
 MIN_LEASE_SECONDS = 300
 MAX_LEASE_SECONDS = 43200
@@ -157,7 +159,22 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     if isinstance(max_jobs, bool) or not isinstance(max_jobs, int) or not 1 <= max_jobs <= 4:
         raise ValueError("max_jobs must be between 1 and 4")
     if worker_kind == "scheduled_chat" and max_jobs != 1:
-        raise ValueError("scheduled_chat requests must use max_jobs=1")
+        raise ValueError("scheduled_chat requests must use max_jobs=1; claim_window controls prefetched standby claims")
+    claim_window_raw = raw.get("claim_window")
+    if worker_kind == "scheduled_chat":
+        claim_window = SCHEDULED_CHAT_CLAIM_WINDOW if claim_window_raw is None else claim_window_raw
+        if (
+            isinstance(claim_window, bool)
+            or not isinstance(claim_window, int)
+            or not 1 <= claim_window <= MAX_SCHEDULED_CHAT_CLAIM_WINDOW
+        ):
+            raise ValueError(
+                f"scheduled_chat claim_window must be between 1 and {MAX_SCHEDULED_CHAT_CLAIM_WINDOW}"
+            )
+    else:
+        if claim_window_raw is not None and claim_window_raw != max_jobs:
+            raise ValueError("claim_window is reserved for scheduled_chat; work requests must use max_jobs")
+        claim_window = max_jobs
     lease_seconds = raw.get("lease_seconds", DEFAULT_LEASE_SECONDS)
     if isinstance(lease_seconds, bool) or not isinstance(lease_seconds, int) or not MIN_LEASE_SECONDS <= lease_seconds <= MAX_LEASE_SECONDS:
         raise ValueError("lease_seconds must be between 300 and 43200")
@@ -172,7 +189,7 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     return {
         "schema_version": 1, "request_id": request_id, "worker_id": worker_id,
         "worker_kind": worker_kind, "requested_at": _iso(requested_at),
-        "max_jobs": max_jobs, "lease_seconds": lease_seconds,
+        "max_jobs": max_jobs, "claim_window": claim_window, "lease_seconds": lease_seconds,
         "job_types": sorted(set(job_types)),
         "job_ids": job_ids,
         "checkpointed_jobs": checkpointed_jobs,
@@ -462,10 +479,37 @@ def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
         "run_key",
         "scheduled_slot",
         "actual_invocation_start",
+        "pipeline_order",
     ):
         if key in claim:
             assignment[key] = claim[key]
     return assignment
+
+
+def _pipeline_sort_key(assignment: dict[str, Any]) -> tuple[int, int, str, str]:
+    order = assignment.get("pipeline_order")
+    if isinstance(order, int) and not isinstance(order, bool) and order >= 0:
+        return (0, order, str(assignment.get("claimed_at") or ""), str(assignment.get("job_id") or ""))
+    return (1, 0, str(assignment.get("claimed_at") or ""), str(assignment.get("job_id") or ""))
+
+
+def _decorate_claim_window(
+    assignments: list[dict[str, Any]],
+    *,
+    claim_window: int,
+) -> tuple[list[dict[str, Any]], str | None, list[str]]:
+    ordered = sorted((dict(item) for item in assignments), key=_pipeline_sort_key)
+    foreground_job_id = None
+    standby_job_ids: list[str] = []
+    for index, item in enumerate(ordered, start=1):
+        item["pipeline_position"] = index
+        item["pipeline_role"] = "foreground" if index == 1 else "standby"
+        job_id = str(item.get("job_id") or "")
+        if index == 1:
+            foreground_job_id = job_id or None
+        elif job_id:
+            standby_job_ids.append(job_id)
+    return ordered, foreground_job_id, standby_job_ids[: max(claim_window - 1, 0)]
 
 
 def _dependencies(job_id: str, job: dict[str, Any]) -> list[str] | None:
@@ -593,7 +637,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         for job_id, current in claims.items():
             if current.get("active") and current.get("request_id") == request["request_id"] and job_id in by_id:
                 recovered.append(_assignment(by_id[job_id], current))
-        if recovered:
+        if recovered and request["worker_kind"] != "scheduled_chat":
             _write(result_path, {
                 "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
                 "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
@@ -607,13 +651,9 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         released_now = _release_worker_checkpointed_claims(root, claims, request, now)
         checkpoint_released += released_now
 
-        if request["worker_kind"] == "scheduled_chat" and _worker_has_active_claim(
-            claims,
-            worker_id=request["worker_id"],
-            worker_kind=request["worker_kind"],
-        ):
-            resumed = []
-            new_expiry = _iso(now + dt.timedelta(seconds=request["lease_seconds"]))
+        resumed: list[dict[str, Any]] = []
+        if request["worker_kind"] == "scheduled_chat":
+            active_rows: list[tuple[tuple[int, int, str, str], str, dict[str, Any]]] = []
             for job_id, current in claims.items():
                 if not (
                     current.get("active")
@@ -626,26 +666,34 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                     and job_id in by_id
                 ):
                     continue
+                active_rows.append((_pipeline_sort_key(current), job_id, current))
+            active_rows.sort(key=lambda row: row[0])
+
+            existing_orders = [
+                int(current.get("pipeline_order"))
+                for _, _, current in active_rows
+                if isinstance(current.get("pipeline_order"), int)
+                and not isinstance(current.get("pipeline_order"), bool)
+                and int(current.get("pipeline_order")) >= 0
+            ]
+            next_missing_order = (max(existing_orders) + 1) if existing_orders else 0
+            new_expiry = _iso(now + dt.timedelta(seconds=request["lease_seconds"]))
+            for _, job_id, current in active_rows:
                 claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
+                if not (
+                    isinstance(claim.get("pipeline_order"), int)
+                    and not isinstance(claim.get("pipeline_order"), bool)
+                    and int(claim.get("pipeline_order")) >= 0
+                ):
+                    claim["pipeline_order"] = next_missing_order
+                    next_missing_order += 1
                 claim["expires_at"] = new_expiry
                 claim["heartbeat_at"] = _iso(now)
                 _write(claims_root / f"{job_id}.json", claim)
                 claims[job_id] = dict(claim, active=True, expired=False)
                 resumed.append(_assignment(by_id[job_id], claim))
-
-            if resumed:
-                _write(result_path, {
-                    "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
-                    "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
-                    **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
-                    "ok": True, "assignments": resumed, "processed_at": _iso(now),
-                    "reason": "resumed active unsubmitted claim",
-                    "checkpoint_released": released_now,
-                })
-                assigned_recovered += len(resumed)
-                renewed += len(resumed)
-                processed += 1
-                continue
+            renewed += len(resumed)
+            assigned_recovered += len(resumed)
 
         checkpointed_ids = set(_checkpoint_map(request))
         requested_job_ids = set(request["job_ids"]) if request["job_ids"] is not None else None
@@ -666,8 +714,23 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 continue
             available.append(item)
         available.sort(key=lambda item: (-int(item.get("priority") or 0), str(item.get("created_at") or ""), str(item.get("job_id") or "")))
-        assignments = []
-        for item in available[:request["max_jobs"]]:
+
+        allocation_limit = request["max_jobs"]
+        if request["worker_kind"] == "scheduled_chat":
+            allocation_limit = max(int(request["claim_window"]) - len(resumed), 0)
+
+        next_pipeline_order = 0
+        if resumed:
+            existing = [
+                int(item.get("pipeline_order"))
+                for item in resumed
+                if isinstance(item.get("pipeline_order"), int)
+                and not isinstance(item.get("pipeline_order"), bool)
+            ]
+            next_pipeline_order = (max(existing) + 1) if existing else len(resumed)
+
+        new_assignments: list[dict[str, Any]] = []
+        for offset, item in enumerate(available[:allocation_limit]):
             job_id = str(item["job_id"])
             dependencies = _dependencies(job_id, item)
             if dependencies is None:
@@ -686,27 +749,44 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 "depends_on_job_ids": dependencies,
                 **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
             }
+            if request["worker_kind"] == "scheduled_chat":
+                claim["pipeline_order"] = next_pipeline_order + offset
             if previous and previous.get("claim_id") != claim_id:
                 claim["previous_claim_id"] = previous.get("claim_id")
             _write(claims_root / f"{job_id}.json", claim)
             claims[job_id] = dict(claim, active=True, expired=False)
-            assignments.append({
-                "job_id": job_id, "claim_id": claim_id, "worker_id": request["worker_id"],
-                "worker_kind": request["worker_kind"], "attempt_id": attempt_id,
-                "claimed_at": _iso(now), "expires_at": _iso(expires), "kind": item.get("type"),
-                "depends_on_job_ids": dependencies, "job": dict(item),
-                **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
-            })
-        _write(result_path, {
+            new_assignments.append(_assignment(item, claim))
+
+        assignments = resumed + new_assignments
+        foreground_job_id = None
+        standby_job_ids: list[str] = []
+        if request["worker_kind"] == "scheduled_chat":
+            assignments, foreground_job_id, standby_job_ids = _decorate_claim_window(
+                assignments,
+                claim_window=int(request["claim_window"]),
+            )
+
+        result_payload = {
             "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
             "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
             **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
             "ok": True, "assignments": assignments, "processed_at": _iso(now),
             "checkpoint_released": released_now,
-        })
-        assigned_new += len(assignments)
+        }
+        if request["worker_kind"] == "scheduled_chat":
+            result_payload.update({
+                "claim_window": int(request["claim_window"]),
+                "active_claim_count": len(assignments),
+                "claim_window_remaining": max(int(request["claim_window"]) - len(assignments), 0),
+                "foreground_job_id": foreground_job_id,
+                "standby_job_ids": standby_job_ids,
+                "reason": "scheduled_chat_claim_window",
+            })
+        _write(result_path, result_payload)
+        assigned_new += len(new_assignments)
         processed += 1
     return {
+        "processed": processed,    return {
         "processed": processed,
         "reused": reused,
         "errors": errors,

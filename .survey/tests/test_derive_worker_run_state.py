@@ -392,5 +392,51 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
                 mod._normalize_request(path, value)
 
 
+    def test_active_foreground_exposes_three_standby_slots_and_requests_nonblocking_refill(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            now = dt.datetime.now(dt.timezone.utc)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 59}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/jobs/job-active.json",
+                {"job_id": "job-active", "type": "research", "status": "ready"},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/claims/job-active.json",
+                {
+                    "schema_version": 1,
+                    "workflow_version": 10,
+                    "job_id": "job-active",
+                    "claim_id": "claim-active",
+                    "attempt_id": "attempt-active",
+                    "request_id": "req-active",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "kind": "research",
+                    "pipeline_order": 0,
+                    "claimed_at": now.isoformat(),
+                    "expires_at": (now + dt.timedelta(hours=1)).isoformat(),
+                },
+            )
+            result = mod.derive(root, value)
+            self.assertTrue(result["active_assignment"])
+            self.assertEqual(result["active_claim_count"], 1)
+            self.assertEqual(result["claim_window"], 4)
+            self.assertEqual(result["claim_window_remaining"], 3)
+            self.assertEqual(result["foreground_job_id"], "job-active")
+            self.assertEqual(result["standby_job_ids"], [])
+            self.assertEqual(
+                result["gate"]["required_action"],
+                "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY",
+            )
+
 if __name__ == "__main__":
     unittest.main()

@@ -87,6 +87,7 @@ class AutoInitialClaimTests(unittest.TestCase):
             request = json.loads(requests[0].read_text(encoding="utf-8"))
             self.assertEqual(request["worker_id"], "scheduled-chat-30")
             self.assertEqual(request["run_key"], "run-1")
+            self.assertEqual(request["claim_window"], 4)
             self.assertTrue(request["auto_initial_claim"])
 
             updated = json.loads(source.read_text(encoding="utf-8"))

@@ -140,6 +140,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         )
     )
     active_assignment = bool(getattr(args, "active_assignment", False))
+    active_claim_count = max(int(getattr(args, "active_claim_count", 1 if active_assignment else 0) or 0), 0)
+    claim_window = max(int(getattr(args, "claim_window", 4) or 4), 1)
+    claim_window_remaining = max(
+        int(getattr(args, "claim_window_remaining", claim_window - active_claim_count) or 0),
+        0,
+    )
 
     transient_claim_wait = bool(claim_state_checked and args.claim_result_pending and args.github_read)
     claim_result_pending_age_seconds = max(
@@ -216,6 +222,22 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "CHECK_CLAIM_STATE"
             finalization_allowed = False
+        elif not submission_state_checked:
+            decision = "CONTINUE"
+            required_action = "CHECK_SUBMISSION_STATE"
+            finalization_allowed = False
+        elif active_assignment:
+            decision = "CONTINUE"
+            if (
+                not handoff_window_active
+                and independent_work
+                and claim_window_remaining > 0
+                and not transient_claim_wait
+            ):
+                required_action = "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY"
+            else:
+                required_action = "CONTINUE_ASSIGNED_WORK"
+            finalization_allowed = False
         elif transient_claim_wait:
             decision = "CONTINUE"
             required_action = (
@@ -223,14 +245,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 if claim_result_pending_age_seconds < claim_monitor_window_seconds
                 else "WAIT_FOR_CLAIM_RESULT"
             )
-            finalization_allowed = False
-        elif not submission_state_checked:
-            decision = "CONTINUE"
-            required_action = "CHECK_SUBMISSION_STATE"
-            finalization_allowed = False
-        elif active_assignment:
-            decision = "CONTINUE"
-            required_action = "CONTINUE_ASSIGNED_WORK"
             finalization_allowed = False
         elif transient_submission_wait:
             decision = "CONTINUE"
@@ -252,13 +266,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
             finalization_allowed = False
         else:
-            # The three-completion quota is a floor, never a stop cap. If this
-            # Research/Audit run is outside the no-new-work window and claimable
-            # independent work exists, make the next paper claim explicit.
             decision = "CONTINUE"
             required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
             finalization_allowed = False
 
+    # Reasons added by the 600-second start-prohibition branch are canonical hard
     # Reasons added by the 600-second start-prohibition branch are canonical hard
     # stop reasons too. Recompute after routing so finalization sees the same state
     # that worker-router.md defines.
@@ -295,7 +307,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
 
     claim_wait_action = "none"
     claim_wait_seconds = 0
-    if transient_claim_wait:
+    if required_action in {"MONITOR_CLAIM_FAST_LANE", "WAIT_FOR_CLAIM_RESULT"}:
         claim_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
         if required_action == "MONITOR_CLAIM_FAST_LANE":
             claim_wait_action = (
@@ -394,8 +406,17 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 "前jobは終端しましたがrunは終了しません。最新queue/claim stateを再取得し、"
                 "同一workerの未完了claimがないことを確認して次のResearch/Auditを1件claimします。"
             )
+    elif required_action == "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY":
+        next_action_message = (
+            "foregroundのResearch/Auditを止めずにそのまま読解します。同時にclaim windowが4件へ戻るよう"
+            "standby補充用claim requestを1件だけ発行します。補充result待ちはforeground読解の同期障壁にせず、"
+            "foreground終端時は既確保standbyの先頭へ即座に昇格します。"
+        )
     elif required_action == "CONTINUE_ASSIGNED_WORK":
-        next_action_message = "すでに担当確保済みのResearch/Auditを継続し、提出・結果確認または正規repairまで進めます。"
+        next_action_message = (
+            "担当確保済みforegroundのResearch/Auditを継続します。既確保standbyがあればforeground終端時に"
+            "追加claim待ちを挟まず先頭standbyへ即座に昇格します。"
+        )
     elif required_action == "WAIT_FOR_READY_RESEARCH_AUDIT":
         next_action_message = "現在claim可能なResearch/Auditが0件です。空のclaim requestを出さず、待機ミクロタスクを1件処理してから最新queueを再確認します。run中にDiscoveryへ切り替えません。"
         progress_notice = next_action_message
@@ -474,6 +495,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "durable_transport_available": any_durable_transport,
         "independent_work_after_fallback": independent_work,
         "active_assignment": active_assignment,
+        "active_claim_count": active_claim_count,
+        "claim_window": claim_window,
+        "claim_window_remaining": claim_window_remaining,
         "handoff_window_active": handoff_window_active,
         "final_handoff_active": final_handoff_active,
         "seconds_to_run_deadline": seconds_to_deadline,
@@ -488,7 +512,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
             "pending claim/result identities are kept stable; instead of sleeping or fixed-interval polling, the worker runs one bounded wait microtask and then rechecks the same target until terminal or a canonical hard stop. "
             "When claimable independent Research/Audit work is available, pending submission results never block another paper claim. "
-            "Workers continue claiming and processing one paper at a time while all submitted attempts remain durably tracked. "
+            "Workers process only one foreground paper at a time, but Scheduled Chat keeps a four-claim window with up to three preclaimed standby papers. "
+            "A standby-refill claim result never blocks an already active foreground paper. When foreground becomes terminal, the oldest standby becomes foreground immediately and the window is refilled asynchronously. "
+            "All submitted attempts remain durably tracked. "
             "Submission results are monitored concurrently and become a foreground wait only when the 600-second no-new-work window begins or no Research/Audit job is claimable. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
@@ -521,6 +547,9 @@ def main() -> int:
     ap.add_argument("--global-dependency", type=yn, default=False)
     ap.add_argument("--independent-work", type=yn, default=True)
     ap.add_argument("--active-assignment", type=yn, default=False)
+    ap.add_argument("--active-claim-count", type=int, default=0)
+    ap.add_argument("--claim-window", type=int, default=4)
+    ap.add_argument("--claim-window-remaining", type=int, default=4)
     ap.add_argument("--spillover-work", type=yn, default=False)
     ap.add_argument("--can-discover", type=yn, default=True)
     ap.add_argument("--claim-state-checked", type=yn, default=False)

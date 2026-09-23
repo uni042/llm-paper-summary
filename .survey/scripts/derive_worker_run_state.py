@@ -31,6 +31,7 @@ ALLOWED_WORKERS = {
     "scheduled-chat-30": "30",
 }
 READ_COUNT = 0
+SCHEDULED_CHAT_CLAIM_WINDOW = 4
 
 RUNTIME_CONDITIONS = {
     "none",
@@ -403,7 +404,7 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
     oldest_pending_age = max(pending_request_ages.values(), default=0)
 
     claims = claim_state.current_claims(root, now)
-    active: list[str] = []
+    active: list[tuple[int, str, str]] = []
     for job_id, current in claims.items():
         if not current.get("active") or current.get("worker_id") != worker_id:
             continue
@@ -415,8 +416,18 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
             and kind in {"research", "audit"}
             and _descriptor_for_attempt(root, kind, attempt_id) is not None
         )
-        if not descriptor_backed:
-            active.append(job_id)
+        if descriptor_backed:
+            continue
+        order = current.get("pipeline_order")
+        normalized_order = (
+            int(order)
+            if isinstance(order, int) and not isinstance(order, bool) and int(order) >= 0
+            else 1_000_000_000
+        )
+        active.append((normalized_order, str(current.get("claimed_at") or ""), job_id))
+    active.sort()
+    active_job_ids = [job_id for _, _, job_id in active]
+    active_claim_count = len(active_job_ids)
     return {
         "claim_state_checked": True,
         "claim_result_pending": bool(pending_requests),
@@ -425,8 +436,13 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         "pending_claim_requested_at": pending_request_times,
         "claim_result_pending_age_seconds": oldest_pending_age,
         "claim_monitor_window_seconds": 60,
-        "active_assignment": bool(active),
-        "active_job_ids": sorted(active),
+        "active_assignment": bool(active_job_ids),
+        "active_job_ids": active_job_ids,
+        "active_claim_count": active_claim_count,
+        "claim_window": SCHEDULED_CHAT_CLAIM_WINDOW,
+        "claim_window_remaining": max(SCHEDULED_CHAT_CLAIM_WINDOW - active_claim_count, 0),
+        "foreground_job_id": active_job_ids[0] if active_job_ids else None,
+        "standby_job_ids": active_job_ids[1:],
     }
 
 
@@ -450,8 +466,14 @@ def _refresh_cached_claim_state(root: Path, value: dict[str, Any]) -> dict[str, 
         if status in {"completed", "blocked", "deferred", "rejected"}:
             continue
         active_jobs.append(job_id)
-    claims["active_job_ids"] = sorted(set(active_jobs))
+    claim_window = max(int(claims.get("claim_window") or SCHEDULED_CHAT_CLAIM_WINDOW), 1)
+    claims["active_job_ids"] = active_jobs
     claims["active_assignment"] = bool(active_jobs)
+    claims["active_claim_count"] = len(active_jobs)
+    claims["claim_window"] = claim_window
+    claims["claim_window_remaining"] = max(claim_window - len(active_jobs), 0)
+    claims["foreground_job_id"] = active_jobs[0] if active_jobs else None
+    claims["standby_job_ids"] = active_jobs[1:]
 
     if claims.get("claim_result_pending") is not True:
         return claims
@@ -472,6 +494,7 @@ def _refresh_cached_claim_state(root: Path, value: dict[str, Any]) -> dict[str, 
     return claims
 
 
+def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
 def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
     state = _read(root / ".survey/work-queue/discovery-state.json", {}) or {}
     history = state.get("history") if isinstance(state.get("history"), list) else []
@@ -693,6 +716,9 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         global_dependency=global_dependency,
         independent_work=independent_work,
         active_assignment=claims["active_assignment"],
+        active_claim_count=claims.get("active_claim_count", 0),
+        claim_window=claims.get("claim_window", SCHEDULED_CHAT_CLAIM_WINDOW),
+        claim_window_remaining=claims.get("claim_window_remaining", SCHEDULED_CHAT_CLAIM_WINDOW),
         spillover_work=False,
         can_discover=work_mode == "discovery" and bool(selector.get("next_direction")),
         claim_state_checked=claims["claim_state_checked"],
@@ -788,6 +814,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "Use this durable derived snapshot instead of manually inventing continuation-gate booleans. "
             "The first successful snapshot for run_key freezes candidate_inventory/work_mode. "
             "Active same-worker claims from a previous invocation are resumed rather than hidden by the new start time; "
+            "Research/Audit uses a four-claim window: the oldest active claim is foreground and up to three later active claims are standby; "
             "only terminal results processed during this invocation count toward its completion quota. "
             "New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. "
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "

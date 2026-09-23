@@ -323,5 +323,34 @@ class ClaimBankReservationTests(unittest.TestCase):
                 self.assertEqual(payload["data"], original_data[slot])
 
 
+    def test_scheduled_chat_four_claim_window_reserves_four_distinct_banks(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_free_banks(root)
+            for index in range(4):
+                seed_job(root, f"job-window-{index}", 100 - index)
+            write_json(root / ".survey/work-queue/claim-requests/req-window.json", {
+                "schema_version": 1,
+                "request_id": "req-window",
+                "worker_id": "scheduled-chat-00",
+                "worker_kind": "scheduled_chat",
+                "requested_at": "2026-09-13T00:00:00+00:00",
+                "max_jobs": 1,
+                "claim_window": 4,
+                "lease_seconds": 5400,
+                "job_types": ["research"],
+            })
+
+            result = claim_worker_with_banks.process_requests(root, at=AT)
+            claim_result = json.loads(
+                (root / ".survey/work-queue/claim-results/req-window.json").read_text()
+            )
+            self.assertEqual(len(claim_result["assignments"]), 4)
+            banks = [item["record_bank"] for item in claim_result["assignments"]]
+            self.assertEqual(len(set(banks)), 4)
+            self.assertEqual(result["banks_reserved"], 4)
+            self.assertEqual(claim_result["foreground_job_id"], "job-window-0")
+            self.assertEqual(len(claim_result["standby_job_ids"]), 3)
+
 if __name__ == "__main__":
     unittest.main()
