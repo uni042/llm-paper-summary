@@ -50,6 +50,10 @@ def _load_preflight_result(repo: Path, preflight_result: Path) -> dict:
         raise ValueError("preflight result must stay within repository") from exc
     if not relative.startswith(".survey/work-queue/research-preflight/results/") or path.suffix != ".json":
         raise ValueError("preflight result must live under research-preflight/results")
+    if not path.is_file():
+        archived = repo / ".survey/work-queue/research-preflight/archive/results" / path.name
+        if archived.is_file():
+            path = archived
     try:
         result = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError, UnicodeError) as exc:
