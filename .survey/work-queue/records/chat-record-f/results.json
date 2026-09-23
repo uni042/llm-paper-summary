@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-4221ae4eae4238e95de8fb44",
-  "job_id": "job-research-8dfa4bfad6e4a344",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4221ae4eae4238e95de8fb44",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-4221ae4eae4238e95de8fb44","job_id":"job-research-8dfa4bfad6e4a344","data":{"overview":"OmniServeは高優先度LSのSLOをGPU専用Sarathi-Serveとほぼ同水準に保ちながら、CPUへ溢れたBE注意計算を処理してBEスループットを大幅に増やす。厳しいLlama-70B TPOT=0.15秒ではLlumnixのSLO達成率62%に対し91.6%で1.48倍、バースト到着でもLlumnix比最大1.23倍、NEO比1.13倍だった。LongBench-v2の重負荷ではBEデコードを最大9.85倍、DailyMailsでも最大9.1倍改善し、CPUを4台追加すると注意相乗り単体で最大3.43倍のスループット向上を得た。","key_results":[{"metric":"LS SLO達成率","condition":"Llama-70B、TPOT SLO 0.15秒","value":"91.6%","baseline":"Llumnix 62%、1.48倍","interpretation":"メモリ予約だけでなくモジュール遅延を明示的に制御することで、BE同居時の厳しい遅延制約を守れる。"},{"metric":"BEデコードスループット","condition":"LongBench-v2、重いLS負荷、GPUサーバ＋CPU4台","value":"最大9.85倍","baseline":"既存ハイブリッド serving 基準群","interpretation":"GPU余力が少ない状況ほどCPU注意計算と大容量CPUメモリの価値が高くなる。"},{"metric":"BEデコードスループット","condition":"DailyMails","value":"最大9.1倍","baseline":"既存基準群","interpretation":"長文だけでなく比較的短い文脈のBE負荷でも相乗り方式の利点が維持される。"},{"metric":"SLO劣化","condition":"CPU追加1〜4台、BE同居あり/なし","value":"0.36%、0.34%、0.28%、0.31%の低下","baseline":"BEなし","interpretation":"CPU側処理能力を増やしてもLSのクリティカルパスへの干渉はほぼ増えない。"},{"metric":"遅延モデル平均精度","condition":"複数並列構成","value":"Yi-34B 95.7%、Llama-70B 94.5%","baseline":"実測遅延","interpretation":"層単位の追加BE件数をSLO境界まで詰めるために十分な予測精度を持つ。"},{"metric":"LS TTFT SLO達成率","condition":"高負荷、受入制御あり","value":"94.1%","baseline":"受入制御なしより最大43.3%高い","interpretation":"処理不能な新規LSを早期拒否することで待ち行列膨張による既存LSのSLO崩壊を防ぐ。"},{"metric":"分離推論でのBEデコード","condition":"Llama-70B、prefill-decode分離","value":"6.94倍","baseline":"Llumnix","interpretation":"注意相乗りは単体サービング構成だけでなくprefill/decode分離にも統合できる。"}],"quality_impact":"生成モデルの重みや数値近似を変更する手法ではなく、同じBF16モデルの注意計算配置と実行時スケジューリングを変えるため、モデル出力品質を近似的に落とす圧縮法ではない。主な品質指標はサービス品質であり、LSのTTFT/TPOT SLO達成率を保つことが目標となる。CPU結果を遅延回収しても残差ストアで層・要求対応を維持し、計算意味を保つ。","negative_results":"軽いLS負荷ではGPUにBE余力が多いためCPU支援の利得は約1.2倍に留まり、最大9.85倍は重負荷条件で現れる。NEOのようにLSを含む注意計算を全面的にCPUへ移す方式は、CPU処理とPCIeがボトルネックになりCPU台数を増やしてもSLOが悪化しうる。相乗り管理にも非連続な残差ロードで400要求時約0.5msのオーバーヘッドがあり、完全に無償ではない。","boundary_conditions":"CPU追加によるスループット向上は通信時間が注意計算より十分短く隠蔽できることに依存する。論文では100Gbpsと10Gbpsで効果を確認するが、さらに低帯域・高遅延な遠隔CPUでは変わりうる。GPUがモデル重みを保持できる前提で、CPUは主にBE KVキャッシュと注意計算を担当する。密計算までCPUへ逃がすとCPU/GPU性能差が大きく設計前提が崩れる。","interpretation":"OmniServeの効果はCPUをGPUの低速代替として同期利用するのではなく、得意な大容量メモリとデコード注意へ限定し、その遅延をGPUの別仕事で隠すことから生じる。SLO予測でBEを層単位に細かく差し込むため、高優先度の保護と低優先度の資源利用を固定ヘッドルームより同時に改善できる。"},"reservation":{"claim_id":"claim-4221ae4eae4238e95de8fb44","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
