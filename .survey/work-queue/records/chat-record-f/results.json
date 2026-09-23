@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-9105373f954fe3246d7dc7ab",
-  "job_id": "job-research-4f3d063490df512a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9105373f954fe3246d7dc7ab",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-9105373f954fe3246d7dc7ab","job_id":"job-research-4f3d063490df512a","data":{"overview":"SpliTEEはTDX-onlyよりほぼ2倍高速で、Llama-3Bの800-token生成ではTDX 53.28秒に対しEP1 23.90秒、Qwen-4BではTDX約82.78秒に対しEP1約35.29秒となる。適応SlalomよりLlamaで約5秒、Qwenで約15秒高速で、量子化を避けるため生成品質も高い。雑音なし中間表現への復元攻撃は約80%意味類似度に達するが、EP1雑音下では約5%へ低下する。","key_results":[{"metric":"Llama-3B 800-token latency","value":"23.90 s (EP1) vs 53.28 s (TDX)","baseline":"full CPU inference inside TDX","condition":"45 Dolly prompts, batch 15, 800 generated tokens","interpretation":"主要線形演算のGPU委譲で2倍超の高速化を得る。"},{"metric":"Qwen-4B 800-token latency","value":"35.29 s EP1 / 35.42 s EPN vs 82.78 s TDX","baseline":"full TDX","condition":"same timing protocol","interpretation":"別Transformer familyでも同様の高速化傾向を確認する。"},{"metric":"Slalom比較","value":"最大約5 s faster on Llama, 約15 s faster on Qwen","baseline":"adapted Slalom FP32 outsourced path with 8-bit finite-field quantization","condition":"400/800 generated tokens","interpretation":"差分プライバシーmaskは有限体量子化型よりオンライン処理が軽い。"},{"metric":"EP1生成品質","value":"semantic similarity 99.20% at natural mean absolute error 2.06e-4","baseline":"clean split T3/GPU output","condition":"100 Dolly prompts, 200 generated tokens","interpretation":"通常のmask/correction数値誤差では意味品質がほぼ維持される。"},{"metric":"prompt reconstruction","value":"79.87% semantic similarity without noise; 5.29% with noise-aware EP1 QKV","baseline":"noise-free QKV exposure","condition":"500 unseen Dolly prompts, Layer 0","interpretation":"未保護中間表現は強く漏洩する一方、EP1では攻撃成功が無関係promptの重なり以下へ落ちる。"}],"negative_results":"強すぎる雑音は浮動小数点相殺誤差を増やし、EPNではexact match 10%、token match 42.55%、BLEU 64.49%、ROUGE-L 69.92%、semantic similarity 95.56%まで低下する。制御誤差実験ではmean absolute error 1e-2でsemantic similarity 82.99%、2e-2で9.91%へ崩れる。逆にepsilonを2500まで大きくして雑音を弱めるとnoise-aware composite attackのsemantic similarityが78.41%まで戻り、privacyが失われる。","interpretation":"性能面ではmask/correction自体の追加費用は小さく、雑音なしsplit T3とEP1/EPNの差は限定的である。支配的な利得はattention/MLP線形射影をGPUへ出すことから得る。privacyとutilityの本質的な交換は計算時間よりepsilon→雑音尺度→浮動小数点誤差→復元耐性の連鎖にある。","quality_impact":"固定epsilonが十分大きい範囲では意味品質をほぼ維持できるが、強いprivacy設定ではtoken-level一致が低下する。Slalomは量子化由来の品質低下をepsilonのように連続調整できない点で不利と報告される。"},"reservation":{"claim_id":"claim-9105373f954fe3246d7dc7ab","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
