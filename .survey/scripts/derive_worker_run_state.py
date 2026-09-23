@@ -495,7 +495,6 @@ def _refresh_cached_claim_state(root: Path, value: dict[str, Any]) -> dict[str, 
 
 
 def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
-def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
     state = _read(root / ".survey/work-queue/discovery-state.json", {}) or {}
     history = state.get("history") if isinstance(state.get("history"), list) else []
     identities: set[str] = set()
