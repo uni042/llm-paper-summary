@@ -96,6 +96,10 @@ def sync_research_bank_sidecars(
         if not _inventory_claim(value):
             continue
         bank = str(value.get("stock_bank") or "").lower()
+        if bank not in rows_by_bank:
+            order = value.get("pool_order")
+            if isinstance(order, int) and not isinstance(order, bool) and order >= 0:
+                bank = bank_for_sequence(order)
         if bank in rows_by_bank:
             rows_by_bank[bank].append(value)
 
