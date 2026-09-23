@@ -61,8 +61,9 @@ jobs:
             python .survey/scripts/claim_worker_with_banks.py --repo-root .
             python .survey/scripts/repair_claim_bank_recovery.py --repo-root .
             python .survey/scripts/enrich_claim_record_routes.py --repo-root .
+            python .survey/scripts/compact_worker_hot_queue.py --repo-root . --apply
 
-            git add \
+            git add -A \
               .survey/work-queue/claim-requests \
               .survey/work-queue/jobs \
               .survey/work-queue/claims \
