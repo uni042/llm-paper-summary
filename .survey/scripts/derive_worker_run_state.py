@@ -539,24 +539,45 @@ def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> b
     return _candidate_inventory(root) > 0
 
 
-def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
+def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False) -> dict[str, Any]:
+    global READ_COUNT
     root = root.resolve()
+    perf_started = time.perf_counter()
+    read_started = READ_COUNT
     started_at = _time(request["actual_invocation_start"])
     assert started_at is not None
 
-    frozen = _frozen_route(root, request["run_key"])
-    if request["scheduled_slot"] == "0830":
-        inventory = _candidate_inventory(root) if frozen is None else frozen[0]
-        work_mode = "maintenance"
-    elif frozen is not None:
-        inventory, work_mode = frozen
+    cached = None if force_canonical else run_state_cache.get_run(root, request)
+    cache_hit = cached is not None
+    if cached is not None:
+        inventory = int(cached["candidate_inventory"])
+        work_mode = str(cached["work_mode"])
+        submission = dict(cached["submission"])
+        claims = _claim_state(root, request["worker_id"], started_at)
+        run_state_cache.update_claims(root, request, claims)
     else:
-        inventory = _candidate_inventory(root)
-        work_mode = "research" if inventory >= 50 else "discovery"
+        frozen = _frozen_route(root, request["run_key"])
+        if request["scheduled_slot"] == "0830":
+            inventory = _candidate_inventory(root) if frozen is None else frozen[0]
+            work_mode = "maintenance"
+        elif frozen is not None:
+            inventory, work_mode = frozen
+        else:
+            inventory = _candidate_inventory(root)
+            work_mode = "research" if inventory >= 50 else "discovery"
 
-    attempts = _run_attempts(root, request["worker_id"], started_at)
-    submission = _run_submission_state(root, attempts, started_at)
-    claims = _claim_state(root, request["worker_id"], started_at)
+        attempts = _run_attempts(root, request["worker_id"], started_at)
+        submission = _run_submission_state(root, attempts, started_at)
+        claims = _claim_state(root, request["worker_id"], started_at)
+        run_state_cache.store_canonical_snapshot(
+            root,
+            request,
+            candidate_inventory=inventory,
+            work_mode=work_mode,
+            claims=claims,
+            submission=submission,
+        )
+
     discovery_rounds, selector = _discovery_rounds(root, request["run_key"])
     discovery_async = _discovery_async_state(root, request["run_key"])
 
@@ -663,6 +684,11 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
     else:
         gate = continuation_gate.decide(args)
 
+    public_submission = {key: value for key, value in submission.items() if key != "attempt_facts"}
+    derive_ms = round((time.perf_counter() - perf_started) * 1000.0, 3)
+    files_read = max(READ_COUNT - read_started, 0)
+    snapshot_generation = run_state_cache.generation_for(root, request["worker_id"], request["run_key"])
+
     return {
         "schema_version": 1,
         "ok": True,
@@ -682,8 +708,12 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "seconds_to_run_deadline": seconds_to_deadline,
         **claims,
-        **submission,
+        **public_submission,
         **discovery_async,
+        "snapshot_generation": snapshot_generation,
+        "run_state_source": "incremental_cache" if cache_hit else "canonical_rebuild",
+        "run_state_files_read": files_read,
+        "run_state_derive_ms": derive_ms,
         "discovery_rounds_completed": discovery_rounds,
         "discovery_selector": selector,
         "independent_work": independent_work,
@@ -698,7 +728,8 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
             "A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. "
-            "Discovery async state and carry-over immutable submissions remain visible across run boundaries."
+            "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
+            "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts."
         ),
     }
 
