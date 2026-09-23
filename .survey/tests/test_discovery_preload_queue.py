@@ -234,6 +234,55 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
         self.assertFalse((self.root / preload._claim_path(entry["preload_id"])).exists())
         self.assertIsNone(preload.pick_available(self.root, direction="forward"))
 
+    def test_compact_direct_take_hands_off_to_same_run_formal_request(self) -> None:
+        entry = self._prepare_forward_result()
+        available = preload.pick_available(self.root, direction="forward")
+        self.assertIsNotNone(available)
+        current = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
+        claim_path = self.root / preload._claim_path(entry["preload_id"])
+        write_json(
+            claim_path,
+            {
+                "schema_version": 1,
+                "operation": "direct_take_discovery",
+                "request_id": "direct-take-reservation",
+                "preload_id": entry["preload_id"],
+                "worker_id": "worker-3",
+                "run_key": "same-run",
+                "requested_at": current.isoformat(),
+                "discovery_bank": available["discovery_bank"],
+                "discovery_slot_path": available["discovery_slot_path"],
+            },
+        )
+
+        # A compact create-only reservation is immediately exclusive even before
+        # the background lane rewrites it with an explicit lease.
+        active = preload._active_claim(self.root, entry["preload_id"], current)
+        self.assertIsNotNone(active)
+        self.assertIsNone(preload.pick_available(self.root, direction="forward"))
+
+        formal = {
+            "request_id": "formal-precheck-request",
+            "worker_id": "worker-3",
+            "run_key": "same-run",
+            "preload_id": entry["preload_id"],
+            "provider": entry["provider"],
+            "source_url": entry["source_url"],
+            "axis": entry["axis"],
+            "initial_cursor": entry["initial_cursor"],
+            "page_size": entry["page_size"],
+            "discovery_bank": available["discovery_bank"],
+            "discovery_slot_path": available["discovery_slot_path"],
+        }
+        adopted_entry, loaded = preload.claim_and_load(self.root, formal)
+        self.assertEqual(adopted_entry["preload_id"], entry["preload_id"])
+        self.assertEqual(loaded["run_key"], f"preload:{entry['preload_id']}")
+        canonical = json.loads(claim_path.read_text(encoding="utf-8"))
+        self.assertEqual(canonical["request_id"], "formal-precheck-request")
+        self.assertEqual(canonical["worker_id"], "worker-3")
+        self.assertEqual(canonical["run_key"], "same-run")
+        self.assertIn("lease_expires_at", canonical)
+
     def test_old_prechecked_window_becomes_stale(self) -> None:
         entry = self._prepare_forward_result()
         entry_path = self.root / preload.ENTRIES / f"{entry['preload_id']}.json"
