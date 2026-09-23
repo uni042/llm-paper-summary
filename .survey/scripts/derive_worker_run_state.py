@@ -287,9 +287,12 @@ def _run_submission_state(
     started_at: dt.datetime,
 ) -> dict[str, Any]:
     completed = 0
+    completed_ids: list[str] = []
+    retryable_ids: list[str] = []
     pending: list[tuple[dt.datetime, str]] = []
     submitted: list[tuple[dt.datetime, str]] = []
     terminal: list[tuple[dt.datetime, str]] = []
+    facts: dict[str, dict[str, Any]] = {}
 
     for attempt_id, claimed_at in attempts.items():
         found_descriptor = False
@@ -299,23 +302,50 @@ def _run_submission_state(
                 continue
             found_descriptor = True
             submitted.append((claimed_at, attempt_id))
+            fact: dict[str, Any] = {
+                "attempt_id": attempt_id,
+                "kind": kind,
+                "claimed_at": claimed_at.astimezone(dt.timezone.utc).isoformat(),
+                "submitted": True,
+                "descriptor_path": descriptor_path.relative_to(root).as_posix(),
+            }
+            descriptor = _read(descriptor_path, {})
+            if isinstance(descriptor, dict):
+                fact["job_id"] = descriptor.get("job_id")
+                fact["worker_id"] = descriptor.get("worker_id")
+                fact["run_key"] = descriptor.get("run_key")
             result = _read(root / ".survey/work-queue/results" / kind / descriptor_path.name, {})
             if not isinstance(result, dict) or result.get("attempt_id") != attempt_id:
                 pending.append((claimed_at, attempt_id))
+                fact["pending"] = True
+                fact["retryable"] = False
+                facts[attempt_id] = fact
                 continue
-            if result.get("ok") is False and result.get("retryable") is True:
+            retryable = result.get("ok") is False and result.get("retryable") is True
+            if retryable:
                 pending.append((claimed_at, attempt_id))
+                retryable_ids.append(attempt_id)
+                fact["pending"] = True
+                fact["retryable"] = True
+                fact["processed_at"] = result.get("processed_at")
+                fact["job_status"] = str(result.get("job_status") or "none").lower()
+                facts[attempt_id] = fact
                 continue
             processed_at = _time(result.get("processed_at")) or claimed_at
             status = str(result.get("job_status") or "none").lower()
-            if (
-                result.get("ok") is True
-                and status == "completed"
-                and processed_at >= started_at
-            ):
+            fact["pending"] = status not in {"completed", "blocked", "deferred", "rejected"}
+            fact["retryable"] = False
+            fact["processed_at"] = processed_at.astimezone(dt.timezone.utc).isoformat()
+            fact["job_status"] = status
+            fact["completed"] = bool(result.get("ok") is True and status == "completed")
+            if fact["pending"]:
+                pending.append((claimed_at, attempt_id))
+            if fact["completed"] and processed_at >= started_at:
                 completed += 1
+                completed_ids.append(attempt_id)
             if status in {"completed", "blocked", "deferred", "rejected"}:
                 terminal.append((processed_at, status))
+            facts[attempt_id] = fact
         if not found_descriptor:
             continue
 
@@ -333,8 +363,10 @@ def _run_submission_state(
         "last_terminal_job_status": terminal[-1][1] if terminal else "none",
         "submitted_attempt_ids": [attempt for _, attempt in sorted(submitted)],
         "pending_attempt_ids": [attempt for _, attempt in sorted(pending)],
+        "completed_attempt_ids": sorted(set(completed_ids)),
+        "retryable_attempt_ids": sorted(set(retryable_ids)),
+        "attempt_facts": facts,
     }
-
 
 def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[str, Any]:
     pending_requests: list[tuple[dt.datetime, str]] = []
