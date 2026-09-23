@@ -137,7 +137,8 @@ def _identity_from_request(request: dict[str, Any]) -> dict[str, Any]:
 
 
 def get_run(root: Path, request: dict[str, Any]) -> dict[str, Any] | None:
-    cache = load_cache(root, str(request.get("worker_id") or ""))
+    worker_id = str(request.get("worker_id") or "")
+    cache = load_cache(root, worker_id)
     if cache is None:
         return None
     run = cache.get("runs", {}).get(str(request.get("run_key") or ""))
