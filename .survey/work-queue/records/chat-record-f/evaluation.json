@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-65be149fc066a960d4993312",
-  "job_id": "job-research-9d4382735e8b7ada",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-65be149fc066a960d4993312",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-65be149fc066a960d4993312","job_id":"job-research-9d4382735e8b7ada","data":{"hardware":"新規ベンチマークを行う実験論文ではなく、N台の並列デバイスを抽象化した仕事量・深さ・メモリモデルを用いる。データ、テンソル、パイプライン、系列、文脈、エキスパート並列および3D/5D複合構成について、Transformer一反復の一ランク当たり・全体複雑度を導出する。","software":"既存RLM基盤と実行エンジンの公開機能を分類する。対象にはTRL、ColossalChat、DeepSpeed-Chat、OpenRLHF、HybridFlow、NeMo RL、ReaL、RLHFuse、FlexRLHF、StreamRL、Asynchronous RLHF、AReaL、Pipe-RLHF、AsyncFlow、Laminar、StaleFlow等が含まれ、訓練側FSDP/ZeRO/Megatron、ロールアウト側vLLM/SGLang/TensorRT-LLMとの組合せを論じる。","methodology":"PPO、GRPO、DPOの数式と実行データフローを生成・評価・学習へ分解し、方策、参照、報酬、批評の各呼出しについて前向き、後向き、自己回帰生成の演算・依存・状態量を導出する。その上で6種のモデル内並列と、構造共有、配置、段階融合、異種並列、非同期化のモデル間最適化を適用した時のW/D/M変化を比較する。最後に公開フレームワークの文書化機能を同一分類表へ写像し、実装ギャップと適用条件を分析する。","baselines":"性能数値を競う単一ベースラインはない。比較軸は同期対非同期、同居対分離配置、逐次対並行評価、単一並列方式対役割別ハイブリッド、PPO対GRPO/DPOのモデル数・訓練対象差である。既存フレームワーク同士は各分類機能の公開サポート有無・部分対応を表形式で比較する。","scope":"仕事量・深さモデルは算術依存を主に扱い、通信を含む実機時間を完全には予測しない。論文自身もエキスパート全対全や分散注意集合通信などを算術深さ抽象の外側として扱う。したがって式は並列化の構造的下限とメモリ傾向を比較する用途に強く、特定GPU・ネットワーク上の絶対速度予測には実測プロファイルが別途必要である。"},"reservation":{"claim_id":"claim-65be149fc066a960d4993312","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
