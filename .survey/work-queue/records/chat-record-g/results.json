@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-b7b0e81277b66329080b1c40",
-  "job_id": "job-research-8699aa3a6604cb58",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b7b0e81277b66329080b1c40",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-b7b0e81277b66329080b1c40","job_id":"job-research-8699aa3a6604cb58","data":{"overview":"1.3B+MoE-128は6.7B denseと同等品質を約5分の1の訓練計算で達成し、128 A100上の訓練スループットは70から372 samples/sへ約5倍。PR-MoEは350M系で13Bから4B未満、1.3B系で52Bから31Bへ縮小し、MoS併用で3.5B/27Bまで削減する。DeepSpeed推論はPyTorch比で最大7.3倍の遅延削減・スループット向上、trillion級MoEを25ms未満で推論し、品質同等dense比では最大4.5倍高速・9倍低コストを報告する。","key_results":[{"metric":"同品質NLG訓練スループット","value":"372 samples/s","baseline":"6.7B dense: 70 samples/s","condition":"1.3B+MoE-128, 128 A100, same-quality comparison","interpretation":"活性計算量を1.3B base相当に保ち、約5倍の訓練コスト削減。"},{"metric":"MoEモデルサイズ削減","value":"最大3.7x","baseline":"Standard MoE","condition":"PR-MoE + staged MoS","interpretation":"PR-MoE単独最大3x、MoS併用でさらに圧縮しながら教師平均ゼロショット性能の約99%以上を保持。"},{"metric":"DeepSpeed-MoE対PyTorch推論","value":"最大7.3x低遅延かつ最大7.3x高スループット","baseline":"distributed PyTorch MoE inference","condition":"107B–2T models, 128/256 A100","interpretation":"多次元並列、通信、カーネル最適化を統合したend-to-end効果。"},{"metric":"trillion級MoE latency","value":"under 25 ms","baseline":"PyTorch baseline scales poorly at this size","condition":"up to 256 A100","interpretation":"expert parallelism/slicingとaggregate bandwidthでtrillion parameter推論を低遅延化。"},{"metric":"品質同等dense比 inference","value":"最大4.5x faster / 9x cheaper","baseline":"175B dense model","condition":"~1.5T PR-MoE+MoS; quality equivalence projected from scaling","interpretation":"大規模比較は品質同等性に投影仮定を含むが、システム・圧縮の組合せでMoEの推論優位を示す。"}],"negative_results":[{"name":"標準MoEのパラメータ効率の低さ","description":"1.3B+MoE-128は同等品質6.7B denseに対して総52Bパラメータで、訓練計算は少なくてもメモリと推論帯域が悪化する。"},{"name":"全期間KDは後半で悪化","description":"容量を減らしたPR-MoE学生へKDを全期間適用すると約400K step以降に検証性能を損ない、LAMBADA/PIQA等も段階KDより低下した。"},{"name":"通信スケーリングの課題","description":"expert parallelismの素朴なall-to-allはGPU数とともに遅延が増え、階層化・tensor-rank協調なしでは大規模化の利益を相殺する。"}],"interpretation":"本論文の中心的示唆はMoE推論のコストが活性FLOPsだけでは決まらない点にある。モデルサイズをPR-MoE/MoSで減らし、1GPUが読む専門家集合をexpert parallelismで減らし、aggregate bandwidthをtensor/expert slicingで増やし、通信・カーネル固定費を削ることで初めて疎性が実遅延へ反映される。","quality_impact":"圧縮は完全無損失ではなく、MoSは平均品質を99%以上保つが個別タスクでは低下もある。trillion級のdense比較は品質同等性を直接学習・評価したものではなく、スケーリング仮定を含むため数値解釈に注意が必要。"},"reservation":{"claim_id":"claim-b7b0e81277b66329080b1c40","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}

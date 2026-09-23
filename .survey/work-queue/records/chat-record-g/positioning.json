@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-b7b0e81277b66329080b1c40",
-  "job_id": "job-research-8699aa3a6604cb58",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b7b0e81277b66329080b1c40",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b7b0e81277b66329080b1c40","job_id":"job-research-8699aa3a6604cb58","data":{"limitations":[{"name":"大規模品質同等性の投影","description":"1.5T MoE対175B denseの比較では、小規模実験と既存文献から品質同等性がスケールすると仮定しており、両モデルを同条件で直接訓練・評価した比較ではない。"},{"name":"大規模GPUクラスタ前提","description":"主要推論利得は128〜256 A100までのaggregate memory bandwidthを利用する設計で、単一GPUや少数GPU環境へ同じ倍率を外挿できない。"},{"name":"top-1中心の評価","description":"NLG MoEは主にtop-1 gatingで、top-2は計算・通信増のため限定評価。現代の細粒度多数expert MoEとはルーティング特性が異なる。"},{"name":"オフロード未評価","description":"GPUメモリ内の分散配置を前提とし、CPU/DRAM/NVMeへのexpert offloadやcache/prefetchは扱わない。"}],"differences":[{"name":"訓練MoE基盤との差","description":"既存DeepSpeed/FastMoE/Fairseq-MoEが主に訓練を対象としたのに対し、モデル圧縮・分散配置・通信・推論カーネルを一体で設計する。"},{"name":"FLOPs中心最適化との差","description":"推論はmemory bandwidth boundとして総モデルサイズと1GPU当たりの重み読み出しを最適化し、疎活性FLOPsだけを性能指標にしない。"},{"name":"dense蒸留との差","description":"MoSはMoEをdenseへ蒸留せず疎なPR-MoE学生を維持するため、expert parallelismと疎推論の構造的利点を残す。"},{"name":"後続offload/cacheとの差","description":"全専門家をGPUクラスタへ分散常駐させaggregate bandwidthを稼ぐ方式で、CPU/SSDに退避して必要expertだけ転送する後続階層メモリ方式とは補完・対照関係にある。"}],"implementation_status":"DeepSpeedの公開MoE機能として実装され、公式GitHubとドキュメントが存在する。論文実装はNCCL/SCCL、CUDA融合カーネル、expert/tensor/data parallelを統合する。","research_positioning":"Adaptive Expert Computation / Compression系統の基礎的システム論文として、(1)アーキテクチャでexpert総量を減らす、(2)蒸留で深さを減らす、(3)expertをGPU間分散して各GPUの重み読み出しを減らす、(4)all-to-allと疎カーネルを最適化する、という後続MoE推論研究の主要軸を早期に一つのend-to-end設計へ統合した。特にメモリ帯域を推論律速と明示した点はexpert cache/offload/prefetch研究へ直接つながる。","evidence_locations":["§1–3: MoE NLGの訓練効率と推論課題","§4.1: PR-MoEのPyramid/Residual設計と圧縮","§4.2: MoS staged knowledge distillation","§5.1–5.2: inference paradoxと多次元parallelism","§5.3: hierarchical/parallelism-coordinated all-to-all","§5.4: fused MoE kernels","§5.5: 52B scaling、107B–2T推論、dense比較"]},"reservation":{"claim_id":"claim-b7b0e81277b66329080b1c40","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
