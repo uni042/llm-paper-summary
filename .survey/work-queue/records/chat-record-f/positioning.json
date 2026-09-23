@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-1205cc442808cb1df99b7f86",
-  "job_id": "job-research-41c5d2a7e72d6309",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1205cc442808cb1df99b7f86",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-1205cc442808cb1df99b7f86","job_id":"job-research-41c5d2a7e72d6309","data":{"limitations":"評価はGLM-5.3-Flashの単一revision、RedHatAI NVFP4 checkpoint、vLLM＋LMCache、4-way tensor parallelismという制御条件に限定される。120要求も直列であり、実サービスの同時実行時に同じthroughputやtail latency改善が得られるかは未検証。token-ID一致は一般的決定性や意味品質同等性を保証せず、GPUメモリ容量を超える大規模cache tieringの効果も扱わない。","differences":"一般的なprefix/KV cache研究がヒット率、転送帯域、TTFTを主要指標にするのに対し、本研究はハイブリッド状態モデルで『転送成功だが再開境界が不整合』という統合バグを主対象にする。新しいcache replacementやcompressionを提案せず、strict-prefix lookupとscheduler accountingの整合、checkpoint timing、rank kernel固定によって既存LMCache/vLLM統合の正しさを検証する点が異なる。","implementation_status":"vLLMとLMCache上で実際に再現・修正・計測されたengineering validationであり、45層GLM-5.3-Flashの4-way TP構成で動作確認されている。独立した公開コードリポジトリは一次資料から確認できないため、再現には論文記載の構成と修正点を追う必要がある。","research_positioning":"本リポジトリではKV cache offload・外部cache・階層メモリ系統のcorrectness validationとして位置付けるべき研究である。CPU/NVMe/remote cacheを導入するシステムは転送量削減だけでなく、モデル固有状態とschedulerの再開境界を耐久契約として扱う必要があることを示す。特にMamba等を含むhybrid architectureではKV cacheだけを復元単位とみなす設計が破綻しうるため、今後のLMCache、Mooncake系、SSD offload設計でもcache hit判定にstate completenessとboundary alignmentを含める必要がある。性能結果はTTFT改善が大きくend-to-end改善が小さいため、prefill比率が高いワークロードほど価値が高いという実務的示唆もある。"},"reservation":{"claim_id":"claim-1205cc442808cb1df99b7f86","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
