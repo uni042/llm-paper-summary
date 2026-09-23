@@ -862,6 +862,23 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
     }
 
 
+def maintain_shared_pool(repo_root: Path, at: Any = None) -> dict[str, int]:
+    """Maintain only the shared preload inventory without replaying claim requests."""
+    root = Path(repo_root).resolve()
+    now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
+    claims = claim_state.current_claims(root, now)
+    descriptors = _immutable_descriptors(root)
+    submitted_jobs = _release_durable_claims(root, claims, descriptors, now)
+    claims = claim_state.current_claims(root, now)
+    return shared_preload_pool.maintain(
+        root,
+        claims=claims,
+        jobs=_job_files(root),
+        submitted_jobs=submitted_jobs,
+        now=now,
+    )
+
+
 if __name__ == "__main__":
     raise SystemExit(
         "claim_worker.py is an internal claim-allocation core; "
