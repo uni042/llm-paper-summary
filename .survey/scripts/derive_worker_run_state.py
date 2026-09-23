@@ -545,31 +545,134 @@ def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
     return len(identities), selector
 
 
+def _discovery_precheck_route_key(request: Any) -> tuple[str, str] | None:
+    """Return a stable fixed-source identity for one schema-v3 precheck request."""
+    if not isinstance(request, dict):
+        return None
+    provider = str(request.get("provider") or "").strip().casefold()
+    source_url = str(request.get("source_url") or "").strip()
+    if not provider or not source_url:
+        return None
+    return provider, source_url
+
+
+def _git_introduction_order(root: Path, relative_paths: list[str]) -> dict[str, int]:
+    """Return first-add commit order for selected durable artifacts.
+
+    Discovery retries intentionally preserve failed immutable artifacts.  File
+    contents alone therefore cannot distinguish a current failure from historical
+    evidence that a later canonical attempt has already superseded.  The run-state
+    workflow checks out full history (fetch-depth: 0), so use one local git query to
+    order only the current run's relevant artifacts.  Non-git test fixtures fall
+    back to exact fixed-source matching.
+    """
+    import subprocess
+
+    paths = sorted({str(Path(path).as_posix()) for path in relative_paths if str(path).strip()})
+    if not paths:
+        return {}
+    proc = subprocess.run(
+        [
+            "git",
+            "log",
+            "--reverse",
+            "--diff-filter=A",
+            "--format=commit:%H",
+            "--name-only",
+            "--",
+            *paths,
+        ],
+        cwd=root,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if proc.returncode != 0:
+        return {}
+
+    wanted = set(paths)
+    order: dict[str, int] = {}
+    commit_order = -1
+    for raw in proc.stdout.splitlines():
+        line = raw.strip()
+        if not line:
+            continue
+        if line.startswith("commit:"):
+            commit_order += 1
+            continue
+        if line in wanted and line not in order:
+            order[line] = commit_order
+    return order
+
+
 def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
     request_root = root / ".survey/work-queue/discovery-precheck/requests"
     precheck_result_root = root / ".survey/work-queue/discovery-precheck/results"
     submission_root = root / ".survey/work-queue/submissions"
     result_root = root / ".survey/work-queue/results"
 
+    state = _read(root / ".survey/work-queue/discovery-state.json", {}) or {}
+    history = state.get("history") if isinstance(state.get("history"), list) else []
+    accounted_prechecks = {
+        str(row.get("precheck_request_id") or "")
+        for row in history
+        if isinstance(row, dict)
+        and str(row.get("run_key") or "") == run_key
+        and (row.get("round_accounted") is True or row.get("round_complete") is True)
+        and str(row.get("precheck_request_id") or "")
+    }
+    accounted_rounds = {
+        str(row.get("round_identity") or row.get("round") or row.get("source_submission") or "")
+        for row in history
+        if isinstance(row, dict)
+        and str(row.get("run_key") or "") == run_key
+        and (row.get("round_accounted") is True or row.get("round_complete") is True)
+        and str(row.get("round_identity") or row.get("round") or row.get("source_submission") or "")
+    }
+
     pending_prechecks: list[str] = []
     evaluation_pending: list[str] = []
     recovery_required: list[str] = []
+    superseded_failures: list[str] = []
     successful_prechecks: dict[str, dict[str, Any]] = {}
+    precheck_requests: dict[str, dict[str, Any]] = {}
+    failed_events: list[dict[str, Any]] = []
+    progress_events: list[dict[str, Any]] = []
     submission_progress: dict[str, dict[str, Any]] = {}
+    submission_rows: list[dict[str, Any]] = []
 
     if request_root.is_dir():
         for path in request_root.glob("*.json"):
             request = _read(path, {})
             if not isinstance(request, dict) or str(request.get("run_key") or "") != run_key:
                 continue
-            result = _read(precheck_result_root / path.name, {})
+            precheck_requests[path.stem] = request
+            result_path = precheck_result_root / path.name
+            result = _read(result_path, {})
             if not isinstance(result, dict) or result.get("request_id") != path.stem:
                 pending_prechecks.append(path.stem)
                 continue
+            route_key = _discovery_precheck_route_key(request)
+            relative_result = result_path.relative_to(root).as_posix()
             if result.get("ok") is True and result.get("evaluation_allowed") is True:
                 successful_prechecks[path.stem] = result
+                progress_events.append(
+                    {
+                        "target": f"precheck:{path.stem}",
+                        "path": relative_result,
+                        "route_key": route_key,
+                    }
+                )
             elif result.get("ok") is False:
-                recovery_required.append(f"precheck:{path.stem}")
+                failed_events.append(
+                    {
+                        "target": f"precheck:{path.stem}",
+                        "path": relative_result,
+                        "route_key": route_key,
+                        "precheck_id": path.stem,
+                        "round_id": None,
+                    }
+                )
 
     pending_submissions: list[str] = []
     if submission_root.is_dir():
@@ -588,6 +691,10 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
                 or stats.get("precheck_request_id")
                 or ""
             )
+            round_id = str(stats.get("round") or "").strip() or None
+            route_key = _discovery_precheck_route_key(precheck_requests.get(precheck_id))
+            relative_submission = path.relative_to(root).as_posix()
+
             if precheck_id:
                 progress = submission_progress.setdefault(
                     precheck_id,
@@ -603,20 +710,49 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
 
             result_path = result_root / path.name
             result = _read(result_path, {})
+            row = {
+                "stem": path.stem,
+                "submission_path": relative_submission,
+                "result_path": result_path.relative_to(root).as_posix(),
+                "precheck_id": precheck_id,
+                "round_id": round_id,
+                "route_key": route_key,
+                "result": result,
+            }
+            submission_rows.append(row)
+
             if not result_path.is_file() or not isinstance(result, dict) or not result:
                 pending_submissions.append(path.stem)
             elif result.get("ok") is False:
-                recovery_required.append(f"submission:{path.stem}")
+                failed_events.append(
+                    {
+                        "target": f"submission:{path.stem}",
+                        "path": row["result_path"],
+                        "route_key": route_key,
+                        "precheck_id": precheck_id or None,
+                        "round_id": round_id,
+                    }
+                )
+            elif result.get("ok") is True:
+                progress_events.append(
+                    {
+                        "target": f"submission:{path.stem}",
+                        "path": row["result_path"],
+                        "route_key": route_key,
+                    }
+                )
 
-    state = _read(root / ".survey/work-queue/discovery-state.json", {}) or {}
-    history = state.get("history") if isinstance(state.get("history"), list) else []
-    accounted_prechecks = {
-        str(row.get("precheck_request_id") or "")
-        for row in history
-        if isinstance(row, dict)
-        and str(row.get("run_key") or "") == run_key
-        and (row.get("round_accounted") is True or row.get("round_complete") is True)
-    }
+            if (
+                (round_id and round_id in accounted_rounds)
+                or (precheck_id and precheck_id in accounted_prechecks)
+            ):
+                progress_events.append(
+                    {
+                        "target": f"accounted:{path.stem}",
+                        "path": relative_submission,
+                        "route_key": route_key,
+                    }
+                )
 
     for request_id in successful_prechecks:
         if request_id in accounted_prechecks:
@@ -628,6 +764,56 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
         if len(progress["indices"]) < int(progress["expected"]):
             evaluation_pending.append(request_id)
 
+    # Historical immutable failures must remain as audit evidence, but they must
+    # not poison the continuation gate forever.  A failure is superseded once a
+    # later canonical success/progress artifact exists in the same run.  When git
+    # history is unavailable (unit-test fixtures), exact fixed-source replacement
+    # provides a conservative fallback.
+    paths_for_order = [str(event.get("path") or "") for event in failed_events + progress_events]
+    introduction_order = _git_introduction_order(root, paths_for_order)
+    successful_routes = {
+        event.get("route_key")
+        for event in progress_events
+        if event.get("route_key") is not None
+    }
+    progress_orders = [
+        introduction_order[path]
+        for path in (str(event.get("path") or "") for event in progress_events)
+        if path in introduction_order
+    ]
+    latest_progress_order = max(progress_orders, default=None)
+
+    for event in failed_events:
+        target = str(event["target"])
+        precheck_id = str(event.get("precheck_id") or "")
+        round_id = str(event.get("round_id") or "")
+        if (
+            (precheck_id and precheck_id in accounted_prechecks)
+            or (round_id and round_id in accounted_rounds)
+        ):
+            superseded_failures.append(target)
+            continue
+
+        path = str(event.get("path") or "")
+        failure_order = introduction_order.get(path)
+        superseded = bool(
+            failure_order is not None
+            and latest_progress_order is not None
+            and latest_progress_order > failure_order
+        )
+        if (
+            not superseded
+            and failure_order is None
+            and event.get("route_key") is not None
+            and event.get("route_key") in successful_routes
+        ):
+            superseded = True
+
+        if superseded:
+            superseded_failures.append(target)
+        else:
+            recovery_required.append(target)
+
     return {
         "discovery_precheck_result_pending": bool(pending_prechecks),
         "pending_discovery_precheck_request_ids": sorted(pending_prechecks),
@@ -637,8 +823,8 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
         "discovery_evaluation_request_ids": sorted(evaluation_pending),
         "discovery_recovery_required": bool(recovery_required),
         "discovery_recovery_targets": sorted(recovery_required),
+        "discovery_superseded_failure_targets": sorted(superseded_failures),
     }
-
 
 def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> bool:
     if work_mode == "discovery":

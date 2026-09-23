@@ -6,6 +6,7 @@ import json
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -260,6 +261,245 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertTrue(result["discovery_evaluation_pending"])
             self.assertIn("pre-1", result["discovery_evaluation_request_ids"])
             self.assertEqual(result["gate"]["required_action"], "CONTINUE_DISCOVERY_ROUND")
+
+    def test_latest_failed_precheck_still_requires_recovery(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-failed.json",
+                {
+                    "request_id": "pre-failed",
+                    "run_key": "run-1",
+                    "provider": "semantic_scholar",
+                    "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=test",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/pre-failed.json",
+                {
+                    "request_id": "pre-failed",
+                    "run_key": "run-1",
+                    "ok": False,
+                    "evaluation_allowed": False,
+                    "error": "HTTP 429",
+                },
+            )
+            result = mod.derive(root, request())
+            self.assertTrue(result["discovery_recovery_required"])
+            self.assertIn("precheck:pre-failed", result["discovery_recovery_targets"])
+            self.assertEqual(result["gate"]["required_action"], "RECOVER_DISCOVERY_SUBMISSION")
+
+    def test_failed_precheck_is_historical_after_later_successful_precheck(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-old.json",
+                {
+                    "request_id": "pre-old",
+                    "run_key": "run-1",
+                    "provider": "semantic_scholar",
+                    "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=old",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/pre-old.json",
+                {"request_id": "pre-old", "run_key": "run-1", "ok": False},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-new.json",
+                {
+                    "request_id": "pre-new",
+                    "run_key": "run-1",
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/pre-new.json",
+                {
+                    "request_id": "pre-new",
+                    "run_key": "run-1",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                },
+            )
+            order = {
+                ".survey/work-queue/discovery-precheck/results/pre-old.json": 0,
+                ".survey/work-queue/discovery-precheck/results/pre-new.json": 1,
+            }
+            with mock.patch.object(mod, "_git_introduction_order", return_value=order):
+                result = mod.derive(root, request())
+            self.assertFalse(result["discovery_recovery_required"])
+            self.assertIn("precheck:pre-old", result["discovery_superseded_failure_targets"])
+            self.assertTrue(result["discovery_evaluation_pending"])
+            self.assertEqual(result["gate"]["required_action"], "CONTINUE_DISCOVERY_ROUND")
+
+    def test_newer_failure_is_not_hidden_by_older_success(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-old-success.json",
+                {
+                    "request_id": "pre-old-success",
+                    "run_key": "run-1",
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/pre-old-success.json",
+                {
+                    "request_id": "pre-old-success",
+                    "run_key": "run-1",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-new-failed.json",
+                {
+                    "request_id": "pre-new-failed",
+                    "run_key": "run-1",
+                    "provider": "semantic_scholar",
+                    "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=new",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/pre-new-failed.json",
+                {"request_id": "pre-new-failed", "run_key": "run-1", "ok": False},
+            )
+            order = {
+                ".survey/work-queue/discovery-precheck/results/pre-old-success.json": 0,
+                ".survey/work-queue/discovery-precheck/results/pre-new-failed.json": 1,
+            }
+            with mock.patch.object(mod, "_git_introduction_order", return_value=order):
+                result = mod.derive(root, request())
+            self.assertTrue(result["discovery_recovery_required"])
+            self.assertIn("precheck:pre-new-failed", result["discovery_recovery_targets"])
+            self.assertEqual(result["gate"]["required_action"], "RECOVER_DISCOVERY_SUBMISSION")
+
+    def test_failed_submission_is_superseded_by_successful_replacement_round(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {
+                    "schema_version": 3,
+                    "history": [
+                        {
+                            "run_key": "run-1",
+                            "round": "round-replacement",
+                            "round_accounted": True,
+                            "precheck_request_id": "pre-replacement",
+                        }
+                    ],
+                },
+            )
+            for precheck_id in ("pre-failed", "pre-replacement"):
+                write_json(
+                    root,
+                    f".survey/work-queue/discovery-precheck/requests/{precheck_id}.json",
+                    {
+                        "request_id": precheck_id,
+                        "run_key": "run-1",
+                        "provider": "repository_references",
+                        "source_url": "repository://structured-references",
+                    },
+                )
+                write_json(
+                    root,
+                    f".survey/work-queue/discovery-precheck/results/{precheck_id}.json",
+                    {
+                        "request_id": precheck_id,
+                        "run_key": "run-1",
+                        "ok": True,
+                        "evaluation_allowed": True,
+                    },
+                )
+
+            write_json(
+                root,
+                ".survey/work-queue/submissions/failed-round.json",
+                {
+                    "operation": "submit_discovery_round",
+                    "discovery_precheck": {"request_id": "pre-failed"},
+                    "discovery_stats": {
+                        "run_key": "run-1",
+                        "round": "round-failed",
+                        "axis": "backward",
+                    },
+                    "candidates": [],
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/results/failed-round.json",
+                {
+                    "ok": False,
+                    "error_code": "discovery_precheck_required",
+                    "error": "workflow provenance required",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/submissions/replacement-round.json",
+                {
+                    "operation": "submit_discovery_round",
+                    "discovery_precheck": {"request_id": "pre-replacement"},
+                    "discovery_stats": {
+                        "run_key": "run-1",
+                        "round": "round-replacement",
+                        "axis": "backward",
+                    },
+                    "candidates": [],
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/results/replacement-round.json",
+                {"ok": True, "ingested": True},
+            )
+
+            result = mod.derive(root, request())
+            self.assertFalse(result["discovery_recovery_required"])
+            self.assertIn("submission:failed-round", result["discovery_superseded_failure_targets"])
+            self.assertEqual(result["discovery_rounds_completed"], 1)
+            self.assertEqual(result["gate"]["required_action"], "DISCOVER_AGAIN")
 
     def test_prior_run_unresolved_submission_remains_pending(self):
         with tempfile.TemporaryDirectory() as td:
