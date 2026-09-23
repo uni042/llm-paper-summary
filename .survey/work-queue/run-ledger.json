@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T05:19:48.470288+00:00",
+  "updated_at": "2026-09-23T05:36:20.174532+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -41859,6 +41859,56 @@
       "paper_active_count_before": 971,
       "paper_active_count_after": 971,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35823070572",
+      "first_recorded_at": "2026-09-23T05:36:20.174532+00:00",
+      "last_recorded_at": "2026-09-23T05:36:20.174532+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35823070572:1",
+          "recorded_at": "2026-09-23T05:36:20.174532+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35823070572",
+            "run_attempt": "1",
+            "source_sha": "d1b6c7b1ba1cad0d2ec09e385c75afe544de15d0"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-cb87e313d4b1653f",
+          "type": "research",
+          "canonical_id": "arXiv:2602.00879",
+          "title": "Dynamic Expert Sharing: Decoupling Memory from Parallelism in Mixture-of-Experts Diffusion LLMs",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 971,
+      "paper_active_count_after": 971,
+      "last_successful_action": "research_completed"
     }
   ]
 }
