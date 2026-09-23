@@ -77,10 +77,23 @@ jobs:
               --manifest /tmp/completed-builder.json
             built="$(jq -r '.built_descriptors | length' /tmp/completed-builder.json)"
 
-            git add \
+            python .survey/scripts/compact_worker_transport.py \
+              --repo-root . \
+              --apply \
+              --min-age-seconds 7200 \
+              --report /tmp/transport-compact.json \
+              || echo 'Transport compaction failed; descriptor recovery continues and maintenance will retry.'
+
+            git add -A \
+              .survey/work-queue/completed-submission-requests \
               .survey/work-queue/completed-submission-failures \
+              .survey/work-queue/research-preflight \
               .survey/work-queue/submissions/research \
-              .survey/work-queue/submissions/audit
+              .survey/work-queue/submissions/audit \
+              .survey/work-queue/run-state \
+              .survey/work-queue/archive \
+              .survey/work-queue/claim-requests \
+              .survey/work-queue/claim-results
 
             if git diff --cached --quiet; then
               echo 'No new completed descriptors or isolation records to publish.'

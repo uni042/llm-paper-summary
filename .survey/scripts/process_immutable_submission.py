@@ -155,8 +155,16 @@ def _clear_repair_state(job: dict[str, Any]) -> None:
     job.pop("last_validation_failed_at", None)
 
 
+def _run_identity(descriptor: dict[str, Any]) -> dict[str, Any]:
+    return {
+        field: descriptor[field]
+        for field in ("worker_id", "run_key", "scheduled_slot", "actual_invocation_start")
+        if descriptor.get(field) not in (None, "")
+    }
+
+
 def _success_result(descriptor: dict[str, Any], relative_submission: str, *, job_status: str | None, artifact: dict[str, Any] | None, reconciled: bool = False) -> dict[str, Any]:
-    result = {"schema_version": 1, "workflow_version": 10, "ok": True, "attempt_id": descriptor["attempt_id"], "job_id": descriptor["job_id"], "job_type": descriptor["kind"], "job_status": job_status, "artifact": artifact, "submission": relative_submission, "processed_at": _now()}
+    result = {"schema_version": 1, "workflow_version": 10, "ok": True, "attempt_id": descriptor["attempt_id"], "job_id": descriptor["job_id"], "job_type": descriptor["kind"], "job_status": job_status, "artifact": artifact, "submission": relative_submission, "processed_at": _now(), **_run_identity(descriptor)}
     if reconciled:
         result["reconciled"] = True
     return result
@@ -225,7 +233,7 @@ def record_failure(repo_root: Path, submission_path: Path, exc: Exception) -> di
         if existing.get("attempt_id") == attempt_id and existing.get("job_id") == job_id:
             return existing
         raise ValueError("immutable result path already contains a conflicting attempt/job")
-    result = {"schema_version": 1, "workflow_version": 10, "ok": False, "attempt_id": attempt_id, "job_id": job_id, "job_type": kind, "job_status": None, "artifact": None, "submission": submission_path.relative_to(repo_root).as_posix(), "error": f"{type(exc).__name__}: {exc}", "processed_at": _now()}
+    result = {"schema_version": 1, "workflow_version": 10, "ok": False, "attempt_id": attempt_id, "job_id": job_id, "job_type": kind, "job_status": None, "artifact": None, "submission": submission_path.relative_to(repo_root).as_posix(), "error": f"{type(exc).__name__}: {exc}", "processed_at": _now(), **_run_identity(raw)}
     validation_errors = list(getattr(exc, "issues", []) or [])
     if validation_errors:
         result["validation_errors"] = validation_errors

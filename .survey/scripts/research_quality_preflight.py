@@ -23,6 +23,8 @@ import process_immutable_submission  # noqa: E402
 SCHEMA_VERSION = 1
 OPERATION = "research_quality_preflight"
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
+ALLOWED_WORKERS = {"scheduled-chat-00": {"00"}, "scheduled-chat-30": {"30", "0830"}}
+RUN_IDENTITY_FIELDS = ("worker_id", "run_key", "scheduled_slot", "actual_invocation_start")
 SELF_REVIEW_KEYS = (
     "primary_source_read_to_end",
     "no_unverified_inference",
@@ -58,6 +60,37 @@ def _safe_id(value: Any, field: str) -> str:
     if not SAFE_ID_RE.fullmatch(out):
         raise PreflightRequestError(f"{field} must be a safe non-empty identifier")
     return out
+
+
+def _run_identity(request: dict[str, Any]) -> dict[str, Any]:
+    present = [field for field in RUN_IDENTITY_FIELDS if request.get(field) not in (None, "")]
+    if not present:
+        return {}
+    missing = [field for field in RUN_IDENTITY_FIELDS if request.get(field) in (None, "")]
+    if missing:
+        raise PreflightRequestError("Scheduled Chat run identity must be complete: " + ", ".join(missing))
+    worker_id = str(request.get("worker_id") or "").strip()
+    if worker_id not in ALLOWED_WORKERS:
+        raise PreflightRequestError("worker_id must be scheduled-chat-00 or scheduled-chat-30")
+    run_key = str(request.get("run_key") or "").strip()
+    if not run_key or len(run_key) > 512:
+        raise PreflightRequestError("run_key must be a non-empty string up to 512 characters")
+    scheduled_slot = str(request.get("scheduled_slot") or "").strip()
+    if scheduled_slot not in ALLOWED_WORKERS[worker_id]:
+        raise PreflightRequestError("scheduled_slot does not match worker_id")
+    start = str(request.get("actual_invocation_start") or "").strip()
+    try:
+        parsed = datetime.fromisoformat(start.replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise PreflightRequestError("actual_invocation_start must be an offset-aware timestamp") from exc
+    if parsed.tzinfo is None:
+        raise PreflightRequestError("actual_invocation_start must be an offset-aware timestamp")
+    return {
+        "worker_id": worker_id,
+        "run_key": run_key,
+        "scheduled_slot": scheduled_slot,
+        "actual_invocation_start": parsed.astimezone(timezone.utc).isoformat(),
+    }
 
 
 def _validate_request(path: Path) -> dict[str, Any]:
@@ -99,6 +132,7 @@ def _validate_request(path: Path) -> dict[str, Any]:
         "record_bank": record_bank,
         "self_review": {key: True for key in SELF_REVIEW_KEYS},
     }
+    out.update(_run_identity(request))
     for field in ("paper_path", "expected_blob_sha"):
         value = request.get(field)
         if value not in (None, ""):
@@ -119,6 +153,10 @@ def _identity(request: dict[str, Any]) -> dict[str, Any]:
         "record_bank": request.get("record_bank"),
         "paper_path": request.get("paper_path"),
         "expected_blob_sha": request.get("expected_blob_sha"),
+        "worker_id": request.get("worker_id"),
+        "run_key": request.get("run_key"),
+        "scheduled_slot": request.get("scheduled_slot"),
+        "actual_invocation_start": request.get("actual_invocation_start"),
     }
 
 
@@ -180,6 +218,10 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
         record_bank=request["record_bank"],
         paper_path=request.get("paper_path"),
         expected_blob_sha=None,
+        worker_id=request.get("worker_id"),
+        run_key=request.get("run_key"),
+        scheduled_slot=request.get("scheduled_slot"),
+        actual_invocation_start=request.get("actual_invocation_start"),
     )
     request["paper_path"] = descriptor["paper_path"]
     request["expected_blob_sha"] = _canonical_expected_blob_sha(
@@ -194,6 +236,10 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
             record_bank=request["record_bank"],
             paper_path=descriptor["paper_path"],
             expected_blob_sha=request["expected_blob_sha"],
+            worker_id=request.get("worker_id"),
+            run_key=request.get("run_key"),
+            scheduled_slot=request.get("scheduled_slot"),
+            actual_invocation_start=request.get("actual_invocation_start"),
         )
 
     try:

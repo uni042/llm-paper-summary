@@ -52,6 +52,21 @@ jobs:
         if: steps.pending.outputs.pending == 'true'
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
+      - name: Rebuild worker run-state cache from canonical facts
+        if: steps.pending.outputs.pending == 'true'
+        continue-on-error: true
+        run: python .survey/scripts/derive_worker_run_state.py --repo-root . --rebuild-cache
+
+      - name: Compact settled worker transport
+        if: steps.pending.outputs.pending == 'true'
+        continue-on-error: true
+        run: |
+          python .survey/scripts/compact_worker_transport.py \
+            --repo-root . \
+            --apply \
+            --min-age-seconds 7200 \
+            --report .survey/reports/transport-compact-latest.json
+
       - name: Run full GC
         if: steps.pending.outputs.pending == 'true'
         run: |

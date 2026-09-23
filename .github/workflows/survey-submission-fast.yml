@@ -100,18 +100,43 @@ jobs:
               exit "$batch_rc"
             fi
 
+            set +e
+            python .survey/scripts/derive_worker_run_state.py \
+              --repo-root . \
+              --auto-from-descriptors-file /tmp/immutable-submissions.txt
+            auto_state_rc=$?
+            python .survey/scripts/compact_worker_transport.py \
+              --repo-root . \
+              --apply \
+              --min-age-seconds 7200 \
+              --report /tmp/transport-compact.json
+            compact_rc=$?
+            set -e
+            if [ "$auto_state_rc" -ne 0 ]; then
+              echo 'Automatic run-state snapshot failed; immutable submission result remains authoritative and request fast lane will recover.' >&2
+            fi
+            if [ "$compact_rc" -ne 0 ]; then
+              echo 'Transport compaction failed; paper processing continues and maintenance will retry.' >&2
+            fi
+
             python .survey/scripts/normalize_required_metadata.py --repo-root . --apply
             python .survey/scripts/record_run_ledger.py record --repo-root . --snapshot /tmp/submission-fast-baseline.json
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
             python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
 
             mkdir -p .survey/work-queue/results/research .survey/work-queue/results/audit
-            git add \
+            git add -A \
               STATUS.md \
               papers \
               .survey/work-queue/jobs \
               .survey/work-queue/results/research \
               .survey/work-queue/results/audit \
+              .survey/work-queue/run-state \
+              .survey/work-queue/completed-submission-requests \
+              .survey/work-queue/research-preflight \
+              .survey/work-queue/archive \
+              .survey/work-queue/claim-requests \
+              .survey/work-queue/claim-results \
               .survey/work-queue/run-ledger.json \
               .survey/work-queue/state.json \
               .survey/work-queue/next-jobs.json \

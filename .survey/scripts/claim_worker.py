@@ -22,6 +22,8 @@ MAX_LEASE_SECONDS = 43200
 MAX_CHECKPOINTED_JOBS = 128
 MAX_REQUESTED_JOB_IDS = 128
 LIBRARY_CHECKPOINT_PREFIX = "/LLM-survey-outbox/pending/"
+RUN_IDENTITY_FIELDS = ("run_key", "scheduled_slot", "actual_invocation_start")
+SCHEDULED_CHAT_SLOTS = {"scheduled-chat-00": {"00"}, "scheduled-chat-30": {"30", "0830"}}
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -103,6 +105,32 @@ def _normalize_checkpointed_jobs(raw: Any) -> list[dict[str, str]]:
     return normalized
 
 
+def _normalize_run_identity(raw: dict[str, Any], *, worker_id: str, worker_kind: str) -> dict[str, str]:
+    present = [field for field in RUN_IDENTITY_FIELDS if raw.get(field) not in (None, "")]
+    if not present:
+        return {}
+    if worker_kind != "scheduled_chat" or worker_id not in SCHEDULED_CHAT_SLOTS:
+        raise ValueError("run identity fields are supported only for fixed Scheduled Chat workers")
+    missing = [field for field in RUN_IDENTITY_FIELDS if raw.get(field) in (None, "")]
+    if missing:
+        raise ValueError("Scheduled Chat run identity must be complete: " + ", ".join(missing))
+    run_key = str(raw.get("run_key") or "").strip()
+    if not run_key or len(run_key) > 512:
+        raise ValueError("run_key must be a non-empty string up to 512 characters")
+    scheduled_slot = str(raw.get("scheduled_slot") or "").strip()
+    if scheduled_slot not in SCHEDULED_CHAT_SLOTS[worker_id]:
+        raise ValueError("scheduled_slot does not match worker_id")
+    start_raw = str(raw.get("actual_invocation_start") or "").strip()
+    start = _as_time(start_raw)
+    if start is None:
+        raise ValueError("actual_invocation_start must be an offset-aware timestamp")
+    return {
+        "run_key": run_key,
+        "scheduled_slot": scheduled_slot,
+        "actual_invocation_start": _iso(start),
+    }
+
+
 def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     if not isinstance(raw, dict):
         raise ValueError("request must be an object")
@@ -140,6 +168,7 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
         raise ValueError("job_types must contain only research or audit")
     job_ids = _normalize_job_ids(raw.get("job_ids"))
     checkpointed_jobs = _normalize_checkpointed_jobs(raw.get("checkpointed_jobs"))
+    run_identity = _normalize_run_identity(raw, worker_id=worker_id, worker_kind=worker_kind)
     return {
         "schema_version": 1, "request_id": request_id, "worker_id": worker_id,
         "worker_kind": worker_kind, "requested_at": _iso(requested_at),
@@ -147,6 +176,7 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
         "job_types": sorted(set(job_types)),
         "job_ids": job_ids,
         "checkpointed_jobs": checkpointed_jobs,
+        **run_identity,
     }
 
 
@@ -429,6 +459,9 @@ def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
         "record_bank_recovery",
         "record_bank_recovery_attempt_ids",
         "record_bank_recovery_submission",
+        "run_key",
+        "scheduled_slot",
+        "actual_invocation_start",
     ):
         if key in claim:
             assignment[key] = claim[key]
@@ -564,6 +597,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             _write(result_path, {
                 "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
                 "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
+                **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
                 "ok": True, "assignments": recovered, "processed_at": _iso(now),
             })
             assigned_recovered += len(recovered)
@@ -603,6 +637,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 _write(result_path, {
                     "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
                     "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
+                    **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
                     "ok": True, "assignments": resumed, "processed_at": _iso(now),
                     "reason": "resumed active unsubmitted claim",
                     "checkpoint_released": released_now,
@@ -649,6 +684,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 "claimed_at": _iso(now), "expires_at": _iso(expires),
                 "kind": item.get("type"),
                 "depends_on_job_ids": dependencies,
+                **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
             }
             if previous and previous.get("claim_id") != claim_id:
                 claim["previous_claim_id"] = previous.get("claim_id")
@@ -659,10 +695,12 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 "worker_kind": request["worker_kind"], "attempt_id": attempt_id,
                 "claimed_at": _iso(now), "expires_at": _iso(expires), "kind": item.get("type"),
                 "depends_on_job_ids": dependencies, "job": dict(item),
+                **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
             })
         _write(result_path, {
             "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
             "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
+            **{field: request[field] for field in RUN_IDENTITY_FIELDS if field in request},
             "ok": True, "assignments": assignments, "processed_at": _iso(now),
             "checkpoint_released": released_now,
         })

@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/run-state/requests/*.json'
+      - '.survey/scripts/derive_worker_run_state.py'
+      - '.survey/scripts/worker_run_state_cache.py'
   workflow_dispatch:
   schedule:
     - cron: '4/10 * * * *'
@@ -44,7 +46,19 @@ jobs:
             git reset --hard origin/main
 
             python .survey/scripts/derive_worker_run_state.py --repo-root .
-            git add .survey/work-queue/run-state/results
+            python .survey/scripts/compact_worker_transport.py \
+              --repo-root . \
+              --apply \
+              --min-age-seconds 7200 \
+              --report /tmp/transport-compact.json \
+              || echo 'Transport compaction failed; run-state publication continues and maintenance will retry.'
+            git add -A \
+              .survey/work-queue/run-state \
+              .survey/work-queue/archive \
+              .survey/work-queue/claim-requests \
+              .survey/work-queue/claim-results \
+              .survey/work-queue/completed-submission-requests \
+              .survey/work-queue/research-preflight
 
             if git diff --cached --quiet; then
               echo 'Run-state requests already settled.'

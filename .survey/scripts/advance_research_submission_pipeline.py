@@ -25,6 +25,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 import prepare_completed_submission  # noqa: E402
+import worker_run_state_cache  # noqa: E402
 
 PREFLIGHT_RESULTS = Path(".survey/work-queue/research-preflight/results")
 COMPLETED_REQUESTS = Path(".survey/work-queue/completed-submission-requests")
@@ -132,7 +133,7 @@ def _normalize_completed_payload(path: Path, value: dict[str, Any]) -> dict[str,
     if not preflight_result.startswith(".survey/work-queue/research-preflight/results/") or not preflight_result.endswith(".json"):
         raise ValueError("preflight_result must point to research-preflight/results/*.json")
     payload: dict[str, Any] = {"kind": kind, "attempt_id": attempt_id, "job_id": job_id, "record_bank": record_bank, "preflight_result": preflight_result}
-    for field in ("paper_path", "expected_blob_sha"):
+    for field in ("paper_path", "expected_blob_sha", "worker_id", "run_key", "scheduled_slot", "actual_invocation_start"):
         item = value.get(field)
         if item not in (None, ""):
             if not isinstance(item, str):
@@ -156,7 +157,7 @@ def _payload_from_passed_preflight(path: Path, result: dict[str, Any]) -> dict[s
     }
     if not payload["record_bank"]:
         raise ValueError("passing preflight record_bank is required")
-    for field in ("paper_path", "expected_blob_sha"):
+    for field in ("paper_path", "expected_blob_sha", "worker_id", "run_key", "scheduled_slot", "actual_invocation_start"):
         item = result.get(field)
         if item not in (None, ""):
             if not isinstance(item, str):
@@ -176,6 +177,10 @@ def _build_descriptor_from_payload(repo: Path, payload: dict[str, Any]) -> dict[
         record_bank=payload["record_bank"],
         paper_path=payload.get("paper_path"),
         expected_blob_sha=expected_blob_sha,
+        worker_id=payload.get("worker_id"),
+        run_key=payload.get("run_key"),
+        scheduled_slot=payload.get("scheduled_slot"),
+        actual_invocation_start=payload.get("actual_invocation_start"),
     )
     prepare_completed_submission.verify_preflight_result(repo, descriptor, preflight_result)
     return descriptor
@@ -201,7 +206,7 @@ def _generated_completed_request(payload: dict[str, Any]) -> dict[str, Any]:
         "record_bank": payload["record_bank"], "preflight_result": payload["preflight_result"],
         "generated_by": "research-preflight-pipeline",
     }
-    for field in ("paper_path", "expected_blob_sha"):
+    for field in ("paper_path", "expected_blob_sha", "worker_id", "run_key", "scheduled_slot", "actual_invocation_start"):
         if payload.get(field) not in (None, ""):
             out[field] = payload[field]
     return out
@@ -301,6 +306,13 @@ def advance(repo: Path, *, mode: str = "all") -> dict[str, Any]:
         drain_completed_requests(repo, summary)
     for key in ("generated_requests", "built_descriptors", "already_settled", "request_conflicts", "quarantined"):
         summary[key] = sorted(set(summary[key]))
+    descriptor_paths = [Path(path) for path in summary["built_descriptors"]]
+    summary["run_state_cache_touched"] = {}
+    if descriptor_paths:
+        try:
+            summary["run_state_cache_touched"] = worker_run_state_cache.observe_descriptors(repo, descriptor_paths)
+        except Exception as exc:
+            summary["run_state_cache_warning"] = f"{type(exc).__name__}: {exc}"
     summary["next_action"] = "dispatch_submission_drain_once" if summary["built_descriptors"] else "no_new_descriptor"
     return summary
 

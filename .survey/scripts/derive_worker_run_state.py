@@ -15,12 +15,14 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import time
 from pathlib import Path
 from typing import Any
 
 import claim_state
 import continuation_gate
 import select_discovery_direction
+import worker_run_state_cache as run_state_cache
 
 REQUESTS = Path(".survey/work-queue/run-state/requests")
 RESULTS = Path(".survey/work-queue/run-state/results")
@@ -28,6 +30,8 @@ ALLOWED_WORKERS = {
     "scheduled-chat-00": "00",
     "scheduled-chat-30": "30",
 }
+READ_COUNT = 0
+
 RUNTIME_CONDITIONS = {
     "none",
     "handoff_guard",
@@ -39,6 +43,8 @@ RUNTIME_CONDITIONS = {
 
 
 def _read(path: Path, default: Any = None) -> Any:
+    global READ_COUNT
+    READ_COUNT += 1
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError, UnicodeError):
@@ -121,20 +127,24 @@ def _candidate_inventory(root: Path) -> int:
 
 
 def _frozen_route(root: Path, run_key: str) -> tuple[int, str] | None:
-    result_root = root / RESULTS
-    if not result_root.is_dir():
-        return None
     rows: list[tuple[str, int, str]] = []
-    for path in result_root.glob("*.json"):
-        value = _read(path, {})
-        if not isinstance(value, dict) or value.get("ok") is not True:
+    roots = (
+        root / RESULTS,
+        root / ".survey/work-queue/archive/transport/run-state/results",
+    )
+    for result_root in roots:
+        if not result_root.is_dir():
             continue
-        if str(value.get("run_key") or "") != run_key:
-            continue
-        inventory = value.get("candidate_inventory")
-        mode = value.get("work_mode")
-        if isinstance(inventory, int) and mode in {"research", "discovery", "maintenance"}:
-            rows.append((str(value.get("processed_at") or ""), inventory, mode))
+        for path in result_root.glob("*.json"):
+            value = _read(path, {})
+            if not isinstance(value, dict) or value.get("ok") is not True:
+                continue
+            if str(value.get("run_key") or "") != run_key:
+                continue
+            inventory = value.get("candidate_inventory")
+            mode = value.get("work_mode")
+            if isinstance(inventory, int) and mode in {"research", "discovery", "maintenance"}:
+                rows.append((str(value.get("processed_at") or ""), inventory, mode))
     if not rows:
         return None
     rows.sort()
@@ -147,8 +157,12 @@ def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[s
     # same-worker attempt whose terminal result was produced during this invocation.
     all_worker_attempts: dict[str, dt.datetime] = {}
     attempts: dict[str, dt.datetime] = {}
-    result_root = root / ".survey/work-queue/claim-results"
-    if result_root.is_dir():
+    for result_root in (
+        root / ".survey/work-queue/claim-results",
+        root / ".survey/work-queue/archive/transport/claim-results",
+    ):
+        if not result_root.is_dir():
+            continue
         for path in result_root.glob("*.json"):
             value = _read(path, {})
             if not isinstance(value, dict) or value.get("worker_id") != worker_id:
@@ -277,9 +291,13 @@ def _run_submission_state(
     started_at: dt.datetime,
 ) -> dict[str, Any]:
     completed = 0
+    completed_ids: list[str] = []
+    retryable_ids: list[str] = []
+    repair_required_ids: list[str] = []
     pending: list[tuple[dt.datetime, str]] = []
     submitted: list[tuple[dt.datetime, str]] = []
     terminal: list[tuple[dt.datetime, str]] = []
+    facts: dict[str, dict[str, Any]] = {}
 
     for attempt_id, claimed_at in attempts.items():
         found_descriptor = False
@@ -289,23 +307,51 @@ def _run_submission_state(
                 continue
             found_descriptor = True
             submitted.append((claimed_at, attempt_id))
+            fact: dict[str, Any] = {
+                "attempt_id": attempt_id,
+                "kind": kind,
+                "claimed_at": claimed_at.astimezone(dt.timezone.utc).isoformat(),
+                "submitted": True,
+                "descriptor_path": descriptor_path.relative_to(root).as_posix(),
+            }
+            descriptor = _read(descriptor_path, {})
+            if isinstance(descriptor, dict):
+                fact["job_id"] = descriptor.get("job_id")
+                fact["worker_id"] = descriptor.get("worker_id")
+                fact["run_key"] = descriptor.get("run_key")
             result = _read(root / ".survey/work-queue/results" / kind / descriptor_path.name, {})
             if not isinstance(result, dict) or result.get("attempt_id") != attempt_id:
                 pending.append((claimed_at, attempt_id))
+                fact["pending"] = True
+                fact["retryable"] = False
+                facts[attempt_id] = fact
                 continue
-            if result.get("ok") is False and result.get("retryable") is True:
+            retryable = result.get("ok") is False and result.get("retryable") is True
+            if retryable:
                 pending.append((claimed_at, attempt_id))
+                retryable_ids.append(attempt_id)
+                fact["pending"] = True
+                fact["retryable"] = True
+                fact["processed_at"] = result.get("processed_at")
+                fact["job_status"] = str(result.get("job_status") or "none").lower()
+                facts[attempt_id] = fact
                 continue
             processed_at = _time(result.get("processed_at")) or claimed_at
             status = str(result.get("job_status") or "none").lower()
-            if (
-                result.get("ok") is True
-                and status == "completed"
-                and processed_at >= started_at
-            ):
+            fact["pending"] = False
+            fact["retryable"] = False
+            fact["repair_required"] = result.get("repair_required") is True
+            fact["processed_at"] = processed_at.astimezone(dt.timezone.utc).isoformat()
+            fact["job_status"] = status
+            fact["completed"] = bool(result.get("ok") is True and status == "completed")
+            if fact["repair_required"]:
+                repair_required_ids.append(attempt_id)
+            if fact["completed"] and processed_at >= started_at:
                 completed += 1
+                completed_ids.append(attempt_id)
             if status in {"completed", "blocked", "deferred", "rejected"}:
                 terminal.append((processed_at, status))
+            facts[attempt_id] = fact
         if not found_descriptor:
             continue
 
@@ -323,8 +369,11 @@ def _run_submission_state(
         "last_terminal_job_status": terminal[-1][1] if terminal else "none",
         "submitted_attempt_ids": [attempt for _, attempt in sorted(submitted)],
         "pending_attempt_ids": [attempt for _, attempt in sorted(pending)],
+        "completed_attempt_ids": sorted(set(completed_ids)),
+        "retryable_attempt_ids": sorted(set(retryable_ids)),
+        "repair_required_attempt_ids": sorted(set(repair_required_ids)),
+        "attempt_facts": facts,
     }
-
 
 def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[str, Any]:
     pending_requests: list[tuple[dt.datetime, str]] = []
@@ -344,6 +393,10 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
 
     pending_request_ages = {
         request_id: max(int((now - requested).total_seconds()), 0)
+        for requested, request_id in pending_requests
+    }
+    pending_request_times = {
+        request_id: requested.astimezone(dt.timezone.utc).isoformat()
         for requested, request_id in pending_requests
     }
     pending_request_ids = [request_id for _, request_id in sorted(pending_requests)]
@@ -369,11 +422,33 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         "claim_result_pending": bool(pending_requests),
         "pending_claim_request_ids": pending_request_ids,
         "pending_claim_request_ages_seconds": pending_request_ages,
+        "pending_claim_requested_at": pending_request_times,
         "claim_result_pending_age_seconds": oldest_pending_age,
         "claim_monitor_window_seconds": 60,
         "active_assignment": bool(active),
         "active_job_ids": sorted(active),
     }
+
+
+def _refresh_cached_claim_state(value: dict[str, Any]) -> dict[str, Any] | None:
+    claims = dict(value)
+    if claims.get("claim_result_pending") is not True:
+        return claims
+    requested = claims.get("pending_claim_requested_at")
+    if not isinstance(requested, dict):
+        return None
+    now = dt.datetime.now(dt.timezone.utc)
+    ages: dict[str, int] = {}
+    for request_id, raw in requested.items():
+        when = _time(raw)
+        if when is None:
+            return None
+        ages[str(request_id)] = max(int((now - when).total_seconds()), 0)
+    claims["pending_claim_request_ages_seconds"] = ages
+    claims["claim_result_pending_age_seconds"] = max(ages.values(), default=0)
+    claims["claim_result_pending"] = bool(ages)
+    claims["pending_claim_request_ids"] = sorted(ages)
+    return claims
 
 
 def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
@@ -497,24 +572,51 @@ def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> b
     return _candidate_inventory(root) > 0
 
 
-def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
+def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False) -> dict[str, Any]:
+    global READ_COUNT
     root = root.resolve()
+    perf_started = time.perf_counter()
+    read_started = READ_COUNT
     started_at = _time(request["actual_invocation_start"])
     assert started_at is not None
 
-    frozen = _frozen_route(root, request["run_key"])
-    if request["scheduled_slot"] == "0830":
-        inventory = _candidate_inventory(root) if frozen is None else frozen[0]
-        work_mode = "maintenance"
-    elif frozen is not None:
-        inventory, work_mode = frozen
+    cached = None if force_canonical else run_state_cache.get_run(root, request)
+    cached_claims = (
+        _refresh_cached_claim_state(cached.get("claims", {}))
+        if isinstance(cached, dict)
+        else None
+    )
+    if cached is not None and cached_claims is None:
+        cached = None
+    cache_hit = cached is not None
+    if cached is not None:
+        inventory = int(cached["candidate_inventory"])
+        work_mode = str(cached["work_mode"])
+        submission = dict(cached["submission"])
+        claims = cached_claims or {}
     else:
-        inventory = _candidate_inventory(root)
-        work_mode = "research" if inventory >= 50 else "discovery"
+        frozen = _frozen_route(root, request["run_key"])
+        if request["scheduled_slot"] == "0830":
+            inventory = _candidate_inventory(root) if frozen is None else frozen[0]
+            work_mode = "maintenance"
+        elif frozen is not None:
+            inventory, work_mode = frozen
+        else:
+            inventory = _candidate_inventory(root)
+            work_mode = "research" if inventory >= 50 else "discovery"
 
-    attempts = _run_attempts(root, request["worker_id"], started_at)
-    submission = _run_submission_state(root, attempts, started_at)
-    claims = _claim_state(root, request["worker_id"], started_at)
+        attempts = _run_attempts(root, request["worker_id"], started_at)
+        submission = _run_submission_state(root, attempts, started_at)
+        claims = _claim_state(root, request["worker_id"], started_at)
+        run_state_cache.store_canonical_snapshot(
+            root,
+            request,
+            candidate_inventory=inventory,
+            work_mode=work_mode,
+            claims=claims,
+            submission=submission,
+        )
+
     discovery_rounds, selector = _discovery_rounds(root, request["run_key"])
     discovery_async = _discovery_async_state(root, request["run_key"])
 
@@ -621,6 +723,11 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
     else:
         gate = continuation_gate.decide(args)
 
+    public_submission = {key: value for key, value in submission.items() if key != "attempt_facts"}
+    derive_ms = round((time.perf_counter() - perf_started) * 1000.0, 3)
+    files_read = max(READ_COUNT - read_started, 0)
+    snapshot_generation = run_state_cache.generation_for(root, request["worker_id"], request["run_key"])
+
     return {
         "schema_version": 1,
         "ok": True,
@@ -640,8 +747,12 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "seconds_to_run_deadline": seconds_to_deadline,
         **claims,
-        **submission,
+        **public_submission,
         **discovery_async,
+        "snapshot_generation": snapshot_generation,
+        "run_state_source": "incremental_cache" if cache_hit else "canonical_rebuild",
+        "run_state_files_read": files_read,
+        "run_state_derive_ms": derive_ms,
         "discovery_rounds_completed": discovery_rounds,
         "discovery_selector": selector,
         "independent_work": independent_work,
@@ -656,13 +767,17 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
             "A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. "
-            "Discovery async state and carry-over immutable submissions remain visible across run boundaries."
+            "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
+            "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts."
         ),
     }
 
 
-def process_pending(root: Path) -> dict[str, int]:
+def process_pending(root: Path) -> dict[str, Any]:
     root = root.resolve()
+    bootstrap = {"rebuilt": 0, "failures": []}
+    if any(run_state_cache.load_cache(root, worker_id) is None for worker_id in ALLOWED_WORKERS):
+        bootstrap = rebuild_caches(root)
     request_root = root / REQUESTS
     result_root = root / RESULTS
     request_root.mkdir(parents=True, exist_ok=True)
@@ -672,10 +787,14 @@ def process_pending(root: Path) -> dict[str, int]:
         target = result_root / path.name
         if target.exists():
             reused += 1
+            existing = _read(target, {})
+            if isinstance(existing, dict) and existing.get("ok") is True:
+                run_state_cache.write_latest_pointer(root, target, existing)
             continue
         try:
             request = _normalize_request(path, _read(path))
             result = derive(root, request)
+            result["snapshot_origin"] = "request-fast-lane"
         except Exception as exc:
             errors += 1
             result = {
@@ -686,15 +805,171 @@ def process_pending(root: Path) -> dict[str, int]:
                 "next_action": "FIX_RUN_STATE_REQUEST",
             }
         _write(target, result)
+        if result.get("ok") is True:
+            run_state_cache.write_latest_pointer(root, target, result)
         processed += 1
-    return {"processed": processed, "errors": errors, "reused": reused}
+    return {"processed": processed, "errors": errors, "reused": reused, "cache_bootstrap_rebuilt": bootstrap.get("rebuilt", 0), "cache_bootstrap_failures": bootstrap.get("failures", [])}
+
+
+def _descriptor_paths(path: Path) -> list[Path]:
+    if not path.is_file():
+        return []
+    return [
+        Path(line.strip())
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+
+
+def auto_snapshot_from_descriptors(root: Path, descriptors_file: Path) -> dict[str, Any]:
+    root = root.resolve()
+    paths = _descriptor_paths(descriptors_file)
+    cached_paths: list[Path] = []
+    expected_runs: dict[tuple[str, str], dict[str, Any]] = {}
+    fallback_required: list[str] = []
+
+    for raw_path in paths:
+        path = raw_path if raw_path.is_absolute() else root / raw_path
+        descriptor = _read(path, {})
+        if not isinstance(descriptor, dict):
+            continue
+        identity = run_state_cache._descriptor_identity(descriptor)
+        if identity is None:
+            continue
+        request = {
+            "schema_version": 1,
+            "request_id": "auto-pending",
+            "run_key": identity["run_key"],
+            "worker_id": identity["worker_id"],
+            "worker_kind": "scheduled_chat",
+            "scheduled_slot": identity["scheduled_slot"],
+            "actual_invocation_start": identity["actual_invocation_start"],
+            "runtime_condition": "none",
+            "runtime_condition_confirmed": False,
+            "runtime_condition_attempts": 0,
+            "runtime_condition_detail": "",
+        }
+        key = (identity["worker_id"], identity["run_key"])
+        expected_runs[key] = request
+        if run_state_cache.get_run(root, request) is None:
+            fallback_required.append(f"{identity['worker_id']}:{identity['run_key']}")
+            continue
+        cached_paths.append(path.relative_to(root))
+
+    touched = run_state_cache.observe_descriptors(root, cached_paths)
+    generated: list[str] = []
+    for worker_id, run_keys in sorted(touched.items()):
+        for run_key in run_keys:
+            request = expected_runs.get((worker_id, run_key))
+            if request is None:
+                request = run_state_cache.cached_request(root, worker_id, run_key)
+            if request is None:
+                fallback_required.append(f"{worker_id}:{run_key}")
+                continue
+            result = derive(root, request)
+            generation = run_state_cache.generation_for(root, worker_id, run_key)
+            request_id = run_state_cache.auto_result_id(worker_id, run_key, generation)
+            result["request_id"] = request_id
+            result["snapshot_generation"] = generation
+            result["snapshot_origin"] = "submission-fast-lane"
+            result["auto_generated"] = True
+            target = root / RESULTS / f"{request_id}.json"
+            _write(target, result)
+            run_state_cache.write_latest_pointer(root, target, result)
+            generated.append(target.relative_to(root).as_posix())
+    return {
+        "observed_descriptors": len(paths),
+        "touched_runs": sum(len(items) for items in touched.values()),
+        "generated_results": generated,
+        "fallback_required": sorted(set(fallback_required)),
+    }
+
+
+def apply_claim_result_deltas(root: Path, results_file: Path) -> dict[str, Any]:
+    root = root.resolve()
+    paths = _descriptor_paths(results_file)
+    touched = run_state_cache.observe_claim_results(root, paths)
+    return {
+        "observed_claim_results": len(paths),
+        "touched_runs": sum(len(items) for items in touched.values()),
+        "workers": touched,
+    }
+
+def rebuild_caches(root: Path) -> dict[str, Any]:
+    root = root.resolve()
+    rows: dict[tuple[str, str], dict[str, Any]] = {}
+    for result_root in (
+        root / RESULTS,
+        root / ".survey/work-queue/archive/transport/run-state/results",
+    ):
+        if not result_root.is_dir():
+            continue
+        for path in result_root.glob("*.json"):
+            value = _read(path, {})
+            if not isinstance(value, dict) or value.get("ok") is not True:
+                continue
+            worker_id = str(value.get("worker_id") or "")
+            run_key = str(value.get("run_key") or "")
+            slot = str(value.get("scheduled_slot") or "")
+            start = value.get("actual_invocation_start")
+            if worker_id not in ALLOWED_WORKERS or not run_key or slot not in {"00", "30", "0830"} or _time(start) is None:
+                continue
+            key = (worker_id, run_key)
+            current = rows.get(key)
+            if current is None or str(value.get("processed_at") or "") > str(current.get("processed_at") or ""):
+                rows[key] = value
+
+    ordered = sorted(
+        rows.values(),
+        key=lambda value: str(value.get("actual_invocation_start") or ""),
+        reverse=True,
+    )
+    rebuilt = 0
+    failures: list[str] = []
+    per_worker = {worker: 0 for worker in ALLOWED_WORKERS}
+    for value in ordered:
+        worker_id = str(value["worker_id"])
+        if per_worker[worker_id] >= 8:
+            continue
+        request = {
+            "schema_version": 1,
+            "request_id": "maintenance-rebuild",
+            "run_key": str(value["run_key"]),
+            "worker_id": worker_id,
+            "worker_kind": "scheduled_chat",
+            "scheduled_slot": str(value["scheduled_slot"]),
+            "actual_invocation_start": str(value["actual_invocation_start"]),
+            "runtime_condition": "none",
+            "runtime_condition_confirmed": False,
+            "runtime_condition_attempts": 0,
+            "runtime_condition_detail": "",
+        }
+        try:
+            derive(root, request, force_canonical=True)
+        except Exception as exc:
+            failures.append(f"{worker_id}:{request['run_key']}:{type(exc).__name__}:{exc}")
+            continue
+        rebuilt += 1
+        per_worker[worker_id] += 1
+    return {"rebuilt": rebuilt, "failures": failures}
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
+    parser.add_argument("--auto-from-descriptors-file", type=Path)
+    parser.add_argument("--claim-results-file", type=Path)
+    parser.add_argument("--rebuild-cache", action="store_true")
     args = parser.parse_args()
-    print(json.dumps(process_pending(args.repo_root), ensure_ascii=False, sort_keys=True))
+    if args.auto_from_descriptors_file is not None:
+        result = auto_snapshot_from_descriptors(args.repo_root, args.auto_from_descriptors_file)
+    elif args.claim_results_file is not None:
+        result = apply_claim_result_deltas(args.repo_root, args.claim_results_file)
+    elif args.rebuild_cache:
+        result = rebuild_caches(args.repo_root)
+    else:
+        result = process_pending(args.repo_root)
+    print(json.dumps(result, ensure_ascii=False, sort_keys=True))
     return 0
 
 
