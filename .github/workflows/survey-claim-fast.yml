@@ -64,8 +64,12 @@ jobs:
             python .survey/scripts/repair_claim_bank_recovery.py --repo-root .
             python .survey/scripts/enrich_claim_record_routes.py --repo-root .
 
-            git diff --name-only -- .survey/work-queue/claim-results \
+            {
+              git diff --name-only -- .survey/work-queue/claim-results
+              git ls-files --others --exclude-standard -- .survey/work-queue/claim-results
+            } \
               | grep '^.survey/work-queue/claim-results/.*\.json$' \
+              | sort -u \
               > /tmp/changed-claim-results.txt || true
             if [ -s /tmp/changed-claim-results.txt ]; then
               python .survey/scripts/derive_worker_run_state.py \
