@@ -25,6 +25,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 import prepare_completed_submission  # noqa: E402
+import worker_run_index  # noqa: E402
 
 PREFLIGHT_RESULTS = Path(".survey/work-queue/research-preflight/results")
 COMPLETED_REQUESTS = Path(".survey/work-queue/completed-submission-requests")
@@ -100,8 +101,19 @@ def _clear_failure(repo: Path, stage: str, source: Path, attempt_id: str | None 
         path.unlink()
 
 
-def _existing_attempt_ids(repo: Path) -> set[str]:
-    attempts: set[str] = set()
+def _attempt_descriptor_exists(repo: Path, attempt_id: str) -> bool:
+    """Fast canonical lookup with a legacy-only historical fallback."""
+    for kind in ("research", "audit"):
+        path = repo / SUBMISSIONS / kind / f"{attempt_id}.json"
+        try:
+            value = _read_object(path)
+        except Exception:
+            value = {}
+        if isinstance(value, dict) and value.get("attempt_id") == attempt_id:
+            return True
+
+    # Old descriptors may have arbitrary filenames. Preserve read compatibility,
+    # but pay this historical scan only when the canonical O(1) lookup misses.
     for kind in ("research", "audit"):
         root = repo / SUBMISSIONS / kind
         if not root.is_dir():
@@ -111,10 +123,9 @@ def _existing_attempt_ids(repo: Path) -> set[str]:
                 value = _read_object(path)
             except Exception:
                 continue
-            attempt_id = value.get("attempt_id")
-            if isinstance(attempt_id, str) and SAFE_ID_RE.fullmatch(attempt_id):
-                attempts.add(attempt_id)
-    return attempts
+            if value.get("attempt_id") == attempt_id:
+                return True
+    return False
 
 
 def _normalize_completed_payload(path: Path, value: dict[str, Any]) -> dict[str, Any]:
@@ -138,6 +149,9 @@ def _normalize_completed_payload(path: Path, value: dict[str, Any]) -> dict[str,
             if not isinstance(item, str):
                 raise ValueError(f"{field} must be a string when present")
             payload[field] = item
+    identity = worker_run_index.normalize_identity(value, required=False)
+    if identity is not None:
+        payload.update(identity)
     return payload
 
 
@@ -162,6 +176,9 @@ def _payload_from_passed_preflight(path: Path, result: dict[str, Any]) -> dict[s
             if not isinstance(item, str):
                 raise ValueError(f"passing preflight {field} must be a string when present")
             payload[field] = item
+    identity = worker_run_index.normalize_identity(result, required=False)
+    if identity is not None:
+        payload.update(identity)
     return payload
 
 
@@ -176,6 +193,10 @@ def _build_descriptor_from_payload(repo: Path, payload: dict[str, Any]) -> dict[
         record_bank=payload["record_bank"],
         paper_path=payload.get("paper_path"),
         expected_blob_sha=expected_blob_sha,
+        worker_id=payload.get("worker_id"),
+        run_key=payload.get("run_key"),
+        scheduled_slot=payload.get("scheduled_slot"),
+        actual_invocation_start=payload.get("actual_invocation_start"),
     )
     prepare_completed_submission.verify_preflight_result(repo, descriptor, preflight_result)
     return descriptor
@@ -201,7 +222,7 @@ def _generated_completed_request(payload: dict[str, Any]) -> dict[str, Any]:
         "record_bank": payload["record_bank"], "preflight_result": payload["preflight_result"],
         "generated_by": "research-preflight-pipeline",
     }
-    for field in ("paper_path", "expected_blob_sha"):
+    for field in ("paper_path", "expected_blob_sha", *worker_run_index.RUN_FIELDS):
         if payload.get(field) not in (None, ""):
             out[field] = payload[field]
     return out
@@ -211,7 +232,7 @@ def materialize_passed_preflights(repo: Path, summary: dict[str, Any]) -> None:
     root = repo / PREFLIGHT_RESULTS
     if not root.is_dir():
         return
-    settled_attempts = _existing_attempt_ids(repo)
+    settled_attempts: set[str] = set()
     latest: dict[str, tuple[str, Path, dict[str, Any]]] = {}
     for path in sorted(root.glob("*.json")):
         try:
@@ -229,7 +250,7 @@ def materialize_passed_preflights(repo: Path, summary: dict[str, Any]) -> None:
             latest[attempt_id] = (rank[0], path, result)
 
     for attempt_id, (_, result_path, result) in sorted(latest.items()):
-        if attempt_id in settled_attempts:
+        if attempt_id in settled_attempts or _attempt_descriptor_exists(repo, attempt_id):
             summary["already_settled"].append(attempt_id)
             _clear_failure(repo, "preflight", result_path, attempt_id)
             request_path = repo / COMPLETED_REQUESTS / f"{attempt_id}.json"
@@ -264,9 +285,9 @@ def drain_completed_requests(repo: Path, summary: dict[str, Any]) -> None:
     root = repo / COMPLETED_REQUESTS
     if not root.is_dir():
         return
-    settled_attempts = _existing_attempt_ids(repo)
+    settled_attempts: set[str] = set()
     for request_path in sorted(root.glob("*.json")):
-        if request_path.stem in settled_attempts:
+        if request_path.stem in settled_attempts or _attempt_descriptor_exists(repo, request_path.stem):
             summary["already_settled"].append(request_path.stem)
             _clear_failure(repo, "request", request_path)
             continue
