@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-6df65f881113008b",
+  "type": "research",
+  "parent_job_id": "job-1fb14d0d69f9c4dc",
+  "priority": 75,
+  "canonical_id": "arXiv:2605.06676",
+  "arxiv_id": "2605.06676",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction",
+  "source_url": "https://www.semanticscholar.org/paper/9dbefa4becfe4a6ae3decde6fabad3ab975cde52",
+  "paper_path": null,
+  "selection_reason": "KV evictionのhead別budgetとtoken selectionをend-to-end学習し、LongBenchで15% KV保持でもnear-losslessを報告するため、KV cache圧縮・長文推論系統を更新する。",
+  "priority_breakdown": {
+    "base": 50,
+    "lineage": 10,
+    "recency": 15,
+    "venue": 0,
+    "total": 75
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T22:39:48+00:00"
+}

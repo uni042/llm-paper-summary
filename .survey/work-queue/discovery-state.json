@@ -1,44 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T22:36:25+00:00",
+  "updated_at": "2026-09-23T22:39:48+00:00",
   "last_run_key": "s30-20260924t073303-6a2f1c",
-  "last_round": "disc-s30-6a2f1c-r1",
+  "last_round": "disc-s30-6a2f1c-r2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 5,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T04:00:00+09:00",
-      "round": "specialist-prefetch-io-7",
-      "axis": "KV prefetch・cache admission・I/O scheduling・memory hierarchy",
-      "query_summary": "cache prefetch、cache admission、storage/I-O scheduling、KV transfer overlapへ検索窓を移動。Asynchronous KV L2 prefetch、CacheFlow、SwiftCache、Tutti、DuoServe-MoE、Apt-Serve、Cascade、cache-resident inference、flow-control scheduling等の既収録をidentity snapshotで事前除外し、provider検索窓終了時に残った2件を評価して採用した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2504.06319",
-        "arXiv:2604.25080",
-        "arXiv:2606.16135",
-        "arXiv:2605.03375",
-        "arXiv:2509.07379",
-        "arXiv:2504.07494",
-        "arXiv:2607.09248",
-        "arXiv:2608.06557",
-        "arXiv:2606.25353",
-        "arXiv:2604.11001"
-      ],
-      "next_axis_hint": "最新canonical inventoryを再評価し、50超ならoverflow research、未満なら未走査の引用関係/隣接systemsへ継続",
-      "source_submission": "work-queue/submissions/20260917T0400JST-discovery-specialist-prefetch-io-7.json"
-    },
     {
       "run_key": "2026-09-17T04:00:00+09:00",
       "round": "specialist-serving-engine-6",
@@ -8861,6 +8832,45 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:disc-s30-6a2f1c-r2",
+      "precheck_request_id": "disc-s30-6a2f1c-r2",
+      "run_key": "s30-20260924t073303-6a2f1c",
+      "round": "disc-s30-6a2f1c-r2",
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "query_summary": "FlexGen前方引用20件を評価し、serving SLO、GPU DVFS、GPU/RAM/SSD階層配置、学習型KV evictionの4件を強候補として採用。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2303.06865",
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 16,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 4,
+      "accepted_canonical_ids": [
+        "arXiv:2606.20577",
+        "DOI:10.1109/CCGrid68966.2026.00014",
+        "arXiv:2604.21026",
+        "arXiv:2605.06676"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260923T223900Z-scheduled-chat-30-6a2f1c-r2.json",
+      "source_submissions": [
+        "work-queue/submissions/20260923T223900Z-scheduled-chat-30-6a2f1c-r2.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 4,
+      "post_final_dedupe_count": 4,
+      "duplicate_ratio": 0.8,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16647,15 +16657,15 @@
       "next_axis_hint": null
     },
     "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
-      "last_run_key": "adhoc-20260924T014906JST-worker-915242",
-      "rounds": 8,
-      "candidate_count": 145,
-      "duplicate_filtered_count": 13,
-      "novel_candidate_count": 132,
+      "last_run_key": "s30-20260924t073303-6a2f1c",
+      "rounds": 9,
+      "candidate_count": 165,
+      "duplicate_filtered_count": 29,
+      "novel_candidate_count": 136,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 132,
-      "accepted_count": 50,
-      "duplicate_ratio": 0.0896551724137931,
+      "post_final_dedupe_count": 136,
+      "accepted_count": 54,
+      "duplicate_ratio": 0.17575757575757575,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
@@ -17937,6 +17947,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-00-20260923T215800Z-6f5800",
       "last_round": "20260923T220300Z-scheduled-chat-00-r1-repair"
+    },
+    "window-7d32e4f2e728072c62de": {
+      "topic": "flexgen forward citations",
+      "source": "semantic_scholar",
+      "date_range": "2026",
+      "category": "offload-hierarchical-memory",
+      "citation_direction": "forward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-7d32e4f2e728072c62de",
+      "scan_count": 1,
+      "raw_result_count": 40,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 16,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 4,
+      "last_position": "cursor-200-to-240",
+      "unseen_rate": 0.5,
+      "duplicate_rate": 0.4,
+      "candidate_acceptance_rate": 0.2,
+      "cooldown": false,
+      "last_run_key": "s30-20260924t073303-6a2f1c",
+      "last_round": "disc-s30-6a2f1c-r2"
     }
   },
   "recent_search_windows": [
@@ -19178,6 +19211,27 @@
       "duplicate_rate": 0.41,
       "candidate_acceptance_rate": 0.0,
       "last_position": "cursor-0-to-100"
+    },
+    {
+      "topic": "flexgen forward citations",
+      "source": "semantic_scholar",
+      "date_range": "2026",
+      "category": "offload-hierarchical-memory",
+      "citation_direction": "forward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-7d32e4f2e728072c62de",
+      "run_key": "s30-20260924t073303-6a2f1c",
+      "round": "disc-s30-6a2f1c-r2",
+      "raw_result_count": 40,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 16,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 4,
+      "unseen_rate": 0.5,
+      "duplicate_rate": 0.4,
+      "candidate_acceptance_rate": 0.2,
+      "last_position": "cursor-200-to-240"
     }
   ],
   "search_window_history_limit": 96,
