@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-0273ce1913f64a15a590f7e2",
-  "job_id": "job-research-52c9fc70a4b38892",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0273ce1913f64a15a590f7e2",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-0273ce1913f64a15a590f7e2","job_id":"job-research-52c9fc70a4b38892","data":{"hardware":"AMD Ryzen AI MAX+ 395、16コア32ハードウェアスレッド、128GiBメモリ、Windows 11 x64。搭載AMD Radeon 8060Sは評価経路では使用しない。決定的64トークン再生だけはOMP_NUM_THREADS=32、OMP_DYNAMIC=FALSE、PIPE_WORKERS=8を固定し、他の収集ではOSスケジューラを使用する。","software":"DeepSeek-V4-FlashチェックポイントをColibriのネイティブ非DSpark CPU経路で実行する。MSYS2 UCRT64 GCC 16.1、-O3、-march=x86-64-v3、OpenMP、有効なfast-mathなし。BF16丸めはソフトウェアで最近接偶数丸めを実装する。生成は貪欲法。","methodology":"深掘り用3プロンプトと探索的幅確認用50プロンプトを使用する。単一層ではAの720順列とBの360構造クラスを列挙。永続実験は3プロンプト×64層別順序×4集約方式=768軌跡を8トークン生成し、別に各方式の同一順序標準12軌跡を置く。B分岐一件でpost-mHC端点再構成と生成境界の全永続状態再構成を行う。中国語プロンプトの10分岐は層別抽出して64トークンへ延長し2回ずつ再生。50プロンプトでは8、16、32トークン時点の累積文面分離を測る。","scope":"実験は1チェックポイント、1ネイティブ実行系、6専門家集約に限定され、実GPU/NPUで各順序が自然に生じる頻度は測らない。凍結ルート介入、量子化項の厳密和参照、C方式の性能オーバーヘッド、トークンごとに変わる順序は未評価。50プロンプト幅確認は探索的で、言語間比較や発生確率推定ではない。"},"reservation":{"claim_id":"claim-0273ce1913f64a15a590f7e2","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
