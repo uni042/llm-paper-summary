@@ -1,4 +1,4 @@
-# Worker router — workflow v10.5
+# Worker router — workflow v10.6
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -58,7 +58,7 @@ Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自
 
 Scheduled ChatからGitHubへ直接耐久保存する場合、**同一論文・同一論理段階で、途中にActions起動や別workerからの可視化を必要としない複数ファイル更新は1回のcommitへ集約する。** 特にResearch / Auditの5スロットは、内容が完成してセルフレビュー可能になった時点でまとめて保存し、metadata / method / evaluation / results / positioningを1ファイルずつ別commitにしてmainを進めない。利用可能なGitHub transportが複数ファイルを1commitで更新できる場合はGit dataのtree/commit等の原子的な複数ファイル更新を優先する。
 
-ただし、次の**耐久境界はまとめて潰さない**。claim request、Research quality preflight request、completed-submission request、immutable submission、run-state requestなど、commit自体がActions起動・正規結果生成・handoff identity確定のトリガーになる境界は、それぞれ必要な順序を守って独立に耐久化する。別attempt、別論文、別workerのpayloadを無関係に1commitへ束ねない。
+ただし、次の**耐久境界はまとめて潰さない**。claim request、Research quality preflight request、immutable submission、run-state requestなど、commit自体がActions起動・正規結果生成・handoff identity確定のトリガーになる境界は、それぞれ必要な順序を守って独立に耐久化する。`completed-submission request` は合格済みpreflight resultからGitHub側のpublication pipelineが自動生成する監査用の耐久記録であり、Scheduled Chatが追加writeする独立境界にはしない。preflight resultはdescriptor生成より前にmainへ耐久反映し、別attempt、別論文、別workerのpayloadを無関係に1commitへ束ねない。
 
 GitHub transportが1ファイル単位のwriteしか提供しない場合は、存在しない原子更新を捏造せず、その環境で可能な最小commit数に留める。commit集約のために品質チェック・preflight・submission順序を変更してはならない。
 
@@ -99,9 +99,9 @@ Research / Auditのcompleted submissionは、**ワーカー自身のセルフレ
 2. セルフレビュー後の5スロットだけをclaim result指定のrecord bankまたは現行fallbackへ完全保存する。次に一意な `request_id` を作り、`.survey/work-queue/research-preflight/requests/<request_id>.json` へ `schema_version: 1`、`operation: research_quality_preflight`、`request_id`、`kind`、`attempt_id`、`job_id`、`record_bank`、必要なら `paper_path` / `expected_blob_sha` と `self_review` を保存する。`self_review` は `primary_source_read_to_end`、`no_unverified_inference`、`summary_and_list_summary_specific`、`headline_result_grounded`、`method_end_to_end_explained`、`evaluation_conditions_and_baselines_explicit`、`results_conditions_and_interpretation_explicit`、`limitations_and_positioning_specific` の8項目をすべて `true` にする。事実として満たしていない項目を形式的にtrueにしてはならない。同じ内容を再検査するときも既存request/resultは書き換えず、新しい `request_id` を使う。
 3. `.github/workflows/survey-research-quality-preflight.yml` が `research_quality_preflight.py` を実行し、実blob SHAから**submission processorと同じ構造化record validation・renderer・paper quality gate**を走らせる。同名resultを `.survey/work-queue/research-preflight/results/<request_id>.json` へ返す。preflight待ちは10秒実時間間隔で同一resultを追跡し、別論文へ逃げない。
 4. resultが `preflight_passed=false` ならcompleted requestを作らない。`validation_errors` / `quality.failures` を全部確認し、指摘されたslotだけを一次資料に基づいて修正してから、新しい `request_id` でセルフレビューとpreflightをやり直す。これはsubmission failureではなく**提出前の通常修正ループ**であり、run終了理由にしない。
-5. resultが `preflight_passed=true` になった場合だけ、`status=completed` requestを `.survey/work-queue/completed-submission-requests/<attempt_id>.json` にcommitする。このrequestは従来の `kind` / `attempt_id` / `job_id` / `record_bank` 等に加えて、合格resultのrepository-relative pathを `preflight_result` として必ず持つ。
-6. `.github/workflows/survey-completed-builder-fast.yml` はcompleted descriptor生成前に `preflight_result` を検証し、preflight時のdescriptor fingerprintと現在の5スロットblob SHAが1つでも違えば拒否する。したがって**合格後にslotを変更した場合は必ず再preflight**する。Scheduled Chatがcompleted descriptorを直接作成・更新してはならない。
-7. builderが生成したdescriptorのpushで `.github/workflows/survey-submission-fast.yml` が起動し、最新main上で正規submission processorを実行する。processor側のquality gateは防御的な二重検査として残す。
+5. resultが `preflight_passed=true` になったら、Scheduled Chatはcompleted requestを手動作成せず、同じ `survey-research-quality-preflight` pipelineにdescriptor生成を任せる。pipelineは合格resultの `kind` / `attempt_id` / `job_id` / `record_bank` / `paper_path` とexact `preflight_result` から `.survey/work-queue/completed-submission-requests/<attempt_id>.json` を監査用に自動生成し、続けて正規immutable descriptorを作る。
+6. 自動pipelineと互換回収用 `.github/workflows/survey-completed-builder-fast.yml` はdescriptor生成前に `preflight_result` を検証し、preflight時のdescriptor fingerprintと現在の5スロットblob SHAが1つでも違えば拒否する。したがって**合格後にslotを変更した場合は必ず再preflight**する。壊れた・期限切れのcompleted requestは `.survey/work-queue/completed-submission-failures/` に内容ハッシュ付きで隔離し、他requestのdescriptor生成を止めない。Scheduled Chatがcompleted descriptorを直接作成・更新してはならない。
+7. pipelineが1件以上のdescriptorを耐久反映したら `.github/workflows/survey-submission-fast.yml` を**バッチ全体で1回だけ**dispatchする。submission laneは個別descriptorごとのworkflow起動ではなく、最新main上の未確定immutable descriptorをまとめて列挙し、既存のbounded parallel batch processorでdrainする。processor側のquality gateは防御的な二重検査として残す。
 8. 同名の `.survey/work-queue/results/research/<attempt_id>.json` または `audit/<attempt_id>.json` を確認し、`ok`、終端status、`next_action` / `recovery_steps` に従う。descriptorをmainへ耐久保存した時点でそのattemptは「提出済み」とする。**提出済みsubmissionのresult待ちは新しいResearch / Audit claimの同期障壁にしない。** 同一workerで未提出active claimを常に1件以下に保ち、各論文を1件ずつ直列に読み・耐久提出したら、未確定submissionが何件残っていても残り600秒より多くclaim可能jobがある限り次の1件をclaimして処理を続ける。未確定resultは耐久identityを保持して並行監視し、終端resultが見えた時点で `next_action` / `recovery_steps` を回収する。
 9. **1 attemptにつきcompleted descriptorは1本だけ**とする。preflight中の修正は同じattemptのrecord bankを直して新しいpreflight requestを作るが、completed descriptor生成後に同じ `job_id / attempt_id` の `repair1`、`repair2` 等を追加して修正しない。
 10. 防御的なsubmission側検査でなお `content_validation` / `repair_required` になった場合だけ、そのfailure resultがmainへ耐久保存されたことを確認した後、同じjobを `job_ids: [<job_id>]` で指定した新しいclaim requestへ回す。新しいclaim_id / attempt_idで指摘slotを修正し、**再びセルフレビュー→preflightから**やり直す。全文読解済み成果は捨てない。
@@ -122,8 +122,8 @@ claim requestでは `request_id` をrequestファイル名のstemと完全一致
 5. 一次資料本文を最後まで読み、抄録や検索断片から欠落情報を推測しない。
 6. `metadata`、`problem_method`、`evaluation`、`results`、`positioning` の5スロットを完成させる。
 7. **GitHub上の公開paperへ出す前にワーカー自身で意味品質をセルフレビューする。** 一次資料との整合、概要・一覧文の固有性、代表結果、end-to-end手法、評価条件/baseline、結果の条件と解釈、限界・関連差を読み返し、不十分ならこの段階で5スロットを修正する。単にチェック項目をtrueにするだけで済ませない。
-8. セルフレビュー済み5スロットをrecord bankへ耐久保存し、第2.1節の `research-preflight` laneでActionsと同じ構造化validation + renderer + paper quality gateを実行する。`preflight_passed=false` なら**completed requestを出さず**、返された全指摘を修正して新しいpreflight requestで再検査する。合格後にslotを変更した場合も再検査する。
-9. `preflight_passed=true` のexact resultを得た場合だけ、`status=completed` requestを `.survey/work-queue/completed-submission-requests/<attempt_id>.json` へ保存する。requestには合格result pathの `preflight_result` を必須で入れ、completed builder fast laneにexact blob fingerprintの再照合とdescriptor生成を委ねる。Scheduled Chatがcompleted descriptorを直接保存してはならない。status-only `blocked` / `deferred` / `rejected` は第3.1節4項の最小descriptorを従来どおりsubmission laneへ直接保存する。
+8. セルフレビュー済み5スロットをrecord bankへ耐久保存し、第2.1節の `research-preflight` laneでActionsと同じ構造化validation + renderer + paper quality gateを実行する。`preflight_passed=false` なら返された全指摘を修正して新しいpreflight requestで再検査する。合格後にslotを変更した場合も再検査する。
+9. `preflight_passed=true` のexact resultを得たら、Scheduled Chatは手動のcompleted request writeを挟まず、GitHub側のpublication pipelineがexact blob fingerprintを再照合して監査用completed requestとimmutable descriptorを自動生成するのを追跡する。descriptorがmainへ耐久保存された時点で提出済みとみなし、submission result待ちは次claimの同期障壁にしない。pipelineが終了したのにdescriptorが無い場合は `.survey/work-queue/completed-submission-failures/` とworkflow結果を確認し、該当sourceだけを正規修復する。status-only `blocked` / `deferred` / `rejected` は第3.1節4項の最小descriptorを従来どおりsubmission laneへ直接保存する。
 10. GitHub書込みがrun全体で利用不能なら、完全な5スロットpayloadをChatGPT Library `/LLM-survey-outbox/pending/` へ1論文1envelopeで保存する。
 11. 完全payloadまたはstatus-only descriptorを耐久保存して不変submissionを送ったら、**submission resultを待たずに次のResearch / Auditを1件ずつclaimして処理する。** 論文Nを提出→N+1をclaim・読解・提出→N+2をclaim・読解・提出……と、論文本体は常に1件ずつ直列に進めるが、提出済みattemptの未確定result数には先行上限を設けない。各提出後・各claim前には最新run-stateと新着resultを確認し、既に返ったfailure / `repair_required` / `retryable` は `next_action` / `recovery_steps` に従って耐久回復へ流す。ただし**未確定resultそのものを理由に新規claimを止めない。** 残り600秒以下の開始禁止窓、未提出active claim、claimable job 0件、hard stopだけが新規claimを止められる。status-only終端は成功件数へ数えない。
 

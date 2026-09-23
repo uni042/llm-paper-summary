@@ -234,9 +234,10 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
         "quality": asdict(quality_result),
         "checked_at": _now(),
         "next_action": (
-            "Create .survey/work-queue/completed-submission-requests/<attempt_id>.json "
-            "and set preflight_result to this exact result path. Do not edit any record slot "
-            "after this check; if a slot changes, run a new preflight first."
+            "Do not create a completed-submission request manually. The GitHub publication "
+            "pipeline will materialize the audit request and immutable descriptor from this "
+            "exact passing result, then dispatch one batch submission drain. Do not edit any "
+            "record slot after this check; if a slot changes, run a new preflight first."
         ),
     }
 

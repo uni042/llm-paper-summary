@@ -8,6 +8,7 @@ on:
       - '.survey/scripts/research_quality_preflight.py'
       - '.survey/scripts/paper_quality_gate.py'
       - '.survey/scripts/prepare_completed_submission.py'
+      - '.survey/scripts/advance_research_submission_pipeline.py'
       - '.github/workflows/survey-research-quality-preflight.yml'
   workflow_dispatch:
     inputs:
@@ -20,15 +21,16 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
-  group: survey-research-quality-preflight-main
+  group: survey-completed-materialization-main
   cancel-in-progress: false
 
 jobs:
   preflight:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -54,6 +56,7 @@ jobs:
           git config user.email 'survey-research-preflight[bot]@users.noreply.github.com'
           mkdir -p .survey/work-queue/research-preflight/requests .survey/work-queue/research-preflight/results
 
+          published=0
           for attempt in $(seq 1 12); do
             git fetch origin main
             git reset --hard origin/main
@@ -77,19 +80,24 @@ jobs:
               if [ -f "$result" ]; then
                 continue
               fi
-              python .survey/scripts/research_quality_preflight.py                 --repo-root .                 --request "$request"                 --result "$result"
+              python .survey/scripts/research_quality_preflight.py \
+                --repo-root . \
+                --request "$request" \
+                --result "$result"
               processed=$((processed + 1))
             done
 
             if [ "$processed" -eq 0 ]; then
               echo 'No unsettled Research/Audit quality preflight requests remain.'
-              exit 0
+              published=1
+              break
             fi
 
             git add .survey/work-queue/research-preflight/results
             git commit -m 'survey: publish research quality preflight results'
             if git push origin HEAD:main; then
-              exit 0
+              published=1
+              break
             fi
 
             echo "Quality preflight push race on attempt ${attempt}; recomputing from latest main."
@@ -99,5 +107,70 @@ jobs:
             sleep $((backoff + jitter))
           done
 
-          echo 'Failed to publish Research/Audit quality preflight results after retries.' >&2
-          exit 1
+          if [ "$published" -ne 1 ]; then
+            echo 'Failed to publish Research/Audit quality preflight results after retries.' >&2
+            exit 1
+          fi
+
+      - name: Auto-materialize passing preflights
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-research-preflight[bot]'
+          git config user.email 'survey-research-preflight[bot]@users.noreply.github.com'
+
+          published=0
+          built=0
+          for attempt in $(seq 1 12); do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p \
+              .survey/work-queue/completed-submission-requests \
+              .survey/work-queue/completed-submission-failures \
+              .survey/work-queue/submissions/research \
+              .survey/work-queue/submissions/audit
+            python .survey/scripts/advance_research_submission_pipeline.py \
+              --repo-root . \
+              --mode all \
+              --manifest /tmp/research-pipeline.json
+            built="$(jq -r '.built_descriptors | length' /tmp/research-pipeline.json)"
+
+            git add \
+              .survey/work-queue/completed-submission-requests \
+              .survey/work-queue/completed-submission-failures \
+              .survey/work-queue/submissions/research \
+              .survey/work-queue/submissions/audit
+
+            if git diff --cached --quiet; then
+              echo 'No new completed descriptors or isolation records to publish.'
+              published=1
+              break
+            fi
+
+            git commit -m 'survey-submission: auto-materialize passed preflights'
+            if git push origin HEAD:main; then
+              published=1
+              break
+            fi
+
+            echo "Research pipeline push race on attempt ${attempt}; recomputing from latest main."
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            jitter=$(( RANDOM % 6 ))
+            sleep $((backoff + jitter))
+          done
+
+          if [ "$published" -ne 1 ]; then
+            echo 'Failed to publish auto-materialized descriptors after retries.' >&2
+            exit 1
+          fi
+
+          # GITHUB_TOKEN pushes do not recursively trigger push workflows.
+          # One dispatch is enough: the submission lane drains every unsettled descriptor.
+          if [ "$built" -gt 0 ]; then
+            gh workflow run survey-submission-fast.yml \
+              --repo "$GITHUB_REPOSITORY" \
+              --ref main
+          fi

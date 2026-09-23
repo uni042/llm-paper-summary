@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/completed-submission-requests/*.json'
+      - '.survey/scripts/advance_research_submission_pipeline.py'
       - '.github/workflows/survey-completed-builder-fast.yml'
   schedule:
     - cron: '9/10 * * * *'
@@ -14,7 +15,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: survey-completed-builder-main
+  group: survey-completed-materialization-main
   cancel-in-progress: false
 
 jobs:
@@ -45,13 +46,14 @@ jobs:
               'preflight_passed=false',
               'preflight_result',
               'exact blob fingerprint',
+              'completed-submission-failures',
           )
           missing = [item for item in required if item not in text]
           if missing:
               raise SystemExit('worker-router preflight contract missing: ' + ', '.join(missing))
           PY
 
-      - name: Build validated completed descriptors
+      - name: Recover legacy completed requests without queue-wide blocking
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -60,102 +62,54 @@ jobs:
           git config user.name 'survey-completed-builder[bot]'
           git config user.email 'survey-completed-builder[bot]@users.noreply.github.com'
 
-          # Treat request files as a durable queue. Push handles the common fast path;
-          # the periodic run recovers requests stranded by a cancelled/failed push run.
-          mkdir -p .survey/work-queue/completed-submission-requests
-          mapfile -t requests < <(find .survey/work-queue/completed-submission-requests -maxdepth 1 -type f -name '*.json' -print | sort)
-          if [ "${#requests[@]}" -eq 0 ]; then
-            echo 'No completed-submission requests exist.'
-            exit 0
-          fi
-
-          : > /tmp/built-submissions.txt
-          built=0
-          for request in "${requests[@]}"; do
-            request_id="$(basename "$request" .json)"
-            kind="$(jq -er '.kind' "$request")"
-            attempt_id="$(jq -er '.attempt_id' "$request")"
-
-            case "$kind" in research|audit) ;; *) echo "unsupported kind: $kind" >&2; exit 1 ;; esac
-            if [ "$request_id" != "$attempt_id" ]; then
-              echo "request filename must equal attempt_id: ${request_id} != ${attempt_id}" >&2
-              exit 1
-            fi
-            output=".survey/work-queue/submissions/${kind}/${attempt_id}.json"
-            if [ -e "$output" ]; then
-              echo "completed descriptor already exists; request is settled: $output"
-              continue
-            fi
-
-            job_id="$(jq -er '.job_id' "$request")"
-            record_bank="$(jq -er '.record_bank' "$request")"
-            paper_path="$(jq -r '.paper_path // empty' "$request")"
-            expected_blob_sha="$(jq -r '.expected_blob_sha // empty' "$request")"
-            preflight_result="$(jq -er '.preflight_result' "$request")"
-            case "$preflight_result" in
-              .survey/work-queue/research-preflight/results/*.json) ;;
-              *) echo "unsupported preflight_result path: $preflight_result" >&2; exit 1 ;;
-            esac
-
-            args=(
-              python .survey/scripts/prepare_completed_submission.py
-              --repo-root .
-              --kind "$kind"
-              --attempt-id "$attempt_id"
-              --job-id "$job_id"
-              --record-bank "$record_bank"
-              --preflight-result "$preflight_result"
-              --output "$output"
-            )
-            if [ -n "$paper_path" ]; then args+=(--paper-path "$paper_path"); fi
-            if [ -n "$expected_blob_sha" ]; then args+=(--expected-blob-sha "$expected_blob_sha"); fi
-            "${args[@]}"
-            printf '%s\n' "$output" >> /tmp/built-submissions.txt
-            built=$((built + 1))
-          done
-
-          if [ "$built" -eq 0 ]; then
-            echo 'All completed-submission requests are already settled.'
-            exit 0
-          fi
-
-          git add .survey/work-queue/submissions/research .survey/work-queue/submissions/audit
-          if git diff --cached --quiet; then
-            echo 'No new completed descriptors were generated.'
-            exit 0
-          fi
-          git commit -m 'survey-submission: build validated completed descriptors'
-
           published=0
+          built=0
           for attempt in $(seq 1 12); do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p \
+              .survey/work-queue/completed-submission-failures \
+              .survey/work-queue/submissions/research \
+              .survey/work-queue/submissions/audit
+            python .survey/scripts/advance_research_submission_pipeline.py \
+              --repo-root . \
+              --mode completed \
+              --manifest /tmp/completed-builder.json
+            built="$(jq -r '.built_descriptors | length' /tmp/completed-builder.json)"
+
+            git add \
+              .survey/work-queue/completed-submission-failures \
+              .survey/work-queue/submissions/research \
+              .survey/work-queue/submissions/audit
+
+            if git diff --cached --quiet; then
+              echo 'No new completed descriptors or isolation records to publish.'
+              published=1
+              break
+            fi
+
+            git commit -m 'survey-submission: recover completed descriptor queue'
             if git push origin HEAD:main; then
               published=1
               break
             fi
-            echo "Builder push race on attempt ${attempt}; refusing to hand-merge generated descriptors." >&2
+
+            echo "Builder push race on attempt ${attempt}; recomputing from latest main."
             backoff=$(( attempt * 2 ))
             if [ "$backoff" -gt 12 ]; then backoff=12; fi
             jitter=$(( RANDOM % 6 ))
             sleep $((backoff + jitter))
-            git fetch origin main
-            if ! git rebase origin/main; then
-              git rebase --abort || true
-              echo 'Generated descriptor conflicts with newer main; periodic recovery will retry from fresh main.' >&2
-              exit 1
-            fi
           done
+
           if [ "$published" -ne 1 ]; then
-            echo 'Failed to publish generated completed descriptors after 12 retries; periodic recovery will retry.' >&2
+            echo 'Failed to publish generated completed descriptors after retries.' >&2
             exit 1
           fi
 
-          # A push made with GITHUB_TOKEN does not recursively trigger push workflows.
-          # Explicitly dispatch each freshly published immutable descriptor; the
-          # submission lane's periodic drain remains the durable recovery path.
-          while IFS= read -r submission; do
-            [ -n "$submission" ] || continue
+          # Dispatch once for the whole batch; survey-submission-fast drains all unsettled
+          # immutable descriptors with its bounded parallel batch processor.
+          if [ "$built" -gt 0 ]; then
             gh workflow run survey-submission-fast.yml \
               --repo "$GITHUB_REPOSITORY" \
-              --ref main \
-              -f submission="$submission"
-          done < /tmp/built-submissions.txt
+              --ref main
+          fi
