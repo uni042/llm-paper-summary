@@ -20,7 +20,15 @@ import argparse
 import json
 
 
-ASYNC_WAIT_POLL_SECONDS = 10
+PRODUCTIVE_WAIT_RECHECK_SECONDS = 0
+
+WAIT_MICROTASKS = (
+    "inspect_same_worker_async_transport",
+    "lightweight_validate_recent_completed_paper",
+    "cleanup_terminal_library_pdf_cache",
+    "read_only_queue_consistency_check",
+    "organize_current_paper_evidence",
+)
 
 
 def yn(value: str) -> bool:
@@ -140,7 +148,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     )
     claim_monitor_window_seconds = max(
         int(getattr(args, "claim_monitor_window_seconds", 60) or 60),
-        ASYNC_WAIT_POLL_SECONDS,
+        PRODUCTIVE_WAIT_RECHECK_SECONDS,
     )
     transient_submission_wait = bool(
         submission_state_checked
@@ -289,19 +297,19 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     claim_wait_action = "none"
     claim_wait_seconds = 0
     if transient_claim_wait:
-        claim_wait_seconds = ASYNC_WAIT_POLL_SECONDS
+        claim_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
         if required_action == "MONITOR_CLAIM_FAST_LANE":
             claim_wait_action = (
                 "keep_same_request_id; do_not_issue_another_claim; inspect_survey_claim_fast_actions_run_for_request_commit; "
                 "inspect_run_job_or_steps_if_queued_or_in_progress; inspect_same_worker_unsettled_submissions_retryable_repairs_and_active_claim_consistency; "
-                "wait_10_real_seconds; refresh_latest_head_and_matching_claim_result; "
-                "repeat_monitor_cycle_while_request_age_under_60_seconds; "
+                "run_one_wait_microtask; refresh_latest_head_and_matching_claim_result; "
+                "repeat_productive_monitor_cycle_while_request_age_under_60_seconds; "
                 "repeat_until_result_or_terminal_hard_stop"
             )
         else:
             claim_wait_action = (
                 "keep_same_request_id; do_not_issue_another_claim; inspect_survey_claim_fast_actions_status_and_same_worker_transport_health; "
-                "wait_10_real_seconds; refresh_latest_head_and_matching_claim_result; "
+                "run_one_wait_microtask; refresh_latest_head_and_matching_claim_result; "
                 "if_actions_failed_or_cancelled_follow_canonical_recovery_without_new_request; "
                 "repeat_until_result_or_terminal_hard_stop"
             )
@@ -309,26 +317,26 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     submission_wait_action = "none"
     submission_wait_seconds = 0
     if required_action == "MONITOR_SUBMISSION_RESULTS":
-        submission_wait_seconds = ASYNC_WAIT_POLL_SECONDS
+        submission_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
         submission_wait_action = (
             "do_not_start_new_paper_in_handoff_window; keep_all_pending_submission_identities; "
-            "wait_10_real_seconds; refresh_latest_head_and_pending_submission_results; "
+            "run_one_wait_microtask; refresh_latest_head_and_pending_submission_results; "
             "follow_each_result_next_action_or_recovery_steps; repeat_until_result_or_final_180_second_handoff"
         )
 
     discovery_wait_action = "none"
     discovery_wait_seconds = 0
     if required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
-        discovery_wait_seconds = ASYNC_WAIT_POLL_SECONDS
+        discovery_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
         discovery_wait_action = (
-            "keep_same_discovery_precheck_request; wait_10_real_seconds; refresh_latest_head_and_matching_precheck_result; "
+            "keep_same_discovery_precheck_request; run_one_wait_microtask; refresh_latest_head_and_matching_precheck_result; "
             "periodic_discovery_precheck_recovery_will_reprocess_orphaned_requests; "
             "repeat_until_result_or_final_180_second_handoff"
         )
     elif required_action == "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT":
-        discovery_wait_seconds = ASYNC_WAIT_POLL_SECONDS
+        discovery_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
         discovery_wait_action = (
-            "keep_same_discovery_submission; wait_10_real_seconds; refresh_latest_head_and_matching_discovery_result; "
+            "keep_same_discovery_submission; run_one_wait_microtask; refresh_latest_head_and_matching_discovery_result; "
             "periodic_discovery_submission_recovery_will_reprocess_orphaned_submissions; "
             "repeat_until_result_or_final_180_second_handoff"
         )
@@ -338,27 +346,27 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         progress_notice = (
             "担当確保結果の生成待ちです。待機中はSurvey claim fast laneのActions状態、job/step、"
             "同一workerの未解決submission・retryable repair・active claim整合を確認し、"
-            "10秒後に最新mainと同じrequest_idのresultを再確認します。60秒未満はこの監視サイクルを継続し、runを終了しません。"
+            "待機ミクロタスクを1件処理してから最新mainと同じrequest_idのresultを再確認します。60秒未満はこの作業サイクルを継続し、runを終了しません。"
         )
     elif required_action == "WAIT_FOR_CLAIM_RESULT":
         progress_notice = (
             "担当確保結果が60秒以上pendingです。新しいrequestは発行せず、Survey claim fast laneのActions状態と"
-            "同一workerのtransport healthを確認してから、同じrequest_idを10秒ごとに再確認します。"
+            "同一workerのtransport healthを確認し、待機ミクロタスクを1件処理してから同じrequest_idを再確認します。"
         )
     elif required_action == "MONITOR_SUBMISSION_RESULTS":
         progress_notice = (
             "残り600秒以下の開始禁止窓に入っているため新しい論文は開始しません。"
-            "既存の未確定submission resultを10秒ごとに確認し、返されたnext_action / recovery_stepsに従います。"
+            "既存の未確定submission result待ちでは短い待機ミクロタスクを1件処理してから結果を再確認し、返されたnext_action / recovery_stepsに従います。"
         )
     elif required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
         progress_notice = (
             "開始済みDiscovery precheckのresultを待っています。残り600秒の開始禁止窓に入っても"
-            "このroundは終了させず、最終180秒までは同じrequestを10秒ごとに再確認します。"
+            "このroundは終了させず、短い待機ミクロタスクを1件処理するたびに同じrequestを再確認します。"
         )
     elif required_action == "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT":
         progress_notice = (
             "開始済みDiscovery submissionのresultを待っています。残り600秒の開始禁止窓に入っても"
-            "このroundは終了させず、最終180秒までは同じsubmissionを10秒ごとに再確認します。"
+            "このroundは終了させず、短い待機ミクロタスクを1件処理するたびに同じsubmissionを再確認します。"
         )
 
     if required_action == "CHECK_CLAIM_STATE":
@@ -390,7 +398,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif required_action == "CONTINUE_ASSIGNED_WORK":
         next_action_message = "すでに担当確保済みのResearch/Auditを継続し、提出・結果確認または正規repairまで進めます。"
     elif required_action == "WAIT_FOR_READY_RESEARCH_AUDIT":
-        next_action_message = "現在claim可能なResearch/Auditが0件です。空のclaim requestを出さず10秒待機し、最新queueを再確認します。run中にDiscoveryへ切り替えません。"
+        next_action_message = "現在claim可能なResearch/Auditが0件です。空のclaim requestを出さず、待機ミクロタスクを1件処理してから最新queueを再確認します。run中にDiscoveryへ切り替えません。"
         progress_notice = next_action_message
     elif required_action == "CONTINUE_WORK":
         next_action_message = "最新queue/stateを再取得し、次の独立Research/Auditまたは許可された独立作業へ進みます。"
@@ -402,6 +410,19 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = "正本所定の停止条件を満たしたため、安全な最終化処理へ進みます。"
     else:
         next_action_message = required_action
+
+    productive_wait_required = bool(
+        not final_handoff_active
+        and required_action
+        in {
+            "MONITOR_CLAIM_FAST_LANE",
+            "WAIT_FOR_CLAIM_RESULT",
+            "MONITOR_SUBMISSION_RESULTS",
+            "WAIT_FOR_DISCOVERY_PRECHECK_RESULT",
+            "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT",
+            "WAIT_FOR_READY_RESEARCH_AUDIT",
+        }
+    )
 
     return {
         "decision": decision,
@@ -446,6 +467,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "discovery_wait_seconds": discovery_wait_seconds,
         "next_action_message": next_action_message,
         "progress_notice": progress_notice,
+        "productive_wait_required": productive_wait_required,
+        "productive_wait_polling": False,
+        "productive_wait_recheck_after_each_task": productive_wait_required,
+        "wait_microtasks": list(WAIT_MICROTASKS) if productive_wait_required else [],
         "fallback_writable": fallback_writable,
         "durable_transport_available": any_durable_transport,
         "independent_work_after_fallback": independent_work,
@@ -462,7 +487,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
             "or discovery submission is never by itself a whole-run stop condition. Normal workers "
             "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
-            "claim results are polled every 10 real seconds using the same target identity until terminal or a canonical hard stop. "
+            "pending claim/result identities are kept stable; instead of sleeping or fixed-interval polling, the worker runs one bounded wait microtask and then rechecks the same target until terminal or a canonical hard stop. "
             "When claimable independent Research/Audit work is available, pending submission results never block another paper claim. "
             "Workers continue claiming and processing one paper at a time while all submitted attempts remain durably tracked. "
             "Submission results are monitored concurrently and become a foreground wait only when the 600-second no-new-work window begins or no Research/Audit job is claimable. Hourly Scheduled Chat workers prefer an actual-"
