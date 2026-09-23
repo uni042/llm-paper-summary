@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:25:00+00:00",
+  "updated_at": "2026-09-23T16:28:36+00:00",
   "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
-  "last_round": "20260924T0125JST-scheduled-chat-00-forward-r2",
+  "last_round": "20260924T0132JST-scheduled-chat-00-forward-r3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,21 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-tail-reasoning-8",
-      "axis": "tail-aware・reasoning phase-aware scheduling",
-      "query_summary": "power-aware controlからrequest semanticsとtail SLOへ軸を変更し、予測依存を避けるtail schedulerとreasoning/answering phaseを区別するschedulerを探索した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "multi-model/model-loading/weight cacheを扱うserving systemsへ移す",
-      "source_submission": "work-queue/submissions/20260916T2034JST-discovery-specialist-tail-reasoning-8.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-model-loading-9",
@@ -8412,6 +8397,46 @@
       "duplicate_ratio": 0.65,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T0132JST-scheduled-chat-00-forward-r3",
+      "precheck_request_id": "20260924T0132JST-scheduled-chat-00-forward-r3",
+      "run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "round": "20260924T0132JST-scheduled-chat-00-forward-r3",
+      "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+      "query_summary": "Fixed forward-citation window for DistServe, adopted from the canonical preload and re-filtered against the current identity snapshot.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2401.09670",
+      "preload_id": "preload-3ea3de6a41b359ee7ae1",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2609.26763",
+        "arXiv:2609.25451",
+        "arXiv:2609.21079",
+        "arXiv:2609.06940",
+        "arXiv:2609.19657"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T0135JST-scheduled-chat-00-forward-r3.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T0135JST-scheduled-chat-00-forward-r3.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16120,14 +16145,14 @@
       "next_axis_hint": null
     },
     "forward citations of DistServe disaggregated prefill-decode LLM serving": {
-      "last_run_key": "2026-09-21T06:58:37+09:00",
-      "rounds": 1,
-      "candidate_count": 5,
+      "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "rounds": 2,
+      "candidate_count": 25,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
+      "novel_candidate_count": 25,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
+      "post_final_dedupe_count": 25,
+      "accepted_count": 10,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
@@ -17225,7 +17250,7 @@
       "citation_direction": "forward",
       "query_family": "*",
       "search_window_key": "window-2fdd5e76ae4e3c44f13b",
-      "scan_count": 1,
+      "scan_count": 2,
       "raw_result_count": 0,
       "unseen_result_count": 0,
       "duplicate_filtered_count": 0,
@@ -17238,7 +17263,7 @@
       "candidate_acceptance_rate": 0.0,
       "cooldown": false,
       "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
-      "last_round": "20260924T0125JST-scheduled-chat-00-forward-r2"
+      "last_round": "20260924T0132JST-scheduled-chat-00-forward-r3"
     }
   },
   "recent_search_windows": [
@@ -18239,6 +18264,27 @@
       "search_window_key": "window-2fdd5e76ae4e3c44f13b",
       "run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
       "round": "20260924T0125JST-scheduled-chat-00-forward-r2",
+      "raw_result_count": 0,
+      "unseen_result_count": 0,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 0,
+      "candidate_accepted_count": 0,
+      "unseen_rate": 0.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.0,
+      "last_position": null
+    },
+    {
+      "topic": "*",
+      "source": "*",
+      "date_range": "*",
+      "category": "*",
+      "citation_direction": "forward",
+      "query_family": "*",
+      "search_window_key": "window-2fdd5e76ae4e3c44f13b",
+      "run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "round": "20260924T0132JST-scheduled-chat-00-forward-r3",
       "raw_result_count": 0,
       "unseen_result_count": 0,
       "duplicate_filtered_count": 0,
