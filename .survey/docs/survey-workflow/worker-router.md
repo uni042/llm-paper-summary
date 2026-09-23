@@ -228,6 +228,8 @@ target_unseen: 20
 
 ### 4.0 探索の事前装填待ち行列（Discovery preload queue）
 
+**初回Discovery fast lane:** 新しいrun-state requestから導出された最初の探索snapshotで、`gate.required_action=DISCOVER_AGAIN`、今回runの完了roundが0、pending/recoveryが0、かつselector方向に一致するPRECHECKED preloadがある場合は、`survey-run-state.yml` がそのpreloadの担当確保から今回run固有schema v3 precheckまでを**同じActions run・同じpush-race再計算ループ内で自動実行**する。run-state resultがmainへ公開される時点で正式precheck resultも同じcommitに含まれ、成功時は `auto_initial_discovery.status=ready_for_evaluation` と `next_action=CONTINUE_DISCOVERY_ROUND` が返るため、ワーカーは追加のprecheck request往復を挟まず候補評価へ入る。これは**初回roundだけ**の高速化であり、2round目以降は従来どおりrun-stateのselectorとworker decision pointを使う。selector方向に一致するpreloadが無い場合は何も自動生成せず、従来の固定ソースschema v3経路へそのままフォールバックする。高速経路でprecheck自体が失敗した場合はfailure resultを耐久化し、通常のDiscovery recovery契約へ戻す。
+
 Discoveryは、run開始後に外部APIの取得を始める待ち時間を減らすため、Research paper preloadとは独立した**探索事前装填待ち行列（Discovery preload queue）**を持つ。ただし物理バンク自体は分離しない。workflow-v10の32 record bankはすべて二重用途バンクで、各bankは **`research-preload.json` + `discovery-preload.json` + Research/Audit用5スロット**を同時に持つ。読解面と探索面は同じbank IDを共有するが、それぞれ独立したsidecar/slotなので互いを上書きしない。
 
 - `.github/workflows/discovery-precheck.yml` は通常のschema v3事前検査（precheck）回収と同時に、`.survey/scripts/discovery_preload_queue.py` で32バンクの探索面へ探索窓を先行装填する。標準目標は**利用可能32窓**、1回の補充上限は8窓、1窓は `target_unseen=20` / `page_size=20` とする。32窓は32個の `discovery-preload.json` と1対1で対応し、Research/Audit用5スロットがoccupiedでも同じバンクの探索面は利用できる。逆に探索面がoccupiedでもResearch/Auditのbank予約を妨げない。
@@ -434,7 +436,7 @@ runtime_condition: none
 - `WAIT_FOR_DISCOVERY_PRECHECK_RESULT` / `WAIT_FOR_DISCOVERY_SUBMISSION_RESULT`: 開始済みDiscovery roundとして、第7.0節の待機ミクロタスクを1件処理するたびに同一identityを再確認する。600秒開始禁止窓に入っても最終180秒まではこの作業サイクルを継続する。
 - `CONTINUE_DISCOVERY_ROUND`: 成功済みprecheckの評価・submissionなど、すでに開始済みのroundを完了する。
 - `RECOVER_DISCOVERY_SUBMISSION`: precheck/submissionの失敗を正規recovery_stepsで回収し、同じroundを終端まで進める。
-- `DISCOVER_AGAIN`: 残り600秒より多い場合だけ新しいDiscovery roundへ進む。run-stateの `discovery_selector.next_direction` を正本とし、同方向の `discovery_preload` が返っていれば先にその事前装填窓をrun固有schema v3 requestとしてadoptする。利用可能preloadが無ければ従来の固定ソースprecheckへ即時フォールバックし、preload待ちで停止しない。
+- `DISCOVER_AGAIN`: 残り600秒より多い場合だけ新しいDiscovery roundへ進む。run-stateの `discovery_selector.next_direction` を正本とする。**今回runの初回roundでは、run-state fast laneが同方向PRECHECKED preloadを自動adoptしてrun固有precheckまで同一commitで完了していれば、返された `auto_initial_discovery` / 正式precheck resultを使って直ちに評価へ進み、同じprecheck requestを作り直さない。** 自動高速化されていない場合だけ、同方向の `discovery_preload` が返っていれば従来どおりその事前装填窓をrun固有schema v3 requestとしてadoptする。利用可能preloadが無ければ固定ソースprecheckへ即時フォールバックし、preload待ちで停止しない。
 - `RUN_0830_MAINTENANCE`: 08:30専用runの非論文更新→maintenanceを続行する。通常論文処理へ入らない。
 - `FINALIZE`: `run_finalization_gate.py` で最終化許可を確認してから終了する。
 
