@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-e9383c5ed3b356c7078986c9","job_id":"job-research-69b42673d686f6f1","data":{"limitations":"評価は5台のNVIDIA Jetson系列、4-stage推論pipeline、2種類の30B級VLMと2データセットに限定される。Linux TCで再現した帯域劣化は実ネットワークのpacket loss、複数link同時変動、長時間の非定常jitterを完全には表さない。BAMLMは候補境界層を隣接端末へ事前複製できるだけの余剰GPUメモリを必要とし、メモリが極端に逼迫した端末では移行自由度が小さくなる。全境界の候補割当探索は事前メモリ制約で枝刈りされるが、node数や候補層数が大きい場合の制御計算scalabilityは広く評価されていない。gamma、window、cooldown等の設定も環境依存性があり、論文自身も今後の課題としてhybrid parallelismとより動的なnetwork条件でのadaptive partitioningを挙げる。","differences":"FasterTransformerはbatch完了待ちの静的方式、Orcaはiteration単位でrequestを出入りさせるが、prefill/decodeの資源差をKV残量まで含めて調整しない。Sarathi-Serveはchunked prefillでdecode stallを抑えるが、IHSはさらにpending token分布とpipeline全体の最小KV空き率からprefill quotaを動的に変える。LinguaLinkedはheterogeneous edge向け分散配置を行うもののoffline partitionへの依存が強く、DynaPipeは計算時間差中心の動的layer assignmentで帯域非対称性を直接扱わない。BAMLMはstageの通信を含む実測遅延から帯域由来のskewを検知し、隣接境界層を事前複製して論理切替するため、オンライン重み転送を避けながら全stage境界を同時調整する点が異なる。","implementation_status":"ICPP 2026採録の11ページ論文。NVIDIA JetPack 6.2とPyTorch上で実装し、5台のJetson実機clusterで評価されている。論文本文から公開code repositoryは確認できず、今回の一次資料は共著者Jie WuのTemple University公開PDF。","research_positioning":"LLM/VLMのedge serving研究の中で、IHS-LMはモデルをCPU/SSDへoffloadする系統というより、複数の小型GPU端末にpipeline partitionした後の動的schedulingとplacementを扱う。特にKV cache occupancyをbatch admissionへ直接使う点はserving scheduler系、帯域変動を見てlayer boundaryを動かす点はheterogeneous/distributed inference系に接続する。候補層の冗長常駐でweight migrationをcontrol-plane操作へ変換する発想は、動的再構成の通信costをmemory reservationへ置き換える設計として重要であり、将来のedge MoEやhybrid parallelismにも応用可能な位置付けである。"},"reservation":{"claim_id":"claim-e9383c5ed3b356c7078986c9","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-54c192f36494effc75698854",
+  "job_id": "job-research-c7bef3f1698aa85a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-54c192f36494effc75698854",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
