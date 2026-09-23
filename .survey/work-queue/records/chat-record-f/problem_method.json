@@ -5,16 +5,16 @@
   "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
   "job_id": "job-research-61e38612a8457ae4",
   "data": {
-    "problem": "MoE MLLMは各tokenで固定数のtop-k expertを実行するため、選択されたexpertの寄与が小さくても計算する。既存のNAEE、MC-MoE、DiEPなどのexpert skippingは主にunimodal LLM向けで、MLLMへ直接移すと高skip率で大幅な精度低下が起きる。著者は原因を、(1) shallow/deep層で最終出力へのexpert寄与が大きく異なるのにlocal routing probabilityだけを見ること、(2) vision tokenはtext tokenよりFFN更新が小さくexpert冗長性が高いのにmodality差を無視すること、と分析する。",
-    "novelty": "MoDESはtraining-freeなMLLM専用expert skippingとして、層全体のglobal contributionをlocal routing probabilityへ乗算するGMLGと、text/visionで独立したthresholdを持つDMTを統合する。さらに2次元threshold gridの全探索を避け、性能損失とskip率の単調性からfeasible frontierだけを評価するfrontier searchを導入する。",
-    "method_overview": "各MoE層lについて、較正集合Cで通常モデルの出力分布と当該層expertをskipしたモデルの出力分布との平均KL divergenceをα(l)として事前計算する。推論時、元routerが選んだtop-k expert iのlocal routing probability π_i(l)にα(l)を掛け、s_i(l)=α(l)π_i(l)をimportance scoreとする。DMTはtext tokenにはτ_t、vision tokenにはτ_vを適用し、scoreが対応threshold未満のexpertをskipする。τ_t,τ_vは目標skip率ρを満たしつつ元モデルとの出力差fを最小化するよう較正集合上で探索する。g(τ_t,τ_v)の単調性とfの単調性仮定を使い、各τ_tに対する最小feasible τ_vだけからfrontierを作ることで探索をO(ND)にする。",
+    "problem": "エキスパート混合型のマルチモーダル大規模言語モデルでは、ルータが各トークンに対して上位k個のエキスパートを選び、選ばれたものを固定的にすべて実行する。しかし、選択済みエキスパートの中にも最終出力への寄与が小さいものがあり、その計算は冗長になり得る。NAEE、MC-MoE、DiEPなど既存の動的省略法は主に単一モダリティの言語モデルを前提とし、マルチモーダルモデルへ直接適用すると高い省略率で性能が大きく落ちる。論文はこの原因を二つに分解する。第一に、浅い層と深い層ではエキスパート出力が最終予測へ与える影響が異なるのに、ルータの局所確率だけではその差を表せない。第二に、画像トークンはテキストトークンよりフィードフォワード層の前後で表現が変わりにくく、エキスパート重みとの整列も弱いため、より多くの計算冗長性を持つ。したがって層とモダリティの双方を考慮して省略量を配分する必要がある。",
+    "novelty": "MoDESは再学習を必要としないマルチモーダルMoE専用の動的エキスパート省略法として、層全体の大域的重要度をルータの局所確率へ掛け合わせる大域変調局所ゲーティング（Globally-Modulated Local Gating; GMLG）と、画像・テキストに独立した閾値を与える二重モダリティ閾値法（Dual-Modality Thresholding; DMT）を統合する。さらに、二つの閾値候補を総当たりする代わりに、目標省略率を満たす実行可能境界だけを調べる探索を用いる。これにより、層重要度、トークンごとの局所重要度、モダリティ別冗長性という三つの情報を一つの推論経路へまとめながら、較正探索の計算量も二次から一次へ下げる。",
+    "method_overview": "処理はオフライン較正とオンライン推論に分かれる。まずGQAから無作為抽出した1024件の較正集合を使い、各MoE層lについて通常モデルの最終出力分布と、その層のエキスパート計算だけを省いた対応モデルの最終出力分布を比較する。両者の平均KLダイバージェンスを層重要度α(l)とし、大きい層ほど省略に敏感だとみなす。オンライン推論では元のルータが上位k個のエキスパートを通常どおり選び、選択エキスパートiのルーティング確率π_i(l)へα(l)を掛けて重要度s_i(l)=α(l)π_i(l)を作る。次にトークンがテキストなら閾値τ_t、画像ならτ_vを用い、対応する閾値を下回る選択済みエキスパートだけを実行から外す。τ_tとτ_vは、目標省略率ρ以上を達成しながら元モデルとの出力差を最小化するよう較正集合上で決める。二次元格子をすべて評価するとD段階の候補に対してO(ND²)回のモデル評価が必要になるため、閾値を上げるほど省略率と出力差が単調に増える性質を使う。各テキスト閾値に対して目標省略率へ初めて到達する最小の画像閾値だけを求め、その実行可能境界上で出力差が最小の組を選ぶことでO(ND)へ削減する。較正後はα(l)、τ_t、τ_vを固定し、通常のルーティング直後に軽い尺度調整と閾値判定を加えるだけで動的省略を行う。",
     "components": [
-      {"name": "Globally-Modulated Local Gating (GMLG)", "description": "layer lを丸ごとexpert-skipしたcounterpartと元モデルの出力KLを1024-sample calibrationで測り、層重要度α(l)を作る。runtime scoreはα(l)×router probability。"},
-      {"name": "Dual-Modality Thresholding (DMT)", "description": "textとvisionで別thresholdを使う。vision tokenはFFN前後cosine similarityが高く、FFN weightとより直交するという観察を利用する。"},
-      {"name": "Frontier search", "description": "D=100のthreshold gridで目標skip率を満たす境界だけを走査し、naive O(ND^2)からO(ND)へ削減する。"},
-      {"name": "Training-free deployment", "description": "既存checkpointを再学習せず、offline calibration/search後にrouting後段でexpert executionを省略する。"}
+      {"name": "大域変調局所ゲーティング（GMLG）", "description": "各MoE層を一つずつ対象にし、その層のエキスパート計算を省いたとき最終出力分布がどれだけ変わるかを1024件の較正標本で測る。平均KLダイバージェンスα(l)を層の大域的重要度とし、通常ルータが出す局所確率π_i(l)へ乗算する。これにより、同じルータ確率でも最終出力に敏感な層では重要度が高くなり、敏感でない層では低くなる。局所ルータだけでは区別できなかった層間の感度差を、モデル全体の出力変化から補正する仕組みである。"},
+      {"name": "二重モダリティ閾値法（DMT）", "description": "テキストトークンと画像トークンに同じ省略閾値を使わず、それぞれτ_tとτ_vを持たせる。著者の解析では、画像トークンはフィードフォワード層の前後でコサイン類似度が高く、エキスパート重みとの整列も弱い傾向があり、テキストよりエキスパート計算の寄与が小さい。そこで画像側へより積極的な省略を許し、テキスト側では必要な計算を残す。83%省略のKimiアブレーションでは単一閾値よりDMTだけでも各ベンチマークが改善し、GMLGとの併用でさらに上がる。"},
+      {"name": "実行可能境界探索（Frontier search）", "description": "テキスト閾値と画像閾値を各D段階で全組合せ評価するとD²通りになる。MoDESは閾値を高くするほど省略率が増え、元モデルとの出力差も悪化するという単調性を利用する。各τ_tについて目標省略率ρを満たす最小τ_vだけを探せば、それより大きいτ_vは同じτ_tで品質面から支配されるため評価不要になる。この実行可能境界だけを比較して最良点を選び、探索計算量をO(ND²)からO(ND)へ落とす。D=100の実験では単純総当たりに対して約45倍高速で、最終品質はほぼ同じだった。"},
+      {"name": "再学習不要のオンライン省略", "description": "既存チェックポイント、元のルータ、元の上位k選択を変更せず、ルーティング後に選択済みエキスパートの一部を実行しない。学習や構造的枝刈りを行わないため、モデル重みを作り直す必要がない。実運用前に層重要度と二つの閾値を一度較正すれば、推論時の追加処理は層係数との乗算、トークン種別に応じた閾値選択、比較判定が中心になる。単一H200の測定では、この省略が事前充填で最大2.16倍、復号で最大1.26倍の速度向上につながる。"}
     ],
-    "system_design": "offline: GQA等から1024 sample→各層α(l)のKL較正→text/vision threshold frontier search。online: token modality判定→元router top-k→s=α×π→modality threshold→残存expert実行。層重要度とthresholdは事前計算されるため、runtime追加処理はscore scaling/thresholding中心。"
+    "system_design": "オフライン段階では、代表的なマルチモーダル較正集合を入力し、層ごとの出力KL変化からα(l)を保存する。続いて画像・テキストの二閾値をD=100の格子上で実行可能境界探索し、要求する省略率に対して品質差が最小のτ_v、τ_tを保存する。オンライン段階では、入力トークンのモダリティを識別し、元モデルのルータが通常どおり上位kエキスパートを選ぶ。その後、各選択エキスパートのルータ確率をα(l)で変調し、モダリティ対応閾値と比較して残すエキスパートだけを実行する。したがってモデル本体の学習済みルーティングを置き換えるのではなく、その直後へ軽量な計算選別層を追加する設計である。"
   },
   "reservation": {"claim_id": "claim-0640a4e19fcd3a04140f52b1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
