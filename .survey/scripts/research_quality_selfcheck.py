@@ -13,6 +13,7 @@ from dataclasses import asdict, is_dataclass
 from pathlib import Path
 from typing import Any
 
+import immutable_submission
 import paper_quality_gate
 import prepare_completed_submission
 import process_immutable_submission
@@ -54,6 +55,22 @@ def check(
             paper_path=paper_path,
             expected_blob_sha=None,
         )
+        target = root / descriptor["paper_path"]
+        expected_blob_sha = (
+            immutable_submission.git_blob_sha(target.read_bytes())
+            if target.is_file()
+            else None
+        )
+        if expected_blob_sha is not None:
+            descriptor = prepare_completed_submission.build(
+                root,
+                kind=kind,
+                attempt_id=attempt_id,
+                job_id=job_id,
+                record_bank=record_bank,
+                paper_path=descriptor["paper_path"],
+                expected_blob_sha=expected_blob_sha,
+            )
         rendered = process_immutable_submission.render_descriptor(root, descriptor)
         process_immutable_submission._precheck_paper(
             root,
