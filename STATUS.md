@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 14:36:20 JST**
+> 自動生成: **2026-09-23 14:41:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **170** |
-| 未claim Research job | **169** |
-| 直近24hの検証済みResearch収録 | **86** |
-| 最終検証済みResearch収録 | **09-23 14:36:16 JST（4秒前）** |
+| 収録候補論文 | **169** |
+| 未claim Research job | **168** |
+| 直近24hの検証済みResearch収録 | **87** |
+| 最終検証済みResearch収録 | **09-23 14:41:11 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **170** |
+| canonical_id確認済みの一意な候補論文 | **169** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **170** |
+| 非終端Research job合計 | **169** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（6時間5分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（6時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **17** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **18** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **17** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **18** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 14:41:11 JST** [research] `arXiv:2510.16138` — Expert Merging in Sparse Mixture of Experts with Nash Bargaining
+  - job: `.survey/work-queue/jobs/job-research-04494ef5a577c4fb.json`
+  - result: `.survey/work-queue/results/research/attempt-c3d771ab5950563d5d332246.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-c3d771ab5950563d5d332246.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md`
 - **09-23 14:36:16 JST** [research] `arXiv:2602.00879` — Dynamic Expert Sharing: Decoupling Memory from Parallelism in Mixture-of-Experts Diffusion LLMs
   - job: `.survey/work-queue/jobs/job-research-cb87e313d4b1653f.json`
   - result: `.survey/work-queue/results/research/attempt-88d4b2308d0d8596f4fd6ce4.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-12e4c076f1788c06010c4a7a.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-12e4c076f1788c06010c4a7a.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2505.03531-faster-moe-llm-inference.md`
-- **09-23 10:45:08 JST** [research] `arXiv:2606.26287` — GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models
-  - job: `.survey/work-queue/jobs/job-research-6d95aed6ee156af5.json`
-  - result: `.survey/work-queue/results/research/attempt-1af943d29bb42540aa6313f9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-1af943d29bb42540aa6313f9.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md`
 
 ### Audit
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **170** |
+| ready | **169** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **979** |
+| inference/training/survey配下の論文Markdown実体 | **980** |
 
 ### immutable submissionの未照合
 
