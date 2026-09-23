@@ -37,6 +37,7 @@ from record_bank_config import (
 POOL_WORKER_ID = "shared-preload-pool"
 POOL_WORKER_KIND = "work"
 POOL_TARGET = claim_window_policy.shared_pool_target()
+DIRECT_RESEARCH_TAKES = Path(".survey/work-queue/direct-takes/research")
 POOL_LEASE_SECONDS = 43200
 POOL_RENEW_BEFORE_SECONDS = 21600
 CLAIM_TYPES = {"research", "audit"}
@@ -153,9 +154,39 @@ def _inventory_claim(value: dict[str, Any]) -> bool:
     return is_pool_claim(value) or value.get("worker_kind") == "scheduled_chat"
 
 
-def waiting_claims(claims: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+def reserved_direct_take_claim_ids(repo_root: Path) -> set[str]:
+    """Return pool claim IDs reserved by create-only direct-take markers.
+
+    A marker is authoritative for exclusivity before the background claim lane has
+    rewritten the canonical pool claim. This lets a worker start reading immediately
+    without allowing a concurrent legacy claim request to adopt the same paper.
+    """
+    root = Path(repo_root).resolve() / DIRECT_RESEARCH_TAKES
+    if not root.is_dir():
+        return set()
+    reserved: set[str] = set()
+    for path in root.glob("*.json"):
+        value = _read(path, {})
+        claim_id = str(value.get("claim_id") or "") if isinstance(value, dict) else ""
+        if claim_id and path.stem == claim_id:
+            reserved.add(claim_id)
+    return reserved
+
+
+def waiting_claims(
+    claims: dict[str, dict[str, Any]],
+    *,
+    repo_root: Path | None = None,
+) -> list[dict[str, Any]]:
+    reserved = reserved_direct_take_claim_ids(repo_root) if repo_root is not None else set()
     return sorted(
-        (value for value in claims.values() if value.get("active") and is_pool_claim(value)),
+        (
+            value
+            for value in claims.values()
+            if value.get("active")
+            and is_pool_claim(value)
+            and str(value.get("claim_id") or "") not in reserved
+        ),
         key=_pool_order,
     )
 
@@ -177,7 +208,7 @@ def adopt(
         return []
 
     candidates: list[dict[str, Any]] = []
-    for current in waiting_claims(claims):
+    for current in waiting_claims(claims, repo_root=repo_root):
         job_id = str(current.get("job_id") or "")
         job = jobs_by_id.get(job_id)
         if not isinstance(job, dict) or job.get("status") != "ready":
