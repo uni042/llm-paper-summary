@@ -144,6 +144,38 @@ def _archive_preflight(root: Path, *, apply: bool, result_retention_hours: float
         })
 
 
+def _archive_claim_requests(root: Path, *, apply: bool, out: dict[str, Any]) -> None:
+    """Archive only requests with a durable matching allocator result.
+
+    Claim results and claim records remain canonical durable facts, so active and
+    carry-over attempt identity is never lost.
+    """
+    requests = root / ".survey/work-queue/claim-requests"
+    results = root / ".survey/work-queue/claim-results"
+    archive = requests / "archive"
+    if not requests.is_dir():
+        return
+    for request_path in sorted(requests.glob("*.json")):
+        request = _read(request_path, {})
+        result = _read(results / request_path.name, {})
+        if not isinstance(request, dict) or not isinstance(result, dict):
+            continue
+        if _time(result.get("processed_at")) is None:
+            continue
+        if not _same_identity(request, result, ("request_id", "worker_id")):
+            out["skipped"].append({
+                "path": request_path.relative_to(root).as_posix(),
+                "reason": "claim_result_identity_mismatch",
+            })
+            continue
+        ok, reason = _move(request_path, archive / request_path.name, apply=apply)
+        (out["archived"] if ok else out["errors"]).append({
+            "path": request_path.relative_to(root).as_posix(),
+            "kind": "claim_request",
+            "detail": reason,
+        })
+
+
 def _archive_run_state_requests(root: Path, *, apply: bool, out: dict[str, Any]) -> None:
     base = root / ".survey/work-queue/run-state"
     requests = base / "requests"
@@ -185,6 +217,7 @@ def compact(root: Path, *, apply: bool, preflight_result_retention_hours: float 
             result_retention_hours=max(float(preflight_result_retention_hours), 0.0),
             out=out,
         ),
+        lambda: _archive_claim_requests(root, apply=apply, out=out),
         lambda: _archive_run_state_requests(root, apply=apply, out=out),
     )
     for stage in stages:
