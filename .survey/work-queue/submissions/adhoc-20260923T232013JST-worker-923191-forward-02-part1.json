@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "discovery_precheck": {
+    "request_id": "adhoc-20260923T232013JST-worker-923191-forward-02",
+    "result_path": ".survey/work-queue/discovery-precheck/results/adhoc-20260923T232013JST-worker-923191-forward-02.json",
+    "receipt": "sha256:992259be4de50dd0b363ca71d2df68326d5c6fa34b4218171977742cf8b1e163"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.26333",
+      "arxiv_id": "2609.26333",
+      "title": "Disaggregated Quantization: Specializing LLM Prefill and Decode",
+      "source_url": "https://arxiv.org/abs/2609.26333",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "prefill/decodeを別量子化形式・重み・配置へ特化し、SSDからprefill重みをstreamするODPまで含む。llama.cpp/vLLMと階層メモリ・量子化系統を直接更新する最新候補。"
+    },
+    {
+      "canonical_id": "arXiv:2609.23816",
+      "arxiv_id": "2609.23816",
+      "title": "SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2609.23816",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.23816-splash-high-bandwidth-flash-long-context.md",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "HBMとHigh-Bandwidth Flashを単一KV階層として扱い、flash物理特性にsparse attentionを協調設計する。SSD/flash階層メモリと長文脈KV系統への直接差分が大きい。"
+    },
+    {
+      "canonical_id": "arXiv:2609.26219",
+      "arxiv_id": "2609.26219",
+      "title": "PatchKV: Efficient KV Cache Recovery for Dynamically Edited LLM Contexts",
+      "source_url": "https://arxiv.org/abs/2609.26219",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.26219-patchkv-dynamic-context-recovery.md",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "長時間agentの文脈編集時にoffloaded KVのsuffixを局所回復して全再計算を避ける。KV offload/recomputation系統へ非常に直接的な最新差分。"
+    },
+    {
+      "canonical_id": "arXiv:2609.25537",
+      "arxiv_id": "2609.25537",
+      "title": "Compressing Long Context into Answer-Aligned Memory Embeddings for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.25537",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.25537-answer-aligned-memory-compression.md",
+      "priority": 88,
+      "priority_breakdown": {
+        "base": 53,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 88
+      },
+      "reason": "長文脈をanswer-aligned memory embeddingへ圧縮し、question-guided selectionとlocal windowを組み合わせる。KV/長文脈圧縮系統に直接接続する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.25405",
+      "arxiv_id": "2609.25405",
+      "title": "Efficient Iterative Retrieval with Heterogeneous Batching",
+      "source_url": "https://arxiv.org/abs/2609.25405",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.25405-orthrus-heterogeneous-batching.md",
+      "priority": 87,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 87
+      },
+      "reason": "Orthrusはembeddingとgenerationを同一推論loopでheterogeneous batchingし、GPU bubbleを減らす。RAG/agent servingとbatch scheduling系統への直接的なシステム候補。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "adhoc-20260923T232013JST-worker-923191",
+    "round": "adhoc-20260923T232013JST-worker-923191-forward-02",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "query_summary": "FlexGenのSemantic Scholar前方引用を固定sourceで100件走査し、precheckが既存・重複等を除外して未評価20件を許可。推論基盤、階層メモリ、KV、servingへ直接寄与する強候補10件を2分割でResearch候補化した。",
+    "seed_canonical_id": "arXiv:2303.06865",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2609.26333",
+      "arXiv:2609.23816",
+      "arXiv:2609.26219",
+      "arXiv:2609.25537",
+      "arXiv:2609.25405"
+    ],
+    "next_axis_hint": "selector after durable forward round",
+    "round_submission_index": 1,
+    "round_submission_count": 2,
+    "search_windows": [
+      {
+        "topic": "FlexGen forward citations",
+        "source": "semantic_scholar",
+        "date_range": "fixed citation result set",
+        "category": "inference-systems",
+        "citation_direction": "forward",
+        "seed_canonical_id": "arXiv:2303.06865",
+        "raw_result_count": 100,
+        "unseen_result_count": 20,
+        "duplicate_filtered_count": 62,
+        "rejection_filtered_count": 1,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 10,
+        "position": "offset-0"
+      }
+    ]
+  }
+}
