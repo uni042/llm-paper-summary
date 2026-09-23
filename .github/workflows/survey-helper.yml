@@ -61,6 +61,7 @@ jobs:
             .survey/scripts/normalize_required_metadata.py \
             .survey/scripts/normalize_research_paper_paths.py \
             .survey/scripts/refresh_queue_snapshot.py \
+            .survey/scripts/hot_dispatch.py \
             .survey/scripts/status_publish_gate.py \
             .survey/scripts/build_status_dashboard.py \
             .survey/scripts/render_status_dashboard.py \
@@ -127,6 +128,9 @@ jobs:
 
       - name: Normalize nullable required paper metadata
         run: python .survey/scripts/normalize_required_metadata.py --repo-root . --apply
+
+      - name: Refresh zero-wait hot dispatch index
+        run: python .survey/scripts/hot_dispatch.py --repo-root . refresh
 
       - name: Refresh citation graph when paper content changed
         shell: bash
