@@ -172,6 +172,20 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
                 source_submission=".survey/work-queue/submissions/round.json",
             )
         )
+        self.assertFalse((self.root / preload._claim_path(entry["preload_id"])).exists())
+        self.assertIsNone(preload.pick_available(self.root, direction="forward"))
+
+    def test_old_prechecked_window_becomes_stale(self) -> None:
+        entry = self._prepare_forward_result()
+        entry_path = self.root / preload.ENTRIES / f"{entry['preload_id']}.json"
+        stored = json.loads(entry_path.read_text(encoding="utf-8"))
+        stored["created_at"] = (
+            dt.datetime.now(dt.timezone.utc)
+            - dt.timedelta(seconds=preload.PRELOAD_MAX_AGE_SECONDS + 1)
+        ).isoformat()
+        write_json(entry_path, stored)
+        now = dt.datetime.now(dt.timezone.utc)
+        self.assertEqual(preload._status(self.root, stored, now), "STALE")
         self.assertIsNone(preload.pick_available(self.root, direction="forward"))
 
     def test_adoption_reuses_cached_window_without_initializing_live_provider(self) -> None:
