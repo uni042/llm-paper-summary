@@ -110,6 +110,8 @@ def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
     preload_id = request.get("preload_id")
     preload_seed = request.get("preload_seed") is True
     worker_id = str(request.get("worker_id") or "").strip()
+    discovery_bank = str(request.get("discovery_bank") or "").lower().strip() or None
+    discovery_slot_path = str(request.get("discovery_slot_path") or "").strip() or None
     if preload_id is not None:
         preload_id = _safe_id(preload_id, "preload_id")
         if not preload_seed and not worker_id:
@@ -128,6 +130,8 @@ def _validate_v3_request(request: dict[str, Any]) -> dict[str, Any]:
             "preload_id": preload_id,
             "preload_seed": preload_seed,
             "worker_id": worker_id or None,
+            "discovery_bank": discovery_bank,
+            "discovery_slot_path": discovery_slot_path,
         }
     )
     return out

@@ -150,6 +150,16 @@ jobs:
               processed=$((processed + 1))
             done
 
+            # Claims release only the Discovery sidecar, so refill those hot
+            # slots again in the same workflow instead of leaving them empty until
+            # the next scheduled run. Newly-created preload requests are durable
+            # and will be processed by this workflow's normal push/schedule path.
+            if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; then
+              python .survey/scripts/discovery_preload_queue.py \
+                --repo-root . top-up --target 32 --max-new 8 \
+                | tee /tmp/discovery-preload-post-topup.json
+            fi
+
             if [ "$processed" -eq 0 ] && git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
               echo 'No unsettled Discovery precheck requests or preload queue changes remain.'
               exit 0
@@ -159,6 +169,11 @@ jobs:
               .survey/work-queue/discovery-precheck/requests \
               .survey/work-queue/discovery-precheck/results \
               .survey/work-queue/discovery-preload
+            while IFS= read -r -d '' discovery_slot; do
+              git add -- "$discovery_slot"
+            done < <(
+              find .survey/work-queue/records -type f -name 'discovery-preload.json' -print0
+            )
 
             if git diff --cached --quiet; then
               echo 'No Discovery precheck changes to publish.'

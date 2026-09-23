@@ -15,6 +15,7 @@ if str(SCRIPTS) not in sys.path:
 
 import discovery_preload_queue as preload  # noqa: E402
 import process_discovery_precheck as precheck  # noqa: E402
+from record_bank_config import BANK_IDS, BANK_ROOTS, SLOT_NAMES, discovery_slot_path  # noqa: E402
 
 
 def write_json(path: Path, value: object) -> None:
@@ -104,6 +105,64 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
             self.assertEqual(request["page_size"], 20)
             self.assertEqual(request["target_unseen"], 20)
             self.assertTrue(request["run_key"].startswith("preload:"))
+            self.assertIn(entry["discovery_bank"], BANK_IDS)
+            self.assertEqual(request["discovery_bank"], entry["discovery_bank"])
+            self.assertEqual(
+                request["discovery_slot_path"],
+                discovery_slot_path(entry["discovery_bank"]),
+            )
+
+        bound = preload._read_bank_bindings(self.root)
+        self.assertEqual(len(bound), 2)
+        for bank in BANK_IDS:
+            self.assertTrue((self.root / discovery_slot_path(bank)).is_file())
+
+    def test_discovery_sidecar_does_not_touch_research_slots(self) -> None:
+        sentinel_bank = "a"
+        sentinel_slot = SLOT_NAMES[0]
+        sentinel_path = self.root / BANK_ROOTS[sentinel_bank] / f"{sentinel_slot}.json"
+        sentinel = {
+            "schema_version": 1,
+            "transport_version": 10,
+            "slot": sentinel_slot,
+            "attempt_id": "attempt-reading",
+            "job_id": "job-reading",
+            "data": {"text": "research payload must survive Discovery rotation"},
+        }
+        write_json(sentinel_path, sentinel)
+
+        forward = self._prepare_forward_result()
+        self.assertEqual(
+            json.loads(sentinel_path.read_text(encoding="utf-8")),
+            sentinel,
+        )
+
+        available = preload.pick_available(self.root, direction="forward")
+        self.assertIsNotNone(available)
+        bank = available["discovery_bank"]
+        request = {
+            "request_id": "real-dual-bank",
+            "worker_id": "worker-9",
+            "run_key": "real-dual-run",
+            "preload_id": forward["preload_id"],
+            "provider": forward["provider"],
+            "source_url": forward["source_url"],
+            "axis": forward["axis"],
+            "initial_cursor": forward["initial_cursor"],
+            "page_size": forward["page_size"],
+            "discovery_bank": bank,
+            "discovery_slot_path": discovery_slot_path(bank),
+        }
+        preload.claim_and_load(self.root, request)
+
+        sidecar = json.loads(
+            (self.root / discovery_slot_path(bank)).read_text(encoding="utf-8")
+        )
+        self.assertIsNone(sidecar["preload_id"])
+        self.assertEqual(
+            json.loads(sentinel_path.read_text(encoding="utf-8")),
+            sentinel,
+        )
 
     def test_failed_preload_does_not_count_as_stock_and_is_replaced(self) -> None:
         first = preload.top_up(self.root, target=1, max_new=1)

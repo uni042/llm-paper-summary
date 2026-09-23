@@ -21,6 +21,7 @@ from typing import Any
 from urllib.parse import parse_qs, urlparse
 
 import worker_identity
+from record_bank_config import BANK_IDS, DISCOVERY_SLOT_NAME, discovery_slot_path
 
 QUEUE_ROOT = Path(".survey/work-queue/discovery-preload")
 ENTRIES = QUEUE_ROOT / "entries"
@@ -165,6 +166,170 @@ def _status(root: Path, entry: dict[str, Any], now: dt.datetime) -> str:
     return "INVALID"
 
 
+def _empty_bank_payload() -> dict[str, Any]:
+    return {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": DISCOVERY_SLOT_NAME,
+        "preload_id": None,
+        "data": {},
+    }
+
+
+def _bank_slot_path(root: Path, bank: str) -> Path:
+    return root / discovery_slot_path(bank)
+
+
+def _bank_payload(root: Path, bank: str) -> dict[str, Any]:
+    value = _read(_bank_slot_path(root, bank), {})
+    return value if isinstance(value, dict) else {}
+
+
+def _write_bank_binding(root: Path, bank: str, entry: dict[str, Any]) -> None:
+    _write(
+        _bank_slot_path(root, bank),
+        {
+            "schema_version": 1,
+            "transport_version": 10,
+            "slot": DISCOVERY_SLOT_NAME,
+            "preload_id": entry["preload_id"],
+            "data": {
+                "precheck_request_id": entry.get("precheck_request_id"),
+                "citation_direction": entry.get("citation_direction"),
+                "provider": entry.get("provider"),
+                "source_url": entry.get("source_url"),
+                "axis": entry.get("axis"),
+                "seed_canonical_id": entry.get("seed_canonical_id"),
+                "created_at": entry.get("created_at"),
+            },
+        },
+    )
+
+
+def _clear_bank_binding(root: Path, bank: str, *, expected_preload_id: str | None = None) -> bool:
+    current = _bank_payload(root, bank)
+    current_id = str(current.get("preload_id") or "").strip() or None
+    if expected_preload_id is not None and current_id != expected_preload_id:
+        return False
+    if current_id is None and current.get("slot") == DISCOVERY_SLOT_NAME:
+        return False
+    _write(_bank_slot_path(root, bank), _empty_bank_payload())
+    return True
+
+
+def _read_bank_bindings(root: Path) -> dict[str, str]:
+    """Return preload_id -> bank for currently materialized Discovery sidecars."""
+    out: dict[str, str] = {}
+    for bank in BANK_IDS:
+        value = _bank_payload(root, bank)
+        if value.get("slot") != DISCOVERY_SLOT_NAME:
+            continue
+        preload_id = str(value.get("preload_id") or "").strip()
+        if preload_id and preload_id not in out:
+            out[preload_id] = bank
+    return out
+
+
+def _sync_bank_bindings(
+    root: Path,
+    entries: list[dict[str, Any]],
+    now: dt.datetime,
+) -> tuple[dict[str, str], list[str], int]:
+    """Repair the Discovery hot sidecars without touching Research/Audit record slots.
+
+    READY/PRECHECKED entries occupy one Discovery sidecar each. CLAIMED entries are
+    deliberately detached: the durable claim/result already preserves their cached
+    window, so the physical bank can immediately preload the next Discovery window.
+    """
+    entry_by_id = {
+        str(row.get("preload_id")): row
+        for row in entries
+        if isinstance(row, dict) and row.get("preload_id")
+    }
+    bindings: dict[str, str] = {}
+    free: list[str] = []
+    changed = 0
+
+    for bank in BANK_IDS:
+        payload = _bank_payload(root, bank)
+        preload_id = str(payload.get("preload_id") or "").strip()
+        entry = entry_by_id.get(preload_id) if preload_id else None
+        if (
+            entry is not None
+            and payload.get("slot") == DISCOVERY_SLOT_NAME
+            and _status(root, entry, now) in {"READY", "PRECHECKED"}
+            and preload_id not in bindings
+        ):
+            bindings[preload_id] = bank
+            continue
+        if preload_id or payload.get("slot") != DISCOVERY_SLOT_NAME:
+            if _clear_bank_binding(root, bank):
+                changed += 1
+        free.append(bank)
+
+    status_rank = {"PRECHECKED": 0, "READY": 1}
+    unbound = []
+    for entry in entries:
+        preload_id = str(entry.get("preload_id") or "")
+        if not preload_id or preload_id in bindings:
+            continue
+        status = _status(root, entry, now)
+        if status not in status_rank:
+            continue
+        unbound.append((status_rank[status], str(entry.get("created_at") or ""), preload_id, entry))
+    unbound.sort(key=lambda row: (row[0], row[1], row[2]))
+
+    still_free = list(free)
+    for _, _, preload_id, entry in unbound:
+        if not still_free:
+            break
+        preferred = str(entry.get("discovery_bank") or "").lower()
+        if preferred in still_free:
+            bank = preferred
+            still_free.remove(bank)
+        else:
+            bank = still_free.pop(0)
+        _write_bank_binding(root, bank, entry)
+        bindings[preload_id] = bank
+        changed += 1
+
+    bound_banks = set(bindings.values())
+    final_free = [bank for bank in BANK_IDS if bank not in bound_banks]
+    return bindings, final_free, changed
+
+
+def _bank_for_preload(root: Path, preload_id: str) -> str | None:
+    return _read_bank_bindings(root).get(str(preload_id or "").strip())
+
+
+def _restore_bank_binding(root: Path, entry: dict[str, Any]) -> str | None:
+    """Rebind one reusable PRECHECKED entry after an expired claim.
+
+    Prefer its former physical bank when that Discovery sidecar is empty, otherwise
+    use the first empty Discovery sidecar. Research/Audit slots are never inspected
+    or modified here because the two planes are independent.
+    """
+    preload_id = str(entry.get("preload_id") or "")
+    if not preload_id:
+        return None
+    current = _bank_for_preload(root, preload_id)
+    if current:
+        return current
+
+    preferred = str(entry.get("discovery_bank") or "").lower()
+    candidates = list(BANK_IDS)
+    if preferred in BANK_IDS:
+        candidates.remove(preferred)
+        candidates.insert(0, preferred)
+    for bank in candidates:
+        payload = _bank_payload(root, bank)
+        if str(payload.get("preload_id") or "").strip():
+            continue
+        _write_bank_binding(root, bank, entry)
+        return bank
+    return None
+
+
 def _source_specs(root: Path) -> list[dict[str, Any]]:
     state = _read(root / DISCOVERY_STATE, {}) or {}
     history = state.get("history") if isinstance(state.get("history"), list) else []
@@ -306,6 +471,9 @@ def _gc_old_artifacts(root: Path, now: dt.datetime) -> list[str]:
                     root / PRECHECK_RESULTS / f"{request_id}.json",
                 ]
             )
+        bank = _bank_for_preload(root, preload_id)
+        if bank:
+            _clear_bank_binding(root, bank, expected_preload_id=preload_id)
         for path in paths:
             try:
                 path.unlink()
@@ -367,7 +535,15 @@ def _next_cursor_for_entry(root: Path, entry: dict[str, Any]) -> tuple[bool, str
     return True, cursor
 
 
-def _make_entry(spec: dict[str, Any], *, bucket: int, sequence: int, initial_cursor: str | None, now: dt.datetime) -> dict[str, Any]:
+def _make_entry(
+    spec: dict[str, Any],
+    *,
+    bucket: int,
+    sequence: int,
+    initial_cursor: str | None,
+    now: dt.datetime,
+    discovery_bank: str | None = None,
+) -> dict[str, Any]:
     source_key = str(spec["source_key"])
     token = json.dumps(
         {
@@ -398,6 +574,7 @@ def _make_entry(spec: dict[str, Any], *, bucket: int, sequence: int, initial_cur
         "page_size": DEFAULT_PAGE_SIZE,
         "max_pages": DEFAULT_MAX_PAGES,
         "precheck_request_id": request_id,
+        "discovery_bank": discovery_bank,
         "created_at": now.isoformat(),
     }
 
@@ -419,6 +596,12 @@ def _request_for_entry(entry: dict[str, Any]) -> dict[str, Any]:
         "initial_cursor": entry.get("initial_cursor"),
         "preload_seed": True,
         "preload_id": preload_id,
+        "discovery_bank": entry.get("discovery_bank"),
+        "discovery_slot_path": (
+            discovery_slot_path(str(entry.get("discovery_bank")))
+            if str(entry.get("discovery_bank") or "").lower() in BANK_IDS
+            else None
+        ),
     }
 
 
@@ -466,12 +649,17 @@ def _prioritize_specs(
 
 def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_MAX_NEW) -> dict[str, Any]:
     root = root.resolve()
+    target = min(max(int(target), 0), len(BANK_IDS))
     now = _utcnow()
     expired = _expire_stale_claims(root, now)
     garbage_collected = _gc_old_artifacts(root, now)
     entries = _entries(root)
+    bindings, free_banks, bank_binding_changes = _sync_bank_bindings(root, entries, now)
     available_rows = [
-        row for row in entries if _status(root, row, now) in {"READY", "PRECHECKED"}
+        row
+        for row in entries
+        if str(row.get("preload_id") or "") in bindings
+        and _status(root, row, now) in {"READY", "PRECHECKED"}
     ]
     available = len(available_rows)
     direction_available = {
@@ -488,7 +676,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         for direction in ("backward", "forward", "normal")
     }
     needed = max(target - available, sum(direction_deficits.values()), 0)
-    budget = min(needed, max(max_new, 0))
+    budget = min(needed, max(max_new, 0), len(free_banks))
     if budget == 0:
         return {
             "target": target,
@@ -498,6 +686,9 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
             "created": [],
             "expired_claims": expired,
             "garbage_collected": garbage_collected,
+            "bank_binding_changes": bank_binding_changes,
+            "dual_purpose_bank_count": len(BANK_IDS),
+            "discovery_bank_slots_free": len(free_banks),
         }
 
     bucket = _refresh_bucket(now)
@@ -536,12 +727,16 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                 sequence = int(latest.get("sequence", 0)) + 1
                 initial_cursor = next_cursor
 
+            if not free_banks:
+                break
+            bank = free_banks[0]
             entry = _make_entry(
                 spec,
                 bucket=bucket,
                 sequence=sequence,
                 initial_cursor=initial_cursor,
                 now=now,
+                discovery_bank=bank,
             )
             entry_path = root / ENTRIES / f"{entry['preload_id']}.json"
             request_path = root / PRECHECK_REQUESTS / f"{entry['precheck_request_id']}.json"
@@ -549,6 +744,9 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                 continue
             _write(entry_path, entry)
             _write(request_path, _request_for_entry(entry))
+            _write_bank_binding(root, bank, entry)
+            free_banks.pop(0)
+            bindings[entry["preload_id"]] = bank
             entries.append(entry)
             created.append(entry["preload_id"])
             if direction_deficits.get(direction, 0) > 0:
@@ -564,6 +762,9 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         "created_count": len(created),
         "expired_claims": expired,
         "garbage_collected": garbage_collected,
+        "bank_binding_changes": bank_binding_changes,
+        "dual_purpose_bank_count": len(BANK_IDS),
+        "discovery_bank_slots_free_after": len(free_banks),
     }
 
 
@@ -579,8 +780,11 @@ def available_preloads(
     # treated as unclaimed by _active_claim(); top_up/maintenance removes their
     # stale marker files.
     rows: list[dict[str, Any]] = []
+    bindings = _read_bank_bindings(root)
     for entry in _entries(root):
-        if _status(root, entry, now) != "PRECHECKED":
+        preload_id = str(entry.get("preload_id") or "")
+        bank = bindings.get(preload_id)
+        if not bank or _status(root, entry, now) != "PRECHECKED":
             continue
         if direction and str(entry.get("citation_direction") or "") != direction:
             continue
@@ -590,6 +794,8 @@ def available_preloads(
         rows.append(
             {
                 "preload_id": entry["preload_id"],
+                "discovery_bank": bank,
+                "discovery_slot_path": discovery_slot_path(bank),
                 "citation_direction": entry.get("citation_direction"),
                 "provider": entry.get("provider"),
                 "source_url": entry.get("source_url"),
@@ -663,6 +869,21 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
         )
         if not same:
             raise ValueError("Discovery preload entry is actively claimed by another worker")
+        discovery_bank = str(current.get("discovery_bank") or "").lower().strip() or None
+    else:
+        discovery_bank = _bank_for_preload(root, preload_id)
+        if discovery_bank is None and _status(root, entry, now) == "PRECHECKED":
+            discovery_bank = _restore_bank_binding(root, entry)
+
+    requested_bank = str(request.get("discovery_bank") or "").lower().strip() or None
+    if discovery_bank is None or discovery_bank not in BANK_IDS:
+        raise ValueError("Discovery preload is not assigned to a valid dual-purpose bank")
+    if requested_bank is not None and requested_bank != discovery_bank:
+        raise ValueError("Discovery preload bank does not match the run-state assignment")
+    requested_slot_path = str(request.get("discovery_slot_path") or "").strip() or None
+    expected_slot_path = discovery_slot_path(discovery_bank)
+    if requested_slot_path is not None and requested_slot_path != expected_slot_path:
+        raise ValueError("Discovery preload slot path does not match the bank assignment")
     lease_expires = now + dt.timedelta(seconds=CLAIM_LEASE_SECONDS)
     claim = {
         "schema_version": 1,
@@ -673,8 +894,14 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
         "claimed_at": current.get("claimed_at") if current else now.isoformat(),
         "lease_expires_at": lease_expires.isoformat(),
         "preload_result_path": _result_path(entry).as_posix(),
+        "discovery_bank": discovery_bank,
+        "discovery_slot_path": expected_slot_path,
     }
     _write(claim_path, claim)
+    # The claimed cache is now protected by entry/result/claim identity. Release
+    # only the Discovery sidecar so this same physical bank can immediately preload
+    # the next search window while its Research/Audit slots remain untouched.
+    _clear_bank_binding(root, discovery_bank, expected_preload_id=preload_id)
     return entry, preload_result
 
 
@@ -699,6 +926,17 @@ def mark_ingested(root: Path, *, preload_id: str, run_key: str, source_submissio
             "ingested_at": _utcnow().isoformat(),
         },
     )
+    claim = _read(root / _claim_path(preload_id), {})
+    claim_bank = (
+        str(claim.get("discovery_bank") or "").lower()
+        if isinstance(claim, dict)
+        else ""
+    )
+    bound_bank = _bank_for_preload(root, preload_id)
+    if bound_bank:
+        _clear_bank_binding(root, bound_bank, expected_preload_id=preload_id)
+    elif claim_bank in BANK_IDS:
+        _clear_bank_binding(root, claim_bank, expected_preload_id=preload_id)
     try:
         (root / _claim_path(preload_id)).unlink()
     except FileNotFoundError:
@@ -712,6 +950,7 @@ def summary(root: Path) -> dict[str, Any]:
     expired = _expire_stale_claims(root, now)
     counts: dict[str, int] = {}
     directions: dict[str, dict[str, int]] = {}
+    bindings = _read_bank_bindings(root)
     for entry in _entries(root):
         status = _status(root, entry, now)
         counts[status] = counts.get(status, 0) + 1
@@ -724,6 +963,9 @@ def summary(root: Path) -> dict[str, Any]:
         "directions": directions,
         "expired_claims_released": expired,
         "claim_lease_seconds": CLAIM_LEASE_SECONDS,
+        "dual_purpose_banks": len(BANK_IDS),
+        "discovery_bank_slots_bound": len(bindings),
+        "discovery_bank_slots_free": max(len(BANK_IDS) - len(bindings), 0),
     }
 
 

@@ -28,6 +28,7 @@ REGISTRY = _load_registry()
 BANK_ROOTS = {str(k).lower(): str(v) for k, v in REGISTRY["banks"].items()}
 BANK_IDS = tuple(BANK_ROOTS)
 SLOT_NAMES = tuple(str(slot) for slot in REGISTRY["slots"])
+DISCOVERY_SLOT_NAME = str(REGISTRY.get("discovery_slot") or "discovery-preload")
 
 # Historical workflow-v10 bundles used ``chat-record-a`` for bank A before the
 # canonical root was renamed to ``chat-record``. This is read compatibility only:
@@ -50,6 +51,13 @@ def slot_path(bank: str, slot: str) -> str:
     if slot not in SLOT_NAMES:
         raise ValueError(f"unknown record slot: {slot}")
     return f"{bank_root(bank)}/{slot}.json"
+
+
+def discovery_slot_path(bank: str) -> str:
+    """Return the independent Discovery preload sidecar path for one dual-purpose bank."""
+    bank = bank.lower()
+    bank_root(bank)
+    return f"{bank_root(bank)}/{DISCOVERY_SLOT_NAME}.json"
 
 
 def canonical_slot_paths(bank: str) -> dict[str, str]:

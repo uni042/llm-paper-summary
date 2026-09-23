@@ -11,7 +11,12 @@ sys.path.insert(0, str(SCRIPTS))
 import enrich_claim_record_routes  # noqa: E402
 import immutable_submission  # noqa: E402
 import list_unsettled_immutable_submissions  # noqa: E402
-from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
+from record_bank_config import (  # noqa: E402
+    BANK_ROOTS,
+    DISCOVERY_SLOT_NAME,
+    SLOT_NAMES,
+    discovery_slot_path,
+)
 
 
 def write_json(path: Path, value):
@@ -82,6 +87,15 @@ class RecordBankRoutingContractTests(unittest.TestCase):
         self.assertEqual(BANK_ROOTS["aa"], ".survey/work-queue/records/chat-record-aa")
         self.assertEqual(BANK_ROOTS["af"], ".survey/work-queue/records/chat-record-af")
         self.assertEqual(len(set(BANK_ROOTS.values())), 32)
+        self.assertEqual(DISCOVERY_SLOT_NAME, "discovery-preload")
+        self.assertEqual(
+            discovery_slot_path("a"),
+            ".survey/work-queue/records/chat-record/discovery-preload.json",
+        )
+        self.assertEqual(
+            discovery_slot_path("af"),
+            ".survey/work-queue/records/chat-record-af/discovery-preload.json",
+        )
 
     def test_bank_a_legacy_slot_paths_remain_read_compatible(self):
         """Already-durable workflow-v10 descriptors using old bank-A paths must recover."""
