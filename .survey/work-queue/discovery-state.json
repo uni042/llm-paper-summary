@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:28:36+00:00",
-  "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
-  "last_round": "20260924T0132JST-scheduled-chat-00-forward-r3",
+  "updated_at": "2026-09-23T16:46:28+00:00",
+  "last_run_key": "adhoc-20260924T014100JST-worker-915241",
+  "last_round": "20260924T014100JST-worker-915241-backward-r1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-model-loading-9",
-      "axis": "serverless model loading・weight residency・multi-GPU KV migration",
-      "query_summary": "request schedulingからmodel lifecycle/memory residencyへ軸を移し、serverless cold startのweight cacheとmulti-GPU KV migrationを探索した。SwiftCache/Tuttiは既知候補のため反復しなかった。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 2,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.5,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.16135",
-        "arXiv:2605.03375"
-      ],
-      "next_axis_hint": "tensor parallel/collective communication・network topologyを使うinference parallelismへ移す",
-      "source_submission": "work-queue/submissions/20260916T2038JST-discovery-specialist-model-loading-9.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-collective-10",
@@ -8437,6 +8419,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T014100JST-worker-915241-backward-r1",
+      "precheck_request_id": "20260924T014100JST-worker-915241-backward-r1",
+      "run_key": "adhoc-20260924T014100JST-worker-915241",
+      "round": "20260924T014100JST-worker-915241-backward-r1",
+      "axis": "preload-backward-structured-references",
+      "query_summary": "Repository-wide structured backward references from the claimed preload window, re-filtered against this run's current identity snapshot.",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-eccacdc18ae88ef456ab",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 1,
+      "accepted_count": 4,
+      "accepted_canonical_ids": [
+        "DOI:10.1109/tmc.2025.3546466",
+        "arXiv:2502.09334",
+        "arXiv:2412.14711",
+        "arXiv:2405.12532",
+        "arXiv:2407.08454"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014100JST-worker-915241-backward-r1-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014100JST-worker-915241-backward-r1-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 19,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.05,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16353,16 +16375,16 @@
       "next_axis_hint": "continue selector with another productive seed or backward-reference window"
     },
     "preload-backward-structured-references": {
-      "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
-      "rounds": 2,
-      "candidate_count": 40,
+      "last_run_key": "adhoc-20260924T014100JST-worker-915241",
+      "rounds": 3,
+      "candidate_count": 60,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 40,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 40,
-      "accepted_count": 7,
+      "novel_candidate_count": 60,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 59,
+      "accepted_count": 11,
       "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.016666666666666666,
       "next_axis_hint": null
     }
   },
