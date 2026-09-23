@@ -745,10 +745,14 @@ def process_pending(root: Path) -> dict[str, int]:
         target = result_root / path.name
         if target.exists():
             reused += 1
+            existing = _read(target, {})
+            if isinstance(existing, dict) and existing.get("ok") is True:
+                run_state_cache.write_latest_pointer(root, target, existing)
             continue
         try:
             request = _normalize_request(path, _read(path))
             result = derive(root, request)
+            result["snapshot_origin"] = "request-fast-lane"
         except Exception as exc:
             errors += 1
             result = {
@@ -759,15 +763,125 @@ def process_pending(root: Path) -> dict[str, int]:
                 "next_action": "FIX_RUN_STATE_REQUEST",
             }
         _write(target, result)
+        if result.get("ok") is True:
+            run_state_cache.write_latest_pointer(root, target, result)
         processed += 1
     return {"processed": processed, "errors": errors, "reused": reused}
+
+
+def _descriptor_paths(path: Path) -> list[Path]:
+    if not path.is_file():
+        return []
+    return [
+        Path(line.strip())
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+
+
+def auto_snapshot_from_descriptors(root: Path, descriptors_file: Path) -> dict[str, Any]:
+    root = root.resolve()
+    paths = _descriptor_paths(descriptors_file)
+    touched = run_state_cache.observe_descriptors(root, paths)
+    generated: list[str] = []
+    fallback_required: list[str] = []
+    for worker_id, run_keys in sorted(touched.items()):
+        for run_key in run_keys:
+            request = run_state_cache.cached_request(root, worker_id, run_key)
+            if request is None:
+                fallback_required.append(f"{worker_id}:{run_key}")
+                continue
+            result = derive(root, request)
+            generation = run_state_cache.generation_for(root, worker_id, run_key)
+            request_id = run_state_cache.auto_result_id(worker_id, run_key, generation)
+            result["request_id"] = request_id
+            result["snapshot_generation"] = generation
+            result["snapshot_origin"] = "submission-fast-lane"
+            result["auto_generated"] = True
+            target = root / RESULTS / f"{request_id}.json"
+            _write(target, result)
+            run_state_cache.write_latest_pointer(root, target, result)
+            generated.append(target.relative_to(root).as_posix())
+    return {
+        "observed_descriptors": len(paths),
+        "touched_runs": sum(len(items) for items in touched.values()),
+        "generated_results": generated,
+        "fallback_required": sorted(set(fallback_required)),
+    }
+
+
+def rebuild_caches(root: Path) -> dict[str, Any]:
+    root = root.resolve()
+    rows: dict[tuple[str, str], dict[str, Any]] = {}
+    for result_root in (
+        root / RESULTS,
+        root / ".survey/work-queue/archive/transport/run-state/results",
+    ):
+        if not result_root.is_dir():
+            continue
+        for path in result_root.glob("*.json"):
+            value = _read(path, {})
+            if not isinstance(value, dict) or value.get("ok") is not True:
+                continue
+            worker_id = str(value.get("worker_id") or "")
+            run_key = str(value.get("run_key") or "")
+            slot = str(value.get("scheduled_slot") or "")
+            start = value.get("actual_invocation_start")
+            if worker_id not in ALLOWED_WORKERS or not run_key or slot not in {"00", "30", "0830"} or _time(start) is None:
+                continue
+            key = (worker_id, run_key)
+            current = rows.get(key)
+            if current is None or str(value.get("processed_at") or "") > str(current.get("processed_at") or ""):
+                rows[key] = value
+
+    ordered = sorted(
+        rows.values(),
+        key=lambda value: str(value.get("actual_invocation_start") or ""),
+        reverse=True,
+    )
+    rebuilt = 0
+    failures: list[str] = []
+    per_worker = {worker: 0 for worker in ALLOWED_WORKERS}
+    for value in ordered:
+        worker_id = str(value["worker_id"])
+        if per_worker[worker_id] >= 8:
+            continue
+        request = {
+            "schema_version": 1,
+            "request_id": "maintenance-rebuild",
+            "run_key": str(value["run_key"]),
+            "worker_id": worker_id,
+            "worker_kind": "scheduled_chat",
+            "scheduled_slot": str(value["scheduled_slot"]),
+            "actual_invocation_start": str(value["actual_invocation_start"]),
+            "runtime_condition": "none",
+            "runtime_condition_confirmed": False,
+            "runtime_condition_attempts": 0,
+            "runtime_condition_detail": "",
+        }
+        try:
+            derive(root, request, force_canonical=True)
+        except Exception as exc:
+            failures.append(f"{worker_id}:{request['run_key']}:{type(exc).__name__}:{exc}")
+            continue
+        rebuilt += 1
+        per_worker[worker_id] += 1
+    return {"rebuilt": rebuilt, "failures": failures}
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
+    parser.add_argument("--auto-from-descriptors-file", type=Path)
+    parser.add_argument("--rebuild-cache", action="store_true")
     args = parser.parse_args()
-    print(json.dumps(process_pending(args.repo_root), ensure_ascii=False, sort_keys=True))
+    if args.auto_from_descriptors_file is not None:
+        result = auto_snapshot_from_descriptors(args.repo_root, args.auto_from_descriptors_file)
+    elif args.rebuild_cache:
+        result = rebuild_caches(args.repo_root)
+    else:
+        result = process_pending(args.repo_root)
+    print(json.dumps(result, ensure_ascii=False, sort_keys=True))
     return 0
 
 
