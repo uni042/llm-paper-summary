@@ -166,6 +166,68 @@ class SharedPreloadPoolTests(unittest.TestCase):
             ]
             self.assertEqual(len(free_or_reusable), 8)
 
+    def test_refill_promotes_cold_standby_into_four_hot_banked_claims(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_banks(root)
+            for index in range(170):
+                seed_job(root, index)
+
+            claim_worker_with_banks.process_requests(root, at=AT, maintain_shared_pool=True)
+            seed_request(root, "req-initial", "worker-1", AT + timedelta(seconds=1))
+            claim_worker_with_banks.process_requests(
+                root,
+                at=AT + timedelta(seconds=1),
+                maintain_shared_pool=False,
+            )
+            initial = json.loads(
+                (root / ".survey/work-queue/claim-results/req-initial.json").read_text()
+            )
+            first_ids = [row["job_id"] for row in initial["assignments"]]
+            self.assertEqual(len(first_ids), 12)
+            self.assertTrue(all(
+                isinstance(row.get("record_bank"), str)
+                for row in initial["assignments"][:4]
+            ))
+            self.assertTrue(all(
+                "record_bank" not in row
+                for row in initial["assignments"][4:]
+            ))
+
+            # Simulate two terminal foregrounds; the low-watermark policy refills
+            # while two old hot claims are still immediately runnable.
+            for job_id in first_ids[:2]:
+                claim_path = root / ".survey/work-queue/claims" / f"{job_id}.json"
+                claim = json.loads(claim_path.read_text())
+                claim["released_at"] = (AT + timedelta(seconds=2)).isoformat()
+                claim["expires_at"] = (AT + timedelta(seconds=2)).isoformat()
+                write_json(claim_path, claim)
+                job_path = root / ".survey/work-queue/jobs" / f"{job_id}.json"
+                job = json.loads(job_path.read_text())
+                job["status"] = "completed"
+                write_json(job_path, job)
+
+            seed_request(root, "req-refill", "worker-1", AT + timedelta(seconds=3))
+            claim_worker_with_banks.process_requests(
+                root,
+                at=AT + timedelta(seconds=3),
+                maintain_shared_pool=False,
+            )
+            refill = json.loads(
+                (root / ".survey/work-queue/claim-results/req-refill.json").read_text()
+            )
+            self.assertEqual(len(refill["assignments"]), 12)
+            self.assertEqual(
+                [row["job_id"] for row in refill["assignments"][:2]],
+                first_ids[2:4],
+            )
+            hot = refill["assignments"][:claim_window_policy.HOT_BANKED_CLAIMS]
+            cold = refill["assignments"][claim_window_policy.HOT_BANKED_CLAIMS:]
+            self.assertTrue(all(isinstance(row.get("record_bank"), str) for row in hot))
+            self.assertTrue(all("record_bank" not in row for row in cold))
+            self.assertEqual(len({row["record_bank"] for row in hot}), 4)
+
+
     def test_new_high_priority_job_is_appended_behind_loaded_fifo(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
