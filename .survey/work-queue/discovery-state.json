@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:56:16+00:00",
+  "updated_at": "2026-09-23T16:58:56+00:00",
   "last_run_key": "adhoc-20260924T014906JST-worker-915242",
-  "last_round": "adhoc-20260924T014906JST-worker-915242-forward-take-2",
+  "last_round": "adhoc-20260924T014906JST-worker-915242-forward-take-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,25 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-exhaust-serving-14",
-      "axis": "disaggregated serving・KV transfer・scheduler最終スイープ",
-      "query_summary": "disaggregated prefill/decode、network-aware KV routing、selective transfer、prefix-aware schedulingを最終再スイープした。SmartGen、NetKV、TraCT等は直近探索済みで、新規の強候補は確認できなかった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2607.28150",
-        "arXiv:2606.03910",
-        "arXiv:2512.18194"
-      ],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260916T2052JST-discovery-specialist-exhaust-serving-14.json"
-    },
     {
       "run_key": "2026-09-17T00:00:00+09:00",
       "round": "specialist-kv-moe-memory-pooling-1",
@@ -8546,6 +8527,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:adhoc-20260924T014906JST-worker-915242-forward-take-3",
+      "precheck_request_id": "adhoc-20260924T014906JST-worker-915242-forward-take-3",
+      "run_key": "adhoc-20260924T014906JST-worker-915242",
+      "round": "adhoc-20260924T014906JST-worker-915242-forward-take-3",
+      "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+      "query_summary": "Forward citations of AWQ from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2306.00978",
+      "preload_id": "preload-fdc456f3ea26f68e46c8",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2609.04724",
+        "arXiv:2609.04526",
+        "arXiv:2609.02652",
+        "DOI:10.1109/TMC.2026.3676689",
+        "DOI:10.24963/ijcai.2026/475"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014906JST-worker-915242-forward-r3-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014906JST-worker-915242-forward-r3-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16358,14 +16379,14 @@
       "next_axis_hint": null
     },
     "forward citations of AWQ weight quantization and inference kernels retry": {
-      "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
-      "rounds": 2,
-      "candidate_count": 25,
+      "last_run_key": "adhoc-20260924T014906JST-worker-915242",
+      "rounds": 3,
+      "candidate_count": 45,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 25,
+      "novel_candidate_count": 45,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 25,
-      "accepted_count": 10,
+      "post_final_dedupe_count": 45,
+      "accepted_count": 15,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
