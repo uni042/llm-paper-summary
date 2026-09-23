@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 13:28:49 JST**
+> 自動生成: **2026-09-23 14:06:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **176** |
-| 未claim Research job | **176** |
-| 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-23 13:28:45 JST（4秒前）** |
+| 収録候補論文 | **175** |
+| 未claim Research job | **174** |
+| 直近24hの検証済みResearch収録 | **82** |
+| 最終検証済みResearch収録 | **09-23 14:06:25 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **176** |
+| canonical_id確認済みの一意な候補論文 | **175** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **176** |
+| 非終端Research job合計 | **175** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -33,9 +33,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6426** |
+| 構造化references総候補 | **6428** |
 | 処理済み | **638** |
-| 未処理 | **5788** |
+| 未処理 | **5790** |
 | 収録済みとして除外 | **530** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（4時間57分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（5時間35分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **15** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **19** | **4** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **15** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 14:06:25 JST** [research] `arXiv:2605.10933` — DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices
+  - job: `.survey/work-queue/jobs/job-research-71e43b4e5ff698a1.json`
+  - result: `.survey/work-queue/results/research/attempt-5a4e9ada9818faf9d38935ab.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5a4e9ada9818faf9d38935ab.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2605.10933-deco-end-side-sparse-moe.md`
 - **09-23 13:28:45 JST** [research] `arXiv:2608.01784` — REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models
   - job: `.survey/work-queue/jobs/job-research-81939bee41b7da9c.json`
   - result: `.survey/work-queue/results/research/attempt-d924da91e59e26de1e7c5529.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-2bf3de3b255ebab0e493ae1d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-2bf3de3b255ebab0e493ae1d.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md`
-- **09-23 09:44:26 JST** [research] `arXiv:2607.28097` — From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference
-  - job: `.survey/work-queue/jobs/job-research-52c9fc70a4b38892.json`
-  - result: `.survey/work-queue/results/research/attempt-0273ce1913f64a15a590f7e2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0273ce1913f64a15a590f7e2.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2607.28097-from-expert-reduction-to-behavioral-divergence-tracing-numerical-state-through-sparse-moe-inference.md`
 
 ### Audit
 
@@ -178,8 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2605.06663` — EMO: Pretraining Mixture of Experts for Emergent Modularity / worker `scheduled-chat-00`
+  - claim: **09-23 13:58:56 JST** / heartbeat: **—** / lease expiry: **09-23 15:28:56 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2c92c0a3b8a6da0e.json`
 
 #### Audit
 
@@ -199,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **176** |
+| ready | **175** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **974** |
+| inference/training/survey配下の論文Markdown実体 | **975** |
 
 ### immutable submissionの未照合
 
