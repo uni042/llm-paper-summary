@@ -4,7 +4,36 @@
   "slot": "evaluation",
   "attempt_id": "attempt-12e4c076f1788c06010c4a7a",
   "job_id": "job-research-acb3c365d16a91ad",
-  "data": {},
+  "data": {
+    "hardware": "基礎MoE効率: A800 80GB PCIe×1。DeepSeek-V2-Liteサービス評価: A800 80GB PCIe×2、Intel Xeon Silver 4314、16GB DDR4モジュール×15。DeepSeek-V3: H200 141GB SXM5×8、Intel Xeon Platinum 8558×2、64GB DDR4モジュール×32。",
+    "software": "基礎評価はPyTorch + torch.compile、SwiGLU、Transformers MixtralModel。サービス評価はSGLang build v0.4.4.post1（commit ad4e58bf67ec833ff4d036af5129ec6e1633efc4）とsglang.bench。",
+    "model": [
+      "DeepSeek-V2-Lite: ne=64, na=6, d=2048, de=1408, shared ds=10944, softmax router",
+      "DeepSeek-V3: ne=256, na=8, d=7168, de=2048, shared ds=18432, sigmoid router"
+    ],
+    "datasets": [
+      "ARC-Challenge",
+      "ARC-Easy",
+      "BoolQ",
+      "OpenBookQA",
+      "RTE",
+      "WinoGrande"
+    ],
+    "baselines": [
+      "各モデルの元の活性専門家数（V2-Lite na=6、V3 na=8）",
+      "V2-Lite 64総専門家の未枝刈りモデル",
+      "ランダム・構造的・activate-count・soft-count専門家枝刈り"
+    ],
+    "correctness": "速度比較では入出力合計だけでなく、基本条件を入力1024・出力1024トークンに固定する。付録では入力と出力の比率だけでスループットが大きく変わることを示し、実世界ワークロードを混ぜず制御条件で比較している。品質は6ベンチマーク平均を用い、純粋な推測で得られる平均36を崩壊の目安として明記する。",
+    "settings": [
+      "通常の効率評価はランダムに抽出した1024入力トークンを与え、追加1024トークンを生成する。要求並列度をV2-Liteでは2〜768、V3では2〜128などで掃引する。",
+      "V2-Liteの専門家スキップは全層一律na=6,5,4,3,2を速度測定。V3はna=8,6,4,3等を比較する。",
+      "層別品質探索は(b,h,e,p)で第1層、第p層、最終層の活性専門家数を指定し、それ以外を線形補間する。上昇・下降・山・谷・一律を比較する。",
+      "総専門家枝刈りはV2-Liteでne=64から48,32,24,16,12,8,6まで速度を測り、品質表では主に48,32,16について複数選択法を評価する。"
+    ],
+    "methodology": "ルーフライン分析→単体MoEバッチ効率→実モデルの負荷別専門家スキップ→層別活性数と品質の探索→総専門家数削減の負荷別速度→枝刈り方式別品質、という順に評価する。速度と品質を同じ削減率だけでまとめず、低・中・高並列度で律速点が変わることを明示的に分析する。",
+    "scope": "速度測定は特定のA800/H200構成とSGLang 0.4.4.post1に依存する。論文自身が並列度192で総専門家削減後にスループットが逆に低下する点をSGLang内部戦略またはバグの可能性として挙げており、全並列度で単調な改善ではない。品質評価は6個の比較的古典的言語理解ベンチマーク平均であり、長文、コード、推論、対話品質を直接評価していない。"
+  },
   "reservation": {
     "claim_id": "claim-12e4c076f1788c06010c4a7a",
     "worker_id": "scheduled-chat-00",

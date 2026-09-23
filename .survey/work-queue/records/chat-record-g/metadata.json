@@ -4,7 +4,64 @@
   "slot": "metadata",
   "attempt_id": "attempt-12e4c076f1788c06010c4a7a",
   "job_id": "job-research-acb3c365d16a91ad",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2505.03531",
+    "arxiv_id": "2505.03531",
+    "doi": "10.48550/arXiv.2505.03531",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
+    "title": "Faster MoE LLM Inference for Extremely Large Models",
+    "summary": "本研究は、DeepSeek系の細粒度な混合専門家（Mixture-of-Experts; MoE）を対象に、推論時のサービス負荷と専門家削減がスループットとモデル品質へ与える影響を系統的に測る。DeepSeek-V2-Lite（64専門家・6活性）とDeepSeek-V3（256専門家・8活性）を用い、活性専門家数を減らす「専門家スキップ」と、推論前に総専門家数を減らす「専門家枝刈り」を分離して評価する。活性専門家削減は低並列度ではメモリI/O、高並列度では計算量を減らすため有効で、V2-Liteでは並列度512で6→2活性にすると9379→10954 token/sへ約16.8%向上した。層ごとの活性数を探索すると平均3.3専門家でもV2-Liteの性能低下を1%以内に抑えられ、V3では著者らの最良構成が性能低下なしで少なくとも10%のスループット改善を達成する。一方、総専門家数を削る枝刈りは速度向上が限定的なうえ品質劣化が大きく、64→32専門家では最良のsoft-count法でも平均66.0→57.8まで低下する。",
+    "list_summary": "細粒度MoEで活性専門家数と総専門家数を別々に削減して実測し、活性専門家スキップは負荷依存で高速化できる一方、総専門家枝刈りは品質損失が大きいという実用境界を示す。",
+    "authors": [
+      "Haoqi Yang",
+      "Luohe Shi",
+      "Qiwei Li",
+      "Zuchao Li",
+      "Ping Wang",
+      "Bo Du",
+      "Mengjia Shen",
+      "Hai Zhao"
+    ],
+    "authors_affiliations": "Wuhan University; Wuhan Second Ship Design And Research Institute; Shanghai Jiao Tong University",
+    "published": "2025-05-06",
+    "publication": "arXiv:2505.03531v1",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint. Under review.",
+    "publication_version": "v1",
+    "lineage": "fine-grained MoE inference / expert skipping / expert pruning / serving efficiency",
+    "topics": [
+      "混合専門家",
+      "推論高速化",
+      "専門家スキップ",
+      "専門家枝刈り",
+      "エキスパート並列",
+      "DeepSeek",
+      "SGLang"
+    ],
+    "importance": "専門家削減を単なるパラメータ圧縮ではなく、サービス並列度・算術強度・メモリI/Oの関係として実測している点が重要である。特に、呼び出す専門家数を減らすことと、常駐する総専門家数を減らすことが速度と品質に全く異なる影響を持つことを示し、適応的専門家計算、専門家キャッシュ、オフロード設計で削減対象を選ぶ際の実用的な基準になる。",
+    "hardware_evaluation": "MoEモジュール単体の基礎評価はA800 80GB PCIe×1。DeepSeek-V2-Liteのサービス評価はA800 80GB PCIe×2、DeepSeek-V3はH200 141GB SXM5×8。V2-Lite側はIntel Xeon Silver 4314と約240GB DDR4、V3側はXeon Platinum 8558×2と約2TB DDR4を用いる。サービス実装はSGLang 0.4.4.post1、固定入力1024・出力1024トークンを基本条件としてスループットを測る。",
+    "quality_effect": "活性専門家削減では品質低下が比較的小さく、V2-Liteは平均活性数3.3でも平均性能低下1%以内、V3は一部の層別構成で固定8活性と同等以上の平均値を示す。一方、総専門家枝刈りは64→48でも最良法の平均が66.0→64.2へ低下し、64→32では57.8まで落ちるため、メモリ削減を目的に総専門家を捨てる方式は品質リスクが大きい。",
+    "source": "https://arxiv.org/abs/2505.03531",
+    "sources": [
+      "https://arxiv.org/abs/2505.03531",
+      "https://arxiv.org/pdf/2505.03531"
+    ],
+    "code": null,
+    "implementation": "サービス評価はSGLang 0.4.4.post1（commit ad4e58bf67ec833ff4d036af5129ec6e1633efc4）とsglang.benchを使用。基礎MoEシミュレーションはPyTorch、torch.compile、TransformersのMixtralModel実装を用いる。論文本文・arXiv付随情報で著者公式の再現コードURLは確認できない。",
+    "implementation_status": "実装条件とソフトウェア版は付録に明記されるが、著者公式コード公開は一次資料上で未確認。",
+    "evaluation_type": "細粒度MoEのサービス負荷別スループット、層別活性専門家数探索、総専門家枝刈り、言語ベンチマーク品質",
+    "last_checked": "2026-09-23",
+    "references": [],
+    "references_checked_at": "2026-09-23",
+    "references_source": "primary manuscript reference section",
+    "references_total": 0
+  },
   "reservation": {
     "claim_id": "claim-12e4c076f1788c06010c4a7a",
     "worker_id": "scheduled-chat-00",
