@@ -1,6 +1,6 @@
 {
   "fact_generation": 44,
-  "generation": 56,
+  "generation": 57,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
@@ -505,115 +505,19 @@
       "work_mode": "research",
       "worker_id": "scheduled-chat-00"
     },
-    "scheduled-chat-00-20260923T090021JST-r09": {
-      "actual_invocation_start": "2026-09-23T00:00:21+00:00",
+    "scheduled-chat-00-20260923T085729Z": {
+      "actual_invocation_start": "2026-09-23T08:57:29+00:00",
       "attempts": {
-        "attempt-01b29ed73471ef21eb33ce79": {
-          "attempt_id": "attempt-01b29ed73471ef21eb33ce79",
-          "claimed_at": "2026-09-23T01:03:07+00:00",
+        "attempt-3e602a0f4e7177d85de6b301": {
+          "attempt_id": "attempt-3e602a0f4e7177d85de6b301",
+          "claimed_at": "2026-09-23T08:32:35+00:00",
           "completed": true,
-          "descriptor_path": ".survey/work-queue/submissions/research/attempt-01b29ed73471ef21eb33ce79.json",
-          "job_id": "job-research-f719eedd6807af4c",
+          "descriptor_path": ".survey/work-queue/submissions/research/attempt-3e602a0f4e7177d85de6b301.json",
+          "job_id": "job-research-b8145b0c5f2892c4",
           "job_status": "completed",
           "kind": "research",
           "pending": false,
-          "processed_at": "2026-09-23T01:09:20+00:00",
-          "repair_required": false,
-          "retryable": false,
-          "run_key": null,
-          "submitted": true,
-          "worker_id": null
-        },
-        "attempt-12e4c076f1788c06010c4a7a": {
-          "attempt_id": "attempt-12e4c076f1788c06010c4a7a",
-          "claimed_at": "2026-09-23T01:45:41+00:00",
-          "completed": true,
-          "descriptor_path": ".survey/work-queue/submissions/research/attempt-12e4c076f1788c06010c4a7a.json",
-          "job_id": "job-research-acb3c365d16a91ad",
-          "job_status": "completed",
-          "kind": "research",
-          "pending": false,
-          "processed_at": "2026-09-23T02:03:25+00:00",
-          "repair_required": false,
-          "retryable": false,
-          "run_key": null,
-          "submitted": true,
-          "worker_id": null
-        },
-        "attempt-1af943d29bb42540aa6313f9": {
-          "attempt_id": "attempt-1af943d29bb42540aa6313f9",
-          "claimed_at": "2026-09-23T01:39:30+00:00",
-          "completed": true,
-          "descriptor_path": ".survey/work-queue/submissions/research/attempt-1af943d29bb42540aa6313f9.json",
-          "job_id": "job-research-6d95aed6ee156af5",
-          "job_status": "completed",
-          "kind": "research",
-          "pending": false,
-          "processed_at": "2026-09-23T01:45:08+00:00",
-          "repair_required": false,
-          "retryable": false,
-          "run_key": null,
-          "submitted": true,
-          "worker_id": null
-        },
-        "attempt-1cdc9fc5138a75e71558bf84": {
-          "attempt_id": "attempt-1cdc9fc5138a75e71558bf84",
-          "claimed_at": "2026-09-23T01:09:02+00:00",
-          "completed": true,
-          "descriptor_path": ".survey/work-queue/submissions/research/attempt-1cdc9fc5138a75e71558bf84.json",
-          "job_id": "job-research-2377e2a4770cb727",
-          "job_status": "completed",
-          "kind": "research",
-          "pending": false,
-          "processed_at": "2026-09-23T01:13:10+00:00",
-          "repair_required": false,
-          "retryable": false,
-          "run_key": null,
-          "submitted": true,
-          "worker_id": null
-        },
-        "attempt-51313bfb190d4ac71af486c7": {
-          "attempt_id": "attempt-51313bfb190d4ac71af486c7",
-          "claimed_at": "2026-09-23T01:13:01+00:00",
-          "completed": true,
-          "descriptor_path": ".survey/work-queue/submissions/research/attempt-51313bfb190d4ac71af486c7.json",
-          "job_id": "job-research-2095724e259f584c",
-          "job_status": "completed",
-          "kind": "research",
-          "pending": false,
-          "processed_at": "2026-09-23T01:37:48+00:00",
-          "repair_required": false,
-          "retryable": false,
-          "run_key": null,
-          "submitted": true,
-          "worker_id": null
-        },
-        "attempt-ba794fbaa3ee0f39aef61a67": {
-          "attempt_id": "attempt-ba794fbaa3ee0f39aef61a67",
-          "claimed_at": "2026-09-23T01:01:06+00:00",
-          "completed": false,
-          "descriptor_path": ".survey/work-queue/submissions/research/attempt-ba794fbaa3ee0f39aef61a67.json",
-          "job_id": "job-research-5b745b5e455d855b",
-          "job_status": "blocked",
-          "kind": "research",
-          "pending": false,
-          "processed_at": "2026-09-23T01:03:38+00:00",
-          "repair_required": false,
-          "retryable": false,
-          "run_key": null,
-          "submitted": true,
-          "worker_id": "scheduled-chat-00"
-        },
-        "attempt-c67963f1064ecc2790db5b2d": {
-          "attempt_id": "attempt-c67963f1064ecc2790db5b2d",
-          "claimed_at": "2026-09-22T23:20:03+00:00",
-          "completed": true,
-          "descriptor_path": ".survey/work-queue/submissions/research/attempt-c67963f1064ecc2790db5b2d.json",
-          "job_id": "job-research-51f4efd90b7a5e12",
-          "job_status": "completed",
-          "kind": "research",
-          "pending": false,
-          "processed_at": "2026-09-23T00:41:14+00:00",
+          "processed_at": "2026-09-23T09:07:47+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": null,
@@ -622,7 +526,7 @@
         }
       },
       "cache_valid": true,
-      "candidate_inventory": 189,
+      "candidate_inventory": 156,
       "claims": {
         "active_assignment": false,
         "active_job_ids": [],
@@ -634,36 +538,25 @@
         "pending_claim_request_ids": [],
         "pending_claim_requested_at": {}
       },
-      "first_cached_at": "2026-09-23T03:58:57.194248+00:00",
-      "generation": 3,
+      "first_cached_at": "2026-09-23T09:09:15.857798+00:00",
+      "generation": 57,
       "rebuilt_from_canonical": true,
-      "run_key": "scheduled-chat-00-20260923T090021JST-r09",
+      "run_key": "scheduled-chat-00-20260923T085729Z",
       "scheduled_slot": "00",
       "submission": {
         "completed_attempt_ids": [
-          "attempt-01b29ed73471ef21eb33ce79",
-          "attempt-12e4c076f1788c06010c4a7a",
-          "attempt-1af943d29bb42540aa6313f9",
-          "attempt-1cdc9fc5138a75e71558bf84",
-          "attempt-51313bfb190d4ac71af486c7",
-          "attempt-c67963f1064ecc2790db5b2d"
+          "attempt-3e602a0f4e7177d85de6b301"
         ],
         "last_terminal_job_status": "completed",
         "pending_attempt_ids": [],
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 6,
+        "research_audit_completed_this_invocation": 1,
         "retryable_attempt_ids": [],
         "submission_result_pending": false,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
-          "attempt-c67963f1064ecc2790db5b2d",
-          "attempt-ba794fbaa3ee0f39aef61a67",
-          "attempt-01b29ed73471ef21eb33ce79",
-          "attempt-1cdc9fc5138a75e71558bf84",
-          "attempt-51313bfb190d4ac71af486c7",
-          "attempt-1af943d29bb42540aa6313f9",
-          "attempt-12e4c076f1788c06010c4a7a"
+          "attempt-3e602a0f4e7177d85de6b301"
         ]
       },
       "work_mode": "research",
@@ -957,6 +850,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T09:07:26.125864+00:00",
+  "updated_at": "2026-09-23T09:09:15.858142+00:00",
   "worker_id": "scheduled-chat-00"
 }
