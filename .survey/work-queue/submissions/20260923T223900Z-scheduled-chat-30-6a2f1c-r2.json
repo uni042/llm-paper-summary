@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "candidates": [
+    {"canonical_id":"arXiv:2606.20577","arxiv_id":"2606.20577","title":"Human-Less LLM Serving: Quantifying the Human Tax on Throughput","source_url":"https://www.semanticscholar.org/paper/48df9b14f18e9b6655032f90e01e7f883bc3d1fd","priority":85,"priority_breakdown":{"base":50,"lineage":20,"recency":15,"venue":0,"total":85},"reason":"FlexGen被引用系列から得た直接接続候補で、TTFT/TPOT SLOが長文・高並列serving throughputへ与える60–93%のhuman taxをSGLang/Sarathi-Serveで実測し、serving policy系統を更新する。"},
+    {"canonical_id":"DOI:10.1109/CCGrid68966.2026.00014","doi":"10.1109/CCGrid68966.2026.00014","title":"Quicktopia: Iteration-Level GPU Frequency Control for Energy–Latency Co-Optimization in LLM Inference","source_url":"https://www.semanticscholar.org/paper/88a222b2340b8906e15edd5efd58293b25fc38ce","priority":77,"priority_breakdown":{"base":48,"lineage":10,"recency":15,"venue":4,"total":77},"reason":"LLM推論のiteration単位DVFSでEDPを最大22%削減しつつ遅延増を1–5%に抑える実測系で、推論資源制御・電力最適化に新しい運用軸を追加する。"},
+    {"canonical_id":"arXiv:2604.21026","arxiv_id":"2604.21026","title":"MCAP: Deployment-Time Layer Profiling for Memory-Constrained LLM Inference","source_url":"https://www.semanticscholar.org/paper/9b42bc4f140b729a22d376bd8c027cd49e304fa1","priority":90,"priority_breakdown":{"base":55,"lineage":20,"recency":15,"venue":0,"total":90},"reason":"deployment時layer profilingからW4A8/W4A16とGPU/RAM/SSD residencyを同時決定し、T4でllama.cpp Q4_0比1.5–1.8倍decode throughputを報告するため、階層メモリ・SSDオフロード重点系統へ直接寄与する。"},
+    {"canonical_id":"arXiv:2605.06676","arxiv_id":"2605.06676","title":"LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction","source_url":"https://www.semanticscholar.org/paper/9dbefa4becfe4a6ae3decde6fabad3ab975cde52","priority":75,"priority_breakdown":{"base":50,"lineage":10,"recency":15,"venue":0,"total":75},"reason":"KV evictionのhead別budgetとtoken selectionをend-to-end学習し、LongBenchで15% KV保持でもnear-losslessを報告するため、KV cache圧縮・長文推論系統を更新する。"}
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-s30-6a2f1c-r2",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-s30-6a2f1c-r2.json",
+    "receipt": "sha256:bfbaea55637e10a841fae2f82ea51be2738baaf817645b7df89cf34fa27bafda"
+  },
+  "discovery_stats": {
+    "run_key": "s30-20260924t073303-6a2f1c",
+    "round": "disc-s30-6a2f1c-r2",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "seed_canonical_id": "arXiv:2303.06865",
+    "query_summary": "FlexGen前方引用20件を評価し、serving SLO、GPU DVFS、GPU/RAM/SSD階層配置、学習型KV evictionの4件を強候補として採用。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 16,
+    "accepted_canonical_ids": ["arXiv:2606.20577","DOI:10.1109/CCGrid68966.2026.00014","arXiv:2604.21026","arXiv:2605.06676"],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [{"topic":"FlexGen forward citations","source":"semantic_scholar","date_range":"2026","category":"offload-hierarchical-memory","citation_direction":"forward","query_family":"citation-curation","raw_result_count":40,"unseen_result_count":20,"duplicate_filtered_count":16,"rejection_filtered_count":1,"candidate_evaluation_count":20,"candidate_accepted_count":4,"position":"cursor-200-to-240"}]
+  }
+}
