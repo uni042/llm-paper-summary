@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-9105373f954fe3246d7dc7ab",
-  "job_id": "job-research-4f3d063490df512a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-9105373f954fe3246d7dc7ab",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-9105373f954fe3246d7dc7ab","job_id":"job-research-4f3d063490df512a","data":{"limitations":"脅威モデルはGPUをhonest-but-curiousとし、結果改ざんを扱わないためSlalomのFreivalds完全性検証を省いている。TEEのside-channelやmetadata漏洩も保証外。noise bankはmaskとWηを事前保存するためprompt数・モデル規模に応じて保護メモリを圧迫し、暗号化してuntrusted diskへ退避する等の追加設計が必要になり得る。\n\n大域感度はworst-caseで実際のembedding範囲より保守的な可能性があり、local/smooth sensitivityで雑音を減らせる余地がある。復元攻撃も最強とは限らず、評価はLlama-3.2-3B/Qwen3-4Bと単一TDX+GPU機に限定される。","differences":"SlalomはTEEとGPUを分割する先駆方式だが、有限体上の一回限りmaskと量子化を用いる。SpliTEEは同じ線形委譲構造をLLMへ適用し、浮動小数点activationへ感度校正ガウス雑音を加えるため量子化を不要にし、epsilonでprivacy/utilityを調整できる。\n\nTwinShield等はモデル・入力・完全性まで含むTransformer outsourcingを扱う一方、SpliTEEは利用者prompt privacyを主目的とし、GPU完全性は仮定する。hidden-stateへ直接Laplace noiseを残すsplit-LLM privacy研究とも異なり、SpliTEEはTEEで補正を引くためモデルが使うactivationには意図的雑音を残さない。","implementation_status":"arXiv v1、2026-09-14公開。Intel TDXとRTX PRO 4500 Blackwellを用いたend-to-end prototypeを実装し、コードはDPVault/SpliTEEで公開。Llama-3.2-3BとQwen3-4Bで性能・品質・攻撃を評価している。","research_positioning":"LLM推論基盤の観点では、CPU TEEを安全な制御・非線形処理層、非信頼GPUを高スループット行列積層として使う異種計算オフロード研究である。通常のCPU/GPU offloadが容量・速度を目的にするのに対し、SpliTEEはoffload境界で漏れるactivationへ形式的privacy保証を与える。\n\nそのため confidential computing、split inference、GPU offload、差分プライバシー、数値解析の交点に位置する。特に『雑音をモデル計算へ残さず、GPU観測だけを汚す』設計は、privacy-preserving inferenceと性能最適化を分離しやすい点で既存系統への接続価値が高い。"},"reservation":{"claim_id":"claim-9105373f954fe3246d7dc7ab","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
