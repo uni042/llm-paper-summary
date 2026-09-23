@@ -504,7 +504,15 @@ def _next_cursor_for_entry(root: Path, entry: dict[str, Any]) -> tuple[bool, str
     return True, cursor
 
 
-def _make_entry(spec: dict[str, Any], *, bucket: int, sequence: int, initial_cursor: str | None, now: dt.datetime) -> dict[str, Any]:
+def _make_entry(
+    spec: dict[str, Any],
+    *,
+    bucket: int,
+    sequence: int,
+    initial_cursor: str | None,
+    now: dt.datetime,
+    discovery_bank: str | None = None,
+) -> dict[str, Any]:
     source_key = str(spec["source_key"])
     token = json.dumps(
         {
@@ -535,6 +543,7 @@ def _make_entry(spec: dict[str, Any], *, bucket: int, sequence: int, initial_cur
         "page_size": DEFAULT_PAGE_SIZE,
         "max_pages": DEFAULT_MAX_PAGES,
         "precheck_request_id": request_id,
+        "discovery_bank": discovery_bank,
         "created_at": now.isoformat(),
     }
 
@@ -556,6 +565,12 @@ def _request_for_entry(entry: dict[str, Any]) -> dict[str, Any]:
         "initial_cursor": entry.get("initial_cursor"),
         "preload_seed": True,
         "preload_id": preload_id,
+        "discovery_bank": entry.get("discovery_bank"),
+        "discovery_slot_path": (
+            discovery_slot_path(str(entry.get("discovery_bank")))
+            if str(entry.get("discovery_bank") or "").lower() in BANK_IDS
+            else None
+        ),
     }
 
 
@@ -603,12 +618,17 @@ def _prioritize_specs(
 
 def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_MAX_NEW) -> dict[str, Any]:
     root = root.resolve()
+    target = min(max(int(target), 0), len(BANK_IDS))
     now = _utcnow()
     expired = _expire_stale_claims(root, now)
     garbage_collected = _gc_old_artifacts(root, now)
     entries = _entries(root)
+    bindings, free_banks, bank_binding_changes = _sync_bank_bindings(root, entries, now)
     available_rows = [
-        row for row in entries if _status(root, row, now) in {"READY", "PRECHECKED"}
+        row
+        for row in entries
+        if str(row.get("preload_id") or "") in bindings
+        and _status(root, row, now) in {"READY", "PRECHECKED"}
     ]
     available = len(available_rows)
     direction_available = {
@@ -625,7 +645,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         for direction in ("backward", "forward", "normal")
     }
     needed = max(target - available, sum(direction_deficits.values()), 0)
-    budget = min(needed, max(max_new, 0))
+    budget = min(needed, max(max_new, 0), len(free_banks))
     if budget == 0:
         return {
             "target": target,
@@ -635,6 +655,9 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
             "created": [],
             "expired_claims": expired,
             "garbage_collected": garbage_collected,
+            "bank_binding_changes": bank_binding_changes,
+            "dual_purpose_bank_count": len(BANK_IDS),
+            "discovery_bank_slots_free": len(free_banks),
         }
 
     bucket = _refresh_bucket(now)
@@ -673,12 +696,16 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                 sequence = int(latest.get("sequence", 0)) + 1
                 initial_cursor = next_cursor
 
+            if not free_banks:
+                break
+            bank = free_banks[0]
             entry = _make_entry(
                 spec,
                 bucket=bucket,
                 sequence=sequence,
                 initial_cursor=initial_cursor,
                 now=now,
+                discovery_bank=bank,
             )
             entry_path = root / ENTRIES / f"{entry['preload_id']}.json"
             request_path = root / PRECHECK_REQUESTS / f"{entry['precheck_request_id']}.json"
@@ -686,6 +713,9 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                 continue
             _write(entry_path, entry)
             _write(request_path, _request_for_entry(entry))
+            _write_bank_binding(root, bank, entry)
+            free_banks.pop(0)
+            bindings[entry["preload_id"]] = bank
             entries.append(entry)
             created.append(entry["preload_id"])
             if direction_deficits.get(direction, 0) > 0:
@@ -701,6 +731,9 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
         "created_count": len(created),
         "expired_claims": expired,
         "garbage_collected": garbage_collected,
+        "bank_binding_changes": bank_binding_changes,
+        "dual_purpose_bank_count": len(BANK_IDS),
+        "discovery_bank_slots_free_after": len(free_banks),
     }
 
 
