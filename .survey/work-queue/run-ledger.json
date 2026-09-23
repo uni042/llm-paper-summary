@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T11:34:09.550496+00:00",
+  "updated_at": "2026-09-23T11:38:54.111384+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -43225,6 +43225,76 @@
       "paper_active_count_before": 971,
       "paper_active_count_after": 971,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35855330702",
+      "first_recorded_at": "2026-09-23T11:38:54.111384+00:00",
+      "last_recorded_at": "2026-09-23T11:38:54.111384+00:00",
+      "signals": [
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 28,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35855330702:1",
+          "recorded_at": "2026-09-23T11:38:54.111384+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "35855330702",
+            "run_attempt": "1",
+            "source_sha": "23f9fe3422aedc0cfd013126dbc434967154067c"
+          },
+          "signals": [
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [],
+      "new_jobs": [],
+      "new_paper_ids": [
+        "DOI:10.1145/3832810.3832886",
+        "DOI:10.4108/eetiot.13349",
+        "arXiv:2201.05596",
+        "arXiv:2410.18248",
+        "arXiv:2509.14900",
+        "arXiv:2510.16138",
+        "arXiv:2511.15690",
+        "arXiv:2601.13631",
+        "arXiv:2601.18089",
+        "arXiv:2602.00879",
+        "arXiv:2602.02443",
+        "arXiv:2602.05711",
+        "arXiv:2603.12831",
+        "arXiv:2605.06663",
+        "arXiv:2605.08738",
+        "arXiv:2605.10933",
+        "arXiv:2605.11277",
+        "arXiv:2605.28042",
+        "arXiv:2606.01502",
+        "arXiv:2606.21712",
+        "arXiv:2608.01784",
+        "arXiv:2608.04454",
+        "arXiv:2608.13565",
+        "arXiv:2608.27046",
+        "arXiv:2609.15030",
+        "arXiv:2609.15039",
+        "arXiv:2609.17890",
+        "arXiv:2609.19880"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 971,
+      "paper_active_count_after": 999,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T20:21:37+00:00",
   "completed_at": "2026-09-23T11:31:05+00:00",
   "blocker": "Primary full text unavailable in this invocation. The official arXiv record/search result for arXiv:2609.07786 was identified, but the direct official arXiv full-text open route returned DisabledError and available indexed pages exposed only abstract-level text (including TBD placeholders), not a complete primary paper. Per workflow, no research record was synthesized from abstracts or secondary summaries.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-18f4fe5bdae4fd13dfe57e51.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-18f4fe5bdae4fd13dfe57e51.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-23T11:31:05+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-23T11:31:05+00:00",
+      "reason": "Primary full text unavailable in this invocation. The official arXiv record/search result for arXiv:2609.07786 was identified, but the direct official arXiv full-text open route returned DisabledError and available indexed pages exposed only abstract-level text (including TBD placeholders), not a complete primary paper. Per workflow, no research record was synthesized from abstracts or secondary summaries."
+    }
+  ],
+  "first_blocked_at": "2026-09-23T11:31:05+00:00",
+  "last_blocked_at": "2026-09-23T11:31:05+00:00",
+  "retry_not_before": "2026-09-30T11:37:00+00:00"
 }

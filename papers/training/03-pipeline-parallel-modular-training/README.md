@@ -38,6 +38,6 @@ CPU DRAMやSSD/NVMeへparameter・optimizer state・activationを退避するこ
   Ring 注意機構の連続分割を縞状のトークン配置へ変え、因果マスクで省略できる計算を全装置へ均等化して長文Transformer学習を高速化する厳密注意方式。
 
 - **2024-05 · [NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment](2024-2405.01481-nemo-aligner.md)**  
-  実装：[✓](https://github.com/NVIDIA/NeMo-Aligner) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/NVIDIA/NeMo-Aligner) ・ リポジトリ内被引用：2  
   整合学習の複数モデルを分散配置し、TensorRT-LLM生成・非同期通信・重み再配置を統合して、PPOを1000 GPU級まで拡張する学習基盤。
 <!-- survey:auto:end -->

@@ -10,11 +10,7 @@
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
-該当なし。
-
-### 3年前（2023-10〜2024-09）
-
-- **2024-01 · [Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding](2024-2401.07851-speculative-decoding-survey.md)**  
-  実装：[✓](https://github.com/hemingkx/SpeculativeDecodingPapers) ・ リポジトリ内被引用：23  
-  投機的デコードをドラフト器・検証規則・対象LLMとの整合へ分解し、受理率とドラフト費用の交換条件をSpec-Benchとともに整理したACL Findings 2024のサーベイ。
+- **2026-05 · [Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models](2026-2605.11277-sieve-dynamic-expert-aware-pim.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  実行時の専門家人気度から画像処理装置とメモリ内演算の配置を動的決定し、通信と注意機構の負荷まで含めて混合専門家推論を最大1.6倍高速化する。
 <!-- survey:auto:end -->

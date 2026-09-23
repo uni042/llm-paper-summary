@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T10:56:31+00:00",
   "completed_at": "2026-09-23T05:19:43+00:00",
   "blocker": "Primary-source full text could not be retrieved reliably in this run. DOI/title retrieval located the peer-reviewed Neural Networks record and publisher/author metadata, but the available indexed sources exposed only the abstract; ResearchGate explicitly reported that full text was unavailable. A fallback attempt through the OpenReview route surfaced by DBLP was not accessible through the retrieval tool. Per worker-router, no five-slot record was inferred from abstract or secondary metadata.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-a83757e9b9d779faf47881b5.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-a83757e9b9d779faf47881b5.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-23T05:19:43+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-23T05:19:43+00:00",
+      "reason": "Primary-source full text could not be retrieved reliably in this run. DOI/title retrieval located the peer-reviewed Neural Networks record and publisher/author metadata, but the available indexed sources exposed only the abstract; ResearchGate explicitly reported that full text was unavailable. A fallback attempt through the OpenReview route surfaced by DBLP was not accessible through the retrieval tool. Per worker-router, no five-slot record was inferred from abstract or secondary metadata."
+    }
+  ],
+  "first_blocked_at": "2026-09-23T05:19:43+00:00",
+  "last_blocked_at": "2026-09-23T05:19:43+00:00",
+  "retry_not_before": "2026-09-30T11:37:00+00:00"
 }

@@ -21,5 +21,17 @@
   "created_at": "2026-09-20T22:23:26+00:00",
   "completed_at": "2026-09-23T09:11:44+00:00",
   "blocker": "Primary full text could not be safely retrieved. The arXiv HTML and PDF primary-source routes for arXiv:2609.07664 both returned DisabledError. Search results exposed the abstract and third-party summaries with detailed experimental claims, but the Research workflow forbids reconstructing the five-slot record from abstracts or secondary summaries. No structured research record was created.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-ee97c1c62e37d96ca0e0e94f.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-ee97c1c62e37d96ca0e0e94f.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-23T09:11:44+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-23T09:11:44+00:00",
+      "reason": "Primary full text could not be safely retrieved. The arXiv HTML and PDF primary-source routes for arXiv:2609.07664 both returned DisabledError. Search results exposed the abstract and third-party summaries with detailed experimental claims, but the Research workflow forbids reconstructing the five-slot record from abstracts or secondary summaries. No structured research record was created."
+    }
+  ],
+  "first_blocked_at": "2026-09-23T09:11:44+00:00",
+  "last_blocked_at": "2026-09-23T09:11:44+00:00",
+  "retry_not_before": "2026-09-30T11:37:00+00:00"
 }
