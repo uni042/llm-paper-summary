@@ -897,6 +897,18 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
         "discovery_bank": discovery_bank,
         "discovery_slot_path": expected_slot_path,
     }
+    if current is not None:
+        for field in (
+            "direct_take",
+            "scheduled_slot",
+            "actual_invocation_start",
+            "candidate_inventory_at_start",
+            "work_mode_at_start",
+            "research_discovery_threshold",
+            "hot_dispatch_generated_at",
+        ):
+            if field in current:
+                claim[field] = current[field]
     _write(claim_path, claim)
     # The claimed cache is now protected by entry/result/claim identity. Release
     # only the Discovery sidecar so this same physical bank can immediately preload
