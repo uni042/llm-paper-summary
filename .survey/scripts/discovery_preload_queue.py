@@ -405,32 +405,81 @@ def _request_for_entry(entry: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _direction_floor_targets(target: int) -> dict[str, int]:
+    """Reserve roughly one third each for backward and forward citation stock."""
+    target = max(int(target), 0)
+    if target <= 1:
+        return {"backward": target, "forward": 0}
+    floor = max(target // 3, 1)
+    return {"backward": floor, "forward": floor}
+
+
+def _prioritize_specs(
+    specs: list[dict[str, Any]],
+    deficits: dict[str, int],
+) -> list[dict[str, Any]]:
+    """Interleave citation directions while either reserved floor is deficient."""
+    groups = {
+        direction: [row for row in specs if row.get("citation_direction") == direction]
+        for direction in ("backward", "forward")
+    }
+    prioritized: list[dict[str, Any]] = []
+    used: set[str] = set()
+    max_len = max((len(rows) for rows in groups.values()), default=0)
+    for index in range(max_len):
+        for direction in ("backward", "forward"):
+            if deficits.get(direction, 0) <= 0:
+                continue
+            rows = groups[direction]
+            if index >= len(rows):
+                continue
+            row = rows[index]
+            prioritized.append(row)
+            used.add(str(row.get("source_key") or ""))
+    prioritized.extend(
+        row for row in specs if str(row.get("source_key") or "") not in used
+    )
+    return prioritized
+
+
 def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_MAX_NEW) -> dict[str, Any]:
     root = root.resolve()
     now = _utcnow()
     expired = _expire_stale_claims(root, now)
     garbage_collected = _gc_old_artifacts(root, now)
     entries = _entries(root)
-    statuses = {_status(root, row, now) for row in entries}
-    del statuses  # status set is only a cheap validation side effect
-    available = sum(
-        1
-        for row in entries
-        if _status(root, row, now) in {"READY", "PRECHECKED"}
-    )
-    needed = max(target - available, 0)
-    budget = min(max(needed, 0), max(max_new, 0))
+    available_rows = [
+        row for row in entries if _status(root, row, now) in {"READY", "PRECHECKED"}
+    ]
+    available = len(available_rows)
+    direction_available = {
+        direction: sum(
+            1
+            for row in available_rows
+            if str(row.get("citation_direction") or "") == direction
+        )
+        for direction in ("backward", "forward", "normal")
+    }
+    direction_targets = _direction_floor_targets(target)
+    direction_deficits = {
+        direction: max(direction_targets.get(direction, 0) - direction_available.get(direction, 0), 0)
+        for direction in ("backward", "forward")
+    }
+    needed = max(target - available, sum(direction_deficits.values()), 0)
+    budget = min(needed, max(max_new, 0))
     if budget == 0:
         return {
             "target": target,
             "available": available,
+            "direction_available": direction_available,
+            "direction_targets": direction_targets,
             "created": [],
             "expired_claims": expired,
             "garbage_collected": garbage_collected,
         }
 
     bucket = _refresh_bucket(now)
-    specs = _source_specs(root)
+    specs = _prioritize_specs(_source_specs(root), direction_deficits)
     created: list[str] = []
     made_progress = True
 
@@ -470,6 +519,8 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
     return {
         "target": target,
         "available_before": available,
+        "direction_available_before": direction_available,
+        "direction_targets": direction_targets,
         "created": created,
         "created_count": len(created),
         "expired_claims": expired,
