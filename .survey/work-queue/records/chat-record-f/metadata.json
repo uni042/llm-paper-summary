@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-c5fb805067e99d4f2b7cd63c",
-  "job_id": "job-research-063776a1a2b53b94",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c5fb805067e99d4f2b7cd63c",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-c5fb805067e99d4f2b7cd63c","job_id":"job-research-063776a1a2b53b94","data":{"canonical_id":"arXiv:2604.19835","arxiv_id":"2604.19835","doi":"10.48550/arXiv.2604.19835","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Expert Upcycling: Shifting the Compute-Efficient Frontier of Mixture-of-Experts","summary":"Expert Upcyclingは、既に学習した疎な混合エキスパート（MoE）を途中でより多くのエキスパートへ拡張し、トークン当たり活性数を固定したまま総容量だけを増やす継続事前学習法である。既存エキスパートを複製し、ルータを拡張して小さなバイアス摂動を与えることで、ランダム初期化より大幅に低い損失から再開する。さらに勾配ノルムに基づく効用選択で重要なエキスパートへ複製枠を偏らせる。7B→13B総パラメータ実験では50%の継続事前学習で固定13B学習より検証損失を下げつつGPU時間を約32%削減し、100%継続では約24%削減しながら11ベンチマーク平均精度差を0.3点まで縮めた。","list_summary":"学習済みMoEのエキスパートを途中で複製し、活性数を固定したまま総容量を拡張することで、13B級の品質へ近づきつつ学習GPU時間を24〜32%削減する手法。","authors":["Chaitanya Dwivedi","Binxuan Huang","Himanshu Gupta","Pratik Jayarao","Neeraj Varshney","Bing Yin"],"authors_affiliations":"Amazon Stores Foundation AI、Carnegie Mellon University、Anthropic。一次PDF著者欄に基づく。","published":"2026-04-21","publication":"arXiv:2604.19835v2, 2026-05-10","publication_type":"Preprint","publication_status":"Preprint","lineage":"MoE training / progressive capacity growth / sparse upcycling / expert specialization","topics":["混合エキスパート","継続事前学習","段階的容量拡張","エキスパート複製","効用選択","学習効率"],"importance":"大規模MoEを最初から最大容量で学習せず、既存の小さいMoEから段階的に総エキスパート数を増やすことで、固定活性計算量のまま学習費を削減できることを理論・実験の両面で示す。既存MoE資産の再利用と新規学習の双方に適用できる。","hardware_evaluation":"主実験と小規模アブレーションはNVIDIA A100 GPUクラスタで実施。7B→13Bでは20層の交互MoE、約1B活性非埋め込みパラメータを使用し、32→64エキスパートへ拡張する。","quality_effect":"複製直後の損失は32エキスパート元モデル1.32に対して1.38で、ランダム64エキスパートの10.5より大幅に低い。十分な継続学習で複製エキスパートが分化し、100%継続では固定64エキスパートに対する平均精度差が0.3点まで縮む。","source":"https://arxiv.org/abs/2604.19835","sources":["https://arxiv.org/abs/2604.19835","https://arxiv.org/pdf/2604.19835"],"code":"https://github.com/amazon-science/expert-upcycling","implementation":"著者らはコードと学習設定をamazon-science/expert-upcyclingで公開すると一次PDF脚注に記載している。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary-reference-section","references_total":62},"reservation":{"claim_id":"claim-c5fb805067e99d4f2b7cd63c","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
