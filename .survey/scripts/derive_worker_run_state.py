@@ -22,6 +22,7 @@ from typing import Any
 import claim_state
 import claim_window_policy
 import continuation_gate
+import discovery_preload_queue
 import select_discovery_direction
 import worker_identity
 import worker_run_state_cache as run_state_cache
@@ -661,6 +662,16 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
 
     discovery_rounds, selector = _discovery_rounds(root, request["run_key"])
     discovery_async = _discovery_async_state(root, request["run_key"])
+    selector_direction = str(selector.get("next_direction") or "")
+    discovery_preload = None
+    if (
+        work_mode == "discovery"
+        and selector_direction in {"backward", "forward", "normal"}
+    ):
+        discovery_preload = discovery_preload_queue.pick_available(
+            root,
+            direction=selector_direction,
+        )
 
     now = dt.datetime.now(dt.timezone.utc)
     deadline = started_at + dt.timedelta(seconds=3600)
@@ -806,6 +817,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "run_state_derive_ms": derive_ms,
         "discovery_rounds_completed": discovery_rounds,
         "discovery_selector": selector,
+        "discovery_preload": discovery_preload,
         "independent_work": independent_work,
         "gate": gate,
         "next_action": gate.get("required_action"),
@@ -820,6 +832,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
             "A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
+            "When work_mode=discovery, discovery_preload exposes the oldest PRECHECKED preload matching the canonical selector direction; "
+            "it is only an acceleration hint and must be adopted through a new run-specific schema-v3 precheck request, never referenced directly by a submission. "
             "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts."
         ),
     }
