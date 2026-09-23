@@ -4,7 +4,60 @@
   "slot": "metadata",
   "attempt_id": "attempt-51313bfb190d4ac71af486c7",
   "job_id": "job-research-2095724e259f584c",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2601.15370",
+    "arxiv_id": "2601.15370",
+    "doi": "10.48550/arXiv.2601.15370",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
+    "summary": "本研究は、混合専門家（Mixture-of-Experts; MoE）が通常は各トークンの専門家数だけを疎にするのに対し、情報量の低いトークン自体へ割く専門家計算も減らす「データ疎性」を、因果的なトークン選択型ルーティングのまま導入する。ルータに計算を行わないヌル専門家を加え、その同一ロジットを複製して上位K選択へ参加させ、標準的な負荷分散損失だけで平均実専門家数を制御する。Qwen3 0.6B/1.7Bからアップサイクルした視覚言語MoEで、期待計算量を揃えた比較ではデータ疎性を加えた構成が損失と下流評価の計算効率前線を改善した。200kステップ・約209Bトークンの1.7B基盤モデルでは、同じ18B-A3B規模でρ=0.5のK8構成がρ=1.0のK4構成よりOCR総合を85.9から87.2、計数総合を69.8から71.9へ改善した。",
+    "list_summary": "ヌル専門家をトークン選択型MoEへ組み込み、因果性を保ったまま情報量に応じて実専門家数を変え、同一期待計算量で損失・下流性能の効率前線を改善する。",
+    "authors": [
+      "Maciej Kilian",
+      "Oleg Mkrtchyan",
+      "Luke Zettlemoyer",
+      "Akshat Shrivastava",
+      "Armen Aghajanyan"
+    ],
+    "authors_affiliations": "Perceptron; University of Washington（Luke Zettlemoyer）",
+    "published": "2026-01-21",
+    "publication": "arXiv:2601.15370v1",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint (v1)",
+    "publication_version": "v1",
+    "lineage": "adaptive expert computation / null experts / data sparsity / multimodal MoE",
+    "topics": [
+      "混合専門家",
+      "データ疎性",
+      "ヌル専門家",
+      "条件付き計算",
+      "視覚言語モデル",
+      "適応計算"
+    ],
+    "importance": "重み疎性だけでなく、トークンごとの実計算量を可変にするデータ疎性を同じルーティング行列上の直交軸として整理し、既存のトークン選択型MoEへ小さな変更で組み込めることを示す。特に、計算量を削減するだけでなく、情報密度に応じて計算を再配分する設計として、適応的専門家計算・圧縮系統に直接つながる。",
+    "hardware_evaluation": "本文は学習に用いたGPU機種・台数を明記していない。主評価は0.6Bおよび1.7BのQwen3基盤モデルをMoEへアップサイクルし、50kステップ約52Bトークンと、拡張実験200kステップ約209Bトークンで行う。したがって結果は学習計算量ベースの比較であり、特定GPU上の実時間高速化や消費電力の測定ではない。",
+    "quality_effect": "近似推論で出力を後処理する方式ではなく、訓練時のルーティングと計算配分を変えるためモデル品質そのものが評価対象となる。訓練損失は疎性を強めるほど改善する一方、下流評価はρ≈0.5付近で最大となり、ρ=0.25など過度な疎性では基準構成を下回るため、計算削減率だけでは品質を保証できない。",
+    "source": "https://arxiv.org/abs/2601.15370",
+    "sources": [
+      "https://arxiv.org/abs/2601.15370",
+      "https://arxiv.org/pdf/2601.15370"
+    ],
+    "code": null,
+    "implementation": "標準トークン選択型MoEのルータへヌル用ロジットを1個追加し、それをM個へ複製して上位K選択した後、実専門家分だけをGroupedGEMMへ渡す構成。論文付録にPyTorch風の擬似コード、非同期負荷分散損失、適応的活性化チェックポイント制御を示すが、arXivページで公式コードURLは確認できない。",
+    "implementation_status": "論文に実装設計と擬似コードあり。公式実装URLは一次資料上で未確認。",
+    "evaluation_type": "視覚言語MoEの学習損失・下流ベンチマーク・ルーティング挙動の比較",
+    "last_checked": "2026-09-23",
+    "references": [],
+    "references_checked_at": "2026-09-23",
+    "references_source": "primary manuscript reference section",
+    "references_total": 43
+  },
   "reservation": {
     "claim_id": "claim-51313bfb190d4ac71af486c7",
     "worker_id": "scheduled-chat-00",
