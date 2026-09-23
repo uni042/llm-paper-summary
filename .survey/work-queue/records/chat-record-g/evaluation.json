@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-c3d771ab5950563d5d332246",
-  "job_id": "job-research-04494ef5a577c4fb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c3d771ab5950563d5d332246",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c3d771ab5950563d5d332246","job_id":"job-research-04494ef5a577c4fb","data":{"hardware":"主要実験は8×NVIDIA A100サーバー。大規模スケーラビリティ評価ではQwen1.5-MoE 14BとDeepSeek-MoE 16Bを扱う。","software":"Transformer/T5/Swin-MoE系の著者実装。NBS係数はCCP反復で求め、大規模NAMEx-Fullでは層当たり2反復を効率設定として使用。","model":["Switch Transformer系SMoE 70M/216M","T5-Base SMoE 約1.0B","Swin-MoE Small 50M","ACMoE","Qwen1.5-MoE 14B","DeepSeek-MoE 16B"],"datasets":["WikiText-103","GLUE","ImageNet-1k","ImageNet-A","ImageNet-O","ImageNet-R","MMLU","GSM8K","ARC","SmolTalk"],"baselines":["SMoE Top-1/Top-2","SMEAR","CAMEx","EP-CAMEx","EP-CAMEx-Momentum"],"correctness":"主要小中規模実験は5乱数種の平均で比較し、NAMExとNAMEx-Fullの交渉計算予算を既存EP-CAMExの学習時間条件に合わせる。大規模MoEではLinear/Cosine/Stable-MoEの複数ルーティング方式でゼロショットとSmolTalk微調整後を比較する。","settings":["WikiText-103で小規模・中規模事前学習","T5-Base + 8 experts/layerでGLUE微調整","Swin-MoE SmallをImageNet-1kで30 epochs、batch size 96","ACMoE系は100 epochs、batch size 512","主要NAMEx比較は1バッチ20 NBS iterationsの予算","Qwen1.5/DeepSeekのNAMEx-Fullは層当たり2 CCP iterationsを選択"],"methodology":"言語・画像の複数アーキテクチャで精度/パープレキシティを測り、分布外画像で頑健性を確認する。さらに14B/16B MoEでMMLU/GSM8K/ARCをゼロショットと微調整後に評価し、NBS反復数、層間更新頻度、複素運動量の偏角、四元数運動量をアブレーションする。","scope":"実機GPUを用いた学習・微調整評価であり、推論専用システムベンチマークではない。大規模MoEでの改善幅は小さく、主な計算追加は統合/学習時のNBS解法に発生する。"},"reservation":{"claim_id":"claim-c3d771ab5950563d5d332246","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
