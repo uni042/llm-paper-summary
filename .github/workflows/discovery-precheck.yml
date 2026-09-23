@@ -120,6 +120,28 @@ jobs:
               if [ -f "$result" ]; then
                 continue
               fi
+
+              # Preload traffic must not burst Semantic Scholar hard enough to
+              # starve foreground workers. Ordinary worker requests stay unpaced;
+              # the provider adapter still handles any returned 429 explicitly.
+              if [[ "$name" == preload-*.json ]]; then
+                provider="$(
+                  python - "$request" <<'PY'
+import json
+import sys
+from pathlib import Path
+try:
+    value = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+except Exception:
+    value = {}
+print(str(value.get("provider") or "").strip().casefold())
+PY
+                )"
+                if [ "$provider" = "semantic_scholar" ]; then
+                  sleep 2
+                fi
+              fi
+
               mkdir -p "$(dirname "$result")"
               if python .survey/scripts/process_discovery_precheck.py \
                 --request "$request" \
