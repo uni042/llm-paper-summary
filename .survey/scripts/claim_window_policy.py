@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-"""Central policy for Research/Audit paper inventory and hot bank buffering.
+"""Central policy for Research/Audit inventory on dual-purpose banks.
 
-Paper ownership and record-bank capacity are intentionally separate layers:
-- a worker may own a deeper logical paper inventory;
-- only the leading hot slice needs record banks immediately;
-- the shared paper preload pool is sized independently from record-bank count.
-
-This keeps allocation latency low without turning every standby paper into a bank
-reservation.
+Each canonical bank can simultaneously hold a Research preload sidecar, a Discovery
+preload sidecar, and the five writable Research/Audit record slots. The sidecars are
+independent derived stock indexes; only the leading hot Research slice reserves the
+five record slots. This keeps allocation latency low without turning every standby
+paper into a record-slot reservation.
 """
 from __future__ import annotations
 
@@ -79,5 +77,5 @@ def should_refill(
 
 
 def shared_pool_target() -> int:
-    """Return the logical preload target; this is deliberately bank-independent."""
+    """Return the logical Research preload target sharded across all bank identities."""
     return SHARED_PRELOAD_TARGET
