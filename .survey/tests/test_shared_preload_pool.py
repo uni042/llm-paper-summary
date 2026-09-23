@@ -15,7 +15,14 @@ import claim_window_policy
 import claim_worker_with_banks
 import select_record_bank
 import shared_preload_pool
-from record_bank_config import BANK_ROOTS, SLOT_NAMES
+from record_bank_config import (
+    BANK_IDS,
+    BANK_ROOTS,
+    RESEARCH_PRELOAD_SLOT_NAME,
+    SLOT_NAMES,
+    bank_for_sequence,
+    research_preload_slot_path,
+)
 
 AT = datetime(2026, 9, 23, 12, 0, tzinfo=timezone.utc)
 
@@ -101,6 +108,29 @@ class SharedPreloadPoolTests(unittest.TestCase):
             self.assertEqual(len(waiting), 144)
             self.assertEqual([row["pool_order"] for row in waiting], list(range(144)))
             self.assertTrue(all("record_bank" not in row for row in waiting))
+            self.assertTrue(all(row.get("stock_lane") == "research" for row in waiting))
+            self.assertEqual(
+                [row.get("stock_bank") for row in waiting],
+                [bank_for_sequence(index) for index in range(144)],
+            )
+            self.assertEqual(summary["shared_pool_research_sidecar_banks"], len(BANK_IDS))
+            self.assertEqual(summary["shared_pool_research_stock_banks"], len(BANK_IDS))
+            self.assertEqual(summary["shared_pool_research_stock_items"], 144)
+
+            sidecar_counts = []
+            for bank in BANK_IDS:
+                sidecar = json.loads(
+                    (root / research_preload_slot_path(bank)).read_text(encoding="utf-8")
+                )
+                self.assertEqual(sidecar["slot"], RESEARCH_PRELOAD_SLOT_NAME)
+                self.assertEqual(sidecar["bank"], bank)
+                self.assertEqual(
+                    [row["job_id"] for row in sidecar["items"]],
+                    [row["job_id"] for row in waiting if row.get("stock_bank") == bank],
+                )
+                sidecar_counts.append(len(sidecar["items"]))
+            self.assertEqual(sidecar_counts[:16], [5] * 16)
+            self.assertEqual(sidecar_counts[16:], [4] * 16)
 
             bank_state = select_record_bank.inspect(root)
             free_or_reusable = [
@@ -144,7 +174,9 @@ class SharedPreloadPoolTests(unittest.TestCase):
                 hot = result["assignments"][:claim_window_policy.HOT_BANKED_CLAIMS]
                 cold = result["assignments"][claim_window_policy.HOT_BANKED_CLAIMS:]
                 self.assertTrue(all(isinstance(row.get("record_bank"), str) for row in hot))
+                self.assertTrue(all(row.get("record_bank") == row.get("stock_bank") for row in hot))
                 self.assertTrue(all("record_bank" not in row for row in cold))
+                self.assertTrue(all(isinstance(row.get("stock_bank"), str) for row in cold))
                 observed.extend(row["job_id"] for row in result["assignments"])
                 banked.extend(row["record_bank"] for row in hot)
 
