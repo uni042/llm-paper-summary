@@ -173,11 +173,17 @@ def _process_v3(
     rejection_ledger_path: Path,
     repo_root: Path,
 ) -> dict[str, Any]:
-    live_fetch_page = discovery_provider_adapter.make_fetcher(
-        request["provider"],
-        request["source_url"],
-        page_size=request["page_size"],
-    )
+    live_fetch_page = None
+
+    def get_live_fetch_page():
+        nonlocal live_fetch_page
+        if live_fetch_page is None:
+            live_fetch_page = discovery_provider_adapter.make_fetcher(
+                request["provider"],
+                request["source_url"],
+                page_size=request["page_size"],
+            )
+        return live_fetch_page
 
     preload_entry: dict[str, Any] | None = None
     preload_source_result: dict[str, Any] | None = None
@@ -214,9 +220,9 @@ def _process_v3(
                     "position": cursor,
                     "provider_progress": preload_source_result.get("provider_progress"),
                 }
-            return live_fetch_page(cursor)
+            return get_live_fetch_page()(cursor)
     else:
-        fetch_page = live_fetch_page
+        fetch_page = get_live_fetch_page()
 
     collected = discovery_search_filter.collect_until_unseen(
         fetch_page,
@@ -241,7 +247,7 @@ def _process_v3(
             "target_unseen": request["target_unseen"],
             "pages_fetched": collected["pages_fetched"],
             "snapshot_source_commit": source_commit,
-                "allowed_identity_tokens": [row["identity_tokens"] for row in allowed],
+            "allowed_identity_tokens": [row["identity_tokens"] for row in allowed],
             "preload_id": request.get("preload_id"),
             "preload_cache_used": preload_cache_used,
         }
