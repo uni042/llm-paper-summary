@@ -1,56 +1,72 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20260923-0830-scheduled-chat-30",
+  "attempt_id": "update-20260924-0830-scheduled-chat-30",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "284aa9f6a34363185880e2e22a430e6fc2dd8be4",
+      "expected_blob_sha": "c4377afea321514bc26b42c2846ab20b75ee33e2",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-09-20**",
-          "new": "- フレームワーク差分の最終確認: **2026-09-23**"
+          "old": "- フレームワーク差分の最終確認: **2026-09-23**",
+          "new": "- フレームワーク差分の最終確認: **2026-09-24**"
         },
         {
           "op": "replace_once",
-          "old": "この2つは分けて扱う。2026-09-20の差分確認では、公式リリースと開発元リポジトリを基準に9月17日以降のvLLMにおけるKimi-K3 routed-expert量子化、SGLangにおけるAscend A5向けKimi-K3 serving最適化、および主要LLMの正式公開を再確認した。",
-          "new": "この2つは分けて扱う。2026-09-23の差分確認では、公式リリースと開発元リポジトリを基準に9月20日以降の主要更新を再確認し、vLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化などを追加した。主要LLMの正式公開はトップ表更新対象なし。"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "### 2026-09-20\n",
-          "text": "### 2026-09-23\n\n#### vLLM\n\n- **v0.30.0 — released 2026-09-22 UTC**\n\n  762 commits / 315 contributorsを含む大型release。GPU上に量子化・TP shard済みweightを保持してengine再起動時にCUDA IPCで再利用するFast Start、sparse-MLA decodeでKV pageをpinned host memoryへ退避するHiSparse、Model Runner V2のdual-batch overlap / speculative decoding拡張、Qwen3.8-Flash-NextとKimi K3のkernel最適化、large-scale serving・量子化経路の拡張がまとまって入った。\n\n  一次資料: https://github.com/vllm-project/vllm/releases/tag/v0.30.0\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/vllm/README.md",
-      "expected_blob_sha": "3089e31f58dcdc2e69a31e848bd86b742b65a519",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "## 2026-09-17\n",
-          "text": "## 2026-09-23\n\n- **v0.30.0 — released 2026-09-22 UTC**: 762 commits / 315 contributorsを含む大型release。主な更新は、post-quantized / TP-sharded weightをGPU常駐daemonに保持し再起動時にCUDA IPCでmapする**Fast Start**（`--load-format ipc_cache`、FP4・multi-node TP対応）、sparse-MLA decodeのKV pageをpinned host memoryへspillしGPU hot bufferでtop-k missを処理する**HiSparse**、Model Runner V2のdual-batch overlap・pipeline parallel下のMTP/EAGLE3/DFlash/DSpark・オンライン受理推定によるadaptive verification、Qwen3.8-Flash-NextのQSA/PLE/FP8 indexer最適化、Kimi K3のKDA/MLA kernel改善、PCP+DCP・Elastic EP・Mooncake/NIXL系の大規模serving拡張。release noteではModel Runner V2のCUDA Graph captureがH200で**12s→2s**、engine initが**28.9s→8.2s**、Kimi K3のgrouped FP8 MLA cache insertionはsmall batchで**4〜6倍**、mixed-batch KDA gather/scatter除去はE2E throughput **+5.2〜7.7%**と報告。[v0.30.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.30.0)\n\n"
+          "old": "この2つは分けて扱う。2026-09-23の差分確認では、公式リリースと開発元リポジトリを基準に9月20日以降の主要更新を再確認し、vLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化などを追加した。主要LLMの正式公開はトップ表更新対象なし。",
+          "new": "この2つは分けて扱う。2026-09-24の差分確認では、前回確認後の主要推論・学習フレームワークの公式release / 開発元リポジトリを再確認したが、掲載方針上追加すべき新しい主要更新は確認できなかった。前回追加したvLLM v0.30.0のFast Start、HiSparse host tier、Model Runner V2、Qwen3.8 / Kimi K3最適化が引き続き直近の主要更新である。"
         }
       ]
     },
     {
       "path": "llm-releases/README.md",
-      "expected_blob_sha": "c73462aadd9125fec3a3399aef5f7d02c803fb3a",
+      "expected_blob_sha": "e09d56fed751983ee206f26e2ada0a4dd9467dff",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-09-20**",
-          "new": "- リリース情報の最終確認: **2026-09-23**"
+          "old": "- リリース情報の最終確認: **2026-09-23**",
+          "new": "- リリース情報の最終確認: **2026-09-24**"
         },
         {
           "op": "replace_once",
-          "old": "2026-09-20に主要提供元の公式公開を再確認した。9月17日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。",
-          "new": "2026-09-23に主要提供元の公式公開を再確認した。9月20日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。"
+          "old": "2026-09-23に主要提供元の公式公開を再確認した。9月20日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。",
+          "new": "2026-09-24に主要提供元の公式公開を再確認し、OpenAIのGPT-6 Sol / LunaとAnthropicのClaude Opus 5.5を追加した。GPT-6 Sol / LunaはAstra世代の能力をより低cost帯へ展開し、Claude Opus 5.5はOpus 5比の性能・効率・安全性を更新する。トップ表は各model familyの最新リリースを示す。"
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-09-03 | GPT-6 Astra | OpenAI GPT | toolを使う長時間task、coding、research、science等を重点にしたGPT-6世代上位APIモデルとして記録。API ID `gpt-6-astra`、最大1.05M-token context / 128K output。 | [OpenAI GPT系](openai-gpt.md) |",
+          "new": "| 2026-09-23 | GPT-6 Sol / Luna | OpenAI GPT | GPT-6 Astraで導入したprofessional work、factuality、coding、computer use等の改善を高速・低cost帯へ展開。API IDは`gpt-6-sol` / `gpt-6-luna`。GPT-5.6のpromotional pricing比でSol / Lunaとも大幅に低価格化。 | [OpenAI GPT系](openai-gpt.md) |"
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-09-01 | Claude Fable 5.1 / Mythos 5.1 | Claude | coding・knowledge work・scienceなど長いmulti-step task向けの上位model群。Mythosはcybersecurity / biology等の専門領域を重点化。 | [Claude系](claude.md) |",
+          "new": "| 2026-09-22 | Claude Opus 5.5 | Claude | Claude 5.5 familyの最初のmodel。Opus 5からagentic coding、computer use、knowledge work、効率、安全性を更新し、通常workloadで約40%低cost、出力速度も30%以上高速化とAnthropicが報告。 | [Claude系](claude.md) |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/openai-gpt.md",
+      "expected_blob_sha": "d6c1cd27bfe9a913c43851cbe73bef132b089992",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "| 2026-09-03 | GPT-6 Astra |",
+          "text": "| 2026-09-23 | GPT-6 Sol / Luna | GPT-6 Astraと同系統の学習手法を使い、professional work、factuality、coding、computer use、alignmentの改善を高速・低cost帯へ展開。API model IDは`gpt-6-sol` / `gpt-6-luna`。API価格はSolが入力$2 / 出力$10、Lunaが入力$0.10 / 出力$0.50（各100万token）で、GPT-5.6 promotional pricingから大幅に低価格化。prompt cachingも改善され、cached input readは90% discount。 | https://openai.com/index/introducing-gpt-6-sol-and-luna/ |\n"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/claude.md",
+      "expected_blob_sha": "185e9c7d63021346a299f6921f6487f7b86a179c",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "| 2026-09-01 | Claude Fable 5.1 / Claude Mythos 5.1 |",
+          "text": "| 2026-09-22 | Claude Opus 5.5 | Claude 5.5 familyの最初のmodel。agentic coding、computer use、knowledge workを重点更新し、Anthropicは通常workloadでOpus 5より約40%低cost、出力速度30%以上高速と報告。API価格は入力$4 / 出力$20、cache read $0.20（各100万token）。prompt injection耐性や長時間taskを含むalignment評価も強化。 | https://www.anthropic.com/claude-opus-5-5 |\n"
         }
       ]
     }
   ],
-  "summary": "2026-09-23の08:30 update route: vLLM v0.30.0のFast Start、HiSparse、Model Runner V2、Qwen3.8/Kimi K3最適化等を追加。主要LLM正式公開は9月20日以降にトップ表更新対象なし。"
+  "summary": "2026-09-24の08:30 update route: GPT-6 Sol / LunaとClaude Opus 5.5を主要LLM一覧へ追加。主要frameworkは前回確認後に掲載方針上追加すべき新規更新なし。"
 }
