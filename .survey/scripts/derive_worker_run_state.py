@@ -576,7 +576,19 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         submission = _run_submission_state(root, attempts, started_at)
 
     discovery_rounds, selector = _discovery_rounds(root, request["run_key"])
-    discovery_async = _discovery_async_state(root, request["run_key"])
+    if work_mode == "discovery":
+        discovery_async = _discovery_async_state(root, request["run_key"])
+    else:
+        discovery_async = {
+            "discovery_precheck_result_pending": False,
+            "pending_discovery_precheck_request_ids": [],
+            "discovery_submission_result_pending": False,
+            "pending_discovery_submission_ids": [],
+            "discovery_evaluation_pending": False,
+            "discovery_evaluation_request_ids": [],
+            "discovery_recovery_required": False,
+            "discovery_recovery_targets": [],
+        }
 
     now = dt.datetime.now(dt.timezone.utc)
     deadline = started_at + dt.timedelta(seconds=3600)
