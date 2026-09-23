@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 17:08:37 JST**
+> 自動生成: **2026-09-23 17:11:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **163** |
-| 未claim Research job | **162** |
-| 直近24hの検証済みResearch収録 | **82** |
-| 最終検証済みResearch収録 | **09-23 17:05:38 JST（2分前）** |
+| 収録候補論文 | **162** |
+| 未claim Research job | **161** |
+| 直近24hの検証済みResearch収録 | **81** |
+| 最終検証済みResearch収録 | **09-23 17:05:38 JST（5分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **163** |
+| canonical_id確認済みの一意な候補論文 | **162** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **163** |
+| 非終端Research job合計 | **162** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（8時間37分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（8時間40分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -145,14 +145,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-23 14:00 JST** / worker `scheduled-chat-00`
+- 最新観測run: **2026-09-23 17:00 JST** / worker `scheduled-chat-00`
 - immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-a83757e9b9d779faf47881b5.json` (job `job-research-eed4801f6d21f8d7`, failure_class `non_success`)
-  - result: `.survey/work-queue/results/research/attempt-a83757e9b9d779faf47881b5.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-41945f240a7e297500403b5b.json` (job `job-research-c67c0a139707ac48`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-41945f240a7e297500403b5b.json` (`ok=true`)
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-23 14:00 JST** / worker `scheduled-chat-00`
+- 最新観測run: **2026-09-23 17:00 JST** / worker `scheduled-chat-00`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -179,9 +179,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2606.19025` — FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs / worker `scheduled-chat-00`
-  - claim: **09-23 17:06:53 JST** / heartbeat: **—** / lease expiry: **09-23 18:36:53 JST**
-  - evidence: `.survey/work-queue/claims/job-research-676eb3c59785d737.json`
+- `DOI:10.4108/eetiot.13349` — Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving / worker `scheduled-chat-00`
+  - claim: **09-23 17:10:45 JST** / heartbeat: **—** / lease expiry: **09-23 18:40:45 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d69ddf3864beda69.json`
 
 #### Audit
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **163** |
+| ready | **162** |
 
 ### 候補の重複・識別情報欠損
 
@@ -229,8 +229,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **258** |
-| └ Research | **186** |
+| 成功result未照合のimmutable submission | **259** |
+| └ Research | **187** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
