@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-041d58979c001abd8a8d2892",
-  "job_id": "job-research-676eb3c59785d737",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-041d58979c001abd8a8d2892",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-041d58979c001abd8a8d2892","job_id":"job-research-676eb3c59785d737","data":{"limitations":"最大の制約はfull-scale empirical evidenceの不足である。training convergenceとrouting stabilityは54M–150M級proxy中心で、13B/100B級はcost/system model projectionである。skip-tokenは非resident expertの計算を省くためfull-replicaと数学的に同じ更新ではなく、downstream reasoningや長期pre-trainingでの影響は未評価。network実験もhomogeneous workers、static i.i.d. data、synchronous rounds、controlled 1–10 Gbps/50 ms条件で、jitter、asymmetric bandwidth、straggler、heterogeneous GPUは扱わない。専用skip-token kernelもなく、optimizer比較はLocalAdamW/DiLoCo中心である。","differences":"DiLoCo/Photonはglobal synchronization頻度を下げるが各siteにfull model replicaを置く。FoMoEはそれと直交してMoE expertの配置自体を分割し、同期1回当たりexpert payloadとsite memoryを削減する。通常のexpert parallelismはtoken activationをexpert所在地へ毎step dispatchするためWAN latency/bandwidthに不向きだが、FoMoEはlocal steps中にremote expert通信を行わずghost pathをskipする。federated MoEのpersonalized/local-expert方式とも異なり、目的はsite固有specializationより単一global pre-training modelを低帯域拠点群で訓練することにある。","implementation_status":"prototype training system、expert placement/shuffle、skip-token、LocalAdamW synchronization、cost modelまで論文で実装・評価される。公開code repositoryは一次metadataから確認できず、100B-scale end-to-end implementationは未実証。","research_positioning":"本リポジトリではdistributed/heterogeneous MoE training系統に位置し、特にmemory hierarchy/offload研究とも接点がある。従来のCPU/NVMe expert offloadが単一node内でresident setを動的管理するのに対し、FoMoEはexpert ownershipを複数training siteへ静的/周期的に分散し、remote expertを同期round間では参照しない。したがってexpert cacheのhit/missを通信で解決するのではなく、missをskipしてoptimization側で吸収する設計である。この発想は低帯域edge/federated trainingへMoEを拡張する際に重要だが、quality degradationとの交換条件が明確で、inference expert cachingの直接代替ではない。"},"reservation":{"claim_id":"claim-041d58979c001abd8a8d2892","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
