@@ -5,21 +5,21 @@
   "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
   "job_id": "job-research-61e38612a8457ae4",
   "data": {
-    "hardware": ["8× NVIDIA H200 GPUs for calibration/search timing", "single NVIDIA H200 GPU for practical inference-speed evaluation"],
-    "software": ["PyTorch implementation", "Hugging Face Transformers", "lmms-eval", "FlashAttention-2 where supported"],
-    "model": ["Kimi-VL-A3B-Instruct (64 routed experts/layer, top-6)", "Qwen3-VL-MoE-30B-A3B-Instruct (128 experts/layer, top-8)", "InternVL-3.5-30B-A3B-HF", "InternVL-3.5-GPT-OSS-20B-A4B-Preview-HF"],
-    "datasets": ["TextVQA", "ChartQA", "MMStar", "MMBench", "MMVet", "MME", "RealWorldQA", "COCO", "MVBench", "EgoSchema", "VideoMME", "LongVideoBench", "VideoMMMU", "GQA calibration set"],
-    "baselines": ["fixed reduced top-k", "NAEE", "MC-MoE", "DiEP", "single-threshold routing-probability thresholding", "GMLG-only / DMT ablations"],
+    "hardware": ["較正・探索時間はNVIDIA H200を8基使用", "実推論速度は単一NVIDIA H200で測定"],
+    "software": ["PyTorch実装", "Hugging Face Transformers", "lmms-eval", "対応モデルではFlashAttention-2"],
+    "model": ["Kimi-VL-A3B-Instruct：1層64エキスパート、上位6個を選択", "Qwen3-VL-MoE-30B-A3B-Instruct：1層128エキスパート、上位8個を選択", "InternVL-3.5-30B-A3B-HF", "InternVL-3.5-GPT-OSS-20B-A4B-Preview-HF"],
+    "datasets": ["画像系：TextVQA、ChartQA、MMStar、MMBench、MMVet、MME、RealWorldQA、COCO", "動画系：MVBench、EgoSchema、VideoMME、LongVideoBench、VideoMMMU", "較正用：GQAから1024件を無作為抽出"],
+    "baselines": ["固定的に上位kを減らす方式", "NAEE", "MC-MoE", "DiEP", "ルーティング確率へ単一閾値を掛ける方式", "GMLGのみ・DMTのみのアブレーション"],
     "settings": [
-      {"name": "calibration/search data", "description": "1024 randomly sampled GQA examples; D=100 threshold grid in (0,1)."},
-      {"name": "Kimi skip ratios", "description": "matched practical expert skipping around 50%, 67%, 83%."},
-      {"name": "cross-backbone aggressive setting", "description": "Qwen3-VL and InternVL-30B at 88% expert skipping; GPT-OSS-20B backbone at 75%."},
-      {"name": "speed test", "description": "single H200; Kimi 83% and Qwen3-VL 88% skipping; prefill batch size 8; decoding sequence length 1024."},
-      {"name": "quantization", "description": "MC-MoE weight-only mixed-precision quantization for MoE FFNs plus 4-bit weight-only quantization elsewhere; 2.5-bit and 1.5-bit expert settings compared."}
+      {"name": "較正と探索", "description": "GQAから無作為抽出した1024件を使用し、画像閾値とテキスト閾値は0から1の範囲を各100段階で候補化する。層重要度のKL測定と閾値決定はいずれも推論前に行い、学習データを使った再学習は行わない。"},
+      {"name": "Kimiの省略率", "description": "既存法と公平に比較するため、おおむね50%、67%、83%のエキスパート省略率を合わせる。省略率が高くなるほど固定上位kや既存の動的省略法の品質が崩れるため、83%条件が主要な厳しい比較になる。"},
+      {"name": "別バックボーンの高省略率", "description": "Qwen3-VLとInternVL-30B-A3Bでは88%省略、GPT-OSS-20B系のInternVLでは75%省略を使い、特定のKimi構造だけに依存しないかを調べる。Qwen3-VLでは元の上位8個から平均的に約1個相当まで計算を削る非常に厳しい条件になる。"},
+      {"name": "速度測定", "description": "単一H200上でKimiの83%省略とQwen3-VLの88%省略を測る。事前充填はバッチサイズ8、復号は系列長1024とし、単なる理論FLOP削減ではなく実際の壁時計速度を元モデルと比較する。"},
+      {"name": "量子化との併用", "description": "MC-MoEの重みのみ混合精度量子化をMoEフィードフォワードへ適用し、それ以外は4ビット重み量子化とする。エキスパート側2.5ビットおよび1.5ビット相当の条件で、動的省略を追加しても品質保持が続くかを調べる。"}
     ],
-    "correctness": "Lossy approximation: expert computations are intentionally removed, so exact output equivalence is not expected. Quality is assessed by normalized benchmark performance at matched skip ratios.",
-    "methodology": "13 image/video understanding benchmarks, multiple MoE MLLM backbones, matched skipping ratios, component ablations, quantization combination, calibration/search cost, and actual H200 prefill/decode speed are evaluated. MMBench/MMVet generated text is judged with DeepSeek-V3.1.",
-    "scope": "Evidence supports training-free expert skipping for multimodal MoE inference and single-node GPU speedups. It does not establish benefits for distributed expert-parallel all-to-all serving, and threshold calibration requires representative multimodal samples."
+    "correctness": "エキスパート計算を意図的に削る近似なので、元モデルとのビット単位・出力列単位の完全一致は目標にしない。正しさは、同じ省略率で画像・動画理解ベンチマークの正規化平均性能がどれだけ元モデルへ近いか、また既存省略法よりどれだけ保持できるかで評価する。",
+    "methodology": "画像と動画を合わせた13ベンチマーク、複数のMoEマルチモーダルモデル、同一省略率の既存法比較、GMLGとDMTの構成要素アブレーション、量子化併用、較正探索時間、単一H200の事前充填・復号速度まで評価する。MMBenchとMMVetの生成回答評価にはDeepSeek-V3.1を判定器として用いる。",
+    "scope": "根拠が直接示すのは、マルチモーダルMoE推論で再学習なしにエキスパート計算を省き、単一GPU上でも壁時計時間を短縮できることまでである。複数ノードのエキスパート並列、全対全通信量、通信と計算の重なり、負荷分散への効果は主要実験では直接測定していない。"
   },
   "reservation": {"claim_id": "claim-0640a4e19fcd3a04140f52b1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
