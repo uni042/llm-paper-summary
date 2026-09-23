@@ -1,0 +1,868 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260924T020210JST-scheduled-chat-00-direct-forward-2",
+  "collector_id": "direct-20260924T020210JST-scheduled-chat-00-direct-forward-2",
+  "run_key": "20260924T020210JST-scheduled-chat-00",
+  "axis": "forward citations of KVLink efficient KV cache reuse",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "333bcac56ecfdfff6178db3791cad4d86f7f594f",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T17:04:54.236980+00:00",
+  "preload_id": "preload-279710d2459727616545",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-279710d2459727616545",
+  "results": [
+    {
+      "title": "GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/0545988e2d959946f5462d928052f3d54c7f5487",
+      "year": 2026,
+      "published": "2026-02-12",
+      "abstract": "Increasingly, LLM inference services proxy client requests to engine replicas distributed globally. Load-balancing policies must jointly account for factors including KV-cache locality, replica load, and variable network latency when optimizing for metrics like latency and TTFT. However, existing systems only evaluate a subset of these factors in their cost model, leading to uneven concentrations of load and KV-cache across replicas. We present GORGO, a proxy architecture that holistically factors network latency, prefill cost, and queueing delay using tunable parameters. Since open-source chat datasets such as LMSYS-Chat1M and WildChat-4.8M lack long-context, high prefix-reuse data, we release a synthetic dataset, ART-Chat-2.5M, from long-context production metadata. On a tuning window from ART-Chat-2.5M, evolutionary strategies guide the GORGO policy's parameters to directly optimize p95 TTFT. During held-out evaluation windows, we fix the parameter values learned from tuning and improve p95 TTFT by 6.9-15.5% and p95 end-to-end (E2E) latency by 14.3-30.9% over baseline load-balancing policies such as simple session affinity and prefix-cache. The code and ART-Chat-2.5M dataset can be found at https://github.com/Arcadia-Research-Team/GORGO.",
+      "canonical_id": "arXiv:2602.11688",
+      "arxiv_id": "2602.11688",
+      "authors": [
+        "Alessio Ricci Toniolo",
+        "Rome Thorstenson",
+        "A. Dinesh"
+      ]
+    },
+    {
+      "title": "TVCACHE: A Stateful Tool-Value Cache for Post-Training LLM Agents",
+      "source_url": "https://www.semanticscholar.org/paper/93ff8e494291921be3ad22116a3923754a439b2c",
+      "year": 2026,
+      "published": "2026-02-11",
+      "abstract": "In RL post-training of LLM agents, calls to external tools take several seconds or even minutes, leaving allocated GPUs idle and inflating post-training time and cost. While many tool invocations repeat across parallel rollouts and could in principle be cached, naively caching their outputs for reuse is incorrect since tool outputs depend on the environment state induced by prior agent interactions. We present TVCACHE, a stateful tool-value cache for LLM agent post-training. TVCACHE maintains a tree of observed tool-call sequences and performs longest-prefix matching for cache lookups: a hit occurs only when the agent's full tool history matches a previously executed sequence, guaranteeing identical environment state. On three diverse workloads-terminal-based tasks, SQL generation, and video understanding. TVCACHE achieves cache hit rates of up to 70% and reduces median tool call execution time by up to 6.9X, with no degradation in post-training reward accumulation.",
+      "canonical_id": "arXiv:2602.10986",
+      "arxiv_id": "2602.10986",
+      "authors": [
+        "Abhishek Vijaya Kumar",
+        "Bhaskar Kataria",
+        "Byungsoo Oh",
+        "Emaad A. Manzoor",
+        "Rachee Singh"
+      ]
+    },
+    {
+      "title": "Hardware Co-Design Scaling Laws via Roofline Modelling for On-Device LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68",
+      "year": 2026,
+      "published": "2026-02-10",
+      "abstract": "Vision-Language-Action Models (VLAs) have emerged as a key paradigm of Physical AI and are increasingly deployed in autonomous vehicles, robots, and smart spaces. In these resource-constrained on-device settings, selecting an appropriate large language model (LLM) backbone is a critical challenge: models must balance accuracy with strict inference latency and hardware efficiency constraints. This makes hardware-software co-design a game-changing requirement for on-device LLM deployment, where each hardware platform demands a tailored architectural solution. We propose a hardware co-design law that jointly captures model accuracy and inference performance. Specifically, we model training loss as an explicit function of architectural hyperparameters and characterise inference latency via roofline modelling. We empirically evaluate 1,942 candidate architectures on NVIDIA Jetson Orin, training 170 selected models for 10B tokens each to fit a scaling law relating architecture to training loss. By coupling this scaling law with latency modelling, we establish a direct accuracy-latency correspondence and identify the Pareto frontier for hardware co-designed LLMs. We further formulate architecture search as a joint optimisation over precision and performance, deriving feasible design regions under industrial hardware and application budgets. Our approach reduces architecture selection from months to days. At the same latency as Qwen2.5-0.5B on the target hardware, our co-designed architecture achieves 19.42% lower perplexity on WikiText-2. To our knowledge, this is the first principled and operational framework for hardware co-design scaling laws in on-device LLM deployment. We will make the code and related checkpoints publicly available.",
+      "canonical_id": "arXiv:2602.10377",
+      "arxiv_id": "2602.10377",
+      "authors": [
+        "Luo-Yang Sun",
+        "Jiwen Jiang",
+        "Yifeng Ding",
+        "Feng-Fa Li",
+        "Yanke Song",
+        "Hai-Feng Zhang",
+        "Jian Ying",
+        "Lei Ren",
+        "Kun Zhan",
+        "Wei Chen",
+        "Yan Xie",
+        "Cheng Deng"
+      ]
+    },
+    {
+      "title": "DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/5f3c013b311276df4d5715c60a799b3cf0dd04ca",
+      "year": 2026,
+      "published": "2026-02-06",
+      "abstract": "In LLM serving, reusing the KV cache of prompts across requests is critical for reducing TTFT and serving costs. Cache-affinity scheduling, which co-locates requests with the same prompt prefix to maximize KV cache reuse, often conflicts with load-balancing scheduling that distributes requests evenly across compute instances. Existing schedulers fail to reconcile this trade-off as they operate within a single mapping space, typically applying cache-affinity routing to a subset of requests and load-balanced routing to the rest, without a unified solution to achieve both goals. To address this limitation, we propose DualMap, a dual-mapping scheduling strategy for distributed LLM serving that achieves both cache affinity and load balancing. Its key idea is to map each request to two candidate instances via two independent hash functions based on the request prompt, then intelligently select the better candidate based on current system states. This design increases the likelihood that requests with shared prefixes are co-located, while evenly dispersing distinct prefixes across the cluster via ``the power of two choices''. To make DualMap robust under dynamic and skewed real-world workloads, we incorporate three techniques: 1) SLO-aware request routing, which prioritizes cache affinity but switches to load-aware scheduling when TTFT exceeds the SLO, enhancing load balance without sacrificing cache reuse; 2) hotspot-aware rebalancing, which dynamically migrates requests from overloaded to underloaded instances, mitigating hotspots and rebalancing the system; 3) lightweight dual-hash-ring scaling, which leverages a dual-hash-ring mapping to support fast and low-overhead instance scaling without costly global remapping. Experiments on real-world workloads show that DualMap improves effective request capacity by up to 2.25$\\times$ under the same TTFT SLO constraints compared with SOTA work.",
+      "canonical_id": "arXiv:2602.06502",
+      "arxiv_id": "2602.06502",
+      "authors": [
+        "Ying Yuan",
+        "Pengfei Zuo",
+        "Bo Wang",
+        "Zhangyu Chen",
+        "Zhipeng Tan",
+        "Zhou Yu"
+      ]
+    },
+    {
+      "title": "You Need an Encoder for Native Position-Independent Caching",
+      "source_url": "https://www.semanticscholar.org/paper/528c65e509423bb2977ee8053649cc882bcd4ef6",
+      "year": 2026,
+      "published": "2026-02-02",
+      "abstract": "The Key-Value (KV) cache of Large Language Models (LLMs) is prefix-based, making it highly inefficient for processing contexts retrieved in arbitrary order. Position-Independent Caching (PIC) has been proposed to enable KV reuse without positional constraints; however, existing approaches often incur substantial accuracy degradation, limiting their practical adoption. To address this issue, we propose native PIC by reintroducing the encoder to prevalent decoder-only LLMs and explicitly training it to support PIC. We further develop COMB, a PIC-aware caching system that integrates seamlessly with existing inference frameworks. Experimental results show that COMB reduces Time-to-First-Token (TTFT) by 51-94% and increases throughput by 3$\\times$ with comparable accuracy. Furthermore, the quality improvement when using DeepSeek-V2-Lite-Chat demonstrates the applicability of COMB to other types of decoder-only LLMs. Our code is available at https://github.com/shijuzhao/Comb.",
+      "canonical_id": "arXiv:2602.01519",
+      "arxiv_id": "2602.01519",
+      "authors": [
+        "Shiju Zhao",
+        "Jun-Hao Hu",
+        "Jiaqi Zheng",
+        "Guihai Chen"
+      ]
+    },
+    {
+      "title": "From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation",
+      "source_url": "https://www.semanticscholar.org/paper/8597d67b45b002e34b43678758cc503ce3cfda66",
+      "year": 2026,
+      "published": "2026-01-19",
+      "abstract": "Retrieval-Augmented Generation enhances Large Language Models by integrating external knowledge, which reduces hallucinations but increases prompt length. This increase leads to higher computational costs and longer Time to First Token. To mitigate this issue, existing solutions aim to reuse the preprocessed KVCache of each retrieved chunk to accelerate RAG. However, the lack of cross-chunk contextual information leads to a significant drop in generation quality, leaving the potential benefits of KVCache reuse largely unfulfilled. The challenge lies in how to reuse the precomputed KVCache chunk while preserving generation quality. We propose FusionRAG, a novel inference framework that optimizes both the preprocessing and reprocessing stages of RAG. In the offline preprocessing stage, we embed information from other related text chunks into each chunk, while in the online reprocessing stage, we recompute the KVCache for tokens that the model focuses on. As a result, we achieve a better trade-off between generation quality and efficiency. According to our experiments, FusionRAG significantly improves generation quality at the same recomputation ratio compared to previous state-of-the-art solutions. By recomputing fewer than 15% of the tokens, FusionRAG achieves up to 70% higher normalized-F1 scores than baselines and reduces TTFT by 2.66-9.39× compared to Full Attention.",
+      "canonical_id": "arXiv:2601.12904",
+      "arxiv_id": "2601.12904",
+      "authors": [
+        "Jiahao Wang",
+        "Weiyu Xie",
+        "Mingxing Zhang",
+        "Bo Zhang",
+        "Jianwei Dong",
+        "Yuening Zhu",
+        "Chen Lin",
+        "Jing Tang",
+        "Yao-Chen Han",
+        "Zhiyuan Ai",
+        "Xianglin Chen",
+        "Yong-Wei Wu",
+        "Cong Jiang"
+      ]
+    },
+    {
+      "title": "TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL",
+      "source_url": "https://www.semanticscholar.org/paper/0cbc0c4f18f65f4346f642500ca82d63ad32d36a",
+      "year": 2026,
+      "published": "2026-01-13",
+      "abstract": "In Text-to-SQL tasks, existing LLM-based methods often include extensive database schemas in prompts, leading to long context lengths and increased prefilling latency. While user queries typically focus on recurrent table sets-offering an opportunity for KV cache sharing across queries-current inference engines, such as SGLang and vLLM, generate redundant prefix cache copies when processing user queries with varying table orders. To address this inefficiency, we propose precomputing table representations as KV caches offline and querying the required ones online. A key aspect of our approach is the computation of table caches while preserving primary foreign key relationships between tables. Additionally, we construct a Table Trie structure to facilitate efficient KV cache lookups during inference. To enhance cache performance, we introduce a cache management system with a query reranking strategy to improve cache hit rates and a computation loading pipeline for parallelizing model inference and cache loading. Experimental results show that our proposed TableCache achieves up to a 3.62x speedup in Time to First Token (TTFT) with negligible performance degradation.",
+      "canonical_id": "arXiv:2601.08743",
+      "arxiv_id": "2601.08743",
+      "authors": [
+        "Jinbo Su",
+        "Yuxuan Hu",
+        "Cuiping Li",
+        "Hong Chen",
+        "Jia Li",
+        "Lintao Ma",
+        "Jing Zhang"
+      ]
+    },
+    {
+      "title": "When KV Cache Reuse Fails in Multi-Agent Systems: Cross-Candidate Interaction is Crucial for LLM Judges",
+      "source_url": "https://www.semanticscholar.org/paper/ee8870b3bd3a0fa22f5cbfece4e1a481cadf05a4",
+      "year": 2026,
+      "published": "2026-01-13",
+      "abstract": "Multi-agent LLM systems routinely generate multiple candidate responses that are aggregated by an LLM judge. To reduce the dominant prefill cost in such pipelines, recent work advocates KV cache reuse across partially shared contexts and reports substantial speedups for generation agents. In this work, we show that these efficiency gains do not transfer uniformly to judge-centric inference. Across GSM8K, MMLU, and HumanEval, we find that reuse strategies that are effective for execution agents can severely perturb judge behavior: end-task accuracy may appear stable, yet the judge's selection becomes highly inconsistent with dense prefill. We quantify this risk using Judge Consistency Rate (JCR) and provide diagnostics showing that reuse systematically weakens cross-candidate attention, especially for later candidate blocks. Our ablation further demonstrates that explicit cross-candidate interaction is crucial for preserving dense-prefill decisions. Overall, our results identify a previously overlooked failure mode of KV cache reuse and highlight judge-centric inference as a distinct regime that demands dedicated, risk-aware system design.",
+      "canonical_id": "arXiv:2601.08343",
+      "arxiv_id": "2601.08343",
+      "authors": [
+        "Sichu Liang",
+        "Zheng-Lin Wang",
+        "Jiajia Chu",
+        "Peng-Fei Xia",
+        "Hui Zang",
+        "De-Yu Zhou"
+      ]
+    },
+    {
+      "title": "Parallel Context-of-Experts Decoding for Retrieval Augmented Generation",
+      "source_url": "https://www.semanticscholar.org/paper/11e0567870496fd2a634e8b1b864e9f3c0cfcad4",
+      "year": 2026,
+      "published": "2026-01-13",
+      "abstract": "Retrieval Augmented Generation faces a trade-off: concatenating documents in a long prompt enables multi-document reasoning but creates prefill bottlenecks, while encoding document KV caches separately offers speed but breaks cross-document interaction. We propose Parallel Context-of-Experts Decoding (Pced), a training-free framework that shifts evidence aggregation from the attention mechanism to the decoding. Pced treats retrieved documents as isolated\"experts\", synchronizing their predictions via a novel retrieval-aware contrastive decoding rule that weighs expert logits against the model prior. This approach recovers cross-document reasoning capabilities without constructing a shared attention across documents.",
+      "canonical_id": "arXiv:2601.08670",
+      "arxiv_id": "2601.08670",
+      "authors": [
+        "Giulio Corallo",
+        "Paolo Papotti"
+      ]
+    },
+    {
+      "title": "Joint Encoding of KV-Cache Blocks for Scalable LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/2f983c75a0ce25cea06a0ba52d226c1cbe7556cb",
+      "year": 2026,
+      "published": "2026-01-06",
+      "abstract": "Modern large language models (LLMs) drive interactive AI systems but are bottlenecked by the memory-heavy growth of key-value (KV) caches, which limits real-time throughput under concurrent loads. Existing KV-cache compression methods rely on rigid heuristics, disrupt tensor layouts, or require specialized compute, hindering scalability and deployment. We propose joint encoding of KV-cache blocks, which fuses similar blocks across requests and input chunks into shared representations while preserving standard cache structure. This alleviates the KV-cache memory bottleneck, supporting high-concurrency serving without specialized hardware. Theoretically, we analyze the rate-distortion tradeoff of fused cache blocks under a Poisson process model. Empirically, our method achieves up to 4.38 $\\times$ KV-cache compression with negligible accuracy loss across diverse LLMs and benchmarks, outperforming recent structured and adaptive compression baselines. In real LLM serving, joint encoding improves the token throughput by $\\sim$40\\% on a single-machine vLLM benchmark, demonstrating substantial gains in inference throughput. Code is available at https://github.com/sef1/kv_fast_fusion kv_joint_encoding.",
+      "canonical_id": "arXiv:2601.03067",
+      "arxiv_id": "2601.03067",
+      "authors": [
+        "Dor-Joseph Kampeas",
+        "E. Haleva"
+      ]
+    },
+    {
+      "title": "Memory-Efficient GenAI Inference on Edge Devices Using Structured Weight sharing",
+      "source_url": "https://www.semanticscholar.org/paper/7b1e1b880f31e18eccafc0b4e6aefbfcc730765f",
+      "year": 2025,
+      "published": "2025-11-12",
+      "abstract": "Generative AI models, such as large language models (LLMs), require significant memory and compute resources, making them difficult to deploy on edge and mobile devices. A major contributor to this challenge is the large size of model weights, which dominate the memory footprint during inference. To address this, we propose a novel weight sharing approach to reduce the memory footprint and DRAM load during LLM inference. The method enables reuse of common weight blocks across model stages, enabling a compact representation that works with both compressed and un compressed weight formats. To address practical deployment challenges, we introduce an algorithm that reconciles differing tiling schemes and access patterns across prefill and decode phases ensuring correct alignment. Our approach includes reuse of weights not only between prefill and decode stages but across multiple use cases. Experiments show that our approach of weight sharing can reduce memory requirement up to 50% based on the use case, while fully preserving model accuracy and maintaining inference performance. These results suggest the proposed weight sharing enables efficient, real time deployment of high capacity LLMs on edge devices without compromising model effectiveness.",
+      "canonical_id": "DOI:10.1109/Wintechcon66724.2025.11429886",
+      "doi": "10.1109/Wintechcon66724.2025.11429886",
+      "authors": [
+        "Madhavi Pokuri",
+        "H. Prabhakar"
+      ]
+    },
+    {
+      "title": "ContextPilot: Fast Long-Context Inference via Context Reuse",
+      "source_url": "https://www.semanticscholar.org/paper/55e8ff688d13948dfbb496af1b565057f5ba5114",
+      "year": 2025,
+      "published": "2025-11-05",
+      "abstract": "AI applications increasingly depend on long-context inference, where LLMs consume substantial context to support stronger reasoning. Common examples include retrieval-augmented generation, agent memory layers, and multi-agent orchestration. As input contexts get longer, prefill latency becomes the main bottleneck. Yet today's prefill acceleration techniques face a trade-off: they either preserve reasoning quality but deliver little KV-cache reuse, or improve reuse at the cost of degraded reasoning quality. We present ContextPilot, a system that accelerates prefill by introducing context reuse as a new mechanism for faster long-context inference. ContextPilot introduces a context index to identify overlapping context blocks across LLM interactions (e.g., across users and turns). It further proposes context ordering and de-duplication techniques to maximize KV-cache reuse. To preserve reasoning quality under reuse, it introduces succinct context annotations that prevent quality degradation. Finally, ContextPilot is built around a modular architecture with a clean interface that integrates with existing inference engines. Extensive evaluation shows that ContextPilot reduces LLM prefill latency by up to $3\\times{}$ compared to state-of-the-art methods while preserving reasoning quality. At longer context lengths, it can even improve reasoning quality. ContextPilot is open-sourced at: https://github.com/EfficientContext/ContextPilot.",
+      "canonical_id": "arXiv:2511.03475",
+      "arxiv_id": "2511.03475",
+      "authors": [
+        "Yinsicheng Jiang",
+        "Yeqi Huang",
+        "Liang Cheng",
+        "Cheng Deng",
+        "Xuan Sun",
+        "Luo Mai"
+      ]
+    },
+    {
+      "title": "HA-RAG: Hotness-Aware RAG Acceleration via Mixed Precision and Data Placement",
+      "source_url": "https://www.semanticscholar.org/paper/29102ac93126e534b27d6d49246f531445dbb6f2",
+      "year": 2025,
+      "published": "2025-10-23",
+      "abstract": "Retrieval-Augmented Generation (RAG) improves model output accuracy by leveraging external knowledge bases, serving as an effective solution to address hallucination issues and knowledge-update delays in Large Language Models (LLMs). However, the introduction of external knowledge bases presents RAG with challenges in long-context processing, significantly increasing memory consumption and inference latency. Existing research accelerates inference by precomputing Key and Value (KV) of the knowledge base and loading them on-demand during inference. Based on the access frequency of different KV chunks within the external knowledge base, this paper proposes a hotness-aware RAG (HA-RAG) inference optimization system. First, leveraging the numerical distribution of KV chunks, we introduce a hotness-aware mixed-precision compressing and loading method to reduce disk I/O and memory access overhead. Second, we design a hotness-aware data placement strategy that prioritizes storing frequently accessed KV chunks in high-speed memory to improve data access efficiency. Experimental results demonstrate that, compared with TurboRAG, the proposed HA-RAG achieves an average speedup of 2.10x and maximum speedup of 10.49x in Time-To-First-Token (TTFT) with negligible accuracy loss.",
+      "canonical_id": "arXiv:2510.20878",
+      "arxiv_id": "2510.20878",
+      "authors": [
+        "Dan-Ying Ge",
+        "Jian-Hua Gao",
+        "Yi-Xue Yang",
+        "Wei-Xing Ji"
+      ]
+    },
+    {
+      "title": "KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems",
+      "source_url": "https://www.semanticscholar.org/paper/471de4fab0885f45dffb717512741128775bcbaa",
+      "year": 2025,
+      "published": "2025-10-14",
+      "abstract": "Multi-agent large language model (LLM) systems are increasingly adopted for complex language processing tasks that require communication and coordination among agents. However, these systems often suffer substantial overhead from repeated reprocessing of overlapping contexts across agents. In typical pipelines, once an agent receives a message from its predecessor, the full context-including prior turns-must be reprocessed from scratch, leading to inefficient processing. While key-value (KV) caching is an effective solution for avoiding redundant computation in single-agent settings where prefixes remain unchanged, it cannot be directly reused in multi-agent scenarios due to diverging prefixes introduced by agent-specific context extensions. We identify that the core challenge lies in the offset variance of KV-caches across agents. To address this, we propose KVCOMM, a training-free framework that enables efficient prefilling in multi-agent inference by reusing KV-caches and aligning cache offsets of overlapping contexts under diverse prefix contexts. KVCOMM estimates and adjusts KV-caches for shared content by referencing a pool of cached examples-termed anchors-that store observed cache deviations under varying prefixes. The anchor pool is maintained and updated online, allowing dynamic adaptation to distinct user requests and context structures. KVCOMM achieves over 70% reuse rate across diverse multi-agent workloads, including retrieval-augmented generation, math reasoning, and collaborative coding tasks, all without quality degradation. Particularly, when each fully-connected agent receives 1K input tokens with 512 prefix tokens and 512 output tokens under a five-agent setting, KVCOMM achieves up to 7.8x speedup compared to the standard prefill pipeline, reducing TTFT from ~430 ms to ~55 ms.",
+      "canonical_id": "arXiv:2510.12872",
+      "arxiv_id": "2510.12872",
+      "authors": [
+        "Hancheng Ye",
+        "Zhengqing Gao",
+        "Mingyuan Ma",
+        "Qinsi Wang",
+        "Yuzhe Fu",
+        "M. Chung",
+        "Yueqian Lin",
+        "Zhijian Liu",
+        "Jianyi Zhang",
+        "Danyang Zhuo",
+        "Yiran Chen"
+      ]
+    },
+    {
+      "title": "CacheClip: Accelerating RAG with Effective KV Cache Reuse",
+      "source_url": "https://www.semanticscholar.org/paper/ce9587ac624800977c412c8e19d995141fded68d",
+      "year": 2025,
+      "published": "2025-10-11",
+      "abstract": "Retrieval-Augmented Generation (RAG) systems suffer from severe time-to-first-token (TTFT) bottlenecks due to long input sequences. Existing KV cache reuse methods face a fundamental trade-off: prefix caching requires identical prefixes that rarely occur in RAG scenarios, while direct precomputation sacrifices quality due to missing inter-chunk attention and repeated attention sinks. Recent methods like APE and CacheBlend partially address these issues but remain inadequate for robust RAG applications. This paper presents CacheClip, a novel framework that achieves both fast TTFT and high generation quality. Our key insight is that small auxiliary LLMs exhibit similar last-layer attention distributions to primary LLMs (the target model for generation), enabling efficient identification of tokens critical for restoring inter-chunk attention, thereby significantly improving response quality on cross-chunk reasoning tasks. CacheClip integrates four techniques: (1) auxiliary-model-guided token selection for selective KV cache recomputation, (2) shared prefixes to eliminate redundant attention sinks, (3) a sliding-window grouping strategy to maintain local coherence during partial KV cache updates, and (4) a CPU-GPU hybrid design that offloads auxiliary model inference to idle CPU resources, avoiding additional GPU overhead. The recomputation ratio is adjustable, allowing users to flexibly balance efficiency and quality for different deployment requirements. Experiments show CacheClip retains up to 85.2% and 91.1% of full-attention performance on NIAH and LongBench, outperforming CacheBlend and APE by 16.1 and 12.8 points on NIAH, and by 4.5 and 4.2 points on LongBench (with recomp% = 20%). Meanwhile, CacheClip accelerates LLM inference by up to 3.33$\\times$ in prefill time (with recomp% = 20%), providing a practical solution to the efficiency-quality trade-off in RAG systems.",
+      "canonical_id": "arXiv:2510.10129",
+      "arxiv_id": "2510.10129",
+      "authors": [
+        "Bin Yang",
+        "Qiuyu Leng",
+        "Jun Zeng",
+        "Zhen-Hua Wu"
+      ]
+    },
+    {
+      "title": "Struc-EMB: The Potential of Structure-Aware Encoding in Language Embeddings",
+      "source_url": "https://www.semanticscholar.org/paper/a0ff3ff5c1be8413b9b8fef04cf258dbc17c04c1",
+      "year": 2025,
+      "published": "2025-10-09",
+      "abstract": "Text embeddings from Large Language Models (LLMs) have become foundational for numerous applications. However, these models typically operate on raw text, overlooking the rich structural information, such as hyperlinks or citations, that provides crucial context in many real-world datasets. This paper introduces and systematically evaluates a new paradigm for generating structure-aware text embeddings by integrating these structural relations directly into the LLM's internal encoding process, rather than relying on traditional post-hoc aggregation. We investigate two primary in-process methods: sequential concatenation and parallel caching. Through extensive zero-shot experiments across retrieval, clustering, classification, and recommendation tasks, we demonstrate that our structure-aware approaches consistently outperform both text-only and post-hoc baselines. Our analysis reveals critical trade-offs: sequential concatenation excels with noisy, moderate-length contexts, while parallel caching scales more effectively to long, high-signal contexts but is more susceptible to distractors. To address the challenge of noisy structural data, we also introduce and validate two effective techniques: Context Distillation and Semantic Balancing. This work provides the first comprehensive analysis of in-process structure-aware encoding, offering a blueprint for building more powerful and contextually aware embedding models.",
+      "canonical_id": "arXiv:2510.08774",
+      "arxiv_id": "2510.08774",
+      "authors": [
+        "Shikun Liu",
+        "H. Wang",
+        "Mufei Li",
+        "Pan Li"
+      ]
+    },
+    {
+      "title": "Cache-to-Cache: Direct Semantic Communication Between Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/0c133c33dd8c568be13c7980f0fdefe024d5e160",
+      "year": 2025,
+      "published": "2025-10-03",
+      "abstract": "Multi-LLM systems harness the complementary strengths of diverse Large Language Models, achieving performance and efficiency gains that are not attainable by a single model. In existing designs, LLMs communicate through text, forcing internal representations to be transformed into output token sequences. This process both loses rich semantic information and incurs token-by-token generation latency. Motivated by these limitations, we ask: Can LLMs communicate beyond text? Oracle experiments show that enriching the KV-Cache semantics can improve response quality without increasing cache size, supporting KV-Cache as an effective medium for inter-model communication. Thus, we propose Cache-to-Cache (C2C), a new paradigm for direct semantic communication between LLMs. C2C uses a neural network to project and fuse the source model's KV-cache with that of the target model to enable direct semantic transfer. A learnable gating mechanism selects the target layers that benefit from cache communication. Compared with text communication, C2C utilizes the deep, specialized semantics from both models, while avoiding explicit intermediate text generation. Experiments show that C2C achieves 6.4-14.2% higher average accuracy than individual models. It further outperforms the text communication paradigm by approximately 3.1-5.4%, while delivering an average 2.5x speedup in latency. Our code is available at https://github.com/thu-nics/C2C.",
+      "canonical_id": "arXiv:2510.03215",
+      "arxiv_id": "2510.03215",
+      "authors": [
+        "Tianyu Fu",
+        "Zihan Min",
+        "Hanling Zhang",
+        "Jichao Yan",
+        "Guohao Dai",
+        "Wanli Ouyang",
+        "Yu Wang"
+      ]
+    },
+    {
+      "title": "Nova: Real-Time Agentic Vision-Language Model Serving With Adaptive Cross-Stage Parallelization",
+      "source_url": "https://www.semanticscholar.org/paper/b05b7d27be48acd1f8f474a0a41e97613936bc87",
+      "year": 2025,
+      "published": "2025-09-25",
+      "abstract": "This paper presents Nova, a real-time scheduling framework for serving agentic vision-language models (VLMs) on a single GPU with balanced per-request latency and overall request process throughput. Our design begins by enabling effective pipelining across vision encode, LLM prefill, and LLM decode stages of VLMs, by exploiting their heterogeneous resource demands during execution and incorporating elastic GPU spatial partitioning among stages to maximally utilize the compute and memory resources. Building on this, we introduce a realtime scheduling algorithm that adaptively calibrates resource allocation among stages based on a Pareto-optimal analysis of the latency-throughput trade-off, allowing the system to sustain responsiveness and resource efficiency under dynamic request loads. To further alleviate GPU memory pressure, we design a lightweight weight offloading strategy for vision encoders that preserves inference efficiency with minimized memory overhead. Extensive evaluations on both synthetic and real-world agent workloads demonstrate that Nova consistently outperforms the state-of-the-art baselines, improving the maximum latency by up to 23.3 %, while keeping competitive throughput.",
+      "canonical_id": "arXiv:2509.21301",
+      "arxiv_id": "2509.21301",
+      "authors": [
+        "Yuhang Xu",
+        "Shengzhong Liu",
+        "Dong Zhang",
+        "Bingheng Yan",
+        "Fan Wu",
+        "Gui-Hai Chen"
+      ]
+    },
+    {
+      "title": "CIFLEX: Contextual Instruction Flow for Sub-task Execution in Multi-Turn Interactions with a Single On-Device LLM",
+      "source_url": "https://www.semanticscholar.org/paper/7b4de2b75e30499bbb772eea64bfea75ec0a72b9",
+      "year": 2025,
+      "published": "2025-09-24",
+      "abstract": "We present CIFLEX (Contextual Instruction Flow for Sub-task Execution), which is a novel execution system for efficient sub-task handling in multi-turn interactions with a single on-device large language model (LLM). As LLMs become increasingly capable, a single model is expected to handle diverse sub-tasks that more effectively and comprehensively support answering user requests. Naive approach reprocesses the entire conversation context when switching between main and sub-tasks (e.g., query rewriting, summarization), incurring significant computational overhead. CIFLEX mitigates this overhead by reusing the key-value (KV) cache from the main task and injecting only task-specific instructions into isolated side paths. After sub-task execution, the model rolls back to the main path via cached context, thereby avoiding redundant prefill computation. To support sub-task selection, we also develop a hierarchical classification strategy tailored for small-scale models, decomposing multi-choice decisions into binary ones. Experiments show that CIFLEX significantly reduces computational costs without degrading task performance, enabling scalable and efficient multi-task dialogue on-device.",
+      "canonical_id": "arXiv:2510.01239",
+      "arxiv_id": "2510.01239",
+      "authors": [
+        "Juntae Lee",
+        "Jihwan Bang",
+        "Seunghan Yang",
+        "Simyung Chang"
+      ]
+    },
+    {
+      "title": "Building a Large Language Model for the Human Resource Services in Malaysia",
+      "source_url": "https://www.semanticscholar.org/paper/642ea0c1454f332e208d4d2a51798b0c7b3b22eb",
+      "year": 2025,
+      "published": "2025-09-15",
+      "abstract": "This study presents the development of a domain-specific base large language model (LLM) tailored for its application in human resources (HR) management, particularly employee engagement. The model addresses inefficiencies in traditional HR systems, such as inconsistent query resolution on compliance management and policy dissemination. By leveraging LLM’s advanced techniques like Rotary Positional Embeddings (RoPE), grouped key-value attention, and Transformer Block enhancements, this research designs and develops an HR-specific base LLM as the first line of HR service for employees in small- and medium-sized enterprises. Data preparation involves cleaning, tokenizing, and training HR-specific datasets, enabling the model to handle nuanced queries with contextual relevance. Through iterative training and evaluation, the Enhanced GPT-2 model has demonstrated significant improvements in learning capability, based on attention weights in the embedding layers, over GPT-2 Small in terms of relevance, consistency, and scalability. Future work focuses on expanding datasets, improving fine-tuning techniques, and integrating retrieval-augmented generation for real-time adaptability.",
+      "canonical_id": "DOI:10.37965/jait.2025.0752",
+      "doi": "10.37965/jait.2025.0752",
+      "authors": [
+        "Guan-Hong Lai",
+        "Darren Xin Lun Chai",
+        "TongMing Lim"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.11688",
+      "identity_tokens": [
+        "id:arXiv:2602.11688",
+        "title:gorgo online tuning for crossregion networkaware llm serving",
+        "url:https://www.semanticscholar.org/paper/0545988e2d959946f5462d928052f3d54c7f5487"
+      ],
+      "record": {
+        "title": "GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/0545988e2d959946f5462d928052f3d54c7f5487",
+        "year": 2026,
+        "published": "2026-02-12",
+        "abstract": "Increasingly, LLM inference services proxy client requests to engine replicas distributed globally. Load-balancing policies must jointly account for factors including KV-cache locality, replica load, and variable network latency when optimizing for metrics like latency and TTFT. However, existing systems only evaluate a subset of these factors in their cost model, leading to uneven concentrations of load and KV-cache across replicas. We present GORGO, a proxy architecture that holistically factors network latency, prefill cost, and queueing delay using tunable parameters. Since open-source chat datasets such as LMSYS-Chat1M and WildChat-4.8M lack long-context, high prefix-reuse data, we release a synthetic dataset, ART-Chat-2.5M, from long-context production metadata. On a tuning window from ART-Chat-2.5M, evolutionary strategies guide the GORGO policy's parameters to directly optimize p95 TTFT. During held-out evaluation windows, we fix the parameter values learned from tuning and improve p95 TTFT by 6.9-15.5% and p95 end-to-end (E2E) latency by 14.3-30.9% over baseline load-balancing policies such as simple session affinity and prefix-cache. The code and ART-Chat-2.5M dataset can be found at https://github.com/Arcadia-Research-Team/GORGO.",
+        "canonical_id": "arXiv:2602.11688",
+        "arxiv_id": "2602.11688",
+        "authors": [
+          "Alessio Ricci Toniolo",
+          "Rome Thorstenson",
+          "A. Dinesh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.10986",
+      "identity_tokens": [
+        "id:arXiv:2602.10986",
+        "title:tvcache a stateful toolvalue cache for posttraining llm agents",
+        "url:https://www.semanticscholar.org/paper/93ff8e494291921be3ad22116a3923754a439b2c"
+      ],
+      "record": {
+        "title": "TVCACHE: A Stateful Tool-Value Cache for Post-Training LLM Agents",
+        "source_url": "https://www.semanticscholar.org/paper/93ff8e494291921be3ad22116a3923754a439b2c",
+        "year": 2026,
+        "published": "2026-02-11",
+        "abstract": "In RL post-training of LLM agents, calls to external tools take several seconds or even minutes, leaving allocated GPUs idle and inflating post-training time and cost. While many tool invocations repeat across parallel rollouts and could in principle be cached, naively caching their outputs for reuse is incorrect since tool outputs depend on the environment state induced by prior agent interactions. We present TVCACHE, a stateful tool-value cache for LLM agent post-training. TVCACHE maintains a tree of observed tool-call sequences and performs longest-prefix matching for cache lookups: a hit occurs only when the agent's full tool history matches a previously executed sequence, guaranteeing identical environment state. On three diverse workloads-terminal-based tasks, SQL generation, and video understanding. TVCACHE achieves cache hit rates of up to 70% and reduces median tool call execution time by up to 6.9X, with no degradation in post-training reward accumulation.",
+        "canonical_id": "arXiv:2602.10986",
+        "arxiv_id": "2602.10986",
+        "authors": [
+          "Abhishek Vijaya Kumar",
+          "Bhaskar Kataria",
+          "Byungsoo Oh",
+          "Emaad A. Manzoor",
+          "Rachee Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.10377",
+      "identity_tokens": [
+        "id:arXiv:2602.10377",
+        "title:hardware codesign scaling laws via roofline modelling for ondevice llms",
+        "url:https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68"
+      ],
+      "record": {
+        "title": "Hardware Co-Design Scaling Laws via Roofline Modelling for On-Device LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68",
+        "year": 2026,
+        "published": "2026-02-10",
+        "abstract": "Vision-Language-Action Models (VLAs) have emerged as a key paradigm of Physical AI and are increasingly deployed in autonomous vehicles, robots, and smart spaces. In these resource-constrained on-device settings, selecting an appropriate large language model (LLM) backbone is a critical challenge: models must balance accuracy with strict inference latency and hardware efficiency constraints. This makes hardware-software co-design a game-changing requirement for on-device LLM deployment, where each hardware platform demands a tailored architectural solution. We propose a hardware co-design law that jointly captures model accuracy and inference performance. Specifically, we model training loss as an explicit function of architectural hyperparameters and characterise inference latency via roofline modelling. We empirically evaluate 1,942 candidate architectures on NVIDIA Jetson Orin, training 170 selected models for 10B tokens each to fit a scaling law relating architecture to training loss. By coupling this scaling law with latency modelling, we establish a direct accuracy-latency correspondence and identify the Pareto frontier for hardware co-designed LLMs. We further formulate architecture search as a joint optimisation over precision and performance, deriving feasible design regions under industrial hardware and application budgets. Our approach reduces architecture selection from months to days. At the same latency as Qwen2.5-0.5B on the target hardware, our co-designed architecture achieves 19.42% lower perplexity on WikiText-2. To our knowledge, this is the first principled and operational framework for hardware co-design scaling laws in on-device LLM deployment. We will make the code and related checkpoints publicly available.",
+        "canonical_id": "arXiv:2602.10377",
+        "arxiv_id": "2602.10377",
+        "authors": [
+          "Luo-Yang Sun",
+          "Jiwen Jiang",
+          "Yifeng Ding",
+          "Feng-Fa Li",
+          "Yanke Song",
+          "Hai-Feng Zhang",
+          "Jian Ying",
+          "Lei Ren",
+          "Kun Zhan",
+          "Wei Chen",
+          "Yan Xie",
+          "Cheng Deng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.06502",
+      "identity_tokens": [
+        "id:arXiv:2602.06502",
+        "title:dualmap enabling both cache affinity and load balancing for distributed llm serving",
+        "url:https://www.semanticscholar.org/paper/5f3c013b311276df4d5715c60a799b3cf0dd04ca"
+      ],
+      "record": {
+        "title": "DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/5f3c013b311276df4d5715c60a799b3cf0dd04ca",
+        "year": 2026,
+        "published": "2026-02-06",
+        "abstract": "In LLM serving, reusing the KV cache of prompts across requests is critical for reducing TTFT and serving costs. Cache-affinity scheduling, which co-locates requests with the same prompt prefix to maximize KV cache reuse, often conflicts with load-balancing scheduling that distributes requests evenly across compute instances. Existing schedulers fail to reconcile this trade-off as they operate within a single mapping space, typically applying cache-affinity routing to a subset of requests and load-balanced routing to the rest, without a unified solution to achieve both goals. To address this limitation, we propose DualMap, a dual-mapping scheduling strategy for distributed LLM serving that achieves both cache affinity and load balancing. Its key idea is to map each request to two candidate instances via two independent hash functions based on the request prompt, then intelligently select the better candidate based on current system states. This design increases the likelihood that requests with shared prefixes are co-located, while evenly dispersing distinct prefixes across the cluster via ``the power of two choices''. To make DualMap robust under dynamic and skewed real-world workloads, we incorporate three techniques: 1) SLO-aware request routing, which prioritizes cache affinity but switches to load-aware scheduling when TTFT exceeds the SLO, enhancing load balance without sacrificing cache reuse; 2) hotspot-aware rebalancing, which dynamically migrates requests from overloaded to underloaded instances, mitigating hotspots and rebalancing the system; 3) lightweight dual-hash-ring scaling, which leverages a dual-hash-ring mapping to support fast and low-overhead instance scaling without costly global remapping. Experiments on real-world workloads show that DualMap improves effective request capacity by up to 2.25$\\times$ under the same TTFT SLO constraints compared with SOTA work.",
+        "canonical_id": "arXiv:2602.06502",
+        "arxiv_id": "2602.06502",
+        "authors": [
+          "Ying Yuan",
+          "Pengfei Zuo",
+          "Bo Wang",
+          "Zhangyu Chen",
+          "Zhipeng Tan",
+          "Zhou Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.01519",
+      "identity_tokens": [
+        "id:arXiv:2602.01519",
+        "title:you need an encoder for native positionindependent caching",
+        "url:https://www.semanticscholar.org/paper/528c65e509423bb2977ee8053649cc882bcd4ef6"
+      ],
+      "record": {
+        "title": "You Need an Encoder for Native Position-Independent Caching",
+        "source_url": "https://www.semanticscholar.org/paper/528c65e509423bb2977ee8053649cc882bcd4ef6",
+        "year": 2026,
+        "published": "2026-02-02",
+        "abstract": "The Key-Value (KV) cache of Large Language Models (LLMs) is prefix-based, making it highly inefficient for processing contexts retrieved in arbitrary order. Position-Independent Caching (PIC) has been proposed to enable KV reuse without positional constraints; however, existing approaches often incur substantial accuracy degradation, limiting their practical adoption. To address this issue, we propose native PIC by reintroducing the encoder to prevalent decoder-only LLMs and explicitly training it to support PIC. We further develop COMB, a PIC-aware caching system that integrates seamlessly with existing inference frameworks. Experimental results show that COMB reduces Time-to-First-Token (TTFT) by 51-94% and increases throughput by 3$\\times$ with comparable accuracy. Furthermore, the quality improvement when using DeepSeek-V2-Lite-Chat demonstrates the applicability of COMB to other types of decoder-only LLMs. Our code is available at https://github.com/shijuzhao/Comb.",
+        "canonical_id": "arXiv:2602.01519",
+        "arxiv_id": "2602.01519",
+        "authors": [
+          "Shiju Zhao",
+          "Jun-Hao Hu",
+          "Jiaqi Zheng",
+          "Guihai Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.12904",
+      "identity_tokens": [
+        "id:arXiv:2601.12904",
+        "title:from prefix cache to fusion rag cache accelerating llm inference in retrievalaugmented generation",
+        "url:https://www.semanticscholar.org/paper/8597d67b45b002e34b43678758cc503ce3cfda66"
+      ],
+      "record": {
+        "title": "From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation",
+        "source_url": "https://www.semanticscholar.org/paper/8597d67b45b002e34b43678758cc503ce3cfda66",
+        "year": 2026,
+        "published": "2026-01-19",
+        "abstract": "Retrieval-Augmented Generation enhances Large Language Models by integrating external knowledge, which reduces hallucinations but increases prompt length. This increase leads to higher computational costs and longer Time to First Token. To mitigate this issue, existing solutions aim to reuse the preprocessed KVCache of each retrieved chunk to accelerate RAG. However, the lack of cross-chunk contextual information leads to a significant drop in generation quality, leaving the potential benefits of KVCache reuse largely unfulfilled. The challenge lies in how to reuse the precomputed KVCache chunk while preserving generation quality. We propose FusionRAG, a novel inference framework that optimizes both the preprocessing and reprocessing stages of RAG. In the offline preprocessing stage, we embed information from other related text chunks into each chunk, while in the online reprocessing stage, we recompute the KVCache for tokens that the model focuses on. As a result, we achieve a better trade-off between generation quality and efficiency. According to our experiments, FusionRAG significantly improves generation quality at the same recomputation ratio compared to previous state-of-the-art solutions. By recomputing fewer than 15% of the tokens, FusionRAG achieves up to 70% higher normalized-F1 scores than baselines and reduces TTFT by 2.66-9.39× compared to Full Attention.",
+        "canonical_id": "arXiv:2601.12904",
+        "arxiv_id": "2601.12904",
+        "authors": [
+          "Jiahao Wang",
+          "Weiyu Xie",
+          "Mingxing Zhang",
+          "Bo Zhang",
+          "Jianwei Dong",
+          "Yuening Zhu",
+          "Chen Lin",
+          "Jing Tang",
+          "Yao-Chen Han",
+          "Zhiyuan Ai",
+          "Xianglin Chen",
+          "Yong-Wei Wu",
+          "Cong Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.08743",
+      "identity_tokens": [
+        "id:arXiv:2601.08743",
+        "title:tablecache primary foreign key guided kv cache precomputation for low latency texttosql",
+        "url:https://www.semanticscholar.org/paper/0cbc0c4f18f65f4346f642500ca82d63ad32d36a"
+      ],
+      "record": {
+        "title": "TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL",
+        "source_url": "https://www.semanticscholar.org/paper/0cbc0c4f18f65f4346f642500ca82d63ad32d36a",
+        "year": 2026,
+        "published": "2026-01-13",
+        "abstract": "In Text-to-SQL tasks, existing LLM-based methods often include extensive database schemas in prompts, leading to long context lengths and increased prefilling latency. While user queries typically focus on recurrent table sets-offering an opportunity for KV cache sharing across queries-current inference engines, such as SGLang and vLLM, generate redundant prefix cache copies when processing user queries with varying table orders. To address this inefficiency, we propose precomputing table representations as KV caches offline and querying the required ones online. A key aspect of our approach is the computation of table caches while preserving primary foreign key relationships between tables. Additionally, we construct a Table Trie structure to facilitate efficient KV cache lookups during inference. To enhance cache performance, we introduce a cache management system with a query reranking strategy to improve cache hit rates and a computation loading pipeline for parallelizing model inference and cache loading. Experimental results show that our proposed TableCache achieves up to a 3.62x speedup in Time to First Token (TTFT) with negligible performance degradation.",
+        "canonical_id": "arXiv:2601.08743",
+        "arxiv_id": "2601.08743",
+        "authors": [
+          "Jinbo Su",
+          "Yuxuan Hu",
+          "Cuiping Li",
+          "Hong Chen",
+          "Jia Li",
+          "Lintao Ma",
+          "Jing Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.08343",
+      "identity_tokens": [
+        "id:arXiv:2601.08343",
+        "title:when kv cache reuse fails in multiagent systems crosscandidate interaction is crucial for llm judges",
+        "url:https://www.semanticscholar.org/paper/ee8870b3bd3a0fa22f5cbfece4e1a481cadf05a4"
+      ],
+      "record": {
+        "title": "When KV Cache Reuse Fails in Multi-Agent Systems: Cross-Candidate Interaction is Crucial for LLM Judges",
+        "source_url": "https://www.semanticscholar.org/paper/ee8870b3bd3a0fa22f5cbfece4e1a481cadf05a4",
+        "year": 2026,
+        "published": "2026-01-13",
+        "abstract": "Multi-agent LLM systems routinely generate multiple candidate responses that are aggregated by an LLM judge. To reduce the dominant prefill cost in such pipelines, recent work advocates KV cache reuse across partially shared contexts and reports substantial speedups for generation agents. In this work, we show that these efficiency gains do not transfer uniformly to judge-centric inference. Across GSM8K, MMLU, and HumanEval, we find that reuse strategies that are effective for execution agents can severely perturb judge behavior: end-task accuracy may appear stable, yet the judge's selection becomes highly inconsistent with dense prefill. We quantify this risk using Judge Consistency Rate (JCR) and provide diagnostics showing that reuse systematically weakens cross-candidate attention, especially for later candidate blocks. Our ablation further demonstrates that explicit cross-candidate interaction is crucial for preserving dense-prefill decisions. Overall, our results identify a previously overlooked failure mode of KV cache reuse and highlight judge-centric inference as a distinct regime that demands dedicated, risk-aware system design.",
+        "canonical_id": "arXiv:2601.08343",
+        "arxiv_id": "2601.08343",
+        "authors": [
+          "Sichu Liang",
+          "Zheng-Lin Wang",
+          "Jiajia Chu",
+          "Peng-Fei Xia",
+          "Hui Zang",
+          "De-Yu Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.08670",
+      "identity_tokens": [
+        "id:arXiv:2601.08670",
+        "title:parallel contextofexperts decoding for retrieval augmented generation",
+        "url:https://www.semanticscholar.org/paper/11e0567870496fd2a634e8b1b864e9f3c0cfcad4"
+      ],
+      "record": {
+        "title": "Parallel Context-of-Experts Decoding for Retrieval Augmented Generation",
+        "source_url": "https://www.semanticscholar.org/paper/11e0567870496fd2a634e8b1b864e9f3c0cfcad4",
+        "year": 2026,
+        "published": "2026-01-13",
+        "abstract": "Retrieval Augmented Generation faces a trade-off: concatenating documents in a long prompt enables multi-document reasoning but creates prefill bottlenecks, while encoding document KV caches separately offers speed but breaks cross-document interaction. We propose Parallel Context-of-Experts Decoding (Pced), a training-free framework that shifts evidence aggregation from the attention mechanism to the decoding. Pced treats retrieved documents as isolated\"experts\", synchronizing their predictions via a novel retrieval-aware contrastive decoding rule that weighs expert logits against the model prior. This approach recovers cross-document reasoning capabilities without constructing a shared attention across documents.",
+        "canonical_id": "arXiv:2601.08670",
+        "arxiv_id": "2601.08670",
+        "authors": [
+          "Giulio Corallo",
+          "Paolo Papotti"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.03067",
+      "identity_tokens": [
+        "id:arXiv:2601.03067",
+        "title:joint encoding of kvcache blocks for scalable llm serving",
+        "url:https://www.semanticscholar.org/paper/2f983c75a0ce25cea06a0ba52d226c1cbe7556cb"
+      ],
+      "record": {
+        "title": "Joint Encoding of KV-Cache Blocks for Scalable LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/2f983c75a0ce25cea06a0ba52d226c1cbe7556cb",
+        "year": 2026,
+        "published": "2026-01-06",
+        "abstract": "Modern large language models (LLMs) drive interactive AI systems but are bottlenecked by the memory-heavy growth of key-value (KV) caches, which limits real-time throughput under concurrent loads. Existing KV-cache compression methods rely on rigid heuristics, disrupt tensor layouts, or require specialized compute, hindering scalability and deployment. We propose joint encoding of KV-cache blocks, which fuses similar blocks across requests and input chunks into shared representations while preserving standard cache structure. This alleviates the KV-cache memory bottleneck, supporting high-concurrency serving without specialized hardware. Theoretically, we analyze the rate-distortion tradeoff of fused cache blocks under a Poisson process model. Empirically, our method achieves up to 4.38 $\\times$ KV-cache compression with negligible accuracy loss across diverse LLMs and benchmarks, outperforming recent structured and adaptive compression baselines. In real LLM serving, joint encoding improves the token throughput by $\\sim$40\\% on a single-machine vLLM benchmark, demonstrating substantial gains in inference throughput. Code is available at https://github.com/sef1/kv_fast_fusion kv_joint_encoding.",
+        "canonical_id": "arXiv:2601.03067",
+        "arxiv_id": "2601.03067",
+        "authors": [
+          "Dor-Joseph Kampeas",
+          "E. Haleva"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/wintechcon66724.2025.11429886",
+      "identity_tokens": [
+        "id:DOI:10.1109/wintechcon66724.2025.11429886",
+        "title:memoryefficient genai inference on edge devices using structured weight sharing",
+        "url:https://www.semanticscholar.org/paper/7b1e1b880f31e18eccafc0b4e6aefbfcc730765f"
+      ],
+      "record": {
+        "title": "Memory-Efficient GenAI Inference on Edge Devices Using Structured Weight sharing",
+        "source_url": "https://www.semanticscholar.org/paper/7b1e1b880f31e18eccafc0b4e6aefbfcc730765f",
+        "year": 2025,
+        "published": "2025-11-12",
+        "abstract": "Generative AI models, such as large language models (LLMs), require significant memory and compute resources, making them difficult to deploy on edge and mobile devices. A major contributor to this challenge is the large size of model weights, which dominate the memory footprint during inference. To address this, we propose a novel weight sharing approach to reduce the memory footprint and DRAM load during LLM inference. The method enables reuse of common weight blocks across model stages, enabling a compact representation that works with both compressed and un compressed weight formats. To address practical deployment challenges, we introduce an algorithm that reconciles differing tiling schemes and access patterns across prefill and decode phases ensuring correct alignment. Our approach includes reuse of weights not only between prefill and decode stages but across multiple use cases. Experiments show that our approach of weight sharing can reduce memory requirement up to 50% based on the use case, while fully preserving model accuracy and maintaining inference performance. These results suggest the proposed weight sharing enables efficient, real time deployment of high capacity LLMs on edge devices without compromising model effectiveness.",
+        "canonical_id": "DOI:10.1109/Wintechcon66724.2025.11429886",
+        "doi": "10.1109/Wintechcon66724.2025.11429886",
+        "authors": [
+          "Madhavi Pokuri",
+          "H. Prabhakar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.03475",
+      "identity_tokens": [
+        "id:arXiv:2511.03475",
+        "title:contextpilot fast longcontext inference via context reuse",
+        "url:https://www.semanticscholar.org/paper/55e8ff688d13948dfbb496af1b565057f5ba5114"
+      ],
+      "record": {
+        "title": "ContextPilot: Fast Long-Context Inference via Context Reuse",
+        "source_url": "https://www.semanticscholar.org/paper/55e8ff688d13948dfbb496af1b565057f5ba5114",
+        "year": 2025,
+        "published": "2025-11-05",
+        "abstract": "AI applications increasingly depend on long-context inference, where LLMs consume substantial context to support stronger reasoning. Common examples include retrieval-augmented generation, agent memory layers, and multi-agent orchestration. As input contexts get longer, prefill latency becomes the main bottleneck. Yet today's prefill acceleration techniques face a trade-off: they either preserve reasoning quality but deliver little KV-cache reuse, or improve reuse at the cost of degraded reasoning quality. We present ContextPilot, a system that accelerates prefill by introducing context reuse as a new mechanism for faster long-context inference. ContextPilot introduces a context index to identify overlapping context blocks across LLM interactions (e.g., across users and turns). It further proposes context ordering and de-duplication techniques to maximize KV-cache reuse. To preserve reasoning quality under reuse, it introduces succinct context annotations that prevent quality degradation. Finally, ContextPilot is built around a modular architecture with a clean interface that integrates with existing inference engines. Extensive evaluation shows that ContextPilot reduces LLM prefill latency by up to $3\\times{}$ compared to state-of-the-art methods while preserving reasoning quality. At longer context lengths, it can even improve reasoning quality. ContextPilot is open-sourced at: https://github.com/EfficientContext/ContextPilot.",
+        "canonical_id": "arXiv:2511.03475",
+        "arxiv_id": "2511.03475",
+        "authors": [
+          "Yinsicheng Jiang",
+          "Yeqi Huang",
+          "Liang Cheng",
+          "Cheng Deng",
+          "Xuan Sun",
+          "Luo Mai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.20878",
+      "identity_tokens": [
+        "id:arXiv:2510.20878",
+        "title:harag hotnessaware rag acceleration via mixed precision and data placement",
+        "url:https://www.semanticscholar.org/paper/29102ac93126e534b27d6d49246f531445dbb6f2"
+      ],
+      "record": {
+        "title": "HA-RAG: Hotness-Aware RAG Acceleration via Mixed Precision and Data Placement",
+        "source_url": "https://www.semanticscholar.org/paper/29102ac93126e534b27d6d49246f531445dbb6f2",
+        "year": 2025,
+        "published": "2025-10-23",
+        "abstract": "Retrieval-Augmented Generation (RAG) improves model output accuracy by leveraging external knowledge bases, serving as an effective solution to address hallucination issues and knowledge-update delays in Large Language Models (LLMs). However, the introduction of external knowledge bases presents RAG with challenges in long-context processing, significantly increasing memory consumption and inference latency. Existing research accelerates inference by precomputing Key and Value (KV) of the knowledge base and loading them on-demand during inference. Based on the access frequency of different KV chunks within the external knowledge base, this paper proposes a hotness-aware RAG (HA-RAG) inference optimization system. First, leveraging the numerical distribution of KV chunks, we introduce a hotness-aware mixed-precision compressing and loading method to reduce disk I/O and memory access overhead. Second, we design a hotness-aware data placement strategy that prioritizes storing frequently accessed KV chunks in high-speed memory to improve data access efficiency. Experimental results demonstrate that, compared with TurboRAG, the proposed HA-RAG achieves an average speedup of 2.10x and maximum speedup of 10.49x in Time-To-First-Token (TTFT) with negligible accuracy loss.",
+        "canonical_id": "arXiv:2510.20878",
+        "arxiv_id": "2510.20878",
+        "authors": [
+          "Dan-Ying Ge",
+          "Jian-Hua Gao",
+          "Yi-Xue Yang",
+          "Wei-Xing Ji"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.12872",
+      "identity_tokens": [
+        "id:arXiv:2510.12872",
+        "title:kvcomm online crosscontext kvcache communication for efficient llmbased multiagent systems",
+        "url:https://www.semanticscholar.org/paper/471de4fab0885f45dffb717512741128775bcbaa"
+      ],
+      "record": {
+        "title": "KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems",
+        "source_url": "https://www.semanticscholar.org/paper/471de4fab0885f45dffb717512741128775bcbaa",
+        "year": 2025,
+        "published": "2025-10-14",
+        "abstract": "Multi-agent large language model (LLM) systems are increasingly adopted for complex language processing tasks that require communication and coordination among agents. However, these systems often suffer substantial overhead from repeated reprocessing of overlapping contexts across agents. In typical pipelines, once an agent receives a message from its predecessor, the full context-including prior turns-must be reprocessed from scratch, leading to inefficient processing. While key-value (KV) caching is an effective solution for avoiding redundant computation in single-agent settings where prefixes remain unchanged, it cannot be directly reused in multi-agent scenarios due to diverging prefixes introduced by agent-specific context extensions. We identify that the core challenge lies in the offset variance of KV-caches across agents. To address this, we propose KVCOMM, a training-free framework that enables efficient prefilling in multi-agent inference by reusing KV-caches and aligning cache offsets of overlapping contexts under diverse prefix contexts. KVCOMM estimates and adjusts KV-caches for shared content by referencing a pool of cached examples-termed anchors-that store observed cache deviations under varying prefixes. The anchor pool is maintained and updated online, allowing dynamic adaptation to distinct user requests and context structures. KVCOMM achieves over 70% reuse rate across diverse multi-agent workloads, including retrieval-augmented generation, math reasoning, and collaborative coding tasks, all without quality degradation. Particularly, when each fully-connected agent receives 1K input tokens with 512 prefix tokens and 512 output tokens under a five-agent setting, KVCOMM achieves up to 7.8x speedup compared to the standard prefill pipeline, reducing TTFT from ~430 ms to ~55 ms.",
+        "canonical_id": "arXiv:2510.12872",
+        "arxiv_id": "2510.12872",
+        "authors": [
+          "Hancheng Ye",
+          "Zhengqing Gao",
+          "Mingyuan Ma",
+          "Qinsi Wang",
+          "Yuzhe Fu",
+          "M. Chung",
+          "Yueqian Lin",
+          "Zhijian Liu",
+          "Jianyi Zhang",
+          "Danyang Zhuo",
+          "Yiran Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.10129",
+      "identity_tokens": [
+        "id:arXiv:2510.10129",
+        "title:cacheclip accelerating rag with effective kv cache reuse",
+        "url:https://www.semanticscholar.org/paper/ce9587ac624800977c412c8e19d995141fded68d"
+      ],
+      "record": {
+        "title": "CacheClip: Accelerating RAG with Effective KV Cache Reuse",
+        "source_url": "https://www.semanticscholar.org/paper/ce9587ac624800977c412c8e19d995141fded68d",
+        "year": 2025,
+        "published": "2025-10-11",
+        "abstract": "Retrieval-Augmented Generation (RAG) systems suffer from severe time-to-first-token (TTFT) bottlenecks due to long input sequences. Existing KV cache reuse methods face a fundamental trade-off: prefix caching requires identical prefixes that rarely occur in RAG scenarios, while direct precomputation sacrifices quality due to missing inter-chunk attention and repeated attention sinks. Recent methods like APE and CacheBlend partially address these issues but remain inadequate for robust RAG applications. This paper presents CacheClip, a novel framework that achieves both fast TTFT and high generation quality. Our key insight is that small auxiliary LLMs exhibit similar last-layer attention distributions to primary LLMs (the target model for generation), enabling efficient identification of tokens critical for restoring inter-chunk attention, thereby significantly improving response quality on cross-chunk reasoning tasks. CacheClip integrates four techniques: (1) auxiliary-model-guided token selection for selective KV cache recomputation, (2) shared prefixes to eliminate redundant attention sinks, (3) a sliding-window grouping strategy to maintain local coherence during partial KV cache updates, and (4) a CPU-GPU hybrid design that offloads auxiliary model inference to idle CPU resources, avoiding additional GPU overhead. The recomputation ratio is adjustable, allowing users to flexibly balance efficiency and quality for different deployment requirements. Experiments show CacheClip retains up to 85.2% and 91.1% of full-attention performance on NIAH and LongBench, outperforming CacheBlend and APE by 16.1 and 12.8 points on NIAH, and by 4.5 and 4.2 points on LongBench (with recomp% = 20%). Meanwhile, CacheClip accelerates LLM inference by up to 3.33$\\times$ in prefill time (with recomp% = 20%), providing a practical solution to the efficiency-quality trade-off in RAG systems.",
+        "canonical_id": "arXiv:2510.10129",
+        "arxiv_id": "2510.10129",
+        "authors": [
+          "Bin Yang",
+          "Qiuyu Leng",
+          "Jun Zeng",
+          "Zhen-Hua Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.08774",
+      "identity_tokens": [
+        "id:arXiv:2510.08774",
+        "title:strucemb the potential of structureaware encoding in language embeddings",
+        "url:https://www.semanticscholar.org/paper/a0ff3ff5c1be8413b9b8fef04cf258dbc17c04c1"
+      ],
+      "record": {
+        "title": "Struc-EMB: The Potential of Structure-Aware Encoding in Language Embeddings",
+        "source_url": "https://www.semanticscholar.org/paper/a0ff3ff5c1be8413b9b8fef04cf258dbc17c04c1",
+        "year": 2025,
+        "published": "2025-10-09",
+        "abstract": "Text embeddings from Large Language Models (LLMs) have become foundational for numerous applications. However, these models typically operate on raw text, overlooking the rich structural information, such as hyperlinks or citations, that provides crucial context in many real-world datasets. This paper introduces and systematically evaluates a new paradigm for generating structure-aware text embeddings by integrating these structural relations directly into the LLM's internal encoding process, rather than relying on traditional post-hoc aggregation. We investigate two primary in-process methods: sequential concatenation and parallel caching. Through extensive zero-shot experiments across retrieval, clustering, classification, and recommendation tasks, we demonstrate that our structure-aware approaches consistently outperform both text-only and post-hoc baselines. Our analysis reveals critical trade-offs: sequential concatenation excels with noisy, moderate-length contexts, while parallel caching scales more effectively to long, high-signal contexts but is more susceptible to distractors. To address the challenge of noisy structural data, we also introduce and validate two effective techniques: Context Distillation and Semantic Balancing. This work provides the first comprehensive analysis of in-process structure-aware encoding, offering a blueprint for building more powerful and contextually aware embedding models.",
+        "canonical_id": "arXiv:2510.08774",
+        "arxiv_id": "2510.08774",
+        "authors": [
+          "Shikun Liu",
+          "H. Wang",
+          "Mufei Li",
+          "Pan Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.03215",
+      "identity_tokens": [
+        "id:arXiv:2510.03215",
+        "title:cachetocache direct semantic communication between large language models",
+        "url:https://www.semanticscholar.org/paper/0c133c33dd8c568be13c7980f0fdefe024d5e160"
+      ],
+      "record": {
+        "title": "Cache-to-Cache: Direct Semantic Communication Between Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/0c133c33dd8c568be13c7980f0fdefe024d5e160",
+        "year": 2025,
+        "published": "2025-10-03",
+        "abstract": "Multi-LLM systems harness the complementary strengths of diverse Large Language Models, achieving performance and efficiency gains that are not attainable by a single model. In existing designs, LLMs communicate through text, forcing internal representations to be transformed into output token sequences. This process both loses rich semantic information and incurs token-by-token generation latency. Motivated by these limitations, we ask: Can LLMs communicate beyond text? Oracle experiments show that enriching the KV-Cache semantics can improve response quality without increasing cache size, supporting KV-Cache as an effective medium for inter-model communication. Thus, we propose Cache-to-Cache (C2C), a new paradigm for direct semantic communication between LLMs. C2C uses a neural network to project and fuse the source model's KV-cache with that of the target model to enable direct semantic transfer. A learnable gating mechanism selects the target layers that benefit from cache communication. Compared with text communication, C2C utilizes the deep, specialized semantics from both models, while avoiding explicit intermediate text generation. Experiments show that C2C achieves 6.4-14.2% higher average accuracy than individual models. It further outperforms the text communication paradigm by approximately 3.1-5.4%, while delivering an average 2.5x speedup in latency. Our code is available at https://github.com/thu-nics/C2C.",
+        "canonical_id": "arXiv:2510.03215",
+        "arxiv_id": "2510.03215",
+        "authors": [
+          "Tianyu Fu",
+          "Zihan Min",
+          "Hanling Zhang",
+          "Jichao Yan",
+          "Guohao Dai",
+          "Wanli Ouyang",
+          "Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.21301",
+      "identity_tokens": [
+        "id:arXiv:2509.21301",
+        "title:nova realtime agentic visionlanguage model serving with adaptive crossstage parallelization",
+        "url:https://www.semanticscholar.org/paper/b05b7d27be48acd1f8f474a0a41e97613936bc87"
+      ],
+      "record": {
+        "title": "Nova: Real-Time Agentic Vision-Language Model Serving With Adaptive Cross-Stage Parallelization",
+        "source_url": "https://www.semanticscholar.org/paper/b05b7d27be48acd1f8f474a0a41e97613936bc87",
+        "year": 2025,
+        "published": "2025-09-25",
+        "abstract": "This paper presents Nova, a real-time scheduling framework for serving agentic vision-language models (VLMs) on a single GPU with balanced per-request latency and overall request process throughput. Our design begins by enabling effective pipelining across vision encode, LLM prefill, and LLM decode stages of VLMs, by exploiting their heterogeneous resource demands during execution and incorporating elastic GPU spatial partitioning among stages to maximally utilize the compute and memory resources. Building on this, we introduce a realtime scheduling algorithm that adaptively calibrates resource allocation among stages based on a Pareto-optimal analysis of the latency-throughput trade-off, allowing the system to sustain responsiveness and resource efficiency under dynamic request loads. To further alleviate GPU memory pressure, we design a lightweight weight offloading strategy for vision encoders that preserves inference efficiency with minimized memory overhead. Extensive evaluations on both synthetic and real-world agent workloads demonstrate that Nova consistently outperforms the state-of-the-art baselines, improving the maximum latency by up to 23.3 %, while keeping competitive throughput.",
+        "canonical_id": "arXiv:2509.21301",
+        "arxiv_id": "2509.21301",
+        "authors": [
+          "Yuhang Xu",
+          "Shengzhong Liu",
+          "Dong Zhang",
+          "Bingheng Yan",
+          "Fan Wu",
+          "Gui-Hai Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.01239",
+      "identity_tokens": [
+        "id:arXiv:2510.01239",
+        "title:ciflex contextual instruction flow for subtask execution in multiturn interactions with a single ondevice llm",
+        "url:https://www.semanticscholar.org/paper/7b4de2b75e30499bbb772eea64bfea75ec0a72b9"
+      ],
+      "record": {
+        "title": "CIFLEX: Contextual Instruction Flow for Sub-task Execution in Multi-Turn Interactions with a Single On-Device LLM",
+        "source_url": "https://www.semanticscholar.org/paper/7b4de2b75e30499bbb772eea64bfea75ec0a72b9",
+        "year": 2025,
+        "published": "2025-09-24",
+        "abstract": "We present CIFLEX (Contextual Instruction Flow for Sub-task Execution), which is a novel execution system for efficient sub-task handling in multi-turn interactions with a single on-device large language model (LLM). As LLMs become increasingly capable, a single model is expected to handle diverse sub-tasks that more effectively and comprehensively support answering user requests. Naive approach reprocesses the entire conversation context when switching between main and sub-tasks (e.g., query rewriting, summarization), incurring significant computational overhead. CIFLEX mitigates this overhead by reusing the key-value (KV) cache from the main task and injecting only task-specific instructions into isolated side paths. After sub-task execution, the model rolls back to the main path via cached context, thereby avoiding redundant prefill computation. To support sub-task selection, we also develop a hierarchical classification strategy tailored for small-scale models, decomposing multi-choice decisions into binary ones. Experiments show that CIFLEX significantly reduces computational costs without degrading task performance, enabling scalable and efficient multi-task dialogue on-device.",
+        "canonical_id": "arXiv:2510.01239",
+        "arxiv_id": "2510.01239",
+        "authors": [
+          "Juntae Lee",
+          "Jihwan Bang",
+          "Seunghan Yang",
+          "Simyung Chang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.37965/jait.2025.0752",
+      "identity_tokens": [
+        "id:DOI:10.37965/jait.2025.0752",
+        "title:building a large language model for the human resource services in malaysia",
+        "url:https://www.semanticscholar.org/paper/642ea0c1454f332e208d4d2a51798b0c7b3b22eb"
+      ],
+      "record": {
+        "title": "Building a Large Language Model for the Human Resource Services in Malaysia",
+        "source_url": "https://www.semanticscholar.org/paper/642ea0c1454f332e208d4d2a51798b0c7b3b22eb",
+        "year": 2025,
+        "published": "2025-09-15",
+        "abstract": "This study presents the development of a domain-specific base large language model (LLM) tailored for its application in human resources (HR) management, particularly employee engagement. The model addresses inefficiencies in traditional HR systems, such as inconsistent query resolution on compliance management and policy dissemination. By leveraging LLM’s advanced techniques like Rotary Positional Embeddings (RoPE), grouped key-value attention, and Transformer Block enhancements, this research designs and develops an HR-specific base LLM as the first line of HR service for employees in small- and medium-sized enterprises. Data preparation involves cleaning, tokenizing, and training HR-specific datasets, enabling the model to handle nuanced queries with contextual relevance. Through iterative training and evaluation, the Enhanced GPT-2 model has demonstrated significant improvements in learning capability, based on attention weights in the embedding layers, over GPT-2 Small in terms of relevance, consistency, and scalability. Future work focuses on expanding datasets, improving fine-tuning techniques, and integrating retrieval-augmented generation for real-time adaptability.",
+        "canonical_id": "DOI:10.37965/jait.2025.0752",
+        "doi": "10.37965/jait.2025.0752",
+        "authors": [
+          "Guan-Hong Lai",
+          "Darren Xin Lun Chai",
+          "TongMing Lim"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:f76803655217299e327bf80a387d5ebe21616109473500bdfa757a9d4a57a22e",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
