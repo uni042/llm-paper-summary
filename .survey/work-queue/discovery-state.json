@@ -1,40 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T20:36:50+00:00",
-  "last_run_key": "scheduled-chat-30-20260923T203038Z-5f30c4",
-  "last_round": "disc-s30-5f30c4-r1-recovery",
+  "updated_at": "2026-09-23T22:03:58+00:00",
+  "last_run_key": "scheduled-chat-00-20260923T215800Z-6f5800",
+  "last_round": "20260923T220300Z-scheduled-chat-00-r1-repair",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 4,
+  "last_empty_round_reason": "No candidate was strong enough for inference-system Research after lightweight evaluation.",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T04:00:00+09:00",
-      "round": "specialist-moe-movement-2",
-      "axis": "MoE expert offload・prefetch・CPU/GPU/NDP placement・all-to-all communication scheduling",
-      "query_summary": "MoE expert SSD/CPU offload、expert cache/prefetch、heterogeneous placement、communication schedulingへ検索窓を移動。最新identity shardでOD-MoE、FlashMoE、DALI、SpecPrefetch、fine-grained overlap等の既収録を評価前に除外し、provider側の今回の独立検索窓が尽きた時点で残った5件を評価して全件を強候補として採用した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2512.03927",
-        "arXiv:2601.17063",
-        "arXiv:2602.03495",
-        "arXiv:2607.24787",
-        "arXiv:2607.19539",
-        "arXiv:2402.07033"
-      ],
-      "next_axis_hint": "GPU collective/runtimeとnetwork-aware serving、またはproduction inference engineのforward citationsへ移る",
-      "source_submission": "work-queue/submissions/20260917T0400JST-discovery-specialist-moe-movement-2.json"
-    },
     {
       "run_key": "2026-09-17T04:00:00+09:00",
       "round": "specialist-runtime-scheduling-3",
@@ -8845,6 +8820,40 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260923T220300Z-scheduled-chat-00-r1-repair",
+      "precheck_request_id": "20260923T220300Z-scheduled-chat-00-r1-repair",
+      "run_key": "scheduled-chat-00-20260923T215800Z-6f5800",
+      "round": "20260923T220300Z-scheduled-chat-00-r1-repair",
+      "axis": "preload-backward-structured-references",
+      "query_summary": "schema v3 repository_references precheckのresults[]を軽量評価。今回確認できた上位候補はモデル訓練・一般能力寄りが中心で、推論システムResearchへ新規投入する強さを確実に満たす候補を選ばず0件とした。",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/discovery-20260923T220400Z-scheduled-chat-00-r1-repair.json",
+      "source_submissions": [
+        "work-queue/submissions/discovery-20260923T220400Z-scheduled-chat-00-r1-repair.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16761,15 +16770,15 @@
       "next_axis_hint": "continue selector with another productive seed or backward-reference window"
     },
     "preload-backward-structured-references": {
-      "last_run_key": "scheduled-chat-30-20260924T022953JST-5c7e21",
-      "rounds": 7,
-      "candidate_count": 140,
-      "duplicate_filtered_count": 20,
+      "last_run_key": "scheduled-chat-00-20260923T215800Z-6f5800",
+      "rounds": 8,
+      "candidate_count": 160,
+      "duplicate_filtered_count": 40,
       "novel_candidate_count": 120,
       "final_duplicate_filtered_count": 3,
       "post_final_dedupe_count": 117,
       "accepted_count": 19,
-      "duplicate_ratio": 0.14285714285714285,
+      "duplicate_ratio": 0.25,
       "final_duplicate_ratio": 0.025,
       "next_axis_hint": null
     },
@@ -17885,6 +17894,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-30-20260923T203038Z-5f30c4",
       "last_round": "disc-s30-5f30c4-r1-recovery"
+    },
+    "window-d60a20a371c1a563ef44": {
+      "topic": "structured-references",
+      "source": "repository_references",
+      "date_range": "*",
+      "category": "*",
+      "citation_direction": "backward",
+      "query_family": "*",
+      "search_window_key": "window-d60a20a371c1a563ef44",
+      "scan_count": 1,
+      "raw_result_count": 60,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 0,
+      "last_position": null,
+      "unseen_rate": 0.3333333333333333,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.0,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-00-20260923T215800Z-6f5800",
+      "last_round": "20260923T220300Z-scheduled-chat-00-r1-repair"
     }
   },
   "recent_search_windows": [
@@ -19084,6 +19116,27 @@
       "duplicate_rate": 0.5666666666666667,
       "candidate_acceptance_rate": 0.0,
       "last_position": "cursor-0-to-60"
+    },
+    {
+      "topic": "structured-references",
+      "source": "repository_references",
+      "date_range": "*",
+      "category": "*",
+      "citation_direction": "backward",
+      "query_family": "*",
+      "search_window_key": "window-d60a20a371c1a563ef44",
+      "run_key": "scheduled-chat-00-20260923T215800Z-6f5800",
+      "round": "20260923T220300Z-scheduled-chat-00-r1-repair",
+      "raw_result_count": 60,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 0,
+      "unseen_rate": 0.3333333333333333,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.0,
+      "last_position": null
     }
   ],
   "search_window_history_limit": 96,
