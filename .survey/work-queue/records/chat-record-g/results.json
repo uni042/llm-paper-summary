@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-c3d771ab5950563d5d332246","job_id":"job-research-04494ef5a577c4fb","data":{"overview":"WikiText-103ではNAMEx-Full-Momが中規模テストPPL 35.37で、CAMEx 36.53、EP-CAMEx 36.55、SMoE Top-2 35.55を上回る。ImageNet-1kではAcc@1 84.52%でCAMEx 83.29%、EP-CAMEx 83.23%を改善し、ImageNet-Aでは35.27%とCAMEx 25.45%から大きく向上する。Qwen1.5-MoE 14BでもLinear routingのゼロショットMMLU/GSM8K/ARCを61.28/60.12/50.77から61.87/60.55/50.95へ改善する。","key_results":[{"metric":"WikiText-103中規模テストPPL","value":"35.37","baseline":"CAMEx 36.53 / EP-CAMEx 36.55 / SMoE Top-2 35.55","condition":"NAMEx-Full-Mom, medium-scale pretraining","interpretation":"ナッシュ係数と複素運動量を組み合わせた変種が主要比較中で最低PPL。"},{"metric":"ImageNet-1k Acc@1","value":"84.52%","baseline":"CAMEx 83.29% / EP-CAMEx 83.23%","condition":"NAMEx-Full-Mom, Swin-MoE Small, 30 epochs","interpretation":"同じ50Mパラメータ規模で約1.2〜1.3ポイント改善。"},{"metric":"ImageNet-A accuracy","value":"35.27%","baseline":"CAMEx 25.45% / EP-CAMEx 24.22%","condition":"NAMEx-Full-Mom zero-shot robustness evaluation","interpretation":"分布外の自然敵対例で運動量付きNAMExの改善が特に大きい。"},{"metric":"Qwen1.5-MoE 14B zero-shot MMLU/GSM8K/ARC","value":"61.87 / 60.55 / 50.95","baseline":"Linear routing original 61.28 / 60.12 / 50.77","condition":"NAMEx-Full, Linear routing, 2 CCP iterations/layer","interpretation":"14B級でも全3指標を小幅だが一貫して改善。"},{"metric":"NAMEx-Full training throughput","value":"21,897 tokens/s","baseline":"CAMEx/EP-CAMEx 21,982 tokens/s","condition":"training compute table; inference TFLOPs 4.65 for all three","interpretation":"層ごとのNBSを追加しても適切な反復数では学習スループット低下は小さく、推論計算量は同等。"}],"negative_results":[{"name":"高頻度NBS更新の実行時間増","description":"更新頻度Delta l=1では平均バッチ時間4.70秒、NBS時間比85.96%に達し、初層のみの0.69秒・4.35%より大幅に重い。"},{"name":"実運動量は最適でない","description":"複素運動量betaの偏角phi=0では複数GLUEタスクが低下し、RTEはNAMExで75.09と非ゼロ偏角の最大76.64を下回る。"},{"name":"NBS反復増の利益は小さい","description":"Qwen/DeepSeekの2〜60反復アブレーションでは20〜40反復が一部指標をわずかに改善するが差は小さく、60反復に一貫した利益はない。"}],"interpretation":"NAMExの利得は、平均係数では捨てる専門家間の内積情報を交渉係数へ反映することと、限られた層数での伝播を複素運動量で加速することに分解できる。小中規模では改善が明瞭で、大規模MoEでは改善幅は小さいがルータ方式やゼロショット/微調整をまたいで方向が揃う。","quality_impact":"専門家統合は元の疎MoEと厳密同値ではなく、品質を保ちながら統合表現へ近似する方式である。NAMExは多くの条件で元SMoEや既存統合を上回るが、NBS解法の頻度と運動量係数に性能・学習時間のトレードオフがある。"},"reservation":{"claim_id":"claim-c3d771ab5950563d5d332246","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-b7b0e81277b66329080b1c40",
+  "job_id": "job-research-8699aa3a6604cb58",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b7b0e81277b66329080b1c40",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
