@@ -559,8 +559,9 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
                     progress["indices"].add(index)
                 progress["paths"].append(path.stem)
 
-            result = _read(result_root / path.name, {})
-            if not isinstance(result, dict):
+            result_path = result_root / path.name
+            result = _read(result_path, {})
+            if not result_path.is_file() or not isinstance(result, dict) or not result:
                 pending_submissions.append(path.stem)
             elif result.get("ok") is False:
                 recovery_required.append(f"submission:{path.stem}")
