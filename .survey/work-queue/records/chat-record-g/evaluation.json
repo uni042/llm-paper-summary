@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-88d4b2308d0d8596f4fd6ce4",
-  "job_id": "job-research-cb87e313d4b1653f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-88d4b2308d0d8596f4fd6ce4",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-88d4b2308d0d8596f4fd6ce4","job_id":"job-research-cb87e313d4b1653f","data":{"hardware":"単一NVIDIA B200 GPU、Intel Xeon 6960P CPU。CUDA 13.1。NVIDIA Nsight SystemsでGPUカーネル実行時間をプロファイル。","software":"dInfer推論フレームワーク、Fast-dLLMのKVキャッシュ方式、confidence-based sampling threshold 0.9。DES-Vote選択用の専用融合GPUカーネルを実装。","model":["LLaDA2.0-mini-preview 16B","LLaDA-MoE-7B-A1B-Instruct 7B"],"datasets":["HumanEval","MBPP","GSM8K","MATH500"],"baselines":["Vanilla MoE routing","Top-K reduction","NAEE expert skipping adapted to parallel dLLM","MC-MoE dynamic expert skipping adapted to parallel dLLM","DES-Seq"],"correctness":"全方式を同じdLLM復号基盤で比較し、主表はblock length 32、prefix cache 16、suffix cache 16で評価する。精度はVanillaを100%とした相対精度も併記し、平均ユニーク専門家数とMoE単層のユニーク活性パラメータメモリを同時に測る。","settings":["dInfer + Fast-dLLM、sampling confidence 0.9","主表block length 32、16 prefix + 16 suffix cache tokens","DES-VoteはM_core=beta×全専門家数、DES-Seqは局所選択数kで予算調整","block size 8/16/32/64で頑健性を検証","融合カーネルの選択時間をPyTorch実装と比較"],"methodology":"4生成ベンチマークで精度と専門家フットプリントのパレートを測定し、単一B200上でMoE層および総GPUカーネル時間を実測する。さらにコア集合サイズ、ブロック長、同一ユニーク専門家数でのトークン当たり活性専門家数をアブレーションし、ルーティング利用分布のコサイン類似度も確認する。","scope":"評価は2つのMoE dLLMと単一B200中心で、自己回帰MoEやマルチGPU、CPU/SSDオフロード環境の実測は含まれない。主張は並列dLLMでユニーク専門家重み転送が律速になる条件に最も直接適用される。"},"reservation":{"claim_id":"claim-88d4b2308d0d8596f4fd6ce4","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
