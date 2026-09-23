@@ -1,28 +1,29 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-b4be6a1ab5725fa47fd44d34",
+  "claim_id": "claim-preload-969693f54ae6a4cce70d44cc",
   "job_id": "job-research-9d57d4c95ee33e52",
-  "worker_id": "scheduled-chat-llm-survey",
-  "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-b4be6a1ab5725fa47fd44d34",
-  "request_id": "claim-20260920T034700Z-scheduled-chat-llm-survey-11e",
-  "claimed_at": "2026-09-20T03:46:33+00:00",
-  "expires_at": "2026-09-20T04:02:54+00:00",
+  "worker_id": "shared-preload-pool",
+  "worker_kind": "work",
+  "attempt_id": "attempt-preload-969693f54ae6a4cce70d44cc",
+  "claimed_at": "2026-09-23T13:07:40+00:00",
+  "preloaded_at": "2026-09-23T13:07:40+00:00",
+  "expires_at": "2026-09-24T01:07:40+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-9d57d4c95ee33e52"
   ],
-  "record_bank": "b",
-  "record_bank_root": ".survey/work-queue/records/chat-record-b",
+  "preload_pool": true,
+  "pool_order": 25,
+  "claim_source": "shared_preload_pool",
+  "previous_claim_id": "claim-b4be6a1ab5725fa47fd44d34",
+  "record_bank": "z",
+  "record_bank_root": ".survey/work-queue/records/chat-record-z",
   "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record-b/results.json",
-    "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
-  },
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-20T04:02:54+00:00"
+    "metadata": ".survey/work-queue/records/chat-record-z/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-z/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-z/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-z/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-z/positioning.json"
+  }
 }

@@ -1,21 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-e320c142c976a89229191f7e","job_id":"job-research-958b0ab5aeb9819d",
- "data":{
-  "overview":"3モデル・4データセットの主評価で、CacheGenは同等品質の一様量子化よりKV転送サイズを3.5〜4.3倍削減し、3Gbps条件のTTFTを3.2〜3.7倍短縮した。テキスト文脈をvLLMでprefillする基準に対しては3.1〜4.7倍短縮し、ほぼ無損失の8-bit量子化に対しても1.67〜1.81倍短縮する。H2O/LLMLingua適用後のKVにも追加圧縮効果があり、帯域適応は1秒SLOで違反率を81%から8%へ下げる。",
-  "key_results":[
-   {"metric":"TTFT短縮","value":"3.2〜3.7倍","baseline":"一様KV量子化","condition":"3Gbps、3モデル、4データセット","interpretation":"KVをテンソルのまま量子化するより転送用ビットストリーム化がネットワーク遅延を大幅に削減する。"},
-   {"metric":"TTFT短縮","value":"3.1〜4.7倍","baseline":"vLLMでテキスト文脈からprefill","condition":"3Gbps、3モデル、4データセット","interpretation":"長文脈ではKV再利用と圧縮転送の組合せが再計算より有利。"},
-   {"metric":"KVサイズ削減","value":"3.5〜4.3倍","baseline":"同等品質の一様量子化","condition":"3モデル、4データセット","interpretation":"差分・層別量子化・算術符号化による分布利用が効く。"},
-   {"metric":"文脈圧縮後の追加KV削減","value":"H2O比3.5〜4倍、LLMLingua比3.3〜4.2倍","baseline":"各手法後の量子化KV","condition":"品質をほぼ維持","interpretation":"トークン削減系と転送時符号化は補完的。"},
-   {"metric":"SLO違反率","value":"81%→8%","baseline":"一様量子化","condition":"1秒TTFT SLO、0.1〜10Gbps変動帯域、同等品質","interpretation":"チャンク単位の帯域適応が固定圧縮率より変動ネットワークへ強い。"}
-  ],
-  "negative_results":[
-   {"name":"高帯域での利益縮小","description":"20Gbps超では量子化基準も転送が速くなるため絶対TTFT削減幅が小さくなる。"},
-   {"name":"短文脈では再計算が有利","description":"約1K tokens未満ではCacheGen自身がテキスト文脈ロードへ戻すほど、KV転送・復号の利益が小さい。"},
-   {"name":"複数表現の保存負担","description":"帯域適応のため同じチャンクを複数品質で保存するが、論文では総保存量は量子化基準と同程度と報告する。"}
-  ],
-  "interpretation":"CacheGenの本質はKVキャッシュのGPU常駐容量削減ではなく、KV再利用を分散システムで成立させるためのネットワーク表現最適化にある。特に通常クラウド内の数Gbps帯域では、prefill計算を省いても巨大KVの転送がTTFTを支配するため、転送サイズをテンソル形式よりさらに削る価値が大きい。一方、極端な高速ネットワーク、短文脈、再利用されない文脈では利益が縮む。",
-  "quality_impact":"損失圧縮を使うため厳密な無劣化ではないが、主評価では正解率低下2%以下、F1低下0.1%未満、perplexity増加0.1未満。帯域適応はSLO内で可能な限り損失の少ない表現を選ぶ設計で、品質と転送遅延のtrade-offを明示的に扱う。"
- },
- "reservation":{"claim_id":"claim-preload-e320c142c976a89229191f7e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-preload-7d3bb7849746fcb0950feb9f",
+  "job_id": "job-research-64becbe5cce3752e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-7d3bb7849746fcb0950feb9f",
+    "worker_id": "shared-preload-pool",
+    "worker_kind": "work"
+  }
 }

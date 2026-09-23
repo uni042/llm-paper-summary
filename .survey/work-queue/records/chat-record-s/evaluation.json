@@ -1,19 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-e320c142c976a89229191f7e","job_id":"job-research-958b0ab5aeb9819d",
- "data":{
-  "hardware":"NVIDIA A40 GPU 4基、384GB RAM、Intel Xeon Gold 6130 CPU 2基。",
-  "software":"CacheGenはPyTorch 2.0、CUDA 12.0、HuggingFace Transformersを基盤に実装。テキストprefill基準はvLLM/xFormersを使用。",
-  "model":"長文脈向けにfine-tuneされたMistral-7B、Llama-34B、Llama-70B（最大32K文脈）。",
-  "datasets":["LongChat 200文脈（中央値9.4K tokens）","TriviaQA 200文脈（中央値9.3K）","NarrativeQA 200文脈（中央値14K）","WikiText 62文脈（中央値5.9K）"],
-  "baselines":["一様3/4/8-bit KV量子化","vLLMによるテキスト文脈prefill","H2O","LLMLingua"],
-  "correctness":"LongChatは正解率、TriviaQA/NarrativeQAはF1、WikiTextはperplexityで圧縮後の品質を測る。主設定では損失圧縮による劣化を正解率2%以下、F1 0.1%未満、perplexity 0.1未満に抑える。",
-  "settings":[
-   {"name":"主TTFT評価","description":"帯域3Gbpsで、ネットワーク転送と新規質問prefillを含むtime-to-first-tokenを3モデル×4データセットで比較する。"},
-   {"name":"帯域感度","description":"Mistral-7B、16K文脈で0.4〜400Gbpsまで帯域を変化させる。"},
-   {"name":"帯域適応","description":"LongChatで各チャンク帯域を0.1〜10Gbpsからランダム生成し、20本の帯域traceを平均。TTFT SLO 0.5秒/1秒で違反率と品質を比較する。"}
-  ],
-  "methodology":"システム指標は圧縮後KVサイズとTTFT、品質指標は各データセット固有のaccuracy/F1/perplexityを用いる。主比較では同等品質になる圧縮設定を比較し、ネットワーク転送削減がTTFTへどう寄与するかを測る。帯域、文脈長、同時要求数を変える感度分析、帯域適応のSLO違反率、GPU復号・オフライン符号化のオーバーヘッド、各符号化要素のアブレーション、270評価のユーザ調査も実施する。",
-  "scope":"実機はA40世代に限定され、OPT-175B等の超大型モデルはGPUメモリ制約で未評価。極端な高帯域条件、自由文生成品質、実運用での文脈再利用率を網羅しておらず、再利用できない揮発性文脈では適用利益が小さい。"
- },
- "reservation":{"claim_id":"claim-preload-e320c142c976a89229191f7e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-7d3bb7849746fcb0950feb9f",
+  "job_id": "job-research-64becbe5cce3752e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-7d3bb7849746fcb0950feb9f",
+    "worker_id": "shared-preload-pool",
+    "worker_kind": "work"
+  }
 }
