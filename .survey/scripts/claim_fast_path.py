@@ -106,7 +106,8 @@ def process(repo_root: Path) -> dict[str, Any]:
         normalization["skipped"] = False
 
     barriers = apply_library_checkpoint_barriers.apply(root)
-    allocation = claim_worker_with_banks.process_requests(root, maintain_shared_pool=True)
+    allocation = claim_worker_with_banks.process_requests(root)
+    allocation.update(claim_worker_with_banks.maintain_shared_pool(root))
     changed = _changed_results(root, before)
 
     repair: dict[str, Any] = {"skipped": True}
