@@ -5,9 +5,11 @@ The pool is worker-agnostic. It owns ready jobs only until a real Scheduled Chat
 request atomically adopts the oldest eligible entries. The global inventory target
 counts both waiting pool claims and already-adopted Scheduled Chat claims.
 
-Paper preload is deliberately independent from record-bank capacity. Waiting pool
-claims are logical paper stock only: they do not reserve record banks. Banks are
-assigned later to the leading hot slice of each worker's adopted inventory.
+Paper preload uses the same 32 canonical bank identities as record staging, but in
+an independent Research stock lane. Waiting pool claims are sharded round-robin by
+pool_order and do not consume the bank's five writable record slots. When a claim
+becomes hot, record staging prefers its stock bank and falls back to another free
+bank only if that bank's Research record slots are already occupied.
 
 All mutation happens inside the existing claim fast path. GitHub Actions serializes
 that path with the survey-claim-main concurrency group, and push-race retries rerun
@@ -24,6 +26,7 @@ from typing import Any
 
 import claim_state
 import claim_window_policy
+from record_bank_config import BANK_IDS, BANK_ROOTS, bank_for_sequence
 
 POOL_WORKER_ID = "shared-preload-pool"
 POOL_WORKER_KIND = "work"
@@ -176,10 +179,27 @@ def maintain(
             continue
 
         expires = claim_state.parse_time(current.get("expires_at"))
-        if expires is None or (expires - now).total_seconds() <= POOL_RENEW_BEFORE_SECONDS:
+        order = current.get("pool_order")
+        desired_stock_bank = (
+            bank_for_sequence(int(order))
+            if isinstance(order, int) and not isinstance(order, bool) and int(order) >= 0
+            else None
+        )
+        route_missing = (
+            desired_stock_bank is not None
+            and str(current.get("stock_bank") or "").lower() != desired_stock_bank
+        )
+        if (
+            expires is None
+            or (expires - now).total_seconds() <= POOL_RENEW_BEFORE_SECONDS
+            or route_missing
+        ):
             claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
             claim["expires_at"] = _iso(now + dt.timedelta(seconds=POOL_LEASE_SECONDS))
             claim["heartbeat_at"] = _iso(now)
+            if desired_stock_bank is not None:
+                claim["stock_bank"] = desired_stock_bank
+                claim["stock_lane"] = "research"
             _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
             claims[job_id] = dict(claim, active=True, expired=False)
             renewed += 1
@@ -253,6 +273,8 @@ def maintain(
             "depends_on_job_ids": dependencies,
             "preload_pool": True,
             "pool_order": order,
+            "stock_bank": bank_for_sequence(order),
+            "stock_lane": "research",
             "claim_source": "shared_preload_pool",
         }
         if previous and previous.get("claim_id") != claim_id:
@@ -266,6 +288,13 @@ def maintain(
         1 for value in claims.values()
         if value.get("active") and is_pool_claim(value)
     )
+    research_stock_banks = {
+        str(value.get("stock_bank") or "").lower()
+        for value in claims.values()
+        if value.get("active")
+        and is_pool_claim(value)
+        and str(value.get("stock_bank") or "").lower() in BANK_ROOTS
+    }
     return {
         "target": int(target),
         "created": created,
@@ -273,5 +302,7 @@ def maintain(
         "released": released,
         "inventory_active": inventory_active,
         "pool_waiting": pool_waiting,
+        "research_stock_banks": len(research_stock_banks),
+        "research_stock_bank_target": len(BANK_IDS),
         "shortfall": max(int(target) - inventory_active, 0),
     }
