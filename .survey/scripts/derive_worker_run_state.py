@@ -430,8 +430,29 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
     }
 
 
-def _refresh_cached_claim_state(value: dict[str, Any]) -> dict[str, Any] | None:
+def _refresh_cached_claim_state(root: Path, value: dict[str, Any]) -> dict[str, Any] | None:
+    """Refresh volatile cached claim fields against cheap canonical facts.
+
+    The incremental cache is only an index. A submission delta can occasionally be
+    missed (for example for a status-only terminal descriptor). In that case a
+    terminal job must not remain an active assignment merely because the cache still
+    contains the allocation produced by the earlier claim result.
+    """
     claims = dict(value)
+
+    active_jobs: list[str] = []
+    for raw_job_id in claims.get("active_job_ids") or []:
+        job_id = str(raw_job_id or "").strip()
+        if not job_id:
+            continue
+        job = _read(root / ".survey/work-queue/jobs" / f"{job_id}.json", {})
+        status = str(job.get("status") or "").lower() if isinstance(job, dict) else ""
+        if status in {"completed", "blocked", "deferred", "rejected"}:
+            continue
+        active_jobs.append(job_id)
+    claims["active_job_ids"] = sorted(set(active_jobs))
+    claims["active_assignment"] = bool(active_jobs)
+
     if claims.get("claim_result_pending") is not True:
         return claims
     requested = claims.get("pending_claim_requested_at")
@@ -582,7 +603,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
 
     cached = None if force_canonical else run_state_cache.get_run(root, request)
     cached_claims = (
-        _refresh_cached_claim_state(cached.get("claims", {}))
+        _refresh_cached_claim_state(root, cached.get("claims", {}))
         if isinstance(cached, dict)
         else None
     )
