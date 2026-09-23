@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 10:09:24 JST**
+> 自動生成: **2026-09-23 10:13:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **183** |
-| 未claim Research job | **181** |
-| 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-23 10:09:20 JST（4秒前）** |
+| 収録候補論文 | **182** |
+| 未claim Research job | **180** |
+| 直近24hの検証済みResearch収録 | **82** |
+| 最終検証済みResearch収録 | **09-23 10:13:10 JST（4秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **183** |
+| canonical_id確認済みの一意な候補論文 | **182** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **183** |
+| 非終端Research job合計 | **182** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（1時間38分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（1時間42分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 10:13:10 JST** [research] `arXiv:2511.18314` — AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert
+  - job: `.survey/work-queue/jobs/job-research-2377e2a4770cb727.json`
+  - result: `.survey/work-queue/results/research/attempt-1cdc9fc5138a75e71558bf84.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-1cdc9fc5138a75e71558bf84.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md`
 - **09-23 10:09:20 JST** [research] `arXiv:2211.05102` — Efficiently Scaling Transformer Inference
   - job: `.survey/work-queue/jobs/job-research-f719eedd6807af4c.json`
   - result: `.survey/work-queue/results/research/attempt-01b29ed73471ef21eb33ce79.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-78929a6ba475ed2b2f05a50c.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-78929a6ba475ed2b2f05a50c.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2606.16332-smepilot-characterizing-and-optimizing-llm-inference-with-scalable-matrix-extensions.md`
-- **09-23 07:39:19 JST** [research] `DOI:10.1007/s10462-026-11651-1` — I/o for LLM inference: a survey of storage and memory bottlenecks
-  - job: `.survey/work-queue/jobs/job-research-15688dbb0cd11f1c.json`
-  - result: `.survey/work-queue/results/research/attempt-4a6861f35cc58610c3fb4b0c.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4a6861f35cc58610c3fb4b0c.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-5e022a2789e7-i-o-for-llm-inference-a-survey-of-storage-and-memory-bottlenecks.md`
 
 ### Audit
 
@@ -179,9 +179,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2511.18314` — AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert / worker `scheduled-chat-00`
-  - claim: **09-23 10:09:02 JST** / heartbeat: **—** / lease expiry: **09-23 11:39:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2377e2a4770cb727.json`
+- `arXiv:2601.15370` — Improving MoE Compute Efficiency by Composing Weight and Data Sparsity / worker `scheduled-chat-00`
+  - claim: **09-23 10:13:01 JST** / heartbeat: **—** / lease expiry: **09-23 11:43:01 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2095724e259f584c.json`
 - `arXiv:2609.17890` — OBC-Prune: Outcome-Based Calibration for Large Reasoning Model Pruning / worker `scheduled-chat-30`
   - claim: **09-23 09:50:04 JST** / heartbeat: **—** / lease expiry: **09-23 11:20:04 JST**
   - evidence: `.survey/work-queue/claims/job-research-17efeee08a231d8b.json`
@@ -204,7 +204,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **183** |
+| ready | **182** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +224,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **967** |
+| inference/training/survey配下の論文Markdown実体 | **968** |
 
 ### immutable submissionの未照合
 
