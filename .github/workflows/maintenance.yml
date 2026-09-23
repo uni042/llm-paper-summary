@@ -52,6 +52,18 @@ jobs:
         if: steps.pending.outputs.pending == 'true'
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
+      - name: Reconcile worker run index and compact hot queues
+        if: steps.pending.outputs.pending == 'true'
+        run: |
+          python .survey/scripts/derive_worker_run_state.py \
+            --repo-root . \
+            --rebuild-latest-caches
+          python .survey/scripts/compact_worker_hot_queue.py \
+            --repo-root . \
+            --apply \
+            --preflight-result-retention-hours 2 \
+            --report .survey/reports/worker-hot-queue-compaction-latest.json
+
       - name: Run full GC
         if: steps.pending.outputs.pending == 'true'
         run: |
