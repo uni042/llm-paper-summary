@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "worker-915241",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.15531",
+      "arxiv_id": "2608.15531",
+      "title": "FlashQuant: Sparse-Dense Fusion for Memory-Efficient Outlier-Aware LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.15531",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "FlashQuant fuses low-bit dense GEMM and high-precision sparse outlier computation to eliminate redundant memory traffic during memory-bound decoding, directly extending quantized inference-kernel lineages."
+    },
+    {
+      "canonical_id": "arXiv:2608.19628",
+      "arxiv_id": "2608.19628",
+      "title": "A Thread-Register Decoupled GPU Execution Model for Efficient Tensor Computation",
+      "source_url": "https://arxiv.org/abs/2608.19628",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 85
+      },
+      "reason": "FIBER redesigns GPU tensor execution to decouple scheduling and operand state for mixed GEMM/non-GEMM AI workloads, offering a hardware execution model relevant to LLM inference kernel efficiency."
+    },
+    {
+      "canonical_id": "arXiv:2608.12932",
+      "arxiv_id": "2608.12932",
+      "title": "FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving",
+      "source_url": "https://arxiv.org/abs/2608.12932",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "FlashDrive is an end-to-end algorithm-system co-design that attacks visual encoding, prefill reuse, reasoning-token generation and denoising bottlenecks together, extending heterogeneous real-time inference lineages."
+    },
+    {
+      "canonical_id": "arXiv:2608.21952",
+      "arxiv_id": "2608.21952",
+      "title": "SSDi8: Accurate and Efficient 8-bit Quantization for State Space Duality",
+      "source_url": "https://arxiv.org/abs/2608.21952",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 85
+      },
+      "reason": "SSDi8 develops a persistent INT8 execution path tailored to Mamba-2/SSD rather than Transformer-only assumptions, broadening low-precision inference coverage to state-space architectures."
+    },
+    {
+      "canonical_id": "arXiv:2609.22106",
+      "arxiv_id": "2609.22106",
+      "title": "PRQuant: Permutation Residual Quantization for Low-Overhead Inference",
+      "source_url": "https://arxiv.org/abs/2609.22106",
+      "priority": 87,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 87
+      },
+      "reason": "PRQuant combines AWQ-style scaling, channel permutation and static weight-side residual compensation to reduce low-bit inference overhead, directly updating weight-quantization deployment lineages."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "20260924T014100JST-worker-915241-forward-r7",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T014100JST-worker-915241-forward-r7.json",
+    "receipt": "sha256:9767488321a9f5b8673fdb4e982271294d0977b192ed7923cea4614d5ea6684d"
+  },
+  "discovery_stats": {
+    "run_key": "adhoc-20260924T014100JST-worker-915241",
+    "round": "20260924T014100JST-worker-915241-forward-r7",
+    "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+    "query_summary": "Forward citations of AWQ from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "arXiv:2608.15531",
+      "arXiv:2608.19628",
+      "arXiv:2608.12932",
+      "arXiv:2608.21952",
+      "arXiv:2609.22106"
+    ],
+    "seed_canonical_id": "arXiv:2306.00978",
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}
