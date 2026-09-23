@@ -4,10 +4,24 @@
   "slot": "positioning",
   "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
   "job_id": "job-research-61e38612a8457ae4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0640a4e19fcd3a04140f52b1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "differences": [
+      "NAEEなどlocal router probability中心のexpert skippingに対し、MoDESは各層を除去したときの最終出力KLをglobal layer factorとして掛け、layer-dependentな重要度を明示する。",
+      "MC-MoE/DiEPを含むunimodal LLM由来の方式に対し、textとvisionに別thresholdを持ち、vision token側の高いexpert冗長性を積極的に利用する。",
+      "固定top-k削減と違い、tokenごとのscoreとmodalityに応じて実行expert数を変えるため、重要token/層では計算を残せる。",
+      "static pruningと違いexpert自体をcheckpointから恒久削除せず、runtimeでselected expertの一部をskipする。",
+      "2D threshold gridをnaiveに全評価せず、monotone frontierに限定することでdeployment search costを約45分の1へ下げる。"
+    ],
+    "limitations": [
+      "training-freeでも1024件規模の代表的multimodal calibration dataとoffline KL evaluation/searchが必要で、完全なcalibration-free方式ではない。",
+      "single-H200のprefill/decode速度評価が中心で、expert-parallel distributed serving、all-to-all traffic、load balanceへの効果は本文で直接評価されない。",
+      "decodeはmemory-boundかつtext-onlyになるため、reported speedupはprefillより小さい。",
+      "公式実装ではfast CUDA MoE kernelとInternVL series codeがTODOで、論文の全backboneを同一成熟度で再現できる状態ではない。",
+      "layer importanceとmodality thresholdはcalibration distributionに依存し、domain shift時の再較正要否やtransfer robustnessは主要評価ではない。"
+    ],
+    "implementation_status": "CVPR 2026 accepted. Official PyTorch repository ModelTC/MoDES is public and includes layer-importance calibration, frontier/grid search, Kimi/Qwen3 evaluation paths and environment instructions. README lists fast CUDA MoE implementation and InternVL code as TODO.",
+    "research_positioning": "Adaptive Expert Computation / Compression系のうち、MoE MLLM向けinference-time dynamic expert skipping。router-only token-local scoreを、layer-global sensitivityとmodality-aware thresholdで補正する位置づけで、static expert pruningやretraining-based adaptive routingとは異なる。特にvision/textの冗長性差をexpert execution budgetへ直接反映した点が既存LLM向けskippingとの差別化になる。",
+    "audit_notes": "一次論文のIntroduction、Related Work、Preliminaries、Motivation、GMLG、DMT/frontier search、13-benchmark evaluation、quantization、cross-backbone comparison、efficiency、ablation、visualization、Conclusion、Appendixのfrontier proof/setupを確認。公式repositoryでCVPR 2026 acceptanceと実装状況も照合。headlineの97.33% vs 86.66%、Kimi 96.25%、frontier約45×、single-H200 speedup、calibration requirement、CUDA/InternVL TODOを保持した。"
+  },
+  "reservation": {"claim_id": "claim-0640a4e19fcd3a04140f52b1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
