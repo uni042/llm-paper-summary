@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 09:40:06 JST**
+> 自動生成: **2026-09-23 09:41:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **188** |
-| 未claim Research job | **187** |
-| 直近24hの検証済みResearch収録 | **77** |
-| 最終検証済みResearch収録 | **09-23 09:40:01 JST（5秒前）** |
+| 収録候補論文 | **187** |
+| 未claim Research job | **186** |
+| 直近24hの検証済みResearch収録 | **78** |
+| 最終検証済みResearch収録 | **09-23 09:41:14 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **188** |
+| canonical_id確認済みの一意な候補論文 | **187** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **188** |
+| 非終端Research job合計 | **187** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（1時間9分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（1時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **4** | **0** | **0** | **1** | **1** | — |
+| Research | **20** | **4** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **19** | **7** | **0** | **3** | **1** | **1** | **6** |
+| 合計 | **20** | **7** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 09:41:14 JST** [research] `arXiv:2609.09240` — Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution
+  - job: `.survey/work-queue/jobs/job-research-51f4efd90b7a5e12.json`
+  - result: `.survey/work-queue/results/research/attempt-c67963f1064ecc2790db5b2d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-c67963f1064ecc2790db5b2d.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2609.09240-scaling-post-training-ternarisation-to-qwen3-8b-capability-retention-reproduction-lossless-packing-and-packed-execution.md`
 - **09-23 09:40:01 JST** [research] `arXiv:2609.19207` — MeshKV: A Network-on-Chip KV Cache Fabric for Scalable Transformer Decoding Accelerators
   - job: `.survey/work-queue/jobs/job-research-9fc5a1ad8ad0b2d8.json`
   - result: `.survey/work-queue/results/research/attempt-b2bab9973d68ecd4f1cace12.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-88d2aa5426361490104919b5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-88d2aa5426361490104919b5.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md`
-- **09-23 05:22:23 JST** [research] `arXiv:2505.13345` — Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference
-  - job: `.survey/work-queue/jobs/job-research-bc95233f6a664ba4.json`
-  - result: `.survey/work-queue/results/research/attempt-a2e5fb73d91123b2b7515fb2.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-a2e5fb73d91123b2b7515fb2.json`
-  - paper: `papers/inference/04-moe-parallelism-communication/2025-2505.13345-occult-collaborative-expert-communication.md`
 
 ### Audit
 
@@ -184,10 +184,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **1件**
-- `arXiv:2609.09240` — Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution / worker `scheduled-chat-00`
-  - claim: **09-23 08:20:03 JST** / heartbeat: **09-23 09:32:37 JST** / lease expiry: **09-23 11:02:37 JST**
-  - evidence: `.survey/work-queue/claims/job-research-51f4efd90b7a5e12.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `arXiv:2607.28097` — From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference / worker `scheduled-chat-30`
+  - claim: **09-23 09:40:58 JST** / heartbeat: **—** / lease expiry: **09-23 11:10:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-52c9fc70a4b38892.json`
 
 #### Audit
 
@@ -207,7 +207,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **188** |
+| ready | **187** |
 
 ### 候補の重複・識別情報欠損
 
@@ -227,7 +227,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **963** |
+| inference/training/survey配下の論文Markdown実体 | **964** |
 
 ### immutable submissionの未照合
 
@@ -235,8 +235,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **255** |
-| └ Research | **183** |
+| 成功result未照合のimmutable submission | **254** |
+| └ Research | **182** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
 
