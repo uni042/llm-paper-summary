@@ -44,7 +44,12 @@ jobs:
         run: |
           python -m py_compile \
             .survey/scripts/discovery_preload_queue.py \
-            .survey/scripts/process_discovery_precheck.py
+            .survey/scripts/process_discovery_precheck.py \
+            .survey/scripts/derive_worker_run_state.py \
+            .survey/scripts/queue_worker.py
+          python -m unittest discover \
+            -s .survey/tests \
+            -p 'test_discovery_preload_queue.py'
 
       - name: Process unsettled Discovery precheck requests
         shell: bash
