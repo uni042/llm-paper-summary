@@ -6,7 +6,6 @@ on:
     paths:
       - '.survey/work-queue/discovery-precheck/requests/*.json'
       - '.survey/work-queue/discovery-preload/claims/*.json'
-      - '.survey/scripts/hot_dispatch.py'
   workflow_dispatch:
     inputs:
       request:
