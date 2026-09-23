@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-e9383c5ed3b356c7078986c9",
-  "job_id": "job-research-69b42673d686f6f1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e9383c5ed3b356c7078986c9",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-e9383c5ed3b356c7078986c9","job_id":"job-research-69b42673d686f6f1","data":{"hardware":"5台のNVIDIA Jetson実機。AGX Orin 64GB×1、Orin NX 16GB×2、Orin Nano 8GB×2をswitch接続し、Orin NX 1台をcoordinator専用、残るAGX Orin 1台・Orin NX 1台・Orin Nano 2台を4-stage pipelineとして用いる。Linux TCで100Mbpsから50〜85Mbpsへの帯域劣化を人工的に与える。","software":"NVIDIA JetPack 6.2 SDK、PyTorch、FP16重み。VLMはQwen2.5-VL-32BとYi-VL-34B。IHSのKstep=8、Bmax=2048、Bmin=32、KV安全水位0.1。BAMLMはwindow 5〜20、jitter閾値0.1、window係数2、imbalance係数gamma=0.15、cooldown 30 batch、基本メモリ割当率0.85、buffer 512MB。","methodology":"IHSはQwen2.5-VL-32B、100MbpsでPoisson到着率1〜5 req/sを与え、Sarathi-Serve等とTTFT、TPOT、平均推論遅延を比較する。BAMLMは帯域を85/70/50Mbpsへ変化させgamma感度を調べ、100Mbps開始後50 iterationで中間linkを約50Mbpsへ落とす動的条件でDynaPipe、LinguaLinkedと比較する。統合評価はSarathi-Serve+DynaPipeをBaselineとし、IHSなし、BAMLMなしのablationを含め、GYU-DETとVizWiz-VQAで平均遅延、精度、ピークGPUメモリを測定する。","scope":"データセットは11,123画像・6欠陥カテゴリのGYU-DETと31,173 image-question pairのVizWiz-VQA。モデルは30B超のQwen2.5-VL-32BとYi-VL-34B。実機エッジclusterと帯域変動を評価する一方、Jetson系列以外、より大規模なnode数、WANの複雑なloss/jitter、異なるVLM構造やhybrid parallelismへの一般化は直接検証していない。"},"reservation":{"claim_id":"claim-e9383c5ed3b356c7078986c9","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
