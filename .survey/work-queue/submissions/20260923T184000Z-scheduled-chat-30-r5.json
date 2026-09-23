@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "candidates": [
+    {"canonical_id":"DOI:10.1109/LCA.2026.3720952","doi":"10.1109/LCA.2026.3720952","title":"LLM KV Cache Storage Using CXL Memory","source_url":"https://www.semanticscholar.org/paper/fb94b27c57d37f297abc1c9c41b332368d381dcd","priority":95,"priority_breakdown":{"base":50,"lineage":25,"recency":15,"venue":5,"total":95},"reason":"CXLメモリをKVキャッシュの新しいオフロード階層としてvLLM+LMCacheで実測し、CPU DRAM/SSDとの比較とメモリプーリングを扱うため、階層メモリ・オフロード重点系統に直接該当する。"},
+    {"canonical_id":"arXiv:2607.22648","arxiv_id":"2607.22648","title":"PTStore (Prefix Tensor Store): Distributed Prefix Caching and Replication for High Throughput Inference Serving","source_url":"https://www.semanticscholar.org/paper/2415617033236b3be928543b49f8ed25b437acf6","priority":90,"priority_breakdown":{"base":50,"lineage":25,"recency":15,"venue":0,"total":90},"reason":"複数ノード/GPUへKV prefixを分散・複製してキャッシュ容量と再利用を拡張し5〜6倍効率化を報告するため、分散KVキャッシュと階層メモリ系統に強く関連する。"},
+    {"canonical_id":"arXiv:2605.09735","arxiv_id":"2605.09735","title":"KV-RM: Regularizing KV-Cache Movement for Static-Graph LLM Serving","source_url":"https://www.semanticscholar.org/paper/8c1077df014c3492e4688d48e669b469c96aad94","priority":90,"priority_breakdown":{"base":50,"lineage":25,"recency":15,"venue":0,"total":90},"reason":"KV履歴と物理ストレージを分離しblock pagerと転送集約で静的グラフservingのKV移動を規則化するため、KV配置・転送・メモリ管理系統の比較対象として重要。"}
+  ],
+  "discovery_precheck":{"request_id":"disc-s30-032918-r5","result_path":".survey/work-queue/discovery-precheck/results/disc-s30-032918-r5.json","receipt":"sha256:959ed89731ab21a21080b17d06187597170cfcc29aee12a5613673b807c43a47"},
+  "discovery_stats":{"run_key":"scheduled-chat-30-20260924T032918-9f2c7a","round":"disc-s30-032918-r5","axis":"forward citations of LMCache enterprise-scale KV cache layer","query_summary":"LMCache前方引用の事前装填をrun固有schema v3で再検査し、20件からCXLオフロード、分散prefix cache、KV移動管理を選別。","candidate_count":20,"duplicate_filtered_count":34,"accepted_canonical_ids":["DOI:10.1109/LCA.2026.3720952","arXiv:2607.22648","arXiv:2605.09735"],"round_submission_index":1,"round_submission_count":1,"search_windows":[{"topic":"LMCache forward citations","source":"semantic_scholar","date_range":"2026","category":"kv-cache-memory-tiering","citation_direction":"forward","query_family":"citation-curation","raw_result_count":60,"unseen_result_count":20,"duplicate_filtered_count":34,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":3,"position":"preload+offset"}]}
+}
