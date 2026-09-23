@@ -1,6 +1,6 @@
 {
-  "fact_generation": 50,
-  "generation": 64,
+  "fact_generation": 51,
+  "generation": 65,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
@@ -447,20 +447,22 @@
         "attempt-4507d6e7a694d747a350c3a0": {
           "attempt_id": "attempt-4507d6e7a694d747a350c3a0",
           "claimed_at": "2026-09-23T10:11:23+00:00",
+          "descriptor_path": ".survey/work-queue/submissions/research/attempt-4507d6e7a694d747a350c3a0.json",
           "job_id": "job-research-e36fdfcc83960d96",
           "kind": "research",
+          "pending": true,
+          "repair_required": false,
+          "retryable": false,
           "run_key": "scheduled-chat-00-20260923T190051JST-a41d72",
-          "submitted": false,
+          "submitted": true,
           "worker_id": "scheduled-chat-00"
         }
       },
       "cache_valid": true,
       "candidate_inventory": 151,
       "claims": {
-        "active_assignment": true,
-        "active_job_ids": [
-          "job-research-e36fdfcc83960d96"
-        ],
+        "active_assignment": false,
+        "active_job_ids": [],
         "claim_monitor_window_seconds": 60,
         "claim_result_pending": false,
         "claim_result_pending_age_seconds": 0,
@@ -470,7 +472,7 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T10:01:42.135117+00:00",
-      "generation": 64,
+      "generation": 65,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-00-20260923T190051JST-a41d72",
       "scheduled_slot": "00",
@@ -479,15 +481,18 @@
           "attempt-0640a4e19fcd3a04140f52b1"
         ],
         "last_terminal_job_status": "completed",
-        "pending_attempt_ids": [],
+        "pending_attempt_ids": [
+          "attempt-4507d6e7a694d747a350c3a0"
+        ],
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
         "research_audit_completed_this_invocation": 1,
         "retryable_attempt_ids": [],
-        "submission_result_pending": false,
+        "submission_result_pending": true,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
-          "attempt-0640a4e19fcd3a04140f52b1"
+          "attempt-0640a4e19fcd3a04140f52b1",
+          "attempt-4507d6e7a694d747a350c3a0"
         ]
       },
       "work_mode": "research",
@@ -781,6 +786,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T10:11:24.146843+00:00",
+  "updated_at": "2026-09-23T10:14:56.441850+00:00",
   "worker_id": "scheduled-chat-00"
 }
