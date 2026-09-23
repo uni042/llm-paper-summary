@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-9105373f954fe3246d7dc7ab",
-  "job_id": "job-research-4f3d063490df512a",
+  "claim_id": "claim-64f95f13e8bf245cb090a9d9",
+  "job_id": "job-research-62c06a71da7d8bc0",
   "worker_id": "scheduled-chat-00",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-9105373f954fe3246d7dc7ab",
-  "request_id": "scheduled-chat-00-20260923T080002Z-claim05",
-  "claimed_at": "2026-09-23T08:21:23+00:00",
-  "expires_at": "2026-09-23T08:27:06+00:00",
+  "attempt_id": "attempt-64f95f13e8bf245cb090a9d9",
+  "request_id": "scheduled-chat-00-20260923T080002Z-claim06",
+  "claimed_at": "2026-09-23T08:27:06+00:00",
+  "expires_at": "2026-09-23T09:57:06+00:00",
   "kind": "research",
   "depends_on_job_ids": [
-    "job-research-4f3d063490df512a"
+    "job-research-62c06a71da7d8bc0"
   ],
   "run_key": "scheduled-chat-00-20260923T080002Z",
   "scheduled_slot": "00",
@@ -24,9 +24,5 @@
     "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
     "results": ".survey/work-queue/records/chat-record-f/results.json",
     "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
-  },
-  "released": false,
-  "invalidated": false,
-  "terminal_job_status": "completed",
-  "released_at": "2026-09-23T08:27:06+00:00"
+  }
 }
