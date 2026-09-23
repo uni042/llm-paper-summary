@@ -45,6 +45,42 @@ class ResearchQualitySelfcheckTests(unittest.TestCase):
         precheck.assert_called_once()
         inspect.assert_called_once()
 
+    def test_existing_paper_rebuilds_descriptor_with_exact_blob_identity(self) -> None:
+        quality = SimpleNamespace(status="PASS", failures=[], warnings=[])
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            target = root / "papers/inference/example.md"
+            target.parent.mkdir(parents=True)
+            target.write_text("# existing\n", encoding="utf-8")
+            with patch.object(
+                selfcheck.prepare_completed_submission,
+                "build",
+                side_effect=[self._descriptor(), self._descriptor()],
+            ) as build, patch.object(
+                selfcheck.process_immutable_submission,
+                "render_descriptor",
+                return_value="# rendered",
+            ), patch.object(
+                selfcheck.process_immutable_submission,
+                "_precheck_paper",
+            ), patch.object(
+                selfcheck.paper_quality_gate,
+                "inspect_rendered_paper",
+                return_value=quality,
+            ):
+                result = selfcheck.check(
+                    root,
+                    kind="audit",
+                    attempt_id="attempt-a",
+                    job_id="job-a",
+                    record_bank="a",
+                )
+
+        self.assertTrue(result["selfcheck_passed"])
+        self.assertEqual(build.call_count, 2)
+        self.assertIsNone(build.call_args_list[0].kwargs["expected_blob_sha"])
+        self.assertTrue(build.call_args_list[1].kwargs["expected_blob_sha"])
+
     def test_quality_fail_is_repair_before_async_preflight(self) -> None:
         quality = SimpleNamespace(
             status="FAIL",
