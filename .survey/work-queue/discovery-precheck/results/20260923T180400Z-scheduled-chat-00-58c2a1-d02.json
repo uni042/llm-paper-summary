@@ -1,0 +1,854 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260923T180400Z-scheduled-chat-00-58c2a1-d02",
+  "collector_id": "scheduled-chat-00-58c2a1-forward-awq",
+  "run_key": "scheduled-chat-00-20260924T025857JST-58c2a1",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "160",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "347808cb7df7850694bccf870649072c78ceb5bf",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T18:04:27.477476+00:00",
+  "preload_id": "preload-a64cd9b9750549c9709a",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-a64cd9b9750549c9709a",
+  "results": [
+    {
+      "title": "One Qubit Can Beat One Bit: Quantum Advantage for Post-Training Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/cc966931e7597097b280c33e95eee927c1fc7519",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "One-bit post-training quantization represents each weight using only its sign, requiring all deployment contexts to share the same binary weight matrix even when their activation statistics favor different sign patterns. We study this shared-sign constraint and introduce Quantum Random Access Quantization (QRAQ). This framework encodes context-dependent signs in a quantum random-access code and retrieves them via context-matched Pauli measurements. Under an explicit fresh-copy logical readout model, QRAQ produces an unbiased, context-specific binary surrogate with a tractable shot-noise penalty. We prove a row-wise separation from shared-sign one-bit PTQ with signed per-row scales. When the optimal context-wise signs are incompatible, QRAQ achieves a strictly lower ideal reconstruction risk. We also derive finite-shot and calibrated-noise conditions under which this separation is retained. Fixed-readout quantum schemes are classically simulable, so the relevant resource in this model is measurement incompatibility rather than quantization alone. Finally, we characterize the role of scale granularity, provide finite-sample certificates, and evaluate the predicted ideal, finite-shot, noisy, and multi-context regimes in simulator experiments.",
+      "canonical_id": "arXiv:2608.05240",
+      "arxiv_id": "2608.05240",
+      "authors": [
+        "Yuma Ichikawa",
+        "Moeto Mishima"
+      ]
+    },
+    {
+      "title": "COSMOS: Designing Energy-Efficient Context-Aware Multimodal Cognitive Systems",
+      "source_url": "https://www.semanticscholar.org/paper/5b0a0d1d75c153c5647f73031f8ba14450995b64",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "Multimodal AI (MMAI) systems are becoming integral to safety-critical edge applications, from autonomous driving and robotics to smart healthcare and surveillance, where real-time perception must operate under stringent energy and compute constraints. These systems comprise distinct sensing units, such as cameras, microphones, and inertial sensors, each forming a separate subsystem with unique capabilities and constraints. As environments evolve, modality relevance shifts and redundancy emerges, requiring dynamic adaptation to maintain quality of service while extending system lifetime. Existing methods optimize individual subsystems or static inference paths, lacking responsiveness to contextual changes; coordinating adaptation across these heterogeneous subsystems remains essential yet largely unexplored. We introduce COSMOS, a runtime framework for distributed multimodal edge nodes. Its central contribution is a closed-loop control structure that uses predicted semantic context and measured temporal stability to jointly govern modality activation, inference frequency, and subsystemlevel approximation. COSMOS instantiates this control loop through three mechanisms: Scene/State-aware Modality Selection (SMS), Temporal Locality-driven Decision and Regulation (TLDR), and modality-aware Design Space Exploration (DSE). The DSE heuristic coordinates compute, audio preprocessing, sensing, memory, and communication knobs under a unified energy-quality objective. Validated on an FPGA-MCU prototype (Intel Agilex-5 primary + ESP32 auxiliary) for Audio-Visual Event Localization, COSMOS extends system lifetime by 7.73× with <5% accuracy loss, achieving up to 1.77× primary and 3.01× auxiliary energy savings across six transformer backbones.",
+      "canonical_id": "DOI:10.1145/3816440.3818581",
+      "doi": "10.1145/3816440.3818581",
+      "authors": [
+        "Arghadip Das",
+        "Yatharth Agarwal",
+        "Soumendu Kumar Ghosh",
+        "Arnab Raha",
+        "Vijay Raghunathan"
+      ]
+    },
+    {
+      "title": "L2Mersit: A Scaling-Free Sub-8-bit Data Format for On-Device Reliable Large Language Model Serving",
+      "source_url": "https://www.semanticscholar.org/paper/22d62a7bd7a73484d90d29394f54070171291500",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "On-device large language model (LLM) serving drives low-precision computing to address memory and compute limits. This paper presents L2Mersit, a scaling-free, range-adjustable exponent-encoded data format tailored for sub-8-bit LLM quantization. Building upon the Mersit framework, L2Mersit employs dual mode operation, comprising range-expanded and precision-enhanced modes that dynamically adapt to activation distributions with minimal control overhead. The proposed design eliminates on-the-fly scaling and auxiliary computations while effectively preserving range and precision, thereby achieving both superior perplexity and hardware efficiency. Experimental results demonstrate that L2Mersit achieves the highest accuracy among all 6-bit exponent-encoded formats while reducing the hardware complexity of auxiliary units for low-precision computing, resulting in a 62.7% area reduction.",
+      "canonical_id": "DOI:10.1145/3816440.3818527",
+      "doi": "10.1145/3816440.3818527",
+      "authors": [
+        "M. Kim",
+        "Hyeonseong Kim",
+        "Ik-Joon Chang",
+        "Seungkyu Choi"
+      ]
+    },
+    {
+      "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
+      "source_url": "https://www.semanticscholar.org/paper/e1599f28636a95b2b34467a5802cd618cd3e8a29",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "Edge-side LLM deployment, characterized by low-batch inference, has gained significance due to data privacy and personalization requirements. Attention is the key operator of LLM inference, involving massive KV cache access and full-context-aware softmax computation. To optimize KV cache size and softmax computation, various Attention mechanisms and the FlashAttention algorithm have been proposed. As 3D DRAM-based process-near-memory (PNM) presents a promising solution for low-batch LLM inference, processing these optimized Attention mechanisms may suffer from low utilization of 3D DRAM internal bandwidth due to the distributed memory access nature. Furthermore, existing Special Function Unit (SFU) architectures in 3D DRAM PNM for FlashAttention suffer from either severe communication bottlenecks in centralized designs or stringent area constraints in distributed implementations. To address these challenges, we propose H3-Attn, an Attention-efficient 3D DRAM PNM processor for low-batch LLM inference. H3-Attn features a hybrid head parallelism for Attention processing, whereby various optimized Attention mechanisms with spatial tiled FlashAttention can be flexibly enabled with fully leveraged 3D DRAM PNM bandwidth. A Hierarchical SFU (H-SFU) architecture with Multi-Head Instruction Interleaving (MHII) is also proposed, which significantly enhances softmax efficiency in FlashAttention by co-optimizing SFU area footprint and temporal utilization. Evaluations on various LLM models demonstrate that our proposed hybrid head parallelism achieves a 1.54-3.84× decoding speedup over the baseline Attention processing. The H-SFU with MHII delivers a 3.20× compute density improvement compared with prior SFU architectures for 3D DRAM PNM.",
+      "canonical_id": "DOI:10.1145/3816440.3818602",
+      "doi": "10.1145/3816440.3818602",
+      "authors": [
+        "Yaolei Li",
+        "Wenbin Jia",
+        "Zhan-Chen Zhao",
+        "Yongpan Liu"
+      ]
+    },
+    {
+      "title": "CIM-FLEX: An Integer-Only Flexible Periphery for Distributed Compute-In-Memory Architectures",
+      "source_url": "https://www.semanticscholar.org/paper/3e808978bd3cd5e36410870e0300145cb015fefb",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "Distributed compute-in-memory (CIM) architectures are emerging as a path towards energy-efficient and highly parallel edge-class deep neural network (DNN) inference. However, the lack of a flexible, unified digital periphery limits the ability of distributed CIM systems to support integer-quantized DNN inference schemes, activation functions, and scalable tile-to-tile dataflow. We present CIM-FLEX, an integer-only periphery architecture that enables each CIM tile to autonomously perform partial-sum rescaling, asymmetric activation processing, and lightweight programmable activation functions. CIM-FLEX also supports mixed-precision integer multiply-and-accumulate (MAC) by decomposing higher-precision operations into uniform-precision partial MACs, without modifying existing CIM primitives. CIM-FLEX enables flexible tile-to-tile dataflow across distributed CIM tiles, exposing a tradeoff between parallel output generation and energy efficiency, where deeper accumulation chains reduce concurrent periphery utilization and improve overall efficiency. Numerical studies and TFLite-based LUT activation experiments validate a high signal-to-noise ratio (~30 dB) for programmable activation functions, and a 14 nm CMOS implementation shows a 0.012 mm2 area for the CIM-FLEX.",
+      "canonical_id": "DOI:10.1145/3816440.3818582",
+      "doi": "10.1145/3816440.3818582",
+      "authors": [
+        "I. Sanli",
+        "Michele Rossi",
+        "E. Ferro",
+        "Abhishek Jha",
+        "A. Burg",
+        "S. Singh",
+        "T. Boesch",
+        "I. Boybat"
+      ]
+    },
+    {
+      "title": "Heterogeneity-Aware Microscaling for Efficient Low-Bit LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/520289186d8df8c31a3ed75f35d9a663f2ceb4fb",
+      "year": 2026,
+      "published": "2026-08-04",
+      "abstract": "Microscaling (MX) is now the standard for low-bit large language model (LLM) inference. Its 4-bit form MXFP4 still loses substantial accuracy, because existing MX formats fix either the element format or the precision-recovery scheme across blocks, and thus capture only limited quantization heterogeneity. Quantization heterogeneity appears at two levels: 1) across blocks, the preferred element format and precision-recovery scheme vary; 2) across operands, weights and activations require different encoding. We introduce AdaMX (Adaptive Microscaling), a heterogeneity-aware format and accelerator. It selects the precision-recovery scheme per block and the representation per operand, at no increase in equivalent bit width (EBW). One design covers two block sizes, giving a higher-accuracy operating point and a lower-EBW operating point that saves storage. We implement a 22nm FD-SOI AI accelerator prototype with the proposed decoder, computing unit, and quantization logic. Against an otherwise identical MXFP4 accelerator with FP4-only multipliers, AdaMX adds about 1% system energy. At the lower-EBW point, AdaMX stays more accurate than the baseline while lowering both memory footprint and energy. Across LLMs from 3B to 70B, AdaMX removes 83% of the MXFP4 accuracy loss on commonsense and 82% on MMLU, and 43% and 27% of the NVFP4 loss. AdaMX also generalizes to multimodal models. On Gemma-4 12B, it leads MXFP4 on all four vision-language benchmarks and keeps up to 96% of FP16 accuracy.",
+      "canonical_id": "arXiv:2608.03867",
+      "arxiv_id": "2608.03867",
+      "authors": [
+        "Junyi Luo",
+        "Xin Jiang",
+        "Tai-Hao Wen",
+        "Ruichen Qi",
+        "Minxing Chu",
+        "Hongyi Wu",
+        "Gregory Kielian",
+        "Ben Laurie",
+        "Qirui Zhang",
+        "Quan Cheng",
+        "Dennis Sylvester",
+        "Mehdi Saligane"
+      ]
+    },
+    {
+      "title": "Recurrent Residual Quantization: A Progressive Multi-Precision Representation for LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17",
+      "year": 2026,
+      "published": "2026-08-04",
+      "abstract": "Serving large language models (LLMs) under diverse deployment constraints requires flexible trade-offs between accuracy, memory footprint, and throughput. However, conventional quantization methods typically require a separate checkpoint for each target bit-width. We introduce Recurrent Residual Quantization (RRQ), a post-training quantization (PTQ) framework that represents weights as a low-bit quantized base together with a sequence of quantized residual corrections, enabling multiple effective precisions from a single checkpoint. Starting from a 2-bit model obtained via post-training quantization (PTQ) or round-to-nearest (RTN), RRQ progressively adds lightweight 2-bit residuals generated via RTN to construct 4-, 6-, and 8-bit representations. The method is calibration-free and avoids joint multi-bit optimization. In our Qwen3-8B setup, the full all-RTN 2-/4-/6-/8-bit package is constructed in 1,293 seconds, 3.3 times faster than the measured MatGPTQ construction. Experiments on six recent LLMs show competitive accuracy at 6 and 8 bits, with model-dependent behavior at 4 bits. The code will be made publicly available upon publication.",
+      "canonical_id": "arXiv:2608.04048",
+      "arxiv_id": "2608.04048",
+      "authors": [
+        "Yu Luo",
+        "Bo Dong",
+        "Wenhua Cheng",
+        "Haihao Shen"
+      ]
+    },
+    {
+      "title": "When Calibration Depends on the Scoring Rule: Quantized Biomedical LLM Classification",
+      "source_url": "https://www.semanticscholar.org/paper/77540548e92660003f8a7152f97666ed23e25160",
+      "year": 2026,
+      "published": "2026-08-04",
+      "abstract": "Quantized large language models can run on consumer hardware, which motivates interest in on-premises processing of sensitive data. The reliability of their confidence estimates depends on implementation choices (prompt template, label wording, and scoring normalization) that are seldom treated as experimental variables. We evaluate three 7-billion-parameter Mistral variants (a base model, BioMistral, and an instruction-tuned checkpoint evaluated without its chat template) at FP16, INT8, and INT4 on five-class sentence classification in medical abstracts. We test two primary templates on n = 2,000 test sentences and two auxiliary templates on n = 200 validation sentences. Our central observation, made without post-hoc calibration, is that switching from summed to mean-token log-likelihood reverses which model appears better calibrated: BioMistral's mean calibration error across matched conditions nearly triples, while the instruction-tuned model's drops by more than half. Accuracy changes by at most 1.4 percentage points for these two checkpoints. Negative log-likelihood and Brier score show the same reversal. The two primary templates were selected using test-derived examples, so absolute performance with them is exploratory. Between them, prompt choice changes mean accuracy across precisions by 2.9 to 17.8 percentage points. Eight-bit quantization changes accuracy by at most 1.1 percentage points for the adapted checkpoints; four-bit quantization shows mixed but non-catastrophic effects. Post-hoc temperature scaling reduces calibration error under summed scoring but was not fitted under mean-token scoring, so whether the reversal survives per-scorer calibration is unknown. These exploratory results suggest that calibration comparisons of decoder-based classifiers should treat scoring normalization and prompt design as first-order experimental decisions.",
+      "canonical_id": "arXiv:2608.03854",
+      "arxiv_id": "2608.03854",
+      "authors": [
+        "A. Rasmussen",
+        "Hongpeng Qin"
+      ]
+    },
+    {
+      "title": "ARCHead: Activation-Metric Residual Correction for Large Language Model Output Heads",
+      "source_url": "https://www.semanticscholar.org/paper/6f2b058ba653c1aca5613e716a2bb7a12bfc748e",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "Weight-only quantization substantially reduces the storage of large language model (LLM) transformer blocks, but practical backends often retain the final language-modeling head (LM-head) in BF16 or FP16. Quantizing this projection naively can strongly perturb the vocabulary-logit distribution. We present ARCHead, a packed LM-head compressor that combines a quantized low-rank core, group-wise INT4 residuals, and a low-rank correction fitted in an activation-derived metric. ARCHead stores no dense BF16 head and reduces persistent LM-head storage by 3.7-3.9x. On Qwen3-8B-Base, it uses 25.6% of BF16 head storage while attaining 1.007 relative perplexity; storage-matched naive INT4 yields 1.14-1.16. Replacing the BF16 head left by AWQ or bitsandbytes adds only 0.006-0.007 cross-entropy, with less than 2% throughput change in our measurements. ARCHead therefore complements block quantizers by compressing the large output projection they can leave untouched. Code is available at https://github.com/suayptalha/archead.",
+      "canonical_id": "arXiv:2608.02703",
+      "arxiv_id": "2608.02703",
+      "authors": [
+        "Suayp Talha Kocabay",
+        "Talha Rüzgar Akkus",
+        "Kamer Ali Yüksel"
+      ]
+    },
+    {
+      "title": "In Which Fields Do ChatGPT Scores Align More Closely with Research Quality than Do Citation Rates?",
+      "source_url": "https://www.semanticscholar.org/paper/9553f30248b2b5c1209ca0bce84c66c90511df77",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "Abstract Purpose Although citation-based indicators are widely used, they are not useful for recently published research, directly reflect only one of the three common dimensions of research quality, and have little value in some social sciences, arts and humanities. Large Language Models (LLMs) may address some of these weaknesses. Design/methodology/approach This article reports a science-wide assessment of the research quality scoring capability of ChatGPT-4o mini, ChatGPT-4o, and ChatGPT-5 mini. It correlates ChatGPT scores, averaged over 5 repetitions, with departmental average quality scores for 107,212 UK-based journal articles. Findings ChatGPT-4o is marginally better than ChatGPT-4o mini in most of the 34 field-based Units of Assessment (UoAs) tested. ChatGPT-4o scores have a positive correlation with research quality in 33 of the 34 UoAs, with the results being statistically significant in 31. ChatGPT-4o scores had a higher correlation with research quality than long term citation rates in 21 out of 34 UoAs and a higher correlation than short term citation rates in 26 out of 34 UoAs. The most substantial exception is Physics, for which citations are more useful. ChatGPT-5 mini has even stronger correlations overall and for departmental averages, it correlates more strongly with quality scores than do citations in 31 out of 34 UoAs, with correlations reaching 0.905. Research limitations All articles assessed are from the UK. The practical value of LLM scores for decision making is not assessed. Only the Normalised Log-transformed Citation Score (NLCS) was tested against ChatGPT rather than other citation rate indicators. Practical implications ChatGPT can be considered as a research quality indicator to support expert judgement in almost all academic fields. Originality/value The results give science-wide evidence that ChatGPT-4o mini, ChatGPT-4o, and ChatGPT-5 mini are competitive with citations as new research quality indicator sources, and technically better in most fields.",
+      "canonical_id": "DOI:10.1515/jdis-2026-0058",
+      "doi": "10.1515/jdis-2026-0058",
+      "authors": [
+        "Mike Thelwall"
+      ]
+    },
+    {
+      "title": "Lossless Tensor Compression as Program Synthesis",
+      "source_url": "https://www.semanticscholar.org/paper/55d44bed336be31e525d1e50d28cada09f2a0ff4",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "Model checkpoints are growing in both number and size, which makes archival, transfer, and deployment increasingly costly. General-purpose compressors can reduce storage requirements but ignore tensor structure, whereas existing tensor-specific compressors rely on fixed and format-specific pipelines. We present Brevis, which formulates lossless tensor compression as program synthesis. We design a typed domain-specific language (DSL) that captures recurring tensor structures, such as repeated regions and floating-point fields, through a set of reversible operators. Given a tensor, Brevis synthesizes a self-contained DSL program that reconstructs it bit-exactly. A checkpoint-specific production prior, learned from a small representative sample of tensors, guides a bounded A* search to synthesize compact programs, which can later be executed directly for bit-exact decompression. On 10 public checkpoints spanning language, audio, and image generation models, Brevis reduces 2.13 TB of checkpoint data to 1.41 TB, a 33.93% storage reduction. It produces archives up to 30.87% smaller than those of four general-purpose compressors, including zstd and gzip, and smaller archives than the tensor-specific compressors ZipNN and DFloat11. Under a practical concurrency configuration, Brevis achieves 3.60 GB/s compression and 6.61 GB/s decompression while preserving every source byte.",
+      "canonical_id": "arXiv:2608.02162",
+      "arxiv_id": "2608.02162",
+      "authors": [
+        "Jieke Shi",
+        "Junda He",
+        "Wenjia Jiang",
+        "Weifeng Sun",
+        "Shi-Dong Pan",
+        "Zhensu Sun",
+        "Chengran Yang",
+        "Peixin Zhang",
+        "Yifan Jia",
+        "Zhou Yang",
+        "T. Hoàng",
+        "Xiwei Xu",
+        "Zhenchang Xing",
+        "David Lo"
+      ]
+    },
+    {
+      "title": "Not All 4-bit Quantizers Are Equal: Deployment-Time Mitigation of PII Leakage in Fine-Tuned Small Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/2924c3fba559324adf911e744d4ff77e566e3fa8",
+      "year": 2026,
+      "published": "2026-08-02",
+      "abstract": "Organizations fine-tune small language models on private data and then compress them to 4 bits for resource-efficient deployment. We show that the compression method also affects privacy. What separates the methods is not the bit width but whether they tune their rounding on a small sample of text, the calibration corpus. On our primary model, when each planted record's own opening text is used as the prompt, the two calibration-based methods we test, Activation-aware Weight Quantization (AWQ) and Gradient-based Post-Training Quantization (GPTQ), each reproduce none of the planted records, while the calibration-corpus-free GGUF Q4_K_M format reproduces 5.3% of them. Tracked across five open models with 0.5-7 billion parameters, AWQ leaks least at every size and in both families, with little accuracy loss at 3-7 billion. Controlled experiments associate the difference with calibration-induced rounding error in channels involved in rare-token prediction. Choosing the 4-bit method is therefore a deployment-time privacy decision, not only a question of speed and quality.",
+      "canonical_id": "arXiv:2609.25014",
+      "arxiv_id": "2609.25014",
+      "authors": [
+        "Cristhian Kapelinski",
+        "Diego Kreutz"
+      ]
+    },
+    {
+      "title": "Retrieval Augmented Biomedical Question Answering with Weak Question Recovery and Neural Reranking for BioASQ Task 14b",
+      "source_url": "https://www.semanticscholar.org/paper/552de24a69b31f3dd5393c53411953c3b7dffc81",
+      "year": 2026,
+      "published": "2026-08-02",
+      "abstract": "This work presents DS@GT ARC BioASQ team's work for a biomedical question answering pipeline, integrating multi-source query expansion, neural reranking, retrieval refinement, and OpenBioLLM-assisted answer generation. The system combines PubMed retrieval with fine-tuned MiniLM-based semantic reranking, Reciprocal Rank Fusion (RRF), and feature-based relevance scoring to improve document ranking quality. To address challenging queries with weak retrieval performance, we introduce a conditional weak-question recovery strategy that applies semantic expansion, relationship-aware augmentation, and selective result merging. A post-retrieval pruning stage further removes redundant or low-relevance snippets while preserving evidence coverage for downstream answer generation. Experimental results on BioASQ evaluation batches demonstrate that the proposed recovery and cleanup strategies substantially improve retrieval robustness and MAP@10 performance on difficult question sets. The final system also incorporates output validation and post-processing steps to ensure formatting consistency and submission reliability across BioASQ phases.",
+      "canonical_id": "arXiv:2608.01468",
+      "arxiv_id": "2608.01468",
+      "authors": [
+        "Xueying Zhao",
+        "Mai Lee",
+        "Balaji Anandganesh"
+      ]
+    },
+    {
+      "title": "AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs",
+      "source_url": "https://www.semanticscholar.org/paper/a62d37d2be41123840ccba5602cd45f27c0747c9",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103839",
+      "doi": "10.1016/j.sysarc.2026.103839",
+      "authors": [
+        "Yun Chen",
+        "Lu Lu"
+      ]
+    },
+    {
+      "title": "DSLA: An Energy-Efficient Dual-Sparsity LLM Accelerator With HiMix-BFP",
+      "source_url": "https://www.semanticscholar.org/paper/195f66a6ce58294ff6a6940ac20151ad3382f841",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Large language models (LLMs) have achieved great success in areas such as language understanding and text generation. However, their massive parameters incur high computational, storage, and energy costs, making deployment on resource- and power-constrained edge devices particularly challenging. Block Floating Point (BFP) reduces storage and computational overhead by grouping data into blocks and aligning them to the maximum exponent within each block, converting them into low-bit fixed-point numbers. Bidirectional Block Floating Point (BBFP) extends BFP by aligning data within a block to two different exponents, reducing quantization error for small values. However, at ultra-low bit widths, both methods suffer from severe accuracy degradation due to their sensitivity to outliers, which limits their ability to achieve aggressive energy savings. In addition, the exponent alignment procedure in these schemes inherently introduces bit-sliced sparsity, an opportunity that remains largely unexplored for further improving energy efficiency on edge accelerators. To address these challenges, we propose an energy-efficient dual-sparsity LLM accelerator (DSLA) that supports the HiMix-BFP data format. HiMix-BFP improves low-bit accuracy by preserving extra mantissa bits for the maximum value and adaptively selecting BFP or BBFP per block. The DSLA architecture efficiently exploits both value and bit-sliced sparsity across different bit widths to further enhance energy efficiency by employing low-bit computational units, load-balancing mechanisms, and a hierarchical bit-accumulation array. Experimental results demonstrate that HiMix-BFP reduces perplexity by up to 76%, while DSLA achieves up to $1.39\\times $ higher throughput and $1.59\\times $ greater energy efficiency compared to SOTA accelerators.",
+      "canonical_id": "DOI:10.1109/TCSI.2026.3692866",
+      "doi": "10.1109/TCSI.2026.3692866",
+      "authors": [
+        "Zikang Zhou",
+        "Siyao Dai",
+        "Yaqi Chen",
+        "Kaiqi Chen",
+        "Jun Han"
+      ]
+    },
+    {
+      "title": "AdaMTP: An Adaptive Training Paradigm for Multi-Token Prediction",
+      "source_url": "https://www.semanticscholar.org/paper/9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Multi-Token Prediction (MTP) has emerged as an effective paradigm that augments a shared Large Language Model backbone with auxiliary heads, training the model to predict several future tokens in parallel to enrich its supervision signal and accelerate inference. However, existing training frameworks adopt a rigid, fixed-length prediction horizon, disregarding the highly non-uniform information density of natural language and code. Forcing the auxiliary heads to predict across high-entropy semantic boundaries injects noisy, conflicting training signals; because these heads share the backbone's latent representations, the resulting gradients backpropagate and interfere with the model's core capabilities. We propose AdaMTP, an adaptive training paradigm that dynamically aligns the prediction horizon with the intrinsic predictability of the sequence. At its core, an entropy-based segmentation algorithm leverages the base model to detect sudden surges in uncertainty as semantic boundaries, partitioning sequences into variable-length groups. Each token is assigned an adaptive prediction depth, and a dynamically masked MTP objective suppresses the loss for predictions that cross these boundaries, attenuating the noisy gradients that degrade the backbone. Across mathematical reasoning, code generation, and general benchmarks on three backbones (Llama-3.1-8B, Qwen-2.5-7B, Gemma-3-12B), AdaMTP consistently outperforms standard MTP in both task performance and inference speedup.",
+      "canonical_id": "arXiv:2608.00434",
+      "arxiv_id": "2608.00434",
+      "authors": [
+        "Ziqiang Cui",
+        "Han Shi",
+        "Bowei He",
+        "Yu Pan",
+        "Peiyang Liu",
+        "Shengyin Sun",
+        "Yankai Chen",
+        "Haoli Bai",
+        "Yichun Yin",
+        "Xue Liu",
+        "Chen Ma"
+      ]
+    },
+    {
+      "title": "Optimizing AI: A Reference Architecture to Streamline AI Inference and Performance Acceleration",
+      "source_url": "https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/mc.2026.3695984",
+      "doi": "10.1109/mc.2026.3695984",
+      "authors": [
+        "Mlađan Jovanović",
+        "M. Campbell"
+      ]
+    },
+    {
+      "title": "Efficient Edge-Cloud Collaboration via Token Pruning and Quantized Feature Transmission for Consumer Electronics and Intelligent Vehicles",
+      "source_url": "https://www.semanticscholar.org/paper/6ee4da8d9d1840e6d8c1e3ef2867d11168a0b706",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Multimodal large models have demonstrated remarkable performance in tasks such as object detection and multimodal question answering. However, due to resource constraints, it is challenging to deploy high-performance multimodal large models on edge devices; even after parameter compression, these models struggle to achieve satisfactory performance. To address this challenge, we explore a novel end-to-end edge-cloud collaborative training paradigm, aiming to efficiently exchange information between the edge and the cloud via token pruning and feature quantization in an edge–cloud architecture. We propose Quantization and Pruning for Edge–Cloud Learning (Q2-ECL), a dual quantization framework for efficient edge-cloud collaboration. Specifically, in the token pruning stage, an adaptive network pruning strategy is applied: by dynamically optimizing the pruning rate and redundancy threshold based on token similarity and a graph-based gradient adversarial learning mechanism, the edge-cloud features (features uploaded by the edge and those received by the cloud, residing in a unified semantic space) are pruned to remove redundancy. In the feature quantization stage, we employ binary spherical quantization as an implicit codebook. We further introduce semantic augmentation and alignment techniques to maximize the similarity between edge and cloud features as a training objective, thereby minimizing semantic loss in edge-cloud information transmission. Experimental results on multiple public datasets demonstrate that Q2-ECL enables efficient and low-cost feature transmission at the edge while minimizing the performance loss caused by feature quantization.",
+      "canonical_id": "DOI:10.1109/TCE.2026.3674936",
+      "doi": "10.1109/TCE.2026.3674936",
+      "authors": [
+        "Yingjie Cui",
+        "Yong Chen",
+        "Hange Zhou",
+        "Zhonglin Jiang",
+        "Huan Rong",
+        "Zhong-Feng Chen",
+        "Zhen-Yu Lu"
+      ]
+    },
+    {
+      "title": "Q-SA2: Enhanced low-bit quantization-aware fine-tuning via structure-aware adaptation.",
+      "source_url": "https://www.semanticscholar.org/paper/234831a790e0931b9a8e6886fdddeeb8bafb84e7",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Quantization-Aware Fine-tuning (QAF) is critical for deploying large language models in resource-constrained scenarios. While in low-bit QAF, strong downstream performance hinges on both minimizing model quantization errors and providing robust initialization of low-rank adaptation. To further improve the model performance, we propose Structure-Aware Adaptation for low-bit QAF (Q-SA2) in this paper. By decomposing pre-trained weights into sparse components and principal subspaces, Q-SA2 provides a favorable initialization for downstream task adaptation. Specifically, to better preserve the representations of pre-trained weights and minimize errors, the sparse components are quantized, and the low-rank adapters are initialized from the principal subspaces. Then, we extend this framework to a weight-wise mixed-precision variant with a distribution-based outlier detection strategy on sparse components, enabling Q-SA2 to adaptively allocate higher precision to critical weights. Comprehensive experiments on WikiText-2, C4, GSM8K, and the GLUE benchmark demonstrate that the proposed method consistently outperforms state-of-the-art QAF methods, particularly on mathematical reasoning tasks, achieving an average improvement of 4% under 2-bit quantization and up to 7.78% on the Qwen2.5-7B model under 4-bit quantization. The code is available at https://github.com/Rainiay/Q-SA2.git.",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109558",
+      "doi": "10.1016/j.neunet.2026.109558",
+      "authors": [
+        "Yuning Yang",
+        "Guo-Wei Peng",
+        "Xiurui Xie",
+        "Dong-Yang Zhang",
+        "Guangchun Luo",
+        "Guisong Liu"
+      ]
+    },
+    {
+      "title": "Empowering Small Language Models With Chain of Thought and Parameter Efficient Fine Tuning for Efficient Deep Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/b83bac36fdab65c294e25d606b11c638812ba86e",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": ": Small Language Models (SLMs) run faster and fit on modest hardware, yet solving multi-step logic problems has traditionally been difficult for them. This work investigates a systematic, multi-model framework that combines Chain-of-Thought (CoT) prompting with Low-Rank Adaptation (LoRA) parameter-efficient fine-tuning, and measures the contribution of each component independently. We evaluate three SLMs (TinyLlama-1.1B, Phi-3-mini-4k-instruct, and Qwen2.5-1.5B) using 1,164 training samples drawn from GSM8K, Microsoft Orca-Math-Word-Problems-200k, and OpenAI HumanEval, and evaluate on 500 GSM8K test problems. Phi-3-mini-4k-instruct achieves the strongest overall gains, reaching 16.0% exact match and 61.7% step accuracy under +CoT+LoRA, a 95% improvement over its own baseline. The decline observed under CoT-only prompting and the subsequent recovery under CoT+LoRA were statistically significant (McNemar test, p<0.05). A notable finding is that CoT prompting applied without fine-tuning degrades Phi-3-mini’s exact match score by approx imately 44% due to an instruction-format conflict that LoRA fine-tuning resolves. Our ablation shows that neither technique alone produces peak performance; their combination does. The framework trains fewer than 0.05% of model parameters and runs end-to-end on a single consumer-grade NVIDIA RTX 4500 Ada GPU with 24 GB VRAM, making capable SLM-based reasoning deployable without datacenter-scale infrastructure.",
+      "canonical_id": "DOI:10.3844/jcssp.2026.2617.2632",
+      "doi": "10.3844/jcssp.2026.2617.2632",
+      "authors": [
+        "Aryan Raina",
+        "Shiwani Gupta",
+        "Jagruti Jadhav",
+        "Sampada Bhonde",
+        "S. Mathur",
+        "Anand A. Maha",
+        "Pranjali Sankhe"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.05240",
+      "identity_tokens": [
+        "id:arXiv:2608.05240",
+        "title:one qubit can beat one bit quantum advantage for posttraining quantization",
+        "url:https://www.semanticscholar.org/paper/cc966931e7597097b280c33e95eee927c1fc7519"
+      ],
+      "record": {
+        "title": "One Qubit Can Beat One Bit: Quantum Advantage for Post-Training Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/cc966931e7597097b280c33e95eee927c1fc7519",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "One-bit post-training quantization represents each weight using only its sign, requiring all deployment contexts to share the same binary weight matrix even when their activation statistics favor different sign patterns. We study this shared-sign constraint and introduce Quantum Random Access Quantization (QRAQ). This framework encodes context-dependent signs in a quantum random-access code and retrieves them via context-matched Pauli measurements. Under an explicit fresh-copy logical readout model, QRAQ produces an unbiased, context-specific binary surrogate with a tractable shot-noise penalty. We prove a row-wise separation from shared-sign one-bit PTQ with signed per-row scales. When the optimal context-wise signs are incompatible, QRAQ achieves a strictly lower ideal reconstruction risk. We also derive finite-shot and calibrated-noise conditions under which this separation is retained. Fixed-readout quantum schemes are classically simulable, so the relevant resource in this model is measurement incompatibility rather than quantization alone. Finally, we characterize the role of scale granularity, provide finite-sample certificates, and evaluate the predicted ideal, finite-shot, noisy, and multi-context regimes in simulator experiments.",
+        "canonical_id": "arXiv:2608.05240",
+        "arxiv_id": "2608.05240",
+        "authors": [
+          "Yuma Ichikawa",
+          "Moeto Mishima"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816440.3818581",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816440.3818581",
+        "title:cosmos designing energyefficient contextaware multimodal cognitive systems",
+        "url:https://www.semanticscholar.org/paper/5b0a0d1d75c153c5647f73031f8ba14450995b64"
+      ],
+      "record": {
+        "title": "COSMOS: Designing Energy-Efficient Context-Aware Multimodal Cognitive Systems",
+        "source_url": "https://www.semanticscholar.org/paper/5b0a0d1d75c153c5647f73031f8ba14450995b64",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "Multimodal AI (MMAI) systems are becoming integral to safety-critical edge applications, from autonomous driving and robotics to smart healthcare and surveillance, where real-time perception must operate under stringent energy and compute constraints. These systems comprise distinct sensing units, such as cameras, microphones, and inertial sensors, each forming a separate subsystem with unique capabilities and constraints. As environments evolve, modality relevance shifts and redundancy emerges, requiring dynamic adaptation to maintain quality of service while extending system lifetime. Existing methods optimize individual subsystems or static inference paths, lacking responsiveness to contextual changes; coordinating adaptation across these heterogeneous subsystems remains essential yet largely unexplored. We introduce COSMOS, a runtime framework for distributed multimodal edge nodes. Its central contribution is a closed-loop control structure that uses predicted semantic context and measured temporal stability to jointly govern modality activation, inference frequency, and subsystemlevel approximation. COSMOS instantiates this control loop through three mechanisms: Scene/State-aware Modality Selection (SMS), Temporal Locality-driven Decision and Regulation (TLDR), and modality-aware Design Space Exploration (DSE). The DSE heuristic coordinates compute, audio preprocessing, sensing, memory, and communication knobs under a unified energy-quality objective. Validated on an FPGA-MCU prototype (Intel Agilex-5 primary + ESP32 auxiliary) for Audio-Visual Event Localization, COSMOS extends system lifetime by 7.73× with <5% accuracy loss, achieving up to 1.77× primary and 3.01× auxiliary energy savings across six transformer backbones.",
+        "canonical_id": "DOI:10.1145/3816440.3818581",
+        "doi": "10.1145/3816440.3818581",
+        "authors": [
+          "Arghadip Das",
+          "Yatharth Agarwal",
+          "Soumendu Kumar Ghosh",
+          "Arnab Raha",
+          "Vijay Raghunathan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816440.3818527",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816440.3818527",
+        "title:l2mersit a scalingfree sub8bit data format for ondevice reliable large language model serving",
+        "url:https://www.semanticscholar.org/paper/22d62a7bd7a73484d90d29394f54070171291500"
+      ],
+      "record": {
+        "title": "L2Mersit: A Scaling-Free Sub-8-bit Data Format for On-Device Reliable Large Language Model Serving",
+        "source_url": "https://www.semanticscholar.org/paper/22d62a7bd7a73484d90d29394f54070171291500",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "On-device large language model (LLM) serving drives low-precision computing to address memory and compute limits. This paper presents L2Mersit, a scaling-free, range-adjustable exponent-encoded data format tailored for sub-8-bit LLM quantization. Building upon the Mersit framework, L2Mersit employs dual mode operation, comprising range-expanded and precision-enhanced modes that dynamically adapt to activation distributions with minimal control overhead. The proposed design eliminates on-the-fly scaling and auxiliary computations while effectively preserving range and precision, thereby achieving both superior perplexity and hardware efficiency. Experimental results demonstrate that L2Mersit achieves the highest accuracy among all 6-bit exponent-encoded formats while reducing the hardware complexity of auxiliary units for low-precision computing, resulting in a 62.7% area reduction.",
+        "canonical_id": "DOI:10.1145/3816440.3818527",
+        "doi": "10.1145/3816440.3818527",
+        "authors": [
+          "M. Kim",
+          "Hyeonseong Kim",
+          "Ik-Joon Chang",
+          "Seungkyu Choi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816440.3818602",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816440.3818602",
+        "title:h3attn attentionefficient 3d dram pnm processor with hybrid head parallelism and hierarchical sfu",
+        "url:https://www.semanticscholar.org/paper/e1599f28636a95b2b34467a5802cd618cd3e8a29"
+      ],
+      "record": {
+        "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
+        "source_url": "https://www.semanticscholar.org/paper/e1599f28636a95b2b34467a5802cd618cd3e8a29",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "Edge-side LLM deployment, characterized by low-batch inference, has gained significance due to data privacy and personalization requirements. Attention is the key operator of LLM inference, involving massive KV cache access and full-context-aware softmax computation. To optimize KV cache size and softmax computation, various Attention mechanisms and the FlashAttention algorithm have been proposed. As 3D DRAM-based process-near-memory (PNM) presents a promising solution for low-batch LLM inference, processing these optimized Attention mechanisms may suffer from low utilization of 3D DRAM internal bandwidth due to the distributed memory access nature. Furthermore, existing Special Function Unit (SFU) architectures in 3D DRAM PNM for FlashAttention suffer from either severe communication bottlenecks in centralized designs or stringent area constraints in distributed implementations. To address these challenges, we propose H3-Attn, an Attention-efficient 3D DRAM PNM processor for low-batch LLM inference. H3-Attn features a hybrid head parallelism for Attention processing, whereby various optimized Attention mechanisms with spatial tiled FlashAttention can be flexibly enabled with fully leveraged 3D DRAM PNM bandwidth. A Hierarchical SFU (H-SFU) architecture with Multi-Head Instruction Interleaving (MHII) is also proposed, which significantly enhances softmax efficiency in FlashAttention by co-optimizing SFU area footprint and temporal utilization. Evaluations on various LLM models demonstrate that our proposed hybrid head parallelism achieves a 1.54-3.84× decoding speedup over the baseline Attention processing. The H-SFU with MHII delivers a 3.20× compute density improvement compared with prior SFU architectures for 3D DRAM PNM.",
+        "canonical_id": "DOI:10.1145/3816440.3818602",
+        "doi": "10.1145/3816440.3818602",
+        "authors": [
+          "Yaolei Li",
+          "Wenbin Jia",
+          "Zhan-Chen Zhao",
+          "Yongpan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816440.3818582",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816440.3818582",
+        "title:cimflex an integeronly flexible periphery for distributed computeinmemory architectures",
+        "url:https://www.semanticscholar.org/paper/3e808978bd3cd5e36410870e0300145cb015fefb"
+      ],
+      "record": {
+        "title": "CIM-FLEX: An Integer-Only Flexible Periphery for Distributed Compute-In-Memory Architectures",
+        "source_url": "https://www.semanticscholar.org/paper/3e808978bd3cd5e36410870e0300145cb015fefb",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "Distributed compute-in-memory (CIM) architectures are emerging as a path towards energy-efficient and highly parallel edge-class deep neural network (DNN) inference. However, the lack of a flexible, unified digital periphery limits the ability of distributed CIM systems to support integer-quantized DNN inference schemes, activation functions, and scalable tile-to-tile dataflow. We present CIM-FLEX, an integer-only periphery architecture that enables each CIM tile to autonomously perform partial-sum rescaling, asymmetric activation processing, and lightweight programmable activation functions. CIM-FLEX also supports mixed-precision integer multiply-and-accumulate (MAC) by decomposing higher-precision operations into uniform-precision partial MACs, without modifying existing CIM primitives. CIM-FLEX enables flexible tile-to-tile dataflow across distributed CIM tiles, exposing a tradeoff between parallel output generation and energy efficiency, where deeper accumulation chains reduce concurrent periphery utilization and improve overall efficiency. Numerical studies and TFLite-based LUT activation experiments validate a high signal-to-noise ratio (~30 dB) for programmable activation functions, and a 14 nm CMOS implementation shows a 0.012 mm2 area for the CIM-FLEX.",
+        "canonical_id": "DOI:10.1145/3816440.3818582",
+        "doi": "10.1145/3816440.3818582",
+        "authors": [
+          "I. Sanli",
+          "Michele Rossi",
+          "E. Ferro",
+          "Abhishek Jha",
+          "A. Burg",
+          "S. Singh",
+          "T. Boesch",
+          "I. Boybat"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03867",
+      "identity_tokens": [
+        "id:arXiv:2608.03867",
+        "title:heterogeneityaware microscaling for efficient lowbit llm inference",
+        "url:https://www.semanticscholar.org/paper/520289186d8df8c31a3ed75f35d9a663f2ceb4fb"
+      ],
+      "record": {
+        "title": "Heterogeneity-Aware Microscaling for Efficient Low-Bit LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/520289186d8df8c31a3ed75f35d9a663f2ceb4fb",
+        "year": 2026,
+        "published": "2026-08-04",
+        "abstract": "Microscaling (MX) is now the standard for low-bit large language model (LLM) inference. Its 4-bit form MXFP4 still loses substantial accuracy, because existing MX formats fix either the element format or the precision-recovery scheme across blocks, and thus capture only limited quantization heterogeneity. Quantization heterogeneity appears at two levels: 1) across blocks, the preferred element format and precision-recovery scheme vary; 2) across operands, weights and activations require different encoding. We introduce AdaMX (Adaptive Microscaling), a heterogeneity-aware format and accelerator. It selects the precision-recovery scheme per block and the representation per operand, at no increase in equivalent bit width (EBW). One design covers two block sizes, giving a higher-accuracy operating point and a lower-EBW operating point that saves storage. We implement a 22nm FD-SOI AI accelerator prototype with the proposed decoder, computing unit, and quantization logic. Against an otherwise identical MXFP4 accelerator with FP4-only multipliers, AdaMX adds about 1% system energy. At the lower-EBW point, AdaMX stays more accurate than the baseline while lowering both memory footprint and energy. Across LLMs from 3B to 70B, AdaMX removes 83% of the MXFP4 accuracy loss on commonsense and 82% on MMLU, and 43% and 27% of the NVFP4 loss. AdaMX also generalizes to multimodal models. On Gemma-4 12B, it leads MXFP4 on all four vision-language benchmarks and keeps up to 96% of FP16 accuracy.",
+        "canonical_id": "arXiv:2608.03867",
+        "arxiv_id": "2608.03867",
+        "authors": [
+          "Junyi Luo",
+          "Xin Jiang",
+          "Tai-Hao Wen",
+          "Ruichen Qi",
+          "Minxing Chu",
+          "Hongyi Wu",
+          "Gregory Kielian",
+          "Ben Laurie",
+          "Qirui Zhang",
+          "Quan Cheng",
+          "Dennis Sylvester",
+          "Mehdi Saligane"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04048",
+      "identity_tokens": [
+        "id:arXiv:2608.04048",
+        "title:recurrent residual quantization a progressive multiprecision representation for llms",
+        "url:https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17"
+      ],
+      "record": {
+        "title": "Recurrent Residual Quantization: A Progressive Multi-Precision Representation for LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17",
+        "year": 2026,
+        "published": "2026-08-04",
+        "abstract": "Serving large language models (LLMs) under diverse deployment constraints requires flexible trade-offs between accuracy, memory footprint, and throughput. However, conventional quantization methods typically require a separate checkpoint for each target bit-width. We introduce Recurrent Residual Quantization (RRQ), a post-training quantization (PTQ) framework that represents weights as a low-bit quantized base together with a sequence of quantized residual corrections, enabling multiple effective precisions from a single checkpoint. Starting from a 2-bit model obtained via post-training quantization (PTQ) or round-to-nearest (RTN), RRQ progressively adds lightweight 2-bit residuals generated via RTN to construct 4-, 6-, and 8-bit representations. The method is calibration-free and avoids joint multi-bit optimization. In our Qwen3-8B setup, the full all-RTN 2-/4-/6-/8-bit package is constructed in 1,293 seconds, 3.3 times faster than the measured MatGPTQ construction. Experiments on six recent LLMs show competitive accuracy at 6 and 8 bits, with model-dependent behavior at 4 bits. The code will be made publicly available upon publication.",
+        "canonical_id": "arXiv:2608.04048",
+        "arxiv_id": "2608.04048",
+        "authors": [
+          "Yu Luo",
+          "Bo Dong",
+          "Wenhua Cheng",
+          "Haihao Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03854",
+      "identity_tokens": [
+        "id:arXiv:2608.03854",
+        "title:when calibration depends on the scoring rule quantized biomedical llm classification",
+        "url:https://www.semanticscholar.org/paper/77540548e92660003f8a7152f97666ed23e25160"
+      ],
+      "record": {
+        "title": "When Calibration Depends on the Scoring Rule: Quantized Biomedical LLM Classification",
+        "source_url": "https://www.semanticscholar.org/paper/77540548e92660003f8a7152f97666ed23e25160",
+        "year": 2026,
+        "published": "2026-08-04",
+        "abstract": "Quantized large language models can run on consumer hardware, which motivates interest in on-premises processing of sensitive data. The reliability of their confidence estimates depends on implementation choices (prompt template, label wording, and scoring normalization) that are seldom treated as experimental variables. We evaluate three 7-billion-parameter Mistral variants (a base model, BioMistral, and an instruction-tuned checkpoint evaluated without its chat template) at FP16, INT8, and INT4 on five-class sentence classification in medical abstracts. We test two primary templates on n = 2,000 test sentences and two auxiliary templates on n = 200 validation sentences. Our central observation, made without post-hoc calibration, is that switching from summed to mean-token log-likelihood reverses which model appears better calibrated: BioMistral's mean calibration error across matched conditions nearly triples, while the instruction-tuned model's drops by more than half. Accuracy changes by at most 1.4 percentage points for these two checkpoints. Negative log-likelihood and Brier score show the same reversal. The two primary templates were selected using test-derived examples, so absolute performance with them is exploratory. Between them, prompt choice changes mean accuracy across precisions by 2.9 to 17.8 percentage points. Eight-bit quantization changes accuracy by at most 1.1 percentage points for the adapted checkpoints; four-bit quantization shows mixed but non-catastrophic effects. Post-hoc temperature scaling reduces calibration error under summed scoring but was not fitted under mean-token scoring, so whether the reversal survives per-scorer calibration is unknown. These exploratory results suggest that calibration comparisons of decoder-based classifiers should treat scoring normalization and prompt design as first-order experimental decisions.",
+        "canonical_id": "arXiv:2608.03854",
+        "arxiv_id": "2608.03854",
+        "authors": [
+          "A. Rasmussen",
+          "Hongpeng Qin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02703",
+      "identity_tokens": [
+        "id:arXiv:2608.02703",
+        "title:archead activationmetric residual correction for large language model output heads",
+        "url:https://www.semanticscholar.org/paper/6f2b058ba653c1aca5613e716a2bb7a12bfc748e"
+      ],
+      "record": {
+        "title": "ARCHead: Activation-Metric Residual Correction for Large Language Model Output Heads",
+        "source_url": "https://www.semanticscholar.org/paper/6f2b058ba653c1aca5613e716a2bb7a12bfc748e",
+        "year": 2026,
+        "published": "2026-08-03",
+        "abstract": "Weight-only quantization substantially reduces the storage of large language model (LLM) transformer blocks, but practical backends often retain the final language-modeling head (LM-head) in BF16 or FP16. Quantizing this projection naively can strongly perturb the vocabulary-logit distribution. We present ARCHead, a packed LM-head compressor that combines a quantized low-rank core, group-wise INT4 residuals, and a low-rank correction fitted in an activation-derived metric. ARCHead stores no dense BF16 head and reduces persistent LM-head storage by 3.7-3.9x. On Qwen3-8B-Base, it uses 25.6% of BF16 head storage while attaining 1.007 relative perplexity; storage-matched naive INT4 yields 1.14-1.16. Replacing the BF16 head left by AWQ or bitsandbytes adds only 0.006-0.007 cross-entropy, with less than 2% throughput change in our measurements. ARCHead therefore complements block quantizers by compressing the large output projection they can leave untouched. Code is available at https://github.com/suayptalha/archead.",
+        "canonical_id": "arXiv:2608.02703",
+        "arxiv_id": "2608.02703",
+        "authors": [
+          "Suayp Talha Kocabay",
+          "Talha Rüzgar Akkus",
+          "Kamer Ali Yüksel"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1515/jdis-2026-0058",
+      "identity_tokens": [
+        "id:DOI:10.1515/jdis-2026-0058",
+        "title:in which fields do chatgpt scores align more closely with research quality than do citation rates",
+        "url:https://www.semanticscholar.org/paper/9553f30248b2b5c1209ca0bce84c66c90511df77"
+      ],
+      "record": {
+        "title": "In Which Fields Do ChatGPT Scores Align More Closely with Research Quality than Do Citation Rates?",
+        "source_url": "https://www.semanticscholar.org/paper/9553f30248b2b5c1209ca0bce84c66c90511df77",
+        "year": 2026,
+        "published": "2026-08-03",
+        "abstract": "Abstract Purpose Although citation-based indicators are widely used, they are not useful for recently published research, directly reflect only one of the three common dimensions of research quality, and have little value in some social sciences, arts and humanities. Large Language Models (LLMs) may address some of these weaknesses. Design/methodology/approach This article reports a science-wide assessment of the research quality scoring capability of ChatGPT-4o mini, ChatGPT-4o, and ChatGPT-5 mini. It correlates ChatGPT scores, averaged over 5 repetitions, with departmental average quality scores for 107,212 UK-based journal articles. Findings ChatGPT-4o is marginally better than ChatGPT-4o mini in most of the 34 field-based Units of Assessment (UoAs) tested. ChatGPT-4o scores have a positive correlation with research quality in 33 of the 34 UoAs, with the results being statistically significant in 31. ChatGPT-4o scores had a higher correlation with research quality than long term citation rates in 21 out of 34 UoAs and a higher correlation than short term citation rates in 26 out of 34 UoAs. The most substantial exception is Physics, for which citations are more useful. ChatGPT-5 mini has even stronger correlations overall and for departmental averages, it correlates more strongly with quality scores than do citations in 31 out of 34 UoAs, with correlations reaching 0.905. Research limitations All articles assessed are from the UK. The practical value of LLM scores for decision making is not assessed. Only the Normalised Log-transformed Citation Score (NLCS) was tested against ChatGPT rather than other citation rate indicators. Practical implications ChatGPT can be considered as a research quality indicator to support expert judgement in almost all academic fields. Originality/value The results give science-wide evidence that ChatGPT-4o mini, ChatGPT-4o, and ChatGPT-5 mini are competitive with citations as new research quality indicator sources, and technically better in most fields.",
+        "canonical_id": "DOI:10.1515/jdis-2026-0058",
+        "doi": "10.1515/jdis-2026-0058",
+        "authors": [
+          "Mike Thelwall"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02162",
+      "identity_tokens": [
+        "id:arXiv:2608.02162",
+        "title:lossless tensor compression as program synthesis",
+        "url:https://www.semanticscholar.org/paper/55d44bed336be31e525d1e50d28cada09f2a0ff4"
+      ],
+      "record": {
+        "title": "Lossless Tensor Compression as Program Synthesis",
+        "source_url": "https://www.semanticscholar.org/paper/55d44bed336be31e525d1e50d28cada09f2a0ff4",
+        "year": 2026,
+        "published": "2026-08-03",
+        "abstract": "Model checkpoints are growing in both number and size, which makes archival, transfer, and deployment increasingly costly. General-purpose compressors can reduce storage requirements but ignore tensor structure, whereas existing tensor-specific compressors rely on fixed and format-specific pipelines. We present Brevis, which formulates lossless tensor compression as program synthesis. We design a typed domain-specific language (DSL) that captures recurring tensor structures, such as repeated regions and floating-point fields, through a set of reversible operators. Given a tensor, Brevis synthesizes a self-contained DSL program that reconstructs it bit-exactly. A checkpoint-specific production prior, learned from a small representative sample of tensors, guides a bounded A* search to synthesize compact programs, which can later be executed directly for bit-exact decompression. On 10 public checkpoints spanning language, audio, and image generation models, Brevis reduces 2.13 TB of checkpoint data to 1.41 TB, a 33.93% storage reduction. It produces archives up to 30.87% smaller than those of four general-purpose compressors, including zstd and gzip, and smaller archives than the tensor-specific compressors ZipNN and DFloat11. Under a practical concurrency configuration, Brevis achieves 3.60 GB/s compression and 6.61 GB/s decompression while preserving every source byte.",
+        "canonical_id": "arXiv:2608.02162",
+        "arxiv_id": "2608.02162",
+        "authors": [
+          "Jieke Shi",
+          "Junda He",
+          "Wenjia Jiang",
+          "Weifeng Sun",
+          "Shi-Dong Pan",
+          "Zhensu Sun",
+          "Chengran Yang",
+          "Peixin Zhang",
+          "Yifan Jia",
+          "Zhou Yang",
+          "T. Hoàng",
+          "Xiwei Xu",
+          "Zhenchang Xing",
+          "David Lo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25014",
+      "identity_tokens": [
+        "id:arXiv:2609.25014",
+        "title:not all 4bit quantizers are equal deploymenttime mitigation of pii leakage in finetuned small language models",
+        "url:https://www.semanticscholar.org/paper/2924c3fba559324adf911e744d4ff77e566e3fa8"
+      ],
+      "record": {
+        "title": "Not All 4-bit Quantizers Are Equal: Deployment-Time Mitigation of PII Leakage in Fine-Tuned Small Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/2924c3fba559324adf911e744d4ff77e566e3fa8",
+        "year": 2026,
+        "published": "2026-08-02",
+        "abstract": "Organizations fine-tune small language models on private data and then compress them to 4 bits for resource-efficient deployment. We show that the compression method also affects privacy. What separates the methods is not the bit width but whether they tune their rounding on a small sample of text, the calibration corpus. On our primary model, when each planted record's own opening text is used as the prompt, the two calibration-based methods we test, Activation-aware Weight Quantization (AWQ) and Gradient-based Post-Training Quantization (GPTQ), each reproduce none of the planted records, while the calibration-corpus-free GGUF Q4_K_M format reproduces 5.3% of them. Tracked across five open models with 0.5-7 billion parameters, AWQ leaks least at every size and in both families, with little accuracy loss at 3-7 billion. Controlled experiments associate the difference with calibration-induced rounding error in channels involved in rare-token prediction. Choosing the 4-bit method is therefore a deployment-time privacy decision, not only a question of speed and quality.",
+        "canonical_id": "arXiv:2609.25014",
+        "arxiv_id": "2609.25014",
+        "authors": [
+          "Cristhian Kapelinski",
+          "Diego Kreutz"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01468",
+      "identity_tokens": [
+        "id:arXiv:2608.01468",
+        "title:retrieval augmented biomedical question answering with weak question recovery and neural reranking for bioasq task 14b",
+        "url:https://www.semanticscholar.org/paper/552de24a69b31f3dd5393c53411953c3b7dffc81"
+      ],
+      "record": {
+        "title": "Retrieval Augmented Biomedical Question Answering with Weak Question Recovery and Neural Reranking for BioASQ Task 14b",
+        "source_url": "https://www.semanticscholar.org/paper/552de24a69b31f3dd5393c53411953c3b7dffc81",
+        "year": 2026,
+        "published": "2026-08-02",
+        "abstract": "This work presents DS@GT ARC BioASQ team's work for a biomedical question answering pipeline, integrating multi-source query expansion, neural reranking, retrieval refinement, and OpenBioLLM-assisted answer generation. The system combines PubMed retrieval with fine-tuned MiniLM-based semantic reranking, Reciprocal Rank Fusion (RRF), and feature-based relevance scoring to improve document ranking quality. To address challenging queries with weak retrieval performance, we introduce a conditional weak-question recovery strategy that applies semantic expansion, relationship-aware augmentation, and selective result merging. A post-retrieval pruning stage further removes redundant or low-relevance snippets while preserving evidence coverage for downstream answer generation. Experimental results on BioASQ evaluation batches demonstrate that the proposed recovery and cleanup strategies substantially improve retrieval robustness and MAP@10 performance on difficult question sets. The final system also incorporates output validation and post-processing steps to ensure formatting consistency and submission reliability across BioASQ phases.",
+        "canonical_id": "arXiv:2608.01468",
+        "arxiv_id": "2608.01468",
+        "authors": [
+          "Xueying Zhao",
+          "Mai Lee",
+          "Balaji Anandganesh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.sysarc.2026.103839",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.sysarc.2026.103839",
+        "title:ascqlut a decodefused int4 gemm kernel for ascend npus",
+        "url:https://www.semanticscholar.org/paper/a62d37d2be41123840ccba5602cd45f27c0747c9"
+      ],
+      "record": {
+        "title": "AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs",
+        "source_url": "https://www.semanticscholar.org/paper/a62d37d2be41123840ccba5602cd45f27c0747c9",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.sysarc.2026.103839",
+        "doi": "10.1016/j.sysarc.2026.103839",
+        "authors": [
+          "Yun Chen",
+          "Lu Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcsi.2026.3692866",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcsi.2026.3692866",
+        "title:dsla an energyefficient dualsparsity llm accelerator with himixbfp",
+        "url:https://www.semanticscholar.org/paper/195f66a6ce58294ff6a6940ac20151ad3382f841"
+      ],
+      "record": {
+        "title": "DSLA: An Energy-Efficient Dual-Sparsity LLM Accelerator With HiMix-BFP",
+        "source_url": "https://www.semanticscholar.org/paper/195f66a6ce58294ff6a6940ac20151ad3382f841",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Large language models (LLMs) have achieved great success in areas such as language understanding and text generation. However, their massive parameters incur high computational, storage, and energy costs, making deployment on resource- and power-constrained edge devices particularly challenging. Block Floating Point (BFP) reduces storage and computational overhead by grouping data into blocks and aligning them to the maximum exponent within each block, converting them into low-bit fixed-point numbers. Bidirectional Block Floating Point (BBFP) extends BFP by aligning data within a block to two different exponents, reducing quantization error for small values. However, at ultra-low bit widths, both methods suffer from severe accuracy degradation due to their sensitivity to outliers, which limits their ability to achieve aggressive energy savings. In addition, the exponent alignment procedure in these schemes inherently introduces bit-sliced sparsity, an opportunity that remains largely unexplored for further improving energy efficiency on edge accelerators. To address these challenges, we propose an energy-efficient dual-sparsity LLM accelerator (DSLA) that supports the HiMix-BFP data format. HiMix-BFP improves low-bit accuracy by preserving extra mantissa bits for the maximum value and adaptively selecting BFP or BBFP per block. The DSLA architecture efficiently exploits both value and bit-sliced sparsity across different bit widths to further enhance energy efficiency by employing low-bit computational units, load-balancing mechanisms, and a hierarchical bit-accumulation array. Experimental results demonstrate that HiMix-BFP reduces perplexity by up to 76%, while DSLA achieves up to $1.39\\times $ higher throughput and $1.59\\times $ greater energy efficiency compared to SOTA accelerators.",
+        "canonical_id": "DOI:10.1109/TCSI.2026.3692866",
+        "doi": "10.1109/TCSI.2026.3692866",
+        "authors": [
+          "Zikang Zhou",
+          "Siyao Dai",
+          "Yaqi Chen",
+          "Kaiqi Chen",
+          "Jun Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00434",
+      "identity_tokens": [
+        "id:arXiv:2608.00434",
+        "title:adamtp an adaptive training paradigm for multitoken prediction",
+        "url:https://www.semanticscholar.org/paper/9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858"
+      ],
+      "record": {
+        "title": "AdaMTP: An Adaptive Training Paradigm for Multi-Token Prediction",
+        "source_url": "https://www.semanticscholar.org/paper/9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Multi-Token Prediction (MTP) has emerged as an effective paradigm that augments a shared Large Language Model backbone with auxiliary heads, training the model to predict several future tokens in parallel to enrich its supervision signal and accelerate inference. However, existing training frameworks adopt a rigid, fixed-length prediction horizon, disregarding the highly non-uniform information density of natural language and code. Forcing the auxiliary heads to predict across high-entropy semantic boundaries injects noisy, conflicting training signals; because these heads share the backbone's latent representations, the resulting gradients backpropagate and interfere with the model's core capabilities. We propose AdaMTP, an adaptive training paradigm that dynamically aligns the prediction horizon with the intrinsic predictability of the sequence. At its core, an entropy-based segmentation algorithm leverages the base model to detect sudden surges in uncertainty as semantic boundaries, partitioning sequences into variable-length groups. Each token is assigned an adaptive prediction depth, and a dynamically masked MTP objective suppresses the loss for predictions that cross these boundaries, attenuating the noisy gradients that degrade the backbone. Across mathematical reasoning, code generation, and general benchmarks on three backbones (Llama-3.1-8B, Qwen-2.5-7B, Gemma-3-12B), AdaMTP consistently outperforms standard MTP in both task performance and inference speedup.",
+        "canonical_id": "arXiv:2608.00434",
+        "arxiv_id": "2608.00434",
+        "authors": [
+          "Ziqiang Cui",
+          "Han Shi",
+          "Bowei He",
+          "Yu Pan",
+          "Peiyang Liu",
+          "Shengyin Sun",
+          "Yankai Chen",
+          "Haoli Bai",
+          "Yichun Yin",
+          "Xue Liu",
+          "Chen Ma"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mc.2026.3695984",
+      "identity_tokens": [
+        "id:DOI:10.1109/mc.2026.3695984",
+        "title:optimizing ai a reference architecture to streamline ai inference and performance acceleration",
+        "url:https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82"
+      ],
+      "record": {
+        "title": "Optimizing AI: A Reference Architecture to Streamline AI Inference and Performance Acceleration",
+        "source_url": "https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/mc.2026.3695984",
+        "doi": "10.1109/mc.2026.3695984",
+        "authors": [
+          "Mlađan Jovanović",
+          "M. Campbell"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tce.2026.3674936",
+      "identity_tokens": [
+        "id:DOI:10.1109/tce.2026.3674936",
+        "title:efficient edgecloud collaboration via token pruning and quantized feature transmission for consumer electronics and intelligent vehicles",
+        "url:https://www.semanticscholar.org/paper/6ee4da8d9d1840e6d8c1e3ef2867d11168a0b706"
+      ],
+      "record": {
+        "title": "Efficient Edge-Cloud Collaboration via Token Pruning and Quantized Feature Transmission for Consumer Electronics and Intelligent Vehicles",
+        "source_url": "https://www.semanticscholar.org/paper/6ee4da8d9d1840e6d8c1e3ef2867d11168a0b706",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Multimodal large models have demonstrated remarkable performance in tasks such as object detection and multimodal question answering. However, due to resource constraints, it is challenging to deploy high-performance multimodal large models on edge devices; even after parameter compression, these models struggle to achieve satisfactory performance. To address this challenge, we explore a novel end-to-end edge-cloud collaborative training paradigm, aiming to efficiently exchange information between the edge and the cloud via token pruning and feature quantization in an edge–cloud architecture. We propose Quantization and Pruning for Edge–Cloud Learning (Q2-ECL), a dual quantization framework for efficient edge-cloud collaboration. Specifically, in the token pruning stage, an adaptive network pruning strategy is applied: by dynamically optimizing the pruning rate and redundancy threshold based on token similarity and a graph-based gradient adversarial learning mechanism, the edge-cloud features (features uploaded by the edge and those received by the cloud, residing in a unified semantic space) are pruned to remove redundancy. In the feature quantization stage, we employ binary spherical quantization as an implicit codebook. We further introduce semantic augmentation and alignment techniques to maximize the similarity between edge and cloud features as a training objective, thereby minimizing semantic loss in edge-cloud information transmission. Experimental results on multiple public datasets demonstrate that Q2-ECL enables efficient and low-cost feature transmission at the edge while minimizing the performance loss caused by feature quantization.",
+        "canonical_id": "DOI:10.1109/TCE.2026.3674936",
+        "doi": "10.1109/TCE.2026.3674936",
+        "authors": [
+          "Yingjie Cui",
+          "Yong Chen",
+          "Hange Zhou",
+          "Zhonglin Jiang",
+          "Huan Rong",
+          "Zhong-Feng Chen",
+          "Zhen-Yu Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neunet.2026.109558",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neunet.2026.109558",
+        "title:qsa2 enhanced lowbit quantizationaware finetuning via structureaware adaptation",
+        "url:https://www.semanticscholar.org/paper/234831a790e0931b9a8e6886fdddeeb8bafb84e7"
+      ],
+      "record": {
+        "title": "Q-SA2: Enhanced low-bit quantization-aware fine-tuning via structure-aware adaptation.",
+        "source_url": "https://www.semanticscholar.org/paper/234831a790e0931b9a8e6886fdddeeb8bafb84e7",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Quantization-Aware Fine-tuning (QAF) is critical for deploying large language models in resource-constrained scenarios. While in low-bit QAF, strong downstream performance hinges on both minimizing model quantization errors and providing robust initialization of low-rank adaptation. To further improve the model performance, we propose Structure-Aware Adaptation for low-bit QAF (Q-SA2) in this paper. By decomposing pre-trained weights into sparse components and principal subspaces, Q-SA2 provides a favorable initialization for downstream task adaptation. Specifically, to better preserve the representations of pre-trained weights and minimize errors, the sparse components are quantized, and the low-rank adapters are initialized from the principal subspaces. Then, we extend this framework to a weight-wise mixed-precision variant with a distribution-based outlier detection strategy on sparse components, enabling Q-SA2 to adaptively allocate higher precision to critical weights. Comprehensive experiments on WikiText-2, C4, GSM8K, and the GLUE benchmark demonstrate that the proposed method consistently outperforms state-of-the-art QAF methods, particularly on mathematical reasoning tasks, achieving an average improvement of 4% under 2-bit quantization and up to 7.78% on the Qwen2.5-7B model under 4-bit quantization. The code is available at https://github.com/Rainiay/Q-SA2.git.",
+        "canonical_id": "DOI:10.1016/j.neunet.2026.109558",
+        "doi": "10.1016/j.neunet.2026.109558",
+        "authors": [
+          "Yuning Yang",
+          "Guo-Wei Peng",
+          "Xiurui Xie",
+          "Dong-Yang Zhang",
+          "Guangchun Luo",
+          "Guisong Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3844/jcssp.2026.2617.2632",
+      "identity_tokens": [
+        "id:DOI:10.3844/jcssp.2026.2617.2632",
+        "title:empowering small language models with chain of thought and parameter efficient fine tuning for efficient deep reasoning",
+        "url:https://www.semanticscholar.org/paper/b83bac36fdab65c294e25d606b11c638812ba86e"
+      ],
+      "record": {
+        "title": "Empowering Small Language Models With Chain of Thought and Parameter Efficient Fine Tuning for Efficient Deep Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/b83bac36fdab65c294e25d606b11c638812ba86e",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": ": Small Language Models (SLMs) run faster and fit on modest hardware, yet solving multi-step logic problems has traditionally been difficult for them. This work investigates a systematic, multi-model framework that combines Chain-of-Thought (CoT) prompting with Low-Rank Adaptation (LoRA) parameter-efficient fine-tuning, and measures the contribution of each component independently. We evaluate three SLMs (TinyLlama-1.1B, Phi-3-mini-4k-instruct, and Qwen2.5-1.5B) using 1,164 training samples drawn from GSM8K, Microsoft Orca-Math-Word-Problems-200k, and OpenAI HumanEval, and evaluate on 500 GSM8K test problems. Phi-3-mini-4k-instruct achieves the strongest overall gains, reaching 16.0% exact match and 61.7% step accuracy under +CoT+LoRA, a 95% improvement over its own baseline. The decline observed under CoT-only prompting and the subsequent recovery under CoT+LoRA were statistically significant (McNemar test, p<0.05). A notable finding is that CoT prompting applied without fine-tuning degrades Phi-3-mini’s exact match score by approx imately 44% due to an instruction-format conflict that LoRA fine-tuning resolves. Our ablation shows that neither technique alone produces peak performance; their combination does. The framework trains fewer than 0.05% of model parameters and runs end-to-end on a single consumer-grade NVIDIA RTX 4500 Ada GPU with 24 GB VRAM, making capable SLM-based reasoning deployable without datacenter-scale infrastructure.",
+        "canonical_id": "DOI:10.3844/jcssp.2026.2617.2632",
+        "doi": "10.3844/jcssp.2026.2617.2632",
+        "authors": [
+          "Aryan Raina",
+          "Shiwani Gupta",
+          "Jagruti Jadhav",
+          "Sampada Bhonde",
+          "S. Mathur",
+          "Anand A. Maha",
+          "Pranjali Sankhe"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:851e3d70610f593d30f9107ed5e124a01514ba93b9c6d20cec65431fbb4ad07b",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
