@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-5e8cb6bdeb7cddafe8c55c3a","job_id":"job-research-c58272e75725b517","data":{"limitations":[{"name":"物理的枝刈りではない","description":"router logit操作で選択資格を消すだけで重みは残る。したがって640専門家をmaskしても現状のcheckpointサイズ、VRAM、ストレージは減らず、実削減にはweight surgeryが必要。"},{"name":"単一モデル・単一主タスク","description":"Qwen3.6-35B-A3BとXLCoSTコード翻訳に限定され、自然言語や別MoEでvery-late耐性が再現する保証はない。"},{"name":"baseline-relative heuristic","description":"Good/Similar/Badは未マスク生成との構文・文字列類似度であり、絶対的意味正解を測らない。AST、CodeBLEU、実行テスト、人手評価が必要。"},{"name":"統計的不確実性","description":"各設定は単一runで信頼区間なし。300件の上位方策は数件差なのでbootstrap等なしに厳密順位を断定できない。"},{"name":"回復学習なし","description":"mask後のSFTやrouting-aware trainingを行わずzero-shotで測るため、物理削除後にどこまで品質回復できるか未検証。"}],"differences":[{"name":"一律expert pruningとの差","description":"総専門家削減率だけを決めるのではなく、層深度を一次の予算配分変数として扱う。後段へ強く、初期・中間へ弱く配る方が同程度の削減で挙動保持が高い。"},{"name":"activation-frequency pruningとの差","description":"専門家活性頻度ではなく重みL2ノルムという単純な静的順位を使い、まず層の感度を分離する。将来は頻度・routing weight・task affinityとの組合せを提案する。"},{"name":"専門家キャッシュ/オフロードとの差","description":"キャッシュやCPU/SSDオフロードは必要専門家を実行時に移動するが、本研究はそもそも後段で選択可能な専門家数を減らせる可能性を測る。物理削除できれば転送対象と常駐容量の双方を減らせる。"},{"name":"Top-k活性幅削減との差","description":"expert maskingは利用可能な総専門家集合を縮める一方、top-k削減はトークン当たり活性数を減らす。論文は両者が独立軸だが強い併用では品質が非加算的に悪化することを示す。"}],"implementation_status":"実験はHugging Face/PyTorch上でrouter logitsを介入する可逆maskとして実装され、機械的integrity checkまで手順化されている。物理checkpoint surgeryは未実装で将来課題。","research_positioning":"Adaptive Expert Computation / Compression系統では、専門家を何個減らすかだけでなく『どの深度から減らすか』の実証データを提供する論文として位置づく。後段層はrouting entropyが高くmarginが小さいという観測と、500件保持検証のvery-late方策を結びつけるため、層別expert cache容量、オフロード優先度、枝刈りbudgetを設計する根拠になる。特に総10,240専門家中640を最終5層だけから除外して419/500を維持した点は、均等削減より保守的な実装開始点を示す。","evidence_locations":["PDF pp.2-4: model, XLCoST, scoring, masking methodology","PDF pp.4-6: routing characterization and regional ablation","PDF pp.6-8: 300-prompt discovery and 500-prompt held-out validation","PDF pp.7-8: compression quantification and top-k probe","PDF pp.8-10: discussion, limitations, conclusion"]},"reservation":{"claim_id":"claim-5e8cb6bdeb7cddafe8c55c3a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-c702d1e87d96e29f00644312",
+  "job_id": "job-research-c9fd7d4e4bda09de",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c702d1e87d96e29f00644312",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

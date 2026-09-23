@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-5e8cb6bdeb7cddafe8c55c3a","job_id":"job-research-c58272e75725b517","data":{"hardware":"NVIDIA H100 80GB HBM3。3台のGPUサーバーを使用し、各runは専用2-GPUペア。bfloat16。","software":"Hugging Face Transformers 5.8.0.dev0、PyTorch 2.10.0+cu128、Accelerate 1.13.0。","model":["Qwen3.6-35B-A3B: 40 MoE layers, 256 experts/layer, top-8, 約3.3B active / 35B total","補助routing probe: Qwen3.5-35B-A3B"],"datasets":["XLCoST cross-lingual code translation","100-prompt regional ablation","300-prompt discovery sweep","500-prompt held-out validation","878-prompt routing characterization"],"baselines":["unmasked Qwen3.6 baseline generation","flat all-layer 30%/40% masking","early/middle/late regional masks","late ramp","global late budget","very-late-only mask","top-k=8 baseline"],"correctness":"hard maskではmasked_selection_hits_total==0を必須確認する。主品質指標はbaseline-relativeで、構文妥当かつ正規化コード完全一致をGood、構文妥当かつ類似度>=0.85等をSimilar、構文不正または大きな乖離をBadとしGood+Similarを集計する。探索300件と保持検証500件を分離し、探索順位の過適合を確認する。","settings":["max_new_tokens=1200。5000ではdriftが増え、800では有効解を切るため選定。","hard maskはrouter logitsを大きな負値へ変更。soft maskは-2/-5。","地域: early 0-9, middle 10-29, late 30-39, very late 35-39。","regional ablationは対象領域40% mask。","held-out validationはvery-late 50%、global late budget 1020、late rampを比較。"],"methodology":"初期のteacher-forced token accuracyに加え、主実験では自由生成を未マスクbaselineと比較する。300件探索では多数方策をランキングし、上位候補を500件の別sliceへ持ち込む。ルーティング解析は878プロンプト・2.085億イベントで深度別entropy/marginを測る。補助的思考フェーズ解析はQwen3.5を使い、Qwen3.6の主マスク結果の因果証拠とは扱わない。","scope":"単一Qwen3.6モデル、XLCoSTのコード翻訳が主対象。Good/Similar/Badは絶対的なコード正解率ではなく未マスクbaselineの挙動保持指標。各設定は単一runで信頼区間なし。物理的重み削除・実メモリ削減は未実施。"},"reservation":{"claim_id":"claim-5e8cb6bdeb7cddafe8c55c3a","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c702d1e87d96e29f00644312",
+  "job_id": "job-research-c9fd7d4e4bda09de",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c702d1e87d96e29f00644312",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
