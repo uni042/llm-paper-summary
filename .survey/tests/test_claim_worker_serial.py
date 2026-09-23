@@ -63,19 +63,21 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             claim_worker.process_requests(root, at=AT)
             second = json.loads((root / ".survey/work-queue/claim-results/req-b.json").read_text())
 
-            self.assertEqual(len(second["assignments"]), 1)
-            resumed = second["assignments"][0]
-            self.assertEqual(resumed["job_id"], "job-a")
+            self.assertEqual(len(second["assignments"]), 2)
+            resumed = next(item for item in second["assignments"] if item["job_id"] == "job-a")
+            standby = next(item for item in second["assignments"] if item["job_id"] == "job-b")
             self.assertEqual(resumed["claim_id"], first_assignment["claim_id"])
             self.assertEqual(resumed["attempt_id"], first_assignment["attempt_id"])
             self.assertEqual(resumed["claimed_at"], first_assignment["claimed_at"])
             self.assertEqual(resumed["worker_id"], "scheduled-chat-20260913-1530")
             self.assertIsNone(resumed["record_bank"])
             self.assertEqual(resumed["record_bank_fallback"], "library")
-            self.assertEqual(second.get("reason"), "resumed active unsubmitted claim")
+            self.assertEqual(resumed["pipeline_role"], "foreground")
+            self.assertEqual(standby["pipeline_role"], "standby")
+            self.assertEqual(second.get("reason"), "scheduled_chat_claim_window")
 
             job_b_claim = root / ".survey/work-queue/claims/job-b.json"
-            self.assertFalse(job_b_claim.exists())
+            self.assertTrue(job_b_claim.exists())
 
     def test_next_normal_run_resumes_active_claim_from_previous_run_id(self):
         with tempfile.TemporaryDirectory() as td:
@@ -99,9 +101,9 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             claim_worker.process_requests(root, at=AT)
             second = json.loads((root / ".survey/work-queue/claim-results/req-1130.json").read_text())
 
-            self.assertEqual(len(second["assignments"]), 1)
-            resumed = second["assignments"][0]
-            self.assertEqual(resumed["job_id"], "job-a")
+            self.assertEqual(len(second["assignments"]), 2)
+            resumed = next(item for item in second["assignments"] if item["job_id"] == "job-a")
+            standby = next(item for item in second["assignments"] if item["job_id"] == "job-b")
             self.assertEqual(resumed["claim_id"], first_assignment["claim_id"])
             self.assertEqual(resumed["attempt_id"], first_assignment["attempt_id"])
             self.assertEqual(resumed["claimed_at"], first_assignment["claimed_at"])
@@ -109,8 +111,10 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
                 resumed["worker_id"],
                 "scheduled-chat-llm-survey-20260914T1030JST",
             )
-            self.assertEqual(second.get("reason"), "resumed active unsubmitted claim")
-            self.assertFalse((root / ".survey/work-queue/claims/job-b.json").exists())
+            self.assertEqual(resumed["pipeline_role"], "foreground")
+            self.assertEqual(standby["pipeline_role"], "standby")
+            self.assertEqual(second.get("reason"), "scheduled_chat_claim_window")
+            self.assertTrue((root / ".survey/work-queue/claims/job-b.json").exists())
 
     def test_durable_descriptor_releases_previous_worker_slot_and_next_job_can_be_claimed(self):
         with tempfile.TemporaryDirectory() as td:
