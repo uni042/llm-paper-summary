@@ -4,7 +4,62 @@
   "slot": "results",
   "attempt_id": "attempt-1af943d29bb42540aa6313f9",
   "job_id": "job-research-6d95aed6ee156af5",
-  "data": {},
+  "data": {
+    "overview": "GeMoEは固定Top-kに近い品質を維持しながら平均専門家数を大幅に減らし、既存動的ルーティングより品質と疎性の均衡が良かった。MolmoE-1B-7Bでは固定Top-8の平均8専門家・平均性能63.99に対し、平均5.43専門家で63.61を維持する。DeepSeek-VL2-TinyでもTop-6の71.29に対し平均3.55専門家で70.90だった。A800-40GではFLOPsだけでなくスループットと壁時計時間も改善し、付録のOLMoEでは平均専門家数5.53でTop-8より平均ベンチマーク性能が高い結果も得ている。",
+    "key_results": [
+      {
+        "metric": "MolmoE主要6ベンチ平均",
+        "value": "AvgP 63.61、平均専門家数5.43",
+        "baseline": "固定Top-8: AvgP 63.99、平均専門家数8.00",
+        "condition": "MolmoE-1B-7B、MMBench/POPE/ScienceQA/TextVQA/GQA/MM-Vet",
+        "interpretation": "平均専門家数を32.1%減らしながら平均性能差を0.38ポイントに抑えた。"
+      },
+      {
+        "metric": "DeepSeek-VL2-Tiny主要6ベンチ平均",
+        "value": "AvgP 70.90、平均専門家数3.55",
+        "baseline": "固定Top-6: AvgP 71.29、平均専門家数6.00",
+        "condition": "DeepSeek-VL2-Tiny-1B-3B",
+        "interpretation": "平均専門家数を40.8%削減し、平均性能差は0.39ポイントだった。"
+      },
+      {
+        "metric": "A800-40G推論FLOPs",
+        "value": "80.65→68.45 GFLOPs/token（15.2%削減）",
+        "baseline": "MolmoE-1B-7B固定Top-8",
+        "condition": "NVIDIA A800-40G、GeMoE平均k=5.43",
+        "interpretation": "専門家数削減が理論活性数だけでなく実際の算術量低下に反映された。"
+      },
+      {
+        "metric": "A800-40G実測速度",
+        "value": "1709→1828 token/s（6.5%向上）、0.169→0.152秒/サンプル（10.1%短縮）",
+        "baseline": "MolmoE-1B-7B固定Top-8",
+        "condition": "同一A800-40G効率評価",
+        "interpretation": "FLOPs削減の一部が実時間短縮へ変換され、追加予測器のオーバーヘッドを上回った。"
+      },
+      {
+        "metric": "OLMoE言語タスク平均",
+        "value": "AvgP 43.58、平均専門家数5.53",
+        "baseline": "固定Top-8: AvgP 38.59、平均専門家数8.00",
+        "condition": "OLMoE-1B-7B、MMLU/BigBench/GSM-8K/HumanEval",
+        "interpretation": "付録の1モデルでは、専門家削減と同時に平均性能も向上し、視覚言語だけに限定されない可能性を示した。"
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "エントロピー誘導なしで性能低下",
+        "description": "専門家数予測器を単調性誘導なしで学習すると平均k=4.49まで下がる一方、アブレーション平均性能は60.03となり、正相関制約ありの64.77から大きく低下する。"
+      },
+      {
+        "name": "相関を逆転するとさらに悪化",
+        "description": "高エントロピーほど少ない専門家を割り当てる負相関制約では平均k=2.86、平均性能51.57まで低下し、エントロピーと専門家数の方向性が重要である。"
+      },
+      {
+        "name": "一部追加ベンチでは固定Top-8が高い",
+        "description": "付録の追加視覚言語評価ではMMMU、AI2D、InfoVQA、MMStar、RealWorldQA、OCRBench、VQAv2の多くで固定Top-8がGeMoEをわずかに上回り、すべての個別課題で品質が向上する方式ではない。"
+      }
+    ],
+    "interpretation": "結果は、固定Top-kで全トークンに同じ計算を配るより、ルータが迷っているトークンにだけ多くの専門家を使う方が平均計算量あたりの品質を高められることを支持する。特に既存のDYNMoE、Top-p、AdaMoE、MoE++がMolmoE上で平均性能をより大きく落とすのに対し、GeMoEは固定Top-8に近い水準を維持した。アブレーションは、単なる専門家削減器ではなく、ゲートエントロピーと専門家数を正に結び付ける学習制約が性能保持の主要因であることを示す。A800実測ではFLOPs15.2%削減に対してスループット6.5%向上なので、削減FLOPsがそのまま速度へ比例するわけではない点も分かる。",
+    "quality_impact": "品質は厳密保存ではない。主2バックボーンでは固定最大Top-kより平均性能が約0.4ポイント低下する代わりに平均専門家数を約32〜41%削減する。一方OLMoE付録では平均性能が改善する例もある。したがって導入時には専門家数削減率だけでなく対象タスクの評価を併用し、単調性損失係数や許容k範囲を調整する必要がある。"
+  },
   "reservation": {
     "claim_id": "claim-1af943d29bb42540aa6313f9",
     "worker_id": "scheduled-chat-00",

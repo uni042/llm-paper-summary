@@ -4,7 +4,62 @@
   "slot": "metadata",
   "attempt_id": "attempt-1af943d29bb42540aa6313f9",
   "job_id": "job-research-6d95aed6ee156af5",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2606.26287",
+    "arxiv_id": "2606.26287",
+    "doi": "10.48550/arXiv.2606.26287",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CV",
+      "cross_list": []
+    },
+    "title": "GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models",
+    "summary": "本研究は、混合専門家（Mixture-of-Experts; MoE）の固定Top-kルーティングが、簡単なトークンにも難しいトークンにも同数の専門家を割り当てる非効率を扱う。動的ルーティングを最小記述長（Minimum Description Length; MDL）の最小化問題として捉え、追加専門家による情報利得を事前に測る代理としてゲート分布のエントロピーを用いる。軽量な専門家数予測器が各トークンの必要専門家数を1〜8個（または1〜6個）で出力し、単調性損失によりエントロピーが高いほど多くの専門家を割り当てる。MolmoE-1B-7Bでは平均5.43専門家で固定Top-8の平均性能63.99に対し63.61を維持し、NVIDIA A800-40GでFLOPs/トークンを80.65から68.45へ15.2%削減、スループットを1709から1828トークン/秒へ6.5%向上、サンプル時間を0.169秒から0.152秒へ10.1%短縮した。",
+    "list_summary": "ゲート分布のエントロピーを不確実性指標として各トークンの専門家数を予測し、固定Top-kに近い品質を保ちながら専門家活性化と実測推論時間を削減する動的MoEルーティング。",
+    "authors": [
+      "Chaoxiang Cai",
+      "Minghe Weng",
+      "Jie Li",
+      "Yibo Jiang",
+      "Longrong Yang",
+      "Zequn Qin",
+      "Xi Li"
+    ],
+    "authors_affiliations": "Zhejiang University, School of Software Technology / College of Computer Science and Technology",
+    "published": "2026-09-09",
+    "publication": "ECCV 2026, Computer Vision – ECCV 2026, Proceedings Part V, LNCS 17005, pp.478–495",
+    "publication_type": "国際会議論文",
+    "publication_status": "ECCV 2026採択・Springer proceedings刊行済み",
+    "publication_version": "arXiv v1 / ECCV 2026 proceedings",
+    "lineage": "adaptive expert computation / dynamic MoE routing / gating uncertainty",
+    "topics": [
+      "混合専門家",
+      "動的ルーティング",
+      "適応計算",
+      "ゲートエントロピー",
+      "最小記述長",
+      "視覚言語モデル"
+    ],
+    "importance": "固定Top-kの専門家数をトークン単位で可変にするだけでなく、専門家を増やす価値をゲート分布の不確実性から判断する原理を最小記述長と情報利得で説明している。適応的専門家計算系統の中でも、実測GPU上のFLOPs・スループット・壁時計時間まで示すため、計算削減が実行時間へつながるかを評価できる。",
+    "hardware_evaluation": "推論効率はNVIDIA A800-40Gで評価され、MolmoE-1B-7Bについてメモリ、GFLOPs/トークン、トークン/秒、秒/サンプルを報告する。学習GPU台数は本文・付録で明示されず、1 GPU当たりバッチ16、FP16、5000ステップなどの設定が示される。",
+    "quality_effect": "近似により固定Top-k出力を厳密保存する方式ではなく、ルータと専門家数予測器を学習して品質・計算量の均衡を変える。MolmoEではTop-8平均63.99に対し63.61、DeepSeek-VL2-TinyではTop-6平均71.29に対し70.90で、いずれも約0.4ポイントの低下に抑えつつ平均専門家数を削減する。一方、単調性制約を外す／逆転すると性能が大きく低下する。",
+    "source": "https://arxiv.org/abs/2606.26287",
+    "sources": [
+      "https://arxiv.org/abs/2606.26287",
+      "https://arxiv.org/pdf/2606.26287",
+      "https://github.com/caichaoxiang/GeMoE",
+      "https://link.springer.com/book/10.1007/978-3-032-37369-4"
+    ],
+    "code": "https://github.com/caichaoxiang/GeMoE",
+    "implementation": "論文は学習・推論の擬似コードを付録に掲載し、ルータ出力からゲートエントロピーを計算、線形な専門家数予測器でsoftな専門家数を出し、丸めをストレートスルー推定器で扱う実装を示す。公式GitHubリポジトリは存在するが、2026-09-23確認時点のREADMEではチェックポイントとコード公開がToDoのままで、実装本体は未公開。",
+    "implementation_status": "論文擬似コードあり。公式リポジトリあり。ただし2026-09-23時点でコード・チェックポイント本体は未公開。",
+    "evaluation_type": "視覚言語MoEとLLMにおける品質、平均活性専門家数、活性パラメータ、FLOPs、GPUスループット、壁時計時間、アブレーション",
+    "last_checked": "2026-09-23",
+    "references": [],
+    "references_checked_at": "2026-09-23",
+    "references_source": "primary manuscript reference section",
+    "references_total": 65
+  },
   "reservation": {
     "claim_id": "claim-1af943d29bb42540aa6313f9",
     "worker_id": "scheduled-chat-00",
