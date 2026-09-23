@@ -134,6 +134,13 @@ def _active_claim(root: Path, preload_id: str, now: dt.datetime) -> dict[str, An
     if not isinstance(claim, dict) or not claim:
         return None
     expires = _parse_time(claim.get("lease_expires_at"))
+    if expires is None and (
+        claim.get("direct_take") is True
+        or claim.get("operation") == "direct_take_discovery"
+    ):
+        claimed = _parse_time(claim.get("claimed_at") or claim.get("requested_at"))
+        if claimed is not None:
+            expires = claimed + dt.timedelta(seconds=CLAIM_LEASE_SECONDS)
     if expires is None or expires <= now:
         return None
     return claim
