@@ -381,11 +381,68 @@ class IncrementalRunStateTests(unittest.TestCase):
             manifest.write_text(claim_result.relative_to(root).as_posix() + "\n", encoding="utf-8")
             summary = derive.apply_claim_result_deltas(root, manifest)
             self.assertEqual(summary["touched_runs"], 1)
+            self.assertEqual(len(summary["generated_results"]), 1)
+            claim_snapshot_path = root / summary["generated_results"][0]
+            claim_snapshot = json.loads(claim_snapshot_path.read_text(encoding="utf-8"))
+            self.assertEqual(claim_snapshot["snapshot_origin"], "claim-fast-lane")
+            self.assertTrue(claim_snapshot["active_assignment"])
+            self.assertEqual(claim_snapshot["active_job_ids"], ["job-delta"])
+            latest = json.loads(
+                (root / ".survey/work-queue/run-state/latest/scheduled-chat-00.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(latest["result_path"], claim_snapshot_path.relative_to(root).as_posix())
+            self.assertEqual(latest["snapshot_generation"], claim_snapshot["snapshot_generation"])
             updated = derive.derive(root, req)
             self.assertEqual(updated["run_state_source"], "incremental_cache")
             self.assertTrue(updated["active_assignment"])
             self.assertEqual(updated["active_job_ids"], ["job-delta"])
             self.assertLess(updated["run_state_files_read"], first["run_state_files_read"])
+
+    def test_claim_result_auto_snapshot_rebuilds_without_existing_cache(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            base_state(root)
+            start = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=2)
+            claim_result = write_json(
+                root,
+                ".survey/work-queue/claim-results/claim-no-cache.json",
+                {
+                    "schema_version": 1,
+                    "request_id": "claim-no-cache",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "run_key": "run-no-cache-claim",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": start.isoformat(),
+                    "ok": True,
+                    "assignments": [
+                        {
+                            "attempt_id": "attempt-no-cache-claim",
+                            "job_id": "job-no-cache-claim",
+                            "kind": "research",
+                            "claimed_at": (start + dt.timedelta(seconds=10)).isoformat(),
+                        }
+                    ],
+                    "processed_at": (start + dt.timedelta(seconds=10)).isoformat(),
+                },
+            )
+            manifest = root / "claim-results.txt"
+            manifest.write_text(claim_result.relative_to(root).as_posix() + "\n", encoding="utf-8")
+
+            summary = derive.apply_claim_result_deltas(root, manifest)
+            self.assertEqual(summary["touched_runs"], 0)
+            self.assertIn(
+                "scheduled-chat-00:run-no-cache-claim",
+                summary["canonical_fallback_runs"],
+            )
+            self.assertEqual(len(summary["generated_results"]), 1)
+            snapshot = json.loads(
+                (root / summary["generated_results"][0]).read_text(encoding="utf-8")
+            )
+            self.assertEqual(snapshot["run_state_source"], "canonical_rebuild")
+            self.assertTrue(snapshot["active_assignment"])
+            self.assertEqual(snapshot["active_job_ids"], ["job-no-cache-claim"])
+
 
     def test_legacy_claim_result_invalidates_cache_instead_of_reviving_old_state(self):
         with tempfile.TemporaryDirectory() as td:
