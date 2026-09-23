@@ -426,6 +426,25 @@ class IncrementalRunStateTests(unittest.TestCase):
                     "processed_at": (start + dt.timedelta(seconds=10)).isoformat(),
                 },
             )
+            write_json(
+                root,
+                ".survey/work-queue/claims/job-no-cache-claim.json",
+                {
+                    "schema_version": 1,
+                    "claim_id": "claim-no-cache-claim",
+                    "job_id": "job-no-cache-claim",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "attempt_id": "attempt-no-cache-claim",
+                    "request_id": "claim-no-cache",
+                    "claimed_at": (start + dt.timedelta(seconds=10)).isoformat(),
+                    "expires_at": (dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=1)).isoformat(),
+                    "kind": "research",
+                    "run_key": "run-no-cache-claim",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": start.isoformat(),
+                },
+            )
             manifest = root / "claim-results.txt"
             manifest.write_text(claim_result.relative_to(root).as_posix() + "\n", encoding="utf-8")
 
