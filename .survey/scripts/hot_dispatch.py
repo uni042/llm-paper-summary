@@ -308,7 +308,11 @@ def process_research_takes(repo_root: Path) -> dict[str, Any]:
     for path in sorted(marker_root.glob("*.json")):
         result_path = result_root / path.name
         existing = _read(result_path, {})
-        if isinstance(existing, dict) and existing.get("status") in {"ready_for_submission", "recovery_required"}:
+        if isinstance(existing, dict) and existing.get("status") in {
+            "canonicalizing",
+            "ready_for_submission",
+            "recovery_required",
+        }:
             continue
         try:
             take = _normalize_research_take(path, _read(path, {}))
