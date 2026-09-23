@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-65be149fc066a960d4993312","job_id":"job-research-9d4382735e8b7ada","data":{"canonical_id":"arXiv:2608.27046","arxiv_id":"2608.27046","doi":"10.48550/arXiv.2608.27046","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Performance Foundations of Parallel & Distributed Reasoning Language Models","summary":"推論言語モデル（RLM）の強化学習型後学習を、生成・評価・学習の三段階パイプラインとして統一し、PPO、GRPO、DPO系を計算中心に比較するサーベイ兼理論分析である。各段階を仕事量・深さ・メモリの三指標で定式化し、データ、テンソル、パイプライン、系列、文脈、エキスパート並列をRLM固有の長い自己回帰生成と複数モデル構成へ対応付ける。さらにモデル配置、段階融合、役割ごとの異種並列、非同期実行をモデル間並列として整理し、TRL、OpenRLHF、HybridFlow、ReaL、RLHFuse、AReaLなど既存基盤を同じ分類軸で比較する。結論は、生成の逐次深さが主要な下限となりやすく、単一の並列方式ではなく役割・段階ごとに配置と並列度を変え、長尾生成を融合・非同期化することがRLMの性能設計の中心になるというもの。","list_summary":"RLM後学習を仕事量・深さ・メモリで形式化し、モデル内6種の並列化と配置・段階融合・非同期化を統一分類して、長い自己回帰生成が支配する分散RLの設計原理を整理する。","authors":["Maciej Besta","Leonard Schmidt","Lara Nonino","Robert Gerstenberger","Pierre Pang","Patrik Okanovic","Ales Kubicek","Tiancheng Chen","Baraq Lipshitz","Torsten Hoefler"],"authors_affiliations":"ETH Zurich。一次PDF著者欄に基づく。","published":"2026-08-27","publication":"arXiv:2608.27046v1, 2026-08-27","publication_type":"Survey / Foundations Preprint","publication_status":"Preprint","lineage":"Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference","topics":["推論言語モデル","RLVR","分散強化学習","モデル内並列","モデル間並列","非同期実行","仕事量・深さ解析"],"importance":"RLM後学習を通常のLLM学習の延長ではなく、複数モデル・複数段階・自己回帰生成が結合した分散システムとして定式化する。既存フレームワークを同一の性能分類で比較し、生成・評価・学習のどこへどの並列方式を適用すべきかを理論的に説明する基盤資料である。","hardware_evaluation":"新規ハードウェア実験を主目的とせず、抽象的なNデバイス系で仕事量・深さ・メモリ複雑度を導出する。既存RLM基盤とLLM実行エンジンの公開仕様・文献を横断比較する。","quality_effect":"モデル品質を変更する新規アルゴリズムではなく性能基盤の分析である。非同期化では古い方策で生成した軌跡による方策ドリフトが収束・品質へ影響しうるため、KL、重要度比、クリップ率、有効サンプルサイズなどの鮮度指標を監視すべきと整理する。","source":"https://arxiv.org/abs/2608.27046","sources":["https://arxiv.org/abs/2608.27046","https://arxiv.org/pdf/2608.27046"],"code":null,"implementation":"実装提案ではなく分析・分類論文。既存のTRL、OpenRLHF、HybridFlow、ReaL、RLHFuse、AReaL、vLLM、SGLang等を比較対象とする。","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary-reference-section","references_total":282},"reservation":{"claim_id":"claim-65be149fc066a960d4993312","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-1205cc442808cb1df99b7f86",
+  "job_id": "job-research-41c5d2a7e72d6309",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1205cc442808cb1df99b7f86",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
