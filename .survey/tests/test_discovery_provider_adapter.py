@@ -4,6 +4,7 @@ import json
 import sys
 import unittest
 from pathlib import Path
+from urllib.error import HTTPError
 from urllib.parse import parse_qs, urlparse
 
 
@@ -85,6 +86,73 @@ class DiscoveryProviderAdapterTest(unittest.TestCase):
         self.assertEqual(calls[0]["offset"], ["0"])
         self.assertEqual(calls[1]["offset"], ["2"])
         self.assertEqual(calls[0]["limit"], ["2"])
+
+    def test_semantic_scholar_retries_http_429_with_retry_after(self) -> None:
+        calls = 0
+        sleeps = []
+
+        def opener(request, timeout=30):
+            nonlocal calls
+            calls += 1
+            if calls == 1:
+                raise HTTPError(
+                    request.full_url,
+                    429,
+                    "Too Many Requests",
+                    {"Retry-After": "7"},
+                    None,
+                )
+            return _Response(
+                {
+                    "offset": 0,
+                    "data": [
+                        {
+                            "paperId": "f" * 40,
+                            "title": "Recovered after rate limit",
+                            "externalIds": {"ArXiv": "2609.30001"},
+                        }
+                    ],
+                }
+            )
+
+        fetch = discovery_provider_adapter.semantic_scholar_fetcher(
+            "https://www.semanticscholar.org/search?q=llm%20serving",
+            opener=opener,
+            sleeper=sleeps.append,
+        )
+        page = fetch(None)
+
+        self.assertEqual(calls, 2)
+        self.assertEqual(sleeps, [7.0])
+        self.assertEqual(page["records"][0]["canonical_id"], "arXiv:2609.30001")
+
+    def test_semantic_scholar_429_without_header_uses_exponential_backoff(self) -> None:
+        calls = 0
+        sleeps = []
+
+        def opener(request, timeout=30):
+            nonlocal calls
+            calls += 1
+            if calls <= 2:
+                raise HTTPError(
+                    request.full_url,
+                    429,
+                    "Too Many Requests",
+                    {},
+                    None,
+                )
+            return _Response({"offset": 0, "data": []})
+
+        fetch = discovery_provider_adapter.semantic_scholar_fetcher(
+            "https://www.semanticscholar.org/search?q=llm%20serving",
+            opener=opener,
+            sleeper=sleeps.append,
+        )
+        page = fetch(None)
+
+        self.assertEqual(calls, 3)
+        self.assertEqual(sleeps, [2.0, 4.0])
+        self.assertEqual(page["records"], [])
 
     def test_semantic_scholar_citations_unwraps_citing_paper(self) -> None:
         paper_id = "d" * 40
