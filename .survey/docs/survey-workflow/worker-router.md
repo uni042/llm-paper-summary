@@ -229,7 +229,7 @@ target_unseen: 20
 Discoveryは、run開始後に外部APIの取得を始める待ち時間を減らすため、論文読解側のpaper preloadとは独立した**探索事前装填待ち行列（Discovery preload queue）**を持つ。これはResearch/Auditのpaper preload FIFOやrecord bankとは別資源であり、候補論文そのものをResearchへ予約する仕組みではない。
 
 - `.github/workflows/discovery-precheck.yml` は通常のschema v3事前検査（precheck）回収と同時に、`.survey/scripts/discovery_preload_queue.py` で探索窓を先行装填する。標準目標は**利用可能32窓**、1回の補充上限は8窓、1窓は `target_unseen=20` / `page_size=20` とする。値を変える場合はワーカー手順へ別の固定値を複製せず、同スクリプトとworkflowを同時に更新する。
-- 探索元は耐久済み `discovery-state.json` の実績から選び、後方引用・前方引用を優先する。構造化referencesの後方引用は常に補充候補とし、実績のある前方引用seedを複数保持する。通常検索のpreloadは、引用2方向を実run内で完了した後のgap-fill用在庫としてのみ扱う。
+- 探索元は耐久済み `discovery-state.json` の実績から選び、後方引用・前方引用を優先する。構造化referencesの後方引用は常に補充候補とし、実績のある前方引用seedを複数保持する。利用可能在庫が片方向へ偏らないよう、可変targetの約1/3ずつを後方引用・前方引用の最低在庫として扱い、残りを実績順の余剰枠にする。通常検索のpreloadは、引用2方向を実run内で完了した後のgap-fill用在庫としてのみ扱う。
 - preloadの論理状態は **READY → PRECHECKED → CLAIMED → INGESTED** とする。READYは先行precheck requestが耐久化済み、PRECHECKEDはworkflow生成resultが利用可能、CLAIMEDは実runが担当確保（claim）済み、INGESTEDはそのrun固有roundのDiscovery submission/resultが正規に耐久反映済みであることを表す。状態は共有JSONを上書きせず、entry / claim / ingestedの独立耐久ファイルから導出する。
 - 担当確保（claim）はDiscovery precheckの直列化領域内で行い、同じpreloadを2 workerへ同時に渡さない。claim leaseは90分で、未完了のまま期限切れになったclaimは補充処理で解放して再利用可能にする。CLAIMED中の窓は利用可能32窓の在庫へ数えず、バックグラウンド補充で後続窓を先に用意する。未取得preloadの鮮度上限は6時間とし、それを超えた窓はSTALEとして在庫から外す。preload専用entry/request/result/claim/ingestedは24時間後にGCし、実run固有precheck resultとDiscovery submission/resultは削除しない。
 - run-state resultの `discovery_selector.next_direction` が今回の正規探索方向を決め、同方向のPRECHECKED在庫があれば `discovery_preload` に最古の1窓を返す。**preloadはselectorを上書きしない。** 同runで後方→前方の必須順序や通常検索解禁条件は従来どおりである。
