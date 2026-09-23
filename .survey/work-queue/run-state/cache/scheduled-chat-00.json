@@ -1,10 +1,23 @@
 {
-  "fact_generation": 1,
-  "generation": 9,
+  "fact_generation": 2,
+  "generation": 10,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
       "attempts": {
+        "attempt-11a2387004457060d2b83f8f": {
+          "attempt_id": "attempt-11a2387004457060d2b83f8f",
+          "claimed_at": "2026-09-23T04:02:00+00:00",
+          "descriptor_path": ".survey/work-queue/submissions/research/attempt-11a2387004457060d2b83f8f.json",
+          "job_id": "job-research-2752e3b1e763b7d9",
+          "kind": "research",
+          "pending": true,
+          "repair_required": false,
+          "retryable": false,
+          "run_key": "manual-e2e-20260923T0402Z-00",
+          "submitted": true,
+          "worker_id": "scheduled-chat-00"
+        },
         "attempt-ff6c2afd7fe3644b99148c7f": {
           "attempt_id": "attempt-ff6c2afd7fe3644b99148c7f",
           "claimed_at": "2026-09-23T04:04:26+00:00",
@@ -25,10 +38,8 @@
       "cache_valid": true,
       "candidate_inventory": 178,
       "claims": {
-        "active_assignment": true,
-        "active_job_ids": [
-          "job-research-2752e3b1e763b7d9"
-        ],
+        "active_assignment": false,
+        "active_job_ids": [],
         "claim_monitor_window_seconds": 60,
         "claim_result_pending": false,
         "claim_result_pending_age_seconds": 0,
@@ -38,8 +49,8 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T04:16:41.028609+00:00",
-      "generation": 9,
-      "rebuilt_from_canonical": true,
+      "generation": 10,
+      "rebuilt_from_canonical": false,
       "run_key": "manual-e2e-20260923T0402Z-00",
       "scheduled_slot": "00",
       "submission": {
@@ -47,14 +58,17 @@
           "attempt-ff6c2afd7fe3644b99148c7f"
         ],
         "last_terminal_job_status": "completed",
-        "pending_attempt_ids": [],
-        "pipeline_ahead_count": 0,
+        "pending_attempt_ids": [
+          "attempt-11a2387004457060d2b83f8f"
+        ],
+        "pipeline_ahead_count": 1,
         "repair_required_attempt_ids": [],
         "research_audit_completed_this_invocation": 1,
         "retryable_attempt_ids": [],
-        "submission_result_pending": false,
+        "submission_result_pending": true,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
+          "attempt-11a2387004457060d2b83f8f",
           "attempt-ff6c2afd7fe3644b99148c7f"
         ]
       },
@@ -2085,6 +2099,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T04:16:41.029080+00:00",
+  "updated_at": "2026-09-23T04:23:12.016206+00:00",
   "worker_id": "scheduled-chat-00"
 }
