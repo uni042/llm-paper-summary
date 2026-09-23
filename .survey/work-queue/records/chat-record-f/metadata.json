@@ -4,10 +4,19 @@
   "slot": "metadata",
   "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
   "job_id": "job-research-61e38612a8457ae4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0640a4e19fcd3a04140f52b1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2511.15690",
+    "arxiv_id": "2511.15690",
+    "title": "MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping",
+    "summary": "MoE型マルチモーダル大規模言語モデルで、固定top-kにより選ばれたexpertの一部をtokenごとに動的に省略する学習不要の推論高速化手法。既存のテキストLLM向けexpert skippingが、層ごとの重要度差とtext/vision tokenの挙動差を無視してMLLMで精度を落とす点を問題化し、層重要度をオフラインKL較正するGlobally-Modulated Local Gating (GMLG)と、text/vision別閾値を使うDual-Modality Thresholding (DMT)を組み合わせる。閾値探索は単調性を使うfrontier searchでO(ND^2)からO(ND)へ削減する。",
+    "source": "https://arxiv.org/abs/2511.15690",
+    "authors": ["Yushi Huang", "Zining Wang", "Zhihang Yuan", "Yifu Ding", "Ruihao Gong", "Jinyang Guo", "Xianglong Liu", "Jun Zhang"],
+    "publication": "arXiv:2511.15690; initial submission 2025-11-19; accepted to CVPR 2026",
+    "publication_type": "CVPR 2026 conference paper / arXiv preprint",
+    "arxiv_categories": {"primary": "cs.CV", "cross_list": []},
+    "topics": ["Mixture-of-Experts", "multimodal LLM", "expert skipping", "adaptive computation", "training-free inference", "modality-aware routing", "layer importance"],
+    "implementation": "Official PyTorch implementation is public at https://github.com/ModelTC/MoDES. README reports CVPR 2026 acceptance and provides calibration, frontier-search, and evaluation scripts. Fast CUDA MoE implementation and InternVL code remain TODO in the repository.",
+    "sources": ["https://arxiv.org/abs/2511.15690", "https://arxiv.org/pdf/2511.15690", "https://github.com/ModelTC/MoDES"]
+  },
+  "reservation": {"claim_id": "claim-0640a4e19fcd3a04140f52b1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
