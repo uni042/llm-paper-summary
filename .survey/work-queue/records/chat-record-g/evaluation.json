@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-df98f0a4232c714053b0bc18","job_id":"job-research-37a03b603cf5e34b","data":{"hardware":"主系は4×H100 SXM5ノードを複数使用し、各GPU間は直接NVLink 4.0、ノード間はConnectX-7とNDR-200 InfiniBand。NVSHMEM 26.3の装置起点遠隔直接メモリアクセスを使用。追加にA40 PCIe Gen4、A100 NVLink 3.0/NVSwitch、RTX Pro 6000 PCIe Gen5を経路比較に用いる。","software":"DeepSeek-V2-Liteの多頭潜在注意を中心に、NVSHMEMのblock-scope非同期put+signalで問い合わせを転送。各通信測定は50回予熱後200回をCUDA eventで計測。疎注意の分散統合は実運用kernelと比較しbf16誤差範囲の一致を検証する。","methodology":"問い合わせ行数、断片token数、保持側数、経路、同時通信数を変え、route/fetch/localの各要素を個別測定する。route modelは探査遅延と実効帯域をfitし、問い合わせ行数512以上の償却領域で平均絶対百分率誤差を報告する。fetchでは全層pull、位置再適応、疎scatter gatherを分離し、localでは再事前計算時間を測る。さらに同一H100のノード内NVLinkとノード間遠隔直接メモリアクセス、他三GPU経路で式の一般性を検証する。","scope":"実機複数ノード評価だが主クラスタは閉源GPU driverという施設制約があり、絶対遅延は他環境で変わり得る。論文の主張は絶対値ではなくroute/fetch/localの費用形状と、経路ごとに二係数を再測定して判定式を移植できる点に置かれる。"},"reservation":{"claim_id":"claim-df98f0a4232c714053b0bc18","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-04e285682c3e9ed7b0782532",
+  "job_id": "job-research-ded5355ef64410a7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-04e285682c3e9ed7b0782532",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

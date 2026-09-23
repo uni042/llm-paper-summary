@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-df98f0a4232c714053b0bc18","job_id":"job-research-37a03b603cf5e34b","data":{"canonical_id":"arXiv:2606.01502","arxiv_id":"2606.01502","doi":"10.48550/arXiv.2606.01502","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI","cs.NI"]},"title":"Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics","summary":"疎注意と多頭潜在注意では、問い合わせ行が約1キロバイトまで圧縮される一方、遠隔にある鍵値キャッシュ断片は全層合計で数十メガバイトになり得る。本研究は従来の『キャッシュを要求元へ運ぶ』方式を反転し、問い合わせだけをキャッシュ保持装置へ送り、その場で注意計算して小さな部分結果を返す方式を実H100クラスタで測定する。装置間経路を探査・転送・計算・返送・統合へ分解した費用モデルと、問い合わせ転送・キャッシュ取得・局所再計算を選ぶ閉形式判定式を構築し、装置間遠隔直接メモリアクセスで大きな優位を示す。","list_summary":"約1KBの問い合わせを遠隔キャッシュへ送り注意計算する方式を実H100で測定し、約3msのキャッシュ再適応より数十µsの往復が有利となる条件を閉形式化する。","authors":["Bole Ma","Jan Eitzinger","Harald Köstler","Gerhard Wellein"],"authors_affiliations":"Erlangen National High Performance Computing Center (NHR@FAU); Friedrich-Alexander-Universität Erlangen-Nürnberg","published":"2026-05-31","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v1, 2026-05-31); manuscript submitted to ACM","lineage":"distributed LLM serving / KV cache / latent attention / GPU fabrics","topics":["鍵値キャッシュ","多頭潜在注意","装置間注意","遠隔直接メモリアクセス","疎注意"],"importance":"潜在注意による鍵値圧縮で『問い合わせよりキャッシュの方が小さい』という従来前提が逆転することを実測で定量化し、帯域最大値ではなく小転送の探査遅延とキャッシュ再適応計算を含む端から端までの費用で経路を選ぶべきことを示す。","implementation":"実H100複数ノード上のNVSHMEM 26.3と装置起点遠隔直接メモリアクセスを用いた微小評価。問い合わせ転送、保持側注意、部分結果返送、オンラインsoftmax統合を測定。","hardware_evaluation":"4×H100 SXM5ノードを複数用い、ノード内NVLink 4.0、ノード間NDR-200 InfiniBandを評価。追加にA40、A100、RTX Pro 6000で経路一般性を検証。","quality_effect":"分散オンラインsoftmax統合は単一装置参照に対してbf16丸め誤差範囲で一致すると検証し、主な差は通信・再適応・再計算時間である。","source":"https://arxiv.org/abs/2606.01502","sources":["https://arxiv.org/abs/2606.01502","https://arxiv.org/html/2606.01502v1"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-df98f0a4232c714053b0bc18","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-04e285682c3e9ed7b0782532",
+  "job_id": "job-research-ded5355ef64410a7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-04e285682c3e9ed7b0782532",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

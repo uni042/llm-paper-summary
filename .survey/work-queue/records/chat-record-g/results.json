@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-df98f0a4232c714053b0bc18","job_id":"job-research-37a03b603cf5e34b","data":{"overview":"H100ノード間では問い合わせ転送モデルが探査約16マイクロ秒、実効約25ギガバイト毎秒で、問い合わせ512行以上の償却領域を約7%誤差で追跡する。復号規模256行では五種類の経路が約31〜48マイクロ秒に集まり、キャッシュ取得時の約3ミリ秒位置再適応より60倍以上短い。1024行でもH100ノード間往復は約116マイクロ秒で、2千トークン断片では取得・局所再計算より1〜2桁速い。疎選択では取得が保持側増加で1.3から3.9ミリ秒へ悪化する一方、問い合わせ転送の統合は25マイクロ秒以下である。","key_results":[{"metric":"H100ノード間問い合わせ往復モデル","value":"探査約16µs、実効約25GB/s、償却領域誤差約7%","baseline":"実測装置起点遠隔直接メモリアクセス","condition":"問い合わせ行数512以上","interpretation":"二係数の単純式で大きな問い合わせ束を十分追跡できる。"},{"metric":"復号規模の経路横断往復","value":"約31–48µs at 256 query rows","baseline":"fetch位置再適応約3ms","condition":"PCIe Gen4/5、NVLink 3/4、H100ノード間","interpretation":"五経路すべてで取得再適応より60倍以上短い。"},{"metric":"H100ノード間1024行","value":"約116µs","baseline":"fetch約3ms、localは2k-tokenで数十ms","condition":"DeepSeek-V2-Lite、2k-token級断片","interpretation":"問い合わせ転送が1〜2桁短い。"},{"metric":"疎取得の保持側増加","value":"2048選択要素で約1.3ms→3.9ms（1→7保持側）","baseline":"route fan-outと統合≤25µs","condition":"2-node H100 testbed","interpretation":"散在選択ではキャッシュ取得のまとめ転送が崩れる。"},{"metric":"経路別モデル誤差","value":"RTX PCIe5約2%、H100 NVLink4約3%、A100 NVLink3約4%、H100 IBGDA約7%","baseline":"各実測sweep","condition":"償却領域","interpretation":"式の構造は複数経路へ一般化する。"}],"negative_results":"A40 PCIe Gen4は大きな問い合わせ束で第二の待ち行列律速が現れ、償却領域誤差が約13%まで増える。小問い合わせでは固定kernel turnaroundにより単純式の誤差が大きい。また問い合わせ束が対象断片より大きくなる領域では、問い合わせ転送量がキャッシュ取得量を超えてfetch/localが勝つ。閉源driver環境の絶対値は他システムへそのまま移せない。","interpretation":"優位の根本は線路帯域だけでなく、fetchが連続再利用で約3ミリ秒の位置再適応、疎選択でミリ秒級scatter gatherを支払うのに対し、routeは既存位置のキャッシュをその場で使えることにある。復号の小転送は発行律速なので最大帯域が高い経路ほど速いとは限らず、探査遅延が経路選択に効く。","quality_impact":"分散softmax統合の数値一致を実kernelで確認しており、方式選択は注意意味を変更する近似ではない。主なtrade-offは通信往復、保持側計算、統合、取得時再適応、局所再計算の時間である。"},"reservation":{"claim_id":"claim-df98f0a4232c714053b0bc18","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-04e285682c3e9ed7b0782532",
+  "job_id": "job-research-ded5355ef64410a7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-04e285682c3e9ed7b0782532",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
