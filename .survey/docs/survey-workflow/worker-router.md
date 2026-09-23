@@ -83,27 +83,27 @@ Web/PDF取得のplatform上限はrunを途中終了させる実害があるた�
 
 Research / Auditのclaimは次の順で行う。
 
-### 3.x 4段claim window（foreground 1 + standby 3）
+### 3.x 可変claim window（foreground 1 + standby N）
 
-#### 共有24本preload FIFO
+#### record bank数から導出する共有preload FIFO
 
-Research / Auditの事前装填はworkerごとの固定4本ではなく、全Scheduled Chat worker共通のFIFO poolを使う。正規claim fast laneは10分周期の回収時を含め、共有poolで待機中のclaimと各Scheduled Chat workerへadopt済みのactive claimを合計して24本になるよう補充する。32個のrecord bankのうち通常装填で最大24個を使い、残り8個はrepair、競合、一時的な例外claimの余白とする。
+Research / Auditの事前装填はworkerごとの固定本数ではなく、全Scheduled Chat / worker-Nで共有するFIFO poolを使う。共有poolの目標在庫はrecord bank数から一般化して導出し、**現在は32 bankの75% = 24件を通常preload、25% = 8 bankをrepair・競合・一時的な例外claimの余白**とする。bank registryを増減した場合は同じ比率でpool目標も追従し、24という固定値を別箇所へ埋め込まない。正規claim fast laneは10分周期の回収時を含め、共有pool待機claimと各workerへadopt済みactive claimの合計をこの目標へ補充する。
 
 - 共有poolのclaimは特定workerに固定しない。Scheduled Chat requestが来た時点で、そのrequestのjob type / 明示job_id条件を満たす最古のpool claimから不足window分をadoptする。
 - adoptはclaim fast laneの正規割当処理内で行い、既存のsurvey-claim-main concurrencyとpush-race再計算を使う。同時・不規則に複数workerがrequestを出しても、同一claim / job / record bankを2 workerへ渡してはならない。
 - pool内の順番はpool_orderで固定する。一度装填済みの論文を後から到着した高priority論文で追い越させない。新しい補充論文は常にpool末尾へ追加する。
 - workerへadoptした後は、そのworker内のpipeline_orderの末尾へ接続する。したがって既存standbyを飛び越さず、foreground終端時は従来どおり最古standbyが昇格する。
-- 24本は待機poolだけの本数ではない。例として2 workerが各4本を保持中なら、8本adopt済み + 16本共有待機 = 24本とする。6 workerが各4本を保持中なら24本すべてadopt済みとなり、共有待機は0本でよい。
+- pool目標は待機poolだけの本数ではない。現在の24件を例に、3 workerが既定window 8件を保持中なら24件すべてadopt済みとなり共有待機は0件でよい。workerごとのwindowは共有poolの専有枠ではなく、pool不足時は取得可能な範囲だけadoptし、正規direct allocation / fallbackへ進む。
 - worker数や起動順に固定laneを割り当ててはならない。特定workerが長期間起動しなくても、そのworker専用バンクに論文が滞留しない構造を維持する。
 - pool claimのjobがreadyでなくなった、terminalになった、または耐久submissionで処理済みになった場合はpoolから解放する。pool leaseは保守runで必要時だけ更新し、lease更新を理由に順番を変更しない。
 - Audit-only等でrequestのjob type条件に合わない先頭claimはそのrequestでは飛ばしてよいが、claim自体のpool_orderは変更しない。通常のResearch/Audit混合workerからは再びFIFO対象となる。
 - 共有poolが一時的に空の場合は従来の直接allocationへ安全にフォールバックしてよい。pool不足やbank不足だけをrun停止理由にしない。
 
-Scheduled ChatのResearch / Auditは、**同時に精読する論文は常に1件**のまま、担当確保だけを最大4件まで先行させる。既定の `claim_window=4` は設定値であり、意味は **foreground 1件 + standby最大3件** である。`max_jobs=1` は精読並列度を表し、claim windowの大きさを表さない。
+Scheduled Chat / worker-NのResearch / Auditは、**同時に精読する論文は常に1件**のまま、担当確保だけを可変長windowで先行させる。既定は `claim_window=8`、つまり **foreground 1件 + standby最大7件** とするが、8という値は正規claim-window policyの設定値であり、worker手順へ固定ロジックとして複製しない。`max_jobs=1` は精読並列度を表し、claim windowの大きさを表さない。
 
 - claim resultの `pipeline_role=foreground` / `pipeline_position=1` の1件だけを本文読解・5スロット作成対象にする。`standby` は担当権とrecord bankだけを先に確保し、foregroundになるまで本文を先読みしない。
 - foregroundが `completed` / `blocked` / `deferred` / `rejected`、またはimmutable descriptor生成により現在claimから外れたら、**既確保standbyの先頭を即座に次foregroundとして開始する。ここで新しいclaim resultを待たない。**
-- foregroundを開始した時点でactive claimが4件未満、残り600秒より多く、claim可能jobがあるなら、standby補充用claim requestを1件だけ発行してwindowを4件へ戻す。**補充result待ちはforeground読解の同期障壁にしない。** pending中もforegroundの全文読解・記録作成を続ける。
+- standby補充は毎回1件減るたびには行わず、**active claim数が正規policyの低水位（既定はclaim windowの1/2、window 8なら4件）以下**になった時点で行う。残り600秒より多くclaim可能jobがあるなら、補充用claim requestを1件だけ発行し、1回の割当で可能な限りwindow目標まで戻す。windowを6や10等へ変更した場合も低水位は同じpolicyから導出し、個別に「3件」「4件」等を埋め込まない。**補充result待ちはforeground読解の同期障壁にしない。** pending中もforegroundの全文読解・記録作成を続ける。
 - 既に補充claim requestがpendingなら重複requestを出さない。返ったresultでwindowを更新し、foregroundは変えない。
 - 残り600秒以下では新しいstandby補充claimを発行しない。ただし600秒窓へ入る前に発行済みのclaimは既発行claimとして扱い、foreground終端時にstandbyへ昇格して処理を継続してよい。残り180秒以下の最終handoff規則は従来どおり優先する。
 - claim allocatorは同一Scheduled Chat workerのactive claimを `pipeline_order` で並べ、最小をforeground、それ以降をstandbyとする。旧claimに `pipeline_order` が無い場合は正規allocatorが移行時に順序を付与する。
@@ -116,11 +116,11 @@ Scheduled ChatのResearch / Auditは、**同時に精読する論文は常に1�
 1. 最新main HEADとclaim stateを再取得する。**同一workerにactiveな未提出claimがある場合は新requestを出さない。直前claimのexact attemptに対する不変descriptorがmainへ耐久保存済みなら、そのclaimがまだactive表示でも次requestを出してよい。claim fast laneは新request処理の冒頭でdescriptor-backed claimを正規解放してから新jobを割り当てる。**
 2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatのrequestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` に加え、今回runで固定した **`run_key`、`scheduled_slot`、`actual_invocation_start`** を持つ。これら3項目はclaim resultへ耐久伝播し、worker別増分run-state cacheをclaim結果だけで更新するために使う。旧requestで3項目が無いものは引き続き処理するが、その場合は該当workerのcacheを安全側に無効化し、次のrun-state導出をcanonical factsから再構築する。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。 **`requested_at` は必ずUTCで、末尾を `Z` または `+00:00` とする。JST等の `+09:00` をそのまま入れてはならない。** `actual_invocation_start` はoffset-aware timestampなら受理され正規化されるが、claim requestの `requested_at` だけは実装契約としてUTC限定である。例: `2026-09-23T04:52:00+00:00`。
 3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で共通 `claim_fast_path.py` を実行する。通常allocationとbank予約は `claim_worker_with_banks.py` を使い、Library checkpoint barrierは割当前に維持する。repair用の重い回復走査は新規assignmentがrepair対象のときだけ実行し、canonical record routeはbank予約時にclaim/resultへ直接書く。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
-4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を確認する。未生成なら固定時間sleepや定周期pollingへ入らず、第7.0節の待機ミクロタスクを1件処理してから同じresultを再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`pipeline_role` / `pipeline_position`、`foreground_job_id` / `standby_job_ids`、`next_action` / `instructions` を正本として以後の処理を行う。初回resultが4件を返した場合も本文読解はforeground 1件だけ開始し、standbyは昇格まで読まない。
+4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を確認する。未生成なら固定時間sleepや定周期pollingへ入らず、第7.0節の待機ミクロタスクを1件処理してから同じresultを再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`claim_window` / `claim_refill_threshold`、`pipeline_role` / `pipeline_position`、`foreground_job_id` / `standby_job_ids`、`next_action` / `instructions` を正本として以後の処理を行う。初回resultが複数件を返しても本文読解はforeground 1件だけ開始し、standbyは昇格まで読まない。
 5. **claim result待ちは受動待機にしない。** request commitから60秒未満は `MONITOR_CLAIM_FAST_LANE` として、同じrequestを起動した `Survey claim fast lane` のActions runを確認し、`queued` / `in_progress` ならjob/step状態を確認する。並行して同一workerの未解決submission、`retryable` / repair待ち、active claim整合だけを軽く監査し、第7.0節の待機ミクロタスクを1件処理してから最新 `main` と同じ `request_id` のresultを再確認する。この作業サイクル中に別claimを発行したり、割当未確定の次論文本文を先読みしてはならない。
 6. request ageが60秒以上でも別requestを発行しない。Actionsが `failed` / `cancelled` なら同じrequestの正規回復へ進み、`queued` / `in_progress` / success後の反映待ちなら同一identityの監視を継続する。claim fast laneはpush起動に加えて**10分周期で未result requestを定期回収**するため、一時的なActions失敗・cancel・push競合でrequestだけ残っても新requestを捏造しない。
 
-**並列workerの扱い:** `max_jobs=1` は**同一worker内で同時に本文を精読するforegroundが1件**という制約である。Scheduled Chatは同じworker lineage内に最大4件のactive claimを持てるが、2〜4件目はstandbyであり本文処理しない。このforeground直列制約と4段claim windowは同一worker / 同一論理worker lineage内だけに適用する。`:00` worker、`:30` worker、その他の独立workerは、別 `worker_id` と別record bankで同時にResearch / Auditを進めてよい。他workerのactive claim、他workerのclaim request、またはclaim fast lane上で先行requestが処理中であることを理由に、このworkerのrunを停止・終了・handoffしてはならない。`.github/workflows/survey-claim-fast.yml` の `concurrency: survey-claim-main` は**claim割当commitの競合回避だけを直列化するもの**であり、論文精読そのものを全worker間で直列化するものではない。自分のrequestがfast lane待ちなら第7.0節の待機ミクロタスクを挟みながら同じ `request_id` のresultを再確認し、割当後は返された別job / record bankで処理を続ける。他workerのclaimを自分の未完了claimとして扱わない。
+**並列workerの扱い:** `max_jobs=1` は**同一worker内で同時に本文を精読するforegroundが1件**という制約である。各worker lineageは正規policyの `claim_window` 上限までactive claimを持てるが、2件目以降はstandbyであり本文処理しない。このforeground直列制約と可変claim windowは同一worker / 同一論理worker lineage内だけに適用する。`:00` worker、`:30` worker、その他の独立workerは、別 `worker_id` と別record bankで同時にResearch / Auditを進めてよい。他workerのactive claim、他workerのclaim request、またはclaim fast lane上で先行requestが処理中であることを理由に、このworkerのrunを停止・終了・handoffしてはならない。`.github/workflows/survey-claim-fast.yml` の `concurrency: survey-claim-main` は**claim割当commitの競合回避だけを直列化するもの**であり、論文精読そのものを全worker間で直列化するものではない。自分のrequestがfast lane待ちなら第7.0節の待機ミクロタスクを挟みながら同じ `request_id` のresultを再確認し、割当後は返された別job / record bankで処理を続ける。他workerのclaimを自分の未完了claimとして扱わない。
 
 Research / Auditのcompleted submissionは、**ワーカー自身の意味品質セルフレビュー + 同期軽量セルフチェック + exact blob preflight** を通してからfast laneへ送る。
 
