@@ -87,16 +87,18 @@ Research / Auditのclaimは次の順で行う。
 
 ### 3.x 可変claim window（foreground 1 + standby N）
 
-#### record bankから独立した共有paper preload FIFO
+#### 32個のdual-mode bankと共有paper preload FIFO
 
-Research / Auditの事前装填はworkerごとの固定本数ではなく、全Scheduled Chat / worker-Nで共有するFIFO poolを使う。**論文の玉（logical paper stock）とrecord bankは別資源**とし、共有poolの待機claimはbankを予約しない。共有pool目標は `claim_window_policy.py` から導出し、現在は **12件/worker × 6 worker × 2セット = 144件**（workerへadopt済みを含む）である。6 workerが各12件を保持しても72件の共有待機余力を残せる。record bank数を増減してもpaper preload数を直接連動させない。
+A〜AFの32個のcanonical bankは**dual-mode bank**として扱い、各bankが同時に **Research stock lane** と **Discovery stock lane** を持つ。さらに従来の5つのResearch/Audit record slotはhot staging laneとして同じbank identityに属する。3レーンは独立しており、Discovery窓を持つbankへResearch recordを書いてよく、Research stockを持つbankのDiscovery窓も同時に利用してよい。
+
+Research / Auditの事前装填はworkerごとの固定本数ではなく、全Scheduled Chat / worker-Nで共有するFIFO poolを使う。共有pool目標は `claim_window_policy.py` から導出し、現在は **12件/worker × 6 worker × 2セット = 144件**（workerへadopt済みを含む）である。待機claimは `pool_order mod 32` のcanonical順で `stock_bank` を持ち、144件を32bankへ均等に散らす。ただしcold Research stockはそのbankの5 record slotを予約しない。したがって全bankに読解用在庫を置きつつ、hot staging容量を先食いしない。
 
 - 共有poolのclaimは特定workerに固定しない。Scheduled Chat requestが来た時点で、そのrequestのjob type / 明示job_id条件を満たす最古のpool claimから不足window分をadoptする。
-- adoptはclaim fast laneの正規割当処理内で行い、既存のsurvey-claim-main concurrencyとpush-race再計算を使う。同時・不規則に複数workerがrequestを出しても、同一claim / jobを2 workerへ渡してはならない。record bankはadoptとは別にhot sliceへだけ割り当てる。
+- adoptはclaim fast laneの正規割当処理内で行い、既存のsurvey-claim-main concurrencyとpush-race再計算を使う。同時・不規則に複数workerがrequestを出しても、同一claim / jobを2 workerへ渡してはならない。adopt後もResearch `stock_bank` は保持し、hot sliceへ昇格したときはまず同じbankのrecord slotを使う。そこが既にResearch stagingで占有中の場合だけ別のfree/reusable bankへ退避する。
 - pool内の順番はpool_orderで固定する。一度装填済みの論文を後から到着した高priority論文で追い越させない。新しい補充論文は常にpool末尾へ追加する。
 - workerへadoptした後は、そのworker内のpipeline_orderの末尾へ接続する。したがって既存standbyを飛び越さず、foreground終端時は従来どおり最古standbyが昇格する。
 - pool目標は待機poolだけの本数ではない。現在144件のうち6 workerが各12件をadopt済みなら72件がworker在庫、残り72件が共有待機となる。workerごとのwindowは共有poolの専有枠ではなく、pool不足時は取得可能な範囲だけadoptし、正規direct allocationへ進む。
-- worker数や起動順に固定laneを割り当ててはならない。特定workerが長期間起動しなくても、そのworker専用バンクに論文が滞留しない構造を維持する。
+- worker数や起動順に固定laneを割り当ててはならない。`stock_bank` はworker専用bankではなくFIFO stockのシャードである。特定workerが長期間起動しなくても論文が滞留せず、どのworkerも任意bankのResearch/Discovery laneをadoptできる構造を維持する。
 - pool claimのjobがreadyでなくなった、terminalになった、または耐久submissionで処理済みになった場合はpoolから解放する。pool leaseは保守runで必要時だけ更新し、lease更新を理由に順番を変更しない。
 - Audit-only等でrequestのjob type条件に合わない先頭claimはそのrequestでは飛ばしてよいが、claim自体のpool_orderは変更しない。通常のResearch/Audit混合workerからは再びFIFO対象となる。
 - 共有poolが一時的に空の場合は従来の直接allocationへ安全にフォールバックしてよい。pool不足やbank不足だけをrun停止理由にしない。
@@ -109,7 +111,7 @@ Scheduled Chat / worker-NのResearch / Auditは、**同時に精読する論文�
 - 既に補充claim requestがpendingなら重複requestを出さない。返ったresultでwindowを更新し、foregroundは変えない。
 - 残り600秒以下では新しいstandby補充claimを発行しない。ただし600秒窓へ入る前に発行済みのclaimは既発行claimとして扱い、foreground終端時にstandbyへ昇格して処理を継続してよい。残り180秒以下の最終handoff規則は従来どおり優先する。
 - claim allocatorは同一Scheduled Chat workerのactive claimを `pipeline_order` で並べ、最小をforeground、それ以降をstandbyとする。旧claimに `pipeline_order` が無い場合は正規allocatorが移行時に順序を付与する。
-- 各claimには従来どおり独立したattemptを割り当てるが、record bankは**hot sliceだけ**へ遅延割当する。cold standbyがhot sliceへ昇格する際はclaim fast laneのbank reconciliationでbankを付与する。bank不足時は既存Library fallbackを使い、bank不足だけをrun停止理由にしない。
+- 各claimには従来どおり独立したattemptを割り当てる。Research stock自体は全claimが `stock_bank` を持つが、5つのrecord slotを予約するのは**hot sliceだけ**である。cold standbyがhot sliceへ昇格する際はclaim fast laneのbank reconciliationでまず `stock_bank` をrecord bankとして使い、使用中なら別bankへ割り当てる。bank不足時は既存Library fallbackを使い、bank不足だけをrun停止理由にしない。
 - `claim_window` は1〜24の範囲で変更可能で、既定値は正規 `claim_window_policy.py` から導出する（現在は12）。通常hot bank幅は4件で、6 worker同時稼働なら通常bank使用は最大24件となり、32 bank中8件をrepair・例外用に残す。精読並列度 `max_jobs=1` は変えない。
 
 
@@ -118,7 +120,7 @@ Scheduled Chat / worker-NのResearch / Auditは、**同時に精読する論文�
 1. 最新main HEADとclaim stateを再取得する。**同一workerにactiveな未提出claimがある場合は新requestを出さない。直前claimのexact attemptに対する不変descriptorがmainへ耐久保存済みなら、そのclaimがまだactive表示でも次requestを出してよい。claim fast laneは新request処理の冒頭でdescriptor-backed claimを正規解放してから新jobを割り当てる。**
 2. 一意な `request_id` を作り、`.survey/work-queue/claim-requests/<request_id>.json` をmainへcommitする。通常Scheduled Chatのrequestは `schema_version: 1`、`request_id`、`worker_id`、`worker_kind: scheduled_chat`、`requested_at`、`max_jobs: 1` に加え、今回runで固定した **`run_key`、`scheduled_slot`、`actual_invocation_start`** を持つ。これら3項目はclaim resultへ耐久伝播し、worker別増分run-state cacheをclaim結果だけで更新するために使う。旧requestで3項目が無いものは引き続き処理するが、その場合は該当workerのcacheを安全側に無効化し、次のrun-state導出をcanonical factsから再構築する。通常は `job_types: ["research", "audit"]` とし、第3節のAudit starvation防止条件に達したclaimだけ `job_types: ["audit"]` に限定する。 **`requested_at` は必ずUTCで、末尾を `Z` または `+00:00` とする。JST等の `+09:00` をそのまま入れてはならない。** `actual_invocation_start` はoffset-aware timestampなら受理され正規化されるが、claim requestの `requested_at` だけは実装契約としてUTC限定である。例: `2026-09-23T04:52:00+00:00`。
 3. このpushで `.github/workflows/survey-claim-fast.yml` が起動し、最新main上で共通 `claim_fast_path.py` を実行する。通常allocationとbank予約は `claim_worker_with_banks.py` を使い、Library checkpoint barrierは割当前に維持する。repair用の重い回復走査は新規assignmentがrepair対象のときだけ実行し、canonical record routeはbank予約時にclaim/resultへ直接書く。ワーカー自身が `claims/*.json`、`jobs/*.json`、`state.json`、`next-jobs.json` を直接編集してclaimを再現してはならない。
-4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を確認する。未生成なら固定時間sleepや定周期pollingへ入らず、第7.0節の待機ミクロタスクを1件処理してから同じresultを再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`record_bank` / `record_bank_fallback`、`claim_window` / `claim_refill_threshold`、`pipeline_role` / `pipeline_position`、`foreground_job_id` / `standby_job_ids`、`next_action` / `instructions` を正本として以後の処理を行う。初回resultが複数件を返しても本文読解はforeground 1件だけ開始し、standbyは昇格まで読まない。
+4. 同じ `request_id` の `.survey/work-queue/claim-results/<request_id>.json` を確認する。未生成なら固定時間sleepや定周期pollingへ入らず、第7.0節の待機ミクロタスクを1件処理してから同じresultを再確認する。resultの `ok`、`assignments`、`attempt_id`、`claim_id`、`stock_bank` / `stock_lane`、`record_bank` / `record_bank_fallback`、`claim_window` / `claim_refill_threshold`、`pipeline_role` / `pipeline_position`、`foreground_job_id` / `standby_job_ids`、`next_action` / `instructions` を正本として以後の処理を行う。初回resultが複数件を返しても本文読解はforeground 1件だけ開始し、standbyは昇格まで読まない。
 5. **claim result待ちは受動待機にしない。** request commitから60秒未満は `MONITOR_CLAIM_FAST_LANE` として、同じrequestを起動した `Survey claim fast lane` のActions runを確認し、`queued` / `in_progress` ならjob/step状態を確認する。並行して同一workerの未解決submission、`retryable` / repair待ち、active claim整合だけを軽く監査し、第7.0節の待機ミクロタスクを1件処理してから最新 `main` と同じ `request_id` のresultを再確認する。この作業サイクル中に別claimを発行したり、割当未確定の次論文本文を先読みしてはならない。
 6. request ageが60秒以上でも別requestを発行しない。Actionsが `failed` / `cancelled` なら同じrequestの正規回復へ進み、`queued` / `in_progress` / success後の反映待ちなら同一identityの監視を継続する。claim fast laneはpush起動に加えて**10分周期で未result requestを定期回収**するため、一時的なActions失敗・cancel・push競合でrequestだけ残っても新requestを捏造しない。
 
@@ -226,14 +228,14 @@ target_unseen: 20
 
 ### 4.0 探索の事前装填待ち行列（Discovery preload queue）
 
-Discoveryは、run開始後に外部APIの取得を始める待ち時間を減らすため、論文読解側のpaper preloadとは独立した**探索事前装填待ち行列（Discovery preload queue）**を持つ。これはResearch/Auditのpaper preload FIFOやrecord bankとは別資源であり、候補論文そのものをResearchへ予約する仕組みではない。
+Discoveryは、run開始後に外部APIの取得を始める待ち時間を減らすため、Researchと同じ32個のdual-mode bank上に独立した**Discovery stock lane**を持つ。探索preloadのentry/result自体は専用queueに耐久保存するが、各entryはcanonical `stock_bank` を1つ持つ。Research stock lane・Discovery stock lane・5 record slotは相互に占有しないため、同じbankが読解用在庫と探索用在庫を同時に保持できる。
 
-- `.github/workflows/discovery-precheck.yml` は通常のschema v3事前検査（precheck）回収と同時に、`.survey/scripts/discovery_preload_queue.py` で探索窓を先行装填する。標準目標は**利用可能32窓**、1回の補充上限は8窓、1窓は `target_unseen=20` / `page_size=20` とする。値を変える場合はワーカー手順へ別の固定値を複製せず、同スクリプトとworkflowを同時に更新する。
+- `.github/workflows/discovery-precheck.yml` は通常のschema v3事前検査（precheck）回収と同時に、`.survey/scripts/discovery_preload_queue.py` で探索窓を先行装填する。標準目標は**利用可能32窓**、1回の補充上限は8窓、1窓は `target_unseen=20` / `page_size=20` とする。通常target=32では、総数だけでなく**A〜AFの各bankに利用可能Discovery窓が最低1つあること**を補充条件にする。値を変える場合はワーカー手順へ別の固定値を複製せず、同スクリプトとworkflowを同時に更新する。
 - 探索元は耐久済み `discovery-state.json` の実績から選び、後方引用・前方引用を優先する。構造化referencesの後方引用は常に補充候補とし、実績のある前方引用seedを複数保持する。利用可能在庫が片方向へ偏らないよう、可変targetの約1/3ずつを後方引用・前方引用の最低在庫、約1/8を通常検索の小さな予備在庫として扱い、残りを実績順の余剰枠にする。通常検索のpreloadは、引用2方向を実run内で完了した後のgap-fill用在庫としてのみ扱う。
-- preloadの論理状態は **READY → PRECHECKED → CLAIMED → INGESTED** とする。READYは先行precheck requestが耐久化済み、PRECHECKEDはworkflow生成resultが利用可能、CLAIMEDは実runが担当確保（claim）済み、INGESTEDはそのrun固有roundのDiscovery submission/resultが正規に耐久反映済みであることを表す。状態は共有JSONを上書きせず、entry / claim / ingestedの独立耐久ファイルから導出する。
+- preloadの論理状態は **READY → PRECHECKED → CLAIMED → INGESTED** とする。各entryは `stock_lane=discovery` とcanonical `stock_bank` を持つ。READYは先行precheck requestが耐久化済み、PRECHECKEDはworkflow生成resultが利用可能、CLAIMEDは実runが担当確保（claim）済み、INGESTEDはそのrun固有roundのDiscovery submission/resultが正規に耐久反映済みであることを表す。状態は共有JSONを上書きせず、entry / claim / ingestedの独立耐久ファイルから導出する。
 - 担当確保（claim）はDiscovery precheckの直列化領域内で行い、同じpreloadを2 workerへ同時に渡さない。claim leaseは90分で、未完了のまま期限切れになったclaimは補充処理で解放して再利用可能にする。CLAIMED中の窓は利用可能32窓の在庫へ数えず、バックグラウンド補充で後続窓を先に用意する。未取得preloadの鮮度上限は6時間とし、それを超えた窓はSTALEとして在庫から外す。preload専用entry/request/result/claim/ingestedは24時間後にGCし、実run固有precheck resultとDiscovery submission/resultは削除しない。
-- run-state resultの `discovery_selector.next_direction` が今回の正規探索方向を決め、同方向のPRECHECKED在庫があれば `discovery_preload` に最古の1窓を返す。**preloadはselectorを上書きしない。** 同runで後方→前方の必須順序や通常検索解禁条件は従来どおりである。
-- `discovery_preload` が非nullなら、新しいrun固有schema v3 requestを作り、そこから返された `provider` / `source_url` / `axis` / `initial_cursor` / `page_size` / `max_pages` / `target_unseen` をそのまま使い、追加で今回の `worker_id` と `preload_id` を保存する。`run_key` は**必ず今回runの値**にする。preload側の `run_key=preload:...` をコピーしない。
+- run-state resultの `discovery_selector.next_direction` が今回の正規探索方向を決め、同方向のPRECHECKED在庫があれば `discovery_preload` に最古の1窓を返す。`discovery_preload` には `stock_bank` / `stock_lane` も含める。**preloadはselectorを上書きしない。** 同runで後方→前方の必須順序や通常検索解禁条件は従来どおりである。
+- `discovery_preload` が非nullなら、新しいrun固有schema v3 requestを作り、そこから返された `provider` / `source_url` / `axis` / `initial_cursor` / `page_size` / `max_pages` / `target_unseen` / `stock_bank` / `stock_lane` をそのまま使い、追加で今回の `worker_id` と `preload_id` を保存する。`run_key` は**必ず今回runの値**にする。preload側の `run_key=preload:...` をコピーしない。
 - 実run用 `process_discovery_precheck.py` は、先行取得済み20件を現在のidentity snapshot / rejection ledgerで**再フィルタ**する。20件残れば外部providerへ追加アクセスせず、その場で今回run固有の正式precheck result / receiptを生成する。既収録化などで20件未満になった場合だけ、同じ固定 `source_url` の保存済み `next_cursor` から不足分を補充する。
 - バックグラウンドpreload result自体をDiscovery submissionの証明として参照してはならない。submissionが参照できるのは、今回runの `run_key` / `axis` で再検査されたworkflow生成resultだけである。queue workerも `preload_seed=true` のresultからの直接submissionを拒否する。
 - 同方向の利用可能preloadが無い、claim競合で先行窓を取れなかった、preloadが破損している等の場合は停止しない。最新run-stateを再取得し、別の同方向preloadがあればそれを使い、無ければselectorが返した固定ソースを従来のschema v3経路で直接precheckする。preload不足をrun終了理由にしない。background preloadのprovider失敗は同一ソース・同一6時間bucketで最大2回までとし、preload request追加pushによる自己起動が障害時に無限再試行ループにならないようにする。
