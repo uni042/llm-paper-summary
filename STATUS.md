@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 17:11:17 JST**
+> 自動生成: **2026-09-23 17:20:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **162** |
+| 収録候補論文 | **161** |
 | 未claim Research job | **161** |
-| 直近24hの検証済みResearch収録 | **81** |
-| 最終検証済みResearch収録 | **09-23 17:05:38 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **82** |
+| 最終検証済みResearch収録 | **09-23 17:19:59 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **162** |
+| canonical_id確認済みの一意な候補論文 | **161** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **162** |
+| 非終端Research job合計 | **161** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（8時間40分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（8時間49分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **15** | **1** | **0** | **0** | **1** | **0** | — |
+| Research | **16** | **1** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **15** | **4** | **0** | **3** | **1** | **0** | **6** |
+| 合計 | **16** | **4** | **0** | **3** | **0** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 17:19:59 JST** [research] `DOI:10.4108/eetiot.13349` — Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving
+  - job: `.survey/work-queue/jobs/job-research-d69ddf3864beda69.json`
+  - result: `.survey/work-queue/results/research/attempt-b1a52303c9877f76cd4ddc7e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-b1a52303c9877f76cd4ddc7e.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-98d01325c44c-janus-joint-prefill-decode-disaggregation-with-kv-cache-aware-multi-cloud-routing-for-edge-adjacent-llm-serving.md`
 - **09-23 17:05:38 JST** [research] `arXiv:2609.15030` — Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache
   - job: `.survey/work-queue/jobs/job-research-41c5d2a7e72d6309.json`
   - result: `.survey/work-queue/results/research/attempt-1205cc442808cb1df99b7f86.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-c702d1e87d96e29f00644312.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c702d1e87d96e29f00644312.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2605.28042-translation-specialist-expert-pruning.md`
-- **09-23 14:12:55 JST** [research] `arXiv:2608.13565` — Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking
-  - job: `.survey/work-queue/jobs/job-research-c58272e75725b517.json`
-  - result: `.survey/work-queue/results/research/attempt-5e8cb6bdeb7cddafe8c55c3a.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-5e8cb6bdeb7cddafe8c55c3a.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.13565-depth-aware-moe-sensitivity.md`
 
 ### Audit
 
@@ -178,10 +178,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `DOI:10.4108/eetiot.13349` — Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving / worker `scheduled-chat-00`
-  - claim: **09-23 17:10:45 JST** / heartbeat: **—** / lease expiry: **09-23 18:40:45 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d69ddf3864beda69.json`
+- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
+- 現在処理中と判定できる有効claimはありません。
 
 #### Audit
 
@@ -201,7 +199,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **162** |
+| ready | **161** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +219,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **986** |
+| inference/training/survey配下の論文Markdown実体 | **987** |
 
 ### immutable submissionの未照合
 
