@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-4221ae4eae4238e95de8fb44",
-  "job_id": "job-research-8dfa4bfad6e4a344",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4221ae4eae4238e95de8fb44",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-4221ae4eae4238e95de8fb44","job_id":"job-research-8dfa4bfad6e4a344","data":{"limitations":"実験はA100とXeon Gold 6342を中心とし、CPU/GPUの性能差とPCIe・ネットワーク特性が設計効果を左右す。新しいGPUやAMX搭載CPUでは密計算をCPUへ残す判断や最適なオフロード量が変わりうる。中心設定はLSとBEの二優先度で、複数SLO階層は議論上の拡張に留まる。GPUがモデル全重みを保持できる前提なので、モデル自体がGPU容量を超えて重みオフロードが必要な環境とは異なる。CPUを遠隔化するほど通信遅延・帯域の影響も大きくなる。","relation_to_prior":"LlumnixはLS用GPUメモリ余白を予約してBEを制限するが、計算帯域干渉や文脈長差を直接モデル化しない。NEOやFastDecodeはCPU-GPU協調で注意計算をCPUへ移すが、主に単一サービスの低遅延化を目的とし、同期・パイプライン依存がCPU性能差をクリティカルパスへ持ち込みやすい。Sarathi-ServeはGPUだけでSLOを守る強い基準だが、余ったCPUメモリ・計算をBEへ活用しない。OmniServeはBEだけを非同期CPU注意へ逃がし、戻り結果を後続GPU密計算へ層単位で合流させることで両者を分離する。","differences":"既存CPUオフロードが要求や層を同期的にCPUへ移してGPUが結果を待つのに対し、OmniServeは注意結果の即時回収を要求しない。連続バッチのトークン単位同期境界を崩し、同じ反復でも層ごとに異なる要求集合を実行する。さらに固定GPUメモリ割当ではなく、プロファイル済みモジュール遅延からSLO余白を数値化し、その時点で相乗りできるBE量を決める。これによりCPUは容量拡張、GPUは密計算、スケジューラはSLO保護という役割分担になる。","research_positioning":"CPU/GPU異種推論、KVキャッシュオフロード、SLO指向LLMサービングを横断するシステム研究である。特にCPUメモリを単なるKV退避先にせず、退避したKVの注意計算をその場でCPU側に実行させ、GPUへ戻すタイミングを層単位スケジューリングで遅延隠蔽する点が特徴である。推論基盤の階層メモリ研究に対して、データ配置だけでなく計算配置と優先度制御を一体化する例として位置付けられる。","repository_relation":"リポジトリのCPU/DRAMオフロード、KVキャッシュ階層化、異種推論、サービングスケジューラ系統へ直接接続する。SSD/NVMeを使う方式ではないが、GPU HBMからCPU DRAMへKVを移し、そのデータ所在地に合わせて注意計算も移動するため『データを計算へ戻す』のではなく『計算をデータへ寄せる』階層メモリ設計である。MoEでは密計算をGPUへ残すためエキスパート並列と併用可能とされる。","practical_takeaway":"GPUにモデル重みは収まるがKVキャッシュ容量が混載BEで不足し、CPUコアとDRAMが余っているクラスタに適する。BEの注意だけCPUへ逃がし、密計算はGPUへ残す。CPU結果を同期的に待つのではなく後続反復の同一層へ合流させ、プロファイルしたLS遅延から相乗り件数を制限することで、LS保護とBE処理量を同時に改善できる。","implementation_status":"vLLMベースの実装を構築し、OpenMP/AVXによるCPU注意、CUDA IPC/MPSによる非同期キュー、Rayによる遠隔CPU分散、sklearnによる遅延回帰を実装して実機評価している。論文本文で公開リポジトリURLは確認できないため、再現には実装詳細の再構築が必要である。","future_work":"論文は複数優先度レベルへの一般化、KTransformersやAMXなどCPU側の密計算高速化との統合を挙げる。将来的にはより高速なCPU、CXLや高速ネットワーク、prefill/decode分離、MoEやLoRAとの組合せで、どのモジュールをどの階層へ置くかをさらに動的に選ぶ方向へ拡張できる。"},"reservation":{"claim_id":"claim-4221ae4eae4238e95de8fb44","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
