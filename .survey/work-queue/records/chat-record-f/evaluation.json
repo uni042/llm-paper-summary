@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b1a52303c9877f76cd4ddc7e","job_id":"job-research-d69ddf3864beda69","data":{"hardware":"評価器は96 pod・512 GPUをAWS、GCP、Azureの6 regionへ配置し、H100、A100、L4、MI300Xを含む異種構成をモデル化する。物理マルチクラウド全体での実機評価ではなく、単一podの実測マイクロベンチマークでprefill/decode係数を校正した離散事象シミュレーションが中心。","software":"17.1K行のJanus制御プレーン、vLLMデータプレーン拡張、Raft制御、分散radix index、離散事象シミュレータ、multi-cloud baseline shim、synthetic trace generatorを実装。公開リポジトリでコードと再現用合成traceを提供する。","methodology":"Llama-3-8B、Llama-3-70B、Mixtral-8x22Bを対象に、assistant workloadを再生したtrace-driven simulationを実施する。比較対象にはMooncake-MC等を置き、TTFT中央値/P99、goodput、reuse-capture、GPU費用、WAN egress、SLO違反を測定する。WAN帯域、spot preemption、region failure、5倍load spike、長文脈32K〜128K、tenant weights 5:2:1、pod数12〜192などを変化させ、ablationとfault injectionを行う。オフラインLP緩和oracleとも比較する。","scope":"強みはマルチクラウド分離サービングの制御問題を広く評価し、価格・帯域・障害・prefix localityを同時に扱う点。主要なend-to-end数値はシミュレーション出力であり、実WAN・クラウドAPI・実spot preemptionを含む物理マルチクラウド展開での再現は今後の課題である。"},"reservation":{"claim_id":"claim-b1a52303c9877f76cd4ddc7e","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-9105373f954fe3246d7dc7ab",
+  "job_id": "job-research-4f3d063490df512a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9105373f954fe3246d7dc7ab",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

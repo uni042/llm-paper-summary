@@ -1,6 +1,6 @@
 {
-  "fact_generation": 38,
-  "generation": 50,
+  "fact_generation": 39,
+  "generation": 51,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
@@ -392,6 +392,15 @@
           "submitted": false,
           "worker_id": "scheduled-chat-00"
         },
+        "attempt-9105373f954fe3246d7dc7ab": {
+          "attempt_id": "attempt-9105373f954fe3246d7dc7ab",
+          "claimed_at": "2026-09-23T08:21:23+00:00",
+          "job_id": "job-research-4f3d063490df512a",
+          "kind": "research",
+          "run_key": "scheduled-chat-00-20260923T080002Z",
+          "submitted": false,
+          "worker_id": "scheduled-chat-00"
+        },
         "attempt-a967a77763d7e94ea847b43b": {
           "attempt_id": "attempt-a967a77763d7e94ea847b43b",
           "claimed_at": "2026-09-23T08:06:53+00:00",
@@ -422,8 +431,10 @@
       "cache_valid": true,
       "candidate_inventory": 164,
       "claims": {
-        "active_assignment": false,
-        "active_job_ids": [],
+        "active_assignment": true,
+        "active_job_ids": [
+          "job-research-4f3d063490df512a"
+        ],
         "claim_monitor_window_seconds": 60,
         "claim_result_pending": false,
         "claim_result_pending_age_seconds": 0,
@@ -433,7 +444,7 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T08:00:48.467498+00:00",
-      "generation": 50,
+      "generation": 51,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-00-20260923T080002Z",
       "scheduled_slot": "00",
@@ -912,6 +923,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T08:19:35.141696+00:00",
+  "updated_at": "2026-09-23T08:21:24.509693+00:00",
   "worker_id": "scheduled-chat-00"
 }
