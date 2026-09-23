@@ -39,6 +39,15 @@ RUNTIME_CONDITIONS = {
     "transport_unrecoverable",
 }
 
+_HISTORY_FILES_SCANNED = 0
+
+
+def _history_glob(root: Path, pattern: str = "*.json") -> list[Path]:
+    global _HISTORY_FILES_SCANNED
+    rows = list(root.glob(pattern))
+    _HISTORY_FILES_SCANNED += len(rows)
+    return rows
+
 
 def _read(path: Path, default: Any = None) -> Any:
     try:
@@ -127,7 +136,7 @@ def _frozen_route(root: Path, run_key: str, worker_id: str | None = None) -> tup
     if not result_root.is_dir():
         return None
     rows: list[tuple[str, int, str]] = []
-    for path in result_root.glob("*.json"):
+    for path in _history_glob(result_root):
         value = _read(path, {})
         if not isinstance(value, dict) or value.get("ok") is not True:
             continue
@@ -189,7 +198,7 @@ def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[s
         results = root / ".survey/work-queue/results" / kind
         if not submissions.is_dir():
             continue
-        for path in submissions.glob("*.json"):
+        for path in _history_glob(submissions):
             descriptor = _read(path, {})
             if not isinstance(descriptor, dict) or descriptor.get("worker_id") != worker_id:
                 continue
@@ -244,7 +253,7 @@ def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[s
         folder = root / ".survey/work-queue/results" / kind
         if not folder.is_dir():
             continue
-        for path in folder.glob("*.json"):
+        for path in _history_glob(folder):
             result = _read(path, {})
             if not isinstance(result, dict):
                 continue
@@ -336,13 +345,13 @@ def _run_submission_state(
     }
 
 
-def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[str, Any]:
+def _claim_state(root: Path, worker_id: str, started_at: dt.datetime, *, known_submitted_attempts: set[str] | None = None, allow_legacy_scan: bool = True) -> dict[str, Any]:
     pending_requests: list[tuple[dt.datetime, str]] = []
     request_root = root / ".survey/work-queue/claim-requests"
     result_root = root / ".survey/work-queue/claim-results"
     now = dt.datetime.now(dt.timezone.utc)
     if request_root.is_dir():
-        for path in request_root.glob("*.json"):
+        for path in _history_glob(request_root):
             value = _read(path, {})
             if not isinstance(value, dict) or value.get("worker_id") != worker_id:
                 continue
@@ -367,11 +376,23 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
             continue
         attempt_id = current.get("attempt_id")
         kind = str(current.get("kind") or "")
+        canonical_descriptor = (
+            root / ".survey/work-queue/submissions" / kind / f"{attempt_id}.json"
+            if isinstance(attempt_id, str) and attempt_id and kind in {"research", "audit"}
+            else None
+        )
         descriptor_backed = bool(
             isinstance(attempt_id, str)
             and attempt_id
-            and kind in {"research", "audit"}
-            and _descriptor_for_attempt(root, kind, attempt_id) is not None
+            and (
+                attempt_id in (known_submitted_attempts or set())
+                or (canonical_descriptor is not None and canonical_descriptor.is_file())
+                or (
+                    allow_legacy_scan
+                    and kind in {"research", "audit"}
+                    and _descriptor_for_attempt(root, kind, attempt_id) is not None
+                )
+            )
         )
         if not descriptor_backed:
             active.append(job_id)
@@ -434,7 +455,7 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
 
     pending_submissions: list[str] = []
     if submission_root.is_dir():
-        for path in submission_root.glob("*.json"):
+        for path in _history_glob(submission_root):
             submission = _read(path, {})
             if not isinstance(submission, dict) or submission.get("operation") != "submit_discovery_round":
                 continue
@@ -512,6 +533,8 @@ def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> b
 
 
 def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False) -> dict[str, Any]:
+    global _HISTORY_FILES_SCANNED
+    _HISTORY_FILES_SCANNED = 0
     root = root.resolve()
     started_at = _time(request["actual_invocation_start"])
     assert started_at is not None
@@ -528,7 +551,15 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         inventory = _candidate_inventory(root)
         work_mode = "research" if inventory >= 50 else "discovery"
 
-    claims = _claim_state(root, request["worker_id"], started_at)
+    cached_submission = worker_run_index.cached_submission_state(cache) if cache is not None else {}
+    known_submitted = set(cached_submission.get("submitted_attempt_ids") or [])
+    claims = _claim_state(
+        root,
+        request["worker_id"],
+        started_at,
+        known_submitted_attempts=known_submitted,
+        allow_legacy_scan=(cache is None or force_canonical),
+    )
     attempts: dict[str, dt.datetime] = {}
     state_source = "canonical_rebuild"
     cache_fallback_reason = "forced_canonical_rebuild" if force_canonical else "cache_missing_or_invalid"
@@ -668,6 +699,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "runtime_condition_detail": request.get("runtime_condition_detail", ""),
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "seconds_to_run_deadline": seconds_to_deadline,
+        "history_files_scanned": _HISTORY_FILES_SCANNED,
         **claims,
         **submission,
         **discovery_async,
