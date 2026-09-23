@@ -2,27 +2,28 @@
   "candidate_inventory": 279,
   "direct_start_allowed": false,
   "discovery": {
-    "backward": [],
-    "forward": [
+    "backward": [
       {
-        "axis": "forward citations of LMCache enterprise-scale KV cache layer",
-        "citation_direction": "forward",
-        "created_at": "2026-09-23T15:23:36.938489+00:00",
+        "axis": "preload-backward-structured-references",
+        "citation_direction": "backward",
+        "created_at": "2026-09-23T15:31:44.617850+00:00",
         "discovery_bank": "ae",
         "discovery_slot_path": ".survey/work-queue/records/chat-record-ae/discovery-preload.json",
-        "initial_cursor": null,
+        "initial_cursor": "120",
         "max_pages": 25,
         "page_size": 20,
-        "preload_id": "preload-43d8a10e2b43c552d378",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-43d8a10e2b43c552d378.json",
+        "preload_id": "preload-389188062fe4ee151f1f",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-389188062fe4ee151f1f.json",
         "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
+        "provider": "repository_references",
         "seed_canonical_id": null,
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-43d8a10e2b43c552d378.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-43d8a10e2b43c552d378.json",
+        "source_url": "repository://structured-references",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-389188062fe4ee151f1f.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-389188062fe4ee151f1f.json",
         "target_unseen": 20
-      },
+      }
+    ],
+    "forward": [
       {
         "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
         "citation_direction": "forward",
@@ -307,6 +308,25 @@
         "take_path": ".survey/work-queue/discovery-preload/claims/preload-3c64abb372b8a8b781e5.json",
         "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-3c64abb372b8a8b781e5.json",
         "target_unseen": 20
+      },
+      {
+        "axis": "forward citations of DeepSpeed-MoE large-scale MoE inference",
+        "citation_direction": "forward",
+        "created_at": "2026-09-23T17:01:12.585623+00:00",
+        "discovery_bank": "w",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-w/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-5f8b3ddd0f5486262ef3",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-5f8b3ddd0f5486262ef3.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": null,
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2201.05596/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-5f8b3ddd0f5486262ef3.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-5f8b3ddd0f5486262ef3.json",
+        "target_unseen": 20
       }
     ],
     "normal": [
@@ -426,7 +446,7 @@
       }
     ]
   },
-  "generated_at": "2026-09-23T18:37:17+00:00",
+  "generated_at": "2026-09-23T18:39:03+00:00",
   "research": [
     {
       "attempt_id": "attempt-preload-413779e41c2b5b98bb543b9f",
