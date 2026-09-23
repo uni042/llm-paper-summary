@@ -73,12 +73,15 @@ def write_current_claim(root: Path, attempt_id: str, job_id: str):
 
 
 class RecordBankRoutingContractTests(unittest.TestCase):
-    def test_registry_exposes_24_canonical_banks(self):
-        self.assertEqual(len(BANK_ROOTS), 24)
-        self.assertEqual(tuple(BANK_ROOTS), tuple("abcdefghijklmnopqrstuvwx"))
+    def test_registry_exposes_32_canonical_banks(self):
+        expected = tuple("abcdefghijklmnopqrstuvwxyz") + ("aa", "ab", "ac", "ad", "ae", "af")
+        self.assertEqual(len(BANK_ROOTS), 32)
+        self.assertEqual(tuple(BANK_ROOTS), expected)
         self.assertEqual(BANK_ROOTS["a"], ".survey/work-queue/records/chat-record")
-        self.assertEqual(BANK_ROOTS["x"], ".survey/work-queue/records/chat-record-x")
-        self.assertEqual(len(set(BANK_ROOTS.values())), 24)
+        self.assertEqual(BANK_ROOTS["z"], ".survey/work-queue/records/chat-record-z")
+        self.assertEqual(BANK_ROOTS["aa"], ".survey/work-queue/records/chat-record-aa")
+        self.assertEqual(BANK_ROOTS["af"], ".survey/work-queue/records/chat-record-af")
+        self.assertEqual(len(set(BANK_ROOTS.values())), 32)
 
     def test_bank_a_legacy_slot_paths_remain_read_compatible(self):
         """Already-durable workflow-v10 descriptors using old bank-A paths must recover."""
