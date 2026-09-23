@@ -636,25 +636,68 @@ def reserve_new_claim_banks(
     }
 
 
-def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
+def _retag_adopted_pool_reservations(repo_root: Path, *, at: Any = None) -> int:
+    """Keep empty bank reservation metadata aligned after a pool claim is adopted."""
+    root = Path(repo_root).resolve()
+    now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
+    changed_banks = 0
+    for job_id, current in claim_state.current_claims(root, now).items():
+        if not current.get("active") or not current.get("preload_pool_adopted_at"):
+            continue
+        bank = str(current.get("record_bank") or "").lower()
+        if bank not in BANK_ROOTS:
+            continue
+        bank_changed = False
+        for slot in SLOT_NAMES:
+            path = root / BANK_ROOTS[bank] / f"{slot}.json"
+            payload = _read(path)
+            if not isinstance(payload, dict) or payload.get("data") != {}:
+                continue
+            reservation = payload.get("reservation")
+            if not isinstance(reservation, dict) or reservation.get("claim_id") != current.get("claim_id"):
+                continue
+            desired = {
+                "claim_id": current.get("claim_id"),
+                "worker_id": current.get("worker_id"),
+                "worker_kind": current.get("worker_kind"),
+            }
+            if reservation != desired:
+                payload["reservation"] = desired
+                _write(path, payload)
+                bank_changed = True
+        if bank_changed:
+            changed_banks += 1
+    return changed_banks
+
+
+def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: bool = False) -> dict[str, int]:
     root = Path(repo_root).resolve()
     now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
     before_claim_ids = _active_claim_ids(root, now)
-    result = claim_worker.process_requests(root, at=now)
+    result = claim_worker.process_requests(
+        root,
+        at=now,
+        maintain_shared_pool=maintain_shared_pool,
+    )
     after_claim_ids = _active_claim_ids(root, now)
     bank_result = reserve_new_claim_banks(
         root,
         new_claim_ids=after_claim_ids - before_claim_ids,
         at=now,
     )
-    return {**result, **{f"banks_{key}": value for key, value in bank_result.items()}}
+    retagged = _retag_adopted_pool_reservations(root, at=now)
+    return {
+        **result,
+        **{f"banks_{key}": value for key, value in bank_result.items()},
+        "banks_retagged_adopted_pool": retagged,
+    }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", default=".")
     args = parser.parse_args()
-    result = process_requests(Path(args.repo_root))
+    result = process_requests(Path(args.repo_root), maintain_shared_pool=True)
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
     return 0
 

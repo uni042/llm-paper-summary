@@ -82,6 +82,20 @@ Research / Auditのclaimは次の順で行う。
 
 ### 3.x 4段claim window（foreground 1 + standby 3）
 
+#### 共有24本preload FIFO
+
+Research / Auditの事前装填はworkerごとの固定4本ではなく、全Scheduled Chat worker共通のFIFO poolを使う。正規claim fast laneは10分周期の回収時を含め、共有poolで待機中のclaimと各Scheduled Chat workerへadopt済みのactive claimを合計して24本になるよう補充する。32個のrecord bankのうち通常装填で最大24個を使い、残り8個はrepair、競合、一時的な例外claimの余白とする。
+
+- 共有poolのclaimは特定workerに固定しない。Scheduled Chat requestが来た時点で、そのrequestのjob type / 明示job_id条件を満たす最古のpool claimから不足window分をadoptする。
+- adoptはclaim fast laneの正規割当処理内で行い、既存のsurvey-claim-main concurrencyとpush-race再計算を使う。同時・不規則に複数workerがrequestを出しても、同一claim / job / record bankを2 workerへ渡してはならない。
+- pool内の順番はpool_orderで固定する。一度装填済みの論文を後から到着した高priority論文で追い越させない。新しい補充論文は常にpool末尾へ追加する。
+- workerへadoptした後は、そのworker内のpipeline_orderの末尾へ接続する。したがって既存standbyを飛び越さず、foreground終端時は従来どおり最古standbyが昇格する。
+- 24本は待機poolだけの本数ではない。例として2 workerが各4本を保持中なら、8本adopt済み + 16本共有待機 = 24本とする。6 workerが各4本を保持中なら24本すべてadopt済みとなり、共有待機は0本でよい。
+- worker数や起動順に固定laneを割り当ててはならない。特定workerが長期間起動しなくても、そのworker専用バンクに論文が滞留しない構造を維持する。
+- pool claimのjobがreadyでなくなった、terminalになった、または耐久submissionで処理済みになった場合はpoolから解放する。pool leaseは保守runで必要時だけ更新し、lease更新を理由に順番を変更しない。
+- Audit-only等でrequestのjob type条件に合わない先頭claimはそのrequestでは飛ばしてよいが、claim自体のpool_orderは変更しない。通常のResearch/Audit混合workerからは再びFIFO対象となる。
+- 共有poolが一時的に空の場合は従来の直接allocationへ安全にフォールバックしてよい。pool不足やbank不足だけをrun停止理由にしない。
+
 Scheduled ChatのResearch / Auditは、**同時に精読する論文は常に1件**のまま、担当確保だけを最大4件まで先行させる。既定の `claim_window=4` は設定値であり、意味は **foreground 1件 + standby最大3件** である。`max_jobs=1` は精読並列度を表し、claim windowの大きさを表さない。
 
 - claim resultの `pipeline_role=foreground` / `pipeline_position=1` の1件だけを本文読解・5スロット作成対象にする。`standby` は担当権とrecord bankだけを先に確保し、foregroundになるまで本文を先読みしない。

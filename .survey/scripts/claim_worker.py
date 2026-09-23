@@ -11,6 +11,7 @@ from typing import Any
 
 import claim_state
 import immutable_submission
+import shared_preload_pool
 
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 WORKER_KINDS = {"scheduled_chat", "work"}
@@ -480,6 +481,9 @@ def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
         "scheduled_slot",
         "actual_invocation_start",
         "pipeline_order",
+        "pool_order",
+        "preloaded_at",
+        "preload_pool_adopted_at",
     ):
         if key in claim:
             assignment[key] = claim[key]
@@ -588,7 +592,7 @@ def _renew_existing_result(
     return renewed
 
 
-def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
+def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: bool = False) -> dict[str, int]:
     root = Path(repo_root).resolve()
     now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
     request_root = root / ".survey/work-queue/claim-requests"
@@ -602,7 +606,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     submitted_jobs = _release_durable_claims(root, claims, descriptors, now)
     leases_normalized, leases_invalidated = _normalize_legacy_scheduled_chat_leases(root, claims, now)
     claims = claim_state.current_claims(root, now)
-    processed = reused = errors = assigned_new = assigned_recovered = assigned_reused = renewed = checkpoint_released = 0
+    processed = reused = errors = assigned_new = assigned_recovered = assigned_reused = renewed = checkpoint_released = assigned_adopted_pool = 0
     for path in sorted(request_root.glob("*.json")):
         result_path = _result_path(root, path.stem)
         if result_path.exists():
@@ -697,6 +701,32 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
 
         checkpointed_ids = set(_checkpoint_map(request))
         requested_job_ids = set(request["job_ids"]) if request["job_ids"] is not None else None
+
+        adopted_pool_claims: list[dict[str, Any]] = []
+        if request["worker_kind"] == "scheduled_chat":
+            existing_orders = [
+                int(item.get("pipeline_order"))
+                for item in resumed
+                if isinstance(item.get("pipeline_order"), int)
+                and not isinstance(item.get("pipeline_order"), bool)
+            ]
+            next_adopt_order = (max(existing_orders) + 1) if existing_orders else len(resumed)
+            adopted_pool_claims = shared_preload_pool.adopt(
+                root,
+                claims=claims,
+                jobs_by_id=by_id,
+                request=request,
+                now=now,
+                needed=max(int(request["claim_window"]) - len(resumed), 0),
+                next_pipeline_order=next_adopt_order,
+                checkpointed_ids=checkpointed_ids,
+                requested_job_ids=requested_job_ids,
+            )
+            for adopted_claim in adopted_pool_claims:
+                job_id = str(adopted_claim["job_id"])
+                resumed.append(_assignment(by_id[job_id], adopted_claim))
+            assigned_adopted_pool += len(adopted_pool_claims)
+
         available = []
         for item in jobs:
             job_id = str(item.get("job_id") or "")
@@ -780,11 +810,40 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 "claim_window_remaining": max(int(request["claim_window"]) - len(assignments), 0),
                 "foreground_job_id": foreground_job_id,
                 "standby_job_ids": standby_job_ids,
+                "shared_pool_adopted_count": len(adopted_pool_claims),
                 "reason": "scheduled_chat_claim_window",
             })
         _write(result_path, result_payload)
         assigned_new += len(new_assignments)
         processed += 1
+
+    pool_maintenance = {
+        "target": shared_preload_pool.POOL_TARGET,
+        "created": 0,
+        "renewed": 0,
+        "released": 0,
+        "inventory_active": sum(
+            1
+            for value in claims.values()
+            if value.get("active")
+            and str(value.get("kind") or "") in shared_preload_pool.CLAIM_TYPES
+            and (
+                shared_preload_pool.is_pool_claim(value)
+                or value.get("worker_kind") == "scheduled_chat"
+            )
+        ),
+        "pool_waiting": len(shared_preload_pool.waiting_claims(claims)),
+        "shortfall": 0,
+    }
+    if maintain_shared_pool:
+        pool_maintenance = shared_preload_pool.maintain(
+            root,
+            claims=claims,
+            jobs=_job_files(root),
+            submitted_jobs=submitted_jobs,
+            now=now,
+        )
+
     return {
         "processed": processed,
         "reused": reused,
@@ -793,8 +852,10 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         "assigned_new": assigned_new,
         "assigned_recovered": assigned_recovered,
         "assigned_reused": assigned_reused,
-        "assigned_total_observed": assigned_new + assigned_recovered + assigned_reused,
+        "assigned_adopted_pool": assigned_adopted_pool,
+        "assigned_total_observed": assigned_new + assigned_recovered + assigned_reused + assigned_adopted_pool,
         "renewed": renewed,
+        **{f"shared_pool_{key}": value for key, value in pool_maintenance.items()},
         "checkpoint_released": checkpoint_released,
         "leases_normalized": leases_normalized,
         "leases_invalidated": leases_invalidated,
