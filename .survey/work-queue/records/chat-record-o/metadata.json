@@ -2,110 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-preload-84011e35924af607152554c4",
-  "job_id": "job-research-6882c5cf191305a1",
-  "data": {
-    "canonical_id": "arXiv:2408.12757",
-    "arxiv_id": "2408.12757",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
-    "summary": "NanoFlowは、大規模言語モデルの推論を単純なメモリ帯域律速とみなすのではなく、密行列演算・注意計算・集合通信がそれぞれ計算、メモリ、ネットワークという異なる資源を使うのに逐次実行されていることが装置内の遊休を生むと分析する。そこで各演算の入力をナノバッチへ分割し、異種資源を律速とする演算を同一GPU内で重ねて実行する装置内並列化を導入する。さらに干渉を実測した二段階の自動探索で、ナノ演算の個数・大きさ・順序・資源配分を決定し、非同期要求スケジューリングと階層KVキャッシュ管理を組み込んだ実行系まで実装する。LLaMA-2-70BをA100 80GB 8基で評価し、実トレース由来の長さ分布ではTensorRT-LLM比で平均1.91倍のスループットを報告する。",
-    "list_summary": "異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。",
-    "authors": [
-      "Kan Zhu",
-      "Yufei Gao",
-      "Yilong Zhao",
-      "Liangyu Zhao",
-      "Gefei Zuo",
-      "Yile Gu",
-      "Dedong Xie",
-      "Tian Tang",
-      "Qinyu Xu",
-      "Zihao Ye",
-      "Keisuke Kamahori",
-      "Chien-Yu Lin",
-      "Ziren Wang",
-      "Stephanie Wang",
-      "Arvind Krishnamurthy",
-      "Baris Kasikci"
-    ],
-    "authors_affiliations": "University of Washingtonを中心に、Tsinghua University、UC Berkeley、University of Michiganの著者を含む。",
-    "published": "2024-08-22",
-    "publication": "arXiv:2408.12757v2, 2025-05-25",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv公開",
-    "publication_version": "v2",
-    "lineage": "大規模言語モデル推論サービング／装置内演算スケジューリング",
-    "topics": [
-      "大規模言語モデル推論",
-      "装置内並列化",
-      "ナノバッチ",
-      "資源重畳",
-      "自動パイプライン探索",
-      "KVキャッシュ"
-    ],
-    "importance": "要求単位・フェーズ単位のスケジューリングより細かい演算粒度で、計算・メモリ・ネットワーク資源の同時利用を狙うエンドツーエンドの推論サービング方式。",
-    "hardware_evaluation": "実機評価あり",
-    "hardware_details": "主評価はNVIDIA A100 80GB SXMを8基、LLaMA-3-8Bのみ単一A100 80GB SXM。",
-    "quality_effect": "近似計算やモデル重み変更ではなく演算の分割・順序・重畳を変えるシステム最適化であり、モデル品質の低下を狙う手法ではない。論文は精度指標を主要評価にしていない。",
-    "storage_targets": [
-      "GPUメモリ",
-      "ホストCPUメモリ",
-      "SSD上のKVキャッシュ"
-    ],
-    "bottlenecks": [
-      "計算資源の遊休",
-      "メモリ律速の復号注意",
-      "テンソル並列の集合通信",
-      "CPU側バッチ形成"
-    ],
-    "evidence_locations": [
-      "§3 資源コストモデル",
-      "§4 自動探索と実行系",
-      "§5 実装",
-      "§6 評価"
-    ],
-    "references": [
-      {
-        "canonical_id": "arXiv:2403.02310",
-        "arxiv_id": "2403.02310"
-      },
-      {
-        "canonical_id": "arXiv:2401.09670",
-        "arxiv_id": "2401.09670"
-      },
-      {
-        "canonical_id": "arXiv:2308.16369",
-        "arxiv_id": "2308.16369"
-      },
-      {
-        "canonical_id": "arXiv:2310.19102",
-        "arxiv_id": "2310.19102"
-      }
-    ],
-    "references_checked_at": "2026-09-23",
-    "references_source": "arXiv v2本文の参考文献節を確認",
-    "references_total": 59,
-    "source": "https://arxiv.org/abs/2408.12757",
-    "sources": [
-      "https://arxiv.org/html/2408.12757v2",
-      "https://arxiv.org/abs/2408.12757",
-      "https://github.com/efeslab/Nanoflow"
-    ],
-    "code": "https://github.com/efeslab/Nanoflow",
-    "implementation": "著者による公開実装あり。NVIDIA製GPU向けにCUDAとPythonで実装され、自動探索、実行系、KVキャッシュ管理、再現用スクリプトを含む。",
-    "implementation_status": "公開実装",
-    "evaluation_type": "実機エンドツーエンド評価",
-    "last_checked": "2026-09-23"
-  },
+  "attempt_id": "attempt-preload-87390d863e901b51781f4435",
+  "job_id": "job-research-62f6ca15b903420d",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-84011e35924af607152554c4",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
+    "claim_id": "claim-preload-87390d863e901b51781f4435",
+    "worker_id": "shared-preload-pool",
+    "worker_kind": "work"
   }
 }
