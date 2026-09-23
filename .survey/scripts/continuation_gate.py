@@ -60,7 +60,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 "candidate_inventory is required when work_mode=auto; "
                 "schedule labels and legacy worker kinds are not routing inputs"
             )
-        work_mode = "research" if candidate_inventory >= 50 else "discovery"
+        work_mode = "research" if candidate_inventory >= claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD else "discovery"
         mode_source = "candidate_inventory"
     else:
         work_mode = explicit_work_mode
@@ -543,7 +543,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "Submission results are monitored concurrently and become a foreground wait only when the 600-second no-new-work window begins or no Research/Audit job is claimable. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
-            "candidate_inventory is mandatory: >=50 selects Research/Audit and <50 selects Discovery. "
+            f"candidate_inventory is mandatory: >={claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD} selects Research/Audit and below it selects Discovery. "
             "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
             "Discovery's four-round floor counts successful canonical precheck rounds in this invocation; "
             "multiple submissions derived from one precheck count as one round only after every declared split submission is durably successful. "
