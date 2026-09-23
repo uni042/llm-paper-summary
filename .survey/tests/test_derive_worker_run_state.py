@@ -45,13 +45,13 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
                 root,
                 ".survey/work-queue/next-jobs.json",
                 {
-                    "claiming": {"ready_research_audit": 60, "claimable": 60},
-                    "counts": {"research": {"ready": 60}, "audit": {"ready": 0}},
+                    "claiming": {"ready_research_audit": 300, "claimable": 300},
+                    "counts": {"research": {"ready": 300}, "audit": {"ready": 0}},
                 },
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             result = mod.derive(root, request())
-            self.assertEqual(result["candidate_inventory"], 60)
+            self.assertEqual(result["candidate_inventory"], 300)
             self.assertEqual(result["work_mode"], "research")
             self.assertTrue(result["claim_state_checked"])
             self.assertTrue(result["submission_state_checked"])
@@ -76,7 +76,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(
                 root,
                 ".survey/work-queue/next-jobs.json",
-                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             value = request()
@@ -94,7 +94,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(
                 root,
                 ".survey/work-queue/next-jobs.json",
-                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             value = request()
@@ -111,7 +111,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(
                 root,
                 ".survey/work-queue/next-jobs.json",
-                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             value = request()
@@ -143,7 +143,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(
                 root,
                 ".survey/work-queue/next-jobs.json",
-                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             value = request()
@@ -267,7 +267,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(
                 root,
                 ".survey/work-queue/next-jobs.json",
-                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             old = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=2)
@@ -294,7 +294,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(
                 root,
                 ".survey/work-queue/next-jobs.json",
-                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             write_json(
@@ -317,7 +317,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(
                 root,
                 ".survey/work-queue/next-jobs.json",
-                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             write_json(
@@ -400,7 +400,7 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             write_json(
                 root,
                 ".survey/work-queue/next-jobs.json",
-                {"claiming": {"ready_research_audit": 60, "claimable": 59}},
+                {"claiming": {"ready_research_audit": 300, "claimable": 299}},
             )
             write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
             write_json(
