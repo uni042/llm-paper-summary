@@ -2,71 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5a4e9ada9818faf9d38935ab",
-  "job_id": "job-research-71e43b4e5ff698a1",
-  "data": {
-    "overview": "主結果は、総パラメータ数と学習トークン数を密モデルと等しくした条件でも、DECOが平均20%のルーティング専門家だけを活性化して密モデル相当の品質へ到達した点にある。これは疎化で計算量だけを減らし、総保存容量を密モデル相当へ抑えたまま性能を維持できる可能性を示す。実機では専用カーネルがDenseに対してRTX 4090で平均2.56倍、Jetson AGX Orinで平均2.93倍の単一GPUデコード速度を示し、疎な活性が端末側の実測利益へ変換された。一方、密モデル同等に必要な活性率は規模とデータ分布に依存し、FineWeb単独ではSmallのパープレキシティが密モデルよりわずかに悪化した。",
-    "key_results": [
-      {
-        "metric": "単一GPUデコード速度",
-        "value": "平均2.93倍",
-        "baseline": "Dense",
-        "condition": "Jetson AGX Orin 64GB、Spec-Bench 6用途、DECO平均44.24トークン/秒対Dense 15.09トークン/秒",
-        "interpretation": "非活性専門家の計算と重みアクセスを避け、ReLU選択がTopKの並べ替えより軽いことが端末側で効いた。"
-      },
-      {
-        "metric": "単一GPUデコード速度",
-        "value": "平均2.56倍",
-        "baseline": "Dense",
-        "condition": "RTX 4090 24GB、Spec-Bench 6用途、DECO平均223.75トークン/秒対Dense 87.28トークン/秒",
-        "interpretation": "高性能GPUでも20%活性の疎計算が実測スループットへ反映された。"
-      },
-      {
-        "metric": "反復学習のC4パープレキシティと常識推論平均精度",
-        "value": "27.53±0.276、39.13±0.217",
-        "baseline": "Denseの27.73±0.307、38.98±0.096",
-        "condition": "Medium 0.24B、5乱数種、同一総パラメータ・学習トークン数",
-        "interpretation": "単発結果だけでなく反復平均でも密モデル相当か僅かに上回る。"
-      },
-      {
-        "metric": "密モデル相当へ到達する活性率",
-        "value": "Smallで15%、Mediumで10%",
-        "baseline": "同規模Dense",
-        "condition": "活性率5%から25%の感度評価",
-        "interpretation": "必要活性率がモデル規模とともに下がる可能性を示すが、より大規模での確認は未実施。"
-      },
-      {
-        "metric": "NormSiLUアブレーション",
-        "value": "MediumでPPL 27.74、平均精度39.18",
-        "baseline": "通常SiLUのPPL 28.05、平均精度38.85",
-        "condition": "Medium、平均活性率を同程度へ制御",
-        "interpretation": "二段階正規化が活性率の暴走を抑え、強い疎性正則化へ頼らず品質を維持する。"
-      }
-    ],
-    "negative_results": [
-      {
-        "name": "単一分布では完全な密モデル同等にならない例",
-        "description": "FineWebだけでSmallを学習すると、DECOのパープレキシティは30.14でDenseの29.76よりわずかに悪い。一方で平均タスク精度は38.65対38.03で上回り、密モデル同等性がデータ多様性に依存する可能性がある。"
-      },
-      {
-        "name": "小規模ほど必要活性率が高い",
-        "description": "活性率感度ではSmallが密モデル相当へ達するのに15%を要する一方、Mediumは10%で到達した。さらに大きい規模でこの傾向が続くかは未確認である。"
-      },
-      {
-        "name": "共有専門家を大きくし過ぎると悪化",
-        "description": "固定総パラメータの下で共有専門家をルーティング専門家の3〜4倍へ拡大すると、利用できるルーティング専門家数が減ってパープレキシティが明確に悪化した。"
-      },
-      {
-        "name": "後学習は未評価",
-        "description": "教師あり微調整と強化学習を実験しておらず、可変ルータ活性が後学習で不安定になる可能性は残る。"
-      }
-    ],
-    "interpretation": "DECOの改善は「MoEなら常に密モデルより良い」という結果ではない。総パラメータと学習量を固定したとき、ReLUルータが作る可変活性をNormSiLUと非ゲート型専門家で安定化し、十分な専門家粒度と適切な共有専門家容量を確保した条件で密モデル相当へ到達する。速度面では活性率20%そのものに加え、ReLUを要素単位で処理できることと専用疎カーネルが重要で、一般的な実装が同じ倍率を得るとは限らない。品質側では多様な学習データほど専門家分化を利用しやすいという著者仮説が示されるが、因果はまだ確定していない。",
-    "quality_impact": "DECOは既存モデルの出力を保ったまま高速化する無損失方式ではなく、事前学習時から構造を変えるアーキテクチャ選択である。そのためトークン列の同一性は保証しない。評価上は同一総パラメータ・同一学習トークン数のDenseと比べ、平均20%活性でC4パープレキシティと7種タスク平均精度をほぼ維持し、Mediumの5回反復では両指標を僅かに上回った。ただしデータ分布、活性率、専門家粒度、共有専門家容量により品質は変動する。"
-  },
+  "attempt_id": "attempt-5e8cb6bdeb7cddafe8c55c3a",
+  "job_id": "job-research-c58272e75725b517",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5a4e9ada9818faf9d38935ab",
-    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-5e8cb6bdeb7cddafe8c55c3a",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }

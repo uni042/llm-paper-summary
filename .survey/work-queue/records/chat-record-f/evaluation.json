@@ -2,43 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5a4e9ada9818faf9d38935ab",
-  "job_id": "job-research-71e43b4e5ff698a1",
-  "data": {
-    "hardware": "推論実機はNVIDIA RTX 4090 24GBとJetson AGX Orin 64GBの単一GPU。事前学習のGPU機種・台数は一次論文に明記されていない。",
-    "software": "実機速度評価はFR-Spec上にDense、TopK、DECO専用カーネルを同一条件で実装し、DECOカーネルはCUTLASSを利用。下流精度はLM Evaluation Harnessを利用。",
-    "model": [
-      "総パラメータ0.11B、0.24B、0.53B、1.18Bの4規模",
-      "最初のFFN層は密、残りをMoE化",
-      "ルーティング専門家の平均活性率は主比較で約20%"
-    ],
-    "datasets": [
-      "事前学習はFineWeb、Nemotron-CC、Pile、Wikipediaなどを含むウェブ・数学・コード混合",
-      "C4英語検証集合でパープレキシティ",
-      "PIQA、SIQA、HellaSwag、ARC-E、ARC-C、WinoGrande、LAMBADA",
-      "実機速度はSpec-Benchの機械翻訳、翻訳、要約、質問応答、数学、検索拡張生成の6用途"
-    ],
-    "baselines": [
-      "同一総パラメータ・同一学習トークン数の密LLaMA型Transformer",
-      "TopP",
-      "DeepSeek-V3型MoE",
-      "ReMoE",
-      "BlockFFN",
-      "実機速度ではDenseと同じ平均20%活性率のTopK"
-    ],
-    "correctness": "品質比較では同じ総パラメータ群の中で学習トークン数を約パラメータ数の40倍に揃え、注意機構・埋め込みを同一化する。MoE間では共有専門家次元、専門家粒度、平均活性率も揃える。SmallとMediumは乱数種を変えた5回反復も実施。",
-    "settings": [
-      "Small 0.11Bは39.3億トークン、Medium 0.24Bは78.6億、Large 0.53Bは210億、XLarge 1.18Bは483億トークンを学習。",
-      "共有専門家の中間次元は主設定で128、ルーティング専門家の中間次元は64。",
-      "活性率の感度は5%から25%まで評価。",
-      "実機速度は単一GPUデコードのトークン毎秒を測定。"
-    ],
-    "methodology": "主評価は、総パラメータと学習トークン数を密モデルと一致させたときに、疎なDECOがC4パープレキシティと7種常識推論平均精度で密モデルへ追いつけるかを調べる。さらに専門家別スケーリング、NormSiLUの二つの正規化、ゲート有無、活性率を個別に除去・変更し、どの機構が活性率安定性と品質へ寄与するかを分離する。最後に学習上の疎性が実際の速度へ変換されるかをRTX 4090とJetson AGX Orinで検証する。",
-    "scope": "事前学習品質と実機デコードの双方を含むが、最大モデルは1.18Bであり、著者が限界として挙げる教師あり微調整や強化学習後学習は未評価である。端末実機の速度結果は専用カーネルとFR-Spec実装に依存し、すべての推論基盤へ同じ倍率が直接移るとは限らない。"
-  },
+  "attempt_id": "attempt-5e8cb6bdeb7cddafe8c55c3a",
+  "job_id": "job-research-c58272e75725b517",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5a4e9ada9818faf9d38935ab",
-    "worker_id": "scheduled-chat-30",
+    "claim_id": "claim-5e8cb6bdeb7cddafe8c55c3a",
+    "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
   }
 }
