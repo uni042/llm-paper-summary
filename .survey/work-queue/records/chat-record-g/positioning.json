@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-88d4b2308d0d8596f4fd6ce4","job_id":"job-research-cb87e313d4b1653f","data":{"limitations":[{"name":"単一GPU・限定モデル評価","description":"実測は単一NVIDIA B200と2つのMoE dLLMに集中し、マルチGPUのexpert parallel通信やCPU/SSD専門家オフロードを直接評価していない。"},{"name":"dLLM並列復号への依存","description":"共有の根拠は同一文脈から同時生成されるトークンの専門家需要が重なる点にあり、独立リクエストを混ぜる通常のAR batchingへ同じ効果がそのまま成立するとは限らない。"},{"name":"近似ルーティングによる品質トレードオフ","description":"コア集合を小さくし過ぎると平均相対精度は96%前後まで低下する。用途ごとにbetaまたはkを調整する必要がある。"},{"name":"公開実装URLが本文で確認できない","description":"融合GPUカーネルを含む実装は評価されるが、本文から著者公式コードリポジトリURLを確認できず、再現性は公開コード付き研究より弱い。"}],"differences":[{"name":"expert skippingとの差","description":"NAEEやMC-MoEは各トークンの低重要度専門家計算を減らすが、他の並列トークンがその専門家を使えば重みロードは残る。DESはブロック全体のユニーク専門家集合を直接小さくする。"},{"name":"offline pruning/mergingとの差","description":"モデル重みを恒久的に削るのではなく、入力ブロックごとにコア集合を動的選択するため、異なるシーケンスで必要な専門家へ切り替えられる。"},{"name":"OEA型AR batch sharingとの差","description":"既存のbatch-level sharingを独立リクエストのARバッチへ適用するのに対し、DESは意味的に結び付いたdLLM並列トークンをsequence-level consensusとして扱い、重み付き投票で共有集合を選ぶ。"}],"implementation_status":"dInfer + Fast-dLLM環境でDES-Seq/DES-Voteを実装し、DES-Vote向けに12処理を2カーネルへ融合したGPU実装を評価している。本文記載の公式公開コードURLは確認できない。","research_positioning":"Adaptive Expert Computation / Compression系統では、専門家を削除・量子化・オフロードするのではなく、同時生成トークン間の専門家再利用を増やして実行時のユニーク重み転送量を減らす方式に位置付く。MoE-Lightning等のCPUオフロードやexpert cacheと組み合わせる場合、1ステップで要求されるユニーク専門家集合自体を縮めるため、PCIe/HBM転送要求を上流で減らす補完策になり得る。ただし論文はオフロード併用を実測していない。","evidence_locations":["§1–3: expert explosionとメモリ律速モデル","§4.1–4.2: 共有コア集合、DES-Seq、DES-Vote","§4.3: 融合GPUカーネル","§5.1: モデル・ハードウェア・ベンチマーク・baseline","Table 1 / §5.2: 精度・専門家数・メモリ","§5.3: B200遅延と6x選択高速化","§5.4–5.5: コア集合・block size・活性専門家数・利用分布アブレーション"]},"reservation":{"claim_id":"claim-88d4b2308d0d8596f4fd6ce4","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-c3d771ab5950563d5d332246",
+  "job_id": "job-research-04494ef5a577c4fb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c3d771ab5950563d5d332246",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

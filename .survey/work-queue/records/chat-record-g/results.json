@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-88d4b2308d0d8596f4fd6ce4","job_id":"job-research-cb87e313d4b1653f","data":{"overview":"LLaDA2.0-Mini 16BではVanillaの平均ユニーク専門家数84・MoE単層メモリ0.98GBに対し、DES-Vote beta=0.15は38・0.45GBまで削減しながら平均相対精度99.5%を維持する。より厳しいbeta=0.10では25専門家・0.29GBで96.4%。LLaDA-MoE-7BではVanilla 59専門家・0.35GBに対しDES-Vote beta=0.6が38・0.22GBで97.6%、beta=0.4が25・0.15GBで96.0%。B200実測ではMoE層遅延を最大38.0%/31.9%削減し、総GPUカーネル時間を8.2〜14.3%改善する。","key_results":[{"metric":"LLaDA2.0-Mini平均相対精度","value":"99.5%","baseline":"Vanilla 100%","condition":"DES-Vote beta=0.15, block length 32","interpretation":"平均ユニーク専門家数を84から38へ約55%減らしてもほぼ精度を維持。"},{"metric":"LLaDA2.0-Mini MoE単層メモリ","value":"0.45 GB","baseline":"Vanilla 0.98 GB","condition":"DES-Vote beta=0.15","interpretation":"ユニーク活性専門家パラメータのメモリ量を約54%削減。"},{"metric":"LLaDA-MoE-7B平均相対精度","value":"97.6%","baseline":"Vanilla 100%","condition":"DES-Vote beta=0.6","interpretation":"平均ユニーク専門家数59から38、メモリ0.35GBから0.22GBへ削減。"},{"metric":"MoE層遅延削減","value":"最大38.0%（LLaDA2.0-Mini）、31.9%（LLaDA-MoE-7B）","baseline":"Vanilla","condition":"single NVIDIA B200","interpretation":"共有コア集合によるHBM重み転送削減が実カーネル時間へ反映。"},{"metric":"総GPUカーネル時間改善","value":"8.2–14.3%","baseline":"Vanilla","condition":"single NVIDIA B200","interpretation":"attention等の非MoE固定費を含めてもend-to-end GPU kernel timeが改善。"},{"metric":"コア集合選択高速化","value":"6x","baseline":"PyTorch selection implementation","condition":"custom fused kernel","interpretation":"12演算相当を2カーネルへ融合しDES自体の選択オーバーヘッドを抑制。"}],"negative_results":[{"name":"既存expert skippingの大幅精度低下","description":"LLaDA2.0-MiniではNAEEとMC-MoEの平均相対精度が約46.6〜46.7%まで低下し、並列トークンへAR向け局所枝刈りを適用するだけでは不十分。"},{"name":"過小コア集合では精度低下","description":"DES-VoteでもLLaDA2.0-Mini beta=0.10は96.4%、LLaDA-MoE-7B beta=0.4は96.0%となり、メモリ削減を強めるほど品質とのトレードオフが残る。"},{"name":"トークン当たり専門家数の削減は不利","description":"同じユニーク専門家集合サイズでも各トークンの活性数を8から4へ減らすと全ベンチマークで精度が低下し、共有済み専門家の再利用計算は維持した方がよい。"}],"interpretation":"結果はMoE並列復号のボトルネックが単なるFLOPsではなくユニーク専門家重みのフェッチであるというモデルを支持する。DES-Voteは局所Top-Kを保ちながら共有集合を小さくするため、追加の重みロードなしに各トークンが複数専門家を再利用でき、単純なTop-K削減より精度を保つ。","quality_impact":"Vanillaと完全同一ではなく近似ルーティングであり、コア集合予算を縮めるほど精度低下が増える。ただし主設定ではLLaDA2.0-Miniで99.5%の平均相対精度を維持し、専門家フットプリントと遅延を大幅に削減する。"},"reservation":{"claim_id":"claim-88d4b2308d0d8596f4fd6ce4","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-c3d771ab5950563d5d332246",
+  "job_id": "job-research-04494ef5a577c4fb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c3d771ab5950563d5d332246",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
