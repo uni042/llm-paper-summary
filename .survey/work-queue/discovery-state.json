@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T14:37:26+00:00",
-  "last_run_key": "adhoc-20260923T232013JST-worker-923191",
-  "last_round": "adhoc-20260923T232013JST-worker-923191-forward-02",
+  "updated_at": "2026-09-23T14:40:12+00:00",
+  "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+  "last_round": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-lossless-weights-19",
-      "axis": "GPU runtime・lossless weight compression・fused decompression GEMM",
-      "query_summary": "GPU runtime/compiler、memory bandwidth、model storageを横断して探索し、lossless compressionをTensor Core実行と融合するZipServを未収録候補として確認した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 1,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.6666666666666666,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.13327",
-        "arXiv:2607.08786"
-      ],
-      "next_axis_hint": "candidate在庫反映を再確認し、50超ならoverflow researchへ切替。未反映なら新着・重点軸を継続する",
-      "source_submission": "work-queue/submissions/20260916T1956JST-discovery-specialist-lossless-weights-19.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-serving-elasticity-20",
@@ -8139,6 +8121,41 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260923T233115JST-scheduled-chat-30-bwd-r1-repair",
+      "precheck_request_id": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair",
+      "run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+      "round": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair",
+      "axis": "repository-wide structured references for LLM inference systems",
+      "query_summary": "repository_references schema v3で固定sourceを走査し、許可された未評価20件を軽量評価。推論効率への直接性・新しさが特に高いDeepSeek-V4を候補化した。",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [
+        "arXiv:2606.19348"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "same-run forward citation refresh",
+      "source_submission": "work-queue/submissions/20260923T233115JST-scheduled-chat-30-bwd-r1-repair.json",
+      "source_submissions": [
+        "work-queue/submissions/20260923T233115JST-scheduled-chat-30-bwd-r1-repair.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -15470,14 +15487,14 @@
       "next_axis_hint": null
     },
     "repository-wide structured references for LLM inference systems": {
-      "last_run_key": "adhoc-20260923T232013JST-worker-923191",
-      "rounds": 3,
-      "candidate_count": 25,
+      "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+      "rounds": 4,
+      "candidate_count": 45,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 25,
+      "novel_candidate_count": 45,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 25,
-      "accepted_count": 9,
+      "post_final_dedupe_count": 45,
+      "accepted_count": 10,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": "same-run forward citation refresh"
@@ -16821,20 +16838,20 @@
       "citation_direction": "backward",
       "query_family": "structured-reference-curation",
       "search_window_key": "window-04e36e1566c19f9e7ebc",
-      "scan_count": 1,
-      "raw_result_count": 100,
-      "unseen_result_count": 20,
-      "duplicate_filtered_count": 21,
-      "rejection_filtered_count": 1,
-      "candidate_evaluation_count": 20,
-      "candidate_accepted_count": 4,
+      "scan_count": 2,
+      "raw_result_count": 200,
+      "unseen_result_count": 40,
+      "duplicate_filtered_count": 46,
+      "rejection_filtered_count": 2,
+      "candidate_evaluation_count": 40,
+      "candidate_accepted_count": 5,
       "last_position": "offset-0",
       "unseen_rate": 0.2,
-      "duplicate_rate": 0.21,
-      "candidate_acceptance_rate": 0.2,
+      "duplicate_rate": 0.23,
+      "candidate_acceptance_rate": 0.125,
       "cooldown": false,
-      "last_run_key": "adhoc-20260923T232013JST-worker-923191",
-      "last_round": "adhoc-20260923T232013JST-worker-923191-backward-01"
+      "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+      "last_round": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair"
     },
     "window-4307f4d54979e103a426": {
       "topic": "flexgen forward citations",
@@ -17720,6 +17737,27 @@
       "unseen_rate": 0.2,
       "duplicate_rate": 0.62,
       "candidate_acceptance_rate": 0.5,
+      "last_position": "offset-0"
+    },
+    {
+      "topic": "structured-references",
+      "source": "repository_references",
+      "date_range": "repository-wide",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "structured-reference-curation",
+      "search_window_key": "window-04e36e1566c19f9e7ebc",
+      "run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+      "round": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair",
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 25,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 1,
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.25,
+      "candidate_acceptance_rate": 0.05,
       "last_position": "offset-0"
     }
   ],
