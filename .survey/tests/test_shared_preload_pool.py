@@ -11,6 +11,7 @@ SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 import claim_state
+import claim_window_policy
 import claim_worker_with_banks
 import select_record_bank
 import shared_preload_pool
@@ -51,7 +52,7 @@ def seed_job(root: Path, index: int, *, priority: int | None = None, job_id: str
     return job_id
 
 
-def seed_request(root: Path, request_id: str, worker_id: str, when: datetime):
+def seed_request(root: Path, request_id: str, worker_id: str, when: datetime, *, window: int = 12):
     write_json(root / ".survey/work-queue/claim-requests" / f"{request_id}.json", {
         "schema_version": 1,
         "request_id": request_id,
@@ -59,7 +60,7 @@ def seed_request(root: Path, request_id: str, worker_id: str, when: datetime):
         "worker_kind": "scheduled_chat",
         "requested_at": when.isoformat(),
         "max_jobs": 1,
-        "claim_window": 4,
+        "claim_window": window,
         "lease_seconds": 5400,
         "job_types": ["research", "audit"],
     })
@@ -79,11 +80,11 @@ def active_inventory(root: Path, at: datetime):
 
 
 class SharedPreloadPoolTests(unittest.TestCase):
-    def test_maintains_24_global_inventory_and_leaves_8_bank_headroom(self):
+    def test_maintains_144_logical_inventory_without_consuming_banks(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             seed_banks(root)
-            for index in range(40):
+            for index in range(170):
                 seed_job(root, index)
 
             summary = claim_worker_with_banks.process_requests(
@@ -94,12 +95,69 @@ class SharedPreloadPoolTests(unittest.TestCase):
             claims = claim_state.current_claims(root, AT)
             waiting = shared_preload_pool.waiting_claims(claims)
 
-            self.assertEqual(summary["shared_pool_target"], 24)
-            self.assertEqual(summary["shared_pool_inventory_active"], 24)
-            self.assertEqual(summary["shared_pool_pool_waiting"], 24)
-            self.assertEqual(len(waiting), 24)
-            self.assertEqual([row["pool_order"] for row in waiting], list(range(24)))
-            self.assertEqual(len({row["record_bank"] for row in waiting}), 24)
+            self.assertEqual(summary["shared_pool_target"], 144)
+            self.assertEqual(summary["shared_pool_inventory_active"], 144)
+            self.assertEqual(summary["shared_pool_pool_waiting"], 144)
+            self.assertEqual(len(waiting), 144)
+            self.assertEqual([row["pool_order"] for row in waiting], list(range(144)))
+            self.assertTrue(all("record_bank" not in row for row in waiting))
+
+            bank_state = select_record_bank.inspect(root)
+            free_or_reusable = [
+                row for row in bank_state["banks"]
+                if row["state"] in {"free", "reusable"}
+            ]
+            self.assertEqual(len(free_or_reusable), len(BANK_ROOTS))
+
+    def test_six_workers_hold_twelve_each_but_only_four_hot_claims_use_banks(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_banks(root)
+            for index in range(180):
+                seed_job(root, index)
+
+            claim_worker_with_banks.process_requests(root, at=AT, maintain_shared_pool=True)
+            before = shared_preload_pool.waiting_claims(claim_state.current_claims(root, AT))
+            expected = [row["job_id"] for row in before[:72]]
+
+            requests = [
+                (f"req-{index}", f"worker-{index}")
+                for index in range(1, 7)
+            ]
+            for offset, (request_id, worker_id) in enumerate(requests):
+                seed_request(root, request_id, worker_id, AT + timedelta(seconds=offset + 1))
+
+            summary = claim_worker_with_banks.process_requests(
+                root,
+                at=AT + timedelta(minutes=1),
+                maintain_shared_pool=False,
+            )
+
+            observed = []
+            banked = []
+            for request_id, _worker_id in sorted(requests):
+                result = json.loads(
+                    (root / ".survey/work-queue/claim-results" / f"{request_id}.json").read_text()
+                )
+                self.assertEqual(result["shared_pool_adopted_count"], 12)
+                self.assertEqual(len(result["assignments"]), 12)
+                hot = result["assignments"][:claim_window_policy.HOT_BANKED_CLAIMS]
+                cold = result["assignments"][claim_window_policy.HOT_BANKED_CLAIMS:]
+                self.assertTrue(all(isinstance(row.get("record_bank"), str) for row in hot))
+                self.assertTrue(all("record_bank" not in row for row in cold))
+                observed.extend(row["job_id"] for row in result["assignments"])
+                banked.extend(row["record_bank"] for row in hot)
+
+            self.assertEqual(observed, expected)
+            self.assertEqual(len(set(observed)), 72)
+            self.assertEqual(len(banked), 24)
+            self.assertEqual(len(set(banked)), 24)
+            self.assertEqual(summary["banks_hot_scheduled_claims"], 24)
+
+            claims = claim_state.current_claims(root, AT + timedelta(minutes=1))
+            waiting = shared_preload_pool.waiting_claims(claims)
+            self.assertEqual(len(active_inventory(root, AT + timedelta(minutes=1))), 144)
+            self.assertEqual(len(waiting), 72)
 
             bank_state = select_record_bank.inspect(root)
             free_or_reusable = [
@@ -108,74 +166,19 @@ class SharedPreloadPoolTests(unittest.TestCase):
             ]
             self.assertEqual(len(free_or_reusable), 8)
 
-    def test_six_irregular_workers_atomically_adopt_disjoint_fifo_windows(self):
-        with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
-            seed_banks(root)
-            for index in range(40):
-                seed_job(root, index)
-
-            claim_worker_with_banks.process_requests(root, at=AT, maintain_shared_pool=True)
-            before = shared_preload_pool.waiting_claims(claim_state.current_claims(root, AT))
-            expected = [row["job_id"] for row in before]
-            expected_bank = {row["job_id"]: row["record_bank"] for row in before}
-
-            requests = [
-                ("req-50", "worker-zeta"),
-                ("req-10", "worker-alpha"),
-                ("req-40", "worker-epsilon"),
-                ("req-20", "worker-beta"),
-                ("req-60", "worker-omega"),
-                ("req-30", "worker-gamma"),
-            ]
-            for request_id, worker_id in requests:
-                seed_request(root, request_id, worker_id, AT + timedelta(minutes=1))
-
-            claim_worker_with_banks.process_requests(
-                root,
-                at=AT + timedelta(minutes=1),
-                maintain_shared_pool=True,
-            )
-
-            observed = []
-            for request_id, _worker_id in sorted(requests):
-                result = json.loads(
-                    (root / ".survey/work-queue/claim-results" / f"{request_id}.json").read_text()
-                )
-                self.assertEqual(result["shared_pool_adopted_count"], 4)
-                self.assertEqual(len(result["assignments"]), 4)
-                observed.extend(row["job_id"] for row in result["assignments"])
-                for row in result["assignments"]:
-                    self.assertEqual(row["record_bank"], expected_bank[row["job_id"]])
-                    payload = json.loads(
-                        (root / BANK_ROOTS[row["record_bank"]] / "metadata.json").read_text()
-                    )
-                    self.assertEqual(payload["reservation"]["claim_id"], row["claim_id"])
-                    self.assertEqual(payload["reservation"]["worker_id"], row["worker_id"])
-
-            self.assertEqual(observed, expected)
-            self.assertEqual(len(set(observed)), 24)
-            self.assertEqual(len(active_inventory(root, AT + timedelta(minutes=1))), 24)
-            self.assertEqual(
-                shared_preload_pool.waiting_claims(
-                    claim_state.current_claims(root, AT + timedelta(minutes=1))
-                ),
-                [],
-            )
-
     def test_new_high_priority_job_is_appended_behind_loaded_fifo(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             seed_banks(root)
-            for index in range(30):
+            for index in range(170):
                 seed_job(root, index)
 
             claim_worker_with_banks.process_requests(root, at=AT, maintain_shared_pool=True)
             initial = shared_preload_pool.waiting_claims(claim_state.current_claims(root, AT))
             initial_ids = [row["job_id"] for row in initial]
 
-            seed_job(root, 99, priority=100000, job_id="job-new-high")
-            seed_request(root, "req-first", "worker-first", AT + timedelta(minutes=1))
+            seed_job(root, 999, priority=100000, job_id="job-new-high")
+            seed_request(root, "req-first", "worker-1", AT + timedelta(minutes=1))
             claim_worker_with_banks.process_requests(
                 root,
                 at=AT + timedelta(minutes=1),
@@ -186,7 +189,7 @@ class SharedPreloadPoolTests(unittest.TestCase):
             )
             self.assertEqual(
                 [row["job_id"] for row in first_result["assignments"]],
-                initial_ids[:4],
+                initial_ids[:12],
             )
 
             completed_job = first_result["assignments"][0]["job_id"]
@@ -208,8 +211,9 @@ class SharedPreloadPoolTests(unittest.TestCase):
                 if row["job_id"] != "job-new-high"
             ]
             self.assertGreater(high["pool_order"], max(row["pool_order"] for row in older_waiting))
+            self.assertNotIn("record_bank", high)
 
-            seed_request(root, "req-second", "worker-second", AT + timedelta(minutes=3))
+            seed_request(root, "req-second", "worker-2", AT + timedelta(minutes=3))
             claim_worker_with_banks.process_requests(
                 root,
                 at=AT + timedelta(minutes=3),
@@ -221,7 +225,7 @@ class SharedPreloadPoolTests(unittest.TestCase):
             self.assertNotIn("job-new-high", [row["job_id"] for row in second["assignments"]])
             self.assertEqual(
                 [row["job_id"] for row in second["assignments"]],
-                initial_ids[4:8],
+                initial_ids[12:24],
             )
 
 
