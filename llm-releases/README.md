@@ -3,10 +3,10 @@
 主要LLMの新規公開・一般提供を**model family別**に整理する。
 
 - 初回バックフィル対象: **2026-03-04〜2026-09-05**
-- リリース情報の最終確認: **2026-09-23**
+- リリース情報の最終確認: **2026-09-24**
 - 用語・可読性の最終監査: **2026-09-07**
 
-2026-09-23に主要提供元の公式公開を再確認した。9月20日以降、現在追跡している主要model familyについてトップ表を更新すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月15日のGemini 3.8 Live / Live Extended Thinking。トップ表は各model familyの最新リリースを示す。
+2026-09-24に主要提供元の公式公開を再確認し、OpenAIのGPT-6 Sol / LunaとAnthropicのClaude Opus 5.5を追加した。GPT-6 Sol / LunaはAstra世代の能力をより低cost帯へ展開し、Claude Opus 5.5はOpus 5比の性能・効率・安全性を更新する。トップ表は各model familyの最新リリースを示す。
 
 噂・リーク・単なる軽微variantは原則含めない。著名なmodel familyで直近半年に主要リリースがない場合は、その系統自体が一覧から消えないよう**直近の主要モデル1件だけ**を期間外として残す。
 
@@ -26,12 +26,12 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 
 | リリース日 | モデル | 系統 | 概要 | 詳細 |
 |---|---|---|---|---|
-| 2026-09-03 | GPT-6 Astra | OpenAI GPT | toolを使う長時間task、coding、research、science等を重点にしたGPT-6世代上位APIモデルとして記録。API ID `gpt-6-astra`、最大1.05M-token context / 128K output。 | [OpenAI GPT系](openai-gpt.md) |
+| 2026-09-23 | GPT-6 Sol / Luna | OpenAI GPT | GPT-6 Astraで導入したprofessional work、factuality、coding、computer use等の改善を高速・低cost帯へ展開。API IDは`gpt-6-sol` / `gpt-6-luna`。GPT-5.6のpromotional pricing比でSol / Lunaとも大幅に低価格化。 | [OpenAI GPT系](openai-gpt.md) |
 | 2026-09-02 | Qwen3.8-Max-0902 | Qwen | 2.4T級MoEを基盤とするQwen3.8-MaxのAPI snapshot。1M contextとtext / image / video入力を維持し、coding・長時間tool taskを更新。0902自体のopen-weight checkpointとは区別。 | [Qwen系](qwen.md) |
 | 2026-09-15 | Gemini 3.8 Live / Live Extended Thinking | Gemini | Live API向けaudio-to-audioモデル。標準Liveは低latencyのreal-time dialogue、Extended Thinkingはlive audio中のbackground reasoningを重視する。両方とも一般提供（GA）。 | [Gemini系](gemini.md) |
 | 2026-09-02 | Muse Spark 1.3 | Meta Muse | codingとエージェント型タスク（agentic tasks）を更新し、Muse Code / Meta APIへ展開されたMuse Spark系モデル。 | [Meta Muse系](meta-muse.md) |
 | 2026-08-26 | GLM-5.3-Flash | GLM | 総320B / 約18B activeのnative multimodal MoE。sparse / linear attentionを組み合わせ、長context時のattention計算とKV増加を抑える設計。 | [GLM系](glm.md) |
-| 2026-09-01 | Claude Fable 5.1 / Mythos 5.1 | Claude | coding・knowledge work・scienceなど長いmulti-step task向けの上位model群。Mythosはcybersecurity / biology等の専門領域を重点化。 | [Claude系](claude.md) |
+| 2026-09-22 | Claude Opus 5.5 | Claude | Claude 5.5 familyの最初のmodel。Opus 5からagentic coding、computer use、knowledge work、効率、安全性を更新し、通常workloadで約40%低cost、出力速度も30%以上高速化とAnthropicが報告。 | [Claude系](claude.md) |
 | 2026-09-10 | DeepSeek-V4.1-Flash | DeepSeek | 総552BのMoE。入力8B・出力16B activeの非対称構造を採用し、前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8へ削減。native multimodal対応でAPIとopen-weightを公開。 | [DeepSeek系](deepseek.md) |
 | 2026-08-12 | Grok 4.6 | Grok | 長時間agent、coding、visual / interactive taskを重点にした上位model。最大500K-token context。 | [Grok系](grok.md) |
 | 2026-07-16 | Kimi K3 | Kimi | 総2.8T、896 routed experts、16 experts/tokenのopen-weight native multimodal MoE。1M contextでimage / videoと長時間coding taskを対象。 | [Kimi系](kimi.md) |

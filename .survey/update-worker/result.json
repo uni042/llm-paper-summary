@@ -1,18 +1,20 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "update-20260923-0830-scheduled-chat-30",
+  "attempt_id": "update-20260924-0830-scheduled-chat-30",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/README.md",
-    "framework-updates/inference-engines/vllm/README.md",
-    "llm-releases/README.md"
+    "llm-releases/README.md",
+    "llm-releases/openai-gpt.md",
+    "llm-releases/claude.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
     "framework-updates/README.md",
-    "framework-updates/inference-engines/vllm/README.md",
-    "llm-releases/README.md"
+    "llm-releases/README.md",
+    "llm-releases/openai-gpt.md",
+    "llm-releases/claude.md"
   ],
-  "summary": "2026-09-23の08:30 update route: vLLM v0.30.0のFast Start、HiSparse、Model Runner V2、Qwen3.8/Kimi K3最適化等を追加。主要LLM正式公開は9月20日以降にトップ表更新対象なし。"
+  "summary": "2026-09-24の08:30 update route: GPT-6 Sol / LunaとClaude Opus 5.5を主要LLM一覧へ追加。主要frameworkは前回確認後に掲載方針上追加すべき新規更新なし。"
 }

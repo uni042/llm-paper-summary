@@ -6,6 +6,7 @@ OpenAI GPT系の主要モデルを新しい順に記録する。初回バック�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-09-23 | GPT-6 Sol / Luna | GPT-6 Astraと同系統の学習手法を使い、professional work、factuality、coding、computer use、alignmentの改善を高速・低cost帯へ展開。API model IDは`gpt-6-sol` / `gpt-6-luna`。API価格はSolが入力$2 / 出力$10、Lunaが入力$0.10 / 出力$0.50（各100万token）で、GPT-5.6 promotional pricingから大幅に低価格化。prompt cachingも改善され、cached input readは90% discount。 | https://openai.com/index/introducing-gpt-6-sol-and-luna/ |
 | 2026-09-03 | GPT-6 Astra | GPT-6世代の上位モデルとして、computer use、browser操作、software engineering、cybersecurity、science、professional workなどtoolを伴う長いtaskを重点強化。API model IDは`gpt-6-astra`。最大1,050,000-token context、最大128,000-token outputとして記録。 | https://openai.com/index/gpt-6-astra/ |
 | 2026-07-09 | GPT-5.6 Sol / Terra / Luna | GPT-5.6世代のmodel群。Solは高能力側、Terraは性能・latency・costのbalance、Lunaは高速・低cost側という役割分担で、coding、knowledge work、science、エージェント型処理（agentic work）を対象とする。 | https://openai.com/index/gpt-5-6/ |
 | 2026-04-23 | GPT-5.5 / GPT-5.5 Pro | 複雑な実務、agentic coding、online research、文書・spreadsheet作成、tool useを重点にした世代。Proはより多い計算量を使う高難度task向けvariantとして区別する。API提供は4月24日開始として記録。 | https://openai.com/index/introducing-gpt-5-5/ |
