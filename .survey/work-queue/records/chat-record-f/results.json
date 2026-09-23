@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-64f95f13e8bf245cb090a9d9",
-  "job_id": "job-research-62c06a71da7d8bc0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-64f95f13e8bf245cb090a9d9",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-64f95f13e8bf245cb090a9d9","job_id":"job-research-62c06a71da7d8bc0","data":{"overview":"5% KV budgetでContiguousKVは平均TTFTをAS+LRU比6.16倍、AS+H2O+LFU比5.83倍、IMPRESS比3.85倍短縮した。P95 tailも既存系より平均0.42〜1.17秒短縮する。sparse KV方式とのaccuracy比較でもほぼ全設定で最良で、IMPRESSに対しbudget 5/10/25/50%で平均7.69/4.81/3.58/1.63%改善する。full-KV AS+LRU比では一部低下するがQwen2.5-32Bで最大2.94%に収まる。","key_results":[{"metric":"平均TTFT speedup","value":"6.16× / 5.83× / 3.85×","baseline":"AS+LRU / AS+H2O+LFU / IMPRESS","condition":"5% KV budget, four datasets, Qwen2.5 7B/14B/32B","interpretation":"granularity alignmentとI/O-compute overlapによりRe-Prefillを大幅短縮する。"},{"metric":"P95 tail latency reduction","value":"0.42 s, 0.89 s, 1.17 s average reductions","baseline":"existing systems across representative datasets/models","condition":"5% KV budget","interpretation":"平均だけでなくtail stallも減らす。"},{"metric":"accuracy vs IMPRESS","value":"+7.69%, +4.81%, +3.58%, +1.63%","baseline":"IMPRESS","condition":"KV budget 5%,10%,25%,50% averaged across settings","interpretation":"細粒度ContiguousChunkは同じsparse budgetでsemantic informationをより保持する。"},{"metric":"Qwen2.5-32B quality","value":"+7.71% vs IMPRESS; at most -2.94% vs full-KV AS+LRU","baseline":"IMPRESS and AS+LRU","condition":"larger-model evaluation","interpretation":"32Bでも速度のためのpruningが極端なquality lossを生まない。"},{"metric":"read amplification motivation","value":"typically ~12×; observed range up to 25–56×","baseline":"IMPRESS","condition":"Qwen2.5-7B, RTE, 25% KV budget","interpretation":"粗いI/O blockと細粒度selectionの不一致がSSD trafficを支配する。"}],"negative_results":"KV budgetが25%へ増えると5%時よりspeedup比は小さくなる。これは既存方式のread amplification影響が相対的に弱まるためである。full-KV AS+LRUと比べるとsemantic pruningによりaccuracyはbudgetに応じて平均5.62%、3.56%、1.21%、0.04%低下する。baseline群は非公開実装を再現したもので完全な同一実装比較ではない。","interpretation":"最大の利得は『より賢いSSD』ではなく、アルゴリズムが欲しい単位とストレージが読む単位を一致させることから来る。そこへcross-layer similarityを使ったprefetchを重ねることで、I/O量削減とI/O待ち隠蔽を同時に行う。attention-guided cacheは高速tierに残すchunkの価値をquery依存にする補助機構である。","quality_impact":"full KVを常に読む方式より一部accuracyを犠牲にするが、既存sparse KV offloadingより高accuracyを示す。chunk単位の連続性がtoken-level pruningより局所semantic coherenceを保つという設計意図と整合する。"},"reservation":{"claim_id":"claim-64f95f13e8bf245cb090a9d9","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
