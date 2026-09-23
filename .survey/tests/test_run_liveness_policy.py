@@ -8,18 +8,19 @@ SCRIPTS = ROOT / "scripts"
 
 
 class RunLivenessPolicyTests(unittest.TestCase):
-    def test_router_and_gates_use_10_second_real_time_polling_until_terminal(self):
+    def test_router_and_gates_use_productive_wait_microtasks_until_terminal(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
         finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
 
-        self.assertIn("10秒", router)
-        self.assertIn("実時間", router)
+        self.assertIn("待機ミクロタスク", router)
+        self.assertIn("固定時間sleep", router)
         self.assertIn("同一target", router)
-        self.assertIn("ASYNC_WAIT_POLL_SECONDS = 10", continuation)
+        self.assertIn("PRODUCTIVE_WAIT_RECHECK_SECONDS = 0", continuation)
+        self.assertIn("run_one_wait_microtask", continuation)
         self.assertIn("repeat_until_result_or_terminal_hard_stop", continuation)
-        self.assertIn("ASYNC_WAIT_POLL_SECONDS = 10", finalization)
-        self.assertIn("repeated until the", finalization)
+        self.assertIn("PRODUCTIVE_WAIT_RECHECK_SECONDS = 0", finalization)
+        self.assertIn("RUN_WAIT_MICROTASK_AND_RECHECK", finalization)
         self.assertIn("terminal state", finalization)
 
     def test_claim_wait_is_productive_fast_lane_monitoring(self):
@@ -35,7 +36,7 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("claim_result_pending_age_seconds", continuation)
         self.assertIn("inspect_survey_claim_fast_actions_run_for_request_commit", continuation)
         self.assertIn("MONITOR_CLAIM_FAST_LANE", guidance)
-        self.assertIn("Pending claim results also require productive fast-lane monitoring", finalization)
+        self.assertIn("Pending claim results also require fast-lane monitoring", finalization)
 
     def test_submission_pending_never_blocks_new_research_claims(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
