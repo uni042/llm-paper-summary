@@ -5,9 +5,12 @@ The existing claim allocator remains authoritative for job ownership. This wrapp
 runs inside the serialized ``survey-claim-main`` lane and adds record-bank
 reservations only where immediate write readiness is useful. Scheduled-chat workers
 may own a deeper logical paper inventory, but only the leading hot slice is banked.
-Shared preload-pool claims are never banked. A bank reservation is encoded as five
-coherent empty slot envelopes, so existing inspection/fallback code still sees a
-hot assignment as occupied before a worker starts writing research content.
+Shared preload-pool claims carry a logical Research stock_bank but do not consume
+that bank's five record slots while cold. A hot assignment prefers its stock_bank
+for record staging; if those record slots are occupied it may use another free bank.
+A bank reservation is encoded as five coherent empty slot envelopes, so existing
+inspection/fallback code still sees a hot assignment as occupied before a worker
+starts writing research content.
 
 Pre-reservation active claims that still lack persisted bank routing are migrated to
 the durable Library fallback. This retires the rollout-era global fence: one legacy
@@ -211,11 +214,23 @@ def _reclaim_inactive_dirty_banks(root: Path, active_claim_ids: set[str]) -> int
     return reclaimed
 
 
-def _available_bank(root: Path, excluded: set[str]) -> str | None:
+def _available_bank(
+    root: Path,
+    excluded: set[str],
+    *,
+    preferred: str | None = None,
+) -> str | None:
     state = select_record_bank.inspect(root)
-    for item in state.get("banks", []):
-        if not isinstance(item, dict):
-            continue
+    items = [item for item in state.get("banks", []) if isinstance(item, dict)]
+    preferred_bank = str(preferred or "").lower()
+    if preferred_bank in BANK_ROOTS and preferred_bank not in excluded:
+        for item in items:
+            if (
+                str(item.get("bank") or "").lower() == preferred_bank
+                and item.get("state") in {"free", "reusable"}
+            ):
+                return preferred_bank
+    for item in items:
         bank = str(item.get("bank") or "").lower()
         if bank in excluded:
             continue
@@ -611,6 +626,8 @@ def _refresh_new_claim_result_routes(root: Path, result_paths: set[Path]) -> int
         "record_bank_recovery_attempt_ids",
         "record_bank_recovery_submission",
         "record_bank_release",
+        "stock_bank",
+        "stock_lane",
     )
     for result_path in sorted(result_paths):
         result = _read(result_path)
@@ -761,7 +778,11 @@ def reserve_new_claim_banks(
         descriptor_repair = _repair_descriptor_candidate(root, claim)
         if descriptor_repair is not None:
             source_submission, _descriptor, payloads, previous_attempts = descriptor_repair
-            bank = _available_bank(root, used)
+            bank = _available_bank(
+                root,
+                used,
+                preferred=str(claim.get("stock_bank") or "") or None,
+            )
             if bank is not None:
                 _recover_bank_payloads(
                     root,
@@ -795,7 +816,11 @@ def reserve_new_claim_banks(
             recovered_expired += 1
             continue
 
-        bank = _available_bank(root, used)
+        bank = _available_bank(
+            root,
+            used,
+            preferred=str(claim.get("stock_bank") or "") or None,
+        )
         if bank is None:
             _persist_library_fallback(root, claim)
             fallback += 1
