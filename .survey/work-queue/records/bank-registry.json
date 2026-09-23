@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "transport_version": 10,
   "banks": {
     "a": ".survey/work-queue/records/chat-record",
@@ -50,6 +50,10 @@
     "fallbacks": [
       "chatgpt_library"
     ],
-    "canonical_bank_count": 32
-  }
+    "canonical_bank_count": 32,
+    "dual_purpose_banks": true,
+    "discovery_preload_per_bank": 1,
+    "discovery_and_research_slots_are_independent": true
+  },
+  "discovery_slot": "discovery-preload"
 }
