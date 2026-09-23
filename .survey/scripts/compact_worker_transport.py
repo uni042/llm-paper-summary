@@ -55,6 +55,17 @@ def _move(root: Path, source: Path, relative_archive: Path, apply: bool) -> tupl
     return True, "archived"
 
 
+def _read_preflight_result(root: Path, relative: str) -> dict[str, Any] | None:
+    path = root / relative
+    value = _read(path, {})
+    if isinstance(value, dict):
+        return value
+    name = Path(relative).name
+    archived = root / ARCHIVE / "research-preflight/results" / name
+    value = _read(archived, {})
+    return value if isinstance(value, dict) else None
+
+
 def _matching_descriptor(root: Path, request: dict[str, Any]) -> Path | None:
     kind = request.get("kind")
     attempt_id = request.get("attempt_id")
@@ -81,8 +92,8 @@ def compact_completed_requests(root: Path, apply: bool) -> tuple[list[str], list
             skipped.append({"path": path.relative_to(root).as_posix(), "reason": "malformed"})
             continue
         descriptor = _matching_descriptor(root, request)
-        preflight_path = root / str(request.get("preflight_result") or "")
-        preflight = _read(preflight_path, {})
+        preflight_relative = str(request.get("preflight_result") or "")
+        preflight = _read_preflight_result(root, preflight_relative)
         if descriptor is None or not isinstance(preflight, dict):
             skipped.append({"path": path.relative_to(root).as_posix(), "reason": "unsettled"})
             continue
