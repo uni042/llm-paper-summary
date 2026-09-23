@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 13:15:24 JST**
+> 自動生成: **2026-09-23 13:24:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **178** |
-| 未claim Research job | **177** |
-| 直近24hの検証済みResearch収録 | **82** |
-| 最終検証済みResearch収録 | **09-23 13:15:20 JST（4秒前）** |
+| 収録候補論文 | **177** |
+| 未claim Research job | **176** |
+| 直近24hの検証済みResearch収録 | **83** |
+| 最終検証済みResearch収録 | **09-23 13:23:59 JST（3秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **178** |
+| canonical_id確認済みの一意な候補論文 | **177** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **178** |
+| 非終端Research job合計 | **177** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -33,10 +33,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6415** |
-| 処理済み | **633** |
-| 未処理 | **5782** |
-| 収録済みとして除外 | **525** |
+| 構造化references総候補 | **6423** |
+| 処理済み | **635** |
+| 未処理 | **5788** |
+| 収録済みとして除外 | **527** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（4時間44分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（4時間53分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 13:23:59 JST** [research] `arXiv:2602.02443` — Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE
+  - job: `.survey/work-queue/jobs/job-research-2752e3b1e763b7d9.json`
+  - result: `.survey/work-queue/results/research/attempt-11a2387004457060d2b83f8f.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-11a2387004457060d2b83f8f.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md`
 - **09-23 13:15:20 JST** [research] `arXiv:2609.17890` — OBC-Prune: Outcome-Based Calibration for Large Reasoning Model Pruning
   - job: `.survey/work-queue/jobs/job-research-17efeee08a231d8b.json`
   - result: `.survey/work-queue/results/research/attempt-ff6c2afd7fe3644b99148c7f.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-c67963f1064ecc2790db5b2d.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-c67963f1064ecc2790db5b2d.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.09240-scaling-post-training-ternarisation-to-qwen3-8b-capability-retention-reproduction-lossless-packing-and-packed-execution.md`
-- **09-23 09:40:01 JST** [research] `arXiv:2609.19207` — MeshKV: A Network-on-Chip KV Cache Fabric for Scalable Transformer Decoding Accelerators
-  - job: `.survey/work-queue/jobs/job-research-9fc5a1ad8ad0b2d8.json`
-  - result: `.survey/work-queue/results/research/attempt-b2bab9973d68ecd4f1cace12.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-b2bab9973d68ecd4f1cace12.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.19207-meshkv-a-network-on-chip-kv-cache-fabric-for-scalable-transformer-decoding-accelerators.md`
 
 ### Audit
 
@@ -179,9 +179,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
-- `arXiv:2602.02443` — Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE / worker `scheduled-chat-00`
-  - claim: **09-23 13:15:11 JST** / heartbeat: **—** / lease expiry: **09-23 14:45:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2752e3b1e763b7d9.json`
+- `arXiv:2608.01784` — REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models / worker `scheduled-chat-00`
+  - claim: **09-23 13:23:46 JST** / heartbeat: **—** / lease expiry: **09-23 14:53:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-81939bee41b7da9c.json`
 
 #### Audit
 
@@ -201,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **178** |
+| ready | **177** |
 
 ### 候補の重複・識別情報欠損
 
@@ -221,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **972** |
+| inference/training/survey配下の論文Markdown実体 | **973** |
 
 ### immutable submissionの未照合
 

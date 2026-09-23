@@ -1,6 +1,6 @@
 {
-  "fact_generation": 2,
-  "generation": 10,
+  "fact_generation": 3,
+  "generation": 11,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
@@ -8,10 +8,13 @@
         "attempt-11a2387004457060d2b83f8f": {
           "attempt_id": "attempt-11a2387004457060d2b83f8f",
           "claimed_at": "2026-09-23T04:02:00+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-11a2387004457060d2b83f8f.json",
           "job_id": "job-research-2752e3b1e763b7d9",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-23T04:23:59+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "manual-e2e-20260923T0402Z-00",
@@ -49,23 +52,22 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T04:16:41.028609+00:00",
-      "generation": 10,
+      "generation": 11,
       "rebuilt_from_canonical": false,
       "run_key": "manual-e2e-20260923T0402Z-00",
       "scheduled_slot": "00",
       "submission": {
         "completed_attempt_ids": [
+          "attempt-11a2387004457060d2b83f8f",
           "attempt-ff6c2afd7fe3644b99148c7f"
         ],
         "last_terminal_job_status": "completed",
-        "pending_attempt_ids": [
-          "attempt-11a2387004457060d2b83f8f"
-        ],
-        "pipeline_ahead_count": 1,
+        "pending_attempt_ids": [],
+        "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 1,
+        "research_audit_completed_this_invocation": 2,
         "retryable_attempt_ids": [],
-        "submission_result_pending": true,
+        "submission_result_pending": false,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
           "attempt-11a2387004457060d2b83f8f",
@@ -2099,6 +2101,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T04:23:12.016206+00:00",
+  "updated_at": "2026-09-23T04:23:59.212178+00:00",
   "worker_id": "scheduled-chat-00"
 }
