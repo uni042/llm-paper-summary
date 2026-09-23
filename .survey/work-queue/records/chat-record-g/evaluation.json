@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-04e285682c3e9ed7b0782532","job_id":"job-research-ded5355ef64410a7","data":{"hardware":"実運用相当のNVIDIA H20/H200クラスタを8〜128画像処理装置まで使用する。ノード間は毎秒200ギガビットの遠隔直接メモリアクセス対応InfiniBand、各ノードは高帯域の装置間接続と2テラバイトのホストメモリを持つ。メモリ制約評価では24ギガバイト級の画像処理装置も含む。","software":"BatchGenはC++約1万3千行、Python約4万9千行。比較対象はSGLang、vLLMと徹底調整版SGLangで、メモリ制約条件ではDeepSpeed、FlexGen、MoE-Lightningを加える。さらにTensorRT-LLM、強化学習ではVeRLと比較する。","methodology":"一括推論はLongBenchの6千系列を用い、事前計算が重い8千入力/2千出力と、復号が重い2千入力/8千出力を評価する。混合専門家モデルはMixtral-8×7B、Mixtral-8×22B、DeepSeek-R1、Kimi-K2。推論時拡張はDeepSeek-R1を16台H20で30分・60分の期限内に処理できる系列数を測る。強化学習生成は16台H20のVeRLで長尾終盤を測定する。大規模評価は32/64/128台H20で1万要求を処理し、12K-4Kと6.5K-2.8Kの二負荷について端から端までの完了時間を比較する。","scope":"主指標は全バッチ完了時間と期限内に処理できる系列数である。比較対象は可能な限り処理量向けの並列度とメモリ割当を調整する。大規模なSGLangとvLLMは16装置を超える条件で安定性問題があるため、16装置のデータ並列群を複数動かして合計処理量を比較する。この制約により32〜128装置では完全に同一の分散構成を直接比較したわけではないが、同じ要求集合の端から端までの完了時間を測ることでクラスタ規模の効果を評価する。"},"reservation":{"claim_id":"claim-04e285682c3e9ed7b0782532","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-3da1ea51b0473920687e505f",
+  "job_id": "job-research-2ebe76509c0b20ac",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3da1ea51b0473920687e505f",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

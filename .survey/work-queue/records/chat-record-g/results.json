@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-04e285682c3e9ed7b0782532","job_id":"job-research-ded5355ef64410a7","data":{"overview":"offline inferenceではH20/H200上でSGLang-Optimized比1.25〜1.85倍の高速化を示し、弱いGPUほどprefill大batch化の利益が大きい。8×H20 memory-constrainedではDeepSeek-R1で1.31〜1.85倍、1T parameter Kimi-K2はbaselineがOOMする中BatchGenのみ完走する。128 H20では10K requestsの6.5K-2.8K workloadを14.6分で処理しSGLang-Optimized 36.0分比約2.3倍。test-time scalingはSLO内系列数を最大1.75倍、RL rolloutはiteration timeを5〜10%短縮する。","key_results":[{"metric":"128 H20 batch completion","value":"14.6分","baseline":"SGLang-Optimized 36.0分","condition":"10K requests, 6.5K input/2.8K output","interpretation":"約2.3倍の大規模短縮。"},{"metric":"offline H20/H200","value":"1.25–1.85× speedup","baseline":"SGLang-Optimized","condition":"6K LongBench sequences, 8K-2K/2K-8K","interpretation":"H20で改善が大きく、coroutine batch accumulationが弱いGPUを補う。"},{"metric":"memory-constrained DeepSeek-R1","value":"1.31–1.85×","baseline":"SGLang-Optimized","condition":"8×H20、offloadingでbatch 1800+","interpretation":"KV offloadでexpert batchを拡大しmemory制約をthroughputへ変換する。"},{"metric":"Kimi-K2 on 8×H20","value":"BatchGenのみ完走","baseline":"vLLM/SGLang/SGLang-OptはOOM","condition":"1T parameters","interpretation":"host offloadによりHBM総容量を超えるmodelを実行可能。"},{"metric":"test-time scaling","value":"30分SLO 1.25–1.57×、60分SLO 1.66–1.75× more sequences","baseline":"SGLang-Optimized","condition":"DeepSeek-R1, 16×H20, RSA","interpretation":"緩いdeadlineほど大batch化の自由度が増える。"},{"metric":"RL rollout","value":"iteration time 5–10%削減","baseline":"VeRL通常生成","condition":"DeepSeek-R1, 16×H20, long-tail final sequences","interpretation":"idle GPUをstragglerへpartitionしてbatch終盤を短縮。"}],"negative_results":"厳しい30分SLOでは最適batch sizeまで待てず、test-time scalingのspeedupは60分SLOより小さい。大規模baselineは16 GPU超でstability問題があり完全同一分散構成では比較できない。KV offloadはPCIe bandwidth依存で、復元費用を大batchで償却できることが前提。coroutine schedulingは対話型の単一sequence latency最小化を目的としない。","interpretation":"改善は単一kernel高速化ではなく、sequenceをmodule境界で再編成できることから生じる。prefillではexpert batchを大きくし、decode終盤ではstragglerへGPUを再割当し、memory不足時はKVをhostへ逃がしてconcurrencyを上げる。これらを同じcoroutine primitivesで実現するためworkload phaseごとの律速へ適応できる。","quality_impact":"生成品質を変える近似が中心ではなく、execution scheduleとparallelismを変更する。RL長尾ではFP8 decode等の選択肢もruntime primitiveとして利用できるが、基本architectureは精度変更なしで適用可能。"},"reservation":{"claim_id":"claim-04e285682c3e9ed7b0782532","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-3da1ea51b0473920687e505f",
+  "job_id": "job-research-2ebe76509c0b20ac",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3da1ea51b0473920687e505f",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

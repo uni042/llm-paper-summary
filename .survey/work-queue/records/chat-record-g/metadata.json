@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-04e285682c3e9ed7b0782532","job_id":"job-research-ded5355ef64410a7","data":{"canonical_id":"arXiv:2606.21712","arxiv_id":"2606.21712","doi":"10.48550/arXiv.2606.21712","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.LG"]},"title":"BatchGen: An Architecture for Scalable and Efficient Batch Inference","summary":"BatchGenは対話配信向けの固定GPU・原子的forward-pass実行を捨て、各系列をイベント駆動コルーチンとして扱うバッチ推論基盤である。系列はモジュール境界で停止でき、結合・分割・移動を実行時に行うことで、MoE専門家の小バッチ、長尾復号straggler、GPU間負荷偏りを同じ抽象化で解消する。H20/H200を8〜128 GPUまで評価し、128 GPUでバッチ完了時間を最大2.3倍短縮、メモリ制約GPUでは強い退避方式を最大9.6倍上回る。","list_summary":"系列をイベント駆動コルーチン化して停止・結合・分割・移動を可能にし、MoEバッチ形成と長尾負荷分散を動的化して最大2.3倍の大規模高速化を示す。","authors":["Tairan Xu","Leyang Xue","Zhan Lu","Jinfu Deng","Hongyang Xiao","Yinsicheng Jiang","Congjie He","Matej Sandor","Le Xu","Luo Mai"],"authors_affiliations":"University of Edinburgh; Tencent","published":"2026-06-19","publication":"OSDI 2026","publication_type":"査読付き国際会議","publication_status":"20th USENIX Symposium on Operating Systems Design and Implementation (OSDI 26), pp.1125–1141","lineage":"batch inference / event-driven runtime / MoE serving / offload","topics":["バッチ推論","系列コルーチン","MoE推論","動的負荷分散","KVキャッシュ退避"],"importance":"対話遅延最適化から継承された『系列を装置へ固定する』実行モデルそのものをバッチ推論の律速として捉え直し、系列状態を可動なスケジューリング単位へ変える。専門家単位のバッチ拡大、長尾系列の分割、メモリ制約時の退避を同じ四つの基本操作で表現する点がシステム設計上重要である。","implementation":"C++約13K行とPython約49K行。OpenAI互換Batch API、master-worker制御、モデル重み管理、KVキャッシュ管理、障害監視を含む。公式実装を公開。","hardware_evaluation":"NVIDIA H20/H200を8〜128 GPU、200Gb/s RDMA InfiniBandで評価。メモリ制約評価では24GB級A5000等も扱う。","quality_effect":"推論アルゴリズムの近似ではなく系列の実行順序・配置・並列度を変更するシステム最適化。正しさを保つコルーチン状態と操作として定義。","source":"https://arxiv.org/abs/2606.21712","sources":["https://arxiv.org/abs/2606.21712","https://www.usenix.org/conference/osdi26/presentation/xu-tairan"],"code":"https://github.com/batchgen-project/batchgen","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"OSDI 2026 primary paper","references_total":0},"reservation":{"claim_id":"claim-04e285682c3e9ed7b0782532","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-3da1ea51b0473920687e505f",
+  "job_id": "job-research-2ebe76509c0b20ac",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-3da1ea51b0473920687e505f",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
