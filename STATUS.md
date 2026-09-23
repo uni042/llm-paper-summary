@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 01:00:37 JST**
+> 自動生成: **2026-09-24 02:15:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **165** |
-| 未claim Research job | **38** |
-| 直近24hの検証済みResearch収録 | **68** |
-| 最終検証済みResearch収録 | **09-23 22:05:03 JST（2時間55分前）** |
+| 収録候補論文 | **264** |
+| 未claim Research job | **120** |
+| 直近24hの検証済みResearch収録 | **63** |
+| 最終検証済みResearch収録 | **09-23 22:05:03 JST（4時間10分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **165** |
+| canonical_id確認済みの一意な候補論文 | **264** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **165** |
+| 非終端Research job合計 | **264** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（16時間29分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（17時間44分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **8** | **1** | **0** | **0** | **127** | **0** | — |
+| Research | **3** | **1** | **0** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **8** | **4** | **0** | **3** | **127** | **0** | **6** |
+| 合計 | **3** | **4** | **0** | **3** | **144** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -97,31 +97,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-9e32a6c39b70b1ce1c5e9f53.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-9e32a6c39b70b1ce1c5e9f53.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2609.15627-deepseek-v4-flash-on-amd-gfx90a-correctness-recovery-and-inference-performance-engineering.md`
-- **09-23 19:57:05 JST** [research] `arXiv:2606.21712` — BatchGen: An Architecture for Scalable and Efficient Batch Inference
-  - job: `.survey/work-queue/jobs/job-research-ded5355ef64410a7.json`
-  - result: `.survey/work-queue/results/research/attempt-04e285682c3e9ed7b0782532.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-04e285682c3e9ed7b0782532.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.21712-batchgen-an-architecture-for-scalable-and-efficient-batch-inference.md`
-- **09-23 19:51:56 JST** [research] `arXiv:2606.01502` — Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics
-  - job: `.survey/work-queue/jobs/job-research-37a03b603cf5e34b.json`
-  - result: `.survey/work-queue/results/research/attempt-df98f0a4232c714053b0bc18.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-df98f0a4232c714053b0bc18.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md`
-- **09-23 19:47:46 JST** [research] `arXiv:2605.11277` — Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models
-  - job: `.survey/work-queue/jobs/job-research-165ae8125699de70.json`
-  - result: `.survey/work-queue/results/research/attempt-e3c59442daeee9dcbcd01db3.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-e3c59442daeee9dcbcd01db3.json`
-  - paper: `papers/inference/04-offload-heterogeneous/2026-2605.11277-sieve-dynamic-expert-aware-pim.md`
-- **09-23 19:16:28 JST** [research] `arXiv:2509.14900` — FURINA: Free from Unmergeable Router via LINear Aggregation of mixed experts
-  - job: `.survey/work-queue/jobs/job-research-e36fdfcc83960d96.json`
-  - result: `.survey/work-queue/results/research/attempt-4507d6e7a694d747a350c3a0.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-4507d6e7a694d747a350c3a0.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.14900-furina-router-free-linear-expert-aggregation.md`
-- **09-23 19:10:12 JST** [research] `arXiv:2511.15690` — MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping
-  - job: `.survey/work-queue/jobs/job-research-61e38612a8457ae4.json`
-  - result: `.survey/work-queue/results/research/attempt-0640a4e19fcd3a04140f52b1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-0640a4e19fcd3a04140f52b1.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2511.15690-modes-dynamic-expert-skipping.md`
 
 ### Audit
 
@@ -168,37 +143,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **127件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
 - `arXiv:2601.08833` — Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-0023a21511f803e1.json`
 - `DOI:10.1109/IMNS67862.2026.11655252` — Characterizing Predictability–Latency Trade-offs of KV-Cache SSD Offloading in LMCache for LLM Serving Systems / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-0058e5cacea33a16.json`
 - `arXiv:2607.29076` — Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-031cf8d3601d8c3a.json`
 - `arXiv:2211.10438` — SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-05c9fecf1a5510e9.json`
 - `arXiv:2405.00263` — Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-05f57bc36c570458.json`
 - `arXiv:2609.23816` — SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-0729262d447a8308.json`
 - `arXiv:2502.13189` — MoBA: Mixture of Block Attention for Long-Context LLMs / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-09d154c9daf0b638.json`
 - `arXiv:2604.16400` — CoLLM: Continuous Adaptation for SLO-Aware LLM Serving on Shared GPU Clusters / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-0a2c1791c2461b69.json`
+- `arXiv:2606.17081` — The Price of Anarchy in Disaggregated Inference / worker `shared-preload-pool`
+  - claim: **09-24 01:27:03 JST** / heartbeat: **—** / lease expiry: **09-24 13:27:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0a4a1c707b0687af.json`
 - `arXiv:2402.12374` — Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
+  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
   - evidence: `.survey/work-queue/claims/job-research-0f8cc0c93811431b.json`
-- `arXiv:2406.02500` — Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **—** / lease expiry: **09-24 11:59:50 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0fd0f07b72fe524f.json`
 
 #### Audit
 
@@ -218,7 +193,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **165** |
+| ready | **264** |
 
 ### 候補の重複・識別情報欠損
 
@@ -246,11 +221,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **284** |
+| 成功result未照合のimmutable submission | **308** |
 | └ Research | **199** |
 | └ Audit | **2** |
 | └ Discovery | **70** |
-| └ Other/Unknown | **13** |
+| └ Other/Unknown | **37** |
 
 ### 厳格検証が未成立のcompleted job
 
