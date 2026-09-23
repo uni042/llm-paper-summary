@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:21:07+00:00",
+  "updated_at": "2026-09-23T16:25:00+00:00",
   "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
-  "last_round": "20260924T0101JST-scheduled-chat-00-backward-r1",
+  "last_round": "20260924T0125JST-scheduled-chat-00-forward-r2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,21 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-power-aware-7",
-      "axis": "GPU power cap・DVFS・serverless energy-aware scheduling",
-      "query_summary": "ネットワーク軸は直前runでNetKV等を既に探索していたため反復せず、電力・エネルギーをfirst-class resourceにするserving runtimeへ切り替えた。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 2,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "reasoning workloadのphase/tail-aware schedulingへ移す",
-      "source_submission": "work-queue/submissions/20260916T2030JST-discovery-specialist-power-aware-7.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-tail-reasoning-8",
@@ -8387,6 +8372,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T0125JST-scheduled-chat-00-forward-r2",
+      "precheck_request_id": "20260924T0125JST-scheduled-chat-00-forward-r2",
+      "run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "round": "20260924T0125JST-scheduled-chat-00-forward-r2",
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "query_summary": "Fixed forward-citation window for FlexGen, adopted from the canonical preload and re-filtered against the current identity snapshot.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2303.06865",
+      "preload_id": "preload-3471bf18c51da137fa4a",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 13,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "DOI:10.1109/ISCAS66217.2026.11562764",
+        "arXiv:2606.09508",
+        "arXiv:2606.17081",
+        "arXiv:2605.22106",
+        "DOI:10.1109/LES.2025.3616900"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T0127JST-scheduled-chat-00-forward-r2.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T0127JST-scheduled-chat-00-forward-r2.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 7,
+      "post_final_dedupe_count": 7,
+      "duplicate_ratio": 0.65,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16173,15 +16198,15 @@
       "next_axis_hint": null
     },
     "forward citations of FlexGen offload and hierarchical-memory LLM inference": {
-      "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
-      "rounds": 5,
-      "candidate_count": 85,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 85,
+      "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "rounds": 6,
+      "candidate_count": 105,
+      "duplicate_filtered_count": 13,
+      "novel_candidate_count": 92,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 85,
-      "accepted_count": 35,
-      "duplicate_ratio": 0.0,
+      "post_final_dedupe_count": 92,
+      "accepted_count": 40,
+      "duplicate_ratio": 0.12380952380952381,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
@@ -17191,6 +17216,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
       "last_round": "20260923T233115JST-scheduled-chat-30-fwd-r5"
+    },
+    "window-2fdd5e76ae4e3c44f13b": {
+      "topic": "*",
+      "source": "*",
+      "date_range": "*",
+      "category": "*",
+      "citation_direction": "forward",
+      "query_family": "*",
+      "search_window_key": "window-2fdd5e76ae4e3c44f13b",
+      "scan_count": 1,
+      "raw_result_count": 0,
+      "unseen_result_count": 0,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 0,
+      "candidate_accepted_count": 0,
+      "last_position": null,
+      "unseen_rate": 0.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.0,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "last_round": "20260924T0125JST-scheduled-chat-00-forward-r2"
     }
   },
   "recent_search_windows": [
@@ -18180,6 +18228,27 @@
       "duplicate_rate": 0.0,
       "candidate_acceptance_rate": 0.0,
       "last_position": "offset-0"
+    },
+    {
+      "topic": "*",
+      "source": "*",
+      "date_range": "*",
+      "category": "*",
+      "citation_direction": "forward",
+      "query_family": "*",
+      "search_window_key": "window-2fdd5e76ae4e3c44f13b",
+      "run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "round": "20260924T0125JST-scheduled-chat-00-forward-r2",
+      "raw_result_count": 0,
+      "unseen_result_count": 0,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 0,
+      "candidate_accepted_count": 0,
+      "unseen_rate": 0.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.0,
+      "last_position": null
     }
   ],
   "search_window_history_limit": 96,
