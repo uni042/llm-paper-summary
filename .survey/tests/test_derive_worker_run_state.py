@@ -310,6 +310,73 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertTrue(result["submission_result_pending"])
             self.assertIn("attempt-orphan", result["pending_attempt_ids"])
 
+    def test_cached_active_assignment_is_cleared_when_job_is_terminal(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 60, "claimable": 60}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/jobs/job-terminal.json",
+                {"job_id": "job-terminal", "type": "research", "status": "blocked"},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/run-state/cache/scheduled-chat-00.json",
+                {
+                    "schema_version": 1,
+                    "worker_id": "scheduled-chat-00",
+                    "generation": 1,
+                    "fact_generation": 0,
+                    "runs": {
+                        "run-1": {
+                            "worker_id": "scheduled-chat-00",
+                            "run_key": "run-1",
+                            "scheduled_slot": "00",
+                            "actual_invocation_start": value["actual_invocation_start"],
+                            "cache_valid": True,
+                            "candidate_inventory": 60,
+                            "work_mode": "research",
+                            "claims": {
+                                "claim_state_checked": True,
+                                "claim_result_pending": False,
+                                "pending_claim_request_ids": [],
+                                "pending_claim_request_ages_seconds": {},
+                                "pending_claim_requested_at": {},
+                                "claim_result_pending_age_seconds": 0,
+                                "claim_monitor_window_seconds": 60,
+                                "active_assignment": True,
+                                "active_job_ids": ["job-terminal"],
+                            },
+                            "submission": {
+                                "research_audit_completed_this_invocation": 0,
+                                "submission_state_checked": True,
+                                "submission_result_pending": False,
+                                "pipeline_ahead_count": 0,
+                                "last_terminal_job_status": "blocked",
+                                "submitted_attempt_ids": [],
+                                "pending_attempt_ids": [],
+                                "completed_attempt_ids": [],
+                                "retryable_attempt_ids": [],
+                                "repair_required_attempt_ids": [],
+                            },
+                            "attempts": {},
+                            "generation": 1,
+                        }
+                    },
+                },
+            )
+            result = mod.derive(root, value)
+            self.assertEqual(result["run_state_source"], "incremental_cache")
+            self.assertFalse(result["active_assignment"])
+            self.assertEqual(result["active_job_ids"], [])
+            self.assertEqual(result["gate"]["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+
     def test_request_rejects_cross_worker_slot(self):
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "snap-1.json"
