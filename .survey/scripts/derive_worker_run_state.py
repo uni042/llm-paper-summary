@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Any
 
 import claim_state
+import claim_window_policy
 import continuation_gate
 import select_discovery_direction
 import worker_identity
@@ -28,7 +29,7 @@ import worker_run_state_cache as run_state_cache
 REQUESTS = Path(".survey/work-queue/run-state/requests")
 RESULTS = Path(".survey/work-queue/run-state/results")
 READ_COUNT = 0
-SCHEDULED_CHAT_CLAIM_WINDOW = 4
+SCHEDULED_CHAT_CLAIM_WINDOW = claim_window_policy.DEFAULT_CLAIM_WINDOW
 
 RUNTIME_CONDITIONS = {
     "none",
@@ -430,6 +431,7 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         "active_job_ids": active_job_ids,
         "active_claim_count": active_claim_count,
         "claim_window": SCHEDULED_CHAT_CLAIM_WINDOW,
+        "claim_refill_threshold": claim_window_policy.refill_threshold(SCHEDULED_CHAT_CLAIM_WINDOW),
         "claim_window_remaining": max(SCHEDULED_CHAT_CLAIM_WINDOW - active_claim_count, 0),
         "foreground_job_id": active_job_ids[0] if active_job_ids else None,
         "standby_job_ids": active_job_ids[1:],
@@ -461,6 +463,7 @@ def _refresh_cached_claim_state(root: Path, value: dict[str, Any]) -> dict[str, 
     claims["active_assignment"] = bool(active_jobs)
     claims["active_claim_count"] = len(active_jobs)
     claims["claim_window"] = claim_window
+    claims["claim_refill_threshold"] = claim_window_policy.refill_threshold(claim_window)
     claims["claim_window_remaining"] = max(claim_window - len(active_jobs), 0)
     claims["foreground_job_id"] = active_jobs[0] if active_jobs else None
     claims["standby_job_ids"] = active_jobs[1:]
@@ -707,6 +710,12 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         active_assignment=claims["active_assignment"],
         active_claim_count=claims.get("active_claim_count", 0),
         claim_window=claims.get("claim_window", SCHEDULED_CHAT_CLAIM_WINDOW),
+        claim_refill_threshold=claims.get(
+            "claim_refill_threshold",
+            claim_window_policy.refill_threshold(
+                int(claims.get("claim_window") or SCHEDULED_CHAT_CLAIM_WINDOW)
+            ),
+        ),
         claim_window_remaining=claims.get("claim_window_remaining", SCHEDULED_CHAT_CLAIM_WINDOW),
         spillover_work=False,
         can_discover=work_mode == "discovery" and bool(selector.get("next_direction")),
@@ -803,7 +812,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "Use this durable derived snapshot instead of manually inventing continuation-gate booleans. "
             "The first successful snapshot for run_key freezes candidate_inventory/work_mode. "
             "Active same-worker claims from a previous invocation are resumed rather than hidden by the new start time; "
-            "Research/Audit uses a four-claim window: the oldest active claim is foreground and up to three later active claims are standby; "
+            f"Research/Audit uses a configurable claim window (default {SCHEDULED_CHAT_CLAIM_WINDOW}): the oldest active claim is foreground and later active claims are standby; "
             "only terminal results processed during this invocation count toward its completion quota. "
             "New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. "
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
