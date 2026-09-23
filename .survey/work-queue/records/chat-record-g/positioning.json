@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-df98f0a4232c714053b0bc18",
-  "job_id": "job-research-37a03b603cf5e34b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-df98f0a4232c714053b0bc18",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-df98f0a4232c714053b0bc18","job_id":"job-research-37a03b603cf5e34b","data":{"limitations":"主な絶対値は施設の閉源GPUドライバを使うH100クラスタで得られ、公開GPUカーネルモジュールや別NICでは探査遅延が変わり得る。モデルは小問い合わせで固定起動費を完全には表さず、A40の大きな問い合わせ束では第二の待ち行列律速により誤差が増える。主具体化はDeepSeek-V2-Liteの多頭潜在注意であり、他アーキテクチャへは問い合わせpayloadとキャッシュ取得費用の再測定が必要。多保持側への同時要求が一つの保持装置や線路へ集中する本格的な配信スケジューリングは今後の課題である。","differences":"既存の分散鍵値キャッシュはキャッシュを要求元へ移すことを基本とするが、本研究は潜在注意・疎注意による問い合わせとキャッシュの大きさ逆転を利用して計算をキャッシュ側へ移す。単なる遠隔注意実装ではなく、route/fetch/localを同じ閉形式費用で比較し、経路の最大帯域ではなく小転送探査、位置再適応、局所再計算を含む。疎選択時にはキャッシュ収集が保持側数とともに悪化する一方、問い合わせfan-outと部分結果mergeが小さいことも実測で示す。","implementation_status":"実機H100複数ノード上で装置起点遠隔直接メモリアクセス、NVSHMEM、保持側注意、部分結果返送を測定したcharacterization研究。論文はACM向け原稿形式のarXiv v1で、独立した公開配信基盤としての実装公開は本文から確認できない。","research_positioning":"階層メモリ型の鍵値キャッシュ退避研究が『どこにキャッシュを置くか』を扱うのに対し、本研究はキャッシュを動かさず『問い合わせ計算をどこへ送るか』を扱う。多頭潜在注意や疎注意で一回の問い合わせpayloadが小さくなるほど有利になり、共通巨大文書を複数装置へ分割するエージェント型配信で特に関連する。\n\nシステム研究上は、帯域中心の配置判断から、探査・転送・保持側計算・返送・統合・位置再適応を含む端から端までの費用判断への転換を示す。圧縮キャッシュや疎選択が進む将来モデルでは、データを計算側へ寄せる従来の原則が逆転し得るため、分散注意、キャッシュ配置、装置間通信を共同設計する基礎的な測定結果として位置付けられる。"},"reservation":{"claim_id":"claim-df98f0a4232c714053b0bc18","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
