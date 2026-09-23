@@ -20,6 +20,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
+import worker_identity
+
 QUEUE_ROOT = Path(".survey/work-queue/discovery-preload")
 ENTRIES = QUEUE_ROOT / "entries"
 CLAIMS = QUEUE_ROOT / "claims"
@@ -484,6 +486,8 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
         raise ValueError("preload_id is required")
     if not worker_id:
         raise ValueError("worker_id is required when adopting a Discovery preload")
+    if not worker_identity.is_supported_worker_id(worker_id):
+        raise ValueError("worker_id must be scheduled-chat-00, scheduled-chat-30, or worker-N")
     if not run_key or run_key.startswith("preload:"):
         raise ValueError("a real run_key is required when adopting a Discovery preload")
     entry_path = root / ENTRIES / f"{preload_id}.json"
