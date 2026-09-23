@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T04:24:02.240906+00:00",
+  "updated_at": "2026-09-23T04:28:49.658168+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -41548,6 +41548,56 @@
           "type": "research",
           "canonical_id": "arXiv:2602.02443",
           "title": "Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 971,
+      "paper_active_count_after": 971,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35818475290",
+      "first_recorded_at": "2026-09-23T04:28:49.658168+00:00",
+      "last_recorded_at": "2026-09-23T04:28:49.658168+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35818475290:1",
+          "recorded_at": "2026-09-23T04:28:49.658168+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35818475290",
+            "run_attempt": "1",
+            "source_sha": "eb364a512e0a1129244135ec581ea12431d05085"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-81939bee41b7da9c",
+          "type": "research",
+          "canonical_id": "arXiv:2608.01784",
+          "title": "REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models",
           "from": "ready",
           "to": "completed"
         }
