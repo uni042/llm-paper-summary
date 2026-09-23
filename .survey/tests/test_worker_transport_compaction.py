@@ -130,6 +130,38 @@ class WorkerTransportCompactionTests(unittest.TestCase):
             self.assertTrue((root / ".survey/work-queue/archive/transport/run-state/results/old.json").is_file())
             self.assertTrue((root / ".survey/work-queue/run-state/results/latest.json").is_file())
 
+    def test_old_auto_run_state_archives_but_latest_auto_snapshot_stays_hot(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            old = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=3)).isoformat()
+            for name, generation in (("auto-old", 1), ("auto-latest", 2)):
+                write_json(
+                    root,
+                    f".survey/work-queue/run-state/results/{name}.json",
+                    {
+                        "request_id": name,
+                        "run_key": "run-auto",
+                        "worker_id": "scheduled-chat-00",
+                        "scheduled_slot": "00",
+                        "actual_invocation_start": old,
+                        "ok": True,
+                        "auto_generated": True,
+                        "snapshot_generation": generation,
+                        "processed_at": old,
+                    },
+                )
+            write_json(
+                root,
+                ".survey/work-queue/run-state/latest/scheduled-chat-00.json",
+                {
+                    "result_path": ".survey/work-queue/run-state/results/auto-latest.json",
+                },
+            )
+            mod.compact(root, apply=True, min_age_seconds=0)
+            self.assertFalse((root / ".survey/work-queue/run-state/results/auto-old.json").exists())
+            self.assertTrue((root / ".survey/work-queue/archive/transport/run-state/results/auto-old.json").is_file())
+            self.assertTrue((root / ".survey/work-queue/run-state/results/auto-latest.json").is_file())
+
     def test_claim_transport_requires_every_assignment_terminal(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
