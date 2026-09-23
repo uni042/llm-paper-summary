@@ -696,6 +696,9 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
                     next_missing_order += 1
                 claim["expires_at"] = new_expiry
                 claim["heartbeat_at"] = _iso(now)
+                if str(claim.get("stock_bank") or "").lower() not in shared_preload_pool.BANK_ROOTS:
+                    claim["stock_bank"] = shared_preload_pool.fallback_stock_bank(job_id)
+                    claim["stock_lane"] = "research"
                 _write(claims_root / f"{job_id}.json", claim)
                 claims[job_id] = dict(claim, active=True, expired=False)
                 resumed.append(_assignment(by_id[job_id], claim))
@@ -784,6 +787,8 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
             }
             if request["worker_kind"] == "scheduled_chat":
                 claim["pipeline_order"] = next_pipeline_order + offset
+                claim["stock_bank"] = shared_preload_pool.fallback_stock_bank(job_id)
+                claim["stock_lane"] = "research"
             if previous and previous.get("claim_id") != claim_id:
                 claim["previous_claim_id"] = previous.get("claim_id")
             _write(claims_root / f"{job_id}.json", claim)
