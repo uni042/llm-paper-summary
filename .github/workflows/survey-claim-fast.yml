@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/claim-requests/*.json'
+      - '.survey/work-queue/direct-takes/research/*.json'
+      - '.survey/scripts/hot_dispatch.py'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
@@ -32,7 +34,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Allocate claims through the shared fast path
+      - name: Reconcile direct takes and allocate claims through the shared fast path
         shell: bash
         run: |
           set -euo pipefail
@@ -51,7 +53,10 @@ jobs:
               .survey/work-queue/claims \
               .survey/work-queue/claim-results \
               .survey/work-queue/records \
-              .survey/work-queue/run-state
+              .survey/work-queue/run-state \
+              .survey/work-queue/direct-takes \
+              .survey/work-queue/direct-take-results \
+              .survey/work-queue/hot-dispatch.json
 
             if git diff --cached --quiet; then
               echo 'Claim state already settled.'
