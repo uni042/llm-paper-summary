@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-ffa0b1baa60976c86cf81af0","job_id":"job-research-1330e1d7068cf379","data":{"canonical_id":"arXiv:2605.08738","arxiv_id":"2605.08738","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI","cs.CL"]},"title":"SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training","summary":"SlimQwenは大規模MoEの事前学習規模圧縮を、深さ・幅・専門家の構造化剪定、専門家統合、知識蒸留、段階的圧縮まで系統比較した研究である。Qwen3-Next系80A3Bを基に、剪定初期化は同一予算のゼロ初期化より平均11.79点高く、400B tokenの継続事前学習後は一回限りの専門家剪定・統合法の差が小さくなることを示す。重要専門家の半分をそのまま残す部分保存統合、言語モデル損失を混ぜた蒸留、多トークン予測蒸留、二段階の段階的剪定を組み合わせ、最終的に23A2Bへ約4倍圧縮する。","list_summary":"Qwen3-Next 80A3Bを深さ・幅・専門家の段階的剪定と多トークン蒸留で23A2Bへ約4倍圧縮し、剪定初期化と段階的圧縮の優位性を示す。","authors":["Shengkun Tang","Zekun Wang","Bo Zheng","Liangyu Wang","Rui Men","Siqi Zhang","Xiulong Yuan","Zihan Qiu","Zhiqiang Shen","Dayiheng Liu"],"authors_affiliations":"Qwen Team, Alibaba Inc.; MBZUAI; KAUST","published":"2026-05-09","publication":"arXiv:2605.08738v2","publication_type":"プレプリント","publication_status":"arXiv v2 (2026-05-18)","lineage":"MoE compression / structured pruning / expert merging / knowledge distillation / Qwen3-Next","topics":["MoE圧縮","構造化剪定","専門家統合","知識蒸留","段階的剪定"],"importance":"大規模継続事前学習まで含めると一回限りのexpert選択基準差が縮むこと、剪定済み重みと段階的圧縮が強いことを示し、MoE圧縮の実務的recipeを整理する。","implementation":"Maestro training frameworkを用い、Qwen3-Next系80A3Bから23A2Bを構築。","hardware_evaluation":"本文でモデル・token budget・batch sizeは明示されるが、主要節では具体的GPU構成は確認できない。","quality_effect":"23A2Bへの圧縮後もMMLU等で競争力を維持し、剪定初期化+KDは120B token後平均73.45でゼロ初期化61.66を大きく上回る。","source":"https://arxiv.org/abs/2605.08738","sources":["https://arxiv.org/abs/2605.08738","https://arxiv.org/html/2605.08738v2"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"arXiv v2 full text","references_total":0},"reservation":{"claim_id":"claim-ffa0b1baa60976c86cf81af0","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
+  "job_id": "job-research-61e38612a8457ae4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0640a4e19fcd3a04140f52b1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

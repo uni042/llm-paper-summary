@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-ffa0b1baa60976c86cf81af0","job_id":"job-research-1330e1d7068cf379","data":{"hardware":"本文主要実験節では具体的GPU型・台数は明示されない。Maestro training framework上で大規模継続事前学習を実施。","software":"Qwen3-Next型hybrid MoEを基盤とし、Maestro training frameworkを使用。teacherは80A3B、targetは主に23A2B。","methodology":"80A3Bは48 blocks（12 full attention、36 linear attention）、hidden 2048、各MoE 512 experts、token当たり10 routed+1 sharedを持つ。targetでは12層削除、hidden 1536、256 experts、8 routed+1 sharedへ圧縮する。calibrationは1024 samples。120B token実験はglobal batch 512、400B token実験は1024。peak LR 4e-4→3e-5 cosine、warmup 2000、KD λは1→0.75、MTP βは0.3→0.1。MMLU/MMLU-Pro/MMLU-Redux/BBH/GSM8K/EvalPlus/C-Eval/CMMLU等をfew-shot評価し、scratch対pruned初期化、expert compression、loss、progressive scheduleを分離比較する。","scope":"主要比較は120Bまたは400B tokenの継続事前学習を含み、one-shot直後だけでなく長期回復後の差を測る。最終モデルはQwen3-Next 80A3Bから23A2Bへの約4倍圧縮。評価は一般知識、推論、数学、coding、中国語に加え、MTP speculative decoding acceptanceも含む。"},"reservation":{"claim_id":"claim-ffa0b1baa60976c86cf81af0","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
+  "job_id": "job-research-61e38612a8457ae4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0640a4e19fcd3a04140f52b1",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
