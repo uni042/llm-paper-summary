@@ -307,6 +307,34 @@ class IncrementalRunStateTests(unittest.TestCase):
             latest = json.loads((root / ".survey/work-queue/run-state/latest/scheduled-chat-00.json").read_text(encoding="utf-8"))
             self.assertEqual(latest["result_path"], result_path.relative_to(root).as_posix())
 
+    def test_latest_pointer_never_rolls_back_snapshot_generation(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            start = dt.datetime.now(dt.timezone.utc).isoformat()
+            newer_path = write_json(root, ".survey/work-queue/run-state/results/newer.json", {})
+            newer = {
+                "worker_id": "scheduled-chat-00",
+                "run_key": "run-same",
+                "scheduled_slot": "00",
+                "actual_invocation_start": start,
+                "request_id": "newer",
+                "snapshot_generation": 5,
+                "processed_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+            }
+            cache.write_latest_pointer(root, newer_path, newer)
+
+            older_path = write_json(root, ".survey/work-queue/run-state/results/older.json", {})
+            older = dict(newer)
+            older["request_id"] = "older"
+            older["snapshot_generation"] = 4
+            self.assertFalse(cache.write_latest_pointer(root, older_path, older))
+
+            pointer = json.loads(
+                (root / ".survey/work-queue/run-state/latest/scheduled-chat-00.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(pointer["request_id"], "newer")
+            self.assertEqual(pointer["snapshot_generation"], 5)
+
     def test_fact_clock_mismatch_forces_canonical_rebuild(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
