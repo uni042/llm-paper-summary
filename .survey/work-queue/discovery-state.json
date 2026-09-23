@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:55:08+00:00",
-  "last_run_key": "adhoc-20260924T014100JST-worker-915241",
-  "last_round": "20260924T014100JST-worker-915241-forward-r3",
+  "updated_at": "2026-09-23T16:56:16+00:00",
+  "last_run_key": "adhoc-20260924T014906JST-worker-915242",
+  "last_round": "adhoc-20260924T014906JST-worker-915242-forward-take-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,25 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-exhaust-moe-13",
-      "axis": "MoE expert offload・cache・prefetch再スイープ",
-      "query_summary": "CPU/GPU expert offload、NPU execution、cacheless edge、predictive prefetchを再確認したが、DALI、NPUMoE、OD-MoE等は既知で追加の強候補は得られなかった。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2602.03495",
-        "arXiv:2604.18788",
-        "arXiv:2512.03927"
-      ],
-      "next_axis_hint": "serving scheduling/disaggregationの新着を最終再スイープする",
-      "source_submission": "work-queue/submissions/20260916T2050JST-discovery-specialist-exhaust-moe-13.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-exhaust-serving-14",
@@ -8525,6 +8506,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:adhoc-20260924T014906JST-worker-915242-forward-take-2",
+      "precheck_request_id": "adhoc-20260924T014906JST-worker-915242-forward-take-2",
+      "run_key": "adhoc-20260924T014906JST-worker-915242",
+      "round": "adhoc-20260924T014906JST-worker-915242-forward-take-2",
+      "axis": "forward citations of Sequoia hardware-aware speculative decoding",
+      "query_summary": "Forward citations of Sequoia from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.12374/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2402.12374",
+      "preload_id": "preload-6a4bc72496b9e709541a",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2609.23900",
+        "arXiv:2607.27269",
+        "arXiv:2606.12243",
+        "DOI:10.1109/IWQoS70441.2026.11661225",
+        "DOI:10.1109/INFOCOM59046.2026.11571388"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014906JST-worker-915242-forward-r2-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014906JST-worker-915242-forward-r2-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16194,14 +16215,14 @@
       "next_axis_hint": null
     },
     "forward citations of Sequoia hardware-aware speculative decoding": {
-      "last_run_key": "2026-09-21T06:58:37+09:00",
-      "rounds": 1,
-      "candidate_count": 5,
+      "last_run_key": "adhoc-20260924T014906JST-worker-915242",
+      "rounds": 2,
+      "candidate_count": 25,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
+      "novel_candidate_count": 25,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
+      "post_final_dedupe_count": 25,
+      "accepted_count": 10,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
