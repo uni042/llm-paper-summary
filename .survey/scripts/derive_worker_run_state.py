@@ -395,6 +395,10 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         request_id: max(int((now - requested).total_seconds()), 0)
         for requested, request_id in pending_requests
     }
+    pending_request_times = {
+        request_id: requested.astimezone(dt.timezone.utc).isoformat()
+        for requested, request_id in pending_requests
+    }
     pending_request_ids = [request_id for _, request_id in sorted(pending_requests)]
     oldest_pending_age = max(pending_request_ages.values(), default=0)
 
@@ -418,11 +422,33 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         "claim_result_pending": bool(pending_requests),
         "pending_claim_request_ids": pending_request_ids,
         "pending_claim_request_ages_seconds": pending_request_ages,
+        "pending_claim_requested_at": pending_request_times,
         "claim_result_pending_age_seconds": oldest_pending_age,
         "claim_monitor_window_seconds": 60,
         "active_assignment": bool(active),
         "active_job_ids": sorted(active),
     }
+
+
+def _refresh_cached_claim_state(value: dict[str, Any]) -> dict[str, Any] | None:
+    claims = dict(value)
+    if claims.get("claim_result_pending") is not True:
+        return claims
+    requested = claims.get("pending_claim_requested_at")
+    if not isinstance(requested, dict):
+        return None
+    now = dt.datetime.now(dt.timezone.utc)
+    ages: dict[str, int] = {}
+    for request_id, raw in requested.items():
+        when = _time(raw)
+        if when is None:
+            return None
+        ages[str(request_id)] = max(int((now - when).total_seconds()), 0)
+    claims["pending_claim_request_ages_seconds"] = ages
+    claims["claim_result_pending_age_seconds"] = max(ages.values(), default=0)
+    claims["claim_result_pending"] = bool(ages)
+    claims["pending_claim_request_ids"] = sorted(ages)
+    return claims
 
 
 def _discovery_rounds(root: Path, run_key: str) -> tuple[int, dict[str, Any]]:
@@ -555,13 +581,19 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     assert started_at is not None
 
     cached = None if force_canonical else run_state_cache.get_run(root, request)
+    cached_claims = (
+        _refresh_cached_claim_state(cached.get("claims", {}))
+        if isinstance(cached, dict)
+        else None
+    )
+    if cached is not None and cached_claims is None:
+        cached = None
     cache_hit = cached is not None
     if cached is not None:
         inventory = int(cached["candidate_inventory"])
         work_mode = str(cached["work_mode"])
         submission = dict(cached["submission"])
-        claims = _claim_state(root, request["worker_id"], started_at)
-        run_state_cache.update_claims(root, request, claims)
+        claims = cached_claims or {}
     else:
         frozen = _frozen_route(root, request["run_key"])
         if request["scheduled_slot"] == "0830":
@@ -792,12 +824,45 @@ def _descriptor_paths(path: Path) -> list[Path]:
 def auto_snapshot_from_descriptors(root: Path, descriptors_file: Path) -> dict[str, Any]:
     root = root.resolve()
     paths = _descriptor_paths(descriptors_file)
-    touched = run_state_cache.observe_descriptors(root, paths)
-    generated: list[str] = []
+    cached_paths: list[Path] = []
+    expected_runs: dict[tuple[str, str], dict[str, Any]] = {}
     fallback_required: list[str] = []
+
+    for raw_path in paths:
+        path = raw_path if raw_path.is_absolute() else root / raw_path
+        descriptor = _read(path, {})
+        if not isinstance(descriptor, dict):
+            continue
+        identity = run_state_cache._descriptor_identity(descriptor)
+        if identity is None:
+            continue
+        request = {
+            "schema_version": 1,
+            "request_id": "auto-pending",
+            "run_key": identity["run_key"],
+            "worker_id": identity["worker_id"],
+            "worker_kind": "scheduled_chat",
+            "scheduled_slot": identity["scheduled_slot"],
+            "actual_invocation_start": identity["actual_invocation_start"],
+            "runtime_condition": "none",
+            "runtime_condition_confirmed": False,
+            "runtime_condition_attempts": 0,
+            "runtime_condition_detail": "",
+        }
+        key = (identity["worker_id"], identity["run_key"])
+        expected_runs[key] = request
+        if run_state_cache.get_run(root, request) is None:
+            fallback_required.append(f"{identity['worker_id']}:{identity['run_key']}")
+            continue
+        cached_paths.append(path.relative_to(root))
+
+    touched = run_state_cache.observe_descriptors(root, cached_paths)
+    generated: list[str] = []
     for worker_id, run_keys in sorted(touched.items()):
         for run_key in run_keys:
-            request = run_state_cache.cached_request(root, worker_id, run_key)
+            request = expected_runs.get((worker_id, run_key))
+            if request is None:
+                request = run_state_cache.cached_request(root, worker_id, run_key)
             if request is None:
                 fallback_required.append(f"{worker_id}:{run_key}")
                 continue
@@ -819,6 +884,16 @@ def auto_snapshot_from_descriptors(root: Path, descriptors_file: Path) -> dict[s
         "fallback_required": sorted(set(fallback_required)),
     }
 
+
+def apply_claim_result_deltas(root: Path, results_file: Path) -> dict[str, Any]:
+    root = root.resolve()
+    paths = _descriptor_paths(results_file)
+    touched = run_state_cache.observe_claim_results(root, paths)
+    return {
+        "observed_claim_results": len(paths),
+        "touched_runs": sum(len(items) for items in touched.values()),
+        "workers": touched,
+    }
 
 def rebuild_caches(root: Path) -> dict[str, Any]:
     root = root.resolve()
@@ -883,10 +958,13 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--auto-from-descriptors-file", type=Path)
+    parser.add_argument("--claim-results-file", type=Path)
     parser.add_argument("--rebuild-cache", action="store_true")
     args = parser.parse_args()
     if args.auto_from_descriptors_file is not None:
         result = auto_snapshot_from_descriptors(args.repo_root, args.auto_from_descriptors_file)
+    elif args.claim_results_file is not None:
+        result = apply_claim_result_deltas(args.repo_root, args.claim_results_file)
     elif args.rebuild_cache:
         result = rebuild_caches(args.repo_root)
     else:
