@@ -40,7 +40,9 @@ class ContinuationGateWaitPolicyTests(unittest.TestCase):
         result = mod.decide(args)
         self.assertEqual(result["decision"], "CONTINUE")
         self.assertEqual(result["claim_wait_seconds"], 0)
-        self.assertTrue(result["productive_wait_required"])\n        self.assertFalse(result["productive_wait_polling"])\n        self.assertIn("run_one_wait_microtask", result["claim_wait_action"])
+        self.assertTrue(result["productive_wait_required"])
+        self.assertFalse(result["productive_wait_polling"])
+        self.assertIn("run_one_wait_microtask", result["claim_wait_action"])
         self.assertIn("repeat_until_result_or_terminal_hard_stop", result["claim_wait_action"])
 
 
