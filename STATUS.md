@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 07:24:48 JST**
+> 自動生成: **2026-09-24 08:00:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **282** |
-| 未claim Research job | **138** |
-| 直近24hの検証済みResearch収録 | **47** |
-| 最終検証済みResearch収録 | **09-23 22:05:03 JST（9時間19分前）** |
+| 収録候補論文 | **298** |
+| 未claim Research job | **154** |
+| 直近24hの検証済みResearch収録 | **42** |
+| 最終検証済みResearch収録 | **09-23 22:05:03 JST（9時間55分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **282** |
+| canonical_id確認済みの一意な候補論文 | **298** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **282** |
+| 非終端Research job合計 | **298** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（22時間53分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（23時間29分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -130,36 +130,36 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
-- `arXiv:2601.08833` — Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0023a21511f803e1.json`
-- `DOI:10.1109/IMNS67862.2026.11655252` — Characterizing Predictability–Latency Trade-offs of KV-Cache SSD Offloading in LMCache for LLM Serving Systems / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0058e5cacea33a16.json`
-- `arXiv:2607.29076` — Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-031cf8d3601d8c3a.json`
-- `arXiv:2211.10438` — SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-05c9fecf1a5510e9.json`
-- `arXiv:2405.00263` — Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-05f57bc36c570458.json`
-- `arXiv:2609.23816` — SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0729262d447a8308.json`
-- `arXiv:2502.13189` — MoBA: Mixture of Block Attention for Long-Context LLMs / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-09d154c9daf0b638.json`
-- `arXiv:2604.16400` — CoLLM: Continuous Adaptation for SLO-Aware LLM Serving on Shared GPU Clusters / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0a2c1791c2461b69.json`
-- `arXiv:2606.17081` — The Price of Anarchy in Disaggregated Inference / worker `shared-preload-pool`
-  - claim: **09-24 01:27:03 JST** / heartbeat: **—** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0a4a1c707b0687af.json`
-- `arXiv:2402.12374` — Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 01:27:03 JST** / lease expiry: **09-24 13:27:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0f8cc0c93811431b.json`
+- `arXiv:2603.10087` — Pooling Engram Conditional Memory in Large Language Models using CXL / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1e9597cecaf6ec3b.json`
+- `arXiv:2112.05682` — Self-attention Does Not Need O(n²) Memory / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3c41560bf93206f5.json`
+- `DOI:10.1109/ICEIC69189.2026.11386441` — Toward Efficient Deployment of Mixture of Experts Models: Quantization and Compression Analysis / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3ccfe94f6e9f9715.json`
+- `arXiv:2602.06154` — MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-441084dd13b83186.json`
+- `arXiv:2407.15891` — RazorAttention: Efficient KV Cache Compression Through Retrieval Heads / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8336bf916cc1d939.json`
+- `arXiv:2608.24664` — Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-898c6226a202425e.json`
+- `DOI:10.18653/v1/2025.emnlp-main.366` — SpecVLM: Enhancing Speculative Decoding of Video LLMs via Verifier-Guided Token Pruning / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-97bdea5134064ed3.json`
+- `DOI:10.36227/techrxiv.177205041.14536362/v1` — Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-98fce5e6481e51fa.json`
+- `arXiv:2604.26334` — Efficient, VRAM-Constrained xLM Inference on Clients / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9ac6b8b0fe0cfe37.json`
+- `DOI:10.1016/j.neucom.2026.134973` — Load balancing for large language model inference serving: A control and learning oriented survey / worker `worker-45`
+  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ca4192f3e116d4ad.json`
 
 #### Audit
 
@@ -179,7 +179,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **282** |
+| ready | **298** |
 
 ### 候補の重複・識別情報欠損
 
@@ -207,11 +207,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **324** |
+| 成功result未照合のimmutable submission | **332** |
 | └ Research | **199** |
 | └ Audit | **2** |
 | └ Discovery | **72** |
-| └ Other/Unknown | **51** |
+| └ Other/Unknown | **59** |
 
 ### 厳格検証が未成立のcompleted job
 
