@@ -157,8 +157,12 @@ def _run_attempts(root: Path, worker_id: str, started_at: dt.datetime) -> dict[s
     # same-worker attempt whose terminal result was produced during this invocation.
     all_worker_attempts: dict[str, dt.datetime] = {}
     attempts: dict[str, dt.datetime] = {}
-    result_root = root / ".survey/work-queue/claim-results"
-    if result_root.is_dir():
+    for result_root in (
+        root / ".survey/work-queue/claim-results",
+        root / ".survey/work-queue/archive/transport/claim-results",
+    ):
+        if not result_root.is_dir():
+            continue
         for path in result_root.glob("*.json"):
             value = _read(path, {})
             if not isinstance(value, dict) or value.get("worker_id") != worker_id:
