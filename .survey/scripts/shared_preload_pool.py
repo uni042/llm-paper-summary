@@ -3,9 +3,10 @@
 
 The pool is worker-agnostic. It owns ready jobs only until a real Scheduled Chat
 request atomically adopts the oldest eligible entries. The global inventory target
-counts both waiting pool claims and already-adopted Scheduled Chat claims, so a
-target of 24 means six four-claim worker windows in total rather than 24 waiting
-claims plus worker-local claims.
+counts both waiting pool claims and already-adopted Scheduled Chat claims. The
+target is derived from the configured record-bank count while retaining proportional
+repair/exception headroom, so increasing the bank registry scales preload capacity
+without changing this module.
 
 All mutation happens inside the existing claim fast path. GitHub Actions serializes
 that path with the survey-claim-main concurrency group, and push-race retries rerun
@@ -21,10 +22,12 @@ from pathlib import Path
 from typing import Any
 
 import claim_state
+import claim_window_policy
+from record_bank_config import BANK_ROOTS
 
 POOL_WORKER_ID = "shared-preload-pool"
 POOL_WORKER_KIND = "work"
-POOL_TARGET = 24
+POOL_TARGET = claim_window_policy.shared_pool_target(len(BANK_ROOTS))
 POOL_LEASE_SECONDS = 43200
 POOL_RENEW_BEFORE_SECONDS = 21600
 CLAIM_TYPES = {"research", "audit"}
