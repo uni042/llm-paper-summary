@@ -251,13 +251,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             decision = "CONTINUE"
             required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
             finalization_allowed = False
-        elif status_only_terminal or research_audit_completed_this_invocation < research_minimum_completions:
+        else:
+            # The three-completion quota is a floor, never a stop cap. If this
+            # Research/Audit run is outside the no-new-work window and claimable
+            # independent work exists, make the next paper claim explicit.
             decision = "CONTINUE"
             required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
-            finalization_allowed = False
-        else:
-            decision = "CONTINUE"
-            required_action = "CONTINUE_WORK"
             finalization_allowed = False
 
     # Reasons added by the 600-second start-prohibition branch are canonical hard
@@ -497,9 +496,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
             "Discovery's four-round floor counts successful canonical precheck rounds in this invocation; "
             "multiple submissions derived from one precheck count as one round only after every declared split submission is durably successful. "
-            "Research/Audit exposes the combined three-completion quota state. After a terminal "
-            "blocked/deferred/rejected result, or whenever the three-completion floor is still unmet, "
-            "the required action is CLAIM_NEXT_RESEARCH_AUDIT rather than run finalization. A pending "
+            "Research/Audit exposes the combined three-completion quota state. The three-completion floor is not a stop cap: "
+            "whenever claimable independent Research/Audit work exists outside the 600-second no-new-work window, "
+            "the required action is CLAIM_NEXT_RESEARCH_AUDIT even after the floor has been met. A pending "
             "submission therefore does not become a claim barrier while new Research/Audit work remains claimable; hard "
             "handoff/platform/durability/read "
             "failures override ordinary continuation. The 600-second handoff window forbids new independent work but does not abort an already-started assignment; "
