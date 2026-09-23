@@ -131,13 +131,19 @@ def load_cache(root: Path, identity: dict[str, Any]) -> dict[str, Any] | None:
     return value
 
 
-def _descriptor_for_attempt(root: Path, attempt_id: str) -> tuple[str, Path, dict[str, Any]] | None:
+def _canonical_descriptor_for_attempt(root: Path, attempt_id: str) -> tuple[str, Path, dict[str, Any]] | None:
     for kind in ("research", "audit"):
-        folder = root / ".survey/work-queue/submissions" / kind
-        canonical = folder / f"{attempt_id}.json"
-        value = _read(canonical, {})
+        path = root / ".survey/work-queue/submissions" / kind / f"{attempt_id}.json"
+        value = _read(path, {})
         if isinstance(value, dict) and value.get("attempt_id") == attempt_id:
-            return kind, canonical, value
+            return kind, path, value
+    return None
+
+
+def _descriptor_for_attempt(root: Path, attempt_id: str) -> tuple[str, Path, dict[str, Any]] | None:
+    canonical = _canonical_descriptor_for_attempt(root, attempt_id)
+    if canonical is not None:
+        return canonical
     # Legacy arbitrary descriptor names are a read-only fallback. This scan is used
     # only during canonical rebuild, never on the incremental hot path.
     for kind in ("research", "audit"):
@@ -269,7 +275,14 @@ def rebuild_cache(
         attempt_rows[attempt_id] = row
 
     previous = load_cache(root, normalized)
-    revision = int((previous or {}).get("revision") or 0) + 1
+    previous_revision = int((previous or {}).get("revision") or 0)
+    latest = _read(latest_path(root, normalized["worker_id"]), {})
+    latest_revision = 0
+    if isinstance(latest, dict) and identity_matches(latest, normalized):
+        raw_generation = latest.get("snapshot_generation")
+        if isinstance(raw_generation, int) and not isinstance(raw_generation, bool):
+            latest_revision = max(raw_generation, 0)
+    revision = max(previous_revision, latest_revision) + 1
     now = dt.datetime.now(dt.timezone.utc).isoformat()
     cache: dict[str, Any] = {
         "schema_version": 1,
@@ -330,17 +343,41 @@ def apply_descriptor(root: Path, descriptor_path: Path) -> dict[str, Any]:
     rows = cache["attempts"]
     row = rows.get(attempt_id)
     if not isinstance(row, dict):
-        return {"updated": False, "reason": "attempt_not_in_canonical_cache", "identity": identity}
+        job_id = str(descriptor.get("job_id") or "")
+        claim = _read(root / ".survey/work-queue/claims" / f"{job_id}.json", {})
+        claimed_at = parse_time(claim.get("claimed_at")) if isinstance(claim, dict) else None
+        if not (
+            isinstance(claim, dict)
+            and claim.get("attempt_id") == attempt_id
+            and claim.get("worker_id") == identity["worker_id"]
+            and claimed_at is not None
+        ):
+            return {"updated": False, "reason": "attempt_not_in_canonical_cache", "identity": identity}
+        row = {
+            "claimed_at": claimed_at.isoformat(),
+            "submitted": False,
+            "submitted_seq": 0,
+            "result_processed_at": None,
+            "result_ok": None,
+            "result_status": None,
+            "retryable": False,
+        }
+        rows[attempt_id] = row
     relative = path.relative_to(root).as_posix()
     changed = row.get("submitted") is not True or row.get("descriptor_path") != relative
     if not changed:
         return {"updated": False, "reason": "already_indexed", "identity": identity}
-    max_seq = max(
-        [int(v.get("submitted_seq") or 0) for v in rows.values() if isinstance(v, dict)] or [0]
-    )
-    if not isinstance(row.get("submitted_seq"), int) or int(row.get("submitted_seq") or 0) <= 0:
-        row["submitted_seq"] = max_seq + 1
     row["submitted"] = True
+    ordered_attempts = sorted(
+        (
+            (parse_time(value.get("claimed_at")) or dt.datetime.max.replace(tzinfo=dt.timezone.utc), key)
+            for key, value in rows.items()
+            if isinstance(value, dict)
+        ),
+        key=lambda item: (item[0], item[1]),
+    )
+    for seq, (_claimed_at, key) in enumerate(ordered_attempts, start=1):
+        rows[key]["submitted_seq"] = seq
     row["kind"] = descriptor.get("kind")
     row["descriptor_path"] = relative
     cache["revision"] = int(cache["revision"]) + 1
@@ -423,7 +460,7 @@ def quick_consistency(root: Path, identity: dict[str, Any], cache: dict[str, Any
     for attempt_id, row in cached_attempts.items():
         if not isinstance(row, dict):
             return False, "malformed_attempt_cache"
-        found = _descriptor_for_attempt(root, attempt_id) if row.get("submitted") is not True else None
+        found = _canonical_descriptor_for_attempt(root, attempt_id) if row.get("submitted") is not True else None
         if found is not None:
             return False, "new_descriptor_not_indexed"
         if row.get("submitted") is not True:
