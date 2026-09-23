@@ -18,6 +18,8 @@ from typing import Any
 
 import claim_fast_path
 import claim_state
+import claim_window_policy
+import initial_claim_fast_path
 import worker_identity
 
 CLAIM_REQUESTS = Path(".survey/work-queue/claim-requests")
@@ -109,6 +111,10 @@ def _request_id(result: dict[str, Any]) -> str:
 
 def _claim_request(result: dict[str, Any], request_id: str) -> dict[str, Any]:
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
+    raw_window = result.get("claim_window")
+    claim_window = claim_window_policy.normalize_window(
+        claim_window_policy.DEFAULT_CLAIM_WINDOW if raw_window is None else raw_window
+    )
     return {
         "schema_version": 1,
         "request_id": request_id,
@@ -116,7 +122,7 @@ def _claim_request(result: dict[str, Any], request_id: str) -> dict[str, Any]:
         "worker_kind": "scheduled_chat",
         "requested_at": now,
         "max_jobs": 1,
-        "claim_window": 4,
+        "claim_window": claim_window,
         "job_types": ["research", "audit"],
         "run_key": result["run_key"],
         "scheduled_slot": result["scheduled_slot"],
@@ -166,10 +172,26 @@ def process(repo_root: Path, run_state_results_file: Path) -> dict[str, Any]:
             "result_path": result_rel.as_posix(),
         })
 
-    fast_path: dict[str, Any] = {"skipped": True}
+    fast_path: dict[str, Any] = {"skipped": True, "mode": "none"}
     if created:
-        fast_path = claim_fast_path.process(root)
-        fast_path["skipped"] = False
+        if len(created) == 1:
+            try:
+                fast_path = initial_claim_fast_path.process(
+                    root,
+                    root / created[0]["request_path"],
+                )
+                fast_path["skipped"] = False
+                fast_path["mode"] = "initial-preload-adopt"
+            except initial_claim_fast_path.InitialClaimFastPathUnavailable as exc:
+                fast_path = claim_fast_path.process(root)
+                fast_path["skipped"] = False
+                fast_path["mode"] = "canonical-fallback"
+                fast_path["fallback_reason"] = str(exc)
+        else:
+            fast_path = claim_fast_path.process(root)
+            fast_path["skipped"] = False
+            fast_path["mode"] = "canonical-fallback"
+            fast_path["fallback_reason"] = "multiple initial claim requests require canonical batch allocation"
 
         for item in created:
             source_path = root / item["source_result"]

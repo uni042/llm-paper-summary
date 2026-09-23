@@ -34,6 +34,7 @@ def eligible_result():
         "snapshot_origin": "request-fast-lane",
         "work_mode": "research",
         "candidate_inventory": 100,
+        "claim_window": 8,
         "active_assignment": False,
         "claim_result_pending": False,
         "research_audit_completed_this_invocation": 0,
@@ -56,9 +57,10 @@ class AutoInitialClaimTests(unittest.TestCase):
             changed = root / "changed.txt"
             changed.write_text(".survey/work-queue/run-state/results/run-state-1.json\n", encoding="utf-8")
 
-            def fake_fast_path(repo_root):
+            def fake_initial_fast_path(repo_root, request_path):
                 requests = list((root / ".survey/work-queue/claim-requests").glob("*.json"))
                 self.assertEqual(len(requests), 1)
+                self.assertEqual(request_path, requests[0])
                 request = json.loads(requests[0].read_text(encoding="utf-8"))
                 write_json(
                     root / ".survey/work-queue/claim-results" / requests[0].name,
@@ -78,16 +80,20 @@ class AutoInitialClaimTests(unittest.TestCase):
                 )
                 return {"ok": True, "changed_claim_results": [requests[0].name]}
 
-            with mock.patch.object(mod.claim_fast_path, "process", side_effect=fake_fast_path) as fast:
+            with (
+                mock.patch.object(mod.initial_claim_fast_path, "process", side_effect=fake_initial_fast_path) as fast,
+                mock.patch.object(mod.claim_fast_path, "process") as fallback,
+            ):
                 summary = mod.process(root, changed)
 
             self.assertEqual(len(summary["created"]), 1)
             fast.assert_called_once()
+            fallback.assert_not_called()
             requests = list((root / ".survey/work-queue/claim-requests").glob("*.json"))
             request = json.loads(requests[0].read_text(encoding="utf-8"))
             self.assertEqual(request["worker_id"], "scheduled-chat-30")
             self.assertEqual(request["run_key"], "run-1")
-            self.assertEqual(request["claim_window"], 4)
+            self.assertEqual(request["claim_window"], 8)
             self.assertTrue(request["auto_initial_claim"])
 
             updated = json.loads(source.read_text(encoding="utf-8"))
@@ -96,6 +102,41 @@ class AutoInitialClaimTests(unittest.TestCase):
             self.assertEqual(auto["assignment_count"], 1)
             self.assertEqual(auto["attempt_ids"], ["attempt-a"])
             self.assertEqual(auto["job_ids"], ["job-a"])
+
+    def test_run_state_claim_window_is_propagated_and_fast_path_can_fallback(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = eligible_result()
+            value["claim_window"] = 6
+            source = root / ".survey/work-queue/run-state/results/run-state-1.json"
+            write_json(source, value)
+            changed = root / "changed.txt"
+            changed.write_text(".survey/work-queue/run-state/results/run-state-1.json\n", encoding="utf-8")
+
+            def canonical(repo_root):
+                request = next((root / ".survey/work-queue/claim-requests").glob("*.json"))
+                payload = json.loads(request.read_text(encoding="utf-8"))
+                self.assertEqual(payload["claim_window"], 6)
+                write_json(
+                    root / ".survey/work-queue/claim-results" / request.name,
+                    {"ok": True, "assignments": [], "request_id": payload["request_id"]},
+                )
+                return {"ok": True}
+
+            with (
+                mock.patch.object(
+                    mod.initial_claim_fast_path,
+                    "process",
+                    side_effect=mod.initial_claim_fast_path.InitialClaimFastPathUnavailable("pool shortfall"),
+                ) as initial,
+                mock.patch.object(mod.claim_fast_path, "process", side_effect=canonical) as fallback,
+            ):
+                summary = mod.process(root, changed)
+
+            initial.assert_called_once()
+            fallback.assert_called_once()
+            self.assertEqual(summary["claim_fast_path"]["mode"], "canonical-fallback")
+            self.assertEqual(summary["claim_fast_path"]["fallback_reason"], "pool shortfall")
 
     def test_existing_same_run_claim_transport_prevents_duplicate(self):
         with tempfile.TemporaryDirectory() as td:
@@ -115,9 +156,13 @@ class AutoInitialClaimTests(unittest.TestCase):
                 },
             )
 
-            with mock.patch.object(mod.claim_fast_path, "process") as fast:
+            with (
+                mock.patch.object(mod.initial_claim_fast_path, "process") as initial,
+                mock.patch.object(mod.claim_fast_path, "process") as fast,
+            ):
                 summary = mod.process(root, changed)
 
+            initial.assert_not_called()
             fast.assert_not_called()
             self.assertEqual(summary["created"], [])
             self.assertEqual(summary["skipped"][0]["reason"], "run_already_has_claim_transport")
@@ -132,9 +177,13 @@ class AutoInitialClaimTests(unittest.TestCase):
             changed = root / "changed.txt"
             changed.write_text(".survey/work-queue/run-state/results/run-state-1.json\n", encoding="utf-8")
 
-            with mock.patch.object(mod.claim_fast_path, "process") as fast:
+            with (
+                mock.patch.object(mod.initial_claim_fast_path, "process") as initial,
+                mock.patch.object(mod.claim_fast_path, "process") as fast,
+            ):
                 summary = mod.process(root, changed)
 
+            initial.assert_not_called()
             fast.assert_not_called()
             self.assertEqual(summary["created"], [])
             self.assertEqual(summary["skipped"][0]["reason"], "not_initial_research_claim_eligible")

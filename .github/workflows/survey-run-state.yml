@@ -63,12 +63,16 @@ jobs:
                 --run-state-results-file /tmp/changed-run-state-results.txt
             fi
 
-            python .survey/scripts/compact_worker_transport.py \
-              --repo-root . \
-              --apply \
-              --min-age-seconds 7200 \
-              --report /tmp/transport-compact.json \
-              || echo 'Transport compaction failed; run-state publication continues and maintenance will retry.'
+            if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+              python .survey/scripts/compact_worker_transport.py \
+                --repo-root . \
+                --apply \
+                --min-age-seconds 7200 \
+                --report /tmp/transport-compact.json \
+                || echo 'Transport compaction failed; run-state publication continues and maintenance will retry.'
+            else
+              echo 'Skip transport compaction on request-triggered run-state hot path.'
+            fi
 
             git add -A \
               .survey/work-queue/run-state \
