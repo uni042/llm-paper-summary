@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T0945JST-scheduled-chat-30-a731c4-05",
+  "kind": "research",
+  "attempt_id": "attempt-0273ce1913f64a15a590f7e2",
+  "job_id": "job-research-52c9fc70a4b38892",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2607.28097-from-expert-reduction-to-behavioral-divergence-tracing-numerical-state-through-sparse-moe-inference.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:2cf3c0bebfc7055ffefb4235195c3e7b38dfff0390f5b7d09a19a3e28b5f1cd0",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "8dd2c977a558d04fde4d9f4adcea86c0854cbc16"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "e96ebd258bfa59f75347e0a5b0d14fb5e77b51ca"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "51422f5076342d5748165c3cf8ffaf6b81f5dc66"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "460fc765624c4832ede48c486675bca0ada8c995"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "1359f34ca19e5fbd688025d6877efe956af8bc65"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[1].description is too short"
+  ],
+  "checked_at": "2026-09-23T00:42:56+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
