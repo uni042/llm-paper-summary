@@ -8,9 +8,9 @@ whether the worker is permitted to emit its final response at all.
 A normal run receives a permit only after continuation_gate has returned
 STOP_RUN with finalization_allowed=true and no active assignment or asynchronous
 result remains. Explicit hard stops may finalize only after the caller has
-confirmed a safe durable handoff. Pending asynchronous results expose a fixed
-10-second real-time polling interval and must be rechecked until terminal so
-callers cannot replace deterministic waiting with ad-hoc early termination.
+confirmed a safe durable handoff. Pending asynchronous results never authorize
+an idle sleep loop: the worker must run one bounded wait microtask, then recheck
+the same durable target until it becomes terminal or a safe hard-stop handoff applies.
 """
 from __future__ import annotations
 
@@ -18,7 +18,15 @@ import argparse
 import json
 
 
-ASYNC_WAIT_POLL_SECONDS = 10
+PRODUCTIVE_WAIT_RECHECK_SECONDS = 0
+
+WAIT_MICROTASKS = (
+    "inspect_same_worker_async_transport",
+    "lightweight_validate_recent_completed_paper",
+    "cleanup_terminal_library_pdf_cache",
+    "read_only_queue_consistency_check",
+    "organize_current_paper_evidence",
+)
 
 
 def yn(value: str) -> bool:
@@ -116,8 +124,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             next_action = "CHECK_SUBMISSION_STATE"
             wait_seconds = 0
         elif wait_targets and not hard_stop:
-            next_action = "WAIT_10_SECONDS_AND_RECHECK"
-            wait_seconds = ASYNC_WAIT_POLL_SECONDS
+            next_action = "RUN_WAIT_MICROTASK_AND_RECHECK"
+            wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
         elif active_assignment:
             next_action = "CONTINUE_ASSIGNED_WORK"
             wait_seconds = 0
@@ -144,16 +152,16 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = "最新のclaim request/result対応を確認し、pendingなら同一request_idの待機へ進みます。"
     elif next_action == "CHECK_SUBMISSION_STATE":
         next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
-    elif next_action == "WAIT_10_SECONDS_AND_RECHECK":
+    elif next_action == "RUN_WAIT_MICROTASK_AND_RECHECK":
         if pending["claim_result"]:
             next_action_message = (
-                "claim resultが処理中です。受動待機だけで終了せず、同じrequestを起動したSurvey claim fast laneの"
-                "Actions状態、job/step、同一workerのtransport healthを確認してから10秒後に同じrequest_idを再確認します。"
+                "claim resultが処理中です。sleepや固定間隔pollingは行わず、同じrequestを起動したSurvey claim fast laneの"
+                "Actions状態、job/step、同一workerのtransport healthを確認し、待機ミクロタスクを1件処理してから同じrequest_idを再確認します。"
             )
         else:
             next_action_message = (
-                "必要な非同期結果が処理中です。この処理が完了または明示的hard stopになるまで"
-                "この処理中はrunを終了しません。同じ対象を10秒ごとに待機・再確認します。"
+                "必要な非同期結果が処理中です。runを終了せず、短い待機ミクロタスクを1件処理してから"
+                "同じ耐久targetを再確認します。結果がterminalになるまでこの作業サイクルを繰り返します。"
             )
     elif next_action == "CONTINUE_ASSIGNED_WORK":
         next_action_message = "有効なassignmentの未完了作業を続行し、耐久保存地点まで進めます。"
@@ -177,7 +185,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     else:
         next_action_message = "最終化許可が成立したため通常の最終通知へ進みます。"
 
-    progress_notice = next_action_message if next_action == "WAIT_10_SECONDS_AND_RECHECK" else ""
+    progress_notice = next_action_message if next_action == "RUN_WAIT_MICROTASK_AND_RECHECK" else ""
+    productive_wait_required = bool(next_action == "RUN_WAIT_MICROTASK_AND_RECHECK")
 
     return {
         "decision": decision,
@@ -189,6 +198,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "next_action": next_action,
         "wait_seconds": wait_seconds,
         "wait_targets": wait_targets,
+        "productive_wait_required": productive_wait_required,
+        "productive_wait_polling": False,
+        "productive_wait_recheck_after_each_task": productive_wait_required,
+        "wait_microtasks": list(WAIT_MICROTASKS) if productive_wait_required else [],
         "continuation_decision": continuation_decision,
         "continuation_finalization_allowed": finalization_allowed,
         "active_assignment": active_assignment,
@@ -212,9 +225,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "rule": (
             "Final response is forbidden without an issued permit. Normal finalization also requires "
             "explicit checks of the latest claim and submission states. Pending claim/submission/ACK/Discovery precheck/Discovery submission "
-            "results require 10-second real-time polling of the same target, repeated until the "
+            "results require a productive wait loop: run one bounded wait microtask and recheck the same durable target, with no fixed sleep or polling interval, until the "
             "required result reaches terminal state or an explicit hard stop is safely handed off. "
-            "Pending claim results also require productive fast-lane monitoring (Actions/job/step and same-worker transport health) between polls. "
+            "Pending claim results also require fast-lane monitoring (Actions/job/step and same-worker transport health) as part of that productive loop. "
             "handoff_safe may be true for a pending asynchronous result only after the durable request/submission identity, "
             "expected result path, current pending state, and exact next canonical action have been preserved for the next run. "
             "As defense in depth, normal Research/Audit finalization is independently refused while "
