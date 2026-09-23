@@ -187,6 +187,27 @@ def _precheck_failure_result(source_submission: str, sub: dict, exc: queue_worke
     }
 
 
+def _recovery_failure_result(source_submission: str, sub: dict, exc: Exception) -> dict[str, Any]:
+    """Isolate one malformed/obsolete immutable round without stopping unrelated recovery."""
+    return {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "submission": source_submission,
+        "ok": False,
+        "operation": "submit_discovery_round",
+        "failure_class": "discovery_recovery_exception",
+        "error_code": "DISCOVERY_RECOVERY_EXCEPTION",
+        "error": f"{type(exc).__name__}: {exc}",
+        "next_action": "Do not replay this immutable submission unchanged; create a fresh canonical Discovery round if work remains.",
+        "recovery_steps": [
+            "Preserve the failed immutable submission and this result for audit evidence.",
+            "Use the current worker-router and workflow-produced precheck result to create a new submission when retry is appropriate.",
+            "Continue recovery of unrelated Discovery submissions; this isolated submission must not poison the queue.",
+        ],
+        "submitted_job_id": sub.get("job_id") if isinstance(sub.get("job_id"), str) else None,
+    }
+
+
 def recover(root: Path) -> dict[str, Any]:
     _configure(root)
     queue_worker.SUBMISSIONS.mkdir(parents=True, exist_ok=True)
@@ -217,6 +238,15 @@ def recover(root: Path) -> dict[str, Any]:
                 "submission": source_submission,
                 "error_code": exc.code,
                 "error": str(exc),
+            })
+            continue
+        except Exception as exc:
+            result = _recovery_failure_result(source_submission, sub, exc)
+            queue_worker.write_json(result_path, result)
+            isolated.append({
+                "submission": source_submission,
+                "error_code": result["error_code"],
+                "error": result["error"],
             })
             continue
         if result is None:
