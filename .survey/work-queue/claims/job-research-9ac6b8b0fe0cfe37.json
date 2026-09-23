@@ -16,13 +16,5 @@
   "preload_pool": true,
   "pool_order": 12,
   "claim_source": "shared_preload_pool",
-  "record_bank": "v",
-  "record_bank_root": ".survey/work-queue/records/chat-record-v",
-  "record_slot_paths": {
-    "metadata": ".survey/work-queue/records/chat-record-v/metadata.json",
-    "problem_method": ".survey/work-queue/records/chat-record-v/problem_method.json",
-    "evaluation": ".survey/work-queue/records/chat-record-v/evaluation.json",
-    "results": ".survey/work-queue/records/chat-record-v/results.json",
-    "positioning": ".survey/work-queue/records/chat-record-v/positioning.json"
-  }
+  "record_bank_release": "logical-inventory-not-hot"
 }
