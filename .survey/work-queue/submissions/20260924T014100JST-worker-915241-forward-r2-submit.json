@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "worker-915241",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571450",
+      "doi": "10.1109/INFOCOM59046.2026.11571450",
+      "title": "Enabling Memory-Disaggregated Cloud Infrastructure for LLMs: An Adaptive CXL-based KV Cache Scheduling Approach",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571450",
+      "priority": 100,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 10,
+        "total": 100
+      },
+      "reason": "CXL-backed hierarchical KV-cache placement combines asynchronous multi-level backup, lifecycle-aware priority and adaptive promotion/eviction, directly updating hierarchical-memory, KV-cache offload and serving lineages."
+    },
+    {
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571463",
+      "doi": "10.1109/INFOCOM59046.2026.11571463",
+      "title": "BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571463",
+      "priority": 97,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 10,
+        "total": 97
+      },
+      "reason": "BROS co-locates latency-critical and best-effort requests with dynamic scheduling and bidirectional KV-cache management, directly extending serving scheduling and cache-aware resource-utilization lineages."
+    },
+    {
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571717",
+      "doi": "10.1109/INFOCOM59046.2026.11571717",
+      "title": "SemCache: Semantic-Aware Cache Sharing for Efficient Multi-User LoRA-Adapted LLM Inference at the Edge",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571717",
+      "priority": 97,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 10,
+        "total": 97
+      },
+      "reason": "SemCache targets redundant per-user KV caching in collaborative edge LoRA inference with semantic-aware sharing, directly connecting edge offload, KV-cache reuse and multi-user serving."
+    },
+    {
+      "canonical_id": "DOI:10.1109/TCAD.2025.3624135",
+      "doi": "10.1109/TCAD.2025.3624135",
+      "title": "AsyncGrid: An Intralayer and Interlayer Asynchronous Hybrid Parallelism System for Responsive Edge LLM Inference",
+      "source_url": "https://doi.org/10.1109/TCAD.2025.3624135",
+      "priority": 89,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 4,
+        "total": 89
+      },
+      "reason": "AsyncGrid combines intra-layer and inter-layer asynchronous parallelism to reduce TTFT under constrained edge resources, directly extending heterogeneous CPU/GPU inference and responsive serving lineages."
+    },
+    {
+      "canonical_id": "arXiv:2605.25550",
+      "arxiv_id": "2605.25550",
+      "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving",
+      "source_url": "https://arxiv.org/abs/2605.25550",
+      "priority": 87,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 87
+      },
+      "reason": "DisagFusion disaggregates heterogeneous diffusion-serving stages and combines asynchronous pipeline parallelism with elastic scheduling, directly extending disaggregated serving and heterogeneous-resource scheduling lineages."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "20260924T014100JST-worker-915241-forward-r2",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T014100JST-worker-915241-forward-r2.json",
+    "receipt": "sha256:7ce1a0ee3a78f14b8eb38ec31025e2736785a5270ccd1f1f51ed6544d0e620e4"
+  },
+  "discovery_stats": {
+    "run_key": "adhoc-20260924T014100JST-worker-915241",
+    "round": "20260924T014100JST-worker-915241-forward-r2",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "query_summary": "Forward citations of FlexGen from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot and topped up from the same fixed source.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "DOI:10.1109/INFOCOM59046.2026.11571450",
+      "DOI:10.1109/INFOCOM59046.2026.11571463",
+      "DOI:10.1109/INFOCOM59046.2026.11571717",
+      "DOI:10.1109/TCAD.2025.3624135",
+      "arXiv:2605.25550"
+    ],
+    "seed_canonical_id": "arXiv:2303.06865",
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}
