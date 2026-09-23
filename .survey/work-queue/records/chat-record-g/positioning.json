@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-04e285682c3e9ed7b0782532",
-  "job_id": "job-research-ded5355ef64410a7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-04e285682c3e9ed7b0782532",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-04e285682c3e9ed7b0782532","job_id":"job-research-ded5355ef64410a7","data":{"limitations":"BatchGenはbatch completion time最適化を主目的とし、対話型推論のtime-to-first-tokenやper-token latencyを最小化する設計ではない。KV offloadはhost memory容量とPCIe bandwidth、large expert batch形成は十分なsequence concurrencyに依存する。32〜128 GPU評価ではbaseline engineの大規模安定性問題により、16-GPU data-parallel groupの集約比較を用いる。主対象はTransformer MoEとbatch workloadsで、multimodal pipeline等への一般化は将来課題。","differences":"vLLM/SGLang/TensorRT-LLMはsequenceをdeviceへ固定しforward passを原子的に扱う。prefill/decode disaggregationもphase単位の配置は静的で、MegaScale-Infer等のmodule disaggregationもcomponent placementを固定する。BatchGenはsequenceそのものを可動coroutineにし、module境界でyieldしてcombine/partition/migrateをruntime決定する。FlexGen等のoffload研究に対しても、単なるweight/KV transfer計画ではなくoffloadで増えたconcurrencyをexpert batch形成へ結びつける。","implementation_status":"OSDI 2026採択・公開済みで、production clusterへのdeployment実績を報告。公式GitHub batchgen-project/batchgenをopen sourceとして公開。C++/Python runtime、OpenAI-compatible batch API、checkpoint manager、health monitoringを含むproduction-ready system。","research_positioning":"batch inferenceをinteractive servingのthroughput設定として扱うのではなく、全batch完了を目的とする独立したexecution modelとして定義する研究である。sequence coroutineはOSのevent-driven serverと同様に、長寿命taskを固定resourceへ縛る代わりに状態付きeventとして共有resource poolへ流す。\n\nMoE推論ではexpert routing後の小batchをmodule境界で再集約できるため、expert placementやall-to-all最適化とは直交する上位schedulerとなる。offload/階層memoryではKVをhostへ退避するだけでなく、それによって得たGPU memory余地をより多くのcoroutine concurrencyとexpert batchへ変換する点が重要で、memory hierarchyとruntime schedulingを結ぶ設計として位置付けられる。"},"reservation":{"claim_id":"claim-04e285682c3e9ed7b0782532","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}

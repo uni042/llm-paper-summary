@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-04e285682c3e9ed7b0782532",
-  "job_id": "job-research-ded5355ef64410a7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-04e285682c3e9ed7b0782532",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-04e285682c3e9ed7b0782532","job_id":"job-research-ded5355ef64410a7","data":{"hardware":"production-grade NVIDIA H20/H200 clusterを8〜128 GPUまで使用。node間は200Gb/s RDMA対応InfiniBand、各nodeは高帯域NVLink/PCIe 5.0と2TB host memoryを持つ。memory-constrained評価では24GB級acceleratorを含む。","software":"BatchGenはC++約13K行、Python約49K行。baselineはSGLang v0.5.5.post3、vLLM v0.11.2、SGLang-Optimized、memory-constrainedではDeepSpeed、FlexGen、MoE-Lightning。追加にTensorRT-LLM、RLではVeRL。","methodology":"offline inferenceはLongBenchで6K sequences、prefill-heavy 8K入力/2K出力とdecode-heavy 2K入力/8K出力を評価。MoE modelはMixtral-8×7B、Mixtral-8×22B、DeepSeek-R1、Kimi-K2。test-time scalingはDeepSeek-R1を16×H20で30/60分SLO下の処理系列数を測る。RL rolloutは16×H20のVeRLで長尾終盤を測定。large deploymentは32/64/128 H20で10K requests、12K-4Kと6.5K-2.8K workloadのend-to-end時間を比較する。","scope":"主指標はbatch completion timeとSLO内処理系列数。baselineは可能な限りthroughput向けparallelismとmemory allocationを調整する。大規模SGLang/vLLMは16 GPU超で安定性問題があるため、16-GPU data-parallel groupを複数動かしてaggregate throughputを比較する。"},"reservation":{"claim_id":"claim-04e285682c3e9ed7b0782532","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
