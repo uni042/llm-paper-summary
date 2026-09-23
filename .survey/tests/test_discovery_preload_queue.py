@@ -131,13 +131,12 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
         }
         write_json(sentinel_path, sentinel)
 
-        preload.top_up(self.root, target=2, max_new=2)
+        forward = self._prepare_forward_result()
         self.assertEqual(
             json.loads(sentinel_path.read_text(encoding="utf-8")),
             sentinel,
         )
 
-        forward = self._prepare_forward_result()
         available = preload.pick_available(self.root, direction="forward")
         self.assertIsNotNone(available)
         bank = available["discovery_bank"]
