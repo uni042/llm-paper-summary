@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -21,6 +22,7 @@ from typing import Any
 import claim_state
 import continuation_gate
 import select_discovery_direction
+import worker_run_index
 
 REQUESTS = Path(".survey/work-queue/run-state/requests")
 RESULTS = Path(".survey/work-queue/run-state/results")
@@ -277,6 +279,8 @@ def _run_submission_state(
     started_at: dt.datetime,
 ) -> dict[str, Any]:
     completed = 0
+    completed_ids: list[str] = []
+    retryable_ids: list[str] = []
     pending: list[tuple[dt.datetime, str]] = []
     submitted: list[tuple[dt.datetime, str]] = []
     terminal: list[tuple[dt.datetime, str]] = []
@@ -295,6 +299,7 @@ def _run_submission_state(
                 continue
             if result.get("ok") is False and result.get("retryable") is True:
                 pending.append((claimed_at, attempt_id))
+                retryable_ids.append(attempt_id)
                 continue
             processed_at = _time(result.get("processed_at")) or claimed_at
             status = str(result.get("job_status") or "none").lower()
@@ -304,6 +309,7 @@ def _run_submission_state(
                 and processed_at >= started_at
             ):
                 completed += 1
+                completed_ids.append(attempt_id)
             if status in {"completed", "blocked", "deferred", "rejected"}:
                 terminal.append((processed_at, status))
         if not found_descriptor:
@@ -323,6 +329,8 @@ def _run_submission_state(
         "last_terminal_job_status": terminal[-1][1] if terminal else "none",
         "submitted_attempt_ids": [attempt for _, attempt in sorted(submitted)],
         "pending_attempt_ids": [attempt for _, attempt in sorted(pending)],
+        "retryable_attempt_ids": sorted(set(retryable_ids)),
+        "completed_attempt_ids_this_invocation": sorted(set(completed_ids)),
     }
 
 
@@ -351,6 +359,7 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
 
     claims = claim_state.current_claims(root, now)
     active: list[str] = []
+    active_attempts: list[str] = []
     for job_id, current in claims.items():
         if not current.get("active") or current.get("worker_id") != worker_id:
             continue
@@ -364,6 +373,8 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         )
         if not descriptor_backed:
             active.append(job_id)
+            if isinstance(attempt_id, str) and attempt_id:
+                active_attempts.append(attempt_id)
     return {
         "claim_state_checked": True,
         "claim_result_pending": bool(pending_requests),
@@ -373,6 +384,7 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         "claim_monitor_window_seconds": 60,
         "active_assignment": bool(active),
         "active_job_ids": sorted(active),
+        "active_attempt_ids": sorted(active_attempts),
     }
 
 
@@ -497,12 +509,14 @@ def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> b
     return _candidate_inventory(root) > 0
 
 
-def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
+def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False) -> dict[str, Any]:
     root = root.resolve()
     started_at = _time(request["actual_invocation_start"])
     assert started_at is not None
 
-    frozen = _frozen_route(root, request["run_key"])
+    cache = None if force_canonical else worker_run_index.load_cache(root, request)
+    cached_route = worker_run_index.cached_route(cache) if cache is not None else None
+    frozen = cached_route if cached_route is not None else _frozen_route(root, request["run_key"])
     if request["scheduled_slot"] == "0830":
         inventory = _candidate_inventory(root) if frozen is None else frozen[0]
         work_mode = "maintenance"
@@ -512,9 +526,22 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
         inventory = _candidate_inventory(root)
         work_mode = "research" if inventory >= 50 else "discovery"
 
-    attempts = _run_attempts(root, request["worker_id"], started_at)
-    submission = _run_submission_state(root, attempts, started_at)
     claims = _claim_state(root, request["worker_id"], started_at)
+    attempts: dict[str, dt.datetime] = {}
+    state_source = "canonical_rebuild"
+    cache_fallback_reason = "forced_canonical_rebuild" if force_canonical else "cache_missing_or_invalid"
+    if cache is not None:
+        consistent, reason = worker_run_index.quick_consistency(root, request, cache, claims)
+        if consistent:
+            submission = worker_run_index.cached_submission_state(cache)
+            state_source = "incremental_cache"
+            cache_fallback_reason = None
+        else:
+            cache_fallback_reason = reason
+    if state_source != "incremental_cache":
+        attempts = _run_attempts(root, request["worker_id"], started_at)
+        submission = _run_submission_state(root, attempts, started_at)
+
     discovery_rounds, selector = _discovery_rounds(root, request["run_key"])
     discovery_async = _discovery_async_state(root, request["run_key"])
 
@@ -621,7 +648,7 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
     else:
         gate = continuation_gate.decide(args)
 
-    return {
+    result = {
         "schema_version": 1,
         "ok": True,
         "request_id": request["request_id"],
@@ -659,6 +686,145 @@ def derive(root: Path, request: dict[str, Any]) -> dict[str, Any]:
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries."
         ),
     }
+    if state_source == "canonical_rebuild":
+        cache = worker_run_index.rebuild_cache(
+            root,
+            request,
+            candidate_inventory=inventory,
+            work_mode=work_mode,
+            attempts=attempts,
+            claims=claims,
+        )
+    else:
+        cache = worker_run_index.update_claim_state(root, request, claims) or cache
+
+    result["state_source"] = state_source
+    result["cache_fallback_reason"] = cache_fallback_reason
+    result["snapshot_origin"] = request.get("snapshot_origin", "run_state_request")
+    if isinstance(cache, dict):
+        result["snapshot_generation"] = int(cache.get("revision") or 0)
+    return result
+
+
+
+
+def emit_automatic_snapshot(
+    root: Path,
+    identity: dict[str, Any],
+    *,
+    source_events: list[str],
+) -> str | None:
+    """Publish a canonical run-state result directly after submission state changes.
+
+    The same derive()/continuation gate is used. If no canonical cache exists for
+    this exact invocation, return None and leave the request fast lane as fallback.
+    """
+    root = Path(root).resolve()
+    cache = worker_run_index.load_cache(root, identity)
+    if cache is None:
+        return None
+
+    event_fingerprints: list[str] = []
+    for rel in sorted(set(source_events)):
+        path = root / rel
+        try:
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        except OSError:
+            digest = "missing"
+        event_fingerprints.append(f"{rel}:{digest}")
+    token_payload = json.dumps(
+        {"identity": worker_run_index.normalize_identity(identity), "events": event_fingerprints},
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    request_id = "auto-" + hashlib.sha256(token_payload).hexdigest()[:32]
+    target = root / RESULTS / f"{request_id}.json"
+    existing = _read(target, {})
+    if isinstance(existing, dict) and existing.get("ok") is True:
+        generation = int(existing.get("snapshot_generation") or cache.get("revision") or 0)
+        worker_run_index.publish_latest(
+            root,
+            target.relative_to(root),
+            existing,
+            generation,
+        )
+        return target.relative_to(root).as_posix()
+
+    normalized = worker_run_index.normalize_identity(identity)
+    assert normalized is not None
+    request = {
+        "schema_version": 1,
+        "request_id": request_id,
+        **normalized,
+        "runtime_condition": "none",
+        "runtime_condition_confirmed": False,
+        "runtime_condition_attempts": 0,
+        "runtime_condition_detail": "",
+        "snapshot_origin": "submission_auto",
+    }
+    result = derive(root, request)
+    result["snapshot_origin"] = "submission_auto"
+    result["source_events"] = event_fingerprints
+    generation = worker_run_index.cache_generation(root, normalized) or int(result.get("snapshot_generation") or 0)
+    result["snapshot_generation"] = generation
+    _write(target, result)
+    worker_run_index.publish_latest(root, target.relative_to(root), result, generation)
+    return target.relative_to(root).as_posix()
+
+
+def rebuild_latest_caches(root: Path) -> dict[str, Any]:
+    """Maintenance reconciliation: scan historical snapshots, rebuild latest run per worker."""
+    root = Path(root).resolve()
+    result_root = root / RESULTS
+    latest: dict[str, tuple[dt.datetime, dict[str, Any]]] = {}
+    scanned = malformed = 0
+    if result_root.is_dir():
+        for path in result_root.glob("*.json"):
+            scanned += 1
+            value = _read(path, {})
+            if not isinstance(value, dict) or value.get("ok") is not True:
+                malformed += 1
+                continue
+            try:
+                normalized = worker_run_index.normalize_identity(value)
+            except ValueError:
+                malformed += 1
+                continue
+            assert normalized is not None
+            started = _time(normalized["actual_invocation_start"])
+            assert started is not None
+            current = latest.get(normalized["worker_id"])
+            if current is None or started > current[0]:
+                latest[normalized["worker_id"]] = (started, value)
+
+    rebuilt: list[str] = []
+    errors: list[str] = []
+    for worker_id, (_started, snapshot) in sorted(latest.items()):
+        request = {
+            "schema_version": 1,
+            "request_id": f"maintenance-rebuild-{worker_id}",
+            "run_key": snapshot["run_key"],
+            "worker_id": worker_id,
+            "scheduled_slot": snapshot["scheduled_slot"],
+            "actual_invocation_start": snapshot["actual_invocation_start"],
+            "runtime_condition": "none",
+            "runtime_condition_confirmed": False,
+            "runtime_condition_attempts": 0,
+            "runtime_condition_detail": "",
+            "snapshot_origin": "maintenance_rebuild",
+        }
+        try:
+            derive(root, request, force_canonical=True)
+            rebuilt.append(worker_id)
+        except Exception as exc:
+            errors.append(f"{worker_id}: {type(exc).__name__}: {exc}")
+    return {
+        "history_results_scanned": scanned,
+        "history_rows_ignored": malformed,
+        "rebuilt_workers": rebuilt,
+        "errors": errors,
+    }
 
 
 def process_pending(root: Path) -> dict[str, int]:
@@ -686,6 +852,10 @@ def process_pending(root: Path) -> dict[str, int]:
                 "next_action": "FIX_RUN_STATE_REQUEST",
             }
         _write(target, result)
+        if isinstance(result, dict) and result.get("ok") is True:
+            generation = worker_run_index.cache_generation(root, result)
+            if generation is not None:
+                worker_run_index.publish_latest(root, target.relative_to(root), result, generation)
         processed += 1
     return {"processed": processed, "errors": errors, "reused": reused}
 
@@ -693,8 +863,13 @@ def process_pending(root: Path) -> dict[str, int]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
+    parser.add_argument("--rebuild-latest-caches", action="store_true")
     args = parser.parse_args()
-    print(json.dumps(process_pending(args.repo_root), ensure_ascii=False, sort_keys=True))
+    if args.rebuild_latest_caches:
+        output = rebuild_latest_caches(args.repo_root)
+    else:
+        output = process_pending(args.repo_root)
+    print(json.dumps(output, ensure_ascii=False, sort_keys=True))
     return 0
 
 
