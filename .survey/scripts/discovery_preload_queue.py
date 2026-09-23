@@ -443,6 +443,9 @@ def _gc_old_artifacts(root: Path, now: dt.datetime) -> list[str]:
                     root / PRECHECK_RESULTS / f"{request_id}.json",
                 ]
             )
+        bank = _bank_for_preload(root, preload_id)
+        if bank:
+            _clear_bank_binding(root, bank, expected_preload_id=preload_id)
         for path in paths:
             try:
                 path.unlink()
@@ -749,8 +752,11 @@ def available_preloads(
     # treated as unclaimed by _active_claim(); top_up/maintenance removes their
     # stale marker files.
     rows: list[dict[str, Any]] = []
+    bindings = _read_bank_bindings(root)
     for entry in _entries(root):
-        if _status(root, entry, now) != "PRECHECKED":
+        preload_id = str(entry.get("preload_id") or "")
+        bank = bindings.get(preload_id)
+        if not bank or _status(root, entry, now) != "PRECHECKED":
             continue
         if direction and str(entry.get("citation_direction") or "") != direction:
             continue
@@ -760,6 +766,8 @@ def available_preloads(
         rows.append(
             {
                 "preload_id": entry["preload_id"],
+                "discovery_bank": bank,
+                "discovery_slot_path": discovery_slot_path(bank),
                 "citation_direction": entry.get("citation_direction"),
                 "provider": entry.get("provider"),
                 "source_url": entry.get("source_url"),
@@ -822,6 +830,17 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
     if str(preload_result.get("run_key") or "") != f"preload:{preload_id}":
         raise ValueError("Discovery preload result identity is inconsistent")
 
+    discovery_bank = _bank_for_preload(root, preload_id)
+    requested_bank = str(request.get("discovery_bank") or "").lower().strip() or None
+    if discovery_bank is None:
+        raise ValueError("Discovery preload is not present in any dual-purpose bank sidecar")
+    if requested_bank is not None and requested_bank != discovery_bank:
+        raise ValueError("Discovery preload bank does not match the run-state assignment")
+    requested_slot_path = str(request.get("discovery_slot_path") or "").strip() or None
+    expected_slot_path = discovery_slot_path(discovery_bank)
+    if requested_slot_path is not None and requested_slot_path != expected_slot_path:
+        raise ValueError("Discovery preload slot path does not match the bank assignment")
+
     now = _utcnow()
     claim_path = root / _claim_path(preload_id)
     current = _active_claim(root, preload_id, now)
@@ -843,8 +862,14 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
         "claimed_at": current.get("claimed_at") if current else now.isoformat(),
         "lease_expires_at": lease_expires.isoformat(),
         "preload_result_path": _result_path(entry).as_posix(),
+        "discovery_bank": discovery_bank,
+        "discovery_slot_path": expected_slot_path,
     }
     _write(claim_path, claim)
+    # The claimed cache is now protected by entry/result/claim identity. Release
+    # only the Discovery sidecar so this same physical bank can immediately preload
+    # the next search window while its Research/Audit slots remain untouched.
+    _clear_bank_binding(root, discovery_bank, expected_preload_id=preload_id)
     return entry, preload_result
 
 
@@ -869,6 +894,17 @@ def mark_ingested(root: Path, *, preload_id: str, run_key: str, source_submissio
             "ingested_at": _utcnow().isoformat(),
         },
     )
+    claim = _read(root / _claim_path(preload_id), {})
+    claim_bank = (
+        str(claim.get("discovery_bank") or "").lower()
+        if isinstance(claim, dict)
+        else ""
+    )
+    bound_bank = _bank_for_preload(root, preload_id)
+    if bound_bank:
+        _clear_bank_binding(root, bound_bank, expected_preload_id=preload_id)
+    elif claim_bank in BANK_IDS:
+        _clear_bank_binding(root, claim_bank, expected_preload_id=preload_id)
     try:
         (root / _claim_path(preload_id)).unlink()
     except FileNotFoundError:
@@ -882,6 +918,7 @@ def summary(root: Path) -> dict[str, Any]:
     expired = _expire_stale_claims(root, now)
     counts: dict[str, int] = {}
     directions: dict[str, dict[str, int]] = {}
+    bindings = _read_bank_bindings(root)
     for entry in _entries(root):
         status = _status(root, entry, now)
         counts[status] = counts.get(status, 0) + 1
@@ -894,6 +931,9 @@ def summary(root: Path) -> dict[str, Any]:
         "directions": directions,
         "expired_claims_released": expired,
         "claim_lease_seconds": CLAIM_LEASE_SECONDS,
+        "dual_purpose_banks": len(BANK_IDS),
+        "discovery_bank_slots_bound": len(bindings),
+        "discovery_bank_slots_free": max(len(BANK_IDS) - len(bindings), 0),
     }
 
 
