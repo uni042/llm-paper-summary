@@ -592,6 +592,55 @@ def _release_logical_only_reservations(
     return released
 
 
+def _refresh_new_claim_result_routes(root: Path, result_paths: set[Path]) -> int:
+    """Refresh only claim results created by the current allocator invocation.
+
+    Resumed claims intentionally retain their original request_id. When a cold
+    standby becomes hot during a later refill, bank reconciliation updates the
+    canonical claim but the just-created refill result was assembled before that
+    bank existed. Re-read those canonical claims once after reconciliation so the
+    current result exposes the bank immediately without scanning historical results.
+    """
+    changed_results = 0
+    route_keys = (
+        "record_bank",
+        "record_bank_fallback",
+        "record_bank_root",
+        "record_slot_paths",
+        "record_bank_recovery",
+        "record_bank_recovery_attempt_ids",
+        "record_bank_recovery_submission",
+        "record_bank_release",
+    )
+    for result_path in sorted(result_paths):
+        result = _read(result_path)
+        if not isinstance(result, dict) or not isinstance(result.get("assignments"), list):
+            continue
+        changed = False
+        for item in result["assignments"]:
+            if not isinstance(item, dict):
+                continue
+            job_id = str(item.get("job_id") or "")
+            claim_id = item.get("claim_id")
+            if not job_id or not claim_id:
+                continue
+            claim = _read(root / ".survey/work-queue/claims" / f"{job_id}.json")
+            if not isinstance(claim, dict) or claim.get("claim_id") != claim_id:
+                continue
+            for key in route_keys:
+                if key in claim:
+                    if item.get(key) != claim[key]:
+                        item[key] = claim[key]
+                        changed = True
+                elif key in item:
+                    item.pop(key, None)
+                    changed = True
+        if changed:
+            _write(result_path, result)
+            changed_results += 1
+    return changed_results
+
+
 def _persist_library_fallback(root: Path, claim: dict[str, Any]) -> None:
     claim_path = root / ".survey/work-queue/claims" / f"{claim['job_id']}.json"
     claim["record_bank"] = None
@@ -813,6 +862,8 @@ def _retag_adopted_pool_reservations(repo_root: Path, *, at: Any = None) -> int:
 def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: bool = False) -> dict[str, int]:
     root = Path(repo_root).resolve()
     now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
+    result_root = root / ".survey/work-queue/claim-results"
+    before_result_paths = set(result_root.glob("*.json")) if result_root.is_dir() else set()
     before_claim_ids = _active_claim_ids(root, now)
     result = claim_worker.process_requests(
         root,
@@ -826,10 +877,16 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
         at=now,
     )
     retagged = _retag_adopted_pool_reservations(root, at=now)
+    after_result_paths = set(result_root.glob("*.json")) if result_root.is_dir() else set()
+    refreshed_results = _refresh_new_claim_result_routes(
+        root,
+        after_result_paths - before_result_paths,
+    )
     return {
         **result,
         **{f"banks_{key}": value for key, value in bank_result.items()},
         "banks_retagged_adopted_pool": retagged,
+        "banks_refreshed_new_claim_results": refreshed_results,
     }
 
 
