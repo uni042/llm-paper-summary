@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:18:15+00:00",
-  "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
-  "last_round": "worker-240052-20260924T0117JST-forward-05",
+  "updated_at": "2026-09-23T16:21:07+00:00",
+  "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+  "last_round": "20260924T0101JST-scheduled-chat-00-backward-r1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,23 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-virtual-memory-6",
-      "axis": "virtual memory・異種state pool・LPDDR allocation",
-      "query_summary": "many-core runtimeからOS/memory-managerへ軸を移し、hybrid SSM/Transformer stateとrandom-access-constrained acceleratorのallocation設計を探索した。BOOSTは既に処理済みのため除外した。",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 2,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.3333333333333333,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.13592"
-      ],
-      "next_axis_hint": "ネットワーク/SmartNIC/RDMA側のKV transfer・remote memory schedulingへ移す",
-      "source_submission": "work-queue/submissions/20260916T2025JST-discovery-specialist-virtual-memory-6.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-power-aware-7",
@@ -8364,6 +8347,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T0101JST-scheduled-chat-00-backward-r1",
+      "precheck_request_id": "20260924T0101JST-scheduled-chat-00-backward-r1",
+      "run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "round": "20260924T0101JST-scheduled-chat-00-backward-r1",
+      "axis": "preload-backward-structured-references",
+      "query_summary": "Repository-wide structured backward references from the adopted preload window, re-filtered against this run's current identity snapshot.",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-59575b87bca524f27756",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2507.19427",
+        "arXiv:2409.17264",
+        "arXiv:2502.07115",
+        "arXiv:2404.12457",
+        "arXiv:2406.14066"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T0122JST-scheduled-chat-00-backward-r1.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T0122JST-scheduled-chat-00-backward-r1.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16280,14 +16303,14 @@
       "next_axis_hint": "continue selector with another productive seed or backward-reference window"
     },
     "preload-backward-structured-references": {
-      "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
-      "rounds": 1,
-      "candidate_count": 20,
+      "last_run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+      "rounds": 2,
+      "candidate_count": 40,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 20,
+      "novel_candidate_count": 40,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 20,
-      "accepted_count": 2,
+      "post_final_dedupe_count": 40,
+      "accepted_count": 7,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
