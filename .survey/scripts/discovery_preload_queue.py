@@ -534,6 +534,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
     bucket = _refresh_bucket(now)
     specs = _prioritize_specs(_source_specs(root), direction_deficits)
     created: list[str] = []
+    created_bank_counts = {bank: 0 for bank in BANK_IDS}
     missing_banks = list(bank_deficits)
     made_progress = True
 
@@ -544,7 +545,11 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                 break
             direction = str(spec.get("citation_direction") or "")
             base_slots_remaining = max(target - (available + len(created)), 0)
-            if base_slots_remaining <= 0 and direction_deficits.get(direction, 0) <= 0:
+            if (
+                base_slots_remaining <= 0
+                and direction_deficits.get(direction, 0) <= 0
+                and not missing_banks
+            ):
                 # Once the total target is full, only create deliberate
                 # backward/forward floor repairs. Never grow the queue in an
                 # unrelated direction just because another direction is short.
@@ -576,14 +581,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                 stock_bank = min(
                     BANK_IDS,
                     key=lambda bank: (
-                        bank_available.get(bank, 0)
-                        + sum(
-                            1
-                            for preload_id in created
-                            if str(
-                                _read(root / ENTRIES / f"{preload_id}.json", {}).get("stock_bank") or ""
-                            ).lower() == bank
-                        ),
+                        bank_available.get(bank, 0) + created_bank_counts.get(bank, 0),
                         BANK_IDS.index(bank),
                     ),
                 )
@@ -603,6 +601,7 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
             _write(request_path, _request_for_entry(entry))
             entries.append(entry)
             created.append(entry["preload_id"])
+            created_bank_counts[stock_bank] = created_bank_counts.get(stock_bank, 0) + 1
             if direction_deficits.get(direction, 0) > 0:
                 direction_deficits[direction] -= 1
             made_progress = True
@@ -735,6 +734,8 @@ def claim_and_load(root: Path, request: dict[str, Any]) -> tuple[dict[str, Any],
         "claimed_at": current.get("claimed_at") if current else now.isoformat(),
         "lease_expires_at": lease_expires.isoformat(),
         "preload_result_path": _result_path(entry).as_posix(),
+        "stock_bank": entry.get("stock_bank"),
+        "stock_lane": "discovery",
     }
     _write(claim_path, claim)
     return entry, preload_result
@@ -774,16 +775,29 @@ def summary(root: Path) -> dict[str, Any]:
     expired = _expire_stale_claims(root, now)
     counts: dict[str, int] = {}
     directions: dict[str, dict[str, int]] = {}
+    banks: dict[str, dict[str, int]] = {bank: {} for bank in BANK_IDS}
     for entry in _entries(root):
         status = _status(root, entry, now)
         counts[status] = counts.get(status, 0) + 1
         direction = str(entry.get("citation_direction") or "unknown")
         row = directions.setdefault(direction, {})
         row[status] = row.get(status, 0) + 1
+        stock_bank = str(entry.get("stock_bank") or "").lower()
+        if stock_bank in banks:
+            bank_row = banks[stock_bank]
+            bank_row[status] = bank_row.get(status, 0) + 1
+    ready_banks = sum(
+        1
+        for bank in BANK_IDS
+        if banks[bank].get("READY", 0) + banks[bank].get("PRECHECKED", 0) > 0
+    )
     return {
         "target": DEFAULT_TARGET,
         "counts": counts,
         "directions": directions,
+        "banks": banks,
+        "discovery_stock_banks_ready": ready_banks,
+        "discovery_stock_bank_target": len(BANK_IDS),
         "expired_claims_released": expired,
         "claim_lease_seconds": CLAIM_LEASE_SECONDS,
     }
