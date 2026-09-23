@@ -19,6 +19,8 @@ from __future__ import annotations
 import argparse
 import json
 
+import claim_window_policy
+
 
 PRODUCTIVE_WAIT_RECHECK_SECONDS = 0
 
@@ -141,10 +143,24 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     )
     active_assignment = bool(getattr(args, "active_assignment", False))
     active_claim_count = max(int(getattr(args, "active_claim_count", 1 if active_assignment else 0) or 0), 0)
-    claim_window = max(int(getattr(args, "claim_window", 4) or 4), 1)
+    claim_window = claim_window_policy.normalize_window(
+        int(getattr(args, "claim_window", claim_window_policy.DEFAULT_CLAIM_WINDOW)
+            or claim_window_policy.DEFAULT_CLAIM_WINDOW)
+    )
+    refill_threshold_raw = getattr(args, "claim_refill_threshold", None)
+    claim_refill_threshold = (
+        claim_window_policy.refill_threshold(claim_window)
+        if refill_threshold_raw is None
+        else max(0, min(int(refill_threshold_raw), claim_window - 1))
+    )
     claim_window_remaining = max(
         int(getattr(args, "claim_window_remaining", claim_window - active_claim_count) or 0),
         0,
+    )
+    claim_refill_needed = claim_window_policy.should_refill(
+        active_claim_count,
+        claim_window,
+        threshold=claim_refill_threshold,
     )
 
     transient_claim_wait = bool(claim_state_checked and args.claim_result_pending and args.github_read)
@@ -232,6 +248,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 not handoff_window_active
                 and independent_work
                 and claim_window_remaining > 0
+                and claim_refill_needed
             ):
                 required_action = "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY"
             else:
@@ -410,8 +427,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             )
     elif required_action == "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY":
         next_action_message = (
-            "foregroundのResearch/Auditを止めずにそのまま読解します。同時にclaim windowが4件へ戻るよう"
-            "standby補充用claim requestを1件だけ発行します。補充result待ちはforeground読解の同期障壁にせず、"
+            f"foregroundのResearch/Auditを止めずにそのまま読解します。active claimが低水位{claim_refill_threshold}件以下になったため、"
+            f"claim windowが{claim_window}件へ戻るようstandby補充用claim requestを1件だけ発行します。"
+            "補充result待ちはforeground読解の同期障壁にせず、"
             "foreground終端時は既確保standbyの先頭へ即座に昇格します。"
         )
     elif required_action == "CONTINUE_ASSIGNED_WORK":
@@ -499,6 +517,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "active_assignment": active_assignment,
         "active_claim_count": active_claim_count,
         "claim_window": claim_window,
+        "claim_refill_threshold": claim_refill_threshold,
+        "claim_refill_needed": claim_refill_needed,
         "claim_window_remaining": claim_window_remaining,
         "handoff_window_active": handoff_window_active,
         "final_handoff_active": final_handoff_active,
@@ -514,8 +534,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
             "pending claim/result identities are kept stable; instead of sleeping or fixed-interval polling, the worker runs one bounded wait microtask and then rechecks the same target until terminal or a canonical hard stop. "
             "When claimable independent Research/Audit work is available, pending submission results never block another paper claim. "
-            "Workers process only one foreground paper at a time, but Scheduled Chat keeps a four-claim window with up to three preclaimed standby papers. "
-            "A standby-refill claim result never blocks an already active foreground paper. When foreground becomes terminal, the oldest standby becomes foreground immediately and the window is refilled asynchronously. "
+            f"Workers process only one foreground paper at a time, while the configurable claim window defaults to {claim_window_policy.DEFAULT_CLAIM_WINDOW} active claims. "
+            f"A refill is triggered at the generalized low-watermark (normally half the window; current threshold {claim_refill_threshold}) and fills back toward the target window. "
+            "A standby-refill claim result never blocks an already active foreground paper. When foreground becomes terminal, the oldest standby becomes foreground immediately. "
             "All submitted attempts remain durably tracked. "
             "Submission results are monitored concurrently and become a foreground wait only when the 600-second no-new-work window begins or no Research/Audit job is claimable. Hourly Scheduled Chat workers prefer an actual-"
             "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
@@ -550,8 +571,9 @@ def main() -> int:
     ap.add_argument("--independent-work", type=yn, default=True)
     ap.add_argument("--active-assignment", type=yn, default=False)
     ap.add_argument("--active-claim-count", type=int, default=0)
-    ap.add_argument("--claim-window", type=int, default=4)
-    ap.add_argument("--claim-window-remaining", type=int, default=4)
+    ap.add_argument("--claim-window", type=int, default=claim_window_policy.DEFAULT_CLAIM_WINDOW)
+    ap.add_argument("--claim-refill-threshold", type=int, default=None)
+    ap.add_argument("--claim-window-remaining", type=int, default=claim_window_policy.DEFAULT_CLAIM_WINDOW)
     ap.add_argument("--spillover-work", type=yn, default=False)
     ap.add_argument("--can-discover", type=yn, default=True)
     ap.add_argument("--claim-state-checked", type=yn, default=False)
