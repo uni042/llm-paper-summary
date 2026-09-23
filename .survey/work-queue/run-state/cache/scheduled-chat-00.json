@@ -1,6 +1,6 @@
 {
-  "fact_generation": 52,
-  "generation": 66,
+  "fact_generation": 53,
+  "generation": 67,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
@@ -447,10 +447,13 @@
         "attempt-4507d6e7a694d747a350c3a0": {
           "attempt_id": "attempt-4507d6e7a694d747a350c3a0",
           "claimed_at": "2026-09-23T10:11:23+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-4507d6e7a694d747a350c3a0.json",
           "job_id": "job-research-e36fdfcc83960d96",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-23T10:16:28+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "scheduled-chat-00-20260923T190051JST-a41d72",
@@ -483,23 +486,22 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T10:01:42.135117+00:00",
-      "generation": 66,
+      "generation": 67,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-00-20260923T190051JST-a41d72",
       "scheduled_slot": "00",
       "submission": {
         "completed_attempt_ids": [
-          "attempt-0640a4e19fcd3a04140f52b1"
-        ],
-        "last_terminal_job_status": "completed",
-        "pending_attempt_ids": [
+          "attempt-0640a4e19fcd3a04140f52b1",
           "attempt-4507d6e7a694d747a350c3a0"
         ],
+        "last_terminal_job_status": "completed",
+        "pending_attempt_ids": [],
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 1,
+        "research_audit_completed_this_invocation": 2,
         "retryable_attempt_ids": [],
-        "submission_result_pending": true,
+        "submission_result_pending": false,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
           "attempt-0640a4e19fcd3a04140f52b1",
@@ -797,6 +799,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T10:16:01.229906+00:00",
+  "updated_at": "2026-09-23T10:16:28.751130+00:00",
   "worker_id": "scheduled-chat-00"
 }

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 19:10:17 JST**
+> 自動生成: **2026-09-23 19:16:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **150** |
-| 未claim Research job | **150** |
-| 直近24hの検証済みResearch収録 | **90** |
-| 最終検証済みResearch収録 | **09-23 19:10:12 JST（5秒前）** |
+| 収録候補論文 | **149** |
+| 未claim Research job | **148** |
+| 直近24hの検証済みResearch収録 | **91** |
+| 最終検証済みResearch収録 | **09-23 19:16:28 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **150** |
+| canonical_id確認済みの一意な候補論文 | **149** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **150** |
+| 非終端Research job合計 | **149** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（10時間39分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（10時間45分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **24** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **24** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **24** | **4** | **0** | **3** | **0** | **0** | **6** |
+| 合計 | **24** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 19:16:28 JST** [research] `arXiv:2509.14900` — FURINA: Free from Unmergeable Router via LINear Aggregation of mixed experts
+  - job: `.survey/work-queue/jobs/job-research-e36fdfcc83960d96.json`
+  - result: `.survey/work-queue/results/research/attempt-4507d6e7a694d747a350c3a0.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-4507d6e7a694d747a350c3a0.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2509.14900-furina-router-free-linear-expert-aggregation.md`
 - **09-23 19:10:12 JST** [research] `arXiv:2511.15690` — MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping
   - job: `.survey/work-queue/jobs/job-research-61e38612a8457ae4.json`
   - result: `.survey/work-queue/results/research/attempt-0640a4e19fcd3a04140f52b1.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-b1a52303c9877f76cd4ddc7e.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-b1a52303c9877f76cd4ddc7e.json`
   - paper: `papers/inference/99-other-inference-systems/2026-98d01325c44c-janus-joint-prefill-decode-disaggregation-with-kv-cache-aware-multi-cloud-routing-for-edge-adjacent-llm-serving.md`
-- **09-23 17:05:38 JST** [research] `arXiv:2609.15030` — Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache
-  - job: `.survey/work-queue/jobs/job-research-41c5d2a7e72d6309.json`
-  - result: `.survey/work-queue/results/research/attempt-1205cc442808cb1df99b7f86.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-1205cc442808cb1df99b7f86.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.15030-validating-hybrid-state-cache-recovery-for-glm-5-3-flash-with-vllm-and-lmcache.md`
 
 ### Audit
 
@@ -178,8 +178,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **0件** / 直近15分heartbeat: **0件**
-- 現在処理中と判定できる有効claimはありません。
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
+- `DOI:10.1109/icassp55912.2026.11465104` — Parsimony, Order and Balance: Principles for Compressing Mixture-of-Experts Models / worker `scheduled-chat-00`
+  - claim: **09-23 19:16:00 JST** / heartbeat: **—** / lease expiry: **09-23 20:46:00 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b5c12e0015184a80.json`
 
 #### Audit
 
@@ -199,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **150** |
+| ready | **149** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **995** |
+| inference/training/survey配下の論文Markdown実体 | **996** |
 
 ### immutable submissionの未照合
 
