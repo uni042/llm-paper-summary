@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-b2bab9973d68ecd4f1cace12","job_id":"job-research-9fc5a1ad8ad0b2d8","data":{"hardware":"Alveo U280上の8×8=64 tile FPGA実装。512-bit wormhole link、VN0/VN1各2 VC、VC入力FIFO 8 flit、tile-local KV stagingはURAM 512個（53%）、DSP48E2 5760個（64%）、LUT 613K（47%）。HBM2 8GB/460GB/sとDDR4 32GBを利用する。","software":"論文はRTL/FPGA datapath中心で、ソフトウェアframeworkの比較ではない。TaKV、Mare、Padをhardware datapathへ実装し、同一platform上のCENT、SHARED、TaKV-only、full MeshKVを比較する。","methodology":"LLaMA-2-7BとMistral-7Bを用い、context T={8192,32768}、batch B={1,4,8}でhardware measurementを行う。主指標はnormalized NoC traffic、bisection KV bandwidth utilization、per-token latency、decode throughput、energy estimate。throughputは5回のhardware runで95% CI<3%。ablationはT=32K、B=8、LLaMA-2-7Bで5回独立測定し平均±95% CIを報告する。","scope":"比較は同一U280上の通信方式を主眼とし、DFX/FlightLLM等とはplatform・mapping・memory system・datapathが異なるため絶対latency比較を避ける。MeshKVは完全なFFN/norm decoderではなくon-chip KV communication substrateである。モデル精度は変えないため品質benchmarkは主対象外。8×8と16×4の感度はあるが、GPU/ASIC実装やより大規模meshでの検証はない。"},"reservation":{"claim_id":"claim-b2bab9973d68ecd4f1cace12","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-ba794fbaa3ee0f39aef61a67",
+  "job_id": "job-research-5b745b5e455d855b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ba794fbaa3ee0f39aef61a67",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

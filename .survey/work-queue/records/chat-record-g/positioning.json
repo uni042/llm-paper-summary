@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-b2bab9973d68ecd4f1cace12","job_id":"job-research-9fc5a1ad8ad0b2d8","data":{"limitations":"MeshKVは完全なLLM acceleratorではなく、分散KV移動のon-chip communication substrateである。FFN、normalization、token samplingを含むend-to-end decoderの絶対latencyを既存FPGA systemと直接比較できない。評価platformはAlveo U280中心で、GPU、ASIC、chiplet実機への移植性は未検証。8×8では1.9倍だが16×4では長いmulticast treeにより1.4倍へ低下し、mesh形状依存性がある。16GiB級KVはHBMだけに収まらずDDR4も使い、tile URAMはstreaming windowなのでoff-chip供給自体は残る。モデル品質を変えない設計のため精度劣化はない一方、router/buffer/control資源とSRAM energy増を支払う。","differences":"PagedAttention/FlexGen/TinyServeがserving層でKVの仮想化・選択・offloadを行い、KIVI/KVQuant/H2O/SnapKVが保存byte数を減らすのに対し、MeshKVはresident/staged KVがtile間を通る残余通信を最適化する。FlashAttention系はattention計算とmemory IO tiling、DFX/FlightLLMはend-to-end FPGA mappingを主対象とするが、MeshKVはKV専用traffic class、distributed home、multicast tree、credit-aligned compute overlapをNoCへ組み込む。したがって圧縮/offloadとは競合より補完関係にある。","implementation_status":"TaKV、Mare、Padは8×8 Alveo U280 hardware datapathとして実装・測定済み。64 tile、512-bit link、2 virtual network、4-bank KV staging、dh=128 systolic PEを用いる。router/bloom/tag logicはLUTの5%未満で、device全体ではDSP48E2使用率64%が主なbottleneck。throughput等は5回hardware runで95% CIを報告している。公開code URLは本文から確認できない。","research_positioning":"長文脈推論のボトルネックを『KVをどれだけ小さくするか』だけでなく『残ったKVをどの経路で誰へ配るか』へ拡張する研究として位置づけられる。特にhead-group localityを12-cycle coalescingへ、layer-major localityをprefetch windowへ直接写像しており、LLM access patternとNoC mechanismの対応が明確。58% traffic削減、2.1倍帯域利用率、1.9倍multi-stream throughputは同一platform baselineで得られているため通信基盤としての効果は比較的解釈しやすい。一方、実運用価値を確定するにはend-to-end decoder統合、より大きいmesh/chiplet、異なるKV圧縮・offload方式との合成評価、GPU/ASIC実装が必要である。"},"reservation":{"claim_id":"claim-b2bab9973d68ecd4f1cace12","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ba794fbaa3ee0f39aef61a67",
+  "job_id": "job-research-5b745b5e455d855b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ba794fbaa3ee0f39aef61a67",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}

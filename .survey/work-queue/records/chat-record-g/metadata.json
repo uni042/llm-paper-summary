@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-b2bab9973d68ecd4f1cace12","job_id":"job-research-9fc5a1ad8ad0b2d8","data":{"canonical_id":"arXiv:2609.19207","arxiv_id":"2609.19207","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.AR","cross_list":["cs.AI"]},"title":"MeshKV: A Network-on-Chip KV Cache Fabric for Scalable Transformer Decoding Accelerators","summary":"長文脈の大規模言語モデルを逐次生成すると、タイル型加速器内の鍵値キャッシュ転送が中央注入点とメッシュ二分線へ集中する。MeshKVは鍵値ブロックをオンチップ網のパケット流として扱い、TaKVのアフィン分散配置、Mareの重複抑制付き多地点配信、Padの通信・計算重畳を協調設計する。8×8のAlveo U280実装でLLaMA-2-7BとMistral-7Bを8K–32K文脈で測定し、中央方式比で相互接続通信量を最大58%削減、共有配置方式比で鍵値帯域利用率を2.1倍、8並列時の生成処理量を最大1.90倍にした。","list_summary":"鍵値キャッシュをオンチップ網の分散流へ変換し、8×8 FPGA実装で通信量最大58%削減、鍵値帯域利用率2.1倍、生成処理量最大1.90倍を実測する。","authors":["Dong Liu","Yanxuan Yu"],"authors_affiliations":"University of California, Los Angeles; Columbia University","published":"2026-09-16","publication":"arXiv:2609.19207v1 / IEEE ICCD 2026 accepted conference paper","publication_type":"会議採択プレプリント","publication_status":"v1・ICCD 2026採択","lineage":"鍵値キャッシュ転送・オンチップ網・タイル型推論加速器","topics":["鍵値キャッシュ","オンチップネットワーク","長文脈推論","FPGA","多地点配信"],"importance":"鍵値容量そのものを削るのではなく、残存する鍵値をタイル間でどう運ぶかを独立したシステム問題として扱い、配置、経路制御、注意計算の流れを同一ハードウェアで協調最適化した点が重要である。","implementation":"8×8タイル型FPGA加速器。512ビットのワームホールリンク、4バンクのタイル内鍵値SRAM、次元128のシストリック演算器、2つの仮想網を備える。","hardware_evaluation":"AMD/Xilinx Alveo U280。HBM2は8GB・460GB/s、DDR4は32GB、計64タイル。","quality_effect":"モデルの数値表現を近似する圧縮法ではなく同じ注意計算の通信基盤を変更するため、精度低下との交換条件は主評価対象ではない。","source":"https://arxiv.org/abs/2609.19207","sources":["https://arxiv.org/abs/2609.19207","https://arxiv.org/pdf/2609.19207"],"code":null,"last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"一次論文の参考文献節を確認済み。正規識別子として追加する項目なし","references_total":24},"reservation":{"claim_id":"claim-b2bab9973d68ecd4f1cace12","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-ba794fbaa3ee0f39aef61a67",
+  "job_id": "job-research-5b745b5e455d855b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ba794fbaa3ee0f39aef61a67",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
+}
