@@ -122,7 +122,7 @@ def _candidate_inventory(root: Path) -> int:
     return max(int(research.get("ready", 0) or 0), 0) + max(int(audit.get("ready", 0) or 0), 0)
 
 
-def _frozen_route(root: Path, run_key: str) -> tuple[int, str] | None:
+def _frozen_route(root: Path, run_key: str, worker_id: str | None = None) -> tuple[int, str] | None:
     result_root = root / RESULTS
     if not result_root.is_dir():
         return None
@@ -132,6 +132,8 @@ def _frozen_route(root: Path, run_key: str) -> tuple[int, str] | None:
         if not isinstance(value, dict) or value.get("ok") is not True:
             continue
         if str(value.get("run_key") or "") != run_key:
+            continue
+        if worker_id is not None and value.get("worker_id") not in (None, worker_id):
             continue
         inventory = value.get("candidate_inventory")
         mode = value.get("work_mode")
@@ -516,7 +518,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
 
     cache = None if force_canonical else worker_run_index.load_cache(root, request)
     cached_route = worker_run_index.cached_route(cache) if cache is not None else None
-    frozen = cached_route if cached_route is not None else _frozen_route(root, request["run_key"])
+    frozen = cached_route if cached_route is not None else _frozen_route(root, request["run_key"], request["worker_id"])
     if request["scheduled_slot"] == "0830":
         inventory = _candidate_inventory(root) if frozen is None else frozen[0]
         work_mode = "maintenance"
