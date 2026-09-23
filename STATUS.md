@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 14:07:46 JST**
+> 自動生成: **2026-09-23 14:13:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **174** |
-| 未claim Research job | **174** |
-| 直近24hの検証済みResearch収録 | **83** |
-| 最終検証済みResearch収録 | **09-23 14:07:39 JST（7秒前）** |
+| 収録候補論文 | **173** |
+| 未claim Research job | **173** |
+| 直近24hの検証済みResearch収録 | **84** |
+| 最終検証済みResearch収録 | **09-23 14:12:55 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **174** |
+| canonical_id確認済みの一意な候補論文 | **173** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **174** |
+| 非終端Research job合計 | **173** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -33,9 +33,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6431** |
+| 構造化references総候補 | **6432** |
 | 処理済み | **638** |
-| 未処理 | **5793** |
+| 未処理 | **5794** |
 | 収録済みとして除外 | **530** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（5時間36分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（5時間42分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 14:12:55 JST** [research] `arXiv:2608.13565` — Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking
+  - job: `.survey/work-queue/jobs/job-research-c58272e75725b517.json`
+  - result: `.survey/work-queue/results/research/attempt-5e8cb6bdeb7cddafe8c55c3a.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-5e8cb6bdeb7cddafe8c55c3a.json`
+  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.13565-depth-aware-moe-sensitivity.md`
 - **09-23 14:07:39 JST** [research] `arXiv:2605.06663` — EMO: Pretraining Mixture of Experts for Emergent Modularity
   - job: `.survey/work-queue/jobs/job-research-2c92c0a3b8a6da0e.json`
   - result: `.survey/work-queue/results/research/attempt-921f188aa26d60b7af5ae872.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-1cdc9fc5138a75e71558bf84.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-1cdc9fc5138a75e71558bf84.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md`
-- **09-23 10:09:20 JST** [research] `arXiv:2211.05102` — Efficiently Scaling Transformer Inference
-  - job: `.survey/work-queue/jobs/job-research-f719eedd6807af4c.json`
-  - result: `.survey/work-queue/results/research/attempt-01b29ed73471ef21eb33ce79.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-01b29ed73471ef21eb33ce79.json`
-  - paper: `papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md`
 
 ### Audit
 
@@ -199,7 +199,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **174** |
+| ready | **173** |
 
 ### 候補の重複・識別情報欠損
 
@@ -219,7 +219,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **976** |
+| inference/training/survey配下の論文Markdown実体 | **977** |
 
 ### immutable submissionの未照合
 
