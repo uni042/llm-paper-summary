@@ -834,15 +834,18 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
 
 
 def maintain_shared_pool(repo_root: Path, at: Any = None) -> dict[str, int]:
-    """Top up the global FIFO inventory and reserve banks for newly loaded claims."""
+    """Top up logical FIFO paper stock without banking the waiting pool.
+
+    The reconciliation pass also frees old preload/cold reservations left by the
+    pre-separation implementation and makes sure each active worker's hot slice is
+    bank-ready.
+    """
     root = Path(repo_root).resolve()
     now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
-    before_claim_ids = _active_claim_ids(root, now)
     result = claim_worker.maintain_shared_pool(root, at=now)
-    after_claim_ids = _active_claim_ids(root, now)
     bank_result = reserve_new_claim_banks(
         root,
-        new_claim_ids=after_claim_ids - before_claim_ids,
+        new_claim_ids=set(),
         at=now,
     )
     return {
