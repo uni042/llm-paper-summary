@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-1205cc442808cb1df99b7f86",
-  "job_id": "job-research-41c5d2a7e72d6309",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1205cc442808cb1df99b7f86",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1205cc442808cb1df99b7f86","job_id":"job-research-41c5d2a7e72d6309","data":{"hardware":"RedHatAI/GLM-5.3-Flash-NVFP4量子化チェックポイントの全45層を4-way tensor parallelismで実行する。LMCacheのCPU側キャッシュ再ロードとGPU側の修正済みcold recomputationを比較対象とする。","software":"推論基盤はvLLM、外部キャッシュ層はLMCache。比較時にはrankごとのカーネル構成、チェックポイントのスケジューリング、共有計算補正を固定し、キャッシュ復旧経路以外の差を抑える。","methodology":"第一段階では9種類の入力長について各4生成、計36本の64-token token-ID列を比較する。修正前後で一致数を測る。第二段階ではinstrumentationを入れ、transfer-page、effective-tail、delayed-saveの内部条件を検査する。第三段階では3種類の合成テンプレートを2つのfresh-container runで実行し、合計72組の256-token継続を比較する。最終段階では直列120要求で出力一致を確認しつつ、CPU reloadと修正済みcold recomputationのTTFTおよびtotal request timeを比較する。","scope":"単一のGLM-5.3-Flash revision、NVFP4チェックポイント、制御された4-way TP構成に限定した統合検証である。並行サービング、異なるモデル・LMCache版・GPU構成、GPUメモリ容量を超える運用は評価していない。token-ID一致はこの条件下の再現性を示すが、一般的な決定性や意味品質の同等性を保証しない。"},"reservation":{"claim_id":"claim-1205cc442808cb1df99b7f86","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
