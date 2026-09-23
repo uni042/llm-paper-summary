@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T16:52:10+00:00",
-  "last_run_key": "adhoc-20260924T014906JST-worker-915242",
-  "last_round": "adhoc-20260924T014906JST-worker-915242-backward-take-1",
+  "updated_at": "2026-09-23T16:55:08+00:00",
+  "last_run_key": "adhoc-20260924T014100JST-worker-915241",
+  "last_round": "20260924T014100JST-worker-915241-forward-r3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T20:00:00+09:00",
-      "round": "specialist-exhaust-ssd-12",
-      "axis": "SSD/NVMe・GPU-direct KV storage再スイープ",
-      "query_summary": "SSD-backed KV、GPU Direct Storage、GPU-centric object I/Oを再確認したが、Tutti等の主要候補は既知で追加の強候補は得られなかった。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 2,
-      "novel_candidate_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2605.03375",
-        "arXiv:2604.26557"
-      ],
-      "next_axis_hint": "MoE expert offload/cache/prefetchを再スイープする",
-      "source_submission": "work-queue/submissions/20260916T2048JST-discovery-specialist-exhaust-ssd-12.json"
-    },
     {
       "run_key": "2026-09-16T20:00:00+09:00",
       "round": "specialist-exhaust-moe-13",
@@ -8503,6 +8485,46 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.05,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T014100JST-worker-915241-forward-r3",
+      "precheck_request_id": "20260924T014100JST-worker-915241-forward-r3",
+      "run_key": "adhoc-20260924T014100JST-worker-915241",
+      "round": "20260924T014100JST-worker-915241-forward-r3",
+      "axis": "forward citations of H2O KV cache eviction and efficient inference",
+      "query_summary": "Forward citations of H2O from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot and topped up from the same fixed source.",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "forward",
+      "seed_canonical_id": "arXiv:2306.14048",
+      "preload_id": "preload-63b2af59853ecc9ed656",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [
+        "arXiv:2608.02691",
+        "DOI:10.1109/TCASAI.2026.3670075",
+        "arXiv:2607.24331",
+        "arXiv:2607.24555",
+        "arXiv:2607.22389"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T014100JST-worker-915241-forward-r3-submit.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T014100JST-worker-915241-forward-r3-submit.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16276,14 +16298,14 @@
       "next_axis_hint": null
     },
     "forward citations of H2O KV cache eviction and efficient inference": {
-      "last_run_key": "adhoc-20260924T005200+09-00-worker-240052",
-      "rounds": 2,
-      "candidate_count": 25,
+      "last_run_key": "adhoc-20260924T014100JST-worker-915241",
+      "rounds": 3,
+      "candidate_count": 45,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 25,
+      "novel_candidate_count": 45,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 25,
-      "accepted_count": 10,
+      "post_final_dedupe_count": 45,
+      "accepted_count": 15,
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
