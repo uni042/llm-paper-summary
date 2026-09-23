@@ -76,9 +76,18 @@ jobs:
               --mode completed \
               --manifest /tmp/completed-builder.json
             built="$(jq -r '.built_descriptors | length' /tmp/completed-builder.json)"
+            jq -r '.built_descriptors[]?' /tmp/completed-builder.json > /tmp/new-descriptors.txt
+            python .survey/scripts/update_worker_run_index.py \
+              --repo-root . \
+              --descriptors-file /tmp/new-descriptors.txt \
+              --manifest /tmp/run-index-descriptors.json
+            python .survey/scripts/compact_worker_hot_queue.py --repo-root . --apply
 
-            git add \
+            git add -A \
+              .survey/work-queue/completed-submission-requests \
               .survey/work-queue/completed-submission-failures \
+              .survey/work-queue/research-preflight \
+              .survey/work-queue/run-state/cache \
               .survey/work-queue/submissions/research \
               .survey/work-queue/submissions/audit
 
