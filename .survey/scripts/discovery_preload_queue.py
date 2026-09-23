@@ -141,9 +141,14 @@ def _status(root: Path, entry: dict[str, Any], now: dt.datetime) -> str:
         return "INGESTED"
     if _active_claim(root, preload_id, now) is not None:
         return "CLAIMED"
-    result = _read(root / _result_path(entry), {})
-    if isinstance(result, dict) and result.get("ok") is True and result.get("evaluation_allowed") is True:
-        return "PRECHECKED"
+    result_path = root / _result_path(entry)
+    result = _read(result_path, {})
+    if isinstance(result, dict) and result:
+        if result.get("ok") is True and result.get("evaluation_allowed") is True:
+            return "PRECHECKED"
+        # A persisted terminal failure is not pending stock. It must not count
+        # toward the warm target or be offered to a real worker.
+        return "FAILED"
     request = root / PRECHECK_REQUESTS / f"{entry.get('precheck_request_id')}.json"
     if request.is_file():
         return "READY"
@@ -282,8 +287,13 @@ def _latest_for_source(
 
 def _next_cursor_for_entry(root: Path, entry: dict[str, Any]) -> tuple[bool, str | None]:
     result = _read(root / _result_path(entry), {})
-    if not isinstance(result, dict) or result.get("ok") is not True:
+    if not isinstance(result, dict) or not result:
         return False, None
+    if result.get("ok") is not True:
+        # Retry a failed fixed-source window with a fresh immutable preload
+        # identity rather than leaving that source dead until the next bucket.
+        cursor = entry.get("initial_cursor")
+        return True, cursor if isinstance(cursor, str) else None
     if result.get("provider_exhausted") is True:
         return False, None
     cursor = result.get("next_cursor")
