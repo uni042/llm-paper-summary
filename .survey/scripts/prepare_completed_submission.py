@@ -82,7 +82,7 @@ def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path
         raise ValueError("preflight result operation mismatch")
     if result.get("ok") is not True or result.get("preflight_passed") is not True:
         raise ValueError("preflight has not passed; repair the record and run a new preflight")
-    for field in ("kind", "attempt_id", "job_id", "record_bank", "paper_path"):
+    for field in ("kind", "attempt_id", "job_id", "record_bank", "paper_path", "worker_id", "run_key", "scheduled_slot", "actual_invocation_start"):
         if result.get(field) != descriptor.get(field):
             raise ValueError(f"preflight result {field} does not match completed descriptor")
     expected = descriptor_fingerprint(descriptor)
@@ -93,7 +93,7 @@ def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path
     return result
 
 
-def build(repo: Path, *, kind: str, attempt_id: str, job_id: str, record_bank: str, paper_path: str | None = None, expected_blob_sha: str | None = None) -> dict:
+def build(repo: Path, *, kind: str, attempt_id: str, job_id: str, record_bank: str, paper_path: str | None = None, expected_blob_sha: str | None = None, worker_id: str | None = None, run_key: str | None = None, scheduled_slot: str | None = None, actual_invocation_start: str | None = None) -> dict:
     repo = repo.resolve()
     bank = record_bank.lower()
     if bank not in BANK_ROOTS:
@@ -116,6 +116,14 @@ def build(repo: Path, *, kind: str, attempt_id: str, job_id: str, record_bank: s
         descriptor["paper_path"] = paper_path
     if expected_blob_sha:
         descriptor["expected_blob_sha"] = expected_blob_sha
+    for field, value in (
+        ("worker_id", worker_id),
+        ("run_key", run_key),
+        ("scheduled_slot", scheduled_slot),
+        ("actual_invocation_start", actual_invocation_start),
+    ):
+        if value not in (None, ""):
+            descriptor[field] = value
     return validate_descriptor(repo, descriptor)
 
 
@@ -128,6 +136,10 @@ def main() -> int:
     parser.add_argument("--record-bank", required=True)
     parser.add_argument("--paper-path")
     parser.add_argument("--expected-blob-sha")
+    parser.add_argument("--worker-id")
+    parser.add_argument("--run-key")
+    parser.add_argument("--scheduled-slot")
+    parser.add_argument("--actual-invocation-start")
     parser.add_argument("--preflight-result", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
@@ -144,6 +156,10 @@ def main() -> int:
         record_bank=args.record_bank,
         paper_path=args.paper_path,
         expected_blob_sha=expected_blob_sha,
+        worker_id=args.worker_id,
+        run_key=args.run_key,
+        scheduled_slot=args.scheduled_slot,
+        actual_invocation_start=args.actual_invocation_start,
     )
     verify_preflight_result(args.repo_root, descriptor, args.preflight_result)
     args.output.parent.mkdir(parents=True, exist_ok=True)
