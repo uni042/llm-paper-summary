@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-23T14:40:12+00:00",
-  "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
-  "last_round": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair",
+  "updated_at": "2026-09-23T14:42:29+00:00",
+  "last_run_key": "adhoc-20260923T233300JST-worker-923331",
+  "last_round": "adhoc-20260923T233300JST-worker-923331-backward-01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,25 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-16T19:00:00+09:00",
-      "round": "specialist-serving-elasticity-20",
-      "axis": "MoE serverless elasticity・token-budget fleet routing",
-      "query_summary": "2026年3〜5月のserving system未収録候補を再走査し、MoE elastic scalingとfleet-level token-budget routingの2件を選定した。",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 3,
-      "novel_candidate_count": 2,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.6,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.07609",
-        "arXiv:2606.15555",
-        "arXiv:2602.02987"
-      ],
-      "next_axis_hint": "candidate inventoryがoverflow thresholdへ近づいている可能性があるためcanonical state反映を確認し、50超ならresearchへ切替する",
-      "source_submission": "work-queue/submissions/20260916T1959JST-discovery-specialist-serving-elasticity-20.json"
-    },
     {
       "run_key": "2026-09-16T19:00:00+09:00",
       "round": "specialist-older-omissions-21",
@@ -8156,6 +8137,43 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:adhoc-20260923T233300JST-worker-923331-backward-01",
+      "precheck_request_id": "adhoc-20260923T233300JST-worker-923331-backward-01",
+      "run_key": "adhoc-20260923T233300JST-worker-923331",
+      "round": "adhoc-20260923T233300JST-worker-923331-backward-01",
+      "axis": "repository-wide structured references for LLM inference systems",
+      "query_summary": "repository_references schema v3で固定sourceから100件を走査し、既存identity/rejectionを除外して未評価20件を取得。一次資料でtitle/abstractを補完し、推論効率・動的計算・長文脈に直接寄与する3件をResearch候補化した。",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 1,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [
+        "arXiv:2606.19348",
+        "arXiv:2404.02258",
+        "arXiv:2312.00752"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "same-run forward citation refresh",
+      "source_submission": "work-queue/submissions/adhoc-20260923T233300JST-worker-923331-backward-01.json",
+      "source_submissions": [
+        "work-queue/submissions/adhoc-20260923T233300JST-worker-923331-backward-01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 19,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.05,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -15487,16 +15505,16 @@
       "next_axis_hint": null
     },
     "repository-wide structured references for LLM inference systems": {
-      "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
-      "rounds": 4,
-      "candidate_count": 45,
+      "last_run_key": "adhoc-20260923T233300JST-worker-923331",
+      "rounds": 5,
+      "candidate_count": 65,
       "duplicate_filtered_count": 0,
-      "novel_candidate_count": 45,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 45,
-      "accepted_count": 10,
+      "novel_candidate_count": 65,
+      "final_duplicate_filtered_count": 1,
+      "post_final_dedupe_count": 64,
+      "accepted_count": 12,
       "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.015384615384615385,
       "next_axis_hint": "same-run forward citation refresh"
     },
     "forward citations of FlashAttention for recent attention kernels and serving systems": {
@@ -16838,20 +16856,20 @@
       "citation_direction": "backward",
       "query_family": "structured-reference-curation",
       "search_window_key": "window-04e36e1566c19f9e7ebc",
-      "scan_count": 2,
-      "raw_result_count": 200,
-      "unseen_result_count": 40,
-      "duplicate_filtered_count": 46,
-      "rejection_filtered_count": 2,
-      "candidate_evaluation_count": 40,
-      "candidate_accepted_count": 5,
+      "scan_count": 3,
+      "raw_result_count": 300,
+      "unseen_result_count": 60,
+      "duplicate_filtered_count": 71,
+      "rejection_filtered_count": 3,
+      "candidate_evaluation_count": 60,
+      "candidate_accepted_count": 8,
       "last_position": "offset-0",
       "unseen_rate": 0.2,
-      "duplicate_rate": 0.23,
-      "candidate_acceptance_rate": 0.125,
+      "duplicate_rate": 0.23666666666666666,
+      "candidate_acceptance_rate": 0.13333333333333333,
       "cooldown": false,
-      "last_run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
-      "last_round": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair"
+      "last_run_key": "adhoc-20260923T233300JST-worker-923331",
+      "last_round": "adhoc-20260923T233300JST-worker-923331-backward-01"
     },
     "window-4307f4d54979e103a426": {
       "topic": "flexgen forward citations",
@@ -17758,6 +17776,27 @@
       "unseen_rate": 0.2,
       "duplicate_rate": 0.25,
       "candidate_acceptance_rate": 0.05,
+      "last_position": "offset-0"
+    },
+    {
+      "topic": "structured-references",
+      "source": "repository_references",
+      "date_range": "repository-wide",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "structured-reference-curation",
+      "search_window_key": "window-04e36e1566c19f9e7ebc",
+      "run_key": "adhoc-20260923T233300JST-worker-923331",
+      "round": "adhoc-20260923T233300JST-worker-923331-backward-01",
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 25,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 3,
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.25,
+      "candidate_acceptance_rate": 0.15,
       "last_position": "offset-0"
     }
   ],
