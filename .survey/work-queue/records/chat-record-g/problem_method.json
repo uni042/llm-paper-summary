@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-b2bab9973d68ecd4f1cace12",
-  "job_id": "job-research-9fc5a1ad8ad0b2d8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b2bab9973d68ecd4f1cace12",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-b2bab9973d68ecd4f1cace12","job_id":"job-research-9fc5a1ad8ad0b2d8","data":{"problem":"自己回帰デコードでは各トークンごとに増大するKVキャッシュ全体を読む必要があり、LLaMA-2-7BをFP16・T=32768で扱うとKVは約16GiBに達する。タイル型アクセラレータでKVを中央メモリ経路から供給すると多数の要求が同じ注入点・二分線へ集中し、リンク周期の40–60%がバックプレッシャに消費される。圧縮やDRAM配置は転送バイト数を減らせても、残ったKVのオンチップ転送集中を直接は解かない。","novelty":"MeshKVはKVキャッシュを単なるメモリ内容ではなく通信基盤として扱う。TaKVでKVブロックのhome tileをアフィン分散し、Mareで近接するhead要求を合流してtree multicastし、PadでNoC往復遅延をprefetch・tile multiply・online softmaxへ重畳する。容量圧縮ではなく配置・routing・compute pipelineを一体化したNoC中心設計である。","method_overview":"P=64 tokenのmacro-block B(l,s)を配置単位とし、homeをπ(l,s)=(l mod W,(a·l+s) mod H)へ写像する。aはHと互いに素な奇数とし、層・segmentを異なる行列位置へ散らす。128 stepごとにcredit counter由来のoccupancyを見て、二乗負荷を減らす場合だけhomeをswapする。Mareは12-cycle window内のhead maskをmergeし、XYM spanning treeでKV_DATAをbranch時だけ複製する。16-entry exact tagと256-bit bloomを併用するが、drop判定はexact hitだけなのでbloom false positiveで初回payloadを失わない。PadはPF/TM/RDの3段をsegment間で重ね、48-flit FIFOで約22-cycle RTTとcoalescing windowを隠す。","components":[{"name":"TaKV topology-aware striping","description":"1MB macro-blockをアフィン写像で64 tileへ分散し、平均hop短縮ではなく最大注入負荷とbisection hotspotを平準化する。128 stepごとの軽量occupancy swapでskewed prefixにも追従する。"},{"name":"Mare multicast routing engine","description":"KV_FETCH/KV_DATAをVN1、PART reductionをVN0へ分離。12-cycle coalescingで同一segment要求をhead maskへまとめ、XYM treeでpayloadを各link最大1回通す。VN分離とrestricted turnsでdeadlock cycleを構造的に排除する。"},{"name":"Pad pipelined attention dataflow","description":"次segmentのKV_FETCH、現在segmentのqK計算、前segmentのonline softmax/reductionを重畳する。48-flit FIFOはNoC RTT約22cycleとmerge windowを吸収し、V flitから完全attention matrixをmaterializeしない。"}],"system_design":"各tileはMAC array、4-bank KV staging SRAM、partial-sum scratchpad、2-VN routerを持つ。U280のURAMは1MB block全体を置くのではなく各tile 288KBのstreaming windowとして使い、HBM/DDRからtile-local prefetch descriptorで昇格する。これによりmemory plane(TaKV)、router plane(Mare)、compute plane(Pad)を同じKV flow identityで接続する。"},"reservation":{"claim_id":"claim-b2bab9973d68ecd4f1cace12","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
