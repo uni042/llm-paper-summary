@@ -13,6 +13,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+import claim_window_policy
 import worker_identity
 
 CACHE_ROOT = Path(".survey/work-queue/run-state/cache")
@@ -20,7 +21,7 @@ LATEST_ROOT = Path(".survey/work-queue/run-state/latest")
 FACT_CLOCK = Path(".survey/work-queue/run-state/fact-clock.json")
 ALLOWED_WORKERS = set(worker_identity.FIXED_SCHEDULED_WORKER_SLOTS)
 TERMINAL = {"completed", "blocked", "deferred", "rejected"}
-SCHEDULED_CHAT_CLAIM_WINDOW = 4
+SCHEDULED_CHAT_CLAIM_WINDOW = claim_window_policy.DEFAULT_CLAIM_WINDOW
 
 
 def parse_time(value: Any) -> dt.datetime | None:
@@ -281,6 +282,7 @@ def _apply_claim_window_fields(
     claims["active_assignment"] = bool(active_jobs)
     claims["active_claim_count"] = len(active_jobs)
     claims["claim_window"] = window
+    claims["claim_refill_threshold"] = claim_window_policy.refill_threshold(window)
     claims["claim_window_remaining"] = max(window - len(active_jobs), 0)
     claims["foreground_job_id"] = active_jobs[0] if active_jobs else None
     claims["standby_job_ids"] = active_jobs[1:]
