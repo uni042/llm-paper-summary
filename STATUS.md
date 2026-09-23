@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 21:58:49 JST**
+> 自動生成: **2026-09-23 22:05:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **139** |
-| 未claim Research job | **116** |
-| 直近24hの検証済みResearch収録 | **84** |
-| 最終検証済みResearch収録 | **09-23 21:58:44 JST（5秒前）** |
+| 収録候補論文 | **138** |
+| 未claim Research job | **115** |
+| 直近24hの検証済みResearch収録 | **85** |
+| 最終検証済みResearch収録 | **09-23 22:05:03 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **139** |
+| canonical_id確認済みの一意な候補論文 | **138** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **139** |
+| 非終端Research job合計 | **138** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,13 +34,13 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6674** |
-| 処理済み | **649** |
-| 未処理 | **6025** |
-| 収録済みとして除外 | **541** |
+| 処理済み | **651** |
+| 未処理 | **6023** |
+| 収録済みとして除外 | **543** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
-- 消化率: **9.7%**
+- 消化率: **9.8%**
 - 処理済み = 収録済み + 無関係 + 微妙。offsetは候補リスト上の開始位置であり、処理済み件数には使いません。
 - STATUS生成時にpaper実体と無関係/微妙台帳からゼロベースで再計算します。過去のschema-v3 precheck snapshotは表示値の根拠にしません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（13時間27分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（13時間34分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **19** | **2** | **0** | **0** | **23** | **3** | — |
+| Research | **20** | **2** | **0** | **0** | **23** | **3** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **19** | **5** | **0** | **3** | **23** | **3** | **6** |
+| 合計 | **20** | **5** | **0** | **3** | **23** | **3** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 22:05:03 JST** [research] `DOI:10.1145/3651890.3672274` — CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving
+  - job: `.survey/work-queue/jobs/job-research-958b0ab5aeb9819d.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-e320c142c976a89229191f7e.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-e320c142c976a89229191f7e.json`
+  - paper: `papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md`
 - **09-23 21:58:44 JST** [research] `arXiv:2408.12757` — NanoFlow: Towards Optimal Large Language Model Serving Throughput
   - job: `.survey/work-queue/jobs/job-research-6882c5cf191305a1.json`
   - result: `.survey/work-queue/results/research/attempt-preload-84011e35924af607152554c4.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-bcdd660e4bafb23e846f2ec8.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-bcdd660e4bafb23e846f2ec8.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md`
-- **09-23 18:41:19 JST** [research] `arXiv:2410.18248` — Fast Inference for Augmented Large Language Models
-  - job: `.survey/work-queue/jobs/job-research-c7bef3f1698aa85a.json`
-  - result: `.survey/work-queue/results/research/attempt-54c192f36494effc75698854.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-54c192f36494effc75698854.json`
-  - paper: `papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.18248-lamps.md`
 
 ### Audit
 
@@ -181,14 +181,17 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research
 
 - 未失効かつ非terminal jobのclaim: **23件** / 直近15分heartbeat: **3件**
+- `DOI:10.1016/j.neunet.2026.109617` — MoEP: Compact and efficient sparsity with modular expert paths / worker `shared-preload-pool`
+  - claim: **09-23 22:01:32 JST** / heartbeat: **—** / lease expiry: **09-24 10:01:32 JST**
+  - evidence: `.survey/work-queue/claims/job-research-62f6ca15b903420d.json`
 - `arXiv:2405.04532` — QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving / worker `scheduled-chat-00`
-  - claim: **09-23 21:48:47 JST** / heartbeat: **09-23 21:48:47 JST** / lease expiry: **09-23 23:18:47 JST**
+  - claim: **09-23 21:48:47 JST** / heartbeat: **09-23 22:01:31 JST** / lease expiry: **09-23 23:31:31 JST**
   - evidence: `.survey/work-queue/claims/job-research-0e84e93a7c48f41f.json`
-- `DOI:10.1145/3651890.3672274` — CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving / worker `scheduled-chat-00`
-  - claim: **09-23 21:48:47 JST** / heartbeat: **09-23 21:48:47 JST** / lease expiry: **09-23 23:18:47 JST**
-  - evidence: `.survey/work-queue/claims/job-research-958b0ab5aeb9819d.json`
+- `arXiv:2405.14636` — PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services / worker `scheduled-chat-00`
+  - claim: **09-23 22:01:31 JST** / heartbeat: **09-23 22:01:31 JST** / lease expiry: **09-23 23:31:31 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c0742ec707ffbbe8.json`
 - `arXiv:2608.24063` — VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference / worker `scheduled-chat-00`
-  - claim: **09-23 21:48:47 JST** / heartbeat: **09-23 21:48:47 JST** / lease expiry: **09-23 23:18:47 JST**
+  - claim: **09-23 21:48:47 JST** / heartbeat: **09-23 22:01:31 JST** / lease expiry: **09-23 23:31:31 JST**
   - evidence: `.survey/work-queue/claims/job-research-cd6b2c0b1a74df08.json`
 - `arXiv:2603.10087` — Pooling Engram Conditional Memory in Large Language Models using CXL / worker `shared-preload-pool`
   - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
@@ -208,9 +211,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `DOI:10.1007/s44196-026-01236-9` — Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models / worker `shared-preload-pool`
   - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
   - evidence: `.survey/work-queue/claims/job-research-75eff2262d950b6f.json`
-- `arXiv:2407.15891` — RazorAttention: Efficient KV Cache Compression Through Retrieval Heads / worker `shared-preload-pool`
-  - claim: **09-23 21:41:31 JST** / heartbeat: **—** / lease expiry: **09-24 09:41:31 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8336bf916cc1d939.json`
 
 #### Audit
 
@@ -230,7 +230,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **139** |
+| ready | **138** |
 
 ### 候補の重複・識別情報欠損
 
@@ -250,7 +250,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1001** |
+| inference/training/survey配下の論文Markdown実体 | **1002** |
 
 ### immutable submissionの未照合
 
