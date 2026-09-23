@@ -4,10 +4,17 @@
   "slot": "problem_method",
   "attempt_id": "attempt-0640a4e19fcd3a04140f52b1",
   "job_id": "job-research-61e38612a8457ae4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0640a4e19fcd3a04140f52b1",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "MoE MLLMは各tokenで固定数のtop-k expertを実行するため、選択されたexpertの寄与が小さくても計算する。既存のNAEE、MC-MoE、DiEPなどのexpert skippingは主にunimodal LLM向けで、MLLMへ直接移すと高skip率で大幅な精度低下が起きる。著者は原因を、(1) shallow/deep層で最終出力へのexpert寄与が大きく異なるのにlocal routing probabilityだけを見ること、(2) vision tokenはtext tokenよりFFN更新が小さくexpert冗長性が高いのにmodality差を無視すること、と分析する。",
+    "novelty": "MoDESはtraining-freeなMLLM専用expert skippingとして、層全体のglobal contributionをlocal routing probabilityへ乗算するGMLGと、text/visionで独立したthresholdを持つDMTを統合する。さらに2次元threshold gridの全探索を避け、性能損失とskip率の単調性からfeasible frontierだけを評価するfrontier searchを導入する。",
+    "method_overview": "各MoE層lについて、較正集合Cで通常モデルの出力分布と当該層expertをskipしたモデルの出力分布との平均KL divergenceをα(l)として事前計算する。推論時、元routerが選んだtop-k expert iのlocal routing probability π_i(l)にα(l)を掛け、s_i(l)=α(l)π_i(l)をimportance scoreとする。DMTはtext tokenにはτ_t、vision tokenにはτ_vを適用し、scoreが対応threshold未満のexpertをskipする。τ_t,τ_vは目標skip率ρを満たしつつ元モデルとの出力差fを最小化するよう較正集合上で探索する。g(τ_t,τ_v)の単調性とfの単調性仮定を使い、各τ_tに対する最小feasible τ_vだけからfrontierを作ることで探索をO(ND)にする。",
+    "components": [
+      {"name": "Globally-Modulated Local Gating (GMLG)", "description": "layer lを丸ごとexpert-skipしたcounterpartと元モデルの出力KLを1024-sample calibrationで測り、層重要度α(l)を作る。runtime scoreはα(l)×router probability。"},
+      {"name": "Dual-Modality Thresholding (DMT)", "description": "textとvisionで別thresholdを使う。vision tokenはFFN前後cosine similarityが高く、FFN weightとより直交するという観察を利用する。"},
+      {"name": "Frontier search", "description": "D=100のthreshold gridで目標skip率を満たす境界だけを走査し、naive O(ND^2)からO(ND)へ削減する。"},
+      {"name": "Training-free deployment", "description": "既存checkpointを再学習せず、offline calibration/search後にrouting後段でexpert executionを省略する。"}
+    ],
+    "system_design": "offline: GQA等から1024 sample→各層α(l)のKL較正→text/vision threshold frontier search。online: token modality判定→元router top-k→s=α×π→modality threshold→残存expert実行。層重要度とthresholdは事前計算されるため、runtime追加処理はscore scaling/thresholding中心。"
+  },
+  "reservation": {"claim_id": "claim-0640a4e19fcd3a04140f52b1", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
