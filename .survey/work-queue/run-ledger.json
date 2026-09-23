@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T08:25:45.934882+00:00",
+  "updated_at": "2026-09-23T08:31:20.296992+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -42398,6 +42398,56 @@
           "type": "research",
           "canonical_id": "arXiv:2609.15039",
           "title": "SpliTEE: Improving LLM Inference on Trusted Hardware with Differentially Private GPU Outsourcing",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 971,
+      "paper_active_count_after": 971,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35837549401",
+      "first_recorded_at": "2026-09-23T08:31:20.296992+00:00",
+      "last_recorded_at": "2026-09-23T08:31:20.296992+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35837549401:1",
+          "recorded_at": "2026-09-23T08:31:20.296992+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35837549401",
+            "run_attempt": "1",
+            "source_sha": "34556f63589e1792e88ed19d1e8eb93e6c39a75a"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-62c06a71da7d8bc0",
+          "type": "research",
+          "canonical_id": "arXiv:2601.13631",
+          "title": "ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management",
           "from": "ready",
           "to": "completed"
         }
