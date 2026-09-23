@@ -260,6 +260,7 @@ def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, lis
     loaded: dict[str, dict[str, Any]] = {}
     parsed: list[tuple[dict[str, Any], dict[str, Any]]] = []
     affected_workers: set[str] = set()
+    invalidate_only: set[str] = set()
 
     for raw_path in result_paths:
         path = raw_path if raw_path.is_absolute() else root / raw_path
@@ -268,6 +269,9 @@ def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, lis
             continue
         identity = _claim_result_identity(value)
         if identity is None:
+            legacy_worker = value.get("worker_id")
+            if legacy_worker in ALLOWED_WORKERS and load_cache(root, legacy_worker) is not None:
+                invalidate_only.add(str(legacy_worker))
             continue
         worker_id = identity["worker_id"]
         cache = loaded.get(worker_id)
@@ -285,10 +289,15 @@ def observe_claim_results(root: Path, result_paths: list[Path]) -> dict[str, lis
         parsed.append((value, identity))
         affected_workers.add(worker_id)
 
+    if not parsed and not invalidate_only:
+        return {}
+
+    clock_generations = bump_fact_clock(
+        root, affected_workers | invalidate_only, "claim-result"
+    )
     if not parsed:
         return {}
 
-    clock_generations = bump_fact_clock(root, affected_workers, "claim-result")
     touched: dict[str, set[str]] = {}
     for value, identity in parsed:
         worker_id = identity["worker_id"]
