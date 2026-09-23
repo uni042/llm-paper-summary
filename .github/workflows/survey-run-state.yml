@@ -7,6 +7,7 @@ on:
       - '.survey/work-queue/run-state/requests/*.json'
       - '.survey/scripts/derive_worker_run_state.py'
       - '.survey/scripts/worker_run_state_cache.py'
+      - '.survey/scripts/auto_discovery_from_run_state.py'
   workflow_dispatch:
   schedule:
     - cron: '4/10 * * * *'
@@ -14,8 +15,8 @@ on:
 permissions:
   contents: write
 
-# Initial Research/Audit claims are allocated in this workflow. Share the same
-# serialization domain as the standalone claim lane so queue ownership remains atomic.
+# Initial Research/Audit claims and the initial Discovery preload adoption are handled
+# in this workflow. Push-race recomputation keeps both allocations atomic on main.
 concurrency:
   group: survey-claim-main
   cancel-in-progress: false
@@ -36,7 +37,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Derive state and allocate an eligible initial claim in one lane
+      - name: Derive state and allocate eligible initial work in one lane
         shell: bash
         run: |
           set -euo pipefail
@@ -61,6 +62,9 @@ jobs:
               python .survey/scripts/auto_claim_from_run_state.py \
                 --repo-root . \
                 --run-state-results-file /tmp/changed-run-state-results.txt
+              python .survey/scripts/auto_discovery_from_run_state.py \
+                --repo-root . \
+                --run-state-results-file /tmp/changed-run-state-results.txt
             fi
 
             if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -83,14 +87,16 @@ jobs:
               .survey/work-queue/jobs \
               .survey/work-queue/records \
               .survey/work-queue/completed-submission-requests \
-              .survey/work-queue/research-preflight
+              .survey/work-queue/research-preflight \
+              .survey/work-queue/discovery-precheck \
+              .survey/work-queue/discovery-preload
 
             if git diff --cached --quiet; then
               echo 'Run-state requests already settled.'
               exit 0
             fi
 
-            git commit -m 'survey-run-state: derive state and allocate initial claim'
+            git commit -m 'survey-run-state: derive state and allocate initial work'
             if git push origin HEAD:main; then
               exit 0
             fi
