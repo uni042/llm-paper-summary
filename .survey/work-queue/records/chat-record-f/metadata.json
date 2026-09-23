@@ -4,7 +4,151 @@
   "slot": "metadata",
   "attempt_id": "attempt-11a2387004457060d2b83f8f",
   "job_id": "job-research-2752e3b1e763b7d9",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2602.02443",
+    "arxiv_id": "2602.02443",
+    "doi": "10.48550/arXiv.2602.02443",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE",
+    "summary": "細粒度混合専門家モデルでは各トークンで多数の専門家候補から複数を有効化するが、通常は上位k個を決定論的に選ぶ。本研究は、ルータ得点の上位には高確信の「確定頭部」があり、その後に得点差の小さい「不確定尾部」が続くことを観測する。上位専門家だけに減らしても貪欲復号の単発精度はほぼ保たれる一方、複数標本のpass@nは低下することから、頭部は中核推論、尾部は推論経路の多様性へ寄与すると解釈する。Expert-Sampleは学習なしで、上位k_keep個を必ず残し、残りを順位k_keep+1からrまでの候補から温度付きルータlogitとGumbel上位k標本化で確率的に選び、最終集約には元のゲート重みを使う。通常温度のトークン標本化と併用し、Qwen3、GPT-OSS、Ling-Lite、Qwen3-Nextの細粒度MoEで数学・知識推論・コードを評価した。Qwen3-30B-A3B-InstructのGPQA-Diamondでは32標本時のpass@32が85.4%から91.9%へ、Best-of-N選択後の精度が59.1%から62.6%へ上昇する。12モデル×課題条件のpass@64では通常温度標本化に対して平均4.32%改善し、8基のA800-80G上の経路当たりスループット差は概ね±1%に収まる。",
+    "list_summary": "細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。",
+    "authors": [
+      "Yuanteng Chen",
+      "Peisong Wang",
+      "Nanxin Zeng",
+      "Yuantian Shao",
+      "Shuang Qiu",
+      "Gang Li",
+      "Jing Liu",
+      "Jian Cheng"
+    ],
+    "authors_affiliations": "Institute of Automation, Chinese Academy of Sciences; Zhongguancun Academy; University of Chinese Academy of Sciences; Nanjing University of Science and Technology; City University of Hong Kong",
+    "published": "2026-02-02",
+    "publication": "Proceedings of the 43rd International Conference on Machine Learning (ICML), PMLR 306, 2026; arXiv:2602.02443v2",
+    "publication_type": "国際会議論文",
+    "publication_status": "Published",
+    "publication_version": "arXiv v2 (2026-05-01)",
+    "lineage": "fine-grained MoE / expert routing / test-time scaling / inference-time sampling",
+    "topics": [
+      "細粒度MoE",
+      "専門家ルーティング",
+      "テスト時スケーリング",
+      "複数標本推論",
+      "Expert-Sample",
+      "vLLM",
+      "推論多様性"
+    ],
+    "importance": "細粒度MoEのルーティング空間を、単なる疎な計算経路ではなくテスト時スケーリングの多様性源として利用する。トークン温度を上げて単発品質を犠牲にする代わりに、高確信専門家を固定し低確信専門家だけを確率化するため、既存の通常温度復号、Best-of-N、重み付き多数決と直交して組み合わせられる。MoEサービングにおいてルータ選択を推論品質側から操作する具体例として位置づけられる。",
+    "hardware_evaluation": "主要な精度評価のGPU構成は本文中で明示されない。経路当たりオーバーヘッド評価はvLLMを推論基盤とし、8×NVIDIA A800-80G、テンソル並列度8で実施。WikiText-2から入力を採り、代表条件は入力長1024、バッチ8、出力長1024。",
+    "quality_effect": "厳密等価ではなく推論経路へ確率性を追加する近似的な標本化法。既に解ける問題集合ではQwen3-30B-A3B-Instructで32試行の通過率低下が0.1%に留まり、Ling-Lite-1.5では低下なしと報告される一方、困難問題では推論経路の多様性とpass@nを増やす。総テスト時計算量は生成候補数nに比例して増えるため、1経路の追加オーバーヘッドが小さいことと総計算量の増加は区別する必要がある。",
+    "source": "https://arxiv.org/abs/2602.02443",
+    "sources": [
+      "https://arxiv.org/abs/2602.02443",
+      "https://arxiv.org/pdf/2602.02443"
+    ],
+    "code": null,
+    "implementation": "各MoE層の通常の上位k専門家選択を差し替える。上位k_keep個を決定論的に保持し、残りk-k_keep個を順位k_keep+1〜rの候補から温度τでスケールしたルータlogitに対するGumbel上位k標本化で選ぶ。選択後の出力集約には標本化確率ではなく元のゲート重みを再正規化して用いる。論文実験はvLLMを推論基盤に用い、既定値k_keep=floor(k/2)+1、τ=1.0、r=4kを全モデルへ共通適用する。",
+    "implementation_status": "学習不要でルータ選択部だけを変更する方式としてアルゴリズムと既定値は詳述されている。LightEvalとvLLMを評価・推論基盤に用いるが、一次資料上では著者公式の再現コードURLは確認できないため、実装にはvLLM等のMoEルータ選択処理への差し込みが必要。",
+    "evaluation_type": "実機MoE推論による精度・多様性・検証選択・スループット評価。pass@n、Best-of-N、重み付き多数決、推論経路多様性、既解問題の安定性、パラメータ感度、前処理・復号スループットを測定。",
+    "last_checked": "2026-09-23",
+    "references": [
+      {
+        "canonical_id": "arXiv:2407.21787",
+        "arxiv_id": "2407.21787"
+      },
+      {
+        "canonical_id": "arXiv:2509.06346",
+        "arxiv_id": "2509.06346"
+      },
+      {
+        "canonical_id": "arXiv:2501.12948",
+        "arxiv_id": "2501.12948"
+      },
+      {
+        "canonical_id": "arXiv:2405.04434",
+        "arxiv_id": "2405.04434"
+      },
+      {
+        "canonical_id": "arXiv:2402.04792",
+        "arxiv_id": "2402.04792"
+      },
+      {
+        "canonical_id": "arXiv:2303.06135",
+        "arxiv_id": "2303.06135"
+      },
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "arxiv_id": "2401.04088"
+      },
+      {
+        "canonical_id": "arXiv:2410.07348",
+        "arxiv_id": "2410.07348"
+      },
+      {
+        "canonical_id": "arXiv:2310.07088",
+        "arxiv_id": "2310.07088"
+      },
+      {
+        "canonical_id": "arXiv:2410.21276",
+        "arxiv_id": "2410.21276"
+      },
+      {
+        "canonical_id": "arXiv:2508.10925",
+        "arxiv_id": "2508.10925"
+      },
+      {
+        "canonical_id": "arXiv:2512.12895",
+        "arxiv_id": "2512.12895"
+      },
+      {
+        "canonical_id": "arXiv:2412.15115",
+        "arxiv_id": "2412.15115"
+      },
+      {
+        "canonical_id": "arXiv:2311.12022",
+        "arxiv_id": "2311.12022"
+      },
+      {
+        "canonical_id": "arXiv:2511.04063",
+        "arxiv_id": "2511.04063"
+      },
+      {
+        "canonical_id": "arXiv:2511.04214",
+        "arxiv_id": "2511.04214"
+      },
+      {
+        "canonical_id": "arXiv:2503.05139",
+        "arxiv_id": "2503.05139"
+      },
+      {
+        "canonical_id": "arXiv:2505.14681",
+        "arxiv_id": "2505.14681"
+      },
+      {
+        "canonical_id": "arXiv:2203.11171",
+        "arxiv_id": "2203.11171"
+      },
+      {
+        "canonical_id": "arXiv:2505.09388",
+        "arxiv_id": "2505.09388"
+      },
+      {
+        "canonical_id": "arXiv:2305.10601",
+        "arxiv_id": "2305.10601"
+      },
+      {
+        "canonical_id": "arXiv:2403.14541",
+        "arxiv_id": "2403.14541"
+      }
+    ],
+    "references_checked_at": "2026-09-23",
+    "references_source": "primary manuscript reference section, PDF pp.9-11",
+    "references_total": 33
+  },
   "reservation": {
     "claim_id": "claim-11a2387004457060d2b83f8f",
     "worker_id": "scheduled-chat-00",
