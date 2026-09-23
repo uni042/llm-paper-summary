@@ -40,7 +40,7 @@ def make_args(**overrides):
         seconds_to_run_deadline=1800,
         seconds_to_next_scheduled_task=None,
         scheduled_handoff_guard_seconds=600,
-        candidate_inventory=50,
+        candidate_inventory=300,
         research_audit_completed_this_invocation=0,
         research_minimum_completions=3,
         last_terminal_job_status="none",
