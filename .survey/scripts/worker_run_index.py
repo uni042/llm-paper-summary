@@ -469,6 +469,8 @@ def quick_consistency(root: Path, identity: dict[str, Any], cache: dict[str, Any
         if not isinstance(descriptor_path_text, str):
             return False, "submitted_attempt_missing_descriptor_path"
         descriptor_path = root / descriptor_path_text
+        if not descriptor_path.is_file():
+            return False, "cached_descriptor_missing_from_canonical_state"
         kind = str(row.get("kind") or descriptor_path.parent.name)
         result = _result_for_descriptor(root, kind, descriptor_path, attempt_id)
         cached_time = parse_time(row.get("result_processed_at"))
@@ -481,6 +483,9 @@ def quick_consistency(root: Path, identity: dict[str, Any], cache: dict[str, Any
             return False, "canonical_result_newer_or_different"
         if result.get("ok") != row.get("result_ok"):
             return False, "canonical_result_outcome_mismatch"
+        canonical_status = str(result.get("job_status") or "").lower() or None
+        if canonical_status != row.get("result_status"):
+            return False, "canonical_result_status_mismatch"
         if (result.get("retryable") is True) != (row.get("retryable") is True):
             return False, "canonical_retryable_mismatch"
     return True, "ok"
