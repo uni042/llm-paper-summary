@@ -1,0 +1,336 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-da93b3e5fc980deba78e",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-da93b3e5fc980deba78e",
+  "axis": "OpenAlex recent SSD NVMe LLM inference offload",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20inference%20SSD%20NVMe%20offload%20storage&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a295c19ddf383a219831b7fa00430609394735bc",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T15:20:02.635706+00:00",
+  "preload_id": "preload-da93b3e5fc980deba78e",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Training and Serving System of Foundation Models: A Comprehensive Survey",
+      "source_url": "https://doi.org/10.1109/ojcs.2024.3380828",
+      "year": 2024,
+      "published": "2024-01-01",
+      "canonical_id": "DOI:10.1109/ojcs.2024.3380828",
+      "doi": "10.1109/ojcs.2024.3380828",
+      "authors": [
+        "Jiahang Zhou",
+        "Yanyu Chen",
+        "Zicong Hong",
+        "Wuhui Chen",
+        "Yue Yu",
+        "Tao Zhang",
+        "Hui Wang",
+        "Chuanfu Zhang",
+        "Zibin Zheng"
+      ]
+    },
+    {
+      "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+      "source_url": "http://arxiv.org/abs/2312.15234",
+      "year": 2023,
+      "published": "2023-12-23",
+      "canonical_id": "arXiv:2312.15234",
+      "arxiv_id": "2312.15234",
+      "authors": [
+        "Xupeng Miao",
+        "Gabriele Oliaro",
+        "Zhihao Zhang",
+        "X. G. Cheng",
+        "Hongyi Jin",
+        "Tianqi Chen",
+        "Zhihao Jia"
+      ]
+    },
+    {
+      "title": "ESPN: Memory-Efficient Multi-Vector Information Retrieval",
+      "source_url": "http://arxiv.org/abs/2312.05417",
+      "year": 2023,
+      "published": "2023-12-09",
+      "canonical_id": "arXiv:2312.05417",
+      "arxiv_id": "2312.05417",
+      "authors": [
+        "Susav Shrestha",
+        "Narasimha Reddy",
+        "Zongwang Li"
+      ]
+    },
+    {
+      "title": "NDSEARCH: Accelerating Graph-Traversal-Based Approximate Nearest Neighbor Search through Near Data Processing",
+      "source_url": "http://arxiv.org/abs/2312.03141",
+      "year": 2023,
+      "published": "2023-12-05",
+      "canonical_id": "arXiv:2312.03141",
+      "arxiv_id": "2312.03141",
+      "authors": [
+        "Yitu Wang",
+        "Shiyu Li",
+        "Qilin Zheng",
+        "Linghao Song",
+        "Zongwang Li",
+        "Andrew Chang",
+        "Hai Helen Li",
+        "Yiran Chen"
+      ]
+    },
+    {
+      "title": "In-Storage Domain-Specific Acceleration for Serverless Computing",
+      "source_url": "http://arxiv.org/abs/2303.03483",
+      "year": 2023,
+      "published": "2023-03-06",
+      "canonical_id": "arXiv:2303.03483",
+      "arxiv_id": "2303.03483",
+      "authors": [
+        "Rohan Mahapatra",
+        "Soroush Ghodrati",
+        "Byung Hoon Ahn",
+        "Sean Kinzer",
+        "Shuting Wang",
+        "Hanyang Xu",
+        "Lavanya Karthikeyan",
+        "Hardik Sharma",
+        "Amir Yazdanbakhsh",
+        "Mohammad Alian",
+        "Hadi Esmaeilzadeh"
+      ]
+    },
+    {
+      "title": "Accelerating Transfer Learning with Near-Data Computation on Cloud Object Stores",
+      "source_url": "http://arxiv.org/abs/2210.08650",
+      "year": 2022,
+      "published": "2022-10-16",
+      "canonical_id": "arXiv:2210.08650",
+      "arxiv_id": "2210.08650",
+      "authors": [
+        "Diana Petrescu",
+        "Arsany Guirguis",
+        "Quoc, Do Le",
+        "Javier Picorel",
+        "Rachid Guerraoui",
+        "Florin Dinu"
+      ]
+    },
+    {
+      "title": "Compute-Efficient Deep Learning: Algorithmic Trends and Opportunities",
+      "source_url": "http://arxiv.org/abs/2210.06640",
+      "year": 2022,
+      "published": "2022-10-13",
+      "canonical_id": "arXiv:2210.06640",
+      "arxiv_id": "2210.06640",
+      "authors": [
+        "Brian R. Bartoldson",
+        "Bhavya Kailkhura",
+        "Davis W. Blalock"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/ojcs.2024.3380828",
+      "identity_tokens": [
+        "id:DOI:10.1109/ojcs.2024.3380828",
+        "title:training and serving system of foundation models a comprehensive survey",
+        "url:https://doi.org/10.1109/ojcs.2024.3380828"
+      ],
+      "record": {
+        "title": "Training and Serving System of Foundation Models: A Comprehensive Survey",
+        "source_url": "https://doi.org/10.1109/ojcs.2024.3380828",
+        "year": 2024,
+        "published": "2024-01-01",
+        "canonical_id": "DOI:10.1109/ojcs.2024.3380828",
+        "doi": "10.1109/ojcs.2024.3380828",
+        "authors": [
+          "Jiahang Zhou",
+          "Yanyu Chen",
+          "Zicong Hong",
+          "Wuhui Chen",
+          "Yue Yu",
+          "Tao Zhang",
+          "Hui Wang",
+          "Chuanfu Zhang",
+          "Zibin Zheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.15234",
+      "identity_tokens": [
+        "id:arXiv:2312.15234",
+        "title:towards efficient generative large language model serving a survey from algorithms to systems",
+        "url:http://arxiv.org/abs/2312.15234"
+      ],
+      "record": {
+        "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+        "source_url": "http://arxiv.org/abs/2312.15234",
+        "year": 2023,
+        "published": "2023-12-23",
+        "canonical_id": "arXiv:2312.15234",
+        "arxiv_id": "2312.15234",
+        "authors": [
+          "Xupeng Miao",
+          "Gabriele Oliaro",
+          "Zhihao Zhang",
+          "X. G. Cheng",
+          "Hongyi Jin",
+          "Tianqi Chen",
+          "Zhihao Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.05417",
+      "identity_tokens": [
+        "id:arXiv:2312.05417",
+        "title:espn memoryefficient multivector information retrieval",
+        "url:http://arxiv.org/abs/2312.05417"
+      ],
+      "record": {
+        "title": "ESPN: Memory-Efficient Multi-Vector Information Retrieval",
+        "source_url": "http://arxiv.org/abs/2312.05417",
+        "year": 2023,
+        "published": "2023-12-09",
+        "canonical_id": "arXiv:2312.05417",
+        "arxiv_id": "2312.05417",
+        "authors": [
+          "Susav Shrestha",
+          "Narasimha Reddy",
+          "Zongwang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.03141",
+      "identity_tokens": [
+        "id:arXiv:2312.03141",
+        "title:ndsearch accelerating graphtraversalbased approximate nearest neighbor search through near data processing",
+        "url:http://arxiv.org/abs/2312.03141"
+      ],
+      "record": {
+        "title": "NDSEARCH: Accelerating Graph-Traversal-Based Approximate Nearest Neighbor Search through Near Data Processing",
+        "source_url": "http://arxiv.org/abs/2312.03141",
+        "year": 2023,
+        "published": "2023-12-05",
+        "canonical_id": "arXiv:2312.03141",
+        "arxiv_id": "2312.03141",
+        "authors": [
+          "Yitu Wang",
+          "Shiyu Li",
+          "Qilin Zheng",
+          "Linghao Song",
+          "Zongwang Li",
+          "Andrew Chang",
+          "Hai Helen Li",
+          "Yiran Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2303.03483",
+      "identity_tokens": [
+        "id:arXiv:2303.03483",
+        "title:instorage domainspecific acceleration for serverless computing",
+        "url:http://arxiv.org/abs/2303.03483"
+      ],
+      "record": {
+        "title": "In-Storage Domain-Specific Acceleration for Serverless Computing",
+        "source_url": "http://arxiv.org/abs/2303.03483",
+        "year": 2023,
+        "published": "2023-03-06",
+        "canonical_id": "arXiv:2303.03483",
+        "arxiv_id": "2303.03483",
+        "authors": [
+          "Rohan Mahapatra",
+          "Soroush Ghodrati",
+          "Byung Hoon Ahn",
+          "Sean Kinzer",
+          "Shuting Wang",
+          "Hanyang Xu",
+          "Lavanya Karthikeyan",
+          "Hardik Sharma",
+          "Amir Yazdanbakhsh",
+          "Mohammad Alian",
+          "Hadi Esmaeilzadeh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2210.08650",
+      "identity_tokens": [
+        "id:arXiv:2210.08650",
+        "title:accelerating transfer learning with neardata computation on cloud object stores",
+        "url:http://arxiv.org/abs/2210.08650"
+      ],
+      "record": {
+        "title": "Accelerating Transfer Learning with Near-Data Computation on Cloud Object Stores",
+        "source_url": "http://arxiv.org/abs/2210.08650",
+        "year": 2022,
+        "published": "2022-10-16",
+        "canonical_id": "arXiv:2210.08650",
+        "arxiv_id": "2210.08650",
+        "authors": [
+          "Diana Petrescu",
+          "Arsany Guirguis",
+          "Quoc, Do Le",
+          "Javier Picorel",
+          "Rachid Guerraoui",
+          "Florin Dinu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2210.06640",
+      "identity_tokens": [
+        "id:arXiv:2210.06640",
+        "title:computeefficient deep learning algorithmic trends and opportunities",
+        "url:http://arxiv.org/abs/2210.06640"
+      ],
+      "record": {
+        "title": "Compute-Efficient Deep Learning: Algorithmic Trends and Opportunities",
+        "source_url": "http://arxiv.org/abs/2210.06640",
+        "year": 2022,
+        "published": "2022-10-13",
+        "canonical_id": "arXiv:2210.06640",
+        "arxiv_id": "2210.06640",
+        "authors": [
+          "Brian R. Bartoldson",
+          "Bhavya Kailkhura",
+          "Davis W. Blalock"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:736093c2636bf046782edf402a45ebc4663902759ec97cc063835347d6e76201",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
