@@ -135,13 +135,15 @@ class LegacyScheduledChatLeaseCapTests(unittest.TestCase):
 
             self.assertEqual(old_claim["expires_at"], "2026-09-13T04:00:00+00:00")
             self.assertNotIn("lease_invalidated_at", old_claim)
-            self.assertEqual(old_claim.get("record_bank_fallback"), "library")
-            self.assertEqual(old_claim.get("record_bank_migration"), "legacy-unbanked-to-library")
-            self.assertEqual(result["banks_migrated_unbanked"], 1)
-            self.assertEqual(result["banks_reserved"], 1)
+            self.assertIsInstance(old_claim.get("record_bank"), str)
+            self.assertNotIn("record_bank_fallback", old_claim)
+            self.assertNotIn("record_bank_migration", old_claim)
+            self.assertEqual(result["banks_migrated_unbanked"], 0)
+            self.assertEqual(result["banks_reserved"], 2)
             self.assertEqual(result["banks_fallback"], 0)
             self.assertIsInstance(new_claim.get("record_bank"), str)
             self.assertNotIn("record_bank_fallback", new_claim)
+            self.assertNotEqual(old_claim["record_bank"], new_claim["record_bank"])
 
 
 if __name__ == "__main__":
