@@ -60,6 +60,25 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         self.assertIn(".survey/work-queue/results/audit", text)
         self.assertIn("Immutable submission failure result was persisted to main.", text)
 
+    def test_submission_and_run_state_recompute_after_push_races(self):
+        submission = self._text("survey-submission-fast.yml")
+        run_state = self._text("survey-run-state.yml")
+        for text, marker in (
+            (submission, "Submission push race on attempt"),
+            (run_state, "Run-state push race on attempt"),
+        ):
+            self.assertIn("for attempt in $(seq 1 12); do", text)
+            self.assertIn("git fetch origin main", text)
+            self.assertIn("git reset --hard origin/main", text)
+            self.assertIn(marker, text)
+
+    def test_submission_auto_snapshot_does_not_dispatch_second_run_state_workflow(self):
+        submission = self._text("survey-submission-fast.yml")
+        self.assertIn("update_worker_run_index.py", submission)
+        self.assertIn("--auto-snapshot", submission)
+        self.assertNotIn("gh workflow run survey-run-state.yml", submission)
+        self.assertIn(".survey/work-queue/run-state", submission)
+
     def test_background_helper_no_longer_owns_claim_or_immutable_submission_triggers(self):
         text = self._text("survey-helper.yml")
         self.assertIn("group: survey-background-main", text)
