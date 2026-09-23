@@ -15,12 +15,14 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import time
 from pathlib import Path
 from typing import Any
 
 import claim_state
 import continuation_gate
 import select_discovery_direction
+import worker_run_state_cache as run_state_cache
 
 REQUESTS = Path(".survey/work-queue/run-state/requests")
 RESULTS = Path(".survey/work-queue/run-state/results")
@@ -28,6 +30,8 @@ ALLOWED_WORKERS = {
     "scheduled-chat-00": "00",
     "scheduled-chat-30": "30",
 }
+READ_COUNT = 0
+
 RUNTIME_CONDITIONS = {
     "none",
     "handoff_guard",
@@ -39,6 +43,8 @@ RUNTIME_CONDITIONS = {
 
 
 def _read(path: Path, default: Any = None) -> Any:
+    global READ_COUNT
+    READ_COUNT += 1
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError, UnicodeError):
@@ -121,20 +127,24 @@ def _candidate_inventory(root: Path) -> int:
 
 
 def _frozen_route(root: Path, run_key: str) -> tuple[int, str] | None:
-    result_root = root / RESULTS
-    if not result_root.is_dir():
-        return None
     rows: list[tuple[str, int, str]] = []
-    for path in result_root.glob("*.json"):
-        value = _read(path, {})
-        if not isinstance(value, dict) or value.get("ok") is not True:
+    roots = (
+        root / RESULTS,
+        root / ".survey/work-queue/archive/transport/run-state/results",
+    )
+    for result_root in roots:
+        if not result_root.is_dir():
             continue
-        if str(value.get("run_key") or "") != run_key:
-            continue
-        inventory = value.get("candidate_inventory")
-        mode = value.get("work_mode")
-        if isinstance(inventory, int) and mode in {"research", "discovery", "maintenance"}:
-            rows.append((str(value.get("processed_at") or ""), inventory, mode))
+        for path in result_root.glob("*.json"):
+            value = _read(path, {})
+            if not isinstance(value, dict) or value.get("ok") is not True:
+                continue
+            if str(value.get("run_key") or "") != run_key:
+                continue
+            inventory = value.get("candidate_inventory")
+            mode = value.get("work_mode")
+            if isinstance(inventory, int) and mode in {"research", "discovery", "maintenance"}:
+                rows.append((str(value.get("processed_at") or ""), inventory, mode))
     if not rows:
         return None
     rows.sort()
