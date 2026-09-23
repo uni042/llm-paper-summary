@@ -1,28 +1,29 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-22T23:30:39+00:00",
+  "checked_at": "2026-09-23T23:35:36+00:00",
   "status": "issues_found",
-  "error_count": 1,
-  "warning_count": 2,
-  "paper_count": 962,
-  "latest_paper_commit": "2026-09-22T23:19:18+00:00",
+  "error_count": 2,
+  "warning_count": 0,
+  "paper_count": 1002,
+  "latest_paper_commit": "2026-09-23T14:29:59+00:00",
   "queue": {
-    "job_count": 1247,
+    "job_count": 1159,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 545,
+        "completed": 383,
+        "processing": 1,
         "ready": 1
       },
       "audit": {
         "blocked": 2
       },
       "research": {
-        "ready": 189,
-        "completed": 422,
-        "blocked": 77,
+        "ready": 298,
+        "completed": 372,
+        "blocked": 91,
         "superseded": 3,
         "deferred": 3,
         "rejected": 5
@@ -30,14 +31,8 @@
     }
   },
   "derived_indexes": {
-    "repaired_files": [
-      "README.md",
-      "papers/README.md",
-      "papers/inference/99-other-inference-systems/README.md",
-      "papers/inference/README.md",
-      "papers/inference/comparison.md"
-    ],
-    "repair_count": 5
+    "repaired_files": [],
+    "repair_count": 0
   },
   "quality": {
     "baseline_initialized": false,
@@ -88,6 +83,7 @@
         "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2505.03531-faster-moe-llm-inference.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2509.21892-elastic-moe-inference-time-scalability.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2509.23012-moe-phds-flexible-runtime-sparsity.md",
@@ -758,6 +754,7 @@
       "overview": [
         "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md",
         "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md",
         "papers/inference/03-kv-cache/2026-2609.17652-fathom-per-query-read-depth-offloaded-kv-cache.md",
@@ -771,6 +768,7 @@
         "papers/inference/99-other-inference-systems/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
         "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
         "papers/inference/99-other-inference-systems/2026-2604.25777-specfed-accelerating-federated-llm-inference-with-speculative-decoding-and-compressed-transmission.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md",
         "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md",
         "papers/survey/03-inference-engines/2025-2506.21901-survey-llm-inference-systems.md",
         "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
@@ -784,22 +782,17 @@
       ]
     },
     "new_failures": {
-      "paper": [],
+      "paper": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2505.03531-faster-moe-llm-inference.md"
+      ],
       "list_summary": [],
       "overview": [
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md",
-        "papers/inference/99-other-inference-systems/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
-        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
-        "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md"
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
       ]
     },
     "resolved_failures": {
-      "paper": [
-        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md"
-      ],
+      "paper": [],
       "list_summary": [],
       "overview": []
     }
@@ -807,30 +800,15 @@
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-09-22T22:56:33+00:00",
-      "total": 960,
+      "checked_at": "2026-09-23T14:29:37+00:00",
+      "total": 1002,
       "incomplete": 0,
-      "findings": [
-        {
-          "severity": "warning",
-          "code": "citation_report_count_mismatch",
-          "detail": "citation coverage total 960 differs from current paper count 962",
-          "report_total": 960,
-          "current_paper_count": 962
-        },
-        {
-          "severity": "warning",
-          "code": "citation_report_stale",
-          "detail": "citation report predates the latest paper-content commit",
-          "checked_at": "2026-09-22T22:56:33+00:00",
-          "latest_paper_commit": "2026-09-22T23:19:18+00:00"
-        }
-      ]
+      "findings": []
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-09-22T23:30:31+00:00",
-      "total": 962,
+      "checked_at": "2026-09-23T23:35:23+00:00",
+      "total": 1002,
       "incomplete": 0,
       "findings": []
     }
@@ -839,31 +817,21 @@
     {
       "severity": "error",
       "code": "quality_regression",
-      "detail": "New overview quality failures appeared since the previous maintenance baseline",
-      "scope": "overview",
+      "detail": "New paper quality failures appeared since the previous maintenance baseline",
+      "scope": "paper",
       "paths": [
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md",
-        "papers/inference/99-other-inference-systems/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
-        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
-        "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md"
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2505.03531-faster-moe-llm-inference.md"
       ]
     },
     {
-      "severity": "warning",
-      "code": "citation_report_count_mismatch",
-      "detail": "citation coverage total 960 differs from current paper count 962",
-      "report_total": 960,
-      "current_paper_count": 962
-    },
-    {
-      "severity": "warning",
-      "code": "citation_report_stale",
-      "detail": "citation report predates the latest paper-content commit",
-      "checked_at": "2026-09-22T22:56:33+00:00",
-      "latest_paper_commit": "2026-09-22T23:19:18+00:00"
+      "severity": "error",
+      "code": "quality_regression",
+      "detail": "New overview quality failures appeared since the previous maintenance baseline",
+      "scope": "overview",
+      "paths": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ]
     }
   ]
 }
