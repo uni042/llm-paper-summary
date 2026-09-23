@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-bcdd660e4bafb23e846f2ec8","job_id":"job-research-c732ba9bb46aaf3a","data":{"limitations":"現実装はNVIDIA GPU向けの独自Triton kernelへ依存し、AMD GPU、TPU、CPUなど他backendへの可搬性は評価されていない。品質評価の最大規模は6.4B総パラメータ・1.7B活性であり、数十〜数百B級の実運用MoEへ同じ傾向が維持されるかは未検証である。Cartesian Product Routerは射影部分をO(√N)へ削減するが、暗黙格子のTop-K候補評価総仕事量自体はNに比例し、GPU並列性で壁時計時間を隠している。専門家中心スケジューリングはバッチ内で十分なtoken-expertタスクがあるほど密化しやすいため、極小バッチや低並列時の利得は大規模サービング条件ほど明確ではない。","differences":"DeepSeekMoE等の粗粒度MoEは完全FFN専門家をTop-K選択し、Tensor Core効率は高いが活性パラメータ粒度が粗い。PEER/PKMは百万規模の細粒度専門家を扱えるが、静的ベクトル集約と散在メモリアクセスが表現力・実行効率を制約する。OmniMoEは入力・出力ベクトル対をAtomic Expertとして非線形に合成し、共有Dense MLPを併置して一般推論を担保する。ルーティングでは直積分解、実行では専門家中心のtask reorderとGrouped GEMMを使うため、単なるexpert granularity変更ではなくroutingとkernel実行まで共同設計する点が異なる。","implementation_status":"arXiv v2の研究実装で、コードはGitHubのHKUSTDial/omni-moeとして公開されている。NVIDIA PyTorch container、Hugging Face Transformers、独自Triton kernelを用い、単一ノード8×A100で学習後評価・推論を実証している。","research_positioning":"Adaptive Expert Computation / Compression系統の中で、OmniMoEは『どの粗粒度expertをロード・配置するか』よりさらに下へ降り、expert自体をベクトル単位へ分解したときに発生するrouting計算量とHBMアクセスを解く研究である。CPU/SSD offloadやexpert cacheを直接扱わないが、細粒度化によって総expert poolを巨大化しつつ活性集合を小さく保つため、将来的な階層メモリ・expert cacheではキャッシュ単位やprefetch粒度をAtomic Expert群へ変える可能性を示す。一方で現状は全パラメータがGPU系メモリで利用可能な前提が強く、容量超過MoEへの適用には配置・転送系との統合が別途必要である。"},"reservation":{"claim_id":"claim-bcdd660e4bafb23e846f2ec8","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ffa0b1baa60976c86cf81af0",
+  "job_id": "job-research-1330e1d7068cf379",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ffa0b1baa60976c86cf81af0",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-bcdd660e4bafb23e846f2ec8","job_id":"job-research-c732ba9bb46aaf3a","data":{"hardware":"全推論・評価は単一ノード8×NVIDIA A100 GPU。速度・メモリ評価では200M backboneを固定し活性パラメータ数と活性トークン数を掃引。","software":"NVIDIA PyTorch container、Hugging Face Transformers、LightEval。OmniMoEの実行にはNVIDIA GPU向け独自Triton kernelを使用。全方式でGQAを採用し、FFN部分のみをDense/GShard/DeepSeekMoE/PKM/PEER/OmniMoE間で変更。","methodology":"品質比較は280M-A80M、800M-A200M、2.7B-A680M、6.4B-A1.7Bの系列を同一backbone・学習recipeでゼロから事前学習し、Dense側も活性パラメータ量を整合させる。SmolLMCorpus 40B tokensをNeoX tokenizerで学習し、6.4B-A1.7BをMMLU、TriviaQA、ARC、PIQA、HellaSwag、OBQA、WinoGrandeの7 zero-shot課題、およびGSM8K、MATH、BBH、MBPP、HumanEval等で評価する。速度・メモリは200M backboneで厳密なend-to-end latencyを測り、OmniMoEのsorting/reordering費も含める。理由付けスループットは40並列要求、約512入力・8192出力token、8×A100で測定。","scope":"比較はDense、GShard、DeepSeekMoE、PKM、PEERを含み、品質・perplexity・latency・peak memory・throughput・expert usage・load unevennessを評価する。最大総パラメータは6.4B、活性1.7Bまでであり、それ以上のモデル規模やNVIDIA以外のGPU/アクセラレータでの性能は未検証。"},"reservation":{"claim_id":"claim-bcdd660e4bafb23e846f2ec8","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-ffa0b1baa60976c86cf81af0",
+  "job_id": "job-research-1330e1d7068cf379",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ffa0b1baa60976c86cf81af0",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

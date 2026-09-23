@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-bcdd660e4bafb23e846f2ec8","job_id":"job-research-c732ba9bb46aaf3a","data":{"canonical_id":"arXiv:2602.05711","arxiv_id":"2602.05711","doi":null,"openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":["cs.AI"]},"title":"OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale","summary":"OmniMoEは、専門家を細粒度化すると活性化パラメータ効率は上がる一方、百万規模の経路選択と散在メモリアクセスでGPU効率が崩れる問題に対するシステム・アルゴリズム協調設計である。入力・出力ベクトル対から成るAtomic Expertをトークンごとに動的合成し、直積ルータで経路計算の射影コストをO(N)からO(√N)へ削減する。さらに専門家中心スケジューリングで散在アクセスを連続グループ化しGrouped GEMMへ変換する。6.4B総パラメータ・1.7B活性構成は7ベンチマーク平均50.9%を達成し、PEERの73msに対して6.7ms、10.9倍の推論高速化を示した。","list_summary":"ベクトル単位Atomic Expert、直積ルータ、専門家中心スケジューリングを統合し、PEER比10.9倍高速で7ベンチ平均50.9%を達成する細粒度MoE。","authors":["Jingze Shi","Zhangyang Peng","Yizhang Zhu","Yifan Wu","Guang Liu","Yuyu Luo"],"authors_affiliations":"The Hong Kong University of Science and Technology (Guangzhou); Beijing Academy of Artificial Intelligence","published":"2026-02-05","publication":"arXiv:2602.05711v2; manuscript keywords indicate ICML","publication_type":"プレプリント","publication_status":"arXiv v2 (2026-07-01)","lineage":"fine-grained MoE / atomic experts / product routing / expert-centric GPU scheduling","topics":["MoE","細粒度専門家","Atomic Expert","ルーティング","Grouped GEMM"],"importance":"百万規模の細粒度MoEを単なるモデル設計ではなく、経路計算量とHBMアクセス局所性まで含めて高速化し、細粒度化とGPU効率のトレードオフを崩す研究。","implementation":"NVIDIA GPU向け独自Tritonカーネルを含む実装。コード公開あり。","hardware_evaluation":"推論・評価は単一ノード8×NVIDIA A100 GPU。200M backboneで速度・メモリ、最大6.4B-A1.7Bで品質・スループットを評価。","quality_effect":"6.4B-A1.7Bで7ベンチ平均50.9%、推論高速化と同時にDeepSeekMoE 50.2%、PEER 48.9%を上回る。","source":"https://arxiv.org/abs/2602.05711","sources":["https://arxiv.org/abs/2602.05711","https://arxiv.org/html/2602.05711v2"],"code":"https://github.com/HKUSTDial/omni-moe","last_checked":"2026-09-23","references":[],"references_checked_at":"2026-09-23","references_source":"arXiv v2 full text","references_total":0},"reservation":{"claim_id":"claim-bcdd660e4bafb23e846f2ec8","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-ffa0b1baa60976c86cf81af0",
+  "job_id": "job-research-1330e1d7068cf379",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ffa0b1baa60976c86cf81af0",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
