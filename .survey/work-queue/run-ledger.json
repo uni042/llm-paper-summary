@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T11:38:54.111384+00:00",
+  "updated_at": "2026-09-23T12:15:03.439032+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -43295,6 +43295,56 @@
       "paper_active_count_before": 971,
       "paper_active_count_after": 999,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "unattributed:35859215061",
+      "first_recorded_at": "2026-09-23T12:15:03.439032+00:00",
+      "last_recorded_at": "2026-09-23T12:15:03.439032+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35859215061:1",
+          "recorded_at": "2026-09-23T12:15:03.439032+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35859215061",
+            "run_attempt": "1",
+            "source_sha": "00c42998a78d1331eefc26950e4617ddcec92dbb"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-3fc10bf916cdbe80",
+          "type": "research",
+          "canonical_id": "DOI:10.5281/zenodo.22339206",
+          "title": "A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 999,
+      "paper_active_count_after": 999,
+      "last_successful_action": "job_blocked"
     }
   ]
 }
