@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T01:17:06.531050+00:00",
+  "updated_at": "2026-09-23T01:37:54.068249+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -41309,6 +41309,56 @@
       "paper_active_count_before": 962,
       "paper_active_count_after": 968,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "unattributed:35807059887",
+      "first_recorded_at": "2026-09-23T01:37:54.068249+00:00",
+      "last_recorded_at": "2026-09-23T01:37:54.068249+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35807059887:1",
+          "recorded_at": "2026-09-23T01:37:54.068249+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35807059887",
+            "run_attempt": "1",
+            "source_sha": "f722bc78c21e952dba41f24050f158ccf0a8ce8a"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-2095724e259f584c",
+          "type": "research",
+          "canonical_id": "arXiv:2601.15370",
+          "title": "Improving MoE Compute Efficiency by Composing Weight and Data Sparsity",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 968,
+      "paper_active_count_after": 968,
+      "last_successful_action": "research_completed"
     }
   ]
 }
