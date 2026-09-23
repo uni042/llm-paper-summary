@@ -459,6 +459,9 @@ def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
         "record_bank_recovery",
         "record_bank_recovery_attempt_ids",
         "record_bank_recovery_submission",
+        "run_key",
+        "scheduled_slot",
+        "actual_invocation_start",
     ):
         if key in claim:
             assignment[key] = claim[key]
