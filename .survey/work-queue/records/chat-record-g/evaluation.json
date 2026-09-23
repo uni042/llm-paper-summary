@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-aa2e141ac0afee3ab981b64b",
-  "job_id": "job-research-8f022c12e250de76",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-aa2e141ac0afee3ab981b64b",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-aa2e141ac0afee3ab981b64b","job_id":"job-research-8f022c12e250de76","data":{"hardware":"Moonlight-16B-A3Bを主テストベッドとし、Qwen3-30B-A3B-Baseでモデル系列の一般化、DeepSeek-V2-Liteでコミュニティ診断の適用範囲を検証する。Moonlight/DeepSeekは64 routed expertsからtop-6、Qwen3は48層で128 expertsからtop-8を選択する。","software":"math20k/coding20kはGLM-5.1-Reasoning-1M-Cleanedから20,000件ずつ構成し、追加にOpenR1-Math-220kを同一前処理後約94k件使用。比較はSFT/NoAux、再適用LBL、RPB、Router-L2、KL-to-base、Logit-L2、RPB-hard、within-soft/within-hard/global-hard。","methodology":"数学、コード、一般/STEM/専門QA、一般推論の12ベンチマークを評価し、重複系3種を除いた9ベンチ平均Overall@9を集約指標とする。各条件は原則3 seed（42/43/44）で学習し、各checkpointを5回評価したavg@5をseed平均±標準偏差で報告する。ルーティング保持は利用率TVD/JSD、token top-k overlap、層別専門家共活性化グラフのLouvain community NMIとmodularityで測る。プローブは訓練と分離した各領域約5,000 tokens。","scope":"主結論はMoonlight-16B-A3Bで最も強く、Qwen3では再適用LBLの不利は再現するがNoAuxに対する軟固定の優位は一貫しない。DeepSeek-V2-Liteは基底ルーティングがほぼ一様でコミュニティ構造が弱いため、community NMI診断の適用範囲外として扱う。"},"reservation":{"claim_id":"claim-aa2e141ac0afee3ab981b64b","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}

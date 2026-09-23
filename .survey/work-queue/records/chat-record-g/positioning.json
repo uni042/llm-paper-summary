@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-aa2e141ac0afee3ab981b64b",
-  "job_id": "job-research-8f022c12e250de76",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-aa2e141ac0afee3ab981b64b",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-aa2e141ac0afee3ab981b64b","job_id":"job-research-8f022c12e250de76","data":{"limitations":"コミュニティに基づく診断の主要証拠はMoonlight-16B-A3B中心で、DeepSeek-V2-Liteのように基底ルータが一様に近いモデルではcommunity NMIが介入を分離できない。Qwen3ではLBLに対する優位は保つ一方、NoAuxに対する優位は消え、codingではNoAuxが上回るため、軟固定の利益を全MoEへ一般化できない。math20k/coding20kは同一元コーパス由来の制御された20k分割で、より大規模・異質なinstruction mixtureや長いreasoning traceは未検証。各固定目的は固定対象と強度を完全には分離しておらず、最適な固定形式・強度を予測する基準も未確立である。","differences":"従来のMoE負荷分散は専門家利用率の一様化を目的とするが、本研究は事後学習では既存ルーティング構造自体が資産であるとみなし、利用率ではなく基底ルータ近傍への軟固定を行う。ESFT等の専門家凍結・選択法は更新対象や専門家集合を構造的に固定するのに対し、RPBはルータを学習可能なまま連続強度で誘導する。Router-L2や出力空間固定を同じ実験内で比較することで、サンプル条件付き事前というRPB固有機構と、軟固定という一般原理を切り分けている。","implementation_status":"論文はarXiv v1プレプリント。公式コードはhttps://github.com/naver-ai/rpbで公開予定と本文に記載されている。RPB本体に加え、Router-L2、KL/logit固定、hard/shuffle controlsまで再現可能な詳細プロトコルとハイパーパラメータを付録で提示する。","research_positioning":"MoEの事後学習安定化を『負荷を均す』問題から『事前学習で獲得したルーティングをどの程度保持しつつ適応するか』という連続的な制約設計へ置き換える研究である。推論時のexpert cacheや配置ではなく学習時ルータの構造保持を扱うが、expert specialization、adaptive routing、MoE圧縮・配置で前提となる専門家関係を壊さない学習原理として関連する。特にcommunity NMIを目的関数ではなく診断量と位置付け、hard介入で因果を分離した点が重要である。"},"reservation":{"claim_id":"claim-aa2e141ac0afee3ab981b64b","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}

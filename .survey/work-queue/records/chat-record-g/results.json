@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-aa2e141ac0afee3ab981b64b",
-  "job_id": "job-research-8f022c12e250de76",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-aa2e141ac0afee3ab981b64b",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-aa2e141ac0afee3ab981b64b","job_id":"job-research-8f022c12e250de76","data":{"overview":"Moonlight-16B-A3BではRPBが再適用LBLと通常SFTを明確に上回り、math20kで領域内45.77、領域外19.53、coding20kで41.37/38.70を達成した。異なる固定空間の4手法は互いに約1点以内で、特定形式より軟固定が重要だった。Qwen3とOpenR1でもLBLの不利は再現したが、NoAuxに対する優位はモデル・コーパス依存だった。hard固定はcommunity NMIを高く保っても性能を大幅に落とし、NMIは原因ではなく軟固定の痕跡であることが示された。","key_results":[{"metric":"Moonlight math20k ID accuracy","value":"RPB 45.77±0.84","baseline":"LBL 31.91±0.10; SFT 29.44±0.32","condition":"Moonlight-16B-A3B, math20k","interpretation":"再適用LBLより13.86点、SFTより16.33点高い。"},{"metric":"Moonlight coding20k ID/OOD","value":"RPB 41.37±0.30 / 38.70±0.11","baseline":"LBL 30.73±0.13 / 35.56±0.38; SFT 28.34±1.36 / 35.83±0.49","condition":"Moonlight-16B-A3B, coding20k","interpretation":"領域内適応を大きく改善しつつ領域外能力も保持する。"},{"metric":"固定形式比較 Overall@9","value":"math 27.24–28.27; coding 39.27–39.81","baseline":"NoAux 20.25/33.34; LBL 20.61/33.95","condition":"RPB, Router-L2, KL-to-base, Logit-L2","interpretation":"4種類の軟固定は近接し、勝者もコーパスで入れ替わるためRPB固有形式は必要条件でない。"},{"metric":"Qwen3一般化","value":"math RPB 57.58±0.74 vs LBL 54.94±1.87; coding RPB 63.13±0.08 vs LBL 62.97±0.21","baseline":"NoAux 56.96±0.84 / 64.10±0.51","condition":"Qwen3-30B-A3B-Base","interpretation":"LBLの不利は再現するが、NoAuxより軟固定が常に優れるわけではない。"},{"metric":"soft vs hard介入","value":"math within-soft 27.23 vs within-hard 18.77; coding 38.96 vs 24.87","baseline":"RPB 28.27/39.59","condition":"Moonlight, community-preserving shuffled prior","interpretation":"コミュニティを保ったままhard化するだけで大幅に性能低下し、固定強度が主要因と分かる。"}],"negative_results":"Qwen3-30B-A3B-Baseではmath20kでRPB/Router-L2/NoAuxがseed noise内に収まり、coding20kではNoAux 64.10がRPB 63.13とRouter-L2 63.93を上回る。DeepSeek-V2-Liteでは基底ルータが一様に近くcommunity NMIが介入を分離できない。global-hardはNMIが最高でもmath 3.59、coding 17.96まで性能が崩れ、NMI最大化は不適切である。","interpretation":"頑健な結論は『事後学習でpretraining型LBLを再適用するより、基底ルーティングを軟らかく保持する方が良い』ことであり、『RPBが常にNoAuxより良い』ではない。専門家共活性化コミュニティの保持は軟固定を診断する観測量だが、hard固定実験により性能の直接原因ではないことが示される。","quality_impact":"Moonlightでは領域内性能と領域外保持を同時改善する。効果量はモデルとコーパスに依存し、Qwen3 codingでは無固定が優れるため、導入時には基底ルータの構造と固定強度の調整が必要。"},"reservation":{"claim_id":"claim-aa2e141ac0afee3ab981b64b","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
