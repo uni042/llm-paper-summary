@@ -37,6 +37,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install survey dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
       - name: Derive state and allocate eligible initial work in one lane
         shell: bash
         run: |
