@@ -1,5 +1,13 @@
 {
- "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-1cdc9fc5138a75e71558bf84","job_id":"job-research-2377e2a4770cb727",
- "data":{"hardware":"一次論文本文で確認できる主実験記述はモデル、データ量、専門家構成、評価ベンチマークを中心としており、GPUまたはアクセラレータの具体的機種・台数を主要条件として明記していない。したがって未記載の計算機構成は推測しない。","software":"Ling-mini-2.0を基礎モデルとし、元の256専門家・固定8活性へ重要度推定多層パーセプトロン、64仮想専門家、可変8〜12スロット、重要度補正ルーティング、補助損失を追加する。最終モデルは総16Bパラメータで、平均8専門家活性時の実効活性容量は約1Bパラメータ。","methodology":"最終学習はMing-Omniの理解系手順に従い、二段階事前学習と二段階教師あり微調整を行う。事前学習は1.1兆マルチモーダルトークン、微調整は画像・テキスト3000万、動画・テキスト1000万、音声・テキスト23万時間を使用する。アブレーションは各段階から約1%を抽出する。評価は一般画像QAのAI2D/MMBench/MMMU/MM-Vet/MathVista等、OCRのOCRBench/ChartQA/TextVQA、動画のOVOBench/MVBench/VideoMME、音声のAISHELL-1/2とLibriSpeech、自然言語のARC-C/GSM8K/GPQAを用いる。固定Top-Kと動的平均活性数を比較し、重要度隠れ状態、重要度補正ルーティング、係数α、仮想専門家比率、重要度推定器容量も個別に除去・変更する。","scope":"主張はマルチモーダルMoEの計算配分効率であり、実際の推論レイテンシ、GPUカーネル効率、専門家通信量、分散配置は直接の主要評価ではない。計算削減は主として実専門家活性数で測るため、仮想経路や可変ルーティング自体の実装オーバーヘッドをハードウェア時間として定量化していない。また画像・動画では大幅削減に強い一方、OCR/NLPのような高情報密度入力では削減余地が小さい。"},
- "reservation":{"claim_id":"claim-1cdc9fc5138a75e71558bf84","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-51313bfb190d4ac71af486c7",
+  "job_id": "job-research-2095724e259f584c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-51313bfb190d4ac71af486c7",
+    "worker_id": "scheduled-chat-00",
+    "worker_kind": "scheduled_chat"
+  }
 }
