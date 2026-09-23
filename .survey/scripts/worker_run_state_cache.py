@@ -313,66 +313,85 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
     loaded: dict[str, dict[str, Any]] = {}
     changed_workers: set[str] = set()
 
+    def cache_for(worker_id: str) -> dict[str, Any] | None:
+        if worker_id not in loaded:
+            value = load_cache(root, worker_id)
+            if value is not None:
+                loaded[worker_id] = value
+        return loaded.get(worker_id)
+
     for raw_path in descriptor_paths:
         path = raw_path if raw_path.is_absolute() else root / raw_path
         descriptor = _read(path, {})
         if not isinstance(descriptor, dict):
             continue
-        identity = _descriptor_identity(descriptor)
-        if identity is None:
-            continue
-        worker_id = identity["worker_id"]
-        cache = loaded.get(worker_id)
-        if cache is None:
-            cache = load_cache(root, worker_id)
-            if cache is None:
-                continue
-            loaded[worker_id] = cache
-        runs = cache.get("runs") if isinstance(cache.get("runs"), dict) else {}
         attempt_id = str(descriptor.get("attempt_id") or "")
         job_id = str(descriptor.get("job_id") or "")
-        result = _result_for_descriptor(root, path, descriptor)
+        if not attempt_id:
+            continue
+        identity = _descriptor_identity(descriptor)
+        candidate_workers: list[str] = []
+        if identity is not None:
+            candidate_workers = [identity["worker_id"]]
+        else:
+            for worker_id in sorted(ALLOWED_WORKERS):
+                cache = cache_for(worker_id)
+                if cache is None:
+                    continue
+                if any(
+                    isinstance(run, dict)
+                    and attempt_id in (run.get("attempts") or {})
+                    for run in cache.get("runs", {}).values()
+                ):
+                    candidate_workers.append(worker_id)
 
-        for run_key, run in runs.items():
-            if not isinstance(run, dict) or run.get("cache_valid") is not True:
+        for worker_id in candidate_workers:
+            cache = cache_for(worker_id)
+            if cache is None:
                 continue
-            attempts = run.setdefault("attempts", {})
-            if not isinstance(attempts, dict):
-                continue
-            if run_key != identity["run_key"] and attempt_id not in attempts:
-                continue
-            fact = dict(attempts.get(attempt_id) or {})
-            before = json.dumps(fact, sort_keys=True, ensure_ascii=False)
-            fact.update({
-                "attempt_id": attempt_id,
-                "job_id": job_id,
-                "kind": descriptor.get("kind"),
-                "submitted": True,
-                "descriptor_path": path.relative_to(root).as_posix(),
-                "worker_id": worker_id,
-                "run_key": descriptor.get("run_key"),
-            })
-            if not fact.get("claimed_at"):
-                fact["claimed_at"] = run.get("actual_invocation_start")
-            if result is None:
-                fact["pending"] = True
-                fact["retryable"] = False
-                fact.pop("processed_at", None)
-                fact.pop("job_status", None)
-                fact.pop("completed", None)
-            else:
-                status = str(result.get("job_status") or "none").lower()
-                retryable = result.get("ok") is False and result.get("retryable") is True
-                fact["processed_at"] = result.get("processed_at")
-                fact["job_status"] = status
-                fact["retryable"] = retryable
-                fact["pending"] = bool(retryable or status not in TERMINAL)
-                fact["completed"] = bool(result.get("ok") is True and status == "completed")
-            attempts[attempt_id] = fact
-            after = json.dumps(fact, sort_keys=True, ensure_ascii=False)
-            if after != before:
-                touched.setdefault(worker_id, set()).add(run_key)
-                changed_workers.add(worker_id)
+            runs = cache.get("runs") if isinstance(cache.get("runs"), dict) else {}
+            result = _result_for_descriptor(root, path, descriptor)
+            for run_key, run in runs.items():
+                if not isinstance(run, dict) or run.get("cache_valid") is not True:
+                    continue
+                attempts = run.setdefault("attempts", {})
+                if not isinstance(attempts, dict):
+                    continue
+                identity_matches = identity is not None and run_key == identity["run_key"]
+                if not identity_matches and attempt_id not in attempts:
+                    continue
+                fact = dict(attempts.get(attempt_id) or {})
+                before = json.dumps(fact, sort_keys=True, ensure_ascii=False)
+                fact.update({
+                    "attempt_id": attempt_id,
+                    "job_id": job_id,
+                    "kind": descriptor.get("kind"),
+                    "submitted": True,
+                    "descriptor_path": path.relative_to(root).as_posix(),
+                    "worker_id": worker_id,
+                    "run_key": descriptor.get("run_key"),
+                })
+                if not fact.get("claimed_at"):
+                    fact["claimed_at"] = run.get("actual_invocation_start")
+                if result is None:
+                    fact["pending"] = True
+                    fact["retryable"] = False
+                    fact.pop("processed_at", None)
+                    fact.pop("job_status", None)
+                    fact.pop("completed", None)
+                else:
+                    status = str(result.get("job_status") or "none").lower()
+                    retryable = result.get("ok") is False and result.get("retryable") is True
+                    fact["processed_at"] = result.get("processed_at")
+                    fact["job_status"] = status
+                    fact["retryable"] = retryable
+                    fact["pending"] = bool(retryable or status not in TERMINAL)
+                    fact["completed"] = bool(result.get("ok") is True and status == "completed")
+                attempts[attempt_id] = fact
+                after = json.dumps(fact, sort_keys=True, ensure_ascii=False)
+                if after != before:
+                    touched.setdefault(worker_id, set()).add(run_key)
+                    changed_workers.add(worker_id)
 
     clock_generations = bump_fact_clock(root, changed_workers, "immutable-submission") if changed_workers else {}
     for worker_id in changed_workers:
@@ -399,7 +418,6 @@ def observe_descriptors(root: Path, descriptor_paths: list[Path]) -> dict[str, l
         _save_cache(root, cache)
 
     return {worker: sorted(keys) for worker, keys in touched.items()}
-
 
 def cached_request(root: Path, worker_id: str, run_key: str) -> dict[str, Any] | None:
     cache = load_cache(root, worker_id)
