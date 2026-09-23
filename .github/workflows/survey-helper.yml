@@ -175,6 +175,7 @@ jobs:
         run: |
           set -euo pipefail
           DERIVED_SNAPSHOT='.survey/work-queue/next-jobs.json'
+          DERIVED_HOT_DISPATCH='.survey/work-queue/hot-dispatch.json'
 
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
@@ -201,7 +202,7 @@ jobs:
 
             for conflict in "${conflicts[@]}"; do
               case "$conflict" in
-                "$DERIVED_SNAPSHOT"|"$run_ledger") ;;
+                "$DERIVED_SNAPSHOT"|"$DERIVED_HOT_DISPATCH"|"$run_ledger") ;;
                 *)
                   echo 'Rebase conflict touches durable/non-derived state; refusing automatic resolution.' >&2
                   printf 'Unmerged paths: %s\n' "${conflicts[*]:-none}" >&2
@@ -213,10 +214,11 @@ jobs:
               esac
             done
 
-            echo 'Resolving derived queue snapshot / append-only run-ledger conflicts from latest main.'
+            echo 'Resolving rebuildable queue/hot-dispatch and append-only run-ledger conflicts from latest main.'
             # During rebase, --ours is the freshly fetched origin/main side. Keep
             # concurrent authoritative state rather than overwriting it with this
-            # helper run's stale derived snapshot or ledger append. The durable job
+            # helper run's stale derived indexes or ledger append. The rebuildable
+            # queue/hot-dispatch indexes are regenerated after rebase; durable job
             # mutations from this helper commit remain in the rebased commit.
             for conflict in "${conflicts[@]}"; do
               git checkout --ours -- "$conflict"
@@ -231,13 +233,14 @@ jobs:
 
           refresh_derived_snapshot() {
             python .survey/scripts/refresh_queue_snapshot.py --repo-root .
-            if git diff --quiet -- "$DERIVED_SNAPSHOT"; then
+            python .survey/scripts/hot_dispatch.py --repo-root . refresh > /tmp/hot-dispatch-after-rebase.json
+            if git diff --quiet -- "$DERIVED_SNAPSHOT" "$DERIVED_HOT_DISPATCH"; then
               return 0
             fi
 
-            git add "$DERIVED_SNAPSHOT"
+            git add "$DERIVED_SNAPSHOT" "$DERIVED_HOT_DISPATCH"
             if [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ]; then
-              git commit -m 'survey-helper: refresh derived queue snapshot after rebase'
+              git commit -m 'survey-helper: refresh derived indexes after rebase'
             else
               git commit --amend --no-edit
             fi
