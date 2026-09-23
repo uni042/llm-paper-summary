@@ -4,7 +4,61 @@
   "slot": "results",
   "attempt_id": "attempt-9e32a6c39b70b1ce1c5e9f53",
   "job_id": "job-research-566a14b0b6e022f7",
-  "data": {},
+  "data": {
+    "overview": "最新のネイティブ自回帰TP8行列では、同時実行数の増加に伴って復号の常駐スループットがC1の88.63出力トークン/秒からC64の1327.10へ上がる。一方、8K級事前充填はC16以降おおむね1.04万入力トークン/秒で頭打ちになる。長い入力でもC16で約8Kの10413.87から32Kの9966.84へ緩やかに低下する範囲に留まった。重要なのは、これらを過去のTP4、個別カーネル、投機的復号の改善率と足し合わせず、同一条件の正式測定として扱っている点である。サービス全体のHTTP率は入場、事前充填、回答長のばらつき、drainを含むため常駐復号率より低く、カーネル速度そのものと同一視できない。",
+    "key_results": [
+      {
+        "metric": "C1常駐復号",
+        "value": "88.63出力トークン/秒",
+        "baseline": "同一正式行列のHTTP全体率86.76出力トークン/秒",
+        "condition": "TP8/EP1、511–512トークン入力、greedy、natural EOS、3ラウンド中央値",
+        "interpretation": "単一要求でも過去の修正済みTP4参照を上回るが、現在条件のTP4対応測定がないためTPスケーリング倍率は算出しない。"
+      },
+      {
+        "metric": "C32常駐復号",
+        "value": "1041.78出力トークン/秒",
+        "baseline": "同一C32のHTTP全体率689.74出力トークン/秒",
+        "condition": "TP8/EP1、正式native-AR行列、default-offのC32 down-consumer試験は無効",
+        "interpretation": "常駐区間と要求wave全体の差が大きく、入場・事前充填・drainを含む境界を明示しない比較は誤解を生む。"
+      },
+      {
+        "metric": "C64常駐復号",
+        "value": "1327.10出力トークン/秒",
+        "baseline": "同一C64のHTTP全体率829.65出力トークン/秒",
+        "condition": "64要求の復号グラフ段、正式3ラウンド中央値",
+        "interpretation": "高同時実行で集約復号量は増えるが、HTTP率との差からエンドツーエンドの固定費と不均一終了が無視できない。"
+      },
+      {
+        "metric": "C16長入力事前充填",
+        "value": "約8K:10413.87、16K:10263.02、32K:9966.84入力トークン/秒",
+        "baseline": "同一C16・同一1M論理KV・32Kチャンク条件の長さ掃引",
+        "condition": "zero prefix-cache hit、各長さ3ラウンド中央値",
+        "interpretation": "32Kまで大きな崩れはないが、これは100万トークン占有時の性能を示さず、論理容量と実占有を区別する必要がある。"
+      },
+      {
+        "metric": "64行expert sorterの歴史的microbenchmark",
+        "value": "gate/up 7.26→5.55ms、down 6.01→5.26ms、合計約18.5%改善",
+        "baseline": "32行expert block",
+        "condition": "M2048の過去カーネル測定。別途endpoint ABBAは2.184/2.061/2.062/2.185秒",
+        "interpretation": "重み走査再利用の有効性を示すが、正式TP8行列の改善率へそのまま加算できない。"
+      }
+    ],
+    "negative_results": [
+      "CKTileのKSPLIT=2/4は約25/22トークン/秒以下となり、小Mの混合エキスパートではsplit-K還元とCTA圧力が不利だった。",
+      "FP4重みを事前にINT8へ展開する案はgateが7.23msから10.45msへ悪化し、展開除去より重み転送増加が支配した。",
+      "full prefillのCUDA Graphはcaptureに成功してもreplayでfaultし、可変metadata addressが安定しないため採用されなかった。",
+      "RCCLへの置換はTTFTを0.679秒から0.711秒へ悪化させ、単純なcollective実装差し替えでは境界固定費を解けなかった。",
+      "C32 down-consumer試験は常駐率約+1.54%の小さな正効果に留まり、正式構成ではdefault-offのままである。"
+    ],
+    "interpretation": "本研究の改善は一つの万能カーネルではなく、復号と事前充填の形状差、FP4保存とCDNA2実行形式の不一致、専門家ごとの小M、注意・索引器の重複、集合通信の固定同期点をそれぞれ狙った結果である。したがって、過去のpeer-read、sorter、空タイル除去などの個別倍率を合算して最新正式値を説明することはできない。C32/C64で常駐復号とHTTP全体率の差が広がることも、カーネルのみを見た速度とサービス利用者が見る完了率が別物であることを示す。",
+    "quality_impact": "元チェックポイントのFP4/FP8保存形式を維持し、明らかなW2列配置やscale layoutの誤りを修復しているため、単なる近似高速化を正しさと交換した方式ではない。ただし、最終固定順Top-6還元や局所component equalityは全モデルのビット一致を保証しない。C16の16K入力では16要求中2要求の先頭トークンが測定ラウンド間で変化し、固定greedyでも実行形状差による数値ドリフトが残る。France固定質問やsemantic sentinelも限定的なsanity checkであり、一般品質ベンチマークの代替ではない。",
+    "evidence_locations": [
+      "Table 2 Formal native P/D matrix",
+      "Table 3 Current C16 length sweep",
+      "§8.2–8.4 historical ablations",
+      "Table 5 Important negative results"
+    ]
+  },
   "reservation": {
     "claim_id": "claim-9e32a6c39b70b1ce1c5e9f53",
     "worker_id": "scheduled-chat-30",
