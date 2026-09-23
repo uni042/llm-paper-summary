@@ -236,7 +236,7 @@ Discoveryは、run開始後に外部APIの取得を始める待ち時間を減�
 - `discovery_preload` が非nullなら、新しいrun固有schema v3 requestを作り、そこから返された `provider` / `source_url` / `axis` / `initial_cursor` / `page_size` / `max_pages` / `target_unseen` をそのまま使い、追加で今回の `worker_id` と `preload_id` を保存する。`run_key` は**必ず今回runの値**にする。preload側の `run_key=preload:...` をコピーしない。
 - 実run用 `process_discovery_precheck.py` は、先行取得済み20件を現在のidentity snapshot / rejection ledgerで**再フィルタ**する。20件残れば外部providerへ追加アクセスせず、その場で今回run固有の正式precheck result / receiptを生成する。既収録化などで20件未満になった場合だけ、同じ固定 `source_url` の保存済み `next_cursor` から不足分を補充する。
 - バックグラウンドpreload result自体をDiscovery submissionの証明として参照してはならない。submissionが参照できるのは、今回runの `run_key` / `axis` で再検査されたworkflow生成resultだけである。queue workerも `preload_seed=true` のresultからの直接submissionを拒否する。
-- 同方向の利用可能preloadが無い、claim競合で先行窓を取れなかった、preloadが破損している等の場合は停止しない。最新run-stateを再取得し、別の同方向preloadがあればそれを使い、無ければselectorが返した固定ソースを従来のschema v3経路で直接precheckする。preload不足をrun終了理由にしない。
+- 同方向の利用可能preloadが無い、claim競合で先行窓を取れなかった、preloadが破損している等の場合は停止しない。最新run-stateを再取得し、別の同方向preloadがあればそれを使い、無ければselectorが返した固定ソースを従来のschema v3経路で直接precheckする。preload不足をrun終了理由にしない。background preloadのprovider失敗は同一ソース・同一6時間bucketで最大2回までとし、preload request追加pushによる自己起動が障害時に無限再試行ループにならないようにする。
 
 `target_unseen` の既定値は20。precheck側の `discovery_provider_adapter.py` と `collect_until_unseen()` が**同じ検索結果をページ送り**し、各ページで既収録・既候補・既却下・ページ間重複を除外する。ワーカーが2ページ目以降を個別に手作業で継ぎ足す必要はない。
 
