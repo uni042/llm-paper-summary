@@ -16,6 +16,7 @@ if str(HERE) not in sys.path:
 
 from immutable_submission import TRANSPORT_VERSION, validate_descriptor
 from record_bank_config import BANK_ROOTS, SLOT_NAMES
+import worker_run_index
 
 
 def _blob_sha(repo: Path, rel: str) -> str:
@@ -85,6 +86,10 @@ def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path
     for field in ("kind", "attempt_id", "job_id", "record_bank", "paper_path"):
         if result.get(field) != descriptor.get(field):
             raise ValueError(f"preflight result {field} does not match completed descriptor")
+    for field in worker_run_index.RUN_FIELDS:
+        if descriptor.get(field) not in (None, "") or result.get(field) not in (None, ""):
+            if result.get(field) != descriptor.get(field):
+                raise ValueError(f"preflight result {field} does not match completed descriptor")
     expected = descriptor_fingerprint(descriptor)
     if result.get("descriptor_sha256") != expected:
         raise ValueError("preflight result is stale: record slots or descriptor fields changed after the check")
@@ -93,7 +98,7 @@ def verify_preflight_result(repo: Path, descriptor: dict, preflight_result: Path
     return result
 
 
-def build(repo: Path, *, kind: str, attempt_id: str, job_id: str, record_bank: str, paper_path: str | None = None, expected_blob_sha: str | None = None) -> dict:
+def build(repo: Path, *, kind: str, attempt_id: str, job_id: str, record_bank: str, paper_path: str | None = None, expected_blob_sha: str | None = None, worker_id: str | None = None, run_key: str | None = None, scheduled_slot: str | None = None, actual_invocation_start: str | None = None) -> dict:
     repo = repo.resolve()
     bank = record_bank.lower()
     if bank not in BANK_ROOTS:
@@ -116,6 +121,15 @@ def build(repo: Path, *, kind: str, attempt_id: str, job_id: str, record_bank: s
         descriptor["paper_path"] = paper_path
     if expected_blob_sha:
         descriptor["expected_blob_sha"] = expected_blob_sha
+    identity_candidate = {
+        "worker_id": worker_id,
+        "run_key": run_key,
+        "scheduled_slot": scheduled_slot,
+        "actual_invocation_start": actual_invocation_start,
+    }
+    identity = worker_run_index.normalize_identity(identity_candidate, required=False)
+    if identity is not None:
+        descriptor.update(identity)
     return validate_descriptor(repo, descriptor)
 
 
