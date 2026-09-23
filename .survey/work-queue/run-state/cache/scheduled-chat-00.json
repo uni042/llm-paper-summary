@@ -1,6 +1,6 @@
 {
-  "fact_generation": 7,
-  "generation": 16,
+  "fact_generation": 8,
+  "generation": 17,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
@@ -1532,10 +1532,13 @@
         "attempt-921f188aa26d60b7af5ae872": {
           "attempt_id": "attempt-921f188aa26d60b7af5ae872",
           "claimed_at": "2026-09-23T04:58:56+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-921f188aa26d60b7af5ae872.json",
           "job_id": "job-research-2c92c0a3b8a6da0e",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-23T05:07:39+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "scheduled-chat-00-auto11-20260923T045745Z",
@@ -1557,21 +1560,21 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T04:58:47.066671+00:00",
-      "generation": 16,
+      "generation": 17,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-00-auto11-20260923T045745Z",
       "scheduled_slot": "00",
       "submission": {
-        "completed_attempt_ids": [],
-        "last_terminal_job_status": "none",
-        "pending_attempt_ids": [
+        "completed_attempt_ids": [
           "attempt-921f188aa26d60b7af5ae872"
         ],
+        "last_terminal_job_status": "completed",
+        "pending_attempt_ids": [],
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 0,
+        "research_audit_completed_this_invocation": 1,
         "retryable_attempt_ids": [],
-        "submission_result_pending": true,
+        "submission_result_pending": false,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
           "attempt-921f188aa26d60b7af5ae872"
@@ -1675,6 +1678,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T05:07:15.971466+00:00",
+  "updated_at": "2026-09-23T05:07:39.459481+00:00",
   "worker_id": "scheduled-chat-00"
 }
