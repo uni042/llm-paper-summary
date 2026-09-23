@@ -1,6 +1,6 @@
 {
-  "fact_generation": 26,
-  "generation": 37,
+  "fact_generation": 27,
+  "generation": 38,
   "runs": {
     "manual-e2e-20260923T0402Z-00": {
       "actual_invocation_start": "2026-09-23T04:02:00+00:00",
@@ -601,10 +601,13 @@
         "attempt-4221ae4eae4238e95de8fb44": {
           "attempt_id": "attempt-4221ae4eae4238e95de8fb44",
           "claimed_at": "2026-09-23T07:12:18+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-4221ae4eae4238e95de8fb44.json",
           "job_id": "job-research-8dfa4bfad6e4a344",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-23T07:15:20+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "scheduled-chat-00-20260923T070124Z",
@@ -642,22 +645,22 @@
         "pending_claim_requested_at": {}
       },
       "first_cached_at": "2026-09-23T07:01:59.931496+00:00",
-      "generation": 37,
+      "generation": 38,
       "rebuilt_from_canonical": false,
       "run_key": "scheduled-chat-00-20260923T070124Z",
       "scheduled_slot": "00",
       "submission": {
         "completed_attempt_ids": [
-          "attempt-3b0b8499edf3a5b73b2ca7f6"
+          "attempt-3b0b8499edf3a5b73b2ca7f6",
+          "attempt-4221ae4eae4238e95de8fb44"
         ],
         "last_terminal_job_status": "completed",
         "pending_attempt_ids": [
-          "attempt-c5fb805067e99d4f2b7cd63c",
-          "attempt-4221ae4eae4238e95de8fb44"
+          "attempt-c5fb805067e99d4f2b7cd63c"
         ],
         "pipeline_ahead_count": 1,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 1,
+        "research_audit_completed_this_invocation": 2,
         "retryable_attempt_ids": [
           "attempt-c5fb805067e99d4f2b7cd63c"
         ],
@@ -1124,6 +1127,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-23T07:14:57.378359+00:00",
+  "updated_at": "2026-09-23T07:15:20.842548+00:00",
   "worker_id": "scheduled-chat-00"
 }

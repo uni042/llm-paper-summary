@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-23T07:05:34.848041+00:00",
+  "updated_at": "2026-09-23T07:15:27.291990+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -42098,6 +42098,56 @@
           "type": "research",
           "canonical_id": "arXiv:2601.18089",
           "title": "LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 971,
+      "paper_active_count_after": 971,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35830725779",
+      "first_recorded_at": "2026-09-23T07:15:27.291990+00:00",
+      "last_recorded_at": "2026-09-23T07:15:27.291990+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35830725779:1",
+          "recorded_at": "2026-09-23T07:15:27.291990+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35830725779",
+            "run_attempt": "1",
+            "source_sha": "14fbd1d4ef8eba59e4c2e6af006a96a7edcbd4df"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-8dfa4bfad6e4a344",
+          "type": "research",
+          "canonical_id": "arXiv:2603.12831",
+          "title": "Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking",
           "from": "ready",
           "to": "completed"
         }

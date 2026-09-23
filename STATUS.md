@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-23 16:10:50 JST**
+> 自動生成: **2026-09-23 16:15:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **166** |
+| 収録候補論文 | **165** |
 | 未claim Research job | **164** |
-| 直近24hの検証済みResearch収録 | **85** |
-| 最終検証済みResearch収録 | **09-23 16:05:31 JST（5分前）** |
+| 直近24hの検証済みResearch収録 | **84** |
+| 最終検証済みResearch収録 | **09-23 16:15:20 JST（7秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **166** |
+| canonical_id確認済みの一意な候補論文 | **165** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **166** |
+| 非終端Research job合計 | **165** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（7時間39分前）** |
+| 最終maintenance完了 | **09-23 08:30:50 JST（7時間44分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **16** | **1** | **0** | **0** | **2** | **0** | — |
+| Research | **16** | **1** | **0** | **0** | **1** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **16** | **4** | **0** | **3** | **2** | **0** | **6** |
+| 合計 | **16** | **4** | **0** | **3** | **1** | **0** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-23 16:15:20 JST** [research] `arXiv:2603.12831` — Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking
+  - job: `.survey/work-queue/jobs/job-research-8dfa4bfad6e4a344.json`
+  - result: `.survey/work-queue/results/research/attempt-4221ae4eae4238e95de8fb44.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-4221ae4eae4238e95de8fb44.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2603.12831-serving-hybrid-llm-loads-with-slo-guarantees-using-cpu-gpu-attention-piggybacking.md`
 - **09-23 16:05:31 JST** [research] `arXiv:2601.18089` — LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts
   - job: `.survey/work-queue/jobs/job-research-88a9229b2587f714.json`
   - result: `.survey/work-queue/results/research/attempt-3b0b8499edf3a5b73b2ca7f6.json` (`ok=true`)
@@ -127,11 +132,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-5a4e9ada9818faf9d38935ab.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-5a4e9ada9818faf9d38935ab.json`
   - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2605.10933-deco-end-side-sparse-moe.md`
-- **09-23 13:28:45 JST** [research] `arXiv:2608.01784` — REFLEX: Rethinking MoE Inference as Refinement-Aware Compute Allocation in Diffusion Language Models
-  - job: `.survey/work-queue/jobs/job-research-81939bee41b7da9c.json`
-  - result: `.survey/work-queue/results/research/attempt-d924da91e59e26de1e7c5529.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-d924da91e59e26de1e7c5529.json`
-  - paper: `papers/inference/02-adaptive-expert-computation-compression/2026-2608.01784-reflex-refinement-aware-compute-allocation.md`
 
 ### Audit
 
@@ -178,10 +178,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **2件** / 直近15分heartbeat: **0件**
-- `arXiv:2604.19835` — Expert Upcycling: Shifting the Compute-Efficient Frontier of Mixture-of-Experts / worker `scheduled-chat-00`
-  - claim: **09-23 16:06:32 JST** / heartbeat: **—** / lease expiry: **09-23 17:36:32 JST**
-  - evidence: `.survey/work-queue/claims/job-research-063776a1a2b53b94.json`
+- 未失効かつ非terminal jobのclaim: **1件** / 直近15分heartbeat: **0件**
 - `arXiv:2606.19025` — FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs / worker `scheduled-chat-30`
   - claim: **09-23 15:32:46 JST** / heartbeat: **—** / lease expiry: **09-23 17:02:46 JST**
   - evidence: `.survey/work-queue/claims/job-research-676eb3c59785d737.json`
@@ -204,7 +201,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **166** |
+| ready | **165** |
 
 ### 候補の重複・識別情報欠損
 
@@ -224,7 +221,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **983** |
+| inference/training/survey配下の論文Markdown実体 | **984** |
 
 ### immutable submissionの未照合
 
