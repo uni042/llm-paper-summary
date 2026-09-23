@@ -120,6 +120,7 @@ jobs:
             fi
 
             python .survey/scripts/normalize_required_metadata.py --repo-root . --apply
+            python .survey/scripts/hot_dispatch.py --repo-root . refresh > /tmp/hot-dispatch.json
             python .survey/scripts/record_run_ledger.py record --repo-root . --snapshot /tmp/submission-fast-baseline.json
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
             python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
@@ -140,6 +141,7 @@ jobs:
               .survey/work-queue/run-ledger.json \
               .survey/work-queue/state.json \
               .survey/work-queue/next-jobs.json \
+              .survey/work-queue/hot-dispatch.json \
               .survey/work-queue/discovery-state.json \
               .survey/survey-state/identity-deltas
 
