@@ -20,10 +20,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-import build_discovery_identity_snapshot
-import build_discovery_rejection_ledger
 import derive_worker_run_state
-import process_discovery_precheck
 import worker_identity
 
 PRECHECK_REQUESTS = Path(".survey/work-queue/discovery-precheck/requests")
@@ -161,6 +158,12 @@ def _process_precheck(
     request_path: Path,
     result_path: Path,
 ) -> dict[str, Any]:
+    # These modules pull in the full survey dependency set (including PyYAML).
+    # Keep them lazy so later run-state refreshes that are not eligible for the
+    # initial Discovery fast lane stay on the lightweight path.
+    import build_discovery_identity_snapshot
+    import build_discovery_rejection_ledger
+    import process_discovery_precheck
     with tempfile.TemporaryDirectory(prefix="survey-initial-discovery-") as td:
         temp = Path(td)
         snapshot_dir = temp / "identities"
