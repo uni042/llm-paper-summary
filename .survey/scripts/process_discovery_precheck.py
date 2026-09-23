@@ -213,6 +213,16 @@ def _process_v3(
                     raise DiscoveryPrecheckRequestError(
                         "Discovery preload result has invalid next_cursor"
                     )
+                # repository_references is a local, dynamic pool whose positional
+                # cursor can shift after papers/ledgers change. If the cached page
+                # is no longer enough, restart the live local scan at index 0;
+                # cross-page identity filtering removes overlap without skipping
+                # candidates that moved ahead of the old cursor.
+                if str(request.get("provider") or "").casefold() in {
+                    "repository_references",
+                    "repository_reference_pool",
+                }:
+                    next_cursor = "0"
                 return {
                     "records": records,
                     "next_cursor": next_cursor,
