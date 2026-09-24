@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 18:19:33 JST**
+> 自動生成: **2026-09-24 19:22:43 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,8 +12,8 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **284** |
-| 未claim Research job | **140** |
-| 直近24hの検証済みResearch収録 | **27** |
+| 未claim Research job | **142** |
+| 直近24hの検証済みResearch収録 | **21** |
 | 最終検証済みResearch収録 | **09-24 18:15:31 JST** |
 | 整合性異常 | **22** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（9時間43分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（10時間46分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,12 +69,12 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **3** | **3** | **0** | **144** | **0** | — |
+| Research | **14** | **3** | **3** | **0** | **142** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **8** | **5** | **5** | **0** | **0** | **0** | **10** |
-| 合計 | **22** | **8** | **8** | **0** | **144** | **0** | **10** |
+| Discovery | **10** | **1** | **0** | **1** | **0** | **0** | **0** |
+| 合計 | **24** | **4** | **3** | **1** | **142** | **0** | **0** |
 
-- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -139,6 +139,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Discovery
 
+- **09-24 18:30:59 JST** job `job-3f7d42c402f19022` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260924T093030Z-scheduled-chat-30-4b7e2a-r1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T093030Z-scheduled-chat-30-4b7e2a-r1.json`
+  - 探索軸: backward references of arXiv:2401.09670
+- **09-24 18:33:47 JST** job `job-c06a53d7d9488737` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260924T093300Z-scheduled-chat-30-4b7e2a-r2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T093300Z-scheduled-chat-30-4b7e2a-r2.json`
+  - 探索軸: forward citations of arXiv:2306.00978
 - **09-24 16:02:32 JST** job `job-589818bf1fa4284e` / 候補 **2件**
   - result: `.survey/work-queue/results/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json`
@@ -202,35 +210,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Discovery（最新Discovery run）
 
-- 最新観測run: **2026-09-24 16:00 JST**
-- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **0件** / 候補: **10件**
-- 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving / forward citations of FlexGen offload and hierarchical-memory LLM inference
-- round `20260924T070008Z-scheduled-chat-00-a3f91c-take1` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json`
-  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json` (`ok=true`)
-- round `20260924T070300Z-scheduled-chat-00-a3f91c-r2` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json`
-  - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json` (`ok=true`)
-- round `20260924T070530Z-scheduled-chat-00-a3f91c-r3` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260924T070630Z-scheduled-chat-00-a3f91c-r3.json`
-  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T070630Z-scheduled-chat-00-a3f91c-r3.json` (`ok=true`)
-- round `20260924T070715Z-scheduled-chat-00-a3f91c-r4` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json`
-  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json` (`ok=true`)
-- round `20260924T070900Z-scheduled-chat-00-a3f91c-r5` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json`
-  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json` (`ok=true`)
+- 最新観測run: **2026-09-24 18:57 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **0件** / 個別result照合: **0件** / 個別result未照合: **1件** / 候補: **0件**
+- 探索軸: backward references from repository structured references
+- round `20260924T095830Z-scheduled-chat-00-6f4c2a-r1` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json`
+  - 探索軸: backward references from repository structured references
+  - 個別result照合: なし（immutable round記録は確認済み）
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **0件**
 - `arXiv:2609.21079` — DLB: Distributed Load Balancing at Scale for Generative AI Inference / worker `shared-preload-pool`
   - claim: **09-24 18:19:18 JST** / heartbeat: **—** / lease expiry: **09-25 06:19:18 JST**
   - evidence: `.survey/work-queue/claims/job-research-207262571f4eb880.json`
@@ -308,10 +300,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **304** |
+| 成功result未照合のimmutable submission | **305** |
 | └ Research | **172** |
 | └ Audit | **2** |
-| └ Discovery | **71** |
+| └ Discovery | **72** |
 | └ Other/Unknown | **59** |
 
 ### 厳格検証が未成立のcompleted job
@@ -333,6 +325,33 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
 | 異常レコード合計（重複排除） | **22** |
+
+### completed Researchのpaper欠損診断対象
+
+上の欠損件数と同じ判定で残ったjob pathです。履歴jobを推測で書き換えず、対応submission/result/paperを一次証拠で照合するための診断一覧です。
+
+- `.survey/work-queue/jobs/job-research-188f6649e816eaae.json`
+- `.survey/work-queue/jobs/job-research-2c335f8cbb6722b2.json`
+- `.survey/work-queue/jobs/job-research-2dcd265cd3f3852c.json`
+- `.survey/work-queue/jobs/job-research-2e7cd1c4e1dc851d.json`
+- `.survey/work-queue/jobs/job-research-303634fb993a11eb.json`
+- `.survey/work-queue/jobs/job-research-44bb3b5d160bad25.json`
+- `.survey/work-queue/jobs/job-research-548d7e4cd563f6b8.json`
+- `.survey/work-queue/jobs/job-research-581beb5301e2ddf8.json`
+- `.survey/work-queue/jobs/job-research-740437feef88b672.json`
+- `.survey/work-queue/jobs/job-research-7e6e9c9b89ab9c18.json`
+- `.survey/work-queue/jobs/job-research-8de660021e1eaf46.json`
+- `.survey/work-queue/jobs/job-research-a06bdf20c1667dad.json`
+- `.survey/work-queue/jobs/job-research-b2d29fa9c529bdfd.json`
+- `.survey/work-queue/jobs/job-research-b3afe97f03f9606a.json`
+- `.survey/work-queue/jobs/job-research-b8f01545319d9604.json`
+- `.survey/work-queue/jobs/job-research-baad806afa0723b4.json`
+- `.survey/work-queue/jobs/job-research-ca56f81ba7248b99.json`
+- `.survey/work-queue/jobs/job-research-ca62fa2224d4eac8.json`
+- `.survey/work-queue/jobs/job-research-ce081c207f1ded58.json`
+- `.survey/work-queue/jobs/job-research-ce95464a254235a3.json`
+- `.survey/work-queue/jobs/job-research-ebde0cc040167968.json`
+- `.survey/work-queue/jobs/job-research-fe0106a025692e30.json`
 
 ### このSTATUSが採用する証拠
 
