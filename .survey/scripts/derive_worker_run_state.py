@@ -45,6 +45,7 @@ RUNTIME_CONDITIONS = {
     "transport_unrecoverable",
 }
 PLATFORM_CONTEXT_LIMIT_EVENT = "platform_tool_call_rejected"
+PLATFORM_CONTEXT_LIMIT_SCOPE = "run_wide"
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -97,6 +98,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         raise ValueError("runtime_condition_attempts must be an integer")
     runtime_condition_detail = str(value.get("runtime_condition_detail") or "").strip()
     runtime_condition_event = str(value.get("runtime_condition_event") or "").strip()
+    runtime_condition_scope = str(value.get("runtime_condition_scope") or "").strip()
 
     direct_inventory = value.get("candidate_inventory_at_start")
     direct_mode = str(value.get("work_mode_at_start") or "").strip()
@@ -170,6 +172,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "runtime_condition_attempts": max(runtime_condition_attempts, 0),
         "runtime_condition_detail": runtime_condition_detail,
         "runtime_condition_event": runtime_condition_event,
+        "runtime_condition_scope": runtime_condition_scope,
         "route_recovery_source": route_recovery_source,
         "recovered_work_mode_at_start": recovered_work_mode,
         **direct_route,
@@ -1642,12 +1645,13 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             request.get("runtime_condition_confirmed")
             and int(request.get("runtime_condition_attempts") or 0) >= 1
             and request.get("runtime_condition_event") == PLATFORM_CONTEXT_LIMIT_EVENT
+            and request.get("runtime_condition_scope") == PLATFORM_CONTEXT_LIMIT_SCOPE
             and str(request.get("runtime_condition_detail") or "").strip()
         )
         if not explicit_platform_rejection:
             runtime = "none"
             runtime_condition_ignored_reason = (
-                "platform_limit_requires_explicit_platform_tool_call_rejection_evidence"
+                "platform_limit_requires_run_wide_tool_rejection_after_fallback"
             )
 
     # 600s is only a no-new-independent-work window. The final 180s is the
