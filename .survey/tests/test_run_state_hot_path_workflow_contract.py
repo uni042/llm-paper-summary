@@ -57,6 +57,8 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
     def test_claim_lane_uses_shared_fast_path_without_schedule_change(self):
         text = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
         self.assertIn("claim_fast_path.py", text)
+        self.assertIn(".survey/scripts/hot_dispatch.py", text)
+        self.assertIn(".github/workflows/survey-claim-fast.yml", text)
         self.assertNotIn("py_compile", text)
         self.assertIn(".survey/work-queue/run-state", text)
         self.assertIn("group: survey-claim-main", text)
