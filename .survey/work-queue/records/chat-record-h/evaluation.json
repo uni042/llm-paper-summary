@@ -4,10 +4,21 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-bf0d9a75a0f968eb0a3957d7",
   "job_id": "job-research-d7f908e39f78ffc5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-bf0d9a75a0f968eb0a3957d7",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "管理クラウドサービスを使うproduction-derived評価で、GPU型番は固定・公開されない。LocalはECS Fargate、SWF decider/activity workerはECS、batchはAmazon Managed Flinkの水平拡張TaskManager clusterを同一AWS regionで使用。",
+    "software": "Amazon Bedrock、AWS Simple Workflow Service、Apache Flink、Amazon SQS、ECS Fargate。workflow authoringはJava typed combinator APIまたはGraalVM JavaScript DSL。",
+    "model": "Amazon Bedrock上のAnthropic Claude Opus、Sonnet、Haiku。RAGはOpus、ReActはSonnet、Routing/PreActはHaiku+Sonnet、Deep ResearchはSonnet。",
+    "datasets": ["5 orchestration patternそれぞれ500件超のexpert-authoredおよびsynthetic prompt", "production release前にも使う同一benchmark suite"],
+    "baselines": ["Local streaming binding", "SWF durable asynchronous binding", "Flink batch binding"],
+    "correctness": "同一workflowを3 bindingで実行し、出力をposition-swapped pairwise comparisonで両順序評価する。同じ出力が両順序で勝った場合のみdecisiveとし、Bradley-Terry strengthをStream=0基準で推定。1000 bootstrapの95%信頼区間が0を含めば検出可能なbinding preferenceなしと判定する。",
+    "settings": [
+      {"name": "RAG", "description": "Opus、single inference、大文脈、toolなし。"},
+      {"name": "ReAct", "description": "Sonnet、2〜5 iterationのtool-calling loop。"},
+      {"name": "Routing / PreAct", "description": "Haiku+Sonnetでclassifier routingまたはlow-cost plannerからstronger ReActへのcomposition。"},
+      {"name": "Deep Research", "description": "Sonnet、planner・parallel specialists・synthesizer、5〜12 inference calls。"}
+    ],
+    "methodology": "主評価はcross-binding output quality equivalenceであり、同じprompt setとBedrock endpointを使って実行substrateだけを変える。追加でend-to-end latencyをStream=1.0に正規化し、代表的Sonnet ReActについてtoken costとorchestration/infrastructure costを分解する。production registryの多数agent configurationでも三bindingを検証し、time-sensitive toolとsubstrate-specific failureを移植性の限界として別途観察する。",
+    "scope": "Amazon Bedrockとconversational shoppingを中心とするproduction platform評価。GPU kernelやtoken-level schedulerのbenchmarkではなく、agent workflow orchestrationをexecution mode間で移植するシステム設計を評価する。"
+  },
+  "reservation": {"claim_id": "claim-preload-bf0d9a75a0f968eb0a3957d7", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
