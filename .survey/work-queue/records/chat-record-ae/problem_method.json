@@ -4,10 +4,18 @@
   "slot": "problem_method",
   "attempt_id": "attempt-preload-7c93b83402e32e5d2b5890a8",
   "job_id": "job-research-042e5712bf1b426e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-7c93b83402e32e5d2b5890a8",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "本番LLMサービスは、対話・QAのようにTTFTとTPOTが厳しいRT要求と、文書一括処理のように個々の遅延より総スループットを重視するBE要求を同時に抱える。従来は両者を別GPUクラスタへ分けるが、RT負荷の時間変動に備えた過剰確保が遊休GPUを生む。同居させると、RTは小バッチを好みBEは大バッチを好むためバッチ方針が衝突し、さらに両者のKVキャッシュが同じGPUメモリを奪い合う。FCFSでは長いBEが後着RTをhead-of-line blockingし、単純な反復単位プリエンプションでもTTFTとTPOTを同時に守りにくい。",
+    "novelty": "BROSはRT/BE混合サービングを、各反復でBE生成トークン/時間を最大化しながら全RTのTTFTまたはTPOT制約を守る組合せ問題として明示する。実用的にはRTの残余SLO余裕から動的優先度を付けて先に詰め、余裕のあるRTをBEへ置換するヒューリスティックとSLO達成状況に応じた適応バッチサイズを使う。さらにKVブロックをRTとBEが両端から逆方向へ使う双方向配置にし、RTがBEブロックの未使用スロットを即時利用できるようにする。必要な場合だけBEの上書き対象KVをCPUへ遅延チェックポイントするため、ブロック全体のswap/recomputeを避ける。",
+    "method_overview": "中央Scheduling EngineはRT/BEごとにwaiting・pending・runningキューを持ち、KV Block Managerがブロック割当とpreemption tableを管理する。反復ごとに入力トークン長、総コンテキスト長、CPUへ退避済みKV量から線形コストモデルで実行時間を予測し、各RTについて現在の経過時間と残りトークン数を使ってSLO違反を避ける。RTを優先度順に詰めた後、BEのCPU↔GPU転送コスト等を考慮してBEを追加・低優先RTと置換し、SLO達成状況から次反復のバッチ上限も調整する。KV側では同一ブロックの左端をRT、右端をBEが使い、衝突時はRTを優先してBEスロットをプリエンプトし、上書き直前のKVテンソルだけ非同期にCPUへ保存する。",
+    "components": [
+      {"name": "SLO制約付き反復スケジューラ", "description": "各反復のRT選択変数とBE選択変数を置き、BEスループット最大化を目的、RTのTTFT/TPOT、バッチ上限、空きKVブロックを制約として定式化する。"},
+      {"name": "動的優先度パッキング", "description": "RT要求のSLOまでの余裕を反映して優先順位を更新し、緊急RTを先に選択した後、BE要求を追加または低優先RTと置換してBE starvationを防ぐ。"},
+      {"name": "SLO-aware適応バッチング", "description": "RTのSLO達成状態に応じて反復ごとのバッチ上限を調整し、RTの小バッチ嗜好とBEの大バッチ嗜好の間を動的に移動する。"},
+      {"name": "双方向KVブロック配置", "description": "1ブロック内でRT KVを左から右、BE KVを右から左へ成長させ、BEが確保したブロックの未使用スロットをRTが利用できるようにする。"},
+      {"name": "ブロックプリエンプション＋遅延チェックポイント", "description": "RTが追加容量を必要とするとBE側スロットを優先的に明け渡し、実際に上書きされる直前のBE KVだけをCPUへ非同期退避する。全ブロックswapを遅延・回避する。"}
+    ],
+    "system_design": "入口がRT/BE要求をScheduling Engineへ渡し、中央SchedulerとKV Block Managerが反復単位で実行対象とKV配置を決める。GPU Executorはテンソル並列でモデルシャードを実行し、指示に応じてGPU/CPU間KV転送を非同期CUDA streamで行う。計算側のSLO予測とメモリ側の双方向共有を同じスケジューリング判断に結び付けることで、RT保護のためにBEを完全排除せず、BEのKVを保持したままRTへ空間を融通する。"
+  },
+  "reservation": {"claim_id": "claim-preload-7c93b83402e32e5d2b5890a8", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
