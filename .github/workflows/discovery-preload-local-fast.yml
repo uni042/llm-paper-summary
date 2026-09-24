@@ -87,17 +87,8 @@ jobs:
               --repo-root . ready --limit 32 \
               > /tmp/local-preload-ready.json
 
-            python - <<'PY' > /tmp/local-preload-requests.txt
-import json
-from pathlib import Path
-data = json.loads(Path('/tmp/local-preload-ready.json').read_text(encoding='utf-8'))
-for row in data.get('items', []):
-    if str(row.get('provider') or '').strip().casefold() in {
-        'repository_references',
-        'repository_reference_pool',
-    }:
-        print(row['request_path'])
-PY
+            python -c 'import json; from pathlib import Path; d=json.loads(Path("/tmp/local-preload-ready.json").read_text(encoding="utf-8")); [print(row["request_path"]) for row in d.get("items", []) if str(row.get("provider") or "").strip().casefold() in {"repository_references","repository_reference_pool"}]' \
+              > /tmp/local-preload-requests.txt
 
             if [ -s /tmp/local-preload-requests.txt ]; then
               set +e
