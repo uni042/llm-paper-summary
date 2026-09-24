@@ -11,6 +11,8 @@ on:
       - '.survey/work-queue/transport/offline-job-seed.json'
       - '.survey/work-queue/transport/request-jobs.json'
       - '.survey/work-queue/fallback-inbox/*.json'
+      - '.survey/scripts/blocked_retry.py'
+      - '.github/workflows/survey-helper.yml'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
