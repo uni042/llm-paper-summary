@@ -22,6 +22,8 @@ except ModuleNotFoundError as exc:
     _core = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(_core)
 
+import paper_taxonomy
+
 
 _GENERIC_SURVEY_WORKERS = {"scheduled-chat-llm-survey"}
 _CURRENT_SCHEDULED_WORKERS = {"scheduled-chat-00": "00", "scheduled-chat-30": "30"}
@@ -120,8 +122,6 @@ def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
         if claim_id:
             claims_by_id[claim_id] = claim
 
-    # Claim-result assignments are immutable allocation evidence and survive
-    # claim cleanup/rotation. Use them only as a fallback for run attribution.
     for _, result in _core.evidence._iter_json(repo_root / ".survey/work-queue/claim-results"):
         assignments = result.get("assignments")
         if not isinstance(assignments, list):
@@ -173,6 +173,7 @@ def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
             )
     return rows
 
+
 def _current_orphan_submission_paths(
     repo_root: Path,
     submissions: list[dict[str, Any]],
@@ -187,6 +188,32 @@ def _current_orphan_submission_paths(
         and row["path"] not in terminally_rejected
         and _core._discovery_round_identity(row) is None
     }
+
+
+def _canonicalized_historical_paper_count(repo_root: Path, jobs: dict[str, dict[str, Any]]) -> int:
+    """Count completed jobs whose stale paper_path resolves to a canonical moved paper."""
+    recovered = 0
+    for job in jobs.values():
+        if job["kind"] != "research":
+            continue
+        payload = job["payload"]
+        if str(payload.get("status") or "").strip().lower() != "completed":
+            continue
+        paper_value = payload.get("paper_path")
+        if not isinstance(paper_value, str) or not paper_value.strip():
+            continue
+        declared = _core.evidence._resolve_repo_path(repo_root, paper_value)
+        if declared is not None and declared.is_file():
+            continue
+        canonical_value = paper_taxonomy.canonicalize_paper_path(
+            paper_value, repo_root=repo_root
+        )
+        if canonical_value == paper_value:
+            continue
+        canonical = _core.evidence._resolve_repo_path(repo_root, canonical_value)
+        if canonical is not None and canonical.is_file():
+            recovered += 1
+    return recovered
 
 
 def _direct_evidence_metrics(
@@ -217,6 +244,12 @@ def _direct_evidence_metrics(
     metrics["orphan_submission_paths"] = sorted(
         str(path.relative_to(repo_root)) for path in orphan_paths
     )
+
+    recovered_papers = _canonicalized_historical_paper_count(repo_root, jobs)
+    old_missing = metrics["consistency"]["completed_research_missing_paper"]
+    recovered_papers = min(recovered_papers, old_missing)
+    metrics["consistency"]["completed_research_missing_paper"] = old_missing - recovered_papers
+    metrics["consistency_total"] = max(0, metrics["consistency_total"] - recovered_papers)
     return metrics
 
 
