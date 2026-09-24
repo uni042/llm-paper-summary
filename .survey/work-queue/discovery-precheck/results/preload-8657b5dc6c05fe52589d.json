@@ -1,0 +1,828 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-8657b5dc6c05fe52589d",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-8657b5dc6c05fe52589d",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "80",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e640b5f254954ad363a15c27eb2910b8247ebff0",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 13,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T16:01:30.877970+00:00",
+  "preload_id": "preload-8657b5dc6c05fe52589d",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "The Efficiency-Decentralization-Security Trilemma: A Co-Design Framework for Lightweight, Decentralized AI in Cyber-Physical Systems",
+      "source_url": "https://www.semanticscholar.org/paper/180b4ce477f7b92c2368a2b9718c2cfd572fdfc3",
+      "year": 2026,
+      "published": "2026-09-10",
+      "abstract": "Smart systems, the Industrial Internet of Things, and cyber-physical networks increasingly make decisions on the devices where data is generated, on nodes short of memory, compute, energy, and bandwidth, and exposed to real adversaries. Two research currents have grown to meet this: one makes artificial intelligence small and distributed (quantization, pruning, distillation, TinyML, federated and split learning), the other makes it safe (defenses against poisoning, backdoors, inversion, and evasion). This review argues that the two are entangled rather than parallel. Operators that shrink a model or scatter it across nodes also redraw its attack surface, each carrying a security dividend and a security liability, and because a node’s resources are finite and shared, model capacity and defense strength compete for one multi-dimensional budget. We formalize this as an efficiency-decentralization-security (EDS) design tension, explicitly a tension and not an impossibility, and show with published measurements that the coupling is non-monotonic. Around this thesis we build three artifacts, following an explicit design-science research process: an evidence-graded scoring matrix that separates each operator’s security dividend from its liability across seven axes and reports the direction of every effect separately from the confidence in the evidence behind it; a resource-aware threat model that judges attack and defense feasibility against a tiered device, gateway, network, and server budget with stated units; and a co-design framework whose decision workflow terminates in a defense-selection program and a verification step under adaptive attack. We work the framework through an industrial predictive-maintenance scenario with the resource arithmetic computed line by line, and evaluate it retrospectively against six published edge-AI systems. The result is a decision-support guide for building edge AI that is efficient, decentralized, and secure at once.",
+      "canonical_id": "DOI:10.3390/ai7090358",
+      "doi": "10.3390/ai7090358",
+      "authors": [
+        "Montaser N. A. Ramadan",
+        "H. Saygin"
+      ]
+    },
+    {
+      "title": "Contextual Utility of Quantization Moves in Extreme Low-Bit LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/92c32b7c52fa021f96407a34b3fc9c0b58dd8703",
+      "year": 2026,
+      "published": "2026-09-09",
+      "abstract": "Post-training quantizers select finite code changes using reconstruction proxies or local loss approximations, but the utility of a quantization move depends on the state through which it is executed. We identify two sources of this contextual dependence. First, the displacement of the move matters: evaluating the gradient at the move midpoint captures curvature accumulated along the move that a current-state linearization omits. Across frozen two-bit moves from Llama-3.2 models, midpoint evaluation predicts the direction of exact endpoint loss changes substantially more accurately than current-state gradients. Second, moves interact: exhaustive lattices of legal quantized states are well approximated by quadratic pseudo-Boolean functions, yet their small pairwise components can determine Pareto fronts and cause different evaluation functionals to prefer opposite directions. These effects explain failures of reconstruction-optimal code re-selection and additive composition. Reading each move at its own midpoint repairs the local selection step and improves downstream accuracy and held-out perplexity, while larger supports require evaluating exact endpoints from the state actually reached. Exact-endpoint beam search finds sparse changes that dominate much larger one-shot updates, and repricing the same moves after intervening changes produces widespread sign reversals. These results show that quantization utility is contextual at the granularity of a few moves: reliable construction must evaluate finite changes along their own paths and compose them from the evolving quantized state.",
+      "canonical_id": "arXiv:2609.09867",
+      "arxiv_id": "2609.09867",
+      "authors": [
+        "Wen-Xuan Xiao",
+        "Xu Cao"
+      ]
+    },
+    {
+      "title": "Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/58bf57f1abf4d0a185efdcf69609f295804f6ed1",
+      "year": 2026,
+      "published": "2026-09-09",
+      "abstract": "Large Language Models (LLMs) can memorize and reproduce sensitive, copyrighted, or otherwise undesirable training content, creating privacy, safety, and regulatory concerns. Machine unlearning offers a practical alternative to full retraining, but many existing methods apply broad or fixed parameter updates that can degrade utility and remain brittle under deployment changes such as post-training quantization, where forgotten knowledge may partially re-emerge. We propose Forgetting Only What Matters via Unlearning Layers (FOM-UL), a layer-level unlearning framework that selects transformer layers using a forget-to-retain significance score. This score identifies layers with high influence on the forget set and low sensitivity to the retain set, allowing FOM-UL to concentrate updates where they are most effective while leaving most of the model unchanged. This targeted update strategy improves the forgetting-utility trade-off and provides an empirical path toward quantization-resilient unlearning by reducing the chance that small, diffuse updates are erased by low-bit rounding. Across TOFU, KnowUnDo, and MUSE-style evaluations, FOM-UL reduces residual memorization compared with strong GA, NPO, KLD, SURE, ReLearn, and LUNAR-based baselines while preserving retain-set utility close to the vanilla model. Under 8-bit and 4-bit post-training quantization, FOM-UL maintains stronger memorization suppression and utility preservation than competing methods, and adversarial prompt evaluations show lower recovery of forgotten content. Overall, FOM-UL provides an efficient unlearning strategy that improves targeted forgetting, utility preservation, and deployment robustness without claiming formal guarantees of erasure.",
+      "canonical_id": "arXiv:2609.10439",
+      "arxiv_id": "2609.10439",
+      "authors": [
+        "Ravi Ranjan",
+        "O. Kotevska",
+        "Agoritsa Polyzou"
+      ]
+    },
+    {
+      "title": "Quantization Amplifies Determinism, Not Bias: Scale-Dependent Behavioral Effects of Serving-Time Weight Compression",
+      "source_url": "https://www.semanticscholar.org/paper/53e68b15a7621d26b9548afcc53074382c17e65e",
+      "year": 2026,
+      "published": "2026-09-07",
+      "abstract": "Weight quantization largely determines the economics of serving open-weight LLMs. Its costs are usually assessed with capability benchmarks, on which 4-bit quantization of mid-sized models is often considered\"nearly free.\"We examine a different question: when several answers are valid, does quantization change what a model chooses to say? We serve three checkpoints (Qwen3-8B/14B/32B) at three weight precisions (W4A16 AWQ, W8A16 FP8-Marlin, and bf16), holding the hardware, software, and sampling configuration constant, and collect approximately 71,000 completions paired by prompt and seed across two custom, leak-checked prompt batteries. We pre-specified the analyses in three waves in version control. At 8B, int4 reduces output diversity: the probability that two samples for the same scenario recommend the same brand increases by 5.1 percentage points (prompt-paired sign-flip test, Holm p = .023; reproduced at +4.4pp on a full regeneration of the arm), and lexical diversity falls substantially (TTR -0.011, standardized effect -0.51; robust to a length-controlled measure). At 14B and 32B, no content-concentration measure reaches significance; instead, stylistic drift emerges (em-dash rate +0.46/1k words at 14B and +0.61/1k at 32B, both Holm p<= .0024). Pre-specified tests of stereotype direction are null at every scale: outputs concentrate on the modal answer for each prompt rather than on stereotypical answers. Mechanistically, the token-level distribution becomes flatter (decision-token entropy +0.091 bits, p = .015) while the semantic distribution, measured directly from first-token log probabilities, becomes more concentrated (collision +2.6pp, p = .023): individual tokens become less predictable even as meanings become more repetitive. At 8B, the smallest size tested, AWQ-int4 serving measurably narrows the range of suggestions; audits should assess concentration as well as bias.",
+      "canonical_id": "arXiv:2609.07901",
+      "arxiv_id": "2609.07901",
+      "authors": [
+        "Dachi Kurtskhalia"
+      ]
+    },
+    {
+      "title": "BEFORE THE FLIP: Measuring Hidden Score Shifts In Quantized Vision Language Models Before The Answer Changes for Visual Question Answering",
+      "source_url": "https://www.semanticscholar.org/paper/5541e23b21606f00af137dad00ba65f244489216",
+      "year": 2026,
+      "published": "2026-09-07",
+      "abstract": "Quantization makes vision language models (VLMs) cheaper to store and run by using fewer bits to represent their weights. While unchanged answers on visual question answering (VQA) after compression are an expected behavior, they can still hide changes in the underlying scores (log probabilities). For example, a model may still answer yes after compression, even as the score gap between yes and no shrinks. We introduce BEFORE THE FLIP to measure these hidden changes. Our method compares the score change caused by compression with the change caused by replacing the image's internal representations, or image tokens, with one fixed average token. We then increase the precision of one weight group at a time to identify where extra bits help, and test whether choosing different groups for each question offers benefits beyond shuffled controls. Among 8,277 LLaVA questions where image token replacement measurably affects the scores, 4-bit compression shifts the yes or no score gap farther toward the replacement output than 8-bit compression. Qwen shows the same pattern, but with a smaller difference. Yet only 265 of 9,000 LLaVA answers change at 4 bits. In a separate study of 1,024 calibration questions, choosing weight groups separately for each question does not outperform both shuffled controls at any tested storage budget. These findings show that compression can alter the scores behind unchanged answers, but do not establish a reliable benefit from adjusting precision for each question.",
+      "canonical_id": "arXiv:2609.06922",
+      "arxiv_id": "2609.06922",
+      "authors": [
+        "Sourajit Saha",
+        "Shubhashis Roy Dipta",
+        "Shaswati Saha",
+        "Nobin Sarwar",
+        "Yuxuan Jiang"
+      ]
+    },
+    {
+      "title": "Steering Under Compression: Dose-Response, Capability Cost, and Failure Asymmetry in Quantized LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/b0e18b09010e657ef6211a832a72bfabd6c87167",
+      "year": 2026,
+      "published": "2026-09-06",
+      "abstract": "Inference-time activation steering enables behavioral control of large language models without parameter modification, while post-training quantization reduces memory and compute costs for deployment. Despite their growing convergence in practice, the interaction between these two techniques remains uncharacterized. We systematically study activation steering under weight-only quantization (INT8 and NF4) across four open-weight 7-9B models and two behavioral targets: judged sentiment and judge-free reasoning length. Using an iso-effect framework that compares capability costs at matched behavioral effect, we find that sentiment steering survives quantization intact. After correcting a GSM8K parser artifact with a uniform v2.3.1 rescore, the pooled INT8 contrast is -0.010 (90% CI [-0.026, +0.007]), descriptively Equivalent under the preregistered three-label rule, while NF4 remains Inconclusive at -0.017 ([-0.067, +0.033]). In contrast, reasoning length exhibits a surprising asymmetric dose-response: lengthening is graded but terminates in cap-runaway and collapse, while shortening is a step function with only 12-30% shortening (model-dependent) before discontinuous failure. We expose a methodological pitfall: the naive iso-effect ladder anchors on the collapse floor for floor-bounded targets, and we introduce a censored construction that restores interpretable crossings. We also quantify a substantial baseline capability shift for Mistral-NF4 (0.545 to 0.365 GSM8K at alpha=0), demonstrating that compression can dominate the steering intervention. Despite this, steering vectors remain highly collinear with their FP16 siblings (cosine similarity 0.989-0.998 for INT8, 0.945-0.990 for NF4), confirming that the behavioral direction survives quantization even when the cost structure does not. All code and data are released.",
+      "canonical_id": "arXiv:2609.06473",
+      "arxiv_id": "2609.06473",
+      "authors": [
+        "Saurav Bhandari",
+        "Benjamin Wade"
+      ]
+    },
+    {
+      "title": "Read-Polarity-Aware Row-Wise Offset Encoding for Readout-Energy Reduction in 8T SRAM Compute-in-Memory",
+      "source_url": "https://www.semanticscholar.org/paper/ed681b9dbbcd36c5e17ab7a9b7f88f5cbb447d28",
+      "year": 2026,
+      "published": "2026-09-03",
+      "abstract": "In SRAM-based compute-in-memory (CIM), read-bitline (RBL) charging and discharging depend on the physical bit pattern stored in the memory array, so the energy-relevant code statistic should be defined with respect to the actual read-port polarity. This paper presents a read-polarity-aware row-wise offset-encoding method for W4A8 INT4 weights. In the evaluated Q-sensed 8T topology, the stored logical one is the discharge-active state; hence, the topology-specific read-active density equals the stored-one fraction. Under the exact whole-row INT4-feasibility protocol, a nonzero row offset is accepted only when every translated valid signed-INT4 code remains within [−8, 7]; no clipping, saturation, wraparound, or remapping is permitted, and zero offset remains the fallback. The complete software evaluation covers 286 quantized modules, 579,464 physical 16 × 16 tile positions, and 147,156,296 quantized weights across ResNet-18, MobileNetV3-Small, and SmolLM2-135M. Circuit re-validation uses 300 independent tile-policy samples, 1200 matched baseline-selected bitplane pairs, and 2400 successfully completed transistor-level Spectre simulations. The balanced circuit population yields an aggregate local SRAM readout-energy reduction of 5.03%, with a sample-cluster bootstrap 95% confidence interval of 4.12–6.02%. After four-bitplane aggregation, relative read-active-density reduction and local SRAM readout-energy reduction exhibit Pearson r = 0.81 and Spearman ρ = 0.75, indicating a substantial but imperfect relationship. The directly validated no-offset, positive-offset, and signed-offset policies preserve the corresponding model-level Top-1 accuracy or perplexity. Proposal-specific digital overheads and metadata-storage capacity are quantified separately, whereas representative physical SRAM/ROM metadata-access energy remains uncharacterized. Accordingly, the measured energy benefit is limited to local SRAM readout; a net energy reduction at the complete CIM-macro or system level, robustness across all evaluated PVT conditions, and robustness to process mismatch are not established by the present evidence.",
+      "canonical_id": "DOI:10.3390/electronics15173980",
+      "doi": "10.3390/electronics15173980",
+      "authors": [
+        "Min-Ju Kang",
+        "Munhyeon Kim"
+      ]
+    },
+    {
+      "title": "Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",
+      "source_url": "https://www.semanticscholar.org/paper/d01da12fc90b7bbc9875f1e04a072456d1d77e7d",
+      "year": 2026,
+      "published": "2026-09-02",
+      "abstract": "Ultra-low-bit language models can reduce storage and memory bandwidth, but a nominal\"1.58-bit\"label does not fully describe the stored representation, retained capability, or runtime behavior. We study an end-to-end post-training conversion of Qwen, an instruction-tuned 4B-parameter model, using KOTMS rotation, E2M-ATQ ternarization, and GPTQ-style error compensation from TWLA. The experiment is weight-only: activations remain at 16-bit precision, so ILA-AMP is omitted. We evaluate effective bit accounting, task capability retention, perplexity, calibration sensitivity, checkpoint composition, and deployment behavior. The final conversion uses 1.641 effective bits per weight for quantized linear weights, with 81.62% of model parameters targeted. Across ten scored capability comparisons, accuracy falls from 64.5% to 54.7%. Degradation is uneven: BoolQ retains 84.6% chance-corrected teacher performance, while ARC-Challenge retains 43.8%. Perplexity rises from 13.639 to 18.748 on WikiText-2, 24.700 to 31.992 on PTB, and 19.831 to 28.966 on C4. A subsequent packing run preserves the ternary planes and scales, reducing reported model size from 8.29 GiB to 3.96 GiB with essentially unchanged perplexity. A separate third-party packing attempt was lossy and is excluded from the primary artifact claim. The packed artifact has not been benchmarked end-to-end for task accuracy or generation throughput. A preliminary Triton GEMV microbenchmark is 4.6x slower than FP16 cuBLAS on one tested shape. We therefore do not claim that compression alone yields faster inference.",
+      "canonical_id": "arXiv:2609.01962",
+      "arxiv_id": "2609.01962",
+      "authors": [
+        "AI OneBit",
+        "A. Malik",
+        "Poojith",
+        "Sparsh Mehra"
+      ]
+    },
+    {
+      "title": "Scalable Kronecker-Fisher Approximation: Efficient Hessian Analysis for Billion-Parameter Language Models Compression",
+      "source_url": "https://www.semanticscholar.org/paper/38defa35e4fd18dad3c4b5cf11283e894f861561",
+      "year": 2026,
+      "published": "2026-09-02",
+      "abstract": "In this paper, we propose a scalable Kronecker-based approximation that captures cross-layer interactions without storing the entire Fisher matrix, enabling practical Hessian analysis for billion-parameter networks where full computation is infeasible. Our approach reveals consistent vulnerability patterns: value projection layers exhibit the highest sensitivity and strongest cross-layer correlations across multiple model families, while other components exhibit architecture-specific behaviors. Through extensive experiments on quantization, sparsification, inter-layer corruption, and post-corruption fine-tuning, we demonstrate that our approximation strongly correlates with both performance degradation and recovery. Our framework provides a practical, theoretically grounded tool for identifying fragile components in large models, opening new avenues for guided compression and optimization strategies, such as mixed-precision allocation, layer-wise sparsity, and adaptive low-rank decomposition across layers and even individual weight groups.",
+      "canonical_id": "arXiv:2609.02451",
+      "arxiv_id": "2609.02451",
+      "authors": [
+        "Viacheslav Yusupov",
+        "Daria Cherniuk",
+        "E. Frolov"
+      ]
+    },
+    {
+      "title": "Streamlining Long-Chain Reasoning via Differentiable Hierarchical Fusion",
+      "source_url": "https://www.semanticscholar.org/paper/15cc6d03ddb19c4b7d20a48d064fe6bffa3f5769",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "While large-scale reasoning models have achieved remarkable performance gains by scaling test-time computation through extended Chain-of-Thought (CoT) sequences, their practical utility is severely constrained by protracted inference lengths and high computational latency. In this paper, we present Differentiable Hierarchical Fusion (DHF), a novel framework that merges reasoning models with efficient base models via differentiable optimization to produce concise, accurate outputs. We introduce a dual-factor adaptive weighting mechanism to capture intra-block (Attention vs. MLP) variance and inter-block (shallow vs. deep layers) importance hierarchies, thereby addressing key limitations of static merging heuristics. Specifically, DHF optimizes fusion coefficients using gradient descent on a loss function that jointly minimizes cross-entropy (for accuracy) and response length (for conciseness). Furthermore, we enhance an outlier-aware initialization strategy to seed coefficients based on activation density and construct multi-calibration datasets to improve the model’s generalization ability. Comprehensive evaluations on Qwen and LLaMA models across six reasoning benchmarks show that DHF reduces the average response length by 55% while boosting accuracy by 2.8%–6% compared to existing state-of-the-art merging methods.",
+      "canonical_id": "DOI:10.24963/ijcai.2026/635",
+      "doi": "10.24963/ijcai.2026/635",
+      "authors": [
+        "Chuan-Gen Gao",
+        "Wen-Lun Zhang",
+        "Shang-Kun Wang",
+        "Shu-Yang Gu"
+      ]
+    },
+    {
+      "title": "Interaction Effects in Hybrid Compression of Small Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/aebd51be18c195ed6fe439e85f208c5ae4548afa",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "We investigate the interaction between quantization and pruning in the compression of open-weight small language models (SLMs), as these techniques are frequently combined in practice without a clear understanding of whether their effects are antagonistic, synergistic or additive. Prior work has reported ordering effects and studied pruning or quantization in isolation, but rarely quantifies their interaction across models and evaluation metrics. We introduce an interaction coefficient that isolates non-additive effects and apply it to Falcon3-1B-Base and LLaMA-3.2-1B, with a limited study on Qwen2.5-1.5B. Our experiments cover four hybrid application orders, multiple pruning sparsities and 4/8-bit quantization. We find non-monotonic interactions: memory savings are dominated by 4-bit quantization, while pruning alone provides limited benefits. Hybrids exhibit the greatest effects at global unstructured pruning sparsity s ∈ {0.2, 0.3} while getting close to additivity at s=0.5. At low sparsity, truthfulness improves, while reasoning losses diminish at higher sparsity. Future work will extend interaction analysis to hardware-aware sparse kernels and larger models.",
+      "canonical_id": "DOI:10.24963/ijcai.2026/631",
+      "doi": "10.24963/ijcai.2026/631",
+      "authors": [
+        "Iheb Bouriel",
+        "Q. Nasir",
+        "Manar Abu Talib"
+      ]
+    },
+    {
+      "title": "Gradient Enhancement Task Aware Post-training Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/63faed7424744aaafb24c17d9fc70e739c5e90a7",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "The huge parameters and extensive training corpora of Large Language Models (LLMs) empower them to tackle complex tasks. Yet, their massive size incurs substantial inference costs, hindering deployment on resource‑constrained edge devices. Low‑bit quantization provides a way to compress models and improve their practicality for edge-side deployment. Nonetheless, many edge applications do not require the full generalization abilities of LLMs and instead only depend on their knowledge in specific domains. This paper introduces Gradient Enhancement Task Aware Post-training Quantization, i.e., GTAQ, to address the generalization issue. Concretely, GTAQ locates task‑critical weights via gradient‑based validation and retrieval, and then amplifies these salient weights. For that purpose, GTAQ preserves and strengthens weights related to the target tasks, enabling task‑aware uniform‑bit quantization. We extensively evaluate the LLaMA family of language models on WikiText, C4, and MMLU. Our experiments show that GTAQ consistently delivers notable performance improvements across tasks, surpassing both general‑purpose and task‑aware quantization baselines. At the same time, GTAQ yields more than 3.5× speedup in model inference and substantially cuts storage requirements. https://github.com/YihuaJerry/GTAQ.git.",
+      "canonical_id": "DOI:10.24963/ijcai.2026/176",
+      "doi": "10.24963/ijcai.2026/176",
+      "authors": [
+        "Yi-Hua Shao",
+        "Yang-Yang Gu",
+        "Min-Xi Yan",
+        "Si-Yu Chen",
+        "Hai-Yang Liu",
+        "Zi-Yang Yan",
+        "Yong-Jian Li",
+        "Yan Wang",
+        "Qun Song",
+        "Hao-Lin Tang",
+        "Hao-Tong Qin",
+        "Jing-Cai Guo",
+        "Nicu Sebe"
+      ]
+    },
+    {
+      "title": "TriM-D: Accelerating 2-D/3-D Diffusion Generation Via Triple-Mixed Quantization and Sparsity-Aware Dual-Branched Computation",
+      "source_url": "https://www.semanticscholar.org/paper/de87e2f640903b9a74bb2c9785d6ef5f42041d1d",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Diffusion models have shown marked advancements in 2-D generation and have also become focal points in 3-D generation via consistent multiview image generation. However, the computation and memory demands hinder their real-time deployment on mobile and edge devices. Moreover, the reduction of diffusion timesteps leads to a decrease in interstep similarity, thereby making previous methods ineffective in optimizing computation. The varied layer quantization sensitivity and optimal format in diffusion models also present challenges for traditional quantization methods to achieve efficient memory compression. To address these issues, we first introduce <inline-formula> <tex-math notation=\"LaTeX\">${M}^{3}$ </tex-math></inline-formula> quantization, a mixed-precision, mixed-format, and mixed-granularity quantization framework that allocates optimal precision and format to different data with a unified FP8 computation flow for efficient implementation. Building upon <inline-formula> <tex-math notation=\"LaTeX\">${M}^{3}$ </tex-math></inline-formula> quantization, we present TriM-D, a hardware accelerator designed to optimize computation. It features sparsity-aware dual-branched FP8-MAC units that introduce a dual-branch path and an efficient approximate adder to fully utilize bit-level sparsity of <inline-formula> <tex-math notation=\"LaTeX\">${M}^{3}$ </tex-math></inline-formula>-quantized data. Such an FP8-MAC scheme preserves both efficiency and numerical accuracy. Our experiments demonstrate that TriM-D significantly outperforms the state-of-the-art (SOTA) diffusion accelerator Cambricon-D (Camb-D), achieving an average reduction of 56.5% in memory access and 80.6% in computation cost. In addition, TriM-D provides a <inline-formula> <tex-math notation=\"LaTeX\">$55\\times $ </tex-math></inline-formula>, <inline-formula> <tex-math notation=\"LaTeX\">$6.72\\times $ </tex-math></inline-formula> improvement in energy efficiency and <inline-formula> <tex-math notation=\"LaTeX\">$3.69\\times $ </tex-math></inline-formula>, <inline-formula> <tex-math notation=\"LaTeX\">$2.67\\times $ </tex-math></inline-formula> speedups over NVIDIA A100 and Camb-D.",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3649442",
+      "doi": "10.1109/TCAD.2025.3649442",
+      "authors": [
+        "Wenxun Wang",
+        "Li-Kai Ma",
+        "Chen Tang",
+        "Zongle Huang",
+        "Boju Chen",
+        "Wenyu Sun",
+        "Yongpan Liu"
+      ]
+    },
+    {
+      "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+      "source_url": "https://www.semanticscholar.org/paper/2cce854850ed000e6fae3f903b5d05bb49d3740f",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Post-training quantization (PTQ) is widely used to reduce the cost of serving large language models (LLMs), but its accuracy cost is uneven and is often tuned per model. We study where quantization damage occurs and how to allocate a small additional precision budget. Using causal mixed-precision intervention as ground truth (raise each layer to 8-bit in turn and measure the accuracy it recovers) across 9 open-weight models in 4 architecture families, we test 3 intuitive hypotheses: that quantization damage lives in task circuits, where the model computes, or in weight statistics. None of them predicts which layers benefit from restored precision. Recovery is instead diffuse: for 8 of 9 models, recovering 75% of the gap takes roughly half the layers; the lone exception, Qwen3-8B, is sharply concentrated. At a matched precision budget, spending it globally on finer quantization granularity beats locally repairing the most recoverable layers for all 8 group-128-compatible models (all but OpenLLaMA, whose width rules out group-128), by 21-52 points, including the concentrated Qwen3-8B. We report 2 secondary findings: the residual is budget-limited (8-bit is near-lossless in our evaluation across RTN, GPTQ, and AWQ), and the location of peak recovery correlates with architecture within a family, though not across families. Within this budget setting, global granularity is a better default than selectively protecting critical layers. More broadly, cheap signals that correlate with quantization damage do not necessarily identify where restoring precision improves accuracy; this must be tested with causal intervention.",
+      "canonical_id": "arXiv:2609.01587",
+      "arxiv_id": "2609.01587",
+      "authors": [
+        "Junhao Hu",
+        "S. Ramachandran"
+      ]
+    },
+    {
+      "title": "IOLM-DB: Instance-optimized large language model execution for column-scale semantic operators",
+      "source_url": "https://www.semanticscholar.org/paper/88d7ecea376c39d9053b45efdee76e078b54fdee",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Large language models (LLMs) can implement row-level semantic transformations over tabular data, but a general-purpose model reserves the same accelerator resources even when every row uses one fixed prompt. IOLM-DB compiles that recurring prompt–column pair into an operator sized to the work it actually does. It samples the target column, constructs calibration sequences that represent both prompt and output behavior, evaluates specialized candidates, and selects an implementation under explicit memory and quality constraints. Across heterogeneous datasets and operator types, column-calibrated quantization reduces the resident footprint of the reference model by 1.8–2.8 × while the 8-bit profile remains a near-lossless replacement and the 4-bit profile preserves behavior on categorical label-output operators. At fixed precision, column calibration consistently improves fidelity over generic GPTQ calibration, and output-aware calibration provides an additional benefit for generative operators. Deployment experiments reveal two complementary outcomes: weight-only compression does not raise per-row throughput in a compute-rich regime, where it primarily releases capacity, but the smaller weight stream also improves throughput when memory bandwidth becomes limiting. The compact artifacts enable deployment under a memory budget where the full-precision operator cannot start and allow three specialized operators to occupy roughly the footprint of one full-precision model. IOLM-DB therefore turns a recurring semantic transformation from an immutable call to a general-purpose backend into a compact, measurable, and hardware-aware operator.",
+      "canonical_id": "DOI:10.1016/j.is.2026.102796",
+      "doi": "10.1016/j.is.2026.102796",
+      "authors": [
+        "Bardia Mohammadi",
+        "Laurent Bindschaedler"
+      ]
+    },
+    {
+      "title": "Generalized post-training quantization for medical image segmentation foundation model.",
+      "source_url": "https://www.semanticscholar.org/paper/794472ecc43ac819e5c3d55d8355d9cb055e4dd7",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Medical image segmentation foundation models (MedFMs) perform strongly across diverse imaging modalities, but their large size and computational demands hinder deployment in resource-limited clinical settings. Lightweight fine-tuning is impractical given the high training cost of MedFMs, and the efficiency benefits of integer inference remain underused. Post-training quantization (PTQ) is a promising alternative, yet existing PTQ methods fail on MedFMs because their heterogeneous weight distributions lead to severe accuracy degradation at low bit-widths. To address this challenge, we propose GPTQ-MedFM, a generalized post-training quantization framework tailored for medical foundation models. GPTQ-MedFM standardizes complex weight distributions under an ℓ∞-constrained normalization to produce quantization-friendly matrices, and then applies an efficient coordinate-descent solver to obtain high-fidelity low-bit representations. The method adds no extra computation or memory overhead at inference, enabling seamless deployment on medical edge devices. By explicitly modeling and mitigating quantization-induced errors, GPTQ-MedFM achieves state-of-the-art low-bit compression across six medical foundation models and nine imaging modalities - spanning nearly the full range of clinical imaging scenarios - and remains robust even with a single calibration sample. Its broad generalization and minimal calibration cost make GPTQ-MedFM a practical pathway for real-time AI-assisted diagnostics in resource-limited healthcare settings.",
+      "canonical_id": "DOI:10.1016/j.media.2026.104287",
+      "doi": "10.1016/j.media.2026.104287",
+      "authors": [
+        "Peng Huang",
+        "Ao-Zhong Zhang",
+        "Peng-Hang Yin",
+        "Yi-Neng Chen",
+        "Hui Guo",
+        "Zi Yang",
+        "Nai-Gang Wang",
+        "Bo Peng",
+        "Shu Hu",
+        "Jing Peng",
+        "Jing Hu",
+        "Xiao-Jie Li",
+        "Shao-Wu Pan",
+        "Xin Li",
+        "Xi Wu",
+        "B. Prabhakaran",
+        "Hong-Tu Zhu",
+        "Xin Wang"
+      ]
+    },
+    {
+      "title": "Decentralized LLM Deployment in Mobile Edge Computing Networks",
+      "source_url": "https://www.semanticscholar.org/paper/ced05c723ed97fb43835d041b9852ec260be4b53",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Large language models (LLMs), powered by multiple transformer layers, have achieved remarkable success, and to save service latency it is important to enable LLM inference closer to mobile users by leveraging mobile edge computing (MEC) resources. However, a single MEC server with limited resource cannot host the entire LLM and we propose model parallelism to partition LLMs into smaller sub-models and deploy across multiple MEC servers. As such, during decentralized inference, intermediate results generated within each transformer layer must be exchanged among MEC servers, introducing substantial communication overhead that degrades inference latency. This work tackles this issue by proposing a novel parallel communication and computation (PCC) protocol for decentralized LLM inference in MEC networks. The PCC protocol enables parallel communication and computation not only within each transformer layer but also across task offloading, computation, and result downloading, significantly reducing communication overhead. Building on this PCC protocol, we formulate a latency minimization problem that jointly optimizes communication and computation resources. To solve this mixed-integer nonlinear programming problem efficiently, we design a simulated annealing-based swapping algorithm to approach the global optimum. Simulation results demonstrate that the proposed scheme significantly reduces overall latency compared to state-of-the-art model parallelism approaches, achieving 55.6% lower latency than conventional tensor parallelism and 49.2% lower latency than conventional pipeline parallelism.",
+      "canonical_id": "DOI:10.1109/tvt.2026.3682257",
+      "doi": "10.1109/tvt.2026.3682257",
+      "authors": [
+        "Ding Xu",
+        "Lingjie Duan",
+        "Jiahao Zhu",
+        "Hongbo Zhu"
+      ]
+    },
+    {
+      "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282",
+      "year": 2026,
+      "published": "2026-08-31",
+      "abstract": "Block Quantization (BQ) enables efficient LLM inference by quantizing both weights and activations, but its design space remains underexplored. Through hardware-accuracy design space exploration, we identify block size as a key trade-off: larger blocks improve hardware efficiency by amortizing dequantization and accumulation costs, but degrade accuracy. Motivated by this insight, we propose Hierarchical Block Quantization (HBQ), which combines large blocks with low-overhead significand (SIG) scaling for second-level quantization. SIG scaling effectively compensates for large-block quantization errors while accounting for distinct weight and activation distributions. HBQ-A achieves W4A16-level accuracy with W4A5 and lower area than NVFP4, while HBQ-E further reduces hardware cost by 17% while outperforming existing BQ methods in accuracy. We implement HBQ for weights, activations, and KV cache in a 28nm ASIC accelerator and introduce partial-sum BQ to reduce EMA energy. At comparable accuracy, HBQ achieves 2.3x/4.6x higher area/energy efficiency than state-of-the-art weight-only quantization and 1.6-3.3x lower system energy with 1.5-3x speedup over prior BQ methods. Our implementation is publicly available at: https://github.com/SeoLabCornell/HBQ.git.",
+      "canonical_id": "arXiv:2609.00450",
+      "arxiv_id": "2609.00450",
+      "authors": [
+        "Chun-Ting Chen",
+        "Dongguang Han",
+        "Han-Gyeol Mun",
+        "Jake Hyun",
+        "Arnab Raha",
+        "A. Agarwal",
+        "Mark A. Anders",
+        "Mohamed S. Abdelfattah",
+        "Jae-sun Seo"
+      ]
+    },
+    {
+      "title": "Reasoning-Aware Compression: Identifying and Protecting Vulnerable Reasoning Circuits for Energy-Efficient LLM Deployment",
+      "source_url": "https://www.semanticscholar.org/paper/20b2302cb74ea80ddbcf65bbcd1b928ecd9c7fb2",
+      "year": 2026,
+      "published": "2026-08-31",
+      "abstract": "Large Reasoning Models (LRMs) impose substantial energy costs during deployment, yet current compression methods apply uniform quantization across all components, risking damage to critical reasoning circuits. We present a reasoning-aware compression framework that benchmarks quantization conditions across five reasoning benchmarks, GSM8K, FOLIO, MATH-500, ProofWriter, and MuSiQue, with hardware-level GPU energy measurement; profiles per-module INT4 vulnerability across all 196-224 (layer, projection) pairs via a perturbation sweep on a held-out calibration split, then selectively restores the most sensitive circuits to FP16. Three findings emerge. First, INT4 quantization can increase energy by extending reasoning chains; a 25% power reduction becomes a net energy increase on GSM8K. Second, vulnerability is task-dependent: attention projections are more critical for mathematical reasoning, and sensitivity patterns differ by architecture in logical inference. Third, selective compression achieves Pareto-optimal points inaccessible to uniform methods: R1-Qwen-7B Top-10% on ProofWriter gains +12 pp over FP16 at -9.7% energy, validated on held-out data across five reasoning benchmarks.",
+      "canonical_id": "arXiv:2609.05512",
+      "arxiv_id": "2609.05512",
+      "authors": [
+        "Leonard Twagirayezu",
+        "Prasenjit Mitra"
+      ]
+    },
+    {
+      "title": "Fully Quantized Training vs. Post-Training Quantization for a Small Hyperspectral Transformer Model for Pixel-Level Foreign Plastic Object Classification",
+      "source_url": "https://www.semanticscholar.org/paper/1e700e54586a87ba40cc9b1ba332de23c7f9e689",
+      "year": 2026,
+      "published": "2026-08-31",
+      "abstract": "Low-precision floating-point computation has become central to efficient artificial intelligence, yet its behavior for compact transformer-based hyperspectral imaging (HSI) models remains underexplored. In this work, we present a controlled comparative study of fully quantized training (FQT) and post-training quantization (PTQ) for pixel-wise foreign plastic object (FPO) classification in poultry hyperspectral data. Using a fixed state-of-the-art spatial–spectral transformer backbone, a common mixed-precision strategy, and identical training and inference protocols, we evaluate FP32, FP16, BF16, FP8, and NVFP4 across predictive performance, model compression, training efficiency, and inference efficiency. The results show that mixed-precision FQT remains highly robust across the tested precision spectrum, with all reduced-precision configurations staying within 0.63 percentage points of the FP32 baseline in overall accuracy while consistently outperforming PTQ at matched precisions. Across the evaluated formats, BF16 provides the closest accuracy to FP32, whereas FP8 offers a particularly favorable balance between accuracy preservation and reduced precision, while model compression increases progressively to 3.69× under NVFP4. The computational benefits, however, are strongly workload dependent. Native FP8/FP4 hardware support does not automatically improve training throughput for this compact model at moderate workloads, and the larger training batches required to better utilize low-precision hardware can degrade predictive performance. In contrast, large-batch inference can effectively exploit FP8 and NVFP4 without affecting predictive accuracy. An ablation study further shows that selective retention of numerically sensitive modules in FP32 is essential for stable ultra-low-precision operation. Overall, the findings demonstrate that low precision is a viable but workload-dependent design choice for compact HSI transformers, with FQT providing greater accuracy robustness than PTQ and FP8, offering a favorable overall accuracy–efficiency trade-off.",
+      "canonical_id": "DOI:10.3390/s26175531",
+      "doi": "10.3390/s26175531",
+      "authors": [
+        "Zirak Khan",
+        "Seung-Chul Yoon",
+        "Suchendra Bhandarkar"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.3390/ai7090358",
+      "identity_tokens": [
+        "id:DOI:10.3390/ai7090358",
+        "title:the efficiencydecentralizationsecurity trilemma a codesign framework for lightweight decentralized ai in cyberphysical systems",
+        "url:https://www.semanticscholar.org/paper/180b4ce477f7b92c2368a2b9718c2cfd572fdfc3"
+      ],
+      "record": {
+        "title": "The Efficiency-Decentralization-Security Trilemma: A Co-Design Framework for Lightweight, Decentralized AI in Cyber-Physical Systems",
+        "source_url": "https://www.semanticscholar.org/paper/180b4ce477f7b92c2368a2b9718c2cfd572fdfc3",
+        "year": 2026,
+        "published": "2026-09-10",
+        "abstract": "Smart systems, the Industrial Internet of Things, and cyber-physical networks increasingly make decisions on the devices where data is generated, on nodes short of memory, compute, energy, and bandwidth, and exposed to real adversaries. Two research currents have grown to meet this: one makes artificial intelligence small and distributed (quantization, pruning, distillation, TinyML, federated and split learning), the other makes it safe (defenses against poisoning, backdoors, inversion, and evasion). This review argues that the two are entangled rather than parallel. Operators that shrink a model or scatter it across nodes also redraw its attack surface, each carrying a security dividend and a security liability, and because a node’s resources are finite and shared, model capacity and defense strength compete for one multi-dimensional budget. We formalize this as an efficiency-decentralization-security (EDS) design tension, explicitly a tension and not an impossibility, and show with published measurements that the coupling is non-monotonic. Around this thesis we build three artifacts, following an explicit design-science research process: an evidence-graded scoring matrix that separates each operator’s security dividend from its liability across seven axes and reports the direction of every effect separately from the confidence in the evidence behind it; a resource-aware threat model that judges attack and defense feasibility against a tiered device, gateway, network, and server budget with stated units; and a co-design framework whose decision workflow terminates in a defense-selection program and a verification step under adaptive attack. We work the framework through an industrial predictive-maintenance scenario with the resource arithmetic computed line by line, and evaluate it retrospectively against six published edge-AI systems. The result is a decision-support guide for building edge AI that is efficient, decentralized, and secure at once.",
+        "canonical_id": "DOI:10.3390/ai7090358",
+        "doi": "10.3390/ai7090358",
+        "authors": [
+          "Montaser N. A. Ramadan",
+          "H. Saygin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09867",
+      "identity_tokens": [
+        "id:arXiv:2609.09867",
+        "title:contextual utility of quantization moves in extreme lowbit llms",
+        "url:https://www.semanticscholar.org/paper/92c32b7c52fa021f96407a34b3fc9c0b58dd8703"
+      ],
+      "record": {
+        "title": "Contextual Utility of Quantization Moves in Extreme Low-Bit LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/92c32b7c52fa021f96407a34b3fc9c0b58dd8703",
+        "year": 2026,
+        "published": "2026-09-09",
+        "abstract": "Post-training quantizers select finite code changes using reconstruction proxies or local loss approximations, but the utility of a quantization move depends on the state through which it is executed. We identify two sources of this contextual dependence. First, the displacement of the move matters: evaluating the gradient at the move midpoint captures curvature accumulated along the move that a current-state linearization omits. Across frozen two-bit moves from Llama-3.2 models, midpoint evaluation predicts the direction of exact endpoint loss changes substantially more accurately than current-state gradients. Second, moves interact: exhaustive lattices of legal quantized states are well approximated by quadratic pseudo-Boolean functions, yet their small pairwise components can determine Pareto fronts and cause different evaluation functionals to prefer opposite directions. These effects explain failures of reconstruction-optimal code re-selection and additive composition. Reading each move at its own midpoint repairs the local selection step and improves downstream accuracy and held-out perplexity, while larger supports require evaluating exact endpoints from the state actually reached. Exact-endpoint beam search finds sparse changes that dominate much larger one-shot updates, and repricing the same moves after intervening changes produces widespread sign reversals. These results show that quantization utility is contextual at the granularity of a few moves: reliable construction must evaluate finite changes along their own paths and compose them from the evolving quantized state.",
+        "canonical_id": "arXiv:2609.09867",
+        "arxiv_id": "2609.09867",
+        "authors": [
+          "Wen-Xuan Xiao",
+          "Xu Cao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10439",
+      "identity_tokens": [
+        "id:arXiv:2609.10439",
+        "title:forgetting only what matters layerselective unlearning toward robust llms",
+        "url:https://www.semanticscholar.org/paper/58bf57f1abf4d0a185efdcf69609f295804f6ed1"
+      ],
+      "record": {
+        "title": "Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/58bf57f1abf4d0a185efdcf69609f295804f6ed1",
+        "year": 2026,
+        "published": "2026-09-09",
+        "abstract": "Large Language Models (LLMs) can memorize and reproduce sensitive, copyrighted, or otherwise undesirable training content, creating privacy, safety, and regulatory concerns. Machine unlearning offers a practical alternative to full retraining, but many existing methods apply broad or fixed parameter updates that can degrade utility and remain brittle under deployment changes such as post-training quantization, where forgotten knowledge may partially re-emerge. We propose Forgetting Only What Matters via Unlearning Layers (FOM-UL), a layer-level unlearning framework that selects transformer layers using a forget-to-retain significance score. This score identifies layers with high influence on the forget set and low sensitivity to the retain set, allowing FOM-UL to concentrate updates where they are most effective while leaving most of the model unchanged. This targeted update strategy improves the forgetting-utility trade-off and provides an empirical path toward quantization-resilient unlearning by reducing the chance that small, diffuse updates are erased by low-bit rounding. Across TOFU, KnowUnDo, and MUSE-style evaluations, FOM-UL reduces residual memorization compared with strong GA, NPO, KLD, SURE, ReLearn, and LUNAR-based baselines while preserving retain-set utility close to the vanilla model. Under 8-bit and 4-bit post-training quantization, FOM-UL maintains stronger memorization suppression and utility preservation than competing methods, and adversarial prompt evaluations show lower recovery of forgotten content. Overall, FOM-UL provides an efficient unlearning strategy that improves targeted forgetting, utility preservation, and deployment robustness without claiming formal guarantees of erasure.",
+        "canonical_id": "arXiv:2609.10439",
+        "arxiv_id": "2609.10439",
+        "authors": [
+          "Ravi Ranjan",
+          "O. Kotevska",
+          "Agoritsa Polyzou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07901",
+      "identity_tokens": [
+        "id:arXiv:2609.07901",
+        "title:quantization amplifies determinism not bias scaledependent behavioral effects of servingtime weight compression",
+        "url:https://www.semanticscholar.org/paper/53e68b15a7621d26b9548afcc53074382c17e65e"
+      ],
+      "record": {
+        "title": "Quantization Amplifies Determinism, Not Bias: Scale-Dependent Behavioral Effects of Serving-Time Weight Compression",
+        "source_url": "https://www.semanticscholar.org/paper/53e68b15a7621d26b9548afcc53074382c17e65e",
+        "year": 2026,
+        "published": "2026-09-07",
+        "abstract": "Weight quantization largely determines the economics of serving open-weight LLMs. Its costs are usually assessed with capability benchmarks, on which 4-bit quantization of mid-sized models is often considered\"nearly free.\"We examine a different question: when several answers are valid, does quantization change what a model chooses to say? We serve three checkpoints (Qwen3-8B/14B/32B) at three weight precisions (W4A16 AWQ, W8A16 FP8-Marlin, and bf16), holding the hardware, software, and sampling configuration constant, and collect approximately 71,000 completions paired by prompt and seed across two custom, leak-checked prompt batteries. We pre-specified the analyses in three waves in version control. At 8B, int4 reduces output diversity: the probability that two samples for the same scenario recommend the same brand increases by 5.1 percentage points (prompt-paired sign-flip test, Holm p = .023; reproduced at +4.4pp on a full regeneration of the arm), and lexical diversity falls substantially (TTR -0.011, standardized effect -0.51; robust to a length-controlled measure). At 14B and 32B, no content-concentration measure reaches significance; instead, stylistic drift emerges (em-dash rate +0.46/1k words at 14B and +0.61/1k at 32B, both Holm p<= .0024). Pre-specified tests of stereotype direction are null at every scale: outputs concentrate on the modal answer for each prompt rather than on stereotypical answers. Mechanistically, the token-level distribution becomes flatter (decision-token entropy +0.091 bits, p = .015) while the semantic distribution, measured directly from first-token log probabilities, becomes more concentrated (collision +2.6pp, p = .023): individual tokens become less predictable even as meanings become more repetitive. At 8B, the smallest size tested, AWQ-int4 serving measurably narrows the range of suggestions; audits should assess concentration as well as bias.",
+        "canonical_id": "arXiv:2609.07901",
+        "arxiv_id": "2609.07901",
+        "authors": [
+          "Dachi Kurtskhalia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06922",
+      "identity_tokens": [
+        "id:arXiv:2609.06922",
+        "title:before the flip measuring hidden score shifts in quantized vision language models before the answer changes for visual question answering",
+        "url:https://www.semanticscholar.org/paper/5541e23b21606f00af137dad00ba65f244489216"
+      ],
+      "record": {
+        "title": "BEFORE THE FLIP: Measuring Hidden Score Shifts In Quantized Vision Language Models Before The Answer Changes for Visual Question Answering",
+        "source_url": "https://www.semanticscholar.org/paper/5541e23b21606f00af137dad00ba65f244489216",
+        "year": 2026,
+        "published": "2026-09-07",
+        "abstract": "Quantization makes vision language models (VLMs) cheaper to store and run by using fewer bits to represent their weights. While unchanged answers on visual question answering (VQA) after compression are an expected behavior, they can still hide changes in the underlying scores (log probabilities). For example, a model may still answer yes after compression, even as the score gap between yes and no shrinks. We introduce BEFORE THE FLIP to measure these hidden changes. Our method compares the score change caused by compression with the change caused by replacing the image's internal representations, or image tokens, with one fixed average token. We then increase the precision of one weight group at a time to identify where extra bits help, and test whether choosing different groups for each question offers benefits beyond shuffled controls. Among 8,277 LLaVA questions where image token replacement measurably affects the scores, 4-bit compression shifts the yes or no score gap farther toward the replacement output than 8-bit compression. Qwen shows the same pattern, but with a smaller difference. Yet only 265 of 9,000 LLaVA answers change at 4 bits. In a separate study of 1,024 calibration questions, choosing weight groups separately for each question does not outperform both shuffled controls at any tested storage budget. These findings show that compression can alter the scores behind unchanged answers, but do not establish a reliable benefit from adjusting precision for each question.",
+        "canonical_id": "arXiv:2609.06922",
+        "arxiv_id": "2609.06922",
+        "authors": [
+          "Sourajit Saha",
+          "Shubhashis Roy Dipta",
+          "Shaswati Saha",
+          "Nobin Sarwar",
+          "Yuxuan Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06473",
+      "identity_tokens": [
+        "id:arXiv:2609.06473",
+        "title:steering under compression doseresponse capability cost and failure asymmetry in quantized llms",
+        "url:https://www.semanticscholar.org/paper/b0e18b09010e657ef6211a832a72bfabd6c87167"
+      ],
+      "record": {
+        "title": "Steering Under Compression: Dose-Response, Capability Cost, and Failure Asymmetry in Quantized LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/b0e18b09010e657ef6211a832a72bfabd6c87167",
+        "year": 2026,
+        "published": "2026-09-06",
+        "abstract": "Inference-time activation steering enables behavioral control of large language models without parameter modification, while post-training quantization reduces memory and compute costs for deployment. Despite their growing convergence in practice, the interaction between these two techniques remains uncharacterized. We systematically study activation steering under weight-only quantization (INT8 and NF4) across four open-weight 7-9B models and two behavioral targets: judged sentiment and judge-free reasoning length. Using an iso-effect framework that compares capability costs at matched behavioral effect, we find that sentiment steering survives quantization intact. After correcting a GSM8K parser artifact with a uniform v2.3.1 rescore, the pooled INT8 contrast is -0.010 (90% CI [-0.026, +0.007]), descriptively Equivalent under the preregistered three-label rule, while NF4 remains Inconclusive at -0.017 ([-0.067, +0.033]). In contrast, reasoning length exhibits a surprising asymmetric dose-response: lengthening is graded but terminates in cap-runaway and collapse, while shortening is a step function with only 12-30% shortening (model-dependent) before discontinuous failure. We expose a methodological pitfall: the naive iso-effect ladder anchors on the collapse floor for floor-bounded targets, and we introduce a censored construction that restores interpretable crossings. We also quantify a substantial baseline capability shift for Mistral-NF4 (0.545 to 0.365 GSM8K at alpha=0), demonstrating that compression can dominate the steering intervention. Despite this, steering vectors remain highly collinear with their FP16 siblings (cosine similarity 0.989-0.998 for INT8, 0.945-0.990 for NF4), confirming that the behavioral direction survives quantization even when the cost structure does not. All code and data are released.",
+        "canonical_id": "arXiv:2609.06473",
+        "arxiv_id": "2609.06473",
+        "authors": [
+          "Saurav Bhandari",
+          "Benjamin Wade"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/electronics15173980",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics15173980",
+        "title:readpolarityaware rowwise offset encoding for readoutenergy reduction in 8t sram computeinmemory",
+        "url:https://www.semanticscholar.org/paper/ed681b9dbbcd36c5e17ab7a9b7f88f5cbb447d28"
+      ],
+      "record": {
+        "title": "Read-Polarity-Aware Row-Wise Offset Encoding for Readout-Energy Reduction in 8T SRAM Compute-in-Memory",
+        "source_url": "https://www.semanticscholar.org/paper/ed681b9dbbcd36c5e17ab7a9b7f88f5cbb447d28",
+        "year": 2026,
+        "published": "2026-09-03",
+        "abstract": "In SRAM-based compute-in-memory (CIM), read-bitline (RBL) charging and discharging depend on the physical bit pattern stored in the memory array, so the energy-relevant code statistic should be defined with respect to the actual read-port polarity. This paper presents a read-polarity-aware row-wise offset-encoding method for W4A8 INT4 weights. In the evaluated Q-sensed 8T topology, the stored logical one is the discharge-active state; hence, the topology-specific read-active density equals the stored-one fraction. Under the exact whole-row INT4-feasibility protocol, a nonzero row offset is accepted only when every translated valid signed-INT4 code remains within [−8, 7]; no clipping, saturation, wraparound, or remapping is permitted, and zero offset remains the fallback. The complete software evaluation covers 286 quantized modules, 579,464 physical 16 × 16 tile positions, and 147,156,296 quantized weights across ResNet-18, MobileNetV3-Small, and SmolLM2-135M. Circuit re-validation uses 300 independent tile-policy samples, 1200 matched baseline-selected bitplane pairs, and 2400 successfully completed transistor-level Spectre simulations. The balanced circuit population yields an aggregate local SRAM readout-energy reduction of 5.03%, with a sample-cluster bootstrap 95% confidence interval of 4.12–6.02%. After four-bitplane aggregation, relative read-active-density reduction and local SRAM readout-energy reduction exhibit Pearson r = 0.81 and Spearman ρ = 0.75, indicating a substantial but imperfect relationship. The directly validated no-offset, positive-offset, and signed-offset policies preserve the corresponding model-level Top-1 accuracy or perplexity. Proposal-specific digital overheads and metadata-storage capacity are quantified separately, whereas representative physical SRAM/ROM metadata-access energy remains uncharacterized. Accordingly, the measured energy benefit is limited to local SRAM readout; a net energy reduction at the complete CIM-macro or system level, robustness across all evaluated PVT conditions, and robustness to process mismatch are not established by the present evidence.",
+        "canonical_id": "DOI:10.3390/electronics15173980",
+        "doi": "10.3390/electronics15173980",
+        "authors": [
+          "Min-Ju Kang",
+          "Munhyeon Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.01962",
+      "identity_tokens": [
+        "id:arXiv:2609.01962",
+        "title:posttraining ternarization of qwen34b capability effective bit budget storage compression and deployment",
+        "url:https://www.semanticscholar.org/paper/d01da12fc90b7bbc9875f1e04a072456d1d77e7d"
+      ],
+      "record": {
+        "title": "Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",
+        "source_url": "https://www.semanticscholar.org/paper/d01da12fc90b7bbc9875f1e04a072456d1d77e7d",
+        "year": 2026,
+        "published": "2026-09-02",
+        "abstract": "Ultra-low-bit language models can reduce storage and memory bandwidth, but a nominal\"1.58-bit\"label does not fully describe the stored representation, retained capability, or runtime behavior. We study an end-to-end post-training conversion of Qwen, an instruction-tuned 4B-parameter model, using KOTMS rotation, E2M-ATQ ternarization, and GPTQ-style error compensation from TWLA. The experiment is weight-only: activations remain at 16-bit precision, so ILA-AMP is omitted. We evaluate effective bit accounting, task capability retention, perplexity, calibration sensitivity, checkpoint composition, and deployment behavior. The final conversion uses 1.641 effective bits per weight for quantized linear weights, with 81.62% of model parameters targeted. Across ten scored capability comparisons, accuracy falls from 64.5% to 54.7%. Degradation is uneven: BoolQ retains 84.6% chance-corrected teacher performance, while ARC-Challenge retains 43.8%. Perplexity rises from 13.639 to 18.748 on WikiText-2, 24.700 to 31.992 on PTB, and 19.831 to 28.966 on C4. A subsequent packing run preserves the ternary planes and scales, reducing reported model size from 8.29 GiB to 3.96 GiB with essentially unchanged perplexity. A separate third-party packing attempt was lossy and is excluded from the primary artifact claim. The packed artifact has not been benchmarked end-to-end for task accuracy or generation throughput. A preliminary Triton GEMV microbenchmark is 4.6x slower than FP16 cuBLAS on one tested shape. We therefore do not claim that compression alone yields faster inference.",
+        "canonical_id": "arXiv:2609.01962",
+        "arxiv_id": "2609.01962",
+        "authors": [
+          "AI OneBit",
+          "A. Malik",
+          "Poojith",
+          "Sparsh Mehra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.02451",
+      "identity_tokens": [
+        "id:arXiv:2609.02451",
+        "title:scalable kroneckerfisher approximation efficient hessian analysis for billionparameter language models compression",
+        "url:https://www.semanticscholar.org/paper/38defa35e4fd18dad3c4b5cf11283e894f861561"
+      ],
+      "record": {
+        "title": "Scalable Kronecker-Fisher Approximation: Efficient Hessian Analysis for Billion-Parameter Language Models Compression",
+        "source_url": "https://www.semanticscholar.org/paper/38defa35e4fd18dad3c4b5cf11283e894f861561",
+        "year": 2026,
+        "published": "2026-09-02",
+        "abstract": "In this paper, we propose a scalable Kronecker-based approximation that captures cross-layer interactions without storing the entire Fisher matrix, enabling practical Hessian analysis for billion-parameter networks where full computation is infeasible. Our approach reveals consistent vulnerability patterns: value projection layers exhibit the highest sensitivity and strongest cross-layer correlations across multiple model families, while other components exhibit architecture-specific behaviors. Through extensive experiments on quantization, sparsification, inter-layer corruption, and post-corruption fine-tuning, we demonstrate that our approximation strongly correlates with both performance degradation and recovery. Our framework provides a practical, theoretically grounded tool for identifying fragile components in large models, opening new avenues for guided compression and optimization strategies, such as mixed-precision allocation, layer-wise sparsity, and adaptive low-rank decomposition across layers and even individual weight groups.",
+        "canonical_id": "arXiv:2609.02451",
+        "arxiv_id": "2609.02451",
+        "authors": [
+          "Viacheslav Yusupov",
+          "Daria Cherniuk",
+          "E. Frolov"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/635",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/635",
+        "title:streamlining longchain reasoning via differentiable hierarchical fusion",
+        "url:https://www.semanticscholar.org/paper/15cc6d03ddb19c4b7d20a48d064fe6bffa3f5769"
+      ],
+      "record": {
+        "title": "Streamlining Long-Chain Reasoning via Differentiable Hierarchical Fusion",
+        "source_url": "https://www.semanticscholar.org/paper/15cc6d03ddb19c4b7d20a48d064fe6bffa3f5769",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "While large-scale reasoning models have achieved remarkable performance gains by scaling test-time computation through extended Chain-of-Thought (CoT) sequences, their practical utility is severely constrained by protracted inference lengths and high computational latency. In this paper, we present Differentiable Hierarchical Fusion (DHF), a novel framework that merges reasoning models with efficient base models via differentiable optimization to produce concise, accurate outputs. We introduce a dual-factor adaptive weighting mechanism to capture intra-block (Attention vs. MLP) variance and inter-block (shallow vs. deep layers) importance hierarchies, thereby addressing key limitations of static merging heuristics. Specifically, DHF optimizes fusion coefficients using gradient descent on a loss function that jointly minimizes cross-entropy (for accuracy) and response length (for conciseness). Furthermore, we enhance an outlier-aware initialization strategy to seed coefficients based on activation density and construct multi-calibration datasets to improve the model’s generalization ability. Comprehensive evaluations on Qwen and LLaMA models across six reasoning benchmarks show that DHF reduces the average response length by 55% while boosting accuracy by 2.8%–6% compared to existing state-of-the-art merging methods.",
+        "canonical_id": "DOI:10.24963/ijcai.2026/635",
+        "doi": "10.24963/ijcai.2026/635",
+        "authors": [
+          "Chuan-Gen Gao",
+          "Wen-Lun Zhang",
+          "Shang-Kun Wang",
+          "Shu-Yang Gu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/631",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/631",
+        "title:interaction effects in hybrid compression of small language models",
+        "url:https://www.semanticscholar.org/paper/aebd51be18c195ed6fe439e85f208c5ae4548afa"
+      ],
+      "record": {
+        "title": "Interaction Effects in Hybrid Compression of Small Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/aebd51be18c195ed6fe439e85f208c5ae4548afa",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "We investigate the interaction between quantization and pruning in the compression of open-weight small language models (SLMs), as these techniques are frequently combined in practice without a clear understanding of whether their effects are antagonistic, synergistic or additive. Prior work has reported ordering effects and studied pruning or quantization in isolation, but rarely quantifies their interaction across models and evaluation metrics. We introduce an interaction coefficient that isolates non-additive effects and apply it to Falcon3-1B-Base and LLaMA-3.2-1B, with a limited study on Qwen2.5-1.5B. Our experiments cover four hybrid application orders, multiple pruning sparsities and 4/8-bit quantization. We find non-monotonic interactions: memory savings are dominated by 4-bit quantization, while pruning alone provides limited benefits. Hybrids exhibit the greatest effects at global unstructured pruning sparsity s ∈ {0.2, 0.3} while getting close to additivity at s=0.5. At low sparsity, truthfulness improves, while reasoning losses diminish at higher sparsity. Future work will extend interaction analysis to hardware-aware sparse kernels and larger models.",
+        "canonical_id": "DOI:10.24963/ijcai.2026/631",
+        "doi": "10.24963/ijcai.2026/631",
+        "authors": [
+          "Iheb Bouriel",
+          "Q. Nasir",
+          "Manar Abu Talib"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/176",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/176",
+        "title:gradient enhancement task aware posttraining quantization",
+        "url:https://www.semanticscholar.org/paper/63faed7424744aaafb24c17d9fc70e739c5e90a7"
+      ],
+      "record": {
+        "title": "Gradient Enhancement Task Aware Post-training Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/63faed7424744aaafb24c17d9fc70e739c5e90a7",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "The huge parameters and extensive training corpora of Large Language Models (LLMs) empower them to tackle complex tasks. Yet, their massive size incurs substantial inference costs, hindering deployment on resource‑constrained edge devices. Low‑bit quantization provides a way to compress models and improve their practicality for edge-side deployment. Nonetheless, many edge applications do not require the full generalization abilities of LLMs and instead only depend on their knowledge in specific domains. This paper introduces Gradient Enhancement Task Aware Post-training Quantization, i.e., GTAQ, to address the generalization issue. Concretely, GTAQ locates task‑critical weights via gradient‑based validation and retrieval, and then amplifies these salient weights. For that purpose, GTAQ preserves and strengthens weights related to the target tasks, enabling task‑aware uniform‑bit quantization. We extensively evaluate the LLaMA family of language models on WikiText, C4, and MMLU. Our experiments show that GTAQ consistently delivers notable performance improvements across tasks, surpassing both general‑purpose and task‑aware quantization baselines. At the same time, GTAQ yields more than 3.5× speedup in model inference and substantially cuts storage requirements. https://github.com/YihuaJerry/GTAQ.git.",
+        "canonical_id": "DOI:10.24963/ijcai.2026/176",
+        "doi": "10.24963/ijcai.2026/176",
+        "authors": [
+          "Yi-Hua Shao",
+          "Yang-Yang Gu",
+          "Min-Xi Yan",
+          "Si-Yu Chen",
+          "Hai-Yang Liu",
+          "Zi-Yang Yan",
+          "Yong-Jian Li",
+          "Yan Wang",
+          "Qun Song",
+          "Hao-Lin Tang",
+          "Hao-Tong Qin",
+          "Jing-Cai Guo",
+          "Nicu Sebe"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2025.3649442",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2025.3649442",
+        "title:trimd accelerating 2d3d diffusion generation via triplemixed quantization and sparsityaware dualbranched computation",
+        "url:https://www.semanticscholar.org/paper/de87e2f640903b9a74bb2c9785d6ef5f42041d1d"
+      ],
+      "record": {
+        "title": "TriM-D: Accelerating 2-D/3-D Diffusion Generation Via Triple-Mixed Quantization and Sparsity-Aware Dual-Branched Computation",
+        "source_url": "https://www.semanticscholar.org/paper/de87e2f640903b9a74bb2c9785d6ef5f42041d1d",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Diffusion models have shown marked advancements in 2-D generation and have also become focal points in 3-D generation via consistent multiview image generation. However, the computation and memory demands hinder their real-time deployment on mobile and edge devices. Moreover, the reduction of diffusion timesteps leads to a decrease in interstep similarity, thereby making previous methods ineffective in optimizing computation. The varied layer quantization sensitivity and optimal format in diffusion models also present challenges for traditional quantization methods to achieve efficient memory compression. To address these issues, we first introduce <inline-formula> <tex-math notation=\"LaTeX\">${M}^{3}$ </tex-math></inline-formula> quantization, a mixed-precision, mixed-format, and mixed-granularity quantization framework that allocates optimal precision and format to different data with a unified FP8 computation flow for efficient implementation. Building upon <inline-formula> <tex-math notation=\"LaTeX\">${M}^{3}$ </tex-math></inline-formula> quantization, we present TriM-D, a hardware accelerator designed to optimize computation. It features sparsity-aware dual-branched FP8-MAC units that introduce a dual-branch path and an efficient approximate adder to fully utilize bit-level sparsity of <inline-formula> <tex-math notation=\"LaTeX\">${M}^{3}$ </tex-math></inline-formula>-quantized data. Such an FP8-MAC scheme preserves both efficiency and numerical accuracy. Our experiments demonstrate that TriM-D significantly outperforms the state-of-the-art (SOTA) diffusion accelerator Cambricon-D (Camb-D), achieving an average reduction of 56.5% in memory access and 80.6% in computation cost. In addition, TriM-D provides a <inline-formula> <tex-math notation=\"LaTeX\">$55\\times $ </tex-math></inline-formula>, <inline-formula> <tex-math notation=\"LaTeX\">$6.72\\times $ </tex-math></inline-formula> improvement in energy efficiency and <inline-formula> <tex-math notation=\"LaTeX\">$3.69\\times $ </tex-math></inline-formula>, <inline-formula> <tex-math notation=\"LaTeX\">$2.67\\times $ </tex-math></inline-formula> speedups over NVIDIA A100 and Camb-D.",
+        "canonical_id": "DOI:10.1109/TCAD.2025.3649442",
+        "doi": "10.1109/TCAD.2025.3649442",
+        "authors": [
+          "Wenxun Wang",
+          "Li-Kai Ma",
+          "Chen Tang",
+          "Zongle Huang",
+          "Boju Chen",
+          "Wenyu Sun",
+          "Yongpan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.01587",
+      "identity_tokens": [
+        "id:arXiv:2609.01587",
+        "title:the structure of quantization damage in llms why the next bit should be spent globally",
+        "url:https://www.semanticscholar.org/paper/2cce854850ed000e6fae3f903b5d05bb49d3740f"
+      ],
+      "record": {
+        "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+        "source_url": "https://www.semanticscholar.org/paper/2cce854850ed000e6fae3f903b5d05bb49d3740f",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Post-training quantization (PTQ) is widely used to reduce the cost of serving large language models (LLMs), but its accuracy cost is uneven and is often tuned per model. We study where quantization damage occurs and how to allocate a small additional precision budget. Using causal mixed-precision intervention as ground truth (raise each layer to 8-bit in turn and measure the accuracy it recovers) across 9 open-weight models in 4 architecture families, we test 3 intuitive hypotheses: that quantization damage lives in task circuits, where the model computes, or in weight statistics. None of them predicts which layers benefit from restored precision. Recovery is instead diffuse: for 8 of 9 models, recovering 75% of the gap takes roughly half the layers; the lone exception, Qwen3-8B, is sharply concentrated. At a matched precision budget, spending it globally on finer quantization granularity beats locally repairing the most recoverable layers for all 8 group-128-compatible models (all but OpenLLaMA, whose width rules out group-128), by 21-52 points, including the concentrated Qwen3-8B. We report 2 secondary findings: the residual is budget-limited (8-bit is near-lossless in our evaluation across RTN, GPTQ, and AWQ), and the location of peak recovery correlates with architecture within a family, though not across families. Within this budget setting, global granularity is a better default than selectively protecting critical layers. More broadly, cheap signals that correlate with quantization damage do not necessarily identify where restoring precision improves accuracy; this must be tested with causal intervention.",
+        "canonical_id": "arXiv:2609.01587",
+        "arxiv_id": "2609.01587",
+        "authors": [
+          "Junhao Hu",
+          "S. Ramachandran"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.is.2026.102796",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.is.2026.102796",
+        "title:iolmdb instanceoptimized large language model execution for columnscale semantic operators",
+        "url:https://www.semanticscholar.org/paper/88d7ecea376c39d9053b45efdee76e078b54fdee"
+      ],
+      "record": {
+        "title": "IOLM-DB: Instance-optimized large language model execution for column-scale semantic operators",
+        "source_url": "https://www.semanticscholar.org/paper/88d7ecea376c39d9053b45efdee76e078b54fdee",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Large language models (LLMs) can implement row-level semantic transformations over tabular data, but a general-purpose model reserves the same accelerator resources even when every row uses one fixed prompt. IOLM-DB compiles that recurring prompt–column pair into an operator sized to the work it actually does. It samples the target column, constructs calibration sequences that represent both prompt and output behavior, evaluates specialized candidates, and selects an implementation under explicit memory and quality constraints. Across heterogeneous datasets and operator types, column-calibrated quantization reduces the resident footprint of the reference model by 1.8–2.8 × while the 8-bit profile remains a near-lossless replacement and the 4-bit profile preserves behavior on categorical label-output operators. At fixed precision, column calibration consistently improves fidelity over generic GPTQ calibration, and output-aware calibration provides an additional benefit for generative operators. Deployment experiments reveal two complementary outcomes: weight-only compression does not raise per-row throughput in a compute-rich regime, where it primarily releases capacity, but the smaller weight stream also improves throughput when memory bandwidth becomes limiting. The compact artifacts enable deployment under a memory budget where the full-precision operator cannot start and allow three specialized operators to occupy roughly the footprint of one full-precision model. IOLM-DB therefore turns a recurring semantic transformation from an immutable call to a general-purpose backend into a compact, measurable, and hardware-aware operator.",
+        "canonical_id": "DOI:10.1016/j.is.2026.102796",
+        "doi": "10.1016/j.is.2026.102796",
+        "authors": [
+          "Bardia Mohammadi",
+          "Laurent Bindschaedler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.media.2026.104287",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.media.2026.104287",
+        "title:generalized posttraining quantization for medical image segmentation foundation model",
+        "url:https://www.semanticscholar.org/paper/794472ecc43ac819e5c3d55d8355d9cb055e4dd7"
+      ],
+      "record": {
+        "title": "Generalized post-training quantization for medical image segmentation foundation model.",
+        "source_url": "https://www.semanticscholar.org/paper/794472ecc43ac819e5c3d55d8355d9cb055e4dd7",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Medical image segmentation foundation models (MedFMs) perform strongly across diverse imaging modalities, but their large size and computational demands hinder deployment in resource-limited clinical settings. Lightweight fine-tuning is impractical given the high training cost of MedFMs, and the efficiency benefits of integer inference remain underused. Post-training quantization (PTQ) is a promising alternative, yet existing PTQ methods fail on MedFMs because their heterogeneous weight distributions lead to severe accuracy degradation at low bit-widths. To address this challenge, we propose GPTQ-MedFM, a generalized post-training quantization framework tailored for medical foundation models. GPTQ-MedFM standardizes complex weight distributions under an ℓ∞-constrained normalization to produce quantization-friendly matrices, and then applies an efficient coordinate-descent solver to obtain high-fidelity low-bit representations. The method adds no extra computation or memory overhead at inference, enabling seamless deployment on medical edge devices. By explicitly modeling and mitigating quantization-induced errors, GPTQ-MedFM achieves state-of-the-art low-bit compression across six medical foundation models and nine imaging modalities - spanning nearly the full range of clinical imaging scenarios - and remains robust even with a single calibration sample. Its broad generalization and minimal calibration cost make GPTQ-MedFM a practical pathway for real-time AI-assisted diagnostics in resource-limited healthcare settings.",
+        "canonical_id": "DOI:10.1016/j.media.2026.104287",
+        "doi": "10.1016/j.media.2026.104287",
+        "authors": [
+          "Peng Huang",
+          "Ao-Zhong Zhang",
+          "Peng-Hang Yin",
+          "Yi-Neng Chen",
+          "Hui Guo",
+          "Zi Yang",
+          "Nai-Gang Wang",
+          "Bo Peng",
+          "Shu Hu",
+          "Jing Peng",
+          "Jing Hu",
+          "Xiao-Jie Li",
+          "Shao-Wu Pan",
+          "Xin Li",
+          "Xi Wu",
+          "B. Prabhakaran",
+          "Hong-Tu Zhu",
+          "Xin Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tvt.2026.3682257",
+      "identity_tokens": [
+        "id:DOI:10.1109/tvt.2026.3682257",
+        "title:decentralized llm deployment in mobile edge computing networks",
+        "url:https://www.semanticscholar.org/paper/ced05c723ed97fb43835d041b9852ec260be4b53"
+      ],
+      "record": {
+        "title": "Decentralized LLM Deployment in Mobile Edge Computing Networks",
+        "source_url": "https://www.semanticscholar.org/paper/ced05c723ed97fb43835d041b9852ec260be4b53",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Large language models (LLMs), powered by multiple transformer layers, have achieved remarkable success, and to save service latency it is important to enable LLM inference closer to mobile users by leveraging mobile edge computing (MEC) resources. However, a single MEC server with limited resource cannot host the entire LLM and we propose model parallelism to partition LLMs into smaller sub-models and deploy across multiple MEC servers. As such, during decentralized inference, intermediate results generated within each transformer layer must be exchanged among MEC servers, introducing substantial communication overhead that degrades inference latency. This work tackles this issue by proposing a novel parallel communication and computation (PCC) protocol for decentralized LLM inference in MEC networks. The PCC protocol enables parallel communication and computation not only within each transformer layer but also across task offloading, computation, and result downloading, significantly reducing communication overhead. Building on this PCC protocol, we formulate a latency minimization problem that jointly optimizes communication and computation resources. To solve this mixed-integer nonlinear programming problem efficiently, we design a simulated annealing-based swapping algorithm to approach the global optimum. Simulation results demonstrate that the proposed scheme significantly reduces overall latency compared to state-of-the-art model parallelism approaches, achieving 55.6% lower latency than conventional tensor parallelism and 49.2% lower latency than conventional pipeline parallelism.",
+        "canonical_id": "DOI:10.1109/tvt.2026.3682257",
+        "doi": "10.1109/tvt.2026.3682257",
+        "authors": [
+          "Ding Xu",
+          "Lingjie Duan",
+          "Jiahao Zhu",
+          "Hongbo Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00450",
+      "identity_tokens": [
+        "id:arXiv:2609.00450",
+        "title:hbq hierarchical scaling block quantization with hardwareefficiencyaware design for accurate llm inference",
+        "url:https://www.semanticscholar.org/paper/3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282"
+      ],
+      "record": {
+        "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282",
+        "year": 2026,
+        "published": "2026-08-31",
+        "abstract": "Block Quantization (BQ) enables efficient LLM inference by quantizing both weights and activations, but its design space remains underexplored. Through hardware-accuracy design space exploration, we identify block size as a key trade-off: larger blocks improve hardware efficiency by amortizing dequantization and accumulation costs, but degrade accuracy. Motivated by this insight, we propose Hierarchical Block Quantization (HBQ), which combines large blocks with low-overhead significand (SIG) scaling for second-level quantization. SIG scaling effectively compensates for large-block quantization errors while accounting for distinct weight and activation distributions. HBQ-A achieves W4A16-level accuracy with W4A5 and lower area than NVFP4, while HBQ-E further reduces hardware cost by 17% while outperforming existing BQ methods in accuracy. We implement HBQ for weights, activations, and KV cache in a 28nm ASIC accelerator and introduce partial-sum BQ to reduce EMA energy. At comparable accuracy, HBQ achieves 2.3x/4.6x higher area/energy efficiency than state-of-the-art weight-only quantization and 1.6-3.3x lower system energy with 1.5-3x speedup over prior BQ methods. Our implementation is publicly available at: https://github.com/SeoLabCornell/HBQ.git.",
+        "canonical_id": "arXiv:2609.00450",
+        "arxiv_id": "2609.00450",
+        "authors": [
+          "Chun-Ting Chen",
+          "Dongguang Han",
+          "Han-Gyeol Mun",
+          "Jake Hyun",
+          "Arnab Raha",
+          "A. Agarwal",
+          "Mark A. Anders",
+          "Mohamed S. Abdelfattah",
+          "Jae-sun Seo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05512",
+      "identity_tokens": [
+        "id:arXiv:2609.05512",
+        "title:reasoningaware compression identifying and protecting vulnerable reasoning circuits for energyefficient llm deployment",
+        "url:https://www.semanticscholar.org/paper/20b2302cb74ea80ddbcf65bbcd1b928ecd9c7fb2"
+      ],
+      "record": {
+        "title": "Reasoning-Aware Compression: Identifying and Protecting Vulnerable Reasoning Circuits for Energy-Efficient LLM Deployment",
+        "source_url": "https://www.semanticscholar.org/paper/20b2302cb74ea80ddbcf65bbcd1b928ecd9c7fb2",
+        "year": 2026,
+        "published": "2026-08-31",
+        "abstract": "Large Reasoning Models (LRMs) impose substantial energy costs during deployment, yet current compression methods apply uniform quantization across all components, risking damage to critical reasoning circuits. We present a reasoning-aware compression framework that benchmarks quantization conditions across five reasoning benchmarks, GSM8K, FOLIO, MATH-500, ProofWriter, and MuSiQue, with hardware-level GPU energy measurement; profiles per-module INT4 vulnerability across all 196-224 (layer, projection) pairs via a perturbation sweep on a held-out calibration split, then selectively restores the most sensitive circuits to FP16. Three findings emerge. First, INT4 quantization can increase energy by extending reasoning chains; a 25% power reduction becomes a net energy increase on GSM8K. Second, vulnerability is task-dependent: attention projections are more critical for mathematical reasoning, and sensitivity patterns differ by architecture in logical inference. Third, selective compression achieves Pareto-optimal points inaccessible to uniform methods: R1-Qwen-7B Top-10% on ProofWriter gains +12 pp over FP16 at -9.7% energy, validated on held-out data across five reasoning benchmarks.",
+        "canonical_id": "arXiv:2609.05512",
+        "arxiv_id": "2609.05512",
+        "authors": [
+          "Leonard Twagirayezu",
+          "Prasenjit Mitra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/s26175531",
+      "identity_tokens": [
+        "id:DOI:10.3390/s26175531",
+        "title:fully quantized training vs posttraining quantization for a small hyperspectral transformer model for pixellevel foreign plastic object classification",
+        "url:https://www.semanticscholar.org/paper/1e700e54586a87ba40cc9b1ba332de23c7f9e689"
+      ],
+      "record": {
+        "title": "Fully Quantized Training vs. Post-Training Quantization for a Small Hyperspectral Transformer Model for Pixel-Level Foreign Plastic Object Classification",
+        "source_url": "https://www.semanticscholar.org/paper/1e700e54586a87ba40cc9b1ba332de23c7f9e689",
+        "year": 2026,
+        "published": "2026-08-31",
+        "abstract": "Low-precision floating-point computation has become central to efficient artificial intelligence, yet its behavior for compact transformer-based hyperspectral imaging (HSI) models remains underexplored. In this work, we present a controlled comparative study of fully quantized training (FQT) and post-training quantization (PTQ) for pixel-wise foreign plastic object (FPO) classification in poultry hyperspectral data. Using a fixed state-of-the-art spatial–spectral transformer backbone, a common mixed-precision strategy, and identical training and inference protocols, we evaluate FP32, FP16, BF16, FP8, and NVFP4 across predictive performance, model compression, training efficiency, and inference efficiency. The results show that mixed-precision FQT remains highly robust across the tested precision spectrum, with all reduced-precision configurations staying within 0.63 percentage points of the FP32 baseline in overall accuracy while consistently outperforming PTQ at matched precisions. Across the evaluated formats, BF16 provides the closest accuracy to FP32, whereas FP8 offers a particularly favorable balance between accuracy preservation and reduced precision, while model compression increases progressively to 3.69× under NVFP4. The computational benefits, however, are strongly workload dependent. Native FP8/FP4 hardware support does not automatically improve training throughput for this compact model at moderate workloads, and the larger training batches required to better utilize low-precision hardware can degrade predictive performance. In contrast, large-batch inference can effectively exploit FP8 and NVFP4 without affecting predictive accuracy. An ablation study further shows that selective retention of numerically sensitive modules in FP32 is essential for stable ultra-low-precision operation. Overall, the findings demonstrate that low precision is a viable but workload-dependent design choice for compact HSI transformers, with FQT providing greater accuracy robustness than PTQ and FP8, offering a favorable overall accuracy–efficiency trade-off.",
+        "canonical_id": "DOI:10.3390/s26175531",
+        "doi": "10.3390/s26175531",
+        "authors": [
+          "Zirak Khan",
+          "Seung-Chul Yoon",
+          "Suchendra Bhandarkar"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:406dd386d83bcd5ebc541b907f7828543d1d6eaff238b33d86cd429306ed67e7",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
