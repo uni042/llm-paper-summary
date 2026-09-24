@@ -21,8 +21,11 @@ import derive_worker_run_state
 import worker_identity
 
 PRECHECK_REQUESTS = Path(".survey/work-queue/discovery-precheck/requests")
+PRECHECK_RESULTS = Path(".survey/work-queue/discovery-precheck/results")
 RUN_STATE_REQUESTS = Path(".survey/work-queue/run-state/requests")
+RUN_STATE_RESULTS = Path(".survey/work-queue/run-state/results")
 ARCHIVED_RUN_STATE_REQUESTS = Path(".survey/work-queue/archive/transport/run-state/requests")
+ARCHIVED_RUN_STATE_RESULTS = Path(".survey/work-queue/archive/transport/run-state/results")
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -66,6 +69,51 @@ def _existing_run_request(root: Path, worker_id: str, run_key: str) -> str | Non
     return None
 
 
+def _run_state_result_exists(root: Path, request_path: str) -> bool:
+    stem = Path(request_path).stem
+    return any(
+        (root / rel_root / f"{stem}.json").is_file()
+        for rel_root in (RUN_STATE_RESULTS, ARCHIVED_RUN_STATE_RESULTS)
+    )
+
+
+def _refresh_request_id(
+    worker_id: str,
+    run_key: str,
+    scheduled_slot: str,
+    actual_invocation_start: str,
+    precheck_request_id: str,
+) -> str:
+    material = "\n".join(
+        (worker_id, run_key, scheduled_slot, actual_invocation_start, precheck_request_id)
+    )
+    digest = hashlib.sha256(material.encode("utf-8")).hexdigest()[:24]
+    return f"auto-refresh-discovery-runstate-{digest}"
+
+
+def _precheck_requires_refresh(root: Path, run_key: str, precheck_request_id: str) -> bool:
+    result = _read(root / PRECHECK_RESULTS / f"{precheck_request_id}.json", {})
+    if not (
+        isinstance(result, dict)
+        and result.get("request_id") == precheck_request_id
+        and str(result.get("run_key") or "") == run_key
+        and result.get("ok") is True
+        and result.get("evaluation_allowed") is True
+        and str(result.get("decision") or "") == "READY_FOR_EVALUATION"
+    ):
+        return False
+
+    state = _read(root / ".survey/work-queue/discovery-state.json", {}) or {}
+    history = state.get("history") if isinstance(state.get("history"), list) else []
+    return not any(
+        isinstance(row, dict)
+        and str(row.get("run_key") or "") == run_key
+        and str(row.get("precheck_request_id") or "") == precheck_request_id
+        and (row.get("round_accounted") is True or row.get("round_complete") is True)
+        for row in history
+    )
+
+
 def ensure_precheck_request(root: Path, precheck_path: Path) -> dict[str, Any]:
     root = root.resolve()
     path = precheck_path if precheck_path.is_absolute() else root / precheck_path
@@ -103,7 +151,51 @@ def ensure_precheck_request(root: Path, precheck_path: Path) -> dict[str, Any]:
         }
 
     existing = _existing_run_request(root, worker_id, run_key)
+    precheck_request_id = str(value.get("request_id") or path.stem)
     if existing:
+        # A run-state request/result pair is immutable. Once that snapshot has
+        # settled, a later READY_FOR_EVALUATION precheck must create a fresh
+        # request so the finalization gate can observe discovery_evaluation_pending.
+        # Otherwise the old result remains authoritative and the worker can stop
+        # immediately after publishing a successful precheck.
+        if _run_state_result_exists(root, existing) and _precheck_requires_refresh(
+            root,
+            run_key,
+            precheck_request_id,
+        ):
+            refresh_id = _refresh_request_id(
+                worker_id,
+                run_key,
+                scheduled_slot,
+                actual_invocation_start,
+                precheck_request_id,
+            )
+            refresh_rel = RUN_STATE_REQUESTS / f"{refresh_id}.json"
+            refresh_request = {
+                "schema_version": 1,
+                "request_id": refresh_id,
+                "run_key": run_key,
+                "worker_id": worker_id,
+                "worker_kind": "scheduled_chat",
+                "scheduled_slot": scheduled_slot,
+                "actual_invocation_start": actual_invocation_start,
+                "runtime_condition": "none",
+                "runtime_condition_confirmed": False,
+                "runtime_condition_attempts": 0,
+                "runtime_condition_detail": "",
+                "route_recovery_source": "discovery_precheck_identity",
+                "recovered_work_mode_at_start": "discovery",
+                "source_discovery_precheck_request_id": precheck_request_id,
+            }
+            _write_create_only(root / refresh_rel, refresh_request)
+            return {
+                "status": "created",
+                "worker_id": worker_id,
+                "run_key": run_key,
+                "request_id": refresh_id,
+                "request_path": refresh_rel.as_posix(),
+                "reason": "refresh_after_ready_for_evaluation",
+            }
         return {
             "status": "reused",
             "worker_id": worker_id,
