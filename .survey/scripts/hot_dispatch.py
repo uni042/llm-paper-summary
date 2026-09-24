@@ -153,6 +153,104 @@ def _research_packets(
     return packets
 
 
+def _submission_descriptor_exists(root: Path, kind: str, attempt_id: str) -> bool:
+    if kind not in {"research", "audit"} or not attempt_id:
+        return False
+    folder = root / ".survey/work-queue/submissions" / kind
+    canonical = folder / f"{attempt_id}.json"
+    if canonical.is_file():
+        return True
+    if not folder.is_dir():
+        return False
+    for path in folder.glob("*.json"):
+        value = _read(path, {})
+        if isinstance(value, dict) and value.get("attempt_id") == attempt_id:
+            return True
+    return False
+
+
+def _research_resume_packets(
+    root: Path,
+    *,
+    jobs: dict[str, dict[str, Any]],
+    claims: dict[str, dict[str, Any]],
+) -> dict[str, list[dict[str, Any]]]:
+    """Expose already-owned unsubmitted work for zero-wait cross-run resume."""
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for job_id, current in claims.items():
+        if not current.get("active") or current.get("worker_kind") != "scheduled_chat":
+            continue
+        worker_id = str(current.get("worker_id") or "")
+        if not worker_identity.is_supported_worker_id(worker_id):
+            continue
+        claim_id = str(current.get("claim_id") or "")
+        attempt_id = str(current.get("attempt_id") or "")
+        kind = str(current.get("kind") or "")
+        job = jobs.get(job_id)
+        if (
+            not claim_id
+            or not attempt_id
+            or kind not in {"research", "audit"}
+            or not isinstance(job, dict)
+            or job.get("status") != "ready"
+            or job.get("type") not in {"research", "audit"}
+            or _submission_descriptor_exists(root, kind, attempt_id)
+        ):
+            continue
+        slot_paths = current.get("record_slot_paths")
+        route_ready = bool(
+            isinstance(slot_paths, dict)
+            and slot_paths
+            and all(isinstance(value, str) and value for value in slot_paths.values())
+        )
+        packet: dict[str, Any] = {
+            "claim_id": claim_id,
+            "job_id": job_id,
+            "attempt_id": attempt_id,
+            "kind": kind,
+            "worker_id": worker_id,
+            "claimed_at": current.get("claimed_at"),
+            "pipeline_order": current.get("pipeline_order"),
+            "source_run_key": current.get("run_key"),
+            "source_scheduled_slot": current.get("scheduled_slot"),
+            "source_actual_invocation_start": current.get("actual_invocation_start"),
+            "claim_path": (CLAIMS / f"{job_id}.json").as_posix(),
+            "job_path": (JOBS / f"{job_id}.json").as_posix(),
+            "job": job,
+            "resume_without_new_claim": True,
+            "work_start_allowed": True,
+            "record_write_allowed": route_ready,
+        }
+        for key in (
+            "record_bank",
+            "record_bank_root",
+            "record_slot_paths",
+            "record_bank_fallback",
+            "direct_take",
+            "direct_take_marker",
+            "stock_bank",
+            "stock_lane",
+        ):
+            if key in current:
+                packet[key] = current[key]
+        grouped.setdefault(worker_id, []).append(packet)
+
+    for rows in grouped.values():
+        rows.sort(key=lambda item: (
+            int(item.get("pipeline_order"))
+            if isinstance(item.get("pipeline_order"), int)
+            and not isinstance(item.get("pipeline_order"), bool)
+            and int(item.get("pipeline_order")) >= 0
+            else 1_000_000_000,
+            str(item.get("claimed_at") or ""),
+            str(item.get("job_id") or ""),
+        ))
+        for position, item in enumerate(rows, start=1):
+            item["pipeline_position"] = position
+            item["pipeline_role"] = "foreground" if position == 1 else "standby"
+    return {worker_id: grouped[worker_id] for worker_id in sorted(grouped)}
+
+
 def _discovery_packets(root: Path) -> dict[str, list[dict[str, Any]]]:
     out: dict[str, list[dict[str, Any]]] = {}
     for direction in ("backward", "forward", "normal"):
@@ -189,6 +287,7 @@ def build_index(repo_root: Path) -> dict[str, Any]:
     threshold = claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
     suggested = "research" if inventory >= threshold else "discovery"
     research_packets = _research_packets(root, jobs=jobs, claims=claims)
+    research_resume = _research_resume_packets(root, jobs=jobs, claims=claims)
     discovery_packets = _discovery_packets(root)
     lane_available = {
         "research": bool(research_packets),
@@ -207,10 +306,13 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; "
             "it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item "
             "immediately, while canonical run-state/precheck/claim publication continues asynchronously. "
-            "direct_start_allowed depends only on prepared stock for the selected lane; if that lane has no packet, "
-            "fall back to the normal synchronous run-state route."
+            "same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence "
+            "over creating a new take, so content work can resume immediately while canonical route repair proceeds; "
+            "direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; "
+            "if that lane has no packet, fall back to the normal synchronous run-state route."
         ),
         "research": research_packets,
+        "research_resume": research_resume,
         "discovery": discovery_packets,
     }
 
@@ -293,6 +395,39 @@ def _research_refill_request_id(take: dict[str, Any]) -> str:
     return "direct-refill-" + hashlib.sha256(material.encode("utf-8")).hexdigest()[:24]
 
 
+def _ensure_research_refill_request(
+    root: Path,
+    take: dict[str, Any],
+    now: dt.datetime,
+) -> tuple[str | None, Path]:
+    refill_id = _research_refill_request_id(take)
+    refill_path = root / CLAIM_REQUESTS / f"{refill_id}.json"
+    canonical_result = CLAIM_RESULTS / f"{refill_id}.json"
+    created: str | None = None
+    if not refill_path.exists() and not (root / canonical_result).exists():
+        _write(
+            refill_path,
+            {
+                "schema_version": 1,
+                "request_id": refill_id,
+                "worker_id": take["worker_id"],
+                "worker_kind": "scheduled_chat",
+                "requested_at": _iso(now),
+                "max_jobs": 1,
+                "claim_window": take["claim_window"],
+                "lease_seconds": claim_worker.DEFAULT_LEASE_SECONDS,
+                "job_types": ["research", "audit"],
+                "run_key": take["run_key"],
+                "scheduled_slot": take["scheduled_slot"],
+                "actual_invocation_start": take["actual_invocation_start"],
+                "direct_take_refill": True,
+                "source_direct_take_claim_id": take["claim_id"],
+            },
+        )
+        created = refill_path.relative_to(root).as_posix()
+    return created, canonical_result
+
+
 def _next_pipeline_order(claims: dict[str, dict[str, Any]], take: dict[str, Any]) -> int:
     orders: list[int] = []
     for current in claims.values():
@@ -319,10 +454,33 @@ def process_research_takes(repo_root: Path) -> dict[str, Any]:
         result_path = result_root / path.name
         existing = _read(result_path, {})
         if isinstance(existing, dict) and existing.get("status") in {
-            "canonicalizing",
             "ready_for_submission",
             "recovery_required",
         }:
+            continue
+        if isinstance(existing, dict) and existing.get("status") == "canonicalizing":
+            try:
+                take = _normalize_research_take(path, _read(path, {}))
+                now = _utcnow()
+                current = claim_state.current_claims(root, now).get(take["job_id"])
+                if (
+                    isinstance(current, dict)
+                    and current.get("active") is True
+                    and current.get("worker_id") == take["worker_id"]
+                    and current.get("claim_id") == take["claim_id"]
+                    and current.get("attempt_id") == take["attempt_id"]
+                ):
+                    created, canonical_result = _ensure_research_refill_request(root, take, now)
+                    if created is not None:
+                        created_refills.append(created)
+                    desired = dict(existing)
+                    desired["canonical_claim_result_path"] = canonical_result.as_posix()
+                    if desired != existing:
+                        _write(result_path, desired)
+            except Exception:
+                # Preserve the durable canonicalizing identity; canonical recovery
+                # will classify genuinely invalid markers without destroying resume state.
+                failures += 1
             continue
         try:
             take = _normalize_research_take(path, _read(path, {}))
@@ -366,30 +524,9 @@ def process_research_takes(repo_root: Path) -> dict[str, Any]:
             claim["direct_take_marker"] = path.relative_to(root).as_posix()
             _write(root / CLAIMS / f"{take['job_id']}.json", claim)
 
-            refill_id = _research_refill_request_id(take)
-            refill_path = root / CLAIM_REQUESTS / f"{refill_id}.json"
-            canonical_result = CLAIM_RESULTS / f"{refill_id}.json"
-            if not refill_path.exists() and not (root / canonical_result).exists():
-                _write(
-                    refill_path,
-                    {
-                        "schema_version": 1,
-                        "request_id": refill_id,
-                        "worker_id": take["worker_id"],
-                        "worker_kind": "scheduled_chat",
-                        "requested_at": _iso(now),
-                        "max_jobs": 1,
-                        "claim_window": take["claim_window"],
-                        "lease_seconds": claim_worker.DEFAULT_LEASE_SECONDS,
-                        "job_types": ["research", "audit"],
-                        "run_key": take["run_key"],
-                        "scheduled_slot": take["scheduled_slot"],
-                        "actual_invocation_start": take["actual_invocation_start"],
-                        "direct_take_refill": True,
-                        "source_direct_take_claim_id": take["claim_id"],
-                    },
-                )
-                created_refills.append(refill_path.relative_to(root).as_posix())
+            created_refill, canonical_result = _ensure_research_refill_request(root, take, now)
+            if created_refill is not None:
+                created_refills.append(created_refill)
 
             _write(
                 result_path,
