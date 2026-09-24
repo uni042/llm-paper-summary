@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-scheduled-chat-00-20260924T190700Z-4f8c2d",
+  "kind": "research",
+  "attempt_id": "attempt-preload-9a2b16779f8e3ddfeb6f3da7",
+  "job_id": "job-research-c312adffcbd5fa76",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.02652-unfolding-the-leech-lattice-fused-multi-shell-decoding-and-vram-layouts-for-2-bit-llm-weights.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-20260925T040223+0900-4f8c2d",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-24T19:02:23+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:924e93bd43967c175df89efd8f7d8d69ba0f2ef0beb04dc79f1f27590b0fa0c2",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "2eaf4d979d1dc1f397d0769bbe64cd7be362cabf"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "fb378fe74fbf719aae009e96d800c68ada2cc374"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "4082765ac3ee13c53269f578b21359148a6992db"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "864be625ddfd3dc7921743022243469ac8e37c4e"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "1d51575228104841cac522a3850cb0574de2b1a4"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "results.overview must explain the main result and its practical meaning",
+    "Japanese-first prose ratio is too low: 36.7% < 70% (Japanese=1017, Latin=1752)"
+  ],
+  "checked_at": "2026-09-24T19:07:37+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
