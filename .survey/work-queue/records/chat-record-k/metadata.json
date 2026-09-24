@@ -4,7 +4,56 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-f423df36c64b70da5c1fa947",
   "job_id": "job-research-12d29ccbbefd4d02",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2406.11430",
+    "arxiv_id": "2406.11430",
+    "doi": "10.18653/v1/2024.emnlp-main.1027",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "A Simple and Effective L2 Norm-Based Strategy for KV Cache Compression",
+    "summary": "長文生成では、過去トークンのキーと値を保持するKVキャッシュが文脈長に比例して増え、GPUメモリ容量とデコード時のメモリ帯域を圧迫する。本研究は、学習済みデコーダ型Transformerで「キー埋め込みのL2ノルムが小さいトークンほど高い注意重みを受けやすい」という相関を観測し、注意重みそのものを計算せずに重要度を近似する。キャッシュが所定長を超えたらL2ノルムが大きいキーと対応する値を追い出し、相関が弱い最初の2層は既定で圧縮しない。これによりFlashAttentionとの互換性を保ったまま追加学習なしで圧縮できる。Llama-2-7B-80Kではneedle-in-a-haystackで50%圧縮時99%正解率、passkey retrievalでは90%圧縮でも100%正解率を報告し、言語モデル評価でも最大50%程度の圧縮まで困惑度をほぼ維持した。",
+    "list_summary": "キーのL2ノルムと注意重みの逆相関を利用し、注意重みを計算せず重要KVを残す学習不要の圧縮法。FlashAttention互換のまま、長文検索では50〜90%のKV削減でも高精度を維持する。",
+    "authors": [
+      "Alessio Devoto",
+      "Yu Zhao",
+      "Simone Scardapane",
+      "Pasquale Minervini"
+    ],
+    "authors_affiliations": "Sapienza University of Rome; The University of Edinburgh; Miniml.AI",
+    "published": "2024-06-17",
+    "publication": "EMNLP 2024",
+    "publication_type": "査読付き国際会議論文",
+    "publication_status": "Published (EMNLP 2024)",
+    "lineage": "KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference",
+    "topics": [
+      "KVキャッシュ圧縮",
+      "L2ノルム",
+      "KV追い出し",
+      "長文推論",
+      "FlashAttention"
+    ],
+    "importance": "注意重みを収集せず、キー単体の幾何量だけでKV重要度を推定できる設計点を示した。注意重み依存の追い出し法と異なりFlashAttentionを壊さず導入できる点が実装上重要。",
+    "implementation": "著者実装l2compressを公開。Hugging Face系モデルでKVキャッシュをL2ノルム順位により枝刈りする実装と再現用評価スクリプトを含む。",
+    "hardware_evaluation": "主眼はモデル品質と長文検索精度で、GPUカーネルの実測スループット比較は中心評価ではない。Llama 2/3、Llama-2-7B-80K、LongLoRA 32K、Gemmaなど最大8B級を評価。",
+    "quality_effect": "言語モデルでは最大50%程度のKV圧縮まで困惑度への影響が小さい。Llama-2-7B-80Kではneedle-in-a-haystack 50%圧縮で99%正解率、passkey retrieval 90%圧縮で100%正解率。層・ヘッドにより相関が弱く、強圧縮では品質劣化し得る。",
+    "source": "https://aclanthology.org/2024.emnlp-main.1027/",
+    "sources": [
+      "https://aclanthology.org/2024.emnlp-main.1027/",
+      "https://arxiv.org/abs/2406.11430",
+      "https://github.com/alessiodevoto/l2compress"
+    ],
+    "code": "https://github.com/alessiodevoto/l2compress",
+    "last_checked": "2026-09-25",
+    "references": [],
+    "references_checked_at": "2026-09-25",
+    "references_source": "primary paper reference section",
+    "references_total": 0
+  },
   "reservation": {
     "claim_id": "claim-preload-f423df36c64b70da5c1fa947",
     "worker_id": "scheduled-chat-00",
