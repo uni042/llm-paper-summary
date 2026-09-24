@@ -553,7 +553,12 @@ def _failed_attempts_for_source_bucket(
     )
 
 
-def _next_cursor_for_entry(root: Path, entry: dict[str, Any]) -> tuple[bool, str | None]:
+def _next_cursor_for_entry(
+    root: Path,
+    entry: dict[str, Any],
+    *,
+    allow_exhausted_evergreen_restart: bool = False,
+) -> tuple[bool, str | None]:
     result = _read(root / _result_path(entry), {})
     if not isinstance(result, dict) or not result:
         return False, None
@@ -564,13 +569,15 @@ def _next_cursor_for_entry(root: Path, entry: dict[str, Any]) -> tuple[bool, str
         return True, cursor if isinstance(cursor, str) else None
     if result.get("provider_exhausted") is True:
         provider = str(entry.get("provider") or "").strip().casefold()
-        if provider in {"repository_references", "repository_reference_pool"}:
+        if (
+            provider in {"repository_references", "repository_reference_pool"}
+            and allow_exhausted_evergreen_restart
+        ):
             # The repository-wide reference pool is a local, evolving source. A
-            # provider-exhausted cursor only means this snapshot reached its end;
-            # newly published papers and relevance-ledger changes can expose new
-            # unseen records immediately. Restart at cursor 0 with a fresh immutable
-            # preload identity instead of leaving the canonical backward lane empty
-            # until the next six-hour refresh bucket.
+            # provider-exhausted cursor only means this snapshot reached its end.
+            # Keep one fallback-ready window when the backward lane would otherwise
+            # be empty, but do not fill its whole directional floor with duplicate
+            # empty snapshots.
             return True, None
         return False, None
     cursor = result.get("next_cursor")
@@ -767,7 +774,14 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
                     >= MAX_FAILED_ATTEMPTS_PER_SOURCE_BUCKET
                 ):
                     continue
-                can_continue, next_cursor = _next_cursor_for_entry(root, latest)
+                can_continue, next_cursor = _next_cursor_for_entry(
+                    root,
+                    latest,
+                    allow_exhausted_evergreen_restart=(
+                        direction == "backward"
+                        and direction_available.get("backward", 0) == 0
+                    ),
+                )
                 if not can_continue:
                     continue
                 sequence = int(latest.get("sequence", 0)) + 1
