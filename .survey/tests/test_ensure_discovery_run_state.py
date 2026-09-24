@@ -62,6 +62,86 @@ class EnsureDiscoveryRunStateTests(unittest.TestCase):
             self.assertEqual(len(second["reused"]), 1)
             self.assertEqual(second["reused"][0]["request_path"], first["created"][0]["request_path"])
 
+    def test_ready_precheck_refreshes_settled_run_state_and_blocks_finalization(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            start = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
+            precheck_rel = Path(".survey/work-queue/discovery-precheck/requests/pre-ready.json")
+            write_json(
+                root / precheck_rel,
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "pre-ready",
+                    "run_key": "run-ready",
+                    "worker_id": "worker-45",
+                    "worker_kind": "scheduled_chat",
+                    "scheduled_slot": "adhoc",
+                    "actual_invocation_start": start.isoformat(),
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                },
+            )
+            write_json(
+                root / ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(
+                root / ".survey/work-queue/discovery-state.json",
+                {"schema_version": 3, "history": []},
+            )
+
+            initial = ensure.ensure_paths(root, [precheck_rel])
+            self.assertEqual(len(initial["created"]), 1)
+            initial_request = initial["created"][0]["request_path"]
+            initial_stem = Path(initial_request).stem
+            write_json(
+                root / f".survey/work-queue/run-state/results/{initial_stem}.json",
+                {
+                    "schema_version": 1,
+                    "ok": True,
+                    "request_id": initial_stem,
+                    "run_key": "run-ready",
+                    "worker_id": "worker-45",
+                    "work_mode": "discovery",
+                },
+            )
+            write_json(
+                root / ".survey/work-queue/discovery-precheck/results/pre-ready.json",
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "pre-ready",
+                    "run_key": "run-ready",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                    "results": [{"title": "candidate"}],
+                },
+            )
+
+            refreshed = ensure.ensure_paths(root, [precheck_rel])
+            self.assertEqual(len(refreshed["created"]), 1)
+            refresh_path = refreshed["created"][0]["request_path"]
+            self.assertNotEqual(refresh_path, initial_request)
+            self.assertEqual(
+                refreshed["created"][0]["reason"],
+                "refresh_after_ready_for_evaluation",
+            )
+
+            processed = ensure.derive_worker_run_state.process_pending(root)
+            self.assertGreaterEqual(processed["processed"], 1)
+            refresh_stem = Path(refresh_path).stem
+            result = json.loads(
+                (root / f".survey/work-queue/run-state/results/{refresh_stem}.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertTrue(result["discovery_evaluation_pending"])
+            self.assertEqual(result["gate"]["required_action"], "CONTINUE_DISCOVERY_ROUND")
+            self.assertEqual(result["finalization_gate"]["decision"], "MUST_CONTINUE")
+            self.assertFalse(result["finalization_permit_issued"])
+
     def test_preload_request_does_not_create_worker_run_state(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
