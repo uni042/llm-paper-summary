@@ -1,0 +1,862 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-c38db1b376d00fe3399d",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-c38db1b376d00fe3399d",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "220",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "20d4d94fde88a1bf25c8042ee38b751a4a41331e",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T22:49:03.753046+00:00",
+  "preload_id": "preload-c38db1b376d00fe3399d",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Dependency-Aware Reliable Orchestration for Smart-IoT Control with Reasoning-Aligned LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/a6e87bb7ef34092f246d80a9b60dbfc1086084df",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large Language Models (LLMs) offer a natural interface for smart-IoT control, yet reliable deployment requires more than producing valid API calls. Multi-device commands often contain preconditions, ordering constraints, and conflicts that must be satisfied before actions are safely executed. This paper presents DARIO, a dependency-aware orchestration framework for translating natural-language commands into verified IoT action plans. DARIO combines supervised instruction tuning, KL-regularized PPO, an explicit dependency graph $\\mathcal{G}=(V, E)$, and a lightweight verifier that checks schema, execution, dependency, and safety constraints before commit. Verifier outcomes are folded into a decomposed reward, enabling the policy to learn from dependency violations rather than treating plans as flat token sequences. On a 2k-prompt held-out HA-Instruct split across five seeds, DARIO achieves $0.85 \\pm 0.01$ JSON exact match, perfect schema validity, $0.91 \\pm 0.01$ overall task success, and $0.81 \\pm 0.02$ success on the dependency-heavy L3 split, outperforming SIT and SIT+PPO baselines by large margins. It also raises dependency satisfaction to 0.94, reduces unsafe execution to 0.02, and runs as a 4-bit 8B LoRA deployment at about 609 ms including verification.",
+      "canonical_id": "DOI:10.1109/ICECET65726.2026.11632566",
+      "doi": "10.1109/ICECET65726.2026.11632566",
+      "authors": [
+        "MD SELIM SAROWAR",
+        "Md Tanvir Islam",
+        "M. Nuruzzaman",
+        "Md Ariful Islam Mozumder"
+      ]
+    },
+    {
+      "title": "A dynamic prompting and scenario generation method for autonomous driving perception via large-model optimization",
+      "source_url": "https://www.semanticscholar.org/paper/757e9c871e1626cdcba1c4a094280ffd80afceaa",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.trc.2026.105672",
+      "doi": "10.1016/j.trc.2026.105672",
+      "authors": [
+        "Songnian Zhang",
+        "Hongyi Lin",
+        "Mengjie Wang",
+        "Bangyang Wei",
+        "Yang Liu",
+        "Xiaobo Qu"
+      ]
+    },
+    {
+      "title": "Trustworthy Collaborative Inference in Edge LLM Servicing: The Credibility-Aware MoE Scheduling",
+      "source_url": "https://www.semanticscholar.org/paper/da91dce56bed34b43c9d558abbc6ce071fb4b6ff",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Mixture of experts (MoE)-based large language models (LLMs) have achieved remarkable success in natural language processing and multimodal learning. To facilitate efficient and adaptive utilization, edge-enabled distributed MoE-LLMs are becoming a prevalent solution. Nonetheless, constrained by static expert activation and device limitations, existing approaches face considerable challenges, such as unreliable environments and imbalanced load distribution. In this article, we propose a knowledge-empowered environment-aware expert activation method to improve collaborative inference under untrustworthy computation conditions. When expert networks are offloaded to edge servers (ESs), the activation decision adaptively selects experts to mitigate threats from malicious nodes engaging in malware execution or dishonest computation (DC). Specifically, leveraging real-time server data and prior knowledge of node credibility derived from centralized monitoring, the method prioritizes experts on more trustworthy, lightly loaded, and energy-efficient servers. To this end, anomaly detection (AD) is first employed to identify untrusted conditions, upon which activation policies are trained within a game-theoretic deep reinforcement learning (DRL) framework to adapt to dynamic environments. Extensive experiments under varying network settings and activation policies demonstrate the superiority of our method in inference credibility, servicing latency, and energy efficiency.",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3682665",
+      "doi": "10.1109/JIOT.2026.3682665",
+      "authors": [
+        "Jinyang Zhang",
+        "Sheng-Li Pan",
+        "Fan Feng",
+        "Cheng-Bo Jiao"
+      ]
+    },
+    {
+      "title": "CrossKV: Accelerating Large Language Model Inference via Cross-Stage Dynamic Co-Optimization for KV Cache",
+      "source_url": "https://www.semanticscholar.org/paper/bb893bc0767980155ac16a209d184502eca912eb",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "The autoregressive nature of Large Language Models (LLMs) has enabled remarkable performance in language generation, making them a cornerstone in natural language processing. As context windows lengthen, the per-token key–value (KV) cache grows linearly with sequence length and turns the generation stage into a memory-bound operation. However, existing works focus primarily on an isolated stage of KV cache reduction, and most efforts incur significant hardware overheads. This results in a lack of cross-stage co-optimization and leaves significant reduction potential untapped. To address these challenges, we propose CrossKV, a software-hardware co-design architecture that accelerates LLM inference to fully achieve the potential of KV caching optimization. Motivated by our observation, we identify the three stages in KV caching and present a cross-stage co-optimization algorithm, including: a derivative-enhanced dynamic progressive pruning method, a DCT-driven key-vector low-rank compressing, and a dynamic clustered hybrid run-length encoding to reduce the KV caching while maintaining high accuracy. Then, an efficient architecture featuring cross-stage dynamic co-optimization with negligible hardware overhead is proposed to fully harness the algorithm of CrossKV. Our evaluations of CrossKV over 9 popular LLMs models and various long-context tasks demonstrate an average of <inline-formula> <tex-math notation=\"LaTeX\">$6.03\\times $ </tex-math></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">$4.10\\times $ </tex-math></inline-formula> improvement for energy efficiency and speedup compared to existing SoTA Accelerators architecture. Compared to the Nvidia A100 GPU, CrossKV achieves an average <inline-formula> <tex-math notation=\"LaTeX\">$23.43\\times $ </tex-math></inline-formula> energy efficiency and <inline-formula> <tex-math notation=\"LaTeX\">$4.64\\times $ </tex-math></inline-formula> speedup, respectively.",
+      "canonical_id": "DOI:10.1109/TCSI.2026.3668423",
+      "doi": "10.1109/TCSI.2026.3668423",
+      "authors": [
+        "Nan Wu",
+        "Shenyu Wang",
+        "Hui-Zheng Wang",
+        "Peng Wang",
+        "Xiao Liu",
+        "Zhi-Hua Wang",
+        "Yang Hu",
+        "Han-Jun Jiang"
+      ]
+    },
+    {
+      "title": "Deployment-Aware Compression of Large Language Models for Edge Intelligence: A System-Level Survey",
+      "source_url": "https://www.semanticscholar.org/paper/be4ee78ffa55741a9d77a9ed8b34d0b6f09efdff",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "The deployment of large language models (LLMs) on edge hardware presents multilayered challenges, including compression, compiler behavior, and system-level trade-offs. This survey provides a deployment-centric taxonomy of compression strategies for LLMs under edge constraints, bridging algorithmic methods and practical hardware toolchains. We examine quantization techniques, including posttraining and quantization-aware variants, under precision-scaling regimes and analyze how they interact with operator lowering, kernel fusion, and numerical drift across compilers such as tensor virtual machine, core machine learning, and tensor runtime-LLM. Pruning and distillation approaches are reviewed with an emphasis on their impact on generalization, robustness, and hallucination under tight memory and energy budgets. We highlight the limitations of existing benchmarking suites, including the lack of robustness-aware evaluation, numerical fidelity tracking under low-precision inference, and explicit treatment of compiler-induced latency and energy variability. Case studies across real-world deployment stacks illustrate how system-level constraints translate into concrete deployment bottlenecks in practical edge LLM pipelines. Finally, we identify the open challenges related to continual model adaptation at the edge, privacy-preserving personalization, and secure and reproducible deployment under system constraints. This study provides a structured synthesis of techniques and trade-offs relevant to practitioners, compiler engineers, and hardware vendors pursuing sustainable high-performance edge artificial intelligence.",
+      "canonical_id": "DOI:10.1109/TAI.2026.3656155",
+      "doi": "10.1109/TAI.2026.3656155",
+      "authors": [
+        "Elias Dritsas",
+        "M. Trigka"
+      ]
+    },
+    {
+      "title": "From Anatomy to Smells: An Empirical Study of SKILL.md in Agent Skills",
+      "source_url": "https://www.semanticscholar.org/paper/e45535f6c8a262e08b485c8c48f458feb989c910",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Agent Skills provide on-demand domain knowledge to LLM agents without requiring model retraining. Each Agent Skill is defined by a mandatory SKILL$.$md file containing metadata and an unstructured Markdown body whose contents are left entirely to the skill author. Despite the rapid adoption of Agent Skills, little is known about how these files are authored or whether existing authoring guidelines are followed in practice. In this paper, we present the first systematic study of SKILL$.$md files as a software artifact. We qualitatively analyze 238 real-world skills and derive a taxonomy of 13 higher-level and 44 lower-level semantic components. We then conduct a multivocal literature review of 29 sources to identify best practices for authoring SKILL$.$md files and introduce skill smells as violations of these practices. Finally, we develop an automated detector and apply it to real-world skills, finding that over 99% of SKILL$.$md files contain at least one skill smell, and once introduced, skill smells rarely disappear as skills evolve. These findings reveal a substantial gap between recommended and actual authoring practices, motivating the development of automated techniques to remediate skill smells while increasing developer awareness of this emerging quality issue.",
+      "canonical_id": "arXiv:2607.01456",
+      "arxiv_id": "2607.01456",
+      "authors": [
+        "David Hong",
+        "Aaron Imani",
+        "Iftekhar Ahmed"
+      ]
+    },
+    {
+      "title": "Small language models for on-device IoT intelligence: A survey on architectures, optimization, and deployment",
+      "source_url": "https://www.semanticscholar.org/paper/1bfa85e2eae50bd9f7e535c3780c776e18bd6d59",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.iot.2026.102020",
+      "doi": "10.1016/j.iot.2026.102020",
+      "authors": [
+        "Maha Driss",
+        "Safa Ben Atitallah",
+        "Bilel Benjdira",
+        "Sawsan Alhalawani",
+        "Anas AboEssa",
+        "Wadii Boulila"
+      ]
+    },
+    {
+      "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation",
+      "source_url": "https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "In $\\textbf{DiT-based video generation models equipped with 3D Rotary Position Embeddings (3D RoPE)}$, the attention mechanism remains a primary computational bottleneck due to its quadratic complexity with respect to sequence length. While quantized $\\textbf{FlashAttention}$ offers a promising path toward hardware acceleration, existing low-bit quantization methods overlook two critical challenges in this setting: $\\textbf{1)}$ applying online rotation matrices -- a widely used technique for mitigating outliers in Queries ($Q$) and Keys ($K$) -- is difficult to reconcile with $\\textbf{RoPE}$; and $\\textbf{2)}$ the non-negative attention matrix $P = \\exp(QK - \\max(QK))$ makes symmetric quantization waste half of the 4-bit dynamic range. In this work, we observe that the outlier distributions of $Q$ and $K$ are strongly affected by the dimensional partitioning of $\\textbf{3D RoPE}$. Based on this finding, we propose $\\textbf{RotateAttention}$, an efficient $\\textbf{mixed-precision INT4 FlashAttention}$ framework tailored for $\\textbf{DiT-based video generation models with 3D RoPE}$, using selective $\\textbf{FP16 fallback}$ for accuracy-sensitive attention blocks and denoising steps. RotateAttention introduces two core techniques: $\\textbf{1) RoPE-aware Rotation}$, which employs either mergeable rotation matrices that can be fused into RoPE or negligible-overhead matrices to mitigate RoPE-induced outliers in $Q$ and $K$; and $\\textbf{2) Range-optimized $P$ Quantization}$, which uses fixed scales and zero-points to fully exploit the $\\textbf{INT4 numerical range}$ with minimal computational overhead. Experiments show that $\\textbf{RotateAttention}$ preserves video generation quality nearly identical to full-precision baselines while achieving up to 1.68$\\times$ end-to-end speedup and 2.2$\\times$ kernel-level acceleration.",
+      "canonical_id": "arXiv:2607.02584",
+      "arxiv_id": "2607.02584",
+      "authors": [
+        "Yaofu Liu",
+        "W. Lan",
+        "Jinxi Li",
+        "Binhang Yuan",
+        "Harry Yang"
+      ]
+    },
+    {
+      "title": "A human-centric decision support framework for edge-based cold chain transportation monitoring with Small Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/02d4407f946bfe4a41e53c17890efffdb088cb2f",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.cie.2026.112240",
+      "doi": "10.1016/j.cie.2026.112240",
+      "authors": [
+        "Hu Li",
+        "Özer Uygun",
+        "Xiaoqing Yu",
+        "Yehong Zhou",
+        "Zeru Yang",
+        "Chun-Hsien Chen"
+      ]
+    },
+    {
+      "title": "Cross-modal Spatiotemporal Prediction in Transportation: A Survey of Modeling Paradigms, Representations, Alignment, and Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/72031eb046e9c4ab99a61ce14fae1c9e82aaea1f",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104617",
+      "doi": "10.1016/j.inffus.2026.104617",
+      "authors": [
+        "Yuchen Pan",
+        "Xiangyu Song",
+        "Siyi Yang",
+        "Jun-Yang Wang",
+        "Tianyi Lan",
+        "Long Li",
+        "Dong Wang",
+        "Xin Hu",
+        "Jie Zhao",
+        "Juan Zhao",
+        "Shijie Sun",
+        "Cai Xu",
+        "Wanlin Li",
+        "Hua Cui"
+      ]
+    },
+    {
+      "title": "Phase-sensitive near-lossless compression for big data in reciprocating pump condition monitoring",
+      "source_url": "https://www.semanticscholar.org/paper/f419097ecefdcb4aed7e2f500e21806b263d37e7",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.measurement.2026.122661",
+      "doi": "10.1016/j.measurement.2026.122661",
+      "authors": [
+        "Yuhua Yin",
+        "Zheng-Yang Xie",
+        "Yang Luo",
+        "Zhi-Liang Liu",
+        "Feilong Liao",
+        "Ming-Jian Zuo"
+      ]
+    },
+    {
+      "title": "Calibrating distributions, not just networks: The PR-Q method for low-bit quantization",
+      "source_url": "https://www.semanticscholar.org/paper/31310ccca7c9ef3c78b90be1dec9d6da763ba70a",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134627",
+      "doi": "10.1016/j.neucom.2026.134627",
+      "authors": [
+        "Xue He",
+        "Xue Geng",
+        "Tiancheng Zhang",
+        "Minghe Yu",
+        "Yuhai Zhao",
+        "Xu-Lei Yang",
+        "Min Wu",
+        "Gensitskiy Yu."
+      ]
+    },
+    {
+      "title": "Resource-Aware Quantized Parameter-Efficient Fine-Tuning of Large Language Models for Low-Resource Cloud Environments",
+      "source_url": "https://www.semanticscholar.org/paper/9a6e8ef8133c84c08b685ddbb0616c905fbec874",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Although large language models have been well-suited to a range of natural language processing tasks, adapting them for domain-specific cloud applications in low-resource settings is difficult because they require substantial memory, training data, and hardware resources. Fine-tuning these parameters at the right cost is important, but existing practices like LoRA, adapters, and prefix-tuning use fewer trainable parameters and still need to be optimized for deployment under dynamic cloud resource constraints. This paper proposes a resource-aware quantized parameter-efficient fine-tuning framework for adapting large language models in low-resource cloud environments. The proposed framework integrates quantized low-rank adaptation with a lightweight resource-monitoring mechanism that dynamically selects the appropriate fine-tuning strategy based on GPU memory, training time, latency, and estimated cloud cost. Experimental evaluation is conducted using representative NLP datasets and simulated cloud-resource settings. The results demonstrate that the proposed approach reduces trainable parameters, memory usage, and training cost while maintaining competitive accuracy compared with full fine-tuning and conventional PEFT methods.",
+      "canonical_id": "DOI:10.1109/ICICIT69063.2026.11634006",
+      "doi": "10.1109/ICICIT69063.2026.11634006",
+      "authors": [
+        "D. Brunda",
+        "V. Kamakshamma",
+        "S. Banu",
+        "K. Manjusha",
+        "M. Narasimhulu",
+        "G. Yadav"
+      ]
+    },
+    {
+      "title": "Energy-Efficient Context-Aware Multimodal AI Inference at the Edge",
+      "source_url": "https://www.semanticscholar.org/paper/fbf55194285d723c7113c68390b3d7faa77710ef",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Deploying multimodal artificial intelligence models on resource-constrained edge devices faces inherent bottlenecks in energy consumption and computational latency, as conventional full-modality inference pipelines keep all perception encoders active regardless of task context and environmental conditions, causing substantial power waste and degraded real-time performance. To address this challenge, this work presents an energy-efficient context-aware multimodal edge inference framework featuring a lightweight modality activation sparsity evaluation unit, dynamic computation path scheduling, and a cross-modal speculative skipping mechanism. The framework quantifies the information value of each input modality in real time according to scene context, task complexity, and device power status, and adaptively activates or deactivates corresponding visual, audio, and sensor encoders, while tuning model quantization precision and operator fusion strategies to align with runtime resource budgets. Validated on NVIDIA Jetson Nano and Raspberry Pi 5 edge platforms across VQAv2, MMBench, and multimodal perception benchmarks, the proposed framework delivers a 42.3% reduction in end-to-end energy consumption and a 30%-65% decrease in inference latency against static full-modality baselines, alongside $\\mathbf{1. 5} \\times$ to $\\mathbf{2. 3} \\times$ higher throughput with an accuracy loss no more than 1.2%. The runtime context scheduling module introduces less than 9 ms of latency overhead and only 0.32 W of additional power draw, with per-inference energy as low as 0.6 J; for battery-powered mobile edge devices, the framework extends continuous operating duration by over 72% under typical perception workloads. These findings confirm that context-aware adaptive scheduling can dramatically boost the energy efficiency of edge multimodal inference without sacrificing task performance, offering a viable deployment solution for low-power Internet of Things, intelligent surveillance, and human-robot interaction scenarios.",
+      "canonical_id": "DOI:10.1109/ICICC71012.2026.11637959",
+      "doi": "10.1109/ICICC71012.2026.11637959",
+      "authors": [
+        "Xiaotian Fang",
+        "Ya-Hui Yang",
+        "Shuyuan Wang"
+      ]
+    },
+    {
+      "title": "Ecosystem Level Inference Redundancy (ELIR): A Quality-Oriented Cross-Platform Reuse Framework for Sustainable AI Ecosystems",
+      "source_url": "https://www.semanticscholar.org/paper/4d529cb9e2ce0fab31e48fb233e85d33560c72cc",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Fragmented AI ecosystems increasingly process semantically overlapping queries across independent platforms without coordinated reuse, causing duplicated inference and unnecessary computational growth. Prior sustainability research has emphasized model-level efficiency and carbon-aware scheduling, leaving cross-platform inference duplication largely unaddressed as a structural reuse problem. This study introduces Ecosystem Level Inference Redundancy (ELIR), a conceptual framework formalizing duplicated inference arising from semantically overlapping workloads across heterogeneous AI platforms, and proposes Carbon Aware Interoperable Agentic Orchestration (CAIAO) as an illustrative, quality-oriented orchestration architecture that aligns inference execution with semantic uniqueness rather than repeated platform-specific computation. An analytical scaling model, coordinated cost formulation, sensitivity analysis, and Monte Carlo robustness exploration examine cross-platform redundancy under varying platform multiplicity and redundancy conditions. Results indicate that fragmented ecosystems may experience substantial computational amplification, whereas coordinated reuse can significantly moderate this growth, though the findings remain analytical rather than deployment-validated. By reframing AI sustainability as a cross-platform reuse governance problem, this study offers a structural perspective and a conceptual foundation for future interoperability-aware orchestration research.",
+      "canonical_id": "DOI:10.1109/COMPSAC69091.2026.00268",
+      "doi": "10.1109/COMPSAC69091.2026.00268",
+      "authors": [
+        "M. Imamoglu"
+      ]
+    },
+    {
+      "title": "Communication-Efficient Decentralized LLM Inference over Low-Bandwidth Distributed Nodes",
+      "source_url": "https://www.semanticscholar.org/paper/126eab5c1731363edfad673e7e2254b33c8b91f7",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Decentralized large language model (LLM) inference distributes transformer layers across heterogeneous nodes to enable resource-constrained participants to collaboratively serve large models. However, inter-node activation transfer constitutes a significant communication bottleneck, especially under low-bandwidth conditions prevalent in consumer-grade and edge networks. We propose BandwidthLLM, a communication-efficient framework that integrates three techniques: (1) a bandwidth-aware layer placement algorithm that minimizes boundary-level transfer cost according to link bandwidth and node reliability; (2) a lightweight activation compression scheme combining adaptive quantization with outlier-aware clipping and error feedback; and (3) a semantic preservation check that automatically falls back to higher precision when compressed activations deviate beyond a calibrated threshold. Experiments on Llama-2-7B, Mistral-7B, and Qwen2.5-7B across simulated bandwidth conditions (20–500 Mbps) demonstrate that BandwidthLLM reduces inter-node activation traffic by 62.7–63.4% relative to the BloomBee-like baseline while maintaining perplexity degradation of at most 0.31 points and task accuracy within 0.9 percentage points of uncompressed inference. Under 20 Mbps links, BandwidthLLM achieves 1.7× higher throughput and 41% lower latency.",
+      "canonical_id": "DOI:10.1109/ECNCT70535.2026.11661442",
+      "doi": "10.1109/ECNCT70535.2026.11661442",
+      "authors": [
+        "Zhi-Hao Wang",
+        "Shi Shu",
+        "Yu-Lin Wang",
+        "I-Hsien Lai",
+        "Cheng-Chuan Peng"
+      ]
+    },
+    {
+      "title": "Coverage-Aware Evidence Packing for Budgeted Multi-Hop RAG on Small Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/bb67748590639cfb4289c6af645f7e2200c3ed1d",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Small language models make retrieval-augmented generation attractive for constrained devices, but multi-hop question answering still depends on how a limited evidence budget is filled. This paper introduces SupportCover-RAG, a training-free post-retrieval packer that selects sentence-level evidence using relevance, marginal support coverage, title diversity, and token cost. The method is inserted between retrieval and generation, so it does not require a new retriever, a learned reranker, or an additional generation step. In a controlled 100-example HotpotQA distractor subset, SupportCover-final achieves answer F1 that is higher by 0.020 and evidence coverage that is higher by 0.068 than relevance-only packing in the main Qwen setting. In the budget ablation, answer F1 increases by 0.091 under a 96-token evidence budget. The additional packing cost is 0.097 ms in this run, while generation remains the dominant runtime cost. These descriptive results should not be interpreted as a full benchmark claim, but they suggest that transparent support-aware packing can help select more complete evidence under strict context limits.",
+      "canonical_id": "DOI:10.1109/ICCSC71566.2026.11650301",
+      "doi": "10.1109/ICCSC71566.2026.11650301",
+      "authors": [
+        "Hamidi Charaf",
+        "Salma Gaou",
+        "Boudchiche Mohamed",
+        "Badiy Mohamed",
+        "M. Boutahir",
+        "Hicham Tribak"
+      ]
+    },
+    {
+      "title": "Lang2Graph: Towards Leveraging Human Language for Indoor Topology Inference Using LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/c735a7d0204b14bcf87df6d19025e9622c48f62b",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Edge-deployed systems such as autonomous robots, AR/XR devices, and emergency-response handhelds require accurate indoor topological representations, yet existing sensor-based and expert-curated mapping methods are impractical for crowd-sourced, resource-constrained deployment. Additionally, current large language model (LLM) approaches to indoor topology inference lack a systematic framework for evaluating the factors that govern performance. We present Lang2Graph, an experimental framework for indoor topological graph inference from natural-language navigational instructions that isolates four governing factors: instruction structure, metadata clarity, prompting strategy, and model size and reasoning capability. We propose the Independent Prompt Executor (IPE), a prompting strategy that decomposes graph construction into independent per-instruction reasoning steps, preventing error propagation. To support factor-level evaluation, we develop a fully synthetic dataset and an augmented benchmark (R2R-AUG) covering idealized and real-world conditions. Our evaluation across multiple model families show that structured instructions, clear metadata, and IPE improve precision, recall, and F1 by 44%, 45%, and 47%, respectively. Reasoning-aligned open-source models of moderate scale (14B parameters) outperform larger proprietary models on the most challenging instruction categories, indicating that reliable indoor topology inference is achievable without cloud-scale dependencies and establishes a viable path toward on-device edge deployment.",
+      "canonical_id": "DOI:10.1109/EDGE72783.2026.00030",
+      "doi": "10.1109/EDGE72783.2026.00030",
+      "authors": [
+        "Moamin Ibrahim",
+        "Yaqoob Ansari",
+        "Khaled A. Harras",
+        "Eduardo Feo-Flushing"
+      ]
+    },
+    {
+      "title": "Reducing Memory Requirements of LLM Inference Through Online rANS Decompression",
+      "source_url": "https://www.semanticscholar.org/paper/a9775c4c794aabf66b5bf77ef5a56ae54825d83b",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "The rapid growth of Large Language Models has outpaced GPU memory capacity, making state-of-the-art models unfit for most GPUs. This necessitates evicting model parameters to CPU memory or disk, further away from the processing elements. In these scenarios, inference throughput is restricted by interconnect bandwidth, and while quantization schemes like FP8 reduce memory usage and enable larger models to fit smaller memories, they compromise generation quality and rely on specialized hardware support for efficient inference. To this end, we propose an inference pipeline that utilizes lossless entropy encoding (rANS) alleviating the bottleneck while maintaining standard floating-point portability or output precision. We demonstrate the potential of this approach by integrating the pipeline into vLLM, with a hardware-aware parallelization strategy. Our method increases the effective GPU memory capacity up to 30% in inference workloads with evicted weights, with no loss of quality and at the same time achieving speed up of 2.5–4.4%.",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00039",
+      "doi": "10.1109/CLOUD72782.2026.00039",
+      "authors": [
+        "Väinö-Waltteri Granat",
+        "Jakub Žádník",
+        "Markku J. Mäkitalo",
+        "Joonas Multanen",
+        "Pekka O. Jääskeläinen"
+      ]
+    },
+    {
+      "title": "Can Byte-Level and Bit-Level Optimizations Enhance The Parameter Lossless Compression of Large Language Models?",
+      "source_url": "https://www.semanticscholar.org/paper/16334f518ca292174216c6ffe75c61fc29e94baa",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across various domains. However, their rapidly growing parameter size leads to significantly increased storage and transmission costs. Current lossy compression methods often introduce irreversible performance degradation, making them inadequate to meet the demands of parameter compression. Even a minor loss in parameters may significantly impact model performance and analytical reliability. Therefore, maintaining complete parameter precision is particularly important in some application scenarios. However, existing lossless compression methods treat LLM parameters merely as regular files and apply general local data models for compression. They overlook the unique byte-level and bit-level structures inherent in LLM parameters, which are crucial for enhancing the performance of lossless compression. Therefore, we propose a framework called lossless compression with bi-level preprocessing (LCBP). To the best of our knowledge, this is the first attempt that explores byte-level and bit-level preprocessing to enhance the lossless compression of LLM parameters. At the byte level, an exclusive OR (XOR) operation is introduced to generate low-entropy residual representations by leveraging correlations among adjacent data blocks. At the bit level, we observe that certain bits in the parameters remain fixed, while the bits corresponding to the sign and mantissa parts exhibit high entropy and are difficult to compress, whereas those in the exponent part show relatively low entropy and are easier to compress. Based on these regularities in the parameters, we design bit-level replacement and bit-level insertion methods to optimize compression performance. Experiments on a series of LLMs demonstrate that LCBP is compatible with existing compression methods to significantly enhance compression performance, providing a viable solution for effective LLM storage.",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00038",
+      "doi": "10.1109/CLOUD72782.2026.00038",
+      "authors": [
+        "Miao-Wei Liu",
+        "Hongcai He",
+        "Cheng-Da Wu",
+        "Hui Xu",
+        "Zetao Zheng",
+        "Jie Shao"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/icecet65726.2026.11632566",
+      "identity_tokens": [
+        "id:DOI:10.1109/icecet65726.2026.11632566",
+        "title:dependencyaware reliable orchestration for smartiot control with reasoningaligned llms",
+        "url:https://www.semanticscholar.org/paper/a6e87bb7ef34092f246d80a9b60dbfc1086084df"
+      ],
+      "record": {
+        "title": "Dependency-Aware Reliable Orchestration for Smart-IoT Control with Reasoning-Aligned LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/a6e87bb7ef34092f246d80a9b60dbfc1086084df",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large Language Models (LLMs) offer a natural interface for smart-IoT control, yet reliable deployment requires more than producing valid API calls. Multi-device commands often contain preconditions, ordering constraints, and conflicts that must be satisfied before actions are safely executed. This paper presents DARIO, a dependency-aware orchestration framework for translating natural-language commands into verified IoT action plans. DARIO combines supervised instruction tuning, KL-regularized PPO, an explicit dependency graph $\\mathcal{G}=(V, E)$, and a lightweight verifier that checks schema, execution, dependency, and safety constraints before commit. Verifier outcomes are folded into a decomposed reward, enabling the policy to learn from dependency violations rather than treating plans as flat token sequences. On a 2k-prompt held-out HA-Instruct split across five seeds, DARIO achieves $0.85 \\pm 0.01$ JSON exact match, perfect schema validity, $0.91 \\pm 0.01$ overall task success, and $0.81 \\pm 0.02$ success on the dependency-heavy L3 split, outperforming SIT and SIT+PPO baselines by large margins. It also raises dependency satisfaction to 0.94, reduces unsafe execution to 0.02, and runs as a 4-bit 8B LoRA deployment at about 609 ms including verification.",
+        "canonical_id": "DOI:10.1109/ICECET65726.2026.11632566",
+        "doi": "10.1109/ICECET65726.2026.11632566",
+        "authors": [
+          "MD SELIM SAROWAR",
+          "Md Tanvir Islam",
+          "M. Nuruzzaman",
+          "Md Ariful Islam Mozumder"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.trc.2026.105672",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.trc.2026.105672",
+        "title:a dynamic prompting and scenario generation method for autonomous driving perception via largemodel optimization",
+        "url:https://www.semanticscholar.org/paper/757e9c871e1626cdcba1c4a094280ffd80afceaa"
+      ],
+      "record": {
+        "title": "A dynamic prompting and scenario generation method for autonomous driving perception via large-model optimization",
+        "source_url": "https://www.semanticscholar.org/paper/757e9c871e1626cdcba1c4a094280ffd80afceaa",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.trc.2026.105672",
+        "doi": "10.1016/j.trc.2026.105672",
+        "authors": [
+          "Songnian Zhang",
+          "Hongyi Lin",
+          "Mengjie Wang",
+          "Bangyang Wei",
+          "Yang Liu",
+          "Xiaobo Qu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jiot.2026.3682665",
+      "identity_tokens": [
+        "id:DOI:10.1109/jiot.2026.3682665",
+        "title:trustworthy collaborative inference in edge llm servicing the credibilityaware moe scheduling",
+        "url:https://www.semanticscholar.org/paper/da91dce56bed34b43c9d558abbc6ce071fb4b6ff"
+      ],
+      "record": {
+        "title": "Trustworthy Collaborative Inference in Edge LLM Servicing: The Credibility-Aware MoE Scheduling",
+        "source_url": "https://www.semanticscholar.org/paper/da91dce56bed34b43c9d558abbc6ce071fb4b6ff",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Mixture of experts (MoE)-based large language models (LLMs) have achieved remarkable success in natural language processing and multimodal learning. To facilitate efficient and adaptive utilization, edge-enabled distributed MoE-LLMs are becoming a prevalent solution. Nonetheless, constrained by static expert activation and device limitations, existing approaches face considerable challenges, such as unreliable environments and imbalanced load distribution. In this article, we propose a knowledge-empowered environment-aware expert activation method to improve collaborative inference under untrustworthy computation conditions. When expert networks are offloaded to edge servers (ESs), the activation decision adaptively selects experts to mitigate threats from malicious nodes engaging in malware execution or dishonest computation (DC). Specifically, leveraging real-time server data and prior knowledge of node credibility derived from centralized monitoring, the method prioritizes experts on more trustworthy, lightly loaded, and energy-efficient servers. To this end, anomaly detection (AD) is first employed to identify untrusted conditions, upon which activation policies are trained within a game-theoretic deep reinforcement learning (DRL) framework to adapt to dynamic environments. Extensive experiments under varying network settings and activation policies demonstrate the superiority of our method in inference credibility, servicing latency, and energy efficiency.",
+        "canonical_id": "DOI:10.1109/JIOT.2026.3682665",
+        "doi": "10.1109/JIOT.2026.3682665",
+        "authors": [
+          "Jinyang Zhang",
+          "Sheng-Li Pan",
+          "Fan Feng",
+          "Cheng-Bo Jiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcsi.2026.3668423",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcsi.2026.3668423",
+        "title:crosskv accelerating large language model inference via crossstage dynamic cooptimization for kv cache",
+        "url:https://www.semanticscholar.org/paper/bb893bc0767980155ac16a209d184502eca912eb"
+      ],
+      "record": {
+        "title": "CrossKV: Accelerating Large Language Model Inference via Cross-Stage Dynamic Co-Optimization for KV Cache",
+        "source_url": "https://www.semanticscholar.org/paper/bb893bc0767980155ac16a209d184502eca912eb",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "The autoregressive nature of Large Language Models (LLMs) has enabled remarkable performance in language generation, making them a cornerstone in natural language processing. As context windows lengthen, the per-token key–value (KV) cache grows linearly with sequence length and turns the generation stage into a memory-bound operation. However, existing works focus primarily on an isolated stage of KV cache reduction, and most efforts incur significant hardware overheads. This results in a lack of cross-stage co-optimization and leaves significant reduction potential untapped. To address these challenges, we propose CrossKV, a software-hardware co-design architecture that accelerates LLM inference to fully achieve the potential of KV caching optimization. Motivated by our observation, we identify the three stages in KV caching and present a cross-stage co-optimization algorithm, including: a derivative-enhanced dynamic progressive pruning method, a DCT-driven key-vector low-rank compressing, and a dynamic clustered hybrid run-length encoding to reduce the KV caching while maintaining high accuracy. Then, an efficient architecture featuring cross-stage dynamic co-optimization with negligible hardware overhead is proposed to fully harness the algorithm of CrossKV. Our evaluations of CrossKV over 9 popular LLMs models and various long-context tasks demonstrate an average of <inline-formula> <tex-math notation=\"LaTeX\">$6.03\\times $ </tex-math></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">$4.10\\times $ </tex-math></inline-formula> improvement for energy efficiency and speedup compared to existing SoTA Accelerators architecture. Compared to the Nvidia A100 GPU, CrossKV achieves an average <inline-formula> <tex-math notation=\"LaTeX\">$23.43\\times $ </tex-math></inline-formula> energy efficiency and <inline-formula> <tex-math notation=\"LaTeX\">$4.64\\times $ </tex-math></inline-formula> speedup, respectively.",
+        "canonical_id": "DOI:10.1109/TCSI.2026.3668423",
+        "doi": "10.1109/TCSI.2026.3668423",
+        "authors": [
+          "Nan Wu",
+          "Shenyu Wang",
+          "Hui-Zheng Wang",
+          "Peng Wang",
+          "Xiao Liu",
+          "Zhi-Hua Wang",
+          "Yang Hu",
+          "Han-Jun Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tai.2026.3656155",
+      "identity_tokens": [
+        "id:DOI:10.1109/tai.2026.3656155",
+        "title:deploymentaware compression of large language models for edge intelligence a systemlevel survey",
+        "url:https://www.semanticscholar.org/paper/be4ee78ffa55741a9d77a9ed8b34d0b6f09efdff"
+      ],
+      "record": {
+        "title": "Deployment-Aware Compression of Large Language Models for Edge Intelligence: A System-Level Survey",
+        "source_url": "https://www.semanticscholar.org/paper/be4ee78ffa55741a9d77a9ed8b34d0b6f09efdff",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "The deployment of large language models (LLMs) on edge hardware presents multilayered challenges, including compression, compiler behavior, and system-level trade-offs. This survey provides a deployment-centric taxonomy of compression strategies for LLMs under edge constraints, bridging algorithmic methods and practical hardware toolchains. We examine quantization techniques, including posttraining and quantization-aware variants, under precision-scaling regimes and analyze how they interact with operator lowering, kernel fusion, and numerical drift across compilers such as tensor virtual machine, core machine learning, and tensor runtime-LLM. Pruning and distillation approaches are reviewed with an emphasis on their impact on generalization, robustness, and hallucination under tight memory and energy budgets. We highlight the limitations of existing benchmarking suites, including the lack of robustness-aware evaluation, numerical fidelity tracking under low-precision inference, and explicit treatment of compiler-induced latency and energy variability. Case studies across real-world deployment stacks illustrate how system-level constraints translate into concrete deployment bottlenecks in practical edge LLM pipelines. Finally, we identify the open challenges related to continual model adaptation at the edge, privacy-preserving personalization, and secure and reproducible deployment under system constraints. This study provides a structured synthesis of techniques and trade-offs relevant to practitioners, compiler engineers, and hardware vendors pursuing sustainable high-performance edge artificial intelligence.",
+        "canonical_id": "DOI:10.1109/TAI.2026.3656155",
+        "doi": "10.1109/TAI.2026.3656155",
+        "authors": [
+          "Elias Dritsas",
+          "M. Trigka"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01456",
+      "identity_tokens": [
+        "id:arXiv:2607.01456",
+        "title:from anatomy to smells an empirical study of skillmd in agent skills",
+        "url:https://www.semanticscholar.org/paper/e45535f6c8a262e08b485c8c48f458feb989c910"
+      ],
+      "record": {
+        "title": "From Anatomy to Smells: An Empirical Study of SKILL.md in Agent Skills",
+        "source_url": "https://www.semanticscholar.org/paper/e45535f6c8a262e08b485c8c48f458feb989c910",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Agent Skills provide on-demand domain knowledge to LLM agents without requiring model retraining. Each Agent Skill is defined by a mandatory SKILL$.$md file containing metadata and an unstructured Markdown body whose contents are left entirely to the skill author. Despite the rapid adoption of Agent Skills, little is known about how these files are authored or whether existing authoring guidelines are followed in practice. In this paper, we present the first systematic study of SKILL$.$md files as a software artifact. We qualitatively analyze 238 real-world skills and derive a taxonomy of 13 higher-level and 44 lower-level semantic components. We then conduct a multivocal literature review of 29 sources to identify best practices for authoring SKILL$.$md files and introduce skill smells as violations of these practices. Finally, we develop an automated detector and apply it to real-world skills, finding that over 99% of SKILL$.$md files contain at least one skill smell, and once introduced, skill smells rarely disappear as skills evolve. These findings reveal a substantial gap between recommended and actual authoring practices, motivating the development of automated techniques to remediate skill smells while increasing developer awareness of this emerging quality issue.",
+        "canonical_id": "arXiv:2607.01456",
+        "arxiv_id": "2607.01456",
+        "authors": [
+          "David Hong",
+          "Aaron Imani",
+          "Iftekhar Ahmed"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.iot.2026.102020",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.iot.2026.102020",
+        "title:small language models for ondevice iot intelligence a survey on architectures optimization and deployment",
+        "url:https://www.semanticscholar.org/paper/1bfa85e2eae50bd9f7e535c3780c776e18bd6d59"
+      ],
+      "record": {
+        "title": "Small language models for on-device IoT intelligence: A survey on architectures, optimization, and deployment",
+        "source_url": "https://www.semanticscholar.org/paper/1bfa85e2eae50bd9f7e535c3780c776e18bd6d59",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.iot.2026.102020",
+        "doi": "10.1016/j.iot.2026.102020",
+        "authors": [
+          "Maha Driss",
+          "Safa Ben Atitallah",
+          "Bilel Benjdira",
+          "Sawsan Alhalawani",
+          "Anas AboEssa",
+          "Wadii Boulila"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02584",
+      "identity_tokens": [
+        "id:arXiv:2607.02584",
+        "title:rotateattention ropeaware rotation and range rectification for int4 quantized attention in video generation",
+        "url:https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708"
+      ],
+      "record": {
+        "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation",
+        "source_url": "https://www.semanticscholar.org/paper/9a87827a354049e67dd0c9202bb77a49c6864708",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "In $\\textbf{DiT-based video generation models equipped with 3D Rotary Position Embeddings (3D RoPE)}$, the attention mechanism remains a primary computational bottleneck due to its quadratic complexity with respect to sequence length. While quantized $\\textbf{FlashAttention}$ offers a promising path toward hardware acceleration, existing low-bit quantization methods overlook two critical challenges in this setting: $\\textbf{1)}$ applying online rotation matrices -- a widely used technique for mitigating outliers in Queries ($Q$) and Keys ($K$) -- is difficult to reconcile with $\\textbf{RoPE}$; and $\\textbf{2)}$ the non-negative attention matrix $P = \\exp(QK - \\max(QK))$ makes symmetric quantization waste half of the 4-bit dynamic range. In this work, we observe that the outlier distributions of $Q$ and $K$ are strongly affected by the dimensional partitioning of $\\textbf{3D RoPE}$. Based on this finding, we propose $\\textbf{RotateAttention}$, an efficient $\\textbf{mixed-precision INT4 FlashAttention}$ framework tailored for $\\textbf{DiT-based video generation models with 3D RoPE}$, using selective $\\textbf{FP16 fallback}$ for accuracy-sensitive attention blocks and denoising steps. RotateAttention introduces two core techniques: $\\textbf{1) RoPE-aware Rotation}$, which employs either mergeable rotation matrices that can be fused into RoPE or negligible-overhead matrices to mitigate RoPE-induced outliers in $Q$ and $K$; and $\\textbf{2) Range-optimized $P$ Quantization}$, which uses fixed scales and zero-points to fully exploit the $\\textbf{INT4 numerical range}$ with minimal computational overhead. Experiments show that $\\textbf{RotateAttention}$ preserves video generation quality nearly identical to full-precision baselines while achieving up to 1.68$\\times$ end-to-end speedup and 2.2$\\times$ kernel-level acceleration.",
+        "canonical_id": "arXiv:2607.02584",
+        "arxiv_id": "2607.02584",
+        "authors": [
+          "Yaofu Liu",
+          "W. Lan",
+          "Jinxi Li",
+          "Binhang Yuan",
+          "Harry Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.cie.2026.112240",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.cie.2026.112240",
+        "title:a humancentric decision support framework for edgebased cold chain transportation monitoring with small language models",
+        "url:https://www.semanticscholar.org/paper/02d4407f946bfe4a41e53c17890efffdb088cb2f"
+      ],
+      "record": {
+        "title": "A human-centric decision support framework for edge-based cold chain transportation monitoring with Small Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/02d4407f946bfe4a41e53c17890efffdb088cb2f",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.cie.2026.112240",
+        "doi": "10.1016/j.cie.2026.112240",
+        "authors": [
+          "Hu Li",
+          "Özer Uygun",
+          "Xiaoqing Yu",
+          "Yehong Zhou",
+          "Zeru Yang",
+          "Chun-Hsien Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.inffus.2026.104617",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.inffus.2026.104617",
+        "title:crossmodal spatiotemporal prediction in transportation a survey of modeling paradigms representations alignment and reasoning",
+        "url:https://www.semanticscholar.org/paper/72031eb046e9c4ab99a61ce14fae1c9e82aaea1f"
+      ],
+      "record": {
+        "title": "Cross-modal Spatiotemporal Prediction in Transportation: A Survey of Modeling Paradigms, Representations, Alignment, and Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/72031eb046e9c4ab99a61ce14fae1c9e82aaea1f",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.inffus.2026.104617",
+        "doi": "10.1016/j.inffus.2026.104617",
+        "authors": [
+          "Yuchen Pan",
+          "Xiangyu Song",
+          "Siyi Yang",
+          "Jun-Yang Wang",
+          "Tianyi Lan",
+          "Long Li",
+          "Dong Wang",
+          "Xin Hu",
+          "Jie Zhao",
+          "Juan Zhao",
+          "Shijie Sun",
+          "Cai Xu",
+          "Wanlin Li",
+          "Hua Cui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.measurement.2026.122661",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.measurement.2026.122661",
+        "title:phasesensitive nearlossless compression for big data in reciprocating pump condition monitoring",
+        "url:https://www.semanticscholar.org/paper/f419097ecefdcb4aed7e2f500e21806b263d37e7"
+      ],
+      "record": {
+        "title": "Phase-sensitive near-lossless compression for big data in reciprocating pump condition monitoring",
+        "source_url": "https://www.semanticscholar.org/paper/f419097ecefdcb4aed7e2f500e21806b263d37e7",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.measurement.2026.122661",
+        "doi": "10.1016/j.measurement.2026.122661",
+        "authors": [
+          "Yuhua Yin",
+          "Zheng-Yang Xie",
+          "Yang Luo",
+          "Zhi-Liang Liu",
+          "Feilong Liao",
+          "Ming-Jian Zuo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134627",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134627",
+        "title:calibrating distributions not just networks the prq method for lowbit quantization",
+        "url:https://www.semanticscholar.org/paper/31310ccca7c9ef3c78b90be1dec9d6da763ba70a"
+      ],
+      "record": {
+        "title": "Calibrating distributions, not just networks: The PR-Q method for low-bit quantization",
+        "source_url": "https://www.semanticscholar.org/paper/31310ccca7c9ef3c78b90be1dec9d6da763ba70a",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134627",
+        "doi": "10.1016/j.neucom.2026.134627",
+        "authors": [
+          "Xue He",
+          "Xue Geng",
+          "Tiancheng Zhang",
+          "Minghe Yu",
+          "Yuhai Zhao",
+          "Xu-Lei Yang",
+          "Min Wu",
+          "Gensitskiy Yu."
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icicit69063.2026.11634006",
+      "identity_tokens": [
+        "id:DOI:10.1109/icicit69063.2026.11634006",
+        "title:resourceaware quantized parameterefficient finetuning of large language models for lowresource cloud environments",
+        "url:https://www.semanticscholar.org/paper/9a6e8ef8133c84c08b685ddbb0616c905fbec874"
+      ],
+      "record": {
+        "title": "Resource-Aware Quantized Parameter-Efficient Fine-Tuning of Large Language Models for Low-Resource Cloud Environments",
+        "source_url": "https://www.semanticscholar.org/paper/9a6e8ef8133c84c08b685ddbb0616c905fbec874",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Although large language models have been well-suited to a range of natural language processing tasks, adapting them for domain-specific cloud applications in low-resource settings is difficult because they require substantial memory, training data, and hardware resources. Fine-tuning these parameters at the right cost is important, but existing practices like LoRA, adapters, and prefix-tuning use fewer trainable parameters and still need to be optimized for deployment under dynamic cloud resource constraints. This paper proposes a resource-aware quantized parameter-efficient fine-tuning framework for adapting large language models in low-resource cloud environments. The proposed framework integrates quantized low-rank adaptation with a lightweight resource-monitoring mechanism that dynamically selects the appropriate fine-tuning strategy based on GPU memory, training time, latency, and estimated cloud cost. Experimental evaluation is conducted using representative NLP datasets and simulated cloud-resource settings. The results demonstrate that the proposed approach reduces trainable parameters, memory usage, and training cost while maintaining competitive accuracy compared with full fine-tuning and conventional PEFT methods.",
+        "canonical_id": "DOI:10.1109/ICICIT69063.2026.11634006",
+        "doi": "10.1109/ICICIT69063.2026.11634006",
+        "authors": [
+          "D. Brunda",
+          "V. Kamakshamma",
+          "S. Banu",
+          "K. Manjusha",
+          "M. Narasimhulu",
+          "G. Yadav"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icicc71012.2026.11637959",
+      "identity_tokens": [
+        "id:DOI:10.1109/icicc71012.2026.11637959",
+        "title:energyefficient contextaware multimodal ai inference at the edge",
+        "url:https://www.semanticscholar.org/paper/fbf55194285d723c7113c68390b3d7faa77710ef"
+      ],
+      "record": {
+        "title": "Energy-Efficient Context-Aware Multimodal AI Inference at the Edge",
+        "source_url": "https://www.semanticscholar.org/paper/fbf55194285d723c7113c68390b3d7faa77710ef",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Deploying multimodal artificial intelligence models on resource-constrained edge devices faces inherent bottlenecks in energy consumption and computational latency, as conventional full-modality inference pipelines keep all perception encoders active regardless of task context and environmental conditions, causing substantial power waste and degraded real-time performance. To address this challenge, this work presents an energy-efficient context-aware multimodal edge inference framework featuring a lightweight modality activation sparsity evaluation unit, dynamic computation path scheduling, and a cross-modal speculative skipping mechanism. The framework quantifies the information value of each input modality in real time according to scene context, task complexity, and device power status, and adaptively activates or deactivates corresponding visual, audio, and sensor encoders, while tuning model quantization precision and operator fusion strategies to align with runtime resource budgets. Validated on NVIDIA Jetson Nano and Raspberry Pi 5 edge platforms across VQAv2, MMBench, and multimodal perception benchmarks, the proposed framework delivers a 42.3% reduction in end-to-end energy consumption and a 30%-65% decrease in inference latency against static full-modality baselines, alongside $\\mathbf{1. 5} \\times$ to $\\mathbf{2. 3} \\times$ higher throughput with an accuracy loss no more than 1.2%. The runtime context scheduling module introduces less than 9 ms of latency overhead and only 0.32 W of additional power draw, with per-inference energy as low as 0.6 J; for battery-powered mobile edge devices, the framework extends continuous operating duration by over 72% under typical perception workloads. These findings confirm that context-aware adaptive scheduling can dramatically boost the energy efficiency of edge multimodal inference without sacrificing task performance, offering a viable deployment solution for low-power Internet of Things, intelligent surveillance, and human-robot interaction scenarios.",
+        "canonical_id": "DOI:10.1109/ICICC71012.2026.11637959",
+        "doi": "10.1109/ICICC71012.2026.11637959",
+        "authors": [
+          "Xiaotian Fang",
+          "Ya-Hui Yang",
+          "Shuyuan Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/compsac69091.2026.00268",
+      "identity_tokens": [
+        "id:DOI:10.1109/compsac69091.2026.00268",
+        "title:ecosystem level inference redundancy elir a qualityoriented crossplatform reuse framework for sustainable ai ecosystems",
+        "url:https://www.semanticscholar.org/paper/4d529cb9e2ce0fab31e48fb233e85d33560c72cc"
+      ],
+      "record": {
+        "title": "Ecosystem Level Inference Redundancy (ELIR): A Quality-Oriented Cross-Platform Reuse Framework for Sustainable AI Ecosystems",
+        "source_url": "https://www.semanticscholar.org/paper/4d529cb9e2ce0fab31e48fb233e85d33560c72cc",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Fragmented AI ecosystems increasingly process semantically overlapping queries across independent platforms without coordinated reuse, causing duplicated inference and unnecessary computational growth. Prior sustainability research has emphasized model-level efficiency and carbon-aware scheduling, leaving cross-platform inference duplication largely unaddressed as a structural reuse problem. This study introduces Ecosystem Level Inference Redundancy (ELIR), a conceptual framework formalizing duplicated inference arising from semantically overlapping workloads across heterogeneous AI platforms, and proposes Carbon Aware Interoperable Agentic Orchestration (CAIAO) as an illustrative, quality-oriented orchestration architecture that aligns inference execution with semantic uniqueness rather than repeated platform-specific computation. An analytical scaling model, coordinated cost formulation, sensitivity analysis, and Monte Carlo robustness exploration examine cross-platform redundancy under varying platform multiplicity and redundancy conditions. Results indicate that fragmented ecosystems may experience substantial computational amplification, whereas coordinated reuse can significantly moderate this growth, though the findings remain analytical rather than deployment-validated. By reframing AI sustainability as a cross-platform reuse governance problem, this study offers a structural perspective and a conceptual foundation for future interoperability-aware orchestration research.",
+        "canonical_id": "DOI:10.1109/COMPSAC69091.2026.00268",
+        "doi": "10.1109/COMPSAC69091.2026.00268",
+        "authors": [
+          "M. Imamoglu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ecnct70535.2026.11661442",
+      "identity_tokens": [
+        "id:DOI:10.1109/ecnct70535.2026.11661442",
+        "title:communicationefficient decentralized llm inference over lowbandwidth distributed nodes",
+        "url:https://www.semanticscholar.org/paper/126eab5c1731363edfad673e7e2254b33c8b91f7"
+      ],
+      "record": {
+        "title": "Communication-Efficient Decentralized LLM Inference over Low-Bandwidth Distributed Nodes",
+        "source_url": "https://www.semanticscholar.org/paper/126eab5c1731363edfad673e7e2254b33c8b91f7",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Decentralized large language model (LLM) inference distributes transformer layers across heterogeneous nodes to enable resource-constrained participants to collaboratively serve large models. However, inter-node activation transfer constitutes a significant communication bottleneck, especially under low-bandwidth conditions prevalent in consumer-grade and edge networks. We propose BandwidthLLM, a communication-efficient framework that integrates three techniques: (1) a bandwidth-aware layer placement algorithm that minimizes boundary-level transfer cost according to link bandwidth and node reliability; (2) a lightweight activation compression scheme combining adaptive quantization with outlier-aware clipping and error feedback; and (3) a semantic preservation check that automatically falls back to higher precision when compressed activations deviate beyond a calibrated threshold. Experiments on Llama-2-7B, Mistral-7B, and Qwen2.5-7B across simulated bandwidth conditions (20–500 Mbps) demonstrate that BandwidthLLM reduces inter-node activation traffic by 62.7–63.4% relative to the BloomBee-like baseline while maintaining perplexity degradation of at most 0.31 points and task accuracy within 0.9 percentage points of uncompressed inference. Under 20 Mbps links, BandwidthLLM achieves 1.7× higher throughput and 41% lower latency.",
+        "canonical_id": "DOI:10.1109/ECNCT70535.2026.11661442",
+        "doi": "10.1109/ECNCT70535.2026.11661442",
+        "authors": [
+          "Zhi-Hao Wang",
+          "Shi Shu",
+          "Yu-Lin Wang",
+          "I-Hsien Lai",
+          "Cheng-Chuan Peng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccsc71566.2026.11650301",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccsc71566.2026.11650301",
+        "title:coverageaware evidence packing for budgeted multihop rag on small language models",
+        "url:https://www.semanticscholar.org/paper/bb67748590639cfb4289c6af645f7e2200c3ed1d"
+      ],
+      "record": {
+        "title": "Coverage-Aware Evidence Packing for Budgeted Multi-Hop RAG on Small Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/bb67748590639cfb4289c6af645f7e2200c3ed1d",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Small language models make retrieval-augmented generation attractive for constrained devices, but multi-hop question answering still depends on how a limited evidence budget is filled. This paper introduces SupportCover-RAG, a training-free post-retrieval packer that selects sentence-level evidence using relevance, marginal support coverage, title diversity, and token cost. The method is inserted between retrieval and generation, so it does not require a new retriever, a learned reranker, or an additional generation step. In a controlled 100-example HotpotQA distractor subset, SupportCover-final achieves answer F1 that is higher by 0.020 and evidence coverage that is higher by 0.068 than relevance-only packing in the main Qwen setting. In the budget ablation, answer F1 increases by 0.091 under a 96-token evidence budget. The additional packing cost is 0.097 ms in this run, while generation remains the dominant runtime cost. These descriptive results should not be interpreted as a full benchmark claim, but they suggest that transparent support-aware packing can help select more complete evidence under strict context limits.",
+        "canonical_id": "DOI:10.1109/ICCSC71566.2026.11650301",
+        "doi": "10.1109/ICCSC71566.2026.11650301",
+        "authors": [
+          "Hamidi Charaf",
+          "Salma Gaou",
+          "Boudchiche Mohamed",
+          "Badiy Mohamed",
+          "M. Boutahir",
+          "Hicham Tribak"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/edge72783.2026.00030",
+      "identity_tokens": [
+        "id:DOI:10.1109/edge72783.2026.00030",
+        "title:lang2graph towards leveraging human language for indoor topology inference using llms",
+        "url:https://www.semanticscholar.org/paper/c735a7d0204b14bcf87df6d19025e9622c48f62b"
+      ],
+      "record": {
+        "title": "Lang2Graph: Towards Leveraging Human Language for Indoor Topology Inference Using LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/c735a7d0204b14bcf87df6d19025e9622c48f62b",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Edge-deployed systems such as autonomous robots, AR/XR devices, and emergency-response handhelds require accurate indoor topological representations, yet existing sensor-based and expert-curated mapping methods are impractical for crowd-sourced, resource-constrained deployment. Additionally, current large language model (LLM) approaches to indoor topology inference lack a systematic framework for evaluating the factors that govern performance. We present Lang2Graph, an experimental framework for indoor topological graph inference from natural-language navigational instructions that isolates four governing factors: instruction structure, metadata clarity, prompting strategy, and model size and reasoning capability. We propose the Independent Prompt Executor (IPE), a prompting strategy that decomposes graph construction into independent per-instruction reasoning steps, preventing error propagation. To support factor-level evaluation, we develop a fully synthetic dataset and an augmented benchmark (R2R-AUG) covering idealized and real-world conditions. Our evaluation across multiple model families show that structured instructions, clear metadata, and IPE improve precision, recall, and F1 by 44%, 45%, and 47%, respectively. Reasoning-aligned open-source models of moderate scale (14B parameters) outperform larger proprietary models on the most challenging instruction categories, indicating that reliable indoor topology inference is achievable without cloud-scale dependencies and establishes a viable path toward on-device edge deployment.",
+        "canonical_id": "DOI:10.1109/EDGE72783.2026.00030",
+        "doi": "10.1109/EDGE72783.2026.00030",
+        "authors": [
+          "Moamin Ibrahim",
+          "Yaqoob Ansari",
+          "Khaled A. Harras",
+          "Eduardo Feo-Flushing"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cloud72782.2026.00039",
+      "identity_tokens": [
+        "id:DOI:10.1109/cloud72782.2026.00039",
+        "title:reducing memory requirements of llm inference through online rans decompression",
+        "url:https://www.semanticscholar.org/paper/a9775c4c794aabf66b5bf77ef5a56ae54825d83b"
+      ],
+      "record": {
+        "title": "Reducing Memory Requirements of LLM Inference Through Online rANS Decompression",
+        "source_url": "https://www.semanticscholar.org/paper/a9775c4c794aabf66b5bf77ef5a56ae54825d83b",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "The rapid growth of Large Language Models has outpaced GPU memory capacity, making state-of-the-art models unfit for most GPUs. This necessitates evicting model parameters to CPU memory or disk, further away from the processing elements. In these scenarios, inference throughput is restricted by interconnect bandwidth, and while quantization schemes like FP8 reduce memory usage and enable larger models to fit smaller memories, they compromise generation quality and rely on specialized hardware support for efficient inference. To this end, we propose an inference pipeline that utilizes lossless entropy encoding (rANS) alleviating the bottleneck while maintaining standard floating-point portability or output precision. We demonstrate the potential of this approach by integrating the pipeline into vLLM, with a hardware-aware parallelization strategy. Our method increases the effective GPU memory capacity up to 30% in inference workloads with evicted weights, with no loss of quality and at the same time achieving speed up of 2.5–4.4%.",
+        "canonical_id": "DOI:10.1109/CLOUD72782.2026.00039",
+        "doi": "10.1109/CLOUD72782.2026.00039",
+        "authors": [
+          "Väinö-Waltteri Granat",
+          "Jakub Žádník",
+          "Markku J. Mäkitalo",
+          "Joonas Multanen",
+          "Pekka O. Jääskeläinen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cloud72782.2026.00038",
+      "identity_tokens": [
+        "id:DOI:10.1109/cloud72782.2026.00038",
+        "title:can bytelevel and bitlevel optimizations enhance the parameter lossless compression of large language models",
+        "url:https://www.semanticscholar.org/paper/16334f518ca292174216c6ffe75c61fc29e94baa"
+      ],
+      "record": {
+        "title": "Can Byte-Level and Bit-Level Optimizations Enhance The Parameter Lossless Compression of Large Language Models?",
+        "source_url": "https://www.semanticscholar.org/paper/16334f518ca292174216c6ffe75c61fc29e94baa",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across various domains. However, their rapidly growing parameter size leads to significantly increased storage and transmission costs. Current lossy compression methods often introduce irreversible performance degradation, making them inadequate to meet the demands of parameter compression. Even a minor loss in parameters may significantly impact model performance and analytical reliability. Therefore, maintaining complete parameter precision is particularly important in some application scenarios. However, existing lossless compression methods treat LLM parameters merely as regular files and apply general local data models for compression. They overlook the unique byte-level and bit-level structures inherent in LLM parameters, which are crucial for enhancing the performance of lossless compression. Therefore, we propose a framework called lossless compression with bi-level preprocessing (LCBP). To the best of our knowledge, this is the first attempt that explores byte-level and bit-level preprocessing to enhance the lossless compression of LLM parameters. At the byte level, an exclusive OR (XOR) operation is introduced to generate low-entropy residual representations by leveraging correlations among adjacent data blocks. At the bit level, we observe that certain bits in the parameters remain fixed, while the bits corresponding to the sign and mantissa parts exhibit high entropy and are difficult to compress, whereas those in the exponent part show relatively low entropy and are easier to compress. Based on these regularities in the parameters, we design bit-level replacement and bit-level insertion methods to optimize compression performance. Experiments on a series of LLMs demonstrate that LCBP is compatible with existing compression methods to significantly enhance compression performance, providing a viable solution for effective LLM storage.",
+        "canonical_id": "DOI:10.1109/CLOUD72782.2026.00038",
+        "doi": "10.1109/CLOUD72782.2026.00038",
+        "authors": [
+          "Miao-Wei Liu",
+          "Hongcai He",
+          "Cheng-Da Wu",
+          "Hui Xu",
+          "Zetao Zheng",
+          "Jie Shao"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:ac5d4a6b672f5fa9ff598d78d74bfd7a566829f3e186593ee5be6aded1884e42",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
