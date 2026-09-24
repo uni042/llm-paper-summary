@@ -88,7 +88,7 @@ audit_version: 0
             self.assertEqual(invalid, [])
 
             missing_paper = paper.read_text(encoding="utf-8").replace(
-                "list_summary: 明示された一覧文を構造検査で必須にし、旧本文からの補完を行わないことを確認する。\\n",
+                "list_summary: 明示された一覧文を構造検査で必須にし、旧本文からの補完を行わないことを確認する。\n",
                 "",
             )
             paper.write_text(missing_paper, encoding="utf-8")
