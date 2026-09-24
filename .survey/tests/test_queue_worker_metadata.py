@@ -37,6 +37,8 @@ class AuditMetadataRoutingTest(unittest.TestCase):
         self.assertEqual(created["paper_path"], "papers/inference/test/paper.md")
         self.assertEqual(created["workflow_version"], 10)
         self.assertEqual(created["artifact_transport"], "structured_record_v10")
+        self.assertIsInstance(created["paper_path"], str)
+        self.assertTrue(created["paper_path"].startswith("papers/inference/"))
         self.assertIn("five-slot structured research record", created["instructions"])
         self.assertIn("five-slot structured research record", created["completion"])
         self.assertNotIn("Markdown", created["completion"])

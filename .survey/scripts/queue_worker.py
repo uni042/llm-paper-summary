@@ -966,7 +966,7 @@ def make_research_job(c: dict, parent: str):
     paper_path = c.get("paper_path")
     if isinstance(paper_path, str) and paper_path:
         paper_path = canonicalize_paper_path(paper_path, repo_root=ROOT.parent)
-    elif c.get("lineage"):
+    else:
         paper_path = resolve_paper_path(c, repo_root=ROOT.parent)
     return add_job({
         "job_id": jid,
