@@ -61,11 +61,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertIn("finalization_gate", result)
             self.assertFalse(result["finalization_permit_issued"])
             self.assertEqual(result["finalization_gate"]["decision"], "MUST_CONTINUE")
-            self.assertFalse(result["final_response_allowed"])
-            self.assertEqual(
-                result["worker_execution_directive"],
-                "MUST_CONTINUE_NO_FINAL_RESPONSE",
-            )
+            self.assertNotIn("final_response_allowed", result)
+            self.assertNotIn("worker_execution_directive", result)
 
     def test_0830_slot_forces_maintenance_route(self):
         with tempfile.TemporaryDirectory() as td:
@@ -365,7 +362,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertFalse(result["discovery_evaluation_pending"])
             self.assertEqual(result["gate"]["required_action"], "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT")
             self.assertFalse(result["finalization_permit_issued"])
-            self.assertEqual(result["worker_execution_directive"], "MUST_CONTINUE_NO_FINAL_RESPONSE")
+            self.assertNotIn("final_response_allowed", result)
+            self.assertNotIn("worker_execution_directive", result)
 
     def test_latest_failed_precheck_still_requires_recovery(self):
         with tempfile.TemporaryDirectory() as td:
