@@ -1005,5 +1005,162 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(failed["active_claim_count"], 2)
 
 
+    def test_preflight_window_is_admission_limit_not_thaw_limit(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            started = dt.datetime.fromisoformat(value["actual_invocation_start"])
+            claimed = started + dt.timedelta(seconds=5)
+            expires = claimed + dt.timedelta(hours=1)
+
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 296}},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {"schema_version": 3, "history": []},
+            )
+            for order, suffix in enumerate(("a", "b", "c", "d")):
+                job_id = f"job-{suffix}"
+                attempt_id = f"attempt-{suffix}"
+                write_json(
+                    root,
+                    f".survey/work-queue/jobs/{job_id}.json",
+                    {"job_id": job_id, "type": "research", "status": "ready"},
+                )
+                write_json(
+                    root,
+                    f".survey/work-queue/claims/{job_id}.json",
+                    {
+                        "schema_version": 1,
+                        "workflow_version": 10,
+                        "job_id": job_id,
+                        "claim_id": f"claim-{suffix}",
+                        "attempt_id": attempt_id,
+                        "request_id": "claim-window",
+                        "worker_id": "scheduled-chat-00",
+                        "worker_kind": "scheduled_chat",
+                        "kind": "research",
+                        "pipeline_order": order,
+                        "claimed_at": claimed.isoformat(),
+                        "expires_at": expires.isoformat(),
+                        "run_key": "run-1",
+                        "scheduled_slot": "00",
+                        "actual_invocation_start": value["actual_invocation_start"],
+                    },
+                )
+
+            # Simulate legacy/concurrent overshoot: three exact-blob preflights are
+            # already pending although the normal admission window is two.
+            for index, suffix in enumerate(("a", "b", "c"), start=1):
+                preflight_id = f"scheduled-chat-00-attempt-{suffix}-r1"
+                write_json(
+                    root,
+                    f".survey/work-queue/research-preflight/requests/{preflight_id}.json",
+                    {
+                        "schema_version": 1,
+                        "operation": "research_quality_preflight",
+                        "request_id": preflight_id,
+                        "kind": "research",
+                        "attempt_id": f"attempt-{suffix}",
+                        "job_id": f"job-{suffix}",
+                        "record_bank": suffix,
+                        "worker_id": "scheduled-chat-00",
+                        "run_key": "run-1",
+                        "scheduled_slot": "00",
+                        "actual_invocation_start": value["actual_invocation_start"],
+                        "requested_at": (
+                            claimed + dt.timedelta(seconds=10 + index)
+                        ).isoformat(),
+                    },
+                )
+
+            result = mod.derive(root, value)
+            self.assertEqual(
+                result["preflight_parked_job_ids"],
+                ["job-a", "job-b", "job-c"],
+            )
+            self.assertEqual(result["preflight_inflight_count"], 3)
+            self.assertEqual(result["preflight_pipeline_window"], 2)
+            self.assertEqual(result["preflight_pipeline_capacity_remaining"], 0)
+            self.assertTrue(result["preflight_pipeline_saturated"])
+            self.assertEqual(result["preflight_pipeline_overflow_count"], 1)
+            # No frozen paper is accidentally thawed just because it exceeded the
+            # intended admission window; the next real content standby is promoted.
+            self.assertEqual(result["foreground_job_id"], "job-d")
+            self.assertEqual(result["active_job_ids"], ["job-d"])
+
+    def test_preflight_identity_mismatch_does_not_freeze_claim(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            started = dt.datetime.fromisoformat(value["actual_invocation_start"])
+            claimed = started + dt.timedelta(seconds=5)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 299}},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {"schema_version": 3, "history": []},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/jobs/job-a.json",
+                {"job_id": "job-a", "type": "research", "status": "ready"},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/claims/job-a.json",
+                {
+                    "schema_version": 1,
+                    "workflow_version": 10,
+                    "job_id": "job-a",
+                    "claim_id": "claim-a",
+                    "attempt_id": "attempt-a",
+                    "request_id": "claim-window",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "kind": "research",
+                    "pipeline_order": 0,
+                    "claimed_at": claimed.isoformat(),
+                    "expires_at": (claimed + dt.timedelta(hours=1)).isoformat(),
+                    "run_key": "run-1",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": value["actual_invocation_start"],
+                },
+            )
+            preflight_id = "corrupt-attempt-a-r1"
+            write_json(
+                root,
+                f".survey/work-queue/research-preflight/requests/{preflight_id}.json",
+                {
+                    "schema_version": 1,
+                    "operation": "research_quality_preflight",
+                    "request_id": preflight_id,
+                    "kind": "research",
+                    "attempt_id": "attempt-a",
+                    "job_id": "job-other",
+                    "record_bank": "a",
+                    "worker_id": "worker-999",
+                    "run_key": "other-run",
+                    "scheduled_slot": "adhoc",
+                    "actual_invocation_start": value["actual_invocation_start"],
+                    "requested_at": (claimed + dt.timedelta(seconds=10)).isoformat(),
+                },
+            )
+
+            result = mod.derive(root, value)
+            self.assertEqual(result["foreground_job_id"], "job-a")
+            self.assertEqual(result["preflight_parked_job_ids"], [])
+            self.assertEqual(result["preflight_inflight_count"], 0)
+
+
+
 if __name__ == "__main__":
     unittest.main()
