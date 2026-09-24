@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-preload-52cbf286c62b67d46769963d",
-  "job_id": "job-research-3403bc6819a107c1",
-  "data": {
-    "limitations": "最大の制約は、10台の異種エッジサーバーを模したトレース駆動シミュレーションであり、実際の地理分散GPUクラスタ上の壁時計評価ではない点である。実ネットワークの突発輻輳、GPUカーネル実行、CPU-GPU転送競合、制御面処理を含む実装費用は十分に検証されていない。また圧縮は近似的で品質低下を許容し、非凸な全体問題に対して大域最適性を保証しない。較正集合で得る統計や閾値に依存するため、分布変化が大きい運用環境での再較正頻度も実運用上の論点になる。",
-    "differences": "MoE-InfinityやPre-gated MoEのような単一ノード内のGPU/CPU階層で専門家をキャッシュ・先読みする系統に対し、TopoCompressは通常インターネットで結ばれた複数エッジサーバー間のトポロジー費用を明示的に扱う。DanceMoEのような専門家配置方式とは、圧縮前トラフィックではなく圧縮後トラフィックを配置・複製へフィードバックする点が異なる。SnapKVやH2Oなどのトークン圧縮とは、意味的重要度だけでなく現在の専門家配置に由来する遠隔通信費用を圧縮判断へ入れる点が異なる。したがって本研究は、専門家配置・階層メモリ常駐・通信ルーティング・トークン圧縮を横断して結合する位置づけにある。",
-    "implementation_status": "論文はPyTorch実装を用いたと記載するが、arXiv本文と論文ページで公式コード公開URLは確認できなかった。評価環境もトレース駆動シミュレータであり、再現可能な実機デプロイメント一式の公開は確認できない。",
-    "research_positioning": "リポジトリの重点である混合専門家モデル（MoE）の専門家配置・キャッシュと、GPU/CPUを跨ぐ階層メモリ、さらに分散推論通信の3系統を直接つなぐ研究である。特に、専門家をどこへ置くかという従来の配置問題に対して、そもそも遠隔専門家へ送るトークン量をトポロジー依存で変えるという追加自由度を導入し、圧縮後需要を次の配置へ戻す点が重要である。現時点では実機システム論文というより、配置と圧縮を共同最適化するアルゴリズム設計・シミュレーション検証として扱うのが適切で、将来の実機エッジMoEやSSD/CPUを含む多階層配置へ拡張する際の設計原理として価値がある。"
-  },
-  "reservation": {"claim_id": "claim-preload-52cbf286c62b67d46769963d", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-preload-47934e491851664368f66108",
+  "job_id": "job-research-cdc29bb5f1d5b9bc",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-47934e491851664368f66108",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
