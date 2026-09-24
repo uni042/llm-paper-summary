@@ -128,6 +128,25 @@ def ensure_precheck_request(root: Path, precheck_path: Path) -> dict[str, Any]:
     worker_id = str(value.get("worker_id") or "").strip()
     scheduled_slot = str(value.get("scheduled_slot") or "").strip()
     actual_invocation_start = str(value.get("actual_invocation_start") or "").strip()
+    existing = (
+        _existing_run_request(root, worker_id, run_key)
+        if worker_identity.is_supported_worker_id(worker_id)
+        else None
+    )
+    # Canonical worker-created precheck requests may carry only worker_id/run_key.
+    # The existing run-state request is durable proof of slot/start identity, so
+    # inherit those fields instead of dropping the post-precheck refresh.
+    if existing and (
+        not worker_identity.identity_slot_valid(worker_id, scheduled_slot)
+        or derive_worker_run_state._time(actual_invocation_start) is None
+    ):
+        existing_value = _read(root / existing, {})
+        if isinstance(existing_value, dict):
+            scheduled_slot = str(existing_value.get("scheduled_slot") or "").strip()
+            actual_invocation_start = str(
+                existing_value.get("actual_invocation_start") or ""
+            ).strip()
+
     started_at = derive_worker_run_state._time(actual_invocation_start)
     if (
         not worker_identity.is_supported_worker_id(worker_id)
@@ -150,7 +169,7 @@ def ensure_precheck_request(root: Path, precheck_path: Path) -> dict[str, Any]:
             "age_seconds": int(age_seconds),
         }
 
-    existing = _existing_run_request(root, worker_id, run_key)
+    existing = existing or _existing_run_request(root, worker_id, run_key)
     precheck_request_id = str(value.get("request_id") or path.stem)
     if existing:
         # A run-state request/result pair is immutable. Once that snapshot has
