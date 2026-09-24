@@ -154,7 +154,38 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             self.assertIn("検証済み成功result: **1件**", text)
             self.assertIn("候補: **1件**", text)
             self.assertIn("MoE expert cache", text)
+            self.assertIn("| 最終検証済みDiscovery探索 | **09-15 18:02:53 JST** |", text)
             self.assertIn("| Discovery | **1** | **1** | **1** | **0** |", text)
+
+    def test_future_run_timestamps_are_not_selected_as_latest(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _research_success(
+                repo,
+                job_id="job-past",
+                attempt="attempt-past",
+                worker="scheduled-chat-paper-20260915T1830JST",
+                completed="2026-09-15T09:38:20+00:00",
+            )
+            _write_json(repo / ".survey/work-queue/submissions/research/attempt-future.json", {
+                "kind": "research", "attempt_id": "attempt-future", "job_id": "job-future",
+                "worker_id": "scheduled-chat-paper-20260916T0230JST",
+                "paper_path": "papers/inference/future.md",
+            })
+            _write_json(repo / ".survey/work-queue/submissions/discovery/future.json", {
+                "kind": "discovery",
+                "operation": "submit_discovery_round",
+                "discovery_stats": {
+                    "run_key": "2026-09-16T02:30:00+09:00",
+                    "round": "future-round",
+                    "candidate_count": 0,
+                },
+            })
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 15, 9, 44, tzinfo=timezone.utc)
+            )
+            self.assertIn("最新観測run: **2026-09-15 18:30 JST**", text)
+            self.assertNotIn("最新観測run: **2026-09-16 02:30 JST**", text)
 
     def test_active_work_excludes_terminal_claim_and_shows_nonterminal_heartbeat(self):
         with tempfile.TemporaryDirectory() as td:
