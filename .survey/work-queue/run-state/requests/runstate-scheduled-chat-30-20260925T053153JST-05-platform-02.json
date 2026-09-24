@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "runstate-scheduled-chat-30-20260925T053153JST-05-platform-02",
+  "run_key": "scheduled-chat-30-20260925T053153JST-05",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T05:31:53+09:00",
+  "runtime_condition": "platform_context_limit",
+  "runtime_condition_confirmed": true,
+  "runtime_condition_attempts": 3,
+  "runtime_condition_event": "platform_tool_call_rejected",
+  "runtime_condition_detail": "Required record update was rejected three times by the platform. Other record writes succeeded.",
+  "candidate_inventory_at_start": 299,
+  "work_mode_at_start": "research",
+  "research_discovery_threshold": 288,
+  "hot_dispatch_generated_at": "2026-09-24T19:27:15+00:00"
+}
