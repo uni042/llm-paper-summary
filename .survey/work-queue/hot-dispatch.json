@@ -4,25 +4,6 @@
   "discovery": {
     "backward": [
       {
-        "axis": "preload-backward-structured-references",
-        "citation_direction": "backward",
-        "created_at": "2026-09-23T17:34:52.326114+00:00",
-        "discovery_bank": "g",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-g/discovery-preload.json",
-        "initial_cursor": "420",
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-ca22804c61a15fda6bd2",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-ca22804c61a15fda6bd2.json",
-        "preload_unseen_result_count": 20,
-        "provider": "repository_references",
-        "seed_canonical_id": null,
-        "source_url": "repository://structured-references",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-ca22804c61a15fda6bd2.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-ca22804c61a15fda6bd2.json",
-        "target_unseen": 20
-      },
-      {
         "axis": "backward references of FlexGen offload and hierarchical-memory LLM inference",
         "citation_direction": "backward",
         "created_at": "2026-09-23T21:35:33.135041+00:00",
@@ -81,44 +62,6 @@
       }
     ],
     "forward": [
-      {
-        "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2406.13233",
-        "citation_direction": "forward",
-        "created_at": "2026-09-23T17:15:29.421097+00:00",
-        "discovery_bank": "ad",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-ad/discovery-preload.json",
-        "initial_cursor": null,
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-d8e0be865a4ce9342689",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-d8e0be865a4ce9342689.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": null,
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2406.13233/citations",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-d8e0be865a4ce9342689.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-d8e0be865a4ce9342689.json",
-        "target_unseen": 20
-      },
-      {
-        "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
-        "citation_direction": "forward",
-        "created_at": "2026-09-23T17:35:02.872842+00:00",
-        "discovery_bank": "k",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-k/discovery-preload.json",
-        "initial_cursor": "360",
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-358030fae5d482fcee01",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-358030fae5d482fcee01.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": "arXiv:2303.06865",
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-358030fae5d482fcee01.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-358030fae5d482fcee01.json",
-        "target_unseen": 20
-      },
       {
         "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
         "citation_direction": "forward",
@@ -384,6 +327,44 @@
         "take_path": ".survey/work-queue/discovery-preload/claims/preload-322bf923487e2462e033.json",
         "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-322bf923487e2462e033.json",
         "target_unseen": 20
+      },
+      {
+        "axis": "forward citations of DeepSpeed-MoE large-scale MoE inference",
+        "citation_direction": "forward",
+        "created_at": "2026-09-23T23:08:32.400806+00:00",
+        "discovery_bank": "u",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-u/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-92d70d4a5f33b45e0455",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-92d70d4a5f33b45e0455.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": null,
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2201.05596/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-92d70d4a5f33b45e0455.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-92d70d4a5f33b45e0455.json",
+        "target_unseen": 20
+      },
+      {
+        "axis": "forward citations of SGLang structured generation serving runtime",
+        "citation_direction": "forward",
+        "created_at": "2026-09-23T23:08:32.400806+00:00",
+        "discovery_bank": "t",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-t/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-b304d45e560b5d2e9211",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-b304d45e560b5d2e9211.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": null,
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.07104/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-b304d45e560b5d2e9211.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-b304d45e560b5d2e9211.json",
+        "target_unseen": 20
       }
     ],
     "normal": [
@@ -446,7 +427,7 @@
       }
     ]
   },
-  "generated_at": "2026-09-23T23:15:29+00:00",
+  "generated_at": "2026-09-24T00:00:19+00:00",
   "research": [
     {
       "attempt_id": "attempt-preload-06a7382e6e4dd1f8011ebfe2",
