@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-preload-f48e2e24f9e9543b922e54eb",
-  "job_id": "job-research-fdc9e29fb13596db",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-f48e2e24f9e9543b922e54eb",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-f48e2e24f9e9543b922e54eb","job_id":"job-research-fdc9e29fb13596db","data":{"hardware":"本文は同等ハードウェア上のwall-clock step速度を比較し、主な計算予算比較をFLOPsで正規化する。大規模設定ではMoDのメモリ節約により必要TPU topologyが小さくなる観測もあるが、著者らはこの点を詳細には検証していない。","software":"論文は実装コードやserving frameworkの詳細を中心にせず、decoder-only TransformerへMoD routingを組み込んだ学習・生成実験を報告する。静的capacityと既知tensor sizeを維持することがハードウェア親和性の主要設計条件である。","methodology":"sequence length 2048、batch size 128を基本設定とし、6e18 FLOPsでrouting頻度とcapacityを探索した後、6e18、2e19、1e20 FLOPsのisoFLOP比較を行う。モデル規模は約60M〜3B parameter。主要MoD設定はrouting every other block、capacity 256/2048=12.5%。学習loss、FLOPs/forward、steps/secを比較し、自己回帰評価では同一held-out 256,000 sequences（約500M tokens）を使う。stochastic routing control、predictor-based causal routing、MoD+MoEも比較する。","scope":"主評価は学習lossと自己回帰language-modeling評価であり、一般的な下流task accuracy、実サービスのthroughput/TTFT/TPOT、batchingやKV cache実測は中心ではない。最大規模も3B級で、現代の数十〜数百B LLMへのserving上の一般化は未検証。メモリ/KV cache節約は示唆に留まり詳細評価されていない。"},"reservation":{"claim_id":"claim-preload-f48e2e24f9e9543b922e54eb","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
