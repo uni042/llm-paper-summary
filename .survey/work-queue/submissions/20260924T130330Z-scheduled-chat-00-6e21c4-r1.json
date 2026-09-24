@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [],
+  "discovery_precheck": {
+    "request_id": "take-scheduled-chat-00-20260924T130032Z-6e21c4-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/take-scheduled-chat-00-20260924T130032Z-6e21c4-r1.json",
+    "receipt": "sha256:90fb6e5d450a563622a484862da08852d9e9c570a263a4a7bfe1a61b6aaca752"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260924T220032+0900-6e21c4",
+    "round": "take-scheduled-chat-00-20260924T130032Z-6e21c4-r1",
+    "axis": "preload-backward-structured-references",
+    "query_summary": "Repository-wide structured referencesを後方引用として正規schema v3で再フィルタし、20件を軽量評価。今回窓では推論システムResearchへ送る十分に強い新規候補を採用せず。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [
+      {
+        "topic": "repository-wide structured references",
+        "source": "repository_references",
+        "date_range": "all",
+        "category": "inference-systems",
+        "citation_direction": "backward",
+        "query_family": "citation-curation",
+        "raw_result_count": 20,
+        "unseen_result_count": 20,
+        "duplicate_filtered_count": 0,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 0,
+        "position": "preload-window"
+      }
+    ]
+  }
+}
