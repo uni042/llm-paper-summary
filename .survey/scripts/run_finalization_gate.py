@@ -224,7 +224,6 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "decision": decision,
         "finalization_permit": {
             "issued": permit,
-            "required_for_final_response": True,
         },
         "blocking_reasons": blocking_reasons,
         "next_action": next_action,
@@ -257,7 +256,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "discovery_rounds_completed": discovery_completed,
         "discovery_min_rounds": discovery_minimum,
         "rule": (
-            "Final response is forbidden without an issued permit. Normal finalization also requires "
+            "The permit controls run finalization only; it does not suppress user-facing reports. Normal finalization requires "
             "explicit checks of the latest claim and submission states. Pending claim/submission/ACK/Discovery precheck/Discovery submission "
             "results require a productive wait loop: run one bounded wait microtask and recheck the same durable target, with no fixed sleep or polling interval, until the "
             "required result reaches terminal state or an explicit hard stop is safely handed off. "
