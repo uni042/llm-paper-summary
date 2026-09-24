@@ -22,7 +22,7 @@ def _load_renderer():
     return module
 
 
-def _write_orphan_submission(repo: Path, *, retryable: bool) -> None:
+def _write_orphan_submission(repo: Path, *, retryable: bool, failure_class: str = "content_validation", error: str = "ValueError: unknown job_id: job-never-existed") -> None:
     submission = ".survey/work-queue/submissions/research/attempt-orphan.json"
     _write_json(repo / submission, {
         "schema_version": 1,
@@ -42,9 +42,9 @@ def _write_orphan_submission(repo: Path, *, retryable: bool) -> None:
         "job_status": None,
         "artifact": None,
         "submission": submission,
-        "error": "ValueError: unknown job_id: job-never-existed",
+        "error": error,
         "processed_at": "2026-09-16T08:38:13+00:00",
-        "failure_class": "content_validation",
+        "failure_class": failure_class,
         "retryable": retryable,
     })
 
@@ -62,6 +62,41 @@ class StatusTerminalRejectionTests(unittest.TestCase):
 
             self.assertIn("| 整合性異常 | **0** |", text)
             self.assertIn("| 対応jobなしsubmission（有効Discovery round除外） | **0** |", text)
+
+    def test_terminal_stale_job_guard_is_history_not_current_anomaly(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _write_orphan_submission(
+                repo,
+                retryable=False,
+                failure_class="state_or_transport_guard",
+            )
+
+            text = _load_renderer().build_dashboard(
+                repo,
+                now=datetime(2026, 9, 16, 12, 0, tzinfo=timezone.utc),
+            )
+
+            self.assertIn("| 整合性異常 | **0** |", text)
+            self.assertIn("| 対応jobなしsubmission（有効Discovery round除外） | **0** |", text)
+
+    def test_nonmatching_transport_guard_remains_current_anomaly(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _write_orphan_submission(
+                repo,
+                retryable=False,
+                failure_class="state_or_transport_guard",
+                error="ValueError: stale attempt: claim mismatch",
+            )
+
+            text = _load_renderer().build_dashboard(
+                repo,
+                now=datetime(2026, 9, 16, 12, 0, tzinfo=timezone.utc),
+            )
+
+            self.assertIn("| 整合性異常 | **1** |", text)
+            self.assertIn("| 対応jobなしsubmission（有効Discovery round除外） | **1** |", text)
 
     def test_retryable_orphan_submission_remains_current_anomaly(self):
         with tempfile.TemporaryDirectory() as td:
