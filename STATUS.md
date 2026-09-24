@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 07:18:25 JST**
+> 自動生成: **2026-09-25 07:18:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **319** |
-| 未claim Research job | **175** |
+| 未claim Research job | **187** |
 | 直近24hの検証済みResearch収録 | **19** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
 | 最終検証済みDiscovery探索 | **09-25 07:18:24 JST** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **3** | **3** | **0** | **144** | **0** | — |
+| Research | **3** | **3** | **3** | **0** | **132** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **9** | **9** | **9** | **0** | **0** | **0** | **20** |
-| 合計 | **12** | **12** | **12** | **0** | **144** | **0** | **20** |
+| 合計 | **12** | **12** | **12** | **0** | **132** | **0** | **20** |
 
 - 最新Discovery runの耐久探索round: **9件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -216,7 +216,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **132件** / 直近15分heartbeat: **0件**
 - `arXiv:2211.10438` — SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models / worker `scheduled-chat-30`
   - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-05c9fecf1a5510e9.json`
