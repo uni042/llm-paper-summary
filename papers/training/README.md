@@ -10,11 +10,11 @@
 
 ## 系統
 
-- [Training Offload / Memory Systems](01-training-offload-memory-systems/) — 13本
+- [Training Offload / Memory Systems](01-training-offload-memory-systems/) — 14本
   - 学習中にGPUへ置ききれない活性値、最適化状態、パラメータなどをCPUメモリやSSDへ一時退避する方式に加え、CPU DRAMをモデル状態の正本として必要な層だけGPUへ送る方式も扱う。データ転送や最適化器更新をGPU計算と同時進行させ、限られたGPUメモリで大規模モデルを学習する研究を含む。
-- [Distributed / Heterogeneous MoE Training](02-distributed-heterogeneous-moe-training/) — 5本
+- [Distributed / Heterogeneous MoE Training](02-distributed-heterogeneous-moe-training/) — 8本
   - MoEのエキスパート（expert）をどのGPUへ置くか、人気expertを何個複製するか、tokenをGPU間でどう通信するか、性能の異なるGPUへどう役割分担させるかを調整し、大規模MoE学習の待ち時間を減らす研究を含む。
-- [Pipeline-Parallel / Modular Training Systems](03-pipeline-parallel-modular-training/) — 1本
+- [Pipeline-Parallel / Modular Training Systems](03-pipeline-parallel-modular-training/) — 3本
   - modelを複数stageへ分けた学習で、microbatch scheduleやstage間dependency、activation lifetime、通信、checkpoint / replayを調整し、pipeline bubble・GPU memory・stage間待ち・failure recovery costを減らす研究を含む。
 
 <!-- survey:auto:start -->
