@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-preload-71270ce404475002d20ce60c",
-  "job_id": "job-research-45a223ad00555581",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-71270ce404475002d20ce60c",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-71270ce404475002d20ce60c","job_id":"job-research-45a223ad00555581","data":{"overview":"FairBatching-vanillaは3 trace×4 model構成のpeak effective RPS幾何平均で1.32を達成し、最良baseline vLLM-sarathiの1.10に対して20.0%改善した。Qwen3-14B/QwenTrace/RPS=2.5ではP99 TTFTがSarathiの4585msから1998msへ、TPOT P99は49msから50msとほぼ同等のdecode SLOを保つ。PAB込みではsingle-node peak goodput幾何平均2.11、cluster DP=8でPAB load balancerがFairBatching node schedulerに追加7.7〜34.9%を与え、best baseline比のcluster capacity改善はQwenTrace 54.3%、BurstGPT 45.3%、AzureTrace 38.3%と報告される。","key_results":[{"metric":"単一node peak goodput","value":"1.32 effective RPS","baseline":"vLLM-sarathi 1.10; vLLM-vanilla 1.09","condition":"3 production traces、4 model/GPU構成の幾何平均","interpretation":"FairBatching-vanillaは最良baseline比20.0%改善。"},{"metric":"Qwen3-14B P99 TTFT","value":"1998 ms","baseline":"vLLM-sarathi 4585 ms; vLLM-vanilla 1842 ms","condition":"QwenTrace、RPS=2.5","interpretation":"Sarathi比で約2.29倍短いTTFTを得ながらTPOT P99は50msでSarathi 49msと同等水準。"},{"metric":"PAB付き単一node peak goodput","value":"2.11 effective RPS","baseline":"vLLM-sarathi 1.10","condition":"3 trace×4 modelの幾何平均、rejectをviolationとして計上","interpretation":"admission controlでoverloadを避け、FairBatching-vanillaを大きく上回る。"},{"metric":"cluster capacity","value":"QwenTrace +54.3%; BurstGPT +45.3%; AzureTrace +38.3%","baseline":"各traceのbest baseline","condition":"Qwen3-14B single-GPU engines、DP=8","interpretation":"PAB-based load balancerがnode内schedulerのSLO余力をcluster routingへ反映する効果を示す。"}],"negative_results":"SLOが緩いほどFairBatching-vanillaの優位は縮小し、TTFT=2000ms/TPOT=200msではbaseline比-0.4%となる。極端な高負荷ではFairBatching-vanillaの性能も低下し、PAB admission controlが必要になる。PABは新規requestをreject/rerouteすることでadmitted workloadのSLOを守るため、無条件に全requestをlocal処理する方式ではない。","interpretation":"主要効果はdecodeを単純に弱めることではなく、過去のservice progressから本当にurgentなdecodeだけを保護し、余剰slackをprefillへ戻す点にある。time-based capacity model、3段階batch形成、PABはablationで段階的にgoodputへ寄与し、node内schedulerとcluster load balancingを同じSLO-aware capacity概念で接続している。","quality_impact":"Qwen3-14B/QwenTraceのablationではvLLM-vanillaがSarathi比+9.2%、FairBatching fixed-batchがさらに+15.1%、dynamic token budgetが+7.9%、time-based budgetが+2.4%、PABがFairBatching-vanilla比+52.1%となり、full PAB構成はstrongest baseline比+93.4% goodput。"},"reservation":{"claim_id":"claim-preload-71270ce404475002d20ce60c","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
