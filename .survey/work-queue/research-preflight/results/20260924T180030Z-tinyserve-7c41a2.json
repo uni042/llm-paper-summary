@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T180030Z-tinyserve-7c41a2",
+  "kind": "research",
+  "attempt_id": "attempt-preload-88865dce95348e7f779dacec",
+  "job_id": "job-research-3d37c9d48dc78998",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260924T175541Z-7c41a2",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T17:55:41+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:68b0aabb7885a1eaa3ac04fad8b99641779fd8a2c0ba807684b7ad648d622b97",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "183950071e3060c221955cb1416fa978c02bd38e"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "1a485691fd39d71970162665cd8ed9682516f042"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "bee241351712c7157fe1a676b6b952470b01c44c"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "61ad13416de95df1aed7b9424edc9992a4138240"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "7fc1eca12821d5dc0c98b29f2124244b5de712f8"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short"
+  ],
+  "checked_at": "2026-09-24T09:00:53+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
