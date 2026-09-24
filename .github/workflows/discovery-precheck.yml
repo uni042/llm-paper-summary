@@ -18,13 +18,12 @@ on:
 permissions:
   contents: write
 
-# Foreground worker checks must not queue behind speculative preload refreshes.
-# Bot-generated preload/result publication commits and scheduled maintenance share
-# one serialized background lane. Every other push gets an independent foreground
-# lane; the publish loop below always resets to latest main and recomputes on a push
-# race, so concurrent foreground workers converge without force-pushing.
+# Every push gets its own foreground-capable lane so a real worker is never
+# queued behind an older Discovery run. Scheduled/manual background maintenance is
+# serialized separately. Concurrent push writers are safe because the publish loop
+# resets to latest main and recomputes all unsettled requests after every push race.
 concurrency:
-  group: ${{ (github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit.message == 'survey: publish discovery precheck results and preload stock')) && 'discovery-preload-background-main' || format('discovery-precheck-foreground-{0}', github.sha) }}
+  group: ${{ github.event_name == 'push' && github.sha || 'discovery-preload-background-main' }}
   cancel-in-progress: false
 
 jobs:
