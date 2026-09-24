@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-preload-f48e2e24f9e9543b922e54eb",
-  "job_id": "job-research-fdc9e29fb13596db",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-f48e2e24f9e9543b922e54eb",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-preload-f48e2e24f9e9543b922e54eb","job_id":"job-research-fdc9e29fb13596db","data":{"problem":"標準Transformerは各tokenへ各layerでほぼ一様に計算量を配分するため、予測が容易なtokenにもself-attentionとMLPを実行する。既存の条件付き計算は動的計算グラフや可変tensor形状を生みやすく、現行アクセラレータの静的形状・高利用率という要請と衝突する。著者らは、総計算量を事前に固定してハードウェア効率を予測可能にしたまま、どのtokenへ計算を使うかだけを文脈依存に動的化できるかを問う。","novelty":"Mixture-of-Depths（MoD）は各routing blockで処理可能token数kを固定し、router score上位k tokenだけをself-attention+MLPへ通し、残りをresidual connectionで迂回させる。総capacityとtensor形状は静的だがtoken identityは動的であり、tokenごとに通過する深さが異なる。MoEのexpert-choice routingを『通常blockかno-opか』へ転用し、attention自体もskip対象にする点、さらに非因果top-kを自己回帰生成へ適用するため予測routerを導入する点が中核である。","method_overview":"各routing blockはtoken embeddingを線形射影してscalar router weightを生成し、sequence内top-kを選択する。選択tokenだけで縮小した集合を作りself-attentionとMLPを実行し、その出力へrouter weightを掛けてresidualへ加える。非選択tokenは入力をそのまま次layerへ渡す。capacity C=kを事前固定するため計算グラフは静的で、attentionのQK計算もC<Sなら大幅に削減される。学習時のexpert-choice top-kは未来tokenを参照するため、生成時にはtop-k membershipを予測する補助MLPまたは補助binary-cross-entropyを用いる。実験ではrouting blockとfull-capacity blockを交互に置き、12.5% capacityを主要設定とする。","components":[{"name":"固定capacity expert-choice routing","description":"各blockのrouterがtokenごとのscalarを出し、上位k tokenのみをblock計算へ送る。k固定なのでload balanceと総FLOPsが事前に決まり、可変shapeを避ける。"},{"name":"block bypassによる深さ方向の条件付き計算","description":"非選択tokenはself-attentionとMLPの双方をresidual経路で迂回する。early-exitと異なり中間layerをskipしたtokenが後段で再び計算へ参加できる。"},{"name":"自己回帰用predictor","description":"学習時top-kの非因果性を解消するため、同じtoken入力からtop-k membershipを予測する小型MLPを学習する。予測精度は早期から97%以上、本文では約99%に達し、生成時の性能劣化は小さい。"},{"name":"MoD+MoE統合","description":"staged方式ではMoD後にMoEを置き、integrated方式では通常expertにno-op expertを加えて単一routingで計算skipを表現する。MoDの利得がMoEと組み合わせても成立することを評価する。"}],"system_design":"routing対象layerでは入力token列→router score→top-k gather→縮小token集合でattention/MLP→元位置へscatterしてresidual加算、非選択tokenはidentity経路、という流れをとる。full-capacity layerを間に挟むことでtoken間情報交換の機会を維持する。生成時は未来tokenを必要とするtop-kの代わりにpredictor判定を使うため、causal decodeを保ったままtoken単位のblock実行可否を決める。"},"reservation":{"claim_id":"claim-preload-f48e2e24f9e9543b922e54eb","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
