@@ -4,25 +4,6 @@
   "discovery": {
     "backward": [
       {
-        "axis": "backward references of FlexGen offload and hierarchical-memory LLM inference",
-        "citation_direction": "backward",
-        "created_at": "2026-09-24T12:52:49.035676+00:00",
-        "discovery_bank": "ad",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-ad/discovery-preload.json",
-        "initial_cursor": null,
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-4adcdbaa4e854f8926e8",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-4adcdbaa4e854f8926e8.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": null,
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-4adcdbaa4e854f8926e8.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-4adcdbaa4e854f8926e8.json",
-        "target_unseen": 20
-      },
-      {
         "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
         "citation_direction": "backward",
         "created_at": "2026-09-24T12:52:49.035676+00:00",
@@ -100,6 +81,25 @@
       }
     ],
     "forward": [
+      {
+        "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+        "citation_direction": "forward",
+        "created_at": "2026-09-24T09:29:56.809301+00:00",
+        "discovery_bank": "ad",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-ad/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-3e35f4369f3a799cb100",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3e35f4369f3a799cb100.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": "arXiv:2303.06865",
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-3e35f4369f3a799cb100.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-3e35f4369f3a799cb100.json",
+        "target_unseen": 20
+      },
       {
         "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
         "citation_direction": "forward",
@@ -384,25 +384,6 @@
         "take_path": ".survey/work-queue/discovery-preload/claims/preload-675b1f1013b00258635d.json",
         "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-675b1f1013b00258635d.json",
         "target_unseen": 20
-      },
-      {
-        "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)",
-        "citation_direction": "forward",
-        "created_at": "2026-09-24T11:21:25.937319+00:00",
-        "discovery_bank": "x",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-x/discovery-preload.json",
-        "initial_cursor": "40",
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-91f32c8ca80a82475f5e",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-91f32c8ca80a82475f5e.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": null,
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2202.09368/citations",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-91f32c8ca80a82475f5e.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-91f32c8ca80a82475f5e.json",
-        "target_unseen": 20
       }
     ],
     "normal": [
@@ -554,31 +535,73 @@
     "source_url": "repository://structured-references",
     "target_unseen": 20
   },
+  "discovery_frontier_target": 3,
   "discovery_primary_direction": "backward",
+  "discovery_start_frontier": [
+    {
+      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+      "citation_direction": "forward",
+      "created_at": "2026-09-24T09:29:56.809301+00:00",
+      "discovery_bank": "ad",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-ad/discovery-preload.json",
+      "initial_cursor": null,
+      "max_pages": 25,
+      "page_size": 20,
+      "preload_id": "preload-3e35f4369f3a799cb100",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3e35f4369f3a799cb100.json",
+      "preload_unseen_result_count": 20,
+      "provider": "semantic_scholar",
+      "seed_canonical_id": "arXiv:2303.06865",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "take_path": ".survey/work-queue/discovery-preload/claims/preload-3e35f4369f3a799cb100.json",
+      "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-3e35f4369f3a799cb100.json",
+      "target_unseen": 20
+    },
+    {
+      "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+      "citation_direction": "forward",
+      "created_at": "2026-09-24T11:00:19.398256+00:00",
+      "discovery_bank": "c",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-c/discovery-preload.json",
+      "initial_cursor": null,
+      "max_pages": 25,
+      "page_size": 20,
+      "preload_id": "preload-5729a2c1509ce8ec49e3",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-5729a2c1509ce8ec49e3.json",
+      "preload_unseen_result_count": 20,
+      "provider": "semantic_scholar",
+      "seed_canonical_id": "arXiv:2401.09670",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+      "take_path": ".survey/work-queue/discovery-preload/claims/preload-5729a2c1509ce8ec49e3.json",
+      "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-5729a2c1509ce8ec49e3.json",
+      "target_unseen": 20
+    }
+  ],
   "discovery_start_lookahead": {
-    "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
     "citation_direction": "forward",
-    "created_at": "2026-09-24T11:00:19.398256+00:00",
-    "discovery_bank": "c",
-    "discovery_slot_path": ".survey/work-queue/records/chat-record-c/discovery-preload.json",
+    "created_at": "2026-09-24T09:29:56.809301+00:00",
+    "discovery_bank": "ad",
+    "discovery_slot_path": ".survey/work-queue/records/chat-record-ad/discovery-preload.json",
     "initial_cursor": null,
     "max_pages": 25,
     "page_size": 20,
-    "preload_id": "preload-5729a2c1509ce8ec49e3",
-    "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-5729a2c1509ce8ec49e3.json",
+    "preload_id": "preload-3e35f4369f3a799cb100",
+    "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3e35f4369f3a799cb100.json",
     "preload_unseen_result_count": 20,
     "provider": "semantic_scholar",
-    "seed_canonical_id": "arXiv:2401.09670",
-    "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-    "take_path": ".survey/work-queue/discovery-preload/claims/preload-5729a2c1509ce8ec49e3.json",
-    "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-5729a2c1509ce8ec49e3.json",
+    "seed_canonical_id": "arXiv:2303.06865",
+    "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+    "take_path": ".survey/work-queue/discovery-preload/claims/preload-3e35f4369f3a799cb100.json",
+    "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-3e35f4369f3a799cb100.json",
     "target_unseen": 20
   },
   "fallback_start_allowed": true,
-  "generated_at": "2026-09-24T13:52:17+00:00",
+  "frontier_auto_reserve": true,
+  "generated_at": "2026-09-24T14:01:49+00:00",
   "idle_gap_guard": {
     "passive_wait_forbidden": true,
-    "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock; if the primary backward packet is absent, start the published fixed-source schema-v3 fallback and, when discovery_start_lookahead is present, start the prepared forward lookahead candidate evaluation immediately while canonical precheck/run-state results proceed asynchronously."
+    "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock. A direct Discovery take automatically reserves a bounded same-run work frontier before its formal precheck becomes the only visible activity; evaluate the already published cached candidates while canonical precheck/run-state results proceed. If the primary backward packet is absent, start the published fixed-source schema-v3 fallback and use discovery_start_frontier for immediate cached candidate work."
   },
   "lane_available": {
     "discovery": true,
@@ -4267,7 +4290,7 @@
     ]
   },
   "route_guard_band": 0,
-  "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed requires prepared stock for the fresh invocation's primary route (backward for Discovery), rather than unrelated forward/normal stock; zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. zero_wait_content_start_allowed distinguishes merely starting an asynchronous fallback from having cached candidate work available now. When the backward packet is absent, issue discovery_fallback immediately and, if discovery_start_lookahead is present, reserve its forward PRECHECKED packet and evaluate cached candidates without waiting for run-state; formal submission remains gated by each run-specific schema-v3 precheck/receipt.",
+  "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed requires prepared stock for the fresh invocation's primary route (backward for Discovery), rather than unrelated forward/normal stock; zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. zero_wait_content_start_allowed distinguishes merely starting an asynchronous fallback from having cached candidate work available now. discovery_start_frontier publishes up to two additional productive packets beside the primary packet; the first direct take causes the Discovery precheck lane to reserve enough same-run packets to keep a bounded three-round frontier populated before formal results settle. When the backward packet is absent, issue discovery_fallback immediately and use discovery_start_frontier for cached candidate evaluation without waiting for run-state; formal submission remains gated by each run-specific schema-v3 precheck/receipt.",
   "schema_version": 1,
   "suggested_work_mode": "discovery",
   "zero_wait_content_start_allowed": true,
