@@ -1199,6 +1199,98 @@ def _reserved_discovery_frontier(
     return rows
 
 
+def _pending_discovery_direct_result(
+    claim: dict[str, Any],
+    *,
+    reserved_frontier: list[dict[str, Any]] | None = None,
+    processed_at: str | None = None,
+    early_ack: bool = False,
+) -> dict[str, Any]:
+    frontier = list(reserved_frontier or [])
+    value = {
+        "schema_version": 1,
+        "operation": "direct_take_discovery",
+        "ok": True,
+        "preload_id": claim["preload_id"],
+        "request_id": claim["request_id"],
+        "worker_id": claim["worker_id"],
+        "run_key": claim["run_key"],
+        "status": "precheck_pending",
+        "work_start_allowed": True,
+        "submission_allowed": False,
+        "preload_result_path": str(claim.get("preload_result_path") or ""),
+        "formal_precheck_result_path": (
+            PRECHECK_RESULTS / f"{claim['request_id']}.json"
+        ).as_posix(),
+        "frontier_target": DISCOVERY_FRONTIER_TARGET,
+        "reserved_frontier": frontier,
+        "frontier_work_available": bool(frontier),
+        "processed_at": processed_at or _iso(_utcnow()),
+    }
+    if early_ack:
+        value["early_ack"] = True
+    return value
+
+
+def acknowledge_discovery_takes(repo_root: Path) -> dict[str, Any]:
+    """Publish a lightweight direct-take result before formal precheck work."""
+    root = Path(repo_root).resolve()
+    claim_root = root / DISCOVERY_CLAIMS
+    result_root = root / DIRECT_DISCOVERY_RESULTS
+    result_root.mkdir(parents=True, exist_ok=True)
+    created = reused = failures = 0
+
+    for path in sorted(claim_root.glob("*.json")) if claim_root.is_dir() else []:
+        raw = _read(path, {})
+        if not isinstance(raw, dict) or not (
+            raw.get("direct_take") is True
+            or raw.get("operation") == "direct_take_discovery"
+        ):
+            continue
+        direct_result = result_root / path.name
+        if direct_result.exists():
+            reused += 1
+            continue
+        try:
+            claim = _normalize_direct_discovery_claim(path, raw)
+            entry = _read(root / DISCOVERY_ENTRIES / f"{claim['preload_id']}.json", {})
+            if not isinstance(entry, dict) or entry.get("preload_id") != claim["preload_id"]:
+                raise ValueError("Discovery preload entry is missing")
+            bank = str(claim.get("discovery_bank") or "").lower()
+            if bank not in BANK_IDS:
+                raise ValueError("direct Discovery take requires a valid discovery_bank")
+            slot_path = str(claim.get("discovery_slot_path") or "")
+            if slot_path != discovery_slot_path(bank):
+                raise ValueError("direct Discovery take slot path does not match its bank")
+            _write(
+                direct_result,
+                _pending_discovery_direct_result(
+                    claim,
+                    reserved_frontier=[],
+                    early_ack=True,
+                ),
+            )
+            created += 1
+        except Exception as exc:
+            failures += 1
+            _write(
+                direct_result,
+                {
+                    "schema_version": 1,
+                    "operation": "direct_take_discovery",
+                    "ok": False,
+                    "preload_id": path.stem,
+                    "status": "recovery_required",
+                    "work_start_allowed": False,
+                    "submission_allowed": False,
+                    "error": f"{type(exc).__name__}: {exc}",
+                    "processed_at": _iso(_utcnow()),
+                    "early_ack": True,
+                },
+            )
+    return {"created": created, "reused": reused, "failures": failures}
+
+
 def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
     root = Path(repo_root).resolve()
     claim_root = root / DISCOVERY_CLAIMS
@@ -1252,30 +1344,21 @@ def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
                 raise ValueError("direct Discovery take slot path does not match its bank")
 
             reserved_frontier = _reserved_discovery_frontier(root, claim)
-            if not direct_result.exists():
-                _write(
-                    direct_result,
-                    {
-                        "schema_version": 1,
-                        "operation": "direct_take_discovery",
-                        "ok": True,
-                        "preload_id": claim["preload_id"],
-                        "request_id": claim["request_id"],
-                        "worker_id": claim["worker_id"],
-                        "run_key": claim["run_key"],
-                        "status": "precheck_pending",
-                        "work_start_allowed": True,
-                        "submission_allowed": False,
-                        "preload_result_path": str(claim.get("preload_result_path") or ""),
-                        "formal_precheck_result_path": (
-                            PRECHECK_RESULTS / f"{claim['request_id']}.json"
-                        ).as_posix(),
-                        "frontier_target": DISCOVERY_FRONTIER_TARGET,
-                        "reserved_frontier": reserved_frontier,
-                        "frontier_work_available": bool(reserved_frontier),
-                        "processed_at": _iso(_utcnow()),
-                    },
-                )
+            existing_direct = _read(direct_result, {})
+            if not isinstance(existing_direct, dict):
+                existing_direct = {}
+            if existing_direct.get("status") in {None, "precheck_pending"}:
+                desired_direct = {
+                    **existing_direct,
+                    **_pending_discovery_direct_result(
+                        claim,
+                        reserved_frontier=reserved_frontier,
+                        processed_at=str(existing_direct.get("processed_at") or "") or None,
+                    ),
+                }
+                if existing_direct.get("early_ack") is True:
+                    desired_direct["early_ack"] = True
+                _write(direct_result, desired_direct)
 
             if precheck_result_path.exists():
                 reused += 1
@@ -1374,6 +1457,7 @@ def main() -> int:
     sub.add_parser("refresh")
     sub.add_parser("process-research")
     sub.add_parser("finalize-research")
+    sub.add_parser("acknowledge-discovery")
     sub.add_parser("materialize-discovery")
     sub.add_parser("finalize-discovery")
     args = parser.parse_args()
@@ -1384,6 +1468,8 @@ def main() -> int:
         result = process_research_takes(args.repo_root)
     elif args.command == "finalize-research":
         result = finalize_research_takes(args.repo_root)
+    elif args.command == "acknowledge-discovery":
+        result = acknowledge_discovery_takes(args.repo_root)
     elif args.command == "materialize-discovery":
         result = materialize_discovery_prechecks(args.repo_root)
     elif args.command == "finalize-discovery":
