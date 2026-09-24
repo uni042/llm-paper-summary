@@ -27,6 +27,8 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn("changed-run-state-results.txt", text)
         self.assertIn(".survey/work-queue/discovery-precheck", text)
         self.assertIn(".survey/work-queue/discovery-preload", text)
+        self.assertIn(".survey/work-queue/direct-take-results", text)
+        self.assertIn(".survey/work-queue/hot-dispatch.json", text)
         self.assertIn("group: survey-claim-main", text)
         self.assertIn("recomputing unsettled requests from latest main", text)
         self.assertIn("periodic recovery will retry unsettled requests", text)
