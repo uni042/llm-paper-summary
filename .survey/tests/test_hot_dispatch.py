@@ -99,7 +99,52 @@ class HotDispatchTests(unittest.TestCase):
             self.assertTrue(index["direct_start_allowed"])
             self.assertEqual(index["research"][0]["claim_id"], claim_id)
             self.assertEqual(index["research"][0]["job"]["title"], "Hot paper")
-            self.assertEqual(index["discovery"]["backward"][0]["preload_id"], "preload-hot")
+            research_contract = index["research"][0]["direct_take_contract"]
+            self.assertTrue(research_contract["create_only"])
+            self.assertEqual(
+                research_contract["payload_base"]["operation"],
+                "direct_take_research",
+            )
+            self.assertEqual(
+                set(research_contract["required_runtime_fields"]),
+                {
+                    "request_id",
+                    "worker_id",
+                    "scheduled_slot",
+                    "run_key",
+                    "actual_invocation_start",
+                    "requested_at",
+                },
+            )
+            discovery_packet = index["discovery"]["backward"][0]
+            self.assertEqual(discovery_packet["preload_id"], "preload-hot")
+            discovery_contract = discovery_packet["direct_take_contract"]
+            self.assertTrue(discovery_contract["create_only"])
+            self.assertEqual(
+                discovery_contract["payload_base"]["operation"],
+                "direct_take_discovery",
+            )
+            self.assertTrue(discovery_contract["payload_base"]["direct_take"])
+            self.assertEqual(
+                discovery_contract["payload_base"]["preload_id"],
+                "preload-hot",
+            )
+            self.assertEqual(
+                discovery_contract["payload_base"]["work_mode_at_start"],
+                "discovery",
+            )
+            self.assertEqual(
+                set(discovery_contract["required_runtime_fields"]),
+                {
+                    "request_id",
+                    "worker_id",
+                    "scheduled_slot",
+                    "run_key",
+                    "actual_invocation_start",
+                    "claimed_at",
+                    "lease_expires_at",
+                },
+            )
             self.assertTrue((root / hot_dispatch.INDEX).is_file())
 
     def test_index_exposes_same_worker_active_claim_for_zero_wait_resume(self):
