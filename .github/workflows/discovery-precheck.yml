@@ -97,6 +97,44 @@ jobs:
             rm -rf /tmp/discovery-identities
             rm -f /tmp/discovery-rejections.json
 
+            # Reuse the durable exclusion snapshot whenever none of its semantic
+            # inputs changed since the source commit recorded in the manifest.
+            # Transport-only commits should not force a full ~1.8k-paper rebuild.
+            snapshot_source="$(
+              python - <<'PY'
+import json
+from pathlib import Path
+p = Path('.survey/work-queue/discovery-identities/_manifest.json')
+try:
+    value = json.loads(p.read_text(encoding='utf-8'))
+    print(str(value.get('source_commit') or ''))
+except Exception:
+    print('')
+PY
+            )"
+            reuse_snapshot=0
+            if [ -n "$snapshot_source" ] \
+              && [ -f .survey/work-queue/discovery-rejections.json ] \
+              && git cat-file -e "$snapshot_source^{commit}" 2>/dev/null \
+              && git merge-base --is-ancestor "$snapshot_source" HEAD \
+              && git diff --quiet "$snapshot_source"..HEAD -- \
+                   .survey/work-queue/jobs \
+                   .survey/work-queue/submissions \
+                   .survey/survey-state/paper-identity-index.json \
+                   .survey/survey-state/identity-deltas \
+                   papers \
+                   .survey/scripts/build_discovery_identity_snapshot.py \
+                   .survey/scripts/build_discovery_rejection_ledger.py \
+                   .survey/scripts/paper_identity.py \
+                   .survey/scripts/represented_paper_index.py \
+                   .survey/scripts/queue_worker.py \
+                   .survey/scripts/survey.py; then
+              cp -a .survey/work-queue/discovery-identities /tmp/discovery-identities
+              cp .survey/work-queue/discovery-rejections.json /tmp/discovery-rejections.json
+              reuse_snapshot=1
+              echo "Reuse durable Discovery exclusion snapshot from $snapshot_source."
+            fi
+
             # Keep a background stock of pre-run Discovery windows. New worker
             # requests are still processed before these preload requests below.
             if [ "$GITHUB_EVENT_NAME" != "push" ] && { [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; }; then
@@ -106,13 +144,15 @@ jobs:
             else
               echo 'Skip preload top-up before foreground push processing; publish worker result first.'
             fi
-            python .survey/scripts/build_discovery_identity_snapshot.py \
-              --root .survey \
-              --output /tmp/discovery-identities \
-              --source-commit "$(git rev-parse HEAD)"
-            python .survey/scripts/build_discovery_rejection_ledger.py \
-              --root .survey \
-              --output /tmp/discovery-rejections.json
+            if [ "$reuse_snapshot" -ne 1 ]; then
+              python .survey/scripts/build_discovery_identity_snapshot.py \
+                --root .survey \
+                --output /tmp/discovery-identities \
+                --source-commit "$(git rev-parse HEAD)"
+              python .survey/scripts/build_discovery_rejection_ledger.py \
+                --root .survey \
+                --output /tmp/discovery-rejections.json
+            fi
 
             mapfile -t all_requests < <(
               find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
