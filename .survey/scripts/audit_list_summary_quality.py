@@ -15,8 +15,8 @@ from list_summary import (
     DEFAULT_MAX_CHARS,
     DEFAULT_MIN_CHARS,
     audit_list_summary,
-    compact_list_summary,
 )
+from paper_audit_scope import PAPER_AUDIT_BASELINE, added_paper_paths
 
 PAPER_FAMILIES = ("inference", "training", "survey")
 MOVED_RE = re.compile(r"^#\s+Moved(?:\s|$)", re.I | re.M)
@@ -50,16 +50,20 @@ def is_paper(path: Path, body: str) -> bool:
 
 
 def audit_file(path: Path, repo_root: Path) -> Result:
-    meta, body = front(path)
-    summary = compact_list_summary(body, str(meta.get("summary") or ""))
+    meta, _ = front(path)
+    value = meta.get("list_summary")
+    summary = value.strip() if isinstance(value, str) else ""
     quality = audit_list_summary(summary)
+    failures = list(quality.failures)
+    if not summary:
+        failures.insert(0, "frontmatter list_summary is required")
     return Result(
         path=path.relative_to(repo_root).as_posix(),
-        status=quality.status,
+        status="FAIL" if failures else quality.status,
         summary=summary,
         char_count=quality.char_count,
         japanese_ratio=quality.japanese_ratio,
-        failures=quality.failures,
+        failures=failures,
         warnings=quality.warnings,
     )
 
@@ -77,7 +81,7 @@ def markdown_report(results: list[Result]) -> str:
         f"- 長さ: {DEFAULT_MIN_CHARS}〜{DEFAULT_MAX_CHARS}文字",
         "- 日本語比率: 70%未満は不合格、80%未満は警告",
         "- 日本語化できる英語専門語、改行、URL、Markdown断片は不合格",
-        "- 正規経路ではresearch workerが作成したタイトル直下の一覧専用解説を使用し、専用解説がない既存ページだけ概要から互換生成",
+        "- frontmatterの明示的なlist_summaryだけを監査し、本文・summaryから生成しない",
         "",
         "## 基準未達",
         "",
@@ -104,6 +108,7 @@ def markdown_report(results: list[Result]) -> str:
 def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo-root", default=".")
+    ap.add_argument("--baseline-commit", default=PAPER_AUDIT_BASELINE)
     ap.add_argument("--markdown-out")
     ap.add_argument("--json-out")
     ap.add_argument("--no-fail-exit", action="store_true")
@@ -114,14 +119,14 @@ def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
     results: list[Result] = []
-    for family in PAPER_FAMILIES:
-        root = repo_root / "papers" / family
-        if not root.exists():
+    added = added_paper_paths(repo_root, args.baseline_commit)
+    for relative in sorted(added):
+        path = repo_root / relative
+        if not path.exists():
             continue
-        for path in sorted(root.rglob("*.md")):
-            meta, body = front(path)
-            if is_paper(path, body):
-                results.append(audit_file(path, repo_root))
+        meta, body = front(path)
+        if is_paper(path, body):
+            results.append(audit_file(path, repo_root))
 
     report = markdown_report(results)
     if args.markdown_out:
@@ -145,7 +150,8 @@ def main() -> int:
                         "warn_japanese_ratio": 0.80,
                         "bare_english_terms_allowed": 0,
                         "worker_authored_preferred": True,
-                        "legacy_overview_fallback": True,
+                        "legacy_overview_fallback": False,
+                        "baseline_commit": args.baseline_commit,
                     },
                     "results": [asdict(r) for r in results],
                 },
