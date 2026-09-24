@@ -195,6 +195,42 @@ def _candidate_inventory(root: Path) -> int:
     return max(int(research.get("ready", 0) or 0), 0) + max(int(audit.get("ready", 0) or 0), 0)
 
 
+def _latest_discovery_completion(
+    root: Path,
+    *,
+    as_of: dt.datetime,
+) -> dt.datetime | None:
+    latest: dt.datetime | None = None
+    folder = root / ".survey/work-queue/jobs"
+    if not folder.is_dir():
+        return None
+    for path in folder.glob("*.json"):
+        value = _read(path, {})
+        if (
+            not isinstance(value, dict)
+            or value.get("type") != "discovery"
+            or value.get("status") != "completed"
+        ):
+            continue
+        completed = _time(value.get("completed_at"))
+        if completed is None or completed > as_of:
+            continue
+        if latest is None or completed > latest:
+            latest = completed
+    return latest
+
+
+def _discovery_age_seconds(
+    root: Path,
+    *,
+    as_of: dt.datetime,
+) -> int | None:
+    latest = _latest_discovery_completion(root, as_of=as_of)
+    if latest is None:
+        return None
+    return max(0, int((as_of - latest).total_seconds()))
+
+
 def _frozen_route(root: Path, run_key: str) -> tuple[int, str] | None:
     rows: list[tuple[str, int, str]] = []
     roots = (
@@ -1425,6 +1461,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             run_state_cache.update_claims(root, request, claims)
     else:
         frozen = _frozen_route(root, request["run_key"])
+        discovery_age_seconds = _discovery_age_seconds(root, as_of=started_at)
         direct_inventory = request.get("candidate_inventory_at_start")
         direct_mode = request.get("work_mode_at_start")
         recovered_mode = request.get("recovered_work_mode_at_start")
@@ -1461,8 +1498,18 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             route_source = "research_preflight_recovery"
         else:
             inventory = _candidate_inventory(root)
-            work_mode = "research" if inventory >= claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD else "discovery"
-            route_source = "canonical_inventory"
+            work_mode = claim_window_policy.select_work_mode(
+                inventory,
+                discovery_age_seconds=discovery_age_seconds,
+            )
+            route_source = (
+                "discovery_freshness_override"
+                if claim_window_policy.discovery_refresh_due(
+                    inventory,
+                    discovery_age_seconds=discovery_age_seconds,
+                )
+                else "canonical_inventory"
+            )
 
         attempts = _run_attempts(root, request["worker_id"], started_at)
         submission = _run_submission_state(root, attempts, started_at)
@@ -1844,6 +1891,11 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "candidate_inventory": inventory,
         "work_mode": work_mode,
         "route_source": route_source,
+        "discovery_age_at_route_seconds": _discovery_age_seconds(root, as_of=started_at),
+        "discovery_refresh_due_at_route": claim_window_policy.discovery_refresh_due(
+            inventory,
+            discovery_age_seconds=_discovery_age_seconds(root, as_of=started_at),
+        ),
         "route_recovery_source": request.get("route_recovery_source") or None,
         "candidate_inventory_at_start_exact": not bool(request.get("route_recovery_source")),
         "runtime_condition_requested": requested_runtime,
