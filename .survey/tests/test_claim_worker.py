@@ -283,5 +283,31 @@ class ClaimWorkerTests(unittest.TestCase):
             self.assertEqual(second["assignments"][0]["pipeline_role"], "foreground")
             self.assertEqual(second["assignments"][-1]["pipeline_role"], "standby")
 
+
+    def test_scheduled_chat_claim_window_reserves_one_audit_per_three_when_available(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            for index in range(12):
+                job(root, f"job-r{index}", priority=200 - index, kind="research")
+            for index in range(4):
+                job(root, f"job-a{index}", priority=20 - index, kind="audit", lane="audit")
+            request(
+                root,
+                "req-audit-fairness",
+                worker="scheduled-chat-00",
+                worker_kind="scheduled_chat",
+                lease=5400,
+            )
+            claim_worker.process_requests(root, at=AT)
+            result = json.loads(
+                (root / ".survey/work-queue/claim-results/req-audit-fairness.json").read_text()
+            )
+            self.assertEqual(result["active_claim_count"], 12)
+            kinds = [item["kind"] for item in result["assignments"]]
+            self.assertEqual([kinds[index] for index in (2, 5, 8, 11)], ["audit"] * 4)
+            for start in range(0, 12, 3):
+                self.assertIn("audit", kinds[start:start + 3])
+
+
 if __name__ == "__main__":
     unittest.main()
