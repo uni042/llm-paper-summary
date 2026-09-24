@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-preload-886ad02757673f91debfda1d",
-  "job_id": "job-research-df8b6eaefcbe8aad",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-886ad02757673f91debfda1d",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-886ad02757673f91debfda1d","job_id":"job-research-df8b6eaefcbe8aad","data":{"overview":"分類5データセットでβ=0.3のRecServeはCloudServeよりaccuracyを0.46〜1.51ポイント程度落とす一方、総通信量を半分以下へ削減し、同程度の通信域ではCasServeより高精度となる。例えばIMDBは93.74%/29.22MBでCasServe setting2の93.32%/30.70MB、CloudServeの94.25%/60.82MBに対し優位なtrade-offを示す。翻訳でもWMT19 β=0.3でBLEU 26.85、449.06KBとなり、CasServeの25.75/503.30KB、ColServeの26.52/557.26KBを同時に上回る。","key_results":[{"metric":"IMDB accuracy/通信量","value":"93.74% / 29.22MB","baseline":"CloudServe 94.25% / 60.82MB; CasServe 93.32% / 30.70MB","condition":"RecServe β=0.3","interpretation":"cloud品質へ0.51ptまで近づきつつ通信を約52%削減し、固定cascadeより精度・通信の双方で改善。"},{"metric":"Yelp Polarity accuracy/通信量","value":"96.06% / 24.78MB","baseline":"CloudServe 96.54% / 51.80MB","condition":"RecServe β=0.3","interpretation":"0.48ptのaccuracy差で通信を約52%削減。"},{"metric":"WMT19 BLEU/通信量","value":"26.85 / 449.06KB","baseline":"CasServe 25.75 / 503.30KB; ColServe 26.52 / 557.26KB","condition":"RecServe β=0.3","interpretation":"生成taskでも固定threshold/確率routingより高品質かつ低通信。"},{"metric":"理論通信比","value":"β(1+β)","baseline":"CloudServe=1","condition":"3-tier近似","interpretation":"β<(√5−1)/2≈0.618なら理論上cloud-onlyより通信効率が高い。"}],"negative_results":"βを0.1から0.5へ上げるとIMDB accuracyは約92.3%から94.2%へ上がる一方、通信量は10MB未満から50MB超へ増えるため、品質改善は無償ではない。queue容量kは300以降でaccuracy改善が飽和し、1000以上では約92.35%付近でほぼ変わらない。CloudServeが最高accuracy/BLEUとなるdatasetも多く、RecServeの目的は最高品質単独ではなく通信とのPareto改善である。","interpretation":"履歴分位点はconfidenceの絶対calibrationを避けつつ、βを『上位tierへ送る難しい割合』に近い操作量へ変換する。実験ではこの単一ノブで多数の固定threshold設定より良いprecision-communication frontierを得ており、入力分布が変わる環境での運用簡素化が主要価値である。","quality_impact":"小βでは多くを下位modelで返すため品質が下がり、大βではcloud近似品質へ寄る。したがってlosslessな推論最適化ではなく、通信量とservice qualityの明示的trade-offである。"},"reservation":{"claim_id":"claim-preload-886ad02757673f91debfda1d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
