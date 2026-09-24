@@ -186,7 +186,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     discovery_submission_result_pending = bool(getattr(args, "discovery_submission_result_pending", False))
     discovery_evaluation_pending = bool(getattr(args, "discovery_evaluation_pending", False))
     discovery_recovery_required = bool(getattr(args, "discovery_recovery_required", False))
-    discovery_pipeline_work_available = bool(\n        getattr(args, "discovery_pipeline_work_available", False)\n    )\n    discovery_round_in_progress = bool(
+    discovery_pipeline_work_available = bool(
+        getattr(args, "discovery_pipeline_work_available", False)
+    )
+    discovery_round_in_progress = bool(
         discovery_precheck_result_pending
         or discovery_submission_result_pending
         or discovery_evaluation_pending
@@ -532,7 +535,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "discovery_submission_result_pending": discovery_submission_result_pending,
         "discovery_evaluation_pending": discovery_evaluation_pending,
         "discovery_recovery_required": discovery_recovery_required,
-        "discovery_pipeline_work_available": discovery_pipeline_work_available,\n        "discovery_round_in_progress": discovery_round_in_progress,
+        "discovery_pipeline_work_available": discovery_pipeline_work_available,
+        "discovery_round_in_progress": discovery_round_in_progress,
         "discovery_wait_action": discovery_wait_action,
         "discovery_wait_seconds": discovery_wait_seconds,
         "next_action_message": next_action_message,
@@ -619,7 +623,8 @@ def main() -> int:
     ap.add_argument("--discovery-submission-result-pending", type=yn, default=False)
     ap.add_argument("--discovery-evaluation-pending", type=yn, default=False)
     ap.add_argument("--discovery-recovery-required", type=yn, default=False)
-    ap.add_argument("--discovery-pipeline-work-available", type=yn, default=False)\n    ap.add_argument("--write-failed", type=yn, default=False)
+    ap.add_argument("--discovery-pipeline-work-available", type=yn, default=False)
+    ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
     ap.add_argument("--seconds-to-run-deadline", type=int, default=None)
     ap.add_argument("--seconds-to-next-scheduled-task", type=int, default=None)
