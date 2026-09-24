@@ -4,10 +4,16 @@
   "slot": "problem_method",
   "attempt_id": "attempt-preload-bf0d9a75a0f968eb0a3957d7",
   "job_id": "job-research-d7f908e39f78ffc5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-bf0d9a75a0f968eb0a3957d7",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "production agentでは同じRAG、tool-calling、multi-agent論理を、顧客へ即時応答するreal-time path、数分かかっても再開可能であるべきbackground path、数十万件を安価に処理するoffline batch pathで使いたい。しかし一般的なagent frameworkはLLM呼び出しを通常関数として隠し、workflowを一つのruntimeのblocking semanticsへ結合する。real-time向けloopをそのままbatchへ持ち込むと独立invocationを一括送信できず、公開価格で安価なbatch inference APIも使えない。逆にruntimeごとにworkflowを書き直すとprompt、tool、分岐、反復が分岐してproductionとevaluationのbehavior driftが起きる。Rufusではこれを数百万顧客規模と多数tool endpointを持つ実運用上の移植性問題として扱う。",
+    "novelty": "中心的な新規性は、workflow定義とexecution substrateを分離するため、agent logicを小さな型付きdataflow combinator集合で表現し、LLM inferenceをopaque functionではなくbinding compilerが意味を変更できるfirst-class nodeにする点である。同じimmutable graphをLocal、SWF、Flinkへcompileし、Localでは同期streaming、SWFではdurable activityとretry、Flinkではinvocation stateをsuspendして複数要求をbatch APIへ集約する。任意I/Oやruntime graph mutationを許さずinterfaceを制限することで、異なるfailure/latency semanticsを持つsubstrate間でもfunctional equivalenceを検証可能にする。",
+    "method_overview": "開発者はJavaの型安全combinator APIまたはGraalVM上のhot-reload可能JavaScript DSLでworkflowを書く。両front-endはsource、map、infer、iterate、compose、branch、parallelBranchなどの同じ小さなoperator集合から不変のdataflow graphを生成する。prompt組立やtool dispatchはmap、ReAct loopはiterate、sub-agent委譲はcompose、routingやspecialist fan-outはbranch系で表し、LLM呼び出しだけはinferとして明示する。\n\nBinderはgraphを走査し、選択したsubstrateごとのBoundGraphへ変換する。Localではnodeを呼出thread上で直接実行し、inferがBedrockからtokenをstreamする。SWFではnodeをactivity taskへ変換し、deciderがretryと進行をdurable event historyへ記録する。FlinkではnodeをDataStream operatorへ変換するが、長時間inferでoperator threadをblockしない。invocation stateをkeyed stateへ保存してsuspendし、SQSへ推論要求をoffloadする。共有inference serviceが複数invocationを集めBedrock Batchへ提出し、返却結果をinvocation IDで対応付けてFlink stateをresumeする。tool callも@Offloadableなら別worker poolへ送る。これによりworkflow codeを変えず、latency重視、durability重視、throughput/cost重視のexecution strategyをbinding側で選べる。",
+    "components": [
+      {"name": "型付きデータフローDSL", "description": "workflowを任意のruntime callback群ではなく、map、infer、iterate、compose、branch、parallelBranchなど制限されたcombinatorで構成する。Java APIはcompile-time type checkを提供し、JavaScript DSLはrapid iterationを可能にするが、どちらも同じimmutable graphへ落ちるためauthoring languageがexecution semanticsを変えない。\n\n制限は移植性のための意図的な設計である。arbitrary I/Oやruntime graph mutationをworkflow本体へ許すと、Localでは可能でもFlink/SWFで同じ意味を保証できない。side effectをtoolへ隔離し、orchestrationをgraphへ限定することで、同一workflowを異なるsubstrateへcompileできる境界を明確にする。"},
+      {"name": "推論の一級ノード化", "description": "通常のframeworkがLLM callをinvoke(fn)のようなopaque blocking functionとして扱うと、runtimeはその中身が高コスト・stateless・asynchronous submission可能であることを知らない。GLMではなく本基盤はinfer nodeとして明示し、binding compilerが実行戦略を差し替えられるようにする。\n\nLocalはstreaming responseを即座に顧客へ返し、SWFはactivityとしてdurable retryし、Flinkは独立invocationからのinfer requestを共通queueへ集約してbatch APIへ送る。特にcross-invocation batchingは一つのworkflow instanceだけを見るdurable engineでは作りにくく、推論をgraph primitiveとして外へ露出することで初めて可能になる。"},
+      {"name": "三種のbinding compiler", "description": "Local bindingは最小overheadとTTFTを優先し、各nodeを同期実行してtokenをprogressive deliveryする。SWF bindingは各nodeをactivity taskへし、decision history、retry、long wait後のresumeを得るため、deep researchなどminutes-scale background workへ適する。\n\nFlink bindingはthroughputとcostを優先し、operatorをblockせずkeyed stateへ中断状態を保存する。SQSへ推論をoffloadし、inference serviceが複数invocationをまとめてBedrock Batchへ送り、response correlation後にgraphを再開する。これによりproduction workflow definitionをそのままevaluation、regression、cache generationへ利用できる。"}
+    ],
+    "system_design": "control planeはagent configuration、registration、lifecycleを三bindingで共有し、developerが作ったbinding-agnostic graphだけを正本とする。request開始時に目的のexecution modeを選び、binderがgraph nodeをsubstrate-native operationへ変換する。Localはcustomer-facing streamを保ち、SWFはdurable event historyを残し、Flinkは多数invocationのstateを分散保持する。\n\nFlinkでinferに到達すると現在stateをcheckpointしてqueueへ要求を出し、別inference serviceがbatchを形成する。完了通知に含まれるIDで元stateを復元し次nodeへ進むため、数時間のprovider batch schedulingでもFlink worker threadを占有しない。failure semanticsは完全には統一せず、correlation timeoutやpartial batch resultなどsubstrate固有の失敗はbinding側で扱う。time-sensitive tool outputのように実行時刻そのものが意味を変える場合はfunctional portabilityの外側として明示する。"
+  },
+  "reservation": {"claim_id": "claim-preload-bf0d9a75a0f968eb0a3957d7", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
