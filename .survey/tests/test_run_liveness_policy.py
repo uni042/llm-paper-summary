@@ -86,14 +86,17 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("enabled状態は維持", router)
         self.assertIn("将来runのスケジュール停止を意味しない", router)
 
-    def test_final_response_requires_deterministic_permit(self):
+    def test_final_report_is_mandatory_and_not_permit_gated(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
         self.assertIn("run_finalization_gate.py", router)
-        self.assertIn("final response", router)
+        self.assertIn("次の3系統以外を理由に終了してはならない", router)
+        self.assertIn("必ず最終報告を残してから終了する", router)
+        self.assertIn("報告許可として扱わない", router)
         self.assertIn("MAY_FINALIZE", finalization)
         self.assertIn("finalization_permit", finalization)
-        self.assertIn("Final response is forbidden without an issued permit", finalization)
+        self.assertNotIn("required_for_final_response", finalization)
+        self.assertNotIn("Final response is forbidden without an issued permit", finalization)
 
     def test_router_does_not_depend_on_retired_worker_policy_docs(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
