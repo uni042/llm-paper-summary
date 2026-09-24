@@ -75,6 +75,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     }
     discovery_evaluation_pending = bool(getattr(args, "discovery_evaluation_pending", False))
     discovery_recovery_required = bool(getattr(args, "discovery_recovery_required", False))
+    discovery_pipeline_work_available = bool(
+        getattr(args, "discovery_pipeline_work_available", False)
+    )
+    continuation_required_action = str(
+        getattr(args, "continuation_required_action", "") or ""
+    ).strip().upper()
     discovery_round_in_progress = bool(
         pending["discovery_precheck_result"]
         or pending["discovery_submission_result"]
@@ -125,6 +131,25 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         elif not submission_state_checked and not hard_stop:
             next_action = "CHECK_SUBMISSION_STATE"
             wait_seconds = 0
+        elif (
+            continuation_required_action
+            in {
+                "RECOVER_DISCOVERY_SUBMISSION",
+                "CONTINUE_DISCOVERY_ROUND",
+                "CONTINUE_DISCOVERY_PIPELINE",
+            }
+            and not hard_stop
+        ):
+            next_action = continuation_required_action
+            wait_seconds = 0
+        elif (
+            discovery_pipeline_work_available
+            and work_mode == "discovery"
+            and wait_targets
+            and not hard_stop
+        ):
+            next_action = "CONTINUE_DISCOVERY_PIPELINE"
+            wait_seconds = 0
         elif wait_targets and not hard_stop:
             next_action = "RUN_WAIT_MICROTASK_AND_RECHECK"
             wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
@@ -169,6 +194,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         next_action_message = "有効なassignmentの未完了作業を続行し、耐久保存地点まで進めます。"
     elif next_action == "RECOVER_DISCOVERY_SUBMISSION":
         next_action_message = "開始済みDiscovery roundの失敗を正規recovery_stepsで回収し、最終化せず同じroundを完了させます。"
+    elif next_action == "CONTINUE_DISCOVERY_PIPELINE":
+        next_action_message = (
+            "非同期Discovery resultだけを待たず、事前装填済みlookahead roundのcached候補を軽量評価します。"
+            "正式precheckが完了するまでsubmissionは行いません。"
+        )
     elif next_action == "CONTINUE_DISCOVERY_ROUND":
         next_action_message = "成功済みDiscovery precheckの評価・submissionを完了し、開始済みroundを終端まで進めます。"
     elif next_action == "CLAIM_NEXT_RESEARCH_AUDIT":
@@ -214,6 +244,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "discovery_submission_result_pending": pending["discovery_submission_result"],
         "discovery_evaluation_pending": discovery_evaluation_pending,
         "discovery_recovery_required": discovery_recovery_required,
+        "discovery_pipeline_work_available": discovery_pipeline_work_available,
+        "continuation_required_action": continuation_required_action,
         "discovery_round_in_progress": discovery_round_in_progress,
         "next_action_message": next_action_message,
         "progress_notice": progress_notice,
@@ -254,6 +286,8 @@ def main() -> int:
     ap.add_argument("--discovery-submission-result-pending", type=yn, default=False)
     ap.add_argument("--discovery-evaluation-pending", type=yn, default=False)
     ap.add_argument("--discovery-recovery-required", type=yn, default=False)
+    ap.add_argument("--discovery-pipeline-work-available", type=yn, default=False)
+    ap.add_argument("--continuation-required-action", default="")
     ap.add_argument("--hard-stop", type=yn, default=False)
     ap.add_argument("--handoff-safe", type=yn, default=False)
     ap.add_argument(
