@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-preload-27067e88f7585964ab37f6a5",
-  "job_id": "job-research-a725ebe4f1dc359c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-27067e88f7585964ab37f6a5",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"problem_method","attempt_id":"attempt-preload-27067e88f7585964ab37f6a5","job_id":"job-research-a725ebe4f1dc359c","data":{"problem":"175B級LLMはFP16重みだけで300GB超を要し、推論にも複数GPUが必要になる。再学習を伴う低ビット量子化は巨大モデルでは高価で、既存の高精度な後学習量子化も層・重みごとの最適化が重く、数十億〜数百億パラメータへ素直に拡張できない。一方、単純な最近傍丸め(RTN)は175B級まで高速に適用できるが、3〜4bitではperplexityが大きく悪化する。したがって、再学習なし・少量校正データだけで、二次情報を使う高精度量子化を175B級へ数時間で適用し、実際の推論メモリとレイテンシを下げることが課題である。","novelty":"GPTQはOptimal Brain Quantization (OBQ)のHessianベース誤差補償を維持しつつ、巨大行列向けに三つの変更を入れる。第一に、各行で貪欲に別々の重み順序を選ぶ必要性が小さいという観察から全行で同じ固定列順序を使い、Hessian逆行列更新を列ごと1回へ共有する。第二に、128列をブロックとして局所更新を蓄積し、ブロック完了時だけ残り全列へ行列積で反映する遅延バッチ更新でGPUのメモリ帯域律速を緩和する。第三に、逐次的な逆行列更新の数値不安定性を、1% dampingとCholesky分解による必要行の事前計算へ置き換える。これによりOBQ系の二次情報量子化を175B級へ実用時間で拡張した。","method_overview":"各線形層について校正入力XからH=2XX^Tを構成し、量子化後の層出力誤差 ||WX-QX||^2 を小さくする。重み列を固定順序で量子化し、各列の丸め誤差をHessian逆行列情報で未量子化列へ補償する。全行が同じ列順序を使うためHessian更新を共有でき、計算量をO(d_row*d_col^3)からO(max(d_row*d_col^2,d_col^3))へ削減する。128列単位で補償更新をまとめ、ブロック外への更新をGEMM化する。Hessian逆行列はCholesky分解で安定に扱う。モデル全体ではTransformer blockを一つずつGPUへ載せ、既に量子化済みblockを通した実入力を次blockの校正に用いる。推論時は低ビット重みをオンザフライ展開する専用weight-only行列ベクトル積で、読み出し量削減を速度へ変換する。","components":[{"name":"共有固定順序による二次情報量子化","description":"OBQの重みごとの貪欲順序を捨て、全出力行で同一の列順序を用いる。Hessianは入力だけに依存するため逆行列更新を全行で共有でき、巨大層で数桁の計算削減を得る。"},{"name":"遅延バッチ更新","description":"128列ブロック内では必要な局所補償だけを逐次適用し、ブロック終了時に残り列への更新をまとめて行列積として実行する。理論計算量は同じでもGPU利用率を高め、巨大モデルで約1桁の実時間短縮をもたらす。"},{"name":"Cholesky再定式化とdamping","description":"反復的なHessian逆行列更新で生じる不定値化を避けるため、必要な逆Hessian行情報を安定なCholesky分解から得る。平均対角値の1%をdampingとして加える。"},{"name":"逐次block校正","description":"Transformer blockを6層単位でGPUへロードし、量子化後blockの出力を次blockの校正入力にする。全FP16モデルをGPUに保持せず、累積量子化誤差を校正経路へ反映する。"},{"name":"weight-only生成カーネル","description":"3/4bit重みをメモリから読み、必要時にFP16へ動的展開してFP16 activation vectorと積を取る。低batch自己回帰生成の行列ベクトル積がメモリ帯域律速であることを利用し、演算量削減なしでもレイテンシを短縮する。"}],"system_design":"量子化アルゴリズム側では二次情報の精度を維持しながら固定順序・バッチ更新・CholeskyでGPU向けに再構成し、モデル処理側ではblock単位ロードで量子化時メモリを制御する。推論側では圧縮表現を単なる容量削減で終わらせず、weight-only専用カーネルでメモリ転送量削減を実時間短縮へ結び付ける。"},"reservation":{"claim_id":"claim-preload-27067e88f7585964ab37f6a5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
