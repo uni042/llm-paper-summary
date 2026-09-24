@@ -187,6 +187,59 @@ class DirectEvidenceStatusTests(unittest.TestCase):
             self.assertIn("最新観測run: **2026-09-15 18:30 JST**", text)
             self.assertNotIn("最新観測run: **2026-09-16 02:30 JST**", text)
 
+    def test_known_nine_hour_completion_skew_uses_submission_run_identity(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            paper = "papers/inference/job-skew.md"
+            submission = ".survey/work-queue/submissions/research/attempt-skew.json"
+            result = ".survey/work-queue/results/research/attempt-skew.json"
+            _write_json(repo / ".survey/work-queue/jobs/job-skew.json", {
+                "job_id": "job-skew",
+                "type": "research",
+                "status": "completed",
+                "completed_at": "2026-09-24T09:07:25+00:00",
+                "canonical_id": "arXiv:2609.77777",
+                "title": "Clock Skew Paper",
+                "paper_path": paper,
+            })
+            _write_json(repo / submission, {
+                "schema_version": 1,
+                "transport_version": 10,
+                "kind": "research",
+                "attempt_id": "attempt-skew",
+                "job_id": "job-skew",
+                "worker_id": "scheduled-chat-30",
+                "run_key": "scheduled-chat-30-20260924T175541Z-test",
+                "scheduled_slot": "30",
+                "actual_invocation_start": "2026-09-24T17:55:41+00:00",
+                "paper_path": paper,
+            })
+            _write_json(repo / result, {
+                "ok": True,
+                "attempt_id": "attempt-skew",
+                "job_id": "job-skew",
+                "job_type": "research",
+                "job_status": "completed",
+                "artifact": {"paper": paper},
+                "submission": submission,
+                "processed_at": "2026-09-24T09:07:25+00:00",
+            })
+            _write_text(repo / paper, "# paper")
+
+            text = _load(repo).build_dashboard(
+                repo, now=datetime(2026, 9, 24, 18, 20, tzinfo=timezone.utc)
+            )
+
+            self.assertIn(
+                "| 最終検証済みResearch収録 | **09-25 03:07:25 JST** |",
+                text,
+            )
+            self.assertIn("**09-25 03:07:25 JST** [research]", text)
+            self.assertNotIn(
+                "| 最終検証済みResearch収録 | **09-24 18:07:25 JST** |",
+                text,
+            )
+
     def test_active_work_excludes_terminal_claim_and_shows_nonterminal_heartbeat(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
