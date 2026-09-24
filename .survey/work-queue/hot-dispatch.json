@@ -1,5 +1,5 @@
 {
-  "candidate_inventory": 288,
+  "candidate_inventory": 287,
   "direct_start_allowed": true,
   "discovery": {
     "backward": [
@@ -351,7 +351,7 @@
       }
     ]
   },
-  "generated_at": "2026-09-24T04:35:53+00:00",
+  "generated_at": "2026-09-24T04:37:54+00:00",
   "lane_available": {
     "discovery": true,
     "research": true
@@ -3488,83 +3488,6 @@
     ],
     "scheduled-chat-30": [
       {
-        "attempt_id": "attempt-preload-38c87a832a14fb80d3b5b6c4",
-        "claim_id": "claim-preload-38c87a832a14fb80d3b5b6c4",
-        "claim_path": ".survey/work-queue/claims/job-research-2a8c8a978e102c67.json",
-        "claimed_at": "2026-09-24T04:31:11+00:00",
-        "job": {
-          "artifact_transport": "structured_record_v10",
-          "block_history": [
-            {
-              "attempt": 1,
-              "blocked_at": "2026-09-19T15:46:17+00:00",
-              "reason": "一次資料全文取得に使用するウェブ取得系が、このinvocation中に明示的な呼び出し上限へ到達した。前件EFIMのarXiv PDF全文取得完了後、システムから『Too many calls / do not call this tool again』を受領しており、本論文について抄録や検索断片だけから科学的内容を補完しないためblockedとする。"
-            }
-          ],
-          "blocked_attempts": 1,
-          "blocker": "一次資料全文取得に使用するウェブ取得系が、このinvocation中に明示的な呼び出し上限へ到達した。前件EFIMのarXiv PDF全文取得完了後、システムから『Too many calls / do not call this tool again』を受領しており、本論文について抄録や検索断片だけから科学的内容を補完しないためblockedとする。",
-          "canonical_id": "arXiv:2511.01633",
-          "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
-          "created_at": "2026-09-16T19:06:02+00:00",
-          "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-          "job_id": "job-research-2a8c8a978e102c67",
-          "last_blocked_at": "2026-09-19T15:46:17+00:00",
-          "last_recorded_blocked_event": "2026-09-19T15:46:17+00:00",
-          "paper_path": "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md",
-          "parent_job_id": "job-95e9425e7c1dbc3e",
-          "priority": 76,
-          "retry_queued_at": "2026-09-19T17:06:42+00:00",
-          "schema_version": 1,
-          "selection_reason": "multi-agent Graph-CoTとgraph-specific KV management、priority eviction、pipelined executionをco-designし、latency 90.3%削減・throughput最大15.1xを報告。application-specificだがagent workflow servingのsystem実装として隣接価値がある。",
-          "source_url": "https://arxiv.org/abs/2511.01633",
-          "status": "ready",
-          "status_submission": ".survey/work-queue/submissions/research/attempt-e5893e2a1bdb6a4c8b277786.json",
-          "title": "Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving",
-          "type": "research",
-          "workflow_version": 10
-        },
-        "job_id": "job-research-2a8c8a978e102c67",
-        "job_path": ".survey/work-queue/jobs/job-research-2a8c8a978e102c67.json",
-        "kind": "research",
-        "pipeline_order": 1,
-        "pipeline_position": 1,
-        "pipeline_role": "foreground",
-        "record_bank": "af",
-        "record_bank_root": ".survey/work-queue/records/chat-record-af",
-        "record_slot_paths": {
-          "evaluation": ".survey/work-queue/records/chat-record-af/evaluation.json",
-          "metadata": ".survey/work-queue/records/chat-record-af/metadata.json",
-          "positioning": ".survey/work-queue/records/chat-record-af/positioning.json",
-          "problem_method": ".survey/work-queue/records/chat-record-af/problem_method.json",
-          "results": ".survey/work-queue/records/chat-record-af/results.json"
-        },
-        "record_write_allowed": true,
-        "resume_without_new_claim": true,
-        "source_actual_invocation_start": "2026-09-24T04:30:00+00:00",
-        "source_run_key": "scheduled-chat-30-20260924T043000Z-6f2c",
-        "source_scheduled_slot": "30",
-        "source_unavailable_next_action": "WRITE_STATUS_ONLY_BLOCKED_DESCRIPTOR_THEN_CONTINUE_STANDBY",
-        "status_only_allowed_statuses": [
-          "blocked",
-          "deferred",
-          "rejected"
-        ],
-        "status_only_descriptor_base": {
-          "attempt_id": "attempt-preload-38c87a832a14fb80d3b5b6c4",
-          "claim_id": "claim-preload-38c87a832a14fb80d3b5b6c4",
-          "job_id": "job-research-2a8c8a978e102c67",
-          "kind": "research",
-          "schema_version": 1,
-          "transport_version": 10,
-          "worker_id": "scheduled-chat-30"
-        },
-        "status_only_submission_path": ".survey/work-queue/submissions/research/attempt-preload-38c87a832a14fb80d3b5b6c4.json",
-        "stock_bank": "af",
-        "stock_lane": "research",
-        "work_start_allowed": true,
-        "worker_id": "scheduled-chat-30"
-      },
-      {
         "attempt_id": "attempt-preload-54435f3f1e70e6def8dfca02",
         "claim_id": "claim-preload-54435f3f1e70e6def8dfca02",
         "claim_path": ".survey/work-queue/claims/job-research-0023a21511f803e1.json",
@@ -3613,8 +3536,8 @@
         "job_path": ".survey/work-queue/jobs/job-research-0023a21511f803e1.json",
         "kind": "research",
         "pipeline_order": 2,
-        "pipeline_position": 2,
-        "pipeline_role": "standby",
+        "pipeline_position": 1,
+        "pipeline_role": "foreground",
         "record_bank": "f",
         "record_bank_root": ".survey/work-queue/records/chat-record-f",
         "record_slot_paths": {
@@ -3677,7 +3600,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-d7f908e39f78ffc5.json",
         "kind": "research",
         "pipeline_order": 3,
-        "pipeline_position": 3,
+        "pipeline_position": 2,
         "pipeline_role": "standby",
         "record_bank": "h",
         "record_bank_root": ".survey/work-queue/records/chat-record-h",
@@ -3741,7 +3664,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-52b6b5d31a9cc426.json",
         "kind": "research",
         "pipeline_order": 4,
-        "pipeline_position": 4,
+        "pipeline_position": 3,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -3796,7 +3719,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-8590c31aaee62eb7.json",
         "kind": "research",
         "pipeline_order": 5,
-        "pipeline_position": 5,
+        "pipeline_position": 4,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -3851,7 +3774,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-a1311273f29408ef.json",
         "kind": "research",
         "pipeline_order": 6,
-        "pipeline_position": 6,
+        "pipeline_position": 5,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -3906,7 +3829,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-40eb7e0c17cbbe4d.json",
         "kind": "research",
         "pipeline_order": 7,
-        "pipeline_position": 7,
+        "pipeline_position": 6,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -3961,7 +3884,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-36d91dd4e28f7f52.json",
         "kind": "research",
         "pipeline_order": 8,
-        "pipeline_position": 8,
+        "pipeline_position": 7,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -4027,7 +3950,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-0fd0f07b72fe524f.json",
         "kind": "research",
         "pipeline_order": 9,
-        "pipeline_position": 9,
+        "pipeline_position": 8,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -4093,7 +4016,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-fd4788affcd524bb.json",
         "kind": "research",
         "pipeline_order": 10,
-        "pipeline_position": 10,
+        "pipeline_position": 9,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -4159,7 +4082,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-a2179107ad5ddbe2.json",
         "kind": "research",
         "pipeline_order": 11,
-        "pipeline_position": 11,
+        "pipeline_position": 10,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -4192,5 +4115,5 @@
   "route_guard_band": 0,
   "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; if that lane has no packet, fall back to the normal synchronous run-state route.",
   "schema_version": 1,
-  "suggested_work_mode": "research"
+  "suggested_work_mode": "discovery"
 }
