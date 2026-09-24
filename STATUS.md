@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 10:17:48 JST**
+> 自動生成: **2026-09-24 11:09:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **290** |
-| 未claim Research job | **148** |
-| 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-24 09:51:56 JST（25分前）** |
-| 整合性異常 | **1** |
+| 収録候補論文 | **289** |
+| 未claim Research job | **155** |
+| 直近24hの検証済みResearch収録 | **38** |
+| 最終検証済みResearch収録 | **09-24 11:09:35 JST（3秒前）** |
+| 整合性異常 | **0** |
 
 ## 現在の収録候補
 
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **290** |
+| canonical_id確認済みの一意な候補論文 | **289** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **290** |
+| 非終端Research job合計 | **289** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -33,9 +33,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6712** |
+| 構造化references総候補 | **6722** |
 | 処理済み | **657** |
-| 未処理 | **6055** |
+| 未処理 | **6065** |
 | 収録済みとして除外 | **549** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（1時間41分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（2時間33分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **6** | **2** | **0** | **0** | **142** | **0** | — |
+| Research | **7** | **2** | **0** | **0** | **134** | **12** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **6** | **5** | **0** | **3** | **142** | **0** | **6** |
+| 合計 | **7** | **5** | **0** | **3** | **134** | **12** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-24 11:09:35 JST** [research] `arXiv:2609.26061` — TopoCompress: Topology Aware Token Compression Algorithm for Distributed Edge MoE Inference
+  - job: `.survey/work-queue/jobs/job-research-3403bc6819a107c1.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-52cbf286c62b67d46769963d.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-52cbf286c62b67d46769963d.json`
+  - paper: `papers/inference/02-moe-expert-placement-caching/2026-2609.26061-topocompress-topology-aware-token-compression-algorithm-for-distributed-edge-moe-inference.md`
 - **09-24 09:51:56 JST** [research] `arXiv:2502.13189` — MoBA: Mixture of Block Attention for Long-Context LLMs
   - job: `.survey/work-queue/jobs/job-research-09d154c9daf0b638.json`
   - result: `.survey/work-queue/results/research/attempt-preload-f2bb13bd5d0d331fc95b5bd6.json` (`ok=true`)
@@ -160,37 +165,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **0件**
-- `arXiv:2607.04164` — BrownoutMoE: Structure-Aware Expert Grouping for Efficient and Accurate LLM Web-based Services / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1a48a3083b0b1499.json`
-- `arXiv:2603.10087` — Pooling Engram Conditional Memory in Large Language Models using CXL / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1e9597cecaf6ec3b.json`
-- `DOI:10.1109/EEI70303.2026.11640499` — PMKS: Co-Designing Distributed Networking and Multi-Tier Storage for Ultra-Long Context LLM Inference / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1edac6e56714dd58.json`
-- `DOI:10.1109/CCGrid68966.2026.00023` — LLM-Pilot: SLO-Aware and Cost-Efficient LLM Serving on Public Cloud VM Clusters via Offloading / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2efe9f8fbd9f6b33.json`
-- `arXiv:2511.19480` — Exploiting the Experts: Unauthorized Compression in MoE-LLMs / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-372c7ba23950bd0c.json`
-- `arXiv:2602.01519` — You Need an Encoder for Native Position-Independent Caching / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-4044c82745a32e7d.json`
-- `arXiv:2602.06154` — MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-441084dd13b83186.json`
-- `arXiv:2609.21137` — A Multi-Engine Dataflow for MoE Decoding on Scratchpad-Based Tensor Accelerators / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5b8f1951128d6fe2.json`
-- `DOI:10.1109/LCA.2026.3720952` — LLM KV Cache Storage Using CXL Memory / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-5cbec5c2c470e865.json`
-- `DOI:10.1109/TCSI.2026.3692866` — DSLA: An Energy-Efficient Dual-Sparsity LLM Accelerator With HiMix-BFP / worker `shared-preload-pool`
-  - claim: **09-24 10:01:49 JST** / heartbeat: **—** / lease expiry: **09-24 22:01:49 JST**
-  - evidence: `.survey/work-queue/claims/job-research-64f36119defd4883.json`
+- 未失効かつ非terminal jobのclaim: **134件** / 直近15分heartbeat: **12件**
+- `arXiv:2211.10438` — SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-05c9fecf1a5510e9.json`
+- `arXiv:2609.25405` — Efficient Iterative Retrieval with Heterogeneous Batching / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-396b5a1af9f8a040.json`
+- `DOI:10.1016/j.parco.2026.103216` — SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3ef5cc2d28abc041.json`
+- `DOI:10.1145/3770855.3817626` — OrionInfer: Low-Overhead Parallelism Switching and Live Migration for Efficient LLM Serving / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-6be480b73a6003b5.json`
+- `arXiv:2502.08363` — Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-8048d1362e569278.json`
+- `arXiv:2405.13019` — A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-82b8ef403de7a370.json`
+- `arXiv:2607.24260` — KAP: Bridging the Knowledge Selection-Runtime Consumption Gap in LLM Systems / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9c9df371bdbac091.json`
+- `DOI:10.1145/3830086` — CELLServe: An SLO-Aware and Cost Efficient LLMs Serving System for Serverless Computing Environments / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-b374f59330145700.json`
+- `arXiv:2609.25537` — Compressing Long Context into Answer-Aligned Memory Embeddings for LLM Inference / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-bfeff3910941fa95.json`
+- `arXiv:2106.06899` — Memory-efficient Transformers via Top-k Attention / worker `worker-45`
+  - claim: **09-24 11:02:03 JST** / heartbeat: **09-24 11:02:03 JST** / lease expiry: **09-24 12:32:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-e3b684ca3ee98a5c.json`
 
 #### Audit
 
@@ -210,7 +215,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **290** |
+| ready | **289** |
 
 ### 候補の重複・識別情報欠損
 
@@ -230,7 +235,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1008** |
+| inference/training/survey配下の論文Markdown実体 | **1009** |
 
 ### immutable submissionの未照合
 
@@ -259,16 +264,10 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 | 検出項目 | 件数 |
 |---|---:|
 | completed Research jobで指定paper実体なし | **0** |
-| 対応jobなしsubmission（有効Discovery round除外） | **1** |
+| 対応jobなしsubmission（有効Discovery round除外） | **0** |
 | 対応jobなし成功result | **0** |
 | 対応submissionなし成功result | **0** |
-| 異常レコード合計（重複排除） | **1** |
-
-### 対応jobなしsubmissionの診断対象
-
-上の異常件数と同一判定で抽出した耐久submission pathです。診断専用であり、submission/result自体は変更しません。
-
-- `.survey/work-queue/submissions/research/attempt-preload-2f7b9ad4ec70e92c6b0818d3.json`
+| 異常レコード合計（重複排除） | **0** |
 
 ### このSTATUSが採用する証拠
 
