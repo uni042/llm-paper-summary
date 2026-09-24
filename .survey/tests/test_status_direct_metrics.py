@@ -140,7 +140,8 @@ class DirectStatusMetricTests(unittest.TestCase):
             self.assertIn("| 収録候補論文 | **2** |", top)
             self.assertIn("| 未claim Research job | **3** |", top)
             self.assertIn("| 直近24hの検証済みResearch収録 | **1** |", top)
-            self.assertIn("| 最終検証済みResearch収録 | **09-16 08:30:00 JST（30分前）** |", top)
+            self.assertIn("| 最終検証済みResearch収録 | **09-16 08:30:00 JST** |", top)
+            self.assertNotIn("最終検証済みResearch収録 | **09-16 08:30:00 JST（", top)
             # The anomaly total counts unique durable record paths, not matched conditions.
             self.assertIn("| 整合性異常 | **3** |", top)
 
