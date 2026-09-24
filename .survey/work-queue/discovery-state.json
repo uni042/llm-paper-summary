@@ -1,41 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-24T07:08:42+00:00",
+  "updated_at": "2026-09-24T07:10:52+00:00",
   "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-  "last_round": "20260924T070715Z-scheduled-chat-00-a3f91c-r4",
+  "last_round": "20260924T070900Z-scheduled-chat-00-a3f91c-r5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T14:00:00+09:00",
-      "round": "disaggregation-evaluation-4",
-      "axis": "distributed-serving-network-and-disaggregation-gaps",
-      "query_summary": "Disaggregated-serving and KV-transfer search after filtering AFlex, SmartGen, SpectrumKV, Lynx, 3DLS, PrefillShare and other already represented identities; one unrepresented system-evaluation paper remained.",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2608.01891",
-        "arXiv:2607.28150",
-        "arXiv:2606.08635",
-        "arXiv:2607.01831",
-        "arXiv:2607.01617",
-        "arXiv:2602.12029",
-        "arXiv:2401.02669"
-      ],
-      "next_axis_hint": "framework-runtime-kernel-and-batching-gaps",
-      "source_submission": "work-queue/submissions/20260917T1528JST-discovery-disaggregation-evaluation-4.json"
-    },
     {
       "run_key": "2026-09-17T21:00:00+09:00",
       "round": "storage-moe-1",
@@ -9018,6 +8992,44 @@
       "duplicate_ratio": 0.95,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T070900Z-scheduled-chat-00-a3f91c-r5",
+      "precheck_request_id": "20260924T070900Z-scheduled-chat-00-a3f91c-r5",
+      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "round": "20260924T070900Z-scheduled-chat-00-a3f91c-r5",
+      "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
+      "query_summary": "DistServe後方引用の未収録集合から、LLM学習pipeline、resource disaggregation、分散AI runtimeの基礎systemsを採用。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "backward",
+      "seed_canonical_id": "arXiv:2401.09670",
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [
+        "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+        "arXiv:1712.05889"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 0,
+      "post_final_dedupe_count": 0,
+      "duplicate_ratio": 1.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16961,14 +16973,14 @@
     },
     "backward references of DistServe disaggregated prefill-decode LLM serving": {
       "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-      "rounds": 5,
-      "candidate_count": 88,
-      "duplicate_filtered_count": 49,
+      "rounds": 6,
+      "candidate_count": 108,
+      "duplicate_filtered_count": 69,
       "novel_candidate_count": 39,
       "final_duplicate_filtered_count": 0,
       "post_final_dedupe_count": 39,
       "accepted_count": 7,
-      "duplicate_ratio": 0.5568181818181818,
+      "duplicate_ratio": 0.6388888888888888,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
@@ -18434,20 +18446,20 @@
       "citation_direction": "backward",
       "query_family": "citation-first",
       "search_window_key": "window-b6ca12c6ceb5550af9b9",
-      "scan_count": 1,
-      "raw_result_count": 48,
-      "unseen_result_count": 20,
-      "duplicate_filtered_count": 19,
+      "scan_count": 2,
+      "raw_result_count": 96,
+      "unseen_result_count": 40,
+      "duplicate_filtered_count": 40,
       "rejection_filtered_count": 0,
-      "candidate_evaluation_count": 20,
-      "candidate_accepted_count": 2,
+      "candidate_evaluation_count": 40,
+      "candidate_accepted_count": 5,
       "last_position": null,
       "unseen_rate": 0.4166666666666667,
-      "duplicate_rate": 0.3958333333333333,
-      "candidate_acceptance_rate": 0.1,
+      "duplicate_rate": 0.4166666666666667,
+      "candidate_acceptance_rate": 0.125,
       "cooldown": false,
       "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-      "last_round": "20260924T070715Z-scheduled-chat-00-a3f91c-r4"
+      "last_round": "20260924T070900Z-scheduled-chat-00-a3f91c-r5"
     }
   },
   "recent_search_windows": [
@@ -20003,6 +20015,27 @@
       "unseen_rate": 0.4166666666666667,
       "duplicate_rate": 0.3958333333333333,
       "candidate_acceptance_rate": 0.1,
+      "last_position": null
+    },
+    {
+      "topic": "distserve",
+      "source": "semantic_scholar",
+      "date_range": "backward-references",
+      "category": "inference-and-training-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-first",
+      "search_window_key": "window-b6ca12c6ceb5550af9b9",
+      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "round": "20260924T070900Z-scheduled-chat-00-a3f91c-r5",
+      "raw_result_count": 48,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 21,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 3,
+      "unseen_rate": 0.4166666666666667,
+      "duplicate_rate": 0.4375,
+      "candidate_acceptance_rate": 0.15,
       "last_position": null
     }
   ],
