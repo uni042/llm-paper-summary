@@ -1649,26 +1649,6 @@ def process_submissions(st: dict):
         write_json(rp, result)
 
 
-def reconcile_legacy_identity_deltas():
-    """Keep identity deltas complete for historical direct-Markdown completions."""
-    import subprocess
-    seen = set()
-    for j in iter_jobs():
-        if j.get("status") != "completed" or j.get("type") not in {"research", "audit"}:
-            continue
-        paper = j.get("paper_path")
-        if not paper or paper in seen or not (ROOT.parent / paper).exists():
-            continue
-        seen.add(paper)
-        p = subprocess.run(
-            [sys.executable, ".survey/scripts/identity_delta.py", "prepare", "--paper", paper],
-            cwd=ROOT.parent,
-            text=True,
-            capture_output=True,
-        )
-        if p.returncode != 0:
-            raise RuntimeError("identity reconciliation failed for " + paper + ": " + (p.stderr or p.stdout))
-
 
 def maybe_rebuild_views(st):
     import subprocess
@@ -1768,7 +1748,6 @@ def main():
     # Keep a discovery lane available even while research/audit work is ready so the
     # specialist worker can replenish the shared candidate buffer independently.
     ensure_discovery_job()
-    reconcile_legacy_identity_deltas()
     normalize_ready_jobs()
     maybe_rebuild_views(st)
     save_state(st)

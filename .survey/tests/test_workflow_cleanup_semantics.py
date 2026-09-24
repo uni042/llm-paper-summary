@@ -53,6 +53,7 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
         self.assertIn("workflow v10", worker)
         self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)
+        self.assertNotIn("reconcile_legacy_identity_deltas", worker)
 
     def test_worker_router_is_single_worker_policy(self):
         readme = (ROOT / ".survey/docs/survey-workflow/README.md").read_text(encoding="utf-8")
