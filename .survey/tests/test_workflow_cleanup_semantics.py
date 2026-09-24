@@ -37,6 +37,7 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn("normalize_v10_jobs.py", workflow)
         self.assertNotIn("apply_offline_job_seed.py", workflow)
         self.assertNotIn("ensure_dashboard_history.py", workflow)
+        self.assertNotIn("normalize_required_metadata.py", workflow)
         self.assertNotIn("workflow_version': 9", workflow)
 
         validator = (ROOT / ".survey/scripts/assemble_research_record.py").read_text(encoding="utf-8")
@@ -103,6 +104,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             ".survey/scripts/refine_status_observability.py",
             ".survey/scripts/apply_offline_job_seed.py",
             ".survey/scripts/ensure_dashboard_history.py",
+            ".survey/scripts/normalize_required_metadata.py",
+            ".survey/tests/test_normalize_required_metadata.py",
             ".survey/work-queue/transport/offline-job-seed.json",
             ".survey/tests/test_reusable_transport_baseline.py",
             ".survey/tests/test_legacy_scheduled_chat_lease_cap.py",
