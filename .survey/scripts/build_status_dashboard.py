@@ -28,6 +28,8 @@ from zoneinfo import ZoneInfo
 JST = ZoneInfo("Asia/Tokyo")
 RECENT_HOURS = 6
 RECENT_HEARTBEAT_MINUTES = 15
+KNOWN_JST_WALLCLOCK_UTC_SKEW = timedelta(hours=9)
+MAX_VERIFIED_COMPLETION_DELAY = timedelta(hours=6)
 TERMINAL_STATUSES = {
     "completed",
     "blocked",
@@ -249,6 +251,35 @@ def _paper_path(
     return None
 
 
+def _verified_completion_time(
+    result: dict[str, Any],
+    submission: dict[str, Any],
+    job: dict[str, Any],
+) -> datetime | None:
+    """Return durable completion time, correcting only the known JST/UTC skew.
+
+    A short-lived worker/runtime bug serialized some completion wall clocks nine
+    hours too early while the immutable submission still carried the correct
+    offset-aware actual_invocation_start. Correct only when adding exactly the
+    JST offset moves the timestamp into a plausible post-start window.
+    """
+    completed_at = result.get("processed_at") or job.get("completed_at")
+    if completed_at is None:
+        return None
+
+    payload = submission.get("payload")
+    if not isinstance(payload, dict):
+        return completed_at
+    run_start = _parse_dt(payload.get("actual_invocation_start"))
+    if run_start is None or completed_at >= run_start:
+        return completed_at
+
+    corrected = completed_at + KNOWN_JST_WALLCLOCK_UTC_SKEW
+    if run_start <= corrected <= run_start + MAX_VERIFIED_COMPLETION_DELAY:
+        return corrected
+    return completed_at
+
+
 def _verified_completions(
     repo_root: Path,
     jobs: dict[str, dict[str, Any]],
@@ -292,7 +323,7 @@ def _verified_completions(
         if kind == "research" and paper is None:
             continue
 
-        completed_at = result["processed_at"] or job["completed_at"]
+        completed_at = _verified_completion_time(result, submission, job)
         if completed_at is None:
             continue
 
@@ -374,7 +405,7 @@ def _verified_discovery_rows(
                 "submission": submission,
                 "result": result,
                 "run_time": run_time,
-                "completed_at": result["processed_at"] or job["completed_at"],
+                "completed_at": _verified_completion_time(result, submission, job),
             }
         )
     return sorted(rows, key=lambda row: row["run_time"], reverse=True)
