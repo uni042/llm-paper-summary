@@ -56,6 +56,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["work_mode"], "research")
             self.assertTrue(result["claim_state_checked"])
             self.assertTrue(result["submission_state_checked"])
+            self.assertIn("GitHub file create/update API or connector", result["transport_rule"])
+            self.assertIn("actual write", result["transport_rule"])
 
     def test_0830_slot_forces_maintenance_route(self):
         with tempfile.TemporaryDirectory() as td:
