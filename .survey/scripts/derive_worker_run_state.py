@@ -33,7 +33,8 @@ REQUESTS = Path(".survey/work-queue/run-state/requests")
 RESULTS = Path(".survey/work-queue/run-state/results")
 READ_COUNT = 0
 SCHEDULED_CHAT_CLAIM_WINDOW = claim_window_policy.DEFAULT_CLAIM_WINDOW
-DISCOVERY_PIPELINE_WINDOW = 3\n
+DISCOVERY_PIPELINE_WINDOW = 3
+
 RUNTIME_CONDITIONS = {
     "none",
     "handoff_guard",
@@ -1153,7 +1154,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         discovery_submission_result_pending=discovery_async["discovery_submission_result_pending"],
         discovery_evaluation_pending=discovery_async["discovery_evaluation_pending"],
         discovery_recovery_required=discovery_async["discovery_recovery_required"],
-        discovery_pipeline_work_available=discovery_pipeline_work_available,\n    )
+        discovery_pipeline_work_available=discovery_pipeline_work_available,
+    )
     if work_mode == "maintenance":
         maintenance = _read(root / ".survey/work-queue/maintenance-cycle.json", {}) or {}
         completed_at = _time(maintenance.get("last_maintenance_completed_at"))
