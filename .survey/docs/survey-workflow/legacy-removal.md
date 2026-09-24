@@ -53,6 +53,18 @@
 5. **ライブ移行前には短時間の書込凍結を実施する。** その直前にmainのHEADと全対象のblob SHAを再取得する。稼働中claimについて、完了、期限切れ、または耐久handoffのいずれかを個別に確認する。active claimが残る、処理結果待ちがある、またはHEADが動いた場合はそのレーンの移行・削除を開始しない。凍結解除後は再棚卸しを行い、台帳と実体の一致を確かめる。
 6. **削除作業は作業ブランチで行い、mainへ直接書かない。** 各フェーズを独立commitにし、差分・台帳・テスト結果をレビューできる状態にする。旧データ削除前に、必要な終端状態、集計値、ID、必要なら元blob SHAを保持する。Git履歴を書き換えない。
 7. 復旧不能項目は黙って破棄しない。理由、対象識別子、保持した要約、復旧を試した経路を台帳へ記録し、削除判断をレビュー可能にする。
+8. 実行ツールは `.survey/scripts/audit_legacy_inventory.py` とする。作業ブランチの GitHub Actions は、実行時点の `origin/main` の完全なcommit SHAを解決し、そのcommitを `git archive` で一時領域へ展開して棚卸しする。台帳の `source_commit` は必ずそのSHAと一致させる。手動実行では次の形式を使う。
+
+   ```sh
+   python .survey/scripts/audit_legacy_inventory.py \\
+     --root <固定commitの展開先> \\
+     --source-commit <40桁のcommit SHA> \\
+     --classifications <レビュー済み分類JSON> \\
+     --output <台帳JSON>
+   ```
+
+   初回は分類JSONを省略して未分類の基準台帳を作ってよい。未分類・未読込バイナリは完了条件を満たさず、既知語の検出は調査証跡であって自動分類や削除許可ではない。分類には必ず理由を付け、対象blob SHAと固定commitを照合する。
+
 
 ## 4. フェーズ
 
