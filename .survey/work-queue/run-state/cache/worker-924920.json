@@ -1,6 +1,6 @@
 {
-  "fact_generation": 1,
-  "generation": 2,
+  "fact_generation": 2,
+  "generation": 3,
   "runs": {
     "adhoc-20260924T092000JST-worker-924920": {
       "actual_invocation_start": "2026-09-24T00:20:00+00:00",
@@ -8,10 +8,14 @@
         "attempt-preload-06a7382e6e4dd1f8011ebfe2": {
           "attempt_id": "attempt-preload-06a7382e6e4dd1f8011ebfe2",
           "claimed_at": "2026-09-24T00:23:02+00:00",
+          "descriptor_path": ".survey/work-queue/submissions/research/attempt-preload-06a7382e6e4dd1f8011ebfe2.json",
           "job_id": "job-research-a7f8650f63d4e4e7",
           "kind": "research",
+          "pending": true,
+          "repair_required": false,
+          "retryable": false,
           "run_key": "adhoc-20260924T092000JST-worker-924920",
-          "submitted": false,
+          "submitted": true,
           "worker_id": "worker-924920"
         },
         "attempt-preload-07b4bd0fc2b67137b35afce5": {
@@ -118,9 +122,8 @@
       "candidate_inventory": 298,
       "claims": {
         "active_assignment": true,
-        "active_claim_count": 12,
+        "active_claim_count": 11,
         "active_job_ids": [
-          "job-research-a7f8650f63d4e4e7",
           "job-research-c4dbc458851f604c",
           "job-research-77f5ab6e591a0176",
           "job-research-97b59f2c42d3b70d",
@@ -139,13 +142,12 @@
         "claim_result_pending_age_seconds": 0,
         "claim_state_checked": true,
         "claim_window": 12,
-        "claim_window_remaining": 0,
-        "foreground_job_id": "job-research-a7f8650f63d4e4e7",
+        "claim_window_remaining": 1,
+        "foreground_job_id": "job-research-c4dbc458851f604c",
         "pending_claim_request_ages_seconds": {},
         "pending_claim_request_ids": [],
         "pending_claim_requested_at": {},
         "standby_job_ids": [
-          "job-research-c4dbc458851f604c",
           "job-research-77f5ab6e591a0176",
           "job-research-97b59f2c42d3b70d",
           "job-research-09d154c9daf0b638",
@@ -159,27 +161,31 @@
         ]
       },
       "first_cached_at": "2026-09-24T00:22:43.624934+00:00",
-      "generation": 2,
+      "generation": 3,
       "rebuilt_from_canonical": false,
       "run_key": "adhoc-20260924T092000JST-worker-924920",
       "scheduled_slot": "adhoc",
       "submission": {
         "completed_attempt_ids": [],
         "last_terminal_job_status": "none",
-        "pending_attempt_ids": [],
+        "pending_attempt_ids": [
+          "attempt-preload-06a7382e6e4dd1f8011ebfe2"
+        ],
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
         "research_audit_completed_this_invocation": 0,
         "retryable_attempt_ids": [],
-        "submission_result_pending": false,
+        "submission_result_pending": true,
         "submission_state_checked": true,
-        "submitted_attempt_ids": []
+        "submitted_attempt_ids": [
+          "attempt-preload-06a7382e6e4dd1f8011ebfe2"
+        ]
       },
       "work_mode": "research",
       "worker_id": "worker-924920"
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T00:23:04.332463+00:00",
+  "updated_at": "2026-09-24T00:29:59.242826+00:00",
   "worker_id": "worker-924920"
 }
