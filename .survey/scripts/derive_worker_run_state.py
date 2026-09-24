@@ -1104,6 +1104,116 @@ def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> b
     return _candidate_inventory(root) > 0
 
 
+def _durable_handoff_safe(
+    *,
+    claims: dict[str, Any],
+    submission: dict[str, Any],
+    discovery_async: dict[str, Any],
+) -> bool:
+    """Return whether every in-flight identity needed for handoff is durable."""
+
+    if claims.get("active_assignment") and not list(claims.get("active_job_ids") or []):
+        return False
+    if claims.get("claim_result_pending") and not list(claims.get("pending_claim_request_ids") or []):
+        return False
+    if submission.get("submission_result_pending") and not list(submission.get("pending_attempt_ids") or []):
+        return False
+    if (
+        discovery_async.get("discovery_precheck_result_pending")
+        and not list(discovery_async.get("pending_discovery_precheck_request_ids") or [])
+    ):
+        return False
+    if (
+        discovery_async.get("discovery_submission_result_pending")
+        and not list(discovery_async.get("pending_discovery_submission_ids") or [])
+    ):
+        return False
+    if (
+        discovery_async.get("discovery_evaluation_pending")
+        and not list(discovery_async.get("discovery_evaluation_request_ids") or [])
+    ):
+        return False
+    if (
+        discovery_async.get("discovery_recovery_required")
+        and not list(discovery_async.get("discovery_recovery_targets") or [])
+    ):
+        return False
+    return True
+
+
+def _build_stop_permit(
+    *,
+    finalization_permit_issued: bool,
+    work_mode: str,
+    runtime_condition: str,
+    runtime_condition_confirmed: bool,
+    runtime_condition_attempts: int,
+    runtime_condition_event: str,
+    runtime_condition_detail: str,
+    gate: dict[str, Any],
+    processed_at: str,
+) -> dict[str, Any]:
+    """Issue an explicit stop proof only for router-approved termination classes."""
+
+    stop_reasons = [str(value) for value in gate.get("stop_reasons") or [] if str(value)]
+    base = {
+        "schema_version": 1,
+        "issued": False,
+        "category": None,
+        "stop_reasons": stop_reasons,
+        "runtime_condition": runtime_condition,
+        "issued_at": None,
+        "rule": (
+            "Normal paper-worker termination requires this durable permit. "
+            "A bare finalization_permit is insufficient. Permits are limited to "
+            "safe time-window handoff, observed platform/acquisition limits, "
+            "confirmed unrecoverable runtime problems, and completed 08:30 maintenance."
+        ),
+    }
+    if not finalization_permit_issued:
+        base["denied_reason"] = "finalization_gate_not_permitted"
+        return base
+
+    category: str | None = None
+    if work_mode == "maintenance" and "scheduled_0830_maintenance_complete" in stop_reasons:
+        category = "maintenance_complete"
+    elif bool(gate.get("handoff_window_active")) or bool(gate.get("final_handoff_active")):
+        category = "time_window"
+    elif (
+        runtime_condition == "platform_context_limit"
+        and runtime_condition_confirmed
+        and runtime_condition_attempts >= 1
+        and runtime_condition_event == PLATFORM_CONTEXT_LIMIT_EVENT
+        and runtime_condition_detail.strip()
+    ):
+        category = "observed_acquisition_limit"
+    elif (
+        runtime_condition in {
+            "github_read_unavailable",
+            "durable_transports_unavailable",
+            "transport_unrecoverable",
+        }
+        and runtime_condition_confirmed
+        and runtime_condition_attempts >= 2
+        and runtime_condition_detail.strip()
+    ):
+        category = "unrecoverable_problem"
+
+    if category is None:
+        base["denied_reason"] = "no_router_approved_stop_reason"
+        return base
+
+    base.update(
+        {
+            "issued": True,
+            "category": category,
+            "issued_at": processed_at,
+            "denied_reason": None,
+        }
+    )
+    return base
+
+
 def _next_work_packet(
     root: Path,
     *,
@@ -1542,12 +1652,21 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     else:
         gate = continuation_gate.decide(args)
 
+    handoff_safe = bool(
+        gate.get("hard_stop")
+        and _durable_handoff_safe(
+            claims=claims,
+            submission=submission,
+            discovery_async=discovery_async,
+        )
+    )
+
     finalization_gate = run_finalization_gate.decide(
         argparse.Namespace(
             continuation_decision=str(gate.get("decision") or "CONTINUE"),
             continuation_finalization_allowed=gate.get("finalization_allowed") is True,
             active_assignment=bool(claims.get("active_assignment")),
-            active_assignment_handoff_safe=False,
+            active_assignment_handoff_safe=handoff_safe,
             claim_state_checked=bool(claims.get("claim_state_checked")),
             claim_result_pending=bool(claims.get("claim_result_pending")),
             submission_state_checked=bool(submission.get("submission_state_checked")),
@@ -1568,7 +1687,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             discovery_pipeline_work_available=discovery_pipeline_work_available,
             continuation_required_action=str(gate.get("required_action") or ""),
             hard_stop=bool(gate.get("hard_stop")),
-            handoff_safe=False,
+            handoff_safe=handoff_safe,
             work_mode=work_mode,
             research_audit_completed_this_invocation=int(
                 submission.get("research_audit_completed_this_invocation") or 0
@@ -1582,6 +1701,18 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     finalization_permit_issued = bool(
         (finalization_gate.get("finalization_permit") or {}).get("issued")
     )
+    stop_permit = _build_stop_permit(
+        finalization_permit_issued=finalization_permit_issued,
+        work_mode=work_mode,
+        runtime_condition=runtime,
+        runtime_condition_confirmed=bool(request.get("runtime_condition_confirmed", False)),
+        runtime_condition_attempts=int(request.get("runtime_condition_attempts", 0) or 0),
+        runtime_condition_event=str(request.get("runtime_condition_event") or ""),
+        runtime_condition_detail=str(request.get("runtime_condition_detail") or ""),
+        gate=gate,
+        processed_at=now.isoformat(),
+    )
+    run_termination_allowed = bool(stop_permit.get("issued"))
     next_work_packet = _next_work_packet(
         root,
         worker_id=str(request["worker_id"]),
@@ -1642,8 +1773,16 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "gate": gate,
         "finalization_gate": finalization_gate,
         "finalization_permit_issued": finalization_permit_issued,
-        "run_termination_allowed": finalization_permit_issued,
-        "run_phase": "finalizable" if finalization_permit_issued else "running",
+        "stop_permit": stop_permit,
+        "stop_permit_required": True,
+        "run_termination_allowed": run_termination_allowed,
+        "run_phase": "finalizable" if run_termination_allowed else "running",
+        "continuation_contract": {
+            "stop_permit_required": True,
+            "must_consume_next_work_packet": not run_termination_allowed,
+            "next_work_packet_ready": next_work_packet is not None,
+            "refill_before_idle": True,
+        },
         "continuation_next_action": gate.get("required_action"),
         "next_action": finalization_gate.get("next_action") or gate.get("required_action"),
         "next_work_packet": next_work_packet,
@@ -1674,6 +1813,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "idle_gap_forbidden=true means an asynchronous result must not be treated as permission to stop or passively wait when a prepared/fallback next action exists. "
             "Top-level next_action is the finalization gate's canonical action, while continuation_next_action preserves the pre-finalization routing decision for diagnostics. "
             "When run_termination_allowed=false, next_work_packet identifies the concrete durable object to process next whenever one can be resolved; this running state is not a handoff condition. "
+            "A finalization_permit alone never authorizes paper-worker termination: stop_permit.issued=true is additionally required and is restricted to router-approved stop categories. "
             "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts. "
             "Every durable run-state snapshot embeds the finalization gate result for continuation and stopping decisions. "
             "Run-state does not suppress user-facing reports; termination reporting is governed by worker-router.md."
