@@ -828,6 +828,48 @@ def top_up(root: Path, *, target: int = DEFAULT_TARGET, max_new: int = DEFAULT_M
     }
 
 
+def ready_preloads(
+    root: Path,
+    *,
+    limit: int = 32,
+) -> list[dict[str, Any]]:
+    """Return only currently bank-bound preload requests that still need precheck."""
+    root = root.resolve()
+    now = _utcnow()
+    bindings = _read_bank_bindings(root)
+    rows: list[dict[str, Any]] = []
+    for entry in _entries(root):
+        preload_id = str(entry.get("preload_id") or "")
+        bank = bindings.get(preload_id)
+        if not bank or _status(root, entry, now) != "READY":
+            continue
+        request_path = _request_path(entry)
+        if not (root / request_path).is_file():
+            continue
+        rows.append(
+            {
+                "preload_id": preload_id,
+                "request_path": request_path.as_posix(),
+                "discovery_bank": bank,
+                "discovery_slot_path": discovery_slot_path(bank),
+                "citation_direction": entry.get("citation_direction"),
+                "provider": entry.get("provider"),
+                "source_url": entry.get("source_url"),
+                "axis": entry.get("axis"),
+                "created_at": entry.get("created_at"),
+            }
+        )
+    direction_order = {"backward": 0, "forward": 1, "normal": 2}
+    rows.sort(
+        key=lambda row: (
+            direction_order.get(str(row.get("citation_direction") or ""), 9),
+            str(row.get("created_at") or ""),
+            str(row.get("preload_id") or ""),
+        )
+    )
+    return rows[: max(limit, 0)]
+
+
 def available_preloads(
     root: Path,
     *,
@@ -1070,6 +1112,9 @@ def main() -> int:
     available.add_argument("--direction", choices=("backward", "forward", "normal"))
     available.add_argument("--limit", type=int, default=32)
 
+    ready = sub.add_parser("ready")
+    ready.add_argument("--limit", type=int, default=32)
+
     sub.add_parser("summary")
     args = parser.parse_args()
 
@@ -1083,6 +1128,8 @@ def main() -> int:
                 limit=max(args.limit, 0),
             )
         }
+    elif args.command == "ready":
+        result = {"items": ready_preloads(args.repo_root, limit=max(args.limit, 0))}
     else:
         result = summary(args.repo_root)
     print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))
