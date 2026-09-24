@@ -4,7 +4,148 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-f2bb13bd5d0d331fc95b5bd6",
   "job_id": "job-research-09d154c9daf0b638",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2502.13189",
+    "arxiv_id": "2502.13189",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    "title": "MoBA: Mixture of Block Attention for Long-Context LLMs",
+    "summary": "長文脈Transformerの完全注意は系列長の二乗で計算量が増える一方、固定窓や注意シンクは強い構造バイアスを持ち、線形注意への置換は既存モデルとの差が大きい。MoBAは文脈を連続ブロックへ分割し、各問い合わせと各ブロックの平均鍵との内積から上位kブロックを動的に選ぶ、専門家混合（Mixture of Experts; MoE）型のブロック疎注意である。未来ブロックを除外し、現在ブロックは必ず選択して因果マスクを掛けることで自己回帰性を保つ。追加ルーターパラメータは持たず、完全注意と同一パラメータ数のまま学習途中や層単位で切り替えられる。Llama 3.1 8Bを1M文脈まで継続学習した比較では、RULER 128Kで0.7818対完全注意0.7849など下流品質をほぼ維持し、注意層の1Mトークン前処理で最大6.5倍、固定95.31%疎性で10Mまで伸ばした実験では注意計算時間を16倍短縮した。著者実装はFlashAttentionとMoE型の問い合わせ再配置を組み合わせるが、既存事前学習モデルへ追加学習なしで直接適用する方式ではない。",
+    "list_summary": "MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。",
+    "authors": [
+      "Enzhe Lu",
+      "Zhejun Jiang",
+      "Jingyuan Liu",
+      "Yulun Du",
+      "Tao Jiang",
+      "Chao Hong",
+      "Shaowei Liu",
+      "Weiran He",
+      "Enming Yuan",
+      "Yuzhi Wang",
+      "Zhiqi Huang",
+      "Huan Yuan",
+      "Suting Xu",
+      "Xinran Xu",
+      "Guokun Lai",
+      "Yanru Chen",
+      "Huabin Zheng",
+      "Junjie Yan",
+      "Jianlin Su",
+      "Yuxin Wu",
+      "Neo Y. Zhang",
+      "Zhilin Yang",
+      "Xinyu Zhou",
+      "Mingxing Zhang",
+      "Jiezhong Qiu"
+    ],
+    "authors_affiliations": "Enzhe LuからZhilin Yangまでの22名とXinyu ZhouはMoonshot AI。Mingxing ZhangはTsinghua University。Jiezhong QiuはZhejiang Lab/Zhejiang University。Xinyu ZhouとJiezhong Qiuは共同責任著者。",
+    "published": "2025-02-18",
+    "publication": "arXiv:2502.13189v1",
+    "publication_type": "Technical report",
+    "publication_status": "arXiv technical report",
+    "publication_version": "v1",
+    "lineage": "疎注意／長文脈学習",
+    "topics": [
+      "動的ブロック疎注意",
+      "長文脈",
+      "専門家混合",
+      "FlashAttention",
+      "継続事前学習"
+    ],
+    "importance": "高",
+    "hardware_evaluation": "実機（GPU機種は論文本文で非開示）",
+    "hardware_details": "論文は学習と注意層の実時間測定を報告するが、GPUの機種・台数を本文中で明示していない。10M系列では問い合わせヘッド側までテンソル並列を拡張し、分散問い合わせヘッドへ鍵・値をブロードキャストした。",
+    "quality_effect": "完全注意を疎注意へ置換する近似なので数学的には同一ではなく、追加の継続学習を前提とする。1.5Bの学習ではMoBA単独で末尾位置の損失が悪化するが、90%をMoBA・最後10%を完全注意にする二段階学習や最終数層を完全注意にする層混成で差を縮める。8Bの下流評価では前処理にMoBA、生成には完全注意を使って品質を保つ。",
+    "storage_targets": [
+      "注意計算対象のKVブロック"
+    ],
+    "bottlenecks": [
+      "完全注意の二乗計算量",
+      "長文脈の前処理時間",
+      "長系列時のGPUメモリ容量",
+      "固定疎注意の構造バイアス"
+    ],
+    "evidence_locations": [
+      "第2.2節のブロック選択と因果性",
+      "第2.3節のFlashAttention実装",
+      "第3.1節のスケーリング則と粒度アブレーション",
+      "第3.2節の完全注意との混成",
+      "第3.3節のLlama 3.1 8B長文脈評価",
+      "第3.4節の1M・10M効率",
+      "付録Aの末尾位置スケーリング"
+    ],
+    "references": [
+      {
+        "canonical_id": "arXiv:2303.09752"
+      },
+      {
+        "canonical_id": "arXiv:2004.08483"
+      },
+      {
+        "canonical_id": "arXiv:2004.05150"
+      },
+      {
+        "canonical_id": "arXiv:1904.10509"
+      },
+      {
+        "canonical_id": "arXiv:2009.14794"
+      },
+      {
+        "canonical_id": "arXiv:2401.06066"
+      },
+      {
+        "canonical_id": "arXiv:2405.21060"
+      },
+      {
+        "canonical_id": "arXiv:2307.02486"
+      },
+      {
+        "canonical_id": "arXiv:2406.14909"
+      },
+      {
+        "canonical_id": "arXiv:2410.13276"
+      },
+      {
+        "canonical_id": "arXiv:2310.01801"
+      },
+      {
+        "canonical_id": "arXiv:2407.02490"
+      },
+      {
+        "canonical_id": "arXiv:2409.10516"
+      },
+      {
+        "canonical_id": "arXiv:2406.10774"
+      },
+      {
+        "canonical_id": "arXiv:1909.08053"
+      }
+    ],
+    "references_checked_at": "2026-09-24",
+    "references_source": "arxiv-pdf-reference-section",
+    "references_total": 66,
+    "source": "https://arxiv.org/abs/2502.13189",
+    "sources": [
+      "https://arxiv.org/abs/2502.13189",
+      "https://arxiv.org/pdf/2502.13189",
+      "https://github.com/MoonshotAI/MoBA"
+    ],
+    "code": "https://github.com/MoonshotAI/MoBA",
+    "implementation": "Moonshot AIの公式実装あり。FlashAttention 2.6.3とPyTorch 2.1以上を前提とする実装を公開し、理解用の単純実装と本番向け実装を分ける。READMEは32K・1注意ヘッド・ブロック2048・top-k=3で本番実装が単純実装より最大40倍高速とするが、これは論文の完全注意基準とは別の実装比較である。",
+    "implementation_status": "official-code-available",
+    "evaluation_type": "real-hardware",
+    "last_checked": "2026-09-24",
+    "last_audited": null,
+    "audit_version": 0
+  },
   "reservation": {
     "claim_id": "claim-preload-f2bb13bd5d0d331fc95b5bd6",
     "worker_id": "worker-924920",
