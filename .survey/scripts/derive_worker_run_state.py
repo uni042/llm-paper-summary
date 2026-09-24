@@ -1075,6 +1075,11 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "independent_work": independent_work,
         "gate": gate,
         "next_action": gate.get("required_action"),
+        "transport_rule": (
+            "A GitHub file create/update API or connector is a valid repository write transport. "
+            "Lack of local shell, Python execution, git push, or manual Actions dispatch is not evidence of write unavailability. "
+            "Before declaring transport_unrecoverable or durable_transports_unavailable, attempt an actual write to the required canonical request/direct-take/submission path and record the concrete failure."
+        ),
         "rule": (
             "Use this durable derived snapshot instead of manually inventing continuation-gate booleans. "
             "The first successful snapshot for run_key freezes candidate_inventory/work_mode. "
@@ -1084,6 +1089,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. "
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
+            "GitHub file create/update capability counts as GitHub write; absence of local script execution alone is never a transport hard stop, and an actual canonical-path write must be attempted before a write-unavailable handoff. "
             "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected and a concrete observed-error detail; a single paper/source retrieval failure is never platform-context evidence. "
             "A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
