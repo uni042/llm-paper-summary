@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 06:43:49 JST**
+> 自動生成: **2026-09-25 07:04:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **155** |
 | 直近24hの検証済みResearch収録 | **19** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
-| 最終検証済みDiscovery探索 | **09-25 01:09:26 JST** |
+| 最終検証済みDiscovery探索 | **09-25 07:04:50 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（22時間7分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（22時間28分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,12 +70,12 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **3** | **3** | **0** | **144** | **13** | — |
+| Research | **3** | **3** | **3** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **8** | **8** | **8** | **0** | **0** | **0** | **12** |
-| 合計 | **12** | **11** | **11** | **0** | **144** | **13** | **12** |
+| Discovery | **6** | **1** | **1** | **0** | **0** | **0** | **0** |
+| 合計 | **9** | **4** | **4** | **0** | **144** | **0** | **0** |
 
-- 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -98,11 +98,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-preload-88865dce95348e7f779dacec.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-preload-88865dce95348e7f779dacec.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md`
-- **09-25 00:46:34 JST** [research] `arXiv:2508.17137` — MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices
-  - job: `.survey/work-queue/jobs/job-research-b22af651ef4f551f.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-5ae76716eb01958d78f1d488.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-5ae76716eb01958d78f1d488.json`
-  - paper: `papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md`
 
 ### Audit
 
@@ -110,18 +105,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Discovery
 
-- **09-25 01:02:26 JST** job `job-04ed27eee57bc021` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260924T160030Z-scheduled-chat-00-7f3c9a-d01.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T160030Z-scheduled-chat-00-7f3c9a-d01.json`
+- **09-25 07:04:50 JST** job `job-00f519dedb96bca2` / 候補 **0件**
+  - result: `.survey/work-queue/results/disc-take-scheduled-chat-00-20260925T070210-run1-r1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-20260925T070210-run1-r1.json`
   - 探索軸: preload-backward-structured-references
-- **09-25 01:02:36 JST** job `job-9d4d1882093158af` / 候補 **2件**
-  - result: `.survey/work-queue/results/20260924T160110Z-scheduled-chat-00-7f3c9a-d02.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T160110Z-scheduled-chat-00-7f3c9a-d02.json`
-  - 探索軸: explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)
-- **09-25 01:02:46 JST** job `job-502b7e14ff53de24` / 候補 **3件**
-  - result: `.survey/work-queue/results/20260924T160130Z-scheduled-chat-00-7f3c9a-d03.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T160130Z-scheduled-chat-00-7f3c9a-d03.json`
-  - 探索軸: forward citations of Splitwise for disaggregated LLM serving
 - **09-25 01:05:41 JST** job `job-cb948c38af6553c3` / 候補 **1件**
   - result: `.survey/work-queue/results/20260924T160430Z-scheduled-chat-00-7f3c9a-d04.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260924T160430Z-scheduled-chat-00-7f3c9a-d04.json`
@@ -173,47 +160,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Discovery（最新Discovery run）
 
-- 最新観測run: **2026-09-25 00:59 JST**
-- 耐久探索round: **8件** / immutable submission: **8件** / 検証済み成功result: **8件** / 個別result照合: **8件** / 個別result未照合: **0件** / 候補: **12件**
-- 探索軸: preload-backward-structured-references / explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations) / forward citations of Splitwise for disaggregated LLM serving / backward references of FlexGen offload and hierarchical-memory LLM inference / forward citations of FlashAttention for recent attention kernels and serving systems / explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2206.00277 (Task-Specific Expert Pruning forward citations) / forward citations of DistServe disaggregated prefill-decode LLM serving
-- round `disc-take-scheduled-chat-00-20260925T005925JST-b2a43c66` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260924T160030Z-scheduled-chat-00-7f3c9a-d01.json`
+- 最新観測run: **2026-09-25 07:02 JST**
+- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **0件**
+- 探索軸: preload-backward-structured-references
+- round `disc-take-scheduled-chat-00-20260925T070210-run1-r1` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/discovery/disc-take-scheduled-chat-00-20260925T070210-run1-r1.json`
   - 探索軸: preload-backward-structured-references
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T160030Z-scheduled-chat-00-7f3c9a-d01.json` (`ok=true`)
-- round `frontier-ffb9f610716bbbb2820ec80c` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260924T160110Z-scheduled-chat-00-7f3c9a-d02.json`
-  - 探索軸: explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T160110Z-scheduled-chat-00-7f3c9a-d02.json` (`ok=true`)
-- round `frontier-6744df2bf719787d6187382f` / 候補 **3件**
-  - submission: `.survey/work-queue/submissions/20260924T160130Z-scheduled-chat-00-7f3c9a-d03.json`
-  - 探索軸: forward citations of Splitwise for disaggregated LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T160130Z-scheduled-chat-00-7f3c9a-d03.json` (`ok=true`)
-- round `disc-take-scheduled-chat-00-7f3c9a-d04` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260924T160430Z-scheduled-chat-00-7f3c9a-d04.json`
-  - 探索軸: backward references of FlexGen offload and hierarchical-memory LLM inference
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T160430Z-scheduled-chat-00-7f3c9a-d04.json` (`ok=true`)
-- round `frontier-ed9ecfadedd08634da9254db` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260924T160450Z-scheduled-chat-00-7f3c9a-d05.json`
-  - 探索軸: forward citations of FlashAttention for recent attention kernels and serving systems
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T160450Z-scheduled-chat-00-7f3c9a-d05.json` (`ok=true`)
-- round `frontier-33a41dbb7e0773c51f5ecd41` / 候補 **2件**
-  - submission: `.survey/work-queue/submissions/20260924T160510Z-scheduled-chat-00-7f3c9a-d06.json`
-  - 探索軸: explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2206.00277 (Task-Specific Expert Pruning forward citations)
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T160510Z-scheduled-chat-00-7f3c9a-d06.json` (`ok=true`)
-- round `disc-take-scheduled-chat-00-7f3c9a-d07` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260924T160720Z-scheduled-chat-00-7f3c9a-d07.json`
-  - 探索軸: forward citations of DistServe disaggregated prefill-decode LLM serving
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T160720Z-scheduled-chat-00-7f3c9a-d07.json` (`ok=true`)
-- round `frontier-58519fa41ceae293f0877761` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260924T160745Z-scheduled-chat-00-7f3c9a-d08.json`
-  - 探索軸: preload-backward-structured-references
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T160745Z-scheduled-chat-00-7f3c9a-d08.json` (`ok=true`)
+  - 個別result照合: あり / `.survey/work-queue/results/disc-take-scheduled-chat-00-20260925T070210-run1-r1.json` (`ok=true`)
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **13件**
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
 - `arXiv:2211.10438` — SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models / worker `scheduled-chat-30`
   - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
   - evidence: `.survey/work-queue/claims/job-research-05c9fecf1a5510e9.json`
