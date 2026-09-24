@@ -86,9 +86,13 @@ def _discovery_run_time_from_key(value: Any):
     if match is None:
         return None
     try:
-        return datetime.strptime(match.group("stamp"), "%Y%m%dT%H%M%S").replace(
-            tzinfo=timezone.utc
-        )
+        zone = match.group("zone")
+        if zone == "Z":
+            zone = "+0000"
+        return datetime.strptime(
+            match.group("stamp") + zone,
+            "%Y%m%dT%H%M%S%z",
+        ).astimezone(timezone.utc)
     except ValueError:
         return None
 
