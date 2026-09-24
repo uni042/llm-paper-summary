@@ -65,7 +65,6 @@ jobs:
             .survey/scripts/status_publish_gate.py \
             .survey/scripts/build_status_dashboard.py \
             .survey/scripts/render_status_dashboard.py \
-            .survey/scripts/ensure_dashboard_history.py \
             .survey/scripts/queue_worker.py \
             .survey/scripts/blocked_retry.py
 
@@ -257,7 +256,6 @@ jobs:
               return 0
             fi
 
-            python .survey/scripts/ensure_dashboard_history.py --repo-root .
             python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
             git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json
 

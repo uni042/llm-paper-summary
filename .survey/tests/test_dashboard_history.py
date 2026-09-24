@@ -1,53 +1,38 @@
 import importlib.util
-import json
-import tempfile
 import unittest
 from pathlib import Path
 
+ROOT = Path(__file__).parents[2]
 
-def _load():
-    path = Path(__file__).parents[1] / "scripts" / "ensure_dashboard_history.py"
-    spec = importlib.util.spec_from_file_location("ensure_dashboard_history", path)
+
+def _load_policy():
+    path = ROOT / ".survey/scripts/history_policy.py"
+    spec = importlib.util.spec_from_file_location("history_policy", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
 
 
 class DashboardHistoryTests(unittest.TestCase):
-    def test_history_limits_are_raised_without_dropping_entries(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            ledger_path = root / ".survey/work-queue/run-ledger.json"
-            discovery_path = root / ".survey/work-queue/discovery-state.json"
-            ledger_path.parent.mkdir(parents=True)
-            ledger_path.write_text(json.dumps({"history_limit": 48, "entries": [{"run_key": "a"}]}), encoding="utf-8")
-            discovery_path.write_text(json.dumps({"history_limit": 24, "history": [{"round": "r1"}]}), encoding="utf-8")
+    def test_history_policy_enforces_dashboard_minimum(self):
+        policy = _load_policy()
+        for value in (None, 0, 24, 48, 383, True, "384"):
+            with self.subTest(value=value):
+                self.assertEqual(policy.normalize_history_limit(value), 384)
 
-            module = _load()
-            changed = module.ensure_history_limits(root)
-            self.assertEqual(set(changed), {
-                ".survey/work-queue/run-ledger.json",
-                ".survey/work-queue/discovery-state.json",
-            })
-            ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
-            discovery = json.loads(discovery_path.read_text(encoding="utf-8"))
-            self.assertEqual(ledger["history_limit"], 384)
-            self.assertEqual(discovery["history_limit"], 384)
-            self.assertEqual(ledger["entries"], [{"run_key": "a"}])
-            self.assertEqual(discovery["history"], [{"round": "r1"}])
+    def test_history_policy_preserves_larger_explicit_limits(self):
+        policy = _load_policy()
+        self.assertEqual(policy.normalize_history_limit(384), 384)
+        self.assertEqual(policy.normalize_history_limit(500), 500)
 
-    def test_history_migration_is_idempotent(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            ledger_path = root / ".survey/work-queue/run-ledger.json"
-            discovery_path = root / ".survey/work-queue/discovery-state.json"
-            ledger_path.parent.mkdir(parents=True)
-            ledger_path.write_text(json.dumps({"history_limit": 500, "entries": []}), encoding="utf-8")
-            discovery_path.write_text(json.dumps({"history_limit": 384, "history": []}), encoding="utf-8")
-            module = _load()
-            self.assertEqual(module.ensure_history_limits(root), [])
-            self.assertEqual(json.loads(ledger_path.read_text(encoding="utf-8"))["history_limit"], 500)
-            self.assertEqual(json.loads(discovery_path.read_text(encoding="utf-8"))["history_limit"], 384)
+    def test_durable_history_writers_use_shared_policy(self):
+        ledger = (ROOT / ".survey/scripts/record_run_ledger.py").read_text(encoding="utf-8")
+        queue = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
+        self.assertIn("DEFAULT_HISTORY_LIMIT = history_policy.MIN_HISTORY_LIMIT", ledger)
+        self.assertIn("history_policy.normalize_history_limit(ledger.get(\"history_limit\"))", ledger)
+        self.assertIn("history_policy.normalize_history_limit(state.get(\"history_limit\"))", queue)
+        self.assertNotIn("DEFAULT_HISTORY_LIMIT = 48", ledger)
+        self.assertNotIn('state.get("history_limit", 24)', queue)
 
 
 if __name__ == "__main__":

@@ -16,7 +16,9 @@ import os
 from pathlib import Path
 from typing import Any
 
-DEFAULT_HISTORY_LIMIT = 48
+import history_policy
+
+DEFAULT_HISTORY_LIMIT = history_policy.MIN_HISTORY_LIMIT
 MAX_EVENTS_PER_RUN = 64
 
 
@@ -278,10 +280,8 @@ def record(root: Path, baseline_path: Path) -> int:
         "entries": [],
     }
     ledger["schema_version"] = 2
-    limit = ledger.get("history_limit")
-    if not isinstance(limit, int) or limit < 1:
-        limit = DEFAULT_HISTORY_LIMIT
-        ledger["history_limit"] = limit
+    limit = history_policy.normalize_history_limit(ledger.get("history_limit"))
+    ledger["history_limit"] = limit
     entries = ledger.get("entries") if isinstance(ledger.get("entries"), list) else []
 
     target = None

@@ -25,6 +25,7 @@ import survey  # noqa: E402
 import claim_state  # noqa: E402
 import discovery_preload_queue  # noqa: E402
 import discovery_search_history  # noqa: E402
+import history_policy  # noqa: E402
 import represented_paper_index  # noqa: E402
 import lineage_proposal  # noqa: E402
 from paper_taxonomy import canonicalize_paper_path  # noqa: E402
@@ -1279,9 +1280,7 @@ def record_discovery_stats(
             state["consecutive_empty_rounds"] = 0
             state["last_empty_round_reason"] = None
 
-    limit = state.get("history_limit", 24)
-    if not isinstance(limit, int) or limit < 1:
-        limit = 24
+    limit = history_policy.normalize_history_limit(state.get("history_limit"))
     state["history_limit"] = limit
     state["history"] = history[-limit:]
     state["axes"] = axes
