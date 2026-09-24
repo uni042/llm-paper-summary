@@ -34,6 +34,21 @@
 |`.survey/scripts/queue_worker.py`|Discovery submission/job化の経路。現行precheck request制約とは別に旧precheck result読取の記載がある。|旧result reader候補（E）。|現存resultの参照・終端状態を全件特定し、旧resultが0になるまで保持。|
 |`.survey/scripts/process_immutable_submission.py`|現行immutable descriptorと5スロットから論文更新を行う。|現行reader/writer（A）。|旧形式除去後もimmutable submissionの正常系・防御検査を回帰確認。|
 
+## 互換コードを外す前に現行経路へ残す機能
+
+2026-09-24の `62401ab` を基準に現行コードとデータの両方を照合した。削除時に必要な機能と、除去を止める実データは次の通り。
+
+|旧分岐・場所|現行でも必要な機能|現行経路／置換条件|削除可否|
+|---|---|---|---|
+|Library退避の再生（`.survey/scripts/replay_record_fallback.py`）|失敗時にLibrary退避を回収し、Research/Auditの5スロットから復旧する。|現行fallback-inboxから、bankまたはLibraryへ安全に保存し、試行ごとの不変submissionへ変換する。これは現行障害復旧経路なので維持する。|現行部分は削除しない。|
+|固定 `chat-inbox.json` 読取（同上）|旧固定輸送にしか残っていない内容を救済する。固定ファイルを再生成しない。|旧bundleを現行の不変submissionへ変換、終端状態として確定、または根拠付きで破棄する。台帳上の固定輸送markerは105件あり、そのうちfallback-archive 84、fallback-failed 10、fallback-inbox 1ファイルに検出。これは文字列ヒット数でありpayload実数ではない。|データ処理とblob照合が完了するまでreaderを維持。|
+|旧Discovery envelope救済（`.survey/scripts/dispatch_fallback_inbox.py`）|正規wrapperのない旧payloadに残るDiscovery結果を拾う。|現行writerの `writes` wrapperから現行immutable submissionを作る。受信箱と退避履歴の旧payloadを移行・終端・記録付き破棄してから、旧分岐を外す。|受信箱・退避履歴の照合前は維持。|
+|旧bank alias/path（`.survey/scripts/record_bank_config.py` 等）|旧rootに残る5スロットrecordと、そのclaim/submission参照を救済する。|現行のbank IDと正規slot pathへデータ・参照を移し、readerを正規path限定にする。marker hitはコード/試験/退避データを含め10ファイル。|参照closure確認前は維持。|
+|bank未割当claim移行（`.survey/scripts/claim_worker_with_banks.py`）|すでに開始した非Scheduled Chat claimがbankなしでも処理を続けられるようLibraryへ経路を付ける。|新しいclaimの通常割当ではbank予約を行い、bankを使えない場合の現行Library fallbackは保持する。残るactive claimのrouteを全件検証し、migration markerなしでも同じ経路が成立した後にだけ旧claim移行分岐を外す。|ライブclaimの書込凍結・route照合前は維持。|
+|論文の旧要約読取（`.survey/scripts/list_summary.py`）|公開一覧で明示要約のない旧ページを表示する。|現行producerは `list_summary` を明示生成する。旧heading markerは論文10件に残るため、当該ページを通常の本文監査で直した後にのみ旧heading/fallback readerを外す。|論文移行完了まで維持。品質修正は現在の作業優先対象から外す。|
+
+この表は機能移管と削除ゲートを特定するもの。列挙件数はmarker hitであり、個々の旧payloadが有効・未処理・ライブであるとの判定ではない。個別レコードの移行結果は機械可読台帳へ記録する。
+
 ## 旧互換専用試験候補
 
 次のテストは名称または実体に旧データ受入れ・正規化を含む。最終的には削除、または旧形式を明示拒否する試験へ置換する。移行完了前に削除しない。
