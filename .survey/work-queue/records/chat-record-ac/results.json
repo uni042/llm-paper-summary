@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-preload-52cbf286c62b67d46769963d",
   "job_id": "job-research-3403bc6819a107c1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-52cbf286c62b67d46769963d",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "Mixtral-8x7Bの既定条件では、TopoCompressは通信量、平均遅延、P99遅延、遠隔実行率、スループットのすべてで主要比較対象を改善し、品質低下を既定2%予算内に抑える。特に通信量は1,000トークン当たり1.18 GBとなりDanceMoE比29.8%減、平均遅延149 ms、スループット1,540 token/sを達成する。効果は単なる意味ベース圧縮ではなく、トポロジー認識スコアと圧縮後トラフィックを配置へ戻す低速ループの双方に依存する。一方で結果はシミュレーション由来であり、品質は完全無損失ではない。",
+    "key_results": [
+      {"metric": "サーバー間通信量", "value": "1.18 GB / 1,000 tokens", "baseline": "DanceMoE", "condition": "Mixtral-8x7B、既定シミュレーション条件", "interpretation": "DanceMoEより29.8%少なく、MoE-Infinityより41.9%、EdgeShardより73.5%少ない。高費用・低価値トークンを転送前に除去する効果を示す。"},
+      {"metric": "平均推論遅延", "value": "149 ms", "baseline": "DanceMoE", "condition": "Mixtral-8x7B、既定シミュレーション条件", "interpretation": "DanceMoEより27.0%、EdgeShardより58.6%低い。帯域制約下でファンアウト・ファンイン転送を減らした効果と解釈される。"},
+      {"metric": "P99推論遅延", "value": "279 ms", "baseline": "DanceMoE", "condition": "Mixtral-8x7B、既定シミュレーション条件", "interpretation": "DanceMoEより35.7%、EdgeShardより61.8%低く、集合ルーティングと高費用トークン圧縮が尾部の多段遠隔経路を抑える。"},
+      {"metric": "スループット", "value": "1,540 token/s", "baseline": "EdgeShard", "condition": "Mixtral-8x7B、既定シミュレーション条件", "interpretation": "EdgeShardの2.18倍で、通信量削減が処理能力へ反映される。"},
+      {"metric": "品質保持", "value": "全3モデルで98.8%以上", "baseline": "完全中央集約モデル", "condition": "品質劣化予算2%を既定値としてWikiText-103、SQuAD、GSM8Kを評価", "interpretation": "通信削減は近似圧縮を伴うが、WikiText-103はパープレキシティ+0.34、SQuAD F1は-0.7、GSM8K正解率は-1.0に抑えられる。"},
+      {"metric": "交互最適化による目的値改善", "value": "初回エポック比21.3%低下", "baseline": "第1エポック", "condition": "5エポックの二時間尺度交互最適化", "interpretation": "4〜5エポックで安定し、最初の3エポックで通信量24.6%、CPUオフロード率19.0%が低下する。圧縮後トラフィックを配置へ戻す逆方向結合の寄与を示す。"}
+    ],
+    "negative_results": "品質は無損失ではなく、中央集約モデルに対してWikiText-103パープレキシティ+0.34、SQuAD F1 -0.7、GSM8K正解率-1.0の低下がある。品質予算を0.5%から3%へ緩めるほど通信量は減るが品質低下も増える。また全体最適化問題は非凸であり、交互最適化は大域最適ではなく座標ごとの停留点への収束のみを主張する。実機ではなくシミュレーションなので、実装オーバーヘッド込みの壁時計速度向上は未実証である。",
+    "interpretation": "利得が大きい理由は、専門家配置だけを改善する方式と、意味だけでトークンを削る方式を直列に置くのではなく、現在の配置で本当に高価なトークンを選んで圧縮し、その結果として変化したトラフィックへ次の配置を適応させるためである。アブレーションではトポロジー認識スコアを外すと通信量が1.18から1.74 GB/1,000 tokensへ悪化し、低速オフラインループを外しても1.52 GBへ悪化する。したがって通信削減は圧縮側と配置側の双方向結合に依存する。",
+    "quality_impact": "近似方式。既定2%品質予算で品質低下を明示的に許容する代わりに通信量と遅延を削減する。高価値トークンを保護する品質ガードと完全精度専門家複製への緊急フォールバックを備え、測定された品質低下は設定予算を下回るが、完全な無損失性は主張しない。"
+  },
+  "reservation": {"claim_id": "claim-preload-52cbf286c62b67d46769963d", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
 }
