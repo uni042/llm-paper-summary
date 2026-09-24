@@ -43,6 +43,7 @@ DISCOVERY_CLAIMS = Path(".survey/work-queue/discovery-preload/claims")
 
 MAX_RESEARCH_PACKETS = 64
 MAX_DISCOVERY_PACKETS_PER_DIRECTION = 16
+DISCOVERY_FRONTIER_TARGET = 3
 # Kept in the index schema for read compatibility. Candidate count no longer
 # disables a prepared lane; direct-start availability is stock-driven.
 DIRECT_ROUTE_GUARD_BAND = 0
@@ -319,6 +320,26 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         ),
         None,
     )
+    primary_preload_id = str(
+        discovery_primary_packets[0].get("preload_id") or ""
+    ) if discovery_primary_packets else ""
+    discovery_start_frontier: list[dict[str, Any]] = []
+    seen_frontier_ids = {primary_preload_id} if primary_preload_id else set()
+    for direction in ("forward", "backward", "normal"):
+        for packet in discovery_packets.get(direction) or []:
+            preload_id = str(packet.get("preload_id") or "")
+            if (
+                not preload_id
+                or preload_id in seen_frontier_ids
+                or int(packet.get("preload_unseen_result_count") or 0) <= 0
+            ):
+                continue
+            discovery_start_frontier.append(packet)
+            seen_frontier_ids.add(preload_id)
+            if len(discovery_start_frontier) >= DISCOVERY_FRONTIER_TARGET - 1:
+                break
+        if len(discovery_start_frontier) >= DISCOVERY_FRONTIER_TARGET - 1:
+            break
     lane_available = {
         "research": bool(research_packets),
         # A fresh Discovery invocation always starts by attempting backward
@@ -358,15 +379,21 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         "discovery_start_lookahead": (
             discovery_start_lookahead if suggested == "discovery" else None
         ),
+        "discovery_frontier_target": DISCOVERY_FRONTIER_TARGET,
+        "discovery_start_frontier": (
+            discovery_start_frontier if suggested == "discovery" else []
+        ),
+        "frontier_auto_reserve": suggested == "discovery",
         "discovery_fallback": discovery_fallback if suggested == "discovery" else None,
         "idle_gap_guard": {
             "passive_wait_forbidden": True,
             "rule": (
                 "An asynchronous request must never be the worker's only remaining activity. "
-                "Prefer PRECHECKED Discovery stock; if the primary backward packet is absent, start the "
-                "published fixed-source schema-v3 fallback and, when discovery_start_lookahead is present, "
-                "start the prepared forward lookahead candidate evaluation immediately while canonical "
-                "precheck/run-state results proceed asynchronously."
+                "Prefer PRECHECKED Discovery stock. A direct Discovery take automatically reserves a bounded "
+                "same-run work frontier before its formal precheck becomes the only visible activity; evaluate "
+                "the already published cached candidates while canonical precheck/run-state results proceed. "
+                "If the primary backward packet is absent, start the published fixed-source schema-v3 fallback "
+                "and use discovery_start_frontier for immediate cached candidate work."
             ),
         },
         "route_guard_band": DIRECT_ROUTE_GUARD_BAND,
@@ -382,9 +409,10 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             "direct_start_allowed requires prepared stock for the fresh invocation's primary route (backward for Discovery), "
             "rather than unrelated forward/normal stock; zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. "
             "zero_wait_content_start_allowed distinguishes merely starting an asynchronous fallback from having cached candidate work available now. "
-            "When the backward packet is absent, issue discovery_fallback immediately and, if discovery_start_lookahead is present, reserve its "
-            "forward PRECHECKED packet and evaluate cached candidates without waiting for run-state; formal submission remains gated by each "
-            "run-specific schema-v3 precheck/receipt."
+            "discovery_start_frontier publishes up to two additional productive packets beside the primary packet; the first direct take causes the "
+            "Discovery precheck lane to reserve enough same-run packets to keep a bounded three-round frontier populated before formal results settle. "
+            "When the backward packet is absent, issue discovery_fallback immediately and use discovery_start_frontier for cached candidate evaluation "
+            "without waiting for run-state; formal submission remains gated by each run-specific schema-v3 precheck/receipt."
         ),
         "research": research_packets,
         "research_resume": research_resume,
@@ -723,12 +751,244 @@ def _normalize_direct_discovery_claim(path: Path, value: Any) -> dict[str, Any]:
     return {**value, "preload_id": preload_id, "worker_id": worker_id, "run_key": run_key, "request_id": request_id}
 
 
+def _frontier_request_id(claim: dict[str, Any], preload_id: str) -> str:
+    material = "\n".join(
+        (
+            str(claim.get("worker_id") or ""),
+            str(claim.get("run_key") or ""),
+            str(claim.get("preload_id") or ""),
+            preload_id,
+        )
+    )
+    return "frontier-" + hashlib.sha256(material.encode("utf-8")).hexdigest()[:24]
+
+
+def _active_direct_discovery_claims(
+    root: Path,
+    *,
+    worker_id: str,
+    run_key: str,
+) -> list[dict[str, Any]]:
+    now = _utcnow()
+    rows: list[dict[str, Any]] = []
+    folder = root / DISCOVERY_CLAIMS
+    if not folder.is_dir():
+        return rows
+    for path in sorted(folder.glob("*.json")):
+        value = _read(path, {})
+        if not isinstance(value, dict) or not (
+            value.get("direct_take") is True
+            or value.get("operation") == "direct_take_discovery"
+        ):
+            continue
+        if value.get("worker_id") != worker_id or value.get("run_key") != run_key:
+            continue
+        claimed = claim_state.parse_time(value.get("claimed_at") or value.get("requested_at"))
+        expires = claim_state.parse_time(value.get("lease_expires_at"))
+        if claimed is not None and expires is None:
+            expires = claimed + dt.timedelta(seconds=discovery_preload_queue.CLAIM_LEASE_SECONDS)
+        if claimed is None or expires is None or expires <= now:
+            continue
+        rows.append(value)
+    return rows
+
+
+def _productive_frontier_packets(
+    root: Path,
+    *,
+    primary_preload_id: str,
+    primary_direction: str,
+    limit: int,
+) -> list[dict[str, Any]]:
+    if limit <= 0:
+        return []
+    if primary_direction == "backward":
+        directions = ("forward", "backward", "normal")
+    elif primary_direction == "forward":
+        directions = ("backward", "forward", "normal")
+    else:
+        directions = ("backward", "forward", "normal")
+    rows: list[dict[str, Any]] = []
+    seen = {primary_preload_id}
+    for direction in directions:
+        for packet in discovery_preload_queue.available_preloads(
+            root,
+            direction=direction,
+            limit=MAX_DISCOVERY_PACKETS_PER_DIRECTION,
+        ):
+            preload_id = str(packet.get("preload_id") or "")
+            if (
+                not preload_id
+                or preload_id in seen
+                or int(packet.get("preload_unseen_result_count") or 0) <= 0
+            ):
+                continue
+            rows.append(packet)
+            seen.add(preload_id)
+            if len(rows) >= limit:
+                return rows
+    return rows
+
+
+def _ensure_discovery_frontier_claims(
+    root: Path,
+    claim: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Reserve work-bearing successor packets before the current precheck can become an idle gap."""
+    worker_id = str(claim["worker_id"])
+    run_key = str(claim["run_key"])
+    active = _active_direct_discovery_claims(
+        root,
+        worker_id=worker_id,
+        run_key=run_key,
+    )
+    active_request_ids = {
+        str(row.get("request_id") or "")
+        for row in active
+        if str(row.get("request_id") or "")
+    }
+    async_state = derive_worker_run_state._discovery_async_state(root, run_key)
+    active_request_ids.update(
+        str(value)
+        for value in async_state.get("discovery_inflight_precheck_ids") or []
+        if str(value)
+    )
+    capacity = max(DISCOVERY_FRONTIER_TARGET - len(active_request_ids), 0)
+    if capacity <= 0:
+        return []
+
+    entry = _read(root / DISCOVERY_ENTRIES / f"{claim['preload_id']}.json", {})
+    primary_direction = str(
+        entry.get("citation_direction")
+        or discovery_preload_queue._direction(
+            str(entry.get("provider") or ""),
+            str(entry.get("source_url") or ""),
+            entry.get("citation_direction"),
+        )
+        or "backward"
+    )
+    packets = _productive_frontier_packets(
+        root,
+        primary_preload_id=str(claim["preload_id"]),
+        primary_direction=primary_direction,
+        limit=capacity,
+    )
+    now = _utcnow()
+    reserved: list[dict[str, Any]] = []
+    for packet in packets:
+        preload_id = str(packet["preload_id"])
+        claim_path = root / DISCOVERY_CLAIMS / f"{preload_id}.json"
+        if claim_path.exists():
+            continue
+        request_id = _frontier_request_id(claim, preload_id)
+        payload = {
+            "schema_version": 1,
+            "operation": "direct_take_discovery",
+            "direct_take": True,
+            "preload_id": preload_id,
+            "worker_id": worker_id,
+            "run_key": run_key,
+            "request_id": request_id,
+            "claimed_at": _iso(now),
+            "requested_at": _iso(now),
+            "lease_expires_at": _iso(
+                now + dt.timedelta(seconds=discovery_preload_queue.CLAIM_LEASE_SECONDS)
+            ),
+            "preload_result_path": packet.get("preload_result_path"),
+            "discovery_bank": packet.get("discovery_bank"),
+            "discovery_slot_path": packet.get("discovery_slot_path"),
+            "scheduled_slot": claim.get("scheduled_slot"),
+            "actual_invocation_start": claim.get("actual_invocation_start"),
+            "candidate_inventory_at_start": claim.get("candidate_inventory_at_start"),
+            "work_mode_at_start": "discovery",
+            "research_discovery_threshold": claim.get("research_discovery_threshold"),
+            "hot_dispatch_generated_at": claim.get("hot_dispatch_generated_at"),
+            "auto_frontier": True,
+            "frontier_parent_preload_id": claim.get("preload_id"),
+        }
+        _write(claim_path, payload)
+        reserved.append(
+            {
+                **packet,
+                "request_id": request_id,
+                "claim_path": claim_path.relative_to(root).as_posix(),
+                "auto_frontier": True,
+            }
+        )
+    return reserved
+
+
+def _reserved_discovery_frontier(
+    root: Path,
+    claim: dict[str, Any],
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    folder = root / DISCOVERY_CLAIMS
+    if not folder.is_dir():
+        return rows
+    for path in sorted(folder.glob("*.json")):
+        value = _read(path, {})
+        if not isinstance(value, dict):
+            continue
+        if (
+            value.get("auto_frontier") is not True
+            or value.get("frontier_parent_preload_id") != claim.get("preload_id")
+            or value.get("worker_id") != claim.get("worker_id")
+            or value.get("run_key") != claim.get("run_key")
+        ):
+            continue
+        preload_id = str(value.get("preload_id") or "")
+        entry = _read(root / DISCOVERY_ENTRIES / f"{preload_id}.json", {})
+        if not isinstance(entry, dict) or entry.get("preload_id") != preload_id:
+            continue
+        rows.append(
+            {
+                "preload_id": preload_id,
+                "request_id": value.get("request_id"),
+                "discovery_bank": value.get("discovery_bank"),
+                "discovery_slot_path": value.get("discovery_slot_path"),
+                "preload_result_path": value.get("preload_result_path"),
+                "formal_precheck_result_path": (
+                    PRECHECK_RESULTS / f"{value.get('request_id')}.json"
+                ).as_posix(),
+                "citation_direction": entry.get("citation_direction"),
+                "axis": entry.get("axis"),
+                "work_start_allowed": True,
+                "submission_allowed": False,
+            }
+        )
+    return rows
+
+
 def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
     root = Path(repo_root).resolve()
     claim_root = root / DISCOVERY_CLAIMS
     result_root = root / DIRECT_DISCOVERY_RESULTS
     result_root.mkdir(parents=True, exist_ok=True)
     created = reused = failures = 0
+    frontier_reserved = 0
+
+    # Reserve a bounded same-run successor frontier before any formal precheck
+    # result can become the worker's only visible activity. This is supply-side:
+    # the worker does not need to decide to create the next packet after seeing
+    # queued/in-progress Actions state.
+    initial_paths = sorted(claim_root.glob("*.json")) if claim_root.is_dir() else []
+    for path in initial_paths:
+        raw = _read(path, {})
+        if not isinstance(raw, dict) or not (
+            raw.get("direct_take") is True
+            or raw.get("operation") == "direct_take_discovery"
+        ):
+            continue
+        if raw.get("auto_frontier") is True:
+            continue
+        try:
+            claim = _normalize_direct_discovery_claim(path, raw)
+            frontier_reserved += len(_ensure_discovery_frontier_claims(root, claim))
+        except Exception:
+            # The normal materialization pass below persists the canonical
+            # recovery_required result for malformed/expired primary takes.
+            pass
 
     for path in sorted(claim_root.glob("*.json")) if claim_root.is_dir() else []:
         raw = _read(path, {})
@@ -780,6 +1040,7 @@ def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
                     "direct_take": True,
                 },
             )
+            reserved_frontier = _reserved_discovery_frontier(root, claim)
             _write(
                 direct_result,
                 {
@@ -795,6 +1056,9 @@ def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
                     "submission_allowed": False,
                     "preload_result_path": str(claim.get("preload_result_path") or ""),
                     "formal_precheck_result_path": (PRECHECK_RESULTS / f"{claim['request_id']}.json").as_posix(),
+                    "frontier_target": DISCOVERY_FRONTIER_TARGET,
+                    "reserved_frontier": reserved_frontier,
+                    "frontier_work_available": bool(reserved_frontier),
                     "processed_at": _iso(_utcnow()),
                 },
             )
@@ -815,7 +1079,13 @@ def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
                     "processed_at": _iso(_utcnow()),
                 },
             )
-    return {"created": created, "reused": reused, "failures": failures}
+    return {
+        "created": created,
+        "reused": reused,
+        "failures": failures,
+        "frontier_reserved": frontier_reserved,
+        "frontier_target": DISCOVERY_FRONTIER_TARGET,
+    }
 
 
 def finalize_discovery_takes(repo_root: Path) -> dict[str, Any]:
