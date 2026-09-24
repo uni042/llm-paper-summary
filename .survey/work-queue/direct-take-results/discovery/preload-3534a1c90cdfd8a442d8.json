@@ -1,0 +1,45 @@
+{
+  "formal_precheck_ready_at": "2026-09-24T22:15:24.064414+00:00",
+  "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T070210-run1-r7.json",
+  "frontier_target": 3,
+  "frontier_work_available": true,
+  "ok": true,
+  "operation": "direct_take_discovery",
+  "preload_id": "preload-3534a1c90cdfd8a442d8",
+  "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3534a1c90cdfd8a442d8.json",
+  "processed_at": "2026-09-24T22:15:08+00:00",
+  "receipt": "sha256:89506914fcab1d0d65ef2b5f8f8ce3fb0a09aab38c267f314934d44719c42355",
+  "request_id": "disc-take-scheduled-chat-00-20260925T070210-run1-r7",
+  "reserved_frontier": [
+    {
+      "axis": "preload-backward-structured-references",
+      "citation_direction": "backward",
+      "discovery_bank": "a",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-5cd9db9d80fcfe4c875d847d.json",
+      "preload_id": "preload-2f3f9afaeffc9ed6ce9f",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-2f3f9afaeffc9ed6ce9f.json",
+      "request_id": "frontier-5cd9db9d80fcfe4c875d847d",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    },
+    {
+      "axis": "backward references of FlexGen offload and hierarchical-memory LLM inference",
+      "citation_direction": "backward",
+      "discovery_bank": "e",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-e/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-6411b1c06a4e6c552c81b94c.json",
+      "preload_id": "preload-3e069e02679c5932aeac",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3e069e02679c5932aeac.json",
+      "request_id": "frontier-6411b1c06a4e6c552c81b94c",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    }
+  ],
+  "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+  "schema_version": 1,
+  "status": "ready_for_submission",
+  "submission_allowed": true,
+  "work_start_allowed": true,
+  "worker_id": "scheduled-chat-00"
+}
