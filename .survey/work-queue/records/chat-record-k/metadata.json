@@ -1,13 +1,98 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "metadata",
   "attempt_id": "attempt-preload-5ae76716eb01958d78f1d488",
   "job_id": "job-research-b22af651ef4f551f",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-5ae76716eb01958d78f1d488",
     "worker_id": "worker-925000",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "metadata",
+  "data": {
+    "canonical_id": "arXiv:2508.17137",
+    "arxiv_id": "2508.17137",
+    "doi": "10.48550/arXiv.2508.17137",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices",
+    "summary": "メモリ容量の小さい端末でMixture-of-Experts（MoE）モデルを動かす際、必要なエキスパートだけをGPUへ先読みできれば大半の重みをホスト側へ退避できるが、履歴類似度などのヒューリスティックはエキスパート数の増加や分布変化でキャッシュ適中率が落ちる。MoE-Beyondはエキスパート活性化を多ラベル系列予測として学習し、トークン埋め込みと層IDから次に必要な64エキスパートを予測する4層Transformerを用いる。DeepSeek-V2-Liteから収集した約6600万活性化サンプルで学習し、未見のWebGLM-QA 100プロンプトで97.55%の位置単位精度と86.18%のマクロF1を得た。トレース駆動シミュレーションでは、GPUに10%のエキスパートしか置けない条件でMoE-Infinityの17%に対し約72%のキャッシュ適中率を示す。",
+    "list_summary": "トークン埋め込みと層IDから次のMoEエキスパートを予測する4層Transformerを学習し、10%容量のGPUキャッシュでMoE-Infinityの17%に対し約72%の適中率を示す。",
+    "authors": [
+      "Nishant Gavhane",
+      "Arush Mehrotra",
+      "Rohit Chawla",
+      "Peter Proenca"
+    ],
+    "authors_affiliations": "University of Pennsylvania",
+    "published": "2025-08-23",
+    "publication": "arXiv:2508.17137v1",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "publication_version": "v1",
+    "lineage": "MoEエキスパート予測・キャッシュ・プリフェッチ",
+    "topics": [
+      "Mixture-of-Experts",
+      "エキスパートキャッシュ",
+      "活性化予測",
+      "プリフェッチ",
+      "端末推論",
+      "モデルオフロード"
+    ],
+    "importance": "ヒューリスティックな履歴照合ではなく小型学習器でエキスパート活性化を直接予測し、GPU常駐率が低い端末条件で大幅なキャッシュ適中率向上を示す。エキスパート予測器自体の精度と、キャッシュ方策へ接続したシミュレーション結果を併記している。",
+    "hardware_evaluation": "学習にはNVIDIA A100を使用し約48 GPU時間を要する。システム性能の主要結果は実機エンドツーエンド遅延ではなくトレース駆動キャッシュシミュレーション。",
+    "hardware_details": "DeepSeek-V2-Liteの活性化トレース収集と予測器学習にNVIDIA A100を使用。端末GPUを模したキャッシュ容量は全エキスパートに対する常駐割合として掃引する。",
+    "quality_effect": "予測器はルータの最終選択を置き換えず、必要と予測したエキスパートを事前にGPUへ置く用途である。予測ミスはキャッシュミスや転送待ちを生むが、正しいエキスパート重みを最終的に取得する限りモデル出力そのものは変更しない。",
+    "storage_targets": [
+      "GPU VRAMエキスパートキャッシュ",
+      "ホストメモリ側エキスパート重み"
+    ],
+    "bottlenecks": [
+      "GPU VRAM容量",
+      "PCIe転送待ち",
+      "ヒューリスティック予測の適中率低下",
+      "エキスパート管理オーバーヘッド"
+    ],
+    "evidence_locations": [
+      "1 Introduction",
+      "2.2 Expert Activation Sparsity",
+      "3.2 Learning Based Approach",
+      "4 Evaluation",
+      "5 Limitations",
+      "6 Conclusions",
+      "References"
+    ],
+    "references": [
+      {
+        "canonical_id": "arXiv:2401.14361",
+        "arxiv_id": "2401.14361"
+      },
+      {
+        "canonical_id": "arXiv:2201.05596",
+        "arxiv_id": "2201.05596"
+      },
+      {
+        "canonical_id": "arXiv:2305.19414",
+        "arxiv_id": "2305.19414"
+      }
+    ],
+    "references_checked_at": "2026-09-25",
+    "references_source": "primary-reference-section",
+    "references_total": 6,
+    "source": "https://arxiv.org/abs/2508.17137",
+    "sources": [
+      "https://arxiv.org/abs/2508.17137",
+      "https://www.researchgate.net/publication/394941033_MoE-Beyond_Learning-Based_Expert_Activation_Prediction_on_Edge_Devices"
+    ],
+    "code": "https://github.com/ngavhane/moe-beyond",
+    "implementation": "公開GitHubリポジトリが本文に明記され、コード、データセット、学習済み重みを公開するとしている。予測器はPyTorchの混合精度学習を使う4層Transformerで、推論時は次層のエキスパートを予測してGPUキャッシュへ先読みする。",
+    "implementation_status": "研究プロトタイプと公開コードあり。システム効果は主としてトレース駆動シミュレーションで評価。",
+    "evaluation_type": "Trace-driven simulation and predictor evaluation",
+    "last_checked": "2026-09-25",
+    "last_audited": null,
+    "audit_version": 0
   }
 }
