@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 22:41:25 JST**
+> 自動生成: **2026-09-24 22:47:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **287** |
+| 収録候補論文 | **286** |
 | 未claim Research job | **145** |
-| 直近24hの検証済みResearch収録 | **16** |
-| 最終検証済みResearch収録 | **09-24 18:15:31 JST** |
+| 直近24hの検証済みResearch収録 | **17** |
+| 最終検証済みResearch収録 | **09-24 22:47:43 JST** |
 | 最終検証済みDiscovery探索 | **09-24 22:15:14 JST** |
 | 整合性異常 | **0** |
 
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **287** |
+| canonical_id確認済みの一意な候補論文 | **286** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **287** |
+| 非終端Research job合計 | **286** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（14時間5分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（14時間11分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **3** | **0** | **0** | **142** | **64** | — |
+| Research | **10** | **3** | **0** | **0** | **141** | **25** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **25** | **1** | **1** | **0** | **0** | **0** | **0** |
-| 合計 | **34** | **4** | **1** | **0** | **142** | **64** | **0** |
+| 合計 | **35** | **4** | **1** | **0** | **141** | **25** | **0** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -83,6 +83,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-24 22:47:43 JST** [research] `arXiv:2607.16248` — High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration
+  - job: `.survey/work-queue/jobs/job-research-11098a1512c29cb4.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-24504aa3d0d6716cf366c75b.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-24504aa3d0d6716cf366c75b.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md`
 - **09-24 18:15:31 JST** [research] `arXiv:2609.26796` — Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs
   - job: `.survey/work-queue/jobs/job-research-41d37332b16e3d57.json`
   - result: `.survey/work-queue/results/research/attempt-preload-3ee424a7b2b36c6924101628.json` (`ok=true`)
@@ -209,7 +214,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **64件**
+- 未失効かつ非terminal jobのclaim: **141件** / 直近15分heartbeat: **25件**
 - `arXiv:2605.15508` — STS: Efficient Sparse Attention with Speculative Token Sparsity / worker `shared-preload-pool`
   - claim: **09-24 22:35:28 JST** / heartbeat: **—** / lease expiry: **09-25 10:35:28 JST**
   - evidence: `.survey/work-queue/claims/job-research-c97d88c20de27e1f.json`
@@ -259,7 +264,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **287** |
+| ready | **286** |
 
 ### 候補の重複・識別情報欠損
 
@@ -279,7 +284,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1023** |
+| inference/training/survey配下の論文Markdown実体 | **1024** |
 
 ### immutable submissionの未照合
 

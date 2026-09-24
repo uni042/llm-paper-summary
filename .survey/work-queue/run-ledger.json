@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T13:41:25.622837+00:00",
+  "updated_at": "2026-09-24T13:47:52.827460+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -45416,6 +45416,56 @@
       "paper_active_count_before": 1023,
       "paper_active_count_after": 1023,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:36008060199",
+      "first_recorded_at": "2026-09-24T13:47:52.827460+00:00",
+      "last_recorded_at": "2026-09-24T13:47:52.827460+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "36008060199:1",
+          "recorded_at": "2026-09-24T13:47:52.827460+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "36008060199",
+            "run_attempt": "1",
+            "source_sha": "c907c52cca98928a3add9113bc705cebc2c814fd"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-11098a1512c29cb4",
+          "type": "research",
+          "canonical_id": "arXiv:2607.16248",
+          "title": "High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1023,
+      "paper_active_count_after": 1023,
+      "last_successful_action": "research_completed"
     }
   ]
 }
