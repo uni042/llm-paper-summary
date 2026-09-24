@@ -4,10 +4,25 @@
   "slot": "results",
   "attempt_id": "attempt-preload-9578aadc947ff8ab74585005",
   "job_id": "job-research-14b72fcf4a8168cf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-9578aadc947ff8ab74585005",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "ZipNNは通常BF16モデルを概ね元サイズの66〜67%へ圧縮し、通常FP32は約83%、clean FP32では33〜48%級まで縮小する。Llama-3.1 BF16ではZstdの77.7%に対しZipNN 66.4%で、圧縮1.15GB/s・復号1.65GB/sとZstdの0.71/1.02GB/sも上回る。モデル固有の指数分布を利用することで、容量削減と速度を同時に改善する。並列CPU実装では最大80GB/s復号、13GB/s圧縮まで拡張され、モデルハブやクラスタ保存系の帯域削減に適する。",
+    "key_results": [
+      {"metric": "通常BF16モデルの圧縮後サイズ", "value": "約66.3〜67.4%", "baseline": "未圧縮100%; Llama-3.1でZstd 77.7%", "condition": "Falcon-7B/BLOOM/OpenLLaMA/Mistral/Llama-3.1等", "interpretation": "指数が16bit中8bitを占め、その指数を約3分の1へ圧縮できるため全体で約33%削減する。"},
+      {"metric": "通常FP32モデルの圧縮後サイズ", "value": "約83.0〜83.3%", "baseline": "未圧縮100%; OLMo-1BでZstd 92.3%", "condition": "wav2vec/BERT/OLMo等", "interpretation": "指数は32bit中8bitなのでBF16より全体効果は小さいが、無損失で約17%削減する。"},
+      {"metric": "clean FP32モデルの圧縮後サイズ", "value": "XLM-RoBERTa 41.8%, CLIP 48.1%, T5-base 33.7%", "baseline": "通常FP32は約83%", "condition": "byte grouping適用", "interpretation": "丸め等で仮数byteにも偏り・ゼロが生じるモデルでは指数以外も圧縮でき、50%超の容量削減が可能。"},
+      {"metric": "Llama-3.1 BF16の単一CPU圧縮比較", "value": "66.4%; 圧縮1.15GB/s; 復号1.65GB/s", "baseline": "Zstd 77.7%; 0.71GB/s; 1.02GB/s", "condition": "1GBモデルslice", "interpretation": "一般圧縮より約11.3ポイント小さく、圧縮・復号速度も高い。"},
+      {"metric": "OLMo-1B FP32", "value": "83.2%; 圧縮1.64GB/s; 復号2.48GB/s", "baseline": "Zstd 92.3%; 0.97GB/s; 1.02GB/s", "condition": "FP32 regular model", "interpretation": "FP32でも指数抽出により容量と速度の双方を改善する。"},
+      {"metric": "XLM-RoBERTa clean FP32", "value": "42.9%; 圧縮0.83GB/s; 復号1.41GB/s", "baseline": "Zstd 57.4%; 0.18GB/s; 0.77GB/s", "condition": "clean model", "interpretation": "byte groupingによりZstdより大幅に小さく、特に圧縮速度の改善が大きい。"},
+      {"metric": "並列復号/圧縮throughput", "value": "最大80GB/s復号、13GB/s圧縮", "baseline": "単一workerより大幅に高い", "condition": "16 workers、多thread、2 NUMA nodes、Intel Xeon Platinum 8480+ 224 cores", "interpretation": "十分なCPU並列度があれば高速ネットワークやモデルロード経路に復号を重ねられる。"}
+    ],
+    "negative_results": [
+      {"name": "量子化済みモデルは圧縮余地が小さい", "description": "GPTQ/AWQ等では既に表現の冗長性が減っており追加の無損失圧縮率が弱い。GGUF量子化モデルではほぼ圧縮できない例もある。"},
+      {"name": "通常FP16/FP32はBF16より効果が小さい", "description": "指数の全bitに占める割合や指数表現の違いにより、通常FP32/FP16では圧縮後サイズが概ね83〜85%で、BF16の約66%ほど縮まらない。"},
+      {"name": "clean性はfine-tuningで失われる", "description": "丸め等に由来する仮数の規則性は追加学習で崩れ、clean modelは通常モデルに近い圧縮性へ戻る。"},
+      {"name": "実行時モデルメモリは直接減らない", "description": "保存・転送中は小さくなるが、通常の推論では復号して元の重みへ戻すため、展開済みGPU/CPUメモリ容量をそのまま33%削減する技術ではない。"}
+    ],
+    "interpretation": "ZipNNの効果はニューラルネットワーク重みが完全な高エントロピーbyte列ではなく、浮動小数点指数に強い偏りを持つことから生じる。LZ反復探索を省き、圧縮可能なbyteだけを選んでentropy codingするため、一般圧縮器より圧縮率と速度を同時に改善できる。用途はモデルの保管・配布・checkpoint I/Oであり、量子化の代替というより量子化前の高精度モデルに対する可逆なI/O層である。",
+    "quality_impact": "復号後は元データとbit単位で一致するためモデル品質への近似誤差はない。トレードオフは品質ではなく、復号CPUコスト、並列度、データ型ごとの圧縮余地、baseを必要とするdelta方式の復元依存性にある。"
+  },
+  "reservation": {"claim_id": "claim-preload-9578aadc947ff8ab74585005", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
