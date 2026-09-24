@@ -1,13 +1,32 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "problem_method",
   "attempt_id": "attempt-preload-f423df36c64b70da5c1fa947",
   "job_id": "job-research-12d29ccbbefd4d02",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-f423df36c64b70da5c1fa947",
     "worker_id": "scheduled-chat-00",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "problem_method",
+  "data": {
+    "problem": "長文生成ではKVキャッシュが文脈長に比例して増え、GPUメモリ容量とデコード時のメモリ帯域を圧迫する。既存の学習不要圧縮は注意重みを重要度として使うものが多いが、注意行列を明示しないFlashAttention系カーネルとの統合が難しい。追加学習や注意重み取得なしで、保存済みKVだけから重要トークンを判定することが課題である。",
+    "novelty": "デコーダ型Transformerで、キー埋め込みのL2ノルムが小さいKVほど後続問い合わせから大きな注意重みを受けやすいという逆相関を観測し、キー自身のノルムだけを追い出し指標に使う。問い合わせ依存の注意重みを計算しないため、学習不要かつFlashAttention互換のKV圧縮になる。",
+    "method_overview": "各層・各ヘッドのキャッシュ済みキーについてL2ノルムを計算し、キャッシュ容量を超えた際にノルムが大きいキーと対応する値を優先して削除し、低ノルムKVを保持する。著者は削除対象の注意質量と理想的削除の差をAttention Loss Referenceで分析し、相関が弱い層を特定する。既定設定では最初の2層を圧縮対象外として重要情報の損失を抑える。",
+    "components": [
+      {
+        "name": "L2ノルム重要度",
+        "description": "キー埋め込み単体のL2ノルムをKV重要度の代理指標とし、低ノルムほど保持する。問い合わせや注意行列を必要としない。"
+      },
+      {
+        "name": "層選択圧縮",
+        "description": "L2ノルムと注意重みの相関が弱い初期層を圧縮対象外にし、層ごとの経験的差を吸収する。"
+      },
+      {
+        "name": "容量制約付き追い出し",
+        "description": "所定のKV予算を超えたとき高L2ノルムのKVペアを削除し、同じトークン位置のkey/valueを一体で管理する。"
+      }
+    ],
+    "system_design": "通常の自己回帰推論で生成されたKVをキャッシュし、keyのL2ノルムを付随統計として保持する。容量上限に達した時点でノルム順位に基づき高ノルムKVを除去する。注意スコアを外部へ取り出さないためFlashAttentionのI/O効率化を維持でき、モデル重みの変更や再学習も不要である。"
   }
 }
