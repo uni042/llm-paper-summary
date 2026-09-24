@@ -106,6 +106,50 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["runtime_condition"], "none")
             self.assertIsNotNone(result["runtime_condition_ignored_reason"])
 
+    def test_platform_context_limit_without_explicit_tool_rejection_is_downgraded(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "platform_context_limit"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 1
+            value["runtime_condition_detail"] = "one paper primary full text could not be retrieved"
+            result = mod.derive(root, value)
+            self.assertEqual(result["runtime_condition"], "none")
+            self.assertEqual(
+                result["runtime_condition_ignored_reason"],
+                "platform_limit_requires_explicit_platform_tool_call_rejection_evidence",
+            )
+            self.assertEqual(result["gate"]["decision"], "CONTINUE")
+            self.assertEqual(result["gate"]["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+
+    def test_platform_context_limit_requires_actual_platform_rejection_evidence(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "platform_context_limit"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 1
+            value["runtime_condition_event"] = mod.PLATFORM_CONTEXT_LIMIT_EVENT
+            value["runtime_condition_detail"] = "platform rejected a required tool call because the context/output limit was reached"
+            result = mod.derive(root, value)
+            self.assertEqual(result["runtime_condition"], "platform_context_limit")
+            self.assertEqual(result["runtime_condition_event"], mod.PLATFORM_CONTEXT_LIMIT_EVENT)
+            self.assertEqual(result["gate"]["decision"], "STOP_RUN")
+            self.assertIn("platform_limit_reached", result["gate"]["stop_reasons"])
+
     def test_fresh_pending_claim_exposes_age_and_monitor_action(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
