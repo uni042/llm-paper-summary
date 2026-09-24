@@ -195,6 +195,8 @@ Scheduled Chat等でrepository Pythonを直接起動できない場合も、こ�
 
 Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/discovery-precheck/requests/<request-id>.json` をmainへcommitし、`.github/workflows/discovery-precheck.yml` に `process_discovery_precheck.py` を実行させ、同名resultを読む。Discovery precheck laneも**10分周期で未result requestを定期回収**する。Discovery submissionは既存のqueue処理経路へ流し、Research jobやstateを手で生成しない。Discovery submissionは既存の10分周期recoveryで未完了を回収する。
 
+**Discovery precheckが `ok=true` / `evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` になった時点では、そのroundはまだ完了していない。** 対応する候補評価を行い、0件を含む正規Discovery submissionを耐久保存し、対応resultまたは明示的hard stopまで進める。`READY_FOR_EVALUATION` のresultだけを残して最終応答・通常handoffへ進んではならない。precheck workflowは成功resultの公開時に同じ `run_key` のrun-state再導出requestを自動生成し、`discovery_evaluation_pending=true` を最新snapshotへ反映する。したがって最終化ゲートが `CONTINUE_DISCOVERY_ROUND` を返す間は、候補枯渇・Actions待ち・古いrun-state snapshotを終了理由にしない。
+
 **重要:** 「ローカルPython/任意コマンド実行機能がない」は、GitHub read/writeと上記fast laneが利用可能な限り `platform_limit` / hard stopではない。fast lane自体がGitHub/API/認証/Actions障害で利用不能になった場合だけ、第6節の保存障害・退避と第7節の停止判定へ進む。
 
 claim requestでは `request_id` をrequestファイル名のstemと完全一致させ、`requested_at` はUTCの `Z` または `+00:00` で保存する。`:00` は常に `worker_id: scheduled-chat-00`、`:30` は常に `worker_id: scheduled-chat-30` を使う。
