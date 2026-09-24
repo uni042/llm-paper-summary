@@ -263,6 +263,29 @@ class AutoAdvanceDiscoveryTests(unittest.TestCase):
             self.assertEqual(result["snapshots"][0]["required_action"], "FINALIZE")
 
 
+    def test_recovery_transaction_refills_frontier_before_next_gate_decision(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            report = root / "recovery.json"
+            write_json(report, {"recovered": []})
+            maintenance = {
+                "created": 1,
+                "reused": 2,
+                "failures": 0,
+                "frontier_reserved": 1,
+                "frontier_target": 3,
+            }
+            with mock.patch.object(
+                advance.hot_dispatch,
+                "materialize_discovery_prechecks",
+                return_value=maintenance,
+            ) as refill:
+                result = advance.advance(root, report)
+
+            refill.assert_called_once_with(root)
+            self.assertEqual(result["frontier_maintenance"], maintenance)
+
+
     def test_completed_round_uses_fixed_source_when_no_prechecked_bank_exists(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
