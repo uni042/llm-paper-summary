@@ -5,92 +5,85 @@
   "attempt_id": "attempt-preload-696e42f89d3df66e6eb783f8",
   "job_id": "job-research-e3b684ca3ee98a5c",
   "data": {
-    "overview": "Top-k attentionは計算量を線形化せず、標準注意の全QK内積を残したまま活性メモリを大幅に削減する。65Kトークンの単層注意で10GiB未満、12層32K入力でvanilla比8倍超・Performer比2倍のメモリ削減を示し、LRA/WikiText-103/UNIFIEDQA/BERT/T5でも高い疎化率で標準注意に近い品質を維持した。",
+    "overview": "評価では、上位k注意が計算量を線形化しない代わりに活性メモリを大幅に削減することを示した。65Kトークンの単層多頭注意では10GiB未満で動作し、通常のクエリ分割に対して約3倍のメモリ削減となる。12層32K入力では30GiB GPUに収まり、標準Transformer比8倍超、線形注意法比2倍のメモリ削減を得た。さらに長距離依存評価、WikiText-103、UNIFIEDQA、BERT、T5で標準注意に近い品質を維持し、事前学習済みモデルへ補正学習なしで差し替えられる実用性を確認した。",
     "key_results": [
       {
-        "metric": "single MHA memory at 65K tokens",
-        "value": "<10 GiB",
-        "baseline": "vanillaは10K tokens超の単層MHAを収容できず、query chunking比でtop-kは65K時に約3× memory reduction",
-        "condition": "BERT-base-like, A100, k=128, C=1024",
-        "interpretation": "注意スコアを保持しないことで系列長を大幅に伸ばせる。"
+        "metric": "65Kトークン単層多頭注意のメモリ",
+        "value": "10GiB未満",
+        "baseline": "標準注意は10Kトークン超を収容できず、通常のクエリ分割に対して約3倍削減",
+        "condition": "BERT-base相当、A100、k=128、C=1024",
+        "interpretation": "二次スコア行列を長時間保持しないことで、単層で扱える系列長を大幅に伸ばす。"
       },
       {
-        "metric": "12-layer 32K input memory",
-        "value": ">8× reduction vs vanilla; 2× vs Performer",
-        "baseline": "vanilla Transformer / Performer",
-        "condition": "30GiB GPU, batch 1, top-64 self-attention C=1024",
-        "interpretation": "多層でQK^T活性を保存しない効果が累積し、32K系列を30GiBへ収める。"
+        "metric": "12層32K入力のメモリ",
+        "value": "標準Transformer比8倍超削減、線形注意法比2倍削減",
+        "baseline": "標準Transformerと線形注意法（Performer）",
+        "condition": "30GiB GPU、バッチ1、自己注意は上位64件、C=1024",
+        "interpretation": "各層で注意スコアを保存しない効果が累積し、32K系列を単一30GiB GPUへ収める。"
       },
       {
-        "metric": "feed-forward capacity at 11GiB",
-        "value": "65K FF dimension",
-        "baseline": "vanillaは同じ約11GiBでFF dimension 2K",
-        "condition": "batch 512, input 512, k=512, C=2^14",
-        "interpretation": "FFNをQKV形式へ写像することで大きな中間次元の活性メモリも削減できる。"
+        "metric": "フィードフォワード中間次元",
+        "value": "11GiBで65K",
+        "baseline": "標準層は同程度のメモリで2K",
+        "condition": "バッチ512、系列長512、k=512、C=2^14",
+        "interpretation": "フィードフォワード層を同じ形式へ写像し、中間次元由来の活性メモリも削減する。"
       },
       {
-        "metric": "estimated FF dimension on 30GiB",
-        "value": "205K",
-        "baseline": "vanilla estimate 7K",
-        "condition": "linear fit of measured memory",
-        "interpretation": "測定曲線の外挿であり実測最大値そのものではない点に注意が必要。"
-      },
-      {
-        "metric": "Long Range Arena mean test accuracy",
+        "metric": "長距離依存評価の平均テスト精度",
         "value": "53.1",
-        "baseline": "vanilla authors' run 53.2; reported vanilla 52.7",
-        "condition": "top-128; ListOps/IMDb/AAN",
-        "interpretation": "kがkeysの約3%でも平均精度は標準注意とほぼ同等。AANは59.14対57.93で改善し、ListOpsは36.56対38.12で低下。"
+        "baseline": "同一実装の標準注意53.2、論文既報52.7",
+        "condition": "上位128件、ListOps・IMDb・AAN",
+        "interpretation": "キー数の約3%でも平均精度をほぼ維持する。AANは改善する一方、ListOpsは約1.6点低下する。"
       },
       {
-        "metric": "WikiText-103 test perplexity",
+        "metric": "WikiText-103テストperplexity",
         "value": "30.51",
-        "baseline": "vanilla 30.96",
-        "condition": "6-layer 156M decoder, top-64, input length 1024",
-        "interpretation": "training from scratchでも品質低下を観測せず、わずかに良いPPL。"
+        "baseline": "標準注意30.96",
+        "condition": "6層156Mモデル、上位64件、系列長1024",
+        "interpretation": "最初から学習する条件でも品質低下を観測せず、わずかに良い値となった。"
       },
       {
-        "metric": "UNIFIEDQA zero-shot sparsity",
-        "value": "k=256/512 (<1% of 65,536 keys) already comparable; k=4096 (6%) equal-or-better on all 12 tasks",
-        "baseline": "vanilla feed-forward k=65,536",
-        "condition": "UNIFIEDQA 11B, 12 QA development sets, no additional training",
-        "interpretation": "事前学習済みFFNを追加trainingなしで高疎化できることを示す。"
+        "metric": "UNIFIEDQAゼロショット疎化",
+        "value": "k=256/512でも概ね同等、k=4096では全12課題で標準以上",
+        "baseline": "標準フィードフォワード k=65,536",
+        "condition": "UNIFIEDQA 11B、追加学習なし",
+        "interpretation": "1%未満のキーでも多くの課題で品質を維持し、6%では全課題で標準と同等以上になる。"
       },
       {
-        "metric": "BERT SQuAD v1 zero-shot exact match",
-        "value": "86.2 at k=16",
-        "baseline": "vanilla 86.9; Performer 256 features 0.38",
-        "condition": "BERT-large fine-tuned checkpoint, k=16 ≈4% of input length",
-        "interpretation": "self-attentionでも補正事前学習なしの差し替えが成立し、同条件のPerformer置換は崩れる。"
+        "metric": "BERT SQuAD v1完全一致率",
+        "value": "k=16で86.2",
+        "baseline": "標準注意86.9、線形注意法0.38",
+        "condition": "SQuAD v1微調整済みBERT-large、kは入力長の約4%",
+        "interpretation": "自己注意でも補正学習なしの差し替えが成立する一方、線形注意への直接置換は崩れる。"
       },
       {
-        "metric": "T5 fine-tuning exact match",
-        "value": "BoolQ 83.1, CSQA 62.0, MCTest 79.4, OBQA 58.0, ROPES 53.8",
-        "baseline": "vanilla fine-tuned 83.3, 61.9, 81.2, 58.8, 54.0",
-        "condition": "T5-base, top-256 FFN, 3K-step fine-tuning",
-        "interpretation": "三taskはほぼ同等、MCTestとOBQAには小幅な悪化が残る。"
+        "metric": "T5微調整の完全一致率",
+        "value": "83.1 / 62.0 / 79.4 / 58.0 / 53.8",
+        "baseline": "標準層83.3 / 61.9 / 81.2 / 58.8 / 54.0",
+        "condition": "BoolQ / CSQA / MCTest / OBQA / ROPES、上位256件、3K更新",
+        "interpretation": "多くの課題で近い性能だが、MCTestとOpenBookQAには小幅な低下が残る。"
       }
     ],
     "negative_results": [
       {
-        "name": "quadratic compute remains",
-        "description": "全query-key内積を計算してからtop-kを選ぶため計算量は依然O(LQ·LK)相当で、Performerのような線形runtimeにはならない。12層長系列ではmemoryは収まってもtraining from scratchのruntimeが制約になる。"
+        "name": "計算量は二次のまま",
+        "description": "全クエリと全キーの内積を最初に計算してから上位kを選ぶため、時間計算量は依然として系列長の二乗に比例する。長系列をメモリへ載せられても、大規模データで12層モデルを最初から学習する際には実行時間が制約になる。"
       },
       {
-        "name": "sparse kernels not exploited",
-        "description": "論文実装の大きな疎×密行列積はsparsityを活用しておらず、現実の速度はvanilla attention並み。torch.sparse_coo_tensorもk=1%まで試したが有望な結果を得られず、block-sparse kernelを将来課題としている。"
+        "name": "疎カーネルを活用できない",
+        "description": "論文実装では大きな疎行列と密行列の積で疎性を高速化へ変換できず、速度は標準注意と同程度である。PyTorchの疎COO表現もk=1%まで試したが有望な結果を得られず、ブロック疎カーネルを将来課題としている。"
       },
       {
-        "name": "task-level losses remain",
-        "description": "LRA ListOpsはvanilla 38.12からtop-128 36.56へ1.56pt低下。T5 fine-tuningでもMCTest 81.2→79.4、OpenBookQA 58.8→58.0の小幅低下がある。"
+        "name": "課題依存の品質低下",
+        "description": "ListOpsは標準38.12から36.56へ低下する。T5微調整でもMCTestは81.2から79.4、OpenBookQAは58.8から58.0へ下がり、完全等価ではない。"
       },
       {
-        "name": "benchmark-era limitation",
-        "description": "資源ベンチマークはPyTorch 1.8.1/A100世代で、FlashAttention等の後発のexact attention kernelとは比較していないため、現代GPUでの相対優位は本文からは確定できない。"
+        "name": "比較世代の制約",
+        "description": "資源ベンチマークはPyTorch 1.8.1とA100世代で行われ、後発の入出力最適化された正確注意カーネルとは比較していない。"
       }
     ],
-    "interpretation": "この方式の強みは演算自体を削ることより、注意行列やFFN活性を長時間保持せず、標準attention/FFNの重みを変えずに疎な中間表現へ変換できる点にある。したがって現代的な位置付けでは、計算量削減手法というよりactivation-memory圧縮とcheckpointingの先行例として読むのが適切である。",
-    "quality_impact": "多くのtaskでvanillaとほぼ同等だが完全等価ではない。高疎化でも品質維持を複数setupで示す一方、task依存の数ポイント低下と二次runtimeを明示的な限界として保持する必要がある。"
+    "interpretation": "性能改善の中心は演算そのものの削減ではなく、注意スコアやフィードフォワード活性の寿命を短くして保持量を減らすことにある。上位k値と添字だけを次工程へ持ち越すため、標準重みを保ちながらメモリを減らせる。一方、内積計算は残るので、用途は計算量削減より活性メモリ圧縮として理解する必要がある。",
+    "quality_impact": "標準注意と数学的に同一ではないが、複数の学習・ゼロショット・微調整条件で品質がほぼ維持される。小幅な悪化を示す課題もあるため、無損失とは扱わず、対象課題ごとの検証が必要な近似手法として記録する。"
   },
   "reservation": {
     "claim_id": "claim-preload-696e42f89d3df66e6eb783f8",
