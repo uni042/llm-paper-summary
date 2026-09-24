@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Ingest and recover stranded root-level Discovery submissions.
+"""Ingest and recover stranded Discovery submissions.
+
+Current Discovery descriptors live under ``submissions/discovery``. Legacy
+root-level descriptors remain readable for compatibility.
 
 Two compatibility paths are intentionally distinct:
 
@@ -208,6 +211,29 @@ def _recovery_failure_result(source_submission: str, sub: dict, exc: Exception) 
     }
 
 
+def _iter_discovery_submission_paths() -> list[Path]:
+    """Return canonical nested Discovery submissions plus legacy root-level ones.
+
+    Canonical nested descriptors win basename collisions because Discovery
+    results remain root-level for backward compatibility.
+    """
+    seen: set[str] = set()
+    ordered: list[Path] = []
+    canonical = queue_worker.SUBMISSIONS / "discovery"
+    if canonical.is_dir():
+        for path in sorted(canonical.glob("*.json")):
+            if path.name in seen:
+                continue
+            seen.add(path.name)
+            ordered.append(path)
+    for path in sorted(queue_worker.SUBMISSIONS.glob("*.json")):
+        if path.name in seen:
+            continue
+        seen.add(path.name)
+        ordered.append(path)
+    return ordered
+
+
 def recover(root: Path) -> dict[str, Any]:
     _configure(root)
     queue_worker.SUBMISSIONS.mkdir(parents=True, exist_ok=True)
@@ -216,7 +242,7 @@ def recover(root: Path) -> dict[str, Any]:
     recovered: list[dict[str, Any]] = []
     isolated: list[dict[str, Any]] = []
 
-    for submission_path in sorted(queue_worker.SUBMISSIONS.glob("*.json")):
+    for submission_path in _iter_discovery_submission_paths():
         result_path = queue_worker.RESULTS / submission_path.name
         existing_result = _read(result_path, {}) or {}
         if not _result_allows_recovery(existing_result):
