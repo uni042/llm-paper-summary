@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-27067e88f7585964ab37f6a5","job_id":"job-research-a725ebe4f1dc359c","data":{"canonical_id":"arXiv:2210.17323","arxiv_id":"2210.17323","doi":"10.48550/arXiv.2210.17323","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers","summary":"GPTQは大規模生成Transformerを再学習なしで3〜4bit重みに圧縮する後学習量子化法である。OBQの二次情報による誤差補償を基礎に、全行で量子化順序を共有してHessian逆行列更新を大幅に削減し、128列単位の遅延バッチ更新とCholesky分解でGPU効率と数値安定性を確保する。OPT-175B/BLOOM-176Bを単一A100で約4時間で量子化し、3bit OPT-175Bを単一80GB A100に収容、専用weight-onlyカーネルでFP16比約3.24倍の生成レイテンシ短縮を示した。","list_summary":"二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。","authors":["Elias Frantar","Saleh Ashkboos","Torsten Hoefler","Dan Alistarh"],"authors_affiliations":"IST Austria; ETH Zurich; NeuralMagic","published":"2022-10-31","publication":"ICLR 2023","publication_type":"国際会議論文","publication_status":"ICLR 2023; arXiv v2 (2023-03-22)","lineage":"post-training quantization / second-order compression / weight-only LLM inference","topics":["後学習量子化","weight-only量子化","二次情報","低ビットLLM","GPU推論カーネル"],"importance":"175B級モデルで精度を保つ3〜4bit後学習量子化を実用時間へ縮め、モデル容量削減だけでなくメモリ帯域律速の自己回帰生成をweight-only低ビット表現で高速化できることを示した。","implementation":"PyTorch実装と量子化重み×FP16ベクトルの専用GPUカーネルを公開。公式コード: https://github.com/IST-DASLab/gptq","hardware_evaluation":"量子化は単一NVIDIA A100 80GB。生成速度はA100 80GBおよびA6000 48GBで評価。","quality_effect":"4bitでは175B級でFP16に近いperplexityを維持し、3bitでもGPTQはRTNの崩壊を回避。2bit/ternaryはgrouping併用で一定の品質を維持するが損失は増える。","source":"https://arxiv.org/abs/2210.17323","sources":["https://arxiv.org/abs/2210.17323","https://arxiv.org/html/2210.17323v2","https://github.com/IST-DASLab/gptq"],"code":"https://github.com/IST-DASLab/gptq","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":39},"reservation":{"claim_id":"claim-preload-27067e88f7585964ab37f6a5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-preload-c7585f2f60769fabddbc893d",
+  "job_id": "job-research-139ad955b920c36f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-c7585f2f60769fabddbc893d",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

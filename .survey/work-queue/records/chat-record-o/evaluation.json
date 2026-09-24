@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-27067e88f7585964ab37f6a5","job_id":"job-research-a725ebe4f1dc359c","data":{"hardware":"全モデルの量子化は単一NVIDIA A100 80GBで実施。OPT-175Bの生成レイテンシ評価はA100 80GBとA6000 48GBを使用し、FP16ではA100 5枚/A6000 8枚、3bit GPTQではA100 1枚/A6000 2枚へ削減。","software":"PyTorchとHugging Face版OPT/BLOOMを使用。GPTQは一様per-row asymmetric min-max量子化、基本block size 128、Hessian dampingは平均対角値の1%。生成用に量子化行列×FP16ベクトルの専用GPUカーネルを実装。","methodology":"校正データはC4からランダム抽出した2048-token segment 128本のみで、task-specific dataは使わない。OPT/BLOOM各サイズを3/4bitへ量子化し、WikiText2・PTB・C4のperplexity、LAMBADA・ARC Easy/Challenge・PIQAのzero-shot精度を評価。RTNを主baselineとし、小型モデルではOBQ/AdaRound/BRECQ等とも比較する。生成速度はbatch size 1、生成長128で平均token latencyを測定し、FP16との差は主にmatrix-vector kernelだけになるようHuggingFace/accelerate型の層分割設定を用いる。","scope":"OPT 125M〜175BとBLOOM 560M〜176Bを中心に、ResNet/BERT-baseでも量子化器自体を検証する。自己回帰生成の低batch・memory-bound条件が主対象であり、大batchのcompute-bound推論、activation quantization、現代的attention/serving stackとの統合は直接評価していない。"},"reservation":{"claim_id":"claim-preload-27067e88f7585964ab37f6a5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-c7585f2f60769fabddbc893d",
+  "job_id": "job-research-139ad955b920c36f",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-c7585f2f60769fabddbc893d",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
