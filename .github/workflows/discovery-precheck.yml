@@ -193,14 +193,13 @@ jobs:
             # run-state request before publication, then derive the canonical state
             # against the just-produced precheck result. This prevents a worker-side
             # omission from creating a finalization/control gap.
-            if [ -s /tmp/discovery-foreground-requests.txt ]; then
-              python .survey/scripts/ensure_discovery_run_state.py \
-                --repo-root . \
-                --requests-file /tmp/discovery-foreground-requests.txt \
-                | tee /tmp/discovery-run-state-recovery.json
-              python .survey/scripts/derive_worker_run_state.py --repo-root . \
-                | tee /tmp/discovery-run-state-derive.json
-            fi
+            # Also scan recent foreground prechecks that already have results.
+            # This repairs a worker omission even when the precheck itself settled
+            # before this workflow invocation; the helper ignores old/inactive runs.
+            python .survey/scripts/ensure_discovery_run_state.py --repo-root . \
+              | tee /tmp/discovery-run-state-recovery.json
+            python .survey/scripts/derive_worker_run_state.py --repo-root . \
+              | tee /tmp/discovery-run-state-derive.json
 
             # Speculative preload refreshes remain on their separate background lane
             # and are intentionally paced/serialized to avoid provider bursts.
