@@ -1241,12 +1241,6 @@ def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
             claim = _normalize_direct_discovery_claim(path, raw)
             request_path = root / PRECHECK_REQUESTS / f"{claim['request_id']}.json"
             precheck_result_path = root / PRECHECK_RESULTS / f"{claim['request_id']}.json"
-            if precheck_result_path.exists():
-                reused += 1
-                continue
-            if request_path.exists():
-                reused += 1
-                continue
             entry = _read(root / DISCOVERY_ENTRIES / f"{claim['preload_id']}.json", {})
             if not isinstance(entry, dict) or entry.get("preload_id") != claim["preload_id"]:
                 raise ValueError("Discovery preload entry is missing")
@@ -1256,6 +1250,40 @@ def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
             slot_path = str(claim.get("discovery_slot_path") or "")
             if slot_path != discovery_slot_path(bank):
                 raise ValueError("direct Discovery take slot path does not match its bank")
+
+            reserved_frontier = _reserved_discovery_frontier(root, claim)
+            if not direct_result.exists():
+                _write(
+                    direct_result,
+                    {
+                        "schema_version": 1,
+                        "operation": "direct_take_discovery",
+                        "ok": True,
+                        "preload_id": claim["preload_id"],
+                        "request_id": claim["request_id"],
+                        "worker_id": claim["worker_id"],
+                        "run_key": claim["run_key"],
+                        "status": "precheck_pending",
+                        "work_start_allowed": True,
+                        "submission_allowed": False,
+                        "preload_result_path": str(claim.get("preload_result_path") or ""),
+                        "formal_precheck_result_path": (
+                            PRECHECK_RESULTS / f"{claim['request_id']}.json"
+                        ).as_posix(),
+                        "frontier_target": DISCOVERY_FRONTIER_TARGET,
+                        "reserved_frontier": reserved_frontier,
+                        "frontier_work_available": bool(reserved_frontier),
+                        "processed_at": _iso(_utcnow()),
+                    },
+                )
+
+            if precheck_result_path.exists():
+                reused += 1
+                continue
+            if request_path.exists():
+                reused += 1
+                continue
+
             _write(
                 request_path,
                 {
@@ -1277,28 +1305,6 @@ def materialize_discovery_prechecks(repo_root: Path) -> dict[str, Any]:
                     "discovery_bank": bank,
                     "discovery_slot_path": slot_path,
                     "direct_take": True,
-                },
-            )
-            reserved_frontier = _reserved_discovery_frontier(root, claim)
-            _write(
-                direct_result,
-                {
-                    "schema_version": 1,
-                    "operation": "direct_take_discovery",
-                    "ok": True,
-                    "preload_id": claim["preload_id"],
-                    "request_id": claim["request_id"],
-                    "worker_id": claim["worker_id"],
-                    "run_key": claim["run_key"],
-                    "status": "precheck_pending",
-                    "work_start_allowed": True,
-                    "submission_allowed": False,
-                    "preload_result_path": str(claim.get("preload_result_path") or ""),
-                    "formal_precheck_result_path": (PRECHECK_RESULTS / f"{claim['request_id']}.json").as_posix(),
-                    "frontier_target": DISCOVERY_FRONTIER_TARGET,
-                    "reserved_frontier": reserved_frontier,
-                    "frontier_work_available": bool(reserved_frontier),
-                    "processed_at": _iso(_utcnow()),
                 },
             )
             created += 1
