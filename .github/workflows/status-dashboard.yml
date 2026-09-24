@@ -14,6 +14,11 @@ on:
     branches: [main]
     paths:
       - 'papers/**/*.md'
+      - '.survey/scripts/build_status_dashboard.py'
+      - '.survey/scripts/render_status_dashboard.py'
+      - '.survey/scripts/render_status_dashboard_core.py'
+      - '.survey/scripts/reference_pool.py'
+      - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
   # Queue-only pushes stay decoupled so STATUS publication does not amplify the
   # hot queue lanes. Paper existence is itself direct STATUS evidence, so a
