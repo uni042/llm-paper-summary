@@ -382,6 +382,56 @@ class HotDispatchTests(unittest.TestCase):
             self.assertTrue(direct["work_start_allowed"])
             self.assertFalse(direct["submission_allowed"])
 
+    def test_accounted_discovery_round_no_longer_consumes_frontier_capacity(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = now()
+            run_key = "run-frontier-release"
+            for preload_id, request_id, auto_frontier in (
+                ("preload-primary", "request-primary", False),
+                ("preload-done", "request-done", True),
+                ("preload-open", "request-open", True),
+            ):
+                write_json(
+                    root / hot_dispatch.DISCOVERY_CLAIMS / f"{preload_id}.json",
+                    {
+                        "schema_version": 1,
+                        "operation": "direct_take_discovery",
+                        "direct_take": True,
+                        "preload_id": preload_id,
+                        "worker_id": "worker-78",
+                        "run_key": run_key,
+                        "request_id": request_id,
+                        "claimed_at": current.isoformat(),
+                        "lease_expires_at": (current + dt.timedelta(minutes=30)).isoformat(),
+                        "auto_frontier": auto_frontier,
+                    },
+                )
+            write_json(
+                root / ".survey/work-queue/discovery-state.json",
+                {
+                    "schema_version": 3,
+                    "history": [
+                        {
+                            "run_key": run_key,
+                            "precheck_request_id": "request-done",
+                            "round_accounted": True,
+                        }
+                    ],
+                },
+            )
+
+            active = hot_dispatch._active_direct_discovery_claims(
+                root,
+                worker_id="worker-78",
+                run_key=run_key,
+            )
+            self.assertEqual(
+                {row["request_id"] for row in active},
+                {"request-primary", "request-open"},
+            )
+
+
     def test_direct_discovery_take_pre_reserves_bounded_work_frontier(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
