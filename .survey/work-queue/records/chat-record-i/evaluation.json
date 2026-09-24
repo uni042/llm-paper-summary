@@ -1,13 +1,26 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "evaluation",
   "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
   "job_id": "job-research-5cbec5c2c470e865",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-4cb587870cc33021ea9f2c50",
     "worker_id": "worker-925000",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "evaluation",
+  "data": {
+    "hardware": "デュアルソケットIntel Xeon（各64コア、Model 173）、512GB DDR5-4800、NVIDIA A100 40GB HBM2e（PCIe Gen4 x16）。退避先は256GB CMM-D、CXLスイッチ型CMM-B、6デバイス合計288GBのCMM-MP、3.84TB SSDを持つCMM-H、およびシステムDRAM。",
+    "software": "Ubuntu 24.04 LTS（kernel 6.8.0-101）、vLLM 0.19.0+cu128、LMCache 0.4.2。LMCacheの単一ソケット向け非同期取得を複数OSスレッド化。",
+    "model": "Llama-3.1-8B-Instructの密モデル。",
+    "datasets": "vLLMの配信ベンチマーク（vllm bench serve）のランダム入力。入力長512〜122Kトークン、同時要求は最大64、条件に応じて14・28・56・64要求を使用。最大集約KVキャッシュは約231GB。",
+    "baselines": [
+      "キャッシュなし",
+      "GPU VRAMのみ",
+      "システムDDR5 DRAM"
+    ],
+    "correctness": "KV内容を近似変換せず保存先だけを変更する。生成品質のベンチマークは行わず、主にスループット、初回トークン時間、処理時間内訳を評価する。",
+    "methodology": "同一のvLLM・LMCacheソフトウェアスタックで退避先だけを切り替え、入力長と同時要求数を変えて長文脈・大容量KV条件を作る。GPU HBMに収まらない条件では、GPUのみの基準は不足分を必要に応じて再計算する。要求スループット、総トークン毎秒、初回トークン時間、64K入力時のプリフィル・デコード・検索・取得の時間内訳を比較し、CXL構成のメモリプール化やNAND背後化がどの段階へ影響するかを見る。",
+    "scope": "実機のシステム評価であり、単一の密モデル、単一A100 GPU、特定のIntel XeonホストとSamsung/XConn系CXL構成に限定される。CMM-MPやCMM-Hには概念実証ハードウェアを含むため、他世代GPU・CXL・ネットワークへの一般化は追加検証が必要である。RDMA型退避との直接実測比較は今後の課題として残る。"
   }
 }
