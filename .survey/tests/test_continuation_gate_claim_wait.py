@@ -192,7 +192,9 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
         self.assertFalse(result["finalization_allowed"])
         self.assertTrue(result["claim_state_checked"])
-        self.assertIn("次のResearch/Audit", result["next_action_message"])
+        self.assertIn("claim window", result["next_action_message"])
+        self.assertIn("standby", result["next_action_message"])
+        self.assertIn("foreground 1件", result["next_action_message"])
 
     def test_terminal_blocked_claims_next_paper_even_after_quota_floor(self):
         result = mod.decide(make_args(
