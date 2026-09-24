@@ -372,6 +372,14 @@ def _direct_evidence_metrics(
         (row["completed_at"] for row in verified_research if row["completed_at"] <= now),
         default=None,
     )
+    last_discovery_completed_at = max(
+        (
+            row["completed_at"]
+            for row in verified_discovery
+            if row["completed_at"] is not None and row["completed_at"] <= now
+        ),
+        default=None,
+    )
 
     verified_submission_paths = {row["submission"]["path"] for row in verified}
     verified_submission_paths.update(
@@ -467,6 +475,7 @@ def _direct_evidence_metrics(
         "paper_markdown_count": len(_paper_markdown_files(repo_root)),
         "research_24h": len(recent_research_24h),
         "last_research_completed_at": last_research_completed_at,
+        "last_discovery_completed_at": last_discovery_completed_at,
         "unmatched_submissions": len(unmatched_submissions),
         "unmatched_by_kind": unmatched_by_kind,
         "consistency": consistency,
@@ -475,11 +484,10 @@ def _direct_evidence_metrics(
 
 
 def _render_top_metrics(metrics: dict[str, Any], now: datetime) -> list[str]:
-    last = metrics["last_research_completed_at"]
-    if last is None:
-        last_text = "—"
-    else:
-        last_text = evidence._fmt_time(last)
+    last_research = metrics["last_research_completed_at"]
+    last_discovery = metrics["last_discovery_completed_at"]
+    research_text = evidence._fmt_time(last_research) if last_research is not None else "—"
+    discovery_text = evidence._fmt_time(last_discovery) if last_discovery is not None else "—"
     return [
         "## 重要指標",
         "",
@@ -490,7 +498,8 @@ def _render_top_metrics(metrics: dict[str, Any], now: datetime) -> list[str]:
         f"| 収録候補論文 | **{metrics['candidate_papers']}** |",
         f"| 未claim Research job | **{metrics['unclaimed_jobs']}** |",
         f"| 直近24hの検証済みResearch収録 | **{metrics['research_24h']}** |",
-        f"| 最終検証済みResearch収録 | **{last_text}** |",
+        f"| 最終検証済みResearch収録 | **{research_text}** |",
+        f"| 最終検証済みDiscovery探索 | **{discovery_text}** |",
         f"| 整合性異常 | **{metrics['consistency_total']}** |",
         "",
     ]
@@ -761,8 +770,8 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         if row["completed_at"] is not None and cutoff <= row["completed_at"] <= now
     ]
 
-    paper_run_time, paper_worker_id, latest_paper_submissions = evidence._latest_paper_run(submissions)
-    discovery_run_time, latest_discovery_submissions = evidence._latest_discovery_run(submissions)
+    paper_run_time, paper_worker_id, latest_paper_submissions = evidence._latest_paper_run(submissions, now)
+    discovery_run_time, latest_discovery_submissions = evidence._latest_discovery_run(submissions, now)
     discovery_verified_by_submission = {
         row["submission"]["path"]: row for row in verified_discovery
     }
