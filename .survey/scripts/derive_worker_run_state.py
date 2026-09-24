@@ -1225,9 +1225,9 @@ def _next_work_packet(
     discovery_preload: dict[str, Any] | None,
     discovery_fallback_source: dict[str, Any] | None,
     discovery_pipeline_preload: dict[str, Any] | None,
+    run_termination_allowed: bool,
 ) -> dict[str, Any] | None:
-    permit = bool((finalization_gate.get("finalization_permit") or {}).get("issued"))
-    if permit:
+    if run_termination_allowed:
         return None
 
     action = str(
@@ -1237,6 +1237,11 @@ def _next_work_packet(
     ).strip()
     if not action:
         return None
+    if action in {"FINALIZE", "FINALIZE_AFTER_SAFE_HANDOFF"}:
+        # A legacy/broad finalization permit is not a stop proof. If the stricter
+        # stop permit was denied, route back into canonical state refresh instead
+        # of presenting FINALIZE as an executable packet.
+        action = "REFRESH_AND_CONTINUE"
 
     if action == "CONTINUE_DISCOVERY_ROUND":
         queue = discovery_async.get("discovery_evaluation_queue")
@@ -1723,6 +1728,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         discovery_preload=discovery_preload,
         discovery_fallback_source=discovery_fallback_source,
         discovery_pipeline_preload=discovery_pipeline_preload,
+        run_termination_allowed=run_termination_allowed,
     )
 
     public_submission = {key: value for key, value in submission.items() if key != "attempt_facts"}
@@ -1784,7 +1790,15 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "refill_before_idle": True,
         },
         "continuation_next_action": gate.get("required_action"),
-        "next_action": finalization_gate.get("next_action") or gate.get("required_action"),
+        "next_action": (
+            (finalization_gate.get("next_action") or gate.get("required_action"))
+            if run_termination_allowed
+            else (
+                "REFRESH_AND_CONTINUE"
+                if (finalization_gate.get("next_action") in {"FINALIZE", "FINALIZE_AFTER_SAFE_HANDOFF"})
+                else (finalization_gate.get("next_action") or gate.get("required_action"))
+            )
+        ),
         "next_work_packet": next_work_packet,
         "transport_rule": (
             "A GitHub file create/update API or connector is a valid repository write transport. "
