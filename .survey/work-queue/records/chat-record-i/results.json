@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-3c754529c6f791ee0cbc78c5","job_id":"job-research-374463a300b97ed5","data":{"overview":"RTX 5090では4k接頭辞のFlashRT冷間初回トークン時間が約366.8ms、同じ実行内のカプセル経路が約53.0msで、99百分位もほぼ同値だった。接頭辞を2kから16kへ伸ばすと冷間経路は200msから1541msへ増える一方、カプセル経路は51〜57msに留まり、速度比は3.92倍から26.94倍へ拡大した。完全状態復元は全条件でトークン一致し、KVのみを戻して再帰・畳み込み状態を欠落させると即座に大きく分岐した。","key_results":[{"metric":"初回トークン時間短縮","value":"3.92倍（2k）〜26.94倍（16k）","baseline":"同一FlashRTの冷間事前充填","condition":"RTX 5090、単一ストリーム、FP8 KV長経路","interpretation":"接頭辞再計算を状態コピーへ置換するため、接頭辞が長いほど差が拡大する。"},{"metric":"保存・復元時間","value":"0.3/0.3ms（2k）〜1.2/1.2ms（16k）","baseline":"冷間事前充填200〜1541ms","condition":"GPU常駐160〜608MBカプセル","interpretation":"復元は定数時間ではないが、バイト数に比例する帯域律速コピーで計算再実行より小さい。"},{"metric":"KVのみ復元の正確性","value":"再帰状態ゼロ化で47/48不一致、古い再帰状態で45/48不一致","baseline":"完全状態復元0/48不一致","condition":"4k境界、貪欲復号、K=0","interpretation":"位置指定KVだけではハイブリッドモデルの継続状態を表現できず、再帰状態が不可欠である。"},{"metric":"vLLMとの絶対初回トークン時間","value":"2k: 51ms対143ms、4k: 53ms対76ms、8k: 54ms対120ms","baseline":"vLLM automatic prefix caching hit","condition":"同一モデル・RTX 5090、単一ストリーム","interpretation":"測定条件では温間再利用も低いが、論文の主要差分は速度比より明示的な全状態管理である。"}],"negative_results":"カプセルは高並列サービングの置換ではなく、定常復号スループットも評価対象外である。ホストやディスクからの初回昇格、未捕捉形状、配備変更、ハイブリッドモデルの非整合チャンク境界では低遅延床がそのまま成立しない。同一ハイブリッドモデルでのSGLang速度値は量子化対応の公平性問題から報告していない。","interpretation":"結果は、低並列の再入場では『何をキャッシュするか』をKV断片から実行境界全体へ広げることで、正確性と応答遅延を同時に改善できることを示す。特にKVのみのアブレーションが失敗するため、単なる静的KVコピーの高速化ではなく、状態完全性が機構上の差分である。","quality_impact":"完全カプセルは保存状態をバイト一致で戻し、貪欲復号をトークン一致させる。チャンク境界を守らない線形注意では丸め順序差が蓄積し得るため、整合境界へ切り下げて残余だけ再計算する必要がある。"},"reservation":{"claim_id":"claim-preload-3c754529c6f791ee0cbc78c5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-preload-3a8d1487d30c19a489a3f0c1",
+  "job_id": "job-research-1ba7917ba260cdda",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-3a8d1487d30c19a489a3f0c1",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

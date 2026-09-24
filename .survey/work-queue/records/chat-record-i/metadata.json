@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-3c754529c6f791ee0cbc78c5","job_id":"job-research-374463a300b97ed5","data":{"canonical_id":"arXiv:2606.20537","arxiv_id":"2606.20537","doi":"10.48550/arXiv.2606.20537","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.DC"]},"title":"Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving","summary":"実行状態カプセル（execution-state capsule）は、KVキャッシュだけでなく再帰状態、畳み込み状態、複数トークン予測状態、境界メタデータまで含む継続実行に必要な閉じた状態集合を、グラフに束縛された名前付きバッファとして保存・復元する仕組みである。FlashRTは連続静的バッファ上のCUDAグラフ再生を用い、単一ストリームの低遅延実行と状態の凍結可能性を同じ設計から得る。RTX 5090ではGPU常駐カプセルの保存・復元がミリ秒未満で、2k〜16kトークンの共有接頭辞に対して冷間事前充填比3.92〜26.94倍の初回トークン時間短縮を示し、KVのみの復元では再帰状態欠落により即座に出力が分岐することも実証する。","list_summary":"KVだけでなく再帰・畳み込み・複数トークン予測状態を丸ごと保存復元し、単一ストリーム再入場の初回応答を最大26.94倍高速化する実行状態カプセル。","authors":["Liang Su"],"authors_affiliations":"記載なし","published":"2026-06-18","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"LLM serving / execution-state reuse / KV cache / CUDA graph runtime / on-device inference","topics":["実行状態カプセル","低遅延推論","状態復元","CUDAグラフ","オンデバイス推論"],"importance":"高並列サービングの位置指定KV再利用とは異なり、ハイブリッドモデルの再帰状態まで含む実行境界そのものを再利用単位にする。低並列・再入場・分岐・ロールバックを重視する推論系に対し、状態管理と実行基盤を一体設計する比較点を与える。","implementation":"FlashRTとして公開実装があり、白箱型のバックエンド向けカーネル実行基盤、静的連続バッファ、捕捉済みグラフ計画、GPU/ホスト/ディスク階層のカプセルを実装する。論文評価はNVIDIA CUDAバックエンドを対象とする。","hardware_evaluation":"主評価はGeForce RTX 5090 33.7GB、CUDA 13、単一ストリーム。Jetson AGX ThorとDGX Sparkでも正確性と構造的性質を再現する。","quality_effect":"完全状態復元は保存状態がバイト一致し、貪欲復号でトークン一致する。KVのみの復元では48トークン中47トークン不一致、無関係な再帰状態を残す場合は45/48不一致となり、再帰状態が正確性に不可欠である。","source":"https://arxiv.org/abs/2606.20537","sources":["https://arxiv.org/abs/2606.20537","https://arxiv.org/html/2606.20537v1","https://github.com/flashrt-project/FlashRT"],"code":"https://github.com/flashrt-project/FlashRT","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-3c754529c6f791ee0cbc78c5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-preload-3a8d1487d30c19a489a3f0c1",
+  "job_id": "job-research-1ba7917ba260cdda",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-3a8d1487d30c19a489a3f0c1",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

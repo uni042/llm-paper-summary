@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-3c754529c6f791ee0cbc78c5","job_id":"job-research-374463a300b97ed5","data":{"limitations":"評価は単一ストリームの初回応答に限定され、高並列スループット、分散配置、任意動的バッチ、クロスノード再利用、定常復号性能を扱わない。ロボット側はオフライン機構試験であり、実機タスク成功率や安全性を示さない。GPU常駐以外のカプセルは初回昇格転送を要し、同一重み・量子化・カーネル・形状バケットという配備整合条件も必要である。線形注意ではチャンク整合境界が正確性条件となる。SGLangとの同一モデル速度比較は量子化未対応のため保留されている。","differences":"vLLMのPagedAttentionは位置をブロック表へ写像してKVページを管理し、高並列バッチングを支える。SGLangのRadixAttentionは接頭辞を基数木へ対応付け、呼出し間のKV再利用を自動化する。これに対しカプセルはトークン位置ではなくコミット済み実行境界をアドレスし、KVに加えて再帰・畳み込み・複数トークン予測状態を含む全継続状態を明示的に保持する。分岐とロールバックを全セッション状態の操作として直接表現する点も異なる。","implementation_status":"FlashRTの公開リポジトリと再現用成果物が提示され、NVIDIA CUDAバックエンド、グラフ捕捉、静的バッファ、カプセル階層、LLMおよびVLA経路を実装している。一方、論文自身がproduction multi-turn agent servingとon-robot評価を将来課題としており、一般的な高並列サービング基盤の完成形を主張していない。","research_positioning":"本サーベイではKVキャッシュ最適化だけでなく、推論時状態管理と階層メモリの境界を広げる隣接システムとして位置付ける。特にハイブリッド注意や将来の状態空間・再帰モデルでは、再利用対象をKVだけに限定できないため、完全な実行状態をGPU・CPU・永続層へ移送する設計は重要になる。明示的な保持方針、状態完全性検証、帯域律速復元という観点は、SSD/NVMeを含む階層状態オフロードやエージェント再入場の研究へ直接接続できる。"},"reservation":{"claim_id":"claim-preload-3c754529c6f791ee0cbc78c5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-preload-3a8d1487d30c19a489a3f0c1",
+  "job_id": "job-research-1ba7917ba260cdda",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-3a8d1487d30c19a489a3f0c1",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
