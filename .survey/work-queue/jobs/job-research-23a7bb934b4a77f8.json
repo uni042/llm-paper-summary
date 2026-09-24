@@ -10,7 +10,7 @@
   "identifiers": [],
   "title": "WeightBridge: An Efficient Weight Transfer Library for Reinforcement Learning",
   "source_url": "https://arxiv.org/abs/2609.25442",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.25442-weightbridge-an-efficient-weight-transfer-library-for-reinforcement-learning.md",
   "lineage": null,
   "selection_reason": "LLM強化学習でtrainerからrollout generatorへのweight transferを独立したsystems bottleneckとして扱い、layout対応の自動抽出、冗長性のないload-balanced転送、複数同期方式を実装。GPU stallを最大42倍削減と報告しており、学習・推論境界の最新systems候補として強い。",
   "priority_breakdown": {
