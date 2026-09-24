@@ -18,7 +18,7 @@
 |papers/inference|986|
 |papers/training|25|
 |papers/survey|13|
-|.survey/scripts/*.py|98|
+|.survey/scripts/*.py|97|
 |.survey/tests/*.py|136|
 |work-queue/jobs|1,212|
 |work-queue/claims|701|
