@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T15:42:32.098470+00:00",
+  "updated_at": "2026-09-24T15:46:39.568821+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -45569,6 +45569,56 @@
       "paper_active_count_before": 1024,
       "paper_active_count_after": 1024,
       "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:36022608077",
+      "first_recorded_at": "2026-09-24T15:46:39.568821+00:00",
+      "last_recorded_at": "2026-09-24T15:46:39.568821+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "36022608077:1",
+          "recorded_at": "2026-09-24T15:46:39.568821+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "36022608077",
+            "run_attempt": "1",
+            "source_sha": "e0931037b423cbb6b628a3538e53572daaea18d1"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-b22af651ef4f551f",
+          "type": "research",
+          "canonical_id": "arXiv:2508.17137",
+          "title": "MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1024,
+      "paper_active_count_after": 1024,
+      "last_successful_action": "research_completed"
     }
   ]
 }

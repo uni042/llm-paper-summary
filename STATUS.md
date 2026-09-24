@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 00:42:32 JST**
+> 自動生成: **2026-09-25 00:46:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **289** |
-| 未claim Research job | **147** |
-| 直近24hの検証済みResearch収録 | **18** |
-| 最終検証済みResearch収録 | **09-25 00:42:27 JST** |
+| 収録候補論文 | **288** |
+| 未claim Research job | **145** |
+| 直近24hの検証済みResearch収録 | **19** |
+| 最終検証済みResearch収録 | **09-25 00:46:34 JST** |
 | 最終検証済みDiscovery探索 | **09-25 00:08:12 JST** |
 | 整合性異常 | **0** |
 
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **289** |
+| canonical_id確認済みの一意な候補論文 | **288** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **289** |
+| 非終端Research job合計 | **288** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,10 +34,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6821** |
-| 処理済み | **667** |
+| 構造化references総候補 | **6822** |
+| 処理済み | **668** |
 | 未処理 | **6154** |
-| 収録済みとして除外 | **558** |
+| 収録済みとして除外 | **559** |
 | 無関係として除外 | **49** |
 | 微妙として除外 | **60** |
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（16時間6分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（16時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **2** | **2** | **1** | **0** | **142** | **10** | — |
+| Research | **3** | **3** | **2** | **0** | **143** | **9** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **26** | **3** | **3** | **0** | **0** | **0** | **5** |
-| 合計 | **28** | **5** | **4** | **0** | **142** | **10** | **5** |
+| 合計 | **29** | **6** | **5** | **0** | **143** | **9** | **5** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -83,6 +83,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-25 00:46:34 JST** [research] `arXiv:2508.17137` — MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices
+  - job: `.survey/work-queue/jobs/job-research-b22af651ef4f551f.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-5ae76716eb01958d78f1d488.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-5ae76716eb01958d78f1d488.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md`
 - **09-25 00:42:27 JST** [research] `DOI:10.1109/LCA.2026.3720952` — LLM KV Cache Storage Using CXL Memory
   - job: `.survey/work-queue/jobs/job-research-5cbec5c2c470e865.json`
   - result: `.survey/work-queue/results/research/attempt-preload-4cb587870cc33021ea9f2c50.json` (`ok=true`)
@@ -146,12 +151,17 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research（最新Research/Audit run）
 
 - 最新観測run: **2026-09-25 00:32 JST** / worker `worker-925000`
-- immutable submission: **2件** / 検証済み成功: **1件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **2件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
 - **成功** `DOI:10.1109/LCA.2026.3720952` — LLM KV Cache Storage Using CXL Memory
   - job: `.survey/work-queue/jobs/job-research-5cbec5c2c470e865.json`
   - result: `.survey/work-queue/results/research/attempt-preload-4cb587870cc33021ea9f2c50.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-preload-4cb587870cc33021ea9f2c50.json`
   - paper: `papers/inference/99-other-inference-systems/2026-4885970e907b-llm-kv-cache-storage-using-cxl-memory.md`
+- **成功** `arXiv:2508.17137` — MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices
+  - job: `.survey/work-queue/jobs/job-research-b22af651ef4f551f.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-5ae76716eb01958d78f1d488.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-5ae76716eb01958d78f1d488.json`
+  - paper: `papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md`
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-f234ef828a71ef4bb3d542c4.json` (job `job-research-e6152c2a3998faa6`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-preload-f234ef828a71ef4bb3d542c4.json` (`ok=true`)
 
@@ -183,7 +193,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **10件**
+- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **9件**
+- `DOI:10.1109/LES.2025.3616900` — LPC: Efficient Lossless Parameter Compression for Deploying LLM Inference on Edge Systems / worker `shared-preload-pool`
+  - claim: **09-25 00:44:23 JST** / heartbeat: **—** / lease expiry: **09-25 12:44:23 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1c0254220f4e6305.json`
+- `arXiv:2601.19908` — CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference / worker `shared-preload-pool`
+  - claim: **09-25 00:44:23 JST** / heartbeat: **—** / lease expiry: **09-25 12:44:23 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7f91748e5f9d004b.json`
 - `arXiv:2607.04164` — BrownoutMoE: Structure-Aware Expert Grouping for Efficient and Accurate LLM Web-based Services / worker `worker-925000`
   - claim: **09-25 00:34:18 JST** / heartbeat: **09-25 00:34:18 JST** / lease expiry: **09-25 02:04:18 JST**
   - evidence: `.survey/work-queue/claims/job-research-1a48a3083b0b1499.json`
@@ -205,15 +221,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `DOI:10.1109/TMC.2026.3676689` — E²LLM: Structure-Guided Efficient Inference for LLMs in Distributed Edge / worker `worker-925000`
   - claim: **09-25 00:34:18 JST** / heartbeat: **09-25 00:34:18 JST** / lease expiry: **09-25 02:04:18 JST**
   - evidence: `.survey/work-queue/claims/job-research-92841f7f38c00d3c.json`
-- `arXiv:2508.17137` — MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices / worker `worker-925000`
-  - claim: **09-25 00:34:18 JST** / heartbeat: **09-25 00:34:18 JST** / lease expiry: **09-25 02:04:18 JST**
-  - evidence: `.survey/work-queue/claims/job-research-b22af651ef4f551f.json`
 - `arXiv:2510.03151` — Mixture of Many Zero-Compute Experts: A High-Rate Quantization Theory Perspective / worker `worker-925000`
   - claim: **09-25 00:34:18 JST** / heartbeat: **09-25 00:34:18 JST** / lease expiry: **09-25 02:04:18 JST**
   - evidence: `.survey/work-queue/claims/job-research-b3cb99418924d14e.json`
-- `arXiv:2607.01444` — On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain / worker `worker-925000`
-  - claim: **09-25 00:34:18 JST** / heartbeat: **09-25 00:34:18 JST** / lease expiry: **09-25 02:04:18 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d5b6de209d3bfef0.json`
 
 #### Audit
 
@@ -233,7 +243,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **289** |
+| ready | **288** |
 
 ### 候補の重複・識別情報欠損
 
@@ -253,7 +263,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1025** |
+| inference/training/survey配下の論文Markdown実体 | **1026** |
 
 ### immutable submissionの未照合
 
