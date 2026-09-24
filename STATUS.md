@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 06:42:19 JST**
+> 自動生成: **2026-09-25 06:42:59 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（22時間6分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（22時間7分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **5** | **3** | **3** | **0** | **144** | **36** | — |
+| Research | **4** | **3** | **3** | **0** | **144** | **36** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **8** | **8** | **0** | **0** | **0** | **12** |
-| 合計 | **13** | **11** | **11** | **0** | **144** | **36** | **12** |
+| 合計 | **12** | **11** | **11** | **0** | **144** | **36** | **12** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -103,11 +103,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-preload-5ae76716eb01958d78f1d488.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-preload-5ae76716eb01958d78f1d488.json`
   - paper: `papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md`
-- **09-25 00:42:27 JST** [research] `DOI:10.1109/LCA.2026.3720952` — LLM KV Cache Storage Using CXL Memory
-  - job: `.survey/work-queue/jobs/job-research-5cbec5c2c470e865.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-4cb587870cc33021ea9f2c50.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-4cb587870cc33021ea9f2c50.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-4885970e907b-llm-kv-cache-storage-using-cxl-memory.md`
 
 ### Audit
 
