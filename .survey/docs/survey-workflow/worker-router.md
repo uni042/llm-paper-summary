@@ -298,8 +298,12 @@ Discoveryは、run開始後に外部APIの取得を始める待ち時間を減�
 この経路は、収録済み論文の `references` を横断して候補集合を作り、同じ候補を指す収録論文数 `relation_count` が多い順に少しずつ評価する。1回に全候補を掃除しようとせず、通常の `target_unseen: 20` の1バッファを処理する。**候補集合は空になるまで継続して掘るが、前方引用refreshをブロックしない。各runで後方引用を処理したら前方引用も実行し、その後は探索実績に応じて配分する。**
 
 - 候補生成は `.survey/scripts/reference_pool.py` を正本とする。既収録論文に加え、`.survey/work-queue/reference-curation/unrelated-papers.json` と `.survey/work-queue/reference-curation/borderline-papers.json` の登録済み候補を通常時は除外する。
-- **明確にサーベイ対象外**と判断した候補は、次の候補へ進む前に `.survey/scripts/reference_relevance_ledger.py mark-unrelated` で無関係台帳へ永続保存する。同じ論文を後続runで再判定しない。
-- **関連性・重要性・得られそうな知見が微妙で、現時点ではResearchへ送る価値が弱い候補**は `.survey/scripts/reference_relevance_ledger.py mark-borderline` で微妙台帳へ保存する。微妙台帳も通常の `repository_references` 探索ではデフォルト除外し、同じ候補を毎回評価し直さない。
+- **明確にサーベイ対象外**と判断した候補は、`.survey/scripts/reference_relevance_ledger.py mark-unrelated` を正規実装として無関係台帳へ永続保存する。同じ論文を後続runで再判定しない。
+- **関連性・重要性・得られそうな知見が微妙で、現時点ではResearchへ送る価値が弱い候補**は、同スクリプトの `mark-borderline` を正規実装として微妙台帳へ保存する。微妙台帳も通常の `repository_references` 探索ではデフォルト除外し、同じ候補を毎回評価し直さない。
+
+**Scheduled Chat / connector用 relevance fast lane:** ローカルPythonを直接実行できないworkerは、上記スクリプトを実行できないことを停止理由にしてはならない。一意な `request_id` を作り、`.survey/work-queue/reference-curation/requests/<request_id>.json` をcreate-onlyでmainへ耐久保存する。requestは `schema_version: 1`、filename stemと一致する `request_id`、`operation: mark_unrelated | mark_borderline`、`canonical_id`、非空の `reason` を必須とし、分かる場合は `title`、`identity_tokens[]`、`linked_from[]`、今回runの `worker_id` / `run_key` / `scheduled_slot` / `actual_invocation_start`、元の `source_precheck_request_id` を付ける。**有効なrequestのcreate成功を、このworkerによる分類判断の耐久保存完了とみなし、その候補を今回roundのローカル除外集合へ直ちに入れて次の候補評価へ進む。Actions resultや台帳本体への反映を待ってはならない。** 当該候補は同じroundのcandidate / rejected candidate submissionへ重複投入しない。
+
+`.github/workflows/survey-reference-relevance-fast.yml` はrequestを受けると `.survey/scripts/process_reference_relevance_requests.py` を実行し、既存の `reference_relevance_ledger.py` を通して正規台帳へ反映し、`.survey/work-queue/reference-curation/results/<request_id>.json` を返す。push起動に加えて周期回収も行い、未result requestを再処理する。valid requestのresult未生成・Actions queued/in_progressは**待機理由でもrun終了理由でもない**。他候補評価、正式precheck回収、submission準備など今回runの実作業を継続し、作業の区切りでresultを回収する。resultが `ok=false` / `FIX_REFERENCE_RELEVANCE_REQUEST` の場合も、その失敗request/resultは不変証跡として残し、修正版を新しい `request_id` で作る一方、他候補の評価は止めない。processor内部の一時的I/O/競合失敗はresultを確定させず周期回収へ残し、1件のpoison requestで他の分類を停止させない。
 - 微妙台帳は永久除外ではない。後で明示的に再検討する場合だけ `reference_pool.py --include-borderline` を使って再び候補へ含めてよい。通常runでは使わない。
 - 関連ありの候補は一次資料でtitle/abstract/書誌を補完してから、当該schema v3 precheck result / receiptを参照する通常のDiscovery submissionへ送る。canonical IDだけをtitle代わりにして提出しない。
 - この経路からResearch jobを直接生成しない。Candidate投入以降は4.3〜4.4の一本道へ合流する。
