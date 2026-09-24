@@ -978,6 +978,28 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
                 ".survey/work-queue/discovery-preload/claims/",
                 result["discovery_pipeline_preload"]["take_path"],
             )
+            contract = result["discovery_pipeline_preload"]["direct_take_contract"]
+            self.assertTrue(contract["create_only"])
+            self.assertEqual(
+                contract["payload_base"]["operation"],
+                "direct_take_discovery",
+            )
+            self.assertEqual(
+                contract["payload_base"]["worker_id"],
+                "scheduled-chat-00",
+            )
+            self.assertEqual(
+                contract["payload_base"]["run_key"],
+                "run-1",
+            )
+            self.assertEqual(
+                contract["required_runtime_fields"],
+                ["request_id", "claimed_at", "lease_expires_at"],
+            )
+            self.assertEqual(
+                result["next_work_packet"]["direct_take_contract"],
+                contract,
+            )
             self.assertEqual(
                 result["gate"]["required_action"],
                 "CONTINUE_DISCOVERY_PIPELINE",
