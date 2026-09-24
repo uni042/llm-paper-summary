@@ -86,7 +86,7 @@ class SurveyIndexGroupingTest(unittest.TestCase):
             Path("papers/inference/07-kv-cache-optimization-compression"),
         )
 
-        self.assertIn("../03-kv-cache/legacy-paper.md", rendered)
+        self.assertIn("../03-kv-cache/legacy-paper.md", "\n".join(rendered))
 
     def test_paper_entries_use_mobile_friendly_vertical_blocks(self) -> None:
         row = self._record("mobile-paper", 2026, 9)
