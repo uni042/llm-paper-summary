@@ -1,0 +1,916 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-a0ba6d66be8d317fdbd6",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-a0ba6d66be8d317fdbd6",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.14800/citations",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": "140",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fa3a0c5390f1f4d5028d705c5c588ef6bc257afc",
+  "raw_search_result_count": 60,
+  "retrieval_duplicate_filtered_count": 34,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T12:12:19.467335+00:00",
+  "preload_id": "preload-a0ba6d66be8d317fdbd6",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 3,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Feature-Generation-Replay Continual Learning Combined with Mixture-of-Experts for Data-Driven Autonomous Guidance",
+      "source_url": "https://www.semanticscholar.org/paper/9d119634597f8f12bfd7bb22e956233ad103463d",
+      "year": 2025,
+      "published": "2025-10-31",
+      "abstract": "Continual learning (CL) is a key technology for enabling data-driven autonomous guidance systems to operate stably and persistently in complex and dynamic environments. Its core goal is to enable the model to continuously learn new scenarios and tasks after deployment, without forgetting existing knowledge, and finally achieving stable decision-making in the different scenarios over a long period. This paper proposes a continual learning method that combines feature-generation-replay with Mixture-of-Experts and Low-Rank Adaptation (MoE-LoRA). This method retains the key features of historical tasks by feature repla and realizes the adaptive selection of old and new knowledge by the Mixture-of-Experts (MoE), which alleviates the conflict between knowledge while ensuring learning efficiency. In the comparison experiments, we compared the proposed method with the representative continual learning methods, and the experimental results show that our method outperforms the representative continual learning methods, and the ablation experiments further demonstrate the role of each component. This work provides technical support for the long-term maintenance and new task expansion of data-driven autonomous guidance systems, laying a foundation for their stable operation in complex, variable real-world scenarios.",
+      "canonical_id": "DOI:10.3390/drones9110757",
+      "doi": "10.3390/drones9110757",
+      "authors": [
+        "Bowen Li",
+        "Junxiang Li",
+        "Hong Cheng",
+        "Tao Wu",
+        "Binhan Du"
+      ]
+    },
+    {
+      "title": "KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models",
+      "source_url": "https://www.semanticscholar.org/paper/33e30ef1dd6c1a08f3563c052b686756192702a8",
+      "year": 2025,
+      "published": "2025-10-12",
+      "abstract": "Due to the sparse nature of Mixture-of-Experts (MoE) models, they are particularly suitable for hybrid CPU/GPU inference, especially in low-concurrency scenarios. This hybrid approach leverages both the large, cost-effective memory capacity of CPU/DRAM and the high bandwidth of GPU/VRAM. However, existing hybrid solutions remain bottlenecked by CPU computation limits and CPU-GPU synchronization overheads, severely restricting their ability to efficiently run state-of-the-art large MoE models, such as the 671B DeepSeek-V3/R1. This paper presents KTransformers, a high-performance inference system designed specifically for efficient heterogeneous computing of diverse MoE models. KTransformers employs optimized, AMX-specialized kernels that fully utilize the computational capabilities of modern CPUs and incorporates an asynchronous CPU-GPU task scheduling mechanism to minimize overhead—achieving 4.62–19.74× prefilling speedups and 1.25–4.09× decoding speedups compared to existing systems. Furthermore, we propose a novel Expert Deferral mechanism that strategically enhances the potential for overlapping CPU and GPU computations, increasing CPU utilization from typically below 75% to almost 100%. This yields up to 1.45× additional throughput beyond the aforementioned optimizations, with an average model accuracy drop of no more than 0.5% across a diverse set of benchmarks. The resulting system, KTransformers, substantially enhances the accessibility of large MoE models for local users who prioritize security or intend to dig into the internals of the models. As a result, it has already been widely adopted within both the open-source community and industry.",
+      "canonical_id": "DOI:10.1145/3731569.3764843",
+      "doi": "10.1145/3731569.3764843",
+      "authors": [
+        "Hongtao Chen",
+        "Weiyu Xie",
+        "Bo Zhang",
+        "Jing Tang",
+        "Jiahao Wang",
+        "Jianwei Dong",
+        "Shao-Yuan Chen",
+        "Zi-Wei Yuan",
+        "Chen Lin",
+        "Cheng Qiu",
+        "Yuening Zhu",
+        "Qingliang Ou",
+        "Jia-Qi Liao",
+        "Xianglin Chen",
+        "Zhiyuan Ai",
+        "Yong-Wei Wu",
+        "Mingxing Zhang"
+      ]
+    },
+    {
+      "title": "Hyperbolic Self-Paced Multi-Expert Network for Cross-Domain Few-Shot Facial Expression Recognition",
+      "source_url": "https://www.semanticscholar.org/paper/3fb11a4055bc3157f79a26d7d4ede3187d1cdfc6",
+      "year": 2025,
+      "published": "2025-09-25",
+      "abstract": "Recently, cross-domain few-shot facial expression recognition (CF-FER), which identifies novel compound expressions with a few images in the target domain by using the model trained only on basic expressions in the source domain, has attracted increasing attention. Generally, existing CF-FER methods leverage the multi-dataset to increase the diversity of the source domain and alleviate the discrepancy between the source and target domains. However, these methods learn feature embeddings in the Euclidean space without considering imbalanced expression categories and imbalanced sample difficulty in the multi-dataset. Such a way makes the model difficult to capture hierarchical relationships of facial expressions, resulting in inferior transferable representations. To address these issues, we propose a hyperbolic self-paced multi-expert network (HSM-Net), which contains multiple mixture-of-experts (MoE) layers located in the hyperbolic space, for CF-FER. Specifically, HSM-Net collaboratively trains multiple experts in a self-distillation manner, where each expert focuses on learning a subset of expression categories from the multi-dataset. Based on this, we introduce a hyperbolic self-paced learning (HSL) strategy that exploits sample difficulty to adaptively train the model from easy-to-hard samples, greatly reducing the influence of imbalanced expression categories and imbalanced sample difficulty. Our HSM-Net can effectively model rich hierarchical relationships of facial expressions and obtain a highly transferable feature space. Extensive experiments on both in-the-lab and in-the-wild compound expression datasets demonstrate the superiority of our proposed method over several state-of-the-art methods. Code will be released at https://github.com/cxtjl/HSM-Net",
+      "canonical_id": "DOI:10.1109/TIP.2025.3612281",
+      "doi": "10.1109/TIP.2025.3612281",
+      "authors": [
+        "Xue-Ting Chen",
+        "Yan Yan",
+        "Jing-Hao Xue",
+        "Chang Shu",
+        "Hanzi Wang"
+      ]
+    },
+    {
+      "title": "Federated Fine-Tuning of Sparsely-Activated Large Language Models on Resource-Constrained Devices",
+      "source_url": "https://www.semanticscholar.org/paper/7b6006bcb9c2507af0ec2c24d4ceaa24b9d87084",
+      "year": 2025,
+      "published": "2025-08-26",
+      "abstract": "Federated fine-tuning of Mixture-of-Experts (MoE)-based large language models (LLMs) is challenging due to their massive computational requirements and the resource constraints of participants. Existing works attempt to fill this gap through model quantization, computation offloading, or expert pruning. However, they cannot achieve desired performance due to impractical system assumptions and a lack of consideration for MoE-specific characteristics. In this paper, we propose Flux, a system designed to enable federated fine-tuning of MoE-based LLMs across participants with constrained computing resources (e.g., consumer-grade GPUs), aiming to minimize time-to-accuracy. Flux introduces three key innovations: (1) quantization-based local profiling to estimate expert activation with minimal overhead, (2) adaptive layer-aware expert merging to reduce resource consumption while preserving accuracy, and (3) dynamic expert role assignment using an exploration-exploitation strategy to balance tuning and non-tuning experts. Extensive experiments on LLaMA-MoE and DeepSeek-MoE with multiple benchmark datasets demonstrate that Flux significantly outperforms existing methods, achieving up to 4.75× speedup in time-to-accuracy.",
+      "canonical_id": "arXiv:2508.19078",
+      "arxiv_id": "2508.19078",
+      "authors": [
+        "Fahao Chen",
+        "Jie Wan",
+        "Peng Li",
+        "Zhou Su",
+        "Dongxiao Yu"
+      ]
+    },
+    {
+      "title": "Scaling Molecular Representation Learning with Hierarchical Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/f22686d5e2754b92b47987f6c2da7cab6c742491",
+      "year": 2025,
+      "published": "2025-08-12",
+      "abstract": null,
+      "canonical_id": "DOI:10.1101/2025.08.09.669511",
+      "doi": "10.1101/2025.08.09.669511",
+      "authors": [
+        "Xiang Zhang",
+        "Shenbao Yu",
+        "Jie Xia",
+        "Fan Yang"
+      ]
+    },
+    {
+      "title": "LeanK: Learnable K Cache Channel Pruning for Efficient Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/86ae14b94f27c5b6f78740b4d4e619252537e9f6",
+      "year": 2025,
+      "published": "2025-08-04",
+      "abstract": "Large language models (LLMs) enable long-context tasks but face efficiency challenges due to the growing key-value (KV) cache. We propose LeanK, a learning-based method that prunes unimportant key (K) cache channels by leveraging static channel sparsity. With a novel two-stage training process, LeanK learns channel-wise static mask that could satisfy specific sparsity ratio and hardware alignment requirement. LeanK reduces GPU memory and accelerates decoding without sacrificing accuracy. Experiments demonstrate up to 70% K cache and 16%-18% V cache memory reduction. Custom decoding kernel enables 1.3x speedup for attention computation. We also provide insights into model channels and attention heads during long-context inference by analyzing the learned importance distribution. Our code is available at https://aka.ms/LeanK.",
+      "canonical_id": "arXiv:2508.02215",
+      "arxiv_id": "2508.02215",
+      "authors": [
+        "Yike Zhang",
+        "Zhiyuan He",
+        "Huiqiang Jiang",
+        "Chengruidong Zhang",
+        "Yuqing Yang",
+        "Jianyong Wang",
+        "Lili Qiu"
+      ]
+    },
+    {
+      "title": "Instruction-Grounded Visual Projectors for Continual Learning of Generative Vision-Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/8b940b7685d1dd57b0c815e79c0b616b5a937134",
+      "year": 2025,
+      "published": "2025-08-01",
+      "abstract": "Continual learning enables pre-trained generative vision-language models (VLMs) to incorporate knowledge from new tasks without retraining data from previous ones. Recent methods update a visual projector to translate visual information for new tasks, connecting pre-trained vision encoders with large language models. However, such adjustments may cause the models to prioritize visual inputs over language instructions, particularly learning tasks with repetitive types of textual instructions. To address the neglect of language instructions, we propose a novel framework that grounds the translation of visual information on instructions for language models. We introduce a mixture of visual projectors, each serving as a specialized visual-to-language translation expert based on the given instruction context to adapt to new tasks. To avoid using experts for irrelevant instruction contexts, we propose an expert recommendation strategy that reuses experts for tasks similar to those previously learned. Additionally, we introduce expert pruning to alleviate interference from the use of experts that cumulatively activated in previous tasks. Extensive experiments on diverse vision-language tasks demonstrate that our method outperforms existing continual learning approaches by generating instruction-following responses.",
+      "canonical_id": "arXiv:2508.00260",
+      "arxiv_id": "2508.00260",
+      "authors": [
+        "Hyundong Jin",
+        "Hyung Jin Chang",
+        "Eunwoo Kim"
+      ]
+    },
+    {
+      "title": "FLEx: Personalized Federated Learning for Mixture-of-Experts LLMs via Expert Grafting",
+      "source_url": "https://www.semanticscholar.org/paper/9d017a12ea6bac0f4074be937ee29786e54c5464",
+      "year": 2025,
+      "published": "2025-06-01",
+      "abstract": "Federated instruction tuning of large language models (LLMs) is challenged by significant data heterogeneity across clients, demanding robust personalization. The Mixture of Experts (MoE) architecture, where experts can specialize in distinct data patterns, presents a natural architectural solution to this challenge. The inherent sparsity of the MoE architecture, achieved by selectively activating experts, poses a significant challenge to its integration with federated learning (FL). Conventional FL frameworks, designed for dense models, naively aggregate all expert parameters irrespective of their local activation patterns. This naive approach not only undermines MoE's dynamic sparsity but also risks corrupting the world knowledge within pretrained experts. To address this, we propose FLEx (Federated LLMs with Personalized Experts), a novel framework that leverages pretrained MoE-based LLMs for efficient personalization. By aggregating only the shared non-expert parameters, FLEx significantly reduces communication overhead and preserves the world knowledge stored within the frozen pretrained experts. For personalization, we introduce a novel expert grafting mechanism that leverages dynamic sparsity to construct a client-specific expert from selected components of pretrained experts, tailored to local data. This grafted expert is then fine-tuned locally alongside the gating mechanism. This joint training enables the model to learn when to leverage the shared knowledge from frozen experts and when to employ the personalized one. Evaluations on diverse, non-IID instruction tuning datasets show that FLEx consistently outperforms federated baselines on average, while demonstrating strong knowledge preservation on the knowledge-driven benchmark MMLU. Our code is available at \\href{https://anonymous.4open.science/r/FLEx-8F12}{\\texttt{https://anonymous.4open.science/r/FLEx-8F12}}.",
+      "canonical_id": "arXiv:2506.00965",
+      "arxiv_id": "2506.00965",
+      "authors": [
+        "Fan Liu",
+        "Bikang Pan",
+        "Zhongyi Wang",
+        "Xi Yao",
+        "Xiaoying Tang",
+        "Jingya Wang",
+        "Ye Shi"
+      ]
+    },
+    {
+      "title": "Mixture-of-Experts for Personalized and Semantic-Aware Next Location Prediction",
+      "source_url": "https://www.semanticscholar.org/paper/0f658e9eb515e21739f11127a64a4fd9f7b9d53e",
+      "year": 2025,
+      "published": "2025-05-30",
+      "abstract": "Next location prediction plays a critical role in understanding human mobility patterns. However, existing approaches face two core limitations: (1) they fall short in capturing the complex, multi-functional semantics of real-world locations; and (2) they lack the capacity to model heterogeneous behavioral dynamics across diverse user groups. To tackle these challenges, we introduce NextLocMoE, a novel framework built upon large language models (LLMs) and structured around a dual-level Mixture-of-Experts (MoE) design. Our architecture comprises two specialized modules: a Location Semantics MoE that operates at the embedding level to encode rich functional semantics of locations, and a Personalized MoE embedded within the Transformer backbone to dynamically adapt to individual user mobility patterns. In addition, we incorporate a history-aware routing mechanism that leverages long-term trajectory data to enhance expert selection and ensure prediction stability. Empirical evaluations across several real-world urban datasets show that NextLocMoE achieves superior performance in terms of predictive accuracy, cross-domain generalization, and interpretability",
+      "canonical_id": "arXiv:2505.24597",
+      "arxiv_id": "2505.24597",
+      "authors": [
+        "Shuai Liu",
+        "Ning Cao",
+        "Yile Chen",
+        "Yue Jiang",
+        "Gao Cong"
+      ]
+    },
+    {
+      "title": "Advancing Expert Specialization for Better MoE",
+      "source_url": "https://www.semanticscholar.org/paper/a1467bd0b11e96f1aac74a91d4842433fd2a9541",
+      "year": 2025,
+      "published": "2025-05-28",
+      "abstract": "Mixture-of-Experts (MoE) models enable efficient scaling of large language models (LLMs) by activating only a subset of experts per input. However, we observe that the commonly used auxiliary load balancing loss often leads to expert overlap and overly uniform routing, which hinders expert specialization and degrades overall performance during post-training. To address this, we propose a simple yet effective solution that introduces two complementary objectives: (1) an orthogonality loss to encourage experts to process distinct types of tokens, and (2) a variance loss to encourage more discriminative routing decisions. Gradient-level analysis demonstrates that these objectives are compatible with the existing auxiliary loss and contribute to optimizing the training process. Experimental results over various model architectures and across multiple benchmarks show that our method significantly enhances expert specialization. Notably, our method improves classic MoE baselines with auxiliary loss by up to 23.79%, while also maintaining load balancing in downstream tasks, without any architectural modifications or additional components. We will release our code to contribute to the community.",
+      "canonical_id": "arXiv:2505.22323",
+      "arxiv_id": "2505.22323",
+      "authors": [
+        "Hongcan Guo",
+        "Hao-Lang Lu",
+        "Guoshun Nan",
+        "Bolun Chu",
+        "Jialin Zhuang",
+        "Yuan Yang",
+        "Wen-Hao Che",
+        "Xin-Ye Cao",
+        "Sicong Leng",
+        "Qi-Mei Cui",
+        "Xu-Dong Jiang"
+      ]
+    },
+    {
+      "title": "Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion",
+      "source_url": "https://www.semanticscholar.org/paper/d116105534980a0e5619c98a66a3b101ea48ed2a",
+      "year": 2025,
+      "published": "2025-05-27",
+      "abstract": "Diffusion language models offer parallel token generation and inherent bidirectionality, promising more efficient and powerful sequence modeling compared to autoregressive approaches. However, state-of-the-art diffusion models (e.g., Dream 7B, LLaDA 8B) suffer from slow inference. While they match the quality of similarly sized autoregressive (AR) models (e.g., Qwen2.5 7B, Llama3 8B), their iterative denoising requires multiple full-sequence forward passes, resulting in high computational costs and latency, particularly for long input prompts and long-context scenarios. Furthermore, parallel token generation introduces token incoherence problems, and current sampling heuristics suffer from significant quality drops with decreasing denoising steps. We address these limitations with two training-free techniques. First, we propose FreeCache, a Key-Value (KV) approximation caching technique that reuses stable KV projections across denoising steps, effectively reducing the computational cost of DLM inference. Second, we introduce Guided Diffusion, a training-free method that uses a lightweight pretrained autoregressive model to supervise token unmasking, dramatically reducing the total number of denoising iterations without sacrificing quality. We conduct extensive evaluations on open-source reasoning benchmarks, and our combined methods deliver an average of 12.14x end-to-end speedup across various tasks with negligible accuracy degradation. For the first time, diffusion language models achieve a comparable and even faster latency as the widely adopted autoregressive models. Our work successfully paved the way for scaling up the diffusion language model to a broader scope of applications across different domains.",
+      "canonical_id": "arXiv:2505.21467",
+      "arxiv_id": "2505.21467",
+      "authors": [
+        "Zhanqiu Hu",
+        "Jian Meng",
+        "Yash Akhauri",
+        "Mohamed S. Abdelfattah",
+        "Jae-sun Seo",
+        "Zhiru Zhang",
+        "Udit Gupta"
+      ]
+    },
+    {
+      "title": "Unveiling Hidden Collaboration within Mixture-of-Experts in Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/f197eb5e3fdbbeef2d7c2b5761eefed4c9e607f2",
+      "year": 2025,
+      "published": "2025-04-16",
+      "abstract": "Mixture-of-Experts based large language models (MoE LLMs) have shown significant promise in multitask adaptability by dynamically routing inputs to specialized experts. Despite their success, the collaborative mechanisms among experts are still not well understood, limiting both the interpretability and optimization of these models. In this paper, we focus on two critical issues: (1) identifying expert collaboration patterns, and (2) optimizing MoE LLMs through expert pruning. To address the first issue, we propose a hierarchical sparse dictionary learning (HSDL) method that uncovers the collaboration patterns among experts. For the second issue, we introduce the Contribution-Aware Expert Pruning (CAEP) algorithm, which effectively prunes low-contribution experts. Our extensive experiments demonstrate that expert collaboration patterns are closely linked to specific input types and exhibit semantic significance across various tasks. Moreover, pruning experiments show that our approach improves overall performance by 2.5\\% on average, outperforming existing methods. These findings offer valuable insights into enhancing the efficiency and interpretability of MoE LLMs, offering a clearer understanding of expert interactions and improving model optimization.",
+      "canonical_id": "arXiv:2504.12359",
+      "arxiv_id": "2504.12359",
+      "authors": [
+        "Yuan-Bo Tang",
+        "Yan Tang",
+        "Naifan Zhang",
+        "Mei Chen",
+        "Yang Li"
+      ]
+    },
+    {
+      "title": "Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations",
+      "source_url": "https://www.semanticscholar.org/paper/2a28903d52688d7bee05f1f9b8ca4ff83a825824",
+      "year": 2025,
+      "published": "2025-04-09",
+      "abstract": "Mixture-of-Experts (MoE) models achieve a favorable trade-off between performance and inference efficiency by activating only a subset of experts. However, the memory overhead of storing all experts remains a major limitation, especially in large-scale MoE models such as DeepSeek-R1(671B). In this study, we investigate domain specialization and expert redundancy in large-scale MoE models and uncover a consistent behavior we term few-shot expert localization, with only a few in-domain demonstrations, the model consistently activates a sparse and stable subset of experts on tasks within the same domain. Building on this observation, we propose a simple yet effective pruning framework, EASY-EP, that leverages a few domain-specific demonstrations to identify and retain only the most relevant experts. EASY-EP comprises two key components: output-aware expert importance assessment and expert-level token contribution estimation. The former evaluates the importance of each expert for the current token by considering the gating scores and L2 norm of the outputs of activated experts, while the latter assesses the contribution of tokens based on representation similarities before and after routed experts. Experiments on DeepSeek-R1 and DeepSeek-V3-0324 show that our method can achieve comparable performances and $2.99\\times$ throughput under the same memory budget with full model with only half the experts.",
+      "canonical_id": "arXiv:2504.06792",
+      "arxiv_id": "2504.06792",
+      "authors": [
+        "Zican Dong",
+        "Han Peng",
+        "Peiyu Liu",
+        "Wayne Xin Zhao",
+        "Dong-Dong Wu",
+        "Feng Xiao",
+        "Zhifeng Wang"
+      ]
+    },
+    {
+      "title": "Guided Model Merging for Hybrid Data Learning: Leveraging Centralized Data to Refine Decentralized Models",
+      "source_url": "https://www.semanticscholar.org/paper/d6a55ca5a154f6deb09202f2b84b781604db4941",
+      "year": 2025,
+      "published": "2025-03-26",
+      "abstract": "Current network training paradigms primarily focus on either centralized or decentralized data regimes. However, in practice, data availability often exhibits a hybrid nature, where both regimes coexist. This hybrid setting presents new opportunities for model training, as the two regimes offer complementary trade-offs: decentralized data is abundant but subject to heterogeneity and communication constraints, while centralized data—though limited in volume and potentially unrepresentative—enables better curation and high-throughput access. Despite its potential, effectively combining these paradigms remains challenging, and few frameworks are tailored to hybrid data regimes. To address this, we propose a novel framework that constructs a model atlas from decentralized models and leverages centralized data to refine a global model within this structured space. The refined model is then used to reinitialize the decentralized models. Our method synergizes federated learning (to exploit decentralized data) and model merging (to utilize centralized data), enabling effective training under hybrid data availability. Theoretically, we show that our approach achieves faster convergence than methods relying solely on decentralized data, due to variance reduction in the merging process. Extensive experiments demonstrate that our framework consistently outperforms purely centralized, purely decentralized, and existing hybrid-adaptable methods. Notably, our method remains robust even when the centralized and decentralized data domains differ or when decentralized data contains noise, significantly broadening its applicability.",
+      "canonical_id": "arXiv:2503.20138",
+      "arxiv_id": "2503.20138",
+      "authors": [
+        "Junyi Zhu",
+        "Rui-Cong Yao",
+        "T. Ceritli",
+        "Savas Ozkan",
+        "Matthew B. Blaschko",
+        "Eunchung Noh",
+        "Jeongwon Min",
+        "Cho Min",
+        "Mete Ozay"
+      ]
+    },
+    {
+      "title": "Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts",
+      "source_url": "https://www.semanticscholar.org/paper/78dfb79bdb2e608245a8ddd1fbcf175f9043f258",
+      "year": 2025,
+      "published": "2025-03-07",
+      "abstract": "The Mixture of Experts (MoE) is an effective architecture for scaling large language models by leveraging sparse expert activation to balance performance and efficiency. However, under expert parallelism, MoE suffers from inference inefficiencies due to imbalanced token-to-expert assignment, where underloaded experts complete computations early but must wait for overloaded experts, leading to global delays. We define this phenomenon as the \\textbf{\\textit{Straggler Effect}}, as the most burdened experts dictate the overall inference latency. To address this, we first propose \\textit{\\textbf{Capacity-Aware Token Drop}}, which enforces expert capacity limits by discarding excess tokens from overloaded experts, effectively reducing load imbalance with minimal performance impact (e.g., $30\\%$ speedup with only $0.9\\%$ degradation on OLMoE). Next, given the presence of low-load experts remaining well below the capacity threshold, we introduce \\textit{\\textbf{Capacity-Aware Expanded Drop}}, which allows tokens to include additional local experts in their candidate set before enforcing strict local capacity constraints, thereby improving load balance and enhancing the utilization of underused experts. Extensive experiments on both language and multimodal MoE models demonstrate the effectiveness of our approach, yielding substantial gains in expert utilization, model performance, and inference efficiency, e.g., applying Expanded Drop to Mixtral-8$\\times$7B-Instruct yields a {0.2\\%} average performance improvement and a {1.85$\\times$} inference speedup. The code is released at: https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE.",
+      "canonical_id": "arXiv:2503.05066",
+      "arxiv_id": "2503.05066",
+      "authors": [
+        "Shwai He",
+        "Weilin Cai",
+        "Jiayi Huang",
+        "Ang Li"
+      ]
+    },
+    {
+      "title": "DeRS: Towards Extremely Efficient Upcycled Mixture-of-Experts Models",
+      "source_url": "https://www.semanticscholar.org/paper/f5d6fc5ee2cc8d1664b75d2e1a0efdeb9ba219b5",
+      "year": 2025,
+      "published": "2025-03-03",
+      "abstract": "Upcycled Mixture-of-Experts (MoE) models have shown great potential in various tasks by converting the original Feed-Forward Network (FFN) layers in pre-trained dense models into MoE layers. However, these models still suffer from significant parameter inefficiency due to the introduction of multiple experts. In this work, we propose a novel DeRS (Decompose, Replace, and Synthesis) paradigm to overcome this shortcoming, which is motivated by our observations about the unique redundancy mechanisms of upcycled MoE experts. Specifically, DeRS decomposes the experts into one expert-shared base weight and multiple expert-specific delta weights, and subsequently represents these delta weights in lightweight forms. Our proposed DeRS paradigm can be applied to enhance parameter efficiency in two different scenarios, including: 1) DeRS Compression for inference stage, using sparsification or quantization to compress vanilla upcycled MoE models; and 2) DeRS Up-cycling for training stage, employing lightweight sparse or low-rank matrixes to efficiently upcycle dense models into MoE models. Extensive experiments across three different tasks show that the proposed methods can achieve extreme parameter efficiency while maintaining the performance for both training and compression of upcycled MoE models.",
+      "canonical_id": "arXiv:2503.01359",
+      "arxiv_id": "2503.01359",
+      "authors": [
+        "Yongqi Huang",
+        "Peng Ye",
+        "Chenyu Huang",
+        "Jianjian Cao",
+        "Lin Zhang",
+        "Baopu Li",
+        "Gang Yu",
+        "Tao Chen"
+      ]
+    },
+    {
+      "title": "CAMEx: Curvature-aware Merging of Experts",
+      "source_url": "https://www.semanticscholar.org/paper/2358a37d89681089c6f6df7df8bdfa08aaca2c1d",
+      "year": 2025,
+      "published": "2025-02-26",
+      "abstract": "Existing methods for merging experts during model training and fine-tuning predominantly rely on Euclidean geometry, which assumes a flat parameter space. This assumption can limit the model's generalization ability, especially during the pre-training phase, where the parameter manifold might exhibit more complex curvature. Curvature-aware merging methods typically require additional information and computational resources to approximate the Fisher Information Matrix, adding memory overhead. In this paper, we introduce CAMEx (Curvature-Aware Merging of Experts), a novel expert merging protocol that incorporates natural gradients to account for the non-Euclidean curvature of the parameter manifold. By leveraging natural gradients, CAMEx adapts more effectively to the structure of the parameter space, improving alignment between model updates and the manifold's geometry. This approach enhances both pre-training and fine-tuning, resulting in better optimization trajectories and improved generalization without the substantial memory overhead typically associated with curvature-aware methods. Our contributions are threefold: (1) CAMEx significantly outperforms traditional Euclidean-based expert merging techniques across various natural language processing tasks, leading to enhanced performance during pre-training and fine-tuning; (2) we introduce a dynamic merging architecture that optimizes resource utilization, achieving high performance while reducing computational costs, facilitating efficient scaling of large language models; and (3) we provide both theoretical and empirical evidence to demonstrate the efficiency of our proposed method. The code is publicly available at: https://github.com/kpup1710/CAMEx.",
+      "canonical_id": "arXiv:2502.18821",
+      "arxiv_id": "2502.18821",
+      "authors": [
+        "Nguyen Viet Dung",
+        "Minh Nguyen",
+        "Luc Q. Nguyen",
+        "Rachel S. Y. Teo",
+        "T. Nguyen",
+        "L. Tran"
+      ]
+    },
+    {
+      "title": "Delta Decompression for MoE-based LLMs Compression",
+      "source_url": "https://www.semanticscholar.org/paper/668f545fa8133b629ee3463c52c10b02190a2496",
+      "year": 2025,
+      "published": "2025-02-24",
+      "abstract": "Mixture-of-Experts (MoE) architectures in large language models (LLMs) achieve exceptional performance, but face prohibitive storage and memory requirements. To address these challenges, we present $D^2$-MoE, a new delta decompression compressor for reducing the parameters of MoE LLMs. Based on observations of expert diversity, we decompose their weights into a shared base weight and unique delta weights. Specifically, our method first merges each expert's weight into the base weight using the Fisher information matrix to capture shared components. Then, we compress delta weights through Singular Value Decomposition (SVD) by exploiting their low-rank properties. Finally, we introduce a semi-dynamical structured pruning strategy for the base weights, combining static and dynamic redundancy analysis to achieve further parameter reduction while maintaining input adaptivity. In this way, our $D^2$-MoE successfully compact MoE LLMs to high compression ratios without additional training. Extensive experiments highlight the superiority of our approach, with over 13% performance gains than other compressors on Mixtral|Phi-3.5|DeepSeek|Qwen2 MoE LLMs at 40$\\sim$60% compression rates. Codes are available in https://github.com/lliai/D2MoE.",
+      "canonical_id": "arXiv:2502.17298",
+      "arxiv_id": "2502.17298",
+      "authors": [
+        "Hao Gu",
+        "Wei Li",
+        "Lujun Li",
+        "Qiyuan Zhu",
+        "Mark G. Lee",
+        "Shengjie Sun",
+        "Wei Xue",
+        "Yike Guo"
+      ]
+    },
+    {
+      "title": "Mixture of Experts (MoE): A Big Data Perspective",
+      "source_url": "https://www.semanticscholar.org/paper/a7401a78effe175c7d9dbb999c130b36d9ef92a7",
+      "year": 2025,
+      "published": "2025-01-18",
+      "abstract": "As the era of big data arrives, traditional artificial intelligence algorithms have difficulty processing the demands of massive and diverse data. Mixture of experts (MoE) has shown excellent performance and broad application prospects. This paper provides an in-depth review and analysis of the latest progress in this field from multiple perspectives, including the basic principles, algorithmic models, key technical challenges, and application practices of MoE. First, we introduce the basic concept of MoE and its core idea and elaborate on its advantages over traditional single models. Then, we discuss the basic architecture of MoE and its main components, including the gating network, expert networks, and learning algorithms. Next, we review the applications of MoE in addressing key technical issues in big data. For each challenge, we provide specific MoE solutions and their innovations. Furthermore, we summarize the typical use cases of MoE in various application domains. This fully demonstrates the powerful capability of MoE in big data processing. We also analyze the advantages of MoE in big data environments. Finally, we explore the future development trends of MoE. We believe that MoE will become an important paradigm of artificial intelligence in the era of big data. In summary, this paper systematically elaborates on the principles, techniques, and applications of MoE in big data processing, providing theoretical and practical references to further promote the application of MoE in real scenarios.",
+      "canonical_id": "arXiv:2501.16352",
+      "arxiv_id": "2501.16352",
+      "authors": [
+        "Wen-Sheng Gan",
+        "Zhenyao Ning",
+        "Zhenlian Qi",
+        "Philip S. Yu"
+      ]
+    },
+    {
+      "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
+      "source_url": "https://www.semanticscholar.org/paper/0790f66f56948017b66b4ee10279e35d641d9ba9",
+      "year": 2024,
+      "published": "2024-11-27",
+      "abstract": "Mixture of Experts (MoE) LLMs have recently gained attention for their ability to enhance performance by selectively engaging specialized subnetworks or\"experts\"for each input. However, deploying MoEs on memory-constrained devices remains challenging, particularly when generating tokens sequentially with a batch size of one, as opposed to typical high-throughput settings involving long sequences or large batches. In this work, we optimize MoE on memory-constrained devices where only a subset of expert weights fit in DRAM. We introduce a novel cache-aware routing strategy that leverages expert reuse during token generation to improve cache locality. We evaluate our approach on language modeling, MMLU, and GSM8K benchmarks and present on-device results demonstrating 2$\\times$ speedups on mobile devices, offering a flexible, training-free solution to extend MoE's applicability across real-world applications.",
+      "canonical_id": "arXiv:2412.00099",
+      "arxiv_id": "2412.00099",
+      "authors": [
+        "Andrii Skliar",
+        "T. V. Rozendaal",
+        "Romain Lepert",
+        "Todor Boinovski",
+        "M. V. Baalen",
+        "Markus Nagel",
+        "Paul N. Whatmough",
+        "B. Bejnordi"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.3390/drones9110757",
+      "identity_tokens": [
+        "id:DOI:10.3390/drones9110757",
+        "title:featuregenerationreplay continual learning combined with mixtureofexperts for datadriven autonomous guidance",
+        "url:https://www.semanticscholar.org/paper/9d119634597f8f12bfd7bb22e956233ad103463d"
+      ],
+      "record": {
+        "title": "Feature-Generation-Replay Continual Learning Combined with Mixture-of-Experts for Data-Driven Autonomous Guidance",
+        "source_url": "https://www.semanticscholar.org/paper/9d119634597f8f12bfd7bb22e956233ad103463d",
+        "year": 2025,
+        "published": "2025-10-31",
+        "abstract": "Continual learning (CL) is a key technology for enabling data-driven autonomous guidance systems to operate stably and persistently in complex and dynamic environments. Its core goal is to enable the model to continuously learn new scenarios and tasks after deployment, without forgetting existing knowledge, and finally achieving stable decision-making in the different scenarios over a long period. This paper proposes a continual learning method that combines feature-generation-replay with Mixture-of-Experts and Low-Rank Adaptation (MoE-LoRA). This method retains the key features of historical tasks by feature repla and realizes the adaptive selection of old and new knowledge by the Mixture-of-Experts (MoE), which alleviates the conflict between knowledge while ensuring learning efficiency. In the comparison experiments, we compared the proposed method with the representative continual learning methods, and the experimental results show that our method outperforms the representative continual learning methods, and the ablation experiments further demonstrate the role of each component. This work provides technical support for the long-term maintenance and new task expansion of data-driven autonomous guidance systems, laying a foundation for their stable operation in complex, variable real-world scenarios.",
+        "canonical_id": "DOI:10.3390/drones9110757",
+        "doi": "10.3390/drones9110757",
+        "authors": [
+          "Bowen Li",
+          "Junxiang Li",
+          "Hong Cheng",
+          "Tao Wu",
+          "Binhan Du"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3731569.3764843",
+      "identity_tokens": [
+        "id:DOI:10.1145/3731569.3764843",
+        "title:ktransformers unleashing the full potential of cpugpu hybrid inference for moe models",
+        "url:https://www.semanticscholar.org/paper/33e30ef1dd6c1a08f3563c052b686756192702a8"
+      ],
+      "record": {
+        "title": "KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models",
+        "source_url": "https://www.semanticscholar.org/paper/33e30ef1dd6c1a08f3563c052b686756192702a8",
+        "year": 2025,
+        "published": "2025-10-12",
+        "abstract": "Due to the sparse nature of Mixture-of-Experts (MoE) models, they are particularly suitable for hybrid CPU/GPU inference, especially in low-concurrency scenarios. This hybrid approach leverages both the large, cost-effective memory capacity of CPU/DRAM and the high bandwidth of GPU/VRAM. However, existing hybrid solutions remain bottlenecked by CPU computation limits and CPU-GPU synchronization overheads, severely restricting their ability to efficiently run state-of-the-art large MoE models, such as the 671B DeepSeek-V3/R1. This paper presents KTransformers, a high-performance inference system designed specifically for efficient heterogeneous computing of diverse MoE models. KTransformers employs optimized, AMX-specialized kernels that fully utilize the computational capabilities of modern CPUs and incorporates an asynchronous CPU-GPU task scheduling mechanism to minimize overhead—achieving 4.62–19.74× prefilling speedups and 1.25–4.09× decoding speedups compared to existing systems. Furthermore, we propose a novel Expert Deferral mechanism that strategically enhances the potential for overlapping CPU and GPU computations, increasing CPU utilization from typically below 75% to almost 100%. This yields up to 1.45× additional throughput beyond the aforementioned optimizations, with an average model accuracy drop of no more than 0.5% across a diverse set of benchmarks. The resulting system, KTransformers, substantially enhances the accessibility of large MoE models for local users who prioritize security or intend to dig into the internals of the models. As a result, it has already been widely adopted within both the open-source community and industry.",
+        "canonical_id": "DOI:10.1145/3731569.3764843",
+        "doi": "10.1145/3731569.3764843",
+        "authors": [
+          "Hongtao Chen",
+          "Weiyu Xie",
+          "Bo Zhang",
+          "Jing Tang",
+          "Jiahao Wang",
+          "Jianwei Dong",
+          "Shao-Yuan Chen",
+          "Zi-Wei Yuan",
+          "Chen Lin",
+          "Cheng Qiu",
+          "Yuening Zhu",
+          "Qingliang Ou",
+          "Jia-Qi Liao",
+          "Xianglin Chen",
+          "Zhiyuan Ai",
+          "Yong-Wei Wu",
+          "Mingxing Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tip.2025.3612281",
+      "identity_tokens": [
+        "id:DOI:10.1109/tip.2025.3612281",
+        "title:hyperbolic selfpaced multiexpert network for crossdomain fewshot facial expression recognition",
+        "url:https://www.semanticscholar.org/paper/3fb11a4055bc3157f79a26d7d4ede3187d1cdfc6"
+      ],
+      "record": {
+        "title": "Hyperbolic Self-Paced Multi-Expert Network for Cross-Domain Few-Shot Facial Expression Recognition",
+        "source_url": "https://www.semanticscholar.org/paper/3fb11a4055bc3157f79a26d7d4ede3187d1cdfc6",
+        "year": 2025,
+        "published": "2025-09-25",
+        "abstract": "Recently, cross-domain few-shot facial expression recognition (CF-FER), which identifies novel compound expressions with a few images in the target domain by using the model trained only on basic expressions in the source domain, has attracted increasing attention. Generally, existing CF-FER methods leverage the multi-dataset to increase the diversity of the source domain and alleviate the discrepancy between the source and target domains. However, these methods learn feature embeddings in the Euclidean space without considering imbalanced expression categories and imbalanced sample difficulty in the multi-dataset. Such a way makes the model difficult to capture hierarchical relationships of facial expressions, resulting in inferior transferable representations. To address these issues, we propose a hyperbolic self-paced multi-expert network (HSM-Net), which contains multiple mixture-of-experts (MoE) layers located in the hyperbolic space, for CF-FER. Specifically, HSM-Net collaboratively trains multiple experts in a self-distillation manner, where each expert focuses on learning a subset of expression categories from the multi-dataset. Based on this, we introduce a hyperbolic self-paced learning (HSL) strategy that exploits sample difficulty to adaptively train the model from easy-to-hard samples, greatly reducing the influence of imbalanced expression categories and imbalanced sample difficulty. Our HSM-Net can effectively model rich hierarchical relationships of facial expressions and obtain a highly transferable feature space. Extensive experiments on both in-the-lab and in-the-wild compound expression datasets demonstrate the superiority of our proposed method over several state-of-the-art methods. Code will be released at https://github.com/cxtjl/HSM-Net",
+        "canonical_id": "DOI:10.1109/TIP.2025.3612281",
+        "doi": "10.1109/TIP.2025.3612281",
+        "authors": [
+          "Xue-Ting Chen",
+          "Yan Yan",
+          "Jing-Hao Xue",
+          "Chang Shu",
+          "Hanzi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.19078",
+      "identity_tokens": [
+        "id:arXiv:2508.19078",
+        "title:federated finetuning of sparselyactivated large language models on resourceconstrained devices",
+        "url:https://www.semanticscholar.org/paper/7b6006bcb9c2507af0ec2c24d4ceaa24b9d87084"
+      ],
+      "record": {
+        "title": "Federated Fine-Tuning of Sparsely-Activated Large Language Models on Resource-Constrained Devices",
+        "source_url": "https://www.semanticscholar.org/paper/7b6006bcb9c2507af0ec2c24d4ceaa24b9d87084",
+        "year": 2025,
+        "published": "2025-08-26",
+        "abstract": "Federated fine-tuning of Mixture-of-Experts (MoE)-based large language models (LLMs) is challenging due to their massive computational requirements and the resource constraints of participants. Existing works attempt to fill this gap through model quantization, computation offloading, or expert pruning. However, they cannot achieve desired performance due to impractical system assumptions and a lack of consideration for MoE-specific characteristics. In this paper, we propose Flux, a system designed to enable federated fine-tuning of MoE-based LLMs across participants with constrained computing resources (e.g., consumer-grade GPUs), aiming to minimize time-to-accuracy. Flux introduces three key innovations: (1) quantization-based local profiling to estimate expert activation with minimal overhead, (2) adaptive layer-aware expert merging to reduce resource consumption while preserving accuracy, and (3) dynamic expert role assignment using an exploration-exploitation strategy to balance tuning and non-tuning experts. Extensive experiments on LLaMA-MoE and DeepSeek-MoE with multiple benchmark datasets demonstrate that Flux significantly outperforms existing methods, achieving up to 4.75× speedup in time-to-accuracy.",
+        "canonical_id": "arXiv:2508.19078",
+        "arxiv_id": "2508.19078",
+        "authors": [
+          "Fahao Chen",
+          "Jie Wan",
+          "Peng Li",
+          "Zhou Su",
+          "Dongxiao Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1101/2025.08.09.669511",
+      "identity_tokens": [
+        "id:DOI:10.1101/2025.08.09.669511",
+        "title:scaling molecular representation learning with hierarchical mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/f22686d5e2754b92b47987f6c2da7cab6c742491"
+      ],
+      "record": {
+        "title": "Scaling Molecular Representation Learning with Hierarchical Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/f22686d5e2754b92b47987f6c2da7cab6c742491",
+        "year": 2025,
+        "published": "2025-08-12",
+        "abstract": null,
+        "canonical_id": "DOI:10.1101/2025.08.09.669511",
+        "doi": "10.1101/2025.08.09.669511",
+        "authors": [
+          "Xiang Zhang",
+          "Shenbao Yu",
+          "Jie Xia",
+          "Fan Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.02215",
+      "identity_tokens": [
+        "id:arXiv:2508.02215",
+        "title:leank learnable k cache channel pruning for efficient decoding",
+        "url:https://www.semanticscholar.org/paper/86ae14b94f27c5b6f78740b4d4e619252537e9f6"
+      ],
+      "record": {
+        "title": "LeanK: Learnable K Cache Channel Pruning for Efficient Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/86ae14b94f27c5b6f78740b4d4e619252537e9f6",
+        "year": 2025,
+        "published": "2025-08-04",
+        "abstract": "Large language models (LLMs) enable long-context tasks but face efficiency challenges due to the growing key-value (KV) cache. We propose LeanK, a learning-based method that prunes unimportant key (K) cache channels by leveraging static channel sparsity. With a novel two-stage training process, LeanK learns channel-wise static mask that could satisfy specific sparsity ratio and hardware alignment requirement. LeanK reduces GPU memory and accelerates decoding without sacrificing accuracy. Experiments demonstrate up to 70% K cache and 16%-18% V cache memory reduction. Custom decoding kernel enables 1.3x speedup for attention computation. We also provide insights into model channels and attention heads during long-context inference by analyzing the learned importance distribution. Our code is available at https://aka.ms/LeanK.",
+        "canonical_id": "arXiv:2508.02215",
+        "arxiv_id": "2508.02215",
+        "authors": [
+          "Yike Zhang",
+          "Zhiyuan He",
+          "Huiqiang Jiang",
+          "Chengruidong Zhang",
+          "Yuqing Yang",
+          "Jianyong Wang",
+          "Lili Qiu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.00260",
+      "identity_tokens": [
+        "id:arXiv:2508.00260",
+        "title:instructiongrounded visual projectors for continual learning of generative visionlanguage models",
+        "url:https://www.semanticscholar.org/paper/8b940b7685d1dd57b0c815e79c0b616b5a937134"
+      ],
+      "record": {
+        "title": "Instruction-Grounded Visual Projectors for Continual Learning of Generative Vision-Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/8b940b7685d1dd57b0c815e79c0b616b5a937134",
+        "year": 2025,
+        "published": "2025-08-01",
+        "abstract": "Continual learning enables pre-trained generative vision-language models (VLMs) to incorporate knowledge from new tasks without retraining data from previous ones. Recent methods update a visual projector to translate visual information for new tasks, connecting pre-trained vision encoders with large language models. However, such adjustments may cause the models to prioritize visual inputs over language instructions, particularly learning tasks with repetitive types of textual instructions. To address the neglect of language instructions, we propose a novel framework that grounds the translation of visual information on instructions for language models. We introduce a mixture of visual projectors, each serving as a specialized visual-to-language translation expert based on the given instruction context to adapt to new tasks. To avoid using experts for irrelevant instruction contexts, we propose an expert recommendation strategy that reuses experts for tasks similar to those previously learned. Additionally, we introduce expert pruning to alleviate interference from the use of experts that cumulatively activated in previous tasks. Extensive experiments on diverse vision-language tasks demonstrate that our method outperforms existing continual learning approaches by generating instruction-following responses.",
+        "canonical_id": "arXiv:2508.00260",
+        "arxiv_id": "2508.00260",
+        "authors": [
+          "Hyundong Jin",
+          "Hyung Jin Chang",
+          "Eunwoo Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.00965",
+      "identity_tokens": [
+        "id:arXiv:2506.00965",
+        "title:flex personalized federated learning for mixtureofexperts llms via expert grafting",
+        "url:https://www.semanticscholar.org/paper/9d017a12ea6bac0f4074be937ee29786e54c5464"
+      ],
+      "record": {
+        "title": "FLEx: Personalized Federated Learning for Mixture-of-Experts LLMs via Expert Grafting",
+        "source_url": "https://www.semanticscholar.org/paper/9d017a12ea6bac0f4074be937ee29786e54c5464",
+        "year": 2025,
+        "published": "2025-06-01",
+        "abstract": "Federated instruction tuning of large language models (LLMs) is challenged by significant data heterogeneity across clients, demanding robust personalization. The Mixture of Experts (MoE) architecture, where experts can specialize in distinct data patterns, presents a natural architectural solution to this challenge. The inherent sparsity of the MoE architecture, achieved by selectively activating experts, poses a significant challenge to its integration with federated learning (FL). Conventional FL frameworks, designed for dense models, naively aggregate all expert parameters irrespective of their local activation patterns. This naive approach not only undermines MoE's dynamic sparsity but also risks corrupting the world knowledge within pretrained experts. To address this, we propose FLEx (Federated LLMs with Personalized Experts), a novel framework that leverages pretrained MoE-based LLMs for efficient personalization. By aggregating only the shared non-expert parameters, FLEx significantly reduces communication overhead and preserves the world knowledge stored within the frozen pretrained experts. For personalization, we introduce a novel expert grafting mechanism that leverages dynamic sparsity to construct a client-specific expert from selected components of pretrained experts, tailored to local data. This grafted expert is then fine-tuned locally alongside the gating mechanism. This joint training enables the model to learn when to leverage the shared knowledge from frozen experts and when to employ the personalized one. Evaluations on diverse, non-IID instruction tuning datasets show that FLEx consistently outperforms federated baselines on average, while demonstrating strong knowledge preservation on the knowledge-driven benchmark MMLU. Our code is available at \\href{https://anonymous.4open.science/r/FLEx-8F12}{\\texttt{https://anonymous.4open.science/r/FLEx-8F12}}.",
+        "canonical_id": "arXiv:2506.00965",
+        "arxiv_id": "2506.00965",
+        "authors": [
+          "Fan Liu",
+          "Bikang Pan",
+          "Zhongyi Wang",
+          "Xi Yao",
+          "Xiaoying Tang",
+          "Jingya Wang",
+          "Ye Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.24597",
+      "identity_tokens": [
+        "id:arXiv:2505.24597",
+        "title:mixtureofexperts for personalized and semanticaware next location prediction",
+        "url:https://www.semanticscholar.org/paper/0f658e9eb515e21739f11127a64a4fd9f7b9d53e"
+      ],
+      "record": {
+        "title": "Mixture-of-Experts for Personalized and Semantic-Aware Next Location Prediction",
+        "source_url": "https://www.semanticscholar.org/paper/0f658e9eb515e21739f11127a64a4fd9f7b9d53e",
+        "year": 2025,
+        "published": "2025-05-30",
+        "abstract": "Next location prediction plays a critical role in understanding human mobility patterns. However, existing approaches face two core limitations: (1) they fall short in capturing the complex, multi-functional semantics of real-world locations; and (2) they lack the capacity to model heterogeneous behavioral dynamics across diverse user groups. To tackle these challenges, we introduce NextLocMoE, a novel framework built upon large language models (LLMs) and structured around a dual-level Mixture-of-Experts (MoE) design. Our architecture comprises two specialized modules: a Location Semantics MoE that operates at the embedding level to encode rich functional semantics of locations, and a Personalized MoE embedded within the Transformer backbone to dynamically adapt to individual user mobility patterns. In addition, we incorporate a history-aware routing mechanism that leverages long-term trajectory data to enhance expert selection and ensure prediction stability. Empirical evaluations across several real-world urban datasets show that NextLocMoE achieves superior performance in terms of predictive accuracy, cross-domain generalization, and interpretability",
+        "canonical_id": "arXiv:2505.24597",
+        "arxiv_id": "2505.24597",
+        "authors": [
+          "Shuai Liu",
+          "Ning Cao",
+          "Yile Chen",
+          "Yue Jiang",
+          "Gao Cong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.22323",
+      "identity_tokens": [
+        "id:arXiv:2505.22323",
+        "title:advancing expert specialization for better moe",
+        "url:https://www.semanticscholar.org/paper/a1467bd0b11e96f1aac74a91d4842433fd2a9541"
+      ],
+      "record": {
+        "title": "Advancing Expert Specialization for Better MoE",
+        "source_url": "https://www.semanticscholar.org/paper/a1467bd0b11e96f1aac74a91d4842433fd2a9541",
+        "year": 2025,
+        "published": "2025-05-28",
+        "abstract": "Mixture-of-Experts (MoE) models enable efficient scaling of large language models (LLMs) by activating only a subset of experts per input. However, we observe that the commonly used auxiliary load balancing loss often leads to expert overlap and overly uniform routing, which hinders expert specialization and degrades overall performance during post-training. To address this, we propose a simple yet effective solution that introduces two complementary objectives: (1) an orthogonality loss to encourage experts to process distinct types of tokens, and (2) a variance loss to encourage more discriminative routing decisions. Gradient-level analysis demonstrates that these objectives are compatible with the existing auxiliary loss and contribute to optimizing the training process. Experimental results over various model architectures and across multiple benchmarks show that our method significantly enhances expert specialization. Notably, our method improves classic MoE baselines with auxiliary loss by up to 23.79%, while also maintaining load balancing in downstream tasks, without any architectural modifications or additional components. We will release our code to contribute to the community.",
+        "canonical_id": "arXiv:2505.22323",
+        "arxiv_id": "2505.22323",
+        "authors": [
+          "Hongcan Guo",
+          "Hao-Lang Lu",
+          "Guoshun Nan",
+          "Bolun Chu",
+          "Jialin Zhuang",
+          "Yuan Yang",
+          "Wen-Hao Che",
+          "Xin-Ye Cao",
+          "Sicong Leng",
+          "Qi-Mei Cui",
+          "Xu-Dong Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.21467",
+      "identity_tokens": [
+        "id:arXiv:2505.21467",
+        "title:accelerating diffusion language model inference via efficient kv caching and guided diffusion",
+        "url:https://www.semanticscholar.org/paper/d116105534980a0e5619c98a66a3b101ea48ed2a"
+      ],
+      "record": {
+        "title": "Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion",
+        "source_url": "https://www.semanticscholar.org/paper/d116105534980a0e5619c98a66a3b101ea48ed2a",
+        "year": 2025,
+        "published": "2025-05-27",
+        "abstract": "Diffusion language models offer parallel token generation and inherent bidirectionality, promising more efficient and powerful sequence modeling compared to autoregressive approaches. However, state-of-the-art diffusion models (e.g., Dream 7B, LLaDA 8B) suffer from slow inference. While they match the quality of similarly sized autoregressive (AR) models (e.g., Qwen2.5 7B, Llama3 8B), their iterative denoising requires multiple full-sequence forward passes, resulting in high computational costs and latency, particularly for long input prompts and long-context scenarios. Furthermore, parallel token generation introduces token incoherence problems, and current sampling heuristics suffer from significant quality drops with decreasing denoising steps. We address these limitations with two training-free techniques. First, we propose FreeCache, a Key-Value (KV) approximation caching technique that reuses stable KV projections across denoising steps, effectively reducing the computational cost of DLM inference. Second, we introduce Guided Diffusion, a training-free method that uses a lightweight pretrained autoregressive model to supervise token unmasking, dramatically reducing the total number of denoising iterations without sacrificing quality. We conduct extensive evaluations on open-source reasoning benchmarks, and our combined methods deliver an average of 12.14x end-to-end speedup across various tasks with negligible accuracy degradation. For the first time, diffusion language models achieve a comparable and even faster latency as the widely adopted autoregressive models. Our work successfully paved the way for scaling up the diffusion language model to a broader scope of applications across different domains.",
+        "canonical_id": "arXiv:2505.21467",
+        "arxiv_id": "2505.21467",
+        "authors": [
+          "Zhanqiu Hu",
+          "Jian Meng",
+          "Yash Akhauri",
+          "Mohamed S. Abdelfattah",
+          "Jae-sun Seo",
+          "Zhiru Zhang",
+          "Udit Gupta"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.12359",
+      "identity_tokens": [
+        "id:arXiv:2504.12359",
+        "title:unveiling hidden collaboration within mixtureofexperts in large language models",
+        "url:https://www.semanticscholar.org/paper/f197eb5e3fdbbeef2d7c2b5761eefed4c9e607f2"
+      ],
+      "record": {
+        "title": "Unveiling Hidden Collaboration within Mixture-of-Experts in Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/f197eb5e3fdbbeef2d7c2b5761eefed4c9e607f2",
+        "year": 2025,
+        "published": "2025-04-16",
+        "abstract": "Mixture-of-Experts based large language models (MoE LLMs) have shown significant promise in multitask adaptability by dynamically routing inputs to specialized experts. Despite their success, the collaborative mechanisms among experts are still not well understood, limiting both the interpretability and optimization of these models. In this paper, we focus on two critical issues: (1) identifying expert collaboration patterns, and (2) optimizing MoE LLMs through expert pruning. To address the first issue, we propose a hierarchical sparse dictionary learning (HSDL) method that uncovers the collaboration patterns among experts. For the second issue, we introduce the Contribution-Aware Expert Pruning (CAEP) algorithm, which effectively prunes low-contribution experts. Our extensive experiments demonstrate that expert collaboration patterns are closely linked to specific input types and exhibit semantic significance across various tasks. Moreover, pruning experiments show that our approach improves overall performance by 2.5\\% on average, outperforming existing methods. These findings offer valuable insights into enhancing the efficiency and interpretability of MoE LLMs, offering a clearer understanding of expert interactions and improving model optimization.",
+        "canonical_id": "arXiv:2504.12359",
+        "arxiv_id": "2504.12359",
+        "authors": [
+          "Yuan-Bo Tang",
+          "Yan Tang",
+          "Naifan Zhang",
+          "Mei Chen",
+          "Yang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.06792",
+      "identity_tokens": [
+        "id:arXiv:2504.06792",
+        "title:domainspecific pruning of large mixtureofexperts models with fewshot demonstrations",
+        "url:https://www.semanticscholar.org/paper/2a28903d52688d7bee05f1f9b8ca4ff83a825824"
+      ],
+      "record": {
+        "title": "Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations",
+        "source_url": "https://www.semanticscholar.org/paper/2a28903d52688d7bee05f1f9b8ca4ff83a825824",
+        "year": 2025,
+        "published": "2025-04-09",
+        "abstract": "Mixture-of-Experts (MoE) models achieve a favorable trade-off between performance and inference efficiency by activating only a subset of experts. However, the memory overhead of storing all experts remains a major limitation, especially in large-scale MoE models such as DeepSeek-R1(671B). In this study, we investigate domain specialization and expert redundancy in large-scale MoE models and uncover a consistent behavior we term few-shot expert localization, with only a few in-domain demonstrations, the model consistently activates a sparse and stable subset of experts on tasks within the same domain. Building on this observation, we propose a simple yet effective pruning framework, EASY-EP, that leverages a few domain-specific demonstrations to identify and retain only the most relevant experts. EASY-EP comprises two key components: output-aware expert importance assessment and expert-level token contribution estimation. The former evaluates the importance of each expert for the current token by considering the gating scores and L2 norm of the outputs of activated experts, while the latter assesses the contribution of tokens based on representation similarities before and after routed experts. Experiments on DeepSeek-R1 and DeepSeek-V3-0324 show that our method can achieve comparable performances and $2.99\\times$ throughput under the same memory budget with full model with only half the experts.",
+        "canonical_id": "arXiv:2504.06792",
+        "arxiv_id": "2504.06792",
+        "authors": [
+          "Zican Dong",
+          "Han Peng",
+          "Peiyu Liu",
+          "Wayne Xin Zhao",
+          "Dong-Dong Wu",
+          "Feng Xiao",
+          "Zhifeng Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.20138",
+      "identity_tokens": [
+        "id:arXiv:2503.20138",
+        "title:guided model merging for hybrid data learning leveraging centralized data to refine decentralized models",
+        "url:https://www.semanticscholar.org/paper/d6a55ca5a154f6deb09202f2b84b781604db4941"
+      ],
+      "record": {
+        "title": "Guided Model Merging for Hybrid Data Learning: Leveraging Centralized Data to Refine Decentralized Models",
+        "source_url": "https://www.semanticscholar.org/paper/d6a55ca5a154f6deb09202f2b84b781604db4941",
+        "year": 2025,
+        "published": "2025-03-26",
+        "abstract": "Current network training paradigms primarily focus on either centralized or decentralized data regimes. However, in practice, data availability often exhibits a hybrid nature, where both regimes coexist. This hybrid setting presents new opportunities for model training, as the two regimes offer complementary trade-offs: decentralized data is abundant but subject to heterogeneity and communication constraints, while centralized data—though limited in volume and potentially unrepresentative—enables better curation and high-throughput access. Despite its potential, effectively combining these paradigms remains challenging, and few frameworks are tailored to hybrid data regimes. To address this, we propose a novel framework that constructs a model atlas from decentralized models and leverages centralized data to refine a global model within this structured space. The refined model is then used to reinitialize the decentralized models. Our method synergizes federated learning (to exploit decentralized data) and model merging (to utilize centralized data), enabling effective training under hybrid data availability. Theoretically, we show that our approach achieves faster convergence than methods relying solely on decentralized data, due to variance reduction in the merging process. Extensive experiments demonstrate that our framework consistently outperforms purely centralized, purely decentralized, and existing hybrid-adaptable methods. Notably, our method remains robust even when the centralized and decentralized data domains differ or when decentralized data contains noise, significantly broadening its applicability.",
+        "canonical_id": "arXiv:2503.20138",
+        "arxiv_id": "2503.20138",
+        "authors": [
+          "Junyi Zhu",
+          "Rui-Cong Yao",
+          "T. Ceritli",
+          "Savas Ozkan",
+          "Matthew B. Blaschko",
+          "Eunchung Noh",
+          "Jeongwon Min",
+          "Cho Min",
+          "Mete Ozay"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.05066",
+      "identity_tokens": [
+        "id:arXiv:2503.05066",
+        "title:capacityaware inference mitigating the straggler effect in mixture of experts",
+        "url:https://www.semanticscholar.org/paper/78dfb79bdb2e608245a8ddd1fbcf175f9043f258"
+      ],
+      "record": {
+        "title": "Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts",
+        "source_url": "https://www.semanticscholar.org/paper/78dfb79bdb2e608245a8ddd1fbcf175f9043f258",
+        "year": 2025,
+        "published": "2025-03-07",
+        "abstract": "The Mixture of Experts (MoE) is an effective architecture for scaling large language models by leveraging sparse expert activation to balance performance and efficiency. However, under expert parallelism, MoE suffers from inference inefficiencies due to imbalanced token-to-expert assignment, where underloaded experts complete computations early but must wait for overloaded experts, leading to global delays. We define this phenomenon as the \\textbf{\\textit{Straggler Effect}}, as the most burdened experts dictate the overall inference latency. To address this, we first propose \\textit{\\textbf{Capacity-Aware Token Drop}}, which enforces expert capacity limits by discarding excess tokens from overloaded experts, effectively reducing load imbalance with minimal performance impact (e.g., $30\\%$ speedup with only $0.9\\%$ degradation on OLMoE). Next, given the presence of low-load experts remaining well below the capacity threshold, we introduce \\textit{\\textbf{Capacity-Aware Expanded Drop}}, which allows tokens to include additional local experts in their candidate set before enforcing strict local capacity constraints, thereby improving load balance and enhancing the utilization of underused experts. Extensive experiments on both language and multimodal MoE models demonstrate the effectiveness of our approach, yielding substantial gains in expert utilization, model performance, and inference efficiency, e.g., applying Expanded Drop to Mixtral-8$\\times$7B-Instruct yields a {0.2\\%} average performance improvement and a {1.85$\\times$} inference speedup. The code is released at: https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE.",
+        "canonical_id": "arXiv:2503.05066",
+        "arxiv_id": "2503.05066",
+        "authors": [
+          "Shwai He",
+          "Weilin Cai",
+          "Jiayi Huang",
+          "Ang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.01359",
+      "identity_tokens": [
+        "id:arXiv:2503.01359",
+        "title:ders towards extremely efficient upcycled mixtureofexperts models",
+        "url:https://www.semanticscholar.org/paper/f5d6fc5ee2cc8d1664b75d2e1a0efdeb9ba219b5"
+      ],
+      "record": {
+        "title": "DeRS: Towards Extremely Efficient Upcycled Mixture-of-Experts Models",
+        "source_url": "https://www.semanticscholar.org/paper/f5d6fc5ee2cc8d1664b75d2e1a0efdeb9ba219b5",
+        "year": 2025,
+        "published": "2025-03-03",
+        "abstract": "Upcycled Mixture-of-Experts (MoE) models have shown great potential in various tasks by converting the original Feed-Forward Network (FFN) layers in pre-trained dense models into MoE layers. However, these models still suffer from significant parameter inefficiency due to the introduction of multiple experts. In this work, we propose a novel DeRS (Decompose, Replace, and Synthesis) paradigm to overcome this shortcoming, which is motivated by our observations about the unique redundancy mechanisms of upcycled MoE experts. Specifically, DeRS decomposes the experts into one expert-shared base weight and multiple expert-specific delta weights, and subsequently represents these delta weights in lightweight forms. Our proposed DeRS paradigm can be applied to enhance parameter efficiency in two different scenarios, including: 1) DeRS Compression for inference stage, using sparsification or quantization to compress vanilla upcycled MoE models; and 2) DeRS Up-cycling for training stage, employing lightweight sparse or low-rank matrixes to efficiently upcycle dense models into MoE models. Extensive experiments across three different tasks show that the proposed methods can achieve extreme parameter efficiency while maintaining the performance for both training and compression of upcycled MoE models.",
+        "canonical_id": "arXiv:2503.01359",
+        "arxiv_id": "2503.01359",
+        "authors": [
+          "Yongqi Huang",
+          "Peng Ye",
+          "Chenyu Huang",
+          "Jianjian Cao",
+          "Lin Zhang",
+          "Baopu Li",
+          "Gang Yu",
+          "Tao Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.18821",
+      "identity_tokens": [
+        "id:arXiv:2502.18821",
+        "title:camex curvatureaware merging of experts",
+        "url:https://www.semanticscholar.org/paper/2358a37d89681089c6f6df7df8bdfa08aaca2c1d"
+      ],
+      "record": {
+        "title": "CAMEx: Curvature-aware Merging of Experts",
+        "source_url": "https://www.semanticscholar.org/paper/2358a37d89681089c6f6df7df8bdfa08aaca2c1d",
+        "year": 2025,
+        "published": "2025-02-26",
+        "abstract": "Existing methods for merging experts during model training and fine-tuning predominantly rely on Euclidean geometry, which assumes a flat parameter space. This assumption can limit the model's generalization ability, especially during the pre-training phase, where the parameter manifold might exhibit more complex curvature. Curvature-aware merging methods typically require additional information and computational resources to approximate the Fisher Information Matrix, adding memory overhead. In this paper, we introduce CAMEx (Curvature-Aware Merging of Experts), a novel expert merging protocol that incorporates natural gradients to account for the non-Euclidean curvature of the parameter manifold. By leveraging natural gradients, CAMEx adapts more effectively to the structure of the parameter space, improving alignment between model updates and the manifold's geometry. This approach enhances both pre-training and fine-tuning, resulting in better optimization trajectories and improved generalization without the substantial memory overhead typically associated with curvature-aware methods. Our contributions are threefold: (1) CAMEx significantly outperforms traditional Euclidean-based expert merging techniques across various natural language processing tasks, leading to enhanced performance during pre-training and fine-tuning; (2) we introduce a dynamic merging architecture that optimizes resource utilization, achieving high performance while reducing computational costs, facilitating efficient scaling of large language models; and (3) we provide both theoretical and empirical evidence to demonstrate the efficiency of our proposed method. The code is publicly available at: https://github.com/kpup1710/CAMEx.",
+        "canonical_id": "arXiv:2502.18821",
+        "arxiv_id": "2502.18821",
+        "authors": [
+          "Nguyen Viet Dung",
+          "Minh Nguyen",
+          "Luc Q. Nguyen",
+          "Rachel S. Y. Teo",
+          "T. Nguyen",
+          "L. Tran"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.17298",
+      "identity_tokens": [
+        "id:arXiv:2502.17298",
+        "title:delta decompression for moebased llms compression",
+        "url:https://www.semanticscholar.org/paper/668f545fa8133b629ee3463c52c10b02190a2496"
+      ],
+      "record": {
+        "title": "Delta Decompression for MoE-based LLMs Compression",
+        "source_url": "https://www.semanticscholar.org/paper/668f545fa8133b629ee3463c52c10b02190a2496",
+        "year": 2025,
+        "published": "2025-02-24",
+        "abstract": "Mixture-of-Experts (MoE) architectures in large language models (LLMs) achieve exceptional performance, but face prohibitive storage and memory requirements. To address these challenges, we present $D^2$-MoE, a new delta decompression compressor for reducing the parameters of MoE LLMs. Based on observations of expert diversity, we decompose their weights into a shared base weight and unique delta weights. Specifically, our method first merges each expert's weight into the base weight using the Fisher information matrix to capture shared components. Then, we compress delta weights through Singular Value Decomposition (SVD) by exploiting their low-rank properties. Finally, we introduce a semi-dynamical structured pruning strategy for the base weights, combining static and dynamic redundancy analysis to achieve further parameter reduction while maintaining input adaptivity. In this way, our $D^2$-MoE successfully compact MoE LLMs to high compression ratios without additional training. Extensive experiments highlight the superiority of our approach, with over 13% performance gains than other compressors on Mixtral|Phi-3.5|DeepSeek|Qwen2 MoE LLMs at 40$\\sim$60% compression rates. Codes are available in https://github.com/lliai/D2MoE.",
+        "canonical_id": "arXiv:2502.17298",
+        "arxiv_id": "2502.17298",
+        "authors": [
+          "Hao Gu",
+          "Wei Li",
+          "Lujun Li",
+          "Qiyuan Zhu",
+          "Mark G. Lee",
+          "Shengjie Sun",
+          "Wei Xue",
+          "Yike Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.16352",
+      "identity_tokens": [
+        "id:arXiv:2501.16352",
+        "title:mixture of experts moe a big data perspective",
+        "url:https://www.semanticscholar.org/paper/a7401a78effe175c7d9dbb999c130b36d9ef92a7"
+      ],
+      "record": {
+        "title": "Mixture of Experts (MoE): A Big Data Perspective",
+        "source_url": "https://www.semanticscholar.org/paper/a7401a78effe175c7d9dbb999c130b36d9ef92a7",
+        "year": 2025,
+        "published": "2025-01-18",
+        "abstract": "As the era of big data arrives, traditional artificial intelligence algorithms have difficulty processing the demands of massive and diverse data. Mixture of experts (MoE) has shown excellent performance and broad application prospects. This paper provides an in-depth review and analysis of the latest progress in this field from multiple perspectives, including the basic principles, algorithmic models, key technical challenges, and application practices of MoE. First, we introduce the basic concept of MoE and its core idea and elaborate on its advantages over traditional single models. Then, we discuss the basic architecture of MoE and its main components, including the gating network, expert networks, and learning algorithms. Next, we review the applications of MoE in addressing key technical issues in big data. For each challenge, we provide specific MoE solutions and their innovations. Furthermore, we summarize the typical use cases of MoE in various application domains. This fully demonstrates the powerful capability of MoE in big data processing. We also analyze the advantages of MoE in big data environments. Finally, we explore the future development trends of MoE. We believe that MoE will become an important paradigm of artificial intelligence in the era of big data. In summary, this paper systematically elaborates on the principles, techniques, and applications of MoE in big data processing, providing theoretical and practical references to further promote the application of MoE in real scenarios.",
+        "canonical_id": "arXiv:2501.16352",
+        "arxiv_id": "2501.16352",
+        "authors": [
+          "Wen-Sheng Gan",
+          "Zhenyao Ning",
+          "Zhenlian Qi",
+          "Philip S. Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.00099",
+      "identity_tokens": [
+        "id:arXiv:2412.00099",
+        "title:mixture of cacheconditional experts for efficient mobile device inference",
+        "url:https://www.semanticscholar.org/paper/0790f66f56948017b66b4ee10279e35d641d9ba9"
+      ],
+      "record": {
+        "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
+        "source_url": "https://www.semanticscholar.org/paper/0790f66f56948017b66b4ee10279e35d641d9ba9",
+        "year": 2024,
+        "published": "2024-11-27",
+        "abstract": "Mixture of Experts (MoE) LLMs have recently gained attention for their ability to enhance performance by selectively engaging specialized subnetworks or\"experts\"for each input. However, deploying MoEs on memory-constrained devices remains challenging, particularly when generating tokens sequentially with a batch size of one, as opposed to typical high-throughput settings involving long sequences or large batches. In this work, we optimize MoE on memory-constrained devices where only a subset of expert weights fit in DRAM. We introduce a novel cache-aware routing strategy that leverages expert reuse during token generation to improve cache locality. We evaluate our approach on language modeling, MMLU, and GSM8K benchmarks and present on-device results demonstrating 2$\\times$ speedups on mobile devices, offering a flexible, training-free solution to extend MoE's applicability across real-world applications.",
+        "canonical_id": "arXiv:2412.00099",
+        "arxiv_id": "2412.00099",
+        "authors": [
+          "Andrii Skliar",
+          "T. V. Rozendaal",
+          "Romain Lepert",
+          "Todor Boinovski",
+          "M. V. Baalen",
+          "Markus Nagel",
+          "Paul N. Whatmough",
+          "B. Bejnordi"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:e878c4896fa83fbf555b8d04a496186a38d287d5aee21a86a4f71ffa7aa952db",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

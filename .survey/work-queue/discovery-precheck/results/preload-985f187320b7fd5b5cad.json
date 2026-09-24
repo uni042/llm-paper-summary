@@ -1,0 +1,798 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-985f187320b7fd5b5cad",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-985f187320b7fd5b5cad",
+  "axis": "forward citations of FlashAttention for recent attention kernels and serving systems",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2205.14135/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fa3a0c5390f1f4d5028d705c5c588ef6bc257afc",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T12:12:07.577710+00:00",
+  "preload_id": "preload-985f187320b7fd5b5cad",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+      "source_url": "https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+      "doi": "10.1016/j.cosrev.2026.101037",
+      "authors": [
+        "Habib Khan",
+        "F. Alqahtani",
+        "Weiwei Jiang",
+        "M. Ali",
+        "Sareer Ul Amin",
+        "Jakeoung Koo"
+      ]
+    },
+    {
+      "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+      "source_url": "https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+      "doi": "10.1016/j.engappai.2026.115976",
+      "authors": [
+        "Yumin Zhang",
+        "Xiaowen Ling",
+        "Zhiqiang Li",
+        "Liang-Liang Song",
+        "Yifan Jia",
+        "Yan-Bin Wang",
+        "Zhuhong You"
+      ]
+    },
+    {
+      "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+      "source_url": "https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+      "doi": "10.1016/j.istruc.2026.112910",
+      "authors": [
+        "X. Song",
+        "Senna Wang",
+        "Xiaowei Cheng",
+        "Haoyou Zhang",
+        "Ruijie Guo",
+        "Yi Li"
+      ]
+    },
+    {
+      "title": "BAG: Faster Matrix Multiplication on a Single GPU",
+      "source_url": "https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Matrix multiplication is a fundamental computation kernel in many parallel and sequential scientific applications. We target FP32 matrix multiplication on GPUs, a setting required by numerous HPC and scientific workloads. Alternative Basis Matrix Multiplication (ABMM) is a practical Strassen-like algorithm that reduces the number of additions while preserving the same asymptotic exponent and admitting a provable O(n) component-wise error bound. However, optimized GPU support for ABMM remains underexplored. This paper presents BAG (Basis Alternative Matrix Multiplication on GPUs), a GPU-oriented implementation of ABMM for the NVIDIA Ampere architecture. A naive GPU implementation of ABMM suffers from excessive workspace and memory traffic, launch-dominated serialization across heterogeneous steps, and high sensitivity to recursion and blocking parameters. We design fused ABMM kernels to shrink workspace and eliminate redundant global-memory traffic, specialize register usage for different primitive patterns to expose intra/inter-kernel parallelism, and introduce a cost-model-based recursion policy together with a Roofline-guided blocking strategy to stabilize performance across problem sizes and shapes. On an NVIDIA A100, experimental results show that 1-level BAG reaches a break-even point against cuBLAS FP32 GEMM at dimension 1280 for square matrices, and recursive BAG achieves a 1.24 × speedup over cuBLAS FP32 GEMM at dimension 4096. Our code is available at https://doi.org/https://github.com/napleon-liu/bag.",
+      "canonical_id": "DOI:10.1145/3832810.3832836",
+      "doi": "10.1145/3832810.3832836",
+      "authors": [
+        "Yao Liu",
+        "Ye-Wen Li",
+        "Zhonghai Zhang",
+        "Erlin Yao",
+        "Guangming Tan",
+        "Wei-Le Jia"
+      ]
+    },
+    {
+      "title": "TFS: Tile-Aware SpMM–GeMM Fusion for Accelerating GNN Inference on Intel AMX",
+      "source_url": "https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Graph Neural Network (GNN) inference involves two successive matrix operations per layer: a sparse neighbor aggregation (SpMM) followed by a dense linear transformation (GeMM). The conventional two-step execution materializes a large intermediate matrix Z in main memory, incurring significant memory traffic that dominates end-to-end latency. We present TFS, a tile-aware fusion framework that eliminates this intermediate materialization by fusing SpMM and GeMM directly inside the tile registers of Intel’s Advanced Matrix Extensions (AMX). The key insight is that tile-based sparse computation becomes efficient only when the degree distribution within each tile batch is carefully controlled. TFS introduces degree-aware tile scheduling, which sorts rows by ascending degree so that rows within each 16-row AMX tile batch have similar neighbor counts, raising tile efficiency η to 0.96 on average. Evaluated on 25 sparse matrices from 8+ application domains, including graphs with 65.6 M nodes and 3.6 B edges, TFS achieves up to 6.67 × kernel-level and 4.09 × end-to-end speedup over Intel MKL. An AMX isolation experiment further demonstrates that AMX tiles provide up to 13.7 × speedup over an equivalent AVX-512 BF16 implementation, indicating that tile compute density, not the BF16 format alone, is the primary source of acceleration.",
+      "canonical_id": "DOI:10.1145/3832810.3832855",
+      "doi": "10.1145/3832810.3832855",
+      "authors": [
+        "Xiao Yan",
+        "Haodong Bian",
+        "Xiao-Ying Wang",
+        "Teng-Fei Cao",
+        "Jianqiang Huang"
+      ]
+    },
+    {
+      "title": "MAGSAT: Memory-Access-Guided Fusion and Shape-Adaptive Auto-Tuning for Dynamic Tensor Programs",
+      "source_url": "https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Dynamic tensor programs are increasingly common in deep learning. Existing libraries and compilers provide or generate highly optimized kernels, but their decisions are often tied to fixed operator patterns or concrete shapes. Dynamic-shape systems reduce tuning overhead, yet they typically optimize individual operators and leave graph-level fusion opportunities underexplored. We propose MAGSAT, a unified framework that combines shape-invariant operator fusion with shape-adaptive parameter selection for dynamic workloads. MAGSAT analyzes memory-access semantics to identify fusion regions, maps them to parameterized tiled templates, and selects kernel configurations with a lightweight trait-driven analytical model. Extensive experiments demonstrate that MAGSAT achieves average speedups of 4.65 × for fused operators and 2.74 × for end-to-end inference over the state-of-the-art baseline.",
+      "canonical_id": "DOI:10.1145/3832810.3832874",
+      "doi": "10.1145/3832810.3832874",
+      "authors": [
+        "Hao-Dong Deng",
+        "Jia-Nuo Sheng",
+        "Wen-Hao Dai",
+        "Fangxin Liu",
+        "Qing-Xiao Sun"
+      ]
+    },
+    {
+      "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+      "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+      "canonical_id": "DOI:10.1145/3832810.3832854",
+      "doi": "10.1145/3832810.3832854",
+      "authors": [
+        "Wen-Hao Sun",
+        "Pan-Pan Cui",
+        "Yiqi Liu",
+        "Wan-Yu Wang"
+      ]
+    },
+    {
+      "title": "Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/2b244bde0bf233ad6b470eac0261a9d2b10a8b55",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Recurrent language models repeatedly apply shared network blocks to refine latent representations, but standard inference recomputes global attention at every recurrent step. We study attention dynamics across recurrent depth and find that attention support and distributions stabilize substantially earlier than hidden states and attention outputs. This suggests a two-stage structure: early steps discover a sparse working set of relevant context, while later steps refine representations over largely the same routing support. Motivated by this structure, we introduce WISE (Working-set Inference with Support Exploitation), a training-free method that uses unrestricted global attention during early recurrence and later reuses directly discovered block-structured support while keeping recurrent depth and within-support attention computation dynamic. Controlled interventions show that recurrent discovery is important and that support-only reuse better preserves model behavior than more restrictive attention-reuse alternatives. Across multi-hop QA benchmarks, WISE largely preserves full-attention performance, while context scaling reveals increasingly sparse working sets and greater efficiency gains. Quality is largely preserved through 2K context, with a measurable loss at 4K. An optimized sparse-attention implementation achieves up to a 1.76x attention speedup over native FlashAttention at 4K and a 1.36x speedup for the full 32-step attention trajectory. Our code is available at https://github.com/tbn5pj/WISE_code.",
+      "canonical_id": "arXiv:2609.27373",
+      "arxiv_id": "2609.27373"
+    },
+    {
+      "title": "Large Knowledge Model: From Papers to a Scientific Reasoning Landscape",
+      "source_url": "https://www.semanticscholar.org/paper/88cc97c0467ead27de2513ae2c4af97be4caf483",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Accumulated scientific knowledge advances inquiry when prior findings help researchers choose new questions, design investigations, and interpret results. Realizing this value at scale requires access to the reasoning that connects research problems, scientific procedures, conclusions, and evidence. We introduce the Large Knowledge Model (LKM), a scientific knowledge infrastructure that transforms the literature into a shared, computationally accessible reasoning resource. LKM represents papers as source-grounded reasoning graphs, couples structural traversal with semantic retrieval over the same objects, and aligns related questions, claims, and reasoning chains across papers. This representation forms a Scientific Reasoning Landscape with three connected views: a Question Landscape that organizes research problems and open directions, a Workflow Landscape that exposes reusable scientific procedures, and an Evidence Landscape that connects conclusions to their support, disagreement, and conditions. The unified substrate supports reasoning-aware scientific search, evidence-grounded question answering, comparative evidence analysis, and research planning. Researchers and agents can retrieve relevant work through its scientific intent, synthesize answers with inspectable supporting arguments, and develop research plans informed by established workflows and unresolved evidence. We describe a corpus-scale system and evaluate scientific retrieval and knowledge-intensive question answering. With the answering model fixed, LKM retrieval improves accuracy by 9.30%, 4.20%, and 14.69% on ChemBench, PubMedQA, and SciBench, respectively. By connecting knowledge access to scientific reasoning and action, LKM provides a common foundation for discovering relevant research, reusing scientific knowledge, and coordinating cumulative inquiry across researchers, agents, and research cycles.",
+      "canonical_id": "arXiv:2609.27297",
+      "arxiv_id": "2609.27297"
+    },
+    {
+      "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+      "source_url": "https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+      "canonical_id": "arXiv:2609.25845",
+      "arxiv_id": "2609.25845",
+      "authors": [
+        "Guan-Xu Yu",
+        "Yu-Hang Yao"
+      ]
+    },
+    {
+      "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Greedy decoding from large language models is commonly treated as deterministic. We show it is not precision-invariant: the same model, prompt, and decoding algorithm produce different outputs in BF16 versus FP16 on identical hardware. Across our evaluations of six models (1.1B-7B parameters, four families; divergence additionally characterised at 12B) and three benchmarks, 49-100\\% of prompts diverge; a single token flip often cascades into trajectory-level divergence. We develop an empirical error-propagation analysis and find that 22 layers of accumulated body error do not distinguish flipping from non-flipping steps; the outcome depends primarily on the top-two logit margin at the LM head relative to the directional perturbation between the top-two candidates. The analysis makes five testable predictions about intervention outcomes, including that applying more FP32 compute (broader scope) makes agreement worse. The experiments match all five predictions. The best-performing low-overhead intervention we evaluate, selective FP32 LM head recomputation, triggered only when the margin falls below a threshold, delivers +22-36 pp exact agreement on A10G (+12-21 pp on L4 and A100) at less than 4\\% latency overhead in low-batch (batch size<=4) single-stream inference. We map the applicability boundary across six models and four batch sizes, and hypothesise that training-time precision stability is a determining factor. The method is a partial mitigation rather than a universal determinism guarantee: its benefit vanishes when body-originated error dominates, including at batch size>=8 and under end-to-end FP8 in our tests.",
+      "canonical_id": "arXiv:2609.26621",
+      "arxiv_id": "2609.26621",
+      "authors": [
+        "Gao-Yuan Du",
+        "A. Khan",
+        "Rex Zhou",
+        "Xiao-Yang Liu",
+        "Deepayan Chakrabarti",
+        "Fnu Suya",
+        "Xue-Ping Li"
+      ]
+    },
+    {
+      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+      "source_url": "https://www.semanticscholar.org/paper/9f35defd62838d30a254123d61bad10b41b0b027",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while maintaining or improving performance on Terminal-Bench and achieving new levels of efficiency for test-time scaling and state-of-the-art results on KernelBench. The per-rollout savings of CliffCompaction make the performance--cost trade-off of test-time scaling more efficient, adding over 10 percentage points on Terminal-Bench for less than the cost of two full-context runs. Under parallel test-time scaling, CliffCompaction lets Kimi K2.6 match Opus 4.7, and exceed Opus 4.6 and GPT-5.3 Codex at lower cost. The key to CliffCompaction's effectiveness is that it keeps compacted information faithful by only truncating or dropping content, never rephrasing or rewriting it. We never compact a compaction---each pass operates only on original content, and prior compacted output is discarded, preventing context drift from accumulating. These properties sustain continual learning over sessions exceeding a million tokens: on KernelBench, CliffCompaction reaches CUDA kernel speedups of $2.23\\times$ after 200 steps and $3.58\\times$ after 400 steps, surpassing specialized search algorithms and trained agents despite being a general-purpose compaction technique. We open-source a scaffold-agnostic API-proxy implementation of CliffCompaction usable with Claude Code, Codex and other harnesses.",
+      "canonical_id": "arXiv:2609.26779",
+      "arxiv_id": "2609.26779",
+      "authors": [
+        "Trang Nguyen",
+        "Eulrang Cho",
+        "Bing-Qing Chen",
+        "Tim Dettmers"
+      ]
+    },
+    {
+      "title": "EMA: Elastic and Performance Transparent Memory Across GPUs",
+      "source_url": "https://www.semanticscholar.org/paper/b094919a1824a1b855c76ac4eb331b16ea08f434",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Multi-GPU servers have become the standard building block of modern data centers, providing aggregated capacity through high-bandwidth interconnects. At the same time, workloads such as LLM inference exhibit highly dynamic memory demands, which can cause one GPU to exhaust its local memory while others remain underutilized. This mismatch motivates a model of elastic resource sharing across GPUs. We present EMA, a memory sharing system that allows GPUs within a server to borrow and reclaim memory from each other, forming an elastic pool of capacity. EMA ensures performance transparency for both borrowers and lenders. For borrowers, prefetching hides remote access costs so that applications experience remote and local memory as indistinguishable in performance. For lenders, borrowed resources remain reclaimable on demand, guaranteeing that performance never falls below that of static partitioning. While our design focuses on memory, the same principle naturally extends to other GPU resources. Our evaluation shows that EMA improves individual user throughput by up to 52%, achieves 96% of the throughput of a system provisioned with 2X capacity, and maintains latency similar to the static local baseline.",
+      "canonical_id": "arXiv:2609.27040",
+      "arxiv_id": "2609.27040"
+    },
+    {
+      "title": "Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/898e569ce96ddf4f4a4e37cb63e510574fe1262b",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "As serving capacity demand surpasses that of training, serving efficiency becomes increasingly important. Prefill-decode (P/D) disaggregation improves serving efficiency through specialization and isolation of the two phases. These benefits rest on a static partitioning. Phase demand, however, is not static. We observe that in a large LLM fleet the ratio of uncached input to output tokens has peak-to-mean ratios up to 4.7x at minute timescales, and that in a public agentic trace the hourly ratio spans a median 24.5x within a single day, while reassigning a replica takes tens of minutes. Agentic traffic sharpens the mismatch. Sizing each pool at its ninety-fifth percentile leaves up to 17% of cluster capacity unused; sizing below it converts the same imbalance into queueing and unrealized throughput. We present Crossflow, which makes this boundary elastic without changing node roles. Each decode node publishes a short-lived, revocable lease that bounds local-prefill compute, KV capacity, transfer work, and projected output. Across public and internal traces, Crossflow improves token throughput by 16.2-17.4% on geometric mean over static P/D, and by up to 43.4% at high load, while reducing mean TTFT at every evaluated point.",
+      "canonical_id": "arXiv:2609.27085",
+      "arxiv_id": "2609.27085"
+    },
+    {
+      "title": "FlashBoB: I/O-Efficient Exact Backward-over-Backward for Softmax Attention",
+      "source_url": "https://www.semanticscholar.org/paper/85e0df00dceb0458ac6ccce5cb4eed4b335586c5",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Transformer models built on the attention mechanism have become a central building block in modern deep learning, yet softmax attention remains a major bottleneck for long-context workloads. While FlashAttention makes the forward and first backward passes I/O-efficient, it does not support backward-over-backward (BoB), which enables exact differentiation through the backward pass for applications such as second-order optimization, test-time training, gradient-based memory, and meta-learning. Existing BoB implementations either materialize large intermediate tensors or exhaust GPU memory at long sequence lengths. We present FlashBoB, an exact, I/O-efficient algorithm for BoB in softmax attention that keeps computation within on-chip tiles and avoids all $N \\times N$ intermediate tensors, where $N$ is the sequence length. The key insight is a hierarchical affine structure in the softmax double backward: two row-wise scalars determine all outputs through affine transformations. This yields a two-pass schedule with bounded on-chip static random-access memory (SRAM) usage and minimal off-chip high-bandwidth memory (HBM) traffic. FlashBoB achieves $\\Theta(N^2 d^2/M)$ HBM traffic ($d$ is the head dimension and $M$ is the memory size) and, within the standard FlashAttention-style score-recomputation model, matches the inherited large-cache lower bound for exact forward attention. Empirically, it scales exact attention BoB to $N=262\\text{K}$ on a single A100 80GB GPU, where prior PyTorch exact baselines fail by $N=16\\text{K}$, and is up to $6.3\\times$ faster than FlashBack. These results make exact second-order attention practical at long-context sequence lengths where prior implementations cannot run efficiently.",
+      "canonical_id": "arXiv:2609.24089",
+      "arxiv_id": "2609.24089",
+      "authors": [
+        "Anthony Givans",
+        "M. Crawshaw",
+        "Ming-Rui Liu"
+      ]
+    },
+    {
+      "title": "Tiga: Compiling Graph Message Passing at Scale",
+      "source_url": "https://www.semanticscholar.org/paper/6509cbceac3ea023f2187612074488ec2e5edc90",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Graph message passing offers a common way to express learning algorithms, physical simulations, and numerical solvers. Efficient execution depends on interaction structure and data movement, which can be obscured when a program is expressed as a sequence of tensor operations. On memory-constrained systems such as laptops, materializing connectivity and intermediate messages can also exhaust device memory. We present Tiga, a just-in-time compiler that separates the definition of a message-passing program from how its interactions are traversed, computed, and stored. Tiga preserves graph relations and reducer algebra in a multi-level intermediate representation, enabling traversal specialization, fusion of relation generation with aggregation, and reverse-mode automatic differentiation. Backend-specific lowering targets CPUs and GPUs. Its runtime extends execution beyond device-memory capacity by streaming graph partitions from disk through host memory with page-sized device staging buffers; partition ownership and halo exchange extend the same programming model to distributed execution. A Python interface interoperates with ordinary PyTorch tensors and autograd for forward and backward computation. Numerical checks validate outputs and gradients for differentiable workloads. A differentiated geometric workload characterizes the memory--time tradeoff of fused forward and backward execution. Evaluation against matched Torch and PyTorch Geometric baselines demonstrates reduced runtime and device-memory use for generated-relation workloads, while offloaded forward execution processes billion-edge graphs on a single memory-limited GPU. Measurements on heterogeneous devices further characterize the communication and load-balance costs of distributed execution.",
+      "canonical_id": "arXiv:2609.24802",
+      "arxiv_id": "2609.24802",
+      "authors": [
+        "Ming-Yuan Chi"
+      ]
+    },
+    {
+      "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+      "source_url": "https://www.semanticscholar.org/paper/a74c8a785b8ee75df581f0b6d99da779be35a326",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+      "canonical_id": "arXiv:2609.24847",
+      "arxiv_id": "2609.24847",
+      "authors": [
+        "G. Tombesi",
+        "William Baisi",
+        "Je Yang",
+        "Elisavet Lydia Alvanaki",
+        "Kevin J. Lee",
+        "Michael S. Lippe",
+        "Biruk B. Seyoum",
+        "Luca P. Carloni"
+      ]
+    },
+    {
+      "title": "SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/6d84823db0123c4cc7884d1d0059a14d353d0425",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Whole-slide pathology images (WSIs) contain gigapixel-scale visual content, creating a major scalability challenge for slide-level multimodal large language models (MLLMs). Existing approaches process thousands of patch tokens and typically apply compression only after slide encoding, leaving multimodal attention computationally expensive. We introduce SLICEChat, a slide-level MLLM that integrates progressive token pruning within a hybrid Mamba--Transformer slide encoder. Mamba layers enable efficient long-range propagation, while Transformer layers preserve global interactions as the sequence is progressively shortened. Between stages, language-supervised, region-aware pruning removes spatially coherent low-utility regions under a controlled keep-rate schedule, producing compact slide representations before multimodal fusion. On SlideBench VQA, SLICEChat achieves 79.84% accuracy on TCGA and 59.09% on BCNB cohorts, outperforming prior slide-level pathology MLLMs, and achieves the highest overall WSI-Bench metrics. It also provides competitive memory usage and the inference latency among the evaluated models. These results demonstrate accurate and computationally efficient multimodal reasoning over gigapixel WSIs.",
+      "canonical_id": "arXiv:2609.24894",
+      "arxiv_id": "2609.24894",
+      "authors": [
+        "Ali Kerem Bozkurt",
+        "Baris Cem Bakay",
+        "Ibrahim Kulac",
+        "Cigdem Gunduz-Demir",
+        "Erkut Erdem",
+        "Aykut Erdem"
+      ]
+    },
+    {
+      "title": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis",
+      "source_url": "https://www.semanticscholar.org/paper/932cb4da08c530f10f4bbf8746d4d27acc3eae1c",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Classifier-free Guidance (CFG) is widely adopted in text-to-speech (TTS) systems to enhance generation quality and conditioning fidelity by interpolating between conditioned and unconditioned predictions. A common unconditional technique is to use an empty representation, in the form of a fixed null vector. In this work, we propose replacing this representation with a learnable unconditional embedding, optimized to represent a meaningful unconditional state. Objective and subjective evaluations demonstrate that learnable null embeddings consistently outperform fixed null embeddings across speaker similarity, speech stability, and expressiveness, while exhibiting greater robustness to larger guidance scales. We further show that learning a distinct unconditional embedding for each of the TTS conditioning modalities allows fine-grained control over speaker and text guidance, showcasing the trade-off between similarity and quality, and stability and expressiveness in the generated speech.",
+      "canonical_id": "arXiv:2609.25411",
+      "arxiv_id": "2609.25411",
+      "authors": [
+        "Biel Tura Vecino",
+        "Yoach Lacombe",
+        "Julian Weber",
+        "Zbigniew Łatka",
+        "Hai-Tong Zhang",
+        "Logan Hart",
+        "E. Gölge"
+      ]
+    },
+    {
+      "title": "RGSQ: Riemannian Geometry-Sensitive Quantization for Large Vision-Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/c007118773adf6b30b6d17e003733e1327d41895",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Large vision-language models (VLMs) can be efficiently deployed under stringent memory and latency constraints through post training quantization (PTQ). However, most PTQ methods are designed for unimodal large language models (LLMs). These methods treat quantization errors as isotropic perturbations under the Euclidean assumption, which provides weak guidance on directions most sensitive to quantization in VLMs. Consequently, directly adapting unimodal PTQ approaches or solely employing modality-specific scaling often leads to uneven bit-width distribution and inconsistent performance in low-bit settings. To address these challenges, we propose Riemannian Geometry-Sensitive Quantization (RGSQ), which formulates quantization as a reconstruction problem under a unified Fisher-Riemannian metric. RGSQ identifies modality-specific sensitive directions via Riemannian manifold mappings built from modality-partitioned empirical Fisher factors and fused into a modality-aware Kronecker-structured metric. We then apply geometry-aligned rotations to reorient the local tangent frame, steering low-bit perturbations toward loss-insensitive axes. Finally, we apply a whitening transformation that maps the Riemannian objective to an equivalent Euclidean form, enabling standard unimodal PTQ methods to evaluate multimodal quantization error under their original assumptions. Across an extensive and diverse set of mainstream VLM benchmarks, RGSQ achieves the highest accuracy and stability under extremely low-bit settings (W2A8 and W3A8). It outperforms VLM-aware baselines, such as MBQ and MQuant, by up to 5.9% and surpasses single-modality improvements by up to 8.6%.",
+      "canonical_id": "arXiv:2609.25492",
+      "arxiv_id": "2609.25492",
+      "authors": [
+        "Zhi-Ping Wu",
+        "Dong-Dong Ren",
+        "Yang Zhou",
+        "Zheng-Jie Zhang",
+        "Wen-Bin Li",
+        "Hong-Bing Pan",
+        "Yang Gao"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.cosrev.2026.101037",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.cosrev.2026.101037",
+        "title:inside the black box a comprehensive survey of explainable ai benchmarks protocols technical analysis and open gaps",
+        "url:https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5"
+      ],
+      "record": {
+        "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+        "source_url": "https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+        "doi": "10.1016/j.cosrev.2026.101037",
+        "authors": [
+          "Habib Khan",
+          "F. Alqahtani",
+          "Weiwei Jiang",
+          "M. Ali",
+          "Sareer Ul Amin",
+          "Jakeoung Koo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115976",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115976",
+        "title:transformers in protein informatics a survey of structure prediction function annotation interactions and drug discovery",
+        "url:https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d"
+      ],
+      "record": {
+        "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+        "source_url": "https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+        "doi": "10.1016/j.engappai.2026.115976",
+        "authors": [
+          "Yumin Zhang",
+          "Xiaowen Ling",
+          "Zhiqiang Li",
+          "Liang-Liang Song",
+          "Yifan Jia",
+          "Yan-Bin Wang",
+          "Zhuhong You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.istruc.2026.112910",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.istruc.2026.112910",
+        "title:rapid displacement time history prediction for urban reinforced concrete frames using gated reparameterized temporal fusion and structural similaritybased extrapolation networks",
+        "url:https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990"
+      ],
+      "record": {
+        "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+        "source_url": "https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+        "doi": "10.1016/j.istruc.2026.112910",
+        "authors": [
+          "X. Song",
+          "Senna Wang",
+          "Xiaowei Cheng",
+          "Haoyou Zhang",
+          "Ruijie Guo",
+          "Yi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832836",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832836",
+        "title:bag faster matrix multiplication on a single gpu",
+        "url:https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f"
+      ],
+      "record": {
+        "title": "BAG: Faster Matrix Multiplication on a Single GPU",
+        "source_url": "https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Matrix multiplication is a fundamental computation kernel in many parallel and sequential scientific applications. We target FP32 matrix multiplication on GPUs, a setting required by numerous HPC and scientific workloads. Alternative Basis Matrix Multiplication (ABMM) is a practical Strassen-like algorithm that reduces the number of additions while preserving the same asymptotic exponent and admitting a provable O(n) component-wise error bound. However, optimized GPU support for ABMM remains underexplored. This paper presents BAG (Basis Alternative Matrix Multiplication on GPUs), a GPU-oriented implementation of ABMM for the NVIDIA Ampere architecture. A naive GPU implementation of ABMM suffers from excessive workspace and memory traffic, launch-dominated serialization across heterogeneous steps, and high sensitivity to recursion and blocking parameters. We design fused ABMM kernels to shrink workspace and eliminate redundant global-memory traffic, specialize register usage for different primitive patterns to expose intra/inter-kernel parallelism, and introduce a cost-model-based recursion policy together with a Roofline-guided blocking strategy to stabilize performance across problem sizes and shapes. On an NVIDIA A100, experimental results show that 1-level BAG reaches a break-even point against cuBLAS FP32 GEMM at dimension 1280 for square matrices, and recursive BAG achieves a 1.24 × speedup over cuBLAS FP32 GEMM at dimension 4096. Our code is available at https://doi.org/https://github.com/napleon-liu/bag.",
+        "canonical_id": "DOI:10.1145/3832810.3832836",
+        "doi": "10.1145/3832810.3832836",
+        "authors": [
+          "Yao Liu",
+          "Ye-Wen Li",
+          "Zhonghai Zhang",
+          "Erlin Yao",
+          "Guangming Tan",
+          "Wei-Le Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832855",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832855",
+        "title:tfs tileaware spmmgemm fusion for accelerating gnn inference on intel amx",
+        "url:https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698"
+      ],
+      "record": {
+        "title": "TFS: Tile-Aware SpMM–GeMM Fusion for Accelerating GNN Inference on Intel AMX",
+        "source_url": "https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Graph Neural Network (GNN) inference involves two successive matrix operations per layer: a sparse neighbor aggregation (SpMM) followed by a dense linear transformation (GeMM). The conventional two-step execution materializes a large intermediate matrix Z in main memory, incurring significant memory traffic that dominates end-to-end latency. We present TFS, a tile-aware fusion framework that eliminates this intermediate materialization by fusing SpMM and GeMM directly inside the tile registers of Intel’s Advanced Matrix Extensions (AMX). The key insight is that tile-based sparse computation becomes efficient only when the degree distribution within each tile batch is carefully controlled. TFS introduces degree-aware tile scheduling, which sorts rows by ascending degree so that rows within each 16-row AMX tile batch have similar neighbor counts, raising tile efficiency η to 0.96 on average. Evaluated on 25 sparse matrices from 8+ application domains, including graphs with 65.6 M nodes and 3.6 B edges, TFS achieves up to 6.67 × kernel-level and 4.09 × end-to-end speedup over Intel MKL. An AMX isolation experiment further demonstrates that AMX tiles provide up to 13.7 × speedup over an equivalent AVX-512 BF16 implementation, indicating that tile compute density, not the BF16 format alone, is the primary source of acceleration.",
+        "canonical_id": "DOI:10.1145/3832810.3832855",
+        "doi": "10.1145/3832810.3832855",
+        "authors": [
+          "Xiao Yan",
+          "Haodong Bian",
+          "Xiao-Ying Wang",
+          "Teng-Fei Cao",
+          "Jianqiang Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832874",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832874",
+        "title:magsat memoryaccessguided fusion and shapeadaptive autotuning for dynamic tensor programs",
+        "url:https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb"
+      ],
+      "record": {
+        "title": "MAGSAT: Memory-Access-Guided Fusion and Shape-Adaptive Auto-Tuning for Dynamic Tensor Programs",
+        "source_url": "https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Dynamic tensor programs are increasingly common in deep learning. Existing libraries and compilers provide or generate highly optimized kernels, but their decisions are often tied to fixed operator patterns or concrete shapes. Dynamic-shape systems reduce tuning overhead, yet they typically optimize individual operators and leave graph-level fusion opportunities underexplored. We propose MAGSAT, a unified framework that combines shape-invariant operator fusion with shape-adaptive parameter selection for dynamic workloads. MAGSAT analyzes memory-access semantics to identify fusion regions, maps them to parameterized tiled templates, and selects kernel configurations with a lightweight trait-driven analytical model. Extensive experiments demonstrate that MAGSAT achieves average speedups of 4.65 × for fused operators and 2.74 × for end-to-end inference over the state-of-the-art baseline.",
+        "canonical_id": "DOI:10.1145/3832810.3832874",
+        "doi": "10.1145/3832810.3832874",
+        "authors": [
+          "Hao-Dong Deng",
+          "Jia-Nuo Sheng",
+          "Wen-Hao Dai",
+          "Fangxin Liu",
+          "Qing-Xiao Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832854",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832854",
+        "title:accesm packedtotal exact inference for cpu esm2 embedding",
+        "url:https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6"
+      ],
+      "record": {
+        "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+        "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+        "canonical_id": "DOI:10.1145/3832810.3832854",
+        "doi": "10.1145/3832810.3832854",
+        "authors": [
+          "Wen-Hao Sun",
+          "Pan-Pan Cui",
+          "Yiqi Liu",
+          "Wan-Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27373",
+      "identity_tokens": [
+        "id:arXiv:2609.27373",
+        "title:attention routing stabilizes early workingset inference for recurrent language models",
+        "url:https://www.semanticscholar.org/paper/2b244bde0bf233ad6b470eac0261a9d2b10a8b55"
+      ],
+      "record": {
+        "title": "Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/2b244bde0bf233ad6b470eac0261a9d2b10a8b55",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Recurrent language models repeatedly apply shared network blocks to refine latent representations, but standard inference recomputes global attention at every recurrent step. We study attention dynamics across recurrent depth and find that attention support and distributions stabilize substantially earlier than hidden states and attention outputs. This suggests a two-stage structure: early steps discover a sparse working set of relevant context, while later steps refine representations over largely the same routing support. Motivated by this structure, we introduce WISE (Working-set Inference with Support Exploitation), a training-free method that uses unrestricted global attention during early recurrence and later reuses directly discovered block-structured support while keeping recurrent depth and within-support attention computation dynamic. Controlled interventions show that recurrent discovery is important and that support-only reuse better preserves model behavior than more restrictive attention-reuse alternatives. Across multi-hop QA benchmarks, WISE largely preserves full-attention performance, while context scaling reveals increasingly sparse working sets and greater efficiency gains. Quality is largely preserved through 2K context, with a measurable loss at 4K. An optimized sparse-attention implementation achieves up to a 1.76x attention speedup over native FlashAttention at 4K and a 1.36x speedup for the full 32-step attention trajectory. Our code is available at https://github.com/tbn5pj/WISE_code.",
+        "canonical_id": "arXiv:2609.27373",
+        "arxiv_id": "2609.27373"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27297",
+      "identity_tokens": [
+        "id:arXiv:2609.27297",
+        "title:large knowledge model from papers to a scientific reasoning landscape",
+        "url:https://www.semanticscholar.org/paper/88cc97c0467ead27de2513ae2c4af97be4caf483"
+      ],
+      "record": {
+        "title": "Large Knowledge Model: From Papers to a Scientific Reasoning Landscape",
+        "source_url": "https://www.semanticscholar.org/paper/88cc97c0467ead27de2513ae2c4af97be4caf483",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Accumulated scientific knowledge advances inquiry when prior findings help researchers choose new questions, design investigations, and interpret results. Realizing this value at scale requires access to the reasoning that connects research problems, scientific procedures, conclusions, and evidence. We introduce the Large Knowledge Model (LKM), a scientific knowledge infrastructure that transforms the literature into a shared, computationally accessible reasoning resource. LKM represents papers as source-grounded reasoning graphs, couples structural traversal with semantic retrieval over the same objects, and aligns related questions, claims, and reasoning chains across papers. This representation forms a Scientific Reasoning Landscape with three connected views: a Question Landscape that organizes research problems and open directions, a Workflow Landscape that exposes reusable scientific procedures, and an Evidence Landscape that connects conclusions to their support, disagreement, and conditions. The unified substrate supports reasoning-aware scientific search, evidence-grounded question answering, comparative evidence analysis, and research planning. Researchers and agents can retrieve relevant work through its scientific intent, synthesize answers with inspectable supporting arguments, and develop research plans informed by established workflows and unresolved evidence. We describe a corpus-scale system and evaluate scientific retrieval and knowledge-intensive question answering. With the answering model fixed, LKM retrieval improves accuracy by 9.30%, 4.20%, and 14.69% on ChemBench, PubMedQA, and SciBench, respectively. By connecting knowledge access to scientific reasoning and action, LKM provides a common foundation for discovering relevant research, reusing scientific knowledge, and coordinating cumulative inquiry across researchers, agents, and research cycles.",
+        "canonical_id": "arXiv:2609.27297",
+        "arxiv_id": "2609.27297"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25845",
+      "identity_tokens": [
+        "id:arXiv:2609.25845",
+        "title:visual jev accurate and efficient decisions from shared visual context",
+        "url:https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1"
+      ],
+      "record": {
+        "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+        "source_url": "https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+        "canonical_id": "arXiv:2609.25845",
+        "arxiv_id": "2609.25845",
+        "authors": [
+          "Guan-Xu Yu",
+          "Yu-Hang Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26621",
+      "identity_tokens": [
+        "id:arXiv:2609.26621",
+        "title:greedy decoding is not precisioninvariant crossprecision output divergence in llm inference",
+        "url:https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e"
+      ],
+      "record": {
+        "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Greedy decoding from large language models is commonly treated as deterministic. We show it is not precision-invariant: the same model, prompt, and decoding algorithm produce different outputs in BF16 versus FP16 on identical hardware. Across our evaluations of six models (1.1B-7B parameters, four families; divergence additionally characterised at 12B) and three benchmarks, 49-100\\% of prompts diverge; a single token flip often cascades into trajectory-level divergence. We develop an empirical error-propagation analysis and find that 22 layers of accumulated body error do not distinguish flipping from non-flipping steps; the outcome depends primarily on the top-two logit margin at the LM head relative to the directional perturbation between the top-two candidates. The analysis makes five testable predictions about intervention outcomes, including that applying more FP32 compute (broader scope) makes agreement worse. The experiments match all five predictions. The best-performing low-overhead intervention we evaluate, selective FP32 LM head recomputation, triggered only when the margin falls below a threshold, delivers +22-36 pp exact agreement on A10G (+12-21 pp on L4 and A100) at less than 4\\% latency overhead in low-batch (batch size<=4) single-stream inference. We map the applicability boundary across six models and four batch sizes, and hypothesise that training-time precision stability is a determining factor. The method is a partial mitigation rather than a universal determinism guarantee: its benefit vanishes when body-originated error dominates, including at batch size>=8 and under end-to-end FP8 in our tests.",
+        "canonical_id": "arXiv:2609.26621",
+        "arxiv_id": "2609.26621",
+        "authors": [
+          "Gao-Yuan Du",
+          "A. Khan",
+          "Rex Zhou",
+          "Xiao-Yang Liu",
+          "Deepayan Chakrabarti",
+          "Fnu Suya",
+          "Xue-Ping Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26779",
+      "identity_tokens": [
+        "id:arXiv:2609.26779",
+        "title:cliffcompaction costefficient compaction for longhorizon coding agents",
+        "url:https://www.semanticscholar.org/paper/9f35defd62838d30a254123d61bad10b41b0b027"
+      ],
+      "record": {
+        "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+        "source_url": "https://www.semanticscholar.org/paper/9f35defd62838d30a254123d61bad10b41b0b027",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while maintaining or improving performance on Terminal-Bench and achieving new levels of efficiency for test-time scaling and state-of-the-art results on KernelBench. The per-rollout savings of CliffCompaction make the performance--cost trade-off of test-time scaling more efficient, adding over 10 percentage points on Terminal-Bench for less than the cost of two full-context runs. Under parallel test-time scaling, CliffCompaction lets Kimi K2.6 match Opus 4.7, and exceed Opus 4.6 and GPT-5.3 Codex at lower cost. The key to CliffCompaction's effectiveness is that it keeps compacted information faithful by only truncating or dropping content, never rephrasing or rewriting it. We never compact a compaction---each pass operates only on original content, and prior compacted output is discarded, preventing context drift from accumulating. These properties sustain continual learning over sessions exceeding a million tokens: on KernelBench, CliffCompaction reaches CUDA kernel speedups of $2.23\\times$ after 200 steps and $3.58\\times$ after 400 steps, surpassing specialized search algorithms and trained agents despite being a general-purpose compaction technique. We open-source a scaffold-agnostic API-proxy implementation of CliffCompaction usable with Claude Code, Codex and other harnesses.",
+        "canonical_id": "arXiv:2609.26779",
+        "arxiv_id": "2609.26779",
+        "authors": [
+          "Trang Nguyen",
+          "Eulrang Cho",
+          "Bing-Qing Chen",
+          "Tim Dettmers"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27040",
+      "identity_tokens": [
+        "id:arXiv:2609.27040",
+        "title:ema elastic and performance transparent memory across gpus",
+        "url:https://www.semanticscholar.org/paper/b094919a1824a1b855c76ac4eb331b16ea08f434"
+      ],
+      "record": {
+        "title": "EMA: Elastic and Performance Transparent Memory Across GPUs",
+        "source_url": "https://www.semanticscholar.org/paper/b094919a1824a1b855c76ac4eb331b16ea08f434",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Multi-GPU servers have become the standard building block of modern data centers, providing aggregated capacity through high-bandwidth interconnects. At the same time, workloads such as LLM inference exhibit highly dynamic memory demands, which can cause one GPU to exhaust its local memory while others remain underutilized. This mismatch motivates a model of elastic resource sharing across GPUs. We present EMA, a memory sharing system that allows GPUs within a server to borrow and reclaim memory from each other, forming an elastic pool of capacity. EMA ensures performance transparency for both borrowers and lenders. For borrowers, prefetching hides remote access costs so that applications experience remote and local memory as indistinguishable in performance. For lenders, borrowed resources remain reclaimable on demand, guaranteeing that performance never falls below that of static partitioning. While our design focuses on memory, the same principle naturally extends to other GPU resources. Our evaluation shows that EMA improves individual user throughput by up to 52%, achieves 96% of the throughput of a system provisioned with 2X capacity, and maintains latency similar to the static local baseline.",
+        "canonical_id": "arXiv:2609.27040",
+        "arxiv_id": "2609.27040"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27085",
+      "identity_tokens": [
+        "id:arXiv:2609.27085",
+        "title:crossflow prefilldecode elasticity for agentic llm serving",
+        "url:https://www.semanticscholar.org/paper/898e569ce96ddf4f4a4e37cb63e510574fe1262b"
+      ],
+      "record": {
+        "title": "Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/898e569ce96ddf4f4a4e37cb63e510574fe1262b",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "As serving capacity demand surpasses that of training, serving efficiency becomes increasingly important. Prefill-decode (P/D) disaggregation improves serving efficiency through specialization and isolation of the two phases. These benefits rest on a static partitioning. Phase demand, however, is not static. We observe that in a large LLM fleet the ratio of uncached input to output tokens has peak-to-mean ratios up to 4.7x at minute timescales, and that in a public agentic trace the hourly ratio spans a median 24.5x within a single day, while reassigning a replica takes tens of minutes. Agentic traffic sharpens the mismatch. Sizing each pool at its ninety-fifth percentile leaves up to 17% of cluster capacity unused; sizing below it converts the same imbalance into queueing and unrealized throughput. We present Crossflow, which makes this boundary elastic without changing node roles. Each decode node publishes a short-lived, revocable lease that bounds local-prefill compute, KV capacity, transfer work, and projected output. Across public and internal traces, Crossflow improves token throughput by 16.2-17.4% on geometric mean over static P/D, and by up to 43.4% at high load, while reducing mean TTFT at every evaluated point.",
+        "canonical_id": "arXiv:2609.27085",
+        "arxiv_id": "2609.27085"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24089",
+      "identity_tokens": [
+        "id:arXiv:2609.24089",
+        "title:flashbob ioefficient exact backwardoverbackward for softmax attention",
+        "url:https://www.semanticscholar.org/paper/85e0df00dceb0458ac6ccce5cb4eed4b335586c5"
+      ],
+      "record": {
+        "title": "FlashBoB: I/O-Efficient Exact Backward-over-Backward for Softmax Attention",
+        "source_url": "https://www.semanticscholar.org/paper/85e0df00dceb0458ac6ccce5cb4eed4b335586c5",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Transformer models built on the attention mechanism have become a central building block in modern deep learning, yet softmax attention remains a major bottleneck for long-context workloads. While FlashAttention makes the forward and first backward passes I/O-efficient, it does not support backward-over-backward (BoB), which enables exact differentiation through the backward pass for applications such as second-order optimization, test-time training, gradient-based memory, and meta-learning. Existing BoB implementations either materialize large intermediate tensors or exhaust GPU memory at long sequence lengths. We present FlashBoB, an exact, I/O-efficient algorithm for BoB in softmax attention that keeps computation within on-chip tiles and avoids all $N \\times N$ intermediate tensors, where $N$ is the sequence length. The key insight is a hierarchical affine structure in the softmax double backward: two row-wise scalars determine all outputs through affine transformations. This yields a two-pass schedule with bounded on-chip static random-access memory (SRAM) usage and minimal off-chip high-bandwidth memory (HBM) traffic. FlashBoB achieves $\\Theta(N^2 d^2/M)$ HBM traffic ($d$ is the head dimension and $M$ is the memory size) and, within the standard FlashAttention-style score-recomputation model, matches the inherited large-cache lower bound for exact forward attention. Empirically, it scales exact attention BoB to $N=262\\text{K}$ on a single A100 80GB GPU, where prior PyTorch exact baselines fail by $N=16\\text{K}$, and is up to $6.3\\times$ faster than FlashBack. These results make exact second-order attention practical at long-context sequence lengths where prior implementations cannot run efficiently.",
+        "canonical_id": "arXiv:2609.24089",
+        "arxiv_id": "2609.24089",
+        "authors": [
+          "Anthony Givans",
+          "M. Crawshaw",
+          "Ming-Rui Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24802",
+      "identity_tokens": [
+        "id:arXiv:2609.24802",
+        "title:tiga compiling graph message passing at scale",
+        "url:https://www.semanticscholar.org/paper/6509cbceac3ea023f2187612074488ec2e5edc90"
+      ],
+      "record": {
+        "title": "Tiga: Compiling Graph Message Passing at Scale",
+        "source_url": "https://www.semanticscholar.org/paper/6509cbceac3ea023f2187612074488ec2e5edc90",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Graph message passing offers a common way to express learning algorithms, physical simulations, and numerical solvers. Efficient execution depends on interaction structure and data movement, which can be obscured when a program is expressed as a sequence of tensor operations. On memory-constrained systems such as laptops, materializing connectivity and intermediate messages can also exhaust device memory. We present Tiga, a just-in-time compiler that separates the definition of a message-passing program from how its interactions are traversed, computed, and stored. Tiga preserves graph relations and reducer algebra in a multi-level intermediate representation, enabling traversal specialization, fusion of relation generation with aggregation, and reverse-mode automatic differentiation. Backend-specific lowering targets CPUs and GPUs. Its runtime extends execution beyond device-memory capacity by streaming graph partitions from disk through host memory with page-sized device staging buffers; partition ownership and halo exchange extend the same programming model to distributed execution. A Python interface interoperates with ordinary PyTorch tensors and autograd for forward and backward computation. Numerical checks validate outputs and gradients for differentiable workloads. A differentiated geometric workload characterizes the memory--time tradeoff of fused forward and backward execution. Evaluation against matched Torch and PyTorch Geometric baselines demonstrates reduced runtime and device-memory use for generated-relation workloads, while offloaded forward execution processes billion-edge graphs on a single memory-limited GPU. Measurements on heterogeneous devices further characterize the communication and load-balance costs of distributed execution.",
+        "canonical_id": "arXiv:2609.24802",
+        "arxiv_id": "2609.24802",
+        "authors": [
+          "Ming-Yuan Chi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24847",
+      "identity_tokens": [
+        "id:arXiv:2609.24847",
+        "title:spectra adaptive execution of speculative decoding on a runtimereconfigurable tiled architecture",
+        "url:https://www.semanticscholar.org/paper/a74c8a785b8ee75df581f0b6d99da779be35a326"
+      ],
+      "record": {
+        "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+        "source_url": "https://www.semanticscholar.org/paper/a74c8a785b8ee75df581f0b6d99da779be35a326",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+        "canonical_id": "arXiv:2609.24847",
+        "arxiv_id": "2609.24847",
+        "authors": [
+          "G. Tombesi",
+          "William Baisi",
+          "Je Yang",
+          "Elisavet Lydia Alvanaki",
+          "Kevin J. Lee",
+          "Michael S. Lippe",
+          "Biruk B. Seyoum",
+          "Luca P. Carloni"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24894",
+      "identity_tokens": [
+        "id:arXiv:2609.24894",
+        "title:slicechat progressive inencoder token pruning for wholeslide pathology language models",
+        "url:https://www.semanticscholar.org/paper/6d84823db0123c4cc7884d1d0059a14d353d0425"
+      ],
+      "record": {
+        "title": "SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/6d84823db0123c4cc7884d1d0059a14d353d0425",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Whole-slide pathology images (WSIs) contain gigapixel-scale visual content, creating a major scalability challenge for slide-level multimodal large language models (MLLMs). Existing approaches process thousands of patch tokens and typically apply compression only after slide encoding, leaving multimodal attention computationally expensive. We introduce SLICEChat, a slide-level MLLM that integrates progressive token pruning within a hybrid Mamba--Transformer slide encoder. Mamba layers enable efficient long-range propagation, while Transformer layers preserve global interactions as the sequence is progressively shortened. Between stages, language-supervised, region-aware pruning removes spatially coherent low-utility regions under a controlled keep-rate schedule, producing compact slide representations before multimodal fusion. On SlideBench VQA, SLICEChat achieves 79.84% accuracy on TCGA and 59.09% on BCNB cohorts, outperforming prior slide-level pathology MLLMs, and achieves the highest overall WSI-Bench metrics. It also provides competitive memory usage and the inference latency among the evaluated models. These results demonstrate accurate and computationally efficient multimodal reasoning over gigapixel WSIs.",
+        "canonical_id": "arXiv:2609.24894",
+        "arxiv_id": "2609.24894",
+        "authors": [
+          "Ali Kerem Bozkurt",
+          "Baris Cem Bakay",
+          "Ibrahim Kulac",
+          "Cigdem Gunduz-Demir",
+          "Erkut Erdem",
+          "Aykut Erdem"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25411",
+      "identity_tokens": [
+        "id:arXiv:2609.25411",
+        "title:learnable classifierfree guidance null embeddings for enhanced controllable speech synthesis",
+        "url:https://www.semanticscholar.org/paper/932cb4da08c530f10f4bbf8746d4d27acc3eae1c"
+      ],
+      "record": {
+        "title": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis",
+        "source_url": "https://www.semanticscholar.org/paper/932cb4da08c530f10f4bbf8746d4d27acc3eae1c",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Classifier-free Guidance (CFG) is widely adopted in text-to-speech (TTS) systems to enhance generation quality and conditioning fidelity by interpolating between conditioned and unconditioned predictions. A common unconditional technique is to use an empty representation, in the form of a fixed null vector. In this work, we propose replacing this representation with a learnable unconditional embedding, optimized to represent a meaningful unconditional state. Objective and subjective evaluations demonstrate that learnable null embeddings consistently outperform fixed null embeddings across speaker similarity, speech stability, and expressiveness, while exhibiting greater robustness to larger guidance scales. We further show that learning a distinct unconditional embedding for each of the TTS conditioning modalities allows fine-grained control over speaker and text guidance, showcasing the trade-off between similarity and quality, and stability and expressiveness in the generated speech.",
+        "canonical_id": "arXiv:2609.25411",
+        "arxiv_id": "2609.25411",
+        "authors": [
+          "Biel Tura Vecino",
+          "Yoach Lacombe",
+          "Julian Weber",
+          "Zbigniew Łatka",
+          "Hai-Tong Zhang",
+          "Logan Hart",
+          "E. Gölge"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25492",
+      "identity_tokens": [
+        "id:arXiv:2609.25492",
+        "title:rgsq riemannian geometrysensitive quantization for large visionlanguage models",
+        "url:https://www.semanticscholar.org/paper/c007118773adf6b30b6d17e003733e1327d41895"
+      ],
+      "record": {
+        "title": "RGSQ: Riemannian Geometry-Sensitive Quantization for Large Vision-Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/c007118773adf6b30b6d17e003733e1327d41895",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Large vision-language models (VLMs) can be efficiently deployed under stringent memory and latency constraints through post training quantization (PTQ). However, most PTQ methods are designed for unimodal large language models (LLMs). These methods treat quantization errors as isotropic perturbations under the Euclidean assumption, which provides weak guidance on directions most sensitive to quantization in VLMs. Consequently, directly adapting unimodal PTQ approaches or solely employing modality-specific scaling often leads to uneven bit-width distribution and inconsistent performance in low-bit settings. To address these challenges, we propose Riemannian Geometry-Sensitive Quantization (RGSQ), which formulates quantization as a reconstruction problem under a unified Fisher-Riemannian metric. RGSQ identifies modality-specific sensitive directions via Riemannian manifold mappings built from modality-partitioned empirical Fisher factors and fused into a modality-aware Kronecker-structured metric. We then apply geometry-aligned rotations to reorient the local tangent frame, steering low-bit perturbations toward loss-insensitive axes. Finally, we apply a whitening transformation that maps the Riemannian objective to an equivalent Euclidean form, enabling standard unimodal PTQ methods to evaluate multimodal quantization error under their original assumptions. Across an extensive and diverse set of mainstream VLM benchmarks, RGSQ achieves the highest accuracy and stability under extremely low-bit settings (W2A8 and W3A8). It outperforms VLM-aware baselines, such as MBQ and MQuant, by up to 5.9% and surpasses single-modality improvements by up to 8.6%.",
+        "canonical_id": "arXiv:2609.25492",
+        "arxiv_id": "2609.25492",
+        "authors": [
+          "Zhi-Ping Wu",
+          "Dong-Dong Ren",
+          "Yang Zhou",
+          "Zheng-Jie Zhang",
+          "Wen-Bin Li",
+          "Hong-Bing Pan",
+          "Yang Gao"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:dbc6d89b454b4bee43014dd12e5454b37a5a871b723c1a975b351a3a6a14465a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
