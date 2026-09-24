@@ -105,6 +105,7 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             ".survey/scripts/ensure_dashboard_history.py",
             ".survey/work-queue/transport/offline-job-seed.json",
             ".survey/tests/test_reusable_transport_baseline.py",
+            ".survey/tests/test_legacy_scheduled_chat_lease_cap.py",
             ".github/workflows/repair-corrupted-lineages.yml",
             ".survey/scripts/repair_corrupted_lineages.py",
             ".survey/tests/test_repair_corrupted_lineages.py",
@@ -122,6 +123,9 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn("MAX_BLOCKED_ATTEMPTS", blocked_retry)
         self.assertNotIn("blocked_permanent", blocked_retry)
         self.assertNotIn("legacy_permanent", blocked_retry)
+        claim_worker = (ROOT / ".survey/scripts/claim_worker.py").read_text(encoding="utf-8")
+        self.assertNotIn("_normalize_legacy_scheduled_chat_leases", claim_worker)
+        self.assertNotIn("scheduled-chat-llm-survey", claim_worker)
 
     def test_survey_build_has_no_training_list_migration(self):
         survey = (ROOT / ".survey/scripts/survey.py").read_text(encoding="utf-8")

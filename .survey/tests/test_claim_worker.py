@@ -225,6 +225,44 @@ class ClaimWorkerTests(unittest.TestCase):
             self.assertEqual([item["job_id"] for item in after["assignments"]], ["job-r0"])
 
 
+    def test_scheduled_chat_rejects_unsupported_worker_id(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            job(root, "job-r1")
+            request(
+                root,
+                "req-invalid-worker",
+                worker="scheduled-chat-new",
+                worker_kind="scheduled_chat",
+                lease=5400,
+            )
+            result = claim_worker.process_requests(root, at=AT)
+            self.assertEqual(result["errors"], 1)
+            payload = json.loads(
+                (root / ".survey/work-queue/claim-results/req-invalid-worker.json").read_text()
+            )
+            self.assertFalse(payload["ok"])
+            self.assertIn("scheduled_chat worker_id must be", payload["error"])
+
+    def test_scheduled_chat_rejects_lease_above_90_minutes(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            job(root, "job-r1")
+            request(
+                root,
+                "req-long-lease",
+                worker="scheduled-chat-00",
+                worker_kind="scheduled_chat",
+                lease=28800,
+            )
+            result = claim_worker.process_requests(root, at=AT)
+            self.assertEqual(result["errors"], 1)
+            payload = json.loads(
+                (root / ".survey/work-queue/claim-results/req-long-lease.json").read_text()
+            )
+            self.assertFalse(payload["ok"])
+            self.assertIn("lease_seconds must be between", payload["error"])
+
     def test_scheduled_chat_claim_window_preclaims_default_window_and_refills_without_idle_gap(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

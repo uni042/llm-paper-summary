@@ -148,6 +148,8 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     worker_kind = raw.get("worker_kind")
     if worker_kind not in WORKER_KINDS:
         raise ValueError("worker_kind must be scheduled_chat or work")
+    if worker_kind == "scheduled_chat" and not worker_identity.is_supported_worker_id(worker_id):
+        raise ValueError("scheduled_chat worker_id must be scheduled-chat-00, scheduled-chat-30, or worker-N")
     requested_at_raw = raw.get("requested_at")
     requested_at = _as_time(requested_at_raw)
     if requested_at is None or not isinstance(requested_at_raw, str) or "T" not in requested_at_raw:
@@ -342,41 +344,6 @@ def _release_durable_claims(
     return submitted_jobs
 
 
-def _normalize_legacy_scheduled_chat_leases(
-    root: Path,
-    claims: dict[str, dict[str, Any]],
-    now: dt.datetime,
-) -> tuple[int, int]:
-    """Cap pre-migration Scheduled Chat leases at 90 minutes from last activity."""
-    normalized = invalidated = 0
-    for job_id, current in list(claims.items()):
-        if current.get("worker_kind") != "scheduled_chat" or current.get("released_at"):
-            continue
-        last_activity = _as_time(current.get("heartbeat_at") or current.get("claimed_at"))
-        expires = _as_time(current.get("expires_at"))
-        if last_activity is None or expires is None:
-            continue
-        capped_expiry = last_activity + dt.timedelta(seconds=DEFAULT_LEASE_SECONDS)
-        if expires <= capped_expiry:
-            continue
-
-        claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
-        claim.setdefault("legacy_lease_original_expires_at", _iso(expires))
-        claim["expires_at"] = _iso(capped_expiry)
-        claim["legacy_lease_normalized_at"] = _iso(now)
-        expired = now >= capped_expiry
-        if expired:
-            claim["lease_invalidated_at"] = _iso(now)
-            claim["lease_invalidation_reason"] = (
-                f"legacy scheduled_chat lease exceeded {DEFAULT_LEASE_SECONDS}-second cap"
-            )
-            invalidated += 1
-        _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
-        claims[job_id] = dict(claim, active=not expired, expired=expired)
-        normalized += 1
-    return normalized, invalidated
-
-
 def _checkpoint_map(request: dict[str, Any]) -> dict[str, str]:
     return {
         str(item["job_id"]): str(item["checkpoint_ref"])
@@ -420,29 +387,16 @@ def _release_worker_checkpointed_claims(
     return released
 
 
-NORMAL_SCHEDULED_CHAT_RUN_RE = re.compile(
-    r"^scheduled-chat-llm-survey(?:-\d{8}T\d{4}JST)?$", re.IGNORECASE
-)
-
-
 def _same_worker_lineage(
     current_worker_id: Any,
     current_worker_kind: Any,
     request_worker_id: Any,
     request_worker_kind: Any,
 ) -> bool:
-    """Match one logical worker across run-specific Scheduled Chat ids."""
-    if current_worker_kind != request_worker_kind:
-        return False
-    current_id = str(current_worker_id or "")
-    request_id = str(request_worker_id or "")
-    if current_id == request_id:
-        return True
-    if current_worker_kind != "scheduled_chat":
-        return False
-    return bool(
-        NORMAL_SCHEDULED_CHAT_RUN_RE.fullmatch(current_id)
-        and NORMAL_SCHEDULED_CHAT_RUN_RE.fullmatch(request_id)
+    """Match one current worker identity exactly."""
+    return (
+        current_worker_kind == request_worker_kind
+        and str(current_worker_id or "") == str(request_worker_id or "")
     )
 
 
@@ -590,7 +544,6 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
     claims = claim_state.current_claims(root, now)
     descriptors = _immutable_descriptors(root)
     submitted_jobs = _release_durable_claims(root, claims, descriptors, now)
-    leases_normalized, leases_invalidated = _normalize_legacy_scheduled_chat_leases(root, claims, now)
     claims = claim_state.current_claims(root, now)
     processed = reused = errors = assigned_new = assigned_recovered = assigned_reused = renewed = checkpoint_released = assigned_adopted_pool = 0
     for path in sorted(request_root.glob("*.json")):
@@ -870,8 +823,6 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
         "renewed": renewed,
         **{f"shared_pool_{key}": value for key, value in pool_maintenance.items()},
         "checkpoint_released": checkpoint_released,
-        "leases_normalized": leases_normalized,
-        "leases_invalidated": leases_invalidated,
     }
 
 
