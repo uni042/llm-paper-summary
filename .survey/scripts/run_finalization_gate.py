@@ -174,7 +174,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif next_action == "CLAIM_NEXT_RESEARCH_AUDIT":
         next_action_message = (
             "Research/Auditの最低成功完了数に未達です。最終化せず、最新queue/claim stateから"
-            "次のResearch/Auditを1件claimします。"
+            "既確保standbyをforegroundへ昇格し、必要ならclaim windowを補充してResearch/Auditを継続します。本文処理はforeground 1件だけです。"
         )
     elif next_action == "DISCOVER_AGAIN":
         next_action_message = "Discoveryの最低ラウンド数に未達です。最終化せず、次の正規Discovery roundへ進みます。"
