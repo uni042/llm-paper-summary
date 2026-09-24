@@ -327,6 +327,46 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
         self.assertTrue(packet["direct_take_before_claim_result"])
         self.assertEqual(packet["pending_claim_request_ids"], ["pending-claim-1"])
 
+    def test_claim_next_packet_prefers_run_state_recovery_over_fresh_direct_take(self):
+        packet = mod._next_work_packet(
+            Path("."),
+            worker_id="scheduled-chat-00",
+            gate={"required_action": "CLAIM_NEXT_RESEARCH_AUDIT"},
+            finalization_gate={
+                "finalization_permit": {"issued": False},
+                "next_action": "CLAIM_NEXT_RESEARCH_AUDIT",
+            },
+            claims={
+                "claim_result_pending": False,
+                "pending_claim_request_ids": [],
+            },
+            discovery_async={},
+            discovery_preload=None,
+            discovery_fallback_source=None,
+            discovery_pipeline_preload=None,
+            run_termination_allowed=False,
+            research_recovery_packet={
+                "resume_recovery": True,
+                "resume_requires_direct_take": False,
+                "job_id": "job-recover",
+                "claim_id": "claim-pool-recover",
+                "attempt_id": "attempt-pool-recover",
+                "recovery_source_attempt_id": "attempt-old",
+            },
+            research_direct_packet={
+                "claim_id": "claim-fresh",
+                "job_id": "job-fresh",
+                "attempt_id": "attempt-fresh",
+                "take_path": ".survey/work-queue/direct-takes/research/claim-fresh.json",
+            },
+        )
+        self.assertEqual(packet["kind"], "research_recovery_via_run_state")
+        self.assertEqual(packet["job_id"], "job-recover")
+        self.assertFalse(packet["direct_take_required"])
+        self.assertTrue(packet["run_state_auto_claim_required"])
+        self.assertNotEqual(packet.get("job_id"), "job-fresh")
+
+
     def test_safe_time_window_issues_explicit_stop_permit(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

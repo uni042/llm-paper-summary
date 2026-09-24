@@ -211,6 +211,86 @@ class AutoInitialClaimTests(unittest.TestCase):
             self.assertEqual(resume["assignment_count"], 1)
             self.assertEqual(resume["foreground"]["attempt_id"], "attempt-old")
 
+    def test_expired_record_recovery_is_auto_claimed_from_run_state_without_direct_take(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = eligible_result()
+            value["route_source"] = "hot_dispatch_direct_start"
+            value["worker_id"] = "scheduled-chat-30"
+            value["scheduled_slot"] = "30"
+            source = root / ".survey/work-queue/run-state/results/run-state-1.json"
+            write_json(source, value)
+            changed = root / "changed.txt"
+            changed.write_text(".survey/work-queue/run-state/results/run-state-1.json\n", encoding="utf-8")
+            write_json(
+                root / ".survey/work-queue/hot-dispatch.json",
+                {
+                    "research_recovery_resume": {
+                        "scheduled-chat-30": [{
+                            "resume_recovery": True,
+                            "resume_requires_direct_take": False,
+                            "recovery_transport": "run_state_auto_claim",
+                            "job_id": "job-recover",
+                            "claim_id": "claim-pool-recover",
+                            "attempt_id": "attempt-pool-recover",
+                            "work_start_allowed": True,
+                            "recovery_source_claim_id": "claim-old",
+                            "recovery_source_attempt_id": "attempt-old",
+                            "recovery_source_record_bank": "m",
+                        }]
+                    }
+                },
+            )
+
+            def fake_initial_fast_path(repo_root, request_path):
+                request = json.loads(request_path.read_text(encoding="utf-8"))
+                self.assertTrue(request["auto_initial_claim"])
+                self.assertTrue(request["auto_recovery_claim"])
+                self.assertEqual(request["job_ids"], ["job-recover"])
+                self.assertEqual(request["recovery_source_attempt_id"], "attempt-old")
+                self.assertEqual(request["recovery_source_record_bank"], "m")
+                self.assertFalse(
+                    (root / ".survey/work-queue/direct-takes/research/claim-pool-recover.json").exists()
+                )
+                write_json(
+                    root / ".survey/work-queue/claim-results" / request_path.name,
+                    {
+                        "ok": True,
+                        "request_id": request["request_id"],
+                        "worker_id": request["worker_id"],
+                        "run_key": request["run_key"],
+                        "scheduled_slot": request["scheduled_slot"],
+                        "actual_invocation_start": request["actual_invocation_start"],
+                        "assignments": [{
+                            "job_id": "job-recover",
+                            "claim_id": "claim-pool-recover",
+                            "attempt_id": "attempt-pool-recover",
+                            "record_bank": "m",
+                            "record_bank_recovery": "expired-same-job",
+                        }],
+                    },
+                )
+                return {"ok": True}
+
+            with (
+                mock.patch.object(mod.initial_claim_fast_path, "process", side_effect=fake_initial_fast_path) as fast,
+                mock.patch.object(mod.claim_fast_path, "process") as fallback,
+            ):
+                summary = mod.process(root, changed)
+
+            fast.assert_called_once()
+            fallback.assert_not_called()
+            self.assertEqual(len(summary["created_recovery"]), 1)
+            updated = json.loads(source.read_text(encoding="utf-8"))
+            recovery = updated["auto_recovery_claim"]
+            self.assertEqual(recovery["status"], "allocated")
+            self.assertFalse(recovery["requires_worker_direct_take"])
+            self.assertTrue(recovery["record_write_allowed"])
+            self.assertEqual(recovery["job_ids"], ["job-recover"])
+            self.assertEqual(recovery["record_bank"], "m")
+            self.assertEqual(recovery["record_bank_recovery"], "expired-same-job")
+
+
     def test_noninitial_snapshot_is_not_auto_claimed(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

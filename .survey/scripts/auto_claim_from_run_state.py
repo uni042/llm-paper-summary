@@ -25,6 +25,7 @@ import worker_identity
 CLAIM_REQUESTS = Path(".survey/work-queue/claim-requests")
 CLAIM_RESULTS = Path(".survey/work-queue/claim-results")
 ARCHIVE = Path(".survey/work-queue/archive/transport")
+HOT_DISPATCH = Path(".survey/work-queue/hot-dispatch.json")
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -117,6 +118,65 @@ def _carryover_resume_eligible(result: dict[str, Any]) -> bool:
     )
 
 
+def _recovery_packet(root: Path, result: dict[str, Any]) -> dict[str, Any] | None:
+    """Return the oldest same-worker expired-record recovery packet for this run.
+
+    Recovery is intentionally materialized by the run-state workflow instead of a
+    Scheduled Chat direct-take write. This keeps the worker-side transport to the
+    already-required run-state request while preserving the canonical claim/bank
+    recovery path.
+    """
+    gate = result.get("gate") if isinstance(result.get("gate"), dict) else {}
+    if not (
+        result.get("ok") is True
+        and result.get("snapshot_origin") == "request-fast-lane"
+        and result.get("work_mode") == "research"
+        and worker_identity.identity_slot_valid(result.get("worker_id"), result.get("scheduled_slot"))
+        and result.get("scheduled_slot") != "0830"
+        and result.get("active_assignment") is False
+        and result.get("claim_result_pending") is False
+        and gate.get("required_action") == "CLAIM_NEXT_RESEARCH_AUDIT"
+        and int(result.get("seconds_to_run_deadline") or 0) > 600
+    ):
+        return None
+
+    hot = _read(root / HOT_DISPATCH, {})
+    recovery_map = hot.get("research_recovery_resume") if isinstance(hot, dict) else {}
+    if not isinstance(recovery_map, dict):
+        return None
+    rows = recovery_map.get(str(result.get("worker_id") or ""), [])
+    if not isinstance(rows, list):
+        return None
+    for packet in rows:
+        if not isinstance(packet, dict):
+            continue
+        if (
+            packet.get("resume_recovery") is True
+            and packet.get("job_id")
+            and packet.get("claim_id")
+            and packet.get("attempt_id")
+            and packet.get("work_start_allowed") is True
+        ):
+            return packet
+    return None
+
+
+def _recovery_request_id(result: dict[str, Any], packet: dict[str, Any]) -> str:
+    material = "\n".join(
+        str(value or "")
+        for value in (
+            result.get("worker_id"),
+            result.get("run_key"),
+            result.get("scheduled_slot"),
+            result.get("actual_invocation_start"),
+            packet.get("job_id"),
+            packet.get("recovery_source_attempt_id"),
+        )
+    )
+    digest = hashlib.sha256(material.encode("utf-8")).hexdigest()[:24]
+    return f"auto-recovery-claim-{digest}"
+
+
 def _request_id(result: dict[str, Any]) -> str:
     material = "\n".join(
         str(result.get(key) or "")
@@ -161,6 +221,47 @@ def process(repo_root: Path, run_state_results_file: Path) -> dict[str, Any]:
         result = _read(path, {})
         if isinstance(result, dict) and _carryover_resume_eligible(result):
             resume_sources.append(path)
+
+        recovery = _recovery_packet(root, result) if isinstance(result, dict) else None
+        if recovery is not None:
+            request_id = _recovery_request_id(result, recovery)
+            request_rel = CLAIM_REQUESTS / f"{request_id}.json"
+            result_rel = CLAIM_RESULTS / f"{request_id}.json"
+            request_path = root / request_rel
+            if request_path.exists() or (root / result_rel).exists():
+                skipped.append({"path": str(raw), "reason": "deterministic_recovery_request_already_exists"})
+                continue
+            payload = _claim_request(result, request_id)
+            payload["job_ids"] = [str(recovery["job_id"])]
+            payload["auto_recovery_claim"] = True
+            payload["recovery_source_claim_id"] = recovery.get("recovery_source_claim_id")
+            payload["recovery_source_attempt_id"] = recovery.get("recovery_source_attempt_id")
+            payload["recovery_source_record_bank"] = recovery.get("recovery_source_record_bank")
+            _write(request_path, payload)
+            result["auto_recovery_claim"] = {
+                "requested": True,
+                "request_id": request_id,
+                "request_path": request_rel.as_posix(),
+                "result_path": result_rel.as_posix(),
+                "job_id": recovery["job_id"],
+                "source_claim_id": recovery.get("recovery_source_claim_id"),
+                "source_attempt_id": recovery.get("recovery_source_attempt_id"),
+                "source_record_bank": recovery.get("recovery_source_record_bank"),
+                "status": "allocating",
+                "requires_worker_direct_take": False,
+            }
+            _write(path, result)
+            created.append({
+                "source_result": path.relative_to(root).as_posix(),
+                "request_id": request_id,
+                "request_path": request_rel.as_posix(),
+                "result_path": result_rel.as_posix(),
+                "metadata_key": "auto_recovery_claim",
+                "claim_reason": "expired_record_recovery",
+                "job_id": str(recovery["job_id"]),
+            })
+            continue
+
         if not isinstance(result, dict) or not _eligible(result):
             skipped.append({"path": str(raw), "reason": "not_initial_research_claim_eligible"})
             continue
@@ -190,6 +291,8 @@ def process(repo_root: Path, run_state_results_file: Path) -> dict[str, Any]:
             "request_id": request_id,
             "request_path": request_rel.as_posix(),
             "result_path": result_rel.as_posix(),
+            "metadata_key": "auto_initial_claim",
+            "claim_reason": "initial_research_claim",
         })
 
     fast_path: dict[str, Any] = {"skipped": True, "mode": "none"}
@@ -220,7 +323,8 @@ def process(repo_root: Path, run_state_results_file: Path) -> dict[str, Any]:
             assignments = claim_result.get("assignments") if isinstance(claim_result, dict) else []
             if not isinstance(assignments, list):
                 assignments = []
-            auto = source.get("auto_initial_claim") if isinstance(source.get("auto_initial_claim"), dict) else {}
+            metadata_key = str(item.get("metadata_key") or "auto_initial_claim")
+            auto = source.get(metadata_key) if isinstance(source.get(metadata_key), dict) else {}
             auto.update({
                 "status": "allocated" if assignments else ("settled_no_assignment" if isinstance(claim_result, dict) else "pending"),
                 "assignment_count": len(assignments),
@@ -235,7 +339,25 @@ def process(repo_root: Path, run_state_results_file: Path) -> dict[str, Any]:
                     if isinstance(row, dict) and row.get("job_id")
                 ),
             })
-            source["auto_initial_claim"] = auto
+            if item.get("claim_reason") == "expired_record_recovery":
+                target_job_id = str(item.get("job_id") or "")
+                target = next(
+                    (
+                        row for row in assignments
+                        if isinstance(row, dict) and str(row.get("job_id") or "") == target_job_id
+                    ),
+                    None,
+                )
+                auto["requires_worker_direct_take"] = False
+                auto["record_write_allowed"] = bool(
+                    isinstance(target, dict) and target.get("record_bank")
+                )
+                if isinstance(target, dict):
+                    auto["claim_id"] = target.get("claim_id")
+                    auto["attempt_id"] = target.get("attempt_id")
+                    auto["record_bank"] = target.get("record_bank")
+                    auto["record_bank_recovery"] = target.get("record_bank_recovery")
+            source[metadata_key] = auto
             _write(source_path, source)
 
     resume_recovery: dict[str, Any] = {"skipped": True, "source_results": len(resume_sources)}
@@ -267,6 +389,10 @@ def process(repo_root: Path, run_state_results_file: Path) -> dict[str, Any]:
         "ok": True,
         "source_results": len(source_paths),
         "created": created,
+        "created_recovery": [
+            item for item in created
+            if item.get("claim_reason") == "expired_record_recovery"
+        ],
         "skipped": skipped,
         "claim_fast_path": fast_path,
         "resume_recovery": resume_recovery,

@@ -351,7 +351,8 @@ def _research_recovery_resume_packets(
             "job_path": (JOBS / f"{job_id}.json").as_posix(),
             "job": job,
             "resume_recovery": True,
-            "resume_requires_direct_take": True,
+            "resume_requires_direct_take": False,
+            "recovery_transport": "run_state_auto_claim",
             "resume_without_new_claim": False,
             "work_start_allowed": True,
             "record_write_allowed": False,
@@ -480,7 +481,18 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         for rows in research_recovery_resume.values()
         for packet in rows
     ]
-    for packet in recovery_packets + research_packets:
+    for packet in recovery_packets:
+        packet["run_state_recovery_contract"] = {
+            "transport": "auto_recovery_claim",
+            "requires_worker_direct_take": False,
+            "worker_id": packet.get("worker_id"),
+            "job_id": packet.get("job_id"),
+            "source_attempt_id": packet.get("recovery_source_attempt_id"),
+            "source_record_bank": packet.get("recovery_source_record_bank"),
+            "trigger": "persist_or_reuse_current_run_state_request",
+        }
+
+    for packet in research_packets:
         if all(packet.get(key) for key in ("take_path", "claim_id", "job_id", "attempt_id")):
             packet["direct_take_contract"] = {
                 "create_only": True,
@@ -620,8 +632,9 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             "same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence "
             "over creating a new take, so content work can resume immediately while canonical route repair proceeds; "
             "coherent unsubmitted record banks whose old claim expired are exposed in research_recovery_resume for their "
-            "original worker, and the matching current pool claim is direct-taken before unrelated fresh FIFO work so "
-            "expired-same-job recovery can retag the preserved slots instead of orphaning them; "
+            "original worker; these packets do not require a worker-side direct-take write. The normal run-state request "
+            "causes auto_claim_from_run_state to issue a deterministic job-pinned canonical claim, after which "
+            "expired-same-job recovery retags the preserved slots before unrelated fresh FIFO work; "
             "resume packets also expose the canonical status-only submission path/template so a single unreadable paper "
             "can be durably terminalized and the next standby can start without ending the run; "
             "direct_start_allowed requires prepared stock for the fresh invocation's primary route (backward for Discovery), "

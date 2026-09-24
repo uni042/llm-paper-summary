@@ -1270,6 +1270,7 @@ def _next_work_packet(
     discovery_pipeline_preload: dict[str, Any] | None,
     run_termination_allowed: bool,
     research_direct_packet: dict[str, Any] | None = None,
+    research_recovery_packet: dict[str, Any] | None = None,
 ) -> dict[str, Any] | None:
     if run_termination_allowed:
         return None
@@ -1344,6 +1345,17 @@ def _next_work_packet(
             return packet
 
     if action == "CLAIM_NEXT_RESEARCH_AUDIT":
+        if isinstance(research_recovery_packet, dict):
+            return {
+                **dict(research_recovery_packet),
+                "kind": "research_recovery_via_run_state",
+                "action": action,
+                "worker_id": worker_id,
+                "hot_dispatch_path": ".survey/work-queue/hot-dispatch.json",
+                "direct_take_required": False,
+                "run_state_auto_claim_required": True,
+                "instruction": "persist or reuse the current run-state request; its workflow will create the canonical recovery claim",
+            }
         if isinstance(research_direct_packet, dict):
             return {
                 **dict(research_direct_packet),
@@ -1589,26 +1601,41 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
 
     discovery_preload = decorate_discovery_packet(discovery_preload)
 
-    # Rescue path for an already-pending normal claim request. A prepared
-    # Research/Audit packet can still be reserved with a create-only direct take,
-    # allowing full-text work to start while the existing request is canonicalized.
-    # claim_fast_path processes direct takes before normal request allocation, so
-    # the pending request converges into the same worker's standby-window refill.
+    # Recovery packets are deliberately not worker-side direct takes. The run-state
+    # workflow turns the oldest same-worker recovery packet into a deterministic,
+    # job-pinned canonical claim request. Fresh prepared stock still uses the
+    # create-only direct-take rescue path so content can start immediately.
     hot_dispatch_index = _read(root / ".survey/work-queue/hot-dispatch.json", {}) or {}
+    research_recovery_packet = None
     research_direct_packet = None
-    if work_mode == "research":
-        packet_groups: list[list[dict[str, Any]]] = []
-        if isinstance(hot_dispatch_index, dict):
-            recovery_by_worker = hot_dispatch_index.get("research_recovery_resume")
-            if isinstance(recovery_by_worker, dict):
-                worker_rows = recovery_by_worker.get(str(request["worker_id"]))
-                if isinstance(worker_rows, list):
-                    packet_groups.append(worker_rows)
-            packets = hot_dispatch_index.get("research")
-            if isinstance(packets, list):
-                packet_groups.append(packets)
-        for packet_group in packet_groups:
-            for raw_packet in packet_group:
+    if work_mode == "research" and isinstance(hot_dispatch_index, dict):
+        recovery_by_worker = hot_dispatch_index.get("research_recovery_resume")
+        if isinstance(recovery_by_worker, dict):
+            worker_rows = recovery_by_worker.get(str(request["worker_id"]))
+            if isinstance(worker_rows, list):
+                for raw_packet in worker_rows:
+                    if not isinstance(raw_packet, dict):
+                        continue
+                    job_id = str(raw_packet.get("job_id") or "")
+                    live_job = _read(
+                        root / ".survey/work-queue/jobs" / f"{job_id}.json",
+                        {},
+                    )
+                    if not (
+                        job_id
+                        and isinstance(live_job, dict)
+                        and live_job.get("status") == "ready"
+                        and live_job.get("type") in {"research", "audit"}
+                        and live_job.get("repair_required") is not True
+                    ):
+                        continue
+                    research_recovery_packet = dict(raw_packet)
+                    research_recovery_packet["job"] = live_job
+                    break
+
+        packets = hot_dispatch_index.get("research")
+        if isinstance(packets, list):
+            for raw_packet in packets:
                 if not isinstance(raw_packet, dict):
                     continue
                 take_path = str(raw_packet.get("take_path") or "")
@@ -1629,9 +1656,9 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
                 research_direct_packet = dict(raw_packet)
                 research_direct_packet["job"] = live_job
                 break
-            if research_direct_packet is not None:
-                break
-    prepared_research_packet_available = research_direct_packet is not None
+    prepared_research_packet_available = bool(
+        research_recovery_packet is not None or research_direct_packet is not None
+    )
 
     now = dt.datetime.now(dt.timezone.utc)
     deadline = started_at + dt.timedelta(seconds=3600)
@@ -1875,6 +1902,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         discovery_pipeline_preload=discovery_pipeline_preload,
         run_termination_allowed=run_termination_allowed,
         research_direct_packet=research_direct_packet,
+        research_recovery_packet=research_recovery_packet,
     )
 
     public_submission = {key: value for key, value in submission.items() if key != "attempt_facts"}
@@ -1974,7 +2002,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
             "GitHub file create/update capability counts as GitHub write; absence of local script execution alone is never a transport hard stop, and an actual canonical-path write must be attempted before a write-unavailable handoff. "
             "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected, runtime_condition_scope=run_wide, runtime_condition_fallback_exhausted=true, and a concrete observed-error detail; a single paper/source/content-write failure is never platform-context evidence. "
-            "A pending claim exposes its request age; when an unclaimed prepared Research/Audit packet is available outside the handoff window, the gate routes directly to that packet instead of monitoring the claim as foreground work. Same-worker expired-claim record recovery packets are selected before unrelated fresh pool packets, while an already-active owned foreground remains authoritative. Only when no prepared packet is available does the first 60 seconds use active Survey claim fast-lane monitoring rather than passive waiting. "
+            "A pending claim exposes its request age; when an unclaimed prepared Research/Audit packet is available outside the handoff window, the gate routes directly to productive work instead of monitoring the claim as foreground work. Same-worker expired-claim record recovery packets are selected before unrelated fresh pool packets and are canonicalized by the run-state workflow through a deterministic pinned claim, without a worker-side direct-take write. Fresh stock may still use create-only direct take. An already-active owned foreground remains authoritative. Only when no prepared packet is available does the first 60 seconds use active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
             "Discovery pending results do not mask already-evaluable rounds; evaluation/recovery work has priority over wait states. "
             f"Outside the 600-second no-new-work window, at most {DISCOVERY_PIPELINE_WINDOW} Discovery rounds may be in flight so a PRECHECKED citation window can be evaluated while an older precheck/submission settles. "

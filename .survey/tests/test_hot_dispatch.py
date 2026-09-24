@@ -896,7 +896,7 @@ class HotDispatchTests(unittest.TestCase):
                 index["discovery_fallback"]["source_url"],
                 "repository://structured-references",
             )
-    def test_index_exposes_expired_partial_record_as_same_worker_recovery_take(self):
+    def test_index_exposes_expired_partial_record_as_same_worker_run_state_recovery(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             current = now()
@@ -955,11 +955,14 @@ class HotDispatchTests(unittest.TestCase):
             self.assertEqual(recovery["claim_id"], claim_id)
             self.assertEqual(recovery["recovery_source_attempt_id"], "attempt-old-interrupted")
             self.assertEqual(recovery["recovery_source_record_bank"], "m")
-            self.assertTrue(recovery["resume_requires_direct_take"])
-            self.assertEqual(
-                recovery["direct_take_contract"]["payload_base"]["claim_id"],
-                claim_id,
-            )
+            self.assertFalse(recovery["resume_requires_direct_take"])
+            self.assertEqual(recovery["recovery_transport"], "run_state_auto_claim")
+            self.assertNotIn("direct_take_contract", recovery)
+            contract = recovery["run_state_recovery_contract"]
+            self.assertEqual(contract["transport"], "auto_recovery_claim")
+            self.assertFalse(contract["requires_worker_direct_take"])
+            self.assertEqual(contract["job_id"], job_id)
+            self.assertEqual(contract["source_attempt_id"], "attempt-old-interrupted")
             self.assertNotIn(job_id, [row["job_id"] for row in index["research"]])
 
 
