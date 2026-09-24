@@ -142,6 +142,72 @@ class EnsureDiscoveryRunStateTests(unittest.TestCase):
             self.assertEqual(result["finalization_gate"]["decision"], "MUST_CONTINUE")
             self.assertFalse(result["finalization_permit_issued"])
 
+    def test_ready_precheck_inherits_missing_identity_from_existing_run_state(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            start = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
+            precheck_rel = Path(".survey/work-queue/discovery-precheck/requests/pre-inherit.json")
+            write_json(
+                root / precheck_rel,
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "pre-inherit",
+                    "run_key": "run-inherit",
+                    "worker_id": "scheduled-chat-00",
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                },
+            )
+            write_json(
+                root / ".survey/work-queue/discovery-precheck/results/pre-inherit.json",
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "pre-inherit",
+                    "run_key": "run-inherit",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                },
+            )
+            write_json(
+                root / ".survey/work-queue/run-state/requests/start.json",
+                {
+                    "schema_version": 1,
+                    "request_id": "start",
+                    "run_key": "run-inherit",
+                    "worker_id": "scheduled-chat-00",
+                    "worker_kind": "scheduled_chat",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": start.isoformat(),
+                    "runtime_condition": "none",
+                },
+            )
+            write_json(
+                root / ".survey/work-queue/run-state/results/start.json",
+                {
+                    "schema_version": 1,
+                    "ok": True,
+                    "request_id": "start",
+                    "run_key": "run-inherit",
+                    "worker_id": "scheduled-chat-00",
+                    "work_mode": "discovery",
+                },
+            )
+
+            refreshed = ensure.ensure_paths(root, [precheck_rel])
+            self.assertEqual(len(refreshed["created"]), 1)
+            refresh = json.loads(
+                (root / refreshed["created"][0]["request_path"]).read_text(encoding="utf-8")
+            )
+            self.assertEqual(refresh["scheduled_slot"], "00")
+            self.assertEqual(refresh["actual_invocation_start"], start.isoformat())
+            self.assertEqual(
+                refreshed["created"][0]["reason"],
+                "refresh_after_ready_for_evaluation",
+            )
+
     def test_preload_request_does_not_create_worker_run_state(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
