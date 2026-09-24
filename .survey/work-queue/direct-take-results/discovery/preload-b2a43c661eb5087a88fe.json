@@ -1,11 +1,45 @@
 {
-  "error": "ValueError: direct Discovery claim lease is missing or expired",
-  "ok": false,
+  "formal_precheck_ready_at": "2026-09-24T16:00:13.822131+00:00",
+  "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T005925JST-b2a43c66.json",
+  "frontier_target": 3,
+  "frontier_work_available": true,
+  "ok": true,
   "operation": "direct_take_discovery",
   "preload_id": "preload-b2a43c661eb5087a88fe",
-  "processed_at": "2026-09-24T15:01:57+00:00",
+  "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-b2a43c661eb5087a88fe.json",
+  "processed_at": "2026-09-24T16:00:12+00:00",
+  "receipt": "sha256:cef3723ab75d150b930f6f9250bd742aaeb9320e22975c651d126f84a6c54108",
+  "request_id": "disc-take-scheduled-chat-00-20260925T005925JST-b2a43c66",
+  "reserved_frontier": [
+    {
+      "axis": "explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)",
+      "citation_direction": "forward",
+      "discovery_bank": "z",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-z/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-ffb9f610716bbbb2820ec80c.json",
+      "preload_id": "preload-35f79ff9fbb933aa98ef",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-35f79ff9fbb933aa98ef.json",
+      "request_id": "frontier-ffb9f610716bbbb2820ec80c",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    },
+    {
+      "axis": "forward citations of Splitwise for disaggregated LLM serving",
+      "citation_direction": "forward",
+      "discovery_bank": "m",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-m/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-6744df2bf719787d6187382f.json",
+      "preload_id": "preload-8171aa396a08ad4b76aa",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-8171aa396a08ad4b76aa.json",
+      "request_id": "frontier-6744df2bf719787d6187382f",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    }
+  ],
+  "run_key": "scheduled-chat-00-20260925T005925+0900-7f3c9a",
   "schema_version": 1,
-  "status": "recovery_required",
-  "submission_allowed": false,
-  "work_start_allowed": false
+  "status": "ready_for_submission",
+  "submission_allowed": true,
+  "work_start_allowed": true,
+  "worker_id": "scheduled-chat-00"
 }
