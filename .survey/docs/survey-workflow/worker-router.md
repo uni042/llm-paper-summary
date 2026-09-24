@@ -102,6 +102,7 @@ Web/PDF取得のplatform上限はrunを途中終了させる実害があるた�
 - 修復ループでは、品質検査が要求する箇所だけを既取得の全文から再確認し、論文全体をWebから取り直さない。
 - Discovery中は候補identityと採否判断に全文PDFが不要なら取得しない。Research/Auditとしてclaimされた時点で初めて全文取得する。
 - 取得節約によって出典確認、全文読解、一次資料優先、品質基準を弱めてはならない。必要な一次情報がキャッシュにもWebにも無い場合は推測せず、正規のblocked/deferred経路を使う。
+- **単一論文の一次資料全文を取得できないことはrun-level hard stopではない。** foregroundで正規取得経路と利用可能な代替一次資料経路を試しても全文を確保できない場合、そのattemptを同じ `attempt_id` のstatus-only immutable descriptorとして `.survey/work-queue/submissions/<kind>/<attempt_id>.json` へ `blocked`（一時的・再試行価値がある場合は `deferred`）で耐久化する。理由と実際に試した一次資料経路を `reason` / `retrieval_evidence` に残し、推測で5スロットを作らない。descriptorがmainへ耐久保存された時点でそのclaimは次foreground選択から外れるので、**同じrunの最古standbyを直ちに開始する。submission result待ちを同期障壁にせず、成功数にも数えない。** `research_resume.<worker_id>[]` が `status_only_submission_path` / `status_only_descriptor_base` / `source_unavailable_next_action` を返している場合はそれを正本テンプレートとして使う。
 
 **ノルマを達成したrunの最終報告には、取得上限を避けるために実際に使った工夫を短く記載する。** 例: 「Library上の既取得PDFを再利用」「PDFを1回だけ取得して修復でも再利用」「同一論文の再ダウンロードを回避」「Discoveryで不要な全文取得を省略」。取得回数や再利用回数を正確に数えられる場合は併記し、計測できない場合は推測値を作らず、実施した工夫だけを報告する。ノルマ未達時も取得上限が原因または近因なら、どの取得が上限に寄与したかを障害診断へ残す。
 
@@ -413,7 +414,7 @@ hard stopは曖昧な「安全そうでない」「難しい」「時間がか�
 - platform/context上限が実際に発生し、継続するtool callまたは出力がプラットフォームから拒否された。
 - 正規transportが要求するGitHub Actions/API/認証が利用不能で、Libraryを含む代替耐久経路でも現在成果を安全に引き継げない。
 
-単一provider失敗、単一論文取得失敗、validation failure、record bank枯渇、claim/submission result pending、候補0件、Library backlog、Notion/補助handoffの読取不能、単に次手が分かりにくいことはhard stopではない。これらは正規回復・別provider・status-only・Library route・同一target待機・次の独立作業へ進む。
+単一provider失敗、**単一論文の一次資料全文取得失敗**、validation failure、record bank枯渇、claim/submission result pending、候補0件、Library backlog、Notion/補助handoffの読取不能、単に次手が分かりにくいことはhard stopではない。これらは正規回復・別provider・status-only・Library route・同一target待機・次の独立作業へ進む。特に一次資料取得失敗を `platform_context_limit` / `global_dependency` へ読み替えてrun全体を終了してはならない。
 
 `continuation_gate.py` / `run_finalization_gate.py` へ停止系入力を渡す場合も、この列挙に対応する観測事実がある時だけtrueにする。ワーカー独自の解釈で `platform_limit` / `global_dependency` / `discovery_exhausted` を立てない。
 
@@ -442,9 +443,11 @@ runtime_condition: none
 # runtime_condition_confirmed: true
 # runtime_condition_attempts: 2
 # runtime_condition_detail: <観測した障害と回復試行>
+# platform_context_limit の場合だけ必須:
+# runtime_condition_event: platform_tool_call_rejected
 ```
 
-hot-dispatch direct startではrun-state requestを**内容作業開始前に耐久保存するがresultは待たない**。上記4項目がpolicyと整合する場合、run-stateはその開始時routeを正規snapshotへ固定する。従来経路ではresultを待ってから開始する。`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は待機ミクロタスク等の別作業を1件以上挟んだ正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformからtool call/outputを拒否された事実がある場合だけ `runtime_condition_confirmed=true` としてよい。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
+hot-dispatch direct startではrun-state requestを**内容作業開始前に耐久保存するがresultは待たない**。上記4項目がpolicyと整合する場合、run-stateはその開始時routeを正規snapshotへ固定する。従来経路ではresultを待ってから開始する。`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は待機ミクロタスク等の別作業を1件以上挟んだ正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformから**必要なtool callまたはoutputを拒否された事実**がある場合に限り、`runtime_condition_confirmed=true`、`runtime_condition_attempts>=1`、非空の `runtime_condition_detail` に加えて **`runtime_condition_event=platform_tool_call_rejected`** を持つ場合だけ有効とする。この構造化証拠が無い `platform_context_limit` はrun-state側で `none` に降格する。単一論文のPDF/HTML/DOI/provider取得失敗はこのeventではなくstatus-only終端対象である。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
 
 同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、**Discovery precheck pending / evaluation pending / submission pending / recovery required**、`gate.decision` / `gate.required_action` を継続判断の正本とする。`pipeline_ahead_count` が出力される場合は観測用テレメトリであり、Research / Auditの新規claim上限には使わない。run-state lane自体も**10分周期で未result requestを定期回収**し、push競合は最新mainから最大12回再導出し、各再試行は上限付きバックオフ＋ジッタで衝突位相をずらす。同一 `run_key` の最初の成功snapshotが `candidate_inventory` / `work_mode` を固定し、後続snapshotはそれを再利用する。ワーカーは結果と矛盾するbooleanを別途推測して `continuation_gate.py` を呼ばない。
 
