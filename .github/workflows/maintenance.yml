@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.survey/work-queue/maintenance-cycle.json'
+      - '.survey/work-queue/maintenance-requests/**.json'
   workflow_dispatch:
 
 permissions:
@@ -35,30 +35,77 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Check whether maintenance is pending
-        id: pending
+      - name: Select pending immutable maintenance request
+        id: request
         shell: bash
         run: |
           python - <<'PY'
-          import json, os
+          import datetime as dt
+          import json
+          import os
+          import re
           from pathlib import Path
-          state = json.loads(Path('.survey/work-queue/maintenance-cycle.json').read_text())
-          pending = bool(state.get('maintenance_pending'))
+
+          request_dir = Path('.survey/work-queue/maintenance-requests')
+          result_dir = Path('.survey/work-queue/maintenance-results')
+          request_dir.mkdir(parents=True, exist_ok=True)
+          result_dir.mkdir(parents=True, exist_ok=True)
+
+          pending = [
+              path
+              for path in sorted(request_dir.glob('*.json'))
+              if not (result_dir / path.name).is_file()
+          ]
+
           with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-              f.write(f'pending={str(pending).lower()}\n')
+              if not pending:
+                  f.write('pending=false\n')
+              else:
+                  request_path = pending[0]
+                  request = json.loads(request_path.read_text(encoding='utf-8'))
+                  request_id = request.get('request_id')
+                  if request.get('schema_version') != 1:
+                      raise ValueError('unsupported maintenance request schema_version')
+                  if request.get('kind') != 'daily_maintenance':
+                      raise ValueError('unsupported maintenance request kind')
+                  if request.get('worker_id') != 'scheduled-chat-30':
+                      raise ValueError('08:30 maintenance request requires scheduled-chat-30')
+                  if str(request.get('scheduled_slot')) != '0830':
+                      raise ValueError('08:30 maintenance request requires scheduled_slot=0830')
+                  if not isinstance(request_id, str) or not re.fullmatch(r'[A-Za-z0-9._-]+', request_id):
+                      raise ValueError('unsafe maintenance request_id')
+                  if request_path.stem != request_id:
+                      raise ValueError('maintenance request filename/request_id mismatch')
+
+                  state_path = Path('.survey/work-queue/maintenance-cycle.json')
+                  state = json.loads(state_path.read_text(encoding='utf-8'))
+                  state['maintenance_pending'] = True
+                  state['active_request_id'] = request_id
+                  state['last_maintenance_requested_at'] = request.get(
+                      'requested_at',
+                      dt.datetime.now(dt.timezone.utc).isoformat(),
+                  )
+                  state_path.write_text(
+                      json.dumps(state, ensure_ascii=False, indent=2) + '\n',
+                      encoding='utf-8',
+                  )
+
+                  f.write('pending=true\n')
+                  f.write(f'request_id={request_id}\n')
+                  f.write(f'request_path={request_path.as_posix()}\n')
           PY
 
       - name: Install survey dependencies
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
       - name: Rebuild worker run-state cache from canonical facts
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         continue-on-error: true
         run: python .survey/scripts/derive_worker_run_state.py --repo-root . --rebuild-cache
 
       - name: Compact settled worker transport
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         continue-on-error: true
         run: |
           python .survey/scripts/compact_worker_transport.py \
@@ -68,7 +115,7 @@ jobs:
             --report .survey/reports/transport-compact-latest.json
 
       - name: Run full GC
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         run: |
           python .survey/scripts/full_gc.py \
             --repo-root . \
@@ -76,7 +123,7 @@ jobs:
             --report .survey/reports/full-gc-latest.json
 
       - name: Rebuild derived paper indexes
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -89,7 +136,7 @@ jobs:
           cat /tmp/derived-index-drift.txt || true
 
       - name: Run quality regression audits
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         run: |
           python .survey/scripts/audit_paper_quality.py \
             --no-fail-exit \
@@ -105,17 +152,17 @@ jobs:
             --json-out /tmp/overview-result-quality-audit.json
 
       - name: Normalize nullable required metadata
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         run: python .survey/scripts/normalize_required_metadata.py --repo-root . --apply
 
       - name: Refresh metadata coverage
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         id: metadata
         continue-on-error: true
         run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out .survey/reports/metadata-coverage-latest.json --strict
 
       - name: Audit queue, state, quality regressions, and report freshness
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         id: health
         shell: bash
         run: |
@@ -134,7 +181,7 @@ jobs:
           exit 0
 
       - name: Build post-maintenance inventory
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         run: |
           python .survey/scripts/build_repository_inventory.py \
             --root . \
@@ -142,7 +189,7 @@ jobs:
             --source-commit post-maintenance-working-tree
 
       - name: Run repository-wide consistency check
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         id: consistency
         shell: bash
         run: |
@@ -156,10 +203,13 @@ jobs:
           exit 0
 
       - name: Finalize maintenance state
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
+        env:
+          MAINTENANCE_REQUEST_ID: ${{ steps.request.outputs.request_id }}
+          MAINTENANCE_REQUEST_PATH: ${{ steps.request.outputs.request_path }}
         run: |
           python - <<'PY'
-          import datetime as dt, json
+          import datetime as dt, json, os
           from pathlib import Path
           state_path = Path('.survey/work-queue/maintenance-cycle.json')
           state = json.loads(state_path.read_text())
@@ -197,11 +247,37 @@ jobs:
               else 'issues_found'
           )
           state['last_maintenance_status_source'] = 'maintenance_workflow'
+          request_id = os.environ['MAINTENANCE_REQUEST_ID']
+          request_path = os.environ['MAINTENANCE_REQUEST_PATH']
+          state['maintenance_pending'] = False
+          state.pop('active_request_id', None)
+          state['last_maintenance_request_id'] = request_id
+          completed_at = state['last_maintenance_completed_at']
           state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
+
+          result_dir = Path('.survey/work-queue/maintenance-results')
+          result_dir.mkdir(parents=True, exist_ok=True)
+          result = {
+              'schema_version': 1,
+              'ok': True,
+              'kind': 'daily_maintenance',
+              'request_id': request_id,
+              'request_path': request_path,
+              'completed_at': completed_at,
+              'gc_deleted': state.get('last_gc_deleted', 0),
+              'health_status': state.get('last_health_status'),
+              'metadata_status': state.get('last_metadata_status'),
+              'consistency_status': state.get('last_consistency_status'),
+              'maintenance_status': state.get('last_maintenance_status'),
+          }
+          (result_dir / f'{request_id}.json').write_text(
+              json.dumps(result, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
           PY
 
       - name: Commit maintenance results
-        if: steps.pending.outputs.pending == 'true'
+        if: steps.request.outputs.pending == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -229,7 +305,7 @@ jobs:
           exit 1
 
       - name: Surface maintenance audit failures
-        if: always() && steps.pending.outputs.pending == 'true'
+        if: always() && steps.request.outputs.pending == 'true'
         shell: bash
         run: |
           set -euo pipefail

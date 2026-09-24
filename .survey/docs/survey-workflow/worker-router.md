@@ -585,14 +585,17 @@ hard stop / safe handoffに入る場合の最終報告には、少なくとも *
 
 毎時 `:30` のScheduled Chatから起動したworkerのうち、**08:30 JSTのrunだけ**を日次更新・maintenance専用runとする。このrunではResearch / Audit / Discoveryを行わない。
 
+この経路も通常workerと同じく、Scheduled Chat側の外部書込みは **create-only の不変リクエスト（immutable request）** に限定する。Scheduled Chatから既存制御ファイルを update しない。特に `.survey/update-worker/update-payload.json`、`.survey/update-worker/update-inbox.json`、`.survey/work-queue/maintenance-cycle.json` をScheduled Chatが直接上書きしてはならない。これらの固定updateファイルは履歴互換の読取面であり、新規08:30 runのHOWには使わない。
+
 実行順序は固定する。
 
 1. 先に `framework-updates/**`、`llm-releases/**` の前回確認日時を読み、前回以降の一次資料（公式release / PR / documentation / model provider公式発表）を確認する。単なるmodel allowlist、軽微bugfix等は各READMEの掲載方針に従い除外する。
-2. 更新があれば、最新blob SHAを基準に一意な `attempt_id` を持つ `.survey/update-worker/update-payload.json` と `update-inbox.json` を作る。`.github/workflows/update-helper.yml` / `.survey/scripts/update_worker.py` の正規入口で反映し、`.survey/update-worker/result.json` の同じ `attempt_id` で `ok=true` を確認する。更新が0件でも「確認済み」を最終報告へ残す。固定update inbox/payloadを過去attemptのまま再実行しない。
-3. update result確認後に最新mainを再取得し、対象READMEの最終確認日と反映内容が一致することを確認する。ここまでを「非論文更新完了」とする。
-4. 非論文更新の保存が完了した後、**runの最後の独立作業としてmaintenanceを実行する。**
-5. maintenanceは `.survey/work-queue/maintenance-cycle.json` の `maintenance_pending=true` を耐久反映して `.github/workflows/maintenance.yml` を起動し、GC、index再構築、品質・メタデータ監査、整合性確認を直列実行させる。
-6. maintenance workflowの結果を確認し、完了後の最新 `main` と `maintenance-cycle.json` を再取得して、`maintenance_pending=false`、かつ `last_maintenance_completed_at >= actual_invocation_start` が耐久反映されたことまでを今回08:30 runの完了条件とする。run-state fast laneはこの条件を満たす前は `RUN_0830_MAINTENANCE` を返し、完了後だけ最終化を許可する。workflowがhard stopで確認不能なら、その事実と未完了状態をhandoffしScheduled Task自体は止めない。未完了08:30 maintenanceの回収責任は次の`:45` STATUS異常修復に置き、通常の`:00`/`:30`論文runはmaintenanceを再発火しない。
-7. 最終報告には非論文更新点（0件なら0件と明記）に加え、update result、maintenanceの起動・完了状態、GC/監査/整合性確認の結果、最終main SHAを含める。
+2. 更新があれば、制御ファイルを書き換える直前と同様に最新 `main` HEAD と対象blob SHAを再取得し、一意な `attempt_id` を作る。更新内容・対象path・各 `expected_blob_sha` を1つのJSONへまとめ、**存在しないことを確認した `.survey/update-worker/requests/<attempt_id>.json` をcreate-onlyで新規作成する。** requestは最低限 `schema_version: 1`, `attempt_id`, `kind: framework_llm_update`, `worker_id: scheduled-chat-30`, `scheduled_slot: 0830`, `run_key`, `actual_invocation_start`, UTC `requested_at`, `artifacts`, `summary` を持つ。同名requestが既に存在する場合は上書きせず、同じidentityのresultを確認するか新しいattemptを作る。
+3. `.github/workflows/update-helper.yml` はこのimmutable request作成で起動し、`.survey/scripts/update_worker.py` が未処理requestを検証・反映する。Scheduled Chatは固定 `update-payload.json` / `update-inbox.json` を更新してworkflowを起動しない。結果は `.survey/update-worker/results/<attempt_id>.json` を正本とし、同じ `attempt_id` で `ok=true` を確認する。更新が0件ならrequestを作らず「確認済み・追加0件」を最終報告へ残す。
+4. update result確認後に最新mainを再取得し、対象READMEの最終確認日と反映内容が一致することを確認する。ここまでを「非論文更新完了」とする。blob SHA mismatch等で `ok=false` の場合はresultのerrorを保持し、最新blobを読み直して**新しいattempt_idのimmutable request**として再投入する。失敗request自体は書き換えない。
+5. 非論文更新の保存が完了した後、**runの最後の独立作業としてmaintenanceを実行する。** 一意な `request_id` を作り、**存在しないことを確認した `.survey/work-queue/maintenance-requests/<request_id>.json` をcreate-onlyで新規作成する。** requestは最低限 `schema_version: 1`, `request_id`, `kind: daily_maintenance`, `worker_id: scheduled-chat-30`, `scheduled_slot: 0830`, `run_key`, `actual_invocation_start`, UTC `requested_at` を持つ。Scheduled Chatは `maintenance-cycle.json` の `maintenance_pending` を直接updateしない。
+6. `.github/workflows/maintenance.yml` は未処理immutable requestを選び、GitHub Actions側で `maintenance-cycle.json` の作業状態を管理しながら、GC、index再構築、品質・メタデータ監査、整合性確認を直列実行する。完了時は `.survey/work-queue/maintenance-results/<request_id>.json` を耐久保存し、`maintenance-cycle.json` に最新完了情報を反映する。
+7. Scheduled Chatは同じ `request_id` のmaintenance resultで `ok=true` を確認し、完了後の最新 `main` と `maintenance-cycle.json` を再取得して、`maintenance_pending=false`、`last_maintenance_request_id=<request_id>`、かつ `last_maintenance_completed_at >= actual_invocation_start` が耐久反映されたことまでを今回08:30 runの完了条件とする。run-state fast laneはこの条件を満たす前は `RUN_0830_MAINTENANCE` を返し、完了後だけ最終化を許可する。workflowがhard stopで確認不能なら、その事実と未完了request identityをhandoffしScheduled Task自体は止めない。未完了08:30 maintenanceの回収責任は次の`:45` STATUS異常修復に置き、通常の`:00`/`:30`論文runはmaintenanceを再発火しない。
+8. 最終報告には非論文更新点（0件なら0件と明記）に加え、update request/result、maintenance request/resultのidentity、maintenanceの起動・完了状態、GC/監査/整合性確認の結果、最終main SHAを含める。
 
 maintenance実行の責任は08:30 JSTの `:30` workerに集約する。通常runでは定期maintenanceを発火させず、旧run-countカウンタも実行条件に使わない。

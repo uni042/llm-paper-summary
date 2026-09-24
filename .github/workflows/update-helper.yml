@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.survey/update-worker/update-inbox.json'
+      - '.survey/update-worker/requests/**.json'
   workflow_dispatch:
 
 permissions:
