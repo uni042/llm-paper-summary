@@ -870,9 +870,7 @@ def available_preloads(
                 "created_at": entry.get("created_at"),
             }
         )
-    rows.sort(key=lambda row: (str(row.get("created_at") or ""), str(row.get("preload_id") or "")))
-    return rows[: max(limit, 0)]
-
+    # Work-bearing windows are the real zero-idle stock. Keep successful empty\n    # windows as valid fallback/proof material, but do not hand an empty packet to a\n    # foreground worker while a packet with candidates is already PRECHECKED.\n    rows.sort(\n        key=lambda row: (\n            0 if int(row.get("preload_unseen_result_count") or 0) > 0 else 1,\n            str(row.get("created_at") or ""),\n            str(row.get("preload_id") or ""),\n        )\n    )\n    return rows[: max(limit, 0)]\n
 
 def pick_available(root: Path, *, direction: str | None) -> dict[str, Any] | None:
     rows = available_preloads(root, direction=direction, limit=1)
