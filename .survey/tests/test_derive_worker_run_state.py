@@ -291,7 +291,8 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             value["runtime_condition_confirmed"] = True
             value["runtime_condition_attempts"] = 1
             value["runtime_condition_event"] = mod.PLATFORM_CONTEXT_LIMIT_EVENT
-            value["runtime_condition_detail"] = "platform rejected a required tool call because the acquisition/output cap was reached"
+            value["runtime_condition_scope"] = mod.PLATFORM_CONTEXT_LIMIT_SCOPE
+            value["runtime_condition_detail"] = "platform rejected a required tool call because the acquisition/output cap was reached after the documented fallback route was attempted"
             result = mod.derive(root, value)
             self.assertTrue(result["stop_permit"]["issued"])
             self.assertEqual(result["stop_permit"]["category"], "observed_acquisition_limit")
