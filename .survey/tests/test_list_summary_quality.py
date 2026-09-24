@@ -136,14 +136,14 @@ class ListSummaryTests(unittest.TestCase):
             paper.parent.mkdir(parents=True)
             explicit = "本研究は明示された一覧文だけを監査し、本文からの自動生成を行わない方式を採用する方針である。"
             paper.write_text(
-                "---\\n"
-                "title: Example\\n"
-                "summary: 古いfallback用の説明文は一覧監査で使わない。\\n"
-                f"list_summary: {explicit}\\n"
-                "---\\n"
-                "# Example\\n\\n"
-                "> 本文にある別の文章は監査対象の一覧文ではない。\\n\\n"
-                "## 概要\\n\\n本文由来のfallbackは禁止する。\\n",
+                "---\n"
+                "title: Example\n"
+                "summary: 古いfallback用の説明文は一覧監査で使わない。\n"
+                f"list_summary: {explicit}\n"
+                "---\n"
+                "# Example\n\n"
+                "> 本文にある別の文章は監査対象の一覧文ではない。\n\n"
+                "## 概要\n\n本文由来のfallbackは禁止する。\n",
                 encoding="utf-8",
             )
             result = audit_file(paper, root)
@@ -157,12 +157,12 @@ class ListSummaryTests(unittest.TestCase):
             paper = root / "papers" / "example.md"
             paper.parent.mkdir(parents=True)
             paper.write_text(
-                "---\\n"
-                "title: Example\\n"
-                "summary: 本文にない情報を推測せず明示した一覧文を使う。\\n"
-                "---\\n"
-                "# Example\\n\\n"
-                "> 本文には十分な長さがあるが、一文要約としては使わない。\\n",
+                "---\n"
+                "title: Example\n"
+                "summary: 本文にない情報を推測せず明示した一覧文を使う。\n"
+                "---\n"
+                "# Example\n\n"
+                "> 本文には十分な長さがあるが、一文要約としては使わない。\n",
                 encoding="utf-8",
             )
             result = audit_file(paper, root)
