@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-preload-71270ce404475002d20ce60c",
-  "job_id": "job-research-45a223ad00555581",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-71270ce404475002d20ce60c",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-71270ce404475002d20ce60c","job_id":"job-research-45a223ad00555581","data":{"canonical_id":"arXiv:2510.14392","arxiv_id":"2510.14392","doi":"10.48550/arXiv.2510.14392","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI"]},"title":"FairBatching: Fairness-Aware Batch Formation for LLM Inference","summary":"FairBatchingは、LLM推論のprefillとdecodeを固定token budgetやdecode常時優先で扱うと、decode側に余剰SLO slackが蓄積する一方でprefillのTTFTが悪化する不公平を解消するスケジューラである。TTFTとTPOTをrequestごとの進捗・slackとして統一的に追跡し、実行時間予測からbatch capacityを動的に決め、緊急decode→prefill→非緊急decodeの順にbatchを形成する。さらにPrefill Admission Budgetで各nodeの受入余力を上位load balancerへ公開する。vLLM v0.10.1.1へ実装し、Llama-3.1-8BからLlama-3.3-70B、A800/H20、3種のproduction traceで評価し、単一nodeのpeak goodputを最良baseline比20.0%、PAB込みcluster capacityを最大54.3%改善した。","list_summary":"TTFT/TPOTのSLO slackを直接追跡してprefillとdecodeの計算資源を動的配分し、vLLM上で単一node・cluster双方のgoodputを改善する公平性指向batch scheduler。","authors":["Hongtao Lyu","Boyue Liu","Mingyu Wu","Haibo Chen"],"authors_affiliations":"Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University","published":"2025-10-16","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"LLM serving / SLO-aware scheduling / chunked prefill / cluster load balancing","topics":["LLMサービング","batch scheduling","TTFT","TPOT","goodput","load balancing"],"importance":"Sarathi型stall-free batchingのdecode過剰優先を、SLO進捗と実行時間budgetに基づく公平な資源配分へ置き換え、node内schedulerとcluster load balancerを同じprefill capacity指標で接続した点が推論基盤のscheduling系統に直接関係する。","implementation":"vLLM v0.10.1.1 V1 engine向け独立scheduler 1,639行、core vLLM変更90行、DPLB coordinator変更16行。GPU/model別step-time回帰用の自動testing framework 2,777行も実装する。","hardware_evaluation":"Llama-3.1-8B/A800-80GB PCIe×1、Qwen3-14B/H20-96GB SXM×1、Qwen3-32B/H20×2、Llama-3.3-70B/H20×4。cluster評価はQwen3-14Bのsingle-GPU engineをDP group化する。","quality_effect":"同一SLO下でTTFTとTPOTを同時達成するeffective RPSを主指標とし、FairBatching-vanillaは最良baseline比でoverall peak goodputを20.0%改善。PABはoverload時にrequestを拒否/別nodeへ誘導するため、admitted requestのSLO遵守を高める。","source":"https://arxiv.org/abs/2510.14392","sources":["https://arxiv.org/abs/2510.14392","https://arxiv.org/html/2510.14392"],"code":null,"last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-71270ce404475002d20ce60c","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
