@@ -4,7 +4,22 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-1f8a910c2a57d30ce56d66d0",
   "job_id": "job-research-e642f12f51409df8",
-  "data": {},
+  "data": {
+    "hardware": "通常の学習はNVIDIA V100 GPU 8基を使用。ImageNet 64×64ではV100を64基使用して70エポック、約7日間学習した。生音声の系列長拡張では16GB V100にモデル並列なしで完全に収まる最大モデルを系列長ごとに選んだ。",
+    "software": "疎な問い合わせ・鍵・値のブロックを直接計算する専用GPUカーネルを実装し、ソフトマックス融合、上三角領域の計算省略、半精度活性値・勾配、動的損失尺度を利用する。",
+    "model": "CIFAR-10は128層・2注意頭・埋め込み幅256のストライド型59M級、Enwik8は30層・8注意頭・幅512の固定型95M級、ImageNet 64×64は48層・16注意頭・幅512の152Mモデル。生音声は系列長65,536で152M、262,144で25M、1,048,576で3M。",
+    "datasets": ["CIFAR-10を3,072バイト系列として使用", "Enwik8の最初の10^8バイト。9,000万を学習、残り1,000万を検証・テストに使用", "64×64へ縮小したImageNet", "12kHz・μ-law符号化のクラシック音楽生音声データ"],
+    "baselines": ["CIFAR-10: PixelCNN、PixelCNN++、Image Transformer、PixelSNAIL、密な注意Transformer", "Enwik8: Deeper Self-Attention、Transformer-XL、密な注意Transformer", "ImageNet: PixelCNN、Parallel Multiscale、Glow、Subscale Pixel Network"],
+    "correctness": "生成品質は密度推定の bits per byte / bits per dim で評価し、画像・音声では無条件生成例も確認する。Enwik8では評価時に利用可能な最小文脈長を変え、長い文脈ほど損失が単調に改善するかを調べて長距離依存の利用を検証する。",
+    "settings": [
+      {"name": "CIFAR-10", "description": "48,000例を学習、2,000例を検証、120エポック、学習率0.00035、ドロップアウト0.25。3乱数種で最終値を確認。"},
+      {"name": "Enwik8", "description": "文脈長12,288、30層固定型、ストライド128、c=32、ドロップアウト0.40、80エポック。因数分解した注意集合を統合して使用。"},
+      {"name": "ImageNet 64×64", "description": "48層・16注意頭・152Mパラメータ、ストライド128、ドロップアウト0.01、70エポック。"},
+      {"name": "生音声", "description": "12kHzのμ-law音声で系列長を65,536、262,144、1,048,576へ拡張し、16GB V100へ収まる範囲でモデル容量を縮小。"}
+    ],
+    "methodology": "疎注意の品質と速度を密な注意および既存生成モデルと比較し、データ種別ごとにストライド型または固定型を選ぶ。速度比較では同じデータ条件で反復時間を測定し、長系列限界では系列長を4倍ずつ増やした際にGPUメモリへ収まるモデル容量と損失を記録する。",
+    "scope": "実機GPU上の自己回帰密度推定・学習評価であり、現代の大規模言語モデル配信における先頭トークン遅延やスループットを測る研究ではない。主眼は長系列Transformerの計算・メモリ拡張性と生成品質である。"
+  },
   "reservation": {
     "claim_id": "claim-preload-1f8a910c2a57d30ce56d66d0",
     "worker_id": "scheduled-chat-30",
