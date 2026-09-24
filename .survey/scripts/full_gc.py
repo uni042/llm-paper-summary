@@ -13,22 +13,14 @@ import json
 import subprocess
 from pathlib import Path
 
-TERMINAL = {"completed", "superseded", "rejected", "failed", "cancelled", "blocked_permanent"}
+TERMINAL = {"completed", "superseded", "rejected", "failed", "cancelled"}
 LIVE_REFERENCE_PATHS = [
     ".survey/work-queue/next-jobs.json",
     ".survey/work-queue/fallback-inbox",
     ".survey/work-queue/fallback-failed",
     ".survey/work-queue/transport",
-    ".survey/work-queue/submissions/chat-inbox.json",
-    ".survey/work-queue/results/chat-inbox.json",
     ".survey/update-worker",
 ]
-FIXED_TRANSPORT = {
-    ".survey/work-queue/submissions/chat-inbox.json",
-    ".survey/work-queue/results/chat-inbox.json",
-    ".survey/work-queue/payloads/chat-payload.md",
-}
-
 
 def now_utc():
     return dt.datetime.now(dt.timezone.utc)
@@ -145,8 +137,6 @@ def collect_settled_transport(root, retention_days, now):
     if submissions.is_dir():
         for sub in sorted(submissions.glob("*.json")):
             rel = sub.relative_to(root).as_posix()
-            if rel in FIXED_TRANSPORT:
-                continue
             result = results / sub.name
             if not result.is_file():
                 skipped.append({"path": rel, "reason": "submission_not_settled"})
@@ -160,7 +150,7 @@ def collect_settled_transport(root, retention_days, now):
                 planned.add(path.resolve())
 
     # Workflow-v10 immutable research/audit descriptors live one directory below
-    # the legacy transport. Only retire exact settled pairs after their canonical
+    # the root submission transport. Only retire exact settled pairs after their canonical
     # job is terminal (or a successful result survives a previously-GCed job).
     for transport_kind in ("research", "audit"):
         sub_folder = submissions / transport_kind
@@ -193,7 +183,7 @@ def collect_settled_transport(root, retention_days, now):
     if results.is_dir():
         for result in sorted(results.glob("*.json")):
             rel = result.relative_to(root).as_posix()
-            if rel in FIXED_TRANSPORT or result.resolve() in planned:
+            if result.resolve() in planned:
                 continue
             if (submissions / result.name).exists():
                 continue
@@ -202,7 +192,7 @@ def collect_settled_transport(root, retention_days, now):
                 candidates.append({"path": result, "kind": "orphan_result", "timestamp": ts.isoformat() if ts else None})
                 planned.add(result.resolve())
 
-    # Only remaining submissions may keep a named legacy payload alive.
+    # Only remaining root-level submissions may keep a named payload alive.
     remaining_refs = []
     if submissions.is_dir():
         for sub in submissions.glob("*.json"):
@@ -214,8 +204,6 @@ def collect_settled_transport(root, retention_days, now):
     if payloads.is_dir():
         for payload in sorted(payloads.glob("*.md")):
             rel = payload.relative_to(root).as_posix()
-            if rel in FIXED_TRANSPORT:
-                continue
             if rel in remaining_text or payload.name in remaining_text:
                 skipped.append({"path": rel, "reason": "payload_still_referenced"})
                 continue
@@ -370,8 +358,7 @@ def main():
             ".survey/work-queue/claim-requests/**", ".survey/work-queue/claim-results/**", ".survey/work-queue/claims/**",
             ".survey/work-queue/records/**", ".survey/work-queue/transport/**",
             ".survey/work-queue/fallback-inbox/**", ".survey/work-queue/fallback-archive/**",
-            ".survey/work-queue/fallback-failed/**", ".survey/work-queue/submissions/chat-inbox.json",
-            ".survey/work-queue/results/chat-inbox.json", ".survey/work-queue/payloads/chat-payload.md",
+            ".survey/work-queue/fallback-failed/**",
             ".survey/update-worker/**",
         ],
     }

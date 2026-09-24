@@ -126,6 +126,10 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         claim_worker = (ROOT / ".survey/scripts/claim_worker.py").read_text(encoding="utf-8")
         self.assertNotIn("_normalize_legacy_scheduled_chat_leases", claim_worker)
         self.assertNotIn("scheduled-chat-llm-survey", claim_worker)
+        full_gc = (ROOT / ".survey/scripts/full_gc.py").read_text(encoding="utf-8")
+        self.assertNotIn("chat-inbox.json", full_gc)
+        self.assertNotIn("chat-payload.md", full_gc)
+        self.assertNotIn("blocked_permanent", full_gc)
 
     def test_survey_build_has_no_training_list_migration(self):
         survey = (ROOT / ".survey/scripts/survey.py").read_text(encoding="utf-8")
