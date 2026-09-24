@@ -58,6 +58,9 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertTrue(result["submission_state_checked"])
             self.assertIn("GitHub file create/update API or connector", result["transport_rule"])
             self.assertIn("actual write", result["transport_rule"])
+            self.assertIn("finalization_gate", result)
+            self.assertFalse(result["finalization_permit_issued"])
+            self.assertEqual(result["finalization_gate"]["decision"], "MUST_CONTINUE")
 
     def test_0830_slot_forces_maintenance_route(self):
         with tempfile.TemporaryDirectory() as td:
@@ -668,6 +671,27 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             repaired_claims = repaired_cache["runs"]["run-1"]["claims"]
             self.assertFalse(repaired_claims["active_assignment"])
             self.assertEqual(repaired_claims["active_job_ids"], [])
+
+    def test_discovery_precheck_recovery_preserves_mode_even_after_inventory_crosses_threshold(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["route_recovery_source"] = "discovery_precheck_identity"
+            value["recovered_work_mode_at_start"] = "discovery"
+            result = mod.derive(root, value)
+            self.assertEqual(result["candidate_inventory"], 300)
+            self.assertEqual(result["work_mode"], "discovery")
+            self.assertEqual(result["route_source"], "discovery_precheck_recovery")
+            self.assertFalse(result["candidate_inventory_at_start_exact"])
+            self.assertFalse(result["finalization_permit_issued"])
+            self.assertEqual(result["finalization_gate"]["decision"], "MUST_CONTINUE")
+            self.assertEqual(result["gate"]["required_action"], "DISCOVER_AGAIN")
 
     def test_request_rejects_cross_worker_slot(self):
         with tempfile.TemporaryDirectory() as td:
