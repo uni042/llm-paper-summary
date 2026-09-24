@@ -105,12 +105,19 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     route_recovery_source = str(value.get("route_recovery_source") or "").strip()
     recovered_work_mode = str(value.get("recovered_work_mode_at_start") or "").strip()
     if route_recovery_source:
-        if route_recovery_source != "discovery_precheck_identity":
+        recovery_modes = {
+            "discovery_precheck_identity": "discovery",
+            "research_preflight_identity": "research",
+        }
+        expected_mode = recovery_modes.get(route_recovery_source)
+        if expected_mode is None:
             raise ValueError("unsupported route_recovery_source")
-        if recovered_work_mode != "discovery":
-            raise ValueError("Discovery run-state recovery must preserve discovery mode")
+        if recovered_work_mode != expected_mode:
+            raise ValueError(
+                f"{route_recovery_source} run-state recovery must preserve {expected_mode} mode"
+            )
         if scheduled_slot == "0830":
-            raise ValueError("08:30 maintenance cannot use Discovery route recovery")
+            raise ValueError("08:30 maintenance cannot use paper-work route recovery")
     direct_present = any(
         item not in (None, "")
         for item in (direct_inventory, direct_mode, direct_threshold, direct_generated_at)
@@ -1130,6 +1137,13 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             inventory = _candidate_inventory(root)
             work_mode = "discovery"
             route_source = "discovery_precheck_recovery"
+        elif recovery_source == "research_preflight_identity" and recovered_mode == "research":
+            # A durable exact-blob Research/Audit preflight proves that this run
+            # was already in Research mode. This recovery is used only when the
+            # incremental cache and an earlier run-state snapshot are unavailable.
+            inventory = _candidate_inventory(root)
+            work_mode = "research"
+            route_source = "research_preflight_recovery"
         else:
             inventory = _candidate_inventory(root)
             work_mode = "research" if inventory >= claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD else "discovery"
@@ -1590,6 +1604,81 @@ def auto_snapshot_from_descriptors(root: Path, descriptors_file: Path) -> dict[s
     }
 
 
+def auto_snapshot_from_preflight_results(
+    root: Path,
+    results_file: Path,
+) -> dict[str, Any]:
+    """Publish fresh run-state snapshots for Research/Audit preflight outcomes."""
+    root = root.resolve()
+    paths = _descriptor_paths(results_file)
+    affected: dict[tuple[str, str], dict[str, Any]] = {}
+    ignored: list[str] = []
+
+    for raw_path in paths:
+        path = raw_path if raw_path.is_absolute() else root / raw_path
+        value = _read(path, {})
+        if (
+            not isinstance(value, dict)
+            or value.get("operation") != "research_quality_preflight"
+        ):
+            ignored.append(str(raw_path))
+            continue
+        worker_id = str(value.get("worker_id") or "").strip()
+        run_key = str(value.get("run_key") or "").strip()
+        scheduled_slot = str(value.get("scheduled_slot") or "").strip()
+        started_at = _time(value.get("actual_invocation_start"))
+        if (
+            not worker_identity.is_supported_worker_id(worker_id)
+            or not worker_identity.identity_slot_valid(worker_id, scheduled_slot)
+            or not run_key
+            or started_at is None
+        ):
+            ignored.append(str(raw_path))
+            continue
+        affected[(worker_id, run_key)] = {
+            "schema_version": 1,
+            "request_id": "auto-preflight-pending",
+            "run_key": run_key,
+            "worker_id": worker_id,
+            "worker_kind": "scheduled_chat",
+            "scheduled_slot": scheduled_slot,
+            "actual_invocation_start": started_at.astimezone(dt.timezone.utc).isoformat(),
+            "runtime_condition": "none",
+            "runtime_condition_confirmed": False,
+            "runtime_condition_attempts": 0,
+            "runtime_condition_detail": "",
+            "route_recovery_source": "research_preflight_identity",
+            "recovered_work_mode_at_start": "research",
+        }
+
+    generated: list[str] = []
+    fallback_recovery: list[str] = []
+    for (worker_id, run_key), fallback_request in sorted(affected.items()):
+        request = run_state_cache.cached_request(root, worker_id, run_key)
+        if request is None:
+            request = fallback_request
+            fallback_recovery.append(f"{worker_id}:{run_key}")
+        result = derive(root, request)
+        generation = run_state_cache.generation_for(root, worker_id, run_key)
+        request_id = run_state_cache.auto_result_id(worker_id, run_key, generation)
+        result["request_id"] = request_id
+        result["snapshot_generation"] = generation
+        result["snapshot_origin"] = "research-preflight-fast-lane"
+        result["auto_generated"] = True
+        target = root / RESULTS / f"{request_id}.json"
+        _write(target, result)
+        run_state_cache.write_latest_pointer(root, target, result)
+        generated.append(target.relative_to(root).as_posix())
+
+    return {
+        "observed_preflight_results": len(paths),
+        "affected_runs": len(affected),
+        "generated_results": generated,
+        "fallback_recovery_runs": fallback_recovery,
+        "ignored_paths": ignored,
+    }
+
+
 def apply_claim_result_deltas(root: Path, results_file: Path) -> dict[str, Any]:
     root = root.resolve()
     paths = _descriptor_paths(results_file)
@@ -1727,12 +1816,15 @@ def main() -> int:
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--auto-from-descriptors-file", type=Path)
     parser.add_argument("--claim-results-file", type=Path)
+    parser.add_argument("--preflight-results-file", type=Path)
     parser.add_argument("--rebuild-cache", action="store_true")
     args = parser.parse_args()
     if args.auto_from_descriptors_file is not None:
         result = auto_snapshot_from_descriptors(args.repo_root, args.auto_from_descriptors_file)
     elif args.claim_results_file is not None:
         result = apply_claim_result_deltas(args.repo_root, args.claim_results_file)
+    elif args.preflight_results_file is not None:
+        result = auto_snapshot_from_preflight_results(args.repo_root, args.preflight_results_file)
     elif args.rebuild_cache:
         result = rebuild_caches(args.repo_root)
     else:
