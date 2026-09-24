@@ -102,6 +102,39 @@ class HotDispatchTests(unittest.TestCase):
             self.assertEqual(index["discovery"]["backward"][0]["preload_id"], "preload-hot")
             self.assertTrue((root / hot_dispatch.INDEX).is_file())
 
+    def test_threshold_proximity_never_disables_a_stocked_selected_lane(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            research_packets = [{"claim_id": "claim-hot"}]
+            discovery_packets = {
+                "backward": [{"preload_id": "preload-hot"}],
+                "forward": [],
+                "normal": [],
+            }
+            for inventory, expected_mode in (
+                (claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD - 1, "discovery"),
+                (claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD, "research"),
+                (claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD + 1, "research"),
+            ):
+                with (
+                    mock.patch.object(hot_dispatch, "_candidate_inventory", return_value=inventory),
+                    mock.patch.object(hot_dispatch, "_research_packets", return_value=research_packets),
+                    mock.patch.object(hot_dispatch, "_discovery_packets", return_value=discovery_packets),
+                    mock.patch.object(
+                        hot_dispatch.shared_preload_pool,
+                        "sync_research_bank_sidecars",
+                        return_value={},
+                    ),
+                ):
+                    index = hot_dispatch.build_index(root)
+                self.assertEqual(index["suggested_work_mode"], expected_mode)
+                self.assertTrue(index["direct_start_allowed"])
+                self.assertEqual(index["route_guard_band"], 0)
+                self.assertEqual(
+                    index["lane_available"],
+                    {"research": True, "discovery": True},
+                )
+
     def test_direct_research_marker_reserves_pool_claim_and_creates_async_refill(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
@@ -156,7 +189,7 @@ class HotDispatchTests(unittest.TestCase):
                     "actual_invocation_start": current.isoformat(),
                     "requested_at": current.isoformat(),
                     "claim_window": 12,
-                    "candidate_inventory_at_start": 300,
+                    "candidate_inventory_at_start": 1,
                     "work_mode_at_start": "research",
                     "research_discovery_threshold": claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD,
                     "hot_dispatch_generated_at": current.isoformat(),
@@ -253,7 +286,7 @@ class HotDispatchTests(unittest.TestCase):
                     "discovery_slot_path": discovery_slot_path("a"),
                     "scheduled_slot": "adhoc",
                     "actual_invocation_start": current.isoformat(),
-                    "candidate_inventory_at_start": 100,
+                    "candidate_inventory_at_start": 1000,
                     "work_mode_at_start": "discovery",
                     "research_discovery_threshold": claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD,
                     "hot_dispatch_generated_at": current.isoformat(),
@@ -297,7 +330,7 @@ class HotDispatchTests(unittest.TestCase):
                 "scheduled_slot": "adhoc",
                 "actual_invocation_start": current.isoformat(),
                 "runtime_condition": "none",
-                "candidate_inventory_at_start": 100,
+                "candidate_inventory_at_start": 400,
                 "work_mode_at_start": "discovery",
                 "research_discovery_threshold": claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD,
                 "hot_dispatch_generated_at": current.isoformat(),

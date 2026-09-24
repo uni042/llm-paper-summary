@@ -42,6 +42,8 @@
 - **`candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD` → 読解（Research / Audit）**
 - **`candidate_inventory < RESEARCH_DISCOVERY_THRESHOLD` → 探索（Discovery）**
 
+**この件数閾値は今回runでどちらを優先して処理するかを選ぶルーティング規則であり、Research / Discoveryどちらかのバンク・preload・direct-take機構を無効化する能力ゲートではない。** 二重用途バンクでは両レーンの在庫を同時に維持し、件数が閾値の上下どちらにあっても仕組み側はResearchとDiscoveryの両方を利用可能な状態に保つ。選ばれなかったレーンはそのrunで通常処理しないだけで、在庫生成・preload維持・次runからの利用を止めない。
+
 閾値は `.survey/scripts/claim_window_policy.py` の正規policyから導出する。現在は、**各workerの論理在庫12件 × 想定同時worker 6 × 4 = 288件**である。worker数・在庫幅を変更するときは閾値だけを別に手修正せず、同policyから連動させる。
 
 **08:30 JSTの`:30`専用runだけ**は、この分岐より優先して第9節の日次更新・maintenance経路へ入る。通常runに「maintenance対象」という別条件は設けない。
@@ -65,13 +67,13 @@ handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Li
 - `research_discovery_threshold: <hot-dispatch research_discovery_threshold>`
 - `hot_dispatch_generated_at: <hot-dispatch generated_at>`
 
-run-state側はこの4項目の整合性を検証し、最初の正規snapshotがまだ無いrunでは `route_source=hot_dispatch_direct_start` として同じrouteを固定する。境界付近の誤routeを避けるため、hot-dispatchが `direct_start_allowed=false` の場合は従来どおりrun-state resultを待ってから開始する。08:30 maintenanceは常にhot dispatch対象外である。
+run-state側はこの4項目の形式・policy整合性を検証し、最初の正規snapshotがまだ無いrunでは `route_source=hot_dispatch_direct_start` として同じrouteを固定する。`candidate_inventory` と閾値は選択モードを決めるための情報であり、direct-takeの技術的可否判定には使わない。hot-dispatchはResearch / Discoveryの両レーンを同時に公開し、`direct_start_allowed` は**今回選択済みレーンに準備済みpacketが存在するか**だけで決める。閾値からの距離・ガード帯を理由にdirect startを禁止しない。選択済みレーンに準備済みpacketが無い場合だけ従来どおりrun-state resultを待って開始する。08:30 maintenanceは常にhot dispatch対象外である。
 
 **Research / Audit:** `research[]` の最古packetから、`take_path=.survey/work-queue/direct-takes/research/<claim_id>.json` を**存在しない場合だけcreate**する。payloadは最低限 `schema_version:1`, `operation:direct_take_research`, packetの `claim_id/job_id/attempt_id`, 一意な `request_id`, `worker_id`, `scheduled_slot`, `run_key`, `actual_invocation_start`, UTC `requested_at`, `claim_window`, 上記4つのdirect-route値を持つ。create成功が排他的な担当確保であり、**その瞬間からpacket内 `job` の一次資料取得・全文読解を開始してよい。** createが既存ファイル競合なら同じindexの次packetへ進み、Actionsを待たない。claim laneは後段でpool claimを正規worker claimへ変換し、同じworkerのwindowを既定12件まで補充し、hot record bankを確保する。5スロットへ書き始める前には `direct-take-results/research/<claim_id>.json` が `status=ready_for_submission` / `record_write_allowed=true` になったこと、または対応canonical claim resultで同一 `job_id/claim_id/attempt_id` とrecord routeが確定したことを確認する。**読解開始はこれを待たない。**
 
 **Discovery:** 正規selector方向に対応する `discovery.<direction>[]` の最古packetについて、packetの `take_path=.survey/work-queue/discovery-preload/claims/<preload_id>.json` を**存在しない場合だけcreate**する。payloadは `schema_version:1`, packetの `preload_id/discovery_bank/discovery_slot_path/preload_result_path`, `worker_id`, `run_key`, 一意な `request_id`, `claimed_at`, 90分後の `lease_expires_at`, `direct_take:true`, `scheduled_slot`, `actual_invocation_start`, 上記direct-route値を持つ。create成功が排他的なpreload担当確保であり、**直ちにpacketの `preload_result_path` にある20件を軽量評価し始めてよい。** 同じpushでDiscovery precheck laneがrun固有schema v3 requestを自動生成し、最新identity/rejection状態で正式再フィルタする。submissionは必ずこのworkflow生成の正式precheck result / receiptを待ち、preloadで先に評価した候補のうち正式 `allowed_records` から外れたものは捨てる。したがって直接開始は品質ゲートを省略せず、**候補を読む時間と正式precheck待ちを重ねるだけ**である。create競合なら同方向の次packetへ進む。
 
-hot-dispatchが欠落・破損、direct start禁止、同方向packet無し、create競合を全packetで失敗、またはdirect-take正規化がrecovery_requiredになった場合だけ、以下の従来request→Actions→result経路へfallbackする。hot-dispatchは正本状態を置き換えず、submission可否は従来どおりcanonical claim / formal precheck / quality preflight / immutable resultが決める。
+hot-dispatchが欠落・破損、選択済みレーンの準備済みpacket無し、Discoveryの同方向packet無し、create競合を全packetで失敗、またはdirect-take正規化がrecovery_requiredになった場合だけ、以下の従来request→Actions→result経路へfallbackする。hot-dispatchは正本状態を置き換えず、submission可否は従来どおりcanonical claim / formal precheck / quality preflight / immutable resultが決める。
 
 ## 2.1 正規スクリプトを直接実行できない環境のfast-lane transport
 
@@ -107,7 +109,7 @@ Research / Auditのclaimは次の順で行う。
 
 #### 二重用途バンク（dual-purpose bank）上の共有paper preload FIFO
 
-A〜AFの32個のcanonical bankは、**Research preload / Discovery preload / Research-Audit hot stagingの3面を同時に持つ二重用途バンク**として扱う。各bankには従来の5つのResearch/Audit record slotに加えて、再構築可能な `research-preload.json` と独立した `discovery-preload.json` を置く。3面は互いに上書きせず、同じbankが読解用在庫と探索用在庫を同時に保持できる。
+A〜AFの32個のcanonical bankは、**Research preload / Discovery preload / Research-Audit hot stagingの3面を同時に持つ二重用途バンク**として扱う。各bankには従来の5つのResearch/Audit record slotに加えて、再構築可能な `research-preload.json` と独立した `discovery-preload.json` を置く。3面は互いに上書きせず、同じbankが読解用在庫と探索用在庫を同時に保持できる。**Research在庫とDiscovery在庫の維持はcandidate件数や今回runの選択モードから独立させ、片方の件数条件を理由にもう片方のpreloadを停止・空化しない。**
 
 Research / Auditの事前装填はworkerごとの固定本数ではなく、全Scheduled Chat / worker-Nで共有するFIFO poolを使う。claim stateを正本とし、`research-preload.json` はその派生インデックスである。共有pool目標は `claim_window_policy.py` から導出し、現在は **12件/worker × 6 worker × 2セット = 144件**（workerへadopt済みを含む）。各Research claimは `pool_order` をcanonical bank順へround-robinして `stock_bank` / `stock_lane=research` を持ち、通常144件なら32bankすべてへ4〜5件ずつ読解用在庫を分散する。cold Research stockは5 record slotを予約しないため、全bankへ読解用在庫を置いてもhot staging容量は先食いしない。
 

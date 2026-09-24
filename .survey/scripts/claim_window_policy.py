@@ -19,9 +19,9 @@ MAX_CLAIM_WINDOW = 24
 # current 32 banks for ordinary hot work, leaving the rest for repair/exception use.
 HOT_BANKED_CLAIMS = 4
 
-# Keep a second complete six-worker inventory in the shared pool. In Research mode
-# the routing threshold guarantees enough candidate depth for this without coupling
-# the paper stock to record-bank capacity.
+# Keep a second complete six-worker Research inventory in the shared pool.
+# This stock is maintained independently of the current Research/Discovery route;
+# dual-purpose banks can hold Research and Discovery preload state simultaneously.
 SHARED_PRELOAD_TARGET = (
     DEFAULT_CLAIM_WINDOW * EXPECTED_PARALLEL_WORKERS * 2
 )

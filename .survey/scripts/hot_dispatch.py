@@ -43,7 +43,9 @@ DISCOVERY_CLAIMS = Path(".survey/work-queue/discovery-preload/claims")
 
 MAX_RESEARCH_PACKETS = 64
 MAX_DISCOVERY_PACKETS_PER_DIRECTION = 16
-DIRECT_ROUTE_GUARD_BAND = claim_window_policy.DEFAULT_CLAIM_WINDOW * 2
+# Kept in the index schema for read compatibility. Candidate count no longer
+# disables a prepared lane; direct-start availability is stock-driven.
+DIRECT_ROUTE_GUARD_BAND = 0
 
 
 def _utcnow() -> dt.datetime:
@@ -186,22 +188,30 @@ def build_index(repo_root: Path) -> dict[str, Any]:
     inventory = _candidate_inventory(jobs)
     threshold = claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
     suggested = "research" if inventory >= threshold else "discovery"
-    margin = abs(inventory - threshold)
+    research_packets = _research_packets(root, jobs=jobs, claims=claims)
+    discovery_packets = _discovery_packets(root)
+    lane_available = {
+        "research": bool(research_packets),
+        "discovery": any(bool(rows) for rows in discovery_packets.values()),
+    }
     return {
         "schema_version": 1,
         "generated_at": _iso(now),
         "candidate_inventory": inventory,
         "research_discovery_threshold": threshold,
         "suggested_work_mode": suggested,
-        "direct_start_allowed": margin > DIRECT_ROUTE_GUARD_BAND,
+        "direct_start_allowed": lane_available[suggested],
         "route_guard_band": DIRECT_ROUTE_GUARD_BAND,
+        "lane_available": lane_available,
         "rule": (
-            "This is a rebuildable acceleration index. A create-only take reserves one prepared item immediately; "
-            "canonical run-state/precheck/claim publication continues asynchronously. If direct_start_allowed is false, "
-            "fall back to the normal synchronous run-state route before starting new work."
+            "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; "
+            "it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item "
+            "immediately, while canonical run-state/precheck/claim publication continues asynchronously. "
+            "direct_start_allowed depends only on prepared stock for the selected lane; if that lane has no packet, "
+            "fall back to the normal synchronous run-state route."
         ),
-        "research": _research_packets(root, jobs=jobs, claims=claims),
-        "discovery": _discovery_packets(root),
+        "research": research_packets,
+        "discovery": discovery_packets,
     }
 
 
@@ -251,13 +261,13 @@ def _normalize_research_take(path: Path, value: Any) -> dict[str, Any]:
     if (
         isinstance(inventory, bool)
         or not isinstance(inventory, int)
+        or inventory < 0
         or isinstance(threshold, bool)
         or not isinstance(threshold, int)
         or threshold != claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
-        or inventory < threshold
         or str(value.get("work_mode_at_start") or "") != "research"
     ):
-        raise ValueError("direct Research route is inconsistent with the current mode threshold")
+        raise ValueError("direct Research route metadata is invalid")
     raw_window = value.get("claim_window", claim_window_policy.DEFAULT_CLAIM_WINDOW)
     claim_window = claim_window_policy.normalize_window(raw_window)
     return {
@@ -491,13 +501,13 @@ def _normalize_direct_discovery_claim(path: Path, value: Any) -> dict[str, Any]:
     if (
         isinstance(inventory, bool)
         or not isinstance(inventory, int)
+        or inventory < 0
         or isinstance(threshold, bool)
         or not isinstance(threshold, int)
         or threshold != claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
-        or inventory >= threshold
         or str(value.get("work_mode_at_start") or "") != "discovery"
     ):
-        raise ValueError("direct Discovery route is inconsistent with the current mode threshold")
+        raise ValueError("direct Discovery route metadata is invalid")
     return {**value, "preload_id": preload_id, "worker_id": worker_id, "run_key": run_key, "request_id": request_id}
 
 

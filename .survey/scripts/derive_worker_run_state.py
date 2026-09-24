@@ -113,9 +113,9 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
             or direct_threshold != claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
         ):
             raise ValueError("research_discovery_threshold does not match the current policy")
-        expected_mode = "research" if direct_inventory >= direct_threshold else "discovery"
-        if direct_mode != expected_mode:
-            raise ValueError("direct work_mode_at_start is inconsistent with candidate_inventory_at_start")
+        # Inventory is routing telemetry, not a transport capability gate. The
+        # caller freezes the selected mode for the invocation; dual-purpose banks
+        # keep Research and Discovery stock independently available.
         if scheduled_slot == "0830":
             raise ValueError("08:30 maintenance cannot use a direct paper-work route")
         generated = _time(direct_generated_at)
