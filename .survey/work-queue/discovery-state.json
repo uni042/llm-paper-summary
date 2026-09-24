@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-24T05:38:21+00:00",
-  "last_run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
-  "last_round": "direct-take-discovery-d4a731-r2",
+  "updated_at": "2026-09-24T06:04:55+00:00",
+  "last_run_key": "scheduled-chat-00-20260924T060123Z-6d91c4",
+  "last_round": "20260924T060123Z-scheduled-chat-00-r1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T07:10:00+09:00",
-      "round": "legacy-invalid-recovery-1",
-      "axis": "recovery-of-invalid-discovery-submissions",
-      "query_summary": "Recovery-only round reconstructed from durable 2026-09-16 21:00/22:00 JST Discovery submissions rejected by the old validator. No new search or re-reading was performed; original candidate metadata is preserved and canonical final deduplication remains authoritative.",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "legacy-invalid-recovery-2",
-      "source_submission": "work-queue/submissions/20260917T0710JST-discovery-recovery-legacy-invalid-1.json"
-    },
     {
       "run_key": "2026-09-17T07:10:00+09:00",
       "round": "legacy-invalid-recovery-2",
@@ -8935,6 +8917,42 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T060123Z-scheduled-chat-00-r1",
+      "precheck_request_id": "20260924T060123Z-scheduled-chat-00-r1",
+      "run_key": "scheduled-chat-00-20260924T060123Z-6d91c4",
+      "round": "20260924T060123Z-scheduled-chat-00-r1",
+      "axis": "backward structured repository references",
+      "query_summary": "構造化referencesの後方引用を正規schema v3で20件まで再フィルタし、既存MoE系統への直接関連が強い基盤候補を選別。",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 19,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [
+        "arXiv:2101.03961"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T060123Z-scheduled-chat-00-r1.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T060123Z-scheduled-chat-00-r1.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.95,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16992,6 +17010,19 @@
       "duplicate_ratio": 0.9,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
+    },
+    "backward structured repository references": {
+      "last_run_key": "scheduled-chat-00-20260924T060123Z-6d91c4",
+      "rounds": 1,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 19,
+      "novel_candidate_count": 1,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.95,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": null
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
@@ -18039,20 +18070,20 @@
       "citation_direction": "backward",
       "query_family": "citation-curation",
       "search_window_key": "window-140a13f2b157c05c6912",
-      "scan_count": 2,
-      "raw_result_count": 160,
-      "unseen_result_count": 40,
-      "duplicate_filtered_count": 75,
-      "rejection_filtered_count": 1,
-      "candidate_evaluation_count": 40,
-      "candidate_accepted_count": 0,
+      "scan_count": 3,
+      "raw_result_count": 260,
+      "unseen_result_count": 60,
+      "duplicate_filtered_count": 94,
+      "rejection_filtered_count": 2,
+      "candidate_evaluation_count": 60,
+      "candidate_accepted_count": 1,
       "last_position": "cursor-0-to-100",
-      "unseen_rate": 0.25,
-      "duplicate_rate": 0.46875,
-      "candidate_acceptance_rate": 0.0,
+      "unseen_rate": 0.23076923076923078,
+      "duplicate_rate": 0.36153846153846153,
+      "candidate_acceptance_rate": 0.016666666666666666,
       "cooldown": false,
-      "last_run_key": "s30-20260924t073303-6a2f1c",
-      "last_round": "disc-s30-6a2f1c-r1"
+      "last_run_key": "scheduled-chat-00-20260924T060123Z-6d91c4",
+      "last_round": "20260924T060123Z-scheduled-chat-00-r1"
     },
     "window-d60a20a371c1a563ef44": {
       "topic": "structured-references",
@@ -19713,6 +19744,27 @@
       "duplicate_rate": 0.0,
       "candidate_acceptance_rate": 0.05,
       "last_position": "cursor-0"
+    },
+    {
+      "topic": "structured repository references",
+      "source": "repository_references",
+      "date_range": "all",
+      "category": "citation-curation",
+      "citation_direction": "backward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-140a13f2b157c05c6912",
+      "run_key": "scheduled-chat-00-20260924T060123Z-6d91c4",
+      "round": "20260924T060123Z-scheduled-chat-00-r1",
+      "raw_result_count": 100,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 19,
+      "rejection_filtered_count": 1,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 1,
+      "unseen_rate": 0.2,
+      "duplicate_rate": 0.19,
+      "candidate_acceptance_rate": 0.05,
+      "last_position": "cursor-0-to-100"
     }
   ],
   "search_window_history_limit": 96,

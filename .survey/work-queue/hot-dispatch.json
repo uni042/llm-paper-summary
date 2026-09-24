@@ -1,5 +1,5 @@
 {
-  "candidate_inventory": 287,
+  "candidate_inventory": 288,
   "direct_start_allowed": true,
   "discovery": {
     "backward": [
@@ -45,7 +45,7 @@
     "forward": [],
     "normal": []
   },
-  "generated_at": "2026-09-24T06:03:28+00:00",
+  "generated_at": "2026-09-24T06:04:55+00:00",
   "lane_available": {
     "discovery": true,
     "research": true
@@ -2414,5 +2414,5 @@
   "route_guard_band": 0,
   "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; if that lane has no packet, fall back to the normal synchronous run-state route.",
   "schema_version": 1,
-  "suggested_work_mode": "discovery"
+  "suggested_work_mode": "research"
 }
