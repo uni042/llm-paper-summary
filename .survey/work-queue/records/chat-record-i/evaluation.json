@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-preload-3ee424a7b2b36c6924101628",
-  "job_id": "job-research-41d37332b16e3d57",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-3ee424a7b2b36c6924101628",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-3ee424a7b2b36c6924101628","job_id":"job-research-41d37332b16e3d57","data":{"hardware":"全実験は単一NVIDIA A100 80GB画像処理装置で行う。拡散モデルはLLaDA-1.5を使用し、バッチ規模の拡張では最大32まで測定する。","software":"融合鍵・値キャッシュカーネルはTriton 2.0で実装する。評価はlm-eval-harnessを用い、比較対象も同じハードウェア・ソフトウェア条件で再実行する。公開コードはVILA-Lab/Flash-dLLM。","methodology":"GSM8Kは5例提示の柔軟抽出正解率、MATHは4例提示の数学検証、HumanEvalは無例提示のpass@1、MBPPは3例提示のpass@1を用いる。生成長256と512を評価し、既定値は下書き確信度0.9、検証確信度0.8、基本ブロック長16、追跡予算80、マスク窓64で、主要表では課題ごとに追跡予算48または64、検証しきい値0.8または0.85、バッチ32を使う。無キャッシュ貪欲復号、無キャッシュ確信度復号、Fast-dLLM、Elastic-Cacheと比較し、Flash-Cache単独、確信度復号との併用、Flash-Verify併用を分離して測る。統計表では五乱数種の平均と標準偏差も報告する。","scope":"主評価は二つの代表的マスク拡散モデル系と数学・コードの構造化出力課題で、連続空間拡散言語モデルは未検証である。開放的な長文生成や対話では位置ごとの確信度分布が平坦になり、固定しきい値と固定窓長の最適点が変わる可能性がある。検証確信度は速度と分布偏差の折衷を持つため、完全に損失のない並列化ではない。"},"reservation":{"claim_id":"claim-preload-3ee424a7b2b36c6924101628","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
