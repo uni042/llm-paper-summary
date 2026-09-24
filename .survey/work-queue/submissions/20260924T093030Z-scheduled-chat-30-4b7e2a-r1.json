@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "candidates": [],
+  "discovery_precheck": {
+    "request_id": "20260924T093000Z-scheduled-chat-30-4b7e2a-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T093000Z-scheduled-chat-30-4b7e2a-r1.json",
+    "receipt": "sha256:cba8e2c5f93e6dbbe5e5bbf94185590dbb09d724630e6e79ea3a9b29b11cf905"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-30-20260924T092830Z-4b7e2a",
+    "round": "20260924T093000Z-scheduled-chat-30-4b7e2a-r1",
+    "axis": "backward references of arXiv:2401.09670",
+    "query_summary": "arXiv:2401.09670 の後方引用を正規schema v3で検査し、未収録20件を軽量評価したが、LLM推論・学習システムの既存系統を直接更新するpriority>=40の強候補はなかった。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 24,
+    "accepted_canonical_ids": [],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [{"topic":"arXiv:2401.09670 backward references","source":"semantic_scholar","date_range":"all","category":"inference-systems","citation_direction":"backward","query_family":"citation-curation","raw_result_count":48,"unseen_result_count":20,"duplicate_filtered_count":24,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":0,"position":"cursor-0"}]
+  }
+}
