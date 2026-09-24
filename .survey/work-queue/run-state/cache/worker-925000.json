@@ -1,6 +1,6 @@
 {
-  "fact_generation": 7,
-  "generation": 8,
+  "fact_generation": 8,
+  "generation": 9,
   "runs": {
     "worker-925000-20260924T153200Z-lazyprobe": {
       "actual_invocation_start": "2026-09-24T15:32:00+00:00",
@@ -134,7 +134,6 @@
         "active_assignment": true,
         "active_claim_count": 10,
         "active_job_ids": [
-          "job-research-b22af651ef4f551f",
           "job-research-1a48a3083b0b1499",
           "job-research-92841f7f38c00d3c",
           "job-research-1edac6e56714dd58",
@@ -152,23 +151,30 @@
         "claim_state_checked": true,
         "claim_window": 12,
         "claim_window_remaining": 2,
-        "foreground_job_id": "job-research-b22af651ef4f551f",
+        "foreground_job_id": "job-research-1a48a3083b0b1499",
         "pending_claim_request_ages_seconds": {},
         "pending_claim_request_ids": [],
         "pending_claim_requested_at": {},
-        "preflight_inflight_count": 0,
-        "preflight_parked_attempt_ids": [],
-        "preflight_parked_job_ids": [],
-        "preflight_parked_request_ids": {},
-        "preflight_parked_states": {},
-        "preflight_pipeline_capacity_remaining": 2,
+        "preflight_inflight_count": 1,
+        "preflight_parked_attempt_ids": [
+          "attempt-preload-5ae76716eb01958d78f1d488"
+        ],
+        "preflight_parked_job_ids": [
+          "job-research-b22af651ef4f551f"
+        ],
+        "preflight_parked_request_ids": {
+          "job-research-b22af651ef4f551f": "preflight-worker-925000-moebeyond-01"
+        },
+        "preflight_parked_states": {
+          "job-research-b22af651ef4f551f": "passed_waiting_descriptor"
+        },
+        "preflight_pipeline_capacity_remaining": 1,
         "preflight_pipeline_overflow_count": 0,
         "preflight_pipeline_saturated": false,
         "preflight_pipeline_window": 2,
         "preflight_repair_attempt_ids": [],
         "preflight_repair_job_ids": [],
         "standby_job_ids": [
-          "job-research-1a48a3083b0b1499",
           "job-research-92841f7f38c00d3c",
           "job-research-1edac6e56714dd58",
           "job-research-2efe9f8fbd9f6b33",
@@ -180,7 +186,7 @@
         ]
       },
       "first_cached_at": "2026-09-24T15:34:25.368143+00:00",
-      "generation": 8,
+      "generation": 9,
       "rebuilt_from_canonical": false,
       "run_key": "worker-925000-20260924T153200Z-lazyprobe",
       "scheduled_slot": "adhoc",
@@ -206,6 +212,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T15:44:28.499982+00:00",
+  "updated_at": "2026-09-24T15:46:09.646347+00:00",
   "worker_id": "worker-925000"
 }
