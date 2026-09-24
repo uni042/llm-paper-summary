@@ -10,7 +10,7 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
-- **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](../09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
+- **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
   実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：7  
   演算子単位の多数カーネル起動をSM粒度の依存グラフへ分解し、単一常駐巨大カーネル内の分散スケジューラで演算・通信・タスク間パイプラインを重ね、vLLM/SGLang比で最大1.7倍の推論遅延改善を示す。
 
@@ -18,7 +18,7 @@
   実装：[✓](https://github.com/fvliang/DART) ・ リポジトリ内被引用：5  
   対象LLM特徴から未来ロジットを1回で並列予測しN-gram木刈り込みを行い、EAGLE3より平均約30%高い投機デコード高速化を得る。
 
-- **2026-01 · [Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving](../12-benchmarking-modeling-emulation/2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md)**  
+- **2026-01 · [Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving](2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   実LLMサーバ制御コードをそのまま走らせ、GPU計算だけ仮想時間へ置換して5%未満の誤差と約5〜17倍の評価高速化を狙うGPU不要エミュレータ。
 
@@ -26,7 +26,7 @@
   実装：[✓](https://github.com/pie-project/pie) ・ リポジトリ内被引用：4  
   生成ループを細粒度APIへ分解し、Wasm inferletがKV・復号・入出力を直接制御しつつ適応一括処理でGPU効率を維持するプログラマブルLLMサービング基盤。
 
-- **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](../02-hardware-accelerators/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
+- **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
 
@@ -34,7 +34,7 @@
   実装：✓ ・ リポジトリ内被引用：3  
   1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
 
-- **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](../12-benchmarking-modeling-emulation/2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
+- **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
   実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：3  
   分離プリフィル/デコードや注意-FFN分離を役割別イベントグラフとして再現し、演算・通信・KVメモリを実測校正して、現代LLMサービング構成の性能を高精度に予測する。
 
@@ -54,7 +54,7 @@
   実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：3  
   異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。
 
-- **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](../04-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
+- **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   遠隔GPUへ返すMoE出力を先にタイル計算し、完成した行帯を専用通信カーネルが即時転送することで、第2の全対全通信の大半を専門家計算中へ隠し、4基A100でMoE層を最大2.74倍高速化する。
 
@@ -62,7 +62,7 @@
   実装：✓ ・ リポジトリ内被引用：2  
   CPU常駐KV向けに出力寄与ベース予算配分とCPU・GPU協調疎注意を統合し、長文復号を最大3.7倍高速化する。
 
-- **2026-05 · [Agentic AI Workload Characteristics](../12-benchmarking-modeling-emulation/2026-2605.26297-agentic-ai-workload-characteristics.md)**  
+- **2026-05 · [Agentic AI Workload Characteristics](2026-2605.26297-agentic-ai-workload-characteristics.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   ReAct型エージェントを追跡し、高い文脈再利用により実行がデコード支配となる一方、長寿命KV状態・再入場・ツール失敗が主要なシステム負荷になることを実測した研究。
 
@@ -70,7 +70,7 @@
   実装：[✓](https://github.com/eunomia-bpf/agentcgroup) ・ リポジトリ内被引用：2  
   AIエージェント144課題のOS資源変動を測定し、OS処理55〜60%、メモリピーク最大15.4倍を確認。ツール呼出し単位cgroupとeBPF制御で競合時の生存率100%と高優先度P95割当遅延29%削減を示す。
 
-- **2026-01 · [FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems](../09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md)**  
+- **2026-01 · [FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems](2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   実LLM serving由来のGPUカーネル課題を統一トレースで検証し、エージェント生成カーネルをSGLang/vLLMへ低オーバーヘッドで動的適用する閉ループ基盤。
 
@@ -82,11 +82,11 @@
   実装：[✓](https://github.com/hyscale-lab/aries) ・ リポジトリ内被引用：1  
   AriesはLLM推論、ハーネス、状態付きツールを一つのエージェント軌跡として計測し、ツール待ち、長期文脈、サンドボックスの瞬間的な資源需要を同じタスク進捗へ結び付ける実験基盤である。
 
-- **2026-07 · [OrderMoE: An expert similarity driven distributed edge MoE inference](../04-moe-parallelism-communication/2026-2607.17154-ordermoe-expert-similarity-distributed-edge.md)**  
+- **2026-07 · [OrderMoE: An expert similarity driven distributed edge MoE inference](2026-2607.17154-ordermoe-expert-similarity-distributed-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ルータ応答から専門家の機能類似性を推定し、類似専門家をエッジ間へ分散配置して、品質予算内なら遠隔の正確な専門家を局所類似専門家で代替し通信と遅延を削減する。
 
-- **2026-07 · [DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning](../10-sparse-attention/2026-delta.md)**  
+- **2026-07 · [DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning](2026-delta.md)**  
   実装：[✓](https://github.com/hoenza/DELTA) ・ リポジトリ内被引用：1  
   少数の更新層で重要KVページを動的に選び、後続層がその集合を再利用することで、完全なKV保持と推論精度を維持しつつ長文デコードを高速化する疎注意方式。
 
@@ -102,7 +102,7 @@
   実装：✓ ・ リポジトリ内被引用：1  
   将来要求の助言信号でKVキャッシュを事前移動し、層優先度と協調HBM管理で不確実性を吸収して計算・メモリ分離を低遅延化する。
 
-- **2026-05 · [Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference](../04-moe-parallelism-communication/2026-2605.10670-surviving-partial-rank-failures-wide-ep-moe.md)**  
+- **2026-05 · [Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference](2026-2605.10670-surviving-partial-rank-failures-wide-ep-moe.md)**  
   実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：1  
   専門家並列の部分ランク障害を、通信相手・専門家被覆・CUDAグラフ可視経路の個別修復で全体再起動なしに復旧するEEPを提案する。
 
@@ -110,7 +110,7 @@
   実装：✓ ・ リポジトリ内被引用：1  
   約1KBの問い合わせを遠隔キャッシュへ送り注意計算する方式を実H100で測定し、約3msのキャッシュ再適応より数十µsの往復が有利となる条件を閉形式化する。
 
-- **2026-05 · [LLM-Emu: Native Runtime Emulation of LLM Inference via Profile-Driven Sampling](../12-benchmarking-modeling-emulation/2026-2605.00616-llm-emu-native-runtime-emulation.md)**  
+- **2026-05 · [LLM-Emu: Native Runtime Emulation of LLM Inference via Profile-Driven Sampling](2026-2605.00616-llm-emu-native-runtime-emulation.md)**  
   実装：[✓](https://github.com/AKafakA/llm-emu) ・ リポジトリ内被引用：1  
   vLLMの本番HTTP・スケジューラ・KV管理を実コードのまま動かし、GPU順伝播だけを二次元遅延プロファイルからの標本化へ置換して、実GPU比の出力トークン当たり時間・反復時間を4.8%、エンドツーエンド遅延を5.3%、出力スループットを1.9%以内で再現する（初回トークン時間は最大10.41%ずれる）実時間エミュレータ。
 
@@ -118,11 +118,11 @@
   実装：✓ ・ リポジトリ内被引用：1  
   注意とMoE-FFNの演算・通信を別GPU群へ分離する価値を、負荷・モデル・SLO・ネットワークを横断して設計空間探索する。
 
-- **2026-04 · [Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns](../04-moe-parallelism-communication/2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md)**  
+- **2026-04 · [Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns](2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル時の専門家活性から似た要求を小バッチ化し、要求群で共発火する専門家を同じノードへ置くことで、マルチノードMoEの全対全通信を削減する。
 
-- **2026-04 · [Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel](../09-kernel-runtime-compilation/2026-2604.13327-event-tensor-dynamic-megakernel-generation.md)**  
+- **2026-04 · [Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel](2026-2604.13327-event-tensor-dynamic-megakernel-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   タイル依存関係を記号形状のイベントテンソルとして表し、可変形状とMoEのデータ依存分岐を再コンパイルせず静的・動的メガカーネルへ変換するコンパイラ抽象。
 
@@ -130,7 +130,7 @@
   実装：[✓](https://github.com/OpenBMB/ArcLight) ・ リポジトリ内被引用：1  
   NUMAごとのメモリ配置、動的スレッド群、Scatter/Gather型テンソル並列を一体化し、多数コアCPUの遠隔メモリアクセス壁を避けて、192コアARM環境でllama.cpp比最大46%高い推論スループットを示す軽量CPU推論基盤。
 
-- **2026-02 · [PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference](../09-kernel-runtime-compilation/2026-2602.06072-packinfer-batched-attention.md)**  
+- **2026-02 · [PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference](2026-2602.06072-packinfer-batched-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   異種長要求を負荷均衡した群へ詰め、共有接頭辞を考慮した連続KV配置と一体化することで、注意計算の無駄と入出力断片化を同時に削減する。
 
@@ -172,7 +172,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   54実測点と校正シミュレータで推論最適化の組合せを品質・遅延・費用の同一Pareto面へ置き、制約別の支配構成を示す。
 
-- **2026-09 · [Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification](../02-hardware-accelerators/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md)**  
+- **2026-09 · [Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification](2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPU縮約順序を記述子化し、非公開行列積のビット挙動復元、コンパイラでの平衡木強制、命令列の静的同値判定を接続して再現性と自動調整を両立する。
 
@@ -204,7 +204,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Qwen3-8Bを適応的約1.64 bit/重みへ後量子化し、78.5%の補正済み能力保持、8.24 GiBの無損失packed artifact、RTX 5070上15.52 トークン/s・7.35 GiBの直接実行まで検証する。
 
-- **2026-09 · [Scaling Inference Prefill with High-Radix Photonic Interconnects](../04-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md)**  
+- **2026-09 · [Scaling Inference Prefill with High-Radix Photonic Interconnects](2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPU間通信が律速になるMoEプリフィルで、4倍帯域・最大1,152 GPUの光スケールアップ網をモデル化し、長文・高バッチ時のプリフィルを2〜5倍級に短縮する一方、デコード飽和へのボトルネック移動も示す。
 
@@ -212,11 +212,11 @@
   実装：[✓](https://github.com/Tencent-Hunyuan/Simple-Attention-Sparsification) ・ リポジトリ内被引用：0  
   言語モデル損失を注意ソフトマックス内の連続ゲートへ直接流してコンテキスト順位を学習し、固定Top-K疎注意の精度と長文脈デコード効率を改善する。
 
-- **2026-09 · [Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention](../09-attention-kernel-serving-optimization/2026-2609.08450-sample-guided-exact-topk-sparse-attention.md)**  
+- **2026-09 · [Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention](2026-2609.08450-sample-guided-exact-topk-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HPC-Ops Top-Kは、標本で上位候補境界を予測し、全行の一回走査で十分性を証明、足りない時だけ回復して正確なK個を選び、長文疎注意の再走査を減らす。
 
-- **2026-09 · [RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention](../10-sparse-attention/2026-2609.07306-routerelay-cross-layer-route-reuse.md)**  
+- **2026-09 · [RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention](2026-2609.07306-routerelay-cross-layer-route-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動的疎注意の前層経路IDを監視候補付きで再利用し、変化した行だけ再ルーティングして経路スコア計算を約38～52%へ削減するが、現CPU実装は未融合処理で逆に低速。
 
@@ -272,7 +272,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   経験再生方式と生成予算を軽量な文脈付きバンディットでタスクごとにオンライン選択し、生涯学習エージェントの精度を保ちながら推論コストを削減する。
 
-- **2026-09 · [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](../09-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md)**  
+- **2026-09 · [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LeanStreamは、層内の部分残差から次層の重み優先度を更新し、重み読出し・GPU計算・キャッシュを非同期に重ねて、端末LLMのSSD待ちと予測ミスを減らす。
 
@@ -308,7 +308,7 @@
   実装：[✓](https://github.com/FlashGPU-Sim/FlashGPU-Sim) ・ リポジトリ内被引用：0  
   Hopper/Blackwellの非同期GPU機構とTriton AIカーネルを実行駆動で再現し、131構成でサイクル誤差5.24%、16スレッドで7.86倍高速化した現代GPUシミュレータ。
 
-- **2026-09 · [Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign](../02-hardware-accelerators/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md)**  
+- **2026-09 · [Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign](2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md)**  
   実装：[✓](https://github.com/CrucibleComputingGroup/fengshui) ・ リポジトリ内被引用：0  
   再利用可能な少数チップレット群そのものと演算子単位の専用アクセラレータ構成を共同探索し、計算データフロー・メモリ・並列方式・配置配線を演算子ごとに最適化してNREを抑えつつLLM推論のエネルギー効率を高める。
 
@@ -316,7 +316,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   単一MoE層の選択可能プローブと二段階グループ検査で、特権監視なしにグレー障害GPU・通信経路をアプリ層から局所化し、診断プローブを約20倍削減する。
 
-- **2026-09 · [Epoch: Compiling Diffusion Blocks for Sparse MoE Serving](../04-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md)**  
+- **2026-09 · [Epoch: Compiling Diffusion Blocks for Sparse MoE Serving](2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散MoEの生成ブロックを再利用単位にし、候補エキスパート集合、確定トークンの期限付き出力、エキスパート並列の通信データをブロック内で疎化して、8基H100上で最良比較対象より最大2.7倍高速化するサービング方式。
 
@@ -356,7 +356,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   共有KVキャッシュ記憶を意味類似度だけで検索せず、生体認証で所有者候補を先に絞ってからMemArtの検索・KV再利用を行う物理ユーザー認可層。
 
-- **2026-09 · [BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices](../moe/2609.14643.md)**  
+- **2026-09 · [BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices](2609.14643.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号の複数トークン窓でエキスパート再利用・フラッシュ連続読出し・NPU計算との移動重畳を行い、30B級MoEのスマホ推論を平均4.83倍高速化する。
 
@@ -372,7 +372,7 @@
   実装：[✓](https://github.com/Miketan1/AMEND_code) ・ リポジトリ内被引用：0  
   過去ステップで監査した注意マージンから次の生存ブロックを先行予測し、GPUの生存ブロック計算と高帯域メモリ内計算による補集合監査を並列化して、キー転送と直列待ちを同時に削減する長文デコード設計。
 
-- **2026-08 · [UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge](../09-kernel-runtime-compilation/2026-2608.09291-unionsparse-index-efficient-low-bit-sparse-inference.md)**  
+- **2026-08 · [UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge](2026-2608.09291-unionsparse-index-efficient-low-bit-sparse-inference.md)**  
   実装：[✓](https://github.com/Victor-Alen/UnionSparse) ・ リポジトリ内被引用：0  
   低ビット化で相対的に増える疎行列の位置情報負担をPMRで定量化し、共有ビットマップ表現と並列復号カーネルを共同設計してJetson上の小バッチ疎推論を高速化する。
 
@@ -388,7 +388,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   重み・3ビット鍵値キャッシュ・専門家退避を統合し、圧縮表現のまま注意計算して120B MoEを17.2GB、14.85トークン毎秒で実行する。
 
-- **2026-08 · [Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM](../05-memory-architecture-near-data/2026-2608.06989-dual-view-memory-npu-pim.md)**  
+- **2026-08 · [Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM](2026-2608.06989-dual-view-memory-npu-pim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   NPU/PIMで共有する物理配置と各デバイスが見る論理配置を分離し、実行時の演算特性に応じて実行先を切り替えても帯域を落とさない統合メモリ方式。
 
@@ -400,7 +400,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   RAG各段階を資源・通信付き演算子へ変換し、ゼロコピー通信とCPU/GPU重畳で復号外のオーケストレーション律速を削減する。
 
-- **2026-08 · [MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding](../09-kernel-runtime-compilation/2026-2609.04244-monomoe-fused-megakernel-quantized-moe-decoding.md)**  
+- **2026-08 · [MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding](2026-2609.04244-monomoe-fused-megakernel-quantized-moe-decoding.md)**  
   実装：[✓](https://github.com/flashinfer-ai/flashinfer/tree/main/csrc/fused_moe/monomoe) ・ リポジトリ内被引用：0  
   少トークンMoE復号を重み主導型の常駐巨大カーネルへ再構成し、ルーティングから二段の専門家射影と縮約までを融合してメモリ帯域利用を高める。
 
@@ -428,15 +428,15 @@
   実装：✓ ・ リポジトリ内被引用：0  
   単一GPU上のオムニモデルで、締切余裕に基づく経路入場制御と帯域圧力に応じたSM配分を連携し、異種出力要求のSLO達成率を高めるサービング方式。
 
-- **2026-08 · [HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference](../04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md)**  
+- **2026-08 · [HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference](2026-2608.00577-hetroute-collaborative-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HetRouteは異種エッジ群で専門家配置・GPU常駐・複製精度を費用モデルで決め、Top-k専門家を集合としてサーバへ割り当てて、ネットワーク転送・計算待ち・量子化品質損失を抑える。
 
-- **2026-08 · [FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction](../04-moe-parallelism-communication/2026-2608.14205-freebalance-prerouting-online-load-balancing.md)**  
+- **2026-08 · [FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction](2026-2608.14205-freebalance-prerouting-online-load-balancing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FreeBalanceは前層出力を現層ルータへ先行入力して専門家負荷を予測し、注意計算中に予算内で専門家を交換する。正式ルーティングを維持し、負荷偏りと移動待ちを減らす。
 
-- **2026-08 · [FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy](../02-hardware-accelerators/2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md)**  
+- **2026-08 · [FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy](2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md)**  
   実装：[✓](https://github.com/nicyyyy/FluxBin) ・ リポジトリ内被引用：0  
   重要列だけをヘッセ行列で選んで追加二値基底を与え、逆量子化を避けるLUT融合CUDAカーネルで約2〜3ビットLLMを実行し、A100で最大5.92倍高速化・10.19倍省エネルギーを報告する。
 
@@ -448,7 +448,7 @@
   実装：[✓](https://github.com/qhfan/FlashPrefillv2) ・ リポジトリ内被引用：0  
   平均補正付きブロック疎注意をHopper向けに再設計し、SGLangの長文事前充填を128Kで最大4.8倍高速化する。
 
-- **2026-08 · [EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding](../02-hardware-accelerators/2026-2608.05303-edgexpert-moe-speculative-decoding.md)**  
+- **2026-08 · [EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding](2026-2608.05303-edgexpert-moe-speculative-decoding.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21481269) ・ リポジトリ内被引用：0  
   MoEと投機的復号の併用で増える専門家外部メモリアクセスを、プリフィルの共有専門家再利用とデコードの深さ認識チャネル統合で直接削減するエッジ向け協調設計。
 
@@ -460,7 +460,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   重み由来の保持地平でKDA/GDN再帰状態を選別・ragged保存し、TP均衡化によりKimi-KDAで2.63倍のcheckpoint容量とTTFT 42.6%削減を実現する。
 
-- **2026-08 · [Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference](../09-kernel-runtime-compilation/2026-2608.01536-celty-dual-sparse-gpu-kernel.md)**  
+- **2026-08 · [Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference](2026-2608.01536-celty-dual-sparse-gpu-kernel.md)**  
   実装：[✓](https://github.com/RuokaiYin/Celty) ・ リポジトリ内被引用：0  
   重み疎性と実行時活性疎性の交差を疎行列×疎ベクトルとして扱い、走長圧縮形式、ワープ割当、レジスタ部分和、専用復号器を共同設計して低バッチLLMデコードを高速化する。
 
@@ -484,7 +484,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   軽量ドラフターだけが完全文脈を読み、完全/圧縮文脈のロジット差δと文脈発散連動の受理ゲートで、圧縮文脈しか見ない大規模検証器の精度を回復する非対称推測復号。
 
-- **2026-08 · [AirMoE: Realizing Over-the-Air Distributed Mixture-of-Experts Inference at the Wireless Edge](../04-moe-parallelism-communication/2026-2608.22932-airmoe.md)**  
+- **2026-08 · [AirMoE: Realizing Over-the-Air Distributed Mixture-of-Experts Inference at the Wireless Edge](2026-2608.22932-airmoe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoE専門家の無線分散実行で、複数端末の専門家出力を空中計算で同時集約し、層感度を考慮した電力制御と専門家配置によって無線歪みによる推論精度低下を抑える。
 
@@ -496,7 +496,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   KV追放を期待値推定として定式化し、確率的追放＋復号時重要度補正で既存top-kのバイアスを抑えタスク間頑健性を高める。
 
-- **2026-07 · [StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration](../05-pim-near-memory/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md)**  
+- **2026-07 · [StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration](2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBMベースダイ上で重みを読み出しながら逆量子化し、GPU側CUDA逆量子化と中間重みの余分なHBM往復を除去する近メモリ推論機構。
 
@@ -504,11 +504,11 @@
   実装：✓ ・ リポジトリ内被引用：0  
   オフラインで重要FFNニューロンを選別して必要分だけロードし、入力ごとの活性で計算対象も絞ることで、端末LLMのメモリ量と計算量を独立に調整する方式。
 
-- **2026-07 · [Mixture-of-Experts Serving](../04-moe-parallelism-communication/2026-2607.17880-mixture-of-experts-serving-online-algorithms.md)**  
+- **2026-07 · [Mixture-of-Experts Serving](2026-2607.17880-mixture-of-experts-serving-online-algorithms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は時間変動する専門家需要へのGPU割当をサービス遅延と再構成費のオンライン最適化として定式化し、分数解の丸め・貪欲更新で再配置コストを抑える理論保証を示す。
 
-- **2026-07 · [LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving](../09-attention-kernel-serving-optimization/2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md)**  
+- **2026-07 · [LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving](2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMETは、LLMのタイル配置とメモリ階層転送を回路レベルのSRAM・M3D特性へ接続し、L2容量を増やす利益とアクセス費が釣り合う省エネ設計点を探索する。
 
@@ -520,7 +520,7 @@
   実装：[✓](https://github.com/rch0wdhury/llm-io-profiler) ・ リポジトリ内被引用：0  
   LLMデコードのデータ移動を重み・KVキャッシュ・活性の三I/O流へ分解し、量子化からSSD/CXL/統合メモリまでをルーフライン上で統一して、最適化を積むと支配ボトルネックが移動することを定量化したサーベイ。
 
-- **2026-07 · [Harness Engineering for LLM-Driven GPU Kernel Generation](../09-kernel-runtime-compilation/2026-2607.17979-harness-engineering-llm-gpu-kernels.md)**  
+- **2026-07 · [Harness Engineering for LLM-Driven GPU Kernel Generation](2026-2607.17979-harness-engineering-llm-gpu-kernels.md)**  
   実装：[✓](https://github.com/syhya/mlsys26-flashinfer-contest) ・ リポジトリ内被引用：0  
   LLM生成GPUカーネルを、公式準拠のコンパイル・正当性・計時・全形状評価とプロファイル駆動の保守的昇格ループで管理し、B200上の5演算子でFlashInfer比1.12〜29.68倍を得たハーネス設計。
 
@@ -528,7 +528,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   疎MoEの専門家加算順序だけで内部状態と生成文が分岐しうることを全順列・状態再構成で実証し、BF16項＋FP32累算を評価範囲の安定な互換契約として特定する。
 
-- **2026-07 · [Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving](../09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md)**  
+- **2026-07 · [Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving](2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md)**  
   実装：[✓](https://github.com/google-coral/coralnpu（ベースコア）。eNPUの改変実装・シミュレータの公開URLは一次資料に記載なし。) ・ リポジトリ内被引用：0  
   eNPUは、演算器・SRAM・HBM・接続を別電圧周波数領域に分け、非同期転送と演算子別計画をSLO余裕で切替えて、NPUサービングの非ボトルネック電力を落とす。
 
@@ -540,7 +540,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   CXL共有メモリをノード間GPU集団通信の媒体として使い、データ配置・細粒度重畳・ドアベル同期でRDMA型通信に対する性能とコストを改善する。
 
-- **2026-07 · [3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving](../05-memory-architecture-near-data/2026-2607.01617-3dls-disaggregated-serving-interconnect.md)**  
+- **2026-07 · [3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving](2026-2607.01617-3dls-disaggregated-serving-interconnect.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィル→デコードのKV転送とデコード側テンソル並列AllReduceを同じ横方向リンクで競合させず、KVだけを3D縦リンクへ物理分離するチップレット構成。等帯域条件でも最大1.49倍のスループットと60.2%の遅延削減を示す。
 
@@ -552,7 +552,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   並列エージェントの生成済みKVを位置再符号化・キャッシュ写像・合成器LoRAで直接統合し、再プリフィルを省いて9課題中7課題で品質を維持・改善しつつ最初のトークンまでを2.5〜11倍高速化する。
 
-- **2026-06 · [SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving](../08-quantization-kernels/2026-2606.11244-spear-error-adaptive-low-bit-serving.md)**  
+- **2026-06 · [SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving](2026-2606.11244-spear-error-adaptive-low-bit-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   トークン適応型量子化誤差補償とカーネル・通信・SLOスケジューリングを共同設計し、W4–FP16のperplexity差を56–75%回復。
 
@@ -568,11 +568,11 @@
   実装：✓ ・ リポジトリ内被引用：0  
   対象側の過去注意とドラフト側の先読み注意を融合し、少数の意味検索ヘッドだけで検証用KVを選ぶことで、長文投機的デコードのKV読込を削減する。
 
-- **2026-06 · [Director: Accelerating Distributed MoE Serving via Online Proactive Expert Placement](../04-moe-parallelism-communication/2026-2607.08782-director-online-proactive-expert-placement.md)**  
+- **2026-06 · [Director: Accelerating Distributed MoE Serving via Online Proactive Expert Placement](2026-2607.08782-director-online-proactive-expert-placement.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   待ち行列の入力からMoE専門家ルーティングを先読みし、通信が空く計算区間へ専門家移動を重ね、予測負荷と実測トポロジを使う配置最適化で静的・反応型配置の遅れを減らす方式。
 
-- **2026-06 · [Coordinated Scheduling for MoE LLM Serving](../04-moe-parallelism-communication/2026-2606.15177-gimbal-coordinated-moe-serving-scheduling.md)**  
+- **2026-06 · [Coordinated Scheduling for MoE LLM Serving](2026-2606.15177-gimbal-coordinated-moe-serving-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Gimbalは要求の残りプリフィル量・待機量・KV使用量と専門家負荷を同時に見て要求振り分けと専門家配置を協調し、MoEサービングのキュー偏りとホットスポットを減らす。
 
@@ -584,15 +584,15 @@
   実装：[✓](https://github.com/batchgen-project/batchgen) ・ リポジトリ内被引用：0  
   系列をイベント駆動コルーチン化して停止・結合・分割・移動を可能にし、MoEバッチ形成と長尾負荷分散を動的化して最大2.3倍の大規模高速化を示す。
 
-- **2026-06 · [Approaching Shannon Bound with Lossless LLM Weight Compression](../09-kernel-runtime-compilation/2026-2606.15789-shannon-bound-lossless-weight-compression.md)**  
+- **2026-06 · [Approaching Shannon Bound with Lossless LLM Weight Compression](2026-2606.15789-shannon-bound-lossless-weight-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GEMMタイルごとにANSで重みを損失なく圧縮し、共有メモリへ復号しながらテンソルコア計算と重ねることで、Mixtral-176Bの最大バッチを20から95へ増やし、SGLangスループットを最大1.6倍にする。
 
-- **2026-06 · [AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference](../09-kernel-runtime-compilation/2026-2606.07665-agentcompile-llm-guided-direct-cuda-inference.md)**  
+- **2026-06 · [AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference](2026-2606.07665-agentcompile-llm-guided-direct-cuda-inference.md)**  
   実装：[✓](https://github.com/veneno1213822/AgentCompile) ・ リポジトリ内被引用：0  
   大規模言語モデルによるCUDA生成をコンパイラ契約・数値検証・実測性能選択で囲い込み、合格した復号カーネルだけを採用して既存実装へ安全にフォールバックできる推論コンパイラ。
 
-- **2026-06 · [Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices](../09-kernel-runtime-compilation/2026-2607.08786-moderately-unstructured-sparse-gpu-inference.md)**  
+- **2026-06 · [Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices](2026-2607.08786-moderately-unstructured-sparse-gpu-inference.md)**  
   実装：[✓](https://github.com/moui0/cudac) ・ リポジトリ内被引用：0  
   約50%の非構造疎重みを2:4疎テンソルコア層・差分距離で再配置する補助層・微小残差層へ分解し、疎テンソルコアとCUDAコアを重ねて実行してSpInfer比最大1.64倍を達成する。
 
@@ -604,7 +604,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   投機的検証クエリが選ぶ重複KVブロックを一度だけ読み、厳密共有と近似共有、層間索引再利用、融合カーネルを比較して、長文脈の疎注意読出しを減らすシステム。
 
-- **2026-05 · [SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference](../04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md)**  
+- **2026-05 · [SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference](2026-2605.28095-sidp-memory-efficient-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SiDPはデータ並列GPU間でFFN重みを一度だけ保持する共有プールを作り、バッチ規模に応じて重み先読み型と活性値集約型を切り替え、KV容量不足と重複重みを減らす。
 
@@ -620,7 +620,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   共有操作グラフからエージェント手順を動的生成し、操作単位の差分KV状態で約4倍のメモリ削減を狙うエージェント・サービング基盤。
 
-- **2026-05 · [GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization](../09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md)**  
+- **2026-05 · [GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization](2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md)**  
   実装：[✓](https://github.com/codezakh/gpu-forecasters) ・ リポジトリ内被引用：0  
   実GPU計測をLLMの相対速度予測で選択的に代替し、同じGPU計測予算で候補数を4倍へ広げて6課題中4課題で基準と同等以上の高速カーネルを発見する。
 
@@ -632,7 +632,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   低帯域・分散オンチップ記憶のMT-3000向けに演算子、融合注意、三段パイプライン、混合並列を共同設計し、大規模LLM推論を実現。
 
-- **2026-05 · [Ada-MK: Adaptive MegaKernel Optimization via Automated DAG-based Search for LLM Inference](../09-kernel-runtime-compilation/2026-2605.11581-ada-mk-adaptive-megakernel-compilation.md)**  
+- **2026-05 · [Ada-MK: Adaptive MegaKernel Optimization via Automated DAG-based Search for LLM Inference](2026-2605.11581-ada-mk-adaptive-megakernel-compilation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Ada-MKはLLMデコードをPTX命令水準の依存グラフへ分解し、共有メモリ配置とワープ役割をオフライン探索して分岐のないメガカーネルを生成し、L20でTensorRT-LLM比最大23.6%高速化する。
 
@@ -652,7 +652,7 @@
   実装：[✓](https://github.com/anon/Scepsy) ・ リポジトリ内被引用：0  
   LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。
 
-- **2026-04 · [Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving](../04-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md)**  
+- **2026-04 · [Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving](2026-2605.00254-network-topologies-cost-effective-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoE推論の通信・計算・重畳・総所有コストを横断モデル化し、高価なスケールアップ網より3Dフルメッシュ等のスイッチレス網と適度な帯域の方が単位費用当たり性能で優れる条件を体系化した研究。
 
@@ -660,7 +660,7 @@
   実装：[✓](https://github.com/yandex-research/context-intensive-kv-offloading) ・ リポジトリ内被引用：0  
   文脈集約型課題でKV退避の選択誤差を分析し、低ビット量子化によるYAKVで精度とスループットを改善する。
 
-- **2026-04 · [Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference](../09-kernel-runtime-compilation/2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md)**  
+- **2026-04 · [Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference](2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   静的Transformer演算をCUDA Graph再生、動的制御を実行時コンパイルへ分け、短系列・バッチ1推論の起動オーバーヘッドと尾部遅延を削減する。
 
@@ -668,11 +668,11 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Fleetは複数ダイGPUにチップレット単位の作業階層を追加し、永続カーネル内で同一L2を共有するCUを協調スケジュールしてLLMデコードの重み再利用と同期局所性を高める。
 
-- **2026-04 · [ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving](../02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md)**  
+- **2026-04 · [ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving](2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBメモリ上の頻出エキスパート上位ビットをキャッシュ兼自己ドラフトとして使い、MoEの投機的デコードと重み転送を一体最適化する3D積層HW-SW協調方式。
 
-- **2026-04 · [DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72](../04-moe-parallelism-communication/2026-2604.01621-dwdp-distributed-weight-data-parallelism.md)**  
+- **2026-04 · [DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72](2026-2604.01621-dwdp-distributed-weight-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DWDPは注意重みを各GPUへ複製し、MoE専門家重みだけをNVLinkドメイン内で分散する。必要重みを非同期先読みして全対全通信とGPU間同期を減らす。
 
@@ -684,19 +684,19 @@
   実装：✓ ・ リポジトリ内被引用：0  
   PIM向け重みを一つだけ保持し、キャッシュ可能バッファへの実行時並べ替えで前処理と生成の属性・配置矛盾を解消してDRAM容量を約半減する。
 
-- **2026-03 · [Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels](../09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md)**  
+- **2026-03 · [Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels](2026-2603.24595-model2kernel-safe-cuda-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデル側からCUDA呼出し条件を抽出するHFProbeと、動的テンソル・全CUDAスレッドを記号化するcuKLEEを組み合わせ、LLM推論カーネルの未知メモリバグ353件を9誤検出で検出した。
 
-- **2026-03 · [Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts](../09-kernel-runtime-compilation/2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md)**  
+- **2026-03 · [Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts](2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   50演算×FP32/BF16のMSKernelBenchと、律速別に選別したNsight Compute情報を計画・実装・コンパイル・デバッグの4担当へ渡すCUDAMasterで、多領域CUDA最適化を自動化し、o4-miniで正当性100%・基準超え94%を達成する。
 
-- **2026-03 · [Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling](../04-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md)**  
+- **2026-03 · [Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling](2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エキスパートストリーミングは専門家重みをチップレット間の細粒度マイクロスライスへ分け、高負荷・低負荷専門家を組み合わせてDDR読込、チップレット転送、計算を重ね、オンチップ容量不足を緩和する。
 
-- **2026-03 · [A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network](../04-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md)**  
+- **2026-03 · [A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network](2026-2603.28239-scin-switch-centric-in-network-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SCINはスイッチ内アクセラレータがGPUメモリを直接読みAll-Reduceを集約・書戻しし、GPU往復を減らす。INT8値と尺度も対応付け、テンソル並列の通信同期を短縮する。
 
@@ -708,11 +708,11 @@
   実装：✓ ・ リポジトリ内被引用：0  
   分離型プリフィル・デコード上で、複数指標による要求ルーティングと実行時適応する投機深度を閉ループ連携し、4×A800評価でテンソル並列vLLM比の平均レイテンシ15.75倍短縮・平均スループット4.4倍を報告する。
 
-- **2026-02 · [ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments](../05-moe/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md)**  
+- **2026-02 · [ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments](2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単一NPU障害時にサービング全体を再起動せず、要求状態・KVブロック表・MoE重み・通信領域・実行グラフを局所修復して大規模MoE推論を高速復旧する。
 
-- **2026-02 · [Deep Kernel Fusion for Transformers](../09-kernel-runtime-compilation/2026-2602.11808-deep-kernel-fusion-transformers.md)**  
+- **2026-02 · [Deep Kernel Fusion for Transformers](2026-2602.11808-deep-kernel-fusion-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SwiGLU前半を単一CUDAカーネルへ深く融合して中間活性のHBM往復を削減し、事前プロファイルでGPU・バッチ別のタイル方式を選んでSGLangのデコードを最大13.2%高速化する。
 
@@ -724,11 +724,11 @@
   実装：[✓](https://github.com/Jianshu-She/LAPS) ・ リポジトリ内被引用：0  
   プリフィル長で短要求と長要求を別キュー・別実行モードへ分離し、待機窓、CUDA Graph形状クラスタリング、動的GPU割当で短要求の待ちと長要求の干渉を同時に抑える。
 
-- **2026-01 · [MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm](../04-moe-parallelism-communication/2026-2601.08800-mixserve-hybrid-tp-ep-fused-communication.md)**  
+- **2026-01 · [MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm](2026-2601.08800-mixserve-hybrid-tp-ep-fused-communication.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデル形状と階層ネットワーク帯域からTP・DP・EP・PP構成を自動選択し、ノード内の全削減通信とノード間の全対全通信を融合・重畳して、MoE配信のTTFTを最大3.80倍、スループットを最大50.3%改善する。
 
-- **2026-01 · [A Scheduling Framework for Efficient MoE Inference on Edge GPU-NDP Systems](../04-moe-parallelism-communication/2026-2601.03992-edge-gpu-ndp-moe-scheduling.md)**  
+- **2026-01 · [A Scheduling Framework for Efficient MoE Inference on Edge GPU-NDP Systems](2026-2601.03992-edge-gpu-ndp-moe-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は専門家行列を複数NDPへ分割し、GPU/NDP実行時間を釣り合わせる動的割当と頻出専門家先読みを組み合わせ、エッジMoEの外部転送と装置間負荷偏りを減らす。
 
@@ -742,7 +742,7 @@
 
 ### 2年前（2024-10〜2025-09）
 
-- **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](../02-hardware-accelerators/2025-2501.01005-flashinfer-attention-engine-serving.md)**  
+- **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
   実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：69  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
@@ -750,11 +750,11 @@
   実装：✓ ・ リポジトリ内被引用：20  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
-- **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](../09-kernel-runtime-compilation/2025-pod-attention.md)**  
+- **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
   実装：[✓](https://github.com/microsoft/vattention/tree/main/pod_attn) ・ リポジトリ内被引用：15  
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
-- **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](../04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
+- **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   層間のトークン遷移統計を二段階ILPへ入力し、MoEのエキスパート配置を計算負荷とGPU間通信の両方が均衡するよう最適化する。
 
@@ -762,7 +762,7 @@
   実装：✓ ・ リポジトリ内被引用：11  
   不確かな出力長と依存関係を逐次更新し、期限達成に必要な最小帯域で要求を選ぶことで、サービス有効処理量を1.4〜6.3倍へ改善する。
 
-- **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](../10-sparse-attention/2024-2410.13276-seerattention.md)**  
+- **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
   実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：11  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
@@ -774,15 +774,15 @@
   実装：✓ ・ リポジトリ内被引用：10  
   SLO予測付きトークン調整・層単位プリエンプション・増分KV退避で、オンライン遅延を守りながら遊休GPUをオフライン推論へ回す共同サービング方式。
 
-- **2025-09 · [Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving](../04-moe-parallelism-communication/2025-2509.17863-expert-as-a-service-moe-serving.md)**  
+- **2025-09 · [Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving](2025-2509.17863-expert-as-a-service-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   MoEの専門家を状態のない独立GPUサービスへ分離し、CPU不要のIBGDA一対一通信、動的バッチ、専門家複製で、GPU単位の伸縮・負荷分散・障害迂回を可能にする大規模MoEサービング方式。
 
-- **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](../10-sparse-attention/2025-2502.13189-moba.md)**  
+- **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
   実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：9  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
-- **2025-03 · [Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling](../04-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md)**  
+- **2025-03 · [Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling](2025-2503.04398-semantic-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   トークンと専門家の活性化親和性を事前学習し、専門家配置と要求・トークン配置を協調させてMoEの全対全通信を削減する推論方式。
 
@@ -794,7 +794,7 @@
   実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：5  
   GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
 
-- **2025-04 · [Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler](../09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md)**  
+- **2025-04 · [Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler](2025-2504.19442-triton-distributed.md)**  
   実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：5  
   OpenSHMEM通信をTritonへ統合し、計算・通信・メモリアクセスをPythonから細粒度に重ね合わせ、8〜64 GPUで分散カーネルを高速化するコンパイラ拡張。
 
@@ -802,7 +802,7 @@
   実装：✓ ・ リポジトリ内被引用：4  
   注意重みではなくキーの幾何学的多様性を重要度代理として使う学習不要KV削除法で、ブロック長文処理でも厳密な容量上限を守りつつ、8K予算で約23%削減・LongBench差0.04%以下、既存削除法比で遅延最大30%短縮を示す。
 
-- **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](../04-moe-parallelism-communication/2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
+- **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
 
@@ -818,7 +818,7 @@
   実装：✓ ・ リポジトリ内被引用：3  
   KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
 
-- **2025-03 · [MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching](../02-moe-inference/2025-2503.09716-moe-gen-module-based-batching.md)**  
+- **2025-03 · [MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching](2025-2503.09716-moe-gen-module-based-batching.md)**  
   実装：[✓](https://github.com/EfficientMoE/MoE-Gen) ・ リポジトリ内被引用：3  
   MoEの注意機構とエキスパートを別々にバッチ化し、ホストメモリでトークンを蓄積して大バッチ化することで、単一GPUオフロード推論のGPU利用率とスループットを改善する。
 
@@ -842,11 +842,11 @@
   実装：✓ ・ リポジトリ内被引用：1  
   長入力事前計算を短入力事前計算で選択的に横取りし、事前計算・復号の分離同居と高速系列並列を組み合わせて、短入力の待ち時間と長入力の飢餓を両立して抑える。
 
-- **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](../02-hardware-accelerators/2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
+- **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
 
-- **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](../04-moe-parallelism-communication/2025-2505.13345-occult-collaborative-expert-communication.md)**  
+- **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
   実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：1  
   共活性化する専門家を同一GPUへ集約し、再索引付き疎行列積と協調剪定でトークン複製を減らすことで、MoEの全対全通信を削減し学習・推論を1.5倍超高速化する。
 
@@ -858,7 +858,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   意味的に近い別プロンプトをトークンLSHで対応付け、位置補正と層別再計算により完全一致なしでもKVを選択再利用する。
 
-- **2025-08 · [PiKV: KV Cache Management System for Mixture of Experts](../05-moe/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md)**  
+- **2025-08 · [PiKV: KV Cache Management System for Mixture of Experts](2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md)**  
   実装：[✓](https://github.com/NoakLiu/PiKV) ・ リポジトリ内被引用：0  
   混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。
 
@@ -892,11 +892,11 @@
 
 ### 3年前（2023-10〜2024-09）
 
-- **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](../10-sparse-attention/2024-2406.10774-quest.md)**  
+- **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
   実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：42  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
-- **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](../10-sparse-attention/2024-2407.02490-minference.md)**  
+- **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
   実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：23  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
@@ -922,15 +922,15 @@
 
 ### 4年前（2022-10〜2023-09）
 
-- **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](../08-quantization-kernels/2022-2210.17323-gptq.md)**  
+- **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
   実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：84  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
-- **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](../09-attention-kernel-serving-optimization/2023-2307.08691-flashattention-2.md)**  
+- **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
   実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：77  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
-- **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](../08-quantization-kernels/2023-2306.00978-awq.md)**  
+- **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
   実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：32  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
@@ -944,7 +944,7 @@
 
 ### 5年前（2021-10〜2022-09）
 
-- **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](../09-attention-kernel-serving-optimization/2022-2205.14135-flashattention.md)**  
+- **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
   実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：70  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 <!-- survey:auto:end -->

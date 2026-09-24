@@ -32,7 +32,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：72  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
-- **2026-02 · [DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference](../05-kv-cache-offloading/2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md)**  
+- **2026-02 · [DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference](2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   プリフィル側だけに集中していたKVキャッシュのストレージ読出しをデコード側NICにも分散し、RDMA転送と負荷認識スケジューリングでエージェント型LLM推論のストレージ帯域ボトルネックを緩和する。
 
@@ -76,7 +76,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/yshk-mxim/agent-memory) ・ リポジトリ内被引用：3  
   複数エージェントのKVをQ4ブロックとしてSSDへ永続化し、再プリフィルせず注意機構へ直接復元することで、固定KV容量あたり約4倍の文脈を保持し先頭トークン遅延を最大136倍短縮する。
 
-- **2025-10 · [Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits](../05-kv-cache-offloading/2025-2511.00321-cxl-pnm-kv-cache.md)**  
+- **2025-10 · [Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits](2025-2511.00321-cxl-pnm-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   CXL-PNMはKVをGPUへ呼び戻さず、CXLメモリ近傍でページ要約・重要度選択・注意を計算する。PnG-KVはGPUも注意を分担し、長文脈のKV転送とGPU容量制約を減らす。
 
@@ -88,7 +88,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   大小モデル間でKVを内容空間のヘッド単位線形写像へ変換し、受信モデルの長文再プリフィルを省く方式。対応層を選びRoPEを付け直して形状差による誤差を抑える。
 
-- **2026-06 · [SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL](../05-kv-cache-offloading/2026-2606.19746-sac-sparse-attention-cxl-disaggregated-kv.md)**  
+- **2026-06 · [SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL](2026-2606.19746-sac-sparse-attention-cxl-disaggregated-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   疎注意で実際に使うtop-k KVだけをCXL共有メモリから層ごとに直接読み込み、RDMAの接頭辞全量転送とローカルKV常駐をなくして長文高並行デコードを高速化する。
 
@@ -198,7 +198,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/kvmem/kvmem-qw3) ・ リポジトリ内被引用：0  
   KVMemは百万トークン級の履歴KVをGPU・CPU・NVMeの論理ワークスペースに保持し、質問に必要なブロックだけをモデル文脈窓へ戻すことで、全履歴の再プリフィルとGPU容量制約を減らす方式。
 
-- **2026-09 · [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](../05-kv-cache-offloading/2026-2609.05764-interface-aware-kv-quantization-nvm.md)**  
+- **2026-09 · [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は固定Hadamard回転・正規化・4ビット符号帳でKVをオンチップNVM向けに量子化し、補助情報と読み出し再構成を減らして長文脈KVの面積・エネルギーを抑える。
 
@@ -206,7 +206,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：0  
   生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
 
-- **2026-09 · [Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving](../05-kv-cache-offloading/2026-2609.10790-composable-cxl-memory-kubernetes-native-shared-memory-llm-serving.md)**  
+- **2026-09 · [Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving](2026-2609.10790-composable-cxl-memory-kubernetes-native-shared-memory-llm-serving.md)**  
   実装：[✓](https://github.com/Seagate) ・ リポジトリ内被引用：0  
   共有CXLメモリをKubernetesの動的資源として割り当て、複数ノードから同じKVキャッシュを再利用して長い接頭辞の初動遅延を5.5〜36.6倍短縮する実現可能性研究。
 
@@ -320,7 +320,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：5  
   Cakeは保存済み接頭辞KVの先頭をGPUで再計算し末尾をストレージから逆順読込みし、両方をチャンク並行化してTTFTを支配する計算・I/O待ちを減らす方式。
 
-- **2025-07 · [HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference](../05-kv-cache-offloading/2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md)**  
+- **2025-07 · [HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference](2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   HGCAは最近のKVをGPUで密注意、古いKVをCPUでヘッド別の疎注意にし、部分出力だけを統合してPCIeでKV全量を戻す待ちを減らす。
 
@@ -340,7 +340,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   ShadowServeは遠隔圧縮KVの展開・逆量子化をSmartNICへ移し、GPUを推論計算に専念させて、KV取得時のGPU競合とCPU処理待ちを減らす方式。
 
-- **2025-08 · [AdaptCache: KV Cache Native Storage Hierarchy for Low-Delay and High-Quality Language Model Serving](../05-kv-cache-offloading/2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md)**  
+- **2025-08 · [AdaptCache: KV Cache Native Storage Hierarchy for Low-Delay and High-Quality Language Model Serving](2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   KV項目ごとの内容・再利用頻度・品質劣化とDRAM/SSD転送遅延を推定し、圧縮方式・率・配置を限界効用で共同最適化して高速階層への命中率を高める。
 

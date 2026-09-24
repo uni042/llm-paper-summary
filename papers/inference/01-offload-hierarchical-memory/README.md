@@ -22,15 +22,15 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：4  
   FluxMoEは層の実行直前だけ必要な専門家重みをGPUへ実体化し、直後に解放するPagedTensorと帯域比例のストリーミングで、KVキャッシュを圧迫する常駐重みを減らす。
 
-- **2026-08 · [HBF Sucks? A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving](../05-offload-hierarchical-memory/2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md)**  
+- **2026-08 · [HBF Sucks? A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving](2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md)**  
   実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：2  
   SSD型KV退避の保存先だけをHBFへ置換すると、近接メモリ減少・書込主体化・熱／耐久制約が利点を上回り、遅延が2〜5.5倍悪化することを本番トレースで示す。
 
-- **2026-06 · [A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference](../06-moe-expert-offloading/2026-2606.15453-spatio-temporal-expert-prefetching.md)**  
+- **2026-06 · [A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference](2026-2606.15453-spatio-temporal-expert-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   ST-MoEは、隣接層と直前トークンのゲート相関から次層専門家を予測してオフチップDRAMから先読みし、誤り時は正しい重みを追加取得してデコードの転送待ちを減らす。
 
-- **2026-04 · [SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding](../03-moe-expert-offload/2026-2604.10152-specmoe-self-assisted-speculative-decoding.md)**  
+- **2026-04 · [SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding](2026-2604.10152-specmoe-self-assisted-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   MoE自身の常駐層と少数ホットエキスパートをドラフト化し、投機検証でエキスパート転送を集約してCPU/SSDオフロードMoEの通信量と推論時間を削減する。
 
@@ -38,7 +38,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   本研究はHigh-Bandwidth FlashをHBMの代替でなく容量階層としてMoE専門家の複製と複数モデル重みの常駐を増やし、遠隔通信・読み込み・負荷偏りを減らせるか検討する。
 
-- **2026-07 · [ExpertPlex: A High-Goodput Disaggregated Serving System for MoE LLMs with Adaptive Persistent Kernels](../06-moe-inference-expert-placement-caching/2026-2607.18002-expertplex-disaggregated-moe-serving.md)**  
+- **2026-07 · [ExpertPlex: A High-Goodput Disaggregated Serving System for MoE LLMs with Adaptive Persistent Kernels](2026-2607.18002-expertplex-disaggregated-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   注意計算だけを相分離し巨大MoEエキスパートを共有、タイル単位の適応型永続カーネルと注意側起動の片側通信で相間干渉を抑え、H800上でインスタンス単位P/D分離比最大2.01倍の有効スループットを達成する。
 
@@ -46,7 +46,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/nokia-applied-research/WiSP) ・ リポジトリ内被引用：1  
   WiSPはルーティング履歴から再利用される専門家をGPUワーキングセットとしてLRU保持し、限られたVRAMを専門家とKVキャッシュの限界便益で配分して、PCIe転送とKV不足を抑える。
 
-- **2026-06 · [Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch](../04-moe-expert-offload-caching/2026-2606.26607-moebius-runtime-parallelism-switch.md)**  
+- **2026-06 · [Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch](2026-2606.26607-moebius-runtime-parallelism-switch.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Moebiusは低同時実行時のテンソル並列と高同時実行時の専門家並列を実行中に切り替え、再起動せず各要求を継続して、負荷変動で固定方式が不利になる問題を減らす。
 
@@ -54,7 +54,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   CXLハイブリッドメモリ内のDRAM+NVMeをTB級の遠隔メモリとして公開し、重みと長文KVの予測可能なアクセスを多段DMA先読み・読出し優先I/Oで隠して、CPU DRAMを超える推論状態を保持する階層メモリ方式。
 
-- **2026-05 · [ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling](../06-expert-offloading/2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md)**  
+- **2026-05 · [ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling](2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md)**  
   実装：[✓](https://github.com/npnothard/ZipMoE-ICML26) ・ リポジトリ内被引用：1  
   BF16指数部の統計冗長性を無損失圧縮し、NVMe読出しとCPU並列展開を4状態キャッシュと近似保証付きスケジューラで重畳して、共有メモリ型端末のMoEを入出力律速から計算中心へ移す。
 
@@ -66,7 +66,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/ims-kdks/TIDE) ・ リポジトリ内被引用：1  
   拡散MoEで近接デノイズ段階の専門家活性が安定する性質を使い、専門家配置を数ステップごとだけ更新してCPU計算とPCIe転送を両方抑え、出力を変えず単一GPU推論を高速化する。
 
-- **2026-05 · [PALS: Power-Aware LLM Serving for Mixture-of-Experts Models](../04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md)**  
+- **2026-05 · [PALS: Power-Aware LLM Serving for Mixture-of-Experts Models](2026-2605.21427-pals-power-aware-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   GPU電力上限とバッチ量を共同制御しエネルギー効率最大26.3%、サービス品質違反4–7倍改善。
 
@@ -92,15 +92,15 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
-- **2026-09 · [The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction](../02-moe-offload/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md)**  
+- **2026-09 · [The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction](2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   学習済み事前ルータの予測を実ルーティングとして一トークン先行させ、SSD上のMoE重みを計算と重ねて配送し、35B級を約3GiBで動かす。
 
-- **2026-09 · [SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC](../02-moe-offload/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md)**  
+- **2026-09 · [SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC](2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エキスパート単位のSSD直接読出し、SSD・RAM・VRAM三階層キャッシュ、CPU・GPU実行分担を統合し、巨大MoEを一般消費者向けPCで高速に実行する。
 
-- **2026-09 · [SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading](../06-moe-inference-expert-offloading/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md)**  
+- **2026-09 · [SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading](2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門家活性化の系列予測、期限付きプリフェッチ、将来予測キャッシュ、CUDA Graph互換実行を統合し、MoEオフロードの転送待ちと実行時オーバーヘッドを同時に削減する。
 
@@ -112,11 +112,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   静的重み用のメモリ内計算、動的データ用のメモリ近傍計算、部分結果集約用のネットワーク内計算を統合し、細粒度データ配置とプリフィル・デコード分離で通信とメモリ帯域の偏りを抑えるLLM推論アクセラレータ。
 
-- **2026-09 · [LLM Inference in a Flash!](../04-cpu-ssd-offload/2026-2609.16161-llm-inference-in-a-flash.md)**  
+- **2026-09 · [LLM Inference in a Flash!](2026-2609.16161-llm-inference-in-a-flash.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   フラッシュ内計算向けに整数のみのLLM推論と静的辞書型KV圧縮を共同設計し、品質をほぼ維持したまま動的KV転送を約15分の1へ削減する。
 
-- **2026-09 · [HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing](../04-moe-expert-offload-caching/2026-2609.08682-hda-moe-3d-near-memory-scheduling.md)**  
+- **2026-09 · [HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing](2026-2609.08682-hda-moe-3d-near-memory-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HDA-MoEは3D近傍メモリ上でテンソル並列と専門家並列を混合し、活性統計に基づく専門家分割・局所配置と先読み・混雑対応スケジューリングで通信と負荷偏りを減らす。
 
@@ -124,7 +124,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/SlugLab/HBFSim) ・ リポジトリ内被引用：0  
   実GPU上のLLMをPTX計装し、未実機化のHBFについて遅延・容量・熱・保持・リフレッシュを閉ループで差し込むシミュレータ。110GiB論理容量やvLLMの同一出力を実データで検証する。
 
-- **2026-09 · [Dynamic HBM Repartitioning for Multi-Turn MoE Serving](../02-moe-expert-placement-caching/2026-2609.13537-dynamic-hbm-repartitioning.md)**  
+- **2026-09 · [Dynamic HBM Repartitioning for Multi-Turn MoE Serving](2026-2609.13537-dynamic-hbm-repartitioning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門家重みとKVキャッシュ間のHBM境界をCUDA VMMで動的再分割し、マルチターンMoEのprefix-キャッシュ cliffを緩和する。
 
@@ -132,11 +132,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/atlarge-research/py-kvcache) ・ リポジトリ内被引用：0  
   GPU・CPU・NVMe間のKV再利用を実測し、非同期直接I/O、固定容量ステージング、待機列先読み、再計算との損益分岐判定を組み合わせたvLLM外部KVキャッシュを実装・評価する。
 
-- **2026-09 · [BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference](../02-memory-offload/2026-2609.13592-boost-concurrent-host-hbm.md)**  
+- **2026-09 · [BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference](2026-2609.13592-boost-concurrent-host-hbm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBMとホストメモリを階層的に入れ替えるのでなく同時アクセスし、GPU実行波ごとに帯域比で重み・KVキャッシュを分散して、Grace Hopper上のLLM推論スループットを高める。
 
-- **2026-09 · [AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription](../05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md)**  
+- **2026-09 · [AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription](2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PyTorch内部のテンソル意味情報をUVM先読みに持ち込み、必要テンソルだけを選択的にCPU→GPU移送して標準UVM比平均3.1倍高速化する。
 
@@ -144,7 +144,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は1兆パラメータ級の混合専門家モデルの重みを専用管理器でなくLinuxカーネルのページキャッシュに任せ、再利用性と先読み助言を比較してDRAM不足時の管理負担を減らす。
 
-- **2026-08 · [TopoCompress: Topology Aware Token Compression Algorithm for Distributed Edge MoE Inference](../02-moe-expert-placement-caching/2026-2609.26061-topocompress-topology-aware-token-compression-algorithm-for-distributed-edge-moe-inference.md)**  
+- **2026-08 · [TopoCompress: Topology Aware Token Compression Algorithm for Distributed Edge MoE Inference](2026-2609.26061-topocompress-topology-aware-token-compression-algorithm-for-distributed-edge-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   意味的重要度と現在の専門家配置による通信費用を同時に見てトークンを圧縮し、圧縮後トラフィックに合わせてMoE専門家配置とGPU/CPU常駐を再最適化する分散エッジ推論方式。
 
@@ -152,7 +152,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   SAEMはCoTの遷移語から推論段階を検出し、段階ごとの活性化頻度でGPU専門家キャッシュを更新する。非常駐専門家はCPU計算に回し、トークン再配置で小カーネルの管理費も減らす。
 
-- **2026-08 · [PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving](../06-moe-inference-expert-placement-caching/2026-2608.05483-plora-pooled-memory-multilora-serving.md)**  
+- **2026-08 · [PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving](2026-2608.05483-plora-pooled-memory-multilora-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PLoRAはLoRAアダプタとKVキャッシュをCXL級共有メモリへ置き、NDPで縮約して小さな結果だけをGPUへ返し、バッチ別戦略選択で1000超アダプタを低遅延に処理する。
 
@@ -160,15 +160,15 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   隣接トークンで82〜85%再利用できるMLP活性行をGPUに残し、新規行だけNVMeから先読みすることで、モデルが常駐不能なJetson上でllama.cpp比7.9〜12.0倍を実現する行単位ストレージ推論。
 
-- **2026-08 · [MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture](../06-moe-expert-offloading/2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md)**  
+- **2026-08 · [MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture](2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ReXpertは、MoE専門家重みを容量比例帯域のReRAMへ常駐させ、共起する専門家を局所共有して、GPUのHBM重み読出しと小バッチFFNの供給律速を減らす。
 
-- **2026-08 · [Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference](../02-moe-expert-placement-caching/2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md)**  
+- **2026-08 · [Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference](2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ExactMoEは全専門家とルータ選択を維持したまま、専門家の射影をW4A16量子化してGPUスロットへ必要分だけ転送し、VRAM容量と量子化復号の負担を抑える。
 
-- **2026-08 · [DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference](../06-moe-expert-offloading/2026-2609.00407-dynande-near-data-expert-scheduling.md)**  
+- **2026-08 · [DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference](2026-2609.00407-dynande-near-data-expert-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DynaNDEは、専門家ごとのトークン数・演算性能・重み転送・キャッシュ再利用を遅延モデルで比較し、各層をNPU実行とNDP実行へ動的分割して転送待ちを減らす。
 
@@ -180,7 +180,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/Shriniwas410/cacheable-by-design) ・ リポジトリ内被引用：0  
   SSDオフロードMoEでは自然な専門家局所性だけで帯域壁を越えられず、局所性学習も品質低下なしには成立しないことを事前登録で示し、学習＋キャッシュ認識再ルーティングなら約80%のミス削減を得る境界を測定した。
 
-- **2026-08 · [APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference](../06-moe-expert-offloading/2026-2608.11688-apex-adaptive-expert-prefetching.md)**  
+- **2026-08 · [APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference](2026-2608.11688-apex-adaptive-expert-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   APEXは、補助ルータの不確実性から各トークンの最小先読み候補数を決め、正確な実ルータで不足専門家を補完して、エッジMoEの外部メモリ転送待ちを削減する。
 
@@ -192,11 +192,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   要求長に応じて短い注意機構をGPU、長い疎注意を実機PNMへ配置し、文脈成長時はキー・バリュー状態を背景移送して一方向に実行先を切り替え、混在長負荷のGPUメモリ圧迫と先頭待ちを抑える異種実行基盤。
 
-- **2026-07 · [Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch](../06-moe-inference-expert-placement-caching/2026-2607.23099-distribution-aware-moe-kernel-dispatch.md)**  
+- **2026-07 · [Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch](2026-2607.23099-distribution-aware-moe-kernel-dispatch.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEのルーティング偏りを実効エキスパート数でモデル化し、GPU上の実ヒストグラムから条件付きCUDAグラフで適切な融合MoEカーネルを選び、B200上のMoE遅延を短縮する。
 
-- **2026-07 · [Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference](../06-moe-inference-expert-offloading/2026-2607.05116-communication-aware-placement-pruning-moe.md)**  
+- **2026-07 · [Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference](2026-2607.05116-communication-aware-placement-pruning-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CAPはMoEの共活性から専門家を近接配置し、通信量と負荷均衡の配置スペクトルを機械別に選び、通信先を意識した動的枝刈りまで統合して全対全通信を削減する。
 
@@ -208,11 +208,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   本研究はCPUのGB級LLCへ重みを常駐させ、重み計算と注意/KVをソケット分離し、コア局所配置と細粒度同期でDRAM往復と演算子バリアを減らす。
 
-- **2026-06 · [ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill](../04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md)**  
+- **2026-06 · [ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill](2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意機構のデータ並列群とMoE間の大域同期を非同期共有バッファ通信で外し、ばらつくプリフィル要求を独立進行させてSLO準拠スループットを最大90%改善する。
 
-- **2026-05 · [Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models](../04-offload-heterogeneous/2026-2605.11277-sieve-dynamic-expert-aware-pim.md)**  
+- **2026-05 · [Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models](2026-2605.11277-sieve-dynamic-expert-aware-pim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実行時の専門家人気度から画像処理装置とメモリ内演算の配置を動的決定し、通信と注意機構の負荷まで含めて混合専門家推論を最大1.6倍高速化する。
 
@@ -220,15 +220,15 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   パイプライン並列で今使わないバッチのKVキャッシュをCPUへ退避し、現在の計算時間に収まる量だけ次バッチ用に先読みすることで、GPUメモリとPCIe帯域を有効活用しオフラインLLM推論を高速化する。
 
-- **2026-05 · [MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving](../06-expert-offloading/2026-2605.02960-moe-prefill-async-expert-weight-streaming.md)**  
+- **2026-05 · [MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving](2026-2605.02960-moe-prefill-async-expert-weight-streaming.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィル専用MoEで活性値AllToAllを次層専門家重みの非同期AllGatherへ置換し、CPUオフロードと接頭辞・実FLOPs対応スケジューリングで通信を計算へ隠す。
 
-- **2026-05 · [Fast MoE Inference via Predictive Prefetching and Expert Replication](../03-moe-expert-offload/2026-2605.11537-predictive-prefetching-expert-replication.md)**  
+- **2026-05 · [Fast MoE Inference via Predictive Prefetching and Expert Replication](2026-2605.11537-predictive-prefetching-expert-replication.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   次バッチの人気専門家をSRUで予測し、需要に比例して専門家をGPU上へ複製してトークン待ちを並列化するMoE推論方式。
 
-- **2026-05 · [CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving](../06-moe-inference-expert-offloading/2026-2603.28768-craft-cost-aware-expert-replication.md)**  
+- **2026-05 · [CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving](2026-2603.28768-craft-cost-aware-expert-replication.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoE各層の専門家負荷偏りから複製1個当たりの均衡改善を推定し、限られたGPUメモリを効果の高い層へ集中配分して、過剰複製によるKV容量減少を避ける。
 
@@ -248,11 +248,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/shouxulin/DirectAccessKernel) ・ リポジトリ内被引用：0  
   DAKはCPUメモリの重み・KVをGPU HBMへ先読みせずTMAで共有メモリへ直接運び、演算別オフロード率・輻輳制御・マルチキャストでHBM中継と帯域競合を減らす。
 
-- **2026-03 · [TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading](../05-moe-expert-offload/2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md)**  
+- **2026-03 · [TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading](2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   高・中・低頻度専門家をGPU・行列演算CPU・DIMM近傍処理へ三分し、予測付き再配置で単一GPUのMoEオフロードを高速化する。
 
-- **2026-01 · [Making MoE-based LLM Inference Resilient with TARRAGON](../03-moe-expert-offload/2026-2601.01310-tarragon-resilient-moe-inference.md)**  
+- **2026-01 · [Making MoE-based LLM Inference Resilient with TARRAGON](2026-2601.01310-tarragon-resilient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意側とエキスパート側を別故障領域に分け、動的エキスパート経路、増分KVチェックポイント、影エキスパートで故障ワーカーだけを自己修復し、MoE推論の全体再起動を避ける。
 
@@ -262,7 +262,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 ### 2年前（2024-10〜2025-09）
 
-- **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](../04-moe-expert-offload-caching/2024-2411.01433-hobbit.md)**  
+- **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
   実装：✓ ・ リポジトリ内被引用：31  
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
@@ -282,15 +282,15 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/caoshiyi/artifacts/tree/asplos25) ・ リポジトリ内被引用：9  
   MoE-Lightningは専門家重みとKVをCPU DRAMへ置き、マイクロバッチ間で次の重み転送・CPU注意・GPU計算を重ねて低VRAMのI/O待ちを減らす。
 
-- **2025-02 · [PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference](../02-cpu-offload/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md)**  
+- **2025-02 · [PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference](2025-2502.07578-cent-cxl-pim-gpu-free-llm.md)**  
   実装：[✓](https://github.com/Yufeng98/CENT) ・ リポジトリ内被引用：8  
   CXL接続のメモリ内・メモリ近傍演算装置だけで大規模言語モデル推論を実行し、A100基準で処理量2.3倍、エネルギー効率2.3倍、費用当たり生成量5.2倍を報告。
 
-- **2025-03 · [eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference](../06-moe-expert-offloading/2025-2503.06823-emoe.md)**  
+- **2025-03 · [eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference](2025-2503.06823-emoe.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   過去のエキスパート選択から必要エキスパートを予測・周期再利用し、タスク感度とSLOを考慮した読み込み・スケジューリングでGPUメモリを削減する。
 
-- **2025-09 · [DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance](../06-moe-expert-offloading/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md)**  
+- **2025-09 · [DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance](2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   DuoServe-MoEは、密なプリフィルでは二重ストリーム転送、疎なデコードでは次層専門家をMLP予測して先読みするようフェーズ別に切替え、CPU→GPU転送待ちを隠す。
 
@@ -310,7 +310,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/scale-snu/SSD-offloading) ・ リポジトリ内被引用：4  
   MoE専門家重みをHBM・CPUメモリ・SSDに置いたときのデコードエネルギーを比較し、SSD退避では1トークン当たりMixtralが3.8〜12.5倍、DeepSeek-R1が4.7〜9.8倍増えると示す。
 
-- **2025-06 · [HarMoEny: Efficient Multi-GPU Inference of MoE Models](../03-moe-expert-offload/2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md)**  
+- **2025-06 · [HarMoEny: Efficient Multi-GPU Inference of MoE Models](2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md)**  
   実装：[✓](https://github.com/sacs-epfl/HarMoEny) ・ リポジトリ内被引用：3  
   MoEの動的な専門家人気偏りに対し、トークンを空きGPUへ再配置し必要な専門家重みを非同期先読みして同期待ちを削減する。
 
@@ -318,7 +318,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：3  
   eLLMは活性値とKVキャッシュを同じ物理メモリプールで動的に融通し、SLO違反に応じてCPU退避量も調整して長文脈サービングの待ち行列とバッチ容量を両立する。
 
-- **2025-05 · [SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices](../03-offload-hierarchical-memory/2025-2505.10259-specoffload-unlocking-latent-gpu-capacity-for-llm-inference.md)**  
+- **2025-05 · [SpecOffload: Unlocking Latent GPU Capacity for LLM Inference on Resource-Constrained Devices](2025-2505.10259-specoffload-unlocking-latent-gpu-capacity-for-llm-inference.md)**  
   実装：[✓](https://github.com/MobiSense/SpecOffload-public) ・ リポジトリ内被引用：3  
   オフロード中に遊休するGPU計算時間と低効率なGPUメモリへ投機的デコードのドラフトモデルを配置し、CPU計算・重み転送・ドラフト生成を重ねてFlexGen比最大2.54倍のスループットを実現する。
 
@@ -326,7 +326,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/ljcleo/moe-lrc) ・ リポジトリ内被引用：3  
   20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。
 
-- **2025-05 · [FloE: On-the-Fly MoE Inference on Memory-constrained GPU](../05-moe-expert-offload/2025-2505.05950-floe-on-the-fly-moe-inference.md)**  
+- **2025-05 · [FloE: On-the-Fly MoE Inference on Memory-constrained GPU](2025-2505.05950-floe-on-the-fly-moe-inference.md)**  
   実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：3  
   専門家内部の不要チャネルを予測して転送対象を削り、次層の専門家を先読みすることで、小容量GPU上のMoE推論を高速化する。
 
@@ -346,31 +346,31 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：2  
   重み読出しを計算と非同期化し、各層へ固定メモリを均等配分し、容量に応じて保持テンソルを切り替えることで、端末向けCPU推論をmmap比最大12.5倍高速化する。
 
-- **2025-03 · [Accelerating MoE Model Inference with Expert Sharding](../05-moe-expert-offload/2025-2503.08467-moe-expert-sharding.md)**  
+- **2025-03 · [Accelerating MoE Model Inference with Expert Sharding](2025-2503.08467-moe-expert-sharding.md)**  
   実装：[✓](https://github.com/sacs-epfl/moe-inference) ・ リポジトリ内被引用：1  
   全エキスパートを全GPUへテンソル分割してルーティング偏りを計算負荷偏りから切り離し、カーネル融合でMoEエンコーダ推論を高速化する。
 
-- **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](../05-moe-expert-offload/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
+- **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
 
-- **2025-08 · [Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories](../03-hierarchical-memory/2025-2508.08457-packing-prefetch-onchip-memory-long-context.md)**  
+- **2025-08 · [Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories](2025-2508.08457-packing-prefetch-onchip-memory-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィル計算中の余剰HBM帯域で次層KVを先読みし、512MB〜1GB級M3Dオンチップメモリへ保持して、長文デコードのKV転送待ちを隠すハードウェア・スケジューラ協調方式。
 
-- **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](../04-cpu-ssd-offload/2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
+- **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   適応しきい値で活性FFNニューロンだけを読み、3D NAND近傍処理とDRAM内処理を統合してエッジLLMのPCIe重量転送を回避する。
 
-- **2025-04 · [Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs](../03-offload-hierarchical-memory/2025-2504.11765-shared-disk-kv-cache-rag.md)**  
+- **2025-04 · [Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs](2025-2504.11765-shared-disk-kv-cache-rag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   RAG文書のKVキャッシュをNVMe SSDへ永続化して複数LLMインスタンスで共有し、待ち行列時間にCPU等で先行生成することで重複プリフィルを削減する。
 
-- **2025-04 · [Hardware-based Heterogeneous Memory Management for Large Language Model Inference](../03-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md)**  
+- **2025-04 · [Hardware-based Heterogeneous Memory Management for Large Language Model Inference](2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBM3とLPDDR5Xを両側計算器付きで並列利用し、動的なヘッド単位割当とハードウェアメモリ抽象化によりLPDDRのみ比で最大2.94倍高速化する。
 
-- **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](../03-offload-hierarchical-memory/2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
+- **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
   実装：[✓](https://github.com/lass-lab/InferSave) ・ リポジトリ内被引用：0  
   SLO・モデル/入出力長・GPU価格/VRAM/帯域からKVオフロード率と実効TPSを予測し、AWS上で最も安価に要件を満たすVMを自動選択する。
 
@@ -392,11 +392,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：50  
   Fiddlerはキャッシュミスした専門家をGPUへ転送するか、活性値だけCPUへ送りCPUで計算するかを実行時に選び、MoEの重み転送待ちを減らす。
 
-- **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](../02-cpu-offload/2023-2312.12456-powerinfer.md)**  
+- **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
   実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：46  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
-- **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](../06-moe-expert-offloading/2024-2408.10284-adapmoe.md)**  
+- **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
   実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：17  
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
@@ -412,7 +412,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：10  
   TwinPilotsはTransformer処理ごとにCPU計算とGPU転送・計算の速さを比較し、CPU計算とPCIe転送を並行させてGPUオフロードの生成待ちを減らす。
 
-- **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](../04-cpu-ssd-offload/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
+- **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
 
@@ -420,11 +420,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   MoNDEは低頻度専門家の重みを拡張メモリ側に置き、デバイス上でGEMMを実行して小さな活性値だけをGPUへ転送し、MoEのデータ移動を減らす。
 
-- **2024-05 · [IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs](../02-cpu-offload/2024-2405.02842-iceformer.md)**  
+- **2024-05 · [IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs](2024-2405.02842-iceformer.md)**  
   実装：[✓](https://yuzhenmao.github.io/IceFormer/) ・ リポジトリ内被引用：1  
   一般keyを最近傍探索可能な空間へ写像し、重要な注意先だけをPrioritized DCIで選んで、再学習なしにCPU長文注意を高速化する方式。
 
-- **2024-06 · [Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference](../04-cpu-ssd-offload/2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md)**  
+- **2024-06 · [Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference](2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   非構造枝刈り重みを非ゼロ値と位置ビットマップへ分離し、CPU/SSDからGPUへの転送量を減らして、退避LLM推論を最大約2.37倍高速化する。
 

@@ -9,6 +9,7 @@ SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 from paper_taxonomy import (  # noqa: E402
+    CANONICAL_INFERENCE_LINEAGES,
     DEFAULT_INFERENCE_LINEAGE,
     canonical_lineage,
     canonicalize_paper_path,
@@ -45,6 +46,11 @@ class PaperTaxonomyTests(unittest.TestCase):
             canonical_lineage("training", "02-distributed-heterogeneous-moe-training"),
             "02-distributed-heterogeneous-moe-training",
         )
+
+    def test_physical_inference_directories_are_canonical(self) -> None:
+        repo_root = Path(__file__).resolve().parents[2]
+        actual = {path.name for path in (repo_root / "papers" / "inference").iterdir() if path.is_dir()}
+        self.assertEqual(actual, set(CANONICAL_INFERENCE_LINEAGES))
 
     def test_candidate_paper_path_is_normalized_to_canonical_directory(self) -> None:
         self.assertEqual(
