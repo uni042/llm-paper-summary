@@ -12,11 +12,14 @@
   "source_url": "https://www.semanticscholar.org/paper/f8b43d078a89a2622af43b6f1855dffcece37dbb",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2607.04164-brownoutmoe-structure-aware-expert-grouping-for-efficient-and-accurate-llm-web-based-services.md",
   "selection_reason": "Structure-aware expert grouping for MoE serving that targets fragmented expert usage and underutilization; reports up to 2.24x throughput improvement with controlled accuracy degradation.",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-20T20:57:11+00:00"
+  "created_at": "2026-09-20T20:57:11+00:00",
+  "completed_at": "2026-09-24T15:49:14+00:00",
+  "blocker": "The canonical arXiv record for arXiv:2607.04164 was reachable, but the arXiv PDF/experimental HTML full-text routes were not retrievable in this worker environment and no author/institution-hosted primary full text was found. The available ResearchGate record explicitly has no file and third-party mirrors/previews are not sufficient primary evidence for a workflow-v10 five-slot research record.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-preload-45d47f580075d5ff79492a68.json"
 }
