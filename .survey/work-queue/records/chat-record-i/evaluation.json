@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-3a8d1487d30c19a489a3f0c1","job_id":"job-research-1ba7917ba260cdda","data":{"hardware":"論文の主評価はモデル能力比較で、特定画像処理装置の提供性能を主目的としない。70億規模Dreamと80億LLaDA、70億Qwen2.5、80億LLaMA3などを同一評価手順で比較する。","software":"Dream-BaseとDream-Instructを評価し、基盤比較にLLaDA 8B、Qwen2.5 7B、LLaMA3 8B、Mistral 7B、DeepSeek 7Bなどを用いる。公開実装とモデル重みを提供する。","methodology":"一般理解はMMLU、BBH、ARC-E/C、HellaSwag、WinoGrande、PIQA、RACE、数学・科学はGSM8K、MATH、GPQA、コードはHumanEval、MBPP、計画はCountdown、Sudoku、Trip planningを用いる。主要4モデルは同一評価手順で比較する。基盤モデルでは拡散方式間と自己回帰方式間を比較し、指示版では180万対・三周の教師あり調整後に標準指示課題を測る。追加分析として自己回帰初期化の有無、計画能力、推論反復数による品質速度曲線、任意順生成を調べる。","scope":"自己回帰基盤のQwen2.5が18兆トークン学習なのに対しDreamの追加拡散学習は約0.6兆で、総事前学習計算を完全に同条件比較したものではない。Dream-Instructは教師あり調整のみで、強化学習済みQwen2.5-Instructとの後学習量も異なる。並列復元は一段で複数トークンを扱えるが、実際の速度は反復数、系列長、カーネル実装に依存し、単純にトークン並列数がそのまま速度倍率になるわけではない。"},"reservation":{"claim_id":"claim-preload-3a8d1487d30c19a489a3f0c1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-3ee424a7b2b36c6924101628",
+  "job_id": "job-research-41d37332b16e3d57",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-3ee424a7b2b36c6924101628",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

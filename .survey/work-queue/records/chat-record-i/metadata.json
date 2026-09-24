@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-3a8d1487d30c19a489a3f0c1","job_id":"job-research-1ba7917ba260cdda","data":{"canonical_id":"arXiv:2508.15487","arxiv_id":"2508.15487","doi":"10.48550/arXiv.2508.15487","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Dream 7B: Diffusion Large Language Models","summary":"Dream 7Bは自己回帰モデルの左から右への逐次生成ではなく、マスクされた系列全体を反復的に復元する離散拡散型の70億パラメータ言語モデルである。Qwen2.5-7Bの重みを予測位置のずれを保ったまま初期値として使い、各マスク位置が周囲から得られる情報量に応じて雑音重みを変える文脈適応型トークン雑音再配分を導入する。約5800億トークンの事前学習でLLaDA 8Bを多くの課題で上回り、Qwen2.5-7Bに近い一般性能を維持しつつ、Sudoku 81.0対21.0、Countdown 16.0対6.2、旅行計画17.8対3.6と計画課題で大幅に上回る。反復回数を変えることで品質と速度を連続的に調整でき、任意順生成や穴埋めも同一モデルで行える。","list_summary":"自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。","authors":["Jiacheng Ye","Zhihui Xie","Lin Zheng","Jiahui Gao","Zirui Wu","Xin Jiang","Zhenguo Li","Lingpeng Kong"],"authors_affiliations":"The University of Hong Kong; Huawei Noah’s Ark Lab","published":"2025-08-21","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion","topics":["拡散言語モデル","並列生成","反復復元","計画能力","品質速度調整"],"importance":"拡散型言語モデルを70億規模で公開し、自己回帰重み再利用によって学習費を抑えながら一般課題の差を縮めた基礎モデルである。後続の拡散LLMサービング、並列復号、反復数適応の比較基盤になる。","implementation":"Dream-BaseとDream-Instructのモデル、実装、Hugging Face重みを公開。Qwen2.5-7Bと同じTransformer構成を用い、離散マスク拡散の学習・復号へ変更する。","hardware_evaluation":"本論文はモデル能力と生成方式の評価が中心で、特定サービングGPUの詳細なエンドツーエンド速度測定より、標準課題、計画課題、推論反復数による品質速度特性を扱う。","quality_effect":"一般課題ではQwen2.5-7Bと近いが一部劣る一方、計画課題で大幅に上回る。Dream-Instructは軽量SFTのみのため、SFT+RL済みQwen2.5-Instructには数学などで差が残る。","source":"https://arxiv.org/abs/2508.15487","sources":["https://arxiv.org/abs/2508.15487","https://arxiv.org/html/2508.15487","https://github.com/DreamLM/Dream"],"code":"https://github.com/DreamLM/Dream","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-3a8d1487d30c19a489a3f0c1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-preload-3ee424a7b2b36c6924101628",
+  "job_id": "job-research-41d37332b16e3d57",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-3ee424a7b2b36c6924101628",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
