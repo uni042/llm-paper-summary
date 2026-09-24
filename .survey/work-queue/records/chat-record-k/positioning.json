@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-886ad02757673f91debfda1d",
-  "job_id": "job-research-df8b6eaefcbe8aad",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-886ad02757673f91debfda1d",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-886ad02757673f91debfda1d","job_id":"job-research-df8b6eaefcbe8aad","data":{"limitations":"実験は通信byte量とtask qualityを中心にし、実WANのRTT、jitter、帯域競合、cloud queueing、GPU inference latencyを含むend-to-end latencyを直接評価しない。confidenceが真のcorrectnessと一致する保証はなく、model familyやdomain shiftでcalibrationが変わり得る。queue分位点は最近の分布へ追随するが、急激な分布変化や少数sample時の安定性は限定的。各tierで再推論するため、offloadされた要求は下位計算も支払う。","differences":"CloudServeは全要求を最高tierへ送るため品質は高いが通信が最大。ColServeは品質を見ず固定確率で送る。CasServeはconfidenceを使うがtier/taskごとの固定thresholdを多数調整する。RecServeはtask別confidenceを定義しつつ、閾値そのものを直近履歴の分位点へ置換して単一βでoffload率を制御する点が差分である。GPU tensor offloadとは異なりmodelの一部ではなくrequest全体を別nodeの別modelへ送る。","implementation_status":"著者公開GitHubにRecServe codeがあり、8 datasetsと複数model tierの評価を再現可能な形で提示する。理論解析とablationも含むが、production WANでのonline deployment、failure injection、real traffic traceによるlatency検証は今後の課題。論文ではupper-tier unavailabilityやcommunication budget制約への拡張方針も議論する。","research_positioning":"本サーベイではdevice-edge-cloud型の分散LLM serving系統として、GPU/CPU/SSD階層offloadとは別の『計算場所の階層化』を扱う論文に位置付ける。共通点は高価な上位資源を全要求へ使わず、安価な近端資源で処理できるworking setを選別する点にある。confidence distributionをrouting制御へ使う設計は、将来のheterogeneous accelerator、remote expert、prefill/decode分離環境でnetwork costと品質を同時に最適化する際の基礎比較になる。"},"reservation":{"claim_id":"claim-preload-886ad02757673f91debfda1d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
