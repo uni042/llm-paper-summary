@@ -351,7 +351,7 @@
       }
     ]
   },
-  "generated_at": "2026-09-24T04:40:05+00:00",
+  "generated_at": "2026-09-24T04:40:22+00:00",
   "lane_available": {
     "discovery": true,
     "research": true
@@ -3580,7 +3580,16 @@
         "pipeline_order": 4,
         "pipeline_position": 2,
         "pipeline_role": "standby",
-        "record_write_allowed": false,
+        "record_bank": "f",
+        "record_bank_root": ".survey/work-queue/records/chat-record-f",
+        "record_slot_paths": {
+          "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+          "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+          "positioning": ".survey/work-queue/records/chat-record-f/positioning.json",
+          "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+          "results": ".survey/work-queue/records/chat-record-f/results.json"
+        },
+        "record_write_allowed": true,
         "resume_without_new_claim": true,
         "source_actual_invocation_start": "2026-09-24T04:30:00+00:00",
         "source_run_key": "scheduled-chat-30-20260924T043000Z-6f2c",
@@ -3635,7 +3644,16 @@
         "pipeline_order": 5,
         "pipeline_position": 3,
         "pipeline_role": "standby",
-        "record_write_allowed": false,
+        "record_bank": "i",
+        "record_bank_root": ".survey/work-queue/records/chat-record-i",
+        "record_slot_paths": {
+          "evaluation": ".survey/work-queue/records/chat-record-i/evaluation.json",
+          "metadata": ".survey/work-queue/records/chat-record-i/metadata.json",
+          "positioning": ".survey/work-queue/records/chat-record-i/positioning.json",
+          "problem_method": ".survey/work-queue/records/chat-record-i/problem_method.json",
+          "results": ".survey/work-queue/records/chat-record-i/results.json"
+        },
+        "record_write_allowed": true,
         "resume_without_new_claim": true,
         "source_actual_invocation_start": "2026-09-24T04:30:00+00:00",
         "source_run_key": "scheduled-chat-30-20260924T043000Z-6f2c",
@@ -3690,7 +3708,16 @@
         "pipeline_order": 6,
         "pipeline_position": 4,
         "pipeline_role": "standby",
-        "record_write_allowed": false,
+        "record_bank": "j",
+        "record_bank_root": ".survey/work-queue/records/chat-record-j",
+        "record_slot_paths": {
+          "evaluation": ".survey/work-queue/records/chat-record-j/evaluation.json",
+          "metadata": ".survey/work-queue/records/chat-record-j/metadata.json",
+          "positioning": ".survey/work-queue/records/chat-record-j/positioning.json",
+          "problem_method": ".survey/work-queue/records/chat-record-j/problem_method.json",
+          "results": ".survey/work-queue/records/chat-record-j/results.json"
+        },
+        "record_write_allowed": true,
         "resume_without_new_claim": true,
         "source_actual_invocation_start": "2026-09-24T04:30:00+00:00",
         "source_run_key": "scheduled-chat-30-20260924T043000Z-6f2c",

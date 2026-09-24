@@ -2,25 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-preload-54435f3f1e70e6def8dfca02",
-  "job_id": "job-research-0023a21511f803e1",
-  "data": {
-    "overview": "同じ2 GPU資源で比較すると、prefill/decode分離は常に高速でも省電力でもない。batch 2〜64では2-GPU colocationが全条件でTTFT最良となり、分離側は一台のprefill GPUへ全要求が集中する負荷とKV転送費を払う。一方、colocationはbatch 32付近から28GB/GPUのKV容量を超え、追い出しと再計算でTPOT・throughput・energyが急激に悪化するため、高負荷ではdecode専用GPUを持つ分離が有利になる。GPU直結、CPU DRAM、NVMeの順で転送階層が深くなるほど概ね性能と非GPUエネルギーが悪化した。GPU周波数を段階別に独立設定できても、評価した分離構成はcolocationの総エネルギーを下回らず、分離の価値は負荷、KV容量、転送媒体、TTFT/TPOT SLOの組合せで決まる。",
-    "key_results": [
-      {"metric": "TTFT", "value": "batch 2〜64の全測定点でco-2gpusが最良", "baseline": "dis-gpu / dis-cpu / dis-disk", "condition": "入力16,384、出力256、2×A100 40GB", "interpretation": "同GPU台数ならcolocationは各GPUが半batchだけprefillするため、分離の干渉除去より負荷分散の効果が大きかった。"},
-      {"metric": "大batch時TPOT", "value": "co-2gpusはbatch 32超で急増", "baseline": "分離3構成", "condition": "各colocated GPUのKV割当28GB、総KV 3.5〜112GB", "interpretation": "KV容量超過で追い出し・再計算が発生し、decode専用メモリを持つ分離が高負荷で有利になる境界を示す。"},
-      {"metric": "分離内の転送経路", "value": "dis-gpuがTTFT・throughput・energyで概ね最良", "baseline": "dis-cpu / dis-disk", "condition": "PCIe P2P、CPU DRAM、NVMeを比較", "interpretation": "KVが深いメモリ階層を通るほど転送時間とCPU/DRAM/disk由来エネルギーが追加される。"},
-      {"metric": "DVFS Pareto", "value": "0.36〜1.26GHzで多くがU字型、約0.81GHz以降は限界改善", "baseline": "各配置・転送構成", "condition": "batch 16、入力16,384、出力256", "interpretation": "低周波では周波数上昇による時間短縮が電力増を相殺するが、一定点以降は性能改善が飽和してエネルギーが増える。"},
-      {"metric": "独立周波数制御の省電力", "value": "評価した分離構成はいずれもcolocationより低エネルギーにならず", "baseline": "co-1gpu / co-2gpus", "condition": "prefill/decode別のTTFT-energy・TPOT-energy Pareto比較", "interpretation": "段階ごとの周波数自由度だけでは、分離の長いprefill時間とKV移送に伴う総エネルギーを相殺できなかった。"}
-    ],
-    "negative_results": [
-      {"name": "分離のTTFT優位が成立しない", "description": "既存研究で示されたprefill専用GPUの優位は、同GPU台数の2-GPU colocationを基準にすると本条件では逆転した。資源量を揃えない基準から分離一般の優位を推定できない。"},
-      {"name": "独立DVFSでも省電力にならない", "description": "prefillとdecodeを別周波数へできるにもかかわらず、すべてのKV転送経路で分離構成の総エネルギーはcolocationを下回らなかった。"},
-      {"name": "NVMeとCPU経路の予想外挙動", "description": "dis-diskのTPOTがdis-cpuより速い傾向を示し、著者は原因を未解明としている。階層の深さだけから全指標を単調予測できない。"},
-      {"name": "一般化範囲", "description": "2×A100 40GB、PCIe Gen3、Llama-3.2-3B、固定長synthetic workloadであり、NVLink/RDMA、multi-node、実トレース、大規模モデルやMoEでは境界が変わり得る。"}
-    ],
-    "interpretation": "この結果の要点は『分離が悪い』ではなく、分離が二つの相反する効果を持つことである。段階干渉を除きdecode専用KV容量を確保できる一方、prefill要求を一台へ集中させ、KVを別GPUへ運ぶ必要がある。低〜中負荷では後者が勝って2-GPU colocationのTTFTとエネルギーが良く、高負荷でcolocationのKV容量が飽和すると前者が効いてTPOTで分離が優位になる。CPU/SSDオフロードも容量を増やすだけでなくデータ移送時間と非GPU電力を追加するため、容量不足による再計算を避ける価値が移送費を上回る領域でのみ有効である。",
-    "quality_impact": "モデル、トークン列、生成アルゴリズム自体は同じで、配置・KV転送経路・GPU周波数を変えるシステム評価なので、出力品質を近似で犠牲にする方式ではない。評価はTTFT、TPOT、throughput、joule/tokenを対象とし、実アプリケーションの回答品質やユーザー評価は測っていない。"
-  },
-  "reservation": {"claim_id": "claim-preload-54435f3f1e70e6def8dfca02", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-preload-a784a131d1f7797456a98b2e",
+  "job_id": "job-research-52b6b5d31a9cc426",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-a784a131d1f7797456a98b2e",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
 }
