@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-preload-a3030e74bc5e746f460874ab",
+  "claim_id": "claim-preload-a3030e74bc5e746f460874ab",
+  "job_id": "job-research-5bd282d7c260721a",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "一次資料全文を正規取得経路で確保できなかったため。DOIのACM本文ページとPDFはこの実行環境から403/取得不能で、著者公開ページの論文PDFリンクも同じACM DOIを指していた。Semantic Scholar由来のjob sourceと公開書誌ページからは抄録・書誌のみ確認できたが、5スロットを一次資料全文から作成するのに必要な手法・評価表・限界の全文証拠を取得できないため推測でResearchを完成させない。",
+  "retrieval_evidence": [
+    {"route":"doi_landing","url":"https://dl.acm.org/doi/10.1145/3806645.3807596","result":"HTTP 403 / full text unavailable in current environment"},
+    {"route":"doi_pdf","url":"https://dl.acm.org/doi/pdf/10.1145/3806645.3807596","result":"PDF URL inaccessible in current environment"},
+    {"route":"author_publication_page","url":"https://lingfenghsiang.github.io/","result":"publication entry found, but PDF link resolves to the same inaccessible ACM DOI"},
+    {"route":"job_primary_index","url":"https://www.semanticscholar.org/paper/04f3ee7dd762dff9b6aad25bfb930e1984f74a09","result":"metadata/abstract route only; insufficient primary full-text evidence"}
+  ]
+}
