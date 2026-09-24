@@ -1,0 +1,13 @@
+{
+  "schema_version":1,
+  "request_id":"20260924T181950Z-scheduled-chat-30-7c41a2c-rs3",
+  "run_key":"scheduled-chat-30-20260924T085541Z-7c41a2c",
+  "worker_id":"scheduled-chat-30",
+  "worker_kind":"scheduled_chat",
+  "scheduled_slot":"30",
+  "actual_invocation_start":"2026-09-24T17:55:41+09:00",
+  "runtime_condition":"platform_context_limit",
+  "runtime_condition_attempts":2,
+  "runtime_condition_event":"platform_tool_call_rejected",
+  "runtime_condition_detail":"platform_tool_call_rejected: web.run returned exactly: Too many tokens. You have called web.run too many times. Do not call this tool again. A second primary-source retrieval cannot be attempted because the platform explicitly forbids further web.run calls in this turn. All current record/preflight/submission state is durably stored in GitHub."
+}
