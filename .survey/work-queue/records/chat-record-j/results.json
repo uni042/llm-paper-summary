@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-preload-d0b404e285d49a0ce5994e57",
-  "job_id": "job-research-ed39f178b202751f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-d0b404e285d49a0ce5994e57",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-d0b404e285d49a0ce5994e57","job_id":"job-research-ed39f178b202751f","data":{"overview":"同じK/V bit budgetでBlock-GTQはuniform TQ-MSEよりRoPE-logitを大幅に保ち、2/3 b/dim K-onlyの双方で10モデル全367 layer比較に勝ち、MAEを32〜80%削減する。Llama-3.1-8BのK2V2ではNIAH平均を70.6→97.4、LongBench-ENを36.87→53.31へ改善する。packed K3V3 servingはQwen2.5-3B・単一H800の128Kでfp16 FA2 70.96msに対し52.95ms、peak memory 56.31GB→19.85GB、KV footprint 3.24倍圧縮を達成し、256K/512Kではfp16がOOMする一方で動作する。","key_results":[{"metric":"RoPE-logit MAE","value":"uniform TQ-MSE比32〜80%削減、367/367 layerで勝利","baseline":"uniform-allocation TQ-MSE","condition":"10-model panel、K-only 2/3 b/dim","interpretation":"RoPE block感度に沿ったbit再配分がattention interfaceを一貫して保つ。"},{"metric":"NIAH average","value":"97.4","baseline":"TQ-MSE 70.6; fp16 99.6","condition":"Llama-3.1-8B-Instruct、K2V2","interpretation":"厳しい2bit budgetでもretrievalをfp16近傍に維持する。"},{"metric":"LongBench-EN average","value":"53.31","baseline":"TQ-MSE 36.87; fp16 59.83","condition":"Llama-3.1-8B-Instruct、K2V2、8 tasks","interpretation":"logit fidelity改善が自然な長文脈生成taskへ波及する。"},{"metric":"128K decode latency / peak memory","value":"52.95 ms / 19.85 GB","baseline":"fp16 FA2 70.96 ms / 56.31 GB","condition":"Qwen2.5-3B-Instruct、K3V3、single H800","interpretation":"packed cacheを直接読むことで圧縮を容量だけでなく帯域高速化へ変換する。"}],"negative_results":"短文脈T≤64Kではpacked decodeのunpack固定費によりfp16 FA2より遅い。uniform TQ-MSEは128KでBlock-GTQより約14%速く3.88倍圧縮だがPPLが大きく崩れる。Block-GTQもKey側だけのbit allocationなのでValue感度が高いbackboneではno-buffer条件で品質差が残り、論文はV-side allocatorを今後の課題とする。","interpretation":"本研究の重要点は非一様bit allocation自体だけでなく、RoPEの数学構造からattention logit感度を定義し、そのscheduleをmixed-rate packed layoutと融合kernelへ接続したことにある。長文脈ほどKV bandwidthが支配的になるため、圧縮decode overheadを償却して速度・容量双方の利益が現れる。","quality_impact":"AIME 2024/2025でDeepSeek-R1-Distill-Qwen-7B K3V2 no-bufferは51.7/37.5でfp16 54.2/37.9に近い一方、uniform TQ-MSEは0/0へ崩れる。量子化bit数だけでなくbitをRoPE blockへどう配るかが長いreasoning chainの安定性に強く影響する。"},"reservation":{"claim_id":"claim-preload-d0b404e285d49a0ce5994e57","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
