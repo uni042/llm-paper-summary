@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.survey/scripts/survey.py'
+      - '.survey/scripts/paper_taxonomy.py'
       - '.github/workflows/rebuild-paper-indexes.yml'
   workflow_dispatch:
 

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Canonical paper-taxonomy helpers shared by queue ingestion and derived indexes.
 
-Historical physical directories created before the current Inference taxonomy
-stabilized are storage locations, not independent user-facing lineages. Derived
-views collapse them onto the canonical taxonomy, and new Discovery candidates
-are normalized before Research jobs are created so fragmentation does not grow.
+Historical Inference lineage names are accepted only as compatibility aliases
+for stale jobs and references. Physical repository storage uses the canonical
+taxonomy, and new Discovery candidates are normalized before Research jobs are
+created so directory fragmentation does not grow again.
 """
 from __future__ import annotations
 
