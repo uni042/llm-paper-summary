@@ -118,6 +118,60 @@ class GenericSurveyWorkerRunTests(unittest.TestCase):
             self.assertIn("最新観測run: **2026-09-17 15:00 JST** / worker `scheduled-chat-00`", text)
             self.assertIn("immutable submission: **2件** / 検証済み成功: **2件**", text)
 
+    def test_current_submission_prefers_explicit_run_identity_over_claim_inference(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            scripts = repo / ".survey/scripts"
+            scripts.mkdir(parents=True)
+            for name in ("build_status_dashboard.py", "render_status_dashboard_core.py", "render_status_dashboard.py"):
+                source = SCRIPT.parent / name
+                (scripts / name).write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+
+            job_id = "job-current-explicit"
+            attempt_id = "attempt-current-explicit"
+            claim_id = "claim-current-explicit"
+            paper = "papers/inference/current-explicit.md"
+            submission = f".survey/work-queue/submissions/research/{attempt_id}.json"
+            result = f".survey/work-queue/results/research/{attempt_id}.json"
+            _write_json(repo / f".survey/work-queue/jobs/{job_id}.json", {
+                "job_id": job_id, "type": "research", "status": "completed",
+                "canonical_id": "arXiv:2609.99111", "title": "Explicit Identity Paper",
+                "paper_path": paper, "completed_at": "2026-09-17T06:36:00+00:00",
+            })
+            _write_json(repo / submission, {
+                "kind": "research", "attempt_id": attempt_id, "job_id": job_id,
+                "claim_id": claim_id, "worker_id": "scheduled-chat-30",
+                "run_key": "scheduled-chat-30-20260917T063223Z-4f7c21",
+                "scheduled_slot": "30",
+                "actual_invocation_start": "2026-09-17T06:32:23+00:00",
+                "paper_path": paper,
+            })
+            _write_json(repo / f".survey/work-queue/claims/{job_id}.json", {
+                "claim_id": claim_id, "attempt_id": attempt_id, "job_id": job_id,
+                "worker_id": "scheduled-chat-30",
+                "claimed_at": "2026-09-17T07:05:00+00:00",
+                "expires_at": "2026-09-17T08:30:00+00:00",
+            })
+            _write_json(repo / result, {
+                "ok": True, "attempt_id": attempt_id, "job_id": job_id,
+                "job_type": "research", "job_status": "completed",
+                "artifact": {"paper": paper}, "submission": submission,
+                "processed_at": "2026-09-17T06:36:00+00:00",
+            })
+            path = repo / paper
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("# paper", encoding="utf-8")
+
+            spec = importlib.util.spec_from_file_location("status_explicit_identity", scripts / "render_status_dashboard.py")
+            module = importlib.util.module_from_spec(spec)
+            assert spec.loader is not None
+            spec.loader.exec_module(module)
+            text = module.build_dashboard(repo, now=datetime(2026, 9, 17, 7, 10, tzinfo=timezone.utc))
+
+            self.assertIn("最新観測run: **2026-09-17 15:32 JST** / worker `scheduled-chat-30`", text)
+            self.assertNotIn("最新観測run: **2026-09-17 16:30 JST**", text)
+
+
     def test_current_discovery_run_key_timestamp_is_recognized(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
@@ -132,7 +186,7 @@ class GenericSurveyWorkerRunTests(unittest.TestCase):
                 "operation": "submit_discovery_round",
                 "candidates": [],
                 "discovery_stats": {
-                    "run_key": "scheduled-chat-00-20260917T060100Z",
+                    "run_key": "scheduled-chat-00-20260917T060100Z-a1b2c3",
                     "round": "round-current",
                     "axis": "current discovery",
                     "candidate_count": 0,
