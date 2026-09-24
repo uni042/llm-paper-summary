@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 21:03:58 JST**
+> 自動生成: **2026-09-24 21:16:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（12時間28分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（12時間40分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -71,8 +71,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **11** | **3** | **3** | **0** | **132** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **9** | **1** | **1** | **0** | **0** | **0** | **0** |
-| 合計 | **20** | **4** | **4** | **0** | **132** | **0** | **0** |
+| Discovery | **8** | **1** | **1** | **0** | **0** | **0** | **0** |
+| 合計 | **19** | **4** | **4** | **0** | **132** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -171,10 +171,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json`
   - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
-- **09-24 15:04:55 JST** job `job-d99c1a1848cb9828` / 候補 **1件**
-  - result: `.survey/work-queue/results/20260924T060123Z-scheduled-chat-00-r1.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/20260924T060123Z-scheduled-chat-00-r1.json`
-  - 探索軸: backward structured repository references
 
 ### 直近タスク
 
@@ -288,7 +284,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1045** |
+| inference/training/survey配下の論文Markdown実体 | **1023** |
 
 ### immutable submissionの未照合
 
