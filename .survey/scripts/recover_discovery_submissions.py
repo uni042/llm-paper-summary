@@ -86,6 +86,21 @@ def _result_allows_recovery(existing_result: dict) -> bool:
     return "job already terminal" in error or "unknown job_id" in error or "job_id required" in error
 
 
+def _obsolete_precheck_isolation_can_retry(
+    existing_result: dict,
+    sub: dict,
+    source_submission: str,
+) -> bool:
+    """Retry only a precheck isolation that the historical boundary no longer requires."""
+    if existing_result.get("ok") is not False:
+        return False
+    if existing_result.get("error_code") != "discovery_precheck_required":
+        return False
+    probe = dict(sub)
+    probe["_file"] = source_submission
+    return not queue_worker._discovery_precheck_required(probe)
+
+
 def _old_discovery_job(sub: dict) -> dict:
     submitted_job_id = sub.get("job_id")
     if not isinstance(submitted_job_id, str) or not submitted_job_id:
@@ -245,13 +260,16 @@ def recover(root: Path) -> dict[str, Any]:
     for submission_path in _iter_discovery_submission_paths():
         result_path = queue_worker.RESULTS / submission_path.name
         existing_result = _read(result_path, {}) or {}
-        if not _result_allows_recovery(existing_result):
-            continue
 
         sub = _read(submission_path, {}) or {}
         if not isinstance(sub, dict):
             continue
         source_submission = submission_path.relative_to(queue_worker.ROOT).as_posix()
+        if (
+            not _result_allows_recovery(existing_result)
+            and not _obsolete_precheck_isolation_can_retry(existing_result, sub, source_submission)
+        ):
+            continue
 
         try:
             result = _recover_self_describing_round(sub, source_submission, existing_result, st)
