@@ -29,9 +29,9 @@ def make_args(**overrides):
         handoff_safe=False,
         work_mode="unknown",
         research_audit_completed_this_invocation=0,
-        research_minimum_completions=3,
+        research_minimum_completions=5,
         discovery_rounds_completed=0,
-        discovery_min_rounds=4,
+        discovery_min_rounds=8,
     )
     data.update(overrides)
     return argparse.Namespace(**data)
@@ -86,7 +86,7 @@ class RunFinalizationGateTests(unittest.TestCase):
             claim_state_checked=True,
             submission_state_checked=True,
             work_mode="discovery",
-            discovery_rounds_completed=4,
+            discovery_rounds_completed=8,
             discovery_evaluation_pending=True,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
@@ -169,7 +169,7 @@ class RunFinalizationGateTests(unittest.TestCase):
             submission_state_checked=True,
             work_mode="research",
             research_audit_completed_this_invocation=0,
-            research_minimum_completions=3,
+            research_minimum_completions=5,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
         self.assertFalse(result["finalization_permit"]["issued"])
@@ -184,7 +184,7 @@ class RunFinalizationGateTests(unittest.TestCase):
             submission_state_checked=True,
             work_mode="discovery",
             discovery_rounds_completed=2,
-            discovery_min_rounds=4,
+            discovery_min_rounds=8,
         ))
         self.assertEqual(result["decision"], "MUST_CONTINUE")
         self.assertFalse(result["finalization_permit"]["issued"])
