@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-886ad02757673f91debfda1d","job_id":"job-research-df8b6eaefcbe8aad","data":{"hardware":"device-edge-cloud三層を異なるmodel能力で模擬する。論文の主要評価はrouting policyのaccuracy/BLEUと通信byte量であり、特定GPUのkernel throughputやTTFTを主指標にはしない。","software":"分類tierはDistilRoBERTa、RoBERTa-base、RoBERTa-large、生成tierはT5-small、opus-mt、fairseq WMT19 transformer。各modelは公式手順でfine-tuneしHugging Faceのpretrained weightsを利用する。RecServe codeを公開する。","methodology":"Seq2ClassはIMDB、SST-2、Rotten Tomatoes、Yelp Polarity、Amazon Polarityの5件、Seq2SeqはWMT16、WMT19、OPUS100の3件を用いる。比較はEndServe、EdgeServe、CloudServe、品質非依存確率offloadのColServe、固定confidence threshold cascadeのCasServe。RecServeはk=10000、β∈{0.1,0.3,0.5}を主設定とし、accuracy/BLEU、各tierおよび総通信量、precision-communication trade-offを測る。ablationではβ、queue capacity k、cloud model変更を検証する。","scope":"通信burdenは転送byte量で評価し、実ネットワークの遅延・jitter・輻輳、GPU queueing、model loading、KV transferなどend-to-end serving latencyは主実験に含まれない。理論解析も隣接node通信やqueue管理費を単純化する。三層modelの品質差とdataset分布にconfidence calibrationが依存するため、異なるmodel familyや動的network状態への一般化は追加検証が必要である。"},"reservation":{"claim_id":"claim-preload-886ad02757673f91debfda1d","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-7567c60b834735ea01f92a82",
+  "job_id": "job-research-7ecc4d7949c81534",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-7567c60b834735ea01f92a82",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

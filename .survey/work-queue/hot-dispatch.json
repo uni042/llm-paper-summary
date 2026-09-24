@@ -6,7 +6,7 @@
     "forward": [],
     "normal": []
   },
-  "generated_at": "2026-09-24T08:51:18+00:00",
+  "generated_at": "2026-09-24T08:56:38+00:00",
   "lane_available": {
     "discovery": false,
     "research": true
@@ -3408,7 +3408,16 @@
         "pipeline_order": 7,
         "pipeline_position": 4,
         "pipeline_role": "standby",
-        "record_write_allowed": false,
+        "record_bank": "k",
+        "record_bank_root": ".survey/work-queue/records/chat-record-k",
+        "record_slot_paths": {
+          "evaluation": ".survey/work-queue/records/chat-record-k/evaluation.json",
+          "metadata": ".survey/work-queue/records/chat-record-k/metadata.json",
+          "positioning": ".survey/work-queue/records/chat-record-k/positioning.json",
+          "problem_method": ".survey/work-queue/records/chat-record-k/problem_method.json",
+          "results": ".survey/work-queue/records/chat-record-k/results.json"
+        },
+        "record_write_allowed": true,
         "resume_without_new_claim": true,
         "source_actual_invocation_start": "2026-09-24T08:28:00+00:00",
         "source_run_key": "scheduled-chat-30-20260924T081700Z-7f2c91",
