@@ -46,6 +46,10 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn("chat-payload.md", validator)
         self.assertNotIn("def assemble(", validator)
 
+        reference_pool = (ROOT / ".survey/scripts/reference_pool.py").read_text(encoding="utf-8")
+        self.assertNotIn("DEFAULT_LEDGER =", reference_pool)
+        self.assertNotIn('--ledger", help="deprecated alias', reference_pool)
+
         worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
         self.assertIn("workflow v10", worker)
         self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)

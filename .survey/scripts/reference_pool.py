@@ -24,8 +24,6 @@ import citation_graph
 SOURCE_URL = "repository://structured-references"
 DEFAULT_UNRELATED_LEDGER = Path(".survey/work-queue/reference-curation/unrelated-papers.json")
 DEFAULT_BORDERLINE_LEDGER = Path(".survey/work-queue/reference-curation/borderline-papers.json")
-# Backward-compatible alias for the first implementation.
-DEFAULT_LEDGER = DEFAULT_UNRELATED_LEDGER
 
 
 def _candidate_record(ref: Any, canonical_id: str, identities: list[str]) -> dict[str, Any]:
@@ -289,7 +287,6 @@ def build_reference_pool(
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".")
-    ap.add_argument("--ledger", help="deprecated alias of --unrelated-ledger")
     ap.add_argument("--unrelated-ledger")
     ap.add_argument("--borderline-ledger")
     ap.add_argument(
@@ -302,13 +299,10 @@ def main() -> int:
     args = ap.parse_args()
     if args.offset < 0 or args.limit <= 0:
         ap.error("offset must be >= 0 and limit must be > 0")
-    if args.ledger and args.unrelated_ledger:
-        ap.error("use only one of --ledger and --unrelated-ledger")
-
     root = Path(args.root).resolve()
     unrelated = (
-        Path(args.unrelated_ledger or args.ledger).resolve()
-        if (args.unrelated_ledger or args.ledger)
+        Path(args.unrelated_ledger).resolve()
+        if args.unrelated_ledger
         else root / DEFAULT_UNRELATED_LEDGER
     )
     borderline = (
