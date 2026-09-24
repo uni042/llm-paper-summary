@@ -4,7 +4,136 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-b1e41ea993ce770bb187a178",
   "job_id": "job-research-77f5ab6e591a0176",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2310.01801",
+    "arxiv_id": "2310.01801",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
+    "title": "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs",
+    "summary": "自己回帰型LLMでは過去トークンの鍵・値をKVキャッシュへ保持して再計算を避ける一方、系列長とモデル規模に比例してGPUメモリを圧迫する。FastGenは、各注意ヘッドの注意構造が局所性、特殊トークン、句読点、頻出トークン、広域注意などで異なることをプロンプト符号化時に一度だけ診断し、ヘッドごとに最も適したKVキャッシュ圧縮方針を選ぶ。追加学習なしで既存モデルへ適用でき、Llama 1の7B〜65Bと複数生成課題で評価した。65Bでは回復率98%設定でKVキャッシュを36.0%削減し、完全キャッシュとの対比較勝率49.8%を維持した。Llama 1-7Bの実行時間評価では、Hugging Face Accelerateに対して16.0〜55.0%、DeepSpeedに対して3.2〜35.8%の短縮を示し、長い生成ほど効果が大きい。",
+    "list_summary": "FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。",
+    "authors": [
+      "Suyu Ge",
+      "Yunan Zhang",
+      "Liyuan Liu",
+      "Minjia Zhang",
+      "Jiawei Han",
+      "Jianfeng Gao"
+    ],
+    "authors_affiliations": "Suyu Ge、Jiawei HanはUniversity of Illinois Urbana-Champaign。Yunan Zhang、Liyuan Liu、Minjia Zhang、Jianfeng GaoはMicrosoft。Suyu Ge、Yunan Zhang、Liyuan Liuは同等貢献。",
+    "published": "2023-10-03",
+    "publication": "ICLR 2024",
+    "publication_type": "Conference paper",
+    "publication_status": "Published at ICLR 2024; arXiv v4",
+    "publication_version": "v4",
+    "lineage": "KVキャッシュ最適化／適応圧縮",
+    "topics": [
+      "KVキャッシュ圧縮",
+      "注意ヘッド解析",
+      "トークン追い出し",
+      "長文生成",
+      "推論メモリ"
+    ],
+    "importance": "高",
+    "hardware_evaluation": "実機",
+    "hardware_details": "品質・メモリ評価はNVIDIA A100 80GBを8基使用。エンドツーエンド遅延比較は同一のNVIDIA V100上でHugging Face Accelerate、DeepSpeed、FastGenを比較した。",
+    "quality_effect": "KV状態を追い出す近似方式なので完全キャッシュと数学的に同一ではない。Llama 1と微調整版でGSM8K、HumanEval、NQ、TQA、AlpacaEvalを評価し、完全キャッシュとの品質差を直接測る。65Bでは回復率98%設定で36.0%を削減して対比較勝率49.8%、回復率95%では44.9%削減で44.2%となるなど、圧縮率と品質の明示的な交換関係がある。",
+    "storage_targets": [
+      "GPU上のKVキャッシュ"
+    ],
+    "bottlenecks": [
+      "KVキャッシュのGPUメモリ消費",
+      "CPU/NVMeオフロード時のPCIe帯域",
+      "長系列での注意計算とメモリ容量"
+    ],
+    "evidence_locations": [
+      "第3.3節の一回プロファイリング",
+      "第3.4節の圧縮方針",
+      "第4節の注意構造の多様性・安定性",
+      "第5.1節の品質と圧縮率",
+      "第5.2節のメモリ削減",
+      "第5.3節の遅延",
+      "第5.4節のプロファイリング費用",
+      "付録Aのアブレーション"
+    ],
+    "references": [
+      {
+        "canonical_id": "arXiv:1708.06834"
+      },
+      {
+        "canonical_id": "arXiv:2107.03374"
+      },
+      {
+        "canonical_id": "arXiv:1904.10509"
+      },
+      {
+        "doi": "10.18653/v1/W19-4828"
+      },
+      {
+        "canonical_id": "arXiv:2110.14168"
+      },
+      {
+        "doi": "10.18653/v1/N19-1423"
+      },
+      {
+        "canonical_id": "arXiv:1904.00761"
+      },
+      {
+        "canonical_id": "arXiv:1904.09751"
+      },
+      {
+        "canonical_id": "arXiv:2304.07327"
+      },
+      {
+        "doi": "10.18653/v1/D19-1445"
+      },
+      {
+        "canonical_id": "arXiv:2305.17118"
+      },
+      {
+        "canonical_id": "arXiv:2304.08467"
+      },
+      {
+        "canonical_id": "arXiv:1711.02085"
+      },
+      {
+        "canonical_id": "arXiv:1701.06538"
+      },
+      {
+        "canonical_id": "arXiv:2302.13971"
+      },
+      {
+        "doi": "10.18653/v1/2020.emnlp-main.496"
+      },
+      {
+        "canonical_id": "arXiv:2306.14048"
+      },
+      {
+        "canonical_id": "arXiv:2305.11206"
+      }
+    ],
+    "references_checked_at": "2026-09-24",
+    "references_source": "arxiv-html-reference-section",
+    "references_total": 38,
+    "source": "https://arxiv.org/abs/2310.01801",
+    "sources": [
+      "https://arxiv.org/abs/2310.01801",
+      "https://arxiv.org/html/2310.01801",
+      "https://arxiv.org/pdf/2310.01801",
+      "https://github.com/machilusZ/FastGen"
+    ],
+    "code": "https://github.com/machilusZ/FastGen",
+    "implementation": "著者公式実装あり。KVキャッシュ枝刈り用にDeepSpeed由来のカスタムCUDAカーネルへ疎性処理を追加している。",
+    "implementation_status": "official-code-available",
+    "evaluation_type": "real-hardware",
+    "last_checked": "2026-09-24",
+    "last_audited": null,
+    "audit_version": 0
+  },
   "reservation": {
     "claim_id": "claim-preload-b1e41ea993ce770bb187a178",
     "worker_id": "worker-924920",
