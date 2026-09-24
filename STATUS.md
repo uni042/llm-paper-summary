@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 22:11:39 JST**
+> 自動生成: **2026-09-24 22:21:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **284** |
-| 未claim Research job | **152** |
+| 収録候補論文 | **291** |
+| 未claim Research job | **159** |
 | 直近24hの検証済みResearch収録 | **16** |
 | 最終検証済みResearch収録 | **09-24 18:15:31 JST** |
-| 最終検証済みDiscovery探索 | **09-24 19:55:28 JST** |
+| 最終検証済みDiscovery探索 | **09-24 22:15:14 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **284** |
+| canonical_id確認済みの一意な候補論文 | **291** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **284** |
+| 非終端Research job合計 | **291** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（13時間35分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（13時間45分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -72,8 +72,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **9** | **3** | **2** | **0** | **132** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **1** | **1** | **0** | **0** | **0** | **0** |
-| 合計 | **12** | **4** | **3** | **0** | **132** | **0** | **0** |
+| Discovery | **24** | **1** | **1** | **0** | **0** | **0** | **0** |
+| 合計 | **33** | **4** | **3** | **0** | **132** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -135,6 +135,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Discovery
 
+- **09-24 22:15:14 JST** job `job-121edc29d47e3074` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260924T130330Z-scheduled-chat-00-6e21c4-r1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T130330Z-scheduled-chat-00-6e21c4-r1.json`
+  - 探索軸: preload-backward-structured-references
 - **09-24 19:55:28 JST** job `job-cfc2aa0addf64b6e` / 候補 **0件**
   - result: `.survey/work-queue/results/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json`
@@ -147,6 +151,30 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/20260924T093300Z-scheduled-chat-30-4b7e2a-r2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260924T093300Z-scheduled-chat-30-4b7e2a-r2.json`
   - 探索軸: forward citations of arXiv:2306.00978
+- **09-24 22:13:52 JST** job `job-f9a9fdd42f4f42ad` / 候補 **0件**
+  - result: `.survey/work-queue/results/2026-09-19T16-00-00+09-00-specialist-agent-multimodal-6.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-agent-multimodal-6.json`
+  - 探索軸: agentic serving・multimodal serving・stateful runtime
+- **09-24 22:13:59 JST** job `job-e339316cfe3974cc` / 候補 **0件**
+  - result: `.survey/work-queue/results/2026-09-19T16-00-00+09-00-specialist-cpu-heterogeneous-10.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-cpu-heterogeneous-10.json`
+  - 探索軸: CPU-only・CPU/GPU heterogeneous inference runtime
+- **09-24 22:14:06 JST** job `job-9521bd9e238ef538` / 候補 **0件**
+  - result: `.survey/work-queue/results/2026-09-19T16-00-00+09-00-specialist-energy-saturation-11.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-energy-saturation-11.json`
+  - 探索軸: energy・power-aware serving・DVFS
+- **09-24 22:14:13 JST** job `job-f629b37eed727368` / 候補 **0件**
+  - result: `.survey/work-queue/results/2026-09-19T16-00-00+09-00-specialist-framework-control-8.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-framework-control-8.json`
+  - 探索軸: serving framework control-plane・CPU-free runtime
+- **09-24 22:14:19 JST** job `job-2599255a1ee2cfaf` / 候補 **0件**
+  - result: `.survey/work-queue/results/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json`
+  - 探索軸: SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL
+- **09-24 22:14:26 JST** job `job-aafd717befe8d1b0` / 候補 **0件**
+  - result: `.survey/work-queue/results/2026-09-19T16-00-00+09-00-specialist-kv-quant-runtime-9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-kv-quant-runtime-9.json`
+  - 探索軸: KV quantization・compressed-domain attention・memory runtime
 
 ### 直近タスク
 
@@ -175,13 +203,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Discovery（最新Discovery run）
 
-- 最新観測run: **2026-09-24 18:57 JST**
+- 最新観測run: **2026-09-24 22:00 JST**
 - 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **0件**
-- 探索軸: backward references from repository structured references
-- round `20260924T095830Z-scheduled-chat-00-6f4c2a-r1` / 候補 **0件**
-  - submission: `.survey/work-queue/submissions/discovery/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json`
-  - 探索軸: backward references from repository structured references
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json` (`ok=true`)
+- 探索軸: preload-backward-structured-references
+- round `take-scheduled-chat-00-20260924T130032Z-6e21c4-r1` / 候補 **0件**
+  - submission: `.survey/work-queue/submissions/20260924T130330Z-scheduled-chat-00-6e21c4-r1.json`
+  - 探索軸: preload-backward-structured-references
+  - 個別result照合: あり / `.survey/work-queue/results/20260924T130330Z-scheduled-chat-00-6e21c4-r1.json` (`ok=true`)
 
 ### 現在処理中
 
@@ -237,7 +265,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **284** |
+| ready | **291** |
 
 ### 候補の重複・識別情報欠損
 
@@ -265,11 +293,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **306** |
+| 成功result未照合のimmutable submission | **284** |
 | └ Research | **172** |
 | └ Audit | **2** |
-| └ Discovery | **71** |
-| └ Other/Unknown | **61** |
+| └ Discovery | **51** |
+| └ Other/Unknown | **59** |
 
 ### 厳格検証が未成立のcompleted job
 
