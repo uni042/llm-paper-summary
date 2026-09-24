@@ -5,14 +5,21 @@
   "attempt_id": "attempt-preload-54435f3f1e70e6def8dfca02",
   "job_id": "job-research-0023a21511f803e1",
   "data": {
-    "relation_to_repository": "DistServe、Splitwise、Mooncake等がprefill/decode分離による干渉除去・独立スケーリング・KV転送基盤を設計するのに対し、本論文は新規serving機構よりも比較方法と境界条件を主題とする。特に分離側2 GPU対colocation側1 GPUという既存比較の資源差を除き、2-GPU colocationを置くことで、分離そのものの利得を再評価する。CPU/DRAM/NVMeを介すKV移送も同一vLLM/LMCache基盤で比較するため、リポジトリのCPU/SSD offload系とphase-disaggregation系をつなぐ評価資料になる。",
-    "difference_from_prior_work": "DistServe等の高速GPU間転送中心の評価に、同資源colocation、CPU DRAM、NVMeの転送tierとenergy breakdownを加える。DynamoLLMやGPU DVFS研究がcolocated servingで周波数最適化を扱うのに対し、prefill/decodeを独立周波数設定できることが本当にenergy利得になるかを実測し、少なくとも本条件ではならないことを示す。",
-    "practical_takeaway": "分離サービングを既定の高速化手段とみなさず、GPU当たりprefill負荷、KV容量圧力、転送tier、TTFT/TPOT SLOを同時に見るべきである。小〜中batchでは同数GPUのcolocationがTTFTとenergyで有利になり得る一方、KVがGPU容量を圧迫する大batchや厳しいTPOTでは分離が有利になる。SSD/CPU経路はGPU直結より転送・energy費用が大きいので、容量拡張の価値がその費用を上回る領域で使うのが妥当。",
-    "caveats": "結果は2×A100 PCIe Gen3と3Bモデルの固定synthetic workloadに依存し、NVLink/RDMA、multi-node、実arrival trace、prefix reuse、より大規模モデルでは境界が変わり得る。dis-diskのTPOT挙動には未解明点が残る。"
+    "differences": [
+      {"name": "DistServe系との差", "description": "prefill/decode分離を新たに提案するのではなく、既存の分離優位を公平な資源基準で再検証する。分離側が2 GPUなのにcolocation側が1 GPUという比較を避け、2 GPU双方でprefill+decodeを行う基準を追加する。"},
+      {"name": "Mooncake等のKV転送基盤との差", "description": "CPU DRAMやNVMeをKV置場として使う機構そのものの設計ではなく、GPU P2P、CPU DRAM、NVMeを同じvLLM/LMCache基盤で切り替え、TTFT・TPOT・throughput・階層別エネルギーを横断比較する。"},
+      {"name": "通常のDVFS研究との差", "description": "colocated GPU全体を一周波数で調整するのではなく、分離によってprefillとdecodeを独立周波数へ設定できる自由度が総エネルギーを本当に減らすかをPareto frontierで検証する。"},
+      {"name": "容量拡張研究に対する位置", "description": "CPU/SSDへKVを逃がせばGPU容量不足は緩和できるが、転送時間と非GPU電力が追加されることを実測する。階層メモリ設計では『収まるか』だけでなく、再計算回避利益と移送費の境界を見る必要があることを示す。"}
+    ],
+    "limitations": [
+      {"name": "小規模モデル・単一ノード", "description": "2×A100 40GB、PCIe Gen3、Llama-3.2-3Bでの評価であり、NVLink、RDMA、複数ノード、大規模密モデル、MoEでは計算対転送比とKV容量圧力が変わる。"},
+      {"name": "synthetic固定長要求", "description": "入力16,384、出力256のRandomDatasetを無限request rateで同時投入する制御実験で、実サービスの到着間隔、長さ分布、prefix reuse、会話継続性は含まない。"},
+      {"name": "NVMe挙動の未解明点", "description": "dis-diskがdis-cpuよりTPOTで速いという直感に反する観測について、論文は原因を調査中としており、ストレージ階層比較の一部には説明不足が残る。"},
+      {"name": "品質・費用の範囲", "description": "モデル出力品質は変えない前提で性能とエネルギーを測り、ハードウェア購入費、ネットワーク設備費、実運用の信頼性やQoE全体までは評価しない。"}
+    ],
+    "implementation_status": "vLLM V1とLMCacheConnectorV1を用いた実機ベンチマーク。GPU P2PはNIXL/cuda_ipc、CPU経路は125GB DRAMとRedis lookup、disk経路は125GB NVMeとfs_connectorを使い、ページキャッシュを迂回する。GPU/CPU/DRAM/node電力も実測する。独自公開コードURLは一次資料で確認できない。",
+    "research_positioning": "DistServe、Splitwise、Mooncake等がprefill/decode分離やKV移送を設計するのに対し、本論文はそれらの『分離すれば速い・段階別DVFSなら省電力』という前提の適用境界を測る評価研究である。リポジトリのCPU/SSDオフロード、KVキャッシュ階層、phase-disaggregation系統を横断する基礎データとして価値が高い。特に同数GPUのcolocationが小〜中batchでTTFTとエネルギーに勝ち、高batchではKV容量超過によりTPOTが崩れるという結果は、階層メモリやSSDを導入する判断を『容量不足の回避価値』と『移送費』の比較へ落とし込む。実運用では要求負荷、KVサイズ、利用可能なP2P帯域、TTFT/TPOT SLOを測ってから配置を選ぶべきで、分離を固定方針にしないことが実務的含意である。",
+    "audit_notes": "arXiv:2601.08833 v1を導入から結論・参考文献まで確認。著者の主要結論は、分離性能の優位がrequest loadとKV transfer mediumに依存し、独立DVFSも省電力を保証しないこと。dis-diskがdis-cpuよりTPOTで速い観測は本文自身が未解明としているため、原因を推測せず負の結果として残した。"
   },
-  "reservation": {
-    "claim_id": "claim-preload-54435f3f1e70e6def8dfca02",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-preload-54435f3f1e70e6def8dfca02", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
