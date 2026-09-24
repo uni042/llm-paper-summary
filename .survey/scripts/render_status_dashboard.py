@@ -204,9 +204,11 @@ def _current_orphan_submission_paths(
     }
 
 
-def _canonicalized_historical_paper_count(repo_root: Path, jobs: dict[str, dict[str, Any]]) -> int:
-    """Count completed jobs whose stale paper_path resolves to a canonical moved paper."""
-    recovered = 0
+def _canonicalized_historical_paper_job_paths(
+    repo_root: Path, jobs: dict[str, dict[str, Any]]
+) -> set[Path]:
+    """Return completed jobs whose stale paper_path resolves to a canonical moved paper."""
+    recovered: set[Path] = set()
     for job in jobs.values():
         if job["kind"] != "research":
             continue
@@ -226,8 +228,29 @@ def _canonicalized_historical_paper_count(repo_root: Path, jobs: dict[str, dict[
             continue
         canonical = _core.evidence._resolve_repo_path(repo_root, canonical_value)
         if canonical is not None and canonical.is_file():
-            recovered += 1
+            recovered.add(job["path"])
     return recovered
+
+
+def _unresolved_missing_paper_job_paths(
+    repo_root: Path, jobs: dict[str, dict[str, Any]]
+) -> set[Path]:
+    """Expose the exact completed Research jobs still missing their declared paper."""
+    recovered = _canonicalized_historical_paper_job_paths(repo_root, jobs)
+    unresolved: set[Path] = set()
+    for job in jobs.values():
+        if job["kind"] != "research":
+            continue
+        payload = job["payload"]
+        if str(payload.get("status") or "").strip().lower() != "completed":
+            continue
+        paper_value = payload.get("paper_path")
+        if not isinstance(paper_value, str) or not paper_value.strip():
+            continue
+        declared = _core.evidence._resolve_repo_path(repo_root, paper_value)
+        if (declared is None or not declared.is_file()) and job["path"] not in recovered:
+            unresolved.add(job["path"])
+    return unresolved
 
 
 def _direct_evidence_metrics(
@@ -259,16 +282,30 @@ def _direct_evidence_metrics(
         str(path.relative_to(repo_root)) for path in orphan_paths
     )
 
-    recovered_papers = _canonicalized_historical_paper_count(repo_root, jobs)
+    recovered_paths = _canonicalized_historical_paper_job_paths(repo_root, jobs)
     old_missing = metrics["consistency"]["completed_research_missing_paper"]
-    recovered_papers = min(recovered_papers, old_missing)
+    recovered_papers = min(len(recovered_paths), old_missing)
     metrics["consistency"]["completed_research_missing_paper"] = old_missing - recovered_papers
     metrics["consistency_total"] = max(0, metrics["consistency_total"] - recovered_papers)
+    metrics["missing_paper_job_paths"] = sorted(
+        str(path.relative_to(repo_root))
+        for path in _unresolved_missing_paper_job_paths(repo_root, jobs)
+    )
     return metrics
 
 
 def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
     lines = _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS(metrics)
+    missing_paper_paths = metrics.get("missing_paper_job_paths") or []
+    if missing_paper_paths:
+        lines.extend([
+            "### completed Researchのpaper欠損診断対象",
+            "",
+            "上の欠損件数と同じ判定で残ったjob pathです。履歴jobを推測で書き換えず、対応submission/result/paperを一次証拠で照合するための診断一覧です。",
+            "",
+        ])
+        lines.extend(f"- `{path}`" for path in missing_paper_paths)
+        lines.append("")
     orphan_paths = metrics.get("orphan_submission_paths") or []
     if orphan_paths:
         lines.extend([
