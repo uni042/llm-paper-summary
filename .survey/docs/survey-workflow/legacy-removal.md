@@ -72,6 +72,25 @@
 この文書冒頭のHEADを参照し、実施時点の最新mainへ追随する。作業ブランチの親commitを移行基準として固定し、旧形式削除は行わない。
 
 ### 1 — データ契約表と棚卸し
+
+データ種別ごとの契約台帳を次のように始める。参照元は2026-09-24に確認した固定コードcommit `02ad9e330ceb0e3d4f3b732248619d222a7d4d20`。運用JSONの正確な必須フィールド、終端状態、参照関係がコード検証前の行は「未確定」とし、移行や削除を許可しない。後続作業で各項目を台帳JSONへ展開する。
+
+|データ種別・保存場所|現行producer / readerの確認先|正本・必須契約|旧形式・移行判定|
+|---|---|---|---|
+|論文 `papers/{inference,training,survey}/**/*.md`|producer: Research完了・paper renderer。reader/audit: `render_paper.py`、`check_repository.py`、品質監査4種|テンプレートのfrontmatterと明示 `list_summary`。必須キーは§2記載|全件構造・品質監査が未実行。欠落一覧文、旧heading等はC候補。科学内容は人手読解|
+|Research/Audit records `work-queue/records/**`|writer: `assemble_research_record.py`、`record_bank_config.py`。reader: submission/fallback経路|5スロット `metadata`、`problem_method`、`evaluation`、`results`、`positioning`。slotは `schema_version: 1`、`transport_version: 10`|旧bank alias/pathは検出対象。実体とdescriptor参照が未照合|
+|jobs `work-queue/jobs/**`|writer/reader候補: `queue_worker.py`、claim workflow|現行必須field・終端状態・参照制約は未確定。writer実装とschema validatorを照合するまで移行不可|未分類|
+|claims `work-queue/claims/**`|writer/reader: `claim_worker.py`、`claim_worker_with_banks.py`、claim workflow|現行identity、lease、bank reservation、terminal semanticsはコードと全active claimを照合して確定|旧lease/unbanked marker候補。freeze前に変更・削除禁止|
+|claim requests/results `work-queue/claim-requests/**`、`claim-results/**`|producer/consumerはclaim workflowと上記claim scriptsを追跡|request-result対応ID、状態、冪等性のschemaは未確定|古いworker名の多くはarchive履歴上の文字列一致。ライブか履歴かを判別する|
+|Research quality preflight `work-queue/research-preflight/**`|writer/reader: `research_quality_preflight.py`、対応workflow|request・resultを別々に定義する。正確なschemaと終端状態はvalidator照合待ち|未分類。Discovery precheck schemaと混同しない|
+|Discovery precheck `work-queue/discovery-preflight/**` 等|request reader: `process_discovery_precheck.py`; job/result readerは `queue_worker.py` 等|request schema v3を確認。resultは別契約として特定する|queue workerにroot-level descriptor、legacy submission/resultの互換経路候補あり|
+|immutable submissions/results `work-queue/submissions/**`、`results/**`|writer: `process_immutable_submission.py` 等。reader: submission/result workflows|不変submission、ID照合、terminal resultのwriter validatorを照合して確定|現行Library fallbackからの不変提出は保持。固定 `chat-inbox.json` は廃止reader候補|
+|run-state `work-queue/run-state/**`|writer/readerはrun-state workflow、`auto_claim_from_run_state.py`、`auto_discovery_from_run_state.py` 等|run key、worker lineage、pending/terminal stateはvalidator照合待ち|未分類。ライブ状態をfreeze前に変更しない|
+|Discovery preload `work-queue/discovery-preload/**`|writer/readerはdiscovery preload workflow、`process_discovery_precheck.py` 等|preload envelope とprecheck requestの関係を別々に確認|不正envelope rescueが存在するか全reader追跡待ち|
+|transport / fallback history `archive/transport/**`、`fallback-archive/**`、`fallback-failed/**`|参照readerを静的検索・実行経路で列挙|必要なID、終端状態、集計値、blob SHAを履歴縮約案として定義|大半は履歴と推定しても、個別件数の照合前はB/C/Dへ自動分類しない。現行Library fallback inboxは保持|
+
+この表の「未確定」は欠落を隠さず示すブロッカーである。各行についてproducer、reader、schema validator、必須field、参照整合、過去形式、移行方法、永続/一時の区別が根拠付きで揃うまで、対象データを一括分類しない。
+
 各データ種別について保存場所、現行producer/reader、必須フィールド、種別固有schema、過去形式、参照関係、一時/永続の別、移行方法、削除可能になる互換コードを表にする。全対象のA〜E台帳を生成する。`legacy_remaining` は旧形式の意味あるデータ、旧形式reader/producer、旧手順・旧専用試験を分けて集計する。全て0になるまで最終切替しない。
 
 ### 2 — 論文1,024件
