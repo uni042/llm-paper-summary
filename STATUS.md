@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 08:00:43 JST**
+> 自動生成: **2026-09-24 09:30:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文 | **298** |
 | 未claim Research job | **154** |
-| 直近24hの検証済みResearch収録 | **42** |
-| 最終検証済みResearch収録 | **09-23 22:05:03 JST（9時間55分前）** |
+| 直近24hの検証済みResearch収録 | **40** |
+| 最終検証済みResearch収録 | **09-23 22:05:03 JST（11時間25分前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -49,17 +49,17 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-23 08:30:50 JST（23時間29分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（54分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
-| health errors / warnings | **1 / 2** |
+| health errors / warnings | **2 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **315** |
+| GC削除件数 | **631** |
 | queue snapshot repaired | **true** |
-| index repairs | **5** |
-| quality regressions | **7** |
+| index repairs | **0** |
+| quality regressions | **3** |
 
 maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **144** | **0** | — |
+| Research | **0** | **1** | **0** | **0** | **144** | **12** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **0** | **4** | **0** | **3** | **144** | **0** | **6** |
+| 合計 | **0** | **4** | **0** | **3** | **144** | **12** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -129,37 +129,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
-- `arXiv:2603.10087` — Pooling Engram Conditional Memory in Large Language Models using CXL / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-1e9597cecaf6ec3b.json`
-- `arXiv:2112.05682` — Self-attention Does Not Need O(n²) Memory / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3c41560bf93206f5.json`
-- `DOI:10.1109/ICEIC69189.2026.11386441` — Toward Efficient Deployment of Mixture of Experts Models: Quantization and Compression Analysis / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-3ccfe94f6e9f9715.json`
-- `arXiv:2602.06154` — MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-441084dd13b83186.json`
-- `arXiv:2407.15891` — RazorAttention: Efficient KV Cache Compression Through Retrieval Heads / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-8336bf916cc1d939.json`
-- `arXiv:2608.24664` — Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-898c6226a202425e.json`
-- `DOI:10.18653/v1/2025.emnlp-main.366` — SpecVLM: Enhancing Speculative Decoding of Video LLMs via Verifier-Guided Token Pruning / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-97bdea5134064ed3.json`
-- `DOI:10.36227/techrxiv.177205041.14536362/v1` — Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-98fce5e6481e51fa.json`
-- `arXiv:2604.26334` — Efficient, VRAM-Constrained xLM Inference on Clients / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9ac6b8b0fe0cfe37.json`
-- `DOI:10.1016/j.neucom.2026.134973` — Load balancing for large language model inference serving: A control and learning oriented survey / worker `worker-45`
-  - claim: **09-24 07:45:30 JST** / heartbeat: **09-24 07:45:30 JST** / lease expiry: **09-24 09:15:30 JST**
-  - evidence: `.survey/work-queue/claims/job-research-ca4192f3e116d4ad.json`
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **12件**
+- `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
+- `DOI:10.1109/INFOCOM59046.2026.11571388` — CoSine: Enhancing LLM Serving via Collaborative and Decoupled Speculative Inference / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-058d69df18b4e613.json`
+- `DOI:10.1109/ICC59461.2026.11587970` — InKubeator: Pre-warming In-Memory KV Caches from Disk for Elastic LLM Serving / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2177bbc3f309a697.json`
+- `arXiv:2608.10545` — ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-2db1a9d83c60d21c.json`
+- `DOI:10.1109/INFOCOM59046.2026.11571450` — Enabling Memory-Disaggregated Cloud Infrastructure for LLMs: An Adaptive CXL-based KV Cache Scheduling Approach / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-319ee9e5d994faaf.json`
+- `arXiv:2602.11688` — GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-352411c0dfdab5c8.json`
+- `arXiv:2608.19395` — HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-4ed6d0d7f17db5e0.json`
+- `arXiv:2608.14498` — Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-c964557cc105a7b7.json`
+- `DOI:10.1145/3789240.3828750` — ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-cdc29bb5f1d5b9bc.json`
+- `arXiv:2602.06502` — DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving / worker `shared-preload-pool`
+  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
+  - evidence: `.survey/work-queue/claims/job-research-d4b85f1346de1326.json`
 
 #### Audit
 
@@ -207,8 +207,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **332** |
-| └ Research | **199** |
+| 成功result未照合のimmutable submission | **292** |
+| └ Research | **159** |
 | └ Audit | **2** |
 | └ Discovery | **72** |
 | └ Other/Unknown | **59** |
@@ -219,7 +219,7 @@ completedでも、現行STATUSの厳格条件（job/result/submission、Research
 
 | 指標 | 件数 |
 |---|---:|
-| completed Research/Audit jobで厳格検証未成立 | **345** |
+| completed Research/Audit jobで厳格検証未成立 | **332** |
 
 ### 整合性異常
 

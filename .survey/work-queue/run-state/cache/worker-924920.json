@@ -1,6 +1,6 @@
 {
-  "fact_generation": 2,
-  "generation": 3,
+  "fact_generation": 3,
+  "generation": 4,
   "runs": {
     "adhoc-20260924T092000JST-worker-924920": {
       "actual_invocation_start": "2026-09-24T00:20:00+00:00",
@@ -8,12 +8,15 @@
         "attempt-preload-06a7382e6e4dd1f8011ebfe2": {
           "attempt_id": "attempt-preload-06a7382e6e4dd1f8011ebfe2",
           "claimed_at": "2026-09-24T00:23:02+00:00",
+          "completed": false,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-preload-06a7382e6e4dd1f8011ebfe2.json",
           "job_id": "job-research-a7f8650f63d4e4e7",
+          "job_status": "none",
           "kind": "research",
           "pending": true,
+          "processed_at": "2026-09-24T00:30:23+00:00",
           "repair_required": false,
-          "retryable": false,
+          "retryable": true,
           "run_key": "adhoc-20260924T092000JST-worker-924920",
           "submitted": true,
           "worker_id": "worker-924920"
@@ -161,7 +164,7 @@
         ]
       },
       "first_cached_at": "2026-09-24T00:22:43.624934+00:00",
-      "generation": 3,
+      "generation": 4,
       "rebuilt_from_canonical": false,
       "run_key": "adhoc-20260924T092000JST-worker-924920",
       "scheduled_slot": "adhoc",
@@ -174,7 +177,9 @@
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
         "research_audit_completed_this_invocation": 0,
-        "retryable_attempt_ids": [],
+        "retryable_attempt_ids": [
+          "attempt-preload-06a7382e6e4dd1f8011ebfe2"
+        ],
         "submission_result_pending": true,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
@@ -186,6 +191,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T00:29:59.242826+00:00",
+  "updated_at": "2026-09-24T00:30:24.224581+00:00",
   "worker_id": "worker-924920"
 }
