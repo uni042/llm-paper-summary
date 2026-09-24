@@ -6,28 +6,26 @@
 
 **作業開始時に固定する基準点**（2026-09-24確認）:
 
-- `main`: `12cc4e657bdcd1badc924858dec27f9dadc77af0`
-- 作業ブランチ: `legacy-purge/2026-09-24-current`（上記commitから作成）
-- この文書の件数は上記commitの棚卸し値。移行実施時の件数を示すものではない。mainではDiscovery処理が進行中のため、ライブデータの移行・削除は書込凍結と再棚卸しが完了するまで開始しない。
+- `main`: `cbb17a29b4bd46b62e123984c0f8123bb7e5d5fb`（2026-09-24 16:09:55 UTC）
+- 作業ブランチ: `legacy-purge/2026-09-24-current-main`（上記commitを親として作成）
+- この文書の基準件数は同commitのread-only棚卸しと品質監査による。mainではDiscovery処理が進行中のため、ライブデータの移行・削除は書込凍結と再棚卸しが完了するまで開始しない。
 
 |対象|基準点での件数|
 |---|---:|
-|Git tree entries（ディレクトリを含む）|10,945|
-|ファイル|10,761|
-|論文Markdown|1,024|
-|papers/inference|986|
-|papers/training|25|
-|papers/survey|13|
+|ファイル|10,828|
+|監査対象論文Markdown|1,026|
+|papers/inference / training / survey（README・比較表等を含む）|1,008 / 29 / 25|
 |.survey/scripts/*.py|96|
 |.survey/tests/*.py|134|
-|work-queue/jobs|1,220|
-|work-queue/claims|704|
-|claim requests / results|64 / 64|
-|submissions / results|382 / 382|
-|research-preflight|556|
-|run-state|172|
-|discovery-preload|189|
-|archive/transport|3,762|
+|work-queue/jobs|1,240|
+|work-queue/claims|705|
+|claim requests / results|62 / 62|
+|records|230|
+|submissions / results|394 / 394|
+|research-preflight|560|
+|run-state|166|
+|discovery-preload|174|
+|archive/transport|3,789|
 |fallback-archive|100|
 |fallback-failed|45|
 |fallback-inbox|2|
