@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 18:16:17 JST**
+> 自動生成: **2026-09-24 18:19:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **284** |
-| 未claim Research job | **143** |
+| 未claim Research job | **140** |
 | 直近24hの検証済みResearch収録 | **27** |
 | 最終検証済みResearch収録 | **09-24 18:15:31 JST** |
 | 整合性異常 | **22** |
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（9時間40分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（9時間43分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **14** | **3** | **3** | **0** | **141** | **0** | — |
+| Research | **14** | **3** | **3** | **0** | **144** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **8** | **5** | **5** | **0** | **0** | **0** | **10** |
-| 合計 | **22** | **8** | **8** | **0** | **141** | **0** | **10** |
+| 合計 | **22** | **8** | **8** | **0** | **144** | **0** | **10** |
 
 - 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -230,7 +230,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **141件** / 直近15分heartbeat: **0件**
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
+- `arXiv:2609.21079` — DLB: Distributed Load Balancing at Scale for Generative AI Inference / worker `shared-preload-pool`
+  - claim: **09-24 18:19:18 JST** / heartbeat: **—** / lease expiry: **09-25 06:19:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-207262571f4eb880.json`
+- `OpenReview:02f3mUtqnM` — Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing / worker `shared-preload-pool`
+  - claim: **09-24 18:19:18 JST** / heartbeat: **—** / lease expiry: **09-25 06:19:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-35087281810758f2.json`
+- `arXiv:2609.25405` — Efficient Iterative Retrieval with Heterogeneous Batching / worker `shared-preload-pool`
+  - claim: **09-24 18:19:18 JST** / heartbeat: **—** / lease expiry: **09-25 06:19:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-396b5a1af9f8a040.json`
+- `arXiv:2405.13019` — A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models / worker `shared-preload-pool`
+  - claim: **09-24 18:19:18 JST** / heartbeat: **—** / lease expiry: **09-25 06:19:18 JST**
+  - evidence: `.survey/work-queue/claims/job-research-82b8ef403de7a370.json`
 - `arXiv:2211.10438` — SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models / worker `shared-preload-pool`
   - claim: **09-24 18:11:31 JST** / heartbeat: **—** / lease expiry: **09-25 06:11:31 JST**
   - evidence: `.survey/work-queue/claims/job-research-05c9fecf1a5510e9.json`
@@ -249,18 +261,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `arXiv:2608.29745` — JITterFlip: Uncovering Fault Attack Surfaces in JIT-Compiled LLM Serving / worker `scheduled-chat-00`
   - claim: **09-24 17:02:20 JST** / heartbeat: **09-24 18:01:02 JST** / lease expiry: **09-24 19:31:02 JST**
   - evidence: `.survey/work-queue/claims/job-research-1da272e975b9b7ea.json`
-- `DOI:10.1109/ISCAS66217.2026.11562764` — AdaCGen: Heterogeneity-Aware Layer Management for Efficient KV Cache Offloading in LLMs / worker `scheduled-chat-00`
-  - claim: **09-24 18:01:02 JST** / heartbeat: **09-24 18:01:02 JST** / lease expiry: **09-24 19:31:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2a1bde22bebd2f67.json`
-- `arXiv:2608.01526` — An Internet for the KV Cache: Rethinking Classical Infrastructure Boundaries in the LLM Inference Age / worker `scheduled-chat-00`
-  - claim: **09-24 17:02:20 JST** / heartbeat: **09-24 18:01:02 JST** / lease expiry: **09-24 19:31:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-379e0b015c40f1e4.json`
-- `arXiv:2510.14392` — FairBatching: Fairness-Aware Batch Formation for LLM Inference / worker `scheduled-chat-00`
-  - claim: **09-24 17:02:20 JST** / heartbeat: **09-24 18:01:02 JST** / lease expiry: **09-24 19:31:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-45a223ad00555581.json`
-- `arXiv:2509.01229` — LiquidGEMM: Hardware-Efficient W4A8 GEMM Kernel for High-Performance LLM Serving / worker `scheduled-chat-00`
-  - claim: **09-24 17:02:20 JST** / heartbeat: **09-24 18:01:02 JST** / lease expiry: **09-24 19:31:02 JST**
-  - evidence: `.survey/work-queue/claims/job-research-483d71fcff10e180.json`
 
 #### Audit
 
@@ -308,8 +308,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **303** |
-| └ Research | **171** |
+| 成功result未照合のimmutable submission | **304** |
+| └ Research | **172** |
 | └ Audit | **2** |
 | └ Discovery | **71** |
 | └ Other/Unknown | **59** |
