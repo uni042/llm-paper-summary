@@ -4,7 +4,34 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-2fa50b35dc3b52ca57aadaca",
   "job_id": "job-research-c4dbc458851f604c",
-  "data": {},
+  "data": {
+    "hardware": "IBM Cloud gx2-16x128x2v100、NVIDIA Tesla V100 16GBを2基。",
+    "software": "SSJFの著者実装。代理モデルはBERT-base。既存の無バッチ、動的バッチ、連続バッチ実行へスケジューラとして組み込む。",
+    "model": [
+      "OPT-1.3B / OPT-2.7B",
+      "GPT2-large / GPT2-xl",
+      "CodeGen-350M / CodeGen-2B",
+      "Bloom-1b1 / Bloom-3B",
+      "Switch-base-16 / Switch-base-32"
+    ],
+    "datasets": [
+      "LMSYS-Chat-1M",
+      "Microsoft Azure Functionsの生産ワークロードトレース"
+    ],
+    "baselines": [
+      "FCFS",
+      "真の出力長を使う理想SJF"
+    ],
+    "correctness": "スケジューラは本体モデルの生成演算を変更しないため出力品質は同じ。代理予測器については五区間換算の精度とF1を測り、要求順序の近似精度を間接評価する。",
+    "settings": [
+      "動的バッチと連続バッチの主要比較では最大バッチサイズを4に設定した。",
+      "要求到着率とバースト性を変え、無バッチ・動的バッチ・連続バッチの三条件でJCTとスループットを比較した。",
+      "LMSYS-Chat-1Mでは空応答と無作為に切れた長い応答を除くため、応答長が1超512未満のデータへ絞った。",
+      "多ラウンド会話では履歴を連結し、代理モデル入力の末尾512トークンを使用した。"
+    ],
+    "methodology": "要求到着パターンはAzure Functionsの実運用トレースで駆動し、入力内容はLMSYS-Chat-1Mから与える。主要評価ではFCFSとSSJF、真の出力長を知る理想SJFを比較し、要求到着率と変動係数を変えて平均JCTとスループットを測る。代理予測器は分類・順序分類・回帰・対比較を比較し、予測精度だけでなく同じ予測を使ったJCT削減とスループット改善まで評価する。",
+    "scope": "2基のV100上で複数の公開モデルを使う実機評価で、実データと生産到着トレースを組み合わせている。一方、数十〜数百GPUの分散サービング、極端に長い文脈、より新しい大規模モデル、プリエンプション実装は評価していない。代理モデルの512トークン上限と、予測器を学習したLMSYS-Chat-1Mの分布への依存が一般化範囲を制約する。"
+  },
   "reservation": {
     "claim_id": "claim-preload-2fa50b35dc3b52ca57aadaca",
     "worker_id": "worker-924920",
