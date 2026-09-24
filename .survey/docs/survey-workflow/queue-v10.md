@@ -6,8 +6,7 @@
 
 ## 現行の実装境界
 
-- ルーティング・継続判定: `.survey/scripts/continuation_gate.py`
-- 最終化判定: `.survey/scripts/run_finalization_gate.py`
+- runノルマ（Research/Audit成功5件・Discovery成功8ラウンド）とAudit配分ブロックの正規値: `.survey/scripts/worker_quota_policy.py`\n- ルーティング・継続判定: `.survey/scripts/continuation_gate.py`\n- 最終化判定: `.survey/scripts/run_finalization_gate.py`
 - Research / Audit の担当確保（ワーカー実行入口）: `.survey/scripts/claim_worker_with_banks.py`
 - Discovery の固定ソース事前検査: `.survey/scripts/process_discovery_precheck.py`
 - 固定ソースのページ送り・重複排除: `.survey/scripts/discovery_search_filter.py`
