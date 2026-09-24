@@ -1,13 +1,54 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "results",
   "attempt_id": "attempt-preload-5ae76716eb01958d78f1d488",
   "job_id": "job-research-b22af651ef4f551f",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-5ae76716eb01958d78f1d488",
     "worker_id": "worker-925000",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "results",
+  "data": {
+    "overview": "学習済み予測器は、学習に使っていないWebGLM-QA 100プロンプトで97.55%の位置単位精度と86.18%のmacro F1を達成した。システム側ではGPUへ全expertの10%しか常駐できない厳しい容量条件でもMoE-Beyondのcache hit rateは約72%で、MoE-Infinityの17%から約55ポイント改善する。GPU容量を増やした範囲でも10〜25ポイント程度の優位を維持し、より早く100% hitへ近づく。したがって要求内活性化の規則性を学習器で先読みする方が、最近の要求行列との類似度だけに依存する方法より小容量キャッシュを有効に使えるという結果である。",
+    "key_results": [
+      {
+        "metric": "GPUキャッシュ適中率",
+        "value": "約72%",
+        "baseline": "MoE-Infinityの17%",
+        "condition": "全エキスパートの10%だけがGPUへ常駐できるトレース駆動シミュレーション",
+        "interpretation": "学習予測により約55 percentage points改善し、小容量GPUほど先読み精度の差が直接キャッシュ効率へ表れる。"
+      },
+      {
+        "metric": "未見テスト位置単位精度",
+        "value": "97.55%",
+        "baseline": "ground-truth expert activation",
+        "condition": "WebGLM-QAの未見100プロンプト",
+        "interpretation": "異なるプロンプト集合でも活性化集合を高率に再現するが、非活性クラスが多いためF1も併用して判断する必要がある。"
+      },
+      {
+        "metric": "未見テストmacro F1",
+        "value": "86.18%",
+        "baseline": "ground-truth expert activation",
+        "condition": "WebGLM-QAの未見100プロンプト・64 routed experts",
+        "interpretation": "クラス不均衡を考慮しても活性expertの予測能力が維持され、単純なaccuracyだけの改善ではないことを示す。"
+      },
+      {
+        "metric": "キャッシュ適中率の優位",
+        "value": "10〜25 percentage points",
+        "baseline": "MoE-Infinity",
+        "condition": "GPU expert capacityを10%より大きい範囲へ増やした掃引",
+        "interpretation": "容量を増やして両方式が100%へ収束するまで、学習ベース予測が一貫してより高いhit rateを保つ。"
+      }
+    ],
+    "negative_results": [
+      "方式はbatch size 1を前提とし、複数要求をmicro-batchすると活性化が重なって疎性が崩れ、prefetch-everythingに近づく。",
+      "予測器はDeepSeek-V2-Liteのtoken embeddingとlayer structureに依存するため、別MoE backboneへの移行には再学習または高コストfine-tuningが必要。",
+      "4層予測器の学習でもDeepSeek-V2-Lite条件で約48 A100 GPU時間を要する。",
+      "現在の予測は1層先だけであり、転送を先行層計算と重ねられても長文脈で残るstallを完全には隠せない。",
+      "主要なcache hit改善はsimulationであり、実端末のend-to-end latency改善量は直接測定していない。"
+    ],
+    "interpretation": "大規模MoEでは多数要求をまとめた全体頻度は平坦でも、batch 1の単一要求内では一部expertが繰り返し選ばれる。MoE-Infinityはこの局所性を履歴類似度で利用するが、履歴検索はモデル幅やdomain shiftで弱くなる。MoE-Beyondはtoken embeddingとlayer identityから直接次のexpert集合を推定するため、同じGPU容量でも必要重みを先回りして置ける確率が高い。逆にbatch化で要求が混ざり局所性が失われるとこの前提も崩れるため、結果は単一利用者・低batchの端末推論に強く依存する。",
+    "quality_impact": "予測されたexpert集合はプリフェッチ計画に使われ、MoE本体のrouterによる正しいexpert選択を置き換えない。したがってcache missは追加転送待ちを生むが、正しいexpertを最終的にロードする限りモデルの数学的出力は変えない。論文は生成品質指標ではなく予測精度とcache hit rateを評価する。"
   }
 }
