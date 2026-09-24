@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 22:36:31 JST**
+> 自動生成: **2026-09-24 22:41:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,7 +11,7 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **288** |
+| 収録候補論文 | **287** |
 | 未claim Research job | **145** |
 | 直近24hの検証済みResearch収録 | **16** |
 | 最終検証済みResearch収録 | **09-24 18:15:31 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **288** |
+| canonical_id確認済みの一意な候補論文 | **287** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **288** |
+| 非終端Research job合計 | **287** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（14時間0分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（14時間5分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **9** | **2** | **0** | **0** | **143** | **65** | — |
+| Research | **9** | **3** | **0** | **0** | **142** | **64** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **25** | **1** | **1** | **0** | **0** | **0** | **0** |
-| 合計 | **34** | **3** | **1** | **0** | **143** | **65** | **0** |
+| 合計 | **34** | **4** | **1** | **0** | **142** | **64** | **0** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -181,7 +181,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 #### Research（最新Research/Audit run）
 
 - 最新観測run: **2026-09-24 22:30 JST** / worker `scheduled-chat-30`
-- immutable submission: **2件** / 検証済み成功: **0件** / result照合済み非成功: **2件** / 個別result未照合: **0件**
+- immutable submission: **3件** / 検証済み成功: **0件** / result照合済み非成功: **3件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-34397d49a25fb4551bfe7b42.json` (job `job-research-ffc621e973881a5d`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-34397d49a25fb4551bfe7b42.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-47934e491851664368f66108.json` (job `job-research-cdc29bb5f1d5b9bc`, failure_class `non_success`)
   - result: `.survey/work-queue/results/research/attempt-preload-47934e491851664368f66108.json` (`ok=true`)
 - **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-c6b1e7cb88aeaaa29ce402f3.json` (job `job-research-4ed6d0d7f17db5e0`, failure_class `non_success`)
@@ -207,7 +209,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **143件** / 直近15分heartbeat: **65件**
+- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **64件**
 - `arXiv:2605.15508` — STS: Efficient Sparse Attention with Speculative Token Sparsity / worker `shared-preload-pool`
   - claim: **09-24 22:35:28 JST** / heartbeat: **—** / lease expiry: **09-25 10:35:28 JST**
   - evidence: `.survey/work-queue/claims/job-research-c97d88c20de27e1f.json`
@@ -257,7 +259,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **288** |
+| ready | **287** |
 
 ### 候補の重複・識別情報欠損
 
@@ -285,8 +287,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **255** |
-| └ Research | **175** |
+| 成功result未照合のimmutable submission | **256** |
+| └ Research | **176** |
 | └ Audit | **2** |
 | └ Discovery | **51** |
 | └ Other/Unknown | **27** |
