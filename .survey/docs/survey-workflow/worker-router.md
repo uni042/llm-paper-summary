@@ -1,4 +1,4 @@
-# Worker router — workflow v10.14
+# Worker router — workflow v10.15
 
 この文書はScheduled Chat / Work系ワーカー（worker）の**唯一の実行手順正本**である。役割分岐（routing）、継続・停止、探索、研究、退避の判断を別文書から組み立て直してはならない。
 
@@ -89,11 +89,13 @@ Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自
 
 **GitHubのファイル作成・更新API/connectorを利用できる場合、それ自体をGitHub write可能と判定する。** ローカルshell、Python実行、`git push`、Actionsのmanual dispatch専用toolが無いことを、claim / run-state / preflight / submissionのwrite不能理由にしてはならない。新規request・direct-take・immutable descriptor等は、正規pathへGitHubのcreate-file相当操作でJSONを作成することで耐久化でき、そのcommitに反応するActions fast laneへ後段処理を委譲する。既存ファイルの更新が必要な段階では、直前に最新HEADと対象blob SHAを再取得してupdate-file相当操作を使う。
 
+**Research / Auditの5スロット更新だけは、connector側で既存ファイルupdateがplatformから拒否された場合に低レベルGit ref更新へエスカレートしない。** 5スロット内容が完成しセルフレビュー済みなら、`.survey/work-queue/fallback-inbox/<unique-id>.json` へ **`record_bundle_mode: "quality_preflight_v1"`** のcreate-only record bundleを1個作る。bundleはrootに `origin: "claimed_worker"`, `kind`, `job_id`, `claim_id`, `worker_id`, `attempt_id`, `depends_on_job_ids`, `paper_path`, 完全なrun identity、`self_review`、必要なら `expected_blob_sha` を持ち、`writes` には同一bank由来の5スロットJSONをすべて含める。このpushでSurvey helperがbundleを安全なrecord bankへ展開し、同じcommitで通常の `research_quality_preflight` requestを生成する。以後は既存のpreflight PASS→自動descriptor→submission fast laneへ戻る。**create-only bundleが成功した時点で対象固有のupdate拒否は回復済みであり、`platform_context_limit` を申告してrunを終了してはならない。**
+
 `transport_unrecoverable` / `durable_transports_unavailable` を申告してhandoffする前に、**今回必要な正規pathへの実writeを少なくとも1回は実際に試す。** write操作を一度も試していない、または「直接スクリプトを実行できない」ことしか確認していない状態はtransport障害ではない。create-only pathで既存ファイル競合が返った場合もwrite不能ではなく排他取得競合なので、routerが定める次packet/同一identity確認へ進む。
 
 ### 2.2 main writeのcommit集約
 
-Scheduled ChatからGitHubへ直接耐久保存する場合、**同一論文・同一論理段階で、途中にActions起動や別workerからの可視化を必要としない複数ファイル更新は1回のcommitへ集約する。** 特にResearch / Auditの5スロットは、内容が完成してセルフレビュー可能になった時点でまとめて保存し、metadata / method / evaluation / results / positioningを1ファイルずつ別commitにしてmainを進めない。利用可能なGitHub transportが複数ファイルを1commitで更新できる場合はGit dataのtree/commit等の原子的な複数ファイル更新を優先する。
+Scheduled ChatからGitHubへ直接耐久保存する場合、**同一論文・同一論理段階で、途中にActions起動や別workerからの可視化を必要としない複数ファイル更新は1回のcommitへ集約する。** 特にResearch / Auditの5スロットは、内容が完成してセルフレビュー可能になった時点でまとめて保存し、metadata / method / evaluation / results / positioningを1ファイルずつ別commitにしてmainを進めない。ローカルGit等で通常のatomic commitが利用できる場合は複数ファイルを1commitへまとめてよい。一方、connector環境で低レベルのtree/commit/ref操作が必要になる場合は、それを多重updateの回避策として使わず、前節の **`quality_preflight_v1` create-only record bundle** を優先する。特にplatformが通常updateを拒否した後に低レベルref更新を繰り返してはならない。
 
 ただし、次の**耐久境界はまとめて潰さない**。claim request、Research quality preflight request、immutable submission、run-state requestなど、commit自体がActions起動・正規結果生成・handoff identity確定のトリガーになる境界は、それぞれ必要な順序を守って独立に耐久化する。`completed-submission request` は合格済みpreflight resultからGitHub側のpublication pipelineが自動生成する監査用の耐久記録であり、Scheduled Chatが追加writeする独立境界にはしない。preflight resultはdescriptor生成より前にmainへ耐久反映し、別attempt、別論文、別workerのpayloadを無関係に1commitへ束ねない。
 
@@ -405,10 +407,13 @@ Google Drive、Notion、旧 `/LLM-survey-fallback/` は使わない。
 GitHub write失敗時:
 
 1. 対象の最新blob SHA / repo状態を取り直し、その対象だけ1回再試行。
-2. まだ失敗する場合、そのrun最初のwrite失敗に限り `.survey/work-queue/transport/health-probe.json` を1回更新。
-3. probe成功 → 対象固有障害。影響payloadだけLibraryへcheckpointし、他のGitHub writeは継続。
-4. probe失敗 → run-wide障害。そのrunではGitHub writeを繰り返さない。Research / Audit中なら現在の1論文だけをLibraryへcheckpointし、GitHub上の成功resultと最新main反映を確認できないため**次の論文へ進まない**。Discovery中も正規precheck/result要件を飛ばして新ラウンドを捏造せず、既に得た成果だけをLibraryへ耐久保存する。
-5. GitHub direct writeとLibrary保存の両方が不能な場合だけ、未保存成果を増やす前に停止。
+2. **Research / Auditの5スロット既存ファイルupdateが再び拒否された場合**は、低レベルtree/ref更新を試さず、完全5スロット＋セルフレビューを1つの `quality_preflight_v1` record bundleとして `.survey/work-queue/fallback-inbox/<unique-id>.json` へcreate-onlyで保存する。これが成功すれば対象固有障害は回復済みで、Actions側の展開→通常preflight→submissionを監視しつつrunを継続する。
+3. 2以外、またはrecord bundleのcreate-only自体も失敗する場合、そのrun最初のwrite失敗に限り `.survey/work-queue/transport/health-probe.json` を1回更新。
+4. probe成功 → 対象固有障害。影響payloadだけLibraryへcheckpointし、他のGitHub writeは継続。Research / Auditで完全5スロットbundleをLibraryへ置いた場合、GitHub create-onlyが再び利用可能になった時点で同じ `quality_preflight_v1` envelopeをfallback-inboxへ搬送する。
+5. probe失敗 → run-wide障害。そのrunではGitHub writeを繰り返さない。Research / Audit中なら現在の1論文だけをLibraryへcheckpointし、GitHub上の成功resultと最新main反映を確認できないため**次の論文へ進まない**。Discovery中も正規precheck/result要件を飛ばして新ラウンドを捏造せず、既に得た成果だけをLibraryへ耐久保存する。
+6. GitHub direct writeとLibrary保存の両方が不能な場合だけ、未保存成果を増やす前に停止。
+
+**`platform_context_limit` はrun-wideのplatform拒否に限定する。** 対象固有のslot updateや低レベルref更新だけが拒否された一方で、create-only request/bundle、GitHub read、またはLibrary保存が利用できる状態はrun-wide limitではない。run-stateへ `platform_context_limit` を申告する場合は、通常の証拠に加えて `runtime_condition_scope: "run_wide"` を必須とし、上記fallbackまで実際に試した後でも現在runの必須tool callを継続できない場合だけ使う。
 
 **Scheduled Task自体を一時停止・無効化してはならない。** GitHub/API/Actions/Library障害、今回runのhard stop、ノルマ未達、その他の一時障害があっても、Scheduled Chat / automationのenabled状態は維持する。停止とは今回runの安全終了だけを意味し、将来runのスケジュール停止を意味しない。
 
@@ -486,9 +491,10 @@ runtime_condition: none
 # runtime_condition_detail: <観測した障害と回復試行>
 # platform_context_limit の場合だけ必須:
 # runtime_condition_event: platform_tool_call_rejected
+# runtime_condition_scope: run_wide
 ```
 
-hot-dispatch direct startではrun-state requestを**内容作業開始前に耐久保存するがresultは待たない**。上記4項目がpolicyと整合する場合、run-stateはその開始時routeを正規snapshotへ固定する。従来経路ではresultを待ってから開始する。`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は待機ミクロタスク等の別作業を1件以上挟んだ正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformから**必要なtool callまたはoutputを拒否された事実**がある場合に限り、`runtime_condition_confirmed=true`、`runtime_condition_attempts>=1`、非空の `runtime_condition_detail` に加えて **`runtime_condition_event=platform_tool_call_rejected`** を持つ場合だけ有効とする。この構造化証拠が無い `platform_context_limit` はrun-state側で `none` に降格する。単一論文のPDF/HTML/DOI/provider取得失敗はこのeventではなくstatus-only終端対象である。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
+hot-dispatch direct startではrun-state requestを**内容作業開始前に耐久保存するがresultは待たない**。上記4項目がpolicyと整合する場合、run-stateはその開始時routeを正規snapshotへ固定する。従来経路ではresultを待ってから開始する。`runtime_condition` は通常 `none`。repoから導出できない実際のplatform/transport事象が起きた場合だけ、`github_read_unavailable` / `durable_transports_unavailable` / `platform_context_limit` / `transport_unrecoverable` のいずれかを使う。**単発のAPI/認証/ネットワーク失敗をruntime hard stopへ昇格させない。** retriableなread/transport事象は待機ミクロタスク等の別作業を1件以上挟んだ正規回復を最低2回試し、それでも同じ条件が継続した場合だけ `runtime_condition_confirmed=true`、`runtime_condition_attempts>=2`、短い `runtime_condition_detail` をrequestへ付ける。`platform_context_limit` は実際にplatformから**run-wideに必要なtool callまたはoutputを拒否された事実**がある場合に限り、`runtime_condition_confirmed=true`、`runtime_condition_attempts>=1`、非空の `runtime_condition_detail` に加えて **`runtime_condition_event=platform_tool_call_rejected` と `runtime_condition_scope=run_wide`** を持つ場合だけ有効とする。対象固有のupdate拒否は前節のcreate-only record bundle等の正規fallbackを先に試す。この構造化証拠が無い `platform_context_limit` はrun-state側で `none` に降格する。単一論文のPDF/HTML/DOI/provider取得失敗はこのeventではなくstatus-only終端対象である。`handoff_guard` はworkerが申告せず、run-stateが残り180秒から自動導出する。証拠不足のruntime_conditionはrun-state側で `none` に降格する。
 
 同名の `.survey/work-queue/run-state/results/<request-id>.json` が返す `candidate_inventory`、run開始時に固定された `work_mode`、claim/submission pending、成功完了数、Discovery round数、**Discovery precheck pending / evaluation pending / submission pending / recovery required**、`gate.decision` / `gate.required_action` を継続判断の正本とする。 **ただしワーカーが次に実行する操作はトップレベルの `next_action` を正本とする。これは `run_finalization_gate.py` の `next_action` から導出し、前段の継続判定は `continuation_next_action` として診断用に残す。** `run_termination_allowed=false` の間はrunを終了・通常handoff扱いにせず、`next_work_packet` が非nullならそこに示された具体的なjob / claim / precheck result / preload / recovery targetを**次の操作として直ちに処理する**。進捗報告はしてよいが、それをrun終了の代替にしない。
 
