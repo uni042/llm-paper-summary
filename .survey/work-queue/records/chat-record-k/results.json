@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-preload-7567c60b834735ea01f92a82",
-  "job_id": "job-research-7ecc4d7949c81534",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-7567c60b834735ea01f92a82",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-7567c60b834735ea01f92a82","job_id":"job-research-7ecc4d7949c81534","data":{"overview":"CompKVは3 modelのRULERとLongBench-Proで比較対象の疎attention方式中もっとも高い平均精度を示し、selectionとcompensationを同じ残差目的で結ぶ効果を確認する。Llama-3.1-8B RULERではFull 87.0に対しCompKV 83.2で、Quest 77.0、InfLLM 73.1、Quest+RESA 78.2を上回る。CPU-offload efficiencyでは32K〜128K context×512〜2048 token budgetの全9条件で最小mean decode-step latencyとなり、full attention比最大6.85倍のself-attention speedupを報告する。","key_results":[{"metric":"RULER average","value":"83.2","baseline":"Full 87.0; Quest 77.0; InfLLM 73.1; Quest+RESA 78.2","condition":"Llama-3.1-8B-Instruct","interpretation":"tail compensationを考慮したselectionによりfullとの差を3.8 pointまで抑える。"},{"metric":"self-attention speedup","value":"最大6.85×","baseline":"full attention","condition":"H100 CPU-offload pipeline、32K〜128K context、512〜2048 token budget","interpretation":"compact summary selectionと非同期CPU gather/compensation overlapが長文脈のKV trafficを削減する。"},{"metric":"efficiency順位","value":"9/9条件で最小mean decode-step latency","baseline":"evaluated sparse methods","condition":"3 context lengths × 3 KV budgets","interpretation":"精度改善だけでなくoffload dataflowでも安定した優位を示す。"}],"negative_results":"Full attentionの精度を完全には維持せず、Llama-3.1-8B RULERでは87.0から83.2へ3.8 point低下する。mean compensationと二次近似に依存するため、block内logit分布が高次項の影響を強く受ける場合はscore近似誤差が残る。block summaryの追加metadataとGPU score計算も必要である。","interpretation":"massが大きいblockを読むという従来直観を、『省略したとき補償でどれだけ戻せないか』へ置き換えたことが中心である。補償しやすい高mass blockはsummaryに任せ、分散が大きくmeanでは再現しにくいblockへexact bandwidthを使うため、同じread budgetをより効率的に配分できる。","quality_impact":"CompKVはselected exact attentionとunselected mean contributionを共同normalizationするため、単純なKV evictionよりtail情報を保持する。accuracy ablationはmassとvarianceの両因子を使うresidual-aware scoreが単独因子より有効であることを示す。"},"reservation":{"claim_id":"claim-preload-7567c60b834735ea01f92a82","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
