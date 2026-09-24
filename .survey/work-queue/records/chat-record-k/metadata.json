@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-preload-270cf0686ddf08989a01feb5",
-  "job_id": "job-research-7526ab28b3c65fc4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-270cf0686ddf08989a01feb5",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-270cf0686ddf08989a01feb5","job_id":"job-research-7526ab28b3c65fc4","data":{"canonical_id":"arXiv:2312.00752","arxiv_id":"2312.00752","doi":"10.48550/arXiv.2312.00752","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"Mamba: Linear-Time Sequence Modeling with Selective State Spaces","summary":"Mambaは、従来の構造化状態空間モデルが固定ダイナミクスのため離散トークンから必要情報を内容依存で選べない問題に対し、状態空間パラメータを入力依存化する選択機構と、GPUメモリ階層を意識した並列走査を組み合わせた注意機構なしの系列モデルである。選択的状態空間層は不要情報を忘れ必要情報を保持し、展開状態を高帯域メモリへ実体化せず高速SRAM内で融合計算する。言語では同規模Transformerに対して生成スループットを4〜5倍へ高め、Mamba-2.8Bは同条件のPythia-2.8Bを平均ゼロショット精度で上回る。系列長に対して線形に計算・メモリが増え、自己回帰推論では過去KVキャッシュを保持しないため1ステップ当たり一定量の状態で処理できる。","list_summary":"入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。","authors":["Albert Gu","Tri Dao"],"authors_affiliations":"Carnegie Mellon University; Princeton University","published":"2023-12-01","publication":"arXiv","publication_type":"プレプリント","publication_status":"Preprint (v2, 2024-05-31)","lineage":"state space models / selective SSM / recurrent inference / hardware-aware sequence modeling","topics":["状態空間モデル","選択機構","再帰推論","長文脈","GPUメモリ階層"],"importance":"注意機構のKVキャッシュを使わず、内容依存選択とハードウェア協調走査で高品質な線形時間系列モデルを実証したMamba系統の基礎論文である。","implementation":"公式実装と事前学習済みチェックポイントをstate-spaces/mambaで公開。選択走査は融合カーネル、並列走査、再計算を組み合わせる。","hardware_evaluation":"選択走査と推論効率をNVIDIA A100 GPUで評価。選択走査は長系列でFlashAttention-2を上回り、標準PyTorch走査比20〜40倍、実装説明では最大3倍の既存手法比高速化を報告する。","quality_effect":"速度だけでなく言語・DNA・音声・合成課題で品質を検証。言語のMamba-2.8Bはゼロショット平均63.3でPythia-2.8Bの59.1を上回る一方、著者は評価規模が主に3B以下である点を限界とする。","source":"https://arxiv.org/abs/2312.00752","sources":["https://arxiv.org/abs/2312.00752","https://arxiv.org/html/2312.00752"],"code":"https://github.com/state-spaces/mamba","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript"},"reservation":{"claim_id":"claim-preload-270cf0686ddf08989a01feb5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
