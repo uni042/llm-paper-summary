@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-preload-7c93b83402e32e5d2b5890a8",
   "job_id": "job-research-042e5712bf1b426e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-7c93b83402e32e5d2b5890a8",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価は主として単一モデルを同種GPU群でRT/BE混載する設定で、異種GPUや複数モデル、P/D分離、ネットワーク越しKV移動への一般化は未検証。反復時間予測はオフラインprofilingした線形モデルに依存し、GPU世代・モデル形状・カーネル実装が変わると再学習が必要になる。RTのSLO設定と到着分布によってBEへ割ける余裕が変わり、RTを厳しく保護するほどBEスループット損失は残る。双方向KV配置は同一ブロックを2要求で共有するためblock managerとcheckpoint状態が複雑化し、スケジューラにも7.56–9.52%程度の反復オーバーヘッドがある。生成品質、障害耐性、長時間のproduction traceでの安定性は主要評価外。",
+    "differences": "vLLM/PagedAttentionはブロック単位KV管理とcontinuous batchingを提供するが、RT/BEという異なるSLOクラスを同一ブロックで協調させる設計ではない。Orca等の反復単位スケジューリングに対し、BROSは各RTのTTFT/TPOT残余余裕を制約へ入れ、BE throughputを目的関数として明示する。DistServeはprefill/decodeフェーズを分離してTTFT/TPOTを改善するのに対し、BROSは同一モデルインスタンス内で要求クラスを混載する。単純なKV swap/recomputeと異なり、双方向配置とlazy checkpointによりBE状態のうち実際に衝突する部分だけを退避する。",
+    "implementation_status": "BROSの実装を用いた実機評価があり、中央Scheduling Engine、KV Block Manager、GPU Executor、非同期KV checkpoint/swapを統合している。arXivおよびIEEE Xploreで著者公式の公開ソースコードURLは確認できず、第三者がそのまま再現できる公開実装の状態は不明。",
+    "research_positioning": "LLMサービングのSLO-aware schedulingとKV-cache memory managementの交点に位置する。ユーザーの重点テーマである階層メモリの観点では、GPU KVをCPUへ全面退避するのではなく『上書きが確定した最小部分だけを遅延退避する』方針が重要で、CPU/SSD/NVMe階層にも一般化できる。特に低優先ジョブの状態を高速層に可能な限り残し、高優先ジョブとの物理衝突時だけ次階層へevictする方式は、expert cacheやKV offloadのpriority-aware eviction設計へ接続しやすい。"
+  },
+  "reservation": {"claim_id": "claim-preload-7c93b83402e32e5d2b5890a8", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
