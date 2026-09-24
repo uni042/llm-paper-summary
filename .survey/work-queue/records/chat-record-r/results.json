@@ -1,13 +1,79 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "results",
   "attempt_id": "attempt-preload-24504aa3d0d6716cf366c75b",
   "job_id": "job-research-11098a1512c29cb4",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-24504aa3d0d6716cf366c75b",
     "worker_id": "worker-924226",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "results",
+  "data": {
+    "overview": "DGAPはK1V1の永続メモリ量を変えず、局所的な候補分布補正だけで強い品質回復を示す。Llama-3.1-8BのRULERでは47.8%から83.2%へ改善し、local distribution driftは0.38から0.14へ低下する。Qwen2.5-14Bでは128K contextで7.58GBのK1V1/DGAP KVに対しFP16は107.69GBで、14.2倍の圧縮を維持する。代償は約5〜6%のper-token latency/throughputであり、高ビットKVでは元から分布が安定するため追加利得は小さい。",
+    "key_results": [
+      {
+        "metric": "RULER accuracy",
+        "value": "47.8% → 83.2%",
+        "baseline": "Llama-3.1-8B K1V1; FP16は84.2%",
+        "condition": "K1V1 + DGAP",
+        "interpretation": "1-bit KVの大きな品質崩壊の大半を永続KV精度を上げずに回復する。"
+      },
+      {
+        "metric": "local distribution drift",
+        "value": "0.38 → 0.14",
+        "baseline": "Llama-3.1-8B K1V1",
+        "condition": "DGAP適用",
+        "interpretation": "提案が直接狙う局所候補分布のずれ自体が縮小している。"
+      },
+      {
+        "metric": "LongBench average",
+        "value": "29.99 → 40.85",
+        "baseline": "Llama-3.1-8B K1V1; KIVI-2bit 40.65, KVQuant-3bit 41.02",
+        "condition": "8 LongBench tasks",
+        "interpretation": "1-bit footprintのまま主要2/3-bit方式と同水準まで回復する。"
+      },
+      {
+        "metric": "persistent KV compression",
+        "value": "14.2× vs FP16",
+        "baseline": "Qwen2.5-14B FP16",
+        "condition": "8K〜128K context; 128Kで107.69GB → 7.58GB",
+        "interpretation": "DGAPはstored KVを変更しないためK1V1の圧縮率を完全に維持する。"
+      },
+      {
+        "metric": "p95 per-token decode latency overhead",
+        "value": "約5.6〜6.3%増",
+        "baseline": "Qwen2.5-14B K1V1 without DGAP",
+        "condition": "8K〜64K context",
+        "interpretation": "補正を危険ステップのtop-Kだけへ限定することで追加計算を小さく抑える。"
+      },
+      {
+        "metric": "DGAP gain vs bitwidth",
+        "value": "+31.9点(K1V1) → +0.2点(K8V8)",
+        "baseline": "Llama-3.1-8BのNIAH/MK/MV平均",
+        "condition": "K1V1/K2V2/K4V4/K8V8",
+        "interpretation": "価値は強い量子化で最大になり、高ビットでは追加補正の必要性が小さい。"
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "高ビットでは利得が小さい",
+        "description": "K4V4/K8V8では元の候補順位が既に安定しており、DGAPの平均改善は0.2〜0.6点程度。"
+      },
+      {
+        "name": "ゼロオーバーヘッドではない",
+        "description": "Qwen2.5-14B K1V1でper-token latencyは約5.6〜6.3%増え、throughputは約5.3〜5.9%低下する。"
+      },
+      {
+        "name": "校正依存",
+        "description": "risk thresholdとrecovery windowはpaired FP16/quantized tracesによるオフライン校正に依存し、運用分布変化へのonline適応は未実装。"
+      },
+      {
+        "name": "serving-system評価なし",
+        "description": "大規模multi-tenant serving、batching、multi-GPU環境との統合効果は未評価。"
+      }
+    ],
+    "interpretation": "DGAPの主要な意味は「KVそのものをより正確に保存する」のではなく、「低ビットKVから生じた最終候補分布の局所的誤りをtoken選択直前に直す」ことである。したがってメモリ側の圧縮率と品質回復を分離できる。制御実験で順位崩れの寄与を切り分け、driftとend-task qualityの双方が改善するため機構との整合性は高い。ただし結果はbatch-size-1 A100中心で、serving全体のthroughput/SLO効果までは示していない。",
+    "quality_impact": "K1V1のような極端な量子化では品質回復が大きく、Llama/Mistral/QwenのLongBench・RULER・MMLU・WikiText-2で高ビット方式に近い値へ戻る。一方、高ビットでは元々の品質がFP16に近いため改善幅は急速に縮む。DGAP自体はbase model weightsやpersistent KV representationを変更しない。"
   }
 }
