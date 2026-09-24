@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-270cf0686ddf08989a01feb5","job_id":"job-research-7526ab28b3c65fc4","data":{"limitations":"論文自身が最大の制約として、主要な言語モデル評価が約3B以下に留まり、当時のLlama、RWKV、RetNetなどが到達していた7B以上でMambaの品質・学習安定性・システム効率が同様に成立するか未検証であると述べる。状態空間モデルの選択性はテキストやDNAのような離散データには有効だが、連続信号で固定線形系が持つ強い帰納バイアスを損なう場合がある。Transformerで成熟している命令調整、文脈内学習、RLHF、量子化、適応学習等の運用特性が同程度に利用できるかも当時は未評価である。速度評価はA100中心で、高バッチ化による利得を含むため、単一要求レイテンシや別GPU世代へ倍率をそのまま一般化できない。","differences":"S4/S4D/S5など従来の構造化状態空間モデルは時間不変性を維持して畳み込みまたは走査を効率化するのに対し、MambaはΔ、B、Cを入力依存にして内容選択を直接状態遷移へ入れる。Hyenaや長大畳み込み系は大域畳み込みを高効率化するが、自己回帰推論で直接高速な有限状態再帰を得にくい。RetNet/RWKV/線形注意は再帰推論を持つものの、Mambaは状態次元を拡大した選択的状態空間層とハードウェア協調走査を組み合わせる。Transformerは全履歴KVを保持して任意位置へアクセスするのに対し、Mambaは情報を固定サイズ状態へ圧縮するためメモリと推論計算が文脈長へ線形または一定に近い一方、完全な履歴保持という性質は持たない。","implementation_status":"公式コードと事前学習済みモデルがstate-spaces/mambaで公開されている。論文はarXiv v2で、選択走査のGPU実装、モデルブロック、学習・推論評価を含む実装研究である。後続Mamba系研究の基盤となったが、この記録は原論文v2の主張範囲に限定する。","research_positioning":"推論システムの観点では、MambaはKVキャッシュ圧縮・オフロードとは異なり、モデルアーキテクチャ自体を有限状態再帰へ変えてKVキャッシュを不要にする系統である。GPUメモリ階層を意識した融合走査と再計算は、FlashAttentionと同様に演算量だけでなくデータ移動を主要制約として扱う。長文脈推論、状態圧縮、カーネル最適化、Transformer代替アーキテクチャを横断する基礎研究として、後続のMamba推論・ハイブリッドモデルを比較する際の基準点になる。"},"reservation":{"claim_id":"claim-preload-270cf0686ddf08989a01feb5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-preload-886ad02757673f91debfda1d",
+  "job_id": "job-research-df8b6eaefcbe8aad",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-886ad02757673f91debfda1d",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

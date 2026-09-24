@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-270cf0686ddf08989a01feb5","job_id":"job-research-7526ab28b3c65fc4","data":{"overview":"Mambaは選択機構によって固定状態空間モデルの内容依存処理不足を改善し、言語で強いTransformer学習レシピに匹敵するスケーリングを示した。2.8Bモデルのゼロショット平均は63.3で、同じPile・tokenizer・300Bトークン条件のPythia-2.8Bの59.1を上回る。効率面では選択走査が長系列でFlashAttention-2を上回り、標準PyTorch走査比20〜40倍高速、モデル全体の自己回帰生成では同規模Transformer比4〜5倍のスループットを報告する。合成誘導ヘッドでは長さ256で学習したモデルが100万超の系列長へ外挿し、選択機構が長距離の内容依存記憶を担うことを示す。","key_results":[{"metric":"ゼロショット下流平均","value":"63.3","baseline":"Pythia-2.8B 59.1、RWKV-3B 59.6","condition":"Mamba-2.8B、Pile/GPT-NeoX tokenizer、最大300B training tokens","interpretation":"同規模かつ近い学習条件の公開再帰・Transformer系モデルを上回り、約2倍規模のPythia-6.9Bの61.7も超える。"},{"metric":"生成スループット","value":"同規模Transformer比4〜5×","baseline":"Transformer","condition":"自己回帰推論、KVキャッシュ不要による高バッチ利用を含む","interpretation":"有限再帰状態により文脈長依存KVキャッシュを避けるシステム上の利点を示す。"},{"metric":"選択走査速度","value":"標準PyTorch走査比20〜40×","baseline":"standard scan implementation","condition":"N=16、A100、長系列","interpretation":"入力依存状態空間モデルを実用化する上で、融合走査とメモリI/O削減が不可欠であることを示す。"},{"metric":"誘導ヘッド長さ外挿","value":"学習256から評価1,048,576までほぼ完全に解く","baseline":"他方式は2×を超える外挿が困難","condition":"2層合成課題","interpretation":"選択的状態更新が雑音区間を跨いだ関連情報保持に有効である。"},{"metric":"選択機構アブレーション","value":"Mamba+S6 perplexity 8.69 vs Mamba+S4(real) 10.56","baseline":"非選択状態空間層","condition":"約350M、Chinchilla token counts","interpretation":"ブロック形状よりも入力依存の選択的状態空間層が品質改善の主要因である。"}],"negative_results":"選択機構は万能ではなく、連続時間的な信号で固定線形状態空間モデルが持つ帰納バイアスを弱める場合がある。著者は音声アブレーションでこの連続・離散のトレードオフを議論する。また主要言語評価は約3B以下で、7B以上の強力な公開LLMと同じ規模で品質を比較していない。推論4〜5倍という倍率はKVキャッシュ不要でより大きなバッチを使える条件を含み、すべてのレイテンシ条件で単純に成立する値ではない。","interpretation":"Mambaの重要点は、状態空間モデルを単に長系列向けに使ったことではなく、内容依存選択を導入して失われた畳み込み効率をGPU向け並列走査で取り戻した共同設計にある。品質改善はS6選択層のアブレーションで確認され、速度改善は中間状態を高帯域メモリへ実体化しない実装で支えられる。","quality_impact":"効率化と同時に品質を落とさないことを言語・DNA・音声で検証している。言語ではMamba-2.8Bが同条件Pythia-2.8Bを平均4.2ポイント上回り、選択層の導入で約350Mモデルのperplexityが10.56から8.69へ改善する。ただし大規模LLMでの最終品質は未検証である。"},"reservation":{"claim_id":"claim-preload-270cf0686ddf08989a01feb5","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-preload-886ad02757673f91debfda1d",
+  "job_id": "job-research-df8b6eaefcbe8aad",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-886ad02757673f91debfda1d",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}
