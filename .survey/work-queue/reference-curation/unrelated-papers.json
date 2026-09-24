@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-09-20T04:15:00+00:00",
-  "record_count": 46,
+  "updated_at": "2026-09-24T13:22:42+00:00",
+  "record_count": 47,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -676,6 +676,18 @@
         "papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md"
       ],
       "title": "GroundCocoa: A Benchmark for Evaluating Compositional & Conditional Reasoning in Language Models"
+    },
+    "arXiv:1804.07461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1804.07461",
+      "identity_tokens": [
+        "arXiv:1804.07461"
+      ],
+      "reason": "General natural-language-understanding benchmark rather than an LLM inference, training-system, memory, serving, or MoE systems contribution.",
+      "first_checked_at": "2026-09-24T13:22:42+00:00",
+      "last_checked_at": "2026-09-24T13:22:42+00:00",
+      "linked_from": [],
+      "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding"
     }
   }
 }
