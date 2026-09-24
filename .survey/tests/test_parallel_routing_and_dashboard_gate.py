@@ -28,7 +28,7 @@ class CommonThresholdRoutingTests(unittest.TestCase):
         self.assertIn("今回のrunで最低8つの**成功した正規schema v3 precheck**", router)
         self.assertIn("1つのprecheck `request_id` = 1ラウンド", router)
         self.assertIn("Audit starvation防止の3件ブロック", router)
-        self.assertIn("run完了ノルマ5件とは別", router)
+        self.assertIn("runの成功完了ノルマ5件とは別", router)
         self.assertIn("foreground 1件 + standby N件", router)
         self.assertIn("max_jobs=1", router)
         self.assertNotIn("Research / Audit 合計3件ノルマ", router)
