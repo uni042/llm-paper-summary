@@ -223,7 +223,7 @@ claim requestでは `request_id` をrequestファイル名のstemと完全一致
 - 1本処理したことだけをrun終了理由にしない。
 - `blocked` / `deferred` / `rejected` が `ok=true` で終端したことをrun終了理由にしない。これは**次の論文へ進めるようになった状態**であり、hard stop / handoff guardでない限り次claimへ進む。
 
-**論文本体の作業は1件ずつ直列、担当確保はwindowで先行、preflight / submission result確認は非同期に並行する。** 同時に全文読解・5スロット作成・修復を行う論文は常にforegroundの1本だけとする。通常はN+1以降をstandbyとして保持するが、論文Nのセルフレビュー済み5スロットとpreflight requestを耐久保存した後は、Nを最大2件まで `preflight-pending` として内容凍結し、N+1を本文foregroundへ昇格してよい。NのFAILが返ればNを古いpipeline順で修復foregroundへ戻し、PASSなら自動descriptor生成へ進める。descriptor後のsubmission resultも従来どおり同期障壁にしない。これにより本文編集の並列度1を維持したまま、Actionsのpreflight待ちを次論文の精読時間で隠蔽する。
+**論文本体の作業は1件ずつ直列、担当確保はwindowで先行、preflight / submission result確認は非同期に並行する。** 同時に全文読解・5スロット作成・修復を行う論文は常にforegroundの1本だけとする。通常はN+1以降をstandbyとして保持するが、論文Nのセルフレビュー済み5スロットとpreflight requestを耐久保存した後は、**新規preflightへの入場を同一worker最大2件まで**先行させ、その各論文を `preflight-pending` として内容凍結し、次の非凍結standbyを本文foregroundへ昇格してよい。既にpendingになった論文数が競合等で2件を超えても全件を凍結したままにする。NのFAILが返ればNを古いpipeline順で修復foregroundへ戻し、PASSなら自動descriptor生成へ進める。descriptor後のsubmission resultも従来どおり同期障壁にしない。これにより本文編集の並列度1を維持したまま、Actionsのpreflight待ちを次論文の精読時間で隠蔽する。
 
 ### 3.1 実運用で確立した高スループット原則
 
