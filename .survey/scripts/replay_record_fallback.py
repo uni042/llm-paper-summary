@@ -9,6 +9,7 @@ attempt-specific immutable descriptor; it never recreates the reusable Chat tran
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path, PurePosixPath
@@ -24,6 +25,8 @@ CHAT_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 TERMINAL = claim_state.TERMINAL
 LIBRARY_PENDING_PREFIX = "/LLM-survey-outbox/pending/"
+PREFLIGHT_REQUEST_DIR = Path(".survey/work-queue/research-preflight/requests")
+PREFLIGHT_REPLAY_MODE = "quality_preflight_v1"
 
 
 def read_object(path: Path) -> dict[str, Any] | None:
@@ -95,6 +98,9 @@ def _metadata(envelope: dict[str, Any]) -> dict[str, Any]:
         "audit_required",
         "audit_flags",
         "audit_reason",
+        "run_key",
+        "scheduled_slot",
+        "actual_invocation_start",
     ):
         root_value = envelope.get(key)
         legacy_value = legacy.get(key)
@@ -155,6 +161,69 @@ def _write_if_changed(path: Path, text: str) -> bool:
         return False
     path.write_text(text, encoding="utf-8")
     return True
+
+
+def _write_immutable(path: Path, text: str) -> bool:
+    """Create an immutable transport record, or accept an exact replay."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():
+        if path.read_text(encoding="utf-8") == text:
+            return False
+        raise ValueError(f"immutable transport conflict: {path}")
+    path.write_text(text, encoding="utf-8")
+    return True
+
+
+def _preflight_request_from_envelope(
+    envelope: dict[str, Any],
+    meta: dict[str, Any],
+    *,
+    record_bank: str,
+) -> tuple[str, str]:
+    """Build the normal quality-preflight request after a create-only record replay.
+
+    This is the current connector-safe fallback contract. Workers can create one
+    immutable fallback-inbox envelope even when repeated updates to reusable record
+    slots are rejected by the client/platform. GitHub Actions then materializes the
+    five slots and returns to the ordinary exact-blob quality preflight path instead
+    of bypassing it.
+    """
+    if envelope.get("record_bundle_mode") != PREFLIGHT_REPLAY_MODE:
+        raise ValueError("record_bundle_mode does not request quality-preflight replay")
+
+    review = envelope.get("self_review")
+    if not isinstance(review, dict) or not review:
+        raise ValueError("quality-preflight replay requires self_review")
+
+    envelope_id = _safe_id(envelope.get("id"), "id")
+    assert envelope_id is not None
+    request_id = "fallback-" + hashlib.sha256(envelope_id.encode("utf-8")).hexdigest()[:24]
+    request: dict[str, Any] = {
+        "schema_version": 1,
+        "operation": "research_quality_preflight",
+        "request_id": request_id,
+        "kind": meta["kind"],
+        "attempt_id": meta["attempt_id"],
+        "job_id": meta["job_id"],
+        "record_bank": record_bank,
+        "paper_path": meta["paper_path"],
+        "self_review": review,
+    }
+    for field in (
+        "worker_id",
+        "run_key",
+        "scheduled_slot",
+        "actual_invocation_start",
+        "expected_blob_sha",
+    ):
+        if meta.get(field) not in (None, ""):
+            request[field] = meta[field]
+    if envelope.get("requested_at") not in (None, ""):
+        request["requested_at"] = envelope["requested_at"]
+
+    relative = PREFLIGHT_REQUEST_DIR / f"{request_id}.json"
+    text = json.dumps(request, ensure_ascii=False, indent=2) + "\n"
+    return relative.as_posix(), text
 
 
 def _current_claim_adopts_checkpoint(current: dict[str, Any], envelope: dict[str, Any]) -> bool:
@@ -316,6 +385,24 @@ def materialize(repo_root: Path, envelope: dict[str, Any]) -> dict[str, Any]:
             }
         )
 
+    if envelope.get("record_bundle_mode") == PREFLIGHT_REPLAY_MODE:
+        preflight_path, preflight_text = _preflight_request_from_envelope(
+            envelope,
+            meta,
+            record_bank=bank,
+        )
+        if _write_immutable(repo_root / preflight_path, preflight_text):
+            changed.append(preflight_path)
+        return {
+            "action": "materialized_preflight",
+            "job_id": job_id,
+            "record_bank": bank,
+            "preflight_request": preflight_path,
+            "changed_paths": changed,
+        }
+
+    # Legacy/read-compatibility record bundles still replay directly to an immutable
+    # descriptor. New connector-side producers use quality_preflight_v1 above.
     descriptor: dict[str, Any] = {
         "schema_version": 1,
         "transport_version": 10,
