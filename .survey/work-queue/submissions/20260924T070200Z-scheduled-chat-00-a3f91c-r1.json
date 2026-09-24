@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2010.05680",
+      "arxiv_id": "2010.05680",
+      "title": "TurboTransformers: an efficient GPU serving system for transformer models",
+      "source_url": "https://arxiv.org/abs/2010.05680",
+      "priority": 62,
+      "priority_breakdown": {"base": 47, "lineage": 15, "recency": 0, "venue": 0, "total": 62},
+      "reason": "DistServeの後方引用に現れるTransformer向けGPU serving基盤。可変長入力に対するメモリ割当、GPU reduction最適化、動的計画法によるbatch schedulerを実装・評価しており、現代LLM servingの前史として直接的なsystems系統接続がある。"
+    },
+    {
+      "canonical_id": "arXiv:2006.02464",
+      "arxiv_id": "2006.02464",
+      "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
+      "source_url": "https://arxiv.org/abs/2006.02464",
+      "priority": 58,
+      "priority_breakdown": {"base": 43, "lineage": 15, "recency": 0, "venue": 0, "total": 58},
+      "reason": "DistServeが参照するmodel-serving基盤で、予測可能な実行時間を利用した分散serving、tail latency/SLO、request isolationを実装評価している。LLM専用ではないが、LLM serving scheduler・SLO設計の基礎系統として関連が明確。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T070008Z-scheduled-chat-00-a3f91c-take1.json",
+    "receipt": "sha256:ee2017e84b9243086ba1560d3d5a9c6454a3b35d839cfe69af02864c93f8e230"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+    "round": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+    "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
+    "query_summary": "DistServeの正規schema v3後方引用20件を軽量評価し、LLM/Transformer servingの実装・scheduler・SLO系統へ直接接続する強候補のみ採用。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": ["arXiv:2010.05680", "arXiv:2006.02464"],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [{"topic":"DistServe","source":"semantic_scholar","date_range":"backward-references","category":"inference-systems","citation_direction":"backward","query_family":"citation-first","raw_result_count":20,"unseen_result_count":20,"duplicate_filtered_count":0,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":2,"seed_canonical_id":"arXiv:2401.09670"}],
+    "seed_canonical_id": "arXiv:2401.09670"
+  }
+}
