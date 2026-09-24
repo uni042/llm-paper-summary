@@ -68,6 +68,46 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertNotIn("final_response_allowed", result)
             self.assertNotIn("worker_execution_directive", result)
 
+    def test_stale_discovery_completion_overrides_research_near_threshold(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            started = dt.datetime.fromisoformat(value["actual_invocation_start"])
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {
+                    "claiming": {"ready_research_audit": 300, "claimable": 300},
+                    "counts": {"research": {"ready": 300}, "audit": {"ready": 0}},
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/jobs/job-discovery-old.json",
+                {
+                    "job_id": "job-discovery-old",
+                    "type": "discovery",
+                    "status": "completed",
+                    "completed_at": (started - dt.timedelta(hours=3)).isoformat(),
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {"schema_version": 3, "history": []},
+            )
+
+            result = mod.derive(root, value)
+
+            self.assertEqual(result["candidate_inventory"], 300)
+            self.assertEqual(result["work_mode"], "discovery")
+            self.assertEqual(result["route_source"], "discovery_freshness_override")
+            self.assertTrue(result["discovery_refresh_due_at_route"])
+            self.assertGreaterEqual(
+                result["discovery_age_at_route_seconds"],
+                mod.claim_window_policy.DISCOVERY_REFRESH_INTERVAL_SECONDS,
+            )
+
     def test_0830_slot_forces_maintenance_route(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
