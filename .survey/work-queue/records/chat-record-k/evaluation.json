@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-preload-7567c60b834735ea01f92a82",
-  "job_id": "job-research-7ecc4d7949c81534",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-7567c60b834735ea01f92a82",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-7567c60b834735ea01f92a82","job_id":"job-research-7ecc4d7949c81534","data":{"hardware":"accuracyはLlama-3.1-8B-Instruct、Qwen3-8B、Qwen3-32Bで評価。efficiencyはNVIDIA H100 GPU上のCPU-offload single-layer pipelineを測定する。complete BF16 KVはpinned CPU memoryに保持する。","software":"selected KVのexact attentionにFlashInferを使用し、GPU fused kernelでblock statistics更新・packing、score計算、Top-Kを実行する。CPU gather、H2D transfer、auxiliary CUDA streamのMean compensationをoverlapする。","methodology":"accuracyはRULERとLongBench-ProでFull attention、Quest、InfLLM、Quest+RESA等と比較し、3 modelの複数KV budgetで平均scoreを測る。efficiencyは32K、64K、128K contextと512、1024、2048 selected-token budgetの9条件でmean decoding-step latencyを比較する。ablationではattention massだけ、varianceだけ、両者を使うscore、variance group granularityを評価し、selection-compensation結合の寄与を確認する。","scope":"効率評価はsingle-layer CPU-offload pipelineであり、model全体のend-to-end generation throughputそのものではない。理論導出はMean compensationを解析対象とし、小分散の二次近似を実用scoreへ使う。summaryはblockごとに2d+r+1 scalarを追加し、grouped varianceの粒度rとblock sizeによってmetadata量と推定精度が変わる。"},"reservation":{"claim_id":"claim-preload-7567c60b834735ea01f92a82","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
