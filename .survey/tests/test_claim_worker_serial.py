@@ -31,7 +31,7 @@ def add_job(root: Path, job_id: str, priority: int):
     })
 
 
-def add_request(root: Path, request_id: str, *, max_jobs=1, worker_id="scheduled-chat-20260913-1530"):
+def add_request(root: Path, request_id: str, *, max_jobs=1, worker_id="scheduled-chat-00"):
     write_json(root / ".survey/work-queue/claim-requests" / f"{request_id}.json", {
         "schema_version": 1,
         "request_id": request_id,
@@ -69,7 +69,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             self.assertEqual(resumed["claim_id"], first_assignment["claim_id"])
             self.assertEqual(resumed["attempt_id"], first_assignment["attempt_id"])
             self.assertEqual(resumed["claimed_at"], first_assignment["claimed_at"])
-            self.assertEqual(resumed["worker_id"], "scheduled-chat-20260913-1530")
+            self.assertEqual(resumed["worker_id"], "scheduled-chat-00")
             self.assertIsNone(resumed["record_bank"])
             self.assertEqual(resumed["record_bank_fallback"], "library")
             self.assertEqual(resumed["pipeline_role"], "foreground")
@@ -87,7 +87,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             add_request(
                 root,
                 "req-1030",
-                worker_id="scheduled-chat-llm-survey-20260914T1030JST",
+                worker_id="scheduled-chat-00",
             )
             claim_worker.process_requests(root, at=AT)
             first = json.loads((root / ".survey/work-queue/claim-results/req-1030.json").read_text())
@@ -96,7 +96,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             add_request(
                 root,
                 "req-1130",
-                worker_id="scheduled-chat-llm-survey-20260914T1130JST",
+                worker_id="scheduled-chat-00",
             )
             claim_worker.process_requests(root, at=AT)
             second = json.loads((root / ".survey/work-queue/claim-results/req-1130.json").read_text())
@@ -109,7 +109,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             self.assertEqual(resumed["claimed_at"], first_assignment["claimed_at"])
             self.assertEqual(
                 resumed["worker_id"],
-                "scheduled-chat-llm-survey-20260914T1030JST",
+                "scheduled-chat-00",
             )
             self.assertEqual(resumed["pipeline_role"], "foreground")
             self.assertEqual(standby["pipeline_role"], "standby")
@@ -156,7 +156,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             write_json(root / ".survey/work-queue/claim-requests/req-other.json", {
                 "schema_version": 1,
                 "request_id": "req-other",
-                "worker_id": "scheduled-chat-other",
+                "worker_id": "worker-1",
                 "worker_kind": "scheduled_chat",
                 "requested_at": "2026-09-13T00:00:00+00:00",
                 "max_jobs": 1,
@@ -189,7 +189,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             write_json(root / ".survey/work-queue/claim-requests/req-other.json", {
                 "schema_version": 1,
                 "request_id": "req-other",
-                "worker_id": "scheduled-chat-other",
+                "worker_id": "worker-1",
                 "worker_kind": "scheduled_chat",
                 "requested_at": "2026-09-13T00:00:00+00:00",
                 "max_jobs": 1,

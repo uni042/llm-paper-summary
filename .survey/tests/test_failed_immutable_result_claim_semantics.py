@@ -12,7 +12,7 @@ import claim_worker  # noqa: E402
 
 
 AT = datetime(2026, 9, 13, 0, 0, tzinfo=timezone.utc)
-WORKER_ID = "scheduled-chat-failed-immutable-test"
+WORKER_ID = "scheduled-chat-00"
 
 
 def write_json(path: Path, obj):
@@ -118,7 +118,7 @@ class FailedImmutableResultClaimSemanticsTests(unittest.TestCase):
             root = Path(td)
             add_job(root, "job-a", 90)
             add_job(root, "job-b", 80)
-            add_request(root, "req-a", AT, worker_id="worker-a")
+            add_request(root, "req-a", AT, worker_id="worker-1")
             claim_worker.process_requests(root, at=AT)
             first = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
             assignment = first["assignments"][0]
@@ -132,7 +132,7 @@ class FailedImmutableResultClaimSemanticsTests(unittest.TestCase):
             write_json(job_path, job)
 
             later = AT + timedelta(minutes=1)
-            add_request(root, "req-repair", later, worker_id="worker-repair")
+            add_request(root, "req-repair", later, worker_id="worker-2")
             claim_worker.process_requests(root, at=later)
 
             second = json.loads((root / ".survey/work-queue/claim-results/req-repair.json").read_text())
@@ -158,7 +158,7 @@ class FailedImmutableResultClaimSemanticsTests(unittest.TestCase):
                 "record_bank": "a",
             })
 
-            add_request(root, "req-next", AT, worker_id="worker-next")
+            add_request(root, "req-next", AT, worker_id="worker-3")
             claim_worker.process_requests(root, at=AT)
 
             result = json.loads((root / ".survey/work-queue/claim-results/req-next.json").read_text())
