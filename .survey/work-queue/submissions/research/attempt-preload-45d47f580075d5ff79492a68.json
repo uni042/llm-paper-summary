@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-preload-45d47f580075d5ff79492a68",
+  "job_id": "job-research-1a48a3083b0b1499",
+  "claim_id": "claim-preload-45d47f580075d5ff79492a68",
+  "worker_id": "worker-925000",
+  "run_key": "worker-925000-20260924T153200Z-lazyprobe",
+  "scheduled_slot": "adhoc",
+  "actual_invocation_start": "2026-09-25T00:32:00+09:00",
+  "status": "blocked",
+  "reason": "The canonical arXiv record for arXiv:2607.04164 was reachable, but the arXiv PDF/experimental HTML full-text routes were not retrievable in this worker environment and no author/institution-hosted primary full text was found. The available ResearchGate record explicitly has no file and third-party mirrors/previews are not sufficient primary evidence for a workflow-v10 five-slot research record.",
+  "retrieval_evidence": [
+    {
+      "url": "https://arxiv.org/abs/2607.04164",
+      "result": "canonical metadata/abstract indexed; direct page fetch timed out through the available route"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.04164",
+      "result": "primary PDF route not retrievable in this worker environment"
+    },
+    {
+      "url": "https://arxiv.org/html/2607.04164",
+      "result": "primary experimental HTML route not retrievable in this worker environment"
+    },
+    {
+      "url": "https://www.researchgate.net/publication/408535570_BrownoutMoE_Structure-Aware_Expert_Grouping_for_Efficient_and_Accurate_LLM_Web-based_Services",
+      "result": "record found but explicitly reports no full-text file available"
+    },
+    {
+      "query": "BrownoutMoE Yi Ding Minxian Xu PDF author institution",
+      "result": "no author/institution-hosted primary full text found"
+    }
+  ],
+  "blocked_at": "2026-09-24T15:49:00Z"
+}
