@@ -60,6 +60,10 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertIn("actual write", result["transport_rule"])
             self.assertIn("finalization_gate", result)
             self.assertFalse(result["finalization_permit_issued"])
+            self.assertFalse(result["stop_permit"]["issued"])
+            self.assertTrue(result["stop_permit_required"])
+            self.assertFalse(result["run_termination_allowed"])
+            self.assertTrue(result["continuation_contract"]["must_consume_next_work_packet"])
             self.assertEqual(result["finalization_gate"]["decision"], "MUST_CONTINUE")
             self.assertNotIn("final_response_allowed", result)
             self.assertNotIn("worker_execution_directive", result)
@@ -156,6 +160,62 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["runtime_condition_event"], mod.PLATFORM_CONTEXT_LIMIT_EVENT)
             self.assertEqual(result["gate"]["decision"], "STOP_RUN")
             self.assertIn("platform_limit_reached", result["gate"]["stop_reasons"])
+
+    def test_bare_finalization_permit_without_approved_stop_reason_is_not_enough(self):
+        permit = mod._build_stop_permit(
+            finalization_permit_issued=True,
+            work_mode="research",
+            runtime_condition="none",
+            runtime_condition_confirmed=False,
+            runtime_condition_attempts=0,
+            runtime_condition_event="",
+            runtime_condition_detail="",
+            gate={"stop_reasons": [], "handoff_window_active": False, "final_handoff_active": False},
+            processed_at=dt.datetime.now(dt.timezone.utc).isoformat(),
+        )
+        self.assertFalse(permit["issued"])
+        self.assertEqual(permit["denied_reason"], "no_router_approved_stop_reason")
+
+    def test_safe_time_window_issues_explicit_stop_permit(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["actual_invocation_start"] = (
+                dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=55)
+            ).isoformat()
+            result = mod.derive(root, value)
+            self.assertTrue(result["finalization_permit_issued"])
+            self.assertTrue(result["stop_permit"]["issued"])
+            self.assertEqual(result["stop_permit"]["category"], "time_window")
+            self.assertTrue(result["run_termination_allowed"])
+            self.assertFalse(result["continuation_contract"]["must_consume_next_work_packet"])
+
+    def test_confirmed_platform_limit_uses_observed_limit_stop_permit(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "platform_context_limit"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 1
+            value["runtime_condition_event"] = mod.PLATFORM_CONTEXT_LIMIT_EVENT
+            value["runtime_condition_detail"] = "platform rejected a required tool call because the acquisition/output cap was reached"
+            result = mod.derive(root, value)
+            self.assertTrue(result["stop_permit"]["issued"])
+            self.assertEqual(result["stop_permit"]["category"], "observed_acquisition_limit")
+            self.assertTrue(result["run_termination_allowed"])
+
 
     def test_fresh_pending_claim_exposes_age_and_monitor_action(self):
         with tempfile.TemporaryDirectory() as td:
