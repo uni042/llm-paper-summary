@@ -1,35 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-24T09:33:47+00:00",
-  "last_run_key": "scheduled-chat-30-20260924T092830Z-4b7e2a",
-  "last_round": "20260924T093200Z-scheduled-chat-30-4b7e2a-r2",
+  "updated_at": "2026-09-24T10:55:28+00:00",
+  "last_run_key": "scheduled-chat-00-20260924T095713Z-6f4c2a",
+  "last_round": "20260924T095830Z-scheduled-chat-00-6f4c2a-r1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 4,
+  "last_empty_round_reason": "No record was promoted without title/abstract evidence; weak or under-evidenced candidates were not used to fill quota.",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T21:00:00+09:00",
-      "round": "cxl-memory-3",
-      "axis": "CXL pooled memory・photonic fabric・near-data processing for KV cache",
-      "query_summary": "CXL/remote-memoryを独立軸として探索。直前runで既に候補化されたHyMCacheは再投入せず、別系統のphotonic-CXL applianceとtransparent CXL near-data processingをcanonical ID照合後に選定した。",
-      "candidate_count": 2,
-      "duplicate_filtered_count": 1,
-      "novel_candidate_count": 1,
-      "final_duplicate_filtered_count": 1,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.5,
-      "final_duplicate_ratio": 1.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arxiv:2607.18141"
-      ],
-      "next_axis_hint": "network/RDMA KV transferと分離型servingの最近のforward-citation系を探索する",
-      "source_submission": "work-queue/submissions/20260917T2100JST-discovery-cxl-memory-3.json"
-    },
     {
       "run_key": "2026-09-17T21:00:00+09:00",
       "round": "moe-placement-5",
@@ -9062,6 +9042,40 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T095830Z-scheduled-chat-00-6f4c2a-r1",
+      "precheck_request_id": "20260924T095830Z-scheduled-chat-00-6f4c2a-r1",
+      "run_key": "scheduled-chat-00-20260924T095713Z-6f4c2a",
+      "round": "20260924T095830Z-scheduled-chat-00-6f4c2a-r1",
+      "axis": "backward references from repository structured references",
+      "query_summary": "repository-wide structured referencesの未収録20件を正規schema v3 precheckで取得。今回の軽量評価ではtitle/abstractが未補完のrecordを推測でCandidate化せず、強候補を0件とした。",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "forward citation refresh for canonical seed selected by run-state selector",
+      "source_submission": "work-queue/submissions/discovery/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json",
+      "source_submissions": [
+        "work-queue/submissions/discovery/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -17158,6 +17172,19 @@
       "duplicate_ratio": 1.0,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
+    },
+    "backward references from repository structured references": {
+      "last_run_key": "scheduled-chat-00-20260924T095713Z-6f4c2a",
+      "rounds": 1,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 20,
+      "final_duplicate_filtered_count": 0,
+      "post_final_dedupe_count": 20,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "next_axis_hint": "forward citation refresh for canonical seed selected by run-state selector"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies.",
