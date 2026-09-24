@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "run-state-scheduled-chat-30-20260925T0741-runtime",
+  "run_key": "scheduled-chat-30-20260925T072853+0900-run7",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T07:28:53+09:00",
+  "runtime_condition": "platform_context_limit",
+  "runtime_condition_confirmed": true,
+  "runtime_condition_attempts": 4,
+  "runtime_condition_event": "platform_tool_call_rejected",
+  "runtime_condition_scope": "run_wide",
+  "runtime_condition_detail": "GitHub read and request-file create succeeded. Required content repair writes were then rejected by platform safety before connector execution: active record metadata update once; create-only quality_preflight_v1 fallback bundle for that active record once; second paper problem_method update once; create-only quality_preflight_v1 fallback bundle for the second paper once. Two distinct record targets and both normal update and canonical create-only fallback were rejected, so required Research/Audit content progression is unavailable in this run. Last successful write was the ZipNN preflight request.",
+  "candidate_inventory_at_start": 335,
+  "work_mode_at_start": "research",
+  "research_discovery_threshold": 288,
+  "hot_dispatch_generated_at": "2026-09-24T22:28:48+00:00"
+}
