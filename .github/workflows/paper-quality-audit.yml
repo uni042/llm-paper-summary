@@ -53,7 +53,6 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Run paper audit scope regression test\n        run: python -m unittest .survey/tests/test_paper_audit_scope.py\n\n      - name: Run paper audit scope regression test
         run: python .survey/tests/test_paper_audit_scope.py
 
       - name: Run quality regression tests
