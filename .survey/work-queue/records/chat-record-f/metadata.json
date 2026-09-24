@@ -4,7 +4,49 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-9a2b16779f8e3ddfeb6f3da7",
   "job_id": "job-research-c312adffcbd5fa76",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2609.02652",
+    "arxiv_id": "2609.02652",
+    "doi": "10.48550/arXiv.2609.02652",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights",
+    "summary": "Leech格子ベクトル量子化の2 bit/weight級表現をGPUサービングへ落とす際に欠けていた301クラスのマルチシェル復号を実装し、ディスク上の圧縮率とVRAM上の実効レートを分離評価する。47-bitの組合せindexをロード時に固定長GPUレコードへ展開し、warp divergenceなしの融合dequantize+GEMVで読む。実用Planes14は4.80 bit/weightのVRAM表現でL40S上FP16比2.15倍のGEMV速度を得る一方、QTIP trellis kernelには2.40倍の読出しbyte差に対応して2.27倍遅く、巨大codebookを展開する帯域コストを定量化した。",
+    "list_summary": "2-bit Leech格子量子化の全301クラス復号をGPU実装し、4.80 bit/weightのVRAM展開表現でL40S上FP16比2.15倍を達成しつつ、巨大codebook展開の帯域コストをQTIP比較で定量化。",
+    "authors": [
+      "Pier-Jean Malandrino"
+    ],
+    "authors_affiliations": "Scub（論文表記）",
+    "published": "2026-09-02",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint (v1, 2026-09-02)",
+    "lineage": "low-bit LLM inference / vector quantization / GPU GEMV kernels / VRAM layout",
+    "topics": [
+      "2-bit量子化",
+      "Leech格子",
+      "GPU GEMV",
+      "VRAMレイアウト",
+      "融合dequantization"
+    ],
+    "importance": "圧縮形式のon-disk bit rateだけでなく、サービング時にGPUが実際に読むin-VRAM rateを独立の設計軸として示し、量子化品質と実行時帯域コストの乖離を実測した。",
+    "implementation": "オフラインtranscoder、固定長GPU layout、融合dequantize+matvec CUDA kernel、f64照合とbit-exact検証を備える。",
+    "hardware_evaluation": "主評価NVIDIA L40S、再現・有効範囲確認にNVIDIA A100。decode-phase GEMV batch=1とQwen3-4B/8B/14B end-to-end servingを評価。",
+    "quality_effect": "4Bでは4-bit基準に対しperplexity 1.38倍、MMLU -14.7点。差は8B/14Bで縮小するが、校正データ差の影響が未分離。",
+    "source": "https://arxiv.org/abs/2609.02652",
+    "sources": [
+      "https://arxiv.org/abs/2609.02652"
+    ],
+    "code": null,
+    "last_checked": "2026-09-25",
+    "references": [],
+    "references_checked_at": "2026-09-25",
+    "references_source": "primary manuscript",
+    "references_total": 31
+  },
   "reservation": {
     "claim_id": "claim-preload-9a2b16779f8e3ddfeb6f3da7",
     "worker_id": "scheduled-chat-00",
