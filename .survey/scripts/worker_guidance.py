@@ -132,7 +132,7 @@ PROFILES = {
         "task": "継続可否判定",
         "next": [
             "出力の decision / finalization_allowed / required_action / next_action_message を確認する。",
-            "required_action=CLAIM_NEXT_RESEARCH_AUDIT なら、status-only終端・最低成功件数未達・submission pendingをrun終了理由にせず、最新queue/claim stateを再取得して次のResearch/Auditを1件claimする。直前attemptのdescriptorが耐久保存済みなら、旧claimがactive表示でもclaim fast laneの正規解放に任せる。",
+            "required_action=CLAIM_NEXT_RESEARCH_AUDIT なら、status-only終端・最低成功件数未達・submission pendingをrun終了理由にせず、next_work_packetを最優先する。kind=research_direct_take なら通常claim resultがpendingでも別の通常claim requestを追加せず、指定take_pathをcreate-only確保して直ちに本文読解を開始する。packetが無い場合だけ最新queue/claim stateから既確保standby昇格または通常claim補充へ進む。直前attemptのdescriptorが耐久保存済みなら、旧claimがactive表示でもclaim fast laneの正規解放に任せる。",
             "Research/Auditのsubmission pendingは観測状態として保持するが、新規claim上限には使わない。--pipeline-ahead-count が渡される場合もテレメトリとして扱い、値の大小で読解を止めない。",
             "decision=CONTINUE では required_action を最優先する。submission pendingが存在しても、required_action=CLAIM_NEXT_RESEARCH_AUDIT なら先に次の1件を処理する。required_action=MONITOR_CLAIM_FAST_LANE なら新claimを出さずActions/transport監視とworker-router.md第7.0節の待機ミクロタスクを1件行ってから同じrequest_idを再確認する。MONITOR_SUBMISSION_RESULTS は残り600秒以下の開始禁止窓でのみ、待機ミクロタスクを挟みながら既存submission resultを前景監視する。",
             "decision=STOP_RUN の場合も直接終了せず、その出力値と今回runの work_mode / 成功件数またはDiscovery round数を run_finalization_gate.py に渡す。",

@@ -1226,6 +1226,7 @@ def _next_work_packet(
     discovery_fallback_source: dict[str, Any] | None,
     discovery_pipeline_preload: dict[str, Any] | None,
     run_termination_allowed: bool,
+    research_direct_packet: dict[str, Any] | None = None,
 ) -> dict[str, Any] | None:
     if run_termination_allowed:
         return None
@@ -1300,6 +1301,20 @@ def _next_work_packet(
             return packet
 
     if action == "CLAIM_NEXT_RESEARCH_AUDIT":
+        if isinstance(research_direct_packet, dict):
+            return {
+                **dict(research_direct_packet),
+                "kind": "research_direct_take",
+                "action": action,
+                "worker_id": worker_id,
+                "hot_dispatch_path": ".survey/work-queue/hot-dispatch.json",
+                "pending_claim_request_ids": list(
+                    claims.get("pending_claim_request_ids") or []
+                ),
+                "direct_take_before_claim_result": bool(
+                    claims.get("claim_result_pending")
+                ),
+            }
         return {
             "kind": "research_audit_claim",
             "action": action,
@@ -1491,6 +1506,43 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
 
     discovery_preload = decorate_discovery_packet(discovery_preload)
 
+    # Rescue path for an already-pending normal claim request. A prepared
+    # Research/Audit packet can still be reserved with a create-only direct take,
+    # allowing full-text work to start while the existing request is canonicalized.
+    # claim_fast_path processes direct takes before normal request allocation, so
+    # the pending request converges into the same worker's standby-window refill.
+    hot_dispatch_index = _read(root / ".survey/work-queue/hot-dispatch.json", {}) or {}
+    research_direct_packet = None
+    if work_mode == "research":
+        packets = (
+            hot_dispatch_index.get("research")
+            if isinstance(hot_dispatch_index, dict)
+            else None
+        )
+        if isinstance(packets, list):
+            for raw_packet in packets:
+                if not isinstance(raw_packet, dict):
+                    continue
+                take_path = str(raw_packet.get("take_path") or "")
+                job_id = str(raw_packet.get("job_id") or "")
+                if not take_path or not job_id or (root / take_path).exists():
+                    continue
+                live_job = _read(
+                    root / ".survey/work-queue/jobs" / f"{job_id}.json",
+                    {},
+                )
+                if not (
+                    isinstance(live_job, dict)
+                    and live_job.get("status") == "ready"
+                    and live_job.get("type") in {"research", "audit"}
+                    and live_job.get("repair_required") is not True
+                ):
+                    continue
+                research_direct_packet = dict(raw_packet)
+                research_direct_packet["job"] = live_job
+                break
+    prepared_research_packet_available = research_direct_packet is not None
+
     now = dt.datetime.now(dt.timezone.utc)
     deadline = started_at + dt.timedelta(seconds=3600)
     seconds_to_deadline = max(int((deadline - now).total_seconds()), 0)
@@ -1606,6 +1658,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         claim_result_pending=claims["claim_result_pending"],
         claim_result_pending_age_seconds=claims["claim_result_pending_age_seconds"],
         claim_monitor_window_seconds=claims["claim_monitor_window_seconds"],
+        prepared_research_packet_available=prepared_research_packet_available,
         submission_state_checked=submission["submission_state_checked"],
         submission_result_pending=submission["submission_result_pending"],
         pipeline_ahead_count=submission["pipeline_ahead_count"],
@@ -1729,6 +1782,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         discovery_fallback_source=discovery_fallback_source,
         discovery_pipeline_preload=discovery_pipeline_preload,
         run_termination_allowed=run_termination_allowed,
+        research_direct_packet=research_direct_packet,
     )
 
     public_submission = {key: value for key, value in submission.items() if key != "attempt_facts"}
@@ -1774,6 +1828,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "discovery_pipeline_preload": discovery_pipeline_preload,
         "discovery_pipeline_work_available": discovery_pipeline_work_available,
         "discovery_pipeline_window": DISCOVERY_PIPELINE_WINDOW,
+        "research_direct_packet": research_direct_packet,
+        "prepared_research_packet_available": prepared_research_packet_available,
         "idle_gap_forbidden": True,
         "independent_work": independent_work,
         "gate": gate,
@@ -1817,7 +1873,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
             "GitHub file create/update capability counts as GitHub write; absence of local script execution alone is never a transport hard stop, and an actual canonical-path write must be attempted before a write-unavailable handoff. "
             "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected and a concrete observed-error detail; a single paper/source retrieval failure is never platform-context evidence. "
-            "A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. "
+            "A pending claim exposes its request age; when an unclaimed prepared Research/Audit packet is available outside the handoff window, the gate routes directly to that packet instead of monitoring the claim as foreground work. Only when no prepared packet is available does the first 60 seconds use active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
             "Discovery pending results do not mask already-evaluable rounds; evaluation/recovery work has priority over wait states. "
             f"Outside the 600-second no-new-work window, at most {DISCOVERY_PIPELINE_WINDOW} Discovery rounds may be in flight so a PRECHECKED citation window can be evaluated while an older precheck/submission settles. "

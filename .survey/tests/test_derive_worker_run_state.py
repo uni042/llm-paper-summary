@@ -196,6 +196,41 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
         self.assertEqual(packet["action"], "REFRESH_AND_CONTINUE")
 
 
+    def test_claim_next_packet_prefers_concrete_direct_take_even_with_pending_request(self):
+        packet = mod._next_work_packet(
+            Path("."),
+            worker_id="scheduled-chat-00",
+            gate={"required_action": "CLAIM_NEXT_RESEARCH_AUDIT"},
+            finalization_gate={
+                "finalization_permit": {"issued": False},
+                "next_action": "CLAIM_NEXT_RESEARCH_AUDIT",
+            },
+            claims={
+                "claim_result_pending": True,
+                "pending_claim_request_ids": ["pending-claim-1"],
+            },
+            discovery_async={},
+            discovery_preload=None,
+            discovery_fallback_source=None,
+            discovery_pipeline_preload=None,
+            run_termination_allowed=False,
+            research_direct_packet={
+                "claim_id": "claim-hot",
+                "job_id": "job-hot",
+                "attempt_id": "attempt-hot",
+                "take_path": ".survey/work-queue/direct-takes/research/claim-hot.json",
+                "job": {
+                    "job_id": "job-hot",
+                    "type": "research",
+                    "status": "ready",
+                },
+            },
+        )
+        self.assertEqual(packet["kind"], "research_direct_take")
+        self.assertEqual(packet["claim_id"], "claim-hot")
+        self.assertTrue(packet["direct_take_before_claim_result"])
+        self.assertEqual(packet["pending_claim_request_ids"], ["pending-claim-1"])
+
     def test_safe_time_window_issues_explicit_stop_permit(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

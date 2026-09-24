@@ -28,6 +28,7 @@ def make_args(**overrides):
         claim_result_pending=False,
         claim_result_pending_age_seconds=0,
         claim_monitor_window_seconds=60,
+        prepared_research_packet_available=False,
         submission_state_checked=False,
         submission_result_pending=False,
         pipeline_ahead_count=0,
@@ -79,6 +80,21 @@ class ContinuationGateClaimWaitTests(unittest.TestCase):
         self.assertIn("unsettled_submissions", result["claim_wait_action"])
         self.assertTrue(result["claim_state_checked"])
         self.assertIn("60秒未満", result["next_action_message"])
+
+    def test_pending_claim_with_prepared_packet_starts_direct_research_instead_of_waiting(self):
+        result = mod.decide(make_args(
+            claim_state_checked=True,
+            claim_result_pending=True,
+            claim_result_pending_age_seconds=22,
+            prepared_research_packet_available=True,
+        ))
+        self.assertEqual(result["decision"], "CONTINUE")
+        self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
+        self.assertFalse(result["productive_wait_required"])
+        self.assertEqual(result["claim_wait_action"], "none")
+        self.assertTrue(result["claim_wait_bypassed_by_prepared_packet"])
+        self.assertIn("direct take", result["next_action_message"])
+        self.assertIn("別の通常claim requestは追加発行せず", result["next_action_message"])
 
     def test_old_pending_claim_keeps_same_request_and_checks_transport_health(self):
         result = mod.decide(make_args(

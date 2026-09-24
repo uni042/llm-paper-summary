@@ -189,6 +189,9 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     discovery_pipeline_work_available = bool(
         getattr(args, "discovery_pipeline_work_available", False)
     )
+    prepared_research_packet_available = bool(
+        getattr(args, "prepared_research_packet_available", False)
+    )
     discovery_round_in_progress = bool(
         discovery_precheck_result_pending
         or discovery_submission_result_pending
@@ -272,6 +275,19 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 required_action = "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY"
             else:
                 required_action = "CONTINUE_ASSIGNED_WORK"
+            finalization_allowed = False
+        elif (
+            transient_claim_wait
+            and prepared_research_packet_available
+            and not handoff_window_active
+        ):
+            # A pending normal claim request must not become the only foreground
+            # activity when the shared preload FIFO still exposes a create-only
+            # Research/Audit packet. The direct take is canonicalized before the
+            # pending request is allocated, so that request can safely converge
+            # into standby-window refill instead of forcing an idle wait.
+            decision = "CONTINUE"
+            required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
             finalization_allowed = False
         elif transient_claim_wait:
             decision = "CONTINUE"
@@ -447,7 +463,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif required_action == "RECOVER_DISCOVERY_SUBMISSION":
         next_action_message = "失敗済みDiscovery precheck/submissionのrecovery_stepsに従い、同じroundを正規経路へ戻します。"
     elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
-        if transient_submission_wait:
+        if transient_claim_wait and prepared_research_packet_available and not handoff_window_active:
+            next_action_message = (
+                "既存の通常claim requestは同じrequest_idのまま追跡しますが、そのresult待ちを前景作業にはしません。"
+                "hot-dispatchの準備済みResearch/Audit packetをcreate-only direct takeで確保し、成功直後から一次資料取得・全文読解を開始します。"
+                "別の通常claim requestは追加発行せず、既存requestはfast lane側でstandby window補充へ収束させます。"
+            )
+        elif transient_submission_wait:
             next_action_message = (
                 "既提出descriptorと未確定resultは耐久追跡対象として残しますが、submission result待ちは新規claimの同期障壁にしません。"
                 "最新queue/claim stateを再取得し、既確保standbyのforeground昇格またはclaim window補充を行ってResearch/Audit処理を継続します。1回のclaim requestが複数assignmentを返しても本文処理はforeground 1件だけです。"
@@ -524,6 +546,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "claim_result_pending_age_seconds": claim_result_pending_age_seconds,
         "claim_monitor_window_seconds": claim_monitor_window_seconds,
         "claim_result_pending": bool(args.claim_result_pending),
+        "prepared_research_packet_available": prepared_research_packet_available,
+        "claim_wait_bypassed_by_prepared_packet": bool(
+            required_action == "CLAIM_NEXT_RESEARCH_AUDIT"
+            and transient_claim_wait
+            and prepared_research_packet_available
+            and not handoff_window_active
+        ),
         "claim_wait_action": claim_wait_action,
         "claim_wait_seconds": claim_wait_seconds,
         "submission_state_checked": submission_state_checked,
@@ -568,6 +597,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "or discovery submission is never by itself a whole-run stop condition. Normal workers "
             "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
             "pending claim/result identities are kept stable; instead of sleeping or fixed-interval polling, the worker runs one bounded wait microtask and then rechecks the same target until terminal or a canonical hard stop. "
+            "If a normal claim result is pending but an unclaimed prepared Research/Audit packet exists outside the handoff window, the worker bypasses the wait by create-only direct take and starts that paper immediately while preserving the original request identity for standby refill. "
             "When claimable independent Research/Audit work is available, pending submission results never block another paper claim. "
             f"Workers process only one foreground paper at a time, while the configurable claim window defaults to {claim_window_policy.DEFAULT_CLAIM_WINDOW} active claims. "
             f"A refill is triggered while half of the hot bank-ready slice remains (current threshold {claim_refill_threshold}) and fills back toward the target window. "
@@ -616,6 +646,7 @@ def main() -> int:
     ap.add_argument("--claim-result-pending", type=yn, default=False)
     ap.add_argument("--claim-result-pending-age-seconds", type=int, default=0)
     ap.add_argument("--claim-monitor-window-seconds", type=int, default=60)
+    ap.add_argument("--prepared-research-packet-available", type=yn, default=False)
     ap.add_argument("--submission-state-checked", type=yn, default=False)
     ap.add_argument("--submission-result-pending", type=yn, default=False)
     ap.add_argument("--pipeline-ahead-count", type=int, default=0)
