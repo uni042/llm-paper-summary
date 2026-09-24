@@ -1,13 +1,109 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "metadata",
   "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
   "job_id": "job-research-5cbec5c2c470e865",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-4cb587870cc33021ea9f2c50",
     "worker_id": "worker-925000",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "metadata",
+  "data": {
+    "canonical_id": "DOI:10.1109/LCA.2026.3720952",
+    "arxiv_id": null,
+    "doi": "10.1109/LCA.2026.3720952",
+    "openreview_id": null,
+    "title": "LLM KV Cache Storage Using CXL Memory",
+    "summary": "長文脈・多数同時要求では、注意機構の過去状態を保持するKVキャッシュがGPUの高帯域メモリ（High Bandwidth Memory; HBM）を圧迫し、容量超過時の再計算が推論性能を大きく落とす。本論文は、vLLMとLMCacheの同一ソフトウェア経路からKVキャッシュをCPU DRAMまたは4種類のCXLメモリへ退避し、保存先そのものの性能差を実機で比較する。DRAM型のCMM-D、スイッチ型のCMM-B、ネットワーク越しのメモリプールをホストから透過的なNUMA領域として見せるCMM-MP、DRAMキャッシュとNANDを組み合わせる大容量CMM-Hを評価した。Llama-3.1-8B-InstructとA100 40GBを用いた評価では、122Kトークン入力でCMM-D、CMM-B、CMM-MPがGPU VRAM基準に対して要求スループットを約9倍にし、初回トークン時間（Time to First Token; TTFT）を最大16分の1まで短縮した。CMM-Hは性能を抑える代わりに大容量・低コスト側へ設計点を移すことを示す。",
+    "list_summary": "vLLMとLMCacheのKVキャッシュを4種類のCXLメモリへ退避して実機比較し、DRAM型・プール型CXLが長文脈でシステムDRAMに近い性能を保ち、122K入力でGPU VRAM比約9倍の要求スループットを示す。",
+    "authors": [
+      "Kwan Huen",
+      "Gongjin Sun",
+      "Mehdi Nik",
+      "Caroline Kahn",
+      "Elham Movahedian",
+      "Senthil Murugesapandian",
+      "Michael Wasef",
+      "Shuyu Lyu",
+      "Dongyang Li",
+      "Edmund Au",
+      "Brian Luu",
+      "Jason Scott",
+      "Ranjitha Gopalakrishna",
+      "Namita Kumar",
+      "Amir Beygi",
+      "Vitorio Cargnini",
+      "Ramdas Kachare"
+    ],
+    "authors_affiliations": "Memory Solutions Lab, Samsung Semiconductor, Inc., San Jose, CA, USA",
+    "published": "2026-01-01",
+    "publication": "IEEE Computer Architecture Letters, January 2026",
+    "publication_type": "Journal Article",
+    "publication_status": "Accepted for publication",
+    "publication_version": "Author accepted manuscript",
+    "lineage": "KVキャッシュ・階層メモリ・CXLオフロード",
+    "topics": [
+      "KVキャッシュ",
+      "CXLメモリ",
+      "階層メモリ",
+      "オフロード",
+      "長文脈推論",
+      "メモリ分離"
+    ],
+    "importance": "CXLを単一のDRAM拡張器だけでなく、スイッチ型プール、ネットワーク透過型プール、DRAMとNANDのハイブリッドまで同じvLLM・LMCache経路で比較しており、KVキャッシュの階層メモリ設計で性能・容量・分離性を選ぶための実測資料になる。",
+    "hardware_evaluation": "実機評価。デュアルソケットIntel Xeon、512GB DDR5、NVIDIA A100 40GBと複数のSamsung CXL試作・製品系デバイスを使用。",
+    "hardware_details": "ホストは各ソケット64コアのIntel Xeon、512GB DDR5-4800。GPUはNVIDIA A100 40GB HBM2e。CXL対象はCMM-D 256GB、CMM-B、6台288GBのCMM-MP、3.84TB SSDを背後に持つCMM-H。",
+    "quality_effect": "近似計算やKV量子化ではなく、既に計算したKV状態の保存場所を変える方式であるため、方式自体はモデル出力品質を変更しない。論文は生成品質指標の差を評価しておらず、性能と容量を中心に測定している。",
+    "storage_targets": [
+      "GPU HBM",
+      "CPU DRAM",
+      "CXL DRAM",
+      "CXLメモリプール",
+      "CXL DRAM-NANDハイブリッド"
+    ],
+    "bottlenecks": [
+      "GPU HBM容量",
+      "KVキャッシュ再計算",
+      "退避先の帯域と遅延",
+      "大容量化に伴う共有メモリ不足"
+    ],
+    "evidence_locations": [
+      "I. Introduction",
+      "II. Background and Motivation",
+      "III. Design and Implementation",
+      "IV. Evaluation",
+      "V. Conclusion",
+      "References"
+    ],
+    "references": [
+      {
+        "canonical_id": "arXiv:2510.09665",
+        "arxiv_id": "2510.09665"
+      },
+      {
+        "canonical_id": "arXiv:2508.18572",
+        "arxiv_id": "2508.18572"
+      },
+      {
+        "canonical_id": "arXiv:2412.12491",
+        "arxiv_id": "2412.12491"
+      }
+    ],
+    "references_checked_at": "2026-09-25",
+    "references_source": "primary-reference-section",
+    "references_total": 13,
+    "source": "https://doi.org/10.1109/LCA.2026.3720952",
+    "sources": [
+      "https://doi.org/10.1109/LCA.2026.3720952",
+      "https://www.researchgate.net/publication/411814165_LLM_KV_Cache_Storage_using_CXL_Memory"
+    ],
+    "code": null,
+    "implementation": "vLLM 0.19.0+cu128とLMCache 0.4.2を使う実機構成で、単一ソケット向けの非同期取得処理を複数OSスレッドへ変更してLMCache側の取得性能を高めている。CXLデバイスはCPUを持たないNUMAノードとして公開し、LMCache本体は変更せず既存のメモリ確保経路を使う。公開コードURLは確認できない。",
+    "implementation_status": "研究用の実機統合・評価。CXL側は製品系デバイスと概念実証（proof of concept; PoC）を含む。",
+    "evaluation_type": "Real-hardware systems evaluation",
+    "last_checked": "2026-09-25",
+    "last_audited": null,
+    "audit_version": 0
   }
 }
