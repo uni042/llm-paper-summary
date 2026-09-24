@@ -27,6 +27,7 @@ import build_discovery_rejection_ledger
 import claim_window_policy
 import derive_worker_run_state
 import discovery_preload_queue
+import ensure_discovery_run_state
 import hot_dispatch
 import process_discovery_precheck
 import worker_identity
@@ -259,7 +260,17 @@ def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
         run_key = run["run_key"]
         request = _run_request(root, worker_id, run_key)
         if request is None:
-            skipped.append({**run, "reason": "run_state_identity_unavailable"})
+            # A foreground Discovery precheck carries the same immutable run
+            # identity. Repair an omitted initial run-state request before giving
+            # up, so submission completion can still derive DISCOVER_AGAIN and
+            # advance the same invocation automatically.
+            ensure_discovery_run_state.ensure_from_submission(
+                root,
+                run["source_submission"],
+            )
+            request = _run_request(root, worker_id, run_key)
+        if request is None:
+            skipped.append({**run, "reason": "run_state_identity_unavailable_after_recovery"})
             continue
 
         state = derive_worker_run_state.derive(root, request)
