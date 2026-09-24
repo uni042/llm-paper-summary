@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2101.03961",
+      "arxiv_id": "2101.03961",
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "source_url": "https://arxiv.org/abs/2101.03961",
+      "priority": 70,
+      "priority_breakdown": {"base": 50, "lineage": 20, "recency": 0, "venue": 0, "total": 70},
+      "reason": "多数の既収録MoE推論・オフロード・圧縮・並列化研究から直接参照される基盤的疎MoE研究で、既存系統への関連度が非常に高い。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "20260924T060123Z-scheduled-chat-00-r1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T060123Z-scheduled-chat-00-r1.json",
+    "receipt": "sha256:765f45e64c2f8a37ba28d1226a5b616a40b885c2f0ca86824a61e9d3b70a1a64"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260924T060123Z-6d91c4",
+    "round": "20260924T060123Z-scheduled-chat-00-r1",
+    "axis": "backward structured repository references",
+    "query_summary": "構造化referencesの後方引用を正規schema v3で20件まで再フィルタし、既存MoE系統への直接関連が強い基盤候補を選別。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 19,
+    "accepted_canonical_ids": ["arXiv:2101.03961"],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [{"topic":"structured repository references","source":"repository_references","date_range":"all","category":"citation-curation","citation_direction":"backward","query_family":"citation-curation","raw_result_count":100,"unseen_result_count":20,"duplicate_filtered_count":19,"rejection_filtered_count":1,"candidate_evaluation_count":20,"candidate_accepted_count":1,"position":"cursor-0-to-100"}]
+  }
+}
