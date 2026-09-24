@@ -16,7 +16,6 @@ from list_summary import (
     DEFAULT_MAX_CHARS,
     DEFAULT_MIN_CHARS,
     audit_list_summary,
-    compact_list_summary,
 )
 
 PAPER_FAMILIES = ("inference", "training", "survey")
@@ -51,9 +50,13 @@ def is_paper(path: Path, body: str) -> bool:
 
 
 def audit_file(path: Path, repo_root: Path) -> Result:
-    meta, body = front(path)
-    summary = compact_list_summary(body, str(meta.get("summary") or ""))
+    meta, _ = front(path)
+    value = meta.get("list_summary")
+    summary = value.strip() if isinstance(value, str) else ""
     quality = audit_list_summary(summary)
+    if not summary:
+        quality.failures.insert(0, "frontmatter list_summary が未設定または空")
+        quality.status = "FAIL"
     return Result(
         path=path.relative_to(repo_root).as_posix(),
         status=quality.status,
@@ -150,7 +153,7 @@ def main() -> int:
                         "worker_authored_preferred": True,
                         "baseline_commit": args.baseline_commit,
                         "paper_target_policy": "Git-added Markdown after baseline only",
-                        "legacy_overview_fallback": True,
+                        "legacy_overview_fallback": False,
                     },
                     "results": [asdict(r) for r in results],
                 },
