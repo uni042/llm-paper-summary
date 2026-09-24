@@ -1,6 +1,6 @@
 # Paper mechanical quality audit
 
-`.survey/scripts/audit_paper_quality.py` など3つの論文品質監査は、固定した基準commit以後に新規追加された論文だけを対象にする。基準commit時点ですでに存在した論文は品質監査で本文を読み直さない。
+`.survey/scripts/audit_paper_quality.py` など3つの論文品質監査は、各スクリプトの既存の対象family内で、固定した基準commit以後に新規追加された論文だけを対象にする。基準commit時点ですでに存在した論文は品質監査で本文を読み直さない。
 
 新規追加論文の判定にはGitの追加差分を使い、旧論文の本文を除外判定のために開かない。新規追加分からカテゴリ索引の`README.md`、横断比較表`comparison.md`、正規の移動先だけを示す`# Moved`ファイルを除外する。全論文の構造・必須メタデータ検査は引き続き別のrepository consistency checkで行う。
 
