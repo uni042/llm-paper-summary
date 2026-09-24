@@ -95,6 +95,142 @@
       ],
       "created_at": "2026-09-24T00:00:00+00:00",
       "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "14-agentic-inference-serving-runtime",
+      "title": "Agentic Inference / Serving Runtime",
+      "description": "ツール呼出し、長寿命セッション、複数LLM・複数エージェントのワークフロー、長い待機時間と再入場を前提に、エージェント推論の資源・状態・GPU配置・KV再利用を最適化するシステム研究をまとめる。",
+      "distinctness_reason": "通常のLLM Serving系統が独立したrequest、batch、prefill/decodeを主要単位にするのに対し、本系統はLLM呼出しとツール実行が交互に続く長寿命ワークフロー、セッション状態、再入場、サンドボックス資源を主要単位にするため、要求単位servingとは運用特性と最適化対象が異なる。",
+      "boundary_rule": "主要貢献がtool-usingまたはmulti-agent workflowの実行特性を利用した資源管理、状態管理、スケジューリング、配置、KV再利用、OS/runtime制御である研究を含め、単にagentを評価対象に使うだけの一般serving・一般KV手法は含めない。",
+      "scope_includes": [
+        "ツール待機・再入場を含む長寿命agent session管理",
+        "multi-agent／multi-LLM workflowのGPU配置・スケジューリング",
+        "agent workflow固有のKV・OS・sandbox資源管理"
+      ],
+      "scope_excludes": [
+        "独立requestだけを扱う一般LLM serving",
+        "agentを単なるワークロードとして使うだけでagent固有機構を持たない研究"
+      ],
+      "neighbor_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "07-kv-cache-optimization-compression",
+        "10-kv-cache-offload-recomputation"
+      ],
+      "supporting_papers": [
+        "arXiv:2608.00101",
+        "arXiv:2606.16824",
+        "arXiv:2606.00866",
+        "arXiv:2605.26297",
+        "arXiv:2602.09345",
+        "arXiv:2608.30830",
+        "arXiv:2607.29069",
+        "arXiv:2609.03236",
+        "arXiv:2609.16491",
+        "arXiv:2609.14138",
+        "arXiv:2609.17193",
+        "arXiv:2609.08566",
+        "arXiv:2608.26004",
+        "arXiv:2606.14672",
+        "arXiv:2605.22566",
+        "arXiv:2604.15186",
+        "arXiv:2507.07400"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "15-inference-simulation-emulation",
+      "title": "Inference Simulation / Emulation",
+      "description": "LLM推論・サービング基盤を実GPU実行の代わりに離散事象、仮想時間、プロファイル標本化、カーネル性能モデルなどで再現し、構成探索や性能評価を高速化する研究をまとめる。",
+      "distinctness_reason": "Serving系統が実運用時の要求処理を高速化するのに対し、本系統の主要成果はサービングシステムそのものを高速化することではなく、別のハードウェア・構成・制御方式を安価かつ高精度に評価するための性能予測・シミュレーション・エミュレーション基盤である。",
+      "boundary_rule": "主要貢献がLLM推論の性能・資源挙動を実機の代替として予測・模擬するsimulator、emulator、time-warp、profile-driven modelである研究を含め、実測benchmarkだけの研究や実serving policyそのものは含めない。",
+      "scope_includes": [
+        "LLM serving離散事象シミュレータ",
+        "実runtimeを残したGPUエミュレーション",
+        "カーネルからservingまでの性能モデル"
+      ],
+      "scope_excludes": [
+        "実測値を列挙するだけのbenchmark",
+        "本番serving schedulerそのもの"
+      ],
+      "neighbor_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "09-kernel-runtime-compilation"
+      ],
+      "supporting_papers": [
+        "arXiv:2601.00397",
+        "arXiv:2605.21312",
+        "arXiv:2602.23036",
+        "arXiv:2606.28565",
+        "arXiv:2605.00616"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "16-weight-quantization-compression",
+      "title": "Weight Quantization / Compression",
+      "description": "一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。",
+      "distinctness_reason": "MoE Quantization / Compression系統はexpert重みとMoE固有のrouting・expert容量を対象とするのに対し、本系統はdense LLMやモデル全体に適用できるweight-only／general weight representationが主対象で、KV圧縮やexpert固有圧縮とは独立した方法論を持つ。",
+      "boundary_rule": "主要貢献が一般LLMのweight quantization、weight compression、mixed/sparse quantized representation、lossless weight codingである研究を含め、KV cache圧縮、MoE expert固有圧縮、単なる量子化カーネル実装だけが主貢献の研究は含めない。",
+      "scope_includes": [
+        "post-training weight quantization",
+        "低ビット／ベクトル／疎量子化表現",
+        "重みの無損失圧縮と復元"
+      ],
+      "scope_excludes": [
+        "KV cache量子化・圧縮",
+        "MoE expert固有の量子化・pruning",
+        "量子化方式を変えないカーネル最適化"
+      ],
+      "neighbor_lineages": [
+        "06-moe-quantization-compression",
+        "09-kernel-runtime-compilation",
+        "08-edge-on-device-llm-systems"
+      ],
+      "supporting_papers": [
+        "arXiv:2210.17323",
+        "arXiv:2306.00978",
+        "arXiv:2306.03078",
+        "arXiv:2603.17435",
+        "arXiv:2608.15602",
+        "arXiv:2606.11244",
+        "arXiv:2609.12208"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "17-pim-near-data-acceleration",
+      "title": "PIM / Near-Data Acceleration",
+      "description": "メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。",
+      "distinctness_reason": "Offload / Hierarchical Memory系統はCPU・GPU・SSD等の階層間でデータを移して容量不足を補うのが中心である。本系統はデータを置く先そのものに演算・選択・逆量子化等を持ち込み、memory/storage側で処理するnear-data executionを主要機構とするため境界が明確に異なる。",
+      "boundary_rule": "主要貢献がPIM/CIM、near-memory、in-storage、memory-side computeによってLLM演算・検索・逆量子化・attention等をデータ近傍で実行する研究を含め、受動的なSSD/CPUへの保存・転送だけのoffloadは含めない。",
+      "scope_includes": [
+        "HBM/DIMM/NAND上のPIM・CIM",
+        "near-memory weight dequantization",
+        "in-storage retrieval／memory-side attention"
+      ],
+      "scope_excludes": [
+        "受動的なSSD/NVMe offload",
+        "計算機能を持たない単なる階層メモリ配置"
+      ],
+      "neighbor_lineages": [
+        "01-offload-hierarchical-memory",
+        "10-kv-cache-offload-recomputation",
+        "08-edge-on-device-llm-systems"
+      ],
+      "supporting_papers": [
+        "arXiv:2609.09823",
+        "arXiv:2608.06989",
+        "arXiv:2607.08993",
+        "arXiv:2607.17538",
+        "arXiv:2605.23294",
+        "arXiv:2603.09216",
+        "arXiv:2504.17584"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
     }
   ]
 }

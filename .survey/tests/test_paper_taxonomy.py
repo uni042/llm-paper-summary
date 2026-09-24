@@ -34,6 +34,14 @@ class PaperTaxonomyTests(unittest.TestCase):
             canonical_lineage("inference", "04-moe-parallelism-communication"),
             DEFAULT_INFERENCE_LINEAGE,
         )
+        self.assertEqual(
+            canonical_lineage("inference", "08-quantization-kernels"),
+            "16-weight-quantization-compression",
+        )
+        self.assertEqual(
+            canonical_lineage("inference", "05-pim-near-memory"),
+            "17-pim-near-data-acceleration",
+        )
 
     def test_unknown_inference_lineage_falls_back_without_creating_another_taxonomy(self) -> None:
         self.assertEqual(

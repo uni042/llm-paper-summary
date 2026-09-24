@@ -114,14 +114,16 @@ INFERENCE_LINEAGE_ALIASES = {
     "04-moe-parallelism-communication": "12-moe-parallelism-communication",
     "05-memory-architecture-near-data": DEFAULT_INFERENCE_LINEAGE,
     "05-moe": DEFAULT_INFERENCE_LINEAGE,
-    "05-pim-near-memory": DEFAULT_INFERENCE_LINEAGE,
-    "08-quantization-kernels": DEFAULT_INFERENCE_LINEAGE,
+    "05-pim-near-memory": "17-pim-near-data-acceleration",
+    "08-quantization-kernels": "16-weight-quantization-compression",
+    "05-quantization": "16-weight-quantization-compression",
     "09-attention-kernel-serving-optimization": DEFAULT_INFERENCE_LINEAGE,
     "09-kernel-runtime-compilation": DEFAULT_INFERENCE_LINEAGE,
     "10-sparse-attention": "13-sparse-attention",
     "12-benchmarking-modeling-emulation": DEFAULT_INFERENCE_LINEAGE,
     "moe": DEFAULT_INFERENCE_LINEAGE,
     "09-other-inference-systems": DEFAULT_INFERENCE_LINEAGE,
+    "12-agent-memory-runtime": "14-agentic-inference-serving-runtime",
 }
 
 

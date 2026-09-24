@@ -21,7 +21,11 @@
 - [Kernel / Runtime Compilation](inference/09-kernel-runtime-compilation/) — 19本 — GPUカーネル生成・融合・JIT・メガカーネル等で推論実装を最適化する。
 - [MoE Parallelism / Communication](inference/12-moe-parallelism-communication/) — 24本 — expert parallelism、通信、分散配置、負荷分散を共同最適化する。
 - [Sparse Attention](inference/13-sparse-attention/) — 6本 — attention対象を疎に選択して長文脈推論の計算量と帯域を削減する。
-- [Other Inference Systems](inference/99-other-inference-systems/) — 232本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
+- [Agentic Inference / Serving Runtime](inference/14-agentic-inference-serving-runtime/) — 17本 — ツール呼出し、長寿命セッション、複数LLM・複数エージェントのワークフロー、長い待機時間と再入場を前提に、エージェント推論の資源・状態・GPU配置・KV再利用を最適化するシステム研究をまとめる。
+- [Inference Simulation / Emulation](inference/15-inference-simulation-emulation/) — 5本 — LLM推論・サービング基盤を実GPU実行の代わりに離散事象、仮想時間、プロファイル標本化、カーネル性能モデルなどで再現し、構成探索や性能評価を高速化する研究をまとめる。
+- [Weight Quantization / Compression](inference/16-weight-quantization-compression/) — 7本 — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
+- [PIM / Near-Data Acceleration](inference/17-pim-near-data-acceleration/) — 7本 — メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。
+- [Other Inference Systems](inference/99-other-inference-systems/) — 147本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 → [Inference一覧](inference/)
 

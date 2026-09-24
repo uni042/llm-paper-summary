@@ -23,6 +23,10 @@
 - [Kernel / Runtime Compilation](09-kernel-runtime-compilation/) — GPUカーネル生成・融合・JIT・メガカーネル等でLLM推論の演算実装そのものを最適化する。
 - [MoE Parallelism / Communication](12-moe-parallelism-communication/) — expert parallelism、all-to-all通信、分散expert配置、負荷分散を共同最適化する。
 - [Sparse Attention](13-sparse-attention/) — 注意対象token・block・pageを疎に選択し、長文脈attentionの計算量と帯域を削減する。
+- [Agentic Inference / Serving Runtime](14-agentic-inference-serving-runtime/) — ツール呼出し、長寿命セッション、複数LLM・複数エージェントのワークフロー、長い待機時間と再入場を前提に、エージェント推論の資源・状態・GPU配置・KV再利用を最適化するシステム研究をまとめる。
+- [Inference Simulation / Emulation](15-inference-simulation-emulation/) — LLM推論・サービング基盤を実GPU実行の代わりに離散事象、仮想時間、プロファイル標本化、カーネル性能モデルなどで再現し、構成探索や性能評価を高速化する研究をまとめる。
+- [Weight Quantization / Compression](16-weight-quantization-compression/) — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
+- [PIM / Near-Data Acceleration](17-pim-near-data-acceleration/) — メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。
 - [Other Inference Systems](99-other-inference-systems/) — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 <!-- survey:auto:start -->
@@ -40,7 +44,14 @@
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 14 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 86 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 19 |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 19 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 89 |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 253 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 232 |
+| [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 24 |
+| [13-sparse-attention](13-sparse-attention/README.md) | 6 |
+| [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 17 |
+| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 5 |
+| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 7 |
+| [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 7 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 147 |
 <!-- survey:auto:end -->
