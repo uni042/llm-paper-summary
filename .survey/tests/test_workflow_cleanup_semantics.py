@@ -120,6 +120,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         blocked_retry = (ROOT / ".survey/scripts/blocked_retry.py").read_text(encoding="utf-8")
         self.assertIn("DORMANT_AFTER_ATTEMPTS", blocked_retry)
         self.assertNotIn("MAX_BLOCKED_ATTEMPTS", blocked_retry)
+        self.assertNotIn("blocked_permanent", blocked_retry)
+        self.assertNotIn("legacy_permanent", blocked_retry)
 
     def test_survey_build_has_no_training_list_migration(self):
         survey = (ROOT / ".survey/scripts/survey.py").read_text(encoding="utf-8")
