@@ -20,6 +20,7 @@ from typing import Any
 
 import claim_state
 import claim_window_policy
+import worker_quota_policy
 import claim_worker
 import claim_worker_with_banks
 import derive_worker_run_state
@@ -115,7 +116,7 @@ def _select_candidates(
     checkpointed = set(claim_worker._checkpoint_map(request))
     requested = set(request["job_ids"]) if request["job_ids"] is not None else None
     target = claim_window_policy.normalize_window(int(request["claim_window"]))
-    selected: list[dict[str, Any]] = []
+    eligible: list[dict[str, Any]] = []
     jobs_by_id: dict[str, dict[str, Any]] = {}
 
     for current in shared_preload_pool.waiting_claims(claims, repo_root=root):
@@ -141,15 +142,60 @@ def _select_candidates(
             raise InitialClaimFastPathUnavailable(f"preloaded dependency state changed: {job_id}")
         if str(current.get("kind") or "") != str(job.get("type") or ""):
             raise InitialClaimFastPathUnavailable(f"preloaded job type changed: {job_id}")
-        selected.append(current)
+        eligible.append(current)
         jobs_by_id[job_id] = job
-        if len(selected) >= target:
-            break
 
+    selected = worker_quota_policy.order_with_audit_fairness(
+        eligible,
+        starting_position=0,
+        prior_kinds=(),
+        kind_field="kind",
+        limit=target,
+        reserve_missing_audit_slot=False,
+    )
     if len(selected) < target:
         raise InitialClaimFastPathUnavailable(
             f"shared preload pool has {len(selected)} eligible claims for target window {target}"
         )
+
+    selected_ids = {str(current.get("job_id") or "") for current in selected}
+    full_blocks = [
+        selected[index:index + worker_quota_policy.AUDIT_STARVATION_BLOCK_SIZE]
+        for index in range(0, len(selected), worker_quota_policy.AUDIT_STARVATION_BLOCK_SIZE)
+        if len(selected[index:index + worker_quota_policy.AUDIT_STARVATION_BLOCK_SIZE])
+        == worker_quota_policy.AUDIT_STARVATION_BLOCK_SIZE
+    ]
+    missing_audit_block = any(
+        all(str(current.get("kind") or "").lower() != "audit" for current in block)
+        for block in full_blocks
+    )
+    if missing_audit_block and "audit" in request["job_types"]:
+        for path in sorted((root / ".survey/work-queue/jobs").glob("*.json")):
+            job = _read(path)
+            if not isinstance(job, dict):
+                continue
+            job_id = str(job.get("job_id") or "")
+            if (
+                not job_id
+                or job_id in selected_ids
+                or job.get("status") != "ready"
+                or job.get("type") != "audit"
+                or (requested is not None and job_id not in requested)
+                or job_id in checkpointed
+            ):
+                continue
+            current = claims.get(job_id)
+            if isinstance(current, dict) and current.get("active"):
+                continue
+            dependencies = claim_state.normalize_dependencies(
+                job_id,
+                job["depends_on_job_ids"] if "depends_on_job_ids" in job else job.get("dependencies"),
+            )
+            if dependencies is not None:
+                raise InitialClaimFastPathUnavailable(
+                    "ready Audit outside preload FIFO requires canonical fairness allocation"
+                )
+
     return selected, jobs_by_id
 
 
