@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Repository-wide audit for compact one-line paper-list summaries."""
+"""Audit explicit one-line paper-list summaries."""
 from __future__ import annotations
 
 import argparse
@@ -15,7 +15,6 @@ from list_summary import (
     DEFAULT_MAX_CHARS,
     DEFAULT_MIN_CHARS,
     audit_list_summary,
-    compact_list_summary,
 )
 
 PAPER_FAMILIES = ("inference", "training", "survey")
@@ -51,7 +50,8 @@ def is_paper(path: Path, body: str) -> bool:
 
 def audit_file(path: Path, repo_root: Path) -> Result:
     meta, body = front(path)
-    summary = compact_list_summary(body, str(meta.get("summary") or ""))
+    explicit = meta.get("list_summary")
+    summary = explicit.strip() if isinstance(explicit, str) else ""
     quality = audit_list_summary(summary)
     return Result(
         path=path.relative_to(repo_root).as_posix(),
