@@ -1,6 +1,6 @@
 {
-  "fact_generation": 3,
-  "generation": 4,
+  "fact_generation": 5,
+  "generation": 6,
   "runs": {
     "worker-925000-20260924T153200Z-lazyprobe": {
       "actual_invocation_start": "2026-09-24T15:32:00+00:00",
@@ -8,10 +8,29 @@
         "attempt-preload-4cb587870cc33021ea9f2c50": {
           "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
           "claimed_at": "2026-09-24T15:32:00+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-preload-4cb587870cc33021ea9f2c50.json",
           "job_id": "job-research-5cbec5c2c470e865",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-24T15:42:27+00:00",
+          "repair_required": false,
+          "retryable": false,
+          "run_key": "worker-925000-20260924T153200Z-lazyprobe",
+          "submitted": true,
+          "worker_id": "worker-925000"
+        },
+        "attempt-preload-f234ef828a71ef4bb3d542c4": {
+          "attempt_id": "attempt-preload-f234ef828a71ef4bb3d542c4",
+          "claimed_at": "2026-09-24T15:32:00+00:00",
+          "completed": false,
+          "descriptor_path": ".survey/work-queue/submissions/research/attempt-preload-f234ef828a71ef4bb3d542c4.json",
+          "job_id": "job-research-e6152c2a3998faa6",
+          "job_status": "blocked",
+          "kind": "research",
+          "pending": false,
+          "processed_at": "2026-09-24T15:42:26+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "worker-925000-20260924T153200Z-lazyprobe",
@@ -23,9 +42,8 @@
       "candidate_inventory": 291,
       "claims": {
         "active_assignment": true,
-        "active_claim_count": 11,
+        "active_claim_count": 10,
         "active_job_ids": [
-          "job-research-e6152c2a3998faa6",
           "job-research-b22af651ef4f551f",
           "job-research-1a48a3083b0b1499",
           "job-research-92841f7f38c00d3c",
@@ -43,32 +61,23 @@
         "claim_result_pending_age_seconds": 0,
         "claim_state_checked": true,
         "claim_window": 12,
-        "claim_window_remaining": 1,
-        "foreground_job_id": "job-research-e6152c2a3998faa6",
+        "claim_window_remaining": 2,
+        "foreground_job_id": "job-research-b22af651ef4f551f",
         "pending_claim_request_ages_seconds": {},
         "pending_claim_request_ids": [],
         "pending_claim_requested_at": {},
-        "preflight_inflight_count": 1,
-        "preflight_parked_attempt_ids": [
-          "attempt-preload-4cb587870cc33021ea9f2c50"
-        ],
-        "preflight_parked_job_ids": [
-          "job-research-5cbec5c2c470e865"
-        ],
-        "preflight_parked_request_ids": {
-          "job-research-5cbec5c2c470e865": "preflight-worker-925000-cxl-kv-02"
-        },
-        "preflight_parked_states": {
-          "job-research-5cbec5c2c470e865": "passed_waiting_descriptor"
-        },
-        "preflight_pipeline_capacity_remaining": 1,
+        "preflight_inflight_count": 0,
+        "preflight_parked_attempt_ids": [],
+        "preflight_parked_job_ids": [],
+        "preflight_parked_request_ids": {},
+        "preflight_parked_states": {},
+        "preflight_pipeline_capacity_remaining": 2,
         "preflight_pipeline_overflow_count": 0,
         "preflight_pipeline_saturated": false,
         "preflight_pipeline_window": 2,
         "preflight_repair_attempt_ids": [],
         "preflight_repair_job_ids": [],
         "standby_job_ids": [
-          "job-research-b22af651ef4f551f",
           "job-research-1a48a3083b0b1499",
           "job-research-92841f7f38c00d3c",
           "job-research-1edac6e56714dd58",
@@ -81,24 +90,25 @@
         ]
       },
       "first_cached_at": "2026-09-24T15:34:25.368143+00:00",
-      "generation": 4,
+      "generation": 6,
       "rebuilt_from_canonical": false,
       "run_key": "worker-925000-20260924T153200Z-lazyprobe",
       "scheduled_slot": "adhoc",
       "submission": {
-        "completed_attempt_ids": [],
-        "last_terminal_job_status": "none",
-        "pending_attempt_ids": [
+        "completed_attempt_ids": [
           "attempt-preload-4cb587870cc33021ea9f2c50"
         ],
+        "last_terminal_job_status": "completed",
+        "pending_attempt_ids": [],
         "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 0,
+        "research_audit_completed_this_invocation": 1,
         "retryable_attempt_ids": [],
-        "submission_result_pending": true,
+        "submission_result_pending": false,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
-          "attempt-preload-4cb587870cc33021ea9f2c50"
+          "attempt-preload-4cb587870cc33021ea9f2c50",
+          "attempt-preload-f234ef828a71ef4bb3d542c4"
         ]
       },
       "work_mode": "research",
@@ -106,6 +116,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T15:41:36.622204+00:00",
+  "updated_at": "2026-09-24T15:42:31.448993+00:00",
   "worker_id": "worker-925000"
 }
