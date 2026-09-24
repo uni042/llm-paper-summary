@@ -169,6 +169,54 @@ class FallbackImmutableReplayTests(unittest.TestCase):
             self.assert_descriptor(root)
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").is_file())
 
+    def test_connector_safe_bundle_materializes_slots_then_reenters_quality_preflight(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_repo(root)
+            envelope = root_fields()
+            envelope.update({
+                "record_bundle_mode": "quality_preflight_v1",
+                "run_key": "worker-a-20260925T060000Z-test",
+                "scheduled_slot": "adhoc",
+                "actual_invocation_start": "2026-09-24T21:00:00+00:00",
+                "requested_at": "2026-09-24T21:05:00+00:00",
+                "self_review": {
+                    "primary_source_read_to_end": True,
+                    "no_unverified_inference": True,
+                    "summary_and_list_summary_specific": True,
+                    "headline_result_grounded": True,
+                    "method_end_to_end_explained": True,
+                    "evaluation_conditions_and_baselines_explicit": True,
+                    "results_conditions_and_interpretation_explicit": True,
+                    "limitations_and_positioning_specific": True,
+                },
+            })
+            envelope["writes"] = slot_writes()
+            put(root, envelope)
+
+            result = dispatch_fallback_inbox.dispatch(root)
+
+            self.assertEqual(result["action"], "dispatched")
+            self.assertEqual(result["record_bank"], "a")
+            self.assertIn("preflight_request", result)
+            self.assertNotIn("descriptor", result)
+            self.assertFalse(
+                (root / ".survey/work-queue/submissions/research/attempt-a.json").exists()
+            )
+
+            request_path = root / result["preflight_request"]
+            self.assertTrue(request_path.is_file())
+            request = json.loads(request_path.read_text(encoding="utf-8"))
+            self.assertEqual(request["operation"], "research_quality_preflight")
+            self.assertEqual(request["attempt_id"], "attempt-a")
+            self.assertEqual(request["job_id"], "job-r1")
+            self.assertEqual(request["record_bank"], "a")
+            self.assertEqual(request["worker_id"], "worker-a")
+            self.assertEqual(request["run_key"], envelope["run_key"])
+            self.assertEqual(request["scheduled_slot"], "adhoc")
+            self.assertTrue(all(request["self_review"].values()))
+            self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").is_file())
+
     def test_offline_record_waits_for_canonical_job_instead_of_quarantine(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
