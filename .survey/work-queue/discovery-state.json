@@ -1,41 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-24T06:50:17+00:00",
-  "last_run_key": "worker-45-20260924T064704Z-audit45",
-  "last_round": "worker-45-20260924T064704Z-preload-666749a6aa1ef86a1375",
+  "updated_at": "2026-09-24T07:02:32+00:00",
+  "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+  "last_round": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T13:30:14+09:00",
-      "round": "sep15-inference-systems-1",
-      "axis": "fresh-arxiv-sep15-inference-systems",
-      "query_summary": "Fresh September 15-16 arXiv search across LLM inference, speculative decoding, memory, KV cache, edge serving, and constrained-memory runtime axes after exact identity-snapshot filtering.",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2609.14850",
-        "arXiv:2609.14872",
-        "arXiv:2609.15338",
-        "arXiv:2609.16161",
-        "arXiv:2609.16206",
-        "arXiv:2609.16491",
-        "arXiv:2609.14773"
-      ],
-      "next_axis_hint": "sep15-adjacent-memory-and-private-inference",
-      "source_submission": "work-queue/submissions/20260917T1340JST-discovery-sep15-inference-systems-1.json"
-    },
     {
       "run_key": "2026-09-17T14:00:00+09:00",
       "round": "unrepresented-memory-systems-1",
@@ -8969,6 +8943,43 @@
       "duplicate_ratio": 0.05,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+      "precheck_request_id": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "round": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+      "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
+      "query_summary": "DistServeの正規schema v3後方引用20件を軽量評価し、LLM/Transformer servingの実装・scheduler・SLO系統へ直接接続する強候補のみ採用。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "backward",
+      "seed_canonical_id": "arXiv:2401.09670",
+      "preload_id": "preload-711f4ea295ec7a7fdcd5",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [
+        "arXiv:2010.05680",
+        "arXiv:2006.02464"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16911,15 +16922,15 @@
       "next_axis_hint": null
     },
     "backward references of DistServe disaggregated prefill-decode LLM serving": {
-      "last_run_key": "scheduled-chat-00-20260924T045834Z-c6e4",
-      "rounds": 2,
-      "candidate_count": 28,
+      "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "rounds": 3,
+      "candidate_count": 48,
       "duplicate_filtered_count": 13,
-      "novel_candidate_count": 15,
+      "novel_candidate_count": 35,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 15,
-      "accepted_count": 2,
-      "duplicate_ratio": 0.4642857142857143,
+      "post_final_dedupe_count": 35,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.2708333333333333,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
@@ -18330,6 +18341,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
       "last_round": "direct-take-discovery-d4a731-r2"
+    },
+    "window-92ae19dc3e0864b14f86": {
+      "topic": "distserve",
+      "source": "semantic_scholar",
+      "date_range": "backward-references",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-first",
+      "search_window_key": "window-92ae19dc3e0864b14f86",
+      "scan_count": 1,
+      "raw_result_count": 20,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 2,
+      "last_position": null,
+      "unseen_rate": 1.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.1,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "last_round": "20260924T070008Z-scheduled-chat-00-a3f91c-take1"
     }
   },
   "recent_search_windows": [
@@ -19802,6 +19836,27 @@
       "duplicate_rate": 0.037037037037037035,
       "candidate_acceptance_rate": 0.0,
       "last_position": "cached-plus-live"
+    },
+    {
+      "topic": "distserve",
+      "source": "semantic_scholar",
+      "date_range": "backward-references",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-first",
+      "search_window_key": "window-92ae19dc3e0864b14f86",
+      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "round": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+      "raw_result_count": 20,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 2,
+      "unseen_rate": 1.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.1,
+      "last_position": null
     }
   ],
   "search_window_history_limit": 96,

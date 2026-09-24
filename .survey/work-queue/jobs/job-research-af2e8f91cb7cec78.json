@@ -1,0 +1,30 @@
+{
+  "job_id": "job-research-af2e8f91cb7cec78",
+  "type": "research",
+  "parent_job_id": "job-589818bf1fa4284e",
+  "priority": 58,
+  "canonical_id": "arXiv:2006.02464",
+  "arxiv_id": "2006.02464",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
+  "source_url": "https://arxiv.org/abs/2006.02464",
+  "paper_path": null,
+  "lineage": null,
+  "selection_reason": "DistServeが参照するmodel-serving基盤で、予測可能な実行時間を利用した分散serving、tail latency/SLO、request isolationを実装評価している。LLM専用ではないが、LLM serving scheduler・SLO設計の基礎系統として関連が明確。",
+  "priority_breakdown": {
+    "base": 43,
+    "lineage": 15,
+    "recency": 0,
+    "venue": 0,
+    "total": 58
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-24T07:02:32+00:00"
+}
