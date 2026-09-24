@@ -100,18 +100,7 @@ jobs:
             # Reuse the durable exclusion snapshot whenever none of its semantic
             # inputs changed since the source commit recorded in the manifest.
             # Transport-only commits should not force a full ~1.8k-paper rebuild.
-            snapshot_source="$(
-              python - <<'PY'
-import json
-from pathlib import Path
-p = Path('.survey/work-queue/discovery-identities/_manifest.json')
-try:
-    value = json.loads(p.read_text(encoding='utf-8'))
-    print(str(value.get('source_commit') or ''))
-except Exception:
-    print('')
-PY
-            )"
+            snapshot_source="$(python -c 'import json; from pathlib import Path; p=Path(".survey/work-queue/discovery-identities/_manifest.json"); print(str(json.loads(p.read_text(encoding="utf-8")).get("source_commit") or "") if p.is_file() else "")')"
             reuse_snapshot=0
             if [ -n "$snapshot_source" ] \
               && [ -f .survey/work-queue/discovery-rejections.json ] \
