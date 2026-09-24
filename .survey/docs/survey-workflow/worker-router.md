@@ -81,6 +81,10 @@ hot-dispatchが欠落・破損、選択済みレーンの準備済みpacket無�
 
 Scheduled Chat等でリポジトリ内Pythonを直接起動できないこと自体は、Research / Audit / Discoveryを停止する理由ではない。GitHubへのread/writeが可能なら、**requestファイルをmainへ耐久保存し、対応するGitHub Actions fast laneに正規スクリプトを実行させ、resultファイルを読む経路**を現行の正規transportとして使う。この経路はmanual state編集ではない。
 
+**GitHubのファイル作成・更新API/connectorを利用できる場合、それ自体をGitHub write可能と判定する。** ローカルshell、Python実行、`git push`、Actionsのmanual dispatch専用toolが無いことを、claim / run-state / preflight / submissionのwrite不能理由にしてはならない。新規request・direct-take・immutable descriptor等は、正規pathへGitHubのcreate-file相当操作でJSONを作成することで耐久化でき、そのcommitに反応するActions fast laneへ後段処理を委譲する。既存ファイルの更新が必要な段階では、直前に最新HEADと対象blob SHAを再取得してupdate-file相当操作を使う。
+
+`transport_unrecoverable` / `durable_transports_unavailable` を申告してhandoffする前に、**今回必要な正規pathへの実writeを少なくとも1回は実際に試す。** write操作を一度も試していない、または「直接スクリプトを実行できない」ことしか確認していない状態はtransport障害ではない。create-only pathで既存ファイル競合が返った場合もwrite不能ではなく排他取得競合なので、routerが定める次packet/同一identity確認へ進む。
+
 ### 2.2 main writeのcommit集約
 
 Scheduled ChatからGitHubへ直接耐久保存する場合、**同一論文・同一論理段階で、途中にActions起動や別workerからの可視化を必要としない複数ファイル更新は1回のcommitへ集約する。** 特にResearch / Auditの5スロットは、内容が完成してセルフレビュー可能になった時点でまとめて保存し、metadata / method / evaluation / results / positioningを1ファイルずつ別commitにしてmainを進めない。利用可能なGitHub transportが複数ファイルを1commitで更新できる場合はGit dataのtree/commit等の原子的な複数ファイル更新を優先する。
@@ -513,6 +517,7 @@ Scheduled Chatで操作不能・platform limit・transport障害を理由に継�
 - 正規回復として何を何回試したか、その結果。
 - **直前まで成功していた操作**。たとえばHEADとworker-routerのreadは成功したがwriteだけ失敗した場合、それを明示する。
 - 「未試行」「利用不能」「試行して失敗」を区別する。利用可能な正規transportを試していない状態で `transport_unrecoverable` と結論しない。
+- **GitHub readが成功しており、ファイル作成・更新API/connectorが利用可能なら、GitHub writeは未試行扱いにしない。** 必要なrequest/direct-take等の正規pathへ実際のcreate/updateを試し、その具体的な失敗を観測して初めてwrite障害候補とする。shell/Python/CLIが無いことはwrite失敗の証拠ではない。
 
 GitHub read/writeの一部だけが失敗した場合は、第6節のprobeと正規回復を行い、read成功をwrite成功と同一視しない。逆にwrite失敗をGitHub全体のread不能とも扱わない。Scheduled Chat固有の能力差が疑われる場合も、観測事実だけを記録し、リポジトリ変更が原因だと推測してhard stopにしない。
 
