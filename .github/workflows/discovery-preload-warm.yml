@@ -131,10 +131,52 @@ jobs:
               return 0
             }
 
-            # Local/reference-pool work is cheap; OpenAlex/other remote sources can
-            # also use bounded parallelism. Semantic Scholar remains serialized to
-            # avoid turning its rate limit into a foreground concern later.
+            stage_preload_state () {
+              if ! python .survey/scripts/hot_dispatch.py --repo-root . refresh \
+                > /tmp/hot-dispatch.json; then
+                echo 'Hot-dispatch refresh failed after preload processing; preserve preload results and repair the derived index on the next run.' >&2
+              fi
+
+              git add \
+                .survey/work-queue/discovery-precheck/requests \
+                .survey/work-queue/discovery-precheck/results \
+                .survey/work-queue/discovery-preload \
+                .survey/work-queue/hot-dispatch.json
+              while IFS= read -r -d '' preload_slot; do
+                git add -- "$preload_slot"
+              done < <(
+                find .survey/work-queue/records -type f -name 'discovery-preload.json' -print0
+              )
+            }
+
+            publish_preload_state () {
+              local message="$1"
+              stage_preload_state
+              if git diff --cached --quiet; then
+                return 0
+              fi
+              git commit -m "$message"
+              git push origin HEAD:main
+            }
+
+            # Local/reference-pool work is cheap and directly feeds the mandatory
+            # backward lane. Publish it before waiting on remote providers so a
+            # worker can consume the new PRECHECKED backward window immediately.
             process_batch /tmp/preload-local.txt
+            if [ -s /tmp/preload-local.txt ]; then
+              if publish_preload_state 'survey: publish local discovery preload stock'; then
+                git fetch origin main
+                git reset --hard origin/main
+              else
+                echo "Local preload push race on attempt ${attempt}; recomputing from latest main."
+                sleep $(( attempt * 2 ))
+                continue
+              fi
+            fi
+
+            # OpenAlex/other remote sources can use bounded parallelism. Semantic
+            # Scholar remains serialized to avoid turning its rate limit into a
+            # foreground concern later.
             process_batch /tmp/preload-remote.txt
 
             while IFS= read -r request; do
@@ -158,26 +200,12 @@ jobs:
             done < /tmp/preload-semantic-scholar.txt
 
             # Failed/exhausted windows can free a sidecar. Refill once more in the
-            # same background run, then publish a fresh hot-dispatch snapshot.
+            # same background run, then publish the remaining remote stock.
             python .survey/scripts/discovery_preload_queue.py \
               --repo-root . top-up --target 32 --max-new 32 \
               | tee /tmp/discovery-preload-retopup.json
-            if ! python .survey/scripts/hot_dispatch.py --repo-root . refresh \
-              > /tmp/hot-dispatch.json; then
-              echo 'Hot-dispatch refresh failed after preload processing; preserve preload results and repair the derived index on the next run.' >&2
-            fi
 
-            git add \
-              .survey/work-queue/discovery-precheck/requests \
-              .survey/work-queue/discovery-precheck/results \
-              .survey/work-queue/discovery-preload \
-              .survey/work-queue/hot-dispatch.json
-            while IFS= read -r -d '' preload_slot; do
-              git add -- "$preload_slot"
-            done < <(
-              find .survey/work-queue/records -type f -name 'discovery-preload.json' -print0
-            )
-
+            stage_preload_state
             if git diff --cached --quiet; then
               echo 'Discovery preload stock is already warm.'
               exit 0
