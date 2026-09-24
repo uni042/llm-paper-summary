@@ -9,6 +9,8 @@ import sys
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
+
+from paper_audit_scope import PAPER_AUDIT_BASELINE, added_paper_paths
 from typing import Iterable
 
 HERE = Path(__file__).resolve().parent
@@ -458,6 +460,7 @@ def markdown_report(results: list[PaperResult], args: argparse.Namespace) -> str
 def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo-root", default=".")
+    ap.add_argument("--baseline-commit", default=PAPER_AUDIT_BASELINE)
     ap.add_argument("--papers-root", default="papers/inference")
     ap.add_argument("--markdown-out")
     ap.add_argument("--json-out")
@@ -479,12 +482,14 @@ def main() -> int:
     paper_roots = [papers_root]
     if args.papers_root == "papers/inference":
         paper_roots.append((repo_root / "papers/survey").resolve())
-    files = sorted({
-        path
-        for root in paper_roots if root.exists()
-        for path in root.rglob("*.md")
-        if is_paper_summary(path)
-    })
+    added = added_paper_paths(repo_root, args.baseline_commit)
+    files = sorted(
+        repo_root / relative
+        for relative in added
+        if any((repo_root / relative).is_relative_to(root) for root in paper_roots)
+        and (repo_root / relative).exists()
+        and is_paper_summary(repo_root / relative)
+    )
     results = [audit_file(path, repo_root, args) for path in files]
     report = markdown_report(results, args)
 
@@ -509,7 +514,8 @@ def main() -> int:
                 "min_japanese_ratio": args.min_japanese_ratio,
                 "warn_japanese_ratio": args.warn_japanese_ratio,
                 "bare_english_terms_allowed": 0,
-                "paper_target_policy": "all Markdown under papers/inference and papers/survey except README, comparison.md and # Moved stubs",
+                "paper_target_policy": "Git-added Markdown after baseline under selected paper families, excluding README, comparison.md and # Moved stubs",
+                "baseline_commit": args.baseline_commit,
                 "method_heading_compatibility": ["手法", "手法の…", "提案手法", "手法N: …"],
                 "structured_method_fallback": {
                     "min_prose_chars": STRUCTURED_METHOD_MIN_PROSE_CHARS,
