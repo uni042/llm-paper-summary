@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "source_commit": "df7386aa72bc7287005e2e0582f74607257ca5d4",
-  "generated_at": "2026-09-24T15:41:42.425818+00:00",
+  "source_commit": "17c76928a3e22cb8047851e8938bf9067c24d91b",
+  "generated_at": "2026-09-24T16:01:19.050794+00:00",
   "status": "review_required",
-  "file_count": 10765,
+  "file_count": 10778,
   "classification_counts": {
     "A": 0,
     "B": 0,
     "C": 0,
     "D": 0,
     "E": 0,
-    "UNREVIEWED": 10765,
+    "UNREVIEWED": 10778,
     "UNSCANNABLE": 0
   },
-  "unclassified_count": 10765,
+  "unclassified_count": 10778,
   "legacy_marker_count": 1320,
   "unreviewed_marker_count": 1313,
   "unscannable_count": 0,
-  "legacy_remaining": 10765,
+  "legacy_remaining": 10778,
   "cleanup_remaining": 0,
   "files": [
     {
@@ -328,8 +328,8 @@
     {
       "path": ".survey/docs/survey-workflow/worker-router.md",
       "kind": "file",
-      "size_bytes": 145441,
-      "sha": "6c4dda4b7439c609184a91b6606edd4ee0086d5e",
+      "size_bytes": 147488,
+      "sha": "034d75f302ed64f2993b1eacdef95813878739c6",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [
@@ -746,8 +746,8 @@
     {
       "path": ".survey/scripts/continuation_gate.py",
       "kind": "file",
-      "size_bytes": 36551,
-      "sha": "4deb0475f28fa83cec29f2ec0770a20ed8846698",
+      "size_bytes": 38692,
+      "sha": "5cf609081399b181b3b64b06555c70dccdc57680",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -766,8 +766,8 @@
     {
       "path": ".survey/scripts/derive_worker_run_state.py",
       "kind": "file",
-      "size_bytes": 98467,
-      "sha": "3974a7f408a93f496e9b574674cec2a333065677",
+      "size_bytes": 102728,
+      "sha": "1ba7b4f4c3c69415e8d58e5fcf3fab829394bb58",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -896,8 +896,8 @@
     {
       "path": ".survey/scripts/hot_dispatch.py",
       "kind": "file",
-      "size_bytes": 49658,
-      "sha": "17705aec96ceae93bfe237605c8b538e217ef88b",
+      "size_bytes": 52996,
+      "sha": "557184038009c32da613de65a24ccc18b1c216b4",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -1366,8 +1366,8 @@
     {
       "path": ".survey/scripts/run_finalization_gate.py",
       "kind": "file",
-      "size_bytes": 16559,
-      "sha": "286fae36b1173cd6067c25b190964b5856bf16e5",
+      "size_bytes": 19071,
+      "sha": "b6494ef76ec52a46d4cd42b39fe1b3d88408ce69",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -1441,8 +1441,8 @@
     {
       "path": ".survey/scripts/worker_guidance.py",
       "kind": "file",
-      "size_bytes": 22959,
-      "sha": "bec44122b7a92c6f7c6a1b192c0d5f90bbde3eaf",
+      "size_bytes": 23219,
+      "sha": "05690935e4fcf4f38b9e581f5a88000b49bbb9c2",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -1513,6 +1513,16 @@
       "kind": "file",
       "size_bytes": 796,
       "sha": "9ee0ab3114b673e0c9cc3cb700d8c6e05b0e5726",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/survey-state/identity-deltas/doi/10.1109/lca.2026.3720952.json",
+      "kind": "file",
+      "size_bytes": 251,
+      "sha": "68a3fc6ff2c4dd0f34d1211bfa117c7c7cf57502",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -1820,8 +1830,8 @@
     {
       "path": ".survey/tests/test_continuation_gate_claim_wait.py",
       "kind": "file",
-      "size_bytes": 10157,
-      "sha": "4b45a75f3b6f810523914cf53052a86ac76f31c3",
+      "size_bytes": 11040,
+      "sha": "0c31206248d1b07e4ba5b42626200dd72d8eceaf",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -1870,8 +1880,8 @@
     {
       "path": ".survey/tests/test_derive_worker_run_state.py",
       "kind": "file",
-      "size_bytes": 69640,
-      "sha": "3071336a57121cbe39b373ff18e4ab4993f9ee58",
+      "size_bytes": 72618,
+      "sha": "7f256d3393c3e3a0eb8ec2d9faec4ac6a5c23543",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -2095,8 +2105,8 @@
     {
       "path": ".survey/tests/test_hot_dispatch.py",
       "kind": "file",
-      "size_bytes": 28981,
-      "sha": "80b9b653250dfdf551aeecb62ac9371954e2b5a8",
+      "size_bytes": 30743,
+      "sha": "2b38d8c24ff19c65682d255f1b0ab36859efdfec",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -2675,8 +2685,8 @@
     {
       "path": ".survey/tests/test_run_finalization_gate.py",
       "kind": "file",
-      "size_bytes": 12835,
-      "sha": "a78d50284637a5256c4d09c87422452b10552686",
+      "size_bytes": 14938,
+      "sha": "e5150b43840f8a3a7614dda9d14ab1de14245460",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -17897,6 +17907,26 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/archive/transport/claim-requests/smoke-refill-after-promotion-20260923-2115.json",
+      "kind": "file",
+      "size_bytes": 925,
+      "sha": "ba4458a2540fa4ccc63ccb8da29e38e41f176f90",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/archive/transport/claim-requests/smoke-refill-standby-20260923-2111.json",
+      "kind": "file",
+      "size_bytes": 917,
+      "sha": "78de7aace45c11076b00d049a993bccc64166d1f",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/archive/transport/claim-requests/validation-20260923T014000Z-scheduled-chat-00-next.json",
       "kind": "file",
       "size_bytes": 769,
@@ -32817,6 +32847,26 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/archive/transport/claim-results/smoke-refill-after-promotion-20260923-2115.json",
+      "kind": "file",
+      "size_bytes": 11580,
+      "sha": "7e09938a997e975aedbf3094026a58dadd3d5539",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/archive/transport/claim-results/smoke-refill-standby-20260923-2111.json",
+      "kind": "file",
+      "size_bytes": 12607,
+      "sha": "4ba41d2d2be9d2d2b6e4143a718c9353b2e854e8",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/archive/transport/claim-results/validation-20260923T014000Z-scheduled-chat-00-next.json",
       "kind": "file",
       "size_bytes": 3059,
@@ -34027,6 +34077,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/archive/transport/completed-submission-requests/attempt-preload-4cb587870cc33021ea9f2c50.json",
+      "kind": "file",
+      "size_bytes": 609,
+      "sha": "1804f17b22239866e4d2b0e30811003bd4c7e65c",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/archive/transport/completed-submission-requests/attempt-preload-52cbf286c62b67d46769963d.json",
       "kind": "file",
       "size_bytes": 686,
@@ -34051,6 +34111,16 @@
       "kind": "file",
       "size_bytes": 627,
       "sha": "5cdc7b098ce34d722dde83b6aa3be948bef43afd",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/archive/transport/completed-submission-requests/attempt-preload-5ae76716eb01958d78f1d488.json",
+      "kind": "file",
+      "size_bytes": 643,
+      "sha": "eb30211d49dd68144af007a7a2f331771d38852b",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -35381,6 +35451,16 @@
       "kind": "file",
       "size_bytes": 968,
       "sha": "3e126d1cf233d5b18ce2b3107ed672e0ac57208d",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/archive/transport/research-preflight/requests/preflight-worker-924226-dgap-a3.json",
+      "kind": "file",
+      "size_bytes": 1038,
+      "sha": "46adad9f46be0d1dc3423e213de1347ed696d7aa",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -36737,6 +36817,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/archive/transport/research-preflight/results/preflight-worker-924226-dgap-a3.json",
+      "kind": "file",
+      "size_bytes": 2703,
+      "sha": "c3bf6db87b954e4ab924beb7b16be00e6cb04ffe",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/archive/transport/research-preflight/results/preflight-worker-924920-fastgen-20260924T0045Z-r1.json",
       "kind": "file",
       "size_bytes": 2546,
@@ -37977,6 +38067,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/archive/transport/run-state/requests/auto-refresh-discovery-runstate-2070e60a64042f8997326ed5.json",
+      "kind": "file",
+      "size_bytes": 654,
+      "sha": "eed44a35750b1fd3892ba2a8685f07a610a26c52",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/archive/transport/run-state/requests/auto-refresh-discovery-runstate-276292e508415248b8d01ea1.json",
       "kind": "file",
       "size_bytes": 637,
@@ -38011,6 +38111,16 @@
       "kind": "file",
       "size_bytes": 650,
       "sha": "068d5506ea95a612ae23dea419912275764c9077",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/archive/transport/run-state/requests/auto-refresh-discovery-runstate-5f2b2c671124617b1a84186b.json",
+      "kind": "file",
+      "size_bytes": 642,
+      "sha": "c7f21d26c5dc9e4f0e899ba221fe2e8f12c979d4",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -42697,6 +42807,26 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/archive/transport/run-state/results/auto-bae855000c07f55e-g00000005.json",
+      "kind": "file",
+      "size_bytes": 16395,
+      "sha": "a0e83f4517dc906a74b83e304bab5c9ff9f8f330",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/archive/transport/run-state/results/auto-bae855000c07f55e-g00000006.json",
+      "kind": "file",
+      "size_bytes": 16464,
+      "sha": "0f4dc194a3ef9c6c5d244a9ff44e82b32becf8f6",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/archive/transport/run-state/results/auto-c7deadaed9290a95-g00000141.json",
       "kind": "file",
       "size_bytes": 14970,
@@ -43077,6 +43207,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/archive/transport/run-state/results/auto-refresh-discovery-runstate-2070e60a64042f8997326ed5.json",
+      "kind": "file",
+      "size_bytes": 16670,
+      "sha": "54748d6c798c0c02bb55dcff6362bd189eb092e5",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/archive/transport/run-state/results/auto-refresh-discovery-runstate-276292e508415248b8d01ea1.json",
       "kind": "file",
       "size_bytes": 14201,
@@ -43111,6 +43251,16 @@
       "kind": "file",
       "size_bytes": 13645,
       "sha": "3e81c3df3f6aaad2daefd46455e7cc914f738c21",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/archive/transport/run-state/results/auto-refresh-discovery-runstate-5f2b2c671124617b1a84186b.json",
+      "kind": "file",
+      "size_bytes": 16636,
+      "sha": "b19957d4a157a1752112ca43e41ef8ff952d1a7f",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -46337,26 +46487,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/claim-requests/smoke-refill-after-promotion-20260923-2115.json",
-      "kind": "file",
-      "size_bytes": 925,
-      "sha": "ba4458a2540fa4ccc63ccb8da29e38e41f176f90",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/claim-requests/smoke-refill-standby-20260923-2111.json",
-      "kind": "file",
-      "size_bytes": 917,
-      "sha": "78de7aace45c11076b00d049a993bccc64166d1f",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/claim-results/20260921T100210Z-00-48375fe.json",
       "kind": "file",
       "size_bytes": 4385,
@@ -46869,8 +46999,8 @@
     {
       "path": ".survey/work-queue/claim-results/direct-refill-dbeff0208295c9713f7beab6.json",
       "kind": "file",
-      "size_bytes": 39967,
-      "sha": "9239033381b1dcbaf2a5229502c6d71e48ee8a81",
+      "size_bytes": 41053,
+      "sha": "b232e208f9f523039ceda7b83a20b0c0a6aa82ec",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -47011,26 +47141,6 @@
       "kind": "file",
       "size_bytes": 2730,
       "sha": "58f250d6113df15bee017a5b169c57c2a94f6c0a",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/claim-results/smoke-refill-after-promotion-20260923-2115.json",
-      "kind": "file",
-      "size_bytes": 11580,
-      "sha": "7e09938a997e975aedbf3094026a58dadd3d5539",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/claim-results/smoke-refill-standby-20260923-2111.json",
-      "kind": "file",
-      "size_bytes": 12607,
-      "sha": "4ba41d2d2be9d2d2b6e4143a718c9353b2e854e8",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -48004,8 +48114,8 @@
     {
       "path": ".survey/work-queue/claims/job-research-1c0254220f4e6305.json",
       "kind": "file",
-      "size_bytes": 1569,
-      "sha": "12c1b4d7c23c008d827536c5881c8fde13fadb89",
+      "size_bytes": 702,
+      "sha": "cd6a42dddb288fd6155c7313c0b060f30fdb1c6b",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -48069,8 +48179,8 @@
     {
       "path": ".survey/work-queue/claims/job-research-1edac6e56714dd58.json",
       "kind": "file",
-      "size_bytes": 1068,
-      "sha": "53e37f9b7932e08bcac7da0fc9172871f3c50546",
+      "size_bytes": 1575,
+      "sha": "f92567d812c7a81ba9d3e89cdd57a7685e33acff",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -50069,8 +50179,8 @@
     {
       "path": ".survey/work-queue/claims/job-research-5cbec5c2c470e865.json",
       "kind": "file",
-      "size_bytes": 1717,
-      "sha": "4334188923bf353749c10647e2f14022bc26f581",
+      "size_bytes": 1801,
+      "sha": "df530e27bfa8617001ceab89f044369627a9e4e1",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -51082,6 +51192,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/claims/job-research-7f91748e5f9d004b.json",
+      "kind": "file",
+      "size_bytes": 637,
+      "sha": "c06055a21798256992558a86a7b26e65449381e8",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/claims/job-research-7fcd5e4f3604dab7.json",
       "kind": "file",
       "size_bytes": 1150,
@@ -51524,8 +51644,8 @@
     {
       "path": ".survey/work-queue/claims/job-research-92841f7f38c00d3c.json",
       "kind": "file",
-      "size_bytes": 1068,
-      "sha": "3e0da73d6e83d98095632ae65f728d7a7cb0b272",
+      "size_bytes": 1575,
+      "sha": "eaab262de2fb2c107396f9d8bcd09be3c75e8888",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -54049,8 +54169,8 @@
     {
       "path": ".survey/work-queue/claims/job-research-e6152c2a3998faa6.json",
       "kind": "file",
-      "size_bytes": 1640,
-      "sha": "9cae90445545f52e5c52899d2d670b00b7ecd1ea",
+      "size_bytes": 1686,
+      "sha": "f22685be4cf18c7362a26a73c87e00ff5667e067",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -55942,6 +56062,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/direct-take-results/discovery/preload-23494db523ee1a210583.json",
+      "kind": "file",
+      "size_bytes": 890,
+      "sha": "1acb699d301d0104b832841bda1250b65dab80dd",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/direct-take-results/discovery/preload-279710d2459727616545.json",
       "kind": "file",
       "size_bytes": 836,
@@ -55972,6 +56102,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/direct-take-results/discovery/preload-35f79ff9fbb933aa98ef.json",
+      "kind": "file",
+      "size_bytes": 892,
+      "sha": "38b3273e41bddbbd52d01dcc86ad8ecfb3fe4394",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/direct-take-results/discovery/preload-3bf1e1d85a15a8755666.json",
       "kind": "file",
       "size_bytes": 892,
@@ -55984,8 +56124,8 @@
     {
       "path": ".survey/work-queue/direct-take-results/discovery/preload-3d786f9437572f1d6f51.json",
       "kind": "file",
-      "size_bytes": 348,
-      "sha": "9c80c5f2a34d7e83863b3a6cc94ff71833027038",
+      "size_bytes": 890,
+      "sha": "abf5038b7c2f441383b856f52ea07c1d54c3c3c0",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -56112,6 +56252,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/direct-take-results/discovery/preload-8171aa396a08ad4b76aa.json",
+      "kind": "file",
+      "size_bytes": 892,
+      "sha": "a64828846812629db1fd1048e48af437d14da0e2",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/direct-take-results/discovery/preload-89bfb663f6ca38dd8f6e.json",
       "kind": "file",
       "size_bytes": 814,
@@ -56154,8 +56304,8 @@
     {
       "path": ".survey/work-queue/direct-take-results/discovery/preload-b2a43c661eb5087a88fe.json",
       "kind": "file",
-      "size_bytes": 348,
-      "sha": "8a10d7afd0580d7f274396bf9a66b19cb593c702",
+      "size_bytes": 2377,
+      "sha": "0e718f23f7182dcd1e77b17d72508cfdd149d0d2",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -56575,7 +56725,7 @@
       "path": ".survey/work-queue/discovery-identities/_manifest.json",
       "kind": "file",
       "size_bytes": 3773,
-      "sha": "63a1ebddacaaac84c3d77a2c47b93a0135ed678f",
+      "sha": "5d94db7fcfefbfb71532fd2686270b0ad2ea9ec8",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -56584,8 +56734,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/_represented_papers.json",
       "kind": "file",
-      "size_bytes": 1969600,
-      "sha": "b028d3e52d903f420d2c46299fb332ae4c33ca26",
+      "size_bytes": 1976865,
+      "sha": "cddee9c6dbea53633d81fbcf237eabd90d163a6d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57234,8 +57384,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/arxiv-2606.txt",
       "kind": "file",
-      "size_bytes": 1900,
-      "sha": "b253a025c7175356210dedc383192d0a48f9edaf",
+      "size_bytes": 1920,
+      "sha": "20d72d3e142d66b9621c6618cca1101a006d958f",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57264,8 +57414,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/arxiv-2609.txt",
       "kind": "file",
-      "size_bytes": 4000,
-      "sha": "b0b7692019181152d093b14c7d44678da0a525e1",
+      "size_bytes": 4060,
+      "sha": "e557d4214ee51b543425c4ab2d042a92e013ffad",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57274,8 +57424,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/doi.txt",
       "kind": "file",
-      "size_bytes": 25776,
-      "sha": "6282971d096d0060a494516b3f002bd7ccab783a",
+      "size_bytes": 25844,
+      "sha": "8ef10579d57d8cabcf19baafad746bd73c2cfc39",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57324,8 +57474,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/title-b.txt",
       "kind": "file",
-      "size_bytes": 3756,
-      "sha": "f721c2c7d3c6c49d6d6a055556ad513616bd3b15",
+      "size_bytes": 3831,
+      "sha": "0aff8125e2f8d92e71a75638ad4cac2cc44652e3",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57334,8 +57484,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/title-c.txt",
       "kind": "file",
-      "size_bytes": 7312,
-      "sha": "3f537aea022af4ac1f1e437d4f8664ffe83a197f",
+      "size_bytes": 7445,
+      "sha": "8912c0c193ac232d8e6a2d171c1d8a07bc279df5",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57354,8 +57504,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/title-e.txt",
       "kind": "file",
-      "size_bytes": 7944,
-      "sha": "b510db23c4f0c0ec29cf7919d5fabdd984245d80",
+      "size_bytes": 8009,
+      "sha": "58e7a91015589baf0c0fa7fddfad4b835cbbd08c",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57524,8 +57674,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/title-u.txt",
       "kind": "file",
-      "size_bytes": 1795,
-      "sha": "d5e4b3158871dd48c5d661ce8e8d35d1b0827ee5",
+      "size_bytes": 1871,
+      "sha": "e128d5636c80a63723d54b93d2cf3ff72b294969",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57594,8 +57744,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/url-arxiv-org.txt",
       "kind": "file",
-      "size_bytes": 43801,
-      "sha": "3a891976b17e6005b00939d7cd79881122b3ebab",
+      "size_bytes": 43986,
+      "sha": "90d67337b900d5b1269a671d0c9e7484fcbad4a5",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -57614,8 +57764,8 @@
     {
       "path": ".survey/work-queue/discovery-identities/url-doi-org.txt",
       "kind": "file",
-      "size_bytes": 3407,
-      "sha": "7bb79f881ecdd02e21a559a04a791155342ee8df",
+      "size_bytes": 3500,
+      "sha": "90349e0449507298efa7864c24ec34075ff5d584",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -60832,6 +60982,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/discovery-precheck/requests/disc-take-scheduled-chat-00-20260925T005925JST-b2a43c66.json",
+      "kind": "file",
+      "size_bytes": 776,
+      "sha": "8f1f766f9d226d6e19853b93839892fc1d1885ea",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/discovery-precheck/requests/disc-worker-912604-20260924T204000JST-r1.json",
       "kind": "file",
       "size_bytes": 636,
@@ -60942,6 +61102,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/discovery-precheck/requests/frontier-4aff5af3b7a76af1e2584cf5.json",
+      "kind": "file",
+      "size_bytes": 847,
+      "sha": "d2c06792b947bbb0b6f962e47a7f322846372baa",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/discovery-precheck/requests/frontier-4bb687902cec09246fc947a0.json",
       "kind": "file",
       "size_bytes": 858,
@@ -60956,6 +61126,26 @@
       "kind": "file",
       "size_bytes": 731,
       "sha": "ec8ba918b72c907c79a244b10fbcb34778117f45",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/requests/frontier-6744df2bf719787d6187382f.json",
+      "kind": "file",
+      "size_bytes": 857,
+      "sha": "bb1eea1124ac182c808ec3b0b713921e2d287a8e",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/requests/frontier-867bf55cb3fe05ad2688ce9a.json",
+      "kind": "file",
+      "size_bytes": 833,
+      "sha": "683117b4bfcb7a3ec928db4902eb355b07ef7e52",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -61006,6 +61196,16 @@
       "kind": "file",
       "size_bytes": 869,
       "sha": "f6415166fb6fa2e320e888fee6bce23830bc60b5",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/requests/frontier-ffb9f610716bbbb2820ec80c.json",
+      "kind": "file",
+      "size_bytes": 890,
+      "sha": "5b45eff399ff04d574aefc8a17e0e0c455bd898d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -61602,26 +61802,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-08bc73efbc2b865af33a.json",
-      "kind": "file",
-      "size_bytes": 680,
-      "sha": "ddcf54179d2d30fb1e44b01c88c5c7ea8076d757",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-08f3e27e3e8e1451c6c0.json",
-      "kind": "file",
-      "size_bytes": 658,
-      "sha": "6daee5971676e8e6dd41669efe0d5d2e0b7dd063",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-0937a1afddfa6907a889.json",
       "kind": "file",
       "size_bytes": 644,
@@ -61792,16 +61972,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-2100b6b78dc6a2313c9a.json",
-      "kind": "file",
-      "size_bytes": 651,
-      "sha": "0ff397e54f1b5b89035aeecdf03bcb2e2cddc397",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-23494db523ee1a210583.json",
       "kind": "file",
       "size_bytes": 746,
@@ -61832,16 +62002,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-279710d2459727616545.json",
-      "kind": "file",
-      "size_bytes": 643,
-      "sha": "98e692e5b14d8e98d5f51a25b0a2dbbb19d7ba98",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-2951a41deabcea99e3a1.json",
       "kind": "file",
       "size_bytes": 779,
@@ -61856,16 +62016,6 @@
       "kind": "file",
       "size_bytes": 725,
       "sha": "754d318913d66fa13d82aef2ac744a1675740113",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-30deed932745d79e3089.json",
-      "kind": "file",
-      "size_bytes": 643,
-      "sha": "f38c9595bc3759554778a2a9a433c20eecf054c2",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -61946,16 +62096,6 @@
       "kind": "file",
       "size_bytes": 751,
       "sha": "5229e972040fb71521300e2b3f0b8c6ceaafdcaa",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-389188062fe4ee151f1f.json",
-      "kind": "file",
-      "size_bytes": 528,
-      "sha": "880da13fe2804ea9690795973c1e5f6846f40d0d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -62052,16 +62192,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-51916ebd5326dfce4e38.json",
-      "kind": "file",
-      "size_bytes": 680,
-      "sha": "307582462ee86bc3c25a52f94a3acdc59a468480",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-51fdf1402866a3bf760e.json",
       "kind": "file",
       "size_bytes": 799,
@@ -62122,16 +62252,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-5d8a830114ae286dcd53.json",
-      "kind": "file",
-      "size_bytes": 666,
-      "sha": "2979055ab1f52cca8a01b09b9c2d8f23fddc4f18",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-5e4f41b8a88a802ad237.json",
       "kind": "file",
       "size_bytes": 770,
@@ -62156,6 +62276,16 @@
       "kind": "file",
       "size_bytes": 768,
       "sha": "5156fc29b85e1eb9327e04a4f3c8015e430c9f4f",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/requests/preload-5fc646a8771838fca273.json",
+      "kind": "file",
+      "size_bytes": 797,
+      "sha": "3e0f3fca5a1b69df09800cd631ee248f4172a36e",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -62322,10 +62452,30 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/discovery-precheck/requests/preload-8387a92a9bbdb3d4ef33.json",
+      "kind": "file",
+      "size_bytes": 779,
+      "sha": "867fdf17c50574bf4a2d0db872e27802af4e45e8",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-86102c2a2dc8bd5da960.json",
       "kind": "file",
       "size_bytes": 792,
       "sha": "75124c7ad7d1d2b4f21e322a44914385b5fc2451",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/requests/preload-8657b5dc6c05fe52589d.json",
+      "kind": "file",
+      "size_bytes": 780,
+      "sha": "ce7a9df6532af91c53806c449b544db99e9cb507",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -62512,16 +62662,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-a64cd9b9750549c9709a.json",
-      "kind": "file",
-      "size_bytes": 664,
-      "sha": "761ed11ca21d5b1b61e8e50cd9521079eabf94a1",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-aa436b0e1f63f3ea03cd.json",
       "kind": "file",
       "size_bytes": 782,
@@ -62566,16 +62706,6 @@
       "kind": "file",
       "size_bytes": 770,
       "sha": "f9f90ef0622576fc4eb5d5d8255fbe857ebae52f",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-b2a09ca2dbfed97a6e6b.json",
-      "kind": "file",
-      "size_bytes": 528,
-      "sha": "2f46bfeff373cdfd64774e1b34a96181f6dc4ac8",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -62812,16 +62942,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-d3c8ad0dee6d08dc53d7.json",
-      "kind": "file",
-      "size_bytes": 663,
-      "sha": "677c62b2c77a616e803d9eb931086c49831fd952",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-d63777f6c286905bd173.json",
       "kind": "file",
       "size_bytes": 644,
@@ -63052,16 +63172,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/requests/preload-f8053c479a493debc96d.json",
-      "kind": "file",
-      "size_bytes": 662,
-      "sha": "5ececcdbc61d90b01eae2d9ff4c0ddb2234c98e4",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/requests/preload-f887fe6c8b053855f38d.json",
       "kind": "file",
       "size_bytes": 643,
@@ -63096,6 +63206,16 @@
       "kind": "file",
       "size_bytes": 782,
       "sha": "5796ddcce71ba468a916215159f9d24cf84924d0",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/requests/preload-faa8810d6c215621ef82.json",
+      "kind": "file",
+      "size_bytes": 645,
+      "sha": "6e6b3f4fd3efe58c257f11b769ea670773765d69",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -66542,6 +66662,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T005925JST-b2a43c66.json",
+      "kind": "file",
+      "size_bytes": 159880,
+      "sha": "9b5e04871b45c77573c9175e4027811f4450e374",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/discovery-precheck/results/disc-worker-912604-20260924T204000JST-r1.json",
       "kind": "file",
       "size_bytes": 226207,
@@ -66652,6 +66782,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/discovery-precheck/results/frontier-4aff5af3b7a76af1e2584cf5.json",
+      "kind": "file",
+      "size_bytes": 88197,
+      "sha": "56986e86f9ddc946b57cddee490ecbea0df00490",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/discovery-precheck/results/frontier-4bb687902cec09246fc947a0.json",
       "kind": "file",
       "size_bytes": 88928,
@@ -66666,6 +66806,26 @@
       "kind": "file",
       "size_bytes": 135896,
       "sha": "97e31d5005c23b5b313726436696bc45be8c86bf",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/results/frontier-6744df2bf719787d6187382f.json",
+      "kind": "file",
+      "size_bytes": 94249,
+      "sha": "3400f6f17a35a97257c3ebad37bc55d65b8e79a4",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/results/frontier-867bf55cb3fe05ad2688ce9a.json",
+      "kind": "file",
+      "size_bytes": 88594,
+      "sha": "27c383b8dfb475f2918015802bf8290183f65695",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -66716,6 +66876,16 @@
       "kind": "file",
       "size_bytes": 83649,
       "sha": "8d8fae4f2d10e529968d8f7ba362160e281fbbbf",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/results/frontier-ffb9f610716bbbb2820ec80c.json",
+      "kind": "file",
+      "size_bytes": 71920,
+      "sha": "614d288f73259d6e5389843cfd670a1ef195339d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -67312,26 +67482,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-08bc73efbc2b865af33a.json",
-      "kind": "file",
-      "size_bytes": 87519,
-      "sha": "c554cf7d38656de83ab12bc83dee99f854b947d3",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-08f3e27e3e8e1451c6c0.json",
-      "kind": "file",
-      "size_bytes": 83811,
-      "sha": "24e0ce9d5022457795963fd1daf72ee48b28e5ab",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/results/preload-0937a1afddfa6907a889.json",
       "kind": "file",
       "size_bytes": 224386,
@@ -67502,16 +67652,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-2100b6b78dc6a2313c9a.json",
-      "kind": "file",
-      "size_bytes": 89033,
-      "sha": "3dc06d8e4d2b2ceb531c1a41516e80a1d0018739",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/results/preload-23494db523ee1a210583.json",
       "kind": "file",
       "size_bytes": 88452,
@@ -67542,16 +67682,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-279710d2459727616545.json",
-      "kind": "file",
-      "size_bytes": 83451,
-      "sha": "946226326ee7d96de9b779244e27587d1a1a0781",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/results/preload-2951a41deabcea99e3a1.json",
       "kind": "file",
       "size_bytes": 90042,
@@ -67566,16 +67696,6 @@
       "kind": "file",
       "size_bytes": 1192,
       "sha": "de5e1c45952e7dca9eca224f9e33cfc89e5ad51d",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-30deed932745d79e3089.json",
-      "kind": "file",
-      "size_bytes": 109716,
-      "sha": "ddbc4c8536c431c4f4e4ad47a522de1dfc910c09",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -67656,16 +67776,6 @@
       "kind": "file",
       "size_bytes": 28561,
       "sha": "e8472298b11bdb2911c0d5bda54e8e01cc15da56",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-389188062fe4ee151f1f.json",
-      "kind": "file",
-      "size_bytes": 129016,
-      "sha": "ef8d475caf47ab4ad94964a38e28e2fb5371297c",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -67762,16 +67872,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-51916ebd5326dfce4e38.json",
-      "kind": "file",
-      "size_bytes": 82180,
-      "sha": "3aad93b518de6f2269239247389b832e9263f722",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/results/preload-51fdf1402866a3bf760e.json",
       "kind": "file",
       "size_bytes": 5990,
@@ -67826,16 +67926,6 @@
       "kind": "file",
       "size_bytes": 28561,
       "sha": "f2f580eec9c2d6ee0f50a36595500db1d6a65ae5",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-5d8a830114ae286dcd53.json",
-      "kind": "file",
-      "size_bytes": 87505,
-      "sha": "e46a080097e8b22b0c6bd9f17075732f49d1674c",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -68222,16 +68312,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-a64cd9b9750549c9709a.json",
-      "kind": "file",
-      "size_bytes": 82837,
-      "sha": "ee3eca6fff93d14e1973274848036a5b61e91af3",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/results/preload-aa436b0e1f63f3ea03cd.json",
       "kind": "file",
       "size_bytes": 83508,
@@ -68266,16 +68346,6 @@
       "kind": "file",
       "size_bytes": 83296,
       "sha": "cd04cd863cfe8db7177ce79670508a6f34ca9a01",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-b2a09ca2dbfed97a6e6b.json",
-      "kind": "file",
-      "size_bytes": 116494,
-      "sha": "cd222ddfc9d50abef44a48cb9fba134489eca860",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -68472,16 +68542,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-d3c8ad0dee6d08dc53d7.json",
-      "kind": "file",
-      "size_bytes": 91393,
-      "sha": "5b48630c4112bb242b3938e8f56b7c8fdd4e4db8",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/results/preload-d63777f6c286905bd173.json",
       "kind": "file",
       "size_bytes": 224386,
@@ -68662,16 +68722,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-precheck/results/preload-f8053c479a493debc96d.json",
-      "kind": "file",
-      "size_bytes": 82006,
-      "sha": "52d1d15af22a103d77c95c8fbf9311da5fe46f2a",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-precheck/results/preload-f887fe6c8b053855f38d.json",
       "kind": "file",
       "size_bytes": 88779,
@@ -68696,6 +68746,16 @@
       "kind": "file",
       "size_bytes": 83508,
       "sha": "d72c07e2d061386315a8edc0e038283231368197",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-precheck/results/preload-faa8810d6c215621ef82.json",
+      "kind": "file",
+      "size_bytes": 83248,
+      "sha": "9656bc3e73b53841c65995e2415d42c6e833fca6",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -69152,6 +69212,26 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/discovery-preload/claims/preload-23494db523ee1a210583.json",
+      "kind": "file",
+      "size_bytes": 833,
+      "sha": "bdbf53bbbaeed423591d86fcfa66a4419d4e0233",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-preload/claims/preload-35f79ff9fbb933aa98ef.json",
+      "kind": "file",
+      "size_bytes": 835,
+      "sha": "f3132ab1dfc3890d722a8e8923767912e50ada45",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/discovery-preload/claims/preload-3bf1e1d85a15a8755666.json",
       "kind": "file",
       "size_bytes": 835,
@@ -69162,20 +69242,20 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/claims/preload-3e35f4369f3a799cb100.json",
+      "path": ".survey/work-queue/discovery-preload/claims/preload-3d786f9437572f1d6f51.json",
       "kind": "file",
-      "size_bytes": 835,
-      "sha": "14c9502ce4444bcb792ff2f8017222a2633d3ede",
+      "size_bytes": 833,
+      "sha": "f8c1e49c7c0cc39df2dc432178339b2a2d3bdb8b",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/claims/preload-4adcdbaa4e854f8926e8.json",
+      "path": ".survey/work-queue/discovery-preload/claims/preload-3e35f4369f3a799cb100.json",
       "kind": "file",
-      "size_bytes": 576,
-      "sha": "d5c259e180d9418eae2de23157926e5b7db3c471",
+      "size_bytes": 835,
+      "sha": "14c9502ce4444bcb792ff2f8017222a2633d3ede",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -69212,6 +69292,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/discovery-preload/claims/preload-8171aa396a08ad4b76aa.json",
+      "kind": "file",
+      "size_bytes": 835,
+      "sha": "2bd983c34e00f6691513cb840ac1a38d7621cb41",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/discovery-preload/claims/preload-9777a7e832a3922c79b4.json",
       "kind": "file",
       "size_bytes": 830,
@@ -69236,6 +69326,16 @@
       "kind": "file",
       "size_bytes": 820,
       "sha": "0265cdb8668ab8d1c28fece7ce2c8e8bb97f490c",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-preload/claims/preload-b2a43c661eb5087a88fe.json",
+      "kind": "file",
+      "size_bytes": 857,
+      "sha": "f50ead9047d8fd01eaca2f841149b91fcb62d001",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -69296,26 +69396,6 @@
       "kind": "file",
       "size_bytes": 722,
       "sha": "055b2c68e2bf7e61bb7e8aaa578fe89e87ee1caa",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-08bc73efbc2b865af33a.json",
-      "kind": "file",
-      "size_bytes": 731,
-      "sha": "1b28fd2e110d6782517129dbe9265234feb498af",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-08f3e27e3e8e1451c6c0.json",
-      "kind": "file",
-      "size_bytes": 695,
-      "sha": "3ce1b61c42093b8c90746cdf9ad638eec3623f7a",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -69492,16 +69572,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-2100b6b78dc6a2313c9a.json",
-      "kind": "file",
-      "size_bytes": 688,
-      "sha": "b658a15987b8b4f462c29576bcfd015722ab7222",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/entries/preload-23494db523ee1a210583.json",
       "kind": "file",
       "size_bytes": 691,
@@ -69532,16 +69602,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-279710d2459727616545.json",
-      "kind": "file",
-      "size_bytes": 680,
-      "sha": "621f012aa9aad5cf81bc376c5a1696ea530c2c14",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/entries/preload-2951a41deabcea99e3a1.json",
       "kind": "file",
       "size_bytes": 738,
@@ -69556,16 +69616,6 @@
       "kind": "file",
       "size_bytes": 670,
       "sha": "a64c951fd58837adee581b035178a050a4ddfb05",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-30deed932745d79e3089.json",
-      "kind": "file",
-      "size_bytes": 590,
-      "sha": "f0ce6facb4d49a20dfac022dbb5dc7ceb146522f",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -69646,16 +69696,6 @@
       "kind": "file",
       "size_bytes": 695,
       "sha": "7c3ab824820c8726510450d579f505e41acc83a6",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-389188062fe4ee151f1f.json",
-      "kind": "file",
-      "size_bytes": 565,
-      "sha": "e2e0090ff0e2ea33b711e8b99ab6dffc9f57abd9",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -69752,16 +69792,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-51916ebd5326dfce4e38.json",
-      "kind": "file",
-      "size_bytes": 731,
-      "sha": "675ad8280fba5346d598be8633df44af7526ea80",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/entries/preload-51fdf1402866a3bf760e.json",
       "kind": "file",
       "size_bytes": 743,
@@ -69822,16 +69852,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-5d8a830114ae286dcd53.json",
-      "kind": "file",
-      "size_bytes": 703,
-      "sha": "6fb218952f968cd3d9f89053940430f02c307443",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/entries/preload-5e4f41b8a88a802ad237.json",
       "kind": "file",
       "size_bytes": 715,
@@ -69856,6 +69876,16 @@
       "kind": "file",
       "size_bytes": 713,
       "sha": "666a3d403b2a383b99fe124b2a89793d42ace749",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-preload/entries/preload-5fc646a8771838fca273.json",
+      "kind": "file",
+      "size_bytes": 756,
+      "sha": "3d95da6e4a7e601fada70c6e53834449e725b78c",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -70022,10 +70052,30 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/discovery-preload/entries/preload-8387a92a9bbdb3d4ef33.json",
+      "kind": "file",
+      "size_bytes": 738,
+      "sha": "6453fc7be99c9a3026099975da1e5ab18e6af9de",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/discovery-preload/entries/preload-86102c2a2dc8bd5da960.json",
       "kind": "file",
       "size_bytes": 737,
       "sha": "27b2d9565106114e5a2ee2235fe710050dae15f9",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-preload/entries/preload-8657b5dc6c05fe52589d.json",
+      "kind": "file",
+      "size_bytes": 739,
+      "sha": "deab546d3f1a80050152a652f464f1c57cf7fcfb",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -70212,16 +70262,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-a64cd9b9750549c9709a.json",
-      "kind": "file",
-      "size_bytes": 701,
-      "sha": "3d5cb2a449f30639c8f299a1ba820e09253d5ff3",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/entries/preload-aa436b0e1f63f3ea03cd.json",
       "kind": "file",
       "size_bytes": 741,
@@ -70266,16 +70306,6 @@
       "kind": "file",
       "size_bytes": 715,
       "sha": "88707c583c3c1d62f47c4deeb4a96355a661bf06",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-b2a09ca2dbfed97a6e6b.json",
-      "kind": "file",
-      "size_bytes": 565,
-      "sha": "d3299ca6242446bf08efbddcc16343c09fb23b9d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -70512,16 +70542,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-d3c8ad0dee6d08dc53d7.json",
-      "kind": "file",
-      "size_bytes": 700,
-      "sha": "001c9d09c72ee653e8120f23c335ec43447506a4",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/entries/preload-d63777f6c286905bd173.json",
       "kind": "file",
       "size_bytes": 589,
@@ -70752,16 +70772,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/entries/preload-f8053c479a493debc96d.json",
-      "kind": "file",
-      "size_bytes": 699,
-      "sha": "09fc922df536393efa3e35138b82798a7fcf367f",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/entries/preload-f887fe6c8b053855f38d.json",
       "kind": "file",
       "size_bytes": 590,
@@ -70796,6 +70806,16 @@
       "kind": "file",
       "size_bytes": 741,
       "sha": "7934cfa87022fddf20c2f6b61ded2ed4b2f2523a",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/discovery-preload/entries/preload-faa8810d6c215621ef82.json",
+      "kind": "file",
+      "size_bytes": 590,
+      "sha": "5d7957d65c0cd27374d58992df3b77bc7762a91b",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -70852,26 +70872,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/ingested/preload-08bc73efbc2b865af33a.json",
-      "kind": "file",
-      "size_bytes": 287,
-      "sha": "2f57f50709efb7c5abb6332ec490a908777dabdf",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/ingested/preload-08f3e27e3e8e1451c6c0.json",
-      "kind": "file",
-      "size_bytes": 287,
-      "sha": "788e7396cb85cc56aa35c81931cf1231e27ed548",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/ingested/preload-0937a1afddfa6907a889.json",
       "kind": "file",
       "size_bytes": 284,
@@ -70906,26 +70906,6 @@
       "kind": "file",
       "size_bytes": 286,
       "sha": "0c00a7841c4b60f51ec6606e8ffd54ebdc42e983",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/ingested/preload-2100b6b78dc6a2313c9a.json",
-      "kind": "file",
-      "size_bytes": 287,
-      "sha": "07ebfaa18877fd473e0af8a550d056646b07f8c2",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/ingested/preload-279710d2459727616545.json",
-      "kind": "file",
-      "size_bytes": 289,
-      "sha": "0883d9aeef6edb9c7045d256be444c048c14797d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -70972,40 +70952,10 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/discovery-preload/ingested/preload-a64cd9b9750549c9709a.json",
-      "kind": "file",
-      "size_bytes": 287,
-      "sha": "596c7c62b8ab92c318a3c73ab320b282788bd8ca",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/ingested/preload-d3c8ad0dee6d08dc53d7.json",
-      "kind": "file",
-      "size_bytes": 287,
-      "sha": "bbd287d2ffc91400f9025bea802fd4dec23028c8",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/discovery-preload/ingested/preload-eccacdc18ae88ef456ab.json",
       "kind": "file",
       "size_bytes": 288,
       "sha": "1fb28518bb38252a4fb735dd5e705d51828e9487",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/discovery-preload/ingested/preload-f8053c479a493debc96d.json",
-      "kind": "file",
-      "size_bytes": 289,
-      "sha": "81498bed4f611edb4dfde3af272fdfb543a86c08",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -73066,8 +73016,8 @@
     {
       "path": ".survey/work-queue/hot-dispatch.json",
       "kind": "file",
-      "size_bytes": 257521,
-      "sha": "bf28ba854ffb39435a204e968298eedbaf2791a6",
+      "size_bytes": 341127,
+      "sha": "d139af6db4549e13efcc1d5a616a50f983f82cfd",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -78206,8 +78156,8 @@
     {
       "path": ".survey/work-queue/jobs/job-research-1a48a3083b0b1499.json",
       "kind": "file",
-      "size_bytes": 1788,
-      "sha": "7e927637c65a5c59104a0b92fcbd4726648d0cdf",
+      "size_bytes": 2363,
+      "sha": "27221ab4daae44c5640596015f157d4a632a8982",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -80356,8 +80306,8 @@
     {
       "path": ".survey/work-queue/jobs/job-research-5cbec5c2c470e865.json",
       "kind": "file",
-      "size_bytes": 2255,
-      "sha": "256de4f71e22cd14c3c70511f6fafe8dcbb69dbb",
+      "size_bytes": 2420,
+      "sha": "5a02c68d3db91a2b1fbfddd7f121ee5ed489e3d6",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -82946,8 +82896,8 @@
     {
       "path": ".survey/work-queue/jobs/job-research-b22af651ef4f551f.json",
       "kind": "file",
-      "size_bytes": 1732,
-      "sha": "8cb116088526c912989273d2388fb6be619a9b36",
+      "size_bytes": 1897,
+      "sha": "4f1c742a4533bd4ed78bf5a44a3576a72d2b4a43",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -84516,8 +84466,8 @@
     {
       "path": ".survey/work-queue/jobs/job-research-e6152c2a3998faa6.json",
       "kind": "file",
-      "size_bytes": 1606,
-      "sha": "fb7efd834bd44d7467f089d92fa14d35a574d1bf",
+      "size_bytes": 2069,
+      "sha": "b8b374707bfeb4ba4c10cd4865c3525db8e5a845",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -85756,8 +85706,8 @@
     {
       "path": ".survey/work-queue/next-jobs.json",
       "kind": "file",
-      "size_bytes": 13242,
-      "sha": "f19aaf0cece5e11a0f6e22b1ea72707e9f10e1fc",
+      "size_bytes": 11973,
+      "sha": "71a5adc468edae8fa1d408bec92e42e84096b467",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86436,8 +86386,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-d/discovery-preload.json",
       "kind": "file",
-      "size_bytes": 611,
-      "sha": "7689ceb212b5210dc39554c7ea575b6616d17e75",
+      "size_bytes": 637,
+      "sha": "3af2699c26b13abc9982de44513f37c2e8d681c1",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86577,7 +86527,7 @@
       "path": ".survey/work-queue/records/chat-record-f/discovery-preload.json",
       "kind": "file",
       "size_bytes": 481,
-      "sha": "2e817552a04f8e81d4a3c3409cc86f7ddab38792",
+      "sha": "1bd529bcf71dfde03d1c33be22f38e73009946e0",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86586,8 +86536,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
       "kind": "file",
-      "size_bytes": 173,
-      "sha": "7a430b5b9712353ad48fc348f7d5b54f297800cd",
+      "size_bytes": 348,
+      "sha": "6ba66764c05f2da2add7082167f62f551f474008",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86596,8 +86546,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-f/metadata.json",
       "kind": "file",
-      "size_bytes": 171,
-      "sha": "300d92b396f86af391d233077efc28ef60a0bbcd",
+      "size_bytes": 346,
+      "sha": "d9a122fe276d303abbf0639a0274d22ab5f0c550",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86606,8 +86556,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-f/positioning.json",
       "kind": "file",
-      "size_bytes": 174,
-      "sha": "d12829eb6ce286de6c62b3184fdd29a6afc09e91",
+      "size_bytes": 349,
+      "sha": "2d4453b266f8b71156fe16d77f864806f2507956",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86616,8 +86566,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
       "kind": "file",
-      "size_bytes": 177,
-      "sha": "4383fd97f80a33b4b9d43cac59c6099b1a0c48bd",
+      "size_bytes": 352,
+      "sha": "1158ad865069230c93b9b384895afba3d69bc056",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86636,8 +86586,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-f/results.json",
       "kind": "file",
-      "size_bytes": 170,
-      "sha": "d2ca3731976db5330d8c42067168c1ea9785ba2c",
+      "size_bytes": 345,
+      "sha": "0f54df051160a3110dfe33ee0c1852b67bc9e597",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86836,8 +86786,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-i/research-preload.json",
       "kind": "file",
-      "size_bytes": 2247,
-      "sha": "3617e7e10edd58f79ef040f6e38d5e7fd5dea680",
+      "size_bytes": 1829,
+      "sha": "0da532a574fb0d51c133fb02981bd527789c05da",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86866,8 +86816,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-j/evaluation.json",
       "kind": "file",
-      "size_bytes": 348,
-      "sha": "95b4056f97ef11761475b4c06393d67e2b45aa1d",
+      "size_bytes": 173,
+      "sha": "7a430b5b9712353ad48fc348f7d5b54f297800cd",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86876,8 +86826,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-j/metadata.json",
       "kind": "file",
-      "size_bytes": 346,
-      "sha": "20cec28c0fc10726daf10ac2d350f9e6572b4994",
+      "size_bytes": 171,
+      "sha": "300d92b396f86af391d233077efc28ef60a0bbcd",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86886,8 +86836,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-j/positioning.json",
       "kind": "file",
-      "size_bytes": 349,
-      "sha": "405ee8d6e4a4ab79b00baf106734b007ed492875",
+      "size_bytes": 174,
+      "sha": "d12829eb6ce286de6c62b3184fdd29a6afc09e91",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86896,8 +86846,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-j/problem_method.json",
       "kind": "file",
-      "size_bytes": 352,
-      "sha": "23a3b01afeeee3e9d2cd921e4487c077bfbe4ac6",
+      "size_bytes": 177,
+      "sha": "4383fd97f80a33b4b9d43cac59c6099b1a0c48bd",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86906,8 +86856,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-j/research-preload.json",
       "kind": "file",
-      "size_bytes": 2247,
-      "sha": "611a1bf8d22c9e79050e358940e8013dd117c6cb",
+      "size_bytes": 1829,
+      "sha": "c97814bbb353463a22891bc4ce2d080a328c7179",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86916,8 +86866,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-j/results.json",
       "kind": "file",
-      "size_bytes": 345,
-      "sha": "d9a46faad0f707f7b5df7bddbeb170fc600c6243",
+      "size_bytes": 170,
+      "sha": "d2ca3731976db5330d8c42067168c1ea9785ba2c",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86936,8 +86886,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-k/evaluation.json",
       "kind": "file",
-      "size_bytes": 348,
-      "sha": "e5c447fe7ffcb9427476f2fcb366ad4006d2ea91",
+      "size_bytes": 2974,
+      "sha": "ab475554faa1998d8a68df5cce049ac78a614ab8",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86946,8 +86896,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-k/metadata.json",
       "kind": "file",
-      "size_bytes": 346,
-      "sha": "c50def8cfb7d2832f215b2284048b08571269d04",
+      "size_bytes": 5580,
+      "sha": "f2f1eaad5f607ed98691168a188bdde7725984c0",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86956,8 +86906,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-k/positioning.json",
       "kind": "file",
-      "size_bytes": 349,
-      "sha": "74d2329de3b377e13229f1f944eaab6347bd66ea",
+      "size_bytes": 2785,
+      "sha": "0064e5d4d177a3ceb89ec7a9aedb664a7b97027c",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86966,8 +86916,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-k/problem_method.json",
       "kind": "file",
-      "size_bytes": 352,
-      "sha": "17b5ef60721e4af60545e4eaf37dc250f63239ff",
+      "size_bytes": 8066,
+      "sha": "79c761be26f9d26a13258ba5474af846473feb6d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86976,8 +86926,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-k/research-preload.json",
       "kind": "file",
-      "size_bytes": 2247,
-      "sha": "39f526a8e49cc28fadf9070ff3bbcad11fcdd2aa",
+      "size_bytes": 1829,
+      "sha": "78dab17217508923b103ec8336904e0ed6f932d4",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -86986,8 +86936,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-k/results.json",
       "kind": "file",
-      "size_bytes": 345,
-      "sha": "d676a30411d0bc6be218644696ebac0ea4da9958",
+      "size_bytes": 4527,
+      "sha": "72cffeb68a44624de023272fd4d7a094b5ab9046",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87066,8 +87016,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-m/discovery-preload.json",
       "kind": "file",
-      "size_bytes": 605,
-      "sha": "34495a7667b8b3fa8892fcefe98e6587b877cb02",
+      "size_bytes": 647,
+      "sha": "cf3e6aa3d520c7e8b6b8eeacc029b5b7a91e1561",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87076,8 +87026,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-m/evaluation.json",
       "kind": "file",
-      "size_bytes": 1877,
-      "sha": "3b0f3d7151b81edbd5296511ce4178f5a3bfaede",
+      "size_bytes": 348,
+      "sha": "bc1b11a28a356a3fa6e966c1fbeab244fdf8c3e2",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87086,8 +87036,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-m/metadata.json",
       "kind": "file",
-      "size_bytes": 3717,
-      "sha": "d8a51adff0c16f68cd3db7c9f4d3f09c2b38bec5",
+      "size_bytes": 346,
+      "sha": "a1a2b725b1d1573703111f78db453bf08949b84d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87096,8 +87046,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-m/positioning.json",
       "kind": "file",
-      "size_bytes": 2861,
-      "sha": "7abd7aaaabc34176d2d11830d357b5c19b3a8c45",
+      "size_bytes": 349,
+      "sha": "b461773e6e8c9d89457c27e32496f7750dd899f2",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87106,8 +87056,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-m/problem_method.json",
       "kind": "file",
-      "size_bytes": 7552,
-      "sha": "f3c4be4fc85fe9b673036d0f7b15bb399e8a9ffb",
+      "size_bytes": 352,
+      "sha": "fb5d83fa38da5f42aa5deb596400f38946d9aee5",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87126,8 +87076,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-m/results.json",
       "kind": "file",
-      "size_bytes": 3208,
-      "sha": "0711cc5d70401959824b0c3c8d56d6a1e757316f",
+      "size_bytes": 345,
+      "sha": "94b45c915cc7e7e1c18466c6cbb1dc20043b5abd",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87206,8 +87156,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-o/discovery-preload.json",
       "kind": "file",
-      "size_bytes": 583,
-      "sha": "d63d61973bc22d6abbe04dac863997e02a775aee",
+      "size_bytes": 631,
+      "sha": "cc7a0dab8b3c24b9f2e3335fb25b2c1516b4c03b",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87886,8 +87836,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-x/research-preload.json",
       "kind": "file",
-      "size_bytes": 1829,
-      "sha": "b9cdf1eb50b6a73f7fd3095100df65737c71eed2",
+      "size_bytes": 2245,
+      "sha": "71cbdadb9ca55ffcf3f42d295bad256dda5fc25f",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87956,8 +87906,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-y/research-preload.json",
       "kind": "file",
-      "size_bytes": 1829,
-      "sha": "44e0690bcd7d98839e4ab791c499e9fdf7654c7e",
+      "size_bytes": 2245,
+      "sha": "0243a988ac3010314f5550b309d4dda21e85bcd5",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -87976,8 +87926,8 @@
     {
       "path": ".survey/work-queue/records/chat-record-z/discovery-preload.json",
       "kind": "file",
-      "size_bytes": 638,
-      "sha": "94db9b1caee966a358681acc551eab36ce3e4cc8",
+      "size_bytes": 630,
+      "sha": "e618203291520fe12a330b6966446d5d9465f23d",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -90934,16 +90884,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/research-preflight/requests/preflight-worker-924226-dgap-a3.json",
-      "kind": "file",
-      "size_bytes": 1038,
-      "sha": "46adad9f46be0d1dc3423e213de1347ed696d7aa",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/research-preflight/requests/preflight-worker-924920-moba-20260924T0050Z-r1.json",
       "kind": "file",
       "size_bytes": 934,
@@ -90968,6 +90908,16 @@
       "kind": "file",
       "size_bytes": 965,
       "sha": "725b8efd6bc0e0d6b452c92f8c4c3905c383b77d",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/research-preflight/requests/preflight-worker-925000-moebeyond-01.json",
+      "kind": "file",
+      "size_bytes": 999,
+      "sha": "6455b91d9ef4623d9b9ce9d6ab4bec4f64ca2061",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -93734,16 +93684,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/research-preflight/results/preflight-worker-924226-dgap-a3.json",
-      "kind": "file",
-      "size_bytes": 2703,
-      "sha": "c3bf6db87b954e4ab924beb7b16be00e6cb04ffe",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/research-preflight/results/preflight-worker-924920-moba-20260924T0050Z-r1.json",
       "kind": "file",
       "size_bytes": 2085,
@@ -93758,6 +93698,26 @@
       "kind": "file",
       "size_bytes": 3031,
       "sha": "ebeb235b3c254e29583f6304a5ae5a1d4fed0027",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/research-preflight/results/preflight-worker-925000-cxl-kv-02.json",
+      "kind": "file",
+      "size_bytes": 2576,
+      "sha": "12f5817d7fdc8548c620df27662b781ef950d22a",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/research-preflight/results/preflight-worker-925000-moebeyond-01.json",
+      "kind": "file",
+      "size_bytes": 2642,
+      "sha": "fb2eb6b5b6eb0ab884e4a7158c24441856145138",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -97364,6 +97324,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/results/research/attempt-preload-45d47f580075d5ff79492a68.json",
+      "kind": "file",
+      "size_bytes": 572,
+      "sha": "9dfac1eae7b94517076f631c2db0f5d0011f79c0",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/results/research/attempt-preload-47934e491851664368f66108.json",
       "kind": "file",
       "size_bytes": 432,
@@ -97378,6 +97348,16 @@
       "kind": "file",
       "size_bytes": 749,
       "sha": "99fc0dd9d1f7b312eaff5ca4046a96e01ff2fa4e",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/results/research/attempt-preload-4cb587870cc33021ea9f2c50.json",
+      "kind": "file",
+      "size_bytes": 781,
+      "sha": "752bf00fe066af8dc32fd47b766f8f84620605d2",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -97418,6 +97398,16 @@
       "kind": "file",
       "size_bytes": 432,
       "sha": "f58a0498a68af499b562afe003f93639e9af2059",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/results/research/attempt-preload-5ae76716eb01958d78f1d488.json",
+      "kind": "file",
+      "size_bytes": 800,
+      "sha": "e3d0b2b891fb5a29c5a9c8cc3b702d532a4f10e9",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -97594,6 +97584,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/results/research/attempt-preload-f234ef828a71ef4bb3d542c4.json",
+      "kind": "file",
+      "size_bytes": 572,
+      "sha": "c5d8a85b4d4579c9e3497d96a975c459ebc6af22",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/results/research/attempt-preload-f2bb13bd5d0d331fc95b5bd6.json",
       "kind": "file",
       "size_bytes": 725,
@@ -97656,8 +97656,8 @@
     {
       "path": ".survey/work-queue/run-ledger.json",
       "kind": "file",
-      "size_bytes": 1499392,
-      "sha": "c7b360fd3cd5540e6fe99f5999af254d13f9206d",
+      "size_bytes": 1504336,
+      "sha": "2d87f186b9b606ba01b4144ce1c4d9faeb0937ce",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -97667,7 +97667,7 @@
       "path": ".survey/work-queue/run-state/cache/scheduled-chat-00.json",
       "kind": "file",
       "size_bytes": 32843,
-      "sha": "9af2a1cd93276aee9b0c83c0c014be75fe9d92e9",
+      "sha": "c290805dfe48858ce5f9142f8579c2016dd20550",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -97906,8 +97906,8 @@
     {
       "path": ".survey/work-queue/run-state/cache/worker-925000.json",
       "kind": "file",
-      "size_bytes": 3308,
-      "sha": "1b0b74d5a3a4599c524baf25372a7562461d47e9",
+      "size_bytes": 9365,
+      "sha": "76ffaa6c9f081619b9e1571ffa31b0d1193162d9",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -97916,8 +97916,8 @@
     {
       "path": ".survey/work-queue/run-state/fact-clock.json",
       "kind": "file",
-      "size_bytes": 888,
-      "sha": "67497efd47b0bd6193d69eff52ce694f34ee406d",
+      "size_bytes": 898,
+      "sha": "58a926c18ef861cdfec4216590afb9ecefca3085",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -97926,8 +97926,8 @@
     {
       "path": ".survey/work-queue/run-state/latest/scheduled-chat-00.json",
       "kind": "file",
-      "size_bytes": 465,
-      "sha": "6e6af76f61b914a829887911f09d333ff2db63ca",
+      "size_bytes": 483,
+      "sha": "b3b81d9212c1e29436c9c0ffa6929d2c71fb8017",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -98166,8 +98166,8 @@
     {
       "path": ".survey/work-queue/run-state/latest/worker-925000.json",
       "kind": "file",
-      "size_bytes": 429,
-      "sha": "da0f7227bf4bd1966f948de79971b2c0f2f372ea",
+      "size_bytes": 430,
+      "sha": "e1cf1d18705957ac770f174aa534ab9601845f66",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -98354,10 +98354,10 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/run-state/requests/auto-refresh-discovery-runstate-2070e60a64042f8997326ed5.json",
+      "path": ".survey/work-queue/run-state/requests/auto-refresh-discovery-runstate-29e6c33a5516943c24d97766.json",
       "kind": "file",
-      "size_bytes": 654,
-      "sha": "eed44a35750b1fd3892ba2a8685f07a610a26c52",
+      "size_bytes": 641,
+      "sha": "b3604e8fee64caafd137f7b4e2a530873f334fcd",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -98408,16 +98408,6 @@
       "kind": "file",
       "size_bytes": 646,
       "sha": "958820ccbbf1ad765fcf6da946e33c97c364f011",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/run-state/requests/auto-refresh-discovery-runstate-5f2b2c671124617b1a84186b.json",
-      "kind": "file",
-      "size_bytes": 642,
-      "sha": "c7f21d26c5dc9e4f0e899ba221fe2e8f12c979d4",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -98488,6 +98478,16 @@
       "kind": "file",
       "size_bytes": 643,
       "sha": "d9457cc53ca57d1e77de9e266ee48af0cb700fb8",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/run-state/requests/auto-refresh-discovery-runstate-bc92485e1e005d51f073e76d.json",
+      "kind": "file",
+      "size_bytes": 641,
+      "sha": "6b4ea403a9b3b610d30a670f2ce5ae467156936a",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -98674,6 +98674,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/run-state/requests/runstate-worker-925000-20260924T154500Z-lazyprobe-02.json",
+      "kind": "file",
+      "size_bytes": 479,
+      "sha": "1df6b15a152133b2ded41dea9cc6946fba0e1f28",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/run-state/requests/worker-731001-20260923T142621Z-rs1.json",
       "kind": "file",
       "size_bytes": 277,
@@ -98844,26 +98854,6 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/run-state/results/auto-bae855000c07f55e-g00000005.json",
-      "kind": "file",
-      "size_bytes": 16395,
-      "sha": "a0e83f4517dc906a74b83e304bab5c9ff9f8f330",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/run-state/results/auto-bae855000c07f55e-g00000006.json",
-      "kind": "file",
-      "size_bytes": 16464,
-      "sha": "0f4dc194a3ef9c6c5d244a9ff44e82b32becf8f6",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
       "path": ".survey/work-queue/run-state/results/auto-bae855000c07f55e-g00000009.json",
       "kind": "file",
       "size_bytes": 16567,
@@ -98904,6 +98894,66 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/run-state/results/auto-e5bc4e51965c011d-g00000003.json",
+      "kind": "file",
+      "size_bytes": 18787,
+      "sha": "08aaa573a0f168e340cdbcff36e1a595344ce1b3",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/run-state/results/auto-e5bc4e51965c011d-g00000006.json",
+      "kind": "file",
+      "size_bytes": 19009,
+      "sha": "aba89b9455b453938e4419f340cbf7c4bb681c1b",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/run-state/results/auto-e5bc4e51965c011d-g00000008.json",
+      "kind": "file",
+      "size_bytes": 19005,
+      "sha": "ead5065c5800f3f58cb1b060b53366af37dfb10c",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/run-state/results/auto-e5bc4e51965c011d-g00000009.json",
+      "kind": "file",
+      "size_bytes": 19226,
+      "sha": "b933fa72eaa0e234a51a09735538a1d8c7d6b665",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/run-state/results/auto-e5bc4e51965c011d-g00000012.json",
+      "kind": "file",
+      "size_bytes": 19077,
+      "sha": "26a6999660ecd60f2c3d0637cf1d14c111b39ccc",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/run-state/results/auto-e5bc4e51965c011d-g00000013.json",
+      "kind": "file",
+      "size_bytes": 22156,
+      "sha": "337eb5fff8b977df5e0afe0089130f70643d4763",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/run-state/results/auto-refresh-discovery-runstate-0892f27ccb12e51743a5afad.json",
       "kind": "file",
       "size_bytes": 16561,
@@ -98934,10 +98984,10 @@
       "content_scan": "scanned"
     },
     {
-      "path": ".survey/work-queue/run-state/results/auto-refresh-discovery-runstate-2070e60a64042f8997326ed5.json",
+      "path": ".survey/work-queue/run-state/results/auto-refresh-discovery-runstate-29e6c33a5516943c24d97766.json",
       "kind": "file",
-      "size_bytes": 16670,
-      "sha": "54748d6c798c0c02bb55dcff6362bd189eb092e5",
+      "size_bytes": 22363,
+      "sha": "6b4b00a5557a583325210ba0b5dd4580a2d39fcd",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -98988,16 +99038,6 @@
       "kind": "file",
       "size_bytes": 13944,
       "sha": "f92a9a717b5dfa8c24371a02d8d923de86ae4283",
-      "classification": null,
-      "classification_reason": null,
-      "legacy_markers": [],
-      "content_scan": "scanned"
-    },
-    {
-      "path": ".survey/work-queue/run-state/results/auto-refresh-discovery-runstate-5f2b2c671124617b1a84186b.json",
-      "kind": "file",
-      "size_bytes": 16636,
-      "sha": "b19957d4a157a1752112ca43e41ef8ff952d1a7f",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -99068,6 +99108,16 @@
       "kind": "file",
       "size_bytes": 16756,
       "sha": "a761cedc00d6f0e678ee7011b1fb3d6f733ee129",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/run-state/results/auto-refresh-discovery-runstate-bc92485e1e005d51f073e76d.json",
+      "kind": "file",
+      "size_bytes": 22363,
+      "sha": "5944b618a49a3007b435820f10974bb4eb09680f",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -99254,6 +99304,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/run-state/results/runstate-worker-925000-20260924T154500Z-lazyprobe-02.json",
+      "kind": "file",
+      "size_bytes": 64144,
+      "sha": "7efd218f3921f969694a40164f1d31270e48e855",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/run-state/results/worker-731001-20260923T142621Z-rs1.json",
       "kind": "file",
       "size_bytes": 9136,
@@ -99266,8 +99326,8 @@
     {
       "path": ".survey/work-queue/state.json",
       "kind": "file",
-      "size_bytes": 1090,
-      "sha": "1fd6daf25b17b34a26a16858ffa21ee2ecbd4820",
+      "size_bytes": 1089,
+      "sha": "c226d13d48cc45dc085e8fcdc8a090e9e5b3e65e",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -99908,6 +99968,16 @@
       "kind": "file",
       "size_bytes": 2746,
       "sha": "e7e1e349daca08d0274da9ae82fcd35394a2c96a",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/submissions/20260924T160030Z-scheduled-chat-00-7f3c9a-d01.json",
+      "kind": "file",
+      "size_bytes": 2179,
+      "sha": "43435b439059b1120c372040c50ed31b1185eef2",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -102874,6 +102944,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/submissions/research/attempt-preload-45d47f580075d5ff79492a68.json",
+      "kind": "file",
+      "size_bytes": 1800,
+      "sha": "35644a782a0e6622e22d38ff6d6d87b1a4e2ad24",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/submissions/research/attempt-preload-47934e491851664368f66108.json",
       "kind": "file",
       "size_bytes": 1212,
@@ -102888,6 +102968,16 @@
       "kind": "file",
       "size_bytes": 1409,
       "sha": "dac41d3acae837ba84089ad9ca7ab5e56f0f1c1e",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/submissions/research/attempt-preload-4cb587870cc33021ea9f2c50.json",
+      "kind": "file",
+      "size_bytes": 1429,
+      "sha": "ceeff0c4b2b5f2c7cfa4e3b30fdb32950577211a",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -102928,6 +103018,16 @@
       "kind": "file",
       "size_bytes": 668,
       "sha": "347742557299649fe315ea23fe8d7bac1c0afeb2",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": ".survey/work-queue/submissions/research/attempt-preload-5ae76716eb01958d78f1d488.json",
+      "kind": "file",
+      "size_bytes": 1460,
+      "sha": "b37b2eb6eabe4cc98ca0a5d9534c3e1c55a3bcfa",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -103104,6 +103204,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": ".survey/work-queue/submissions/research/attempt-preload-f234ef828a71ef4bb3d542c4.json",
+      "kind": "file",
+      "size_bytes": 1490,
+      "sha": "fd4e74cd21a231800ef5a1af8cee1c9f2003be07",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": ".survey/work-queue/submissions/research/attempt-preload-f2bb13bd5d0d331fc95b5bd6.json",
       "kind": "file",
       "size_bytes": 1385,
@@ -103196,8 +103306,8 @@
     {
       "path": "STATUS.md",
       "kind": "file",
-      "size_bytes": 20049,
-      "sha": "64345829767e8f6d6b401f35f88018fdee67869f",
+      "size_bytes": 22046,
+      "sha": "61e2444a62075ef750edce342e40353dede0d578",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
@@ -112424,6 +112534,16 @@
       "content_scan": "scanned"
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md",
+      "kind": "file",
+      "size_bytes": 24436,
+      "sha": "85a0f09cb9c9cff18497d7961b6957874ff35daa",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md",
       "kind": "file",
       "size_bytes": 20093,
@@ -113553,6 +113673,16 @@
       "kind": "file",
       "size_bytes": 23105,
       "sha": "98a06ef9e8dca299f748293708bfd28ef2c52e63",
+      "classification": null,
+      "classification_reason": null,
+      "legacy_markers": [],
+      "content_scan": "scanned"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-4885970e907b-llm-kv-cache-storage-using-cxl-memory.md",
+      "kind": "file",
+      "size_bytes": 22954,
+      "sha": "f9745f3c305d8200e7fb738b9757bc8aafdb1631",
       "classification": null,
       "classification_reason": null,
       "legacy_markers": [],
