@@ -186,7 +186,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     discovery_submission_result_pending = bool(getattr(args, "discovery_submission_result_pending", False))
     discovery_evaluation_pending = bool(getattr(args, "discovery_evaluation_pending", False))
     discovery_recovery_required = bool(getattr(args, "discovery_recovery_required", False))
-    discovery_round_in_progress = bool(
+    discovery_pipeline_work_available = bool(\n        getattr(args, "discovery_pipeline_work_available", False)\n    )\n    discovery_round_in_progress = bool(
         discovery_precheck_result_pending
         or discovery_submission_result_pending
         or discovery_evaluation_pending
@@ -207,21 +207,33 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         required_action = "FINALIZE"
         finalization_allowed = True
     elif work_mode == "discovery":
-        if discovery_precheck_result_pending:
-            decision = "CONTINUE"
-            required_action = "WAIT_FOR_DISCOVERY_PRECHECK_RESULT"
-            finalization_allowed = False
-        elif discovery_submission_result_pending:
-            decision = "CONTINUE"
-            required_action = "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"
-            finalization_allowed = False
-        elif discovery_recovery_required:
+        # Productive Discovery work outranks asynchronous waits. A successful
+        # precheck waiting for evaluation must never be hidden by a different
+        # pending precheck, and a bounded PRECHECKED lookahead window may be
+        # evaluated while an earlier round is canonicalizing.
+        if discovery_recovery_required:
             decision = "CONTINUE"
             required_action = "RECOVER_DISCOVERY_SUBMISSION"
             finalization_allowed = False
         elif discovery_evaluation_pending:
             decision = "CONTINUE"
             required_action = "CONTINUE_DISCOVERY_ROUND"
+            finalization_allowed = False
+        elif (
+            discovery_pipeline_work_available
+            and not handoff_window_active
+            and (discovery_precheck_result_pending or discovery_submission_result_pending)
+        ):
+            decision = "CONTINUE"
+            required_action = "CONTINUE_DISCOVERY_PIPELINE"
+            finalization_allowed = False
+        elif discovery_precheck_result_pending:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_DISCOVERY_PRECHECK_RESULT"
+            finalization_allowed = False
+        elif discovery_submission_result_pending:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"
             finalization_allowed = False
         elif handoff_window_active:
             reasons.append(handoff_reason or "handoff_window_no_new_discovery_round")
@@ -374,6 +386,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "periodic_discovery_submission_recovery_will_reprocess_orphaned_submissions; "
             "repeat_until_result_or_final_180_second_handoff"
         )
+    elif required_action == "CONTINUE_DISCOVERY_PIPELINE":
+        discovery_wait_action = (
+            "keep_existing_pending_discovery_identities; claim_only_the_published_discovery_pipeline_preload; "
+            "evaluate_its_cached_candidates_immediately; do_not_submit_until_its_run_specific_formal_precheck_is_ready; "
+            "recheck_older_results_between_bounded_evaluation_steps"
+        )
 
     progress_notice = ""
     if required_action == "MONITOR_CLAIM_FAST_LANE":
@@ -402,6 +420,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "開始済みDiscovery submissionのresultを待っています。残り600秒の開始禁止窓に入っても"
             "このroundは終了させず、短い待機ミクロタスクを1件処理するたびに同じsubmissionを再確認します。"
         )
+    elif required_action == "CONTINUE_DISCOVERY_PIPELINE":
+        progress_notice = (
+            "前のDiscovery結果を待つだけの状態にはせず、準備済みの次引用windowを先行確保して"
+            "cached候補を軽量評価します。正式precheck/receiptが返るまでsubmissionは行わず、"
+            "既存roundの結果確認と先行評価を重ねます。"
+        )
 
     if required_action == "CHECK_CLAIM_STATE":
         next_action_message = "最新のclaim request/result対応を確認し、pendingなら同一request_idの監視サイクルへ進みます。"
@@ -412,6 +436,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     elif required_action == "MONITOR_SUBMISSION_RESULTS":
         next_action_message = progress_notice
     elif required_action in {"WAIT_FOR_DISCOVERY_PRECHECK_RESULT", "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"}:
+        next_action_message = progress_notice
+    elif required_action == "CONTINUE_DISCOVERY_PIPELINE":
         next_action_message = progress_notice
     elif required_action == "CONTINUE_DISCOVERY_ROUND":
         next_action_message = "成功済みprecheckの評価・正規Discovery submissionまで、開始済みroundを完了させます。"
@@ -506,7 +532,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "discovery_submission_result_pending": discovery_submission_result_pending,
         "discovery_evaluation_pending": discovery_evaluation_pending,
         "discovery_recovery_required": discovery_recovery_required,
-        "discovery_round_in_progress": discovery_round_in_progress,
+        "discovery_pipeline_work_available": discovery_pipeline_work_available,\n        "discovery_round_in_progress": discovery_round_in_progress,
         "discovery_wait_action": discovery_wait_action,
         "discovery_wait_seconds": discovery_wait_seconds,
         "next_action_message": next_action_message,
@@ -593,7 +619,7 @@ def main() -> int:
     ap.add_argument("--discovery-submission-result-pending", type=yn, default=False)
     ap.add_argument("--discovery-evaluation-pending", type=yn, default=False)
     ap.add_argument("--discovery-recovery-required", type=yn, default=False)
-    ap.add_argument("--write-failed", type=yn, default=False)
+    ap.add_argument("--discovery-pipeline-work-available", type=yn, default=False)\n    ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
     ap.add_argument("--seconds-to-run-deadline", type=int, default=None)
     ap.add_argument("--seconds-to-next-scheduled-task", type=int, default=None)
