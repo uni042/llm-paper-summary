@@ -31,6 +31,6 @@
         "description": "補正器の教師は検出器と同じpaired FP16/quantized-KV tracesから作る。選択されたtop-K_b候補についてFP16と補正後logitをtemperature付きsoftmaxで局所分布へ変換し、FP16から補正後へのKL divergenceを最小化する。さらにFP16でiがjより上位だった候補pairに対し、補正後もその順序を保つようpairwise rank-consistency lossを加え、各pairの重みにはFP16確率差を使う。大きな更新を抑えるL2正則化も加える。\n\nこの三項目的により、確率質量の形、上位候補の相対順位、補正量の安定性を同時に扱う。pairwise項はオフライン学習時だけに使い、オンラインでは学習済み補正器が局所候補への更新を直接出すため追加のpair列挙は不要である。著者は常時動く単一end-to-end correctorではstable stepにも重い処理が必要になるとし、軽い検出と条件付き補正を分離してデコード時のmemory trafficとcompute overheadを抑えている。補正器は危険かつ回復可能なstepだけに適用されるため、学習目標と実行時gateが同じ局所回復仮説に沿っている。"
       }
     ],
-    "system_design": "オフライン段階でPG-19の長文書から8K/16K/32K/64K等のprefixを採り、同一モデルをFP16 KVと対象低ビットKVで実行してpaired tracesを収集する。ここから検出器、補正器、閾値τ、ビット幅別K_bを学習・校正する。オンライン段階は既存低ビットKVデコーダの後段にDGAPを追加し、検出→必要時のみ局所補正→token selectionの順で処理する。注意カーネルや永続KVフォーマットは変更しないため、低ビットKVのメモリ削減をそのまま保持する。"
+    "system_design": "オフライン段階でPG-19の長文書から複数の文脈長を持つprefixを採り、同一モデルをFP16 KVと対象低ビットKVで実行してpaired tracesを収集する。そこから各stepのFP16/量子化局所分布、候補被覆率、分布特徴を算出し、検出器と補正器を学習する。同時にrisk threshold τとbitwidth別recovery window K_bをvalidation traceで校正し、推論時に固定して使う。学習用PG-19と評価用LongBench、RULER、MMLU、WikiText-2は分離されるため、評価ベンチマークの答えを直接教師へ混入させない構成である。\n\nオンライン段階では既存の低ビットKV attentionが通常どおり量子化KVからlogitsを生成し、その直後にDGAPを置く。検出器が毎stepの量子化logitsからrisk scoreを出し、閾値以下なら何も変更せずtoken selectionへ流す。閾値超過時だけtop-K_b候補を補正器へ渡し、疎なlogit更新を全語彙logitへmergeしてから次tokenを選ぶ。したがってbase model weights、attention kernel、persistent KV layoutを再構成せず、K1V1の保存容量を維持したまま分布修復だけを追加できる。現在の実装はこの後段補正をPyTorch上で評価しており、Triton/CUDA融合やonline calibrationは将来拡張として残されている。"
   }
 }
