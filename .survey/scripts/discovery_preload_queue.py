@@ -563,6 +563,15 @@ def _next_cursor_for_entry(root: Path, entry: dict[str, Any]) -> tuple[bool, str
         cursor = entry.get("initial_cursor")
         return True, cursor if isinstance(cursor, str) else None
     if result.get("provider_exhausted") is True:
+        provider = str(entry.get("provider") or "").strip().casefold()
+        if provider in {"repository_references", "repository_reference_pool"}:
+            # The repository-wide reference pool is a local, evolving source. A
+            # provider-exhausted cursor only means this snapshot reached its end;
+            # newly published papers and relevance-ledger changes can expose new
+            # unseen records immediately. Restart at cursor 0 with a fresh immutable
+            # preload identity instead of leaving the canonical backward lane empty
+            # until the next six-hour refresh bucket.
+            return True, None
         return False, None
     cursor = result.get("next_cursor")
     if cursor is None:
