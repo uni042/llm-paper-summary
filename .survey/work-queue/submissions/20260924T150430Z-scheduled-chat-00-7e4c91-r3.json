@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.27040",
+      "arxiv_id": "2609.27040",
+      "title": "EMA: Elastic and Performance Transparent Memory Across GPUs",
+      "source_url": "https://arxiv.org/abs/2609.27040",
+      "priority": 88,
+      "priority_breakdown": {"base": 50, "lineage": 20, "recency": 18, "venue": 0, "total": 88},
+      "reason": "LLM推論の動的GPUメモリ需要を対象に、GPU間で容量を貸借・回収するelastic memory poolとremote-access prefetchを設計。最大52%の個別throughput改善と2倍容量構成の96% throughputを報告し、階層メモリ重点系統に強く合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.27085",
+      "arxiv_id": "2609.27085",
+      "title": "Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.27085",
+      "priority": 88,
+      "priority_breakdown": {"base": 50, "lineage": 20, "recency": 18, "venue": 0, "total": 88},
+      "reason": "prefill/decode分離servingの静的partitionを短期revocable leaseで弾力化し、agentic workloadのphase imbalanceへ対応。static P/D比で幾何平均16.2–17.4%、高負荷時最大43.4% token throughput改善を報告する最新serving systems候補。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-f6457f0fe296dced4a887067",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-f6457f0fe296dced4a887067.json",
+    "receipt": "sha256:e1b251fa1d3cb24fc655edd51d6f8157d53302e22a3fb514a5d9e3b50df62a0e"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260924T235956JST-7e4c91",
+    "round": "frontier-f6457f0fe296dced4a887067",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "query_summary": "FlexGen前方引用20件を正規schema v3で評価し、GPU間elastic memoryとprefill/decode elasticityの2件を最新の強い推論systems候補として採用。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": ["arXiv:2609.27040", "arXiv:2609.27085"],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "seed_canonical_id": "arXiv:2303.06865",
+    "search_windows": [{"topic":"FlexGen","source":"semantic_scholar","date_range":"forward-citations","category":"inference-systems","citation_direction":"forward","query_family":"citation-first","raw_result_count":20,"unseen_result_count":20,"duplicate_filtered_count":0,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":2,"seed_canonical_id":"arXiv:2303.06865"}]
+  }
+}
