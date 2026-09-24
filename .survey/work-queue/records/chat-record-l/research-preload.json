@@ -6,18 +6,6 @@
   "derived_from": "canonical active claim state",
   "items": [
     {
-      "job_id": "job-research-ab538ce8827cfd86",
-      "claim_id": "claim-preload-cefeb3b38988ad1b80d775ad",
-      "attempt_id": "attempt-preload-cefeb3b38988ad1b80d775ad",
-      "kind": "research",
-      "pool_order": 235,
-      "preloaded_at": "2026-09-24T06:33:22+00:00",
-      "worker_id": "scheduled-chat-00",
-      "worker_kind": "scheduled_chat",
-      "preload_pool": false,
-      "pipeline_order": 5
-    },
-    {
       "job_id": "job-research-bfeff3910941fa95",
       "claim_id": "claim-preload-644ad2903221a879bcc71c1a",
       "attempt_id": "attempt-preload-644ad2903221a879bcc71c1a",
@@ -48,6 +36,18 @@
       "kind": "research",
       "pool_order": 331,
       "preloaded_at": "2026-09-24T18:48:37+00:00",
+      "worker_id": "shared-preload-pool",
+      "worker_kind": "work",
+      "preload_pool": true,
+      "pipeline_order": null
+    },
+    {
+      "job_id": "job-research-0729262d447a8308",
+      "claim_id": "claim-preload-335832380754f42d39cb1a5d",
+      "attempt_id": "attempt-preload-335832380754f42d39cb1a5d",
+      "kind": "research",
+      "pool_order": 363,
+      "preloaded_at": "2026-09-24T20:48:48+00:00",
       "worker_id": "shared-preload-pool",
       "worker_kind": "work",
       "preload_pool": true,
