@@ -10,7 +10,7 @@
   "identifiers": [],
   "title": "Communication-Efficient Verifiable Attention for LLM Inference",
   "source_url": "https://arxiv.org/abs/2606.16352",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.16352-communication-efficient-verifiable-attention-for-llm-inference.md",
   "lineage": null,
   "selection_reason": "TEE-GPU間の検証可能LLM推論でattentionをGPUへオフロードし、prefill二段pipelineとKV cache超過時のTEE/GPU分割attentionを提案。Intel TDX上でprefill 2.60–3.38倍、decode 3.86–5.42倍の高速化を報告する推論systems候補。",
   "priority_breakdown": {
