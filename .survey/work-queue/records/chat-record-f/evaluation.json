@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-preload-88865dce95348e7f779dacec",
-  "job_id": "job-research-3d37c9d48dc78998",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-88865dce95348e7f779dacec",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-88865dce95348e7f779dacec","job_id":"job-research-3d37c9d48dc78998","data":{"hardware":"8×NVIDIA A100 80GB GPUを使用し、FP16で評価する。多GPU評価は1、2、4、8 GPUへ拡張し、128同時promptでスループット効率を測る。","software":"CUDA 11.8、cuDNN 8.7、PyTorch 2.0.1、Ubuntu 20.04。vLLMのPagedAttentionを改変したTinyServe実装と、vLLM、TGI、TensorRT-LLM、StreamingLLM、SnapKV、PyramidKV等を比較する。","methodology":"TinyLLaMA-125M、GPT2-345M、OPT-350M、GPT2-774M、LLaMA-1.3Bを対象に、4K〜32K文脈でPG19、WikiText-103、LongBench、MMLU、LAMBADA、Passkey、合成診断を評価する。2048〜8192トークン予算で各条件5回実行し、平均と標準偏差を報告する。サービング評価では512〜2048同時要求をPoisson到着、平均到着間隔50ms、各要求100〜500生成トークンとして、待ち行列・セッション管理を含むP50/P99遅延、req/s、GPU利用率を測る。ページサイズ4〜64、選択率0.1〜0.5も探索し、既定値16と0.3を選ぶ。","scope":"中心評価は125M〜1.3Bの小型〜中型モデルであり、7B以上の本番級モデルで同じ速度比が維持されることを直接実証したものではない。LLaMA-1.3Bの32K入力は2048超を1024重複のsliding windowで処理するため、ネイティブ32Kモデルの挙動と同一ではない。コードは論文中で出版時公開予定とされ、論文時点で公開URLによる完全再現性が確立済みとは限らない。"},"reservation":{"claim_id":"claim-preload-88865dce95348e7f779dacec","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
