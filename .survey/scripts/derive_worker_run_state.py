@@ -481,6 +481,9 @@ def _research_preflight_overlap_states(root: Path) -> dict[str, dict[str, Any]]:
             {
                 "attempt_id": attempt_id,
                 "job_id": job_id,
+                "worker_id": str(request.get("worker_id") or "").strip(),
+                "run_key": str(request.get("run_key") or "").strip(),
+                "kind": str(request.get("kind") or "").strip(),
                 "request_id": stem,
                 "request_path": relative,
                 "requested_at": requested,
@@ -535,9 +538,7 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
 
     claims = claim_state.current_claims(root, now)
     preflight_states = _research_preflight_overlap_states(root)
-    owned: list[tuple[int, str, str]] = []
-    active: list[tuple[int, str, str]] = []
-    parked: list[tuple[int, str, str, str, str]] = []
+    owned_rows: list[dict[str, Any]] = []
     for job_id, current in claims.items():
         if not current.get("active") or current.get("worker_id") != worker_id:
             continue
@@ -558,34 +559,64 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
             else 1_000_000_000
         )
         claimed_at = str(current.get("claimed_at") or "")
-        owned.append((normalized_order, claimed_at, job_id))
-
         preflight = (
             preflight_states.get(str(attempt_id))
             if isinstance(attempt_id, str) and attempt_id
             else None
         )
-        park_state = str((preflight or {}).get("state") or "")
-        if (
-            park_state in {"pending", "passed_waiting_descriptor"}
-            and len(parked) < RESEARCH_PREFLIGHT_PIPELINE_WINDOW
-        ):
-            parked.append(
-                (
-                    normalized_order,
-                    claimed_at,
-                    job_id,
-                    str(attempt_id),
-                    park_state,
-                )
+        # Never let a stale/corrupt preflight for another job or worker freeze this
+        # claim. Attempt IDs are expected to be unique, but exact identity matching
+        # keeps the overlap optimization fail-closed.
+        if isinstance(preflight, dict) and (
+            str(preflight.get("job_id") or "") != job_id
+            or (
+                str(preflight.get("worker_id") or "")
+                and str(preflight.get("worker_id") or "") != worker_id
             )
-            continue
-        active.append((normalized_order, claimed_at, job_id))
-    owned.sort()
-    active.sort()
-    parked.sort()
-    active_job_ids = [job_id for _, _, job_id in active]
-    active_claim_count = len(owned)
+            or (
+                str(preflight.get("kind") or "")
+                and str(preflight.get("kind") or "") != kind
+            )
+        ):
+            preflight = None
+        owned_rows.append(
+            {
+                "order": normalized_order,
+                "claimed_at": claimed_at,
+                "job_id": job_id,
+                "attempt_id": str(attempt_id or ""),
+                "preflight_state": str((preflight or {}).get("state") or ""),
+                "preflight_request_id": str((preflight or {}).get("request_id") or ""),
+            }
+        )
+
+    owned_rows.sort(
+        key=lambda row: (
+            int(row["order"]),
+            str(row["claimed_at"]),
+            str(row["job_id"]),
+        )
+    )
+    frozen_states = {"pending", "passed_waiting_descriptor"}
+    parked_rows = [
+        row for row in owned_rows
+        if str(row.get("preflight_state") or "") in frozen_states
+    ]
+    repair_rows = [
+        row for row in owned_rows
+        if str(row.get("preflight_state") or "") == "repair_required"
+    ]
+    active_rows = [
+        row for row in owned_rows
+        if str(row.get("preflight_state") or "") not in frozen_states
+    ]
+    active_job_ids = [str(row["job_id"]) for row in active_rows]
+    active_claim_count = len(owned_rows)
+    preflight_inflight_count = len(parked_rows)
+    preflight_pipeline_capacity_remaining = max(
+        RESEARCH_PREFLIGHT_PIPELINE_WINDOW - preflight_inflight_count,
+        0,
+    )
     return {
         "claim_state_checked": True,
         "claim_result_pending": bool(pending_requests),
@@ -602,12 +633,29 @@ def _claim_state(root: Path, worker_id: str, started_at: dt.datetime) -> dict[st
         "claim_window_remaining": max(SCHEDULED_CHAT_CLAIM_WINDOW - active_claim_count, 0),
         "foreground_job_id": active_job_ids[0] if active_job_ids else None,
         "standby_job_ids": active_job_ids[1:],
-        "preflight_parked_job_ids": [job_id for _, _, job_id, _, _ in parked],
-        "preflight_parked_attempt_ids": [attempt_id for _, _, _, attempt_id, _ in parked],
+        "preflight_parked_job_ids": [str(row["job_id"]) for row in parked_rows],
+        "preflight_parked_attempt_ids": [str(row["attempt_id"]) for row in parked_rows],
         "preflight_parked_states": {
-            job_id: state for _, _, job_id, _, state in parked
+            str(row["job_id"]): str(row["preflight_state"])
+            for row in parked_rows
         },
+        "preflight_parked_request_ids": {
+            str(row["job_id"]): str(row["preflight_request_id"])
+            for row in parked_rows
+        },
+        "preflight_repair_job_ids": [str(row["job_id"]) for row in repair_rows],
+        "preflight_repair_attempt_ids": [str(row["attempt_id"]) for row in repair_rows],
+        "preflight_inflight_count": preflight_inflight_count,
         "preflight_pipeline_window": RESEARCH_PREFLIGHT_PIPELINE_WINDOW,
+        "preflight_pipeline_capacity_remaining": preflight_pipeline_capacity_remaining,
+        "preflight_pipeline_saturated": preflight_pipeline_capacity_remaining == 0,
+        # The window is an admission limit for starting more preflights, never a
+        # license to edit an already frozen third request. If legacy/concurrent
+        # state exceeds the bound, freeze all of them and report the overflow.
+        "preflight_pipeline_overflow_count": max(
+            preflight_inflight_count - RESEARCH_PREFLIGHT_PIPELINE_WINDOW,
+            0,
+        ),
     }
 
 
@@ -1405,6 +1453,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "The first successful snapshot for run_key freezes candidate_inventory/work_mode. "
             "Active same-worker claims from a previous invocation are resumed rather than hidden by the new start time; "
             f"Research/Audit uses a configurable claim window (default {SCHEDULED_CHAT_CLAIM_WINDOW}): the oldest active claim is foreground and later active claims are standby; "
+            f"Research exact-blob preflight is overlapped with content work using an admission window of {RESEARCH_PREFLIGHT_PIPELINE_WINDOW}; every pending/passed-without-descriptor attempt remains frozen regardless of overflow, and a failed latest preflight returns to pipeline-order foreground repair. "
             "only terminal results processed during this invocation count toward its completion quota. "
             "New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. "
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
