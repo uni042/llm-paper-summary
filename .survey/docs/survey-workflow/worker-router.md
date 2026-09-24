@@ -37,10 +37,12 @@
 
 ## 2. 共通ルーター
 
-毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じ論文処理規約・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新 `next-jobs.json` から **Research/Audit の ready 全件数**を `candidate_inventory` として取得する。`claimable` ではなく、原則 `claiming.ready_research_audit`、それが無ければ `counts.research.ready + counts.audit.ready` を使う。このrun開始時の値を固定し、次の1条件だけで今回の論文作業モードを決める。
+毎時 `:00` と毎時 `:30` の論文ワーカーは、**同じ論文処理規約・同じ手順**を使う。スケジュール時刻による役割差は設けない。run開始時に最新 `next-jobs.json` から **Research/Audit の ready 全件数**を `candidate_inventory` として取得する。`claimable` ではなく、原則 `claiming.ready_research_audit`、それが無ければ `counts.research.ready + counts.audit.ready` を使う。このrun開始時の値を固定し、まず次の基本閾値で今回の論文作業モードを決める。
 
 - **`candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD` → 読解（Research / Audit）**
 - **`candidate_inventory < RESEARCH_DISCOVERY_THRESHOLD` → 探索（Discovery）**
+
+ただし、Research在庫が閾値近傍で長時間維持されることでDiscoveryが永久に後回しになることを防ぐため、`.survey/scripts/claim_window_policy.py` の**探索鮮度オーバーライド**を基本閾値より優先する。現在は、最後に耐久完了したDiscoveryから **2時間以上**経過し、かつ `candidate_inventory <= 360`（288件の基本閾値 + 6 worker × 12件の1 window）なら、その新規runをDiscoveryへ送る。直近Discovery完了時刻を直接確認できない場合はこのオーバーライドを推測適用せず、基本閾値だけを使う。360件を超える大きなResearch backlogではResearchを優先する。
 
 **この件数閾値は今回runでどちらを優先して処理するかを選ぶルーティング規則であり、Research / Discoveryどちらかのバンク・preload・direct-take機構を無効化する能力ゲートではない。** 二重用途バンクでは両レーンの在庫を同時に維持し、件数が閾値の上下どちらにあっても仕組み側はResearchとDiscoveryの両方を利用可能な状態に保つ。選ばれなかったレーンはそのrunで通常処理しないだけで、在庫生成・preload維持・次runからの利用を止めない。
 
@@ -50,7 +52,7 @@
 
 モード決定後は、どちらのScheduled Chatから起動したかを一切条件分岐に使わない。探索なら第4節、読解なら第3節の共通手順をそのまま使う。`:00` 専用・`:30` 専用の探索手順、読解手順、overflow modeは作らない。
 
-候補数は最新の耐久状態から毎run開始時に取得し、旧runや旧STATUSの推定値を再利用しない。候補数が現在の境界ちょうど288件なら読解を選ぶ。**一度選んだモードはそのrunの終了まで固定する。** run中に候補数が閾値を跨いでも再ルーティングしない。次回runの開始時にあらためて最新候補数で判定する。
+候補数は最新の耐久状態から毎run開始時に取得し、旧runや旧STATUSの推定値を再利用しない。候補数が現在の境界ちょうど288件なら、探索鮮度オーバーライドが発火しない限り読解を選ぶ。探索鮮度は耐久保存されたDiscovery完了時刻からrun開始時点までを計算し、`hot-dispatch.json` の `discovery_age_seconds` / `discovery_refresh_due` はこの判定の観測面である。**一度選んだモードはそのrunの終了まで固定する。** run中に候補数や探索鮮度が境界を跨いでも再ルーティングしない。次回runの開始時にあらためて最新状態で判定する。Discovery freshness runは既存Research claimを破棄・解放する操作ではなく、そのrunでDiscoveryを優先するだけである。
 
 runノルマの正規値は `.survey/scripts/worker_quota_policy.py` に一元化する。現在はResearch / Audit成功5件、Discovery成功8ラウンドである。Audit starvation防止の3件ブロックも同policyに置くが、これは**作業配分の公平性規則でありrun完了ノルマではない**。
 
@@ -67,7 +69,7 @@ handoff guard、platform/context limit、GitHub正本の読取不能、GitHub/Li
 - `research_discovery_threshold: <hot-dispatch research_discovery_threshold>`
 - `hot_dispatch_generated_at: <hot-dispatch generated_at>`
 
-run-state側はこの4項目の形式・policy整合性を検証し、最初の正規snapshotがまだ無いrunでは `route_source=hot_dispatch_direct_start` として同じrouteを固定する。`candidate_inventory` と閾値は選択モードを決めるための情報であり、direct-takeの技術的可否判定には使わない。hot-dispatchはResearch / Discoveryの両レーンを同時に公開し、`direct_start_allowed` は**今回選択済みレーンに準備済みpacketが存在するか**だけで決める。閾値からの距離・ガード帯を理由にdirect startを禁止しない。選択済みレーンに準備済みpacketが無い場合だけ従来どおりrun-state resultを待って開始する。08:30 maintenanceは常にhot dispatch対象外である。
+run-state側はこの4項目の形式・policy整合性を検証し、最初の正規snapshotがまだ無いrunでは `route_source=hot_dispatch_direct_start` として同じrouteを固定する。`suggested_work_mode` は基本閾値と探索鮮度オーバーライドを同じ正規policyから適用した結果であり、`candidate_inventory` と閾値はdirect-takeの技術的可否判定には使わない。hot-dispatchはResearch / Discoveryの両レーンを同時に公開し、`direct_start_allowed` は**今回選択済みレーンに準備済みpacketが存在するか**だけで決める。閾値からの距離・ガード帯を理由にdirect startを禁止しない。選択済みレーンに準備済みpacketが無い場合だけ従来どおりrun-state resultを待って開始する。08:30 maintenanceは常にhot dispatch対象外である。
 
 **Research / Audit:** まず `research_resume.<worker_id>[]` を確認する。同一workerのactive未提出claimが載っている場合は、**新しいtake/claim/resultを待たず最古のforegroundを即時再開する。** `work_start_allowed=true` なら一次資料取得・全文読解を直ちに継続してよい。`record_write_allowed=false` の場合でも読解開始は止めず、同時に通常のrun-state requestを耐久保存してclaim fast pathの正規canonicalization/record-bank回復を走らせる。run-state resultの `auto_resume_recovery.foreground` または更新後の同じ `research_resume.<worker_id>[]` で `record_write_allowed=true` と正規routeが確定してから5スロットへ書く。resume packetは既存claimの再開専用であり、create-only takeを発行せず、別workerのpacketを取得しない。
 
