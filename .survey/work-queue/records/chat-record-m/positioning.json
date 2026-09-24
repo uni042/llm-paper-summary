@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-adcf408437d27a8a65fe0220",
-  "job_id": "job-research-20dfb7993995c1a7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-adcf408437d27a8a65fe0220",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-adcf408437d27a8a65fe0220","job_id":"job-research-20dfb7993995c1a7","data":{"limitations":"主実機評価はQwen3 1.7Bで、より大きい32Bは性能モデルによる外挿である。context長にも訓練アルゴリズムとシステム上の制約があり、長文脈servingでの実測一般化は未確認。A100 INT4に対する1.7B decode優位は小型低bitモデルでGPUのHBM帯域利用率が下がる現象に依存し、32B外挿ではA100 INT4がLUT-LLMより速い。Allo/InTAR/FlightLLM比較はV80上のsimulatorであり同一bitstream実測ではない。共同量子化はFP16品質を完全には保持せず、タスクごとの低下も残る。","differences":"Allo、InTAR、FlightLLM等は主に低bit算術器・dataflow・sparsityでFPGA LLM推論を高速化するのに対し、LUT-LLMは線形層のdot product自体を事前計算表のmemory readへ置換する。LUT-DLA等の従来memory-based acceleratorはactivation VQ中心で巨大表と単一centroid pipelineがLLM規模で律速になるが、本手法はactivation-weight co-quantizationで2D表を縮小し、bandwidth-aware searchと専用2D-PSumを設計する。GPUのGPTQ/Marlinは低bit weightをonline dequantizeしてtensor coreで算術するため、計算パラダイムが異なる。","implementation_status":"公式コードLUT-FPGA/LUT-LLMが公開され、AMD Alveo V80上のbitstream生成まで含む実装評価がある。Vitis HLS/TAPA/RapidStream/Vivadoを使用し、Qwen3 1.7B変換用training recipeも実装する。論文はarXiv v2の拡張11ページ版でFCCM 2026として報告されている。","research_positioning":"本サーベイでは非GPU・near-memory/PIM系推論と、量子化・hardware-aware kernel設計の交点に位置する。HBM/オンチップメモリを単なるweight格納場所ではなく演算資源として使う点でPIM的だが、計算はFPGA内部の分散memoryとlogicで行う。GPU servingとの比較ではbatch-1/edge寄りのlatency・energy最適化であり、大規模multi-tenant throughput systemとは目的が異なる。今後のstacked-memory ASICやFPGA向け低bit LLMの設計空間を示す基準点になる。"},"reservation":{"claim_id":"claim-preload-adcf408437d27a8a65fe0220","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
