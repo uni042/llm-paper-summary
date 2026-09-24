@@ -33,7 +33,7 @@ class ContinuationGateWaitPolicyTests(unittest.TestCase):
             scheduled_handoff_guard_seconds=600,
             candidate_inventory=300,
             discovery_rounds_completed=0,
-            discovery_min_rounds=4,
+            discovery_min_rounds=8,
             discovery_exhausted=False,
             next_axis_available=False,
         )
