@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-24T07:07:05+00:00",
+  "updated_at": "2026-09-24T07:08:42+00:00",
   "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-  "last_round": "20260924T070530Z-scheduled-chat-00-a3f91c-r3",
+  "last_round": "20260924T070715Z-scheduled-chat-00-a3f91c-r4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,28 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T14:00:00+09:00",
-      "round": "training-memory-systems-3",
-      "axis": "training-offload-checkpoint-storage-gaps",
-      "query_summary": "Independent training-system axis covering long-context memory reduction, heterogeneous CPU/GPU training, out-of-core optimizers, checkpoint I/O, and automatic offload planning; filtered against canonical monthly identity snapshots.",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2506.06472",
-        "arXiv:2509.02480",
-        "arXiv:2408.10013"
-      ],
-      "next_axis_hint": "distributed-serving-network-and-disaggregation-gaps",
-      "source_submission": "work-queue/submissions/20260917T1521JST-discovery-training-memory-systems-3.json"
-    },
     {
       "run_key": "2026-09-17T14:00:00+09:00",
       "round": "disaggregation-evaluation-4",
@@ -9003,6 +8981,43 @@
       "duplicate_ratio": 0.85,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:20260924T070715Z-scheduled-chat-00-a3f91c-r4",
+      "precheck_request_id": "20260924T070715Z-scheduled-chat-00-a3f91c-r4",
+      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "round": "20260924T070715Z-scheduled-chat-00-a3f91c-r4",
+      "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
+      "query_summary": "DistServe後方引用の残存未収録集合を評価し、大規模モデル学習systemsの基礎系統としてgoodput schedulingとpipeline parallelismの代表実装を採用。",
+      "provider": "semantic_scholar",
+      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+      "citation_direction": "backward",
+      "seed_canonical_id": "arXiv:2401.09670",
+      "preload_id": null,
+      "candidate_count": 20,
+      "duplicate_filtered_count": 19,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [
+        "arXiv:2008.12260",
+        "DOI:10.1145/3341301.3359646"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.95,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16946,14 +16961,14 @@
     },
     "backward references of DistServe disaggregated prefill-decode LLM serving": {
       "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-      "rounds": 4,
-      "candidate_count": 68,
-      "duplicate_filtered_count": 30,
-      "novel_candidate_count": 38,
+      "rounds": 5,
+      "candidate_count": 88,
+      "duplicate_filtered_count": 49,
+      "novel_candidate_count": 39,
       "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 38,
-      "accepted_count": 6,
-      "duplicate_ratio": 0.4411764705882353,
+      "post_final_dedupe_count": 39,
+      "accepted_count": 7,
+      "duplicate_ratio": 0.5568181818181818,
       "final_duplicate_ratio": 0.0,
       "next_axis_hint": null
     },
@@ -18410,6 +18425,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
       "last_round": "20260924T070300Z-scheduled-chat-00-a3f91c-r2"
+    },
+    "window-b6ca12c6ceb5550af9b9": {
+      "topic": "distserve",
+      "source": "semantic_scholar",
+      "date_range": "backward-references",
+      "category": "inference-and-training-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-first",
+      "search_window_key": "window-b6ca12c6ceb5550af9b9",
+      "scan_count": 1,
+      "raw_result_count": 48,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 19,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 2,
+      "last_position": null,
+      "unseen_rate": 0.4166666666666667,
+      "duplicate_rate": 0.3958333333333333,
+      "candidate_acceptance_rate": 0.1,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "last_round": "20260924T070715Z-scheduled-chat-00-a3f91c-r4"
     }
   },
   "recent_search_windows": [
@@ -19943,6 +19981,27 @@
       "candidate_accepted_count": 2,
       "unseen_rate": 0.4166666666666667,
       "duplicate_rate": 0.3541666666666667,
+      "candidate_acceptance_rate": 0.1,
+      "last_position": null
+    },
+    {
+      "topic": "distserve",
+      "source": "semantic_scholar",
+      "date_range": "backward-references",
+      "category": "inference-and-training-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-first",
+      "search_window_key": "window-b6ca12c6ceb5550af9b9",
+      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+      "round": "20260924T070715Z-scheduled-chat-00-a3f91c-r4",
+      "raw_result_count": 48,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 19,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 2,
+      "unseen_rate": 0.4166666666666667,
+      "duplicate_rate": 0.3958333333333333,
       "candidate_acceptance_rate": 0.1,
       "last_position": null
     }
