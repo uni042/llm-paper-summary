@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "candidates": [],
+  "discovery_precheck": {"request_id":"20260924T093200Z-scheduled-chat-30-4b7e2a-r2","result_path":".survey/work-queue/discovery-precheck/results/20260924T093200Z-scheduled-chat-30-4b7e2a-r2.json","receipt":"sha256:eb699b481fa55251dafc70f4c502a4f11fe61b9ac37558fe6ea5f7bb4bc05142"},
+  "discovery_stats": {"run_key":"scheduled-chat-30-20260924T092830Z-4b7e2a","round":"20260924T093200Z-scheduled-chat-30-4b7e2a-r2","axis":"forward citations of arXiv:2306.00978","query_summary":"GPTQの前方引用から未収録20件を評価したが、今回の窓はVLA・world model・unlearning等が中心で、LLM推論システム系統を直接更新するpriority>=40の強候補は採用しなかった。","candidate_count":20,"duplicate_filtered_count":30,"accepted_canonical_ids":[],"round_submission_index":1,"round_submission_count":1,"search_windows":[{"topic":"arXiv:2306.00978 forward citations","source":"semantic_scholar","date_range":"all","category":"inference-systems","citation_direction":"forward","query_family":"citation-curation","raw_result_count":60,"unseen_result_count":20,"duplicate_filtered_count":29,"rejection_filtered_count":1,"candidate_evaluation_count":20,"candidate_accepted_count":0,"position":"cursor-60"}]}
+}
