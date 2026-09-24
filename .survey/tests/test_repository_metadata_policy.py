@@ -43,6 +43,7 @@ class RepositoryMetadataPolicyTests(unittest.TestCase):
 canonical_id: DOI:10.0000/example
 title: Month Precision Example
 summary: Month-precision proceedings metadata must remain valid when the primary source exposes no day.
+list_summary: 明示された一覧文を構造検査で必須にし、旧本文からの補完を行わないことを確認する。
 authors:
 - Example Author
 published: 2025-11
@@ -85,6 +86,33 @@ audit_version: 0
                 and finding["path"] == paper.relative_to(root).as_posix()
             ]
             self.assertEqual(invalid, [])
+
+            missing_paper = paper.read_text(encoding="utf-8").replace(
+                "list_summary: 明示された一覧文を構造検査で必須にし、旧本文からの補完を行わないことを確認する。\\n",
+                "",
+            )
+            paper.write_text(missing_paper, encoding="utf-8")
+            files = []
+            for current in sorted(root.rglob("*")):
+                if current.is_file():
+                    data = current.read_bytes()
+                    files.append(
+                        {
+                            "path": current.relative_to(root).as_posix(),
+                            "sha": blob_sha(data),
+                        }
+                    )
+            inventory = {"source_commit": "test", "files": files}
+            with patch.object(check_repository, "REQUIRED_V10_PATHS", ()):
+                missing_result = check_repository.check(root, inventory)
+            missing = [
+                finding
+                for finding in missing_result["findings"]
+                if finding["code"] == "paper_missing_metadata"
+                and finding["path"] == paper.relative_to(root).as_posix()
+                and finding["detail"] == "list_summary"
+            ]
+            self.assertEqual(len(missing), 1)
 
 
 if __name__ == "__main__":
