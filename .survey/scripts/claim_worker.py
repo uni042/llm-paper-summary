@@ -446,24 +446,6 @@ def _same_worker_lineage(
     )
 
 
-def _worker_has_active_claim(
-    claims: dict[str, dict[str, Any]],
-    *,
-    worker_id: str,
-    worker_kind: str,
-) -> bool:
-    return any(
-        current.get("active")
-        and _same_worker_lineage(
-            current.get("worker_id"),
-            current.get("worker_kind"),
-            worker_id,
-            worker_kind,
-        )
-        for current in claims.values()
-    )
-
-
 def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
     assignment = {
         "job_id": claim["job_id"], "claim_id": claim["claim_id"],
