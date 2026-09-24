@@ -2,141 +2,63 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-preload-b1e41ea993ce770bb187a178",
-  "job_id": "job-research-77f5ab6e591a0176",
+  "attempt_id": "attempt-preload-54435f3f1e70e6def8dfca02",
+  "job_id": "job-research-0023a21511f803e1",
   "data": {
-    "canonical_id": "arXiv:2310.01801",
-    "arxiv_id": "2310.01801",
-    "doi": null,
+    "canonical_id": "arXiv:2601.08833",
+    "arxiv_id": "2601.08833",
+    "doi": "10.48550/arXiv.2601.08833",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.CL",
-      "cross_list": []
+      "primary": "cs.PF",
+      "cross_list": [
+        "cs.AI",
+        "cs.AR",
+        "cs.DC"
+      ]
     },
-    "title": "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs",
-    "summary": "自己回帰型LLMでは過去トークンの鍵・値をKVキャッシュへ保持して再計算を避ける一方、系列長とモデル規模に比例してGPUメモリを圧迫する。FastGenは、各注意ヘッドの注意構造が局所性、特殊トークン、句読点、頻出トークン、広域注意などで異なることをプロンプト符号化時に一度だけ診断し、ヘッドごとに最も適したKVキャッシュ圧縮方針を選ぶ。追加学習なしで既存モデルへ適用でき、Llama 1の7B〜65Bと複数生成課題で評価した。65Bでは回復率98%設定でKVキャッシュを36.0%削減し、完全キャッシュとの対比較勝率49.8%を維持した。Llama 1-7Bの実行時間評価では、Hugging Face Accelerateに対して16.0〜55.0%、DeepSpeedに対して3.2〜35.8%の短縮を示し、長い生成ほど効果が大きい。",
-    "list_summary": "FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。",
+    "title": "Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications",
+    "summary": "prefill/decode分離サービングを、同数GPUを使う公平なcolocation基準、GPU直結・CPU DRAM・NVMe経由のKV転送、GPU周波数制御の組合せで再評価するベンチマーク研究。2×A100上のLlama-3.2-3Bでは分離の性能優位は負荷と転送媒体に依存し、2-GPU colocationが全batchでTTFT最良となる一方、大batchではKV evictionによりcolocationのTPOTが悪化する。段階別独立DVFSも分離構成の高い基礎エネルギーを覆せず、エネルギー節約を保証しない。",
+    "list_summary": "公平な2-GPU基準と複数KV転送階層・DVFSでprefill/decode分離を再評価し、性能・省電力の優位が条件依存であることを示す。",
     "authors": [
-      "Suyu Ge",
-      "Yunan Zhang",
-      "Liyuan Liu",
-      "Minjia Zhang",
-      "Jiawei Han",
-      "Jianfeng Gao"
+      "Jiaxi Li",
+      "Yue Zhu",
+      "Eun Kyung Lee",
+      "Klara Nahrstedt"
     ],
-    "authors_affiliations": "Suyu Ge、Jiawei HanはUniversity of Illinois Urbana-Champaign。Yunan Zhang、Liyuan Liu、Minjia Zhang、Jianfeng GaoはMicrosoft。Suyu Ge、Yunan Zhang、Liyuan Liuは同等貢献。",
-    "published": "2023-10-03",
-    "publication": "ICLR 2024",
-    "publication_type": "Conference paper",
-    "publication_status": "Published at ICLR 2024; arXiv v4",
-    "publication_version": "v4",
-    "lineage": "KVキャッシュ最適化／適応圧縮",
+    "authors_affiliations": "University of Illinois Urbana-Champaign; IBM Research",
+    "published": "2025-11-14",
+    "publication": "arXiv",
+    "publication_type": "プレプリント",
+    "publication_status": "Preprint v1 (2025-11-14; arXiv identifier 2601.08833)",
+    "lineage": "prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS",
     "topics": [
-      "KVキャッシュ圧縮",
-      "注意ヘッド解析",
-      "トークン追い出し",
-      "長文生成",
-      "推論メモリ"
+      "分離サービング",
+      "KVキャッシュ転送",
+      "CPUオフロード",
+      "NVMeオフロード",
+      "DVFS",
+      "エネルギー効率"
     ],
-    "importance": "高",
-    "hardware_evaluation": "実機",
-    "hardware_details": "品質・メモリ評価はNVIDIA A100 80GBを8基使用。エンドツーエンド遅延比較は同一のNVIDIA V100上でHugging Face Accelerate、DeepSpeed、FastGenを比較した。",
-    "quality_effect": "KV状態を追い出す近似方式なので完全キャッシュと数学的に同一ではない。Llama 1と微調整版でGSM8K、HumanEval、NQ、TQA、AlpacaEvalを評価し、完全キャッシュとの品質差を直接測る。65Bでは回復率98%設定で36.0%を削減して対比較勝率49.8%、回復率95%では44.9%削減で44.2%となるなど、圧縮率と品質の明示的な交換関係がある。",
-    "storage_targets": [
-      "GPU上のKVキャッシュ"
-    ],
-    "bottlenecks": [
-      "KVキャッシュのGPUメモリ消費",
-      "CPU/NVMeオフロード時のPCIe帯域",
-      "長系列での注意計算とメモリ容量"
-    ],
-    "evidence_locations": [
-      "第3.3節の一回プロファイリング",
-      "第3.4節の圧縮方針",
-      "第4節の注意構造の多様性・安定性",
-      "第5.1節の品質と圧縮率",
-      "第5.2節のメモリ削減",
-      "第5.3節の遅延",
-      "第5.4節のプロファイリング費用",
-      "付録Aのアブレーション"
-    ],
-    "references": [
-      {
-        "canonical_id": "arXiv:1708.06834"
-      },
-      {
-        "canonical_id": "arXiv:2107.03374"
-      },
-      {
-        "canonical_id": "arXiv:1904.10509"
-      },
-      {
-        "doi": "10.18653/v1/W19-4828"
-      },
-      {
-        "canonical_id": "arXiv:2110.14168"
-      },
-      {
-        "doi": "10.18653/v1/N19-1423"
-      },
-      {
-        "canonical_id": "arXiv:1904.00761"
-      },
-      {
-        "canonical_id": "arXiv:1904.09751"
-      },
-      {
-        "canonical_id": "arXiv:2304.07327"
-      },
-      {
-        "doi": "10.18653/v1/D19-1445"
-      },
-      {
-        "canonical_id": "arXiv:2305.17118"
-      },
-      {
-        "canonical_id": "arXiv:2304.08467"
-      },
-      {
-        "canonical_id": "arXiv:1711.02085"
-      },
-      {
-        "canonical_id": "arXiv:1701.06538"
-      },
-      {
-        "canonical_id": "arXiv:2302.13971"
-      },
-      {
-        "doi": "10.18653/v1/2020.emnlp-main.496"
-      },
-      {
-        "canonical_id": "arXiv:2306.14048"
-      },
-      {
-        "canonical_id": "arXiv:2305.11206"
-      }
-    ],
-    "references_checked_at": "2026-09-24",
-    "references_source": "arxiv-html-reference-section",
-    "references_total": 38,
-    "source": "https://arxiv.org/abs/2310.01801",
+    "importance": "分離サービングの既存優位性を単一GPU colocationとの不公平な比較から切り離し、同じ2 GPU資源での基準、転送階層、負荷、エネルギーを同時に測ることで『いつ分離すべきか』の境界条件を示す。",
+    "implementation": "vLLM V1とLMCacheConnectorV1を用い、GPU P2PはNIXL/cuda_ipc、CPU経路はDRAM＋Redis lookup、disk経路はfs_connector＋NVMeで実装したベンチマーク。独自公開コードURLは一次資料で確認できない。",
+    "hardware_evaluation": "同一ノードの2×NVIDIA A100 40GB（PCIe Gen3 bridge）、Intel Xeon E5-2697 v4 18-core、1TB DDR4、3.2TB NVMe。GPU周波数0.21〜1.41GHz対応。",
+    "quality_effect": "モデル出力品質は変更せず、TTFT/TPOT/throughput/energyを評価対象とする。synthetic token workloadのため実アプリケーション品質は評価しない。",
+    "source": "https://arxiv.org/abs/2601.08833",
     "sources": [
-      "https://arxiv.org/abs/2310.01801",
-      "https://arxiv.org/html/2310.01801",
-      "https://arxiv.org/pdf/2310.01801",
-      "https://github.com/machilusZ/FastGen"
+      "https://arxiv.org/abs/2601.08833",
+      "https://arxiv.org/html/2601.08833v1"
     ],
-    "code": "https://github.com/machilusZ/FastGen",
-    "implementation": "著者公式実装あり。KVキャッシュ枝刈り用にDeepSpeed由来のカスタムCUDAカーネルへ疎性処理を追加している。",
-    "implementation_status": "official-code-available",
-    "evaluation_type": "real-hardware",
-    "last_checked": "2026-09-24",
-    "last_audited": null,
-    "audit_version": 0
+    "code": null,
+    "last_checked": "2026-09-20",
+    "references": [],
+    "references_checked_at": "2026-09-20",
+    "references_source": "primary manuscript reference section",
+    "references_total": 59
   },
   "reservation": {
-    "claim_id": "claim-preload-b1e41ea993ce770bb187a178",
-    "worker_id": "worker-924920",
+    "claim_id": "claim-preload-54435f3f1e70e6def8dfca02",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }

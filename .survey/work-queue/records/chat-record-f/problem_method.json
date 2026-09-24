@@ -2,35 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-preload-b1e41ea993ce770bb187a178",
-  "job_id": "job-research-77f5ab6e591a0176",
+  "attempt_id": "attempt-preload-54435f3f1e70e6def8dfca02",
+  "job_id": "job-research-0023a21511f803e1",
   "data": {
-    "problem": "自己回帰生成では、各デコード段で過去トークンの鍵・値を再計算しないためKVキャッシュを保持する。これは計算量を下げる代わりに、バッチ数、注意ヘッド数、系列長、隠れ次元に比例する大きなGPUメモリを消費する。モデルと生成長が大きいほどKVキャッシュは重量化し、GPU容量を超えるとCPUやNVMeへのオフロードが必要になるが、PCIe帯域が新たな遅延要因になる。既存の固定追い出し方式は、すべての注意ヘッドへ同じ局所窓や高頻度トークン規則を適用する。しかし実際には、特殊トークンだけを見るヘッド、局所文脈を見るヘッド、広域に注意するヘッドが混在するため、一律の削減は不要なKVを残す一方で重要なKVを捨て、圧縮率と生成品質の両方を損ねうる。",
-    "novelty": "FastGenは「圧縮方針を全ヘッドへ固定する」のではなく、プロンプト符号化で得た注意行列から各注意ヘッドの構造を一度診断し、そのヘッドが保持すべきKVを方針集合から適応選択する。特殊トークン、句読点、局所窓、累積注意量の大きい頻出トークン、それらの組合せ、完全保持を候補にし、目標とする注意スコア回復率を満たす最小の保持集合を選ぶ。注意構造が1系列のデコード中では概ね安定するという観察により、毎トークン方針探索をやり直さず、最初の診断結果を生成中に継続利用する。モデル重みを微調整・再学習せず導入できる点も固定圧縮や学習型枝刈りとの差である。",
-    "method_overview": "まずプロンプトを通常どおり符号化し、各注意ヘッドについて問い合わせ・鍵・値と注意行列を得る。FastGenは候補圧縮方針を注意行列へ当てはめ、各方針で残すトークンが元の注意スコアをどれだけ回復できるかを計算する。指定回復率Tを満たす候補の中から、より小さいKV集合を作れる方針をヘッド単位で選ぶ。この診断はプロンプト符号化時に1回だけ行い、方針識別子と圧縮済み鍵・値を適応KVキャッシュとして保存する。\n\n候補には、文頭や命令記号など少数の特殊トークンだけを残す方式、句読点だけを残す方式、一定距離より古い文脈を捨てる局所方式、累積注意スコアが大きいトークンだけを残す頻出方式、そして完全保持がある。実際には特殊トークンを土台に、句読点、頻出、局所を順に加えた少数の混成候補を作る。特殊トークンは多くのヘッドで注意量が大きい一方、個数が少なくメモリ費用が小さいため、すべての混成方針へ含める。\n\n生成段では各新規トークンに対して通常の注意計算を行うが、過去文脈として参照するのは各ヘッドに割り当てた圧縮済みKVである。新しく生成した鍵・値も同じ方針関数で更新し、不要と判断された状態を保持しない。方針は最初のプロンプトから固定するため探索費用は生成長とともに増えない。Llama 1-65Bではプロファイリングが0.11秒で、生成長128では総生成時間の0.35%、1024では0.07%に低下した。頻出方式用の累積注意量はKVキャッシュ比0.78%の追加メモリに留まる。",
+    "problem": "prefillとdecodeを別GPUへ分離すると計算集約型とメモリ集約型の干渉を除き、それぞれを独立最適化できる一方、prefillが生成した大容量KVキャッシュをdecode側へ移送する追加費用が生じる。既存研究はNVLink等の高速経路を中心に評価し、分離では2 GPUを使うのにcolocation基準が1 GPUだけという比較もあり、分離自体の優位と単なる資源量差を切り分けにくい。またCPU DRAMやdiskを介す安価な転送経路、段階別にGPU周波数を変えられる分離構成の省電力余地について、性能とenergyを同一条件で横断比較したデータが不足していた。",
+    "novelty": "本研究は新しいserving algorithmを提案するより、既存の分離サービングの前提を系統的に検証する。公平な基準として2 GPUを双方colocated workerとして使いbatchを半分ずつ処理するco-2gpusを追加し、同じ2 GPUをprefill専用/decode専用にするdis-gpu、CPU DRAM経由dis-cpu、NVMe経由dis-diskと比較する。さらに各構成でGPU周波数を掃引し、TTFT-energyとTPOT-energyのPareto frontierを作ることで、分離なら段階別DVFSで省電力になるという仮説も検証する。転送媒体・batch/KV量・周波数を同一ベンチマーク内で変える点が中心である。",
+    "method_overview": "入力はLlama-3.2-3Bへ与える長さ16,384トークンのsynthetic promptと、256トークンの生成要求である。RandomDatasetで同一長の要求を作り、request rateは無限大としてbatch内要求を同時投入する。第一実験ではbatch sizeを2から64まで増やし、総KVキャッシュ量を約3.5GBから112GBへ拡大する。同じ要求集合を四構成へ流す。co-2gpusでは2 GPUそれぞれがprefillとdecodeの両方を行い、batchを半分ずつ担当する。dis-gpuではGPU0がprefill、GPU1がdecodeを担当し、LMCacheConnectorV1とNIXL/cuda_ipcでPCIe P2P転送する。dis-cpuではprefill後KVをCPU DRAMへoffloadしRedis表で位置を共有、decode GPUがDRAMからloadする。dis-diskではpage cacheを迂回してNVMeへ書き出し、fs_connector経由でdecode側へ戻す。各構成でmedian TTFT、median TPOT、prefill/decode throughput、GPU/CPU/DRAM/diskを含むjoule/tokenを測り、batch増加で転送費用とKV容量超過のどちらが支配するかを見る。第二実験ではbatch=16に固定し、両GPU周波数を0.36〜1.26GHzで均等に掃引して各構成のlatency-energy点を測る。そこからprefillとdecode別のPareto frontierを構築し、任意のTTFT/TPOT SLOを満たす最小energy点をcolocationとdisaggregationで比較する。出力は特定システムの単一順位ではなく、負荷・KV転送媒体・周波数に対してどの構成が性能/energy面で優位になるかという境界条件である。",
     "components": [
       {
-        "name": "注意ヘッド単位の構造診断",
-        "description": "同一層の注意ヘッドでも、特殊トークンへ集中するもの、局所近傍へ集中するもの、句読点や高頻度トークンへ集中するもの、広域へ分散するものがある。FastGenはプロンプト符号化時の注意行列を使って各ヘッドを個別に評価し、候補圧縮方針が元の注意スコアをどれだけ保持するかを測る。\n\n論文はLlama 1-65Bで第1、10、20、30デコード段の累積注意構造を比較し、値には揺れがあってもヘッド固有のパターンが比較的安定することを確認する。この安定性を前提に、生成中に繰り返し高価な探索をせず最初の1回だけ診断する。広域注意が必要なヘッドには完全保持を選べるため、圧縮を強制しない逃げ道も持つ。"
+        "name": "同資源2-GPU colocation基準",
+        "description": "従来の1-GPU colocated基準では2 GPUを使う分離構成との比較に資源量差が混ざるため、2 GPUそれぞれに完全なvLLM workerを置き、incoming batchを半分ずつ配るco-2gpusを導入する。各GPUはprefillとdecodeを同一deviceで実行するのでKV転送は不要で、各GPUが処理するrequest数は分離構成の半分になる。この基準により、干渉除去の利益と『prefill GPUへ全batchを集中させる』負荷増加を同じGPU台数で比較できる。"
       },
       {
-        "name": "特殊・句読点・局所・頻出の混成方針",
-        "description": "基本方針は、特殊トークンのみ、句読点のみ、局所窓、累積注意量が大きい頻出トークン、完全保持である。FastGenは候補数の爆発を避けるため、特殊トークンから始めて句読点、頻出、局所を段階的に足す混成集合を用意する。各方針の保持集合は和集合として構成される。\n\n特殊トークンは全体的に大きな注意を受けやすく、しかも1文中の個数が少ないため常に含める。付録のアブレーションでは頻出方針を外すと勝率が3.67ポイント、特殊トークン方針を外すと2.11ポイント低下し、個別方針を単独で全ヘッドへ適用するより、ヘッドごとの適応選択が重要であることを示す。"
+        "name": "三種類のKV転送経路",
+        "description": "dis-gpuは同一PCIe bridge上のGPU間をNIXL/cuda_ipcで直接転送し、最短のmemory pathを使う。dis-cpuは125GBのCPU DRAMをKV置場としてprefill GPUからoffloadし、Redis lookupでblock位置をdecode側へ伝える。dis-diskは125GBのNVMe領域を使い、page cacheを意図的に迂回して完全なdisk read/writeを測る。vLLM V1とLMCacheConnectorV1を共通基盤にすることで、software stack差よりmemory/storage tier差を主因として比較する。"
       },
       {
-        "name": "目標回復率に基づく圧縮率制御",
-        "description": "圧縮の強さは目標注意スコア回復率Tで制御する。Tを高くすると元の注意をより多く保持する方針が選ばれ、品質は完全キャッシュへ近づく一方、削減率は下がる。例えば微調整Llama 1-65BではT=98%で36.0%のKVを削減し、完全キャッシュとの対比較勝率49.8%を得る。T=95%では44.9%削減まで広げられるが勝率44.2%へ低下する。\n\nこの構成により「一定割合を必ず捨てる」のではなく、品質側の回復基準を決めてヘッドごとに必要な保持量を変えられる。モデル規模が大きいほど同じ品質近辺で削減できる割合が増える傾向も観測され、7BのT=98%では16.9%削減・勝率47.4%、65Bでは36.0%削減・49.8%となる。"
+        "name": "階層別エネルギー計測",
+        "description": "GPU瞬時電力はpynvml/NVML、CPUとDRAMはIntel RAPL、node全体はIPMIで取得し、推論時間にわたり積分する。処理したinput/output token総数で割ってjoule/tokenを算出し、GPUだけでなくCPU DRAMやdiskを触る転送経路の非GPU energyも含める。これにより遅い経路が低GPU powerに見えても、長い実行時間やmemory/storage電力で総energyが増える効果を捕捉する。"
       },
       {
-        "name": "圧縮KV向け実行カーネル",
-        "description": "メモリ削減だけでなく実行時間へ反映するため、FastGenはDeepSpeedの推論カーネルを基にKVキャッシュの疎性処理を追加したカスタム実装を用いる。Llama 1-7Bでプロンプト長と生成長、バッチ数を変え、Hugging Face AccelerateとDeepSpeedの完全キャッシュ実装を同一V100上で比較した。\n\n短い512トークン生成ではHugging Face比16.03%短縮だが、生成長16kでは55.0%まで拡大する。DeepSpeed比でも3.20〜35.78%短縮する設定があり、長系列・大バッチほど圧縮で注意対象が減る効果が表れる。ただし著者自身も疎性カーネルには追加最適化余地があると述べる。"
+        "name": "DVFS Pareto解析",
+        "description": "batch 16、入力16K、出力256に固定し、GPU周波数を0.36〜1.26GHzで掃引する。各構成についてprefillのTTFT-energy、decodeのTPOT-energyを別々に描き、周波数上昇でlatency短縮がpower増を上回る領域と、限界性能でpowerだけ増える領域を含むU字型frontierを得る。分離ではprefill/decode GPUを独立設定できる利点があるため、SLO別の最小energy点がcolocationを下回るかを直接検証する。"
       }
     ],
-    "system_design": "入力プロンプトの符号化段で通常の各注意ヘッドの注意行列を得ると、FastGenは候補方針ごとの保持トークン集合と回復注意量を計算する。目標回復率Tを満たしながら保持量を抑える方針をヘッド別に決定し、その方針IDと圧縮済み鍵・値をGPU上に保存する。広域注意ヘッドは完全保持、局所ヘッドは古いKVを追い出し、特殊トークン中心ヘッドは少数の特殊状態を残すなど、同じ層内でも異なるキャッシュ形状を持つ。\n\nデコードでは新しいトークンから鍵・問い合わせ・値を計算し、圧縮済み過去KVと注意を計算する。その後、新規鍵・値を各ヘッド固有の同じ方針へ通してキャッシュを更新する。頻出方針では累積注意スコアも更新する。モデル重み自体は変更せず、方針探索も再学習も不要である。生成終了までこのループを続けることで、メモリ保持量と注意計算対象を減らしながら、プロンプトで観測した注意構造を保つ。"
+    "system_design": "この研究の設計は、同じモデル・同じ2 GPU・同じrequest形状を固定し、変数を『stage配置』『KV移送tier』『batch/KV量』『GPU周波数』へ限定する対照実験である。batchが小さいとco-2gpusは各GPUのprefill負荷が半分でKV転送もなくTTFTに有利だが、batchが増えKVが28GB/GPUの割当を超えるとeviction/recomputationでTPOTとenergyが急増する。分離構成はdecode GPUのKV容量を専用化できる一方、prefill GPUへ全requestが集中し転送費も払う。したがって分離の価値は固定ではなく、KV容量圧力が転送・集中負荷を上回る領域で現れる。"
   },
   "reservation": {
-    "claim_id": "claim-preload-b1e41ea993ce770bb187a178",
-    "worker_id": "worker-924920",
+    "claim_id": "claim-preload-54435f3f1e70e6def8dfca02",
+    "worker_id": "scheduled-chat-30",
     "worker_kind": "scheduled_chat"
   }
 }
