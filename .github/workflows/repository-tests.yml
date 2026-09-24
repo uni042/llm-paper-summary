@@ -57,7 +57,7 @@ jobs:
           PY
 
       - name: Run legacy inventory tests
-        run: python -m unittest .survey.tests.test_legacy_inventory
+        run: python -m unittest discover -s .survey/tests -p 'test_legacy_inventory.py'
 
       - name: Build legacy cleanup inventory
         run: python .survey/scripts/legacy_inventory.py --root . --output /tmp/legacy-inventory.json --source-commit "${GITHUB_SHA}"
