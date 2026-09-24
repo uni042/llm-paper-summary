@@ -84,14 +84,18 @@ def _source_commit(root: Path, supplied: str | None) -> str:
     return value.lower()
 
 
-def _legacy_markers(data: bytes) -> tuple[list[str], str]:
+def _legacy_markers(data: bytes) -> tuple[list[dict[str, str]], str]:
     try:
         text = data.decode("utf-8")
     except UnicodeDecodeError:
         return [], "unscannable_binary"
     if "\0" in text:
         return [], "unscannable_binary"
-    hits = [name for name, pattern in LEGACY_MARKERS.items() if pattern.search(text)]
+    hits = []
+    for name, pattern in LEGACY_MARKERS.items():
+        match = pattern.search(text)
+        if match:
+            hits.append({"id": name, "evidence": match.group(0)[:160]})
     return hits, "scanned"
 
 

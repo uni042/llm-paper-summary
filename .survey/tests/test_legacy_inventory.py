@@ -44,7 +44,10 @@ class LegacyInventoryTests(unittest.TestCase):
             self.assertEqual(rows["papers/inference/legacy_notes.md"]["classification"], "B")
             self.assertEqual(rows["papers/inference/legacy_notes.md"]["legacy_markers"], [])
             self.assertEqual(rows[".survey/scripts/reader.py"]["classification"], "E")
-            self.assertIn("chat-inbox.json", rows[".survey/scripts/reader.py"]["legacy_markers"])
+            self.assertEqual(
+                rows[".survey/scripts/reader.py"]["legacy_markers"],
+                [{"id": "fixed_chat_inbox", "evidence": "chat-inbox.json"}],
+            )
             self.assertIsNone(rows["unreviewed.txt"]["classification"])
             self.assertEqual(report["unclassified_count"], 1)
             self.assertEqual(report["legacy_remaining"], 2)
