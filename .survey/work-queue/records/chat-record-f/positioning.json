@@ -4,7 +4,12 @@
   "slot": "positioning",
   "attempt_id": "attempt-preload-9a2b16779f8e3ddfeb6f3da7",
   "job_id": "job-research-c312adffcbd5fa76",
-  "data": {},
+  "data": {
+    "limitations": "The main kernel study focuses on batch-1 decode and L40S. A100 does not reproduce the L40S speedup, so results depend on memory hierarchy and launch geometry. The 4B end-to-end result with an int8 output head includes a change outside the lattice weight kernel. Quality is measured on a limited set of models and tasks.",
+    "differences": "Prior Leech-lattice quantization work emphasizes compression quality and did not provide the full multi-shell serving path required for the stated rate. This work implements that path and measures its GPU representation cost. Compared with QTIP, the unfolded lattice layout reads more bytes; compared with AWQ it targets a lower nominal weight rate but uses a more complex vector code.",
+    "implementation_status": "An offline transcoder and fused CUDA GEMV are implemented and evaluated on L40S and A100 with Qwen3 models. The paper is arXiv v1 dated 2026-09-02.",
+    "research_positioning": "This is a systems-oriented low-bit inference paper at the boundary between vector quantization and GPU kernel/memory-layout design. Its key systems lesson is that compression quality per file bit is insufficient: VRAM bytes per weight, decode regularity, and the target GPU byte bound must be evaluated together."
+  },
   "reservation": {
     "claim_id": "claim-preload-9a2b16779f8e3ddfeb6f3da7",
     "worker_id": "scheduled-chat-00",
