@@ -4,7 +4,39 @@
   "slot": "metadata",
   "attempt_id": "attempt-preload-696e42f89d3df66e6eb783f8",
   "job_id": "job-research-e3b684ca3ee98a5c",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2106.06899",
+    "arxiv_id": "2106.06899",
+    "title": "Memory-efficient Transformers via Top-k Attention",
+    "summary": "各クエリについて全キーとの内積から上位k件だけを厳密に残し、クエリ分割と入力チェックポイントを組み合わせることで、標準注意機構を置換できる線形メモリ型の疎注意を実現する。65Kトークンの単層注意で10GiB未満、12層32K入力で標準Transformer比8倍超のメモリ削減を示す一方、全内積を計算するため計算量は二次のままである。",
+    "source": "https://arxiv.org/abs/2106.06899",
+    "authors": [
+      "Ankit Gupta",
+      "Guy Dar",
+      "Shaya Goodman",
+      "David Ciprut",
+      "Jonathan Berant"
+    ],
+    "publication": "arXiv:2106.06899v1, 2021-06-13",
+    "publication_type": "arXiv preprint (under review in v1)",
+    "topics": [
+      "sparse attention",
+      "long-context inference",
+      "activation memory",
+      "query chunking",
+      "checkpointing"
+    ],
+    "implementation": "著者公開実装あり: https://github.com/ag1988/top_k_attention 。論文のベンチマーク実装はPyTorch 1.8.1を用い、注意行列の上位k値・添字を保存する専用forward/backwardを実装する。",
+    "sources": [
+      "https://arxiv.org/abs/2106.06899",
+      "https://arxiv.org/pdf/2106.06899",
+      "https://github.com/ag1988/top_k_attention"
+    ],
+    "arxiv_categories": [
+      "cs.CL",
+      "cs.LG"
+    ]
+  },
   "reservation": {
     "claim_id": "claim-preload-696e42f89d3df66e6eb783f8",
     "worker_id": "worker-45",
