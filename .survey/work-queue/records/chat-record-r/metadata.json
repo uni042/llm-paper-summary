@@ -1,13 +1,82 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "metadata",
   "attempt_id": "attempt-preload-24504aa3d0d6716cf366c75b",
   "job_id": "job-research-11098a1512c29cb4",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-24504aa3d0d6716cf366c75b",
     "worker_id": "worker-924226",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "metadata",
+  "data": {
+    "canonical_id": "arXiv:2607.16248",
+    "arxiv_id": "2607.16248",
+    "doi": "10.48550/arXiv.2607.16248",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration",
+    "summary": "DGAPは、1ビット級KVキャッシュ量子化で精度が崩れる主因を、ロジット値の一様な誤差ではなく高確率候補の局所的な順位入れ替わりとして捉え、永続KV表現を高精度化せずにデコード時だけ候補分布を修復する方式である。量子化ロジットから分布リスクを推定する軽量検出器を毎ステップ実行し、危険なステップだけ量子化top-K候補へ補正器を適用する。補正器はFP16/低ビットの対になったオフライン軌跡から、局所KL損失と順位整合損失で学習される。Llama-3.1-8BのRULERではK1V1の47.8%を83.2%まで回復し、FP16の84.2%へ近づける一方、Qwen2.5-14BではFP16比14.2倍のKV圧縮率を維持する。デコード遅延増は約1.06倍、スループット低下は6%未満で、利益は1ビット級の強い量子化ほど大きい。",
+    "list_summary": "1ビットKVキャッシュを維持したまま、量子化で崩れた高確率候補の局所順位だけを検出・補正し、RULER精度を47.8%から83.2%へ回復するDGAP。",
+    "authors": [
+      "Gradwell Dzikanyanga",
+      "Yanqi Pan",
+      "Weihao Yang",
+      "Donglei Wu",
+      "Wen Xia",
+      "Hao Huang"
+    ],
+    "authors_affiliations": "Harbin Institute of Technology, Shenzhen",
+    "published": "2026-06-27",
+    "publication": "arXiv:2607.16248v1",
+    "publication_type": "arXiv preprint",
+    "publication_status": "preprint",
+    "publication_version": "v1",
+    "lineage": "kv-cache-optimization-compression",
+    "topics": [
+      "KVキャッシュ量子化",
+      "低ビット推論",
+      "分布復元",
+      "長文脈推論",
+      "デコード効率"
+    ],
+    "importance": "既存のKV量子化が永続表現そのものを改善するのに対し、DGAPは量子化後に残る局所候補順位の崩れをデコード時の小さな補正層で扱う。特にK1V1のような極端な低ビット設定で、メモリ圧縮率を維持したまま品質を高ビット方式へ近づける点が重要である。",
+    "hardware_evaluation": "NVIDIA A100 80GB、batch size 1の長文脈デコード。",
+    "hardware_details": "A100-80GB。遅延計測はCUDA同期を用い、p95 per-token decode latencyとthroughputを報告。",
+    "quality_effect": "K1V1では大幅な品質低下を修復する。Llama-3.1-8B RULERは47.8%から83.2%へ回復しFP16 84.2%に接近するが、K4V4/K8V8では追加利得は0.2〜0.6点程度まで縮小する。",
+    "storage_targets": [
+      "GPU上の永続KVキャッシュ",
+      "デコード時の量子化Key/Value",
+      "一時的なtop-K候補ロジット"
+    ],
+    "bottlenecks": [
+      "長文脈で線形増大するKVメモリ容量",
+      "低ビットKVによる注意スコア・候補順位の局所的な崩れ",
+      "全語彙補正やFP16再計算を行う場合のデコード時オーバーヘッド"
+    ],
+    "evidence_locations": [
+      "§1 Introduction",
+      "§3 Motivation",
+      "§4 Methodology",
+      "§5 Experimental Setup",
+      "Tables 1–7",
+      "§7 Limitations and Future Work"
+    ],
+    "source": "https://arxiv.org/abs/2607.16248",
+    "sources": [
+      "https://arxiv.org/abs/2607.16248",
+      "https://arxiv.org/html/2607.16248v1"
+    ],
+    "code": null,
+    "implementation": "Python 3.10 / PyTorch 2.5.1+cu121 / Transformers 4.45.1 / CUDA 12.1 / PyTorch SDPAによる統一実装を論文中で評価。2026-09-24確認時点で本文には公式コード公開URLの記載を確認できない。",
+    "implementation_status": "評価実装あり。公式公開リポジトリは本文記載なし。",
+    "evaluation_type": "実機GPU評価 + オフライン学習/校正 + 複数モデル・複数ベンチマーク",
+    "last_checked": "2026-09-24",
+    "audit_version": 0
   }
 }
