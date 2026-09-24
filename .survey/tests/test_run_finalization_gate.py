@@ -44,6 +44,8 @@ class RunFinalizationGateTests(unittest.TestCase):
         result = mod.decide(make_args())
         self.assertEqual(result["decision"], "MUST_CONTINUE")
         self.assertFalse(result["finalization_permit"]["issued"])
+        self.assertNotIn("required_for_final_response", result["finalization_permit"])
+        self.assertNotIn("Final response is forbidden", result["rule"])
         self.assertIn("continuation_decision_is_continue", result["blocking_reasons"])
 
     def test_active_assignment_blocks_normal_finalization(self):
