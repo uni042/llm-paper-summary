@@ -1,0 +1,30 @@
+{
+  "job_id": "job-research-691c358850b25ecc",
+  "type": "research",
+  "parent_job_id": "job-e53dbbd42dbddbc2",
+  "priority": 88,
+  "canonical_id": "arXiv:2609.26828",
+  "arxiv_id": "2609.26828",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Bridging LLM Serving and CXL-SSDs with Chunk-Aware KV Cache Management",
+  "source_url": "https://arxiv.org/abs/2609.26828",
+  "paper_path": null,
+  "lineage": null,
+  "selection_reason": "CXL-SSDをLLM prefix/KV cache向けに協調設計し、chunk-aware配置、GPU可視device DRAM、windowed/layerwise prefetchでNAND遅延を隠蔽。stock CXL-SSD比TTFT最大4.03倍改善を報告し、階層メモリ・SSDオフロード重点系統に直接該当する。",
+  "priority_breakdown": {
+    "base": 50,
+    "lineage": 20,
+    "recency": 18,
+    "venue": 0,
+    "total": 88
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-24T15:07:58+00:00"
+}

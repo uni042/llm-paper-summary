@@ -1,0 +1,30 @@
+{
+  "job_id": "job-research-fd194814c677a98c",
+  "type": "research",
+  "parent_job_id": "job-c09940bfed9694b8",
+  "priority": 88,
+  "canonical_id": "arXiv:2609.27040",
+  "arxiv_id": "2609.27040",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "EMA: Elastic and Performance Transparent Memory Across GPUs",
+  "source_url": "https://arxiv.org/abs/2609.27040",
+  "paper_path": null,
+  "lineage": null,
+  "selection_reason": "LLM推論の動的GPUメモリ需要を対象に、GPU間で容量を貸借・回収するelastic memory poolとremote-access prefetchを設計。最大52%の個別throughput改善と2倍容量構成の96% throughputを報告し、階層メモリ重点系統に強く合致する。",
+  "priority_breakdown": {
+    "base": 50,
+    "lineage": 20,
+    "recency": 18,
+    "venue": 0,
+    "total": 88
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-24T15:08:12+00:00"
+}

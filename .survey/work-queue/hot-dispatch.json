@@ -1,5 +1,5 @@
 {
-  "candidate_inventory": 286,
+  "candidate_inventory": 291,
   "direct_start_allowed": true,
   "discovery": {
     "backward": [
@@ -503,83 +503,14 @@
       }
     ]
   },
-  "discovery_fallback": {
-    "axis": "preload-backward-structured-references",
-    "citation_direction": "backward",
-    "initial_cursor": null,
-    "max_pages": 25,
-    "page_size": 20,
-    "provider": "repository_references",
-    "seed_canonical_id": null,
-    "source_key": "00f3af0375a575549572",
-    "source_kind": "fixed_source_fallback",
-    "source_url": "repository://structured-references",
-    "target_unseen": 20
-  },
+  "discovery_fallback": null,
   "discovery_frontier_target": 3,
-  "discovery_primary_direction": "backward",
-  "discovery_start_frontier": [
-    {
-      "axis": "forward citations of KVLink efficient KV cache reuse",
-      "citation_direction": "forward",
-      "created_at": "2026-09-24T11:00:19.398256+00:00",
-      "discovery_bank": "d",
-      "discovery_slot_path": ".survey/work-queue/records/chat-record-d/discovery-preload.json",
-      "initial_cursor": null,
-      "max_pages": 25,
-      "page_size": 20,
-      "preload_id": "preload-3d786f9437572f1d6f51",
-      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3d786f9437572f1d6f51.json",
-      "preload_unseen_result_count": 20,
-      "provider": "semantic_scholar",
-      "seed_canonical_id": "arXiv:2502.16002",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-      "take_path": ".survey/work-queue/discovery-preload/claims/preload-3d786f9437572f1d6f51.json",
-      "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-3d786f9437572f1d6f51.json",
-      "target_unseen": 20
-    },
-    {
-      "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
-      "citation_direction": "forward",
-      "created_at": "2026-09-24T11:00:43.159999+00:00",
-      "discovery_bank": "o",
-      "discovery_slot_path": ".survey/work-queue/records/chat-record-o/discovery-preload.json",
-      "initial_cursor": null,
-      "max_pages": 25,
-      "page_size": 20,
-      "preload_id": "preload-23494db523ee1a210583",
-      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-23494db523ee1a210583.json",
-      "preload_unseen_result_count": 20,
-      "provider": "semantic_scholar",
-      "seed_canonical_id": null,
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.14800/citations",
-      "take_path": ".survey/work-queue/discovery-preload/claims/preload-23494db523ee1a210583.json",
-      "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-23494db523ee1a210583.json",
-      "target_unseen": 20
-    }
-  ],
-  "discovery_start_lookahead": {
-    "axis": "forward citations of KVLink efficient KV cache reuse",
-    "citation_direction": "forward",
-    "created_at": "2026-09-24T11:00:19.398256+00:00",
-    "discovery_bank": "d",
-    "discovery_slot_path": ".survey/work-queue/records/chat-record-d/discovery-preload.json",
-    "initial_cursor": null,
-    "max_pages": 25,
-    "page_size": 20,
-    "preload_id": "preload-3d786f9437572f1d6f51",
-    "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3d786f9437572f1d6f51.json",
-    "preload_unseen_result_count": 20,
-    "provider": "semantic_scholar",
-    "seed_canonical_id": "arXiv:2502.16002",
-    "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-    "take_path": ".survey/work-queue/discovery-preload/claims/preload-3d786f9437572f1d6f51.json",
-    "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-3d786f9437572f1d6f51.json",
-    "target_unseen": 20
-  },
-  "fallback_start_allowed": true,
-  "frontier_auto_reserve": true,
-  "generated_at": "2026-09-24T15:06:18+00:00",
+  "discovery_primary_direction": null,
+  "discovery_start_frontier": [],
+  "discovery_start_lookahead": null,
+  "fallback_start_allowed": false,
+  "frontier_auto_reserve": false,
+  "generated_at": "2026-09-24T15:08:22+00:00",
   "idle_gap_guard": {
     "passive_wait_forbidden": true,
     "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock. A direct Discovery take automatically reserves a bounded same-run work frontier before its formal precheck becomes the only visible activity; evaluate the already published cached candidates while canonical precheck/run-state results proceed. If the primary backward packet is absent, start the published fixed-source schema-v3 fallback and use discovery_start_frontier for immediate cached candidate work."
@@ -2969,7 +2900,7 @@
   "route_guard_band": 0,
   "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed requires prepared stock for the fresh invocation's primary route (backward for Discovery), rather than unrelated forward/normal stock; zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. zero_wait_content_start_allowed distinguishes merely starting an asynchronous fallback from having cached candidate work available now. discovery_start_frontier publishes up to two additional productive packets beside the primary packet; the first direct take causes the Discovery precheck lane to reserve enough same-run packets to keep a bounded three-round frontier populated before formal results settle. When the backward packet is absent, issue discovery_fallback immediately and use discovery_start_frontier for cached candidate evaluation without waiting for run-state; formal submission remains gated by each run-specific schema-v3 precheck/receipt.",
   "schema_version": 1,
-  "suggested_work_mode": "discovery",
+  "suggested_work_mode": "research",
   "zero_wait_content_start_allowed": true,
   "zero_wait_start_allowed": true
 }
