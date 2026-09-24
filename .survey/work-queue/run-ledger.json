@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T10:23:18.661590+00:00",
+  "updated_at": "2026-09-24T13:36:30.913680+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -45300,6 +45300,72 @@
       "paper_active_count_before": 1012,
       "paper_active_count_after": 1023,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "unattributed:36006632343",
+      "first_recorded_at": "2026-09-24T13:36:30.913680+00:00",
+      "last_recorded_at": "2026-09-24T13:36:30.913680+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 3,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "36006632343:1",
+          "recorded_at": "2026-09-24T13:36:30.913680+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "36006632343",
+            "run_attempt": "1",
+            "source_sha": "271ce3ff7f00c00c3ba8690afc7aebc4c1a32171"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-4ed6d0d7f17db5e0",
+          "type": "research",
+          "canonical_id": "arXiv:2608.19395",
+          "title": "HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-c338c792802f12de",
+          "type": "research",
+          "canonical_id": "arXiv:2607.17181",
+          "title": "Talaria: Session-Aware Serverless Serving of Hundred-Billion-Parameter LLMs",
+          "from": "ready",
+          "to": "blocked"
+        },
+        {
+          "job_id": "job-research-cdc29bb5f1d5b9bc",
+          "type": "research",
+          "canonical_id": "DOI:10.1145/3789240.3828750",
+          "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1023,
+      "paper_active_count_after": 1023,
+      "last_successful_action": "job_blocked"
     }
   ]
 }

@@ -14,8 +14,9 @@
   "run_key": "scheduled-chat-30-20260924T085541Z-7c41a2c",
   "scheduled_slot": "30",
   "actual_invocation_start": "2026-09-24T08:55:41+00:00",
-  "failure_class": "post_validation_processing_failure",
-  "retryable": true,
-  "recovery_failures": 2,
-  "last_recovery_failed_at": "2026-09-24T10:22:36+00:00"
+  "failure_class": "recovery_exhausted",
+  "retryable": false,
+  "recovery_failures": 3,
+  "last_recovery_failed_at": "2026-09-24T13:36:19+00:00",
+  "last_retryable_failure_class": "post_validation_processing_failure"
 }
