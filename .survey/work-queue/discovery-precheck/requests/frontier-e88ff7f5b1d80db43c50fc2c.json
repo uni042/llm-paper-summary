@@ -1,0 +1,20 @@
+{
+  "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+  "collector_id": "direct-frontier-e88ff7f5b1d80db43c50fc2c",
+  "direct_take": true,
+  "discovery_bank": "c",
+  "discovery_slot_path": ".survey/work-queue/records/chat-record-c/discovery-preload.json",
+  "initial_cursor": null,
+  "max_pages": 25,
+  "operation": "precheck_discovery_candidates",
+  "page_size": 20,
+  "preload_id": "preload-5729a2c1509ce8ec49e3",
+  "preload_seed": false,
+  "provider": "semantic_scholar",
+  "request_id": "frontier-e88ff7f5b1d80db43c50fc2c",
+  "run_key": "scheduled-chat-30-20260924T232825JST-a91c3f",
+  "schema_version": 3,
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "worker_id": "scheduled-chat-30"
+}
