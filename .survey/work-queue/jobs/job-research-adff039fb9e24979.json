@@ -8,11 +8,14 @@
   "source_url": "https://doi.org/10.1145/3805621.3807651",
   "paper_path": "papers/inference/99-other-inference-systems/2026-dae506ee161c-hardware-aware-co-design-of-multi-chip-llm-serving-via-performance-modeling.md",
   "selection_reason": "EuroMLSys 2026の査読systems workshop論文。multi-chip accelerator上のLLM servingをhardware-aware performance modelingで扱い、tensor parallelismやchunked prefillを含むhardware-algorithm co-designを対象とする。非arXiv workshop経路の補完として、GPU runtime/serving設計空間の比較基盤に価値がある。",
-  "status": "ready",
+  "status": "blocked",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-18T19:02:42+00:00"
+  "created_at": "2026-09-18T19:02:42+00:00",
+  "completed_at": "2026-09-24T06:39:43+00:00",
+  "blocker": "Primary full text could not be obtained through the available official routes without guessing. Retrieval evidence: DOI/ACM proceedings landing page https://dl.acm.org/doi/10.1145/3805621.3807651 was reachable and exposed only abstract/metadata in the available reader; the official ACM PDF route https://dl.acm.org/doi/pdf/10.1145/3805621.3807651 returned 403 to both the web fetch and direct file download; DBLP/DOI discovery exposed the same ACM publisher route and no alternate author-hosted primary full text was found. Search snippets/abstract were not used to synthesize the five-slot record.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-preload-917b8abeba887d5fc63bb86c.json"
 }
