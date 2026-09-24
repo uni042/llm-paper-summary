@@ -190,6 +190,10 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertFalse(result["finalization_permit"]["issued"])
         self.assertIn("discovery_minimum_not_met", result["blocking_reasons"])
         self.assertEqual(result["next_action"], "DISCOVER_AGAIN")
+        self.assertIn("5-success floor", result["rule"])
+        self.assertIn("8-round floor", result["rule"])
+        self.assertNotIn("three-success", result["rule"])
+        self.assertNotIn("four-round", result["rule"])
 
     def test_clean_stop_run_issues_permit(self):
         result = mod.decide(make_args(
