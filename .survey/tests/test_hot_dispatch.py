@@ -695,6 +695,72 @@ class HotDispatchTests(unittest.TestCase):
                 index["discovery_fallback"]["source_url"],
                 "repository://structured-references",
             )
+    def test_index_exposes_expired_partial_record_as_same_worker_recovery_take(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = now()
+            job_id = "job-recovery-resume"
+            claim_id = "claim-preload-recovery"
+            write_json(
+                root / ".survey/work-queue/jobs" / f"{job_id}.json",
+                {
+                    "job_id": job_id,
+                    "type": "research",
+                    "status": "ready",
+                    "title": "Interrupted paper",
+                    "depends_on_job_ids": [job_id],
+                },
+            )
+            write_json(
+                root / ".survey/work-queue/claims" / f"{job_id}.json",
+                {
+                    "schema_version": 1,
+                    "workflow_version": 10,
+                    "claim_id": claim_id,
+                    "job_id": job_id,
+                    "worker_id": shared_preload_pool.POOL_WORKER_ID,
+                    "worker_kind": shared_preload_pool.POOL_WORKER_KIND,
+                    "attempt_id": "attempt-preload-recovery",
+                    "claimed_at": current.isoformat(),
+                    "preloaded_at": current.isoformat(),
+                    "expires_at": (current + dt.timedelta(hours=12)).isoformat(),
+                    "kind": "research",
+                    "depends_on_job_ids": [job_id],
+                    "preload_pool": True,
+                    "pool_order": 17,
+                },
+            )
+            from record_bank_config import BANK_ROOTS, SLOT_NAMES
+            for index, slot in enumerate(SLOT_NAMES):
+                write_json(
+                    root / BANK_ROOTS["m"] / f"{slot}.json",
+                    {
+                        "schema_version": 1,
+                        "transport_version": 10,
+                        "slot": slot,
+                        "attempt_id": "attempt-old-interrupted",
+                        "job_id": job_id,
+                        "data": {"draft": "kept"} if index == 0 else {},
+                        "reservation": {
+                            "claim_id": "claim-old-interrupted",
+                            "worker_id": "scheduled-chat-00",
+                            "worker_kind": "scheduled_chat",
+                        },
+                    },
+                )
+
+            index = hot_dispatch.build_index(root)
+            recovery = index["research_recovery_resume"]["scheduled-chat-00"][0]
+            self.assertEqual(recovery["claim_id"], claim_id)
+            self.assertEqual(recovery["recovery_source_attempt_id"], "attempt-old-interrupted")
+            self.assertEqual(recovery["recovery_source_record_bank"], "m")
+            self.assertTrue(recovery["resume_requires_direct_take"])
+            self.assertEqual(
+                recovery["direct_take_contract"]["payload_base"]["claim_id"],
+                claim_id,
+            )
+            self.assertNotIn(job_id, [row["job_id"] for row in index["research"]])
+
 
 if __name__ == "__main__":
     unittest.main()

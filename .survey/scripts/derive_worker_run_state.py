@@ -1322,6 +1322,7 @@ def _next_work_packet(
             "hot_dispatch_path": ".survey/work-queue/hot-dispatch.json",
             "selection_order": [
                 f"research_resume.{worker_id}[0]",
+                f"research_recovery_resume.{worker_id}[0]",
                 "research[0]",
             ],
         }
@@ -1542,13 +1543,18 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     hot_dispatch_index = _read(root / ".survey/work-queue/hot-dispatch.json", {}) or {}
     research_direct_packet = None
     if work_mode == "research":
-        packets = (
-            hot_dispatch_index.get("research")
-            if isinstance(hot_dispatch_index, dict)
-            else None
-        )
-        if isinstance(packets, list):
-            for raw_packet in packets:
+        packet_groups: list[list[dict[str, Any]]] = []
+        if isinstance(hot_dispatch_index, dict):
+            recovery_by_worker = hot_dispatch_index.get("research_recovery_resume")
+            if isinstance(recovery_by_worker, dict):
+                worker_rows = recovery_by_worker.get(str(request["worker_id"]))
+                if isinstance(worker_rows, list):
+                    packet_groups.append(worker_rows)
+            packets = hot_dispatch_index.get("research")
+            if isinstance(packets, list):
+                packet_groups.append(packets)
+        for packet_group in packet_groups:
+            for raw_packet in packet_group:
                 if not isinstance(raw_packet, dict):
                     continue
                 take_path = str(raw_packet.get("take_path") or "")
@@ -1568,6 +1574,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
                     continue
                 research_direct_packet = dict(raw_packet)
                 research_direct_packet["job"] = live_job
+                break
+            if research_direct_packet is not None:
                 break
     prepared_research_packet_available = research_direct_packet is not None
 
@@ -1901,7 +1909,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
             "GitHub file create/update capability counts as GitHub write; absence of local script execution alone is never a transport hard stop, and an actual canonical-path write must be attempted before a write-unavailable handoff. "
             "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected and a concrete observed-error detail; a single paper/source retrieval failure is never platform-context evidence. "
-            "A pending claim exposes its request age; when an unclaimed prepared Research/Audit packet is available outside the handoff window, the gate routes directly to that packet instead of monitoring the claim as foreground work. Only when no prepared packet is available does the first 60 seconds use active Survey claim fast-lane monitoring rather than passive waiting. "
+            "A pending claim exposes its request age; when an unclaimed prepared Research/Audit packet is available outside the handoff window, the gate routes directly to that packet instead of monitoring the claim as foreground work. Same-worker expired-claim record recovery packets are selected before unrelated fresh pool packets, while an already-active owned foreground remains authoritative. Only when no prepared packet is available does the first 60 seconds use active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
             "Discovery pending results do not mask already-evaluable rounds; evaluation/recovery work has priority over wait states. "
             f"Outside the 600-second no-new-work window, at most {DISCOVERY_PIPELINE_WINDOW} Discovery rounds may be in flight so a PRECHECKED citation window can be evaluated while an older precheck/submission settles. "

@@ -26,11 +26,13 @@ from typing import Any
 
 import claim_state
 import claim_window_policy
+import worker_identity
 import worker_quota_policy
 from record_bank_config import (
     BANK_IDS,
     BANK_ROOTS,
     RESEARCH_PRELOAD_SLOT_NAME,
+    SLOT_NAMES,
     bank_for_sequence,
     research_preload_slot_path,
 )
@@ -185,6 +187,102 @@ def reserved_direct_take_claim_ids(repo_root: Path) -> set[str]:
     return reserved
 
 
+def _data_has_progress(payload: dict[str, Any]) -> bool:
+    data = payload.get("data")
+    if isinstance(data, (dict, list, str, tuple, set)):
+        return bool(data)
+    return data not in (None, False, 0, "")
+
+
+def unfinished_resume_affinities(repo_root: Path) -> dict[str, dict[str, Any]]:
+    """Map coherent unsubmitted record banks back to the worker that started them.
+
+    A Scheduled Chat claim can expire after useful five-slot work has already been
+    persisted. The shared pool may then own a new claim for the same ready job.
+    Keep that durable work visible as a worker affinity so the next refill/direct
+    take for the original worker reclaims the same job and lets the existing
+    expired-same-job bank recovery retag the content to the new attempt.
+
+    Ambiguous duplicate banks are deliberately omitted; normal recovery remains the
+    authority for those cases.
+    """
+    root = Path(repo_root)
+    submitted_attempts: set[str] = set()
+    for kind in CLAIM_TYPES:
+        folder = root / ".survey/work-queue/submissions" / kind
+        if not folder.is_dir():
+            continue
+        for path in folder.glob("*.json"):
+            value = _read(path, {})
+            if isinstance(value, dict) and value.get("attempt_id"):
+                submitted_attempts.add(str(value["attempt_id"]))
+
+    candidates: dict[str, list[dict[str, Any]]] = {}
+    for bank, relative_root in BANK_ROOTS.items():
+        job_ids: set[str] = set()
+        attempt_ids: set[str] = set()
+        claim_ids: set[str] = set()
+        worker_ids: set[str] = set()
+        nonempty = 0
+        valid = True
+        slot_paths: dict[str, str] = {}
+        for slot in SLOT_NAMES:
+            path = root / relative_root / f"{slot}.json"
+            payload = _read(path, {})
+            reservation = payload.get("reservation") if isinstance(payload, dict) else None
+            if (
+                not isinstance(payload, dict)
+                or payload.get("slot") != slot
+                or not isinstance(payload.get("job_id"), str)
+                or not payload.get("job_id")
+                or not isinstance(payload.get("attempt_id"), str)
+                or not payload.get("attempt_id")
+                or "data" not in payload
+                or not isinstance(reservation, dict)
+                or not reservation.get("claim_id")
+                or not reservation.get("worker_id")
+            ):
+                valid = False
+                break
+            job_ids.add(str(payload["job_id"]))
+            attempt_ids.add(str(payload["attempt_id"]))
+            claim_ids.add(str(reservation["claim_id"]))
+            worker_ids.add(str(reservation["worker_id"]))
+            nonempty += int(_data_has_progress(payload))
+            slot_paths[slot] = (Path(relative_root) / f"{slot}.json").as_posix()
+
+        if (
+            not valid
+            or nonempty <= 0
+            or len(job_ids) != 1
+            or len(attempt_ids) != 1
+            or len(claim_ids) != 1
+            or len(worker_ids) != 1
+        ):
+            continue
+        job_id = next(iter(job_ids))
+        attempt_id = next(iter(attempt_ids))
+        worker_id = next(iter(worker_ids))
+        if attempt_id in submitted_attempts or not worker_identity.is_supported_worker_id(worker_id):
+            continue
+        candidates.setdefault(job_id, []).append({
+            "worker_id": worker_id,
+            "source_attempt_id": attempt_id,
+            "source_claim_id": next(iter(claim_ids)),
+            "source_record_bank": bank,
+            "source_record_bank_root": relative_root,
+            "source_record_slot_paths": slot_paths,
+            "nonempty_slot_count": nonempty,
+            "sticky_to_worker": worker_id in {"scheduled-chat-00", "scheduled-chat-30"},
+        })
+
+    return {
+        job_id: rows[0]
+        for job_id, rows in candidates.items()
+        if len(rows) == 1
+    }
+
+
 def waiting_claims(
     claims: dict[str, dict[str, Any]],
     *,
@@ -233,6 +331,17 @@ def adopt(
             continue
         candidates.append(current)
 
+    resume_affinities = unfinished_resume_affinities(repo_root)
+    candidates = [
+        current
+        for current in candidates
+        if not (
+            (affinity := resume_affinities.get(str(current.get("job_id") or "")))
+            and affinity.get("sticky_to_worker") is True
+            and affinity.get("worker_id") != request["worker_id"]
+        )
+    ]
+
     block_size = worker_quota_policy.AUDIT_STARVATION_BLOCK_SIZE
     block_start = next_pipeline_order - (next_pipeline_order % block_size)
     prior_rows = sorted(
@@ -276,14 +385,32 @@ def adopt(
                 outside_ready_audit = True
                 break
 
-    candidates = worker_quota_policy.order_with_audit_fairness(
-        candidates,
-        starting_position=next_pipeline_order,
-        prior_kinds=prior_kinds,
+    resume_candidates = [
+        current
+        for current in candidates
+        if (
+            (affinity := resume_affinities.get(str(current.get("job_id") or "")))
+            and affinity.get("worker_id") == request["worker_id"]
+        )
+    ]
+    resume_candidates.sort(key=_pool_order)
+    resume_candidates = resume_candidates[:needed]
+    resume_job_ids = {str(current.get("job_id") or "") for current in resume_candidates}
+    normal_candidates = [
+        current
+        for current in candidates
+        if str(current.get("job_id") or "") not in resume_job_ids
+    ]
+    remaining = max(needed - len(resume_candidates), 0)
+    normal_candidates = worker_quota_policy.order_with_audit_fairness(
+        normal_candidates,
+        starting_position=next_pipeline_order + len(resume_candidates),
+        prior_kinds=prior_kinds + [str(current.get("kind") or "") for current in resume_candidates],
         kind_field="kind",
-        limit=needed,
+        limit=remaining,
         reserve_missing_audit_slot=outside_ready_audit,
     )
+    candidates = resume_candidates + normal_candidates
 
     adopted: list[dict[str, Any]] = []
     new_expiry = _iso(now + dt.timedelta(seconds=int(request["lease_seconds"])))
@@ -301,6 +428,17 @@ def adopt(
         claim["heartbeat_at"] = _iso(now)
         claim["expires_at"] = new_expiry
         claim["pipeline_order"] = next_pipeline_order + offset
+        affinity = resume_affinities.get(job_id)
+        if affinity and affinity.get("worker_id") == request["worker_id"]:
+            claim["resume_recovery_source"] = {
+                "worker_id": affinity.get("worker_id"),
+                "claim_id": affinity.get("source_claim_id"),
+                "attempt_id": affinity.get("source_attempt_id"),
+                "record_bank": affinity.get("source_record_bank"),
+                "nonempty_slot_count": affinity.get("nonempty_slot_count"),
+            }
+        else:
+            claim.pop("resume_recovery_source", None)
         for field in ("run_key", "scheduled_slot", "actual_invocation_start"):
             if field in request:
                 claim[field] = request[field]

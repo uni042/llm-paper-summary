@@ -353,6 +353,62 @@ class SharedPreloadPoolTests(unittest.TestCase):
                 initial_ids[12:24],
             )
 
+    def test_refill_prioritizes_same_worker_unfinished_record_before_fifo(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_banks(root)
+            for index in range(6):
+                seed_job(root, index)
+
+            claim_worker_with_banks.process_requests(root, at=AT, maintain_shared_pool=True)
+            claims = claim_state.current_claims(root, AT)
+            resume_job = "job-005"
+            self.assertGreater(claims[resume_job]["pool_order"], claims["job-000"]["pool_order"])
+
+            recovery_bank = "h"
+            for index, slot in enumerate(SLOT_NAMES):
+                write_json(root / BANK_ROOTS[recovery_bank] / f"{slot}.json", {
+                    "schema_version": 1,
+                    "transport_version": 10,
+                    "slot": slot,
+                    "attempt_id": "attempt-expired-partial",
+                    "job_id": resume_job,
+                    "data": {"preserved": "already researched"} if index == 0 else {},
+                    "reservation": {
+                        "claim_id": "claim-expired-partial",
+                        "worker_id": "scheduled-chat-00",
+                        "worker_kind": "scheduled_chat",
+                    },
+                })
+
+            affinities = shared_preload_pool.unfinished_resume_affinities(root)
+            self.assertEqual(affinities[resume_job]["worker_id"], "scheduled-chat-00")
+            self.assertTrue(affinities[resume_job]["sticky_to_worker"])
+
+            seed_request(root, "req-resume", "scheduled-chat-00", AT + timedelta(seconds=1), window=1)
+            claim_worker_with_banks.process_requests(
+                root,
+                at=AT + timedelta(seconds=1),
+                maintain_shared_pool=False,
+            )
+            result = json.loads(
+                (root / ".survey/work-queue/claim-results/req-resume.json").read_text()
+            )
+            assignment = result["assignments"][0]
+            self.assertEqual(assignment["job_id"], resume_job)
+            self.assertEqual(assignment["record_bank"], recovery_bank)
+            self.assertEqual(assignment["record_bank_recovery"], "expired-same-job")
+            self.assertEqual(
+                assignment["resume_recovery_source"]["attempt_id"],
+                "attempt-expired-partial",
+            )
+            payload = json.loads(
+                (root / BANK_ROOTS[recovery_bank] / "metadata.json").read_text()
+            )
+            self.assertEqual(payload["data"], {"preserved": "already researched"})
+            self.assertEqual(payload["attempt_id"], assignment["attempt_id"])
+            self.assertEqual(payload["reservation"]["claim_id"], assignment["claim_id"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -111,6 +111,7 @@ def _research_packets(
     *,
     jobs: dict[str, dict[str, Any]],
     claims: dict[str, dict[str, Any]],
+    resume_affinities: dict[str, dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     packets: list[dict[str, Any]] = []
     for current in shared_preload_pool.waiting_claims(claims, repo_root=root):
@@ -118,6 +119,9 @@ def _research_packets(
         claim_id = str(current.get("claim_id") or "")
         attempt_id = str(current.get("attempt_id") or "")
         job = jobs.get(job_id)
+        affinity = (resume_affinities or {}).get(job_id)
+        if affinity and affinity.get("sticky_to_worker") is True:
+            continue
         if (
             not job_id
             or not claim_id
@@ -268,6 +272,78 @@ def _research_resume_packets(
     return {worker_id: grouped[worker_id] for worker_id in sorted(grouped)}
 
 
+def _research_recovery_resume_packets(
+    root: Path,
+    *,
+    jobs: dict[str, dict[str, Any]],
+    claims: dict[str, dict[str, Any]],
+    resume_affinities: dict[str, dict[str, Any]],
+) -> dict[str, list[dict[str, Any]]]:
+    """Expose pool claims that carry durable unfinished work for their old worker."""
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for current in shared_preload_pool.waiting_claims(claims, repo_root=root):
+        job_id = str(current.get("job_id") or "")
+        affinity = resume_affinities.get(job_id)
+        if not affinity:
+            continue
+        worker_id = str(affinity.get("worker_id") or "")
+        if not worker_identity.is_supported_worker_id(worker_id):
+            continue
+        job = jobs.get(job_id)
+        claim_id = str(current.get("claim_id") or "")
+        attempt_id = str(current.get("attempt_id") or "")
+        kind = str(current.get("kind") or (job or {}).get("type") or "")
+        if (
+            not claim_id
+            or not attempt_id
+            or kind not in {"research", "audit"}
+            or not isinstance(job, dict)
+            or job.get("status") != "ready"
+            or job.get("type") not in {"research", "audit"}
+            or job.get("repair_required") is True
+        ):
+            continue
+        packet = {
+            "claim_id": claim_id,
+            "job_id": job_id,
+            "attempt_id": attempt_id,
+            "kind": kind,
+            "worker_id": worker_id,
+            "pool_order": current.get("pool_order"),
+            "preloaded_at": current.get("preloaded_at") or current.get("claimed_at"),
+            "stock_bank": _stock_bank(current),
+            "take_path": (DIRECT_RESEARCH_TAKES / f"{claim_id}.json").as_posix(),
+            "take_result_path": (DIRECT_RESEARCH_RESULTS / f"{claim_id}.json").as_posix(),
+            "claim_path": (CLAIMS / f"{job_id}.json").as_posix(),
+            "job_path": (JOBS / f"{job_id}.json").as_posix(),
+            "job": job,
+            "resume_recovery": True,
+            "resume_requires_direct_take": True,
+            "resume_without_new_claim": False,
+            "work_start_allowed": True,
+            "record_write_allowed": False,
+            "recovery_source_worker_id": worker_id,
+            "recovery_source_claim_id": affinity.get("source_claim_id"),
+            "recovery_source_attempt_id": affinity.get("source_attempt_id"),
+            "recovery_source_record_bank": affinity.get("source_record_bank"),
+            "recovery_source_record_bank_root": affinity.get("source_record_bank_root"),
+            "recovery_source_record_slot_paths": affinity.get("source_record_slot_paths"),
+            "recovery_nonempty_slot_count": affinity.get("nonempty_slot_count"),
+        }
+        grouped.setdefault(worker_id, []).append(packet)
+
+    for rows in grouped.values():
+        rows.sort(key=lambda item: (
+            int(item.get("pool_order"))
+            if isinstance(item.get("pool_order"), int)
+            and not isinstance(item.get("pool_order"), bool)
+            else 1_000_000_000,
+            str(item.get("preloaded_at") or ""),
+            str(item.get("job_id") or ""),
+        ))
+    return {worker_id: grouped[worker_id] for worker_id in sorted(grouped)}
+
+
 def _discovery_packets(root: Path) -> dict[str, list[dict[str, Any]]]:
     out: dict[str, list[dict[str, Any]]] = {}
     for direction in ("backward", "forward", "normal"):
@@ -303,8 +379,20 @@ def build_index(repo_root: Path) -> dict[str, Any]:
     inventory = _candidate_inventory(jobs)
     threshold = claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
     suggested = "research" if inventory >= threshold else "discovery"
-    research_packets = _research_packets(root, jobs=jobs, claims=claims)
+    resume_affinities = shared_preload_pool.unfinished_resume_affinities(root)
+    research_packets = _research_packets(
+        root,
+        jobs=jobs,
+        claims=claims,
+        resume_affinities=resume_affinities,
+    )
     research_resume = _research_resume_packets(root, jobs=jobs, claims=claims)
+    research_recovery_resume = _research_recovery_resume_packets(
+        root,
+        jobs=jobs,
+        claims=claims,
+        resume_affinities=resume_affinities,
+    )
     discovery_packets = _discovery_packets(root)
     discovery_primary_direction = "backward"
     discovery_primary_packets = discovery_packets.get(discovery_primary_direction) or []
@@ -341,7 +429,12 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         if len(discovery_start_frontier) >= DISCOVERY_FRONTIER_TARGET - 1:
             break
     generated_at = _iso(now)
-    for packet in research_packets:
+    recovery_packets = [
+        packet
+        for rows in research_recovery_resume.values()
+        for packet in rows
+    ]
+    for packet in recovery_packets + research_packets:
         if all(packet.get(key) for key in ("take_path", "claim_id", "job_id", "attempt_id")):
             packet["direct_take_contract"] = {
                 "create_only": True,
@@ -409,14 +502,14 @@ def build_index(repo_root: Path) -> dict[str, Any]:
                 }
 
     lane_available = {
-        "research": bool(research_packets),
+        "research": bool(recovery_packets or research_packets),
         # A fresh Discovery invocation always starts by attempting backward
         # references. Forward/normal stock is still exposed below, but must not
         # falsely advertise direct-start readiness for the primary round.
         "discovery": bool(discovery_primary_packets),
     }
     zero_wait_content_start_allowed = bool(
-        research_packets
+        (recovery_packets or research_packets)
         if suggested == "research"
         else (
             any(
@@ -472,6 +565,9 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             "immediately, while canonical run-state/precheck/claim publication continues asynchronously. "
             "same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence "
             "over creating a new take, so content work can resume immediately while canonical route repair proceeds; "
+            "coherent unsubmitted record banks whose old claim expired are exposed in research_recovery_resume for their "
+            "original worker, and the matching current pool claim is direct-taken before unrelated fresh FIFO work so "
+            "expired-same-job recovery can retag the preserved slots instead of orphaning them; "
             "resume packets also expose the canonical status-only submission path/template so a single unreadable paper "
             "can be durably terminalized and the next standby can start without ending the run; "
             "direct_start_allowed requires prepared stock for the fresh invocation's primary route (backward for Discovery), "
@@ -486,6 +582,7 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         ),
         "research": research_packets,
         "research_resume": research_resume,
+        "research_recovery_resume": research_recovery_resume,
         "discovery": discovery_packets,
     }
 
