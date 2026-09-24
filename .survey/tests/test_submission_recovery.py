@@ -2,7 +2,6 @@ import json
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -182,8 +181,7 @@ class DiscoverySubmissionRecoveryTests(unittest.TestCase):
                 },
             })
 
-            with patch.object(recovery.queue_worker, "validate_discovery_precheck", return_value=None):
-                summary = recovery.recover(sr)
+            summary = recovery.recover(sr)
 
             result = json.loads((results / "current-round.json").read_text(encoding="utf-8"))
             self.assertEqual(summary["recovered_count"], 1)
@@ -193,6 +191,42 @@ class DiscoverySubmissionRecoveryTests(unittest.TestCase):
                 result["submission"],
                 "work-queue/submissions/discovery/current-round.json",
             )
+
+
+
+    def test_obsolete_nested_precheck_isolation_is_retried(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            sr = survey_root(root)
+            submissions = sr / "work-queue/submissions"
+            results = sr / "work-queue/results"
+            write_json(submissions / "discovery/historical-round.json", {
+                "operation": "submit_discovery_round",
+                "candidates": [],
+                "discovery_stats": {
+                    "run_key": "historical-run",
+                    "round": "historical-round",
+                    "axis": "backward",
+                    "round_submission_index": 1,
+                    "round_submission_count": 1,
+                },
+            })
+            write_json(results / "historical-round.json", {
+                "ok": False,
+                "operation": "submit_discovery_round",
+                "failure_class": "discovery_precheck",
+                "error_code": "discovery_precheck_required",
+                "error": "Discovery precheck receipt is required for this run.",
+            })
+
+            summary = recovery.recover(sr)
+
+            result = json.loads((results / "historical-round.json").read_text(encoding="utf-8"))
+            self.assertEqual(summary["recovered_count"], 1)
+            self.assertEqual(summary["isolated_count"], 0)
+            self.assertTrue(result["ok"])
+            self.assertTrue(result["recovered"])
+            self.assertTrue(result["ingested"])
 
 
 
