@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-54d2a2c5f4eca8e69e54d846",
-  "job_id": "job-research-105b69444b4fa0ad",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-54d2a2c5f4eca8e69e54d846",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-54d2a2c5f4eca8e69e54d846","job_id":"job-research-105b69444b4fa0ad","data":{"limitations":"実証コーパスは一人のpower user、Claude Code、15ソフトウェアプロジェクトに偏り、他製品・一般ユーザー・非コーディング用途で同じ無駄率やfault率になる保証はない。L3会話圧縮は実装済みだが大規模評価前、L4クロスセッション記憶は未実装。現在のFIFO age policyは定常時には低faultだが、作業集合がresident setを超えると97% faultのthrashingへ陥る。構造変更はprompt cache invalidationを起こし、一時的に大きな再計算コストを生む。","differences":"LLMLinguaやagent pruningは情報量やタスク重要度でpromptを小さくするが、Pichayは内容意味を推定する前に再取得可能性とアクセス履歴を管理する。MemGPTはVM比喩とarchival memoryを導入したが、容量到達時のflush中心で、明示的なreleaseや実測fault率を主眼にしない。SideQuestはKV cache自体から古いtool outputを追い出すため推論engine変更を要するが、PichayはAPI proxyでmessage列を変換する。prompt cachingは再計算を減らすだけでcontext占有を減らさない。","implementation_status":"L1 eviction、L2 fault-driven pinning、L3 model-authored collapseをproduction proxyへ実装し、日常のソフトウェア開発で使用している。probe、proxy、experiment runnerにより計測・介入・比較を分離する。L4 persistent cross-session memoryは設計のみで、multi-user検証、cost-aware replacement、pin decay、phase-aware evictionなどはfuture workとして残る。","research_positioning":"本サーベイではGPU内部KV offloadの直接手法ではなく、推論要求を構成する上位文脈の階層メモリ化として位置付ける。FlexGen等がtensor/KVをGPU・CPU・SSD間で動かすのに対し、Pichayは意味のあるtool result/pageをL1 contextからclient backing storeへ追い出す。共通する本質は、有限で高価な高速層をworking setだけに限定し、miss/faultを許容して大容量低速層を使うことにある。保持コストが毎ターン累積するというLLM固有の逆転コストモデルは、SSD/NVMe活用を含む将来の階層推論で置換方針を考える際にも有用な視点を与える。"},"reservation":{"claim_id":"claim-preload-54d2a2c5f4eca8e69e54d846","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
