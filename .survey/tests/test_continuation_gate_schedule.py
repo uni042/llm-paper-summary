@@ -45,9 +45,9 @@ def make_args(**overrides):
         candidate_inventory=None,
         work_mode="auto",
         research_audit_completed_this_invocation=0,
-        research_minimum_completions=3,
+        research_minimum_completions=5,
         discovery_rounds_completed=0,
-        discovery_min_rounds=4,
+        discovery_min_rounds=8,
         discovery_exhausted=False,
         next_axis_available=False,
     )
@@ -77,7 +77,7 @@ class ContinuationGateScheduleTests(unittest.TestCase):
             seconds_to_run_deadline=3500,
         ))
         self.assertEqual(result["work_mode"], "research")
-        self.assertEqual(result["research_quota_remaining"], 3)
+        self.assertEqual(result["research_quota_remaining"], 5)
 
     def test_inventory_at_least_threshold_is_research_and_exposes_combined_quota(self):
         result = mod.decide(make_args(
@@ -86,13 +86,13 @@ class ContinuationGateScheduleTests(unittest.TestCase):
             seconds_to_run_deadline=3500,
         ))
         self.assertEqual(result["work_mode"], "research")
-        self.assertEqual(result["research_minimum_completions"], 3)
+        self.assertEqual(result["research_minimum_completions"], 5)
         self.assertEqual(result["research_audit_completed_this_invocation"], 1)
-        self.assertEqual(result["research_quota_remaining"], 2)
+        self.assertEqual(result["research_quota_remaining"], 4)
         self.assertEqual(result["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
 
     def test_research_keeps_claiming_after_minimum_floor(self):
-        for completed in (3, 4, 7):
+        for completed in (5, 6, 9):
             with self.subTest(completed=completed):
                 result = mod.decide(make_args(
                     candidate_inventory=50,
@@ -107,10 +107,10 @@ class ContinuationGateScheduleTests(unittest.TestCase):
                 self.assertEqual(result["research_quota_remaining"], 0)
 
 
-    def test_discovery_minimum_four_rounds_is_preserved(self):
+    def test_discovery_minimum_eight_rounds_is_preserved(self):
         result = mod.decide(make_args(
             candidate_inventory=49,
-            discovery_rounds_completed=3,
+            discovery_rounds_completed=7,
             discovery_exhausted=True,
             next_axis_available=False,
             independent_work=False,
@@ -125,7 +125,7 @@ class ContinuationGateScheduleTests(unittest.TestCase):
     def test_discovery_exhaustion_does_not_end_run_early(self):
         result = mod.decide(make_args(
             candidate_inventory=49,
-            discovery_rounds_completed=4,
+            discovery_rounds_completed=8,
             discovery_exhausted=True,
             next_axis_available=False,
             independent_work=False,
@@ -146,12 +146,12 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         ))
         self.assertEqual(result["work_mode"], "research")
         self.assertEqual(result["mode_source"], "explicit_work_mode")
-        self.assertEqual(result["research_quota_remaining"], 1)
+        self.assertEqual(result["research_quota_remaining"], 3)
 
-    def test_four_round_floor_uses_total_completed_prechecks(self):
+    def test_eight_round_floor_uses_total_completed_prechecks(self):
         result = mod.decide(make_args(
             candidate_inventory=49,
-            discovery_rounds_completed=4,
+            discovery_rounds_completed=8,
             discovery_exhausted=True,
             next_axis_available=False,
             independent_work=False,
