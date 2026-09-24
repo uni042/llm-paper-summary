@@ -2,108 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-preload-4b68202feb39838866eccea9",
-  "job_id": "job-research-97b59f2c42d3b70d",
-  "data": {
-    "canonical_id": "arXiv:2410.01035",
-    "arxiv_id": "2410.01035",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "Don't Stop Me Now: Embedding Based Scheduling for LLMs",
-    "summary": "対話型LLMサービングでは、出力長が未知なため先着順では短い要求が長い要求の後ろで待たされる一方、最短残り処理時間型のプリエンプションは未完了要求のKVキャッシュを保持してGPUメモリを圧迫する。TRAILは、初回だけBERTで出力長を見積もった後、対象LLM自身の中間層埋め込みを各デコード反復で再利用し、約210万パラメータの軽量分類器から残り長を逐次更新する。さらに予測残り時間が短い要求を優先しつつ、初期予測長rに対して年齢aがC×r未満の前半だけプリエンプトを許す制限付きSPRPTを導入する。Llama-3-8B-Instructを単一A100 80GB上のvLLM 0.5.0へ統合し、Alpaca 1万要求で評価した結果、埋め込み精緻化はBERTのみより平均絶対誤差を2.66倍低減し、vLLMに対して平均遅延を1.66〜2.01倍、平均初回トークン時間を1.76〜24.07倍低減した。理論面ではM/G/1待ち行列に対する制限付きSPRPTの平均応答時間を閉形式で導出し、付録でメモリと応答時間の交換関係もシミュレーションする。",
-    "list_summary": "TRAILはLLM内部層埋め込みで残り出力長を逐次予測し、KVキャッシュ増加前だけプリエンプトする制限付きSPRPTでvLLMの待ち時間を削減する。",
-    "authors": [
-      "Rana Shahout",
-      "Eran Malach",
-      "Chunwei Liu",
-      "Weifan Jiang",
-      "Minlan Yu",
-      "Michael Mitzenmacher"
-    ],
-    "authors_affiliations": "Rana Shahout、Eran Malach、Weifan Jiang、Minlan Yu、Michael MitzenmacherはHarvard University。Chunwei LiuはMIT。",
-    "published": "2024-10-01",
-    "publication": "arXiv:2410.01035v1",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint; under review",
-    "publication_version": "v1",
-    "lineage": "LLMサービング／予測型スケジューリング",
-    "topics": [
-      "出力長予測",
-      "中間層埋め込み",
-      "要求スケジューリング",
-      "プリエンプション",
-      "KVキャッシュ"
-    ],
-    "importance": "高",
-    "hardware_evaluation": "実機",
-    "hardware_details": "単一NVIDIA A100 80GB、64基のAMD EPYC 7313 16-Core Processorコア、503 GiBメモリ、CUDA 12.3。サービングモデルはLlama-3-8B-Instruct。",
-    "quality_effect": "要求の生成モデルやデコード内容を近似する方式ではなく、実行順序とプリエンプション可否を変える。出力長分類器はスケジューリング判断だけに使われるため、同一モデル・生成設定での生成品質を意図的には変更しない。ただしプリエンプト済み要求のKVを捨てるOOM方針では再計算が入り、遅延へ影響する。",
-    "storage_targets": [
-      "GPU上のKVキャッシュ"
-    ],
-    "bottlenecks": [
-      "出力長の不確実性",
-      "先頭要求による待ち",
-      "プリエンプト済み要求のKVキャッシュ保持",
-      "GPUメモリ容量"
-    ],
-    "evidence_locations": [
-      "第3.1節の埋め込み予測",
-      "第3.2節の予測器実行費用",
-      "第3.3節の制限付きSPRPT",
-      "第4節のA100実機評価",
-      "第6節の制約",
-      "付録C〜Eの理論・シミュレーション"
-    ],
-    "references": [
-      {
-        "canonical_id": "arXiv:2406.04785"
-      },
-      {
-        "canonical_id": "arXiv:1909.03368"
-      },
-      {
-        "canonical_id": "arXiv:1902.00732"
-      },
-      {
-        "canonical_id": "arXiv:2404.08509"
-      },
-      {
-        "canonical_id": "arXiv:1910.01108"
-      },
-      {
-        "canonical_id": "arXiv:2402.03564"
-      },
-      {
-        "canonical_id": "arXiv:2408.00741"
-      },
-      {
-        "canonical_id": "arXiv:2305.05920"
-      }
-    ],
-    "references_checked_at": "2026-09-24",
-    "references_source": "arxiv-pdf-reference-section",
-    "references_total": 20,
-    "source": "https://arxiv.org/abs/2410.01035",
-    "sources": [
-      "https://arxiv.org/abs/2410.01035",
-      "https://arxiv.org/pdf/2410.01035",
-      "https://arxiv.org/html/2410.01035"
-    ],
-    "code": null,
-    "implementation": "論文はvLLM 0.5.0を改造した実装で評価しているが、一次資料と公開コード探索では著者公式リポジトリを確認できなかった。",
-    "implementation_status": "paper-implementation-no-official-code-found",
-    "evaluation_type": "real-hardware",
-    "last_checked": "2026-09-24",
-    "last_audited": null,
-    "audit_version": 0
-  },
+  "attempt_id": "attempt-preload-609beb86595a0a7244ab26ff",
+  "job_id": "job-research-9ffff7b3c686d070",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-4b68202feb39838866eccea9",
+    "claim_id": "claim-preload-609beb86595a0a7244ab26ff",
     "worker_id": "worker-924920",
     "worker_kind": "scheduled_chat"
   }

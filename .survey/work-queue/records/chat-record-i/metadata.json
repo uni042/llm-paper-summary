@@ -2,100 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-preload-2fa50b35dc3b52ca57aadaca",
-  "job_id": "job-research-c4dbc458851f604c",
-  "data": {
-    "canonical_id": "arXiv:2404.08509",
-    "arxiv_id": "2404.08509",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.CL",
-        "cs.LG"
-      ]
-    },
-    "title": "Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction",
-    "summary": "対話型LLMの出力長が事前には分からないため、到着順処理では長い生成が後続の短い要求を待たせる問題に対し、軽量なBERT-base代理モデルで各入力の出力トークン長を予測し、予測長が短い順に実行する投機的最短ジョブ優先（Speculative Shortest-Job-First; SSJF）を提案する。予測器はLMSYS-Chat-1Mで微調整し、L1損失の回帰が最良だった。既存のメモリ管理やバッチ戦略を変更せず、無バッチ、動的バッチ、連続バッチへ適用できる。2基のNVIDIA V100上で実データと生産ワークロード到着トレースを使い、先着順（First-Come-First-Serve; FCFS）に対して平均ジョブ完了時間を30.5〜39.6%削減し、スループットを2.2〜3.6倍へ高めた。代理予測の平均遅延は7.6msで、平均モデル実行9.8秒に比べ0.02%と小さい。",
-    "list_summary": "SSJFはBERT-base代理モデルでLLMの出力長を予測して短い要求を先に処理し、FCFS比で平均完了時間を30.5〜39.6%削減する。",
-    "authors": [
-      "Haoran Qiu",
-      "Weichao Mao",
-      "Archit Patke",
-      "Shengkun Cui",
-      "Saurabh Jha",
-      "Chen Wang",
-      "Hubertus Franke",
-      "Zbigniew T. Kalbarczyk",
-      "Tamer Başar",
-      "Ravishankar K. Iyer"
-    ],
-    "authors_affiliations": "Haoran Qiu、Weichao Mao、Archit Patke、Shengkun Cui、Zbigniew T. Kalbarczyk、Tamer Başar、Ravishankar K. IyerはUIUC。Saurabh Jha、Chen Wang、Hubertus FrankeはIBM Research。",
-    "published": "2024-04-12",
-    "publication": "5th International Workshop on Cloud Intelligence and AIOps, co-located with ASPLOS 2024",
-    "publication_type": "Workshop paper",
-    "publication_status": "Accepted at AIOps 2024; arXiv v2",
-    "publication_version": "v2",
-    "lineage": "LLMサービング／スケジューリング",
-    "topics": [
-      "出力長予測",
-      "要求スケジューリング",
-      "ジョブ完了時間",
-      "連続バッチ",
-      "対話型LLM"
-    ],
-    "importance": "高",
-    "hardware_evaluation": "実機",
-    "hardware_details": "IBM Cloud gx2-16x128x2v100上のNVIDIA Tesla V100 16GBを2基使用。GPUのストリーミングマルチプロセッサ周波数は最大1380MHz、最小200MHz。",
-    "quality_effect": "要求の順序を変えるだけでモデル計算や生成確率を近似しないため、生成内容の品質自体は変更しない。予測誤差は待ち時間と処理順序へ影響するが、出力トークン列の計算を削除・置換しない。",
-    "storage_targets": [
-      "KVキャッシュ管理は変更しない"
-    ],
-    "bottlenecks": [
-      "出力長の不確実性",
-      "先頭要求による待ち行列停滞",
-      "長さの異なる要求を同一バッチへ入れた際の待ち"
-    ],
-    "evidence_locations": [
-      "第2節の動機と出力長分布",
-      "第3.1節の代理予測器",
-      "第3.2節のバッチ別スケジューリング",
-      "第4.2節のJCT・スループット",
-      "第4.3節の予測精度とアブレーション",
-      "第6節の飢餓・プリエンプション議論"
-    ],
-    "references": [
-      {
-        "canonical_id": "arXiv:2305.09781"
-      },
-      {
-        "canonical_id": "arXiv:2305.05920"
-      },
-      {
-        "canonical_id": "arXiv:2309.11998"
-      }
-    ],
-    "references_checked_at": "2026-09-24",
-    "references_source": "arxiv-html-reference-section",
-    "references_total": 32,
-    "source": "https://arxiv.org/abs/2404.08509",
-    "sources": [
-      "https://arxiv.org/abs/2404.08509",
-      "https://arxiv.org/html/2404.08509v2",
-      "https://arxiv.org/pdf/2404.08509",
-      "https://github.com/James-QiuHaoran/LLM-serving-with-proxy-models"
-    ],
-    "code": "https://github.com/James-QiuHaoran/LLM-serving-with-proxy-models",
-    "implementation": "著者の公開実装あり。論文は既存サービング基盤のメモリ管理・バッチ機構を置き換えず、予測長を優先度として使う構成を示す。",
-    "implementation_status": "official-code-available",
-    "evaluation_type": "real-hardware",
-    "last_checked": "2026-09-24",
-    "last_audited": null,
-    "audit_version": 0
-  },
+  "attempt_id": "attempt-preload-b29bf232cafd652eeeb8712e",
+  "job_id": "job-research-659a613581e8490b",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-preload-2fa50b35dc3b52ca57aadaca",
+    "claim_id": "claim-preload-b29bf232cafd652eeeb8712e",
     "worker_id": "worker-924920",
     "worker_kind": "scheduled_chat"
   }
