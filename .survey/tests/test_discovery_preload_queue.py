@@ -366,6 +366,47 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
         self.assertEqual(result["preload_id"], entry["preload_id"])
 
 
+    def test_exhausted_repository_reference_source_restarts_from_zero(self) -> None:
+        first = preload.top_up(self.root, target=1, max_new=1)
+        self.assertEqual(first["created_count"], 1)
+        entry = preload._entries(self.root)[0]
+        self.assertEqual(entry["provider"], "repository_references")
+        write_json(
+            self.root / preload._result_path(entry),
+            {
+                "schema_version": 3,
+                "operation": "precheck_discovery_candidates",
+                "ok": True,
+                "evaluation_allowed": True,
+                "request_id": entry["precheck_request_id"],
+                "run_key": f"preload:{entry['preload_id']}",
+                "results": [],
+                "allowed_records": [],
+                "unseen_result_count": 0,
+                "next_cursor": None,
+                "provider_exhausted": True,
+            },
+        )
+        write_json(
+            self.root / preload._ingested_path(entry["preload_id"]),
+            {
+                "schema_version": 1,
+                "preload_id": entry["preload_id"],
+                "run_key": "finished-run",
+            },
+        )
+
+        second = preload.top_up(self.root, target=1, max_new=1)
+        self.assertEqual(second["available_before"], 0)
+        self.assertEqual(second["created_count"], 1)
+        replacement = next(
+            row
+            for row in preload._entries(self.root)
+            if row["preload_id"] == second["created"][0]
+        )
+        self.assertIsNone(replacement["initial_cursor"])
+        self.assertGreater(int(replacement["sequence"]), int(entry["sequence"]))
+
     def test_fixed_source_fallback_reuses_preload_source_policy(self) -> None:
         backward = preload.fallback_source(self.root, direction="backward")
         self.assertIsNotNone(backward)
