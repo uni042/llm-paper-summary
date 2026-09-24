@@ -421,13 +421,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         if transient_submission_wait:
             next_action_message = (
                 "既提出descriptorと未確定resultは耐久追跡対象として残しますが、submission result待ちは新規claimの同期障壁にしません。"
-                "最新queue/claim stateを再取得して次のResearch/Auditを1件claimし、論文処理を継続します。"
+                "最新queue/claim stateを再取得し、既確保standbyのforeground昇格またはclaim window補充を行ってResearch/Audit処理を継続します。1回のclaim requestが複数assignmentを返しても本文処理はforeground 1件だけです。"
                 "descriptor-backed旧claimがactive表示でも、新claim処理の正規解放に任せます。"
             )
         else:
             next_action_message = (
                 "前jobは終端しましたがrunは終了しません。最新queue/claim stateを再取得し、"
-                "同一workerの未完了claimがないことを確認して次のResearch/Auditを1件claimします。"
+                "同一workerのclaim window状態を確認し、既確保standbyの昇格または必要なstandby補充を行います。本文処理はforeground 1件だけです。"
             )
     elif required_action == "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY":
         next_action_message = (
