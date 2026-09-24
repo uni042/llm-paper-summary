@@ -1,42 +1,15 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-09-24T05:01:48+00:00",
-  "last_run_key": "scheduled-chat-00-20260924T045834Z-c6e4",
-  "last_round": "direct-take-disc-108f1a0f-c6e4",
+  "updated_at": "2026-09-24T05:38:21+00:00",
+  "last_run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
+  "last_round": "direct-take-discovery-d4a731-r2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-17T07:00:00+09:00",
-      "round": "specialist-scheduling-memory-1",
-      "axis": "2025 LLM serving scheduling・CPU/GPU coupled memory・DIMM-PIM disaggregation",
-      "query_summary": "直近の2026-09新着runtime軸を反復せず、2025年のserving scheduler、CPU/GPU coupling、PIM disaggregation、memory-aware batchingへ検索窓を移動。canonical arXiv shardで既収録をcandidate評価前に除外し、provider検索窓が返した未収録6件を評価した。",
-      "candidate_count": 4,
-      "duplicate_filtered_count": 4,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2502.12574",
-        "arXiv:2505.10259",
-        "arXiv:2502.05370",
-        "arXiv:2509.17863",
-        "arXiv:2504.11320",
-        "arXiv:2511.14510",
-        "arXiv:2504.07494",
-        "arXiv:2507.06608"
-      ],
-      "next_axis_hint": "採用候補のforward/backward citationと、CPU serving・network/topology-aware servingへ独立軸を移す。2025 scheduling keywordの同一検索窓は直ちに反復しない。",
-      "source_submission": "work-queue/submissions/20260917T0700JST-discovery-specialist-scheduling-memory-1.json"
-    },
     {
       "run_key": "2026-09-17T07:10:00+09:00",
       "round": "legacy-invalid-recovery-1",
@@ -8926,6 +8899,42 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:direct-take-discovery-d4a731-r2",
+      "precheck_request_id": "direct-take-discovery-d4a731-r2",
+      "run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
+      "round": "direct-take-discovery-d4a731-r2",
+      "axis": "preload-backward-structured-references",
+      "query_summary": "収録済み論文の構造化後方参照を正規schema v3で再検査し、20件の未収録候補から推論システムへ直接寄与する候補を選別。",
+      "provider": "repository_references",
+      "source_url": "repository://structured-references",
+      "citation_direction": "backward",
+      "seed_canonical_id": null,
+      "preload_id": "preload-0937a1afddfa6907a889",
+      "candidate_count": 20,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [
+        "arXiv:2311.01282"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/20260924T053120Z-scheduled-chat-30-d4a731-r2.json",
+      "source_submissions": [
+        "work-queue/submissions/20260924T053120Z-scheduled-chat-30-d4a731-r2.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 20,
+      "post_final_dedupe_count": 20,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -16842,16 +16851,16 @@
       "next_axis_hint": "continue selector with another productive seed or backward-reference window"
     },
     "preload-backward-structured-references": {
-      "last_run_key": "scheduled-chat-00-20260923T215800Z-6f5800",
-      "rounds": 8,
-      "candidate_count": 160,
+      "last_run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
+      "rounds": 9,
+      "candidate_count": 180,
       "duplicate_filtered_count": 40,
-      "novel_candidate_count": 120,
+      "novel_candidate_count": 140,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 117,
-      "accepted_count": 19,
-      "duplicate_ratio": 0.25,
-      "final_duplicate_ratio": 0.025,
+      "post_final_dedupe_count": 137,
+      "accepted_count": 20,
+      "duplicate_ratio": 0.2222222222222222,
+      "final_duplicate_ratio": 0.02142857142857143,
       "next_axis_hint": null
     },
     "backward references of FlexGen offload and hierarchical-memory LLM inference": {
@@ -18251,6 +18260,29 @@
       "cooldown": false,
       "last_run_key": "scheduled-chat-00-20260924T045834Z-c6e4",
       "last_round": "direct-take-disc-108f1a0f-c6e4"
+    },
+    "window-a1b589bb9113128c8047": {
+      "topic": "structured repository references",
+      "source": "repository_references",
+      "date_range": "all",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-a1b589bb9113128c8047",
+      "scan_count": 1,
+      "raw_result_count": 20,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 1,
+      "last_position": "cursor-0",
+      "unseen_rate": 1.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.05,
+      "cooldown": false,
+      "last_run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
+      "last_round": "direct-take-discovery-d4a731-r2"
     }
   },
   "recent_search_windows": [
@@ -19660,6 +19692,27 @@
       "duplicate_rate": 0.0,
       "candidate_acceptance_rate": 0.0,
       "last_position": "cursor-40-provider-exhausted"
+    },
+    {
+      "topic": "structured repository references",
+      "source": "repository_references",
+      "date_range": "all",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-curation",
+      "search_window_key": "window-a1b589bb9113128c8047",
+      "run_key": "scheduled-chat-30-20260924T052822Z-d4a731",
+      "round": "direct-take-discovery-d4a731-r2",
+      "raw_result_count": 20,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 1,
+      "unseen_rate": 1.0,
+      "duplicate_rate": 0.0,
+      "candidate_acceptance_rate": 0.05,
+      "last_position": "cursor-0"
     }
   ],
   "search_window_history_limit": 96,
