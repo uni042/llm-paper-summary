@@ -10,14 +10,15 @@
 
 ## 最新固定スナップショットの棚卸し（2026-09-24）
 
-- 対象commit: `cbb17a29b4bd46b62e123984c0f8123bb7e5d5fb`
+- 対象commit: `62401ab310da02b472d31715e3c4b3b6364a9bbc`
 - 機械可読台帳: `.survey/reports/legacy-inventory.json`（`source_commit` を確認すること）
 - 論文監査: `.survey/reports/legacy-paper-audit.json`（同じ `source_commit` を確認すること）
-- 走査対象ファイル: 10,828。UTF-8走査不能0。
-- 分類: A〜Eのレビュー済み分類0。未レビュー10,828。したがって `legacy_remaining=10,828` は「旧形式の実データ件数」ではなく、未分類・未決のゲート値である。
+- 走査対象ファイル: 10,902。UTF-8走査不能0。
+- 分類: A〜Eのレビュー済み分類0。未レビュー10,902。したがって `legacy_remaining=10,902` は「旧形式の実データ件数」ではなく、未分類・未決のゲート値である。
 - 旧形式marker候補ヒット: 1,320（`chat-inbox.json` 105、旧Scheduled Chat名1,193、旧unbanked marker 2、旧record bank root 10、旧要約heading 10）。文字列一致であり、ライブ/履歴や旧reader依存を個別判定した件数ではない。
 - 論文監査対象: 1,026。本文品質 PASS 243 / WARN 49 / FAIL 734、明示 `list_summary` 欠落0（一覧品質 PASS 1,017 / WARN 9 / FAIL 0）、代表結果監査 PASS 1,000 / FAIL 26。
 - この状態では旧reader削除、履歴削除、ライブ移行を開始しない。紙面FAILは一次資料を読んで修正し、状態ファイルは参照・終端・writer契約を個別に確認する。
+- 作業ブランチで一次資料を再確認したMixtral offloading論文（`2312.17238`）の評価説明を日本語化し、本文・一覧・代表結果の3監査がPASS。変更後も全論文FAIL件数の大勢は変わらず、全件合格の条件には未到達。
 
 ## コード経路の暫定分類
 
