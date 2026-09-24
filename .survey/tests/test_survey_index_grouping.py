@@ -3,6 +3,7 @@ from __future__ import annotations
 import sys
 import unittest
 from datetime import datetime
+import tempfile
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -10,6 +11,7 @@ from zoneinfo import ZoneInfo
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
+import survey  # noqa: E402
 from survey import _render_paper_list, _render_taxonomy_list  # noqa: E402
 
 
@@ -23,6 +25,37 @@ class SurveyIndexGroupingTest(unittest.TestCase):
             "month": month,
             "implementation": None,
         }
+
+    def test_paper_views_use_explicit_list_summary(self) -> None:
+        explicit = "本研究は明示された一覧文をそのまま用い、本文の概要から自動短縮しない方式を採用する。"
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            survey_root = repo / ".survey"
+            survey_root.mkdir()
+            paper_dir = repo / "papers" / "inference" / "example"
+            paper_dir.mkdir(parents=True)
+            paper = paper_dir / "2026-2609.00001-example.md"
+            paper.write_text(
+                "---\\n"
+                "title: Example\\n"
+                "summary: 本文から作る旧形式の説明であり、一覧用の明示文とは異なる。\\n"
+                f"list_summary: {explicit}\\n"
+                "published: '2026-09-01'\\n"
+                "---\\n"
+                "# Example\\n\\n"
+                "> 本文の引用文を一覧に使ってはならない。十分な長さを確保しても明示一覧文を優先する。\\n\\n"
+                "## 概要\\n\\n本文の概要は別の説明として保持する。\\n",
+                encoding="utf-8",
+            )
+            previous_root = survey.ROOT
+            try:
+                survey.ROOT = survey_root
+                rows = survey.paper_views()
+            finally:
+                survey.ROOT = previous_root
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["summary"], explicit)
 
     def test_recent_cited_papers_are_featured_and_older_papers_use_rolling_year_buckets(self) -> None:
         rows = [
