@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 07:28:48 JST**
+> 自動生成: **2026-09-25 07:31:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **335** |
-| 未claim Research job | **203** |
+| 未claim Research job | **191** |
 | 直近24hの検証済みResearch収録 | **19** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
 | 最終検証済みDiscovery探索 | **09-25 07:28:01 JST** |
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（22時間52分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（22時間55分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **3** | **3** | **0** | **132** | **0** | — |
+| Research | **3** | **3** | **3** | **0** | **144** | **2** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **15** | **15** | **15** | **0** | **0** | **0** | **36** |
-| 合計 | **18** | **18** | **18** | **0** | **132** | **0** | **36** |
+| 合計 | **18** | **18** | **18** | **0** | **144** | **2** | **36** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -224,37 +224,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **132件** / 直近15分heartbeat: **0件**
-- `arXiv:2211.10438` — SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-05c9fecf1a5510e9.json`
-- `DOI:10.1109/cloud67622.2025.00028` — ZipNN: Lossless Compression for AI Models / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-14b72fcf4a8168cf.json`
-- `arXiv:2511.12286` — Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-19ebd04771d99798.json`
-- `arXiv:2609.21079` — DLB: Distributed Load Balancing at Scale for Generative AI Inference / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-207262571f4eb880.json`
-- `DOI:10.1109/ISCAS66217.2026.11562764` — AdaCGen: Heterogeneity-Aware Layer Management for Efficient KV Cache Offloading in LLMs / worker `scheduled-chat-30`
-  - claim: **09-25 06:31:05 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2a1bde22bebd2f67.json`
-- `OpenReview:02f3mUtqnM` — Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-35087281810758f2.json`
-- `arXiv:2511.19480` — Exploiting the Experts: Unauthorized Compression in MoE-LLMs / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-372c7ba23950bd0c.json`
-- `arXiv:2609.25405` — Efficient Iterative Retrieval with Heterogeneous Batching / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-396b5a1af9f8a040.json`
-- `arXiv:2405.13019` — A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-82b8ef403de7a370.json`
-- `arXiv:2607.24260` — KAP: Bridging the Knowledge Selection-Runtime Consumption Gap in LLM Systems / worker `scheduled-chat-30`
-  - claim: **09-25 06:29:26 JST** / heartbeat: **09-25 06:31:05 JST** / lease expiry: **09-25 08:01:05 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9c9df371bdbac091.json`
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **2件**
+- `arXiv:2403.01876` — DéjàVu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0dbe9070b5598362.json`
+- `DOI:10.1109/LES.2025.3616900` — LPC: Efficient Lossless Parameter Compression for Deploying LLM Inference on Edge Systems / worker `shared-preload-pool`
+  - claim: **09-25 00:44:23 JST** / heartbeat: **09-25 07:29:58 JST** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1c0254220f4e6305.json`
+- `arXiv:2608.02703` — ARCHead: Activation-Metric Residual Correction for Large Language Model Output Heads / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-590ed0885ee9194c.json`
+- `arXiv:2604.26968` — Predictive Multi-Tier Memory Management for KV Cache in Large-Scale GPU Inference / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5ad45ab69ece2c8b.json`
+- `DOI:10.1145/3689031.3696075` — HybridFlow: A Flexible and Efficient RLHF Framework / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-68536c168eab2a5c.json`
+- `arXiv:2606.01065` — Leyline: KV Cache Directives for Agentic Inference / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-72e08ad8753db376.json`
+- `arXiv:2608.12932` — FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-76ce31f768f97dbb.json`
+- `arXiv:2601.19908` — CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference / worker `shared-preload-pool`
+  - claim: **09-25 00:44:23 JST** / heartbeat: **09-25 07:29:58 JST** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7f91748e5f9d004b.json`
+- `arXiv:2207.00032` — DeepSpeed- Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-9abe9e90c796b25d.json`
+- `arXiv:2608.15531` — FlashQuant: Sparse-Dense Fusion for Memory-Efficient Outlier-Aware LLM Inference / worker `shared-preload-pool`
+  - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
+  - evidence: `.survey/work-queue/claims/job-research-a76d2b9cc887916e.json`
 
 #### Audit
 
