@@ -40,6 +40,7 @@ RUNTIME_CONDITIONS = {
     "platform_context_limit",
     "transport_unrecoverable",
 }
+PLATFORM_CONTEXT_LIMIT_EVENT = "platform_tool_call_rejected"
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -88,6 +89,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     if isinstance(runtime_condition_attempts, bool) or not isinstance(runtime_condition_attempts, int):
         raise ValueError("runtime_condition_attempts must be an integer")
     runtime_condition_detail = str(value.get("runtime_condition_detail") or "").strip()
+    runtime_condition_event = str(value.get("runtime_condition_event") or "").strip()
 
     direct_inventory = value.get("candidate_inventory_at_start")
     direct_mode = str(value.get("work_mode_at_start") or "").strip()
@@ -140,6 +142,7 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "runtime_condition_confirmed": runtime_condition_confirmed,
         "runtime_condition_attempts": max(runtime_condition_attempts, 0),
         "runtime_condition_detail": runtime_condition_detail,
+        "runtime_condition_event": runtime_condition_event,
         **direct_route,
     }
 
@@ -928,9 +931,17 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             runtime = "none"
             runtime_condition_ignored_reason = "transient_runtime_condition_not_confirmed_after_two_attempts"
     elif runtime == "platform_context_limit":
-        if not request.get("runtime_condition_confirmed") or int(request.get("runtime_condition_attempts") or 0) < 1:
+        explicit_platform_rejection = bool(
+            request.get("runtime_condition_confirmed")
+            and int(request.get("runtime_condition_attempts") or 0) >= 1
+            and request.get("runtime_condition_event") == PLATFORM_CONTEXT_LIMIT_EVENT
+            and str(request.get("runtime_condition_detail") or "").strip()
+        )
+        if not explicit_platform_rejection:
             runtime = "none"
-            runtime_condition_ignored_reason = "platform_limit_not_confirmed"
+            runtime_condition_ignored_reason = (
+                "platform_limit_requires_explicit_platform_tool_call_rejection_evidence"
+            )
 
     # 600s is only a no-new-independent-work window. The final 180s is the
     # unconditional handoff condition.
@@ -1048,6 +1059,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "runtime_condition_confirmed": request.get("runtime_condition_confirmed", False),
         "runtime_condition_attempts": request.get("runtime_condition_attempts", 0),
         "runtime_condition_detail": request.get("runtime_condition_detail", ""),
+        "runtime_condition_event": request.get("runtime_condition_event", ""),
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "seconds_to_run_deadline": seconds_to_deadline,
         **claims,
@@ -1072,6 +1084,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. "
             "The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. "
             "runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. "
+            "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected and a concrete observed-error detail; a single paper/source retrieval failure is never platform-context evidence. "
             "A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
             "When work_mode=discovery, discovery_preload exposes the oldest PRECHECKED preload matching the canonical selector direction; "
