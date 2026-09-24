@@ -342,47 +342,20 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             break
     generated_at = _iso(now)
     for packet in research_packets:
-        packet["direct_take_contract"] = {
-            "create_only": True,
-            "path": packet["take_path"],
-            "lease_seconds": claim_worker.DEFAULT_LEASE_SECONDS,
-            "payload_base": {
-                "schema_version": 1,
-                "operation": "direct_take_research",
-                "claim_id": packet["claim_id"],
-                "job_id": packet["job_id"],
-                "attempt_id": packet["attempt_id"],
-                "claim_window": claim_window_policy.DEFAULT_CLAIM_WINDOW,
-                "candidate_inventory_at_start": inventory,
-                "work_mode_at_start": "research",
-                "research_discovery_threshold": threshold,
-                "hot_dispatch_generated_at": generated_at,
-            },
-            "required_runtime_fields": [
-                "request_id",
-                "worker_id",
-                "scheduled_slot",
-                "run_key",
-                "actual_invocation_start",
-                "requested_at",
-            ],
-        }
-    for direction_packets in discovery_packets.values():
-        for packet in direction_packets:
+        if all(packet.get(key) for key in ("take_path", "claim_id", "job_id", "attempt_id")):
             packet["direct_take_contract"] = {
                 "create_only": True,
                 "path": packet["take_path"],
-                "lease_seconds": discovery_preload_queue.CLAIM_LEASE_SECONDS,
+                "lease_seconds": claim_worker.DEFAULT_LEASE_SECONDS,
                 "payload_base": {
                     "schema_version": 1,
-                    "operation": "direct_take_discovery",
-                    "direct_take": True,
-                    "preload_id": packet["preload_id"],
-                    "discovery_bank": packet["discovery_bank"],
-                    "discovery_slot_path": packet["discovery_slot_path"],
-                    "preload_result_path": packet["preload_result_path"],
+                    "operation": "direct_take_research",
+                    "claim_id": packet["claim_id"],
+                    "job_id": packet["job_id"],
+                    "attempt_id": packet["attempt_id"],
+                    "claim_window": claim_window_policy.DEFAULT_CLAIM_WINDOW,
                     "candidate_inventory_at_start": inventory,
-                    "work_mode_at_start": "discovery",
+                    "work_mode_at_start": "research",
                     "research_discovery_threshold": threshold,
                     "hot_dispatch_generated_at": generated_at,
                 },
@@ -392,10 +365,48 @@ def build_index(repo_root: Path) -> dict[str, Any]:
                     "scheduled_slot",
                     "run_key",
                     "actual_invocation_start",
-                    "claimed_at",
-                    "lease_expires_at",
+                    "requested_at",
                 ],
             }
+    for direction_packets in discovery_packets.values():
+        for packet in direction_packets:
+            if all(
+                packet.get(key)
+                for key in (
+                    "take_path",
+                    "preload_id",
+                    "discovery_bank",
+                    "discovery_slot_path",
+                    "preload_result_path",
+                )
+            ):
+                packet["direct_take_contract"] = {
+                    "create_only": True,
+                    "path": packet["take_path"],
+                    "lease_seconds": discovery_preload_queue.CLAIM_LEASE_SECONDS,
+                    "payload_base": {
+                        "schema_version": 1,
+                        "operation": "direct_take_discovery",
+                        "direct_take": True,
+                        "preload_id": packet["preload_id"],
+                        "discovery_bank": packet["discovery_bank"],
+                        "discovery_slot_path": packet["discovery_slot_path"],
+                        "preload_result_path": packet["preload_result_path"],
+                        "candidate_inventory_at_start": inventory,
+                        "work_mode_at_start": "discovery",
+                        "research_discovery_threshold": threshold,
+                        "hot_dispatch_generated_at": generated_at,
+                    },
+                    "required_runtime_fields": [
+                        "request_id",
+                        "worker_id",
+                        "scheduled_slot",
+                        "run_key",
+                        "actual_invocation_start",
+                        "claimed_at",
+                        "lease_expires_at",
+                    ],
+                }
 
     lane_available = {
         "research": bool(research_packets),
