@@ -1,8 +1,6 @@
 # Paper mechanical quality audit
 
-`.survey/scripts/audit_paper_quality.py` は `papers/inference/**/*.md` を全件走査し、`.survey/templates/paper.md` のうち機械判定できる品質条件を一覧化する。
-
-監査対象の判定はfrontmatterや`canonical_id`の正常性に依存させない。カテゴリ索引の`README.md`、横断比較表`comparison.md`、正規の移動先だけを示す`# Moved`ファイルだけを除外する。
+本文品質監査は固定基準commit `c566e8afb54617375d01db261b1a609a9ef90524` より後に追加された論文だけを対象とする。基準時点以前の論文本文は読み直さず、品質監査の対象外にする。全論文の構造・必須メタデータ検査は別に維持する。追加論文の抽出はGitの追加差分で行い、README、comparison、`# Moved`は対象外とする。
 
 この品質監査には、本文量・日本語率だけでなく、**一覧の一文解説が「何をした論文か」を失っていないか**、**単体ページの概要だけで代表結果が分かるか**も含める。
 
@@ -70,7 +68,7 @@ workflow v10の構造化研究レコードでは `metadata.list_summary` に保�
 6. 代表結果を短く入れると理解が大きく改善する場合は結果も含めてよいが、詳細な数値は`## 概要`を優先する。
 7. 論文未読者がその一文だけ読んでも、その論文の主な貢献を区別できることを最終基準とする。
 
-`.survey/scripts/list_summary.py` は、タイトル直下のワーカー生成文を最優先で使用する。まだ専用短文を持たない既存論文に限り、`## 概要`から意味的に圧縮する旧互換フォールバックを使う。このフォールバックは移行用であり、新規論文の正規生成経路には使わない。
+`.survey/scripts/survey.py` はfrontmatterの明示的な `list_summary` を一覧表示に使う。`.survey/scripts/list_summary.py` はその文章を検査するだけで、本文や `summary` から一覧文を生成・補完しない。全論文の構造検査も `list_summary` の欠落を拒否する。
 
 ## 概要に代表結果を必ず含める
 
