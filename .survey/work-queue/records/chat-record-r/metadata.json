@@ -77,6 +77,41 @@
     "implementation_status": "評価実装あり。公式公開リポジトリは本文記載なし。",
     "evaluation_type": "実機GPU評価 + オフライン学習/校正 + 複数モデル・複数ベンチマーク",
     "last_checked": "2026-09-24",
-    "audit_version": 0
+    "audit_version": 0,
+    "references": [
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      },
+      {
+        "canonical_id": "arXiv:2402.02750",
+        "arxiv_id": "2402.02750",
+        "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache"
+      },
+      {
+        "canonical_id": "arXiv:2401.18079",
+        "arxiv_id": "2401.18079",
+        "title": "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization"
+      },
+      {
+        "canonical_id": "arXiv:2504.19874",
+        "arxiv_id": "2504.19874",
+        "title": "TurboQuant: Online Vector Quantization with Near-Optimal Distortion Rate"
+      },
+      {
+        "canonical_id": "arXiv:2406.02069",
+        "arxiv_id": "2406.02069",
+        "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling"
+      },
+      {
+        "canonical_id": "arXiv:2306.14048",
+        "arxiv_id": "2306.14048",
+        "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models"
+      }
+    ],
+    "references_checked_at": "2026-09-24",
+    "references_source": "arXiv:2607.16248v1 References",
+    "references_total": 32
   }
 }
