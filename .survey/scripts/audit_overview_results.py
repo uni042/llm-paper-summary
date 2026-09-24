@@ -9,6 +9,8 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+from paper_audit_scope import PAPER_AUDIT_BASELINE, added_paper_paths
+
 PAPER_FAMILIES = ("inference", "training", "survey")
 H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 MOVED_RE = re.compile(r"^#\s+Moved(?:\s|$)", re.I | re.M)
@@ -170,6 +172,7 @@ def markdown_report(results: list[FileAudit]) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", default=".")
+    parser.add_argument("--baseline-commit", default=PAPER_AUDIT_BASELINE)
     parser.add_argument("--markdown-out")
     parser.add_argument("--json-out")
     parser.add_argument("--no-fail-exit", action="store_true")
@@ -180,15 +183,15 @@ def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
     results: list[FileAudit] = []
-    for family in PAPER_FAMILIES:
-        root = repo_root / "papers" / family
-        if not root.exists():
+    added = added_paper_paths(repo_root, args.baseline_commit)
+    for relative in sorted(added):
+        path = repo_root / relative
+        if not path.exists():
             continue
-        for path in sorted(root.rglob("*.md")):
-            text = path.read_text(encoding="utf-8", errors="ignore")
-            body = _body_without_frontmatter(text)
-            if is_paper(path, body):
-                results.append(audit_file(path, repo_root))
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        body = _body_without_frontmatter(text)
+        if is_paper(path, body):
+            results.append(audit_file(path, repo_root))
 
     report = markdown_report(results)
     if args.markdown_out:
@@ -207,6 +210,7 @@ def main() -> int:
                     "schema_version": 1,
                     "criteria": {
                         "families": list(PAPER_FAMILIES),
+                        "baseline_commit": args.baseline_commit,
                         "overview_must_include_representative_result": True,
                         "result_preference": [
                             "headline quantitative result",
