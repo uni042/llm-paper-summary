@@ -55,6 +55,45 @@ jobs:
             .survey/scripts/derive_worker_run_state.py \
             .survey/scripts/queue_worker.py
 
+      - name: Publish direct Discovery take acknowledgements early
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-discovery-precheck[bot]'
+          git config user.email 'survey-discovery-precheck[bot]@users.noreply.github.com'
+
+          for attempt in $(seq 1 4); do
+            git fetch origin main
+            git reset --hard origin/main
+
+            # The direct-take acknowledgement is lightweight and is sufficient for
+            # the worker to know that cached candidate evaluation may continue.
+            # Publish it before identity snapshot construction and formal precheck.
+            python .survey/scripts/hot_dispatch.py --repo-root . materialize-discovery \
+              | tee /tmp/direct-discovery-early.json
+
+            git add .survey/work-queue/direct-take-results
+            if git diff --cached --quiet; then
+              echo 'No new direct Discovery take acknowledgements to publish.'
+              exit 0
+            fi
+
+            git commit -m 'survey: acknowledge discovery direct takes'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Direct-take acknowledgement push race on attempt ${attempt}; retrying."
+            git reset --hard
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 8 ]; then backoff=8; fi
+            sleep "$backoff"
+          done
+
+          echo 'Failed to publish direct Discovery take acknowledgements after retries.' >&2
+          exit 1
+
       - name: Run Discovery regression tests off the foreground hot path
         if: github.event_name != 'push'
         run: |
