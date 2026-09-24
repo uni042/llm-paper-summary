@@ -4,7 +4,29 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-0eb96878e292ba8c65359cba",
   "job_id": "job-research-372c7ba23950bd0c",
-  "data": {},
+  "data": {
+    "setup": "主評価はMixtral-8x7BとMixtral-8x22Bを用い、8専門家から上位4・2・1専門家を残す帰属ベース削減を比較する。補助的にSwitch Transformer系の小型MoEでも方法の適用可能性を確認する。データはGLUEのMNLI・SST-2・QNLI、WikiText-103、XSumで、分類、言語モデル、要約という異なるタスクで削減と再調整の挙動を測る。",
+    "datasets": [
+      "GLUE（MNLI、SST-2、QNLI）",
+      "WikiText-103",
+      "XSum"
+    ],
+    "baselines": [
+      "未削減の元MoE",
+      "削減後・再調整なし",
+      "無作為抽出による再調整",
+      "通常訓練の専門家と絡み合い専門家の削減比較"
+    ],
+    "metrics": [
+      "GLUE分類精度",
+      "WikiText-103の正規化パープレキシティ",
+      "XSumのROUGE-1/2/L",
+      "ラベル使用数",
+      "専門家数を減らしたときの性能低下率"
+    ],
+    "hardware_scope": "一次資料はGPU型番、台数、実測レイテンシや消費電力を主要評価条件として報告していない。評価の中心はモデル品質とラベル効率であり、推論システムの実機スループット評価ではない。",
+    "implementation_scope": "公開済みMoEチェックポイントを用いた白箱・ルータ可視の設定で、専門家帰属、削減、再調整、防御訓練の効果を測る。絡み合い専門家の結果は論文自身が予備的実験と表現しており、大規模・多モーダルMoEへの一般化は今後の課題である。"
+  },
   "reservation": {
     "claim_id": "claim-preload-0eb96878e292ba8c65359cba",
     "worker_id": "scheduled-chat-30",
