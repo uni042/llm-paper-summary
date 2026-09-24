@@ -11,6 +11,7 @@ non-exact start telemetry.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import hashlib
 import json
 from pathlib import Path
@@ -79,15 +80,26 @@ def ensure_precheck_request(root: Path, precheck_path: Path) -> dict[str, Any]:
     worker_id = str(value.get("worker_id") or "").strip()
     scheduled_slot = str(value.get("scheduled_slot") or "").strip()
     actual_invocation_start = str(value.get("actual_invocation_start") or "").strip()
+    started_at = derive_worker_run_state._time(actual_invocation_start)
     if (
         not worker_identity.is_supported_worker_id(worker_id)
         or not worker_identity.identity_slot_valid(worker_id, scheduled_slot)
-        or derive_worker_run_state._time(actual_invocation_start) is None
+        or started_at is None
     ):
         return {
             "status": "skipped",
             "reason": "precheck_missing_recoverable_run_identity",
             "path": str(precheck_path),
+        }
+
+    now = dt.datetime.now(dt.timezone.utc)
+    age_seconds = (now - started_at.astimezone(dt.timezone.utc)).total_seconds()
+    if age_seconds > 7200 or age_seconds < -300:
+        return {
+            "status": "skipped",
+            "reason": "run_outside_active_recovery_window",
+            "path": str(precheck_path),
+            "age_seconds": int(age_seconds),
         }
 
     existing = _existing_run_request(root, worker_id, run_key)
