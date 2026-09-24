@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-71270ce404475002d20ce60c",
-  "job_id": "job-research-45a223ad00555581",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-71270ce404475002d20ce60c",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-71270ce404475002d20ce60c","job_id":"job-research-45a223ad00555581","data":{"limitations":"評価traceはhead segmentを抽出しており、長期的なarrival regime変化や全production分布を網羅しない。PABはcapacity不足時にrequestを別nodeへ回す前提であり、実際のcluster network、routing delay、KV migration等のcostはdeployment依存である。step-time predictorはmodel/GPUごとのprofilingを必要とし、未知hardwareへの即時移植性は限定される。緩いSLOではbaselineも容易に達成でき、FairBatching-vanillaの相対優位が消える条件がある。","implementation_status":"vLLM v0.10.1.1 V1 engine上で1,639行のpluggable schedulerとして実装し、core変更90行、DPLB coordinator変更16行。profiling/linear-regression用testing framework 2,777行も作成。論文本文でcode repository URLは確認できない。","research_positioning":"Sarathi-Serveのstall-free batching、vLLM/SGLangのchunked prefill、VTC等のfair scheduling、DistServe系のcluster servingの間に位置する。従来のTBT/固定token budgetではなくTTFT/TPOTの累積service progressを直接slackへ変換し、local batch形成とcluster admission/load balancingの双方に使う点が特徴。","relation_to_prior":"Sarathiはactive decodeを毎batch優先してTBTを保証するため、decodeに余裕があってもprefillを抑制し得る。vLLM defaultは大きいbatchでprefillを優先しTTFTに強いがdecode pauseが起きやすい。FairBatchingはurgent decodeだけを先に保護し、prefill、non-urgent decodeの順で資源を配ることで両者の中間をSLO slackに応じて動的に選ぶ。上位schedulerではrequest countの代わりにPABを用いる。","repository_position":"推論基盤のscheduler/load-balancing系統に置く。特にprefill/decode co-location環境でのSLO-aware batch formation、goodput最適化、cluster admission controlを比較する際の主要事例となる。","differences":"公平性をtenant間token配分ではなくprefill/decode phase間の計算資源配分として捉え、TTFTとTPOTを同じ進捗表現で扱う。batch capacityもtoken上限ではなくtime budgetから導出し、同じ予測器をPABへ拡張してcluster routingに再利用する。","followups":"prefill/decode disaggregation環境への適用、heterogeneous GPU clusterでのPAB正規化、speculative decoding併用時のslack定義、KV transfer/migration costを含むglobal scheduler、長期間production traceでのrobustnessを追跡すると有用。"},"reservation":{"claim_id":"claim-preload-71270ce404475002d20ce60c","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
