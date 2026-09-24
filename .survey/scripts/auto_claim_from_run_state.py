@@ -101,6 +101,22 @@ def _eligible(result: dict[str, Any]) -> bool:
     )
 
 
+def _carryover_resume_eligible(result: dict[str, Any]) -> bool:
+    gate = result.get("gate") if isinstance(result.get("gate"), dict) else {}
+    return bool(
+        result.get("ok") is True
+        and result.get("snapshot_origin") == "request-fast-lane"
+        and result.get("work_mode") == "research"
+        and worker_identity.identity_slot_valid(result.get("worker_id"), result.get("scheduled_slot"))
+        and result.get("scheduled_slot") != "0830"
+        and result.get("active_assignment") is True
+        and gate.get("required_action") in {
+            "CONTINUE_ASSIGNED_WORK",
+            "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY",
+        }
+    )
+
+
 def _request_id(result: dict[str, Any]) -> str:
     material = "\n".join(
         str(result.get(key) or "")
@@ -138,10 +154,13 @@ def process(repo_root: Path, run_state_results_file: Path) -> dict[str, Any]:
     source_paths = _paths_file(run_state_results_file)
     created: list[dict[str, str]] = []
     skipped: list[dict[str, str]] = []
+    resume_sources: list[Path] = []
 
     for raw in source_paths:
         path = raw if raw.is_absolute() else root / raw
         result = _read(path, {})
+        if isinstance(result, dict) and _carryover_resume_eligible(result):
+            resume_sources.append(path)
         if not isinstance(result, dict) or not _eligible(result):
             skipped.append({"path": str(raw), "reason": "not_initial_research_claim_eligible"})
             continue
@@ -219,12 +238,38 @@ def process(repo_root: Path, run_state_results_file: Path) -> dict[str, Any]:
             source["auto_initial_claim"] = auto
             _write(source_path, source)
 
+    resume_recovery: dict[str, Any] = {"skipped": True, "source_results": len(resume_sources)}
+    if resume_sources:
+        resume_recovery = claim_fast_path.process(root)
+        resume_recovery["skipped"] = False
+        resume_recovery["source_results"] = len(resume_sources)
+        hot_index = _read(root / ".survey/work-queue/hot-dispatch.json", {})
+        resume_map = hot_index.get("research_resume") if isinstance(hot_index, dict) else {}
+        if not isinstance(resume_map, dict):
+            resume_map = {}
+        for path in resume_sources:
+            source = _read(path, {})
+            if not isinstance(source, dict):
+                continue
+            packets = resume_map.get(str(source.get("worker_id") or ""), [])
+            if not isinstance(packets, list):
+                packets = []
+            source["auto_resume_recovery"] = {
+                "status": "ready" if packets else "reconciled_no_active_resume",
+                "assignment_count": len(packets),
+                "foreground": packets[0] if packets else None,
+                "assignments": packets,
+                "rule": "resume foreground immediately; do not create a new claim",
+            }
+            _write(path, source)
+
     return {
         "ok": True,
         "source_results": len(source_paths),
         "created": created,
         "skipped": skipped,
         "claim_fast_path": fast_path,
+        "resume_recovery": resume_recovery,
     }
 
 
