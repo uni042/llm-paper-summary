@@ -17,7 +17,7 @@ class ExplicitListSummaryAuditTests(unittest.TestCase):
             root = Path(td)
             paper = root / "papers" / "example.md"
             paper.parent.mkdir(parents=True)
-            explicit = "本研究は明示された一覧文をそのまま監査し、本文からの自動生成を行わない方式を採用する。"
+            explicit = "本研究は明示された一覧文をそのまま監査し、本文からの自動生成を行わない方式を採用する方針である。"
             paper.write_text(
                 "---\n"
                 "title: Example\n"
