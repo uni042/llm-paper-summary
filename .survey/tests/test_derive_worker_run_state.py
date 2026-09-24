@@ -1195,6 +1195,18 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
                 result["gate"]["required_action"],
                 "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY",
             )
+            self.assertEqual(
+                result["finalization_gate"]["next_action"],
+                "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY",
+            )
+            self.assertEqual(result["finalization_gate"]["decision"], "MUST_CONTINUE")
+            self.assertFalse(result["finalization_gate"]["finalization_permit"]["issued"])
+            self.assertIn("standby", result["finalization_gate"]["next_action_message"])
+            self.assertNotIn(
+                "最終化許可が成立",
+                result["finalization_gate"]["next_action_message"],
+            )
+            self.assertFalse(result["run_termination_allowed"])
 
 
     def test_pending_research_preflight_parks_paper_and_promotes_standby(self):
