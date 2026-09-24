@@ -27,6 +27,35 @@
     "source_url": "https://arxiv.org/abs/2511.19480",
     "code_url": null,
     "summary": "疎な専門家混合（Mixture-of-Experts; MoE）モデルの専門家分割性を、単なる効率化ではなく無断圧縮の攻撃面として評価した研究である。ルータの割当確率からタスク別の重要専門家を順位付けし、重要度の低い専門家を削除した後、能動学習（active learning）で残存専門家を少量データ再調整する攻撃を構成する。Mixtral-8x7BではGLUEで8専門家中2専門家だけを残しても精度78.9%を維持し、能動学習による6千例の再調整で83.9%まで回復した。さらに、知識を専門家間へ意図的に重ねる絡み合い専門家（entangled experts）を防御案として示し、専門家削除時の性能低下を急峻化できる可能性を報告する。",
-    "list_summary": "ルータ統計でタスク重要専門家を特定してMoEを無断圧縮する攻撃を系統評価し、少量の能動学習で性能が回復する脆弱性と、知識を専門家間に絡ませる防御を示した。"
+    "list_summary": "ルータ統計でタスク重要専門家を特定してMoEを無断圧縮する攻撃を系統評価し、少量の能動学習で性能が回復する脆弱性と、知識を専門家間に絡ませる防御を示した。",
+    "source": "https://arxiv.org/abs/2511.19480",
+    "sources": [
+      "https://arxiv.org/abs/2511.19480"
+    ],
+    "publication": "arXiv",
+    "topics": [
+      "Mixture-of-Experts",
+      "expert pruning",
+      "model compression",
+      "active learning"
+    ],
+    "implementation": "公開MoEチェックポイントを用いた研究実装。公式コードURLは確認できない。",
+    "last_checked": "2026-09-25",
+    "code": null,
+    "publication_type": "preprint",
+    "published": "2025-11-22",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "hardware_evaluation": "GPU型番・台数や実測レイテンシを主評価とせず、タスク品質とラベル効率を中心に評価する。",
+    "quality_effect": "専門家削減に伴う品質低下と再調整後の回復を測定する。",
+    "references": [
+      "arXiv:1701.06538",
+      "arXiv:2401.04088",
+      "arXiv:2402.14800"
+    ]
   }
 }
