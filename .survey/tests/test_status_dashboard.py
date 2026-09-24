@@ -8,6 +8,7 @@ from pathlib import Path
 
 SCRIPT = Path(__file__).parents[1] / "scripts" / "render_status_dashboard.py"
 EVIDENCE_SCRIPT = Path(__file__).parents[1] / "scripts" / "build_status_dashboard.py"
+DISCOVERY_RECOVERY_WORKFLOW = Path(__file__).parents[2] / ".github" / "workflows" / "survey-discovery-recovery.yml"
 
 
 def _write_json(path: Path, payload):
@@ -61,6 +62,14 @@ def _research_success(repo: Path, *, job_id="job-r", attempt="attempt-r",
 
 
 class DirectEvidenceStatusTests(unittest.TestCase):
+    def test_discovery_recovery_refreshes_status_in_authoritative_commit(self):
+        workflow = DISCOVERY_RECOVERY_WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn(
+            "python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md",
+            workflow,
+        )
+        self.assertIn("STATUS.md", workflow)
+
     def test_verified_research_ignores_conflicting_aggregate_files(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
