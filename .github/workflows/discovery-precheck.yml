@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/discovery-precheck/requests/*.json'
+      - '.survey/work-queue/discovery-precheck/results/*.json'
       - '.survey/work-queue/discovery-preload/claims/*.json'
   workflow_dispatch:
     inputs:
@@ -13,7 +14,7 @@ on:
         required: false
         type: string
   schedule:
-    - cron: '6/10 * * * *'
+    - cron: '1/5 * * * *'
 
 permissions:
   contents: write
@@ -149,7 +150,7 @@ jobs:
 
             : > /tmp/discovery-foreground-requests.txt
             : > /tmp/discovery-preload-requests.txt
-            preload_push_budget=8
+            preload_push_budget=32
             preload_push_selected=0
 
             if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
@@ -276,9 +277,10 @@ jobs:
             python .survey/scripts/derive_worker_run_state.py --repo-root . \
               | tee /tmp/discovery-run-state-derive.json
 
-            # Background preload refresh remains bounded. Foreground requests were
-            # processed first; pushes now warm at most eight preload windows so the
-            # next worker/round has PRECHECKED work without waiting for the schedule.
+            # Background preload refresh is isolated from foreground publication.
+            # A background-only invocation drains up to all 32 unresolved preload
+            # windows so READY reservations become actually usable PRECHECKED stock
+            # before the next worker arrives.
             while IFS= read -r request; do
               [ -n "$request" ] || continue
               name="$(basename "$request")"
