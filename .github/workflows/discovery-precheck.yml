@@ -5,7 +5,6 @@ on:
     branches: [main]
     paths:
       - '.survey/work-queue/discovery-precheck/requests/*.json'
-      - '.survey/work-queue/discovery-precheck/results/*.json'
       - '.survey/work-queue/discovery-preload/claims/*.json'
   workflow_dispatch:
     inputs:
@@ -13,18 +12,13 @@ on:
         description: 'Repository-relative Discovery precheck request path'
         required: false
         type: string
-  schedule:
-    - cron: '1/5 * * * *'
-
 permissions:
   contents: write
 
-# Every push gets its own foreground-capable lane so a real worker is never
-# queued behind an older Discovery run. Scheduled/manual background maintenance is
-# serialized separately. Concurrent push writers are safe because the publish loop
-# resets to latest main and recomputes all unsettled requests after every push race.
+# Foreground worker runs never share a concurrency lane. Background preload warming
+# is owned by discovery-preload-warm.yml.
 concurrency:
-  group: ${{ github.event_name == 'push' && github.sha || 'discovery-preload-background-main' }}
+  group: discovery-precheck-foreground-${{ github.sha }}
   cancel-in-progress: false
 
 jobs:
@@ -90,10 +84,8 @@ jobs:
             python .survey/scripts/hot_dispatch.py --repo-root . materialize-discovery \
               | tee /tmp/direct-discovery-materialize.json
 
-            # Foreground work always has priority, but a push must also repair the
-            # warm Discovery reserve. Deferring every preload to the 10-minute
-            # schedule can leave PRECHECKED stock at zero and create a worker idle
-            # gap. A bounded preload budget below keeps this lane responsive.
+            # Preload warming is a separate workflow. This foreground lane only
+            # processes run-specific worker prechecks and direct-take materialization.
 
             rm -rf /tmp/discovery-identities
             rm -f /tmp/discovery-rejections.json
@@ -125,15 +117,6 @@ jobs:
               echo "Reuse durable Discovery exclusion snapshot from $snapshot_source."
             fi
 
-            # Keep a background stock of pre-run Discovery windows. New worker
-            # requests are still processed before these preload requests below.
-            if [ "$GITHUB_EVENT_NAME" != "push" ] && { [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; }; then
-              python .survey/scripts/discovery_preload_queue.py \
-                --repo-root . top-up --target 32 --max-new 8 \
-                | tee /tmp/discovery-preload-topup.json
-            else
-              echo 'Skip preload top-up before foreground push processing; publish worker result first.'
-            fi
             if [ "$reuse_snapshot" -ne 1 ]; then
               python .survey/scripts/build_discovery_identity_snapshot.py \
                 --root .survey \
@@ -150,9 +133,6 @@ jobs:
 
             : > /tmp/discovery-foreground-requests.txt
             : > /tmp/discovery-preload-requests.txt
-            preload_push_budget=32
-            preload_push_selected=0
-
             if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
               case "$MANUAL_REQUEST" in
                 .survey/work-queue/discovery-precheck/requests/*.json) ;;
@@ -173,12 +153,7 @@ jobs:
                 result=".survey/work-queue/discovery-precheck/results/$name"
                 [ ! -f "$result" ] || continue
                 case "$name" in
-                  preload-*.json)
-                    if [ "$GITHUB_EVENT_NAME" != "push" ] || [ "$preload_push_selected" -lt "$preload_push_budget" ]; then
-                      printf '%s\n' "$request" >> /tmp/discovery-preload-requests.txt
-                      preload_push_selected=$((preload_push_selected + 1))
-                    fi
-                    ;;
+                  preload-*.json) : ;;
                   *) printf '%s\n' "$request" >> /tmp/discovery-foreground-requests.txt ;;
                 esac
               done
@@ -186,16 +161,6 @@ jobs:
 
             processed=0
             foreground_failures=0
-            preload_failures=0
-
-            # A real worker request owns the latency budget. Never make its durable
-            # result wait behind speculative preload provider calls in the same run.
-            # The post-publication top-up below creates/refills preload requests and
-            # their resulting push starts a separate background-only invocation.
-            if [ -s /tmp/discovery-foreground-requests.txt ]; then
-              : > /tmp/discovery-preload-requests.txt
-              echo 'Foreground Discovery present; defer background preload processing until after foreground publication.'
-            fi
 
             # Foreground worker prechecks are independent after the shared identity
             # snapshot is built. Run up to four concurrently; the batch processor
@@ -277,46 +242,6 @@ jobs:
             python .survey/scripts/derive_worker_run_state.py --repo-root . \
               | tee /tmp/discovery-run-state-derive.json
 
-            # Background preload refresh is isolated from foreground publication.
-            # A background-only invocation drains up to all 32 unresolved preload
-            # windows so READY reservations become actually usable PRECHECKED stock
-            # before the next worker arrives.
-            while IFS= read -r request; do
-              [ -n "$request" ] || continue
-              name="$(basename "$request")"
-              result=".survey/work-queue/discovery-precheck/results/$name"
-
-              provider="$(
-                python -c 'import json,sys; from pathlib import Path; p=Path(sys.argv[1]); value=json.loads(p.read_text(encoding="utf-8")); print(str(value.get("provider") or "").strip().casefold())' "$request"
-              )"
-              if [ "$provider" = "semantic_scholar" ]; then
-                sleep 2
-              fi
-
-              mkdir -p "$(dirname "$result")"
-              if python .survey/scripts/process_discovery_precheck.py \
-                --request "$request" \
-                --result "$result" \
-                --snapshot-dir /tmp/discovery-identities \
-                --rejection-ledger /tmp/discovery-rejections.json \
-                --repo-root .; then
-                :
-              else
-                preload_failures=1
-              fi
-              processed=$((processed + 1))
-            done < /tmp/discovery-preload-requests.txt
-
-            # Claims release only the Discovery sidecar, so refill those hot
-            # slots again in the same workflow instead of leaving them empty until
-            # the next scheduled run. Newly-created preload requests are durable
-            # and will be processed by this workflow's normal push/schedule path.
-            if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; then
-              python .survey/scripts/discovery_preload_queue.py \
-                --repo-root . top-up --target 32 --max-new 8 \
-                | tee /tmp/discovery-preload-post-topup.json
-            fi
-
             python .survey/scripts/hot_dispatch.py --repo-root . finalize-discovery \
               | tee /tmp/direct-discovery-finalize.json
             python .survey/scripts/hot_dispatch.py --repo-root . refresh \
@@ -348,9 +273,6 @@ jobs:
             git commit -m 'survey: publish discovery precheck results and preload stock'
 
             if git push origin HEAD:main; then
-              if [ "$preload_failures" -ne 0 ]; then
-                echo 'One or more background preload failures were persisted; foreground Discovery remains usable.' >&2
-              fi
               if [ "$foreground_failures" -ne 0 ]; then
                 echo 'One or more foreground precheck failures were persisted with recovery guidance.' >&2
                 exit 1
