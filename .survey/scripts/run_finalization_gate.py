@@ -17,6 +17,8 @@ from __future__ import annotations
 import argparse
 import json
 
+import worker_quota_policy
+
 
 PRODUCTIVE_WAIT_RECHECK_SECONDS = 0
 
@@ -55,13 +57,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         int(getattr(args, "research_audit_completed_this_invocation", 0) or 0), 0
     )
     research_minimum = max(
-        int(getattr(args, "research_minimum_completions", 5) or 5), 1
+        int(getattr(args, "research_minimum_completions", worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS) or worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS), 1
     )
     discovery_completed = max(
         int(getattr(args, "discovery_rounds_completed", 0) or 0), 0
     )
     discovery_minimum = max(
-        int(getattr(args, "discovery_min_rounds", 8) or 8), 1
+        int(getattr(args, "discovery_min_rounds", worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS) or worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS), 1
     )
 
     pending = {
@@ -231,8 +233,8 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "handoff_safe may be true for a pending asynchronous result only after the durable request/submission identity, "
             "expected result path, current pending state, and exact next canonical action have been preserved for the next run. "
             "As defense in depth, normal Research/Audit finalization is independently refused while "
-            "the three-success floor is unmet, and normal Discovery finalization is refused while "
-            "the four-round floor is unmet, even if an incorrect STOP_RUN is supplied."
+            f"the {research_minimum}-success floor is unmet, and normal Discovery finalization is refused while "
+            f"the {discovery_minimum}-round floor is unmet, even if an incorrect STOP_RUN is supplied."
         ),
     }
 
@@ -260,9 +262,9 @@ def main() -> int:
         default="unknown",
     )
     ap.add_argument("--research-audit-completed-this-invocation", type=int, default=0)
-    ap.add_argument("--research-minimum-completions", type=int, default=5)
+    ap.add_argument("--research-minimum-completions", type=int, default=worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS)
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
-    ap.add_argument("--discovery-min-rounds", type=int, default=8)
+    ap.add_argument("--discovery-min-rounds", type=int, default=worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS)
     args = ap.parse_args()
     print(json.dumps(decide(args), ensure_ascii=False, indent=2))
     return 0
