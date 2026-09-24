@@ -20,7 +20,7 @@ def write_json(path: Path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-class ClaimAndLegacyTransportStateTests(unittest.TestCase):
+class ClaimTransportStateTests(unittest.TestCase):
     def test_release_and_invalidation_markers_make_future_lease_inactive(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
