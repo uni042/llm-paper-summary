@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-24T14:36:14+00:00",
-  "paper_count": 1024,
-  "edge_count": 8495,
+  "generated_at": "2026-09-24T19:16:36+00:00",
+  "paper_count": 1026,
+  "edge_count": 8500,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 223,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 54,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md": 56,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md": 55,
-    "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md": 72,
+    "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md": 73,
     "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md": 50,
     "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md": 16,
     "papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md": 11,
@@ -109,7 +109,7 @@
     "papers/inference/01-offload-hierarchical-memory/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md": 0,
     "papers/inference/01-offload-hierarchical-memory/2026-2609.26061-topocompress-topology-aware-token-compression-algorithm-for-distributed-edge-moe-inference.md": 0,
     "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md": 10,
-    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md": 38,
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md": 39,
     "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md": 22,
     "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md": 33,
     "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md": 10,
@@ -446,7 +446,7 @@
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md": 0,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.16857-shadowserve-smartnic-kv-fetching.md": 2,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md": 2,
-    "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md": 72,
+    "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md": 73,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md": 11,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2511.00321-cxl-pnm-kv-cache.md": 3,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md": 2,
@@ -864,6 +864,7 @@
     "papers/inference/99-other-inference-systems/2025-2506.17615-equarx-quantized-allreduce-xla.md": 1,
     "papers/inference/99-other-inference-systems/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md": 1,
     "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md": 16,
+    "papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md": 2,
     "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md": 1,
     "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md": 0,
     "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md": 7,
@@ -977,6 +978,7 @@
     "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md": 0,
     "papers/inference/99-other-inference-systems/2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md": 1,
     "papers/inference/99-other-inference-systems/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md": 0,
+    "papers/inference/99-other-inference-systems/2026-4885970e907b-llm-kv-cache-storage-using-cxl-memory.md": 0,
     "papers/inference/99-other-inference-systems/2026-5e022a2789e7-i-o-for-llm-inference-a-survey-of-storage-and-memory-bottlenecks.md": 0,
     "papers/inference/99-other-inference-systems/2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md": 0,
     "papers/inference/99-other-inference-systems/2026-98d01325c44c-janus-joint-prefill-decode-disaggregation-with-kv-cache-aware-multi-cloud-routing-for-edge-adjacent-llm-serving.md": 0,
@@ -1482,6 +1484,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md",
       "papers/inference/12-moe-parallelism-communication/2025-2509.17863-expert-as-a-service-moe-serving.md",
+      "papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md",
       "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
     ],
     "papers/inference/01-offload-hierarchical-memory/2025-2509.08342-moepic-adaptive-expert-split.md": [
@@ -3106,7 +3109,8 @@
       "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
       "papers/inference/03-expert-prefetch/2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md",
       "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
-      "papers/inference/05-speculative-decoding-moe/2025-2511.14102-moe-speq-speculative-quantized-decoding-with-proactive-expert-prefetching-and-of.md"
+      "papers/inference/05-speculative-decoding-moe/2025-2511.14102-moe-speq-speculative-quantized-decoding-with-proactive-expert-prefetching-and-of.md",
+      "papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md"
     ],
     "papers/inference/03-expert-prefetch/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -10087,6 +10091,10 @@
       "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
     ],
     "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md": [],
+    "papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+    ],
     "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md": [
       "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
@@ -11135,6 +11143,9 @@
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
     ],
     "papers/inference/99-other-inference-systems/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md": [],
+    "papers/inference/99-other-inference-systems/2026-4885970e907b-llm-kv-cache-storage-using-cxl-memory.md": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md"
+    ],
     "papers/inference/99-other-inference-systems/2026-5e022a2789e7-i-o-for-llm-inference-a-survey-of-storage-and-memory-bottlenecks.md": [],
     "papers/inference/99-other-inference-systems/2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md": [],
     "papers/inference/99-other-inference-systems/2026-98d01325c44c-janus-joint-prefill-decode-disaggregation-with-kv-cache-aware-multi-cloud-routing-for-edge-adjacent-llm-serving.md": [],
