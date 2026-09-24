@@ -4,10 +4,23 @@
   "slot": "results",
   "attempt_id": "attempt-preload-bf0d9a75a0f968eb0a3957d7",
   "job_id": "job-research-d7f908e39f78ffc5",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-bf0d9a75a0f968eb0a3957d7",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "同一agent workflowをLocal、SWF、Flinkへcompileした結果、RAG、Routing、ReAct、PreAct、Deep Researchの全5パターンでBradley-Terryの95%信頼区間が0を含み、実行bindingによる統計的に検出可能なoutput quality差は無かった。一方、operational profileは大きく異なる。SWFはStreamの1.1〜3.4倍のend-to-end latency、Flinkは33〜152倍で、特にFlinkはprovider-side batch schedulingが支配する。しかしoffline workloadでは公開batch API価格に沿うcost reductionを得られ、代表的Sonnet ReActではtoken costが全bindingのquery costのほぼ100%、orchestration/messaging等は0.5%未満だったため、安価なbatch token pricingへ到達できることが主要な費用効果になる。",
+    "key_results": [
+      {"metric": "cross-binding品質", "value": "全5パターンで95% Bradley-Terry CIが0を含む", "baseline": "Local streaming", "condition": "各pattern 500+ prompts、position-swapped pairwise、1000 bootstrap", "interpretation": "SWFとFlinkへ実行形態を変えても、tested workflowsでは統計的に検出可能なsystematic preferenceが無い。"},
+      {"metric": "SWF latency", "value": "Streamの1.1〜3.4倍", "baseline": "Stream=1.0", "condition": "RAG 1.5、Routing 1.8、ReAct 3.4、PreAct 1.8、Deep Research 1.1", "interpretation": "durable decision/activity round-tripを払う代わりにretry、event history、long-running resumeを得る。"},
+      {"metric": "Flink batch latency", "value": "Streamの33〜152倍", "baseline": "Stream=1.0", "condition": "RAG 79、Routing 152、ReAct 96、PreAct 116、Deep Research 33", "interpretation": "低遅延向けではなくprovider-side batch schedulingを許容できるoffline workload用である。"},
+      {"metric": "per-query cost構造", "value": "代表的Sonnet ReActでtokenが約100%、その他infrastructureは0.5%未満", "baseline": "real-time Local/SWF", "condition": "3-iteration ReAct、各iteration tens of thousands tokens", "interpretation": "workflow engine自体の費用よりbatch inferenceのtoken単価差が支配的なcost leverになる。"},
+      {"metric": "batch pricing", "value": "公開価格上50% discountのbatch inference pathを利用可能", "baseline": "real-time inference API", "condition": "Flink bindingによるBedrock Batch利用", "interpretation": "同一workflowをoffline用に書き直さず安価なprovider batch APIへ集約できる。"}
+    ],
+    "negative_results": [
+      {"name": "latency semanticsは移植されない", "description": "functional outputは等価でもFlinkは33〜152倍遅く、SWFもper-step scheduling overheadを持つ。execution modeを変えて同じQoSが得られるわけではない。"},
+      {"name": "time-sensitive tool", "description": "価格やavailabilityのようにwall-clockで結果が変わるtoolは、数時間後に走るbatchでは別値を返してcontinuation predicateまで変え得る。これはbindingでは吸収できない。"},
+      {"name": "substrate固有failure", "description": "async/batchではresponse correlation timeout、partial result、aggregate token limit、long completion windowなど同期pathにない故障があるためfailure semanticsは完全には統一できない。"},
+      {"name": "低utilizationのFlink固定費", "description": "Managed Flinkの固定費により低利用率ではper-query infrastructure overheadが約1桁増えるが、それでもtotal costではlow single-digit percentageに留まる。"}
+    ],
+    "interpretation": "この研究の価値は三runtimeを同じ速度にすることではなく、workflow behaviorを一つに保ちながらSLOに応じて異なるexecution substrateを選べることにある。customer trafficはLocalのstreaming、数分のdeep researchはSWFのdurability、evaluationやcontent generationはFlinkのcross-invocation batchというように、latencyとcostの違いを意図的に使い分ける。推論を一級nodeへしたため、offline pathだけbatch APIへ変えてもprompt/tool/orchestration logicは同じままで、productionとevaluationのdriftを減らせる。",
+    "quality_impact": "binding変更による品質差は5パターンで検出されなかった。RoutingではSWF β=+0.11[-0.26,+0.50]、Batch +0.02[-0.38,+0.39]、ReActでは+0.14[-0.59,+0.93]と-0.43[-1.42,+0.53]など全CIが0を跨ぐ。ただしtime-sensitive toolやsubstrate-specific failureを含む失敗実行まで意味的等価とする主張ではない。"
+  },
+  "reservation": {"claim_id": "claim-preload-bf0d9a75a0f968eb0a3957d7", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
