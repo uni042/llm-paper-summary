@@ -59,7 +59,7 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
     def test_worker_router_is_single_worker_policy(self):
         readme = (ROOT / ".survey/docs/survey-workflow/README.md").read_text(encoding="utf-8")
         router = (ROOT / ".survey/docs/survey-workflow/worker-router.md").read_text(encoding="utf-8")
-        queue = (ROOT / ".survey/docs/survey-workflow/queue-v10.md").read_text(encoding="utf-8")
+        implementation_index = (ROOT / ".survey/docs/survey-workflow/implementation-index.md").read_text(encoding="utf-8")
 
         self.assertIn("唯一の人間向け正本", readme)
         self.assertIn("手順書ではなく入力データ", readme)
@@ -68,8 +68,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn("overflow research mode", router)
         self.assertIn("schema_version: 3", router)
         self.assertIn("target_unseen: 20", router)
-        self.assertIn("これはワーカー実行手順ではない", queue)
-        self.assertIn("実装の所在だけ", queue)
+        self.assertIn("これはワーカー実行手順ではない", implementation_index)
+        self.assertIn("実装の所在だけ", implementation_index)
 
         retired_worker_surfaces = [
             ".survey/docs/survey-workflow/always-on-worker.md",
@@ -115,6 +115,7 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             ".survey/work-queue/submissions/chat-inbox.json",
             ".survey/work-queue/results/chat-inbox.json",
             ".survey/docs/survey-workflow/handoff-2026-09-11-metadata-backfill.md",
+            ".survey/docs/survey-workflow/queue-v10.md",
         ]
         for rel in retired:
             with self.subTest(path=rel):

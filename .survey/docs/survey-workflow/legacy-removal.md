@@ -36,7 +36,7 @@
 
 - 論文契約: `.survey/templates/paper.md`、`.survey/scripts/render_paper.py`、`check_repository.py`、`audit_paper_quality.py`、`audit_list_summary_quality.py`、`audit_overview_results.py`
 - ワーカー手順の唯一の人間向け正本: `.survey/docs/survey-workflow/worker-router.md`
-- 保守実装索引: `.survey/docs/survey-workflow/queue-v10.md`（現行文書は互換由来のファイル名を明記している）
+- 保守実装索引: `.survey/docs/survey-workflow/implementation-index.md`（workflow v10の現行コード位置を示す）
 - Research/Auditレコード: `metadata`、`problem_method`、`evaluation`、`results`、`positioning` の5スロット。レコードの `schema_version: 1` / `transport_version: 10` を、他のデータ種別へ流用しない。
 - Discovery事前検査などは別契約を持つ。データ種別ごとに現行writerとreaderを調べ、正規形式を決める。
 
@@ -108,7 +108,7 @@ jobs、claims、claim requests/results、records、research-preflight、submissi
 
 ### 6 — 互換コード・旧手順の撤去
 データが0件になった後、一覧旧fallback、固定chat inbox reader、record-bank alias、claim lease normalizer、旧Discovery envelope救済、その他旧reader、移行専用コード、旧互換試験の順に削除する。Library fallbackの現行部分は残す。
-`worker-router.md` は現行正常系と現行障害復旧系だけを記述する。`queue-v10.md` は現行文書でも互換由来名を明記している。名前自体も撤去する場合は、参照を全更新したうえで `implementation-index.md` へ改名し、リンク切れ検査を通す。workflow v10が現行である間は番号自体を削除理由にしない。
+`worker-router.md` は現行正常系と現行障害復旧系だけを記述する。保守索引は `implementation-index.md` に統一し、旧索引名を削除する。workflow v10が現行である間は番号自体を削除理由にしない。
 
 ### 7 — 拒否試験と最終検査
 旧形式を受け入れる旧専用試験は、旧形式入力の明示拒否を検査する試験へ置換する。少なくとも旧chat inbox、旧record-bank alias、旧lease、list_summary欠落論文、現行schema外ライブ入力、移行専用field生成、既知legacy pathを検査する。
