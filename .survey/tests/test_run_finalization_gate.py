@@ -127,6 +127,30 @@ class RunFinalizationGateTests(unittest.TestCase):
         self.assertFalse(result["finalization_permit"]["issued"])
 
 
+    def test_productive_research_refill_action_is_preserved(self):
+        result = mod.decide(make_args(
+            continuation_required_action="CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY",
+            active_assignment=True,
+            claim_state_checked=True,
+            submission_state_checked=True,
+            work_mode="research",
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertEqual(result["next_action"], "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY")
+        self.assertFalse(result["finalization_permit"]["issued"])
+
+    def test_wait_for_ready_research_is_not_degraded_into_empty_claim(self):
+        result = mod.decide(make_args(
+            continuation_required_action="WAIT_FOR_READY_RESEARCH_AUDIT",
+            claim_state_checked=True,
+            submission_state_checked=True,
+            work_mode="research",
+            research_audit_completed_this_invocation=0,
+        ))
+        self.assertEqual(result["decision"], "MUST_CONTINUE")
+        self.assertEqual(result["next_action"], "WAIT_FOR_READY_RESEARCH_AUDIT")
+        self.assertFalse(result["finalization_permit"]["issued"])
+
     def test_stop_run_without_finalization_allowed_still_cannot_finalize(self):
         result = mod.decide(make_args(
             continuation_decision="STOP_RUN",

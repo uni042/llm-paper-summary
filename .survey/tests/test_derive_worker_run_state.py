@@ -873,6 +873,137 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             )
 
 
+    def test_evaluable_discovery_round_exposes_concrete_next_work_packet(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/eval-1.json",
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "eval-1",
+                    "run_key": "run-1",
+                    "worker_id": "scheduled-chat-00",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": request()["actual_invocation_start"],
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                    "axis": "backward",
+                    "citation_direction": "backward",
+                    "requested_at": "2026-01-01T00:00:00+00:00",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/eval-1.json",
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "eval-1",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                    "allowed_records": [{"canonical_id": "arXiv:2609.00001"}],
+                    "results": [{"canonical_id": "arXiv:2609.00001"}],
+                    "receipt": "sha256:test",
+                },
+            )
+
+            result = mod.derive(root, request())
+            self.assertFalse(result["run_termination_allowed"])
+            self.assertEqual(result["run_phase"], "running")
+            self.assertEqual(result["continuation_next_action"], "CONTINUE_DISCOVERY_ROUND")
+            self.assertEqual(result["next_action"], "CONTINUE_DISCOVERY_ROUND")
+            self.assertEqual(result["next_work_packet"]["kind"], "discovery_evaluation")
+            self.assertEqual(result["next_work_packet"]["request_id"], "eval-1")
+            self.assertEqual(
+                result["next_work_packet"]["result_path"],
+                ".survey/work-queue/discovery-precheck/results/eval-1.json",
+            )
+            self.assertEqual(result["next_work_packet"]["allowed_record_count"], 1)
+
+    def test_pipeline_lookahead_next_work_packet_is_concrete(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {
+                    "schema_version": 3,
+                    "history": [
+                        {
+                            "run_key": "old-run",
+                            "round": "forward-seed",
+                            "axis": "forward citations",
+                            "provider": "semantic_scholar",
+                            "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations",
+                            "citation_direction": "forward",
+                            "seed_canonical_id": "arXiv:2303.06865",
+                            "candidate_count": 20,
+                            "novel_candidate_count": 10,
+                            "accepted_count": 4,
+                            "round_accounted": True,
+                        }
+                    ],
+                },
+            )
+            created = mod.discovery_preload_queue.top_up(root, target=2, max_new=2)
+            self.assertEqual(created["created_count"], 2)
+            entries = mod.discovery_preload_queue._entries(root)
+            forward = next(row for row in entries if row["citation_direction"] == "forward")
+            write_json(
+                root,
+                mod.discovery_preload_queue._result_path(forward).as_posix(),
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                    "request_id": forward["precheck_request_id"],
+                    "run_key": f"preload:{forward['preload_id']}",
+                    "results": [{"canonical_id": f"arXiv:2609.{index:05d}"} for index in range(20)],
+                    "allowed_records": [],
+                    "unseen_result_count": 20,
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pending-backward.json",
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "request_id": "pending-backward",
+                    "collector_id": "pending-backward",
+                    "run_key": "run-1",
+                    "axis": "backward",
+                    "provider": "repository_references",
+                    "source_url": "repository://structured-references",
+                    "target_unseen": 20,
+                },
+            )
+
+            result = mod.derive(root, request())
+            self.assertEqual(result["next_action"], "CONTINUE_DISCOVERY_PIPELINE")
+            self.assertEqual(result["next_work_packet"]["kind"], "discovery_pipeline_preload")
+            self.assertEqual(
+                result["next_work_packet"]["preload_id"],
+                result["discovery_pipeline_preload"]["preload_id"],
+            )
+            self.assertFalse(result["run_termination_allowed"])
+
     def test_request_rejects_cross_worker_slot(self):
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "snap-1.json"

@@ -1019,6 +1019,46 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
         else:
             recovery_required.append(target)
 
+    evaluation_queue: list[dict[str, Any]] = []
+    for request_id in evaluation_pending:
+        request = precheck_requests.get(request_id)
+        result = successful_prechecks.get(request_id)
+        if not isinstance(request, dict) or not isinstance(result, dict):
+            continue
+        allowed_records = result.get("allowed_records") if isinstance(result.get("allowed_records"), list) else []
+        result_records = result.get("results") if isinstance(result.get("results"), list) else []
+        direction = discovery_preload_queue._direction(
+            str(request.get("provider") or ""),
+            str(request.get("source_url") or ""),
+            request.get("citation_direction"),
+        )
+        evaluation_queue.append(
+            {
+                "request_id": request_id,
+                "request_path": (
+                    Path(".survey/work-queue/discovery-precheck/requests") / f"{request_id}.json"
+                ).as_posix(),
+                "result_path": (
+                    Path(".survey/work-queue/discovery-precheck/results") / f"{request_id}.json"
+                ).as_posix(),
+                "provider": request.get("provider"),
+                "source_url": request.get("source_url"),
+                "axis": request.get("axis"),
+                "citation_direction": direction,
+                "requested_at": request.get("requested_at"),
+                "allowed_record_count": len(allowed_records),
+                "result_record_count": len(result_records),
+                "receipt": result.get("receipt"),
+                "submission_root": ".survey/work-queue/submissions/discovery",
+            }
+        )
+    evaluation_queue.sort(
+        key=lambda row: (
+            str(row.get("requested_at") or ""),
+            str(row.get("request_id") or ""),
+        )
+    )
+
     inflight_precheck_ids = set(pending_prechecks) | set(evaluation_pending)
     pending_submission_set = set(pending_submissions)
     for row in submission_rows:
@@ -1044,6 +1084,7 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
         "pending_discovery_submission_ids": sorted(pending_submissions),
         "discovery_evaluation_pending": bool(evaluation_pending),
         "discovery_evaluation_request_ids": sorted(evaluation_pending),
+        "discovery_evaluation_queue": evaluation_queue,
         "discovery_recovery_required": bool(recovery_required),
         "discovery_recovery_targets": sorted(recovery_required),
         "discovery_superseded_failure_targets": sorted(superseded_failures),
@@ -1061,6 +1102,146 @@ def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> b
     if isinstance(claimable, int) and not isinstance(claimable, bool):
         return claimable > 0
     return _candidate_inventory(root) > 0
+
+
+def _next_work_packet(
+    root: Path,
+    *,
+    worker_id: str,
+    gate: dict[str, Any],
+    finalization_gate: dict[str, Any],
+    claims: dict[str, Any],
+    discovery_async: dict[str, Any],
+    discovery_preload: dict[str, Any] | None,
+    discovery_fallback_source: dict[str, Any] | None,
+    discovery_pipeline_preload: dict[str, Any] | None,
+) -> dict[str, Any] | None:
+    permit = bool((finalization_gate.get("finalization_permit") or {}).get("issued"))
+    if permit:
+        return None
+
+    action = str(
+        finalization_gate.get("next_action")
+        or gate.get("required_action")
+        or ""
+    ).strip()
+    if not action:
+        return None
+
+    if action == "CONTINUE_DISCOVERY_ROUND":
+        queue = discovery_async.get("discovery_evaluation_queue")
+        if isinstance(queue, list) and queue and isinstance(queue[0], dict):
+            return {
+                "kind": "discovery_evaluation",
+                "action": action,
+                **dict(queue[0]),
+            }
+
+    if action == "CONTINUE_DISCOVERY_PIPELINE" and isinstance(discovery_pipeline_preload, dict):
+        return {
+            "kind": "discovery_pipeline_preload",
+            "action": action,
+            **dict(discovery_pipeline_preload),
+        }
+
+    if action == "DISCOVER_AGAIN":
+        if isinstance(discovery_preload, dict):
+            return {
+                "kind": "discovery_direct_take",
+                "action": action,
+                **dict(discovery_preload),
+            }
+        if isinstance(discovery_fallback_source, dict):
+            return {
+                "kind": "discovery_fixed_source_precheck",
+                "action": action,
+                **dict(discovery_fallback_source),
+            }
+
+    if action in {"CONTINUE_ASSIGNED_WORK", "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY"}:
+        job_id = str(claims.get("foreground_job_id") or "")
+        if job_id:
+            job_path = Path(".survey/work-queue/jobs") / f"{job_id}.json"
+            claim_path = Path(".survey/work-queue/claims") / f"{job_id}.json"
+            job = _read(root / job_path, {}) or {}
+            claim = _read(root / claim_path, {}) or {}
+            packet: dict[str, Any] = {
+                "kind": "research_audit_foreground",
+                "action": action,
+                "job_id": job_id,
+                "job_path": job_path.as_posix(),
+                "claim_path": claim_path.as_posix(),
+            }
+            if isinstance(job, dict):
+                for key in ("type", "canonical_id", "title", "source_url", "paper_path"):
+                    if job.get(key) is not None:
+                        packet[key] = job.get(key)
+            if isinstance(claim, dict):
+                for key in ("claim_id", "attempt_id", "kind", "record_bank", "record_bank_root"):
+                    if claim.get(key) is not None:
+                        packet[key] = claim.get(key)
+            if action == "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY":
+                packet["refill_standby"] = True
+            return packet
+
+    if action == "CLAIM_NEXT_RESEARCH_AUDIT":
+        return {
+            "kind": "research_audit_claim",
+            "action": action,
+            "worker_id": worker_id,
+            "hot_dispatch_path": ".survey/work-queue/hot-dispatch.json",
+            "selection_order": [
+                f"research_resume.{worker_id}[0]",
+                "research[0]",
+            ],
+        }
+
+    if action == "RECOVER_DISCOVERY_SUBMISSION":
+        targets = discovery_async.get("discovery_recovery_targets")
+        target = str(targets[0]) if isinstance(targets, list) and targets else ""
+        packet: dict[str, Any] = {
+            "kind": "discovery_recovery",
+            "action": action,
+            "target": target,
+        }
+        if target.startswith("submission:"):
+            stem = target.split(":", 1)[1]
+            packet["submission_path"] = (
+                Path(".survey/work-queue/submissions/discovery") / f"{stem}.json"
+            ).as_posix()
+            packet["result_path"] = (
+                Path(".survey/work-queue/results/discovery") / f"{stem}.json"
+            ).as_posix()
+        elif target.startswith("precheck:"):
+            request_id = target.split(":", 1)[1]
+            packet["precheck_request_path"] = (
+                Path(".survey/work-queue/discovery-precheck/requests") / f"{request_id}.json"
+            ).as_posix()
+            packet["precheck_result_path"] = (
+                Path(".survey/work-queue/discovery-precheck/results") / f"{request_id}.json"
+            ).as_posix()
+        return packet
+
+    if action == "RUN_WAIT_MICROTASK_AND_RECHECK":
+        return {
+            "kind": "productive_wait",
+            "action": action,
+            "wait_targets": list(finalization_gate.get("wait_targets") or []),
+            "wait_microtasks": list(finalization_gate.get("wait_microtasks") or []),
+        }
+
+    if action == "WAIT_FOR_READY_RESEARCH_AUDIT":
+        return {
+            "kind": "productive_wait",
+            "action": action,
+            "queue_path": ".survey/work-queue/next-jobs.json",
+            "wait_microtasks": list(finalization_gate.get("wait_microtasks") or []),
+        }
+
+    return {
+        "kind": "canonical_action",
+        "action": action,
+    }
 
 
 def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False) -> dict[str, Any]:
@@ -1398,6 +1579,21 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         )
     )
 
+    finalization_permit_issued = bool(
+        (finalization_gate.get("finalization_permit") or {}).get("issued")
+    )
+    next_work_packet = _next_work_packet(
+        root,
+        worker_id=str(request["worker_id"]),
+        gate=gate,
+        finalization_gate=finalization_gate,
+        claims=claims,
+        discovery_async=discovery_async,
+        discovery_preload=discovery_preload,
+        discovery_fallback_source=discovery_fallback_source,
+        discovery_pipeline_preload=discovery_pipeline_preload,
+    )
+
     public_submission = {key: value for key, value in submission.items() if key != "attempt_facts"}
     derive_ms = round((time.perf_counter() - perf_started) * 1000.0, 3)
     files_read = max(READ_COUNT - read_started, 0)
@@ -1445,10 +1641,12 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "independent_work": independent_work,
         "gate": gate,
         "finalization_gate": finalization_gate,
-        "finalization_permit_issued": bool(
-            (finalization_gate.get("finalization_permit") or {}).get("issued")
-        ),
-        "next_action": gate.get("required_action"),
+        "finalization_permit_issued": finalization_permit_issued,
+        "run_termination_allowed": finalization_permit_issued,
+        "run_phase": "finalizable" if finalization_permit_issued else "running",
+        "continuation_next_action": gate.get("required_action"),
+        "next_action": finalization_gate.get("next_action") or gate.get("required_action"),
+        "next_work_packet": next_work_packet,
         "transport_rule": (
             "A GitHub file create/update API or connector is a valid repository write transport. "
             "Lack of local shell, Python execution, git push, or manual Actions dispatch is not evidence of write unavailability. "
@@ -1474,6 +1672,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "it is only an acceleration hint and must be adopted through a new run-specific schema-v3 precheck request, never referenced directly by a submission. "
             "If that warm bank is absent, discovery_fallback_source exposes the same selector-compatible fixed source so the next schema-v3 precheck can start immediately without passive waiting. "
             "idle_gap_forbidden=true means an asynchronous result must not be treated as permission to stop or passively wait when a prepared/fallback next action exists. "
+            "Top-level next_action is the finalization gate's canonical action, while continuation_next_action preserves the pre-finalization routing decision for diagnostics. "
+            "When run_termination_allowed=false, next_work_packet identifies the concrete durable object to process next whenever one can be resolved; this running state is not a handoff condition. "
             "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts. "
             "Every durable run-state snapshot embeds the finalization gate result for continuation and stopping decisions. "
             "Run-state does not suppress user-facing reports; termination reporting is governed by worker-router.md."

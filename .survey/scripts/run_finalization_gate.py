@@ -137,6 +137,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
                 "RECOVER_DISCOVERY_SUBMISSION",
                 "CONTINUE_DISCOVERY_ROUND",
                 "CONTINUE_DISCOVERY_PIPELINE",
+                "CONTINUE_ASSIGNED_WORK",
+                "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY",
+                "CLAIM_NEXT_RESEARCH_AUDIT",
+                "WAIT_FOR_READY_RESEARCH_AUDIT",
+                "DISCOVER_AGAIN",
+                "RUN_0830_MAINTENANCE",
             }
             and not hard_stop
         ):
