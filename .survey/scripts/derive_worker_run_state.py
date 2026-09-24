@@ -33,7 +33,7 @@ REQUESTS = Path(".survey/work-queue/run-state/requests")
 RESULTS = Path(".survey/work-queue/run-state/results")
 READ_COUNT = 0
 SCHEDULED_CHAT_CLAIM_WINDOW = claim_window_policy.DEFAULT_CLAIM_WINDOW
-
+DISCOVERY_PIPELINE_WINDOW = 3\n
 RUNTIME_CONDITIONS = {
     "none",
     "handoff_guard",
@@ -856,6 +856,24 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
         else:
             recovery_required.append(target)
 
+    inflight_precheck_ids = set(pending_prechecks) | set(evaluation_pending)
+    pending_submission_set = set(pending_submissions)
+    for row in submission_rows:
+        if row.get("stem") in pending_submission_set and row.get("precheck_id"):
+            inflight_precheck_ids.add(str(row["precheck_id"]))
+    inflight_directions: set[str] = set()
+    for precheck_id in inflight_precheck_ids:
+        request = precheck_requests.get(precheck_id)
+        if not isinstance(request, dict):
+            continue
+        direction = discovery_preload_queue._direction(
+            str(request.get("provider") or ""),
+            str(request.get("source_url") or ""),
+            request.get("citation_direction"),
+        )
+        if direction in {"backward", "forward", "normal"}:
+            inflight_directions.add(direction)
+
     return {
         "discovery_precheck_result_pending": bool(pending_prechecks),
         "pending_discovery_precheck_request_ids": sorted(pending_prechecks),
@@ -866,6 +884,9 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
         "discovery_recovery_required": bool(recovery_required),
         "discovery_recovery_targets": sorted(recovery_required),
         "discovery_superseded_failure_targets": sorted(superseded_failures),
+        "discovery_inflight_precheck_ids": sorted(inflight_precheck_ids),
+        "discovery_inflight_round_count": len(inflight_precheck_ids),
+        "discovery_inflight_directions": sorted(inflight_directions),
     }
 
 def _independent_work(root: Path, work_mode: str, selector: dict[str, Any]) -> bool:
@@ -981,9 +1002,69 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
                 direction=selector_direction,
             )
 
+    def decorate_discovery_packet(value: dict[str, Any] | None) -> dict[str, Any] | None:
+        if not isinstance(value, dict) or not value.get("preload_id"):
+            return None
+        packet = dict(value)
+        preload_id = str(packet["preload_id"])
+        packet["take_path"] = (
+            Path(".survey/work-queue/discovery-preload/claims") / f"{preload_id}.json"
+        ).as_posix()
+        packet["take_result_path"] = (
+            Path(".survey/work-queue/direct-take-results/discovery") / f"{preload_id}.json"
+        ).as_posix()
+        return packet
+
+    discovery_preload = decorate_discovery_packet(discovery_preload)
+
     now = dt.datetime.now(dt.timezone.utc)
     deadline = started_at + dt.timedelta(seconds=3600)
     seconds_to_deadline = max(int((deadline - now).total_seconds()), 0)
+
+    discovery_pipeline_preload = None
+    inflight_count = int(discovery_async.get("discovery_inflight_round_count") or 0)
+    inflight_directions = set(discovery_async.get("discovery_inflight_directions") or [])
+    async_wait_exists = bool(
+        discovery_async.get("discovery_precheck_result_pending")
+        or discovery_async.get("discovery_submission_result_pending")
+    )
+    pipeline_eligible = bool(
+        work_mode == "discovery"
+        and seconds_to_deadline > 600
+        and async_wait_exists
+        and not discovery_async.get("discovery_evaluation_pending")
+        and not discovery_async.get("discovery_recovery_required")
+        and inflight_count < DISCOVERY_PIPELINE_WINDOW
+    )
+    if pipeline_eligible:
+        if selector_direction == "backward":
+            directions = ["forward", "backward"]
+        elif selector_direction == "forward":
+            directions = ["backward", "forward"]
+        else:
+            directions = ["backward", "forward"]
+        directions = sorted(
+            directions,
+            key=lambda direction: (direction in inflight_directions, directions.index(direction)),
+        )
+        for direction in directions:
+            rows = discovery_preload_queue.available_preloads(
+                root,
+                direction=direction,
+                limit=16,
+            )
+            productive = next(
+                (
+                    row
+                    for row in rows
+                    if int(row.get("preload_unseen_result_count") or 0) > 0
+                ),
+                None,
+            )
+            if productive is not None:
+                discovery_pipeline_preload = decorate_discovery_packet(productive)
+                break
+    discovery_pipeline_work_available = discovery_pipeline_preload is not None
     requested_runtime = request["runtime_condition"]
     runtime = requested_runtime
     runtime_condition_ignored_reason = None
@@ -1072,7 +1153,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         discovery_submission_result_pending=discovery_async["discovery_submission_result_pending"],
         discovery_evaluation_pending=discovery_async["discovery_evaluation_pending"],
         discovery_recovery_required=discovery_async["discovery_recovery_required"],
-    )
+        discovery_pipeline_work_available=discovery_pipeline_work_available,\n    )
     if work_mode == "maintenance":
         maintenance = _read(root / ".survey/work-queue/maintenance-cycle.json", {}) or {}
         completed_at = _time(maintenance.get("last_maintenance_completed_at"))
@@ -1124,6 +1205,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             discovery_recovery_required=bool(
                 discovery_async.get("discovery_recovery_required")
             ),
+            discovery_pipeline_work_available=discovery_pipeline_work_available,
+            continuation_required_action=str(gate.get("required_action") or ""),
             hard_stop=bool(gate.get("hard_stop")),
             handoff_safe=False,
             work_mode=work_mode,
@@ -1176,6 +1259,9 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "discovery_selector": selector,
         "discovery_preload": discovery_preload,
         "discovery_fallback_source": discovery_fallback_source,
+        "discovery_pipeline_preload": discovery_pipeline_preload,
+        "discovery_pipeline_work_available": discovery_pipeline_work_available,
+        "discovery_pipeline_window": DISCOVERY_PIPELINE_WINDOW,
         "idle_gap_forbidden": True,
         "independent_work": independent_work,
         "gate": gate,
@@ -1210,6 +1296,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "platform_context_limit is accepted only with runtime_condition_event=platform_tool_call_rejected and a concrete observed-error detail; a single paper/source retrieval failure is never platform-context evidence. "
             "A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. "
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
+            "Discovery pending results do not mask already-evaluable rounds; evaluation/recovery work has priority over wait states. "
+            f"Outside the 600-second no-new-work window, at most {DISCOVERY_PIPELINE_WINDOW} Discovery rounds may be in flight so a PRECHECKED citation window can be evaluated while an older precheck/submission settles. "
             "When work_mode=discovery, discovery_preload exposes the oldest PRECHECKED preload matching the canonical selector direction; "
             "it is only an acceleration hint and must be adopted through a new run-specific schema-v3 precheck request, never referenced directly by a submission. "
             "If that warm bank is absent, discovery_fallback_source exposes the same selector-compatible fixed source so the next schema-v3 precheck can start immediately without passive waiting. "
