@@ -1,0 +1,150 @@
+name: Discovery preload local fast lane
+
+on:
+  workflow_run:
+    workflows: ['Discovery precheck gate']
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/discovery-preload-local-fast.yml'
+      - '.survey/scripts/discovery_preload_queue.py'
+      - '.survey/scripts/process_discovery_precheck.py'
+      - '.survey/scripts/process_discovery_precheck_batch.py'
+      - '.survey/scripts/hot_dispatch.py'
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Local repository-reference preload must never wait behind slow remote providers.
+# This lane may race the remote warmer, so every push is recomputed from latest main.
+concurrency:
+  group: discovery-preload-local-fast-main
+  cancel-in-progress: false
+
+jobs:
+  warm-local:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      DISCOVERY_PRELOAD_PARALLELISM: '4'
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: '.survey/scripts/requirements.txt'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Fill and publish local backward Discovery stock
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-discovery-local-preload[bot]'
+          git config user.email 'survey-discovery-local-preload[bot]@users.noreply.github.com'
+
+          for attempt in $(seq 1 8); do
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Fill enough free sidecars to repair the directional floor. top-up
+            # prioritizes backward deficits; non-local READY requests created as a
+            # side effect are left for the remote/background warmer.
+            python .survey/scripts/discovery_preload_queue.py \
+              --repo-root . top-up --target 32 --max-new 12 \
+              > /tmp/local-preload-topup.json
+
+            rm -rf /tmp/discovery-identities
+            rm -f /tmp/discovery-rejections.json
+            if [ -d .survey/work-queue/discovery-identities ] \
+              && [ -f .survey/work-queue/discovery-identities/_manifest.json ] \
+              && [ -f .survey/work-queue/discovery-rejections.json ]; then
+              cp -a .survey/work-queue/discovery-identities /tmp/discovery-identities
+              cp .survey/work-queue/discovery-rejections.json /tmp/discovery-rejections.json
+            else
+              python .survey/scripts/build_discovery_identity_snapshot.py \
+                --root .survey \
+                --output /tmp/discovery-identities \
+                --source-commit "$(git rev-parse HEAD)"
+              python .survey/scripts/build_discovery_rejection_ledger.py \
+                --root .survey \
+                --output /tmp/discovery-rejections.json
+            fi
+
+            python .survey/scripts/discovery_preload_queue.py \
+              --repo-root . ready --limit 32 \
+              > /tmp/local-preload-ready.json
+
+            python - <<'PY' > /tmp/local-preload-requests.txt
+import json
+from pathlib import Path
+data = json.loads(Path('/tmp/local-preload-ready.json').read_text(encoding='utf-8'))
+for row in data.get('items', []):
+    if str(row.get('provider') or '').strip().casefold() in {
+        'repository_references',
+        'repository_reference_pool',
+    }:
+        print(row['request_path'])
+PY
+
+            if [ -s /tmp/local-preload-requests.txt ]; then
+              set +e
+              python .survey/scripts/process_discovery_precheck_batch.py \
+                --repo-root . \
+                --requests-file /tmp/local-preload-requests.txt \
+                --snapshot-dir /tmp/discovery-identities \
+                --rejection-ledger /tmp/discovery-rejections.json \
+                --parallelism "$DISCOVERY_PRELOAD_PARALLELISM"
+              rc=$?
+              set -e
+              if [ "$rc" -ne 0 ] && [ "$rc" -ne 1 ]; then
+                exit "$rc"
+              fi
+            fi
+
+            # A local result can exhaust a window and free/reclassify stock. Repair
+            # once more before publishing the derived hot-dispatch index.
+            python .survey/scripts/discovery_preload_queue.py \
+              --repo-root . top-up --target 32 --max-new 12 \
+              > /tmp/local-preload-retopup.json
+            python .survey/scripts/hot_dispatch.py --repo-root . refresh \
+              > /tmp/local-hot-dispatch.json
+
+            git add \
+              .survey/work-queue/discovery-precheck/requests \
+              .survey/work-queue/discovery-precheck/results \
+              .survey/work-queue/discovery-preload \
+              .survey/work-queue/hot-dispatch.json
+            while IFS= read -r -d '' preload_slot; do
+              git add -- "$preload_slot"
+            done < <(
+              find .survey/work-queue/records -type f -name 'discovery-preload.json' -print0
+            )
+
+            if git diff --cached --quiet; then
+              echo 'Local backward Discovery stock is already warm.'
+              exit 0
+            fi
+
+            git commit -m 'survey: warm local backward discovery stock'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Local Discovery preload push race on attempt ${attempt}; recomputing from latest main."
+          done
+
+          echo 'Failed to publish local backward Discovery stock after retries.' >&2
+          exit 1
