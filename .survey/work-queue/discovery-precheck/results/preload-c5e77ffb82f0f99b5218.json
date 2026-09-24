@@ -1,0 +1,806 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-c5e77ffb82f0f99b5218",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-c5e77ffb82f0f99b5218",
+  "axis": "forward citations of SGLang structured generation serving runtime",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.07104/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4cae4c1a71a6d66aafde56c71cb472f7e1451043",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 20,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T13:05:57.324725+00:00",
+  "preload_id": "preload-c5e77ffb82f0f99b5218",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems",
+      "source_url": "https://www.semanticscholar.org/paper/722af1814c8958ddb9fbb8579feb7fb1fc9e0b63",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Prefix caching is critical for efficient large language model (LLM) serving, particularly for agentic workloads that repeatedly invoke the model with a growing conversation and tool-use history. By reusing the key-value (KV) states of previously processed prefixes, prefix caching avoids redundant prefill computation. Its effectiveness, however, depends on retaining a sufficiently large set of KV cache states. Provisioning enough cache to preserve all historical KV states is prohibitively expensive and often unnecessary, whereas insufficient capacity can substantially degrade the cache hit rate. Determining the KV cache working set, defined as the minimum cache capacity required to achieve a target hit rate, is therefore essential for efficient cache provisioning and system design. We present KVSET, an online analyzer that estimates the KV cache working set of LLM serving workloads. KVSET uses the Mattson stack algorithm to efficiently estimate cache hit rates across a wide range of cache capacities. For each KV cache page, KVSET computes its LRU stack distance and compares it with the page number of each candidate capacity. This comparison determines whether the page would be a hit at each capacity without independently simulating every capacity configuration. KVSET therefore substantially reduces the computational and memory overhead of conventional capacity-by-capacity simulation and makes online working-set analysis practical. KVSET further determines the minimum cache capacity based on the maximum LRU depth among the prefix pages required to achieve the target hit rate. We validate KVSET using traces collected from production LLM workloads and show that its estimates closely match measurements from real cache deployments. The open-source implementation supports both online request processing and offline trace replay.",
+      "canonical_id": "arXiv:2609.27746",
+      "arxiv_id": "2609.27746"
+    },
+    {
+      "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/42cb858ef1c96a4950f14bcb89c8e127fc7c3194",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+      "canonical_id": "arXiv:2609.26638",
+      "arxiv_id": "2609.26638",
+      "authors": [
+        "Dohyun Kim",
+        "Sung-Jun Han",
+        "Hyun-geun Kim",
+        "Yusik Kim",
+        "Jamin Shin",
+        "Paul Hongsuck Seo",
+        "Hongjoon Ahn"
+      ]
+    },
+    {
+      "title": "Scaling of Capability and Efficiency at Inference Time in Large Reasoning Models",
+      "source_url": "https://www.semanticscholar.org/paper/15133940e1d8505b41d5255aee8c47f8a93dd129",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Capability and efficiency are two key dimensions of reasoning in large language models (LLMs). Capability refers to the ability to solve a given problem correctly, whereas efficiency refers to the ability to do so with limited resources. When LLMs use Chain-of-Thought (CoT) reasoning to solve problems of controlled hardness, both the number of problems solved correctly and the number of tokens required to reach a correct answer depend on problem hardness and model size. However, how these factors jointly shape capability and efficiency remains poorly understood. Here, we use hierarchical Bayesian models to evaluate the capability and efficiency of LLMs from the DeepSeek-R1-Distill model family across four classes of arithmetic and algorithmic reasoning problems. At a fixed model size, the probability of correctly solving an instance decays approximately exponentially with instance size, our proxy for problem hardness. The decay scale grows sublinearly with model size, indicating that larger models are more capable, but that capability gains diminish with scale. Output length grows as a power law with instance size, which serves as a proxy for difficulty. However, the parameters of this power law do not vary systematically with model size, suggesting that larger models do not become more efficient. Together, these findings reveal potential limitations of naive scaling as a strategy for developing more capable AI systems: capability improves with diminishing returns, while efficiency shows little to no improvement.",
+      "canonical_id": "arXiv:2609.27166",
+      "arxiv_id": "2609.27166"
+    },
+    {
+      "title": "Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/898e569ce96ddf4f4a4e37cb63e510574fe1262b",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "As serving capacity demand surpasses that of training, serving efficiency becomes increasingly important. Prefill-decode (P/D) disaggregation improves serving efficiency through specialization and isolation of the two phases. These benefits rest on a static partitioning. Phase demand, however, is not static. We observe that in a large LLM fleet the ratio of uncached input to output tokens has peak-to-mean ratios up to 4.7x at minute timescales, and that in a public agentic trace the hourly ratio spans a median 24.5x within a single day, while reassigning a replica takes tens of minutes. Agentic traffic sharpens the mismatch. Sizing each pool at its ninety-fifth percentile leaves up to 17% of cluster capacity unused; sizing below it converts the same imbalance into queueing and unrealized throughput. We present Crossflow, which makes this boundary elastic without changing node roles. Each decode node publishes a short-lived, revocable lease that bounds local-prefill compute, KV capacity, transfer work, and projected output. Across public and internal traces, Crossflow improves token throughput by 16.2-17.4% on geometric mean over static P/D, and by up to 43.4% at high load, while reducing mean TTFT at every evaluated point.",
+      "canonical_id": "arXiv:2609.27085",
+      "arxiv_id": "2609.27085"
+    },
+    {
+      "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+      "source_url": "https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+      "canonical_id": "arXiv:2609.25845",
+      "arxiv_id": "2609.25845",
+      "authors": [
+        "Guan-Xu Yu",
+        "Yu-Hang Yao"
+      ]
+    },
+    {
+      "title": "ClusterFewshot: Improving Few-shot Optimization for LLMs workflow",
+      "source_url": "https://www.semanticscholar.org/paper/3a8b66e7618434d867428b56e0038ad3ef58d460",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "The performance of large language model (LLM) workflows often depends on selecting a small set of in-context demonstrations to guide model behavior on new tasks. Recent methods improve this process by augmenting prompts with successful reasoning paths. However, their demonstration selection relies on random sampling or metric-based rankings, overlooking the semantic structure of the task. We propose ClusterFewshot, a strategy that combines semantic structuring with utility-aware scoring to construct representative and effective few-shot demonstration sets. Evaluated within DSPy-based pipelines, ClusterFewshot substantially reduces optimization cost across multiple benchmarks, while consistently improving accuracy relative to prior bootstrap-based methods in both standalone prompt tuning and hybrid prompt-weight optimization.",
+      "canonical_id": "arXiv:2609.25939",
+      "arxiv_id": "2609.25939",
+      "authors": [
+        "O. Haim",
+        "Shahar Katz",
+        "Lior Wolf"
+      ]
+    },
+    {
+      "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving",
+      "source_url": "https://www.semanticscholar.org/paper/3ae0b884bfc172b87f63af1c94d1f01135b2ca82",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "We introduce SWE-Serve, a benchmark for evaluating agents on production inference engineering tasks. Implementing an inference feature can require coordinating multiple changes across the serving stack, including model support, runtime execution, and public APIs. Existing benchmarks provide limited coverage of production inference engineering: repository-level software engineering benchmarks do not target inference, while general terminal-agent benchmarks include only a few inference tasks. Dedicated inference benchmarks, meanwhile, focus primarily on isolated kernel generation or performance optimization rather than repository-scale production feature implementation. SWE-Serve provides 53 repository-grounded tasks derived from recent production changes to SGLang, spanning six inference engineering families. Each task executes on either CPU or a single GPU (H100) and is evaluated with hidden functional and regression tests, including, where applicable, end-to-end (E2E) serving tests and calibrated performance gates. Executable no-op and oracle controls, adversarial verifier review, and closed-book execution support task validity and evaluation integrity. Across 11 models and 31 model-effort configurations, the best-performing configuration achieves 75% mean pass@1. SWE-Serve exposes a substantial gap between completing tasks locally and achieving production correctness. On 19 tasks with end-to-end coverage, model-serving E2E tests reject roughly one-third of patches that pass every other test (45.9% under the verifier versus 69.4% with E2E tests excluded from scoring), with pass rate increasing for each model's best-performing configuration. By making the production correctness gap directly measurable, SWE-Serve enables the field to track whether future agents move beyond completing tasks locally to achieving production correctness.",
+      "canonical_id": "arXiv:2609.26777",
+      "arxiv_id": "2609.26777",
+      "authors": [
+        "Jennifer Williams",
+        "David P. Farris",
+        "Jeffrey J. Farris",
+        "Jian-Tao Jiao"
+      ]
+    },
+    {
+      "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Greedy decoding from large language models is commonly treated as deterministic. We show it is not precision-invariant: the same model, prompt, and decoding algorithm produce different outputs in BF16 versus FP16 on identical hardware. Across our evaluations of six models (1.1B-7B parameters, four families; divergence additionally characterised at 12B) and three benchmarks, 49-100\\% of prompts diverge; a single token flip often cascades into trajectory-level divergence. We develop an empirical error-propagation analysis and find that 22 layers of accumulated body error do not distinguish flipping from non-flipping steps; the outcome depends primarily on the top-two logit margin at the LM head relative to the directional perturbation between the top-two candidates. The analysis makes five testable predictions about intervention outcomes, including that applying more FP32 compute (broader scope) makes agreement worse. The experiments match all five predictions. The best-performing low-overhead intervention we evaluate, selective FP32 LM head recomputation, triggered only when the margin falls below a threshold, delivers +22-36 pp exact agreement on A10G (+12-21 pp on L4 and A100) at less than 4\\% latency overhead in low-batch (batch size<=4) single-stream inference. We map the applicability boundary across six models and four batch sizes, and hypothesise that training-time precision stability is a determining factor. The method is a partial mitigation rather than a universal determinism guarantee: its benefit vanishes when body-originated error dominates, including at batch size>=8 and under end-to-end FP8 in our tests.",
+      "canonical_id": "arXiv:2609.26621",
+      "arxiv_id": "2609.26621",
+      "authors": [
+        "Gao-Yuan Du",
+        "A. Khan",
+        "Rex Zhou",
+        "Xiao-Yang Liu",
+        "Deepayan Chakrabarti",
+        "Fnu Suya",
+        "Xue-Ping Li"
+      ]
+    },
+    {
+      "title": "Polylogarithmic Collective Tree Exploration",
+      "source_url": "https://www.semanticscholar.org/paper/561f6425f6701a82fc4d68ec3b09bdf9e612329e",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "We study asynchronous collective tree exploration, where $k$ agents with unrestricted communication start at the root of an unknown tree and discover edges online. At each step, an adversary chooses which agent moves. We give a deterministic algorithm that explores any tree with $n$ nodes and depth $D$ in at most \\[ 2n+O\\left(k\\log^2(k)D\\right) \\] moves, matching known lower bounds up to a constant factor. As a direct consequence, we obtain a near-optimal competitive ratio of $O(\\log^2 k)$ for synchronous collective tree exploration, where all agents move at each round. The proof relies on a multiscale power regularizer that may be of independent interest.",
+      "canonical_id": "arXiv:2609.26789",
+      "arxiv_id": "2609.26789",
+      "authors": [
+        "Romain Cosson",
+        "Laurent Massoulié"
+      ]
+    },
+    {
+      "title": "Who Pays for the KV Cache? Attributing Shared AI Inference Spend Across Kubernetes and LLM Provider Bills",
+      "source_url": "https://www.semanticscholar.org/paper/440ae2510cf26285727166260935c713a1b6c8c9",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Organizations pay for AI through disconnected ledgers: Kubernetes allocations for self-hosted inference, gateway logs, and per-token bills from API providers. We present unalloc, an open-source tool that joins OpenCost, LiteLLM, OpenAI and Anthropic cost data into one exact ledger and reports the share of spend with no owner, and use it to study where attribution breaks at the seams between these systems. Five case studies run inference for real or simulate it: a vLLM-style serving simulator with paged KV memory and prefix caching; a PyTorch transformer serving a multi-tenant trace with a real KV cache; tensor- and pipeline-parallel inference on torch.distributed; the unmodified CLI against mock provider APIs; and four downstream use cases. At the seams, in a constructed multi-pod deployment scenario -- one month of synthetic OpenCost allocations, not observed billing data -- owner labels set only on LeaderWorkerSet leader pods leave 66% of that deployment's GPU bill unowned, and the natural fallback key assigns 61% of it to a Helm chart name while the headline unallocated share falls to 4%; enabling every source double counts all gateway spend; and reading one page of a billing API reports a quarter of spend. Inside a shared inference server the metering rule decides who pays: on an NVIDIA H100 running vLLM, a token meter assigns a retrieval-heavy tenant 12-14 percentage points more of the bill than an equal time-share meter at every load tested, while GPU utilization reads 97-99% across configured loads of 2 to 16 requests per second (3.7 to 26.9 completed requests per second; the configured rate counts session-initial arrivals only) and power draw tracks load. Neither meter is a ground truth; we position these results against recent Shapley-based energy attribution. Code, raw data, captured evidence, figures and the paper regenerate from the repository.",
+      "canonical_id": "arXiv:2609.24991",
+      "arxiv_id": "2609.24991",
+      "authors": [
+        "Tim Urista"
+      ]
+    },
+    {
+      "title": "Rollout Efficiency in Reinforcement Learning for Reasoning Large Language Models: A Taxonomy and Future Directions",
+      "source_url": "https://www.semanticscholar.org/paper/5b41c29c73826779d2d671315978c9f818876f36",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Reasoning-oriented reinforcement learning enables large language models to solve mathematical, coding, and other multi-step tasks, but shifts a substantial portion of the training cost to rollout, where trajectories are generated for policy updates. Efficient rollout mechanisms are therefore essential to reduce this cost while maintaining the freshness, consistency, and statistical validity of training data. This survey provides a systematic taxonomy of recent research on rollout efficiency for reasoning-oriented reinforcement learning, classifying existing approaches from both mechanism and bottleneck perspectives. Based on this taxonomy, we analyze how different technique families address distinct sources of rollout inefficiency, examine opportunities and potential conflicts for combining them, identify gaps in the evaluation and reporting of efficiency gains, and discuss open challenges and future research directions.",
+      "canonical_id": "arXiv:2609.25463",
+      "arxiv_id": "2609.25463",
+      "authors": [
+        "N. Gholipour",
+        "Marcos Assuncao",
+        "Gursimran Singh",
+        "T. Yu",
+        "Rajkummar Buyya",
+        "Julien Gascon-Samson",
+        "Zhe-Nan Fan",
+        "Yong Zhang",
+        "Xiao-Jie Xu",
+        "Yanyu Yao",
+        "Xiao-Long Bai"
+      ]
+    },
+    {
+      "title": "Towards Full Pipeline FP8 Reinforcement Learning for LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/c9568ef74185a29fbfc8910a559636863ed555f8",
+      "year": 2026,
+      "published": "2026-09-19",
+      "abstract": "Reinforcement learning (RL) has become a key technique for improving the reasoning and agentic abilities of large language models (LLMs). Although FP8 quantization can accelerate RL training, maintaining stability throughout an FP8 RL pipeline remains challenging. While previous works have focused on resolving train-inference mismatches using correction techniques like TIS, we reveal that full-pipeline FP8 RL still suffers from severe training instability, manifesting as anomalous mid-training entropy surges and garbled outputs. We trace this instability to a previously overlooked cause: compounded FP8 quantization noise distorts the importance ratio, disproportionately pushing negative-advantage tokens outside the trust region and erroneously zeroing out their gradients. As a result, pathological outputs are not properly penalized and accumulate over the course of training. To address this, we propose Calibrated Clipping, a dynamic method that aligns the FP8 clipping bounds with high-precision BF16 distributions by matching the lower-bound clipping quantile and rebalancing the upper bound accordingly. Extensive experiments across GRPO and DAPO algorithms, model scales from 8B to 32B, and multiple FP8 scaling granularities demonstrate that our approach successfully eliminates entropy surges and restores performance comparable to the BF16 baseline.",
+      "canonical_id": "arXiv:2609.22870",
+      "arxiv_id": "2609.22870",
+      "authors": [
+        "Fan Chen",
+        "Ziheng Jiang",
+        "Zi-Yun Wei",
+        "Zheng Zhong",
+        "Du Li",
+        "Chi Zhang",
+        "Haibin Lin",
+        "Shivaram Venkataraman"
+      ]
+    },
+    {
+      "title": "Fast Intent-Driven Service Orchestration with Jev for 6G Edge Networks",
+      "source_url": "https://www.semanticscholar.org/paper/da3e8ab9b5e10edcd303335e2c15a68cbc092f85",
+      "year": 2026,
+      "published": "2026-09-19",
+      "abstract": "Intent-driven services envisioned for sixth-generation (6G) edge networks must translate changing requirements into executable contracts while wireless requests continue to arrive. Interpretation consumes part of the same deadline budget as transmission, queueing, and execution. We evaluate Jev as a decision model for this stage, asking whether faster contract activation improves service timeliness while preserving interpretation quality. Contracts specify permitted execution locations, deadlines, and priorities; a numerical scheduler uses them to allocate edge work. The evaluation combines live Jev, DeepSeek, Gemini, and self-hosted Qwen responses with packet-level New Radio simulation, mobility events, shared edge queues, and a real image-reading service. Cached interpretation with numerical scheduling substantially improves completion over direct model-selected placement. With correct interpretation on all evaluated contracts, Jev reduces median decision latency by 22.4% against DeepSeek and 61.9% against Gemini; completion in the modeled update scenarios rises by 3.50 and 8.35 percentage points. A separate comparison with direct-attribute Qwen retains a 53.0% latency reduction and a 4.78-point completion gain. Exchanging recorded model and scheduling waits reproduces the comparator completion summaries for all 12 trajectories in each of two modeled comparisons. In the real image service, Jev retains faster decisions and completes 459 requests correctly and on time, compared with 463 for DeepSeek and 435 for Qwen out of 1,080 each. These findings connect fast intent decisions to timely edge service execution and support using Jev at contract activation, with numerical scheduling adapting placements to current network and computing state.",
+      "canonical_id": "arXiv:2609.23136",
+      "arxiv_id": "2609.23136",
+      "authors": [
+        "De-Long Li",
+        "Xu Wang",
+        "Hao-Chen Gong",
+        "Rui Lang",
+        "Guangsheng Yu"
+      ]
+    },
+    {
+      "title": "Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration",
+      "source_url": "https://www.semanticscholar.org/paper/8138536bb9ab0c28ccd56e45ffa65d1aa7cc4968",
+      "year": 2026,
+      "published": "2026-09-19",
+      "abstract": "Natural-language service requests can require a language-model decision before execution starts, consuming part of the request's latency budget. We integrate Jev's decision-oriented application programming interface (API) into edge service orchestration to reduce this overhead while retaining service completion. The integration extracts four bounded intent fields and applies a shared validator, admission policy, and scheduler, accounting for decision waiting throughout the request timeline. We compare Jev with a short, structured-output DeepSeek deployment using live API measurements followed by modeled execution, and then a real two-node optical character recognition (OCR) service with self-hosted Qwen and rule-based references. Across three consecutive measurement blocks, Jev reduces median client decision latency by 15.9-26.5%. In eight paired OCR conditions, Jev matches DeepSeek's correct, on-time completion count in seven and exceeds it in one. Without caching, median end-to-end latency on requests completed correctly by both systems is 11.1-25.3% lower; API fees per correct completion are 69.0-70.6% lower. Repeated-request caching largely removes the latency difference. The results demonstrate that decision-model substitution can lower both response latency and API fees in the tested service path, and identify fresh interpretation as the main opportunity for latency savings.",
+      "canonical_id": "arXiv:2609.22753",
+      "arxiv_id": "2609.22753",
+      "authors": [
+        "De-Long Li",
+        "Xu Wang",
+        "Hao-Chen Gong",
+        "Rui Lang",
+        "Guangsheng Yu"
+      ]
+    },
+    {
+      "title": "TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching",
+      "source_url": "https://www.semanticscholar.org/paper/fe460fbf1405f9db97c729bab3ab5b09d218aa50",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Large language models (LLMs) are moving onto mobile devices for increasingly diverse workloads over text, images, video, and audio. These applications often require long contexts, making the Key-Value (KV) cache a dominant memory bottleneck because it grows linearly with sequence length and is accessed at every decoding step. Prior work reduces KV-cache footprint through low-rank compression, token eviction, or flash offloading, but the resulting reconstruction overhead, irreversible token loss, or I/O stalls can offset the benefit of saving memory. We present TierKV, a mobile LLM inference framework built on Predictive Multi-Tier Cache Optimization (PMCO). Before decoding starts, PMCO predicts future cache demand from prefill hidden states and jointly assigns tokens to exact, low-rank, and flash-offloaded tiers under the device memory and accuracy budgets. This formulation retains access to the full context, removes the circular dependency of reactive eviction, and admits a closed-form solver that selects tier boundaries and per-layer ranks at runtime. Across eight text, vision, and audio models on three mobile SoCs, TierKV improves prefill throughput by up to 17.6x over existing mobile LLM frameworks, reduces RAM-resident KV cache by 12.5-34%, thereby enabling substantially longer contexts under the same memory budget, while incurring only minor accuracy degradation.",
+      "canonical_id": "arXiv:2609.21172",
+      "arxiv_id": "2609.21172",
+      "authors": [
+        "Zhihao Shu",
+        "Md Musfiqur Rahman Sanim",
+        "Jie Hu",
+        "Kun Yuan",
+        "Ming-Hai Qin",
+        "Gagan Agrawal",
+        "Wei Niu"
+      ]
+    },
+    {
+      "title": "MintAct: A Unified Visual Agent for Digital Environments",
+      "source_url": "https://www.semanticscholar.org/paper/78951820697056023d297d367e1d7d74f20d2bb6",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through careful design of our environments, data, and training recipes, MintAct models match the performance of per-domain specialists across all of these capabilities. To enable this, we develop a scalable environment and reinforcement learning (RL) infrastructure. On the environment side, we host hundreds of concurrent instances across heterogeneous per-domain backends, serving both trajectory data collection and online RL. To enable efficient and scalable RL training, an asynchronous framework keeps explicit control over the cross-domain training distribution and remains stable under noisy environment feedback and off-policy drift. Experimental results show that MintAct achieves state-of-the-art performance (48.9 on OSWorld-Verified) across a wide range of benchmarks at comparable model sizes.",
+      "canonical_id": "arXiv:2609.22083",
+      "arxiv_id": "2609.22083",
+      "authors": [
+        "Ming-Fei Gao",
+        "Rui Tian",
+        "Hai-Ming Gang",
+        "Bo-Han Zhai",
+        "Le Zhang",
+        "Yu Gong",
+        "Di Feng",
+        "Ege Özsoy",
+        "Kai-Xin Ma",
+        "Vishwesh Kirthivasan",
+        "Oguzhan Fatih Kar",
+        "Roman Bachmann",
+        "Anders Boesen Lindbo Larsen",
+        "Afshin Dehghan"
+      ]
+    },
+    {
+      "title": "Long-Lived Characters, Local Inference: Incremental Memory Maintenance for Game NPCs",
+      "source_url": "https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "A game character should not have to reread its entire life before every conversation. For locally deployed language-model characters, however, revising a few memories can invalidate a long reusable prefix. The resulting preparation cost competes with both foreground dialogue and the maintenance of other characters. This matters especially when dialogue feeds game-defined actions and value judgments: a fluent but incorrect account of who owns an item, or whether a transfer has already happened, can corrupt the input to otherwise deterministic rules. We study incremental memory maintenance for long-lived game NPCs in a quantized Qwen hybrid recurrent-attention model. Our runtime removes superseded attention KV entries, computes replacement records at the true sequence tail, and preserves the continuing recurrent state and unchanged KV. Existing local experiments combine multi-update dialogue replays, fixed-input placement ablations, and attention diagnostics. Independent block composition weakens query-conditioned memory selection without a uniform chunk-initial attention collapse. True-tail updates preserve important current-state and historical bindings across eight scripted maintenance rounds; a placement case recovers the full-refill quantity in three reconstructions, while slot-preserving alternatives repeat a double-subtraction error. Attention-distribution proximity alone does not explain these semantic differences. The results motivate treating a character's inference state as a maintained, history-dependent resource, rather than only a disposable encoding of its latest memory text.",
+      "canonical_id": "arXiv:2609.18935",
+      "arxiv_id": "2609.18935",
+      "authors": [
+        "Zi-Mu Xu"
+      ]
+    },
+    {
+      "title": "MiST: Mid-Training LLMs for Cybersecurity",
+      "source_url": "https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Cybersecurity combines high-stakes analysis with complex technical language, making it an impactful and challenging domain for LLMs. We present MiST (Mid-trained Security Transformer), a suite of 8B and 32B models that achieve strong performance on public cybersecurity benchmarks. We use mid-training as an intermediate adaptation stage between general pre-training and cybersecurity training. Rather than performing continual pre-training over large volumes of raw domain text, we curate a compact, expert-vetted seed corpus, and transform it into high-quality domain-specific synthetic training data. The final MiST checkpoints improve mean cybersecurity accuracy by +13.1 and +8.6 absolute percentage points over the corresponding Qwen baselines for 8B and 32B, respectively, corresponding to relative gains of +27.0% and +15.8%. Ablation results further show that these cybersecurity gains arise in the mid-training and supervised fine-tuning stages through a combination of the synthetic data generation flows. Furthermore, we show that MiST provides a stronger initialization for downstream task-specific fine-tuning adaptation and reinforcement learning.",
+      "canonical_id": "arXiv:2609.18496",
+      "arxiv_id": "2609.18496",
+      "authors": [
+        "O. Ovadia",
+        "Elad Ben Zaken",
+        "Elad Guttman",
+        "Orly Moreno Kadosh"
+      ]
+    },
+    {
+      "title": "Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays",
+      "source_url": "https://www.semanticscholar.org/paper/226f7a507df4aef2e917bc53941d86e9b88019df",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Large language model (LLM) inference deployed on Kubernetes faces an autoscaling challenge that conventional web services do not: new serving replicas take two to ten minutes to start because multi-gigabyte model weights must be loaded, which makes purely reactive scaling structurally late. We ask a sharp question: among the components of a predictive autoscaler, which ones actually matter under such long actuation delays? We answer it by decomposing predictive autoscaling into four factors---token-aware demand tracking, startup-delay lookahead, a bounded uncertainty margin, and plant-state observation---and measuring each factor's contribution in isolation on production-derived heavy-tailed workloads generated by ServeGen. Our main finding is that a simple exponentially weighted moving average (EWMA) predictor with delay-aware lookahead and an upper confidence bound (UCB) margin captures most of the benefit, reducing time-to-first-token (TTFT) service-level-objective (SLO) violations from 53% (reactive, queries-per-second based) to 0.5% across five random seeds; lookahead alone is the single largest factor, a 14$\\times$ reduction. Kalman filter variants do not consistently improve the cost--SLO tradeoff. Controlled experiments isolate the reason token granularity is necessary: context length, through key--value cache pressure, degrades TTFT far more than request rate at matched throughput. Finally, a validation on a real Kubernetes cluster (Qwen2.5-7B, A100, vLLM) confirms the central mechanism: a delay-aware lookahead controller cuts TTFT violations from 63.5\\% to 3.7\\% relative to reactive KEDA scaling. We distinguish throughout which findings are specific to Kubernetes actuation and which are general to LLM serving.",
+      "canonical_id": "arXiv:2609.20874",
+      "arxiv_id": "2609.20874",
+      "authors": [
+        "Tian-Rui Liu",
+        "Xiao-Hai Hu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27746",
+      "identity_tokens": [
+        "id:arXiv:2609.27746",
+        "title:the kv cache working set online capacity planning for llm inference systems",
+        "url:https://www.semanticscholar.org/paper/722af1814c8958ddb9fbb8579feb7fb1fc9e0b63"
+      ],
+      "record": {
+        "title": "The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems",
+        "source_url": "https://www.semanticscholar.org/paper/722af1814c8958ddb9fbb8579feb7fb1fc9e0b63",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Prefix caching is critical for efficient large language model (LLM) serving, particularly for agentic workloads that repeatedly invoke the model with a growing conversation and tool-use history. By reusing the key-value (KV) states of previously processed prefixes, prefix caching avoids redundant prefill computation. Its effectiveness, however, depends on retaining a sufficiently large set of KV cache states. Provisioning enough cache to preserve all historical KV states is prohibitively expensive and often unnecessary, whereas insufficient capacity can substantially degrade the cache hit rate. Determining the KV cache working set, defined as the minimum cache capacity required to achieve a target hit rate, is therefore essential for efficient cache provisioning and system design. We present KVSET, an online analyzer that estimates the KV cache working set of LLM serving workloads. KVSET uses the Mattson stack algorithm to efficiently estimate cache hit rates across a wide range of cache capacities. For each KV cache page, KVSET computes its LRU stack distance and compares it with the page number of each candidate capacity. This comparison determines whether the page would be a hit at each capacity without independently simulating every capacity configuration. KVSET therefore substantially reduces the computational and memory overhead of conventional capacity-by-capacity simulation and makes online working-set analysis practical. KVSET further determines the minimum cache capacity based on the maximum LRU depth among the prefix pages required to achieve the target hit rate. We validate KVSET using traces collected from production LLM workloads and show that its estimates closely match measurements from real cache deployments. The open-source implementation supports both online request processing and offline trace replay.",
+        "canonical_id": "arXiv:2609.27746",
+        "arxiv_id": "2609.27746"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26638",
+      "identity_tokens": [
+        "id:arXiv:2609.26638",
+        "title:diffusion drafts ar verifies accelerating document ocr with selfspeculative decoding",
+        "url:https://www.semanticscholar.org/paper/42cb858ef1c96a4950f14bcb89c8e127fc7c3194"
+      ],
+      "record": {
+        "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/42cb858ef1c96a4950f14bcb89c8e127fc7c3194",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+        "canonical_id": "arXiv:2609.26638",
+        "arxiv_id": "2609.26638",
+        "authors": [
+          "Dohyun Kim",
+          "Sung-Jun Han",
+          "Hyun-geun Kim",
+          "Yusik Kim",
+          "Jamin Shin",
+          "Paul Hongsuck Seo",
+          "Hongjoon Ahn"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27166",
+      "identity_tokens": [
+        "id:arXiv:2609.27166",
+        "title:scaling of capability and efficiency at inference time in large reasoning models",
+        "url:https://www.semanticscholar.org/paper/15133940e1d8505b41d5255aee8c47f8a93dd129"
+      ],
+      "record": {
+        "title": "Scaling of Capability and Efficiency at Inference Time in Large Reasoning Models",
+        "source_url": "https://www.semanticscholar.org/paper/15133940e1d8505b41d5255aee8c47f8a93dd129",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Capability and efficiency are two key dimensions of reasoning in large language models (LLMs). Capability refers to the ability to solve a given problem correctly, whereas efficiency refers to the ability to do so with limited resources. When LLMs use Chain-of-Thought (CoT) reasoning to solve problems of controlled hardness, both the number of problems solved correctly and the number of tokens required to reach a correct answer depend on problem hardness and model size. However, how these factors jointly shape capability and efficiency remains poorly understood. Here, we use hierarchical Bayesian models to evaluate the capability and efficiency of LLMs from the DeepSeek-R1-Distill model family across four classes of arithmetic and algorithmic reasoning problems. At a fixed model size, the probability of correctly solving an instance decays approximately exponentially with instance size, our proxy for problem hardness. The decay scale grows sublinearly with model size, indicating that larger models are more capable, but that capability gains diminish with scale. Output length grows as a power law with instance size, which serves as a proxy for difficulty. However, the parameters of this power law do not vary systematically with model size, suggesting that larger models do not become more efficient. Together, these findings reveal potential limitations of naive scaling as a strategy for developing more capable AI systems: capability improves with diminishing returns, while efficiency shows little to no improvement.",
+        "canonical_id": "arXiv:2609.27166",
+        "arxiv_id": "2609.27166"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27085",
+      "identity_tokens": [
+        "id:arXiv:2609.27085",
+        "title:crossflow prefilldecode elasticity for agentic llm serving",
+        "url:https://www.semanticscholar.org/paper/898e569ce96ddf4f4a4e37cb63e510574fe1262b"
+      ],
+      "record": {
+        "title": "Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/898e569ce96ddf4f4a4e37cb63e510574fe1262b",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "As serving capacity demand surpasses that of training, serving efficiency becomes increasingly important. Prefill-decode (P/D) disaggregation improves serving efficiency through specialization and isolation of the two phases. These benefits rest on a static partitioning. Phase demand, however, is not static. We observe that in a large LLM fleet the ratio of uncached input to output tokens has peak-to-mean ratios up to 4.7x at minute timescales, and that in a public agentic trace the hourly ratio spans a median 24.5x within a single day, while reassigning a replica takes tens of minutes. Agentic traffic sharpens the mismatch. Sizing each pool at its ninety-fifth percentile leaves up to 17% of cluster capacity unused; sizing below it converts the same imbalance into queueing and unrealized throughput. We present Crossflow, which makes this boundary elastic without changing node roles. Each decode node publishes a short-lived, revocable lease that bounds local-prefill compute, KV capacity, transfer work, and projected output. Across public and internal traces, Crossflow improves token throughput by 16.2-17.4% on geometric mean over static P/D, and by up to 43.4% at high load, while reducing mean TTFT at every evaluated point.",
+        "canonical_id": "arXiv:2609.27085",
+        "arxiv_id": "2609.27085"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25845",
+      "identity_tokens": [
+        "id:arXiv:2609.25845",
+        "title:visual jev accurate and efficient decisions from shared visual context",
+        "url:https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1"
+      ],
+      "record": {
+        "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+        "source_url": "https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+        "canonical_id": "arXiv:2609.25845",
+        "arxiv_id": "2609.25845",
+        "authors": [
+          "Guan-Xu Yu",
+          "Yu-Hang Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25939",
+      "identity_tokens": [
+        "id:arXiv:2609.25939",
+        "title:clusterfewshot improving fewshot optimization for llms workflow",
+        "url:https://www.semanticscholar.org/paper/3a8b66e7618434d867428b56e0038ad3ef58d460"
+      ],
+      "record": {
+        "title": "ClusterFewshot: Improving Few-shot Optimization for LLMs workflow",
+        "source_url": "https://www.semanticscholar.org/paper/3a8b66e7618434d867428b56e0038ad3ef58d460",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "The performance of large language model (LLM) workflows often depends on selecting a small set of in-context demonstrations to guide model behavior on new tasks. Recent methods improve this process by augmenting prompts with successful reasoning paths. However, their demonstration selection relies on random sampling or metric-based rankings, overlooking the semantic structure of the task. We propose ClusterFewshot, a strategy that combines semantic structuring with utility-aware scoring to construct representative and effective few-shot demonstration sets. Evaluated within DSPy-based pipelines, ClusterFewshot substantially reduces optimization cost across multiple benchmarks, while consistently improving accuracy relative to prior bootstrap-based methods in both standalone prompt tuning and hybrid prompt-weight optimization.",
+        "canonical_id": "arXiv:2609.25939",
+        "arxiv_id": "2609.25939",
+        "authors": [
+          "O. Haim",
+          "Shahar Katz",
+          "Lior Wolf"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26777",
+      "identity_tokens": [
+        "id:arXiv:2609.26777",
+        "title:sweserve benchmarking agentic engineering for production inference serving",
+        "url:https://www.semanticscholar.org/paper/3ae0b884bfc172b87f63af1c94d1f01135b2ca82"
+      ],
+      "record": {
+        "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving",
+        "source_url": "https://www.semanticscholar.org/paper/3ae0b884bfc172b87f63af1c94d1f01135b2ca82",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "We introduce SWE-Serve, a benchmark for evaluating agents on production inference engineering tasks. Implementing an inference feature can require coordinating multiple changes across the serving stack, including model support, runtime execution, and public APIs. Existing benchmarks provide limited coverage of production inference engineering: repository-level software engineering benchmarks do not target inference, while general terminal-agent benchmarks include only a few inference tasks. Dedicated inference benchmarks, meanwhile, focus primarily on isolated kernel generation or performance optimization rather than repository-scale production feature implementation. SWE-Serve provides 53 repository-grounded tasks derived from recent production changes to SGLang, spanning six inference engineering families. Each task executes on either CPU or a single GPU (H100) and is evaluated with hidden functional and regression tests, including, where applicable, end-to-end (E2E) serving tests and calibrated performance gates. Executable no-op and oracle controls, adversarial verifier review, and closed-book execution support task validity and evaluation integrity. Across 11 models and 31 model-effort configurations, the best-performing configuration achieves 75% mean pass@1. SWE-Serve exposes a substantial gap between completing tasks locally and achieving production correctness. On 19 tasks with end-to-end coverage, model-serving E2E tests reject roughly one-third of patches that pass every other test (45.9% under the verifier versus 69.4% with E2E tests excluded from scoring), with pass rate increasing for each model's best-performing configuration. By making the production correctness gap directly measurable, SWE-Serve enables the field to track whether future agents move beyond completing tasks locally to achieving production correctness.",
+        "canonical_id": "arXiv:2609.26777",
+        "arxiv_id": "2609.26777",
+        "authors": [
+          "Jennifer Williams",
+          "David P. Farris",
+          "Jeffrey J. Farris",
+          "Jian-Tao Jiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26621",
+      "identity_tokens": [
+        "id:arXiv:2609.26621",
+        "title:greedy decoding is not precisioninvariant crossprecision output divergence in llm inference",
+        "url:https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e"
+      ],
+      "record": {
+        "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/a34b72039975f72b8991ab1c565976094f046d1e",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Greedy decoding from large language models is commonly treated as deterministic. We show it is not precision-invariant: the same model, prompt, and decoding algorithm produce different outputs in BF16 versus FP16 on identical hardware. Across our evaluations of six models (1.1B-7B parameters, four families; divergence additionally characterised at 12B) and three benchmarks, 49-100\\% of prompts diverge; a single token flip often cascades into trajectory-level divergence. We develop an empirical error-propagation analysis and find that 22 layers of accumulated body error do not distinguish flipping from non-flipping steps; the outcome depends primarily on the top-two logit margin at the LM head relative to the directional perturbation between the top-two candidates. The analysis makes five testable predictions about intervention outcomes, including that applying more FP32 compute (broader scope) makes agreement worse. The experiments match all five predictions. The best-performing low-overhead intervention we evaluate, selective FP32 LM head recomputation, triggered only when the margin falls below a threshold, delivers +22-36 pp exact agreement on A10G (+12-21 pp on L4 and A100) at less than 4\\% latency overhead in low-batch (batch size<=4) single-stream inference. We map the applicability boundary across six models and four batch sizes, and hypothesise that training-time precision stability is a determining factor. The method is a partial mitigation rather than a universal determinism guarantee: its benefit vanishes when body-originated error dominates, including at batch size>=8 and under end-to-end FP8 in our tests.",
+        "canonical_id": "arXiv:2609.26621",
+        "arxiv_id": "2609.26621",
+        "authors": [
+          "Gao-Yuan Du",
+          "A. Khan",
+          "Rex Zhou",
+          "Xiao-Yang Liu",
+          "Deepayan Chakrabarti",
+          "Fnu Suya",
+          "Xue-Ping Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26789",
+      "identity_tokens": [
+        "id:arXiv:2609.26789",
+        "title:polylogarithmic collective tree exploration",
+        "url:https://www.semanticscholar.org/paper/561f6425f6701a82fc4d68ec3b09bdf9e612329e"
+      ],
+      "record": {
+        "title": "Polylogarithmic Collective Tree Exploration",
+        "source_url": "https://www.semanticscholar.org/paper/561f6425f6701a82fc4d68ec3b09bdf9e612329e",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "We study asynchronous collective tree exploration, where $k$ agents with unrestricted communication start at the root of an unknown tree and discover edges online. At each step, an adversary chooses which agent moves. We give a deterministic algorithm that explores any tree with $n$ nodes and depth $D$ in at most \\[ 2n+O\\left(k\\log^2(k)D\\right) \\] moves, matching known lower bounds up to a constant factor. As a direct consequence, we obtain a near-optimal competitive ratio of $O(\\log^2 k)$ for synchronous collective tree exploration, where all agents move at each round. The proof relies on a multiscale power regularizer that may be of independent interest.",
+        "canonical_id": "arXiv:2609.26789",
+        "arxiv_id": "2609.26789",
+        "authors": [
+          "Romain Cosson",
+          "Laurent Massoulié"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24991",
+      "identity_tokens": [
+        "id:arXiv:2609.24991",
+        "title:who pays for the kv cache attributing shared ai inference spend across kubernetes and llm provider bills",
+        "url:https://www.semanticscholar.org/paper/440ae2510cf26285727166260935c713a1b6c8c9"
+      ],
+      "record": {
+        "title": "Who Pays for the KV Cache? Attributing Shared AI Inference Spend Across Kubernetes and LLM Provider Bills",
+        "source_url": "https://www.semanticscholar.org/paper/440ae2510cf26285727166260935c713a1b6c8c9",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Organizations pay for AI through disconnected ledgers: Kubernetes allocations for self-hosted inference, gateway logs, and per-token bills from API providers. We present unalloc, an open-source tool that joins OpenCost, LiteLLM, OpenAI and Anthropic cost data into one exact ledger and reports the share of spend with no owner, and use it to study where attribution breaks at the seams between these systems. Five case studies run inference for real or simulate it: a vLLM-style serving simulator with paged KV memory and prefix caching; a PyTorch transformer serving a multi-tenant trace with a real KV cache; tensor- and pipeline-parallel inference on torch.distributed; the unmodified CLI against mock provider APIs; and four downstream use cases. At the seams, in a constructed multi-pod deployment scenario -- one month of synthetic OpenCost allocations, not observed billing data -- owner labels set only on LeaderWorkerSet leader pods leave 66% of that deployment's GPU bill unowned, and the natural fallback key assigns 61% of it to a Helm chart name while the headline unallocated share falls to 4%; enabling every source double counts all gateway spend; and reading one page of a billing API reports a quarter of spend. Inside a shared inference server the metering rule decides who pays: on an NVIDIA H100 running vLLM, a token meter assigns a retrieval-heavy tenant 12-14 percentage points more of the bill than an equal time-share meter at every load tested, while GPU utilization reads 97-99% across configured loads of 2 to 16 requests per second (3.7 to 26.9 completed requests per second; the configured rate counts session-initial arrivals only) and power draw tracks load. Neither meter is a ground truth; we position these results against recent Shapley-based energy attribution. Code, raw data, captured evidence, figures and the paper regenerate from the repository.",
+        "canonical_id": "arXiv:2609.24991",
+        "arxiv_id": "2609.24991",
+        "authors": [
+          "Tim Urista"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25463",
+      "identity_tokens": [
+        "id:arXiv:2609.25463",
+        "title:rollout efficiency in reinforcement learning for reasoning large language models a taxonomy and future directions",
+        "url:https://www.semanticscholar.org/paper/5b41c29c73826779d2d671315978c9f818876f36"
+      ],
+      "record": {
+        "title": "Rollout Efficiency in Reinforcement Learning for Reasoning Large Language Models: A Taxonomy and Future Directions",
+        "source_url": "https://www.semanticscholar.org/paper/5b41c29c73826779d2d671315978c9f818876f36",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Reasoning-oriented reinforcement learning enables large language models to solve mathematical, coding, and other multi-step tasks, but shifts a substantial portion of the training cost to rollout, where trajectories are generated for policy updates. Efficient rollout mechanisms are therefore essential to reduce this cost while maintaining the freshness, consistency, and statistical validity of training data. This survey provides a systematic taxonomy of recent research on rollout efficiency for reasoning-oriented reinforcement learning, classifying existing approaches from both mechanism and bottleneck perspectives. Based on this taxonomy, we analyze how different technique families address distinct sources of rollout inefficiency, examine opportunities and potential conflicts for combining them, identify gaps in the evaluation and reporting of efficiency gains, and discuss open challenges and future research directions.",
+        "canonical_id": "arXiv:2609.25463",
+        "arxiv_id": "2609.25463",
+        "authors": [
+          "N. Gholipour",
+          "Marcos Assuncao",
+          "Gursimran Singh",
+          "T. Yu",
+          "Rajkummar Buyya",
+          "Julien Gascon-Samson",
+          "Zhe-Nan Fan",
+          "Yong Zhang",
+          "Xiao-Jie Xu",
+          "Yanyu Yao",
+          "Xiao-Long Bai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.22870",
+      "identity_tokens": [
+        "id:arXiv:2609.22870",
+        "title:towards full pipeline fp8 reinforcement learning for llms",
+        "url:https://www.semanticscholar.org/paper/c9568ef74185a29fbfc8910a559636863ed555f8"
+      ],
+      "record": {
+        "title": "Towards Full Pipeline FP8 Reinforcement Learning for LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/c9568ef74185a29fbfc8910a559636863ed555f8",
+        "year": 2026,
+        "published": "2026-09-19",
+        "abstract": "Reinforcement learning (RL) has become a key technique for improving the reasoning and agentic abilities of large language models (LLMs). Although FP8 quantization can accelerate RL training, maintaining stability throughout an FP8 RL pipeline remains challenging. While previous works have focused on resolving train-inference mismatches using correction techniques like TIS, we reveal that full-pipeline FP8 RL still suffers from severe training instability, manifesting as anomalous mid-training entropy surges and garbled outputs. We trace this instability to a previously overlooked cause: compounded FP8 quantization noise distorts the importance ratio, disproportionately pushing negative-advantage tokens outside the trust region and erroneously zeroing out their gradients. As a result, pathological outputs are not properly penalized and accumulate over the course of training. To address this, we propose Calibrated Clipping, a dynamic method that aligns the FP8 clipping bounds with high-precision BF16 distributions by matching the lower-bound clipping quantile and rebalancing the upper bound accordingly. Extensive experiments across GRPO and DAPO algorithms, model scales from 8B to 32B, and multiple FP8 scaling granularities demonstrate that our approach successfully eliminates entropy surges and restores performance comparable to the BF16 baseline.",
+        "canonical_id": "arXiv:2609.22870",
+        "arxiv_id": "2609.22870",
+        "authors": [
+          "Fan Chen",
+          "Ziheng Jiang",
+          "Zi-Yun Wei",
+          "Zheng Zhong",
+          "Du Li",
+          "Chi Zhang",
+          "Haibin Lin",
+          "Shivaram Venkataraman"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23136",
+      "identity_tokens": [
+        "id:arXiv:2609.23136",
+        "title:fast intentdriven service orchestration with jev for 6g edge networks",
+        "url:https://www.semanticscholar.org/paper/da3e8ab9b5e10edcd303335e2c15a68cbc092f85"
+      ],
+      "record": {
+        "title": "Fast Intent-Driven Service Orchestration with Jev for 6G Edge Networks",
+        "source_url": "https://www.semanticscholar.org/paper/da3e8ab9b5e10edcd303335e2c15a68cbc092f85",
+        "year": 2026,
+        "published": "2026-09-19",
+        "abstract": "Intent-driven services envisioned for sixth-generation (6G) edge networks must translate changing requirements into executable contracts while wireless requests continue to arrive. Interpretation consumes part of the same deadline budget as transmission, queueing, and execution. We evaluate Jev as a decision model for this stage, asking whether faster contract activation improves service timeliness while preserving interpretation quality. Contracts specify permitted execution locations, deadlines, and priorities; a numerical scheduler uses them to allocate edge work. The evaluation combines live Jev, DeepSeek, Gemini, and self-hosted Qwen responses with packet-level New Radio simulation, mobility events, shared edge queues, and a real image-reading service. Cached interpretation with numerical scheduling substantially improves completion over direct model-selected placement. With correct interpretation on all evaluated contracts, Jev reduces median decision latency by 22.4% against DeepSeek and 61.9% against Gemini; completion in the modeled update scenarios rises by 3.50 and 8.35 percentage points. A separate comparison with direct-attribute Qwen retains a 53.0% latency reduction and a 4.78-point completion gain. Exchanging recorded model and scheduling waits reproduces the comparator completion summaries for all 12 trajectories in each of two modeled comparisons. In the real image service, Jev retains faster decisions and completes 459 requests correctly and on time, compared with 463 for DeepSeek and 435 for Qwen out of 1,080 each. These findings connect fast intent decisions to timely edge service execution and support using Jev at contract activation, with numerical scheduling adapting placements to current network and computing state.",
+        "canonical_id": "arXiv:2609.23136",
+        "arxiv_id": "2609.23136",
+        "authors": [
+          "De-Long Li",
+          "Xu Wang",
+          "Hao-Chen Gong",
+          "Rui Lang",
+          "Guangsheng Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.22753",
+      "identity_tokens": [
+        "id:arXiv:2609.22753",
+        "title:replacing large language models with jev decision models for lowlatency edge service orchestration",
+        "url:https://www.semanticscholar.org/paper/8138536bb9ab0c28ccd56e45ffa65d1aa7cc4968"
+      ],
+      "record": {
+        "title": "Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration",
+        "source_url": "https://www.semanticscholar.org/paper/8138536bb9ab0c28ccd56e45ffa65d1aa7cc4968",
+        "year": 2026,
+        "published": "2026-09-19",
+        "abstract": "Natural-language service requests can require a language-model decision before execution starts, consuming part of the request's latency budget. We integrate Jev's decision-oriented application programming interface (API) into edge service orchestration to reduce this overhead while retaining service completion. The integration extracts four bounded intent fields and applies a shared validator, admission policy, and scheduler, accounting for decision waiting throughout the request timeline. We compare Jev with a short, structured-output DeepSeek deployment using live API measurements followed by modeled execution, and then a real two-node optical character recognition (OCR) service with self-hosted Qwen and rule-based references. Across three consecutive measurement blocks, Jev reduces median client decision latency by 15.9-26.5%. In eight paired OCR conditions, Jev matches DeepSeek's correct, on-time completion count in seven and exceeds it in one. Without caching, median end-to-end latency on requests completed correctly by both systems is 11.1-25.3% lower; API fees per correct completion are 69.0-70.6% lower. Repeated-request caching largely removes the latency difference. The results demonstrate that decision-model substitution can lower both response latency and API fees in the tested service path, and identify fresh interpretation as the main opportunity for latency savings.",
+        "canonical_id": "arXiv:2609.22753",
+        "arxiv_id": "2609.22753",
+        "authors": [
+          "De-Long Li",
+          "Xu Wang",
+          "Hao-Chen Gong",
+          "Rui Lang",
+          "Guangsheng Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21172",
+      "identity_tokens": [
+        "id:arXiv:2609.21172",
+        "title:tierkv longcontext ondevice llms via predictive multitier kv caching",
+        "url:https://www.semanticscholar.org/paper/fe460fbf1405f9db97c729bab3ab5b09d218aa50"
+      ],
+      "record": {
+        "title": "TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching",
+        "source_url": "https://www.semanticscholar.org/paper/fe460fbf1405f9db97c729bab3ab5b09d218aa50",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Large language models (LLMs) are moving onto mobile devices for increasingly diverse workloads over text, images, video, and audio. These applications often require long contexts, making the Key-Value (KV) cache a dominant memory bottleneck because it grows linearly with sequence length and is accessed at every decoding step. Prior work reduces KV-cache footprint through low-rank compression, token eviction, or flash offloading, but the resulting reconstruction overhead, irreversible token loss, or I/O stalls can offset the benefit of saving memory. We present TierKV, a mobile LLM inference framework built on Predictive Multi-Tier Cache Optimization (PMCO). Before decoding starts, PMCO predicts future cache demand from prefill hidden states and jointly assigns tokens to exact, low-rank, and flash-offloaded tiers under the device memory and accuracy budgets. This formulation retains access to the full context, removes the circular dependency of reactive eviction, and admits a closed-form solver that selects tier boundaries and per-layer ranks at runtime. Across eight text, vision, and audio models on three mobile SoCs, TierKV improves prefill throughput by up to 17.6x over existing mobile LLM frameworks, reduces RAM-resident KV cache by 12.5-34%, thereby enabling substantially longer contexts under the same memory budget, while incurring only minor accuracy degradation.",
+        "canonical_id": "arXiv:2609.21172",
+        "arxiv_id": "2609.21172",
+        "authors": [
+          "Zhihao Shu",
+          "Md Musfiqur Rahman Sanim",
+          "Jie Hu",
+          "Kun Yuan",
+          "Ming-Hai Qin",
+          "Gagan Agrawal",
+          "Wei Niu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.22083",
+      "identity_tokens": [
+        "id:arXiv:2609.22083",
+        "title:mintact a unified visual agent for digital environments",
+        "url:https://www.semanticscholar.org/paper/78951820697056023d297d367e1d7d74f20d2bb6"
+      ],
+      "record": {
+        "title": "MintAct: A Unified Visual Agent for Digital Environments",
+        "source_url": "https://www.semanticscholar.org/paper/78951820697056023d297d367e1d7d74f20d2bb6",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through careful design of our environments, data, and training recipes, MintAct models match the performance of per-domain specialists across all of these capabilities. To enable this, we develop a scalable environment and reinforcement learning (RL) infrastructure. On the environment side, we host hundreds of concurrent instances across heterogeneous per-domain backends, serving both trajectory data collection and online RL. To enable efficient and scalable RL training, an asynchronous framework keeps explicit control over the cross-domain training distribution and remains stable under noisy environment feedback and off-policy drift. Experimental results show that MintAct achieves state-of-the-art performance (48.9 on OSWorld-Verified) across a wide range of benchmarks at comparable model sizes.",
+        "canonical_id": "arXiv:2609.22083",
+        "arxiv_id": "2609.22083",
+        "authors": [
+          "Ming-Fei Gao",
+          "Rui Tian",
+          "Hai-Ming Gang",
+          "Bo-Han Zhai",
+          "Le Zhang",
+          "Yu Gong",
+          "Di Feng",
+          "Ege Özsoy",
+          "Kai-Xin Ma",
+          "Vishwesh Kirthivasan",
+          "Oguzhan Fatih Kar",
+          "Roman Bachmann",
+          "Anders Boesen Lindbo Larsen",
+          "Afshin Dehghan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18935",
+      "identity_tokens": [
+        "id:arXiv:2609.18935",
+        "title:longlived characters local inference incremental memory maintenance for game npcs",
+        "url:https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3"
+      ],
+      "record": {
+        "title": "Long-Lived Characters, Local Inference: Incremental Memory Maintenance for Game NPCs",
+        "source_url": "https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "A game character should not have to reread its entire life before every conversation. For locally deployed language-model characters, however, revising a few memories can invalidate a long reusable prefix. The resulting preparation cost competes with both foreground dialogue and the maintenance of other characters. This matters especially when dialogue feeds game-defined actions and value judgments: a fluent but incorrect account of who owns an item, or whether a transfer has already happened, can corrupt the input to otherwise deterministic rules. We study incremental memory maintenance for long-lived game NPCs in a quantized Qwen hybrid recurrent-attention model. Our runtime removes superseded attention KV entries, computes replacement records at the true sequence tail, and preserves the continuing recurrent state and unchanged KV. Existing local experiments combine multi-update dialogue replays, fixed-input placement ablations, and attention diagnostics. Independent block composition weakens query-conditioned memory selection without a uniform chunk-initial attention collapse. True-tail updates preserve important current-state and historical bindings across eight scripted maintenance rounds; a placement case recovers the full-refill quantity in three reconstructions, while slot-preserving alternatives repeat a double-subtraction error. Attention-distribution proximity alone does not explain these semantic differences. The results motivate treating a character's inference state as a maintained, history-dependent resource, rather than only a disposable encoding of its latest memory text.",
+        "canonical_id": "arXiv:2609.18935",
+        "arxiv_id": "2609.18935",
+        "authors": [
+          "Zi-Mu Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18496",
+      "identity_tokens": [
+        "id:arXiv:2609.18496",
+        "title:mist midtraining llms for cybersecurity",
+        "url:https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9"
+      ],
+      "record": {
+        "title": "MiST: Mid-Training LLMs for Cybersecurity",
+        "source_url": "https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Cybersecurity combines high-stakes analysis with complex technical language, making it an impactful and challenging domain for LLMs. We present MiST (Mid-trained Security Transformer), a suite of 8B and 32B models that achieve strong performance on public cybersecurity benchmarks. We use mid-training as an intermediate adaptation stage between general pre-training and cybersecurity training. Rather than performing continual pre-training over large volumes of raw domain text, we curate a compact, expert-vetted seed corpus, and transform it into high-quality domain-specific synthetic training data. The final MiST checkpoints improve mean cybersecurity accuracy by +13.1 and +8.6 absolute percentage points over the corresponding Qwen baselines for 8B and 32B, respectively, corresponding to relative gains of +27.0% and +15.8%. Ablation results further show that these cybersecurity gains arise in the mid-training and supervised fine-tuning stages through a combination of the synthetic data generation flows. Furthermore, we show that MiST provides a stronger initialization for downstream task-specific fine-tuning adaptation and reinforcement learning.",
+        "canonical_id": "arXiv:2609.18496",
+        "arxiv_id": "2609.18496",
+        "authors": [
+          "O. Ovadia",
+          "Elad Ben Zaken",
+          "Elad Guttman",
+          "Orly Moreno Kadosh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20874",
+      "identity_tokens": [
+        "id:arXiv:2609.20874",
+        "title:decomposing predictive kubernetes autoscaling for large language model serving under long startup delays",
+        "url:https://www.semanticscholar.org/paper/226f7a507df4aef2e917bc53941d86e9b88019df"
+      ],
+      "record": {
+        "title": "Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays",
+        "source_url": "https://www.semanticscholar.org/paper/226f7a507df4aef2e917bc53941d86e9b88019df",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Large language model (LLM) inference deployed on Kubernetes faces an autoscaling challenge that conventional web services do not: new serving replicas take two to ten minutes to start because multi-gigabyte model weights must be loaded, which makes purely reactive scaling structurally late. We ask a sharp question: among the components of a predictive autoscaler, which ones actually matter under such long actuation delays? We answer it by decomposing predictive autoscaling into four factors---token-aware demand tracking, startup-delay lookahead, a bounded uncertainty margin, and plant-state observation---and measuring each factor's contribution in isolation on production-derived heavy-tailed workloads generated by ServeGen. Our main finding is that a simple exponentially weighted moving average (EWMA) predictor with delay-aware lookahead and an upper confidence bound (UCB) margin captures most of the benefit, reducing time-to-first-token (TTFT) service-level-objective (SLO) violations from 53% (reactive, queries-per-second based) to 0.5% across five random seeds; lookahead alone is the single largest factor, a 14$\\times$ reduction. Kalman filter variants do not consistently improve the cost--SLO tradeoff. Controlled experiments isolate the reason token granularity is necessary: context length, through key--value cache pressure, degrades TTFT far more than request rate at matched throughput. Finally, a validation on a real Kubernetes cluster (Qwen2.5-7B, A100, vLLM) confirms the central mechanism: a delay-aware lookahead controller cuts TTFT violations from 63.5\\% to 3.7\\% relative to reactive KEDA scaling. We distinguish throughout which findings are specific to Kubernetes actuation and which are general to LLM serving.",
+        "canonical_id": "arXiv:2609.20874",
+        "arxiv_id": "2609.20874",
+        "authors": [
+          "Tian-Rui Liu",
+          "Xiao-Hai Hu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:5cb648739036aacfcbb588c48ee6685448259d6a996ecf923448321c6d7dbfb3",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
