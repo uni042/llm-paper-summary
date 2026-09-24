@@ -1,6 +1,6 @@
 {
-  "fact_generation": 0,
-  "generation": 1,
+  "fact_generation": 1,
+  "generation": 2,
   "runs": {
     "worker-925000-20260924T153200Z-lazyprobe": {
       "actual_invocation_start": "2026-09-24T15:32:00+00:00",
@@ -44,8 +44,12 @@
         "preflight_pipeline_overflow_count": 0,
         "preflight_pipeline_saturated": false,
         "preflight_pipeline_window": 2,
-        "preflight_repair_attempt_ids": [],
-        "preflight_repair_job_ids": [],
+        "preflight_repair_attempt_ids": [
+          "attempt-preload-4cb587870cc33021ea9f2c50"
+        ],
+        "preflight_repair_job_ids": [
+          "job-research-5cbec5c2c470e865"
+        ],
         "standby_job_ids": [
           "job-research-e6152c2a3998faa6",
           "job-research-b22af651ef4f551f",
@@ -61,7 +65,7 @@
         ]
       },
       "first_cached_at": "2026-09-24T15:34:25.368143+00:00",
-      "generation": 1,
+      "generation": 2,
       "rebuilt_from_canonical": true,
       "run_key": "worker-925000-20260924T153200Z-lazyprobe",
       "scheduled_slot": "adhoc",
@@ -82,6 +86,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T15:34:25.368260+00:00",
+  "updated_at": "2026-09-24T15:39:59.176797+00:00",
   "worker_id": "worker-925000"
 }
