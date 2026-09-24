@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 13:37:54 JST**
+> 自動生成: **2026-09-24 13:40:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **287** |
+| 収録候補論文 | **286** |
 | 未claim Research job | **145** |
-| 直近24hの検証済みResearch収録 | **31** |
-| 最終検証済みResearch収録 | **09-24 13:37:49 JST（5秒前）** |
+| 直近24hの検証済みResearch収録 | **32** |
+| 最終検証済みResearch収録 | **09-24 13:39:58 JST（7秒前）** |
 | 整合性異常 | **128** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **287** |
+| canonical_id確認済みの一意な候補論文 | **286** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **287** |
+| 非終端Research job合計 | **286** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（5時間2分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（5時間4分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **2** | **0** | **0** | **142** | **10** | — |
+| Research | **5** | **2** | **0** | **0** | **141** | **9** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **4** | **5** | **0** | **3** | **142** | **10** | **6** |
+| 合計 | **5** | **5** | **0** | **3** | **141** | **9** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-24 13:39:58 JST** [research] `arXiv:2601.08833` — Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications
+  - job: `.survey/work-queue/jobs/job-research-0023a21511f803e1.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-54435f3f1e70e6def8dfca02.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-54435f3f1e70e6def8dfca02.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md`
 - **09-24 13:37:49 JST** [research] `arXiv:2511.01633` — Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving
   - job: `.survey/work-queue/jobs/job-research-2a8c8a978e102c67.json`
   - result: `.survey/work-queue/results/research/attempt-preload-38c87a832a14fb80d3b5b6c4.json` (`ok=true`)
@@ -150,10 +155,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **142件** / 直近15分heartbeat: **10件**
-- `arXiv:2601.08833` — Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications / worker `scheduled-chat-30`
-  - claim: **09-24 13:31:11 JST** / heartbeat: **09-24 13:31:11 JST** / lease expiry: **09-24 15:01:11 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0023a21511f803e1.json`
+- 未失効かつ非terminal jobのclaim: **141件** / 直近15分heartbeat: **9件**
 - `arXiv:2406.02500` — Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques / worker `scheduled-chat-30`
   - claim: **09-24 13:31:11 JST** / heartbeat: **09-24 13:31:11 JST** / lease expiry: **09-24 15:01:11 JST**
   - evidence: `.survey/work-queue/claims/job-research-0fd0f07b72fe524f.json`
@@ -181,6 +183,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - `arXiv:2409.10516` — RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval / worker `scheduled-chat-30`
   - claim: **09-24 13:31:11 JST** / heartbeat: **09-24 13:31:11 JST** / lease expiry: **09-24 15:01:11 JST**
   - evidence: `.survey/work-queue/claims/job-research-fd4788affcd524bb.json`
+- `arXiv:2607.29076` — Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems / worker `scheduled-chat-00`
+  - claim: **09-24 12:58:44 JST** / heartbeat: **09-24 12:58:44 JST** / lease expiry: **09-24 14:28:44 JST**
+  - evidence: `.survey/work-queue/claims/job-research-031cf8d3601d8c3a.json`
 
 #### Audit
 
@@ -200,7 +205,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **287** |
+| ready | **286** |
 
 ### 候補の重複・識別情報欠損
 
@@ -220,7 +225,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1011** |
+| inference/training/survey配下の論文Markdown実体 | **1012** |
 
 ### immutable submissionの未照合
 

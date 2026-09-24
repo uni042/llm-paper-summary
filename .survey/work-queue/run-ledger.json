@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T04:37:54.382331+00:00",
+  "updated_at": "2026-09-24T04:40:05.526553+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -44620,6 +44620,56 @@
           "type": "research",
           "canonical_id": "arXiv:2511.01633",
           "title": "Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1009,
+      "paper_active_count_after": 1009,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35956562147",
+      "first_recorded_at": "2026-09-24T04:40:05.526553+00:00",
+      "last_recorded_at": "2026-09-24T04:40:05.526553+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35956562147:1",
+          "recorded_at": "2026-09-24T04:40:05.526553+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35956562147",
+            "run_attempt": "1",
+            "source_sha": "b9261a683b4cedb967320ea5032a4715306edd05"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-0023a21511f803e1",
+          "type": "research",
+          "canonical_id": "arXiv:2601.08833",
+          "title": "Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications",
           "from": "ready",
           "to": "completed"
         }
