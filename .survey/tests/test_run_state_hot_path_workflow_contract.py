@@ -37,7 +37,7 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
     def test_discovery_precheck_repairs_missing_run_state_before_publication(self):
         text = (WORKFLOWS / "discovery-precheck.yml").read_text(encoding="utf-8")
         self.assertIn("ensure_discovery_run_state.py", text)
-        self.assertIn("--requests-file /tmp/discovery-foreground-requests.txt", text)
+        self.assertIn("ensure_discovery_run_state.py --repo-root .", text)
         self.assertIn("derive_worker_run_state.py --repo-root .", text)
         self.assertIn(".survey/work-queue/run-state", text)
 
