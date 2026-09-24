@@ -41,7 +41,8 @@ class RunLivenessPolicyTests(unittest.TestCase):
     def test_submission_pending_never_blocks_new_research_claims(self):
         router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
         continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
-        self.assertIn("submission result待ちは**新しい論文claimの同期障壁にしない**", router)
+        self.assertIn("submission result待ちは**foreground進行やclaim window補充の同期障壁にしない**", router)
+        self.assertIn("既確保standby", router)
         self.assertIn("pipeline_ahead_count", router)
         self.assertIn("観測用テレメトリ", router)
         self.assertIn("CLAIM_NEXT_RESEARCH_AUDIT", continuation)
