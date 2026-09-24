@@ -1,13 +1,39 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "positioning",
   "attempt_id": "attempt-preload-e67ec48caa52d77d1c7b992a",
   "job_id": "job-research-0a4a1c707b0687af",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-e67ec48caa52d77d1c7b992a",
     "worker_id": "worker-924226",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "positioning",
+  "data": {
+    "differences": [
+      {
+        "name": "DistServe/Splitwise等との違い",
+        "description": "既存の分離推論研究がprefill/decodeを物理的に分けてgoodputやSLOを最適化するのに対し、本論文はその上で生じるresource allocation、KV cache、request routingの相互作用をゲーム理論の語彙で分解し、負荷レジームに応じたrouter parameter切替へ結び付ける。"
+      },
+      {
+        "name": "通常の負荷分散との違い",
+        "description": "round-robinやpower-of-two choicesを固定採用するのではなく、低負荷ではKV cache overlapを利用し、飽和時だけ混雑回避の比重を増やす。静的policy比較よりqueue/KV stateの時間発展が大きいことをPoA-hatで可視化する。"
+      },
+      {
+        "name": "Plannerとの違い",
+        "description": "Dynamo PlannerのGPU再配置そのものは変更せず、per-request routerに約270行のPython controllerを追加する。P/D resource gameは理論化するが、今回のadaptive experimentが操作するのはτとωである。"
+      }
+    ],
+    "limitations": [
+      "実験は3-node B200 cluster、dense 70B/340B、m=2〜5 workerに限定され、MoEやproduction-scale clusterは未評価。",
+      "workloadは5 prompt template、128 input token、最大256 output token、temperature 0.0で均質性が高く、variable-length、multi-turn、production traceで同じregime構造が成立するか未確認。",
+      "KV blockがHBMから溢れないため、DRAM/SSD/networkを含むhierarchical cache placement gameの主要部分は直接評価されない。",
+      "P/D resource allocation gameは解析のみで、Plannerによる動的GPU split変更を実験していない。",
+      "PoA-hat denominatorは未校正cost modelとfrozen latencyによるHungarian hindsight assignmentで、真のmany-to-one社会最適を厳密に表さない。絶対値より相対変化用のindexとして使う必要がある。",
+      "340Bの適応制御では飽和相throughputが36%低下し、latency改善には明確なoperating-point trade-offがある。"
+    ],
+    "implementation_status": "Python側で約270行のgame-theoretic adapterをDynamo KvPushRouterへ追加し、router_config_overrideで要求ごとのτ/ωを切替える。Prometheus監視と二重frontendによるzero-downtime switchを実装。Rust core変更なし。本文に公式コード公開URLは記載されていない。",
+    "research_positioning": "分離推論のresource managementを、静的構成探索だけでなく負荷状態に応じてpayoff structureが変わるdynamic systems problemとして捉える研究。KV-aware routing、prefill/decode disaggregation、hierarchical KV management、SLO-aware schedulingの交点にあり、既存Dynamo機構を大きく置換せずcontrol-planeで適応させる。特に『低負荷ではtuning不要、saturation kneeを越えて初めてparameter sensitivityが顕在化する』という観測を、適応制御の発火条件へ直接利用する。",
+    "audit_notes": "arXiv:2606.17081v1と同一identityの公開full-text preprintをIntroductionからAppendix A・Referencesまで確認。3 coupled games、PoA-hat estimatorの非絶対性、B200 testbed、14-point concurrency sweep、4×4 parameter sweep、3回反復のadaptive load spike、Game 1未検証、KV tier spillover未発生、throughput trade-offを記録した。"
   }
 }
