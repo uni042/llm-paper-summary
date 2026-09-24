@@ -76,6 +76,7 @@ jobs:
             --source-commit "$SOURCE_COMMIT" \
             "${classification_args[@]}" \
             --output "$output_path"
+          mkdir -p .survey/reports
           cp "$output_path" .survey/reports/legacy-inventory.json
           python - <<'PY'
           import json
@@ -90,7 +91,7 @@ jobs:
 
       - name: Save the inventory on the work branch
         run: |
-          if git diff --quiet -- .survey/reports/legacy-inventory.json; then
+          if [ -z "$(git status --porcelain -- .survey/reports/legacy-inventory.json)" ]; then
             echo "Inventory report is unchanged."
             exit 0
           fi
