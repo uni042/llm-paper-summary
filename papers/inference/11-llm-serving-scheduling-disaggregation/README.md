@@ -15,7 +15,7 @@
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2025-10 · [Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market](2025-3731569.3764815-aegaeon-gpu-pooling.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：15  
   トークン単位の先取り自動スケーリングと高速モデル切替で多数LLMをGPUプールへ集約し、実運用でGPU数を82%削減したマルチモデル推論基盤。
 
 - **2025-12 · [TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale](2025-2512.18194-tract-rack-scale-cxl-shared-kv.md)**  
@@ -265,6 +265,10 @@
 - **2025-11 · [FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs](2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md)**  
   実装：[✓](https://github.com/AndrewFangZequan/LLM_Serving_FREESH) ・ リポジトリ内被引用：1  
   地域別炭素強度と異種GPU特性を使った30分単位の資源配置、1秒単位の動的周波数制御、要求単位の最小余裕時間優先を組み合わせ、エネルギー28.6%・炭素排出45.45%を削減する分散LLMサービング方式。
+
+- **2025-11 · [DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving](2025-2511.20982-dopd-dynamic-pd-disaggregation.md)**  
+  実装：[✓](https://github.com/liao4s/DOPD) ・ リポジトリ内被引用：1  
+  負荷予測と解析的な最適P/D比でプリフィル/デコード instanceを動的再構成し、8x H100実機で有効スループット最大1.5倍・SLO達成99.4%を報告。
 
 - **2025-10 · [BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure](2025-2510.13223-banaserve-dynamic-module-migration.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -708,10 +712,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPU障害後も任意数のGPUでテンソル並列推論を継続し、KVキャッシュ配置・注意計算・要求割当を均衡化しながら状態復旧を高速化する。
 
-- **2025-11 · [DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving](2025-2511.20982-dopd-dynamic-pd-disaggregation.md)**  
-  実装：[✓](https://github.com/liao4s/DOPD) ・ リポジトリ内被引用：0  
-  負荷予測と解析的な最適P/D比でプリフィル/デコード instanceを動的再構成し、8x H100実機で有効スループット最大1.5倍・SLO達成99.4%を報告。
-
 - **2025-10 · [Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving](2025-2511.00101-loquetier-virtualized-multilora-serving.md)**  
   実装：[✓](https://github.com/NJUDeepEngine/Loquetier) ・ リポジトリ内被引用：0  
   共有基盤LLM上でLoRAごとの仮想モデルを隔離し、SMLMカーネルで微調整・評価・プリフィル・デコードを同一実行系へ統合する多数LoRA基盤。推論でFlexLLM比最大3.0倍、統一負荷でPEFT比46.4倍のSLO達成率を報告する。
@@ -969,7 +969,7 @@
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-08 · [NanoFlow: Towards Optimal Large Language Model Serving Throughput](2024-2408.12757-nanoflow.md)**  
-  実装：[✓](https://github.com/efeslab/Nanoflow) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/efeslab/Nanoflow) ・ リポジトリ内被引用：32  
   異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。
 
 - **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  

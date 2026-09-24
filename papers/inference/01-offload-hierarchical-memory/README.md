@@ -397,7 +397,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   Fiddlerはキャッシュミスした専門家をGPUへ転送するか、活性値だけCPUへ送りCPUで計算するかを実行時に選び、MoEの重み転送待ちを減らす。
 
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
-  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：22  
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
 - **2024-03 · [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
@@ -413,7 +413,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   TwinPilotsはTransformer処理ごとにCPU計算とGPU転送・計算の速さを比較し、CPU計算とPCIe転送を並行させてGPUオフロードの生成待ちを減らす。
 
 - **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
 
 - **2024-05 · [IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs](2024-2405.02842-iceformer.md)**  
