@@ -21,6 +21,7 @@ import argparse
 import json
 
 import claim_window_policy
+import worker_quota_policy
 
 
 PRODUCTIVE_WAIT_RECHECK_SECONDS = 0
@@ -71,7 +72,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         0,
     )
     research_minimum_completions = max(
-        int(getattr(args, "research_minimum_completions", 5) or 5),
+        int(getattr(args, "research_minimum_completions", worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS) or worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS),
         1,
     )
     last_terminal_job_status = str(
@@ -84,7 +85,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         or getattr(args, "submission_result_pending", False)
     )
     discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
-    discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 8) or 8), 1)
+    discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS) or worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
     minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_completed, 0)
@@ -102,7 +103,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         handoff_reason = "run_deadline_within_handoff_guard"
     elif seconds_to_next is not None:
         effective_seconds_to_handoff = int(seconds_to_next)
-        handoff_time_source = "next_scheduled_task"
+        handoff_time_source = "legacy_next_scheduled_task_compat"
         handoff_reason = "next_scheduled_task_within_handoff_guard"
     else:
         effective_seconds_to_handoff = None
@@ -529,6 +530,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "seconds_to_next_scheduled_task": seconds_to_next,
         "effective_seconds_to_handoff": effective_seconds_to_handoff,
         "handoff_time_source": handoff_time_source,
+        "legacy_schedule_handoff_fallback_used": handoff_time_source == "legacy_next_scheduled_task_compat",
         "scheduled_handoff_guard_seconds": handoff_guard,
         "scheduled_handoff_active": handoff_window_active,
         "rule": (
@@ -546,9 +548,10 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
             f"candidate_inventory is mandatory: >={claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD} selects Research/Audit and below it selects Discovery. "
             "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
-            "Discovery's four-round floor counts successful canonical precheck rounds in this invocation; "
+            "Canonical callers must provide seconds_to_run_deadline from actual_invocation_start; seconds_to_next_scheduled_task is a compatibility-only fallback for historical direct callers and must not be used by normal run-state flow. "
+            f"Discovery's {discovery_min_rounds}-round floor counts successful canonical precheck rounds in this invocation; "
             "multiple submissions derived from one precheck count as one round only after every declared split submission is durably successful. "
-            "Research/Audit exposes the combined three-completion quota state. The three-completion floor is not a stop cap: "
+            f"Research/Audit exposes the combined {research_minimum_completions}-completion quota state. The {research_minimum_completions}-completion floor is not a stop cap: "
             "whenever claimable independent Research/Audit work exists outside the 600-second no-new-work window, "
             "the required action is CLAIM_NEXT_RESEARCH_AUDIT even after the floor has been met. A pending "
             "submission therefore does not become a claim barrier while new Research/Audit work remains claimable; hard "
@@ -598,14 +601,14 @@ def main() -> int:
     ap.add_argument("--candidate-inventory", type=int, default=None)
     ap.add_argument("--work-mode", choices=("auto", "research", "discovery"), default="auto")
     ap.add_argument("--research-audit-completed-this-invocation", type=int, default=0)
-    ap.add_argument("--research-minimum-completions", type=int, default=5)
+    ap.add_argument("--research-minimum-completions", type=int, default=worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS)
     ap.add_argument(
         "--last-terminal-job-status",
         choices=("none", "completed", "blocked", "deferred", "rejected"),
         default="none",
     )
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
-    ap.add_argument("--discovery-min-rounds", type=int, default=8)
+    ap.add_argument("--discovery-min-rounds", type=int, default=worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS)
     ap.add_argument("--discovery-exhausted", type=yn, default=False)
     ap.add_argument("--next-axis-available", type=yn, default=False)
     args = ap.parse_args()
