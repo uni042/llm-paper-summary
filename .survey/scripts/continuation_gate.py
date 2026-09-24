@@ -71,7 +71,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         0,
     )
     research_minimum_completions = max(
-        int(getattr(args, "research_minimum_completions", 3) or 3),
+        int(getattr(args, "research_minimum_completions", 5) or 5),
         1,
     )
     last_terminal_job_status = str(
@@ -84,7 +84,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         or getattr(args, "submission_result_pending", False)
     )
     discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
-    discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 4) or 4), 1)
+    discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", 8) or 8), 1)
     discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
     next_axis_available = bool(getattr(args, "next_axis_available", False))
     minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_completed, 0)
@@ -598,14 +598,14 @@ def main() -> int:
     ap.add_argument("--candidate-inventory", type=int, default=None)
     ap.add_argument("--work-mode", choices=("auto", "research", "discovery"), default="auto")
     ap.add_argument("--research-audit-completed-this-invocation", type=int, default=0)
-    ap.add_argument("--research-minimum-completions", type=int, default=3)
+    ap.add_argument("--research-minimum-completions", type=int, default=5)
     ap.add_argument(
         "--last-terminal-job-status",
         choices=("none", "completed", "blocked", "deferred", "rejected"),
         default="none",
     )
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
-    ap.add_argument("--discovery-min-rounds", type=int, default=4)
+    ap.add_argument("--discovery-min-rounds", type=int, default=8)
     ap.add_argument("--discovery-exhausted", type=yn, default=False)
     ap.add_argument("--next-axis-available", type=yn, default=False)
     args = ap.parse_args()
