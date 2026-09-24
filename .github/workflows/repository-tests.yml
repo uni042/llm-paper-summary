@@ -56,11 +56,8 @@ jobs:
               print(path)
           PY
 
-      - name: Run all regression tests
-        run: python -m unittest discover -s .survey/tests -p 'test_*.py'
-
-      - name: Audit live metadata coverage
-        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out /tmp/metadata-coverage.json --strict
+      - name: Run legacy inventory tests
+        run: python -m unittest .survey.tests.test_legacy_inventory
 
       - name: Build legacy cleanup inventory
         run: python .survey/scripts/legacy_inventory.py --root . --output /tmp/legacy-inventory.json --source-commit "${GITHUB_SHA}"
@@ -72,6 +69,12 @@ jobs:
           path: /tmp/legacy-inventory.json
           if-no-files-found: error
           retention-days: 30
+
+      - name: Run all regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_*.py'
+
+      - name: Audit live metadata coverage
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out /tmp/metadata-coverage.json --strict
 
       - name: Build live repository inventory
         run: python .survey/scripts/build_repository_inventory.py --root . --output /tmp/repository-inventory.json --source-commit "${GITHUB_SHA}"
