@@ -7,9 +7,22 @@
   "data": {
     "canonical_id": "arXiv:2106.06899",
     "arxiv_id": "2106.06899",
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
     "title": "Memory-efficient Transformers via Top-k Attention",
-    "summary": "各クエリについて全キーとの内積から上位k件だけを厳密に残し、クエリ分割と入力チェックポイントを組み合わせることで、標準注意機構を置換できる線形メモリ型の疎注意を実現する。65Kトークンの単層注意で10GiB未満、12層32K入力で標準Transformer比8倍超のメモリ削減を示す一方、全内積を計算するため計算量は二次のままである。",
+    "summary": "標準注意は系列長の二乗に比例する注意スコア行列を保持するため、長文脈でメモリ使用量が急増する。本論文は各クエリで全キーとの内積を計算した後に上位k件だけを厳密に残し、クエリ分割と入力チェックポイントを組み合わせて注意行列の常駐を避ける。65Kトークンの単層注意で10GiB未満、12層32K入力で標準Transformer比8倍超のメモリ削減を示す。計算量は二次のままだが、事前学習済みモデルへ重み変更なしで差し替えられる点が特徴である。",
+    "list_summary": "上位k注意とクエリ分割で標準注意の重みを保ったまま活性メモリを削減し、12層32K入力を30GiB GPUへ収める。計算量は二次のまま。",
     "source": "https://arxiv.org/abs/2106.06899",
+    "sources": [
+      "https://arxiv.org/abs/2106.06899",
+      "https://arxiv.org/pdf/2106.06899",
+      "https://github.com/ag1988/top_k_attention"
+    ],
+    "code": "https://github.com/ag1988/top_k_attention",
     "authors": [
       "Ankit Gupta",
       "Guy Dar",
@@ -17,25 +30,59 @@
       "David Ciprut",
       "Jonathan Berant"
     ],
+    "published": "2021-06-13",
     "publication": "arXiv:2106.06899v1, 2021-06-13",
-    "publication_type": "arXiv preprint (under review in v1)",
+    "publication_type": "arXiv preprint",
+    "publication_status": "preprint / under review in v1",
     "topics": [
-      "sparse attention",
-      "long-context inference",
-      "activation memory",
-      "query chunking",
-      "checkpointing"
+      "疎注意",
+      "長文脈",
+      "活性メモリ削減",
+      "クエリ分割",
+      "チェックポイント"
     ],
-    "implementation": "著者公開実装あり: https://github.com/ag1988/top_k_attention 。論文のベンチマーク実装はPyTorch 1.8.1を用い、注意行列の上位k値・添字を保存する専用forward/backwardを実装する。",
-    "sources": [
-      "https://arxiv.org/abs/2106.06899",
-      "https://arxiv.org/pdf/2106.06899",
-      "https://github.com/ag1988/top_k_attention"
+    "implementation": "著者公式コードあり。PyTorch 1.8.1上でクエリ分割、上位k値・添字の保存、専用の順伝播・逆伝播を実装する。論文時点では疎行列カーネルを十分活用できていない。",
+    "implementation_status": "official code available",
+    "hardware_evaluation": "実機GPU評価あり。資源ベンチマークはNvidia A100、T5微調整は単一Nvidia V100、長距離依存評価は各実行で最大2台のA100を使用。",
+    "hardware_details": "A100では30GiBを上限としてメモリ使用量を測定し、各測定点は3回平均。12層モデルはバッチ1で32K系列を評価した。",
+    "quality_effect": "近似手法であり完全等価ではない。長距離依存評価の平均精度は標準注意53.2に対して53.1、WikiText-103のPPLは30.96に対して30.51。ゼロショット・微調整でも多くの課題で近い品質を保つが、一部課題では小幅な低下がある。",
+    "evaluation_type": "real-hardware benchmarking + downstream quality evaluation",
+    "references": [
+      {
+        "canonical_id": "arXiv:2004.05150",
+        "arxiv_id": "2004.05150",
+        "title": "Longformer: The Long-Document Transformer"
+      },
+      {
+        "canonical_id": "arXiv:1904.10509",
+        "arxiv_id": "1904.10509",
+        "title": "Generating Long Sequences with Sparse Transformers"
+      },
+      {
+        "canonical_id": "arXiv:2006.03274",
+        "arxiv_id": "2006.03274",
+        "title": "GMAT: Global Memory Augmentation for Transformers"
+      },
+      {
+        "canonical_id": "arXiv:2103.09857",
+        "arxiv_id": "2103.09857",
+        "title": "Value-aware Approximate Attention"
+      },
+      {
+        "canonical_id": "arXiv:2006.04768",
+        "arxiv_id": "2006.04768",
+        "title": "Linformer: Self-Attention with Linear Complexity"
+      },
+      {
+        "canonical_id": "arXiv:2012.14913",
+        "arxiv_id": "2012.14913",
+        "title": "Transformer Feed-Forward Layers Are Key-Value Memories"
+      }
     ],
-    "arxiv_categories": [
-      "cs.CL",
-      "cs.LG"
-    ]
+    "references_checked_at": "2026-09-24",
+    "references_source": "arXiv:2106.06899v1 PDF References section",
+    "references_total": 55,
+    "last_checked": "2026-09-24"
   },
   "reservation": {
     "claim_id": "claim-preload-696e42f89d3df66e6eb783f8",
