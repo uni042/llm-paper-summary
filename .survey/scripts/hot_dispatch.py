@@ -96,6 +96,19 @@ def _candidate_inventory(jobs: dict[str, dict[str, Any]]) -> int:
     )
 
 
+def _latest_discovery_completion(
+    jobs: dict[str, dict[str, Any]],
+) -> dt.datetime | None:
+    latest: dt.datetime | None = None
+    for job in jobs.values():
+        if job.get("type") != "discovery" or job.get("status") != "completed":
+            continue
+        completed = claim_state.parse_time(job.get("completed_at"))
+        if completed is not None and (latest is None or completed > latest):
+            latest = completed
+    return latest
+
+
 def _stock_bank(claim: dict[str, Any]) -> str:
     bank = str(claim.get("stock_bank") or "").lower()
     if bank in BANK_IDS:
@@ -378,7 +391,20 @@ def build_index(repo_root: Path) -> dict[str, Any]:
 
     inventory = _candidate_inventory(jobs)
     threshold = claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
-    suggested = "research" if inventory >= threshold else "discovery"
+    latest_discovery_at = _latest_discovery_completion(jobs)
+    discovery_age_seconds = (
+        max(0, int((now - latest_discovery_at).total_seconds()))
+        if latest_discovery_at is not None
+        else None
+    )
+    discovery_refresh_due = claim_window_policy.discovery_refresh_due(
+        inventory,
+        discovery_age_seconds=discovery_age_seconds,
+    )
+    suggested = claim_window_policy.select_work_mode(
+        inventory,
+        discovery_age_seconds=discovery_age_seconds,
+    )
     resume_affinities = shared_preload_pool.unfinished_resume_affinities(root)
     research_packets = _research_packets(
         root,
@@ -525,6 +551,13 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         "candidate_inventory": inventory,
         "research_discovery_threshold": threshold,
         "suggested_work_mode": suggested,
+        "latest_discovery_completion_at": (
+            _iso(latest_discovery_at) if latest_discovery_at is not None else None
+        ),
+        "discovery_age_seconds": discovery_age_seconds,
+        "discovery_refresh_due": discovery_refresh_due,
+        "discovery_refresh_interval_seconds": claim_window_policy.DISCOVERY_REFRESH_INTERVAL_SECONDS,
+        "discovery_refresh_max_inventory": claim_window_policy.DISCOVERY_REFRESH_MAX_INVENTORY,
         "direct_start_allowed": lane_available[suggested],
         "zero_wait_start_allowed": bool(
             lane_available[suggested]
@@ -560,7 +593,8 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         "route_guard_band": DIRECT_ROUTE_GUARD_BAND,
         "lane_available": lane_available,
         "rule": (
-            "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; "
+            "This is a rebuildable acceleration index. Candidate inventory selects the base work mode; "
+            "a bounded freshness override may select Discovery when its last durable completion is stale, "
             "it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item "
             "immediately, while canonical run-state/precheck/claim publication continues asynchronously. "
             "same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence "
