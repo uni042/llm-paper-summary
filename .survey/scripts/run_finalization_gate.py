@@ -55,13 +55,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         int(getattr(args, "research_audit_completed_this_invocation", 0) or 0), 0
     )
     research_minimum = max(
-        int(getattr(args, "research_minimum_completions", 3) or 3), 1
+        int(getattr(args, "research_minimum_completions", 5) or 5), 1
     )
     discovery_completed = max(
         int(getattr(args, "discovery_rounds_completed", 0) or 0), 0
     )
     discovery_minimum = max(
-        int(getattr(args, "discovery_min_rounds", 4) or 4), 1
+        int(getattr(args, "discovery_min_rounds", 8) or 8), 1
     )
 
     pending = {
@@ -260,9 +260,9 @@ def main() -> int:
         default="unknown",
     )
     ap.add_argument("--research-audit-completed-this-invocation", type=int, default=0)
-    ap.add_argument("--research-minimum-completions", type=int, default=3)
+    ap.add_argument("--research-minimum-completions", type=int, default=5)
     ap.add_argument("--discovery-rounds-completed", type=int, default=0)
-    ap.add_argument("--discovery-min-rounds", type=int, default=4)
+    ap.add_argument("--discovery-min-rounds", type=int, default=8)
     args = ap.parse_args()
     print(json.dumps(decide(args), ensure_ascii=False, indent=2))
     return 0
