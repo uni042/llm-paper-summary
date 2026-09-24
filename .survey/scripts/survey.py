@@ -18,7 +18,6 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from list_summary import compact_list_summary
 from paper_taxonomy import canonical_lineage
 
 # ROOT is the .survey working root in production. Tests may point it at a
@@ -232,6 +231,13 @@ def _view_identifiers(meta, path):
     return ids
 
 
+def _explicit_list_summary(meta: dict, path: Path) -> str:
+    value = meta.get("list_summary")
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"{path}: frontmatter list_summary is required")
+    return value.strip()
+
+
 def paper_views():
     """Return render-only records for inference, training, and survey papers."""
     repo = repository_root()
@@ -254,7 +260,7 @@ def paper_views():
                 "path": rel,
                 "file": p,
                 "title": meta["title"],
-                "summary": compact_list_summary(body, meta["summary"]),
+                "summary": _explicit_list_summary(meta, p),
                 "year": year,
                 "month": month,
                 "identifiers": _view_identifiers(meta, p),
