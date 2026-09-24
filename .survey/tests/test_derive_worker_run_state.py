@@ -1031,6 +1031,127 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(failed["active_claim_count"], 2)
 
 
+
+    def test_auto_snapshot_from_preflight_fail_restores_repair_foreground(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            started = dt.datetime.fromisoformat(value["actual_invocation_start"])
+            claimed = started + dt.timedelta(seconds=5)
+            expires = claimed + dt.timedelta(hours=1)
+
+            # Current inventory has dropped below the normal Research threshold;
+            # the preflight identity must still preserve this invocation's mode.
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 20, "claimable": 18}},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {"schema_version": 3, "history": []},
+            )
+            for order, suffix in enumerate(("a", "b")):
+                write_json(
+                    root,
+                    f".survey/work-queue/jobs/job-{suffix}.json",
+                    {"job_id": f"job-{suffix}", "type": "research", "status": "ready"},
+                )
+                write_json(
+                    root,
+                    f".survey/work-queue/claims/job-{suffix}.json",
+                    {
+                        "schema_version": 1,
+                        "workflow_version": 10,
+                        "job_id": f"job-{suffix}",
+                        "claim_id": f"claim-{suffix}",
+                        "attempt_id": f"attempt-{suffix}",
+                        "request_id": "claim-window",
+                        "worker_id": "scheduled-chat-00",
+                        "worker_kind": "scheduled_chat",
+                        "kind": "research",
+                        "pipeline_order": order,
+                        "claimed_at": claimed.isoformat(),
+                        "expires_at": expires.isoformat(),
+                        "run_key": "run-1",
+                        "scheduled_slot": "00",
+                        "actual_invocation_start": value["actual_invocation_start"],
+                    },
+                )
+
+            preflight_id = "scheduled-chat-00-attempt-a-r1"
+            request_path = (
+                f".survey/work-queue/research-preflight/requests/{preflight_id}.json"
+            )
+            result_path = (
+                f".survey/work-queue/research-preflight/results/{preflight_id}.json"
+            )
+            write_json(
+                root,
+                request_path,
+                {
+                    "schema_version": 1,
+                    "operation": "research_quality_preflight",
+                    "request_id": preflight_id,
+                    "kind": "research",
+                    "attempt_id": "attempt-a",
+                    "job_id": "job-a",
+                    "record_bank": "a",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "run-1",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": value["actual_invocation_start"],
+                    "requested_at": (claimed + dt.timedelta(seconds=10)).isoformat(),
+                },
+            )
+            write_json(
+                root,
+                result_path,
+                {
+                    "schema_version": 1,
+                    "operation": "research_quality_preflight",
+                    "request_id": preflight_id,
+                    "kind": "research",
+                    "attempt_id": "attempt-a",
+                    "job_id": "job-a",
+                    "record_bank": "a",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "run-1",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": value["actual_invocation_start"],
+                    "ok": True,
+                    "preflight_passed": False,
+                    "repair_required": True,
+                    "checked_at": (claimed + dt.timedelta(seconds=20)).isoformat(),
+                },
+            )
+            paths = root / "preflight-results.txt"
+            paths.write_text(result_path + "\n", encoding="utf-8")
+
+            auto = mod.auto_snapshot_from_preflight_results(root, paths)
+            self.assertEqual(auto["observed_preflight_results"], 1)
+            self.assertEqual(auto["affected_runs"], 1)
+            self.assertEqual(
+                auto["fallback_recovery_runs"],
+                ["scheduled-chat-00:run-1"],
+            )
+            self.assertEqual(len(auto["generated_results"]), 1)
+
+            snapshot = json.loads(
+                (root / auto["generated_results"][0]).read_text(encoding="utf-8")
+            )
+            self.assertEqual(snapshot["work_mode"], "research")
+            self.assertEqual(snapshot["route_source"], "research_preflight_recovery")
+            self.assertEqual(snapshot["snapshot_origin"], "research-preflight-fast-lane")
+            self.assertTrue(snapshot["auto_generated"])
+            self.assertEqual(snapshot["foreground_job_id"], "job-a")
+            self.assertEqual(snapshot["preflight_repair_job_ids"], ["job-a"])
+            self.assertEqual(snapshot["preflight_parked_job_ids"], [])
+            self.assertEqual(snapshot["standby_job_ids"], ["job-b"])
+            self.assertFalse(snapshot["finalization_permit_issued"])
+
+
     def test_preflight_window_is_admission_limit_not_thaw_limit(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
