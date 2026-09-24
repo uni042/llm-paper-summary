@@ -243,6 +243,46 @@ class HotDispatchTests(unittest.TestCase):
                     {"research": True, "discovery": True},
                 )
 
+    def test_stale_discovery_temporarily_overrides_research_route_near_threshold(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = now()
+            research_packets = [{"claim_id": "claim-hot"}]
+            discovery_packets = {
+                "backward": [{"preload_id": "preload-hot", "preload_unseen_result_count": 20}],
+                "forward": [],
+                "normal": [],
+            }
+            with (
+                mock.patch.object(hot_dispatch, "_utcnow", return_value=current),
+                mock.patch.object(
+                    hot_dispatch,
+                    "_candidate_inventory",
+                    return_value=claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD + 11,
+                ),
+                mock.patch.object(
+                    hot_dispatch,
+                    "_latest_discovery_completion",
+                    return_value=current - dt.timedelta(hours=3),
+                ),
+                mock.patch.object(hot_dispatch, "_research_packets", return_value=research_packets),
+                mock.patch.object(hot_dispatch, "_discovery_packets", return_value=discovery_packets),
+                mock.patch.object(
+                    hot_dispatch.shared_preload_pool,
+                    "sync_research_bank_sidecars",
+                    return_value={},
+                ),
+            ):
+                index = hot_dispatch.build_index(root)
+
+            self.assertEqual(index["suggested_work_mode"], "discovery")
+            self.assertTrue(index["discovery_refresh_due"])
+            self.assertGreaterEqual(
+                index["discovery_age_seconds"],
+                claim_window_policy.DISCOVERY_REFRESH_INTERVAL_SECONDS,
+            )
+            self.assertTrue(index["direct_start_allowed"])
+
     def test_direct_research_marker_reserves_pool_claim_and_creates_async_refill(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
