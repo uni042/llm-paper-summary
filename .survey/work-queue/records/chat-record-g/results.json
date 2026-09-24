@@ -4,7 +4,94 @@
   "slot": "results",
   "attempt_id": "attempt-preload-696e42f89d3df66e6eb783f8",
   "job_id": "job-research-e3b684ca3ee98a5c",
-  "data": {},
+  "data": {
+    "overview": "Top-k attentionは計算量を線形化せず、標準注意の全QK内積を残したまま活性メモリを大幅に削減する。65Kトークンの単層注意で10GiB未満、12層32K入力でvanilla比8倍超・Performer比2倍のメモリ削減を示し、LRA/WikiText-103/UNIFIEDQA/BERT/T5でも高い疎化率で標準注意に近い品質を維持した。",
+    "key_results": [
+      {
+        "metric": "single MHA memory at 65K tokens",
+        "value": "<10 GiB",
+        "baseline": "vanillaは10K tokens超の単層MHAを収容できず、query chunking比でtop-kは65K時に約3× memory reduction",
+        "condition": "BERT-base-like, A100, k=128, C=1024",
+        "interpretation": "注意スコアを保持しないことで系列長を大幅に伸ばせる。"
+      },
+      {
+        "metric": "12-layer 32K input memory",
+        "value": ">8× reduction vs vanilla; 2× vs Performer",
+        "baseline": "vanilla Transformer / Performer",
+        "condition": "30GiB GPU, batch 1, top-64 self-attention C=1024",
+        "interpretation": "多層でQK^T活性を保存しない効果が累積し、32K系列を30GiBへ収める。"
+      },
+      {
+        "metric": "feed-forward capacity at 11GiB",
+        "value": "65K FF dimension",
+        "baseline": "vanillaは同じ約11GiBでFF dimension 2K",
+        "condition": "batch 512, input 512, k=512, C=2^14",
+        "interpretation": "FFNをQKV形式へ写像することで大きな中間次元の活性メモリも削減できる。"
+      },
+      {
+        "metric": "estimated FF dimension on 30GiB",
+        "value": "205K",
+        "baseline": "vanilla estimate 7K",
+        "condition": "linear fit of measured memory",
+        "interpretation": "測定曲線の外挿であり実測最大値そのものではない点に注意が必要。"
+      },
+      {
+        "metric": "Long Range Arena mean test accuracy",
+        "value": "53.1",
+        "baseline": "vanilla authors' run 53.2; reported vanilla 52.7",
+        "condition": "top-128; ListOps/IMDb/AAN",
+        "interpretation": "kがkeysの約3%でも平均精度は標準注意とほぼ同等。AANは59.14対57.93で改善し、ListOpsは36.56対38.12で低下。"
+      },
+      {
+        "metric": "WikiText-103 test perplexity",
+        "value": "30.51",
+        "baseline": "vanilla 30.96",
+        "condition": "6-layer 156M decoder, top-64, input length 1024",
+        "interpretation": "training from scratchでも品質低下を観測せず、わずかに良いPPL。"
+      },
+      {
+        "metric": "UNIFIEDQA zero-shot sparsity",
+        "value": "k=256/512 (<1% of 65,536 keys) already comparable; k=4096 (6%) equal-or-better on all 12 tasks",
+        "baseline": "vanilla feed-forward k=65,536",
+        "condition": "UNIFIEDQA 11B, 12 QA development sets, no additional training",
+        "interpretation": "事前学習済みFFNを追加trainingなしで高疎化できることを示す。"
+      },
+      {
+        "metric": "BERT SQuAD v1 zero-shot exact match",
+        "value": "86.2 at k=16",
+        "baseline": "vanilla 86.9; Performer 256 features 0.38",
+        "condition": "BERT-large fine-tuned checkpoint, k=16 ≈4% of input length",
+        "interpretation": "self-attentionでも補正事前学習なしの差し替えが成立し、同条件のPerformer置換は崩れる。"
+      },
+      {
+        "metric": "T5 fine-tuning exact match",
+        "value": "BoolQ 83.1, CSQA 62.0, MCTest 79.4, OBQA 58.0, ROPES 53.8",
+        "baseline": "vanilla fine-tuned 83.3, 61.9, 81.2, 58.8, 54.0",
+        "condition": "T5-base, top-256 FFN, 3K-step fine-tuning",
+        "interpretation": "三taskはほぼ同等、MCTestとOBQAには小幅な悪化が残る。"
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "quadratic compute remains",
+        "description": "全query-key内積を計算してからtop-kを選ぶため計算量は依然O(LQ·LK)相当で、Performerのような線形runtimeにはならない。12層長系列ではmemoryは収まってもtraining from scratchのruntimeが制約になる。"
+      },
+      {
+        "name": "sparse kernels not exploited",
+        "description": "論文実装の大きな疎×密行列積はsparsityを活用しておらず、現実の速度はvanilla attention並み。torch.sparse_coo_tensorもk=1%まで試したが有望な結果を得られず、block-sparse kernelを将来課題としている。"
+      },
+      {
+        "name": "task-level losses remain",
+        "description": "LRA ListOpsはvanilla 38.12からtop-128 36.56へ1.56pt低下。T5 fine-tuningでもMCTest 81.2→79.4、OpenBookQA 58.8→58.0の小幅低下がある。"
+      },
+      {
+        "name": "benchmark-era limitation",
+        "description": "資源ベンチマークはPyTorch 1.8.1/A100世代で、FlashAttention等の後発のexact attention kernelとは比較していないため、現代GPUでの相対優位は本文からは確定できない。"
+      }
+    ],
+    "interpretation": "この方式の強みは演算自体を削ることより、注意行列やFFN活性を長時間保持せず、標準attention/FFNの重みを変えずに疎な中間表現へ変換できる点にある。したがって現代的な位置付けでは、計算量削減手法というよりactivation-memory圧縮とcheckpointingの先行例として読むのが適切である。",
+    "quality_impact": "多くのtaskでvanillaとほぼ同等だが完全等価ではない。高疎化でも品質維持を複数setupで示す一方、task依存の数ポイント低下と二次runtimeを明示的な限界として保持する必要がある。"
+  },
   "reservation": {
     "claim_id": "claim-preload-696e42f89d3df66e6eb783f8",
     "worker_id": "worker-45",
