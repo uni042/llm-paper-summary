@@ -407,6 +407,85 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
         self.assertIsNone(replacement["initial_cursor"])
         self.assertGreater(int(replacement["sequence"]), int(entry["sequence"]))
 
+
+    def test_available_preloads_returns_empty_list_when_stock_is_empty(self) -> None:
+        self.assertEqual(
+            preload.available_preloads(self.root, direction="backward"),
+            [],
+        )
+
+    def test_available_preloads_prefers_productive_window_over_empty_window(self) -> None:
+        now = dt.datetime.now(dt.timezone.utc)
+        source = {
+            "source_key": "same-forward-source",
+            "provider": "semantic_scholar",
+            "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations",
+            "citation_direction": "forward",
+            "axis": "forward test",
+            "seed_canonical_id": "arXiv:2303.06865",
+        }
+        empty = preload._make_entry(
+            source,
+            bucket=preload._refresh_bucket(now),
+            sequence=0,
+            initial_cursor=None,
+            now=now - dt.timedelta(seconds=1),
+            discovery_bank="a",
+        )
+        productive = preload._make_entry(
+            source,
+            bucket=preload._refresh_bucket(now),
+            sequence=1,
+            initial_cursor="20",
+            now=now,
+            discovery_bank="b",
+        )
+        for entry, count in ((empty, 0), (productive, 20)):
+            write_json(
+                self.root / preload.ENTRIES / f"{entry['preload_id']}.json",
+                entry,
+            )
+            write_json(
+                self.root / preload._result_path(entry),
+                {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                    "request_id": entry["precheck_request_id"],
+                    "run_key": f"preload:{entry['preload_id']}",
+                    "results": [
+                        {
+                            "canonical_id": f"arXiv:2609.{index:05d}",
+                            "title": f"Candidate {index}",
+                            "source_url": f"https://arxiv.org/abs/2609.{index:05d}",
+                        }
+                        for index in range(count)
+                    ],
+                    "allowed_records": [],
+                    "unseen_result_count": count,
+                    "next_cursor": None,
+                    "provider_exhausted": count == 0,
+                },
+            )
+            preload._write_bank_binding(
+                self.root,
+                str(entry["discovery_bank"]),
+                entry,
+            )
+
+        rows = preload.available_preloads(
+            self.root,
+            direction="forward",
+            limit=2,
+        )
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(rows[0]["preload_id"], productive["preload_id"])
+        self.assertEqual(rows[0]["preload_unseen_result_count"], 20)
+        self.assertEqual(rows[1]["preload_id"], empty["preload_id"])
+
+
     def test_fixed_source_fallback_reuses_preload_source_policy(self) -> None:
         backward = preload.fallback_source(self.root, direction="backward")
         self.assertIsNotNone(backward)
