@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-preload-06399f8ef041c80fdeac63e6",
+  "job_id": "job-research-c338c792802f12de",
+  "claim_id": "claim-preload-06399f8ef041c80fdeac63e6",
+  "worker_id": "worker-924226",
+  "status": "blocked",
+  "reason": "Primary-source full text could not be obtained after checking the durable Library cache and materially distinct primary-source routes. Abstract/search snippets and third-party summaries were not used to synthesize the five-slot research record.",
+  "retrieval_evidence": [
+    "Durable Library search by arXiv:2607.17181 and exact title found no matching primary PDF cache.",
+    "Official arXiv abstract identity was located, but this environment could not fetch the arXiv abstract/PDF body (DisabledError on direct open).",
+    "Searched by exact title, arXiv ID, and author names for alternate author/institution-hosted full text; no materially distinct primary full-text copy was found.",
+    "ResearchGate record exposed only a request-full-text flow, not an immediately readable primary full-text copy."
+  ]
+}
