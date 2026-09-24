@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-preload-f48e2e24f9e9543b922e54eb",
-  "job_id": "job-research-fdc9e29fb13596db",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-f48e2e24f9e9543b922e54eb",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-f48e2e24f9e9543b922e54eb","job_id":"job-research-fdc9e29fb13596db","data":{"canonical_id":"arXiv:2404.02258","arxiv_id":"2404.02258","doi":"10.48550/arXiv.2404.02258","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},"title":"Mixture-of-Depths: Dynamically allocating compute in transformer-based language models","summary":"Mixture-of-Depths（MoD）は、Transformerの各routing blockで処理するtoken数を固定capacityに制限し、learned top-k routerで選ばれたtokenだけにself-attentionとMLPを実行する条件付き計算方式である。残りtokenはresidual経路でblockを迂回するため、静的tensor形状と予測可能な総FLOPsを保ちながらtokenごとの実効depthを動的化できる。主要設定ではevery-other-blockを12.5% capacityにし、同等以上のlossを保ちながらforward計算とstep時間を削減する。非因果top-kを自己回帰生成へ適用するためpredictor routerも導入し、MoEとの統合も示す。","list_summary":"固定capacityのtop-k routingでtoken単位にTransformer blockをskipし、静的shapeのまま同等以上のlossと最大66%のstep高速化を示す。","authors":["David Raposo","Sam Ritter","Blake Richards","Timothy Lillicrap","Peter Conway Humphreys","Adam Santoro"],"authors_affiliations":"Google DeepMind; McGill University; Mila","published":"2024-04-02","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"adaptive computation / conditional computation / depth routing / MoE","topics":["Mixture-of-Depths","条件付き計算","token routing","Transformer","自己回帰推論"],"importance":"動的計算を可変shapeではなく固定capacityへ落とし込むため、ハードウェア効率を維持したadaptive computationの基準点になる。MoE routing予測やtoken schedulingにも接続する。","implementation":"decoder-only Transformerへexpert-choice型top-k depth routingと生成時predictorを組み込む研究実装。production serving framework統合は本文の主張対象外。","hardware_evaluation":"同等ハードウェアでsteps/secとwall-clockを比較し、FLOPsを主要正規化指標とする。大規模設定でTPU topology削減の観測もあるが詳細評価は限定的。","quality_effect":"12.5% capacity・every-other-block routingでisoFLOP baselineと同等以上のlossを達成する例があり、自己回帰predictorへの切替でも性能劣化は小さい。一方stochastic routingや過度なcapacity削減は悪化する。","source":"https://arxiv.org/abs/2404.02258","sources":["https://arxiv.org/abs/2404.02258","https://arxiv.org/html/2404.02258"],"code":null,"last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-f48e2e24f9e9543b922e54eb","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
