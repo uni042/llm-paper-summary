@@ -1,13 +1,111 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "metadata",
   "attempt_id": "attempt-preload-e67ec48caa52d77d1c7b992a",
   "job_id": "job-research-0a4a1c707b0687af",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-e67ec48caa52d77d1c7b992a",
     "worker_id": "worker-924226",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "metadata",
+  "data": {
+    "canonical_id": "arXiv:2606.17081",
+    "arxiv_id": "2606.17081",
+    "doi": "10.48550/arXiv.2606.17081",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
+    "title": "The Price of Anarchy in Disaggregated Inference",
+    "summary": "本論文は、プリフィル（prefill）とデコード（decode）を分離するLLM推論を、GPU配分・階層KVキャッシュ配置・要求ルーティングという3つの結合ゲームとして定式化し、NVIDIA Dynamo上で混雑度に応じたルーティング制御へ落とし込む。絶対効率比ではなく運用状態の指標として推定した無秩序の代償（Price of Anarchy; PoA）が飽和点で急増することを利用し、待ち時間の少ない領域ではキャッシュ親和性を維持し、飽和時には負荷分散を強める適応制御器を実装する。3ノードのB200クラスタで、70Bの1プリフィル/5デコード構成では飽和時PoA指標を66.42から21.53へ3.1倍改善し、処理量13%低下との交換で末尾遅延を抑えた。",
+    "list_summary": "分離推論を3つのゲームとして捉え、飽和遷移を検出してDynamoのキャッシュ親和性と負荷分散を切り替え、70B構成の飽和時PoA指標を3.1倍改善する。",
+    "authors": [
+      "Athos Georgiou"
+    ],
+    "authors_affiliations": "NCA",
+    "published": "2026-06-11",
+    "publication": "arXiv:2606.17081v1",
+    "publication_type": "arXiv preprint",
+    "publication_status": "preprint",
+    "publication_version": "v1",
+    "lineage": "disaggregated-serving",
+    "topics": [
+      "分離推論",
+      "ルーティング",
+      "KVキャッシュ",
+      "GPUスケジューリング",
+      "ゲーム理論",
+      "NVIDIA Dynamo"
+    ],
+    "importance": "分離推論のスケジューラを単なる経験的な重み調整として扱わず、プリフィル/デコード資源配分、キャッシュ外部性、要求混雑を別々のゲームとして記述し、GPU飽和によって最適なルーティング方針が切り替わることを実機で示す。特にDynamoの既存ルータへ小さな制御層を重ねるだけで、飽和時のキュー爆発を検知して運用点を移せる点が実装上重要である。",
+    "hardware_evaluation": "3台のHGX B200ノード。各ノード8基のB200 SXM 192GB HBM3e、NVLink 5/NVSwitch。70BではTP=4、340BではTP=8を使用。",
+    "hardware_details": "70B 1P/2Dで計12 GPU、340B 1P/2Dと70B 1P/5Dで各24 GPUを使用。ノード内はGPUあたり双方向900GB/sのNVLink 5、ノード間はInfiniBand経路を含む。",
+    "quality_effect": "モデル重みや生成アルゴリズムは変更せず、ルーティングによる性能特性だけを変える。品質指標そのものは主評価ではなく、TTFT P99、ITL P99、要求/秒、PoA推定指標を対象とする。",
+    "storage_targets": [
+      "GPU HBM上のKVブロック",
+      "CPU DRAMのKV階層",
+      "ローカルSSDのKV階層",
+      "ネットワーク越しのKVコピー"
+    ],
+    "bottlenecks": [
+      "プリフィルGPUの飽和によるキュー急増",
+      "デコードworkerへの要求集中",
+      "キャッシュ親和性と負荷分散の競合",
+      "固定プリフィル/デコード分割での資源外部性"
+    ],
+    "evidence_locations": [
+      "§4 Three Coupled Games",
+      "§5 Saturation",
+      "§6 Adaptive Controller Design",
+      "§7 Experimental Setup",
+      "§8 Results",
+      "Tables 3–8",
+      "§9 Discussion and Scope",
+      "§10 Conclusion",
+      "Appendix A"
+    ],
+    "references": [
+      {
+        "canonical_id": "arXiv:2311.18677",
+        "arxiv_id": "2311.18677",
+        "title": "Splitwise: Efficient Generative LLM Inference Using Phase Splitting"
+      },
+      {
+        "canonical_id": "arXiv:2401.09670",
+        "arxiv_id": "2401.09670",
+        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      },
+      {
+        "canonical_id": "arXiv:2508.01989",
+        "arxiv_id": "2508.01989",
+        "title": "Prefill-decode aggregation or disaggregation? Unifying both for goodput-optimized LLM serving"
+      },
+      {
+        "canonical_id": "arXiv:2601.06288",
+        "arxiv_id": "2601.06288",
+        "title": "AIConfigurator: Lightning-fast configuration optimization for multi-framework LLM serving"
+      }
+    ],
+    "references_checked_at": "2026-09-24",
+    "references_source": "arXiv:2606.17081v1 reference section",
+    "references_total": 40,
+    "source": "https://arxiv.org/abs/2606.17081",
+    "sources": [
+      "https://arxiv.org/abs/2606.17081",
+      "https://www.researchgate.net/publication/407172523_The_Price_of_Anarchy_in_Disaggregated_Inference"
+    ],
+    "code": null,
+    "implementation": "DynamoのPythonルータハンドラKvPushRouterを約270行の適応制御ラッパーで拡張し、router_config_overrideを用いて要求単位にtemperatureとoverlap weightを変更する。Rust coreは変更しない。論文本文に公式コード公開URLの記載は確認できない。",
+    "implementation_status": "実験用実装は論文に具体記載されるが、公式公開リポジトリは本文記載なし。",
+    "evaluation_type": "実機クラスタ評価 + 解析モデル + パラメータ掃引 + 適応制御実験",
+    "last_checked": "2026-09-24",
+    "audit_version": 0
   }
 }
