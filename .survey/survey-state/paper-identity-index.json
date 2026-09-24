@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 1002,
+  "active_count": 1006,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -2683,6 +2683,13 @@
       ],
       "source_hash": "87ab7daf2de1bd417e68875c3e88948e01a2f2a0eaa7174cf8273524b830427d"
     },
+    "arXiv:2404.08509": {
+      "path": "papers/inference/06-serving-scheduling/2024-2404.08509-ssjf.md",
+      "identifiers": [
+        "arXiv:2404.08509"
+      ],
+      "source_hash": "f2d57a9063edb7015fb31aa301a36ee3c2ef4c9e4ce4f91fadc29eb2f7890bbf"
+    },
     "arXiv:2501.12162": {
       "path": "papers/inference/06-serving-scheduling/2025-2501.12162-adaserve-multi-slo-speculative-serving.md",
       "identifiers": [
@@ -2946,6 +2953,13 @@
       ],
       "source_hash": "8c6126497ff288fc7cf54bfca277baf88a6a389f75705766af89f88a23fed79b"
     },
+    "arXiv:2310.01801": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+      "identifiers": [
+        "arXiv:2310.01801"
+      ],
+      "source_hash": "cf6a920f63b1c1ba5016e186638a0701900abfef1e54b1cb7a85a47d288104c7"
+    },
     "arXiv:2402.05099": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
       "identifiers": [
@@ -2975,6 +2989,14 @@
         "arXiv:2405.04437"
       ],
       "source_hash": "7232ed5e3e35b4897509f0bba5023130cb7e5eb08a6642a2a0c5c75590fcc001"
+    },
+    "arXiv:2406.02069": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2406.02069",
+        "arXiv:2406.02069"
+      ],
+      "source_hash": "48e446a00e4a8cdf5a27fce58de52036997ea5418bbc3a3f5a719533c823eed5"
     },
     "arXiv:2407.11550": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
@@ -3454,6 +3476,14 @@
         "arXiv:2609.06551"
       ],
       "source_hash": "9427e0df7edfc7339f361259f014b2b20ed170df9a4a9d84e72ce34a9f722c99"
+    },
+    "arXiv:2210.17323": {
+      "path": "papers/inference/08-quantization-kernels/2022-2210.17323-gptq.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2210.17323",
+        "arXiv:2210.17323"
+      ],
+      "source_hash": "5df3cd7833a74b9702eeda8bbdf965fa0138e93246bb0221e41372e6ee61558d"
     },
     "arXiv:2306.00978": {
       "path": "papers/inference/08-quantization-kernels/2023-2306.00978-awq.md",
@@ -8253,6 +8283,7 @@
     "arXiv:2607.16184": "arXiv:2607.16184",
     "DOI:10.48550/arxiv.2609.04453": "arXiv:2609.04453",
     "arXiv:2609.04453": "arXiv:2609.04453",
+    "arXiv:2404.08509": "arXiv:2404.08509",
     "DOI:10.48550/arxiv.2501.12162": "arXiv:2501.12162",
     "arXiv:2501.12162": "arXiv:2501.12162",
     "DOI:10.48550/arxiv.2504.08784": "arXiv:2504.08784",
@@ -8312,12 +8343,15 @@
     "arXiv:2608.10362": "arXiv:2608.10362",
     "DOI:10.48550/arxiv.2306.14048": "arXiv:2306.14048",
     "arXiv:2306.14048": "arXiv:2306.14048",
+    "arXiv:2310.01801": "arXiv:2310.01801",
     "arXiv:2402.05099": "arXiv:2402.05099",
     "DOI:10.1109/isca59077.2024.00077": "arXiv:2403.17312",
     "arXiv:2403.17312": "arXiv:2403.17312",
     "arXiv:2404.14469": "arXiv:2404.14469",
     "DOI:10.1145/3669940.3707256": "arXiv:2405.04437",
     "arXiv:2405.04437": "arXiv:2405.04437",
+    "DOI:10.48550/arxiv.2406.02069": "arXiv:2406.02069",
+    "arXiv:2406.02069": "arXiv:2406.02069",
     "arXiv:2407.11550": "arXiv:2407.11550",
     "DOI:10.48550/arxiv.2410.16179": "arXiv:2410.16179",
     "arXiv:2410.16179": "arXiv:2410.16179",
@@ -8413,6 +8447,8 @@
     "arXiv:2609.01338": "arXiv:2609.01338",
     "arXiv:2609.02514": "arXiv:2609.02514",
     "arXiv:2609.06551": "arXiv:2609.06551",
+    "DOI:10.48550/arxiv.2210.17323": "arXiv:2210.17323",
+    "arXiv:2210.17323": "arXiv:2210.17323",
     "DOI:10.48550/arxiv.2306.00978": "arXiv:2306.00978",
     "arXiv:2306.00978": "arXiv:2306.00978",
     "DOI:10.48550/arxiv.2606.11244": "arXiv:2606.11244",
