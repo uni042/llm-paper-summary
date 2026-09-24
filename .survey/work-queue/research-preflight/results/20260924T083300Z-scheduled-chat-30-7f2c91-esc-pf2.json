@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T083300Z-scheduled-chat-30-7f2c91-esc-pf2",
+  "kind": "research",
+  "attempt_id": "attempt-preload-3c754529c6f791ee0cbc78c5",
+  "job_id": "job-research-374463a300b97ed5",
+  "record_bank": "i",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:7c9f4d669d8d9fa7af83891c53d15addc6155098cdb7020983c8bd03e6fec327",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-i/metadata.json",
+      "blob_sha": "cded4a0390f9b8214d62b7fc2222969f3d287d25"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-i/problem_method.json",
+      "blob_sha": "be4420cc99bf78882995aa8a5ba3aa90cc5d0b5b"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-i/evaluation.json",
+      "blob_sha": "53ec20cfbf989bd2e6264fd0567a2017d8df0428"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-i/results.json",
+      "blob_sha": "4d6100cfddcff851c07aedebbd31790fa10d34aa"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-i/positioning.json",
+      "blob_sha": "70fbb396d89a390e74ceef7db1f3ff89291add37"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-24T08:33:30+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md",
+    "status": "FAIL",
+    "file_bytes": 21124,
+    "prose_chars": 5021,
+    "paragraphs": 20,
+    "method_paragraphs": 6,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.971150019896538,
+    "japanese_chars": 4881,
+    "latin_chars": 145,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}
