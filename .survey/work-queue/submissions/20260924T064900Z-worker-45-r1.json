@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "worker-45",
+  "candidates": [],
+  "discovery_precheck": {
+    "request_id": "worker-45-20260924T064704Z-preload-666749a6aa1ef86a1375",
+    "result_path": ".survey/work-queue/discovery-precheck/results/worker-45-20260924T064704Z-preload-666749a6aa1ef86a1375.json",
+    "receipt": "sha256:93e1c995421cfae78bb30c78bd28c70ddb6557a9a81831abb5d82fb0dbbd9071"
+  },
+  "discovery_stats": {
+    "run_key": "worker-45-20260924T064704Z-audit45",
+    "round": "worker-45-20260924T064704Z-preload-666749a6aa1ef86a1375",
+    "axis": "backward references of FlexGen offload and hierarchical-memory LLM inference",
+    "query_summary": "FlexGenの後方参照20件を正規schema v3で再検査し、LLM推論システム・オフロード・階層メモリ系統へResearch投入下限以上で直接寄与する未収録候補を軽量評価したが、今回の正式allowed_recordsから新規投入対象は採用しなかった。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 1,
+    "accepted_canonical_ids": [],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [{
+      "topic": "FlexGen references",
+      "source": "semantic_scholar",
+      "date_range": "all",
+      "category": "inference-systems",
+      "citation_direction": "backward",
+      "query_family": "citation-curation",
+      "raw_result_count": 27,
+      "unseen_result_count": 20,
+      "duplicate_filtered_count": 1,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 20,
+      "candidate_accepted_count": 0,
+      "position": "cached-plus-live"
+    }]
+  }
+}
