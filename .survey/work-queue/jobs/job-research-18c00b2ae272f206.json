@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2609.17940",
   "title": "Beyond the Previous Layer: Residual Predictive Structure in Sparse MoE Routing",
   "source_url": "https://arxiv.org/abs/2609.17940",
-  "paper_path": "papers/inference/07-moe-inference/2026-2609.17940-beyond-previous-layer-moe-routing-history.md",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17940-beyond-previous-layer-moe-routing-history.md",
   "selection_reason": "OLMoE/JetMoEで直前layerだけでなく複数layerのexpert-selection履歴に次routerを予測する残余情報があることを定量化。直接のserving system提案ではないためpriorityは抑えるが、expert prefetch/cacheのrouting predictor設計に直結する一次的な予測可能性証拠として重要。",
   "status": "ready",
   "workflow_version": 10,
