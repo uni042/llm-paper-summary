@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 22:21:37 JST**
+> 自動生成: **2026-09-24 22:23:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6818** |
-| 処理済み | **666** |
-| 未処理 | **6152** |
+| 処理済み | **667** |
+| 未処理 | **6151** |
 | 収録済みとして除外 | **558** |
-| 無関係として除外 | **48** |
+| 無関係として除外 | **49** |
 | 微妙として除外 | **60** |
 
 - 消化率: **9.8%**
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（13時間45分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（13時間47分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -72,8 +72,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Research | **9** | **3** | **2** | **0** | **132** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **24** | **1** | **1** | **0** | **0** | **0** | **0** |
-| 合計 | **33** | **4** | **3** | **0** | **132** | **0** | **0** |
+| Discovery | **25** | **1** | **1** | **0** | **0** | **0** | **0** |
+| 合計 | **34** | **4** | **3** | **0** | **132** | **0** | **0** |
 
 - 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -139,6 +139,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/20260924T130330Z-scheduled-chat-00-6e21c4-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260924T130330Z-scheduled-chat-00-6e21c4-r1.json`
   - 探索軸: preload-backward-structured-references
+- **09-24 22:15:07 JST** job `job-62fd66001f3e574b` / 候補 **0件**
+  - result: `.survey/work-queue/results/20260924T123145Z-scheduled-chat-30-8f31c2-r1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T123145Z-scheduled-chat-30-8f31c2-r1.json`
+  - 探索軸: preload-backward-structured-references
 - **09-24 19:55:28 JST** job `job-cfc2aa0addf64b6e` / 候補 **0件**
   - result: `.survey/work-queue/results/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/20260924T095930Z-scheduled-chat-00-6f4c2a-r1.json`
@@ -171,10 +175,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json`
   - 探索軸: SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL
-- **09-24 22:14:26 JST** job `job-aafd717befe8d1b0` / 候補 **0件**
-  - result: `.survey/work-queue/results/2026-09-19T16-00-00+09-00-specialist-kv-quant-runtime-9.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-kv-quant-runtime-9.json`
-  - 探索軸: KV quantization・compressed-domain attention・memory runtime
 
 ### 直近タスク
 
@@ -293,11 +293,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **284** |
+| 成功result未照合のimmutable submission | **252** |
 | └ Research | **172** |
 | └ Audit | **2** |
 | └ Discovery | **51** |
-| └ Other/Unknown | **59** |
+| └ Other/Unknown | **27** |
 
 ### 厳格検証が未成立のcompleted job
 
