@@ -1,0 +1,867 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-5d31b59196b899fff6ff",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-5d31b59196b899fff6ff",
+  "axis": "OpenAlex recent MoE serving expert cache offloading",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=mixture%20experts%20LLM%20serving%20expert%20cache%20offloading&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg0NTA1NjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTcwMjI0NTE1J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1e7e0e884c6acd3f7c221b0968885963aa2b6057",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 57,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T11:38:20.896887+00:00",
+  "preload_id": "preload-5d31b59196b899fff6ff",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+      "source_url": "https://arxiv.org/abs/2609.18842",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "arXiv:2609.18842",
+      "arxiv_id": "2609.18842",
+      "authors": [
+        "Jinli Hu",
+        "Ross M. Clarke",
+        "Yichuan Zhang",
+        "Jose Miguel Hernández-Lobato"
+      ]
+    },
+    {
+      "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models",
+      "source_url": "https://doi.org/10.1145/3845797",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "arXiv:2401.00625",
+      "arxiv_id": "2401.00625",
+      "authors": [
+        "Guangji Bai",
+        "Zheng Chai",
+        "Ling Chen",
+        "Shiyu Wang",
+        "Jiaying Lu",
+        "Nan Zhang",
+        "Tingwei Shi",
+        "Ziyang Yu",
+        "Mengdan Zhu",
+        "Yifei Zhang",
+        "Xinyuan Song",
+        "Carl Yang",
+        "Yue Cheng",
+        "Liang Zhao"
+      ]
+    },
+    {
+      "title": "Dynamic Scheduling Algorithm for Edge-cloud Collaborative Computing Resources Based on 5G NR-U and Distributed Large Model",
+      "source_url": "https://doi.org/10.26599/tst.2026.9010041",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "DOI:10.26599/tst.2026.9010041",
+      "doi": "10.26599/tst.2026.9010041",
+      "authors": [
+        "Defeng Duan",
+        "Hong Liu",
+        "Liyun Huang",
+        "Songlei Zhang",
+        "Bo Meng"
+      ]
+    },
+    {
+      "title": "Harmfulness Propagation Dynamics: Layer-wise Trajectories of Adversarial Intent in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.13534",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13534",
+      "arxiv_id": "2609.13534",
+      "authors": [
+        "Noor Islam S. Mohammad",
+        "Uluğ Bayazıt"
+      ]
+    },
+    {
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.10355",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10355",
+      "arxiv_id": "2609.10355",
+      "authors": [
+        "Killian Steunou",
+        "Yannis Tevissen",
+        "Mounîm A. El Yacoubi"
+      ]
+    },
+    {
+      "title": "Miles v0.1: Production-Level Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.08368",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08368",
+      "arxiv_id": "2609.08368",
+      "authors": [
+        "RadixArk",
+        ":",
+        "Tom Chen",
+        "Mao Cheng",
+        "Shi Dong",
+        "Kangrui Du",
+        "Yanbin Jiang",
+        "Jiajun Li",
+        "Yiming Li",
+        "Tao Lin",
+        "Yusheng Su",
+        "Andy Ye",
+        "Yueming Yuan",
+        "Zhichen Zeng"
+      ]
+    },
+    {
+      "title": "Detokenization Leaks: Reconstructing Local LLM Outputs From Cache Traces",
+      "source_url": "https://arxiv.org/abs/2609.06674",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06674",
+      "arxiv_id": "2609.06674",
+      "authors": [
+        "Roy Weiss",
+        "Benyamin Konstantinov",
+        "Eitam Sheetrit",
+        "Tomer Simon",
+        "Yisroel Mirsky"
+      ]
+    },
+    {
+      "title": "From Concentration to Differentiation and Back: Routing Effective Rank in MoE Reasoning Cohorts",
+      "source_url": "https://arxiv.org/abs/2609.06403",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06403",
+      "arxiv_id": "2609.06403",
+      "authors": [
+        "Kang Chen",
+        "Sihan Zhao",
+        "Yixin Cao",
+        "Yu-Gang Jiang"
+      ]
+    },
+    {
+      "title": "FiMI Banking: A Sovereign Model for Indian Retail Banking",
+      "source_url": "https://arxiv.org/abs/2609.03960",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.03960",
+      "arxiv_id": "2609.03960",
+      "authors": [
+        "NPCI AI Research Team",
+        "Aman Kumar",
+        "Asit Desai",
+        "Chandra Bhushan",
+        "Harsh Sharma",
+        "Harshit Bhushan",
+        "Hrithik Kadam",
+        "Keyur Doshi",
+        "Kolisetty Sai Kapardheeswar",
+        "Krishanu Adhikary",
+        "Nadeem Shaik",
+        "Navya Prakash",
+        "Nitin Kukreja",
+        "Prashant Devadiga",
+        "Shamanth MH",
+        "Shantanu Pandey",
+        "Suvradip Paul",
+        "Yatharth Dedhia"
+      ]
+    },
+    {
+      "title": "Hoss: Fast Oblivious Semantic Search with Heterogeneous GPU-CPU-TEE Architecture",
+      "source_url": "https://arxiv.org/abs/2609.04522",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.04522",
+      "arxiv_id": "2609.04522",
+      "authors": [
+        "Jianzhang Du",
+        "Weijie Huang",
+        "Chenghong Wang",
+        "Nicolas Tsagareli",
+        "Yukui Luo",
+        "XiaoFeng Wang",
+        "Zhongshu Gu"
+      ]
+    },
+    {
+      "title": "APEx: Distillation of Agent Procedural Experience for Adaptive Deep Research Question Answering",
+      "source_url": "https://arxiv.org/abs/2609.02253",
+      "year": 2026,
+      "published": "2026-09-02",
+      "canonical_id": "arXiv:2609.02253",
+      "arxiv_id": "2609.02253",
+      "authors": [
+        "Jie Ding",
+        "Rui Sun",
+        "Xinyuan Zhang",
+        "Zeyu Zhang",
+        "Xin Liu"
+      ]
+    },
+    {
+      "title": "Self–Optimizing AI data systems: a systematic literature review of CQLE-Aware query optimization, Edge–cloud offloading, Cloud/HPC orchestration, Data–Centric MLOps, and RAG",
+      "source_url": "https://doi.org/10.1007/s10791-026-10515-0",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "DOI:10.1007/s10791-026-10515-0",
+      "doi": "10.1007/s10791-026-10515-0",
+      "authors": [
+        "Chaitanya Ranga Singamaneni",
+        "Salakapuri Rakesh"
+      ]
+    },
+    {
+      "title": "A human-centred analytics framework for auditable supply chain risk monitoring and decision support",
+      "source_url": "https://doi.org/10.1016/j.sca.2026.100239",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "DOI:10.1016/j.sca.2026.100239",
+      "doi": "10.1016/j.sca.2026.100239",
+      "authors": [
+        "Natalia Rumanti Hartono",
+        "Kevin Nathanael",
+        "Voicu Ion Sucala",
+        "Martino Luis",
+        "Elioenai Sitepu"
+      ]
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing",
+      "source_url": "https://arxiv.org/abs/2608.25683",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.25683",
+      "arxiv_id": "2608.25683",
+      "authors": [
+        "Mianjie Yu",
+        "Zizhao Mo",
+        "Huanyu Qu",
+        "Zhirong Qian",
+        "Huanle Xu",
+        "Cen Li",
+        "Zifeng Zhao",
+        "Zhi Zhou",
+        "Jinhua Zhou",
+        "Jun Xie",
+        "Chengzhong Xu"
+      ]
+    },
+    {
+      "title": "Benchmarking Composable Compression Techniques in Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2608.21693",
+      "year": 2026,
+      "published": "2026-08-22",
+      "canonical_id": "arXiv:2608.21693",
+      "arxiv_id": "2608.21693",
+      "authors": [
+        "Afsara Benazir",
+        "Chen Chen",
+        "Rongxiao Qu",
+        "Jiabo Huang",
+        "Jingtao Li",
+        "Lingjuan Lyu"
+      ]
+    },
+    {
+      "title": "AI Infrastructure in Space: How Far Can We Go?",
+      "source_url": "https://arxiv.org/abs/2608.21034",
+      "year": 2026,
+      "published": "2026-08-21",
+      "canonical_id": "arXiv:2608.21034",
+      "arxiv_id": "2608.21034",
+      "authors": [
+        "Qing Li",
+        "Qiyang Zhang",
+        "Daliang Xu",
+        "Tianze Huang",
+        "Dingge Zhang",
+        "Yihao Zhao",
+        "Xiaolong Huang",
+        "Jinfeng Wen",
+        "Xiameng Hu",
+        "Tao Qi",
+        "Mengwei Xu",
+        "Shangguang Wang",
+        "Xuanzhe Liu"
+      ]
+    },
+    {
+      "title": "Generating knowledge graphs from news articles via multi-agent claim extraction and attribution",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.116890",
+      "year": 2026,
+      "published": "2026-08-20",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116890",
+      "doi": "10.1016/j.knosys.2026.116890",
+      "authors": [
+        "Massimiliano Fadda",
+        "Enrico Motta",
+        "Francesco Osborne",
+        "Diego Reforgiato Recupero",
+        "Angelo A. Salatino"
+      ]
+    },
+    {
+      "title": "Predatory MoE: Serving Mixture-of-Experts with a Sequence-Local Expert Roster",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10741449/v1",
+      "year": 2026,
+      "published": "2026-08-19",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10741449/v1",
+      "doi": "10.21203/rs.3.rs-10741449/v1",
+      "authors": [
+        "ChaeWoo Son"
+      ]
+    },
+    {
+      "title": "Heterogeneous edge AI orchestration: A systematic review, taxonomy and future directions",
+      "source_url": "https://doi.org/10.1016/j.cosrev.2026.101044",
+      "year": 2026,
+      "published": "2026-08-14",
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.101044",
+      "doi": "10.1016/j.cosrev.2026.101044",
+      "authors": [
+        "Babar Ali",
+        "Sukhpal Singh Gill",
+        "Félix Cuadrado",
+        "Steve Uhlig"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.18842",
+      "identity_tokens": [
+        "id:arXiv:2609.18842",
+        "title:infiniteparameter llms generating and adapting weights from live data",
+        "url:https://arxiv.org/abs/2609.18842"
+      ],
+      "record": {
+        "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+        "source_url": "https://arxiv.org/abs/2609.18842",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "arXiv:2609.18842",
+        "arxiv_id": "2609.18842",
+        "authors": [
+          "Jinli Hu",
+          "Ross M. Clarke",
+          "Yichuan Zhang",
+          "Jose Miguel Hernández-Lobato"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.00625",
+      "identity_tokens": [
+        "id:DOI:10.1145/3845797",
+        "id:arXiv:2401.00625",
+        "title:beyond efficiency a systematic survey of resourceefficient large language models",
+        "url:https://doi.org/10.1145/3845797"
+      ],
+      "record": {
+        "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models",
+        "source_url": "https://doi.org/10.1145/3845797",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "arXiv:2401.00625",
+        "arxiv_id": "2401.00625",
+        "authors": [
+          "Guangji Bai",
+          "Zheng Chai",
+          "Ling Chen",
+          "Shiyu Wang",
+          "Jiaying Lu",
+          "Nan Zhang",
+          "Tingwei Shi",
+          "Ziyang Yu",
+          "Mengdan Zhu",
+          "Yifei Zhang",
+          "Xinyuan Song",
+          "Carl Yang",
+          "Yue Cheng",
+          "Liang Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.26599/tst.2026.9010041",
+      "identity_tokens": [
+        "id:DOI:10.26599/tst.2026.9010041",
+        "title:dynamic scheduling algorithm for edgecloud collaborative computing resources based on 5g nru and distributed large model",
+        "url:https://doi.org/10.26599/tst.2026.9010041"
+      ],
+      "record": {
+        "title": "Dynamic Scheduling Algorithm for Edge-cloud Collaborative Computing Resources Based on 5G NR-U and Distributed Large Model",
+        "source_url": "https://doi.org/10.26599/tst.2026.9010041",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "DOI:10.26599/tst.2026.9010041",
+        "doi": "10.26599/tst.2026.9010041",
+        "authors": [
+          "Defeng Duan",
+          "Hong Liu",
+          "Liyun Huang",
+          "Songlei Zhang",
+          "Bo Meng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13534",
+      "identity_tokens": [
+        "id:arXiv:2609.13534",
+        "title:harmfulness propagation dynamics layerwise trajectories of adversarial intent in large language models",
+        "url:https://arxiv.org/abs/2609.13534"
+      ],
+      "record": {
+        "title": "Harmfulness Propagation Dynamics: Layer-wise Trajectories of Adversarial Intent in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.13534",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13534",
+        "arxiv_id": "2609.13534",
+        "authors": [
+          "Noor Islam S. Mohammad",
+          "Uluğ Bayazıt"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10355",
+      "identity_tokens": [
+        "id:arXiv:2609.10355",
+        "title:why is video still so expensive a survey of inferenceefficiency mechanisms in video and audiovisual llms",
+        "url:https://arxiv.org/abs/2609.10355"
+      ],
+      "record": {
+        "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.10355",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10355",
+        "arxiv_id": "2609.10355",
+        "authors": [
+          "Killian Steunou",
+          "Yannis Tevissen",
+          "Mounîm A. El Yacoubi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08368",
+      "identity_tokens": [
+        "id:arXiv:2609.08368",
+        "title:miles v01 productionlevel posttraining",
+        "url:https://arxiv.org/abs/2609.08368"
+      ],
+      "record": {
+        "title": "Miles v0.1: Production-Level Post-Training",
+        "source_url": "https://arxiv.org/abs/2609.08368",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08368",
+        "arxiv_id": "2609.08368",
+        "authors": [
+          "RadixArk",
+          ":",
+          "Tom Chen",
+          "Mao Cheng",
+          "Shi Dong",
+          "Kangrui Du",
+          "Yanbin Jiang",
+          "Jiajun Li",
+          "Yiming Li",
+          "Tao Lin",
+          "Yusheng Su",
+          "Andy Ye",
+          "Yueming Yuan",
+          "Zhichen Zeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06674",
+      "identity_tokens": [
+        "id:arXiv:2609.06674",
+        "title:detokenization leaks reconstructing local llm outputs from cache traces",
+        "url:https://arxiv.org/abs/2609.06674"
+      ],
+      "record": {
+        "title": "Detokenization Leaks: Reconstructing Local LLM Outputs From Cache Traces",
+        "source_url": "https://arxiv.org/abs/2609.06674",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06674",
+        "arxiv_id": "2609.06674",
+        "authors": [
+          "Roy Weiss",
+          "Benyamin Konstantinov",
+          "Eitam Sheetrit",
+          "Tomer Simon",
+          "Yisroel Mirsky"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06403",
+      "identity_tokens": [
+        "id:arXiv:2609.06403",
+        "title:from concentration to differentiation and back routing effective rank in moe reasoning cohorts",
+        "url:https://arxiv.org/abs/2609.06403"
+      ],
+      "record": {
+        "title": "From Concentration to Differentiation and Back: Routing Effective Rank in MoE Reasoning Cohorts",
+        "source_url": "https://arxiv.org/abs/2609.06403",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06403",
+        "arxiv_id": "2609.06403",
+        "authors": [
+          "Kang Chen",
+          "Sihan Zhao",
+          "Yixin Cao",
+          "Yu-Gang Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.03960",
+      "identity_tokens": [
+        "id:arXiv:2609.03960",
+        "title:fimi banking a sovereign model for indian retail banking",
+        "url:https://arxiv.org/abs/2609.03960"
+      ],
+      "record": {
+        "title": "FiMI Banking: A Sovereign Model for Indian Retail Banking",
+        "source_url": "https://arxiv.org/abs/2609.03960",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.03960",
+        "arxiv_id": "2609.03960",
+        "authors": [
+          "NPCI AI Research Team",
+          "Aman Kumar",
+          "Asit Desai",
+          "Chandra Bhushan",
+          "Harsh Sharma",
+          "Harshit Bhushan",
+          "Hrithik Kadam",
+          "Keyur Doshi",
+          "Kolisetty Sai Kapardheeswar",
+          "Krishanu Adhikary",
+          "Nadeem Shaik",
+          "Navya Prakash",
+          "Nitin Kukreja",
+          "Prashant Devadiga",
+          "Shamanth MH",
+          "Shantanu Pandey",
+          "Suvradip Paul",
+          "Yatharth Dedhia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04522",
+      "identity_tokens": [
+        "id:arXiv:2609.04522",
+        "title:hoss fast oblivious semantic search with heterogeneous gpucputee architecture",
+        "url:https://arxiv.org/abs/2609.04522"
+      ],
+      "record": {
+        "title": "Hoss: Fast Oblivious Semantic Search with Heterogeneous GPU-CPU-TEE Architecture",
+        "source_url": "https://arxiv.org/abs/2609.04522",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.04522",
+        "arxiv_id": "2609.04522",
+        "authors": [
+          "Jianzhang Du",
+          "Weijie Huang",
+          "Chenghong Wang",
+          "Nicolas Tsagareli",
+          "Yukui Luo",
+          "XiaoFeng Wang",
+          "Zhongshu Gu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.02253",
+      "identity_tokens": [
+        "id:arXiv:2609.02253",
+        "title:apex distillation of agent procedural experience for adaptive deep research question answering",
+        "url:https://arxiv.org/abs/2609.02253"
+      ],
+      "record": {
+        "title": "APEx: Distillation of Agent Procedural Experience for Adaptive Deep Research Question Answering",
+        "source_url": "https://arxiv.org/abs/2609.02253",
+        "year": 2026,
+        "published": "2026-09-02",
+        "canonical_id": "arXiv:2609.02253",
+        "arxiv_id": "2609.02253",
+        "authors": [
+          "Jie Ding",
+          "Rui Sun",
+          "Xinyuan Zhang",
+          "Zeyu Zhang",
+          "Xin Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10791-026-10515-0",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10791-026-10515-0",
+        "title:selfoptimizing ai data systems a systematic literature review of cqleaware query optimization edgecloud offloading cloudhpc orchestration datacentric mlops and rag",
+        "url:https://doi.org/10.1007/s10791-026-10515-0"
+      ],
+      "record": {
+        "title": "Self–Optimizing AI data systems: a systematic literature review of CQLE-Aware query optimization, Edge–cloud offloading, Cloud/HPC orchestration, Data–Centric MLOps, and RAG",
+        "source_url": "https://doi.org/10.1007/s10791-026-10515-0",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "DOI:10.1007/s10791-026-10515-0",
+        "doi": "10.1007/s10791-026-10515-0",
+        "authors": [
+          "Chaitanya Ranga Singamaneni",
+          "Salakapuri Rakesh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.sca.2026.100239",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.sca.2026.100239",
+        "title:a humancentred analytics framework for auditable supply chain risk monitoring and decision support",
+        "url:https://doi.org/10.1016/j.sca.2026.100239"
+      ],
+      "record": {
+        "title": "A human-centred analytics framework for auditable supply chain risk monitoring and decision support",
+        "source_url": "https://doi.org/10.1016/j.sca.2026.100239",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "DOI:10.1016/j.sca.2026.100239",
+        "doi": "10.1016/j.sca.2026.100239",
+        "authors": [
+          "Natalia Rumanti Hartono",
+          "Kevin Nathanael",
+          "Voicu Ion Sucala",
+          "Martino Luis",
+          "Elioenai Sitepu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25683",
+      "identity_tokens": [
+        "id:arXiv:2608.25683",
+        "title:psrl efficient training for agentic ai via trainingtime prefix sharing",
+        "url:https://arxiv.org/abs/2608.25683"
+      ],
+      "record": {
+        "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing",
+        "source_url": "https://arxiv.org/abs/2608.25683",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.25683",
+        "arxiv_id": "2608.25683",
+        "authors": [
+          "Mianjie Yu",
+          "Zizhao Mo",
+          "Huanyu Qu",
+          "Zhirong Qian",
+          "Huanle Xu",
+          "Cen Li",
+          "Zifeng Zhao",
+          "Zhi Zhou",
+          "Jinhua Zhou",
+          "Jun Xie",
+          "Chengzhong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21693",
+      "identity_tokens": [
+        "id:arXiv:2608.21693",
+        "title:benchmarking composable compression techniques in mixtureofexperts llms",
+        "url:https://arxiv.org/abs/2608.21693"
+      ],
+      "record": {
+        "title": "Benchmarking Composable Compression Techniques in Mixture-of-Experts LLMs",
+        "source_url": "https://arxiv.org/abs/2608.21693",
+        "year": 2026,
+        "published": "2026-08-22",
+        "canonical_id": "arXiv:2608.21693",
+        "arxiv_id": "2608.21693",
+        "authors": [
+          "Afsara Benazir",
+          "Chen Chen",
+          "Rongxiao Qu",
+          "Jiabo Huang",
+          "Jingtao Li",
+          "Lingjuan Lyu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21034",
+      "identity_tokens": [
+        "id:arXiv:2608.21034",
+        "title:ai infrastructure in space how far can we go",
+        "url:https://arxiv.org/abs/2608.21034"
+      ],
+      "record": {
+        "title": "AI Infrastructure in Space: How Far Can We Go?",
+        "source_url": "https://arxiv.org/abs/2608.21034",
+        "year": 2026,
+        "published": "2026-08-21",
+        "canonical_id": "arXiv:2608.21034",
+        "arxiv_id": "2608.21034",
+        "authors": [
+          "Qing Li",
+          "Qiyang Zhang",
+          "Daliang Xu",
+          "Tianze Huang",
+          "Dingge Zhang",
+          "Yihao Zhao",
+          "Xiaolong Huang",
+          "Jinfeng Wen",
+          "Xiameng Hu",
+          "Tao Qi",
+          "Mengwei Xu",
+          "Shangguang Wang",
+          "Xuanzhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.knosys.2026.116890",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.knosys.2026.116890",
+        "title:generating knowledge graphs from news articles via multiagent claim extraction and attribution",
+        "url:https://doi.org/10.1016/j.knosys.2026.116890"
+      ],
+      "record": {
+        "title": "Generating knowledge graphs from news articles via multi-agent claim extraction and attribution",
+        "source_url": "https://doi.org/10.1016/j.knosys.2026.116890",
+        "year": 2026,
+        "published": "2026-08-20",
+        "canonical_id": "DOI:10.1016/j.knosys.2026.116890",
+        "doi": "10.1016/j.knosys.2026.116890",
+        "authors": [
+          "Massimiliano Fadda",
+          "Enrico Motta",
+          "Francesco Osborne",
+          "Diego Reforgiato Recupero",
+          "Angelo A. Salatino"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10741449/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10741449/v1",
+        "title:predatory moe serving mixtureofexperts with a sequencelocal expert roster",
+        "url:https://doi.org/10.21203/rs.3.rs-10741449/v1"
+      ],
+      "record": {
+        "title": "Predatory MoE: Serving Mixture-of-Experts with a Sequence-Local Expert Roster",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10741449/v1",
+        "year": 2026,
+        "published": "2026-08-19",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10741449/v1",
+        "doi": "10.21203/rs.3.rs-10741449/v1",
+        "authors": [
+          "ChaeWoo Son"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.cosrev.2026.101044",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.cosrev.2026.101044",
+        "title:heterogeneous edge ai orchestration a systematic review taxonomy and future directions",
+        "url:https://doi.org/10.1016/j.cosrev.2026.101044"
+      ],
+      "record": {
+        "title": "Heterogeneous edge AI orchestration: A systematic review, taxonomy and future directions",
+        "source_url": "https://doi.org/10.1016/j.cosrev.2026.101044",
+        "year": 2026,
+        "published": "2026-08-14",
+        "canonical_id": "DOI:10.1016/j.cosrev.2026.101044",
+        "doi": "10.1016/j.cosrev.2026.101044",
+        "authors": [
+          "Babar Ali",
+          "Sukhpal Singh Gill",
+          "Félix Cuadrado",
+          "Steve Uhlig"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:5111812f21d187c9536e607664b4f4a2bd8d4617f712a8be44fed6052f372cd3",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

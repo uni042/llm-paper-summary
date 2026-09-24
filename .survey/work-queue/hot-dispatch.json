@@ -2,27 +2,7 @@
   "candidate_inventory": 284,
   "direct_start_allowed": true,
   "discovery": {
-    "backward": [
-      {
-        "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
-        "citation_direction": "backward",
-        "created_at": "2026-09-24T07:01:16.305807+00:00",
-        "discovery_bank": "k",
-        "discovery_slot_path": ".survey/work-queue/records/chat-record-k/discovery-preload.json",
-        "initial_cursor": null,
-        "max_pages": 25,
-        "page_size": 20,
-        "preload_id": "preload-353566d67dc903709143",
-        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-353566d67dc903709143.json",
-        "preload_unseen_result_count": 20,
-        "provider": "semantic_scholar",
-        "seed_canonical_id": null,
-        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-        "take_path": ".survey/work-queue/discovery-preload/claims/preload-353566d67dc903709143.json",
-        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-353566d67dc903709143.json",
-        "target_unseen": 20
-      }
-    ],
+    "backward": [],
     "forward": [
       {
         "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
@@ -101,6 +81,25 @@
         "target_unseen": 20
       },
       {
+        "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+        "citation_direction": "forward",
+        "created_at": "2026-09-24T11:00:19.398256+00:00",
+        "discovery_bank": "b",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-b/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-7bc9edd5f0a4be54b525",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-7bc9edd5f0a4be54b525.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": "arXiv:2306.00978",
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-7bc9edd5f0a4be54b525.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-7bc9edd5f0a4be54b525.json",
+        "target_unseen": 20
+      },
+      {
         "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
         "citation_direction": "forward",
         "created_at": "2026-09-24T11:00:43.159999+00:00",
@@ -137,9 +136,86 @@
         "take_path": ".survey/work-queue/discovery-preload/claims/preload-35f79ff9fbb933aa98ef.json",
         "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-35f79ff9fbb933aa98ef.json",
         "target_unseen": 20
+      },
+      {
+        "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+        "citation_direction": "forward",
+        "created_at": "2026-09-24T11:21:25.937319+00:00",
+        "discovery_bank": "u",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-u/discovery-preload.json",
+        "initial_cursor": "100",
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-675b1f1013b00258635d",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-675b1f1013b00258635d.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": "arXiv:2510.09665",
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-675b1f1013b00258635d.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-675b1f1013b00258635d.json",
+        "target_unseen": 20
+      },
+      {
+        "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+        "citation_direction": "forward",
+        "created_at": "2026-09-24T11:24:29.597911+00:00",
+        "discovery_bank": "y",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-y/discovery-preload.json",
+        "initial_cursor": "120",
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-167e113a06fcc4d41aa8",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-167e113a06fcc4d41aa8.json",
+        "preload_unseen_result_count": 20,
+        "provider": "semantic_scholar",
+        "seed_canonical_id": "arXiv:2303.06865",
+        "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-167e113a06fcc4d41aa8.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-167e113a06fcc4d41aa8.json",
+        "target_unseen": 20
       }
     ],
-    "normal": []
+    "normal": [
+      {
+        "axis": "OpenAlex recent MoE serving expert cache offloading",
+        "citation_direction": "normal",
+        "created_at": "2026-09-24T11:37:49.022432+00:00",
+        "discovery_bank": "aa",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-aa/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-3829ea732218ee1c4ebd",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-3829ea732218ee1c4ebd.json",
+        "preload_unseen_result_count": 20,
+        "provider": "openalex",
+        "seed_canonical_id": null,
+        "source_url": "https://api.openalex.org/works?search=mixture%20experts%20LLM%20serving%20expert%20cache%20offloading&sort=publication_date:desc&per-page=100",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-3829ea732218ee1c4ebd.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-3829ea732218ee1c4ebd.json",
+        "target_unseen": 20
+      },
+      {
+        "axis": "recent KV cache offload disaggregation remote memory LLM inference systems",
+        "citation_direction": "normal",
+        "created_at": "2026-09-24T11:37:49.022432+00:00",
+        "discovery_bank": "ab",
+        "discovery_slot_path": ".survey/work-queue/records/chat-record-ab/discovery-preload.json",
+        "initial_cursor": null,
+        "max_pages": 25,
+        "page_size": 20,
+        "preload_id": "preload-548f81495f9ca8b8e027",
+        "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-548f81495f9ca8b8e027.json",
+        "preload_unseen_result_count": 20,
+        "provider": "openalex",
+        "seed_canonical_id": null,
+        "source_url": "https://api.openalex.org/works?search=LLM%20inference%20KV%20cache%20offload%20disaggregation%20remote%20memory&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+        "take_path": ".survey/work-queue/discovery-preload/claims/preload-548f81495f9ca8b8e027.json",
+        "take_result_path": ".survey/work-queue/direct-take-results/discovery/preload-548f81495f9ca8b8e027.json",
+        "target_unseen": 20
+      }
+    ]
   },
   "discovery_fallback": {
     "axis": "preload-backward-structured-references",
@@ -155,7 +231,7 @@
     "target_unseen": 20
   },
   "fallback_start_allowed": true,
-  "generated_at": "2026-09-24T11:24:29+00:00",
+  "generated_at": "2026-09-24T11:38:48+00:00",
   "idle_gap_guard": {
     "passive_wait_forbidden": true,
     "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock; if none exists, start the published fixed-source schema-v3 fallback immediately while run-state recovery proceeds asynchronously."

@@ -1,0 +1,867 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-675b1f1013b00258635d",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-675b1f1013b00258635d",
+  "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1e7e0e884c6acd3f7c221b0968885963aa2b6057",
+  "raw_search_result_count": 48,
+  "retrieval_duplicate_filtered_count": 22,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T11:38:28.409563+00:00",
+  "preload_id": "preload-675b1f1013b00258635d",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 3,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/f86bc34e1e748b9bed0da8513962a8d4e54a40ba",
+      "year": 2026,
+      "published": "2026-03-05",
+      "abstract": "Prefill-Decode (P/D) disaggregation has emerged as a widely adopted optimization strategy for Large Language Model (LLM) inference. However, there currently exists no well-established methodology for determining the optimal number of P/D hardware resources, subject to constraints on total throughput, service level objectives (SLOs), and request characteristics - specifically input and output lengths. To address this gap, we propose a hybrid approach that combines theoretical modeling with empirical benchmarking. First, we present a theoretical model for calculating P/D resource counts, which is based on total throughput requirements, request input and output lengths, as well as prefill and decode throughput. Then, to obtain the actual prefill and decode throughput under SLO constraints, we model the prefill process using M/M/1 queuing theory, deriving the achieved prefill throughput from the benchmarked maximum prefill throughput and Time-To-First-Token (TTFT). For the decode phase, we determine the decode batch sizes that meet Time-Per-Output-Token (TPOT) requirements and obtain the corresponding decode throughput through empirical measurements. Our experimental results demonstrate that the proposed method can accurately predict optimal P/D resource allocation in real-world LLM inference scenarios.",
+      "canonical_id": "arXiv:2603.04716",
+      "arxiv_id": "2603.04716",
+      "authors": [
+        "Luchang Li",
+        "Dongfang Li",
+        "Bo-Zhao Gong",
+        "Yu Zhang"
+      ]
+    },
+    {
+      "title": "Hardware Co-Design Scaling Laws via Roofline Modelling for On-Device LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68",
+      "year": 2026,
+      "published": "2026-02-10",
+      "abstract": "Vision-Language-Action Models (VLAs) have emerged as a key paradigm of Physical AI and are increasingly deployed in autonomous vehicles, robots, and smart spaces. In these resource-constrained on-device settings, selecting an appropriate large language model (LLM) backbone is a critical challenge: models must balance accuracy with strict inference latency and hardware efficiency constraints. This makes hardware-software co-design a game-changing requirement for on-device LLM deployment, where each hardware platform demands a tailored architectural solution. We propose a hardware co-design law that jointly captures model accuracy and inference performance. Specifically, we model training loss as an explicit function of architectural hyperparameters and characterise inference latency via roofline modelling. We empirically evaluate 1,942 candidate architectures on NVIDIA Jetson Orin, training 170 selected models for 10B tokens each to fit a scaling law relating architecture to training loss. By coupling this scaling law with latency modelling, we establish a direct accuracy-latency correspondence and identify the Pareto frontier for hardware co-designed LLMs. We further formulate architecture search as a joint optimisation over precision and performance, deriving feasible design regions under industrial hardware and application budgets. Our approach reduces architecture selection from months to days. At the same latency as Qwen2.5-0.5B on the target hardware, our co-designed architecture achieves 19.42% lower perplexity on WikiText-2. To our knowledge, this is the first principled and operational framework for hardware co-design scaling laws in on-device LLM deployment. We will make the code and related checkpoints publicly available.",
+      "canonical_id": "arXiv:2602.10377",
+      "arxiv_id": "2602.10377",
+      "authors": [
+        "Luo-Yang Sun",
+        "Jiwen Jiang",
+        "Yifeng Ding",
+        "Feng-Fa Li",
+        "Yanke Song",
+        "Hai-Feng Zhang",
+        "Jian Ying",
+        "Lei Ren",
+        "Kun Zhan",
+        "Wei Chen",
+        "Yan Xie",
+        "Cheng Deng"
+      ]
+    },
+    {
+      "title": "Balancing Sustainability And Performance: The Role Of Small-Scale Llms In Agentic Artificial Intelligence Systems",
+      "source_url": "https://www.semanticscholar.org/paper/cfa25c46b9d9518013c0415d446dc4921cf18a7c",
+      "year": 2026,
+      "published": "2026-01-27",
+      "abstract": "As large language models become integral to agentic artificial intelligence systems, their energy demands during inference may pose significant sustainability challenges. This study investigates whether deploying smaller-scale language models can reduce energy consumption without compromising responsiveness and output quality in a multi-agent, real-world environments. We conduct a comparative analysis across language models of varying scales to quantify trade-offs between efficiency and performance. Results show that smaller open-weights models can lower energy usage while preserving task quality. Building on these findings, we propose practical guidelines for sustainable artificial intelligence design, including optimal batch size configuration and computation resource allocation. These insights offer actionable strategies for developing scalable, environmentally responsible artificial intelligence systems.",
+      "canonical_id": "arXiv:2601.19311",
+      "arxiv_id": "2601.19311",
+      "authors": [
+        "Anh Khoi Ngo Ho",
+        "Martin Chauvin",
+        "Simon Gosset",
+        "Philippe Cordier",
+        "Boris Gamazaychikov"
+      ]
+    },
+    {
+      "title": "LLM-Prefetch: Accelerating Long-Context LLM Inference via Explicit Prefetching",
+      "source_url": "https://www.semanticscholar.org/paper/008e3007400a6d895c5252b888a9bf59d4f01f41",
+      "year": 2026,
+      "published": "2026-01-23",
+      "abstract": "Serving Large Language Models (LLMs) with low latency is critical for user experience, particularly in multi-round conversations where historical context accumulates significantly and TTFT is often bottlenecked by the prefill phase. While modern inference engines (e.g., vLLM) leverage Prefix Caching to mitigate the overhead of processing these long historical contexts, they typically manage the KV cache using passive, Least Recently Used (LRU) eviction policies. This leads to a fundamental mismatch between eviction algorithm and human interaction patterns: the natural “thinking time” between conversation rounds is often misinterpreted as system inactivity, causing prefix cache eviction. Consequently, the system is forced to recompute the prefix upon the user's return, severely degrading Time to First Token (TTFT). To bridge this gap, this paper proposes LLM-Prefetch, a crosslayer system that shifts KV cache management from passive retention to active, signal-driven scheduling. Inspired by instruction prefetch in memory hierarchies, LLM-Prefetch coordinates the application frontend with the inference backend. Specifically, LLM-Prefetch instruments the frontend chatbot framework to capture the onset of user input in ongoing multi-turn sessions. These events are propagated to the inference backend as explicit hints for Prefix Cache scheduling, triggering the preparation of prefix KV blocks using idle resources. Experimental results demonstrate that LLM-Prefetch significantly improves the hit rate of the in-GPU memory Prefix Cache, leading to a substantial 36% reduction in Time to First Token (TTFT) compared to baseline strategies.",
+      "canonical_id": "DOI:10.1109/ISCAIT69154.2026.11477382",
+      "doi": "10.1109/ISCAIT69154.2026.11477382",
+      "authors": [
+        "Shu Wang"
+      ]
+    },
+    {
+      "title": "Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference",
+      "source_url": "https://www.semanticscholar.org/paper/31b44ae603a6b6568f9e9d949cd2711df3678096",
+      "year": 2026,
+      "published": "2026-01-19",
+      "abstract": "Agentic applications are LLMs that iteratively invoke external tools to accomplish complex tasks. Such tool-based agents are rapidly becoming the dominant paradigm for deploying language models in production. Unlike traditional single-turn inference, agentic workloads chain together multiple LLM calls and tool executions before producing a final response, creating a new performance bottleneck that manifests as increased latency in First Token Rendered (FTR) of the final answer. Through analysis of requests at production scale, we reveal three critical challenges: tool calls account for 30-85% of FTR latency, KV cache hit rates collapse despite substantial context reuse across iterations, and sequential orchestration wastes potential intra-request parallelism. These bottlenecks stem from a design gap in which orchestrators and LLM engines operate as decoupled black boxes, preventing cross-layer optimizations. We present Sutradhara, a co-designed agentic inference system that integrates orchestration with LLM serving through a thin API enabling three optimizations: overlap tool execution with subsequent LLM prefill using tool-aware prompt splitting, streaming tool execution to dispatch tools incrementally during decode rather than waiting for complete output, and orchestrator-aware cache management that uses semantic hints to improve hit rates and reduce thrashing. Implemented on vLLM, Sutradhara improves the throughput-latency trade-off in agentic systems, sustains up to 77% higher load at the same median FTR latency, or reduces median FTR latency by up to 15% at the same load while reducing end-to-end latency by upto 11% on A100 GPUs.",
+      "canonical_id": "arXiv:2601.12967",
+      "arxiv_id": "2601.12967",
+      "authors": [
+        "Anish Biswas",
+        "Kanishk Goel",
+        "Jayashree Mohan",
+        "Alind Khare",
+        "Anjaly Parayil",
+        "R. Ramjee",
+        "Chetan Bansal"
+      ]
+    },
+    {
+      "title": "Parallel Context-of-Experts Decoding for Retrieval Augmented Generation",
+      "source_url": "https://www.semanticscholar.org/paper/11e0567870496fd2a634e8b1b864e9f3c0cfcad4",
+      "year": 2026,
+      "published": "2026-01-13",
+      "abstract": "Retrieval Augmented Generation faces a trade-off: concatenating documents in a long prompt enables multi-document reasoning but creates prefill bottlenecks, while encoding document KV caches separately offers speed but breaks cross-document interaction. We propose Parallel Context-of-Experts Decoding (Pced), a training-free framework that shifts evidence aggregation from the attention mechanism to the decoding. Pced treats retrieved documents as isolated\"experts\", synchronizing their predictions via a novel retrieval-aware contrastive decoding rule that weighs expert logits against the model prior. This approach recovers cross-document reasoning capabilities without constructing a shared attention across documents.",
+      "canonical_id": "arXiv:2601.08670",
+      "arxiv_id": "2601.08670",
+      "authors": [
+        "Giulio Corallo",
+        "Paolo Papotti"
+      ]
+    },
+    {
+      "title": "Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks",
+      "source_url": "https://www.semanticscholar.org/paper/1bcdd41f57ff183ec338ee3b5fe6f1e3a94ab0b2",
+      "year": 2026,
+      "published": "2026-01-09",
+      "abstract": "Recent advancements in Large Language Model (LLM) agents have enabled complex multi-turn agentic tasks requiring extensive tool calling, where conversations can span dozens of API calls with increasingly large context windows. However, although major LLM providers offer prompt caching to reduce cost and latency, its benefits for agentic workloads remain underexplored in the research literature. To our knowledge, no prior work quantifies these cost savings or compares caching strategies for multi-turn agentic tasks. We present a comprehensive evaluation of prompt caching across three major LLM providers (OpenAI, Anthropic, and Google) and compare three caching strategies, including full context caching, system prompt only caching, and caching that excludes dynamic tool results. We evaluate on DeepResearch Bench, a multi-turn agentic benchmark where agents autonomously execute real-world web search tool calls to answer complex research questions, measuring both API cost and time to first token (TTFT) across over 500 agent sessions with 10,000-token system prompts. Our results demonstrate that prompt caching reduces API costs by 41-80% and improves time to first token by 13-31% across providers. We find that strategic prompt cache block control, such as placing dynamic content at the end of the system prompt, avoiding dynamic traditional function calling, and excluding dynamic tool results, provides more consistent benefits than naive full-context caching, which can paradoxically increase latency. An ablation study across prompt sizes (500-50,000 tokens) and tool call counts (3-50) demonstrates universal linear cost and TTFT benefits, after the provider caching token minimum, and reveal provider-specific strategy discrepancies across variants. We provide nuanced discussion and guidance for implementing prompt caching in production agentic systems.",
+      "canonical_id": "arXiv:2601.06007",
+      "arxiv_id": "2601.06007",
+      "authors": [
+        "Elias Lumer",
+        "Faheem Nizar",
+        "Akshaya Jangiti",
+        "Kevin Frank",
+        "Anmol Gulati",
+        "M. Phadate",
+        "V. K. Subbiah"
+      ]
+    },
+    {
+      "title": "Nalar: An agent serving framework",
+      "source_url": "https://www.semanticscholar.org/paper/ac4c31e19ef6581427ddb6f84638a62ab86b4e45",
+      "year": 2026,
+      "published": "2026-01-08",
+      "abstract": "LLM-driven agentic applications increasingly automate complex, multi-step tasks, but serving them efficiently remains challenging due to heterogeneous components, dynamic and model-driven control flow, long-running state, and unpredictable latencies. Nalar is a ground-up agent-serving framework that cleanly separates workflow specification from execution while providing the runtime visibility and control needed for robust performance. Nalar preserves full Python expressiveness, using lightweight auto-generated stubs that turn agent and tool invocations into futures carrying dependency and context metadata. A managed state layer decouples logical state from physical placement, enabling safe reuse, migration, and consistent retry behavior. A two-level control architecture combines global policy computation with local event-driven enforcement to support adaptive routing, scheduling, and resource management across evolving workflows. Together, these mechanisms allow Nalar to deliver scalable, efficient, and policy-driven serving of heterogeneous agentic applications without burdening developers with orchestration logic. Across three agentic workloads, Nalar cuts tail latency by 34--74\\%, achieves up to $2.9\\times$ speedups, sustains 80 RPS where baselines fail, and scales to 130K futures with sub-500 ms control overhead.",
+      "canonical_id": "arXiv:2601.05109",
+      "arxiv_id": "2601.05109",
+      "authors": [
+        "Marco Laju",
+        "Donghyun Son",
+        "Saurabh Agarwal",
+        "Nitin Kedia",
+        "Myungjin Lee",
+        "Jayanth Srinivasa",
+        "Aditya Akella"
+      ]
+    },
+    {
+      "title": "Towards Efficient Agents: A Co-Design of Inference Architecture and System",
+      "source_url": "https://www.semanticscholar.org/paper/81f6ed0b57ab52adbcaa2dc37944ef5e9c107731",
+      "year": 2025,
+      "published": "2025-12-20",
+      "abstract": "The rapid development of large language model (LLM)-based agents has unlocked new possibilities for autonomous multi-turn reasoning and tool-augmented decision-making. However, their real-world deployment is hindered by severe inefficiencies that arise not from isolated model inference, but from the systemic latency accumulated across reasoning loops, context growth, and heterogeneous tool interactions. This paper presents AgentInfer, a unified framework for end-to-end agent acceleration that bridges inference optimization and architectural design. We decompose the problem into four synergistic components: AgentCollab, a hierarchical dual-model reasoning framework that balances large- and small-model usage through dynamic role assignment; AgentSched, a cache-aware hybrid scheduler that minimizes latency under heterogeneous request patterns; AgentSAM, a suffix-automaton-based speculative decoding method that reuses multi-session semantic memory to achieve low-overhead inference acceleration; and AgentCompress, a semantic compression mechanism that asynchronously distills and reorganizes agent memory without disrupting ongoing reasoning. Together, these modules form a Self-Evolution Engine capable of sustaining efficiency and cognitive stability throughout long-horizon reasoning tasks. Experiments on the BrowseComp-zh and DeepDiver benchmarks demonstrate that through the synergistic collaboration of these methods, AgentInfer reduces ineffective token consumption by over 50%, achieving an overall 1.8-2.5 times speedup with preserved accuracy. These results underscore that optimizing for agentic task completion-rather than merely per-token throughput-is the key to building scalable, efficient, and self-improving intelligent systems.",
+      "canonical_id": "arXiv:2512.18337",
+      "arxiv_id": "2512.18337",
+      "authors": [
+        "Wei-Zhe Lin",
+        "Hui-Ling Zhen",
+        "Shuai Yang",
+        "Xian Wang",
+        "Ren-Xi Liu",
+        "Hanting Chen",
+        "Wang Zhang",
+        "Chuansai Zhou",
+        "Yiming Li",
+        "Chen Chen",
+        "Xing Li",
+        "Zhiyuan Yang",
+        "Xiao-Song Li",
+        "Xian-Zhi Yu",
+        "Zhen-Hua Dong",
+        "Ming-Hu Yuan",
+        "Yun-He Wang"
+      ]
+    },
+    {
+      "title": "gpu_ext: Extensible OS Policies for GPUs via eBPF",
+      "source_url": "https://www.semanticscholar.org/paper/60d496724d1480d9a0bfa737e81a417493c19126",
+      "year": 2025,
+      "published": "2025-12-14",
+      "abstract": "Performance in modern GPU-centric systems increasingly depends on resource management policies, including memory placement, scheduling, and observability. However, uniform policies typically yield suboptimal performance across diverse workloads. Existing approaches present a tradeoff: user-space runtimes provide programmability and flexibility but lack cross-tenant visibility and fine-grained control of hardware resources; meanwhile, modifications to the OS kernel introduce significant complexity and safety risks. To address this, we argue that the GPU driver and device layer should provide an extensible OS interface for policy enforcement. While the emerging eBPF technology shows potential, directly applying existing host-side eBPF is insufficient because they lack visibility and control into critical device-side events, and directly embedding policy code into GPU kernels could compromise safety and efficiency. We propose gpu_ext, an eBPF-based runtime that treats the GPU driver and device as a programmable OS subsystem. gpu_ext extends GPU drivers by exposing safe programmable hooks and introduces a device-side eBPF runtime capable of executing verified policy logic within GPU kernels, enabling coherent and transparent policies. Evaluation across realistic workloads including inference, training, and vector search demonstrates that gpu_ext improves throughput by up to 4.8x and reduces tail latency by up to 2x, incurring low overhead, without modifying or restarting applications",
+      "canonical_id": "arXiv:2512.12615",
+      "arxiv_id": "2512.12615",
+      "authors": [
+        "Yusheng Zheng",
+        "Tong Yu",
+        "Yiwei Yang",
+        "M. Jiang",
+        "Xiangyu Gao",
+        "Jianchang Su",
+        "Yan-Peng Hu",
+        "Wen-An Mao",
+        "Wei Zhang",
+        "Dan Williams",
+        "Andi Quinn"
+      ]
+    },
+    {
+      "title": "Whose Narrative is it Anyway? A KV Cache Manipulation Attack",
+      "source_url": "https://www.semanticscholar.org/paper/2b9fd08ba6c83564aca28abae01e5e3b0149a4ec",
+      "year": 2025,
+      "published": "2025-11-16",
+      "abstract": "The Key Value(KV) cache is an important component for efficient inference in autoregressive Large Language Models (LLMs), but its role as a representation of the model's internal state makes it a potential target for integrity attacks. This paper introduces\"History Swapping,\"a novel block-level attack that manipulates the KV cache to steer model generation without altering the user-facing prompt. The attack involves overwriting a contiguous segment of the active generation's cache with a precomputed cache from a different topic. We empirically evaluate this method across 324 configurations on the Qwen 3 family of models, analyzing the impact of timing, magnitude, and layer depth of the cache overwrite. Our findings reveal that only full-layer overwrites can successfully hijack the conversation's topic, leading to three distinct behaviors: immediate and persistent topic shift, partial recovery, or a delayed hijack. Furthermore, we observe that high-level structural plans are encoded early in the generation process and local discourse structure is maintained by the final layers of the model. This work demonstrates that the KV cache is a significant vector for security analysis, as it encodes not just context but also topic trajectory and structural planning, making it a powerful interface for manipulating model behavior.",
+      "canonical_id": "arXiv:2511.12752",
+      "arxiv_id": "2511.12752",
+      "authors": [
+        "Mukkesh Ganesh",
+        "K. Iyer",
+        "Arun Baalaaji Sankar Ananthan"
+      ]
+    },
+    {
+      "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse",
+      "source_url": "https://www.semanticscholar.org/paper/15008d5d0491d83141ddfeaed2c750d75a279483",
+      "year": 2025,
+      "published": "2025-11-01",
+      "abstract": "Agentic large language model (LLM) training often involves multi-turn interaction trajectories that branch into multiple execution paths due to concurrent tool use, think-mode, sub-agent, context management and other runtime designs. As a result, the tokens produced by a single task naturally form a tree-structured token trajectory with shared prefixes, rather than a linear sequence. Existing training pipelines linearize such trajectories and treat each branch independently, leading to substantial redundant computation in both forward and backward passes. We derive that averaging the loss over all branches independently is algebraically identical to a per-token weighted loss, where each token's weight equals the fraction of branches passing through it. The problem therefore reduces to computing the log-probability of every token in the prefix tree exactly once, with no repeated computation across shared prefixes: we propose DFS serialization of the tree, which visits every token exactly once, and adapt full-attention and SSM layers to ensure the resulting log-probabilities match independent per-branch calculation exactly. In practice, a single trajectory tree can be too large to fit in GPU memory; we therefore propose Redundancy-Free Tree Partitioning, which handles memory-constrained settings with zero redundant computation and peak memory bounded by a single root-to-leaf path. Together, these contributions form Tree Training, an efficient framework for training LLMs on tree-structured trajectories, achieving up to 6.2x end-to-end training speedup on dense and MoE models for both supervised fine-tuning and reinforcement learning.",
+      "canonical_id": "arXiv:2511.00413",
+      "arxiv_id": "2511.00413",
+      "authors": [
+        "Shao-Jie Wang",
+        "Jing-Hui Wang",
+        "Ying-Han Cui",
+        "Xuxing Chen",
+        "Chao Wang",
+        "Liang Huang",
+        "Xiao-Jiang Zhang",
+        "Jun-Yi Peng",
+        "Lihua Wan",
+        "Haotian Zhang",
+        "Bin Chen"
+      ]
+    },
+    {
+      "title": "Energy use of AI inference, efficiency pathways, and test-time scaling",
+      "source_url": "https://www.semanticscholar.org/paper/596c24daff380f156fe080ff5232a9b318d3f7d2",
+      "year": 2025,
+      "published": "2025-09-24",
+      "abstract": "As AI inference scales to billions of queries, estimates of per-query energy use are increasingly important for capacity planning, efficiency interventions, and policy. Yet many public estimates assume non-production settings, leading to systematic overestimation. We introduce a bottom-up framework estimating inference energy from token throughput, node power, and overhead under large-scale deployment assumptions. For frontier-scale models (>200B parameters) on H100 nodes, we estimate a median energy of 0.31 Wh/query (IQR 0.16-0.60), indicating widely cited estimates are overstated by 4-20x. In test-time scaling scenarios 15x longer than typical queries, the median energy rises 13x to 3.91 Wh (IQR 2.15-7.05). Across models, serving systems, and hardware, we estimate 8-20x line-of-sight energy reductions. At datacenter scale, serving 1 billion queries/day requires 0.7 GWh; if 10% are long queries, demand rises to 1.7 GWh/day. With efficiency interventions, it falls to 0.8 GWh/day, mitigating the energy impact of test-time scaling.",
+      "canonical_id": "arXiv:2509.20241",
+      "arxiv_id": "2509.20241",
+      "authors": [
+        "Felipe Oviedo",
+        "Fiodar Kazhamiaka",
+        "Esha Choukse",
+        "Allen Kim",
+        "Amy Luers",
+        "Melanie Nakagawa",
+        "Ricardo Bianchini",
+        "J. L. Lavista Ferres"
+      ]
+    },
+    {
+      "title": "Batch Query Processing and Optimization for Agentic Workflows",
+      "source_url": "https://www.semanticscholar.org/paper/065c9ac1ea5e8db2b64a64ef69c2da3122cffda4",
+      "year": 2025,
+      "published": "2025-09-02",
+      "abstract": "Large Language Models (LLMs) in agentic workflows combine multi-step reasoning, heterogeneous tool use, and collaboration across multiple specialized agents. Existing LLM serving engines optimize individual calls in isolation, while multi-agent frameworks focus on orchestration without system-level performance planning. As a result, repeated prompts, overlapping contexts, and fragmented CPU-GPU execution create substantial redundancy and poor hardware utilization, especially in batch analytics scenarios. We introduce Halo, a system that brings batch query processing and optimization into agentic LLM workflows. Halo represents each workflow as a structured query plan DAG and constructs a consolidated graph for batched queries that exposes shared computation. Guided by a cost model that jointly considers heterogeneous resource constraints, prefill and decode costs, cache reuse, and GPU placement, Halo performs plan-level optimization to minimize redundant execution. The Processor integrates adaptive batching, KV-cache sharing and migration, along with fine-grained CPU-GPU pipelining to maximize holistic hardware efficiency. Evaluation across six benchmarks shows that Halo achieves up to 3.6x speedup for batch inference and 2.6x throughput improvement under online serving, scaling to workloads of thousands of queries and complex graphs. These gains are achieved without compromising output quality. By unifying query optimization with heterogeneous LLM serving, Halo enables efficient agentic workflows in data analytics and decision-making applications.",
+      "canonical_id": "arXiv:2509.02121",
+      "arxiv_id": "2509.02121",
+      "authors": [
+        "Junyi Shen",
+        "Noppanat Wadlom",
+        "Yao Lu"
+      ]
+    },
+    {
+      "title": "AI Compute Architecture and Evolution Trends",
+      "source_url": "https://www.semanticscholar.org/paper/eb0e6c760068d498860caa54c4e00c2663af2f22",
+      "year": 2025,
+      "published": "2025-08-29",
+      "abstract": "The focus of AI development has shifted from academic research to practical applications. However, AI development faces numerous challenges at various levels. This article will attempt to analyze the opportunities and challenges of AI from several different perspectives using a structured approach. This article proposes a seven-layer model for AI compute architecture, including Physical Layer, Link Layer, Neural Network Layer, Context Layer, Agent Layer, Orchestrator Layer, and Application Layer, from bottom to top. It also explains the three stages in the evolution of large language models (LLMs) using the proposed 7-layer model. For each layer, we describe the development trajectory and key technologies. In Layers 1 and 2 we discuss AI computing issues and the impact of Scale-Up and Scale-Out strategies on computing architecture. In Layer 3 we explore two different development paths for LLMs. In Layer 4 we discuss the impact of contextual memory on LLMs and compares it to traditional processor memory. In Layers 5 to 7 we discuss the trends of AI agents and explore the issues in evolution from a single AI agent to an AI-based ecosystem, and their impact on the AI industry.",
+      "canonical_id": "arXiv:2508.21394",
+      "arxiv_id": "2508.21394",
+      "authors": [
+        "Bor-Sung Liang"
+      ]
+    },
+    {
+      "title": "Al Compute Architecture and Evolution Trends [Feature]",
+      "source_url": "https://www.semanticscholar.org/paper/a8993b213abbc2882a7ee7d7f3649e114b7d1ee3",
+      "year": 2026,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/mcas.2025.3650725",
+      "doi": "10.1109/mcas.2025.3650725",
+      "authors": [
+        "Bor-Sung Liang"
+      ]
+    },
+    {
+      "title": "Top-K Retrieval with Fixed-Size Linear-Attention Completion: Backbone- and KV-Format-Preserving Attention for KV-Cache Read Reduction",
+      "source_url": "https://www.semanticscholar.org/paper/f60a94ef96cf8c6648e947543b982a1b810d9fe2",
+      "year": 2026,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "DOI:10.48550/arXiv.2604.05438",
+      "doi": "10.48550/arXiv.2604.05438",
+      "authors": [
+        "Yasuto Hoshi",
+        "Daisuke Miyashita",
+        "Jun Deguchi"
+      ]
+    },
+    {
+      "title": "Power-Aware Orchestration for Geo-Distributed LLM Inference via Quantum Optimization",
+      "source_url": "https://www.semanticscholar.org/paper/43c80c7a0d6d69fff0ded1ef321f83ba8cadad56",
+      "year": 2026,
+      "published": null,
+      "abstract": "For geo-distributed large-scale LLM inference, achieving lowlatency request execution requires jointly optimizing transmission delay, heterogeneous compute capacity, and spatialtemporal variability in power availability across datacenters. We formulate this orchestration problem as an integer linear program that minimizes end-to-end latency while explicitly capturing time-to-first-token, per-token generation latency, and wide-area network delay. However, the resulting problem is NP-hard and intractable for real-time decision-making at scale. To address this challenge, we develop a quantum-classical hybrid optimization framework based on the quantum approximate optimization algorithm (QAOA). We introduce a feasibility-guaranteed QAOA (FG-QAOA), which incorporates structured variable pruning to eliminate infeasible routing configurations while preserving the optimal solution space. This reduction yields a compact formulation that is then transformed into a quadratic unconstrained binary optimization model with penalty-encoded constraints, enabling mapping to an Ising Hamiltonian for quantum optimization. Experimental results show that FG-QAOA achieves near-optimal performance, matching the exact solver on small-scale instances while keeping the optimality gap below 3.1% on larger instances, and exhibiting much slower runtime growth than the exact solver.",
+      "canonical_id": "DOI:10.1109/TNSE.2026.3704855",
+      "doi": "10.1109/TNSE.2026.3704855",
+      "authors": [
+        "Xiang-Dong Zheng",
+        "Jia-Nan Min",
+        "Long Luo",
+        "Hong-Fang Yu",
+        "Zonghang Li"
+      ]
+    },
+    {
+      "title": "Understanding and Optimizing KV-cache Management for Long-Context LLM Inference A",
+      "source_url": "https://www.semanticscholar.org/paper/fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+      "year": null,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a"
+    },
+    {
+      "title": "CodecFlow: Codec-Guided End-to-End Optimization for Streaming Video Analytics",
+      "source_url": "https://www.semanticscholar.org/paper/075fbaee3d28b21d786f19528815a898d617bfb2",
+      "year": null,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:075fbaee3d28b21d786f19528815a898d617bfb2",
+      "authors": [
+        "Yulin Zou",
+        "Yan Chen",
+        "Wenyan Chen",
+        "Shivaraman Nitin",
+        "Luo Tao",
+        "Francisco Romero"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.04716",
+      "identity_tokens": [
+        "id:arXiv:2603.04716",
+        "title:sloaware compute resource allocation for prefilldecode disaggregated llm inference",
+        "url:https://www.semanticscholar.org/paper/f86bc34e1e748b9bed0da8513962a8d4e54a40ba"
+      ],
+      "record": {
+        "title": "SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/f86bc34e1e748b9bed0da8513962a8d4e54a40ba",
+        "year": 2026,
+        "published": "2026-03-05",
+        "abstract": "Prefill-Decode (P/D) disaggregation has emerged as a widely adopted optimization strategy for Large Language Model (LLM) inference. However, there currently exists no well-established methodology for determining the optimal number of P/D hardware resources, subject to constraints on total throughput, service level objectives (SLOs), and request characteristics - specifically input and output lengths. To address this gap, we propose a hybrid approach that combines theoretical modeling with empirical benchmarking. First, we present a theoretical model for calculating P/D resource counts, which is based on total throughput requirements, request input and output lengths, as well as prefill and decode throughput. Then, to obtain the actual prefill and decode throughput under SLO constraints, we model the prefill process using M/M/1 queuing theory, deriving the achieved prefill throughput from the benchmarked maximum prefill throughput and Time-To-First-Token (TTFT). For the decode phase, we determine the decode batch sizes that meet Time-Per-Output-Token (TPOT) requirements and obtain the corresponding decode throughput through empirical measurements. Our experimental results demonstrate that the proposed method can accurately predict optimal P/D resource allocation in real-world LLM inference scenarios.",
+        "canonical_id": "arXiv:2603.04716",
+        "arxiv_id": "2603.04716",
+        "authors": [
+          "Luchang Li",
+          "Dongfang Li",
+          "Bo-Zhao Gong",
+          "Yu Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.10377",
+      "identity_tokens": [
+        "id:arXiv:2602.10377",
+        "title:hardware codesign scaling laws via roofline modelling for ondevice llms",
+        "url:https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68"
+      ],
+      "record": {
+        "title": "Hardware Co-Design Scaling Laws via Roofline Modelling for On-Device LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68",
+        "year": 2026,
+        "published": "2026-02-10",
+        "abstract": "Vision-Language-Action Models (VLAs) have emerged as a key paradigm of Physical AI and are increasingly deployed in autonomous vehicles, robots, and smart spaces. In these resource-constrained on-device settings, selecting an appropriate large language model (LLM) backbone is a critical challenge: models must balance accuracy with strict inference latency and hardware efficiency constraints. This makes hardware-software co-design a game-changing requirement for on-device LLM deployment, where each hardware platform demands a tailored architectural solution. We propose a hardware co-design law that jointly captures model accuracy and inference performance. Specifically, we model training loss as an explicit function of architectural hyperparameters and characterise inference latency via roofline modelling. We empirically evaluate 1,942 candidate architectures on NVIDIA Jetson Orin, training 170 selected models for 10B tokens each to fit a scaling law relating architecture to training loss. By coupling this scaling law with latency modelling, we establish a direct accuracy-latency correspondence and identify the Pareto frontier for hardware co-designed LLMs. We further formulate architecture search as a joint optimisation over precision and performance, deriving feasible design regions under industrial hardware and application budgets. Our approach reduces architecture selection from months to days. At the same latency as Qwen2.5-0.5B on the target hardware, our co-designed architecture achieves 19.42% lower perplexity on WikiText-2. To our knowledge, this is the first principled and operational framework for hardware co-design scaling laws in on-device LLM deployment. We will make the code and related checkpoints publicly available.",
+        "canonical_id": "arXiv:2602.10377",
+        "arxiv_id": "2602.10377",
+        "authors": [
+          "Luo-Yang Sun",
+          "Jiwen Jiang",
+          "Yifeng Ding",
+          "Feng-Fa Li",
+          "Yanke Song",
+          "Hai-Feng Zhang",
+          "Jian Ying",
+          "Lei Ren",
+          "Kun Zhan",
+          "Wei Chen",
+          "Yan Xie",
+          "Cheng Deng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.19311",
+      "identity_tokens": [
+        "id:arXiv:2601.19311",
+        "title:balancing sustainability and performance the role of smallscale llms in agentic artificial intelligence systems",
+        "url:https://www.semanticscholar.org/paper/cfa25c46b9d9518013c0415d446dc4921cf18a7c"
+      ],
+      "record": {
+        "title": "Balancing Sustainability And Performance: The Role Of Small-Scale Llms In Agentic Artificial Intelligence Systems",
+        "source_url": "https://www.semanticscholar.org/paper/cfa25c46b9d9518013c0415d446dc4921cf18a7c",
+        "year": 2026,
+        "published": "2026-01-27",
+        "abstract": "As large language models become integral to agentic artificial intelligence systems, their energy demands during inference may pose significant sustainability challenges. This study investigates whether deploying smaller-scale language models can reduce energy consumption without compromising responsiveness and output quality in a multi-agent, real-world environments. We conduct a comparative analysis across language models of varying scales to quantify trade-offs between efficiency and performance. Results show that smaller open-weights models can lower energy usage while preserving task quality. Building on these findings, we propose practical guidelines for sustainable artificial intelligence design, including optimal batch size configuration and computation resource allocation. These insights offer actionable strategies for developing scalable, environmentally responsible artificial intelligence systems.",
+        "canonical_id": "arXiv:2601.19311",
+        "arxiv_id": "2601.19311",
+        "authors": [
+          "Anh Khoi Ngo Ho",
+          "Martin Chauvin",
+          "Simon Gosset",
+          "Philippe Cordier",
+          "Boris Gamazaychikov"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscait69154.2026.11477382",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscait69154.2026.11477382",
+        "title:llmprefetch accelerating longcontext llm inference via explicit prefetching",
+        "url:https://www.semanticscholar.org/paper/008e3007400a6d895c5252b888a9bf59d4f01f41"
+      ],
+      "record": {
+        "title": "LLM-Prefetch: Accelerating Long-Context LLM Inference via Explicit Prefetching",
+        "source_url": "https://www.semanticscholar.org/paper/008e3007400a6d895c5252b888a9bf59d4f01f41",
+        "year": 2026,
+        "published": "2026-01-23",
+        "abstract": "Serving Large Language Models (LLMs) with low latency is critical for user experience, particularly in multi-round conversations where historical context accumulates significantly and TTFT is often bottlenecked by the prefill phase. While modern inference engines (e.g., vLLM) leverage Prefix Caching to mitigate the overhead of processing these long historical contexts, they typically manage the KV cache using passive, Least Recently Used (LRU) eviction policies. This leads to a fundamental mismatch between eviction algorithm and human interaction patterns: the natural “thinking time” between conversation rounds is often misinterpreted as system inactivity, causing prefix cache eviction. Consequently, the system is forced to recompute the prefix upon the user's return, severely degrading Time to First Token (TTFT). To bridge this gap, this paper proposes LLM-Prefetch, a crosslayer system that shifts KV cache management from passive retention to active, signal-driven scheduling. Inspired by instruction prefetch in memory hierarchies, LLM-Prefetch coordinates the application frontend with the inference backend. Specifically, LLM-Prefetch instruments the frontend chatbot framework to capture the onset of user input in ongoing multi-turn sessions. These events are propagated to the inference backend as explicit hints for Prefix Cache scheduling, triggering the preparation of prefix KV blocks using idle resources. Experimental results demonstrate that LLM-Prefetch significantly improves the hit rate of the in-GPU memory Prefix Cache, leading to a substantial 36% reduction in Time to First Token (TTFT) compared to baseline strategies.",
+        "canonical_id": "DOI:10.1109/ISCAIT69154.2026.11477382",
+        "doi": "10.1109/ISCAIT69154.2026.11477382",
+        "authors": [
+          "Shu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.12967",
+      "identity_tokens": [
+        "id:arXiv:2601.12967",
+        "title:sutradhara an intelligent orchestratorengine codesign for toolbased agentic inference",
+        "url:https://www.semanticscholar.org/paper/31b44ae603a6b6568f9e9d949cd2711df3678096"
+      ],
+      "record": {
+        "title": "Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference",
+        "source_url": "https://www.semanticscholar.org/paper/31b44ae603a6b6568f9e9d949cd2711df3678096",
+        "year": 2026,
+        "published": "2026-01-19",
+        "abstract": "Agentic applications are LLMs that iteratively invoke external tools to accomplish complex tasks. Such tool-based agents are rapidly becoming the dominant paradigm for deploying language models in production. Unlike traditional single-turn inference, agentic workloads chain together multiple LLM calls and tool executions before producing a final response, creating a new performance bottleneck that manifests as increased latency in First Token Rendered (FTR) of the final answer. Through analysis of requests at production scale, we reveal three critical challenges: tool calls account for 30-85% of FTR latency, KV cache hit rates collapse despite substantial context reuse across iterations, and sequential orchestration wastes potential intra-request parallelism. These bottlenecks stem from a design gap in which orchestrators and LLM engines operate as decoupled black boxes, preventing cross-layer optimizations. We present Sutradhara, a co-designed agentic inference system that integrates orchestration with LLM serving through a thin API enabling three optimizations: overlap tool execution with subsequent LLM prefill using tool-aware prompt splitting, streaming tool execution to dispatch tools incrementally during decode rather than waiting for complete output, and orchestrator-aware cache management that uses semantic hints to improve hit rates and reduce thrashing. Implemented on vLLM, Sutradhara improves the throughput-latency trade-off in agentic systems, sustains up to 77% higher load at the same median FTR latency, or reduces median FTR latency by up to 15% at the same load while reducing end-to-end latency by upto 11% on A100 GPUs.",
+        "canonical_id": "arXiv:2601.12967",
+        "arxiv_id": "2601.12967",
+        "authors": [
+          "Anish Biswas",
+          "Kanishk Goel",
+          "Jayashree Mohan",
+          "Alind Khare",
+          "Anjaly Parayil",
+          "R. Ramjee",
+          "Chetan Bansal"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.08670",
+      "identity_tokens": [
+        "id:arXiv:2601.08670",
+        "title:parallel contextofexperts decoding for retrieval augmented generation",
+        "url:https://www.semanticscholar.org/paper/11e0567870496fd2a634e8b1b864e9f3c0cfcad4"
+      ],
+      "record": {
+        "title": "Parallel Context-of-Experts Decoding for Retrieval Augmented Generation",
+        "source_url": "https://www.semanticscholar.org/paper/11e0567870496fd2a634e8b1b864e9f3c0cfcad4",
+        "year": 2026,
+        "published": "2026-01-13",
+        "abstract": "Retrieval Augmented Generation faces a trade-off: concatenating documents in a long prompt enables multi-document reasoning but creates prefill bottlenecks, while encoding document KV caches separately offers speed but breaks cross-document interaction. We propose Parallel Context-of-Experts Decoding (Pced), a training-free framework that shifts evidence aggregation from the attention mechanism to the decoding. Pced treats retrieved documents as isolated\"experts\", synchronizing their predictions via a novel retrieval-aware contrastive decoding rule that weighs expert logits against the model prior. This approach recovers cross-document reasoning capabilities without constructing a shared attention across documents.",
+        "canonical_id": "arXiv:2601.08670",
+        "arxiv_id": "2601.08670",
+        "authors": [
+          "Giulio Corallo",
+          "Paolo Papotti"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.06007",
+      "identity_tokens": [
+        "id:arXiv:2601.06007",
+        "title:dont break the cache an evaluation of prompt caching for longhorizon agentic tasks",
+        "url:https://www.semanticscholar.org/paper/1bcdd41f57ff183ec338ee3b5fe6f1e3a94ab0b2"
+      ],
+      "record": {
+        "title": "Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks",
+        "source_url": "https://www.semanticscholar.org/paper/1bcdd41f57ff183ec338ee3b5fe6f1e3a94ab0b2",
+        "year": 2026,
+        "published": "2026-01-09",
+        "abstract": "Recent advancements in Large Language Model (LLM) agents have enabled complex multi-turn agentic tasks requiring extensive tool calling, where conversations can span dozens of API calls with increasingly large context windows. However, although major LLM providers offer prompt caching to reduce cost and latency, its benefits for agentic workloads remain underexplored in the research literature. To our knowledge, no prior work quantifies these cost savings or compares caching strategies for multi-turn agentic tasks. We present a comprehensive evaluation of prompt caching across three major LLM providers (OpenAI, Anthropic, and Google) and compare three caching strategies, including full context caching, system prompt only caching, and caching that excludes dynamic tool results. We evaluate on DeepResearch Bench, a multi-turn agentic benchmark where agents autonomously execute real-world web search tool calls to answer complex research questions, measuring both API cost and time to first token (TTFT) across over 500 agent sessions with 10,000-token system prompts. Our results demonstrate that prompt caching reduces API costs by 41-80% and improves time to first token by 13-31% across providers. We find that strategic prompt cache block control, such as placing dynamic content at the end of the system prompt, avoiding dynamic traditional function calling, and excluding dynamic tool results, provides more consistent benefits than naive full-context caching, which can paradoxically increase latency. An ablation study across prompt sizes (500-50,000 tokens) and tool call counts (3-50) demonstrates universal linear cost and TTFT benefits, after the provider caching token minimum, and reveal provider-specific strategy discrepancies across variants. We provide nuanced discussion and guidance for implementing prompt caching in production agentic systems.",
+        "canonical_id": "arXiv:2601.06007",
+        "arxiv_id": "2601.06007",
+        "authors": [
+          "Elias Lumer",
+          "Faheem Nizar",
+          "Akshaya Jangiti",
+          "Kevin Frank",
+          "Anmol Gulati",
+          "M. Phadate",
+          "V. K. Subbiah"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.05109",
+      "identity_tokens": [
+        "id:arXiv:2601.05109",
+        "title:nalar an agent serving framework",
+        "url:https://www.semanticscholar.org/paper/ac4c31e19ef6581427ddb6f84638a62ab86b4e45"
+      ],
+      "record": {
+        "title": "Nalar: An agent serving framework",
+        "source_url": "https://www.semanticscholar.org/paper/ac4c31e19ef6581427ddb6f84638a62ab86b4e45",
+        "year": 2026,
+        "published": "2026-01-08",
+        "abstract": "LLM-driven agentic applications increasingly automate complex, multi-step tasks, but serving them efficiently remains challenging due to heterogeneous components, dynamic and model-driven control flow, long-running state, and unpredictable latencies. Nalar is a ground-up agent-serving framework that cleanly separates workflow specification from execution while providing the runtime visibility and control needed for robust performance. Nalar preserves full Python expressiveness, using lightweight auto-generated stubs that turn agent and tool invocations into futures carrying dependency and context metadata. A managed state layer decouples logical state from physical placement, enabling safe reuse, migration, and consistent retry behavior. A two-level control architecture combines global policy computation with local event-driven enforcement to support adaptive routing, scheduling, and resource management across evolving workflows. Together, these mechanisms allow Nalar to deliver scalable, efficient, and policy-driven serving of heterogeneous agentic applications without burdening developers with orchestration logic. Across three agentic workloads, Nalar cuts tail latency by 34--74\\%, achieves up to $2.9\\times$ speedups, sustains 80 RPS where baselines fail, and scales to 130K futures with sub-500 ms control overhead.",
+        "canonical_id": "arXiv:2601.05109",
+        "arxiv_id": "2601.05109",
+        "authors": [
+          "Marco Laju",
+          "Donghyun Son",
+          "Saurabh Agarwal",
+          "Nitin Kedia",
+          "Myungjin Lee",
+          "Jayanth Srinivasa",
+          "Aditya Akella"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.18337",
+      "identity_tokens": [
+        "id:arXiv:2512.18337",
+        "title:towards efficient agents a codesign of inference architecture and system",
+        "url:https://www.semanticscholar.org/paper/81f6ed0b57ab52adbcaa2dc37944ef5e9c107731"
+      ],
+      "record": {
+        "title": "Towards Efficient Agents: A Co-Design of Inference Architecture and System",
+        "source_url": "https://www.semanticscholar.org/paper/81f6ed0b57ab52adbcaa2dc37944ef5e9c107731",
+        "year": 2025,
+        "published": "2025-12-20",
+        "abstract": "The rapid development of large language model (LLM)-based agents has unlocked new possibilities for autonomous multi-turn reasoning and tool-augmented decision-making. However, their real-world deployment is hindered by severe inefficiencies that arise not from isolated model inference, but from the systemic latency accumulated across reasoning loops, context growth, and heterogeneous tool interactions. This paper presents AgentInfer, a unified framework for end-to-end agent acceleration that bridges inference optimization and architectural design. We decompose the problem into four synergistic components: AgentCollab, a hierarchical dual-model reasoning framework that balances large- and small-model usage through dynamic role assignment; AgentSched, a cache-aware hybrid scheduler that minimizes latency under heterogeneous request patterns; AgentSAM, a suffix-automaton-based speculative decoding method that reuses multi-session semantic memory to achieve low-overhead inference acceleration; and AgentCompress, a semantic compression mechanism that asynchronously distills and reorganizes agent memory without disrupting ongoing reasoning. Together, these modules form a Self-Evolution Engine capable of sustaining efficiency and cognitive stability throughout long-horizon reasoning tasks. Experiments on the BrowseComp-zh and DeepDiver benchmarks demonstrate that through the synergistic collaboration of these methods, AgentInfer reduces ineffective token consumption by over 50%, achieving an overall 1.8-2.5 times speedup with preserved accuracy. These results underscore that optimizing for agentic task completion-rather than merely per-token throughput-is the key to building scalable, efficient, and self-improving intelligent systems.",
+        "canonical_id": "arXiv:2512.18337",
+        "arxiv_id": "2512.18337",
+        "authors": [
+          "Wei-Zhe Lin",
+          "Hui-Ling Zhen",
+          "Shuai Yang",
+          "Xian Wang",
+          "Ren-Xi Liu",
+          "Hanting Chen",
+          "Wang Zhang",
+          "Chuansai Zhou",
+          "Yiming Li",
+          "Chen Chen",
+          "Xing Li",
+          "Zhiyuan Yang",
+          "Xiao-Song Li",
+          "Xian-Zhi Yu",
+          "Zhen-Hua Dong",
+          "Ming-Hu Yuan",
+          "Yun-He Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.12615",
+      "identity_tokens": [
+        "id:arXiv:2512.12615",
+        "title:gpu_ext extensible os policies for gpus via ebpf",
+        "url:https://www.semanticscholar.org/paper/60d496724d1480d9a0bfa737e81a417493c19126"
+      ],
+      "record": {
+        "title": "gpu_ext: Extensible OS Policies for GPUs via eBPF",
+        "source_url": "https://www.semanticscholar.org/paper/60d496724d1480d9a0bfa737e81a417493c19126",
+        "year": 2025,
+        "published": "2025-12-14",
+        "abstract": "Performance in modern GPU-centric systems increasingly depends on resource management policies, including memory placement, scheduling, and observability. However, uniform policies typically yield suboptimal performance across diverse workloads. Existing approaches present a tradeoff: user-space runtimes provide programmability and flexibility but lack cross-tenant visibility and fine-grained control of hardware resources; meanwhile, modifications to the OS kernel introduce significant complexity and safety risks. To address this, we argue that the GPU driver and device layer should provide an extensible OS interface for policy enforcement. While the emerging eBPF technology shows potential, directly applying existing host-side eBPF is insufficient because they lack visibility and control into critical device-side events, and directly embedding policy code into GPU kernels could compromise safety and efficiency. We propose gpu_ext, an eBPF-based runtime that treats the GPU driver and device as a programmable OS subsystem. gpu_ext extends GPU drivers by exposing safe programmable hooks and introduces a device-side eBPF runtime capable of executing verified policy logic within GPU kernels, enabling coherent and transparent policies. Evaluation across realistic workloads including inference, training, and vector search demonstrates that gpu_ext improves throughput by up to 4.8x and reduces tail latency by up to 2x, incurring low overhead, without modifying or restarting applications",
+        "canonical_id": "arXiv:2512.12615",
+        "arxiv_id": "2512.12615",
+        "authors": [
+          "Yusheng Zheng",
+          "Tong Yu",
+          "Yiwei Yang",
+          "M. Jiang",
+          "Xiangyu Gao",
+          "Jianchang Su",
+          "Yan-Peng Hu",
+          "Wen-An Mao",
+          "Wei Zhang",
+          "Dan Williams",
+          "Andi Quinn"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.12752",
+      "identity_tokens": [
+        "id:arXiv:2511.12752",
+        "title:whose narrative is it anyway a kv cache manipulation attack",
+        "url:https://www.semanticscholar.org/paper/2b9fd08ba6c83564aca28abae01e5e3b0149a4ec"
+      ],
+      "record": {
+        "title": "Whose Narrative is it Anyway? A KV Cache Manipulation Attack",
+        "source_url": "https://www.semanticscholar.org/paper/2b9fd08ba6c83564aca28abae01e5e3b0149a4ec",
+        "year": 2025,
+        "published": "2025-11-16",
+        "abstract": "The Key Value(KV) cache is an important component for efficient inference in autoregressive Large Language Models (LLMs), but its role as a representation of the model's internal state makes it a potential target for integrity attacks. This paper introduces\"History Swapping,\"a novel block-level attack that manipulates the KV cache to steer model generation without altering the user-facing prompt. The attack involves overwriting a contiguous segment of the active generation's cache with a precomputed cache from a different topic. We empirically evaluate this method across 324 configurations on the Qwen 3 family of models, analyzing the impact of timing, magnitude, and layer depth of the cache overwrite. Our findings reveal that only full-layer overwrites can successfully hijack the conversation's topic, leading to three distinct behaviors: immediate and persistent topic shift, partial recovery, or a delayed hijack. Furthermore, we observe that high-level structural plans are encoded early in the generation process and local discourse structure is maintained by the final layers of the model. This work demonstrates that the KV cache is a significant vector for security analysis, as it encodes not just context but also topic trajectory and structural planning, making it a powerful interface for manipulating model behavior.",
+        "canonical_id": "arXiv:2511.12752",
+        "arxiv_id": "2511.12752",
+        "authors": [
+          "Mukkesh Ganesh",
+          "K. Iyer",
+          "Arun Baalaaji Sankar Ananthan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.00413",
+      "identity_tokens": [
+        "id:arXiv:2511.00413",
+        "title:tree training accelerating agentic llms training via shared prefix reuse",
+        "url:https://www.semanticscholar.org/paper/15008d5d0491d83141ddfeaed2c750d75a279483"
+      ],
+      "record": {
+        "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse",
+        "source_url": "https://www.semanticscholar.org/paper/15008d5d0491d83141ddfeaed2c750d75a279483",
+        "year": 2025,
+        "published": "2025-11-01",
+        "abstract": "Agentic large language model (LLM) training often involves multi-turn interaction trajectories that branch into multiple execution paths due to concurrent tool use, think-mode, sub-agent, context management and other runtime designs. As a result, the tokens produced by a single task naturally form a tree-structured token trajectory with shared prefixes, rather than a linear sequence. Existing training pipelines linearize such trajectories and treat each branch independently, leading to substantial redundant computation in both forward and backward passes. We derive that averaging the loss over all branches independently is algebraically identical to a per-token weighted loss, where each token's weight equals the fraction of branches passing through it. The problem therefore reduces to computing the log-probability of every token in the prefix tree exactly once, with no repeated computation across shared prefixes: we propose DFS serialization of the tree, which visits every token exactly once, and adapt full-attention and SSM layers to ensure the resulting log-probabilities match independent per-branch calculation exactly. In practice, a single trajectory tree can be too large to fit in GPU memory; we therefore propose Redundancy-Free Tree Partitioning, which handles memory-constrained settings with zero redundant computation and peak memory bounded by a single root-to-leaf path. Together, these contributions form Tree Training, an efficient framework for training LLMs on tree-structured trajectories, achieving up to 6.2x end-to-end training speedup on dense and MoE models for both supervised fine-tuning and reinforcement learning.",
+        "canonical_id": "arXiv:2511.00413",
+        "arxiv_id": "2511.00413",
+        "authors": [
+          "Shao-Jie Wang",
+          "Jing-Hui Wang",
+          "Ying-Han Cui",
+          "Xuxing Chen",
+          "Chao Wang",
+          "Liang Huang",
+          "Xiao-Jiang Zhang",
+          "Jun-Yi Peng",
+          "Lihua Wan",
+          "Haotian Zhang",
+          "Bin Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.20241",
+      "identity_tokens": [
+        "id:arXiv:2509.20241",
+        "title:energy use of ai inference efficiency pathways and testtime scaling",
+        "url:https://www.semanticscholar.org/paper/596c24daff380f156fe080ff5232a9b318d3f7d2"
+      ],
+      "record": {
+        "title": "Energy use of AI inference, efficiency pathways, and test-time scaling",
+        "source_url": "https://www.semanticscholar.org/paper/596c24daff380f156fe080ff5232a9b318d3f7d2",
+        "year": 2025,
+        "published": "2025-09-24",
+        "abstract": "As AI inference scales to billions of queries, estimates of per-query energy use are increasingly important for capacity planning, efficiency interventions, and policy. Yet many public estimates assume non-production settings, leading to systematic overestimation. We introduce a bottom-up framework estimating inference energy from token throughput, node power, and overhead under large-scale deployment assumptions. For frontier-scale models (>200B parameters) on H100 nodes, we estimate a median energy of 0.31 Wh/query (IQR 0.16-0.60), indicating widely cited estimates are overstated by 4-20x. In test-time scaling scenarios 15x longer than typical queries, the median energy rises 13x to 3.91 Wh (IQR 2.15-7.05). Across models, serving systems, and hardware, we estimate 8-20x line-of-sight energy reductions. At datacenter scale, serving 1 billion queries/day requires 0.7 GWh; if 10% are long queries, demand rises to 1.7 GWh/day. With efficiency interventions, it falls to 0.8 GWh/day, mitigating the energy impact of test-time scaling.",
+        "canonical_id": "arXiv:2509.20241",
+        "arxiv_id": "2509.20241",
+        "authors": [
+          "Felipe Oviedo",
+          "Fiodar Kazhamiaka",
+          "Esha Choukse",
+          "Allen Kim",
+          "Amy Luers",
+          "Melanie Nakagawa",
+          "Ricardo Bianchini",
+          "J. L. Lavista Ferres"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.02121",
+      "identity_tokens": [
+        "id:arXiv:2509.02121",
+        "title:batch query processing and optimization for agentic workflows",
+        "url:https://www.semanticscholar.org/paper/065c9ac1ea5e8db2b64a64ef69c2da3122cffda4"
+      ],
+      "record": {
+        "title": "Batch Query Processing and Optimization for Agentic Workflows",
+        "source_url": "https://www.semanticscholar.org/paper/065c9ac1ea5e8db2b64a64ef69c2da3122cffda4",
+        "year": 2025,
+        "published": "2025-09-02",
+        "abstract": "Large Language Models (LLMs) in agentic workflows combine multi-step reasoning, heterogeneous tool use, and collaboration across multiple specialized agents. Existing LLM serving engines optimize individual calls in isolation, while multi-agent frameworks focus on orchestration without system-level performance planning. As a result, repeated prompts, overlapping contexts, and fragmented CPU-GPU execution create substantial redundancy and poor hardware utilization, especially in batch analytics scenarios. We introduce Halo, a system that brings batch query processing and optimization into agentic LLM workflows. Halo represents each workflow as a structured query plan DAG and constructs a consolidated graph for batched queries that exposes shared computation. Guided by a cost model that jointly considers heterogeneous resource constraints, prefill and decode costs, cache reuse, and GPU placement, Halo performs plan-level optimization to minimize redundant execution. The Processor integrates adaptive batching, KV-cache sharing and migration, along with fine-grained CPU-GPU pipelining to maximize holistic hardware efficiency. Evaluation across six benchmarks shows that Halo achieves up to 3.6x speedup for batch inference and 2.6x throughput improvement under online serving, scaling to workloads of thousands of queries and complex graphs. These gains are achieved without compromising output quality. By unifying query optimization with heterogeneous LLM serving, Halo enables efficient agentic workflows in data analytics and decision-making applications.",
+        "canonical_id": "arXiv:2509.02121",
+        "arxiv_id": "2509.02121",
+        "authors": [
+          "Junyi Shen",
+          "Noppanat Wadlom",
+          "Yao Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.21394",
+      "identity_tokens": [
+        "id:arXiv:2508.21394",
+        "title:ai compute architecture and evolution trends",
+        "url:https://www.semanticscholar.org/paper/eb0e6c760068d498860caa54c4e00c2663af2f22"
+      ],
+      "record": {
+        "title": "AI Compute Architecture and Evolution Trends",
+        "source_url": "https://www.semanticscholar.org/paper/eb0e6c760068d498860caa54c4e00c2663af2f22",
+        "year": 2025,
+        "published": "2025-08-29",
+        "abstract": "The focus of AI development has shifted from academic research to practical applications. However, AI development faces numerous challenges at various levels. This article will attempt to analyze the opportunities and challenges of AI from several different perspectives using a structured approach. This article proposes a seven-layer model for AI compute architecture, including Physical Layer, Link Layer, Neural Network Layer, Context Layer, Agent Layer, Orchestrator Layer, and Application Layer, from bottom to top. It also explains the three stages in the evolution of large language models (LLMs) using the proposed 7-layer model. For each layer, we describe the development trajectory and key technologies. In Layers 1 and 2 we discuss AI computing issues and the impact of Scale-Up and Scale-Out strategies on computing architecture. In Layer 3 we explore two different development paths for LLMs. In Layer 4 we discuss the impact of contextual memory on LLMs and compares it to traditional processor memory. In Layers 5 to 7 we discuss the trends of AI agents and explore the issues in evolution from a single AI agent to an AI-based ecosystem, and their impact on the AI industry.",
+        "canonical_id": "arXiv:2508.21394",
+        "arxiv_id": "2508.21394",
+        "authors": [
+          "Bor-Sung Liang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mcas.2025.3650725",
+      "identity_tokens": [
+        "id:DOI:10.1109/mcas.2025.3650725",
+        "title:al compute architecture and evolution trends feature",
+        "url:https://www.semanticscholar.org/paper/a8993b213abbc2882a7ee7d7f3649e114b7d1ee3"
+      ],
+      "record": {
+        "title": "Al Compute Architecture and Evolution Trends [Feature]",
+        "source_url": "https://www.semanticscholar.org/paper/a8993b213abbc2882a7ee7d7f3649e114b7d1ee3",
+        "year": 2026,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/mcas.2025.3650725",
+        "doi": "10.1109/mcas.2025.3650725",
+        "authors": [
+          "Bor-Sung Liang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.48550/arxiv.2604.05438",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.05438",
+        "id:arXiv:2604.05438",
+        "title:topk retrieval with fixedsize linearattention completion backbone and kvformatpreserving attention for kvcache read reduction",
+        "url:https://www.semanticscholar.org/paper/f60a94ef96cf8c6648e947543b982a1b810d9fe2"
+      ],
+      "record": {
+        "title": "Top-K Retrieval with Fixed-Size Linear-Attention Completion: Backbone- and KV-Format-Preserving Attention for KV-Cache Read Reduction",
+        "source_url": "https://www.semanticscholar.org/paper/f60a94ef96cf8c6648e947543b982a1b810d9fe2",
+        "year": 2026,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "DOI:10.48550/arXiv.2604.05438",
+        "doi": "10.48550/arXiv.2604.05438",
+        "authors": [
+          "Yasuto Hoshi",
+          "Daisuke Miyashita",
+          "Jun Deguchi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tnse.2026.3704855",
+      "identity_tokens": [
+        "id:DOI:10.1109/tnse.2026.3704855",
+        "title:poweraware orchestration for geodistributed llm inference via quantum optimization",
+        "url:https://www.semanticscholar.org/paper/43c80c7a0d6d69fff0ded1ef321f83ba8cadad56"
+      ],
+      "record": {
+        "title": "Power-Aware Orchestration for Geo-Distributed LLM Inference via Quantum Optimization",
+        "source_url": "https://www.semanticscholar.org/paper/43c80c7a0d6d69fff0ded1ef321f83ba8cadad56",
+        "year": 2026,
+        "published": null,
+        "abstract": "For geo-distributed large-scale LLM inference, achieving lowlatency request execution requires jointly optimizing transmission delay, heterogeneous compute capacity, and spatialtemporal variability in power availability across datacenters. We formulate this orchestration problem as an integer linear program that minimizes end-to-end latency while explicitly capturing time-to-first-token, per-token generation latency, and wide-area network delay. However, the resulting problem is NP-hard and intractable for real-time decision-making at scale. To address this challenge, we develop a quantum-classical hybrid optimization framework based on the quantum approximate optimization algorithm (QAOA). We introduce a feasibility-guaranteed QAOA (FG-QAOA), which incorporates structured variable pruning to eliminate infeasible routing configurations while preserving the optimal solution space. This reduction yields a compact formulation that is then transformed into a quadratic unconstrained binary optimization model with penalty-encoded constraints, enabling mapping to an Ising Hamiltonian for quantum optimization. Experimental results show that FG-QAOA achieves near-optimal performance, matching the exact solver on small-scale instances while keeping the optimality gap below 3.1% on larger instances, and exhibiting much slower runtime growth than the exact solver.",
+        "canonical_id": "DOI:10.1109/TNSE.2026.3704855",
+        "doi": "10.1109/TNSE.2026.3704855",
+        "authors": [
+          "Xiang-Dong Zheng",
+          "Jia-Nan Min",
+          "Long Luo",
+          "Hong-Fang Yu",
+          "Zonghang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+      "identity_tokens": [
+        "id:SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+        "title:understanding and optimizing kvcache management for longcontext llm inference a",
+        "url:https://www.semanticscholar.org/paper/fe7df672dd110fdae6d3b49e3e63db59075fba7a"
+      ],
+      "record": {
+        "title": "Understanding and Optimizing KV-cache Management for Long-Context LLM Inference A",
+        "source_url": "https://www.semanticscholar.org/paper/fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+        "year": null,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a"
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:075fbaee3d28b21d786f19528815a898d617bfb2",
+      "identity_tokens": [
+        "id:SemanticScholar:075fbaee3d28b21d786f19528815a898d617bfb2",
+        "title:codecflow codecguided endtoend optimization for streaming video analytics",
+        "url:https://www.semanticscholar.org/paper/075fbaee3d28b21d786f19528815a898d617bfb2"
+      ],
+      "record": {
+        "title": "CodecFlow: Codec-Guided End-to-End Optimization for Streaming Video Analytics",
+        "source_url": "https://www.semanticscholar.org/paper/075fbaee3d28b21d786f19528815a898d617bfb2",
+        "year": null,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:075fbaee3d28b21d786f19528815a898d617bfb2",
+        "authors": [
+          "Yulin Zou",
+          "Yan Chen",
+          "Wenyan Chen",
+          "Shivaraman Nitin",
+          "Luo Tao",
+          "Francisco Romero"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:71a78bd1fac66b1f859e6426aae61f9be10b255bbcab80add7096fdb5da26a69",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

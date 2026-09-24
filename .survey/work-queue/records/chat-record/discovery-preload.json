@@ -1,14 +1,14 @@
 {
   "data": {
-    "axis": "OpenAlex recent SSD NVMe LLM inference offload",
+    "axis": "recent MoE expert prefetch prediction offload inference alternate provider",
     "citation_direction": "normal",
-    "created_at": "2026-09-24T05:30:26.904808+00:00",
-    "precheck_request_id": "preload-929bf8b20b3125ed803d",
-    "provider": "openalex",
+    "created_at": "2026-09-24T11:37:49.022432+00:00",
+    "precheck_request_id": "preload-c11e9154ddd3d8039a60",
+    "provider": "semantic_scholar",
     "seed_canonical_id": null,
-    "source_url": "https://api.openalex.org/works?search=LLM%20inference%20SSD%20NVMe%20offload%20storage&sort=publication_date:desc&per-page=100"
+    "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=MoE%20expert%20prefetch%20prediction%20offload%20inference&fields=title,abstract,year,externalIds,url,publicationDate&limit=100"
   },
-  "preload_id": "preload-929bf8b20b3125ed803d",
+  "preload_id": "preload-c11e9154ddd3d8039a60",
   "schema_version": 1,
   "slot": "discovery-preload",
   "transport_version": 10
