@@ -1,13 +1,38 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "positioning",
   "attempt_id": "attempt-preload-24504aa3d0d6716cf366c75b",
   "job_id": "job-research-11098a1512c29cb4",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-24504aa3d0d6716cf366c75b",
     "worker_id": "worker-924226",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "positioning",
+  "data": {
+    "differences": [
+      {
+        "name": "KIVI/KVQuant/TurboQuant等との違い",
+        "description": "既存法が量子化表現、outlier処理、校正、混合精度などでKV表現自体の誤差を減らすのに対し、DGAPは既存低ビットデコーダの後段でtoken候補分布を選択的に修復する。"
+      },
+      {
+        "name": "KV eviction/retention方式との違い",
+        "description": "SnapKV/PyramidKV等が保持するtoken/headを減らして容量を削るのに対し、DGAPは保持集合ではなく低ビット表現が起こす局所順位崩れを対象とするため直交的に組み合わせ得る。"
+      },
+      {
+        "name": "量子化誤差の見方",
+        "description": "absolute logit errorの大きさではなく、高確率候補の相対順位と局所確率質量の歪みを直接の修復対象として定式化する。"
+      }
+    ],
+    "limitations": [
+      "現行実装はオフライン校正したrisk threshold τとbitwidth別recovery window K_bを使い、deployment-specificなonline calibrationは将来課題。",
+      "検出器/補正器の追加計算は小さいがゼロではなく、K1V1でper-token latency約5〜6%増、throughput約5〜6%減がある。",
+      "評価はA100-80GBのbatch-size-1中心で、大規模multi-tenant serving、continuous batching、複数GPU/異種GPUでのsystem-level効果は未検証。",
+      "kernel-level Triton/CUDA fusionは将来課題とされ、現実装の統合コストや他attention kernelとの相互作用は十分評価されていない。",
+      "利益はaggressive low-bit量子化で最大で、高精度KVでは改善幅が小さい。"
+    ],
+    "implementation_status": "論文はPython 3.10、PyTorch 2.5.1+cu121、Transformers 4.45.1、CUDA 12.1、PyTorch SDPAによる統一評価実装を記載する。2026-09-24時点で本文に公式コード公開URLは記載されていない。",
+    "research_positioning": "KVキャッシュ圧縮系の中でも、storage representationをさらに工夫する系列ではなく、量子化後のdecode-time output distributionを復元する補助層という位置づけ。K1V1級の極端な圧縮で容量削減を維持しつつ品質を戻すため、KV量子化・長文脈推論・distribution-aware correctionの交点にある。システム面ではvLLM等のpaged KV管理やoffload/evictionと競合するというより、その上で用いる低ビットKVの品質補償として併用可能。",
+    "audit_notes": "arXiv v1 HTML全文をIntroduction、Related Work、Motivation、Methodology、Experimental Setup、全主要表/ablation、Conclusion、Limitationsまで確認。制御実験の31.8-point ranking effect、K1V1の品質回復、14.2× KV圧縮、約1.06× decode latency、offline calibration依存とsystem-level未評価を記録した。"
   }
 }
