@@ -4,6 +4,14 @@ on:
   workflow_run:
     workflows: ['Discovery precheck gate']
     types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/discovery-preload-warm.yml'
+      - '.survey/scripts/discovery_preload_queue.py'
+      - '.survey/scripts/process_discovery_precheck.py'
+      - '.survey/scripts/process_discovery_precheck_batch.py'
+      - '.survey/scripts/hot_dispatch.py'
   schedule:
     - cron: '1/5 * * * *'
   workflow_dispatch:
