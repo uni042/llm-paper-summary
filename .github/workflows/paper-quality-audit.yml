@@ -8,6 +8,8 @@ on:
       - ".survey/scripts/audit_overview_results.py"
       - ".survey/scripts/paper_audit_scope.py"
       - ".survey/tests/test_paper_audit_scope.py"
+      - ".survey/tests/test_survey_index_grouping.py"
+      - ".survey/tests/test_repository_metadata_policy.py"
       - ".survey/scripts/list_summary.py"
       - ".survey/scripts/render_paper.py"
       - ".survey/scripts/japanese_style.py"
@@ -55,6 +57,12 @@ jobs:
 
       - name: Run paper audit scope regression test
         run: python .survey/tests/test_paper_audit_scope.py
+
+      - name: Run explicit paper view contract test
+        run: python -m unittest discover -s .survey/tests -p 'test_survey_index_grouping.py'
+
+      - name: Run structural metadata policy test
+        run: python -m unittest discover -s .survey/tests -p 'test_repository_metadata_policy.py'
 
       - name: Run quality regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_*quality.py'

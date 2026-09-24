@@ -43,6 +43,7 @@ class RepositoryMetadataPolicyTests(unittest.TestCase):
 canonical_id: DOI:10.0000/example
 title: Month Precision Example
 summary: Month-precision proceedings metadata must remain valid when the primary source exposes no day.
+list_summary: 新しい論文契約では一覧説明を明示項目として保存し、他の本文から生成しない。
 authors:
 - Example Author
 published: 2025-11
@@ -85,6 +86,26 @@ audit_version: 0
                 and finding["path"] == paper.relative_to(root).as_posix()
             ]
             self.assertEqual(invalid, [])
+
+            paper.write_text(
+                paper.read_text(encoding="utf-8").replace(
+                    "list_summary: 新しい論文契約では一覧説明を明示項目として保存し、他の本文から生成しない。\n",
+                    "",
+                ),
+                encoding="utf-8",
+            )
+            paper_path = paper.relative_to(root).as_posix()
+            for entry in files:
+                if entry["path"] == paper_path:
+                    entry["sha"] = blob_sha(paper.read_bytes())
+            missing_result = check_repository.check(root, inventory)
+            missing = [
+                finding for finding in missing_result["findings"]
+                if finding["code"] == "paper_missing_metadata"
+                and finding["path"] == paper_path
+                and finding["detail"] == "list_summary"
+            ]
+            self.assertEqual(len(missing), 1)
 
 
 if __name__ == "__main__":

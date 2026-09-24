@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import sys
+import tempfile
+from unittest.mock import patch
 import unittest
 from datetime import datetime
 from pathlib import Path
@@ -10,6 +12,7 @@ from zoneinfo import ZoneInfo
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
+import survey  # noqa: E402
 from survey import _render_paper_list, _render_taxonomy_list  # noqa: E402
 
 
@@ -87,6 +90,31 @@ class SurveyIndexGroupingTest(unittest.TestCase):
         )
 
         self.assertIn("../03-kv-cache/legacy-paper.md", "\n".join(rendered))
+
+    def test_paper_views_uses_explicit_list_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/01-offload-hierarchical-memory/example.md"
+            paper.parent.mkdir(parents=True)
+            explicit = "本研究はfrontmatterの明示一覧文を表示し、本文からの代替生成を使わない方式を採用する。"
+            paper.write_text(
+                "---\n"
+                "canonical_id: arXiv:2401.12345\n"
+                "title: Example\n"
+                "summary: metadata fallback\n"
+                f"list_summary: {explicit}\n"
+                "published: 2024-01-01\n"
+                "---\n"
+                "# Example\n\n"
+                "> 本文中のfallback文は一覧表示に使わない。\n",
+                encoding="utf-8",
+            )
+
+            with patch.object(survey, "ROOT", root):
+                rows = survey.paper_views()
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["summary"], explicit)
 
     def test_paper_entries_use_mobile_friendly_vertical_blocks(self) -> None:
         row = self._record("mobile-paper", 2026, 9)
