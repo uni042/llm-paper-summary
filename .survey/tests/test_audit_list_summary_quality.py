@@ -19,14 +19,14 @@ class ExplicitListSummaryAuditTests(unittest.TestCase):
             paper.parent.mkdir(parents=True)
             explicit = "本研究は明示された一覧文をそのまま監査し、本文からの自動生成を行わない方式を採用する。"
             paper.write_text(
-                "---\\n"
-                "title: Example\\n"
-                "summary: fallback summary in English\\n"
-                f"list_summary: {explicit}\\n"
-                "---\\n"
-                "# Example\\n\\n"
-                "> 本文の引用には英語のrequestとtokenが含まれ、一覧文としては使わない。\\n\\n"
-                "## 概要\\n\\n概要からのfallback summary is forbidden.\\n",
+                "---\n"
+                "title: Example\n"
+                "summary: fallback summary in English\n"
+                f"list_summary: {explicit}\n"
+                "---\n"
+                "# Example\n\n"
+                "> 本文の引用には英語のrequestとtokenが含まれ、一覧文としては使わない。\n\n"
+                "## 概要\n\n概要からのfallback summary is forbidden.\n",
                 encoding="utf-8",
             )
 
@@ -41,12 +41,12 @@ class ExplicitListSummaryAuditTests(unittest.TestCase):
             paper = root / "papers" / "example.md"
             paper.parent.mkdir(parents=True)
             paper.write_text(
-                "---\\n"
-                "title: Example\\n"
-                "summary: 本文にはない情報を推測せず一覧文を入力する運用を徹底する。\\n"
-                "---\\n"
-                "# Example\\n\\n"
-                "> 本研究は明示された一覧文がない場合も本文から自動生成せず、欠落として扱う方式を採用する。\\n",
+                "---\n"
+                "title: Example\n"
+                "summary: 本文にはない情報を推測せず一覧文を入力する運用を徹底する。\n"
+                "---\n"
+                "# Example\n\n"
+                "> 本研究は明示された一覧文がない場合も本文から自動生成せず、欠落として扱う方式を採用する。\n",
                 encoding="utf-8",
             )
 

@@ -36,15 +36,15 @@ class SurveyIndexGroupingTest(unittest.TestCase):
             paper_dir.mkdir(parents=True)
             paper = paper_dir / "2026-2609.00001-example.md"
             paper.write_text(
-                "---\\n"
-                "title: Example\\n"
-                "summary: 本文から作る旧形式の説明であり、一覧用の明示文とは異なる。\\n"
-                f"list_summary: {explicit}\\n"
-                "published: '2026-09-01'\\n"
-                "---\\n"
-                "# Example\\n\\n"
-                "> 本文の引用文を一覧に使ってはならない。十分な長さを確保しても明示一覧文を優先する。\\n\\n"
-                "## 概要\\n\\n本文の概要は別の説明として保持する。\\n",
+                "---\n"
+                "title: Example\n"
+                "summary: 本文から作る旧形式の説明であり、一覧用の明示文とは異なる。\n"
+                f"list_summary: {explicit}\n"
+                "published: '2026-09-01'\n"
+                "---\n"
+                "# Example\n\n"
+                "> 本文の引用文を一覧に使ってはならない。十分な長さを確保しても明示一覧文を優先する。\n\n"
+                "## 概要\n\n本文の概要は別の説明として保持する。\n",
                 encoding="utf-8",
             )
             previous_root = survey.ROOT
