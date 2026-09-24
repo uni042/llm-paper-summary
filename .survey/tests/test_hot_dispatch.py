@@ -414,5 +414,25 @@ class HotDispatchTests(unittest.TestCase):
             self.assertEqual(result["route_source"], "hot_dispatch_direct_start")
 
 
+    def test_discovery_cold_start_exposes_zero_wait_fixed_source_fallback(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            with mock.patch.object(
+                hot_dispatch.discovery_preload_queue,
+                "available_preloads",
+                return_value=[],
+            ):
+                index = hot_dispatch.refresh(root)
+
+            self.assertEqual(index["suggested_work_mode"], "discovery")
+            self.assertFalse(index["direct_start_allowed"])
+            self.assertTrue(index["fallback_start_allowed"])
+            self.assertTrue(index["zero_wait_start_allowed"])
+            self.assertTrue(index["idle_gap_guard"]["passive_wait_forbidden"])
+            self.assertEqual(
+                index["discovery_fallback"]["source_url"],
+                "repository://structured-references",
+            )
+
 if __name__ == "__main__":
     unittest.main()

@@ -75,7 +75,7 @@ run-state側はこの4項目の形式・policy整合性を検証し、最初の�
 
 **Discovery:** 正規selector方向に対応する `discovery.<direction>[]` の最古packetについて、packetの `take_path=.survey/work-queue/discovery-preload/claims/<preload_id>.json` を**存在しない場合だけcreate**する。payloadは `schema_version:1`, packetの `preload_id/discovery_bank/discovery_slot_path/preload_result_path`, `worker_id`, `run_key`, 一意な `request_id`, `claimed_at`, 90分後の `lease_expires_at`, `direct_take:true`, `scheduled_slot`, `actual_invocation_start`, 上記direct-route値を持つ。create成功が排他的なpreload担当確保であり、**直ちにpacketの `preload_result_path` にある20件を軽量評価し始めてよい。** 同じpushでDiscovery precheck laneがrun固有schema v3 requestを自動生成し、最新identity/rejection状態で正式再フィルタする。submissionは必ずこのworkflow生成の正式precheck result / receiptを待ち、preloadで先に評価した候補のうち正式 `allowed_records` から外れたものは捨てる。したがって直接開始は品質ゲートを省略せず、**候補を読む時間と正式precheck待ちを重ねるだけ**である。create競合なら同方向の次packetへ進む。
 
-hot-dispatchが欠落・破損、選択済みレーンの準備済みpacket無し、Discoveryの同方向packet無し、create競合を全packetで失敗、またはdirect-take正規化がrecovery_requiredになった場合だけ、以下の従来request→Actions→result経路へfallbackする。hot-dispatchは正本状態を置き換えず、submission可否は従来どおりcanonical claim / formal precheck / quality preflight / immutable resultが決める。
+hot-dispatchが欠落・破損、create競合を全packetで失敗、またはdirect-take正規化がrecovery_requiredになった場合は従来経路へfallbackする。ただし**Discoveryを選択済みで同方向PRECHECKED packetが0件でも、hot-dispatchの `discovery_fallback` / `fallback_start_allowed=true` があればrun-state resultを待ってはならない。** 同じ `run_key / worker_id / scheduled_slot / actual_invocation_start` を持つrun固有schema v3 precheck requestを、その固定 `provider / source_url / axis` から即時作成し、通常のrun-state requestは並行して耐久保存する。precheck laneはこのidentityからrun-stateを自動回復・更新するため、初回run-state resultは内容作業開始の同期障壁ではない。hot-dispatchは正本状態を置き換えず、submission可否は従来どおりcanonical claim / formal precheck / quality preflight / immutable resultが決める。
 
 ## 2.1 正規スクリプトを直接実行できない環境のfast-lane transport
 
@@ -269,7 +269,7 @@ Discoveryは、run開始後に外部APIの取得を始める待ち時間を減�
 - `discovery_preload` が非nullなら、新しいrun固有schema v3 requestを作り、そこから返された `provider` / `source_url` / `axis` / `initial_cursor` / `page_size` / `max_pages` / `target_unseen` / `discovery_bank` / `discovery_slot_path` をそのまま使い、追加で今回の `worker_id` と `preload_id` を保存する。`run_key` は**必ず今回runの値**にする。preload側の `run_key=preload:...` をコピーしない。precheck側はrun-stateで見えたバンクと実claim時のバンクが一致することを検証する。
 - 実run用 `process_discovery_precheck.py` は、先行取得済み20件を現在のidentity snapshot / rejection ledgerで**再フィルタ**する。20件残れば外部providerへ追加アクセスせず、その場で今回run固有の正式precheck result / receiptを生成する。既収録化などで20件未満になった場合だけ、同じ固定 `source_url` の保存済み `next_cursor` から不足分を補充する。
 - バックグラウンドpreload result自体をDiscovery submissionの証明として参照してはならない。submissionが参照できるのは、今回runの `run_key` / `axis` で再検査されたworkflow生成resultだけである。queue workerも `preload_seed=true` のresultからの直接submissionを拒否する。
-- 同方向の利用可能preloadが無い、claim競合で先行窓を取れなかった、preloadが破損している等の場合は停止しない。最新run-stateを再取得し、別の同方向preloadがあればそれを使い、無ければselectorが返した固定ソースを従来のschema v3経路で直接precheckする。preload不足をrun終了理由にしない。background preloadのprovider失敗は同一ソース・同一6時間bucketで最大2回までとし、preload request追加pushによる自己起動が障害時に無限再試行ループにならないようにする。
+- 同方向の利用可能preloadが無い、claim競合で先行窓を取れなかった、preloadが破損している等の場合は停止しない。**最新run-stateの再取得を先に待たず**、既に得ているselectorまたはhot-dispatchの `discovery_fallback` が示す固定ソースをrun固有schema v3 precheckとして即時開始する。run-state再導出は並行して行う。preload不足をrun終了理由・受動待機理由にしない。background preloadのprovider失敗は同一ソース・同一6時間bucketで最大2回までとし、preload request追加pushによる自己起動が障害時に無限再試行ループにならないようにする。
 
 `target_unseen` の既定値は20。precheck側の `discovery_provider_adapter.py` と `collect_until_unseen()` が**同じ検索結果をページ送り**し、各ページで既収録・既候補・既却下・ページ間重複を除外する。ワーカーが2ページ目以降を個別に手作業で継ぎ足す必要はない。
 
@@ -426,6 +426,12 @@ claim result、Research quality preflight、submission result、Discovery preche
 - 残り600秒以下の開始禁止窓でもread-only監査・安全なcache cleanup等の小作業は行ってよいが、新しい独立内容作業には拡大しない。残り180秒以下ではミクロタスクも新規開始せず、耐久保存・result確認・handoffだけを行う。
 - 実行可能なミクロタスクを一通り確認済みでも、それ自体をrun終了理由にしない。同一targetの状態を再確認し、pendingなら安全なread-only確認を繰り返すか、既存の正規回復へ従う。
 - resultが生成された時点でミクロタスクよりresult処理を優先し、`next_action` / `recovery_steps` にただちに戻る。
+
+### 7.0.1 ゼロアイドル不変条件
+
+通常の作業時間帯では、**非同期request/result待ちだけが残ってworkerに実行可能作業が0件になる状態を許容しない。** hot-dispatchのPRECHECKED packet、同一runの次Discovery固定ソースprecheck、Research/Audit standby、または第7.0節の有限ミクロタスクの少なくとも1つを常に次作業として持つ。特にDiscoveryは、PRECHECKED在庫が0でも固定ソースfallbackを即時開始し、前ラウンド成功時の自動advanceも同方向bankが無ければ同じrecovery transaction内で固定ソースprecheckまで実行する。
+
+`idle_gap_forbidden=true` / hot-dispatchの `idle_gap_guard.passive_wait_forbidden=true` は、`Actionsが処理中なので何もせず終了`、`resultがまだ無いので最終応答`、`次の定期回収を待つ` を禁止する機械指示である。待ち対象が存在する場合も、そのtargetを保持したまま独立に進められる準備済み作業を先に実行する。**準備済み作業も固定ソースfallbackもミクロタスクも本当に生成できない状態は運用上の在庫欠損として最終報告へ記録するが、それ自体を通常終了許可にはしない。**
 
 ### 7.1 hard stopの機械判定
 

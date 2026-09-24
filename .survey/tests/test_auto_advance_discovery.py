@@ -263,5 +263,128 @@ class AutoAdvanceDiscoveryTests(unittest.TestCase):
             self.assertEqual(result["snapshots"][0]["required_action"], "FINALIZE")
 
 
+    def test_completed_round_uses_fixed_source_when_no_prechecked_bank_exists(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            current = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
+            report = root / "recovery.json"
+            write_json(
+                report,
+                {"recovered": [{"submission": "work-queue/submissions/round-fallback.json"}]},
+            )
+            write_json(
+                root / ".survey/work-queue/submissions/round-fallback.json",
+                {
+                    "operation": "submit_discovery_round",
+                    "worker_id": "worker-80",
+                    "discovery_stats": {
+                        "run_key": "run-fallback",
+                        "round": "round-1",
+                        "axis": "backward",
+                    },
+                },
+            )
+            request = {
+                "schema_version": 1,
+                "request_id": "cached-fallback",
+                "worker_id": "worker-80",
+                "worker_kind": "scheduled_chat",
+                "run_key": "run-fallback",
+                "scheduled_slot": "adhoc",
+                "actual_invocation_start": current.isoformat(),
+                "runtime_condition": "none",
+            }
+            before = {
+                "ok": True,
+                "worker_id": "worker-80",
+                "run_key": "run-fallback",
+                "scheduled_slot": "adhoc",
+                "actual_invocation_start": current.isoformat(),
+                "candidate_inventory": 100,
+                "work_mode": "discovery",
+                "seconds_to_run_deadline": 3000,
+                "processed_at": current.isoformat(),
+                "next_action": "DISCOVER_AGAIN",
+                "gate": {"required_action": "DISCOVER_AGAIN"},
+                "discovery_selector": {"next_direction": "backward"},
+            }
+            after = {
+                **before,
+                "next_action": "CONTINUE_DISCOVERY_ROUND",
+                "gate": {"required_action": "CONTINUE_DISCOVERY_ROUND"},
+                "discovery_evaluation_pending": True,
+            }
+            fallback = {
+                "source_kind": "fixed_source_fallback",
+                "citation_direction": "backward",
+                "provider": "repository_references",
+                "source_url": "repository://structured-references",
+                "axis": "preload-backward-structured-references",
+                "target_unseen": 20,
+                "page_size": 20,
+                "max_pages": 25,
+                "initial_cursor": None,
+            }
+
+            def ready_precheck(repo_root: Path, request_id: str):
+                result = {
+                    "schema_version": 3,
+                    "operation": "precheck_discovery_candidates",
+                    "ok": True,
+                    "request_id": request_id,
+                    "run_key": "run-fallback",
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                    "receipt": "sha256:fallback-ready",
+                }
+                write_json(
+                    repo_root / hot_dispatch.PRECHECK_RESULTS / f"{request_id}.json",
+                    result,
+                )
+                return result
+
+            with mock.patch.object(
+                advance.derive_worker_run_state.run_state_cache,
+                "cached_request",
+                return_value=request,
+            ), mock.patch.object(
+                advance.derive_worker_run_state,
+                "derive",
+                side_effect=[before, after],
+            ), mock.patch.object(
+                advance.derive_worker_run_state.run_state_cache,
+                "generation_for",
+                return_value=8,
+            ), mock.patch.object(
+                advance.discovery_preload_queue,
+                "pick_available",
+                return_value=None,
+            ), mock.patch.object(
+                advance.discovery_preload_queue,
+                "fallback_source",
+                return_value=fallback,
+            ), mock.patch.object(
+                advance,
+                "_process_formal_precheck",
+                side_effect=ready_precheck,
+            ):
+                result = advance.advance(root, report)
+
+            self.assertEqual(len(result["advanced"]), 1)
+            self.assertEqual(result["advanced"][0]["source_kind"], "fixed_source_fallback")
+            self.assertTrue(result["advanced"][0]["formal_precheck_ready"])
+            request_id = result["advanced"][0]["request_id"]
+            formal = json.loads(
+                (root / hot_dispatch.PRECHECK_REQUESTS / f"{request_id}.json").read_text()
+            )
+            self.assertTrue(formal["fixed_source_fallback"])
+            self.assertEqual(formal["scheduled_slot"], "adhoc")
+            snapshot = json.loads((root / result["snapshots"][0]["result_path"]).read_text())
+            self.assertEqual(
+                snapshot["auto_next_discovery"]["source_kind"],
+                "fixed_source_fallback",
+            )
+            self.assertTrue(snapshot["auto_next_discovery"]["formal_precheck_ready"])
+
 if __name__ == "__main__":
     unittest.main()

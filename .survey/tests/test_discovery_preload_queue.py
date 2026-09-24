@@ -366,5 +366,19 @@ class DiscoveryPreloadQueueTests(unittest.TestCase):
         self.assertEqual(result["preload_id"], entry["preload_id"])
 
 
+    def test_fixed_source_fallback_reuses_preload_source_policy(self) -> None:
+        backward = preload.fallback_source(self.root, direction="backward")
+        self.assertIsNotNone(backward)
+        self.assertEqual(backward["source_kind"], "fixed_source_fallback")
+        self.assertEqual(backward["citation_direction"], "backward")
+        self.assertEqual(backward["provider"], "repository_references")
+        self.assertEqual(backward["source_url"], "repository://structured-references")
+        self.assertEqual(backward["target_unseen"], preload.DEFAULT_TARGET_UNSEEN)
+
+        forward = preload.fallback_source(self.root, direction="forward")
+        self.assertIsNotNone(forward)
+        self.assertEqual(forward["citation_direction"], "forward")
+        self.assertEqual(forward["provider"], "semantic_scholar")
+
 if __name__ == "__main__":
     unittest.main()
