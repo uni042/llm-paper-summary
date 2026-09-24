@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1145/3606557.3606559",
+      "doi": "10.1145/3606557.3606559",
+      "title": "Make It Real: An End-to-End Implementation of A Physically Disaggregated Data Center",
+      "source_url": "https://doi.org/10.1145/3606557.3606559",
+      "priority": 64,
+      "reason": "Physical resource disaggregation is foundational context for disaggregated LLM serving architectures."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-3da1839c7a8cad9849445805",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-3da1839c7a8cad9849445805.json",
+    "receipt": "sha256:b407848452a928ddc061d8d7fc6f1cccf94a1d609dc5389ee12c497dba355aed"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "frontier-3da1839c7a8cad9849445805",
+    "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
+    "candidate_count": 20,
+    "accepted_canonical_ids": [
+      "DOI:10.1145/3606557.3606559"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "backward"
+  }
+}
