@@ -9,7 +9,10 @@ paper into a record-slot reservation.
 """
 from __future__ import annotations
 
-# Capacity-sizing baseline only; this is not a worker-count admission limit.\n# Additional worker-N identities remain valid and share the same canonical pool.\nEXPECTED_PARALLEL_WORKERS = 6\n
+# Capacity-sizing baseline only; this is not a worker-count admission limit.
+# Additional worker-N identities remain valid and share the same canonical pool.
+EXPECTED_PARALLEL_WORKERS = 6
+
 # Logical paper inventory held by each worker. Only the foreground is read at once.
 DEFAULT_CLAIM_WINDOW = 12
 MAX_CLAIM_WINDOW = 24
