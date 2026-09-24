@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-7c93b83402e32e5d2b5890a8",
   "job_id": "job-research-042e5712bf1b426e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-7c93b83402e32e5d2b5890a8",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "動機実験ではNVIDIA A100 40GB×4上でOPT-13Bをtensor parallel=2として動かし、FCFSと単純プリエンプションを比較する。本評価は複数GPU実機上でOPT-13B/30BおよびLlama-3-70Bを用いる。",
+    "software": "BROSを実装し、production-grade serving baselineとしてvLLMとText Generation Inference (TGI) を比較対象にする。SchedulerはCPU側Scheduling Engine、ExecutorはGPU側でtensor parallelをサポートし、KVのD2H/H2Dは非同期CUDA streamで重ねる。",
+    "methodology": "RT/BEの混合要求を構成し、SharedGPTおよびLMSYS-CHAT-1M由来の入出力長分布とPoisson到着を用いて負荷を変える。RTについて正規化遅延、TTFT/TPOTと各SLO達成率を測り、BEについてスループット低下を測る。さらに双方向KV管理の有無をアブレーションし、スケジューラ自体の反復オーバーヘッドも測定する。論文の動機実験では512要求をSharedGPTから合成して到着率を掃引する。",
+    "scope": "主要評価はRT/BEを同一モデル・同一GPU群で混載するケースであり、異種GPUクラスタやP/D分離サービングを主対象とはしない。SLO値と要求分布に依存するため、絶対的な優位性よりも混合負荷でRTを保護しながらBEを残せるかを評価する。モデル品質の変化は測らず、性能・SLO・メモリ管理に焦点を置く。"
+  },
+  "reservation": {"claim_id": "claim-preload-7c93b83402e32e5d2b5890a8", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
 }
