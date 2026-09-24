@@ -27,7 +27,9 @@ import paper_taxonomy
 
 _GENERIC_SURVEY_WORKERS = {"scheduled-chat-llm-survey"}
 _CURRENT_SCHEDULED_WORKERS = {"scheduled-chat-00": "00", "scheduled-chat-30": "30"}
-_CURRENT_RUN_KEY_RE = re.compile(r"^scheduled-chat-(?:00|30)-(?P<stamp>\d{8}T\d{6})Z$")
+_CURRENT_RUN_KEY_RE = re.compile(
+    r"^scheduled-chat-(?:00|30)-(?P<stamp>\d{8}T\d{6})Z(?:-[A-Za-z0-9._-]+)?$"
+)
 _ORIGINAL_COLLECT_SUBMISSIONS = _core.evidence._collect_submissions
 _ORIGINAL_DIRECT_EVIDENCE_METRICS = _core._direct_evidence_metrics
 _ORIGINAL_RENDER_DIRECT_METRIC_DETAILS = _core._render_direct_metric_details
@@ -91,6 +93,14 @@ def _discovery_run_time_from_key(value: Any):
         return None
 
 
+def _explicit_worker_run_time(payload: dict[str, Any]):
+    """Read the workflow-v10 run identity carried by the immutable submission."""
+    actual_start = _core.evidence._parse_dt(payload.get("actual_invocation_start"))
+    if actual_start is not None:
+        return actual_start
+    return _discovery_run_time_from_key(payload.get("run_key"))
+
+
 def _discovery_round_identity(submission: dict[str, Any]) -> tuple[str, str] | None:
     """Accept both current and durable pre-v10 Discovery round identities."""
     identity = _ORIGINAL_DISCOVERY_ROUND_IDENTITY(submission)
@@ -144,6 +154,10 @@ def _collect_submissions(repo_root: Path) -> list[dict[str, Any]]:
             parsed_run = _discovery_run_time_from_key(run_key)
             if parsed_run is not None:
                 row["discovery_run_time"] = parsed_run
+
+        explicit_run_time = _explicit_worker_run_time(row["payload"])
+        if explicit_run_time is not None:
+            row["worker_run_time"] = explicit_run_time
 
         if row.get("worker_run_time") is not None:
             continue
