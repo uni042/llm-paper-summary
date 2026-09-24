@@ -210,6 +210,8 @@ class ContinuationGateScheduleTests(unittest.TestCase):
         ))
         self.assertEqual(result["decision"], "STOP_RUN")
         self.assertIn("next_scheduled_task_within_handoff_guard", result["stop_reasons"])
+        self.assertEqual(result["handoff_time_source"], "legacy_next_scheduled_task_compat")
+        self.assertTrue(result["legacy_schedule_handoff_fallback_used"])
 
     def test_discovery_pending_precheck_survives_600_second_start_prohibition_window(self):
         result = mod.decide(make_args(
