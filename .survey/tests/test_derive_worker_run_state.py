@@ -904,5 +904,106 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
                 "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY",
             )
 
+
+    def test_pending_research_preflight_parks_paper_and_promotes_standby(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = request()
+            started = dt.datetime.fromisoformat(value["actual_invocation_start"])
+            claimed = started + dt.timedelta(seconds=5)
+            expires = claimed + dt.timedelta(hours=1)
+
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 298}},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-state.json",
+                {"schema_version": 3, "history": []},
+            )
+            for order, suffix in enumerate(("a", "b")):
+                job_id = f"job-{suffix}"
+                attempt_id = f"attempt-{suffix}"
+                write_json(
+                    root,
+                    f".survey/work-queue/jobs/{job_id}.json",
+                    {"job_id": job_id, "type": "research", "status": "ready"},
+                )
+                write_json(
+                    root,
+                    f".survey/work-queue/claims/{job_id}.json",
+                    {
+                        "schema_version": 1,
+                        "workflow_version": 10,
+                        "job_id": job_id,
+                        "claim_id": f"claim-{suffix}",
+                        "attempt_id": attempt_id,
+                        "request_id": "claim-window",
+                        "worker_id": "scheduled-chat-00",
+                        "worker_kind": "scheduled_chat",
+                        "kind": "research",
+                        "pipeline_order": order,
+                        "claimed_at": claimed.isoformat(),
+                        "expires_at": expires.isoformat(),
+                        "run_key": "run-1",
+                        "scheduled_slot": "00",
+                        "actual_invocation_start": value["actual_invocation_start"],
+                    },
+                )
+
+            preflight_id = "scheduled-chat-00-attempt-a-r1"
+            write_json(
+                root,
+                f".survey/work-queue/research-preflight/requests/{preflight_id}.json",
+                {
+                    "schema_version": 1,
+                    "operation": "research_quality_preflight",
+                    "request_id": preflight_id,
+                    "kind": "research",
+                    "attempt_id": "attempt-a",
+                    "job_id": "job-a",
+                    "record_bank": "a",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "run-1",
+                    "scheduled_slot": "00",
+                    "actual_invocation_start": value["actual_invocation_start"],
+                    "requested_at": (claimed + dt.timedelta(seconds=10)).isoformat(),
+                },
+            )
+
+            pending = mod.derive(root, value)
+            self.assertEqual(pending["active_claim_count"], 2)
+            self.assertEqual(pending["foreground_job_id"], "job-b")
+            self.assertEqual(pending["preflight_parked_job_ids"], ["job-a"])
+            self.assertEqual(
+                pending["preflight_parked_states"]["job-a"],
+                "pending",
+            )
+            self.assertTrue(pending["active_assignment"])
+
+            write_json(
+                root,
+                f".survey/work-queue/research-preflight/results/{preflight_id}.json",
+                {
+                    "schema_version": 1,
+                    "operation": "research_quality_preflight",
+                    "request_id": preflight_id,
+                    "attempt_id": "attempt-a",
+                    "job_id": "job-a",
+                    "ok": True,
+                    "preflight_passed": False,
+                    "repair_required": True,
+                    "checked_at": (claimed + dt.timedelta(seconds=20)).isoformat(),
+                },
+            )
+
+            failed = mod.derive(root, value)
+            self.assertEqual(failed["foreground_job_id"], "job-a")
+            self.assertEqual(failed["preflight_parked_job_ids"], [])
+            self.assertEqual(failed["active_claim_count"], 2)
+
+
 if __name__ == "__main__":
     unittest.main()
