@@ -382,12 +382,15 @@ def _verified_discovery_rows(
 
 def _latest_paper_run(
     submissions: list[dict[str, Any]],
+    now: datetime | None = None,
 ) -> tuple[datetime | None, str | None, list[dict[str, Any]]]:
+    now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
     rows = [
         row
         for row in submissions
         if row["kind"] in {"research", "audit"}
         and row["worker_run_time"] is not None
+        and row["worker_run_time"] <= now
         and row["worker_id"]
     ]
     if not rows:
@@ -399,11 +402,14 @@ def _latest_paper_run(
 
 def _latest_discovery_run(
     submissions: list[dict[str, Any]],
+    now: datetime | None = None,
 ) -> tuple[datetime | None, list[dict[str, Any]]]:
+    now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
     rows = [
         row
         for row in submissions
         if row["discovery_run_time"] is not None
+        and row["discovery_run_time"] <= now
         and (
             row["kind"] == "discovery"
             or isinstance(row["payload"].get("discovery_stats"), dict)
@@ -492,8 +498,8 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     recent_audit = [row for row in recent if row["kind"] == "audit"]
     last_completed = recent[0]["completed_at"] if recent else (verified[0]["completed_at"] if verified else None)
 
-    paper_run_time, paper_worker_id, latest_paper_submissions = _latest_paper_run(submissions)
-    discovery_run_time, latest_discovery_submissions = _latest_discovery_run(submissions)
+    paper_run_time, paper_worker_id, latest_paper_submissions = _latest_paper_run(submissions, now)
+    discovery_run_time, latest_discovery_submissions = _latest_discovery_run(submissions, now)
     discovery_verified_by_submission = {
         row["submission"]["path"]: row for row in verified_discovery
     }
