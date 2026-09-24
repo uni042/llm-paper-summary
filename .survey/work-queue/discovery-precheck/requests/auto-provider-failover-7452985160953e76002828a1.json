@@ -1,0 +1,18 @@
+{
+  "axis": "normal search: LLM inference serving offload [OpenAlex provider failover]",
+  "collector_id": "scheduled-chat-30-4b7e2a-r3-normal-openalex-failover",
+  "initial_cursor": null,
+  "max_pages": 25,
+  "operation": "precheck_discovery_candidates",
+  "page_size": 20,
+  "provider": "openalex",
+  "provider_failover_from": "semantic_scholar",
+  "provider_failover_index": 1,
+  "provider_failover_parent_request_id": "20260924T093500Z-scheduled-chat-30-4b7e2a-r3",
+  "request_id": "auto-provider-failover-7452985160953e76002828a1",
+  "run_key": "scheduled-chat-30-20260924T092830Z-4b7e2a",
+  "schema_version": 3,
+  "source_url": "https://api.openalex.org/works?search=large+language+model+inference+serving+offload",
+  "target_unseen": 20,
+  "worker_id": "scheduled-chat-30"
+}
