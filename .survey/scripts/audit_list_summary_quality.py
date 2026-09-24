@@ -53,6 +53,9 @@ def audit_file(path: Path, repo_root: Path) -> Result:
     explicit = meta.get("list_summary")
     summary = explicit.strip() if isinstance(explicit, str) else ""
     quality = audit_list_summary(summary)
+    if not summary:
+        quality.failures.insert(0, "frontmatter list_summary が未設定または空")
+        quality.status = "FAIL"
     return Result(
         path=path.relative_to(repo_root).as_posix(),
         status=quality.status,
