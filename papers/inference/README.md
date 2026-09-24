@@ -52,6 +52,6 @@
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 17 |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 5 |
 | [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 7 |
-| [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 7 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 147 |
+| [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 8 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 146 |
 <!-- survey:auto:end -->
