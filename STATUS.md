@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 07:31:21 JST**
+> 自動生成: **2026-09-25 07:37:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -12,7 +12,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | 収録候補論文 | **335** |
-| 未claim Research job | **191** |
+| 未claim Research job | **203** |
 | 直近24hの検証済みResearch収録 | **19** |
 | 最終検証済みResearch収録 | **09-25 03:12:55 JST** |
 | 最終検証済みDiscovery探索 | **09-25 07:28:01 JST** |
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（22時間55分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（23時間1分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **3** | **3** | **3** | **0** | **144** | **2** | — |
+| Research | **3** | **3** | **3** | **0** | **132** | **2** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **15** | **15** | **15** | **0** | **0** | **0** | **36** |
-| 合計 | **18** | **18** | **18** | **0** | **144** | **2** | **36** |
+| 合計 | **18** | **18** | **18** | **0** | **132** | **2** | **36** |
 
 - 最新Discovery runの耐久探索round: **15件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -224,7 +224,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **2件**
+- 未失効かつ非terminal jobのclaim: **132件** / 直近15分heartbeat: **2件**
 - `arXiv:2403.01876` — DéjàVu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving / worker `shared-preload-pool`
   - claim: **09-25 07:29:58 JST** / heartbeat: **—** / lease expiry: **09-25 19:29:58 JST**
   - evidence: `.survey/work-queue/claims/job-research-0dbe9070b5598362.json`
