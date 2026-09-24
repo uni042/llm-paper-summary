@@ -29,7 +29,7 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn(".survey/work-queue/discovery-preload", text)
         self.assertIn(".survey/work-queue/direct-take-results", text)
         self.assertIn(".survey/work-queue/hot-dispatch.json", text)
-        self.assertIn("group: survey-claim-main", text)
+        self.assertIn("group: survey-run-state-main", text)
         self.assertIn("recomputing unsettled requests from latest main", text)
         self.assertIn("periodic recovery will retry unsettled requests", text)
         self.assertIn("cron: '4/10 * * * *'", text)
@@ -40,6 +40,20 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn("ensure_discovery_run_state.py --repo-root .", text)
         self.assertIn("derive_worker_run_state.py --repo-root .", text)
         self.assertIn(".survey/work-queue/run-state", text)
+
+    def test_discovery_precheck_recovers_normal_provider_failure_in_same_lane(self):
+        text = (WORKFLOWS / "discovery-precheck.yml").read_text(encoding="utf-8")
+        self.assertIn("recover_discovery_provider_failures.py", text)
+        self.assertIn("discovery-provider-failover-requests.txt", text)
+        self.assertIn("--verify-only", text)
+        self.assertIn("provider-failover batch", text)
+
+    def test_claim_and_run_state_lanes_do_not_share_actions_concurrency_group(self):
+        run_state = (WORKFLOWS / "survey-run-state.yml").read_text(encoding="utf-8")
+        claim = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
+        self.assertIn("group: survey-run-state-main", run_state)
+        self.assertIn("group: survey-claim-main", claim)
+        self.assertNotIn("group: survey-claim-main", run_state)
 
     def test_discovery_recovery_auto_advances_prepared_bank_with_push_race_recompute(self):
         text = (WORKFLOWS / "survey-discovery-recovery.yml").read_text(encoding="utf-8")
