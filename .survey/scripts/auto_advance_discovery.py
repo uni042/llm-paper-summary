@@ -5,10 +5,12 @@ A successful Discovery ingestion already updates discovery-state.json.  This hel
 uses that canonical state immediately, publishes a fresh run-state snapshot, and,
 when the continuation gate says DISCOVER_AGAIN, reserves the oldest PRECHECKED
 preload for the selector's next direction.  The reservation is materialized into a
-run-specific schema-v3 precheck request in the same commit.
+run-specific schema-v3 precheck request, and that formal precheck is executed inline
+before the recovery transaction is published.
 
 The worker may begin lightweight evaluation from the reserved preload immediately;
-submission remains blocked until the formal run-specific precheck result is ready.
+when the inline precheck succeeds the same transaction also unlocks submission, so
+later Discovery rounds do not wait for the periodic precheck collector.
 """
 from __future__ import annotations
 
@@ -16,13 +18,17 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import tempfile
 from pathlib import Path
 from typing import Any
 
+import build_discovery_identity_snapshot
+import build_discovery_rejection_ledger
 import claim_window_policy
 import derive_worker_run_state
 import discovery_preload_queue
 import hot_dispatch
+import process_discovery_precheck
 import worker_identity
 
 RUN_STATE_REQUESTS = Path(".survey/work-queue/run-state/requests")
@@ -205,6 +211,39 @@ def _direct_result(root: Path, preload_id: str) -> dict[str, Any]:
     return value if isinstance(value, dict) else {}
 
 
+def _process_formal_precheck(root: Path, request_id: str) -> dict[str, Any]:
+    request_path = root / hot_dispatch.PRECHECK_REQUESTS / f"{request_id}.json"
+    result_path = root / hot_dispatch.PRECHECK_RESULTS / f"{request_id}.json"
+    existing = _read(result_path, {})
+    if isinstance(existing, dict) and str(existing.get("request_id") or "") == request_id:
+        return existing
+
+    with tempfile.TemporaryDirectory(prefix="survey-next-discovery-") as td:
+        temp = Path(td)
+        snapshot_dir = temp / "identities"
+        rejection_ledger = temp / "rejections.json"
+        build_discovery_identity_snapshot.build_snapshot(
+            root / ".survey",
+            snapshot_dir,
+        )
+        build_discovery_rejection_ledger.build_ledger(
+            root / ".survey",
+            rejection_ledger,
+        )
+        try:
+            result = process_discovery_precheck.process_request(
+                request_path,
+                snapshot_dir=snapshot_dir,
+                rejection_ledger_path=rejection_ledger,
+                repo_root=root,
+            )
+        except Exception as exc:
+            result = process_discovery_precheck.failure_result(request_path, exc)
+
+    _write(result_path, result)
+    return result
+
+
 def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
     root = Path(repo_root).resolve()
     report = _read(Path(recovery_report), {})
@@ -258,6 +297,13 @@ def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
                 materialized = hot_dispatch.materialize_discovery_prechecks(root)
                 direct = _direct_result(root, preload_id)
                 if direct.get("ok") is True and direct.get("work_start_allowed") is True:
+                    precheck = _process_formal_precheck(root, request_id)
+                    finalized = hot_dispatch.finalize_discovery_takes(root)
+                    direct = _direct_result(root, preload_id)
+                    precheck_ready = bool(
+                        precheck.get("ok") is True
+                        and precheck.get("evaluation_allowed") is True
+                    )
                     auto_next = {
                         "status": str(direct.get("status") or "precheck_pending"),
                         "work_start_allowed": True,
@@ -269,6 +315,9 @@ def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
                         "preload_result_path": direct.get("preload_result_path"),
                         "request_id": request_id,
                         "formal_precheck_result_path": direct.get("formal_precheck_result_path"),
+                        "formal_precheck_ready": precheck_ready,
+                        "inline_precheck": True,
+                        "receipt": precheck.get("receipt"),
                         "source_submission": run["source_submission"],
                     }
                     advanced.append(
@@ -279,6 +328,9 @@ def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
                             "preload_id": preload_id,
                             "request_id": request_id,
                             "materialized": materialized,
+                            "finalized": finalized,
+                            "formal_precheck_ok": precheck.get("ok") is True,
+                            "formal_precheck_ready": precheck_ready,
                         }
                     )
                 else:
