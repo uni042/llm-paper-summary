@@ -1448,14 +1448,6 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "finalization_permit_issued": bool(
             (finalization_gate.get("finalization_permit") or {}).get("issued")
         ),
-        "final_response_allowed": bool(
-            (finalization_gate.get("finalization_permit") or {}).get("issued")
-        ),
-        "worker_execution_directive": (
-            "FINAL_RESPONSE_ALLOWED"
-            if bool((finalization_gate.get("finalization_permit") or {}).get("issued"))
-            else "MUST_CONTINUE_NO_FINAL_RESPONSE"
-        ),
         "next_action": gate.get("required_action"),
         "transport_rule": (
             "A GitHub file create/update API or connector is a valid repository write transport. "
@@ -1483,8 +1475,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "If that warm bank is absent, discovery_fallback_source exposes the same selector-compatible fixed source so the next schema-v3 precheck can start immediately without passive waiting. "
             "idle_gap_forbidden=true means an asynchronous result must not be treated as permission to stop or passively wait when a prepared/fallback next action exists. "
             "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts. "
-            "Every durable run-state snapshot embeds the finalization gate result; a normal final response requires finalization_permit_issued=true. "
-            "worker_execution_directive=MUST_CONTINUE_NO_FINAL_RESPONSE is an explicit prohibition on emitting a normal final response; follow next_action instead."
+            "Every durable run-state snapshot embeds the finalization gate result for continuation and stopping decisions. "
+            "Run-state does not suppress user-facing reports; termination reporting is governed by worker-router.md."
         ),
     }
 
