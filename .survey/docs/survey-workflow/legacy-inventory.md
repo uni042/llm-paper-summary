@@ -48,7 +48,20 @@
 |`.survey/tests/test_legacy_record_bank_alias.py`|`6dd752c462e6847617e73d3fcce904479983fe28`|
 |`.survey/tests/test_legacy_scheduled_chat_lease_cap.py`|`be8d9be091febacafd1d46a2d4f4f9ad7bfbe1cc`|
 
-As of `12cc4e657bdcd1badc924858dec27f9dadc77af0`, `.survey/tests/test_legacy_scheduled_chat_lease_cap.py` was removed from `main`; the earlier test path is retained here only as evidence of the initial snapshot. No deletion is needed for that already-removed file.\n\n## 残作業
+As of `12cc4e657bdcd1badc924858dec27f9dadc77af0`, `.survey/tests/test_legacy_scheduled_chat_lease_cap.py` was removed from `main`; the earlier test path is retained here only as evidence of the initial snapshot. No deletion is needed for that already-removed file.\n\n
+## 固定スナップショットでの論文監査
+
+- 対象commit: `3139b5a59501dee401bae94b9419d5d68b2e3250`
+- レポート: `.survey/reports/legacy-paper-audit.json`
+- 対象論文: 1,026件（inference / training / survey。本文品質監査で inference+survey と training に分けて全件処理）
+- 本文品質: PASS 243 / WARN 49 / FAIL 734
+- 一覧用 `list_summary`: PASS 1,017 / WARN 9 / FAIL 0。明示値の欠落0件
+- 概要の代表結果: PASS 1,000 / FAIL 26
+- 本文FAIL理由の出現数（同一論文内で重複あり）: 手法構成要素の段落不足3,708、英語専門語75、日本語比率11、説明文量12。これは監査失敗レコードの分類であり、単純な論文件数ではない。
+- 26件の代表結果FAILと734件の本文FAILは科学的内容の再読解が要る。監査文言から自動で結果を補完しない。個別の一次資料確認を伴う修正後、全監査を再実行する。
+- 先行の棚卸しレポート `df7386...` は初回実行の履歴。現在の再現可能な基準はこの行のsource commitと、台帳JSON内の個別blob SHAである。
+
+## 残作業
 
 1. 現行mainの安定した移行基準点を定める。ワーカーが書込中のHEADを固定したままライブ移行を開始しない。
 2. 論文frontmatter/bodyを全件走査し、旧一覧形式の件数と要人手読解件数を確定する。
