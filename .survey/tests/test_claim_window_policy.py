@@ -27,6 +27,38 @@ class ClaimWindowPolicyTests(unittest.TestCase):
         self.assertFalse(claim_window_policy.should_refill(9, 10))
         self.assertTrue(claim_window_policy.should_refill(8, 10))
 
+    def test_discovery_freshness_override_is_bounded(self):
+        threshold = claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD
+        self.assertEqual(claim_window_policy.DISCOVERY_REFRESH_INTERVAL_SECONDS, 7200)
+        self.assertEqual(claim_window_policy.DISCOVERY_REFRESH_MAX_INVENTORY, 360)
+        self.assertEqual(
+            claim_window_policy.select_work_mode(
+                threshold + 11,
+                discovery_age_seconds=7199,
+            ),
+            "research",
+        )
+        self.assertEqual(
+            claim_window_policy.select_work_mode(
+                threshold + 11,
+                discovery_age_seconds=7200,
+            ),
+            "discovery",
+        )
+        self.assertEqual(
+            claim_window_policy.select_work_mode(
+                claim_window_policy.DISCOVERY_REFRESH_MAX_INVENTORY + 1,
+                discovery_age_seconds=99999,
+            ),
+            "research",
+        )
+        self.assertFalse(
+            claim_window_policy.discovery_refresh_due(
+                threshold,
+                discovery_age_seconds=None,
+            )
+        )
+
     def test_shared_stock_and_route_threshold_are_bank_independent(self):
         self.assertEqual(claim_window_policy.EXPECTED_PARALLEL_WORKERS, 6)
         self.assertEqual(claim_window_policy.shared_pool_target(), 144)
