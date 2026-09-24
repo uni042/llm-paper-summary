@@ -398,8 +398,11 @@ class SharedPreloadPoolTests(unittest.TestCase):
             self.assertEqual(assignment["job_id"], resume_job)
             self.assertEqual(assignment["record_bank"], recovery_bank)
             self.assertEqual(assignment["record_bank_recovery"], "expired-same-job")
+            adopted_claim = json.loads(
+                (root / ".survey/work-queue/claims" / f"{resume_job}.json").read_text()
+            )
             self.assertEqual(
-                assignment["resume_recovery_source"]["attempt_id"],
+                adopted_claim["resume_recovery_source"]["attempt_id"],
                 "attempt-expired-partial",
             )
             payload = json.loads(
