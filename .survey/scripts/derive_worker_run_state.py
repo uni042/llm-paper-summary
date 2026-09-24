@@ -1852,6 +1852,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "runtime_condition_attempts": request.get("runtime_condition_attempts", 0),
         "runtime_condition_detail": request.get("runtime_condition_detail", ""),
         "runtime_condition_event": request.get("runtime_condition_event", ""),
+        "runtime_condition_scope": request.get("runtime_condition_scope", ""),
         "runtime_condition_ignored_reason": runtime_condition_ignored_reason,
         "seconds_to_run_deadline": seconds_to_deadline,
         **claims,
