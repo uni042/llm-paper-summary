@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import posixpath
 import re
 from datetime import datetime
 from pathlib import Path
@@ -18,6 +19,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from list_summary import compact_list_summary
+from paper_taxonomy import canonical_lineage
 
 # ROOT is the .survey working root in production. Tests may point it at a
 # temporary repository root directly. Keep state beneath ROOT, but resolve
@@ -255,11 +257,13 @@ def paper_views():
             if p.name == "README.md" or p.name == "comparison.md":
                 continue
             rel = p.relative_to(repo).as_posix()
+            source_lineage = p.parent.name
             meta, body = front(p)
             year, month = _publication_month(meta, p)
             records.append({
                 "family": family,
-                "lineage": p.parent.name,
+                "lineage": canonical_lineage(family, source_lineage),
+                "source_lineage": source_lineage,
                 "path": rel,
                 "file": p,
                 "title": meta.get("title") or _legacy_title(body, p),
@@ -303,7 +307,7 @@ def _render_paper_list(rows, citations, base_dir):
         return ["該当なし。"]
     lines = []
     for r in rows:
-        link = Path(r["path"]).relative_to(base_dir).as_posix()
+        link = posixpath.relpath(r["path"], start=base_dir.as_posix())
         lines += [
             f"- **{_month_label(r)} · [{cell(r['title'])}]({link})**  ",
             f"  実装：{_implementation_cell(r['implementation'])} ・ リポジトリ内被引用：{citations.get(r['path'], 0)}  ",
@@ -411,6 +415,9 @@ def _render_family_overview(family, rows):
     if family_readme.exists():
         content = family_readme.read_text(encoding="utf-8")
         content = re.sub(r"収録論文: \*\*\d+本\*\*", f"収録論文: **{len(rows)}本**", content)
+        for lineage, lineage_rows in grouped.items():
+            pattern = r"(\]\(" + re.escape(f"{lineage}/") + r"\)\s*—\s*)\d+本"
+            content = re.sub(pattern, lambda m, count=len(lineage_rows): m.group(1) + str(count) + "本", content)
         family_readme.write_text(content, encoding="utf-8")
     block(f"papers/{family}/README.md", "\n".join(lines))
 

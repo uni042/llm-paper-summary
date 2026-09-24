@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-from survey import _render_taxonomy_list  # noqa: E402
+from survey import _render_paper_list, _render_taxonomy_list  # noqa: E402
 
 
 class SurveyIndexGroupingTest(unittest.TestCase):
@@ -76,6 +76,17 @@ class SurveyIndexGroupingTest(unittest.TestCase):
         three_years = rendered[rendered.index(three_year_heading):]
         self.assertIn("three-years-boundary", three_years)
         self.assertNotIn("two-years-boundary", three_years)
+
+    def test_canonical_readme_links_to_paper_kept_in_legacy_directory(self) -> None:
+        row = self._record("legacy-paper", 2026, 9)
+        row["path"] = "papers/inference/03-kv-cache/legacy-paper.md"
+        rendered = _render_paper_list(
+            [row],
+            {row["path"]: 0},
+            Path("papers/inference/07-kv-cache-optimization-compression"),
+        )
+
+        self.assertIn("../03-kv-cache/legacy-paper.md", rendered)
 
     def test_paper_entries_use_mobile_friendly_vertical_blocks(self) -> None:
         row = self._record("mobile-paper", 2026, 9)

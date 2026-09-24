@@ -26,6 +26,7 @@ import claim_state  # noqa: E402
 import discovery_preload_queue  # noqa: E402
 import discovery_search_history  # noqa: E402
 import represented_paper_index  # noqa: E402
+from paper_taxonomy import canonicalize_paper_path  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "work-queue"
@@ -947,6 +948,9 @@ def make_research_job(c: dict, parent: str):
     if not key:
         return False
     jid = stable_id("job-research", key)
+    paper_path = c.get("paper_path")
+    if isinstance(paper_path, str) and paper_path:
+        paper_path = canonicalize_paper_path(paper_path)
     return add_job({
         "job_id": jid,
         "type": "research",
@@ -959,7 +963,7 @@ def make_research_job(c: dict, parent: str):
         "identifiers": list(c.get("identifiers") or []),
         "title": c.get("title"),
         "source_url": c.get("source_url"),
-        "paper_path": c.get("paper_path"),
+        "paper_path": paper_path,
         "selection_reason": c.get("reason"),
         "priority_breakdown": c.get("priority_breakdown"),
         "status": "ready",
