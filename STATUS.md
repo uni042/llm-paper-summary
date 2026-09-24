@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-25 00:15:01 JST**
+> 自動生成: **2026-09-25 00:21:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -50,7 +50,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（15時間39分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（15時間45分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -70,10 +70,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **2** | **3** | **0** | **0** | **122** | **0** | — |
+| Research | **1** | **3** | **0** | **0** | **122** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **28** | **3** | **3** | **0** | **0** | **0** | **5** |
-| 合計 | **30** | **6** | **3** | **0** | **122** | **0** | **5** |
+| 合計 | **29** | **6** | **3** | **0** | **122** | **0** | **5** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -88,11 +88,6 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - result: `.survey/work-queue/results/research/attempt-preload-24504aa3d0d6716cf366c75b.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/research/attempt-preload-24504aa3d0d6716cf366c75b.json`
   - paper: `papers/inference/99-other-inference-systems/2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md`
-- **09-24 18:15:31 JST** [research] `arXiv:2609.26796` — Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs
-  - job: `.survey/work-queue/jobs/job-research-41d37332b16e3d57.json`
-  - result: `.survey/work-queue/results/research/attempt-preload-3ee424a7b2b36c6924101628.json` (`ok=true`)
-  - submission: `.survey/work-queue/submissions/research/attempt-preload-3ee424a7b2b36c6924101628.json`
-  - paper: `papers/inference/99-other-inference-systems/2026-2609.26796-flash-dllm-io-aware-kv-caching-and-parallel-decoding-for-fast-memory-efficient-diffusion-llms.md`
 
 ### Audit
 
