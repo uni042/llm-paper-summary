@@ -277,7 +277,10 @@ def _terminally_rejected_submission_paths(
 
     These immutable submissions remain useful failure history. They are not a
     current queue-consistency anomaly once the processor has durably rejected
-    the exact attempt as non-retryable content validation.
+    the exact attempt as non-retryable content validation. The same applies to
+    an exact non-retryable state/transport guard proving that a stale status-only
+    descriptor referenced a job that no longer exists; the immutable failure is
+    then the terminal historical record, not live queue work.
     """
     rejected: set[Path] = set()
     for result in results:
@@ -286,7 +289,9 @@ def _terminally_rejected_submission_paths(
             continue
         if payload.get("retryable") is not False:
             continue
-        if str(payload.get("failure_class") or "").strip() != "content_validation":
+
+        failure_class = str(payload.get("failure_class") or "").strip()
+        if failure_class not in {"content_validation", "state_or_transport_guard"}:
             continue
 
         submission = evidence._submission_for_result(repo_root, result, submissions)
@@ -298,6 +303,13 @@ def _terminally_rejected_submission_paths(
             continue
         if result["job_id"] != submission["job_id"]:
             continue
+
+        if failure_class == "state_or_transport_guard":
+            job_id = str(submission["job_id"] or "").strip()
+            error = str(payload.get("error") or "").strip()
+            if not job_id or error != f"ValueError: unknown job_id: {job_id}":
+                continue
+
         rejected.add(submission["path"])
     return rejected
 
