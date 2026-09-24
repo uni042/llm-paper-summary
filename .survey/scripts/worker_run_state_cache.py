@@ -729,13 +729,25 @@ def write_latest_pointer(root: Path, result_path: Path, result: dict[str, Any]) 
         # New snapshots must already carry canonical time. We only reinterpret a
         # legacy poisoned current pointer for ordering so it cannot block a newer run.
         return False
-    current_generation = int(current.get("snapshot_generation", -1) or -1) if isinstance(current, dict) else -1
+    current_generation = int(current.get("snapshot_generation", -1)) if isinstance(current, dict) else -1
     new_generation = int(result.get("snapshot_generation", 0) or 0)
+    current_processed = parse_time(current.get("processed_at")) if isinstance(current, dict) else None
+    new_processed = parse_time(result.get("processed_at"))
     if current_start is not None and new_start is not None:
         if current_start > new_start:
             return False
-        if current_start == new_start and current_generation > new_generation:
-            return False
+        if current_start == new_start:
+            if current_generation > new_generation:
+                return False
+            if current_generation == new_generation:
+                # process_pending() revisits every historical request in filename
+                # order.  Without this tie-break an older result processed later
+                # can roll latest/<worker>.json back from a freshly derived
+                # Discovery continuation snapshot to the run's initial snapshot.
+                if current_processed is not None and (
+                    new_processed is None or current_processed >= new_processed
+                ):
+                    return False
     payload = {
         "schema_version": 1,
         "worker_id": worker_id,
