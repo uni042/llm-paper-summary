@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-00-dc2fe30c-07",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-a281208d9562176a",
+      "claim_id": "claim-12ff44708ddbccafc8f6f7e9",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-12ff44708ddbccafc8f6f7e9",
+      "claimed_at": "2026-09-22T07:19:54+00:00",
+      "expires_at": "2026-09-22T08:49:54+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-a281208d9562176a"
+      ],
+      "job": {
+        "job_id": "job-research-a281208d9562176a",
+        "type": "research",
+        "parent_job_id": "job-4d9b4b9bf02ce43f",
+        "priority": 98,
+        "canonical_id": "arXiv:2608.08910",
+        "arxiv_id": "2608.08910",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+        "source_url": "https://arxiv.org/abs/2608.08910",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2608.08910-tied-trit-planes-constraining-ptqtp-to-a-uniform-nine-level-quantizer-with-a-persistent-folded-format-for-disk-streamed.md",
+        "selection_reason": "Recent disk-streamed MoE serving method combining persistent low-bit format with storage-backed execution; directly relevant to SSD/offload and MoE inference.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:25:05+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T07:19:54+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "refcuration-sizeprobe-20260920-300",
+  "collector_id": "repository-reference-size-probe",
+  "run_key": "manual-size-probe-2026-09-20",
+  "axis": "structured references pool size probe at cursor 300",
+  "provider": "repository_references",
+  "source_url": "repository://structured-references",
+  "target_unseen": 1,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "400",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ce07d2aef3f3e2a6c01ef4b724b9357af28e59c1",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 5,
+  "intra_batch_alias_duplicate_filtered_count": 5,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "results": [
+    {
+      "canonical_id": "arXiv:2505.11432",
+      "identity_tokens": [
+        "arXiv:2505.11432"
+      ],
+      "arxiv_id": "2505.11432",
+      "source_url": "https://arxiv.org/abs/2505.11432",
+      "relation_count": 5,
+      "linked_from": [
+        "papers/inference/04-moe-parallelism-communication/2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md",
+        "papers/inference/04-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md",
+        "papers/inference/06-moe-inference-expert-offloading/2026-2603.28768-craft-cost-aware-expert-replication.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md",
+        "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+      ],
+      "linked_from_titles": [
+        "CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving",
+        "Efficient Training on Multiple Consumer GPUs with RoundPipe",
+        "Epoch: Compiling Diffusion Blocks for Sparse MoE Serving",
+        "Reliable and Resilient Collective Communication Library for LLM Training and Serving",
+        "Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns"
+      ],
+      "linked_from_lineages": [
+        "04-moe-parallelism-communication",
+        "MoE inference / expert parallelism / expert replication / load balancing",
+        "activation-aware expert placement and multi-node MoE inference",
+        "llm-serving-scheduling-disaggregation",
+        "オフロード／階層メモリ"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.11432",
+      "identity_tokens": [
+        "id:arXiv:2505.11432",
+        "url:https://arxiv.org/abs/2505.11432"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2505.11432",
+        "identity_tokens": [
+          "arXiv:2505.11432"
+        ],
+        "arxiv_id": "2505.11432",
+        "source_url": "https://arxiv.org/abs/2505.11432",
+        "relation_count": 5,
+        "linked_from": [
+          "papers/inference/04-moe-parallelism-communication/2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md",
+          "papers/inference/04-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md",
+          "papers/inference/06-moe-inference-expert-offloading/2026-2603.28768-craft-cost-aware-expert-replication.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md",
+          "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+        ],
+        "linked_from_titles": [
+          "CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving",
+          "Efficient Training on Multiple Consumer GPUs with RoundPipe",
+          "Epoch: Compiling Diffusion Blocks for Sparse MoE Serving",
+          "Reliable and Resilient Collective Communication Library for LLM Training and Serving",
+          "Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns"
+        ],
+        "linked_from_lineages": [
+          "04-moe-parallelism-communication",
+          "MoE inference / expert parallelism / expert replication / load balancing",
+          "activation-aware expert placement and multi-node MoE inference",
+          "llm-serving-scheduling-disaggregation",
+          "オフロード／階層メモリ"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:801a7aa04a0b945986a0c0c22675ef8db61b40e0c44a613df670ad796aeffc25",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

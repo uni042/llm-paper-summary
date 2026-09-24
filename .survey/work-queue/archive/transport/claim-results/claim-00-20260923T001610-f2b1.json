@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-00-20260923T001610-f2b1",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-e434f2731ff9316c",
+      "claim_id": "claim-c38aefc50c08da92ba7b2ee0",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-c38aefc50c08da92ba7b2ee0",
+      "claimed_at": "2026-09-22T15:16:29+00:00",
+      "expires_at": "2026-09-22T16:46:29+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-e434f2731ff9316c"
+      ],
+      "job": {
+        "job_id": "job-research-e434f2731ff9316c",
+        "type": "research",
+        "parent_job_id": "job-03b8bacb3eae4f0a",
+        "priority": 97,
+        "canonical_id": "DOI:10.1109/TON.2026.3704584",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Efficient Mixture-of-Experts Model Inference at the Edge via Adaptive Expert Merging",
+        "source_url": "https://doi.org/10.1109/TON.2026.3704584",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-adaptive-expert-merging-edge.md",
+        "selection_reason": "edge serverごとのresourceとtask preferenceに応じてexpert mergingを適応させ、task offloadingとjoint optimizationする動的expert構成手法。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T11:38:21+00:00"
+      },
+      "record_bank": "g",
+      "record_bank_root": ".survey/work-queue/records/chat-record-g",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-g/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-g/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-g/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-g/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-g/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T15:16:29+00:00",
+  "checkpoint_released": 0
+}

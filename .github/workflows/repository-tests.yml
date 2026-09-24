@@ -1,0 +1,76 @@
+name: Repository regression tests
+
+on:
+  push:
+    paths:
+      - '.survey/scripts/**/*.py'
+      - '.survey/tests/**/*.py'
+      - '.survey/scripts/requirements.txt'
+      - '.survey/docs/survey-workflow/worker-router.md'
+      - '.survey/docs/survey-workflow/*.md'
+      - '.github/workflows/*.yml'
+      - 'papers/**/*.md'
+  pull_request:
+    paths:
+      - '.survey/scripts/**/*.py'
+      - '.survey/tests/**/*.py'
+      - '.survey/scripts/requirements.txt'
+      - '.survey/docs/survey-workflow/worker-router.md'
+      - '.survey/docs/survey-workflow/*.md'
+      - '.github/workflows/*.yml'
+      - 'papers/**/*.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Compile survey scripts
+        run: python -m compileall -q .survey/scripts
+
+      - name: Validate workflow YAML
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+          for path in sorted(Path('.github/workflows').glob('*.yml')):
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+              print(path)
+          PY
+
+      - name: Run all regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_*.py'
+
+      - name: Audit live metadata coverage
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out /tmp/metadata-coverage.json --strict
+
+      - name: Build live repository inventory
+        run: python .survey/scripts/build_repository_inventory.py --root . --output /tmp/repository-inventory.json --source-commit "${GITHUB_SHA}"
+
+      - name: Run live repository consistency check
+        run: python .survey/scripts/check_repository.py --root . --inventory /tmp/repository-inventory.json --report /tmp/repository-consistency.json
+
+      - name: Show repository consistency findings
+        if: failure()
+        run: |
+          if [ -f /tmp/repository-consistency.json ]; then
+            cat /tmp/repository-consistency.json
+          fi

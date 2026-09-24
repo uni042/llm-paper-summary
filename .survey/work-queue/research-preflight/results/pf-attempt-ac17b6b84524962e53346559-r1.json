@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-ac17b6b84524962e53346559-r1",
+  "kind": "research",
+  "attempt_id": "attempt-ac17b6b84524962e53346559",
+  "job_id": "job-research-3bf50f659a80056e",
+  "record_bank": "g",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:bb9a351a044c89acc13bc2d1c085fe25b897d5e1832de995e4266fc8b4d31327",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "6c99a0e2a0e7faf15091000c07633ddc81f7552e"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "b195a45f0add0f7a285c6abe47116d4e8a27a3a6"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "3db571ce7c9953346247e5139180f63f0ac7600a"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "e02606225dcca9e5e79e0c86d252cc42c0afd46b"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "2b1f8b7d7426aa95995d7e069d6bed9b65bd421e"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview is required",
+    "problem_method.components is required",
+    "problem_method.system_design is required",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components requires at least two major mechanisms",
+    "evaluation requires hardware/software/methodology evidence",
+    "evaluation.scope is required to distinguish real-hardware/simulation and generalization limits",
+    "results.overview must explain the main result and its practical meaning",
+    "results.key_results[0] must be an object",
+    "results.key_results[1] must be an object",
+    "results.key_results[2] must be an object",
+    "results.key_results[3] must be an object",
+    "results.key_results[4] must be an object",
+    "results.negative_results is required; record degradation and boundary conditions",
+    "results.quality_impact is required; distinguish lossless from approximate methods",
+    "positioning.differences is required",
+    "positioning.research_positioning is required"
+  ],
+  "checked_at": "2026-09-22T13:04:05+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

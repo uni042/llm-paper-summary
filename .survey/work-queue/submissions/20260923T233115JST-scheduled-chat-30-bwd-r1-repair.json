@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "discovery_precheck": {
+    "request_id": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260923T233115JST-scheduled-chat-30-bwd-r1-repair.json",
+    "receipt": "sha256:637daa5834c405fccacfeafdd8a306f021704f7037b52a8e080a7238fb18f6f9"
+  },
+  "candidates": [{
+    "canonical_id": "arXiv:2606.19348",
+    "arxiv_id": "2606.19348",
+    "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
+    "source_url": "https://arxiv.org/abs/2606.19348",
+    "paper_path": "papers/inference/99-other-inference-systems/2026-2606.19348-deepseek-v4-million-token-context-intelligence.md",
+    "priority": 90,
+    "priority_breakdown": {"base":55,"lineage":20,"recency":15,"venue":0,"total":90},
+    "reason": "既存の投機的復号・長文脈推論系統から直接参照される2026年のMoEモデル技術報告。圧縮疎注意と強圧縮注意を組み合わせ、100万トークン文脈でDeepSeek-V3.2比27%の単一トークン推論FLOPs、10%のKVキャッシュを報告しており、推論効率系統への直接性が高い。"
+  }],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
+    "round": "20260923T233115JST-scheduled-chat-30-bwd-r1-repair",
+    "axis": "repository-wide structured references for LLM inference systems",
+    "query_summary": "repository_references schema v3で固定sourceを走査し、許可された未評価20件を軽量評価。推論効率への直接性・新しさが特に高いDeepSeek-V4を候補化した。",
+    "candidate_count":20,
+    "duplicate_filtered_count":0,
+    "duplicate_canonical_ids":[],
+    "accepted_canonical_ids":["arXiv:2606.19348"],
+    "next_axis_hint":"same-run forward citation refresh",
+    "empty_round_reason":null,
+    "round_submission_index":1,
+    "round_submission_count":1,
+    "search_windows":[{"topic":"structured-references","source":"repository_references","date_range":"repository-wide","category":"inference-systems","citation_direction":"backward","query_family":"structured-reference-curation","raw_result_count":100,"unseen_result_count":20,"duplicate_filtered_count":25,"rejection_filtered_count":1,"candidate_evaluation_count":20,"candidate_accepted_count":1,"position":"offset-0"}]
+  }
+}

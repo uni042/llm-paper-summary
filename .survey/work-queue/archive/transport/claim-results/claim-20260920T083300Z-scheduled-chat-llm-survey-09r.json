@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T083300Z-scheduled-chat-llm-survey-09r",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-0ad72717e3fdb154",
+      "claim_id": "claim-57d5d091923e08545a3ff388",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-57d5d091923e08545a3ff388",
+      "claimed_at": "2026-09-20T08:33:20+00:00",
+      "expires_at": "2026-09-20T10:03:20+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-0ad72717e3fdb154"
+      ],
+      "job": {
+        "job_id": "job-research-0ad72717e3fdb154",
+        "type": "research",
+        "parent_job_id": "job-fa9e3ba772afe5d8",
+        "priority": 94,
+        "canonical_id": "arXiv:2405.01481",
+        "arxiv_id": "2405.01481",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment",
+        "source_url": "https://arxiv.org/abs/2405.01481",
+        "paper_path": "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md",
+        "selection_reason": "Scalable alignment training toolkit with optimized RLHF/DPO/etc. implementations demonstrated up to thousand-GPU scale and 405B-class models.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T04:01:36+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[1].description is too short | problem_method.components[2].description is too short",
+        "validation_errors": [
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-20T08:32:40+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-bbc6c14d4fcb44b8a7c50e4e"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-bbc6c14d4fcb44b8a7c50e4e.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T08:33:20+00:00",
+  "checkpoint_released": 0
+}

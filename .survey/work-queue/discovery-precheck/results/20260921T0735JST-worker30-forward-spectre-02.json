@@ -1,0 +1,96 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0735JST-worker30-forward-spectre-02",
+  "collector_id": "worker30-20260921T0730JST-forward-spectre",
+  "run_key": "2026-09-21T07:30:58+09:00",
+  "axis": "recent speculative serving SPECTRE forward neighborhood",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=SPECTRE%20Hybrid%20Ordinary-Parallel%20Speculative%20Serving%20Resource-Efficient%20LLM%20Inference&sort=relevance_score:desc",
+  "target_unseen": 20,
+  "page_size": 25,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "aa2ffeae4b656fc41dbc8afb903b021f29fa8049",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T22:34:01.071478+00:00",
+  "results": [
+    {
+      "title": "Synthesis-Enabled Reasoning: Scalable Automated Formal Verification for Hardware-Software Security",
+      "source_url": "https://escholarship.org/uc/item/2gd921ph",
+      "year": 2026,
+      "published": "2026-05-01",
+      "canonical_id": "OpenAlex:W7213477036",
+      "authors": [
+        "Adwait Godbole"
+      ]
+    },
+    {
+      "title": "Natural Othering of Plants: Human and Non-Human Decoupling in Artistic Research",
+      "source_url": "http://orcid.org/0000-0003-3540-7145>",
+      "year": 2026,
+      "published": "2026-05-21",
+      "canonical_id": "OpenAlex:W7167989915",
+      "authors": [
+        "Ian Brown"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:OpenAlex:W7213477036",
+      "identity_tokens": [
+        "id:OpenAlex:W7213477036",
+        "title:synthesisenabled reasoning scalable automated formal verification for hardwaresoftware security",
+        "url:https://escholarship.org/uc/item/2gd921ph"
+      ],
+      "record": {
+        "title": "Synthesis-Enabled Reasoning: Scalable Automated Formal Verification for Hardware-Software Security",
+        "source_url": "https://escholarship.org/uc/item/2gd921ph",
+        "year": 2026,
+        "published": "2026-05-01",
+        "canonical_id": "OpenAlex:W7213477036",
+        "authors": [
+          "Adwait Godbole"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7167989915",
+      "identity_tokens": [
+        "id:OpenAlex:W7167989915",
+        "title:natural othering of plants human and nonhuman decoupling in artistic research",
+        "url:http://orcid.org/0000-0003-3540-7145>"
+      ],
+      "record": {
+        "title": "Natural Othering of Plants: Human and Non-Human Decoupling in Artistic Research",
+        "source_url": "http://orcid.org/0000-0003-3540-7145>",
+        "year": 2026,
+        "published": "2026-05-21",
+        "canonical_id": "OpenAlex:W7167989915",
+        "authors": [
+          "Ian Brown"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b04ed188fa02d26ad588a8f9820e5766fc18368ed371acfd733ea8ea01907acd",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T020258Z-scheduled-chat-discovery-specialist-11",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-9deede0a4d81ad54",
+      "claim_id": "claim-c5a1355fbf04e9cb0fd675f4",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-c5a1355fbf04e9cb0fd675f4",
+      "claimed_at": "2026-09-19T02:03:38+00:00",
+      "expires_at": "2026-09-19T03:33:38+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-9deede0a4d81ad54"
+      ],
+      "job": {
+        "job_id": "job-research-9deede0a4d81ad54",
+        "type": "research",
+        "parent_job_id": "job-9b8c216a46edd0b5",
+        "priority": 84,
+        "canonical_id": "DOI:10.1109/LCA.2026.3660969",
+        "title": "H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference",
+        "source_url": "https://doi.org/10.1109/LCA.2026.3660969",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-27b000808907-h3-hybrid-architecture-using-high-bandwidth-memory-and-high-bandwidth-flash-for-cost-efficient-llm-inference.md",
+        "selection_reason": "IEEE Computer Architecture Letters 2026の査読論文。HBMとHigh Bandwidth Flashを役割分担し、巨大なread-only data、とくにshared precomputed KV cacheをHBFへ置くhybrid architectureを評価する。HBM-only比最大2.69x throughput-per-powerを報告し、HBF階層memory系統の基礎候補として重要。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T19:02:33+00:00",
+        "blocker": "一次資料全文を安全に取得できなかった。DOI 10.1109/LCA.2026.3660969のIEEE掲載情報は確認できたが、本文全文へ到達できず、題名・DOI・著者で探索してもarXivや著者公式の同一論文全文は確認できなかった。後続一次論文FLINTやHBFlexがH3を先行研究として引用していることは確認したが、それらの記述をH3本文の代替証拠には使用しなかった。検索で得られた二次解説も全文精読の代わりにせず、推測による5-slot生成を避けて再試行可能なblockedとして保存する。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-5dff7f0f4fd678a8b6c50581.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-18T20:18:32+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-18T20:18:32+00:00",
+            "reason": "一次資料全文を安全に取得できなかった。DOI 10.1109/LCA.2026.3660969のIEEE掲載情報は確認できたが、本文全文へ到達できず、題名・DOI・著者で探索してもarXivや著者公式の同一論文全文は確認できなかった。後続一次論文FLINTやHBFlexがH3を先行研究として引用していることは確認したが、それらの記述をH3本文の代替証拠には使用しなかった。検索で得られた二次解説も全文精読の代わりにせず、推測による5-slot生成を避けて再試行可能なblockedとして保存する。"
+          }
+        ],
+        "last_blocked_at": "2026-09-18T20:18:32+00:00",
+        "retry_queued_at": "2026-09-18T23:25:01+00:00"
+      },
+      "record_bank": "d",
+      "record_bank_root": ".survey/work-queue/records/chat-record-d",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-d/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T02:03:38+00:00",
+  "checkpoint_released": 0
+}

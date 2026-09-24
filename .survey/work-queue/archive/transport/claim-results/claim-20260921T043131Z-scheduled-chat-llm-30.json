@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T043131Z-scheduled-chat-llm-30",
+  "worker_id": "scheduled-chat-llm-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-68365ee603a68033",
+      "claim_id": "claim-d473f0ab9809231abdaf6376",
+      "worker_id": "scheduled-chat-llm-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-d473f0ab9809231abdaf6376",
+      "claimed_at": "2026-09-21T04:32:31+00:00",
+      "expires_at": "2026-09-21T06:02:31+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-68365ee603a68033"
+      ],
+      "job": {
+        "job_id": "job-research-68365ee603a68033",
+        "type": "research",
+        "parent_job_id": "job-03c06d8367dd20c5",
+        "priority": 99,
+        "canonical_id": "arXiv:2608.04974",
+        "arxiv_id": "2608.04974",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks",
+        "source_url": "https://www.semanticscholar.org/paper/36ed80d839d9afc3a02f77f54c9aadc6d7d3865b",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2608.04974-asymspec-efficient-cloud-edge-speculative-decoding-over-asymmetric-networks.md",
+        "selection_reason": "cloud-edge投機的復号でuplink非対称性を考慮したverification protocolとconfirmed-prefix pipelineを設計し、3 network profileで最強baseline比2.82–28.03倍のoutput-token throughput。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:11:14+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T04:32:31+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T031500Z-scheduled-chat-llm-survey-11g",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-8fc74c0fbb46c30e",
+      "claim_id": "claim-391a60b20009f8118bae73b5",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-391a60b20009f8118bae73b5",
+      "claimed_at": "2026-09-20T03:11:37+00:00",
+      "expires_at": "2026-09-20T04:41:37+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-8fc74c0fbb46c30e"
+      ],
+      "job": {
+        "job_id": "job-research-8fc74c0fbb46c30e",
+        "type": "research",
+        "parent_job_id": "job-d61d05a54a7f645b",
+        "priority": 93,
+        "canonical_id": "arXiv:2406.10774",
+        "arxiv_id": "2406.10774",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2406.10774",
+        "paper_path": "papers/inference/10-sparse-attention/2024-2406.10774-quest.md",
+        "selection_reason": "Query-aware sparse attention system that selects critical KV pages to reduce KV loading and long-context inference latency.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:22:12+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T03:11:37+00:00",
+  "checkpoint_released": 0
+}

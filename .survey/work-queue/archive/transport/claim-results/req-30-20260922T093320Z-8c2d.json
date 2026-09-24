@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-30-20260922T093320Z-8c2d",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-55e652fd722a1d9f",
+      "claim_id": "claim-fb73ed3108593d95cd494336",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-fb73ed3108593d95cd494336",
+      "claimed_at": "2026-09-22T09:33:01+00:00",
+      "expires_at": "2026-09-22T11:03:01+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-55e652fd722a1d9f"
+      ],
+      "job": {
+        "job_id": "job-research-55e652fd722a1d9f",
+        "type": "research",
+        "parent_job_id": "job-ccd6957cbc0e3f2b",
+        "priority": 98,
+        "canonical_id": "DOI:10.1109/JIOT.2026.3709703",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Co-Optimizing Request Scheduling and KV Caching for Edge LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/f25ba2c420a573830f2b4b2f30dd2fcc3adffeb2",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-de817f8d0333-co-optimizing-request-scheduling-and-kv-caching-for-edge-llm-serving.md",
+        "selection_reason": "multinode edge LLM servingでblock-level KV cachingとrequest schedulingを共同最適化し、平均TTFTを最大54.02%削減。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:11:49+00:00"
+      },
+      "record_bank": "g",
+      "record_bank_root": ".survey/work-queue/records/chat-record-g",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-g/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-g/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-g/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-g/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-g/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T09:33:01+00:00",
+  "checkpoint_released": 0
+}

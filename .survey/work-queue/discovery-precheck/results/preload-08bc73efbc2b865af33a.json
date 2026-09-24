@@ -1,0 +1,850 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-08bc73efbc2b865af33a",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-08bc73efbc2b865af33a",
+  "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "200",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "51858c8c5eb01ad993c2a980a90802f70032df89",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 9,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T15:32:10.875412+00:00",
+  "preload_id": "preload-08bc73efbc2b865af33a",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving",
+      "source_url": "https://www.semanticscholar.org/paper/67cbff0af7e609348691d3a66fb276fea4bc3146",
+      "year": 2026,
+      "published": "2026-05-25",
+      "abstract": "Diffusion-based generation is increasingly powering production content pipelines; however, deploying these models at scale remains a significant challenge. Model weights frequently exceed the memory capacity of commodity GPUs, while the encoder, diffusion transformer (DiT), and decoder stages exhibit highly imbalanced computational and memory footprints. A natural remedy is disaggregated serving-running stages as separate services on heterogeneous GPUs-yet this introduces new bottlenecks, including stage handoff overheads and fast-changing workloads that make cross-stage provisioning and scheduling brittle. This paper presents DisagFusion, enabling asynchronous pipeline parallelism and elastic scheduling for disaggregated diffusion serving. First, DisagFusion introduces asynchronous pipeline parallelism that overlaps computation and stage-to-stage communication to reduce pipeline bubbles and mitigate network jitter. Second, DisagFusion employs a hybrid instance scheduling strategy that combines lightweight performance prediction with runtime feedback to continuously rebalance instance ratio across stages under workload shifts. We implement DisagFusion and evaluate it with modern diffusion models. Compared to a monolithic baseline, DisagFusion improves throughput by 3.4x-20.5x and reduces end-to-end latency by 18.5x, while enabling flexible, cost-efficient deployment across heterogeneous GPUs.",
+      "canonical_id": "arXiv:2605.25550",
+      "arxiv_id": "2605.25550",
+      "authors": [
+        "Han-Tian Zha",
+        "Teng Ma",
+        "Yang Yong",
+        "Haiwen Fu",
+        "Ruiyang Ma",
+        "Wei Gao",
+        "Ruihao Gong",
+        "Xianglong Liu",
+        "Wei Wang",
+        "Yun-Peng Chai"
+      ]
+    },
+    {
+      "title": "A Token/KV-Cache Communication Media Selection and Resource Allocation Strategy for Multi-Agent Collaboration",
+      "source_url": "https://www.semanticscholar.org/paper/61fd166dfbb246a99a1c466adf157edc05c64f4c",
+      "year": 2026,
+      "published": "2026-05-25",
+      "abstract": "The convergence of large language models (LLMs) with 6G networks is fostering a paradigm of autonomous multi-agent cooperation, which in turn is expected to substantially increase east-west traffic. Although latent-space interaction mechanisms can enable more efficient collaboration than symbolic natural-language (NL) exchanges, prior work often abstracts away the associated communication overhead under practical wireless constraints. In embodied multi-agent settings, heterogeneous interaction media incur disparate inference and transmission costs, thereby inducing an inherent end-to-end (E2E) latency trade-off. To address this, we propose a joint design that integrates communication-media selection with wireless resource allocation. Through analytical characterization and simulation-based evaluation, we show that neither token-based transmission nor key-value (KV) cache-based transmission is uniformly optimal across operating regimes, as performance depends critically on system parameters such as available computational resources and channel conditions. Accordingly, we formulate a joint optimization problem aimed at minimizing the E2E latency of multi-agent collaboration and develop a low-complexity joint media selection and resource allocation (JMSRA) algorithm. Numerical results further confirm that, by adaptively coordinating the interaction media and bandwidth allocation over heterogeneous links, the proposed scheme achieves markedly reduced E2E latency relative to conventional NL-only and KV-cache-only baselines, enabling efficient and robust multi-agent collaboration in future wireless networks.",
+      "canonical_id": "arXiv:2605.25422",
+      "arxiv_id": "2605.25422",
+      "authors": [
+        "Li-Peng Dai",
+        "Lu-Ping Xiang",
+        "Kun Yang"
+      ]
+    },
+    {
+      "title": "AdaCGen: Heterogeneity-Aware Layer Management for Efficient KV Cache Offloading in LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/801324b1c88cdd91c41a7a3db971460e7f575758",
+      "year": 2026,
+      "published": "2026-05-24",
+      "abstract": "The growing demand for large language models (LLMs) in long-sequence, large-batch applications intensifies memory bottlenecks from key-value (KV) cache during inference. While KV cache offloading to host memory alleviates GPU memory constraints, limited PCIe bandwidth creates severe data transfer bottlenecks during full KV cache fetching. Recent advances mitigate this issue by leveraging attention sparsity to selectively transfer only critical KV pairs, combined with prefetching to overlap computation and transfer. However, these approaches overlook heterogeneous attention sparsity across layers, thereby causing imbalanced transfer loads and suboptimal pipeline utilization. To address these computation-transfer imbalances, we propose an adaptive layer classification management strategy. By identifying transfer-dominant layers and applying computation-transfer co-optimization, our method reduces their data transfer volume by 3.56×. Experiments demonstrate up to 1.34–1.59× lower inference latency compared to state-of-the-art KV cache offloading systems.",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562764",
+      "doi": "10.1109/ISCAS66217.2026.11562764",
+      "authors": [
+        "Yujiao Wang",
+        "J. Guo",
+        "Zongjie Wang",
+        "Yujuan Tan"
+      ]
+    },
+    {
+      "title": "Convex Optimization for Alignment and Preference Learning on a Single GPU",
+      "source_url": "https://www.semanticscholar.org/paper/a4e4f3c590c6dc032f7e732c25e362fba073e713",
+      "year": 2026,
+      "published": "2026-05-22",
+      "abstract": "Fine-tuning large language models (LLMs) to align with human preferences has driven the success of systems such as Gemini and ChatGPT. However, approaches like Reinforcement Learning from Human Feedback (RLHF) remain computationally expensive and complex. Direct Preference Optimization (DPO) offers a simpler alternative but has limitations such as inconsistent ranking accuracy, high dependence on GPU resources, and expensive hyperparameter tuning. We propose the Convex Optimization for Alignment and Preference Learning Algorithm (COALA): a novel lightweight strategy with strong theoretical guarantees. By leveraging the convex optimization reformulation of neural networks, COALA eliminates the need for a reference model and obtains significant reduction in both training time and VRAM consumption, thus enabling efficient training on a single GPU. Experiments across four datasets--including a 26621-sample synthetic Educational Feedback dataset--and six models (including Llama-3.1-8B) demonstrate COALA's competitive performance and efficiency while utilizing as little as ~17.6% of DPO's total TFLOPs. COALA exhibits stable, monotonically increasing rewards and reaches peak margins in significantly shorter time in comparison to traditional methods such as DPO and ORPO. To the best of our knowledge, this is the first time convex optimization has been effectively applied to preference fine-tuning of LLMs.",
+      "canonical_id": "arXiv:2605.23244",
+      "arxiv_id": "2605.23244",
+      "authors": [
+        "Miria Feng",
+        "Mert Pilanci"
+      ]
+    },
+    {
+      "title": "ArborKV: Structure-Aware KV Cache Management for Scaling Tree-based LLM Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/cadfad4387c4c186621830349ecc1204f0280616",
+      "year": 2026,
+      "published": "2026-05-21",
+      "abstract": "Recent progress in LLM reasoning has increasingly shifted from single-pass generation to explicit search over intermediate reasoning states. Tree-of-Thoughts (ToT) organizes inference to tree-structured search with branching and backtracking, but it substantially amplifies the Key--Value (KV) cache: retaining KV states for a frontier of partial trajectories quickly becomes a memory bottleneck that limits throughput and constrains search depth and width under fixed hardware budgets. We address this challenge by observing that KV reuse in ToT-style inference is governed by search dynamics: near-term decoding depends primarily on the active branch and its ancestors, whereas inactive subtrees have low short-term reuse probability yet must remain recoverable for backtracking. Motivated by this, we propose ArborKV, a structure-aware eviction framework that couples a lightweight value estimator with a tree-aware allocation policy, and performs purely token-extractive eviction with lazy rehydration to support revisits. Experiments on ToT-style reasoning benchmarks show that ArborKV achieves up to ~4x peak KV-memory reduction while preserving near-full-retention accuracy, enabling larger search configurations under fixed device budgets that would otherwise run out of memory.",
+      "canonical_id": "arXiv:2605.22106",
+      "arxiv_id": "2605.22106",
+      "authors": [
+        "Ye-Qiu Chen",
+        "Ziyan Liu",
+        "Zhen Huang",
+        "Runquan Gui",
+        "Hong Wang",
+        "Lei Liu"
+      ]
+    },
+    {
+      "title": "APS: Bias-Controlled Adaptive Prototype Simulation for Population-Scale LLM Agents",
+      "source_url": "https://www.semanticscholar.org/paper/c6961cf53663ef2e2ceb7a45a3503a4634c58973",
+      "year": 2026,
+      "published": "2026-05-19",
+      "abstract": "LLM-agent simulation offers a flexible computational tool for studying population response trajectories that depend on scenario events, memory, demographics, and evolving social context. However, full multi-round simulation scales linearly with both population size and horizon, requiring every agent to query the LLM at every round. We propose Adaptive Prototype Simulation (APS), a framework that reframes scalable LLM-based simulation as a recurrent oracle-allocation problem. APS retains the designated LLM as the online transition oracle while querying adaptive core prototypes, selected singleton-tail agents, and shadow-audit agents. Prototype responses induce local response surfaces for nearby agents, reducing online LLM calls without replacing the underlying transition model. To control approximation bias, shadow-audit residual correction estimates propagation residuals for aggregate correction and future budget allocation, while tail-protected singleton routing directly queries selected isolated, heterogeneous, or high-curvature regions that are vulnerable to smoothing. Theoretically, we treat APS as an estimator for full-scale high-precision individual social simulation and decompose its errors into prototype-coverage error, shadow-audit residual-correction error, local-propagation bias, and temporal context mismatch. Under the reported protocols, APS gives lower reference-aligned distributional discrepancy than scale-oriented and same-budget baselines while reducing online LLM calls, with ablations and compact robustness checks diagnosing the main bias-control mechanisms. In a 10M-agent, multi-round public-opinion simulation, APS achieves a 381.1-fold reduction over full simulation, with reference-aligned final-round JSD of 0.094 against the corresponding full-LLM reference.",
+      "canonical_id": "arXiv:2605.27419",
+      "arxiv_id": "2605.27419",
+      "authors": [
+        "Q. Zheng",
+        "Yan Gao",
+        "Shaobin He",
+        "Haoxiang Guan",
+        "Yuan Tian",
+        "Jie Feng",
+        "Ming Wang",
+        "Shu-Xin Zheng",
+        "Zhen Liu"
+      ]
+    },
+    {
+      "title": "BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests",
+      "source_url": "https://www.semanticscholar.org/paper/93115d2c7ec752fdc17a0ced77b59f40c49eff8f",
+      "year": 2026,
+      "published": "2026-05-18",
+      "abstract": "Recent breakthroughs in large language models have enabled various generative tasks on a single model. Real-world services powered by the LLM often concurrently support latency-critical requests for interactive applications (e.g., question-answering systems, referred to as real-time or RT requests) and throughput-oriented requests for back-of-house processing (e.g., documents batch processing, referred to best-effort or BE requests), with complex hybrid inference workloads to the underlying model. State-of-the-art (SOTA) LLM serving systems dedicate machines to each type of requests, towards either low inference latency or high serving throughput, respectively. This simplifies request scheduling and management but suffers from poor resource utilization. We propose BROS, a hybrid LLM serving system that aims to collocate RT/BE requests, meeting RT requests’ latency requirements while maintaining BE requests’ throughput. BROS formulates the problem of hybrid RT/BE request scheduling and solves it with a dynamic priority-based algorithm. BROS designs a bidirectional KV cache management mechanism, allowing RT requests to share KV memory with BE requests to remove the scheduling restrictions caused by memory insufficiency and improve utilization. Extensive experiments validate that BROS achieves a good trade-off when serving hybrid RT and BE requests. It significantly reduces the latency of RT requests (up to 74.20%), improving their fine-grained service level objectives (SLOs) attainments (up to 36.38×), with negligible throughput reduction for BE requests, showing significant advantages over SOTA systems.",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571463",
+      "doi": "10.1109/INFOCOM59046.2026.11571463",
+      "authors": [
+        "Borui Wan",
+        "Juntao Zhao",
+        "Chenyu Jiang",
+        "Chuanxiong Guo",
+        "Chuan Wu"
+      ]
+    },
+    {
+      "title": "SemCache: Semantic-Aware Cache Sharing for Efficient Multi-User LoRA-Adapted LLM Inference at the Edge",
+      "source_url": "https://www.semanticscholar.org/paper/134b17928377a9f0f7d54f80a73461f9d164ff70",
+      "year": 2026,
+      "published": "2026-05-18",
+      "abstract": "Large language models (LLMs) enable personalized applications through parameter-efficient techniques like Low-Rank Adaptation (LoRA). Deploying LoRA-adapted LLMs faces a critical dilemma: resource-constrained user devices (UDs) are hard to host full-scale LLMs, while centralized edge deployments of all LoRA adapters incur huge storage and privacy risks. We propose EdgeLoRA, a collaborative framework where UDs retain private LoRA adapters locally while offloading base model computations to edge servers (ESs), enhancing privacy and reducing storage overhead. However, EdgeLoRA introduces latency inefficiency from multi-round ES-UD interactions and memory overhead from redundant per-user key-value (KV) caching. To address this, we design SemCache, a semantic-aware caching mechanism that exploits hierarchical redundancies. SemCache first clusters user queries into coarse-grained intents (e.g., health, economic) via lightweight textual encoders, then identifies reusable fine-grained subsequences (e.g., \"feel pain in\") within clusters. A hybrid-indexed global cache (cluster index + token position) enables cross-user KV reuse, while an adaptive policy optimizes cache utility via frequency, recency, and semantic impact metrics. Integrated with EdgeLoRA, SemCache reduces memory cost up to 10.8× and achieves 2.11× latency speedup per query via efficient token reuse, offering a scalable, privacy-preserving solution for efficient LoRA-adapted LLM inference at the edge.",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571717",
+      "doi": "10.1109/INFOCOM59046.2026.11571717",
+      "authors": [
+        "Tao Ren",
+        "Yiming Yao",
+        "Zhe-Yuan Hu",
+        "Jianwei Niu"
+      ]
+    },
+    {
+      "title": "Enabling Memory-Disaggregated Cloud Infrastructure for LLMs: An Adaptive CXL-based KV Cache Scheduling Approach",
+      "source_url": "https://www.semanticscholar.org/paper/14b8eba2b5cb9e8e144e31004275989112e244d2",
+      "year": 2026,
+      "published": "2026-05-18",
+      "abstract": "Realizing memory-disaggregated cloud infrastructure for high-throughput, long-context LLM serving is currently bottlenecked by the ‘memory wall’ of GPU HBM and the high latency of traditional storage offloading. To address this, we propose an adaptive hierarchical KV Cache scheduling approach based on CXL (Compute Express Link) expanded memory. By exploiting CXL’s near-DRAM bandwidth, our system effectively balances the trade-off between massive storage capacity and high-speed access performance. Key innovations include: (1) an asynchronous multi-level backup mechanism for non-blocking tiered data placement; (2) a depth-aware priority algorithm that integrates prefix-tree topology for precise lifecycle management; and (3) an adaptive KV cache scheduling strategy that utilizes a dual mechanism of periodic scanning and on-demand response to flexibly promote data from CXL memory to the CPU DRAM, while coordinating the precise eviction (via unmapping) of low-priority data across GPU and CPU tiers. Compared to the default LRU policy in SGLang HiCache, our approach achieves a reduction of more than 30% in Time-To-First-Token (TTFT) and an increase of over 10% in cache hit rates across typical workloads.",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571450",
+      "doi": "10.1109/INFOCOM59046.2026.11571450",
+      "authors": [
+        "Ke Wang",
+        "Yaqian Zhao",
+        "Yaqiang Zhang",
+        "Fei Gao",
+        "Guangyuan Xu"
+      ]
+    },
+    {
+      "title": "A Cloud-Edge Collaborative System for Efficient LLM Fine-Tuning with Backbone Activation Caching",
+      "source_url": "https://www.semanticscholar.org/paper/4abc9f5da784ad039e4c25f5f65ce6d2c4fbd238",
+      "year": 2026,
+      "published": "2026-05-18",
+      "abstract": "Transformer models have become the foundation of modern artificial intelligence, particularly in Large Language Models (LLMs). To fully realize the potential of Cloud-Network Convergence (CNC), there is a critical need to deploy these models as pervasive AI edge services. However, fine-tuning LLMs on edge devices is hindered by high memory and computational demands. While Parameter-Efficient Fine-Tuning (PEFT) and side-network-based Memory-Efficient Fine-Tuning (MEFT) methods alleviate some resource burdens, current approaches still suffer from computational redundancy due to repeated backbone activation calculations, excessive memory usage from concurrent network storage, and suboptimal hardware utilization. To address these limitations, we propose Backbone Activation Cache and Side-network Acceleration (BAC-SA). BAC-SA decouples the fine-tuning process to enable pipelined activation caching to disk, eliminating redundant backbone computations and GPU memory usage. To maximize resource efficiency, BAC-SA further employs a CPU-GPU collaborative offloading strategy in the side-network fine-tuning stage. Experimental results demonstrate that, compared to G-DPSA, BAC-SA reduces memory overhead by up to 35.7% and training time by up to 27.6% on T5 models without compromising accuracy. These improvements indicate the strong practicality of BAC-SA in resource-constrained edge scenarios.",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571548",
+      "doi": "10.1109/INFOCOM59046.2026.11571548",
+      "authors": [
+        "Yu-Chu Chen",
+        "Ying-Chi Mao",
+        "Si Chen",
+        "Rongzhi Qi",
+        "Tian-Fu Pang",
+        "Zhen-Xiang Pan"
+      ]
+    },
+    {
+      "title": "Lever: Speculative LLM Inference on Smartphones",
+      "source_url": "https://www.semanticscholar.org/paper/93fc0cc2aec15a9587d5fa1ed4cb2bf7d5b0b310",
+      "year": 2026,
+      "published": "2026-05-16",
+      "abstract": "Large language models (LLMs) are increasingly needed for interactive mobile applications, but high-quality models exceed the limited DRAM available on smartphones. Flash storage can hold larger models, yet flash-backed inference is slow because autoregressive decoding repeatedly invokes the target model and incurs costly I/O. We observe that speculative decoding is a natural fit for this setting: a small draft model can remain in DRAM, while a larger flash-resident target model verifies multiple candidate tokens per invocation. However, existing methods assume server-class accelerators and fail to account for prolonged I/O latency, limited computation parallelism, and irregular speculation execution. We present Lever, an end-to-end system for efficient flash-backed LLM inference on smartphones. Lever jointly optimizes the three stages of speculative decoding under mobile constraints. For drafting, it builds token trees using an I/O- and compute-aware gain-cost objective. For verification, it prunes low-value branches through early-exit prediction to reduce target-model computation. For execution, it maps speculation efficiently across mobile CPU-NPU hardware to improve utilization. Comprehensive evaluations show that Lever reduces inference latency by an average of 2.93x over baseline flash-offloaded inference and 1.50x over conventional speculative decoding, narrowing the latency gap between flash-backed and memory-resident LLM inference.",
+      "canonical_id": "arXiv:2605.16786",
+      "arxiv_id": "2605.16786",
+      "authors": [
+        "Tuowei Wang",
+        "Feng-Zu Li",
+        "Yanfan Sun",
+        "Wei Gao",
+        "Ju Ren"
+      ]
+    },
+    {
+      "title": "STS: Efficient Sparse Attention with Speculative Token Sparsity",
+      "source_url": "https://www.semanticscholar.org/paper/21bb5437002ab66a37e89c8accc1016b6b82197e",
+      "year": 2026,
+      "published": "2026-05-15",
+      "abstract": "The quadratic complexity of attention imposes severe memory and computational bottlenecks on Large Language Model (LLM) inference. This challenge is particularly acute for emerging agentic applications that require processing multi-million token sequences. We propose STS, a sparse attention mechanism that requires no model retraining. STS leverages the key insight that tokens identified as important by a smaller draft model are highly predictive of important tokens for a larger target model. By integrating into speculative decoding frameworks, STS repurposes the draft model's attention scores to dynamically construct a token-and-head-wise sparsity mask. This mask effectively prunes the expensive attention computation in the target LLM. Our evaluation shows that STS achieves a 2.67x speedup operating at approximately 90% sparsity on representative benchmark NarrativeQA, maintaining negligible accuracy degradation compared to dense attention. STS establishes a new state-of-the-art on the sparsity-accuracy trade-off, outperforming prior techniques by enabling higher sparsity levels for a given accuracy budget.",
+      "canonical_id": "arXiv:2605.15508",
+      "arxiv_id": "2605.15508",
+      "authors": [
+        "Ce-Yu Xu",
+        "Jiang-Nan Yu",
+        "Yong-Ji Wu",
+        "Yuan Xie"
+      ]
+    },
+    {
+      "title": "PipeSD: An Efficient Cloud-Edge Collaborative Pipeline Inference Framework with Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/45a17f67e6fd56a356cd2970982d80b32d882378",
+      "year": 2026,
+      "published": "2026-05-13",
+      "abstract": "Speculative decoding can significantly accelerate LLM inference, especially given that its cloud-edge collaborative deployment offers cloud workload offloading, offline robustness, and privacy enhancement. However, existing collaborative inference frameworks with speculative decoding are constrained by (i) sequential token generation and communication with low resource utilization, and (ii) inflexible cloud non-autoregressive verification (NAV) triggering that induces premature verification or costly rollbacks. In this paper, we propose PipeSD, an efficient cloud-edge collaborative pipeline inference framework with speculative decoding. PipeSD overlaps token generation and communication by a token-batch pipeline scheduling mechanism optimized by dynamic programming, and improves verification flexibility through a dual-threshold NAV triggering mechanism with a lightweight Bayesian optimization autotuner. We implement PipeSD using llama-cpp-python, PyTorch, and FastAPI, and evaluate it on a real-world cloud-edge testbed with two draft-target model pairs across four scenarios. Results show that PipeSD consistently outperforms state-of-the-art baselines, achieving 1.16x-2.16x speedup and reducing energy consumption by 14.3%-25.3%.",
+      "canonical_id": "arXiv:2605.13319",
+      "arxiv_id": "2605.13319",
+      "authors": [
+        "Yu Han",
+        "Yun-Qi Gao",
+        "Bing Hu",
+        "Mahdi Boloursaz Mashhadi",
+        "Yitong Duan",
+        "Pei Xiao",
+        "Yanfeng Zhang"
+      ]
+    },
+    {
+      "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/83c3d5c1fd9bfb35f217c2b4434fa01f11c614ce",
+      "year": 2026,
+      "published": "2026-05-13",
+      "abstract": "Key-Value (KV) cache is essential for accelerating attention computation in Large Language Models (LLMs). However, as the cache grows linearly with input length, long-prompt inference imposes substantial GPU memory and latency overheads. Existing KV cache eviction methods typically focus on the decoding phase and rely on heuristic rules, which often lead to suboptimal and unstable performance. To address these limitations, we propose SemanticKV, a general and plug-and-play framework for long-prompt KV cache eviction. SemanticKV identifies semantically active tokens based on the L2-norm of their query vectors, estimates their importance through multi-head attention and retains critical tokens via a head-wise grouped selection strategy. This design preserves semantic integrity across attention heads while significantly reducing redundant memory usage. Extensive experiments demonstrate that SemanticKV achieves up to 5x KV cache reduction while maintaining over 95% of the original model performance. For sequences exceeding 100K tokens, SemanticKV improves throughput by 2.4x and reduces peak memory consumption by 29%. These results establish SemanticKV as a practical and stable solution for efficient long-prompt LLM inference under constrained GPU resources.",
+      "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
+      "doi": "10.1109/CSCWD68734.2026.11582397",
+      "authors": [
+        "Mengkai Huang",
+        "Baolong Wang",
+        "Xiao Zhang",
+        "Shujie Han"
+      ]
+    },
+    {
+      "title": "Separating Intelligence from Inference: A Standard for Edge-Native AI Computing",
+      "source_url": "https://www.semanticscholar.org/paper/b54734bcc069ebcdb58df7ef830420dad2bef4ef",
+      "year": 2026,
+      "published": "2026-05-13",
+      "abstract": "The artificial intelligence industry has constructed a USD 300 billion centralized data center infrastructure to serve a workload, large language model inference, that does not architecturally require centralization. This paper articulates the central architectural inefficiency of contemporary AI infrastructure: the conflation of model training (irreducibly centralized, capital-intensive, one-time per model version) with model inference (parallelizable, latency-sensitive, recurring per query) on the same physical hardware. We propose the separation principle: intelligence is trained centrally and shipped as software; inference executes on hardware near the data source, at the edge. We quantify the energy implications at civilizational scale and show that a fully edge-resident inference architecture for one billion daily users saves approximately 19 TWh per year and 7.3 megatons of CO2 annually relative to current centralized practice. We specify two new device classes, the Personal AI Computer (PAC) and the Corporate AI Workstation (CAW), with concrete hardware tiers, memory bandwidth requirements, thermal envelopes, and software interfaces. We then describe a reference architectural stack of eight components addressing weight distribution, sovereignty-aware routing, thermal-adaptive quantization, multi-tenant resource management, federated network inference, cryptographic provenance, privacy-preserving telemetry, and distributed context window extension. Several components are the subject of pending United States patent applications by the first author and are presented here as candidate open architectural principles",
+      "canonical_id": "arXiv:2608.02608",
+      "arxiv_id": "2608.02608",
+      "authors": [
+        "Venkat Vinjam",
+        "Krishnaiah Narukulla"
+      ]
+    },
+    {
+      "title": "Training-Inference Consistent Segmented Execution for Long-Context LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/d1987f656a5b92a844115a88aed6f7aa20174250",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "Transformer-based large language models face severe scalability challenges in long-context generation due to the computational and memory costs of full-context attention. Under practical computation and memory constraints, many inference-efficient long-context methods improve efficiency by adopting bounded-context or segment-level execution only during inference, while continuing to train models under full-context attention, resulting in a mismatch between training and inference execution and state-transition semantics. Based on this insight, we propose a training-inference consistent segment-level generation framework, in which training and inference follow the same segment-level forward execution semantics. During training, consistency with inference is enforced by restricting gradient propagation to KV states carried over from the immediately preceding segment, while permitting head-specific access to past KV states during the forward pass without involving them in gradient propagation. Across long-context benchmarks, our approach achieves performance comparable to full-context attention, while achieving competitive latency-memory trade-offs against strong inference-efficient baselines, and substantially improving scalability at very long context lengths (e.g., approximately 6x lower peak prefill memory at 128K compared to full-context attention with FlashAttention).",
+      "canonical_id": "arXiv:2605.11744",
+      "arxiv_id": "2605.11744",
+      "authors": [
+        "Xianpeng Shang",
+        "Jiang Li",
+        "Zehua Duo",
+        "Qi Cai",
+        "Xiangdong Su"
+      ]
+    },
+    {
+      "title": "GriNNder: Breaking the Memory Capacity Wall in Full-Graph GNN Training with Storage Offloading",
+      "source_url": "https://www.semanticscholar.org/paper/7c463ebe8dc37ee3a74d95023d59d4453cdb6c23",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "Full-graph training of graph neural networks (GNNs) is widely used as it enables direct validation of algorithmic improvements by preserving complete neighborhood information. However, it typically requires multiple GPUs or servers, incurring substantial hardware and inter-device communication costs. While existing single-server methods reduce infrastructure requirements, they remain constrained by GPU and host memory capacity as graph sizes increase. To address this limitation, we introduce GriNNder, which is the first work to leverage storage devices to enable full-graph training even with limited memory. Because modern NVMe SSDs offer multi-terabyte capacities and bandwidths exceeding 10 GB/s, they provide an appealing option when memory resources are scarce. Yet, directly applying storage-based methods from other domains fails to address the unique access patterns and data dependencies in full-graph GNN training. GriNNder tackles these challenges by structured storage offloading (SSO), a framework that manages the GPU-host-storage hierarchy through coordinated cache, (re)gather, and bypass mechanisms. To realize the framework, we devise (i) a partition-wise caching strategy for host memory that exploits the observation on cross-partition dependencies, (ii) a regathering strategy for gradient computation that eliminates redundant storage operations, and (iii) a lightweight partitioning scheme that mitigates the memory requirements of existing graph partitioners. In experiments performed over various models and datasets, GriNNder achieves up to 9.78x speedup over state-of-the-art baselines and throughput comparable to distributed systems, enabling previously infeasible large-scale full-graph training even on a single GPU.",
+      "canonical_id": "arXiv:2605.11517",
+      "arxiv_id": "2605.11517",
+      "authors": [
+        "Jaeyong Song",
+        "Seong-Yeol Park",
+        "Hongsun Jang",
+        "Jaewon Jung",
+        "Hunseong Lim",
+        "Junguk Hong",
+        "Jin-Ho Lee"
+      ]
+    },
+    {
+      "title": "OOM-Free Alpamayo via CPU-GPU Memory Swapping for Vision-Language-Action Models",
+      "source_url": "https://www.semanticscholar.org/paper/68dda97eabca9fd8d0f46ff011678c133b5e54fd",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "End-to-end Vision-Language-Action (VLA) models for autonomous driving unify perception, reasoning, and control in a single neural network and achieve strong driving performance. However, some VLA models require $20-60 ~\\text{GB}$ of GPU memory, which exceeds the memory capacity of commodity GPUs. We present a framework that enables memoryefficient VLA inference on VRAM-constrained GPUs through system-level optimization alone, without model modification. Our work proceeds in three stages: (1) Sequential Demand Layering reduces VRAM usage from model-level to layer-level granularity; (2) Pipelined Demand Layering hides parameter transfer time within layer execution time via transfer-compute overlap; and (3) a GPU-Resident Layer Decision Policy, informed by per-module residency benefit analysis, eliminates the residual transfer overhead that pipelining cannot hide. We further propose a performance prediction model that determines the optimal configuration-both the number and placement of resident layers-from a single profiling run with less than 1.3% prediction error across all configurations. When applied to NVIDIA's Alpamayo-R1-10B (21.52 GB) on an RTX 5070 Ti (16 GB), our framework achieves up to a $\\mathbf{3. 5 5} \\times$ speedup over conventional memory offloading methods while maintaining full BF16 precision.",
+      "canonical_id": "arXiv:2605.11678",
+      "arxiv_id": "2605.11678",
+      "authors": [
+        "Seung-Wook. Roh",
+        "H. Kim",
+        "Jong-Chan Kim"
+      ]
+    },
+    {
+      "title": "Position: LLM Inference Should Be Evaluated as Energy-to-Token Production",
+      "source_url": "https://www.semanticscholar.org/paper/ade6d0a5498d2a4b130c230b3318e71b4dd622de",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "LLM inference is still evaluated mainly as a model or software problem: accuracy, latency, throughput, and hardware utilization. This is incomplete. At deployment scale, the relevant output is a quality-conditioned token produced under joint constraints from effective compute, delivered data-center power, cooling capacity, PUE, and utilization. We argue that the ML community should treat inference as \\emph{energy-to-token production}. We formalize this view with a dimensionally consistent Token Production Function in which token rate is bounded by both compute-per-token and energy-per-token ceilings. Listed API prices vary by over an order of magnitude across providers, but we use price dispersion only as directional motivation, not as causal evidence of marginal cost. The core physical question is instead: under fixed quality and service targets, when does the binding constraint move from theoretical peak compute toward delivered power, cooling, and operational efficiency? Under this framing, system optimizations -- latent KV-cache compression, sparse or heavily compressed attention, quantization, routing, and difficulty-adaptive reasoning -- are not merely local engineering tricks. They are energy-to-token levers because they reduce FLOPs/token, joules/token, memory traffic, or utilization losses under fixed $(q^{*},s^{*})$. We therefore call for inference papers and benchmarks to report Joules/token, active binding constraint, PUE-adjusted delivered power, and utilization-adjusted token output alongside accuracy and latency.",
+      "canonical_id": "arXiv:2605.11733",
+      "arxiv_id": "2605.11733",
+      "authors": [
+        "Xiang Liu",
+        "Shimiao Yuan",
+        "Zhenheng Tang",
+        "Peijie Dong",
+        "Kaiyong Zhao",
+        "Qiang Wang",
+        "Bo Li",
+        "Xiaowen Chu"
+      ]
+    },
+    {
+      "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference",
+      "source_url": "https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7",
+      "year": 2026,
+      "published": "2026-05-11",
+      "abstract": "Layerwise offloading reduces the GPU memory footprint of large diffusion transformer (DiT) inference by prefetching upcoming layers from host memory, but its effectiveness hinges on hiding prefetch latency behind per-layer computation. This assumption breaks down when the per-GPU compute workload is small. Moreover, on PCIe-only nodes, prefetch and inter-GPU collective communications such as all-reduce and all-to-all contend on the shared PCIe path, exposing prefetch latency even when compute would otherwise hide it. We revisit layerwise offloading as a co-scheduling problem between prefetch and communication, guided by a first-order analytical model that predicts when prefetch can be hidden by computation. Building on this model, we design ChunkFlow, a communication-aware, chunk-granular offloading runtime that adaptively yields to collective communication and smoothly trades GPU memory for prefetch volume. On three representative diffusion transformers running on two H100 GPUs over PCIe with Ulysses sequence parallelism, ChunkFlow delivers up to 1.28x step-time speedup over SGLang's existing layerwise offloading, reduces peak GPU memory by up to 49% over the no-offload baseline at near-identical step time once the workload is large enough, and exposes a tunable memory-latency tradeoff that recovers near-zero step-time overhead in the small-workload regime.",
+      "canonical_id": "arXiv:2605.11335",
+      "arxiv_id": "2605.11335",
+      "authors": [
+        "Han Meng",
+        "Dan Liu",
+        "Dong Li"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.25550",
+      "identity_tokens": [
+        "id:arXiv:2605.25550",
+        "title:disagfusion asynchronous pipeline parallelism and elastic scheduling for disaggregated diffusion serving",
+        "url:https://www.semanticscholar.org/paper/67cbff0af7e609348691d3a66fb276fea4bc3146"
+      ],
+      "record": {
+        "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving",
+        "source_url": "https://www.semanticscholar.org/paper/67cbff0af7e609348691d3a66fb276fea4bc3146",
+        "year": 2026,
+        "published": "2026-05-25",
+        "abstract": "Diffusion-based generation is increasingly powering production content pipelines; however, deploying these models at scale remains a significant challenge. Model weights frequently exceed the memory capacity of commodity GPUs, while the encoder, diffusion transformer (DiT), and decoder stages exhibit highly imbalanced computational and memory footprints. A natural remedy is disaggregated serving-running stages as separate services on heterogeneous GPUs-yet this introduces new bottlenecks, including stage handoff overheads and fast-changing workloads that make cross-stage provisioning and scheduling brittle. This paper presents DisagFusion, enabling asynchronous pipeline parallelism and elastic scheduling for disaggregated diffusion serving. First, DisagFusion introduces asynchronous pipeline parallelism that overlaps computation and stage-to-stage communication to reduce pipeline bubbles and mitigate network jitter. Second, DisagFusion employs a hybrid instance scheduling strategy that combines lightweight performance prediction with runtime feedback to continuously rebalance instance ratio across stages under workload shifts. We implement DisagFusion and evaluate it with modern diffusion models. Compared to a monolithic baseline, DisagFusion improves throughput by 3.4x-20.5x and reduces end-to-end latency by 18.5x, while enabling flexible, cost-efficient deployment across heterogeneous GPUs.",
+        "canonical_id": "arXiv:2605.25550",
+        "arxiv_id": "2605.25550",
+        "authors": [
+          "Han-Tian Zha",
+          "Teng Ma",
+          "Yang Yong",
+          "Haiwen Fu",
+          "Ruiyang Ma",
+          "Wei Gao",
+          "Ruihao Gong",
+          "Xianglong Liu",
+          "Wei Wang",
+          "Yun-Peng Chai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25422",
+      "identity_tokens": [
+        "id:arXiv:2605.25422",
+        "title:a tokenkvcache communication media selection and resource allocation strategy for multiagent collaboration",
+        "url:https://www.semanticscholar.org/paper/61fd166dfbb246a99a1c466adf157edc05c64f4c"
+      ],
+      "record": {
+        "title": "A Token/KV-Cache Communication Media Selection and Resource Allocation Strategy for Multi-Agent Collaboration",
+        "source_url": "https://www.semanticscholar.org/paper/61fd166dfbb246a99a1c466adf157edc05c64f4c",
+        "year": 2026,
+        "published": "2026-05-25",
+        "abstract": "The convergence of large language models (LLMs) with 6G networks is fostering a paradigm of autonomous multi-agent cooperation, which in turn is expected to substantially increase east-west traffic. Although latent-space interaction mechanisms can enable more efficient collaboration than symbolic natural-language (NL) exchanges, prior work often abstracts away the associated communication overhead under practical wireless constraints. In embodied multi-agent settings, heterogeneous interaction media incur disparate inference and transmission costs, thereby inducing an inherent end-to-end (E2E) latency trade-off. To address this, we propose a joint design that integrates communication-media selection with wireless resource allocation. Through analytical characterization and simulation-based evaluation, we show that neither token-based transmission nor key-value (KV) cache-based transmission is uniformly optimal across operating regimes, as performance depends critically on system parameters such as available computational resources and channel conditions. Accordingly, we formulate a joint optimization problem aimed at minimizing the E2E latency of multi-agent collaboration and develop a low-complexity joint media selection and resource allocation (JMSRA) algorithm. Numerical results further confirm that, by adaptively coordinating the interaction media and bandwidth allocation over heterogeneous links, the proposed scheme achieves markedly reduced E2E latency relative to conventional NL-only and KV-cache-only baselines, enabling efficient and robust multi-agent collaboration in future wireless networks.",
+        "canonical_id": "arXiv:2605.25422",
+        "arxiv_id": "2605.25422",
+        "authors": [
+          "Li-Peng Dai",
+          "Lu-Ping Xiang",
+          "Kun Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas66217.2026.11562764",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas66217.2026.11562764",
+        "title:adacgen heterogeneityaware layer management for efficient kv cache offloading in llms",
+        "url:https://www.semanticscholar.org/paper/801324b1c88cdd91c41a7a3db971460e7f575758"
+      ],
+      "record": {
+        "title": "AdaCGen: Heterogeneity-Aware Layer Management for Efficient KV Cache Offloading in LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/801324b1c88cdd91c41a7a3db971460e7f575758",
+        "year": 2026,
+        "published": "2026-05-24",
+        "abstract": "The growing demand for large language models (LLMs) in long-sequence, large-batch applications intensifies memory bottlenecks from key-value (KV) cache during inference. While KV cache offloading to host memory alleviates GPU memory constraints, limited PCIe bandwidth creates severe data transfer bottlenecks during full KV cache fetching. Recent advances mitigate this issue by leveraging attention sparsity to selectively transfer only critical KV pairs, combined with prefetching to overlap computation and transfer. However, these approaches overlook heterogeneous attention sparsity across layers, thereby causing imbalanced transfer loads and suboptimal pipeline utilization. To address these computation-transfer imbalances, we propose an adaptive layer classification management strategy. By identifying transfer-dominant layers and applying computation-transfer co-optimization, our method reduces their data transfer volume by 3.56×. Experiments demonstrate up to 1.34–1.59× lower inference latency compared to state-of-the-art KV cache offloading systems.",
+        "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562764",
+        "doi": "10.1109/ISCAS66217.2026.11562764",
+        "authors": [
+          "Yujiao Wang",
+          "J. Guo",
+          "Zongjie Wang",
+          "Yujuan Tan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.23244",
+      "identity_tokens": [
+        "id:arXiv:2605.23244",
+        "title:convex optimization for alignment and preference learning on a single gpu",
+        "url:https://www.semanticscholar.org/paper/a4e4f3c590c6dc032f7e732c25e362fba073e713"
+      ],
+      "record": {
+        "title": "Convex Optimization for Alignment and Preference Learning on a Single GPU",
+        "source_url": "https://www.semanticscholar.org/paper/a4e4f3c590c6dc032f7e732c25e362fba073e713",
+        "year": 2026,
+        "published": "2026-05-22",
+        "abstract": "Fine-tuning large language models (LLMs) to align with human preferences has driven the success of systems such as Gemini and ChatGPT. However, approaches like Reinforcement Learning from Human Feedback (RLHF) remain computationally expensive and complex. Direct Preference Optimization (DPO) offers a simpler alternative but has limitations such as inconsistent ranking accuracy, high dependence on GPU resources, and expensive hyperparameter tuning. We propose the Convex Optimization for Alignment and Preference Learning Algorithm (COALA): a novel lightweight strategy with strong theoretical guarantees. By leveraging the convex optimization reformulation of neural networks, COALA eliminates the need for a reference model and obtains significant reduction in both training time and VRAM consumption, thus enabling efficient training on a single GPU. Experiments across four datasets--including a 26621-sample synthetic Educational Feedback dataset--and six models (including Llama-3.1-8B) demonstrate COALA's competitive performance and efficiency while utilizing as little as ~17.6% of DPO's total TFLOPs. COALA exhibits stable, monotonically increasing rewards and reaches peak margins in significantly shorter time in comparison to traditional methods such as DPO and ORPO. To the best of our knowledge, this is the first time convex optimization has been effectively applied to preference fine-tuning of LLMs.",
+        "canonical_id": "arXiv:2605.23244",
+        "arxiv_id": "2605.23244",
+        "authors": [
+          "Miria Feng",
+          "Mert Pilanci"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.22106",
+      "identity_tokens": [
+        "id:arXiv:2605.22106",
+        "title:arborkv structureaware kv cache management for scaling treebased llm reasoning",
+        "url:https://www.semanticscholar.org/paper/cadfad4387c4c186621830349ecc1204f0280616"
+      ],
+      "record": {
+        "title": "ArborKV: Structure-Aware KV Cache Management for Scaling Tree-based LLM Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/cadfad4387c4c186621830349ecc1204f0280616",
+        "year": 2026,
+        "published": "2026-05-21",
+        "abstract": "Recent progress in LLM reasoning has increasingly shifted from single-pass generation to explicit search over intermediate reasoning states. Tree-of-Thoughts (ToT) organizes inference to tree-structured search with branching and backtracking, but it substantially amplifies the Key--Value (KV) cache: retaining KV states for a frontier of partial trajectories quickly becomes a memory bottleneck that limits throughput and constrains search depth and width under fixed hardware budgets. We address this challenge by observing that KV reuse in ToT-style inference is governed by search dynamics: near-term decoding depends primarily on the active branch and its ancestors, whereas inactive subtrees have low short-term reuse probability yet must remain recoverable for backtracking. Motivated by this, we propose ArborKV, a structure-aware eviction framework that couples a lightweight value estimator with a tree-aware allocation policy, and performs purely token-extractive eviction with lazy rehydration to support revisits. Experiments on ToT-style reasoning benchmarks show that ArborKV achieves up to ~4x peak KV-memory reduction while preserving near-full-retention accuracy, enabling larger search configurations under fixed device budgets that would otherwise run out of memory.",
+        "canonical_id": "arXiv:2605.22106",
+        "arxiv_id": "2605.22106",
+        "authors": [
+          "Ye-Qiu Chen",
+          "Ziyan Liu",
+          "Zhen Huang",
+          "Runquan Gui",
+          "Hong Wang",
+          "Lei Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27419",
+      "identity_tokens": [
+        "id:arXiv:2605.27419",
+        "title:aps biascontrolled adaptive prototype simulation for populationscale llm agents",
+        "url:https://www.semanticscholar.org/paper/c6961cf53663ef2e2ceb7a45a3503a4634c58973"
+      ],
+      "record": {
+        "title": "APS: Bias-Controlled Adaptive Prototype Simulation for Population-Scale LLM Agents",
+        "source_url": "https://www.semanticscholar.org/paper/c6961cf53663ef2e2ceb7a45a3503a4634c58973",
+        "year": 2026,
+        "published": "2026-05-19",
+        "abstract": "LLM-agent simulation offers a flexible computational tool for studying population response trajectories that depend on scenario events, memory, demographics, and evolving social context. However, full multi-round simulation scales linearly with both population size and horizon, requiring every agent to query the LLM at every round. We propose Adaptive Prototype Simulation (APS), a framework that reframes scalable LLM-based simulation as a recurrent oracle-allocation problem. APS retains the designated LLM as the online transition oracle while querying adaptive core prototypes, selected singleton-tail agents, and shadow-audit agents. Prototype responses induce local response surfaces for nearby agents, reducing online LLM calls without replacing the underlying transition model. To control approximation bias, shadow-audit residual correction estimates propagation residuals for aggregate correction and future budget allocation, while tail-protected singleton routing directly queries selected isolated, heterogeneous, or high-curvature regions that are vulnerable to smoothing. Theoretically, we treat APS as an estimator for full-scale high-precision individual social simulation and decompose its errors into prototype-coverage error, shadow-audit residual-correction error, local-propagation bias, and temporal context mismatch. Under the reported protocols, APS gives lower reference-aligned distributional discrepancy than scale-oriented and same-budget baselines while reducing online LLM calls, with ablations and compact robustness checks diagnosing the main bias-control mechanisms. In a 10M-agent, multi-round public-opinion simulation, APS achieves a 381.1-fold reduction over full simulation, with reference-aligned final-round JSD of 0.094 against the corresponding full-LLM reference.",
+        "canonical_id": "arXiv:2605.27419",
+        "arxiv_id": "2605.27419",
+        "authors": [
+          "Q. Zheng",
+          "Yan Gao",
+          "Shaobin He",
+          "Haoxiang Guan",
+          "Yuan Tian",
+          "Jie Feng",
+          "Ming Wang",
+          "Shu-Xin Zheng",
+          "Zhen Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/infocom59046.2026.11571463",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571463",
+        "title:bros efficient llm serving on hybrid realtime and besteffort requests",
+        "url:https://www.semanticscholar.org/paper/93115d2c7ec752fdc17a0ced77b59f40c49eff8f"
+      ],
+      "record": {
+        "title": "BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests",
+        "source_url": "https://www.semanticscholar.org/paper/93115d2c7ec752fdc17a0ced77b59f40c49eff8f",
+        "year": 2026,
+        "published": "2026-05-18",
+        "abstract": "Recent breakthroughs in large language models have enabled various generative tasks on a single model. Real-world services powered by the LLM often concurrently support latency-critical requests for interactive applications (e.g., question-answering systems, referred to as real-time or RT requests) and throughput-oriented requests for back-of-house processing (e.g., documents batch processing, referred to best-effort or BE requests), with complex hybrid inference workloads to the underlying model. State-of-the-art (SOTA) LLM serving systems dedicate machines to each type of requests, towards either low inference latency or high serving throughput, respectively. This simplifies request scheduling and management but suffers from poor resource utilization. We propose BROS, a hybrid LLM serving system that aims to collocate RT/BE requests, meeting RT requests’ latency requirements while maintaining BE requests’ throughput. BROS formulates the problem of hybrid RT/BE request scheduling and solves it with a dynamic priority-based algorithm. BROS designs a bidirectional KV cache management mechanism, allowing RT requests to share KV memory with BE requests to remove the scheduling restrictions caused by memory insufficiency and improve utilization. Extensive experiments validate that BROS achieves a good trade-off when serving hybrid RT and BE requests. It significantly reduces the latency of RT requests (up to 74.20%), improving their fine-grained service level objectives (SLOs) attainments (up to 36.38×), with negligible throughput reduction for BE requests, showing significant advantages over SOTA systems.",
+        "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571463",
+        "doi": "10.1109/INFOCOM59046.2026.11571463",
+        "authors": [
+          "Borui Wan",
+          "Juntao Zhao",
+          "Chenyu Jiang",
+          "Chuanxiong Guo",
+          "Chuan Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/infocom59046.2026.11571717",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571717",
+        "title:semcache semanticaware cache sharing for efficient multiuser loraadapted llm inference at the edge",
+        "url:https://www.semanticscholar.org/paper/134b17928377a9f0f7d54f80a73461f9d164ff70"
+      ],
+      "record": {
+        "title": "SemCache: Semantic-Aware Cache Sharing for Efficient Multi-User LoRA-Adapted LLM Inference at the Edge",
+        "source_url": "https://www.semanticscholar.org/paper/134b17928377a9f0f7d54f80a73461f9d164ff70",
+        "year": 2026,
+        "published": "2026-05-18",
+        "abstract": "Large language models (LLMs) enable personalized applications through parameter-efficient techniques like Low-Rank Adaptation (LoRA). Deploying LoRA-adapted LLMs faces a critical dilemma: resource-constrained user devices (UDs) are hard to host full-scale LLMs, while centralized edge deployments of all LoRA adapters incur huge storage and privacy risks. We propose EdgeLoRA, a collaborative framework where UDs retain private LoRA adapters locally while offloading base model computations to edge servers (ESs), enhancing privacy and reducing storage overhead. However, EdgeLoRA introduces latency inefficiency from multi-round ES-UD interactions and memory overhead from redundant per-user key-value (KV) caching. To address this, we design SemCache, a semantic-aware caching mechanism that exploits hierarchical redundancies. SemCache first clusters user queries into coarse-grained intents (e.g., health, economic) via lightweight textual encoders, then identifies reusable fine-grained subsequences (e.g., \"feel pain in\") within clusters. A hybrid-indexed global cache (cluster index + token position) enables cross-user KV reuse, while an adaptive policy optimizes cache utility via frequency, recency, and semantic impact metrics. Integrated with EdgeLoRA, SemCache reduces memory cost up to 10.8× and achieves 2.11× latency speedup per query via efficient token reuse, offering a scalable, privacy-preserving solution for efficient LoRA-adapted LLM inference at the edge.",
+        "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571717",
+        "doi": "10.1109/INFOCOM59046.2026.11571717",
+        "authors": [
+          "Tao Ren",
+          "Yiming Yao",
+          "Zhe-Yuan Hu",
+          "Jianwei Niu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/infocom59046.2026.11571450",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571450",
+        "title:enabling memorydisaggregated cloud infrastructure for llms an adaptive cxlbased kv cache scheduling approach",
+        "url:https://www.semanticscholar.org/paper/14b8eba2b5cb9e8e144e31004275989112e244d2"
+      ],
+      "record": {
+        "title": "Enabling Memory-Disaggregated Cloud Infrastructure for LLMs: An Adaptive CXL-based KV Cache Scheduling Approach",
+        "source_url": "https://www.semanticscholar.org/paper/14b8eba2b5cb9e8e144e31004275989112e244d2",
+        "year": 2026,
+        "published": "2026-05-18",
+        "abstract": "Realizing memory-disaggregated cloud infrastructure for high-throughput, long-context LLM serving is currently bottlenecked by the ‘memory wall’ of GPU HBM and the high latency of traditional storage offloading. To address this, we propose an adaptive hierarchical KV Cache scheduling approach based on CXL (Compute Express Link) expanded memory. By exploiting CXL’s near-DRAM bandwidth, our system effectively balances the trade-off between massive storage capacity and high-speed access performance. Key innovations include: (1) an asynchronous multi-level backup mechanism for non-blocking tiered data placement; (2) a depth-aware priority algorithm that integrates prefix-tree topology for precise lifecycle management; and (3) an adaptive KV cache scheduling strategy that utilizes a dual mechanism of periodic scanning and on-demand response to flexibly promote data from CXL memory to the CPU DRAM, while coordinating the precise eviction (via unmapping) of low-priority data across GPU and CPU tiers. Compared to the default LRU policy in SGLang HiCache, our approach achieves a reduction of more than 30% in Time-To-First-Token (TTFT) and an increase of over 10% in cache hit rates across typical workloads.",
+        "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571450",
+        "doi": "10.1109/INFOCOM59046.2026.11571450",
+        "authors": [
+          "Ke Wang",
+          "Yaqian Zhao",
+          "Yaqiang Zhang",
+          "Fei Gao",
+          "Guangyuan Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/infocom59046.2026.11571548",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571548",
+        "title:a cloudedge collaborative system for efficient llm finetuning with backbone activation caching",
+        "url:https://www.semanticscholar.org/paper/4abc9f5da784ad039e4c25f5f65ce6d2c4fbd238"
+      ],
+      "record": {
+        "title": "A Cloud-Edge Collaborative System for Efficient LLM Fine-Tuning with Backbone Activation Caching",
+        "source_url": "https://www.semanticscholar.org/paper/4abc9f5da784ad039e4c25f5f65ce6d2c4fbd238",
+        "year": 2026,
+        "published": "2026-05-18",
+        "abstract": "Transformer models have become the foundation of modern artificial intelligence, particularly in Large Language Models (LLMs). To fully realize the potential of Cloud-Network Convergence (CNC), there is a critical need to deploy these models as pervasive AI edge services. However, fine-tuning LLMs on edge devices is hindered by high memory and computational demands. While Parameter-Efficient Fine-Tuning (PEFT) and side-network-based Memory-Efficient Fine-Tuning (MEFT) methods alleviate some resource burdens, current approaches still suffer from computational redundancy due to repeated backbone activation calculations, excessive memory usage from concurrent network storage, and suboptimal hardware utilization. To address these limitations, we propose Backbone Activation Cache and Side-network Acceleration (BAC-SA). BAC-SA decouples the fine-tuning process to enable pipelined activation caching to disk, eliminating redundant backbone computations and GPU memory usage. To maximize resource efficiency, BAC-SA further employs a CPU-GPU collaborative offloading strategy in the side-network fine-tuning stage. Experimental results demonstrate that, compared to G-DPSA, BAC-SA reduces memory overhead by up to 35.7% and training time by up to 27.6% on T5 models without compromising accuracy. These improvements indicate the strong practicality of BAC-SA in resource-constrained edge scenarios.",
+        "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571548",
+        "doi": "10.1109/INFOCOM59046.2026.11571548",
+        "authors": [
+          "Yu-Chu Chen",
+          "Ying-Chi Mao",
+          "Si Chen",
+          "Rongzhi Qi",
+          "Tian-Fu Pang",
+          "Zhen-Xiang Pan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.16786",
+      "identity_tokens": [
+        "id:arXiv:2605.16786",
+        "title:lever speculative llm inference on smartphones",
+        "url:https://www.semanticscholar.org/paper/93fc0cc2aec15a9587d5fa1ed4cb2bf7d5b0b310"
+      ],
+      "record": {
+        "title": "Lever: Speculative LLM Inference on Smartphones",
+        "source_url": "https://www.semanticscholar.org/paper/93fc0cc2aec15a9587d5fa1ed4cb2bf7d5b0b310",
+        "year": 2026,
+        "published": "2026-05-16",
+        "abstract": "Large language models (LLMs) are increasingly needed for interactive mobile applications, but high-quality models exceed the limited DRAM available on smartphones. Flash storage can hold larger models, yet flash-backed inference is slow because autoregressive decoding repeatedly invokes the target model and incurs costly I/O. We observe that speculative decoding is a natural fit for this setting: a small draft model can remain in DRAM, while a larger flash-resident target model verifies multiple candidate tokens per invocation. However, existing methods assume server-class accelerators and fail to account for prolonged I/O latency, limited computation parallelism, and irregular speculation execution. We present Lever, an end-to-end system for efficient flash-backed LLM inference on smartphones. Lever jointly optimizes the three stages of speculative decoding under mobile constraints. For drafting, it builds token trees using an I/O- and compute-aware gain-cost objective. For verification, it prunes low-value branches through early-exit prediction to reduce target-model computation. For execution, it maps speculation efficiently across mobile CPU-NPU hardware to improve utilization. Comprehensive evaluations show that Lever reduces inference latency by an average of 2.93x over baseline flash-offloaded inference and 1.50x over conventional speculative decoding, narrowing the latency gap between flash-backed and memory-resident LLM inference.",
+        "canonical_id": "arXiv:2605.16786",
+        "arxiv_id": "2605.16786",
+        "authors": [
+          "Tuowei Wang",
+          "Feng-Zu Li",
+          "Yanfan Sun",
+          "Wei Gao",
+          "Ju Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.15508",
+      "identity_tokens": [
+        "id:arXiv:2605.15508",
+        "title:sts efficient sparse attention with speculative token sparsity",
+        "url:https://www.semanticscholar.org/paper/21bb5437002ab66a37e89c8accc1016b6b82197e"
+      ],
+      "record": {
+        "title": "STS: Efficient Sparse Attention with Speculative Token Sparsity",
+        "source_url": "https://www.semanticscholar.org/paper/21bb5437002ab66a37e89c8accc1016b6b82197e",
+        "year": 2026,
+        "published": "2026-05-15",
+        "abstract": "The quadratic complexity of attention imposes severe memory and computational bottlenecks on Large Language Model (LLM) inference. This challenge is particularly acute for emerging agentic applications that require processing multi-million token sequences. We propose STS, a sparse attention mechanism that requires no model retraining. STS leverages the key insight that tokens identified as important by a smaller draft model are highly predictive of important tokens for a larger target model. By integrating into speculative decoding frameworks, STS repurposes the draft model's attention scores to dynamically construct a token-and-head-wise sparsity mask. This mask effectively prunes the expensive attention computation in the target LLM. Our evaluation shows that STS achieves a 2.67x speedup operating at approximately 90% sparsity on representative benchmark NarrativeQA, maintaining negligible accuracy degradation compared to dense attention. STS establishes a new state-of-the-art on the sparsity-accuracy trade-off, outperforming prior techniques by enabling higher sparsity levels for a given accuracy budget.",
+        "canonical_id": "arXiv:2605.15508",
+        "arxiv_id": "2605.15508",
+        "authors": [
+          "Ce-Yu Xu",
+          "Jiang-Nan Yu",
+          "Yong-Ji Wu",
+          "Yuan Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13319",
+      "identity_tokens": [
+        "id:arXiv:2605.13319",
+        "title:pipesd an efficient cloudedge collaborative pipeline inference framework with speculative decoding",
+        "url:https://www.semanticscholar.org/paper/45a17f67e6fd56a356cd2970982d80b32d882378"
+      ],
+      "record": {
+        "title": "PipeSD: An Efficient Cloud-Edge Collaborative Pipeline Inference Framework with Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/45a17f67e6fd56a356cd2970982d80b32d882378",
+        "year": 2026,
+        "published": "2026-05-13",
+        "abstract": "Speculative decoding can significantly accelerate LLM inference, especially given that its cloud-edge collaborative deployment offers cloud workload offloading, offline robustness, and privacy enhancement. However, existing collaborative inference frameworks with speculative decoding are constrained by (i) sequential token generation and communication with low resource utilization, and (ii) inflexible cloud non-autoregressive verification (NAV) triggering that induces premature verification or costly rollbacks. In this paper, we propose PipeSD, an efficient cloud-edge collaborative pipeline inference framework with speculative decoding. PipeSD overlaps token generation and communication by a token-batch pipeline scheduling mechanism optimized by dynamic programming, and improves verification flexibility through a dual-threshold NAV triggering mechanism with a lightweight Bayesian optimization autotuner. We implement PipeSD using llama-cpp-python, PyTorch, and FastAPI, and evaluate it on a real-world cloud-edge testbed with two draft-target model pairs across four scenarios. Results show that PipeSD consistently outperforms state-of-the-art baselines, achieving 1.16x-2.16x speedup and reducing energy consumption by 14.3%-25.3%.",
+        "canonical_id": "arXiv:2605.13319",
+        "arxiv_id": "2605.13319",
+        "authors": [
+          "Yu Han",
+          "Yun-Qi Gao",
+          "Bing Hu",
+          "Mahdi Boloursaz Mashhadi",
+          "Yitong Duan",
+          "Pei Xiao",
+          "Yanfeng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cscwd68734.2026.11582397",
+      "identity_tokens": [
+        "id:DOI:10.1109/cscwd68734.2026.11582397",
+        "title:semantickv a semanticsdriven kv cache eviction framework for efficient long prompt llm inference",
+        "url:https://www.semanticscholar.org/paper/83c3d5c1fd9bfb35f217c2b4434fa01f11c614ce"
+      ],
+      "record": {
+        "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/83c3d5c1fd9bfb35f217c2b4434fa01f11c614ce",
+        "year": 2026,
+        "published": "2026-05-13",
+        "abstract": "Key-Value (KV) cache is essential for accelerating attention computation in Large Language Models (LLMs). However, as the cache grows linearly with input length, long-prompt inference imposes substantial GPU memory and latency overheads. Existing KV cache eviction methods typically focus on the decoding phase and rely on heuristic rules, which often lead to suboptimal and unstable performance. To address these limitations, we propose SemanticKV, a general and plug-and-play framework for long-prompt KV cache eviction. SemanticKV identifies semantically active tokens based on the L2-norm of their query vectors, estimates their importance through multi-head attention and retains critical tokens via a head-wise grouped selection strategy. This design preserves semantic integrity across attention heads while significantly reducing redundant memory usage. Extensive experiments demonstrate that SemanticKV achieves up to 5x KV cache reduction while maintaining over 95% of the original model performance. For sequences exceeding 100K tokens, SemanticKV improves throughput by 2.4x and reduces peak memory consumption by 29%. These results establish SemanticKV as a practical and stable solution for efficient long-prompt LLM inference under constrained GPU resources.",
+        "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
+        "doi": "10.1109/CSCWD68734.2026.11582397",
+        "authors": [
+          "Mengkai Huang",
+          "Baolong Wang",
+          "Xiao Zhang",
+          "Shujie Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02608",
+      "identity_tokens": [
+        "id:arXiv:2608.02608",
+        "title:separating intelligence from inference a standard for edgenative ai computing",
+        "url:https://www.semanticscholar.org/paper/b54734bcc069ebcdb58df7ef830420dad2bef4ef"
+      ],
+      "record": {
+        "title": "Separating Intelligence from Inference: A Standard for Edge-Native AI Computing",
+        "source_url": "https://www.semanticscholar.org/paper/b54734bcc069ebcdb58df7ef830420dad2bef4ef",
+        "year": 2026,
+        "published": "2026-05-13",
+        "abstract": "The artificial intelligence industry has constructed a USD 300 billion centralized data center infrastructure to serve a workload, large language model inference, that does not architecturally require centralization. This paper articulates the central architectural inefficiency of contemporary AI infrastructure: the conflation of model training (irreducibly centralized, capital-intensive, one-time per model version) with model inference (parallelizable, latency-sensitive, recurring per query) on the same physical hardware. We propose the separation principle: intelligence is trained centrally and shipped as software; inference executes on hardware near the data source, at the edge. We quantify the energy implications at civilizational scale and show that a fully edge-resident inference architecture for one billion daily users saves approximately 19 TWh per year and 7.3 megatons of CO2 annually relative to current centralized practice. We specify two new device classes, the Personal AI Computer (PAC) and the Corporate AI Workstation (CAW), with concrete hardware tiers, memory bandwidth requirements, thermal envelopes, and software interfaces. We then describe a reference architectural stack of eight components addressing weight distribution, sovereignty-aware routing, thermal-adaptive quantization, multi-tenant resource management, federated network inference, cryptographic provenance, privacy-preserving telemetry, and distributed context window extension. Several components are the subject of pending United States patent applications by the first author and are presented here as candidate open architectural principles",
+        "canonical_id": "arXiv:2608.02608",
+        "arxiv_id": "2608.02608",
+        "authors": [
+          "Venkat Vinjam",
+          "Krishnaiah Narukulla"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11744",
+      "identity_tokens": [
+        "id:arXiv:2605.11744",
+        "title:traininginference consistent segmented execution for longcontext llms",
+        "url:https://www.semanticscholar.org/paper/d1987f656a5b92a844115a88aed6f7aa20174250"
+      ],
+      "record": {
+        "title": "Training-Inference Consistent Segmented Execution for Long-Context LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/d1987f656a5b92a844115a88aed6f7aa20174250",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "Transformer-based large language models face severe scalability challenges in long-context generation due to the computational and memory costs of full-context attention. Under practical computation and memory constraints, many inference-efficient long-context methods improve efficiency by adopting bounded-context or segment-level execution only during inference, while continuing to train models under full-context attention, resulting in a mismatch between training and inference execution and state-transition semantics. Based on this insight, we propose a training-inference consistent segment-level generation framework, in which training and inference follow the same segment-level forward execution semantics. During training, consistency with inference is enforced by restricting gradient propagation to KV states carried over from the immediately preceding segment, while permitting head-specific access to past KV states during the forward pass without involving them in gradient propagation. Across long-context benchmarks, our approach achieves performance comparable to full-context attention, while achieving competitive latency-memory trade-offs against strong inference-efficient baselines, and substantially improving scalability at very long context lengths (e.g., approximately 6x lower peak prefill memory at 128K compared to full-context attention with FlashAttention).",
+        "canonical_id": "arXiv:2605.11744",
+        "arxiv_id": "2605.11744",
+        "authors": [
+          "Xianpeng Shang",
+          "Jiang Li",
+          "Zehua Duo",
+          "Qi Cai",
+          "Xiangdong Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11517",
+      "identity_tokens": [
+        "id:arXiv:2605.11517",
+        "title:grinnder breaking the memory capacity wall in fullgraph gnn training with storage offloading",
+        "url:https://www.semanticscholar.org/paper/7c463ebe8dc37ee3a74d95023d59d4453cdb6c23"
+      ],
+      "record": {
+        "title": "GriNNder: Breaking the Memory Capacity Wall in Full-Graph GNN Training with Storage Offloading",
+        "source_url": "https://www.semanticscholar.org/paper/7c463ebe8dc37ee3a74d95023d59d4453cdb6c23",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "Full-graph training of graph neural networks (GNNs) is widely used as it enables direct validation of algorithmic improvements by preserving complete neighborhood information. However, it typically requires multiple GPUs or servers, incurring substantial hardware and inter-device communication costs. While existing single-server methods reduce infrastructure requirements, they remain constrained by GPU and host memory capacity as graph sizes increase. To address this limitation, we introduce GriNNder, which is the first work to leverage storage devices to enable full-graph training even with limited memory. Because modern NVMe SSDs offer multi-terabyte capacities and bandwidths exceeding 10 GB/s, they provide an appealing option when memory resources are scarce. Yet, directly applying storage-based methods from other domains fails to address the unique access patterns and data dependencies in full-graph GNN training. GriNNder tackles these challenges by structured storage offloading (SSO), a framework that manages the GPU-host-storage hierarchy through coordinated cache, (re)gather, and bypass mechanisms. To realize the framework, we devise (i) a partition-wise caching strategy for host memory that exploits the observation on cross-partition dependencies, (ii) a regathering strategy for gradient computation that eliminates redundant storage operations, and (iii) a lightweight partitioning scheme that mitigates the memory requirements of existing graph partitioners. In experiments performed over various models and datasets, GriNNder achieves up to 9.78x speedup over state-of-the-art baselines and throughput comparable to distributed systems, enabling previously infeasible large-scale full-graph training even on a single GPU.",
+        "canonical_id": "arXiv:2605.11517",
+        "arxiv_id": "2605.11517",
+        "authors": [
+          "Jaeyong Song",
+          "Seong-Yeol Park",
+          "Hongsun Jang",
+          "Jaewon Jung",
+          "Hunseong Lim",
+          "Junguk Hong",
+          "Jin-Ho Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11678",
+      "identity_tokens": [
+        "id:arXiv:2605.11678",
+        "title:oomfree alpamayo via cpugpu memory swapping for visionlanguageaction models",
+        "url:https://www.semanticscholar.org/paper/68dda97eabca9fd8d0f46ff011678c133b5e54fd"
+      ],
+      "record": {
+        "title": "OOM-Free Alpamayo via CPU-GPU Memory Swapping for Vision-Language-Action Models",
+        "source_url": "https://www.semanticscholar.org/paper/68dda97eabca9fd8d0f46ff011678c133b5e54fd",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "End-to-end Vision-Language-Action (VLA) models for autonomous driving unify perception, reasoning, and control in a single neural network and achieve strong driving performance. However, some VLA models require $20-60 ~\\text{GB}$ of GPU memory, which exceeds the memory capacity of commodity GPUs. We present a framework that enables memoryefficient VLA inference on VRAM-constrained GPUs through system-level optimization alone, without model modification. Our work proceeds in three stages: (1) Sequential Demand Layering reduces VRAM usage from model-level to layer-level granularity; (2) Pipelined Demand Layering hides parameter transfer time within layer execution time via transfer-compute overlap; and (3) a GPU-Resident Layer Decision Policy, informed by per-module residency benefit analysis, eliminates the residual transfer overhead that pipelining cannot hide. We further propose a performance prediction model that determines the optimal configuration-both the number and placement of resident layers-from a single profiling run with less than 1.3% prediction error across all configurations. When applied to NVIDIA's Alpamayo-R1-10B (21.52 GB) on an RTX 5070 Ti (16 GB), our framework achieves up to a $\\mathbf{3. 5 5} \\times$ speedup over conventional memory offloading methods while maintaining full BF16 precision.",
+        "canonical_id": "arXiv:2605.11678",
+        "arxiv_id": "2605.11678",
+        "authors": [
+          "Seung-Wook. Roh",
+          "H. Kim",
+          "Jong-Chan Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11733",
+      "identity_tokens": [
+        "id:arXiv:2605.11733",
+        "title:position llm inference should be evaluated as energytotoken production",
+        "url:https://www.semanticscholar.org/paper/ade6d0a5498d2a4b130c230b3318e71b4dd622de"
+      ],
+      "record": {
+        "title": "Position: LLM Inference Should Be Evaluated as Energy-to-Token Production",
+        "source_url": "https://www.semanticscholar.org/paper/ade6d0a5498d2a4b130c230b3318e71b4dd622de",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "LLM inference is still evaluated mainly as a model or software problem: accuracy, latency, throughput, and hardware utilization. This is incomplete. At deployment scale, the relevant output is a quality-conditioned token produced under joint constraints from effective compute, delivered data-center power, cooling capacity, PUE, and utilization. We argue that the ML community should treat inference as \\emph{energy-to-token production}. We formalize this view with a dimensionally consistent Token Production Function in which token rate is bounded by both compute-per-token and energy-per-token ceilings. Listed API prices vary by over an order of magnitude across providers, but we use price dispersion only as directional motivation, not as causal evidence of marginal cost. The core physical question is instead: under fixed quality and service targets, when does the binding constraint move from theoretical peak compute toward delivered power, cooling, and operational efficiency? Under this framing, system optimizations -- latent KV-cache compression, sparse or heavily compressed attention, quantization, routing, and difficulty-adaptive reasoning -- are not merely local engineering tricks. They are energy-to-token levers because they reduce FLOPs/token, joules/token, memory traffic, or utilization losses under fixed $(q^{*},s^{*})$. We therefore call for inference papers and benchmarks to report Joules/token, active binding constraint, PUE-adjusted delivered power, and utilization-adjusted token output alongside accuracy and latency.",
+        "canonical_id": "arXiv:2605.11733",
+        "arxiv_id": "2605.11733",
+        "authors": [
+          "Xiang Liu",
+          "Shimiao Yuan",
+          "Zhenheng Tang",
+          "Peijie Dong",
+          "Kaiyong Zhao",
+          "Qiang Wang",
+          "Bo Li",
+          "Xiaowen Chu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11335",
+      "identity_tokens": [
+        "id:arXiv:2605.11335",
+        "title:chunkflow communicationaware chunked prefetching for layerwise offloading in distributed diffusion transformer inference",
+        "url:https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7"
+      ],
+      "record": {
+        "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference",
+        "source_url": "https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7",
+        "year": 2026,
+        "published": "2026-05-11",
+        "abstract": "Layerwise offloading reduces the GPU memory footprint of large diffusion transformer (DiT) inference by prefetching upcoming layers from host memory, but its effectiveness hinges on hiding prefetch latency behind per-layer computation. This assumption breaks down when the per-GPU compute workload is small. Moreover, on PCIe-only nodes, prefetch and inter-GPU collective communications such as all-reduce and all-to-all contend on the shared PCIe path, exposing prefetch latency even when compute would otherwise hide it. We revisit layerwise offloading as a co-scheduling problem between prefetch and communication, guided by a first-order analytical model that predicts when prefetch can be hidden by computation. Building on this model, we design ChunkFlow, a communication-aware, chunk-granular offloading runtime that adaptively yields to collective communication and smoothly trades GPU memory for prefetch volume. On three representative diffusion transformers running on two H100 GPUs over PCIe with Ulysses sequence parallelism, ChunkFlow delivers up to 1.28x step-time speedup over SGLang's existing layerwise offloading, reduces peak GPU memory by up to 49% over the no-offload baseline at near-identical step time once the workload is large enough, and exposes a tunable memory-latency tradeoff that recovers near-zero step-time overhead in the small-workload regime.",
+        "canonical_id": "arXiv:2605.11335",
+        "arxiv_id": "2605.11335",
+        "authors": [
+          "Han Meng",
+          "Dan Liu",
+          "Dong Li"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:0d8b8e4df490aefa1a9263db0500ee9ba1c5f6f0cafa596d82f71ed156527976",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

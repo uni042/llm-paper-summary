@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "20260921T170325Z-scheduled-chat-00-4d",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-be16d214d5c628cd",
+      "claim_id": "claim-98e93021dfa426e817958f07",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-98e93021dfa426e817958f07",
+      "claimed_at": "2026-09-21T17:03:42+00:00",
+      "expires_at": "2026-09-21T18:33:42+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-be16d214d5c628cd"
+      ],
+      "job": {
+        "job_id": "job-research-be16d214d5c628cd",
+        "type": "research",
+        "parent_job_id": "job-12568c96b9a4cf81",
+        "priority": 99,
+        "canonical_id": "arXiv:2608.04502",
+        "arxiv_id": "2608.04502",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation",
+        "source_url": "https://www.semanticscholar.org/paper/7abcf6581731dc0e18b15305095ec0619756835d",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2608.04502-afd-ledger-deployment-provisioning-for-attention-ffn-disaggregation.md",
+        "selection_reason": "MoEのAttention-FFN disaggregationとcollocated配置を同一budget/SLO下で分析的にprovisionし、deployment評価を68.8–83.5%削減しつつglobal optimumを回収。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:15:20+00:00",
+        "blocker": "Primary-source metadata and the official AFD-Ledger repository were reachable, but the arXiv abstract/HTML full-text routes returned a retrieval DisabledError in this invocation and the official repository did not expose a paper source at the checked canonical path. Secondary mirrors contained summaries but were not used to synthesize scientific details. No five-slot record was produced without a safe full-primary read.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-09e6b7e331fdc3f1e5497e51.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-21T04:45:02+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-21T04:45:02+00:00",
+            "reason": "Primary-source metadata and the official AFD-Ledger repository were reachable, but the arXiv abstract/HTML full-text routes returned a retrieval DisabledError in this invocation and the official repository did not expose a paper source at the checked canonical path. Secondary mirrors contained summaries but were not used to synthesize scientific details. No five-slot record was produced without a safe full-primary read."
+          }
+        ],
+        "last_blocked_at": "2026-09-21T04:45:02+00:00",
+        "retry_queued_at": "2026-09-21T14:09:55+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | Japanese-first prose ratio is too low: 66.1% < 70% (Japanese=4795, Latin=2462)",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "Japanese-first prose ratio is too low: 66.1% < 70% (Japanese=4795, Latin=2462)"
+        ],
+        "last_validation_failed_at": "2026-09-21T17:03:13+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-300a136b6deb772341ce9166"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-300a136b6deb772341ce9166.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T17:03:42+00:00",
+  "checkpoint_released": 0
+}

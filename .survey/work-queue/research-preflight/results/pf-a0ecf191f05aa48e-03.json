@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-a0ecf191f05aa48e-03",
+  "kind": "research",
+  "attempt_id": "attempt-a0ecf191f05aa48e02bfda2f",
+  "job_id": "job-research-71cfe275bb4fcca4",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.23888-siftmoe-similarity-aware-expert-selection.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:f5dc2af9dd999527eb4a993981942b7c2306f9cb25572da3dcc5b806be0738f7",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "66f402cb325ced3210e2800000ed6d54bcf6366b"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "02b45e07cac782469cd7d57e7ebf15a93e2394b4"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "b753720b6050281f9701be2e784e9d6d3a3b4182"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "ca36bd17bb97478e1075baf45d75923485414511"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "210ca3d04ef7a4104e4fa3c04364b39ae3680337"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T15:48:12+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.23888-siftmoe-similarity-aware-expert-selection.md",
+    "status": "FAIL",
+    "file_bytes": 28284,
+    "prose_chars": 5552,
+    "paragraphs": 25,
+    "method_paragraphs": 13,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.8663410872638478,
+    "japanese_chars": 6741,
+    "latin_chars": 1040,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

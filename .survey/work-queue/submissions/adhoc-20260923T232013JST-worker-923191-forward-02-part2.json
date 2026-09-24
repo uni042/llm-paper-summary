@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "discovery_precheck": {
+    "request_id": "adhoc-20260923T232013JST-worker-923191-forward-02",
+    "result_path": ".survey/work-queue/discovery-precheck/results/adhoc-20260923T232013JST-worker-923191-forward-02.json",
+    "receipt": "sha256:992259be4de50dd0b363ca71d2df68326d5c6fa34b4218171977742cf8b1e163"
+  },
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1145/3770855.3817626",
+      "doi": "10.1145/3770855.3817626",
+      "title": "OrionInfer: Low-Overhead Parallelism Switching and Live Migration for Efficient LLM Serving",
+      "source_url": "https://doi.org/10.1145/3770855.3817626",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-orioninfer-parallelism-switching-live-migration.md",
+      "priority": 87,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 87
+      },
+      "reason": "負荷変動に応じてDP/TPをruntime切替し、batch効率を保ったlive migrationを行う。動的LLM serving/scheduling系統を直接更新する。"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3830086",
+      "doi": "10.1145/3830086",
+      "title": "CELLServe: An SLO-Aware and Cost Efficient LLMs Serving System for Serverless Computing Environments",
+      "source_url": "https://doi.org/10.1145/3830086",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-cellserve-serverless-pd-disaggregation.md",
+      "priority": 87,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 87
+      },
+      "reason": "serverless環境へprefill-decode分離とcontinuous batchingを統合し、SLO制約下で資源provisioningとdecode instance統合を行う。serving系統への直接候補。"
+    },
+    {
+      "canonical_id": "arXiv:2609.24417",
+      "arxiv_id": "2609.24417",
+      "title": "ARM: Attention with Routed-Memory for Learnable Sparse Control",
+      "source_url": "https://arxiv.org/abs/2609.24417",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory.md",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 85
+      },
+      "reason": "固定サイズの階層routed memoryでKV保持・更新量を学習し、推論時のmemory access量も適応化する。KV cache圧縮・選択系統に明確な差分を持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2608.04991",
+      "arxiv_id": "2608.04991",
+      "title": "RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.04991",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.04991-rac-reference-aware-activation-compression.md",
+      "priority": 75,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 10,
+        "recency": 15,
+        "venue": 0,
+        "total": 75
+      },
+      "reason": "local-cloud split inferenceの境界activation通信を履歴参照と残差量子化で圧縮する。edge/offload系統に有用な通信最適化差分を持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2608.05926",
+      "arxiv_id": "2608.05926",
+      "title": "BALANCE: Hybrid Autoregressive-Speculative LLM Inference at the Network Edge",
+      "source_url": "https://arxiv.org/abs/2608.05926",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.05926-balance-hybrid-autoregressive-speculative-edge.md",
+      "priority": 72,
+      "priority_breakdown": {
+        "base": 47,
+        "lineage": 10,
+        "recency": 15,
+        "venue": 0,
+        "total": 72
+      },
+      "reason": "edge資源制約下でautoregressive/speculative modeを同時運用し、admissionと計算資源配分を最適化する。edge inferenceとspeculative servingを接続する候補。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "adhoc-20260923T232013JST-worker-923191",
+    "round": "adhoc-20260923T232013JST-worker-923191-forward-02",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "query_summary": "FlexGenのSemantic Scholar前方引用を固定sourceで100件走査し、precheckが既存・重複等を除外して未評価20件を許可。推論基盤、階層メモリ、KV、servingへ直接寄与する強候補10件を2分割でResearch候補化した。",
+    "seed_canonical_id": "arXiv:2303.06865",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "DOI:10.1145/3770855.3817626",
+      "DOI:10.1145/3830086",
+      "arXiv:2609.24417",
+      "arXiv:2608.04991",
+      "arXiv:2608.05926"
+    ],
+    "next_axis_hint": "selector after durable forward round",
+    "round_submission_index": 2,
+    "round_submission_count": 2,
+    "search_windows": [
+      {
+        "topic": "FlexGen forward citations",
+        "source": "semantic_scholar",
+        "date_range": "fixed citation result set",
+        "category": "inference-systems",
+        "citation_direction": "forward",
+        "seed_canonical_id": "arXiv:2303.06865",
+        "raw_result_count": 100,
+        "unseen_result_count": 20,
+        "duplicate_filtered_count": 62,
+        "rejection_filtered_count": 1,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 10,
+        "position": "offset-0"
+      }
+    ]
+  }
+}

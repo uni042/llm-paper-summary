@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T081100JST-scheduled-chat-00-546bf3-r4",
+  "kind": "research",
+  "attempt_id": "attempt-546bf32315ae41457b812520",
+  "job_id": "job-research-06d45370eceff021",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.25426-above-the-inner-loop-exceeding-accelerate-at-llm-prefill-gemm-on-the-m1-amx.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:94295390940760ae339e0b7c7613ca2f9287d6ca49a94fb122813a50df9e5407",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "37384e8c15dc4f8ed5d4bd9c40d8dc9535772077"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "8795e36799f7e164ec8400cb1ec5b3c025afbbf0"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "3a51e060d26bd49bb31490210a8d6bb7bdab46cd"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "546eddae10a73c39e8dd7616a289e4523adc0f78"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "73ca60cac617249eb43860088dd62251f1c6f230"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[4].description is too short",
+    "Japanese-first prose ratio is too low: 68.2% < 70% (Japanese=3952, Latin=1841)"
+  ],
+  "checked_at": "2026-09-22T23:09:07+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260916T034100Z-scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-c0e589d0a60cc7cf",
+      "claim_id": "claim-743db39c9d8329de077d7390",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-743db39c9d8329de077d7390",
+      "claimed_at": "2026-09-16T03:41:18+00:00",
+      "expires_at": "2026-09-16T05:11:18+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-c0e589d0a60cc7cf"
+      ],
+      "job": {
+        "job_id": "job-research-c0e589d0a60cc7cf",
+        "type": "research",
+        "parent_job_id": "job-41df938e522724a4",
+        "priority": 83,
+        "canonical_id": "arXiv:2602.01053",
+        "title": "LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents",
+        "source_url": "https://arxiv.org/abs/2602.01053",
+        "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
+        "selection_reason": "multi-LoRA agentでbase model由来KVを共有しadapter依存成分だけ低rank保持する構成と、full dimensionへのmaterializeを避けるFlash-LoRA-Attentionを提案。agent間の長いtool trajectory共有でmemory/compute重複を減らすため、ForkKVと異なるlow-rank decomposition系の比較対象になる。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T00:04:42+00:00"
+      },
+      "record_bank": "c"
+    }
+  ],
+  "processed_at": "2026-09-16T03:41:18+00:00",
+  "checkpoint_released": 0
+}

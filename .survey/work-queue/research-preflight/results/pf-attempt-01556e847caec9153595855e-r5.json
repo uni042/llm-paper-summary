@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-01556e847caec9153595855e-r5",
+  "kind": "research",
+  "attempt_id": "attempt-01556e847caec9153595855e",
+  "job_id": "job-research-c449ea471528f1b0",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17109-shared-prefix-kv-reuse-across-standard-lora-adapters-quality-and-serving-tradeoffs.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:da29cc292414af5d35653039b59a4f9ebfaa9daba2c451c49406184ae87adcae",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "669ac0f5f65774dcf894f6aa3240348b8779436f"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "4504b7855098086c903c1fed1e1204c94864fae7"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "2dc74042abfdc974b3ba283db1a7cf46551eec4e"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "dcd7cf1b7619e5571788465317395f89dcc3b3bc"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "06a33905c44f16a76b4bf38ab65354aa07c255ac"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2",
+    "手法構成要素#7 の段落数 1 < 2",
+    "手法構成要素#8 の段落数 1 < 2",
+    "手法構成要素#9 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T12:36:51+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2609.17109-shared-prefix-kv-reuse-across-standard-lora-adapters-quality-and-serving-tradeoffs.md",
+    "status": "FAIL",
+    "file_bytes": 26743,
+    "prose_chars": 7518,
+    "paragraphs": 29,
+    "method_paragraphs": 11,
+    "method_components": 9,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.8573748308525034,
+    "japanese_chars": 6336,
+    "latin_chars": 1054,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2",
+      "手法構成要素#7 の段落数 1 < 2",
+      "手法構成要素#8 の段落数 1 < 2",
+      "手法構成要素#9 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

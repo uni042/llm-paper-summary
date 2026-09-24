@@ -1,0 +1,882 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-e5c9babb1a94ccfeafbd",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-e5c9babb1a94ccfeafbd",
+  "axis": "forward citations of PagedAttention/vLLM memory-efficient LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2309.06180/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "895a7fcf0d552fd099298d9f659ea0d5d4d062df",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 16,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T17:24:18.187214+00:00",
+  "preload_id": "preload-e5c9babb1a94ccfeafbd",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+      "source_url": "https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.future.2026.108697",
+      "doi": "10.1016/j.future.2026.108697",
+      "authors": [
+        "Guanghan Wu",
+        "Roberto Morabito"
+      ]
+    },
+    {
+      "title": "Measuring the production of scientific human capital: New data, methods, and evidence on the U.S. scientific training ecosystem",
+      "source_url": "https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.respol.2026.105605",
+      "doi": "10.1016/j.respol.2026.105605",
+      "authors": [
+        "Dror Shvadron",
+        "Han-Sen Zhang",
+        "L. Fleming",
+        "D. Gross"
+      ]
+    },
+    {
+      "title": "A unified framework for early childhood image captioning via knowledge-grounded metrics and process-level reinforcement",
+      "source_url": "https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116162",
+      "doi": "10.1016/j.engappai.2026.116162",
+      "authors": [
+        "Zhen-Dong Wang",
+        "Zhi-Bin Gu",
+        "Zi-Qi Zhang",
+        "Zong-Yang Ma",
+        "Bing Li",
+        "Cheng Xu",
+        "Songyin Dai",
+        "Ying Wang",
+        "Hong-Zhe Liu"
+      ]
+    },
+    {
+      "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+      "source_url": "https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+      "doi": "10.1016/j.neucom.2026.134297",
+      "authors": [
+        "Ge Teng",
+        "Chen Shen",
+        "Wenxiao Wang",
+        "Sinan Fan",
+        "Liang Xie",
+        "Xiang Tian",
+        "Peng Chen",
+        "Xuesong Liu",
+        "Yaowu Chen",
+        "Jieping Ye"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+      "source_url": "https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+      "doi": "10.1016/j.comnet.2026.112609",
+      "authors": [
+        "Yu-Qi Zhang",
+        "Hao-Chen Lv",
+        "Dan-Yang Zheng",
+        "Chen Yang",
+        "Huan-Lai Xing",
+        "Xiao-Jun Cao",
+        "Ji Xu",
+        "Fei Teng"
+      ]
+    },
+    {
+      "title": "Agentic active Asset Administration Shell for circular manufacturing",
+      "source_url": "https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.jmsy.2026.07.011",
+      "doi": "10.1016/j.jmsy.2026.07.011",
+      "authors": [
+        "Jian-Zhang Li",
+        "Qian Ruan",
+        "Dachuan Shi",
+        "Matthias Schneider",
+        "Olga Meyer",
+        "Michael Oberle",
+        "Li Yi",
+        "Fei Tao"
+      ]
+    },
+    {
+      "title": "Exploring the Design Space of Isolation Mechanisms",
+      "source_url": "https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Processes, containers, and virtual machines (VMs) offer different trade-offs between performance, isolation, and resource sharing. Yet, they represent just three points in a vast design space. Developers repeatedly introduce ad-hoc isolation mechanisms to tune these trade-offs for specific deployments, but there is no systematic way to explore the design space and derive mechanisms that satisfy given security and performance goals. We introduce IsoSearch, a technique for exploring the isolation mechanism design space to find one that satisfies the goals and constraints of a specific deployment scenario. IsoSearch builds on OSmosis [4], our prior model of isolation, which represents protection domains, resources, and their relationships as a graph. A developer begins with a starting mechanism and its representation as an OSmosis graph and specifies both a set of functional constraints (e.g., these two protection domains must both be able to write to this file) and an optimization target (e.g., minimize the amount of memory shared between the two domains). IsoSearch then navigates the design space by applying valid graph transitions to generate candidate mechanisms, scores each mechanism, and selects the most promising ones for further exploration. The search terminates when all active candidates satisfy the constraints and goals or when score improvement plateaus. We demonstrate the efficacy of our approach through five case studies, ranging from resource privatization to protecting a database's private key.",
+      "canonical_id": "DOI:10.1145/3831586.3838145",
+      "doi": "10.1145/3831586.3838145",
+      "authors": [
+        "Sidhartha Agrawal",
+        "Shaurya Patel",
+        "Linh Pham",
+        "Arya Stevinson",
+        "Ilias Karimalis",
+        "Hugo Lefeuvre",
+        "Aastha Mehta",
+        "Reto Achermann",
+        "Margo I. Seltzer"
+      ]
+    },
+    {
+      "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+      "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+      "canonical_id": "DOI:10.1145/3832810.3832854",
+      "doi": "10.1145/3832810.3832854",
+      "authors": [
+        "Wen-Hao Sun",
+        "Pan-Pan Cui",
+        "Yiqi Liu",
+        "Wan-Yu Wang"
+      ]
+    },
+    {
+      "title": "MEDO: Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool",
+      "source_url": "https://www.semanticscholar.org/paper/c0a20d3dafcb048005bdef773e26f59b22a4767d",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The scale of data-intensive workloads in intelligent datacenters has grown rapidly in recent years, intensifying the need for efficient data movement within disaggregated memory pools across memory and storage subsystems. However, most existing solutions focus primarily on optimizing communication between compute nodes and data nodes, overlooking fine-grained management of in-pool data flows. Furthermore, prevailing data swap strategies often suffer from high overhead, limited parallelism, and a lack of adaptivity to dynamic workloads, especially for bursty data access patterns in heterogeneous memory pools. To address these issues, this paper introduces MEDO, a high-parallelism data offloading system for disaggregated memory pools. MEDO leverages a novel multi-stream data offloading architecture, featuring parallel data streams and approximate LRU queues, to maximize throughput and efficiently handle diverse workloads. Additionally, MEDO incorporates a lightweight, adaptive offloading agent that dynamically optimizes data placement decisions and fine-grained system configurations. Our prototype achieves up to 3.6 × latency reduction on real-world data services compared with baselines and can reduce in-pool memory usage by up to 50% on state-of-the-art disaggregated memory systems.",
+      "canonical_id": "DOI:10.1145/3832810.3832890",
+      "doi": "10.1145/3832810.3832890",
+      "authors": [
+        "Jing Wang",
+        "Han-Zhang Yang",
+        "Chao Li",
+        "Xinkai Wang",
+        "Tao-Lei Wang",
+        "Jinyang Guo",
+        "Minyi Guo",
+        "Jie Meng",
+        "Shuang-Fu Zeng"
+      ]
+    },
+    {
+      "title": "From Utterances to Networks: Modelling Slang Adoption and Diffusion Across Subreddits",
+      "source_url": "https://www.semanticscholar.org/paper/10b790121cfec8decbec201d93770e79175c594d",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Adoption and diffusion of neologisms in online communities have received renewed attention in recent years. As internet slang terms such as APT, referring to a K-pop song, and phrases such as Canon Event meaning an embarrassing but pivotal event, go viral online, it becomes increasingly important to understand the mechanisms that contribute to their success. Prior studies have often explained slang diffusion either from the perspective of social interaction or from the linguistic properties of the slang itself, but rarely from both perspectives together. One major obstacle has been the high cost of annotating slang usage in large-scale online communication. Recent advances in large language models (LLMs), however, make it possible to use them as scalable annotators for such tasks. In this study, we first curate a human-annotated benchmark to evaluate LLM performance in detecting slang usage in real Reddit communication. We then leverage LLM-based annotations to model slang adoption and diffusion. Our results show that slang diffusers with higher bridging capital are associated with increased subsequent adoption, whereas diffusers with higher bonding capital are associated with reduced adoption. We also find that wider contextual usage of a slang term is associated with a longer time before new users officially adopt it. Together, these findings suggest that both social-network structure and linguistic context shape the diffusion of neologisms in online communities.",
+      "canonical_id": "arXiv:2609.25669",
+      "arxiv_id": "2609.25669",
+      "authors": [
+        "Xiao-Ning Wang",
+        "Ted Underwood",
+        "Zhe-Wei Sun"
+      ]
+    },
+    {
+      "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/42cb858ef1c96a4950f14bcb89c8e127fc7c3194",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+      "canonical_id": "arXiv:2609.26638",
+      "arxiv_id": "2609.26638",
+      "authors": [
+        "Dohyun Kim",
+        "Sung-Jun Han",
+        "Hyungguk Kim",
+        "Yusik Kim",
+        "Jamin Shin",
+        "Paul Hongsuck Seo",
+        "Hongjoon Ahn"
+      ]
+    },
+    {
+      "title": "How Strongly Should Task State Influence an LLM Agent?",
+      "source_url": "https://www.semanticscholar.org/paper/eef926837a209fc686e897b78f617316e8a856e0",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Long-horizon assigned work requires an LLM agent to track the state of a task: which steps are done, blocked, cancelled, or open to repetition. Agent systems either keep this state as text in the prompt and rely on the model to read that text, or move the state into a module that enforces it, and each system is evaluated as a whole, so no one knows how much reliability comes from the state being shown, told, or enforced. We fix the task rules, the model, and paired episodes and vary how strongly task state reaches the agent: a raw transcript, an exact checklist, per-turn directives from a state machine compiled from the brief and advanced only by execution receipts, or an enforcement gate on that machine that refuses state-violating actions; every episode is scored by exact payload matching against dynamic ground truth. Across three models, two reasoning regimes, and two domains, four findings hold without per-turn reasoning: displaying accurate state is unreliable, an unverified ledger the agent writes itself beats an accurate checklist it is shown, directives help in proportion to the model's obedience, and enforcement needs no obedience but is bounded by the correctness of its state and by the matcher that maps requests to steps; per-turn reasoning at a 235B agent compresses these separations without repairing the text rungs. The same gate, compiled from $\\tau^2$-bench's airline policy, raises a 235B agent's pass$^1$ from 0.39 to 0.54 and changes nothing for a 35B agent that rarely violates the policy; on PM-Bench, where acting turns on recognizing a cue rather than on state, showing the record is the best rung--matching or beating both gates and reversing the ledger-over-checklist finding--and enforcing the matcher's judgement drops a 35B agent below its raw transcript. Enforcement pays when failures are state-decidable and frequent, and hurts when the gate's judgement is wrong.",
+      "canonical_id": "arXiv:2609.25686",
+      "arxiv_id": "2609.25686",
+      "authors": [
+        "Chen-Yu Zhang",
+        "Wonbin Kweon",
+        "Jia-Wei Han"
+      ]
+    },
+    {
+      "title": "Decoupling Logical Masks from GPU Execution for Dynamic Block-Sparse Attention",
+      "source_url": "https://www.semanticscholar.org/paper/1be67dfb6a47f4d63f18a0d3d0ebfb053d8c5a33",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Attention computation makes inference expensive in video diffusion transformers (vDiTs), which generate videos through iterative denoising. Block-sparse attention (BSA) reduces this cost by computing only blocks selected by a logical mask, which specifies attention interactions to compute. However, coupling logical block geometry to execution choices limits adaptation to varying masks and graphics processing units (GPUs), while runtime kernel specialization can incur preparation overhead that outweighs execution time savings. We present Tessera, a specialized runtime for dynamic BSA that decouples logical masks from GPU execution while preserving specified attention interactions. Its physical mapping layer retains, combines, or subdivides logical attention blocks into physical tiles suited to different attention mask shapes and GPU architectures. Its task organization layer groups and schedules tiles within GPU tasks to reuse data, expose parallelism, and overlap data movement with computation. Finally, profile-guided regime selection enables low- overhead execution plan selection through a lookup table constructed from offline profiling. We implement Tessera with specialized CUDA kernels supporting four NVIDIA GPU generations. Evaluated on 2,315 real attention masks and industrial video diffusion models, Tessera achieves up to 6.79x BSA request speedup over baseline systems in the evaluated video diffusion models.",
+      "canonical_id": "arXiv:2609.25869",
+      "arxiv_id": "2609.25869",
+      "authors": [
+        "Shang-Hao Liu",
+        "Xiao-Yun Yu",
+        "Wan-Ting Li",
+        "Wen-Qi Jiang"
+      ]
+    },
+    {
+      "title": "Hot-Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/8e224a113dc50bb07f14d0e189fb7995f1d21027",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Large language model (LLM) serving is increasingly agentic, with multi-turn sessions that idle between actions yet must retain their full context. Limited GPU memory capacity forces inactive KV states to be evicted, so resuming a session incurs either costly recomputation or slow interconnect transfers. To address this, high bandwidth flash (HBF)-an on-package 3D-NAND memory offering orders-of-magnitude greater capacity than high bandwidth memory (HBM) at comparable read bandwidth-has emerged as a strong candidate. However, its high read energy and limited write endurance make it impractical to serve all KV traffic. Fortunately, our analysis shows that agentic KV states exhibit distinct access patterns: a small hot set is read for every decoding step, while a large cold pool is read only when a paused session resumes. Exploiting this, we place the hot set in HBM and the cold pool in HBF, forming a hot-cold KV hierarchy within the GPU memory tier. On agentic workloads with Qwen3-Coder-30B-A3B, our design delivers 14 ms time-between-tokens (TBT) and adds only $\\approx$0.1 ms of resume latency on top of prefill, while hosting $24\\times$ more concurrent sessions per GPU. By confining HBM to the hot set, our design also cuts read power by 7.6 kW per 8-GPU node relative to serving all KV from flash-establishing HBF as a cold-tier complement to HBM rather than its replacement.",
+      "canonical_id": "arXiv:2609.25782",
+      "arxiv_id": "2609.25782",
+      "authors": [
+        "Jongjin Baek",
+        "Won Ji",
+        "Seungjae Yoo",
+        "Joo-Young Kim"
+      ]
+    },
+    {
+      "title": "Modular Norm RandOpt: Population-Efficient Ensembling through Architecture-Aware Perturbations",
+      "source_url": "https://www.semanticscholar.org/paper/d3bd59422c6eb8d8bd8ae7d1a9dff7eb25a93038",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "RandOpt samples weight-perturbed language models and ensembles top-ranked candidates through plurality voting, but its global perturbation scale ignores heterogeneous module geometry. We propose \\mbox{\\textbf{\\emph{Modular Norm RandOpt}}}, an architecture-aware sampling method using module-wise natural norms and calibrated scales while preserving selection and voting. It outperforms RandOpt using $3\\times$ fewer candidates on Countdown and at least $12\\times$ fewer on GSM8K, with corresponding wall-clock savings. Evaluations across seven tasks and three Qwen scales ($0.5$B--$3$B) show higher mean accuracy than RandOpt on Countdown, GSM8K, and MATH-500 at every scale. The gains extend to Llama 3.2 $3$B and Gemma 3 $4$B on Countdown and GSM8K. On Qwen2.5-1.5B, our ensembles also achieve higher mean accuracy than iterative baselines on both tasks at comparable main-run evaluation budgets. On GSM8K, a tail-density diagnostic implies only a $1.2$--$1.8\\times$ candidate reduction, while most ensemble improvement is associated with more favorable correct-expert support. These results highlight perturbation geometry as a key design choice for population-efficient, gradient-free search around pretrained models.",
+      "canonical_id": "arXiv:2609.25745",
+      "arxiv_id": "2609.25745",
+      "authors": [
+        "Kirato Yoshihara",
+        "Hiroaki Hamade"
+      ]
+    },
+    {
+      "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+      "source_url": "https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+      "canonical_id": "arXiv:2609.25845",
+      "arxiv_id": "2609.25845",
+      "authors": [
+        "Guan-Xu Yu",
+        "Yu-Hang Yao"
+      ]
+    },
+    {
+      "title": "You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/52a4a506939d1fc107fc053d923c75d1f28a7a69",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Fine-grained mixture-of-experts (MoE) architectures have become a mainstream design for open-weight LLMs, with hundreds of experts and increasingly many selected per token. This shift makes dynamic expert pruning an attractive route to cheaper inference. Yet existing evidence comes largely from coarser architectures and likelihood-scored multiple-choice benchmarks, leaving three central questions open in the fine-grained regime: how redundant per-token expert selection is, how effectively existing pruning methods exploit that redundancy, and what governs a model's sensitivity to pruning. We fill this gap with a systematic empirical study of twelve fine-grained MoE checkpoints spanning nine architecture families, with a core suite of eleven benchmarks covering knowledge QA, mathematics, code generation, and general reasoning. We find that expert selection is far more redundant than the field's operating points assume: uniformly retaining about two thirds of the selected experts preserves 98.8% of unpruned performance on average, requiring only a one-integer change and delivering 1.2-1.7x measured speedup across two serving backends. This simple baseline leaves little room for dynamic allocation at conservative budgets: even the best published rules differ from it by under 1% at matched expert budgets. Their value emerges under aggressive pruning, where the best rules recover up to 3.0% over uniform truncation, with gains concentrated in the generative tasks that suffer the sharpest degradation. Sensitivity to aggressive pruning also depends on the model: larger and thinking models are more resilient, whereas multimodal models are more vulnerable. Together, these findings reveal how much expert computation fine-grained MoEs can dispense with, and establish when dynamic allocation earns its complexity, informing both practical deployment and future pruning methods.",
+      "canonical_id": "arXiv:2609.25809",
+      "arxiv_id": "2609.25809",
+      "authors": [
+        "Yuan-Teng Chen",
+        "Qi-Wei Lai",
+        "Tian-Qi Chen",
+        "Pei-Song Wang",
+        "Yuan-Tian Shao",
+        "Nan-Xin Zeng",
+        "Zhi-Lei Liu",
+        "Chuang-Yi Li",
+        "Jing Liu",
+        "Jian Cheng"
+      ]
+    },
+    {
+      "title": "DHSched: Stateless Control for Stateful Real-Time Avatar Serving",
+      "source_url": "https://www.semanticscholar.org/paper/4b6acf3fb2588d7a7b350dab0eccfc7d8dfa1266",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Real-time avatar services run long-lived, GPU-backed sessions that transform a continuous text stream into speech, facial motion, rendered video, and RTC media. Elastic operation repeatedly reassigns these sessions across Workers. A reassignment updates shared placement state while the previous GPU runtime and RTC connection remain alive, opening a gap between control-plane assignment and execution authority. A stateful controller serializes ownership by retaining per-session authority, placing that state on the controller's scaling and failover path. We present DHSched, a control plane that manages long-lived stateful sessions through stateless peer Dispatch replicas. DHSched externalizes session ownership as a generation identified by (WorkerID, epoch). Dispatch conditionally commits each generation. Infer-Controller claims and revalidates the same generation before releasing state-advancing input. A stale runtime loses execution authority even if it remains alive. DHSched ranks candidates from periodically refreshed load views while keeping capacity admission authoritative. Recovery advances the same generation path via source-epoch guards and source-independent reconstruction. DHSched runs in our production avatar-serving stack, which reached 49,987 concurrent live sessions. On 10 June 2026, it completed 9,927 session migrations with no observed dual-owner conflicts or capacity overshoots. At the production peak, CreateLive latency was 98.3 ms at P99 and PushText latency was 16.5 ms at P99. Across 100,000 randomized ownership runs, assignment-time, claim-only, and WorkerID-only protocols permit stale execution, while DHSched records no dual-owner or stale-generation release.",
+      "canonical_id": "arXiv:2609.26363",
+      "arxiv_id": "2609.26363",
+      "authors": [
+        "Xin Wang",
+        "Hai-Tong Zhang",
+        "Xiang-Hong Li",
+        "Shu-Min Lin",
+        "Xian-Zheng Song",
+        "Lin Wang",
+        "Zhen-Yu Xu"
+      ]
+    },
+    {
+      "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/962c7e516aba354ee7e0d5618b18180eb44d6d04",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Quantization-aware distillation (QAD) restores much of the short-form question-answering performance lost to sub-3-bit quantization, yet leaves mathematical and code reasoning substantially impaired. Long generations often degenerate into repetitive loops, exhausting the decoding budget without completing a solution. We trace this gap to quantization-amplified exposure bias: QAD trains on fixed corpus prefixes, while quantization-induced deviations compound along the model's own autoregressive trajectories. To address this mismatch, we introduce an on-policy distillation (OPD) stage that places teacher supervision where the quantized model actually goes. Starting from a QAD checkpoint, the student generates through the quantized forward path used at deployment and receives feedback from a frozen full-precision teacher on its own prefixes, combining dense token-level guidance with task-verifier rewards. Across four models at 2.79 and 1.88 effective bits, OPD raises average BF16 performance retention from 35% to 70% on MATH-500 and from 66% to 91% on HumanEval while preserving short-form performance, with reasoning gains substantially exceeding those of continued teacher-forced QAD in matched-budget comparisons. By coupling QAD's stable low-bit initialization with OPD's on-policy reasoning recovery, our framework provides a comprehensive sub-3-bit solution that preserves broad capabilities while restoring long-form reasoning.",
+      "canonical_id": "arXiv:2609.26708",
+      "arxiv_id": "2609.26708",
+      "authors": [
+        "Yuan-Teng Chen",
+        "Zhi-Lei Liu",
+        "Pei-Song Wang",
+        "Yuan-Tian Shao",
+        "Chuang-Yi Li",
+        "Wei-Ning Wang",
+        "Shuang Qiu",
+        "Gang Li",
+        "Jing Liu",
+        "Jian Cheng"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.future.2026.108697",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.future.2026.108697",
+        "title:beaveredge an llmorchestrated framework for edge ai lifecycle management automation",
+        "url:https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559"
+      ],
+      "record": {
+        "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+        "source_url": "https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.future.2026.108697",
+        "doi": "10.1016/j.future.2026.108697",
+        "authors": [
+          "Guanghan Wu",
+          "Roberto Morabito"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.respol.2026.105605",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.respol.2026.105605",
+        "title:measuring the production of scientific human capital new data methods and evidence on the us scientific training ecosystem",
+        "url:https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e"
+      ],
+      "record": {
+        "title": "Measuring the production of scientific human capital: New data, methods, and evidence on the U.S. scientific training ecosystem",
+        "source_url": "https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.respol.2026.105605",
+        "doi": "10.1016/j.respol.2026.105605",
+        "authors": [
+          "Dror Shvadron",
+          "Han-Sen Zhang",
+          "L. Fleming",
+          "D. Gross"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116162",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116162",
+        "title:a unified framework for early childhood image captioning via knowledgegrounded metrics and processlevel reinforcement",
+        "url:https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6"
+      ],
+      "record": {
+        "title": "A unified framework for early childhood image captioning via knowledge-grounded metrics and process-level reinforcement",
+        "source_url": "https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116162",
+        "doi": "10.1016/j.engappai.2026.116162",
+        "authors": [
+          "Zhen-Dong Wang",
+          "Zhi-Bin Gu",
+          "Zi-Qi Zhang",
+          "Zong-Yang Ma",
+          "Bing Li",
+          "Cheng Xu",
+          "Songyin Dai",
+          "Ying Wang",
+          "Hong-Zhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134297",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134297",
+        "title:ddpt enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+        "url:https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917"
+      ],
+      "record": {
+        "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+        "source_url": "https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+        "doi": "10.1016/j.neucom.2026.134297",
+        "authors": [
+          "Ge Teng",
+          "Chen Shen",
+          "Wenxiao Wang",
+          "Sinan Fan",
+          "Liang Xie",
+          "Xiang Tian",
+          "Peng Chen",
+          "Xuesong Liu",
+          "Yaowu Chen",
+          "Jieping Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.comnet.2026.112609",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.comnet.2026.112609",
+        "title:profitaware deployment of large language modelenabled inference chains in data centers",
+        "url:https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211"
+      ],
+      "record": {
+        "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+        "source_url": "https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+        "doi": "10.1016/j.comnet.2026.112609",
+        "authors": [
+          "Yu-Qi Zhang",
+          "Hao-Chen Lv",
+          "Dan-Yang Zheng",
+          "Chen Yang",
+          "Huan-Lai Xing",
+          "Xiao-Jun Cao",
+          "Ji Xu",
+          "Fei Teng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.jmsy.2026.07.011",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.jmsy.2026.07.011",
+        "title:agentic active asset administration shell for circular manufacturing",
+        "url:https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3"
+      ],
+      "record": {
+        "title": "Agentic active Asset Administration Shell for circular manufacturing",
+        "source_url": "https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.jmsy.2026.07.011",
+        "doi": "10.1016/j.jmsy.2026.07.011",
+        "authors": [
+          "Jian-Zhang Li",
+          "Qian Ruan",
+          "Dachuan Shi",
+          "Matthias Schneider",
+          "Olga Meyer",
+          "Michael Oberle",
+          "Li Yi",
+          "Fei Tao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3831586.3838145",
+      "identity_tokens": [
+        "id:DOI:10.1145/3831586.3838145",
+        "title:exploring the design space of isolation mechanisms",
+        "url:https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743"
+      ],
+      "record": {
+        "title": "Exploring the Design Space of Isolation Mechanisms",
+        "source_url": "https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Processes, containers, and virtual machines (VMs) offer different trade-offs between performance, isolation, and resource sharing. Yet, they represent just three points in a vast design space. Developers repeatedly introduce ad-hoc isolation mechanisms to tune these trade-offs for specific deployments, but there is no systematic way to explore the design space and derive mechanisms that satisfy given security and performance goals. We introduce IsoSearch, a technique for exploring the isolation mechanism design space to find one that satisfies the goals and constraints of a specific deployment scenario. IsoSearch builds on OSmosis [4], our prior model of isolation, which represents protection domains, resources, and their relationships as a graph. A developer begins with a starting mechanism and its representation as an OSmosis graph and specifies both a set of functional constraints (e.g., these two protection domains must both be able to write to this file) and an optimization target (e.g., minimize the amount of memory shared between the two domains). IsoSearch then navigates the design space by applying valid graph transitions to generate candidate mechanisms, scores each mechanism, and selects the most promising ones for further exploration. The search terminates when all active candidates satisfy the constraints and goals or when score improvement plateaus. We demonstrate the efficacy of our approach through five case studies, ranging from resource privatization to protecting a database's private key.",
+        "canonical_id": "DOI:10.1145/3831586.3838145",
+        "doi": "10.1145/3831586.3838145",
+        "authors": [
+          "Sidhartha Agrawal",
+          "Shaurya Patel",
+          "Linh Pham",
+          "Arya Stevinson",
+          "Ilias Karimalis",
+          "Hugo Lefeuvre",
+          "Aastha Mehta",
+          "Reto Achermann",
+          "Margo I. Seltzer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832854",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832854",
+        "title:accesm packedtotal exact inference for cpu esm2 embedding",
+        "url:https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6"
+      ],
+      "record": {
+        "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+        "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+        "canonical_id": "DOI:10.1145/3832810.3832854",
+        "doi": "10.1145/3832810.3832854",
+        "authors": [
+          "Wen-Hao Sun",
+          "Pan-Pan Cui",
+          "Yiqi Liu",
+          "Wan-Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832890",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832890",
+        "title:medo adaptive multistream data offloading for efficient management of disaggregated memory pool",
+        "url:https://www.semanticscholar.org/paper/c0a20d3dafcb048005bdef773e26f59b22a4767d"
+      ],
+      "record": {
+        "title": "MEDO: Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool",
+        "source_url": "https://www.semanticscholar.org/paper/c0a20d3dafcb048005bdef773e26f59b22a4767d",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The scale of data-intensive workloads in intelligent datacenters has grown rapidly in recent years, intensifying the need for efficient data movement within disaggregated memory pools across memory and storage subsystems. However, most existing solutions focus primarily on optimizing communication between compute nodes and data nodes, overlooking fine-grained management of in-pool data flows. Furthermore, prevailing data swap strategies often suffer from high overhead, limited parallelism, and a lack of adaptivity to dynamic workloads, especially for bursty data access patterns in heterogeneous memory pools. To address these issues, this paper introduces MEDO, a high-parallelism data offloading system for disaggregated memory pools. MEDO leverages a novel multi-stream data offloading architecture, featuring parallel data streams and approximate LRU queues, to maximize throughput and efficiently handle diverse workloads. Additionally, MEDO incorporates a lightweight, adaptive offloading agent that dynamically optimizes data placement decisions and fine-grained system configurations. Our prototype achieves up to 3.6 × latency reduction on real-world data services compared with baselines and can reduce in-pool memory usage by up to 50% on state-of-the-art disaggregated memory systems.",
+        "canonical_id": "DOI:10.1145/3832810.3832890",
+        "doi": "10.1145/3832810.3832890",
+        "authors": [
+          "Jing Wang",
+          "Han-Zhang Yang",
+          "Chao Li",
+          "Xinkai Wang",
+          "Tao-Lei Wang",
+          "Jinyang Guo",
+          "Minyi Guo",
+          "Jie Meng",
+          "Shuang-Fu Zeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25669",
+      "identity_tokens": [
+        "id:arXiv:2609.25669",
+        "title:from utterances to networks modelling slang adoption and diffusion across subreddits",
+        "url:https://www.semanticscholar.org/paper/10b790121cfec8decbec201d93770e79175c594d"
+      ],
+      "record": {
+        "title": "From Utterances to Networks: Modelling Slang Adoption and Diffusion Across Subreddits",
+        "source_url": "https://www.semanticscholar.org/paper/10b790121cfec8decbec201d93770e79175c594d",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Adoption and diffusion of neologisms in online communities have received renewed attention in recent years. As internet slang terms such as APT, referring to a K-pop song, and phrases such as Canon Event meaning an embarrassing but pivotal event, go viral online, it becomes increasingly important to understand the mechanisms that contribute to their success. Prior studies have often explained slang diffusion either from the perspective of social interaction or from the linguistic properties of the slang itself, but rarely from both perspectives together. One major obstacle has been the high cost of annotating slang usage in large-scale online communication. Recent advances in large language models (LLMs), however, make it possible to use them as scalable annotators for such tasks. In this study, we first curate a human-annotated benchmark to evaluate LLM performance in detecting slang usage in real Reddit communication. We then leverage LLM-based annotations to model slang adoption and diffusion. Our results show that slang diffusers with higher bridging capital are associated with increased subsequent adoption, whereas diffusers with higher bonding capital are associated with reduced adoption. We also find that wider contextual usage of a slang term is associated with a longer time before new users officially adopt it. Together, these findings suggest that both social-network structure and linguistic context shape the diffusion of neologisms in online communities.",
+        "canonical_id": "arXiv:2609.25669",
+        "arxiv_id": "2609.25669",
+        "authors": [
+          "Xiao-Ning Wang",
+          "Ted Underwood",
+          "Zhe-Wei Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26638",
+      "identity_tokens": [
+        "id:arXiv:2609.26638",
+        "title:diffusion drafts ar verifies accelerating document ocr with selfspeculative decoding",
+        "url:https://www.semanticscholar.org/paper/42cb858ef1c96a4950f14bcb89c8e127fc7c3194"
+      ],
+      "record": {
+        "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/42cb858ef1c96a4950f14bcb89c8e127fc7c3194",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+        "canonical_id": "arXiv:2609.26638",
+        "arxiv_id": "2609.26638",
+        "authors": [
+          "Dohyun Kim",
+          "Sung-Jun Han",
+          "Hyungguk Kim",
+          "Yusik Kim",
+          "Jamin Shin",
+          "Paul Hongsuck Seo",
+          "Hongjoon Ahn"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25686",
+      "identity_tokens": [
+        "id:arXiv:2609.25686",
+        "title:how strongly should task state influence an llm agent",
+        "url:https://www.semanticscholar.org/paper/eef926837a209fc686e897b78f617316e8a856e0"
+      ],
+      "record": {
+        "title": "How Strongly Should Task State Influence an LLM Agent?",
+        "source_url": "https://www.semanticscholar.org/paper/eef926837a209fc686e897b78f617316e8a856e0",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Long-horizon assigned work requires an LLM agent to track the state of a task: which steps are done, blocked, cancelled, or open to repetition. Agent systems either keep this state as text in the prompt and rely on the model to read that text, or move the state into a module that enforces it, and each system is evaluated as a whole, so no one knows how much reliability comes from the state being shown, told, or enforced. We fix the task rules, the model, and paired episodes and vary how strongly task state reaches the agent: a raw transcript, an exact checklist, per-turn directives from a state machine compiled from the brief and advanced only by execution receipts, or an enforcement gate on that machine that refuses state-violating actions; every episode is scored by exact payload matching against dynamic ground truth. Across three models, two reasoning regimes, and two domains, four findings hold without per-turn reasoning: displaying accurate state is unreliable, an unverified ledger the agent writes itself beats an accurate checklist it is shown, directives help in proportion to the model's obedience, and enforcement needs no obedience but is bounded by the correctness of its state and by the matcher that maps requests to steps; per-turn reasoning at a 235B agent compresses these separations without repairing the text rungs. The same gate, compiled from $\\tau^2$-bench's airline policy, raises a 235B agent's pass$^1$ from 0.39 to 0.54 and changes nothing for a 35B agent that rarely violates the policy; on PM-Bench, where acting turns on recognizing a cue rather than on state, showing the record is the best rung--matching or beating both gates and reversing the ledger-over-checklist finding--and enforcing the matcher's judgement drops a 35B agent below its raw transcript. Enforcement pays when failures are state-decidable and frequent, and hurts when the gate's judgement is wrong.",
+        "canonical_id": "arXiv:2609.25686",
+        "arxiv_id": "2609.25686",
+        "authors": [
+          "Chen-Yu Zhang",
+          "Wonbin Kweon",
+          "Jia-Wei Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25869",
+      "identity_tokens": [
+        "id:arXiv:2609.25869",
+        "title:decoupling logical masks from gpu execution for dynamic blocksparse attention",
+        "url:https://www.semanticscholar.org/paper/1be67dfb6a47f4d63f18a0d3d0ebfb053d8c5a33"
+      ],
+      "record": {
+        "title": "Decoupling Logical Masks from GPU Execution for Dynamic Block-Sparse Attention",
+        "source_url": "https://www.semanticscholar.org/paper/1be67dfb6a47f4d63f18a0d3d0ebfb053d8c5a33",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Attention computation makes inference expensive in video diffusion transformers (vDiTs), which generate videos through iterative denoising. Block-sparse attention (BSA) reduces this cost by computing only blocks selected by a logical mask, which specifies attention interactions to compute. However, coupling logical block geometry to execution choices limits adaptation to varying masks and graphics processing units (GPUs), while runtime kernel specialization can incur preparation overhead that outweighs execution time savings. We present Tessera, a specialized runtime for dynamic BSA that decouples logical masks from GPU execution while preserving specified attention interactions. Its physical mapping layer retains, combines, or subdivides logical attention blocks into physical tiles suited to different attention mask shapes and GPU architectures. Its task organization layer groups and schedules tiles within GPU tasks to reuse data, expose parallelism, and overlap data movement with computation. Finally, profile-guided regime selection enables low- overhead execution plan selection through a lookup table constructed from offline profiling. We implement Tessera with specialized CUDA kernels supporting four NVIDIA GPU generations. Evaluated on 2,315 real attention masks and industrial video diffusion models, Tessera achieves up to 6.79x BSA request speedup over baseline systems in the evaluated video diffusion models.",
+        "canonical_id": "arXiv:2609.25869",
+        "arxiv_id": "2609.25869",
+        "authors": [
+          "Shang-Hao Liu",
+          "Xiao-Yun Yu",
+          "Wan-Ting Li",
+          "Wen-Qi Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25782",
+      "identity_tokens": [
+        "id:arXiv:2609.25782",
+        "title:hotcold tiering of hbm and high bandwidth flash for agentic llm serving",
+        "url:https://www.semanticscholar.org/paper/8e224a113dc50bb07f14d0e189fb7995f1d21027"
+      ],
+      "record": {
+        "title": "Hot-Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/8e224a113dc50bb07f14d0e189fb7995f1d21027",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Large language model (LLM) serving is increasingly agentic, with multi-turn sessions that idle between actions yet must retain their full context. Limited GPU memory capacity forces inactive KV states to be evicted, so resuming a session incurs either costly recomputation or slow interconnect transfers. To address this, high bandwidth flash (HBF)-an on-package 3D-NAND memory offering orders-of-magnitude greater capacity than high bandwidth memory (HBM) at comparable read bandwidth-has emerged as a strong candidate. However, its high read energy and limited write endurance make it impractical to serve all KV traffic. Fortunately, our analysis shows that agentic KV states exhibit distinct access patterns: a small hot set is read for every decoding step, while a large cold pool is read only when a paused session resumes. Exploiting this, we place the hot set in HBM and the cold pool in HBF, forming a hot-cold KV hierarchy within the GPU memory tier. On agentic workloads with Qwen3-Coder-30B-A3B, our design delivers 14 ms time-between-tokens (TBT) and adds only $\\approx$0.1 ms of resume latency on top of prefill, while hosting $24\\times$ more concurrent sessions per GPU. By confining HBM to the hot set, our design also cuts read power by 7.6 kW per 8-GPU node relative to serving all KV from flash-establishing HBF as a cold-tier complement to HBM rather than its replacement.",
+        "canonical_id": "arXiv:2609.25782",
+        "arxiv_id": "2609.25782",
+        "authors": [
+          "Jongjin Baek",
+          "Won Ji",
+          "Seungjae Yoo",
+          "Joo-Young Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25745",
+      "identity_tokens": [
+        "id:arXiv:2609.25745",
+        "title:modular norm randopt populationefficient ensembling through architectureaware perturbations",
+        "url:https://www.semanticscholar.org/paper/d3bd59422c6eb8d8bd8ae7d1a9dff7eb25a93038"
+      ],
+      "record": {
+        "title": "Modular Norm RandOpt: Population-Efficient Ensembling through Architecture-Aware Perturbations",
+        "source_url": "https://www.semanticscholar.org/paper/d3bd59422c6eb8d8bd8ae7d1a9dff7eb25a93038",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "RandOpt samples weight-perturbed language models and ensembles top-ranked candidates through plurality voting, but its global perturbation scale ignores heterogeneous module geometry. We propose \\mbox{\\textbf{\\emph{Modular Norm RandOpt}}}, an architecture-aware sampling method using module-wise natural norms and calibrated scales while preserving selection and voting. It outperforms RandOpt using $3\\times$ fewer candidates on Countdown and at least $12\\times$ fewer on GSM8K, with corresponding wall-clock savings. Evaluations across seven tasks and three Qwen scales ($0.5$B--$3$B) show higher mean accuracy than RandOpt on Countdown, GSM8K, and MATH-500 at every scale. The gains extend to Llama 3.2 $3$B and Gemma 3 $4$B on Countdown and GSM8K. On Qwen2.5-1.5B, our ensembles also achieve higher mean accuracy than iterative baselines on both tasks at comparable main-run evaluation budgets. On GSM8K, a tail-density diagnostic implies only a $1.2$--$1.8\\times$ candidate reduction, while most ensemble improvement is associated with more favorable correct-expert support. These results highlight perturbation geometry as a key design choice for population-efficient, gradient-free search around pretrained models.",
+        "canonical_id": "arXiv:2609.25745",
+        "arxiv_id": "2609.25745",
+        "authors": [
+          "Kirato Yoshihara",
+          "Hiroaki Hamade"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25845",
+      "identity_tokens": [
+        "id:arXiv:2609.25845",
+        "title:visual jev accurate and efficient decisions from shared visual context",
+        "url:https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1"
+      ],
+      "record": {
+        "title": "Visual Jev: Accurate and Efficient Decisions from Shared Visual Context",
+        "source_url": "https://www.semanticscholar.org/paper/0e4039869fb51c9d12318d46cd5e94cc31a7e3d1",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Many vision applications ask several independent, forced-choice questions about the same image. Visual Jev encodes the image and public context once, executes isolated question suffixes as a batch, and reads candidate probabilities from the backbone's language-model head. Across four benchmarks, answer-supervised post-training raises equal-weight macro accuracy from 70.6% to 76.1%, with the gain concentrated on the two task families represented in training. At N=32 questions per image, shared batched execution is 8.9x faster in warm amortized time than independent serial execution and remains 3.4x faster than an already-batched baseline that recomputes the prefix, at the cost of higher peak memory. A matched typed-head control offers no consistent accuracy advantage over the language-model-head readout. The supported design is therefore simple: adapt the backbone for quality, retain the existing readout, and share execution for efficiency.",
+        "canonical_id": "arXiv:2609.25845",
+        "arxiv_id": "2609.25845",
+        "authors": [
+          "Guan-Xu Yu",
+          "Yu-Hang Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25809",
+      "identity_tokens": [
+        "id:arXiv:2609.25809",
+        "title:you only need 23 of the chosen experts an empirical study of dynamic expert pruning in finegrained moe llms",
+        "url:https://www.semanticscholar.org/paper/52a4a506939d1fc107fc053d923c75d1f28a7a69"
+      ],
+      "record": {
+        "title": "You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/52a4a506939d1fc107fc053d923c75d1f28a7a69",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Fine-grained mixture-of-experts (MoE) architectures have become a mainstream design for open-weight LLMs, with hundreds of experts and increasingly many selected per token. This shift makes dynamic expert pruning an attractive route to cheaper inference. Yet existing evidence comes largely from coarser architectures and likelihood-scored multiple-choice benchmarks, leaving three central questions open in the fine-grained regime: how redundant per-token expert selection is, how effectively existing pruning methods exploit that redundancy, and what governs a model's sensitivity to pruning. We fill this gap with a systematic empirical study of twelve fine-grained MoE checkpoints spanning nine architecture families, with a core suite of eleven benchmarks covering knowledge QA, mathematics, code generation, and general reasoning. We find that expert selection is far more redundant than the field's operating points assume: uniformly retaining about two thirds of the selected experts preserves 98.8% of unpruned performance on average, requiring only a one-integer change and delivering 1.2-1.7x measured speedup across two serving backends. This simple baseline leaves little room for dynamic allocation at conservative budgets: even the best published rules differ from it by under 1% at matched expert budgets. Their value emerges under aggressive pruning, where the best rules recover up to 3.0% over uniform truncation, with gains concentrated in the generative tasks that suffer the sharpest degradation. Sensitivity to aggressive pruning also depends on the model: larger and thinking models are more resilient, whereas multimodal models are more vulnerable. Together, these findings reveal how much expert computation fine-grained MoEs can dispense with, and establish when dynamic allocation earns its complexity, informing both practical deployment and future pruning methods.",
+        "canonical_id": "arXiv:2609.25809",
+        "arxiv_id": "2609.25809",
+        "authors": [
+          "Yuan-Teng Chen",
+          "Qi-Wei Lai",
+          "Tian-Qi Chen",
+          "Pei-Song Wang",
+          "Yuan-Tian Shao",
+          "Nan-Xin Zeng",
+          "Zhi-Lei Liu",
+          "Chuang-Yi Li",
+          "Jing Liu",
+          "Jian Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26363",
+      "identity_tokens": [
+        "id:arXiv:2609.26363",
+        "title:dhsched stateless control for stateful realtime avatar serving",
+        "url:https://www.semanticscholar.org/paper/4b6acf3fb2588d7a7b350dab0eccfc7d8dfa1266"
+      ],
+      "record": {
+        "title": "DHSched: Stateless Control for Stateful Real-Time Avatar Serving",
+        "source_url": "https://www.semanticscholar.org/paper/4b6acf3fb2588d7a7b350dab0eccfc7d8dfa1266",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Real-time avatar services run long-lived, GPU-backed sessions that transform a continuous text stream into speech, facial motion, rendered video, and RTC media. Elastic operation repeatedly reassigns these sessions across Workers. A reassignment updates shared placement state while the previous GPU runtime and RTC connection remain alive, opening a gap between control-plane assignment and execution authority. A stateful controller serializes ownership by retaining per-session authority, placing that state on the controller's scaling and failover path. We present DHSched, a control plane that manages long-lived stateful sessions through stateless peer Dispatch replicas. DHSched externalizes session ownership as a generation identified by (WorkerID, epoch). Dispatch conditionally commits each generation. Infer-Controller claims and revalidates the same generation before releasing state-advancing input. A stale runtime loses execution authority even if it remains alive. DHSched ranks candidates from periodically refreshed load views while keeping capacity admission authoritative. Recovery advances the same generation path via source-epoch guards and source-independent reconstruction. DHSched runs in our production avatar-serving stack, which reached 49,987 concurrent live sessions. On 10 June 2026, it completed 9,927 session migrations with no observed dual-owner conflicts or capacity overshoots. At the production peak, CreateLive latency was 98.3 ms at P99 and PushText latency was 16.5 ms at P99. Across 100,000 randomized ownership runs, assignment-time, claim-only, and WorkerID-only protocols permit stale execution, while DHSched records no dual-owner or stale-generation release.",
+        "canonical_id": "arXiv:2609.26363",
+        "arxiv_id": "2609.26363",
+        "authors": [
+          "Xin Wang",
+          "Hai-Tong Zhang",
+          "Xiang-Hong Li",
+          "Shu-Min Lin",
+          "Xian-Zheng Song",
+          "Lin Wang",
+          "Zhen-Yu Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26708",
+      "identity_tokens": [
+        "id:arXiv:2609.26708",
+        "title:train where the quantized model goes onpolicy distillation for lowbit reasoning",
+        "url:https://www.semanticscholar.org/paper/962c7e516aba354ee7e0d5618b18180eb44d6d04"
+      ],
+      "record": {
+        "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/962c7e516aba354ee7e0d5618b18180eb44d6d04",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Quantization-aware distillation (QAD) restores much of the short-form question-answering performance lost to sub-3-bit quantization, yet leaves mathematical and code reasoning substantially impaired. Long generations often degenerate into repetitive loops, exhausting the decoding budget without completing a solution. We trace this gap to quantization-amplified exposure bias: QAD trains on fixed corpus prefixes, while quantization-induced deviations compound along the model's own autoregressive trajectories. To address this mismatch, we introduce an on-policy distillation (OPD) stage that places teacher supervision where the quantized model actually goes. Starting from a QAD checkpoint, the student generates through the quantized forward path used at deployment and receives feedback from a frozen full-precision teacher on its own prefixes, combining dense token-level guidance with task-verifier rewards. Across four models at 2.79 and 1.88 effective bits, OPD raises average BF16 performance retention from 35% to 70% on MATH-500 and from 66% to 91% on HumanEval while preserving short-form performance, with reasoning gains substantially exceeding those of continued teacher-forced QAD in matched-budget comparisons. By coupling QAD's stable low-bit initialization with OPD's on-policy reasoning recovery, our framework provides a comprehensive sub-3-bit solution that preserves broad capabilities while restoring long-form reasoning.",
+        "canonical_id": "arXiv:2609.26708",
+        "arxiv_id": "2609.26708",
+        "authors": [
+          "Yuan-Teng Chen",
+          "Zhi-Lei Liu",
+          "Pei-Song Wang",
+          "Yuan-Tian Shao",
+          "Chuang-Yi Li",
+          "Wei-Ning Wang",
+          "Shuang Qiu",
+          "Gang Li",
+          "Jing Liu",
+          "Jian Cheng"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:179f21a98de7cce7174bd327c80b84ecd549356226ac7a306560a33c74fc4ed8",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

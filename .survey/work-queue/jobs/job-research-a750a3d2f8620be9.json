@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-a750a3d2f8620be9",
+  "type": "research",
+  "parent_job_id": "job-29504d94fb8f8bec",
+  "priority": 72,
+  "canonical_id": "arXiv:2608.09225",
+  "title": "Governing the KV Cache: Preventing Timing Side-Channel Leakage in Multi-Tenant LLM Inference",
+  "source_url": "https://arxiv.org/abs/2608.09225",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.09225-governing-kv-cache-multitenant-isolation.md",
+  "selection_reason": "vLLM/SGLangのprefix cache共有が作るmulti-tenant timing side channelをcache-key isolationで扱う。KV cache sharingの性能設計にsecurity isolation制約を加える隣接system研究。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T05:47:24+00:00"
+}

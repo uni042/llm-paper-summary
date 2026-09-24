@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T093610Z-scheduled-chat-llm-survey-quota-07",
+  "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-0e6ed88f587a40d2",
+      "claim_id": "claim-e8ec2848c993c87c9d340e2f",
+      "worker_id": "scheduled-chat-llm-survey-20260919T182739JST-quota",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-e8ec2848c993c87c9d340e2f",
+      "claimed_at": "2026-09-19T09:35:39+00:00",
+      "expires_at": "2026-09-19T11:05:39+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-0e6ed88f587a40d2"
+      ],
+      "job": {
+        "job_id": "job-research-0e6ed88f587a40d2",
+        "type": "research",
+        "parent_job_id": "job-5c8ea8ca705a9ecb",
+        "priority": 79,
+        "canonical_id": "arXiv:2402.01528",
+        "title": "Decoding Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2402.01528",
+        "paper_path": "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+        "selection_reason": "Large empirical study of speculative-decoding performance factors followed by hardware-efficient draft-model design; directly useful for system-level drafter selection and throughput optimization.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T06:03:27+00:00",
+        "blocker": "一次資料全文を安全に取得できなかったため再試行可能なblockedとする。今回のattemptでは正本URL arXiv:2402.01528 に対し、(1) arXiv experimental HTML https://arxiv.org/html/2402.01528 の直接取得を試したが実行環境からDisabledError、(2) arXiv PDF https://arxiv.org/pdf/2402.01528 の直接ダウンロードを別経路で試したがdownload failed、(3) 題名完全一致＋arXiv IDで外部検索し、SciX、alphaXiv、Hugging Face paper page等から書誌・abstract・NAACL 2025採録情報とdraft-model公開情報までは確認したが、今回利用可能な取得結果には一次論文全文が含まれなかった。二次要約やabstractから5-slotを推測生成していない。単一URL失敗ではなくHTML/PDF/検索経路を独立に確認した上での一時的取得不能であり、永久rejectedにはしない。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-e55ee414ac2d0aef0a6fbcc3.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-19T02:15:55+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-19T02:15:55+00:00",
+            "reason": "一次資料全文を安全に取得できなかったため再試行可能なblockedとする。今回のattemptでは正本URL arXiv:2402.01528 に対し、(1) arXiv experimental HTML https://arxiv.org/html/2402.01528 の直接取得を試したが実行環境からDisabledError、(2) arXiv PDF https://arxiv.org/pdf/2402.01528 の直接ダウンロードを別経路で試したがdownload failed、(3) 題名完全一致＋arXiv IDで外部検索し、SciX、alphaXiv、Hugging Face paper page等から書誌・abstract・NAACL 2025採録情報とdraft-model公開情報までは確認したが、今回利用可能な取得結果には一次論文全文が含まれなかった。二次要約やabstractから5-slotを推測生成していない。単一URL失敗ではなくHTML/PDF/検索経路を独立に確認した上での一時的取得不能であり、永久rejectedにはしない。"
+          }
+        ],
+        "last_blocked_at": "2026-09-19T02:15:55+00:00",
+        "retry_queued_at": "2026-09-19T08:04:52+00:00"
+      },
+      "record_bank": "d",
+      "record_bank_root": ".survey/work-queue/records/chat-record-d",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-d/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T09:35:39+00:00",
+  "checkpoint_released": 0
+}

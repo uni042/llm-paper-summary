@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-38c87a832a14fb80d3b5b6c4",
+  "job_id": "job-research-2a8c8a978e102c67",
+  "data": {
+    "hardware": "Qwen3-235B-A22Bを8基のNVIDIA A800 SXM4 80GBへNVLINK接続して配置。本文は全実験にNVIDIA A100 GPUを使用とも記載しており、主モデルの具体的クラスタ記述はA800である。",
+    "software": "Python 3.8、vLLM 0.8.5を改変した約3,000行のGLM試作、Hugging Face Transformers 4.36.2、MPNet-v2、FAISS。質問ごとに独立スレッドを使い、vLLM側で動的バッチ処理する。",
+    "model": "主バックボーンはQwen3-235B-A22B、デコード温度0。精度比較ではBase LLM、Text RAG、Graph RAG、Graph-CoTと同じ主モデル条件で比較する。",
+    "datasets": ["GRBenchの実世界グラフ5領域: Academic/DBLP、E-commerce/Amazon、Literature/Goodreads、Healthcare/Disease、Legal/Freelaw", "本文Table 3の評価集合は合計1,040問、ノード総数約1.04億、エッジ総数約5.05億。本文説明ではGRBench全体を1,740 QA・10グラフとも記述するため、表の実使用部分集合と区別する。"],
+    "baselines": ["Base LLM", "Text RAG", "Graph RAG", "Graph-CoT"],
+    "correctness": "表層一致はROUGE-L、意味的正しさはGPT-4判定のGPTScoreで評価。システム効率はエンドツーエンド遅延、1秒あたり処理質問数、総トークン消費、KVキャッシュ命中率で測る。",
+    "settings": [
+      {"name": "精度", "description": "5領域でROUGE-LとGPTScoreを比較し、単純質問から多段推論まで含む。"},
+      {"name": "トークン", "description": "1問あたり総トークン、LLM呼び出し回数、1呼び出しあたりトークンをGraph-CoTと分解比較。"},
+      {"name": "遅延・スループット", "description": "Graph-CoTとGLMの質問処理遅延、検索とLLM推論の内訳、並行要求時のqueries/sを測定。"},
+      {"name": "要素別評価", "description": "検索・デコード重畳、頂点中心KV再利用、優先度追い出しを個別に無効化または比較し、遅延・スループット・キャッシュ命中率への寄与を測る。"}
+    ],
+    "methodology": "推論方式と配信最適化を一体で評価するエンドツーエンド比較に加え、各最適化の寄与を分離するアブレーションを実施する。キャッシュ関連の評価では非決定的質問が少ないE-commerceとLiteratureを追加質問で拡張し、再利用が発生する条件を測る。コード生成の品質面は、形式違反、検索誤り、コード実行エラー、段数上限超過へ分類して故障モードの変化を調べる。",
+    "scope": "Graph-CoTという特定の構造化検索・複数エージェントワークロード向けの共同設計評価である。一般的な会話LLM、コード生成、単一要求の純粋なデコード性能へそのまま15.1倍を一般化できない。"
+  },
+  "reservation": {"claim_id": "claim-preload-38c87a832a14fb80d3b5b6c4", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+}

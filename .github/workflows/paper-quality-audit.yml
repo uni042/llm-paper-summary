@@ -1,0 +1,85 @@
+name: Paper quality audit
+
+on:
+  push:
+    paths:
+      - ".survey/scripts/audit_paper_quality.py"
+      - ".survey/scripts/audit_list_summary_quality.py"
+      - ".survey/scripts/audit_overview_results.py"
+      - ".survey/scripts/list_summary.py"
+      - ".survey/scripts/render_paper.py"
+      - ".survey/scripts/japanese_style.py"
+      - ".survey/scripts/paper_quality_gate.py"
+      - ".survey/scripts/prepare_completed_submission.py"
+      - ".survey/scripts/research_quality_preflight.py"
+      - ".survey/templates/paper.md"
+      - ".survey/docs/survey-workflow/paper-quality-audit.md"
+      - ".survey/tests/test_audit_paper_quality.py"
+      - ".survey/tests/test_research_preflight_quality.py"
+      - ".survey/tests/test_list_summary_quality.py"
+      - ".survey/tests/test_overview_result_quality.py"
+      - ".survey/tests/test_render_paper_metadata.py"
+      - "papers/inference/**/*.md"
+      - "papers/training/**/*.md"
+      - "papers/survey/**/*.md"
+      - ".github/workflows/paper-quality-audit.yml"
+      - ".github/workflows/survey-research-quality-preflight.yml"
+      - ".github/workflows/survey-completed-builder-fast.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paper-quality-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Run quality regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_*quality.py'
+
+      - name: Run renderer regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_render_paper_metadata.py'
+
+      - name: Run repository audit
+        run: |
+          mkdir -p audit-output
+          python .survey/scripts/audit_paper_quality.py \
+            --no-fail-exit \
+            --markdown-out audit-output/paper-quality-audit.md \
+            --json-out audit-output/paper-quality-audit.json
+
+      - name: Run paper-list summary audit
+        run: |
+          python .survey/scripts/audit_list_summary_quality.py \
+            --no-fail-exit \
+            --markdown-out audit-output/list-summary-quality-audit.md \
+            --json-out audit-output/list-summary-quality-audit.json
+
+      - name: Run overview representative-result audit
+        run: |
+          python .survey/scripts/audit_overview_results.py \
+            --no-fail-exit \
+            --markdown-out audit-output/overview-result-quality-audit.md \
+            --json-out audit-output/overview-result-quality-audit.json
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-quality-audit
+          path: audit-output/
+          retention-days: 7

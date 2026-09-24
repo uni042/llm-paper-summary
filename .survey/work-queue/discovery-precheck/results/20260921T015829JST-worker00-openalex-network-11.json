@@ -1,0 +1,1167 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T015829JST-worker00-openalex-network-11",
+  "collector_id": "worker00-openalex-networking",
+  "run_key": "2026-09-21T01:58:29+09:00-worker00",
+  "axis": "GPU RDMA NVLink collective communication for LLM and MoE serving",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20inference%20GPU%20RDMA%20NVLink%20collective%20communication%20MoE%20serving&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8216544522297f010e26479c65eac2d449a92287",
+  "raw_search_result_count": 77,
+  "retrieval_duplicate_filtered_count": 18,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 1,
+  "intra_batch_alias_duplicate_filtered_count": 1,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T17:07:33.505204+00:00",
+  "results": [
+    {
+      "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+      "source_url": "https://arxiv.org/abs/2609.13585",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13585",
+      "arxiv_id": "2609.13585",
+      "authors": [
+        "Ziming Mao",
+        "Yihan Zhang",
+        "Shawn Wei Chew",
+        "Shuang Ma",
+        "Costin Raiciu",
+        "Yang Zhou",
+        "Scott Shenker",
+        "Ion Stoica"
+      ]
+    },
+    {
+      "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27046",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27046",
+      "arxiv_id": "2608.27046",
+      "authors": [
+        "Maciej Besta",
+        "Leonard Schmidt",
+        "Lara Nonino",
+        "Robert Gerstenberger",
+        "Pierre Pang",
+        "Patrik Okanovic",
+        "Ales Kubicek",
+        "Tiancheng Chen",
+        "B. Lipshitz",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "Understanding the Synchronization Tax in GPU Scale-Up Domains",
+      "source_url": "https://arxiv.org/abs/2608.22503",
+      "year": 2026,
+      "published": "2026-08-23",
+      "canonical_id": "arXiv:2608.22503",
+      "arxiv_id": "2608.22503",
+      "authors": [
+        "Arjun Devraj",
+        "Lindsey Bowen",
+        "Rachee Singh"
+      ]
+    },
+    {
+      "title": "TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes",
+      "source_url": "https://arxiv.org/abs/2608.13057",
+      "year": 2026,
+      "published": "2026-08-13",
+      "canonical_id": "arXiv:2608.13057",
+      "arxiv_id": "2608.13057",
+      "authors": [
+        "Jie Li",
+        "Chenxin Jia",
+        "Jinliang Shen",
+        "Cunzhuang Liu",
+        "Ruiyi Ding",
+        "Jianwen Xian",
+        "Kang He",
+        "Chengru Song"
+      ]
+    },
+    {
+      "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+      "source_url": "https://doi.org/10.1145/3789240.3829183",
+      "year": 2026,
+      "published": "2026-08-11",
+      "canonical_id": "arXiv:2607.06202",
+      "arxiv_id": "2607.06202",
+      "authors": [
+        "Yipeng Liu",
+        "Chang Liu",
+        "Si Shen",
+        "Jiaqi Zheng",
+        "Mingfan Li",
+        "Yuyang Yang",
+        "Guanhua Li",
+        "Yuquan Zhang",
+        "Yimeng Xu",
+        "Zhongzhe Hu",
+        "Z Zhangqin Huang",
+        "Q Duan",
+        "Junsong Wang",
+        "Wenkai Ling",
+        "杨保川",
+        "Xianzhi Yu",
+        "Han Bao",
+        "Yijie Chen",
+        "Guihai Chen"
+      ]
+    },
+    {
+      "title": "CommBench: Can LLMs Write Correct and Efficient GPU Communication Code?",
+      "source_url": "https://arxiv.org/abs/2608.04450",
+      "year": 2026,
+      "published": "2026-08-05",
+      "canonical_id": "arXiv:2608.04450",
+      "arxiv_id": "2608.04450",
+      "authors": [
+        "Shuang Ma",
+        "Yuyi Li",
+        "Yihan Zhang",
+        "Hezhi Xie",
+        "Danyang Chen",
+        "Shuyang Ji",
+        "Ziming Mao",
+        "Cheng Ji",
+        "Ansha Prashanth",
+        "Wenting Yang",
+        "Yiran Wang",
+        "Chihan Cui",
+        "Pei Yu Lin",
+        "Ion Stoica",
+        "Yang Zhou"
+      ]
+    },
+    {
+      "title": "NUNA: Characterizing and Mitigating Non-Uniform Network Access in Multi-Die GPU Scale-Up Systems",
+      "source_url": "https://arxiv.org/abs/2608.00867",
+      "year": 2026,
+      "published": "2026-08-01",
+      "canonical_id": "arXiv:2608.00867",
+      "arxiv_id": "2608.00867",
+      "authors": [
+        "Conor James Green",
+        "William Won",
+        "Tuan Ta",
+        "Bradford M. Beckmann"
+      ]
+    },
+    {
+      "title": "ServerlessT2I: Efficient Text-to-Image Workflow Serving on a Serverless Platform",
+      "source_url": "https://arxiv.org/abs/2607.26566",
+      "year": 2026,
+      "published": "2026-07-29",
+      "canonical_id": "arXiv:2607.26566",
+      "arxiv_id": "2607.26566",
+      "authors": [
+        "Xiaoxiao Jiang",
+        "Suyi Li",
+        "Sheng Yao",
+        "Tianyu Feng",
+        "Lingyun Yang",
+        "D.X. Nie",
+        "Haoran Yang",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+      "source_url": "https://arxiv.org/abs/2607.26444",
+      "year": 2026,
+      "published": "2026-07-29",
+      "canonical_id": "arXiv:2607.26444",
+      "arxiv_id": "2607.26444",
+      "authors": [
+        "Tiancheng Hu",
+        "Jin Qin",
+        "Yuzheng Wang",
+        "Ke Liu",
+        "TangShengSheng Li",
+        "Sheng Wang",
+        "Zhongzhe Hu",
+        "Tianlun Hu",
+        "Wei Wang",
+        "Lijun Li",
+        "Jingbin Zhou",
+        "Xiaoming Bao",
+        "Hongwei Sun",
+        "Jieru Zhao",
+        "Huimin Cui",
+        "Tao Xie",
+        "Chenxi Wang"
+      ]
+    },
+    {
+      "title": "Application-Driven Architecture Exploration for Cross-Layer Heterogeneous Systems",
+      "source_url": "https://arxiv.org/abs/2607.23042",
+      "year": 2026,
+      "published": "2026-07-25",
+      "canonical_id": "arXiv:2607.23042",
+      "arxiv_id": "2607.23042",
+      "authors": [
+        "Yuchen Fan",
+        "Minghong Sun",
+        "Jikui Ma",
+        "Yunpeng Xu",
+        "Shunyu Mao",
+        "Liu He",
+        "Shunan Dong",
+        "Jiahao Yang",
+        "Yu Zhu",
+        "Xinhao Yang",
+        "Tianyan Zhong",
+        "Haoran Sun",
+        "Daoqi Liu",
+        "Zongle Huang",
+        "Xinyuan Lin",
+        "Huazhong Yang",
+        "Maokun Li",
+        "Yongpan Liu",
+        "Yu Wang",
+        "Zhenhua Zhu",
+        "Hongyang Jia",
+        "Shuwen Deng"
+      ]
+    },
+    {
+      "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design",
+      "source_url": "https://arxiv.org/abs/2607.09084",
+      "year": 2026,
+      "published": "2026-07-10",
+      "canonical_id": "arXiv:2607.09084",
+      "arxiv_id": "2607.09084",
+      "authors": [
+        "Linhui Xiao",
+        "Guiping Cao",
+        "Mingyue Guo",
+        "Xianchao Guan",
+        "Fan Yang",
+        "Ming Tao",
+        "Xin Li",
+        "Yuxin Peng",
+        "Yaowei Wang"
+      ]
+    },
+    {
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "arXiv:2607.02574",
+      "arxiv_id": "2607.02574",
+      "authors": [
+        "Jie Li",
+        "Tongyang Wang",
+        "Yong Chen"
+      ]
+    },
+    {
+      "title": "Simulating Unified Tensor Resharding in heterogeneous AI systems",
+      "source_url": "https://arxiv.org/abs/2606.26633",
+      "year": 2026,
+      "published": "2026-06-25",
+      "canonical_id": "arXiv:2606.26633",
+      "arxiv_id": "2606.26633",
+      "authors": [
+        "S Naresh Kumar",
+        "Sayantan Dasgupta",
+        "Kushal Mitra",
+        "Meet Dadhania",
+        "Rohan Sudhir Basugade",
+        "Praveen Tammana",
+        "Satananda Burla",
+        "Abed Mohammad Kamaluddin",
+        "Rinku Shah"
+      ]
+    },
+    {
+      "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference",
+      "source_url": "https://arxiv.org/abs/2606.21712",
+      "year": 2026,
+      "published": "2026-06-19",
+      "canonical_id": "arXiv:2606.21712",
+      "arxiv_id": "2606.21712",
+      "authors": [
+        "Tairan Xu",
+        "Leyang Xue",
+        "Zhan Lu",
+        "Jinfu Deng",
+        "Hongyang Xiao",
+        "Yu Jiang",
+        "C N He",
+        "Matej Šandor",
+        "Le Xu",
+        "Luo Mai"
+      ]
+    },
+    {
+      "title": "ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2606.20374",
+      "year": 2026,
+      "published": "2026-06-18",
+      "canonical_id": "arXiv:2606.20374",
+      "arxiv_id": "2606.20374",
+      "authors": [
+        "Jie Zhou",
+        "Li Zeng",
+        "Clavis Chen",
+        "Ruiming Lu",
+        "Qinwei Yang",
+        "Leyi Ye",
+        "Ray Ying",
+        "Zhang Key"
+      ]
+    },
+    {
+      "title": "Libra: Efficient Resource Management for Agentic RL Post-Training",
+      "source_url": "https://arxiv.org/abs/2606.03077",
+      "year": 2026,
+      "published": "2026-06-02",
+      "canonical_id": "arXiv:2606.03077",
+      "arxiv_id": "2606.03077",
+      "authors": [
+        "Kaiwen Chen",
+        "Xin Tan",
+        "Jingzong Li",
+        "Zhi Zhou",
+        "Cen Li",
+        "Jiang Liu",
+        "Meng Jie",
+        "Jiazhi Jiang",
+        "Hong Xu"
+      ]
+    },
+    {
+      "title": "UltraEP: Unleash MoE Training and Inference on Rack-Scale Nodes with Near-Optimal Load Balancing",
+      "source_url": "https://arxiv.org/abs/2606.04101",
+      "year": 2026,
+      "published": "2026-06-02",
+      "canonical_id": "arXiv:2606.04101",
+      "arxiv_id": "2606.04101",
+      "authors": [
+        "Xinming Wei",
+        "Chao Jin",
+        "Tuo Dai",
+        "Yinmin Zhong",
+        "Shan Yu",
+        "Chengxu Yang",
+        "Bingyang Wu",
+        "Zili Zhang",
+        "Jing Mai",
+        "Qianchao Zhu",
+        "Zhouyang Li",
+        "Yuliang Liu",
+        "Guojie Luo"
+      ]
+    },
+    {
+      "title": "Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics",
+      "source_url": "https://arxiv.org/abs/2606.01502",
+      "year": 2026,
+      "published": "2026-05-31",
+      "canonical_id": "arXiv:2606.01502",
+      "arxiv_id": "2606.01502",
+      "authors": [
+        "Bole Ma",
+        "Jan Eitzinger",
+        "Harald Köstler",
+        "Gerhard Wellein"
+      ]
+    },
+    {
+      "title": "Laguna M.1/XS.2 Technical Report",
+      "source_url": "https://arxiv.org/abs/2605.27605",
+      "year": 2026,
+      "published": "2026-05-26",
+      "canonical_id": "arXiv:2605.27605",
+      "arxiv_id": "2605.27605",
+      "authors": [
+        "Julien Abadji",
+        "Marah Abdin",
+        "Connor Adams",
+        "Eric Alcaide",
+        "Mustafa Altun",
+        "Michele Artoni",
+        "Junze Bao",
+        "Uday Barar",
+        "Vassilis Bekiaris",
+        "Arkadii Bessonov",
+        "Benjamin Bütikofer",
+        "Jonathan Chang",
+        "Yen-Chun Chen",
+        "Dmitry Chernenkov",
+        "Yang Chi",
+        "Filippos Christianos",
+        "Fenia Christopoulou",
+        "Razvan-Andrei Ciocoiu",
+        "Tzachi Cohen",
+        "Yohann Coppel",
+        "Dmitrii Emelianenko",
+        "Brandon Fergerson",
+        "Brian Fitzgerald",
+        "Matthias Gallé",
+        "Alex Golonzovskyi",
+        "George Grigorev",
+        "Yiyang Hao",
+        "Christian Hensel",
+        "Jan Huenermann",
+        "Ye Ji",
+        "Sarthak Joshi",
+        "Eiso Kant",
+        "Kabir Khandpur",
+        "Seonghyeon Kim",
+        "Vladimir Kirichenko",
+        "Umut Kocasaraç",
+        "Ilya Kochik",
+        "Иван Комаров",
+        "Chaerin Kong",
+        "Anurag Koul",
+        "François-Joseph Lacroix",
+        "Sergei Laktionov",
+        "Waren Long",
+        "Quentin Malartic",
+        "Vadim Markovtsev",
+        "Afonso Marques",
+        "Robert McHardy",
+        "Carlos Mocholí",
+        "Dmitry Monakhov",
+        "Adam Morris",
+        "Martin Müller",
+        "Christian Mürtz",
+        "Robin Nabel",
+        "Thien Huu Nguyen",
+        "Rok Novosel",
+        "Szymon Ozog",
+        "Aalhad Patankar",
+        "Aleksei Petrov",
+        "Alexandre Piché",
+        "Arthur Pignet",
+        "Teodor Poncu",
+        "Phil Potter",
+        "Alexander Rakowski",
+        "Pierre-Yves Ritschard",
+        "Jay Roberts",
+        "Joe Rowell",
+        "Piotr Sarna",
+        "Pierre-André Savalle",
+        "Uladzislau Sazanovich",
+        "Нікіта Шаповалов",
+        "Arsenii Shevchenko",
+        "Mikhail Shilkov",
+        "Andrei Sokol",
+        "Mohamed Soliman",
+        "Jack Stephenson",
+        "Victor Storchan",
+        "Dragoş-Constantin Ţânţaru",
+        "Artem Tyurin",
+        "Adrian Wälchli",
+        "Pengming Wang",
+        "Jianxiao Yang",
+        "Renat Zayashnikov",
+        "Alexander Zelenka Martin",
+        "Nikolay Zinov",
+        "Caroline Bercier",
+        "José Caldeira",
+        "Margarida Garcia",
+        "Tom George",
+        "Kabeer Gharzai",
+        "Glenn Hitchcock",
+        "Carson Klingenberg",
+        "Ivo Pinto",
+        "Varun Randery",
+        "Noah Smith",
+        "Arina Sugako",
+        "Jason Warner"
+      ]
+    },
+    {
+      "title": "Exploiting Multicast for Accelerating Collective Communication",
+      "source_url": "https://arxiv.org/abs/2605.22428",
+      "year": 2026,
+      "published": "2026-05-21",
+      "canonical_id": "arXiv:2605.22428",
+      "arxiv_id": "2605.22428",
+      "authors": [
+        "Chao Xu",
+        "Xu Zhang",
+        "Zihang Luo",
+        "Yuyan Wu",
+        "Guoxin Qian",
+        "Yufeng Yao",
+        "Chihyung Wang",
+        "Jingbin Zhou"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.13585",
+      "identity_tokens": [
+        "id:arXiv:2609.13585",
+        "title:mkernel fast multigpu multinode fused kernels",
+        "url:https://arxiv.org/abs/2609.13585"
+      ],
+      "record": {
+        "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+        "source_url": "https://arxiv.org/abs/2609.13585",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13585",
+        "arxiv_id": "2609.13585",
+        "authors": [
+          "Ziming Mao",
+          "Yihan Zhang",
+          "Shawn Wei Chew",
+          "Shuang Ma",
+          "Costin Raiciu",
+          "Yang Zhou",
+          "Scott Shenker",
+          "Ion Stoica"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27046",
+      "identity_tokens": [
+        "id:arXiv:2608.27046",
+        "title:performance foundations of parallel distributed reasoning language models",
+        "url:https://arxiv.org/abs/2608.27046"
+      ],
+      "record": {
+        "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27046",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27046",
+        "arxiv_id": "2608.27046",
+        "authors": [
+          "Maciej Besta",
+          "Leonard Schmidt",
+          "Lara Nonino",
+          "Robert Gerstenberger",
+          "Pierre Pang",
+          "Patrik Okanovic",
+          "Ales Kubicek",
+          "Tiancheng Chen",
+          "B. Lipshitz",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22503",
+      "identity_tokens": [
+        "id:arXiv:2608.22503",
+        "title:understanding the synchronization tax in gpu scaleup domains",
+        "url:https://arxiv.org/abs/2608.22503"
+      ],
+      "record": {
+        "title": "Understanding the Synchronization Tax in GPU Scale-Up Domains",
+        "source_url": "https://arxiv.org/abs/2608.22503",
+        "year": 2026,
+        "published": "2026-08-23",
+        "canonical_id": "arXiv:2608.22503",
+        "arxiv_id": "2608.22503",
+        "authors": [
+          "Arjun Devraj",
+          "Lindsey Bowen",
+          "Rachee Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.13057",
+      "identity_tokens": [
+        "id:arXiv:2608.13057",
+        "title:tempo makespanaware expertparallel load balancing across memory and computebound regimes",
+        "url:https://arxiv.org/abs/2608.13057"
+      ],
+      "record": {
+        "title": "TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes",
+        "source_url": "https://arxiv.org/abs/2608.13057",
+        "year": 2026,
+        "published": "2026-08-13",
+        "canonical_id": "arXiv:2608.13057",
+        "arxiv_id": "2608.13057",
+        "authors": [
+          "Jie Li",
+          "Chenxin Jia",
+          "Jinliang Shen",
+          "Cunzhuang Liu",
+          "Ruiyi Ding",
+          "Jianwen Xian",
+          "Kang He",
+          "Chengru Song"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.06202",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3829183",
+        "id:arXiv:2607.06202",
+        "title:ubep rearchitecting expert parallelism communication library for production superpods",
+        "url:https://doi.org/10.1145/3789240.3829183"
+      ],
+      "record": {
+        "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+        "source_url": "https://doi.org/10.1145/3789240.3829183",
+        "year": 2026,
+        "published": "2026-08-11",
+        "canonical_id": "arXiv:2607.06202",
+        "arxiv_id": "2607.06202",
+        "authors": [
+          "Yipeng Liu",
+          "Chang Liu",
+          "Si Shen",
+          "Jiaqi Zheng",
+          "Mingfan Li",
+          "Yuyang Yang",
+          "Guanhua Li",
+          "Yuquan Zhang",
+          "Yimeng Xu",
+          "Zhongzhe Hu",
+          "Z Zhangqin Huang",
+          "Q Duan",
+          "Junsong Wang",
+          "Wenkai Ling",
+          "杨保川",
+          "Xianzhi Yu",
+          "Han Bao",
+          "Yijie Chen",
+          "Guihai Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04450",
+      "identity_tokens": [
+        "id:arXiv:2608.04450",
+        "title:commbench can llms write correct and efficient gpu communication code",
+        "url:https://arxiv.org/abs/2608.04450"
+      ],
+      "record": {
+        "title": "CommBench: Can LLMs Write Correct and Efficient GPU Communication Code?",
+        "source_url": "https://arxiv.org/abs/2608.04450",
+        "year": 2026,
+        "published": "2026-08-05",
+        "canonical_id": "arXiv:2608.04450",
+        "arxiv_id": "2608.04450",
+        "authors": [
+          "Shuang Ma",
+          "Yuyi Li",
+          "Yihan Zhang",
+          "Hezhi Xie",
+          "Danyang Chen",
+          "Shuyang Ji",
+          "Ziming Mao",
+          "Cheng Ji",
+          "Ansha Prashanth",
+          "Wenting Yang",
+          "Yiran Wang",
+          "Chihan Cui",
+          "Pei Yu Lin",
+          "Ion Stoica",
+          "Yang Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00867",
+      "identity_tokens": [
+        "id:arXiv:2608.00867",
+        "title:nuna characterizing and mitigating nonuniform network access in multidie gpu scaleup systems",
+        "url:https://arxiv.org/abs/2608.00867"
+      ],
+      "record": {
+        "title": "NUNA: Characterizing and Mitigating Non-Uniform Network Access in Multi-Die GPU Scale-Up Systems",
+        "source_url": "https://arxiv.org/abs/2608.00867",
+        "year": 2026,
+        "published": "2026-08-01",
+        "canonical_id": "arXiv:2608.00867",
+        "arxiv_id": "2608.00867",
+        "authors": [
+          "Conor James Green",
+          "William Won",
+          "Tuan Ta",
+          "Bradford M. Beckmann"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.26566",
+      "identity_tokens": [
+        "id:arXiv:2607.26566",
+        "title:serverlesst2i efficient texttoimage workflow serving on a serverless platform",
+        "url:https://arxiv.org/abs/2607.26566"
+      ],
+      "record": {
+        "title": "ServerlessT2I: Efficient Text-to-Image Workflow Serving on a Serverless Platform",
+        "source_url": "https://arxiv.org/abs/2607.26566",
+        "year": 2026,
+        "published": "2026-07-29",
+        "canonical_id": "arXiv:2607.26566",
+        "arxiv_id": "2607.26566",
+        "authors": [
+          "Xiaoxiao Jiang",
+          "Suyi Li",
+          "Sheng Yao",
+          "Tianyu Feng",
+          "Lingyun Yang",
+          "D.X. Nie",
+          "Haoran Yang",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.26444",
+      "identity_tokens": [
+        "id:arXiv:2607.26444",
+        "title:stratacl fabricnative communication library for production supernodes",
+        "url:https://arxiv.org/abs/2607.26444"
+      ],
+      "record": {
+        "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+        "source_url": "https://arxiv.org/abs/2607.26444",
+        "year": 2026,
+        "published": "2026-07-29",
+        "canonical_id": "arXiv:2607.26444",
+        "arxiv_id": "2607.26444",
+        "authors": [
+          "Tiancheng Hu",
+          "Jin Qin",
+          "Yuzheng Wang",
+          "Ke Liu",
+          "TangShengSheng Li",
+          "Sheng Wang",
+          "Zhongzhe Hu",
+          "Tianlun Hu",
+          "Wei Wang",
+          "Lijun Li",
+          "Jingbin Zhou",
+          "Xiaoming Bao",
+          "Hongwei Sun",
+          "Jieru Zhao",
+          "Huimin Cui",
+          "Tao Xie",
+          "Chenxi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.23042",
+      "identity_tokens": [
+        "id:arXiv:2607.23042",
+        "title:applicationdriven architecture exploration for crosslayer heterogeneous systems",
+        "url:https://arxiv.org/abs/2607.23042"
+      ],
+      "record": {
+        "title": "Application-Driven Architecture Exploration for Cross-Layer Heterogeneous Systems",
+        "source_url": "https://arxiv.org/abs/2607.23042",
+        "year": 2026,
+        "published": "2026-07-25",
+        "canonical_id": "arXiv:2607.23042",
+        "arxiv_id": "2607.23042",
+        "authors": [
+          "Yuchen Fan",
+          "Minghong Sun",
+          "Jikui Ma",
+          "Yunpeng Xu",
+          "Shunyu Mao",
+          "Liu He",
+          "Shunan Dong",
+          "Jiahao Yang",
+          "Yu Zhu",
+          "Xinhao Yang",
+          "Tianyan Zhong",
+          "Haoran Sun",
+          "Daoqi Liu",
+          "Zongle Huang",
+          "Xinyuan Lin",
+          "Huazhong Yang",
+          "Maokun Li",
+          "Yongpan Liu",
+          "Yu Wang",
+          "Zhenhua Zhu",
+          "Hongyang Jia",
+          "Shuwen Deng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09084",
+      "identity_tokens": [
+        "id:arXiv:2607.09084",
+        "title:a survey on the green development of large models from resourceefficient architectures to hardwaresoftware codesign",
+        "url:https://arxiv.org/abs/2607.09084"
+      ],
+      "record": {
+        "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design",
+        "source_url": "https://arxiv.org/abs/2607.09084",
+        "year": 2026,
+        "published": "2026-07-10",
+        "canonical_id": "arXiv:2607.09084",
+        "arxiv_id": "2607.09084",
+        "authors": [
+          "Linhui Xiao",
+          "Guiping Cao",
+          "Mingyue Guo",
+          "Xianchao Guan",
+          "Fan Yang",
+          "Ming Tao",
+          "Xin Li",
+          "Yuxin Peng",
+          "Yaowei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02574",
+      "identity_tokens": [
+        "id:arXiv:2607.02574",
+        "title:from tensor buffer to distributed memory hierarchy a survey of kv cache management for llm serving",
+        "url:https://arxiv.org/abs/2607.02574"
+      ],
+      "record": {
+        "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.02574",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "arXiv:2607.02574",
+        "arxiv_id": "2607.02574",
+        "authors": [
+          "Jie Li",
+          "Tongyang Wang",
+          "Yong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.26633",
+      "identity_tokens": [
+        "id:arXiv:2606.26633",
+        "title:simulating unified tensor resharding in heterogeneous ai systems",
+        "url:https://arxiv.org/abs/2606.26633"
+      ],
+      "record": {
+        "title": "Simulating Unified Tensor Resharding in heterogeneous AI systems",
+        "source_url": "https://arxiv.org/abs/2606.26633",
+        "year": 2026,
+        "published": "2026-06-25",
+        "canonical_id": "arXiv:2606.26633",
+        "arxiv_id": "2606.26633",
+        "authors": [
+          "S Naresh Kumar",
+          "Sayantan Dasgupta",
+          "Kushal Mitra",
+          "Meet Dadhania",
+          "Rohan Sudhir Basugade",
+          "Praveen Tammana",
+          "Satananda Burla",
+          "Abed Mohammad Kamaluddin",
+          "Rinku Shah"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21712",
+      "identity_tokens": [
+        "id:arXiv:2606.21712",
+        "title:batchgen an architecture for scalable and efficient batch inference",
+        "url:https://arxiv.org/abs/2606.21712"
+      ],
+      "record": {
+        "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference",
+        "source_url": "https://arxiv.org/abs/2606.21712",
+        "year": 2026,
+        "published": "2026-06-19",
+        "canonical_id": "arXiv:2606.21712",
+        "arxiv_id": "2606.21712",
+        "authors": [
+          "Tairan Xu",
+          "Leyang Xue",
+          "Zhan Lu",
+          "Jinfu Deng",
+          "Hongyang Xiao",
+          "Yu Jiang",
+          "C N He",
+          "Matej Šandor",
+          "Le Xu",
+          "Luo Mai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.20374",
+      "identity_tokens": [
+        "id:arXiv:2606.20374",
+        "title:argus productionscale tracing and performance diagnosis for over 10000gpu clusters",
+        "url:https://arxiv.org/abs/2606.20374"
+      ],
+      "record": {
+        "title": "ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters",
+        "source_url": "https://arxiv.org/abs/2606.20374",
+        "year": 2026,
+        "published": "2026-06-18",
+        "canonical_id": "arXiv:2606.20374",
+        "arxiv_id": "2606.20374",
+        "authors": [
+          "Jie Zhou",
+          "Li Zeng",
+          "Clavis Chen",
+          "Ruiming Lu",
+          "Qinwei Yang",
+          "Leyi Ye",
+          "Ray Ying",
+          "Zhang Key"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.03077",
+      "identity_tokens": [
+        "id:arXiv:2606.03077",
+        "title:libra efficient resource management for agentic rl posttraining",
+        "url:https://arxiv.org/abs/2606.03077"
+      ],
+      "record": {
+        "title": "Libra: Efficient Resource Management for Agentic RL Post-Training",
+        "source_url": "https://arxiv.org/abs/2606.03077",
+        "year": 2026,
+        "published": "2026-06-02",
+        "canonical_id": "arXiv:2606.03077",
+        "arxiv_id": "2606.03077",
+        "authors": [
+          "Kaiwen Chen",
+          "Xin Tan",
+          "Jingzong Li",
+          "Zhi Zhou",
+          "Cen Li",
+          "Jiang Liu",
+          "Meng Jie",
+          "Jiazhi Jiang",
+          "Hong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04101",
+      "identity_tokens": [
+        "id:arXiv:2606.04101",
+        "title:ultraep unleash moe training and inference on rackscale nodes with nearoptimal load balancing",
+        "url:https://arxiv.org/abs/2606.04101"
+      ],
+      "record": {
+        "title": "UltraEP: Unleash MoE Training and Inference on Rack-Scale Nodes with Near-Optimal Load Balancing",
+        "source_url": "https://arxiv.org/abs/2606.04101",
+        "year": 2026,
+        "published": "2026-06-02",
+        "canonical_id": "arXiv:2606.04101",
+        "arxiv_id": "2606.04101",
+        "authors": [
+          "Xinming Wei",
+          "Chao Jin",
+          "Tuo Dai",
+          "Yinmin Zhong",
+          "Shan Yu",
+          "Chengxu Yang",
+          "Bingyang Wu",
+          "Zili Zhang",
+          "Jing Mai",
+          "Qianchao Zhu",
+          "Zhouyang Li",
+          "Yuliang Liu",
+          "Guojie Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01502",
+      "identity_tokens": [
+        "id:arXiv:2606.01502",
+        "title:move the query not the cache characterizing crossinstance latent attention redistribution across gpu fabrics",
+        "url:https://arxiv.org/abs/2606.01502"
+      ],
+      "record": {
+        "title": "Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics",
+        "source_url": "https://arxiv.org/abs/2606.01502",
+        "year": 2026,
+        "published": "2026-05-31",
+        "canonical_id": "arXiv:2606.01502",
+        "arxiv_id": "2606.01502",
+        "authors": [
+          "Bole Ma",
+          "Jan Eitzinger",
+          "Harald Köstler",
+          "Gerhard Wellein"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27605",
+      "identity_tokens": [
+        "id:arXiv:2605.27605",
+        "title:laguna m1xs2 technical report",
+        "url:https://arxiv.org/abs/2605.27605"
+      ],
+      "record": {
+        "title": "Laguna M.1/XS.2 Technical Report",
+        "source_url": "https://arxiv.org/abs/2605.27605",
+        "year": 2026,
+        "published": "2026-05-26",
+        "canonical_id": "arXiv:2605.27605",
+        "arxiv_id": "2605.27605",
+        "authors": [
+          "Julien Abadji",
+          "Marah Abdin",
+          "Connor Adams",
+          "Eric Alcaide",
+          "Mustafa Altun",
+          "Michele Artoni",
+          "Junze Bao",
+          "Uday Barar",
+          "Vassilis Bekiaris",
+          "Arkadii Bessonov",
+          "Benjamin Bütikofer",
+          "Jonathan Chang",
+          "Yen-Chun Chen",
+          "Dmitry Chernenkov",
+          "Yang Chi",
+          "Filippos Christianos",
+          "Fenia Christopoulou",
+          "Razvan-Andrei Ciocoiu",
+          "Tzachi Cohen",
+          "Yohann Coppel",
+          "Dmitrii Emelianenko",
+          "Brandon Fergerson",
+          "Brian Fitzgerald",
+          "Matthias Gallé",
+          "Alex Golonzovskyi",
+          "George Grigorev",
+          "Yiyang Hao",
+          "Christian Hensel",
+          "Jan Huenermann",
+          "Ye Ji",
+          "Sarthak Joshi",
+          "Eiso Kant",
+          "Kabir Khandpur",
+          "Seonghyeon Kim",
+          "Vladimir Kirichenko",
+          "Umut Kocasaraç",
+          "Ilya Kochik",
+          "Иван Комаров",
+          "Chaerin Kong",
+          "Anurag Koul",
+          "François-Joseph Lacroix",
+          "Sergei Laktionov",
+          "Waren Long",
+          "Quentin Malartic",
+          "Vadim Markovtsev",
+          "Afonso Marques",
+          "Robert McHardy",
+          "Carlos Mocholí",
+          "Dmitry Monakhov",
+          "Adam Morris",
+          "Martin Müller",
+          "Christian Mürtz",
+          "Robin Nabel",
+          "Thien Huu Nguyen",
+          "Rok Novosel",
+          "Szymon Ozog",
+          "Aalhad Patankar",
+          "Aleksei Petrov",
+          "Alexandre Piché",
+          "Arthur Pignet",
+          "Teodor Poncu",
+          "Phil Potter",
+          "Alexander Rakowski",
+          "Pierre-Yves Ritschard",
+          "Jay Roberts",
+          "Joe Rowell",
+          "Piotr Sarna",
+          "Pierre-André Savalle",
+          "Uladzislau Sazanovich",
+          "Нікіта Шаповалов",
+          "Arsenii Shevchenko",
+          "Mikhail Shilkov",
+          "Andrei Sokol",
+          "Mohamed Soliman",
+          "Jack Stephenson",
+          "Victor Storchan",
+          "Dragoş-Constantin Ţânţaru",
+          "Artem Tyurin",
+          "Adrian Wälchli",
+          "Pengming Wang",
+          "Jianxiao Yang",
+          "Renat Zayashnikov",
+          "Alexander Zelenka Martin",
+          "Nikolay Zinov",
+          "Caroline Bercier",
+          "José Caldeira",
+          "Margarida Garcia",
+          "Tom George",
+          "Kabeer Gharzai",
+          "Glenn Hitchcock",
+          "Carson Klingenberg",
+          "Ivo Pinto",
+          "Varun Randery",
+          "Noah Smith",
+          "Arina Sugako",
+          "Jason Warner"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.22428",
+      "identity_tokens": [
+        "id:arXiv:2605.22428",
+        "title:exploiting multicast for accelerating collective communication",
+        "url:https://arxiv.org/abs/2605.22428"
+      ],
+      "record": {
+        "title": "Exploiting Multicast for Accelerating Collective Communication",
+        "source_url": "https://arxiv.org/abs/2605.22428",
+        "year": 2026,
+        "published": "2026-05-21",
+        "canonical_id": "arXiv:2605.22428",
+        "arxiv_id": "2605.22428",
+        "authors": [
+          "Chao Xu",
+          "Xu Zhang",
+          "Zihang Luo",
+          "Yuyan Wu",
+          "Guoxin Qian",
+          "Yufeng Yao",
+          "Chihyung Wang",
+          "Jingbin Zhou"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:fefa51363841c2161456315d30d23dddf1272bf770076f84e3d389690f6bbcca",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

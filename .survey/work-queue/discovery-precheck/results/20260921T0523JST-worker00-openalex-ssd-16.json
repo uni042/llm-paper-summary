@@ -1,0 +1,792 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0523JST-worker00-openalex-ssd-16",
+  "collector_id": "worker00-openalex-ssd-offload",
+  "run_key": "2026-09-21T05:01:46+09:00",
+  "axis": "OpenAlex recent SSD NVMe LLM inference offload",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20inference%20SSD%20NVMe%20offload%20storage&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzAzMjg5NjAwMDAwLCAnLUluZmluaXR5JywgMTksICdodHRwczovL29wZW5hbGV4Lm9yZy9XNDM5MDMwNjE2MSddIg==",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4c9317e44738b2ffbb65a877337e41e6b2e8df88",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 35,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 18,
+  "intra_batch_duplicate_filtered_count": 3,
+  "intra_batch_alias_duplicate_filtered_count": 3,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:23:12.005781+00:00",
+  "results": [
+    {
+      "title": "Application-Aware I/O Prediction and Optimization for HPC and AI Workloads",
+      "source_url": "https://hdl.handle.net/10919/143770",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "OpenAlex:W7204677223",
+      "authors": [
+        "Ahmad Hossein Yazdani"
+      ]
+    },
+    {
+      "title": "Intelligent Portable Edge-Cloud Computing Ar-chitecture for Secure Data Analysis and Adaptive Resource Optimization Using AI-Driven Resource Scheduling",
+      "source_url": "https://doi.org/10.22214/ijraset.2026.84593",
+      "year": 2026,
+      "published": "2026-08-13",
+      "canonical_id": "DOI:10.22214/ijraset.2026.84593",
+      "doi": "10.22214/ijraset.2026.84593",
+      "authors": [
+        "Pradeep Kachakayala",
+        "Akshith Kachakayala"
+      ]
+    },
+    {
+      "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2608.08910",
+      "year": 2026,
+      "published": "2026-08-09",
+      "canonical_id": "arXiv:2608.08910",
+      "arxiv_id": "2608.08910",
+      "authors": [
+        "Matteo Grella"
+      ]
+    },
+    {
+      "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://hdl.handle.net/10919/143438",
+      "year": 2026,
+      "published": "2026-06-16",
+      "canonical_id": "OpenAlex:W7165293849",
+      "authors": [
+        "Dongha Yoon"
+      ]
+    },
+    {
+      "title": "Unified KV Pooling to Accelerate Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.14779",
+      "year": 2026,
+      "published": "2026-06-10",
+      "canonical_id": "arXiv:2606.14779",
+      "arxiv_id": "2606.14779",
+      "authors": [
+        "Minchul Kang",
+        "Changyong Shin",
+        "Jinwoo Jeong",
+        "J C Park",
+        "W J Kim",
+        "구본율",
+        "Dongwoo Kang",
+        "Gyeongsik Yang",
+        "Chuck Yoo"
+      ]
+    },
+    {
+      "title": "AgileOS: A GPU Operating System Layer for Protected CUDA Services",
+      "source_url": "https://arxiv.org/abs/2606.06697",
+      "year": 2026,
+      "published": "2026-06-04",
+      "canonical_id": "arXiv:2606.06697",
+      "arxiv_id": "2606.06697",
+      "authors": [
+        "Zhuoping Yang",
+        "Yiyu Shi",
+        "Alex Jones",
+        "Peipei Zhou"
+      ]
+    },
+    {
+      "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
+      "source_url": "https://doi.org/10.1145/3745756.3809234",
+      "year": 2026,
+      "published": "2026-05-29",
+      "canonical_id": "arXiv:2511.11907",
+      "arxiv_id": "2511.11907",
+      "authors": [
+        "Huawei Zhang",
+        "Chunwei Xia",
+        "Zheng Wang"
+      ]
+    },
+    {
+      "title": "TIDAL: Recovering Temporal Phase for Cloud Block Storage Placement from LLM-Derived Semantics",
+      "source_url": "https://arxiv.org/abs/2605.18066",
+      "year": 2026,
+      "published": "2026-05-18",
+      "canonical_id": "arXiv:2605.18066",
+      "arxiv_id": "2605.18066",
+      "authors": [
+        "Difan Tan",
+        "Changlin Wan",
+        "Jiawen Liu",
+        "Hua Wang",
+        "Ke Zhou"
+      ]
+    },
+    {
+      "title": "Separating Intelligence from Inference: A Standard for Edge-Native AI Computing",
+      "source_url": "https://arxiv.org/abs/2608.02608",
+      "year": 2026,
+      "published": "2026-05-13",
+      "canonical_id": "arXiv:2608.02608",
+      "arxiv_id": "2608.02608",
+      "authors": [
+        "Venkat Vinjam",
+        "Krishnaiah Narukulla"
+      ]
+    },
+    {
+      "title": "GriNNder: Breaking the Memory Capacity Wall in Full-Graph GNN Training with Storage Offloading",
+      "source_url": "https://arxiv.org/abs/2605.11517",
+      "year": 2026,
+      "published": "2026-05-12",
+      "canonical_id": "arXiv:2605.11517",
+      "arxiv_id": "2605.11517",
+      "authors": [
+        "Jaeyong Song",
+        "Seongyeon Park",
+        "Hongsun Jang",
+        "Jaewon Jung",
+        "Hunseong Lim",
+        "Junguk Hong",
+        "Jinho Lee"
+      ]
+    },
+    {
+      "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+      "source_url": "https://arxiv.org/abs/2605.05899",
+      "year": 2026,
+      "published": "2026-05-07",
+      "canonical_id": "arXiv:2605.05899",
+      "arxiv_id": "2605.05899",
+      "authors": [
+        "Cheng Xu",
+        "Xiaofeng Hou",
+        "Jiacheng Liu",
+        "Chao Li"
+      ]
+    },
+    {
+      "title": "MojoFrame: Dataframe Library in Mojo Language",
+      "source_url": "https://doi.org/10.1109/icde65706.2026.00108",
+      "year": 2026,
+      "published": "2026-05-01",
+      "canonical_id": "arXiv:2505.04080",
+      "arxiv_id": "2505.04080",
+      "authors": [
+        "Shengya Huang",
+        "Zhaoheng Li",
+        "Derek Werner",
+        "Yongjoo Park"
+      ]
+    },
+    {
+      "title": "MTServe: Efficient Serving for Generative Recommendation Models with Hierarchical Caches",
+      "source_url": "https://arxiv.org/abs/2604.22881",
+      "year": 2026,
+      "published": "2026-04-24",
+      "canonical_id": "arXiv:2604.22881",
+      "arxiv_id": "2604.22881",
+      "authors": [
+        "Xin Wang",
+        "Chi Ma",
+        "Shaobin Chen",
+        "Pu Wang",
+        "Menglei Zhou",
+        "Junyi Qiu",
+        "Qiaorui Chen",
+        "Jiayu Sun",
+        "Shijie Liu",
+        "Zehuan Wang",
+        "Lei Yu",
+        "Chuan Liu",
+        "Fei Jiang",
+        "Wei Lin",
+        "Hao Wang",
+        "Jiawei Jiang",
+        "Xiao Yan"
+      ]
+    },
+    {
+      "title": "ReFlux: Reversible Compute Placement for CXL-Enabled Storage",
+      "source_url": "https://arxiv.org/abs/2604.02442",
+      "year": 2026,
+      "published": "2026-04-02",
+      "canonical_id": "arXiv:2604.02442",
+      "arxiv_id": "2604.02442",
+      "authors": [
+        "Yanpeng Hu",
+        "Yiwei Yang",
+        "Yusheng Zheng",
+        "Estabon Ramos",
+        "Jianchang Su",
+        "Andi Quinn",
+        "Wei Zhang"
+      ]
+    },
+    {
+      "title": "HiMA: Not All Parameters Need Every Step",
+      "source_url": "https://doi.org/10.20944/preprints202603.2457.v1",
+      "year": 2026,
+      "published": "2026-03-31",
+      "canonical_id": "DOI:10.20944/preprints202603.2457.v1",
+      "doi": "10.20944/preprints202603.2457.v1",
+      "authors": [
+        "JaeHwan Kim",
+        "Minjun Kim"
+      ]
+    },
+    {
+      "title": "HyperShield: An Automated Evaluation Platform for Security and Performance Trade-Offs in Virtual Systems",
+      "source_url": "https://doi.org/10.3390/jcp6020056",
+      "year": 2026,
+      "published": "2026-03-24",
+      "canonical_id": "DOI:10.3390/jcp6020056",
+      "doi": "10.3390/jcp6020056",
+      "authors": [
+        "Faiz Alam",
+        "Mohammed Mubeen Mifthak",
+        "Sahil Bhalchandra Purohit",
+        "Md Shadab",
+        "Gregory T. Byrd",
+        "Khaled Harfoush"
+      ]
+    },
+    {
+      "title": "SwiftBot: A Decentralized Platform for LLM-Powered Federated Robotic Task Execution",
+      "source_url": "http://arxiv.org/abs/2603.20233",
+      "year": 2026,
+      "published": "2026-03-07",
+      "canonical_id": "arXiv:2603.20233",
+      "arxiv_id": "2603.20233",
+      "authors": [
+        "YueMing Zhang",
+        "Shuai Xu",
+        "Zhengxiong Li",
+        "Fangtian Zhong",
+        "Xiaokun Yang",
+        "Hailu Xu"
+      ]
+    },
+    {
+      "title": "ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management",
+      "source_url": "http://arxiv.org/abs/2601.13631",
+      "year": 2026,
+      "published": "2026-01-20",
+      "canonical_id": "arXiv:2601.13631",
+      "arxiv_id": "2601.13631",
+      "authors": [
+        "Jing Zou",
+        "Shangyu Wu",
+        "Hancong Duan",
+        "Qiao Li",
+        "Chun Jason Xue"
+      ]
+    },
+    {
+      "title": "Overview of WSC Workloads",
+      "source_url": "https://doi.org/10.1007/978-3-031-99489-0_3",
+      "year": 2025,
+      "published": "2025-12-27",
+      "canonical_id": "DOI:10.1007/978-3-031-99489-0_3",
+      "doi": "10.1007/978-3-031-99489-0_3",
+      "authors": [
+        "Luiz André Barroso",
+        "Urs Hölzle",
+        "Parthasarathy Ranganathan"
+      ]
+    },
+    {
+      "title": "Collaborative Lossless LLM Inference Serving with Offloading-based Pipeline Parallelism on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2512.21835",
+      "year": 2025,
+      "published": "2025-12-26",
+      "canonical_id": "arXiv:2512.21835",
+      "arxiv_id": "2512.21835",
+      "authors": [
+        "Mingyu Sun",
+        "Xiao Zhang",
+        "Shen Qu",
+        "Wing Yan Li",
+        "Mengbai Xiao",
+        "Yanwei Zheng",
+        "Dongxiao Yu",
+        "Dongxiao Yu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:OpenAlex:W7204677223",
+      "identity_tokens": [
+        "id:OpenAlex:W7204677223",
+        "title:applicationaware io prediction and optimization for hpc and ai workloads",
+        "url:https://hdl.handle.net/10919/143770"
+      ],
+      "record": {
+        "title": "Application-Aware I/O Prediction and Optimization for HPC and AI Workloads",
+        "source_url": "https://hdl.handle.net/10919/143770",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "OpenAlex:W7204677223",
+        "authors": [
+          "Ahmad Hossein Yazdani"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.22214/ijraset.2026.84593",
+      "identity_tokens": [
+        "id:DOI:10.22214/ijraset.2026.84593",
+        "title:intelligent portable edgecloud computing architecture for secure data analysis and adaptive resource optimization using aidriven resource scheduling",
+        "url:https://doi.org/10.22214/ijraset.2026.84593"
+      ],
+      "record": {
+        "title": "Intelligent Portable Edge-Cloud Computing Ar-chitecture for Secure Data Analysis and Adaptive Resource Optimization Using AI-Driven Resource Scheduling",
+        "source_url": "https://doi.org/10.22214/ijraset.2026.84593",
+        "year": 2026,
+        "published": "2026-08-13",
+        "canonical_id": "DOI:10.22214/ijraset.2026.84593",
+        "doi": "10.22214/ijraset.2026.84593",
+        "authors": [
+          "Pradeep Kachakayala",
+          "Akshith Kachakayala"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08910",
+      "identity_tokens": [
+        "id:arXiv:2608.08910",
+        "title:tied tritplanes constraining ptqtp to a uniform ninelevel quantizer with a persistent folded format for diskstreamed mixtureofexperts serving",
+        "url:https://arxiv.org/abs/2608.08910"
+      ],
+      "record": {
+        "title": "Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving",
+        "source_url": "https://arxiv.org/abs/2608.08910",
+        "year": 2026,
+        "published": "2026-08-09",
+        "canonical_id": "arXiv:2608.08910",
+        "arxiv_id": "2608.08910",
+        "authors": [
+          "Matteo Grella"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7165293849",
+      "identity_tokens": [
+        "id:OpenAlex:W7165293849",
+        "title:disaggregated llm serving with cxl shared memory kv cache at rackscale",
+        "url:https://hdl.handle.net/10919/143438"
+      ],
+      "record": {
+        "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+        "source_url": "https://hdl.handle.net/10919/143438",
+        "year": 2026,
+        "published": "2026-06-16",
+        "canonical_id": "OpenAlex:W7165293849",
+        "authors": [
+          "Dongha Yoon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.14779",
+      "identity_tokens": [
+        "id:arXiv:2606.14779",
+        "title:unified kv pooling to accelerate longcontext llm serving",
+        "url:https://arxiv.org/abs/2606.14779"
+      ],
+      "record": {
+        "title": "Unified KV Pooling to Accelerate Long-Context LLM Serving",
+        "source_url": "https://arxiv.org/abs/2606.14779",
+        "year": 2026,
+        "published": "2026-06-10",
+        "canonical_id": "arXiv:2606.14779",
+        "arxiv_id": "2606.14779",
+        "authors": [
+          "Minchul Kang",
+          "Changyong Shin",
+          "Jinwoo Jeong",
+          "J C Park",
+          "W J Kim",
+          "구본율",
+          "Dongwoo Kang",
+          "Gyeongsik Yang",
+          "Chuck Yoo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.06697",
+      "identity_tokens": [
+        "id:arXiv:2606.06697",
+        "title:agileos a gpu operating system layer for protected cuda services",
+        "url:https://arxiv.org/abs/2606.06697"
+      ],
+      "record": {
+        "title": "AgileOS: A GPU Operating System Layer for Protected CUDA Services",
+        "source_url": "https://arxiv.org/abs/2606.06697",
+        "year": 2026,
+        "published": "2026-06-04",
+        "canonical_id": "arXiv:2606.06697",
+        "arxiv_id": "2606.06697",
+        "authors": [
+          "Zhuoping Yang",
+          "Yiyu Shi",
+          "Alex Jones",
+          "Peipei Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11907",
+      "identity_tokens": [
+        "id:DOI:10.1145/3745756.3809234",
+        "id:arXiv:2511.11907",
+        "title:kvswap diskaware kv cache offloading for longcontext ondevice inference",
+        "url:https://doi.org/10.1145/3745756.3809234"
+      ],
+      "record": {
+        "title": "KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference",
+        "source_url": "https://doi.org/10.1145/3745756.3809234",
+        "year": 2026,
+        "published": "2026-05-29",
+        "canonical_id": "arXiv:2511.11907",
+        "arxiv_id": "2511.11907",
+        "authors": [
+          "Huawei Zhang",
+          "Chunwei Xia",
+          "Zheng Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18066",
+      "identity_tokens": [
+        "id:arXiv:2605.18066",
+        "title:tidal recovering temporal phase for cloud block storage placement from llmderived semantics",
+        "url:https://arxiv.org/abs/2605.18066"
+      ],
+      "record": {
+        "title": "TIDAL: Recovering Temporal Phase for Cloud Block Storage Placement from LLM-Derived Semantics",
+        "source_url": "https://arxiv.org/abs/2605.18066",
+        "year": 2026,
+        "published": "2026-05-18",
+        "canonical_id": "arXiv:2605.18066",
+        "arxiv_id": "2605.18066",
+        "authors": [
+          "Difan Tan",
+          "Changlin Wan",
+          "Jiawen Liu",
+          "Hua Wang",
+          "Ke Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02608",
+      "identity_tokens": [
+        "id:arXiv:2608.02608",
+        "title:separating intelligence from inference a standard for edgenative ai computing",
+        "url:https://arxiv.org/abs/2608.02608"
+      ],
+      "record": {
+        "title": "Separating Intelligence from Inference: A Standard for Edge-Native AI Computing",
+        "source_url": "https://arxiv.org/abs/2608.02608",
+        "year": 2026,
+        "published": "2026-05-13",
+        "canonical_id": "arXiv:2608.02608",
+        "arxiv_id": "2608.02608",
+        "authors": [
+          "Venkat Vinjam",
+          "Krishnaiah Narukulla"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11517",
+      "identity_tokens": [
+        "id:arXiv:2605.11517",
+        "title:grinnder breaking the memory capacity wall in fullgraph gnn training with storage offloading",
+        "url:https://arxiv.org/abs/2605.11517"
+      ],
+      "record": {
+        "title": "GriNNder: Breaking the Memory Capacity Wall in Full-Graph GNN Training with Storage Offloading",
+        "source_url": "https://arxiv.org/abs/2605.11517",
+        "year": 2026,
+        "published": "2026-05-12",
+        "canonical_id": "arXiv:2605.11517",
+        "arxiv_id": "2605.11517",
+        "authors": [
+          "Jaeyong Song",
+          "Seongyeon Park",
+          "Hongsun Jang",
+          "Jaewon Jung",
+          "Hunseong Lim",
+          "Junguk Hong",
+          "Jinho Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05899",
+      "identity_tokens": [
+        "id:arXiv:2605.05899",
+        "title:vismmoe exploiting visualexpert affinity for efficient visuallanguage moe offloading",
+        "url:https://arxiv.org/abs/2605.05899"
+      ],
+      "record": {
+        "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+        "source_url": "https://arxiv.org/abs/2605.05899",
+        "year": 2026,
+        "published": "2026-05-07",
+        "canonical_id": "arXiv:2605.05899",
+        "arxiv_id": "2605.05899",
+        "authors": [
+          "Cheng Xu",
+          "Xiaofeng Hou",
+          "Jiacheng Liu",
+          "Chao Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.04080",
+      "identity_tokens": [
+        "id:DOI:10.1109/icde65706.2026.00108",
+        "id:arXiv:2505.04080",
+        "title:mojoframe dataframe library in mojo language",
+        "url:https://doi.org/10.1109/icde65706.2026.00108"
+      ],
+      "record": {
+        "title": "MojoFrame: Dataframe Library in Mojo Language",
+        "source_url": "https://doi.org/10.1109/icde65706.2026.00108",
+        "year": 2026,
+        "published": "2026-05-01",
+        "canonical_id": "arXiv:2505.04080",
+        "arxiv_id": "2505.04080",
+        "authors": [
+          "Shengya Huang",
+          "Zhaoheng Li",
+          "Derek Werner",
+          "Yongjoo Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.22881",
+      "identity_tokens": [
+        "id:arXiv:2604.22881",
+        "title:mtserve efficient serving for generative recommendation models with hierarchical caches",
+        "url:https://arxiv.org/abs/2604.22881"
+      ],
+      "record": {
+        "title": "MTServe: Efficient Serving for Generative Recommendation Models with Hierarchical Caches",
+        "source_url": "https://arxiv.org/abs/2604.22881",
+        "year": 2026,
+        "published": "2026-04-24",
+        "canonical_id": "arXiv:2604.22881",
+        "arxiv_id": "2604.22881",
+        "authors": [
+          "Xin Wang",
+          "Chi Ma",
+          "Shaobin Chen",
+          "Pu Wang",
+          "Menglei Zhou",
+          "Junyi Qiu",
+          "Qiaorui Chen",
+          "Jiayu Sun",
+          "Shijie Liu",
+          "Zehuan Wang",
+          "Lei Yu",
+          "Chuan Liu",
+          "Fei Jiang",
+          "Wei Lin",
+          "Hao Wang",
+          "Jiawei Jiang",
+          "Xiao Yan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02442",
+      "identity_tokens": [
+        "id:arXiv:2604.02442",
+        "title:reflux reversible compute placement for cxlenabled storage",
+        "url:https://arxiv.org/abs/2604.02442"
+      ],
+      "record": {
+        "title": "ReFlux: Reversible Compute Placement for CXL-Enabled Storage",
+        "source_url": "https://arxiv.org/abs/2604.02442",
+        "year": 2026,
+        "published": "2026-04-02",
+        "canonical_id": "arXiv:2604.02442",
+        "arxiv_id": "2604.02442",
+        "authors": [
+          "Yanpeng Hu",
+          "Yiwei Yang",
+          "Yusheng Zheng",
+          "Estabon Ramos",
+          "Jianchang Su",
+          "Andi Quinn",
+          "Wei Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.20944/preprints202603.2457.v1",
+      "identity_tokens": [
+        "id:DOI:10.20944/preprints202603.2457.v1",
+        "title:hima not all parameters need every step",
+        "url:https://doi.org/10.20944/preprints202603.2457.v1"
+      ],
+      "record": {
+        "title": "HiMA: Not All Parameters Need Every Step",
+        "source_url": "https://doi.org/10.20944/preprints202603.2457.v1",
+        "year": 2026,
+        "published": "2026-03-31",
+        "canonical_id": "DOI:10.20944/preprints202603.2457.v1",
+        "doi": "10.20944/preprints202603.2457.v1",
+        "authors": [
+          "JaeHwan Kim",
+          "Minjun Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/jcp6020056",
+      "identity_tokens": [
+        "id:DOI:10.3390/jcp6020056",
+        "title:hypershield an automated evaluation platform for security and performance tradeoffs in virtual systems",
+        "url:https://doi.org/10.3390/jcp6020056"
+      ],
+      "record": {
+        "title": "HyperShield: An Automated Evaluation Platform for Security and Performance Trade-Offs in Virtual Systems",
+        "source_url": "https://doi.org/10.3390/jcp6020056",
+        "year": 2026,
+        "published": "2026-03-24",
+        "canonical_id": "DOI:10.3390/jcp6020056",
+        "doi": "10.3390/jcp6020056",
+        "authors": [
+          "Faiz Alam",
+          "Mohammed Mubeen Mifthak",
+          "Sahil Bhalchandra Purohit",
+          "Md Shadab",
+          "Gregory T. Byrd",
+          "Khaled Harfoush"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.20233",
+      "identity_tokens": [
+        "id:arXiv:2603.20233",
+        "title:swiftbot a decentralized platform for llmpowered federated robotic task execution",
+        "url:http://arxiv.org/abs/2603.20233"
+      ],
+      "record": {
+        "title": "SwiftBot: A Decentralized Platform for LLM-Powered Federated Robotic Task Execution",
+        "source_url": "http://arxiv.org/abs/2603.20233",
+        "year": 2026,
+        "published": "2026-03-07",
+        "canonical_id": "arXiv:2603.20233",
+        "arxiv_id": "2603.20233",
+        "authors": [
+          "YueMing Zhang",
+          "Shuai Xu",
+          "Zhengxiong Li",
+          "Fangtian Zhong",
+          "Xiaokun Yang",
+          "Hailu Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.13631",
+      "identity_tokens": [
+        "id:arXiv:2601.13631",
+        "title:contiguouskv accelerating llm prefill with granularityaligned kv cache management",
+        "url:http://arxiv.org/abs/2601.13631"
+      ],
+      "record": {
+        "title": "ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management",
+        "source_url": "http://arxiv.org/abs/2601.13631",
+        "year": 2026,
+        "published": "2026-01-20",
+        "canonical_id": "arXiv:2601.13631",
+        "arxiv_id": "2601.13631",
+        "authors": [
+          "Jing Zou",
+          "Shangyu Wu",
+          "Hancong Duan",
+          "Qiao Li",
+          "Chun Jason Xue"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/978-3-031-99489-0_3",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-031-99489-0_3",
+        "title:overview of wsc workloads",
+        "url:https://doi.org/10.1007/978-3-031-99489-0_3"
+      ],
+      "record": {
+        "title": "Overview of WSC Workloads",
+        "source_url": "https://doi.org/10.1007/978-3-031-99489-0_3",
+        "year": 2025,
+        "published": "2025-12-27",
+        "canonical_id": "DOI:10.1007/978-3-031-99489-0_3",
+        "doi": "10.1007/978-3-031-99489-0_3",
+        "authors": [
+          "Luiz André Barroso",
+          "Urs Hölzle",
+          "Parthasarathy Ranganathan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.21835",
+      "identity_tokens": [
+        "id:arXiv:2512.21835",
+        "title:collaborative lossless llm inference serving with offloadingbased pipeline parallelism on edge devices",
+        "url:https://arxiv.org/abs/2512.21835"
+      ],
+      "record": {
+        "title": "Collaborative Lossless LLM Inference Serving with Offloading-based Pipeline Parallelism on Edge Devices",
+        "source_url": "https://arxiv.org/abs/2512.21835",
+        "year": 2025,
+        "published": "2025-12-26",
+        "canonical_id": "arXiv:2512.21835",
+        "arxiv_id": "2512.21835",
+        "authors": [
+          "Mingyu Sun",
+          "Xiao Zhang",
+          "Shen Qu",
+          "Wing Yan Li",
+          "Mengbai Xiao",
+          "Yanwei Zheng",
+          "Dongxiao Yu",
+          "Dongxiao Yu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:2c43f6e6d5dd2cc77263221006d7ce3b840ad96f110b320f5ee9ca09b547682a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

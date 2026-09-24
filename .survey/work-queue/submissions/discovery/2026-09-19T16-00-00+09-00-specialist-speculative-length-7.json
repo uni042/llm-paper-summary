@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.11812",
+      "title": "Predicting LLM Output Length via Entropy-Guided Representations",
+      "source_url": "https://arxiv.org/abs/2602.11812",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md",
+      "priority": 75,
+      "reason": "main model内部表現を再利用した軽量output-length predictionを提示し、progressive predictionでstochastic generationにも対応する。長さ予測をlength-aware schedulerへ接続してend-to-end throughput改善を評価しており、serving schedulingの補助機構として既存系統を補完する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T16:00:00+09:00",
+    "round": "specialist-speculative-length-7",
+    "axis": "speculative decoding・deterministic inference・output-length prediction",
+    "query_summary": "speculative serving、deterministic inference、output-length predictionを独立検索。SPECTRE、LLM-42、OUTLETS、SpecAttn、PicoSpec等はcanonical identityで既知。一方2602.11812は対応月identity snapshotに存在せずrepo検索にも一致しなかったため、serving schedulerへ実際に接続してthroughput評価を持つ候補として採用した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2605.08151", "arXiv:2601.17768", "arXiv:2609.01068", "arXiv:2602.07223", "arXiv:2603.19133"],
+    "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する",
+    "empty_round_reason": null,
+    "search_windows": [{"topic":"speculative-length-systems","source":"web-arxiv-search","date_range":"2026-01..2026-09","category":"speculative-scheduling","citation_direction":"none","query_family":"speculative-deterministic-output-length-serving","raw_result_count":17,"unseen_result_count":1,"duplicate_filtered_count":5,"rejection_filtered_count":0,"candidate_evaluation_count":6,"candidate_accepted_count":1,"position":"web-search-multi-query-7"}]
+  }
+}

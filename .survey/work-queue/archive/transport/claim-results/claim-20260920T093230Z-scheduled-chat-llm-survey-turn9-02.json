@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T093230Z-scheduled-chat-llm-survey-turn9-02",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-7975c226ad04d80a",
+      "claim_id": "claim-da2aebbde976d20453f0ceeb",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-da2aebbde976d20453f0ceeb",
+      "claimed_at": "2026-09-20T09:32:08+00:00",
+      "expires_at": "2026-09-20T11:02:08+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-7975c226ad04d80a"
+      ],
+      "job": {
+        "job_id": "job-research-7975c226ad04d80a",
+        "type": "research",
+        "parent_job_id": "job-4243204e6865c123",
+        "priority": 94,
+        "canonical_id": "DOI:10.18653/v1/2025.naacl-long.601",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion",
+        "source_url": "https://aclanthology.org/2025.naacl-long.601/",
+        "paper_path": "papers/inference/05-speculative-decoding/2025-speculative-diffusion-decoding.md",
+        "selection_reason": "Uses discrete diffusion as the draft mechanism to parallelize both drafting and verification, advancing speculative decoding throughput.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T04:05:01+00:00",
+        "repair_required": true,
+        "validation_error": "ValueError: metadata.list_summary failed quality checks: 日本語化できる英語専門語が裸で残っている: draft",
+        "last_validation_failed_at": "2026-09-20T09:12:24+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-d9e87a2e384695561c52ab9b"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-d9e87a2e384695561c52ab9b.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T09:32:08+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-adaptive-max-20260920-remoe",
+  "collector_id": "manual-user-adaptive-max-remoe",
+  "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2605.27081 (router finetuning / expert reuse)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2605.27081/citations",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6b8c89cdd8d4c71d9facda9b599bf3bc145681ef",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:34:53.116428+00:00",
+  "results": [
+    {
+      "title": "Sticky Routing: Training MoE Models for Memory-Efficient Inference",
+      "source_url": "https://www.semanticscholar.org/paper/869fb3ca49876294f54254f0bc4698355749f394",
+      "year": 2026,
+      "published": "2026-06-12",
+      "abstract": "Mixture-of-Experts (MoE) models activate only a sparse subset of experts per token, yet consecutive tokens frequently activate different experts -- causing constant weight swapping between slow storage and fast memory on edge devices. Existing remedies are either system-level (caching heuristics) or post-hoc (router fine-tuning), leaving the root cause unchanged during pretraining. We propose StickyMoE, a differentiable routing consistency loss that penalises abrupt expert switches between adjacent tokens, encouraging the router to maintain the same expert assignment across semantically coherent spans. StickyMoE requires no architectural changes, adds a single hyperparameter lambda, and unlike post-hoc methods, allows expert representations and routing decisions to co-adapt from the first training step. Experiments on small-scale MoE language models show that StickyMoE reduces the expert switch rate by up to 60% with less than 4% perplexity degradation, Pareto-dominating post-hoc fine-tuning on the quality-locality frontier. Routing temporal locality is most efficiently instilled at training time.",
+      "canonical_id": "arXiv:2607.08780",
+      "arxiv_id": "2607.08780",
+      "authors": [
+        "Ali Kayyam"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.08780",
+      "identity_tokens": [
+        "id:arXiv:2607.08780",
+        "title:sticky routing training moe models for memoryefficient inference",
+        "url:https://www.semanticscholar.org/paper/869fb3ca49876294f54254f0bc4698355749f394"
+      ],
+      "record": {
+        "title": "Sticky Routing: Training MoE Models for Memory-Efficient Inference",
+        "source_url": "https://www.semanticscholar.org/paper/869fb3ca49876294f54254f0bc4698355749f394",
+        "year": 2026,
+        "published": "2026-06-12",
+        "abstract": "Mixture-of-Experts (MoE) models activate only a sparse subset of experts per token, yet consecutive tokens frequently activate different experts -- causing constant weight swapping between slow storage and fast memory on edge devices. Existing remedies are either system-level (caching heuristics) or post-hoc (router fine-tuning), leaving the root cause unchanged during pretraining. We propose StickyMoE, a differentiable routing consistency loss that penalises abrupt expert switches between adjacent tokens, encouraging the router to maintain the same expert assignment across semantically coherent spans. StickyMoE requires no architectural changes, adds a single hyperparameter lambda, and unlike post-hoc methods, allows expert representations and routing decisions to co-adapt from the first training step. Experiments on small-scale MoE language models show that StickyMoE reduces the expert switch rate by up to 60% with less than 4% perplexity degradation, Pareto-dominating post-hoc fine-tuning on the quality-locality frontier. Routing temporal locality is most efficiently instilled at training time.",
+        "canonical_id": "arXiv:2607.08780",
+        "arxiv_id": "2607.08780",
+        "authors": [
+          "Ali Kayyam"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:5cf993937af1425ffa1666e3544a3b473ad9b35738680d2bc0621ad5ae7e7565",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

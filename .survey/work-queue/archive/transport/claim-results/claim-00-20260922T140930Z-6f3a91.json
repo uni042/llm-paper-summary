@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-00-20260922T140930Z-6f3a91",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-c10c6ca0720f4ecc",
+      "claim_id": "claim-fc5b7d76e4c2ccfdd465afca",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-fc5b7d76e4c2ccfdd465afca",
+      "claimed_at": "2026-09-22T14:09:48+00:00",
+      "expires_at": "2026-09-22T15:39:48+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-c10c6ca0720f4ecc"
+      ],
+      "job": {
+        "job_id": "job-research-c10c6ca0720f4ecc",
+        "type": "research",
+        "parent_job_id": "job-0353b7e3879dfaa8",
+        "priority": 97,
+        "canonical_id": "arXiv:2602.09316",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Effective MoE-based LLM Compression by Exploiting Heterogeneous Inter-Group Experts Routing Frequency and Information Density",
+        "source_url": "https://arxiv.org/abs/2602.09316",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.09316-rfid-moe-heterogeneous-svd-compression.md",
+        "selection_reason": "routing frequencyとeffective rankを融合してexpert groupごとのSVD rankを非一様配分するpost-training compression。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T10:59:45+00:00"
+      },
+      "record_bank": "g",
+      "record_bank_root": ".survey/work-queue/records/chat-record-g",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-g/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-g/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-g/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-g/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-g/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T14:09:48+00:00",
+  "checkpoint_released": 0
+}

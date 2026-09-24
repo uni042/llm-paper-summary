@@ -1,0 +1,20 @@
+{
+  "job_id": "job-research-f371944d5d8c6995",
+  "type": "research",
+  "parent_job_id": "job-5abe9b84bcfd8389",
+  "priority": 88,
+  "canonical_id": "arXiv:2511.04791",
+  "title": "DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing",
+  "source_url": "https://arxiv.org/abs/2511.04791",
+  "paper_path": "papers/inference/06-serving-scheduling/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
+  "selection_reason": "通常はaggregated、TBT悪化予測時だけSM-level spatial multiplexingでprefill/decodeを分離するadaptive設計。disaggregation級isolationを単一GPUで実現しthroughput最大1.3xを報告する。",
+  "status": "completed",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T21:07:57+00:00",
+  "completed_at": "2026-09-17T04:12:35+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-f3d428f698e82fad885bba54.json"
+}

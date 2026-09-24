@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-c1687a55baa06d3477e9780a-r2",
+  "kind": "research",
+  "attempt_id": "attempt-c1687a55baa06d3477e9780a",
+  "job_id": "job-research-af08dd730875cebb",
+  "record_bank": "g",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.22572-dynamic-experts-search.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:11c03713421d3c3ebd9ed0d7f61736ab53195c50d02002b4098ca2ac937798c8",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "1e68604b99c76cee1ed6717f31e1bdb561fb0b45"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "012c664d6ff37d2aaeaa2b26dc57747d2b8655bf"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "66fd13da3b2ea577a311c2d43adc63f2d98ca2d2"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "038ef304762ecca4c420be0d020dd9c2141f6d69"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "bca9e36b85bae8d33caaf64dfebe98832dccdcf9"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#7 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T14:05:26+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.22572-dynamic-experts-search.md",
+    "status": "FAIL",
+    "file_bytes": 22837,
+    "prose_chars": 6148,
+    "paragraphs": 27,
+    "method_paragraphs": 13,
+    "method_components": 7,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.8900562851782364,
+    "japanese_chars": 4744,
+    "latin_chars": 586,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#7 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

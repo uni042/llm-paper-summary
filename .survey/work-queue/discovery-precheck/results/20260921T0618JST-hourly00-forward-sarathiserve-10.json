@@ -1,0 +1,814 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0618JST-hourly00-forward-sarathiserve-10",
+  "collector_id": "hourly00-20260921T0559JST-forward-sarathiserve",
+  "run_key": "2026-09-21T05:58:48+09:00",
+  "axis": "forward citations of Sarathi-Serve chunked-prefill LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2403.02310/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1362a7ff1d062a8f2b2c97a437cd75cf26b8a4d6",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 55,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T21:18:32.104563+00:00",
+  "results": [
+    {
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "source_url": "https://www.semanticscholar.org/paper/a429cf6f1f9285849ceea67823d8824fe7661719",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Test-time scaling can improve large language model reasoning by generating and combining multiple candidate responses. In sampling-based methods, the inference budget is often described by the number of generated candidates, N. However, N tells us how many candidates are generated, not how they are executed. The same candidate budget can be produced in one batched generation call or split across several sequential calls with smaller batch sizes. We first study the effect of increasing N on reasoning accuracy using Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts. As expected, increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B. However, accuracy alone does not show the systems cost of using a larger candidate budget. We therefore fix N = 8 and compare four generation schedules: 1x8, 2x4, 4x2, and 8x1, where axb denotes a generation calls with b candidates per call. We measure latency, throughput, GPU-hours, and gross GPU-device energy while keeping the total candidate count fixed. On A100 GPUs, eight serial calls use 4.64-4.86x as much gross GPU-device energy and have 5.77-6.12x the P95 latency of one batched call with eight candidates. The same pattern appears across three independently scheduled A100 nodes per model and in short-output SciQ/V100 experiments. These results show that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling. When candidates are independent and memory allows it, fewer generation calls with larger batch sizes are more efficient. Evaluations should therefore report not only candidate count and accuracy, but also generation schedule and GPU-level systems metrics.",
+      "canonical_id": "arXiv:2609.19499",
+      "arxiv_id": "2609.19499",
+      "authors": [
+        "Mobina Kashaniyan",
+        "Ali Jannesari"
+      ]
+    },
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Auto-regressive model decode is bandwidth-bound, since every weight and key/value-cache byte crosses high-bandwidth memory once per token. A megakernel is an ideal solution, but existing automatic megakernel generation approaches cannot achieve both generalization across models and correctness guarantees. We present ForgeMegakernel, which generates a per-model high-performance decode megakernel using coding agents. ForgeMegakernel pairs a universal knowledge base of ten progressive milestones with an independent mid-state test oracle. The milestones provide the megakernel's structural properties: a fine-grained instruction stream for each SM, dependency counters replacing the global synchronization, and a shared-memory buffer pool for workload balance across SMs and greater parallelism. The test oracle derives the mid-states of the megakernel and checks the performance, error and precision during the generation process, guaranteeing a correct and trustworthy forged megakernel. We evaluated ForgeMegakernel on 14 representative decoding operations across eight model families spanning 0.6B-13B parameters. The generated megakernels achieved 50.5-85.9% MBU and geometric mean speedups of 1.21x over SGLang 0.5.18 and 1.54x over a megakernel compiler under identical configurations. Inside SGLang, evaluated on GSM8K with ragged prompts, all 14 megakernels decoded faster than the SGLang engine at comparable answer accuracy.",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Le-Shan Li",
+        "Zhui Zhu",
+        "Xiang-Long Deng",
+        "Yao-Jian Chen",
+        "Qing-Feng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhi-Yuan Liu"
+      ]
+    },
+    {
+      "title": "Confidence-Gated Admission for Hardware Prefetching: When the Gate Matters More Than the Predictor",
+      "source_url": "https://www.semanticscholar.org/paper/828d428a86a6c8925448f51489ba9105bcfb0ba5",
+      "year": 2026,
+      "published": "2026-09-03",
+      "abstract": "Learned cache prefetchers are typically evaluated against classical predictors that always issue requests, confounding the prediction model with the admission policy. We disentangle these variables with matched controls: the same admission gate is applied to both a 257-parameter online MLP and a classical stride predictor. The neural advantage vanishes; the MLP is indistinguishable from gated stride on random traffic and slower on most regular streams. The gate itself is architecturally useful independent of the predictor: on twenty SPEC CPU2017 programs in native ChampSim, it removes 35% of prefetches and improves accuracy from 11% to 15%, but DRAM reads change by only 0.07% demonstrating that proxy metrics do not predict endpoint behavior. We prove gate-closed execution reproduces the no-prefetch baseline exactly. The gate matters more than the predictor, and better proxies do not imply better endpoints.",
+      "canonical_id": "arXiv:2609.04040",
+      "arxiv_id": "2609.04040",
+      "authors": [
+        "Youssef Majdane",
+        "Simone Jarno Casartelli",
+        "Enrico Lopedoto"
+      ]
+    },
+    {
+      "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+      "source_url": "https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab",
+      "year": 2026,
+      "published": "2026-09-03",
+      "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+      "canonical_id": "arXiv:2609.05565",
+      "arxiv_id": "2609.05565",
+      "authors": [
+        "Twinkll Sisodia"
+      ]
+    },
+    {
+      "title": "SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving",
+      "source_url": "https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.parco.2026.103216",
+      "doi": "10.1016/j.parco.2026.103216",
+      "authors": [
+        "Si-Yuan Sun",
+        "Zhao-Jia Wang",
+        "Han-Shuo Liu",
+        "Jie-Han Zhou"
+      ]
+    },
+    {
+      "title": "Bridging Agent Semantics with Spot Capacity: An Elastic and Recoverable Service Model",
+      "source_url": "https://www.semanticscholar.org/paper/3eb55b75bf757ac8c2b8971ec32d959dc7f69142",
+      "year": 2026,
+      "published": "2026-08-30",
+      "abstract": "LLM agents increasingly drive long-running cloud inference workloads in which model calls differ in urgency, redundancy, completion semantics, and replay cost. Model-as-a-Service (MaaS) platforms expose several service models for trading cost against latency, availability, and capacity commitment. These models operate primarily at request, job, or endpoint scopes and provide limited support for combining transient platform supply with the evolving semantics of an agent task. We present SemSpot, a semantics-aware service model that allows agent applications to leverage the spot capacity of LLM inference platforms. At the request level, SemSpot lets a provider publish short-lived offers over successful price, completion probability, and failure-notification deadline; the agent runtime selects among these offers using the current task state and completion rule. An audit of 1,535 cases from six agent benchmarks identifies four recurring workflow structures and shows how this service model may produce different cost, service-time, and fallback behavior. With specialized MaaS support, token-level SemSpot further preserves provider inference state and runtime-verified semantic segments inside a long request. We develop the service model, economic boundary, and the cross-layer research agenda required to realize SemSpot.",
+      "canonical_id": "arXiv:2608.29581",
+      "arxiv_id": "2608.29581",
+      "authors": [
+        "Min-Chen Yu"
+      ]
+    },
+    {
+      "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+      "source_url": "https://www.semanticscholar.org/paper/aaf46dc87740c49088dedc2036ecaa4814de3791",
+      "year": 2026,
+      "published": "2026-08-28",
+      "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31x at context-512 to 1.17x at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+      "canonical_id": "arXiv:2608.28044",
+      "arxiv_id": "2608.28044",
+      "authors": [
+        "P. Vellaisamy",
+        "Vanessa Lam",
+        "Shawn Blanton",
+        "J. Shen"
+      ]
+    },
+    {
+      "title": "Devising a method for latency tail stabilization in asynchronous machine learning inference pipelines through timeout-constrained adaptive batching",
+      "source_url": "https://www.semanticscholar.org/paper/f733af302664246a74d0b5c6b2a9282e492bfbfd",
+      "year": 2026,
+      "published": "2026-08-28",
+      "abstract": "This study investigates the execution of machine inference queries in a microservice pipeline, represented as a directed acyclic graph (DAG), under conditions of a non-stationary Poisson event flow. The impact of grouping events before the inference node on the tail delay of the pipeline has been considered. The issue arises during peak loads when the 99th percentile of the delay becomes unstable. During this period, queues grow in several nodes of the graph, which increases the response time, complicates compliance with SLA, and reduces throughput. Static grouping partially reduces the load, but its parameters are set during deployment and do not always correspond to the change in the flow.\nTo limit the tail delay, a template with a temporal barrier node has been proposed. It accumulates events into micro-packages but limits the time they stay in the queue by an interval Δt. After the batch is completed, the BatchedInferenceNode performs one group direct pass of the model for all events. The micro package formation is completed when N_max is reached, the timer is triggered, or the watermark is shifted.\nFor verification, a prototype with 1D-CNN inference trained on the CWRU set has been implemented on an NVIDIA RTX 4060 Ti. Experiments showed that at λ = 1200 events/s, that is, above the saturation point of the basic configuration, the p99 delay decreased from 1400 to 41 ms. At the same time, the throughput increased from 931 to 1175 events/s, which is approximately 26%.\nThe microbenchmark showed that the direct model pass time in the batch range 1–256 almost does not change and is 0.66–0.74 ms. This makes it possible to amortize the costs of context initialization per event.\nThe results could prove useful for real-time ML inference systems where predictability of response time is important",
+      "canonical_id": "DOI:10.15587/1729-4061.2026.367544",
+      "doi": "10.15587/1729-4061.2026.367544",
+      "authors": [
+        "Anton Ponomarenko",
+        "T. Zaiko"
+      ]
+    },
+    {
+      "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+      "source_url": "https://www.semanticscholar.org/paper/32d6f5766d70595e661eb15b2354d84d923e8d48",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "Existing methods for improving Retrieval-Augmented Generation (RAG) efficiency mainly optimize downstream LLM generation, such as context compression or serving optimization. However, RAG is an end-to-end system, and its bottleneck can shift between upstream reranking and downstream generation under different serving loads and reranking budgets.In this paper, we first empirically characterize this shifting-bottleneck behavior and show that upstream reranking can become the dominant bottleneck under high query rates or large reranking budgets. Reducing the reranking budget can relieve this bottleneck, but it may also drop supporting evidence and degrade recall. To address this problem, we propose \\textbf{\\textsf{PACE}} (\\textbf{P}rioritized \\textbf{A}daptive \\textbf{C}overage of \\textbf{E}vidence), a training-free framework that combines \\textit{evidence frontloading} with \\textit{pressure-adaptive budgeting}. \\textsf{PACE} first reorders candidates by marginal evidence coverage, prioritizing documents that are query-relevant, complementary, and useful for forming multi-hop evidence chains. We show that this objective is monotone submodular, giving greedy selection a $(1-1/e)$ approximation guarantee. \\textsf{PACE} then dynamically adjusts the reranking budget according to the relative pressure of the reranker and the LLM. Experiments on three multi-hop QA datasets and online serving simulations show that \\textsf{PACE} improves evidence recall, reduces p95 latency under ranking-heavy workloads. More importantly, the two components together reveal that \\textit{less can be more}: an evidence-dense top-ranked candidates enable higher final recall with fewer reranked documents.",
+      "canonical_id": "arXiv:2608.25115",
+      "arxiv_id": "2608.25115",
+      "authors": [
+        "Weibin Cai",
+        "Reza Zafarani"
+      ]
+    },
+    {
+      "title": "AI Infrastructure in Space: How Far Can We Go?",
+      "source_url": "https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7",
+      "year": 2026,
+      "published": "2026-08-21",
+      "abstract": "Satellites are becoming programmable computing platforms capable of running increasingly demanding AI workloads. This shift raises a systems problem: how can AI services remain deployable, manageable, and recoverable after launch when compute capacity, connectivity, energy, and thermal headroom vary over orbital time? This paper develops a systems vision for AI infrastructure in space. We define it as the systems layer that manages AI capabilities across spacecraft, orbital networks, ground stations, and cloud backends, while treating orbital and physical state as part of the resource model. We synthesize relevant foundations from terrestrial AI infrastructure, satellite networking, and satellite edge computing, and examine the physical constraints that directly shape system design. We further ground this vision in three in-orbit case studies spanning the node, platform, and service levels. Telemetry from BUPT-1 satellite shows that usable compute capacity is bounded by thermal and energy envelopes. SateLight on BUPT-2 satellite reduces application-update transmission latency by 56.54% on average and up to 91.18%, with 100% update correctness. A stateful VLM serving case further shows that thermal interruptions make execution-state recovery a first-class systems problem. These observations motivate a research agenda for space-native resource management, lifecycle support, and sustained AI service across space and ground.",
+      "canonical_id": "arXiv:2608.21034",
+      "arxiv_id": "2608.21034",
+      "authors": [
+        "Qing Li",
+        "Qi-Yang Zhang",
+        "Daliang Xu",
+        "Tianze Huang",
+        "Ding-Ge Zhang",
+        "Yihao Zhao",
+        "Xiaolong Huang",
+        "Jin-Feng Wen",
+        "Xiameng Hu",
+        "Tao Qi",
+        "Mengwei Xu",
+        "Shang-Guang Wang",
+        "Xuazhe Liu"
+      ]
+    },
+    {
+      "title": "AgentDecarbonizer: Carbon-Aware Execution for AI Agents",
+      "source_url": "https://www.semanticscholar.org/paper/6e2eab05d313f24b42549cffe374dc0de28ad8eb",
+      "year": 2026,
+      "published": "2026-08-20",
+      "abstract": "AI agents extend large language models from single prompt-response interactions to long-running, goaldirected workflows that issue many model calls, invoke tools, and interact with external environments. These workflows enable tasks such as software repair, data analysis, and experiment management, but their repeated model invocations can incur substantial carbon emissions. This paper characterizes the carbon emissions of OpenClaw agent workloads using WildClawBench, and shows that emissions depend on token consumption, context cache reuse, and the carbon intensity of the grid. Our characterization identifies deadline flexibility as an opportunity for carbon-aware execution: agent tasks can wait for lower-carbon-intensity periods or shift to lower-carbon grids. However, doing so requires handling uncertain execution time for temporal shifting and cached context recomputation during spatial shifting. We present AgentDecarbonizer, a carbon optimizer for AI agents that runs alongside OpenClaw. Given a task prompt and user-specified deadline, AgentDecarbonizer conservatively estimates task duration and selects deadline-feasible execution schedules, while accounting for cache recomputation overhead during spatial shifting. Evaluated on WildClawBench workloads with 60 agent tasks across four grids, AgentDecarbonizer reduces carbon emissions by up to 57.9 % compared with a carbon-agnostic baseline and by up to 37.5 % compared with a baseline that selects the carbon-optimal grid at task start time.",
+      "canonical_id": "arXiv:2608.20566",
+      "arxiv_id": "2608.20566",
+      "authors": [
+        "Leyi Yan",
+        "Shuang-Ning Li",
+        "Sihang Liu"
+      ]
+    },
+    {
+      "title": "HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads",
+      "source_url": "https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568",
+      "year": 2026,
+      "published": "2026-08-19",
+      "abstract": "Hybrid Transformer-Mamba large language models (LLMs) enhance long-context efficiency, but their heterogeneous computation and communication patterns complicate efficient hardware acceleration. Chiplet-based architectures offer a scalable solution by integrating specialized compute and memory units. However, the design space spanning static architectural configurations and dynamic runtime policies is prohibitively large to explore exhaustively. To address this challenge, we present HYDRA, a comprehensive design space exploration framework for hybrid LLM serving on heterogeneous chiplet systems. HYDRA jointly explores chiplet composition, placement, inter-chiplet bandwidth provisioning, dynamic batching, and runtime scheduling. It integrates communication-aware placement, dynamic batching, elastic task scheduling, and a fast Markov-based performance estimator that captures multi-tenant runtime dynamics for efficient and accurate exploration. Across all workloads, HYDRA delivers 1.55x the throughput and 43.7 percent lower time-to-first-token on average, with throughput gains reaching up to 2.3x compared to state-of-the-art baselines. These results highlight that co-designing architecture and runtime policies is critical for efficient large-scale LLM serving on heterogeneous chiplet systems.",
+      "canonical_id": "arXiv:2608.19395",
+      "arxiv_id": "2608.19395",
+      "authors": [
+        "Jiahao Lin",
+        "Alish Kanani",
+        "Sang-Won Lee",
+        "Jaehyun Park",
+        "U. Ogras"
+      ]
+    },
+    {
+      "title": "Beyond Binary Priorities: Multi-Tier SLA Scheduling for Large Language Model Serving",
+      "source_url": "https://www.semanticscholar.org/paper/945f6ad1d64df020c3f1186ccf0ac2d9298eb878",
+      "year": 2026,
+      "published": "2026-08-17",
+      "abstract": "Modern LLM serving deployments must simultaneously satisfy heterogeneous service-level objectives (SLOs) across a diverse population of user tiers, ranging from latency-critical API calls to background batch processing. Llumnix introduced a dynamic, migration-capable multi-instance scheduler for LLM inference that achieves load balancing, defragmentation, prioritization, and auto-scaling through a unified\"freeness\"metric. However, Llumnix's priority model is restricted to two levels (high and normal), an abstraction too coarse to express the richer SLA classes common in production deployments. In this work, we extend Llumnix's priority model to support an arbitrary number of tiers and evaluate the effects of this extension under three realistic priority distributions (uniform, Gaussian, enterprise) using Vidur, a high-fidelity LLM inference simulator. We implement per-tier headroom with exponential decay, tier-aware dispatch ordering, and the full Llumnix migration pipeline inside Vidur's hierarchical scheduling framework. We compare our extended scheduler against INFaaS (global routing baseline), vLLM, Orca, and Sarathi-Serve (per-replica baselines), sweeping priority levels from 1 to 10. Our experiments demonstrate that four priority tiers yields the best cost-effectiveness tradeoff, achieving prefill mean speedups of up to 8.3x and end-to-end P99 speedups of up to 3.1x over INFaaS with cost-per-latency improvements of 46 to 68%, while preserving strong SLO differentiation across tiers. We further show that the system sustains these gains at 10 priority levels without tail latency collapse, with overhead concentrated in the prefill phase.",
+      "canonical_id": "arXiv:2608.16336",
+      "arxiv_id": "2608.16336",
+      "authors": [
+        "Anders Vestrum",
+        "Arya Raeesi",
+        "Hanna Roed"
+      ]
+    },
+    {
+      "title": "DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/ba847ed300df91079e51db87c0376ffd46dea62b",
+      "year": 2026,
+      "published": "2026-08-16",
+      "abstract": "Linear attention models eliminate the quadratic prefix computation and context-growing KV cache of softmax attention by replacing pairwise token interactions with recurrent state updates. However, existing decoding implementations often materialize and write back the full recurrent state after every generated token, making state maintenance a major source of memory traffic, especially for models with large states and many heads. This paper presents DeltaLog, a recurrent-state decoding scheme that reduces this overhead without changing the model semantics. Specifically, DeltaLog represents the recurrent state as a dense base state together with a bounded log of recent compact updates. Most decode steps append only compact update factors to this log, while periodic merge steps fold the accumulated updates back into the dense base state. Thus, the model observes the same dense state as in eager decoding, but most full-state write-backs are replaced by lightweight append operations. We implement DeltaLog for GDN, KDA, and RWKV6 and integrate it into a prototype serving stack. Across these models, DeltaLog accelerates the recurrent-state update kernel by up to $1.86\\times$, reduces profiled recurrent-state write traffic by up to $7.83\\times$, and achieves $1.05$--$1.20\\times$ end-to-end serving speedups over dense recurrent baselines.",
+      "canonical_id": "arXiv:2608.15533",
+      "arxiv_id": "2608.15533",
+      "authors": [
+        "Jun-Qing Lin",
+        "Jingwei Sun",
+        "Guangzhong Sun"
+      ]
+    },
+    {
+      "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/9ce502492feb6ba78479de2953486b8f0e0a9769",
+      "year": 2026,
+      "published": "2026-08-16",
+      "abstract": "Pipeline parallelism (PP) is widely used to scale large language model (LLM) training, but its efficiency is often limited by stage imbalance and pipeline bubbles. Meanwhile, cross-layer KV sharing has primarily been studied as a mechanism for reducing KV-cache costs during inference, without examining how KV reuse reshapes pipeline workloads. We present \\textbf{KV-Pipe}, a stage-aware KV-sharing mechanism that turns KV reuse into a pipeline-balancing control knob. KV-Pipe starts from the tail stage, converts selected attention layers to cross-layer KV sharing in a tail-first order, and iteratively retargets the current bottleneck to drive the FLOPs Imbalance Ratio (FIR) toward $1$. The procedure is performed offline and requires only a pipeline partition and per-layer FLOPs estimates, introducing negligible runtime overhead and requiring no online tuning. Across multiple pipeline-parallel configurations, KV-Pipe consistently improves utilization and throughput, achieving up to \\textbf{9.2\\%} higher training MFU and up to a \\textbf{9.8\\%} reduction in iteration time, with larger gains at higher pipeline-parallel degrees where stage imbalance is amplified. Furthermore, the same KV-sharing mechanism provides an inference-side benefit by reducing KV-cache growth and redundant KV projection work, resulting in higher decoding throughput for long-context workloads. These results identify KV layout as a system--architecture degree of freedom for jointly improving pipeline-parallel training efficiency and long-context inference.",
+      "canonical_id": "arXiv:2608.15943",
+      "arxiv_id": "2608.15943",
+      "authors": [
+        "Maryam Dialameh",
+        "Hossein Rajabzadeh",
+        "Harish Murali",
+        "Walid Ahmed",
+        "Weiwei Zhang",
+        "Hyock Ju Kwon"
+      ]
+    },
+    {
+      "title": "AIDC Microgrid Vulnerability Assessment Under Computing-Power Coordinated Attacks",
+      "source_url": "https://www.semanticscholar.org/paper/d267959868104c68acf8b1917cd2b8e6ecbc28aa",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "The rapid growth of large language model (LLM) services is expanding AI data centers (AIDCs), increasing electricity demand and associated carbon emissions. Renewable energy integration can mitigate these impacts but also strengthens the coupling between AIDC loads and inverter-interfaced generation, creating cross-domain cyber-physical vulnerabilities. Specifically, adversarial AI requests alter AIDC power demand, whereas inverter control tampering modifies source-side dynamics, and their combined impact on system stability varies with generation forecast and demand response uncertainties. To this end, we propose an uncertainty-aware AIDC microgrid vulnerability assessment framework under computing-power coordinated attacks. First, the framework maps adversarial AI requests to AIDC power variations and represents uncertainties in attack-induced demand responses and photovoltaic (PV) forecasts through confidence-weighted realizations. Then, impedance based stability analysis combines these realizations with bounded inverter parameter tampering to construct attack reachable domains and identify critical attack time windows. Furthermore, a separate criterion identifies fixed coordinated attack vectors that retain destabilizing capability throughout each selected window. Case studies demonstrate that, unlike either attack component applied alone, coordinated attacks within identified critical windows induce sustained inverter frequency oscillations with peak absolute deviations exceeding 20% of nominal frequency, whereas the evaluated out-of-window response remains bounded. The proposed method further identifies critical attack windows and the associated coordinated attack vectors.",
+      "canonical_id": "arXiv:2608.10645",
+      "arxiv_id": "2608.10645",
+      "authors": [
+        "Ze Yu",
+        "Hong Zhen",
+        "Chao Shen",
+        "Mingyang Sun"
+      ]
+    },
+    {
+      "title": "Rate-Assured GPU Inference for 5G AI Slices",
+      "source_url": "https://www.semanticscholar.org/paper/30051cd9f8d695b578f1b87cb261b12ab259e33a",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Edge AI inference is an important workload in 5G networks. Multiple classes of edge AI workloads often share edge infrastructure, yet each may require distinct latency and rate guarantees. 5G network slicing supports differentiated requirements on the network side, but shared GPU inference also needs compute-side guarantees after requests reach the Multi-access Edge Computing (MEC) host. We extend 3GPP network slicing with compute-side enforcement so that slice guarantees remain effective after traffic reaches the MEC host. To realize this extension, we design a GPU scheduler that combines Hierarchical Token Bucket (HTB)-based traffic conditioning with Earliest Deadline First (EDF) scheduling. Our scheduler enforces per-class assured goodput, defined as the committed rate of latency-compliant completions for each class. The GPU scheduler identifies request classes via tags, which are assigned during GTPU encapsulation at the 5G user plane. This integration preserves overall latency guarantees across both the network and compute domains of a 5G slice for AI.",
+      "canonical_id": "DOI:10.1145/3789240.3830291",
+      "doi": "10.1145/3789240.3830291",
+      "authors": [
+        "Yu-Hong Shen",
+        "Wen-Ju Chiang",
+        "Hsiang-Ming Hung",
+        "Yen-Ting Kuo",
+        "Chien-Chao Tseng",
+        "Meng-Hsun Tsai"
+      ]
+    },
+    {
+      "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
+      "source_url": "https://www.semanticscholar.org/paper/fd83b6daf9fd534328820dc99a9a6f9ee5b956b8",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "The performance of multi-turn, agentic LLM inference is increasingly dominated by KV-Cache storage I/O rather than computation. In prevalent disaggregated architectures, loading the massive KV-Cache from external storage creates a fundamental imbalance: storage NICs on prefill engines become bandwidth-saturated, while those on decoding engines remain idle. This asymmetry severely constrains overall system throughput. We present DualPath, an inference system that breaks this bottleneck by introducing dual-path KV-Cache loading. Beyond the traditional storage-to-prefill path, DualPath enables a novel storage-to-decode path, in which the KV-Cache is loaded into decoding engines and then efficiently transferred to prefill engines via RDMA over the compute network. DualPath combines this optimized data path — which inherently avoids network congestion and avoids interference with latency-critical model execution communications — with a global scheduler that dynamically balances load across prefill and decode engines. Our evaluation on three models with production agentic workloads demonstrates that DualPath improves offline inference throughput by up to 1.87x on our in-house inference system. It can also improve online serving throughput by an average factor of 1.96x without violating SLO.",
+      "canonical_id": "DOI:10.1145/3789240.3829159",
+      "doi": "10.1145/3789240.3829159",
+      "authors": [
+        "Yong-Tong Wu",
+        "Shao-Yuan Chen",
+        "Rilin Huang",
+        "Yi-Xuan Tan",
+        "Yinmin Zhong",
+        "Mingxing Zhang",
+        "Xin Jin",
+        "Pan-Pan Huang"
+      ]
+    },
+    {
+      "title": "TokenPowerSandbox: Evidence-Gated CPU-First Screening for Energy-Aware LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/09438278d363ec2d00a028d83c917362123bd34e",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Energy-aware LLM serving requires comparing configurations under realistic request shapes, yet exhaustive target-GPU profiling is costly and a cheap predictor can be dangerously confident outside its measured scope. We present TokenPowerSandbox, an evidence-gated workflow that combines an interpretable CPU-resident projector, short target-GPU probes, full-workload verification, and tamper-evident freeze-before-measurement provenance. On one NVIDIA H100 80GB serving Qwen2.5-7B-Instruct with vLLM, three anchor repeats and six development workloads calibrate workload transfer. The same frozen model is evaluated on a blind holdout and a separately predeclared no-refit confirmation totaling 51 post-freeze runs. Energy MAPE is 6.23% and 7.35%, with Spearman rank correlations of 0.976 and 0.933. However, a predeclared TTFT gate passes at concurrency four (9.27% MAPE) and triggers abstention below four (64.80%), showing why energy accuracy cannot certify latency.",
+      "canonical_id": "arXiv:2608.18149",
+      "arxiv_id": "2608.18149",
+      "authors": [
+        "Chenxu Niu"
+      ]
+    },
+    {
+      "title": "OrionInfer: Low-Overhead Parallelism Switching and Live Migration for Efficient LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/da6286203a132daafbf9e274956a35f7df587546",
+      "year": 2026,
+      "published": "2026-08-08",
+      "abstract": "Existing Large Language Model (LLM) inference systems often rely on static model placement and scheduling policies, which struggle to handle heterogeneous and dynamic real-world workloads. The key challenge is to adapt serving strategies to workload fluctuations while keeping reconfiguration overhead minimal. In this paper, we present OrionInfer, an adaptive LLM serving system that aligns inference strategies with real-time demand. OrionInfer introduces three key techniques: (1) runtime switching between data parallelism and tensor parallelism with negligible overhead; (2) an efficient inference pipeline that preserves batching efficiency during parallelism transitions; and (3) live-migration-based load balancing to alleviate memory pressure and improve resource utilization. Evaluations across multiple model scales show that OrionInfer delivers robust performance under diverse serving scenarios. In end-to-end serving, it reduces average TTFT by up to 25% over DP-priority configurations under low loads and lowers P99 tail latency by 50%--90% over TP-priority configurations under most high-traffic settings. In disaggregated prefill serving, OrionInfer improves prefill completion time (PCT) SLO attainment by up to 16.5 percentage points over DP-priority static baselines and reduces P99 PCT by up to 74.7% over TP-priority static baselines. Compared with dynamic baseline, OrionInfer provides better tail-latency stability, reducing P99 PCT by 38.6%--40.8% while avoiding the extra memory footprint.",
+      "canonical_id": "DOI:10.1145/3770855.3817626",
+      "doi": "10.1145/3770855.3817626",
+      "authors": [
+        "Jingqi Feng",
+        "Guang Yang",
+        "Yukai Huang",
+        "Sicheng Liang",
+        "Chunpu Huang",
+        "Ming Yan",
+        "Wu Jie"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.19499",
+      "identity_tokens": [
+        "id:arXiv:2609.19499",
+        "title:sample count is not enough candidategeneration strategy shapes the energy and performance of llm testtime scaling",
+        "url:https://www.semanticscholar.org/paper/a429cf6f1f9285849ceea67823d8824fe7661719"
+      ],
+      "record": {
+        "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+        "source_url": "https://www.semanticscholar.org/paper/a429cf6f1f9285849ceea67823d8824fe7661719",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Test-time scaling can improve large language model reasoning by generating and combining multiple candidate responses. In sampling-based methods, the inference budget is often described by the number of generated candidates, N. However, N tells us how many candidates are generated, not how they are executed. The same candidate budget can be produced in one batched generation call or split across several sequential calls with smaller batch sizes. We first study the effect of increasing N on reasoning accuracy using Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts. As expected, increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B. However, accuracy alone does not show the systems cost of using a larger candidate budget. We therefore fix N = 8 and compare four generation schedules: 1x8, 2x4, 4x2, and 8x1, where axb denotes a generation calls with b candidates per call. We measure latency, throughput, GPU-hours, and gross GPU-device energy while keeping the total candidate count fixed. On A100 GPUs, eight serial calls use 4.64-4.86x as much gross GPU-device energy and have 5.77-6.12x the P95 latency of one batched call with eight candidates. The same pattern appears across three independently scheduled A100 nodes per model and in short-output SciQ/V100 experiments. These results show that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling. When candidates are independent and memory allows it, fewer generation calls with larger batch sizes are more efficient. Evaluations should therefore report not only candidate count and accuracy, but also generation schedule and GPU-level systems metrics.",
+        "canonical_id": "arXiv:2609.19499",
+        "arxiv_id": "2609.19499",
+        "authors": [
+          "Mobina Kashaniyan",
+          "Ali Jannesari"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12379",
+      "identity_tokens": [
+        "id:arXiv:2609.12379",
+        "title:forgemegakernel a general framework for efficient autoregressive model decode megakernels",
+        "url:https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f"
+      ],
+      "record": {
+        "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+        "source_url": "https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Auto-regressive model decode is bandwidth-bound, since every weight and key/value-cache byte crosses high-bandwidth memory once per token. A megakernel is an ideal solution, but existing automatic megakernel generation approaches cannot achieve both generalization across models and correctness guarantees. We present ForgeMegakernel, which generates a per-model high-performance decode megakernel using coding agents. ForgeMegakernel pairs a universal knowledge base of ten progressive milestones with an independent mid-state test oracle. The milestones provide the megakernel's structural properties: a fine-grained instruction stream for each SM, dependency counters replacing the global synchronization, and a shared-memory buffer pool for workload balance across SMs and greater parallelism. The test oracle derives the mid-states of the megakernel and checks the performance, error and precision during the generation process, guaranteeing a correct and trustworthy forged megakernel. We evaluated ForgeMegakernel on 14 representative decoding operations across eight model families spanning 0.6B-13B parameters. The generated megakernels achieved 50.5-85.9% MBU and geometric mean speedups of 1.21x over SGLang 0.5.18 and 1.54x over a megakernel compiler under identical configurations. Inside SGLang, evaluated on GSM8K with ragged prompts, all 14 megakernels decoded faster than the SGLang engine at comparable answer accuracy.",
+        "canonical_id": "arXiv:2609.12379",
+        "arxiv_id": "2609.12379",
+        "authors": [
+          "Le-Shan Li",
+          "Zhui Zhu",
+          "Xiang-Long Deng",
+          "Yao-Jian Chen",
+          "Qing-Feng He",
+          "Yuxuan Li",
+          "Rong Zhao",
+          "Xu Han",
+          "Zhi-Yuan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04040",
+      "identity_tokens": [
+        "id:arXiv:2609.04040",
+        "title:confidencegated admission for hardware prefetching when the gate matters more than the predictor",
+        "url:https://www.semanticscholar.org/paper/828d428a86a6c8925448f51489ba9105bcfb0ba5"
+      ],
+      "record": {
+        "title": "Confidence-Gated Admission for Hardware Prefetching: When the Gate Matters More Than the Predictor",
+        "source_url": "https://www.semanticscholar.org/paper/828d428a86a6c8925448f51489ba9105bcfb0ba5",
+        "year": 2026,
+        "published": "2026-09-03",
+        "abstract": "Learned cache prefetchers are typically evaluated against classical predictors that always issue requests, confounding the prediction model with the admission policy. We disentangle these variables with matched controls: the same admission gate is applied to both a 257-parameter online MLP and a classical stride predictor. The neural advantage vanishes; the MLP is indistinguishable from gated stride on random traffic and slower on most regular streams. The gate itself is architecturally useful independent of the predictor: on twenty SPEC CPU2017 programs in native ChampSim, it removes 35% of prefetches and improves accuracy from 11% to 15%, but DRAM reads change by only 0.07% demonstrating that proxy metrics do not predict endpoint behavior. We prove gate-closed execution reproduces the no-prefetch baseline exactly. The gate matters more than the predictor, and better proxies do not imply better endpoints.",
+        "canonical_id": "arXiv:2609.04040",
+        "arxiv_id": "2609.04040",
+        "authors": [
+          "Youssef Majdane",
+          "Simone Jarno Casartelli",
+          "Enrico Lopedoto"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05565",
+      "identity_tokens": [
+        "id:arXiv:2609.05565",
+        "title:toward sustainable distributed llm inference a systems synthesis and research agenda for an energy carbon and cacheaware llmd control plane",
+        "url:https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab"
+      ],
+      "record": {
+        "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+        "source_url": "https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab",
+        "year": 2026,
+        "published": "2026-09-03",
+        "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+        "canonical_id": "arXiv:2609.05565",
+        "arxiv_id": "2609.05565",
+        "authors": [
+          "Twinkll Sisodia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.parco.2026.103216",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.parco.2026.103216",
+        "title:smartbatchllm an efficient adaptive hybrid batching strategy for large language model serving",
+        "url:https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c"
+      ],
+      "record": {
+        "title": "SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving",
+        "source_url": "https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.parco.2026.103216",
+        "doi": "10.1016/j.parco.2026.103216",
+        "authors": [
+          "Si-Yuan Sun",
+          "Zhao-Jia Wang",
+          "Han-Shuo Liu",
+          "Jie-Han Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.29581",
+      "identity_tokens": [
+        "id:arXiv:2608.29581",
+        "title:bridging agent semantics with spot capacity an elastic and recoverable service model",
+        "url:https://www.semanticscholar.org/paper/3eb55b75bf757ac8c2b8971ec32d959dc7f69142"
+      ],
+      "record": {
+        "title": "Bridging Agent Semantics with Spot Capacity: An Elastic and Recoverable Service Model",
+        "source_url": "https://www.semanticscholar.org/paper/3eb55b75bf757ac8c2b8971ec32d959dc7f69142",
+        "year": 2026,
+        "published": "2026-08-30",
+        "abstract": "LLM agents increasingly drive long-running cloud inference workloads in which model calls differ in urgency, redundancy, completion semantics, and replay cost. Model-as-a-Service (MaaS) platforms expose several service models for trading cost against latency, availability, and capacity commitment. These models operate primarily at request, job, or endpoint scopes and provide limited support for combining transient platform supply with the evolving semantics of an agent task. We present SemSpot, a semantics-aware service model that allows agent applications to leverage the spot capacity of LLM inference platforms. At the request level, SemSpot lets a provider publish short-lived offers over successful price, completion probability, and failure-notification deadline; the agent runtime selects among these offers using the current task state and completion rule. An audit of 1,535 cases from six agent benchmarks identifies four recurring workflow structures and shows how this service model may produce different cost, service-time, and fallback behavior. With specialized MaaS support, token-level SemSpot further preserves provider inference state and runtime-verified semantic segments inside a long request. We develop the service model, economic boundary, and the cross-layer research agenda required to realize SemSpot.",
+        "canonical_id": "arXiv:2608.29581",
+        "arxiv_id": "2608.29581",
+        "authors": [
+          "Min-Chen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28044",
+      "identity_tokens": [
+        "id:arXiv:2608.28044",
+        "title:characterization of request and token energy costs for llm inference workloads on gpu platforms",
+        "url:https://www.semanticscholar.org/paper/aaf46dc87740c49088dedc2036ecaa4814de3791"
+      ],
+      "record": {
+        "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+        "source_url": "https://www.semanticscholar.org/paper/aaf46dc87740c49088dedc2036ecaa4814de3791",
+        "year": 2026,
+        "published": "2026-08-28",
+        "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31x at context-512 to 1.17x at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+        "canonical_id": "arXiv:2608.28044",
+        "arxiv_id": "2608.28044",
+        "authors": [
+          "P. Vellaisamy",
+          "Vanessa Lam",
+          "Shawn Blanton",
+          "J. Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.15587/1729-4061.2026.367544",
+      "identity_tokens": [
+        "id:DOI:10.15587/1729-4061.2026.367544",
+        "title:devising a method for latency tail stabilization in asynchronous machine learning inference pipelines through timeoutconstrained adaptive batching",
+        "url:https://www.semanticscholar.org/paper/f733af302664246a74d0b5c6b2a9282e492bfbfd"
+      ],
+      "record": {
+        "title": "Devising a method for latency tail stabilization in asynchronous machine learning inference pipelines through timeout-constrained adaptive batching",
+        "source_url": "https://www.semanticscholar.org/paper/f733af302664246a74d0b5c6b2a9282e492bfbfd",
+        "year": 2026,
+        "published": "2026-08-28",
+        "abstract": "This study investigates the execution of machine inference queries in a microservice pipeline, represented as a directed acyclic graph (DAG), under conditions of a non-stationary Poisson event flow. The impact of grouping events before the inference node on the tail delay of the pipeline has been considered. The issue arises during peak loads when the 99th percentile of the delay becomes unstable. During this period, queues grow in several nodes of the graph, which increases the response time, complicates compliance with SLA, and reduces throughput. Static grouping partially reduces the load, but its parameters are set during deployment and do not always correspond to the change in the flow.\nTo limit the tail delay, a template with a temporal barrier node has been proposed. It accumulates events into micro-packages but limits the time they stay in the queue by an interval Δt. After the batch is completed, the BatchedInferenceNode performs one group direct pass of the model for all events. The micro package formation is completed when N_max is reached, the timer is triggered, or the watermark is shifted.\nFor verification, a prototype with 1D-CNN inference trained on the CWRU set has been implemented on an NVIDIA RTX 4060 Ti. Experiments showed that at λ = 1200 events/s, that is, above the saturation point of the basic configuration, the p99 delay decreased from 1400 to 41 ms. At the same time, the throughput increased from 931 to 1175 events/s, which is approximately 26%.\nThe microbenchmark showed that the direct model pass time in the batch range 1–256 almost does not change and is 0.66–0.74 ms. This makes it possible to amortize the costs of context initialization per event.\nThe results could prove useful for real-time ML inference systems where predictability of response time is important",
+        "canonical_id": "DOI:10.15587/1729-4061.2026.367544",
+        "doi": "10.15587/1729-4061.2026.367544",
+        "authors": [
+          "Anton Ponomarenko",
+          "T. Zaiko"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25115",
+      "identity_tokens": [
+        "id:arXiv:2608.25115",
+        "title:less can be more relieving rag bottlenecks via evidence frontloading and pressureadaptive budgeting",
+        "url:https://www.semanticscholar.org/paper/32d6f5766d70595e661eb15b2354d84d923e8d48"
+      ],
+      "record": {
+        "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+        "source_url": "https://www.semanticscholar.org/paper/32d6f5766d70595e661eb15b2354d84d923e8d48",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "Existing methods for improving Retrieval-Augmented Generation (RAG) efficiency mainly optimize downstream LLM generation, such as context compression or serving optimization. However, RAG is an end-to-end system, and its bottleneck can shift between upstream reranking and downstream generation under different serving loads and reranking budgets.In this paper, we first empirically characterize this shifting-bottleneck behavior and show that upstream reranking can become the dominant bottleneck under high query rates or large reranking budgets. Reducing the reranking budget can relieve this bottleneck, but it may also drop supporting evidence and degrade recall. To address this problem, we propose \\textbf{\\textsf{PACE}} (\\textbf{P}rioritized \\textbf{A}daptive \\textbf{C}overage of \\textbf{E}vidence), a training-free framework that combines \\textit{evidence frontloading} with \\textit{pressure-adaptive budgeting}. \\textsf{PACE} first reorders candidates by marginal evidence coverage, prioritizing documents that are query-relevant, complementary, and useful for forming multi-hop evidence chains. We show that this objective is monotone submodular, giving greedy selection a $(1-1/e)$ approximation guarantee. \\textsf{PACE} then dynamically adjusts the reranking budget according to the relative pressure of the reranker and the LLM. Experiments on three multi-hop QA datasets and online serving simulations show that \\textsf{PACE} improves evidence recall, reduces p95 latency under ranking-heavy workloads. More importantly, the two components together reveal that \\textit{less can be more}: an evidence-dense top-ranked candidates enable higher final recall with fewer reranked documents.",
+        "canonical_id": "arXiv:2608.25115",
+        "arxiv_id": "2608.25115",
+        "authors": [
+          "Weibin Cai",
+          "Reza Zafarani"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21034",
+      "identity_tokens": [
+        "id:arXiv:2608.21034",
+        "title:ai infrastructure in space how far can we go",
+        "url:https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7"
+      ],
+      "record": {
+        "title": "AI Infrastructure in Space: How Far Can We Go?",
+        "source_url": "https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7",
+        "year": 2026,
+        "published": "2026-08-21",
+        "abstract": "Satellites are becoming programmable computing platforms capable of running increasingly demanding AI workloads. This shift raises a systems problem: how can AI services remain deployable, manageable, and recoverable after launch when compute capacity, connectivity, energy, and thermal headroom vary over orbital time? This paper develops a systems vision for AI infrastructure in space. We define it as the systems layer that manages AI capabilities across spacecraft, orbital networks, ground stations, and cloud backends, while treating orbital and physical state as part of the resource model. We synthesize relevant foundations from terrestrial AI infrastructure, satellite networking, and satellite edge computing, and examine the physical constraints that directly shape system design. We further ground this vision in three in-orbit case studies spanning the node, platform, and service levels. Telemetry from BUPT-1 satellite shows that usable compute capacity is bounded by thermal and energy envelopes. SateLight on BUPT-2 satellite reduces application-update transmission latency by 56.54% on average and up to 91.18%, with 100% update correctness. A stateful VLM serving case further shows that thermal interruptions make execution-state recovery a first-class systems problem. These observations motivate a research agenda for space-native resource management, lifecycle support, and sustained AI service across space and ground.",
+        "canonical_id": "arXiv:2608.21034",
+        "arxiv_id": "2608.21034",
+        "authors": [
+          "Qing Li",
+          "Qi-Yang Zhang",
+          "Daliang Xu",
+          "Tianze Huang",
+          "Ding-Ge Zhang",
+          "Yihao Zhao",
+          "Xiaolong Huang",
+          "Jin-Feng Wen",
+          "Xiameng Hu",
+          "Tao Qi",
+          "Mengwei Xu",
+          "Shang-Guang Wang",
+          "Xuazhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20566",
+      "identity_tokens": [
+        "id:arXiv:2608.20566",
+        "title:agentdecarbonizer carbonaware execution for ai agents",
+        "url:https://www.semanticscholar.org/paper/6e2eab05d313f24b42549cffe374dc0de28ad8eb"
+      ],
+      "record": {
+        "title": "AgentDecarbonizer: Carbon-Aware Execution for AI Agents",
+        "source_url": "https://www.semanticscholar.org/paper/6e2eab05d313f24b42549cffe374dc0de28ad8eb",
+        "year": 2026,
+        "published": "2026-08-20",
+        "abstract": "AI agents extend large language models from single prompt-response interactions to long-running, goaldirected workflows that issue many model calls, invoke tools, and interact with external environments. These workflows enable tasks such as software repair, data analysis, and experiment management, but their repeated model invocations can incur substantial carbon emissions. This paper characterizes the carbon emissions of OpenClaw agent workloads using WildClawBench, and shows that emissions depend on token consumption, context cache reuse, and the carbon intensity of the grid. Our characterization identifies deadline flexibility as an opportunity for carbon-aware execution: agent tasks can wait for lower-carbon-intensity periods or shift to lower-carbon grids. However, doing so requires handling uncertain execution time for temporal shifting and cached context recomputation during spatial shifting. We present AgentDecarbonizer, a carbon optimizer for AI agents that runs alongside OpenClaw. Given a task prompt and user-specified deadline, AgentDecarbonizer conservatively estimates task duration and selects deadline-feasible execution schedules, while accounting for cache recomputation overhead during spatial shifting. Evaluated on WildClawBench workloads with 60 agent tasks across four grids, AgentDecarbonizer reduces carbon emissions by up to 57.9 % compared with a carbon-agnostic baseline and by up to 37.5 % compared with a baseline that selects the carbon-optimal grid at task start time.",
+        "canonical_id": "arXiv:2608.20566",
+        "arxiv_id": "2608.20566",
+        "authors": [
+          "Leyi Yan",
+          "Shuang-Ning Li",
+          "Sihang Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19395",
+      "identity_tokens": [
+        "id:arXiv:2608.19395",
+        "title:hydra a heterogeneous chiplet dse framework for serving dynamic hybrid llm workloads",
+        "url:https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568"
+      ],
+      "record": {
+        "title": "HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads",
+        "source_url": "https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568",
+        "year": 2026,
+        "published": "2026-08-19",
+        "abstract": "Hybrid Transformer-Mamba large language models (LLMs) enhance long-context efficiency, but their heterogeneous computation and communication patterns complicate efficient hardware acceleration. Chiplet-based architectures offer a scalable solution by integrating specialized compute and memory units. However, the design space spanning static architectural configurations and dynamic runtime policies is prohibitively large to explore exhaustively. To address this challenge, we present HYDRA, a comprehensive design space exploration framework for hybrid LLM serving on heterogeneous chiplet systems. HYDRA jointly explores chiplet composition, placement, inter-chiplet bandwidth provisioning, dynamic batching, and runtime scheduling. It integrates communication-aware placement, dynamic batching, elastic task scheduling, and a fast Markov-based performance estimator that captures multi-tenant runtime dynamics for efficient and accurate exploration. Across all workloads, HYDRA delivers 1.55x the throughput and 43.7 percent lower time-to-first-token on average, with throughput gains reaching up to 2.3x compared to state-of-the-art baselines. These results highlight that co-designing architecture and runtime policies is critical for efficient large-scale LLM serving on heterogeneous chiplet systems.",
+        "canonical_id": "arXiv:2608.19395",
+        "arxiv_id": "2608.19395",
+        "authors": [
+          "Jiahao Lin",
+          "Alish Kanani",
+          "Sang-Won Lee",
+          "Jaehyun Park",
+          "U. Ogras"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.16336",
+      "identity_tokens": [
+        "id:arXiv:2608.16336",
+        "title:beyond binary priorities multitier sla scheduling for large language model serving",
+        "url:https://www.semanticscholar.org/paper/945f6ad1d64df020c3f1186ccf0ac2d9298eb878"
+      ],
+      "record": {
+        "title": "Beyond Binary Priorities: Multi-Tier SLA Scheduling for Large Language Model Serving",
+        "source_url": "https://www.semanticscholar.org/paper/945f6ad1d64df020c3f1186ccf0ac2d9298eb878",
+        "year": 2026,
+        "published": "2026-08-17",
+        "abstract": "Modern LLM serving deployments must simultaneously satisfy heterogeneous service-level objectives (SLOs) across a diverse population of user tiers, ranging from latency-critical API calls to background batch processing. Llumnix introduced a dynamic, migration-capable multi-instance scheduler for LLM inference that achieves load balancing, defragmentation, prioritization, and auto-scaling through a unified\"freeness\"metric. However, Llumnix's priority model is restricted to two levels (high and normal), an abstraction too coarse to express the richer SLA classes common in production deployments. In this work, we extend Llumnix's priority model to support an arbitrary number of tiers and evaluate the effects of this extension under three realistic priority distributions (uniform, Gaussian, enterprise) using Vidur, a high-fidelity LLM inference simulator. We implement per-tier headroom with exponential decay, tier-aware dispatch ordering, and the full Llumnix migration pipeline inside Vidur's hierarchical scheduling framework. We compare our extended scheduler against INFaaS (global routing baseline), vLLM, Orca, and Sarathi-Serve (per-replica baselines), sweeping priority levels from 1 to 10. Our experiments demonstrate that four priority tiers yields the best cost-effectiveness tradeoff, achieving prefill mean speedups of up to 8.3x and end-to-end P99 speedups of up to 3.1x over INFaaS with cost-per-latency improvements of 46 to 68%, while preserving strong SLO differentiation across tiers. We further show that the system sustains these gains at 10 priority levels without tail latency collapse, with overhead concentrated in the prefill phase.",
+        "canonical_id": "arXiv:2608.16336",
+        "arxiv_id": "2608.16336",
+        "authors": [
+          "Anders Vestrum",
+          "Arya Raeesi",
+          "Hanna Roed"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15533",
+      "identity_tokens": [
+        "id:arXiv:2608.15533",
+        "title:deltalog deferred materialization of recurrent states for linear attention decoding",
+        "url:https://www.semanticscholar.org/paper/ba847ed300df91079e51db87c0376ffd46dea62b"
+      ],
+      "record": {
+        "title": "DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/ba847ed300df91079e51db87c0376ffd46dea62b",
+        "year": 2026,
+        "published": "2026-08-16",
+        "abstract": "Linear attention models eliminate the quadratic prefix computation and context-growing KV cache of softmax attention by replacing pairwise token interactions with recurrent state updates. However, existing decoding implementations often materialize and write back the full recurrent state after every generated token, making state maintenance a major source of memory traffic, especially for models with large states and many heads. This paper presents DeltaLog, a recurrent-state decoding scheme that reduces this overhead without changing the model semantics. Specifically, DeltaLog represents the recurrent state as a dense base state together with a bounded log of recent compact updates. Most decode steps append only compact update factors to this log, while periodic merge steps fold the accumulated updates back into the dense base state. Thus, the model observes the same dense state as in eager decoding, but most full-state write-backs are replaced by lightweight append operations. We implement DeltaLog for GDN, KDA, and RWKV6 and integrate it into a prototype serving stack. Across these models, DeltaLog accelerates the recurrent-state update kernel by up to $1.86\\times$, reduces profiled recurrent-state write traffic by up to $7.83\\times$, and achieves $1.05$--$1.20\\times$ end-to-end serving speedups over dense recurrent baselines.",
+        "canonical_id": "arXiv:2608.15533",
+        "arxiv_id": "2608.15533",
+        "authors": [
+          "Jun-Qing Lin",
+          "Jingwei Sun",
+          "Guangzhong Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15943",
+      "identity_tokens": [
+        "id:arXiv:2608.15943",
+        "title:kvpipe on the relation between kv sharing and pipeline parallel efficiency in llms",
+        "url:https://www.semanticscholar.org/paper/9ce502492feb6ba78479de2953486b8f0e0a9769"
+      ],
+      "record": {
+        "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/9ce502492feb6ba78479de2953486b8f0e0a9769",
+        "year": 2026,
+        "published": "2026-08-16",
+        "abstract": "Pipeline parallelism (PP) is widely used to scale large language model (LLM) training, but its efficiency is often limited by stage imbalance and pipeline bubbles. Meanwhile, cross-layer KV sharing has primarily been studied as a mechanism for reducing KV-cache costs during inference, without examining how KV reuse reshapes pipeline workloads. We present \\textbf{KV-Pipe}, a stage-aware KV-sharing mechanism that turns KV reuse into a pipeline-balancing control knob. KV-Pipe starts from the tail stage, converts selected attention layers to cross-layer KV sharing in a tail-first order, and iteratively retargets the current bottleneck to drive the FLOPs Imbalance Ratio (FIR) toward $1$. The procedure is performed offline and requires only a pipeline partition and per-layer FLOPs estimates, introducing negligible runtime overhead and requiring no online tuning. Across multiple pipeline-parallel configurations, KV-Pipe consistently improves utilization and throughput, achieving up to \\textbf{9.2\\%} higher training MFU and up to a \\textbf{9.8\\%} reduction in iteration time, with larger gains at higher pipeline-parallel degrees where stage imbalance is amplified. Furthermore, the same KV-sharing mechanism provides an inference-side benefit by reducing KV-cache growth and redundant KV projection work, resulting in higher decoding throughput for long-context workloads. These results identify KV layout as a system--architecture degree of freedom for jointly improving pipeline-parallel training efficiency and long-context inference.",
+        "canonical_id": "arXiv:2608.15943",
+        "arxiv_id": "2608.15943",
+        "authors": [
+          "Maryam Dialameh",
+          "Hossein Rajabzadeh",
+          "Harish Murali",
+          "Walid Ahmed",
+          "Weiwei Zhang",
+          "Hyock Ju Kwon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.10645",
+      "identity_tokens": [
+        "id:arXiv:2608.10645",
+        "title:aidc microgrid vulnerability assessment under computingpower coordinated attacks",
+        "url:https://www.semanticscholar.org/paper/d267959868104c68acf8b1917cd2b8e6ecbc28aa"
+      ],
+      "record": {
+        "title": "AIDC Microgrid Vulnerability Assessment Under Computing-Power Coordinated Attacks",
+        "source_url": "https://www.semanticscholar.org/paper/d267959868104c68acf8b1917cd2b8e6ecbc28aa",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "The rapid growth of large language model (LLM) services is expanding AI data centers (AIDCs), increasing electricity demand and associated carbon emissions. Renewable energy integration can mitigate these impacts but also strengthens the coupling between AIDC loads and inverter-interfaced generation, creating cross-domain cyber-physical vulnerabilities. Specifically, adversarial AI requests alter AIDC power demand, whereas inverter control tampering modifies source-side dynamics, and their combined impact on system stability varies with generation forecast and demand response uncertainties. To this end, we propose an uncertainty-aware AIDC microgrid vulnerability assessment framework under computing-power coordinated attacks. First, the framework maps adversarial AI requests to AIDC power variations and represents uncertainties in attack-induced demand responses and photovoltaic (PV) forecasts through confidence-weighted realizations. Then, impedance based stability analysis combines these realizations with bounded inverter parameter tampering to construct attack reachable domains and identify critical attack time windows. Furthermore, a separate criterion identifies fixed coordinated attack vectors that retain destabilizing capability throughout each selected window. Case studies demonstrate that, unlike either attack component applied alone, coordinated attacks within identified critical windows induce sustained inverter frequency oscillations with peak absolute deviations exceeding 20% of nominal frequency, whereas the evaluated out-of-window response remains bounded. The proposed method further identifies critical attack windows and the associated coordinated attack vectors.",
+        "canonical_id": "arXiv:2608.10645",
+        "arxiv_id": "2608.10645",
+        "authors": [
+          "Ze Yu",
+          "Hong Zhen",
+          "Chao Shen",
+          "Mingyang Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3830291",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3830291",
+        "title:rateassured gpu inference for 5g ai slices",
+        "url:https://www.semanticscholar.org/paper/30051cd9f8d695b578f1b87cb261b12ab259e33a"
+      ],
+      "record": {
+        "title": "Rate-Assured GPU Inference for 5G AI Slices",
+        "source_url": "https://www.semanticscholar.org/paper/30051cd9f8d695b578f1b87cb261b12ab259e33a",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Edge AI inference is an important workload in 5G networks. Multiple classes of edge AI workloads often share edge infrastructure, yet each may require distinct latency and rate guarantees. 5G network slicing supports differentiated requirements on the network side, but shared GPU inference also needs compute-side guarantees after requests reach the Multi-access Edge Computing (MEC) host. We extend 3GPP network slicing with compute-side enforcement so that slice guarantees remain effective after traffic reaches the MEC host. To realize this extension, we design a GPU scheduler that combines Hierarchical Token Bucket (HTB)-based traffic conditioning with Earliest Deadline First (EDF) scheduling. Our scheduler enforces per-class assured goodput, defined as the committed rate of latency-compliant completions for each class. The GPU scheduler identifies request classes via tags, which are assigned during GTPU encapsulation at the 5G user plane. This integration preserves overall latency guarantees across both the network and compute domains of a 5G slice for AI.",
+        "canonical_id": "DOI:10.1145/3789240.3830291",
+        "doi": "10.1145/3789240.3830291",
+        "authors": [
+          "Yu-Hong Shen",
+          "Wen-Ju Chiang",
+          "Hsiang-Ming Hung",
+          "Yen-Ting Kuo",
+          "Chien-Chao Tseng",
+          "Meng-Hsun Tsai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3829159",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3829159",
+        "title:dualpath accelerating agentic llm inference by harvesting disaggregated kvcache storage io",
+        "url:https://www.semanticscholar.org/paper/fd83b6daf9fd534328820dc99a9a6f9ee5b956b8"
+      ],
+      "record": {
+        "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
+        "source_url": "https://www.semanticscholar.org/paper/fd83b6daf9fd534328820dc99a9a6f9ee5b956b8",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "The performance of multi-turn, agentic LLM inference is increasingly dominated by KV-Cache storage I/O rather than computation. In prevalent disaggregated architectures, loading the massive KV-Cache from external storage creates a fundamental imbalance: storage NICs on prefill engines become bandwidth-saturated, while those on decoding engines remain idle. This asymmetry severely constrains overall system throughput. We present DualPath, an inference system that breaks this bottleneck by introducing dual-path KV-Cache loading. Beyond the traditional storage-to-prefill path, DualPath enables a novel storage-to-decode path, in which the KV-Cache is loaded into decoding engines and then efficiently transferred to prefill engines via RDMA over the compute network. DualPath combines this optimized data path — which inherently avoids network congestion and avoids interference with latency-critical model execution communications — with a global scheduler that dynamically balances load across prefill and decode engines. Our evaluation on three models with production agentic workloads demonstrates that DualPath improves offline inference throughput by up to 1.87x on our in-house inference system. It can also improve online serving throughput by an average factor of 1.96x without violating SLO.",
+        "canonical_id": "DOI:10.1145/3789240.3829159",
+        "doi": "10.1145/3789240.3829159",
+        "authors": [
+          "Yong-Tong Wu",
+          "Shao-Yuan Chen",
+          "Rilin Huang",
+          "Yi-Xuan Tan",
+          "Yinmin Zhong",
+          "Mingxing Zhang",
+          "Xin Jin",
+          "Pan-Pan Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.18149",
+      "identity_tokens": [
+        "id:arXiv:2608.18149",
+        "title:tokenpowersandbox evidencegated cpufirst screening for energyaware llm serving",
+        "url:https://www.semanticscholar.org/paper/09438278d363ec2d00a028d83c917362123bd34e"
+      ],
+      "record": {
+        "title": "TokenPowerSandbox: Evidence-Gated CPU-First Screening for Energy-Aware LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/09438278d363ec2d00a028d83c917362123bd34e",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Energy-aware LLM serving requires comparing configurations under realistic request shapes, yet exhaustive target-GPU profiling is costly and a cheap predictor can be dangerously confident outside its measured scope. We present TokenPowerSandbox, an evidence-gated workflow that combines an interpretable CPU-resident projector, short target-GPU probes, full-workload verification, and tamper-evident freeze-before-measurement provenance. On one NVIDIA H100 80GB serving Qwen2.5-7B-Instruct with vLLM, three anchor repeats and six development workloads calibrate workload transfer. The same frozen model is evaluated on a blind holdout and a separately predeclared no-refit confirmation totaling 51 post-freeze runs. Energy MAPE is 6.23% and 7.35%, with Spearman rank correlations of 0.976 and 0.933. However, a predeclared TTFT gate passes at concurrency four (9.27% MAPE) and triggers abstention below four (64.80%), showing why energy accuracy cannot certify latency.",
+        "canonical_id": "arXiv:2608.18149",
+        "arxiv_id": "2608.18149",
+        "authors": [
+          "Chenxu Niu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3770855.3817626",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770855.3817626",
+        "title:orioninfer lowoverhead parallelism switching and live migration for efficient llm serving",
+        "url:https://www.semanticscholar.org/paper/da6286203a132daafbf9e274956a35f7df587546"
+      ],
+      "record": {
+        "title": "OrionInfer: Low-Overhead Parallelism Switching and Live Migration for Efficient LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/da6286203a132daafbf9e274956a35f7df587546",
+        "year": 2026,
+        "published": "2026-08-08",
+        "abstract": "Existing Large Language Model (LLM) inference systems often rely on static model placement and scheduling policies, which struggle to handle heterogeneous and dynamic real-world workloads. The key challenge is to adapt serving strategies to workload fluctuations while keeping reconfiguration overhead minimal. In this paper, we present OrionInfer, an adaptive LLM serving system that aligns inference strategies with real-time demand. OrionInfer introduces three key techniques: (1) runtime switching between data parallelism and tensor parallelism with negligible overhead; (2) an efficient inference pipeline that preserves batching efficiency during parallelism transitions; and (3) live-migration-based load balancing to alleviate memory pressure and improve resource utilization. Evaluations across multiple model scales show that OrionInfer delivers robust performance under diverse serving scenarios. In end-to-end serving, it reduces average TTFT by up to 25% over DP-priority configurations under low loads and lowers P99 tail latency by 50%--90% over TP-priority configurations under most high-traffic settings. In disaggregated prefill serving, OrionInfer improves prefill completion time (PCT) SLO attainment by up to 16.5 percentage points over DP-priority static baselines and reduces P99 PCT by up to 74.7% over TP-priority static baselines. Compared with dynamic baseline, OrionInfer provides better tail-latency stability, reducing P99 PCT by 38.6%--40.8% while avoiding the extra memory footprint.",
+        "canonical_id": "DOI:10.1145/3770855.3817626",
+        "doi": "10.1145/3770855.3817626",
+        "authors": [
+          "Jingqi Feng",
+          "Guang Yang",
+          "Yukai Huang",
+          "Sicheng Liang",
+          "Chunpu Huang",
+          "Ming Yan",
+          "Wu Jie"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:db375c029b458e30b94869c47f2fc14c5e835f8ecb085d8ee90bd3bda74ce1f7",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T142753Z-scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-f3b9350c8e883e12",
+      "claim_id": "claim-6adea251db936612ba17864d",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-6adea251db936612ba17864d",
+      "claimed_at": "2026-09-17T14:28:26+00:00",
+      "expires_at": "2026-09-17T15:58:26+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-f3b9350c8e883e12"
+      ],
+      "job": {
+        "job_id": "job-research-f3b9350c8e883e12",
+        "type": "research",
+        "parent_job_id": "job-e45c04a3ba21f09c",
+        "priority": 88,
+        "canonical_id": "arXiv:2503.18869",
+        "title": "Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design",
+        "source_url": "https://arxiv.org/abs/2503.18869",
+        "paper_path": "papers/inference/99-other-inference-systems/2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md",
+        "selection_reason": "Hardware/software co-design for lossless weight/KV-cache compression and context-dependent quantized memory access in the accelerator memory controller; directly relevant to inference memory bandwidth and capacity reduction.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T06:01:06+00:00",
+        "blocker": "Primary-source retrieval was incomplete in this run. The official arXiv abstract/full-text rendering for arXiv:2503.18869 was opened and read through the proposed design and the beginning of evaluation, including bit-plane disaggregation, cross-token KV clustering/de-correlation, and compression results. The available rendering was truncated before the remaining evaluation/conclusion could be read. A materially distinct official PDF retrieval was then attempted directly from https://arxiv.org/pdf/2503.18869 but the retrieval failed. Because the full primary manuscript was not safely available end-to-end, no five-slot scientific record was generated from partial text; retry full-text retrieval in a later run.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-afb867c7067bd524852f7243.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-17T07:43:48+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-17T07:43:48+00:00",
+            "reason": "Primary-source retrieval was incomplete in this run. The official arXiv abstract/full-text rendering for arXiv:2503.18869 was opened and read through the proposed design and the beginning of evaluation, including bit-plane disaggregation, cross-token KV clustering/de-correlation, and compression results. The available rendering was truncated before the remaining evaluation/conclusion could be read. A materially distinct official PDF retrieval was then attempted directly from https://arxiv.org/pdf/2503.18869 but the retrieval failed. Because the full primary manuscript was not safely available end-to-end, no five-slot scientific record was generated from partial text; retry full-text retrieval in a later run."
+          }
+        ],
+        "last_blocked_at": "2026-09-17T07:43:48+00:00",
+        "retry_queued_at": "2026-09-17T12:03:58+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | evaluation requires hardware/software/methodology evidence | evaluation.scope is required to distinguish real-hardware/simulation and generalization limits | results.overview must explain the main result and its practical meaning | results.key_results[0] missing: baseline, condition, interpretation | results.key_results[1] missing: baseline, condition, interpretation | results.key_results[2] missing: baseline, condition, interpretation | results.key_results[3] missing: baseline, condition, interpretation | results.key_results[4] missing: baseline, condition, interpretation | results.key_results[5] missing: baseline, condition, interpretation | results.negative_results is required; record degradation and boundary conditions | results.quality_impact is required; distinguish lossless from approximate methods | positioning.implementation_status is required | positioning.research_positioning is required",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "evaluation requires hardware/software/methodology evidence",
+          "evaluation.scope is required to distinguish real-hardware/simulation and generalization limits",
+          "results.overview must explain the main result and its practical meaning",
+          "results.key_results[0] missing: baseline, condition, interpretation",
+          "results.key_results[1] missing: baseline, condition, interpretation",
+          "results.key_results[2] missing: baseline, condition, interpretation",
+          "results.key_results[3] missing: baseline, condition, interpretation",
+          "results.key_results[4] missing: baseline, condition, interpretation",
+          "results.key_results[5] missing: baseline, condition, interpretation",
+          "results.negative_results is required; record degradation and boundary conditions",
+          "results.quality_impact is required; distinguish lossless from approximate methods",
+          "positioning.implementation_status is required",
+          "positioning.research_positioning is required"
+        ],
+        "last_validation_failed_at": "2026-09-17T12:37:44+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-542ed69d76769ea2b6e90057"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-542ed69d76769ea2b6e90057-repair.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-17T14:28:26+00:00",
+  "checkpoint_released": 0
+}

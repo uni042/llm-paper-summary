@@ -1,0 +1,833 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T015829JST-worker00-openalex-runtime-08",
+  "collector_id": "worker00-openalex-runtime-serving",
+  "run_key": "2026-09-21T01:58:29+09:00-worker00",
+  "axis": "recent LLM inference serving GPU runtime scheduling",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20inference%20serving%20GPU%20runtime%20scheduling&filter=from_publication_date:2025-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg4NDgwMDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjExODkzNjg2J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fc1b676b6d1e3f6b556befc71dd76143f7a3047d",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 37,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 6,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T17:01:02.710636+00:00",
+  "results": [
+    {
+      "title": "FedBCFA: a boundary-constrained feature alignment federated learning framework for multi-center breast MRI classification",
+      "source_url": "https://doi.org/10.1007/s44443-026-01280-7",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "DOI:10.1007/s44443-026-01280-7",
+      "doi": "10.1007/s44443-026-01280-7",
+      "authors": [
+        "Wenbiao Du",
+        "Boya Zhang",
+        "Liuquan Cheng",
+        "Xiru Li"
+      ]
+    },
+    {
+      "title": "Finite-Time Minimax Bounds and an Optimal Lyapunov Policy in Queueing Control",
+      "source_url": "https://doi.org/10.1287/opre.2025.2528",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "arXiv:2506.18278",
+      "arxiv_id": "2506.18278",
+      "authors": [
+        "Yujie Liu",
+        "Vincent Y. F. Tan",
+        "Yunbei Xu"
+      ]
+    },
+    {
+      "title": "Cracks in the Memory Wall: Data Systems On Disaggregated Memory",
+      "source_url": "https://doi.org/10.1007/s13222-026-00561-9",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "DOI:10.1007/s13222-026-00561-9",
+      "doi": "10.1007/s13222-026-00561-9",
+      "authors": [
+        "Yi Jiang",
+        "Hamish Nicholson",
+        "Anastasia Ailamaki"
+      ]
+    },
+    {
+      "title": "Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache",
+      "source_url": "https://arxiv.org/abs/2609.15030",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15030",
+      "arxiv_id": "2609.15030",
+      "authors": [
+        "Frank Li"
+      ]
+    },
+    {
+      "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+      "source_url": "https://arxiv.org/abs/2609.15311",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15311",
+      "arxiv_id": "2609.15311",
+      "authors": [
+        "Siying Yu",
+        "Yixun Hong",
+        "Guozhi Qiu",
+        "Jingci Liu",
+        "Feng Gu",
+        "C. Geng",
+        "Zhengrong Wang",
+        "Chen Zhang",
+        "Bei Yu"
+      ]
+    },
+    {
+      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+      "source_url": "https://arxiv.org/abs/2609.15636",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15636",
+      "arxiv_id": "2609.15636",
+      "authors": [
+        "Pengfei Xia",
+        "Tuo Hao",
+        "Shengwei Li",
+        "Jinjing Chen",
+        "Shiru Wei",
+        "Wenjun Zou",
+        "Rui Zhang",
+        "Hui Zang"
+      ]
+    },
+    {
+      "title": "When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis",
+      "source_url": "https://arxiv.org/abs/2609.15309",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15309",
+      "arxiv_id": "2609.15309",
+      "authors": [
+        "Kaiyuan Liu",
+        "Qiuyang Mang",
+        "Bo Peng",
+        "Wenhao Chai",
+        "Hanchen Li",
+        "Shreyas Pimpalgaonkar",
+        "Luke Zettlemoyer",
+        "Alex Dimakis",
+        "Alvin Cheung"
+      ]
+    },
+    {
+      "title": "Agentic Autoscaling through Worker-Pool Orchestration for LLM-driven Text Classification in Cloud Computing Environments",
+      "source_url": "https://arxiv.org/abs/2609.14898",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.14898",
+      "arxiv_id": "2609.14898",
+      "authors": [
+        "Bablu Kumar",
+        "Anshul Verma",
+        "Rajkumar Buyya"
+      ]
+    },
+    {
+      "title": "MOPAR: A Model Partitioning Framework for Deep Learning Inference Services on Serverless Platforms",
+      "source_url": "https://doi.org/10.1145/3832810.3832925",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2404.02445",
+      "arxiv_id": "2404.02445",
+      "authors": [
+        "Jiaang Duan",
+        "Shiyou Qian",
+        "Hanwen Hu",
+        "Jian Cao",
+        "Guangtao Xue"
+      ]
+    },
+    {
+      "title": "DB-SpMSpV: Dual-View Blocked Sparse Matrix-Sparse Vector Multiplication for Dynamic GPU Workloads",
+      "source_url": "https://doi.org/10.1145/3832810.3832821",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2608.16308",
+      "arxiv_id": "2608.16308",
+      "authors": [
+        "Xing Cong",
+        "Chenhao Xie",
+        "Rui Wang",
+        "Zhongzhi Luan",
+        "Yi Liu",
+        "Depei Qian"
+      ]
+    },
+    {
+      "title": "CATS: A Carbon-Aware Task Simulator for Reducing AI Data Center Emissions",
+      "source_url": "https://arxiv.org/abs/2609.14775",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14775",
+      "arxiv_id": "2609.14775",
+      "authors": [
+        "Dayuan Chen",
+        "Ziliang Zong"
+      ]
+    },
+    {
+      "title": "PriMobiBench: Characterizing Visual Privacy Leakage in VLM-Driven Mobile GUI Agents",
+      "source_url": "https://arxiv.org/abs/2609.13873",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.13873",
+      "arxiv_id": "2609.13873",
+      "authors": [
+        "Qihang Cen",
+        "Tianshuo Cong",
+        "Da Song",
+        "Xinlei He",
+        "Jiaxing Song",
+        "Ke Xu",
+        "Qi Li"
+      ]
+    },
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://arxiv.org/abs/2609.12379",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Leshan Li",
+        "Zhui Zhu",
+        "Xianglong Deng",
+        "Yaojian Chen",
+        "Qingfeng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhiyuan Liu"
+      ]
+    },
+    {
+      "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+      "source_url": "https://arxiv.org/abs/2609.12412",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12412",
+      "arxiv_id": "2609.12412",
+      "authors": [
+        "Inesh Chakrabarti",
+        "Zejun Xiong",
+        "Pragya Sharma",
+        "Mani Srivastava"
+      ]
+    },
+    {
+      "title": "ESTS at WMT26: Routing-Informed Expert Pruning for Model Compression",
+      "source_url": "https://arxiv.org/abs/2609.12310",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12310",
+      "arxiv_id": "2609.12310",
+      "authors": [
+        "Liu O. Martin",
+        "Lucas Bandarkar",
+        "Nanyun Peng"
+      ]
+    },
+    {
+      "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+      "source_url": "https://arxiv.org/abs/2609.12550",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12550",
+      "arxiv_id": "2609.12550",
+      "authors": [
+        "Zhenghong Huang",
+        "Hongfan Wu",
+        "Jiheng Zhang"
+      ]
+    },
+    {
+      "title": "The Mechanics of a Swarm: A Reproducible External Reconstruction of an Unintended Agent-Coordination Episode on a Third-Party Wiki",
+      "source_url": "https://arxiv.org/abs/2609.12748",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12748",
+      "arxiv_id": "2609.12748",
+      "authors": [
+        "Philipp Lütje"
+      ]
+    },
+    {
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "source_url": "https://arxiv.org/abs/2609.13356",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13356",
+      "arxiv_id": "2609.13356",
+      "authors": [
+        "Jiyan He",
+        "Guang Liang",
+        "Hao Liu",
+        "Haoxiang Guan",
+        "Jinbo Sun",
+        "Junyi Guo",
+        "Wenjun Feng",
+        "Yantai Xie",
+        "Yifei Shen",
+        "Bin Shao",
+        "Chuyang Wei",
+        "Kai Chen",
+        "Kexin Zhou",
+        "Minghang Zhu",
+        "Shuxin Zheng",
+        "Tie-Yan Liu",
+        "Taine Zhao",
+        "Wenhui Zhu",
+        "Xueyin Xu",
+        "Xiaoqing Zhang",
+        "Yatao Li",
+        "Yuxuan Ren"
+      ]
+    },
+    {
+      "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+      "source_url": "https://arxiv.org/abs/2609.13585",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13585",
+      "arxiv_id": "2609.13585",
+      "authors": [
+        "Ziming Mao",
+        "Yihan Zhang",
+        "Shawn Wei Chew",
+        "Shuang Ma",
+        "Costin Raiciu",
+        "Yang Zhou",
+        "Scott Shenker",
+        "Ion Stoica"
+      ]
+    },
+    {
+      "title": "Task-Aware Federated Fine-Tuning for MoE-based Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.13395",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13395",
+      "arxiv_id": "2609.13395",
+      "authors": [
+        "Tingqi Wang",
+        "Hongyu Ke",
+        "Haoxin Wang",
+        "Rafal Angryk",
+        "Zhipeng Cai"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1007/s44443-026-01280-7",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44443-026-01280-7",
+        "title:fedbcfa a boundaryconstrained feature alignment federated learning framework for multicenter breast mri classification",
+        "url:https://doi.org/10.1007/s44443-026-01280-7"
+      ],
+      "record": {
+        "title": "FedBCFA: a boundary-constrained feature alignment federated learning framework for multi-center breast MRI classification",
+        "source_url": "https://doi.org/10.1007/s44443-026-01280-7",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "DOI:10.1007/s44443-026-01280-7",
+        "doi": "10.1007/s44443-026-01280-7",
+        "authors": [
+          "Wenbiao Du",
+          "Boya Zhang",
+          "Liuquan Cheng",
+          "Xiru Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.18278",
+      "identity_tokens": [
+        "id:DOI:10.1287/opre.2025.2528",
+        "id:arXiv:2506.18278",
+        "title:finitetime minimax bounds and an optimal lyapunov policy in queueing control",
+        "url:https://doi.org/10.1287/opre.2025.2528"
+      ],
+      "record": {
+        "title": "Finite-Time Minimax Bounds and an Optimal Lyapunov Policy in Queueing Control",
+        "source_url": "https://doi.org/10.1287/opre.2025.2528",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "arXiv:2506.18278",
+        "arxiv_id": "2506.18278",
+        "authors": [
+          "Yujie Liu",
+          "Vincent Y. F. Tan",
+          "Yunbei Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s13222-026-00561-9",
+      "identity_tokens": [
+        "id:DOI:10.1007/s13222-026-00561-9",
+        "title:cracks in the memory wall data systems on disaggregated memory",
+        "url:https://doi.org/10.1007/s13222-026-00561-9"
+      ],
+      "record": {
+        "title": "Cracks in the Memory Wall: Data Systems On Disaggregated Memory",
+        "source_url": "https://doi.org/10.1007/s13222-026-00561-9",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "DOI:10.1007/s13222-026-00561-9",
+        "doi": "10.1007/s13222-026-00561-9",
+        "authors": [
+          "Yi Jiang",
+          "Hamish Nicholson",
+          "Anastasia Ailamaki"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15030",
+      "identity_tokens": [
+        "id:arXiv:2609.15030",
+        "title:validating hybridstate cache recovery for glm53flash with vllm and lmcache",
+        "url:https://arxiv.org/abs/2609.15030"
+      ],
+      "record": {
+        "title": "Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache",
+        "source_url": "https://arxiv.org/abs/2609.15030",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15030",
+        "arxiv_id": "2609.15030",
+        "authors": [
+          "Frank Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15311",
+      "identity_tokens": [
+        "id:arXiv:2609.15311",
+        "title:flashgpusim enabling gpu modeling for modern architectures and ai workloads",
+        "url:https://arxiv.org/abs/2609.15311"
+      ],
+      "record": {
+        "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+        "source_url": "https://arxiv.org/abs/2609.15311",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15311",
+        "arxiv_id": "2609.15311",
+        "authors": [
+          "Siying Yu",
+          "Yixun Hong",
+          "Guozhi Qiu",
+          "Jingci Liu",
+          "Feng Gu",
+          "C. Geng",
+          "Zhengrong Wang",
+          "Chen Zhang",
+          "Bei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15636",
+      "identity_tokens": [
+        "id:arXiv:2609.15636",
+        "title:trillionparameter moe in a box decoupling memory provisioning with highbandwidth flash",
+        "url:https://arxiv.org/abs/2609.15636"
+      ],
+      "record": {
+        "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+        "source_url": "https://arxiv.org/abs/2609.15636",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15636",
+        "arxiv_id": "2609.15636",
+        "authors": [
+          "Pengfei Xia",
+          "Tuo Hao",
+          "Shengwei Li",
+          "Jinjing Chen",
+          "Shiru Wei",
+          "Wenjun Zou",
+          "Rui Zhang",
+          "Hui Zang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15309",
+      "identity_tokens": [
+        "id:arXiv:2609.15309",
+        "title:when agents slow down understanding llm agents testtime strategies via elopertoken analysis",
+        "url:https://arxiv.org/abs/2609.15309"
+      ],
+      "record": {
+        "title": "When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis",
+        "source_url": "https://arxiv.org/abs/2609.15309",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15309",
+        "arxiv_id": "2609.15309",
+        "authors": [
+          "Kaiyuan Liu",
+          "Qiuyang Mang",
+          "Bo Peng",
+          "Wenhao Chai",
+          "Hanchen Li",
+          "Shreyas Pimpalgaonkar",
+          "Luke Zettlemoyer",
+          "Alex Dimakis",
+          "Alvin Cheung"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14898",
+      "identity_tokens": [
+        "id:arXiv:2609.14898",
+        "title:agentic autoscaling through workerpool orchestration for llmdriven text classification in cloud computing environments",
+        "url:https://arxiv.org/abs/2609.14898"
+      ],
+      "record": {
+        "title": "Agentic Autoscaling through Worker-Pool Orchestration for LLM-driven Text Classification in Cloud Computing Environments",
+        "source_url": "https://arxiv.org/abs/2609.14898",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.14898",
+        "arxiv_id": "2609.14898",
+        "authors": [
+          "Bablu Kumar",
+          "Anshul Verma",
+          "Rajkumar Buyya"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.02445",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832925",
+        "id:arXiv:2404.02445",
+        "title:mopar a model partitioning framework for deep learning inference services on serverless platforms",
+        "url:https://doi.org/10.1145/3832810.3832925"
+      ],
+      "record": {
+        "title": "MOPAR: A Model Partitioning Framework for Deep Learning Inference Services on Serverless Platforms",
+        "source_url": "https://doi.org/10.1145/3832810.3832925",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2404.02445",
+        "arxiv_id": "2404.02445",
+        "authors": [
+          "Jiaang Duan",
+          "Shiyou Qian",
+          "Hanwen Hu",
+          "Jian Cao",
+          "Guangtao Xue"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.16308",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832821",
+        "id:arXiv:2608.16308",
+        "title:dbspmspv dualview blocked sparse matrixsparse vector multiplication for dynamic gpu workloads",
+        "url:https://doi.org/10.1145/3832810.3832821"
+      ],
+      "record": {
+        "title": "DB-SpMSpV: Dual-View Blocked Sparse Matrix-Sparse Vector Multiplication for Dynamic GPU Workloads",
+        "source_url": "https://doi.org/10.1145/3832810.3832821",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2608.16308",
+        "arxiv_id": "2608.16308",
+        "authors": [
+          "Xing Cong",
+          "Chenhao Xie",
+          "Rui Wang",
+          "Zhongzhi Luan",
+          "Yi Liu",
+          "Depei Qian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14775",
+      "identity_tokens": [
+        "id:arXiv:2609.14775",
+        "title:cats a carbonaware task simulator for reducing ai data center emissions",
+        "url:https://arxiv.org/abs/2609.14775"
+      ],
+      "record": {
+        "title": "CATS: A Carbon-Aware Task Simulator for Reducing AI Data Center Emissions",
+        "source_url": "https://arxiv.org/abs/2609.14775",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14775",
+        "arxiv_id": "2609.14775",
+        "authors": [
+          "Dayuan Chen",
+          "Ziliang Zong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13873",
+      "identity_tokens": [
+        "id:arXiv:2609.13873",
+        "title:primobibench characterizing visual privacy leakage in vlmdriven mobile gui agents",
+        "url:https://arxiv.org/abs/2609.13873"
+      ],
+      "record": {
+        "title": "PriMobiBench: Characterizing Visual Privacy Leakage in VLM-Driven Mobile GUI Agents",
+        "source_url": "https://arxiv.org/abs/2609.13873",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.13873",
+        "arxiv_id": "2609.13873",
+        "authors": [
+          "Qihang Cen",
+          "Tianshuo Cong",
+          "Da Song",
+          "Xinlei He",
+          "Jiaxing Song",
+          "Ke Xu",
+          "Qi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12379",
+      "identity_tokens": [
+        "id:arXiv:2609.12379",
+        "title:forgemegakernel a general framework for efficient autoregressive model decode megakernels",
+        "url:https://arxiv.org/abs/2609.12379"
+      ],
+      "record": {
+        "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+        "source_url": "https://arxiv.org/abs/2609.12379",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12379",
+        "arxiv_id": "2609.12379",
+        "authors": [
+          "Leshan Li",
+          "Zhui Zhu",
+          "Xianglong Deng",
+          "Yaojian Chen",
+          "Qingfeng He",
+          "Yuxuan Li",
+          "Rong Zhao",
+          "Xu Han",
+          "Zhiyuan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12412",
+      "identity_tokens": [
+        "id:arXiv:2609.12412",
+        "title:holibench a crossplatform benchmarking and deployment toolkit for foundation models in cpsiot applications",
+        "url:https://arxiv.org/abs/2609.12412"
+      ],
+      "record": {
+        "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+        "source_url": "https://arxiv.org/abs/2609.12412",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12412",
+        "arxiv_id": "2609.12412",
+        "authors": [
+          "Inesh Chakrabarti",
+          "Zejun Xiong",
+          "Pragya Sharma",
+          "Mani Srivastava"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12310",
+      "identity_tokens": [
+        "id:arXiv:2609.12310",
+        "title:ests at wmt26 routinginformed expert pruning for model compression",
+        "url:https://arxiv.org/abs/2609.12310"
+      ],
+      "record": {
+        "title": "ESTS at WMT26: Routing-Informed Expert Pruning for Model Compression",
+        "source_url": "https://arxiv.org/abs/2609.12310",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12310",
+        "arxiv_id": "2609.12310",
+        "authors": [
+          "Liu O. Martin",
+          "Lucas Bandarkar",
+          "Nanyun Peng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12550",
+      "identity_tokens": [
+        "id:arXiv:2609.12550",
+        "title:qualityconstrained routing over a fixed pool of quantized mixtureofexperts instances",
+        "url:https://arxiv.org/abs/2609.12550"
+      ],
+      "record": {
+        "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+        "source_url": "https://arxiv.org/abs/2609.12550",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12550",
+        "arxiv_id": "2609.12550",
+        "authors": [
+          "Zhenghong Huang",
+          "Hongfan Wu",
+          "Jiheng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12748",
+      "identity_tokens": [
+        "id:arXiv:2609.12748",
+        "title:the mechanics of a swarm a reproducible external reconstruction of an unintended agentcoordination episode on a thirdparty wiki",
+        "url:https://arxiv.org/abs/2609.12748"
+      ],
+      "record": {
+        "title": "The Mechanics of a Swarm: A Reproducible External Reconstruction of an Unintended Agent-Coordination Episode on a Third-Party Wiki",
+        "source_url": "https://arxiv.org/abs/2609.12748",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12748",
+        "arxiv_id": "2609.12748",
+        "authors": [
+          "Philipp Lütje"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13356",
+      "identity_tokens": [
+        "id:arXiv:2609.13356",
+        "title:zgcm1 a fully open and extremely efficient foundation model for math and agentic search",
+        "url:https://arxiv.org/abs/2609.13356"
+      ],
+      "record": {
+        "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+        "source_url": "https://arxiv.org/abs/2609.13356",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13356",
+        "arxiv_id": "2609.13356",
+        "authors": [
+          "Jiyan He",
+          "Guang Liang",
+          "Hao Liu",
+          "Haoxiang Guan",
+          "Jinbo Sun",
+          "Junyi Guo",
+          "Wenjun Feng",
+          "Yantai Xie",
+          "Yifei Shen",
+          "Bin Shao",
+          "Chuyang Wei",
+          "Kai Chen",
+          "Kexin Zhou",
+          "Minghang Zhu",
+          "Shuxin Zheng",
+          "Tie-Yan Liu",
+          "Taine Zhao",
+          "Wenhui Zhu",
+          "Xueyin Xu",
+          "Xiaoqing Zhang",
+          "Yatao Li",
+          "Yuxuan Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13585",
+      "identity_tokens": [
+        "id:arXiv:2609.13585",
+        "title:mkernel fast multigpu multinode fused kernels",
+        "url:https://arxiv.org/abs/2609.13585"
+      ],
+      "record": {
+        "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+        "source_url": "https://arxiv.org/abs/2609.13585",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13585",
+        "arxiv_id": "2609.13585",
+        "authors": [
+          "Ziming Mao",
+          "Yihan Zhang",
+          "Shawn Wei Chew",
+          "Shuang Ma",
+          "Costin Raiciu",
+          "Yang Zhou",
+          "Scott Shenker",
+          "Ion Stoica"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13395",
+      "identity_tokens": [
+        "id:arXiv:2609.13395",
+        "title:taskaware federated finetuning for moebased large language models",
+        "url:https://arxiv.org/abs/2609.13395"
+      ],
+      "record": {
+        "title": "Task-Aware Federated Fine-Tuning for MoE-based Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.13395",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13395",
+        "arxiv_id": "2609.13395",
+        "authors": [
+          "Tingqi Wang",
+          "Hongyu Ke",
+          "Haoxin Wang",
+          "Rafal Angryk",
+          "Zhipeng Cai"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:35c4ede5d20ba6101cf0d989815a6e7463f59a6f15c57748b67d664c94ecbcc5",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-ed1b7d45b79f4c3d",
+  "type": "research",
+  "parent_job_id": "job-b3660c25cd248e41",
+  "priority": 74,
+  "canonical_id": "arXiv:2406.06858",
+  "arxiv_id": "2406.06858",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion",
+  "source_url": "https://arxiv.org/abs/2406.06858",
+  "paper_path": "papers/inference/99-other-inference-systems/2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fusion.md",
+  "selection_reason": "構造化referencesで分散推論・MoE通信重畳系8件から参照される未収録候補。通信とGEMMを細粒度に分解・融合し、vLLM推論でprefill最大1.66倍、decode最大1.30倍を報告するためkernel/runtime通信最適化系統に有用。",
+  "priority_breakdown": {
+    "base": 50,
+    "lineage": 15,
+    "recency": 5,
+    "venue": 4,
+    "total": 74
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T22:54:10+00:00"
+}

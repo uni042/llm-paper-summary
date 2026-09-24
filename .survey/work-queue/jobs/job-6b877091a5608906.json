@@ -1,0 +1,23 @@
+{
+  "job_id": "job-6b877091a5608906",
+  "type": "discovery",
+  "lane": "discovery-ingest",
+  "priority": 50,
+  "status": "completed",
+  "ingest_only": true,
+  "ingest_for_submission": "work-queue/submissions/refcuration-stress-20260920-offset4000-3.json",
+  "submitted_job_id": null,
+  "instructions": "Internal Discovery ingest job. Apply the already durable candidate payload; do not perform new research or discovery in this job.",
+  "completion": "Apply the durable Discovery round payload.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-20T04:05:01+00:00",
+  "completed_at": "2026-09-20T04:05:12+00:00",
+  "result_summary": {
+    "submitted_candidates": 3,
+    "final_duplicate_filtered_count": 0,
+    "research_jobs_added": 3,
+    "precheck_request_id": "refcuration-stress-deep-20260920-offset4000",
+    "precheck_snapshot_source_commit": "ab882ac135124d5537a67168d9dcddde70f7c195"
+  }
+}

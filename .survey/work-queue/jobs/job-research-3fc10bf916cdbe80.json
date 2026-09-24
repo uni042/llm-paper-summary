@@ -1,0 +1,37 @@
+{
+  "job_id": "job-research-3fc10bf916cdbe80",
+  "type": "research",
+  "parent_job_id": "job-4ef274a8918622fd",
+  "priority": 94,
+  "canonical_id": "DOI:10.5281/zenodo.22339206",
+  "arxiv_id": null,
+  "doi": "10.5281/zenodo.22339206",
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)",
+  "source_url": "https://doi.org/10.5281/zenodo.22339206",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-f8b8eb9da2fe-a-survey-of-inference-processing-units-for-large-language-model-inference-chips-systems-algorithms-and-paradigms-2024202.md",
+  "selection_reason": "Recent survey spanning chips, systems and algorithms for LLM inference; useful cross-lineage survey coverage for hardware-aware inference.",
+  "status": "blocked",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T20:48:34+00:00",
+  "completed_at": "2026-09-23T12:14:58+00:00",
+  "blocker": "一次資料全文を取得できないため。Libraryに一致する一次PDFキャッシュがなく、DOIおよびZenodo recordへの直接到達に失敗し、論文タイトル・DOIによる代替一次資料検索でも同一論文の公式全文を確認できなかった。検索断片や別論文で補完せず再試行対象とする。",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-5511cbb4903900b0c855af47.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-23T12:14:58+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-23T12:14:58+00:00",
+      "reason": "一次資料全文を取得できないため。Libraryに一致する一次PDFキャッシュがなく、DOIおよびZenodo recordへの直接到達に失敗し、論文タイトル・DOIによる代替一次資料検索でも同一論文の公式全文を確認できなかった。検索断片や別論文で補完せず再試行対象とする。"
+    }
+  ],
+  "first_blocked_at": "2026-09-23T12:14:58+00:00",
+  "last_blocked_at": "2026-09-23T12:14:58+00:00",
+  "retry_not_before": "2026-09-30T14:28:13+00:00"
+}

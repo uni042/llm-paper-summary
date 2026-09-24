@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-7ecc4d7949c81534",
+  "type": "research",
+  "parent_job_id": "job-3e54b028d058ee2b",
+  "priority": 95,
+  "canonical_id": "arXiv:2609.26300",
+  "arxiv_id": "2609.26300",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference",
+  "source_url": "https://www.semanticscholar.org/paper/bfdfdb9a104b074b2a914d3a12d2471d0af1b3fb",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md",
+  "selection_reason": "CompKV directly optimizes sparse KV selection for long-context inference and provides an asynchronous implementation with up to 6.85x self-attention speedup, strongly matching KV-cache and serving-efficiency lineages.",
+  "priority_breakdown": {
+    "base": 55,
+    "lineage": 20,
+    "recency": 15,
+    "venue": 5,
+    "total": 95
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T16:18:15+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "job_id": "job-research-a725b9cf79d670cf",
+  "type": "research",
+  "parent_job_id": "job-09415fe947517f0c",
+  "priority": 90,
+  "canonical_id": "arXiv:2609.17573",
+  "title": "GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference",
+  "source_url": "https://arxiv.org/abs/2609.17573",
+  "paper_path": "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+  "selection_reason": "長文diffusion LLM推論で、group-level coarse-to-fine sparse KV selection、cross-layer consistencyを使うpredictive prefetch、staleness correction、streaming prefillを統合したsystem-level KV管理。GPUメモリ制約下で最大serviceable contextを48倍、offload長文設定のend-to-end性能を最大3.73倍に改善しており、既存のautoregressive KV offload系統とは異なる動的KV lifecycleを直接扱う強い未収録候補。",
+  "status": "completed",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-17T19:05:29+00:00",
+  "completed_at": "2026-09-17T21:03:44+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-c9e86b0774fbe3177b6fb0f5.json"
+}

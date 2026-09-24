@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-f437cb4dac9732a5ed37dd62-r4",
+  "kind": "research",
+  "attempt_id": "attempt-f437cb4dac9732a5ed37dd62",
+  "job_id": "job-research-791dd06c8f3ceecf",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.18643-zeda-post-trained-dynamic-expert-skipping.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:e6c2677e8450848f133708f4332940d99c5ba2fb3e6375f695dd5f61caf336fa",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "21a2d5608980e5a19d7edde217b125b12f4c5741"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "e5e6fe0148b78f90b6b5bcd313ba26bf2cb6b2f5"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "32018872c55525a7e7010f479048f1ad6e147f57"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "4e410887063e6f6a96204a702b9977880c6c22c7"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "ed15bce9991089951d1c53dc87045df3bd3fa78a"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#8 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T12:39:26+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.18643-zeda-post-trained-dynamic-expert-skipping.md",
+    "status": "FAIL",
+    "file_bytes": 23910,
+    "prose_chars": 6003,
+    "paragraphs": 28,
+    "method_paragraphs": 14,
+    "method_components": 8,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9523891966759003,
+    "japanese_chars": 5501,
+    "latin_chars": 275,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#8 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

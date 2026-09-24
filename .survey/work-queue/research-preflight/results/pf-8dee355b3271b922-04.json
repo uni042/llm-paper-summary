@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-8dee355b3271b922-04",
+  "kind": "research",
+  "attempt_id": "attempt-8dee355b3271b922b97af132",
+  "job_id": "job-research-6728332ce11cd1ed",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:8ec2b0149c7ead2139a24cc86c7a9b4c5718fb0b27408fa7f8f3702c584bc703",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "676a3241b54fdb9a288097b74526b0956de4e2e3"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "47375be6c0c06208e7e1de9b6e15994918361f17"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "9d97f05b7b4e21bb9c871cb805345dfce042ee5e"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "ee29d732211ec2478afa6beb620869d4a1d6305f"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "eab7d770b826d5cee9e213ae2a4f2bcc6be7f118"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2",
+    "手法構成要素#7 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T15:38:38+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
+    "status": "FAIL",
+    "file_bytes": 25604,
+    "prose_chars": 5365,
+    "paragraphs": 21,
+    "method_paragraphs": 9,
+    "method_components": 7,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7509272467902995,
+    "japanese_chars": 5264,
+    "latin_chars": 1746,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2",
+      "手法構成要素#7 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 75.1% < 警告基準 80.0%"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-8837b183815ff352f1066a0d",
+  "job_id": "job-research-00f6a78e028bd698",
+  "claim_id": "claim-8837b183815ff352f1066a0d",
+  "worker_id": "scheduled-chat-llm-survey",
+  "status": "blocked",
+  "reason": "Primary-source full text could not be safely retrieved in this attempt. Official arXiv metadata/abstract was retrievable, but direct official HTML and PDF retrieval both returned DisabledError. Search found third-party renderings and a ResearchGate entry explicitly reporting no file available; no author/project/conference official full-text copy was established. No five-slot record was inferred.",
+  "retrieval_evidence": [
+    "https://arxiv.org/abs/2606.27866 — official metadata/abstract available",
+    "https://arxiv.org/html/2606.27866 — runtime DisabledError",
+    "https://arxiv.org/pdf/2606.27866 — runtime DisabledError",
+    "ResearchGate entry reports no file available; other search results are third-party renderings"
+  ],
+  "blocked_at": "2026-09-20T13:47:00Z"
+}

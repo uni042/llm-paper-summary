@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T030900Z-scheduled-chat-llm-survey-11d",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-710ff1d6feeafd76",
+      "claim_id": "claim-85841135c44788f4cd9b5a81",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-85841135c44788f4cd9b5a81",
+      "claimed_at": "2026-09-20T03:06:34+00:00",
+      "expires_at": "2026-09-20T04:36:34+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-710ff1d6feeafd76"
+      ],
+      "job": {
+        "job_id": "job-research-710ff1d6feeafd76",
+        "type": "research",
+        "parent_job_id": "job-e252bd3e556866ff",
+        "priority": 93,
+        "canonical_id": "arXiv:2006.16668",
+        "arxiv_id": "2006.16668",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding",
+        "source_url": "https://arxiv.org/abs/2006.16668",
+        "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "selection_reason": "Foundational distributed MoE training system combining automatic sharding with conditional computation at very large scale.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:18:19+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[1].description is too short | problem_method.components[2].description is too short",
+        "validation_errors": [
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-20T03:06:08+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-aa5fee4140884cdeb790c49e"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-aa5fee4140884cdeb790c49e.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T03:06:34+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T195823Z-scheduled-chat-discovery-specialist",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-a725b9cf79d670cf",
+      "claim_id": "claim-3ade85df2d9f4d0195503a71",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-3ade85df2d9f4d0195503a71",
+      "claimed_at": "2026-09-17T19:59:06+00:00",
+      "expires_at": "2026-09-17T21:29:06+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-a725b9cf79d670cf"
+      ],
+      "job": {
+        "job_id": "job-research-a725b9cf79d670cf",
+        "type": "research",
+        "parent_job_id": "job-09415fe947517f0c",
+        "priority": 90,
+        "canonical_id": "arXiv:2609.17573",
+        "title": "GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.17573",
+        "paper_path": "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+        "selection_reason": "長文diffusion LLM推論で、group-level coarse-to-fine sparse KV selection、cross-layer consistencyを使うpredictive prefetch、staleness correction、streaming prefillを統合したsystem-level KV管理。GPUメモリ制約下で最大serviceable contextを48倍、offload長文設定のend-to-end性能を最大3.73倍に改善しており、既存のautoregressive KV offload系統とは異なる動的KV lifecycleを直接扱う強い未収録候補。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T19:05:29+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-17T19:59:06+00:00",
+  "checkpoint_released": 0
+}

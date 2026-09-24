@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-preload-bf0d9a75a0f968eb0a3957d7",
+  "job_id": "job-research-d7f908e39f78ffc5",
+  "data": {
+    "differences": [
+      {"name": "LangGraph/Strands/AutoGenとの差", "description": "agent APIのcomposabilityだけでなく、LLM inferenceをbinding compilerが認識するgraph primitiveへし、同じworkflowからstreaming、durable async、cross-invocation batchという異なるexecution strategyを生成する。"},
+      {"name": "Temporal/SWF系durable workflowとの差", "description": "durable execution単体ではなく、customer-facing token streamingとoffline batchも同じworkflow definitionから扱う。特に複数workflow invocationを跨いでinference requestをprovider batchへ集約する点が異なる。"},
+      {"name": "Apache Beam/Flinkとの差", "description": "define-once execute-anywhereの発想は近いが、一般data pipelineではなくagent programming layerにtyped DSLを置き、inferenceとtool callをsubstrate-aware operationとして扱う。binding間でlatency/failure semanticsが異なることも意図的に許容する。"},
+      {"name": "vLLM/Orca/Sarathi等との差", "description": "GPU利用やtoken schedulingより上位のworkflow orchestration layerを対象とし、provider inference serviceへの提出形態そのものをreal-time、async、batchで切り替える。低レベルserving engineとは補完関係にある。"}
+    ],
+    "limitations": [
+      {"name": "完全なsemantic portabilityではない", "description": "成功実行のoutput qualityは等価でも、latency、failure、wall-clock依存tool outputはbinding間で異なる。時間依存情報が分岐条件へ入るworkflowではbatch実行が別の経路を通り得る。"},
+      {"name": "restricted DSLが必要", "description": "arbitrary I/Oやruntime graph mutationを許すworkflowは同一意味でcompileできない。side effectをtoolへ隔離し、stream timingなどexecution context依存logicをportable graphの外へ出す設計制約がある。"},
+      {"name": "provider/domain依存", "description": "品質等価性はAmazon Bedrockとconversational shoppingを中心に検証され、別provider、別domain、response characteristicが大きく違うmodelでは再検証が必要。"},
+      {"name": "batchの長い完了時間", "description": "Flink pathはStreamの33〜152倍のend-to-end latencyで、低TTFTが必要なonline requestには不適切。cost優位はlatencyを許容できるoffline workloadに限定される。"}
+    ],
+    "implementation_status": "Rufusで2年以上運用した設計を基に、Java/GraalVM DSL、binding compiler、ECS/SWF/Flink/SQS/Bedrock Batchを組み合わせたproduction platformとして実装。数十のproduction agent configurationを三bindingで検証。公開source repositoryは一次資料で確認できない。",
+    "research_positioning": "本論文はLLM inference kernelではなくagentic inference orchestrationのproduction systems研究として位置づく。推論をopaque RPCとして隠さず、compilerがexecution modeを選べる一級nodeへ上げることで、同じagent logicを低遅延streaming、durable background、安価なbatchへ展開する。リポジトリではvLLM等のGPU-serving層より上位にあり、multi-agent serving、batch inference、workflow durability、evaluation infrastructureをつなぐ。特にoffline evaluationをproduction workflowそのものから生成し、batch pricingへ接続する設計は、agent systemの運用費削減とbehavior drift防止を同時に扱う点で有用である。",
+    "audit_notes": "arXiv:2609.06128 v1の本文をAbstractからConclusion・Referencesまで確認。品質等価性は『全bindingが同じ出力』ではなくBradley-Terryの95% CIが全条件で0を含むという統計的非検出である。Flinkの33〜152倍latencyとbatch pricing discountは両立するため、cost改善をlatency改善として記述しない。"
+  },
+  "reservation": {"claim_id": "claim-preload-bf0d9a75a0f968eb0a3957d7", "worker_id": "scheduled-chat-30", "worker_kind": "scheduled_chat"}
+}

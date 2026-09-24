@@ -1,0 +1,12 @@
+{
+  "schema_version":1,
+  "request_id":"rs-30-20260922T224800Z-c84e31-04",
+  "run_key":"run-30-20260922T222759Z-c84e31",
+  "worker_id":"scheduled-chat-30",
+  "scheduled_slot":"30",
+  "actual_invocation_start":"2026-09-22T22:27:59+00:00",
+  "runtime_condition":"platform_context_limit",
+  "runtime_condition_confirmed":true,
+  "runtime_condition_attempts":4,
+  "runtime_condition_detail":"failed_operation=Full primary-source read for active MeshKV attempt-82a9eef63b857ccffc7b3a86; last_successful_operation=arXiv PDF primary source opened and lines 0-490 were returned, but the platform then rejected further output with system_error Too many tokens / too many web calls before the end of the 5-page paper could be read; recovery_attempts=arXiv HTML five offsets all DisabledError, container PDF download failed, alternate mirror search, then direct arXiv PDF succeeded partially but subsequent web access was platform-rejected; observed_error=web.run system_error Too many tokens and explicit instruction not to call web.run again; GitHub transport remains healthy; next_operation=next run resume MeshKV before any new claim, read the remaining primary PDF through the end, then create five slots and preflight."
+}

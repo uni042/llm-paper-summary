@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260916T222500Z-discovery-specialist-0700-5",
+  "worker_id": "scheduled-chat-discovery-specialist-0700",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-af7d4aee1c99dd28",
+      "claim_id": "claim-4d1714b487473a1189509b96",
+      "worker_id": "scheduled-chat-discovery-specialist-0700",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-4d1714b487473a1189509b96",
+      "claimed_at": "2026-09-16T22:15:32+00:00",
+      "expires_at": "2026-09-16T23:45:32+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-af7d4aee1c99dd28"
+      ],
+      "job": {
+        "job_id": "job-research-af7d4aee1c99dd28",
+        "type": "research",
+        "parent_job_id": "job-5abe9b84bcfd8389",
+        "priority": 90,
+        "canonical_id": "arXiv:2601.11822",
+        "title": "RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation",
+        "source_url": "https://arxiv.org/abs/2601.11822",
+        "paper_path": "papers/inference/06-serving-scheduling/2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md",
+        "selection_reason": "同一GPU内でprefill/decodeを並行実行し、AMD CU maskingを含むadaptive resource managementでSLO制約下throughput平均4.9x・最大32x超を報告。cross-GPU PD disaggregationと異なる設計点を提供する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T21:07:57+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-16T22:13:24+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-fc4b8ea523432819ced2a1bb"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-fc4b8ea523432819ced2a1bb.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-16T22:15:32+00:00",
+  "checkpoint_released": 0
+}

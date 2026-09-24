@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-e5893e2a1bdb6a4c8b277786",
+  "job_id": "job-research-2a8c8a978e102c67",
+  "claim_id": "claim-e5893e2a1bdb6a4c8b277786",
+  "worker_id": "scheduled-chat-llm-survey",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md",
+  "status": "blocked",
+  "reason": "一次資料全文取得に使用するウェブ取得系が、このinvocation中に明示的な呼び出し上限へ到達した。前件EFIMのarXiv PDF全文取得完了後、システムから『Too many calls / do not call this tool again』を受領しており、本論文について抄録や検索断片だけから科学的内容を補完しないためblockedとする。",
+  "retrieval_evidence": [
+    "primary source URL: https://arxiv.org/abs/2511.01633",
+    "web retrieval platform explicitly reported the maximum call limit reached in this invocation",
+    "no full-text content for arXiv:2511.01633 was read before the platform limit; no five-slot record was generated"
+  ]
+}

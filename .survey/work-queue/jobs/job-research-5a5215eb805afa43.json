@@ -1,0 +1,33 @@
+{
+  "job_id": "job-research-5a5215eb805afa43",
+  "type": "research",
+  "parent_job_id": "job-eec5ff8f364687d4",
+  "priority": 87,
+  "canonical_id": "arXiv:2409.00918",
+  "title": "LuWu: An End-to-End In-Network Out-of-Core Optimizer for 100B-Scale Model-in-Network Data-Parallel Training on Distributed GPUs",
+  "source_url": "https://arxiv.org/abs/2409.00918",
+  "paper_path": "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md",
+  "selection_reason": "Moves optimizer state/parameters and collective communication off GPU workers into an in-network optimizer design, directly addressing out-of-core training, communication, and CPU optimizer bottlenecks.",
+  "status": "completed",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-17T06:03:34+00:00",
+  "blocker": "Full primary-source reading could not be completed in this run. The official arXiv HTML for arXiv:2409.00918 was opened and read from the abstract through the background and the first part of the DisDP design, including the SmartNIC/SmartSwitch/parameter-server architecture and beginning of the SmartNIC collective implementation. The remaining design, evaluation, related-work, conclusion, and references were not retrievable because the web retrieval facility reached its actual per-run call ceiling. A materially distinct direct arXiv network retrieval through the execution container was also attempted, but the environment returned a DNS/network resolution failure. No five-slot record was generated from the partial manuscript; retry the full official primary source in a later run.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-b8e3a9c0664d271ad698f2d3.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-17T07:44:31+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-17T07:44:31+00:00",
+      "reason": "Full primary-source reading could not be completed in this run. The official arXiv HTML for arXiv:2409.00918 was opened and read from the abstract through the background and the first part of the DisDP design, including the SmartNIC/SmartSwitch/parameter-server architecture and beginning of the SmartNIC collective implementation. The remaining design, evaluation, related-work, conclusion, and references were not retrievable because the web retrieval facility reached its actual per-run call ceiling. A materially distinct direct arXiv network retrieval through the execution container was also attempted, but the environment returned a DNS/network resolution failure. No five-slot record was generated from the partial manuscript; retry the full official primary source in a later run."
+    }
+  ],
+  "last_blocked_at": "2026-09-17T07:44:31+00:00",
+  "retry_queued_at": "2026-09-17T12:03:58+00:00",
+  "completed_at": "2026-09-17T14:39:36+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-ad568a9def7133e0a5107c75-repair.json"
+}

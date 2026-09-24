@@ -1,0 +1,10 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2309.06180/citations?fields=title,abstract,year,externalIds,url&limit=100&offset=0",
+  "collector_id": "scheduled-worker30-forward-vllm",
+  "run_key": "2026-09-21T05:32:01+09:00",
+  "axis": "forward citations of vLLM PagedAttention",
+  "target_unseen": 20
+}

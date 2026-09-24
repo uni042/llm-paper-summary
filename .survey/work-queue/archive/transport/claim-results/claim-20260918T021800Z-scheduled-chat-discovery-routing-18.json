@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T021800Z-scheduled-chat-discovery-routing-18",
+  "worker_id": "scheduled-chat-discovery-routing",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-e6a248e5246d3a4e",
+      "claim_id": "claim-b0e2c7ec2fd69933c27ee41a",
+      "worker_id": "scheduled-chat-discovery-routing",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-b0e2c7ec2fd69933c27ee41a",
+      "claimed_at": "2026-09-18T02:12:59+00:00",
+      "expires_at": "2026-09-18T03:42:59+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-e6a248e5246d3a4e"
+      ],
+      "job": {
+        "job_id": "job-research-e6a248e5246d3a4e",
+        "type": "research",
+        "parent_job_id": "job-303e9d043b4472ca",
+        "priority": 86,
+        "canonical_id": "arXiv:2608.22613",
+        "title": "NOVA: Technology-Architecture Co-Design of Near-Memory Processing for Attention-SSM-MoE Hybrid LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.22613",
+        "paper_path": "papers/inference/05-pim-near-memory/2026-2608.22613-nova-near-memory-processing-hybrid-llm-inference.md",
+        "selection_reason": "GQA/SSM/MoE混成LLMの異なる演算強度に対し、peri-dieとbase-dieの2-tier near-memory processingを割り当てるtechnology-architecture co-design。Qwen3等で平均throughput 4.5倍、end-to-end latency 69.8%削減、energy efficiency 5倍を報告し、MoEと階層near-memory executionを横断する比較価値が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T16:06:11+00:00",
+        "blocker": "一次資料全文の再取得を実施した。検索サービス経由ではarXiv公式abstractのメタデータと抄録は取得できたが、arXiv公式abstract https://arxiv.org/abs/2608.22613、公式PDF https://arxiv.org/pdf/2608.22613、公式HTML https://arxiv.org/html/2608.22613 を直接取得するといずれもDisabledErrorとなった。検索結果には二次資料の長文解説も存在したが、一次資料全文ではないため科学的内容の補完には使用していない。前回とは別runで公式abstract/PDF/HTMLを再試行して同じ実行環境制限を確認したため、このattemptは一時的取得障害としてblockedで耐久保存し、5-slotは生成しない。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-49730322c2e1a64c60b740a8.json",
+        "blocked_attempts": 2,
+        "last_recorded_blocked_event": "2026-09-18T00:29:37+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-17T21:08:15+00:00",
+            "reason": "一次資料全文を安全に取得できなかった。arXiv公式PDF https://arxiv.org/pdf/2608.22613 は取得時にDisabledError、arXiv公式abstract https://arxiv.org/abs/2608.22613 もDisabledErrorとなった。別経路として export.arxiv.org/pdf/2608.22613 と ar5iv.labs.arxiv.org/html/2608.22613 も試したが実行環境からアクセス不能だった。検索結果では抄録と二次資料本文は得られたが、workflow-v10は抄録・二次資料から未確認の科学的内容を補完することを禁止しているため5-slotは生成していない。一時的取得障害として再試行対象にする。"
+          },
+          {
+            "attempt": 2,
+            "blocked_at": "2026-09-18T00:29:37+00:00",
+            "reason": "一次資料全文の再取得を実施した。検索サービス経由ではarXiv公式abstractのメタデータと抄録は取得できたが、arXiv公式abstract https://arxiv.org/abs/2608.22613、公式PDF https://arxiv.org/pdf/2608.22613、公式HTML https://arxiv.org/html/2608.22613 を直接取得するといずれもDisabledErrorとなった。検索結果には二次資料の長文解説も存在したが、一次資料全文ではないため科学的内容の補完には使用していない。前回とは別runで公式abstract/PDF/HTMLを再試行して同じ実行環境制限を確認したため、このattemptは一時的取得障害としてblockedで耐久保存し、5-slotは生成しない。"
+          }
+        ],
+        "last_blocked_at": "2026-09-18T00:29:37+00:00",
+        "retry_queued_at": "2026-09-18T02:06:27+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T02:12:59+00:00",
+  "checkpoint_released": 0
+}

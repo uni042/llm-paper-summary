@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-f8a196fb851ca2c1095b5a40-01",
+  "kind": "research",
+  "attempt_id": "attempt-f8a196fb851ca2c1095b5a40",
+  "job_id": "job-research-6ca9e5aa49540dd5",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:89332183abd799609ab26273e83f8ae8d9e5ab345f9b1a9c67d51354f951192c",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-c/metadata.json",
+      "blob_sha": "dc07d79b9801009c7afafb47387bcb300ca2cf15"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-c/problem_method.json",
+      "blob_sha": "5dcf77921396c6f3fc4b0dbdd8cbc24556ec44ed"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-c/evaluation.json",
+      "blob_sha": "dc06bb21ec7675565f371e6d55e5b0d6f6a86f59"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-c/results.json",
+      "blob_sha": "4d3df55e3f064b0f7f0315d77fb8a5c898f12827"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-c/positioning.json",
+      "blob_sha": "9d165d10edc1694678a188a606739dbe1fc18ee8"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T08:02:41+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md",
+    "status": "FAIL",
+    "file_bytes": 22055,
+    "prose_chars": 5329,
+    "paragraphs": 19,
+    "method_paragraphs": 5,
+    "method_components": 5,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9587900933820545,
+    "japanese_chars": 4723,
+    "latin_chars": 203,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

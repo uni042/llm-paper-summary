@@ -1,0 +1,1849 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "refcuration-stress-probe-20260920T0346JST-offset100",
+  "collector_id": "repository-reference-curation-stress-probe",
+  "run_key": "manual-stress-2026-09-20T0346JST",
+  "axis": "structured references stress probe at raw offset 100",
+  "provider": "repository_references",
+  "source_url": "repository://structured-references",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "200",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8e77ec7f79f8b2bff9e01a64350e1d63c97c7ca4",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 4,
+  "intra_batch_alias_duplicate_filtered_count": 4,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "results": [
+    {
+      "canonical_id": "arXiv:2410.01035",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.01035",
+        "arXiv:2410.01035"
+      ],
+      "arxiv_id": "2410.01035",
+      "source_url": "https://arxiv.org/abs/2410.01035",
+      "doi": "10.48550/arxiv.2410.01035",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md",
+        "papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.02329-taming-request-imbalance-slo-aware-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16637-hexagent-workflow-heterogeneity-aware-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18431-tail-aware-prediction-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03948-online-linear-programming-multi-objective-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md"
+      ],
+      "linked_from_titles": [
+        "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+        "Beyond Prediction: Tail-Aware Scheduling for LLM Inference",
+        "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
+        "Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice",
+        "HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling",
+        "Online Linear Programming for Multi-Objective Routing in LLM Serving",
+        "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+        "Scorpio: Serving Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference",
+        "Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale",
+        "Taming Request Imbalance: SLO-Aware Scheduling for Disaggregated LLM Inference"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM Serving / Scheduling / KV-Constrained Scheduling",
+        "LLMサービング／スケジューリング／分離",
+        "SLO-aware LLM serving scheduling",
+        "llm-serving-scheduling-disaggregation",
+        "moe-offload-routing",
+        "エージェント型LLMサービング／プリフィル・デコード分離／異種GPUスケジューリング"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2508.14544",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.14544",
+        "arXiv:2508.14544"
+      ],
+      "arxiv_id": "2508.14544",
+      "source_url": "https://arxiv.org/abs/2508.14544",
+      "doi": "10.48550/arxiv.2508.14544",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.11320-fluid-guided-online-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02987-prefill-decode-contention-optimal-control.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11001-flow-controlled-scheduling-stability.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15555-service-induced-congestion-memory-constrained-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md"
+      ],
+      "linked_from_titles": [
+        "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+        "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+        "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
+        "Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees",
+        "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing",
+        "Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice",
+        "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
+        "Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints",
+        "Service-Induced Congestion in Memory-Constrained LLM Serving",
+        "Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale"
+      ],
+      "linked_from_lineages": [
+        "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+        "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching",
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM Serving / Scheduling / KV-Constrained Scheduling",
+        "LLM配信／KVキャッシュ制約／連続バッチ処理／待ち行列・力学系",
+        "llm-serving-scheduling-disaggregation",
+        "serving-scheduling"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2310.06770",
+      "identity_tokens": [
+        "arXiv:2310.06770"
+      ],
+      "arxiv_id": "2310.06770",
+      "source_url": "https://arxiv.org/abs/2310.06770",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01839-conserve-conversation-level-agentic-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
+        "papers/inference/99-other-inference-systems/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md",
+        "papers/inference/99-other-inference-systems/2026-2608.00101-agentic-coding-production-scale-characterization.md",
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "linked_from_titles": [
+        "AgentCgroup: Understanding and Controlling OS Resources of AI Agents",
+        "Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale",
+        "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+        "Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
+        "From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems",
+        "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
+        "Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving",
+        "Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs",
+        "Unlocking Lossless Speedups in LLMs via Discrete Diffusion",
+        "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLMサービング・スケジューリング・KVキャッシュ保持",
+        "Other Inference Systems / Lossless Parallel Decoding",
+        "agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation",
+        "llm-serving-scheduling-disaggregation",
+        "other"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2502.16002",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2502.16002",
+        "arXiv:2502.16002"
+      ],
+      "arxiv_id": "2502.16002",
+      "source_url": "https://arxiv.org/abs/2502.16002",
+      "doi": "10.48550/arxiv.2502.16002",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/05-kv-cache-memory-management/2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.01751-sparsex-segment-level-kv-sharing.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md",
+        "papers/inference/kv-cache/2608.19662.md"
+      ],
+      "linked_from_titles": [
+        "Adaptive KV Cache Reuse for Fast Long-Context LLM Serving",
+        "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
+        "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+        "LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents",
+        "LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs",
+        "MEPIC: Memory Efficient Position Independent Caching for LLM Serving",
+        "Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving",
+        "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+        "SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving",
+        "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing"
+      ],
+      "linked_from_lineages": [
+        "KVキャッシュ再利用 / エージェント型LLM / ツール呼出し / KV圧縮 / 構造的枝刈り",
+        "kv-cache-offload-recomputation",
+        "multi-LoRA serving / multi-agent KV cache sharing / low-rank cache representation",
+        "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング",
+        "マルチエージェントKVキャッシュ共有／位置非依存キャッシュ／KVキャッシュ圧縮",
+        "位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ"
+      ]
+    },
+    {
+      "canonical_id": "OpenReview:RkRrPp7GKO",
+      "identity_tokens": [
+        "OpenReview:RkRrPp7GKO"
+      ],
+      "openreview_id": "RkRrPp7GKO",
+      "source_url": "https://openreview.net/forum?id=RkRrPp7GKO",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/04-cpu-ssd-offload/2026-2609.16161-llm-inference-in-a-flash.md",
+        "papers/inference/05-kv-cache-memory-management/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+        "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2602.06072-packinfer-batched-attention.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.01708-splitzip-lossless-kv-compression.md"
+      ],
+      "linked_from_titles": [
+        "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+        "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+        "C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference",
+        "GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference",
+        "LLM Inference in a Flash!",
+        "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+        "PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference",
+        "SGD-KV: Summarization Guided KV Cache Compression",
+        "SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving",
+        "Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "KV Cache Optimization / Compression",
+        "KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論",
+        "attention kernel / heterogeneous batched inference / KV-cache layout",
+        "flash compute-in-memory / KV-cache compression / integer-only inference",
+        "kv-cache-offload-recomputation",
+        "kv-cache-optimization-compression"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2109.10465",
+      "identity_tokens": [
+        "arXiv:2109.10465"
+      ],
+      "arxiv_id": "2109.10465",
+      "source_url": "https://arxiv.org/abs/2109.10465",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md",
+        "papers/inference/06-moe-inference-expert-offloading/2026-2607.05116-communication-aware-placement-pruning-moe.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md",
+        "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md",
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+        "papers/inference/06-moe-quantization-compression/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md",
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md"
+      ],
+      "linked_from_titles": [
+        "Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference",
+        "EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models",
+        "MC#: Mixture Compressor for Mixture-of-Experts Large Models",
+        "Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy",
+        "Mixture Compressor for Mixture-of-Experts LLMs Gains More",
+        "Mixture of Experts with Mixture of Precisions for Tuning Quality of Service",
+        "Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness",
+        "MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing",
+        "Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models",
+        "SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget"
+      ],
+      "linked_from_lineages": [
+        "Adaptive Expert Computation / Compression",
+        "Edge／on-device MoE",
+        "MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散",
+        "Quantization × MoE × Offload",
+        "moe-inference-expert-offloading"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2311.04934",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.04934",
+        "arXiv:2311.04934"
+      ],
+      "arxiv_id": "2311.04934",
+      "source_url": "https://arxiv.org/abs/2311.04934",
+      "doi": "10.48550/arxiv.2311.04934",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md",
+        "papers/inference/99-other-inference-systems/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md"
+      ],
+      "linked_from_titles": [
+        "Adaptive Context Parallelism for Production LLM Serving",
+        "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving",
+        "Efficient Remote KV Cache Reuse with GPU-native Video Codec",
+        "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+        "KernelSight-LM: A Kernel-Level LLM Inference Simulator",
+        "Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot",
+        "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
+        "PrefixWall: Mitigating Prefix Caching Side Channels in Shared LLM Systems",
+        "SGLang: Efficient Execution of Structured Language Model Programs",
+        "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLMサービング・接頭辞キャッシュ・マルチテナント隔離",
+        "Prefill/Decode Disaggregation / Production LLM Serving",
+        "llm-serving-scheduling-disaggregation",
+        "other-inference-systems"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2410.14257",
+      "identity_tokens": [
+        "arXiv:2410.14257"
+      ],
+      "arxiv_id": "2410.14257",
+      "source_url": "https://arxiv.org/abs/2410.14257",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/03-offload-hierarchical-memory/2025-2504.11816-infersave-vm-selection-kv-offloading.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.10812-exaserve-large-scale-llm-serving-exascale-hpc-systems.md",
+        "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md",
+        "papers/inference/99-other-inference-systems/2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md",
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md",
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "linked_from_titles": [
+        "AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving",
+        "Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading",
+        "ExaServe: Large-Scale LLM Serving on Exascale HPC Systems",
+        "JITServe: SLO-aware LLM Serving with Imprecise Request Information",
+        "Multi-stage Flow Scheduling for LLM Serving",
+        "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+        "PLA-Serve: A Prefill-Length-Aware LLM Serving System",
+        "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving",
+        "TCM-Serve: Modality-aware Scheduling for Multimodal Large Language Model Inference",
+        "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+      ],
+      "linked_from_lineages": [
+        "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+        "System-aware KV cache",
+        "llm-serving-scheduling-disaggregation",
+        "offload-hierarchical-memory",
+        "serving-scheduling"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2503.19786",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.19786",
+        "arXiv:2503.19786"
+      ],
+      "arxiv_id": "2503.19786",
+      "source_url": "https://arxiv.org/abs/2503.19786",
+      "doi": "10.48550/arxiv.2503.19786",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.06664-foundry-cuda-graph-context-materialization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.04357-coral-multi-llm-heterogeneous-cloud-gpus.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.14237-opweave-flexible-operator-disaggregation.md",
+        "papers/inference/99-other-inference-systems/2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md",
+        "papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md"
+      ],
+      "linked_from_titles": [
+        "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+        "Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs",
+        "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+        "Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start",
+        "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
+        "Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU",
+        "OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving",
+        "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+        "TCM-Serve: Modality-aware Scheduling for Multimodal Large Language Model Inference",
+        "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression"
+      ],
+      "linked_from_lineages": [
+        "KV Cache Optimization / Compression",
+        "Prefill/Decode Disaggregation / Selective KV Transfer",
+        "llama.cpp・WebGPU・ブラウザ内オンデバイス推論・量子化カーネル",
+        "llm-serving-scheduling-disaggregation",
+        "on-device LLM serving / TEE / TrustZone / mobile NPU isolation"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1109/hpca61900.2025.00102",
+      "identity_tokens": [
+        "DOI:10.1109/hpca61900.2025.00102"
+      ],
+      "doi": "10.1109/hpca61900.2025.00102",
+      "source_url": "https://doi.org/10.1109/hpca61900.2025.00102",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.22880-loraserve-heterogeneous-adapter-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.12241-rapid-power-aware-dynamic-reallocation.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01839-conserve-conversation-level-agentic-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments",
+        "Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving",
+        "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+        "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing",
+        "Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention",
+        "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
+        "Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism",
+        "Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving",
+        "Power Aware Dynamic Reallocation For Inference",
+        "Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems"
+      ],
+      "linked_from_lineages": [
+        "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+        "LLM Serving / Scheduling / Disaggregation",
+        "llm-serving-scheduling-disaggregation",
+        "many-adapter LLM serving / LoRA serving / inference scheduling",
+        "先行するNPUの単一計算領域DVFSを、部品単位の空間的DVFSへ拡張。ReGateなどの電力遮断とは補完関係。"
+      ]
+    },
+    {
+      "canonical_id": "DOI:10.1145/3731569.3764815",
+      "identity_tokens": [
+        "DOI:10.1145/3731569.3764815"
+      ],
+      "doi": "10.1145/3731569.3764815",
+      "source_url": "https://doi.org/10.1145/3731569.3764815",
+      "relation_count": 10,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+        "papers/inference/01-offload-hierarchical-memory/2026-2608.13127-hbf-llm-serving.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md",
+        "papers/inference/06-serving-scheduling/2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md",
+        "papers/inference/99-other-inference-systems/2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md"
+      ],
+      "linked_from_titles": [
+        "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving",
+        "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+        "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+        "LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure",
+        "Potential Applications of HBF in LLM Serving Systems",
+        "Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving",
+        "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling",
+        "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+        "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
+        "Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Speculative Decoding / Multi-tenant Resource Reuse",
+        "LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design",
+        "Offload / Hierarchical Memory",
+        "agentic workflow serving / multi-LLM serving / GPU allocation / fractional placement",
+        "llm-serving-scheduling-disaggregation"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2401.02385",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.02385",
+        "arXiv:2401.02385"
+      ],
+      "arxiv_id": "2401.02385",
+      "source_url": "https://arxiv.org/abs/2401.02385",
+      "doi": "10.48550/arxiv.2401.02385",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+        "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/08-speculative-decoding/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+        "papers/inference/moe/2609.14643.md",
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "linked_from_titles": [
+        "BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices",
+        "Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference",
+        "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+        "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference",
+        "MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts",
+        "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+        "OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference",
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+        "SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs"
+      ],
+      "linked_from_lineages": [
+        "Adaptive computation／cache-aware MoE",
+        "Expert Prefetch",
+        "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+        "Speculative Decoding",
+        "offload-hierarchical-memory",
+        "speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling",
+        "speculative decoding / heterogeneous CPU-GPU inference / consumer hardware",
+        "モバイルMoE推論・エキスパートオフロード・投機的復号・フラッシュ配置・NPUスケジューリング",
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2309.08168",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.08168",
+        "arXiv:2309.08168"
+      ],
+      "arxiv_id": "2309.08168",
+      "source_url": "https://arxiv.org/abs/2309.08168",
+      "doi": "10.48550/arxiv.2309.08168",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2026-2609.09662-pelm-speculative-decoding-dvfs.md"
+      ],
+      "linked_from_titles": [
+        "Decoding Speculative Decoding",
+        "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+        "MagicPIG: LSH Sampling for Efficient LLM Generation",
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+        "PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling",
+        "Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency",
+        "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+        "SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference",
+        "SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs"
+      ],
+      "linked_from_lineages": [
+        "Conditional Computation",
+        "Speculative Decoding",
+        "Speculative decoding × MoE",
+        "kv-cache-optimization-compression",
+        "other-inference-systems",
+        "speculative decoding / draft-model design",
+        "speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling",
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.04532",
+      "identity_tokens": [
+        "arXiv:2405.04532"
+      ],
+      "arxiv_id": "2405.04532",
+      "source_url": "https://arxiv.org/abs/2405.04532",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/05-pim-near-memory/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md",
+        "papers/inference/06-kv-cache-memory/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.20868-runtime-certified-bounded-error-quantized-attention.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md",
+        "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md",
+        "papers/inference/99-other-inference-systems/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md"
+      ],
+      "linked_from_titles": [
+        "D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving",
+        "FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving",
+        "MagicPIG: LSH Sampling for Efficient LLM Generation",
+        "MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing",
+        "MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design",
+        "Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization",
+        "Runtime-Certified Bounded-Error Quantized Attention",
+        "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration",
+        "Vortex: Bridging Extreme Compression and Efficient LLM Inference"
+      ],
+      "linked_from_lineages": [
+        "Edge／on-device MoE",
+        "Quantization × MoE × Offload",
+        "kv-cache-memory",
+        "kv-cache-offload-recomputation",
+        "kv-cache-optimization-compression",
+        "llm-serving-scheduling-disaggregation",
+        "offload-hierarchical-memory",
+        "近メモリ処理 / HBMベースダイ / 重みのみ量子化 / 逆量子化 / LLM推論アクセラレーション"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2503.16525",
+      "identity_tokens": [
+        "arXiv:2503.16525"
+      ],
+      "arxiv_id": "2503.16525",
+      "source_url": "https://arxiv.org/abs/2503.16525",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/05-kv-cache-memory-management/2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md",
+        "papers/inference/05-kv-cache-memory-management/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+        "papers/inference/06-kv-cache-memory/2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.01751-sparsex-segment-level-kv-sharing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.07447-dbms-inspired-cache-replacement-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.08075-dual-pool-token-budget-routing.md",
+        "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md"
+      ],
+      "linked_from_titles": [
+        "Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits",
+        "C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference",
+        "Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving",
+        "Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?",
+        "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
+        "MEPIC: Memory Efficient Position Independent Caching for LLM Serving",
+        "Saving GPU Hours in LLM Inference System Development and Online Workloads with Simulation and DBMS-Inspired Cache Replacement Policies",
+        "SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching",
+        "SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "KV Cache Offload / Recomputation",
+        "KVキャッシュ再利用・選択的再計算・RAGキャッシュ編集",
+        "KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論",
+        "kv-cache-offload-recomputation",
+        "llm-serving-scheduling-disaggregation",
+        "other-inference-systems",
+        "位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ",
+        "大規模言語モデル配信ルーティング／KVキャッシュ容量計画／異種ワークロードスケジューリング"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2508.06471",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.06471",
+        "arXiv:2508.06471"
+      ],
+      "arxiv_id": "2508.06471",
+      "source_url": "https://arxiv.org/abs/2508.06471",
+      "doi": "10.48550/arxiv.2508.06471",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+        "papers/inference/02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md",
+        "papers/inference/02-moe-offload/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md",
+        "papers/inference/03-expert-prefetch/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md",
+        "papers/inference/05-moe-expert-offload/2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md",
+        "papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00368-tent-declarative-slice-spraying-data-movement.md",
+        "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
+      ],
+      "linked_from_titles": [
+        "ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving",
+        "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+        "GrowMTP: Can RL Grow Its Own Draft Head?",
+        "SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC",
+        "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+        "Speculative Decoding: Performance or Illusion?",
+        "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving",
+        "TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading",
+        "Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents"
+      ],
+      "linked_from_lineages": [
+        "Expert Prefetch",
+        "LLMサービング／スケジューリング／分離実行",
+        "MoE推論／SSDオフロード／階層メモリ／エキスパートキャッシュ／CPU-GPU協調",
+        "MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード",
+        "Offload / Hierarchical Memory",
+        "kv-cache-optimization-compression",
+        "speculative-decoding",
+        "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2310.07177",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.07177",
+        "arXiv:2310.07177"
+      ],
+      "arxiv_id": "2310.07177",
+      "source_url": "https://arxiv.org/abs/2310.07177",
+      "doi": "10.48550/arxiv.2310.07177",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md",
+        "papers/inference/05-speculative-decoding/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+        "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.21072-bloombee-internet-scale-distributed-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
+      ],
+      "linked_from_titles": [
+        "Decoding Speculative Decoding",
+        "Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization",
+        "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+        "GrowMTP: Can RL Grow Its Own Draft Head?",
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+        "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+        "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
+        "Speculative Decoding: Performance or Illusion?",
+        "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System"
+      ],
+      "linked_from_lineages": [
+        "Speculative Decoding",
+        "distributed LLM inference / communication-aware serving",
+        "llm-serving-scheduling-disaggregation",
+        "speculative decoding / draft-model design",
+        "speculative-decoding",
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+        "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2401.07851",
+      "identity_tokens": [
+        "arXiv:2401.07851"
+      ],
+      "arxiv_id": "2401.07851",
+      "source_url": "https://arxiv.org/abs/2401.07851",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+        "papers/inference/05-speculative-decoding/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+        "papers/inference/06-speculative-decoding/2026-2604.20503-faser-fine-grained-phase-management.md",
+        "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm.md",
+        "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2504.06419-spire-throughput-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md",
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "linked_from_titles": [
+        "Collaborative Speculative Inference for Efficient LLM Inference Serving",
+        "FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving",
+        "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+        "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+        "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
+        "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+        "SPIRe: Boosting LLM Inference Throughput with Speculative Decoding",
+        "The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?",
+        "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System"
+      ],
+      "linked_from_lineages": [
+        "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+        "Speculative Decoding / Draft Model Architecture",
+        "kv-cache-memory-management",
+        "speculative decoding / multi-drafter serving / heterogeneous multi-node inference / pipeline scheduling",
+        "speculative-decoding",
+        "投機的デコード／動的LLMサービング／GPU空間多重化",
+        "推論基盤比較・Pareto最適化・量子化・KV cache・speculative decoding・batching"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2403.07974",
+      "identity_tokens": [
+        "arXiv:2403.07974"
+      ],
+      "arxiv_id": "2403.07974",
+      "source_url": "https://arxiv.org/abs/2403.07974",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.05228-ace.md",
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/04-moe-parallelism-communication/2026-2607.08782-director-online-proactive-expert-placement.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/06-speculative-decoding/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12151-oserve-spatial-temporal-workload-orchestration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
+        "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md"
+      ],
+      "linked_from_titles": [
+        "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
+        "DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference",
+        "Director: Accelerating Distributed MoE Serving via Online Proactive Expert Placement",
+        "Dynamic Early Exit in Reasoning Models",
+        "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
+        "OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration",
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+        "SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding",
+        "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime"
+      ],
+      "linked_from_lineages": [
+        "Conditional Computation",
+        "agentic workflow serving / workflow physical planning / adaptive serving",
+        "llm-serving-scheduling-disaggregation",
+        "moe-parallelism-communication",
+        "speculative decoding / parallel drafting / diffusion-inspired language modeling",
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+        "投機的復号 / LLMサービング・ベンチマーク"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.01814",
+      "identity_tokens": [
+        "arXiv:2405.01814"
+      ],
+      "arxiv_id": "2405.01814",
+      "source_url": "https://arxiv.org/abs/2405.01814",
+      "relation_count": 9,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.13111-iserve-intent-based-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15473-q-first-disaggregated-decoding.md"
+      ],
+      "linked_from_titles": [
+        "ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling",
+        "Language Models Can Control Their Own Attention",
+        "MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism",
+        "NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference",
+        "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+        "PrefixWall: Mitigating Prefix Caching Side Channels in Shared LLM Systems",
+        "Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding",
+        "STAR: Decode-Phase Rescheduling for LLM Inference",
+        "iServe: An Intent-based Serving System for LLMs"
+      ],
+      "linked_from_lineages": [
+        "Adaptive computation／cache-aware MoE",
+        "LLMサービング・接頭辞キャッシュ・マルチテナント隔離",
+        "LLMサービング／配備構成探索／自動並列化・圧縮選択／負荷対応配置",
+        "Offload / Hierarchical Memory",
+        "kv-cache-optimization-compression",
+        "llm-serving-scheduling-disaggregation",
+        "分離型LLMサービング／モデル・注意機構分離／KVキャッシュ分散"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2410.01035",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.01035",
+        "id:arXiv:2410.01035",
+        "url:https://arxiv.org/abs/2410.01035"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2410.01035",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2410.01035",
+          "arXiv:2410.01035"
+        ],
+        "arxiv_id": "2410.01035",
+        "source_url": "https://arxiv.org/abs/2410.01035",
+        "doi": "10.48550/arxiv.2410.01035",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/04-moe-offload-routing/2026-2605.21427-pals-power-aware-moe-serving.md",
+          "papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.02329-taming-request-imbalance-slo-aware-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16637-hexagent-workflow-heterogeneity-aware-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18431-tail-aware-prediction-free-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03948-online-linear-programming-multi-objective-routing.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md"
+        ],
+        "linked_from_titles": [
+          "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+          "Beyond Prediction: Tail-Aware Scheduling for LLM Inference",
+          "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
+          "Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice",
+          "HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling",
+          "Online Linear Programming for Multi-Objective Routing in LLM Serving",
+          "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models",
+          "Scorpio: Serving Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference",
+          "Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale",
+          "Taming Request Imbalance: SLO-Aware Scheduling for Disaggregated LLM Inference"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Scheduling / Disaggregation",
+          "LLM Serving / Scheduling / KV-Constrained Scheduling",
+          "LLMサービング／スケジューリング／分離",
+          "SLO-aware LLM serving scheduling",
+          "llm-serving-scheduling-disaggregation",
+          "moe-offload-routing",
+          "エージェント型LLMサービング／プリフィル・デコード分離／異種GPUスケジューリング"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.14544",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.14544",
+        "id:arXiv:2508.14544",
+        "url:https://arxiv.org/abs/2508.14544"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2508.14544",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2508.14544",
+          "arXiv:2508.14544"
+        ],
+        "arxiv_id": "2508.14544",
+        "source_url": "https://arxiv.org/abs/2508.14544",
+        "doi": "10.48550/arxiv.2508.14544",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/06-serving-scheduling/2026-2605.06113-balanceroute-data-parallel-online-routing.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.11320-fluid-guided-online-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02987-prefill-decode-contention-optimal-control.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11001-flow-controlled-scheduling-stability.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15555-service-induced-congestion-memory-constrained-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md"
+        ],
+        "linked_from_titles": [
+          "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+          "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+          "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
+          "Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees",
+          "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing",
+          "Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice",
+          "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
+          "Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints",
+          "Service-Induced Congestion in Memory-Constrained LLM Serving",
+          "Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale"
+        ],
+        "linked_from_lineages": [
+          "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+          "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching",
+          "LLM Serving / Scheduling / Disaggregation",
+          "LLM Serving / Scheduling / KV-Constrained Scheduling",
+          "LLM配信／KVキャッシュ制約／連続バッチ処理／待ち行列・力学系",
+          "llm-serving-scheduling-disaggregation",
+          "serving-scheduling"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.06770",
+      "identity_tokens": [
+        "id:arXiv:2310.06770",
+        "url:https://arxiv.org/abs/2310.06770"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2310.06770",
+        "identity_tokens": [
+          "arXiv:2310.06770"
+        ],
+        "arxiv_id": "2310.06770",
+        "source_url": "https://arxiv.org/abs/2310.06770",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01839-conserve-conversation-level-agentic-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
+          "papers/inference/99-other-inference-systems/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md",
+          "papers/inference/99-other-inference-systems/2026-2608.00101-agentic-coding-production-scale-characterization.md",
+          "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+        ],
+        "linked_from_titles": [
+          "AgentCgroup: Understanding and Controlling OS Resources of AI Agents",
+          "Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale",
+          "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+          "Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
+          "From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems",
+          "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
+          "Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving",
+          "Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs",
+          "Unlocking Lossless Speedups in LLMs via Discrete Diffusion",
+          "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Scheduling / Disaggregation",
+          "LLMサービング・スケジューリング・KVキャッシュ保持",
+          "Other Inference Systems / Lossless Parallel Decoding",
+          "agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation",
+          "llm-serving-scheduling-disaggregation",
+          "other"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.16002",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.16002",
+        "id:arXiv:2502.16002",
+        "url:https://arxiv.org/abs/2502.16002"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2502.16002",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2502.16002",
+          "arXiv:2502.16002"
+        ],
+        "arxiv_id": "2502.16002",
+        "source_url": "https://arxiv.org/abs/2502.16002",
+        "doi": "10.48550/arxiv.2502.16002",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/05-kv-cache-memory-management/2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2606.01751-sparsex-segment-level-kv-sharing.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md",
+          "papers/inference/kv-cache/2608.19662.md"
+        ],
+        "linked_from_titles": [
+          "Adaptive KV Cache Reuse for Fast Long-Context LLM Serving",
+          "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
+          "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+          "LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents",
+          "LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs",
+          "MEPIC: Memory Efficient Position Independent Caching for LLM Serving",
+          "Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving",
+          "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+          "SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving",
+          "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing"
+        ],
+        "linked_from_lineages": [
+          "KVキャッシュ再利用 / エージェント型LLM / ツール呼出し / KV圧縮 / 構造的枝刈り",
+          "kv-cache-offload-recomputation",
+          "multi-LoRA serving / multi-agent KV cache sharing / low-rank cache representation",
+          "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング",
+          "マルチエージェントKVキャッシュ共有／位置非依存キャッシュ／KVキャッシュ圧縮",
+          "位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenReview:RkRrPp7GKO",
+      "identity_tokens": [
+        "id:OpenReview:RkRrPp7GKO",
+        "url:https://openreview.net/forum"
+      ],
+      "record": {
+        "canonical_id": "OpenReview:RkRrPp7GKO",
+        "identity_tokens": [
+          "OpenReview:RkRrPp7GKO"
+        ],
+        "openreview_id": "RkRrPp7GKO",
+        "source_url": "https://openreview.net/forum?id=RkRrPp7GKO",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/04-cpu-ssd-offload/2026-2609.16161-llm-inference-in-a-flash.md",
+          "papers/inference/05-kv-cache-memory-management/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+          "papers/inference/06-kv-cache-memory/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv.md",
+          "papers/inference/09-kernel-runtime-compilation/2026-2602.06072-packinfer-batched-attention.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2605.01708-splitzip-lossless-kv-compression.md"
+        ],
+        "linked_from_titles": [
+          "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+          "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+          "C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference",
+          "GroupKV: Hierarchical KV Cache Management for Long-Context Diffusion LLM Inference",
+          "LLM Inference in a Flash!",
+          "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+          "PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference",
+          "SGD-KV: Summarization Guided KV Cache Compression",
+          "SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving",
+          "Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "KV Cache Optimization / Compression",
+          "KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論",
+          "attention kernel / heterogeneous batched inference / KV-cache layout",
+          "flash compute-in-memory / KV-cache compression / integer-only inference",
+          "kv-cache-offload-recomputation",
+          "kv-cache-optimization-compression"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2109.10465",
+      "identity_tokens": [
+        "id:arXiv:2109.10465",
+        "url:https://arxiv.org/abs/2109.10465"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2109.10465",
+        "identity_tokens": [
+          "arXiv:2109.10465"
+        ],
+        "arxiv_id": "2109.10465",
+        "source_url": "https://arxiv.org/abs/2109.10465",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+          "papers/inference/04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md",
+          "papers/inference/06-moe-inference-expert-offloading/2026-2607.05116-communication-aware-placement-pruning-moe.md",
+          "papers/inference/06-moe-quantization-compression/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md",
+          "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md",
+          "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+          "papers/inference/06-moe-quantization-compression/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md",
+          "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+          "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md"
+        ],
+        "linked_from_titles": [
+          "Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference",
+          "EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models",
+          "MC#: Mixture Compressor for Mixture-of-Experts Large Models",
+          "Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy",
+          "Mixture Compressor for Mixture-of-Experts LLMs Gains More",
+          "Mixture of Experts with Mixture of Precisions for Tuning Quality of Service",
+          "Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness",
+          "MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing",
+          "Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models",
+          "SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget"
+        ],
+        "linked_from_lineages": [
+          "Adaptive Expert Computation / Compression",
+          "Edge／on-device MoE",
+          "MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散",
+          "Quantization × MoE × Offload",
+          "moe-inference-expert-offloading"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2311.04934",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2311.04934",
+        "id:arXiv:2311.04934",
+        "url:https://arxiv.org/abs/2311.04934"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2311.04934",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2311.04934",
+          "arXiv:2311.04934"
+        ],
+        "arxiv_id": "2311.04934",
+        "source_url": "https://arxiv.org/abs/2311.04934",
+        "doi": "10.48550/arxiv.2311.04934",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md",
+          "papers/inference/99-other-inference-systems/2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md"
+        ],
+        "linked_from_titles": [
+          "Adaptive Context Parallelism for Production LLM Serving",
+          "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving",
+          "Efficient Remote KV Cache Reuse with GPU-native Video Codec",
+          "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+          "KernelSight-LM: A Kernel-Level LLM Inference Simulator",
+          "Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot",
+          "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
+          "PrefixWall: Mitigating Prefix Caching Side Channels in Shared LLM Systems",
+          "SGLang: Efficient Execution of Structured Language Model Programs",
+          "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Scheduling / Disaggregation",
+          "LLMサービング・接頭辞キャッシュ・マルチテナント隔離",
+          "Prefill/Decode Disaggregation / Production LLM Serving",
+          "llm-serving-scheduling-disaggregation",
+          "other-inference-systems"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.14257",
+      "identity_tokens": [
+        "id:arXiv:2410.14257",
+        "url:https://arxiv.org/abs/2410.14257"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2410.14257",
+        "identity_tokens": [
+          "arXiv:2410.14257"
+        ],
+        "arxiv_id": "2410.14257",
+        "source_url": "https://arxiv.org/abs/2410.14257",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/03-offload-hierarchical-memory/2025-2504.11816-infersave-vm-selection-kv-offloading.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.10812-exaserve-large-scale-llm-serving-exascale-hpc-systems.md",
+          "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md",
+          "papers/inference/99-other-inference-systems/2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md",
+          "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md",
+          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+        ],
+        "linked_from_titles": [
+          "AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving",
+          "Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading",
+          "ExaServe: Large-Scale LLM Serving on Exascale HPC Systems",
+          "JITServe: SLO-aware LLM Serving with Imprecise Request Information",
+          "Multi-stage Flow Scheduling for LLM Serving",
+          "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+          "PLA-Serve: A Prefill-Length-Aware LLM Serving System",
+          "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving",
+          "TCM-Serve: Modality-aware Scheduling for Multimodal Large Language Model Inference",
+          "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+        ],
+        "linked_from_lineages": [
+          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+          "System-aware KV cache",
+          "llm-serving-scheduling-disaggregation",
+          "offload-hierarchical-memory",
+          "serving-scheduling"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.19786",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.19786",
+        "id:arXiv:2503.19786",
+        "url:https://arxiv.org/abs/2503.19786"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2503.19786",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2503.19786",
+          "arXiv:2503.19786"
+        ],
+        "arxiv_id": "2503.19786",
+        "source_url": "https://arxiv.org/abs/2503.19786",
+        "doi": "10.48550/arxiv.2503.19786",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md",
+          "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.06664-foundry-cuda-graph-context-materialization.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.04357-coral-multi-llm-heterogeneous-cloud-gpus.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.14237-opweave-flexible-operator-disaggregation.md",
+          "papers/inference/99-other-inference-systems/2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md",
+          "papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md"
+        ],
+        "linked_from_titles": [
+          "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+          "Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs",
+          "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+          "Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start",
+          "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
+          "Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU",
+          "OpWeave: Flexible Operator Disaggregation for Heterogeneous LLM Serving",
+          "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+          "TCM-Serve: Modality-aware Scheduling for Multimodal Large Language Model Inference",
+          "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression"
+        ],
+        "linked_from_lineages": [
+          "KV Cache Optimization / Compression",
+          "Prefill/Decode Disaggregation / Selective KV Transfer",
+          "llama.cpp・WebGPU・ブラウザ内オンデバイス推論・量子化カーネル",
+          "llm-serving-scheduling-disaggregation",
+          "on-device LLM serving / TEE / TrustZone / mobile NPU isolation"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/hpca61900.2025.00102",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca61900.2025.00102",
+        "url:https://doi.org/10.1109/hpca61900.2025.00102"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1109/hpca61900.2025.00102",
+        "identity_tokens": [
+          "DOI:10.1109/hpca61900.2025.00102"
+        ],
+        "doi": "10.1109/hpca61900.2025.00102",
+        "source_url": "https://doi.org/10.1109/hpca61900.2025.00102",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.22880-loraserve-heterogeneous-adapter-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.12241-rapid-power-aware-dynamic-reallocation.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01839-conserve-conversation-level-agentic-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments",
+          "Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving",
+          "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+          "General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing",
+          "Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention",
+          "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
+          "Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism",
+          "Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving",
+          "Power Aware Dynamic Reallocation For Inference",
+          "Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems"
+        ],
+        "linked_from_lineages": [
+          "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+          "LLM Serving / Scheduling / Disaggregation",
+          "llm-serving-scheduling-disaggregation",
+          "many-adapter LLM serving / LoRA serving / inference scheduling",
+          "先行するNPUの単一計算領域DVFSを、部品単位の空間的DVFSへ拡張。ReGateなどの電力遮断とは補完関係。"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3731569.3764815",
+      "identity_tokens": [
+        "id:DOI:10.1145/3731569.3764815",
+        "url:https://doi.org/10.1145/3731569.3764815"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.1145/3731569.3764815",
+        "identity_tokens": [
+          "DOI:10.1145/3731569.3764815"
+        ],
+        "doi": "10.1145/3731569.3764815",
+        "source_url": "https://doi.org/10.1145/3731569.3764815",
+        "relation_count": 10,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+          "papers/inference/01-offload-hierarchical-memory/2026-2608.13127-hbf-llm-serving.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md",
+          "papers/inference/06-serving-scheduling/2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md",
+          "papers/inference/99-other-inference-systems/2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md",
+          "papers/inference/99-other-inference-systems/2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md"
+        ],
+        "linked_from_titles": [
+          "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving",
+          "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+          "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+          "LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure",
+          "Potential Applications of HBF in LLM Serving Systems",
+          "Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving",
+          "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling",
+          "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+          "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
+          "Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines"
+        ],
+        "linked_from_lineages": [
+          "LLM Serving / Speculative Decoding / Multi-tenant Resource Reuse",
+          "LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design",
+          "Offload / Hierarchical Memory",
+          "agentic workflow serving / multi-LLM serving / GPU allocation / fractional placement",
+          "llm-serving-scheduling-disaggregation"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.02385",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2401.02385",
+        "id:arXiv:2401.02385",
+        "url:https://arxiv.org/abs/2401.02385"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2401.02385",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2401.02385",
+          "arXiv:2401.02385"
+        ],
+        "arxiv_id": "2401.02385",
+        "source_url": "https://arxiv.org/abs/2401.02385",
+        "doi": "10.48550/arxiv.2401.02385",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md",
+          "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+          "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
+          "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+          "papers/inference/08-speculative-decoding/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+          "papers/inference/moe/2609.14643.md",
+          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+        ],
+        "linked_from_titles": [
+          "BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices",
+          "Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference",
+          "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+          "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference",
+          "MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts",
+          "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+          "OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference",
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+          "SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs"
+        ],
+        "linked_from_lineages": [
+          "Adaptive computation／cache-aware MoE",
+          "Expert Prefetch",
+          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+          "Speculative Decoding",
+          "offload-hierarchical-memory",
+          "speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling",
+          "speculative decoding / heterogeneous CPU-GPU inference / consumer hardware",
+          "モバイルMoE推論・エキスパートオフロード・投機的復号・フラッシュ配置・NPUスケジューリング",
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2309.08168",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2309.08168",
+        "id:arXiv:2309.08168",
+        "url:https://arxiv.org/abs/2309.08168"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2309.08168",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2309.08168",
+          "arXiv:2309.08168"
+        ],
+        "arxiv_id": "2309.08168",
+        "source_url": "https://arxiv.org/abs/2309.08168",
+        "doi": "10.48550/arxiv.2309.08168",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
+          "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+          "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+          "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+          "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+          "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+          "papers/inference/99-other-inference-systems/2026-2609.09662-pelm-speculative-decoding-dvfs.md"
+        ],
+        "linked_from_titles": [
+          "Decoding Speculative Decoding",
+          "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+          "MagicPIG: LSH Sampling for Efficient LLM Generation",
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+          "PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling",
+          "Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency",
+          "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+          "SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference",
+          "SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs"
+        ],
+        "linked_from_lineages": [
+          "Conditional Computation",
+          "Speculative Decoding",
+          "Speculative decoding × MoE",
+          "kv-cache-optimization-compression",
+          "other-inference-systems",
+          "speculative decoding / draft-model design",
+          "speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling",
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.04532",
+      "identity_tokens": [
+        "id:arXiv:2405.04532",
+        "url:https://arxiv.org/abs/2405.04532"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.04532",
+        "identity_tokens": [
+          "arXiv:2405.04532"
+        ],
+        "arxiv_id": "2405.04532",
+        "source_url": "https://arxiv.org/abs/2405.04532",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/05-pim-near-memory/2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md",
+          "papers/inference/06-kv-cache-memory/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md",
+          "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+          "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+          "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2605.20868-runtime-certified-bounded-error-quantized-attention.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md",
+          "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md",
+          "papers/inference/99-other-inference-systems/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md"
+        ],
+        "linked_from_titles": [
+          "D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving",
+          "FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving",
+          "MagicPIG: LSH Sampling for Efficient LLM Generation",
+          "MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing",
+          "MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design",
+          "Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization",
+          "Runtime-Certified Bounded-Error Quantized Attention",
+          "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration",
+          "Vortex: Bridging Extreme Compression and Efficient LLM Inference"
+        ],
+        "linked_from_lineages": [
+          "Edge／on-device MoE",
+          "Quantization × MoE × Offload",
+          "kv-cache-memory",
+          "kv-cache-offload-recomputation",
+          "kv-cache-optimization-compression",
+          "llm-serving-scheduling-disaggregation",
+          "offload-hierarchical-memory",
+          "近メモリ処理 / HBMベースダイ / 重みのみ量子化 / 逆量子化 / LLM推論アクセラレーション"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.16525",
+      "identity_tokens": [
+        "id:arXiv:2503.16525",
+        "url:https://arxiv.org/abs/2503.16525"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2503.16525",
+        "identity_tokens": [
+          "arXiv:2503.16525"
+        ],
+        "arxiv_id": "2503.16525",
+        "source_url": "https://arxiv.org/abs/2503.16525",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/05-kv-cache-memory-management/2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md",
+          "papers/inference/05-kv-cache-memory-management/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
+          "papers/inference/06-kv-cache-memory/2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2606.01751-sparsex-segment-level-kv-sharing.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.07447-dbms-inspired-cache-replacement-llm-inference.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.08075-dual-pool-token-budget-routing.md",
+          "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md"
+        ],
+        "linked_from_titles": [
+          "Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits",
+          "C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference",
+          "Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving",
+          "Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?",
+          "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
+          "MEPIC: Memory Efficient Position Independent Caching for LLM Serving",
+          "Saving GPU Hours in LLM Inference System Development and Online Workloads with Simulation and DBMS-Inspired Cache Replacement Policies",
+          "SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching",
+          "SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "KV Cache Offload / Recomputation",
+          "KVキャッシュ再利用・選択的再計算・RAGキャッシュ編集",
+          "KVキャッシュ再利用／KVキャッシュ圧縮／長文脈推論",
+          "kv-cache-offload-recomputation",
+          "llm-serving-scheduling-disaggregation",
+          "other-inference-systems",
+          "位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ",
+          "大規模言語モデル配信ルーティング／KVキャッシュ容量計画／異種ワークロードスケジューリング"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.06471",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.06471",
+        "id:arXiv:2508.06471",
+        "url:https://arxiv.org/abs/2508.06471"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2508.06471",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2508.06471",
+          "arXiv:2508.06471"
+        ],
+        "arxiv_id": "2508.06471",
+        "source_url": "https://arxiv.org/abs/2508.06471",
+        "doi": "10.48550/arxiv.2508.06471",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+          "papers/inference/02-hardware-accelerators/2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md",
+          "papers/inference/02-moe-offload/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md",
+          "papers/inference/03-expert-prefetch/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md",
+          "papers/inference/05-moe-expert-offload/2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md",
+          "papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00368-tent-declarative-slice-spraying-data-movement.md",
+          "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
+        ],
+        "linked_from_titles": [
+          "ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving",
+          "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+          "GrowMTP: Can RL Grow Its Own Draft Head?",
+          "SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC",
+          "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+          "Speculative Decoding: Performance or Illusion?",
+          "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving",
+          "TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading",
+          "Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents"
+        ],
+        "linked_from_lineages": [
+          "Expert Prefetch",
+          "LLMサービング／スケジューリング／分離実行",
+          "MoE推論／SSDオフロード／階層メモリ／エキスパートキャッシュ／CPU-GPU協調",
+          "MoE推論／ハイブリッドボンディング3Dメモリ／エキスパートキャッシュ／自己投機的デコード",
+          "Offload / Hierarchical Memory",
+          "kv-cache-optimization-compression",
+          "speculative-decoding",
+          "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.07177",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.07177",
+        "id:arXiv:2310.07177",
+        "url:https://arxiv.org/abs/2310.07177"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2310.07177",
+        "identity_tokens": [
+          "DOI:10.48550/arxiv.2310.07177",
+          "arXiv:2310.07177"
+        ],
+        "arxiv_id": "2310.07177",
+        "source_url": "https://arxiv.org/abs/2310.07177",
+        "doi": "10.48550/arxiv.2310.07177",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+          "papers/inference/05-speculative-decoding/2026-2601.11580-speculative-decoding-performance-or-illusion.md",
+          "papers/inference/05-speculative-decoding/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+          "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.21072-bloombee-internet-scale-distributed-inference.md",
+          "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+          "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
+        ],
+        "linked_from_titles": [
+          "Decoding Speculative Decoding",
+          "Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization",
+          "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+          "GrowMTP: Can RL Grow Its Own Draft Head?",
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+          "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+          "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
+          "Speculative Decoding: Performance or Illusion?",
+          "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System"
+        ],
+        "linked_from_lineages": [
+          "Speculative Decoding",
+          "distributed LLM inference / communication-aware serving",
+          "llm-serving-scheduling-disaggregation",
+          "speculative decoding / draft-model design",
+          "speculative-decoding",
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+          "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.07851",
+      "identity_tokens": [
+        "id:arXiv:2401.07851",
+        "url:https://arxiv.org/abs/2401.07851"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2401.07851",
+        "identity_tokens": [
+          "arXiv:2401.07851"
+        ],
+        "arxiv_id": "2401.07851",
+        "source_url": "https://arxiv.org/abs/2401.07851",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+          "papers/inference/05-speculative-decoding/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+          "papers/inference/06-speculative-decoding/2026-2604.20503-faser-fine-grained-phase-management.md",
+          "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm.md",
+          "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md",
+          "papers/inference/99-other-inference-systems/2025-2504.06419-spire-throughput-speculative-decoding.md",
+          "papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md",
+          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+        ],
+        "linked_from_titles": [
+          "Collaborative Speculative Inference for Efficient LLM Inference Serving",
+          "FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving",
+          "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+          "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+          "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
+          "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+          "SPIRe: Boosting LLM Inference Throughput with Speculative Decoding",
+          "The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?",
+          "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System"
+        ],
+        "linked_from_lineages": [
+          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+          "Speculative Decoding / Draft Model Architecture",
+          "kv-cache-memory-management",
+          "speculative decoding / multi-drafter serving / heterogeneous multi-node inference / pipeline scheduling",
+          "speculative-decoding",
+          "投機的デコード／動的LLMサービング／GPU空間多重化",
+          "推論基盤比較・Pareto最適化・量子化・KV cache・speculative decoding・batching"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.07974",
+      "identity_tokens": [
+        "id:arXiv:2403.07974",
+        "url:https://arxiv.org/abs/2403.07974"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2403.07974",
+        "identity_tokens": [
+          "arXiv:2403.07974"
+        ],
+        "arxiv_id": "2403.07974",
+        "source_url": "https://arxiv.org/abs/2403.07974",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2026-2609.05228-ace.md",
+          "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+          "papers/inference/04-moe-parallelism-communication/2026-2607.08782-director-online-proactive-expert-placement.md",
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+          "papers/inference/06-speculative-decoding/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12151-oserve-spatial-temporal-workload-orchestration.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02942-dyserve-agentic-physical-plan-runtime.md",
+          "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md"
+        ],
+        "linked_from_titles": [
+          "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
+          "DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference",
+          "Director: Accelerating Distributed MoE Serving via Online Proactive Expert Placement",
+          "Dynamic Early Exit in Reasoning Models",
+          "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
+          "OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration",
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+          "SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding",
+          "Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime"
+        ],
+        "linked_from_lineages": [
+          "Conditional Computation",
+          "agentic workflow serving / workflow physical planning / adaptive serving",
+          "llm-serving-scheduling-disaggregation",
+          "moe-parallelism-communication",
+          "speculative decoding / parallel drafting / diffusion-inspired language modeling",
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+          "投機的復号 / LLMサービング・ベンチマーク"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.01814",
+      "identity_tokens": [
+        "id:arXiv:2405.01814",
+        "url:https://arxiv.org/abs/2405.01814"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.01814",
+        "identity_tokens": [
+          "arXiv:2405.01814"
+        ],
+        "arxiv_id": "2405.01814",
+        "source_url": "https://arxiv.org/abs/2405.01814",
+        "relation_count": 9,
+        "linked_from": [
+          "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+          "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
+          "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.13111-iserve-intent-based-llm-serving.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md",
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15473-q-first-disaggregated-decoding.md"
+        ],
+        "linked_from_titles": [
+          "ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling",
+          "Language Models Can Control Their Own Attention",
+          "MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism",
+          "NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference",
+          "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+          "PrefixWall: Mitigating Prefix Caching Side Channels in Shared LLM Systems",
+          "Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding",
+          "STAR: Decode-Phase Rescheduling for LLM Inference",
+          "iServe: An Intent-based Serving System for LLMs"
+        ],
+        "linked_from_lineages": [
+          "Adaptive computation／cache-aware MoE",
+          "LLMサービング・接頭辞キャッシュ・マルチテナント隔離",
+          "LLMサービング／配備構成探索／自動並列化・圧縮選択／負荷対応配置",
+          "Offload / Hierarchical Memory",
+          "kv-cache-optimization-compression",
+          "llm-serving-scheduling-disaggregation",
+          "分離型LLMサービング／モデル・注意機構分離／KVキャッシュ分散"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:e8e76ca1e0879ea5e0f4cd2a6aa2c695b0c12d69d3e57269ab19808a9f334e8b",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

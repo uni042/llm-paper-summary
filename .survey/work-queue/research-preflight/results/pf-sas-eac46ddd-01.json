@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-sas-eac46ddd-01",
+  "kind": "research",
+  "attempt_id": "attempt-eac46ddd3cb449fe8b2c0320",
+  "job_id": "job-research-6542fa570cf353a1",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:955833e5998a2d5a2b1e390d70a387283d269fa926e07ef495f4b6624f202603",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "b311e00ae487eb4441d13c3c511a40e9840c12aa"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "c716b71b4527565dcce368838aa110009b1537ab"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "6ece9c52714056701a4513d8a095ccf9e166d39f"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "222eb297d2856d77bb8a5f3f99117867119f2aff"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "1042b0d8d3570fea27944978a6a816239c7e932d"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[2].description is too short",
+    "Japanese-first prose ratio is too low: 52.6% < 70% (Japanese=3239, Latin=2916)"
+  ],
+  "checked_at": "2026-09-22T07:34:09+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

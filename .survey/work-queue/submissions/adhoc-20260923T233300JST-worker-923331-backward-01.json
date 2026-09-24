@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "discovery_precheck": {
+    "request_id": "adhoc-20260923T233300JST-worker-923331-backward-01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/adhoc-20260923T233300JST-worker-923331-backward-01.json",
+    "receipt": "sha256:438a764f2c934a111a885ac4db38aaf13da95cfe8d7f757aca9bc742d29429a8"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.19348",
+      "arxiv_id": "2606.19348",
+      "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
+      "source_url": "https://arxiv.org/abs/2606.19348",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.19348-deepseek-v4-million-token-context-intelligence.md",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 85
+      },
+      "reason": "million-token文脈向けにCompressed Sparse AttentionとHeavily Compressed Attentionを導入し、DeepSeek-V3.2比で単一token推論FLOPs 27%、KV cache 10%を報告する。長文脈・KV圧縮・MoE推論系統を直接更新する2026年候補。"
+    },
+    {
+      "canonical_id": "arXiv:2404.02258",
+      "arxiv_id": "2404.02258",
+      "title": "Mixture-of-Depths: Dynamically allocating compute in transformer-based language models",
+      "source_url": "https://arxiv.org/abs/2404.02258",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2024-2404.02258-mixture-of-depths-dynamic-compute.md",
+      "priority": 74,
+      "priority_breakdown": {
+        "base": 54,
+        "lineage": 20,
+        "recency": 0,
+        "venue": 0,
+        "total": 74
+      },
+      "reason": "各layerで処理token数を固定budgetに抑えつつtop-k routingでtoken単位に計算を動的配分する。条件付き計算・adaptive computation系統に直接接続し、post-training samplingで最大50%以上高速化を報告する。"
+    },
+    {
+      "canonical_id": "arXiv:2312.00752",
+      "arxiv_id": "2312.00752",
+      "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+      "source_url": "https://arxiv.org/abs/2312.00752",
+      "paper_path": "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "priority": 75,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 0,
+        "venue": 0,
+        "total": 75
+      },
+      "reason": "attentionを用いないselective state spaceとhardware-aware recurrent algorithmによりsequence lengthへ線形にscaleし、Transformer比5倍の推論throughputを報告する。長文脈・hybrid Mamba推論系統の基礎として直接性が高い。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "adhoc-20260923T233300JST-worker-923331",
+    "round": "adhoc-20260923T233300JST-worker-923331-backward-01",
+    "axis": "repository-wide structured references for LLM inference systems",
+    "query_summary": "repository_references schema v3で固定sourceから100件を走査し、既存identity/rejectionを除外して未評価20件を取得。一次資料でtitle/abstractを補完し、推論効率・動的計算・長文脈に直接寄与する3件をResearch候補化した。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "accepted_canonical_ids": [
+      "arXiv:2606.19348",
+      "arXiv:2404.02258",
+      "arXiv:2312.00752"
+    ],
+    "next_axis_hint": "same-run forward citation refresh",
+    "empty_round_reason": null,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [
+      {
+        "topic": "structured-references",
+        "source": "repository_references",
+        "date_range": "repository-wide",
+        "category": "inference-systems",
+        "citation_direction": "backward",
+        "query_family": "structured-reference-curation",
+        "raw_result_count": 100,
+        "unseen_result_count": 20,
+        "duplicate_filtered_count": 25,
+        "rejection_filtered_count": 1,
+        "candidate_evaluation_count": 20,
+        "candidate_accepted_count": 3,
+        "position": "offset-0"
+      }
+    ]
+  }
+}

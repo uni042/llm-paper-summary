@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-30-20260921T222940Z-repair2",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-f0b1ffeacc3b0ccd",
+      "claim_id": "claim-a153536b7690fbfbd5037795",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-a153536b7690fbfbd5037795",
+      "claimed_at": "2026-09-21T22:29:57+00:00",
+      "expires_at": "2026-09-21T23:59:57+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-f0b1ffeacc3b0ccd"
+      ],
+      "job": {
+        "job_id": "job-research-f0b1ffeacc3b0ccd",
+        "type": "research",
+        "parent_job_id": "job-7cb17342eeae49e3",
+        "priority": 104,
+        "canonical_id": "arXiv:2608.21836",
+        "arxiv_id": "2608.21836",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization",
+        "source_url": "https://www.semanticscholar.org/paper/05ce627af947fbb7b08b2b653f62974cce24b1b2",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md",
+        "selection_reason": "単体kernel benchmarkと実LLM推論の差を閉ループで埋め、実モデル内validationまで含むdeployment-aware kernel最適化。推論kernel・自動最適化系統への直接的な新規性が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T23:10:45+00:00",
+        "blocker": "Primary full text could not be safely retrieved through an official source in this invocation. The official arXiv abstract page for arXiv:2608.21836 was retrievable and confirms the paper identity, date, cs.AI category, EMNLP 2026 main-conference acceptance, and abstract, but direct official arXiv PDF and experimental HTML full-text retrieval both failed in this environment. Per workflow v10, no five-slot record was synthesized from abstracts or third-party mirrors.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-edddb03a59361ef75fa46b0f.json",
+        "blocked_attempts": 2,
+        "last_recorded_blocked_event": "2026-09-21T10:01:56+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-21T00:07:44+00:00",
+            "reason": "Primary full text could not be safely retrieved through an official source in this invocation. The official arXiv abstract was available through indexed metadata, but direct official arXiv full-text retrieval was unavailable. A third-party page mirrored substantial arXiv HTML, but the workflow requires the primary source in full, so it was not used to synthesize the five-slot record."
+          },
+          {
+            "attempt": 2,
+            "blocked_at": "2026-09-21T10:01:56+00:00",
+            "reason": "Primary full text could not be safely retrieved through an official source in this invocation. The official arXiv abstract page for arXiv:2608.21836 was retrievable and confirms the paper identity, date, cs.AI category, EMNLP 2026 main-conference acceptance, and abstract, but direct official arXiv PDF and experimental HTML full-text retrieval both failed in this environment. Per workflow v10, no five-slot record was synthesized from abstracts or third-party mirrors."
+          }
+        ],
+        "last_blocked_at": "2026-09-21T10:01:56+00:00",
+        "retry_queued_at": "2026-09-21T19:28:13+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | Japanese-first prose ratio is too low: 53.3% < 70% (Japanese=2626, Latin=2301)",
+        "validation_errors": [
+          "metadata.references_total must be a non-negative integer",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "Japanese-first prose ratio is too low: 53.3% < 70% (Japanese=2626, Latin=2301)"
+        ],
+        "last_validation_failed_at": "2026-09-21T22:28:48+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-d175e801840388d8f1f07012"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-d175e801840388d8f1f07012.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T22:29:57+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-f9b1303eb0dbce6b902842b6",
+  "job_id": "job-research-e488ee96459c1b4f",
+  "claim_id": "claim-f9b1303eb0dbce6b902842b6",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "Primary-source full text could not be retrieved reliably in this run. The arXiv PDF endpoint was unavailable to the worker; the arXiv abstract page and distinct indexed mirrors exposed metadata/abstract only. Per worker-router, no five-slot record was inferred from abstract/search snippets.",
+  "retrieval_evidence": [
+    "https://arxiv.org/pdf/2609.16503 — primary PDF fetch attempted; worker retrieval returned DisabledError",
+    "https://arxiv.org/abs/2609.16503 — primary arXiv record reachable, but available retrieval exposed abstract/metadata rather than full manuscript",
+    "https://arxiv.deeppaper.ai/papers/2609.16503v1 — distinct document front-end checked; available page exposed abstract/metadata only",
+    "https://searcharxiv.org/abs/2609.16503 — distinct arXiv index checked; available page exposed record/abstract but not a verified full-text manuscript"
+  ],
+  "blocked_at": "2026-09-22T15:44:00Z"
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T095800Z-scheduled-chat-30-slimqwen-pf2",
+  "kind": "research",
+  "attempt_id": "attempt-ffa0b1baa60976c86cf81af0",
+  "job_id": "job-research-1330e1d7068cf379",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:f2c4a5a0c2137f690463e96000072c1639b01bb5e5a527fb711e689cdc5030de",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "03bd2afe8b7adc684ad00789fc8699f33f1af03a"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "ba281f6409e105e93bcc086defc983d11b2b5b21"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "8d6ba571e499ba78210e49b945e125ca212f7656"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "e1c874aca7ac07617fa5e819bfbb35a2038e0b96"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "979fd367052981a915ce1843a093f3deee01294e"
+    }
+  ],
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 69.9% < 70% (Japanese=3963, Latin=1707)"
+  ],
+  "checked_at": "2026-09-23T09:50:14+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

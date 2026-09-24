@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "scheduled-chat-20260917t043138-0900-agentkv",
+  "worker_id": "scheduled-chat-20260917t043138-0900",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-71c206bf0990ca87",
+      "claim_id": "claim-5f751e3b4a448f7f2f7978ae",
+      "worker_id": "scheduled-chat-20260917t043138-0900",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-5f751e3b4a448f7f2f7978ae",
+      "claimed_at": "2026-09-16T19:35:26+00:00",
+      "expires_at": "2026-09-16T21:05:26+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-71c206bf0990ca87"
+      ],
+      "job": {
+        "job_id": "job-research-71c206bf0990ca87",
+        "type": "research",
+        "parent_job_id": "job-93fb2f0552bd58b2",
+        "priority": 91,
+        "canonical_id": "arXiv:2609.14872",
+        "title": "AgentKV: Phase-Aware KV Eviction for Agentic LLMs",
+        "source_url": "https://arxiv.org/abs/2609.14872",
+        "paper_path": "papers/inference/06-kv-cache-memory/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md",
+        "selection_reason": "agentic generationのthink/act/tool等でquery subspaceが変化しrecency-based KV evictionが破綻する点を示し、phase別query bufferのunionでKVを評価するAGENTKVをpersistent multi-turn servingへ実装。full-KV SGLang比output throughput最大1.80xで、agentic KV managementの最新かつ直接的なsystem研究。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T19:03:42+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-16T19:35:26+00:00",
+  "checkpoint_released": 0
+}

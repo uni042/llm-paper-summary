@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-30",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.14191",
+      "arxiv_id": "2608.14191",
+      "title": "KV Cache Compression Through the Lens of Transform Coding",
+      "source_url": "https://www.semanticscholar.org/paper/1e5bc01a3141538f66f03cea51090f1aba8599e4",
+      "priority": 95,
+      "priority_breakdown": {"base": 50, "lineage": 25, "recency": 20, "venue": 0, "total": 95},
+      "reason": "2026年8月の新しいKVキャッシュ圧縮手法で、注意機構に対する歪みを考慮したビット配分により約5.8倍圧縮を報告しており、推論時メモリ最適化の重点系統に直接該当する。"
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-s30-032918-r2",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-s30-032918-r2.json",
+    "receipt": "sha256:3d4948dd6fe3b6a777995b37552bdffaef74de5354a81c2b4afd955fd199578e"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-30-20260924T032918-9f2c7a",
+    "round": "disc-s30-032918-r2",
+    "axis": "forward citations of H2O KV cache eviction and efficient inference",
+    "query_summary": "H2Oの前方引用を正規schema v3で走査し、20件の未収録候補から新規性が高くKVキャッシュ圧縮・推論メモリ効率へ直接寄与する候補を選別。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 55,
+    "accepted_canonical_ids": ["arXiv:2608.14191"],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "search_windows": [{"topic":"H2O forward citations","source":"semantic_scholar","date_range":"2026","category":"kv-cache","citation_direction":"forward","query_family":"citation-curation","raw_result_count":100,"unseen_result_count":20,"duplicate_filtered_count":55,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":1,"position":"offset-0"}]
+  }
+}

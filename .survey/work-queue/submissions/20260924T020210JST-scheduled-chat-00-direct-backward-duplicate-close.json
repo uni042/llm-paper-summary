@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [],
+  "discovery_precheck": {
+    "request_id": "20260924T020210JST-scheduled-chat-00-direct-backward-1",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T020210JST-scheduled-chat-00-direct-backward-1.json",
+    "receipt": "sha256:88d0badf0a9d6e0f7805f10e97c198ca1bf217936249f69d40ce23e517ef1c66"
+  },
+  "discovery_stats": {
+    "run_key": "20260924T020210JST-scheduled-chat-00",
+    "round": "20260924T020210JST-scheduled-chat-00-direct-backward-duplicate-close",
+    "axis": "preload-backward-structured-references",
+    "query_summary": "Transport-duplicate formal precheck for the same claimed preload after a manual canonical precheck was issued during workflow queue delay; all useful candidates were already evaluated and submitted through backward-r1, so this duplicate is closed with zero additional candidates.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 20,
+    "accepted_canonical_ids": [],
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}

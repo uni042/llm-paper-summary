@@ -1,0 +1,21 @@
+{
+  "job_id": "job-8101fbdc44417e39",
+  "type": "discovery",
+  "lane": "discovery-ingest",
+  "priority": 50,
+  "status": "completed",
+  "ingest_only": true,
+  "ingest_for_submission": "work-queue/submissions/20260917T2300JST-discovery-kv-architecture-2.json",
+  "submitted_job_id": null,
+  "instructions": "Internal Discovery ingest job. Apply the already durable candidate payload; do not perform new research or discovery in this job.",
+  "completion": "Apply the durable Discovery round payload.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-17T14:03:07+00:00",
+  "completed_at": "2026-09-17T14:03:14+00:00",
+  "result_summary": {
+    "submitted_candidates": 1,
+    "final_duplicate_filtered_count": 1,
+    "research_jobs_added": 0
+  }
+}

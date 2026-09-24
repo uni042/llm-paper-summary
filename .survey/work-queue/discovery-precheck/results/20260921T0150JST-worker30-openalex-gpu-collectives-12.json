@@ -1,0 +1,877 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0150JST-worker30-openalex-gpu-collectives-12",
+  "collector_id": "worker30-openalex-gpu-collectives",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "GPU collectives communication overlap LLM inference serving",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=GPU%20collectives%20communication%20overlap%20LLM%20inference%20serving&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg1ODg4MDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjAxOTEzOTg4J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c003ca1aeda5e8d4bc29db32b03032f4024d8f97",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 20,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:51:00.809930+00:00",
+  "results": [
+    {
+      "title": "Bridging Explanation and Operations: A Systematic Review and Taxonomy of XAI-Enabled Cybersecurity Detection",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10669512/v1",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10669512/v1",
+      "doi": "10.21203/rs.3.rs-10669512/v1",
+      "authors": [
+        "Christos Smiliotopoulos",
+        "Konstantinos E. Kampourakis",
+        "Vyron Kampourakis",
+        "Georgios Kambourakis",
+        "Andreas Artemiou",
+        "Paraskevas Giannakopoulos"
+      ]
+    },
+    {
+      "title": "When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis",
+      "source_url": "https://arxiv.org/abs/2609.15309",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15309",
+      "arxiv_id": "2609.15309",
+      "authors": [
+        "Kaiyuan Liu",
+        "Qiuyang Mang",
+        "Bo Peng",
+        "Wenhao Chai",
+        "Hanchen Li",
+        "Shreyas Pimpalgaonkar",
+        "Luke Zettlemoyer",
+        "Alex Dimakis",
+        "Alvin Cheung"
+      ]
+    },
+    {
+      "title": "CATS: A Carbon-Aware Task Simulator for Reducing AI Data Center Emissions",
+      "source_url": "https://arxiv.org/abs/2609.14775",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14775",
+      "arxiv_id": "2609.14775",
+      "authors": [
+        "Dayuan Chen",
+        "Ziliang Zong"
+      ]
+    },
+    {
+      "title": "Dynamic Scheduling Algorithm for Edge-cloud Collaborative Computing Resources Based on 5G NR-U and Distributed Large Model",
+      "source_url": "https://doi.org/10.26599/tst.2026.9010041",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "DOI:10.26599/tst.2026.9010041",
+      "doi": "10.26599/tst.2026.9010041",
+      "authors": [
+        "Defeng Duan",
+        "Hong Liu",
+        "Liyun Huang",
+        "Songlei Zhang",
+        "Bo Meng"
+      ]
+    },
+    {
+      "title": "The Mechanics of a Swarm: A Reproducible External Reconstruction of an Unintended Agent-Coordination Episode on a Third-Party Wiki",
+      "source_url": "https://arxiv.org/abs/2609.12748",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12748",
+      "arxiv_id": "2609.12748",
+      "authors": [
+        "Philipp Lütje"
+      ]
+    },
+    {
+      "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+      "source_url": "https://arxiv.org/abs/2609.13585",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13585",
+      "arxiv_id": "2609.13585",
+      "authors": [
+        "Ziming Mao",
+        "Yihan Zhang",
+        "Shawn Wei Chew",
+        "Shuang Ma",
+        "Costin Raiciu",
+        "Yang Zhou",
+        "Scott Shenker",
+        "Ion Stoica"
+      ]
+    },
+    {
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "source_url": "https://arxiv.org/abs/2609.11873",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11873",
+      "arxiv_id": "2609.11873",
+      "authors": [
+        "Yi Duan",
+        "Ying Liu",
+        "Zirui Tang",
+        "Haodong Chen",
+        "Jun Zhou",
+        "Yumou Liu",
+        "Xu BangRui",
+        "Yukai Wu",
+        "Sidi Chen",
+        "Yuhan Zhou",
+        "Haoyu Wang",
+        "Xiaoyou Yu",
+        "Shaokun Han",
+        "Xuzhou Zhu",
+        "Le Zhou",
+        "Bolin Lu",
+        "Wei Zhou",
+        "Jiachen Liu",
+        "Nuozhou Fang",
+        "Jiaxin Tian",
+        "Ruoyu Chen",
+        "Yuxuan Li",
+        "Kai Zuo",
+        "Kaiyan Zhang",
+        "Qianyu Yang",
+        "Zijie Wang",
+        "黎国樑",
+        "Conghui He",
+        "Zhiyuan Liu",
+        "Bowen Zhou",
+        "Zhiyuan Liu",
+        "Zhoufutu Wen",
+        "Jihua Kang",
+        "Xuanhe Zhou",
+        "Fan Wu"
+      ]
+    },
+    {
+      "title": "AI-coupled HPC Workflow Applications, Middleware and Performance",
+      "source_url": "https://doi.org/10.1145/3844499",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2406.14315",
+      "arxiv_id": "2406.14315",
+      "authors": [
+        "Wes Brewer",
+        "Ana Gainaru",
+        "Frédéric Suter",
+        "Feiyi Wang",
+        "Murali Emani",
+        "Shantenu Jha"
+      ]
+    },
+    {
+      "title": "Optimizing resource allocation for federated LLM training via workload forecasting and autoscaling in edge environments",
+      "source_url": "https://doi.org/10.1007/s11276-026-04224-1",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "DOI:10.1007/s11276-026-04224-1",
+      "doi": "10.1007/s11276-026-04224-1",
+      "authors": [
+        "Bablu Kumar",
+        "Anshul Verma",
+        "Rajkumar Buyya"
+      ]
+    },
+    {
+      "title": "Numbat: Building and Verifying a Self-Contained Machine-Learning Stack",
+      "source_url": "https://arxiv.org/abs/2609.10632",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10632",
+      "arxiv_id": "2609.10632",
+      "authors": [
+        "Thang Tran",
+        "Lan Dang"
+      ]
+    },
+    {
+      "title": "A Survey on Foundation Models for Personalized Federated Intelligence",
+      "source_url": "https://doi.org/10.1145/3844947",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2505.06907",
+      "arxiv_id": "2505.06907",
+      "authors": [
+        "Yu Qiao",
+        "Huy Q. Le",
+        "Avi Deb Raha",
+        "Pham-Tue-Hung Tran",
+        "Apurba Adhikary",
+        "Mengchun Zhang",
+        "Loc X. Nguyen",
+        "Eui‐Nam Huh",
+        "Dusit Niyato",
+        "Choong Seon Hong"
+      ]
+    },
+    {
+      "title": "How Portable Are LLM-Serving Scheduler Rankings Across Workloads, Operating Regions, and Metrics?",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10935389/v1",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10935389/v1",
+      "doi": "10.21203/rs.3.rs-10935389/v1",
+      "authors": [
+        "Soroush Vahidi"
+      ]
+    },
+    {
+      "title": "SiBot: A hybrid framework for fine-grained semantic attribution of AI-generated text and its production deployment",
+      "source_url": "https://doi.org/10.1371/journal.pone.0357405",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "DOI:10.1371/journal.pone.0357405",
+      "doi": "10.1371/journal.pone.0357405",
+      "authors": [
+        "Md. Sadiq Iqbal",
+        "Mohammod Abul Kashem"
+      ]
+    },
+    {
+      "title": "Leveraging fine-grained error correction in Korean speech recognition for consultation services",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.116038",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.09889",
+      "arxiv_id": "2609.09889",
+      "authors": [
+        "Yonghyun Jun",
+        "Jimin Lee",
+        "Hwan Chang",
+        "Dongho Shin",
+        "Seolah Kim",
+        "Hwanhee Lee"
+      ]
+    },
+    {
+      "title": "Miles v0.1: Production-Level Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.08368",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08368",
+      "arxiv_id": "2609.08368",
+      "authors": [
+        "RadixArk",
+        ":",
+        "Tom Chen",
+        "Mao Cheng",
+        "Shi Dong",
+        "Kangrui Du",
+        "Yanbin Jiang",
+        "Jiajun Li",
+        "Yiming Li",
+        "Tao Lin",
+        "Yusheng Su",
+        "Andy Ye",
+        "Yueming Yuan",
+        "Zhichen Zeng"
+      ]
+    },
+    {
+      "title": "BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.08566",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08566",
+      "arxiv_id": "2609.08566",
+      "authors": [
+        "Yanhong Qian",
+        "何宣莹",
+        "Qingguo Meng",
+        "Shihao Ding",
+        "Xingbo Dong",
+        "Zhe Jin"
+      ]
+    },
+    {
+      "title": "SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans",
+      "source_url": "https://arxiv.org/abs/2609.08231",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08231",
+      "arxiv_id": "2609.08231",
+      "authors": [
+        "Genlang Chen",
+        "Junyi Zhu",
+        "Yuanshan Lin"
+      ]
+    },
+    {
+      "title": "Dynamic Adaptive Multimodal Graph Fusion Network for Multi-Hazard Recognition Using Remote Sensing, Social Media, IoT, and Seismic Observations",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10714749/v1",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10714749/v1",
+      "doi": "10.21203/rs.3.rs-10714749/v1",
+      "authors": [
+        "Dannuri Mounika",
+        "Johnson Kolluri",
+        "Sunil Srinivas",
+        "Kiran Siripuri"
+      ]
+    },
+    {
+      "title": "Gutenberg: Taming Latency-Critical Cloud Services with Near-Data-Processing",
+      "source_url": "https://arxiv.org/abs/2609.06691",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06691",
+      "arxiv_id": "2609.06691",
+      "authors": [
+        "Qiushi Lin",
+        "Phillip B. Gibbons",
+        "Jovan Stojkovic",
+        "Yiwei Zhao"
+      ]
+    },
+    {
+      "title": "A Novel Semantic Manifold Alignment Attack against Embedding-to-Embedding Obfuscation in Privacy-Preserving LLMs",
+      "source_url": "https://arxiv.org/abs/2609.06749",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06749",
+      "arxiv_id": "2609.06749",
+      "authors": [
+        "Sicong Li",
+        "Lingfeng Yao",
+        "Xingke Yang",
+        "Ke Tu",
+        "Chenhao Wu",
+        "Hao Wang",
+        "Jiang Liu",
+        "Phone Lin",
+        "Xin Fu",
+        "Miao Pan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10669512/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10669512/v1",
+        "title:bridging explanation and operations a systematic review and taxonomy of xaienabled cybersecurity detection",
+        "url:https://doi.org/10.21203/rs.3.rs-10669512/v1"
+      ],
+      "record": {
+        "title": "Bridging Explanation and Operations: A Systematic Review and Taxonomy of XAI-Enabled Cybersecurity Detection",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10669512/v1",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10669512/v1",
+        "doi": "10.21203/rs.3.rs-10669512/v1",
+        "authors": [
+          "Christos Smiliotopoulos",
+          "Konstantinos E. Kampourakis",
+          "Vyron Kampourakis",
+          "Georgios Kambourakis",
+          "Andreas Artemiou",
+          "Paraskevas Giannakopoulos"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15309",
+      "identity_tokens": [
+        "id:arXiv:2609.15309",
+        "title:when agents slow down understanding llm agents testtime strategies via elopertoken analysis",
+        "url:https://arxiv.org/abs/2609.15309"
+      ],
+      "record": {
+        "title": "When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis",
+        "source_url": "https://arxiv.org/abs/2609.15309",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15309",
+        "arxiv_id": "2609.15309",
+        "authors": [
+          "Kaiyuan Liu",
+          "Qiuyang Mang",
+          "Bo Peng",
+          "Wenhao Chai",
+          "Hanchen Li",
+          "Shreyas Pimpalgaonkar",
+          "Luke Zettlemoyer",
+          "Alex Dimakis",
+          "Alvin Cheung"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14775",
+      "identity_tokens": [
+        "id:arXiv:2609.14775",
+        "title:cats a carbonaware task simulator for reducing ai data center emissions",
+        "url:https://arxiv.org/abs/2609.14775"
+      ],
+      "record": {
+        "title": "CATS: A Carbon-Aware Task Simulator for Reducing AI Data Center Emissions",
+        "source_url": "https://arxiv.org/abs/2609.14775",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14775",
+        "arxiv_id": "2609.14775",
+        "authors": [
+          "Dayuan Chen",
+          "Ziliang Zong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.26599/tst.2026.9010041",
+      "identity_tokens": [
+        "id:DOI:10.26599/tst.2026.9010041",
+        "title:dynamic scheduling algorithm for edgecloud collaborative computing resources based on 5g nru and distributed large model",
+        "url:https://doi.org/10.26599/tst.2026.9010041"
+      ],
+      "record": {
+        "title": "Dynamic Scheduling Algorithm for Edge-cloud Collaborative Computing Resources Based on 5G NR-U and Distributed Large Model",
+        "source_url": "https://doi.org/10.26599/tst.2026.9010041",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "DOI:10.26599/tst.2026.9010041",
+        "doi": "10.26599/tst.2026.9010041",
+        "authors": [
+          "Defeng Duan",
+          "Hong Liu",
+          "Liyun Huang",
+          "Songlei Zhang",
+          "Bo Meng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12748",
+      "identity_tokens": [
+        "id:arXiv:2609.12748",
+        "title:the mechanics of a swarm a reproducible external reconstruction of an unintended agentcoordination episode on a thirdparty wiki",
+        "url:https://arxiv.org/abs/2609.12748"
+      ],
+      "record": {
+        "title": "The Mechanics of a Swarm: A Reproducible External Reconstruction of an Unintended Agent-Coordination Episode on a Third-Party Wiki",
+        "source_url": "https://arxiv.org/abs/2609.12748",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12748",
+        "arxiv_id": "2609.12748",
+        "authors": [
+          "Philipp Lütje"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13585",
+      "identity_tokens": [
+        "id:arXiv:2609.13585",
+        "title:mkernel fast multigpu multinode fused kernels",
+        "url:https://arxiv.org/abs/2609.13585"
+      ],
+      "record": {
+        "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+        "source_url": "https://arxiv.org/abs/2609.13585",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13585",
+        "arxiv_id": "2609.13585",
+        "authors": [
+          "Ziming Mao",
+          "Yihan Zhang",
+          "Shawn Wei Chew",
+          "Shuang Ma",
+          "Costin Raiciu",
+          "Yang Zhou",
+          "Scott Shenker",
+          "Ion Stoica"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11873",
+      "identity_tokens": [
+        "id:arXiv:2609.11873",
+        "title:the last ai built by humans toward genuine recursive selfimprovement",
+        "url:https://arxiv.org/abs/2609.11873"
+      ],
+      "record": {
+        "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+        "source_url": "https://arxiv.org/abs/2609.11873",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11873",
+        "arxiv_id": "2609.11873",
+        "authors": [
+          "Yi Duan",
+          "Ying Liu",
+          "Zirui Tang",
+          "Haodong Chen",
+          "Jun Zhou",
+          "Yumou Liu",
+          "Xu BangRui",
+          "Yukai Wu",
+          "Sidi Chen",
+          "Yuhan Zhou",
+          "Haoyu Wang",
+          "Xiaoyou Yu",
+          "Shaokun Han",
+          "Xuzhou Zhu",
+          "Le Zhou",
+          "Bolin Lu",
+          "Wei Zhou",
+          "Jiachen Liu",
+          "Nuozhou Fang",
+          "Jiaxin Tian",
+          "Ruoyu Chen",
+          "Yuxuan Li",
+          "Kai Zuo",
+          "Kaiyan Zhang",
+          "Qianyu Yang",
+          "Zijie Wang",
+          "黎国樑",
+          "Conghui He",
+          "Zhiyuan Liu",
+          "Bowen Zhou",
+          "Zhiyuan Liu",
+          "Zhoufutu Wen",
+          "Jihua Kang",
+          "Xuanhe Zhou",
+          "Fan Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.14315",
+      "identity_tokens": [
+        "id:DOI:10.1145/3844499",
+        "id:arXiv:2406.14315",
+        "title:aicoupled hpc workflow applications middleware and performance",
+        "url:https://doi.org/10.1145/3844499"
+      ],
+      "record": {
+        "title": "AI-coupled HPC Workflow Applications, Middleware and Performance",
+        "source_url": "https://doi.org/10.1145/3844499",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2406.14315",
+        "arxiv_id": "2406.14315",
+        "authors": [
+          "Wes Brewer",
+          "Ana Gainaru",
+          "Frédéric Suter",
+          "Feiyi Wang",
+          "Murali Emani",
+          "Shantenu Jha"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11276-026-04224-1",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11276-026-04224-1",
+        "title:optimizing resource allocation for federated llm training via workload forecasting and autoscaling in edge environments",
+        "url:https://doi.org/10.1007/s11276-026-04224-1"
+      ],
+      "record": {
+        "title": "Optimizing resource allocation for federated LLM training via workload forecasting and autoscaling in edge environments",
+        "source_url": "https://doi.org/10.1007/s11276-026-04224-1",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "DOI:10.1007/s11276-026-04224-1",
+        "doi": "10.1007/s11276-026-04224-1",
+        "authors": [
+          "Bablu Kumar",
+          "Anshul Verma",
+          "Rajkumar Buyya"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10632",
+      "identity_tokens": [
+        "id:arXiv:2609.10632",
+        "title:numbat building and verifying a selfcontained machinelearning stack",
+        "url:https://arxiv.org/abs/2609.10632"
+      ],
+      "record": {
+        "title": "Numbat: Building and Verifying a Self-Contained Machine-Learning Stack",
+        "source_url": "https://arxiv.org/abs/2609.10632",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10632",
+        "arxiv_id": "2609.10632",
+        "authors": [
+          "Thang Tran",
+          "Lan Dang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.06907",
+      "identity_tokens": [
+        "id:DOI:10.1145/3844947",
+        "id:arXiv:2505.06907",
+        "title:a survey on foundation models for personalized federated intelligence",
+        "url:https://doi.org/10.1145/3844947"
+      ],
+      "record": {
+        "title": "A Survey on Foundation Models for Personalized Federated Intelligence",
+        "source_url": "https://doi.org/10.1145/3844947",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2505.06907",
+        "arxiv_id": "2505.06907",
+        "authors": [
+          "Yu Qiao",
+          "Huy Q. Le",
+          "Avi Deb Raha",
+          "Pham-Tue-Hung Tran",
+          "Apurba Adhikary",
+          "Mengchun Zhang",
+          "Loc X. Nguyen",
+          "Eui‐Nam Huh",
+          "Dusit Niyato",
+          "Choong Seon Hong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10935389/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10935389/v1",
+        "title:how portable are llmserving scheduler rankings across workloads operating regions and metrics",
+        "url:https://doi.org/10.21203/rs.3.rs-10935389/v1"
+      ],
+      "record": {
+        "title": "How Portable Are LLM-Serving Scheduler Rankings Across Workloads, Operating Regions, and Metrics?",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10935389/v1",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10935389/v1",
+        "doi": "10.21203/rs.3.rs-10935389/v1",
+        "authors": [
+          "Soroush Vahidi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1371/journal.pone.0357405",
+      "identity_tokens": [
+        "id:DOI:10.1371/journal.pone.0357405",
+        "title:sibot a hybrid framework for finegrained semantic attribution of aigenerated text and its production deployment",
+        "url:https://doi.org/10.1371/journal.pone.0357405"
+      ],
+      "record": {
+        "title": "SiBot: A hybrid framework for fine-grained semantic attribution of AI-generated text and its production deployment",
+        "source_url": "https://doi.org/10.1371/journal.pone.0357405",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "DOI:10.1371/journal.pone.0357405",
+        "doi": "10.1371/journal.pone.0357405",
+        "authors": [
+          "Md. Sadiq Iqbal",
+          "Mohammod Abul Kashem"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09889",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116038",
+        "id:arXiv:2609.09889",
+        "title:leveraging finegrained error correction in korean speech recognition for consultation services",
+        "url:https://doi.org/10.1016/j.engappai.2026.116038"
+      ],
+      "record": {
+        "title": "Leveraging fine-grained error correction in Korean speech recognition for consultation services",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.116038",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.09889",
+        "arxiv_id": "2609.09889",
+        "authors": [
+          "Yonghyun Jun",
+          "Jimin Lee",
+          "Hwan Chang",
+          "Dongho Shin",
+          "Seolah Kim",
+          "Hwanhee Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08368",
+      "identity_tokens": [
+        "id:arXiv:2609.08368",
+        "title:miles v01 productionlevel posttraining",
+        "url:https://arxiv.org/abs/2609.08368"
+      ],
+      "record": {
+        "title": "Miles v0.1: Production-Level Post-Training",
+        "source_url": "https://arxiv.org/abs/2609.08368",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08368",
+        "arxiv_id": "2609.08368",
+        "authors": [
+          "RadixArk",
+          ":",
+          "Tom Chen",
+          "Mao Cheng",
+          "Shi Dong",
+          "Kangrui Du",
+          "Yanbin Jiang",
+          "Jiajun Li",
+          "Yiming Li",
+          "Tao Lin",
+          "Yusheng Su",
+          "Andy Ye",
+          "Yueming Yuan",
+          "Zhichen Zeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08566",
+      "identity_tokens": [
+        "id:arXiv:2609.08566",
+        "title:biomemart biometricaware kv cache memory for multiuser llm agents",
+        "url:https://arxiv.org/abs/2609.08566"
+      ],
+      "record": {
+        "title": "BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.08566",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08566",
+        "arxiv_id": "2609.08566",
+        "authors": [
+          "Yanhong Qian",
+          "何宣莹",
+          "Qingguo Meng",
+          "Shihao Ding",
+          "Xingbo Dong",
+          "Zhe Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08231",
+      "identity_tokens": [
+        "id:arXiv:2609.08231",
+        "title:sembridge compiling consumer observations into crossstack communication plans",
+        "url:https://arxiv.org/abs/2609.08231"
+      ],
+      "record": {
+        "title": "SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans",
+        "source_url": "https://arxiv.org/abs/2609.08231",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08231",
+        "arxiv_id": "2609.08231",
+        "authors": [
+          "Genlang Chen",
+          "Junyi Zhu",
+          "Yuanshan Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10714749/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10714749/v1",
+        "title:dynamic adaptive multimodal graph fusion network for multihazard recognition using remote sensing social media iot and seismic observations",
+        "url:https://doi.org/10.21203/rs.3.rs-10714749/v1"
+      ],
+      "record": {
+        "title": "Dynamic Adaptive Multimodal Graph Fusion Network for Multi-Hazard Recognition Using Remote Sensing, Social Media, IoT, and Seismic Observations",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10714749/v1",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10714749/v1",
+        "doi": "10.21203/rs.3.rs-10714749/v1",
+        "authors": [
+          "Dannuri Mounika",
+          "Johnson Kolluri",
+          "Sunil Srinivas",
+          "Kiran Siripuri"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06691",
+      "identity_tokens": [
+        "id:arXiv:2609.06691",
+        "title:gutenberg taming latencycritical cloud services with neardataprocessing",
+        "url:https://arxiv.org/abs/2609.06691"
+      ],
+      "record": {
+        "title": "Gutenberg: Taming Latency-Critical Cloud Services with Near-Data-Processing",
+        "source_url": "https://arxiv.org/abs/2609.06691",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06691",
+        "arxiv_id": "2609.06691",
+        "authors": [
+          "Qiushi Lin",
+          "Phillip B. Gibbons",
+          "Jovan Stojkovic",
+          "Yiwei Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06749",
+      "identity_tokens": [
+        "id:arXiv:2609.06749",
+        "title:a novel semantic manifold alignment attack against embeddingtoembedding obfuscation in privacypreserving llms",
+        "url:https://arxiv.org/abs/2609.06749"
+      ],
+      "record": {
+        "title": "A Novel Semantic Manifold Alignment Attack against Embedding-to-Embedding Obfuscation in Privacy-Preserving LLMs",
+        "source_url": "https://arxiv.org/abs/2609.06749",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06749",
+        "arxiv_id": "2609.06749",
+        "authors": [
+          "Sicong Li",
+          "Lingfeng Yao",
+          "Xingke Yang",
+          "Ke Tu",
+          "Chenhao Wu",
+          "Hao Wang",
+          "Jiang Liu",
+          "Phone Lin",
+          "Xin Fu",
+          "Miao Pan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:a2e2b8cdaf8615944623fe1cd26a68f678dafec2f424e1940008a701c5c68fbc",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

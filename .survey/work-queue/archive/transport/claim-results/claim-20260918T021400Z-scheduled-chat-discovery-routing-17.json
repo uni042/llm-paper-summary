@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T021400Z-scheduled-chat-discovery-routing-17",
+  "worker_id": "scheduled-chat-discovery-routing",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-a2e0c7f004aa0b3e",
+      "claim_id": "claim-c3837abe3035158dff8a8ff1",
+      "worker_id": "scheduled-chat-discovery-routing",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-c3837abe3035158dff8a8ff1",
+      "claimed_at": "2026-09-18T02:12:02+00:00",
+      "expires_at": "2026-09-18T03:42:02+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-a2e0c7f004aa0b3e"
+      ],
+      "job": {
+        "job_id": "job-research-a2e0c7f004aa0b3e",
+        "type": "research",
+        "parent_job_id": "job-f7a9e21348e7d3cb",
+        "priority": 87,
+        "canonical_id": "arXiv:2511.22333",
+        "title": "PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel",
+        "source_url": "https://arxiv.org/abs/2511.22333",
+        "paper_path": "papers/inference/03-kv-cache/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md",
+        "selection_reason": "Prefix-aware decode-attention kernel reduces repeated shared-prefix KV loads and integrates as a vLLM plugin; reports large attention/TPOT reductions.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T01:07:45+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T02:12:02+00:00",
+  "checkpoint_released": 0
+}

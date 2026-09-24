@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260916T2224Z-scheduled-chat-normal-20260917T0723",
+  "worker_id": "scheduled-chat-normal-20260917T0723",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-411dee2b8db54e04",
+      "claim_id": "claim-9730536bfd6295c896a732be",
+      "worker_id": "scheduled-chat-normal-20260917T0723",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-9730536bfd6295c896a732be",
+      "claimed_at": "2026-09-16T22:28:05+00:00",
+      "expires_at": "2026-09-16T23:58:05+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-411dee2b8db54e04"
+      ],
+      "job": {
+        "job_id": "job-research-411dee2b8db54e04",
+        "type": "research",
+        "parent_job_id": "job-e30ba5725a8a8a2d",
+        "priority": 88,
+        "canonical_id": "arXiv:2406.11674",
+        "title": "Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference",
+        "source_url": "https://arxiv.org/abs/2406.11674",
+        "paper_path": "papers/inference/04-cpu-ssd-offload/2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md",
+        "selection_reason": "CPU memory/SSDからGPUへweightを逐次転送するoffloaded inferenceで、転送が支配的になる問題に対しbitmap-based sparse formatで転送量とdecompression overheadを削減。SSD direct transfer時にOPT-66B 2.25x、Llama2-70B 2.37x高速化を報告しており、offload系統の重要な未収録候補。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T19:01:52+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-16T20:34:23+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-6b1a0ee3dc2a2d685a2203c9"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-6b1a0ee3dc2a2d685a2203c9.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-16T22:28:05+00:00",
+  "checkpoint_released": 0
+}

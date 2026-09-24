@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-00-20260922T160900Z-7c42",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-0bfa5a31fda6f9e8",
+      "claim_id": "claim-153fefa22e4198ce4ffc522b",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-153fefa22e4198ce4ffc522b",
+      "claimed_at": "2026-09-22T16:05:27+00:00",
+      "expires_at": "2026-09-22T17:40:28+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-0bfa5a31fda6f9e8"
+      ],
+      "job": {
+        "job_id": "job-research-0bfa5a31fda6f9e8",
+        "type": "research",
+        "parent_job_id": "job-4d9b4b9bf02ce43f",
+        "priority": 97,
+        "canonical_id": "arXiv:2606.14779",
+        "arxiv_id": "2606.14779",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Unified KV Pooling to Accelerate Long-Context LLM Serving",
+        "source_url": "https://arxiv.org/abs/2606.14779",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2606.14779-unified-kv-pooling-to-accelerate-long-context-llm-serving.md",
+        "selection_reason": "Recent unified KV pooling mechanism targeting long-context LLM serving acceleration; directly relevant to KV-cache memory management.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:25:05+00:00"
+      },
+      "record_bank": "g",
+      "record_bank_root": ".survey/work-queue/records/chat-record-g",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-g/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-g/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-g/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-g/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-g/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T16:05:27+00:00",
+  "checkpoint_released": 0,
+  "heartbeat_at": "2026-09-22T16:10:28+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-40eb7e0c17cbbe4d",
+  "type": "research",
+  "parent_job_id": "job-30b575397d0968eb",
+  "priority": 76,
+  "canonical_id": "arXiv:2511.10676",
+  "title": "Pre-Attention Expert Prediction and Prefetching for Mixture-of-Experts Large Language Models",
+  "source_url": "https://arxiv.org/abs/2511.10676",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-large-language-models.md",
+  "selection_reason": "MoE expert-prefetch method using same-layer pre-attention activations and lightweight ranking-aware predictors, including first-layer prefetch and measured prediction accuracy across DeepSeek/Qwen/Phi MoE models. Relevant to expert prefetch/cache lineage.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-19T10:07:17+00:00"
+}

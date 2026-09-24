@@ -1,0 +1,20 @@
+{
+  "job_id": "job-research-97b8208885471bff",
+  "type": "research",
+  "parent_job_id": "job-ca1a1c24ad6a887a",
+  "priority": 96,
+  "canonical_id": "arXiv:2609.18063",
+  "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+  "source_url": "https://arxiv.org/abs/2609.18063",
+  "paper_path": "papers/inference/02-moe-offload/2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md",
+  "selection_reason": "コンシューマ向け単一マシンで35B級MoEをSSDからストリーミングする推論エンジンEdge0。次層のexpert routingを1 token先に予測する学習済みprerouterをrouting自体として利用し、必要expert集合を事前stageしてSSD I/Oを計算と重ねる。4-bit 35B MoEをpeak active memory 3GiBで20 tok/sと報告し、SSD/NVMe・MoE expert offload・prefetchという重点系統へ直接接続する新着候補。",
+  "status": "completed",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-17T16:58:45+00:00",
+  "completed_at": "2026-09-17T19:37:19+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-d1f7aa5ebc3945e6ec100e5b.json"
+}

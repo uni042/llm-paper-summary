@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-1b188ce32f47e9723ddc14cd-r2",
+  "kind": "research",
+  "attempt_id": "attempt-1b188ce32f47e9723ddc14cd",
+  "job_id": "job-research-199b831b6808fd50",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:2644da1ee1db60d3a69b563a218f7ecc1287bc15bfa69b515630eb76bee63bdb",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "34b68153a6dbcb59e2bb5fc0b32ccaa32b963254"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "9da8e38ca2301d32ec87e8c3ffa08a8327e4625f"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "7e4ecec24c82592e97abad373e537c9576453081"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "910bc733d5bb10d75dfea0299c04e251f36daef3"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "a25043a04d919573d6fefce58eecc92ca8c60458"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2",
+    "手法構成要素#7 の段落数 1 < 2",
+    "手法構成要素#8 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T10:31:53+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md",
+    "status": "FAIL",
+    "file_bytes": 21003,
+    "prose_chars": 5810,
+    "paragraphs": 22,
+    "method_paragraphs": 8,
+    "method_components": 8,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.8269860417025676,
+    "japanese_chars": 4799,
+    "latin_chars": 1004,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2",
+      "手法構成要素#7 の段落数 1 < 2",
+      "手法構成要素#8 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,759 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0529JST-worker00-openalex-admission-19",
+  "collector_id": "worker00-openalex-admission-slo",
+  "run_key": "2026-09-21T05:01:46+09:00",
+  "axis": "OpenAlex recent LLM serving admission control SLO",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20serving%20admission%20control%20SLO%20latency&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzc3NTkzNjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTYwMzI5NzM0J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "501e54aefca26b0ba9d1142474ff5511975e3863",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 43,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 3,
+  "intra_batch_duplicate_filtered_count": 2,
+  "intra_batch_alias_duplicate_filtered_count": 2,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:26:21.459142+00:00",
+  "results": [
+    {
+      "title": "Every-successful-replay route admission changes first-token latency rankings in clinical question answering",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10990749/v1",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10990749/v1",
+      "doi": "10.21203/rs.3.rs-10990749/v1",
+      "authors": [
+        "Rui Li",
+        "Jason Zhao",
+        "Shuang Cao",
+        "Alexandre Duprey",
+        "Ruihua Liu"
+      ]
+    },
+    {
+      "title": "From DevOps to XOps: an agent-driven reference architecture for autonomous enterprise operations",
+      "source_url": "https://doi.org/10.1038/s41598-026-71189-8",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "DOI:10.1038/s41598-026-71189-8",
+      "doi": "10.1038/s41598-026-71189-8",
+      "authors": [
+        "Mete KÖSE",
+        "Ecir Uğur Küçüksille"
+      ]
+    },
+    {
+      "title": "How Portable Are LLM-Serving Scheduler Rankings Across Workloads, Operating Regions, and Metrics?",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10935389/v1",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10935389/v1",
+      "doi": "10.21203/rs.3.rs-10935389/v1",
+      "authors": [
+        "Soroush Vahidi"
+      ]
+    },
+    {
+      "title": "Gutenberg: Taming Latency-Critical Cloud Services with Near-Data-Processing",
+      "source_url": "https://arxiv.org/abs/2609.06691",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06691",
+      "arxiv_id": "2609.06691",
+      "authors": [
+        "Qiushi Lin",
+        "Phillip B. Gibbons",
+        "Jovan Stojkovic",
+        "Yiwei Zhao"
+      ]
+    },
+    {
+      "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+      "source_url": "https://arxiv.org/abs/2609.00643",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "arXiv:2609.00643",
+      "arxiv_id": "2609.00643",
+      "authors": [
+        "Ruoling Qi",
+        "Xuaner Wu",
+        "Penghang Liu",
+        "Jian Chen",
+        "Yirui Liu"
+      ]
+    },
+    {
+      "title": "Self–Optimizing AI data systems: a systematic literature review of CQLE-Aware query optimization, Edge–cloud offloading, Cloud/HPC orchestration, Data–Centric MLOps, and RAG",
+      "source_url": "https://doi.org/10.1007/s10791-026-10515-0",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "DOI:10.1007/s10791-026-10515-0",
+      "doi": "10.1007/s10791-026-10515-0",
+      "authors": [
+        "Chaitanya Ranga Singamaneni",
+        "S. Rakesh"
+      ]
+    },
+    {
+      "title": "Memory as Infrastructure: Reliability Engineering for Persistent Agent Memory in Months-Long LLM-Assisted Development",
+      "source_url": "https://arxiv.org/abs/2609.05510",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "arXiv:2609.05510",
+      "arxiv_id": "2609.05510",
+      "authors": [
+        "Mike Helwig"
+      ]
+    },
+    {
+      "title": "Genetic Fragmentation Gradient Descent: Failure-Constrained Scheduling for GPU-Sharing Clusters",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-8849349/v1",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "DOI:10.21203/rs.3.rs-8849349/v1",
+      "doi": "10.21203/rs.3.rs-8849349/v1",
+      "authors": [
+        "Soeun Choi",
+        "Jaehyeong Sim"
+      ]
+    },
+    {
+      "title": "The Price of Order in Disaggregated Inference",
+      "source_url": "https://arxiv.org/abs/2606.17081",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2606.17081",
+      "arxiv_id": "2606.17081",
+      "authors": [
+        "Athos Georgiou"
+      ]
+    },
+    {
+      "title": "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware",
+      "source_url": "https://arxiv.org/abs/2608.23807",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2608.23807",
+      "arxiv_id": "2608.23807",
+      "authors": [
+        "Farhana Amin",
+        "Sabiha Afroz",
+        "Mona Moghadampanah",
+        "Dimitrios S. Nikolopoulos"
+      ]
+    },
+    {
+      "title": "AI Infrastructure in Space: How Far Can We Go?",
+      "source_url": "https://arxiv.org/abs/2608.21034",
+      "year": 2026,
+      "published": "2026-08-21",
+      "canonical_id": "arXiv:2608.21034",
+      "arxiv_id": "2608.21034",
+      "authors": [
+        "Qing Li",
+        "Qiyang Zhang",
+        "Daliang Xu",
+        "Tianze Huang",
+        "Dingge Zhang",
+        "Yihao Zhao",
+        "Xiaolong Huang",
+        "Jinfeng Wen",
+        "Xiameng Hu",
+        "Tao Qi",
+        "Mengwei Xu",
+        "Shangguang Wang",
+        "Xuanzhe Liu"
+      ]
+    },
+    {
+      "title": "FleetSieve: Decision-Critical Profiling for SLO-Aware LLM Fleet Configuration",
+      "source_url": "https://arxiv.org/abs/2608.19659",
+      "year": 2026,
+      "published": "2026-08-20",
+      "canonical_id": "arXiv:2608.19659",
+      "arxiv_id": "2608.19659",
+      "authors": [
+        "Huang Cheng",
+        "Scott Zhang",
+        "Aubert Li"
+      ]
+    },
+    {
+      "title": "Zetta $ζ$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence",
+      "source_url": "https://arxiv.org/abs/2608.16590",
+      "year": 2026,
+      "published": "2026-08-17",
+      "canonical_id": "arXiv:2608.16590",
+      "arxiv_id": "2608.16590",
+      "authors": [
+        "Xin Ding",
+        "Liang Mi",
+        "Mingzhe Huang",
+        "Zixuan Wang",
+        "Chao Zhang",
+        "Zixu Hao",
+        "Fu Chen",
+        "Xiangyu Li",
+        "Yikai Zheng",
+        "Yaoyu Guo",
+        "Weijun Wang",
+        "Kun Li",
+        "Hao Wu",
+        "Yunxin Liu",
+        "Ting Cao"
+      ]
+    },
+    {
+      "title": "Governed Serverless Automation Ecosystem for AI-Driven Enterprise Integration and Sustainable Cloud Operations",
+      "source_url": "https://doi.org/10.70917/ijcisim-2026-4684",
+      "year": 2026,
+      "published": "2026-08-12",
+      "canonical_id": "DOI:10.70917/ijcisim-2026-4684",
+      "doi": "10.70917/ijcisim-2026-4684",
+      "authors": [
+        "Sridhar Mahadevan"
+      ]
+    },
+    {
+      "title": "Performance and Cost-Aware Cache Provisioning",
+      "source_url": "https://arxiv.org/abs/2608.09820",
+      "year": 2026,
+      "published": "2026-08-10",
+      "canonical_id": "arXiv:2608.09820",
+      "arxiv_id": "2608.09820",
+      "authors": [
+        "Ridwanul Tanvir",
+        "George Kesidis"
+      ]
+    },
+    {
+      "title": "ElastiCo: Elastic Configuration and Interference-Aware Orchestration for GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2608.07971",
+      "year": 2026,
+      "published": "2026-08-08",
+      "canonical_id": "arXiv:2608.07971",
+      "arxiv_id": "2608.07971",
+      "authors": [
+        "Jinghao Wang",
+        "Yihang Zhou",
+        "Xiaoyang Sun",
+        "Chunming Hu",
+        "Tianyu Wo",
+        "Xu Wang",
+        "Albert Y. Zomaya",
+        "Renyu Yang"
+      ]
+    },
+    {
+      "title": "OpenReliOps: A Safety-Constrained Architecture for Autonomous Reliability in Open-Weight Model Services",
+      "source_url": "https://doi.org/10.62225/2583049x.2026.6.4.6707",
+      "year": 2026,
+      "published": "2026-08-06",
+      "canonical_id": "DOI:10.62225/2583049x.2026.6.4.6707",
+      "doi": "10.62225/2583049x.2026.6.4.6707",
+      "authors": [
+        "Prudvi Saisaran Ponduru",
+        "Pavani Priya Vyshnavi Nandanavanam",
+        "Sai Kesav Kumar Ponduru"
+      ]
+    },
+    {
+      "title": "ASGE-RR: Agentic Service Graph Embedding with Revisable Reservations for Dynamic AI-Agent Calls",
+      "source_url": "https://arxiv.org/abs/2608.06033",
+      "year": 2026,
+      "published": "2026-08-06",
+      "canonical_id": "arXiv:2608.06033",
+      "arxiv_id": "2608.06033",
+      "authors": [
+        "Trond Vatten",
+        "Yuming Jiang"
+      ]
+    },
+    {
+      "title": "Token-Burst-Aware Capacity Planning for LLM Inference Services: Request Arrival, Token Demand, and Failure Risk Modeling from BurstGPT Traces",
+      "source_url": "https://doi.org/10.51903/jtie.v5i2.565",
+      "year": 2026,
+      "published": "2026-08-03",
+      "canonical_id": "DOI:10.51903/jtie.v5i2.565",
+      "doi": "10.51903/jtie.v5i2.565",
+      "authors": [
+        "Jiayi Nie",
+        "Yinchen Shi",
+        "Lucas Zhao"
+      ]
+    },
+    {
+      "title": "HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving",
+      "source_url": "https://doi.org/10.48550/arxiv.2608.01785",
+      "year": 2026,
+      "published": "2026-08-03",
+      "canonical_id": "DOI:10.48550/arxiv.2608.01785",
+      "doi": "10.48550/arxiv.2608.01785",
+      "authors": [
+        "Yuning Zhang",
+        "Dong Yuan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10990749/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10990749/v1",
+        "title:everysuccessfulreplay route admission changes firsttoken latency rankings in clinical question answering",
+        "url:https://doi.org/10.21203/rs.3.rs-10990749/v1"
+      ],
+      "record": {
+        "title": "Every-successful-replay route admission changes first-token latency rankings in clinical question answering",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10990749/v1",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10990749/v1",
+        "doi": "10.21203/rs.3.rs-10990749/v1",
+        "authors": [
+          "Rui Li",
+          "Jason Zhao",
+          "Shuang Cao",
+          "Alexandre Duprey",
+          "Ruihua Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s41598-026-71189-8",
+      "identity_tokens": [
+        "id:DOI:10.1038/s41598-026-71189-8",
+        "title:from devops to xops an agentdriven reference architecture for autonomous enterprise operations",
+        "url:https://doi.org/10.1038/s41598-026-71189-8"
+      ],
+      "record": {
+        "title": "From DevOps to XOps: an agent-driven reference architecture for autonomous enterprise operations",
+        "source_url": "https://doi.org/10.1038/s41598-026-71189-8",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "DOI:10.1038/s41598-026-71189-8",
+        "doi": "10.1038/s41598-026-71189-8",
+        "authors": [
+          "Mete KÖSE",
+          "Ecir Uğur Küçüksille"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10935389/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10935389/v1",
+        "title:how portable are llmserving scheduler rankings across workloads operating regions and metrics",
+        "url:https://doi.org/10.21203/rs.3.rs-10935389/v1"
+      ],
+      "record": {
+        "title": "How Portable Are LLM-Serving Scheduler Rankings Across Workloads, Operating Regions, and Metrics?",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10935389/v1",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10935389/v1",
+        "doi": "10.21203/rs.3.rs-10935389/v1",
+        "authors": [
+          "Soroush Vahidi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06691",
+      "identity_tokens": [
+        "id:arXiv:2609.06691",
+        "title:gutenberg taming latencycritical cloud services with neardataprocessing",
+        "url:https://arxiv.org/abs/2609.06691"
+      ],
+      "record": {
+        "title": "Gutenberg: Taming Latency-Critical Cloud Services with Near-Data-Processing",
+        "source_url": "https://arxiv.org/abs/2609.06691",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06691",
+        "arxiv_id": "2609.06691",
+        "authors": [
+          "Qiushi Lin",
+          "Phillip B. Gibbons",
+          "Jovan Stojkovic",
+          "Yiwei Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00643",
+      "identity_tokens": [
+        "id:arXiv:2609.00643",
+        "title:revise validityguided recovery for online revisions in agent workflows",
+        "url:https://arxiv.org/abs/2609.00643"
+      ],
+      "record": {
+        "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+        "source_url": "https://arxiv.org/abs/2609.00643",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "arXiv:2609.00643",
+        "arxiv_id": "2609.00643",
+        "authors": [
+          "Ruoling Qi",
+          "Xuaner Wu",
+          "Penghang Liu",
+          "Jian Chen",
+          "Yirui Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10791-026-10515-0",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10791-026-10515-0",
+        "title:selfoptimizing ai data systems a systematic literature review of cqleaware query optimization edgecloud offloading cloudhpc orchestration datacentric mlops and rag",
+        "url:https://doi.org/10.1007/s10791-026-10515-0"
+      ],
+      "record": {
+        "title": "Self–Optimizing AI data systems: a systematic literature review of CQLE-Aware query optimization, Edge–cloud offloading, Cloud/HPC orchestration, Data–Centric MLOps, and RAG",
+        "source_url": "https://doi.org/10.1007/s10791-026-10515-0",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "DOI:10.1007/s10791-026-10515-0",
+        "doi": "10.1007/s10791-026-10515-0",
+        "authors": [
+          "Chaitanya Ranga Singamaneni",
+          "S. Rakesh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05510",
+      "identity_tokens": [
+        "id:arXiv:2609.05510",
+        "title:memory as infrastructure reliability engineering for persistent agent memory in monthslong llmassisted development",
+        "url:https://arxiv.org/abs/2609.05510"
+      ],
+      "record": {
+        "title": "Memory as Infrastructure: Reliability Engineering for Persistent Agent Memory in Months-Long LLM-Assisted Development",
+        "source_url": "https://arxiv.org/abs/2609.05510",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "arXiv:2609.05510",
+        "arxiv_id": "2609.05510",
+        "authors": [
+          "Mike Helwig"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-8849349/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-8849349/v1",
+        "title:genetic fragmentation gradient descent failureconstrained scheduling for gpusharing clusters",
+        "url:https://doi.org/10.21203/rs.3.rs-8849349/v1"
+      ],
+      "record": {
+        "title": "Genetic Fragmentation Gradient Descent: Failure-Constrained Scheduling for GPU-Sharing Clusters",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-8849349/v1",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "DOI:10.21203/rs.3.rs-8849349/v1",
+        "doi": "10.21203/rs.3.rs-8849349/v1",
+        "authors": [
+          "Soeun Choi",
+          "Jaehyeong Sim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17081",
+      "identity_tokens": [
+        "id:arXiv:2606.17081",
+        "title:the price of order in disaggregated inference",
+        "url:https://arxiv.org/abs/2606.17081"
+      ],
+      "record": {
+        "title": "The Price of Order in Disaggregated Inference",
+        "source_url": "https://arxiv.org/abs/2606.17081",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2606.17081",
+        "arxiv_id": "2606.17081",
+        "authors": [
+          "Athos Georgiou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.23807",
+      "identity_tokens": [
+        "id:arXiv:2608.23807",
+        "title:serving masked diffusion llms characterization and design principles from real hardware",
+        "url:https://arxiv.org/abs/2608.23807"
+      ],
+      "record": {
+        "title": "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware",
+        "source_url": "https://arxiv.org/abs/2608.23807",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2608.23807",
+        "arxiv_id": "2608.23807",
+        "authors": [
+          "Farhana Amin",
+          "Sabiha Afroz",
+          "Mona Moghadampanah",
+          "Dimitrios S. Nikolopoulos"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21034",
+      "identity_tokens": [
+        "id:arXiv:2608.21034",
+        "title:ai infrastructure in space how far can we go",
+        "url:https://arxiv.org/abs/2608.21034"
+      ],
+      "record": {
+        "title": "AI Infrastructure in Space: How Far Can We Go?",
+        "source_url": "https://arxiv.org/abs/2608.21034",
+        "year": 2026,
+        "published": "2026-08-21",
+        "canonical_id": "arXiv:2608.21034",
+        "arxiv_id": "2608.21034",
+        "authors": [
+          "Qing Li",
+          "Qiyang Zhang",
+          "Daliang Xu",
+          "Tianze Huang",
+          "Dingge Zhang",
+          "Yihao Zhao",
+          "Xiaolong Huang",
+          "Jinfeng Wen",
+          "Xiameng Hu",
+          "Tao Qi",
+          "Mengwei Xu",
+          "Shangguang Wang",
+          "Xuanzhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19659",
+      "identity_tokens": [
+        "id:arXiv:2608.19659",
+        "title:fleetsieve decisioncritical profiling for sloaware llm fleet configuration",
+        "url:https://arxiv.org/abs/2608.19659"
+      ],
+      "record": {
+        "title": "FleetSieve: Decision-Critical Profiling for SLO-Aware LLM Fleet Configuration",
+        "source_url": "https://arxiv.org/abs/2608.19659",
+        "year": 2026,
+        "published": "2026-08-20",
+        "canonical_id": "arXiv:2608.19659",
+        "arxiv_id": "2608.19659",
+        "authors": [
+          "Huang Cheng",
+          "Scott Zhang",
+          "Aubert Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.16590",
+      "identity_tokens": [
+        "id:arXiv:2608.16590",
+        "title:zetta ζ an efficient closedloop embodied harness for selfevolving physical intelligence",
+        "url:https://arxiv.org/abs/2608.16590"
+      ],
+      "record": {
+        "title": "Zetta $ζ$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence",
+        "source_url": "https://arxiv.org/abs/2608.16590",
+        "year": 2026,
+        "published": "2026-08-17",
+        "canonical_id": "arXiv:2608.16590",
+        "arxiv_id": "2608.16590",
+        "authors": [
+          "Xin Ding",
+          "Liang Mi",
+          "Mingzhe Huang",
+          "Zixuan Wang",
+          "Chao Zhang",
+          "Zixu Hao",
+          "Fu Chen",
+          "Xiangyu Li",
+          "Yikai Zheng",
+          "Yaoyu Guo",
+          "Weijun Wang",
+          "Kun Li",
+          "Hao Wu",
+          "Yunxin Liu",
+          "Ting Cao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.70917/ijcisim-2026-4684",
+      "identity_tokens": [
+        "id:DOI:10.70917/ijcisim-2026-4684",
+        "title:governed serverless automation ecosystem for aidriven enterprise integration and sustainable cloud operations",
+        "url:https://doi.org/10.70917/ijcisim-2026-4684"
+      ],
+      "record": {
+        "title": "Governed Serverless Automation Ecosystem for AI-Driven Enterprise Integration and Sustainable Cloud Operations",
+        "source_url": "https://doi.org/10.70917/ijcisim-2026-4684",
+        "year": 2026,
+        "published": "2026-08-12",
+        "canonical_id": "DOI:10.70917/ijcisim-2026-4684",
+        "doi": "10.70917/ijcisim-2026-4684",
+        "authors": [
+          "Sridhar Mahadevan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09820",
+      "identity_tokens": [
+        "id:arXiv:2608.09820",
+        "title:performance and costaware cache provisioning",
+        "url:https://arxiv.org/abs/2608.09820"
+      ],
+      "record": {
+        "title": "Performance and Cost-Aware Cache Provisioning",
+        "source_url": "https://arxiv.org/abs/2608.09820",
+        "year": 2026,
+        "published": "2026-08-10",
+        "canonical_id": "arXiv:2608.09820",
+        "arxiv_id": "2608.09820",
+        "authors": [
+          "Ridwanul Tanvir",
+          "George Kesidis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.07971",
+      "identity_tokens": [
+        "id:arXiv:2608.07971",
+        "title:elastico elastic configuration and interferenceaware orchestration for gpu clusters",
+        "url:https://arxiv.org/abs/2608.07971"
+      ],
+      "record": {
+        "title": "ElastiCo: Elastic Configuration and Interference-Aware Orchestration for GPU Clusters",
+        "source_url": "https://arxiv.org/abs/2608.07971",
+        "year": 2026,
+        "published": "2026-08-08",
+        "canonical_id": "arXiv:2608.07971",
+        "arxiv_id": "2608.07971",
+        "authors": [
+          "Jinghao Wang",
+          "Yihang Zhou",
+          "Xiaoyang Sun",
+          "Chunming Hu",
+          "Tianyu Wo",
+          "Xu Wang",
+          "Albert Y. Zomaya",
+          "Renyu Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.62225/2583049x.2026.6.4.6707",
+      "identity_tokens": [
+        "id:DOI:10.62225/2583049x.2026.6.4.6707",
+        "title:openreliops a safetyconstrained architecture for autonomous reliability in openweight model services",
+        "url:https://doi.org/10.62225/2583049x.2026.6.4.6707"
+      ],
+      "record": {
+        "title": "OpenReliOps: A Safety-Constrained Architecture for Autonomous Reliability in Open-Weight Model Services",
+        "source_url": "https://doi.org/10.62225/2583049x.2026.6.4.6707",
+        "year": 2026,
+        "published": "2026-08-06",
+        "canonical_id": "DOI:10.62225/2583049x.2026.6.4.6707",
+        "doi": "10.62225/2583049x.2026.6.4.6707",
+        "authors": [
+          "Prudvi Saisaran Ponduru",
+          "Pavani Priya Vyshnavi Nandanavanam",
+          "Sai Kesav Kumar Ponduru"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06033",
+      "identity_tokens": [
+        "id:arXiv:2608.06033",
+        "title:asgerr agentic service graph embedding with revisable reservations for dynamic aiagent calls",
+        "url:https://arxiv.org/abs/2608.06033"
+      ],
+      "record": {
+        "title": "ASGE-RR: Agentic Service Graph Embedding with Revisable Reservations for Dynamic AI-Agent Calls",
+        "source_url": "https://arxiv.org/abs/2608.06033",
+        "year": 2026,
+        "published": "2026-08-06",
+        "canonical_id": "arXiv:2608.06033",
+        "arxiv_id": "2608.06033",
+        "authors": [
+          "Trond Vatten",
+          "Yuming Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.51903/jtie.v5i2.565",
+      "identity_tokens": [
+        "id:DOI:10.51903/jtie.v5i2.565",
+        "title:tokenburstaware capacity planning for llm inference services request arrival token demand and failure risk modeling from burstgpt traces",
+        "url:https://doi.org/10.51903/jtie.v5i2.565"
+      ],
+      "record": {
+        "title": "Token-Burst-Aware Capacity Planning for LLM Inference Services: Request Arrival, Token Demand, and Failure Risk Modeling from BurstGPT Traces",
+        "source_url": "https://doi.org/10.51903/jtie.v5i2.565",
+        "year": 2026,
+        "published": "2026-08-03",
+        "canonical_id": "DOI:10.51903/jtie.v5i2.565",
+        "doi": "10.51903/jtie.v5i2.565",
+        "authors": [
+          "Jiayi Nie",
+          "Yinchen Shi",
+          "Lucas Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.48550/arxiv.2608.01785",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.01785",
+        "id:arXiv:2608.01785",
+        "title:horizonserve coordinating request scheduling with gpu sharing for omnimodel serving",
+        "url:https://doi.org/10.48550/arxiv.2608.01785"
+      ],
+      "record": {
+        "title": "HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving",
+        "source_url": "https://doi.org/10.48550/arxiv.2608.01785",
+        "year": 2026,
+        "published": "2026-08-03",
+        "canonical_id": "DOI:10.48550/arxiv.2608.01785",
+        "doi": "10.48550/arxiv.2608.01785",
+        "authors": [
+          "Yuning Zhang",
+          "Dong Yuan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:f26dbce0eca0f02bae9c84d1805e61ad65fff54b41c897e61f11035dcb93ac60",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

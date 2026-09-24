@@ -1,0 +1,625 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "worker30-20260921-023117-narrow-cxl-9",
+  "collector_id": "worker30-narrow-cxl-kv",
+  "run_key": "2026-09-21T02:31:17+09:00-worker30",
+  "axis": "rack-scale CXL shared KV follow-up",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=disaggregated%20LLM%20CXL%20shared%20memory%20KV%20cache%20rack-scale&filter=from_publication_date:2025-01-01&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f6bd6b2c02385a4942d934636992abfb0d76d528",
+  "raw_search_result_count": 32,
+  "retrieval_duplicate_filtered_count": 15,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 3,
+  "intra_batch_alias_duplicate_filtered_count": 3,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T17:40:12.543254+00:00",
+  "results": [
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "arXiv:2607.02574",
+      "arxiv_id": "2607.02574",
+      "authors": [
+        "Jie Li",
+        "Tongyang Wang",
+        "Yong Chen"
+      ]
+    },
+    {
+      "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://hdl.handle.net/10919/143438",
+      "year": 2026,
+      "published": "2026-06-16",
+      "canonical_id": "OpenAlex:W7165293849",
+      "authors": [
+        "Dongha Yoon"
+      ]
+    },
+    {
+      "title": "Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation",
+      "source_url": "https://arxiv.org/abs/2606.01725",
+      "year": 2026,
+      "published": "2026-06-01",
+      "canonical_id": "arXiv:2606.01725",
+      "arxiv_id": "2606.01725",
+      "authors": [
+        "Donghwan Kim",
+        "Prakhar Singh",
+        "Younghoon Min",
+        "Jongryool Kim",
+        "Jongse Park",
+        "Kiwan Maeng"
+      ]
+    },
+    {
+      "title": "Cloud-native and Distributed Systems for Efficient and Scalable Large Language Models -- A Research Agenda",
+      "source_url": "https://arxiv.org/abs/2604.17227",
+      "year": 2026,
+      "published": "2026-04-19",
+      "canonical_id": "arXiv:2604.17227",
+      "arxiv_id": "2604.17227",
+      "authors": [
+        "Minxian Xu",
+        "吴劲风",
+        "Shengye Song",
+        "Satish Narayana Srirama",
+        "Bahman Javad",
+        "Rajiv Ranjan",
+        "Devki Nandan Jha",
+        "Sa Wang",
+        "Wenhong Tian",
+        "Huanle Xu",
+        "Li Li",
+        "Zizhao Mo",
+        "Shuo Ren",
+        "Thomas Kunz",
+        "Petar Kochovski",
+        "Vlado Stankovski",
+        "Kejiang Ye",
+        "Chengzhong Xu",
+        "Rajkumar Buyya"
+      ]
+    },
+    {
+      "title": "DisaggKV: Scalable and Disaggregated CXL-PIM Pooling for Multi-Tenant LLM Serving",
+      "source_url": "https://doi.org/10.5281/zenodo.19343622",
+      "year": 2026,
+      "published": "2026-03-31",
+      "canonical_id": "DOI:10.5281/zenodo.19343622",
+      "doi": "10.5281/zenodo.19343622",
+      "authors": [
+        "KAICHEN LI"
+      ]
+    },
+    {
+      "title": "I/O for LLM Inference: A Survey of Storage and Memory Bottlenecks",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-9036613/v1",
+      "year": 2026,
+      "published": "2026-03-19",
+      "canonical_id": "DOI:10.21203/rs.3.rs-9036613/v1",
+      "doi": "10.21203/rs.3.rs-9036613/v1",
+      "authors": [
+        "Rajarshi Chowdhury"
+      ]
+    },
+    {
+      "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
+      "source_url": "http://arxiv.org/abs/2603.10087",
+      "year": 2026,
+      "published": "2026-03-10",
+      "canonical_id": "arXiv:2603.10087",
+      "arxiv_id": "2603.10087",
+      "authors": [
+        "Ruiyang Ma",
+        "Teng Ma",
+        "Zhiyuan Su",
+        "Hantian Zha",
+        "X Zhao",
+        "Xuchun Shang",
+        "Xingrui Yi",
+        "Zheng Liu",
+        "Zhu Cao",
+        "An Wu",
+        "Zhichong Dou",
+        "Ziqian Liu",
+        "Daikang Kuang",
+        "Guojie Luo"
+      ]
+    },
+    {
+      "title": "AI+HW 2035: Shaping the Next Decade",
+      "source_url": "http://arxiv.org/abs/2603.05225",
+      "year": 2026,
+      "published": "2026-03-05",
+      "canonical_id": "arXiv:2603.05225",
+      "arxiv_id": "2603.05225",
+      "authors": [
+        "Deming Chen",
+        "Jason Cong",
+        "Azalia Mirhoseini",
+        "Christos Kozyrakis",
+        "Subhasish Mitra",
+        "Jinjun Xiong",
+        "Cliff Young",
+        "Anima Anandkumar",
+        "Michael Littman",
+        "Aron Kirschen",
+        "Sophia Shao",
+        "Serge Leef",
+        "Naresh R. Shanbhag",
+        "Dejan Milojicic",
+        "Michael Schulte",
+        "Gert Cauwenberghs",
+        "Jerry M. Chow",
+        "Tri Dao",
+        "Kailash Gopalakrishnan",
+        "Richard Ho",
+        "Hoshik Kim",
+        "Kunle Olukotun",
+        "David Z. Pan",
+        "Mark Ren",
+        "Dan Roth",
+        "Aarti Singh",
+        "Yizhou Sun",
+        "Yusu Wang",
+        "Yann Lecun",
+        "Ruchir Puri"
+      ]
+    },
+    {
+      "title": "CCCL: Node-Spanning GPU Collectives with CXL Memory Pooling",
+      "source_url": "https://arxiv.org/abs/2602.22457",
+      "year": 2026,
+      "published": "2026-02-25",
+      "canonical_id": "arXiv:2602.22457",
+      "arxiv_id": "2602.22457",
+      "authors": [
+        "Dong Xu",
+        "Han Meng",
+        "Xinyu Chen",
+        "Dengcheng Zhu",
+        "Wei Tang",
+        "Fei Liu",
+        "Liguang Xie",
+        "Wu Xiang",
+        "Rui Shi",
+        "Yue Li",
+        "Henry Hu",
+        "Hui Zhang",
+        "Jianping Jiang",
+        "Dong Li"
+      ]
+    },
+    {
+      "title": "Survey of storage systems in high performance computing",
+      "source_url": "https://doi.org/10.1007/s42514-025-00268-5",
+      "year": 2025,
+      "published": "2025-12-17",
+      "canonical_id": "DOI:10.1007/s42514-025-00268-5",
+      "doi": "10.1007/s42514-025-00268-5",
+      "authors": [
+        "Gen Zhang",
+        "Zhenlong Song",
+        "Wenzhe Zhang",
+        "Xinhai Chen",
+        "Shan Huang",
+        "Yong Dong"
+      ]
+    },
+    {
+      "title": "LLMServingSim2.0: A Unified Simulator for Heterogeneous Hardware and Serving Techniques in LLM Infrastructure",
+      "source_url": "https://doi.org/10.1109/lca.2025.3628325",
+      "year": 2025,
+      "published": "2025-07-01",
+      "canonical_id": "arXiv:2511.07229",
+      "arxiv_id": "2511.07229",
+      "authors": [
+        "Jaehong Cho",
+        "Hyunmin Choi",
+        "Jongse Park"
+      ]
+    },
+    {
+      "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+      "source_url": "https://arxiv.org/abs/2504.09775",
+      "year": 2025,
+      "published": "2025-04-14",
+      "canonical_id": "arXiv:2504.09775",
+      "arxiv_id": "2504.09775",
+      "authors": [
+        "Abhimanyu Rajeshkumar Bambhaniya",
+        "Hanjiang Wu",
+        "Suvinay Subramanian",
+        "Sudarshan Srinivasan",
+        "Souvik Kundu",
+        "Amir Yazdanbakhsh",
+        "Midhilesh Elavazhagan",
+        "Madhu Kumar",
+        "Yu, Minlan",
+        "Raychowdhury, Arijit",
+        "Tushar Krishna"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02574",
+      "identity_tokens": [
+        "id:arXiv:2607.02574",
+        "title:from tensor buffer to distributed memory hierarchy a survey of kv cache management for llm serving",
+        "url:https://arxiv.org/abs/2607.02574"
+      ],
+      "record": {
+        "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.02574",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "arXiv:2607.02574",
+        "arxiv_id": "2607.02574",
+        "authors": [
+          "Jie Li",
+          "Tongyang Wang",
+          "Yong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7165293849",
+      "identity_tokens": [
+        "id:OpenAlex:W7165293849",
+        "title:disaggregated llm serving with cxl shared memory kv cache at rackscale",
+        "url:https://hdl.handle.net/10919/143438"
+      ],
+      "record": {
+        "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+        "source_url": "https://hdl.handle.net/10919/143438",
+        "year": 2026,
+        "published": "2026-06-16",
+        "canonical_id": "OpenAlex:W7165293849",
+        "authors": [
+          "Dongha Yoon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01725",
+      "identity_tokens": [
+        "id:arXiv:2606.01725",
+        "title:characterization of multimodel agentic ai systems on general tasks via tracedriven simulation",
+        "url:https://arxiv.org/abs/2606.01725"
+      ],
+      "record": {
+        "title": "Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation",
+        "source_url": "https://arxiv.org/abs/2606.01725",
+        "year": 2026,
+        "published": "2026-06-01",
+        "canonical_id": "arXiv:2606.01725",
+        "arxiv_id": "2606.01725",
+        "authors": [
+          "Donghwan Kim",
+          "Prakhar Singh",
+          "Younghoon Min",
+          "Jongryool Kim",
+          "Jongse Park",
+          "Kiwan Maeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.17227",
+      "identity_tokens": [
+        "id:arXiv:2604.17227",
+        "title:cloudnative and distributed systems for efficient and scalable large language models a research agenda",
+        "url:https://arxiv.org/abs/2604.17227"
+      ],
+      "record": {
+        "title": "Cloud-native and Distributed Systems for Efficient and Scalable Large Language Models -- A Research Agenda",
+        "source_url": "https://arxiv.org/abs/2604.17227",
+        "year": 2026,
+        "published": "2026-04-19",
+        "canonical_id": "arXiv:2604.17227",
+        "arxiv_id": "2604.17227",
+        "authors": [
+          "Minxian Xu",
+          "吴劲风",
+          "Shengye Song",
+          "Satish Narayana Srirama",
+          "Bahman Javad",
+          "Rajiv Ranjan",
+          "Devki Nandan Jha",
+          "Sa Wang",
+          "Wenhong Tian",
+          "Huanle Xu",
+          "Li Li",
+          "Zizhao Mo",
+          "Shuo Ren",
+          "Thomas Kunz",
+          "Petar Kochovski",
+          "Vlado Stankovski",
+          "Kejiang Ye",
+          "Chengzhong Xu",
+          "Rajkumar Buyya"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5281/zenodo.19343622",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.19343622",
+        "title:disaggkv scalable and disaggregated cxlpim pooling for multitenant llm serving",
+        "url:https://doi.org/10.5281/zenodo.19343622"
+      ],
+      "record": {
+        "title": "DisaggKV: Scalable and Disaggregated CXL-PIM Pooling for Multi-Tenant LLM Serving",
+        "source_url": "https://doi.org/10.5281/zenodo.19343622",
+        "year": 2026,
+        "published": "2026-03-31",
+        "canonical_id": "DOI:10.5281/zenodo.19343622",
+        "doi": "10.5281/zenodo.19343622",
+        "authors": [
+          "KAICHEN LI"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-9036613/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-9036613/v1",
+        "title:io for llm inference a survey of storage and memory bottlenecks",
+        "url:https://doi.org/10.21203/rs.3.rs-9036613/v1"
+      ],
+      "record": {
+        "title": "I/O for LLM Inference: A Survey of Storage and Memory Bottlenecks",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-9036613/v1",
+        "year": 2026,
+        "published": "2026-03-19",
+        "canonical_id": "DOI:10.21203/rs.3.rs-9036613/v1",
+        "doi": "10.21203/rs.3.rs-9036613/v1",
+        "authors": [
+          "Rajarshi Chowdhury"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.10087",
+      "identity_tokens": [
+        "id:arXiv:2603.10087",
+        "title:pooling engram conditional memory in large language models using cxl",
+        "url:http://arxiv.org/abs/2603.10087"
+      ],
+      "record": {
+        "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
+        "source_url": "http://arxiv.org/abs/2603.10087",
+        "year": 2026,
+        "published": "2026-03-10",
+        "canonical_id": "arXiv:2603.10087",
+        "arxiv_id": "2603.10087",
+        "authors": [
+          "Ruiyang Ma",
+          "Teng Ma",
+          "Zhiyuan Su",
+          "Hantian Zha",
+          "X Zhao",
+          "Xuchun Shang",
+          "Xingrui Yi",
+          "Zheng Liu",
+          "Zhu Cao",
+          "An Wu",
+          "Zhichong Dou",
+          "Ziqian Liu",
+          "Daikang Kuang",
+          "Guojie Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.05225",
+      "identity_tokens": [
+        "id:arXiv:2603.05225",
+        "title:aihw 2035 shaping the next decade",
+        "url:http://arxiv.org/abs/2603.05225"
+      ],
+      "record": {
+        "title": "AI+HW 2035: Shaping the Next Decade",
+        "source_url": "http://arxiv.org/abs/2603.05225",
+        "year": 2026,
+        "published": "2026-03-05",
+        "canonical_id": "arXiv:2603.05225",
+        "arxiv_id": "2603.05225",
+        "authors": [
+          "Deming Chen",
+          "Jason Cong",
+          "Azalia Mirhoseini",
+          "Christos Kozyrakis",
+          "Subhasish Mitra",
+          "Jinjun Xiong",
+          "Cliff Young",
+          "Anima Anandkumar",
+          "Michael Littman",
+          "Aron Kirschen",
+          "Sophia Shao",
+          "Serge Leef",
+          "Naresh R. Shanbhag",
+          "Dejan Milojicic",
+          "Michael Schulte",
+          "Gert Cauwenberghs",
+          "Jerry M. Chow",
+          "Tri Dao",
+          "Kailash Gopalakrishnan",
+          "Richard Ho",
+          "Hoshik Kim",
+          "Kunle Olukotun",
+          "David Z. Pan",
+          "Mark Ren",
+          "Dan Roth",
+          "Aarti Singh",
+          "Yizhou Sun",
+          "Yusu Wang",
+          "Yann Lecun",
+          "Ruchir Puri"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.22457",
+      "identity_tokens": [
+        "id:arXiv:2602.22457",
+        "title:cccl nodespanning gpu collectives with cxl memory pooling",
+        "url:https://arxiv.org/abs/2602.22457"
+      ],
+      "record": {
+        "title": "CCCL: Node-Spanning GPU Collectives with CXL Memory Pooling",
+        "source_url": "https://arxiv.org/abs/2602.22457",
+        "year": 2026,
+        "published": "2026-02-25",
+        "canonical_id": "arXiv:2602.22457",
+        "arxiv_id": "2602.22457",
+        "authors": [
+          "Dong Xu",
+          "Han Meng",
+          "Xinyu Chen",
+          "Dengcheng Zhu",
+          "Wei Tang",
+          "Fei Liu",
+          "Liguang Xie",
+          "Wu Xiang",
+          "Rui Shi",
+          "Yue Li",
+          "Henry Hu",
+          "Hui Zhang",
+          "Jianping Jiang",
+          "Dong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s42514-025-00268-5",
+      "identity_tokens": [
+        "id:DOI:10.1007/s42514-025-00268-5",
+        "title:survey of storage systems in high performance computing",
+        "url:https://doi.org/10.1007/s42514-025-00268-5"
+      ],
+      "record": {
+        "title": "Survey of storage systems in high performance computing",
+        "source_url": "https://doi.org/10.1007/s42514-025-00268-5",
+        "year": 2025,
+        "published": "2025-12-17",
+        "canonical_id": "DOI:10.1007/s42514-025-00268-5",
+        "doi": "10.1007/s42514-025-00268-5",
+        "authors": [
+          "Gen Zhang",
+          "Zhenlong Song",
+          "Wenzhe Zhang",
+          "Xinhai Chen",
+          "Shan Huang",
+          "Yong Dong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.07229",
+      "identity_tokens": [
+        "id:DOI:10.1109/lca.2025.3628325",
+        "id:arXiv:2511.07229",
+        "title:llmservingsim20 a unified simulator for heterogeneous hardware and serving techniques in llm infrastructure",
+        "url:https://doi.org/10.1109/lca.2025.3628325"
+      ],
+      "record": {
+        "title": "LLMServingSim2.0: A Unified Simulator for Heterogeneous Hardware and Serving Techniques in LLM Infrastructure",
+        "source_url": "https://doi.org/10.1109/lca.2025.3628325",
+        "year": 2025,
+        "published": "2025-07-01",
+        "canonical_id": "arXiv:2511.07229",
+        "arxiv_id": "2511.07229",
+        "authors": [
+          "Jaehong Cho",
+          "Hyunmin Choi",
+          "Jongse Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.09775",
+      "identity_tokens": [
+        "id:arXiv:2504.09775",
+        "title:mist a codesign framework for heterogeneous multistage llm inference",
+        "url:https://arxiv.org/abs/2504.09775"
+      ],
+      "record": {
+        "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+        "source_url": "https://arxiv.org/abs/2504.09775",
+        "year": 2025,
+        "published": "2025-04-14",
+        "canonical_id": "arXiv:2504.09775",
+        "arxiv_id": "2504.09775",
+        "authors": [
+          "Abhimanyu Rajeshkumar Bambhaniya",
+          "Hanjiang Wu",
+          "Suvinay Subramanian",
+          "Sudarshan Srinivasan",
+          "Souvik Kundu",
+          "Amir Yazdanbakhsh",
+          "Midhilesh Elavazhagan",
+          "Madhu Kumar",
+          "Yu, Minlan",
+          "Raychowdhury, Arijit",
+          "Tushar Krishna"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:cab234e7afbeee08ce30d239717b56151cfff68f4aba382b46d714d5775ae3b9",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

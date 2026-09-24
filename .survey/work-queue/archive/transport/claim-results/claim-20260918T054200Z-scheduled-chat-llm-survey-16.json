@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T054200Z-scheduled-chat-llm-survey-16",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-a2e0c7f004aa0b3e",
+      "claim_id": "claim-5b5769ffc299e3f095219b3d",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-5b5769ffc299e3f095219b3d",
+      "claimed_at": "2026-09-18T05:37:58+00:00",
+      "expires_at": "2026-09-18T07:07:58+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-a2e0c7f004aa0b3e"
+      ],
+      "job": {
+        "job_id": "job-research-a2e0c7f004aa0b3e",
+        "type": "research",
+        "parent_job_id": "job-f7a9e21348e7d3cb",
+        "priority": 87,
+        "canonical_id": "arXiv:2511.22333",
+        "title": "PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel",
+        "source_url": "https://arxiv.org/abs/2511.22333",
+        "paper_path": "papers/inference/03-kv-cache/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md",
+        "selection_reason": "Prefix-aware decode-attention kernel reduces repeated shared-prefix KV loads and integrates as a vLLM plugin; reports large attention/TPOT reductions.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T01:07:45+00:00",
+        "blocker": "一次資料の複数経路を確認した。検索サービス経由ではarXiv公式abstract（arXiv:2511.22333）の書誌・抄録を取得でき、ASPLOS 2026公式programで採択・著者情報、著者公式GitHub（flashserve/PAT）で実装公開とvLLM plugin情報も確認できた。しかしこの実行環境ではarXiv公式PDF/HTMLの全文を安全に取得できず、ACM/ASPLOS側からも論文本文そのものには到達できなかった。alphaXiv等の二次的長文解説には評価詳細があるが、一次資料全文ではないため5-slotの科学的内容を補完していない。このattemptは一時的なprimary-source full-text retrieval failureとしてblockedで耐久保存し、全文未読の5-slotは生成しない。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-c3837abe3035158dff8a8ff1.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-18T02:12:39+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-18T02:12:39+00:00",
+            "reason": "一次資料の複数経路を確認した。検索サービス経由ではarXiv公式abstract（arXiv:2511.22333）の書誌・抄録を取得でき、ASPLOS 2026公式programで採択・著者情報、著者公式GitHub（flashserve/PAT）で実装公開とvLLM plugin情報も確認できた。しかしこの実行環境ではarXiv公式PDF/HTMLの全文を安全に取得できず、ACM/ASPLOS側からも論文本文そのものには到達できなかった。alphaXiv等の二次的長文解説には評価詳細があるが、一次資料全文ではないため5-slotの科学的内容を補完していない。このattemptは一時的なprimary-source full-text retrieval failureとしてblockedで耐久保存し、全文未読の5-slotは生成しない。"
+          }
+        ],
+        "last_blocked_at": "2026-09-18T02:12:39+00:00",
+        "retry_queued_at": "2026-09-18T05:05:14+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T05:37:58+00:00",
+  "checkpoint_released": 0
+}

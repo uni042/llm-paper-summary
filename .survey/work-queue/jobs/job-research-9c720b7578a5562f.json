@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-9c720b7578a5562f",
+  "type": "research",
+  "parent_job_id": "job-1fb14d0d69f9c4dc",
+  "priority": 90,
+  "canonical_id": "arXiv:2604.21026",
+  "arxiv_id": "2604.21026",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "MCAP: Deployment-Time Layer Profiling for Memory-Constrained LLM Inference",
+  "source_url": "https://www.semanticscholar.org/paper/9b42bc4f140b729a22d376bd8c027cd49e304fa1",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2604.21026-mcap-deployment-time-layer-profiling-for-memory-constrained-llm-inference.md",
+  "selection_reason": "deployment時layer profilingからW4A8/W4A16とGPU/RAM/SSD residencyを同時決定し、T4でllama.cpp Q4_0比1.5–1.8倍decode throughputを報告するため、階層メモリ・SSDオフロード重点系統へ直接寄与する。",
+  "priority_breakdown": {
+    "base": 55,
+    "lineage": 20,
+    "recency": 15,
+    "venue": 0,
+    "total": 90
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T22:39:48+00:00"
+}

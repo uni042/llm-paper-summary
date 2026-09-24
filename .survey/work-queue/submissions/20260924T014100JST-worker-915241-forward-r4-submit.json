@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "worker-915241",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1109/EEI70303.2026.11640499",
+      "doi": "10.1109/EEI70303.2026.11640499",
+      "title": "PMKS: Co-Designing Distributed Networking and Multi-Tier Storage for Ultra-Long Context LLM Inference",
+      "source_url": "https://doi.org/10.1109/EEI70303.2026.11640499",
+      "priority": 94,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 4,
+        "total": 94
+      },
+      "reason": "PMKS explicitly tiers KV state across GPU VRAM, host RAM, local NVMe SSD and RDMA-connected remote storage with asynchronous predictive prefetch, directly extending hierarchical-memory and storage-backed long-context inference lineages."
+    },
+    {
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00035",
+      "doi": "10.1109/2575-8411.2026.00035",
+      "title": "KV Cache Reuse for Elastic LLM Inference on Edge Devices",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00035",
+      "priority": 91,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 4,
+        "total": 91
+      },
+      "reason": "ElastKV reuses mixed-precision KV caches by selectively recomputing high-impact entries, directly connecting elastic on-device inference, quantization and KV-cache reuse."
+    },
+    {
+      "canonical_id": "arXiv:2606.09441",
+      "arxiv_id": "2606.09441",
+      "title": "SIFT: Selective-Index For Fast Compute of RAG Prefill by Exploiting Attention Invariance",
+      "source_url": "https://arxiv.org/abs/2606.09441",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "SIFT replaces stored document KV tensors with compact attention-location indexes and sparse prefill computation, directly updating RAG prefill, KV reuse and storage-transfer bottleneck lineages."
+    },
+    {
+      "canonical_id": "arXiv:2604.16864",
+      "arxiv_id": "2604.16864",
+      "title": "HieraSparse: Hierarchical Semi-Structured Sparse KV Attention",
+      "source_url": "https://arxiv.org/abs/2604.16864",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "HieraSparse couples hierarchical KV pruning with semi-structured sparse GPU kernels across prefill and decode, directly extending sparse-attention and KV-cache compression lineages."
+    },
+    {
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00033",
+      "doi": "10.1109/2575-8411.2026.00033",
+      "title": "Efficient KV Cache Migration for Geo-Distributed LLM Inference in Collaborative Edge Computing",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00033",
+      "priority": 91,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 4,
+        "total": 91
+      },
+      "reason": "EdgeFlow jointly uses direct KV transmission and activation-based recomputation to migrate state across heterogeneous geo-distributed edge servers, directly extending KV migration, disaggregated serving and edge-inference lineages."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "20260924T014100JST-worker-915241-forward-r4",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T014100JST-worker-915241-forward-r4.json",
+    "receipt": "sha256:f3d22ec1c790d961f3d1a5cd74096e1a4dd7c59decfe37937ecedc29d8c2084e"
+  },
+  "discovery_stats": {
+    "run_key": "adhoc-20260924T014100JST-worker-915241",
+    "round": "20260924T014100JST-worker-915241-forward-r4",
+    "axis": "forward citations of KVLink efficient KV cache reuse",
+    "query_summary": "Forward citations of KVLink from the claimed Semantic Scholar preload window, re-filtered against the current identity snapshot and topped up from the same fixed source.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "DOI:10.1109/EEI70303.2026.11640499",
+      "DOI:10.1109/2575-8411.2026.00035",
+      "arXiv:2606.09441",
+      "arXiv:2604.16864",
+      "DOI:10.1109/2575-8411.2026.00033"
+    ],
+    "seed_canonical_id": "arXiv:2502.16002",
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}

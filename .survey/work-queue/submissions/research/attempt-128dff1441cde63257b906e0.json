@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-128dff1441cde63257b906e0",
+  "job_id": "job-research-03793bd297310cea",
+  "claim_id": "claim-128dff1441cde63257b906e0",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "Primary full text remains unavailable after retrying the official arXiv routes. Both https://arxiv.org/html/2609.15636 and https://arxiv.org/pdf/2609.15636 return DisabledError in this environment. Fresh search resolves the official arXiv identity/abstract but only third-party summaries or mirrors beyond that; no authoritative full paper body was safely retrievable. No five-slot record was synthesized from abstracts or secondary material.",
+  "blocked_at": "2026-09-22T00:34:30Z",
+  "retrieval_evidence": [
+    "Official arXiv HTML route returned DisabledError.",
+    "Official arXiv PDF route returned DisabledError.",
+    "Fresh search found only abstract metadata and third-party summaries/mirrors, which were not used as full-text substitutes."
+  ]
+}

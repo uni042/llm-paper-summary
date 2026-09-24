@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-30-20260922t123147z-a31f72",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-c449ea471528f1b0",
+      "claim_id": "claim-01556e847caec9153595855e",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-01556e847caec9153595855e",
+      "claimed_at": "2026-09-22T11:35:43+00:00",
+      "expires_at": "2026-09-22T14:02:20+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-c449ea471528f1b0"
+      ],
+      "job": {
+        "job_id": "job-research-c449ea471528f1b0",
+        "type": "research",
+        "parent_job_id": "job-c44a110e87a6bd80",
+        "priority": 98,
+        "canonical_id": "arXiv:2609.17109",
+        "arxiv_id": "2609.17109",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs",
+        "source_url": "https://www.semanticscholar.org/paper/9b998f8a02c4bb92a679ad3c113bfda69dd9cdf0",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17109-shared-prefix-kv-reuse-across-standard-lora-adapters-quality-and-serving-tradeoffs.md",
+        "selection_reason": "複数LoRA specialistでbase prefill KVを再利用する実serving tradeoffを測定し8Kでwarm-cache TTFT約16倍改善。物理共有されない場合のmemory-saving限界も明示。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:20:28+00:00"
+      },
+      "record_bank": "g"
+    }
+  ],
+  "processed_at": "2026-09-22T12:32:20+00:00",
+  "reason": "resumed active unsubmitted claim",
+  "checkpoint_released": 0
+}

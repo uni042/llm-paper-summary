@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2402.12374",
+      "title": "Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2402.12374",
+      "paper_path": "papers/inference/99-other-inference-systems/2024-2402.12374-sequoia-scalable-robust-hardware-aware-speculative-decoding.md",
+      "priority": 91,
+      "reason": "投機的復号の木構造を動的計画法で最適化し、ハードウェア実測コストに応じて木サイズと深さを選択する。A100で最大4.04倍、L40のオフロード条件ではLlama2-70Bを0.56秒/tokenまで短縮しており、推論高速化とオフロードの双方に直接関連する。"
+    },
+    {
+      "canonical_id": "arXiv:2211.10438",
+      "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2211.10438",
+      "paper_path": "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-efficient-post-training-quantization.md",
+      "priority": 88,
+      "reason": "活性値の外れ値を重み側へ数学的に等価変換して移し、学習なしでW8A8量子化を実現する。OPT-175B等の大規模LLMで精度をほぼ維持しつつ最大1.56倍高速化・メモリ半減を報告しており、推論時メモリと計算効率の基礎技術として重要。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-21T05:58:48+09:00",
+    "round": "hourly00-backward-01",
+    "axis": "repository-wide structured references for LLM inference systems",
+    "query_summary": "repository_references schema v3で未評価参照20件を取得し、precheckでevaluation_allowed=trueの候補だけを軽量評価。既知・重複はprecheckで早期除外し、推論システムへの直接性と実測効果が強い2件を採用した。",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "forward citationの独立軸へ移り、同一structured-reference取得の反復を避ける",
+    "empty_round_reason": null,
+    "search_windows": [{"topic":"structured-references","source":"repository_references","date_range":"repository-wide","category":"inference-systems","citation_direction":"backward","query_family":"structured-reference-curation","raw_result_count":20,"unseen_result_count":20,"duplicate_filtered_count":0,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":2,"position":"offset-640"}]
+  }
+}

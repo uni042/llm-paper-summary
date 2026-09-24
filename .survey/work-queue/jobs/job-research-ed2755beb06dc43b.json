@@ -1,0 +1,37 @@
+{
+  "job_id": "job-research-ed2755beb06dc43b",
+  "type": "research",
+  "parent_job_id": "job-b5bf583e62ddd130",
+  "priority": 96,
+  "canonical_id": "DOI:10.1016/j.neunet.2026.109469",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "DR-EFT: Exploring and reloading domain-representative experts for the memory-constrained fine-tuning of MoE large models",
+  "source_url": "https://doi.org/10.1016/j.neunet.2026.109469",
+  "paper_path": "papers/training/01-training-offload-memory-systems/2026-dr-eft-domain-representative-expert-finetuning.md",
+  "selection_reason": "domain代表expertだけをロード・学習し、MoE微調整のmemory consumptionを約50%削減する。secondary relevant expertsまで含めるexpert subset設計が特徴で、メモリ制約下MoE学習へ直接接続する。",
+  "status": "blocked",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T12:57:49+00:00",
+  "completed_at": "2026-09-22T20:27:31+00:00",
+  "blocker": "一次資料全文を取得できないため。DOI/出版社経路は本文取得不能、PubMedは書誌・抄録のみ。タイトル・著者・DOIで著者配布版/公開一次全文を探索したが確認できず、検索断片や第三者要約から5スロットを推測しない。取得不能は一時状態として再試行対象にする。",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-dcccc1ab08c3632dc84e3e6e.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T20:27:31+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T20:27:31+00:00",
+      "reason": "一次資料全文を取得できないため。DOI/出版社経路は本文取得不能、PubMedは書誌・抄録のみ。タイトル・著者・DOIで著者配布版/公開一次全文を探索したが確認できず、検索断片や第三者要約から5スロットを推測しない。取得不能は一時状態として再試行対象にする。"
+    }
+  ],
+  "first_blocked_at": "2026-09-22T20:27:31+00:00",
+  "last_blocked_at": "2026-09-22T20:27:31+00:00",
+  "retry_not_before": "2026-09-29T22:55:02+00:00"
+}

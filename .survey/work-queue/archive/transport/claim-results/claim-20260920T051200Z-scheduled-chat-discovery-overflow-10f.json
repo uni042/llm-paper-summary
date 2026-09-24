@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T051200Z-scheduled-chat-discovery-overflow-10f",
+  "worker_id": "scheduled-chat-discovery-overflow",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-3ee76817e29cd5c6",
+      "claim_id": "claim-70a666fee11f193ab86cf1e3",
+      "worker_id": "scheduled-chat-discovery-overflow",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-70a666fee11f193ab86cf1e3",
+      "claimed_at": "2026-09-20T05:11:05+00:00",
+      "expires_at": "2026-09-20T06:41:05+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-3ee76817e29cd5c6"
+      ],
+      "job": {
+        "job_id": "job-research-3ee76817e29cd5c6",
+        "type": "research",
+        "parent_job_id": "job-fa9e3ba772afe5d8",
+        "priority": 97,
+        "canonical_id": "arXiv:2404.19429",
+        "arxiv_id": "2404.19429",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping",
+        "source_url": "https://arxiv.org/abs/2404.19429",
+        "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md",
+        "selection_reason": "Compiler-based MoE training system that overlaps all-to-all communication with computation across the whole training graph.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T04:01:36+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "problem_method.components[4].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-20T05:10:37+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-4153e066ad5dce9da5473686"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-4153e066ad5dce9da5473686.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T05:11:05+00:00",
+  "checkpoint_released": 0
+}

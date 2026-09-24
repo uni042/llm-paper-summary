@@ -1,0 +1,1122 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-adaptive-max-20260920-xmoe-refs",
+  "collector_id": "manual-user-adaptive-max-xmoe-refs",
+  "run_key": "manual-user-adaptive-max-2026-09-20-backrefs",
+  "axis": "explicit user request: backward references of Adaptive Expert Computation / Compression seed arXiv:2403.18926 (XMoE references)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2403.18926/references",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "eebc8d97f38ca6d8fe0983c0b673e9c98a330447",
+  "raw_search_result_count": 29,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 26,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:59:58.838892+00:00",
+  "results": [
+    {
+      "title": "OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/37ac7683543f0e039197a56e71e752a9ebe5998e",
+      "year": 2024,
+      "published": "2024-01-29",
+      "abstract": "To help the open-source community have a better understanding of Mixture-of-Experts (MoE) based large language models (LLMs), we train and release OpenMoE, a series of fully open-sourced and reproducible decoder-only MoE LLMs, ranging from 650M to 34B parameters and trained on up to over 1T tokens. Our investigation confirms that MoE-based LLMs can offer a more favorable cost-effectiveness trade-off than dense LLMs, highlighting the potential effectiveness for future LLM development. One more important contribution of this study is an in-depth analysis of the routing mechanisms within our OpenMoE models, leading to three significant findings: Context-Independent Specialization, Early Routing Learning, and Drop-towards-the-End. We discovered that routing decisions in MoE models are predominantly based on token IDs, with minimal context relevance. The token-to-expert assignments are determined early in the pre-training phase and remain largely unchanged. This imperfect routing can result in performance degradation, particularly in sequential tasks like multi-turn conversations, where tokens appearing later in a sequence are more likely to be dropped. Finally, we rethink our design based on the above-mentioned observations and analysis. To facilitate future MoE LLM development, we propose potential strategies for mitigating the issues we found and further improving off-the-shelf MoE LLM designs.",
+      "canonical_id": "arXiv:2402.01739",
+      "arxiv_id": "2402.01739",
+      "authors": [
+        "Fuzhao Xue",
+        "Zian Andy Zheng",
+        "Yao Fu",
+        "Jinjie Ni",
+        "Zangwei Zheng",
+        "Wangchunshu Zhou",
+        "Yang You"
+      ]
+    },
+    {
+      "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/16d6e1ed1cf72212f6154644f3aa59d18bc95fda",
+      "year": 2024,
+      "published": "2024-01-11",
+      "abstract": "In the era of large language models, Mixture-of-Experts (MoE) is a promising architecture for managing computational costs when scaling up model parameters. However, conventional MoE architectures like GShard, which activate the top-$K$ out of $N$ experts, face challenges in ensuring expert specialization, i.e. each expert acquires non-overlapping and focused knowledge. In response, we propose the DeepSeekMoE architecture towards ultimate expert specialization. It involves two principal strategies: (1) finely segmenting the experts into $mN$ ones and activating $mK$ from them, allowing for a more flexible combination of activated experts; (2) isolating $K_s$ experts as shared ones, aiming at capturing common knowledge and mitigating redundancy in routed experts. Starting from a modest scale with 2B parameters, we demonstrate that DeepSeekMoE 2B achieves comparable performance with GShard 2.9B, which has 1.5 times the expert parameters and computation. In addition, DeepSeekMoE 2B nearly approaches the performance of its dense counterpart with the same number of total parameters, which set the upper bound of MoE models. Subsequently, we scale up DeepSeekMoE to 16B parameters and show that it achieves comparable performance with LLaMA2 7B, with only about 40% of computations. Further, our preliminary efforts to scale up DeepSeekMoE to 145B parameters consistently validate its substantial advantages over the GShard architecture, and show its performance comparable with DeepSeek 67B, using only 28.5% (maybe even 18.2%) of computations.",
+      "canonical_id": "arXiv:2401.06066",
+      "arxiv_id": "2401.06066",
+      "authors": [
+        "Damai Dai",
+        "C. Deng",
+        "Cheng-Gang Zhao",
+        "R. X. Xu",
+        "Hua-Zuo Gao",
+        "Deli Chen",
+        "Jia-Shi Li",
+        "Wangding Zeng",
+        "Xing-Kai Yu",
+        "Yu Wu",
+        "Zhen-Da Xie",
+        "Y. K. Li",
+        "Pan-Pan Huang",
+        "Fuli Luo",
+        "C. Ruan",
+        "Zhifang Sui",
+        "W. Liang"
+      ]
+    },
+    {
+      "title": "From Sparse to Soft Mixtures of Experts",
+      "source_url": "https://www.semanticscholar.org/paper/2edccb8fa562ed52cd49ea6fc67ed32db6218247",
+      "year": 2023,
+      "published": "2023-08-02",
+      "abstract": "Sparse mixture of expert architectures (MoEs) scale model capacity without significant increases in training or inference costs. Despite their success, MoEs suffer from a number of issues: training instability, token dropping, inability to scale the number of experts, or ineffective finetuning. In this work, we propose Soft MoE, a fully-differentiable sparse Transformer that addresses these challenges, while maintaining the benefits of MoEs. Soft MoE performs an implicit soft assignment by passing different weighted combinations of all input tokens to each expert. As in other MoEs, experts in Soft MoE only process a subset of the (combined) tokens, enabling larger model capacity (and performance) at lower inference cost. In the context of visual recognition, Soft MoE greatly outperforms dense Transformers (ViTs) and popular MoEs (Tokens Choice and Experts Choice). Furthermore, Soft MoE scales well: Soft MoE Huge/14 with 128 experts in 16 MoE layers has over 40x more parameters than ViT Huge/14, with only 2% increased inference time, and substantially better quality.",
+      "canonical_id": "arXiv:2308.00951",
+      "arxiv_id": "2308.00951",
+      "authors": [
+        "J. Puigcerver",
+        "C. Riquelme",
+        "Basil Mustafa",
+        "N. Houlsby"
+      ]
+    },
+    {
+      "title": "Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers",
+      "source_url": "https://www.semanticscholar.org/paper/1462a0e5b7db47301bb0995db56426e1f4a0ac7d",
+      "year": 2023,
+      "published": "2023-03-02",
+      "abstract": "Despite their remarkable achievement, gigantic transformers encounter significant drawbacks, including exorbitant computational and memory footprints during training, as well as severe collapse evidenced by a high degree of parameter redundancy. Sparsely-activated Mixture-of-Experts (SMoEs) have shown promise to mitigate the issue of training efficiency, yet they are prone to (1) redundant experts due to representational collapse; and (2) poor expert scalability for inference and downstream fine-tuning, primarily due to overfitting of the learned routing policy to the number of activated experts during training. As recent research efforts are predominantly focused on improving routing policies to encourage expert specializations, this work focuses on exploring the overlooked scalability bottleneck of SMoEs and leveraging it to effectively scale dense transformers. To this end, we propose a new plug-and-play training framework, SMoE-Dropout, to enable scaling transformers to better accuracy in their full capacity without collapse. Specifically, SMoE-Dropout consists of a randomly initialized and fixed router network to activate experts and gradually increases the activated expert number as training progresses over time. Transformers trained by SMoE-Dropout naturally exhibit a self-slimmable property subject to resource availability, offering smooth and consistent performance boosts with an increase in activated experts during inference or fine-tuning. Our extensive experiments demonstrate the superior performance and substantial computation savings of SMoE-Dropout, compared to dense training baselines with equivalent parameter counts. In particular, our trained BERT outperforms its densely trained counterpart with consistent improvements of {1.03%, 0.78%, 1.09%} on challenging reasoning tasks {ASDiv-A, MAWPS, SVAMP}, respectively.",
+      "canonical_id": "arXiv:2303.01610",
+      "arxiv_id": "2303.01610",
+      "authors": [
+        "Tianlong Chen",
+        "Zhenyu (Allen) Zhang",
+        "Ajay Jaiswal",
+        "Shiwei Liu",
+        "Zhangyang Wang"
+      ]
+    },
+    {
+      "title": "The Lazy Neuron Phenomenon: On Emergence of Activation Sparsity in Transformers",
+      "source_url": "https://www.semanticscholar.org/paper/e0271cb75087ccfd4a8c3351e0f5189a6de04c03",
+      "year": 2022,
+      "published": "2022-10-12",
+      "abstract": "This paper studies the curious phenomenon for machine learning models with Transformer architectures that their activation maps are sparse. By activation map we refer to the intermediate output of the multi-layer perceptrons (MLPs) after a ReLU activation function, and by sparse we mean that on average very few entries (e.g., 3.0% for T5-Base and 6.3% for ViT-B16) are nonzero for each input to MLP. Moreover, larger Transformers with more layers and wider MLP hidden dimensions are sparser as measured by the percentage of nonzero entries. Through extensive experiments we demonstrate that the emergence of sparsity is a prevalent phenomenon that occurs for both natural language processing and vision tasks, on both training and evaluation data, for Transformers of various configurations, at layers of all depth levels, as well as for other architectures including MLP-mixers and 2-layer MLPs. We show that sparsity also emerges using training datasets with random labels, or with random inputs, or with infinite amount of data, demonstrating that sparsity is not a result of a specific family of datasets. We discuss how sparsity immediately implies a way to significantly reduce the FLOP count and improve efficiency for Transformers. Moreover, we demonstrate perhaps surprisingly that enforcing an even sparser activation via Top-k thresholding with a small value of k brings a collection of desired but missing properties for Transformers, namely less sensitivity to noisy training data, more robustness to input corruptions, and better calibration for their prediction confidence.",
+      "canonical_id": "arXiv:2210.06313",
+      "arxiv_id": "2210.06313",
+      "authors": [
+        "Zong-xiao Li",
+        "Chong You",
+        "Srinadh Bhojanapalli",
+        "Daliang Li",
+        "A. Rawat",
+        "Sashank J. Reddi",
+        "Kenneth Q Ye",
+        "Felix Chern",
+        "Felix X. Yu",
+        "Ruiqi Guo",
+        "Surinder Kumar"
+      ]
+    },
+    {
+      "title": "Mixture-of-Experts with Expert Choice Routing",
+      "source_url": "https://www.semanticscholar.org/paper/bbc57e1b3cf90e09b64377f13de455793bc81ad5",
+      "year": 2022,
+      "published": "2022-02-18",
+      "abstract": "Sparsely-activated Mixture-of-experts (MoE) models allow the number of parameters to greatly increase while keeping the amount of computation for a given token or a given sample unchanged. However, a poor expert routing strategy (e.g. one resulting in load imbalance) can cause certain experts to be under-trained, leading to an expert being under or over-specialized. Prior work allocates a fixed number of experts to each token using a top-k function regardless of the relative importance of different tokens. To address this, we propose a heterogeneous mixture-of-experts employing an expert choice method. Instead of letting tokens select the top-k experts, we have experts selecting the top-k tokens. As a result, each token can be routed to a variable number of experts and each expert can have a fixed bucket size. We systematically study pre-training speedups using the same computational resources of the Switch Transformer top-1 and GShard top-2 gating of prior work and find that our method improves training convergence time by more than 2x. For the same computational cost, our method demonstrates higher performance in fine-tuning 11 selected tasks in the GLUE and SuperGLUE benchmarks. For a smaller activation cost, our method outperforms the T5 dense model in 7 out of the 11 tasks.",
+      "canonical_id": "arXiv:2202.09368",
+      "arxiv_id": "2202.09368",
+      "authors": [
+        "Yanqi Zhou",
+        "Tao Lei",
+        "Han-Chu Liu",
+        "Nan Du",
+        "Yanping Huang",
+        "Vincent Zhao",
+        "Andrew M. Dai",
+        "Zhifeng Chen",
+        "Quoc V. Le",
+        "J. Laudon"
+      ]
+    },
+    {
+      "title": "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale",
+      "source_url": "https://www.semanticscholar.org/paper/7d1e512888a2fa4e838c12a02ae7fce867d322a8",
+      "year": 2022,
+      "published": "2022-01-14",
+      "abstract": "As the training of giant dense models hits the boundary on the availability and capability of the hardware resources today, Mixture-of-Experts (MoE) models become one of the most promising model architectures due to their significant training cost reduction compared to a quality-equivalent dense model. Its training cost saving is demonstrated from encoder-decoder models (prior works) to a 5x saving for auto-aggressive language models (this work along with parallel explorations). However, due to the much larger model size and unique architecture, how to provide fast MoE model inference remains challenging and unsolved, limiting its practical usage. To tackle this, we present DeepSpeed-MoE, an end-to-end MoE training and inference solution as part of the DeepSpeed library, including novel MoE architecture designs and model compression techniques that reduce MoE model size by up to 3.7x, and a highly optimized inference system that provides 7.3x better latency and cost compared to existing MoE inference solutions. DeepSpeed-MoE offers an unprecedented scale and efficiency to serve massive MoE models with up to 4.5x faster and 9x cheaper inference compared to quality-equivalent dense models. We hope our innovations and systems help open a promising path to new directions in the large model landscape, a shift from dense to sparse MoE models, where training and deploying higher-quality models with fewer resources becomes more widely possible.",
+      "canonical_id": "arXiv:2201.05596",
+      "arxiv_id": "2201.05596",
+      "authors": [
+        "Samyam Rajbhandari",
+        "Conglong Li",
+        "Z. Yao",
+        "Minjia Zhang",
+        "Reza Yazdani Aminabadi",
+        "A. Awan",
+        "Jeff Rasley",
+        "Yuxiong He"
+      ]
+    },
+    {
+      "title": "Sparse is Enough in Scaling Transformers",
+      "source_url": "https://www.semanticscholar.org/paper/da0d38cf2ac7e2a6908e0d9e1fff07058daab2ed",
+      "year": 2021,
+      "published": "2021-11-24",
+      "abstract": "Large Transformer models yield impressive results on many tasks, but are expensive to train, or even fine-tune, and so slow at decoding that their use and study becomes out of reach. We address this problem by leveraging sparsity. We study sparse variants for all layers in the Transformer and propose Scaling Transformers, a family of next generation Transformer models that use sparse layers to scale efficiently and perform unbatched decoding much faster than the standard Transformer as we scale up the model size. Surprisingly, the sparse layers are enough to obtain the same perplexity as the standard Transformer with the same number of parameters. We also integrate with prior sparsity approaches to attention and enable fast inference on long sequences even with limited memory. This results in performance competitive to the state-of-the-art on long text summarization.",
+      "canonical_id": "arXiv:2111.12763",
+      "arxiv_id": "2111.12763",
+      "authors": [
+        "Sebastian Jaszczur",
+        "A. Chowdhery",
+        "Afroz Mohiuddin",
+        "Lukasz Kaiser",
+        "Wojciech P. Gajewski",
+        "H. Michalewski",
+        "Jonni Kanerva"
+      ]
+    },
+    {
+      "title": "MoEfication: Transformer Feed-forward Layers are Mixtures of Experts",
+      "source_url": "https://www.semanticscholar.org/paper/561f9f5abb2c0960a886ab6221c821295f0461a1",
+      "year": 2021,
+      "published": "2021-10-05",
+      "abstract": "Recent work has shown that feed-forward networks (FFNs) in pre-trained Transformers are a key component, storing various linguistic and factual knowledge. However, the computational patterns of FFNs are still unclear. In this work, we study the computational patterns of FFNs and observe that most inputs only activate a tiny ratio of neurons of FFNs. This phenomenon is similar to the sparsity of the human brain, which drives research on functional partitions of the human brain. To verify whether functional partitions also emerge in FFNs, we propose to convert a model into its MoE version with the same parameters, namely MoEfication. Specifically, MoEfication consists of two phases: (1) splitting the parameters of FFNs into multiple functional partitions as experts, and (2) building expert routers to decide which experts will be used for each input. Experimental results show that MoEfication can conditionally use 10% to 30% of FFN parameters while maintaining over 95% original performance for different models on various downstream tasks. Besides, MoEfication brings two advantages: (1) it significantly reduces the FLOPS of inference, i.e., 2x speedup with 25% of FFN parameters, and (2) it provides a fine-grained perspective to study the inner mechanism of FFNs. The source code of this paper can be obtained from https://github.com/thunlp/MoEfication.",
+      "canonical_id": "arXiv:2110.01786",
+      "arxiv_id": "2110.01786",
+      "authors": [
+        "Zhengyan Zhang",
+        "Yankai Lin",
+        "Zhiyuan Liu",
+        "Peng Li",
+        "Maosong Sun",
+        "Jie Zhou"
+      ]
+    },
+    {
+      "title": "Hash Layers For Large Sparse Models",
+      "source_url": "https://www.semanticscholar.org/paper/0611d2f2ea6a3c8fb8534f42758a5a3e9c7bc8fe",
+      "year": 2021,
+      "published": "2021-06-08",
+      "abstract": "We investigate the training of sparse layers that use different parameters for different inputs based on hashing in large Transformer models. Specifically, we modify the feedforward layer to hash to different sets of weights depending on the current token, over all tokens in the sequence. We show that this procedure either outperforms or is competitive with learning-to-route mixture-of-expert methods such as Switch Transformers and BASE Layers, while requiring no routing parameters or extra terms in the objective function such as a load balancing loss, and no sophisticated assignment algorithm. We study the performance of different hashing techniques, hash sizes and input features, and show that balanced and random hashes focused on the most local features work best, compared to either learning clusters or using longer-range context. We show our approach works well both on large language modeling and dialogue tasks, and on downstream fine-tuning tasks.",
+      "canonical_id": "arXiv:2106.04426",
+      "arxiv_id": "2106.04426",
+      "authors": [
+        "Stephen Roller",
+        "Sainbayar Sukhbaatar",
+        "Arthur Szlam",
+        "J. Weston"
+      ]
+    },
+    {
+      "title": "Exploring Sparse Expert Models and Beyond",
+      "source_url": "https://www.semanticscholar.org/paper/7777a31341fa4bfbd25b96a5320681af8dccf3af",
+      "year": 2021,
+      "published": "2021-05-31",
+      "abstract": "Mixture-of-Experts (MoE) models can achieve promising results with outrageous large amount of parameters but constant computation cost, and thus it has become a trend in model scaling. Still it is a mystery how MoE layers bring quality gains by leveraging the parameters with sparse activation. In this work, we investigate several key factors in sparse expert models. We observe that load imbalance may not be a significant problem affecting model quality, contrary to the perspectives of recent studies, while the number of sparsely activated experts $k$ and expert capacity $C$ in top-$k$ routing can significantly make a difference in this context. Furthermore, we take a step forward to propose a simple method called expert prototyping that splits experts into different prototypes and applies $k$ top-$1$ routing. This strategy improves the model quality but maintains constant computational costs, and our further exploration on extremely large-scale models reflects that it is more effective in training larger models. We push the model scale to over $1$ trillion parameters and implement it on solely $480$ NVIDIA V100-32GB GPUs, in comparison with the recent SOTAs on $2048$ TPU cores. The proposed giant model achieves substantial speedup in convergence over the same-size baseline.",
+      "canonical_id": "arXiv:2105.15082",
+      "arxiv_id": "2105.15082",
+      "authors": [
+        "An Yang",
+        "Junyang Lin",
+        "Rui Men",
+        "Chang Zhou",
+        "Le Jiang",
+        "Xianyan Jia",
+        "Ang Wang",
+        "J. Zhang",
+        "Jiamang Wang",
+        "Yong Li",
+        "Dingyang Zhang",
+        "Wei Lin",
+        "Lin Qu",
+        "Jingren Zhou",
+        "Hongxia Yang"
+      ]
+    },
+    {
+      "title": "BASE Layers: Simplifying Training of Large, Sparse Models",
+      "source_url": "https://www.semanticscholar.org/paper/b15ea460c77a4ee8aa159a30ab0331deedfcf392",
+      "year": 2021,
+      "published": "2021-03-30",
+      "abstract": "We introduce a new balanced assignment of experts (BASE) layer for large language models that greatly simplifies existing high capacity sparse layers. Sparse layers can dramatically improve the efficiency of training and inference by routing each token to specialized expert modules that contain only a small fraction of the model parameters. However, it can be difficult to learn balanced routing functions that make full use of the available experts; existing approaches typically use routing heuristics or auxiliary expert-balancing loss functions. In contrast, we formulate token-to-expert allocation as a linear assignment problem, allowing an optimal assignment in which each expert receives an equal number of tokens. This optimal assignment scheme improves efficiency by guaranteeing balanced compute loads, and also simplifies training by not requiring any new hyperparameters or auxiliary losses. Code is publicly released at https://github.com/pytorch/fairseq/",
+      "canonical_id": "arXiv:2103.16716",
+      "arxiv_id": "2103.16716",
+      "authors": [
+        "M. Lewis",
+        "Shruti Bhosale",
+        "Tim Dettmers",
+        "Naman Goyal",
+        "Luke Zettlemoyer"
+      ]
+    },
+    {
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "source_url": "https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13",
+      "year": 2021,
+      "published": "2021-01-11",
+      "abstract": "In deep learning, models typically reuse the same parameters for all inputs. Mixture of Experts (MoE) defies this and instead selects different parameters for each incoming example. The result is a sparsely-activated model -- with outrageous numbers of parameters -- but a constant computational cost. However, despite several notable successes of MoE, widespread adoption has been hindered by complexity, communication costs and training instability -- we address these with the Switch Transformer. We simplify the MoE routing algorithm and design intuitive improved models with reduced communication and computational costs. Our proposed training techniques help wrangle the instabilities and we show large sparse models may be trained, for the first time, with lower precision (bfloat16) formats. We design models based off T5-Base and T5-Large to obtain up to 7x increases in pre-training speed with the same computational resources. These improvements extend into multilingual settings where we measure gains over the mT5-Base version across all 101 languages. Finally, we advance the current scale of language models by pre-training up to trillion parameter models on the\"Colossal Clean Crawled Corpus\"and achieve a 4x speedup over the T5-XXL model.",
+      "canonical_id": "arXiv:2101.03961",
+      "arxiv_id": "2101.03961",
+      "authors": [
+        "W. Fedus",
+        "Barret Zoph",
+        "Noam Shazeer"
+      ]
+    },
+    {
+      "title": "Transformer Feed-Forward Layers Are Key-Value Memories",
+      "source_url": "https://www.semanticscholar.org/paper/4a54d58a4b20e4f3af25cea3c188a12082a95e02",
+      "year": 2020,
+      "published": "2020-12-29",
+      "abstract": "Feed-forward layers constitute two-thirds of a transformer model’s parameters, yet their role in the network remains under-explored. We show that feed-forward layers in transformer-based language models operate as key-value memories, where each key correlates with textual patterns in the training examples, and each value induces a distribution over the output vocabulary. Our experiments show that the learned patterns are human-interpretable, and that lower layers tend to capture shallow patterns, while upper layers learn more semantic ones. The values complement the keys’ input patterns by inducing output distributions that concentrate probability mass on tokens likely to appear immediately after each pattern, particularly in the upper layers. Finally, we demonstrate that the output of a feed-forward layer is a composition of its memories, which is subsequently refined throughout the model’s layers via residual connections to produce the final output distribution.",
+      "canonical_id": "arXiv:2012.14913",
+      "arxiv_id": "2012.14913",
+      "authors": [
+        "Mor Geva",
+        "R. Schuster",
+        "Jonathan Berant",
+        "Omer Levy"
+      ]
+    },
+    {
+      "title": "Language Models are Few-Shot Learners",
+      "source_url": "https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+      "year": 2020,
+      "published": "2020-05-28",
+      "abstract": "Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. By contrast, humans can generally perform a new language task from only a few examples or from simple instructions - something which current NLP systems still largely struggle to do. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. At the same time, we also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora. Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans. We discuss broader societal impacts of this finding and of GPT-3 in general.",
+      "canonical_id": "arXiv:2005.14165",
+      "arxiv_id": "2005.14165",
+      "authors": [
+        "Tom B. Brown",
+        "Benjamin Mann",
+        "Nick Ryder",
+        "Melanie Subbiah",
+        "J. Kaplan",
+        "Prafulla Dhariwal",
+        "Arvind Neelakantan",
+        "Pranav Shyam",
+        "G. Sastry",
+        "Amanda Askell",
+        "S. Agarwal",
+        "Ariel Herbert-Voss",
+        "Gretchen Krueger",
+        "T. Henighan",
+        "R. Child",
+        "A. Ramesh",
+        "Daniel M. Ziegler",
+        "Jeff Wu",
+        "Clemens Winter",
+        "Christopher Hesse",
+        "Mark Chen",
+        "Eric Sigler",
+        "Ma-teusz Litwin",
+        "Scott Gray",
+        "Benjamin Chess",
+        "Jack Clark",
+        "Christopher Berner",
+        "Sam McCandlish",
+        "Alec Radford",
+        "I. Sutskever",
+        "Dario Amodei"
+      ]
+    },
+    {
+      "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+      "source_url": "https://www.semanticscholar.org/paper/6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+      "year": 2019,
+      "published": "2019-10-23",
+      "abstract": "Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a downstream task, has emerged as a powerful technique in natural language processing (NLP). The effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and practice. In this paper, we explore the landscape of transfer learning techniques for NLP by introducing a unified framework that converts every language problem into a text-to-text format. Our systematic study compares pre-training objectives, architectures, unlabeled datasets, transfer approaches, and other factors on dozens of language understanding tasks. By combining the insights from our exploration with scale and our new \"Colossal Clean Crawled Corpus\", we achieve state-of-the-art results on many benchmarks covering summarization, question answering, text classification, and more. To facilitate future work on transfer learning for NLP, we release our dataset, pre-trained models, and code.",
+      "canonical_id": "arXiv:1910.10683",
+      "arxiv_id": "1910.10683",
+      "authors": [
+        "Colin Raffel",
+        "Noam Shazeer",
+        "Adam Roberts",
+        "Katherine Lee",
+        "Sharan Narang",
+        "Michael Matena",
+        "Yanqi Zhou",
+        "Wei Li",
+        "Peter J. Liu"
+      ]
+    },
+    {
+      "title": "Large Memory Layers with Product Keys",
+      "source_url": "https://www.semanticscholar.org/paper/bf442ab269074665a68e4dbbe19e4efc97862541",
+      "year": 2019,
+      "published": "2019-07-10",
+      "abstract": "This paper introduces a structured memory which can be easily integrated into a neural network. The memory is very large by design and significantly increases the capacity of the architecture, by up to a billion parameters with a negligible computational overhead. Its design and access pattern is based on product keys, which enable fast and exact nearest neighbor search. The ability to increase the number of parameters while keeping the same computational budget lets the overall system strike a better trade-off between prediction accuracy and computation efficiency both at training and test time. This memory layer allows us to tackle very large scale language modeling tasks. In our experiments we consider a dataset with up to 30 billion words, and we plug our memory layer in a state-of-the-art transformer-based architecture. In particular, we found that a memory augmented model with only 12 layers outperforms a baseline transformer model with 24 layers, while being twice faster at inference time. We release our code for reproducibility purposes.",
+      "canonical_id": "arXiv:1907.05242",
+      "arxiv_id": "1907.05242",
+      "authors": [
+        "Guillaume Lample",
+        "Alexandre Sablayrolles",
+        "M. Ranzato",
+        "Ludovic Denoyer",
+        "H. Jégou"
+      ]
+    },
+    {
+      "title": "fairseq: A Fast, Extensible Toolkit for Sequence Modeling",
+      "source_url": "https://www.semanticscholar.org/paper/faadd7d081c8d67e8c2567e8a5579e46cd6b2280",
+      "year": 2019,
+      "published": "2019-04-01",
+      "abstract": "fairseq is an open-source sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling, and other text generation tasks. The toolkit is based on PyTorch and supports distributed training across multiple GPUs and machines. We also support fast mixed-precision training and inference on modern GPUs. A demo video can be found at https://www.youtube.com/watch?v=OtgDdWtHvto",
+      "canonical_id": "arXiv:1904.01038",
+      "arxiv_id": "1904.01038",
+      "authors": [
+        "Myle Ott",
+        "Sergey Edunov",
+        "Alexei Baevski",
+        "Angela Fan",
+        "Sam Gross",
+        "Nathan Ng",
+        "David Grangier",
+        "Michael Auli"
+      ]
+    },
+    {
+      "title": "Attention is All you Need",
+      "source_url": "https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+      "year": 2017,
+      "published": "2017-06-12",
+      "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+      "canonical_id": "arXiv:1706.03762",
+      "arxiv_id": "1706.03762",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "I. Polosukhin"
+      ]
+    },
+    {
+      "title": "Pointer Sentinel Mixture Models",
+      "source_url": "https://www.semanticscholar.org/paper/efbd381493bb9636f489b965a2034d529cd56bcd",
+      "year": 2016,
+      "published": "2016-09-26",
+      "abstract": "Recent neural network sequence models with softmax classifiers have achieved their best language modeling performance only with very large hidden states and large vocabularies. Even then they struggle to predict rare or unseen words even if the context makes the prediction unambiguous. We introduce the pointer sentinel mixture architecture for neural sequence models which has the ability to either reproduce a word from the recent context or produce a word from a standard softmax classifier. Our pointer sentinel-LSTM model achieves state of the art language modeling performance on the Penn Treebank (70.9 perplexity) while using far fewer parameters than a standard softmax LSTM. In order to evaluate how well language models can exploit longer contexts and deal with more realistic vocabularies and larger corpora we also introduce the freely available WikiText corpus.",
+      "canonical_id": "arXiv:1609.07843",
+      "arxiv_id": "1609.07843",
+      "authors": [
+        "Stephen Merity",
+        "Caiming Xiong",
+        "James Bradbury",
+        "R. Socher"
+      ]
+    },
+    {
+      "title": "Language Models are Unsupervised Multitask Learners",
+      "source_url": "https://www.semanticscholar.org/paper/9405cc0d6169988371b2755e573cc28650d14dfe",
+      "year": 2019,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:9405cc0d6169988371b2755e573cc28650d14dfe",
+      "authors": [
+        "Alec Radford",
+        "Jeff Wu",
+        "R. Child",
+        "D. Luan",
+        "Dario Amodei",
+        "I. Sutskever"
+      ]
+    },
+    {
+      "title": "Openwebtext corpus",
+      "source_url": null,
+      "year": 2019,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": ". Mix-tral of experts",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2022. MoEfication",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2022. Knowledge neurons in pretrained transformers",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2022. Scaling instruction-finetuned language models",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2402.01739",
+      "identity_tokens": [
+        "id:arXiv:2402.01739",
+        "title:openmoe an early effort on open mixtureofexperts language models",
+        "url:https://www.semanticscholar.org/paper/37ac7683543f0e039197a56e71e752a9ebe5998e"
+      ],
+      "record": {
+        "title": "OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/37ac7683543f0e039197a56e71e752a9ebe5998e",
+        "year": 2024,
+        "published": "2024-01-29",
+        "abstract": "To help the open-source community have a better understanding of Mixture-of-Experts (MoE) based large language models (LLMs), we train and release OpenMoE, a series of fully open-sourced and reproducible decoder-only MoE LLMs, ranging from 650M to 34B parameters and trained on up to over 1T tokens. Our investigation confirms that MoE-based LLMs can offer a more favorable cost-effectiveness trade-off than dense LLMs, highlighting the potential effectiveness for future LLM development. One more important contribution of this study is an in-depth analysis of the routing mechanisms within our OpenMoE models, leading to three significant findings: Context-Independent Specialization, Early Routing Learning, and Drop-towards-the-End. We discovered that routing decisions in MoE models are predominantly based on token IDs, with minimal context relevance. The token-to-expert assignments are determined early in the pre-training phase and remain largely unchanged. This imperfect routing can result in performance degradation, particularly in sequential tasks like multi-turn conversations, where tokens appearing later in a sequence are more likely to be dropped. Finally, we rethink our design based on the above-mentioned observations and analysis. To facilitate future MoE LLM development, we propose potential strategies for mitigating the issues we found and further improving off-the-shelf MoE LLM designs.",
+        "canonical_id": "arXiv:2402.01739",
+        "arxiv_id": "2402.01739",
+        "authors": [
+          "Fuzhao Xue",
+          "Zian Andy Zheng",
+          "Yao Fu",
+          "Jinjie Ni",
+          "Zangwei Zheng",
+          "Wangchunshu Zhou",
+          "Yang You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.06066",
+      "identity_tokens": [
+        "id:arXiv:2401.06066",
+        "title:deepseekmoe towards ultimate expert specialization in mixtureofexperts language models",
+        "url:https://www.semanticscholar.org/paper/16d6e1ed1cf72212f6154644f3aa59d18bc95fda"
+      ],
+      "record": {
+        "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/16d6e1ed1cf72212f6154644f3aa59d18bc95fda",
+        "year": 2024,
+        "published": "2024-01-11",
+        "abstract": "In the era of large language models, Mixture-of-Experts (MoE) is a promising architecture for managing computational costs when scaling up model parameters. However, conventional MoE architectures like GShard, which activate the top-$K$ out of $N$ experts, face challenges in ensuring expert specialization, i.e. each expert acquires non-overlapping and focused knowledge. In response, we propose the DeepSeekMoE architecture towards ultimate expert specialization. It involves two principal strategies: (1) finely segmenting the experts into $mN$ ones and activating $mK$ from them, allowing for a more flexible combination of activated experts; (2) isolating $K_s$ experts as shared ones, aiming at capturing common knowledge and mitigating redundancy in routed experts. Starting from a modest scale with 2B parameters, we demonstrate that DeepSeekMoE 2B achieves comparable performance with GShard 2.9B, which has 1.5 times the expert parameters and computation. In addition, DeepSeekMoE 2B nearly approaches the performance of its dense counterpart with the same number of total parameters, which set the upper bound of MoE models. Subsequently, we scale up DeepSeekMoE to 16B parameters and show that it achieves comparable performance with LLaMA2 7B, with only about 40% of computations. Further, our preliminary efforts to scale up DeepSeekMoE to 145B parameters consistently validate its substantial advantages over the GShard architecture, and show its performance comparable with DeepSeek 67B, using only 28.5% (maybe even 18.2%) of computations.",
+        "canonical_id": "arXiv:2401.06066",
+        "arxiv_id": "2401.06066",
+        "authors": [
+          "Damai Dai",
+          "C. Deng",
+          "Cheng-Gang Zhao",
+          "R. X. Xu",
+          "Hua-Zuo Gao",
+          "Deli Chen",
+          "Jia-Shi Li",
+          "Wangding Zeng",
+          "Xing-Kai Yu",
+          "Yu Wu",
+          "Zhen-Da Xie",
+          "Y. K. Li",
+          "Pan-Pan Huang",
+          "Fuli Luo",
+          "C. Ruan",
+          "Zhifang Sui",
+          "W. Liang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2308.00951",
+      "identity_tokens": [
+        "id:arXiv:2308.00951",
+        "title:from sparse to soft mixtures of experts",
+        "url:https://www.semanticscholar.org/paper/2edccb8fa562ed52cd49ea6fc67ed32db6218247"
+      ],
+      "record": {
+        "title": "From Sparse to Soft Mixtures of Experts",
+        "source_url": "https://www.semanticscholar.org/paper/2edccb8fa562ed52cd49ea6fc67ed32db6218247",
+        "year": 2023,
+        "published": "2023-08-02",
+        "abstract": "Sparse mixture of expert architectures (MoEs) scale model capacity without significant increases in training or inference costs. Despite their success, MoEs suffer from a number of issues: training instability, token dropping, inability to scale the number of experts, or ineffective finetuning. In this work, we propose Soft MoE, a fully-differentiable sparse Transformer that addresses these challenges, while maintaining the benefits of MoEs. Soft MoE performs an implicit soft assignment by passing different weighted combinations of all input tokens to each expert. As in other MoEs, experts in Soft MoE only process a subset of the (combined) tokens, enabling larger model capacity (and performance) at lower inference cost. In the context of visual recognition, Soft MoE greatly outperforms dense Transformers (ViTs) and popular MoEs (Tokens Choice and Experts Choice). Furthermore, Soft MoE scales well: Soft MoE Huge/14 with 128 experts in 16 MoE layers has over 40x more parameters than ViT Huge/14, with only 2% increased inference time, and substantially better quality.",
+        "canonical_id": "arXiv:2308.00951",
+        "arxiv_id": "2308.00951",
+        "authors": [
+          "J. Puigcerver",
+          "C. Riquelme",
+          "Basil Mustafa",
+          "N. Houlsby"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2303.01610",
+      "identity_tokens": [
+        "id:arXiv:2303.01610",
+        "title:sparse moe as the new dropout scaling dense and selfslimmable transformers",
+        "url:https://www.semanticscholar.org/paper/1462a0e5b7db47301bb0995db56426e1f4a0ac7d"
+      ],
+      "record": {
+        "title": "Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers",
+        "source_url": "https://www.semanticscholar.org/paper/1462a0e5b7db47301bb0995db56426e1f4a0ac7d",
+        "year": 2023,
+        "published": "2023-03-02",
+        "abstract": "Despite their remarkable achievement, gigantic transformers encounter significant drawbacks, including exorbitant computational and memory footprints during training, as well as severe collapse evidenced by a high degree of parameter redundancy. Sparsely-activated Mixture-of-Experts (SMoEs) have shown promise to mitigate the issue of training efficiency, yet they are prone to (1) redundant experts due to representational collapse; and (2) poor expert scalability for inference and downstream fine-tuning, primarily due to overfitting of the learned routing policy to the number of activated experts during training. As recent research efforts are predominantly focused on improving routing policies to encourage expert specializations, this work focuses on exploring the overlooked scalability bottleneck of SMoEs and leveraging it to effectively scale dense transformers. To this end, we propose a new plug-and-play training framework, SMoE-Dropout, to enable scaling transformers to better accuracy in their full capacity without collapse. Specifically, SMoE-Dropout consists of a randomly initialized and fixed router network to activate experts and gradually increases the activated expert number as training progresses over time. Transformers trained by SMoE-Dropout naturally exhibit a self-slimmable property subject to resource availability, offering smooth and consistent performance boosts with an increase in activated experts during inference or fine-tuning. Our extensive experiments demonstrate the superior performance and substantial computation savings of SMoE-Dropout, compared to dense training baselines with equivalent parameter counts. In particular, our trained BERT outperforms its densely trained counterpart with consistent improvements of {1.03%, 0.78%, 1.09%} on challenging reasoning tasks {ASDiv-A, MAWPS, SVAMP}, respectively.",
+        "canonical_id": "arXiv:2303.01610",
+        "arxiv_id": "2303.01610",
+        "authors": [
+          "Tianlong Chen",
+          "Zhenyu (Allen) Zhang",
+          "Ajay Jaiswal",
+          "Shiwei Liu",
+          "Zhangyang Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2210.06313",
+      "identity_tokens": [
+        "id:arXiv:2210.06313",
+        "title:the lazy neuron phenomenon on emergence of activation sparsity in transformers",
+        "url:https://www.semanticscholar.org/paper/e0271cb75087ccfd4a8c3351e0f5189a6de04c03"
+      ],
+      "record": {
+        "title": "The Lazy Neuron Phenomenon: On Emergence of Activation Sparsity in Transformers",
+        "source_url": "https://www.semanticscholar.org/paper/e0271cb75087ccfd4a8c3351e0f5189a6de04c03",
+        "year": 2022,
+        "published": "2022-10-12",
+        "abstract": "This paper studies the curious phenomenon for machine learning models with Transformer architectures that their activation maps are sparse. By activation map we refer to the intermediate output of the multi-layer perceptrons (MLPs) after a ReLU activation function, and by sparse we mean that on average very few entries (e.g., 3.0% for T5-Base and 6.3% for ViT-B16) are nonzero for each input to MLP. Moreover, larger Transformers with more layers and wider MLP hidden dimensions are sparser as measured by the percentage of nonzero entries. Through extensive experiments we demonstrate that the emergence of sparsity is a prevalent phenomenon that occurs for both natural language processing and vision tasks, on both training and evaluation data, for Transformers of various configurations, at layers of all depth levels, as well as for other architectures including MLP-mixers and 2-layer MLPs. We show that sparsity also emerges using training datasets with random labels, or with random inputs, or with infinite amount of data, demonstrating that sparsity is not a result of a specific family of datasets. We discuss how sparsity immediately implies a way to significantly reduce the FLOP count and improve efficiency for Transformers. Moreover, we demonstrate perhaps surprisingly that enforcing an even sparser activation via Top-k thresholding with a small value of k brings a collection of desired but missing properties for Transformers, namely less sensitivity to noisy training data, more robustness to input corruptions, and better calibration for their prediction confidence.",
+        "canonical_id": "arXiv:2210.06313",
+        "arxiv_id": "2210.06313",
+        "authors": [
+          "Zong-xiao Li",
+          "Chong You",
+          "Srinadh Bhojanapalli",
+          "Daliang Li",
+          "A. Rawat",
+          "Sashank J. Reddi",
+          "Kenneth Q Ye",
+          "Felix Chern",
+          "Felix X. Yu",
+          "Ruiqi Guo",
+          "Surinder Kumar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2202.09368",
+      "identity_tokens": [
+        "id:arXiv:2202.09368",
+        "title:mixtureofexperts with expert choice routing",
+        "url:https://www.semanticscholar.org/paper/bbc57e1b3cf90e09b64377f13de455793bc81ad5"
+      ],
+      "record": {
+        "title": "Mixture-of-Experts with Expert Choice Routing",
+        "source_url": "https://www.semanticscholar.org/paper/bbc57e1b3cf90e09b64377f13de455793bc81ad5",
+        "year": 2022,
+        "published": "2022-02-18",
+        "abstract": "Sparsely-activated Mixture-of-experts (MoE) models allow the number of parameters to greatly increase while keeping the amount of computation for a given token or a given sample unchanged. However, a poor expert routing strategy (e.g. one resulting in load imbalance) can cause certain experts to be under-trained, leading to an expert being under or over-specialized. Prior work allocates a fixed number of experts to each token using a top-k function regardless of the relative importance of different tokens. To address this, we propose a heterogeneous mixture-of-experts employing an expert choice method. Instead of letting tokens select the top-k experts, we have experts selecting the top-k tokens. As a result, each token can be routed to a variable number of experts and each expert can have a fixed bucket size. We systematically study pre-training speedups using the same computational resources of the Switch Transformer top-1 and GShard top-2 gating of prior work and find that our method improves training convergence time by more than 2x. For the same computational cost, our method demonstrates higher performance in fine-tuning 11 selected tasks in the GLUE and SuperGLUE benchmarks. For a smaller activation cost, our method outperforms the T5 dense model in 7 out of the 11 tasks.",
+        "canonical_id": "arXiv:2202.09368",
+        "arxiv_id": "2202.09368",
+        "authors": [
+          "Yanqi Zhou",
+          "Tao Lei",
+          "Han-Chu Liu",
+          "Nan Du",
+          "Yanping Huang",
+          "Vincent Zhao",
+          "Andrew M. Dai",
+          "Zhifeng Chen",
+          "Quoc V. Le",
+          "J. Laudon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2201.05596",
+      "identity_tokens": [
+        "id:arXiv:2201.05596",
+        "title:deepspeedmoe advancing mixtureofexperts inference and training to power nextgeneration ai scale",
+        "url:https://www.semanticscholar.org/paper/7d1e512888a2fa4e838c12a02ae7fce867d322a8"
+      ],
+      "record": {
+        "title": "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale",
+        "source_url": "https://www.semanticscholar.org/paper/7d1e512888a2fa4e838c12a02ae7fce867d322a8",
+        "year": 2022,
+        "published": "2022-01-14",
+        "abstract": "As the training of giant dense models hits the boundary on the availability and capability of the hardware resources today, Mixture-of-Experts (MoE) models become one of the most promising model architectures due to their significant training cost reduction compared to a quality-equivalent dense model. Its training cost saving is demonstrated from encoder-decoder models (prior works) to a 5x saving for auto-aggressive language models (this work along with parallel explorations). However, due to the much larger model size and unique architecture, how to provide fast MoE model inference remains challenging and unsolved, limiting its practical usage. To tackle this, we present DeepSpeed-MoE, an end-to-end MoE training and inference solution as part of the DeepSpeed library, including novel MoE architecture designs and model compression techniques that reduce MoE model size by up to 3.7x, and a highly optimized inference system that provides 7.3x better latency and cost compared to existing MoE inference solutions. DeepSpeed-MoE offers an unprecedented scale and efficiency to serve massive MoE models with up to 4.5x faster and 9x cheaper inference compared to quality-equivalent dense models. We hope our innovations and systems help open a promising path to new directions in the large model landscape, a shift from dense to sparse MoE models, where training and deploying higher-quality models with fewer resources becomes more widely possible.",
+        "canonical_id": "arXiv:2201.05596",
+        "arxiv_id": "2201.05596",
+        "authors": [
+          "Samyam Rajbhandari",
+          "Conglong Li",
+          "Z. Yao",
+          "Minjia Zhang",
+          "Reza Yazdani Aminabadi",
+          "A. Awan",
+          "Jeff Rasley",
+          "Yuxiong He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2111.12763",
+      "identity_tokens": [
+        "id:arXiv:2111.12763",
+        "title:sparse is enough in scaling transformers",
+        "url:https://www.semanticscholar.org/paper/da0d38cf2ac7e2a6908e0d9e1fff07058daab2ed"
+      ],
+      "record": {
+        "title": "Sparse is Enough in Scaling Transformers",
+        "source_url": "https://www.semanticscholar.org/paper/da0d38cf2ac7e2a6908e0d9e1fff07058daab2ed",
+        "year": 2021,
+        "published": "2021-11-24",
+        "abstract": "Large Transformer models yield impressive results on many tasks, but are expensive to train, or even fine-tune, and so slow at decoding that their use and study becomes out of reach. We address this problem by leveraging sparsity. We study sparse variants for all layers in the Transformer and propose Scaling Transformers, a family of next generation Transformer models that use sparse layers to scale efficiently and perform unbatched decoding much faster than the standard Transformer as we scale up the model size. Surprisingly, the sparse layers are enough to obtain the same perplexity as the standard Transformer with the same number of parameters. We also integrate with prior sparsity approaches to attention and enable fast inference on long sequences even with limited memory. This results in performance competitive to the state-of-the-art on long text summarization.",
+        "canonical_id": "arXiv:2111.12763",
+        "arxiv_id": "2111.12763",
+        "authors": [
+          "Sebastian Jaszczur",
+          "A. Chowdhery",
+          "Afroz Mohiuddin",
+          "Lukasz Kaiser",
+          "Wojciech P. Gajewski",
+          "H. Michalewski",
+          "Jonni Kanerva"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2110.01786",
+      "identity_tokens": [
+        "id:arXiv:2110.01786",
+        "title:moefication transformer feedforward layers are mixtures of experts",
+        "url:https://www.semanticscholar.org/paper/561f9f5abb2c0960a886ab6221c821295f0461a1"
+      ],
+      "record": {
+        "title": "MoEfication: Transformer Feed-forward Layers are Mixtures of Experts",
+        "source_url": "https://www.semanticscholar.org/paper/561f9f5abb2c0960a886ab6221c821295f0461a1",
+        "year": 2021,
+        "published": "2021-10-05",
+        "abstract": "Recent work has shown that feed-forward networks (FFNs) in pre-trained Transformers are a key component, storing various linguistic and factual knowledge. However, the computational patterns of FFNs are still unclear. In this work, we study the computational patterns of FFNs and observe that most inputs only activate a tiny ratio of neurons of FFNs. This phenomenon is similar to the sparsity of the human brain, which drives research on functional partitions of the human brain. To verify whether functional partitions also emerge in FFNs, we propose to convert a model into its MoE version with the same parameters, namely MoEfication. Specifically, MoEfication consists of two phases: (1) splitting the parameters of FFNs into multiple functional partitions as experts, and (2) building expert routers to decide which experts will be used for each input. Experimental results show that MoEfication can conditionally use 10% to 30% of FFN parameters while maintaining over 95% original performance for different models on various downstream tasks. Besides, MoEfication brings two advantages: (1) it significantly reduces the FLOPS of inference, i.e., 2x speedup with 25% of FFN parameters, and (2) it provides a fine-grained perspective to study the inner mechanism of FFNs. The source code of this paper can be obtained from https://github.com/thunlp/MoEfication.",
+        "canonical_id": "arXiv:2110.01786",
+        "arxiv_id": "2110.01786",
+        "authors": [
+          "Zhengyan Zhang",
+          "Yankai Lin",
+          "Zhiyuan Liu",
+          "Peng Li",
+          "Maosong Sun",
+          "Jie Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2106.04426",
+      "identity_tokens": [
+        "id:arXiv:2106.04426",
+        "title:hash layers for large sparse models",
+        "url:https://www.semanticscholar.org/paper/0611d2f2ea6a3c8fb8534f42758a5a3e9c7bc8fe"
+      ],
+      "record": {
+        "title": "Hash Layers For Large Sparse Models",
+        "source_url": "https://www.semanticscholar.org/paper/0611d2f2ea6a3c8fb8534f42758a5a3e9c7bc8fe",
+        "year": 2021,
+        "published": "2021-06-08",
+        "abstract": "We investigate the training of sparse layers that use different parameters for different inputs based on hashing in large Transformer models. Specifically, we modify the feedforward layer to hash to different sets of weights depending on the current token, over all tokens in the sequence. We show that this procedure either outperforms or is competitive with learning-to-route mixture-of-expert methods such as Switch Transformers and BASE Layers, while requiring no routing parameters or extra terms in the objective function such as a load balancing loss, and no sophisticated assignment algorithm. We study the performance of different hashing techniques, hash sizes and input features, and show that balanced and random hashes focused on the most local features work best, compared to either learning clusters or using longer-range context. We show our approach works well both on large language modeling and dialogue tasks, and on downstream fine-tuning tasks.",
+        "canonical_id": "arXiv:2106.04426",
+        "arxiv_id": "2106.04426",
+        "authors": [
+          "Stephen Roller",
+          "Sainbayar Sukhbaatar",
+          "Arthur Szlam",
+          "J. Weston"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2105.15082",
+      "identity_tokens": [
+        "id:arXiv:2105.15082",
+        "title:exploring sparse expert models and beyond",
+        "url:https://www.semanticscholar.org/paper/7777a31341fa4bfbd25b96a5320681af8dccf3af"
+      ],
+      "record": {
+        "title": "Exploring Sparse Expert Models and Beyond",
+        "source_url": "https://www.semanticscholar.org/paper/7777a31341fa4bfbd25b96a5320681af8dccf3af",
+        "year": 2021,
+        "published": "2021-05-31",
+        "abstract": "Mixture-of-Experts (MoE) models can achieve promising results with outrageous large amount of parameters but constant computation cost, and thus it has become a trend in model scaling. Still it is a mystery how MoE layers bring quality gains by leveraging the parameters with sparse activation. In this work, we investigate several key factors in sparse expert models. We observe that load imbalance may not be a significant problem affecting model quality, contrary to the perspectives of recent studies, while the number of sparsely activated experts $k$ and expert capacity $C$ in top-$k$ routing can significantly make a difference in this context. Furthermore, we take a step forward to propose a simple method called expert prototyping that splits experts into different prototypes and applies $k$ top-$1$ routing. This strategy improves the model quality but maintains constant computational costs, and our further exploration on extremely large-scale models reflects that it is more effective in training larger models. We push the model scale to over $1$ trillion parameters and implement it on solely $480$ NVIDIA V100-32GB GPUs, in comparison with the recent SOTAs on $2048$ TPU cores. The proposed giant model achieves substantial speedup in convergence over the same-size baseline.",
+        "canonical_id": "arXiv:2105.15082",
+        "arxiv_id": "2105.15082",
+        "authors": [
+          "An Yang",
+          "Junyang Lin",
+          "Rui Men",
+          "Chang Zhou",
+          "Le Jiang",
+          "Xianyan Jia",
+          "Ang Wang",
+          "J. Zhang",
+          "Jiamang Wang",
+          "Yong Li",
+          "Dingyang Zhang",
+          "Wei Lin",
+          "Lin Qu",
+          "Jingren Zhou",
+          "Hongxia Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2103.16716",
+      "identity_tokens": [
+        "id:arXiv:2103.16716",
+        "title:base layers simplifying training of large sparse models",
+        "url:https://www.semanticscholar.org/paper/b15ea460c77a4ee8aa159a30ab0331deedfcf392"
+      ],
+      "record": {
+        "title": "BASE Layers: Simplifying Training of Large, Sparse Models",
+        "source_url": "https://www.semanticscholar.org/paper/b15ea460c77a4ee8aa159a30ab0331deedfcf392",
+        "year": 2021,
+        "published": "2021-03-30",
+        "abstract": "We introduce a new balanced assignment of experts (BASE) layer for large language models that greatly simplifies existing high capacity sparse layers. Sparse layers can dramatically improve the efficiency of training and inference by routing each token to specialized expert modules that contain only a small fraction of the model parameters. However, it can be difficult to learn balanced routing functions that make full use of the available experts; existing approaches typically use routing heuristics or auxiliary expert-balancing loss functions. In contrast, we formulate token-to-expert allocation as a linear assignment problem, allowing an optimal assignment in which each expert receives an equal number of tokens. This optimal assignment scheme improves efficiency by guaranteeing balanced compute loads, and also simplifies training by not requiring any new hyperparameters or auxiliary losses. Code is publicly released at https://github.com/pytorch/fairseq/",
+        "canonical_id": "arXiv:2103.16716",
+        "arxiv_id": "2103.16716",
+        "authors": [
+          "M. Lewis",
+          "Shruti Bhosale",
+          "Tim Dettmers",
+          "Naman Goyal",
+          "Luke Zettlemoyer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2101.03961",
+      "identity_tokens": [
+        "id:arXiv:2101.03961",
+        "title:switch transformers scaling to trillion parameter models with simple and efficient sparsity",
+        "url:https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13"
+      ],
+      "record": {
+        "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+        "source_url": "https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13",
+        "year": 2021,
+        "published": "2021-01-11",
+        "abstract": "In deep learning, models typically reuse the same parameters for all inputs. Mixture of Experts (MoE) defies this and instead selects different parameters for each incoming example. The result is a sparsely-activated model -- with outrageous numbers of parameters -- but a constant computational cost. However, despite several notable successes of MoE, widespread adoption has been hindered by complexity, communication costs and training instability -- we address these with the Switch Transformer. We simplify the MoE routing algorithm and design intuitive improved models with reduced communication and computational costs. Our proposed training techniques help wrangle the instabilities and we show large sparse models may be trained, for the first time, with lower precision (bfloat16) formats. We design models based off T5-Base and T5-Large to obtain up to 7x increases in pre-training speed with the same computational resources. These improvements extend into multilingual settings where we measure gains over the mT5-Base version across all 101 languages. Finally, we advance the current scale of language models by pre-training up to trillion parameter models on the\"Colossal Clean Crawled Corpus\"and achieve a 4x speedup over the T5-XXL model.",
+        "canonical_id": "arXiv:2101.03961",
+        "arxiv_id": "2101.03961",
+        "authors": [
+          "W. Fedus",
+          "Barret Zoph",
+          "Noam Shazeer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2012.14913",
+      "identity_tokens": [
+        "id:arXiv:2012.14913",
+        "title:transformer feedforward layers are keyvalue memories",
+        "url:https://www.semanticscholar.org/paper/4a54d58a4b20e4f3af25cea3c188a12082a95e02"
+      ],
+      "record": {
+        "title": "Transformer Feed-Forward Layers Are Key-Value Memories",
+        "source_url": "https://www.semanticscholar.org/paper/4a54d58a4b20e4f3af25cea3c188a12082a95e02",
+        "year": 2020,
+        "published": "2020-12-29",
+        "abstract": "Feed-forward layers constitute two-thirds of a transformer model’s parameters, yet their role in the network remains under-explored. We show that feed-forward layers in transformer-based language models operate as key-value memories, where each key correlates with textual patterns in the training examples, and each value induces a distribution over the output vocabulary. Our experiments show that the learned patterns are human-interpretable, and that lower layers tend to capture shallow patterns, while upper layers learn more semantic ones. The values complement the keys’ input patterns by inducing output distributions that concentrate probability mass on tokens likely to appear immediately after each pattern, particularly in the upper layers. Finally, we demonstrate that the output of a feed-forward layer is a composition of its memories, which is subsequently refined throughout the model’s layers via residual connections to produce the final output distribution.",
+        "canonical_id": "arXiv:2012.14913",
+        "arxiv_id": "2012.14913",
+        "authors": [
+          "Mor Geva",
+          "R. Schuster",
+          "Jonathan Berant",
+          "Omer Levy"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2005.14165",
+      "identity_tokens": [
+        "id:arXiv:2005.14165",
+        "title:language models are fewshot learners",
+        "url:https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0"
+      ],
+      "record": {
+        "title": "Language Models are Few-Shot Learners",
+        "source_url": "https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "year": 2020,
+        "published": "2020-05-28",
+        "abstract": "Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. By contrast, humans can generally perform a new language task from only a few examples or from simple instructions - something which current NLP systems still largely struggle to do. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. At the same time, we also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora. Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans. We discuss broader societal impacts of this finding and of GPT-3 in general.",
+        "canonical_id": "arXiv:2005.14165",
+        "arxiv_id": "2005.14165",
+        "authors": [
+          "Tom B. Brown",
+          "Benjamin Mann",
+          "Nick Ryder",
+          "Melanie Subbiah",
+          "J. Kaplan",
+          "Prafulla Dhariwal",
+          "Arvind Neelakantan",
+          "Pranav Shyam",
+          "G. Sastry",
+          "Amanda Askell",
+          "S. Agarwal",
+          "Ariel Herbert-Voss",
+          "Gretchen Krueger",
+          "T. Henighan",
+          "R. Child",
+          "A. Ramesh",
+          "Daniel M. Ziegler",
+          "Jeff Wu",
+          "Clemens Winter",
+          "Christopher Hesse",
+          "Mark Chen",
+          "Eric Sigler",
+          "Ma-teusz Litwin",
+          "Scott Gray",
+          "Benjamin Chess",
+          "Jack Clark",
+          "Christopher Berner",
+          "Sam McCandlish",
+          "Alec Radford",
+          "I. Sutskever",
+          "Dario Amodei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1910.10683",
+      "identity_tokens": [
+        "id:arXiv:1910.10683",
+        "title:exploring the limits of transfer learning with a unified texttotext transformer",
+        "url:https://www.semanticscholar.org/paper/6c4b76232bb72897685d19b3d264c6ee3005bc2b"
+      ],
+      "record": {
+        "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+        "source_url": "https://www.semanticscholar.org/paper/6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+        "year": 2019,
+        "published": "2019-10-23",
+        "abstract": "Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a downstream task, has emerged as a powerful technique in natural language processing (NLP). The effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and practice. In this paper, we explore the landscape of transfer learning techniques for NLP by introducing a unified framework that converts every language problem into a text-to-text format. Our systematic study compares pre-training objectives, architectures, unlabeled datasets, transfer approaches, and other factors on dozens of language understanding tasks. By combining the insights from our exploration with scale and our new \"Colossal Clean Crawled Corpus\", we achieve state-of-the-art results on many benchmarks covering summarization, question answering, text classification, and more. To facilitate future work on transfer learning for NLP, we release our dataset, pre-trained models, and code.",
+        "canonical_id": "arXiv:1910.10683",
+        "arxiv_id": "1910.10683",
+        "authors": [
+          "Colin Raffel",
+          "Noam Shazeer",
+          "Adam Roberts",
+          "Katherine Lee",
+          "Sharan Narang",
+          "Michael Matena",
+          "Yanqi Zhou",
+          "Wei Li",
+          "Peter J. Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1907.05242",
+      "identity_tokens": [
+        "id:arXiv:1907.05242",
+        "title:large memory layers with product keys",
+        "url:https://www.semanticscholar.org/paper/bf442ab269074665a68e4dbbe19e4efc97862541"
+      ],
+      "record": {
+        "title": "Large Memory Layers with Product Keys",
+        "source_url": "https://www.semanticscholar.org/paper/bf442ab269074665a68e4dbbe19e4efc97862541",
+        "year": 2019,
+        "published": "2019-07-10",
+        "abstract": "This paper introduces a structured memory which can be easily integrated into a neural network. The memory is very large by design and significantly increases the capacity of the architecture, by up to a billion parameters with a negligible computational overhead. Its design and access pattern is based on product keys, which enable fast and exact nearest neighbor search. The ability to increase the number of parameters while keeping the same computational budget lets the overall system strike a better trade-off between prediction accuracy and computation efficiency both at training and test time. This memory layer allows us to tackle very large scale language modeling tasks. In our experiments we consider a dataset with up to 30 billion words, and we plug our memory layer in a state-of-the-art transformer-based architecture. In particular, we found that a memory augmented model with only 12 layers outperforms a baseline transformer model with 24 layers, while being twice faster at inference time. We release our code for reproducibility purposes.",
+        "canonical_id": "arXiv:1907.05242",
+        "arxiv_id": "1907.05242",
+        "authors": [
+          "Guillaume Lample",
+          "Alexandre Sablayrolles",
+          "M. Ranzato",
+          "Ludovic Denoyer",
+          "H. Jégou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1904.01038",
+      "identity_tokens": [
+        "id:arXiv:1904.01038",
+        "title:fairseq a fast extensible toolkit for sequence modeling",
+        "url:https://www.semanticscholar.org/paper/faadd7d081c8d67e8c2567e8a5579e46cd6b2280"
+      ],
+      "record": {
+        "title": "fairseq: A Fast, Extensible Toolkit for Sequence Modeling",
+        "source_url": "https://www.semanticscholar.org/paper/faadd7d081c8d67e8c2567e8a5579e46cd6b2280",
+        "year": 2019,
+        "published": "2019-04-01",
+        "abstract": "fairseq is an open-source sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling, and other text generation tasks. The toolkit is based on PyTorch and supports distributed training across multiple GPUs and machines. We also support fast mixed-precision training and inference on modern GPUs. A demo video can be found at https://www.youtube.com/watch?v=OtgDdWtHvto",
+        "canonical_id": "arXiv:1904.01038",
+        "arxiv_id": "1904.01038",
+        "authors": [
+          "Myle Ott",
+          "Sergey Edunov",
+          "Alexei Baevski",
+          "Angela Fan",
+          "Sam Gross",
+          "Nathan Ng",
+          "David Grangier",
+          "Michael Auli"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1706.03762",
+      "identity_tokens": [
+        "id:arXiv:1706.03762",
+        "title:attention is all you need",
+        "url:https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776"
+      ],
+      "record": {
+        "title": "Attention is All you Need",
+        "source_url": "https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+        "year": 2017,
+        "published": "2017-06-12",
+        "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+        "canonical_id": "arXiv:1706.03762",
+        "arxiv_id": "1706.03762",
+        "authors": [
+          "Ashish Vaswani",
+          "Noam Shazeer",
+          "Niki Parmar",
+          "Jakob Uszkoreit",
+          "Llion Jones",
+          "Aidan N. Gomez",
+          "Lukasz Kaiser",
+          "I. Polosukhin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1609.07843",
+      "identity_tokens": [
+        "id:arXiv:1609.07843",
+        "title:pointer sentinel mixture models",
+        "url:https://www.semanticscholar.org/paper/efbd381493bb9636f489b965a2034d529cd56bcd"
+      ],
+      "record": {
+        "title": "Pointer Sentinel Mixture Models",
+        "source_url": "https://www.semanticscholar.org/paper/efbd381493bb9636f489b965a2034d529cd56bcd",
+        "year": 2016,
+        "published": "2016-09-26",
+        "abstract": "Recent neural network sequence models with softmax classifiers have achieved their best language modeling performance only with very large hidden states and large vocabularies. Even then they struggle to predict rare or unseen words even if the context makes the prediction unambiguous. We introduce the pointer sentinel mixture architecture for neural sequence models which has the ability to either reproduce a word from the recent context or produce a word from a standard softmax classifier. Our pointer sentinel-LSTM model achieves state of the art language modeling performance on the Penn Treebank (70.9 perplexity) while using far fewer parameters than a standard softmax LSTM. In order to evaluate how well language models can exploit longer contexts and deal with more realistic vocabularies and larger corpora we also introduce the freely available WikiText corpus.",
+        "canonical_id": "arXiv:1609.07843",
+        "arxiv_id": "1609.07843",
+        "authors": [
+          "Stephen Merity",
+          "Caiming Xiong",
+          "James Bradbury",
+          "R. Socher"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:9405cc0d6169988371b2755e573cc28650d14dfe",
+      "identity_tokens": [
+        "id:SemanticScholar:9405cc0d6169988371b2755e573cc28650d14dfe",
+        "title:language models are unsupervised multitask learners",
+        "url:https://www.semanticscholar.org/paper/9405cc0d6169988371b2755e573cc28650d14dfe"
+      ],
+      "record": {
+        "title": "Language Models are Unsupervised Multitask Learners",
+        "source_url": "https://www.semanticscholar.org/paper/9405cc0d6169988371b2755e573cc28650d14dfe",
+        "year": 2019,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:9405cc0d6169988371b2755e573cc28650d14dfe",
+        "authors": [
+          "Alec Radford",
+          "Jeff Wu",
+          "R. Child",
+          "D. Luan",
+          "Dario Amodei",
+          "I. Sutskever"
+        ]
+      }
+    },
+    {
+      "primary_identity": "title:openwebtext corpus",
+      "identity_tokens": [
+        "title:openwebtext corpus"
+      ],
+      "record": {
+        "title": "Openwebtext corpus",
+        "source_url": null,
+        "year": 2019,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:mixtral of experts",
+      "identity_tokens": [
+        "title:mixtral of experts"
+      ],
+      "record": {
+        "title": ". Mix-tral of experts",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2022 moefication",
+      "identity_tokens": [
+        "title:2022 moefication"
+      ],
+      "record": {
+        "title": "2022. MoEfication",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2022 knowledge neurons in pretrained transformers",
+      "identity_tokens": [
+        "title:2022 knowledge neurons in pretrained transformers"
+      ],
+      "record": {
+        "title": "2022. Knowledge neurons in pretrained transformers",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2022 scaling instructionfinetuned language models",
+      "identity_tokens": [
+        "title:2022 scaling instructionfinetuned language models"
+      ],
+      "record": {
+        "title": "2022. Scaling instruction-finetuned language models",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    }
+  ],
+  "receipt": "sha256:2bf15e9fd1cdb6ea86c3597737e9588e171a5ddaab29694988f6725e98598447",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

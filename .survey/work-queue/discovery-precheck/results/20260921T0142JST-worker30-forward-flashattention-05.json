@@ -1,0 +1,848 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0142JST-worker30-forward-flashattention-05",
+  "collector_id": "worker30-forward-flashattention",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "forward citations from FlashAttention IO-aware attention lineage",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2205.14135/citations?fields=title,abstract,year,authors,url,externalIds,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "08ff9cdc379c56cf9fdd5b9126be55daf595267c",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 17,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 3,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:42:49.723320+00:00",
+  "results": [
+    {
+      "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+      "source_url": "https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+      "doi": "10.1016/j.cosrev.2026.101037",
+      "authors": [
+        "Habib Khan",
+        "Faleh Alqahtani",
+        "Weiwei Jiang",
+        "M. Ali",
+        "Sareer Ul Amin",
+        "Jakeoung Koo"
+      ]
+    },
+    {
+      "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+      "source_url": "https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+      "doi": "10.1016/j.engappai.2026.115976",
+      "authors": [
+        "Yumin Zhang",
+        "Xiaowen Ling",
+        "Zhiqiang Li",
+        "Liang-Liang Song",
+        "Yifan Jia",
+        "Yan-Bin Wang",
+        "Zhuhong You"
+      ]
+    },
+    {
+      "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+      "source_url": "https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+      "doi": "10.1016/j.istruc.2026.112910",
+      "authors": [
+        "X. Song",
+        "Senna Wang",
+        "Xiaowei Cheng",
+        "Haoyou Zhang",
+        "Ruijie Guo",
+        "Yi Li"
+      ]
+    },
+    {
+      "title": "Cross-Layer Performance Analysis of Single-GPU Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The performance of single-GPU LLM inference is characterized by strong cross-layer interactions spanning model architecture, runtime scheduling, operator execution, and GPU microarchitecture. Unfortunately, a unified understanding of single-GPU LLM inference bottlenecks is still lacking due to two limitations: the lack of traceable cross-layer attribution and the static characterization of KV-cache usage. To this end, we present a cross-layer analysis approach for single-GPU LLM inference that jointly characterizes latency and memory behavior. However, this requires addressing two challenges: cross-layer attribution and dynamic KV-cache characterization. To address the two challenges, we employ four-layer joint profiling for cross-layer attribution and introduce a logical KV computation metric for dynamic KV-cache characterization, respectively. Finally, we systematically characterize representative dense and Mixture-of-Experts (MoE) models under diverse workloads on a single A100 GPU, identify key bottlenecks across inference phases and architectures, and reveal opportunities for further optimization.",
+      "canonical_id": "DOI:10.1145/3832810.3832894",
+      "doi": "10.1145/3832810.3832894",
+      "authors": [
+        "Zong-Xing Zhao",
+        "Xiaqing Li",
+        "Ze-Kai Meng",
+        "Zheng-Jun Fu",
+        "Qian Wang",
+        "Yan-Ling Zhang",
+        "Yidong Li"
+      ]
+    },
+    {
+      "title": "BAG: Faster Matrix Multiplication on a Single GPU",
+      "source_url": "https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Matrix multiplication is a fundamental computation kernel in many parallel and sequential scientific applications. We target FP32 matrix multiplication on GPUs, a setting required by numerous HPC and scientific workloads. Alternative Basis Matrix Multiplication (ABMM) is a practical Strassen-like algorithm that reduces the number of additions while preserving the same asymptotic exponent and admitting a provable O(n) component-wise error bound. However, optimized GPU support for ABMM remains underexplored. This paper presents BAG (Basis Alternative Matrix Multiplication on GPUs), a GPU-oriented implementation of ABMM for the NVIDIA Ampere architecture. A naive GPU implementation of ABMM suffers from excessive workspace and memory traffic, launch-dominated serialization across heterogeneous steps, and high sensitivity to recursion and blocking parameters. We design fused ABMM kernels to shrink workspace and eliminate redundant global-memory traffic, specialize register usage for different primitive patterns to expose intra/inter-kernel parallelism, and introduce a cost-model-based recursion policy together with a Roofline-guided blocking strategy to stabilize performance across problem sizes and shapes. On an NVIDIA A100, experimental results show that 1-level BAG reaches a break-even point against cuBLAS FP32 GEMM at dimension 1280 for square matrices, and recursive BAG achieves a 1.24 × speedup over cuBLAS FP32 GEMM at dimension 4096. Our code is available at https://doi.org/https://github.com/napleon-liu/bag.",
+      "canonical_id": "DOI:10.1145/3832810.3832836",
+      "doi": "10.1145/3832810.3832836",
+      "authors": [
+        "Yao Liu",
+        "Ye-Wen Li",
+        "Zhonghai Zhang",
+        "Erlin Yao",
+        "Guangming Tan",
+        "Wei-Le Jia"
+      ]
+    },
+    {
+      "title": "TFS: Tile-Aware SpMM–GeMM Fusion for Accelerating GNN Inference on Intel AMX",
+      "source_url": "https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Graph Neural Network (GNN) inference involves two successive matrix operations per layer: a sparse neighbor aggregation (SpMM) followed by a dense linear transformation (GeMM). The conventional two-step execution materializes a large intermediate matrix Z in main memory, incurring significant memory traffic that dominates end-to-end latency. We present TFS, a tile-aware fusion framework that eliminates this intermediate materialization by fusing SpMM and GeMM directly inside the tile registers of Intel’s Advanced Matrix Extensions (AMX). The key insight is that tile-based sparse computation becomes efficient only when the degree distribution within each tile batch is carefully controlled. TFS introduces degree-aware tile scheduling, which sorts rows by ascending degree so that rows within each 16-row AMX tile batch have similar neighbor counts, raising tile efficiency η to 0.96 on average. Evaluated on 25 sparse matrices from 8+ application domains, including graphs with 65.6 M nodes and 3.6 B edges, TFS achieves up to 6.67 × kernel-level and 4.09 × end-to-end speedup over Intel MKL. An AMX isolation experiment further demonstrates that AMX tiles provide up to 13.7 × speedup over an equivalent AVX-512 BF16 implementation, indicating that tile compute density, not the BF16 format alone, is the primary source of acceleration.",
+      "canonical_id": "DOI:10.1145/3832810.3832855",
+      "doi": "10.1145/3832810.3832855",
+      "authors": [
+        "Xiao Yan",
+        "Haodong Bian",
+        "Xiao-Ying Wang",
+        "Teng-Fei Cao",
+        "Jianqiang Huang"
+      ]
+    },
+    {
+      "title": "MAGSAT: Memory-Access-Guided Fusion and Shape-Adaptive Auto-Tuning for Dynamic Tensor Programs",
+      "source_url": "https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Dynamic tensor programs are increasingly common in deep learning. Existing libraries and compilers provide or generate highly optimized kernels, but their decisions are often tied to fixed operator patterns or concrete shapes. Dynamic-shape systems reduce tuning overhead, yet they typically optimize individual operators and leave graph-level fusion opportunities underexplored. We propose MAGSAT, a unified framework that combines shape-invariant operator fusion with shape-adaptive parameter selection for dynamic workloads. MAGSAT analyzes memory-access semantics to identify fusion regions, maps them to parameterized tiled templates, and selects kernel configurations with a lightweight trait-driven analytical model. Extensive experiments demonstrate that MAGSAT achieves average speedups of 4.65 × for fused operators and 2.74 × for end-to-end inference over the state-of-the-art baseline.",
+      "canonical_id": "DOI:10.1145/3832810.3832874",
+      "doi": "10.1145/3832810.3832874",
+      "authors": [
+        "Hao-Dong Deng",
+        "Jia-Nuo Sheng",
+        "Wen-Hao Dai",
+        "Fangxin Liu",
+        "Qing-Xiao Sun"
+      ]
+    },
+    {
+      "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
+      "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Driven by cost and privacy constraints, many organizations deploy large language model (LLM) inference on local CPU-GPU servers. For long-context requests, the key-value (KV) cache grows linearly with sequence length and can rapidly exhaust GPU memory, reducing both the maximum supported context and request concurrency. Meanwhile, we observe that GPU utilization is high during the compute-heavy prefill phase but drops sharply during the memory-bound decode phase, where modern CPUs equipped with matrix units can achieve competitive attention throughput. We present AsymFlow, a prefill-decode disaggregated serving system that runs prefill on the GPU and decode on the CPU. AsymFlow (1) streams per-layer KV states through a shared-memory KV pool to overlap KV transfer with GPU prefill, (2) employs a task-aware online dispatcher that jointly accounts for pipeline queueing and KV capacity to prevent GPU OOM and idle bubbles, and (3) accelerates CPU decode attention with AMX. Implemented on SGLang and evaluated on a CPU-GPU platform, AsymFlow serves 32K-context workloads that can trigger OOM on a GPU-only baseline, improves throughput by 1.08–1.25 × over the GPU-only baseline, and by 1.32-2.49 × over a state-of-the-art KV-offloading method; the gains increase as GPU memory becomes tighter.",
+      "canonical_id": "DOI:10.1145/3832810.3832866",
+      "doi": "10.1145/3832810.3832866",
+      "authors": [
+        "Jun-Wen Zhang",
+        "Wei-Ling Yang",
+        "Jian-Bin Fang",
+        "En-Da Yu",
+        "De-Zun Dong"
+      ]
+    },
+    {
+      "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+      "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+      "canonical_id": "DOI:10.1145/3832810.3832854",
+      "doi": "10.1145/3832810.3832854",
+      "authors": [
+        "Wen-Hao Sun",
+        "Pan-Pan Cui",
+        "Yiqi Liu",
+        "Wan-Yu Wang"
+      ]
+    },
+    {
+      "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The deployment of Large Language Models (LLMs) as multi-tenant cloud services is now widespread, but maintaining high Service Level Objective (SLO) attainment across diverse tenants remains challenging. Current serving systems focus on a single layer of the stack, either using iteration-level batching or coarse-grained instance-level routing. This approach causes significant SLO violations during bursty workloads and struggles to balance throughput with differentiated tenant priorities. The core issue lies in intra-instance schedulers lacking awareness of the global cluster state, while cluster-level routers do not account for fine-grained, per-iteration execution behavior within each GPU. We introduce CrossServe, a cross-layer scheduling framework that jointly optimizes request routing, adaptive micro-batching, and tenant-weighted preemption to maximize SLO attainment in multi-tenant LLM serving. CrossServe integrates three complementary layers: (1) an online, lightweight length classifier that separates requests to reduce Head-of-Line (HoL) blocking; (2) an SLO-aware adaptive micro-batching system that dynamically tunes prefill chunk sizes based on the real-time Time-Per-Output-Token (TPOT) slack of decoding requests; and (3) a global routing and preemption layer that distributes load across GPU instances while using tenant weights when reclaiming resources under overload. We evaluate CrossServe with BurstGPT-derived trace replay on a 32-GPU cluster. Compared with vLLM, Sarathi-Serve, and SOLA, CrossServe increases overall SLO attainment by 53, 29, and 14 percentage points respectively (from 42% to 95%, from 66% to 95%, and from 81% to 95%) while sustaining high throughput. In the ablation workload, removing global routing raises P99 TTFT from 185 ms to 410 ms; the full system therefore reduces this tail latency by 54.9% relative to that ablation and improves the observed throughput–SLO tradeoff.",
+      "canonical_id": "DOI:10.1145/3832810.3832859",
+      "doi": "10.1145/3832810.3832859",
+      "authors": [
+        "Jia-He Li",
+        "Jia-Bin Li"
+      ]
+    },
+    {
+      "title": "WAQ-LLM: Optimizing Multi-Instance LLM Deployment via Workload-Aware Queueing Model",
+      "source_url": "https://www.semanticscholar.org/paper/a3ea92c6fa8233ac57ec595875a2a35f7f640056",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The deployment of Large Language Models (LLMs) on multi-instance GPU clusters has become essential to meet the surging demand for generative AI applications. While scaling out instances increases throughput, the distinct computational characteristics of prefill and decode phases introduce significant resource contention, making it challenging to satisfy stringent Service Level Objectives (SLOs) for responsiveness and generation speed. Existing serving solutions typically rely on static deployment strategies—either aggregating or disaggregating these phases—which often fail to adapt to the interference patterns caused by varying request arrival rates and sequence lengths. In this work, we propose WAQ-LLM, a performance optimization framework to find the optimal deployment configuration for multi-instance LLM serving. Specifically, we first establish an analytical workload-aware queueing model that captures the LLM computational characteristics and queuing behavior of both aggregation and disaggregation designs. We then formulate the deployment configuration problem as a constrained optimization problem and develop a polynomial-time algorithm to efficiently identify configurations that minimize Time-per-Output-Token (TPOT) while satisfying SLOs. Extensive experiments are conducted on a 16-GPU cluster across various LLMs and workload settings. WAQ-LLM consistently outperforms AIConfigurator, NVIDIA’s official product-level solution, reducing TPOT by 21.62% on average and up to 81.7%. Moreover, WAQ-LLM can provide adaptive and hybrid configurations to handle diverse workloads, surpassing static deployments limited to a single instance type (either PD aggregation or disaggregation).",
+      "canonical_id": "DOI:10.1145/3832810.3832865",
+      "doi": "10.1145/3832810.3832865",
+      "authors": [
+        "Jia-Xin Lai",
+        "Yi-Zhou Luo",
+        "Qiang Wang"
+      ]
+    },
+    {
+      "title": "The Life of a Token: from Words to Bits on the Wire",
+      "source_url": "https://www.semanticscholar.org/paper/834e5b182df49185530f96f8d856d626930e2620",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Large Language Models (LLMs) transform vast collections of unstructured text into semantic patterns used for language generation and reasoning tasks. Behind their ease of use lies a complex process: words become tokens, tokens become vectors, and vectors ultimately give rise to streams of bits that flow through High-Performance Computing (HPC) systems. As modern LLMs grow to billions or trillions of parameters, this path increasingly unfolds across thousands of interconnected accelerators, making the underlying communication fabric a critical and often opaque component of model training. This tutorial aims to walk the reader through the journey from words to network traffic, shedding light on how language is translated into communication flows within HPC training systems. Using concrete examples from Dante's Divine Comedy, we illustrate how model architecture, tokenization, embeddings, and parallelization strategies shape the volume, structure, and timing of data exchanged across the network. We combine architectural analysis with analytical traffic models and numerical examples to characterize the communication requirements of LLM training. We try to demystify how words travel across the network and provide practical insights into the network requirements needed to support the journey from text to trained model.",
+      "canonical_id": "arXiv:2609.19924",
+      "arxiv_id": "2609.19924",
+      "authors": [
+        "Davide Avesani",
+        "Pengwenlong Gu",
+        "S. Skaperas",
+        "Stefano Secci"
+      ]
+    },
+    {
+      "title": "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+      "source_url": "https://www.semanticscholar.org/paper/f3535a44fc379b82ad075d9d4520cc9e4f473f5a",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Video diffusion models repeatedly process long spatiotemporal token sequences during denoising, making attention a major computational bottleneck. Linear attention offers an appealing alternative and has been widely adopted in recent large language models, but directly applying it to video models often fails to preserve the fine-grained interactions required for high-quality generation. We present Video DeltaNet (VDN), which combines local Softmax attention with bidirectional linear memory for long-range video context. Its linear branch introduces Video Delta Attention (VDA), which updates memory once per frame by jointly incorporating its spatial tokens. Separate output projections and learnable gates calibrate the two branches, while a staged teacher-alignment recipe progressively introduces the new pathway into pretrained models. We instantiate VDN on MiniMax H3, applying the hybrid to video-to-video interactions while retaining Softmax for interactions involving text or audio. With eight-step distillation and an optimized SGLang serving stack, VDN-H3 completes DiT denoising for a 14.3-second, 768p video in 6.70 seconds on eight NVIDIA B200 GPUs, corresponding to a 14.5x speedup over the 50-step dense H3 baseline on the same GPU count.",
+      "canonical_id": "arXiv:2609.20744",
+      "arxiv_id": "2609.20744",
+      "authors": [
+        "Haocheng Xi",
+        "Yiming Xie",
+        "He-Xue Zhao",
+        "Yi-Wen Zhang",
+        "Michael F. Liu",
+        "Thomas Creavin",
+        "Kurt Keutzer",
+        "Xiu-Yu Li",
+        "Zhao-Yang Lv",
+        "Chen-Feng Xu",
+        "Hai-Wen Feng"
+      ]
+    },
+    {
+      "title": "Inference-Engine Fingerprinting Attacks are Practical: Exploring Model-Driven Environmental Discovery, Exploitation, and Escape",
+      "source_url": "https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Frontier AI models are rapidly gaining the ability to exploit vulnerabilities in complex pieces of software. The risk is not theoretical, as evidenced by recent sandbox escapes performed by frontier models at OpenAI and Anthropic. Discussions of how to sandbox inference stack components often focus on components other than the inference engine itself (e.g., network proxies or code execution environments). However, the inference engine is an attractive target for a misaligned model. For example, if a model can trigger exploits in that engine merely by generating specially-crafted output tokens, the model can initiate a multi-step, to-the-bare-metal exploit chain in the engine, without relying on vulnerabilities in other components of the inference stack, and without assistance from externally-provided, maliciously-crafted input tokens. In this paper, we show that a misaligned model can perform inference engine fingerprinting to determine the specific engine (e.g., vLLM, SGLang) which executes the model. Once the engine has been fingerprinted, the model can leverage engine-specific exploits to take control of the engine using only carefully-selected output tokens. We provide concrete examples of model fingerprints in five popular engines, and demonstrate how realistic agentic harnesses allow a model to leverage those fingerprints to identify the local engine. We also describe a proof-of-concept, to-the-bare-metal exploit chain that originates from a fingerprinted (and subsequently compromised) inference engine. We conclude by discussing several ways that inference engines could be changed to make fingerprinting attacks more difficult.",
+      "canonical_id": "arXiv:2609.20614",
+      "arxiv_id": "2609.20614",
+      "authors": [
+        "Sarah Radway",
+        "Andrew Cheng",
+        "V. Reddi",
+        "James Mickens"
+      ]
+    },
+    {
+      "title": "On-Demand Attention: Language Models Know When to Recall",
+      "source_url": "https://www.semanticscholar.org/paper/8da785252ba758eed80836daa30707f53a485ad5",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Reasoning and agentic workloads increasingly demand efficient long-context inference. Yet full-attention decoding reads the growing history at every step, regardless of its benefit to the next prediction. We show that a pretrained model's decoding states already contain information predictive of this benefit, before the global read. Building on this finding, we introduce On-Demand Attention (ODA), a local-first decoding method that uses a lightweight recall head to selectively invoke global attention as its predicted benefit changes during generation. ODA trains only the recall head, leaving pretrained weights unchanged and the complete historical KV cache available for future recall. We further implement GPU-side conditional execution in vLLM, translating reduced global reads into practical decoding speedups over full attention at long context lengths. Experiments across Qwen and Gemma models, including hybrid-attention backbones, show that selective recall recovers most of the performance lost under local attention while substantially reducing global reads. These findings support long-context inference in which pretrained models guide their own access to the information they retain.",
+      "canonical_id": "arXiv:2609.20734",
+      "arxiv_id": "2609.20734",
+      "authors": [
+        "Hai-Bo Feng",
+        "Ruiqi Liang",
+        "Han-Yang Peng",
+        "Shi-Qi Yu"
+      ]
+    },
+    {
+      "title": "Spotlights: Discovering Improvement Opportunities in Software Repositories",
+      "source_url": "https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Coding agents and evolutionary code-search systems can improve implementations once a target and evaluation criterion have been specified. Applying these methods to an existing software repository raises an earlier question: which implementation choices are worth investigating for a high-level engineering objective? We introduce \\emph{optimization-opportunity discovery}, the repository-level task of identifying candidate source regions, explaining how they relate to the objective, and proposing possible changes. The task takes as input a repository, an engineering objective, and optional runtime evidence such as offline telemetry observations or profiles. It does not require the user to specify a defect, bottleneck, or code location. We present \\emph{Spotlights}, a system that performs this task through logical repository mapping, successive agent reviews, and optional research linking candidates to relevant techniques. We evaluate Spotlights across model serving, document retrieval, blockchain ordering, and document processing. Across three cases, it recovers seven of nine expert-selected targets. In the reliability study, 70\\% of the top ten candidates meet the stated correctness and severity thresholds. Across five repeated retrieval runs, 73.6\\% of candidate occurrences have a matching source region in all five runs. Spotlights also rediscovers the target of a withheld retrieval optimization and connects it to a relevant tiling technique. In an implementation study, a discovered change reduces end-to-end page-processing runtime by 10.6\\% while preserving measured output quality. These results establish optimization-opportunity discovery as a distinct and empirically evaluable step between a broad engineering objective and subsequent implementation and validation.",
+      "canonical_id": "arXiv:2609.20446",
+      "arxiv_id": "2609.20446",
+      "authors": [
+        "U. Barzelay",
+        "Ophir Azulai",
+        "Idan Friedman",
+        "Inbar Shapira",
+        "Foad Abo Dahood",
+        "Yevgeny Burshtein",
+        "Orit Prince",
+        "Michael Soloveitchik",
+        "O. Naparstek",
+        "Roi Pony",
+        "Tal Drory",
+        "Michael Factor"
+      ]
+    },
+    {
+      "title": "PixelFlow: Token-Level Workload Management for Efficient Distributed DiT Serving",
+      "source_url": "https://www.semanticscholar.org/paper/cf252ff65f776fa5f99f195a323ae1a0c61a0925",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Online image generation with Diffusion Transformers (DiTs) must meet latency service-level objectives (SLOs) while using GPU resources efficiently. Existing systems improve GPU utilization by batching multiple requests for joint execution. However, request-level batching offers limited control over batch size: batches may be too small to saturate GPU compute, while larger ones may violate latency SLOs. Globally coordinated scheduling introduces further delays by requiring independently progressing GPUs to synchronize before admitting new work. We present PixelFlow, a distributed DiT serving system that addresses these limitations through token-level workload management. Its key idea is to use image tokens (the units a DiT processes to generate an image) to divide and batch request workloads at a finer granularity. This allows each GPU to take on a portion of additional work under latency constraints. By distributing these portions across GPUs, PixelFlow accommodates more concurrent requests, improving GPU utilization while reducing queueing delays. To realize this flexibility, PixelFlow provides a runtime that splits requests into variable-sized partitions and batches them efficiently on each GPU. To reduce the resulting communication overhead, it optimizes token placement to limit cross-GPU data exchange while balancing GPU workloads. It further exploits similarity across denoising steps to overlap the remaining transfers with computation. An SLO-aware scheduler groups GPUs to share compute resources among requests with compatible latency requirements. Each group progresses independently, synchronizing with others only when their combined resources are needed to admit a new request. Evaluation with Stable Diffusion 3 and FLUX.1-dev on H100 GPUs shows that PixelFlow improves SLO attainment by up to 43% and achieves up to 2.8 times the goodput of state-of-the-art DiT serving systems.",
+      "canonical_id": "arXiv:2609.20723",
+      "arxiv_id": "2609.20723",
+      "authors": [
+        "Zhexiang Zhang",
+        "Min-Chen Yu",
+        "Yi-Fan Sun",
+        "Xu Bai",
+        "Xing-Liang Yuan",
+        "A. N. Toosi"
+      ]
+    },
+    {
+      "title": "MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson",
+      "source_url": "https://www.semanticscholar.org/paper/ec3d18f33537a5eab1e328eb3d05cf255b64b08b",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Embodied LLM systems increasingly co-locate latency-critical robotics pipelines with compute- and memory-intensive language-model inference on edge platforms such as NVIDIA Jetson. This co-location avoids cloud round trips and enables privacy-preserving, low-latency interaction, but it also creates a new source of resource interference. Our experiments show that the deadline miss rate of a real-time task can reach nearly 100% under co-running LLM inference. The root cause is that, although robotics workloads and LLM inference typically execute on the CPU and GPU, respectively, they share the same unified-memory subsystem on edge platforms. As a result, Memory-Controller (MC) capacity can become a hidden bottleneck even when conventional compute resources do not appear saturated. Based on this finding, we propose MCSched, a lightweight MC-aware runtime scheduler for embodied LLM systems. MCSched combines coarse MC-pressure signals with foreground timing feedback and temporarily gates background LLM execution when robotics tasks approach deadline risk. In our prototype experiments, MCSched successfully reduced the deadline miss rate of the camera task and PCL task by up to 83.35% and 74.11%, respectively, on the ROS-LLM framework while maintaining LLM inference speed. These observations provide preliminary but compelling evidence that MC-aware scheduling is a practical operating system/runtime direction for deployable embodied AI on unified memory edge devices.",
+      "canonical_id": "DOI:10.1145/3838177.3841726",
+      "doi": "10.1145/3838177.3841726",
+      "authors": [
+        "Teng Mei",
+        "Cheng-Xuan Pei",
+        "Marco Canini",
+        "Yunming Xiao"
+      ]
+    },
+    {
+      "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+      "source_url": "https://www.semanticscholar.org/paper/42d284a05471e9a548ef0ce3b24203a3ce24396b",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Open-source video generative models ship almost exclusively as PyTorch/CUDA reference implementations. This leaves Cloud TPU pods without a production-ready inference path, despite offering large, cost-effective accelerator memory pools ideal for long-sequence spatiotemporal attention. We present vidax, an open-source JAX/Flax inference engine and zero-copy PyTorch-to-JAX weight translator for modern video generation architectures. vidax covers a diverse set of spatiotemporal models --- including Diffusion Transformers, omnimodal Mixture-of-Transformers, 3D VAEs, text encoders, and native samplers --- with zero PyTorch dependency in the execution path. The framework unifies 1D tensor parallelism with DeepSpeed-Ulysses sequence parallelism on a single JAX sharding mesh, integrates TPU flash-attention kernels, and implements per-layer weight offloading to support reference resolutions that exceed single-device memory. We benchmark compile times, latency, and peak memory utilization on TPU v4-8 hardware, and document real-world numerical bugs surfaced during checkpoint translation. vidax is released open-source as a baseline for JAX and TPU video generation research.",
+      "canonical_id": "arXiv:2609.18077",
+      "arxiv_id": "2609.18077",
+      "authors": [
+        "Congyue Deng"
+      ]
+    },
+    {
+      "title": "Automated Instruction Encoding Synthesis for Modern GPU ISA Compression",
+      "source_url": "https://www.semanticscholar.org/paper/f5262333ebf60e4b8b753a4d9254c2734020ab38",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Modern GPU kernels increasingly stress the instruction supply path, while fixed instruction containers can leave substantial footprint slack. This paper presents an automated encoding-synthesis framework that treats instruction layout as a constrained slot-assignment problem over a validated instruction-form field specification. The formulation separates semantic field identity from physical bit positions and supports tied, pinned, and free placement constraints, making it applicable when recurring decoded fields are not frozen by a public format contract. We instantiate the framework for NVIDIA SASS: raw public encoding text is normalized into a machine-readable specification, a SASS disassembler is validated against nvdisasm on 3.78M instructions, released as an open benchmark, and CP-SAT synthesis is used for fixed-length and variable-length encodings. On 142 Blackwell kernel inputs, variable-length synthesis reduces instruction footprint by 33%, with comparable reductions after re-synthesis on Ampere and Hopper; fixed-length synthesis on the same specification reduces decoder area by 16% against a decoder generated from the NVIDIA-observed 128-bit layout by the same generator and flow. Generated fetch/decode RTL meets 1.5 GHz in TSMC 22 nm with a replicated area delta of 0.12% of a GA100-class die; a same-node SRAM comparison shows the footprint reduction corresponds to about 9x this added logic in instruction-SRAM bit-cell area.",
+      "canonical_id": "arXiv:2609.18662",
+      "arxiv_id": "2609.18662",
+      "authors": [
+        "Ming-Yuan Ma",
+        "Hu He"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.cosrev.2026.101037",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.cosrev.2026.101037",
+        "title:inside the black box a comprehensive survey of explainable ai benchmarks protocols technical analysis and open gaps",
+        "url:https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5"
+      ],
+      "record": {
+        "title": "Inside the black box: A comprehensive survey of explainable AI benchmarks, protocols, technical analysis, and open gaps",
+        "source_url": "https://www.semanticscholar.org/paper/3ef9fa484665f4bc75ec6a208228ffe5124342d5",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.cosrev.2026.101037",
+        "doi": "10.1016/j.cosrev.2026.101037",
+        "authors": [
+          "Habib Khan",
+          "Faleh Alqahtani",
+          "Weiwei Jiang",
+          "M. Ali",
+          "Sareer Ul Amin",
+          "Jakeoung Koo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115976",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115976",
+        "title:transformers in protein informatics a survey of structure prediction function annotation interactions and drug discovery",
+        "url:https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d"
+      ],
+      "record": {
+        "title": "Transformers in protein informatics: A survey of structure prediction, function annotation, interactions, and drug discovery",
+        "source_url": "https://www.semanticscholar.org/paper/09628c62388392dfc29aa165e60592680865f50d",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115976",
+        "doi": "10.1016/j.engappai.2026.115976",
+        "authors": [
+          "Yumin Zhang",
+          "Xiaowen Ling",
+          "Zhiqiang Li",
+          "Liang-Liang Song",
+          "Yifan Jia",
+          "Yan-Bin Wang",
+          "Zhuhong You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.istruc.2026.112910",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.istruc.2026.112910",
+        "title:rapid displacement time history prediction for urban reinforced concrete frames using gated reparameterized temporal fusion and structural similaritybased extrapolation networks",
+        "url:https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990"
+      ],
+      "record": {
+        "title": "Rapid displacement time history prediction for urban reinforced concrete frames using Gated Reparameterized Temporal Fusion and Structural Similarity‐Based Extrapolation Networks",
+        "source_url": "https://www.semanticscholar.org/paper/4d1c490a2a75a1d418f61f8c8a2042c6d933e990",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.istruc.2026.112910",
+        "doi": "10.1016/j.istruc.2026.112910",
+        "authors": [
+          "X. Song",
+          "Senna Wang",
+          "Xiaowei Cheng",
+          "Haoyou Zhang",
+          "Ruijie Guo",
+          "Yi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832894",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832894",
+        "title:crosslayer performance analysis of singlegpu large language model inference",
+        "url:https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb"
+      ],
+      "record": {
+        "title": "Cross-Layer Performance Analysis of Single-GPU Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The performance of single-GPU LLM inference is characterized by strong cross-layer interactions spanning model architecture, runtime scheduling, operator execution, and GPU microarchitecture. Unfortunately, a unified understanding of single-GPU LLM inference bottlenecks is still lacking due to two limitations: the lack of traceable cross-layer attribution and the static characterization of KV-cache usage. To this end, we present a cross-layer analysis approach for single-GPU LLM inference that jointly characterizes latency and memory behavior. However, this requires addressing two challenges: cross-layer attribution and dynamic KV-cache characterization. To address the two challenges, we employ four-layer joint profiling for cross-layer attribution and introduce a logical KV computation metric for dynamic KV-cache characterization, respectively. Finally, we systematically characterize representative dense and Mixture-of-Experts (MoE) models under diverse workloads on a single A100 GPU, identify key bottlenecks across inference phases and architectures, and reveal opportunities for further optimization.",
+        "canonical_id": "DOI:10.1145/3832810.3832894",
+        "doi": "10.1145/3832810.3832894",
+        "authors": [
+          "Zong-Xing Zhao",
+          "Xiaqing Li",
+          "Ze-Kai Meng",
+          "Zheng-Jun Fu",
+          "Qian Wang",
+          "Yan-Ling Zhang",
+          "Yidong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832836",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832836",
+        "title:bag faster matrix multiplication on a single gpu",
+        "url:https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f"
+      ],
+      "record": {
+        "title": "BAG: Faster Matrix Multiplication on a Single GPU",
+        "source_url": "https://www.semanticscholar.org/paper/5e63e831565169257cbdb71c6fd71944c4aef31f",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Matrix multiplication is a fundamental computation kernel in many parallel and sequential scientific applications. We target FP32 matrix multiplication on GPUs, a setting required by numerous HPC and scientific workloads. Alternative Basis Matrix Multiplication (ABMM) is a practical Strassen-like algorithm that reduces the number of additions while preserving the same asymptotic exponent and admitting a provable O(n) component-wise error bound. However, optimized GPU support for ABMM remains underexplored. This paper presents BAG (Basis Alternative Matrix Multiplication on GPUs), a GPU-oriented implementation of ABMM for the NVIDIA Ampere architecture. A naive GPU implementation of ABMM suffers from excessive workspace and memory traffic, launch-dominated serialization across heterogeneous steps, and high sensitivity to recursion and blocking parameters. We design fused ABMM kernels to shrink workspace and eliminate redundant global-memory traffic, specialize register usage for different primitive patterns to expose intra/inter-kernel parallelism, and introduce a cost-model-based recursion policy together with a Roofline-guided blocking strategy to stabilize performance across problem sizes and shapes. On an NVIDIA A100, experimental results show that 1-level BAG reaches a break-even point against cuBLAS FP32 GEMM at dimension 1280 for square matrices, and recursive BAG achieves a 1.24 × speedup over cuBLAS FP32 GEMM at dimension 4096. Our code is available at https://doi.org/https://github.com/napleon-liu/bag.",
+        "canonical_id": "DOI:10.1145/3832810.3832836",
+        "doi": "10.1145/3832810.3832836",
+        "authors": [
+          "Yao Liu",
+          "Ye-Wen Li",
+          "Zhonghai Zhang",
+          "Erlin Yao",
+          "Guangming Tan",
+          "Wei-Le Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832855",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832855",
+        "title:tfs tileaware spmmgemm fusion for accelerating gnn inference on intel amx",
+        "url:https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698"
+      ],
+      "record": {
+        "title": "TFS: Tile-Aware SpMM–GeMM Fusion for Accelerating GNN Inference on Intel AMX",
+        "source_url": "https://www.semanticscholar.org/paper/e8b26a1e01cf9ddbd65aa91db1fd5120b5248698",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Graph Neural Network (GNN) inference involves two successive matrix operations per layer: a sparse neighbor aggregation (SpMM) followed by a dense linear transformation (GeMM). The conventional two-step execution materializes a large intermediate matrix Z in main memory, incurring significant memory traffic that dominates end-to-end latency. We present TFS, a tile-aware fusion framework that eliminates this intermediate materialization by fusing SpMM and GeMM directly inside the tile registers of Intel’s Advanced Matrix Extensions (AMX). The key insight is that tile-based sparse computation becomes efficient only when the degree distribution within each tile batch is carefully controlled. TFS introduces degree-aware tile scheduling, which sorts rows by ascending degree so that rows within each 16-row AMX tile batch have similar neighbor counts, raising tile efficiency η to 0.96 on average. Evaluated on 25 sparse matrices from 8+ application domains, including graphs with 65.6 M nodes and 3.6 B edges, TFS achieves up to 6.67 × kernel-level and 4.09 × end-to-end speedup over Intel MKL. An AMX isolation experiment further demonstrates that AMX tiles provide up to 13.7 × speedup over an equivalent AVX-512 BF16 implementation, indicating that tile compute density, not the BF16 format alone, is the primary source of acceleration.",
+        "canonical_id": "DOI:10.1145/3832810.3832855",
+        "doi": "10.1145/3832810.3832855",
+        "authors": [
+          "Xiao Yan",
+          "Haodong Bian",
+          "Xiao-Ying Wang",
+          "Teng-Fei Cao",
+          "Jianqiang Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832874",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832874",
+        "title:magsat memoryaccessguided fusion and shapeadaptive autotuning for dynamic tensor programs",
+        "url:https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb"
+      ],
+      "record": {
+        "title": "MAGSAT: Memory-Access-Guided Fusion and Shape-Adaptive Auto-Tuning for Dynamic Tensor Programs",
+        "source_url": "https://www.semanticscholar.org/paper/383a385946060d5d6814c1b321540722134601cb",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Dynamic tensor programs are increasingly common in deep learning. Existing libraries and compilers provide or generate highly optimized kernels, but their decisions are often tied to fixed operator patterns or concrete shapes. Dynamic-shape systems reduce tuning overhead, yet they typically optimize individual operators and leave graph-level fusion opportunities underexplored. We propose MAGSAT, a unified framework that combines shape-invariant operator fusion with shape-adaptive parameter selection for dynamic workloads. MAGSAT analyzes memory-access semantics to identify fusion regions, maps them to parameterized tiled templates, and selects kernel configurations with a lightweight trait-driven analytical model. Extensive experiments demonstrate that MAGSAT achieves average speedups of 4.65 × for fused operators and 2.74 × for end-to-end inference over the state-of-the-art baseline.",
+        "canonical_id": "DOI:10.1145/3832810.3832874",
+        "doi": "10.1145/3832810.3832874",
+        "authors": [
+          "Hao-Dong Deng",
+          "Jia-Nuo Sheng",
+          "Wen-Hao Dai",
+          "Fangxin Liu",
+          "Qing-Xiao Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832866",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832866",
+        "title:asymflow enabling longcontext llm serving via cpugpu prefilldecode disaggregation",
+        "url:https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9"
+      ],
+      "record": {
+        "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
+        "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Driven by cost and privacy constraints, many organizations deploy large language model (LLM) inference on local CPU-GPU servers. For long-context requests, the key-value (KV) cache grows linearly with sequence length and can rapidly exhaust GPU memory, reducing both the maximum supported context and request concurrency. Meanwhile, we observe that GPU utilization is high during the compute-heavy prefill phase but drops sharply during the memory-bound decode phase, where modern CPUs equipped with matrix units can achieve competitive attention throughput. We present AsymFlow, a prefill-decode disaggregated serving system that runs prefill on the GPU and decode on the CPU. AsymFlow (1) streams per-layer KV states through a shared-memory KV pool to overlap KV transfer with GPU prefill, (2) employs a task-aware online dispatcher that jointly accounts for pipeline queueing and KV capacity to prevent GPU OOM and idle bubbles, and (3) accelerates CPU decode attention with AMX. Implemented on SGLang and evaluated on a CPU-GPU platform, AsymFlow serves 32K-context workloads that can trigger OOM on a GPU-only baseline, improves throughput by 1.08–1.25 × over the GPU-only baseline, and by 1.32-2.49 × over a state-of-the-art KV-offloading method; the gains increase as GPU memory becomes tighter.",
+        "canonical_id": "DOI:10.1145/3832810.3832866",
+        "doi": "10.1145/3832810.3832866",
+        "authors": [
+          "Jun-Wen Zhang",
+          "Wei-Ling Yang",
+          "Jian-Bin Fang",
+          "En-Da Yu",
+          "De-Zun Dong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832854",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832854",
+        "title:accesm packedtotal exact inference for cpu esm2 embedding",
+        "url:https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6"
+      ],
+      "record": {
+        "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+        "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+        "canonical_id": "DOI:10.1145/3832810.3832854",
+        "doi": "10.1145/3832810.3832854",
+        "authors": [
+          "Wen-Hao Sun",
+          "Pan-Pan Cui",
+          "Yiqi Liu",
+          "Wan-Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832859",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832859",
+        "title:crossserve crosslayer scheduling for slo optimization in multitenant llm serving",
+        "url:https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4"
+      ],
+      "record": {
+        "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The deployment of Large Language Models (LLMs) as multi-tenant cloud services is now widespread, but maintaining high Service Level Objective (SLO) attainment across diverse tenants remains challenging. Current serving systems focus on a single layer of the stack, either using iteration-level batching or coarse-grained instance-level routing. This approach causes significant SLO violations during bursty workloads and struggles to balance throughput with differentiated tenant priorities. The core issue lies in intra-instance schedulers lacking awareness of the global cluster state, while cluster-level routers do not account for fine-grained, per-iteration execution behavior within each GPU. We introduce CrossServe, a cross-layer scheduling framework that jointly optimizes request routing, adaptive micro-batching, and tenant-weighted preemption to maximize SLO attainment in multi-tenant LLM serving. CrossServe integrates three complementary layers: (1) an online, lightweight length classifier that separates requests to reduce Head-of-Line (HoL) blocking; (2) an SLO-aware adaptive micro-batching system that dynamically tunes prefill chunk sizes based on the real-time Time-Per-Output-Token (TPOT) slack of decoding requests; and (3) a global routing and preemption layer that distributes load across GPU instances while using tenant weights when reclaiming resources under overload. We evaluate CrossServe with BurstGPT-derived trace replay on a 32-GPU cluster. Compared with vLLM, Sarathi-Serve, and SOLA, CrossServe increases overall SLO attainment by 53, 29, and 14 percentage points respectively (from 42% to 95%, from 66% to 95%, and from 81% to 95%) while sustaining high throughput. In the ablation workload, removing global routing raises P99 TTFT from 185 ms to 410 ms; the full system therefore reduces this tail latency by 54.9% relative to that ablation and improves the observed throughput–SLO tradeoff.",
+        "canonical_id": "DOI:10.1145/3832810.3832859",
+        "doi": "10.1145/3832810.3832859",
+        "authors": [
+          "Jia-He Li",
+          "Jia-Bin Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832865",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832865",
+        "title:waqllm optimizing multiinstance llm deployment via workloadaware queueing model",
+        "url:https://www.semanticscholar.org/paper/a3ea92c6fa8233ac57ec595875a2a35f7f640056"
+      ],
+      "record": {
+        "title": "WAQ-LLM: Optimizing Multi-Instance LLM Deployment via Workload-Aware Queueing Model",
+        "source_url": "https://www.semanticscholar.org/paper/a3ea92c6fa8233ac57ec595875a2a35f7f640056",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The deployment of Large Language Models (LLMs) on multi-instance GPU clusters has become essential to meet the surging demand for generative AI applications. While scaling out instances increases throughput, the distinct computational characteristics of prefill and decode phases introduce significant resource contention, making it challenging to satisfy stringent Service Level Objectives (SLOs) for responsiveness and generation speed. Existing serving solutions typically rely on static deployment strategies—either aggregating or disaggregating these phases—which often fail to adapt to the interference patterns caused by varying request arrival rates and sequence lengths. In this work, we propose WAQ-LLM, a performance optimization framework to find the optimal deployment configuration for multi-instance LLM serving. Specifically, we first establish an analytical workload-aware queueing model that captures the LLM computational characteristics and queuing behavior of both aggregation and disaggregation designs. We then formulate the deployment configuration problem as a constrained optimization problem and develop a polynomial-time algorithm to efficiently identify configurations that minimize Time-per-Output-Token (TPOT) while satisfying SLOs. Extensive experiments are conducted on a 16-GPU cluster across various LLMs and workload settings. WAQ-LLM consistently outperforms AIConfigurator, NVIDIA’s official product-level solution, reducing TPOT by 21.62% on average and up to 81.7%. Moreover, WAQ-LLM can provide adaptive and hybrid configurations to handle diverse workloads, surpassing static deployments limited to a single instance type (either PD aggregation or disaggregation).",
+        "canonical_id": "DOI:10.1145/3832810.3832865",
+        "doi": "10.1145/3832810.3832865",
+        "authors": [
+          "Jia-Xin Lai",
+          "Yi-Zhou Luo",
+          "Qiang Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19924",
+      "identity_tokens": [
+        "id:arXiv:2609.19924",
+        "title:the life of a token from words to bits on the wire",
+        "url:https://www.semanticscholar.org/paper/834e5b182df49185530f96f8d856d626930e2620"
+      ],
+      "record": {
+        "title": "The Life of a Token: from Words to Bits on the Wire",
+        "source_url": "https://www.semanticscholar.org/paper/834e5b182df49185530f96f8d856d626930e2620",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Large Language Models (LLMs) transform vast collections of unstructured text into semantic patterns used for language generation and reasoning tasks. Behind their ease of use lies a complex process: words become tokens, tokens become vectors, and vectors ultimately give rise to streams of bits that flow through High-Performance Computing (HPC) systems. As modern LLMs grow to billions or trillions of parameters, this path increasingly unfolds across thousands of interconnected accelerators, making the underlying communication fabric a critical and often opaque component of model training. This tutorial aims to walk the reader through the journey from words to network traffic, shedding light on how language is translated into communication flows within HPC training systems. Using concrete examples from Dante's Divine Comedy, we illustrate how model architecture, tokenization, embeddings, and parallelization strategies shape the volume, structure, and timing of data exchanged across the network. We combine architectural analysis with analytical traffic models and numerical examples to characterize the communication requirements of LLM training. We try to demystify how words travel across the network and provide practical insights into the network requirements needed to support the journey from text to trained model.",
+        "canonical_id": "arXiv:2609.19924",
+        "arxiv_id": "2609.19924",
+        "authors": [
+          "Davide Avesani",
+          "Pengwenlong Gu",
+          "S. Skaperas",
+          "Stefano Secci"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20744",
+      "identity_tokens": [
+        "id:arXiv:2609.20744",
+        "title:video deltanet a videonative hybrid attention for livestream video generation",
+        "url:https://www.semanticscholar.org/paper/f3535a44fc379b82ad075d9d4520cc9e4f473f5a"
+      ],
+      "record": {
+        "title": "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+        "source_url": "https://www.semanticscholar.org/paper/f3535a44fc379b82ad075d9d4520cc9e4f473f5a",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Video diffusion models repeatedly process long spatiotemporal token sequences during denoising, making attention a major computational bottleneck. Linear attention offers an appealing alternative and has been widely adopted in recent large language models, but directly applying it to video models often fails to preserve the fine-grained interactions required for high-quality generation. We present Video DeltaNet (VDN), which combines local Softmax attention with bidirectional linear memory for long-range video context. Its linear branch introduces Video Delta Attention (VDA), which updates memory once per frame by jointly incorporating its spatial tokens. Separate output projections and learnable gates calibrate the two branches, while a staged teacher-alignment recipe progressively introduces the new pathway into pretrained models. We instantiate VDN on MiniMax H3, applying the hybrid to video-to-video interactions while retaining Softmax for interactions involving text or audio. With eight-step distillation and an optimized SGLang serving stack, VDN-H3 completes DiT denoising for a 14.3-second, 768p video in 6.70 seconds on eight NVIDIA B200 GPUs, corresponding to a 14.5x speedup over the 50-step dense H3 baseline on the same GPU count.",
+        "canonical_id": "arXiv:2609.20744",
+        "arxiv_id": "2609.20744",
+        "authors": [
+          "Haocheng Xi",
+          "Yiming Xie",
+          "He-Xue Zhao",
+          "Yi-Wen Zhang",
+          "Michael F. Liu",
+          "Thomas Creavin",
+          "Kurt Keutzer",
+          "Xiu-Yu Li",
+          "Zhao-Yang Lv",
+          "Chen-Feng Xu",
+          "Hai-Wen Feng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20614",
+      "identity_tokens": [
+        "id:arXiv:2609.20614",
+        "title:inferenceengine fingerprinting attacks are practical exploring modeldriven environmental discovery exploitation and escape",
+        "url:https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e"
+      ],
+      "record": {
+        "title": "Inference-Engine Fingerprinting Attacks are Practical: Exploring Model-Driven Environmental Discovery, Exploitation, and Escape",
+        "source_url": "https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Frontier AI models are rapidly gaining the ability to exploit vulnerabilities in complex pieces of software. The risk is not theoretical, as evidenced by recent sandbox escapes performed by frontier models at OpenAI and Anthropic. Discussions of how to sandbox inference stack components often focus on components other than the inference engine itself (e.g., network proxies or code execution environments). However, the inference engine is an attractive target for a misaligned model. For example, if a model can trigger exploits in that engine merely by generating specially-crafted output tokens, the model can initiate a multi-step, to-the-bare-metal exploit chain in the engine, without relying on vulnerabilities in other components of the inference stack, and without assistance from externally-provided, maliciously-crafted input tokens. In this paper, we show that a misaligned model can perform inference engine fingerprinting to determine the specific engine (e.g., vLLM, SGLang) which executes the model. Once the engine has been fingerprinted, the model can leverage engine-specific exploits to take control of the engine using only carefully-selected output tokens. We provide concrete examples of model fingerprints in five popular engines, and demonstrate how realistic agentic harnesses allow a model to leverage those fingerprints to identify the local engine. We also describe a proof-of-concept, to-the-bare-metal exploit chain that originates from a fingerprinted (and subsequently compromised) inference engine. We conclude by discussing several ways that inference engines could be changed to make fingerprinting attacks more difficult.",
+        "canonical_id": "arXiv:2609.20614",
+        "arxiv_id": "2609.20614",
+        "authors": [
+          "Sarah Radway",
+          "Andrew Cheng",
+          "V. Reddi",
+          "James Mickens"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20734",
+      "identity_tokens": [
+        "id:arXiv:2609.20734",
+        "title:ondemand attention language models know when to recall",
+        "url:https://www.semanticscholar.org/paper/8da785252ba758eed80836daa30707f53a485ad5"
+      ],
+      "record": {
+        "title": "On-Demand Attention: Language Models Know When to Recall",
+        "source_url": "https://www.semanticscholar.org/paper/8da785252ba758eed80836daa30707f53a485ad5",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Reasoning and agentic workloads increasingly demand efficient long-context inference. Yet full-attention decoding reads the growing history at every step, regardless of its benefit to the next prediction. We show that a pretrained model's decoding states already contain information predictive of this benefit, before the global read. Building on this finding, we introduce On-Demand Attention (ODA), a local-first decoding method that uses a lightweight recall head to selectively invoke global attention as its predicted benefit changes during generation. ODA trains only the recall head, leaving pretrained weights unchanged and the complete historical KV cache available for future recall. We further implement GPU-side conditional execution in vLLM, translating reduced global reads into practical decoding speedups over full attention at long context lengths. Experiments across Qwen and Gemma models, including hybrid-attention backbones, show that selective recall recovers most of the performance lost under local attention while substantially reducing global reads. These findings support long-context inference in which pretrained models guide their own access to the information they retain.",
+        "canonical_id": "arXiv:2609.20734",
+        "arxiv_id": "2609.20734",
+        "authors": [
+          "Hai-Bo Feng",
+          "Ruiqi Liang",
+          "Han-Yang Peng",
+          "Shi-Qi Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20446",
+      "identity_tokens": [
+        "id:arXiv:2609.20446",
+        "title:spotlights discovering improvement opportunities in software repositories",
+        "url:https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962"
+      ],
+      "record": {
+        "title": "Spotlights: Discovering Improvement Opportunities in Software Repositories",
+        "source_url": "https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Coding agents and evolutionary code-search systems can improve implementations once a target and evaluation criterion have been specified. Applying these methods to an existing software repository raises an earlier question: which implementation choices are worth investigating for a high-level engineering objective? We introduce \\emph{optimization-opportunity discovery}, the repository-level task of identifying candidate source regions, explaining how they relate to the objective, and proposing possible changes. The task takes as input a repository, an engineering objective, and optional runtime evidence such as offline telemetry observations or profiles. It does not require the user to specify a defect, bottleneck, or code location. We present \\emph{Spotlights}, a system that performs this task through logical repository mapping, successive agent reviews, and optional research linking candidates to relevant techniques. We evaluate Spotlights across model serving, document retrieval, blockchain ordering, and document processing. Across three cases, it recovers seven of nine expert-selected targets. In the reliability study, 70\\% of the top ten candidates meet the stated correctness and severity thresholds. Across five repeated retrieval runs, 73.6\\% of candidate occurrences have a matching source region in all five runs. Spotlights also rediscovers the target of a withheld retrieval optimization and connects it to a relevant tiling technique. In an implementation study, a discovered change reduces end-to-end page-processing runtime by 10.6\\% while preserving measured output quality. These results establish optimization-opportunity discovery as a distinct and empirically evaluable step between a broad engineering objective and subsequent implementation and validation.",
+        "canonical_id": "arXiv:2609.20446",
+        "arxiv_id": "2609.20446",
+        "authors": [
+          "U. Barzelay",
+          "Ophir Azulai",
+          "Idan Friedman",
+          "Inbar Shapira",
+          "Foad Abo Dahood",
+          "Yevgeny Burshtein",
+          "Orit Prince",
+          "Michael Soloveitchik",
+          "O. Naparstek",
+          "Roi Pony",
+          "Tal Drory",
+          "Michael Factor"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20723",
+      "identity_tokens": [
+        "id:arXiv:2609.20723",
+        "title:pixelflow tokenlevel workload management for efficient distributed dit serving",
+        "url:https://www.semanticscholar.org/paper/cf252ff65f776fa5f99f195a323ae1a0c61a0925"
+      ],
+      "record": {
+        "title": "PixelFlow: Token-Level Workload Management for Efficient Distributed DiT Serving",
+        "source_url": "https://www.semanticscholar.org/paper/cf252ff65f776fa5f99f195a323ae1a0c61a0925",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Online image generation with Diffusion Transformers (DiTs) must meet latency service-level objectives (SLOs) while using GPU resources efficiently. Existing systems improve GPU utilization by batching multiple requests for joint execution. However, request-level batching offers limited control over batch size: batches may be too small to saturate GPU compute, while larger ones may violate latency SLOs. Globally coordinated scheduling introduces further delays by requiring independently progressing GPUs to synchronize before admitting new work. We present PixelFlow, a distributed DiT serving system that addresses these limitations through token-level workload management. Its key idea is to use image tokens (the units a DiT processes to generate an image) to divide and batch request workloads at a finer granularity. This allows each GPU to take on a portion of additional work under latency constraints. By distributing these portions across GPUs, PixelFlow accommodates more concurrent requests, improving GPU utilization while reducing queueing delays. To realize this flexibility, PixelFlow provides a runtime that splits requests into variable-sized partitions and batches them efficiently on each GPU. To reduce the resulting communication overhead, it optimizes token placement to limit cross-GPU data exchange while balancing GPU workloads. It further exploits similarity across denoising steps to overlap the remaining transfers with computation. An SLO-aware scheduler groups GPUs to share compute resources among requests with compatible latency requirements. Each group progresses independently, synchronizing with others only when their combined resources are needed to admit a new request. Evaluation with Stable Diffusion 3 and FLUX.1-dev on H100 GPUs shows that PixelFlow improves SLO attainment by up to 43% and achieves up to 2.8 times the goodput of state-of-the-art DiT serving systems.",
+        "canonical_id": "arXiv:2609.20723",
+        "arxiv_id": "2609.20723",
+        "authors": [
+          "Zhexiang Zhang",
+          "Min-Chen Yu",
+          "Yi-Fan Sun",
+          "Xu Bai",
+          "Xing-Liang Yuan",
+          "A. N. Toosi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3838177.3841726",
+      "identity_tokens": [
+        "id:DOI:10.1145/3838177.3841726",
+        "title:mcsched memorycontrolleraware scheduling for embodied llm workloads on nvidia jetson",
+        "url:https://www.semanticscholar.org/paper/ec3d18f33537a5eab1e328eb3d05cf255b64b08b"
+      ],
+      "record": {
+        "title": "MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson",
+        "source_url": "https://www.semanticscholar.org/paper/ec3d18f33537a5eab1e328eb3d05cf255b64b08b",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Embodied LLM systems increasingly co-locate latency-critical robotics pipelines with compute- and memory-intensive language-model inference on edge platforms such as NVIDIA Jetson. This co-location avoids cloud round trips and enables privacy-preserving, low-latency interaction, but it also creates a new source of resource interference. Our experiments show that the deadline miss rate of a real-time task can reach nearly 100% under co-running LLM inference. The root cause is that, although robotics workloads and LLM inference typically execute on the CPU and GPU, respectively, they share the same unified-memory subsystem on edge platforms. As a result, Memory-Controller (MC) capacity can become a hidden bottleneck even when conventional compute resources do not appear saturated. Based on this finding, we propose MCSched, a lightweight MC-aware runtime scheduler for embodied LLM systems. MCSched combines coarse MC-pressure signals with foreground timing feedback and temporarily gates background LLM execution when robotics tasks approach deadline risk. In our prototype experiments, MCSched successfully reduced the deadline miss rate of the camera task and PCL task by up to 83.35% and 74.11%, respectively, on the ROS-LLM framework while maintaining LLM inference speed. These observations provide preliminary but compelling evidence that MC-aware scheduling is a practical operating system/runtime direction for deployable embodied AI on unified memory edge devices.",
+        "canonical_id": "DOI:10.1145/3838177.3841726",
+        "doi": "10.1145/3838177.3841726",
+        "authors": [
+          "Teng Mei",
+          "Cheng-Xuan Pei",
+          "Marco Canini",
+          "Yunming Xiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18077",
+      "identity_tokens": [
+        "id:arXiv:2609.18077",
+        "title:vidax a unified jax framework for video generative models on accelerator meshes",
+        "url:https://www.semanticscholar.org/paper/42d284a05471e9a548ef0ce3b24203a3ce24396b"
+      ],
+      "record": {
+        "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+        "source_url": "https://www.semanticscholar.org/paper/42d284a05471e9a548ef0ce3b24203a3ce24396b",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Open-source video generative models ship almost exclusively as PyTorch/CUDA reference implementations. This leaves Cloud TPU pods without a production-ready inference path, despite offering large, cost-effective accelerator memory pools ideal for long-sequence spatiotemporal attention. We present vidax, an open-source JAX/Flax inference engine and zero-copy PyTorch-to-JAX weight translator for modern video generation architectures. vidax covers a diverse set of spatiotemporal models --- including Diffusion Transformers, omnimodal Mixture-of-Transformers, 3D VAEs, text encoders, and native samplers --- with zero PyTorch dependency in the execution path. The framework unifies 1D tensor parallelism with DeepSpeed-Ulysses sequence parallelism on a single JAX sharding mesh, integrates TPU flash-attention kernels, and implements per-layer weight offloading to support reference resolutions that exceed single-device memory. We benchmark compile times, latency, and peak memory utilization on TPU v4-8 hardware, and document real-world numerical bugs surfaced during checkpoint translation. vidax is released open-source as a baseline for JAX and TPU video generation research.",
+        "canonical_id": "arXiv:2609.18077",
+        "arxiv_id": "2609.18077",
+        "authors": [
+          "Congyue Deng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18662",
+      "identity_tokens": [
+        "id:arXiv:2609.18662",
+        "title:automated instruction encoding synthesis for modern gpu isa compression",
+        "url:https://www.semanticscholar.org/paper/f5262333ebf60e4b8b753a4d9254c2734020ab38"
+      ],
+      "record": {
+        "title": "Automated Instruction Encoding Synthesis for Modern GPU ISA Compression",
+        "source_url": "https://www.semanticscholar.org/paper/f5262333ebf60e4b8b753a4d9254c2734020ab38",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Modern GPU kernels increasingly stress the instruction supply path, while fixed instruction containers can leave substantial footprint slack. This paper presents an automated encoding-synthesis framework that treats instruction layout as a constrained slot-assignment problem over a validated instruction-form field specification. The formulation separates semantic field identity from physical bit positions and supports tied, pinned, and free placement constraints, making it applicable when recurring decoded fields are not frozen by a public format contract. We instantiate the framework for NVIDIA SASS: raw public encoding text is normalized into a machine-readable specification, a SASS disassembler is validated against nvdisasm on 3.78M instructions, released as an open benchmark, and CP-SAT synthesis is used for fixed-length and variable-length encodings. On 142 Blackwell kernel inputs, variable-length synthesis reduces instruction footprint by 33%, with comparable reductions after re-synthesis on Ampere and Hopper; fixed-length synthesis on the same specification reduces decoder area by 16% against a decoder generated from the NVIDIA-observed 128-bit layout by the same generator and flow. Generated fetch/decode RTL meets 1.5 GHz in TSMC 22 nm with a replicated area delta of 0.12% of a GA100-class die; a same-node SRAM comparison shows the footprint reduction corresponds to about 9x this added logic in instruction-SRAM bit-cell area.",
+        "canonical_id": "arXiv:2609.18662",
+        "arxiv_id": "2609.18662",
+        "authors": [
+          "Ming-Yuan Ma",
+          "Hu He"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:5c65ab58dce6acdb048246796d06a18494c84e1da3478e13e146742630bfb3c0",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-6e051e433e00a10f",
+  "type": "research",
+  "parent_job_id": "job-a47f20aadb90ecb0",
+  "priority": 95,
+  "canonical_id": "arXiv:2609.24639",
+  "arxiv_id": "2609.24639",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Analytical Power-Aware Provisioning for Prefill-Decode Disaggregated AI Inference",
+  "source_url": "https://www.semanticscholar.org/paper/7ba23c77966f3a25afceb7fdcc9bc8a90346c517",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.24639-analytical-power-aware-provisioning-for-prefill-decode-disaggregated-ai-inference.md",
+  "selection_reason": "2026年9月21日の最新論文で、prefill/decode分離、KVキャッシュ予約、キューイング、電力制約を統合した解析モデルを扱い、分離型LLM serving系統に直接接続する。",
+  "priority_breakdown": {
+    "base": 50,
+    "lineage": 25,
+    "recency": 20,
+    "venue": 0,
+    "total": 95
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T18:37:15+00:00"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T165800Z-scheduled-chat-discovery-specialist-25",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-56fbeb640bc1560d",
+      "claim_id": "claim-120d2d3cb0fa96918f480540",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-120d2d3cb0fa96918f480540",
+      "claimed_at": "2026-09-18T16:23:29+00:00",
+      "expires_at": "2026-09-18T17:53:29+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-56fbeb640bc1560d"
+      ],
+      "job": {
+        "job_id": "job-research-56fbeb640bc1560d",
+        "type": "research",
+        "parent_job_id": "job-d3061f092aa97b3c",
+        "priority": 82,
+        "canonical_id": "arXiv:2603.28018",
+        "title": "Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill",
+        "source_url": "https://arxiv.org/abs/2603.28018",
+        "paper_path": "papers/inference/06-kv-cache-memory/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md",
+        "selection_reason": "edge LLM handoverでKV cache転送とtoken forwarding後のprefill再計算をjoint schedulingし、backhaul帯域下のservice interruptionを最小化する。KV移動と再計算の境界条件を扱う隣接研究。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T13:02:42+00:00",
+        "blocker": "今回runではarXiv公式abstractを取得し、公開索引から論文が12節・3命題・25式・4図で構成され、ctHOが複数UEの最悪ハンドオーバ遅延を最小化するためprefill長とKV backhaul転送を共同最適化すること、Qwen2.5-7B-Instruct・3072トークン文脈・176MB KV等のシミュレーション条件や最大3.1倍/3.7倍の遅延削減が報告されることまで確認した。しかしarXiv公式HTML/PDF本文を一次資料として最後まで取得できず、利用可能な別経路も二次索引または全文未公開ページだった。未確認の数式・証明・参考文献を補完せず一時的blockedとして保存し、次回はarXiv公式全文または著者公式PDF経路で再試行する。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-a8f14db6d30274a877be442c.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-18T10:09:56+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-18T10:09:56+00:00",
+            "reason": "今回runではarXiv公式abstractを取得し、公開索引から論文が12節・3命題・25式・4図で構成され、ctHOが複数UEの最悪ハンドオーバ遅延を最小化するためprefill長とKV backhaul転送を共同最適化すること、Qwen2.5-7B-Instruct・3072トークン文脈・176MB KV等のシミュレーション条件や最大3.1倍/3.7倍の遅延削減が報告されることまで確認した。しかしarXiv公式HTML/PDF本文を一次資料として最後まで取得できず、利用可能な別経路も二次索引または全文未公開ページだった。未確認の数式・証明・参考文献を補完せず一時的blockedとして保存し、次回はarXiv公式全文または著者公式PDF経路で再試行する。"
+          }
+        ],
+        "last_blocked_at": "2026-09-18T10:09:56+00:00",
+        "retry_queued_at": "2026-09-18T13:03:31+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T16:23:29+00:00",
+  "checkpoint_released": 0
+}

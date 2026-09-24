@@ -1,0 +1,20 @@
+{
+  "job_id": "job-research-a06bdf20c1667dad",
+  "type": "research",
+  "parent_job_id": "job-05d7dc3b9919ab5f",
+  "priority": 87,
+  "canonical_id": "arXiv:2609.12208",
+  "title": "Vortex: Bridging Extreme Compression and Efficient LLM Inference",
+  "source_url": "https://arxiv.org/abs/2609.12208",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md",
+  "selection_reason": "Recent hardware/system co-design for translating vector quantization and input-dependent sparsity into practical inference efficiency on systolic-array accelerators. Reports 8.03x-23.7x end-to-end speedup and 5.68x-12.5x energy reduction; relevant adjacent architecture/runtime lineage for compressed inference.",
+  "status": "completed",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-16T22:11:15+00:00",
+  "completed_at": "2026-09-17T04:24:04+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-c2d1264e84b9954d425e9dd6.json"
+}

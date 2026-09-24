@@ -1,0 +1,870 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0149JST-worker30-openalex-cpu-gpu-offload-11b",
+  "collector_id": "worker30-openalex-cpu-gpu-offload",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "CPU GPU offload activation sparsity heterogeneous LLM inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20CPU%20GPU%20offload%20activation%20sparsity%20heterogeneous%20inference&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzgwMjcyMDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTYyOTkwMjEyJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "29b6d71d10b3bc3348bb6e8acfb06f4ee4f49b5a",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 32,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:48:12.056940+00:00",
+  "results": [
+    {
+      "title": "Dynamic Scheduling Algorithm for Edge-cloud Collaborative Computing Resources Based on 5G NR-U and Distributed Large Model",
+      "source_url": "https://doi.org/10.26599/tst.2026.9010041",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "DOI:10.26599/tst.2026.9010041",
+      "doi": "10.26599/tst.2026.9010041",
+      "authors": [
+        "Defeng Duan",
+        "Hong Liu",
+        "Liyun Huang",
+        "Songlei Zhang",
+        "Bo Meng"
+      ]
+    },
+    {
+      "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+      "source_url": "https://arxiv.org/abs/2609.12815",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12815",
+      "arxiv_id": "2609.12815",
+      "authors": [
+        "Deifilia Kieckhefen",
+        "Juan Pedro Gutiérrez Hermosillo Muriedas",
+        "Lars H. Heyen",
+        "Mathis Bode",
+        "Iida Hakulinen",
+        "Andreas Herten",
+        "Chelsea Maria John",
+        "Thorsten Kurth",
+        "Anni Moisala",
+        "Asena Karolin Özdemir",
+        "Kaleb Phipps",
+        "Oskar Taubert",
+        "Arvid Weyrauch",
+        "Markus Götz",
+        "Charlotte Debus"
+      ]
+    },
+    {
+      "title": "Understanding the Security Boundary of Obfuscation-based On-Device LLM Protection",
+      "source_url": "https://arxiv.org/abs/2609.10117",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10117",
+      "arxiv_id": "2609.10117",
+      "authors": [
+        "Hanyi Zhou",
+        "Chenyang Li",
+        "Yuanzhe Pang",
+        "Ke Xu",
+        "Mingwei Xu",
+        "Zhuotao Liu"
+      ]
+    },
+    {
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.10355",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10355",
+      "arxiv_id": "2609.10355",
+      "authors": [
+        "Killian Steunou",
+        "Yannis Tevissen",
+        "Mounîm A. El Yacoubi"
+      ]
+    },
+    {
+      "title": "Every Kernel Is a Join: Automatic Multi-GPU Parallelism for AI Computations in Einsummable",
+      "source_url": "https://arxiv.org/abs/2609.03905",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.03905",
+      "arxiv_id": "2609.03905",
+      "authors": [
+        "Zhimin Ding",
+        "Chen-Kuan Liao",
+        "Chima Adiole",
+        "Brianna Barrow",
+        "Fangzhou Du",
+        "Yu Hsiao",
+        "Ge Huang",
+        "Yicheng Jin",
+        "Ismail Syed",
+        "Chris Jermaine"
+      ]
+    },
+    {
+      "title": "Computation-bandwidth-memory trade-offs: a unified paradigm for AI infrastructure",
+      "source_url": "https://doi.org/10.1007/s44336-026-00041-4",
+      "year": 2026,
+      "published": "2026-09-02",
+      "canonical_id": "DOI:10.1007/s44336-026-00041-4",
+      "doi": "10.1007/s44336-026-00041-4",
+      "authors": [
+        "Yuankai Fan",
+        "Qizhen Weng",
+        "Xuelong Li"
+      ]
+    },
+    {
+      "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+      "source_url": "https://doi.org/10.1016/j.hcc.2026.100428",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+      "doi": "10.1016/j.hcc.2026.100428",
+      "authors": [
+        "Yu Duan",
+        "Jiateng Li",
+        "Navya Goli",
+        "Yuma Ishimura",
+        "Yiyang Li",
+        "Umamaheswara Rao Tida",
+        "Zhenge Jia"
+      ]
+    },
+    {
+      "title": "From Action Units to Emotions: A Two-Stage Fine-Tuning Framework with Decision-Level Fusion for Facial Expression Recognition",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10578386/v1",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10578386/v1",
+      "doi": "10.21203/rs.3.rs-10578386/v1",
+      "authors": [
+        "Rui Tu",
+        "Liguo Zhou",
+        "Alois Knoll"
+      ]
+    },
+    {
+      "title": "LLM-Enabled Cloud-Edge PIoT for Low-Carbon Energy Services: A Review of Virtual Power Plants, Digital Twins, and Demand Response",
+      "source_url": "https://doi.org/10.1093/ce/zkag058",
+      "year": 2026,
+      "published": "2026-08-29",
+      "canonical_id": "DOI:10.1093/ce/zkag058",
+      "doi": "10.1093/ce/zkag058",
+      "authors": [
+        "Chao He",
+        "Yunjie Su",
+        "Sirui Zhang",
+        "Xin Xie",
+        "Cheng Yang"
+      ]
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27046",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27046",
+      "arxiv_id": "2608.27046",
+      "authors": [
+        "Maciej Besta",
+        "Leonard Schmidt",
+        "Lara Nonino",
+        "Robert Gerstenberger",
+        "Pierre Pang",
+        "Patrik Okanovic",
+        "Ales Kubicek",
+        "Tiancheng Chen",
+        "B. Lipshitz",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "LLMscope: Extracting LLM Assets from Edge AI Chips via Optical Probing",
+      "source_url": "https://arxiv.org/abs/2608.25321",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.25321",
+      "arxiv_id": "2608.25321",
+      "authors": [
+        "Dev Mehta",
+        "Lily Dukette",
+        "William Folan",
+        "Olivia Kochol",
+        "Noah Solomon",
+        "Shahin Tajik",
+        "Fatemeh Ganji"
+      ]
+    },
+    {
+      "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+      "source_url": "https://arxiv.org/abs/2608.26389",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.26389",
+      "arxiv_id": "2608.26389",
+      "authors": [
+        "Zishan Shao",
+        "Lixun Zhang",
+        "Kangning Cui",
+        "Wenhao Wu",
+        "Jinhee Kim",
+        "Yixiao Wang",
+        "Ting Jiang",
+        "Hancheng Ye",
+        "Qinsi Wang",
+        "Fan Yang",
+        "Danyang Zhuo",
+        "Yiran Chen",
+        "Hai Li"
+      ]
+    },
+    {
+      "title": "Application-Aware I/O Prediction and Optimization for HPC and AI Workloads",
+      "source_url": "https://hdl.handle.net/10919/143770",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "OpenAlex:W7204677223",
+      "authors": [
+        "Ahmad Hossein Yazdani"
+      ]
+    },
+    {
+      "title": "Model Compression and Hardware-Aware Acceleration for Deep Learning on FPGAs: A Co-Design Taxonomy and Comparative Analysis",
+      "source_url": "https://arxiv.org/abs/2608.21657",
+      "year": 2026,
+      "published": "2026-08-21",
+      "canonical_id": "arXiv:2608.21657",
+      "arxiv_id": "2608.21657",
+      "authors": [
+        "Peter Forcha",
+        "H. Kajekusumadhar",
+        "Mbua Peter",
+        "Muhammed Kawser",
+        "Audrey Cyriell Mo",
+        "Christophe Bobda"
+      ]
+    },
+    {
+      "title": "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2608.19920",
+      "year": 2026,
+      "published": "2026-08-20",
+      "canonical_id": "arXiv:2608.19920",
+      "arxiv_id": "2608.19920",
+      "authors": [
+        "Matthias Seeger",
+        "Zeyu Zhang",
+        "Vihang Patil",
+        "Konstantinos Benidis",
+        "Sebastian Schelter"
+      ]
+    },
+    {
+      "title": "High-Altitude Platforms Beyond Connectivity: A Survey of Integrated Sensing, Storage, Communication, Computing, and Intelligence",
+      "source_url": "https://arxiv.org/abs/2608.18587",
+      "year": 2026,
+      "published": "2026-08-19",
+      "canonical_id": "arXiv:2608.18587",
+      "arxiv_id": "2608.18587",
+      "authors": [
+        "Haoxiang Luo",
+        "Mohamed-Slim Alouini"
+      ]
+    },
+    {
+      "title": "UniVerse: Benchmarking and Enhancing LALMs on Culturally Inclusive Low-Resource Music Understanding",
+      "source_url": "https://arxiv.org/abs/2608.17852",
+      "year": 2026,
+      "published": "2026-08-18",
+      "canonical_id": "arXiv:2608.17852",
+      "arxiv_id": "2608.17852",
+      "authors": [
+        "Ziya Zhou",
+        "Shangda Wu",
+        "S. Xu",
+        "Yutong Zheng",
+        "Dafang Liang",
+        "Suin Chung",
+        "Danbinaerin Han",
+        "Junyan Jiang",
+        "Yongyi Zang",
+        "Ruibin Yuan",
+        "Rongxiu Zhong",
+        "Shilei Zhang",
+        "Junlan Feng",
+        "Jinglei Liu",
+        "Haotian Zhou",
+        "Zijin Li",
+        "Dasaem Jeong",
+        "Wei Xue",
+        "Yike Guo"
+      ]
+    },
+    {
+      "title": "Algorithm-Architecture Co-Design for Efficient VLA Inference via Speculative Inference and Verification",
+      "source_url": "https://arxiv.org/abs/2608.15636",
+      "year": 2026,
+      "published": "2026-08-16",
+      "canonical_id": "arXiv:2608.15636",
+      "arxiv_id": "2608.15636",
+      "authors": [
+        "Chunyu Qi",
+        "Zhuoran Song",
+        "Jian Weng",
+        "Haozhe Jiang",
+        "Xueyuan Liu",
+        "Naifeng Jing",
+        "Guanghui He",
+        "Xiaoyao Liang",
+        "Haibing Guan"
+      ]
+    },
+    {
+      "title": "Deep Reinforcement Learning for 6G AI-RAN: A Comprehensive Survey",
+      "source_url": "https://arxiv.org/abs/2608.14877",
+      "year": 2026,
+      "published": "2026-08-14",
+      "canonical_id": "arXiv:2608.14877",
+      "arxiv_id": "2608.14877",
+      "authors": [
+        "Jie Lu",
+        "Peihao Yan",
+        "Qijun Wang",
+        "Ruxin Lin",
+        "Huacheng Zeng"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.26599/tst.2026.9010041",
+      "identity_tokens": [
+        "id:DOI:10.26599/tst.2026.9010041",
+        "title:dynamic scheduling algorithm for edgecloud collaborative computing resources based on 5g nru and distributed large model",
+        "url:https://doi.org/10.26599/tst.2026.9010041"
+      ],
+      "record": {
+        "title": "Dynamic Scheduling Algorithm for Edge-cloud Collaborative Computing Resources Based on 5G NR-U and Distributed Large Model",
+        "source_url": "https://doi.org/10.26599/tst.2026.9010041",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "DOI:10.26599/tst.2026.9010041",
+        "doi": "10.26599/tst.2026.9010041",
+        "authors": [
+          "Defeng Duan",
+          "Hong Liu",
+          "Liyun Huang",
+          "Songlei Zhang",
+          "Bo Meng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12815",
+      "identity_tokens": [
+        "id:arXiv:2609.12815",
+        "title:4d parallelism unlocks exascale bayesian neural networks for highfidelity atmospheric modeling",
+        "url:https://arxiv.org/abs/2609.12815"
+      ],
+      "record": {
+        "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+        "source_url": "https://arxiv.org/abs/2609.12815",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12815",
+        "arxiv_id": "2609.12815",
+        "authors": [
+          "Deifilia Kieckhefen",
+          "Juan Pedro Gutiérrez Hermosillo Muriedas",
+          "Lars H. Heyen",
+          "Mathis Bode",
+          "Iida Hakulinen",
+          "Andreas Herten",
+          "Chelsea Maria John",
+          "Thorsten Kurth",
+          "Anni Moisala",
+          "Asena Karolin Özdemir",
+          "Kaleb Phipps",
+          "Oskar Taubert",
+          "Arvid Weyrauch",
+          "Markus Götz",
+          "Charlotte Debus"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10117",
+      "identity_tokens": [
+        "id:arXiv:2609.10117",
+        "title:understanding the security boundary of obfuscationbased ondevice llm protection",
+        "url:https://arxiv.org/abs/2609.10117"
+      ],
+      "record": {
+        "title": "Understanding the Security Boundary of Obfuscation-based On-Device LLM Protection",
+        "source_url": "https://arxiv.org/abs/2609.10117",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10117",
+        "arxiv_id": "2609.10117",
+        "authors": [
+          "Hanyi Zhou",
+          "Chenyang Li",
+          "Yuanzhe Pang",
+          "Ke Xu",
+          "Mingwei Xu",
+          "Zhuotao Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10355",
+      "identity_tokens": [
+        "id:arXiv:2609.10355",
+        "title:why is video still so expensive a survey of inferenceefficiency mechanisms in video and audiovisual llms",
+        "url:https://arxiv.org/abs/2609.10355"
+      ],
+      "record": {
+        "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.10355",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10355",
+        "arxiv_id": "2609.10355",
+        "authors": [
+          "Killian Steunou",
+          "Yannis Tevissen",
+          "Mounîm A. El Yacoubi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.03905",
+      "identity_tokens": [
+        "id:arXiv:2609.03905",
+        "title:every kernel is a join automatic multigpu parallelism for ai computations in einsummable",
+        "url:https://arxiv.org/abs/2609.03905"
+      ],
+      "record": {
+        "title": "Every Kernel Is a Join: Automatic Multi-GPU Parallelism for AI Computations in Einsummable",
+        "source_url": "https://arxiv.org/abs/2609.03905",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.03905",
+        "arxiv_id": "2609.03905",
+        "authors": [
+          "Zhimin Ding",
+          "Chen-Kuan Liao",
+          "Chima Adiole",
+          "Brianna Barrow",
+          "Fangzhou Du",
+          "Yu Hsiao",
+          "Ge Huang",
+          "Yicheng Jin",
+          "Ismail Syed",
+          "Chris Jermaine"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s44336-026-00041-4",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44336-026-00041-4",
+        "title:computationbandwidthmemory tradeoffs a unified paradigm for ai infrastructure",
+        "url:https://doi.org/10.1007/s44336-026-00041-4"
+      ],
+      "record": {
+        "title": "Computation-bandwidth-memory trade-offs: a unified paradigm for AI infrastructure",
+        "source_url": "https://doi.org/10.1007/s44336-026-00041-4",
+        "year": 2026,
+        "published": "2026-09-02",
+        "canonical_id": "DOI:10.1007/s44336-026-00041-4",
+        "doi": "10.1007/s44336-026-00041-4",
+        "authors": [
+          "Yuankai Fan",
+          "Qizhen Weng",
+          "Xuelong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.hcc.2026.100428",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.hcc.2026.100428",
+        "title:sok towards a usercentric privacypreserving and reliable ai agent via ondevice llm personalization",
+        "url:https://doi.org/10.1016/j.hcc.2026.100428"
+      ],
+      "record": {
+        "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+        "source_url": "https://doi.org/10.1016/j.hcc.2026.100428",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+        "doi": "10.1016/j.hcc.2026.100428",
+        "authors": [
+          "Yu Duan",
+          "Jiateng Li",
+          "Navya Goli",
+          "Yuma Ishimura",
+          "Yiyang Li",
+          "Umamaheswara Rao Tida",
+          "Zhenge Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10578386/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10578386/v1",
+        "title:from action units to emotions a twostage finetuning framework with decisionlevel fusion for facial expression recognition",
+        "url:https://doi.org/10.21203/rs.3.rs-10578386/v1"
+      ],
+      "record": {
+        "title": "From Action Units to Emotions: A Two-Stage Fine-Tuning Framework with Decision-Level Fusion for Facial Expression Recognition",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10578386/v1",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10578386/v1",
+        "doi": "10.21203/rs.3.rs-10578386/v1",
+        "authors": [
+          "Rui Tu",
+          "Liguo Zhou",
+          "Alois Knoll"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1093/ce/zkag058",
+      "identity_tokens": [
+        "id:DOI:10.1093/ce/zkag058",
+        "title:llmenabled cloudedge piot for lowcarbon energy services a review of virtual power plants digital twins and demand response",
+        "url:https://doi.org/10.1093/ce/zkag058"
+      ],
+      "record": {
+        "title": "LLM-Enabled Cloud-Edge PIoT for Low-Carbon Energy Services: A Review of Virtual Power Plants, Digital Twins, and Demand Response",
+        "source_url": "https://doi.org/10.1093/ce/zkag058",
+        "year": 2026,
+        "published": "2026-08-29",
+        "canonical_id": "DOI:10.1093/ce/zkag058",
+        "doi": "10.1093/ce/zkag058",
+        "authors": [
+          "Chao He",
+          "Yunjie Su",
+          "Sirui Zhang",
+          "Xin Xie",
+          "Cheng Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27046",
+      "identity_tokens": [
+        "id:arXiv:2608.27046",
+        "title:performance foundations of parallel distributed reasoning language models",
+        "url:https://arxiv.org/abs/2608.27046"
+      ],
+      "record": {
+        "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27046",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27046",
+        "arxiv_id": "2608.27046",
+        "authors": [
+          "Maciej Besta",
+          "Leonard Schmidt",
+          "Lara Nonino",
+          "Robert Gerstenberger",
+          "Pierre Pang",
+          "Patrik Okanovic",
+          "Ales Kubicek",
+          "Tiancheng Chen",
+          "B. Lipshitz",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25321",
+      "identity_tokens": [
+        "id:arXiv:2608.25321",
+        "title:llmscope extracting llm assets from edge ai chips via optical probing",
+        "url:https://arxiv.org/abs/2608.25321"
+      ],
+      "record": {
+        "title": "LLMscope: Extracting LLM Assets from Edge AI Chips via Optical Probing",
+        "source_url": "https://arxiv.org/abs/2608.25321",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.25321",
+        "arxiv_id": "2608.25321",
+        "authors": [
+          "Dev Mehta",
+          "Lily Dukette",
+          "William Folan",
+          "Olivia Kochol",
+          "Noah Solomon",
+          "Shahin Tajik",
+          "Fatemeh Ganji"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26389",
+      "identity_tokens": [
+        "id:arXiv:2608.26389",
+        "title:lowrankarena a standardized evaluation platform for svdbased llm compression",
+        "url:https://arxiv.org/abs/2608.26389"
+      ],
+      "record": {
+        "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+        "source_url": "https://arxiv.org/abs/2608.26389",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.26389",
+        "arxiv_id": "2608.26389",
+        "authors": [
+          "Zishan Shao",
+          "Lixun Zhang",
+          "Kangning Cui",
+          "Wenhao Wu",
+          "Jinhee Kim",
+          "Yixiao Wang",
+          "Ting Jiang",
+          "Hancheng Ye",
+          "Qinsi Wang",
+          "Fan Yang",
+          "Danyang Zhuo",
+          "Yiran Chen",
+          "Hai Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7204677223",
+      "identity_tokens": [
+        "id:OpenAlex:W7204677223",
+        "title:applicationaware io prediction and optimization for hpc and ai workloads",
+        "url:https://hdl.handle.net/10919/143770"
+      ],
+      "record": {
+        "title": "Application-Aware I/O Prediction and Optimization for HPC and AI Workloads",
+        "source_url": "https://hdl.handle.net/10919/143770",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "OpenAlex:W7204677223",
+        "authors": [
+          "Ahmad Hossein Yazdani"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21657",
+      "identity_tokens": [
+        "id:arXiv:2608.21657",
+        "title:model compression and hardwareaware acceleration for deep learning on fpgas a codesign taxonomy and comparative analysis",
+        "url:https://arxiv.org/abs/2608.21657"
+      ],
+      "record": {
+        "title": "Model Compression and Hardware-Aware Acceleration for Deep Learning on FPGAs: A Co-Design Taxonomy and Comparative Analysis",
+        "source_url": "https://arxiv.org/abs/2608.21657",
+        "year": 2026,
+        "published": "2026-08-21",
+        "canonical_id": "arXiv:2608.21657",
+        "arxiv_id": "2608.21657",
+        "authors": [
+          "Peter Forcha",
+          "H. Kajekusumadhar",
+          "Mbua Peter",
+          "Muhammed Kawser",
+          "Audrey Cyriell Mo",
+          "Christophe Bobda"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19920",
+      "identity_tokens": [
+        "id:arXiv:2608.19920",
+        "title:learning how to forget finetuning for longcontext sparse attention",
+        "url:https://arxiv.org/abs/2608.19920"
+      ],
+      "record": {
+        "title": "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2608.19920",
+        "year": 2026,
+        "published": "2026-08-20",
+        "canonical_id": "arXiv:2608.19920",
+        "arxiv_id": "2608.19920",
+        "authors": [
+          "Matthias Seeger",
+          "Zeyu Zhang",
+          "Vihang Patil",
+          "Konstantinos Benidis",
+          "Sebastian Schelter"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.18587",
+      "identity_tokens": [
+        "id:arXiv:2608.18587",
+        "title:highaltitude platforms beyond connectivity a survey of integrated sensing storage communication computing and intelligence",
+        "url:https://arxiv.org/abs/2608.18587"
+      ],
+      "record": {
+        "title": "High-Altitude Platforms Beyond Connectivity: A Survey of Integrated Sensing, Storage, Communication, Computing, and Intelligence",
+        "source_url": "https://arxiv.org/abs/2608.18587",
+        "year": 2026,
+        "published": "2026-08-19",
+        "canonical_id": "arXiv:2608.18587",
+        "arxiv_id": "2608.18587",
+        "authors": [
+          "Haoxiang Luo",
+          "Mohamed-Slim Alouini"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.17852",
+      "identity_tokens": [
+        "id:arXiv:2608.17852",
+        "title:universe benchmarking and enhancing lalms on culturally inclusive lowresource music understanding",
+        "url:https://arxiv.org/abs/2608.17852"
+      ],
+      "record": {
+        "title": "UniVerse: Benchmarking and Enhancing LALMs on Culturally Inclusive Low-Resource Music Understanding",
+        "source_url": "https://arxiv.org/abs/2608.17852",
+        "year": 2026,
+        "published": "2026-08-18",
+        "canonical_id": "arXiv:2608.17852",
+        "arxiv_id": "2608.17852",
+        "authors": [
+          "Ziya Zhou",
+          "Shangda Wu",
+          "S. Xu",
+          "Yutong Zheng",
+          "Dafang Liang",
+          "Suin Chung",
+          "Danbinaerin Han",
+          "Junyan Jiang",
+          "Yongyi Zang",
+          "Ruibin Yuan",
+          "Rongxiu Zhong",
+          "Shilei Zhang",
+          "Junlan Feng",
+          "Jinglei Liu",
+          "Haotian Zhou",
+          "Zijin Li",
+          "Dasaem Jeong",
+          "Wei Xue",
+          "Yike Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15636",
+      "identity_tokens": [
+        "id:arXiv:2608.15636",
+        "title:algorithmarchitecture codesign for efficient vla inference via speculative inference and verification",
+        "url:https://arxiv.org/abs/2608.15636"
+      ],
+      "record": {
+        "title": "Algorithm-Architecture Co-Design for Efficient VLA Inference via Speculative Inference and Verification",
+        "source_url": "https://arxiv.org/abs/2608.15636",
+        "year": 2026,
+        "published": "2026-08-16",
+        "canonical_id": "arXiv:2608.15636",
+        "arxiv_id": "2608.15636",
+        "authors": [
+          "Chunyu Qi",
+          "Zhuoran Song",
+          "Jian Weng",
+          "Haozhe Jiang",
+          "Xueyuan Liu",
+          "Naifeng Jing",
+          "Guanghui He",
+          "Xiaoyao Liang",
+          "Haibing Guan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14877",
+      "identity_tokens": [
+        "id:arXiv:2608.14877",
+        "title:deep reinforcement learning for 6g airan a comprehensive survey",
+        "url:https://arxiv.org/abs/2608.14877"
+      ],
+      "record": {
+        "title": "Deep Reinforcement Learning for 6G AI-RAN: A Comprehensive Survey",
+        "source_url": "https://arxiv.org/abs/2608.14877",
+        "year": 2026,
+        "published": "2026-08-14",
+        "canonical_id": "arXiv:2608.14877",
+        "arxiv_id": "2608.14877",
+        "authors": [
+          "Jie Lu",
+          "Peihao Yan",
+          "Qijun Wang",
+          "Ruxin Lin",
+          "Huacheng Zeng"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:60b398b136427598564e74c353f3f67a27fbe6a83905a8eb5bccac395a428285",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

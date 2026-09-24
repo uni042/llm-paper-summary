@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.26763",
+      "arxiv_id": "2609.26763",
+      "title": "SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services",
+      "source_url": "https://www.semanticscholar.org/paper/378875b9e688b02c17c87f6270544d016cc03ae3",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "Queueing-theoretic prefill/KV-transfer/decode resource models and cost-constrained SLO allocation directly extend disaggregated serving, KV transfer, and goodput optimization lineages."
+    },
+    {
+      "canonical_id": "arXiv:2609.25451",
+      "arxiv_id": "2609.25451",
+      "title": "Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo",
+      "source_url": "https://www.semanticscholar.org/paper/1000762804db03f72081f51b269a675a3dc6d59a",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "Dynamo recovery preserves GPU-resident model state across engine failures through decoupled device-memory ownership, directly relevant to inference runtime reliability and persistent accelerator memory."
+    },
+    {
+      "canonical_id": "arXiv:2609.21079",
+      "arxiv_id": "2609.21079",
+      "title": "DLB: Distributed Load Balancing at Scale for Generative AI Inference",
+      "source_url": "https://www.semanticscholar.org/paper/ca4b5782bd0d8cca170761fa584e570e362aed55",
+      "priority": 88,
+      "priority_breakdown": {
+        "base": 53,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 88
+      },
+      "reason": "DLB targets heterogeneous, multi-stage generative-inference service times with distributed load balancing, directly updating large-scale serving scheduling and SLO-aware routing."
+    },
+    {
+      "canonical_id": "arXiv:2609.06940",
+      "arxiv_id": "2609.06940",
+      "title": "Unified AI Gateway: A Framework for Joint Model Routing and KV Cache Management",
+      "source_url": "https://www.semanticscholar.org/paper/4affda1dbe50475a3be782dcc62391802b20986e",
+      "priority": 87,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 87
+      },
+      "reason": "The gateway jointly coordinates model routing with KV-cache availability and compatibility, directly connecting routing decisions to cache reuse and recomputation costs."
+    },
+    {
+      "canonical_id": "arXiv:2609.19657",
+      "arxiv_id": "2609.19657",
+      "title": "PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/f2bd7ee63816dcd5365ccd44bdca095c0860c6d8",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 85
+      },
+      "reason": "Controlled vLLM/TensorRT-LLM measurements characterize when KV prefix reuse improves TTFT and when scheduling/cache pressure erodes benefits, directly relevant to prefix caching and serving-runtime comparisons."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "20260924T0132JST-scheduled-chat-00-forward-r3",
+    "result_path": ".survey/work-queue/discovery-precheck/results/20260924T0132JST-scheduled-chat-00-forward-r3.json",
+    "receipt": "sha256:bfc5876a0100997e26d21b3af298c2f370a88418efb7b98a631c41724d40f3a5"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+    "round": "20260924T0132JST-scheduled-chat-00-forward-r3",
+    "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+    "seed_canonical_id": "arXiv:2401.09670",
+    "query_summary": "Fixed forward-citation window for DistServe, adopted from the canonical preload and re-filtered against the current identity snapshot.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "arXiv:2609.26763",
+      "arXiv:2609.25451",
+      "arXiv:2609.21079",
+      "arXiv:2609.06940",
+      "arXiv:2609.19657"
+    ],
+    "search_windows": [
+      {
+        "seed_canonical_id": "arXiv:2401.09670",
+        "citation_direction": "forward",
+        "retrieved_count": 20,
+        "unseen_count": 20,
+        "evaluated_count": 20,
+        "accepted_count": 5
+      }
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}

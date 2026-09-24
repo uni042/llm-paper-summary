@@ -1,0 +1,73 @@
+name: Rebuild paper indexes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/scripts/survey.py'
+      - '.survey/scripts/paper_taxonomy.py'
+      - '.survey/config/promoted-inference-lineages.json'
+      - '.github/workflows/rebuild-paper-indexes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-background-main
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Validate and rebuild paper indexes
+        run: |
+          python -m py_compile .survey/scripts/survey.py
+          python .survey/scripts/survey.py --root .survey build
+
+      - name: Commit derived paper indexes
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+
+          stage_indexes() {
+            git restore .survey/survey-state/paper-identity-index.json 2>/dev/null || true
+            git add README.md papers/README.md papers/inference/README.md papers/training/README.md papers/survey/README.md papers/inference/comparison.md
+            find papers -mindepth 3 -maxdepth 3 -name README.md -print0 | xargs -0 -r git add --
+          }
+
+          for publish_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/survey.py --root .survey build
+            stage_indexes
+            if git diff --cached --quiet; then
+              echo 'Latest main already contains equivalent indexes.'
+              exit 0
+            fi
+            git commit -m 'docs: rebuild paper indexes'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Index push race on attempt ${publish_attempt}; recomputing indexes from latest main."
+            sleep $((publish_attempt * 2))
+          done
+
+          echo 'Failed to publish rebuilt indexes after 5 recomputations.' >&2
+          exit 1

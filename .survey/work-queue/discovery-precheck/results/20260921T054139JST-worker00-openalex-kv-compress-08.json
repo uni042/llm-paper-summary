@@ -1,0 +1,860 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T054139JST-worker00-openalex-kv-compress-08",
+  "collector_id": "scheduled-20260921T052937JST-openalex-kv-compress",
+  "run_key": "2026-09-21T05:29:37+09:00",
+  "axis": "recent KV cache compression quantization long-context inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20quantization%20long%20context%20inference&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg3NTI5NjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTY1MjE5MTcxJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "dff5dd4b1b61496ba52d2975e505fbd75fe3d978",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 31,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 8,
+  "intra_batch_duplicate_filtered_count": 1,
+  "intra_batch_alias_duplicate_filtered_count": 1,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:43:41.717805+00:00",
+  "results": [
+    {
+      "title": "Review of: \"Towards More Economical Context-Augmented LLM Generation by Reusing Stored KV Cache\"",
+      "source_url": "https://doi.org/10.32388/f2fnb3",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "DOI:10.32388/f2fnb3",
+      "doi": "10.32388/f2fnb3",
+      "authors": [
+        "Evgeny V. Arsentyev"
+      ]
+    },
+    {
+      "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers for Latent Reasoning With Dynamic Routing",
+      "source_url": "https://arxiv.org/abs/2609.15160",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15160",
+      "arxiv_id": "2609.15160",
+      "authors": [
+        "Mingqian Yu",
+        "Wenpeng Zhang",
+        "Peilin Zhao"
+      ]
+    },
+    {
+      "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+      "source_url": "https://arxiv.org/abs/2609.12412",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12412",
+      "arxiv_id": "2609.12412",
+      "authors": [
+        "Inesh Chakrabarti",
+        "Zejun Xiong",
+        "Pragya Sharma",
+        "Mani Srivastava"
+      ]
+    },
+    {
+      "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+      "source_url": "https://arxiv.org/abs/2609.13141",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13141",
+      "arxiv_id": "2609.13141",
+      "authors": [
+        "Zhiwei Li",
+        "Lei Zhu",
+        "Hao Gu",
+        "Xiang Hu",
+        "Yan Wang",
+        "Haitao Mi",
+        "Sirui Han",
+        "Leo Liang",
+        "Zhijiang Guo"
+      ]
+    },
+    {
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "source_url": "https://arxiv.org/abs/2609.13356",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13356",
+      "arxiv_id": "2609.13356",
+      "authors": [
+        "Jiyan He",
+        "Guang Liang",
+        "Hao Liu",
+        "Haoxiang Guan",
+        "Jinbo Sun",
+        "Junyi Guo",
+        "Wenjun Feng",
+        "Yantai Xie",
+        "Yifei Shen",
+        "Bin Shao",
+        "Chuyang Wei",
+        "Kai Chen",
+        "Kexin Zhou",
+        "Minghang Zhu",
+        "Shuxin Zheng",
+        "Tie-Yan Liu",
+        "Taine Zhao",
+        "Wenhui Zhu",
+        "Xueyin Xu",
+        "Xiaoqing Zhang",
+        "Yatao Li",
+        "Yuxuan Ren"
+      ]
+    },
+    {
+      "title": "Why Does Post-Training Quantization Work?",
+      "source_url": "https://arxiv.org/abs/2609.11716",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11716",
+      "arxiv_id": "2609.11716",
+      "authors": [
+        "Yuxiang Chen",
+        "Michael Beyer",
+        "Jun Zhu",
+        "Jianfei Chen"
+      ]
+    },
+    {
+      "title": "Off-Target Effects of Response-Style Alignment in a Korean 27B Language Model",
+      "source_url": "https://arxiv.org/abs/2609.11291",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11291",
+      "arxiv_id": "2609.11291",
+      "authors": [
+        "HyoJung Han"
+      ]
+    },
+    {
+      "title": "FlexComp: One Model for Every Ratio in Context Compression",
+      "source_url": "https://arxiv.org/abs/2609.11192",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11192",
+      "arxiv_id": "2609.11192",
+      "authors": [
+        "Kaiyan Zhao",
+        "Zhongtao Miao",
+        "Akiko Aizawa",
+        "Yoshimasa Tsuruoka"
+      ]
+    },
+    {
+      "title": "Reasoning-Aware Error-Bounded KV-Cache Compression and Sparse Attention for Long-Context LLMs",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10952127/v1",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10952127/v1",
+      "doi": "10.21203/rs.3.rs-10952127/v1",
+      "authors": [
+        "Yue Ning",
+        "Zhenning Guo",
+        "Xiang Li",
+        "Wenjuan Guo"
+      ]
+    },
+    {
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.10355",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10355",
+      "arxiv_id": "2609.10355",
+      "authors": [
+        "Killian Steunou",
+        "Yannis Tevissen",
+        "Mounîm A. El Yacoubi"
+      ]
+    },
+    {
+      "title": "$S^3$-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants",
+      "source_url": "https://arxiv.org/abs/2609.09852",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.09852",
+      "arxiv_id": "2609.09852",
+      "authors": [
+        "Heyang Liu",
+        "Jiayi Huang",
+        "Wenyang Xiao",
+        "Ziyang Cheng",
+        "Lixin Zhang",
+        "Zhen Liu",
+        "Miao He",
+        "Ronghua Wu",
+        "Qunshan Gu",
+        "Yanfeng Wang",
+        "Yu Wang"
+      ]
+    },
+    {
+      "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+      "source_url": "https://arxiv.org/abs/2609.08443",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08443",
+      "arxiv_id": "2609.08443",
+      "authors": [
+        "Lin Guan",
+        "Jia‐Qi Yang",
+        "Zhishan Zhao",
+        "Jiaqi Huang",
+        "Hangyu Wang",
+        "Longbin Li",
+        "Beichuan Zhang",
+        "Haonan Jiang",
+        "Jinan Ni",
+        "Xiangyu Fan",
+        "Xiaowen Li",
+        "Ziyao Ren",
+        "Yuhang Qi",
+        "Xiaolong Zhu",
+        "Xuanyuan Luo",
+        "Qiwei Chen",
+        "Yi Cheng",
+        "Lele Yu"
+      ]
+    },
+    {
+      "title": "It's Not RoPE that Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention",
+      "source_url": "https://arxiv.org/abs/2609.09085",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.09085",
+      "arxiv_id": "2609.09085",
+      "authors": [
+        "Raito Kiya",
+        "Satoki Ohashi",
+        "Kosuke Sato",
+        "Go Kamoda",
+        "Ryosuke Takahashi",
+        "Yuji Yamamoto",
+        "Daiki Shiono",
+        "Keisuke Sakaguchi",
+        "Goro Kobayashi"
+      ]
+    },
+    {
+      "title": "TASTE2: Text-Aligned Speech Modeling and Deployment toward Full-Duplex Voice Interaction",
+      "source_url": "https://arxiv.org/abs/2609.08956",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08956",
+      "arxiv_id": "2609.08956",
+      "authors": [
+        "Yi-Chang Chen",
+        "Chun Wei Chen",
+        "Dien-Ruei Wu",
+        "Jie Lin",
+        "Yu-Kuan Fu",
+        "Yang-Hsien Lin",
+        "Eddie TC Huang",
+        "Simon See",
+        "Hung-yi Lee",
+        "Da-Shan Shiu"
+      ]
+    },
+    {
+      "title": "Noēsis: Deterministic-First Retrieval with Two-Tier Context Hydration for Factuality-Critical Queries on Small Local Models",
+      "source_url": "https://arxiv.org/abs/2609.07663",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07663",
+      "arxiv_id": "2609.07663",
+      "authors": [
+        "Nicola Cogotti"
+      ]
+    },
+    {
+      "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2609.07664",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07664",
+      "arxiv_id": "2609.07664",
+      "authors": [
+        "Shahzeb Qamar",
+        "Lorenz Sparrenberg",
+        "Christian Bauckhage",
+        "Baha Rababah",
+        " Carson Leung",
+        "Murat Kantarcioglu",
+        "Cüneyt Gürcan Akçora",
+        "Rafet Sifa"
+      ]
+    },
+    {
+      "title": "CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
+      "source_url": "https://arxiv.org/abs/2609.07237",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07237",
+      "arxiv_id": "2609.07237",
+      "authors": [
+        "Siyu Li",
+        "Dong Wang",
+        "Jie Zhou",
+        "Wei Li",
+        "Yang Xu",
+        "Sijie Song"
+      ]
+    },
+    {
+      "title": "A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)",
+      "source_url": "https://doi.org/10.5281/zenodo.22339206",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "DOI:10.5281/zenodo.22339206",
+      "doi": "10.5281/zenodo.22339206",
+      "authors": [
+        "Zheping Wang"
+      ]
+    },
+    {
+      "title": "Multimodal Resource-Exhaustion Attacks on Vision-Language Models via Joint Pixel-Prompt Optimization",
+      "source_url": "https://arxiv.org/abs/2609.05889",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "arXiv:2609.05889",
+      "arxiv_id": "2609.05889",
+      "authors": [
+        "Zhaoxiong Ni",
+        "Yatie Xiao",
+        "Chi-Man Pun",
+        "Fei Peng",
+        "Qingxiao Guan",
+        "Keke Tang"
+      ]
+    },
+    {
+      "title": "All for 1-Bit: Towards Genuine 1-Bit Post-Training Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2609.06161",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "arXiv:2609.06161",
+      "arxiv_id": "2609.06161",
+      "authors": [
+        "Zhixiong Zhao",
+        "Zukang Xu",
+        "Guangyu Sun",
+        "Lifeng Liu",
+        "Dawei Yang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.32388/f2fnb3",
+      "identity_tokens": [
+        "id:DOI:10.32388/f2fnb3",
+        "title:review of towards more economical contextaugmented llm generation by reusing stored kv cache",
+        "url:https://doi.org/10.32388/f2fnb3"
+      ],
+      "record": {
+        "title": "Review of: \"Towards More Economical Context-Augmented LLM Generation by Reusing Stored KV Cache\"",
+        "source_url": "https://doi.org/10.32388/f2fnb3",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "DOI:10.32388/f2fnb3",
+        "doi": "10.32388/f2fnb3",
+        "authors": [
+          "Evgeny V. Arsentyev"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15160",
+      "identity_tokens": [
+        "id:arXiv:2609.15160",
+        "title:tloopformer tokenlevel elasticdepth looped transformers for latent reasoning with dynamic routing",
+        "url:https://arxiv.org/abs/2609.15160"
+      ],
+      "record": {
+        "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers for Latent Reasoning With Dynamic Routing",
+        "source_url": "https://arxiv.org/abs/2609.15160",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15160",
+        "arxiv_id": "2609.15160",
+        "authors": [
+          "Mingqian Yu",
+          "Wenpeng Zhang",
+          "Peilin Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12412",
+      "identity_tokens": [
+        "id:arXiv:2609.12412",
+        "title:holibench a crossplatform benchmarking and deployment toolkit for foundation models in cpsiot applications",
+        "url:https://arxiv.org/abs/2609.12412"
+      ],
+      "record": {
+        "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+        "source_url": "https://arxiv.org/abs/2609.12412",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12412",
+        "arxiv_id": "2609.12412",
+        "authors": [
+          "Inesh Chakrabarti",
+          "Zejun Xiong",
+          "Pragya Sharma",
+          "Mani Srivastava"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13141",
+      "identity_tokens": [
+        "id:arXiv:2609.13141",
+        "title:sas simple attention sparsification via endtoend optimization of context ranking",
+        "url:https://arxiv.org/abs/2609.13141"
+      ],
+      "record": {
+        "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+        "source_url": "https://arxiv.org/abs/2609.13141",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13141",
+        "arxiv_id": "2609.13141",
+        "authors": [
+          "Zhiwei Li",
+          "Lei Zhu",
+          "Hao Gu",
+          "Xiang Hu",
+          "Yan Wang",
+          "Haitao Mi",
+          "Sirui Han",
+          "Leo Liang",
+          "Zhijiang Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13356",
+      "identity_tokens": [
+        "id:arXiv:2609.13356",
+        "title:zgcm1 a fully open and extremely efficient foundation model for math and agentic search",
+        "url:https://arxiv.org/abs/2609.13356"
+      ],
+      "record": {
+        "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+        "source_url": "https://arxiv.org/abs/2609.13356",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13356",
+        "arxiv_id": "2609.13356",
+        "authors": [
+          "Jiyan He",
+          "Guang Liang",
+          "Hao Liu",
+          "Haoxiang Guan",
+          "Jinbo Sun",
+          "Junyi Guo",
+          "Wenjun Feng",
+          "Yantai Xie",
+          "Yifei Shen",
+          "Bin Shao",
+          "Chuyang Wei",
+          "Kai Chen",
+          "Kexin Zhou",
+          "Minghang Zhu",
+          "Shuxin Zheng",
+          "Tie-Yan Liu",
+          "Taine Zhao",
+          "Wenhui Zhu",
+          "Xueyin Xu",
+          "Xiaoqing Zhang",
+          "Yatao Li",
+          "Yuxuan Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11716",
+      "identity_tokens": [
+        "id:arXiv:2609.11716",
+        "title:why does posttraining quantization work",
+        "url:https://arxiv.org/abs/2609.11716"
+      ],
+      "record": {
+        "title": "Why Does Post-Training Quantization Work?",
+        "source_url": "https://arxiv.org/abs/2609.11716",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11716",
+        "arxiv_id": "2609.11716",
+        "authors": [
+          "Yuxiang Chen",
+          "Michael Beyer",
+          "Jun Zhu",
+          "Jianfei Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11291",
+      "identity_tokens": [
+        "id:arXiv:2609.11291",
+        "title:offtarget effects of responsestyle alignment in a korean 27b language model",
+        "url:https://arxiv.org/abs/2609.11291"
+      ],
+      "record": {
+        "title": "Off-Target Effects of Response-Style Alignment in a Korean 27B Language Model",
+        "source_url": "https://arxiv.org/abs/2609.11291",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11291",
+        "arxiv_id": "2609.11291",
+        "authors": [
+          "HyoJung Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11192",
+      "identity_tokens": [
+        "id:arXiv:2609.11192",
+        "title:flexcomp one model for every ratio in context compression",
+        "url:https://arxiv.org/abs/2609.11192"
+      ],
+      "record": {
+        "title": "FlexComp: One Model for Every Ratio in Context Compression",
+        "source_url": "https://arxiv.org/abs/2609.11192",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11192",
+        "arxiv_id": "2609.11192",
+        "authors": [
+          "Kaiyan Zhao",
+          "Zhongtao Miao",
+          "Akiko Aizawa",
+          "Yoshimasa Tsuruoka"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10952127/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10952127/v1",
+        "title:reasoningaware errorbounded kvcache compression and sparse attention for longcontext llms",
+        "url:https://doi.org/10.21203/rs.3.rs-10952127/v1"
+      ],
+      "record": {
+        "title": "Reasoning-Aware Error-Bounded KV-Cache Compression and Sparse Attention for Long-Context LLMs",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10952127/v1",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10952127/v1",
+        "doi": "10.21203/rs.3.rs-10952127/v1",
+        "authors": [
+          "Yue Ning",
+          "Zhenning Guo",
+          "Xiang Li",
+          "Wenjuan Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10355",
+      "identity_tokens": [
+        "id:arXiv:2609.10355",
+        "title:why is video still so expensive a survey of inferenceefficiency mechanisms in video and audiovisual llms",
+        "url:https://arxiv.org/abs/2609.10355"
+      ],
+      "record": {
+        "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.10355",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10355",
+        "arxiv_id": "2609.10355",
+        "authors": [
+          "Killian Steunou",
+          "Yannis Tevissen",
+          "Mounîm A. El Yacoubi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09852",
+      "identity_tokens": [
+        "id:arXiv:2609.09852",
+        "title:s3bench evaluating speech interaction models as scientific voice assistants",
+        "url:https://arxiv.org/abs/2609.09852"
+      ],
+      "record": {
+        "title": "$S^3$-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants",
+        "source_url": "https://arxiv.org/abs/2609.09852",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.09852",
+        "arxiv_id": "2609.09852",
+        "authors": [
+          "Heyang Liu",
+          "Jiayi Huang",
+          "Wenyang Xiao",
+          "Ziyang Cheng",
+          "Lixin Zhang",
+          "Zhen Liu",
+          "Miao He",
+          "Ronghua Wu",
+          "Qunshan Gu",
+          "Yanfeng Wang",
+          "Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08443",
+      "identity_tokens": [
+        "id:arXiv:2609.08443",
+        "title:sequenceo1 endtoend ultralong 100k sequence modeling in recommendation with lowrank caching",
+        "url:https://arxiv.org/abs/2609.08443"
+      ],
+      "record": {
+        "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+        "source_url": "https://arxiv.org/abs/2609.08443",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08443",
+        "arxiv_id": "2609.08443",
+        "authors": [
+          "Lin Guan",
+          "Jia‐Qi Yang",
+          "Zhishan Zhao",
+          "Jiaqi Huang",
+          "Hangyu Wang",
+          "Longbin Li",
+          "Beichuan Zhang",
+          "Haonan Jiang",
+          "Jinan Ni",
+          "Xiangyu Fan",
+          "Xiaowen Li",
+          "Ziyao Ren",
+          "Yuhang Qi",
+          "Xiaolong Zhu",
+          "Xuanyuan Luo",
+          "Qiwei Chen",
+          "Yi Cheng",
+          "Lele Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09085",
+      "identity_tokens": [
+        "id:arXiv:2609.09085",
+        "title:its not rope that creates sinks the role of selfconcentration and valuenonmixing in attention",
+        "url:https://arxiv.org/abs/2609.09085"
+      ],
+      "record": {
+        "title": "It's Not RoPE that Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention",
+        "source_url": "https://arxiv.org/abs/2609.09085",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.09085",
+        "arxiv_id": "2609.09085",
+        "authors": [
+          "Raito Kiya",
+          "Satoki Ohashi",
+          "Kosuke Sato",
+          "Go Kamoda",
+          "Ryosuke Takahashi",
+          "Yuji Yamamoto",
+          "Daiki Shiono",
+          "Keisuke Sakaguchi",
+          "Goro Kobayashi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08956",
+      "identity_tokens": [
+        "id:arXiv:2609.08956",
+        "title:taste2 textaligned speech modeling and deployment toward fullduplex voice interaction",
+        "url:https://arxiv.org/abs/2609.08956"
+      ],
+      "record": {
+        "title": "TASTE2: Text-Aligned Speech Modeling and Deployment toward Full-Duplex Voice Interaction",
+        "source_url": "https://arxiv.org/abs/2609.08956",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08956",
+        "arxiv_id": "2609.08956",
+        "authors": [
+          "Yi-Chang Chen",
+          "Chun Wei Chen",
+          "Dien-Ruei Wu",
+          "Jie Lin",
+          "Yu-Kuan Fu",
+          "Yang-Hsien Lin",
+          "Eddie TC Huang",
+          "Simon See",
+          "Hung-yi Lee",
+          "Da-Shan Shiu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07663",
+      "identity_tokens": [
+        "id:arXiv:2609.07663",
+        "title:noēsis deterministicfirst retrieval with twotier context hydration for factualitycritical queries on small local models",
+        "url:https://arxiv.org/abs/2609.07663"
+      ],
+      "record": {
+        "title": "Noēsis: Deterministic-First Retrieval with Two-Tier Context Hydration for Factuality-Critical Queries on Small Local Models",
+        "source_url": "https://arxiv.org/abs/2609.07663",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07663",
+        "arxiv_id": "2609.07663",
+        "authors": [
+          "Nicola Cogotti"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07664",
+      "identity_tokens": [
+        "id:arXiv:2609.07664",
+        "title:accuracy is not enough a divergencebased approach to evaluate fidelity loss in quantized llms",
+        "url:https://arxiv.org/abs/2609.07664"
+      ],
+      "record": {
+        "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs",
+        "source_url": "https://arxiv.org/abs/2609.07664",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07664",
+        "arxiv_id": "2609.07664",
+        "authors": [
+          "Shahzeb Qamar",
+          "Lorenz Sparrenberg",
+          "Christian Bauckhage",
+          "Baha Rababah",
+          " Carson Leung",
+          "Murat Kantarcioglu",
+          "Cüneyt Gürcan Akçora",
+          "Rafet Sifa"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07237",
+      "identity_tokens": [
+        "id:arXiv:2609.07237",
+        "title:cedar errorbounded residual routing for efficient longcontext attention",
+        "url:https://arxiv.org/abs/2609.07237"
+      ],
+      "record": {
+        "title": "CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention",
+        "source_url": "https://arxiv.org/abs/2609.07237",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07237",
+        "arxiv_id": "2609.07237",
+        "authors": [
+          "Siyu Li",
+          "Dong Wang",
+          "Jie Zhou",
+          "Wei Li",
+          "Yang Xu",
+          "Sijie Song"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5281/zenodo.22339206",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.22339206",
+        "title:a survey of inference processing units for large language model inference chips systems algorithms and paradigms 20242026",
+        "url:https://doi.org/10.5281/zenodo.22339206"
+      ],
+      "record": {
+        "title": "A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)",
+        "source_url": "https://doi.org/10.5281/zenodo.22339206",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "DOI:10.5281/zenodo.22339206",
+        "doi": "10.5281/zenodo.22339206",
+        "authors": [
+          "Zheping Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05889",
+      "identity_tokens": [
+        "id:arXiv:2609.05889",
+        "title:multimodal resourceexhaustion attacks on visionlanguage models via joint pixelprompt optimization",
+        "url:https://arxiv.org/abs/2609.05889"
+      ],
+      "record": {
+        "title": "Multimodal Resource-Exhaustion Attacks on Vision-Language Models via Joint Pixel-Prompt Optimization",
+        "source_url": "https://arxiv.org/abs/2609.05889",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "arXiv:2609.05889",
+        "arxiv_id": "2609.05889",
+        "authors": [
+          "Zhaoxiong Ni",
+          "Yatie Xiao",
+          "Chi-Man Pun",
+          "Fei Peng",
+          "Qingxiao Guan",
+          "Keke Tang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06161",
+      "identity_tokens": [
+        "id:arXiv:2609.06161",
+        "title:all for 1bit towards genuine 1bit posttraining quantization for llms",
+        "url:https://arxiv.org/abs/2609.06161"
+      ],
+      "record": {
+        "title": "All for 1-Bit: Towards Genuine 1-Bit Post-Training Quantization for LLMs",
+        "source_url": "https://arxiv.org/abs/2609.06161",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "arXiv:2609.06161",
+        "arxiv_id": "2609.06161",
+        "authors": [
+          "Zhixiong Zhao",
+          "Zukang Xu",
+          "Guangyu Sun",
+          "Lifeng Liu",
+          "Dawei Yang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:0d4498d39c126f589420e1da07d5b3f725319bbb4c89f0bfb2f2488ad9dec9fb",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

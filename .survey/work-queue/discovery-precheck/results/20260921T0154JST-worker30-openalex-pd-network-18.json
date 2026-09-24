@@ -1,0 +1,1054 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0154JST-worker30-openalex-pd-network-18",
+  "collector_id": "worker30-openalex-pd-network",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "prefill decode disaggregation KV transfer RDMA network LLM serving",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=prefill%20decode%20disaggregation%20KV%20transfer%20RDMA%20network%20LLM%20serving&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2efa0587e680997e9607607fafd58bbfce4f4157",
+  "raw_search_result_count": 99,
+  "retrieval_duplicate_filtered_count": 51,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:54:03.673488+00:00",
+  "results": [
+    {
+      "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27046",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27046",
+      "arxiv_id": "2608.27046",
+      "authors": [
+        "Maciej Besta",
+        "Leonard Schmidt",
+        "Lara Nonino",
+        "Robert Gerstenberger",
+        "Pierre Pang",
+        "Patrik Okanovic",
+        "Ales Kubicek",
+        "Tiancheng Chen",
+        "B. Lipshitz",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "The Price of Order in Disaggregated Inference",
+      "source_url": "https://arxiv.org/abs/2606.17081",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2606.17081",
+      "arxiv_id": "2606.17081",
+      "authors": [
+        "Athos Georgiou"
+      ]
+    },
+    {
+      "title": "AI Infrastructure in Space: How Far Can We Go?",
+      "source_url": "https://arxiv.org/abs/2608.21034",
+      "year": 2026,
+      "published": "2026-08-21",
+      "canonical_id": "arXiv:2608.21034",
+      "arxiv_id": "2608.21034",
+      "authors": [
+        "Qing Li",
+        "Qiyang Zhang",
+        "Daliang Xu",
+        "Tianze Huang",
+        "Dingge Zhang",
+        "Yihao Zhao",
+        "Xiaolong Huang",
+        "Jinfeng Wen",
+        "Xiameng Hu",
+        "Tao Qi",
+        "Mengwei Xu",
+        "Shangguang Wang",
+        "Xuanzhe Liu"
+      ]
+    },
+    {
+      "title": "When Does Distributed AI Inference Need More Wide-Area Bandwidth? A Co-Design Evaluation of Optical, Packet, and Software Levers",
+      "source_url": "https://arxiv.org/abs/2608.14967",
+      "year": 2026,
+      "published": "2026-08-15",
+      "canonical_id": "arXiv:2608.14967",
+      "arxiv_id": "2608.14967",
+      "authors": [
+        "Prasanna C"
+      ]
+    },
+    {
+      "title": "Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving",
+      "source_url": "https://doi.org/10.4108/eetiot.13349",
+      "year": 2026,
+      "published": "2026-08-12",
+      "canonical_id": "DOI:10.4108/eetiot.13349",
+      "doi": "10.4108/eetiot.13349",
+      "authors": [
+        "K. B. Aruna",
+        "V. Kaliraj",
+        "I. Sudha",
+        "V. Sureka"
+      ]
+    },
+    {
+      "title": "The Fabric Is the Cluster Driver: Cross-Layer eBPF Policies for GPU-CXL Fabrics",
+      "source_url": "https://arxiv.org/abs/2607.26335",
+      "year": 2026,
+      "published": "2026-07-28",
+      "canonical_id": "arXiv:2607.26335",
+      "arxiv_id": "2607.26335",
+      "authors": [
+        "Yiwei Yang",
+        "Andi Quinn"
+      ]
+    },
+    {
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "source_url": "https://arxiv.org/abs/2607.24653",
+      "year": 2026,
+      "published": "2026-07-27",
+      "canonical_id": "arXiv:2607.24653",
+      "arxiv_id": "2607.24653",
+      "authors": [
+        "Kimi Team",
+        "Tongtong Bai",
+        "Yifan Bai",
+        "Yiping Bao",
+        "M. C.",
+        "Jianfeng Cai",
+        "Xinyuan Cai",
+        "Peizhou Cao",
+        "Yuxuan Cao",
+        "Ziwei Chai",
+        "Y. Charles",
+        "H. S. Che",
+        "Guanduo Chen",
+        "Guangyu Chen",
+        "Guanzheng Chen",
+        "Huarong Chen",
+        "Jia Chen",
+        "Jianlong Chen",
+        "Jun Chen",
+        "Kexin Chen",
+        "Peng Chen",
+        "Ruijue Chen",
+        "Wentao Chen",
+        "Xin Chen",
+        "Yang Chen",
+        "Yanru Chen",
+        "Yifei Chen",
+        "Yingjiang Chen",
+        "Yuankun Chen",
+        "Yujie Chen",
+        "Yutian Chen",
+        "Zhirong Chen",
+        "Dazhi Cheng",
+        "Yean Cheng",
+        "Jialei Cui",
+        "Jingbing Cui",
+        "Anqi Dai",
+        "Jiaqi Deng",
+        "Hao Ding",
+        "Rui Ding",
+        "Shaofeng Ding",
+        "Mengfan Dong",
+        "Mengnan Dong",
+        "Yuhao Dong",
+        "Yuxin Dong",
+        "Angang Du",
+        "Chenzhuang Du",
+        "Dikang Du",
+        "J. Du",
+        "Yulun Du",
+        "Yu Fan",
+        "Jing Feng",
+        "Qiulin Feng",
+        "Yichen Feng",
+        "Kelin Fu",
+        "Qiang Fu",
+        "高甫瑄",
+        "Hongcheng Gao",
+        "Jingyue Gao",
+        "Tong Gao",
+        "Weijia Gao",
+        "Shangyi Geng",
+        "Jie Gong",
+        "功 林戸",
+        "Shengao Gong",
+        "Xiaochen Gong",
+        "Qizheng Gu",
+        "Yicheng Gu",
+        "Shuhao Guan",
+        "Haiqing Guo",
+        "Shiqi Guo",
+        "Xiang Guo",
+        "Zhengyan Guo",
+        "Beixi Hao",
+        "Wenxin Hao",
+        "Xiaoru Hao",
+        "Dailan He",
+        "Haotian He",
+        "Lehan He",
+        "Qi He",
+        "Weiran He",
+        "Xinran He",
+        "Xinyi He",
+        "Yibo He",
+        "Yi He",
+        "Chao Hong",
+        "Tiange Hong",
+        "Hao Hu",
+        "Jiaxi Hu",
+        "Ruikun Hu",
+        "Weiming Hu",
+        "Yangyang Hu",
+        "Zhenxing Hu",
+        "Liang Hua",
+        "Jinbin Huang",
+        "Ke Huang",
+        "Ruiyuan Huang",
+        "Siying Huang",
+        "Weixiao Huang",
+        "Yan Huang"
+      ]
+    },
+    {
+      "title": "Auto-Scaling Heterogeneous Neural Processing Units for Energy and Cost-Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.16488",
+      "year": 2026,
+      "published": "2026-07-17",
+      "canonical_id": "arXiv:2607.16488",
+      "arxiv_id": "2607.16488",
+      "authors": [
+        "Yuqi Xue",
+        "Jichuan Chang",
+        "Jian Huang"
+      ]
+    },
+    {
+      "title": "Think Before You Grid-Search: Floor-First Triage for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.05876",
+      "year": 2026,
+      "published": "2026-07-07",
+      "canonical_id": "arXiv:2607.05876",
+      "arxiv_id": "2607.05876",
+      "authors": [
+        "Yihua Liu"
+      ]
+    },
+    {
+      "title": "Omni-Flow: A Unified Workflow Orchestration and Distributed KV Cache Sharing Framework for Multimodal Inference",
+      "source_url": "https://arxiv.org/abs/2606.31093",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "arXiv:2606.31093",
+      "arxiv_id": "2606.31093",
+      "authors": [
+        "Bin Xiao",
+        "Jingfu Dong",
+        "Changran Wang",
+        "Yitian Chen",
+        "X Zhao",
+        "Y Peng",
+        "Jiahao Lin",
+        "Yuchen Xie"
+      ]
+    },
+    {
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "arXiv:2607.02574",
+      "arxiv_id": "2607.02574",
+      "authors": [
+        "Jie Li",
+        "Tongyang Wang",
+        "Yong Chen"
+      ]
+    },
+    {
+      "title": "Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving",
+      "source_url": "https://arxiv.org/abs/2606.29708",
+      "year": 2026,
+      "published": "2026-06-29",
+      "canonical_id": "arXiv:2606.29708",
+      "arxiv_id": "2606.29708",
+      "authors": [
+        "Zhixin Wang",
+        "Zhengbo Wang",
+        "Fangcheng Fu",
+        "Yinhui Lu",
+        "Jinlong Hou",
+        "Yijie Chen",
+        "Xiaowei Shen",
+        "He Liu",
+        "Xiangbin Li",
+        "Jun Chen",
+        "Ruya Gu",
+        "Dian Wang",
+        "Zhou Tan",
+        "Yuan Cheng",
+        "Hongzhou Zhang",
+        "XJ Huang",
+        "P Zhang",
+        "Xiaohe Hu"
+      ]
+    },
+    {
+      "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference",
+      "source_url": "https://arxiv.org/abs/2606.21712",
+      "year": 2026,
+      "published": "2026-06-19",
+      "canonical_id": "arXiv:2606.21712",
+      "arxiv_id": "2606.21712",
+      "authors": [
+        "Tairan Xu",
+        "Leyang Xue",
+        "Zhan Lu",
+        "Jinfu Deng",
+        "Hongyang Xiao",
+        "Yu Jiang",
+        "C N He",
+        "Matej Šandor",
+        "Le Xu",
+        "Luo Mai"
+      ]
+    },
+    {
+      "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://hdl.handle.net/10919/143438",
+      "year": 2026,
+      "published": "2026-06-16",
+      "canonical_id": "OpenAlex:W7165293849",
+      "authors": [
+        "Dongha Yoon"
+      ]
+    },
+    {
+      "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+      "source_url": "https://arxiv.org/abs/2606.13708",
+      "year": 2026,
+      "published": "2026-06-10",
+      "canonical_id": "arXiv:2606.13708",
+      "arxiv_id": "2606.13708",
+      "authors": [
+        "Bojie Li"
+      ]
+    },
+    {
+      "title": "UltraEP: Unleash MoE Training and Inference on Rack-Scale Nodes with Near-Optimal Load Balancing",
+      "source_url": "https://arxiv.org/abs/2606.04101",
+      "year": 2026,
+      "published": "2026-06-02",
+      "canonical_id": "arXiv:2606.04101",
+      "arxiv_id": "2606.04101",
+      "authors": [
+        "Xinming Wei",
+        "Chao Jin",
+        "Tuo Dai",
+        "Yinmin Zhong",
+        "Shan Yu",
+        "Chengxu Yang",
+        "Bingyang Wu",
+        "Zili Zhang",
+        "Jing Mai",
+        "Qianchao Zhu",
+        "Zhouyang Li",
+        "Yuliang Liu",
+        "Guojie Luo"
+      ]
+    },
+    {
+      "title": "Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics",
+      "source_url": "https://arxiv.org/abs/2606.01502",
+      "year": 2026,
+      "published": "2026-05-31",
+      "canonical_id": "arXiv:2606.01502",
+      "arxiv_id": "2606.01502",
+      "authors": [
+        "Bole Ma",
+        "Jan Eitzinger",
+        "Harald Köstler",
+        "Gerhard Wellein"
+      ]
+    },
+    {
+      "title": "HetCCL: Enabling Collective Communication For Mixed-Vendor Heterogeneous Clusters",
+      "source_url": "https://arxiv.org/abs/2605.31000",
+      "year": 2026,
+      "published": "2026-05-29",
+      "canonical_id": "arXiv:2605.31000",
+      "arxiv_id": "2605.31000",
+      "authors": [
+        "Yuejie Wang",
+        "Tao Chang",
+        "Yuanyuan Zhao",
+        "Yulong Ao",
+        "Zeyu Gu",
+        "Zhiyu Li",
+        "Yanmin Jia",
+        "Yan Zhang",
+        "Mingjun Zhang",
+        "He Liu",
+        "Yongzhe He",
+        "Yonghua Lin",
+        "Guyue Liu"
+      ]
+    },
+    {
+      "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving",
+      "source_url": "https://arxiv.org/abs/2605.25550",
+      "year": 2026,
+      "published": "2026-05-25",
+      "canonical_id": "arXiv:2605.25550",
+      "arxiv_id": "2605.25550",
+      "authors": [
+        "Hantian Zha",
+        "Teng Ma",
+        "Yang Yong",
+        "Haiwen Fu",
+        "Ruiyang Ma",
+        "Wei Gao",
+        "Ruihao Gong",
+        "Xianglong Liu",
+        "Wei Wang",
+        "Yunpeng Chai"
+      ]
+    },
+    {
+      "title": "NanoCP: Request-Level Dynamic Context Parallelism for Data-Expert Parallel Decoding",
+      "source_url": "https://arxiv.org/abs/2605.21100",
+      "year": 2026,
+      "published": "2026-05-20",
+      "canonical_id": "arXiv:2605.21100",
+      "arxiv_id": "2605.21100",
+      "authors": [
+        "Jiefei Chen",
+        "Binbin Lin",
+        "Jinming Ma",
+        "Jiangfei Duan",
+        "Haojie Duanmu",
+        "Hao Liu",
+        "Qinxiu Cheng",
+        "Xiuhong Li",
+        "Zhilin Pei",
+        "Hui Wang",
+        "Xingcheng Zhang",
+        "Dahua Lin"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.27046",
+      "identity_tokens": [
+        "id:arXiv:2608.27046",
+        "title:performance foundations of parallel distributed reasoning language models",
+        "url:https://arxiv.org/abs/2608.27046"
+      ],
+      "record": {
+        "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27046",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27046",
+        "arxiv_id": "2608.27046",
+        "authors": [
+          "Maciej Besta",
+          "Leonard Schmidt",
+          "Lara Nonino",
+          "Robert Gerstenberger",
+          "Pierre Pang",
+          "Patrik Okanovic",
+          "Ales Kubicek",
+          "Tiancheng Chen",
+          "B. Lipshitz",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17081",
+      "identity_tokens": [
+        "id:arXiv:2606.17081",
+        "title:the price of order in disaggregated inference",
+        "url:https://arxiv.org/abs/2606.17081"
+      ],
+      "record": {
+        "title": "The Price of Order in Disaggregated Inference",
+        "source_url": "https://arxiv.org/abs/2606.17081",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2606.17081",
+        "arxiv_id": "2606.17081",
+        "authors": [
+          "Athos Georgiou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21034",
+      "identity_tokens": [
+        "id:arXiv:2608.21034",
+        "title:ai infrastructure in space how far can we go",
+        "url:https://arxiv.org/abs/2608.21034"
+      ],
+      "record": {
+        "title": "AI Infrastructure in Space: How Far Can We Go?",
+        "source_url": "https://arxiv.org/abs/2608.21034",
+        "year": 2026,
+        "published": "2026-08-21",
+        "canonical_id": "arXiv:2608.21034",
+        "arxiv_id": "2608.21034",
+        "authors": [
+          "Qing Li",
+          "Qiyang Zhang",
+          "Daliang Xu",
+          "Tianze Huang",
+          "Dingge Zhang",
+          "Yihao Zhao",
+          "Xiaolong Huang",
+          "Jinfeng Wen",
+          "Xiameng Hu",
+          "Tao Qi",
+          "Mengwei Xu",
+          "Shangguang Wang",
+          "Xuanzhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14967",
+      "identity_tokens": [
+        "id:arXiv:2608.14967",
+        "title:when does distributed ai inference need more widearea bandwidth a codesign evaluation of optical packet and software levers",
+        "url:https://arxiv.org/abs/2608.14967"
+      ],
+      "record": {
+        "title": "When Does Distributed AI Inference Need More Wide-Area Bandwidth? A Co-Design Evaluation of Optical, Packet, and Software Levers",
+        "source_url": "https://arxiv.org/abs/2608.14967",
+        "year": 2026,
+        "published": "2026-08-15",
+        "canonical_id": "arXiv:2608.14967",
+        "arxiv_id": "2608.14967",
+        "authors": [
+          "Prasanna C"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.4108/eetiot.13349",
+      "identity_tokens": [
+        "id:DOI:10.4108/eetiot.13349",
+        "title:janus joint prefilldecode disaggregation with kvcacheaware multicloud routing for edgeadjacent llm serving",
+        "url:https://doi.org/10.4108/eetiot.13349"
+      ],
+      "record": {
+        "title": "Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving",
+        "source_url": "https://doi.org/10.4108/eetiot.13349",
+        "year": 2026,
+        "published": "2026-08-12",
+        "canonical_id": "DOI:10.4108/eetiot.13349",
+        "doi": "10.4108/eetiot.13349",
+        "authors": [
+          "K. B. Aruna",
+          "V. Kaliraj",
+          "I. Sudha",
+          "V. Sureka"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.26335",
+      "identity_tokens": [
+        "id:arXiv:2607.26335",
+        "title:the fabric is the cluster driver crosslayer ebpf policies for gpucxl fabrics",
+        "url:https://arxiv.org/abs/2607.26335"
+      ],
+      "record": {
+        "title": "The Fabric Is the Cluster Driver: Cross-Layer eBPF Policies for GPU-CXL Fabrics",
+        "source_url": "https://arxiv.org/abs/2607.26335",
+        "year": 2026,
+        "published": "2026-07-28",
+        "canonical_id": "arXiv:2607.26335",
+        "arxiv_id": "2607.26335",
+        "authors": [
+          "Yiwei Yang",
+          "Andi Quinn"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.24653",
+      "identity_tokens": [
+        "id:arXiv:2607.24653",
+        "title:kimi k3 open frontier intelligence",
+        "url:https://arxiv.org/abs/2607.24653"
+      ],
+      "record": {
+        "title": "Kimi K3: Open Frontier Intelligence",
+        "source_url": "https://arxiv.org/abs/2607.24653",
+        "year": 2026,
+        "published": "2026-07-27",
+        "canonical_id": "arXiv:2607.24653",
+        "arxiv_id": "2607.24653",
+        "authors": [
+          "Kimi Team",
+          "Tongtong Bai",
+          "Yifan Bai",
+          "Yiping Bao",
+          "M. C.",
+          "Jianfeng Cai",
+          "Xinyuan Cai",
+          "Peizhou Cao",
+          "Yuxuan Cao",
+          "Ziwei Chai",
+          "Y. Charles",
+          "H. S. Che",
+          "Guanduo Chen",
+          "Guangyu Chen",
+          "Guanzheng Chen",
+          "Huarong Chen",
+          "Jia Chen",
+          "Jianlong Chen",
+          "Jun Chen",
+          "Kexin Chen",
+          "Peng Chen",
+          "Ruijue Chen",
+          "Wentao Chen",
+          "Xin Chen",
+          "Yang Chen",
+          "Yanru Chen",
+          "Yifei Chen",
+          "Yingjiang Chen",
+          "Yuankun Chen",
+          "Yujie Chen",
+          "Yutian Chen",
+          "Zhirong Chen",
+          "Dazhi Cheng",
+          "Yean Cheng",
+          "Jialei Cui",
+          "Jingbing Cui",
+          "Anqi Dai",
+          "Jiaqi Deng",
+          "Hao Ding",
+          "Rui Ding",
+          "Shaofeng Ding",
+          "Mengfan Dong",
+          "Mengnan Dong",
+          "Yuhao Dong",
+          "Yuxin Dong",
+          "Angang Du",
+          "Chenzhuang Du",
+          "Dikang Du",
+          "J. Du",
+          "Yulun Du",
+          "Yu Fan",
+          "Jing Feng",
+          "Qiulin Feng",
+          "Yichen Feng",
+          "Kelin Fu",
+          "Qiang Fu",
+          "高甫瑄",
+          "Hongcheng Gao",
+          "Jingyue Gao",
+          "Tong Gao",
+          "Weijia Gao",
+          "Shangyi Geng",
+          "Jie Gong",
+          "功 林戸",
+          "Shengao Gong",
+          "Xiaochen Gong",
+          "Qizheng Gu",
+          "Yicheng Gu",
+          "Shuhao Guan",
+          "Haiqing Guo",
+          "Shiqi Guo",
+          "Xiang Guo",
+          "Zhengyan Guo",
+          "Beixi Hao",
+          "Wenxin Hao",
+          "Xiaoru Hao",
+          "Dailan He",
+          "Haotian He",
+          "Lehan He",
+          "Qi He",
+          "Weiran He",
+          "Xinran He",
+          "Xinyi He",
+          "Yibo He",
+          "Yi He",
+          "Chao Hong",
+          "Tiange Hong",
+          "Hao Hu",
+          "Jiaxi Hu",
+          "Ruikun Hu",
+          "Weiming Hu",
+          "Yangyang Hu",
+          "Zhenxing Hu",
+          "Liang Hua",
+          "Jinbin Huang",
+          "Ke Huang",
+          "Ruiyuan Huang",
+          "Siying Huang",
+          "Weixiao Huang",
+          "Yan Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16488",
+      "identity_tokens": [
+        "id:arXiv:2607.16488",
+        "title:autoscaling heterogeneous neural processing units for energy and costefficient llm serving",
+        "url:https://arxiv.org/abs/2607.16488"
+      ],
+      "record": {
+        "title": "Auto-Scaling Heterogeneous Neural Processing Units for Energy and Cost-Efficient LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.16488",
+        "year": 2026,
+        "published": "2026-07-17",
+        "canonical_id": "arXiv:2607.16488",
+        "arxiv_id": "2607.16488",
+        "authors": [
+          "Yuqi Xue",
+          "Jichuan Chang",
+          "Jian Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.05876",
+      "identity_tokens": [
+        "id:arXiv:2607.05876",
+        "title:think before you gridsearch floorfirst triage for llm serving",
+        "url:https://arxiv.org/abs/2607.05876"
+      ],
+      "record": {
+        "title": "Think Before You Grid-Search: Floor-First Triage for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.05876",
+        "year": 2026,
+        "published": "2026-07-07",
+        "canonical_id": "arXiv:2607.05876",
+        "arxiv_id": "2607.05876",
+        "authors": [
+          "Yihua Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.31093",
+      "identity_tokens": [
+        "id:arXiv:2606.31093",
+        "title:omniflow a unified workflow orchestration and distributed kv cache sharing framework for multimodal inference",
+        "url:https://arxiv.org/abs/2606.31093"
+      ],
+      "record": {
+        "title": "Omni-Flow: A Unified Workflow Orchestration and Distributed KV Cache Sharing Framework for Multimodal Inference",
+        "source_url": "https://arxiv.org/abs/2606.31093",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "arXiv:2606.31093",
+        "arxiv_id": "2606.31093",
+        "authors": [
+          "Bin Xiao",
+          "Jingfu Dong",
+          "Changran Wang",
+          "Yitian Chen",
+          "X Zhao",
+          "Y Peng",
+          "Jiahao Lin",
+          "Yuchen Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02574",
+      "identity_tokens": [
+        "id:arXiv:2607.02574",
+        "title:from tensor buffer to distributed memory hierarchy a survey of kv cache management for llm serving",
+        "url:https://arxiv.org/abs/2607.02574"
+      ],
+      "record": {
+        "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.02574",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "arXiv:2607.02574",
+        "arxiv_id": "2607.02574",
+        "authors": [
+          "Jie Li",
+          "Tongyang Wang",
+          "Yong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.29708",
+      "identity_tokens": [
+        "id:arXiv:2606.29708",
+        "title:demystifying the design space and best practices for heterogeneous llm inference and serving",
+        "url:https://arxiv.org/abs/2606.29708"
+      ],
+      "record": {
+        "title": "Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving",
+        "source_url": "https://arxiv.org/abs/2606.29708",
+        "year": 2026,
+        "published": "2026-06-29",
+        "canonical_id": "arXiv:2606.29708",
+        "arxiv_id": "2606.29708",
+        "authors": [
+          "Zhixin Wang",
+          "Zhengbo Wang",
+          "Fangcheng Fu",
+          "Yinhui Lu",
+          "Jinlong Hou",
+          "Yijie Chen",
+          "Xiaowei Shen",
+          "He Liu",
+          "Xiangbin Li",
+          "Jun Chen",
+          "Ruya Gu",
+          "Dian Wang",
+          "Zhou Tan",
+          "Yuan Cheng",
+          "Hongzhou Zhang",
+          "XJ Huang",
+          "P Zhang",
+          "Xiaohe Hu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21712",
+      "identity_tokens": [
+        "id:arXiv:2606.21712",
+        "title:batchgen an architecture for scalable and efficient batch inference",
+        "url:https://arxiv.org/abs/2606.21712"
+      ],
+      "record": {
+        "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference",
+        "source_url": "https://arxiv.org/abs/2606.21712",
+        "year": 2026,
+        "published": "2026-06-19",
+        "canonical_id": "arXiv:2606.21712",
+        "arxiv_id": "2606.21712",
+        "authors": [
+          "Tairan Xu",
+          "Leyang Xue",
+          "Zhan Lu",
+          "Jinfu Deng",
+          "Hongyang Xiao",
+          "Yu Jiang",
+          "C N He",
+          "Matej Šandor",
+          "Le Xu",
+          "Luo Mai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7165293849",
+      "identity_tokens": [
+        "id:OpenAlex:W7165293849",
+        "title:disaggregated llm serving with cxl shared memory kv cache at rackscale",
+        "url:https://hdl.handle.net/10919/143438"
+      ],
+      "record": {
+        "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+        "source_url": "https://hdl.handle.net/10919/143438",
+        "year": 2026,
+        "published": "2026-06-16",
+        "canonical_id": "OpenAlex:W7165293849",
+        "authors": [
+          "Dongha Yoon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.13708",
+      "identity_tokens": [
+        "id:arXiv:2606.13708",
+        "title:tiara a programmable linerate isa for remote memory access",
+        "url:https://arxiv.org/abs/2606.13708"
+      ],
+      "record": {
+        "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+        "source_url": "https://arxiv.org/abs/2606.13708",
+        "year": 2026,
+        "published": "2026-06-10",
+        "canonical_id": "arXiv:2606.13708",
+        "arxiv_id": "2606.13708",
+        "authors": [
+          "Bojie Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04101",
+      "identity_tokens": [
+        "id:arXiv:2606.04101",
+        "title:ultraep unleash moe training and inference on rackscale nodes with nearoptimal load balancing",
+        "url:https://arxiv.org/abs/2606.04101"
+      ],
+      "record": {
+        "title": "UltraEP: Unleash MoE Training and Inference on Rack-Scale Nodes with Near-Optimal Load Balancing",
+        "source_url": "https://arxiv.org/abs/2606.04101",
+        "year": 2026,
+        "published": "2026-06-02",
+        "canonical_id": "arXiv:2606.04101",
+        "arxiv_id": "2606.04101",
+        "authors": [
+          "Xinming Wei",
+          "Chao Jin",
+          "Tuo Dai",
+          "Yinmin Zhong",
+          "Shan Yu",
+          "Chengxu Yang",
+          "Bingyang Wu",
+          "Zili Zhang",
+          "Jing Mai",
+          "Qianchao Zhu",
+          "Zhouyang Li",
+          "Yuliang Liu",
+          "Guojie Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01502",
+      "identity_tokens": [
+        "id:arXiv:2606.01502",
+        "title:move the query not the cache characterizing crossinstance latent attention redistribution across gpu fabrics",
+        "url:https://arxiv.org/abs/2606.01502"
+      ],
+      "record": {
+        "title": "Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics",
+        "source_url": "https://arxiv.org/abs/2606.01502",
+        "year": 2026,
+        "published": "2026-05-31",
+        "canonical_id": "arXiv:2606.01502",
+        "arxiv_id": "2606.01502",
+        "authors": [
+          "Bole Ma",
+          "Jan Eitzinger",
+          "Harald Köstler",
+          "Gerhard Wellein"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31000",
+      "identity_tokens": [
+        "id:arXiv:2605.31000",
+        "title:hetccl enabling collective communication for mixedvendor heterogeneous clusters",
+        "url:https://arxiv.org/abs/2605.31000"
+      ],
+      "record": {
+        "title": "HetCCL: Enabling Collective Communication For Mixed-Vendor Heterogeneous Clusters",
+        "source_url": "https://arxiv.org/abs/2605.31000",
+        "year": 2026,
+        "published": "2026-05-29",
+        "canonical_id": "arXiv:2605.31000",
+        "arxiv_id": "2605.31000",
+        "authors": [
+          "Yuejie Wang",
+          "Tao Chang",
+          "Yuanyuan Zhao",
+          "Yulong Ao",
+          "Zeyu Gu",
+          "Zhiyu Li",
+          "Yanmin Jia",
+          "Yan Zhang",
+          "Mingjun Zhang",
+          "He Liu",
+          "Yongzhe He",
+          "Yonghua Lin",
+          "Guyue Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25550",
+      "identity_tokens": [
+        "id:arXiv:2605.25550",
+        "title:disagfusion asynchronous pipeline parallelism and elastic scheduling for disaggregated diffusion serving",
+        "url:https://arxiv.org/abs/2605.25550"
+      ],
+      "record": {
+        "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving",
+        "source_url": "https://arxiv.org/abs/2605.25550",
+        "year": 2026,
+        "published": "2026-05-25",
+        "canonical_id": "arXiv:2605.25550",
+        "arxiv_id": "2605.25550",
+        "authors": [
+          "Hantian Zha",
+          "Teng Ma",
+          "Yang Yong",
+          "Haiwen Fu",
+          "Ruiyang Ma",
+          "Wei Gao",
+          "Ruihao Gong",
+          "Xianglong Liu",
+          "Wei Wang",
+          "Yunpeng Chai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.21100",
+      "identity_tokens": [
+        "id:arXiv:2605.21100",
+        "title:nanocp requestlevel dynamic context parallelism for dataexpert parallel decoding",
+        "url:https://arxiv.org/abs/2605.21100"
+      ],
+      "record": {
+        "title": "NanoCP: Request-Level Dynamic Context Parallelism for Data-Expert Parallel Decoding",
+        "source_url": "https://arxiv.org/abs/2605.21100",
+        "year": 2026,
+        "published": "2026-05-20",
+        "canonical_id": "arXiv:2605.21100",
+        "arxiv_id": "2605.21100",
+        "authors": [
+          "Jiefei Chen",
+          "Binbin Lin",
+          "Jinming Ma",
+          "Jiangfei Duan",
+          "Haojie Duanmu",
+          "Hao Liu",
+          "Qinxiu Cheng",
+          "Xiuhong Li",
+          "Zhilin Pei",
+          "Hui Wang",
+          "Xingcheng Zhang",
+          "Dahua Lin"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:14e07bb481d05d0b45d76654778c2a3df6723d1818dcffbca7bdd0296ee6a6d1",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

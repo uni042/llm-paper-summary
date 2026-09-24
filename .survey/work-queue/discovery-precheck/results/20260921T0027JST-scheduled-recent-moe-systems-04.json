@@ -1,0 +1,959 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0027JST-scheduled-recent-moe-systems-04",
+  "collector_id": "scheduled-20260921T0027JST-recent-moe-systems",
+  "run_key": "2026-09-21T00:27:43+09:00",
+  "axis": "recent MoE inference systems expert pruning routing cache offload",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=mixture%20of%20experts%20inference%20expert%20pruning%20routing%20cache%20offload&filter=from_publication_date:2026-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "IlsxNzgwMjcyMDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTYyOTkwMjEyJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9d9c9e7caab7bfb2a5787aa4fedb234c443f73c0",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 11,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T15:29:18.454667+00:00",
+  "results": [
+    {
+      "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+      "source_url": "https://arxiv.org/abs/2609.10714",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10714",
+      "arxiv_id": "2609.10714",
+      "authors": [
+        "Yu Ma",
+        "Zhen Gao",
+        "Li Qiao",
+        "Xiaoyuan Zhang",
+        "Mahdi Boloursaz Mashhadi",
+        "Yin Xu",
+        "Wenjun Xu",
+        "Xiaodong Xu",
+        "Kaibin Huang",
+        "Jiangzhou Wang",
+        "Rahim Tafazolli",
+        "Sheng Chen",
+        "Tony Q. S. Quek",
+        "Ping Zhang"
+      ]
+    },
+    {
+      "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+      "source_url": "https://arxiv.org/abs/2609.11977",
+      "year": 2026,
+      "published": "2026-09-04",
+      "canonical_id": "arXiv:2609.11977",
+      "arxiv_id": "2609.11977",
+      "authors": [
+        "Wenhui Chen",
+        "Shiwen Cheng",
+        "Hao Dong",
+        "Chenda Duan",
+        "Ruixiang Feng",
+        "Zhong Guan",
+        "Boqiang Guo",
+        "Xueyuan Han",
+        "Haojie Hao",
+        "Liangmeng Huang",
+        "Zhelong Huang",
+        "Xinke Kong",
+        "Hongyu Li",
+        "Jiazheng Li",
+        "Junbo Li",
+        "Qingchuan Li",
+        "Yukun Lian",
+        "Chang Liu",
+        "Tianyu Liu",
+        "Zicheng Liu",
+        "Shuyi Ouyang",
+        "Yijun Pan",
+        "Kunyu Shi",
+        "Xiaojun Tang",
+        "Bingquan Wang",
+        "Kesu Wang",
+        "Yuchen Wang",
+        "Sibo Wei",
+        "Sicong Xie",
+        "Xiaoying Xing",
+        "Yi Xu",
+        "Zhijun Xu",
+        "Hongwei Xue",
+        "Qingcheng Zeng",
+        "Di Zhang",
+        "Guannan Zhang",
+        "Haochen Zhang",
+        "Tianlong Zhang",
+        "Tianyu Zhao",
+        "Tianyu Zhao",
+        "Yanjun Zheng",
+        "Jialong Zhu",
+        "Zijian Zou"
+      ]
+    },
+    {
+      "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+      "source_url": "https://doi.org/10.1016/j.hcc.2026.100428",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+      "doi": "10.1016/j.hcc.2026.100428",
+      "authors": [
+        "Yu Duan",
+        "Jiateng Li",
+        "Navya Goli",
+        "Yuma Ishimura",
+        "Yiyang Li",
+        "Umamaheswara Rao Tida",
+        "Zhenge Jia"
+      ]
+    },
+    {
+      "title": "Self–Optimizing AI data systems: a systematic literature review of CQLE-Aware query optimization, Edge–cloud offloading, Cloud/HPC orchestration, Data–Centric MLOps, and RAG",
+      "source_url": "https://doi.org/10.1007/s10791-026-10515-0",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "DOI:10.1007/s10791-026-10515-0",
+      "doi": "10.1007/s10791-026-10515-0",
+      "authors": [
+        "Chaitanya Ranga Singamaneni",
+        "S. Rakesh"
+      ]
+    },
+    {
+      "title": "Loom: Full-Stack Compilation and Automated Exploration of Heterogeneous Multi-Core Spatial Accelerator Systems",
+      "source_url": "https://escholarship.org/uc/item/84k2g515",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "OpenAlex:W7213490513",
+      "authors": [
+        "Sihao Liu"
+      ]
+    },
+    {
+      "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27046",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27046",
+      "arxiv_id": "2608.27046",
+      "authors": [
+        "Maciej Besta",
+        "Leonard Schmidt",
+        "Lara Nonino",
+        "Robert Gerstenberger",
+        "Pierre Pang",
+        "Patrik Okanovic",
+        "Ales Kubicek",
+        "Tiancheng Chen",
+        "B. Lipshitz",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "Heterogeneous edge AI orchestration: A systematic review, taxonomy and future directions",
+      "source_url": "https://doi.org/10.1016/j.cosrev.2026.101044",
+      "year": 2026,
+      "published": "2026-08-14",
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.101044",
+      "doi": "10.1016/j.cosrev.2026.101044",
+      "authors": [
+        "Babar Ali",
+        "Sukhpal Singh Gill",
+        "Félix Cuadrado",
+        "Steve Uhlig"
+      ]
+    },
+    {
+      "title": "LoKiFormer: Locality-aware Attention with Decoupled Knowledge Memory for Efficient Large Language Model Pretraining",
+      "source_url": "https://arxiv.org/abs/2608.12419",
+      "year": 2026,
+      "published": "2026-08-12",
+      "canonical_id": "arXiv:2608.12419",
+      "arxiv_id": "2608.12419",
+      "authors": [
+        "Qiuwu Chen",
+        "Zimo Liu",
+        "Yuchen Li",
+        "Ying Sun",
+        "Yifan Zhang",
+        "Zhijie Qiu",
+        "Zeng You",
+        "Ryan Dong",
+        "Simeng Ma",
+        "Yaofo Chen",
+        "Mingkui Tan"
+      ]
+    },
+    {
+      "title": "Diffusion Language Models for Mobile Edge Agentic AI: Foundations, Applications, and Challenges",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10410801/v1",
+      "year": 2026,
+      "published": "2026-08-11",
+      "canonical_id": "arXiv:2609.04778",
+      "arxiv_id": "2609.04778",
+      "authors": [
+        "Chenqi Li",
+        "Minghui Min",
+        "Dusit Niyato",
+        "Wei Ni"
+      ]
+    },
+    {
+      "title": "Large Language Models: From Internal Architecture and Distributed Training Optimisation to Adaptation Strategies",
+      "source_url": "https://doi.org/10.3390/app16157849",
+      "year": 2026,
+      "published": "2026-08-06",
+      "canonical_id": "DOI:10.3390/app16157849",
+      "doi": "10.3390/app16157849",
+      "authors": [
+        "Martin Lukáč",
+        "František Duchoň",
+        "Jakub Ivan",
+        "Martin Dekan",
+        "Eduard Zelenay",
+        "Maroš Kocúr",
+        "Izabela Trepáčová",
+        "Tomáš Jurov",
+        "Radoslav Pšenka"
+      ]
+    },
+    {
+      "title": "Tiny Large Language Models for IoT networks: Potentials and challenges",
+      "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111406",
+      "year": 2026,
+      "published": "2026-08-04",
+      "canonical_id": "DOI:10.1016/j.compeleceng.2026.111406",
+      "doi": "10.1016/j.compeleceng.2026.111406",
+      "authors": [
+        "Muhammed Golec",
+        "Suhib Bani Melhem",
+        "Yaser Khamayseh",
+        "Abdulmalik Alwarafy",
+        "Naofal Al-Dhahir"
+      ]
+    },
+    {
+      "title": "SparSEEty: Extracting Tokens from Sparsity-Exploiting LLM Serving Systems via Deterministic Side Channels",
+      "source_url": "https://arxiv.org/abs/2608.02995",
+      "year": 2026,
+      "published": "2026-08-04",
+      "canonical_id": "arXiv:2608.02995",
+      "arxiv_id": "2608.02995",
+      "authors": [
+        "조용완",
+        "Jinyoung Park",
+        "Euihyun Lee",
+        "Dokyung Song"
+      ]
+    },
+    {
+      "title": "An Extensive Analysis of RISC-V Floating-Point Units: Architectures, Difficulties, and Prospects",
+      "source_url": "https://doi.org/10.70917/ijcisim-2026-4051",
+      "year": 2026,
+      "published": "2026-07-31",
+      "canonical_id": "DOI:10.70917/ijcisim-2026-4051",
+      "doi": "10.70917/ijcisim-2026-4051",
+      "authors": [
+        "Naveen Kumar",
+        "Chandrashekar M Patil",
+        "Geethashree A"
+      ]
+    },
+    {
+      "title": "Media Meets Communication in 6G: Fundamentals, Key Technologies, and Applications",
+      "source_url": "https://arxiv.org/abs/2608.05184",
+      "year": 2026,
+      "published": "2026-07-25",
+      "canonical_id": "arXiv:2608.05184",
+      "arxiv_id": "2608.05184",
+      "authors": [
+        "Bingyan Xie",
+        "Longyu Zhou",
+        "Zihan Chen",
+        "Shunpu Tang",
+        "Mingyang Shi",
+        "Yu Tian",
+        "Guo Lu",
+        "Yongpeng Wu",
+        "Tianhao Liang",
+        "Tony Q. S. Quek",
+        "Guangtao Zhai",
+        "Wenjun Zhang"
+      ]
+    },
+    {
+      "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+      "source_url": "https://arxiv.org/abs/2607.16836",
+      "year": 2026,
+      "published": "2026-07-18",
+      "canonical_id": "arXiv:2607.16836",
+      "arxiv_id": "2607.16836",
+      "authors": [
+        "Shuhao Zhang",
+        "H H Peng",
+        "Chun Ho",
+        "Yancan Mao",
+        "Yufeng Du",
+        "Liu S",
+        "Ruijie Qiu",
+        "Xiaofei Liao",
+        "Hai Jin"
+      ]
+    },
+    {
+      "title": "Towards a Unified Framework for Large–Small Model Collaboration in Cloud–Edge Systems",
+      "source_url": "https://doi.org/10.53941/jaia.2026.100012",
+      "year": 2026,
+      "published": "2026-07-17",
+      "canonical_id": "DOI:10.53941/jaia.2026.100012",
+      "doi": "10.53941/jaia.2026.100012",
+      "authors": [
+        "Yi Yang",
+        "Jing Bi",
+        "Haitao Yuan",
+        "Ziqi Wang",
+        "Jiayi Li",
+        "Jiahui Zhai",
+        "Jia Zhang"
+      ]
+    },
+    {
+      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+      "source_url": "https://arxiv.org/abs/2607.14952",
+      "year": 2026,
+      "published": "2026-07-16",
+      "canonical_id": "arXiv:2607.14952",
+      "arxiv_id": "2607.14952",
+      "authors": [
+        "Changhai Zhou",
+        "Kieran Liu",
+        "Yuhua Zhou",
+        "Qian Qiao",
+        "Jun Gao",
+        "Harry Zhang",
+        "Irvine Lu",
+        "Nolan Ho",
+        "Lucian Li",
+        "Andrew Lei",
+        "Cleon Cheng",
+        "Steven Chiang",
+        "Yihang Zeng",
+        "Di Zhang",
+        "Rio Yang",
+        "Kaijie Chen",
+        "Andrew Chen",
+        "PONY MA",
+        "Weizhong Zhang",
+        "Cheng Jin"
+      ]
+    },
+    {
+      "title": "Constraint-Driven Model Optimization: An Industry Framework for Selecting Compression and Acceleration Techniques in Modern Machine Learning Systems",
+      "source_url": "https://arxiv.org/abs/2607.13735",
+      "year": 2026,
+      "published": "2026-07-15",
+      "canonical_id": "arXiv:2607.13735",
+      "arxiv_id": "2607.13735",
+      "authors": [
+        "Dhruv Shivkant",
+        "Saket Mohanty",
+        "Somya Rai",
+        "Utkarsh Wadhwa"
+      ]
+    },
+    {
+      "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design",
+      "source_url": "https://arxiv.org/abs/2607.09084",
+      "year": 2026,
+      "published": "2026-07-10",
+      "canonical_id": "arXiv:2607.09084",
+      "arxiv_id": "2607.09084",
+      "authors": [
+        "Linhui Xiao",
+        "Guiping Cao",
+        "Mingyue Guo",
+        "Xianchao Guan",
+        "Fan Yang",
+        "Ming Tao",
+        "Xin Li",
+        "Yuxin Peng",
+        "Yaowei Wang"
+      ]
+    },
+    {
+      "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents",
+      "source_url": "https://arxiv.org/abs/2607.08032",
+      "year": 2026,
+      "published": "2026-07-09",
+      "canonical_id": "arXiv:2607.08032",
+      "arxiv_id": "2607.08032",
+      "authors": [
+        "Ashwin Gerard Colaco",
+        "Nada Lahjouji"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.10714",
+      "identity_tokens": [
+        "id:arXiv:2609.10714",
+        "title:from semantic to token communication the next paradigm for largemodeldriven 6g intelligent connectivity",
+        "url:https://arxiv.org/abs/2609.10714"
+      ],
+      "record": {
+        "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+        "source_url": "https://arxiv.org/abs/2609.10714",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10714",
+        "arxiv_id": "2609.10714",
+        "authors": [
+          "Yu Ma",
+          "Zhen Gao",
+          "Li Qiao",
+          "Xiaoyuan Zhang",
+          "Mahdi Boloursaz Mashhadi",
+          "Yin Xu",
+          "Wenjun Xu",
+          "Xiaodong Xu",
+          "Kaibin Huang",
+          "Jiangzhou Wang",
+          "Rahim Tafazolli",
+          "Sheng Chen",
+          "Tony Q. S. Quek",
+          "Ping Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11977",
+      "identity_tokens": [
+        "id:arXiv:2609.11977",
+        "title:occamy10 open paretofrontier 35b intelligence for cowork",
+        "url:https://arxiv.org/abs/2609.11977"
+      ],
+      "record": {
+        "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+        "source_url": "https://arxiv.org/abs/2609.11977",
+        "year": 2026,
+        "published": "2026-09-04",
+        "canonical_id": "arXiv:2609.11977",
+        "arxiv_id": "2609.11977",
+        "authors": [
+          "Wenhui Chen",
+          "Shiwen Cheng",
+          "Hao Dong",
+          "Chenda Duan",
+          "Ruixiang Feng",
+          "Zhong Guan",
+          "Boqiang Guo",
+          "Xueyuan Han",
+          "Haojie Hao",
+          "Liangmeng Huang",
+          "Zhelong Huang",
+          "Xinke Kong",
+          "Hongyu Li",
+          "Jiazheng Li",
+          "Junbo Li",
+          "Qingchuan Li",
+          "Yukun Lian",
+          "Chang Liu",
+          "Tianyu Liu",
+          "Zicheng Liu",
+          "Shuyi Ouyang",
+          "Yijun Pan",
+          "Kunyu Shi",
+          "Xiaojun Tang",
+          "Bingquan Wang",
+          "Kesu Wang",
+          "Yuchen Wang",
+          "Sibo Wei",
+          "Sicong Xie",
+          "Xiaoying Xing",
+          "Yi Xu",
+          "Zhijun Xu",
+          "Hongwei Xue",
+          "Qingcheng Zeng",
+          "Di Zhang",
+          "Guannan Zhang",
+          "Haochen Zhang",
+          "Tianlong Zhang",
+          "Tianyu Zhao",
+          "Tianyu Zhao",
+          "Yanjun Zheng",
+          "Jialong Zhu",
+          "Zijian Zou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.hcc.2026.100428",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.hcc.2026.100428",
+        "title:sok towards a usercentric privacypreserving and reliable ai agent via ondevice llm personalization",
+        "url:https://doi.org/10.1016/j.hcc.2026.100428"
+      ],
+      "record": {
+        "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization",
+        "source_url": "https://doi.org/10.1016/j.hcc.2026.100428",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+        "doi": "10.1016/j.hcc.2026.100428",
+        "authors": [
+          "Yu Duan",
+          "Jiateng Li",
+          "Navya Goli",
+          "Yuma Ishimura",
+          "Yiyang Li",
+          "Umamaheswara Rao Tida",
+          "Zhenge Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10791-026-10515-0",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10791-026-10515-0",
+        "title:selfoptimizing ai data systems a systematic literature review of cqleaware query optimization edgecloud offloading cloudhpc orchestration datacentric mlops and rag",
+        "url:https://doi.org/10.1007/s10791-026-10515-0"
+      ],
+      "record": {
+        "title": "Self–Optimizing AI data systems: a systematic literature review of CQLE-Aware query optimization, Edge–cloud offloading, Cloud/HPC orchestration, Data–Centric MLOps, and RAG",
+        "source_url": "https://doi.org/10.1007/s10791-026-10515-0",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "DOI:10.1007/s10791-026-10515-0",
+        "doi": "10.1007/s10791-026-10515-0",
+        "authors": [
+          "Chaitanya Ranga Singamaneni",
+          "S. Rakesh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7213490513",
+      "identity_tokens": [
+        "id:OpenAlex:W7213490513",
+        "title:loom fullstack compilation and automated exploration of heterogeneous multicore spatial accelerator systems",
+        "url:https://escholarship.org/uc/item/84k2g515"
+      ],
+      "record": {
+        "title": "Loom: Full-Stack Compilation and Automated Exploration of Heterogeneous Multi-Core Spatial Accelerator Systems",
+        "source_url": "https://escholarship.org/uc/item/84k2g515",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "OpenAlex:W7213490513",
+        "authors": [
+          "Sihao Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27046",
+      "identity_tokens": [
+        "id:arXiv:2608.27046",
+        "title:performance foundations of parallel distributed reasoning language models",
+        "url:https://arxiv.org/abs/2608.27046"
+      ],
+      "record": {
+        "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27046",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27046",
+        "arxiv_id": "2608.27046",
+        "authors": [
+          "Maciej Besta",
+          "Leonard Schmidt",
+          "Lara Nonino",
+          "Robert Gerstenberger",
+          "Pierre Pang",
+          "Patrik Okanovic",
+          "Ales Kubicek",
+          "Tiancheng Chen",
+          "B. Lipshitz",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.cosrev.2026.101044",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.cosrev.2026.101044",
+        "title:heterogeneous edge ai orchestration a systematic review taxonomy and future directions",
+        "url:https://doi.org/10.1016/j.cosrev.2026.101044"
+      ],
+      "record": {
+        "title": "Heterogeneous edge AI orchestration: A systematic review, taxonomy and future directions",
+        "source_url": "https://doi.org/10.1016/j.cosrev.2026.101044",
+        "year": 2026,
+        "published": "2026-08-14",
+        "canonical_id": "DOI:10.1016/j.cosrev.2026.101044",
+        "doi": "10.1016/j.cosrev.2026.101044",
+        "authors": [
+          "Babar Ali",
+          "Sukhpal Singh Gill",
+          "Félix Cuadrado",
+          "Steve Uhlig"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.12419",
+      "identity_tokens": [
+        "id:arXiv:2608.12419",
+        "title:lokiformer localityaware attention with decoupled knowledge memory for efficient large language model pretraining",
+        "url:https://arxiv.org/abs/2608.12419"
+      ],
+      "record": {
+        "title": "LoKiFormer: Locality-aware Attention with Decoupled Knowledge Memory for Efficient Large Language Model Pretraining",
+        "source_url": "https://arxiv.org/abs/2608.12419",
+        "year": 2026,
+        "published": "2026-08-12",
+        "canonical_id": "arXiv:2608.12419",
+        "arxiv_id": "2608.12419",
+        "authors": [
+          "Qiuwu Chen",
+          "Zimo Liu",
+          "Yuchen Li",
+          "Ying Sun",
+          "Yifan Zhang",
+          "Zhijie Qiu",
+          "Zeng You",
+          "Ryan Dong",
+          "Simeng Ma",
+          "Yaofo Chen",
+          "Mingkui Tan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04778",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10410801/v1",
+        "id:arXiv:2609.04778",
+        "title:diffusion language models for mobile edge agentic ai foundations applications and challenges",
+        "url:https://doi.org/10.21203/rs.3.rs-10410801/v1"
+      ],
+      "record": {
+        "title": "Diffusion Language Models for Mobile Edge Agentic AI: Foundations, Applications, and Challenges",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10410801/v1",
+        "year": 2026,
+        "published": "2026-08-11",
+        "canonical_id": "arXiv:2609.04778",
+        "arxiv_id": "2609.04778",
+        "authors": [
+          "Chenqi Li",
+          "Minghui Min",
+          "Dusit Niyato",
+          "Wei Ni"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/app16157849",
+      "identity_tokens": [
+        "id:DOI:10.3390/app16157849",
+        "title:large language models from internal architecture and distributed training optimisation to adaptation strategies",
+        "url:https://doi.org/10.3390/app16157849"
+      ],
+      "record": {
+        "title": "Large Language Models: From Internal Architecture and Distributed Training Optimisation to Adaptation Strategies",
+        "source_url": "https://doi.org/10.3390/app16157849",
+        "year": 2026,
+        "published": "2026-08-06",
+        "canonical_id": "DOI:10.3390/app16157849",
+        "doi": "10.3390/app16157849",
+        "authors": [
+          "Martin Lukáč",
+          "František Duchoň",
+          "Jakub Ivan",
+          "Martin Dekan",
+          "Eduard Zelenay",
+          "Maroš Kocúr",
+          "Izabela Trepáčová",
+          "Tomáš Jurov",
+          "Radoslav Pšenka"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.compeleceng.2026.111406",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.compeleceng.2026.111406",
+        "title:tiny large language models for iot networks potentials and challenges",
+        "url:https://doi.org/10.1016/j.compeleceng.2026.111406"
+      ],
+      "record": {
+        "title": "Tiny Large Language Models for IoT networks: Potentials and challenges",
+        "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111406",
+        "year": 2026,
+        "published": "2026-08-04",
+        "canonical_id": "DOI:10.1016/j.compeleceng.2026.111406",
+        "doi": "10.1016/j.compeleceng.2026.111406",
+        "authors": [
+          "Muhammed Golec",
+          "Suhib Bani Melhem",
+          "Yaser Khamayseh",
+          "Abdulmalik Alwarafy",
+          "Naofal Al-Dhahir"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02995",
+      "identity_tokens": [
+        "id:arXiv:2608.02995",
+        "title:sparseety extracting tokens from sparsityexploiting llm serving systems via deterministic side channels",
+        "url:https://arxiv.org/abs/2608.02995"
+      ],
+      "record": {
+        "title": "SparSEEty: Extracting Tokens from Sparsity-Exploiting LLM Serving Systems via Deterministic Side Channels",
+        "source_url": "https://arxiv.org/abs/2608.02995",
+        "year": 2026,
+        "published": "2026-08-04",
+        "canonical_id": "arXiv:2608.02995",
+        "arxiv_id": "2608.02995",
+        "authors": [
+          "조용완",
+          "Jinyoung Park",
+          "Euihyun Lee",
+          "Dokyung Song"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.70917/ijcisim-2026-4051",
+      "identity_tokens": [
+        "id:DOI:10.70917/ijcisim-2026-4051",
+        "title:an extensive analysis of riscv floatingpoint units architectures difficulties and prospects",
+        "url:https://doi.org/10.70917/ijcisim-2026-4051"
+      ],
+      "record": {
+        "title": "An Extensive Analysis of RISC-V Floating-Point Units: Architectures, Difficulties, and Prospects",
+        "source_url": "https://doi.org/10.70917/ijcisim-2026-4051",
+        "year": 2026,
+        "published": "2026-07-31",
+        "canonical_id": "DOI:10.70917/ijcisim-2026-4051",
+        "doi": "10.70917/ijcisim-2026-4051",
+        "authors": [
+          "Naveen Kumar",
+          "Chandrashekar M Patil",
+          "Geethashree A"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.05184",
+      "identity_tokens": [
+        "id:arXiv:2608.05184",
+        "title:media meets communication in 6g fundamentals key technologies and applications",
+        "url:https://arxiv.org/abs/2608.05184"
+      ],
+      "record": {
+        "title": "Media Meets Communication in 6G: Fundamentals, Key Technologies, and Applications",
+        "source_url": "https://arxiv.org/abs/2608.05184",
+        "year": 2026,
+        "published": "2026-07-25",
+        "canonical_id": "arXiv:2608.05184",
+        "arxiv_id": "2608.05184",
+        "authors": [
+          "Bingyan Xie",
+          "Longyu Zhou",
+          "Zihan Chen",
+          "Shunpu Tang",
+          "Mingyang Shi",
+          "Yu Tian",
+          "Guo Lu",
+          "Yongpeng Wu",
+          "Tianhao Liang",
+          "Tony Q. S. Quek",
+          "Guangtao Zhai",
+          "Wenjun Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16836",
+      "identity_tokens": [
+        "id:arXiv:2607.16836",
+        "title:beyond storage state as a runtime control problem in parallel and distributed systems",
+        "url:https://arxiv.org/abs/2607.16836"
+      ],
+      "record": {
+        "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+        "source_url": "https://arxiv.org/abs/2607.16836",
+        "year": 2026,
+        "published": "2026-07-18",
+        "canonical_id": "arXiv:2607.16836",
+        "arxiv_id": "2607.16836",
+        "authors": [
+          "Shuhao Zhang",
+          "H H Peng",
+          "Chun Ho",
+          "Yancan Mao",
+          "Yufeng Du",
+          "Liu S",
+          "Ruijie Qiu",
+          "Xiaofei Liao",
+          "Hai Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.53941/jaia.2026.100012",
+      "identity_tokens": [
+        "id:DOI:10.53941/jaia.2026.100012",
+        "title:towards a unified framework for largesmall model collaboration in cloudedge systems",
+        "url:https://doi.org/10.53941/jaia.2026.100012"
+      ],
+      "record": {
+        "title": "Towards a Unified Framework for Large–Small Model Collaboration in Cloud–Edge Systems",
+        "source_url": "https://doi.org/10.53941/jaia.2026.100012",
+        "year": 2026,
+        "published": "2026-07-17",
+        "canonical_id": "DOI:10.53941/jaia.2026.100012",
+        "doi": "10.53941/jaia.2026.100012",
+        "authors": [
+          "Yi Yang",
+          "Jing Bi",
+          "Haitao Yuan",
+          "Ziqi Wang",
+          "Jiayi Li",
+          "Jiahui Zhai",
+          "Jia Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.14952",
+      "identity_tokens": [
+        "id:arXiv:2607.14952",
+        "title:longstraw longcontext rl beyond 2m tokens under a fixed gpu budget",
+        "url:https://arxiv.org/abs/2607.14952"
+      ],
+      "record": {
+        "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+        "source_url": "https://arxiv.org/abs/2607.14952",
+        "year": 2026,
+        "published": "2026-07-16",
+        "canonical_id": "arXiv:2607.14952",
+        "arxiv_id": "2607.14952",
+        "authors": [
+          "Changhai Zhou",
+          "Kieran Liu",
+          "Yuhua Zhou",
+          "Qian Qiao",
+          "Jun Gao",
+          "Harry Zhang",
+          "Irvine Lu",
+          "Nolan Ho",
+          "Lucian Li",
+          "Andrew Lei",
+          "Cleon Cheng",
+          "Steven Chiang",
+          "Yihang Zeng",
+          "Di Zhang",
+          "Rio Yang",
+          "Kaijie Chen",
+          "Andrew Chen",
+          "PONY MA",
+          "Weizhong Zhang",
+          "Cheng Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.13735",
+      "identity_tokens": [
+        "id:arXiv:2607.13735",
+        "title:constraintdriven model optimization an industry framework for selecting compression and acceleration techniques in modern machine learning systems",
+        "url:https://arxiv.org/abs/2607.13735"
+      ],
+      "record": {
+        "title": "Constraint-Driven Model Optimization: An Industry Framework for Selecting Compression and Acceleration Techniques in Modern Machine Learning Systems",
+        "source_url": "https://arxiv.org/abs/2607.13735",
+        "year": 2026,
+        "published": "2026-07-15",
+        "canonical_id": "arXiv:2607.13735",
+        "arxiv_id": "2607.13735",
+        "authors": [
+          "Dhruv Shivkant",
+          "Saket Mohanty",
+          "Somya Rai",
+          "Utkarsh Wadhwa"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09084",
+      "identity_tokens": [
+        "id:arXiv:2607.09084",
+        "title:a survey on the green development of large models from resourceefficient architectures to hardwaresoftware codesign",
+        "url:https://arxiv.org/abs/2607.09084"
+      ],
+      "record": {
+        "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design",
+        "source_url": "https://arxiv.org/abs/2607.09084",
+        "year": 2026,
+        "published": "2026-07-10",
+        "canonical_id": "arXiv:2607.09084",
+        "arxiv_id": "2607.09084",
+        "authors": [
+          "Linhui Xiao",
+          "Guiping Cao",
+          "Mingyue Guo",
+          "Xianchao Guan",
+          "Fan Yang",
+          "Ming Tao",
+          "Xin Li",
+          "Yuxin Peng",
+          "Yaowei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.08032",
+      "identity_tokens": [
+        "id:arXiv:2607.08032",
+        "title:what to keep what to forget a ratedistortion view of memory compaction in llms and agents",
+        "url:https://arxiv.org/abs/2607.08032"
+      ],
+      "record": {
+        "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents",
+        "source_url": "https://arxiv.org/abs/2607.08032",
+        "year": 2026,
+        "published": "2026-07-09",
+        "canonical_id": "arXiv:2607.08032",
+        "arxiv_id": "2607.08032",
+        "authors": [
+          "Ashwin Gerard Colaco",
+          "Nada Lahjouji"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:fce5a25bdc1a56445e4b86915c848d2dcf438afced83238033c02a43f0afdbf2",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

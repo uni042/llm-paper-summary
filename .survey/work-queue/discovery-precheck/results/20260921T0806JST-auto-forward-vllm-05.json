@@ -1,0 +1,1006 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0806JST-auto-forward-vllm-05",
+  "collector_id": "scheduled-forward-vllm",
+  "run_key": "20260921T0802JST-auto",
+  "axis": "forward-citation-vllm",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2309.06180/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fd55165cd7d12b9fcfddbe7fd4a6fdcb77f34bd9",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 49,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 3,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T23:07:02.503669+00:00",
+  "results": [
+    {
+      "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+      "source_url": "https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.future.2026.108697",
+      "doi": "10.1016/j.future.2026.108697",
+      "authors": [
+        "Guanghan Wu",
+        "Roberto Morabito"
+      ]
+    },
+    {
+      "title": "Measuring the production of scientific human capital: New data, methods, and evidence on the U.S. scientific training ecosystem",
+      "source_url": "https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.respol.2026.105605",
+      "doi": "10.1016/j.respol.2026.105605",
+      "authors": [
+        "Dror Shvadron",
+        "Han-Sen Zhang",
+        "L. Fleming",
+        "D. Gross"
+      ]
+    },
+    {
+      "title": "A unified framework for early childhood image captioning via knowledge-grounded metrics and process-level reinforcement",
+      "source_url": "https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116162",
+      "doi": "10.1016/j.engappai.2026.116162",
+      "authors": [
+        "Zhen-Dong Wang",
+        "Zhi-Bin Gu",
+        "Zi-Qi Zhang",
+        "Zong-Yang Ma",
+        "Bing Li",
+        "Cheng Xu",
+        "Songyin Dai",
+        "Ying Wang",
+        "Hong-Zhe Liu"
+      ]
+    },
+    {
+      "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+      "source_url": "https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+      "doi": "10.1016/j.neucom.2026.134297",
+      "authors": [
+        "Ge Teng",
+        "Chen Shen",
+        "Wenxiao Wang",
+        "Sinan Fan",
+        "Liang Xie",
+        "Xiang Tian",
+        "Peng Chen",
+        "Xuesong Liu",
+        "Yaowu Chen",
+        "Jieping Ye"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+      "source_url": "https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+      "doi": "10.1016/j.comnet.2026.112609",
+      "authors": [
+        "Yu-Qi Zhang",
+        "Hao-Chen Lv",
+        "Dan-Yang Zheng",
+        "Chen Yang",
+        "Huan-Lai Xing",
+        "Xiao-Jun Cao",
+        "Ji Xu",
+        "Fei Teng"
+      ]
+    },
+    {
+      "title": "Agentic active Asset Administration Shell for circular manufacturing",
+      "source_url": "https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.jmsy.2026.07.011",
+      "doi": "10.1016/j.jmsy.2026.07.011",
+      "authors": [
+        "Jian-Zhang Li",
+        "Qian Ruan",
+        "Dachuan Shi",
+        "Matthias Schneider",
+        "Olga Meyer",
+        "Michael Oberle",
+        "Li Yi",
+        "Fei Tao"
+      ]
+    },
+    {
+      "title": "GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning",
+      "source_url": "https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Multi-tenant computing, which executes multiple neural networks on a single GPU, is essential for maximizing hardware utilization in both cloud and edge environments. However, effective co-location faces a fundamental trade-off between utilization and safety. On one hand, the diverse computing patterns of concurrent models lead to resource fragmentation, requiring fine-grained scheduling to improve throughput. On the other hand, modern workloads (especially Generative AI) introduce strict memory constraints: their dynamic memory growth requires rigid reservation to prevent Out-Of-Memory (OOM) crashes, often leaving valuable resources idle but inaccessible to other tenants. Existing solutions struggle to balance these two sides: static partitioning ensures safety but limits utilization, while aggressive fine-grained scheduling boosts speed but risks system instability. To address this, we propose <bold><italic>GACER-M</italic></bold>, a unified resource coordination framework that harmonizes fine-grained computing with strict memory governance. Unlike previous approaches that sacrifice speed for safety, <italic>GACER-M</italic> achieves the best of both worlds via a tiered strategy: (1) A granularity-aware spatial mechanism that minimizes computational residue via operator splitting, strictly regulated by a cost-benefit guardrail to prevent memory bloat; (2) A memory-driven temporal coordination technique that segments dynamic workloads to safely inject concurrent tasks into resource gaps. <italic>GACER-M</italic> consistently achieves <bold>1.35</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq1-3701443.gif\"/></alternatives></inline-formula><inline-formula><tex-math notation=\"LaTeX\">$\\sim$</tex-math><alternatives><mml:math><mml:mo>∼</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq2-3701443.gif\"/></alternatives></inline-formula><bold>1.67</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq3-3701443.gif\"/></alternatives></inline-formula> <bold>speedup</bold> in compute-bound scenarios compared to state-of-the-art works; furthermore, in memory-critical scenarios, it delivers <bold>1.33</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq4-3701443.gif\"/></alternatives></inline-formula> <bold>higher effective capacity</bold> and <bold>1.4</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq5-3701443.gif\"/></alternatives></inline-formula> <bold>aggregate throughput</bold> while ensuring strict memory safety.",
+      "canonical_id": "DOI:10.1109/TC.2026.3701443",
+      "doi": "10.1109/TC.2026.3701443",
+      "authors": [
+        "Yongbo Yu",
+        "Fuxun Yu",
+        "Jia-Qi Yang",
+        "Xiuzhen Cheng",
+        "Chenchen Liu",
+        "Xiang Chen"
+      ]
+    },
+    {
+      "title": "Exploring the Design Space of Isolation Mechanisms",
+      "source_url": "https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Processes, containers, and virtual machines (VMs) offer different trade-offs between performance, isolation, and resource sharing. Yet, they represent just three points in a vast design space. Developers repeatedly introduce ad-hoc isolation mechanisms to tune these trade-offs for specific deployments, but there is no systematic way to explore the design space and derive mechanisms that satisfy given security and performance goals. We introduce IsoSearch, a technique for exploring the isolation mechanism design space to find one that satisfies the goals and constraints of a specific deployment scenario. IsoSearch builds on OSmosis [4], our prior model of isolation, which represents protection domains, resources, and their relationships as a graph. A developer begins with a starting mechanism and its representation as an OSmosis graph and specifies both a set of functional constraints (e.g., these two protection domains must both be able to write to this file) and an optimization target (e.g., minimize the amount of memory shared between the two domains). IsoSearch then navigates the design space by applying valid graph transitions to generate candidate mechanisms, scores each mechanism, and selects the most promising ones for further exploration. The search terminates when all active candidates satisfy the constraints and goals or when score improvement plateaus. We demonstrate the efficacy of our approach through five case studies, ranging from resource privatization to protecting a database's private key.",
+      "canonical_id": "DOI:10.1145/3831586.3838145",
+      "doi": "10.1145/3831586.3838145",
+      "authors": [
+        "Sidhartha Agrawal",
+        "Shaurya Patel",
+        "Linh Pham",
+        "Arya Stevinson",
+        "Ilias Karimalis",
+        "Hugo Lefeuvre",
+        "Aastha Mehta",
+        "Reto Achermann",
+        "Margo I. Seltzer"
+      ]
+    },
+    {
+      "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+      "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+      "canonical_id": "DOI:10.1145/3832810.3832854",
+      "doi": "10.1145/3832810.3832854",
+      "authors": [
+        "Wen-Hao Sun",
+        "Pan-Pan Cui",
+        "Yiqi Liu",
+        "Wan-Yu Wang"
+      ]
+    },
+    {
+      "title": "MEDO: Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool",
+      "source_url": "https://www.semanticscholar.org/paper/c0a20d3dafcb048005bdef773e26f59b22a4767d",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The scale of data-intensive workloads in intelligent datacenters has grown rapidly in recent years, intensifying the need for efficient data movement within disaggregated memory pools across memory and storage subsystems. However, most existing solutions focus primarily on optimizing communication between compute nodes and data nodes, overlooking fine-grained management of in-pool data flows. Furthermore, prevailing data swap strategies often suffer from high overhead, limited parallelism, and a lack of adaptivity to dynamic workloads, especially for bursty data access patterns in heterogeneous memory pools. To address these issues, this paper introduces MEDO, a high-parallelism data offloading system for disaggregated memory pools. MEDO leverages a novel multi-stream data offloading architecture, featuring parallel data streams and approximate LRU queues, to maximize throughput and efficiently handle diverse workloads. Additionally, MEDO incorporates a lightweight, adaptive offloading agent that dynamically optimizes data placement decisions and fine-grained system configurations. Our prototype achieves up to 3.6 × latency reduction on real-world data services compared with baselines and can reduce in-pool memory usage by up to 50% on state-of-the-art disaggregated memory systems.",
+      "canonical_id": "DOI:10.1145/3832810.3832890",
+      "doi": "10.1145/3832810.3832890",
+      "authors": [
+        "Jing Wang",
+        "Han-Zhang Yang",
+        "Chao Li",
+        "Xinkai Wang",
+        "Tao-Lei Wang",
+        "Jinyang Guo",
+        "Minyi Guo",
+        "Jie Meng",
+        "Shuang-Fu Zeng"
+      ]
+    },
+    {
+      "title": "When2Think: Learning Difficulty-Aware Length Control for Efficient Hybrid Reasoning Models",
+      "source_url": "https://www.semanticscholar.org/paper/5014ebce24c476ba8c26696856a3745c56f09d8f",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Large Reasoning Models (LRMs) achieve strong performance on complex tasks but exhibit systematic inefficiency: they often overthink easy problems and underthink hard ones. Existing approaches based on uniform length penalties or rigid routing incur an efficiency tax, trading reduced computation on easy instances for accuracy loss on hard instances. We formulate efficient reasoning as an instance-adaptive computation allocation problem and propose When2Think, a post-training framework for hybrid reasoning that dynamically allocates computation based on problem difficulty. Our method introduces Instance-level Difficulty-Aware Control (IDAC), a reward-shaping mechanism that leverages pre-computed reference statistics (accuracy and token usage) to regulate reasoning depth. Combined with verifier-based rewards and batch-wise standardized advantages, IDAC enables stable critic-free optimization without learned reward models or online reference-model queries. When2Think encourages direct answering on easy instances while preserving extended reasoning on hard instances, thereby learning when to use System 1 (NoThink) versus System 2 (Think). Experiments on mathematical benchmarks demonstrate improved accuracy-efficiency trade-offs: on AIME24, Pass@3 increases by 10.0% while token usage is reduced by 27.9% relative to the base model, and on AIME25, When2Think achieves 40.0% Pass@3, outperforming compression and routing-only baselines.",
+      "canonical_id": "arXiv:2609.19671",
+      "arxiv_id": "2609.19671",
+      "authors": [
+        "Jaejun Shim",
+        "Hyunjin Kim",
+        "Young Jin Kim",
+        "J. Bak"
+      ]
+    },
+    {
+      "title": "The More It Says, the More You Pay: A Black-Box Audit of Provider-Side Token Inflation in LLM Services",
+      "source_url": "https://www.semanticscholar.org/paper/41a81d47d9f61de50f58153754c15d6d2c10ba66",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "In pay-per-token LLM services, the more a model says, the more users pay. Dishonest providers can covertly manipulate generation to inflate output tokens while largely preserving task utility. We define such manipulation as a Provider-Side Token Inflation Attack (PTIA) and instantiate five representative attacks at the query, prompt, representation, and model levels of the provider-controlled pipeline. Our experiments show that each attack increases mean output length to more than 10.2x the clean baseline, demonstrating PTIA's financial appeal and feasibility at multiple stages of generation. Yet auditing PTIA from black-box responses is difficult for users. Our key observation is PTIA saturation: an initial attack sharply lengthens output, but further strengthening or composition has much less effect. We trace this saturation to stopping behavior: an initial PTIA sharply lowers the end-of-sequence token probability, whereas further intervention lowers it only marginally. Building on this insight, we design a lightweight single-probe audit that applies a controlled lengthening intervention. Under PTIA, the probe induces far fewer additional tokens than under normal service. The audit requires neither a trusted local reference model nor historical clean responses, and its separately issued original and probed requests resemble ordinary traffic, making evasion difficult. Across four open-weight models, it achieves an average detection rate of 85.1% with false-positive rates below 2%. Across 15 real LLM API services, the audit flags 7 for PTIA-consistent behavior.",
+      "canonical_id": "arXiv:2609.20370",
+      "arxiv_id": "2609.20370",
+      "authors": [
+        "Lei-Lei Chen",
+        "Lan Zhang",
+        "Chen Tang",
+        "Peng-Cheng Sun",
+        "Jie-Wei Lai",
+        "Yi-Xiao Huang",
+        "Zhao-Peng Zhang",
+        "Xin-Peng Shen"
+      ]
+    },
+    {
+      "title": "Spotlights: Discovering Improvement Opportunities in Software Repositories",
+      "source_url": "https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Coding agents and evolutionary code-search systems can improve implementations once a target and evaluation criterion have been specified. Applying these methods to an existing software repository raises an earlier question: which implementation choices are worth investigating for a high-level engineering objective? We introduce \\emph{optimization-opportunity discovery}, the repository-level task of identifying candidate source regions, explaining how they relate to the objective, and proposing possible changes. The task takes as input a repository, an engineering objective, and optional runtime evidence such as offline telemetry observations or profiles. It does not require the user to specify a defect, bottleneck, or code location. We present \\emph{Spotlights}, a system that performs this task through logical repository mapping, successive agent reviews, and optional research linking candidates to relevant techniques. We evaluate Spotlights across model serving, document retrieval, blockchain ordering, and document processing. Across three cases, it recovers seven of nine expert-selected targets. In the reliability study, 70\\% of the top ten candidates meet the stated correctness and severity thresholds. Across five repeated retrieval runs, 73.6\\% of candidate occurrences have a matching source region in all five runs. Spotlights also rediscovers the target of a withheld retrieval optimization and connects it to a relevant tiling technique. In an implementation study, a discovered change reduces end-to-end page-processing runtime by 10.6\\% while preserving measured output quality. These results establish optimization-opportunity discovery as a distinct and empirically evaluable step between a broad engineering objective and subsequent implementation and validation.",
+      "canonical_id": "arXiv:2609.20446",
+      "arxiv_id": "2609.20446",
+      "authors": [
+        "U. Barzelay",
+        "Ophir Azulai",
+        "Idan Friedman",
+        "Inbar Shapira",
+        "Foad Abo Dahood",
+        "Yevgeny Burshtein",
+        "Orit Prince",
+        "Michael Soloveitchik",
+        "O. Naparstek",
+        "Roi Pony",
+        "Tal Drory",
+        "Michael Factor"
+      ]
+    },
+    {
+      "title": "Marginal utility, matrix factorization, and the Key-Value (KV) cache: a unified information-economic framework for sovereign geo-mining inference",
+      "source_url": "https://www.semanticscholar.org/paper/3c78fee792118a284aa63e17a8b02df78e89a850",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "This paper builds a theoretical bridge between the economic notion of marginal utility and two machine-learning constructs, matrix factorization and the Key--Value cache of transformer language models. The singular value spectrum of a rating matrix is shown to be a diminishing marginal utility schedule for latent factors, the eigenvalue spectrum of the projected covariance operator to be the marginal utility schedule of a model's learned representation, and cache eviction and low-rank cache compression to be instances of constrained utility maximization under a memory budget. The three collapse into a single allocation rule: retain the top dimensions whose eigenvalue exceeds the shadow price of the binding constraint. The framework is applied to the automated extraction of structured information from geo-mining documents, where it motivates a multi-pass inference protocol, a layer-wise TIES model merging procedure, and a selection policy combining extraction quality, localization drift and energy, scalarized with a Conditional Value-at-Risk term on drift. Two empirical contributions are reported. An 11.2-million-parameter hierarchical classifier, trained in about five minutes on a single GPU, reaches 90.0 per cent level-1 accuracy on a held-out test set from a 973-document uranium-exploration corpus, against 92.0 per cent for a proprietary model on a fifty-document human audit of the same corpus, at a latency of 2.62 ms per card against approximately 2,000 ms for the API and at negligible cost. A diagnostic of uniform-density TIES merging exposes a reproducible degenerate mode in which the merged model returns token-identical outputs across five geographically distinct districts while declaring high confidence; re-executing the merge under layer-wise calibrated densities removes that signature on the diagnostic sample. The full-scale extraction benchmark, including LoRA fine-tuning, is reported as projected rather than measured and remains an empirical extension of this work.",
+      "canonical_id": "arXiv:2609.20068",
+      "arxiv_id": "2609.20068",
+      "authors": [
+        "Caroline Gans Combe"
+      ]
+    },
+    {
+      "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+      "source_url": "https://www.semanticscholar.org/paper/b91d16e3cd753c397f0988d9afc63c785079aa2a",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms survive selection and form SoL-Pi, spanning action execution, context compaction, observation handling, and delegated reading. On the 51-task EdgeBench evaluation, SoL-Pi achieves performance comparable to Pi across GPT-5.6 Sol and Opus 5 while reducing recorded token traffic by 44.7-49.0% and API cost by about one third. In other words, estimated hourly savings are \\$8.75-\\$13.50 relative to native Codex and Claude Code harnesses, and \\$4.36-\\$5.71 relative to Pi.",
+      "canonical_id": "arXiv:2609.20519",
+      "arxiv_id": "2609.20519",
+      "authors": [
+        "Hao-Zhe Liu",
+        "Tian Ye",
+        "Sen-Sen Gao",
+        "Qi Cao",
+        "Yi-Tong Li",
+        "Mingchen Zhuge",
+        "Duo-Min Wang",
+        "Rui-Hua Zhang",
+        "Ping Luo",
+        "Jia-Wang Bian",
+        "Lei Zhu",
+        "Ligeng Zhu",
+        "Enze Xie",
+        "Song Han"
+      ]
+    },
+    {
+      "title": "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering",
+      "source_url": "https://www.semanticscholar.org/paper/81261a627be7d4b185e18eacc106cfa0118de491",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Answer grounding in document visual question answering remains an open challenge: most benchmarks lack grounding annotations or provide limited-quality labels, while constructing grounded datasets still requires costly manual effort. We introduce DocAttriBench (DAB), a large-scale benchmark for fine-grained, element-level source attribution in Document VQA, grounding answers to specific layout elements such as text blocks, tables, and images. To build DAB, we propose a Mask-based Perplexity-Derived Attribution method (MAPPET) that combines document layout and language modeling to identify the most informative element for each answer. MAPPET measures the increase in perplexity after masking candidate elements and attributes the answer to the element contributing most to model confidence. Applying MAPPET to multiple existing Document VQA datasets yields DAB, with 237k documents and 296k question-answer pairs with element-level grounding. We benchmark grounding-capable multimodal LLMs on DAB, evaluating answer accuracy, attribution accuracy, and overall answer quality. Results show that while larger models generally achieve higher answer accuracy, even the strongest models often fail to localize the supporting elements. DAB provides a scalable benchmark for developing grounded, verifiable, and trustworthy Document VQA models. Dataset and code are available at https://aimagelab.github.io/DocAttriBench/.",
+      "canonical_id": "arXiv:2609.20574",
+      "arxiv_id": "2609.20574",
+      "authors": [
+        "Luca De Grandis",
+        "Silvia Cappelletti",
+        "William Raccagni",
+        "M. Cornia",
+        "L. Baraldi",
+        "Rita Cucchiara University of Modena",
+        "R. Emilia",
+        "Modena",
+        "Italy",
+        "University of Pisa",
+        "Pisa"
+      ]
+    },
+    {
+      "title": "Noise-Robust Quantum State Characterization for Remote State Preparation with Deep Learning",
+      "source_url": "https://www.semanticscholar.org/paper/113aec4557a58636eba31460ca0430f8070626ae",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Quantum communication underpins secure information processing and scalable quantum networks. In particular, remote state preparation (RSP) enables efficient quantum state transfer, but accurately estimating target states under complex noise remains challenging. Here, we propose a Transformer-based Quantum State Characterizer (TQSC) model for noisy RSP experiments. Our model reconstructs experimentally prepared pure and mixed photonic polarization states from noisy measurements in complex scattering environments, while its attention patterns provide physically grounded insights into correlations among the measured observables. The method achieves a mean estimator-target fidelity exceeding 99.999% under complex scattering and dynamic Gaussian noise, while its robustness and generalization are further examined using Qiskit-simulated Bloch-ball states.Furthermore, in a practical MNIST image transmission task with held-out states, the decoded bit error rate is reduced from 50.34% to zero after TQSC post-processing. The TQSC model enables accurate tomographic characterization under dynamic noise and provides physically grounded post-hoc insights, holding promise for intelligent quantum information processing applications.",
+      "canonical_id": "arXiv:2609.20523",
+      "arxiv_id": "2609.20523",
+      "authors": [
+        "Bo Tang",
+        "Zi-Xuan Liao",
+        "Hao Li",
+        "Yi-Lin Yang",
+        "Jia-Ni Lei",
+        "Zeng-Ya Li",
+        "Jing Qiu",
+        "Zhao-Hui Dong",
+        "Zheng-Yang Mao",
+        "Yuan-Hua Li",
+        "Yuan-Lin Zheng",
+        "Xian-Feng Chen"
+      ]
+    },
+    {
+      "title": "LiveResize: Runtime GPU Reallocation for Disaggregated LLM Post-Training",
+      "source_url": "https://www.semanticscholar.org/paper/4f1f00c7b05d2c8bb0ec88239ef6341da1741a32",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "RL-based LLM post-training increasingly disaggregates rollout and training across separate GPU resources, but static GPU partitioning can suffer from pipeline bubbles under long-tail rollout latency. We present LiveResize, a runtime GPU reallocation system that dynamically switches GPUs between rollout and training to balance stage execution times without changing RL semantics. LiveResize decomposes resizing into fine-grained operations and removes non-startup-critical work from the critical path through communicator reuse, bounded state staging, and hysteresis-based resizing. LiveResize achieves a 1.26× throughput end-to-end speedup over a representative fixed 6:2 train/rollout baseline, compared with 1.24× for our unoptimized in-job resize baseline, while reducing isolated role-switching latency by 27%.",
+      "canonical_id": "DOI:10.1145/3838177.3841727",
+      "doi": "10.1145/3838177.3841727",
+      "authors": [
+        "Han-Lin Du",
+        "Zhiyuan Yan",
+        "Yun-Gang Bao",
+        "Sa Wang"
+      ]
+    },
+    {
+      "title": "ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments",
+      "source_url": "https://www.semanticscholar.org/paper/1ced5fc9ff3bcc8fd3a56aeec31b99686014adb7",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Scientific code repositories encode decades of human knowledge in executable models, methods, and tools. Yet fragmented toolchains, implicit domain conventions, and specialized correctness criteria make this knowledge difficult to convert into reliable learning experience-a challenge we call the scientific experience bottleneck. We introduce ScienceIDE, infrastructure for turning the world's scientific code into programmable environments for scientific agents. Guided by expert-defined scientific cases and acceptance criteria, agents transform repositories into executable environments that support task generation, execution, and scientific verification. These environments provide a shared foundation for supervised fine-tuning, reinforcement learning, and evaluation. Using verified interaction trajectories, we train PhAI-IDE-72B, PhAI-IDE-9B, and PhAI-IDE-4B. The model family shows gains in held-out scientific-code repair and across selected general-purpose benchmarks in code, reasoning, and knowledge, providing evidence of positive transfer from scientific experience to broader capabilities. ScienceIDE lays the foundation for an integrated workspace for agent learning and scientific practice, making humanity's scientific software a shared substrate for developing scientific intelligence. Code: https://github.com/aitofound/ScienceIDE",
+      "canonical_id": "arXiv:2609.19134",
+      "arxiv_id": "2609.19134",
+      "authors": [
+        "He-Jia Geng",
+        "Ze-Sen Huang",
+        "Hao-Yang Li",
+        "Wen-Bin Li",
+        "Koutian Wu",
+        "Zi-Han Zhou",
+        "Yuan Pang",
+        "Wei-Hao Liu",
+        "Ziao Xu",
+        "Zhi-Ping Li",
+        "Zongzheng Zhang",
+        "Chuan-Fei Dong",
+        "Jiankai Sun",
+        "Tian Zheng",
+        "Feng-Yu Xie",
+        "Yue Ma",
+        "Yue-Heng Shi",
+        "Tong Xie",
+        "Zong-Lin Di",
+        "Xian-Rong Liu",
+        "Qu-Cheng Gao",
+        "Yi-Min Liu",
+        "Jian Pan",
+        "Sheng Huang",
+        "Xiao-Han Ma",
+        "Lan-Qin Yuan",
+        "Zhe Zhu",
+        "Ziang Liu",
+        "Ziao Xu",
+        "Jun-Kai Wang",
+        "Kang-Kai Liang",
+        "Jian Xian",
+        "Ze Zhao",
+        "Liu-Wei Xu",
+        "Jing Xie",
+        "Pei-Jin Zhang",
+        "Qiang Gao",
+        "Chen Xing",
+        "Zhe Zhao",
+        "X. Wang",
+        "Yaozong Xing",
+        "Xin-Ran Meng",
+        "Zhen-Fei Yin",
+        "Ying-Cheng Wu",
+        "Ling Yang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.future.2026.108697",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.future.2026.108697",
+        "title:beaveredge an llmorchestrated framework for edge ai lifecycle management automation",
+        "url:https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559"
+      ],
+      "record": {
+        "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+        "source_url": "https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.future.2026.108697",
+        "doi": "10.1016/j.future.2026.108697",
+        "authors": [
+          "Guanghan Wu",
+          "Roberto Morabito"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.respol.2026.105605",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.respol.2026.105605",
+        "title:measuring the production of scientific human capital new data methods and evidence on the us scientific training ecosystem",
+        "url:https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e"
+      ],
+      "record": {
+        "title": "Measuring the production of scientific human capital: New data, methods, and evidence on the U.S. scientific training ecosystem",
+        "source_url": "https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.respol.2026.105605",
+        "doi": "10.1016/j.respol.2026.105605",
+        "authors": [
+          "Dror Shvadron",
+          "Han-Sen Zhang",
+          "L. Fleming",
+          "D. Gross"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116162",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116162",
+        "title:a unified framework for early childhood image captioning via knowledgegrounded metrics and processlevel reinforcement",
+        "url:https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6"
+      ],
+      "record": {
+        "title": "A unified framework for early childhood image captioning via knowledge-grounded metrics and process-level reinforcement",
+        "source_url": "https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116162",
+        "doi": "10.1016/j.engappai.2026.116162",
+        "authors": [
+          "Zhen-Dong Wang",
+          "Zhi-Bin Gu",
+          "Zi-Qi Zhang",
+          "Zong-Yang Ma",
+          "Bing Li",
+          "Cheng Xu",
+          "Songyin Dai",
+          "Ying Wang",
+          "Hong-Zhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134297",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134297",
+        "title:ddpt enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+        "url:https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917"
+      ],
+      "record": {
+        "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+        "source_url": "https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+        "doi": "10.1016/j.neucom.2026.134297",
+        "authors": [
+          "Ge Teng",
+          "Chen Shen",
+          "Wenxiao Wang",
+          "Sinan Fan",
+          "Liang Xie",
+          "Xiang Tian",
+          "Peng Chen",
+          "Xuesong Liu",
+          "Yaowu Chen",
+          "Jieping Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.comnet.2026.112609",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.comnet.2026.112609",
+        "title:profitaware deployment of large language modelenabled inference chains in data centers",
+        "url:https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211"
+      ],
+      "record": {
+        "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+        "source_url": "https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+        "doi": "10.1016/j.comnet.2026.112609",
+        "authors": [
+          "Yu-Qi Zhang",
+          "Hao-Chen Lv",
+          "Dan-Yang Zheng",
+          "Chen Yang",
+          "Huan-Lai Xing",
+          "Xiao-Jun Cao",
+          "Ji Xu",
+          "Fei Teng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.jmsy.2026.07.011",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.jmsy.2026.07.011",
+        "title:agentic active asset administration shell for circular manufacturing",
+        "url:https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3"
+      ],
+      "record": {
+        "title": "Agentic active Asset Administration Shell for circular manufacturing",
+        "source_url": "https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.jmsy.2026.07.011",
+        "doi": "10.1016/j.jmsy.2026.07.011",
+        "authors": [
+          "Jian-Zhang Li",
+          "Qian Ruan",
+          "Dachuan Shi",
+          "Matthias Schneider",
+          "Olga Meyer",
+          "Michael Oberle",
+          "Li Yi",
+          "Fei Tao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2026.3701443",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2026.3701443",
+        "title:gacerm granularityaware and memorycentric coordination for multitenant deep learning",
+        "url:https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae"
+      ],
+      "record": {
+        "title": "GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning",
+        "source_url": "https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Multi-tenant computing, which executes multiple neural networks on a single GPU, is essential for maximizing hardware utilization in both cloud and edge environments. However, effective co-location faces a fundamental trade-off between utilization and safety. On one hand, the diverse computing patterns of concurrent models lead to resource fragmentation, requiring fine-grained scheduling to improve throughput. On the other hand, modern workloads (especially Generative AI) introduce strict memory constraints: their dynamic memory growth requires rigid reservation to prevent Out-Of-Memory (OOM) crashes, often leaving valuable resources idle but inaccessible to other tenants. Existing solutions struggle to balance these two sides: static partitioning ensures safety but limits utilization, while aggressive fine-grained scheduling boosts speed but risks system instability. To address this, we propose <bold><italic>GACER-M</italic></bold>, a unified resource coordination framework that harmonizes fine-grained computing with strict memory governance. Unlike previous approaches that sacrifice speed for safety, <italic>GACER-M</italic> achieves the best of both worlds via a tiered strategy: (1) A granularity-aware spatial mechanism that minimizes computational residue via operator splitting, strictly regulated by a cost-benefit guardrail to prevent memory bloat; (2) A memory-driven temporal coordination technique that segments dynamic workloads to safely inject concurrent tasks into resource gaps. <italic>GACER-M</italic> consistently achieves <bold>1.35</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq1-3701443.gif\"/></alternatives></inline-formula><inline-formula><tex-math notation=\"LaTeX\">$\\sim$</tex-math><alternatives><mml:math><mml:mo>∼</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq2-3701443.gif\"/></alternatives></inline-formula><bold>1.67</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq3-3701443.gif\"/></alternatives></inline-formula> <bold>speedup</bold> in compute-bound scenarios compared to state-of-the-art works; furthermore, in memory-critical scenarios, it delivers <bold>1.33</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq4-3701443.gif\"/></alternatives></inline-formula> <bold>higher effective capacity</bold> and <bold>1.4</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq5-3701443.gif\"/></alternatives></inline-formula> <bold>aggregate throughput</bold> while ensuring strict memory safety.",
+        "canonical_id": "DOI:10.1109/TC.2026.3701443",
+        "doi": "10.1109/TC.2026.3701443",
+        "authors": [
+          "Yongbo Yu",
+          "Fuxun Yu",
+          "Jia-Qi Yang",
+          "Xiuzhen Cheng",
+          "Chenchen Liu",
+          "Xiang Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3831586.3838145",
+      "identity_tokens": [
+        "id:DOI:10.1145/3831586.3838145",
+        "title:exploring the design space of isolation mechanisms",
+        "url:https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743"
+      ],
+      "record": {
+        "title": "Exploring the Design Space of Isolation Mechanisms",
+        "source_url": "https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Processes, containers, and virtual machines (VMs) offer different trade-offs between performance, isolation, and resource sharing. Yet, they represent just three points in a vast design space. Developers repeatedly introduce ad-hoc isolation mechanisms to tune these trade-offs for specific deployments, but there is no systematic way to explore the design space and derive mechanisms that satisfy given security and performance goals. We introduce IsoSearch, a technique for exploring the isolation mechanism design space to find one that satisfies the goals and constraints of a specific deployment scenario. IsoSearch builds on OSmosis [4], our prior model of isolation, which represents protection domains, resources, and their relationships as a graph. A developer begins with a starting mechanism and its representation as an OSmosis graph and specifies both a set of functional constraints (e.g., these two protection domains must both be able to write to this file) and an optimization target (e.g., minimize the amount of memory shared between the two domains). IsoSearch then navigates the design space by applying valid graph transitions to generate candidate mechanisms, scores each mechanism, and selects the most promising ones for further exploration. The search terminates when all active candidates satisfy the constraints and goals or when score improvement plateaus. We demonstrate the efficacy of our approach through five case studies, ranging from resource privatization to protecting a database's private key.",
+        "canonical_id": "DOI:10.1145/3831586.3838145",
+        "doi": "10.1145/3831586.3838145",
+        "authors": [
+          "Sidhartha Agrawal",
+          "Shaurya Patel",
+          "Linh Pham",
+          "Arya Stevinson",
+          "Ilias Karimalis",
+          "Hugo Lefeuvre",
+          "Aastha Mehta",
+          "Reto Achermann",
+          "Margo I. Seltzer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832854",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832854",
+        "title:accesm packedtotal exact inference for cpu esm2 embedding",
+        "url:https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6"
+      ],
+      "record": {
+        "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+        "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+        "canonical_id": "DOI:10.1145/3832810.3832854",
+        "doi": "10.1145/3832810.3832854",
+        "authors": [
+          "Wen-Hao Sun",
+          "Pan-Pan Cui",
+          "Yiqi Liu",
+          "Wan-Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832890",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832890",
+        "title:medo adaptive multistream data offloading for efficient management of disaggregated memory pool",
+        "url:https://www.semanticscholar.org/paper/c0a20d3dafcb048005bdef773e26f59b22a4767d"
+      ],
+      "record": {
+        "title": "MEDO: Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool",
+        "source_url": "https://www.semanticscholar.org/paper/c0a20d3dafcb048005bdef773e26f59b22a4767d",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The scale of data-intensive workloads in intelligent datacenters has grown rapidly in recent years, intensifying the need for efficient data movement within disaggregated memory pools across memory and storage subsystems. However, most existing solutions focus primarily on optimizing communication between compute nodes and data nodes, overlooking fine-grained management of in-pool data flows. Furthermore, prevailing data swap strategies often suffer from high overhead, limited parallelism, and a lack of adaptivity to dynamic workloads, especially for bursty data access patterns in heterogeneous memory pools. To address these issues, this paper introduces MEDO, a high-parallelism data offloading system for disaggregated memory pools. MEDO leverages a novel multi-stream data offloading architecture, featuring parallel data streams and approximate LRU queues, to maximize throughput and efficiently handle diverse workloads. Additionally, MEDO incorporates a lightweight, adaptive offloading agent that dynamically optimizes data placement decisions and fine-grained system configurations. Our prototype achieves up to 3.6 × latency reduction on real-world data services compared with baselines and can reduce in-pool memory usage by up to 50% on state-of-the-art disaggregated memory systems.",
+        "canonical_id": "DOI:10.1145/3832810.3832890",
+        "doi": "10.1145/3832810.3832890",
+        "authors": [
+          "Jing Wang",
+          "Han-Zhang Yang",
+          "Chao Li",
+          "Xinkai Wang",
+          "Tao-Lei Wang",
+          "Jinyang Guo",
+          "Minyi Guo",
+          "Jie Meng",
+          "Shuang-Fu Zeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19671",
+      "identity_tokens": [
+        "id:arXiv:2609.19671",
+        "title:when2think learning difficultyaware length control for efficient hybrid reasoning models",
+        "url:https://www.semanticscholar.org/paper/5014ebce24c476ba8c26696856a3745c56f09d8f"
+      ],
+      "record": {
+        "title": "When2Think: Learning Difficulty-Aware Length Control for Efficient Hybrid Reasoning Models",
+        "source_url": "https://www.semanticscholar.org/paper/5014ebce24c476ba8c26696856a3745c56f09d8f",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Large Reasoning Models (LRMs) achieve strong performance on complex tasks but exhibit systematic inefficiency: they often overthink easy problems and underthink hard ones. Existing approaches based on uniform length penalties or rigid routing incur an efficiency tax, trading reduced computation on easy instances for accuracy loss on hard instances. We formulate efficient reasoning as an instance-adaptive computation allocation problem and propose When2Think, a post-training framework for hybrid reasoning that dynamically allocates computation based on problem difficulty. Our method introduces Instance-level Difficulty-Aware Control (IDAC), a reward-shaping mechanism that leverages pre-computed reference statistics (accuracy and token usage) to regulate reasoning depth. Combined with verifier-based rewards and batch-wise standardized advantages, IDAC enables stable critic-free optimization without learned reward models or online reference-model queries. When2Think encourages direct answering on easy instances while preserving extended reasoning on hard instances, thereby learning when to use System 1 (NoThink) versus System 2 (Think). Experiments on mathematical benchmarks demonstrate improved accuracy-efficiency trade-offs: on AIME24, Pass@3 increases by 10.0% while token usage is reduced by 27.9% relative to the base model, and on AIME25, When2Think achieves 40.0% Pass@3, outperforming compression and routing-only baselines.",
+        "canonical_id": "arXiv:2609.19671",
+        "arxiv_id": "2609.19671",
+        "authors": [
+          "Jaejun Shim",
+          "Hyunjin Kim",
+          "Young Jin Kim",
+          "J. Bak"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20370",
+      "identity_tokens": [
+        "id:arXiv:2609.20370",
+        "title:the more it says the more you pay a blackbox audit of providerside token inflation in llm services",
+        "url:https://www.semanticscholar.org/paper/41a81d47d9f61de50f58153754c15d6d2c10ba66"
+      ],
+      "record": {
+        "title": "The More It Says, the More You Pay: A Black-Box Audit of Provider-Side Token Inflation in LLM Services",
+        "source_url": "https://www.semanticscholar.org/paper/41a81d47d9f61de50f58153754c15d6d2c10ba66",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "In pay-per-token LLM services, the more a model says, the more users pay. Dishonest providers can covertly manipulate generation to inflate output tokens while largely preserving task utility. We define such manipulation as a Provider-Side Token Inflation Attack (PTIA) and instantiate five representative attacks at the query, prompt, representation, and model levels of the provider-controlled pipeline. Our experiments show that each attack increases mean output length to more than 10.2x the clean baseline, demonstrating PTIA's financial appeal and feasibility at multiple stages of generation. Yet auditing PTIA from black-box responses is difficult for users. Our key observation is PTIA saturation: an initial attack sharply lengthens output, but further strengthening or composition has much less effect. We trace this saturation to stopping behavior: an initial PTIA sharply lowers the end-of-sequence token probability, whereas further intervention lowers it only marginally. Building on this insight, we design a lightweight single-probe audit that applies a controlled lengthening intervention. Under PTIA, the probe induces far fewer additional tokens than under normal service. The audit requires neither a trusted local reference model nor historical clean responses, and its separately issued original and probed requests resemble ordinary traffic, making evasion difficult. Across four open-weight models, it achieves an average detection rate of 85.1% with false-positive rates below 2%. Across 15 real LLM API services, the audit flags 7 for PTIA-consistent behavior.",
+        "canonical_id": "arXiv:2609.20370",
+        "arxiv_id": "2609.20370",
+        "authors": [
+          "Lei-Lei Chen",
+          "Lan Zhang",
+          "Chen Tang",
+          "Peng-Cheng Sun",
+          "Jie-Wei Lai",
+          "Yi-Xiao Huang",
+          "Zhao-Peng Zhang",
+          "Xin-Peng Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20446",
+      "identity_tokens": [
+        "id:arXiv:2609.20446",
+        "title:spotlights discovering improvement opportunities in software repositories",
+        "url:https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962"
+      ],
+      "record": {
+        "title": "Spotlights: Discovering Improvement Opportunities in Software Repositories",
+        "source_url": "https://www.semanticscholar.org/paper/794dc331cd88bcace66cb0e7554d62776bb33962",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Coding agents and evolutionary code-search systems can improve implementations once a target and evaluation criterion have been specified. Applying these methods to an existing software repository raises an earlier question: which implementation choices are worth investigating for a high-level engineering objective? We introduce \\emph{optimization-opportunity discovery}, the repository-level task of identifying candidate source regions, explaining how they relate to the objective, and proposing possible changes. The task takes as input a repository, an engineering objective, and optional runtime evidence such as offline telemetry observations or profiles. It does not require the user to specify a defect, bottleneck, or code location. We present \\emph{Spotlights}, a system that performs this task through logical repository mapping, successive agent reviews, and optional research linking candidates to relevant techniques. We evaluate Spotlights across model serving, document retrieval, blockchain ordering, and document processing. Across three cases, it recovers seven of nine expert-selected targets. In the reliability study, 70\\% of the top ten candidates meet the stated correctness and severity thresholds. Across five repeated retrieval runs, 73.6\\% of candidate occurrences have a matching source region in all five runs. Spotlights also rediscovers the target of a withheld retrieval optimization and connects it to a relevant tiling technique. In an implementation study, a discovered change reduces end-to-end page-processing runtime by 10.6\\% while preserving measured output quality. These results establish optimization-opportunity discovery as a distinct and empirically evaluable step between a broad engineering objective and subsequent implementation and validation.",
+        "canonical_id": "arXiv:2609.20446",
+        "arxiv_id": "2609.20446",
+        "authors": [
+          "U. Barzelay",
+          "Ophir Azulai",
+          "Idan Friedman",
+          "Inbar Shapira",
+          "Foad Abo Dahood",
+          "Yevgeny Burshtein",
+          "Orit Prince",
+          "Michael Soloveitchik",
+          "O. Naparstek",
+          "Roi Pony",
+          "Tal Drory",
+          "Michael Factor"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20068",
+      "identity_tokens": [
+        "id:arXiv:2609.20068",
+        "title:marginal utility matrix factorization and the keyvalue kv cache a unified informationeconomic framework for sovereign geomining inference",
+        "url:https://www.semanticscholar.org/paper/3c78fee792118a284aa63e17a8b02df78e89a850"
+      ],
+      "record": {
+        "title": "Marginal utility, matrix factorization, and the Key-Value (KV) cache: a unified information-economic framework for sovereign geo-mining inference",
+        "source_url": "https://www.semanticscholar.org/paper/3c78fee792118a284aa63e17a8b02df78e89a850",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "This paper builds a theoretical bridge between the economic notion of marginal utility and two machine-learning constructs, matrix factorization and the Key--Value cache of transformer language models. The singular value spectrum of a rating matrix is shown to be a diminishing marginal utility schedule for latent factors, the eigenvalue spectrum of the projected covariance operator to be the marginal utility schedule of a model's learned representation, and cache eviction and low-rank cache compression to be instances of constrained utility maximization under a memory budget. The three collapse into a single allocation rule: retain the top dimensions whose eigenvalue exceeds the shadow price of the binding constraint. The framework is applied to the automated extraction of structured information from geo-mining documents, where it motivates a multi-pass inference protocol, a layer-wise TIES model merging procedure, and a selection policy combining extraction quality, localization drift and energy, scalarized with a Conditional Value-at-Risk term on drift. Two empirical contributions are reported. An 11.2-million-parameter hierarchical classifier, trained in about five minutes on a single GPU, reaches 90.0 per cent level-1 accuracy on a held-out test set from a 973-document uranium-exploration corpus, against 92.0 per cent for a proprietary model on a fifty-document human audit of the same corpus, at a latency of 2.62 ms per card against approximately 2,000 ms for the API and at negligible cost. A diagnostic of uniform-density TIES merging exposes a reproducible degenerate mode in which the merged model returns token-identical outputs across five geographically distinct districts while declaring high confidence; re-executing the merge under layer-wise calibrated densities removes that signature on the diagnostic sample. The full-scale extraction benchmark, including LoRA fine-tuning, is reported as projected rather than measured and remains an empirical extension of this work.",
+        "canonical_id": "arXiv:2609.20068",
+        "arxiv_id": "2609.20068",
+        "authors": [
+          "Caroline Gans Combe"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20519",
+      "identity_tokens": [
+        "id:arXiv:2609.20519",
+        "title:solpi recursively scaling autoresearch loops for efficient agent harness",
+        "url:https://www.semanticscholar.org/paper/b91d16e3cd753c397f0988d9afc63c785079aa2a"
+      ],
+      "record": {
+        "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+        "source_url": "https://www.semanticscholar.org/paper/b91d16e3cd753c397f0988d9afc63c785079aa2a",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms survive selection and form SoL-Pi, spanning action execution, context compaction, observation handling, and delegated reading. On the 51-task EdgeBench evaluation, SoL-Pi achieves performance comparable to Pi across GPT-5.6 Sol and Opus 5 while reducing recorded token traffic by 44.7-49.0% and API cost by about one third. In other words, estimated hourly savings are \\$8.75-\\$13.50 relative to native Codex and Claude Code harnesses, and \\$4.36-\\$5.71 relative to Pi.",
+        "canonical_id": "arXiv:2609.20519",
+        "arxiv_id": "2609.20519",
+        "authors": [
+          "Hao-Zhe Liu",
+          "Tian Ye",
+          "Sen-Sen Gao",
+          "Qi Cao",
+          "Yi-Tong Li",
+          "Mingchen Zhuge",
+          "Duo-Min Wang",
+          "Rui-Hua Zhang",
+          "Ping Luo",
+          "Jia-Wang Bian",
+          "Lei Zhu",
+          "Ligeng Zhu",
+          "Enze Xie",
+          "Song Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20574",
+      "identity_tokens": [
+        "id:arXiv:2609.20574",
+        "title:docattribench benchmarking answer grounding in document visual question answering",
+        "url:https://www.semanticscholar.org/paper/81261a627be7d4b185e18eacc106cfa0118de491"
+      ],
+      "record": {
+        "title": "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering",
+        "source_url": "https://www.semanticscholar.org/paper/81261a627be7d4b185e18eacc106cfa0118de491",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Answer grounding in document visual question answering remains an open challenge: most benchmarks lack grounding annotations or provide limited-quality labels, while constructing grounded datasets still requires costly manual effort. We introduce DocAttriBench (DAB), a large-scale benchmark for fine-grained, element-level source attribution in Document VQA, grounding answers to specific layout elements such as text blocks, tables, and images. To build DAB, we propose a Mask-based Perplexity-Derived Attribution method (MAPPET) that combines document layout and language modeling to identify the most informative element for each answer. MAPPET measures the increase in perplexity after masking candidate elements and attributes the answer to the element contributing most to model confidence. Applying MAPPET to multiple existing Document VQA datasets yields DAB, with 237k documents and 296k question-answer pairs with element-level grounding. We benchmark grounding-capable multimodal LLMs on DAB, evaluating answer accuracy, attribution accuracy, and overall answer quality. Results show that while larger models generally achieve higher answer accuracy, even the strongest models often fail to localize the supporting elements. DAB provides a scalable benchmark for developing grounded, verifiable, and trustworthy Document VQA models. Dataset and code are available at https://aimagelab.github.io/DocAttriBench/.",
+        "canonical_id": "arXiv:2609.20574",
+        "arxiv_id": "2609.20574",
+        "authors": [
+          "Luca De Grandis",
+          "Silvia Cappelletti",
+          "William Raccagni",
+          "M. Cornia",
+          "L. Baraldi",
+          "Rita Cucchiara University of Modena",
+          "R. Emilia",
+          "Modena",
+          "Italy",
+          "University of Pisa",
+          "Pisa"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20523",
+      "identity_tokens": [
+        "id:arXiv:2609.20523",
+        "title:noiserobust quantum state characterization for remote state preparation with deep learning",
+        "url:https://www.semanticscholar.org/paper/113aec4557a58636eba31460ca0430f8070626ae"
+      ],
+      "record": {
+        "title": "Noise-Robust Quantum State Characterization for Remote State Preparation with Deep Learning",
+        "source_url": "https://www.semanticscholar.org/paper/113aec4557a58636eba31460ca0430f8070626ae",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Quantum communication underpins secure information processing and scalable quantum networks. In particular, remote state preparation (RSP) enables efficient quantum state transfer, but accurately estimating target states under complex noise remains challenging. Here, we propose a Transformer-based Quantum State Characterizer (TQSC) model for noisy RSP experiments. Our model reconstructs experimentally prepared pure and mixed photonic polarization states from noisy measurements in complex scattering environments, while its attention patterns provide physically grounded insights into correlations among the measured observables. The method achieves a mean estimator-target fidelity exceeding 99.999% under complex scattering and dynamic Gaussian noise, while its robustness and generalization are further examined using Qiskit-simulated Bloch-ball states.Furthermore, in a practical MNIST image transmission task with held-out states, the decoded bit error rate is reduced from 50.34% to zero after TQSC post-processing. The TQSC model enables accurate tomographic characterization under dynamic noise and provides physically grounded post-hoc insights, holding promise for intelligent quantum information processing applications.",
+        "canonical_id": "arXiv:2609.20523",
+        "arxiv_id": "2609.20523",
+        "authors": [
+          "Bo Tang",
+          "Zi-Xuan Liao",
+          "Hao Li",
+          "Yi-Lin Yang",
+          "Jia-Ni Lei",
+          "Zeng-Ya Li",
+          "Jing Qiu",
+          "Zhao-Hui Dong",
+          "Zheng-Yang Mao",
+          "Yuan-Hua Li",
+          "Yuan-Lin Zheng",
+          "Xian-Feng Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3838177.3841727",
+      "identity_tokens": [
+        "id:DOI:10.1145/3838177.3841727",
+        "title:liveresize runtime gpu reallocation for disaggregated llm posttraining",
+        "url:https://www.semanticscholar.org/paper/4f1f00c7b05d2c8bb0ec88239ef6341da1741a32"
+      ],
+      "record": {
+        "title": "LiveResize: Runtime GPU Reallocation for Disaggregated LLM Post-Training",
+        "source_url": "https://www.semanticscholar.org/paper/4f1f00c7b05d2c8bb0ec88239ef6341da1741a32",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "RL-based LLM post-training increasingly disaggregates rollout and training across separate GPU resources, but static GPU partitioning can suffer from pipeline bubbles under long-tail rollout latency. We present LiveResize, a runtime GPU reallocation system that dynamically switches GPUs between rollout and training to balance stage execution times without changing RL semantics. LiveResize decomposes resizing into fine-grained operations and removes non-startup-critical work from the critical path through communicator reuse, bounded state staging, and hysteresis-based resizing. LiveResize achieves a 1.26× throughput end-to-end speedup over a representative fixed 6:2 train/rollout baseline, compared with 1.24× for our unoptimized in-job resize baseline, while reducing isolated role-switching latency by 27%.",
+        "canonical_id": "DOI:10.1145/3838177.3841727",
+        "doi": "10.1145/3838177.3841727",
+        "authors": [
+          "Han-Lin Du",
+          "Zhiyuan Yan",
+          "Yun-Gang Bao",
+          "Sa Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19134",
+      "identity_tokens": [
+        "id:arXiv:2609.19134",
+        "title:scienceide turning worlds scientific codebase into agent learnable environments",
+        "url:https://www.semanticscholar.org/paper/1ced5fc9ff3bcc8fd3a56aeec31b99686014adb7"
+      ],
+      "record": {
+        "title": "ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments",
+        "source_url": "https://www.semanticscholar.org/paper/1ced5fc9ff3bcc8fd3a56aeec31b99686014adb7",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Scientific code repositories encode decades of human knowledge in executable models, methods, and tools. Yet fragmented toolchains, implicit domain conventions, and specialized correctness criteria make this knowledge difficult to convert into reliable learning experience-a challenge we call the scientific experience bottleneck. We introduce ScienceIDE, infrastructure for turning the world's scientific code into programmable environments for scientific agents. Guided by expert-defined scientific cases and acceptance criteria, agents transform repositories into executable environments that support task generation, execution, and scientific verification. These environments provide a shared foundation for supervised fine-tuning, reinforcement learning, and evaluation. Using verified interaction trajectories, we train PhAI-IDE-72B, PhAI-IDE-9B, and PhAI-IDE-4B. The model family shows gains in held-out scientific-code repair and across selected general-purpose benchmarks in code, reasoning, and knowledge, providing evidence of positive transfer from scientific experience to broader capabilities. ScienceIDE lays the foundation for an integrated workspace for agent learning and scientific practice, making humanity's scientific software a shared substrate for developing scientific intelligence. Code: https://github.com/aitofound/ScienceIDE",
+        "canonical_id": "arXiv:2609.19134",
+        "arxiv_id": "2609.19134",
+        "authors": [
+          "He-Jia Geng",
+          "Ze-Sen Huang",
+          "Hao-Yang Li",
+          "Wen-Bin Li",
+          "Koutian Wu",
+          "Zi-Han Zhou",
+          "Yuan Pang",
+          "Wei-Hao Liu",
+          "Ziao Xu",
+          "Zhi-Ping Li",
+          "Zongzheng Zhang",
+          "Chuan-Fei Dong",
+          "Jiankai Sun",
+          "Tian Zheng",
+          "Feng-Yu Xie",
+          "Yue Ma",
+          "Yue-Heng Shi",
+          "Tong Xie",
+          "Zong-Lin Di",
+          "Xian-Rong Liu",
+          "Qu-Cheng Gao",
+          "Yi-Min Liu",
+          "Jian Pan",
+          "Sheng Huang",
+          "Xiao-Han Ma",
+          "Lan-Qin Yuan",
+          "Zhe Zhu",
+          "Ziang Liu",
+          "Ziao Xu",
+          "Jun-Kai Wang",
+          "Kang-Kai Liang",
+          "Jian Xian",
+          "Ze Zhao",
+          "Liu-Wei Xu",
+          "Jing Xie",
+          "Pei-Jin Zhang",
+          "Qiang Gao",
+          "Chen Xing",
+          "Zhe Zhao",
+          "X. Wang",
+          "Yaozong Xing",
+          "Xin-Ran Meng",
+          "Zhen-Fei Yin",
+          "Ying-Cheng Wu",
+          "Ling Yang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:1cad9ddd8a323819ab3588213a4add0dc84cd6bc034ca3a6e673ed15d1886c11",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

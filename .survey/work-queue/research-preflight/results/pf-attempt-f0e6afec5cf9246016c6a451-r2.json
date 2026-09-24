@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-f0e6afec5cf9246016c6a451-r2",
+  "kind": "research",
+  "attempt_id": "attempt-f0e6afec5cf9246016c6a451",
+  "job_id": "job-research-e7435b966cd8c5e7",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2f1f58b49e98-disaggregated-llm-serving-with-cxl-shared-memory-kv-cache-at-rack-scale.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:3f08ec6764aa30de3741541b1cb749c366fa65a86c24859642a36a62fc53a95f",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "be1d9dcaa1c0e56524f3be582958c6ccabc2e7d4"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "488ac3d6405915fb3bd417751fc45778515314ab"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "5868f7acb2e5d7aef8c904d6f43ab6618c9af3bc"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "ef7c524b632945c0256d4ace6ba9e83f1be6b353"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "6a3f69ff859c5f9c6b0d228aa73e92e4da0d66b0"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#7 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T16:35:16+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2f1f58b49e98-disaggregated-llm-serving-with-cxl-shared-memory-kv-cache-at-rack-scale.md",
+    "status": "FAIL",
+    "file_bytes": 28781,
+    "prose_chars": 7691,
+    "paragraphs": 27,
+    "method_paragraphs": 13,
+    "method_components": 7,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9731115731115731,
+    "japanese_chars": 7021,
+    "latin_chars": 194,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#7 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

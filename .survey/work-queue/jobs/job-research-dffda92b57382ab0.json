@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-dffda92b57382ab0",
+  "type": "research",
+  "parent_job_id": "job-4243204e6865c123",
+  "priority": 89,
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.1926",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "The Pitfalls of KV Cache Compression",
+  "source_url": "https://aclanthology.org/2026.acl-long.1926/",
+  "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2026-pitfalls-kv-cache-compression.md",
+  "selection_reason": "Systematic deployment-oriented study of KV-cache compression failure modes under multi-instruction prompting, including mitigation changes to eviction policies.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T04:05:01+00:00"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-05dcd349efb11788a6f85507-r2",
+  "kind": "research",
+  "attempt_id": "attempt-05dcd349efb11788a6f85507",
+  "job_id": "job-research-c15907d33f78f8cd",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:ad9add59868c263af7ffeb0a635ec84998b2f16607de98d0c75420fecc9cc035",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "1f2a9c8b8beabb13064e17be83532664c0df7b55"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "d720a59c3cc9a73a22fdc9995eca0fc010f8790b"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "546351942f1cd87f4f535cf35d3d284afb6f6a69"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "d6cc9a44996e96b5c1bbd739b32e96727dd9d545"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "20a3609e45a09a5e161fccff010a23d832688108"
+    }
+  ],
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 69.1% < 70% (Japanese=6222, Latin=2776)"
+  ],
+  "checked_at": "2026-09-22T12:13:52+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

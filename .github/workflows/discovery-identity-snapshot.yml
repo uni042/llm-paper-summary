@@ -1,0 +1,101 @@
+name: Discovery identity snapshot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/jobs/*.json'
+      - '.survey/work-queue/submissions/*.json'
+      - '.survey/work-queue/submissions/**/*.json'
+      - '.survey/survey-state/paper-identity-index.json'
+      - '.survey/survey-state/identity-deltas/**/*.json'
+      - 'papers/**/*.md'
+      - '.survey/scripts/build_discovery_identity_snapshot.py'
+      - '.survey/scripts/build_discovery_rejection_ledger.py'
+      - '.survey/scripts/paper_identity.py'
+      - '.survey/scripts/represented_paper_index.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Keep only the newest pending snapshot build, but do not let unrelated survey
+# background workflows replace/cancel this ledger refresh. Every run checks out and
+# rebuilds from latest main, so the newest pending run subsumes earlier relevant pushes.
+concurrency:
+  group: discovery-exclusion-snapshot-main
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Build authoritative Discovery identity shards
+        shell: bash
+        run: |
+          set -euo pipefail
+          python .survey/scripts/build_discovery_identity_snapshot.py \
+            --root .survey \
+            --source-commit "$(git rev-parse HEAD)"
+
+      - name: Build Discovery rejection ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          python .survey/scripts/build_discovery_rejection_ledger.py --root .survey
+
+      - name: Commit snapshots if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-identity-snapshot[bot]'
+          git config user.email 'survey-identity-snapshot[bot]@users.noreply.github.com'
+          git add .survey/work-queue/discovery-identities .survey/work-queue/discovery-rejections.json
+
+          if git diff --cached --quiet; then
+            echo 'Discovery identity snapshot and rejection ledger are already current.'
+            exit 0
+          fi
+
+          git commit -m 'survey: refresh discovery identity snapshot'
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "Rebase failed on attempt ${attempt}." >&2
+              continue
+            fi
+
+            # Rebuild after rebasing so both derived exclusion sources reflect any
+            # identity/submission changes that landed while this workflow was running.
+            python .survey/scripts/build_discovery_identity_snapshot.py \
+              --root .survey \
+              --source-commit "$(git rev-parse origin/main)"
+            python .survey/scripts/build_discovery_rejection_ledger.py --root .survey
+            git add .survey/work-queue/discovery-identities .survey/work-queue/discovery-rejections.json
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
+            fi
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+
+          echo 'Failed to publish Discovery identity/rejection snapshots after retries.' >&2
+          exit 1

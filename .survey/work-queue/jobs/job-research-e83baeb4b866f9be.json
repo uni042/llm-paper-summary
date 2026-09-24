@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-e83baeb4b866f9be",
+  "type": "research",
+  "parent_job_id": "job-0d321e0ee61493f7",
+  "priority": 87,
+  "canonical_id": "arXiv:2609.22106",
+  "arxiv_id": "2609.22106",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "PRQuant: Permutation Residual Quantization for Low-Overhead Inference",
+  "source_url": "https://arxiv.org/abs/2609.22106",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.22106-prquant-permutation-residual-quantization-for-low-overhead-inference.md",
+  "selection_reason": "PRQuant combines AWQ-style scaling, channel permutation and static weight-side residual compensation to reduce low-bit inference overhead, directly updating weight-quantization deployment lineages.",
+  "priority_breakdown": {
+    "base": 52,
+    "lineage": 20,
+    "recency": 15,
+    "venue": 0,
+    "total": 87
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T17:12:07+00:00"
+}

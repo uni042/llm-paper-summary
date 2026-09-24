@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "precheck_result_path": ".survey/work-queue/discovery-precheck/results/20260921T0142JST-worker30-forward-h2o-06.json",
+  "precheck_receipt": "sha256:4952573fe3f96f5b1f03dfb03dace432be45210718353648adfa5a72acfc2f5d",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-21T01:31:26+09:00-worker30",
+    "round": "forward-h2o-06",
+    "axis": "forward citations from H2O KV-cache eviction lineage",
+    "query_summary": "H2O前方引用の未評価集合を正規precheckから評価。理論寄りKV eviction等は確認したが、このroundではsystemサーベイへ追加する強い新規候補を採用しない。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "MoE expert prefetch系の前方引用へ進む",
+    "empty_round_reason": "no_candidate_selected_after_quality_screen"
+  }
+}

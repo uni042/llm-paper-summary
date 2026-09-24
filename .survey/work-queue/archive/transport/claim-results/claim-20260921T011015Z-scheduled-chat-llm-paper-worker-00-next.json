@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T011015Z-scheduled-chat-llm-paper-worker-00-next",
+  "worker_id": "scheduled-chat-llm-paper-worker-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-03793bd297310cea",
+      "claim_id": "claim-38e27232290f510236f78455",
+      "worker_id": "scheduled-chat-llm-paper-worker-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-38e27232290f510236f78455",
+      "claimed_at": "2026-09-21T01:10:37+00:00",
+      "expires_at": "2026-09-21T02:40:37+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-03793bd297310cea"
+      ],
+      "job": {
+        "job_id": "job-research-03793bd297310cea",
+        "type": "research",
+        "parent_job_id": "job-ccd6957cbc0e3f2b",
+        "priority": 100,
+        "canonical_id": "arXiv:2609.15636",
+        "arxiv_id": "2609.15636",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+        "source_url": "https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high-bandwidth-flash.md",
+        "selection_reason": "trillion-parameter MoEを単一nodeで低concurrency servingするためHBFとDRAMの容量・帯域を分離評価。HBF transportとstate bandwidthの独立なkneeを示しflash-backed MoE推論設計へ直接寄与。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:11:49+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T01:10:37+00:00",
+  "checkpoint_released": 0
+}

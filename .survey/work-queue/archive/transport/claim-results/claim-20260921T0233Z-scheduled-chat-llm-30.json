@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T0233Z-scheduled-chat-llm-30",
+  "worker_id": "scheduled-chat-llm-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-85f2bc3e024d7c6c",
+      "claim_id": "claim-52a34989c8ae780c3bc8d7f5",
+      "worker_id": "scheduled-chat-llm-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-52a34989c8ae780c3bc8d7f5",
+      "claimed_at": "2026-09-21T02:33:11+00:00",
+      "expires_at": "2026-09-21T04:03:11+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-85f2bc3e024d7c6c"
+      ],
+      "job": {
+        "job_id": "job-research-85f2bc3e024d7c6c",
+        "type": "research",
+        "parent_job_id": "job-ee8845deb380e763",
+        "priority": 100,
+        "canonical_id": "DOI:10.1145/3789240.3829347",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/3fada5fea76c30b6fb0f156189b080168f66e241",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-3eaac796b1c5-dynamoserve-a-distributed-tiered-memory-system-for-multi-tenant-llm-serving.md",
+        "selection_reason": "stranded GPU memoryへweights/KVをoffloadしfragmentation緩和とcoordinated placement・demand-driven weight migrationを統合するmulti-tenant tiered-memory serving system。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:17:43+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T02:33:11+00:00",
+  "checkpoint_released": 0
+}

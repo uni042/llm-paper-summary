@@ -1,0 +1,974 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260924T014100JST-worker-915241-forward-r7",
+  "collector_id": "direct-20260924T014100JST-worker-915241-forward-r7",
+  "run_key": "adhoc-20260924T014100JST-worker-915241",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "120",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0eb19355493c7dc353419f3b01ced8c87159f369",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T17:10:38.190756+00:00",
+  "preload_id": "preload-d3c8ad0dee6d08dc53d7",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-d3c8ad0dee6d08dc53d7",
+  "results": [
+    {
+      "title": "Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation",
+      "source_url": "https://www.semanticscholar.org/paper/5a478848e7707acca122bb648ac8907fbc11b92d",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "With the rapid development of large-scale pre-trained language models based on Transformer architectures, their high computational and memory costs have become a major obstacle to deployment, especially in resource-constrained environments. Traditional pruning methods typically depend on full gradient-based importance estimation, and they necessitate prior finetuning of the model to achieve satisfactory performance. This process often results in intolerable resource consumption. This paper proposes REP-LIE, a new approach to enable resource-efficient pruning during the process of finetuning. REP-LIE leverages the gradients of LoRA low-rank matrices to estimate the importance of weights without requiring full gradient computation. To address the inherent randomness in importance estimation, a stability score is introduced, serving as the basis for iterative pruning of unimportant model parameters. The pruned model is further finetuned through lightweight updates, eliminating the need for full-parameter optimization in the process of finetuning. Extensive experiments on both medium-scale encoder models and large-scale generative models (LLaMA-7B and Mistral-7B) demonstrate that REP-LIE still achieves competitive performance compared to existing approaches.",
+      "canonical_id": "arXiv:2608.24973",
+      "arxiv_id": "2608.24973",
+      "authors": [
+        "Peng Liu",
+        "Hui-Bing Zeng",
+        "Yi-Qun Zhang",
+        "Yang Yi",
+        "Ji-Gang Wu"
+      ]
+    },
+    {
+      "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "Depth pruning removes entire Transformer blocks to reduce the inference cost of large language models, but disrupts the hidden-state distributions expected by downstream layers, leading to significant accuracy loss. We introduce SHIFT-LLM, a training-free post-pruning correction framework that inserts a Linear Residual Adapter (LRA) at each pruning site. Each LRA preserves the identity pathway of the original residual block and adds a lightweight affine residual correction. This correction is calibrated via closed-form least-squares regression on a small held-out set, without gradient computation, to approximate the missing residual update produced by the pruned block. Together with the preserved identity pathway, the resulting LRA output approximates the hidden state produced by the original block, thereby mitigating the distributional mismatch introduced by layer removal while avoiding the expensive attention and feed-forward computations of the removed blocks. The resulting LRAs support low-rank factorization and exact merging across consecutive pruned layers for additional compression, and combine naturally with parameter-efficient fine-tuning for further recovery beyond fine-tuning the pruned model alone. Experiments on five model families, six layer-selection criteria, and seven zero-shot benchmarks show that SHIFT-LLM consistently recovers accuracy lost to depth pruning across most configurations, achieving gains up to +15.7 points on Llama-3.1-8B-Instruct while requiring only a few hundred calibration samples and no gradient computation.",
+      "canonical_id": "arXiv:2608.25068",
+      "arxiv_id": "2608.25068",
+      "authors": [
+        "Ali Bahri",
+        "Hang Li",
+        "Hongliang Li",
+        "Zhitang Chen"
+      ]
+    },
+    {
+      "title": "Don't Repeat Yourself: Stopping Verbatim Loops at Sampling Time",
+      "source_url": "https://www.semanticscholar.org/paper/de6b17ac2da80542741590e214dfcf1868d3d356",
+      "year": 2026,
+      "published": "2026-08-24",
+      "abstract": "Large Language Models generate text autoregressively, but open-ended generation is prone to verbatim looping, in which models repeat spans already present in context. Standard defenses such as repetition, presence, and frequency penalties and n-gram blocking act on token recurrence rather than the sequential structure of a loop, and often suppress looping only at strengths that also degrade formatting or fluency. We propose Don't Repeat Yourself (DRY), a sampling-time logit adjustment that penalizes a candidate token only when generating it would extend the current suffix into an exact continuation of a span seen earlier in the context. Sequence breakers protect chat templates and formatting tokens. Across models from 1.5B to 120B parameters, nine prompt families, and a 600-pair human study, DRY reduces suffix-extension rate by 47% while improving lexical diversity. An intervention-matched placebo produces no comparable reduction, identifying suffix matching as the operative mechanism. On AWQ-quantized 70B and 120B models, DRY reduces loop rate by roughly half while preserving MT-Bench, MMLU, and GSM8K performance, whereas standard alternatives lose measurable ground. DRY has been adopted by popular open-source LLM inference frameworks including llama.cpp, ExLlamaV2, and text-generation-webui, highlighting its practical impact on text generation.",
+      "canonical_id": "arXiv:2608.22761",
+      "arxiv_id": "2608.22761",
+      "authors": [
+        "Philippe Weidmann",
+        "Allen G. Roush",
+        "Judah Goldfeder",
+        "Sanjay Basu",
+        "Ravid Shwartz-Ziv"
+      ]
+    },
+    {
+      "title": "XTC: Head-Aware Sampling by Excluding Top Choices",
+      "source_url": "https://www.semanticscholar.org/paper/140e81dd5b22924188a1ddf040c0307fda2b7b98",
+      "year": 2026,
+      "published": "2026-08-24",
+      "abstract": "Standard decoding rules for autoregressive language models promote diversity by rescaling the full next-token distribution or truncating its low-probability tail. These strategies overlook a common regime of open-ended generation in which several continuations are plausible but too much probability mass remains concentrated on the most generic choice. We introduce XTC (Exclude Top Choices), a lightweight head-aware decoding operator that targets this regime directly. XTC identifies tokens whose probabilities exceed an absolute plausibility threshold $\\tau$: when at least two qualify, it removes the dominant eligible choices with probability $\\rho$ and retains only the weakest plausible alternative before renormalization. Across 60 experiments on Gemma 3 27B Q4, Gemma 3 12B Q6, and DeepSeek R1 14B Q6, with scaling validation on Llama 3.3 70B Q4, XTC improves the diversity-repetition Pareto frontier. On creative generation, Distinct-2 increases by 11--15% and repeat trigrams decrease by 27--47% across the four models. Combined with temperature scaling, gains reach 38% in Distinct-2 and 71% in repeat-trigram reduction over baseline. A blinded Amazon Mechanical Turk study with 150 Master raters yields a 62.3% creativity preference for XTC ($p<10^{-4}$) without reduced fluency, while a GPT-4o control judge reproduces the Anthropic-judge direction on every measure. On IFEval with Llama 3.3 70B Q4, XTC preserves prompt-level strict accuracy within 1.7 percentage points of baseline while recovering most of the diversity gain; a temperature setting matched on Distinct-2 reduces IFEval by 8.8 points. The effect is additive with temperature and repetition penalties, robust across quantization levels and model families, and consistent across twelve prompt genres. XTC has been adopted by llama.cpp, ExLlamaV2, and text-generation-webui.",
+      "canonical_id": "arXiv:2608.22758",
+      "arxiv_id": "2608.22758",
+      "authors": [
+        "Philippe Weidmann",
+        "Allen G. Roush",
+        "Judah Goldfeder",
+        "Sanjay Basu",
+        "Ravid Shwartz-Ziv"
+      ]
+    },
+    {
+      "title": "FAMPWQ: Fisher Information-based Adaptive Mixed Precision Weight Quantization for Effective LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/444bca6d7877b152c0f93291240f1684fc60b06a",
+      "year": 2026,
+      "published": "2026-08-24",
+      "abstract": "Recent years have witnessed remarkable achievements of Large Language Models (LLMs) in multiple domains, while the excessive resource requirements of LLMs hinder the deployment on resource-constrained devices. Although model quantization stands out as an effective approach, conventional quantization approaches typically incur severe performance degradation due to uniform bit-width or simple heuristic sensitivity evaluation. In this paper, we propose a novel Fisher information-based Adaptive Mixed Precision Weight Quantization approach, i.e., FAMPWQ, which performs layer-adaptive weight quantization for effective LLM inference on commodity GPUs. First, we propose a system model with a novel Fisher information metric to measure the layer-wise sensitivity to quantization. Second, we propose a reinforcement learning-based bit-width allocator in FAMPWQ, which generates an adaptive bit-width allocation strategy based on the Fisher information sensitivity metric. Extensive experiments on 7 models and 5 benchmarks demonstrate that FAMPWQ significantly outperforms 7 baseline approaches in terms of PPL (up to 3.39 smaller), accuracy (up to 6.87% higher), and LLM-as-a-judge comparison (up to 76% win rate).",
+      "canonical_id": "arXiv:2608.24945",
+      "arxiv_id": "2608.24945",
+      "authors": [
+        "G. Lee",
+        "Ji Liu",
+        "Juncheng Jia",
+        "Ji Wu"
+      ]
+    },
+    {
+      "title": "Activation-Weighted Seeded Residual Coding for Low-Bit LLM Weight Repair",
+      "source_url": "https://www.semanticscholar.org/paper/af6afa9670f7d987f319a4ef0d92f1d630707460",
+      "year": 2026,
+      "published": "2026-08-24",
+      "abstract": "Low-bit weight quantization saves storage but leaves errors that degrade LLM quality. We introduce activation-weighted seeded residual coding (AWSRC), a compact repair codec for an existing quantization backbone. Given a reconstructed weight $W_0$, AWSRC encodes the residual $W-W_0$ using deterministic seed-generated bases. The sidecar stores seed selectors, low-bit coefficients, and scales rather than an explicit codebook. Two variants combine activation weighting with per-module byte quotas ($\\mathrm{AWSRC\\text{-}U}$), or blended activation/Fisher weighting with globally ranked progressive prefixes ($\\mathrm{AWSRC\\text{-}P}_{F}$) that support multiple byte budgets without refitting. On Qwen2.5-3B-Instruct, adding $0.162$ scope-bits/weight to an RTN-INT4 baseline closes $88.2\\%$, $78.9\\%$, and $71.3\\%$ of the PPL, KL, and 11-task mean-accuracy gaps to BF16, respectively. AWSRC achieves the highest mean downstream accuracy in byte-matched residual-codec ablations and improves all metrics across model families with up to 32B parameters.",
+      "canonical_id": "arXiv:2608.23144",
+      "arxiv_id": "2608.23144",
+      "authors": [
+        "Zehao Liu",
+        "Chuangchuang Fang",
+        "Yang Ren"
+      ]
+    },
+    {
+      "title": "SSDi8: Accurate and Efficient 8-bit Quantization for State Space Duality",
+      "source_url": "https://www.semanticscholar.org/paper/930e4d9388f71bdcc1e3afb77f1ee46a7c1d879b",
+      "year": 2026,
+      "published": "2026-08-22",
+      "abstract": "Recent advances in sequence modeling have highlighted Mamba as a state space architecture offering efficient long-range dependency modeling and providing a viable alternative to Transformers. Building upon this, Mamba-2 introduces the Structured State Space Duality (SSD), which integrates recurrent and attention modes to achieve efficiency and scalability. However, this architectural expansion substantially increases memory and latency overhead, underscoring the need for efficient compression strategies tailored to SSD. In this work, we present SSDi8, the first post-training quantization framework specifically designed for SSD to maintain a persistent INT8 path. SSDi8 introduces a reformulation that decouples element-wise multiplications from matrix multiplications, enabling reuse of quantized activations across modules. Moreover, SSDi8 adaptively quantizes channel-varying activations at cost-effective points, further reducing latency. On the accuracy side, SSDi8 explicitly leverages the intrinsic dimensional decomposition of SSD, exploiting distinct outlier distributions across axes, and incorporates an error correction term based on per-channel error statistics. Comprehensive experiments demonstrate that SSDi8 achieves accuracy comparable to FP16 while delivering up to 1.4x speedup in W4A8 and W8A8 settings. We further validate its robustness in resource-constrained environments by deploying it on the Orin NX device.",
+      "canonical_id": "arXiv:2608.21952",
+      "arxiv_id": "2608.21952",
+      "authors": [
+        "Hyunwoo J. Kim",
+        "Byoungchan Ko",
+        "Minseok Kang",
+        "Minwoo Kim",
+        "Dongjin Lee",
+        "Jaehoon Lee",
+        "Sungroh Yoon",
+        "Dahuin Jung"
+      ]
+    },
+    {
+      "title": "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/002268c09c38e77dd73a99e845191a4fb479f6c1",
+      "year": 2026,
+      "published": "2026-08-21",
+      "abstract": "Quantization is widely used to deploy large language models, but its effect on uncertainty behavior, such as confidence, margins, and abstention, is rarely treated as a primary objective. We frame calibration-data selection for quantization as a target-dependent uncertainty-preservation problem. Different deployments emphasize different regions of the input distribution, yet prior work mainly optimizes accuracy-oriented compression metrics or adjusts scores after quantization. We formalize this goal with distributional and boundary preservation risks, and provide a simple mixture-mismatch argument explaining why no single calibration recipe should be expected to fit all targets. We introduce Doubt-Preserving Quantization (DPQ), a lightweight pre-quantization recipe family that uses full-precision predictions to construct target-aligned calibration mixtures of high-doubt examples and generic anchors. Across 8 language models, 9 NLP benchmarks, and 22 comparison methods, the leading fixed recipe changes with the preservation target: DPQ-r75 leads on SQuAD2 answerability-boundary preservation, while milder or single-signal variants, including DPQ-r50, confidence-only, and entropy-only, better preserve broad multiple-choice QA behavior. These results show that calibration data should be selected for the specific full-precision score behavior a deployment needs to preserve, rather than treated as a fixed quantization detail.",
+      "canonical_id": "arXiv:2608.21019",
+      "arxiv_id": "2608.21019",
+      "authors": [
+        "Zhen Yang",
+        "Sizai Hou",
+        "Kaiwen Zheng",
+        "Yao-Fang Liu",
+        "Liang He",
+        "Yi-Xuan Chen",
+        "Kangning Cui"
+      ]
+    },
+    {
+      "title": "A Thread-Register Decoupled GPU Execution Model for Efficient Tensor Computation",
+      "source_url": "https://www.semanticscholar.org/paper/4b5e5626f4e68e3576d3519c936e3966f05e8016",
+      "year": 2026,
+      "published": "2026-08-20",
+      "abstract": "Modern GPUs increasingly integrate Tensor Cores into the execution pipeline. Although aggregate tensor throughput continues to grow, aided by an operand supply that has evolved from register-based in Ampere to redundancy-free, memory-based in Hopper and Blackwell, efficiently orchestrating the complete tensor compute pipeline for the modern AI workloads remains challenging. We identify the fundamental bottlenecks as fixed parallelism and coarse-grained scheduling, both of which are exposed by modern AI workloads that interleave diverse non-GEMM operations with GEMM. To orchestrate tensor computation efficiently, we propose FIBER, a new architecture that extends the GPU SIMT (single instruction, multiple thread) model. Its basic execution instance, the \\emph{fiber}, is decoupled from private register ownership, carrying only minimal control state while accessing an SM's registers through a shared view. This enables dynamic parallelism scaling, fine-grained register-level dataflow scheduling, and offers a redundancy-free alternative for matrix operand supply. We extend the ISA, microarchitecture, and compiler to realize shared-register addressing, conflict-free operand delivery, and fiber-based program mapping. Under a typical mixed-precision LLM serving scenario, FIBER achieves a 2.25x end-to-end speedup on Ampere (1.15x for the original FP16 computation), with 1.8x and 2.09x on Hopper and Blackwell respectively, and kernel-level gains up to 2.49x.",
+      "canonical_id": "arXiv:2608.19628",
+      "arxiv_id": "2608.19628",
+      "authors": [
+        "Zihan Liu",
+        "Jingwen Leng",
+        "Yangjie Zhou",
+        "Yitong Ding",
+        "Guanlin Zhu",
+        "Yiluan Huang",
+        "Chi Jin",
+        "Chen Zhang",
+        "Shixuan Sun",
+        "Yu Feng",
+        "Anbang Wu",
+        "Minyi Guo",
+        "Jian Weng",
+        "Jiajin Tu",
+        "Junsong Wang"
+      ]
+    },
+    {
+      "title": "FlashQuant: Sparse-Dense Fusion for Memory-Efficient Outlier-Aware LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/21b5b26abba4b69a8e531c68ccde48d50041102e",
+      "year": 2026,
+      "published": "2026-08-16",
+      "abstract": "Low-bit quantization reduces the memory footprint and computational cost of large language model (LLM) inference. However, high-magnitude outlier weights can induce substantial quantization errors and degrade model accuracy. Outlier-aware quantization addresses this issue by retaining outliers in high precision while quantizing the remaining weights, resulting in a low-bit dense GEMM path and a high-precision sparse SpMM path. Existing implementations execute these paths in separate GPU kernels, despite their shared activations and outputs, thereby missing opportunities for intra-operator reuse and incurring redundant global-memory accesses. This inefficiency is particularly pronounced in memory-bound decoding workloads. We propose FlashQuant, a content-sharing execution framework for outlier-aware W4A16 decoding. FlashQuant fuses the dense GEMM and sparse outlier SpMM paths into a single GPU kernel, enabling on-chip reuse of activation and output tiles across heterogeneous computations. It introduces three key techniques: sparse-dense tiling, which aligns outlier processing with dense GEMM tiles; Tile-COO outlier encoding, which enables efficient sparse access and reduces shared-memory bank conflicts; and pipelined scheduling, which overlaps computation with data movement. Experiments show that FlashQuant reduces outlier-processing overhead, achieving $2.74\\times - 4.18\\times$ speedup over cuBLAS BF16 and up to $1.53\\times$ speedup over the strongest unfused outlier-aware baseline.",
+      "canonical_id": "arXiv:2608.15531",
+      "arxiv_id": "2608.15531",
+      "authors": [
+        "Jun-Qing Lin",
+        "Jingwei Sun",
+        "Zhengding Hu",
+        "Guangzhong Sun"
+      ]
+    },
+    {
+      "title": "SchurQuant: Groupwise Discrete Optimization for Layer-Wise LLM Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/f63417d538146b0e3adec7d49225eab64ffd01fa",
+      "year": 2026,
+      "published": "2026-08-16",
+      "abstract": "Weight-only post-training quantization (PTQ) enables the deployment of large language models under tight memory budgets, but accuracy often collapses at 2-3 bits. Existing backpropagation-free PTQ optimizers have two limitations: group decisions ignore the correction that the remaining continuous suffix can absorb, and discrete refinements typically keep the affine quantization grid fixed. We introduce SCHUROPT, which analytically eliminates the suffix's optimal continuous response, yielding an exact groupwise quadratic with Schur-complement curvature. It then alternates closed-form row-wise scale/zero-point refitting with coordinate descent over integer codes. With the GPTQ objective fixed, SCHUROPT improves mean zero-shot accuracy on 2-bit Qwen3-4B by 11.88 percentage points (pp). At higher precision, however, tighter reconstruction does not consistently improve end-model metrics. SCHURQUANT therefore combines SCHUROPT with quantized-prefix teacher reconstruction, reference-weight regularization, residual-add targets, and teacher-decision token weighting. Across eight Llama and Qwen models, SCHURQUANT achieves the highest mean zero-shot accuracy among the evaluated backpropagation free PTQ baselines, outperforming the strongest baseline by 9.65 pp at 2 bits.",
+      "canonical_id": "arXiv:2608.15567",
+      "arxiv_id": "2608.15567",
+      "authors": [
+        "Gunjun Lee",
+        "Sehwan Son",
+        "Younjoo Lee",
+        "Byungjun Kim",
+        "Jung Ho Ahn"
+      ]
+    },
+    {
+      "title": "PRQuant: Permutation Residual Quantization for Low-Overhead Inference",
+      "source_url": "https://www.semanticscholar.org/paper/187ef9b2d7f342fd4a27212e442c98532c9f5f3d",
+      "year": 2026,
+      "published": "2026-08-16",
+      "abstract": "Accuracy of Low-bit quantization of linear layers is often dominated by a small number of outliers. Although existing methods, such as smoothing, rotation, or residual-based approaches, may mitigate this problem, they often introduce new accuracy bottlenecks to weights. Besides, most of these techniques are implemented as online approaches, which can result in heavy execution overheads. To address the afore-mentioned issues, We propose PRQuant (Permutation Residual Quantization), a training-free and low-overhead framework that combines channel reorganization with static weight-side residual compensation. After AWQ-style scaling, PRQuant identifies the input channels that contribute most to weight quantization error, permutes them into contiguous tail blocks, and constructs their residual weight sub-tensors offline. During inference, this contiguous structure enables the activation side to use tail blocks seamlessly without the expensive online gathering operation, and turns scattered residual compensation into a regular tail-augmented GEMM, substantially reducing latency. Experiments demonstrate that PRQuant effectively reduces down-projection reconstruction error. Ablation studies confirm that smoothing and residual compensation are the primary drivers of numerical improvement, while permutation provides a consistent marginal numerical benefit and, more importantly, enables a hardware-friendly contiguous layout that eliminates dynamic gathering overhead. Overall, PRQuant outperforms default MXFP4 and the evaluated PTQ baselines in average accuracy across five downstream benchmarks, improving over MXFP4 by 1.24 and 0.55 on Qwen3-4B-Instruct-2507 and Qwen3-30B-A3B-Instruct-2507, respectively.",
+      "canonical_id": "arXiv:2609.22106",
+      "arxiv_id": "2609.22106",
+      "authors": [
+        "Pei-Ran Wang",
+        "An-Qi Wang",
+        "Jia-Ying Zhao",
+        "Hui-Wen Yang",
+        "Zhenyu Ming",
+        "Rong-Qian Wang",
+        "Yi-Wu Yao",
+        "Kun Tian",
+        "Xin Yao",
+        "Gong Zhang",
+        "Fan Yang",
+        "Zhong-Yi Huang"
+      ]
+    },
+    {
+      "title": "Machine Unlearning Across AI Systems: A Scoping Review of Evidence, Evaluation, and Deployment Contexts",
+      "source_url": "https://www.semanticscholar.org/paper/23840ede153f2c35c71e6fd603dce273e7d814e3",
+      "year": 2026,
+      "published": "2026-08-15",
+      "abstract": "Machine unlearning (MU) is increasingly studied across artificial intelligence systems in which target information may remain in model weights, adapters, retrieval indexes, caches, federated states, and temporally derived representations. However, existing reviews often examine methods, benchmarks, or deployment settings separately. Therefore, this scoping review collected and synthesized 159 sources to compare unlearning evidence across these connected system components. The evidence map separates 42 core MU sources—26 primary empirical or theoretical studies, 12 benchmark or evaluation frameworks, and 4 secondary evidence syntheses—from 117 contextual sources. First, a three-dimensional taxonomy distinguishes guarantee or reference type, update mechanism, and deployment or memory context. This structure prevents partitioning from being treated as a guarantee and influence estimation from being treated as an outcome. Next, the quantitative map identifies 13 centralized or general sources, 16 LLM- or benchmark-focused sources, 3 graph sources, 3 federated sources, 2 temporal sources, 2 quantized-network sources, and 3 cross-domain reviews. These results indicate a stronger reference-based foundation for centralized MU and a benchmark-rich but transformation-sensitive evidence base for large language models. In contrast, graph, federated, and temporal unlearning remain less mature because they are supported by smaller core evidence sets. Moreover, recent studies show that apparent forgetting may fail after 4-bit quantization, probabilistic decoding, alternative reference selection, recovery testing, benign query changes, or overlap between forget and retain knowledge. Accordingly, we present an audit-oriented deletion lifecycle that connects forgetting evidence, retained-utility testing, threat-model-specific attacks, post-transformation verification, and redeployment decisions. Calibration, citation grounding, provenance, and human review are treated as supplementary decision-readiness checks rather than direct proof of unlearning. Finally, the lifecycle is presented as a structured synthesis and reporting framework that still requires prospective validation in real systems and independent practitioner assessment.",
+      "canonical_id": "DOI:10.3390/electronics15163643",
+      "doi": "10.3390/electronics15163643",
+      "authors": [
+        "Hyeonwoo Kim",
+        "Jihoon Moon",
+        "Namkyun Baik"
+      ]
+    },
+    {
+      "title": "A Survey of Large Models in Sports",
+      "source_url": "https://www.semanticscholar.org/paper/76d29cb6f8e6506c5e6447488cfe203f9b9bf932",
+      "year": 2026,
+      "published": "2026-08-14",
+      "abstract": "Sports have witnessed growing global enthusiasm in recent years, serving as a vital force for physical health, cultural exchange, social connection, and economic growth. The rapid advancement of large models, particularly (multimodal) large language models (M)LLMs, has demonstrated transformative potential to reshape sports understanding, analysis, and interaction across diverse domains. This paper presents a comprehensive survey of large models in sports, including (i) an overview of tasks and applications across different participant groups; (ii) a detailed analysis of sports-related datasets and benchmarks; and (iii) a critical discussion of current challenges and future directions. Our goal is to establish a foundation for advancing research and practical development of large-model-driven sports intelligence. An open-source GitHub repository is maintained at: https://github.com/Road2Redemption/Awesome_Large_Models_In_Sports1.",
+      "canonical_id": "arXiv:2608.14377",
+      "arxiv_id": "2608.14377",
+      "authors": [
+        "Yichen Xu",
+        "Jianzhe Ma",
+        "Chuhan Wang",
+        "Zhong Cao",
+        "Liangyu Chen",
+        "Wenxuan Wang",
+        "Qin Jin"
+      ]
+    },
+    {
+      "title": "Contrastive representation learning for self-supervised deception detection in edge LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/2ac919b9217977a898be23542651d23ab2d859a6",
+      "year": 2026,
+      "published": "2026-08-14",
+      "abstract": "Existing deceptive alignment detection schemes generally follow a three-step strategy: auto-labeling, supervised fine-tuning (SFT), and proximal policy optimization (PPO). In which, the detection is treated as a simple binary classification and rely on heavyweight teacher models for Chain-of-Thought (CoT) annotation, limiting discrimination of nuanced deceptive strategies and creating an oracle dependency that prevents autonomous operation. This paper introduces contrastive representation learning, rather than learning a hard decision boundary (BCE loss), our lightweight monitor (0.1% parameters) projects CoT hidden states into a structured semantic space where deceptive and safe reasoning form separable manifolds. Through Triplet Loss optimization, the monitor captures gradual deceptive transitions, from surface hedging to fundamental objective substitution, that elude binary classifiers. Evaluation on Sycophancy subset of DeceptionBench confirms that contrastive learning outperforms BCE classification by 2.33pp Deception Tendency Rate (DTR, lower better, 39.29% vs. 36.96%). This establishes a geometric foundation for self-supervised deception detection, transforming CoT transparency from vulnerability into forensic evidence.",
+      "canonical_id": "DOI:10.1371/journal.pone.0354894",
+      "doi": "10.1371/journal.pone.0354894",
+      "authors": [
+        "Feng An",
+        "Wenyin Tao"
+      ]
+    },
+    {
+      "title": "QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction",
+      "source_url": "https://www.semanticscholar.org/paper/422f831f36a74485e8f4ec2dddb30b8c2eda4362",
+      "year": 2026,
+      "published": "2026-08-14",
+      "abstract": "As large language model inference shifts toward lower precision, post-training quantization (PTQ) becomes increasingly brittle, making quantization-aware training (QAT) essential for preserving model quality. However, QAT computes the loss and surrogate gradients using a lossy reconstruction of latent full-precision weights, while applying updates to the latent weights themselves. This mismatch can lead to suboptimal training trajectories and a higher loss floor. Second-order PTQ methods mitigate a similar gap by minimizing loss-aware reconstruction error, but doing it once for a frozen model can take hours; repeating this process throughout QAT as the weights evolve is impractical. We introduce QUASAR, a QAT method that continuously performs lightweight, loss-aware reconstruction in the training loop to lower the loss floor and improve the resulting low-bit model. At each training step, QUASAR uses the exponential moving average of squared gradients as online saliency estimates, searches over a small set of clipping ranges, and fits affine dequantizers via saliency-weighted least squares. Our analysis shows that the loss-aware reconstruction error is the only reconstruction-dependent term in the QAT convergence bound and controls the loss of the final quantized model, establishing QUASAR's objective as a principled optimization target. QUASAR modifies only the training procedure and supports standard deployment formats, including integer quantization and NVFP4, with no inference-time changes or overhead. Across Qwen3 and Llama-3.1, QUASAR achieves the lowest held-out KL divergence among competitive QAT methods at 2, 3, and 4 bits, reducing KL by at least 10% at 3 and 4 bits and by 29% at 2 bits. At 2 bits, it improves average accuracy across eight tasks by 3.5-4.3 percentage points over strong QAT and PTQ baselines.",
+      "canonical_id": "arXiv:2608.13966",
+      "arxiv_id": "2608.13966",
+      "authors": [
+        "Vincent Counathe",
+        "Ben Athiwaratkun",
+        "C. De Sa",
+        "Tian-Yi Zhang"
+      ]
+    },
+    {
+      "title": "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean",
+      "source_url": "https://www.semanticscholar.org/paper/f33395eddc6d2222b6e17f43bf6757e9d6d536f8",
+      "year": 2026,
+      "published": "2026-08-14",
+      "abstract": "Genomic Foundation Models (GFMs) are increasingly used for large-scale sequence analysis and generation. Compared with frontier language models, GFMs are typically smaller and frequently operate on long genomic sequences, with evaluation often requiring preservation of biologically meaningful structure and sequence-level relationships. Although low-precision post-training quantization (PTQ) has shown substantial memory and throughput benefits for general-purpose language models, it remains unclear whether these benefits transfer to GFMs given their distinct model scales, sequence characteristics, and evaluation requirements. We present an empirical case study of FP8 post-training quantization applied to GenomeOcean, a computationally efficient genomic foundation model with strong reported performance across diverse genomics tasks [Zhou et al., 2025]. Its range of model scales, from 100M to 4B parameters, provides a useful setting for examining how quantization effects vary with model size. We evaluate FP8 across two primary GFM inference regimes—embedding extraction and autoregressive generation—and assess its impact along two dimensions: biological fidelity relative to BF16 baselines and system-level efficiency in terms of throughput, memory usage, and energy efficiency. We find that FP8 largely preserves biological fidelity across the evaluated scales and inference regimes, while reducing GPU memory footprint at 4B scale and improving energy efficiency during autoregressive generation. However, realized throughput gains remain substantially below FP8’s theoretical 2× hardware ceiling, with a best-case improvement of 19.3% in autoregressive generation and benefits varying strongly by model scale and workload. Autoregressive generation shows the clearest gains, driven largely by KV-cache compression, whereas embedding extraction provides limited or negative throughput benefits at smaller model scales. We attribute this theory–practice gap to the interaction of model-scale effects, memory-system bottlenecks, and software-stack limitations. These findings highlight the need for workload-specific empirical evaluation before adopting low-precision inference in scientific foundation models. Code availability https://github.com/jgi-genomeocean/genomeocean_efficiency",
+      "canonical_id": "DOI:10.64898/2026.08.09.743676",
+      "doi": "10.64898/2026.08.09.743676",
+      "authors": [
+        "Mutian Yu",
+        "Robert Egan",
+        "Feng-Chen Liu",
+        "Zhong Wang",
+        "Li-Zhen Shi"
+      ]
+    },
+    {
+      "title": "Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for Protein Variant-Effect Prediction",
+      "source_url": "https://www.semanticscholar.org/paper/d35a4aec5731b097c7f6cb5dd8f5083eda564da7",
+      "year": 2026,
+      "published": "2026-08-14",
+      "abstract": "We benchmark six numerical precision configurations for ESM-2 protein language models across throughput, memory footprint and predictive accuracy, on two workloads with sharply different characteristics: bulk embedding extraction and deep mutational scanning (DMS) variant-effect scoring. Accuracy is evaluated on the complete ProteinGym substitution benchmark — 201 assays, 2.41M variants — at three model scales spanning 650M to 15B parameters, with a paired bootstrap clustered on protein. Three findings follow, and each contradicts a common practice. First, benchmark averages conceal the failure that decides deployability: no configuration shifts mean correlation by more than 0.007 at any scale, yet INT8 dynamic quantization — indistinguishable from fp32 on that mean at 3B (p = 0.34) — takes a single assay from ρ = 0.591 to 0.223. Selection must be made on worst-case, not mean, behaviour. Second, fidelity measured against fp32 bounds risk but cannot rank quality: over 3015 assay/configuration pairs it predicts the magnitude of ground-truth change (r = 0.56–0.81) but not its direction, and the INT4 effect differs significantly between 650M and 3B (+0.0101, p = 0.0007) with no monotone trend to extrapolate. Third, quantizing a large model is dominated by using a small one: of eighteen scale/configuration combinations only three are Pareto-optimal over accuracy, memory and speed, and all three are 650M. The one catastrophic failure we observe is a defect of default symmetric activation scaling, not of W8A8 itself: asymmetric activation quantization, a one-line change needing no calibration, removes every damaged assay. We also give a label-free screen for at-risk targets, and report four measurement artifacts encountered during this study, three of which inverted the result they were meant to measure.",
+      "canonical_id": "DOI:10.64898/2026.08.10.744024",
+      "doi": "10.64898/2026.08.10.744024",
+      "authors": [
+        "Qing Shao"
+      ]
+    },
+    {
+      "title": "FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving",
+      "source_url": "https://www.semanticscholar.org/paper/35b221d0ad8878db7bc32f6858f31e0c6e6e5b68",
+      "year": 2026,
+      "published": "2026-08-13",
+      "abstract": "Vision-Language-Action (VLA) models promise to bring end-to-end reasoning to autonomous driving, but their computational cost remains far too high for real-time control. The core challenge is structural: VLA inference is not a single bottleneck but a cascade of four. Visual encoding wastes compute on overlapping video frames; language-model prefill recomputes context that could be carried over from the previous timestep; reasoning tokens are generated serially despite low entropy; and flow-matching denoising applies uniform compute to a non-uniform velocity field. Addressing any one stage in isolation leaves the others untouched. We propose FlashDrive, an algorithm-system co-design framework that targets all four stages simultaneously. Our key insight is that each bottleneck admits a distinct, lightweight algorithmic shortcut: temporal overlap enables streaming KV-cache reuse across frames; the low per-token entropy and strong intra-block correlations of driving-domain reasoning make a non-autoregressive diffusion drafter highly effective for speculative decoding; and the velocity field's structure---sharp at the endpoints, flat in the middle---permits adaptive step caching that concentrates compute where it matters. Layered on system-level CUDA Graph compilation and kernel fusion, these techniques compound. Applied to Alpamayo 1.5-10B with W4A8 quantization, FlashDrive reduces end-to-end latency from 717ms to 151ms (4.7x) while leaving accuracy essentially unchanged: minADE6@6.4s shifts by only 0.08m, minADE1 improves, and closed-loop collision and off-road rates improve in simulation. By raising a 10B-parameter reasoning VLA from 1.4~Hz to 6.6~Hz on a single GPU, FlashDrive moves end-to-end autonomous driving substantially closer to real-time deployment.",
+      "canonical_id": "arXiv:2608.12932",
+      "arxiv_id": "2608.12932",
+      "authors": [
+        "Zekai Li",
+        "Yihao Liang",
+        "Hongfei Zhang",
+        "Jian Chen",
+        "Yesheng Liang",
+        "Zhijian Liu"
+      ]
+    },
+    {
+      "title": "Autonomous driving chips",
+      "source_url": "https://www.semanticscholar.org/paper/94a21c6cd3f48845c96802f0a5c01ff5abe82c31",
+      "year": 2026,
+      "published": "2026-08-13",
+      "abstract": null,
+      "canonical_id": "DOI:10.1038/s44287-026-00319-1",
+      "doi": "10.1038/s44287-026-00319-1",
+      "authors": [
+        "Qiujing Lu",
+        "Sihong Wu",
+        "Yifan Liu",
+        "Ziwei Huang",
+        "Yueyao Zhou",
+        "Boyi Dong",
+        "Tianyi Zhang",
+        "Linsen Li",
+        "Kaichen Zhu",
+        "Haowen Shu",
+        "Haikang Diao",
+        "Kaiteng Tan",
+        "Yu Liu",
+        "Xudong Zheng",
+        "Hongkai Ning",
+        "Y. Wan",
+        "Xuanhan Wang",
+        "Runze Yuan",
+        "Hong-Yan Sang",
+        "Xiaodong Yan",
+        "Ling Wang",
+        "Tong Dang",
+        "Aijia Yao",
+        "Zhien Wang",
+        "Aaron D. Franklin",
+        "Zhengshuai Wang",
+        "Jeffrey H. Lang",
+        "Jinchi Han",
+        "Xiyuan Tang",
+        "Kenan Zhang",
+        "Tilo H. Yang",
+        "Peng Wu",
+        "Jiangtao Wang",
+        "Qing-Cheng Huang",
+        "Jiajia Sun",
+        "Jiefu Chen",
+        "Xuqing Wu",
+        "Yuanji Zheng",
+        "Lin Xu",
+        "Yunyue Zhu",
+        "Jian Wang",
+        "Rui Chen",
+        "Meng‐Chi Chen",
+        "Xingjun Wang",
+        "Xiang Cheng",
+        "Biao Qin",
+        "Kaihui Liu",
+        "Hailin Peng",
+        "Mario Lanza",
+        "Saptarshi Das",
+        "Lain-Jong Li",
+        "Xiangfeng Duan",
+        "Vwani Roychowdhury",
+        "V. Bulović",
+        "Tomás Palacios",
+        "Jing Kong",
+        "Shuo Feng",
+        "Lian-Mao Peng",
+        "Jianfeng Jiang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.24973",
+      "identity_tokens": [
+        "id:arXiv:2608.24973",
+        "title:resourceefficient pruning for transformer via lowrank importance estimation",
+        "url:https://www.semanticscholar.org/paper/5a478848e7707acca122bb648ac8907fbc11b92d"
+      ],
+      "record": {
+        "title": "Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation",
+        "source_url": "https://www.semanticscholar.org/paper/5a478848e7707acca122bb648ac8907fbc11b92d",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "With the rapid development of large-scale pre-trained language models based on Transformer architectures, their high computational and memory costs have become a major obstacle to deployment, especially in resource-constrained environments. Traditional pruning methods typically depend on full gradient-based importance estimation, and they necessitate prior finetuning of the model to achieve satisfactory performance. This process often results in intolerable resource consumption. This paper proposes REP-LIE, a new approach to enable resource-efficient pruning during the process of finetuning. REP-LIE leverages the gradients of LoRA low-rank matrices to estimate the importance of weights without requiring full gradient computation. To address the inherent randomness in importance estimation, a stability score is introduced, serving as the basis for iterative pruning of unimportant model parameters. The pruned model is further finetuned through lightweight updates, eliminating the need for full-parameter optimization in the process of finetuning. Extensive experiments on both medium-scale encoder models and large-scale generative models (LLaMA-7B and Mistral-7B) demonstrate that REP-LIE still achieves competitive performance compared to existing approaches.",
+        "canonical_id": "arXiv:2608.24973",
+        "arxiv_id": "2608.24973",
+        "authors": [
+          "Peng Liu",
+          "Hui-Bing Zeng",
+          "Yi-Qun Zhang",
+          "Yang Yi",
+          "Ji-Gang Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25068",
+      "identity_tokens": [
+        "id:arXiv:2608.25068",
+        "title:shiftllm distribution shift correction in depthpruned llms",
+        "url:https://www.semanticscholar.org/paper/430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3"
+      ],
+      "record": {
+        "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "Depth pruning removes entire Transformer blocks to reduce the inference cost of large language models, but disrupts the hidden-state distributions expected by downstream layers, leading to significant accuracy loss. We introduce SHIFT-LLM, a training-free post-pruning correction framework that inserts a Linear Residual Adapter (LRA) at each pruning site. Each LRA preserves the identity pathway of the original residual block and adds a lightweight affine residual correction. This correction is calibrated via closed-form least-squares regression on a small held-out set, without gradient computation, to approximate the missing residual update produced by the pruned block. Together with the preserved identity pathway, the resulting LRA output approximates the hidden state produced by the original block, thereby mitigating the distributional mismatch introduced by layer removal while avoiding the expensive attention and feed-forward computations of the removed blocks. The resulting LRAs support low-rank factorization and exact merging across consecutive pruned layers for additional compression, and combine naturally with parameter-efficient fine-tuning for further recovery beyond fine-tuning the pruned model alone. Experiments on five model families, six layer-selection criteria, and seven zero-shot benchmarks show that SHIFT-LLM consistently recovers accuracy lost to depth pruning across most configurations, achieving gains up to +15.7 points on Llama-3.1-8B-Instruct while requiring only a few hundred calibration samples and no gradient computation.",
+        "canonical_id": "arXiv:2608.25068",
+        "arxiv_id": "2608.25068",
+        "authors": [
+          "Ali Bahri",
+          "Hang Li",
+          "Hongliang Li",
+          "Zhitang Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22761",
+      "identity_tokens": [
+        "id:arXiv:2608.22761",
+        "title:dont repeat yourself stopping verbatim loops at sampling time",
+        "url:https://www.semanticscholar.org/paper/de6b17ac2da80542741590e214dfcf1868d3d356"
+      ],
+      "record": {
+        "title": "Don't Repeat Yourself: Stopping Verbatim Loops at Sampling Time",
+        "source_url": "https://www.semanticscholar.org/paper/de6b17ac2da80542741590e214dfcf1868d3d356",
+        "year": 2026,
+        "published": "2026-08-24",
+        "abstract": "Large Language Models generate text autoregressively, but open-ended generation is prone to verbatim looping, in which models repeat spans already present in context. Standard defenses such as repetition, presence, and frequency penalties and n-gram blocking act on token recurrence rather than the sequential structure of a loop, and often suppress looping only at strengths that also degrade formatting or fluency. We propose Don't Repeat Yourself (DRY), a sampling-time logit adjustment that penalizes a candidate token only when generating it would extend the current suffix into an exact continuation of a span seen earlier in the context. Sequence breakers protect chat templates and formatting tokens. Across models from 1.5B to 120B parameters, nine prompt families, and a 600-pair human study, DRY reduces suffix-extension rate by 47% while improving lexical diversity. An intervention-matched placebo produces no comparable reduction, identifying suffix matching as the operative mechanism. On AWQ-quantized 70B and 120B models, DRY reduces loop rate by roughly half while preserving MT-Bench, MMLU, and GSM8K performance, whereas standard alternatives lose measurable ground. DRY has been adopted by popular open-source LLM inference frameworks including llama.cpp, ExLlamaV2, and text-generation-webui, highlighting its practical impact on text generation.",
+        "canonical_id": "arXiv:2608.22761",
+        "arxiv_id": "2608.22761",
+        "authors": [
+          "Philippe Weidmann",
+          "Allen G. Roush",
+          "Judah Goldfeder",
+          "Sanjay Basu",
+          "Ravid Shwartz-Ziv"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22758",
+      "identity_tokens": [
+        "id:arXiv:2608.22758",
+        "title:xtc headaware sampling by excluding top choices",
+        "url:https://www.semanticscholar.org/paper/140e81dd5b22924188a1ddf040c0307fda2b7b98"
+      ],
+      "record": {
+        "title": "XTC: Head-Aware Sampling by Excluding Top Choices",
+        "source_url": "https://www.semanticscholar.org/paper/140e81dd5b22924188a1ddf040c0307fda2b7b98",
+        "year": 2026,
+        "published": "2026-08-24",
+        "abstract": "Standard decoding rules for autoregressive language models promote diversity by rescaling the full next-token distribution or truncating its low-probability tail. These strategies overlook a common regime of open-ended generation in which several continuations are plausible but too much probability mass remains concentrated on the most generic choice. We introduce XTC (Exclude Top Choices), a lightweight head-aware decoding operator that targets this regime directly. XTC identifies tokens whose probabilities exceed an absolute plausibility threshold $\\tau$: when at least two qualify, it removes the dominant eligible choices with probability $\\rho$ and retains only the weakest plausible alternative before renormalization. Across 60 experiments on Gemma 3 27B Q4, Gemma 3 12B Q6, and DeepSeek R1 14B Q6, with scaling validation on Llama 3.3 70B Q4, XTC improves the diversity-repetition Pareto frontier. On creative generation, Distinct-2 increases by 11--15% and repeat trigrams decrease by 27--47% across the four models. Combined with temperature scaling, gains reach 38% in Distinct-2 and 71% in repeat-trigram reduction over baseline. A blinded Amazon Mechanical Turk study with 150 Master raters yields a 62.3% creativity preference for XTC ($p<10^{-4}$) without reduced fluency, while a GPT-4o control judge reproduces the Anthropic-judge direction on every measure. On IFEval with Llama 3.3 70B Q4, XTC preserves prompt-level strict accuracy within 1.7 percentage points of baseline while recovering most of the diversity gain; a temperature setting matched on Distinct-2 reduces IFEval by 8.8 points. The effect is additive with temperature and repetition penalties, robust across quantization levels and model families, and consistent across twelve prompt genres. XTC has been adopted by llama.cpp, ExLlamaV2, and text-generation-webui.",
+        "canonical_id": "arXiv:2608.22758",
+        "arxiv_id": "2608.22758",
+        "authors": [
+          "Philippe Weidmann",
+          "Allen G. Roush",
+          "Judah Goldfeder",
+          "Sanjay Basu",
+          "Ravid Shwartz-Ziv"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24945",
+      "identity_tokens": [
+        "id:arXiv:2608.24945",
+        "title:fampwq fisher informationbased adaptive mixed precision weight quantization for effective llm inference",
+        "url:https://www.semanticscholar.org/paper/444bca6d7877b152c0f93291240f1684fc60b06a"
+      ],
+      "record": {
+        "title": "FAMPWQ: Fisher Information-based Adaptive Mixed Precision Weight Quantization for Effective LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/444bca6d7877b152c0f93291240f1684fc60b06a",
+        "year": 2026,
+        "published": "2026-08-24",
+        "abstract": "Recent years have witnessed remarkable achievements of Large Language Models (LLMs) in multiple domains, while the excessive resource requirements of LLMs hinder the deployment on resource-constrained devices. Although model quantization stands out as an effective approach, conventional quantization approaches typically incur severe performance degradation due to uniform bit-width or simple heuristic sensitivity evaluation. In this paper, we propose a novel Fisher information-based Adaptive Mixed Precision Weight Quantization approach, i.e., FAMPWQ, which performs layer-adaptive weight quantization for effective LLM inference on commodity GPUs. First, we propose a system model with a novel Fisher information metric to measure the layer-wise sensitivity to quantization. Second, we propose a reinforcement learning-based bit-width allocator in FAMPWQ, which generates an adaptive bit-width allocation strategy based on the Fisher information sensitivity metric. Extensive experiments on 7 models and 5 benchmarks demonstrate that FAMPWQ significantly outperforms 7 baseline approaches in terms of PPL (up to 3.39 smaller), accuracy (up to 6.87% higher), and LLM-as-a-judge comparison (up to 76% win rate).",
+        "canonical_id": "arXiv:2608.24945",
+        "arxiv_id": "2608.24945",
+        "authors": [
+          "G. Lee",
+          "Ji Liu",
+          "Juncheng Jia",
+          "Ji Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.23144",
+      "identity_tokens": [
+        "id:arXiv:2608.23144",
+        "title:activationweighted seeded residual coding for lowbit llm weight repair",
+        "url:https://www.semanticscholar.org/paper/af6afa9670f7d987f319a4ef0d92f1d630707460"
+      ],
+      "record": {
+        "title": "Activation-Weighted Seeded Residual Coding for Low-Bit LLM Weight Repair",
+        "source_url": "https://www.semanticscholar.org/paper/af6afa9670f7d987f319a4ef0d92f1d630707460",
+        "year": 2026,
+        "published": "2026-08-24",
+        "abstract": "Low-bit weight quantization saves storage but leaves errors that degrade LLM quality. We introduce activation-weighted seeded residual coding (AWSRC), a compact repair codec for an existing quantization backbone. Given a reconstructed weight $W_0$, AWSRC encodes the residual $W-W_0$ using deterministic seed-generated bases. The sidecar stores seed selectors, low-bit coefficients, and scales rather than an explicit codebook. Two variants combine activation weighting with per-module byte quotas ($\\mathrm{AWSRC\\text{-}U}$), or blended activation/Fisher weighting with globally ranked progressive prefixes ($\\mathrm{AWSRC\\text{-}P}_{F}$) that support multiple byte budgets without refitting. On Qwen2.5-3B-Instruct, adding $0.162$ scope-bits/weight to an RTN-INT4 baseline closes $88.2\\%$, $78.9\\%$, and $71.3\\%$ of the PPL, KL, and 11-task mean-accuracy gaps to BF16, respectively. AWSRC achieves the highest mean downstream accuracy in byte-matched residual-codec ablations and improves all metrics across model families with up to 32B parameters.",
+        "canonical_id": "arXiv:2608.23144",
+        "arxiv_id": "2608.23144",
+        "authors": [
+          "Zehao Liu",
+          "Chuangchuang Fang",
+          "Yang Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21952",
+      "identity_tokens": [
+        "id:arXiv:2608.21952",
+        "title:ssdi8 accurate and efficient 8bit quantization for state space duality",
+        "url:https://www.semanticscholar.org/paper/930e4d9388f71bdcc1e3afb77f1ee46a7c1d879b"
+      ],
+      "record": {
+        "title": "SSDi8: Accurate and Efficient 8-bit Quantization for State Space Duality",
+        "source_url": "https://www.semanticscholar.org/paper/930e4d9388f71bdcc1e3afb77f1ee46a7c1d879b",
+        "year": 2026,
+        "published": "2026-08-22",
+        "abstract": "Recent advances in sequence modeling have highlighted Mamba as a state space architecture offering efficient long-range dependency modeling and providing a viable alternative to Transformers. Building upon this, Mamba-2 introduces the Structured State Space Duality (SSD), which integrates recurrent and attention modes to achieve efficiency and scalability. However, this architectural expansion substantially increases memory and latency overhead, underscoring the need for efficient compression strategies tailored to SSD. In this work, we present SSDi8, the first post-training quantization framework specifically designed for SSD to maintain a persistent INT8 path. SSDi8 introduces a reformulation that decouples element-wise multiplications from matrix multiplications, enabling reuse of quantized activations across modules. Moreover, SSDi8 adaptively quantizes channel-varying activations at cost-effective points, further reducing latency. On the accuracy side, SSDi8 explicitly leverages the intrinsic dimensional decomposition of SSD, exploiting distinct outlier distributions across axes, and incorporates an error correction term based on per-channel error statistics. Comprehensive experiments demonstrate that SSDi8 achieves accuracy comparable to FP16 while delivering up to 1.4x speedup in W4A8 and W8A8 settings. We further validate its robustness in resource-constrained environments by deploying it on the Orin NX device.",
+        "canonical_id": "arXiv:2608.21952",
+        "arxiv_id": "2608.21952",
+        "authors": [
+          "Hyunwoo J. Kim",
+          "Byoungchan Ko",
+          "Minseok Kang",
+          "Minwoo Kim",
+          "Dongjin Lee",
+          "Jaehoon Lee",
+          "Sungroh Yoon",
+          "Dahuin Jung"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21019",
+      "identity_tokens": [
+        "id:arXiv:2608.21019",
+        "title:targetaware calibration data selection for preserving uncertainty in quantized language models",
+        "url:https://www.semanticscholar.org/paper/002268c09c38e77dd73a99e845191a4fb479f6c1"
+      ],
+      "record": {
+        "title": "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/002268c09c38e77dd73a99e845191a4fb479f6c1",
+        "year": 2026,
+        "published": "2026-08-21",
+        "abstract": "Quantization is widely used to deploy large language models, but its effect on uncertainty behavior, such as confidence, margins, and abstention, is rarely treated as a primary objective. We frame calibration-data selection for quantization as a target-dependent uncertainty-preservation problem. Different deployments emphasize different regions of the input distribution, yet prior work mainly optimizes accuracy-oriented compression metrics or adjusts scores after quantization. We formalize this goal with distributional and boundary preservation risks, and provide a simple mixture-mismatch argument explaining why no single calibration recipe should be expected to fit all targets. We introduce Doubt-Preserving Quantization (DPQ), a lightweight pre-quantization recipe family that uses full-precision predictions to construct target-aligned calibration mixtures of high-doubt examples and generic anchors. Across 8 language models, 9 NLP benchmarks, and 22 comparison methods, the leading fixed recipe changes with the preservation target: DPQ-r75 leads on SQuAD2 answerability-boundary preservation, while milder or single-signal variants, including DPQ-r50, confidence-only, and entropy-only, better preserve broad multiple-choice QA behavior. These results show that calibration data should be selected for the specific full-precision score behavior a deployment needs to preserve, rather than treated as a fixed quantization detail.",
+        "canonical_id": "arXiv:2608.21019",
+        "arxiv_id": "2608.21019",
+        "authors": [
+          "Zhen Yang",
+          "Sizai Hou",
+          "Kaiwen Zheng",
+          "Yao-Fang Liu",
+          "Liang He",
+          "Yi-Xuan Chen",
+          "Kangning Cui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19628",
+      "identity_tokens": [
+        "id:arXiv:2608.19628",
+        "title:a threadregister decoupled gpu execution model for efficient tensor computation",
+        "url:https://www.semanticscholar.org/paper/4b5e5626f4e68e3576d3519c936e3966f05e8016"
+      ],
+      "record": {
+        "title": "A Thread-Register Decoupled GPU Execution Model for Efficient Tensor Computation",
+        "source_url": "https://www.semanticscholar.org/paper/4b5e5626f4e68e3576d3519c936e3966f05e8016",
+        "year": 2026,
+        "published": "2026-08-20",
+        "abstract": "Modern GPUs increasingly integrate Tensor Cores into the execution pipeline. Although aggregate tensor throughput continues to grow, aided by an operand supply that has evolved from register-based in Ampere to redundancy-free, memory-based in Hopper and Blackwell, efficiently orchestrating the complete tensor compute pipeline for the modern AI workloads remains challenging. We identify the fundamental bottlenecks as fixed parallelism and coarse-grained scheduling, both of which are exposed by modern AI workloads that interleave diverse non-GEMM operations with GEMM. To orchestrate tensor computation efficiently, we propose FIBER, a new architecture that extends the GPU SIMT (single instruction, multiple thread) model. Its basic execution instance, the \\emph{fiber}, is decoupled from private register ownership, carrying only minimal control state while accessing an SM's registers through a shared view. This enables dynamic parallelism scaling, fine-grained register-level dataflow scheduling, and offers a redundancy-free alternative for matrix operand supply. We extend the ISA, microarchitecture, and compiler to realize shared-register addressing, conflict-free operand delivery, and fiber-based program mapping. Under a typical mixed-precision LLM serving scenario, FIBER achieves a 2.25x end-to-end speedup on Ampere (1.15x for the original FP16 computation), with 1.8x and 2.09x on Hopper and Blackwell respectively, and kernel-level gains up to 2.49x.",
+        "canonical_id": "arXiv:2608.19628",
+        "arxiv_id": "2608.19628",
+        "authors": [
+          "Zihan Liu",
+          "Jingwen Leng",
+          "Yangjie Zhou",
+          "Yitong Ding",
+          "Guanlin Zhu",
+          "Yiluan Huang",
+          "Chi Jin",
+          "Chen Zhang",
+          "Shixuan Sun",
+          "Yu Feng",
+          "Anbang Wu",
+          "Minyi Guo",
+          "Jian Weng",
+          "Jiajin Tu",
+          "Junsong Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15531",
+      "identity_tokens": [
+        "id:arXiv:2608.15531",
+        "title:flashquant sparsedense fusion for memoryefficient outlieraware llm inference",
+        "url:https://www.semanticscholar.org/paper/21b5b26abba4b69a8e531c68ccde48d50041102e"
+      ],
+      "record": {
+        "title": "FlashQuant: Sparse-Dense Fusion for Memory-Efficient Outlier-Aware LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/21b5b26abba4b69a8e531c68ccde48d50041102e",
+        "year": 2026,
+        "published": "2026-08-16",
+        "abstract": "Low-bit quantization reduces the memory footprint and computational cost of large language model (LLM) inference. However, high-magnitude outlier weights can induce substantial quantization errors and degrade model accuracy. Outlier-aware quantization addresses this issue by retaining outliers in high precision while quantizing the remaining weights, resulting in a low-bit dense GEMM path and a high-precision sparse SpMM path. Existing implementations execute these paths in separate GPU kernels, despite their shared activations and outputs, thereby missing opportunities for intra-operator reuse and incurring redundant global-memory accesses. This inefficiency is particularly pronounced in memory-bound decoding workloads. We propose FlashQuant, a content-sharing execution framework for outlier-aware W4A16 decoding. FlashQuant fuses the dense GEMM and sparse outlier SpMM paths into a single GPU kernel, enabling on-chip reuse of activation and output tiles across heterogeneous computations. It introduces three key techniques: sparse-dense tiling, which aligns outlier processing with dense GEMM tiles; Tile-COO outlier encoding, which enables efficient sparse access and reduces shared-memory bank conflicts; and pipelined scheduling, which overlaps computation with data movement. Experiments show that FlashQuant reduces outlier-processing overhead, achieving $2.74\\times - 4.18\\times$ speedup over cuBLAS BF16 and up to $1.53\\times$ speedup over the strongest unfused outlier-aware baseline.",
+        "canonical_id": "arXiv:2608.15531",
+        "arxiv_id": "2608.15531",
+        "authors": [
+          "Jun-Qing Lin",
+          "Jingwei Sun",
+          "Zhengding Hu",
+          "Guangzhong Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15567",
+      "identity_tokens": [
+        "id:arXiv:2608.15567",
+        "title:schurquant groupwise discrete optimization for layerwise llm quantization",
+        "url:https://www.semanticscholar.org/paper/f63417d538146b0e3adec7d49225eab64ffd01fa"
+      ],
+      "record": {
+        "title": "SchurQuant: Groupwise Discrete Optimization for Layer-Wise LLM Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/f63417d538146b0e3adec7d49225eab64ffd01fa",
+        "year": 2026,
+        "published": "2026-08-16",
+        "abstract": "Weight-only post-training quantization (PTQ) enables the deployment of large language models under tight memory budgets, but accuracy often collapses at 2-3 bits. Existing backpropagation-free PTQ optimizers have two limitations: group decisions ignore the correction that the remaining continuous suffix can absorb, and discrete refinements typically keep the affine quantization grid fixed. We introduce SCHUROPT, which analytically eliminates the suffix's optimal continuous response, yielding an exact groupwise quadratic with Schur-complement curvature. It then alternates closed-form row-wise scale/zero-point refitting with coordinate descent over integer codes. With the GPTQ objective fixed, SCHUROPT improves mean zero-shot accuracy on 2-bit Qwen3-4B by 11.88 percentage points (pp). At higher precision, however, tighter reconstruction does not consistently improve end-model metrics. SCHURQUANT therefore combines SCHUROPT with quantized-prefix teacher reconstruction, reference-weight regularization, residual-add targets, and teacher-decision token weighting. Across eight Llama and Qwen models, SCHURQUANT achieves the highest mean zero-shot accuracy among the evaluated backpropagation free PTQ baselines, outperforming the strongest baseline by 9.65 pp at 2 bits.",
+        "canonical_id": "arXiv:2608.15567",
+        "arxiv_id": "2608.15567",
+        "authors": [
+          "Gunjun Lee",
+          "Sehwan Son",
+          "Younjoo Lee",
+          "Byungjun Kim",
+          "Jung Ho Ahn"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.22106",
+      "identity_tokens": [
+        "id:arXiv:2609.22106",
+        "title:prquant permutation residual quantization for lowoverhead inference",
+        "url:https://www.semanticscholar.org/paper/187ef9b2d7f342fd4a27212e442c98532c9f5f3d"
+      ],
+      "record": {
+        "title": "PRQuant: Permutation Residual Quantization for Low-Overhead Inference",
+        "source_url": "https://www.semanticscholar.org/paper/187ef9b2d7f342fd4a27212e442c98532c9f5f3d",
+        "year": 2026,
+        "published": "2026-08-16",
+        "abstract": "Accuracy of Low-bit quantization of linear layers is often dominated by a small number of outliers. Although existing methods, such as smoothing, rotation, or residual-based approaches, may mitigate this problem, they often introduce new accuracy bottlenecks to weights. Besides, most of these techniques are implemented as online approaches, which can result in heavy execution overheads. To address the afore-mentioned issues, We propose PRQuant (Permutation Residual Quantization), a training-free and low-overhead framework that combines channel reorganization with static weight-side residual compensation. After AWQ-style scaling, PRQuant identifies the input channels that contribute most to weight quantization error, permutes them into contiguous tail blocks, and constructs their residual weight sub-tensors offline. During inference, this contiguous structure enables the activation side to use tail blocks seamlessly without the expensive online gathering operation, and turns scattered residual compensation into a regular tail-augmented GEMM, substantially reducing latency. Experiments demonstrate that PRQuant effectively reduces down-projection reconstruction error. Ablation studies confirm that smoothing and residual compensation are the primary drivers of numerical improvement, while permutation provides a consistent marginal numerical benefit and, more importantly, enables a hardware-friendly contiguous layout that eliminates dynamic gathering overhead. Overall, PRQuant outperforms default MXFP4 and the evaluated PTQ baselines in average accuracy across five downstream benchmarks, improving over MXFP4 by 1.24 and 0.55 on Qwen3-4B-Instruct-2507 and Qwen3-30B-A3B-Instruct-2507, respectively.",
+        "canonical_id": "arXiv:2609.22106",
+        "arxiv_id": "2609.22106",
+        "authors": [
+          "Pei-Ran Wang",
+          "An-Qi Wang",
+          "Jia-Ying Zhao",
+          "Hui-Wen Yang",
+          "Zhenyu Ming",
+          "Rong-Qian Wang",
+          "Yi-Wu Yao",
+          "Kun Tian",
+          "Xin Yao",
+          "Gong Zhang",
+          "Fan Yang",
+          "Zhong-Yi Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/electronics15163643",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics15163643",
+        "title:machine unlearning across ai systems a scoping review of evidence evaluation and deployment contexts",
+        "url:https://www.semanticscholar.org/paper/23840ede153f2c35c71e6fd603dce273e7d814e3"
+      ],
+      "record": {
+        "title": "Machine Unlearning Across AI Systems: A Scoping Review of Evidence, Evaluation, and Deployment Contexts",
+        "source_url": "https://www.semanticscholar.org/paper/23840ede153f2c35c71e6fd603dce273e7d814e3",
+        "year": 2026,
+        "published": "2026-08-15",
+        "abstract": "Machine unlearning (MU) is increasingly studied across artificial intelligence systems in which target information may remain in model weights, adapters, retrieval indexes, caches, federated states, and temporally derived representations. However, existing reviews often examine methods, benchmarks, or deployment settings separately. Therefore, this scoping review collected and synthesized 159 sources to compare unlearning evidence across these connected system components. The evidence map separates 42 core MU sources—26 primary empirical or theoretical studies, 12 benchmark or evaluation frameworks, and 4 secondary evidence syntheses—from 117 contextual sources. First, a three-dimensional taxonomy distinguishes guarantee or reference type, update mechanism, and deployment or memory context. This structure prevents partitioning from being treated as a guarantee and influence estimation from being treated as an outcome. Next, the quantitative map identifies 13 centralized or general sources, 16 LLM- or benchmark-focused sources, 3 graph sources, 3 federated sources, 2 temporal sources, 2 quantized-network sources, and 3 cross-domain reviews. These results indicate a stronger reference-based foundation for centralized MU and a benchmark-rich but transformation-sensitive evidence base for large language models. In contrast, graph, federated, and temporal unlearning remain less mature because they are supported by smaller core evidence sets. Moreover, recent studies show that apparent forgetting may fail after 4-bit quantization, probabilistic decoding, alternative reference selection, recovery testing, benign query changes, or overlap between forget and retain knowledge. Accordingly, we present an audit-oriented deletion lifecycle that connects forgetting evidence, retained-utility testing, threat-model-specific attacks, post-transformation verification, and redeployment decisions. Calibration, citation grounding, provenance, and human review are treated as supplementary decision-readiness checks rather than direct proof of unlearning. Finally, the lifecycle is presented as a structured synthesis and reporting framework that still requires prospective validation in real systems and independent practitioner assessment.",
+        "canonical_id": "DOI:10.3390/electronics15163643",
+        "doi": "10.3390/electronics15163643",
+        "authors": [
+          "Hyeonwoo Kim",
+          "Jihoon Moon",
+          "Namkyun Baik"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14377",
+      "identity_tokens": [
+        "id:arXiv:2608.14377",
+        "title:a survey of large models in sports",
+        "url:https://www.semanticscholar.org/paper/76d29cb6f8e6506c5e6447488cfe203f9b9bf932"
+      ],
+      "record": {
+        "title": "A Survey of Large Models in Sports",
+        "source_url": "https://www.semanticscholar.org/paper/76d29cb6f8e6506c5e6447488cfe203f9b9bf932",
+        "year": 2026,
+        "published": "2026-08-14",
+        "abstract": "Sports have witnessed growing global enthusiasm in recent years, serving as a vital force for physical health, cultural exchange, social connection, and economic growth. The rapid advancement of large models, particularly (multimodal) large language models (M)LLMs, has demonstrated transformative potential to reshape sports understanding, analysis, and interaction across diverse domains. This paper presents a comprehensive survey of large models in sports, including (i) an overview of tasks and applications across different participant groups; (ii) a detailed analysis of sports-related datasets and benchmarks; and (iii) a critical discussion of current challenges and future directions. Our goal is to establish a foundation for advancing research and practical development of large-model-driven sports intelligence. An open-source GitHub repository is maintained at: https://github.com/Road2Redemption/Awesome_Large_Models_In_Sports1.",
+        "canonical_id": "arXiv:2608.14377",
+        "arxiv_id": "2608.14377",
+        "authors": [
+          "Yichen Xu",
+          "Jianzhe Ma",
+          "Chuhan Wang",
+          "Zhong Cao",
+          "Liangyu Chen",
+          "Wenxuan Wang",
+          "Qin Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1371/journal.pone.0354894",
+      "identity_tokens": [
+        "id:DOI:10.1371/journal.pone.0354894",
+        "title:contrastive representation learning for selfsupervised deception detection in edge llms",
+        "url:https://www.semanticscholar.org/paper/2ac919b9217977a898be23542651d23ab2d859a6"
+      ],
+      "record": {
+        "title": "Contrastive representation learning for self-supervised deception detection in edge LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/2ac919b9217977a898be23542651d23ab2d859a6",
+        "year": 2026,
+        "published": "2026-08-14",
+        "abstract": "Existing deceptive alignment detection schemes generally follow a three-step strategy: auto-labeling, supervised fine-tuning (SFT), and proximal policy optimization (PPO). In which, the detection is treated as a simple binary classification and rely on heavyweight teacher models for Chain-of-Thought (CoT) annotation, limiting discrimination of nuanced deceptive strategies and creating an oracle dependency that prevents autonomous operation. This paper introduces contrastive representation learning, rather than learning a hard decision boundary (BCE loss), our lightweight monitor (0.1% parameters) projects CoT hidden states into a structured semantic space where deceptive and safe reasoning form separable manifolds. Through Triplet Loss optimization, the monitor captures gradual deceptive transitions, from surface hedging to fundamental objective substitution, that elude binary classifiers. Evaluation on Sycophancy subset of DeceptionBench confirms that contrastive learning outperforms BCE classification by 2.33pp Deception Tendency Rate (DTR, lower better, 39.29% vs. 36.96%). This establishes a geometric foundation for self-supervised deception detection, transforming CoT transparency from vulnerability into forensic evidence.",
+        "canonical_id": "DOI:10.1371/journal.pone.0354894",
+        "doi": "10.1371/journal.pone.0354894",
+        "authors": [
+          "Feng An",
+          "Wenyin Tao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.13966",
+      "identity_tokens": [
+        "id:arXiv:2608.13966",
+        "title:quasar lowering the loss floor of quantizationaware training with lossaware reconstruction",
+        "url:https://www.semanticscholar.org/paper/422f831f36a74485e8f4ec2dddb30b8c2eda4362"
+      ],
+      "record": {
+        "title": "QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction",
+        "source_url": "https://www.semanticscholar.org/paper/422f831f36a74485e8f4ec2dddb30b8c2eda4362",
+        "year": 2026,
+        "published": "2026-08-14",
+        "abstract": "As large language model inference shifts toward lower precision, post-training quantization (PTQ) becomes increasingly brittle, making quantization-aware training (QAT) essential for preserving model quality. However, QAT computes the loss and surrogate gradients using a lossy reconstruction of latent full-precision weights, while applying updates to the latent weights themselves. This mismatch can lead to suboptimal training trajectories and a higher loss floor. Second-order PTQ methods mitigate a similar gap by minimizing loss-aware reconstruction error, but doing it once for a frozen model can take hours; repeating this process throughout QAT as the weights evolve is impractical. We introduce QUASAR, a QAT method that continuously performs lightweight, loss-aware reconstruction in the training loop to lower the loss floor and improve the resulting low-bit model. At each training step, QUASAR uses the exponential moving average of squared gradients as online saliency estimates, searches over a small set of clipping ranges, and fits affine dequantizers via saliency-weighted least squares. Our analysis shows that the loss-aware reconstruction error is the only reconstruction-dependent term in the QAT convergence bound and controls the loss of the final quantized model, establishing QUASAR's objective as a principled optimization target. QUASAR modifies only the training procedure and supports standard deployment formats, including integer quantization and NVFP4, with no inference-time changes or overhead. Across Qwen3 and Llama-3.1, QUASAR achieves the lowest held-out KL divergence among competitive QAT methods at 2, 3, and 4 bits, reducing KL by at least 10% at 3 and 4 bits and by 29% at 2 bits. At 2 bits, it improves average accuracy across eight tasks by 3.5-4.3 percentage points over strong QAT and PTQ baselines.",
+        "canonical_id": "arXiv:2608.13966",
+        "arxiv_id": "2608.13966",
+        "authors": [
+          "Vincent Counathe",
+          "Ben Athiwaratkun",
+          "C. De Sa",
+          "Tian-Yi Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.64898/2026.08.09.743676",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.08.09.743676",
+        "title:fp8 inference in genomic foundation models theoretical vs realized speedups on genomeocean",
+        "url:https://www.semanticscholar.org/paper/f33395eddc6d2222b6e17f43bf6757e9d6d536f8"
+      ],
+      "record": {
+        "title": "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean",
+        "source_url": "https://www.semanticscholar.org/paper/f33395eddc6d2222b6e17f43bf6757e9d6d536f8",
+        "year": 2026,
+        "published": "2026-08-14",
+        "abstract": "Genomic Foundation Models (GFMs) are increasingly used for large-scale sequence analysis and generation. Compared with frontier language models, GFMs are typically smaller and frequently operate on long genomic sequences, with evaluation often requiring preservation of biologically meaningful structure and sequence-level relationships. Although low-precision post-training quantization (PTQ) has shown substantial memory and throughput benefits for general-purpose language models, it remains unclear whether these benefits transfer to GFMs given their distinct model scales, sequence characteristics, and evaluation requirements. We present an empirical case study of FP8 post-training quantization applied to GenomeOcean, a computationally efficient genomic foundation model with strong reported performance across diverse genomics tasks [Zhou et al., 2025]. Its range of model scales, from 100M to 4B parameters, provides a useful setting for examining how quantization effects vary with model size. We evaluate FP8 across two primary GFM inference regimes—embedding extraction and autoregressive generation—and assess its impact along two dimensions: biological fidelity relative to BF16 baselines and system-level efficiency in terms of throughput, memory usage, and energy efficiency. We find that FP8 largely preserves biological fidelity across the evaluated scales and inference regimes, while reducing GPU memory footprint at 4B scale and improving energy efficiency during autoregressive generation. However, realized throughput gains remain substantially below FP8’s theoretical 2× hardware ceiling, with a best-case improvement of 19.3% in autoregressive generation and benefits varying strongly by model scale and workload. Autoregressive generation shows the clearest gains, driven largely by KV-cache compression, whereas embedding extraction provides limited or negative throughput benefits at smaller model scales. We attribute this theory–practice gap to the interaction of model-scale effects, memory-system bottlenecks, and software-stack limitations. These findings highlight the need for workload-specific empirical evaluation before adopting low-precision inference in scientific foundation models. Code availability https://github.com/jgi-genomeocean/genomeocean_efficiency",
+        "canonical_id": "DOI:10.64898/2026.08.09.743676",
+        "doi": "10.64898/2026.08.09.743676",
+        "authors": [
+          "Mutian Yu",
+          "Robert Egan",
+          "Feng-Chen Liu",
+          "Zhong Wang",
+          "Li-Zhen Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.64898/2026.08.10.744024",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.08.10.744024",
+        "title:benchmark averages hide the failures that matter quantizing esm2 for protein varianteffect prediction",
+        "url:https://www.semanticscholar.org/paper/d35a4aec5731b097c7f6cb5dd8f5083eda564da7"
+      ],
+      "record": {
+        "title": "Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for Protein Variant-Effect Prediction",
+        "source_url": "https://www.semanticscholar.org/paper/d35a4aec5731b097c7f6cb5dd8f5083eda564da7",
+        "year": 2026,
+        "published": "2026-08-14",
+        "abstract": "We benchmark six numerical precision configurations for ESM-2 protein language models across throughput, memory footprint and predictive accuracy, on two workloads with sharply different characteristics: bulk embedding extraction and deep mutational scanning (DMS) variant-effect scoring. Accuracy is evaluated on the complete ProteinGym substitution benchmark — 201 assays, 2.41M variants — at three model scales spanning 650M to 15B parameters, with a paired bootstrap clustered on protein. Three findings follow, and each contradicts a common practice. First, benchmark averages conceal the failure that decides deployability: no configuration shifts mean correlation by more than 0.007 at any scale, yet INT8 dynamic quantization — indistinguishable from fp32 on that mean at 3B (p = 0.34) — takes a single assay from ρ = 0.591 to 0.223. Selection must be made on worst-case, not mean, behaviour. Second, fidelity measured against fp32 bounds risk but cannot rank quality: over 3015 assay/configuration pairs it predicts the magnitude of ground-truth change (r = 0.56–0.81) but not its direction, and the INT4 effect differs significantly between 650M and 3B (+0.0101, p = 0.0007) with no monotone trend to extrapolate. Third, quantizing a large model is dominated by using a small one: of eighteen scale/configuration combinations only three are Pareto-optimal over accuracy, memory and speed, and all three are 650M. The one catastrophic failure we observe is a defect of default symmetric activation scaling, not of W8A8 itself: asymmetric activation quantization, a one-line change needing no calibration, removes every damaged assay. We also give a label-free screen for at-risk targets, and report four measurement artifacts encountered during this study, three of which inverted the result they were meant to measure.",
+        "canonical_id": "DOI:10.64898/2026.08.10.744024",
+        "doi": "10.64898/2026.08.10.744024",
+        "authors": [
+          "Qing Shao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.12932",
+      "identity_tokens": [
+        "id:arXiv:2608.12932",
+        "title:flashdrive flash visionlanguageaction inference for autonomous driving",
+        "url:https://www.semanticscholar.org/paper/35b221d0ad8878db7bc32f6858f31e0c6e6e5b68"
+      ],
+      "record": {
+        "title": "FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving",
+        "source_url": "https://www.semanticscholar.org/paper/35b221d0ad8878db7bc32f6858f31e0c6e6e5b68",
+        "year": 2026,
+        "published": "2026-08-13",
+        "abstract": "Vision-Language-Action (VLA) models promise to bring end-to-end reasoning to autonomous driving, but their computational cost remains far too high for real-time control. The core challenge is structural: VLA inference is not a single bottleneck but a cascade of four. Visual encoding wastes compute on overlapping video frames; language-model prefill recomputes context that could be carried over from the previous timestep; reasoning tokens are generated serially despite low entropy; and flow-matching denoising applies uniform compute to a non-uniform velocity field. Addressing any one stage in isolation leaves the others untouched. We propose FlashDrive, an algorithm-system co-design framework that targets all four stages simultaneously. Our key insight is that each bottleneck admits a distinct, lightweight algorithmic shortcut: temporal overlap enables streaming KV-cache reuse across frames; the low per-token entropy and strong intra-block correlations of driving-domain reasoning make a non-autoregressive diffusion drafter highly effective for speculative decoding; and the velocity field's structure---sharp at the endpoints, flat in the middle---permits adaptive step caching that concentrates compute where it matters. Layered on system-level CUDA Graph compilation and kernel fusion, these techniques compound. Applied to Alpamayo 1.5-10B with W4A8 quantization, FlashDrive reduces end-to-end latency from 717ms to 151ms (4.7x) while leaving accuracy essentially unchanged: minADE6@6.4s shifts by only 0.08m, minADE1 improves, and closed-loop collision and off-road rates improve in simulation. By raising a 10B-parameter reasoning VLA from 1.4~Hz to 6.6~Hz on a single GPU, FlashDrive moves end-to-end autonomous driving substantially closer to real-time deployment.",
+        "canonical_id": "arXiv:2608.12932",
+        "arxiv_id": "2608.12932",
+        "authors": [
+          "Zekai Li",
+          "Yihao Liang",
+          "Hongfei Zhang",
+          "Jian Chen",
+          "Yesheng Liang",
+          "Zhijian Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s44287-026-00319-1",
+      "identity_tokens": [
+        "id:DOI:10.1038/s44287-026-00319-1",
+        "title:autonomous driving chips",
+        "url:https://www.semanticscholar.org/paper/94a21c6cd3f48845c96802f0a5c01ff5abe82c31"
+      ],
+      "record": {
+        "title": "Autonomous driving chips",
+        "source_url": "https://www.semanticscholar.org/paper/94a21c6cd3f48845c96802f0a5c01ff5abe82c31",
+        "year": 2026,
+        "published": "2026-08-13",
+        "abstract": null,
+        "canonical_id": "DOI:10.1038/s44287-026-00319-1",
+        "doi": "10.1038/s44287-026-00319-1",
+        "authors": [
+          "Qiujing Lu",
+          "Sihong Wu",
+          "Yifan Liu",
+          "Ziwei Huang",
+          "Yueyao Zhou",
+          "Boyi Dong",
+          "Tianyi Zhang",
+          "Linsen Li",
+          "Kaichen Zhu",
+          "Haowen Shu",
+          "Haikang Diao",
+          "Kaiteng Tan",
+          "Yu Liu",
+          "Xudong Zheng",
+          "Hongkai Ning",
+          "Y. Wan",
+          "Xuanhan Wang",
+          "Runze Yuan",
+          "Hong-Yan Sang",
+          "Xiaodong Yan",
+          "Ling Wang",
+          "Tong Dang",
+          "Aijia Yao",
+          "Zhien Wang",
+          "Aaron D. Franklin",
+          "Zhengshuai Wang",
+          "Jeffrey H. Lang",
+          "Jinchi Han",
+          "Xiyuan Tang",
+          "Kenan Zhang",
+          "Tilo H. Yang",
+          "Peng Wu",
+          "Jiangtao Wang",
+          "Qing-Cheng Huang",
+          "Jiajia Sun",
+          "Jiefu Chen",
+          "Xuqing Wu",
+          "Yuanji Zheng",
+          "Lin Xu",
+          "Yunyue Zhu",
+          "Jian Wang",
+          "Rui Chen",
+          "Meng‐Chi Chen",
+          "Xingjun Wang",
+          "Xiang Cheng",
+          "Biao Qin",
+          "Kaihui Liu",
+          "Hailin Peng",
+          "Mario Lanza",
+          "Saptarshi Das",
+          "Lain-Jong Li",
+          "Xiangfeng Duan",
+          "Vwani Roychowdhury",
+          "V. Bulović",
+          "Tomás Palacios",
+          "Jing Kong",
+          "Shuo Feng",
+          "Lian-Mao Peng",
+          "Jianfeng Jiang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:9767488321a9f5b8673fdb4e982271294d0977b192ed7923cea4614d5ea6684d",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

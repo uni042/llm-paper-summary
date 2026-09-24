@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-scheduled-chat-30-20260921T143650Z-5d",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-91f6b64d7380c105",
+      "claim_id": "claim-3e3fc61362f70b7c5d3289a3",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-3e3fc61362f70b7c5d3289a3",
+      "claimed_at": "2026-09-21T14:37:11+00:00",
+      "expires_at": "2026-09-21T16:07:11+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-91f6b64d7380c105"
+      ],
+      "job": {
+        "job_id": "job-research-91f6b64d7380c105",
+        "type": "research",
+        "parent_job_id": "job-ee8845deb380e763",
+        "priority": 100,
+        "canonical_id": "DOI:10.1145/3789240.3822568",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Replacing NVMe Staging in LLM Inference with a High-Bandwidth CXL Memory Expander with an On-Device DMA Controller",
+        "source_url": "https://www.semanticscholar.org/paper/7a2499fd38665d8205c513eb3740ddedc3675c5e",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-34514b56228c-replacing-nvme-staging-in-llm-inference-with-a-high-bandwidth-cxl-memory-expander-with-an-on-device-dma-controller.md",
+        "selection_reason": "NVMe stagingをon-device DMA付きCXL memory expanderへ置換しGPU HBMとのPCIe P2PをNIXL backendで実装。51GB/s read・33GB/s writeを実測しSSD階層との比較に直接有用。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:17:43+00:00",
+        "blocker": "Primary full text could not be safely obtained in this invocation after checking materially distinct publication/official routes. No five-slot scientific record was synthesized from abstract-only material.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-7e62f792c2cc449ed553eca3.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-21T02:35:37+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-21T02:35:37+00:00",
+            "reason": "Primary full text could not be safely obtained in this invocation after checking materially distinct publication/official routes. No five-slot scientific record was synthesized from abstract-only material."
+          }
+        ],
+        "last_blocked_at": "2026-09-21T02:35:37+00:00",
+        "retry_queued_at": "2026-09-21T14:09:55+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T14:37:11+00:00",
+  "checkpoint_released": 0
+}

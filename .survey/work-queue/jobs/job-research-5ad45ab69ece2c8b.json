@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-5ad45ab69ece2c8b",
+  "type": "research",
+  "parent_job_id": "job-205b78df2854f187",
+  "priority": 90,
+  "canonical_id": "arXiv:2604.26968",
+  "arxiv_id": "2604.26968",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Predictive Multi-Tier Memory Management for KV Cache in Large-Scale GPU Inference",
+  "source_url": "https://arxiv.org/abs/2604.26968",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md",
+  "selection_reason": "This work explicitly manages KV state across GPU HBM, CPU DRAM, CXL memory, NVMe/GDS, RDMA and parallel filesystems with predictive movement, directly extending the survey's hierarchical-memory and storage-offload core lineage.",
+  "priority_breakdown": {
+    "base": 55,
+    "lineage": 20,
+    "recency": 15,
+    "venue": 0,
+    "total": 90
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T17:06:06+00:00"
+}

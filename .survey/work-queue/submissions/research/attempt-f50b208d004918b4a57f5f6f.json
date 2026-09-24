@@ -1,0 +1,15 @@
+{
+  "schema_version":1,
+  "transport_version":10,
+  "kind":"research",
+  "attempt_id":"attempt-f50b208d004918b4a57f5f6f",
+  "job_id":"job-research-96b3d1e9f6fc49b7",
+  "claim_id":"claim-f50b208d004918b4a57f5f6f",
+  "worker_id":"scheduled-chat-30",
+  "worker_kind":"scheduled_chat",
+  "paper_path":"papers/inference/99-other-inference-systems/2026-2608.07458-coinrag-contextualized-information-nugget-kv-cache-reuse-for-long-context-rag.md",
+  "status":"blocked",
+  "reason":"Primary-source full text could not be retrieved in this invocation. The arXiv abstract and author publication page were accessible, but the retrieval environment did not expose the arXiv full-text/PDF body. Fresh searches returned detailed third-party reviews and mirrors, but workflow v10 requires reading the primary source in full and forbids reconstructing the five-slot record from secondary summaries. Retry when the primary arXiv PDF/HTML is retrievable.",
+  "retrieval_evidence":[{"route":"arXiv abstract","url":"https://arxiv.org/abs/2608.07458","result":"Primary metadata and abstract retrieved; full paper body unavailable."},{"route":"author publication page","url":"https://gyuwankim.github.io/publication/coinrag/","result":"Author-hosted publication metadata/abstract retrieved, but no primary full-text body exposed to the retrieval environment."},{"route":"fresh title/arXiv search","result":"Third-party full-paper reviews/mirrors were found but intentionally not used as a substitute for primary full-text reading."}],
+  "retrieval_checked_at":"2026-09-22T08:36:00Z"
+}

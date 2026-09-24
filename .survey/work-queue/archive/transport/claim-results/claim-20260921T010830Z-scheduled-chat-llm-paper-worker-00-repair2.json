@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T010830Z-scheduled-chat-llm-paper-worker-00-repair2",
+  "worker_id": "scheduled-chat-llm-paper-worker-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-b865a4d050e3e427",
+      "claim_id": "claim-5c2c382bbce50b33c11d2e0b",
+      "worker_id": "scheduled-chat-llm-paper-worker-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-5c2c382bbce50b33c11d2e0b",
+      "claimed_at": "2026-09-21T01:08:54+00:00",
+      "expires_at": "2026-09-21T02:38:54+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-b865a4d050e3e427"
+      ],
+      "job": {
+        "job_id": "job-research-b865a4d050e3e427",
+        "type": "research",
+        "parent_job_id": "job-e4f8f4196ff22878",
+        "priority": 100,
+        "canonical_id": "DOI:10.14778/3827998.3828047",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "PolarKV: Tier Locally, Serve Globally-A KV Cache over Cloud Memory and Storage",
+        "source_url": "https://www.semanticscholar.org/paper/4c43bf9b5db42abd015e006496498ef7a013aa7a",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md",
+        "selection_reason": "cloud memoryとblock storageをco-located shard-paired階層にしてcross-tier network trafficを抑える商用KV cache service。実運用を含む評価でTTFT最大80%削減。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:11:38+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[2].description is too short | results.key_results[0] missing: baseline, interpretation | results.key_results[1] missing: baseline, interpretation | results.key_results[2] missing: baseline, interpretation | results.key_results[3] missing: baseline, interpretation",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[2].description is too short",
+          "results.key_results[0] missing: baseline, interpretation",
+          "results.key_results[1] missing: baseline, interpretation",
+          "results.key_results[2] missing: baseline, interpretation",
+          "results.key_results[3] missing: baseline, interpretation"
+        ],
+        "last_validation_failed_at": "2026-09-21T01:08:13+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-d35dd5011cf9f206c1a875f7"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-d35dd5011cf9f206c1a875f7.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T01:08:54+00:00",
+  "checkpoint_released": 0
+}

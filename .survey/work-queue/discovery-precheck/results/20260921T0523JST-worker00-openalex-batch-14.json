@@ -1,0 +1,872 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0523JST-worker00-openalex-batch-14",
+  "collector_id": "worker00-openalex-batching",
+  "run_key": "2026-09-21T05:01:46+09:00",
+  "axis": "OpenAlex recent LLM serving batching scheduling",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20serving%20batching%20scheduler%20throughput%20latency&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg4NTY2NDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjEyMDMxODY4J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4c9317e44738b2ffbb65a877337e41e6b2e8df88",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 35,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 8,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:23:07.185013+00:00",
+  "results": [
+    {
+      "title": "D5.1 Developing the Teaching Factory 5.0. Phases 1, 2, 3",
+      "source_url": "https://resolver.tno.nl/uuid:5acb0f84-17f4-44da-8d4c-82905e9ac0b9",
+      "year": 2026,
+      "published": "2026-09-17",
+      "canonical_id": "DOI:10.82135/tno-1034810",
+      "doi": "10.82135/tno-1034810",
+      "authors": [
+        "A. Papacharalampopoulos",
+        "P. Stavropoulos",
+        "O.M. Karagianni",
+        "U. Ziarsolo",
+        "A. Sotil",
+        "U. Elorza",
+        "M. Fedeli",
+        "F. Timo",
+        "M. Ippolito",
+        "A. Gumuliauskas",
+        "G. Aleksandraviciene",
+        "D. Eitmantyte",
+        "P. Dobozinskas",
+        "D. Vaitkaitis",
+        "P. Totterdill",
+        "P. Oeij",
+        "M. Kohlgrueber",
+        "A.J. Schroeder",
+        "H.C. Garmann Johnsen",
+        "S. Dhondt"
+      ]
+    },
+    {
+      "title": "TransMoE: Multimodal traffic prediction with large language model and mixture of experts",
+      "source_url": "https://doi.org/10.1016/j.trc.2026.106018",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "DOI:10.1016/j.trc.2026.106018",
+      "doi": "10.1016/j.trc.2026.106018",
+      "authors": [
+        "Songyi Cui",
+        "Sen Shen",
+        "Xinyue Guo",
+        "Ceyu Liu",
+        "Yimo Yan",
+        "Zhixuan Xiao",
+        "Dongkun Han",
+        "Lishan Sun"
+      ]
+    },
+    {
+      "title": "Progress of Digital Technologies in the Perioperative Management of Postoperative Delirium Among Older Adults",
+      "source_url": "https://doi.org/10.62713/aic.4800",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "DOI:10.62713/aic.4800",
+      "doi": "10.62713/aic.4800",
+      "authors": [
+        "Yao Lin",
+        "Tianmin Lu",
+        "刘春兰",
+        "Xiuyun Wu",
+        "Haiyan Jiang",
+        "Mingli Zhu",
+        "Weiying Dai"
+      ]
+    },
+    {
+      "title": "Prompt Engineering in the Segment Anything Model: Methodologies, Applications, and Emerging Challenges",
+      "source_url": "https://doi.org/10.34133/icomputing.1194",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2507.09562",
+      "arxiv_id": "2507.09562",
+      "authors": [
+        "Yidong Jiang",
+        "Jiangtong Li",
+        "Dawei Cheng"
+      ]
+    },
+    {
+      "title": "ResonatorLM: Causal Resonant Field Mixing for Efficient Long-Context Language Modeling",
+      "source_url": "https://doi.org/10.1007/978-3-032-38398-3_36",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2607.05583",
+      "arxiv_id": "2607.05583",
+      "authors": [
+        "Archie Chaudhury"
+      ]
+    },
+    {
+      "title": "Artificial intelligence techniques for the physical layer of non-terrestrial networks",
+      "source_url": "https://amsdottorato.unibo.it/view/dottorati/DOT539/>,",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "DOI:10.48676/unibo/amsdottorato/12581",
+      "doi": "10.48676/unibo/amsdottorato/12581",
+      "authors": [
+        "Bruno <1998> De Filippo"
+      ]
+    },
+    {
+      "title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
+      "source_url": "https://arxiv.org/abs/2609.15838",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15838",
+      "arxiv_id": "2609.15838",
+      "authors": [
+        "Huicheng Zhang",
+        "Xiyao Feng",
+        "Ze‐Tong Li",
+        "Chengkai Zhu",
+        "Xiao Shi",
+        "Xiwei Pan",
+        "Jinguo Liu",
+        "Ge Bai",
+        "Xin Eric Wang"
+      ]
+    },
+    {
+      "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+      "source_url": "https://arxiv.org/abs/2609.15311",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15311",
+      "arxiv_id": "2609.15311",
+      "authors": [
+        "Siying Yu",
+        "Yixun Hong",
+        "Guozhi Qiu",
+        "Jingci Liu",
+        "Feng Gu",
+        "C. Geng",
+        "Zhengrong Wang",
+        "Chen Zhang",
+        "Bei Yu"
+      ]
+    },
+    {
+      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+      "source_url": "https://arxiv.org/abs/2609.15636",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15636",
+      "arxiv_id": "2609.15636",
+      "authors": [
+        "Pengfei Xia",
+        "Tuo Hao",
+        "Shengwei Li",
+        "Jinjing Chen",
+        "Shiru Wei",
+        "Wenjun Zou",
+        "Rui Zhang",
+        "Hui Zang"
+      ]
+    },
+    {
+      "title": "When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis",
+      "source_url": "https://arxiv.org/abs/2609.15309",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15309",
+      "arxiv_id": "2609.15309",
+      "authors": [
+        "Kaiyuan Liu",
+        "Qiuyang Mang",
+        "Bo Peng",
+        "Wenhao Chai",
+        "Hanchen Li",
+        "Shreyas Pimpalgaonkar",
+        "Luke Zettlemoyer",
+        "Alex Dimakis",
+        "Alvin Cheung"
+      ]
+    },
+    {
+      "title": "Agentic Autoscaling through Worker-Pool Orchestration for LLM-driven Text Classification in Cloud Computing Environments",
+      "source_url": "https://arxiv.org/abs/2609.14898",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.14898",
+      "arxiv_id": "2609.14898",
+      "authors": [
+        "Bablu Kumar",
+        "Anshul Verma",
+        "Rajkumar Buyya"
+      ]
+    },
+    {
+      "title": "MOPAR: A Model Partitioning Framework for Deep Learning Inference Services on Serverless Platforms",
+      "source_url": "https://doi.org/10.1145/3832810.3832925",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2404.02445",
+      "arxiv_id": "2404.02445",
+      "authors": [
+        "Jiaang Duan",
+        "Shiyou Qian",
+        "Hanwen Hu",
+        "Jian Cao",
+        "Guangtao Xue"
+      ]
+    },
+    {
+      "title": "DB-SpMSpV: Dual-View Blocked Sparse Matrix-Sparse Vector Multiplication for Dynamic GPU Workloads",
+      "source_url": "https://doi.org/10.1145/3832810.3832821",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2608.16308",
+      "arxiv_id": "2608.16308",
+      "authors": [
+        "Xing Cong",
+        "Chenhao Xie",
+        "Rui Wang",
+        "Zhongzhi Luan",
+        "Yi Liu",
+        "Depei Qian"
+      ]
+    },
+    {
+      "title": "Communication-Efficient LLM Adaptation over Decentralized GPU Meshes",
+      "source_url": "https://arxiv.org/abs/2609.14339",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14339",
+      "arxiv_id": "2609.14339",
+      "authors": [
+        "Sameera Ramasinghe",
+        "Shamane Siriwardhana",
+        "Thalaiyasingam Ajanthan",
+        "Hadi M. Dolatabadi",
+        "Chamin P Hewa Koneputugodage",
+        "Gil Avraham",
+        "Violetta Shevchenko",
+        "James Snewin",
+        "Karol Pająk",
+        "Harry Xi",
+        "Alexander Long"
+      ]
+    },
+    {
+      "title": "Functional alignment of protein language models via reinforcement learning",
+      "source_url": "https://doi.org/10.1038/s41467-026-77557-2",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "DOI:10.1038/s41467-026-77557-2",
+      "doi": "10.1038/s41467-026-77557-2",
+      "authors": [
+        "Nathaniel Blalock",
+        "Srinath Seshadri",
+        "Kensuke Nakamura",
+        "Agrim Babbar",
+        "Sarah A. Fahlberg",
+        "Ameya Kulkarni",
+        "Philip A. Romero"
+      ]
+    },
+    {
+      "title": "A Multi-Resolution Multi-Domain Pre-Training Framework for Universal Traffic Forecasting",
+      "source_url": "https://arxiv.org/abs/2609.13878",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.13878",
+      "arxiv_id": "2609.13878",
+      "authors": [
+        "Zhouyang Liu",
+        "Jindong Han",
+        "Hao Wang",
+        "Xinyue Liu",
+        "Hui Gao",
+        "Dongsheng Li",
+        "Hao Liu"
+      ]
+    },
+    {
+      "title": "From DevOps to XOps: an agent-driven reference architecture for autonomous enterprise operations",
+      "source_url": "https://doi.org/10.1038/s41598-026-71189-8",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "DOI:10.1038/s41598-026-71189-8",
+      "doi": "10.1038/s41598-026-71189-8",
+      "authors": [
+        "Mete KÖSE",
+        "Ecir Uğur Küçüksille"
+      ]
+    },
+    {
+      "title": "Dynamic Scheduling Algorithm for Edge-cloud Collaborative Computing Resources Based on 5G NR-U and Distributed Large Model",
+      "source_url": "https://doi.org/10.26599/tst.2026.9010041",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "DOI:10.26599/tst.2026.9010041",
+      "doi": "10.26599/tst.2026.9010041",
+      "authors": [
+        "Defeng Duan",
+        "Hong Liu",
+        "Liyun Huang",
+        "Songlei Zhang",
+        "Bo Meng"
+      ]
+    },
+    {
+      "title": "Parameter-Efficient Retrievers for Polish and European Languages",
+      "source_url": "https://arxiv.org/abs/2609.12913",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12913",
+      "arxiv_id": "2609.12913",
+      "authors": [
+        "Sławomir Dadas",
+        "Rafał Poświata",
+        "Małgorzata Grębowiec",
+        "Michał Perełkiewicz"
+      ]
+    },
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://arxiv.org/abs/2609.12379",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Leshan Li",
+        "Zhui Zhu",
+        "Xianglong Deng",
+        "Yaojian Chen",
+        "Qingfeng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhiyuan Liu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.82135/tno-1034810",
+      "identity_tokens": [
+        "id:DOI:10.82135/tno-1034810",
+        "title:d51 developing the teaching factory 50 phases 1 2 3",
+        "url:https://resolver.tno.nl/uuid:5acb0f84-17f4-44da-8d4c-82905e9ac0b9"
+      ],
+      "record": {
+        "title": "D5.1 Developing the Teaching Factory 5.0. Phases 1, 2, 3",
+        "source_url": "https://resolver.tno.nl/uuid:5acb0f84-17f4-44da-8d4c-82905e9ac0b9",
+        "year": 2026,
+        "published": "2026-09-17",
+        "canonical_id": "DOI:10.82135/tno-1034810",
+        "doi": "10.82135/tno-1034810",
+        "authors": [
+          "A. Papacharalampopoulos",
+          "P. Stavropoulos",
+          "O.M. Karagianni",
+          "U. Ziarsolo",
+          "A. Sotil",
+          "U. Elorza",
+          "M. Fedeli",
+          "F. Timo",
+          "M. Ippolito",
+          "A. Gumuliauskas",
+          "G. Aleksandraviciene",
+          "D. Eitmantyte",
+          "P. Dobozinskas",
+          "D. Vaitkaitis",
+          "P. Totterdill",
+          "P. Oeij",
+          "M. Kohlgrueber",
+          "A.J. Schroeder",
+          "H.C. Garmann Johnsen",
+          "S. Dhondt"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.trc.2026.106018",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.trc.2026.106018",
+        "title:transmoe multimodal traffic prediction with large language model and mixture of experts",
+        "url:https://doi.org/10.1016/j.trc.2026.106018"
+      ],
+      "record": {
+        "title": "TransMoE: Multimodal traffic prediction with large language model and mixture of experts",
+        "source_url": "https://doi.org/10.1016/j.trc.2026.106018",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "DOI:10.1016/j.trc.2026.106018",
+        "doi": "10.1016/j.trc.2026.106018",
+        "authors": [
+          "Songyi Cui",
+          "Sen Shen",
+          "Xinyue Guo",
+          "Ceyu Liu",
+          "Yimo Yan",
+          "Zhixuan Xiao",
+          "Dongkun Han",
+          "Lishan Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.62713/aic.4800",
+      "identity_tokens": [
+        "id:DOI:10.62713/aic.4800",
+        "title:progress of digital technologies in the perioperative management of postoperative delirium among older adults",
+        "url:https://doi.org/10.62713/aic.4800"
+      ],
+      "record": {
+        "title": "Progress of Digital Technologies in the Perioperative Management of Postoperative Delirium Among Older Adults",
+        "source_url": "https://doi.org/10.62713/aic.4800",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "DOI:10.62713/aic.4800",
+        "doi": "10.62713/aic.4800",
+        "authors": [
+          "Yao Lin",
+          "Tianmin Lu",
+          "刘春兰",
+          "Xiuyun Wu",
+          "Haiyan Jiang",
+          "Mingli Zhu",
+          "Weiying Dai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.09562",
+      "identity_tokens": [
+        "id:DOI:10.34133/icomputing.1194",
+        "id:arXiv:2507.09562",
+        "title:prompt engineering in the segment anything model methodologies applications and emerging challenges",
+        "url:https://doi.org/10.34133/icomputing.1194"
+      ],
+      "record": {
+        "title": "Prompt Engineering in the Segment Anything Model: Methodologies, Applications, and Emerging Challenges",
+        "source_url": "https://doi.org/10.34133/icomputing.1194",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2507.09562",
+        "arxiv_id": "2507.09562",
+        "authors": [
+          "Yidong Jiang",
+          "Jiangtong Li",
+          "Dawei Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.05583",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-38398-3_36",
+        "id:arXiv:2607.05583",
+        "title:resonatorlm causal resonant field mixing for efficient longcontext language modeling",
+        "url:https://doi.org/10.1007/978-3-032-38398-3_36"
+      ],
+      "record": {
+        "title": "ResonatorLM: Causal Resonant Field Mixing for Efficient Long-Context Language Modeling",
+        "source_url": "https://doi.org/10.1007/978-3-032-38398-3_36",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2607.05583",
+        "arxiv_id": "2607.05583",
+        "authors": [
+          "Archie Chaudhury"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.48676/unibo/amsdottorato/12581",
+      "identity_tokens": [
+        "id:DOI:10.48676/unibo/amsdottorato/12581",
+        "title:artificial intelligence techniques for the physical layer of nonterrestrial networks",
+        "url:https://amsdottorato.unibo.it/view/dottorati/DOT539/>,"
+      ],
+      "record": {
+        "title": "Artificial intelligence techniques for the physical layer of non-terrestrial networks",
+        "source_url": "https://amsdottorato.unibo.it/view/dottorati/DOT539/>,",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "DOI:10.48676/unibo/amsdottorato/12581",
+        "doi": "10.48676/unibo/amsdottorato/12581",
+        "authors": [
+          "Bruno <1998> De Filippo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15838",
+      "identity_tokens": [
+        "id:arXiv:2609.15838",
+        "title:permatrix optimality is not enough threelevel optimization for lowrank llm compression",
+        "url:https://arxiv.org/abs/2609.15838"
+      ],
+      "record": {
+        "title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
+        "source_url": "https://arxiv.org/abs/2609.15838",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15838",
+        "arxiv_id": "2609.15838",
+        "authors": [
+          "Huicheng Zhang",
+          "Xiyao Feng",
+          "Ze‐Tong Li",
+          "Chengkai Zhu",
+          "Xiao Shi",
+          "Xiwei Pan",
+          "Jinguo Liu",
+          "Ge Bai",
+          "Xin Eric Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15311",
+      "identity_tokens": [
+        "id:arXiv:2609.15311",
+        "title:flashgpusim enabling gpu modeling for modern architectures and ai workloads",
+        "url:https://arxiv.org/abs/2609.15311"
+      ],
+      "record": {
+        "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+        "source_url": "https://arxiv.org/abs/2609.15311",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15311",
+        "arxiv_id": "2609.15311",
+        "authors": [
+          "Siying Yu",
+          "Yixun Hong",
+          "Guozhi Qiu",
+          "Jingci Liu",
+          "Feng Gu",
+          "C. Geng",
+          "Zhengrong Wang",
+          "Chen Zhang",
+          "Bei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15636",
+      "identity_tokens": [
+        "id:arXiv:2609.15636",
+        "title:trillionparameter moe in a box decoupling memory provisioning with highbandwidth flash",
+        "url:https://arxiv.org/abs/2609.15636"
+      ],
+      "record": {
+        "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+        "source_url": "https://arxiv.org/abs/2609.15636",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15636",
+        "arxiv_id": "2609.15636",
+        "authors": [
+          "Pengfei Xia",
+          "Tuo Hao",
+          "Shengwei Li",
+          "Jinjing Chen",
+          "Shiru Wei",
+          "Wenjun Zou",
+          "Rui Zhang",
+          "Hui Zang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15309",
+      "identity_tokens": [
+        "id:arXiv:2609.15309",
+        "title:when agents slow down understanding llm agents testtime strategies via elopertoken analysis",
+        "url:https://arxiv.org/abs/2609.15309"
+      ],
+      "record": {
+        "title": "When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis",
+        "source_url": "https://arxiv.org/abs/2609.15309",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15309",
+        "arxiv_id": "2609.15309",
+        "authors": [
+          "Kaiyuan Liu",
+          "Qiuyang Mang",
+          "Bo Peng",
+          "Wenhao Chai",
+          "Hanchen Li",
+          "Shreyas Pimpalgaonkar",
+          "Luke Zettlemoyer",
+          "Alex Dimakis",
+          "Alvin Cheung"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14898",
+      "identity_tokens": [
+        "id:arXiv:2609.14898",
+        "title:agentic autoscaling through workerpool orchestration for llmdriven text classification in cloud computing environments",
+        "url:https://arxiv.org/abs/2609.14898"
+      ],
+      "record": {
+        "title": "Agentic Autoscaling through Worker-Pool Orchestration for LLM-driven Text Classification in Cloud Computing Environments",
+        "source_url": "https://arxiv.org/abs/2609.14898",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.14898",
+        "arxiv_id": "2609.14898",
+        "authors": [
+          "Bablu Kumar",
+          "Anshul Verma",
+          "Rajkumar Buyya"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.02445",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832925",
+        "id:arXiv:2404.02445",
+        "title:mopar a model partitioning framework for deep learning inference services on serverless platforms",
+        "url:https://doi.org/10.1145/3832810.3832925"
+      ],
+      "record": {
+        "title": "MOPAR: A Model Partitioning Framework for Deep Learning Inference Services on Serverless Platforms",
+        "source_url": "https://doi.org/10.1145/3832810.3832925",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2404.02445",
+        "arxiv_id": "2404.02445",
+        "authors": [
+          "Jiaang Duan",
+          "Shiyou Qian",
+          "Hanwen Hu",
+          "Jian Cao",
+          "Guangtao Xue"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.16308",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832821",
+        "id:arXiv:2608.16308",
+        "title:dbspmspv dualview blocked sparse matrixsparse vector multiplication for dynamic gpu workloads",
+        "url:https://doi.org/10.1145/3832810.3832821"
+      ],
+      "record": {
+        "title": "DB-SpMSpV: Dual-View Blocked Sparse Matrix-Sparse Vector Multiplication for Dynamic GPU Workloads",
+        "source_url": "https://doi.org/10.1145/3832810.3832821",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2608.16308",
+        "arxiv_id": "2608.16308",
+        "authors": [
+          "Xing Cong",
+          "Chenhao Xie",
+          "Rui Wang",
+          "Zhongzhi Luan",
+          "Yi Liu",
+          "Depei Qian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14339",
+      "identity_tokens": [
+        "id:arXiv:2609.14339",
+        "title:communicationefficient llm adaptation over decentralized gpu meshes",
+        "url:https://arxiv.org/abs/2609.14339"
+      ],
+      "record": {
+        "title": "Communication-Efficient LLM Adaptation over Decentralized GPU Meshes",
+        "source_url": "https://arxiv.org/abs/2609.14339",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14339",
+        "arxiv_id": "2609.14339",
+        "authors": [
+          "Sameera Ramasinghe",
+          "Shamane Siriwardhana",
+          "Thalaiyasingam Ajanthan",
+          "Hadi M. Dolatabadi",
+          "Chamin P Hewa Koneputugodage",
+          "Gil Avraham",
+          "Violetta Shevchenko",
+          "James Snewin",
+          "Karol Pająk",
+          "Harry Xi",
+          "Alexander Long"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s41467-026-77557-2",
+      "identity_tokens": [
+        "id:DOI:10.1038/s41467-026-77557-2",
+        "title:functional alignment of protein language models via reinforcement learning",
+        "url:https://doi.org/10.1038/s41467-026-77557-2"
+      ],
+      "record": {
+        "title": "Functional alignment of protein language models via reinforcement learning",
+        "source_url": "https://doi.org/10.1038/s41467-026-77557-2",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "DOI:10.1038/s41467-026-77557-2",
+        "doi": "10.1038/s41467-026-77557-2",
+        "authors": [
+          "Nathaniel Blalock",
+          "Srinath Seshadri",
+          "Kensuke Nakamura",
+          "Agrim Babbar",
+          "Sarah A. Fahlberg",
+          "Ameya Kulkarni",
+          "Philip A. Romero"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13878",
+      "identity_tokens": [
+        "id:arXiv:2609.13878",
+        "title:a multiresolution multidomain pretraining framework for universal traffic forecasting",
+        "url:https://arxiv.org/abs/2609.13878"
+      ],
+      "record": {
+        "title": "A Multi-Resolution Multi-Domain Pre-Training Framework for Universal Traffic Forecasting",
+        "source_url": "https://arxiv.org/abs/2609.13878",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.13878",
+        "arxiv_id": "2609.13878",
+        "authors": [
+          "Zhouyang Liu",
+          "Jindong Han",
+          "Hao Wang",
+          "Xinyue Liu",
+          "Hui Gao",
+          "Dongsheng Li",
+          "Hao Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s41598-026-71189-8",
+      "identity_tokens": [
+        "id:DOI:10.1038/s41598-026-71189-8",
+        "title:from devops to xops an agentdriven reference architecture for autonomous enterprise operations",
+        "url:https://doi.org/10.1038/s41598-026-71189-8"
+      ],
+      "record": {
+        "title": "From DevOps to XOps: an agent-driven reference architecture for autonomous enterprise operations",
+        "source_url": "https://doi.org/10.1038/s41598-026-71189-8",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "DOI:10.1038/s41598-026-71189-8",
+        "doi": "10.1038/s41598-026-71189-8",
+        "authors": [
+          "Mete KÖSE",
+          "Ecir Uğur Küçüksille"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.26599/tst.2026.9010041",
+      "identity_tokens": [
+        "id:DOI:10.26599/tst.2026.9010041",
+        "title:dynamic scheduling algorithm for edgecloud collaborative computing resources based on 5g nru and distributed large model",
+        "url:https://doi.org/10.26599/tst.2026.9010041"
+      ],
+      "record": {
+        "title": "Dynamic Scheduling Algorithm for Edge-cloud Collaborative Computing Resources Based on 5G NR-U and Distributed Large Model",
+        "source_url": "https://doi.org/10.26599/tst.2026.9010041",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "DOI:10.26599/tst.2026.9010041",
+        "doi": "10.26599/tst.2026.9010041",
+        "authors": [
+          "Defeng Duan",
+          "Hong Liu",
+          "Liyun Huang",
+          "Songlei Zhang",
+          "Bo Meng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12913",
+      "identity_tokens": [
+        "id:arXiv:2609.12913",
+        "title:parameterefficient retrievers for polish and european languages",
+        "url:https://arxiv.org/abs/2609.12913"
+      ],
+      "record": {
+        "title": "Parameter-Efficient Retrievers for Polish and European Languages",
+        "source_url": "https://arxiv.org/abs/2609.12913",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12913",
+        "arxiv_id": "2609.12913",
+        "authors": [
+          "Sławomir Dadas",
+          "Rafał Poświata",
+          "Małgorzata Grębowiec",
+          "Michał Perełkiewicz"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12379",
+      "identity_tokens": [
+        "id:arXiv:2609.12379",
+        "title:forgemegakernel a general framework for efficient autoregressive model decode megakernels",
+        "url:https://arxiv.org/abs/2609.12379"
+      ],
+      "record": {
+        "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+        "source_url": "https://arxiv.org/abs/2609.12379",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12379",
+        "arxiv_id": "2609.12379",
+        "authors": [
+          "Leshan Li",
+          "Zhui Zhu",
+          "Xianglong Deng",
+          "Yaojian Chen",
+          "Qingfeng He",
+          "Yuxuan Li",
+          "Rong Zhao",
+          "Xu Han",
+          "Zhiyuan Liu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:3ce19115eeecf9f4d200b4e9cddcfb3aee1ffe2cf39e534221f72339572eea8c",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

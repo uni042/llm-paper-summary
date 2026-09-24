@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-8590c31aaee62eb7",
+  "type": "research",
+  "parent_job_id": "job-9b8c216a46edd0b5",
+  "priority": 76,
+  "canonical_id": "DOI:10.1145/3679240.3734604",
+  "title": "StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices",
+  "source_url": "https://doi.org/10.1145/3679240.3734604",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md",
+  "selection_reason": "ACM e-Energy 2025の一次査読論文。attention matrixの再計算を永続storage accessへ置換するcompute-vs-storage設計を提案し、LazyLLM比1.45x energy改善、MoE/PTQ拡張で2.64x/2.83x energy reductionを報告する。通常のKV offloadとは異なるstorage materialization系統として差分が明確。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T19:02:33+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T16:00:00+09:00",
+    "round": "specialist-moe-saturation-3",
+    "axis": "MoE expert cache・prefetch・placement・heterogeneous offload",
+    "query_summary": "MoE expert offload/prefetch/cache/placementを独立検索。DALI、MoE-SpAc、NPUMoE、CAP、ELDR、DraftExpert、Mixture-of-Experts Servingなどを軽量評価したが、月別canonical identity snapshotですべて既知。既知論文で候補数を水増しせず新規0件とした。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 7,
+    "duplicate_canonical_ids": ["arXiv:2602.03495", "arXiv:2603.09983", "arXiv:2604.18788", "arXiv:2607.05116", "arXiv:2607.00466", "arXiv:2607.24434", "arXiv:2607.17880"],
+    "next_axis_hint": "MoE軸は高重複のため、network/RDMA/collective・disaggregated serving transportへ移る",
+    "empty_round_reason": "strong_results_already_represented",
+    "search_windows": [{"topic":"2026-moe-systems","source":"web-arxiv-search","date_range":"2026-01..2026-09","category":"moe-inference","citation_direction":"none","query_family":"moe-expert-cache-prefetch-placement-offload","raw_result_count":18,"unseen_result_count":0,"duplicate_filtered_count":7,"rejection_filtered_count":0,"candidate_evaluation_count":7,"candidate_accepted_count":0,"position":"web-search-multi-query-3"}]
+  }
+}

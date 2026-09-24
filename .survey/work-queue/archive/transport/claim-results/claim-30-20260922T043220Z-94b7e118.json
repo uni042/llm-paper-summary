@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-30-20260922T043220Z-94b7e118",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-80e5caed751c8e16",
+      "claim_id": "claim-e2cb9c7e6843f61eff66a9dd",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-e2cb9c7e6843f61eff66a9dd",
+      "claimed_at": "2026-09-22T04:32:41+00:00",
+      "expires_at": "2026-09-22T06:02:41+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-80e5caed751c8e16"
+      ],
+      "job": {
+        "job_id": "job-research-80e5caed751c8e16",
+        "type": "research",
+        "parent_job_id": "job-51d5aef3157c84a0",
+        "priority": 98,
+        "canonical_id": "arXiv:2206.00277",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Task-Specific Expert Pruning for Sparse Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2206.00277",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+        "selection_reason": "downstream taskで寄与の小さいexpertをprogressiveにdropし、MoEをsingle-expert dense modelまで縮小して99.3% benefit維持・2x inference speedを報告する初期の直接的expert pruning。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T11:04:06+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism"
+        ],
+        "last_validation_failed_at": "2026-09-22T04:31:57+00:00"
+      },
+      "record_bank": "f",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-386d871abade4a6686fd7869"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-386d871abade4a6686fd7869.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-f",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-f/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T04:32:41+00:00",
+  "checkpoint_released": 0
+}

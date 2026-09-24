@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-59dc9473086573b3d534c617-01",
+  "kind": "research",
+  "attempt_id": "attempt-59dc9473086573b3d534c617",
+  "job_id": "job-research-10bf8d55e9caa5c4",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2605.07719-an-efficient-hybrid-sparse-attention-with-cpu-gpu-parallelism-for-long-context-inference.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:ae1e5af90a48e40287aae1276c3f0d612ff3708d07972cf31d53617ccdcce0b0",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-c/metadata.json",
+      "blob_sha": "1885ebd0650b0f5ef391c8fca08cd3cdd6f76e54"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-c/problem_method.json",
+      "blob_sha": "4b420499ce60fc8853a77ba705baa3f7df9c08f9"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-c/evaluation.json",
+      "blob_sha": "3976e8f4c6dd68a08bff8ede6caa00f5467383a5"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-c/results.json",
+      "blob_sha": "7dcfb4d151324c6b8c41404682690fb1fc33fd2c"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-c/positioning.json",
+      "blob_sha": "8df32afe08cd5faeeb7ce77fa735db0441013ac3"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "results.overview must explain the main result and its practical meaning"
+  ],
+  "checked_at": "2026-09-22T08:07:22+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T074430Z-scheduled-chat-llm-survey-run09-05",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-7059e5a5af8e2266",
+      "claim_id": "claim-df7a80addf0ba7c0728d75ec",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-df7a80addf0ba7c0728d75ec",
+      "claimed_at": "2026-09-20T07:44:28+00:00",
+      "expires_at": "2026-09-20T09:14:28+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-7059e5a5af8e2266"
+      ],
+      "job": {
+        "job_id": "job-research-7059e5a5af8e2266",
+        "type": "research",
+        "parent_job_id": "job-02f790281a1fd3fa",
+        "priority": 94,
+        "canonical_id": "arXiv:2305.17118",
+        "arxiv_id": "2305.17118",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time",
+        "source_url": "https://arxiv.org/abs/2305.17118",
+        "paper_path": "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "selection_reason": "Foundational test-time KV-cache compression method that maintains a fixed cache budget by preferentially retaining persistently important tokens.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T03:59:36+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T07:44:28+00:00",
+  "checkpoint_released": 0
+}

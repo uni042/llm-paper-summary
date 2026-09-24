@@ -1,0 +1,12 @@
+{
+  "schema_version":1,
+  "request_id":"rs-00-20260923T001800-limit-6f2a",
+  "run_key":"scheduled-chat-00-20260923T000224-7a91",
+  "worker_id":"scheduled-chat-00",
+  "scheduled_slot":"00",
+  "actual_invocation_start":"2026-09-23T00:02:24+09:00",
+  "runtime_condition":"platform_context_limit",
+  "runtime_condition_confirmed":true,
+  "runtime_condition_attempts":1,
+  "runtime_condition_detail":"While reading primary PDF for DOI:10.1109/TON.2026.3704584 attempt-c38aefc50c08da92ba7b2ee0, web retrieval returned 'Too many tokens / You have called web.run too many times. Do not call this tool again.' Primary PDF identity and active claim are durable on main; next run must resume this active claim before creating another claim and re-read the remaining primary-source sections needed for a complete five-slot record. Last successful operation before the platform rejection was retrieving the primary PDF through the authors' TU Berlin version and reading method/evaluation sections through the JTOM experiment analysis."
+}

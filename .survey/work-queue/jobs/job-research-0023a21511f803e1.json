@@ -1,0 +1,20 @@
+{
+  "job_id": "job-research-0023a21511f803e1",
+  "type": "research",
+  "parent_job_id": "job-5041f5c489f0e9c8",
+  "priority": 76,
+  "canonical_id": "arXiv:2601.08833",
+  "title": "Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications",
+  "source_url": "https://arxiv.org/abs/2601.08833",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md",
+  "selection_reason": "Systematic performance/energy evaluation of prefill-decode disaggregation across KV-transfer media and frequency-scaling strategies; useful for identifying when disaggregation is actually beneficial and for validating serving-system design assumptions.",
+  "status": "completed",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-17T06:04:08+00:00",
+  "completed_at": "2026-09-24T04:39:58+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-preload-54435f3f1e70e6def8dfca02.json"
+}

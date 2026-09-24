@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-3930d1453c4e909421448ada",
+  "job_id": "job-research-8f68f6b8d4d62651",
+  "claim_id": "claim-3930d1453c4e909421448ada",
+  "worker_id": "scheduled-chat-30b",
+  "status": "blocked",
+  "reason": "Primary-source full text could not be safely retrieved through materially distinct official routes in this retry. The official arXiv abstract metadata was discoverable, but direct official arXiv HTML and PDF fetches both returned DisabledError in the runtime. Search also found third-party renderings/copies, but workflow policy requires full reading from a primary/official source, so no five-slot record was inferred from those materials.",
+  "retrieval_evidence": [
+    "https://arxiv.org/abs/2608.15299 — official arXiv abstract/metadata discoverable via search, direct open returned DisabledError",
+    "https://arxiv.org/html/2608.15299 — official arXiv HTML direct open returned DisabledError",
+    "https://arxiv.org/pdf/2608.15299 — official arXiv PDF direct open returned DisabledError",
+    "No verified OpenReview/conference/author-project official full-text route was found in this retry; third-party alphaXiv/ResearchGate renderings were not used as primary evidence"
+  ],
+  "blocked_at": "2026-09-21T07:31:00Z"
+}

@@ -1,0 +1,29 @@
+{
+  "job_id": "job-research-0644cc2bbcfab5c7",
+  "type": "research",
+  "parent_job_id": "job-3b1fd4689282a02e",
+  "priority": 67,
+  "canonical_id": "arXiv:2609.23585",
+  "arxiv_id": "2609.23585",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Global Ranks Survive, Selected Heads Shift: BOS-Sink Topology under 4-bit Weight-Only Quantization",
+  "source_url": "https://www.semanticscholar.org/paper/f992275cced1c153a71a0ad630ebbff2f1ddefa1",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.23585-global-ranks-survive-selected-heads-shift-bos-sink-topology-under-4-bit-weight-only-quantization.md",
+  "selection_reason": "This paper studies whether sink-aware inference policies remain valid after 4-bit PTQ and includes Jetson Orin NX measurements, providing concrete deployment guidance for quantized attention/KV-management policies.",
+  "priority_breakdown": {
+    "base": 42,
+    "lineage": 10,
+    "recency": 15,
+    "venue": 0,
+    "total": 67
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-23T16:11:13+00:00"
+}

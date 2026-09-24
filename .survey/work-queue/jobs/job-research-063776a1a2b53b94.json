@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-063776a1a2b53b94",
+  "type": "research",
+  "parent_job_id": "job-b5bf583e62ddd130",
+  "priority": 95,
+  "canonical_id": "arXiv:2604.19835",
+  "arxiv_id": null,
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Expert Upcycling: Shifting the Compute-Efficient Frontier of Mixture-of-Experts",
+  "source_url": "https://arxiv.org/abs/2604.19835",
+  "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2026-2604.19835-expert-upcycling-progressive-moe-expansion.md",
+  "selection_reason": "既存MoEのexpertを複製してtop-kを保ったまま容量を増やすprogressive upcycling。固定active computeのまま容量を拡張し、学習GPU時間を32%削減しておりMoE training efficiencyの有力な設計。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T12:57:49+00:00"
+}

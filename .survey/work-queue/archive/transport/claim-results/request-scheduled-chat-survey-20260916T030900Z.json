@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "request-scheduled-chat-survey-20260916T030900Z",
+  "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-bd280ca93f0a6940",
+      "claim_id": "claim-a1a99a1e12c990178bfe94f8",
+      "worker_id": "scheduled-chat-llm-survey-20260916T025906Z",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-a1a99a1e12c990178bfe94f8",
+      "claimed_at": "2026-09-16T03:08:35+00:00",
+      "expires_at": "2026-09-16T04:39:41+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-bd280ca93f0a6940"
+      ],
+      "job": {
+        "job_id": "job-research-bd280ca93f0a6940",
+        "type": "research",
+        "parent_job_id": "job-694f3af256c78a3c",
+        "priority": 85,
+        "canonical_id": "arXiv:2605.02960",
+        "title": "MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving",
+        "source_url": "https://arxiv.org/abs/2605.02960",
+        "paper_path": "papers/inference/06-expert-offloading/2026-2605.02960-moe-prefill-async-expert-weight-streaming.md",
+        "selection_reason": "prefill-onlyの分類・推薦・検証workloadでは長いcompute windowを利用してexpert weightを非同期streamingできる点に着目し、activation AllToAllの代わりにexpert weight AllGatherを計算と完全重畳するAsyncEPを提案する。prefix-aware routingとtrue-FLOPs load trackingで飽和閾値も制御し、Qwen3-235B-A22Bの4 hardware/precision構成で最強distributed baseline比1.35〜1.37倍、long-context syntheticで最大1.59倍のthroughput、29.8〜36.2%のper-GPU model FLOPs utilizationを報告する。expert placementとcommunicationをprefill特性に合わせて再設計するためMoE serving系統で比較価値が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T00:03:32+00:00"
+      },
+      "record_bank": "b"
+    }
+  ],
+  "processed_at": "2026-09-16T03:08:35+00:00",
+  "checkpoint_released": 0,
+  "heartbeat_at": "2026-09-16T03:09:41+00:00"
+}

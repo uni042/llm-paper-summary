@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-52cbf286c62b67d46769963d",
+  "job_id": "job-research-3403bc6819a107c1",
+  "data": {
+    "hardware": "10台の異種エッジサーバーを模擬し、計算性能18〜120 TFLOPS、GPUメモリ12〜48 GB、CPUメモリ96〜512 GB、サーバー間帯域0.8〜10 Gbps、伝搬・待ち行列遅延0.3〜22 msを設定する。専用高速網ではなく通常インターネット相当の地理分散リンクを想定する。",
+    "software": "TopoCompressはPyTorchで実装され、トレース駆動の地理分散エッジシミュレータ上で評価される。公式コード公開URLは本文およびarXivページでは確認できない。",
+    "methodology": "Switch-Base-8E、Qwen-MoE-A2.7B、Mixtral-8x7Bの3モデルを用い、WikiText-103のパープレキシティ、SQuADのF1、GSM8Kの正解率で品質を測る。保持した較正集合で専門家配置、GPU/CPU常駐、ルーティング費用グラフ、層別圧縮閾値、圧縮後トラフィックを計算し、基盤モデル自体は固定する。既定では品質劣化予算2%、ビーム幅8、冗長配置メモリ予算比2.0、交互最適化5エポック、要求到着率40件/秒。比較対象はDanceMoE、MoE-Infinity、EdgeShard、SnapKV、H2Oで、通信量、平均/P99遅延、遠隔実行率、圧縮率、スループット、品質を比較する。さらにトポロジー認識スコア、GPU/CPU常駐最適化、トラフィック認識複製、低速オフラインループを個別に除くアブレーションを行う。",
+    "scope": "評価は実際の地理分散GPUクラスタでの実測ではなく、異種資源・帯域・遅延を与えたトレース駆動シミュレーションである。したがって、通信削減と品質制約のアルゴリズム上の傾向は比較できるが、実ネットワークの輻輳変動、GPUカーネル効率、実際のCPU-GPU転送競合、制御面オーバーヘッドを含む壁時計性能への一般化には追加の実機検証が必要である。"
+  },
+  "reservation": {"claim_id": "claim-preload-52cbf286c62b67d46769963d", "worker_id": "scheduled-chat-00", "worker_kind": "scheduled_chat"}
+}

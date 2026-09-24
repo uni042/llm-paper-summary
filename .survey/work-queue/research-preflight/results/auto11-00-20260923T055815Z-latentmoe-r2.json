@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "auto11-00-20260923T055815Z-latentmoe-r2",
+  "kind": "research",
+  "attempt_id": "attempt-3b0b8499edf3a5b73b2ca7f6",
+  "job_id": "job-research-88a9229b2587f714",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-auto11-20260923T055815Z",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-23T05:58:15+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:2aa513b7e9fdf221f89fe22ec0539c2b510d0549efb35de6480dda1b455352e7",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "0fc35ad052c7e4501cb785d1528045e63a8ffb65"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "afecc971cb4fbdac2e7ae1fd9d4954fc39ead22e"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "6a600c24790e82773f400af5dba78834a3b52665"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "7bf48fda12555754e7aed8b6329f5220889227d4"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "17432d6be8335917e7534fe9a970d5d5910776e6"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[1].description is too short",
+    "Japanese-first prose ratio is too low: 69.2% < 70% (Japanese=3648, Latin=1621)"
+  ],
+  "checked_at": "2026-09-23T06:11:13+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

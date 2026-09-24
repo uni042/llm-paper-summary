@@ -1,0 +1,20 @@
+{
+  "job_id": "job-research-24c58326f22e095e",
+  "type": "research",
+  "parent_job_id": "job-f557e7cd72d205b3",
+  "priority": 85,
+  "canonical_id": "arXiv:2502.06643",
+  "title": "MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing",
+  "source_url": "https://arxiv.org/abs/2502.06643",
+  "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md",
+  "selection_reason": "分散MoE配信でトークン負荷不均衡とGPU間通信スキューを同時に扱い、層間ルーティング依存性を利用したILPでexpert-to-GPU配置を最適化する。単一ノード9.3%、複数ノード17.5%のend-to-end高速化を報告し、expert placementと通信最適化の系統で直接的なシステム候補。",
+  "status": "completed",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-17T15:05:06+00:00",
+  "completed_at": "2026-09-17T15:47:32+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-788e1aebfc9c132ec95bfc8a.json"
+}

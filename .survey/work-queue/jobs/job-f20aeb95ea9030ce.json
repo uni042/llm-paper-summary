@@ -1,0 +1,23 @@
+{
+  "job_id": "job-f20aeb95ea9030ce",
+  "type": "discovery",
+  "lane": "discovery-ingest",
+  "priority": 50,
+  "status": "completed",
+  "ingest_only": true,
+  "ingest_for_submission": "work-queue/submissions/20260921T0516JST-discovery-round-05-openalex-memory.json",
+  "submitted_job_id": null,
+  "instructions": "Internal Discovery ingest job. Apply the already durable candidate payload; do not perform new research or discovery in this job.",
+  "completion": "Apply the durable Discovery round payload.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-20T20:15:58+00:00",
+  "completed_at": "2026-09-20T20:16:04+00:00",
+  "result_summary": {
+    "submitted_candidates": 0,
+    "final_duplicate_filtered_count": 0,
+    "research_jobs_added": 0,
+    "precheck_request_id": "20260921T0515JST-worker00-openalex-memory-08",
+    "precheck_snapshot_source_commit": "f8806712c679fc4befb69daff04ebd07d0ce3916"
+  }
+}

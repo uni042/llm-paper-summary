@@ -1,0 +1,22 @@
+{
+  "job_id": "job-research-f275a67ee6dad314",
+  "type": "research",
+  "parent_job_id": "job-263afcf8af4aad4d",
+  "priority": 86,
+  "canonical_id": "arXiv:2401.17644",
+  "arxiv_id": "2401.17644",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "BurstGPT: A Real-world Workload Dataset to Optimize LLM Serving Systems",
+  "source_url": "https://arxiv.org/abs/2401.17644",
+  "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2024-2401.17644-burstgpt.md",
+  "selection_reason": "Large real-world LLM serving trace dataset directly useful for evaluating scheduling, KV management, and disaggregation systems under realistic burstiness.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-19T18:22:27+00:00"
+}

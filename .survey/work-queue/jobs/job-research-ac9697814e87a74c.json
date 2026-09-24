@@ -1,0 +1,37 @@
+{
+  "job_id": "job-research-ac9697814e87a74c",
+  "type": "research",
+  "parent_job_id": "job-4ef274a8918622fd",
+  "priority": 97,
+  "canonical_id": "DOI:10.21203/rs.3.rs-10952127/v1",
+  "arxiv_id": null,
+  "doi": "10.21203/rs.3.rs-10952127/v1",
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "Reasoning-Aware Error-Bounded KV-Cache Compression and Sparse Attention for Long-Context LLMs",
+  "source_url": "https://doi.org/10.21203/rs.3.rs-10952127/v1",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.md",
+  "selection_reason": "Directly combines error-bounded KV-cache compression with sparse attention for long-context LLMs; strong fit for KV memory optimization.",
+  "status": "blocked",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-20T20:48:34+00:00",
+  "completed_at": "2026-09-22T16:46:38+00:00",
+  "blocker": "正規一次資料として指定されたResearch Square DOIを直接取得し、完全な一次本文を検索したが、この実行環境ではDOI本文を取得できず、題名とDOIによるWeb検索でも一次全文を発見できなかった。抄録断片や題名だけから5スロットを推測で完成させない。",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-0c2e3f57b64fd03e93d22174.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-22T16:46:38+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-22T16:46:38+00:00",
+      "reason": "正規一次資料として指定されたResearch Square DOIを直接取得し、完全な一次本文を検索したが、この実行環境ではDOI本文を取得できず、題名とDOIによるWeb検索でも一次全文を発見できなかった。抄録断片や題名だけから5スロットを推測で完成させない。"
+    }
+  ],
+  "first_blocked_at": "2026-09-22T16:46:38+00:00",
+  "last_blocked_at": "2026-09-22T16:46:38+00:00",
+  "retry_not_before": "2026-09-29T19:57:37+00:00"
+}

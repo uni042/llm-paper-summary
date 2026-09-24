@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-e1881183879733d0f0a4eb0e-r1",
+  "kind": "research",
+  "attempt_id": "attempt-e1881183879733d0f0a4eb0e",
+  "job_id": "job-research-6a21e987e314dd70",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:9888b4a512824d80b3fd70cae8af964b57de4d5bcb1d3ba91496782fc0ec1985",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "018987d19b7ef2264cdeb0c3e4e9c1accecf1968"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "dbca79cb3d2335ad05a58cb2fd8fe15868bde6db"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "211f5f4c8ae71a2bee2e1bf552118b2f72f63a39"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "eae6339e01077000432b763265f671160961db67"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "a13c7c37554294b8df63f3c73c59f788b3400cdc"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "Japanese-first prose ratio is too low: 42.2% < 70% (Japanese=1533, Latin=2097)"
+  ],
+  "checked_at": "2026-09-22T10:34:12+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

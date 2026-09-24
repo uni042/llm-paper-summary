@@ -1,0 +1,842 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-b9e92b4c22933bcd05f7",
+  "collector_id": "discovery-preload-normal",
+  "run_key": "preload:preload-b9e92b4c22933bcd05f7",
+  "axis": "recent KV cache compression quantization long-context inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20quantization%20long%20context%20inference&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg4MDQ4MDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjA2MTU3MjQ1J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "29e23316e7ec5f7a6f0283cb43a56c488b8e7649",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 52,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 3,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T23:13:13.271695+00:00",
+  "preload_id": "preload-b9e92b4c22933bcd05f7",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Intelligence by Appointment",
+      "source_url": "http://arxiv.org/abs/2603.05225",
+      "year": 2026,
+      "published": "2026-09-21",
+      "canonical_id": "arXiv:2603.05225",
+      "arxiv_id": "2603.05225",
+      "authors": [
+        "Brad Pierce"
+      ]
+    },
+    {
+      "title": "What is the Role of Small Models in the LLM Era: A Survey",
+      "source_url": "https://doi.org/10.1162/coli.a.652",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2409.06857",
+      "arxiv_id": "2409.06857",
+      "authors": [
+        "Lihu Chen",
+        "Gaël Varoquaux"
+      ]
+    },
+    {
+      "title": "Towards Trustworthy and Scalable Agentic Smart Manufacturing: A Roadmap for Generative AI-integrated MAS 2.0",
+      "source_url": "https://doi.org/10.1088/2631-7990/aea9db",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "DOI:10.1088/2631-7990/aea9db",
+      "doi": "10.1088/2631-7990/aea9db",
+      "authors": [
+        "Jiewu Leng",
+        "Gang Wang",
+        "T. J. Zhu",
+        "Jiarui Cao",
+        "Chong Chen",
+        "Hailong Cui",
+        "Yuanfa Dong",
+        "Haisong Huang",
+        "Lucheng Chen",
+        "Xiaoping Lu",
+        "Qiang Liu",
+        "Xin Chen",
+        "Lihui Wang",
+        "Weiming Shen"
+      ]
+    },
+    {
+      "title": "Recency Forcing: Bridging the Long-Horizon Gap in Autoregressive Video Generation",
+      "source_url": "https://arxiv.org/abs/2609.19729",
+      "year": 2026,
+      "published": "2026-09-17",
+      "canonical_id": "arXiv:2609.19729",
+      "arxiv_id": "2609.19729",
+      "authors": [
+        "Tri Cao",
+        "Hung Nguyen",
+        "Phong Nguyen",
+        "Khoi Nguyen"
+      ]
+    },
+    {
+      "title": "Review of: \"Towards More Economical Context-Augmented LLM Generation by Reusing Stored KV Cache\"",
+      "source_url": "https://doi.org/10.32388/f2fnb3",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "DOI:10.32388/f2fnb3",
+      "doi": "10.32388/f2fnb3",
+      "authors": [
+        "Evgeny V. Arsentyev"
+      ]
+    },
+    {
+      "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+      "source_url": "https://arxiv.org/abs/2609.18005",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "arXiv:2609.18005",
+      "arxiv_id": "2609.18005",
+      "authors": [
+        "Jerry Kaplan"
+      ]
+    },
+    {
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "year": 2026,
+      "published": "2026-09-16",
+      "canonical_id": "arXiv:2609.18916",
+      "arxiv_id": "2609.18916",
+      "authors": [
+        "Alex M. Tseng",
+        "Prannay Kaul",
+        "Luca Zancato",
+        "Wei Xia",
+        "Stefano Soatto"
+      ]
+    },
+    {
+      "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models",
+      "source_url": "https://doi.org/10.1145/3845797",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "arXiv:2401.00625",
+      "arxiv_id": "2401.00625",
+      "authors": [
+        "Guangji Bai",
+        "Zheng Chai",
+        "Ling Chen",
+        "Shiyu Wang",
+        "Jiaying Lu",
+        "Nan Zhang",
+        "Tingwei Shi",
+        "Ziyang Yu",
+        "Mengdan Zhu",
+        "Yifei Zhang",
+        "Xinyuan Song",
+        "Carl Yang",
+        "Yue Cheng",
+        "Liang Zhao"
+      ]
+    },
+    {
+      "title": "Survey on Verifiable Machine Learning",
+      "source_url": "https://doi.org/10.1145/3847111",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "DOI:10.1145/3847111",
+      "doi": "10.1145/3847111",
+      "authors": [
+        "He Lyu",
+        "Xikun Jiang",
+        "Boris Düdder",
+        "Yuya Sasaki"
+      ]
+    },
+    {
+      "title": "Divergence Timing and Cumulative Disagreement under KV-Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2609.16617",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "arXiv:2609.16617",
+      "arxiv_id": "2609.16617",
+      "authors": [
+        "Xinyue Luo",
+        "Fei Yu"
+      ]
+    },
+    {
+      "title": "AeroLat: Channel-Aware Latent Space Semantic Communication for Decentralized UAV Swarms",
+      "source_url": "https://arxiv.org/abs/2609.16947",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "arXiv:2609.16947",
+      "arxiv_id": "2609.16947",
+      "authors": [
+        "Rajdeep Ghosh",
+        "Goparaju Venkata Seshachala Sree Vatsava",
+        "Sudip Misra"
+      ]
+    },
+    {
+      "title": "Optimizing Few-Shot Learning in Pruned Large Language Models with Task-Specific Prompts",
+      "source_url": "https://arrow.tudublin.ie/scschcomdis/289",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "DOI:10.21427/zs9c-0w38",
+      "doi": "10.21427/zs9c-0w38",
+      "authors": [
+        "Danyal Aftab"
+      ]
+    },
+    {
+      "title": "Uncertainty-aware Bayesian federated learning for low-resource neural machine translation at the edge",
+      "source_url": "https://doi.org/10.1038/s41598-026-71065-5",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "DOI:10.1038/s41598-026-71065-5",
+      "doi": "10.1038/s41598-026-71065-5",
+      "authors": [
+        "Na Yao",
+        "Xin Yang",
+        "Feng Xiao"
+      ]
+    },
+    {
+      "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers for Latent Reasoning With Dynamic Routing",
+      "source_url": "https://arxiv.org/abs/2609.15160",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15160",
+      "arxiv_id": "2609.15160",
+      "authors": [
+        "Mingqian Yu",
+        "Wenpeng Zhang",
+        "Peilin Zhao"
+      ]
+    },
+    {
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "source_url": "https://arxiv.org/abs/2609.13356",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.13356",
+      "arxiv_id": "2609.13356",
+      "authors": [
+        "Jiyan He",
+        "Guang Liang",
+        "Hao Liu",
+        "Haoxiang Guan",
+        "Jinbo Sun",
+        "Junyi Guo",
+        "Wenjun Feng",
+        "Yantai Xie",
+        "Yifei Shen",
+        "Bin Shao",
+        "Chuyang Wei",
+        "Kai Chen",
+        "Kexin Zhou",
+        "Minghang Zhu",
+        "Shuxin Zheng",
+        "Tie-Yan Liu",
+        "Taine Zhao",
+        "Wenhui Zhu",
+        "Xueyin Xu",
+        "Xiaoqing Zhang",
+        "Yatao Li",
+        "Yuxuan Ren"
+      ]
+    },
+    {
+      "title": "Off-Target Effects of Response-Style Alignment in a Korean 27B Language Model",
+      "source_url": "https://arxiv.org/abs/2609.11291",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11291",
+      "arxiv_id": "2609.11291",
+      "authors": [
+        "HyoJung Han"
+      ]
+    },
+    {
+      "title": "FlexComp: One Model for Every Ratio in Context Compression",
+      "source_url": "https://arxiv.org/abs/2609.11192",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11192",
+      "arxiv_id": "2609.11192",
+      "authors": [
+        "Kaiyan Zhao",
+        "Zhongtao Miao",
+        "Akiko Aizawa",
+        "Yoshimasa Tsuruoka"
+      ]
+    },
+    {
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.10355",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10355",
+      "arxiv_id": "2609.10355",
+      "authors": [
+        "Killian Steunou",
+        "Yannis Tevissen",
+        "Mounîm A. El Yacoubi"
+      ]
+    },
+    {
+      "title": "$S^3$-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants",
+      "source_url": "https://arxiv.org/abs/2609.09852",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.09852",
+      "arxiv_id": "2609.09852",
+      "authors": [
+        "Heyang Liu",
+        "Jiayi Huang",
+        "Wenyang Xiao",
+        "Ziyang Cheng",
+        "Lixin Zhang",
+        "Zhen Liu",
+        "Miao He",
+        "Ronghua Wu",
+        "Qunshan Gu",
+        "Yanfeng Wang",
+        "Yu Wang"
+      ]
+    },
+    {
+      "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+      "source_url": "https://arxiv.org/abs/2609.08443",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08443",
+      "arxiv_id": "2609.08443",
+      "authors": [
+        "Lin Guan",
+        "Jia‐Qi Yang",
+        "Zhishan Zhao",
+        "Jiaqi Huang",
+        "Hangyu Wang",
+        "Longbin Li",
+        "Beichuan Zhang",
+        "Haonan Jiang",
+        "Jinan Ni",
+        "Xiangyu Fan",
+        "Xiaowen Li",
+        "Ziyao Ren",
+        "Yuhang Qi",
+        "Xiaolong Zhu",
+        "Xuanyuan Luo",
+        "Qiwei Chen",
+        "Yi Cheng",
+        "Lele Yu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.05225",
+      "identity_tokens": [
+        "id:arXiv:2603.05225",
+        "title:intelligence by appointment",
+        "url:http://arxiv.org/abs/2603.05225"
+      ],
+      "record": {
+        "title": "Intelligence by Appointment",
+        "source_url": "http://arxiv.org/abs/2603.05225",
+        "year": 2026,
+        "published": "2026-09-21",
+        "canonical_id": "arXiv:2603.05225",
+        "arxiv_id": "2603.05225",
+        "authors": [
+          "Brad Pierce"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.06857",
+      "identity_tokens": [
+        "id:DOI:10.1162/coli.a.652",
+        "id:arXiv:2409.06857",
+        "title:what is the role of small models in the llm era a survey",
+        "url:https://doi.org/10.1162/coli.a.652"
+      ],
+      "record": {
+        "title": "What is the Role of Small Models in the LLM Era: A Survey",
+        "source_url": "https://doi.org/10.1162/coli.a.652",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2409.06857",
+        "arxiv_id": "2409.06857",
+        "authors": [
+          "Lihu Chen",
+          "Gaël Varoquaux"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1088/2631-7990/aea9db",
+      "identity_tokens": [
+        "id:DOI:10.1088/2631-7990/aea9db",
+        "title:towards trustworthy and scalable agentic smart manufacturing a roadmap for generative aiintegrated mas 20",
+        "url:https://doi.org/10.1088/2631-7990/aea9db"
+      ],
+      "record": {
+        "title": "Towards Trustworthy and Scalable Agentic Smart Manufacturing: A Roadmap for Generative AI-integrated MAS 2.0",
+        "source_url": "https://doi.org/10.1088/2631-7990/aea9db",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "DOI:10.1088/2631-7990/aea9db",
+        "doi": "10.1088/2631-7990/aea9db",
+        "authors": [
+          "Jiewu Leng",
+          "Gang Wang",
+          "T. J. Zhu",
+          "Jiarui Cao",
+          "Chong Chen",
+          "Hailong Cui",
+          "Yuanfa Dong",
+          "Haisong Huang",
+          "Lucheng Chen",
+          "Xiaoping Lu",
+          "Qiang Liu",
+          "Xin Chen",
+          "Lihui Wang",
+          "Weiming Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19729",
+      "identity_tokens": [
+        "id:arXiv:2609.19729",
+        "title:recency forcing bridging the longhorizon gap in autoregressive video generation",
+        "url:https://arxiv.org/abs/2609.19729"
+      ],
+      "record": {
+        "title": "Recency Forcing: Bridging the Long-Horizon Gap in Autoregressive Video Generation",
+        "source_url": "https://arxiv.org/abs/2609.19729",
+        "year": 2026,
+        "published": "2026-09-17",
+        "canonical_id": "arXiv:2609.19729",
+        "arxiv_id": "2609.19729",
+        "authors": [
+          "Tri Cao",
+          "Hung Nguyen",
+          "Phong Nguyen",
+          "Khoi Nguyen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.32388/f2fnb3",
+      "identity_tokens": [
+        "id:DOI:10.32388/f2fnb3",
+        "title:review of towards more economical contextaugmented llm generation by reusing stored kv cache",
+        "url:https://doi.org/10.32388/f2fnb3"
+      ],
+      "record": {
+        "title": "Review of: \"Towards More Economical Context-Augmented LLM Generation by Reusing Stored KV Cache\"",
+        "source_url": "https://doi.org/10.32388/f2fnb3",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "DOI:10.32388/f2fnb3",
+        "doi": "10.32388/f2fnb3",
+        "authors": [
+          "Evgeny V. Arsentyev"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18005",
+      "identity_tokens": [
+        "id:arXiv:2609.18005",
+        "title:a calibrated instrument for measuring how inference optimizations affect output quality",
+        "url:https://arxiv.org/abs/2609.18005"
+      ],
+      "record": {
+        "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+        "source_url": "https://arxiv.org/abs/2609.18005",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "arXiv:2609.18005",
+        "arxiv_id": "2609.18005",
+        "authors": [
+          "Jerry Kaplan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18916",
+      "identity_tokens": [
+        "id:arXiv:2609.18916",
+        "title:higherorder pruning of experts in mixtureofexperts language models",
+        "url:https://arxiv.org/abs/2609.18916"
+      ],
+      "record": {
+        "title": "Higher-order pruning of experts in mixture-of-experts language models",
+        "source_url": "https://arxiv.org/abs/2609.18916",
+        "year": 2026,
+        "published": "2026-09-16",
+        "canonical_id": "arXiv:2609.18916",
+        "arxiv_id": "2609.18916",
+        "authors": [
+          "Alex M. Tseng",
+          "Prannay Kaul",
+          "Luca Zancato",
+          "Wei Xia",
+          "Stefano Soatto"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.00625",
+      "identity_tokens": [
+        "id:DOI:10.1145/3845797",
+        "id:arXiv:2401.00625",
+        "title:beyond efficiency a systematic survey of resourceefficient large language models",
+        "url:https://doi.org/10.1145/3845797"
+      ],
+      "record": {
+        "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models",
+        "source_url": "https://doi.org/10.1145/3845797",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "arXiv:2401.00625",
+        "arxiv_id": "2401.00625",
+        "authors": [
+          "Guangji Bai",
+          "Zheng Chai",
+          "Ling Chen",
+          "Shiyu Wang",
+          "Jiaying Lu",
+          "Nan Zhang",
+          "Tingwei Shi",
+          "Ziyang Yu",
+          "Mengdan Zhu",
+          "Yifei Zhang",
+          "Xinyuan Song",
+          "Carl Yang",
+          "Yue Cheng",
+          "Liang Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3847111",
+      "identity_tokens": [
+        "id:DOI:10.1145/3847111",
+        "title:survey on verifiable machine learning",
+        "url:https://doi.org/10.1145/3847111"
+      ],
+      "record": {
+        "title": "Survey on Verifiable Machine Learning",
+        "source_url": "https://doi.org/10.1145/3847111",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "DOI:10.1145/3847111",
+        "doi": "10.1145/3847111",
+        "authors": [
+          "He Lyu",
+          "Xikun Jiang",
+          "Boris Düdder",
+          "Yuya Sasaki"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16617",
+      "identity_tokens": [
+        "id:arXiv:2609.16617",
+        "title:divergence timing and cumulative disagreement under kvcache eviction",
+        "url:https://arxiv.org/abs/2609.16617"
+      ],
+      "record": {
+        "title": "Divergence Timing and Cumulative Disagreement under KV-Cache Eviction",
+        "source_url": "https://arxiv.org/abs/2609.16617",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "arXiv:2609.16617",
+        "arxiv_id": "2609.16617",
+        "authors": [
+          "Xinyue Luo",
+          "Fei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16947",
+      "identity_tokens": [
+        "id:arXiv:2609.16947",
+        "title:aerolat channelaware latent space semantic communication for decentralized uav swarms",
+        "url:https://arxiv.org/abs/2609.16947"
+      ],
+      "record": {
+        "title": "AeroLat: Channel-Aware Latent Space Semantic Communication for Decentralized UAV Swarms",
+        "source_url": "https://arxiv.org/abs/2609.16947",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "arXiv:2609.16947",
+        "arxiv_id": "2609.16947",
+        "authors": [
+          "Rajdeep Ghosh",
+          "Goparaju Venkata Seshachala Sree Vatsava",
+          "Sudip Misra"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21427/zs9c-0w38",
+      "identity_tokens": [
+        "id:DOI:10.21427/zs9c-0w38",
+        "title:optimizing fewshot learning in pruned large language models with taskspecific prompts",
+        "url:https://arrow.tudublin.ie/scschcomdis/289"
+      ],
+      "record": {
+        "title": "Optimizing Few-Shot Learning in Pruned Large Language Models with Task-Specific Prompts",
+        "source_url": "https://arrow.tudublin.ie/scschcomdis/289",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "DOI:10.21427/zs9c-0w38",
+        "doi": "10.21427/zs9c-0w38",
+        "authors": [
+          "Danyal Aftab"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s41598-026-71065-5",
+      "identity_tokens": [
+        "id:DOI:10.1038/s41598-026-71065-5",
+        "title:uncertaintyaware bayesian federated learning for lowresource neural machine translation at the edge",
+        "url:https://doi.org/10.1038/s41598-026-71065-5"
+      ],
+      "record": {
+        "title": "Uncertainty-aware Bayesian federated learning for low-resource neural machine translation at the edge",
+        "source_url": "https://doi.org/10.1038/s41598-026-71065-5",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "DOI:10.1038/s41598-026-71065-5",
+        "doi": "10.1038/s41598-026-71065-5",
+        "authors": [
+          "Na Yao",
+          "Xin Yang",
+          "Feng Xiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15160",
+      "identity_tokens": [
+        "id:arXiv:2609.15160",
+        "title:tloopformer tokenlevel elasticdepth looped transformers for latent reasoning with dynamic routing",
+        "url:https://arxiv.org/abs/2609.15160"
+      ],
+      "record": {
+        "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers for Latent Reasoning With Dynamic Routing",
+        "source_url": "https://arxiv.org/abs/2609.15160",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15160",
+        "arxiv_id": "2609.15160",
+        "authors": [
+          "Mingqian Yu",
+          "Wenpeng Zhang",
+          "Peilin Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13356",
+      "identity_tokens": [
+        "id:arXiv:2609.13356",
+        "title:zgcm1 a fully open and extremely efficient foundation model for math and agentic search",
+        "url:https://arxiv.org/abs/2609.13356"
+      ],
+      "record": {
+        "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+        "source_url": "https://arxiv.org/abs/2609.13356",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.13356",
+        "arxiv_id": "2609.13356",
+        "authors": [
+          "Jiyan He",
+          "Guang Liang",
+          "Hao Liu",
+          "Haoxiang Guan",
+          "Jinbo Sun",
+          "Junyi Guo",
+          "Wenjun Feng",
+          "Yantai Xie",
+          "Yifei Shen",
+          "Bin Shao",
+          "Chuyang Wei",
+          "Kai Chen",
+          "Kexin Zhou",
+          "Minghang Zhu",
+          "Shuxin Zheng",
+          "Tie-Yan Liu",
+          "Taine Zhao",
+          "Wenhui Zhu",
+          "Xueyin Xu",
+          "Xiaoqing Zhang",
+          "Yatao Li",
+          "Yuxuan Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11291",
+      "identity_tokens": [
+        "id:arXiv:2609.11291",
+        "title:offtarget effects of responsestyle alignment in a korean 27b language model",
+        "url:https://arxiv.org/abs/2609.11291"
+      ],
+      "record": {
+        "title": "Off-Target Effects of Response-Style Alignment in a Korean 27B Language Model",
+        "source_url": "https://arxiv.org/abs/2609.11291",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11291",
+        "arxiv_id": "2609.11291",
+        "authors": [
+          "HyoJung Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11192",
+      "identity_tokens": [
+        "id:arXiv:2609.11192",
+        "title:flexcomp one model for every ratio in context compression",
+        "url:https://arxiv.org/abs/2609.11192"
+      ],
+      "record": {
+        "title": "FlexComp: One Model for Every Ratio in Context Compression",
+        "source_url": "https://arxiv.org/abs/2609.11192",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11192",
+        "arxiv_id": "2609.11192",
+        "authors": [
+          "Kaiyan Zhao",
+          "Zhongtao Miao",
+          "Akiko Aizawa",
+          "Yoshimasa Tsuruoka"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10355",
+      "identity_tokens": [
+        "id:arXiv:2609.10355",
+        "title:why is video still so expensive a survey of inferenceefficiency mechanisms in video and audiovisual llms",
+        "url:https://arxiv.org/abs/2609.10355"
+      ],
+      "record": {
+        "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.10355",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10355",
+        "arxiv_id": "2609.10355",
+        "authors": [
+          "Killian Steunou",
+          "Yannis Tevissen",
+          "Mounîm A. El Yacoubi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09852",
+      "identity_tokens": [
+        "id:arXiv:2609.09852",
+        "title:s3bench evaluating speech interaction models as scientific voice assistants",
+        "url:https://arxiv.org/abs/2609.09852"
+      ],
+      "record": {
+        "title": "$S^3$-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants",
+        "source_url": "https://arxiv.org/abs/2609.09852",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.09852",
+        "arxiv_id": "2609.09852",
+        "authors": [
+          "Heyang Liu",
+          "Jiayi Huang",
+          "Wenyang Xiao",
+          "Ziyang Cheng",
+          "Lixin Zhang",
+          "Zhen Liu",
+          "Miao He",
+          "Ronghua Wu",
+          "Qunshan Gu",
+          "Yanfeng Wang",
+          "Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08443",
+      "identity_tokens": [
+        "id:arXiv:2609.08443",
+        "title:sequenceo1 endtoend ultralong 100k sequence modeling in recommendation with lowrank caching",
+        "url:https://arxiv.org/abs/2609.08443"
+      ],
+      "record": {
+        "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+        "source_url": "https://arxiv.org/abs/2609.08443",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08443",
+        "arxiv_id": "2609.08443",
+        "authors": [
+          "Lin Guan",
+          "Jia‐Qi Yang",
+          "Zhishan Zhao",
+          "Jiaqi Huang",
+          "Hangyu Wang",
+          "Longbin Li",
+          "Beichuan Zhang",
+          "Haonan Jiang",
+          "Jinan Ni",
+          "Xiangyu Fan",
+          "Xiaowen Li",
+          "Ziyao Ren",
+          "Yuhang Qi",
+          "Xiaolong Zhu",
+          "Xuanyuan Luo",
+          "Qiwei Chen",
+          "Yi Cheng",
+          "Lele Yu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:13693d49a2a34765c12f1852db92971dad2f47cdef73ee48ea334ecc0a3a8741",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,1710 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-adaptive-max-20260920-adamoe-refs",
+  "collector_id": "manual-user-adaptive-max-adamoe-refs",
+  "run_key": "manual-user-adaptive-max-2026-09-20-backrefs",
+  "axis": "explicit user request: backward references of Adaptive Expert Computation / Compression seed arXiv:2406.13233 (AdaMoE references)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2406.13233/references",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "eebc8d97f38ca6d8fe0983c0b673e9c98a330447",
+  "raw_search_result_count": 36,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 34,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:59:57.173750+00:00",
+  "results": [
+    {
+      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts",
+      "source_url": "https://www.semanticscholar.org/paper/ebcf108f8bc42140721ff02b6727b0a291362957",
+      "year": 2024,
+      "published": "2024-04-22",
+      "abstract": "Fine-tuning Large Language Models (LLMs) is a common practice to adapt pre-trained models for specific applications. While methods like LoRA have effectively addressed GPU memory constraints during fine-tuning, their performance often falls short, especially in multi-task scenarios. In contrast, Mixture-of-Expert (MoE) models, such as Mixtral 8x7B, demonstrate remarkable performance in multi-task learning scenarios while maintaining a reduced parameter count. However, the resource requirements of these MoEs remain challenging, particularly for consumer-grade GPUs with less than 24GB memory. To tackle these challenges, we propose MixLoRA, an approach to construct a resource-efficient sparse MoE model based on LoRA. MixLoRA inserts multiple LoRA-based experts within the feed-forward network block of a frozen pre-trained dense model and employs a commonly used top-k router. Unlike other LoRA-based MoE methods, MixLoRA enhances model performance by utilizing independent attention-layer LoRA adapters. Additionally, an auxiliary load balance loss is employed to address the imbalance problem of the router. Our evaluations show that MixLoRA improves about 9% accuracy compared to state-of-the-art PEFT methods in multi-task learning scenarios. We also propose a new high-throughput framework to alleviate the computation and memory bottlenecks during the training and inference of MOE models. This framework reduces GPU memory consumption by 40% and token computation latency by 30% during both training and inference.",
+      "canonical_id": "arXiv:2404.15159",
+      "arxiv_id": "2404.15159",
+      "authors": [
+        "Dengchun Li",
+        "Ying-Zi Ma",
+        "Naizheng Wang",
+        "Zhiyuan Cheng",
+        "Lei Duan",
+        "Jie Zuo",
+        "Cal Yang",
+        "Mingjie Tang"
+      ]
+    },
+    {
+      "title": "Higher Layers Need More LoRA Experts",
+      "source_url": "https://www.semanticscholar.org/paper/94e531c3b139cdc50ab4b7be21a29dba8f87e3c0",
+      "year": 2024,
+      "published": "2024-02-13",
+      "abstract": "Parameter-efficient tuning (PEFT) techniques like low-rank adaptation (LoRA) offer training efficiency on Large Language Models, but their impact on model performance remains limited. Recent efforts integrate LoRA and Mixture-of-Experts (MoE) to improve the performance of PEFT methods. Despite promising results, research on improving the efficiency of LoRA with MoE is still in its early stages. Recent studies have shown that experts in the MoE architecture have different strengths and also exhibit some redundancy. Does this statement also apply to parameter-efficient MoE? In this paper, we introduce a novel parameter-efficient MoE method, \\textit{\\textbf{M}oE-L\\textbf{o}RA with \\textbf{L}ayer-wise Expert \\textbf{A}llocation (MoLA)} for Transformer-based models, where each model layer has the flexibility to employ a varying number of LoRA experts. We investigate several architectures with varying layer-wise expert configurations. Experiments on six well-known NLP and commonsense QA benchmarks demonstrate that MoLA achieves equal or superior performance compared to all baselines. We find that allocating more LoRA experts to higher layers further enhances the effectiveness of models with a certain number of experts in total. With much fewer parameters, this allocation strategy outperforms the setting with the same number of experts in every layer. This work can be widely used as a plug-and-play parameter-efficient tuning approach for various applications. The code is available at https://github.com/GCYZSL/MoLA.",
+      "canonical_id": "arXiv:2402.08562",
+      "arxiv_id": "2402.08562",
+      "authors": [
+        "Chongyang Gao",
+        "Kezhen Chen",
+        "Jinmeng Rao",
+        "Baochen Sun",
+        "Ruibo Liu",
+        "Daiyi Peng",
+        "Yawen Zhang",
+        "Xiaoyuan Guo",
+        "Jie Yang",
+        "V. Subrahmanian"
+      ]
+    },
+    {
+      "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/16d6e1ed1cf72212f6154644f3aa59d18bc95fda",
+      "year": 2024,
+      "published": "2024-01-11",
+      "abstract": "In the era of large language models, Mixture-of-Experts (MoE) is a promising architecture for managing computational costs when scaling up model parameters. However, conventional MoE architectures like GShard, which activate the top-$K$ out of $N$ experts, face challenges in ensuring expert specialization, i.e. each expert acquires non-overlapping and focused knowledge. In response, we propose the DeepSeekMoE architecture towards ultimate expert specialization. It involves two principal strategies: (1) finely segmenting the experts into $mN$ ones and activating $mK$ from them, allowing for a more flexible combination of activated experts; (2) isolating $K_s$ experts as shared ones, aiming at capturing common knowledge and mitigating redundancy in routed experts. Starting from a modest scale with 2B parameters, we demonstrate that DeepSeekMoE 2B achieves comparable performance with GShard 2.9B, which has 1.5 times the expert parameters and computation. In addition, DeepSeekMoE 2B nearly approaches the performance of its dense counterpart with the same number of total parameters, which set the upper bound of MoE models. Subsequently, we scale up DeepSeekMoE to 16B parameters and show that it achieves comparable performance with LLaMA2 7B, with only about 40% of computations. Further, our preliminary efforts to scale up DeepSeekMoE to 145B parameters consistently validate its substantial advantages over the GShard architecture, and show its performance comparable with DeepSeek 67B, using only 28.5% (maybe even 18.2%) of computations.",
+      "canonical_id": "arXiv:2401.06066",
+      "arxiv_id": "2401.06066",
+      "authors": [
+        "Damai Dai",
+        "C. Deng",
+        "Cheng-Gang Zhao",
+        "R. X. Xu",
+        "Hua-Zuo Gao",
+        "Deli Chen",
+        "Jia-Shi Li",
+        "Wangding Zeng",
+        "Xing-Kai Yu",
+        "Yu Wu",
+        "Zhen-Da Xie",
+        "Y. K. Li",
+        "Pan-Pan Huang",
+        "Fuli Luo",
+        "C. Ruan",
+        "Zhifang Sui",
+        "W. Liang"
+      ]
+    },
+    {
+      "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning",
+      "source_url": "https://www.semanticscholar.org/paper/5aae7d84f8eaa55f3386cee41d94769e7ab01e9d",
+      "year": 2023,
+      "published": "2023-09-11",
+      "abstract": "The Mixture of Experts (MoE) is a widely known neural architecture where an ensemble of specialized sub-models optimizes overall performance with a constant computational cost. However, conventional MoEs pose challenges at scale due to the need to store all experts in memory. In this paper, we push MoE to the limit. We propose extremely parameter-efficient MoE by uniquely combining MoE architecture with lightweight experts.Our MoE architecture outperforms standard parameter-efficient fine-tuning (PEFT) methods and is on par with full fine-tuning by only updating the lightweight experts -- less than 1% of an 11B parameters model. Furthermore, our method generalizes to unseen tasks as it does not depend on any prior task knowledge. Our research underscores the versatility of the mixture of experts architecture, showcasing its ability to deliver robust performance even when subjected to rigorous parameter constraints. Our code used in all the experiments is publicly available here: https://github.com/for-ai/parameter-efficient-moe.",
+      "canonical_id": "arXiv:2309.05444",
+      "arxiv_id": "2309.05444",
+      "authors": [
+        "Ted Zadouri",
+        "A. Ustun",
+        "Arash Ahmadian",
+        "Beyza Ermics",
+        "Acyr F. Locatelli",
+        "Sara Hooker"
+      ]
+    },
+    {
+      "title": "Llama 2: Open Foundation and Fine-Tuned Chat Models",
+      "source_url": "https://www.semanticscholar.org/paper/104b0bb1da562d53cbda87aec79ef6a2827d191a",
+      "year": 2023,
+      "published": "2023-07-18",
+      "abstract": "In this work, we develop and release Llama 2, a collection of pretrained and fine-tuned large language models (LLMs) ranging in scale from 7 billion to 70 billion parameters. Our fine-tuned LLMs, called Llama 2-Chat, are optimized for dialogue use cases. Our models outperform open-source chat models on most benchmarks we tested, and based on our human evaluations for helpfulness and safety, may be a suitable substitute for closed-source models. We provide a detailed description of our approach to fine-tuning and safety improvements of Llama 2-Chat in order to enable the community to build on our work and contribute to the responsible development of LLMs.",
+      "canonical_id": "arXiv:2307.09288",
+      "arxiv_id": "2307.09288",
+      "authors": [
+        "Hugo Touvron",
+        "Louis Martin",
+        "Kevin R. Stone",
+        "Peter Albert",
+        "Amjad Almahairi",
+        "Yasmine Babaei",
+        "Nikolay Bash-lykov",
+        "Soumya Batra",
+        "Prajjwal Bhargava",
+        "Shruti Bhosale",
+        "D. Bikel",
+        "Lukas Blecher",
+        "Cristian Canton Ferrer",
+        "Moya Chen",
+        "Guillem Cucurull",
+        "David Esiobu",
+        "Jude Fernandes",
+        "Jeremy Fu",
+        "Wenyin Fu",
+        "Brian Fuller",
+        "Cynthia Gao",
+        "Vedanuj Goswami",
+        "Naman Goyal",
+        "A. Hartshorn",
+        "Saghar Hosseini",
+        "Rui Hou",
+        "Hakan Inan",
+        "Marcin Kardas",
+        "Viktor Kerkez",
+        "Madian Khabsa",
+        "Isabel M. Kloumann",
+        "A. Korenev",
+        "Punit Singh Koura",
+        "M. Lachaux",
+        "Thibaut Lavril",
+        "Jenya Lee",
+        "Diana Liskovich",
+        "Yinghai Lu",
+        "Yuning Mao",
+        "X. Martinet",
+        "Todor Mihaylov",
+        "Pushkar Mishra",
+        "Igor Molybog",
+        "Yixin Nie",
+        "Andrew Poulton",
+        "J. Reizenstein",
+        "Rashi Rungta",
+        "Kalyan Saladi",
+        "A. Schelten",
+        "Ruan Silva",
+        "Eric Michael Smith",
+        "R. Subramanian",
+        "Xia Tan",
+        "Binh Tang",
+        "Ross Taylor",
+        "Adina Williams",
+        "Jian Xiang Kuan",
+        "Puxin Xu",
+        "Zheng-Xu Yan",
+        "Iliyan Zarov",
+        "Yuchen Zhang",
+        "Angela Fan",
+        "M. Kambadur",
+        "Sharan Narang",
+        "Aur'elien Rodriguez",
+        "Robert Stojnic",
+        "Sergey Edunov",
+        "Thomas Scialom"
+      ]
+    },
+    {
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/32ac52069e562d4f900afee70bdca63f53461481",
+      "year": 2023,
+      "published": "2023-05-23",
+      "abstract": "We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters~(LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes. We use QLoRA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. A lemon-picked analysis demonstrates where Guanaco fails compared to ChatGPT. We release all of our models and code, including CUDA kernels for 4-bit training.",
+      "canonical_id": "arXiv:2305.14314",
+      "arxiv_id": "2305.14314",
+      "authors": [
+        "Tim Dettmers",
+        "Artidoro Pagnoni",
+        "Ari Holtzman",
+        "Luke Zettlemoyer"
+      ]
+    },
+    {
+      "title": "Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering",
+      "source_url": "https://www.semanticscholar.org/paper/d3135733aa39dec20ce72aa138589dda27c8406d",
+      "year": 2022,
+      "published": "2022-09-20",
+      "abstract": "When answering a question, humans utilize the information available across different modalities to synthesize a consistent and complete chain of thought (CoT). This process is normally a black box in the case of deep learning models like large-scale language models. Recently, science question benchmarks have been used to diagnose the multi-hop reasoning ability and interpretability of an AI system. However, existing datasets fail to provide annotations for the answers, or are restricted to the textual-only modality, small scales, and limited domain diversity. To this end, we present Science Question Answering (ScienceQA), a new benchmark that consists of ~21k multimodal multiple choice questions with a diverse set of science topics and annotations of their answers with corresponding lectures and explanations. We further design language models to learn to generate lectures and explanations as the chain of thought (CoT) to mimic the multi-hop reasoning process when answering ScienceQA questions. ScienceQA demonstrates the utility of CoT in language models, as CoT improves the question answering performance by 1.20% in few-shot GPT-3 and 3.99% in fine-tuned UnifiedQA. We also explore the upper bound for models to leverage explanations by feeding those in the input; we observe that it improves the few-shot performance of GPT-3 by 18.96%. Our analysis further shows that language models, similar to humans, benefit from explanations to learn from fewer data and achieve the same performance with just 40% of the data. The data and code are available at https://scienceqa.github.io.",
+      "canonical_id": "arXiv:2209.09513",
+      "arxiv_id": "2209.09513",
+      "authors": [
+        "Pan Lu",
+        "Swaroop Mishra",
+        "Tony Xia",
+        "Liang Qiu",
+        "Kai-Wei Chang",
+        "Song-Chun Zhu",
+        "Oyvind Tafjord",
+        "Peter Clark",
+        "A. Kalyan"
+      ]
+    },
+    {
+      "title": "Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning",
+      "source_url": "https://www.semanticscholar.org/paper/7cdaa08890895e1ad92afb5fad429690ad7b1dac",
+      "year": 2022,
+      "published": "2022-05-11",
+      "abstract": "Few-shot in-context learning (ICL) enables pre-trained language models to perform a previously-unseen task without any gradient-based training by feeding a small number of training examples as part of the input. ICL incurs substantial computational, memory, and storage costs because it involves processing all of the training examples every time a prediction is made. Parameter-efficient fine-tuning (PEFT) (e.g. adapter modules, prompt tuning, sparse update methods, etc.) offers an alternative paradigm where a small set of parameters are trained to enable a model to perform the new task. In this paper, we rigorously compare few-shot ICL and PEFT and demonstrate that the latter offers better accuracy as well as dramatically lower computational costs. Along the way, we introduce a new PEFT method called (IA)$^3$ that scales activations by learned vectors, attaining stronger performance while only introducing a relatively tiny amount of new parameters. We also propose a simple recipe based on the T0 model called T-Few that can be applied to new tasks without task-specific tuning or modifications. We validate the effectiveness of T-Few on completely unseen tasks by applying it to the RAFT benchmark, attaining super-human performance for the first time and outperforming the state-of-the-art by 6% absolute. All of the code used in our experiments is publicly available.",
+      "canonical_id": "arXiv:2205.05638",
+      "arxiv_id": "2205.05638",
+      "authors": [
+        "Haokun Liu",
+        "Derek Tam",
+        "Mohammed Muqeeth",
+        "Jay Mohta",
+        "Tenghao Huang",
+        "Mohit Bansal",
+        "Colin Raffel"
+      ]
+    },
+    {
+      "title": "OPT: Open Pre-trained Transformer Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/13a0d8bb38f739990c8cd65a44061c6534f17221",
+      "year": 2022,
+      "published": "2022-05-02",
+      "abstract": "Large language models, which are often trained for hundreds of thousands of compute days, have shown remarkable capabilities for zero- and few-shot learning. Given their computational cost, these models are difficult to replicate without significant capital. For the few that are available through APIs, no access is granted to the full model weights, making them difficult to study. We present Open Pre-trained Transformers (OPT), a suite of decoder-only pre-trained transformers ranging from 125M to 175B parameters, which we aim to fully and responsibly share with interested researchers. We show that OPT-175B is comparable to GPT-3, while requiring only 1/7th the carbon footprint to develop. We are also releasing our logbook detailing the infrastructure challenges we faced, along with code for experimenting with all of the released models.",
+      "canonical_id": "arXiv:2205.01068",
+      "arxiv_id": "2205.01068",
+      "authors": [
+        "Susan Zhang",
+        "Stephen Roller",
+        "Naman Goyal",
+        "Mikel Artetxe",
+        "Moya Chen",
+        "Shuohui Chen",
+        "Christopher Dewan",
+        "Mona T. Diab",
+        "Xian Li",
+        "Xi Victoria Lin",
+        "Todor Mihaylov",
+        "Myle Ott",
+        "Sam Shleifer",
+        "Kurt Shuster",
+        "Daniel Simig",
+        "Punit Singh Koura",
+        "Anjali Sridhar",
+        "Tianlu Wang",
+        "Luke Zettlemoyer"
+      ]
+    },
+    {
+      "title": "PaLM: Scaling Language Modeling with Pathways",
+      "source_url": "https://www.semanticscholar.org/paper/094ff971d6a8b8ff870946c9b3ce5aa173617bfb",
+      "year": 2022,
+      "published": "2022-04-05",
+      "abstract": "Large language models have been shown to achieve remarkable performance across a variety of natural language tasks using few-shot learning, which drastically reduces the number of task-specific training examples needed to adapt the model to a particular application. To further our understanding of the impact of scale on few-shot learning, we trained a 540-billion parameter, densely activated, Transformer language model, which we call Pathways Language Model PaLM. We trained PaLM on 6144 TPU v4 chips using Pathways, a new ML system which enables highly efficient training across multiple TPU Pods. We demonstrate continued benefits of scaling by achieving state-of-the-art few-shot learning results on hundreds of language understanding and generation benchmarks. On a number of these tasks, PaLM 540B achieves breakthrough performance, outperforming the finetuned state-of-the-art on a suite of multi-step reasoning tasks, and outperforming average human performance on the recently released BIG-bench benchmark. A significant number of BIG-bench tasks showed discontinuous improvements from model scale, meaning that performance steeply increased as we scaled to our largest model. PaLM also has strong capabilities in multilingual tasks and source code generation, which we demonstrate on a wide array of benchmarks. We additionally provide a comprehensive analysis on bias and toxicity, and study the extent of training data memorization with respect to model scale. Finally, we discuss the ethical considerations related to large language models and discuss potential mitigation strategies.",
+      "canonical_id": "arXiv:2204.02311",
+      "arxiv_id": "2204.02311",
+      "authors": [
+        "A. Chowdhery",
+        "Sharan Narang",
+        "Jacob Devlin",
+        "Maarten Bosma",
+        "Gaurav Mishra",
+        "Adam Roberts",
+        "P. Barham",
+        "Hyung Won Chung",
+        "Charles Sutton",
+        "Sebastian Gehrmann",
+        "P. Schuh",
+        "Kensen Shi",
+        "Sasha Tsvyashchenko",
+        "Joshua Maynez",
+        "Abhishek Rao",
+        "Parker Barnes",
+        "Yi Tay",
+        "Noam Shazeer",
+        "Vinodkumar Prabhakaran",
+        "Emily Reif",
+        "Nan Du",
+        "Ben Hutchinson",
+        "Reiner Pope",
+        "James Bradbury",
+        "Jacob Austin",
+        "M. Isard",
+        "Guy Gur-Ari",
+        "Pengcheng Yin",
+        "Toju Duke",
+        "Anselm Levskaya",
+        "S. Ghemawat",
+        "Sunipa Dev",
+        "H. Michalewski",
+        "Xavier García",
+        "Vedant Misra",
+        "Kevin Robinson",
+        "L. Fedus",
+        "Denny Zhou",
+        "Daphne Ippolito",
+        "D. Luan",
+        "Hyeontaek Lim",
+        "Barret Zoph",
+        "A. Spiridonov",
+        "Ryan Sepassi",
+        "David Dohan",
+        "Shivani Agrawal",
+        "Mark Omernick",
+        "Andrew M. Dai",
+        "Thanumalayan Sankaranarayana Pillai",
+        "Marie Pellat",
+        "Aitor Lewkowycz",
+        "Erica Moreira",
+        "R. Child",
+        "Oleksandr Polozov",
+        "Katherine Lee",
+        "Zongwei Zhou",
+        "Xuezhi Wang",
+        "Brennan Saeta",
+        "Mark Díaz",
+        "Orhan Firat",
+        "Michele Catasta",
+        "Jason Wei",
+        "K. Meier-Hellstern",
+        "D. Eck",
+        "J. Dean",
+        "Slav Petrov",
+        "Noah Fiedel"
+      ]
+    },
+    {
+      "title": "Input-Tuning: Adapting Unfamiliar Inputs to Frozen Pretrained Models",
+      "source_url": "https://www.semanticscholar.org/paper/2e4cdd36d77b9d814638fc2cd6c703535cb1d2f7",
+      "year": 2022,
+      "published": "2022-03-07",
+      "abstract": "Recently the prompt-tuning paradigm has attracted significant attention. By only tuning continuous prompts with a frozen pre-trained language model (PLM), prompt-tuning takes a step towards deploying a shared frozen PLM to serve numerous downstream tasks. Although prompt-tuning shows good performance on certain natural language understanding (NLU) tasks, its effectiveness on natural language generation (NLG) tasks is still under-explored. In this paper, we argue that one of the factors hindering the development of prompt-tuning on NLG tasks is the unfamiliar inputs (i.e., inputs are linguistically different from the pretraining corpus). For example, our preliminary exploration reveals a large performance gap between prompt-tuning and fine-tuning when unfamiliar inputs occur frequently in NLG tasks. This motivates us to propose input-tuning, which fine-tunes both the continuous prompts and the input representations, leading to a more effective way to adapt unfamiliar inputs to frozen PLMs. Our proposed input-tuning is conceptually simple and empirically powerful. Experimental results on seven NLG tasks demonstrate that input-tuning is significantly and consistently better than prompt-tuning. Furthermore, on three of these tasks, input-tuning can achieve a comparable or even better performance than fine-tuning.",
+      "canonical_id": "arXiv:2203.03131",
+      "arxiv_id": "2203.03131",
+      "authors": [
+        "Shengnan An",
+        "Yifei Li",
+        "Zeqi Lin",
+        "Qian Liu",
+        "Bei Chen",
+        "Qiang Fu",
+        "Weizhu Chen",
+        "Nanning Zheng",
+        "Jian-Guang Lou"
+      ]
+    },
+    {
+      "title": "Mixture-of-Experts with Expert Choice Routing",
+      "source_url": "https://www.semanticscholar.org/paper/bbc57e1b3cf90e09b64377f13de455793bc81ad5",
+      "year": 2022,
+      "published": "2022-02-18",
+      "abstract": "Sparsely-activated Mixture-of-experts (MoE) models allow the number of parameters to greatly increase while keeping the amount of computation for a given token or a given sample unchanged. However, a poor expert routing strategy (e.g. one resulting in load imbalance) can cause certain experts to be under-trained, leading to an expert being under or over-specialized. Prior work allocates a fixed number of experts to each token using a top-k function regardless of the relative importance of different tokens. To address this, we propose a heterogeneous mixture-of-experts employing an expert choice method. Instead of letting tokens select the top-k experts, we have experts selecting the top-k tokens. As a result, each token can be routed to a variable number of experts and each expert can have a fixed bucket size. We systematically study pre-training speedups using the same computational resources of the Switch Transformer top-1 and GShard top-2 gating of prior work and find that our method improves training convergence time by more than 2x. For the same computational cost, our method demonstrates higher performance in fine-tuning 11 selected tasks in the GLUE and SuperGLUE benchmarks. For a smaller activation cost, our method outperforms the T5 dense model in 7 out of the 11 tasks.",
+      "canonical_id": "arXiv:2202.09368",
+      "arxiv_id": "2202.09368",
+      "authors": [
+        "Yanqi Zhou",
+        "Tao Lei",
+        "Han-Chu Liu",
+        "Nan Du",
+        "Yanping Huang",
+        "Vincent Zhao",
+        "Andrew M. Dai",
+        "Zhifeng Chen",
+        "Quoc V. Le",
+        "J. Laudon"
+      ]
+    },
+    {
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/a8ca46b171467ceb2d7652fbfb67fe701ad86092",
+      "year": 2021,
+      "published": "2021-06-17",
+      "abstract": "An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.",
+      "canonical_id": "arXiv:2106.09685",
+      "arxiv_id": "2106.09685",
+      "authors": [
+        "Edward J. Hu",
+        "Yelong Shen",
+        "Phillip Wallis",
+        "Zeyuan Allen-Zhu",
+        "Yuanzhi Li",
+        "Shean Wang",
+        "Weizhu Chen"
+      ]
+    },
+    {
+      "title": "Hash Layers For Large Sparse Models",
+      "source_url": "https://www.semanticscholar.org/paper/0611d2f2ea6a3c8fb8534f42758a5a3e9c7bc8fe",
+      "year": 2021,
+      "published": "2021-06-08",
+      "abstract": "We investigate the training of sparse layers that use different parameters for different inputs based on hashing in large Transformer models. Specifically, we modify the feedforward layer to hash to different sets of weights depending on the current token, over all tokens in the sequence. We show that this procedure either outperforms or is competitive with learning-to-route mixture-of-expert methods such as Switch Transformers and BASE Layers, while requiring no routing parameters or extra terms in the objective function such as a load balancing loss, and no sophisticated assignment algorithm. We study the performance of different hashing techniques, hash sizes and input features, and show that balanced and random hashes focused on the most local features work best, compared to either learning clusters or using longer-range context. We show our approach works well both on large language modeling and dialogue tasks, and on downstream fine-tuning tasks.",
+      "canonical_id": "arXiv:2106.04426",
+      "arxiv_id": "2106.04426",
+      "authors": [
+        "Stephen Roller",
+        "Sainbayar Sukhbaatar",
+        "Arthur Szlam",
+        "J. Weston"
+      ]
+    },
+    {
+      "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+      "source_url": "https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+      "year": 2021,
+      "published": "2021-04-18",
+      "abstract": "In this work, we explore “prompt tuning,” a simple yet effective mechanism for learning “soft prompts” to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3’s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method “closes the gap” and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed “prefix tuning” of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient “prompt ensembling.” We release code and model checkpoints to reproduce our experiments.",
+      "canonical_id": "arXiv:2104.08691",
+      "arxiv_id": "2104.08691",
+      "authors": [
+        "Brian Lester",
+        "Rami Al-Rfou",
+        "Noah Constant"
+      ]
+    },
+    {
+      "title": "BASE Layers: Simplifying Training of Large, Sparse Models",
+      "source_url": "https://www.semanticscholar.org/paper/b15ea460c77a4ee8aa159a30ab0331deedfcf392",
+      "year": 2021,
+      "published": "2021-03-30",
+      "abstract": "We introduce a new balanced assignment of experts (BASE) layer for large language models that greatly simplifies existing high capacity sparse layers. Sparse layers can dramatically improve the efficiency of training and inference by routing each token to specialized expert modules that contain only a small fraction of the model parameters. However, it can be difficult to learn balanced routing functions that make full use of the available experts; existing approaches typically use routing heuristics or auxiliary expert-balancing loss functions. In contrast, we formulate token-to-expert allocation as a linear assignment problem, allowing an optimal assignment in which each expert receives an equal number of tokens. This optimal assignment scheme improves efficiency by guaranteeing balanced compute loads, and also simplifies training by not requiring any new hyperparameters or auxiliary losses. Code is publicly released at https://github.com/pytorch/fairseq/",
+      "canonical_id": "arXiv:2103.16716",
+      "arxiv_id": "2103.16716",
+      "authors": [
+        "M. Lewis",
+        "Shruti Bhosale",
+        "Tim Dettmers",
+        "Naman Goyal",
+        "Luke Zettlemoyer"
+      ]
+    },
+    {
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "source_url": "https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13",
+      "year": 2021,
+      "published": "2021-01-11",
+      "abstract": "In deep learning, models typically reuse the same parameters for all inputs. Mixture of Experts (MoE) defies this and instead selects different parameters for each incoming example. The result is a sparsely-activated model -- with outrageous numbers of parameters -- but a constant computational cost. However, despite several notable successes of MoE, widespread adoption has been hindered by complexity, communication costs and training instability -- we address these with the Switch Transformer. We simplify the MoE routing algorithm and design intuitive improved models with reduced communication and computational costs. Our proposed training techniques help wrangle the instabilities and we show large sparse models may be trained, for the first time, with lower precision (bfloat16) formats. We design models based off T5-Base and T5-Large to obtain up to 7x increases in pre-training speed with the same computational resources. These improvements extend into multilingual settings where we measure gains over the mT5-Base version across all 101 languages. Finally, we advance the current scale of language models by pre-training up to trillion parameter models on the\"Colossal Clean Crawled Corpus\"and achieve a 4x speedup over the T5-XXL model.",
+      "canonical_id": "arXiv:2101.03961",
+      "arxiv_id": "2101.03961",
+      "authors": [
+        "W. Fedus",
+        "Barret Zoph",
+        "Noam Shazeer"
+      ]
+    },
+    {
+      "title": "Language Models are Few-Shot Learners",
+      "source_url": "https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+      "year": 2020,
+      "published": "2020-05-28",
+      "abstract": "Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. By contrast, humans can generally perform a new language task from only a few examples or from simple instructions - something which current NLP systems still largely struggle to do. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. At the same time, we also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora. Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans. We discuss broader societal impacts of this finding and of GPT-3 in general.",
+      "canonical_id": "arXiv:2005.14165",
+      "arxiv_id": "2005.14165",
+      "authors": [
+        "Tom B. Brown",
+        "Benjamin Mann",
+        "Nick Ryder",
+        "Melanie Subbiah",
+        "J. Kaplan",
+        "Prafulla Dhariwal",
+        "Arvind Neelakantan",
+        "Pranav Shyam",
+        "G. Sastry",
+        "Amanda Askell",
+        "S. Agarwal",
+        "Ariel Herbert-Voss",
+        "Gretchen Krueger",
+        "T. Henighan",
+        "R. Child",
+        "A. Ramesh",
+        "Daniel M. Ziegler",
+        "Jeff Wu",
+        "Clemens Winter",
+        "Christopher Hesse",
+        "Mark Chen",
+        "Eric Sigler",
+        "Ma-teusz Litwin",
+        "Scott Gray",
+        "Benjamin Chess",
+        "Jack Clark",
+        "Christopher Berner",
+        "Sam McCandlish",
+        "Alec Radford",
+        "I. Sutskever",
+        "Dario Amodei"
+      ]
+    },
+    {
+      "title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+      "source_url": "https://www.semanticscholar.org/paper/04f4e55e14150b7c48b0287ba77c7443df76ed45",
+      "year": 2019,
+      "published": "2019-11-26",
+      "abstract": "To apply eyeshadow without a brush, should I use a cotton swab or a toothpick? Questions requiring this kind of physical commonsense pose a challenge to today's natural language understanding systems. While recent pretrained models (such as BERT) have made progress on question answering over more abstract domains – such as news articles and encyclopedia entries, where text is plentiful – in more physical domains, text is inherently limited due to reporting bias. Can AI systems learn to reliably answer physical commonsense questions without experiencing the physical world?In this paper, we introduce the task of physical commonsense reasoning and a corresponding benchmark dataset Physical Interaction: Question Answering or PIQA. Though humans find the dataset easy (95% accuracy), large pretrained models struggle (∼75%). We provide analysis about the dimensions of knowledge that existing models lack, which offers significant opportunities for future research.",
+      "canonical_id": "arXiv:1911.11641",
+      "arxiv_id": "1911.11641",
+      "authors": [
+        "Yonatan Bisk",
+        "Rowan Zellers",
+        "Ronan Le Bras",
+        "Jianfeng Gao",
+        "Yejin Choi"
+      ]
+    },
+    {
+      "title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+      "source_url": "https://www.semanticscholar.org/paper/8b0f27bb594b1eaaf493eaf1e2ee723a2b0a19ad",
+      "year": 2019,
+      "published": "2019-05-01",
+      "abstract": "Recent work by Zellers et al. (2018) introduced a new task of commonsense natural language inference: given an event description such as “A woman sits at a piano,” a machine must select the most likely followup: “She sets her fingers on the keys.” With the introduction of BERT, near human-level performance was reached. Does this mean that machines can perform human level commonsense inference? In this paper, we show that commonsense inference still proves difficult for even state-of-the-art models, by presenting HellaSwag, a new challenge dataset. Though its questions are trivial for humans (>95% accuracy), state-of-the-art models struggle (<48%). We achieve this via Adversarial Filtering (AF), a data collection paradigm wherein a series of discriminators iteratively select an adversarial set of machine-generated wrong answers. AF proves to be surprisingly robust. The key insight is to scale up the length and complexity of the dataset examples towards a critical ‘Goldilocks’ zone wherein generated text is ridiculous to humans, yet often misclassified by state-of-the-art models. Our construction of HellaSwag, and its resulting difficulty, sheds light on the inner workings of deep pretrained models. More broadly, it suggests a new path forward for NLP research, in which benchmarks co-evolve with the evolving state-of-the-art in an adversarial way, so as to present ever-harder challenges.",
+      "canonical_id": "arXiv:1905.07830",
+      "arxiv_id": "1905.07830",
+      "authors": [
+        "Rowan Zellers",
+        "Ari Holtzman",
+        "Yonatan Bisk",
+        "Ali Farhadi",
+        "Yejin Choi"
+      ]
+    },
+    {
+      "title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
+      "source_url": "https://www.semanticscholar.org/paper/1536e8958697c5364f68b2e2448905dbbeb3a0ca",
+      "year": 2018,
+      "published": "2018-08-13",
+      "abstract": "We present a new kind of question answering dataset, OpenBookQA, modeled after open book exams for assessing human understanding of a subject. The open book that comes with our questions is a set of 1326 elementary level science facts. Roughly 6000 questions probe an understanding of these facts and their application to novel situations. This requires combining an open book fact (e.g., metals conduct electricity) with broad common knowledge (e.g., a suit of armor is made of metal) obtained from other sources. While existing QA datasets over documents or knowledge bases, being generally self-contained, focus on linguistic understanding, OpenBookQA probes a deeper understanding of both the topic—in the context of common knowledge—and the language it is expressed in. Human performance on OpenBookQA is close to 92%, but many state-of-the-art pre-trained QA methods perform surprisingly poorly, worse than several simple neural baselines we develop. Our oracle experiments designed to circumvent the knowledge retrieval bottleneck demonstrate the value of both the open book and additional facts. We leave it as a challenge to solve the retrieval problem in this multi-hop setting and to close the large gap to human performance.",
+      "canonical_id": "arXiv:1809.02789",
+      "arxiv_id": "1809.02789",
+      "authors": [
+        "Todor Mihaylov",
+        "Peter Clark",
+        "Tushar Khot",
+        "Ashish Sabharwal"
+      ]
+    },
+    {
+      "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+      "source_url": "https://www.semanticscholar.org/paper/451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c",
+      "year": 2018,
+      "published": "2018-04-20",
+      "abstract": "Human ability to understand language is general, flexible, and robust. In contrast, most NLU models above the word level are designed for a specific task and struggle with out-of-domain data. If we aspire to develop models with understanding beyond the detection of superficial correspondences between inputs and outputs, then it is critical to develop a unified model that can execute a range of linguistic tasks across different domains. To facilitate research in this direction, we present the General Language Understanding Evaluation (GLUE, gluebenchmark.com): a benchmark of nine diverse NLU tasks, an auxiliary dataset for probing models for understanding of specific linguistic phenomena, and an online platform for evaluating and comparing models. For some benchmark tasks, training data is plentiful, but for others it is limited or does not match the genre of the test set. GLUE thus favors models that can represent linguistic knowledge in a way that facilitates sample-efficient learning and effective knowledge-transfer across tasks. While none of the datasets in GLUE were created from scratch for the benchmark, four of them feature privately-held test data, which is used to ensure that the benchmark is used fairly. We evaluate baselines that use ELMo (Peters et al., 2018), a powerful transfer learning technique, as well as state-of-the-art sentence representation models. The best models still achieve fairly low absolute scores. Analysis with our diagnostic dataset yields similarly weak performance over all phenomena tested, with some exceptions.",
+      "canonical_id": "arXiv:1804.07461",
+      "arxiv_id": "1804.07461",
+      "authors": [
+        "Alex Wang",
+        "Amanpreet Singh",
+        "Julian Michael",
+        "Felix Hill",
+        "Omer Levy",
+        "Samuel R. Bowman"
+      ]
+    },
+    {
+      "title": "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge",
+      "source_url": "https://www.semanticscholar.org/paper/88bb0a28bb58d847183ec505dda89b63771bb495",
+      "year": 2018,
+      "published": "2018-03-14",
+      "abstract": "We present a new question set, text corpus, and baselines assembled to encourage AI research in advanced question answering. Together, these constitute the AI2 Reasoning Challenge (ARC), which requires far more powerful knowledge and reasoning than previous challenges such as SQuAD or SNLI. The ARC question set is partitioned into a Challenge Set and an Easy Set, where the Challenge Set contains only questions answered incorrectly by both a retrieval-based algorithm and a word co-occurence algorithm. The dataset contains only natural, grade-school science questions (authored for human tests), and is the largest public-domain set of this kind (7,787 questions). We test several baselines on the Challenge Set, including leading neural models from the SQuAD and SNLI tasks, and find that none are able to significantly outperform a random baseline, reflecting the difficult nature of this task. We are also releasing the ARC Corpus, a corpus of 14M science sentences relevant to the task, and implementations of the three neural baseline models tested. Can your model perform better? We pose ARC as a challenge to the community.",
+      "canonical_id": "arXiv:1803.05457",
+      "arxiv_id": "1803.05457",
+      "authors": [
+        "Peter Clark",
+        "Isaac Cowhey",
+        "Oren Etzioni",
+        "Tushar Khot",
+        "Ashish Sabharwal",
+        "Carissa Schoenick",
+        "Oyvind Tafjord"
+      ]
+    },
+    {
+      "title": "Decoupled Weight Decay Regularization",
+      "source_url": "https://www.semanticscholar.org/paper/d07284a6811f1b2745d91bdb06b040b57f226882",
+      "year": 2017,
+      "published": "2017-11-14",
+      "abstract": null,
+      "canonical_id": "SemanticScholar:d07284a6811f1b2745d91bdb06b040b57f226882",
+      "authors": [
+        "I. Loshchilov",
+        "F. Hutter"
+      ]
+    },
+    {
+      "title": "Adaptive Mixtures of Local Experts",
+      "source_url": "https://www.semanticscholar.org/paper/c8d90974c3f3b40fa05e322df2905fc16204aa56",
+      "year": 1991,
+      "published": "1991-03-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1162/neco.1991.3.1.79",
+      "doi": "10.1162/neco.1991.3.1.79",
+      "authors": [
+        "R. Jacobs",
+        "Michael I. Jordan",
+        "S. Nowlan",
+        "Geoffrey E. Hinton"
+      ]
+    },
+    {
+      "title": "Qwen1.5-moe: Matching 7b model performance with 1/3 activated parameters",
+      "source_url": null,
+      "year": 2024,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "LoRAMoE: Revolutionizing Mixture of Experts for Maintaining World Knowledge in Language Model Alignment",
+      "source_url": "https://www.semanticscholar.org/paper/5fffc5f56c67740603c68473dea50ce059cbb78f",
+      "year": 2023,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "DOI:10.48550/arXiv.2312.09979",
+      "doi": "10.48550/arXiv.2312.09979",
+      "authors": [
+        "Shihan Dou",
+        "Enyu Zhou",
+        "Yan Liu",
+        "Songyang Gao",
+        "Jun Zhao",
+        "Wei Shen",
+        "Yuhao Zhou",
+        "Zhiheng Xi",
+        "Xiao Wang",
+        "Xiaoran Fan",
+        "Shiliang Pu",
+        "Jiang Zhu",
+        "Rui Zheng",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ]
+    },
+    {
+      "title": "MOELoRA: An MOE-based Parameter Efficient Fine-Tuning Method for Multi-task Medical Applications",
+      "source_url": "https://www.semanticscholar.org/paper/1fb8f2d080e965c833c777f06fccf09dc9856b91",
+      "year": 2023,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "DOI:10.48550/arXiv.2310.18339",
+      "doi": "10.48550/arXiv.2310.18339",
+      "authors": [
+        "Qidong Liu",
+        "Xian Wu",
+        "Xiangyu Zhao",
+        "Yuanshao Zhu",
+        "Derong Xu",
+        "Feng Tian",
+        "Yefeng Zheng"
+      ]
+    },
+    {
+      "title": "OpenCompass Contributors",
+      "source_url": null,
+      "year": 2023,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "Socialiqa: Com-monsense reasoning about social interactions",
+      "source_url": null,
+      "year": 2019,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "An Adversarial Winograd Schema Challenge at Scale",
+      "source_url": "https://www.semanticscholar.org/paper/92e121c6e114fe3cfb89370df03847c66a9b4e28",
+      "year": 2019,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:92e121c6e114fe3cfb89370df03847c66a9b4e28",
+      "authors": [
+        "Keisuke Sakaguchi",
+        "Ronan Le Bras",
+        "Chandra Bhagavatula",
+        "Yejin Choi"
+      ]
+    },
+    {
+      "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge",
+      "source_url": "https://www.semanticscholar.org/paper/c21a4d70d83e0f6eb2a9e1c41d034842dd561e47",
+      "year": 2019,
+      "published": null,
+      "abstract": "When answering a question, people often draw upon their rich world knowledge in addition to the particular context. Recent work has focused primarily on answering questions given some relevant document or context, and required very little general background. To investigate question answering with prior knowledge, we present CommonsenseQA: a challenging new dataset for commonsense question answering. To capture common sense beyond associations, we extract from ConceptNet (Speer et al., 2017) multiple target concepts that have the same semantic relation to a single source concept. Crowd-workers are asked to author multiple-choice questions that mention the source concept and discriminate in turn between each of the target concepts. This encourages workers to create questions with complex semantics that often require prior knowledge. We create 12,247 questions through this procedure and demonstrate the difficulty of our task with a large number of strong baselines. Our best baseline is based on BERT-large (Devlin et al., 2018) and obtains 56% accuracy, well below human performance, which is 89%.",
+      "canonical_id": "arXiv:1811.00937",
+      "arxiv_id": "1811.00937",
+      "authors": [
+        "Alon Talmor",
+        "Jonathan Herzig",
+        "Nicholas Lourie",
+        "Jonathan Berant"
+      ]
+    },
+    {
+      "title": "2024. Mixture-of-depths: Dynamically allocating compute in transformer-based language models",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "2023. Vicuna: An open-source chatbot impressing gpt-4 with 90%* chatgpt quality",
+      "source_url": null,
+      "year": null,
+      "published": null,
+      "abstract": null
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2404.15159",
+      "identity_tokens": [
+        "id:arXiv:2404.15159",
+        "title:mixlora enhancing large language models finetuning with lora based mixture of experts",
+        "url:https://www.semanticscholar.org/paper/ebcf108f8bc42140721ff02b6727b0a291362957"
+      ],
+      "record": {
+        "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts",
+        "source_url": "https://www.semanticscholar.org/paper/ebcf108f8bc42140721ff02b6727b0a291362957",
+        "year": 2024,
+        "published": "2024-04-22",
+        "abstract": "Fine-tuning Large Language Models (LLMs) is a common practice to adapt pre-trained models for specific applications. While methods like LoRA have effectively addressed GPU memory constraints during fine-tuning, their performance often falls short, especially in multi-task scenarios. In contrast, Mixture-of-Expert (MoE) models, such as Mixtral 8x7B, demonstrate remarkable performance in multi-task learning scenarios while maintaining a reduced parameter count. However, the resource requirements of these MoEs remain challenging, particularly for consumer-grade GPUs with less than 24GB memory. To tackle these challenges, we propose MixLoRA, an approach to construct a resource-efficient sparse MoE model based on LoRA. MixLoRA inserts multiple LoRA-based experts within the feed-forward network block of a frozen pre-trained dense model and employs a commonly used top-k router. Unlike other LoRA-based MoE methods, MixLoRA enhances model performance by utilizing independent attention-layer LoRA adapters. Additionally, an auxiliary load balance loss is employed to address the imbalance problem of the router. Our evaluations show that MixLoRA improves about 9% accuracy compared to state-of-the-art PEFT methods in multi-task learning scenarios. We also propose a new high-throughput framework to alleviate the computation and memory bottlenecks during the training and inference of MOE models. This framework reduces GPU memory consumption by 40% and token computation latency by 30% during both training and inference.",
+        "canonical_id": "arXiv:2404.15159",
+        "arxiv_id": "2404.15159",
+        "authors": [
+          "Dengchun Li",
+          "Ying-Zi Ma",
+          "Naizheng Wang",
+          "Zhiyuan Cheng",
+          "Lei Duan",
+          "Jie Zuo",
+          "Cal Yang",
+          "Mingjie Tang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.08562",
+      "identity_tokens": [
+        "id:arXiv:2402.08562",
+        "title:higher layers need more lora experts",
+        "url:https://www.semanticscholar.org/paper/94e531c3b139cdc50ab4b7be21a29dba8f87e3c0"
+      ],
+      "record": {
+        "title": "Higher Layers Need More LoRA Experts",
+        "source_url": "https://www.semanticscholar.org/paper/94e531c3b139cdc50ab4b7be21a29dba8f87e3c0",
+        "year": 2024,
+        "published": "2024-02-13",
+        "abstract": "Parameter-efficient tuning (PEFT) techniques like low-rank adaptation (LoRA) offer training efficiency on Large Language Models, but their impact on model performance remains limited. Recent efforts integrate LoRA and Mixture-of-Experts (MoE) to improve the performance of PEFT methods. Despite promising results, research on improving the efficiency of LoRA with MoE is still in its early stages. Recent studies have shown that experts in the MoE architecture have different strengths and also exhibit some redundancy. Does this statement also apply to parameter-efficient MoE? In this paper, we introduce a novel parameter-efficient MoE method, \\textit{\\textbf{M}oE-L\\textbf{o}RA with \\textbf{L}ayer-wise Expert \\textbf{A}llocation (MoLA)} for Transformer-based models, where each model layer has the flexibility to employ a varying number of LoRA experts. We investigate several architectures with varying layer-wise expert configurations. Experiments on six well-known NLP and commonsense QA benchmarks demonstrate that MoLA achieves equal or superior performance compared to all baselines. We find that allocating more LoRA experts to higher layers further enhances the effectiveness of models with a certain number of experts in total. With much fewer parameters, this allocation strategy outperforms the setting with the same number of experts in every layer. This work can be widely used as a plug-and-play parameter-efficient tuning approach for various applications. The code is available at https://github.com/GCYZSL/MoLA.",
+        "canonical_id": "arXiv:2402.08562",
+        "arxiv_id": "2402.08562",
+        "authors": [
+          "Chongyang Gao",
+          "Kezhen Chen",
+          "Jinmeng Rao",
+          "Baochen Sun",
+          "Ruibo Liu",
+          "Daiyi Peng",
+          "Yawen Zhang",
+          "Xiaoyuan Guo",
+          "Jie Yang",
+          "V. Subrahmanian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.06066",
+      "identity_tokens": [
+        "id:arXiv:2401.06066",
+        "title:deepseekmoe towards ultimate expert specialization in mixtureofexperts language models",
+        "url:https://www.semanticscholar.org/paper/16d6e1ed1cf72212f6154644f3aa59d18bc95fda"
+      ],
+      "record": {
+        "title": "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/16d6e1ed1cf72212f6154644f3aa59d18bc95fda",
+        "year": 2024,
+        "published": "2024-01-11",
+        "abstract": "In the era of large language models, Mixture-of-Experts (MoE) is a promising architecture for managing computational costs when scaling up model parameters. However, conventional MoE architectures like GShard, which activate the top-$K$ out of $N$ experts, face challenges in ensuring expert specialization, i.e. each expert acquires non-overlapping and focused knowledge. In response, we propose the DeepSeekMoE architecture towards ultimate expert specialization. It involves two principal strategies: (1) finely segmenting the experts into $mN$ ones and activating $mK$ from them, allowing for a more flexible combination of activated experts; (2) isolating $K_s$ experts as shared ones, aiming at capturing common knowledge and mitigating redundancy in routed experts. Starting from a modest scale with 2B parameters, we demonstrate that DeepSeekMoE 2B achieves comparable performance with GShard 2.9B, which has 1.5 times the expert parameters and computation. In addition, DeepSeekMoE 2B nearly approaches the performance of its dense counterpart with the same number of total parameters, which set the upper bound of MoE models. Subsequently, we scale up DeepSeekMoE to 16B parameters and show that it achieves comparable performance with LLaMA2 7B, with only about 40% of computations. Further, our preliminary efforts to scale up DeepSeekMoE to 145B parameters consistently validate its substantial advantages over the GShard architecture, and show its performance comparable with DeepSeek 67B, using only 28.5% (maybe even 18.2%) of computations.",
+        "canonical_id": "arXiv:2401.06066",
+        "arxiv_id": "2401.06066",
+        "authors": [
+          "Damai Dai",
+          "C. Deng",
+          "Cheng-Gang Zhao",
+          "R. X. Xu",
+          "Hua-Zuo Gao",
+          "Deli Chen",
+          "Jia-Shi Li",
+          "Wangding Zeng",
+          "Xing-Kai Yu",
+          "Yu Wu",
+          "Zhen-Da Xie",
+          "Y. K. Li",
+          "Pan-Pan Huang",
+          "Fuli Luo",
+          "C. Ruan",
+          "Zhifang Sui",
+          "W. Liang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2309.05444",
+      "identity_tokens": [
+        "id:arXiv:2309.05444",
+        "title:pushing mixture of experts to the limit extremely parameter efficient moe for instruction tuning",
+        "url:https://www.semanticscholar.org/paper/5aae7d84f8eaa55f3386cee41d94769e7ab01e9d"
+      ],
+      "record": {
+        "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning",
+        "source_url": "https://www.semanticscholar.org/paper/5aae7d84f8eaa55f3386cee41d94769e7ab01e9d",
+        "year": 2023,
+        "published": "2023-09-11",
+        "abstract": "The Mixture of Experts (MoE) is a widely known neural architecture where an ensemble of specialized sub-models optimizes overall performance with a constant computational cost. However, conventional MoEs pose challenges at scale due to the need to store all experts in memory. In this paper, we push MoE to the limit. We propose extremely parameter-efficient MoE by uniquely combining MoE architecture with lightweight experts.Our MoE architecture outperforms standard parameter-efficient fine-tuning (PEFT) methods and is on par with full fine-tuning by only updating the lightweight experts -- less than 1% of an 11B parameters model. Furthermore, our method generalizes to unseen tasks as it does not depend on any prior task knowledge. Our research underscores the versatility of the mixture of experts architecture, showcasing its ability to deliver robust performance even when subjected to rigorous parameter constraints. Our code used in all the experiments is publicly available here: https://github.com/for-ai/parameter-efficient-moe.",
+        "canonical_id": "arXiv:2309.05444",
+        "arxiv_id": "2309.05444",
+        "authors": [
+          "Ted Zadouri",
+          "A. Ustun",
+          "Arash Ahmadian",
+          "Beyza Ermics",
+          "Acyr F. Locatelli",
+          "Sara Hooker"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.09288",
+      "identity_tokens": [
+        "id:arXiv:2307.09288",
+        "title:llama 2 open foundation and finetuned chat models",
+        "url:https://www.semanticscholar.org/paper/104b0bb1da562d53cbda87aec79ef6a2827d191a"
+      ],
+      "record": {
+        "title": "Llama 2: Open Foundation and Fine-Tuned Chat Models",
+        "source_url": "https://www.semanticscholar.org/paper/104b0bb1da562d53cbda87aec79ef6a2827d191a",
+        "year": 2023,
+        "published": "2023-07-18",
+        "abstract": "In this work, we develop and release Llama 2, a collection of pretrained and fine-tuned large language models (LLMs) ranging in scale from 7 billion to 70 billion parameters. Our fine-tuned LLMs, called Llama 2-Chat, are optimized for dialogue use cases. Our models outperform open-source chat models on most benchmarks we tested, and based on our human evaluations for helpfulness and safety, may be a suitable substitute for closed-source models. We provide a detailed description of our approach to fine-tuning and safety improvements of Llama 2-Chat in order to enable the community to build on our work and contribute to the responsible development of LLMs.",
+        "canonical_id": "arXiv:2307.09288",
+        "arxiv_id": "2307.09288",
+        "authors": [
+          "Hugo Touvron",
+          "Louis Martin",
+          "Kevin R. Stone",
+          "Peter Albert",
+          "Amjad Almahairi",
+          "Yasmine Babaei",
+          "Nikolay Bash-lykov",
+          "Soumya Batra",
+          "Prajjwal Bhargava",
+          "Shruti Bhosale",
+          "D. Bikel",
+          "Lukas Blecher",
+          "Cristian Canton Ferrer",
+          "Moya Chen",
+          "Guillem Cucurull",
+          "David Esiobu",
+          "Jude Fernandes",
+          "Jeremy Fu",
+          "Wenyin Fu",
+          "Brian Fuller",
+          "Cynthia Gao",
+          "Vedanuj Goswami",
+          "Naman Goyal",
+          "A. Hartshorn",
+          "Saghar Hosseini",
+          "Rui Hou",
+          "Hakan Inan",
+          "Marcin Kardas",
+          "Viktor Kerkez",
+          "Madian Khabsa",
+          "Isabel M. Kloumann",
+          "A. Korenev",
+          "Punit Singh Koura",
+          "M. Lachaux",
+          "Thibaut Lavril",
+          "Jenya Lee",
+          "Diana Liskovich",
+          "Yinghai Lu",
+          "Yuning Mao",
+          "X. Martinet",
+          "Todor Mihaylov",
+          "Pushkar Mishra",
+          "Igor Molybog",
+          "Yixin Nie",
+          "Andrew Poulton",
+          "J. Reizenstein",
+          "Rashi Rungta",
+          "Kalyan Saladi",
+          "A. Schelten",
+          "Ruan Silva",
+          "Eric Michael Smith",
+          "R. Subramanian",
+          "Xia Tan",
+          "Binh Tang",
+          "Ross Taylor",
+          "Adina Williams",
+          "Jian Xiang Kuan",
+          "Puxin Xu",
+          "Zheng-Xu Yan",
+          "Iliyan Zarov",
+          "Yuchen Zhang",
+          "Angela Fan",
+          "M. Kambadur",
+          "Sharan Narang",
+          "Aur'elien Rodriguez",
+          "Robert Stojnic",
+          "Sergey Edunov",
+          "Thomas Scialom"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.14314",
+      "identity_tokens": [
+        "id:arXiv:2305.14314",
+        "title:qlora efficient finetuning of quantized llms",
+        "url:https://www.semanticscholar.org/paper/32ac52069e562d4f900afee70bdca63f53461481"
+      ],
+      "record": {
+        "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/32ac52069e562d4f900afee70bdca63f53461481",
+        "year": 2023,
+        "published": "2023-05-23",
+        "abstract": "We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters~(LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes. We use QLoRA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. A lemon-picked analysis demonstrates where Guanaco fails compared to ChatGPT. We release all of our models and code, including CUDA kernels for 4-bit training.",
+        "canonical_id": "arXiv:2305.14314",
+        "arxiv_id": "2305.14314",
+        "authors": [
+          "Tim Dettmers",
+          "Artidoro Pagnoni",
+          "Ari Holtzman",
+          "Luke Zettlemoyer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2209.09513",
+      "identity_tokens": [
+        "id:arXiv:2209.09513",
+        "title:learn to explain multimodal reasoning via thought chains for science question answering",
+        "url:https://www.semanticscholar.org/paper/d3135733aa39dec20ce72aa138589dda27c8406d"
+      ],
+      "record": {
+        "title": "Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering",
+        "source_url": "https://www.semanticscholar.org/paper/d3135733aa39dec20ce72aa138589dda27c8406d",
+        "year": 2022,
+        "published": "2022-09-20",
+        "abstract": "When answering a question, humans utilize the information available across different modalities to synthesize a consistent and complete chain of thought (CoT). This process is normally a black box in the case of deep learning models like large-scale language models. Recently, science question benchmarks have been used to diagnose the multi-hop reasoning ability and interpretability of an AI system. However, existing datasets fail to provide annotations for the answers, or are restricted to the textual-only modality, small scales, and limited domain diversity. To this end, we present Science Question Answering (ScienceQA), a new benchmark that consists of ~21k multimodal multiple choice questions with a diverse set of science topics and annotations of their answers with corresponding lectures and explanations. We further design language models to learn to generate lectures and explanations as the chain of thought (CoT) to mimic the multi-hop reasoning process when answering ScienceQA questions. ScienceQA demonstrates the utility of CoT in language models, as CoT improves the question answering performance by 1.20% in few-shot GPT-3 and 3.99% in fine-tuned UnifiedQA. We also explore the upper bound for models to leverage explanations by feeding those in the input; we observe that it improves the few-shot performance of GPT-3 by 18.96%. Our analysis further shows that language models, similar to humans, benefit from explanations to learn from fewer data and achieve the same performance with just 40% of the data. The data and code are available at https://scienceqa.github.io.",
+        "canonical_id": "arXiv:2209.09513",
+        "arxiv_id": "2209.09513",
+        "authors": [
+          "Pan Lu",
+          "Swaroop Mishra",
+          "Tony Xia",
+          "Liang Qiu",
+          "Kai-Wei Chang",
+          "Song-Chun Zhu",
+          "Oyvind Tafjord",
+          "Peter Clark",
+          "A. Kalyan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2205.05638",
+      "identity_tokens": [
+        "id:arXiv:2205.05638",
+        "title:fewshot parameterefficient finetuning is better and cheaper than incontext learning",
+        "url:https://www.semanticscholar.org/paper/7cdaa08890895e1ad92afb5fad429690ad7b1dac"
+      ],
+      "record": {
+        "title": "Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning",
+        "source_url": "https://www.semanticscholar.org/paper/7cdaa08890895e1ad92afb5fad429690ad7b1dac",
+        "year": 2022,
+        "published": "2022-05-11",
+        "abstract": "Few-shot in-context learning (ICL) enables pre-trained language models to perform a previously-unseen task without any gradient-based training by feeding a small number of training examples as part of the input. ICL incurs substantial computational, memory, and storage costs because it involves processing all of the training examples every time a prediction is made. Parameter-efficient fine-tuning (PEFT) (e.g. adapter modules, prompt tuning, sparse update methods, etc.) offers an alternative paradigm where a small set of parameters are trained to enable a model to perform the new task. In this paper, we rigorously compare few-shot ICL and PEFT and demonstrate that the latter offers better accuracy as well as dramatically lower computational costs. Along the way, we introduce a new PEFT method called (IA)$^3$ that scales activations by learned vectors, attaining stronger performance while only introducing a relatively tiny amount of new parameters. We also propose a simple recipe based on the T0 model called T-Few that can be applied to new tasks without task-specific tuning or modifications. We validate the effectiveness of T-Few on completely unseen tasks by applying it to the RAFT benchmark, attaining super-human performance for the first time and outperforming the state-of-the-art by 6% absolute. All of the code used in our experiments is publicly available.",
+        "canonical_id": "arXiv:2205.05638",
+        "arxiv_id": "2205.05638",
+        "authors": [
+          "Haokun Liu",
+          "Derek Tam",
+          "Mohammed Muqeeth",
+          "Jay Mohta",
+          "Tenghao Huang",
+          "Mohit Bansal",
+          "Colin Raffel"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2205.01068",
+      "identity_tokens": [
+        "id:arXiv:2205.01068",
+        "title:opt open pretrained transformer language models",
+        "url:https://www.semanticscholar.org/paper/13a0d8bb38f739990c8cd65a44061c6534f17221"
+      ],
+      "record": {
+        "title": "OPT: Open Pre-trained Transformer Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/13a0d8bb38f739990c8cd65a44061c6534f17221",
+        "year": 2022,
+        "published": "2022-05-02",
+        "abstract": "Large language models, which are often trained for hundreds of thousands of compute days, have shown remarkable capabilities for zero- and few-shot learning. Given their computational cost, these models are difficult to replicate without significant capital. For the few that are available through APIs, no access is granted to the full model weights, making them difficult to study. We present Open Pre-trained Transformers (OPT), a suite of decoder-only pre-trained transformers ranging from 125M to 175B parameters, which we aim to fully and responsibly share with interested researchers. We show that OPT-175B is comparable to GPT-3, while requiring only 1/7th the carbon footprint to develop. We are also releasing our logbook detailing the infrastructure challenges we faced, along with code for experimenting with all of the released models.",
+        "canonical_id": "arXiv:2205.01068",
+        "arxiv_id": "2205.01068",
+        "authors": [
+          "Susan Zhang",
+          "Stephen Roller",
+          "Naman Goyal",
+          "Mikel Artetxe",
+          "Moya Chen",
+          "Shuohui Chen",
+          "Christopher Dewan",
+          "Mona T. Diab",
+          "Xian Li",
+          "Xi Victoria Lin",
+          "Todor Mihaylov",
+          "Myle Ott",
+          "Sam Shleifer",
+          "Kurt Shuster",
+          "Daniel Simig",
+          "Punit Singh Koura",
+          "Anjali Sridhar",
+          "Tianlu Wang",
+          "Luke Zettlemoyer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2204.02311",
+      "identity_tokens": [
+        "id:arXiv:2204.02311",
+        "title:palm scaling language modeling with pathways",
+        "url:https://www.semanticscholar.org/paper/094ff971d6a8b8ff870946c9b3ce5aa173617bfb"
+      ],
+      "record": {
+        "title": "PaLM: Scaling Language Modeling with Pathways",
+        "source_url": "https://www.semanticscholar.org/paper/094ff971d6a8b8ff870946c9b3ce5aa173617bfb",
+        "year": 2022,
+        "published": "2022-04-05",
+        "abstract": "Large language models have been shown to achieve remarkable performance across a variety of natural language tasks using few-shot learning, which drastically reduces the number of task-specific training examples needed to adapt the model to a particular application. To further our understanding of the impact of scale on few-shot learning, we trained a 540-billion parameter, densely activated, Transformer language model, which we call Pathways Language Model PaLM. We trained PaLM on 6144 TPU v4 chips using Pathways, a new ML system which enables highly efficient training across multiple TPU Pods. We demonstrate continued benefits of scaling by achieving state-of-the-art few-shot learning results on hundreds of language understanding and generation benchmarks. On a number of these tasks, PaLM 540B achieves breakthrough performance, outperforming the finetuned state-of-the-art on a suite of multi-step reasoning tasks, and outperforming average human performance on the recently released BIG-bench benchmark. A significant number of BIG-bench tasks showed discontinuous improvements from model scale, meaning that performance steeply increased as we scaled to our largest model. PaLM also has strong capabilities in multilingual tasks and source code generation, which we demonstrate on a wide array of benchmarks. We additionally provide a comprehensive analysis on bias and toxicity, and study the extent of training data memorization with respect to model scale. Finally, we discuss the ethical considerations related to large language models and discuss potential mitigation strategies.",
+        "canonical_id": "arXiv:2204.02311",
+        "arxiv_id": "2204.02311",
+        "authors": [
+          "A. Chowdhery",
+          "Sharan Narang",
+          "Jacob Devlin",
+          "Maarten Bosma",
+          "Gaurav Mishra",
+          "Adam Roberts",
+          "P. Barham",
+          "Hyung Won Chung",
+          "Charles Sutton",
+          "Sebastian Gehrmann",
+          "P. Schuh",
+          "Kensen Shi",
+          "Sasha Tsvyashchenko",
+          "Joshua Maynez",
+          "Abhishek Rao",
+          "Parker Barnes",
+          "Yi Tay",
+          "Noam Shazeer",
+          "Vinodkumar Prabhakaran",
+          "Emily Reif",
+          "Nan Du",
+          "Ben Hutchinson",
+          "Reiner Pope",
+          "James Bradbury",
+          "Jacob Austin",
+          "M. Isard",
+          "Guy Gur-Ari",
+          "Pengcheng Yin",
+          "Toju Duke",
+          "Anselm Levskaya",
+          "S. Ghemawat",
+          "Sunipa Dev",
+          "H. Michalewski",
+          "Xavier García",
+          "Vedant Misra",
+          "Kevin Robinson",
+          "L. Fedus",
+          "Denny Zhou",
+          "Daphne Ippolito",
+          "D. Luan",
+          "Hyeontaek Lim",
+          "Barret Zoph",
+          "A. Spiridonov",
+          "Ryan Sepassi",
+          "David Dohan",
+          "Shivani Agrawal",
+          "Mark Omernick",
+          "Andrew M. Dai",
+          "Thanumalayan Sankaranarayana Pillai",
+          "Marie Pellat",
+          "Aitor Lewkowycz",
+          "Erica Moreira",
+          "R. Child",
+          "Oleksandr Polozov",
+          "Katherine Lee",
+          "Zongwei Zhou",
+          "Xuezhi Wang",
+          "Brennan Saeta",
+          "Mark Díaz",
+          "Orhan Firat",
+          "Michele Catasta",
+          "Jason Wei",
+          "K. Meier-Hellstern",
+          "D. Eck",
+          "J. Dean",
+          "Slav Petrov",
+          "Noah Fiedel"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2203.03131",
+      "identity_tokens": [
+        "id:arXiv:2203.03131",
+        "title:inputtuning adapting unfamiliar inputs to frozen pretrained models",
+        "url:https://www.semanticscholar.org/paper/2e4cdd36d77b9d814638fc2cd6c703535cb1d2f7"
+      ],
+      "record": {
+        "title": "Input-Tuning: Adapting Unfamiliar Inputs to Frozen Pretrained Models",
+        "source_url": "https://www.semanticscholar.org/paper/2e4cdd36d77b9d814638fc2cd6c703535cb1d2f7",
+        "year": 2022,
+        "published": "2022-03-07",
+        "abstract": "Recently the prompt-tuning paradigm has attracted significant attention. By only tuning continuous prompts with a frozen pre-trained language model (PLM), prompt-tuning takes a step towards deploying a shared frozen PLM to serve numerous downstream tasks. Although prompt-tuning shows good performance on certain natural language understanding (NLU) tasks, its effectiveness on natural language generation (NLG) tasks is still under-explored. In this paper, we argue that one of the factors hindering the development of prompt-tuning on NLG tasks is the unfamiliar inputs (i.e., inputs are linguistically different from the pretraining corpus). For example, our preliminary exploration reveals a large performance gap between prompt-tuning and fine-tuning when unfamiliar inputs occur frequently in NLG tasks. This motivates us to propose input-tuning, which fine-tunes both the continuous prompts and the input representations, leading to a more effective way to adapt unfamiliar inputs to frozen PLMs. Our proposed input-tuning is conceptually simple and empirically powerful. Experimental results on seven NLG tasks demonstrate that input-tuning is significantly and consistently better than prompt-tuning. Furthermore, on three of these tasks, input-tuning can achieve a comparable or even better performance than fine-tuning.",
+        "canonical_id": "arXiv:2203.03131",
+        "arxiv_id": "2203.03131",
+        "authors": [
+          "Shengnan An",
+          "Yifei Li",
+          "Zeqi Lin",
+          "Qian Liu",
+          "Bei Chen",
+          "Qiang Fu",
+          "Weizhu Chen",
+          "Nanning Zheng",
+          "Jian-Guang Lou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2202.09368",
+      "identity_tokens": [
+        "id:arXiv:2202.09368",
+        "title:mixtureofexperts with expert choice routing",
+        "url:https://www.semanticscholar.org/paper/bbc57e1b3cf90e09b64377f13de455793bc81ad5"
+      ],
+      "record": {
+        "title": "Mixture-of-Experts with Expert Choice Routing",
+        "source_url": "https://www.semanticscholar.org/paper/bbc57e1b3cf90e09b64377f13de455793bc81ad5",
+        "year": 2022,
+        "published": "2022-02-18",
+        "abstract": "Sparsely-activated Mixture-of-experts (MoE) models allow the number of parameters to greatly increase while keeping the amount of computation for a given token or a given sample unchanged. However, a poor expert routing strategy (e.g. one resulting in load imbalance) can cause certain experts to be under-trained, leading to an expert being under or over-specialized. Prior work allocates a fixed number of experts to each token using a top-k function regardless of the relative importance of different tokens. To address this, we propose a heterogeneous mixture-of-experts employing an expert choice method. Instead of letting tokens select the top-k experts, we have experts selecting the top-k tokens. As a result, each token can be routed to a variable number of experts and each expert can have a fixed bucket size. We systematically study pre-training speedups using the same computational resources of the Switch Transformer top-1 and GShard top-2 gating of prior work and find that our method improves training convergence time by more than 2x. For the same computational cost, our method demonstrates higher performance in fine-tuning 11 selected tasks in the GLUE and SuperGLUE benchmarks. For a smaller activation cost, our method outperforms the T5 dense model in 7 out of the 11 tasks.",
+        "canonical_id": "arXiv:2202.09368",
+        "arxiv_id": "2202.09368",
+        "authors": [
+          "Yanqi Zhou",
+          "Tao Lei",
+          "Han-Chu Liu",
+          "Nan Du",
+          "Yanping Huang",
+          "Vincent Zhao",
+          "Andrew M. Dai",
+          "Zhifeng Chen",
+          "Quoc V. Le",
+          "J. Laudon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2106.09685",
+      "identity_tokens": [
+        "id:arXiv:2106.09685",
+        "title:lora lowrank adaptation of large language models",
+        "url:https://www.semanticscholar.org/paper/a8ca46b171467ceb2d7652fbfb67fe701ad86092"
+      ],
+      "record": {
+        "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/a8ca46b171467ceb2d7652fbfb67fe701ad86092",
+        "year": 2021,
+        "published": "2021-06-17",
+        "abstract": "An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.",
+        "canonical_id": "arXiv:2106.09685",
+        "arxiv_id": "2106.09685",
+        "authors": [
+          "Edward J. Hu",
+          "Yelong Shen",
+          "Phillip Wallis",
+          "Zeyuan Allen-Zhu",
+          "Yuanzhi Li",
+          "Shean Wang",
+          "Weizhu Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2106.04426",
+      "identity_tokens": [
+        "id:arXiv:2106.04426",
+        "title:hash layers for large sparse models",
+        "url:https://www.semanticscholar.org/paper/0611d2f2ea6a3c8fb8534f42758a5a3e9c7bc8fe"
+      ],
+      "record": {
+        "title": "Hash Layers For Large Sparse Models",
+        "source_url": "https://www.semanticscholar.org/paper/0611d2f2ea6a3c8fb8534f42758a5a3e9c7bc8fe",
+        "year": 2021,
+        "published": "2021-06-08",
+        "abstract": "We investigate the training of sparse layers that use different parameters for different inputs based on hashing in large Transformer models. Specifically, we modify the feedforward layer to hash to different sets of weights depending on the current token, over all tokens in the sequence. We show that this procedure either outperforms or is competitive with learning-to-route mixture-of-expert methods such as Switch Transformers and BASE Layers, while requiring no routing parameters or extra terms in the objective function such as a load balancing loss, and no sophisticated assignment algorithm. We study the performance of different hashing techniques, hash sizes and input features, and show that balanced and random hashes focused on the most local features work best, compared to either learning clusters or using longer-range context. We show our approach works well both on large language modeling and dialogue tasks, and on downstream fine-tuning tasks.",
+        "canonical_id": "arXiv:2106.04426",
+        "arxiv_id": "2106.04426",
+        "authors": [
+          "Stephen Roller",
+          "Sainbayar Sukhbaatar",
+          "Arthur Szlam",
+          "J. Weston"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2104.08691",
+      "identity_tokens": [
+        "id:arXiv:2104.08691",
+        "title:the power of scale for parameterefficient prompt tuning",
+        "url:https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4"
+      ],
+      "record": {
+        "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+        "source_url": "https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+        "year": 2021,
+        "published": "2021-04-18",
+        "abstract": "In this work, we explore “prompt tuning,” a simple yet effective mechanism for learning “soft prompts” to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3’s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method “closes the gap” and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed “prefix tuning” of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient “prompt ensembling.” We release code and model checkpoints to reproduce our experiments.",
+        "canonical_id": "arXiv:2104.08691",
+        "arxiv_id": "2104.08691",
+        "authors": [
+          "Brian Lester",
+          "Rami Al-Rfou",
+          "Noah Constant"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2103.16716",
+      "identity_tokens": [
+        "id:arXiv:2103.16716",
+        "title:base layers simplifying training of large sparse models",
+        "url:https://www.semanticscholar.org/paper/b15ea460c77a4ee8aa159a30ab0331deedfcf392"
+      ],
+      "record": {
+        "title": "BASE Layers: Simplifying Training of Large, Sparse Models",
+        "source_url": "https://www.semanticscholar.org/paper/b15ea460c77a4ee8aa159a30ab0331deedfcf392",
+        "year": 2021,
+        "published": "2021-03-30",
+        "abstract": "We introduce a new balanced assignment of experts (BASE) layer for large language models that greatly simplifies existing high capacity sparse layers. Sparse layers can dramatically improve the efficiency of training and inference by routing each token to specialized expert modules that contain only a small fraction of the model parameters. However, it can be difficult to learn balanced routing functions that make full use of the available experts; existing approaches typically use routing heuristics or auxiliary expert-balancing loss functions. In contrast, we formulate token-to-expert allocation as a linear assignment problem, allowing an optimal assignment in which each expert receives an equal number of tokens. This optimal assignment scheme improves efficiency by guaranteeing balanced compute loads, and also simplifies training by not requiring any new hyperparameters or auxiliary losses. Code is publicly released at https://github.com/pytorch/fairseq/",
+        "canonical_id": "arXiv:2103.16716",
+        "arxiv_id": "2103.16716",
+        "authors": [
+          "M. Lewis",
+          "Shruti Bhosale",
+          "Tim Dettmers",
+          "Naman Goyal",
+          "Luke Zettlemoyer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2101.03961",
+      "identity_tokens": [
+        "id:arXiv:2101.03961",
+        "title:switch transformers scaling to trillion parameter models with simple and efficient sparsity",
+        "url:https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13"
+      ],
+      "record": {
+        "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+        "source_url": "https://www.semanticscholar.org/paper/fdacf2a732f55befdc410ea927091cad3b791f13",
+        "year": 2021,
+        "published": "2021-01-11",
+        "abstract": "In deep learning, models typically reuse the same parameters for all inputs. Mixture of Experts (MoE) defies this and instead selects different parameters for each incoming example. The result is a sparsely-activated model -- with outrageous numbers of parameters -- but a constant computational cost. However, despite several notable successes of MoE, widespread adoption has been hindered by complexity, communication costs and training instability -- we address these with the Switch Transformer. We simplify the MoE routing algorithm and design intuitive improved models with reduced communication and computational costs. Our proposed training techniques help wrangle the instabilities and we show large sparse models may be trained, for the first time, with lower precision (bfloat16) formats. We design models based off T5-Base and T5-Large to obtain up to 7x increases in pre-training speed with the same computational resources. These improvements extend into multilingual settings where we measure gains over the mT5-Base version across all 101 languages. Finally, we advance the current scale of language models by pre-training up to trillion parameter models on the\"Colossal Clean Crawled Corpus\"and achieve a 4x speedup over the T5-XXL model.",
+        "canonical_id": "arXiv:2101.03961",
+        "arxiv_id": "2101.03961",
+        "authors": [
+          "W. Fedus",
+          "Barret Zoph",
+          "Noam Shazeer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2005.14165",
+      "identity_tokens": [
+        "id:arXiv:2005.14165",
+        "title:language models are fewshot learners",
+        "url:https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0"
+      ],
+      "record": {
+        "title": "Language Models are Few-Shot Learners",
+        "source_url": "https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "year": 2020,
+        "published": "2020-05-28",
+        "abstract": "Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. By contrast, humans can generally perform a new language task from only a few examples or from simple instructions - something which current NLP systems still largely struggle to do. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. At the same time, we also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora. Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans. We discuss broader societal impacts of this finding and of GPT-3 in general.",
+        "canonical_id": "arXiv:2005.14165",
+        "arxiv_id": "2005.14165",
+        "authors": [
+          "Tom B. Brown",
+          "Benjamin Mann",
+          "Nick Ryder",
+          "Melanie Subbiah",
+          "J. Kaplan",
+          "Prafulla Dhariwal",
+          "Arvind Neelakantan",
+          "Pranav Shyam",
+          "G. Sastry",
+          "Amanda Askell",
+          "S. Agarwal",
+          "Ariel Herbert-Voss",
+          "Gretchen Krueger",
+          "T. Henighan",
+          "R. Child",
+          "A. Ramesh",
+          "Daniel M. Ziegler",
+          "Jeff Wu",
+          "Clemens Winter",
+          "Christopher Hesse",
+          "Mark Chen",
+          "Eric Sigler",
+          "Ma-teusz Litwin",
+          "Scott Gray",
+          "Benjamin Chess",
+          "Jack Clark",
+          "Christopher Berner",
+          "Sam McCandlish",
+          "Alec Radford",
+          "I. Sutskever",
+          "Dario Amodei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1911.11641",
+      "identity_tokens": [
+        "id:arXiv:1911.11641",
+        "title:piqa reasoning about physical commonsense in natural language",
+        "url:https://www.semanticscholar.org/paper/04f4e55e14150b7c48b0287ba77c7443df76ed45"
+      ],
+      "record": {
+        "title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "source_url": "https://www.semanticscholar.org/paper/04f4e55e14150b7c48b0287ba77c7443df76ed45",
+        "year": 2019,
+        "published": "2019-11-26",
+        "abstract": "To apply eyeshadow without a brush, should I use a cotton swab or a toothpick? Questions requiring this kind of physical commonsense pose a challenge to today's natural language understanding systems. While recent pretrained models (such as BERT) have made progress on question answering over more abstract domains – such as news articles and encyclopedia entries, where text is plentiful – in more physical domains, text is inherently limited due to reporting bias. Can AI systems learn to reliably answer physical commonsense questions without experiencing the physical world?In this paper, we introduce the task of physical commonsense reasoning and a corresponding benchmark dataset Physical Interaction: Question Answering or PIQA. Though humans find the dataset easy (95% accuracy), large pretrained models struggle (∼75%). We provide analysis about the dimensions of knowledge that existing models lack, which offers significant opportunities for future research.",
+        "canonical_id": "arXiv:1911.11641",
+        "arxiv_id": "1911.11641",
+        "authors": [
+          "Yonatan Bisk",
+          "Rowan Zellers",
+          "Ronan Le Bras",
+          "Jianfeng Gao",
+          "Yejin Choi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1905.07830",
+      "identity_tokens": [
+        "id:arXiv:1905.07830",
+        "title:hellaswag can a machine really finish your sentence",
+        "url:https://www.semanticscholar.org/paper/8b0f27bb594b1eaaf493eaf1e2ee723a2b0a19ad"
+      ],
+      "record": {
+        "title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "source_url": "https://www.semanticscholar.org/paper/8b0f27bb594b1eaaf493eaf1e2ee723a2b0a19ad",
+        "year": 2019,
+        "published": "2019-05-01",
+        "abstract": "Recent work by Zellers et al. (2018) introduced a new task of commonsense natural language inference: given an event description such as “A woman sits at a piano,” a machine must select the most likely followup: “She sets her fingers on the keys.” With the introduction of BERT, near human-level performance was reached. Does this mean that machines can perform human level commonsense inference? In this paper, we show that commonsense inference still proves difficult for even state-of-the-art models, by presenting HellaSwag, a new challenge dataset. Though its questions are trivial for humans (>95% accuracy), state-of-the-art models struggle (<48%). We achieve this via Adversarial Filtering (AF), a data collection paradigm wherein a series of discriminators iteratively select an adversarial set of machine-generated wrong answers. AF proves to be surprisingly robust. The key insight is to scale up the length and complexity of the dataset examples towards a critical ‘Goldilocks’ zone wherein generated text is ridiculous to humans, yet often misclassified by state-of-the-art models. Our construction of HellaSwag, and its resulting difficulty, sheds light on the inner workings of deep pretrained models. More broadly, it suggests a new path forward for NLP research, in which benchmarks co-evolve with the evolving state-of-the-art in an adversarial way, so as to present ever-harder challenges.",
+        "canonical_id": "arXiv:1905.07830",
+        "arxiv_id": "1905.07830",
+        "authors": [
+          "Rowan Zellers",
+          "Ari Holtzman",
+          "Yonatan Bisk",
+          "Ali Farhadi",
+          "Yejin Choi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1809.02789",
+      "identity_tokens": [
+        "id:arXiv:1809.02789",
+        "title:can a suit of armor conduct electricity a new dataset for open book question answering",
+        "url:https://www.semanticscholar.org/paper/1536e8958697c5364f68b2e2448905dbbeb3a0ca"
+      ],
+      "record": {
+        "title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
+        "source_url": "https://www.semanticscholar.org/paper/1536e8958697c5364f68b2e2448905dbbeb3a0ca",
+        "year": 2018,
+        "published": "2018-08-13",
+        "abstract": "We present a new kind of question answering dataset, OpenBookQA, modeled after open book exams for assessing human understanding of a subject. The open book that comes with our questions is a set of 1326 elementary level science facts. Roughly 6000 questions probe an understanding of these facts and their application to novel situations. This requires combining an open book fact (e.g., metals conduct electricity) with broad common knowledge (e.g., a suit of armor is made of metal) obtained from other sources. While existing QA datasets over documents or knowledge bases, being generally self-contained, focus on linguistic understanding, OpenBookQA probes a deeper understanding of both the topic—in the context of common knowledge—and the language it is expressed in. Human performance on OpenBookQA is close to 92%, but many state-of-the-art pre-trained QA methods perform surprisingly poorly, worse than several simple neural baselines we develop. Our oracle experiments designed to circumvent the knowledge retrieval bottleneck demonstrate the value of both the open book and additional facts. We leave it as a challenge to solve the retrieval problem in this multi-hop setting and to close the large gap to human performance.",
+        "canonical_id": "arXiv:1809.02789",
+        "arxiv_id": "1809.02789",
+        "authors": [
+          "Todor Mihaylov",
+          "Peter Clark",
+          "Tushar Khot",
+          "Ashish Sabharwal"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1804.07461",
+      "identity_tokens": [
+        "id:arXiv:1804.07461",
+        "title:glue a multitask benchmark and analysis platform for natural language understanding",
+        "url:https://www.semanticscholar.org/paper/451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c"
+      ],
+      "record": {
+        "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+        "source_url": "https://www.semanticscholar.org/paper/451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c",
+        "year": 2018,
+        "published": "2018-04-20",
+        "abstract": "Human ability to understand language is general, flexible, and robust. In contrast, most NLU models above the word level are designed for a specific task and struggle with out-of-domain data. If we aspire to develop models with understanding beyond the detection of superficial correspondences between inputs and outputs, then it is critical to develop a unified model that can execute a range of linguistic tasks across different domains. To facilitate research in this direction, we present the General Language Understanding Evaluation (GLUE, gluebenchmark.com): a benchmark of nine diverse NLU tasks, an auxiliary dataset for probing models for understanding of specific linguistic phenomena, and an online platform for evaluating and comparing models. For some benchmark tasks, training data is plentiful, but for others it is limited or does not match the genre of the test set. GLUE thus favors models that can represent linguistic knowledge in a way that facilitates sample-efficient learning and effective knowledge-transfer across tasks. While none of the datasets in GLUE were created from scratch for the benchmark, four of them feature privately-held test data, which is used to ensure that the benchmark is used fairly. We evaluate baselines that use ELMo (Peters et al., 2018), a powerful transfer learning technique, as well as state-of-the-art sentence representation models. The best models still achieve fairly low absolute scores. Analysis with our diagnostic dataset yields similarly weak performance over all phenomena tested, with some exceptions.",
+        "canonical_id": "arXiv:1804.07461",
+        "arxiv_id": "1804.07461",
+        "authors": [
+          "Alex Wang",
+          "Amanpreet Singh",
+          "Julian Michael",
+          "Felix Hill",
+          "Omer Levy",
+          "Samuel R. Bowman"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1803.05457",
+      "identity_tokens": [
+        "id:arXiv:1803.05457",
+        "title:think you have solved question answering try arc the ai2 reasoning challenge",
+        "url:https://www.semanticscholar.org/paper/88bb0a28bb58d847183ec505dda89b63771bb495"
+      ],
+      "record": {
+        "title": "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge",
+        "source_url": "https://www.semanticscholar.org/paper/88bb0a28bb58d847183ec505dda89b63771bb495",
+        "year": 2018,
+        "published": "2018-03-14",
+        "abstract": "We present a new question set, text corpus, and baselines assembled to encourage AI research in advanced question answering. Together, these constitute the AI2 Reasoning Challenge (ARC), which requires far more powerful knowledge and reasoning than previous challenges such as SQuAD or SNLI. The ARC question set is partitioned into a Challenge Set and an Easy Set, where the Challenge Set contains only questions answered incorrectly by both a retrieval-based algorithm and a word co-occurence algorithm. The dataset contains only natural, grade-school science questions (authored for human tests), and is the largest public-domain set of this kind (7,787 questions). We test several baselines on the Challenge Set, including leading neural models from the SQuAD and SNLI tasks, and find that none are able to significantly outperform a random baseline, reflecting the difficult nature of this task. We are also releasing the ARC Corpus, a corpus of 14M science sentences relevant to the task, and implementations of the three neural baseline models tested. Can your model perform better? We pose ARC as a challenge to the community.",
+        "canonical_id": "arXiv:1803.05457",
+        "arxiv_id": "1803.05457",
+        "authors": [
+          "Peter Clark",
+          "Isaac Cowhey",
+          "Oren Etzioni",
+          "Tushar Khot",
+          "Ashish Sabharwal",
+          "Carissa Schoenick",
+          "Oyvind Tafjord"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:d07284a6811f1b2745d91bdb06b040b57f226882",
+      "identity_tokens": [
+        "id:SemanticScholar:d07284a6811f1b2745d91bdb06b040b57f226882",
+        "title:decoupled weight decay regularization",
+        "url:https://www.semanticscholar.org/paper/d07284a6811f1b2745d91bdb06b040b57f226882"
+      ],
+      "record": {
+        "title": "Decoupled Weight Decay Regularization",
+        "source_url": "https://www.semanticscholar.org/paper/d07284a6811f1b2745d91bdb06b040b57f226882",
+        "year": 2017,
+        "published": "2017-11-14",
+        "abstract": null,
+        "canonical_id": "SemanticScholar:d07284a6811f1b2745d91bdb06b040b57f226882",
+        "authors": [
+          "I. Loshchilov",
+          "F. Hutter"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1162/neco.1991.3.1.79",
+      "identity_tokens": [
+        "id:DOI:10.1162/neco.1991.3.1.79",
+        "title:adaptive mixtures of local experts",
+        "url:https://www.semanticscholar.org/paper/c8d90974c3f3b40fa05e322df2905fc16204aa56"
+      ],
+      "record": {
+        "title": "Adaptive Mixtures of Local Experts",
+        "source_url": "https://www.semanticscholar.org/paper/c8d90974c3f3b40fa05e322df2905fc16204aa56",
+        "year": 1991,
+        "published": "1991-03-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1162/neco.1991.3.1.79",
+        "doi": "10.1162/neco.1991.3.1.79",
+        "authors": [
+          "R. Jacobs",
+          "Michael I. Jordan",
+          "S. Nowlan",
+          "Geoffrey E. Hinton"
+        ]
+      }
+    },
+    {
+      "primary_identity": "title:qwen15moe matching 7b model performance with 13 activated parameters",
+      "identity_tokens": [
+        "title:qwen15moe matching 7b model performance with 13 activated parameters"
+      ],
+      "record": {
+        "title": "Qwen1.5-moe: Matching 7b model performance with 1/3 activated parameters",
+        "source_url": null,
+        "year": 2024,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.48550/arxiv.2312.09979",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2312.09979",
+        "id:arXiv:2312.09979",
+        "title:loramoe revolutionizing mixture of experts for maintaining world knowledge in language model alignment",
+        "url:https://www.semanticscholar.org/paper/5fffc5f56c67740603c68473dea50ce059cbb78f"
+      ],
+      "record": {
+        "title": "LoRAMoE: Revolutionizing Mixture of Experts for Maintaining World Knowledge in Language Model Alignment",
+        "source_url": "https://www.semanticscholar.org/paper/5fffc5f56c67740603c68473dea50ce059cbb78f",
+        "year": 2023,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "DOI:10.48550/arXiv.2312.09979",
+        "doi": "10.48550/arXiv.2312.09979",
+        "authors": [
+          "Shihan Dou",
+          "Enyu Zhou",
+          "Yan Liu",
+          "Songyang Gao",
+          "Jun Zhao",
+          "Wei Shen",
+          "Yuhao Zhou",
+          "Zhiheng Xi",
+          "Xiao Wang",
+          "Xiaoran Fan",
+          "Shiliang Pu",
+          "Jiang Zhu",
+          "Rui Zheng",
+          "Tao Gui",
+          "Qi Zhang",
+          "Xuanjing Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.48550/arxiv.2310.18339",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.18339",
+        "id:arXiv:2310.18339",
+        "title:moelora an moebased parameter efficient finetuning method for multitask medical applications",
+        "url:https://www.semanticscholar.org/paper/1fb8f2d080e965c833c777f06fccf09dc9856b91"
+      ],
+      "record": {
+        "title": "MOELoRA: An MOE-based Parameter Efficient Fine-Tuning Method for Multi-task Medical Applications",
+        "source_url": "https://www.semanticscholar.org/paper/1fb8f2d080e965c833c777f06fccf09dc9856b91",
+        "year": 2023,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "DOI:10.48550/arXiv.2310.18339",
+        "doi": "10.48550/arXiv.2310.18339",
+        "authors": [
+          "Qidong Liu",
+          "Xian Wu",
+          "Xiangyu Zhao",
+          "Yuanshao Zhu",
+          "Derong Xu",
+          "Feng Tian",
+          "Yefeng Zheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "title:opencompass contributors",
+      "identity_tokens": [
+        "title:opencompass contributors"
+      ],
+      "record": {
+        "title": "OpenCompass Contributors",
+        "source_url": null,
+        "year": 2023,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:socialiqa commonsense reasoning about social interactions",
+      "identity_tokens": [
+        "title:socialiqa commonsense reasoning about social interactions"
+      ],
+      "record": {
+        "title": "Socialiqa: Com-monsense reasoning about social interactions",
+        "source_url": null,
+        "year": 2019,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:92e121c6e114fe3cfb89370df03847c66a9b4e28",
+      "identity_tokens": [
+        "id:SemanticScholar:92e121c6e114fe3cfb89370df03847c66a9b4e28",
+        "title:an adversarial winograd schema challenge at scale",
+        "url:https://www.semanticscholar.org/paper/92e121c6e114fe3cfb89370df03847c66a9b4e28"
+      ],
+      "record": {
+        "title": "An Adversarial Winograd Schema Challenge at Scale",
+        "source_url": "https://www.semanticscholar.org/paper/92e121c6e114fe3cfb89370df03847c66a9b4e28",
+        "year": 2019,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:92e121c6e114fe3cfb89370df03847c66a9b4e28",
+        "authors": [
+          "Keisuke Sakaguchi",
+          "Ronan Le Bras",
+          "Chandra Bhagavatula",
+          "Yejin Choi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1811.00937",
+      "identity_tokens": [
+        "id:arXiv:1811.00937",
+        "title:commonsenseqa a question answering challenge targeting commonsense knowledge",
+        "url:https://www.semanticscholar.org/paper/c21a4d70d83e0f6eb2a9e1c41d034842dd561e47"
+      ],
+      "record": {
+        "title": "CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge",
+        "source_url": "https://www.semanticscholar.org/paper/c21a4d70d83e0f6eb2a9e1c41d034842dd561e47",
+        "year": 2019,
+        "published": null,
+        "abstract": "When answering a question, people often draw upon their rich world knowledge in addition to the particular context. Recent work has focused primarily on answering questions given some relevant document or context, and required very little general background. To investigate question answering with prior knowledge, we present CommonsenseQA: a challenging new dataset for commonsense question answering. To capture common sense beyond associations, we extract from ConceptNet (Speer et al., 2017) multiple target concepts that have the same semantic relation to a single source concept. Crowd-workers are asked to author multiple-choice questions that mention the source concept and discriminate in turn between each of the target concepts. This encourages workers to create questions with complex semantics that often require prior knowledge. We create 12,247 questions through this procedure and demonstrate the difficulty of our task with a large number of strong baselines. Our best baseline is based on BERT-large (Devlin et al., 2018) and obtains 56% accuracy, well below human performance, which is 89%.",
+        "canonical_id": "arXiv:1811.00937",
+        "arxiv_id": "1811.00937",
+        "authors": [
+          "Alon Talmor",
+          "Jonathan Herzig",
+          "Nicholas Lourie",
+          "Jonathan Berant"
+        ]
+      }
+    },
+    {
+      "primary_identity": "title:2024 mixtureofdepths dynamically allocating compute in transformerbased language models",
+      "identity_tokens": [
+        "title:2024 mixtureofdepths dynamically allocating compute in transformerbased language models"
+      ],
+      "record": {
+        "title": "2024. Mixture-of-depths: Dynamically allocating compute in transformer-based language models",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:2023 vicuna an opensource chatbot impressing gpt4 with 90 chatgpt quality",
+      "identity_tokens": [
+        "title:2023 vicuna an opensource chatbot impressing gpt4 with 90 chatgpt quality"
+      ],
+      "record": {
+        "title": "2023. Vicuna: An open-source chatbot impressing gpt-4 with 90%* chatgpt quality",
+        "source_url": null,
+        "year": null,
+        "published": null,
+        "abstract": null
+      }
+    }
+  ],
+  "receipt": "sha256:b31cb56cd19aa62897a6cb8f78d92a05c341576f30359ea3679208f78f5d17d2",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

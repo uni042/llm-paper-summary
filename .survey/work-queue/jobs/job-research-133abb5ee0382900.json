@@ -1,0 +1,20 @@
+{
+  "job_id": "job-research-133abb5ee0382900",
+  "type": "research",
+  "parent_job_id": "job-eec5ff8f364687d4",
+  "priority": 85,
+  "canonical_id": "arXiv:2503.01890",
+  "title": "AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs",
+  "source_url": "https://arxiv.org/abs/2503.01890",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md",
+  "selection_reason": "Automatically co-tunes activation checkpointing, parameter offloading and optimizer offloading across heterogeneous CPU/GPU memory, with priority scheduling to overlap operations across iterations.",
+  "status": "completed",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-17T06:03:34+00:00",
+  "completed_at": "2026-09-17T09:10:45+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-942af3295b1538b54adcfd38.json"
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "worker-240052",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.24033",
+      "arxiv_id": "2606.24033",
+      "title": "RoPE-Aware Bit Allocation for KV-Cache Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/8cd570efad7b7c239d0af2ac7e73f4b8f49a260e",
+      "priority": 95,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 5,
+        "total": 95
+      },
+      "reason": "Block-GTQ directly targets long-context KV-cache memory and bandwidth with RoPE-aware mixed-bit allocation, includes a packed serving path, reports 3.24x cache compression, 1.34x speedup at 128K, and enables contexts where fp16 OOMs."
+    },
+    {
+      "canonical_id": "arXiv:2607.16248",
+      "arxiv_id": "2607.16248",
+      "title": "High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration",
+      "source_url": "https://www.semanticscholar.org/paper/4408c6af1a9d70699393fa7240d207d924fc2b5d",
+      "priority": 88,
+      "priority_breakdown": {
+        "base": 53,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 88
+      },
+      "reason": "DGAP addresses 1-bit KV-cache quality collapse with selective local-distribution restoration while keeping the low-bit cache footprint, directly matching KV-memory and long-context inference lineages."
+    },
+    {
+      "canonical_id": "arXiv:2606.30560",
+      "arxiv_id": "2606.30560",
+      "title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/5d3da10e6ce527c3f636d25137ce1f37004d22f9",
+      "priority": 84,
+      "priority_breakdown": {
+        "base": 54,
+        "lineage": 15,
+        "recency": 15,
+        "venue": 0,
+        "total": 84
+      },
+      "reason": "TraceLab provides a real coding-agent serving trace with roughly 4,300 sessions and identifies concrete serving opportunities around prefill, prefix caching, tool latency, and KV-cache management."
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00129",
+      "doi": "10.1109/ICWS72778.2026.00129",
+      "title": "QueueBreak: A Trace-to-Diagnosis Pipeline for Tail Latency in Agentic LLM Services",
+      "source_url": "https://www.semanticscholar.org/paper/aa516e10879a6aa96b08ffd635832854788de3a5",
+      "priority": 82,
+      "priority_breakdown": {
+        "base": 52,
+        "lineage": 15,
+        "recency": 15,
+        "venue": 0,
+        "total": 82
+      },
+      "reason": "QueueBreak decomposes agentic LLM service tail latency into pre-execution and execution components and validates admission-control/capacity interventions, fitting serving observability and scheduling lineages."
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00157",
+      "doi": "10.1109/ICWS72778.2026.00157",
+      "title": "Towards Efficient and Reliable On-Device Multi-Agent Systems: Challenges, Technologies and Explorations",
+      "source_url": "https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda",
+      "priority": 78,
+      "priority_breakdown": {
+        "base": 48,
+        "lineage": 15,
+        "recency": 15,
+        "venue": 0,
+        "total": 78
+      },
+      "reason": "The paper includes a cross-layer on-device framework combining MoE-based parameter offloading with real-time validation and reports lower memory usage, connecting offload, MoE, and edge inference."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "worker-240052-20260924T0113JST-forward-04",
+    "result_path": ".survey/work-queue/discovery-precheck/results/worker-240052-20260924T0113JST-forward-04.json",
+    "receipt": "sha256:b25a8e3c053516dbb43e9d2fbe5eb308209714717450ae5f9572271fe611a012"
+  },
+  "discovery_stats": {
+    "run_key": "adhoc-20260924T005200+09-00-worker-240052",
+    "round": "worker-240052-20260924T0113JST-forward-04",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "query_summary": "Fixed forward-citation window for FlexGen from bank h preload, re-filtered against the current identity snapshot with one provider page used to restore 20 unseen records.",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "arXiv:2606.24033",
+      "arXiv:2607.16248",
+      "arXiv:2606.30560",
+      "DOI:10.1109/ICWS72778.2026.00129",
+      "DOI:10.1109/ICWS72778.2026.00157"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1
+  }
+}

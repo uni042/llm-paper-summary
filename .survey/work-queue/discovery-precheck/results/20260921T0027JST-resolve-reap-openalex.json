@@ -1,0 +1,84 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0027JST-resolve-reap-openalex",
+  "collector_id": "scheduled-20260921T0027JST-resolve-reap-openalex",
+  "run_key": "2026-09-21T00:27:43+09:00",
+  "axis": "resolve REAP the Experts OpenAlex seed identity for forward-citation refresh",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=REAP%20the%20Experts%20Why%20Pruning%20Prevails%20for%20One-Shot%20MoE%20compression&sort=relevance_score:desc",
+  "target_unseen": 1,
+  "page_size": 5,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxOC40MTUxNCwgJy1JbmZpbml0eScsIDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNzE2MTA4OTc1MSddIg==",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "381b9c536005e52bb6fb26b87df15b78e19bdf1d",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T15:30:24.937489+00:00",
+  "results": [
+    {
+      "title": "Prompt Engineering Accelerates the Data‐Driven Discovery of Photocatalysts via an LLM‐Based Model Ensemble Strategy",
+      "source_url": "https://doi.org/10.1002/advs.202524215",
+      "year": 2026,
+      "published": "2026-02-16",
+      "canonical_id": "DOI:10.1002/advs.202524215",
+      "doi": "10.1002/advs.202524215",
+      "authors": [
+        "Dianyuan Li",
+        "Xichen Sun",
+        "Shaohua Sun",
+        "Runzhou Wang",
+        "Miaomiao Zhang",
+        "Meng Xiao",
+        "Yue Wang",
+        "Yuezhou Zhang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1002/advs.202524215",
+      "identity_tokens": [
+        "id:DOI:10.1002/advs.202524215",
+        "title:prompt engineering accelerates the datadriven discovery of photocatalysts via an llmbased model ensemble strategy",
+        "url:https://doi.org/10.1002/advs.202524215"
+      ],
+      "record": {
+        "title": "Prompt Engineering Accelerates the Data‐Driven Discovery of Photocatalysts via an LLM‐Based Model Ensemble Strategy",
+        "source_url": "https://doi.org/10.1002/advs.202524215",
+        "year": 2026,
+        "published": "2026-02-16",
+        "canonical_id": "DOI:10.1002/advs.202524215",
+        "doi": "10.1002/advs.202524215",
+        "authors": [
+          "Dianyuan Li",
+          "Xichen Sun",
+          "Shaohua Sun",
+          "Runzhou Wang",
+          "Miaomiao Zhang",
+          "Meng Xiao",
+          "Yue Wang",
+          "Yuezhou Zhang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:8be83d293e37448799eb663f2d086b89b133d0339660983244b35c1099ee290d",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

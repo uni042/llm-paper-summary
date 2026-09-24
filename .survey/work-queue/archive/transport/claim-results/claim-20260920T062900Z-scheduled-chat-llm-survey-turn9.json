@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T062900Z-scheduled-chat-llm-survey-turn9",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-4892de26a5d749a2",
+      "claim_id": "claim-efe23ce921e3469dda4204fc",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-efe23ce921e3469dda4204fc",
+      "claimed_at": "2026-09-20T06:29:06+00:00",
+      "expires_at": "2026-09-20T07:59:06+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-4892de26a5d749a2"
+      ],
+      "job": {
+        "job_id": "job-research-4892de26a5d749a2",
+        "type": "research",
+        "parent_job_id": "job-91b81e336fb8c7cc",
+        "priority": 95,
+        "canonical_id": "arXiv:2408.10284",
+        "arxiv_id": "2408.10284",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference",
+        "source_url": "https://arxiv.org/abs/2408.10284",
+        "paper_path": "papers/inference/06-moe-expert-offloading/2024-2408.10284-adapmoe.md",
+        "selection_reason": "Algorithm-system co-design for edge MoE inference combining adaptive expert activation, prefetching, and cache management to reduce loading overhead.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T03:59:47+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T06:29:06+00:00",
+  "checkpoint_released": 0
+}

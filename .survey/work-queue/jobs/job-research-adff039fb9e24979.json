@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-adff039fb9e24979",
+  "type": "research",
+  "parent_job_id": "job-1e48c57afdf71a43",
+  "priority": 74,
+  "canonical_id": "DOI:10.1145/3805621.3807651",
+  "title": "Hardware-Aware Co-Design of Multi-Chip LLM Serving via Performance Modeling",
+  "source_url": "https://doi.org/10.1145/3805621.3807651",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-dae506ee161c-hardware-aware-co-design-of-multi-chip-llm-serving-via-performance-modeling.md",
+  "selection_reason": "EuroMLSys 2026の査読systems workshop論文。multi-chip accelerator上のLLM servingをhardware-aware performance modelingで扱い、tensor parallelismやchunked prefillを含むhardware-algorithm co-designを対象とする。非arXiv workshop経路の補完として、GPU runtime/serving設計空間の比較基盤に価値がある。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T19:02:42+00:00"
+}

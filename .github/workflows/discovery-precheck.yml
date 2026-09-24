@@ -1,0 +1,276 @@
+name: Discovery precheck gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/discovery-precheck/requests/*.json'
+      - '.survey/work-queue/discovery-preload/claims/*.json'
+  workflow_dispatch:
+    inputs:
+      request:
+        description: 'Repository-relative Discovery precheck request path'
+        required: false
+        type: string
+  schedule:
+    - cron: '6/10 * * * *'
+
+permissions:
+  contents: write
+
+# Foreground worker checks must not queue behind speculative preload refreshes.
+# Scheduled preload maintenance uses a separate writer lane; both lanes retain
+# push-race recomputation before publishing durable state.
+concurrency:
+  group: ${{ github.event_name == 'schedule' && 'discovery-preload-background-main' || 'discovery-precheck-main' }}
+  cancel-in-progress: false
+
+jobs:
+  precheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DISCOVERY_PRECHECK_PARALLELISM: '4'
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Validate Discovery preload helpers
+        run: |
+          python -m py_compile \
+            .survey/scripts/discovery_preload_queue.py \
+            .survey/scripts/process_discovery_precheck.py \
+            .survey/scripts/process_discovery_precheck_batch.py \
+            .survey/scripts/derive_worker_run_state.py \
+            .survey/scripts/queue_worker.py
+          python -m unittest discover \
+            -s .survey/tests \
+            -p 'test_discovery_preload_queue.py'
+          python -m unittest discover \
+            -s .survey/tests \
+            -p 'test_discovery_precheck_batch.py'
+
+      - name: Process unsettled Discovery precheck requests
+        shell: bash
+        env:
+          MANUAL_REQUEST: ${{ inputs.request }}
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-discovery-precheck[bot]'
+          git config user.email 'survey-discovery-precheck[bot]@users.noreply.github.com'
+
+          for attempt in $(seq 1 12); do
+            git fetch origin main
+            git reset --hard origin/main
+
+            # A direct preload claim is already exclusive and lets the worker start
+            # evaluating cached candidates immediately. Materialize its formal
+            # run-specific schema-v3 request behind that foreground work.
+            python .survey/scripts/hot_dispatch.py --repo-root . materialize-discovery \
+              | tee /tmp/direct-discovery-materialize.json
+
+            # A push caused only by generated preload requests must not occupy
+            # the foreground worker lane. Scheduled maintenance owns preload
+            # execution; push runs settle only unresolved real-worker requests.
+            if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+              foreground_pending=0
+              while IFS= read -r request; do
+                [ -n "$request" ] || continue
+                name="$(basename "$request")"
+                case "$name" in
+                  preload-*.json) continue ;;
+                esac
+                result=".survey/work-queue/discovery-precheck/results/$name"
+                if [ ! -f "$result" ]; then
+                  foreground_pending=1
+                  break
+                fi
+              done < <(
+                find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
+              )
+              if [ "$foreground_pending" -eq 0 ]; then
+                echo 'No unresolved foreground Discovery precheck request on this push; preload work is deferred to scheduled maintenance.'
+                exit 0
+              fi
+            fi
+
+            rm -rf /tmp/discovery-identities
+            rm -f /tmp/discovery-rejections.json
+
+            # Keep a background stock of pre-run Discovery windows. New worker
+            # requests are still processed before these preload requests below.
+            if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; then
+              python .survey/scripts/discovery_preload_queue.py \
+                --repo-root . top-up --target 32 --max-new 8 \
+                | tee /tmp/discovery-preload-topup.json
+            fi
+            python .survey/scripts/build_discovery_identity_snapshot.py \
+              --root .survey \
+              --output /tmp/discovery-identities \
+              --source-commit "$(git rev-parse HEAD)"
+            python .survey/scripts/build_discovery_rejection_ledger.py \
+              --root .survey \
+              --output /tmp/discovery-rejections.json
+
+            mapfile -t all_requests < <(
+              find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
+            )
+
+            : > /tmp/discovery-foreground-requests.txt
+            : > /tmp/discovery-preload-requests.txt
+
+            if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
+              case "$MANUAL_REQUEST" in
+                .survey/work-queue/discovery-precheck/requests/*.json) ;;
+                *) echo "Unsupported precheck request path: $MANUAL_REQUEST" >&2; exit 2 ;;
+              esac
+              name="$(basename "$MANUAL_REQUEST")"
+              result=".survey/work-queue/discovery-precheck/results/$name"
+              if [ ! -f "$result" ]; then
+                case "$name" in
+                  preload-*.json) printf '%s\n' "$MANUAL_REQUEST" >> /tmp/discovery-preload-requests.txt ;;
+                  *) printf '%s\n' "$MANUAL_REQUEST" >> /tmp/discovery-foreground-requests.txt ;;
+                esac
+              fi
+            else
+              for request in "${all_requests[@]:-}"; do
+                [ -n "$request" ] || continue
+                name="$(basename "$request")"
+                result=".survey/work-queue/discovery-precheck/results/$name"
+                [ ! -f "$result" ] || continue
+                case "$name" in
+                  preload-*.json)
+                    if [ "$GITHUB_EVENT_NAME" != "push" ]; then
+                      printf '%s\n' "$request" >> /tmp/discovery-preload-requests.txt
+                    fi
+                    ;;
+                  *) printf '%s\n' "$request" >> /tmp/discovery-foreground-requests.txt ;;
+                esac
+              done
+            fi
+
+            processed=0
+            foreground_failures=0
+            preload_failures=0
+
+            # Foreground worker prechecks are independent after the shared identity
+            # snapshot is built. Run up to four concurrently; the batch processor
+            # serializes only the short preload claim/bank mutation section.
+            if [ -s /tmp/discovery-foreground-requests.txt ]; then
+              set +e
+              python .survey/scripts/process_discovery_precheck_batch.py \
+                --repo-root . \
+                --requests-file /tmp/discovery-foreground-requests.txt \
+                --snapshot-dir /tmp/discovery-identities \
+                --rejection-ledger /tmp/discovery-rejections.json \
+                --parallelism "$DISCOVERY_PRECHECK_PARALLELISM"
+              batch_rc=$?
+              set -e
+              if [ "$batch_rc" -eq 1 ]; then
+                foreground_failures=1
+              elif [ "$batch_rc" -ne 0 ]; then
+                echo 'Fatal Discovery precheck batch failure; refusing partial publish.' >&2
+                exit "$batch_rc"
+              fi
+              batch_count="$(grep -cve '^[[:space:]]*$' /tmp/discovery-foreground-requests.txt || true)"
+              processed=$((processed + batch_count))
+            fi
+
+            # Speculative preload refreshes remain on their separate background lane
+            # and are intentionally paced/serialized to avoid provider bursts.
+            while IFS= read -r request; do
+              [ -n "$request" ] || continue
+              name="$(basename "$request")"
+              result=".survey/work-queue/discovery-precheck/results/$name"
+
+              provider="$(
+                python -c 'import json,sys; from pathlib import Path; p=Path(sys.argv[1]); value=json.loads(p.read_text(encoding="utf-8")); print(str(value.get("provider") or "").strip().casefold())' "$request"
+              )"
+              if [ "$provider" = "semantic_scholar" ]; then
+                sleep 2
+              fi
+
+              mkdir -p "$(dirname "$result")"
+              if python .survey/scripts/process_discovery_precheck.py \
+                --request "$request" \
+                --result "$result" \
+                --snapshot-dir /tmp/discovery-identities \
+                --rejection-ledger /tmp/discovery-rejections.json \
+                --repo-root .; then
+                :
+              else
+                preload_failures=1
+              fi
+              processed=$((processed + 1))
+            done < /tmp/discovery-preload-requests.txt
+
+            # Claims release only the Discovery sidecar, so refill those hot
+            # slots again in the same workflow instead of leaving them empty until
+            # the next scheduled run. Newly-created preload requests are durable
+            # and will be processed by this workflow's normal push/schedule path.
+            if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] || [ -z "${MANUAL_REQUEST:-}" ]; then
+              python .survey/scripts/discovery_preload_queue.py \
+                --repo-root . top-up --target 32 --max-new 8 \
+                | tee /tmp/discovery-preload-post-topup.json
+            fi
+
+            python .survey/scripts/hot_dispatch.py --repo-root . finalize-discovery \
+              | tee /tmp/direct-discovery-finalize.json
+            python .survey/scripts/hot_dispatch.py --repo-root . refresh \
+              > /tmp/hot-dispatch.json
+
+            if [ "$processed" -eq 0 ] && git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+              echo 'No unsettled Discovery precheck requests or preload queue changes remain.'
+              exit 0
+            fi
+
+            git add \
+              .survey/work-queue/discovery-precheck/requests \
+              .survey/work-queue/discovery-precheck/results \
+              .survey/work-queue/discovery-preload \
+              .survey/work-queue/direct-take-results \
+              .survey/work-queue/hot-dispatch.json
+            while IFS= read -r -d '' preload_slot; do
+              git add -- "$preload_slot"
+            done < <(
+              find .survey/work-queue/records -type f \
+                \( -name 'discovery-preload.json' -o -name 'research-preload.json' \) -print0
+            )
+
+            if git diff --cached --quiet; then
+              echo 'No Discovery precheck changes to publish.'
+              exit 0
+            fi
+            git commit -m 'survey: publish discovery precheck results and preload stock'
+
+            if git push origin HEAD:main; then
+              if [ "$preload_failures" -ne 0 ]; then
+                echo 'One or more background preload failures were persisted; foreground Discovery remains usable.' >&2
+              fi
+              if [ "$foreground_failures" -ne 0 ]; then
+                echo 'One or more foreground precheck failures were persisted with recovery guidance.' >&2
+                exit 1
+              fi
+              exit 0
+            fi
+
+            echo "Precheck push race on attempt ${attempt}; recomputing from latest main."
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            jitter=$(( RANDOM % 6 ))
+            sleep $((backoff + jitter))
+          done
+
+          echo 'Failed to publish Discovery precheck results after retries.' >&2
+          exit 1

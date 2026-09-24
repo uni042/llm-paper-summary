@@ -1,0 +1,78 @@
+name: Survey claim fast lane
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/claim-requests/*.json'
+      - '.survey/work-queue/direct-takes/research/*.json'
+  workflow_dispatch:
+  schedule:
+    - cron: '3/10 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-claim-main
+  cancel-in-progress: false
+
+jobs:
+  claim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Reconcile direct takes and allocate claims through the shared fast path
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-claim[bot]'
+          git config user.email 'survey-claim[bot]@users.noreply.github.com'
+
+          for attempt in $(seq 1 12); do
+            git fetch origin main
+            git reset --hard origin/main
+
+            python .survey/scripts/claim_fast_path.py --repo-root .
+
+            git add \
+              .survey/work-queue/claim-requests \
+              .survey/work-queue/jobs \
+              .survey/work-queue/claims \
+              .survey/work-queue/claim-results \
+              .survey/work-queue/records \
+              .survey/work-queue/run-state \
+              .survey/work-queue/direct-takes \
+              .survey/work-queue/direct-take-results \
+              .survey/work-queue/hot-dispatch.json
+
+            if git diff --cached --quiet; then
+              echo 'Claim state already settled.'
+              exit 0
+            fi
+
+            git commit -m 'survey-claim: allocate one-job claims and reserve banks'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Claim push race on attempt ${attempt}; recomputing from latest main."
+            backoff=$(( attempt * 2 ))
+            if [ "$backoff" -gt 12 ]; then backoff=12; fi
+            jitter=$(( RANDOM % 6 ))
+            sleep $((backoff + jitter))
+          done
+
+          echo 'Failed to publish claim results after 12 retries.' >&2
+          exit 1

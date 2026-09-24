@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260916T093500Z-scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-3d5f11737ec9b4a2",
+      "claim_id": "claim-f75804377f721126ddb01d08",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-f75804377f721126ddb01d08",
+      "claimed_at": "2026-09-16T09:33:36+00:00",
+      "expires_at": "2026-09-16T11:03:36+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-3d5f11737ec9b4a2"
+      ],
+      "job": {
+        "job_id": "job-research-3d5f11737ec9b4a2",
+        "type": "research",
+        "parent_job_id": "job-8d60bd6cf9220eb5",
+        "priority": 75,
+        "canonical_id": "arXiv:2609.09662",
+        "title": "PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling",
+        "source_url": "https://arxiv.org/abs/2609.09662",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09662-pelm-speculative-decoding-dvfs.md",
+        "selection_reason": "投機的デコードとDVFSを協調させるon-device LLM推論研究。推論アルゴリズムとhardware power managementのcross-layer co-designとして隣接分野の比較価値がある。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T05:47:13+00:00"
+      },
+      "record_bank": "c"
+    }
+  ],
+  "processed_at": "2026-09-16T09:33:36+00:00",
+  "checkpoint_released": 0
+}

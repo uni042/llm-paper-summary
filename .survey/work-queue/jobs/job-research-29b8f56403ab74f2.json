@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-29b8f56403ab74f2",
+  "type": "research",
+  "parent_job_id": "job-b414445e354deaa2",
+  "priority": 88,
+  "canonical_id": "DOI:10.48550/arxiv.2405.04434",
+  "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+  "source_url": "https://arxiv.org/abs/2405.04434",
+  "paper_path": "papers/inference/05-kv-cache-compression-quantization/2024-2405.04434-deepseek-v2-mla.md",
+  "selection_reason": "Introduces Multi-head Latent Attention (MLA) and DeepSeekMoE; MLA directly targets inference KV-cache footprint and the report quantifies large cache and throughput effects.",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-19T18:10:07+00:00"
+}

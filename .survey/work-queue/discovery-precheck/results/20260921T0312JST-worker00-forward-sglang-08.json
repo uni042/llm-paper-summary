@@ -1,0 +1,842 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "worker00-20260921-031203-forward-sglang-08",
+  "collector_id": "worker00-forward-sglang-r08",
+  "run_key": "2026-09-21T03:01:03+09:00-worker00",
+  "axis": "forward citations SGLang",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2312.07104/citations?fields=title,abstract,year,externalIds,url,venue,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e471de78805a46d7aa3b7c88e78b969679a8d3ba",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 38,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T18:11:30.694572+00:00",
+  "results": [
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "CARE-MoE: Correlation-Aware Expert Placement and Semantic Equivalence Routing for MoE LLM Inference on Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Mixture-of-Experts (MoE) has become a mainstream architecture for Large Language Models (LLMs) due to its sparse activation mechanism. While distributed inference is promising for deploying LLMs on resource-constrained edge devices, it still faces two critical challenges for MoEs. First, the gating network’s strong bias toward a small subset of hot experts causes severe cross-device load imbalance. Cloud-side methods, such as expert replication, incur prohibitive memory overhead, and global load balancing introduces excessive communication latency in edge networks. Existing edge methods overlook expert co-activation correlations and cannot adapt to hot-cold expert drift induced by shifting user interactions. Second, the All-to-All communication overhead of expert parallelism can dominate the inference latency under bandwidth-constrained edge environments. Existing token dropping or fusion strategies reduce communication at the cost of distorted token feature propagation and degraded long-context accuracy. To address these challenges, we propose CARE-MoE, an efficient MoE LLM inference framework comprising two core components. The Correlation-Aware Expert Placer (CAEP) balances expert placement by jointly modeling co-activation correlation and hot–cold drift, preventing overload from correlated experts and enabling low-cost adaptive rebalancing. The Communication-Aware Expert Router (CAER) exploits semantic equivalence in MoEs to redirect token-expert assignments toward low-latency devices, thereby achieving significant communication reduction with negligible accuracy loss. Experiments across diverse edge environments and MoE models demonstrate that CARE-MoE achieves a 2.1 × to 5.2 × speedup over state-of-the-art baselines.",
+      "canonical_id": "DOI:10.1145/3832810.3832869",
+      "doi": "10.1145/3832810.3832869",
+      "authors": [
+        "Zhen-Yu Wang",
+        "Wei Li",
+        "Ao Ren",
+        "Duo Liu",
+        "Bo Zhang",
+        "Kan Zhong",
+        "Chao-Xia Qin",
+        "Hao-Yang Li"
+      ]
+    },
+    {
+      "title": "Cross-Layer Performance Analysis of Single-GPU Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The performance of single-GPU LLM inference is characterized by strong cross-layer interactions spanning model architecture, runtime scheduling, operator execution, and GPU microarchitecture. Unfortunately, a unified understanding of single-GPU LLM inference bottlenecks is still lacking due to two limitations: the lack of traceable cross-layer attribution and the static characterization of KV-cache usage. To this end, we present a cross-layer analysis approach for single-GPU LLM inference that jointly characterizes latency and memory behavior. However, this requires addressing two challenges: cross-layer attribution and dynamic KV-cache characterization. To address the two challenges, we employ four-layer joint profiling for cross-layer attribution and introduce a logical KV computation metric for dynamic KV-cache characterization, respectively. Finally, we systematically characterize representative dense and Mixture-of-Experts (MoE) models under diverse workloads on a single A100 GPU, identify key bottlenecks across inference phases and architectures, and reveal opportunities for further optimization.",
+      "canonical_id": "DOI:10.1145/3832810.3832894",
+      "doi": "10.1145/3832810.3832894",
+      "authors": [
+        "Zong-Xing Zhao",
+        "Xiaqing Li",
+        "Ze-Kai Meng",
+        "Zheng-Jun Fu",
+        "Qian Wang",
+        "Yan-Ling Zhang",
+        "Yidong Li"
+      ]
+    },
+    {
+      "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
+      "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Driven by cost and privacy constraints, many organizations deploy large language model (LLM) inference on local CPU-GPU servers. For long-context requests, the key-value (KV) cache grows linearly with sequence length and can rapidly exhaust GPU memory, reducing both the maximum supported context and request concurrency. Meanwhile, we observe that GPU utilization is high during the compute-heavy prefill phase but drops sharply during the memory-bound decode phase, where modern CPUs equipped with matrix units can achieve competitive attention throughput. We present AsymFlow, a prefill-decode disaggregated serving system that runs prefill on the GPU and decode on the CPU. AsymFlow (1) streams per-layer KV states through a shared-memory KV pool to overlap KV transfer with GPU prefill, (2) employs a task-aware online dispatcher that jointly accounts for pipeline queueing and KV capacity to prevent GPU OOM and idle bubbles, and (3) accelerates CPU decode attention with AMX. Implemented on SGLang and evaluated on a CPU-GPU platform, AsymFlow serves 32K-context workloads that can trigger OOM on a GPU-only baseline, improves throughput by 1.08–1.25 × over the GPU-only baseline, and by 1.32-2.49 × over a state-of-the-art KV-offloading method; the gains increase as GPU memory becomes tighter.",
+      "canonical_id": "DOI:10.1145/3832810.3832866",
+      "doi": "10.1145/3832810.3832866",
+      "authors": [
+        "Jun-Wen Zhang",
+        "Wei-Ling Yang",
+        "Jian-Bin Fang",
+        "En-Da Yu",
+        "De-Zun Dong"
+      ]
+    },
+    {
+      "title": "RPSC: Robust LLM Scheduling by Tolerating Prediction Inaccuracy and Mitigating Tail Latency",
+      "source_url": "https://www.semanticscholar.org/paper/d6928989c68496141ed1c5c207f742bc9cad96db",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "High-concurrency LLM serving requires inference systems to balance execution efficiency with stringent performance guarantees. While Shortest Remaining Processing Time (SRPT) is theoretically optimal for minimizing average job completion time, its practical application is hindered by the autoregressive nature of generative inference. Specifically, inherent length prediction inaccuracies trigger frequent, redundant preemptions, leading to excessive KV Cache swapping and recomputation penalty. Moreover, strict SRPT scheduling inherently sacrifices tail latency, failing to meet consistent SLOs. We first establish an analytical system model to characterize LLM inference through task execution states, compute and memory constraints, and preemption penalty, providing a theoretical foundation for analyzing performance trade-offs. Based on this foundation, we propose Resident Protection & Sojourn Compensation (RPSC), a robust scheduling algorithm designed to tolerate prediction inaccuracy and mitigate tail latency. RPSC introduces two synergistic mechanisms: (1) Resident Protection (RP), which shields running tasks from inaccuracy-driven preemptions to minimize redundant KV Cache swapping and recomputation overhead; and (2) Sojourn Compensation (SC), which dynamically reconciles the priority distribution based on sojourn time to prevent starvation and mitigate tail latency. Experimental results demonstrate that RPSC reduces redundant preemptions by 33.6% and improves P99 JCT by 20.3% compared to SRPT. Our work provides an efficient and robust solution for managing high-concurrency inference workloads in production environments.",
+      "canonical_id": "DOI:10.1145/3832810.3832840",
+      "doi": "10.1145/3832810.3832840",
+      "authors": [
+        "Guo-Sheng Xiao",
+        "Xuan Mo",
+        "Jia-Lun Li",
+        "Weigang Wu"
+      ]
+    },
+    {
+      "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The deployment of Large Language Models (LLMs) as multi-tenant cloud services is now widespread, but maintaining high Service Level Objective (SLO) attainment across diverse tenants remains challenging. Current serving systems focus on a single layer of the stack, either using iteration-level batching or coarse-grained instance-level routing. This approach causes significant SLO violations during bursty workloads and struggles to balance throughput with differentiated tenant priorities. The core issue lies in intra-instance schedulers lacking awareness of the global cluster state, while cluster-level routers do not account for fine-grained, per-iteration execution behavior within each GPU. We introduce CrossServe, a cross-layer scheduling framework that jointly optimizes request routing, adaptive micro-batching, and tenant-weighted preemption to maximize SLO attainment in multi-tenant LLM serving. CrossServe integrates three complementary layers: (1) an online, lightweight length classifier that separates requests to reduce Head-of-Line (HoL) blocking; (2) an SLO-aware adaptive micro-batching system that dynamically tunes prefill chunk sizes based on the real-time Time-Per-Output-Token (TPOT) slack of decoding requests; and (3) a global routing and preemption layer that distributes load across GPU instances while using tenant weights when reclaiming resources under overload. We evaluate CrossServe with BurstGPT-derived trace replay on a 32-GPU cluster. Compared with vLLM, Sarathi-Serve, and SOLA, CrossServe increases overall SLO attainment by 53, 29, and 14 percentage points respectively (from 42% to 95%, from 66% to 95%, and from 81% to 95%) while sustaining high throughput. In the ablation workload, removing global routing raises P99 TTFT from 185 ms to 410 ms; the full system therefore reduces this tail latency by 54.9% relative to that ablation and improves the observed throughput–SLO tradeoff.",
+      "canonical_id": "DOI:10.1145/3832810.3832859",
+      "doi": "10.1145/3832810.3832859",
+      "authors": [
+        "Jia-He Li",
+        "Jia-Bin Li"
+      ]
+    },
+    {
+      "title": "ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape",
+      "source_url": "https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Sharing GPUs among many deep learning models is crucial for cost-efficient inference, but bursty multi-model workloads can easily overwhelm GPU capacity, causing severe tail latency and SLO goodput drops. Existing solutions—whether traffic-aware scheduling or hardware-level resource partitioning—can only juggle contention inside the GPU pool and cannot relieve pressure when many models spike at once. We present ReliefServe, which leverages idle CPUs as interference relief paths to offload appropriate models from oversubscribed GPUs. The key is that migrating CPU-tolerant models to CPU during bursts can reduce overall GPU interference more than the local slowdown incurred, thus protecting performance-critical GPU models even with slower CPU execution. ReliefServe employs three mechanisms: (1) Escape Profiling, to identify viable offload candidates using each model’s CPU tolerance, GPU criticality, interference, and migration cost; (2) Pressure-Driven Escape Control, to monitor GPU pressure and trigger offload only if the projected interference reduction outweighs all costs; and (3) Relief-Oriented Cache Preparation, to proactively warm up high-value candidates in CPU memory for responsive migration. In a 12-server testbed with real workloads, ReliefServe reduces average inference latency by up to 27.05% and improves goodput by 39.74% under extreme burst conditions over state-of-the-art.",
+      "canonical_id": "DOI:10.1145/3832810.3832827",
+      "doi": "10.1145/3832810.3832827",
+      "authors": [
+        "Shi-Jie Peng",
+        "Yanying Lin",
+        "Chengzhi Lu",
+        "Shuai-Peng Wu",
+        "Cheng-Zhong Xu",
+        "Ke-Jiang Ye"
+      ]
+    },
+    {
+      "title": "WAQ-LLM: Optimizing Multi-Instance LLM Deployment via Workload-Aware Queueing Model",
+      "source_url": "https://www.semanticscholar.org/paper/a3ea92c6fa8233ac57ec595875a2a35f7f640056",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The deployment of Large Language Models (LLMs) on multi-instance GPU clusters has become essential to meet the surging demand for generative AI applications. While scaling out instances increases throughput, the distinct computational characteristics of prefill and decode phases introduce significant resource contention, making it challenging to satisfy stringent Service Level Objectives (SLOs) for responsiveness and generation speed. Existing serving solutions typically rely on static deployment strategies—either aggregating or disaggregating these phases—which often fail to adapt to the interference patterns caused by varying request arrival rates and sequence lengths. In this work, we propose WAQ-LLM, a performance optimization framework to find the optimal deployment configuration for multi-instance LLM serving. Specifically, we first establish an analytical workload-aware queueing model that captures the LLM computational characteristics and queuing behavior of both aggregation and disaggregation designs. We then formulate the deployment configuration problem as a constrained optimization problem and develop a polynomial-time algorithm to efficiently identify configurations that minimize Time-per-Output-Token (TPOT) while satisfying SLOs. Extensive experiments are conducted on a 16-GPU cluster across various LLMs and workload settings. WAQ-LLM consistently outperforms AIConfigurator, NVIDIA’s official product-level solution, reducing TPOT by 21.62% on average and up to 81.7%. Moreover, WAQ-LLM can provide adaptive and hybrid configurations to handle diverse workloads, surpassing static deployments limited to a single instance type (either PD aggregation or disaggregation).",
+      "canonical_id": "DOI:10.1145/3832810.3832865",
+      "doi": "10.1145/3832810.3832865",
+      "authors": [
+        "Jia-Xin Lai",
+        "Yi-Zhou Luo",
+        "Qiang Wang"
+      ]
+    },
+    {
+      "title": "Congestion-Aware Serving of Agentic LLM Applications",
+      "source_url": "https://www.semanticscholar.org/paper/adc66da23cd03d90f351c1db39703742f0ec85d9",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Agentic LLM workflows issue many dependent calls with unpredictable resource demand, causing queue buildup and latency degradation on shared serving backends when left unmanaged. In this paper, we propose CALM-MAS, a congestion-aware serving framework for LLM applications that treats LLM test-time computation as an elastic resource, dynamically adjusting the compute profile of admitted tasks to tame congestion. CALM-MAS detects early signals of back-end saturation, and leverages the flexibility of LLM applications to regulate load. During spikes of requests, the system downgrades agent topology and reasoning depth; during low-utilization periods, it allocates additional reasoning effort to maximize task accuracy. Compared with a static serving baseline based on vLLM, CALM-MAS reduces shared-backend tail latency by 77% with the accuracy degradation remaining confined to 6.1 pps relative to the native agent configuration.",
+      "canonical_id": "DOI:10.1145/3838177.3841735",
+      "doi": "10.1145/3838177.3841735",
+      "authors": [
+        "Mouheb Ben Nasr",
+        "Muhammad Bilal",
+        "Alessandro Cornacchia",
+        "Boris Radovič",
+        "Marco Canini"
+      ]
+    },
+    {
+      "title": "Long-Lived Characters, Local Inference: Incremental Memory Maintenance for Game NPCs",
+      "source_url": "https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "A game character should not have to reread its entire life before every conversation. For locally deployed language-model characters, however, revising a few memories can invalidate a long reusable prefix. The resulting preparation cost competes with both foreground dialogue and the maintenance of other characters. This matters especially when dialogue feeds game-defined actions and value judgments: a fluent but incorrect account of who owns an item, or whether a transfer has already happened, can corrupt the input to otherwise deterministic rules. We study incremental memory maintenance for long-lived game NPCs in a quantized Qwen hybrid recurrent-attention model. Our runtime removes superseded attention KV entries, computes replacement records at the true sequence tail, and preserves the continuing recurrent state and unchanged KV. Existing local experiments combine multi-update dialogue replays, fixed-input placement ablations, and attention diagnostics. Independent block composition weakens query-conditioned memory selection without a uniform chunk-initial attention collapse. True-tail updates preserve important current-state and historical bindings across eight scripted maintenance rounds; a placement case recovers the full-refill quantity in three reconstructions, while slot-preserving alternatives repeat a double-subtraction error. Attention-distribution proximity alone does not explain these semantic differences. The results motivate treating a character's inference state as a maintained, history-dependent resource, rather than only a disposable encoding of its latest memory text.",
+      "canonical_id": "arXiv:2609.18935",
+      "arxiv_id": "2609.18935",
+      "authors": [
+        "Zi-Mu Xu"
+      ]
+    },
+    {
+      "title": "MiST: Mid-Training LLMs for Cybersecurity",
+      "source_url": "https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Cybersecurity combines high-stakes analysis with complex technical language, making it an impactful and challenging domain for LLMs. We present MiST (Mid-trained Security Transformer), a suite of 8B and 32B models that achieve strong performance on public cybersecurity benchmarks. We use mid-training as an intermediate adaptation stage between general pre-training and cybersecurity training. Rather than performing continual pre-training over large volumes of raw domain text, we curate a compact, expert-vetted seed corpus, and transform it into high-quality domain-specific synthetic training data. The final MiST checkpoints improve mean cybersecurity accuracy by +13.1 and +8.6 absolute percentage points over the corresponding Qwen baselines for 8B and 32B, respectively, corresponding to relative gains of +27.0% and +15.8%. Ablation results further show that these cybersecurity gains arise in the mid-training and supervised fine-tuning stages through a combination of the synthetic data generation flows. Furthermore, we show that MiST provides a stronger initialization for downstream task-specific fine-tuning adaptation and reinforcement learning.",
+      "canonical_id": "arXiv:2609.18496",
+      "arxiv_id": "2609.18496",
+      "authors": [
+        "O. Ovadia",
+        "Elad Ben Zaken",
+        "Elad Guttman",
+        "Orly Moreno Kadosh"
+      ]
+    },
+    {
+      "title": "Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs",
+      "source_url": "https://www.semanticscholar.org/paper/9b998f8a02c4bb92a679ad3c113bfda69dd9cdf0",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "A common small-model deployment runs one shared backbone with several LoRA specialists that answer over the same context. Serving them naively re-prefills that shared context once per specialist. We study a narrow, practical question: for already-trained standard LoRA adapters -- not adapters retrained for cache compatibility -- how much task quality is preserved if the backbone's prefill KV cache is computed once and reused across specialists, and what does that buy in serving cost? On a Qwen3-1.7B backbone with two adapters (extractive QA on HotpotQA, arithmetic reasoning on GSM8K), we sweep the boundary at which the specialist takes over from the reused base cache and measure paired quality differences and serving cost. Full-prefix reuse had the lowest prefill cost and a small quality difference on held-out GSM8K (Delta = -4.6 EM at a 160-token budget; -3.0 at 320 tokens; -0.8 under a second training seed -- all favoring native, only the first excluding zero, and the magnitude not consistent). Partial recomputation provided no demonstrated advantage. Neither quality equivalence nor a general boundary-selection rule is established. We also report a closed-form ridge KV translator that did not beat direct reuse, and specialist-dependence contrasts whose intervals all include zero. The measured serving benefit is warm-cache time-to-first-token, which grows with context (~16x at 8K); two-branch peak memory was only 12% lower and, on inspection, the prefix was never physically shared across branches -- this implementation reuses KV values but copies their storage, so shared-cache memory savings are not achieved.",
+      "canonical_id": "arXiv:2609.17109",
+      "arxiv_id": "2609.17109",
+      "authors": [
+        "D. Rajput"
+      ]
+    },
+    {
+      "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+      "source_url": "https://www.semanticscholar.org/paper/deae700f0061de98c92b3c0a4e321c8f5b996d68",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "As AI becomes increasingly ubiquitous, modern AI systems are shaped by a tight software-hardware co-design loop. Later GPUs expose features such as asynchronous data movement, tensor core pipelines, and fine-grained synchronization that high-performance kernels aggressively exploit, while emerging application behaviors increasingly influence the next generation of hardware design. Unfortunately, the latest open-source simulators for NVIDIA GPUs focus on architectures and software stacks from roughly six years ago. Therefore, they cannot support many state-of-the-art AI kernels generated by modern compiler stacks, e.g. Triton, or accurately model the hardware features they depend on. As a result, architects lack a credible platform for analyzing bottlenecks in this flywheel or evaluating design trade-offs for future AI systems. To bridge this gap, we present FlashGPU-sim, an open-source, execution-driven, cycle-accurate GPU simulator for modern AI workloads. FlashGPU-sim faithfully models modern hardware features such as asynchronous data movement, fine-grained synchronization, tensor-core execution, and distributed shared memory. A Triton extraction front-end allows direct simulation of optimized AI operators without manual porting, while multi-threaded execution makes large-scale software-hardware co-design practical. Across 131 workload configurations on RTX 5090, H100, and B200, FlashGPU-sim achieves a cycle-level MAPE of 5.24%, while multi-threaded simulation reaches a 7.86x speedup with 16 host threads. An H100 case study further demonstrates its utility for microarchitectural design exploration.",
+      "canonical_id": "arXiv:2609.15311",
+      "arxiv_id": "2609.15311",
+      "authors": [
+        "Si-Ying Yu",
+        "Yi-Xun Hong",
+        "Guo-Zhi Qiu",
+        "Jing-Ci Liu",
+        "Feng Gu",
+        "C. Geng",
+        "Zheng-Rong Wang",
+        "Chen Zhang",
+        "Bei Yu"
+      ]
+    },
+    {
+      "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+      "source_url": "https://www.semanticscholar.org/paper/7230bca60434024cc679e0d1e71a80bde5a9f3c5",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "GPU high bandwidth memory is scarce and expensive, and KV caches consume much of it as chats, agent loops, and document question answering accumulate state. Systems such as Mooncake, LMCache, FlexGen, InfiniGen, and AttentionStore extend GPU memory with CPU DRAM and SSD. The harder question is which blocks belong in each tier, when to move or evict them, and whether prefetching helps. We study these choices in a discrete event simulator spanning GPU HBM, CPU DRAM, and SSD, calibrated against a random forest execution time predictor. We compare recency, reuse frequency, predicted reuse, and an EWMA predictor with prefetch lookahead across chat, agent, and document question answering workloads. Tiering supports 73.02 times more concurrent sessions per GPU and lowers cost per session by 62.04 times. These gains come from tier capacities of 1 plus 8 plus 64, not placement policy. Decode is compute bound at batch size one in our setup, so placement barely affects throughput. It mainly changes PCIe migration traffic and time to first token. Recency produces 2.30 times less migration traffic than reuse frequency for chat. Reuse frequency performs best for agents and document question answering. The existing predicted reuse policy is byte identical to recency, making its agent recommendation effectively recency. A genuine EWMA predictor changes behavior but still ranks behind reuse frequency on the workloads prediction was expected to help. Prefetching does not justify its bandwidth cost. Across the policy and cache size grid, even an oracle with knowledge of future requests never beats no prefetch on migration traffic. Workload specific placement can reduce data movement, but the predicted reuse and prefetch recommendations are not supported as implemented.",
+      "canonical_id": "arXiv:2609.16215",
+      "arxiv_id": "2609.16215",
+      "authors": [
+        "Srikanta Datta Tumkur",
+        "Jay Iyer",
+        "Mehar Simhadri",
+        "S. Kumar",
+        "Sai Kapil Kumar",
+        "Ramesh Nampelly"
+      ]
+    },
+    {
+      "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+      "source_url": "https://www.semanticscholar.org/paper/5dfc253c4e99e4dc927022ba6963d6e82b5b7530",
+      "year": 2026,
+      "published": "2026-09-12",
+      "abstract": "Concurrent local LLM serving on unified-memory desktops must preserve memory headroom and output fidelity, which speed-only rankings overlook. We introduce SiliconBench, which evaluates nine Apple Silicon serving engines through three lenses: speed, memory, and fidelity. We evaluate chat and agent serving on Qwen3, Qwen3.5, and Gemma 4. We use a classification task to check for quality regressions against an NVIDIA reference. DGX Spark provides a complementary serving-performance reference. Three desiderata guide interpretation: serving architecture readiness, memory discipline, and multi-node scaling. On Qwen3-0.6B, vllm-metal alone more than doubles throughput on both workloads from concurrency 1 to 16. CUDA vLLM and SGLang show stronger concurrency scaling on the same prompts. Explicit memory budgets do not guarantee memory headroom: two stacks complete every request while memory use approaches physical capacity and throughput declines. The newer model architectures have narrower engine support. Their evaluated implementations match the fidelity reference. Only three stacks satisfy the completion, fidelity, and model-coverage gates. Comparisons on larger dense and MoE models reinforce the importance of scheduling prompt processing alongside ongoing generation: vllm-metal's packed prefill-decode path maintains lower first-token latency than omlx under concurrent load. In the tested two-machine configurations, tensor parallelism over Thunderbolt RDMA scales while pipeline parallelism over TCP regresses. We release benchmark code, per-run results, and maintenance journals, supported by a workflow combining bounded agent fixes with human review.",
+      "canonical_id": "arXiv:2609.19169",
+      "arxiv_id": "2609.19169",
+      "authors": [
+        "Ran-Ran Zhang",
+        "A. X. Fan",
+        "David Munhá Correia",
+        "Alex Cheema",
+        "Rui Zhang"
+      ]
+    },
+    {
+      "title": "Security-Augmented Use Case Flow Refinement for LLM-Based Agentic Systems",
+      "source_url": "https://www.semanticscholar.org/paper/4e435602476474730e219e89f49b5eea23d3b352",
+      "year": 2026,
+      "published": "2026-09-12",
+      "abstract": "Unlike conventional software systems and large language models (LLMs) evaluated in isolation, LLM-based agentic systems introduce a compositional, workflow-level attack surface. Existing security analysis approaches provide limited support for identifying security omissions implicit in functional use case flows and deriving corresponding flow refinements for direct incorporation into use case specifications. We formulate the Security-Augmented Use Case Flow Refinement Task and propose MA-SAFR, a multi-agent framework that coordinates Red Team, Blue Team, and Critic agents for threat anchoring, security-branch construction, and validation. EvoGraphRAG adapts relation-aware retrieval through validation feedback, while Risk-Specific Security Guidance (RSSG) provides risk- and role-specific constraints. To support systematic evaluation of this task, we construct SAFR-Bench from OWASP and MITRE ATLAS, comprising 157 cases and 235 source-grounded threat–refinement pairs. Across three generation models, MA-SAFR improves all three metrics on average compared with the strongest corresponding baselines; pipeline recall and pipeline precision increase by 63.44% and 54.96%, respectively. Controlled analyses show that RSSG and feedback-based graph evolution within gEvoGraphRAG improve downstream threat-to-defense conversion. Despite remaining challenges in implicit-threat identification, multi-threat coverage, and defense alignment, the results show that MA-SAFR can support the construction of valid security-augmented use case flows.",
+      "canonical_id": "DOI:10.3390/electronics15184135",
+      "doi": "10.3390/electronics15184135",
+      "authors": [
+        "Guang-Yu Wang",
+        "Bangqi Li",
+        "Ji Wu",
+        "Zhi-Jun Shao"
+      ]
+    },
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Auto-regressive model decode is bandwidth-bound, since every weight and key/value-cache byte crosses high-bandwidth memory once per token. A megakernel is an ideal solution, but existing automatic megakernel generation approaches cannot achieve both generalization across models and correctness guarantees. We present ForgeMegakernel, which generates a per-model high-performance decode megakernel using coding agents. ForgeMegakernel pairs a universal knowledge base of ten progressive milestones with an independent mid-state test oracle. The milestones provide the megakernel's structural properties: a fine-grained instruction stream for each SM, dependency counters replacing the global synchronization, and a shared-memory buffer pool for workload balance across SMs and greater parallelism. The test oracle derives the mid-states of the megakernel and checks the performance, error and precision during the generation process, guaranteeing a correct and trustworthy forged megakernel. We evaluated ForgeMegakernel on 14 representative decoding operations across eight model families spanning 0.6B-13B parameters. The generated megakernels achieved 50.5-85.9% MBU and geometric mean speedups of 1.21x over SGLang 0.5.18 and 1.54x over a megakernel compiler under identical configurations. Inside SGLang, evaluated on GSM8K with ragged prompts, all 14 megakernels decoded faster than the SGLang engine at comparable answer accuracy.",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Le-Shan Li",
+        "Zhui Zhu",
+        "Xiang-Long Deng",
+        "Yao-Jian Chen",
+        "Qing-Feng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhi-Yuan Liu"
+      ]
+    },
+    {
+      "title": "OneLA: Scaling Linear-Attention Decoding to Large Beams in Generative Recommendation",
+      "source_url": "https://www.semanticscholar.org/paper/5ed501d200a16be2542d821f48b168def5a84913",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Generative recommendation (GR) relies on large-beam decoding to generate hundreds of candidate items, creating a new scaling challenge for recurrent linear attention. Existing linear attention serving systems either materialize a full recurrent state for every beam or repeatedly replay shared history, incurring substantial memory and traffic overhead. To address this, we present OneLA, a linear-attention decoding framework that exploits the shared prompt and short divergent suffixes of GR workloads. Specifically, OneLA represents all beam states using a single shared prompt-derived state and compact, append-only records of their divergent transitions. Using this representation, OneLA computes only the state information required at each decoding step, without reconstructing a full recurrent state for every beam. Furthermore, OneLA uses a lightweight ancestry index to track the transition records that make up each beam's history, allowing beams to be updated without moving or copying existing records. A fused GPU kernel further reuses the shared state across beams. Our analysis shows that OneLA achieves 1.54-2.46x end-to-end decode speedups while substantially reducing recurrent-state memory use and data movement.",
+      "canonical_id": "arXiv:2609.12399",
+      "arxiv_id": "2609.12399",
+      "authors": [
+        "Xiang-Rui Yang",
+        "Cheng Peng",
+        "Yun-Feng Zhao",
+        "Liang Zeng",
+        "Ao Hu",
+        "Jia-Wei Yang",
+        "Sheng-Zhe Wang",
+        "Jing-Shan Lv",
+        "Xiao Liang",
+        "Chen Yang",
+        "Jia-Qi Liu",
+        "Yiming Qiu"
+      ]
+    },
+    {
+      "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+      "source_url": "https://www.semanticscholar.org/paper/5fedeb84be4240c6c87fa5e311714720f66491e8",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Foundation models, including large language models, vision-language models, and time-series foundation models, are increasingly deployed on embedded and edge platforms for CPS and IoT applications, where energy, latency, and memory are as critical as task accuracy. Existing benchmarking tools evaluate model capability in isolation, reporting accuracy assuming sufficient compute, while hardware profiling tools remain platform-specific and mutually incompatible. As a result, users lack a unified workflow for making deployment decisions across heterogeneous devices. We present HoliBench, a modular benchmarking and deployment toolkit that jointly characterizes accuracy, latency, and energy across platforms from single-board computers to GPU servers. Its platform abstraction layer calibrates cross-device measurement, and the toolkit supports multiple model modalities, inference engines, concurrencies, and existing evaluation harnesses. An interactive interface exposes constraint-aware configuration selection over a design space that is profiled once and reused across studies. Using HoliBench, we characterize 20 models across 7 device types, 3 quantization levels, 8 inference backends, and over 30 tasks, surfacing tradeoffs that existing tools miss: quantization reduces latency only on hardware with low-precision support, accuracy gains show diminishing returns relative to energy, and for autoregressive workloads, average inference power is approximately constant across output lengths. We further find that single-model profiles compose under sequential co-resident execution. In a multi-model CPS deployment, standalone profiles predict combined-pipeline latency and power within 1.2% and 2.5%, enabling deployment exploration without exhaustively profiling every pipeline configuration. We release HoliBench as open-source infrastructure for deployment-aware evaluation of foundation models.",
+      "canonical_id": "arXiv:2609.12412",
+      "arxiv_id": "2609.12412",
+      "authors": [
+        "Inesh Chakrabarti",
+        "Ze-Jun Xiong",
+        "Pragya Sharma",
+        "Mani Srivastava"
+      ]
+    },
+    {
+      "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+      "source_url": "https://www.semanticscholar.org/paper/ad14a5226c99c4f3f97e37102ae12fcf6662cdd4",
+      "year": 2026,
+      "published": "2026-09-11",
+      "abstract": "Quantized Mixture-of-Experts (MoE) services can hold several pre-materialized instances of one base model, but quantization damage varies sharply across requests and bitwidths. Because instance materialization and replica counts consume memory and require slow reconfiguration, we treat them as upstream provisioning decisions and study routing within a fixed resident pool. Within this fixed-pool boundary, we route each request to maximize modeled throughput under a class-level expected quality-degradation budget and measured instance capacities. To predict this request-specific risk, we introduce FWP (Fragility-Weighted Perplexity), computed from prompt tokens on a reference-instance prefill and calibrated to candidate-instance degradation. Underlying FWP is an exact two-expert affinity--fragility decomposition and a conditional multi-layer top-$k$ expansion whose bias, interaction, route-change, separability, and higher-order terms remain explicit. Using these calibrated risks, a window-level linear program yields a signed reduced-reward score that is KKT-consistent with the LP optimum under optimal prices and primal-feasible tie allocation. On 88 extended Qwen prompts, complete W2, W3, and W4 instances quantizing all 6,144 expert blocks incur mean $\\Delta$NLL of $0.9437$, $0.1832$, and $0.0513$. Under the same population and $\\tau=0.1513$, FWP allocation reaches a $1.284\\times$ offline model-based multiplier versus $1.253\\times$ for request-agnostic mixing and $1.000\\times$ for static W4, an incremental $2.5\\%$ relative FWP gain.",
+      "canonical_id": "arXiv:2609.12550",
+      "arxiv_id": "2609.12550",
+      "authors": [
+        "Zheng-Hong Huang",
+        "Hong-Fan Wu",
+        "Ji-Heng Zhang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832869",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832869",
+        "title:caremoe correlationaware expert placement and semantic equivalence routing for moe llm inference on edge devices",
+        "url:https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068"
+      ],
+      "record": {
+        "title": "CARE-MoE: Correlation-Aware Expert Placement and Semantic Equivalence Routing for MoE LLM Inference on Edge Devices",
+        "source_url": "https://www.semanticscholar.org/paper/21fc6b1af66296c39fefd6e52e29d679963f6068",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Mixture-of-Experts (MoE) has become a mainstream architecture for Large Language Models (LLMs) due to its sparse activation mechanism. While distributed inference is promising for deploying LLMs on resource-constrained edge devices, it still faces two critical challenges for MoEs. First, the gating network’s strong bias toward a small subset of hot experts causes severe cross-device load imbalance. Cloud-side methods, such as expert replication, incur prohibitive memory overhead, and global load balancing introduces excessive communication latency in edge networks. Existing edge methods overlook expert co-activation correlations and cannot adapt to hot-cold expert drift induced by shifting user interactions. Second, the All-to-All communication overhead of expert parallelism can dominate the inference latency under bandwidth-constrained edge environments. Existing token dropping or fusion strategies reduce communication at the cost of distorted token feature propagation and degraded long-context accuracy. To address these challenges, we propose CARE-MoE, an efficient MoE LLM inference framework comprising two core components. The Correlation-Aware Expert Placer (CAEP) balances expert placement by jointly modeling co-activation correlation and hot–cold drift, preventing overload from correlated experts and enabling low-cost adaptive rebalancing. The Communication-Aware Expert Router (CAER) exploits semantic equivalence in MoEs to redirect token-expert assignments toward low-latency devices, thereby achieving significant communication reduction with negligible accuracy loss. Experiments across diverse edge environments and MoE models demonstrate that CARE-MoE achieves a 2.1 × to 5.2 × speedup over state-of-the-art baselines.",
+        "canonical_id": "DOI:10.1145/3832810.3832869",
+        "doi": "10.1145/3832810.3832869",
+        "authors": [
+          "Zhen-Yu Wang",
+          "Wei Li",
+          "Ao Ren",
+          "Duo Liu",
+          "Bo Zhang",
+          "Kan Zhong",
+          "Chao-Xia Qin",
+          "Hao-Yang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832894",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832894",
+        "title:crosslayer performance analysis of singlegpu large language model inference",
+        "url:https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb"
+      ],
+      "record": {
+        "title": "Cross-Layer Performance Analysis of Single-GPU Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The performance of single-GPU LLM inference is characterized by strong cross-layer interactions spanning model architecture, runtime scheduling, operator execution, and GPU microarchitecture. Unfortunately, a unified understanding of single-GPU LLM inference bottlenecks is still lacking due to two limitations: the lack of traceable cross-layer attribution and the static characterization of KV-cache usage. To this end, we present a cross-layer analysis approach for single-GPU LLM inference that jointly characterizes latency and memory behavior. However, this requires addressing two challenges: cross-layer attribution and dynamic KV-cache characterization. To address the two challenges, we employ four-layer joint profiling for cross-layer attribution and introduce a logical KV computation metric for dynamic KV-cache characterization, respectively. Finally, we systematically characterize representative dense and Mixture-of-Experts (MoE) models under diverse workloads on a single A100 GPU, identify key bottlenecks across inference phases and architectures, and reveal opportunities for further optimization.",
+        "canonical_id": "DOI:10.1145/3832810.3832894",
+        "doi": "10.1145/3832810.3832894",
+        "authors": [
+          "Zong-Xing Zhao",
+          "Xiaqing Li",
+          "Ze-Kai Meng",
+          "Zheng-Jun Fu",
+          "Qian Wang",
+          "Yan-Ling Zhang",
+          "Yidong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832866",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832866",
+        "title:asymflow enabling longcontext llm serving via cpugpu prefilldecode disaggregation",
+        "url:https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9"
+      ],
+      "record": {
+        "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
+        "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Driven by cost and privacy constraints, many organizations deploy large language model (LLM) inference on local CPU-GPU servers. For long-context requests, the key-value (KV) cache grows linearly with sequence length and can rapidly exhaust GPU memory, reducing both the maximum supported context and request concurrency. Meanwhile, we observe that GPU utilization is high during the compute-heavy prefill phase but drops sharply during the memory-bound decode phase, where modern CPUs equipped with matrix units can achieve competitive attention throughput. We present AsymFlow, a prefill-decode disaggregated serving system that runs prefill on the GPU and decode on the CPU. AsymFlow (1) streams per-layer KV states through a shared-memory KV pool to overlap KV transfer with GPU prefill, (2) employs a task-aware online dispatcher that jointly accounts for pipeline queueing and KV capacity to prevent GPU OOM and idle bubbles, and (3) accelerates CPU decode attention with AMX. Implemented on SGLang and evaluated on a CPU-GPU platform, AsymFlow serves 32K-context workloads that can trigger OOM on a GPU-only baseline, improves throughput by 1.08–1.25 × over the GPU-only baseline, and by 1.32-2.49 × over a state-of-the-art KV-offloading method; the gains increase as GPU memory becomes tighter.",
+        "canonical_id": "DOI:10.1145/3832810.3832866",
+        "doi": "10.1145/3832810.3832866",
+        "authors": [
+          "Jun-Wen Zhang",
+          "Wei-Ling Yang",
+          "Jian-Bin Fang",
+          "En-Da Yu",
+          "De-Zun Dong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832840",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832840",
+        "title:rpsc robust llm scheduling by tolerating prediction inaccuracy and mitigating tail latency",
+        "url:https://www.semanticscholar.org/paper/d6928989c68496141ed1c5c207f742bc9cad96db"
+      ],
+      "record": {
+        "title": "RPSC: Robust LLM Scheduling by Tolerating Prediction Inaccuracy and Mitigating Tail Latency",
+        "source_url": "https://www.semanticscholar.org/paper/d6928989c68496141ed1c5c207f742bc9cad96db",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "High-concurrency LLM serving requires inference systems to balance execution efficiency with stringent performance guarantees. While Shortest Remaining Processing Time (SRPT) is theoretically optimal for minimizing average job completion time, its practical application is hindered by the autoregressive nature of generative inference. Specifically, inherent length prediction inaccuracies trigger frequent, redundant preemptions, leading to excessive KV Cache swapping and recomputation penalty. Moreover, strict SRPT scheduling inherently sacrifices tail latency, failing to meet consistent SLOs. We first establish an analytical system model to characterize LLM inference through task execution states, compute and memory constraints, and preemption penalty, providing a theoretical foundation for analyzing performance trade-offs. Based on this foundation, we propose Resident Protection & Sojourn Compensation (RPSC), a robust scheduling algorithm designed to tolerate prediction inaccuracy and mitigate tail latency. RPSC introduces two synergistic mechanisms: (1) Resident Protection (RP), which shields running tasks from inaccuracy-driven preemptions to minimize redundant KV Cache swapping and recomputation overhead; and (2) Sojourn Compensation (SC), which dynamically reconciles the priority distribution based on sojourn time to prevent starvation and mitigate tail latency. Experimental results demonstrate that RPSC reduces redundant preemptions by 33.6% and improves P99 JCT by 20.3% compared to SRPT. Our work provides an efficient and robust solution for managing high-concurrency inference workloads in production environments.",
+        "canonical_id": "DOI:10.1145/3832810.3832840",
+        "doi": "10.1145/3832810.3832840",
+        "authors": [
+          "Guo-Sheng Xiao",
+          "Xuan Mo",
+          "Jia-Lun Li",
+          "Weigang Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832859",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832859",
+        "title:crossserve crosslayer scheduling for slo optimization in multitenant llm serving",
+        "url:https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4"
+      ],
+      "record": {
+        "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The deployment of Large Language Models (LLMs) as multi-tenant cloud services is now widespread, but maintaining high Service Level Objective (SLO) attainment across diverse tenants remains challenging. Current serving systems focus on a single layer of the stack, either using iteration-level batching or coarse-grained instance-level routing. This approach causes significant SLO violations during bursty workloads and struggles to balance throughput with differentiated tenant priorities. The core issue lies in intra-instance schedulers lacking awareness of the global cluster state, while cluster-level routers do not account for fine-grained, per-iteration execution behavior within each GPU. We introduce CrossServe, a cross-layer scheduling framework that jointly optimizes request routing, adaptive micro-batching, and tenant-weighted preemption to maximize SLO attainment in multi-tenant LLM serving. CrossServe integrates three complementary layers: (1) an online, lightweight length classifier that separates requests to reduce Head-of-Line (HoL) blocking; (2) an SLO-aware adaptive micro-batching system that dynamically tunes prefill chunk sizes based on the real-time Time-Per-Output-Token (TPOT) slack of decoding requests; and (3) a global routing and preemption layer that distributes load across GPU instances while using tenant weights when reclaiming resources under overload. We evaluate CrossServe with BurstGPT-derived trace replay on a 32-GPU cluster. Compared with vLLM, Sarathi-Serve, and SOLA, CrossServe increases overall SLO attainment by 53, 29, and 14 percentage points respectively (from 42% to 95%, from 66% to 95%, and from 81% to 95%) while sustaining high throughput. In the ablation workload, removing global routing raises P99 TTFT from 185 ms to 410 ms; the full system therefore reduces this tail latency by 54.9% relative to that ablation and improves the observed throughput–SLO tradeoff.",
+        "canonical_id": "DOI:10.1145/3832810.3832859",
+        "doi": "10.1145/3832810.3832859",
+        "authors": [
+          "Jia-He Li",
+          "Jia-Bin Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832827",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832827",
+        "title:reliefserve relieving gpu pressure in multimodel serving via selective cpu escape",
+        "url:https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80"
+      ],
+      "record": {
+        "title": "ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape",
+        "source_url": "https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Sharing GPUs among many deep learning models is crucial for cost-efficient inference, but bursty multi-model workloads can easily overwhelm GPU capacity, causing severe tail latency and SLO goodput drops. Existing solutions—whether traffic-aware scheduling or hardware-level resource partitioning—can only juggle contention inside the GPU pool and cannot relieve pressure when many models spike at once. We present ReliefServe, which leverages idle CPUs as interference relief paths to offload appropriate models from oversubscribed GPUs. The key is that migrating CPU-tolerant models to CPU during bursts can reduce overall GPU interference more than the local slowdown incurred, thus protecting performance-critical GPU models even with slower CPU execution. ReliefServe employs three mechanisms: (1) Escape Profiling, to identify viable offload candidates using each model’s CPU tolerance, GPU criticality, interference, and migration cost; (2) Pressure-Driven Escape Control, to monitor GPU pressure and trigger offload only if the projected interference reduction outweighs all costs; and (3) Relief-Oriented Cache Preparation, to proactively warm up high-value candidates in CPU memory for responsive migration. In a 12-server testbed with real workloads, ReliefServe reduces average inference latency by up to 27.05% and improves goodput by 39.74% under extreme burst conditions over state-of-the-art.",
+        "canonical_id": "DOI:10.1145/3832810.3832827",
+        "doi": "10.1145/3832810.3832827",
+        "authors": [
+          "Shi-Jie Peng",
+          "Yanying Lin",
+          "Chengzhi Lu",
+          "Shuai-Peng Wu",
+          "Cheng-Zhong Xu",
+          "Ke-Jiang Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832865",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832865",
+        "title:waqllm optimizing multiinstance llm deployment via workloadaware queueing model",
+        "url:https://www.semanticscholar.org/paper/a3ea92c6fa8233ac57ec595875a2a35f7f640056"
+      ],
+      "record": {
+        "title": "WAQ-LLM: Optimizing Multi-Instance LLM Deployment via Workload-Aware Queueing Model",
+        "source_url": "https://www.semanticscholar.org/paper/a3ea92c6fa8233ac57ec595875a2a35f7f640056",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The deployment of Large Language Models (LLMs) on multi-instance GPU clusters has become essential to meet the surging demand for generative AI applications. While scaling out instances increases throughput, the distinct computational characteristics of prefill and decode phases introduce significant resource contention, making it challenging to satisfy stringent Service Level Objectives (SLOs) for responsiveness and generation speed. Existing serving solutions typically rely on static deployment strategies—either aggregating or disaggregating these phases—which often fail to adapt to the interference patterns caused by varying request arrival rates and sequence lengths. In this work, we propose WAQ-LLM, a performance optimization framework to find the optimal deployment configuration for multi-instance LLM serving. Specifically, we first establish an analytical workload-aware queueing model that captures the LLM computational characteristics and queuing behavior of both aggregation and disaggregation designs. We then formulate the deployment configuration problem as a constrained optimization problem and develop a polynomial-time algorithm to efficiently identify configurations that minimize Time-per-Output-Token (TPOT) while satisfying SLOs. Extensive experiments are conducted on a 16-GPU cluster across various LLMs and workload settings. WAQ-LLM consistently outperforms AIConfigurator, NVIDIA’s official product-level solution, reducing TPOT by 21.62% on average and up to 81.7%. Moreover, WAQ-LLM can provide adaptive and hybrid configurations to handle diverse workloads, surpassing static deployments limited to a single instance type (either PD aggregation or disaggregation).",
+        "canonical_id": "DOI:10.1145/3832810.3832865",
+        "doi": "10.1145/3832810.3832865",
+        "authors": [
+          "Jia-Xin Lai",
+          "Yi-Zhou Luo",
+          "Qiang Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3838177.3841735",
+      "identity_tokens": [
+        "id:DOI:10.1145/3838177.3841735",
+        "title:congestionaware serving of agentic llm applications",
+        "url:https://www.semanticscholar.org/paper/adc66da23cd03d90f351c1db39703742f0ec85d9"
+      ],
+      "record": {
+        "title": "Congestion-Aware Serving of Agentic LLM Applications",
+        "source_url": "https://www.semanticscholar.org/paper/adc66da23cd03d90f351c1db39703742f0ec85d9",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Agentic LLM workflows issue many dependent calls with unpredictable resource demand, causing queue buildup and latency degradation on shared serving backends when left unmanaged. In this paper, we propose CALM-MAS, a congestion-aware serving framework for LLM applications that treats LLM test-time computation as an elastic resource, dynamically adjusting the compute profile of admitted tasks to tame congestion. CALM-MAS detects early signals of back-end saturation, and leverages the flexibility of LLM applications to regulate load. During spikes of requests, the system downgrades agent topology and reasoning depth; during low-utilization periods, it allocates additional reasoning effort to maximize task accuracy. Compared with a static serving baseline based on vLLM, CALM-MAS reduces shared-backend tail latency by 77% with the accuracy degradation remaining confined to 6.1 pps relative to the native agent configuration.",
+        "canonical_id": "DOI:10.1145/3838177.3841735",
+        "doi": "10.1145/3838177.3841735",
+        "authors": [
+          "Mouheb Ben Nasr",
+          "Muhammad Bilal",
+          "Alessandro Cornacchia",
+          "Boris Radovič",
+          "Marco Canini"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18935",
+      "identity_tokens": [
+        "id:arXiv:2609.18935",
+        "title:longlived characters local inference incremental memory maintenance for game npcs",
+        "url:https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3"
+      ],
+      "record": {
+        "title": "Long-Lived Characters, Local Inference: Incremental Memory Maintenance for Game NPCs",
+        "source_url": "https://www.semanticscholar.org/paper/fe1163f244724694727efda120050751be655dd3",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "A game character should not have to reread its entire life before every conversation. For locally deployed language-model characters, however, revising a few memories can invalidate a long reusable prefix. The resulting preparation cost competes with both foreground dialogue and the maintenance of other characters. This matters especially when dialogue feeds game-defined actions and value judgments: a fluent but incorrect account of who owns an item, or whether a transfer has already happened, can corrupt the input to otherwise deterministic rules. We study incremental memory maintenance for long-lived game NPCs in a quantized Qwen hybrid recurrent-attention model. Our runtime removes superseded attention KV entries, computes replacement records at the true sequence tail, and preserves the continuing recurrent state and unchanged KV. Existing local experiments combine multi-update dialogue replays, fixed-input placement ablations, and attention diagnostics. Independent block composition weakens query-conditioned memory selection without a uniform chunk-initial attention collapse. True-tail updates preserve important current-state and historical bindings across eight scripted maintenance rounds; a placement case recovers the full-refill quantity in three reconstructions, while slot-preserving alternatives repeat a double-subtraction error. Attention-distribution proximity alone does not explain these semantic differences. The results motivate treating a character's inference state as a maintained, history-dependent resource, rather than only a disposable encoding of its latest memory text.",
+        "canonical_id": "arXiv:2609.18935",
+        "arxiv_id": "2609.18935",
+        "authors": [
+          "Zi-Mu Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18496",
+      "identity_tokens": [
+        "id:arXiv:2609.18496",
+        "title:mist midtraining llms for cybersecurity",
+        "url:https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9"
+      ],
+      "record": {
+        "title": "MiST: Mid-Training LLMs for Cybersecurity",
+        "source_url": "https://www.semanticscholar.org/paper/7111cc34317de2454113c41d6e233fa848a3bfd9",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Cybersecurity combines high-stakes analysis with complex technical language, making it an impactful and challenging domain for LLMs. We present MiST (Mid-trained Security Transformer), a suite of 8B and 32B models that achieve strong performance on public cybersecurity benchmarks. We use mid-training as an intermediate adaptation stage between general pre-training and cybersecurity training. Rather than performing continual pre-training over large volumes of raw domain text, we curate a compact, expert-vetted seed corpus, and transform it into high-quality domain-specific synthetic training data. The final MiST checkpoints improve mean cybersecurity accuracy by +13.1 and +8.6 absolute percentage points over the corresponding Qwen baselines for 8B and 32B, respectively, corresponding to relative gains of +27.0% and +15.8%. Ablation results further show that these cybersecurity gains arise in the mid-training and supervised fine-tuning stages through a combination of the synthetic data generation flows. Furthermore, we show that MiST provides a stronger initialization for downstream task-specific fine-tuning adaptation and reinforcement learning.",
+        "canonical_id": "arXiv:2609.18496",
+        "arxiv_id": "2609.18496",
+        "authors": [
+          "O. Ovadia",
+          "Elad Ben Zaken",
+          "Elad Guttman",
+          "Orly Moreno Kadosh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.17109",
+      "identity_tokens": [
+        "id:arXiv:2609.17109",
+        "title:sharedprefix kv reuse across standard lora adapters quality and serving tradeoffs",
+        "url:https://www.semanticscholar.org/paper/9b998f8a02c4bb92a679ad3c113bfda69dd9cdf0"
+      ],
+      "record": {
+        "title": "Shared-Prefix KV Reuse Across Standard LoRA Adapters: Quality and Serving Tradeoffs",
+        "source_url": "https://www.semanticscholar.org/paper/9b998f8a02c4bb92a679ad3c113bfda69dd9cdf0",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "A common small-model deployment runs one shared backbone with several LoRA specialists that answer over the same context. Serving them naively re-prefills that shared context once per specialist. We study a narrow, practical question: for already-trained standard LoRA adapters -- not adapters retrained for cache compatibility -- how much task quality is preserved if the backbone's prefill KV cache is computed once and reused across specialists, and what does that buy in serving cost? On a Qwen3-1.7B backbone with two adapters (extractive QA on HotpotQA, arithmetic reasoning on GSM8K), we sweep the boundary at which the specialist takes over from the reused base cache and measure paired quality differences and serving cost. Full-prefix reuse had the lowest prefill cost and a small quality difference on held-out GSM8K (Delta = -4.6 EM at a 160-token budget; -3.0 at 320 tokens; -0.8 under a second training seed -- all favoring native, only the first excluding zero, and the magnitude not consistent). Partial recomputation provided no demonstrated advantage. Neither quality equivalence nor a general boundary-selection rule is established. We also report a closed-form ridge KV translator that did not beat direct reuse, and specialist-dependence contrasts whose intervals all include zero. The measured serving benefit is warm-cache time-to-first-token, which grows with context (~16x at 8K); two-branch peak memory was only 12% lower and, on inspection, the prefix was never physically shared across branches -- this implementation reuses KV values but copies their storage, so shared-cache memory savings are not achieved.",
+        "canonical_id": "arXiv:2609.17109",
+        "arxiv_id": "2609.17109",
+        "authors": [
+          "D. Rajput"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15311",
+      "identity_tokens": [
+        "id:arXiv:2609.15311",
+        "title:flashgpusim enabling gpu modeling for modern architectures and ai workloads",
+        "url:https://www.semanticscholar.org/paper/deae700f0061de98c92b3c0a4e321c8f5b996d68"
+      ],
+      "record": {
+        "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+        "source_url": "https://www.semanticscholar.org/paper/deae700f0061de98c92b3c0a4e321c8f5b996d68",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "As AI becomes increasingly ubiquitous, modern AI systems are shaped by a tight software-hardware co-design loop. Later GPUs expose features such as asynchronous data movement, tensor core pipelines, and fine-grained synchronization that high-performance kernels aggressively exploit, while emerging application behaviors increasingly influence the next generation of hardware design. Unfortunately, the latest open-source simulators for NVIDIA GPUs focus on architectures and software stacks from roughly six years ago. Therefore, they cannot support many state-of-the-art AI kernels generated by modern compiler stacks, e.g. Triton, or accurately model the hardware features they depend on. As a result, architects lack a credible platform for analyzing bottlenecks in this flywheel or evaluating design trade-offs for future AI systems. To bridge this gap, we present FlashGPU-sim, an open-source, execution-driven, cycle-accurate GPU simulator for modern AI workloads. FlashGPU-sim faithfully models modern hardware features such as asynchronous data movement, fine-grained synchronization, tensor-core execution, and distributed shared memory. A Triton extraction front-end allows direct simulation of optimized AI operators without manual porting, while multi-threaded execution makes large-scale software-hardware co-design practical. Across 131 workload configurations on RTX 5090, H100, and B200, FlashGPU-sim achieves a cycle-level MAPE of 5.24%, while multi-threaded simulation reaches a 7.86x speedup with 16 host threads. An H100 case study further demonstrates its utility for microarchitectural design exploration.",
+        "canonical_id": "arXiv:2609.15311",
+        "arxiv_id": "2609.15311",
+        "authors": [
+          "Si-Ying Yu",
+          "Yi-Xun Hong",
+          "Guo-Zhi Qiu",
+          "Jing-Ci Liu",
+          "Feng Gu",
+          "C. Geng",
+          "Zheng-Rong Wang",
+          "Chen Zhang",
+          "Bei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16215",
+      "identity_tokens": [
+        "id:arXiv:2609.16215",
+        "title:where should the kv cache live placement policies across gpu cpu and ssd for longlived sessions",
+        "url:https://www.semanticscholar.org/paper/7230bca60434024cc679e0d1e71a80bde5a9f3c5"
+      ],
+      "record": {
+        "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+        "source_url": "https://www.semanticscholar.org/paper/7230bca60434024cc679e0d1e71a80bde5a9f3c5",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "GPU high bandwidth memory is scarce and expensive, and KV caches consume much of it as chats, agent loops, and document question answering accumulate state. Systems such as Mooncake, LMCache, FlexGen, InfiniGen, and AttentionStore extend GPU memory with CPU DRAM and SSD. The harder question is which blocks belong in each tier, when to move or evict them, and whether prefetching helps. We study these choices in a discrete event simulator spanning GPU HBM, CPU DRAM, and SSD, calibrated against a random forest execution time predictor. We compare recency, reuse frequency, predicted reuse, and an EWMA predictor with prefetch lookahead across chat, agent, and document question answering workloads. Tiering supports 73.02 times more concurrent sessions per GPU and lowers cost per session by 62.04 times. These gains come from tier capacities of 1 plus 8 plus 64, not placement policy. Decode is compute bound at batch size one in our setup, so placement barely affects throughput. It mainly changes PCIe migration traffic and time to first token. Recency produces 2.30 times less migration traffic than reuse frequency for chat. Reuse frequency performs best for agents and document question answering. The existing predicted reuse policy is byte identical to recency, making its agent recommendation effectively recency. A genuine EWMA predictor changes behavior but still ranks behind reuse frequency on the workloads prediction was expected to help. Prefetching does not justify its bandwidth cost. Across the policy and cache size grid, even an oracle with knowledge of future requests never beats no prefetch on migration traffic. Workload specific placement can reduce data movement, but the predicted reuse and prefetch recommendations are not supported as implemented.",
+        "canonical_id": "arXiv:2609.16215",
+        "arxiv_id": "2609.16215",
+        "authors": [
+          "Srikanta Datta Tumkur",
+          "Jay Iyer",
+          "Mehar Simhadri",
+          "S. Kumar",
+          "Sai Kapil Kumar",
+          "Ramesh Nampelly"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19169",
+      "identity_tokens": [
+        "id:arXiv:2609.19169",
+        "title:siliconbench speed memory and fidelity for llm serving on unifiedmemory desktops",
+        "url:https://www.semanticscholar.org/paper/5dfc253c4e99e4dc927022ba6963d6e82b5b7530"
+      ],
+      "record": {
+        "title": "SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops",
+        "source_url": "https://www.semanticscholar.org/paper/5dfc253c4e99e4dc927022ba6963d6e82b5b7530",
+        "year": 2026,
+        "published": "2026-09-12",
+        "abstract": "Concurrent local LLM serving on unified-memory desktops must preserve memory headroom and output fidelity, which speed-only rankings overlook. We introduce SiliconBench, which evaluates nine Apple Silicon serving engines through three lenses: speed, memory, and fidelity. We evaluate chat and agent serving on Qwen3, Qwen3.5, and Gemma 4. We use a classification task to check for quality regressions against an NVIDIA reference. DGX Spark provides a complementary serving-performance reference. Three desiderata guide interpretation: serving architecture readiness, memory discipline, and multi-node scaling. On Qwen3-0.6B, vllm-metal alone more than doubles throughput on both workloads from concurrency 1 to 16. CUDA vLLM and SGLang show stronger concurrency scaling on the same prompts. Explicit memory budgets do not guarantee memory headroom: two stacks complete every request while memory use approaches physical capacity and throughput declines. The newer model architectures have narrower engine support. Their evaluated implementations match the fidelity reference. Only three stacks satisfy the completion, fidelity, and model-coverage gates. Comparisons on larger dense and MoE models reinforce the importance of scheduling prompt processing alongside ongoing generation: vllm-metal's packed prefill-decode path maintains lower first-token latency than omlx under concurrent load. In the tested two-machine configurations, tensor parallelism over Thunderbolt RDMA scales while pipeline parallelism over TCP regresses. We release benchmark code, per-run results, and maintenance journals, supported by a workflow combining bounded agent fixes with human review.",
+        "canonical_id": "arXiv:2609.19169",
+        "arxiv_id": "2609.19169",
+        "authors": [
+          "Ran-Ran Zhang",
+          "A. X. Fan",
+          "David Munhá Correia",
+          "Alex Cheema",
+          "Rui Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/electronics15184135",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics15184135",
+        "title:securityaugmented use case flow refinement for llmbased agentic systems",
+        "url:https://www.semanticscholar.org/paper/4e435602476474730e219e89f49b5eea23d3b352"
+      ],
+      "record": {
+        "title": "Security-Augmented Use Case Flow Refinement for LLM-Based Agentic Systems",
+        "source_url": "https://www.semanticscholar.org/paper/4e435602476474730e219e89f49b5eea23d3b352",
+        "year": 2026,
+        "published": "2026-09-12",
+        "abstract": "Unlike conventional software systems and large language models (LLMs) evaluated in isolation, LLM-based agentic systems introduce a compositional, workflow-level attack surface. Existing security analysis approaches provide limited support for identifying security omissions implicit in functional use case flows and deriving corresponding flow refinements for direct incorporation into use case specifications. We formulate the Security-Augmented Use Case Flow Refinement Task and propose MA-SAFR, a multi-agent framework that coordinates Red Team, Blue Team, and Critic agents for threat anchoring, security-branch construction, and validation. EvoGraphRAG adapts relation-aware retrieval through validation feedback, while Risk-Specific Security Guidance (RSSG) provides risk- and role-specific constraints. To support systematic evaluation of this task, we construct SAFR-Bench from OWASP and MITRE ATLAS, comprising 157 cases and 235 source-grounded threat–refinement pairs. Across three generation models, MA-SAFR improves all three metrics on average compared with the strongest corresponding baselines; pipeline recall and pipeline precision increase by 63.44% and 54.96%, respectively. Controlled analyses show that RSSG and feedback-based graph evolution within gEvoGraphRAG improve downstream threat-to-defense conversion. Despite remaining challenges in implicit-threat identification, multi-threat coverage, and defense alignment, the results show that MA-SAFR can support the construction of valid security-augmented use case flows.",
+        "canonical_id": "DOI:10.3390/electronics15184135",
+        "doi": "10.3390/electronics15184135",
+        "authors": [
+          "Guang-Yu Wang",
+          "Bangqi Li",
+          "Ji Wu",
+          "Zhi-Jun Shao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12379",
+      "identity_tokens": [
+        "id:arXiv:2609.12379",
+        "title:forgemegakernel a general framework for efficient autoregressive model decode megakernels",
+        "url:https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f"
+      ],
+      "record": {
+        "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+        "source_url": "https://www.semanticscholar.org/paper/a78fc774cbfbd35a989dccbc2d401e7467f6118f",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Auto-regressive model decode is bandwidth-bound, since every weight and key/value-cache byte crosses high-bandwidth memory once per token. A megakernel is an ideal solution, but existing automatic megakernel generation approaches cannot achieve both generalization across models and correctness guarantees. We present ForgeMegakernel, which generates a per-model high-performance decode megakernel using coding agents. ForgeMegakernel pairs a universal knowledge base of ten progressive milestones with an independent mid-state test oracle. The milestones provide the megakernel's structural properties: a fine-grained instruction stream for each SM, dependency counters replacing the global synchronization, and a shared-memory buffer pool for workload balance across SMs and greater parallelism. The test oracle derives the mid-states of the megakernel and checks the performance, error and precision during the generation process, guaranteeing a correct and trustworthy forged megakernel. We evaluated ForgeMegakernel on 14 representative decoding operations across eight model families spanning 0.6B-13B parameters. The generated megakernels achieved 50.5-85.9% MBU and geometric mean speedups of 1.21x over SGLang 0.5.18 and 1.54x over a megakernel compiler under identical configurations. Inside SGLang, evaluated on GSM8K with ragged prompts, all 14 megakernels decoded faster than the SGLang engine at comparable answer accuracy.",
+        "canonical_id": "arXiv:2609.12379",
+        "arxiv_id": "2609.12379",
+        "authors": [
+          "Le-Shan Li",
+          "Zhui Zhu",
+          "Xiang-Long Deng",
+          "Yao-Jian Chen",
+          "Qing-Feng He",
+          "Yuxuan Li",
+          "Rong Zhao",
+          "Xu Han",
+          "Zhi-Yuan Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12399",
+      "identity_tokens": [
+        "id:arXiv:2609.12399",
+        "title:onela scaling linearattention decoding to large beams in generative recommendation",
+        "url:https://www.semanticscholar.org/paper/5ed501d200a16be2542d821f48b168def5a84913"
+      ],
+      "record": {
+        "title": "OneLA: Scaling Linear-Attention Decoding to Large Beams in Generative Recommendation",
+        "source_url": "https://www.semanticscholar.org/paper/5ed501d200a16be2542d821f48b168def5a84913",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Generative recommendation (GR) relies on large-beam decoding to generate hundreds of candidate items, creating a new scaling challenge for recurrent linear attention. Existing linear attention serving systems either materialize a full recurrent state for every beam or repeatedly replay shared history, incurring substantial memory and traffic overhead. To address this, we present OneLA, a linear-attention decoding framework that exploits the shared prompt and short divergent suffixes of GR workloads. Specifically, OneLA represents all beam states using a single shared prompt-derived state and compact, append-only records of their divergent transitions. Using this representation, OneLA computes only the state information required at each decoding step, without reconstructing a full recurrent state for every beam. Furthermore, OneLA uses a lightweight ancestry index to track the transition records that make up each beam's history, allowing beams to be updated without moving or copying existing records. A fused GPU kernel further reuses the shared state across beams. Our analysis shows that OneLA achieves 1.54-2.46x end-to-end decode speedups while substantially reducing recurrent-state memory use and data movement.",
+        "canonical_id": "arXiv:2609.12399",
+        "arxiv_id": "2609.12399",
+        "authors": [
+          "Xiang-Rui Yang",
+          "Cheng Peng",
+          "Yun-Feng Zhao",
+          "Liang Zeng",
+          "Ao Hu",
+          "Jia-Wei Yang",
+          "Sheng-Zhe Wang",
+          "Jing-Shan Lv",
+          "Xiao Liang",
+          "Chen Yang",
+          "Jia-Qi Liu",
+          "Yiming Qiu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12412",
+      "identity_tokens": [
+        "id:arXiv:2609.12412",
+        "title:holibench a crossplatform benchmarking and deployment toolkit for foundation models in cpsiot applications",
+        "url:https://www.semanticscholar.org/paper/5fedeb84be4240c6c87fa5e311714720f66491e8"
+      ],
+      "record": {
+        "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+        "source_url": "https://www.semanticscholar.org/paper/5fedeb84be4240c6c87fa5e311714720f66491e8",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Foundation models, including large language models, vision-language models, and time-series foundation models, are increasingly deployed on embedded and edge platforms for CPS and IoT applications, where energy, latency, and memory are as critical as task accuracy. Existing benchmarking tools evaluate model capability in isolation, reporting accuracy assuming sufficient compute, while hardware profiling tools remain platform-specific and mutually incompatible. As a result, users lack a unified workflow for making deployment decisions across heterogeneous devices. We present HoliBench, a modular benchmarking and deployment toolkit that jointly characterizes accuracy, latency, and energy across platforms from single-board computers to GPU servers. Its platform abstraction layer calibrates cross-device measurement, and the toolkit supports multiple model modalities, inference engines, concurrencies, and existing evaluation harnesses. An interactive interface exposes constraint-aware configuration selection over a design space that is profiled once and reused across studies. Using HoliBench, we characterize 20 models across 7 device types, 3 quantization levels, 8 inference backends, and over 30 tasks, surfacing tradeoffs that existing tools miss: quantization reduces latency only on hardware with low-precision support, accuracy gains show diminishing returns relative to energy, and for autoregressive workloads, average inference power is approximately constant across output lengths. We further find that single-model profiles compose under sequential co-resident execution. In a multi-model CPS deployment, standalone profiles predict combined-pipeline latency and power within 1.2% and 2.5%, enabling deployment exploration without exhaustively profiling every pipeline configuration. We release HoliBench as open-source infrastructure for deployment-aware evaluation of foundation models.",
+        "canonical_id": "arXiv:2609.12412",
+        "arxiv_id": "2609.12412",
+        "authors": [
+          "Inesh Chakrabarti",
+          "Ze-Jun Xiong",
+          "Pragya Sharma",
+          "Mani Srivastava"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12550",
+      "identity_tokens": [
+        "id:arXiv:2609.12550",
+        "title:qualityconstrained routing over a fixed pool of quantized mixtureofexperts instances",
+        "url:https://www.semanticscholar.org/paper/ad14a5226c99c4f3f97e37102ae12fcf6662cdd4"
+      ],
+      "record": {
+        "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+        "source_url": "https://www.semanticscholar.org/paper/ad14a5226c99c4f3f97e37102ae12fcf6662cdd4",
+        "year": 2026,
+        "published": "2026-09-11",
+        "abstract": "Quantized Mixture-of-Experts (MoE) services can hold several pre-materialized instances of one base model, but quantization damage varies sharply across requests and bitwidths. Because instance materialization and replica counts consume memory and require slow reconfiguration, we treat them as upstream provisioning decisions and study routing within a fixed resident pool. Within this fixed-pool boundary, we route each request to maximize modeled throughput under a class-level expected quality-degradation budget and measured instance capacities. To predict this request-specific risk, we introduce FWP (Fragility-Weighted Perplexity), computed from prompt tokens on a reference-instance prefill and calibrated to candidate-instance degradation. Underlying FWP is an exact two-expert affinity--fragility decomposition and a conditional multi-layer top-$k$ expansion whose bias, interaction, route-change, separability, and higher-order terms remain explicit. Using these calibrated risks, a window-level linear program yields a signed reduced-reward score that is KKT-consistent with the LP optimum under optimal prices and primal-feasible tie allocation. On 88 extended Qwen prompts, complete W2, W3, and W4 instances quantizing all 6,144 expert blocks incur mean $\\Delta$NLL of $0.9437$, $0.1832$, and $0.0513$. Under the same population and $\\tau=0.1513$, FWP allocation reaches a $1.284\\times$ offline model-based multiplier versus $1.253\\times$ for request-agnostic mixing and $1.000\\times$ for static W4, an incremental $2.5\\%$ relative FWP gain.",
+        "canonical_id": "arXiv:2609.12550",
+        "arxiv_id": "2609.12550",
+        "authors": [
+          "Zheng-Hong Huang",
+          "Hong-Fan Wu",
+          "Ji-Heng Zhang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:98afe371c4e4a327f0679db3a7632e876c9207e02c9eba5bda0c4c78417bd5ec",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

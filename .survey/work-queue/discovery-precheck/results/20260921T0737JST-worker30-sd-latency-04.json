@@ -1,0 +1,1208 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0737JST-worker30-sd-latency-04",
+  "collector_id": "worker30-20260921T0730JST-sd-latency",
+  "run_key": "2026-09-21T07:30:58+09:00",
+  "axis": "speculative decoding production serving latency modeling neighborhood",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=Interpretable%20Latency%20Model%20Speculative%20Decoding%20LLM%20Serving&sort=relevance_score:desc",
+  "target_unseen": 20,
+  "page_size": 25,
+  "pages_fetched": 1,
+  "next_cursor": "Ils2My45MjAyMDQsICctSW5maW5pdHknLCAxMiwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c0NDA0MzEzMTM1J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "aa2ffeae4b656fc41dbc8afb903b021f29fa8049",
+  "raw_search_result_count": 25,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T22:34:02.261609+00:00",
+  "results": [
+    {
+      "title": "A Survey of Large Language Models",
+      "source_url": "https://doi.org/10.1007/s11704-026-60308-3",
+      "year": 2026,
+      "published": "2026-05-09",
+      "canonical_id": "arXiv:2303.18223",
+      "arxiv_id": "2303.18223",
+      "authors": [
+        "Wayne Xin Zhao",
+        "Kun Zhou",
+        "Junyi Li",
+        "Tianyi Tang",
+        "Zican Dong",
+        "Yupeng Hou",
+        "Beichen Zhang",
+        "Yingqian Min",
+        "Junjie Zhang",
+        "Peiyu Liu",
+        "Xiaolei Wang",
+        "Yifan Du",
+        "Yushuo Chen",
+        "Yushuo Chen",
+        "Zhipeng Chen",
+        "Jinhao Jiang",
+        "Ruiyang Ren",
+        "Yifan Li",
+        "Xinyu Tang",
+        "Peiyu Liu",
+        "Yiwen Hu",
+        "Jian‐Yun Nie",
+        "Ji-Rong Wen"
+      ]
+    },
+    {
+      "title": "Can Open Large Language Models Catch Vulnerabilities?",
+      "source_url": "http://arxiv.org/abs/2501.12948",
+      "year": 2025,
+      "published": "2025-01-01",
+      "canonical_id": "arXiv:2501.12948",
+      "arxiv_id": "2501.12948",
+      "authors": [
+        "DeepSeek-AI",
+        "Guo, Daya",
+        "Yang, Dejian",
+        "Zhang, Haowei",
+        "Junxiao Song",
+        "Wang, Peiyi",
+        "Qihao Zhu",
+        "Runxin Xu",
+        "Ruoyu Zhang",
+        "Shirong Ma",
+        "Xiao Bi",
+        "Xiaokang Zhang",
+        "Xingkai Yu",
+        "Yu Wu",
+        "Zhenhua Wu",
+        "Zhibin Gou",
+        "Zhihong Shao",
+        "Zhuoshu Li",
+        "Ziyi Gao",
+        "Aixin Liu",
+        "Bing Xue",
+        "Bingxuan Wang",
+        "Bowen Wu",
+        "Bei Feng",
+        "Chengda Lu",
+        "Chenggang Zhao",
+        "Chengqi Deng",
+        "Chenyu Zhang",
+        "Chong Ruan",
+        "Damai Dai",
+        "Deli Chen",
+        "Dongjie Ji",
+        "Erhang Li",
+        "Fangyun Lin",
+        "Dai, Fucong",
+        "Fuli Luo",
+        "Guangbo Hao",
+        "Guan-Ting Chen",
+        "Guowei Li",
+        "Hongjun Zhang",
+        "Han Bao",
+        "Hanwei Xu",
+        "Haocheng Wang",
+        "Honghui Ding",
+        "Huajian Xin",
+        "Huazuo Gao",
+        "Hui Qu",
+        "Hui Li",
+        "Jianzhong Guo",
+        "Jiashi Li",
+        "Jiawei Wang",
+        "Jingchang Chen",
+        "Jingyang Yuan",
+        "Junjie Qiu",
+        "Junlong Li",
+        "Jiali Cai",
+        "Jiaqi Ni",
+        "Jian Liang",
+        "Jing Chen",
+        "Kai Dong",
+        "Kai Hu",
+        "Kaige Gao",
+        "Kang Guan",
+        "Kexin Huang",
+        "Kuai Yu",
+        "Lean Wang",
+        "Lecong Zhang",
+        "Liang Zhao",
+        "Litong Wang",
+        "Liyue Zhang",
+        "Lei Xu",
+        "L. Xia",
+        "Mingchuan Zhang",
+        "Minghua Zhang",
+        "Minghui Tang",
+        "Meng Li",
+        "Miaojun Wang",
+        "Mingming Li",
+        "Ning Tian",
+        "Panpan Huang",
+        "Peng Zhang",
+        "Qiancheng Wang",
+        "Qinyu Chen",
+        "Qiushi Du",
+        "Ruiqi Ge",
+        "Ruisong Zhang",
+        "Pan, Ruizhe",
+        "Runji Wang",
+        "R. J. Chen",
+        "Rong Jin",
+        "Ruyi Chen",
+        "Shanghao Lu",
+        "Shangyan Zhou",
+        "Shanhuang Chen",
+        "Shengfeng Ye",
+        "Shiyu Wang",
+        "Shuiping Yu",
+        "Shunfeng Zhou",
+        "Shuting Pan",
+        "Sansan Li"
+      ]
+    },
+    {
+      "title": "Large Language Models: A Survey",
+      "source_url": "http://arxiv.org/abs/2402.06196",
+      "year": 2024,
+      "published": "2024-02-09",
+      "canonical_id": "arXiv:2402.06196",
+      "arxiv_id": "2402.06196",
+      "authors": [
+        "Shervin Minaee",
+        "Tomas Mikolov",
+        "Nikzad, Narjes",
+        "Meysam Chenaghlu",
+        "Richard Socher",
+        "Xavier Amatriain",
+        "Jianfeng Gao"
+      ]
+    },
+    {
+      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+      "source_url": "http://arxiv.org/abs/2311.05232",
+      "year": 2023,
+      "published": "2023-11-09",
+      "canonical_id": "arXiv:2311.05232",
+      "arxiv_id": "2311.05232",
+      "authors": [
+        "Lei Huang",
+        "Weijiang Yu",
+        "Weitao Ma",
+        "Wei‐Hong Zhong",
+        "Zhangyin Feng",
+        "Haotian Wang",
+        "Qianglong Chen",
+        "Weihua Peng",
+        "Xiaocheng Feng",
+        "Bing Qin",
+        "Ting Liu"
+      ]
+    },
+    {
+      "title": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+      "source_url": "http://arxiv.org/abs/2401.08092",
+      "year": 2024,
+      "published": "2024-01-16",
+      "canonical_id": "arXiv:2401.08092",
+      "arxiv_id": "2401.08092",
+      "authors": [
+        "Mengwei Xu",
+        "Wangsong Yin",
+        "Dongqi Cai",
+        "Rongjie Yi",
+        "Daliang Xu",
+        "Qipeng Wang",
+        "Bingyang Wu",
+        "Yihao Zhao",
+        "Chen Yang",
+        "Shihe Wang",
+        "Qiyang Zhang",
+        "Zhen-Yan Lu",
+        "Li Zhang",
+        "Shangguang Wang",
+        "Yuanchun Li",
+        "Yunxin Liu",
+        "Xin Jin",
+        "Xuanzhe Liu"
+      ]
+    },
+    {
+      "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+      "source_url": "http://arxiv.org/abs/2312.15234",
+      "year": 2023,
+      "published": "2023-12-23",
+      "canonical_id": "arXiv:2312.15234",
+      "arxiv_id": "2312.15234",
+      "authors": [
+        "Xupeng Miao",
+        "Gabriele Oliaro",
+        "Zhihao Zhang",
+        "X. G. Cheng",
+        "Hongyi Jin",
+        "Tianqi Chen",
+        "Zhihao Jia"
+      ]
+    },
+    {
+      "title": "Personal LLM Agents: Insights and Survey about the Capability, Efficiency and Security",
+      "source_url": "http://arxiv.org/abs/2401.05459",
+      "year": 2024,
+      "published": "2024-01-10",
+      "canonical_id": "arXiv:2401.05459",
+      "arxiv_id": "2401.05459",
+      "authors": [
+        "Yuanchun Li",
+        "Hao Wen",
+        "Weijun Wang",
+        "Xiangyu Li",
+        "Yi-Zhen Yuan",
+        "Guohong Liu",
+        "Jiacheng Liu",
+        "Wenxing Xu",
+        "Xiang Wang",
+        "Yi Sun",
+        "Rui Kong",
+        "Yile Wang",
+        "Hanfei Geng",
+        "Jian Luan",
+        "Xuefeng Jin",
+        "Zilong Ye",
+        "Guanjing Xiong",
+        "Fan Zhang",
+        "Xiang Li",
+        "Mengwei Xu",
+        "Zhijun Li",
+        "Peng Li",
+        "Yang Liu",
+        "Ya-Qin Zhang",
+        "Yunxin Liu"
+      ]
+    },
+    {
+      "title": "Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation",
+      "source_url": "http://arxiv.org/abs/2307.15337",
+      "year": 2023,
+      "published": "2023-07-28",
+      "canonical_id": "arXiv:2307.15337",
+      "arxiv_id": "2307.15337",
+      "authors": [
+        "Xuefei Ning",
+        "Zinan Lin",
+        "Zixuan Zhou",
+        "Wang, Zifu",
+        "Huazhong Yang",
+        "Yu Wang"
+      ]
+    },
+    {
+      "title": "SpecEE: Accelerating Large Language Model Inference with Speculative Early Exiting",
+      "source_url": "https://doi.org/10.1145/3695053.3730996",
+      "year": 2025,
+      "published": "2025-06-20",
+      "canonical_id": "DOI:10.1145/3695053.3730996",
+      "doi": "10.1145/3695053.3730996",
+      "authors": [
+        "Jianrong Xu",
+        "Jiayi Pan",
+        "Yongkang Zhou",
+        "S. Chen",
+        "Jinhao Li",
+        "Yaoxiu Lian",
+        "Junyi Wu",
+        "Guohao Dai"
+      ]
+    },
+    {
+      "title": "Large Search Model: Redefining Search Stack in the Era of LLMs",
+      "source_url": "https://doi.org/10.1145/3642979.3643006",
+      "year": 2023,
+      "published": "2023-12-01",
+      "canonical_id": "DOI:10.1145/3642979.3643006",
+      "doi": "10.1145/3642979.3643006",
+      "authors": [
+        "Liang Wang",
+        "Nan Yang",
+        "Xiaolong Huang",
+        "Linjun Yang",
+        "Rangan Majumder",
+        "Furu Wei"
+      ]
+    },
+    {
+      "title": "Faster and Lighter LLMs: A Survey on Current Challenges and Way Forward",
+      "source_url": "https://doi.org/10.24963/ijcai.2024/883",
+      "year": 2024,
+      "published": "2024-07-26",
+      "canonical_id": "DOI:10.24963/ijcai.2024/883",
+      "doi": "10.24963/ijcai.2024/883",
+      "authors": [
+        "Arnav Chavan",
+        "Raghav Magazine",
+        "Shubham Kushwaha",
+        "Merouane Debbah",
+        "Deepak Gupta"
+      ]
+    },
+    {
+      "title": "Understanding LLMs: A Comprehensive Overview from Training to Inference",
+      "source_url": "http://arxiv.org/abs/2401.02038",
+      "year": 2024,
+      "published": "2024-01-04",
+      "canonical_id": "arXiv:2401.02038",
+      "arxiv_id": "2401.02038",
+      "authors": [
+        "Yiheng Liu",
+        "Hao He",
+        "Tianle Han",
+        "Xu Zhang",
+        "Mengyuan Liu",
+        "Jiaming Tian",
+        "Yutong Zhang",
+        "Jiaqi Wang",
+        "Xiaohui Gao",
+        "Tianyang Zhong",
+        "Yi Pan",
+        "Shaochen Xu",
+        "Zihao Wu",
+        "Zhengliang Liu",
+        "Xin Zhang",
+        "Shu Zhang",
+        "Xintao Hu",
+        "Tuo Zhang",
+        "Qiang Ning",
+        "Tianming Liu",
+        "Bao Ge"
+      ]
+    },
+    {
+      "title": "Knowledge distillation and dataset distillation of large language models: emerging trends, challenges, and future directions",
+      "source_url": "https://doi.org/10.1007/s10462-025-11423-3",
+      "year": 2025,
+      "published": "2025-11-20",
+      "canonical_id": "DOI:10.1007/s10462-025-11423-3",
+      "doi": "10.1007/s10462-025-11423-3",
+      "authors": [
+        "Luyang Fang",
+        "Xiaowei Yu",
+        "Jiazhang Cai",
+        "Yongkai Chen",
+        "Shushan Wu",
+        "Zhengliang Liu",
+        "Zhenyuan Yang",
+        "Haoran Lu",
+        "Xilin Gong",
+        "Yufang Liu",
+        "Terry Ma",
+        "Wei Ruan",
+        "Ali Abbasi",
+        "Jing Zhang",
+        "Tao Wang",
+        "Ehsan Latif",
+        "Wei Liu",
+        "Wei Zhang",
+        "Soheil Kolouri",
+        "Xiaoming Zhaı",
+        "Dajiang Zhu",
+        "Wenqin Zhong",
+        "Tianming Liu",
+        "Ping Ma"
+      ]
+    },
+    {
+      "title": "A Review of Large Language Models for Energy Systems: Applications, Challenges, and Future Prospects",
+      "source_url": "https://doi.org/10.1109/access.2025.3610994",
+      "year": 2025,
+      "published": "2025-01-01",
+      "canonical_id": "DOI:10.1109/access.2025.3610994",
+      "doi": "10.1109/access.2025.3610994",
+      "authors": [
+        "Hamid Mirshekali",
+        "Mohammad Reza Shadi",
+        "Fatemehsadat Ghanadi Ladani",
+        "Hamid Reza Shaker"
+      ]
+    },
+    {
+      "title": "Cascade Speculative Drafting for Even Faster LLM Inference",
+      "source_url": "http://arxiv.org/abs/2312.11462",
+      "year": 2023,
+      "published": "2023-12-18",
+      "canonical_id": "arXiv:2312.11462",
+      "arxiv_id": "2312.11462",
+      "authors": [
+        "Ziyi Chen",
+        "Xiaocong Yang",
+        "Jiacheng Lin",
+        "Chenkai Sun",
+        "Kevin Chen–Chuan Chang",
+        "Jie Huang"
+      ]
+    },
+    {
+      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.240",
+      "year": 2025,
+      "published": "2025-01-01",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.240",
+      "doi": "10.18653/v1/2025.emnlp-main.240",
+      "authors": [
+        "Juntao Zhao",
+        "Wenhao Lu",
+        "Sheng Wang",
+        "Lingpeng Kong",
+        "Chuan Wu"
+      ]
+    },
+    {
+      "title": "Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting",
+      "source_url": "http://arxiv.org/abs/2407.08223",
+      "year": 2024,
+      "published": "2024-07-11",
+      "canonical_id": "arXiv:2407.08223",
+      "arxiv_id": "2407.08223",
+      "authors": [
+        "Zilong Wang",
+        "Zifeng Wang",
+        "Long Tan Le",
+        "Huaixiu Zheng",
+        "Swaroop Mishra",
+        "Vinçent Pérot",
+        "Yuwei Zhang",
+        "Anush Mattapalli",
+        "Ankur Taly",
+        "Jingbo Shang",
+        "Chen-Yu Lee",
+        "Tomas Pfister"
+      ]
+    },
+    {
+      "title": "RAG LLMs are Not Safer: A Safety Analysis of Retrieval-Augmented Generation for Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.281",
+      "year": 2025,
+      "published": "2025-01-01",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.281",
+      "doi": "10.18653/v1/2025.naacl-long.281",
+      "authors": [
+        "Bang An",
+        "Shiyue Zhang",
+        "Mark Dredze"
+      ]
+    },
+    {
+      "title": "What is the Role of Small Models in the LLM Era: A Survey",
+      "source_url": "https://doi.org/10.1162/coli.a.652",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2409.06857",
+      "arxiv_id": "2409.06857",
+      "authors": [
+        "Lihu Chen",
+        "Gaël Varoquaux"
+      ]
+    },
+    {
+      "title": "Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond",
+      "source_url": "http://arxiv.org/abs/2410.19744",
+      "year": 2024,
+      "published": "2024-10-10",
+      "canonical_id": "arXiv:2410.19744",
+      "arxiv_id": "2410.19744",
+      "authors": [
+        "Qi Wang",
+        "Jindong Li",
+        "Shiqi Wang",
+        "Qianli Xing",
+        "Runliang Niu",
+        "Hyeyoung Kong",
+        "Rui Li",
+        "Guodong Long",
+        "Yi Chang",
+        "Chengqi Zhang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2303.18223",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11704-026-60308-3",
+        "id:arXiv:2303.18223",
+        "title:a survey of large language models",
+        "url:https://doi.org/10.1007/s11704-026-60308-3"
+      ],
+      "record": {
+        "title": "A Survey of Large Language Models",
+        "source_url": "https://doi.org/10.1007/s11704-026-60308-3",
+        "year": 2026,
+        "published": "2026-05-09",
+        "canonical_id": "arXiv:2303.18223",
+        "arxiv_id": "2303.18223",
+        "authors": [
+          "Wayne Xin Zhao",
+          "Kun Zhou",
+          "Junyi Li",
+          "Tianyi Tang",
+          "Zican Dong",
+          "Yupeng Hou",
+          "Beichen Zhang",
+          "Yingqian Min",
+          "Junjie Zhang",
+          "Peiyu Liu",
+          "Xiaolei Wang",
+          "Yifan Du",
+          "Yushuo Chen",
+          "Yushuo Chen",
+          "Zhipeng Chen",
+          "Jinhao Jiang",
+          "Ruiyang Ren",
+          "Yifan Li",
+          "Xinyu Tang",
+          "Peiyu Liu",
+          "Yiwen Hu",
+          "Jian‐Yun Nie",
+          "Ji-Rong Wen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.12948",
+      "identity_tokens": [
+        "id:arXiv:2501.12948",
+        "title:can open large language models catch vulnerabilities",
+        "url:http://arxiv.org/abs/2501.12948"
+      ],
+      "record": {
+        "title": "Can Open Large Language Models Catch Vulnerabilities?",
+        "source_url": "http://arxiv.org/abs/2501.12948",
+        "year": 2025,
+        "published": "2025-01-01",
+        "canonical_id": "arXiv:2501.12948",
+        "arxiv_id": "2501.12948",
+        "authors": [
+          "DeepSeek-AI",
+          "Guo, Daya",
+          "Yang, Dejian",
+          "Zhang, Haowei",
+          "Junxiao Song",
+          "Wang, Peiyi",
+          "Qihao Zhu",
+          "Runxin Xu",
+          "Ruoyu Zhang",
+          "Shirong Ma",
+          "Xiao Bi",
+          "Xiaokang Zhang",
+          "Xingkai Yu",
+          "Yu Wu",
+          "Zhenhua Wu",
+          "Zhibin Gou",
+          "Zhihong Shao",
+          "Zhuoshu Li",
+          "Ziyi Gao",
+          "Aixin Liu",
+          "Bing Xue",
+          "Bingxuan Wang",
+          "Bowen Wu",
+          "Bei Feng",
+          "Chengda Lu",
+          "Chenggang Zhao",
+          "Chengqi Deng",
+          "Chenyu Zhang",
+          "Chong Ruan",
+          "Damai Dai",
+          "Deli Chen",
+          "Dongjie Ji",
+          "Erhang Li",
+          "Fangyun Lin",
+          "Dai, Fucong",
+          "Fuli Luo",
+          "Guangbo Hao",
+          "Guan-Ting Chen",
+          "Guowei Li",
+          "Hongjun Zhang",
+          "Han Bao",
+          "Hanwei Xu",
+          "Haocheng Wang",
+          "Honghui Ding",
+          "Huajian Xin",
+          "Huazuo Gao",
+          "Hui Qu",
+          "Hui Li",
+          "Jianzhong Guo",
+          "Jiashi Li",
+          "Jiawei Wang",
+          "Jingchang Chen",
+          "Jingyang Yuan",
+          "Junjie Qiu",
+          "Junlong Li",
+          "Jiali Cai",
+          "Jiaqi Ni",
+          "Jian Liang",
+          "Jing Chen",
+          "Kai Dong",
+          "Kai Hu",
+          "Kaige Gao",
+          "Kang Guan",
+          "Kexin Huang",
+          "Kuai Yu",
+          "Lean Wang",
+          "Lecong Zhang",
+          "Liang Zhao",
+          "Litong Wang",
+          "Liyue Zhang",
+          "Lei Xu",
+          "L. Xia",
+          "Mingchuan Zhang",
+          "Minghua Zhang",
+          "Minghui Tang",
+          "Meng Li",
+          "Miaojun Wang",
+          "Mingming Li",
+          "Ning Tian",
+          "Panpan Huang",
+          "Peng Zhang",
+          "Qiancheng Wang",
+          "Qinyu Chen",
+          "Qiushi Du",
+          "Ruiqi Ge",
+          "Ruisong Zhang",
+          "Pan, Ruizhe",
+          "Runji Wang",
+          "R. J. Chen",
+          "Rong Jin",
+          "Ruyi Chen",
+          "Shanghao Lu",
+          "Shangyan Zhou",
+          "Shanhuang Chen",
+          "Shengfeng Ye",
+          "Shiyu Wang",
+          "Shuiping Yu",
+          "Shunfeng Zhou",
+          "Shuting Pan",
+          "Sansan Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.06196",
+      "identity_tokens": [
+        "id:arXiv:2402.06196",
+        "title:large language models a survey",
+        "url:http://arxiv.org/abs/2402.06196"
+      ],
+      "record": {
+        "title": "Large Language Models: A Survey",
+        "source_url": "http://arxiv.org/abs/2402.06196",
+        "year": 2024,
+        "published": "2024-02-09",
+        "canonical_id": "arXiv:2402.06196",
+        "arxiv_id": "2402.06196",
+        "authors": [
+          "Shervin Minaee",
+          "Tomas Mikolov",
+          "Nikzad, Narjes",
+          "Meysam Chenaghlu",
+          "Richard Socher",
+          "Xavier Amatriain",
+          "Jianfeng Gao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2311.05232",
+      "identity_tokens": [
+        "id:arXiv:2311.05232",
+        "title:a survey on hallucination in large language models principles taxonomy challenges and open questions",
+        "url:http://arxiv.org/abs/2311.05232"
+      ],
+      "record": {
+        "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+        "source_url": "http://arxiv.org/abs/2311.05232",
+        "year": 2023,
+        "published": "2023-11-09",
+        "canonical_id": "arXiv:2311.05232",
+        "arxiv_id": "2311.05232",
+        "authors": [
+          "Lei Huang",
+          "Weijiang Yu",
+          "Weitao Ma",
+          "Wei‐Hong Zhong",
+          "Zhangyin Feng",
+          "Haotian Wang",
+          "Qianglong Chen",
+          "Weihua Peng",
+          "Xiaocheng Feng",
+          "Bing Qin",
+          "Ting Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.08092",
+      "identity_tokens": [
+        "id:arXiv:2401.08092",
+        "title:a survey of resourceefficient llm and multimodal foundation models",
+        "url:http://arxiv.org/abs/2401.08092"
+      ],
+      "record": {
+        "title": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+        "source_url": "http://arxiv.org/abs/2401.08092",
+        "year": 2024,
+        "published": "2024-01-16",
+        "canonical_id": "arXiv:2401.08092",
+        "arxiv_id": "2401.08092",
+        "authors": [
+          "Mengwei Xu",
+          "Wangsong Yin",
+          "Dongqi Cai",
+          "Rongjie Yi",
+          "Daliang Xu",
+          "Qipeng Wang",
+          "Bingyang Wu",
+          "Yihao Zhao",
+          "Chen Yang",
+          "Shihe Wang",
+          "Qiyang Zhang",
+          "Zhen-Yan Lu",
+          "Li Zhang",
+          "Shangguang Wang",
+          "Yuanchun Li",
+          "Yunxin Liu",
+          "Xin Jin",
+          "Xuanzhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.15234",
+      "identity_tokens": [
+        "id:arXiv:2312.15234",
+        "title:towards efficient generative large language model serving a survey from algorithms to systems",
+        "url:http://arxiv.org/abs/2312.15234"
+      ],
+      "record": {
+        "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+        "source_url": "http://arxiv.org/abs/2312.15234",
+        "year": 2023,
+        "published": "2023-12-23",
+        "canonical_id": "arXiv:2312.15234",
+        "arxiv_id": "2312.15234",
+        "authors": [
+          "Xupeng Miao",
+          "Gabriele Oliaro",
+          "Zhihao Zhang",
+          "X. G. Cheng",
+          "Hongyi Jin",
+          "Tianqi Chen",
+          "Zhihao Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.05459",
+      "identity_tokens": [
+        "id:arXiv:2401.05459",
+        "title:personal llm agents insights and survey about the capability efficiency and security",
+        "url:http://arxiv.org/abs/2401.05459"
+      ],
+      "record": {
+        "title": "Personal LLM Agents: Insights and Survey about the Capability, Efficiency and Security",
+        "source_url": "http://arxiv.org/abs/2401.05459",
+        "year": 2024,
+        "published": "2024-01-10",
+        "canonical_id": "arXiv:2401.05459",
+        "arxiv_id": "2401.05459",
+        "authors": [
+          "Yuanchun Li",
+          "Hao Wen",
+          "Weijun Wang",
+          "Xiangyu Li",
+          "Yi-Zhen Yuan",
+          "Guohong Liu",
+          "Jiacheng Liu",
+          "Wenxing Xu",
+          "Xiang Wang",
+          "Yi Sun",
+          "Rui Kong",
+          "Yile Wang",
+          "Hanfei Geng",
+          "Jian Luan",
+          "Xuefeng Jin",
+          "Zilong Ye",
+          "Guanjing Xiong",
+          "Fan Zhang",
+          "Xiang Li",
+          "Mengwei Xu",
+          "Zhijun Li",
+          "Peng Li",
+          "Yang Liu",
+          "Ya-Qin Zhang",
+          "Yunxin Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.15337",
+      "identity_tokens": [
+        "id:arXiv:2307.15337",
+        "title:skeletonofthought prompting llms for efficient parallel generation",
+        "url:http://arxiv.org/abs/2307.15337"
+      ],
+      "record": {
+        "title": "Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation",
+        "source_url": "http://arxiv.org/abs/2307.15337",
+        "year": 2023,
+        "published": "2023-07-28",
+        "canonical_id": "arXiv:2307.15337",
+        "arxiv_id": "2307.15337",
+        "authors": [
+          "Xuefei Ning",
+          "Zinan Lin",
+          "Zixuan Zhou",
+          "Wang, Zifu",
+          "Huazhong Yang",
+          "Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3695053.3730996",
+      "identity_tokens": [
+        "id:DOI:10.1145/3695053.3730996",
+        "title:specee accelerating large language model inference with speculative early exiting",
+        "url:https://doi.org/10.1145/3695053.3730996"
+      ],
+      "record": {
+        "title": "SpecEE: Accelerating Large Language Model Inference with Speculative Early Exiting",
+        "source_url": "https://doi.org/10.1145/3695053.3730996",
+        "year": 2025,
+        "published": "2025-06-20",
+        "canonical_id": "DOI:10.1145/3695053.3730996",
+        "doi": "10.1145/3695053.3730996",
+        "authors": [
+          "Jianrong Xu",
+          "Jiayi Pan",
+          "Yongkang Zhou",
+          "S. Chen",
+          "Jinhao Li",
+          "Yaoxiu Lian",
+          "Junyi Wu",
+          "Guohao Dai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3642979.3643006",
+      "identity_tokens": [
+        "id:DOI:10.1145/3642979.3643006",
+        "title:large search model redefining search stack in the era of llms",
+        "url:https://doi.org/10.1145/3642979.3643006"
+      ],
+      "record": {
+        "title": "Large Search Model: Redefining Search Stack in the Era of LLMs",
+        "source_url": "https://doi.org/10.1145/3642979.3643006",
+        "year": 2023,
+        "published": "2023-12-01",
+        "canonical_id": "DOI:10.1145/3642979.3643006",
+        "doi": "10.1145/3642979.3643006",
+        "authors": [
+          "Liang Wang",
+          "Nan Yang",
+          "Xiaolong Huang",
+          "Linjun Yang",
+          "Rangan Majumder",
+          "Furu Wei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2024/883",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2024/883",
+        "title:faster and lighter llms a survey on current challenges and way forward",
+        "url:https://doi.org/10.24963/ijcai.2024/883"
+      ],
+      "record": {
+        "title": "Faster and Lighter LLMs: A Survey on Current Challenges and Way Forward",
+        "source_url": "https://doi.org/10.24963/ijcai.2024/883",
+        "year": 2024,
+        "published": "2024-07-26",
+        "canonical_id": "DOI:10.24963/ijcai.2024/883",
+        "doi": "10.24963/ijcai.2024/883",
+        "authors": [
+          "Arnav Chavan",
+          "Raghav Magazine",
+          "Shubham Kushwaha",
+          "Merouane Debbah",
+          "Deepak Gupta"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.02038",
+      "identity_tokens": [
+        "id:arXiv:2401.02038",
+        "title:understanding llms a comprehensive overview from training to inference",
+        "url:http://arxiv.org/abs/2401.02038"
+      ],
+      "record": {
+        "title": "Understanding LLMs: A Comprehensive Overview from Training to Inference",
+        "source_url": "http://arxiv.org/abs/2401.02038",
+        "year": 2024,
+        "published": "2024-01-04",
+        "canonical_id": "arXiv:2401.02038",
+        "arxiv_id": "2401.02038",
+        "authors": [
+          "Yiheng Liu",
+          "Hao He",
+          "Tianle Han",
+          "Xu Zhang",
+          "Mengyuan Liu",
+          "Jiaming Tian",
+          "Yutong Zhang",
+          "Jiaqi Wang",
+          "Xiaohui Gao",
+          "Tianyang Zhong",
+          "Yi Pan",
+          "Shaochen Xu",
+          "Zihao Wu",
+          "Zhengliang Liu",
+          "Xin Zhang",
+          "Shu Zhang",
+          "Xintao Hu",
+          "Tuo Zhang",
+          "Qiang Ning",
+          "Tianming Liu",
+          "Bao Ge"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10462-025-11423-3",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10462-025-11423-3",
+        "title:knowledge distillation and dataset distillation of large language models emerging trends challenges and future directions",
+        "url:https://doi.org/10.1007/s10462-025-11423-3"
+      ],
+      "record": {
+        "title": "Knowledge distillation and dataset distillation of large language models: emerging trends, challenges, and future directions",
+        "source_url": "https://doi.org/10.1007/s10462-025-11423-3",
+        "year": 2025,
+        "published": "2025-11-20",
+        "canonical_id": "DOI:10.1007/s10462-025-11423-3",
+        "doi": "10.1007/s10462-025-11423-3",
+        "authors": [
+          "Luyang Fang",
+          "Xiaowei Yu",
+          "Jiazhang Cai",
+          "Yongkai Chen",
+          "Shushan Wu",
+          "Zhengliang Liu",
+          "Zhenyuan Yang",
+          "Haoran Lu",
+          "Xilin Gong",
+          "Yufang Liu",
+          "Terry Ma",
+          "Wei Ruan",
+          "Ali Abbasi",
+          "Jing Zhang",
+          "Tao Wang",
+          "Ehsan Latif",
+          "Wei Liu",
+          "Wei Zhang",
+          "Soheil Kolouri",
+          "Xiaoming Zhaı",
+          "Dajiang Zhu",
+          "Wenqin Zhong",
+          "Tianming Liu",
+          "Ping Ma"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/access.2025.3610994",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2025.3610994",
+        "title:a review of large language models for energy systems applications challenges and future prospects",
+        "url:https://doi.org/10.1109/access.2025.3610994"
+      ],
+      "record": {
+        "title": "A Review of Large Language Models for Energy Systems: Applications, Challenges, and Future Prospects",
+        "source_url": "https://doi.org/10.1109/access.2025.3610994",
+        "year": 2025,
+        "published": "2025-01-01",
+        "canonical_id": "DOI:10.1109/access.2025.3610994",
+        "doi": "10.1109/access.2025.3610994",
+        "authors": [
+          "Hamid Mirshekali",
+          "Mohammad Reza Shadi",
+          "Fatemehsadat Ghanadi Ladani",
+          "Hamid Reza Shaker"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.11462",
+      "identity_tokens": [
+        "id:arXiv:2312.11462",
+        "title:cascade speculative drafting for even faster llm inference",
+        "url:http://arxiv.org/abs/2312.11462"
+      ],
+      "record": {
+        "title": "Cascade Speculative Drafting for Even Faster LLM Inference",
+        "source_url": "http://arxiv.org/abs/2312.11462",
+        "year": 2023,
+        "published": "2023-12-18",
+        "canonical_id": "arXiv:2312.11462",
+        "arxiv_id": "2312.11462",
+        "authors": [
+          "Ziyi Chen",
+          "Xiaocong Yang",
+          "Jiacheng Lin",
+          "Chenkai Sun",
+          "Kevin Chen–Chuan Chang",
+          "Jie Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.emnlp-main.240",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.emnlp-main.240",
+        "title:qspec speculative decoding with complementary quantization schemes",
+        "url:https://doi.org/10.18653/v1/2025.emnlp-main.240"
+      ],
+      "record": {
+        "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+        "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.240",
+        "year": 2025,
+        "published": "2025-01-01",
+        "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.240",
+        "doi": "10.18653/v1/2025.emnlp-main.240",
+        "authors": [
+          "Juntao Zhao",
+          "Wenhao Lu",
+          "Sheng Wang",
+          "Lingpeng Kong",
+          "Chuan Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.08223",
+      "identity_tokens": [
+        "id:arXiv:2407.08223",
+        "title:speculative rag enhancing retrieval augmented generation through drafting",
+        "url:http://arxiv.org/abs/2407.08223"
+      ],
+      "record": {
+        "title": "Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting",
+        "source_url": "http://arxiv.org/abs/2407.08223",
+        "year": 2024,
+        "published": "2024-07-11",
+        "canonical_id": "arXiv:2407.08223",
+        "arxiv_id": "2407.08223",
+        "authors": [
+          "Zilong Wang",
+          "Zifeng Wang",
+          "Long Tan Le",
+          "Huaixiu Zheng",
+          "Swaroop Mishra",
+          "Vinçent Pérot",
+          "Yuwei Zhang",
+          "Anush Mattapalli",
+          "Ankur Taly",
+          "Jingbo Shang",
+          "Chen-Yu Lee",
+          "Tomas Pfister"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.naacl-long.281",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.naacl-long.281",
+        "title:rag llms are not safer a safety analysis of retrievalaugmented generation for large language models",
+        "url:https://doi.org/10.18653/v1/2025.naacl-long.281"
+      ],
+      "record": {
+        "title": "RAG LLMs are Not Safer: A Safety Analysis of Retrieval-Augmented Generation for Large Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.281",
+        "year": 2025,
+        "published": "2025-01-01",
+        "canonical_id": "DOI:10.18653/v1/2025.naacl-long.281",
+        "doi": "10.18653/v1/2025.naacl-long.281",
+        "authors": [
+          "Bang An",
+          "Shiyue Zhang",
+          "Mark Dredze"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.06857",
+      "identity_tokens": [
+        "id:DOI:10.1162/coli.a.652",
+        "id:arXiv:2409.06857",
+        "title:what is the role of small models in the llm era a survey",
+        "url:https://doi.org/10.1162/coli.a.652"
+      ],
+      "record": {
+        "title": "What is the Role of Small Models in the LLM Era: A Survey",
+        "source_url": "https://doi.org/10.1162/coli.a.652",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2409.06857",
+        "arxiv_id": "2409.06857",
+        "authors": [
+          "Lihu Chen",
+          "Gaël Varoquaux"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.19744",
+      "identity_tokens": [
+        "id:arXiv:2410.19744",
+        "title:towards nextgeneration llmbased recommender systems a survey and beyond",
+        "url:http://arxiv.org/abs/2410.19744"
+      ],
+      "record": {
+        "title": "Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond",
+        "source_url": "http://arxiv.org/abs/2410.19744",
+        "year": 2024,
+        "published": "2024-10-10",
+        "canonical_id": "arXiv:2410.19744",
+        "arxiv_id": "2410.19744",
+        "authors": [
+          "Qi Wang",
+          "Jindong Li",
+          "Shiqi Wang",
+          "Qianli Xing",
+          "Runliang Niu",
+          "Hyeyoung Kong",
+          "Rui Li",
+          "Guodong Long",
+          "Yi Chang",
+          "Chengqi Zhang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:bdca746f33f577c58c9773f61468fd6c9b8a2a6acbfe8ad85fd021562bd512ce",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

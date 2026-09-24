@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-4e9fe196315c28d707c9b275-r2",
+  "kind": "research",
+  "attempt_id": "attempt-4e9fe196315c28d707c9b275",
+  "job_id": "job-research-303634fb993a11eb",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:3a2c24ed2d66901a9ae34d1767522d6d5ccd728ae3bf350054f3ebfae5e839df",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "a0d70be6f63163c475220c2bbaa1b613634b4818"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "70f133b7c0a7b760951274da4026f70438c60764"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "1d1278232b4f23fdf332ee4c6226598e9b401037"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "eda1766cc5fa2e7f1a20cc186f875221d57c433d"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "ad60e06f9360c78da03ba21f243c5c23e9f674fd"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+    "status": "PASS",
+    "file_bytes": 25926,
+    "prose_chars": 6099,
+    "paragraphs": 37,
+    "method_paragraphs": 17,
+    "method_components": 8,
+    "method_detection": "explicit",
+    "japanese_ratio": 1.0,
+    "japanese_chars": 6736,
+    "latin_chars": 0,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": []
+  },
+  "checked_at": "2026-09-22T12:26:57+00:00",
+  "next_action": "Create .survey/work-queue/completed-submission-requests/<attempt_id>.json and set preflight_result to this exact result path. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}

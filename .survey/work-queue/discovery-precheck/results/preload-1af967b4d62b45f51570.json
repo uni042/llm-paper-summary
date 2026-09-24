@@ -1,0 +1,880 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-1af967b4d62b45f51570",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-1af967b4d62b45f51570",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2310.01334",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2310.01334/citations",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 4,
+  "next_cursor": "80",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "29e23316e7ec5f7a6f0283cb43a56c488b8e7649",
+  "raw_search_result_count": 80,
+  "retrieval_duplicate_filtered_count": 55,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T23:09:31.834613+00:00",
+  "preload_id": "preload-1af967b4d62b45f51570",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 4,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Learning to Recover Task Experts from a Multi-Task Merged Model",
+      "source_url": "https://www.semanticscholar.org/paper/ec4f22fb59a6ec137c8d17355086daa32f237026",
+      "year": 2026,
+      "published": "2026-06-25",
+      "abstract": "Multi-task model merging aims to consolidate several task-specific experts into a unified model, yet static merging consistently suffers from parameter interference. While dynamic merging models aim to bridge this gap, many works rely on the costly storage and loading of redundant expert components at inference. In this work, from the perspective of task expert, we view parameter interference as parameter perturbation introduced to each expert during merging process. We show that such parameter perturbations can be modeled as affine transformation, which can be approximated as additive offsets. Motivated by these, we propose Recover Task eXpert (ReTeX), a framework that predicts those offsets, in order to undo parameter interference and recover task-expert performance from a single merged checkpoint. To recover the appropriate expert when task identity is unknown, we introduce a router-free task identifier based on SVD subspace signatures computed offline before inference. At inference, the identifier selects the task whose subspace yields the smallest projection residual for a given input. As a result, ReTeX recovers over 95% of individual-expert performance in both vision and NLP domains, while significantly improving generalization to unseen tasks. Crucially, we also show that the parameter offset prediction leads to emergent adaptive interpolation of expert knowledge for out-of-distribution (OOD) tasks. ReTeX adaptively interpolates seen expert knowledge to handle unseen tasks. Our code is available at https://github.com/BAIKLAB/ReTeX",
+      "canonical_id": "arXiv:2606.26902",
+      "arxiv_id": "2606.26902",
+      "authors": [
+        "Jinwook Jung",
+        "Taegyu Kim",
+        "Kumju Jo",
+        "Sungyong Baik"
+      ]
+    },
+    {
+      "title": "Post-Hoc Merging is Not Enough: Many-Shot Model Merging with Loss-Gap Balancing",
+      "source_url": "https://www.semanticscholar.org/paper/a8c19a12f8bbf36f80919ec9ba350d8cc8416269",
+      "year": 2026,
+      "published": "2026-06-15",
+      "abstract": "Model merging has become a practical post-training strategy for building a single multi-task large language model (LLM) by combining multiple task-specialized models. However, most existing approaches rely on post-hoc merging, in which task-specific models are merged only once after training. This one-shot aggregation often suffers from task interference, leading to information erasure across individual tasks. In this work, we show that replacing post-hoc merging with an iterative many-shot merging protocol is effective in improving multi-task performance. Building on this insight, we propose METIS, Mitigating Erasure from Task Interference for Stable many-shot merging. METIS is a loss-aware many-shot merging method that addresses information erasure in post-hoc merging through task-wise loss-gap weighting and consensus-based masking. Notably, METIS exhibits significant performance improvement on the worst-performing task, effectively mitigating information erasure. (Project page: https://imkyungjin.github.io/METIS/)",
+      "canonical_id": "arXiv:2606.16501",
+      "arxiv_id": "2606.16501",
+      "authors": [
+        "Kyungjin Im",
+        "Miru Kim",
+        "Chanin Eom",
+        "Minhae Kwon"
+      ]
+    },
+    {
+      "title": "Self-Speculative Decoding for On-device MoE Acceleration",
+      "source_url": "https://www.semanticscholar.org/paper/f6ebb3043b0ccecc1c6e8ebfa819ed029be11d17",
+      "year": 2026,
+      "published": "2026-04-12",
+      "abstract": "The sparse mixture-of-experts (MoE) architecture is a promising backbone of foundation models for a wide range of applications in edge. However, deploying them locally presents a significant challenge to memory-constrained GPUs. Previous techniques utilize CPUs for expert offloading, which suffer from inaccurate expert prefetching and on-demand loading latency. To address these challenges, we propose self-speculative MoE ( SS-MoE ), an algorithm-system co-design framework that facilitates inference under limited GPU memory. Our insight is that only a subset of routed experts, i.e., draft model, can still tackle easy tasks and generate draft tokens. Second, we deem GPU memory as the experts cache, and on-demand update it to mitigate IO overhead. Draft tokens from fewer routed experts are generated quickly, and these experts are then routed for verification. Additionally, we design a confidence-based policy to adaptively accept or verify draft tokens, which selectively decreases or increases the number of verification tokens of speculative decoding and achieves acceleration. Notably, under conservative verification, our approach preserves model accuracy and surpasses the decoding speed of the 4-bit quantized counterpart model. Under adaptive verification, our method significantly enhances decoding speed by 3.72x over state-of-the-art methods while maintaining nearly lossless accuracy.",
+      "canonical_id": "DOI:10.1145/3774904.3792218",
+      "doi": "10.1145/3774904.3792218",
+      "authors": [
+        "Peirong Zheng",
+        "Wenchao Xu",
+        "Haozhao Wang"
+      ]
+    },
+    {
+      "title": "Dynamic Experts Synergy for Multi-Task Recommendation",
+      "source_url": "https://www.semanticscholar.org/paper/523e276f9cd3a54fd00baad5cdc32028b4a13438",
+      "year": 2026,
+      "published": "2026-04-12",
+      "abstract": "Expert-sharing patterns have emerged as promising paradigms for multi-task learning (MTL) in recommender systems, enabling efficient resource allocation and dynamic modeling of diverse tasks. In this paper, we observe that high-gating (leader) and low-gating (auxiliary) experts play distinct roles in MTL: leader experts dominate task-specific predictions, while auxiliary experts, despite their lower gating scores, often contain complementary knowledge that can enhance model performance. However, critical challenges persist: how to effectively identify and utilize the knowledge of the leader and auxiliary experts in a synergistic manner? To address this, we propose a novel Dynamic Experts Synergy (DES) mechanism that integrates Entropy-driven Experts Classification (EEC) and Multi-view Knowledge Recycle (MVKR). EEC dynamically partitions experts into leader and auxiliary groups by analyzing task-specific prediction and gating entropy, enabling adaptive allocation aligned with real-time task difficulty. MVKR effectively revisits knowledge from auxiliary experts through utility, diversity, and task-relatedness perspectives, ensuring comprehensive knowledge utilization. Extensive experiments on five datasets demonstrate the superiority of our DES against state-of-the-art methods.",
+      "canonical_id": "DOI:10.1145/3774904.3792593",
+      "doi": "10.1145/3774904.3792593",
+      "authors": [
+        "Haotian Wu",
+        "Yingpeng Du",
+        "Zhu Sun",
+        "Jie Zhang",
+        "Puay Siew Tan"
+      ]
+    },
+    {
+      "title": "Improving Ensemble Forecasts of Abnormally Deflecting Tropical Cyclones with Fused Atmosphere-Ocean-Terrain Data",
+      "source_url": "https://www.semanticscholar.org/paper/f70ec3cbd2efc98196045204923da33288f77eb7",
+      "year": 2026,
+      "published": "2026-03-31",
+      "abstract": "Deep learning-based tropical cyclone (TC) forecasting methods have demonstrated significant potential and application advantages, as they feature much lower computational cost and faster operation speed than numerical weather prediction models. However, existing deep learning methods still have key limitations: they can only process a single type of sequential trajectory data or homogeneous meteorological variables, and fail to achieve accurate forecasting of abnormal deflected TCs. To address these challenges, we present two groundbreaking contributions. First, we have constructed a multimodal and multi-source dataset named AOT-TCs for TC forecasting in the Northwest Pacific basin. As the first dataset of its kind, it innovatively integrates heterogeneous variables from the atmosphere, ocean, and land, thus obtaining a comprehensive and information-rich meteorological dataset. Second, based on the AOT-TCs dataset, we propose a forecasting model that can handle both normal and abnormally deflected TCs. This is the first TC forecasting model to adopt an explicit atmosphere-ocean-terrain coupling architecture, enabling it to effectively capture complex interactions across physical domains. Extensive experiments on all TC cases in the Northwest Pacific from 2017 to 2024 show that our model achieves state-of-the-art performance in TC forecasting: it not only significantly improves the forecasting accuracy of normal TCs but also breaks through the technical bottleneck in forecasting abnormally deflected TCs.",
+      "canonical_id": "arXiv:2603.29200",
+      "arxiv_id": "2603.29200",
+      "authors": [
+        "Qi-Xiang Li",
+        "Yuan Zhou",
+        "Shuwei Huo",
+        "Chong Wang",
+        "Xiao-Feng Li"
+      ]
+    },
+    {
+      "title": "Mozart: Modularized and Efficient MoE Training on 3.5D Wafer-Scale Chiplet Architectures",
+      "source_url": "https://www.semanticscholar.org/paper/ac5517798ce8de7892ee3f0b30647d00c26ff537",
+      "year": 2026,
+      "published": "2026-03-07",
+      "abstract": "Mixture-of-Experts (MoE) architecture offers enhanced efficiency for Large Language Models (LLMs) with modularized computation, yet its inherent sparsity poses significant hardware deployment challenges, including memory locality issues, communication overhead, and inefficient computing resource utilization. Inspired by the modular organization of the human brain, we propose Mozart, a novel algorithm-hardware co-design framework tailored for efficient training of MoE-based LLMs on 3.5D wafer-scale chiplet architectures. On the algorithm side, Mozart exploits the inherent modularity of chiplets and introduces: (1) an expert allocation strategy that enables efficient on-package all-to-all communication, and (2) a fine-grained scheduling mechanism that improves communication-computation overlap through streaming tokens and experts. On the architecture side, Mozart adaptively co-locates heterogeneous modules on specialized chiplets with a 2.5D NoP-Tree topology and hierarchical memory structure. Evaluation across three popular MoE models demonstrates significant efficiency gains, enabling more effective parallelization and resource utilization for large-scale modularized MoE-LLMs.",
+      "canonical_id": "arXiv:2603.07006",
+      "arxiv_id": "2603.07006",
+      "authors": [
+        "Shuqing Luo",
+        "Ye Han",
+        "Pingzhi Li",
+        "Jiayin Qin",
+        "Jie Peng",
+        "Yang Zhao",
+        "Yu Cao",
+        "Tianlong Chen"
+      ]
+    },
+    {
+      "title": "SS-AdaMoE: Spatio-Spectral Adaptive Mixture of Experts with Global Structural Priors for Graph Node Classification",
+      "source_url": "https://www.semanticscholar.org/paper/6502245061fe3eba9e06273bc728f1b2c7bdef28",
+      "year": 2026,
+      "published": "2026-03-01",
+      "abstract": "Graph Neural Networks (GNNs) have emerged as the standard for learning representations from graph-structured data. While traditional architectures relying on message-passing mechanisms excel in homophilic settings, they essentially function as fixed low-pass filters. However, this smoothing operation limits their ability to generalize to heterophilic graphs, where connected nodes often exhibit dissimilar labels and high-frequency signals are crucial for discrimination. Furthermore, existing Mixture-of-Experts (MoE) methods for graphs often suffer from local-view routing, failing to capture global structural context during expert selection. To address these challenges, this paper proposes SS-AdaMoE, a novel Spatio-Spectral Adaptive Mixture of Experts framework designed for robust node classification across diverse graph patterns. Specifically, a Dual-Domain Expert System is constructed, integrating heterogeneous spatial aggregators with learnable spectral filters based on Bernstein polynomials. This allows the model to adaptively capture arbitrary frequency responses—including high-pass and band-pass signals—which are overlooked by standard GNNs. To resolve the locality bias, a Hierarchical Global-Prior Gating Network augmented by a Linear Graph Transformer is introduced, ensuring that expert selection is guided by both local node features and global topological awareness. Extensive experiments are conducted on five benchmark datasets spanning both homophilic and heterophilic networks. The results demonstrate that SS-AdaMoE consistently outperforms baselines, achieving accuracy improvements of up to 2.65% on Chameleon and 1.41% on Roman-empire over the strongest MoE baseline, while surpassing traditional GCN architectures by margins exceeding 28% on heterophilic datasets such as Texas. These findings validate that the synergy of learnable spectral priors and global gating effectively bridges the gap between spatial aggregation and spectral filtering.",
+      "canonical_id": "DOI:10.3390/e28030355",
+      "doi": "10.3390/e28030355",
+      "authors": [
+        "Xilin Kang",
+        "Tianyu Yu",
+        "Letao Wang",
+        "Yutong Guo",
+        "Fengjun Zhang"
+      ]
+    },
+    {
+      "title": "A Systematic Study of In-the-Wild Model Merging for Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/91a41d8ffacfaf86428fa1ac963bf25d927bbd1a",
+      "year": 2025,
+      "published": "2025-11-26",
+      "abstract": "Model merging combines multiple fine-tuned checkpoints into a single model without additional training, offering an attractive approach to reusing models and efficiently improving performance. However, it remains unclear whether the advantages reported for settings where all merged experts have distinct roles and are tuned on clearly separated tasks also hold in settings where the merged experts do not have clearly distinct roles, but are trained on overlapping or even conflicting objectives. To evaluate this setting, we present a large-scale, systematic evaluation of\"in-the-wild\"model merging of heterogeneous experts, that may have been trained on overlapping or conflicting objectives. Concretely, we evaluate six state-of-the-art merging methods, including recent subspace methods, across four open-weight LLMs, twelve fine-tuned checkpoints per base model, and sixteen standard LLM benchmarks. Evaluating through standardized benchmarks, we measure both the probability that a model merged from a heterogeneous set of experts outperforms the base model and we measure relative gains over the best individual checkpoint. Our results show that the oldest and simplest method, Task Arithmetic, is the only approach that reliably yields performance gains on LLMs in this\"in-the-wild\"setting. Other interference-aware and subspace merging methods typically do not result in notable improvements over the base model. Our findings indicate that current merging techniques mostly do not enable extracting useful weight updates from heterogeneous and potentially conflicting versions. This motivates the design of LLM-specific merging algorithms and merging-aware fine-tuning methods.",
+      "canonical_id": "arXiv:2511.21437",
+      "arxiv_id": "2511.21437",
+      "authors": [
+        "Oguz Kagan Hitit",
+        "Leander Girrbach",
+        "Zeynep Akata"
+      ]
+    },
+    {
+      "title": "Merging without Forgetting: Continual Fusion of Task-Specific Models via Optimal Transport",
+      "source_url": "https://www.semanticscholar.org/paper/bcde2bc31126f60a81a45fcd46cb2579a4a3f9cc",
+      "year": 2025,
+      "published": "2025-11-24",
+      "abstract": "Merging models fine-tuned for different tasks into a single unified model has become an increasingly important direction for building versatile, efficient multi-task systems. Existing approaches predominantly rely on parameter interpolation in weight space, which we show introduces significant distribution shift in the feature space and undermines task-specific knowledge. In this paper, we propose OTMF (Optimal Transport-based Masked Fusion), a novel model merging framework rooted in optimal transport theory to address the distribution shift that arises from naive parameter interpolation. Instead of directly aggregating features or weights, OTMF aligns the semantic geometry of task-specific models by discovering common masks applied to task vectors through optimal transport plans. These masks selectively extract transferable and task-agnostic components while preserving the unique structural identities of each task. To ensure scalability in real-world settings, OTMF further supports a continual fusion paradigm that incrementally integrates each new task vector without revisiting previous ones, maintaining a bounded memory footprint and enabling efficient fusion across a growing number of tasks. We conduct comprehensive experiments on multiple vision and language benchmarks, and results show that OTMF achieves state-of-the-art performance in terms of both accuracy and efficiency. These findings highlight the practical and theoretical value of our approach to model merging.",
+      "canonical_id": "arXiv:2511.19561",
+      "arxiv_id": "2511.19561",
+      "authors": [
+        "Zecheng Pan",
+        "Zhikang Chen",
+        "Ding Li",
+        "Min Zhang",
+        "Sen Cui",
+        "Hongshu Jin",
+        "Lu-Qi Tao",
+        "Yi Yang",
+        "De-Heng Ye",
+        "Yu Zhang",
+        "Ting-Ting Zhu",
+        "Tianling Ren"
+      ]
+    },
+    {
+      "title": "Attention-enhanced Gating for Mixture of Expert LLM",
+      "source_url": "https://www.semanticscholar.org/paper/a4a8fc725cbc709e90516d4279aa025827a64fda",
+      "year": 2025,
+      "published": "2025-11-19",
+      "abstract": "Transformer-based MoE models have become mainstream in large language models (LLMs). The core design of the Transformer architecture is the attention mechanism that each input token will calculate the attention values with others. The Mixture of Experts (MoE)-based LLMs was proposed to replace the dense layer in the Transformer with a gate function and several sparsely activated small experts. This design saves the inference cost since only part of the experts are used. However, existing MoE works only use the data features as the input of the gate function; the importance information of attention value is ignored. In this paper, we propose an attention-enhanced mixture of experts (AMoE), a novel transformer-based MoE model. Specifically, we propose a new gate with an integrated attention mechanism, which improves the model’s performance. We conduct comprehensive experiments to support the effectiveness of our proposals.",
+      "canonical_id": "DOI:10.1109/iCAST68191.2025.11300172",
+      "doi": "10.1109/iCAST68191.2025.11300172",
+      "authors": [
+        "Na Gao",
+        "Boqian Fu",
+        "Xiu-Heng Liao",
+        "Ziang Wu",
+        "Tao Liu",
+        "Chunhua Su"
+      ]
+    },
+    {
+      "title": "Leave It to the Experts: Detecting Knowledge Distillation via MoE Expert Signatures",
+      "source_url": "https://www.semanticscholar.org/paper/25257d98c39c2f2bdfff76b473e8d685d5f661b6",
+      "year": 2025,
+      "published": "2025-10-19",
+      "abstract": "Knowledge Distillation (KD) accelerates training of large language models (LLMs) but poses intellectual property protection and LLM diversity risks. Existing KD detection methods based on self-identity or output similarity can be easily evaded through prompt engineering. We present a KD detection framework effective in both white-box and black-box settings by exploiting an overlooked signal: the transfer of MoE\"structural habits\", especially internal routing patterns. Our approach analyzes how different experts specialize and collaborate across various inputs, creating distinctive fingerprints that persist through the distillation process. To extend beyond the white-box setup and MoE architectures, we further propose Shadow-MoE, a black-box method that constructs proxy MoE representations via auxiliary distillation to compare these patterns between arbitrary model pairs. We establish a comprehensive, reproducible benchmark that offers diverse distilled checkpoints and an extensible framework to facilitate future research. Extensive experiments demonstrate>94% detection accuracy across various scenarios and strong robustness to prompt-based evasion, outperforming existing baselines while highlighting the structural habits transfer in LLMs.",
+      "canonical_id": "arXiv:2510.16968",
+      "arxiv_id": "2510.16968",
+      "authors": [
+        "Pingzhi Li",
+        "Morris Yu-Chao Huang",
+        "Zhen Tan",
+        "Qingquan Song",
+        "Jie Peng",
+        "Kai Zou",
+        "Yu Cheng",
+        "Kaidi Xu",
+        "Tianlong Chen"
+      ]
+    },
+    {
+      "title": "ABC: Towards a Universal Code Styler through Model Merging",
+      "source_url": "https://www.semanticscholar.org/paper/8475120d4afb6f1c7cf95f24362c4cf51cd207aa",
+      "year": 2025,
+      "published": "2025-10-09",
+      "abstract": "Code style transformation models built on code Language Models (code LMs) have achieved remarkable success. However, they typically focus on basis style transformations, where the target style follows a single criterion, and often struggle with combination styles, where the target style involves multiple criteria. In practice, style guides encompass multiple criteria, making the lack of effective combination style transformation a major limitation to their real-world applicability. In this paper, we propose Absent-Basis-Combination (abbreviated as ABC), a novel framework for code style transformation that significantly improves combination style transformation and overcomes the limitations of existing approaches. We implement four variants of ABC with parameter sizes of 0.5B, 1.3B, 1.5B, and 3B, demonstrating consistent superiority over existing approaches across all model sizes in both basis and combination style transformations. Specifically, ABC achieves performance gains of up to 86.70%, and remains superior even when baseline approaches use three times the parameters. Furthermore, to address the lack of high-quality datasets and evaluation metrics, we construct and release a new style transformation dataset, Basis & Combination Code Style (abbreviated as BCCStyle), and introduce Code Sequence, Syntactic, Semantic and Stylistic BLEU (abbreviated as CS4BLEU), a novel code similarity metric that surpasses existing metrics in accuracy and consistency.",
+      "canonical_id": "DOI:10.1145/3763104",
+      "doi": "10.1145/3763104",
+      "authors": [
+        "Yitong Chen",
+        "Zhiqiang Gao",
+        "Chuanqi Shi",
+        "Baixuan Li",
+        "Miao Gao"
+      ]
+    },
+    {
+      "title": "GRACE-MoE: Grouping and Replication with Locality-Aware Routing for Efficient Distributed MoE Inference",
+      "source_url": "https://www.semanticscholar.org/paper/1fbaabccef99f0ea1a26b21bdd2c53741ea22103",
+      "year": 2025,
+      "published": "2025-09-29",
+      "abstract": "Sparse Mixture of Experts (SMoE) enables scalable parameter growth in large language models (LLMs) by selectively activating a subset of experts, and its large parameter count necessitates distributed deployment for inference. However, distributed inference faces a critical dilemma: although communication overhead constitutes the primary bottleneck, reducing it often exacerbates computational load imbalance, leading to resource waste. In this paper, we present GRACE-MoE, which stands for Grouping and Replication with Locality-Aware Routing for SMoE inference. GRACE-MoE is a lossless co-optimization framework that integrates expert grouping to reduce communication and dynamic replication to correct load skew, together with locality-aware routing to resolve replica selection. To underpin this coordinated optimization in multi-node settings, GRACE-MoE adopts a hierarchical sparse communication design that reduces cross-node traffic while implicitly aligning execution across nodes, thereby mitigating synchronization overhead. Experiments on diverse models and multi-node, multi-GPU environments demonstrate that GRACE-MoE efficiently reduces end-to-end inference latency, achieving up to 4.66x speedup over existing systems, and the code will be released upon acceptance.",
+      "canonical_id": "arXiv:2509.25041",
+      "arxiv_id": "2509.25041",
+      "authors": [
+        "Yu Han",
+        "Lehan Pan",
+        "Jie Peng",
+        "Ziyang Tao",
+        "Wuyang Zhang",
+        "Yanyong Zhang"
+      ]
+    },
+    {
+      "title": "UNIFORM: Unifying Knowledge from Large-scale and Diverse Pre-trained Models",
+      "source_url": "https://www.semanticscholar.org/paper/d153d0bf57b584c0151c892862b04906f297a116",
+      "year": 2025,
+      "published": "2025-08-27",
+      "abstract": "In the era of deep learning, the increasing number of pre-trained models available online presents a wealth of knowledge. These models, developed with diverse architectures and trained on varied datasets for different tasks, provide unique interpretations of the real world. Their collective consensus is likely universal and generalizable to unseen data. However, effectively harnessing this collective knowledge poses a fundamental challenge due to the heterogeneity of pre-trained models. Existing knowledge integration solutions typically rely on strong assumptions about training data distributions and network architectures, limiting them to learning only from specific types of models and resulting in data and/or inductive biases. In this work, we introduce a novel framework, namely UNIFORM, for knowledge transfer from a diverse set of off-the-shelf models into one student model without such constraints. Specifically, we propose a dedicated voting mechanism to capture the consensus of knowledge both at the logit level -- incorporating teacher models that are capable of predicting target classes of interest -- and at the feature level, utilizing visual representations learned on arbitrary label spaces. Extensive experiments demonstrate that UNIFORM effectively enhances unsupervised object recognition performance compared to strong knowledge transfer baselines. Notably, it exhibits remarkable scalability by benefiting from over one hundred teachers, while existing methods saturate at a much smaller scale.",
+      "canonical_id": "arXiv:2508.19498",
+      "arxiv_id": "2508.19498",
+      "authors": [
+        "Yimu Wang",
+        "Weiming Zhuang",
+        "Chen Chen",
+        "Jiabo Huang",
+        "Jingtao Li",
+        "Lingjuan Lyu"
+      ]
+    },
+    {
+      "title": "Federated Fine-Tuning of Sparsely-Activated Large Language Models on Resource-Constrained Devices",
+      "source_url": "https://www.semanticscholar.org/paper/7b6006bcb9c2507af0ec2c24d4ceaa24b9d87084",
+      "year": 2025,
+      "published": "2025-08-26",
+      "abstract": "Federated fine-tuning of Mixture-of-Experts (MoE)-based large language models (LLMs) is challenging due to their massive computational requirements and the resource constraints of participants. Existing works attempt to fill this gap through model quantization, computation offloading, or expert pruning. However, they cannot achieve desired performance due to impractical system assumptions and a lack of consideration for MoE-specific characteristics. In this paper, we propose Flux, a system designed to enable federated fine-tuning of MoE-based LLMs across participants with constrained computing resources (e.g., consumer-grade GPUs), aiming to minimize time-to-accuracy. Flux introduces three key innovations: (1) quantization-based local profiling to estimate expert activation with minimal overhead, (2) adaptive layer-aware expert merging to reduce resource consumption while preserving accuracy, and (3) dynamic expert role assignment using an exploration-exploitation strategy to balance tuning and non-tuning experts. Extensive experiments on LLaMA-MoE and DeepSeek-MoE with multiple benchmark datasets demonstrate that Flux significantly outperforms existing methods, achieving up to 4.75× speedup in time-to-accuracy.",
+      "canonical_id": "arXiv:2508.19078",
+      "arxiv_id": "2508.19078",
+      "authors": [
+        "Fahao Chen",
+        "Jie Wan",
+        "Peng Li",
+        "Zhou Su",
+        "Dongxiao Yu"
+      ]
+    },
+    {
+      "title": "CoMoE: Collaborative Optimization of Expert Aggregation and Offloading for MoE-based LLMs at Edge",
+      "source_url": "https://www.semanticscholar.org/paper/21bfcab57074e54c3d2e691a27dc4c0ea28564d9",
+      "year": 2025,
+      "published": "2025-08-10",
+      "abstract": "The proliferation of large language models (LLMs) has driven the adoption of Mixture-of-Experts (MoE) architectures as a promising solution to scale model capacity while controlling computational costs. However, deploying MoE models in resource-constrained mobile edge computing environments presents significant challenges due to their large memory footprint and dynamic expert activation patterns. To address these challenges, we propose a novel dynamic resource-aware collaborative optimization framework that jointly optimizes expert aggregation granularity and offloading strategies based on real-time device resource states, network conditions, and input characteristics in mobile edge environments, denoted as CoMoE. In CoMoE, we first systematically analyze existing expert aggregation techniques, including expert parameter merging,knowledge distillation,and parameter sharing decomposition, identifying their limitations in dynamic mobile environments.We then investigate expert offloading strategies encompassing expert prediction and prefetching, expert caching and scheduling, and multi-tier storage architectures, revealing the interdependencies between routing decisions and offloading performance.The CoMoE incorporates adaptive scheduling mechanisms that respond to user mobility and varying network conditions, enabling efficient MoE deployment across heterogeneous edge devices. Extensive experiments on real mobile edge testbeds demonstrate that CoMoE achieves approximately 70% reduction in memory usage compared to baseline methods, 10.5% lower inference latency than existing expert offloading techniques, while maintaining model performance stability. For large-scale MoE models (e.g,7.4B-parameter Switch-Base-128), the CoMoE reduces memory requirements from 15.6GB to 4.7GB, enabling deployment on resource-constrained mobile edge devices that previously could only support much smaller models.",
+      "canonical_id": "arXiv:2508.09208",
+      "arxiv_id": "2508.09208",
+      "authors": [
+        "Muqing Li",
+        "Ning Li",
+        "Xin Yuan",
+        "Wenchao Xu",
+        "Quan Chen",
+        "Song Guo",
+        "Hai-Jun Zhang"
+      ]
+    },
+    {
+      "title": "HAMoBE: Hierarchical and Adaptive Mixture of Biometric Experts for Video-Based Person ReID",
+      "source_url": "https://www.semanticscholar.org/paper/dba09b55e80ec9717d739ea046972c7702421e2d",
+      "year": 2025,
+      "published": "2025-08-07",
+      "abstract": "Recently, research interest in person re-identification (ReID) has increasingly focused on video-based scenarios, essential for robust surveillance and security in varied and dynamic environments. However, existing videobased ReID methods often overlook the necessity of identifying and selecting the most discriminative features from both videos in a query-gallery pair for effective matching. To address this issue, we propose a novel Hierarchical and Adaptive Mixture of Biometric Experts (HAMoBE) framework, which leverages multi-layer features from a pretrained large model (e.g., CLIP) and is designed to mimic human perceptual mechanisms by independently modeling key biometric features—appearance, static body shape, and dynamic gait—and adaptively integrating them. Specifically, HAMoBE includes two levels: the first level extracts low-level features from multi-layer representations provided by the frozen large model, while the second level consists of specialized experts focusing on long-term, shortterm, and temporal features. To ensure robust matching, we introduce a new dual-input decision gating network that dynamically adjusts the contributions of each expert based on their relevance to the input scenarios. Extensive evaluations on benchmarks like MEVID demonstrate that our approach yields significant performance improvements (e.g., $+13.0 \\%$ Rank1).",
+      "canonical_id": "arXiv:2508.05038",
+      "arxiv_id": "2508.05038",
+      "authors": [
+        "Yiyang Su",
+        "Yunping Shi",
+        "Feng Liu",
+        "Xiaoming Liu"
+      ]
+    },
+    {
+      "title": "CAMERA: Multi-Matrix Joint Compression for MoE Models via Micro-Expert Redundancy Analysis",
+      "source_url": "https://www.semanticscholar.org/paper/33889991c500cb9f548e6313b1897f4fb72d3445",
+      "year": 2025,
+      "published": "2025-08-04",
+      "abstract": "Large Language Models (LLMs) with Mixture-of-Experts (MoE) architectures are distinguished by their strong performance scaling with increasing parameters across a wide range of tasks, yet they also suffer from substantial computational and storage overheads. Notably, the performance gains of MoE models do not scale proportionally with the growth in expert parameters. While prior works attempt to reduce parameters via expert-level pruning, merging, or decomposition, they still suffer from challenges in both performance and computational efficiency. In this paper, we address these challenges by introducing micro-expert as a finer-grained compression unit that spans across matrices. We first establish a more fundamental perspective, viewing MoE layers as mixtures of micro-experts, and present CAMERA, a lightweight and training-free framework for identifying micro-expert redundancy. Our analysis uncovers significant variance in micro-expert contributions during decoding. Based on this insight, we further propose CAMERA-P, a structured micro-expert pruning framework, and CAMERA-Q, a mixed-precision quantization idea designed for micro-experts. Extensive experiments on nine downstream tasks show that CAMERA-P consistently outperforms strong baselines under pruning ratios ranging from 20% to 60%. Furthermore, CAMERA-Q achieves superior results under aggressive 2-bit quantization, surpassing existing matrix- and channel-level ideas. Notably, our method enables complete micro-expert analysis of Qwen2-57B-A14B in less than 5 minutes on a single NVIDIA A100-40GB GPU.",
+      "canonical_id": "arXiv:2508.02322",
+      "arxiv_id": "2508.02322",
+      "authors": [
+        "Yuzhuang Xu",
+        "Xu Han",
+        "Yuanchi Zhang",
+        "Yixuan Wang",
+        "Yijun Liu",
+        "Shiyu Ji",
+        "Qingfu Zhu",
+        "Wanxiang Che"
+      ]
+    },
+    {
+      "title": "RouteMark: A Fingerprint for Intellectual Property Attribution in Routing-based Model Merging",
+      "source_url": "https://www.semanticscholar.org/paper/933798c96842593b4974d02fec2133e271f54f50",
+      "year": 2025,
+      "published": "2025-08-03",
+      "abstract": "Model merging via Mixture-of-Experts (MoE) has emerged as a scalable solution for consolidating multiple task-specific models into a unified sparse architecture, where each expert is derived from a model fine-tuned on a distinct task. While effective for multi-task integration, this paradigm introduces a critical yet underexplored challenge: how to attribute and protect the intellectual property (IP) of individual experts after merging. We propose RouteMark, a framework for IP protection in merged MoE models through the design of expert routing fingerprints. Our key insight is that task-specific experts exhibit stable and distinctive routing behaviors under probing inputs. To capture these patterns, we construct expert-level fingerprints using two complementary statistics: the Routing Score Fingerprint (RSF), quantifying the intensity of expert activation, and the Routing Preference Fingerprint (RPF), characterizing the input distribution that preferentially activates each expert. These fingerprints are reproducible, task-discriminative, and lightweight to construct. For attribution and tampering detection, we introduce a similarity-based matching algorithm that compares expert fingerprints between a suspect and a reference (victim) model. Extensive experiments across diverse tasks and CLIP-based MoE architectures show that RouteMark consistently yields high similarity for reused experts and clear separation from unrelated ones. Moreover, it remains robust against both structural tampering (expert replacement, addition, deletion) and parametric tampering (fine-tuning, pruning, permutation), outperforming weight- and activation-based baseliness. Our work lays the foundation for RouteMark as a practical and broadly applicable framework for IP verification in MoE-based model merging.",
+      "canonical_id": "arXiv:2508.01784",
+      "arxiv_id": "2508.01784",
+      "authors": [
+        "Xin He",
+        "Jun Shen",
+        "Zhenheng Tang",
+        "Xiaowen Chu",
+        "Bo Li",
+        "I. Tsang",
+        "Y. Ong"
+      ]
+    },
+    {
+      "title": "EMOE: Modality-Specific Enhanced Dynamic Emotion Experts",
+      "source_url": "https://www.semanticscholar.org/paper/cffd9bf8c9287c9b8da196623a1152255309082f",
+      "year": 2025,
+      "published": "2025-06-10",
+      "abstract": "Multimodal Emotion Recognition (MER) aims to predict human emotions by leveraging multiple modalities, such as vision, acoustics, and language. However, due to the heterogeneity of these modalities, MER faces two key challenges: modality balance dilemma and modality specialization disappearance. Existing methods often overlook the varying importance of modalities across samples in tackling the modality balance dilemma. Moreover, mainstream decoupling methods, while preserving modality-specific information, often neglect the predictive capability of unimodal data. To address these, we propose a novel model, Modality-Specific Enhanced Dynamic Emotion Experts (EMOE), consisting of: (1) Mixture of Modality Experts for dynamically adjusting modality importance based on sample features, and (2) Unimodal Distillation to retain single-modality predictive ability within fused features. EMOE enables adaptive fusion by learning a unique modality weight distribution for each sample, enhancing multi-modal predictions with single-modality predictions to balance invariant and specific features in emotion recognition. Experimental results on benchmark datasets show that EMOE achieves superior or comparable performance to state-of-the-art methods. Additionally, we extend EMOE to Multimodal Intent Recognition (MIR), further demonstrating its effectiveness and versatility.",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.01335",
+      "doi": "10.1109/CVPR52734.2025.01335",
+      "authors": [
+        "Yiyang Fang",
+        "Wenke Huang",
+        "Guancheng Wan",
+        "Kehua Su",
+        "Mang Ye"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.26902",
+      "identity_tokens": [
+        "id:arXiv:2606.26902",
+        "title:learning to recover task experts from a multitask merged model",
+        "url:https://www.semanticscholar.org/paper/ec4f22fb59a6ec137c8d17355086daa32f237026"
+      ],
+      "record": {
+        "title": "Learning to Recover Task Experts from a Multi-Task Merged Model",
+        "source_url": "https://www.semanticscholar.org/paper/ec4f22fb59a6ec137c8d17355086daa32f237026",
+        "year": 2026,
+        "published": "2026-06-25",
+        "abstract": "Multi-task model merging aims to consolidate several task-specific experts into a unified model, yet static merging consistently suffers from parameter interference. While dynamic merging models aim to bridge this gap, many works rely on the costly storage and loading of redundant expert components at inference. In this work, from the perspective of task expert, we view parameter interference as parameter perturbation introduced to each expert during merging process. We show that such parameter perturbations can be modeled as affine transformation, which can be approximated as additive offsets. Motivated by these, we propose Recover Task eXpert (ReTeX), a framework that predicts those offsets, in order to undo parameter interference and recover task-expert performance from a single merged checkpoint. To recover the appropriate expert when task identity is unknown, we introduce a router-free task identifier based on SVD subspace signatures computed offline before inference. At inference, the identifier selects the task whose subspace yields the smallest projection residual for a given input. As a result, ReTeX recovers over 95% of individual-expert performance in both vision and NLP domains, while significantly improving generalization to unseen tasks. Crucially, we also show that the parameter offset prediction leads to emergent adaptive interpolation of expert knowledge for out-of-distribution (OOD) tasks. ReTeX adaptively interpolates seen expert knowledge to handle unseen tasks. Our code is available at https://github.com/BAIKLAB/ReTeX",
+        "canonical_id": "arXiv:2606.26902",
+        "arxiv_id": "2606.26902",
+        "authors": [
+          "Jinwook Jung",
+          "Taegyu Kim",
+          "Kumju Jo",
+          "Sungyong Baik"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.16501",
+      "identity_tokens": [
+        "id:arXiv:2606.16501",
+        "title:posthoc merging is not enough manyshot model merging with lossgap balancing",
+        "url:https://www.semanticscholar.org/paper/a8c19a12f8bbf36f80919ec9ba350d8cc8416269"
+      ],
+      "record": {
+        "title": "Post-Hoc Merging is Not Enough: Many-Shot Model Merging with Loss-Gap Balancing",
+        "source_url": "https://www.semanticscholar.org/paper/a8c19a12f8bbf36f80919ec9ba350d8cc8416269",
+        "year": 2026,
+        "published": "2026-06-15",
+        "abstract": "Model merging has become a practical post-training strategy for building a single multi-task large language model (LLM) by combining multiple task-specialized models. However, most existing approaches rely on post-hoc merging, in which task-specific models are merged only once after training. This one-shot aggregation often suffers from task interference, leading to information erasure across individual tasks. In this work, we show that replacing post-hoc merging with an iterative many-shot merging protocol is effective in improving multi-task performance. Building on this insight, we propose METIS, Mitigating Erasure from Task Interference for Stable many-shot merging. METIS is a loss-aware many-shot merging method that addresses information erasure in post-hoc merging through task-wise loss-gap weighting and consensus-based masking. Notably, METIS exhibits significant performance improvement on the worst-performing task, effectively mitigating information erasure. (Project page: https://imkyungjin.github.io/METIS/)",
+        "canonical_id": "arXiv:2606.16501",
+        "arxiv_id": "2606.16501",
+        "authors": [
+          "Kyungjin Im",
+          "Miru Kim",
+          "Chanin Eom",
+          "Minhae Kwon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3792218",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792218",
+        "title:selfspeculative decoding for ondevice moe acceleration",
+        "url:https://www.semanticscholar.org/paper/f6ebb3043b0ccecc1c6e8ebfa819ed029be11d17"
+      ],
+      "record": {
+        "title": "Self-Speculative Decoding for On-device MoE Acceleration",
+        "source_url": "https://www.semanticscholar.org/paper/f6ebb3043b0ccecc1c6e8ebfa819ed029be11d17",
+        "year": 2026,
+        "published": "2026-04-12",
+        "abstract": "The sparse mixture-of-experts (MoE) architecture is a promising backbone of foundation models for a wide range of applications in edge. However, deploying them locally presents a significant challenge to memory-constrained GPUs. Previous techniques utilize CPUs for expert offloading, which suffer from inaccurate expert prefetching and on-demand loading latency. To address these challenges, we propose self-speculative MoE ( SS-MoE ), an algorithm-system co-design framework that facilitates inference under limited GPU memory. Our insight is that only a subset of routed experts, i.e., draft model, can still tackle easy tasks and generate draft tokens. Second, we deem GPU memory as the experts cache, and on-demand update it to mitigate IO overhead. Draft tokens from fewer routed experts are generated quickly, and these experts are then routed for verification. Additionally, we design a confidence-based policy to adaptively accept or verify draft tokens, which selectively decreases or increases the number of verification tokens of speculative decoding and achieves acceleration. Notably, under conservative verification, our approach preserves model accuracy and surpasses the decoding speed of the 4-bit quantized counterpart model. Under adaptive verification, our method significantly enhances decoding speed by 3.72x over state-of-the-art methods while maintaining nearly lossless accuracy.",
+        "canonical_id": "DOI:10.1145/3774904.3792218",
+        "doi": "10.1145/3774904.3792218",
+        "authors": [
+          "Peirong Zheng",
+          "Wenchao Xu",
+          "Haozhao Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3792593",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792593",
+        "title:dynamic experts synergy for multitask recommendation",
+        "url:https://www.semanticscholar.org/paper/523e276f9cd3a54fd00baad5cdc32028b4a13438"
+      ],
+      "record": {
+        "title": "Dynamic Experts Synergy for Multi-Task Recommendation",
+        "source_url": "https://www.semanticscholar.org/paper/523e276f9cd3a54fd00baad5cdc32028b4a13438",
+        "year": 2026,
+        "published": "2026-04-12",
+        "abstract": "Expert-sharing patterns have emerged as promising paradigms for multi-task learning (MTL) in recommender systems, enabling efficient resource allocation and dynamic modeling of diverse tasks. In this paper, we observe that high-gating (leader) and low-gating (auxiliary) experts play distinct roles in MTL: leader experts dominate task-specific predictions, while auxiliary experts, despite their lower gating scores, often contain complementary knowledge that can enhance model performance. However, critical challenges persist: how to effectively identify and utilize the knowledge of the leader and auxiliary experts in a synergistic manner? To address this, we propose a novel Dynamic Experts Synergy (DES) mechanism that integrates Entropy-driven Experts Classification (EEC) and Multi-view Knowledge Recycle (MVKR). EEC dynamically partitions experts into leader and auxiliary groups by analyzing task-specific prediction and gating entropy, enabling adaptive allocation aligned with real-time task difficulty. MVKR effectively revisits knowledge from auxiliary experts through utility, diversity, and task-relatedness perspectives, ensuring comprehensive knowledge utilization. Extensive experiments on five datasets demonstrate the superiority of our DES against state-of-the-art methods.",
+        "canonical_id": "DOI:10.1145/3774904.3792593",
+        "doi": "10.1145/3774904.3792593",
+        "authors": [
+          "Haotian Wu",
+          "Yingpeng Du",
+          "Zhu Sun",
+          "Jie Zhang",
+          "Puay Siew Tan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.29200",
+      "identity_tokens": [
+        "id:arXiv:2603.29200",
+        "title:improving ensemble forecasts of abnormally deflecting tropical cyclones with fused atmosphereoceanterrain data",
+        "url:https://www.semanticscholar.org/paper/f70ec3cbd2efc98196045204923da33288f77eb7"
+      ],
+      "record": {
+        "title": "Improving Ensemble Forecasts of Abnormally Deflecting Tropical Cyclones with Fused Atmosphere-Ocean-Terrain Data",
+        "source_url": "https://www.semanticscholar.org/paper/f70ec3cbd2efc98196045204923da33288f77eb7",
+        "year": 2026,
+        "published": "2026-03-31",
+        "abstract": "Deep learning-based tropical cyclone (TC) forecasting methods have demonstrated significant potential and application advantages, as they feature much lower computational cost and faster operation speed than numerical weather prediction models. However, existing deep learning methods still have key limitations: they can only process a single type of sequential trajectory data or homogeneous meteorological variables, and fail to achieve accurate forecasting of abnormal deflected TCs. To address these challenges, we present two groundbreaking contributions. First, we have constructed a multimodal and multi-source dataset named AOT-TCs for TC forecasting in the Northwest Pacific basin. As the first dataset of its kind, it innovatively integrates heterogeneous variables from the atmosphere, ocean, and land, thus obtaining a comprehensive and information-rich meteorological dataset. Second, based on the AOT-TCs dataset, we propose a forecasting model that can handle both normal and abnormally deflected TCs. This is the first TC forecasting model to adopt an explicit atmosphere-ocean-terrain coupling architecture, enabling it to effectively capture complex interactions across physical domains. Extensive experiments on all TC cases in the Northwest Pacific from 2017 to 2024 show that our model achieves state-of-the-art performance in TC forecasting: it not only significantly improves the forecasting accuracy of normal TCs but also breaks through the technical bottleneck in forecasting abnormally deflected TCs.",
+        "canonical_id": "arXiv:2603.29200",
+        "arxiv_id": "2603.29200",
+        "authors": [
+          "Qi-Xiang Li",
+          "Yuan Zhou",
+          "Shuwei Huo",
+          "Chong Wang",
+          "Xiao-Feng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.07006",
+      "identity_tokens": [
+        "id:arXiv:2603.07006",
+        "title:mozart modularized and efficient moe training on 35d waferscale chiplet architectures",
+        "url:https://www.semanticscholar.org/paper/ac5517798ce8de7892ee3f0b30647d00c26ff537"
+      ],
+      "record": {
+        "title": "Mozart: Modularized and Efficient MoE Training on 3.5D Wafer-Scale Chiplet Architectures",
+        "source_url": "https://www.semanticscholar.org/paper/ac5517798ce8de7892ee3f0b30647d00c26ff537",
+        "year": 2026,
+        "published": "2026-03-07",
+        "abstract": "Mixture-of-Experts (MoE) architecture offers enhanced efficiency for Large Language Models (LLMs) with modularized computation, yet its inherent sparsity poses significant hardware deployment challenges, including memory locality issues, communication overhead, and inefficient computing resource utilization. Inspired by the modular organization of the human brain, we propose Mozart, a novel algorithm-hardware co-design framework tailored for efficient training of MoE-based LLMs on 3.5D wafer-scale chiplet architectures. On the algorithm side, Mozart exploits the inherent modularity of chiplets and introduces: (1) an expert allocation strategy that enables efficient on-package all-to-all communication, and (2) a fine-grained scheduling mechanism that improves communication-computation overlap through streaming tokens and experts. On the architecture side, Mozart adaptively co-locates heterogeneous modules on specialized chiplets with a 2.5D NoP-Tree topology and hierarchical memory structure. Evaluation across three popular MoE models demonstrates significant efficiency gains, enabling more effective parallelization and resource utilization for large-scale modularized MoE-LLMs.",
+        "canonical_id": "arXiv:2603.07006",
+        "arxiv_id": "2603.07006",
+        "authors": [
+          "Shuqing Luo",
+          "Ye Han",
+          "Pingzhi Li",
+          "Jiayin Qin",
+          "Jie Peng",
+          "Yang Zhao",
+          "Yu Cao",
+          "Tianlong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/e28030355",
+      "identity_tokens": [
+        "id:DOI:10.3390/e28030355",
+        "title:ssadamoe spatiospectral adaptive mixture of experts with global structural priors for graph node classification",
+        "url:https://www.semanticscholar.org/paper/6502245061fe3eba9e06273bc728f1b2c7bdef28"
+      ],
+      "record": {
+        "title": "SS-AdaMoE: Spatio-Spectral Adaptive Mixture of Experts with Global Structural Priors for Graph Node Classification",
+        "source_url": "https://www.semanticscholar.org/paper/6502245061fe3eba9e06273bc728f1b2c7bdef28",
+        "year": 2026,
+        "published": "2026-03-01",
+        "abstract": "Graph Neural Networks (GNNs) have emerged as the standard for learning representations from graph-structured data. While traditional architectures relying on message-passing mechanisms excel in homophilic settings, they essentially function as fixed low-pass filters. However, this smoothing operation limits their ability to generalize to heterophilic graphs, where connected nodes often exhibit dissimilar labels and high-frequency signals are crucial for discrimination. Furthermore, existing Mixture-of-Experts (MoE) methods for graphs often suffer from local-view routing, failing to capture global structural context during expert selection. To address these challenges, this paper proposes SS-AdaMoE, a novel Spatio-Spectral Adaptive Mixture of Experts framework designed for robust node classification across diverse graph patterns. Specifically, a Dual-Domain Expert System is constructed, integrating heterogeneous spatial aggregators with learnable spectral filters based on Bernstein polynomials. This allows the model to adaptively capture arbitrary frequency responses—including high-pass and band-pass signals—which are overlooked by standard GNNs. To resolve the locality bias, a Hierarchical Global-Prior Gating Network augmented by a Linear Graph Transformer is introduced, ensuring that expert selection is guided by both local node features and global topological awareness. Extensive experiments are conducted on five benchmark datasets spanning both homophilic and heterophilic networks. The results demonstrate that SS-AdaMoE consistently outperforms baselines, achieving accuracy improvements of up to 2.65% on Chameleon and 1.41% on Roman-empire over the strongest MoE baseline, while surpassing traditional GCN architectures by margins exceeding 28% on heterophilic datasets such as Texas. These findings validate that the synergy of learnable spectral priors and global gating effectively bridges the gap between spatial aggregation and spectral filtering.",
+        "canonical_id": "DOI:10.3390/e28030355",
+        "doi": "10.3390/e28030355",
+        "authors": [
+          "Xilin Kang",
+          "Tianyu Yu",
+          "Letao Wang",
+          "Yutong Guo",
+          "Fengjun Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.21437",
+      "identity_tokens": [
+        "id:arXiv:2511.21437",
+        "title:a systematic study of inthewild model merging for large language models",
+        "url:https://www.semanticscholar.org/paper/91a41d8ffacfaf86428fa1ac963bf25d927bbd1a"
+      ],
+      "record": {
+        "title": "A Systematic Study of In-the-Wild Model Merging for Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/91a41d8ffacfaf86428fa1ac963bf25d927bbd1a",
+        "year": 2025,
+        "published": "2025-11-26",
+        "abstract": "Model merging combines multiple fine-tuned checkpoints into a single model without additional training, offering an attractive approach to reusing models and efficiently improving performance. However, it remains unclear whether the advantages reported for settings where all merged experts have distinct roles and are tuned on clearly separated tasks also hold in settings where the merged experts do not have clearly distinct roles, but are trained on overlapping or even conflicting objectives. To evaluate this setting, we present a large-scale, systematic evaluation of\"in-the-wild\"model merging of heterogeneous experts, that may have been trained on overlapping or conflicting objectives. Concretely, we evaluate six state-of-the-art merging methods, including recent subspace methods, across four open-weight LLMs, twelve fine-tuned checkpoints per base model, and sixteen standard LLM benchmarks. Evaluating through standardized benchmarks, we measure both the probability that a model merged from a heterogeneous set of experts outperforms the base model and we measure relative gains over the best individual checkpoint. Our results show that the oldest and simplest method, Task Arithmetic, is the only approach that reliably yields performance gains on LLMs in this\"in-the-wild\"setting. Other interference-aware and subspace merging methods typically do not result in notable improvements over the base model. Our findings indicate that current merging techniques mostly do not enable extracting useful weight updates from heterogeneous and potentially conflicting versions. This motivates the design of LLM-specific merging algorithms and merging-aware fine-tuning methods.",
+        "canonical_id": "arXiv:2511.21437",
+        "arxiv_id": "2511.21437",
+        "authors": [
+          "Oguz Kagan Hitit",
+          "Leander Girrbach",
+          "Zeynep Akata"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.19561",
+      "identity_tokens": [
+        "id:arXiv:2511.19561",
+        "title:merging without forgetting continual fusion of taskspecific models via optimal transport",
+        "url:https://www.semanticscholar.org/paper/bcde2bc31126f60a81a45fcd46cb2579a4a3f9cc"
+      ],
+      "record": {
+        "title": "Merging without Forgetting: Continual Fusion of Task-Specific Models via Optimal Transport",
+        "source_url": "https://www.semanticscholar.org/paper/bcde2bc31126f60a81a45fcd46cb2579a4a3f9cc",
+        "year": 2025,
+        "published": "2025-11-24",
+        "abstract": "Merging models fine-tuned for different tasks into a single unified model has become an increasingly important direction for building versatile, efficient multi-task systems. Existing approaches predominantly rely on parameter interpolation in weight space, which we show introduces significant distribution shift in the feature space and undermines task-specific knowledge. In this paper, we propose OTMF (Optimal Transport-based Masked Fusion), a novel model merging framework rooted in optimal transport theory to address the distribution shift that arises from naive parameter interpolation. Instead of directly aggregating features or weights, OTMF aligns the semantic geometry of task-specific models by discovering common masks applied to task vectors through optimal transport plans. These masks selectively extract transferable and task-agnostic components while preserving the unique structural identities of each task. To ensure scalability in real-world settings, OTMF further supports a continual fusion paradigm that incrementally integrates each new task vector without revisiting previous ones, maintaining a bounded memory footprint and enabling efficient fusion across a growing number of tasks. We conduct comprehensive experiments on multiple vision and language benchmarks, and results show that OTMF achieves state-of-the-art performance in terms of both accuracy and efficiency. These findings highlight the practical and theoretical value of our approach to model merging.",
+        "canonical_id": "arXiv:2511.19561",
+        "arxiv_id": "2511.19561",
+        "authors": [
+          "Zecheng Pan",
+          "Zhikang Chen",
+          "Ding Li",
+          "Min Zhang",
+          "Sen Cui",
+          "Hongshu Jin",
+          "Lu-Qi Tao",
+          "Yi Yang",
+          "De-Heng Ye",
+          "Yu Zhang",
+          "Ting-Ting Zhu",
+          "Tianling Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icast68191.2025.11300172",
+      "identity_tokens": [
+        "id:DOI:10.1109/icast68191.2025.11300172",
+        "title:attentionenhanced gating for mixture of expert llm",
+        "url:https://www.semanticscholar.org/paper/a4a8fc725cbc709e90516d4279aa025827a64fda"
+      ],
+      "record": {
+        "title": "Attention-enhanced Gating for Mixture of Expert LLM",
+        "source_url": "https://www.semanticscholar.org/paper/a4a8fc725cbc709e90516d4279aa025827a64fda",
+        "year": 2025,
+        "published": "2025-11-19",
+        "abstract": "Transformer-based MoE models have become mainstream in large language models (LLMs). The core design of the Transformer architecture is the attention mechanism that each input token will calculate the attention values with others. The Mixture of Experts (MoE)-based LLMs was proposed to replace the dense layer in the Transformer with a gate function and several sparsely activated small experts. This design saves the inference cost since only part of the experts are used. However, existing MoE works only use the data features as the input of the gate function; the importance information of attention value is ignored. In this paper, we propose an attention-enhanced mixture of experts (AMoE), a novel transformer-based MoE model. Specifically, we propose a new gate with an integrated attention mechanism, which improves the model’s performance. We conduct comprehensive experiments to support the effectiveness of our proposals.",
+        "canonical_id": "DOI:10.1109/iCAST68191.2025.11300172",
+        "doi": "10.1109/iCAST68191.2025.11300172",
+        "authors": [
+          "Na Gao",
+          "Boqian Fu",
+          "Xiu-Heng Liao",
+          "Ziang Wu",
+          "Tao Liu",
+          "Chunhua Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.16968",
+      "identity_tokens": [
+        "id:arXiv:2510.16968",
+        "title:leave it to the experts detecting knowledge distillation via moe expert signatures",
+        "url:https://www.semanticscholar.org/paper/25257d98c39c2f2bdfff76b473e8d685d5f661b6"
+      ],
+      "record": {
+        "title": "Leave It to the Experts: Detecting Knowledge Distillation via MoE Expert Signatures",
+        "source_url": "https://www.semanticscholar.org/paper/25257d98c39c2f2bdfff76b473e8d685d5f661b6",
+        "year": 2025,
+        "published": "2025-10-19",
+        "abstract": "Knowledge Distillation (KD) accelerates training of large language models (LLMs) but poses intellectual property protection and LLM diversity risks. Existing KD detection methods based on self-identity or output similarity can be easily evaded through prompt engineering. We present a KD detection framework effective in both white-box and black-box settings by exploiting an overlooked signal: the transfer of MoE\"structural habits\", especially internal routing patterns. Our approach analyzes how different experts specialize and collaborate across various inputs, creating distinctive fingerprints that persist through the distillation process. To extend beyond the white-box setup and MoE architectures, we further propose Shadow-MoE, a black-box method that constructs proxy MoE representations via auxiliary distillation to compare these patterns between arbitrary model pairs. We establish a comprehensive, reproducible benchmark that offers diverse distilled checkpoints and an extensible framework to facilitate future research. Extensive experiments demonstrate>94% detection accuracy across various scenarios and strong robustness to prompt-based evasion, outperforming existing baselines while highlighting the structural habits transfer in LLMs.",
+        "canonical_id": "arXiv:2510.16968",
+        "arxiv_id": "2510.16968",
+        "authors": [
+          "Pingzhi Li",
+          "Morris Yu-Chao Huang",
+          "Zhen Tan",
+          "Qingquan Song",
+          "Jie Peng",
+          "Kai Zou",
+          "Yu Cheng",
+          "Kaidi Xu",
+          "Tianlong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3763104",
+      "identity_tokens": [
+        "id:DOI:10.1145/3763104",
+        "title:abc towards a universal code styler through model merging",
+        "url:https://www.semanticscholar.org/paper/8475120d4afb6f1c7cf95f24362c4cf51cd207aa"
+      ],
+      "record": {
+        "title": "ABC: Towards a Universal Code Styler through Model Merging",
+        "source_url": "https://www.semanticscholar.org/paper/8475120d4afb6f1c7cf95f24362c4cf51cd207aa",
+        "year": 2025,
+        "published": "2025-10-09",
+        "abstract": "Code style transformation models built on code Language Models (code LMs) have achieved remarkable success. However, they typically focus on basis style transformations, where the target style follows a single criterion, and often struggle with combination styles, where the target style involves multiple criteria. In practice, style guides encompass multiple criteria, making the lack of effective combination style transformation a major limitation to their real-world applicability. In this paper, we propose Absent-Basis-Combination (abbreviated as ABC), a novel framework for code style transformation that significantly improves combination style transformation and overcomes the limitations of existing approaches. We implement four variants of ABC with parameter sizes of 0.5B, 1.3B, 1.5B, and 3B, demonstrating consistent superiority over existing approaches across all model sizes in both basis and combination style transformations. Specifically, ABC achieves performance gains of up to 86.70%, and remains superior even when baseline approaches use three times the parameters. Furthermore, to address the lack of high-quality datasets and evaluation metrics, we construct and release a new style transformation dataset, Basis & Combination Code Style (abbreviated as BCCStyle), and introduce Code Sequence, Syntactic, Semantic and Stylistic BLEU (abbreviated as CS4BLEU), a novel code similarity metric that surpasses existing metrics in accuracy and consistency.",
+        "canonical_id": "DOI:10.1145/3763104",
+        "doi": "10.1145/3763104",
+        "authors": [
+          "Yitong Chen",
+          "Zhiqiang Gao",
+          "Chuanqi Shi",
+          "Baixuan Li",
+          "Miao Gao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.25041",
+      "identity_tokens": [
+        "id:arXiv:2509.25041",
+        "title:gracemoe grouping and replication with localityaware routing for efficient distributed moe inference",
+        "url:https://www.semanticscholar.org/paper/1fbaabccef99f0ea1a26b21bdd2c53741ea22103"
+      ],
+      "record": {
+        "title": "GRACE-MoE: Grouping and Replication with Locality-Aware Routing for Efficient Distributed MoE Inference",
+        "source_url": "https://www.semanticscholar.org/paper/1fbaabccef99f0ea1a26b21bdd2c53741ea22103",
+        "year": 2025,
+        "published": "2025-09-29",
+        "abstract": "Sparse Mixture of Experts (SMoE) enables scalable parameter growth in large language models (LLMs) by selectively activating a subset of experts, and its large parameter count necessitates distributed deployment for inference. However, distributed inference faces a critical dilemma: although communication overhead constitutes the primary bottleneck, reducing it often exacerbates computational load imbalance, leading to resource waste. In this paper, we present GRACE-MoE, which stands for Grouping and Replication with Locality-Aware Routing for SMoE inference. GRACE-MoE is a lossless co-optimization framework that integrates expert grouping to reduce communication and dynamic replication to correct load skew, together with locality-aware routing to resolve replica selection. To underpin this coordinated optimization in multi-node settings, GRACE-MoE adopts a hierarchical sparse communication design that reduces cross-node traffic while implicitly aligning execution across nodes, thereby mitigating synchronization overhead. Experiments on diverse models and multi-node, multi-GPU environments demonstrate that GRACE-MoE efficiently reduces end-to-end inference latency, achieving up to 4.66x speedup over existing systems, and the code will be released upon acceptance.",
+        "canonical_id": "arXiv:2509.25041",
+        "arxiv_id": "2509.25041",
+        "authors": [
+          "Yu Han",
+          "Lehan Pan",
+          "Jie Peng",
+          "Ziyang Tao",
+          "Wuyang Zhang",
+          "Yanyong Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.19498",
+      "identity_tokens": [
+        "id:arXiv:2508.19498",
+        "title:uniform unifying knowledge from largescale and diverse pretrained models",
+        "url:https://www.semanticscholar.org/paper/d153d0bf57b584c0151c892862b04906f297a116"
+      ],
+      "record": {
+        "title": "UNIFORM: Unifying Knowledge from Large-scale and Diverse Pre-trained Models",
+        "source_url": "https://www.semanticscholar.org/paper/d153d0bf57b584c0151c892862b04906f297a116",
+        "year": 2025,
+        "published": "2025-08-27",
+        "abstract": "In the era of deep learning, the increasing number of pre-trained models available online presents a wealth of knowledge. These models, developed with diverse architectures and trained on varied datasets for different tasks, provide unique interpretations of the real world. Their collective consensus is likely universal and generalizable to unseen data. However, effectively harnessing this collective knowledge poses a fundamental challenge due to the heterogeneity of pre-trained models. Existing knowledge integration solutions typically rely on strong assumptions about training data distributions and network architectures, limiting them to learning only from specific types of models and resulting in data and/or inductive biases. In this work, we introduce a novel framework, namely UNIFORM, for knowledge transfer from a diverse set of off-the-shelf models into one student model without such constraints. Specifically, we propose a dedicated voting mechanism to capture the consensus of knowledge both at the logit level -- incorporating teacher models that are capable of predicting target classes of interest -- and at the feature level, utilizing visual representations learned on arbitrary label spaces. Extensive experiments demonstrate that UNIFORM effectively enhances unsupervised object recognition performance compared to strong knowledge transfer baselines. Notably, it exhibits remarkable scalability by benefiting from over one hundred teachers, while existing methods saturate at a much smaller scale.",
+        "canonical_id": "arXiv:2508.19498",
+        "arxiv_id": "2508.19498",
+        "authors": [
+          "Yimu Wang",
+          "Weiming Zhuang",
+          "Chen Chen",
+          "Jiabo Huang",
+          "Jingtao Li",
+          "Lingjuan Lyu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.19078",
+      "identity_tokens": [
+        "id:arXiv:2508.19078",
+        "title:federated finetuning of sparselyactivated large language models on resourceconstrained devices",
+        "url:https://www.semanticscholar.org/paper/7b6006bcb9c2507af0ec2c24d4ceaa24b9d87084"
+      ],
+      "record": {
+        "title": "Federated Fine-Tuning of Sparsely-Activated Large Language Models on Resource-Constrained Devices",
+        "source_url": "https://www.semanticscholar.org/paper/7b6006bcb9c2507af0ec2c24d4ceaa24b9d87084",
+        "year": 2025,
+        "published": "2025-08-26",
+        "abstract": "Federated fine-tuning of Mixture-of-Experts (MoE)-based large language models (LLMs) is challenging due to their massive computational requirements and the resource constraints of participants. Existing works attempt to fill this gap through model quantization, computation offloading, or expert pruning. However, they cannot achieve desired performance due to impractical system assumptions and a lack of consideration for MoE-specific characteristics. In this paper, we propose Flux, a system designed to enable federated fine-tuning of MoE-based LLMs across participants with constrained computing resources (e.g., consumer-grade GPUs), aiming to minimize time-to-accuracy. Flux introduces three key innovations: (1) quantization-based local profiling to estimate expert activation with minimal overhead, (2) adaptive layer-aware expert merging to reduce resource consumption while preserving accuracy, and (3) dynamic expert role assignment using an exploration-exploitation strategy to balance tuning and non-tuning experts. Extensive experiments on LLaMA-MoE and DeepSeek-MoE with multiple benchmark datasets demonstrate that Flux significantly outperforms existing methods, achieving up to 4.75× speedup in time-to-accuracy.",
+        "canonical_id": "arXiv:2508.19078",
+        "arxiv_id": "2508.19078",
+        "authors": [
+          "Fahao Chen",
+          "Jie Wan",
+          "Peng Li",
+          "Zhou Su",
+          "Dongxiao Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.09208",
+      "identity_tokens": [
+        "id:arXiv:2508.09208",
+        "title:comoe collaborative optimization of expert aggregation and offloading for moebased llms at edge",
+        "url:https://www.semanticscholar.org/paper/21bfcab57074e54c3d2e691a27dc4c0ea28564d9"
+      ],
+      "record": {
+        "title": "CoMoE: Collaborative Optimization of Expert Aggregation and Offloading for MoE-based LLMs at Edge",
+        "source_url": "https://www.semanticscholar.org/paper/21bfcab57074e54c3d2e691a27dc4c0ea28564d9",
+        "year": 2025,
+        "published": "2025-08-10",
+        "abstract": "The proliferation of large language models (LLMs) has driven the adoption of Mixture-of-Experts (MoE) architectures as a promising solution to scale model capacity while controlling computational costs. However, deploying MoE models in resource-constrained mobile edge computing environments presents significant challenges due to their large memory footprint and dynamic expert activation patterns. To address these challenges, we propose a novel dynamic resource-aware collaborative optimization framework that jointly optimizes expert aggregation granularity and offloading strategies based on real-time device resource states, network conditions, and input characteristics in mobile edge environments, denoted as CoMoE. In CoMoE, we first systematically analyze existing expert aggregation techniques, including expert parameter merging,knowledge distillation,and parameter sharing decomposition, identifying their limitations in dynamic mobile environments.We then investigate expert offloading strategies encompassing expert prediction and prefetching, expert caching and scheduling, and multi-tier storage architectures, revealing the interdependencies between routing decisions and offloading performance.The CoMoE incorporates adaptive scheduling mechanisms that respond to user mobility and varying network conditions, enabling efficient MoE deployment across heterogeneous edge devices. Extensive experiments on real mobile edge testbeds demonstrate that CoMoE achieves approximately 70% reduction in memory usage compared to baseline methods, 10.5% lower inference latency than existing expert offloading techniques, while maintaining model performance stability. For large-scale MoE models (e.g,7.4B-parameter Switch-Base-128), the CoMoE reduces memory requirements from 15.6GB to 4.7GB, enabling deployment on resource-constrained mobile edge devices that previously could only support much smaller models.",
+        "canonical_id": "arXiv:2508.09208",
+        "arxiv_id": "2508.09208",
+        "authors": [
+          "Muqing Li",
+          "Ning Li",
+          "Xin Yuan",
+          "Wenchao Xu",
+          "Quan Chen",
+          "Song Guo",
+          "Hai-Jun Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.05038",
+      "identity_tokens": [
+        "id:arXiv:2508.05038",
+        "title:hamobe hierarchical and adaptive mixture of biometric experts for videobased person reid",
+        "url:https://www.semanticscholar.org/paper/dba09b55e80ec9717d739ea046972c7702421e2d"
+      ],
+      "record": {
+        "title": "HAMoBE: Hierarchical and Adaptive Mixture of Biometric Experts for Video-Based Person ReID",
+        "source_url": "https://www.semanticscholar.org/paper/dba09b55e80ec9717d739ea046972c7702421e2d",
+        "year": 2025,
+        "published": "2025-08-07",
+        "abstract": "Recently, research interest in person re-identification (ReID) has increasingly focused on video-based scenarios, essential for robust surveillance and security in varied and dynamic environments. However, existing videobased ReID methods often overlook the necessity of identifying and selecting the most discriminative features from both videos in a query-gallery pair for effective matching. To address this issue, we propose a novel Hierarchical and Adaptive Mixture of Biometric Experts (HAMoBE) framework, which leverages multi-layer features from a pretrained large model (e.g., CLIP) and is designed to mimic human perceptual mechanisms by independently modeling key biometric features—appearance, static body shape, and dynamic gait—and adaptively integrating them. Specifically, HAMoBE includes two levels: the first level extracts low-level features from multi-layer representations provided by the frozen large model, while the second level consists of specialized experts focusing on long-term, shortterm, and temporal features. To ensure robust matching, we introduce a new dual-input decision gating network that dynamically adjusts the contributions of each expert based on their relevance to the input scenarios. Extensive evaluations on benchmarks like MEVID demonstrate that our approach yields significant performance improvements (e.g., $+13.0 \\%$ Rank1).",
+        "canonical_id": "arXiv:2508.05038",
+        "arxiv_id": "2508.05038",
+        "authors": [
+          "Yiyang Su",
+          "Yunping Shi",
+          "Feng Liu",
+          "Xiaoming Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.02322",
+      "identity_tokens": [
+        "id:arXiv:2508.02322",
+        "title:camera multimatrix joint compression for moe models via microexpert redundancy analysis",
+        "url:https://www.semanticscholar.org/paper/33889991c500cb9f548e6313b1897f4fb72d3445"
+      ],
+      "record": {
+        "title": "CAMERA: Multi-Matrix Joint Compression for MoE Models via Micro-Expert Redundancy Analysis",
+        "source_url": "https://www.semanticscholar.org/paper/33889991c500cb9f548e6313b1897f4fb72d3445",
+        "year": 2025,
+        "published": "2025-08-04",
+        "abstract": "Large Language Models (LLMs) with Mixture-of-Experts (MoE) architectures are distinguished by their strong performance scaling with increasing parameters across a wide range of tasks, yet they also suffer from substantial computational and storage overheads. Notably, the performance gains of MoE models do not scale proportionally with the growth in expert parameters. While prior works attempt to reduce parameters via expert-level pruning, merging, or decomposition, they still suffer from challenges in both performance and computational efficiency. In this paper, we address these challenges by introducing micro-expert as a finer-grained compression unit that spans across matrices. We first establish a more fundamental perspective, viewing MoE layers as mixtures of micro-experts, and present CAMERA, a lightweight and training-free framework for identifying micro-expert redundancy. Our analysis uncovers significant variance in micro-expert contributions during decoding. Based on this insight, we further propose CAMERA-P, a structured micro-expert pruning framework, and CAMERA-Q, a mixed-precision quantization idea designed for micro-experts. Extensive experiments on nine downstream tasks show that CAMERA-P consistently outperforms strong baselines under pruning ratios ranging from 20% to 60%. Furthermore, CAMERA-Q achieves superior results under aggressive 2-bit quantization, surpassing existing matrix- and channel-level ideas. Notably, our method enables complete micro-expert analysis of Qwen2-57B-A14B in less than 5 minutes on a single NVIDIA A100-40GB GPU.",
+        "canonical_id": "arXiv:2508.02322",
+        "arxiv_id": "2508.02322",
+        "authors": [
+          "Yuzhuang Xu",
+          "Xu Han",
+          "Yuanchi Zhang",
+          "Yixuan Wang",
+          "Yijun Liu",
+          "Shiyu Ji",
+          "Qingfu Zhu",
+          "Wanxiang Che"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.01784",
+      "identity_tokens": [
+        "id:arXiv:2508.01784",
+        "title:routemark a fingerprint for intellectual property attribution in routingbased model merging",
+        "url:https://www.semanticscholar.org/paper/933798c96842593b4974d02fec2133e271f54f50"
+      ],
+      "record": {
+        "title": "RouteMark: A Fingerprint for Intellectual Property Attribution in Routing-based Model Merging",
+        "source_url": "https://www.semanticscholar.org/paper/933798c96842593b4974d02fec2133e271f54f50",
+        "year": 2025,
+        "published": "2025-08-03",
+        "abstract": "Model merging via Mixture-of-Experts (MoE) has emerged as a scalable solution for consolidating multiple task-specific models into a unified sparse architecture, where each expert is derived from a model fine-tuned on a distinct task. While effective for multi-task integration, this paradigm introduces a critical yet underexplored challenge: how to attribute and protect the intellectual property (IP) of individual experts after merging. We propose RouteMark, a framework for IP protection in merged MoE models through the design of expert routing fingerprints. Our key insight is that task-specific experts exhibit stable and distinctive routing behaviors under probing inputs. To capture these patterns, we construct expert-level fingerprints using two complementary statistics: the Routing Score Fingerprint (RSF), quantifying the intensity of expert activation, and the Routing Preference Fingerprint (RPF), characterizing the input distribution that preferentially activates each expert. These fingerprints are reproducible, task-discriminative, and lightweight to construct. For attribution and tampering detection, we introduce a similarity-based matching algorithm that compares expert fingerprints between a suspect and a reference (victim) model. Extensive experiments across diverse tasks and CLIP-based MoE architectures show that RouteMark consistently yields high similarity for reused experts and clear separation from unrelated ones. Moreover, it remains robust against both structural tampering (expert replacement, addition, deletion) and parametric tampering (fine-tuning, pruning, permutation), outperforming weight- and activation-based baseliness. Our work lays the foundation for RouteMark as a practical and broadly applicable framework for IP verification in MoE-based model merging.",
+        "canonical_id": "arXiv:2508.01784",
+        "arxiv_id": "2508.01784",
+        "authors": [
+          "Xin He",
+          "Jun Shen",
+          "Zhenheng Tang",
+          "Xiaowen Chu",
+          "Bo Li",
+          "I. Tsang",
+          "Y. Ong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cvpr52734.2025.01335",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvpr52734.2025.01335",
+        "title:emoe modalityspecific enhanced dynamic emotion experts",
+        "url:https://www.semanticscholar.org/paper/cffd9bf8c9287c9b8da196623a1152255309082f"
+      ],
+      "record": {
+        "title": "EMOE: Modality-Specific Enhanced Dynamic Emotion Experts",
+        "source_url": "https://www.semanticscholar.org/paper/cffd9bf8c9287c9b8da196623a1152255309082f",
+        "year": 2025,
+        "published": "2025-06-10",
+        "abstract": "Multimodal Emotion Recognition (MER) aims to predict human emotions by leveraging multiple modalities, such as vision, acoustics, and language. However, due to the heterogeneity of these modalities, MER faces two key challenges: modality balance dilemma and modality specialization disappearance. Existing methods often overlook the varying importance of modalities across samples in tackling the modality balance dilemma. Moreover, mainstream decoupling methods, while preserving modality-specific information, often neglect the predictive capability of unimodal data. To address these, we propose a novel model, Modality-Specific Enhanced Dynamic Emotion Experts (EMOE), consisting of: (1) Mixture of Modality Experts for dynamically adjusting modality importance based on sample features, and (2) Unimodal Distillation to retain single-modality predictive ability within fused features. EMOE enables adaptive fusion by learning a unique modality weight distribution for each sample, enhancing multi-modal predictions with single-modality predictions to balance invariant and specific features in emotion recognition. Experimental results on benchmark datasets show that EMOE achieves superior or comparable performance to state-of-the-art methods. Additionally, we extend EMOE to Multimodal Intent Recognition (MIR), further demonstrating its effectiveness and versatility.",
+        "canonical_id": "DOI:10.1109/CVPR52734.2025.01335",
+        "doi": "10.1109/CVPR52734.2025.01335",
+        "authors": [
+          "Yiyang Fang",
+          "Wenke Huang",
+          "Guancheng Wan",
+          "Kehua Su",
+          "Mang Ye"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:90420d35f1e31fbfb19ae34a2c58e0d006cfe5a643a3cab3ff4a73519a5b21ae",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

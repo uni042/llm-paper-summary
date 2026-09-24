@@ -1,0 +1,880 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260924T020210JST-scheduled-chat-00-forward-r4",
+  "collector_id": "direct-20260924T020210JST-scheduled-chat-00-forward-r4",
+  "run_key": "20260924T020210JST-scheduled-chat-00",
+  "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "120",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ee98a9e857ba21b1eb6ad1d95d2d61afb4f3d449",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T17:13:22.559739+00:00",
+  "preload_id": "preload-f8053c479a493debc96d",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-f8053c479a493debc96d",
+  "results": [
+    {
+      "title": "HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads",
+      "source_url": "https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568",
+      "year": 2026,
+      "published": "2026-08-19",
+      "abstract": "Hybrid Transformer-Mamba large language models (LLMs) enhance long-context efficiency, but their heterogeneous computation and communication patterns complicate efficient hardware acceleration. Chiplet-based architectures offer a scalable solution by integrating specialized compute and memory units. However, the design space spanning static architectural configurations and dynamic runtime policies is prohibitively large to explore exhaustively. To address this challenge, we present HYDRA, a comprehensive design space exploration framework for hybrid LLM serving on heterogeneous chiplet systems. HYDRA jointly explores chiplet composition, placement, inter-chiplet bandwidth provisioning, dynamic batching, and runtime scheduling. It integrates communication-aware placement, dynamic batching, elastic task scheduling, and a fast Markov-based performance estimator that captures multi-tenant runtime dynamics for efficient and accurate exploration. Across all workloads, HYDRA delivers 1.55x the throughput and 43.7 percent lower time-to-first-token on average, with throughput gains reaching up to 2.3x compared to state-of-the-art baselines. These results highlight that co-designing architecture and runtime policies is critical for efficient large-scale LLM serving on heterogeneous chiplet systems.",
+      "canonical_id": "arXiv:2608.19395",
+      "arxiv_id": "2608.19395",
+      "authors": [
+        "Jiahao Lin",
+        "Alish Kanani",
+        "Sang-Won Lee",
+        "Jaehyun Park",
+        "U. Ogras"
+      ]
+    },
+    {
+      "title": "Decomposition Attacks Across Unlinkable Identities: Limits of Stateful Defenses for LLM Services",
+      "source_url": "https://www.semanticscholar.org/paper/bb1ba75a29e01b0f0f8c42a38bf948d04afd207e",
+      "year": 2026,
+      "published": "2026-08-18",
+      "abstract": "Most large language model services use stateless defenses, which judge only the current request, to refuse harmful tasks. Decomposition attacks exploit this limitation by splitting a harmful task into individually permissible requests and combining their answers. Defending against them therefore requires a stateful monitor that considers requests together. If it can group all requests for one attacker task, it can stop the attack. However, attackers can use unlinkable identities and combine answers elsewhere, leaving no reliable grouping signal. We ask whether decomposition attacks can still be stopped under this setting. For a fixed attack strategy without retries, we prove that the achievable security and utility tradeoff depends entirely on how benign requests for the same capabilities are grouped. Persistent, recognizable groups permit a useful defense; fresh, indistinguishable groups do not. When attackers can retry and learn from Allow/Block decisions, this useful operating point disappears: the feedback reveals what passes but not whether a block was correct. Experiments on 91 executable tasks and 11,393 capability-matched benign requests support these results. Under a 1% denial cap for these requests and a 0.5% cap for unrelated background traffic, all ten tested policies, including one privileged policy with an exact request-to-operation map, either fail to stop attacks or exceed the budget. On defense-unseen task families, attack success is at least 99% after one attempt and 100% after two. Effective defenses therefore require additional evidence or mechanisms tied to grouping, such as reliable identity linkage, costs for fresh identities, or control over answer use.",
+      "canonical_id": "arXiv:2608.17445",
+      "arxiv_id": "2608.17445",
+      "authors": [
+        "Bowen Sun",
+        "Zhengyue Zhao",
+        "Xiaogeng Liu",
+        "Yinzhi Cao",
+        "Chaowei Xiao"
+      ]
+    },
+    {
+      "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/713681b5ad435a87d94c6eb057a4b06f97a99c22",
+      "year": 2026,
+      "published": "2026-08-17",
+      "abstract": "Disaggregated LLM inference separates the prefill and decode phases across GPU pools, generating massive KV-cache transfers. Because these transfers last hundreds of milliseconds to seconds, they behave as mega elephant flows that dominate link bandwidth utilization. In this regime, stateless ECMP can perform poorly: hash collisions may overload one spine link while leaving others idle, stretching transfer times by seconds. Yet this same persistence makes coordination practical. Since these flows are long-lived, even lightweight one-to-all coordination can be amortized over their lifetime. We present ARK, a distributed elephant-flow path reservation mechanism. ARK coordinates senders to choose source ports whose hashes map concurrent flows onto distinct spines, without requiring switch changes or receiver-side packet reordering. Packet-level RDMA simulations show that ARK reduces mean and P95 FCT by up to 27.3% and 34.0% under moderate load, and further reduces mean TTFT by up to 12.9%.",
+      "canonical_id": "DOI:10.1145/3789240.3828750",
+      "doi": "10.1145/3789240.3828750",
+      "authors": [
+        "Hung-Chun Lin",
+        "Ting-Wei Hsu",
+        "Chung-En Ho",
+        "Ahmed Saeed"
+      ]
+    },
+    {
+      "title": "xSwitch: An Adaptive O-E-integrated Interconnect for Scale-up Networks",
+      "source_url": "https://www.semanticscholar.org/paper/72793bbef1981965995e0db01b6bf5eceddb44f3",
+      "year": 2026,
+      "published": "2026-08-17",
+      "abstract": "To adapt to the intensive, bursty, and latency-constrained traffic from large language model (LLM) training and inference, scale-up networks are now facing tremendous challenges. Existing electrical packet switching (EPS) fabrics provide packet-level flexibility at the cost of high power consumption and long latency. Introducing optical circuit switching (OCS) in scale-up networks offers direct optical connections that can effectively reduce power consumption and latency, but OCS lacks the packet-level flexibility required by LLM inference (especially for mixture-of-experts (MoE) inference). To address these dilemmas, this work presents xSwitch, an optical-electrical-integrated (O-E-integrated) interconnect for scale-up networks, and demonstrates its effectiveness experimentally. Unlike the traditional hybrid-optical-electrical interconnects that usually place EPS and OCS in parallel, xSwitch integrates one port-count-reduced (defined by the O/E port ratio) EPS layer (ESL) on top of an OCS layer (OSL). Then, OSL can establish optical connections for xPU pairs with stable and intensive traffic demands, while bypassing the ESL for energy and latency reduction, and the dynamic and unpredictable traffic between xPUs can be provisioned by letting OSL forward it to the ESL. We prototype xSwitch with off-the-shelf components, validate its effectiveness with real-world MoE inference tasks, and also confirm its scalability with large-scale simulations. Our results indicate that for MoE inference workloads, xSwitch with a 2:1 O/E port ratio limits the average gaps to the full-EPS baseline to 1.96% in TTFT and 0.59% in TPOT.",
+      "canonical_id": "DOI:10.1145/3789240.3822607",
+      "doi": "10.1145/3789240.3822607",
+      "authors": [
+        "Wei-Chi Wu",
+        "Xuanmiao Mu",
+        "Xiao-Liang Chen",
+        "Bin-Jun Tang",
+        "Xingming Cui",
+        "Yuxuan Dou",
+        "Zu-Qing Zhu"
+      ]
+    },
+    {
+      "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+      "source_url": "https://www.semanticscholar.org/paper/5e242025eb9b1fec5a9cbaa2354ec9a9205d4fe0",
+      "year": 2026,
+      "published": "2026-08-14",
+      "abstract": "Vision-language models (VLMs) enable embodied agents to reason and act from visual observations and language instructions. Reinforcement learning (RL) post-training enhances these capabilities using task feedback, but current on-policy RL runtimes execute rollout, reference scoring, and actor training in strict serial phases. While effective for text-only RL, this phase-granular execution is wasteful for VLMs, where processing dense video inputs and prompt prefixes occupies a large fraction of each phase. Because prefix processing is independent of the generated response, it can be run alongside rollout decoding, which leaves GPU compute capacity underutilized, without breaking synchronous on-policy semantics. We present Rollplex, a runtime that decomposes the reference and training phase and moves the prefix computation into the rollout decode window. Realizing this schedule requires more than concurrent kernel launches: naive colocation of Qwen2.5-VL-32\\,B requires roughly 165\\,GiB per GPU, while rollout and training prefer different tensor-parallel (TP) degrees and weight layouts. Rollplex addresses these constraints with two mechanisms. Phase-aware memory management controls HBM residency according to producer--consumer lifetimes. Parallelism-aware weight sharing uses the same physical storage for layout-compatible tensors across distinct TP degrees and reconstructs only incompatible tensors, avoiding a complete second actor copy. On 32 H800 GPUs, Rollplex achieves $1.23\\times$--$1.30\\times$ speedup over serial colocation and $1.57\\times$--$2.24\\times$ over disaggregation under the same GPU budget, while preserving the synchronous RL update.",
+      "canonical_id": "arXiv:2608.14498",
+      "arxiv_id": "2608.14498",
+      "authors": [
+        "Hanfeng Lu",
+        "Tianyu Feng",
+        "Suyi Li",
+        "Yuheng Zhao",
+        "Wei Gao",
+        "Shaopan Xiong",
+        "Ju Huang",
+        "Si-Ran Yang",
+        "Jiamang Wang",
+        "Lin Qu",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling",
+      "source_url": "https://www.semanticscholar.org/paper/a33eef9ca01b2a09a30a488bacb39167015ac5d6",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Reinforcement learning (RL) for large language models is moving toward multi-turn agentic workloads, where rollout tasks repeatedly pause for external environments, resume with growing contexts, and finish at highly variable times. In this setting, RL training goodput, measured by training throughput, matters more than raw GPU occupancy: GPU waiting and repeated prefill recomputation are pure overhead. We present TideRL, a readiness-aware elastic RL system with Continuous Task Batching, Resource-Aware Ref-Actor Pipelining, and Elastic Resource Scaling. CTB preserves useful rollout state, $\\textrm{RA}^2\\textrm{P}$ selects between decoupled streaming and colocated aggregation from the ready backlog and arrival interval, and ERS moves ranks between rollout and training using the same readiness signals. Across text-only and multi-modal agentic workloads, TideRL improves RL training goodput by up to 5.6$\\times$ over synchronous baselines and over 33% over asynchronous baselines, while reaching similar task performance. It also improves KV cache hit rate by 1.58$\\times$, reduces per-step training time by up to 44.3%, and cuts total waiting time by up to 77.6%.",
+      "canonical_id": "arXiv:2608.10402",
+      "arxiv_id": "2608.10402",
+      "authors": [
+        "Yanyu Ren",
+        "Xizheng Wang",
+        "Xiao Liu",
+        "Bowen Lv",
+        "Hanchen Zhang",
+        "Shudan Zhang",
+        "Hanyu Lai",
+        "Shuai Wang",
+        "Li Chen",
+        "Dan Li",
+        "Jie Tang"
+      ]
+    },
+    {
+      "title": "ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover",
+      "source_url": "https://www.semanticscholar.org/paper/097f17d8a67c3e8eddcf5c37806f54426da54402",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Edge LLMs must preserve inference continuity when a user hands over between edge nodes, requiring key-value (KV) cache transfer to the target node. However, simultaneous handovers saturate the backhaul, preventing full cache delivery within the mobility-imposed transfer window. Rather than allocating bandwidth as if all cache entries were equally valuable, we order each user's KV cache by importance and transmit only its most informative fraction, turning token-level sparsity into communication savings. We cast the transfer as a multi-user backhaul allocation problem that maximizes average accuracy across users. Each user's partial-cache accuracy serves as its utility: a sigmoid that fits measurements on the RULER benchmark with $R^2>0.99$ across models and context lengths. Because importance ordering front-loads the high-value entries, the concave region of the accuracy curve spans nearly the entire cache. Our proposed allocator keeps served users within this region, making each per-slot allocation problem convex. The optimum is derived via a closed-form weighted water-filling solution that generalizes information-theoretic water-filling and enables online scheduling. The proposed allocator attains over 93.7% average accuracy in a 500ms transfer window, within 0.5pp of the full-cache ceiling, and reaches 98.2-99.5% of a clairvoyant upper bound.",
+      "canonical_id": "arXiv:2608.10545",
+      "arxiv_id": "2608.10545",
+      "authors": [
+        "Minwoo Kim",
+        "Soochang Song",
+        "Namyoon Lee",
+        "B. Jung",
+        "Yongjune Kim"
+      ]
+    },
+    {
+      "title": "Draco-SLB: Supporting High-performance RDMA under Server Load Balancers for LLM",
+      "source_url": "https://www.semanticscholar.org/paper/2dd56e9b7b98a508c02771b15968f99c38c86f1f",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "To sustain the exponential growth of AI, large-scale multi-node LLM services are increasingly deployed behind Server Load Balancers (SLBs). While these services heavily rely on Remote Direct Memory Access (RDMA) for high-performance communication, natively integrating RDMA with standard SLB architectures introduces severe incompatibilities, such as centralized node bottlenecks, scheduling inconsistencies, and performance degradation during long-distance RDMA transmission. Hence, we propose Draco-SLB, a novel endpoint-side transport shim layer. Draco-SLB transparently shields underlying RDMA execution from network-side complexities, including SLBs and intermediate network middleboxes.",
+      "canonical_id": "DOI:10.1145/3789240.3830297",
+      "doi": "10.1145/3789240.3830297",
+      "authors": [
+        "Yi-Ning Qi",
+        "Yilong Lyu",
+        "Ye Yang",
+        "Junnan Cai",
+        "Hao-Xiang Pan",
+        "Peng Cheng",
+        "Jiming Chen",
+        "Zikang Chen",
+        "Zhigang Zong"
+      ]
+    },
+    {
+      "title": "GPU-Centric Stateless LLM Serving With GIGANETS",
+      "source_url": "https://www.semanticscholar.org/paper/1a5dab49a68651ccea87ccfefd39098a6cb41ba2",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Giganetes is a GPU-centric architecture for stateless LLM serving that externalizes KV caches to a disaggregated remote memory pool via GPUDirect RDMA. By treating remote memory as a GPU-addressable tier via GPUDirect RDMA, Giganetes eliminates session affinity constraints: any GPU can serve any request, enabling near-linear horizontal scaling in a Kubernetes-native deployment. A Scatter/Gather I/O interface bypasses the CPU and host memory entirely, achieving 52.4 GB/s application-level read throughput on our 4×200 Gbps RDMA testbed. A session-level metadata abstraction and proactive readahead mechanism reduce GPU bubbles by overlapping remote KV fetches with prefill computation and scheduling slack. On a 4-node H800 cluster, Giganetes delivers 33% higher throughput (QPS 2.4 vs. 1.8) and 1.75× lower P95 TPOT than PD-disaggregation with sticky sessions, with the gain driven by scheduling flexibility rather than faster transport alone.",
+      "canonical_id": "DOI:10.1145/3789240.3828738",
+      "doi": "10.1145/3789240.3828738",
+      "authors": [
+        "Xiaoliang Wang",
+        "Zhen-Wei Pi",
+        "Rui Zhang",
+        "Cam-Tu Nguyen"
+      ]
+    },
+    {
+      "title": "Connex: Endpoint Mobility Primitives for Dynamic LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/62e73cfa625d3c2676abec0b1e9779cb9f11e77f",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Modern LLM serving systems increasingly adopt elastic inference pipelines where stages frequently join, leave, and migrate across nodes. However, existing GPU communication frameworks like NCCL assume static topologies, causing routing failures and P99 latency spikes during worker transitions that violate sub-millisecond tail latency requirements. We present Connex, a communication system that elevates endpoint mobility from exceptional failure to first-class primitive. Rather than optimizing individual mechanisms in isolation, Connex defines a mobility contract that the communication layer enforces whenever workers join, leave, or migrate while token streams, activations, or KV transfers are in flight. The contract is realized through three cooperating mechanisms: (1) epoch-based routing that bounds staleness without global coordination, (2) explicit handover protocols that preserve stream ordering and provide exactly-once delivery across migrations, and (3) credit-based backpressure with traffic-class isolation that prevents churn-induced interference with latency-critical paths. Evaluation on a 5-node GPU cluster under synthetic and production-derived churn shows that Connex reduces P99 tail spikes by up to 85% compared to NCCL-based baselines, achieves sub-second cutover, and maintains 100% goodput at moderate loads where baselines collapse to 0–28%, while incurring less than 5% steady-state overhead.",
+      "canonical_id": "DOI:10.1145/3789240.3829200",
+      "doi": "10.1145/3789240.3829200",
+      "authors": [
+        "Yanying Lin",
+        "Vincent Liu",
+        "Tao Luo",
+        "Chengzhong Xu",
+        "Ke-Jiang Ye"
+      ]
+    },
+    {
+      "title": "Split-Gate Pooled-Evidence Stochastic-Rollout Scheduling for Timely Progressive Edge Inference",
+      "source_url": "https://www.semanticscholar.org/paper/98a61eb7d9f6e0bf81e10f188991d78553ccd4e2",
+      "year": 2026,
+      "published": "2026-08-08",
+      "abstract": "This paper investigates causal radio scheduling for progressive edge inference, with the goal of maximizing timely inference throughput under job-specific deadlines. Specifically, a multi-tenant system is modeled in which each job alternates between wireless transmission and graphics processing unit (GPU) computation. The model captures time-varying uplink service, inter-stage precedence, variant-aware batching, non-preemptive execution on two GPU streams, and heterogeneous deadlines. To account for delayed radio-GPU coupling, a split-gate pooled-evidence stochastic-rollout (SGPE-SR) scheduler is proposed. Candidate and fallback policies are selected on one set of sampled futures, after which admission is evaluated on an independent held-out set; common random numbers are retained within each held-out candidate-fallback comparison. The override is executed only when its pooled nominal/recent-history held-out advantage is sufficiently positive and an independent recent-history replication statistic is nonnegative. System-level simulations using measured GPU profiles and paired random instances show that, in a prespecified long-horizon evaluation over 30 previously unused seeds and 3,379 offered jobs, SGPE-SR improves timely completions over the strongest rate-based baseline by 4.27%, with a mean paired gain of 3.00 jobs per run and a 95% bootstrap interval of [1.60, 4.43].",
+      "canonical_id": "arXiv:2608.08338",
+      "arxiv_id": "2608.08338",
+      "authors": [
+        "Sai Xu",
+        "Yin-Bo Yu",
+        "Yanan Du",
+        "Xusheng Zhu",
+        "Gaojie Chen"
+      ]
+    },
+    {
+      "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
+      "source_url": "https://www.semanticscholar.org/paper/87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a",
+      "year": 2026,
+      "published": "2026-08-06",
+      "abstract": "Large Language Models (LLMs) such as ChatGPT and Claude are widely used for information retrieval and problem-solving. Recent work has focused on improving scheduling algorithms to boost throughput while maintaining low latency. However, these approaches often assume Poisson request arrivals with constant rates - an assumption that fails to reflect the inherently bursty and dynamic nature of real-world traffic. We propose a lightweight extension to the state-of-the-art WAIT algorithm [1], which adapts to time-varying arrival rates without prior traffic knowledge. The proposed algorithm performs online estimation of request intensity based on observed interarrival times. Using Markov Modulated Poisson Process (MMPP)-based synthetic workloads with diverse request types, we conduct a simulation-based evaluation demonstrating that the proposed method achieves higher throughput than Sarathi-Serve [2], ORCA [3], and vLLM [4] in the evaluated low arrival-rate shift scenarios while maintaining comparable latency.",
+      "canonical_id": "arXiv:2608.06135",
+      "arxiv_id": "2608.06135",
+      "authors": [
+        "Anjali Gangadhar Katageria",
+        "S. Rani",
+        "R. Sengupta"
+      ]
+    },
+    {
+      "title": "RAG on the Decentralized Web: An Empirical Study of Akash and Golem",
+      "source_url": "https://www.semanticscholar.org/paper/e99b2b7b5cb0dd34741f40f8e5bc9d7cda63ec44",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "Decentralized compute markets claim to be an alternative to the cloud, yet the systems community lacks hard evidence on whether they can run modern workloads end to end. We put this claim to the test by deploying a Retrieval-Augmented Generation (RAG) pipeline on the Akash and Golem networks, two popular decentralized computing markets. Our analysis reveals a striking paradox: supply is abundant, with over 10,000 CPU cores and 50 TiB of memory available, yet utilization remains minimal (about 0.3% on Akash). When mapped carefully, several RAG pipeline stages execute correctly and up to 3 × cheaper than AWS; others degrade under node churn and network bottlenecks. We also observe that decentralization in practice is already hybrid, with centralized gateways and offchain services masking blockchain complexity. Taken together, our findings suggest that decentralized markets are neither hype nor drop-in cloud replacements, but an underutilized substrate whose viability depends on better scheduling, reliability mechanisms, and trust primitives.",
+      "canonical_id": "DOI:10.1145/3820441.3820466",
+      "doi": "10.1145/3820441.3820466",
+      "authors": [
+        "Suting Chen",
+        "Matteo Varvello",
+        "Aleksandar Kuzmanovic",
+        "Yunming Xiao"
+      ]
+    },
+    {
+      "title": "Towards Efficient Serving of Network-intensive LLM Inferences",
+      "source_url": "https://www.semanticscholar.org/paper/1b82afcafc66c2a308f90cf45a289886152c0753",
+      "year": 2026,
+      "published": "2026-08-05",
+      "abstract": "Prefix caching has become a key technique for LLM serving, and nowadays the reusable KVCache contents are often hosted on distributed servers. For long-context LLM inferences with high cache hit ratio, cross-server KVCache transmission has become an emerging performance bottleneck; such network-intensive LLM inferences are increasingly prevalent in the coming era of agentic AI. However, existing LLM inference engines are essentially compute-centric; we find that they are highly inefficient when serving such workloads due to compute-stage service blocking and ignorance of KVCache-transfer cost. To efficiently serve network-intensive LLM inferences, in this paper, we design Sanic, an optimized LLM engine that treats KVCache transmission as a first-class citizen. Viewing KVCache loading and computation as equally-significant stages, Sanic decouples their service control and allows each stage to progress autonomously in an asynchronous manner, thereby improving the overall resource utilization. Moreover, when scheduling competing LLM inferences, Sanic treats the KVCache loading delay as an independent factor in service cost modeling, which is more accurate and can yield better scheduling decisions. Our testbed experiments with diverse benchmarks show that, Sanic can substantially enhance the service efficiency of network-intensive LLM inferences, improving the SLO-attainment by up to 61.67%.",
+      "canonical_id": "DOI:10.1145/3820441.3820479",
+      "doi": "10.1145/3820441.3820479",
+      "authors": [
+        "Weiye Wang",
+        "Chen Chen",
+        "Junxue Zhang",
+        "Zhusheng Wang",
+        "Hui Yuan",
+        "Zi-Ting Guan",
+        "Xiaolong Zheng",
+        "Qizhen Weng",
+        "Yin Chen",
+        "Minyi Guo"
+      ]
+    },
+    {
+      "title": "Recurrent Residual Quantization: A Progressive Multi-Precision Representation for LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17",
+      "year": 2026,
+      "published": "2026-08-04",
+      "abstract": "Serving large language models (LLMs) under diverse deployment constraints requires flexible trade-offs between accuracy, memory footprint, and throughput. However, conventional quantization methods typically require a separate checkpoint for each target bit-width. We introduce Recurrent Residual Quantization (RRQ), a post-training quantization (PTQ) framework that represents weights as a low-bit quantized base together with a sequence of quantized residual corrections, enabling multiple effective precisions from a single checkpoint. Starting from a 2-bit model obtained via post-training quantization (PTQ) or round-to-nearest (RTN), RRQ progressively adds lightweight 2-bit residuals generated via RTN to construct 4-, 6-, and 8-bit representations. The method is calibration-free and avoids joint multi-bit optimization. In our Qwen3-8B setup, the full all-RTN 2-/4-/6-/8-bit package is constructed in 1,293 seconds, 3.3 times faster than the measured MatGPTQ construction. Experiments on six recent LLMs show competitive accuracy at 6 and 8 bits, with model-dependent behavior at 4 bits. The code will be made publicly available upon publication.",
+      "canonical_id": "arXiv:2608.04048",
+      "arxiv_id": "2608.04048",
+      "authors": [
+        "Yu Luo",
+        "Bo Dong",
+        "Wenhua Cheng",
+        "Haihao Shen"
+      ]
+    },
+    {
+      "title": "Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework",
+      "source_url": "https://www.semanticscholar.org/paper/701d83e51585e98d9c79f3f97f844789e0f231ff",
+      "year": 2026,
+      "published": "2026-08-02",
+      "abstract": "Prefix caching reuses the key--value (KV) states of shared prompt prefixes and can substantially reduce the time to first token (TTFT) of large language model (LLM) inference. In a wireless edge network, however, prefix states are distributed across geographically separated GPU nodes. A nearby node offers a short radio path but may provide little reuse, whereas a more distant node may cache a longer matching prefix but incur additional communication and queueing delay. Moreover, persistent prefixes and active-request KV states compete for the same GPU memory, so aggressive caching can reduce inference concurrency and create queueing hotspots. This paper develops a stochastic-geometry and queueing framework for this spatial communication--caching--computation tradeoff. We represent the prompt workload by a prefix forest and define an ancestor-closed cache profile that may contain multiple reusable prefixes. Edge GPU nodes form a Poisson point process and are independently marked by cache profile, yielding analytically tractable spatial tiers. We derive the profile-association probability, conditional serving-distance distribution, token-level computation-offloading ratio, and TTFT coverage probability under a load-aware association policy. A fixed-point formulation captures the coupling between spatial association and multi-server GPU queues, while an outer optimization selects the cache-profile distribution subject to static-memory and stability constraints. Analytical and Monte Carlo results agree closely. The results show that the latency-optimal node need not be the nearest node, that TTFT can be non-monotonic in cached-prefix depth because of GPU-memory coupling.",
+      "canonical_id": "arXiv:2608.01126",
+      "arxiv_id": "2608.01126",
+      "authors": [
+        "Leo T. Yang",
+        "Zhouyong Liu"
+      ]
+    },
+    {
+      "title": "Augmented Backpressure for Decentralized Management of Agentic Networks",
+      "source_url": "https://www.semanticscholar.org/paper/10c26dc693527bdd77d9539b835121c8b21c7bd8",
+      "year": 2026,
+      "published": "2026-08-02",
+      "abstract": "Agentic foundation-model service networks handle requests spanning retrieval, planning, generation, verification, and tool use. Unlike traditional communication networks, control performance depends on queue dynamics and contextual memory states, including prefix/KV blocks, retrieved contexts, expert warm states, and verified tool outputs. These states arise from execution history and alter service work and downstream successor laws under finite local budgets. Treating them as passive caches or an independent process leaves a queueing-control gap. To this end, we propose \\emph{Memory-Augmented Backpressure} (MABP), a queue--memory control framework for stateful foundation-model service networks (SFMSNs) that jointly models commodity queues and causal contextual memory dynamics. MABP represents each request by service and state types, estimates memory-dependent work, penalties, and successor probabilities, then reads queues and resident memory each slot, selects feasible routing, transfer, activation, and service actions using a memory-dependent pressure score, and retains a budget-feasible subset of resident and newly generated objects. We prove an occupation-measure capacity outer bound with conditional tightness. We show that modeling contextual memory can strictly increase the stability region through work reduction and transition shaping, establishing a separation between memory-aware and memory-oblivious decisions. We also prove throughput and drift-plus-penalty guarantees for exact frame-MABP with bounded-loss extensions to approximate solvers.",
+      "canonical_id": "arXiv:2608.00914",
+      "arxiv_id": "2608.00914",
+      "authors": [
+        "Zuyuan Zhang",
+        "Sizhe Tang",
+        "Tian Lan"
+      ]
+    },
+    {
+      "title": "EdgeSD: Efficient Speculative Decoding With Vision-Decoding Disaggregation for MLLM Inference in Edge-Cloud Networks",
+      "source_url": "https://www.semanticscholar.org/paper/f4864bde0b68b441b89f1ed559ecdca4bacc2cec",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "The deployment of multimodal large language models (MLLMs) in edge-cloud networks faces critical challenges, including computational resource heterogeneity, memory bottlenecks, and bandwidth constraints. To address these issues, we propose EdgeSD, a novel framework that accelerates MLLM inference by integrating speculative decoding (SD) with edge-cloud collaboration. First, EdgeSD decouples the vision encoding and decoding processes of the draft MLLM across heterogeneous edge servers (ESs). This disaggregation architecture overcomes single-node memory constraints, enabling optimized resource utilization and high-resolution input processing. Second, to resolve the communication bottleneck and computational burden inherent in this distributed architecture, EdgeSD integrates a bandwidth-aware dynamic image token merging (ITM) method. Unlike general pruning techniques, this EdgeSD-specific ITM method focuses on minimizing inter-ES transmission latency for vision-decoding disaggregation while maintaining draft quality. Third, to optimize SD efficiency on consumer-grade ESs, EdgeSD employs an adaptive and scalable token tree structure solved using a parallel delta-stepping algorithm. This structure maximizes the number of accepted tokens under strict edge latency constraints. Extensive experiments on six multimodal datasets and five benchmarks with various MLLM pairs demonstrate that EdgeSD achieves substantial acceleration and throughput gains in edge-cloud collaboration scenarios using a lightweight draft MLLM, achieving 3.04-5.12x speedup compared to baseline methods.",
+      "canonical_id": "DOI:10.1109/TMC.2026.3667591",
+      "doi": "10.1109/TMC.2026.3667591",
+      "authors": [
+        "Hualong Huang",
+        "Wenhan Zhan",
+        "Hancong Duan",
+        "Kai Peng",
+        "Geyong Min",
+        "Zi-Jia Zhao",
+        "Zi-Tian Zhao",
+        "Yalan Ye"
+      ]
+    },
+    {
+      "title": "Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces",
+      "source_url": "https://www.semanticscholar.org/paper/bed107ae78794de0a52e47f8d6e2e0cddab881a7",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "Production LLM serving generates millions of diverse requests, making full-trace replay across serving configurations increasingly expensive. Existing trace reduction methods mainly preserve workload distributions or representative requests, but bottleneck-revealing workloads may be rare and non-representative. Moreover, evidence for one component cannot compensate for missing evidence in another, while using predicted bottlenecks as target truth creates circular evaluation. These limitations make it necessary to preserve evidence for every bottleneck component rather than rely on workload representativeness alone. We propose Bottleneck-Preserving Witnessing (BPW), a quality-constrained framework for compact and diagnostically reliable LLM serving replay suites. BPW first performs Workload Candidate Nomination using response-blind workload features and closed source-side measurements. This stage identifies workloads that may expose scheduler, prefill, decode, or KV-cache bottlenecks. Coverage-Priority Sequence Construction then organizes multi-component proposals as reusable hyperedges and prioritizes weak and uncovered dimensions. Finally, Bottleneck Truth Verification derives prediction-independent labels solely from direct target-system measurements. The verified results determine the earliest prefix satisfying the direct two-witness requirement for every component. Experiments on BurstGPT, ServeGen, and Mooncake show that BPW reaches the verified gate with a compact workload set and outperforms 16 policies, achieving relative improvements of 2.3% and 16.3% in Mean prefix Macro-F1 and WBRC-AUC, respectively. Stage-resolved and sensitivity analyses confirm the distinct contributions and local stability of its three stages. Our code is publicly available at https://github.com/llmllmllm/BPW",
+      "canonical_id": "arXiv:2608.00423",
+      "arxiv_id": "2608.00423",
+      "authors": [
+        "Li-Ming Liu",
+        "Chao Hu",
+        "Ming-Fei Lu",
+        "Cong Tan",
+        "Yi-Wei Ge",
+        "Chi-Jin Zhou",
+        "Yongjun Xie",
+        "Run-Zhe Wang",
+        "Xiaohai Shi",
+        "He-Yuan Shi"
+      ]
+    },
+    {
+      "title": "Optimizing AI: A Reference Architecture to Streamline AI Inference and Performance Acceleration",
+      "source_url": "https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/mc.2026.3695984",
+      "doi": "10.1109/mc.2026.3695984",
+      "authors": [
+        "Mlađan Jovanović",
+        "M. Campbell"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.19395",
+      "identity_tokens": [
+        "id:arXiv:2608.19395",
+        "title:hydra a heterogeneous chiplet dse framework for serving dynamic hybrid llm workloads",
+        "url:https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568"
+      ],
+      "record": {
+        "title": "HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads",
+        "source_url": "https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568",
+        "year": 2026,
+        "published": "2026-08-19",
+        "abstract": "Hybrid Transformer-Mamba large language models (LLMs) enhance long-context efficiency, but their heterogeneous computation and communication patterns complicate efficient hardware acceleration. Chiplet-based architectures offer a scalable solution by integrating specialized compute and memory units. However, the design space spanning static architectural configurations and dynamic runtime policies is prohibitively large to explore exhaustively. To address this challenge, we present HYDRA, a comprehensive design space exploration framework for hybrid LLM serving on heterogeneous chiplet systems. HYDRA jointly explores chiplet composition, placement, inter-chiplet bandwidth provisioning, dynamic batching, and runtime scheduling. It integrates communication-aware placement, dynamic batching, elastic task scheduling, and a fast Markov-based performance estimator that captures multi-tenant runtime dynamics for efficient and accurate exploration. Across all workloads, HYDRA delivers 1.55x the throughput and 43.7 percent lower time-to-first-token on average, with throughput gains reaching up to 2.3x compared to state-of-the-art baselines. These results highlight that co-designing architecture and runtime policies is critical for efficient large-scale LLM serving on heterogeneous chiplet systems.",
+        "canonical_id": "arXiv:2608.19395",
+        "arxiv_id": "2608.19395",
+        "authors": [
+          "Jiahao Lin",
+          "Alish Kanani",
+          "Sang-Won Lee",
+          "Jaehyun Park",
+          "U. Ogras"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.17445",
+      "identity_tokens": [
+        "id:arXiv:2608.17445",
+        "title:decomposition attacks across unlinkable identities limits of stateful defenses for llm services",
+        "url:https://www.semanticscholar.org/paper/bb1ba75a29e01b0f0f8c42a38bf948d04afd207e"
+      ],
+      "record": {
+        "title": "Decomposition Attacks Across Unlinkable Identities: Limits of Stateful Defenses for LLM Services",
+        "source_url": "https://www.semanticscholar.org/paper/bb1ba75a29e01b0f0f8c42a38bf948d04afd207e",
+        "year": 2026,
+        "published": "2026-08-18",
+        "abstract": "Most large language model services use stateless defenses, which judge only the current request, to refuse harmful tasks. Decomposition attacks exploit this limitation by splitting a harmful task into individually permissible requests and combining their answers. Defending against them therefore requires a stateful monitor that considers requests together. If it can group all requests for one attacker task, it can stop the attack. However, attackers can use unlinkable identities and combine answers elsewhere, leaving no reliable grouping signal. We ask whether decomposition attacks can still be stopped under this setting. For a fixed attack strategy without retries, we prove that the achievable security and utility tradeoff depends entirely on how benign requests for the same capabilities are grouped. Persistent, recognizable groups permit a useful defense; fresh, indistinguishable groups do not. When attackers can retry and learn from Allow/Block decisions, this useful operating point disappears: the feedback reveals what passes but not whether a block was correct. Experiments on 91 executable tasks and 11,393 capability-matched benign requests support these results. Under a 1% denial cap for these requests and a 0.5% cap for unrelated background traffic, all ten tested policies, including one privileged policy with an exact request-to-operation map, either fail to stop attacks or exceed the budget. On defense-unseen task families, attack success is at least 99% after one attempt and 100% after two. Effective defenses therefore require additional evidence or mechanisms tied to grouping, such as reliable identity linkage, costs for fresh identities, or control over answer use.",
+        "canonical_id": "arXiv:2608.17445",
+        "arxiv_id": "2608.17445",
+        "authors": [
+          "Bowen Sun",
+          "Zhengyue Zhao",
+          "Xiaogeng Liu",
+          "Yinzhi Cao",
+          "Chaowei Xiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3828750",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3828750",
+        "title:ark avoiding routing collisions for kv cache transfer in disaggregated llm inference",
+        "url:https://www.semanticscholar.org/paper/713681b5ad435a87d94c6eb057a4b06f97a99c22"
+      ],
+      "record": {
+        "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/713681b5ad435a87d94c6eb057a4b06f97a99c22",
+        "year": 2026,
+        "published": "2026-08-17",
+        "abstract": "Disaggregated LLM inference separates the prefill and decode phases across GPU pools, generating massive KV-cache transfers. Because these transfers last hundreds of milliseconds to seconds, they behave as mega elephant flows that dominate link bandwidth utilization. In this regime, stateless ECMP can perform poorly: hash collisions may overload one spine link while leaving others idle, stretching transfer times by seconds. Yet this same persistence makes coordination practical. Since these flows are long-lived, even lightweight one-to-all coordination can be amortized over their lifetime. We present ARK, a distributed elephant-flow path reservation mechanism. ARK coordinates senders to choose source ports whose hashes map concurrent flows onto distinct spines, without requiring switch changes or receiver-side packet reordering. Packet-level RDMA simulations show that ARK reduces mean and P95 FCT by up to 27.3% and 34.0% under moderate load, and further reduces mean TTFT by up to 12.9%.",
+        "canonical_id": "DOI:10.1145/3789240.3828750",
+        "doi": "10.1145/3789240.3828750",
+        "authors": [
+          "Hung-Chun Lin",
+          "Ting-Wei Hsu",
+          "Chung-En Ho",
+          "Ahmed Saeed"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3822607",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3822607",
+        "title:xswitch an adaptive oeintegrated interconnect for scaleup networks",
+        "url:https://www.semanticscholar.org/paper/72793bbef1981965995e0db01b6bf5eceddb44f3"
+      ],
+      "record": {
+        "title": "xSwitch: An Adaptive O-E-integrated Interconnect for Scale-up Networks",
+        "source_url": "https://www.semanticscholar.org/paper/72793bbef1981965995e0db01b6bf5eceddb44f3",
+        "year": 2026,
+        "published": "2026-08-17",
+        "abstract": "To adapt to the intensive, bursty, and latency-constrained traffic from large language model (LLM) training and inference, scale-up networks are now facing tremendous challenges. Existing electrical packet switching (EPS) fabrics provide packet-level flexibility at the cost of high power consumption and long latency. Introducing optical circuit switching (OCS) in scale-up networks offers direct optical connections that can effectively reduce power consumption and latency, but OCS lacks the packet-level flexibility required by LLM inference (especially for mixture-of-experts (MoE) inference). To address these dilemmas, this work presents xSwitch, an optical-electrical-integrated (O-E-integrated) interconnect for scale-up networks, and demonstrates its effectiveness experimentally. Unlike the traditional hybrid-optical-electrical interconnects that usually place EPS and OCS in parallel, xSwitch integrates one port-count-reduced (defined by the O/E port ratio) EPS layer (ESL) on top of an OCS layer (OSL). Then, OSL can establish optical connections for xPU pairs with stable and intensive traffic demands, while bypassing the ESL for energy and latency reduction, and the dynamic and unpredictable traffic between xPUs can be provisioned by letting OSL forward it to the ESL. We prototype xSwitch with off-the-shelf components, validate its effectiveness with real-world MoE inference tasks, and also confirm its scalability with large-scale simulations. Our results indicate that for MoE inference workloads, xSwitch with a 2:1 O/E port ratio limits the average gaps to the full-EPS baseline to 1.96% in TTFT and 0.59% in TPOT.",
+        "canonical_id": "DOI:10.1145/3789240.3822607",
+        "doi": "10.1145/3789240.3822607",
+        "authors": [
+          "Wei-Chi Wu",
+          "Xuanmiao Mu",
+          "Xiao-Liang Chen",
+          "Bin-Jun Tang",
+          "Xingming Cui",
+          "Yuxuan Dou",
+          "Zu-Qing Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14498",
+      "identity_tokens": [
+        "id:arXiv:2608.14498",
+        "title:rollplex crossphase gpu spatial sharing for vision language model posttraining",
+        "url:https://www.semanticscholar.org/paper/5e242025eb9b1fec5a9cbaa2354ec9a9205d4fe0"
+      ],
+      "record": {
+        "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+        "source_url": "https://www.semanticscholar.org/paper/5e242025eb9b1fec5a9cbaa2354ec9a9205d4fe0",
+        "year": 2026,
+        "published": "2026-08-14",
+        "abstract": "Vision-language models (VLMs) enable embodied agents to reason and act from visual observations and language instructions. Reinforcement learning (RL) post-training enhances these capabilities using task feedback, but current on-policy RL runtimes execute rollout, reference scoring, and actor training in strict serial phases. While effective for text-only RL, this phase-granular execution is wasteful for VLMs, where processing dense video inputs and prompt prefixes occupies a large fraction of each phase. Because prefix processing is independent of the generated response, it can be run alongside rollout decoding, which leaves GPU compute capacity underutilized, without breaking synchronous on-policy semantics. We present Rollplex, a runtime that decomposes the reference and training phase and moves the prefix computation into the rollout decode window. Realizing this schedule requires more than concurrent kernel launches: naive colocation of Qwen2.5-VL-32\\,B requires roughly 165\\,GiB per GPU, while rollout and training prefer different tensor-parallel (TP) degrees and weight layouts. Rollplex addresses these constraints with two mechanisms. Phase-aware memory management controls HBM residency according to producer--consumer lifetimes. Parallelism-aware weight sharing uses the same physical storage for layout-compatible tensors across distinct TP degrees and reconstructs only incompatible tensors, avoiding a complete second actor copy. On 32 H800 GPUs, Rollplex achieves $1.23\\times$--$1.30\\times$ speedup over serial colocation and $1.57\\times$--$2.24\\times$ over disaggregation under the same GPU budget, while preserving the synchronous RL update.",
+        "canonical_id": "arXiv:2608.14498",
+        "arxiv_id": "2608.14498",
+        "authors": [
+          "Hanfeng Lu",
+          "Tianyu Feng",
+          "Suyi Li",
+          "Yuheng Zhao",
+          "Wei Gao",
+          "Shaopan Xiong",
+          "Ju Huang",
+          "Si-Ran Yang",
+          "Jiamang Wang",
+          "Lin Qu",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.10402",
+      "identity_tokens": [
+        "id:arXiv:2608.10402",
+        "title:tiderl boosting agentic rl goodput with readinessaware scheduling",
+        "url:https://www.semanticscholar.org/paper/a33eef9ca01b2a09a30a488bacb39167015ac5d6"
+      ],
+      "record": {
+        "title": "TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling",
+        "source_url": "https://www.semanticscholar.org/paper/a33eef9ca01b2a09a30a488bacb39167015ac5d6",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Reinforcement learning (RL) for large language models is moving toward multi-turn agentic workloads, where rollout tasks repeatedly pause for external environments, resume with growing contexts, and finish at highly variable times. In this setting, RL training goodput, measured by training throughput, matters more than raw GPU occupancy: GPU waiting and repeated prefill recomputation are pure overhead. We present TideRL, a readiness-aware elastic RL system with Continuous Task Batching, Resource-Aware Ref-Actor Pipelining, and Elastic Resource Scaling. CTB preserves useful rollout state, $\\textrm{RA}^2\\textrm{P}$ selects between decoupled streaming and colocated aggregation from the ready backlog and arrival interval, and ERS moves ranks between rollout and training using the same readiness signals. Across text-only and multi-modal agentic workloads, TideRL improves RL training goodput by up to 5.6$\\times$ over synchronous baselines and over 33% over asynchronous baselines, while reaching similar task performance. It also improves KV cache hit rate by 1.58$\\times$, reduces per-step training time by up to 44.3%, and cuts total waiting time by up to 77.6%.",
+        "canonical_id": "arXiv:2608.10402",
+        "arxiv_id": "2608.10402",
+        "authors": [
+          "Yanyu Ren",
+          "Xizheng Wang",
+          "Xiao Liu",
+          "Bowen Lv",
+          "Hanchen Zhang",
+          "Shudan Zhang",
+          "Hanyu Lai",
+          "Shuai Wang",
+          "Li Chen",
+          "Dan Li",
+          "Jie Tang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.10545",
+      "identity_tokens": [
+        "id:arXiv:2608.10545",
+        "title:impactho importanceaware kv cache transfer for multiuser edge llm handover",
+        "url:https://www.semanticscholar.org/paper/097f17d8a67c3e8eddcf5c37806f54426da54402"
+      ],
+      "record": {
+        "title": "ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover",
+        "source_url": "https://www.semanticscholar.org/paper/097f17d8a67c3e8eddcf5c37806f54426da54402",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Edge LLMs must preserve inference continuity when a user hands over between edge nodes, requiring key-value (KV) cache transfer to the target node. However, simultaneous handovers saturate the backhaul, preventing full cache delivery within the mobility-imposed transfer window. Rather than allocating bandwidth as if all cache entries were equally valuable, we order each user's KV cache by importance and transmit only its most informative fraction, turning token-level sparsity into communication savings. We cast the transfer as a multi-user backhaul allocation problem that maximizes average accuracy across users. Each user's partial-cache accuracy serves as its utility: a sigmoid that fits measurements on the RULER benchmark with $R^2>0.99$ across models and context lengths. Because importance ordering front-loads the high-value entries, the concave region of the accuracy curve spans nearly the entire cache. Our proposed allocator keeps served users within this region, making each per-slot allocation problem convex. The optimum is derived via a closed-form weighted water-filling solution that generalizes information-theoretic water-filling and enables online scheduling. The proposed allocator attains over 93.7% average accuracy in a 500ms transfer window, within 0.5pp of the full-cache ceiling, and reaches 98.2-99.5% of a clairvoyant upper bound.",
+        "canonical_id": "arXiv:2608.10545",
+        "arxiv_id": "2608.10545",
+        "authors": [
+          "Minwoo Kim",
+          "Soochang Song",
+          "Namyoon Lee",
+          "B. Jung",
+          "Yongjune Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3830297",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3830297",
+        "title:dracoslb supporting highperformance rdma under server load balancers for llm",
+        "url:https://www.semanticscholar.org/paper/2dd56e9b7b98a508c02771b15968f99c38c86f1f"
+      ],
+      "record": {
+        "title": "Draco-SLB: Supporting High-performance RDMA under Server Load Balancers for LLM",
+        "source_url": "https://www.semanticscholar.org/paper/2dd56e9b7b98a508c02771b15968f99c38c86f1f",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "To sustain the exponential growth of AI, large-scale multi-node LLM services are increasingly deployed behind Server Load Balancers (SLBs). While these services heavily rely on Remote Direct Memory Access (RDMA) for high-performance communication, natively integrating RDMA with standard SLB architectures introduces severe incompatibilities, such as centralized node bottlenecks, scheduling inconsistencies, and performance degradation during long-distance RDMA transmission. Hence, we propose Draco-SLB, a novel endpoint-side transport shim layer. Draco-SLB transparently shields underlying RDMA execution from network-side complexities, including SLBs and intermediate network middleboxes.",
+        "canonical_id": "DOI:10.1145/3789240.3830297",
+        "doi": "10.1145/3789240.3830297",
+        "authors": [
+          "Yi-Ning Qi",
+          "Yilong Lyu",
+          "Ye Yang",
+          "Junnan Cai",
+          "Hao-Xiang Pan",
+          "Peng Cheng",
+          "Jiming Chen",
+          "Zikang Chen",
+          "Zhigang Zong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3828738",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3828738",
+        "title:gpucentric stateless llm serving with giganets",
+        "url:https://www.semanticscholar.org/paper/1a5dab49a68651ccea87ccfefd39098a6cb41ba2"
+      ],
+      "record": {
+        "title": "GPU-Centric Stateless LLM Serving With GIGANETS",
+        "source_url": "https://www.semanticscholar.org/paper/1a5dab49a68651ccea87ccfefd39098a6cb41ba2",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Giganetes is a GPU-centric architecture for stateless LLM serving that externalizes KV caches to a disaggregated remote memory pool via GPUDirect RDMA. By treating remote memory as a GPU-addressable tier via GPUDirect RDMA, Giganetes eliminates session affinity constraints: any GPU can serve any request, enabling near-linear horizontal scaling in a Kubernetes-native deployment. A Scatter/Gather I/O interface bypasses the CPU and host memory entirely, achieving 52.4 GB/s application-level read throughput on our 4×200 Gbps RDMA testbed. A session-level metadata abstraction and proactive readahead mechanism reduce GPU bubbles by overlapping remote KV fetches with prefill computation and scheduling slack. On a 4-node H800 cluster, Giganetes delivers 33% higher throughput (QPS 2.4 vs. 1.8) and 1.75× lower P95 TPOT than PD-disaggregation with sticky sessions, with the gain driven by scheduling flexibility rather than faster transport alone.",
+        "canonical_id": "DOI:10.1145/3789240.3828738",
+        "doi": "10.1145/3789240.3828738",
+        "authors": [
+          "Xiaoliang Wang",
+          "Zhen-Wei Pi",
+          "Rui Zhang",
+          "Cam-Tu Nguyen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3829200",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3829200",
+        "title:connex endpoint mobility primitives for dynamic llm serving",
+        "url:https://www.semanticscholar.org/paper/62e73cfa625d3c2676abec0b1e9779cb9f11e77f"
+      ],
+      "record": {
+        "title": "Connex: Endpoint Mobility Primitives for Dynamic LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/62e73cfa625d3c2676abec0b1e9779cb9f11e77f",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Modern LLM serving systems increasingly adopt elastic inference pipelines where stages frequently join, leave, and migrate across nodes. However, existing GPU communication frameworks like NCCL assume static topologies, causing routing failures and P99 latency spikes during worker transitions that violate sub-millisecond tail latency requirements. We present Connex, a communication system that elevates endpoint mobility from exceptional failure to first-class primitive. Rather than optimizing individual mechanisms in isolation, Connex defines a mobility contract that the communication layer enforces whenever workers join, leave, or migrate while token streams, activations, or KV transfers are in flight. The contract is realized through three cooperating mechanisms: (1) epoch-based routing that bounds staleness without global coordination, (2) explicit handover protocols that preserve stream ordering and provide exactly-once delivery across migrations, and (3) credit-based backpressure with traffic-class isolation that prevents churn-induced interference with latency-critical paths. Evaluation on a 5-node GPU cluster under synthetic and production-derived churn shows that Connex reduces P99 tail spikes by up to 85% compared to NCCL-based baselines, achieves sub-second cutover, and maintains 100% goodput at moderate loads where baselines collapse to 0–28%, while incurring less than 5% steady-state overhead.",
+        "canonical_id": "DOI:10.1145/3789240.3829200",
+        "doi": "10.1145/3789240.3829200",
+        "authors": [
+          "Yanying Lin",
+          "Vincent Liu",
+          "Tao Luo",
+          "Chengzhong Xu",
+          "Ke-Jiang Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08338",
+      "identity_tokens": [
+        "id:arXiv:2608.08338",
+        "title:splitgate pooledevidence stochasticrollout scheduling for timely progressive edge inference",
+        "url:https://www.semanticscholar.org/paper/98a61eb7d9f6e0bf81e10f188991d78553ccd4e2"
+      ],
+      "record": {
+        "title": "Split-Gate Pooled-Evidence Stochastic-Rollout Scheduling for Timely Progressive Edge Inference",
+        "source_url": "https://www.semanticscholar.org/paper/98a61eb7d9f6e0bf81e10f188991d78553ccd4e2",
+        "year": 2026,
+        "published": "2026-08-08",
+        "abstract": "This paper investigates causal radio scheduling for progressive edge inference, with the goal of maximizing timely inference throughput under job-specific deadlines. Specifically, a multi-tenant system is modeled in which each job alternates between wireless transmission and graphics processing unit (GPU) computation. The model captures time-varying uplink service, inter-stage precedence, variant-aware batching, non-preemptive execution on two GPU streams, and heterogeneous deadlines. To account for delayed radio-GPU coupling, a split-gate pooled-evidence stochastic-rollout (SGPE-SR) scheduler is proposed. Candidate and fallback policies are selected on one set of sampled futures, after which admission is evaluated on an independent held-out set; common random numbers are retained within each held-out candidate-fallback comparison. The override is executed only when its pooled nominal/recent-history held-out advantage is sufficiently positive and an independent recent-history replication statistic is nonnegative. System-level simulations using measured GPU profiles and paired random instances show that, in a prespecified long-horizon evaluation over 30 previously unused seeds and 3,379 offered jobs, SGPE-SR improves timely completions over the strongest rate-based baseline by 4.27%, with a mean paired gain of 3.00 jobs per run and a 95% bootstrap interval of [1.60, 4.43].",
+        "canonical_id": "arXiv:2608.08338",
+        "arxiv_id": "2608.08338",
+        "authors": [
+          "Sai Xu",
+          "Yin-Bo Yu",
+          "Yanan Du",
+          "Xusheng Zhu",
+          "Gaojie Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06135",
+      "identity_tokens": [
+        "id:arXiv:2608.06135",
+        "title:llm inference under bursty workload distribution modifying the wait algorithm",
+        "url:https://www.semanticscholar.org/paper/87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a"
+      ],
+      "record": {
+        "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
+        "source_url": "https://www.semanticscholar.org/paper/87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a",
+        "year": 2026,
+        "published": "2026-08-06",
+        "abstract": "Large Language Models (LLMs) such as ChatGPT and Claude are widely used for information retrieval and problem-solving. Recent work has focused on improving scheduling algorithms to boost throughput while maintaining low latency. However, these approaches often assume Poisson request arrivals with constant rates - an assumption that fails to reflect the inherently bursty and dynamic nature of real-world traffic. We propose a lightweight extension to the state-of-the-art WAIT algorithm [1], which adapts to time-varying arrival rates without prior traffic knowledge. The proposed algorithm performs online estimation of request intensity based on observed interarrival times. Using Markov Modulated Poisson Process (MMPP)-based synthetic workloads with diverse request types, we conduct a simulation-based evaluation demonstrating that the proposed method achieves higher throughput than Sarathi-Serve [2], ORCA [3], and vLLM [4] in the evaluated low arrival-rate shift scenarios while maintaining comparable latency.",
+        "canonical_id": "arXiv:2608.06135",
+        "arxiv_id": "2608.06135",
+        "authors": [
+          "Anjali Gangadhar Katageria",
+          "S. Rani",
+          "R. Sengupta"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3820441.3820466",
+      "identity_tokens": [
+        "id:DOI:10.1145/3820441.3820466",
+        "title:rag on the decentralized web an empirical study of akash and golem",
+        "url:https://www.semanticscholar.org/paper/e99b2b7b5cb0dd34741f40f8e5bc9d7cda63ec44"
+      ],
+      "record": {
+        "title": "RAG on the Decentralized Web: An Empirical Study of Akash and Golem",
+        "source_url": "https://www.semanticscholar.org/paper/e99b2b7b5cb0dd34741f40f8e5bc9d7cda63ec44",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "Decentralized compute markets claim to be an alternative to the cloud, yet the systems community lacks hard evidence on whether they can run modern workloads end to end. We put this claim to the test by deploying a Retrieval-Augmented Generation (RAG) pipeline on the Akash and Golem networks, two popular decentralized computing markets. Our analysis reveals a striking paradox: supply is abundant, with over 10,000 CPU cores and 50 TiB of memory available, yet utilization remains minimal (about 0.3% on Akash). When mapped carefully, several RAG pipeline stages execute correctly and up to 3 × cheaper than AWS; others degrade under node churn and network bottlenecks. We also observe that decentralization in practice is already hybrid, with centralized gateways and offchain services masking blockchain complexity. Taken together, our findings suggest that decentralized markets are neither hype nor drop-in cloud replacements, but an underutilized substrate whose viability depends on better scheduling, reliability mechanisms, and trust primitives.",
+        "canonical_id": "DOI:10.1145/3820441.3820466",
+        "doi": "10.1145/3820441.3820466",
+        "authors": [
+          "Suting Chen",
+          "Matteo Varvello",
+          "Aleksandar Kuzmanovic",
+          "Yunming Xiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3820441.3820479",
+      "identity_tokens": [
+        "id:DOI:10.1145/3820441.3820479",
+        "title:towards efficient serving of networkintensive llm inferences",
+        "url:https://www.semanticscholar.org/paper/1b82afcafc66c2a308f90cf45a289886152c0753"
+      ],
+      "record": {
+        "title": "Towards Efficient Serving of Network-intensive LLM Inferences",
+        "source_url": "https://www.semanticscholar.org/paper/1b82afcafc66c2a308f90cf45a289886152c0753",
+        "year": 2026,
+        "published": "2026-08-05",
+        "abstract": "Prefix caching has become a key technique for LLM serving, and nowadays the reusable KVCache contents are often hosted on distributed servers. For long-context LLM inferences with high cache hit ratio, cross-server KVCache transmission has become an emerging performance bottleneck; such network-intensive LLM inferences are increasingly prevalent in the coming era of agentic AI. However, existing LLM inference engines are essentially compute-centric; we find that they are highly inefficient when serving such workloads due to compute-stage service blocking and ignorance of KVCache-transfer cost. To efficiently serve network-intensive LLM inferences, in this paper, we design Sanic, an optimized LLM engine that treats KVCache transmission as a first-class citizen. Viewing KVCache loading and computation as equally-significant stages, Sanic decouples their service control and allows each stage to progress autonomously in an asynchronous manner, thereby improving the overall resource utilization. Moreover, when scheduling competing LLM inferences, Sanic treats the KVCache loading delay as an independent factor in service cost modeling, which is more accurate and can yield better scheduling decisions. Our testbed experiments with diverse benchmarks show that, Sanic can substantially enhance the service efficiency of network-intensive LLM inferences, improving the SLO-attainment by up to 61.67%.",
+        "canonical_id": "DOI:10.1145/3820441.3820479",
+        "doi": "10.1145/3820441.3820479",
+        "authors": [
+          "Weiye Wang",
+          "Chen Chen",
+          "Junxue Zhang",
+          "Zhusheng Wang",
+          "Hui Yuan",
+          "Zi-Ting Guan",
+          "Xiaolong Zheng",
+          "Qizhen Weng",
+          "Yin Chen",
+          "Minyi Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04048",
+      "identity_tokens": [
+        "id:arXiv:2608.04048",
+        "title:recurrent residual quantization a progressive multiprecision representation for llms",
+        "url:https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17"
+      ],
+      "record": {
+        "title": "Recurrent Residual Quantization: A Progressive Multi-Precision Representation for LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/6723314b3bfa30d0d2733bb245616ab856b67e17",
+        "year": 2026,
+        "published": "2026-08-04",
+        "abstract": "Serving large language models (LLMs) under diverse deployment constraints requires flexible trade-offs between accuracy, memory footprint, and throughput. However, conventional quantization methods typically require a separate checkpoint for each target bit-width. We introduce Recurrent Residual Quantization (RRQ), a post-training quantization (PTQ) framework that represents weights as a low-bit quantized base together with a sequence of quantized residual corrections, enabling multiple effective precisions from a single checkpoint. Starting from a 2-bit model obtained via post-training quantization (PTQ) or round-to-nearest (RTN), RRQ progressively adds lightweight 2-bit residuals generated via RTN to construct 4-, 6-, and 8-bit representations. The method is calibration-free and avoids joint multi-bit optimization. In our Qwen3-8B setup, the full all-RTN 2-/4-/6-/8-bit package is constructed in 1,293 seconds, 3.3 times faster than the measured MatGPTQ construction. Experiments on six recent LLMs show competitive accuracy at 6 and 8 bits, with model-dependent behavior at 4 bits. The code will be made publicly available upon publication.",
+        "canonical_id": "arXiv:2608.04048",
+        "arxiv_id": "2608.04048",
+        "authors": [
+          "Yu Luo",
+          "Bo Dong",
+          "Wenhua Cheng",
+          "Haihao Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01126",
+      "identity_tokens": [
+        "id:arXiv:2608.01126",
+        "title:spatial prefix caching for wireless edge llm inference a stochasticgeometry and queueing framework",
+        "url:https://www.semanticscholar.org/paper/701d83e51585e98d9c79f3f97f844789e0f231ff"
+      ],
+      "record": {
+        "title": "Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework",
+        "source_url": "https://www.semanticscholar.org/paper/701d83e51585e98d9c79f3f97f844789e0f231ff",
+        "year": 2026,
+        "published": "2026-08-02",
+        "abstract": "Prefix caching reuses the key--value (KV) states of shared prompt prefixes and can substantially reduce the time to first token (TTFT) of large language model (LLM) inference. In a wireless edge network, however, prefix states are distributed across geographically separated GPU nodes. A nearby node offers a short radio path but may provide little reuse, whereas a more distant node may cache a longer matching prefix but incur additional communication and queueing delay. Moreover, persistent prefixes and active-request KV states compete for the same GPU memory, so aggressive caching can reduce inference concurrency and create queueing hotspots. This paper develops a stochastic-geometry and queueing framework for this spatial communication--caching--computation tradeoff. We represent the prompt workload by a prefix forest and define an ancestor-closed cache profile that may contain multiple reusable prefixes. Edge GPU nodes form a Poisson point process and are independently marked by cache profile, yielding analytically tractable spatial tiers. We derive the profile-association probability, conditional serving-distance distribution, token-level computation-offloading ratio, and TTFT coverage probability under a load-aware association policy. A fixed-point formulation captures the coupling between spatial association and multi-server GPU queues, while an outer optimization selects the cache-profile distribution subject to static-memory and stability constraints. Analytical and Monte Carlo results agree closely. The results show that the latency-optimal node need not be the nearest node, that TTFT can be non-monotonic in cached-prefix depth because of GPU-memory coupling.",
+        "canonical_id": "arXiv:2608.01126",
+        "arxiv_id": "2608.01126",
+        "authors": [
+          "Leo T. Yang",
+          "Zhouyong Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00914",
+      "identity_tokens": [
+        "id:arXiv:2608.00914",
+        "title:augmented backpressure for decentralized management of agentic networks",
+        "url:https://www.semanticscholar.org/paper/10c26dc693527bdd77d9539b835121c8b21c7bd8"
+      ],
+      "record": {
+        "title": "Augmented Backpressure for Decentralized Management of Agentic Networks",
+        "source_url": "https://www.semanticscholar.org/paper/10c26dc693527bdd77d9539b835121c8b21c7bd8",
+        "year": 2026,
+        "published": "2026-08-02",
+        "abstract": "Agentic foundation-model service networks handle requests spanning retrieval, planning, generation, verification, and tool use. Unlike traditional communication networks, control performance depends on queue dynamics and contextual memory states, including prefix/KV blocks, retrieved contexts, expert warm states, and verified tool outputs. These states arise from execution history and alter service work and downstream successor laws under finite local budgets. Treating them as passive caches or an independent process leaves a queueing-control gap. To this end, we propose \\emph{Memory-Augmented Backpressure} (MABP), a queue--memory control framework for stateful foundation-model service networks (SFMSNs) that jointly models commodity queues and causal contextual memory dynamics. MABP represents each request by service and state types, estimates memory-dependent work, penalties, and successor probabilities, then reads queues and resident memory each slot, selects feasible routing, transfer, activation, and service actions using a memory-dependent pressure score, and retains a budget-feasible subset of resident and newly generated objects. We prove an occupation-measure capacity outer bound with conditional tightness. We show that modeling contextual memory can strictly increase the stability region through work reduction and transition shaping, establishing a separation between memory-aware and memory-oblivious decisions. We also prove throughput and drift-plus-penalty guarantees for exact frame-MABP with bounded-loss extensions to approximate solvers.",
+        "canonical_id": "arXiv:2608.00914",
+        "arxiv_id": "2608.00914",
+        "authors": [
+          "Zuyuan Zhang",
+          "Sizhe Tang",
+          "Tian Lan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tmc.2026.3667591",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2026.3667591",
+        "title:edgesd efficient speculative decoding with visiondecoding disaggregation for mllm inference in edgecloud networks",
+        "url:https://www.semanticscholar.org/paper/f4864bde0b68b441b89f1ed559ecdca4bacc2cec"
+      ],
+      "record": {
+        "title": "EdgeSD: Efficient Speculative Decoding With Vision-Decoding Disaggregation for MLLM Inference in Edge-Cloud Networks",
+        "source_url": "https://www.semanticscholar.org/paper/f4864bde0b68b441b89f1ed559ecdca4bacc2cec",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "The deployment of multimodal large language models (MLLMs) in edge-cloud networks faces critical challenges, including computational resource heterogeneity, memory bottlenecks, and bandwidth constraints. To address these issues, we propose EdgeSD, a novel framework that accelerates MLLM inference by integrating speculative decoding (SD) with edge-cloud collaboration. First, EdgeSD decouples the vision encoding and decoding processes of the draft MLLM across heterogeneous edge servers (ESs). This disaggregation architecture overcomes single-node memory constraints, enabling optimized resource utilization and high-resolution input processing. Second, to resolve the communication bottleneck and computational burden inherent in this distributed architecture, EdgeSD integrates a bandwidth-aware dynamic image token merging (ITM) method. Unlike general pruning techniques, this EdgeSD-specific ITM method focuses on minimizing inter-ES transmission latency for vision-decoding disaggregation while maintaining draft quality. Third, to optimize SD efficiency on consumer-grade ESs, EdgeSD employs an adaptive and scalable token tree structure solved using a parallel delta-stepping algorithm. This structure maximizes the number of accepted tokens under strict edge latency constraints. Extensive experiments on six multimodal datasets and five benchmarks with various MLLM pairs demonstrate that EdgeSD achieves substantial acceleration and throughput gains in edge-cloud collaboration scenarios using a lightweight draft MLLM, achieving 3.04-5.12x speedup compared to baseline methods.",
+        "canonical_id": "DOI:10.1109/TMC.2026.3667591",
+        "doi": "10.1109/TMC.2026.3667591",
+        "authors": [
+          "Hualong Huang",
+          "Wenhan Zhan",
+          "Hancong Duan",
+          "Kai Peng",
+          "Geyong Min",
+          "Zi-Jia Zhao",
+          "Zi-Tian Zhao",
+          "Yalan Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00423",
+      "identity_tokens": [
+        "id:arXiv:2608.00423",
+        "title:diagnose before you compress predictionindependent bottleneck witness refinement for llm serving traces",
+        "url:https://www.semanticscholar.org/paper/bed107ae78794de0a52e47f8d6e2e0cddab881a7"
+      ],
+      "record": {
+        "title": "Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces",
+        "source_url": "https://www.semanticscholar.org/paper/bed107ae78794de0a52e47f8d6e2e0cddab881a7",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "Production LLM serving generates millions of diverse requests, making full-trace replay across serving configurations increasingly expensive. Existing trace reduction methods mainly preserve workload distributions or representative requests, but bottleneck-revealing workloads may be rare and non-representative. Moreover, evidence for one component cannot compensate for missing evidence in another, while using predicted bottlenecks as target truth creates circular evaluation. These limitations make it necessary to preserve evidence for every bottleneck component rather than rely on workload representativeness alone. We propose Bottleneck-Preserving Witnessing (BPW), a quality-constrained framework for compact and diagnostically reliable LLM serving replay suites. BPW first performs Workload Candidate Nomination using response-blind workload features and closed source-side measurements. This stage identifies workloads that may expose scheduler, prefill, decode, or KV-cache bottlenecks. Coverage-Priority Sequence Construction then organizes multi-component proposals as reusable hyperedges and prioritizes weak and uncovered dimensions. Finally, Bottleneck Truth Verification derives prediction-independent labels solely from direct target-system measurements. The verified results determine the earliest prefix satisfying the direct two-witness requirement for every component. Experiments on BurstGPT, ServeGen, and Mooncake show that BPW reaches the verified gate with a compact workload set and outperforms 16 policies, achieving relative improvements of 2.3% and 16.3% in Mean prefix Macro-F1 and WBRC-AUC, respectively. Stage-resolved and sensitivity analyses confirm the distinct contributions and local stability of its three stages. Our code is publicly available at https://github.com/llmllmllm/BPW",
+        "canonical_id": "arXiv:2608.00423",
+        "arxiv_id": "2608.00423",
+        "authors": [
+          "Li-Ming Liu",
+          "Chao Hu",
+          "Ming-Fei Lu",
+          "Cong Tan",
+          "Yi-Wei Ge",
+          "Chi-Jin Zhou",
+          "Yongjun Xie",
+          "Run-Zhe Wang",
+          "Xiaohai Shi",
+          "He-Yuan Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mc.2026.3695984",
+      "identity_tokens": [
+        "id:DOI:10.1109/mc.2026.3695984",
+        "title:optimizing ai a reference architecture to streamline ai inference and performance acceleration",
+        "url:https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82"
+      ],
+      "record": {
+        "title": "Optimizing AI: A Reference Architecture to Streamline AI Inference and Performance Acceleration",
+        "source_url": "https://www.semanticscholar.org/paper/7a26d0980b162687211831900ec26f434300af82",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/mc.2026.3695984",
+        "doi": "10.1109/mc.2026.3695984",
+        "authors": [
+          "Mlađan Jovanović",
+          "M. Campbell"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:2db304b7927b88fa49683a3df5b6bd95db693356c5497ef65dcd4a00e793e7d0",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

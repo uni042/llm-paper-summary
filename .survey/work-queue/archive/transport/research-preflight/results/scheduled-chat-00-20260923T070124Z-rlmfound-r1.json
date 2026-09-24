@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "scheduled-chat-00-20260923T070124Z-rlmfound-r1",
+  "kind": "research",
+  "attempt_id": "attempt-65be149fc066a960d4993312",
+  "job_id": "job-research-9d4382735e8b7ada",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-20260923T070124Z",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-23T07:01:24+00:00",
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:a34898a9a15134d4c910fa81efedd8b5f012dc09a80e9e06ae884f95300cc298",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "37999ed0a8aca6447fb7f149cfc7b14f980642eb"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "79a6f7f28cad787233997b960d17a4916ce025df"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "401833c81c19202ca24c927d356632aa7a46b6d1"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "d8ebee07b2e3ce5c264f73167a67e79a8171dc72"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "d06941f42e0526651e089927402202ca191921a4"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md",
+    "status": "PASS",
+    "file_bytes": 23871,
+    "prose_chars": 5485,
+    "paragraphs": 28,
+    "method_paragraphs": 14,
+    "method_components": 7,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9787857882028286,
+    "japanese_chars": 5675,
+    "latin_chars": 123,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": []
+  },
+  "checked_at": "2026-09-23T07:19:43+00:00",
+  "next_action": "Do not create a completed-submission request manually. The GitHub publication pipeline will materialize the audit request and immutable descriptor from this exact passing result, then dispatch one batch submission drain. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}

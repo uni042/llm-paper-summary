@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-a7b827dd3ec3e848ee83f4c2",
+  "job_id": "job-research-a46b5d827d3949cf",
+  "status": "blocked",
+  "reason": "Primary-source full-text retrieval could not be completed in this invocation. Direct arXiv abstract and HTML fetches were rejected by the web retrieval path; web search exposed the arXiv abstract and third-party summaries but not a verified primary full text, and container-side direct arXiv retrieval failed because external DNS/network access is unavailable. The paper was therefore not inferred from abstract or secondary summaries. Retry this same paper in a later invocation with a working primary full-text route."
+}

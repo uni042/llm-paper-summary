@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "source_commit": "citation-backfill-working-tree",
+  "checked_at": "2026-09-24T03:22:53.607562+00:00",
+  "status": "passed",
+  "scope": "repository-wide structural consistency",
+  "inventory_file_count": 10555,
+  "checked_file_count": 10555,
+  "missing_files": [],
+  "working_changes": [],
+  "checks": [
+    "inventory_coverage",
+    "required_v10_paths",
+    "all_json_yaml",
+    "markdown_file_links",
+    "symlink_targets",
+    "training_membership",
+    "paper_metadata_and_identity",
+    "maintenance_cycle"
+  ],
+  "not_checked": [
+    "External URL reachability",
+    "Fragment anchors",
+    "Scientific validity / full paper audits",
+    "Scheduler startup guarantees",
+    "Runtime execution of arbitrary repository code"
+  ],
+  "external_url_count": 601,
+  "findings": []
+}

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-20dfb7993995c1a7",
+  "type": "research",
+  "parent_job_id": "job-8b03115ae2cdf87d",
+  "priority": 74,
+  "canonical_id": "arXiv:2511.06174",
+  "title": "LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs",
+  "source_url": "https://arxiv.org/abs/2511.06174",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md",
+  "selection_reason": "FPGAのon-chip memoryをtable lookup中心のLLM推論へ転用する直接的なinference architectureで、1B+モデルの実装とAMD V80上の実測評価を持つ。GPU以外のheterogeneous inference/near-memory系統を補完し、MI210/A100とのlatency・energy比較もある。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-18T21:02:30+00:00"
+}

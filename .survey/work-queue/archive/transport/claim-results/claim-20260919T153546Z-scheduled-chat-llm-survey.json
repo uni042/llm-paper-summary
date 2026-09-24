@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T153546Z-scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-376e535ed84f7cfa",
+      "claim_id": "claim-0ff59bc0d504d0b2b89bbcc6",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-0ff59bc0d504d0b2b89bbcc6",
+      "claimed_at": "2026-09-19T15:36:10+00:00",
+      "expires_at": "2026-09-19T17:06:10+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-376e535ed84f7cfa"
+      ],
+      "job": {
+        "job_id": "job-research-376e535ed84f7cfa",
+        "type": "research",
+        "parent_job_id": "job-2b02a086f7aef2f5",
+        "priority": 96,
+        "canonical_id": "arXiv:2609.19969",
+        "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2609.19969",
+        "paper_path": "papers/inference/05-kv-cache/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+        "selection_reason": "1M contextの552B MoEで、CSA2のcross-layer KV reuseとFP4 KV cacheによりHBM常駐global KVを890 bytes/tokenへ縮小し、SWA Bounded ReplayでSSD/host常駐persistent KVをDeepSeek-V4-Flash比約1/8へ削減する。KV圧縮・階層メモリ・SSD offload・MoEという重点テーマが同一実装で交差するため最優先候補。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T15:04:10+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[4].description is too short",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[4].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-19T15:35:59+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-707dea46767d27bb3baa733f"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-707dea46767d27bb3baa733f.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T15:36:10+00:00",
+  "checkpoint_released": 0
+}

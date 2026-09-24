@@ -24,7 +24,7 @@ def write_json(path: Path, value) -> None:
 
 
 class AutoAdvanceDiscoveryTests(unittest.TestCase):
-    def test_completed_round_claims_next_prechecked_bank_and_prechecks_inline(self):
+    def test_completed_round_claims_next_prechecked_bank_and_materializes_request(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             current = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
@@ -89,10 +89,9 @@ class AutoAdvanceDiscoveryTests(unittest.TestCase):
             }
             after = {
                 **before,
-                "next_action": "CONTINUE_DISCOVERY_ROUND",
-                "gate": {"required_action": "CONTINUE_DISCOVERY_ROUND"},
-                "discovery_precheck_result_pending": False,
-                "discovery_evaluation_pending": True,
+                "next_action": "WAIT_FOR_DISCOVERY_PRECHECK_RESULT",
+                "gate": {"required_action": "WAIT_FOR_DISCOVERY_PRECHECK_RESULT"},
+                "discovery_precheck_result_pending": True,
             }
             preload = {
                 "preload_id": preload_id,
@@ -108,23 +107,6 @@ class AutoAdvanceDiscoveryTests(unittest.TestCase):
                 "max_pages": 25,
                 "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-next.json",
             }
-
-            def ready_precheck(repo_root: Path, request_id: str):
-                result = {
-                    "schema_version": 3,
-                    "operation": "precheck_discovery_candidates",
-                    "ok": True,
-                    "request_id": request_id,
-                    "evaluation_allowed": True,
-                    "preload_id": preload_id,
-                    "receipt": "sha256:inline-ready",
-                    "progress_observed_at": current.isoformat(),
-                }
-                write_json(
-                    repo_root / hot_dispatch.PRECHECK_RESULTS / f"{request_id}.json",
-                    result,
-                )
-                return result
 
             with mock.patch.object(
                 advance.derive_worker_run_state.run_state_cache,
@@ -146,12 +128,7 @@ class AutoAdvanceDiscoveryTests(unittest.TestCase):
                             "pick_available",
                             return_value=preload,
                         ):
-                            with mock.patch.object(
-                                advance,
-                                "_process_formal_precheck",
-                                side_effect=ready_precheck,
-                            ):
-                                result = advance.advance(root, report)
+                            result = advance.advance(root, report)
 
             self.assertEqual(len(result["advanced"]), 1)
             claim = json.loads(
@@ -178,21 +155,16 @@ class AutoAdvanceDiscoveryTests(unittest.TestCase):
                 (root / hot_dispatch.DIRECT_DISCOVERY_RESULTS / f"{preload_id}.json").read_text()
             )
             self.assertTrue(direct["work_start_allowed"])
-            self.assertTrue(direct["submission_allowed"])
-            self.assertEqual(direct["status"], "ready_for_submission")
-            self.assertEqual(direct["receipt"], "sha256:inline-ready")
+            self.assertFalse(direct["submission_allowed"])
 
             snapshot_path = root / result["snapshots"][0]["result_path"]
             snapshot = json.loads(snapshot_path.read_text())
             self.assertEqual(snapshot["snapshot_origin"], "discovery-recovery-fast-lane")
             self.assertEqual(snapshot["auto_next_discovery"]["preload_id"], preload_id)
             self.assertTrue(snapshot["auto_next_discovery"]["work_start_allowed"])
-            self.assertTrue(snapshot["auto_next_discovery"]["submission_allowed"])
-            self.assertTrue(snapshot["auto_next_discovery"]["formal_precheck_ready"])
-            self.assertTrue(snapshot["auto_next_discovery"]["inline_precheck"])
             self.assertEqual(
                 snapshot["gate"]["required_action"],
-                "CONTINUE_DISCOVERY_ROUND",
+                "WAIT_FOR_DISCOVERY_PRECHECK_RESULT",
             )
 
     def test_no_new_bank_is_claimed_when_gate_does_not_allow_new_round(self):

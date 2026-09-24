@@ -1,0 +1,622 @@
+#!/usr/bin/env python3
+"""Deterministic stop/continue gate for Scheduled Chat survey workers.
+
+The gate decides whether the whole run may stop for the common hourly paper
+worker. The :00 and :30 schedules are identical. When candidate_inventory is
+provided, the run-start candidate_inventory is compared with the generalized
+RESEARCH_DISCOVERY_THRESHOLD from claim_window_policy. The selected mode is frozen
+for the run;
+callers must reuse the run-start routing value or pass the explicit work_mode on later checks. Existing per-mode quotas remain progression floors.
+Transport backlogs, claim-result propagation delay, and job-local failures are not
+stop conditions when repository state remains readable and no explicit hard
+condition holds.
+
+Hourly Scheduled Chat workers use a one-hour run window measured from the actual
+invocation start. The nominal :00/:30 schedule boundary is retained only as a
+compatibility fallback when a caller cannot provide the actual-start deadline.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+
+import claim_window_policy
+import worker_quota_policy
+
+
+PRODUCTIVE_WAIT_RECHECK_SECONDS = 0
+
+WAIT_MICROTASKS = (
+    "inspect_same_worker_async_transport",
+    "lightweight_validate_recent_completed_paper",
+    "cleanup_terminal_library_pdf_cache",
+    "read_only_queue_consistency_check",
+    "organize_current_paper_evidence",
+)
+
+
+def yn(value: str) -> bool:
+    value = value.strip().lower()
+    if value in {"yes", "y", "true", "1"}:
+        return True
+    if value in {"no", "n", "false", "0"}:
+        return False
+    raise argparse.ArgumentTypeError("expected yes/no")
+
+
+def decide(args: argparse.Namespace) -> dict[str, object]:
+    reasons: list[str] = []
+    fallback_writable = bool(args.library_writable)
+    any_durable_transport = bool(args.github_write or fallback_writable)
+
+    candidate_inventory_raw = getattr(args, "candidate_inventory", None)
+    candidate_inventory = (
+        max(int(candidate_inventory_raw), 0)
+        if candidate_inventory_raw is not None
+        else None
+    )
+    explicit_work_mode = str(getattr(args, "work_mode", "auto") or "auto").strip().lower()
+    if explicit_work_mode == "auto":
+        if candidate_inventory is None:
+            raise ValueError(
+                "candidate_inventory is required when work_mode=auto; "
+                "schedule labels and legacy worker kinds are not routing inputs"
+            )
+        work_mode = "research" if candidate_inventory >= claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD else "discovery"
+        mode_source = "candidate_inventory"
+    else:
+        work_mode = explicit_work_mode
+        mode_source = "explicit_work_mode"
+    research_audit_completed_this_invocation = max(
+        int(getattr(args, "research_audit_completed_this_invocation", 0) or 0),
+        0,
+    )
+    research_minimum_completions = max(
+        int(getattr(args, "research_minimum_completions", worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS) or worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS),
+        1,
+    )
+    last_terminal_job_status = str(
+        getattr(args, "last_terminal_job_status", "none") or "none"
+    ).strip().lower()
+    status_only_terminal = last_terminal_job_status in {"blocked", "deferred", "rejected"}
+    claim_state_checked = bool(getattr(args, "claim_state_checked", False) or getattr(args, "claim_result_pending", False))
+    submission_state_checked = bool(
+        getattr(args, "submission_state_checked", False)
+        or getattr(args, "submission_result_pending", False)
+    )
+    discovery_rounds_completed = max(int(getattr(args, "discovery_rounds_completed", 0) or 0), 0)
+    discovery_min_rounds = max(int(getattr(args, "discovery_min_rounds", worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS) or worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS), 1)
+    discovery_exhausted = bool(getattr(args, "discovery_exhausted", False))
+    next_axis_available = bool(getattr(args, "next_axis_available", False))
+    minimum_rounds_remaining = max(discovery_min_rounds - discovery_rounds_completed, 0)
+
+    if args.platform_limit:
+        reasons.append("platform_limit_reached")
+
+    seconds_to_next = getattr(args, "seconds_to_next_scheduled_task", None)
+    seconds_to_deadline = getattr(args, "seconds_to_run_deadline", None)
+    handoff_guard = int(getattr(args, "scheduled_handoff_guard_seconds", 600))
+
+    if seconds_to_deadline is not None:
+        effective_seconds_to_handoff = int(seconds_to_deadline)
+        handoff_time_source = "run_deadline"
+        handoff_reason = "run_deadline_within_handoff_guard"
+    elif seconds_to_next is not None:
+        effective_seconds_to_handoff = int(seconds_to_next)
+        handoff_time_source = "legacy_next_scheduled_task_compat"
+        handoff_reason = "next_scheduled_task_within_handoff_guard"
+    else:
+        effective_seconds_to_handoff = None
+        handoff_time_source = "unknown"
+        handoff_reason = None
+
+    handoff_window_active = bool(
+        effective_seconds_to_handoff is not None
+        and effective_seconds_to_handoff <= handoff_guard
+    )
+    final_handoff_active = bool(
+        effective_seconds_to_handoff is not None
+        and effective_seconds_to_handoff <= 180
+    )
+    if final_handoff_active and handoff_reason is not None:
+        reasons.append("run_deadline_within_final_180_second_handoff_guard")
+
+    if not args.github_read:
+        reasons.append("github_read_unavailable_for_repo_state")
+
+    if args.unpublished_completed_result:
+        durable = bool(args.result_durable or any_durable_transport)
+        if not durable:
+            reasons.append("completed_result_not_durably_preserved")
+
+    if args.offline_seed_required:
+        seed_durable = bool(args.seed_durable or any_durable_transport)
+        if not seed_durable:
+            reasons.append("required_spillover_seed_not_durably_preserved")
+
+    independent_work = bool(
+        args.independent_work
+        or args.spillover_work
+        or (
+            work_mode == "discovery"
+            and args.can_discover
+            and any_durable_transport
+        )
+    )
+    active_assignment = bool(getattr(args, "active_assignment", False))
+    active_claim_count = max(int(getattr(args, "active_claim_count", 1 if active_assignment else 0) or 0), 0)
+    claim_window = claim_window_policy.normalize_window(
+        int(getattr(args, "claim_window", claim_window_policy.DEFAULT_CLAIM_WINDOW)
+            or claim_window_policy.DEFAULT_CLAIM_WINDOW)
+    )
+    refill_threshold_raw = getattr(args, "claim_refill_threshold", None)
+    claim_refill_threshold = (
+        claim_window_policy.refill_threshold(claim_window)
+        if refill_threshold_raw is None
+        else max(0, min(int(refill_threshold_raw), claim_window - 1))
+    )
+    claim_window_remaining_raw = getattr(args, "claim_window_remaining", None)
+    claim_window_remaining = (
+        max(claim_window - active_claim_count, 0)
+        if claim_window_remaining_raw is None
+        else max(int(claim_window_remaining_raw), 0)
+    )
+    claim_refill_needed = claim_window_policy.should_refill(
+        active_claim_count,
+        claim_window,
+        threshold=claim_refill_threshold,
+    )
+
+    transient_claim_wait = bool(claim_state_checked and args.claim_result_pending and args.github_read)
+    claim_result_pending_age_seconds = max(
+        int(getattr(args, "claim_result_pending_age_seconds", 0) or 0),
+        0,
+    )
+    claim_monitor_window_seconds = max(
+        int(getattr(args, "claim_monitor_window_seconds", 60) or 60),
+        PRODUCTIVE_WAIT_RECHECK_SECONDS,
+    )
+    transient_submission_wait = bool(
+        submission_state_checked
+        and getattr(args, "submission_result_pending", False)
+        and args.github_read
+    )
+    pipeline_ahead_count = max(int(getattr(args, "pipeline_ahead_count", 0) or 0), 0)
+    discovery_precheck_result_pending = bool(getattr(args, "discovery_precheck_result_pending", False))
+    discovery_submission_result_pending = bool(getattr(args, "discovery_submission_result_pending", False))
+    discovery_evaluation_pending = bool(getattr(args, "discovery_evaluation_pending", False))
+    discovery_recovery_required = bool(getattr(args, "discovery_recovery_required", False))
+    discovery_round_in_progress = bool(
+        discovery_precheck_result_pending
+        or discovery_submission_result_pending
+        or discovery_evaluation_pending
+        or discovery_recovery_required
+    )
+    if (
+        args.global_dependency
+        and not independent_work
+        and not transient_claim_wait
+        and not transient_submission_wait
+        and not discovery_round_in_progress
+    ):
+        reasons.append("all_remaining_work_blocked_after_fallback_consideration")
+
+    hard_stop = bool(reasons)
+    if reasons:
+        decision = "STOP_RUN"
+        required_action = "FINALIZE"
+        finalization_allowed = True
+    elif work_mode == "discovery":
+        if discovery_precheck_result_pending:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_DISCOVERY_PRECHECK_RESULT"
+            finalization_allowed = False
+        elif discovery_submission_result_pending:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"
+            finalization_allowed = False
+        elif discovery_recovery_required:
+            decision = "CONTINUE"
+            required_action = "RECOVER_DISCOVERY_SUBMISSION"
+            finalization_allowed = False
+        elif discovery_evaluation_pending:
+            decision = "CONTINUE"
+            required_action = "CONTINUE_DISCOVERY_ROUND"
+            finalization_allowed = False
+        elif handoff_window_active:
+            reasons.append(handoff_reason or "handoff_window_no_new_discovery_round")
+            reasons.append("handoff_window_no_new_discovery_round")
+            decision = "STOP_RUN"
+            required_action = "FINALIZE"
+            finalization_allowed = True
+        elif discovery_rounds_completed < discovery_min_rounds:
+            decision = "CONTINUE"
+            required_action = "DISCOVER_AGAIN"
+            finalization_allowed = False
+        else:
+            decision = "CONTINUE"
+            required_action = "DISCOVER_AGAIN" if (next_axis_available or args.can_discover) else "REFRESH_AND_CONTINUE"
+            finalization_allowed = False
+    else:
+        if not claim_state_checked:
+            decision = "CONTINUE"
+            required_action = "CHECK_CLAIM_STATE"
+            finalization_allowed = False
+        elif active_assignment:
+            decision = "CONTINUE"
+            if transient_claim_wait:
+                required_action = "CONTINUE_ASSIGNED_WORK"
+            elif not submission_state_checked:
+                required_action = "CHECK_SUBMISSION_STATE"
+            elif (
+                not handoff_window_active
+                and independent_work
+                and claim_window_remaining > 0
+                and claim_refill_needed
+            ):
+                required_action = "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY"
+            else:
+                required_action = "CONTINUE_ASSIGNED_WORK"
+            finalization_allowed = False
+        elif transient_claim_wait:
+            decision = "CONTINUE"
+            required_action = (
+                "MONITOR_CLAIM_FAST_LANE"
+                if claim_result_pending_age_seconds < claim_monitor_window_seconds
+                else "WAIT_FOR_CLAIM_RESULT"
+            )
+            finalization_allowed = False
+        elif not submission_state_checked:
+            decision = "CONTINUE"
+            required_action = "CHECK_SUBMISSION_STATE"
+            finalization_allowed = False
+        elif transient_submission_wait:
+            decision = "CONTINUE"
+            if handoff_window_active:
+                required_action = "MONITOR_SUBMISSION_RESULTS"
+            elif independent_work:
+                required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
+            else:
+                required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
+            finalization_allowed = False
+        elif handoff_window_active:
+            reasons.append(handoff_reason or "handoff_window_no_new_research_audit_claim")
+            reasons.append("handoff_window_no_new_research_audit_claim")
+            decision = "STOP_RUN"
+            required_action = "FINALIZE"
+            finalization_allowed = True
+        elif not independent_work:
+            decision = "CONTINUE"
+            required_action = "WAIT_FOR_READY_RESEARCH_AUDIT"
+            finalization_allowed = False
+        else:
+            decision = "CONTINUE"
+            required_action = "CLAIM_NEXT_RESEARCH_AUDIT"
+            finalization_allowed = False
+
+    # Reasons added by the 600-second start-prohibition branch are canonical hard
+    # stop reasons too. Recompute after routing so finalization sees the same state
+    # that worker-router.md defines.
+    hard_stop = bool(reasons)
+
+    write_scope = "none"
+    write_action = "normal"
+    if args.write_failed:
+        if args.probe == "success":
+            write_scope = "target_or_payload_specific"
+            write_action = "checkpoint_affected_job_via_library_if_needed_then_continue; github_writes_remain_allowed"
+        elif args.probe == "failure":
+            write_scope = "run_wide_github_write_unavailable"
+            if fallback_writable:
+                if work_mode == "research":
+                    write_action = (
+                        "disable_further_github_writes_this_run; checkpoint_current_assignment_to_library; "
+                        "do_not_start_next_paper; keep_scheduled_task_enabled"
+                    )
+                else:
+                    write_action = (
+                        "disable_further_github_writes_this_run; checkpoint_current_discovery_payload_to_library; "
+                        "continue_only_work_that_can_be_durably_preserved_without_bypassing_precheck; "
+                        "keep_scheduled_task_enabled"
+                    )
+            else:
+                write_action = (
+                    "disable_further_github_writes_this_run; do_not_start_uncheckpointable_new_work; "
+                    "keep_scheduled_task_enabled"
+                )
+        else:
+            write_scope = "unclassified"
+            write_action = "run_fixed_health_probe_once_before_classifying"
+
+    claim_wait_action = "none"
+    claim_wait_seconds = 0
+    if required_action in {"MONITOR_CLAIM_FAST_LANE", "WAIT_FOR_CLAIM_RESULT"}:
+        claim_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
+        if required_action == "MONITOR_CLAIM_FAST_LANE":
+            claim_wait_action = (
+                "keep_same_request_id; do_not_issue_another_claim; inspect_survey_claim_fast_actions_run_for_request_commit; "
+                "inspect_run_job_or_steps_if_queued_or_in_progress; inspect_same_worker_unsettled_submissions_retryable_repairs_and_active_claim_consistency; "
+                "run_one_wait_microtask; refresh_latest_head_and_matching_claim_result; "
+                "repeat_productive_monitor_cycle_while_request_age_under_60_seconds; "
+                "repeat_until_result_or_terminal_hard_stop"
+            )
+        else:
+            claim_wait_action = (
+                "keep_same_request_id; do_not_issue_another_claim; inspect_survey_claim_fast_actions_status_and_same_worker_transport_health; "
+                "run_one_wait_microtask; refresh_latest_head_and_matching_claim_result; "
+                "if_actions_failed_or_cancelled_follow_canonical_recovery_without_new_request; "
+                "repeat_until_result_or_terminal_hard_stop"
+            )
+
+    submission_wait_action = "none"
+    submission_wait_seconds = 0
+    if required_action == "MONITOR_SUBMISSION_RESULTS":
+        submission_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
+        submission_wait_action = (
+            "do_not_start_new_paper_in_handoff_window; keep_all_pending_submission_identities; "
+            "run_one_wait_microtask; refresh_latest_head_and_pending_submission_results; "
+            "follow_each_result_next_action_or_recovery_steps; repeat_until_result_or_final_180_second_handoff"
+        )
+
+    discovery_wait_action = "none"
+    discovery_wait_seconds = 0
+    if required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
+        discovery_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
+        discovery_wait_action = (
+            "keep_same_discovery_precheck_request; run_one_wait_microtask; refresh_latest_head_and_matching_precheck_result; "
+            "periodic_discovery_precheck_recovery_will_reprocess_orphaned_requests; "
+            "repeat_until_result_or_final_180_second_handoff"
+        )
+    elif required_action == "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT":
+        discovery_wait_seconds = PRODUCTIVE_WAIT_RECHECK_SECONDS
+        discovery_wait_action = (
+            "keep_same_discovery_submission; run_one_wait_microtask; refresh_latest_head_and_matching_discovery_result; "
+            "periodic_discovery_submission_recovery_will_reprocess_orphaned_submissions; "
+            "repeat_until_result_or_final_180_second_handoff"
+        )
+
+    progress_notice = ""
+    if required_action == "MONITOR_CLAIM_FAST_LANE":
+        progress_notice = (
+            "担当確保結果の生成待ちです。待機中はSurvey claim fast laneのActions状態、job/step、"
+            "同一workerの未解決submission・retryable repair・active claim整合を確認し、"
+            "待機ミクロタスクを1件処理してから最新mainと同じrequest_idのresultを再確認します。60秒未満はこの作業サイクルを継続し、runを終了しません。"
+        )
+    elif required_action == "WAIT_FOR_CLAIM_RESULT":
+        progress_notice = (
+            "担当確保結果が60秒以上pendingです。新しいrequestは発行せず、Survey claim fast laneのActions状態と"
+            "同一workerのtransport healthを確認し、待機ミクロタスクを1件処理してから同じrequest_idを再確認します。"
+        )
+    elif required_action == "MONITOR_SUBMISSION_RESULTS":
+        progress_notice = (
+            "残り600秒以下の開始禁止窓に入っているため新しい論文は開始しません。"
+            "既存の未確定submission result待ちでは短い待機ミクロタスクを1件処理してから結果を再確認し、返されたnext_action / recovery_stepsに従います。"
+        )
+    elif required_action == "WAIT_FOR_DISCOVERY_PRECHECK_RESULT":
+        progress_notice = (
+            "開始済みDiscovery precheckのresultを待っています。残り600秒の開始禁止窓に入っても"
+            "このroundは終了させず、短い待機ミクロタスクを1件処理するたびに同じrequestを再確認します。"
+        )
+    elif required_action == "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT":
+        progress_notice = (
+            "開始済みDiscovery submissionのresultを待っています。残り600秒の開始禁止窓に入っても"
+            "このroundは終了させず、短い待機ミクロタスクを1件処理するたびに同じsubmissionを再確認します。"
+        )
+
+    if required_action == "CHECK_CLAIM_STATE":
+        next_action_message = "最新のclaim request/result対応を確認し、pendingなら同一request_idの監視サイクルへ進みます。"
+    elif required_action in {"MONITOR_CLAIM_FAST_LANE", "WAIT_FOR_CLAIM_RESULT"}:
+        next_action_message = progress_notice
+    elif required_action == "CHECK_SUBMISSION_STATE":
+        next_action_message = "最新のimmutable descriptorと対応するsubmission result/Actions状態を確認します。"
+    elif required_action == "MONITOR_SUBMISSION_RESULTS":
+        next_action_message = progress_notice
+    elif required_action in {"WAIT_FOR_DISCOVERY_PRECHECK_RESULT", "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT"}:
+        next_action_message = progress_notice
+    elif required_action == "CONTINUE_DISCOVERY_ROUND":
+        next_action_message = "成功済みprecheckの評価・正規Discovery submissionまで、開始済みroundを完了させます。"
+    elif required_action == "RECOVER_DISCOVERY_SUBMISSION":
+        next_action_message = "失敗済みDiscovery precheck/submissionのrecovery_stepsに従い、同じroundを正規経路へ戻します。"
+    elif required_action == "CLAIM_NEXT_RESEARCH_AUDIT":
+        if transient_submission_wait:
+            next_action_message = (
+                "既提出descriptorと未確定resultは耐久追跡対象として残しますが、submission result待ちは新規claimの同期障壁にしません。"
+                "最新queue/claim stateを再取得し、既確保standbyのforeground昇格またはclaim window補充を行ってResearch/Audit処理を継続します。1回のclaim requestが複数assignmentを返しても本文処理はforeground 1件だけです。"
+                "descriptor-backed旧claimがactive表示でも、新claim処理の正規解放に任せます。"
+            )
+        else:
+            next_action_message = (
+                "前jobは終端しましたがrunは終了しません。最新queue/claim stateを再取得し、"
+                "同一workerのclaim window状態を確認し、既確保standbyの昇格または必要なstandby補充を行います。本文処理はforeground 1件だけです。"
+            )
+    elif required_action == "CONTINUE_ASSIGNED_WORK_AND_REFILL_STANDBY":
+        next_action_message = (
+            f"foregroundのResearch/Auditを止めずにそのまま読解します。active claimが低水位{claim_refill_threshold}件以下になったため、"
+            f"claim windowが{claim_window}件へ戻るようstandby補充用claim requestを1件だけ発行します。"
+            "補充result待ちはforeground読解の同期障壁にせず、"
+            "foreground終端時は既確保standbyの先頭へ即座に昇格します。"
+        )
+    elif required_action == "CONTINUE_ASSIGNED_WORK":
+        next_action_message = (
+            "担当確保済みforegroundのResearch/Auditを継続します。既確保standbyがあればforeground終端時に"
+            "追加claim待ちを挟まず先頭standbyへ即座に昇格します。"
+        )
+    elif required_action == "WAIT_FOR_READY_RESEARCH_AUDIT":
+        next_action_message = "現在claim可能なResearch/Auditが0件です。空のclaim requestを出さず、待機ミクロタスクを1件処理してから最新queueを再確認します。run中にDiscoveryへ切り替えません。"
+        progress_notice = next_action_message
+    elif required_action == "CONTINUE_WORK":
+        next_action_message = "最新queue/stateを再取得し、次の独立Research/Auditまたは許可された独立作業へ進みます。"
+    elif required_action == "DISCOVER_AGAIN":
+        next_action_message = "未走査の探索軸へ進み、次のDiscovery roundを実行します。"
+    elif required_action == "REFRESH_AND_CONTINUE":
+        next_action_message = "最新canonical stateを再取得し、返された次の独立作業へ進みます。"
+    elif required_action == "FINALIZE":
+        next_action_message = "正本所定の停止条件を満たしたため、安全な最終化処理へ進みます。"
+    else:
+        next_action_message = required_action
+
+    productive_wait_required = bool(
+        not final_handoff_active
+        and required_action
+        in {
+            "MONITOR_CLAIM_FAST_LANE",
+            "WAIT_FOR_CLAIM_RESULT",
+            "MONITOR_SUBMISSION_RESULTS",
+            "WAIT_FOR_DISCOVERY_PRECHECK_RESULT",
+            "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT",
+            "WAIT_FOR_READY_RESEARCH_AUDIT",
+        }
+    )
+
+    return {
+        "decision": decision,
+        "required_action": required_action,
+        "finalization_allowed": finalization_allowed,
+        "hard_stop": bool(reasons),
+        "stop_reasons": reasons,
+        "candidate_inventory": candidate_inventory,
+        "work_mode": work_mode,
+        "mode_source": mode_source,
+        "research_audit_completed_this_invocation": research_audit_completed_this_invocation,
+        "research_minimum_completions": research_minimum_completions,
+        "last_terminal_job_status": last_terminal_job_status,
+        "status_only_terminal": status_only_terminal,
+        "research_quota_remaining": max(
+            research_minimum_completions - research_audit_completed_this_invocation, 0
+        ),
+        "discovery_rounds_completed": discovery_rounds_completed,
+        "discovery_min_rounds": discovery_min_rounds,
+        "minimum_rounds_remaining": minimum_rounds_remaining,
+        "discovery_exhausted": discovery_exhausted,
+        "next_axis_available": next_axis_available,
+        "write_failure_scope": write_scope,
+        "write_action": write_action,
+        "claim_state_checked": claim_state_checked,
+        "claim_result_pending_age_seconds": claim_result_pending_age_seconds,
+        "claim_monitor_window_seconds": claim_monitor_window_seconds,
+        "claim_result_pending": bool(args.claim_result_pending),
+        "claim_wait_action": claim_wait_action,
+        "claim_wait_seconds": claim_wait_seconds,
+        "submission_state_checked": submission_state_checked,
+        "submission_result_pending": bool(getattr(args, "submission_result_pending", False)),
+        "pipeline_ahead_count": pipeline_ahead_count,
+        "submission_wait_action": submission_wait_action,
+        "submission_wait_seconds": submission_wait_seconds,
+        "discovery_precheck_result_pending": discovery_precheck_result_pending,
+        "discovery_submission_result_pending": discovery_submission_result_pending,
+        "discovery_evaluation_pending": discovery_evaluation_pending,
+        "discovery_recovery_required": discovery_recovery_required,
+        "discovery_round_in_progress": discovery_round_in_progress,
+        "discovery_wait_action": discovery_wait_action,
+        "discovery_wait_seconds": discovery_wait_seconds,
+        "next_action_message": next_action_message,
+        "progress_notice": progress_notice,
+        "productive_wait_required": productive_wait_required,
+        "productive_wait_polling": False,
+        "productive_wait_recheck_after_each_task": productive_wait_required,
+        "wait_microtasks": list(WAIT_MICROTASKS) if productive_wait_required else [],
+        "fallback_writable": fallback_writable,
+        "durable_transport_available": any_durable_transport,
+        "independent_work_after_fallback": independent_work,
+        "active_assignment": active_assignment,
+        "active_claim_count": active_claim_count,
+        "claim_window": claim_window,
+        "claim_refill_threshold": claim_refill_threshold,
+        "claim_refill_needed": claim_refill_needed,
+        "claim_window_remaining": claim_window_remaining,
+        "handoff_window_active": handoff_window_active,
+        "final_handoff_active": final_handoff_active,
+        "seconds_to_run_deadline": seconds_to_deadline,
+        "seconds_to_next_scheduled_task": seconds_to_next,
+        "effective_seconds_to_handoff": effective_seconds_to_handoff,
+        "handoff_time_source": handoff_time_source,
+        "legacy_schedule_handoff_fallback_used": handoff_time_source == "legacy_next_scheduled_task_compat",
+        "scheduled_handoff_guard_seconds": handoff_guard,
+        "scheduled_handoff_active": handoff_window_active,
+        "rule": (
+            "A single transport failure, pending claim result, pending backlog, bank exhaustion, "
+            "or discovery submission is never by itself a whole-run stop condition. Normal workers "
+            "must explicitly confirm the latest claim and submission state before ordinary finalization. Required "
+            "pending claim/result identities are kept stable; instead of sleeping or fixed-interval polling, the worker runs one bounded wait microtask and then rechecks the same target until terminal or a canonical hard stop. "
+            "When claimable independent Research/Audit work is available, pending submission results never block another paper claim. "
+            f"Workers process only one foreground paper at a time, while the configurable claim window defaults to {claim_window_policy.DEFAULT_CLAIM_WINDOW} active claims. "
+            f"A refill is triggered while half of the hot bank-ready slice remains (current threshold {claim_refill_threshold}) and fills back toward the target window. "
+            "A standby-refill claim result never blocks an already active foreground paper. When foreground becomes terminal, the oldest standby becomes foreground immediately. "
+            "All submitted attempts remain durably tracked. "
+            "Submission results are monitored concurrently and become a foreground wait only when the 600-second no-new-work window begins or no Research/Audit job is claimable. Hourly Scheduled Chat workers prefer an actual-"
+            "invocation-start + 3600 second run deadline over the nominal schedule boundary. "
+            "The :00 and :30 schedules are the same paper task. In automatic mode, the run-start "
+            f"candidate_inventory is mandatory: >={claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD} selects Research/Audit and below it selects Discovery. "
+            "The selected mode is frozen for the run. Schedule labels and legacy worker kinds never select a mode. "
+            "Canonical callers must provide seconds_to_run_deadline from actual_invocation_start; seconds_to_next_scheduled_task is a compatibility-only fallback for historical direct callers and must not be used by normal run-state flow. "
+            f"Discovery's {discovery_min_rounds}-round floor counts successful canonical precheck rounds in this invocation; "
+            "multiple submissions derived from one precheck count as one round only after every declared split submission is durably successful. "
+            f"Research/Audit exposes the combined {research_minimum_completions}-completion quota state. The {research_minimum_completions}-completion floor is not a stop cap: "
+            "whenever claimable independent Research/Audit work exists outside the 600-second no-new-work window, "
+            "the required action is CLAIM_NEXT_RESEARCH_AUDIT even after the floor has been met. A pending "
+            "submission therefore does not become a claim barrier while new Research/Audit work remains claimable; hard "
+            "handoff/platform/durability/read "
+            "failures override ordinary continuation. The 600-second handoff window forbids new independent work but does not abort an already-started assignment; "
+            "the final 180 seconds force safe handoff. The 600-second window never aborts an already-started Discovery precheck/evaluation/submission/recovery. Research/Audit with zero claimable jobs waits and refreshes instead of issuing empty claims or switching modes. "
+            "Discovery has no exhaustion-based ordinary early stop."
+        ),
+    }
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--github-read", type=yn, default=True)
+    ap.add_argument("--github-write", type=yn, default=True)
+    ap.add_argument("--library-writable", type=yn, default=False)
+    ap.add_argument("--result-durable", type=yn, default=True)
+    ap.add_argument("--seed-durable", type=yn, default=True)
+    ap.add_argument("--unpublished-completed-result", type=yn, default=False)
+    ap.add_argument("--offline-seed-required", type=yn, default=False)
+    ap.add_argument("--platform-limit", type=yn, default=False)
+    ap.add_argument("--global-dependency", type=yn, default=False)
+    ap.add_argument("--independent-work", type=yn, default=True)
+    ap.add_argument("--active-assignment", type=yn, default=False)
+    ap.add_argument("--active-claim-count", type=int, default=0)
+    ap.add_argument("--claim-window", type=int, default=claim_window_policy.DEFAULT_CLAIM_WINDOW)
+    ap.add_argument("--claim-refill-threshold", type=int, default=None)
+    ap.add_argument("--claim-window-remaining", type=int, default=None)
+    ap.add_argument("--spillover-work", type=yn, default=False)
+    ap.add_argument("--can-discover", type=yn, default=True)
+    ap.add_argument("--claim-state-checked", type=yn, default=False)
+    ap.add_argument("--claim-result-pending", type=yn, default=False)
+    ap.add_argument("--claim-result-pending-age-seconds", type=int, default=0)
+    ap.add_argument("--claim-monitor-window-seconds", type=int, default=60)
+    ap.add_argument("--submission-state-checked", type=yn, default=False)
+    ap.add_argument("--submission-result-pending", type=yn, default=False)
+    ap.add_argument("--pipeline-ahead-count", type=int, default=0)
+    ap.add_argument("--discovery-precheck-result-pending", type=yn, default=False)
+    ap.add_argument("--discovery-submission-result-pending", type=yn, default=False)
+    ap.add_argument("--discovery-evaluation-pending", type=yn, default=False)
+    ap.add_argument("--discovery-recovery-required", type=yn, default=False)
+    ap.add_argument("--write-failed", type=yn, default=False)
+    ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
+    ap.add_argument("--seconds-to-run-deadline", type=int, default=None)
+    ap.add_argument("--seconds-to-next-scheduled-task", type=int, default=None)
+    ap.add_argument("--scheduled-handoff-guard-seconds", type=int, default=600)
+    ap.add_argument("--candidate-inventory", type=int, default=None)
+    ap.add_argument("--work-mode", choices=("auto", "research", "discovery"), default="auto")
+    ap.add_argument("--research-audit-completed-this-invocation", type=int, default=0)
+    ap.add_argument("--research-minimum-completions", type=int, default=worker_quota_policy.RESEARCH_AUDIT_MINIMUM_COMPLETIONS)
+    ap.add_argument(
+        "--last-terminal-job-status",
+        choices=("none", "completed", "blocked", "deferred", "rejected"),
+        default="none",
+    )
+    ap.add_argument("--discovery-rounds-completed", type=int, default=0)
+    ap.add_argument("--discovery-min-rounds", type=int, default=worker_quota_policy.DISCOVERY_MINIMUM_ROUNDS)
+    ap.add_argument("--discovery-exhausted", type=yn, default=False)
+    ap.add_argument("--next-axis-available", type=yn, default=False)
+    args = ap.parse_args()
+    print(json.dumps(decide(args), ensure_ascii=False, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    from worker_guidance import run_guided
+
+    raise SystemExit(run_guided(main, script=__file__))

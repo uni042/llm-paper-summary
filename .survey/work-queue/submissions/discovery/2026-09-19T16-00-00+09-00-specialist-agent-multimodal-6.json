@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T16:00:00+09:00",
+    "round": "specialist-agent-multimodal-6",
+    "axis": "agentic serving・multimodal serving・stateful runtime",
+    "query_summary": "agentic/multi-turn servingとmultimodal servingを独立検索。Policy-Driven Runtime Layer、HeteroServe、AGENTSERVESIM、GoodServe、RPS/TCM-Serve等はcanonical identityで既知。security寄りAgenTEEは今回のinference performance survey主対象から外し、弱い候補で埋めなかった。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2605.27744", "arXiv:2603.12707", "arXiv:2606.09613", "arXiv:2605.16867", "arXiv:2603.26498"],
+    "next_axis_hint": "最後にspeculative decoding・deterministic inference・output-length predictionのsystems経路を確認する",
+    "empty_round_reason": "strong_results_already_represented",
+    "search_windows": [{"topic":"agent-multimodal-serving","source":"web-arxiv-search","date_range":"2026-01..2026-09","category":"agentic-multimodal","citation_direction":"none","query_family":"agentic-multiturn-multimodal-serving-state","raw_result_count":15,"unseen_result_count":0,"duplicate_filtered_count":5,"rejection_filtered_count":0,"candidate_evaluation_count":5,"candidate_accepted_count":0,"position":"web-search-multi-query-6"}]
+  }
+}

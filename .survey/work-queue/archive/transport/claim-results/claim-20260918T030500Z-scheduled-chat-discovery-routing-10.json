@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T030500Z-scheduled-chat-discovery-routing-10",
+  "worker_id": "scheduled-chat-discovery-routing",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-2829f7afbf13ae9b",
+      "claim_id": "claim-795dba1598f051e075af3ec9",
+      "worker_id": "scheduled-chat-discovery-routing",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-795dba1598f051e075af3ec9",
+      "claimed_at": "2026-09-18T03:03:51+00:00",
+      "expires_at": "2026-09-18T04:33:51+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-2829f7afbf13ae9b"
+      ],
+      "job": {
+        "job_id": "job-research-2829f7afbf13ae9b",
+        "type": "research",
+        "parent_job_id": "job-eb22aac21645da23",
+        "priority": 84,
+        "canonical_id": "arXiv:2508.02558",
+        "title": "Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction",
+        "source_url": "https://arxiv.org/abs/2508.02558",
+        "paper_path": "papers/inference/06-kv-cache-memory/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+        "selection_reason": "dLLMのcross-layer token saliency安定性を利用してdynamic cache evictionとdelayed bidirectional sparse cachingを行うtraining-free framework。LLaDA/Dreamでvanilla dLLM比最大10倍throughputを報告し、長文cache memory圧力に直接関係する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T19:08:05+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.novelty must explain the paper-specific idea | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.novelty must explain the paper-specific idea",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-18T02:23:55+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-ce3285262dcb4c07529a0b28"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-ce3285262dcb4c07529a0b28.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T03:03:51+00:00",
+  "checkpoint_released": 0
+}
