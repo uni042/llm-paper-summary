@@ -70,7 +70,7 @@ jobs:
             # The direct-take acknowledgement is lightweight and is sufficient for
             # the worker to know that cached candidate evaluation may continue.
             # Publish it before identity snapshot construction and formal precheck.
-            python .survey/scripts/hot_dispatch.py --repo-root . materialize-discovery \
+            python .survey/scripts/hot_dispatch.py --repo-root . acknowledge-discovery \
               | tee /tmp/direct-discovery-early.json
 
             git add .survey/work-queue/direct-take-results
