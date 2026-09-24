@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-f151a18e22842a355a31eb94","job_id":"job-research-fc413cbcbab0d455","data":{"hardware":"NVIDIA GH200 Grace Hopper Superchipを使用する。画像処理装置はH200 96GB HBM3、中央処理装置は72 Arm Neoverse V2 coreと224GB LPDDR5Xを持ち、CPU-GPU間は900GB/s NVLinkで接続される。","software":"vLLM 0.7.3、CUDA 12.4、PyTorch 2.5.1、Linux kernel 5.14。Oneiros実装は約3000行のPythonと約300行のC++/CUDAを追加し、動的鍵値物理ページ割当、再割当制御、非同期重み転送を統合する。","methodology":"OPT-13B/30B、Llama-2-13B、Llama-3-8Bを用い、時間共有では三モデル構成C1と二モデル構成C2、空間共有ではMPS型の非厳密分離とMIG型の厳密分離を評価する。Azure coding LLM traceの到着パターンを負荷率だけ変えて再生し、ShareGPT、Alpaca、平均1734トークンの長要求と634トークンの短要求を使う。比較対象はvLLMと鍵値交換方式Pie。指標はP99初回トークン遅延、P99トークン間遅延、トークン毎秒スループット。層選択、MRU/LRU、動的復帰、再割当率上限の切除実験も行う。","scope":"主な性能利得はGH200の非常に高いCPU-GPU帯域を前提にする。論文自身がH100では中央処理装置計算退避が相対的に有利になり得ることを示しており、PCIe接続の一般的なGPUで同じ再割当率を隠蔽できるとは限らない。理論では層が同一計算時間・転送量である前提を置き、異種層モデルでは層ごとの転送時間を用いた整数最適化などへの拡張が必要である。"},"reservation":{"claim_id":"claim-preload-f151a18e22842a355a31eb94","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-a2bcb0515500552db537d4c2",
+  "job_id": "job-research-92841f7f38c00d3c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-a2bcb0515500552db537d4c2",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}

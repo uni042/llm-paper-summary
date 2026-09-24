@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-f151a18e22842a355a31eb94","job_id":"job-research-fc413cbcbab0d455","data":{"canonical_id":"DOI:10.1145/3830422.3830427","arxiv_id":"2507.11507","doi":"10.1145/3830422.3830427","openreview_id":null,"arxiv_categories":{"primary":"cs.OS","cross_list":[]},"title":"Elastic Memory Remapping for Multi-tenant LLM Serving","summary":"本論文の実体であるOneirosは、鍵・値キャッシュを中央処理装置へ双方向交換する代わりに、推論中は不変なモデル重みの画像処理装置メモリを一時的に鍵・値キャッシュへ転用し、必要な層重みだけを主記憶から一方向に戻す動的再割当方式を提案する。多モデル共存環境では休止モデルの重み領域を優先的に回収し、鍵値不足時に層単位で再割当率を増減する。循環する層実行順序を利用して再転送層を等間隔に選び、転送と画像処理装置計算を重ねる。vLLMへ約3000行のPythonと300行のC++/CUDAを追加し、GH200上でOPT-13B/30B、Llama-2-13B、Llama-3-8Bを評価した結果、vLLM比でP99トークン間遅延44.8〜82.5%、P99初回トークン遅延20.7〜99.3%を削減し、スループットを6.6〜86.7%向上する。","list_summary":"鍵・値キャッシュ自体を交換せず、不変なモデル重み領域を動的に鍵値容量へ再割当し、必要層だけを主記憶から非同期復元することで多モデル推論のメモリ不足を緩和する。","authors":["Ruihao Li","Shagnik Pal","Vineeth Narayan Pullu","Prasoon Sinha","Jeeho Ryoo","Lizy K. John","Neeraja J. Yadwadkar"],"authors_affiliations":"The University of Texas at Austin; Fairleigh Dickinson University","published":"2026-07-01","publication":"ACM SIGOPS Operating Systems Review 60(1):41-49 / extended Oneiros study","publication_type":"査読済み会議・論文系統","publication_status":"DOI 10.1145/3830422.3830427; primary full study available as arXiv:2507.11507v2 / SoCC '25 Oneiros","lineage":"KV cache memory management / parameter offload / multi-tenant LLM serving / tiered CPU-GPU memory","topics":["鍵・値キャッシュ","モデル重み退避","多モデル推論","階層メモリ","動的メモリ再割当"],"importance":"動的に増える鍵値を主記憶へ退避する従来発想を反転し、更新されない重みを一方向転送対象にすることで同期と双方向帯域を減らす。高帯域CPU-GPU接続を持つGH200世代の階層メモリ推論に直接関係する。","implementation":"vLLM 0.7.3へ再割当制御器、非同期転送器、動的鍵値物理ページ割当を統合。vAttention型仮想領域を用いて解放した重み物理ページを鍵値へ即時再利用する。公開コードあり。","hardware_evaluation":"NVIDIA GH200 Grace Hopper Superchip。H200 GPU 96GB HBM3、72 Arm Neoverse V2 CPU core、224GB LPDDR5X、CPU-GPU間900GB/s NVLink。","quality_effect":"モデル計算自体や注意近似を変更せず、重み配置と鍵値容量だけを変更するため生成品質を近似化しない。評価は遅延・スループット中心。","source":"https://arxiv.org/abs/2507.11507","sources":["https://arxiv.org/abs/2507.11507","https://arxiv.org/html/2507.11507","https://github.com/UT-SysML/Oneiros/"],"code":"https://github.com/UT-SysML/Oneiros/","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-f151a18e22842a355a31eb94","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-preload-a2bcb0515500552db537d4c2",
+  "job_id": "job-research-92841f7f38c00d3c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-a2bcb0515500552db537d4c2",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}

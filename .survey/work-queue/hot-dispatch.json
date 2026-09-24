@@ -510,7 +510,7 @@
   "discovery_start_lookahead": null,
   "fallback_start_allowed": false,
   "frontier_auto_reserve": false,
-  "generated_at": "2026-09-24T15:42:31+00:00",
+  "generated_at": "2026-09-24T15:44:28+00:00",
   "idle_gap_guard": {
     "passive_wait_forbidden": true,
     "rule": "An asynchronous request must never be the worker's only remaining activity. Prefer PRECHECKED Discovery stock. A direct Discovery take automatically reserves a bounded same-run work frontier before its formal precheck becomes the only visible activity; evaluate the already published cached candidates while canonical precheck/run-state results proceed. If the primary backward packet is absent, start the published fixed-source schema-v3 fallback and use discovery_start_frontier for immediate cached candidate work."
@@ -3116,7 +3116,16 @@
         "pipeline_order": 4,
         "pipeline_position": 3,
         "pipeline_role": "standby",
-        "record_write_allowed": false,
+        "record_bank": "m",
+        "record_bank_root": ".survey/work-queue/records/chat-record-m",
+        "record_slot_paths": {
+          "evaluation": ".survey/work-queue/records/chat-record-m/evaluation.json",
+          "metadata": ".survey/work-queue/records/chat-record-m/metadata.json",
+          "positioning": ".survey/work-queue/records/chat-record-m/positioning.json",
+          "problem_method": ".survey/work-queue/records/chat-record-m/problem_method.json",
+          "results": ".survey/work-queue/records/chat-record-m/results.json"
+        },
+        "record_write_allowed": true,
         "resume_without_new_claim": true,
         "source_actual_invocation_start": "2026-09-24T15:32:00+00:00",
         "source_run_key": "worker-925000-20260924T153200Z-lazyprobe",
@@ -3182,7 +3191,16 @@
         "pipeline_order": 5,
         "pipeline_position": 4,
         "pipeline_role": "standby",
-        "record_write_allowed": false,
+        "record_bank": "f",
+        "record_bank_root": ".survey/work-queue/records/chat-record-f",
+        "record_slot_paths": {
+          "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+          "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+          "positioning": ".survey/work-queue/records/chat-record-f/positioning.json",
+          "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+          "results": ".survey/work-queue/records/chat-record-f/results.json"
+        },
+        "record_write_allowed": true,
         "resume_without_new_claim": true,
         "source_actual_invocation_start": "2026-09-24T15:32:00+00:00",
         "source_run_key": "worker-925000-20260924T153200Z-lazyprobe",

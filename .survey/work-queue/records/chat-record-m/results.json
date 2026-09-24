@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-f151a18e22842a355a31eb94","job_id":"job-research-fc413cbcbab0d455","data":{"overview":"時間共有の多モデル推論でOneirosはvLLM比P99トークン間遅延を44.8〜82.5%、P99初回トークン遅延を74.8〜99.3%削減し、スループットを39.9〜86.7%向上する。空間共有でも非厳密分離でP99トークン間65.5%、初回20.7%を削減し、厳密分離で57.4%、34.8%を削減する。鍵値交換方式Pieとの直接比較ではP99トークン間35.0%、初回93.6%を削減し、スループットを47.1%向上する。","key_results":[{"metric":"時間共有C1平均","value":"P99 TBT 54.4%削減、P99 TTFT 96.7%削減、throughput 39.9%向上","baseline":"vLLM","condition":"OPT-13B + Llama-2-13B + Llama-3-8B、Alpaca/ShareGPT、GH200","interpretation":"休止モデル重み領域を鍵値へ転用し、再計算を避ける効果が大きい。"},{"metric":"時間共有C2可変到着率","value":"throughput 86.7%向上、P99 TBT 82.5%削減、P99 TTFT 99.3%削減","baseline":"vLLM","condition":"OPT-30B + OPT-6.7B、異なる要求到着率","interpretation":"負荷変動に応じた再割当率とモデル選択がピーク時の鍵値不足を吸収する。"},{"metric":"Pie直接比較","value":"throughput 47.1%向上、P99 TBT 35.0%削減、P99 TTFT 93.6%削減","baseline":"Pie KV-cache swapping","condition":"OPT-13B、Alpaca、同等メモリ条件","interpretation":"更新鍵値の双方向交換より、不変重みの一方向再読込が高帯域接続を効率利用する。"},{"metric":"動的復帰","value":"非ピーク1 RPSでP50 TBT 49%削減","baseline":"再割当を継続する構成","condition":"OPT-13B + Alpaca","interpretation":"鍵値不足が解消した後に重み常駐へ戻す停止判断も性能に重要である。"}],"negative_results":"再割当を過度に続けると転送が計算を上回り、平均遅延が悪化する。再割当率を適切に上限設定しない場合、軽負荷でも転送費が残る。層選択で常に一共有領域を使う構成は二重バッファまたは動的切替よりスループットが12.7%低下する。モデル選択もLRUのように近く再利用されるモデルを退避するとMRU比で尾遅延が最大22%悪化する。","interpretation":"Oneirosの利点はCPUメモリを単なる鍵値置場として使うのではなく、更新頻度の異なる二種類の状態のうち不変な重みを移動対象に選び直した点にある。高帯域CPU-GPU接続では重み再読込を層計算へ隠し、解放した画像処理装置物理ページを鍵値へ直接回すことで再計算と鍵値交換の両方を避ける。","quality_impact":"注意計算や鍵値内容を近似・圧縮しないため、方式そのものは生成分布を変更しない。主な代償は重み転送による実行時間であり、品質ではなく遅延・スループット・メモリ容量の折衷として現れる。"},"reservation":{"claim_id":"claim-preload-f151a18e22842a355a31eb94","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-preload-a2bcb0515500552db537d4c2",
+  "job_id": "job-research-92841f7f38c00d3c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-a2bcb0515500552db537d4c2",
+    "worker_id": "worker-925000",
+    "worker_kind": "scheduled_chat"
+  }
+}
