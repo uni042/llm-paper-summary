@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-worker-924226-dgap-a2",
+  "kind": "research",
+  "attempt_id": "attempt-preload-24504aa3d0d6716cf366c75b",
+  "job_id": "job-research-11098a1512c29cb4",
+  "record_bank": "r",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md",
+  "expected_blob_sha": null,
+  "worker_id": "worker-924226",
+  "run_key": "worker-924226-20260924T222600+0900",
+  "scheduled_slot": "adhoc",
+  "actual_invocation_start": "2026-09-24T13:26:00+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:fb82e0814756fec0568bfb278fd574366e59f6ed5367419c7af933c563011747",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-r/metadata.json",
+      "blob_sha": "adc53caa1bbcbe6be00d79853e6def965195a2cf"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-r/problem_method.json",
+      "blob_sha": "30c6ff26c4a20994511f2efe31c023acb03d5290"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-r/evaluation.json",
+      "blob_sha": "85a5d486dae157dca2f7a5fd6e1f2f3f9715e16c"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-r/results.json",
+      "blob_sha": "6b3300ea0f60ec851d2c36de2684084dbe11c26f"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-r/positioning.json",
+      "blob_sha": "041634a3e6c01ad05b12a42f26b33e3840a86572"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-24T13:45:21+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md",
+    "status": "FAIL",
+    "file_bytes": 24062,
+    "prose_chars": 5417,
+    "paragraphs": 23,
+    "method_paragraphs": 11,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7464670255720054,
+    "japanese_chars": 4437,
+    "latin_chars": 1507,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 74.6% < 警告基準 80.0%"
+    ]
+  }
+}
