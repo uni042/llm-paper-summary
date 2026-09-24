@@ -334,6 +334,23 @@ Discoveryは軽量評価だけを行う。title、abstract、書誌、一次資�
 
 Discoveryのmulti-round submissionは、どちらのwork mixから探索を選んだ場合でも自己記述型（self-describing）を使い、存在しないDiscovery `job_id` を合成しない。candidate投入前に最新HEAD / identity / queueを再確認する。
 
+### 4.3.1 新しい研究系統の昇格ルート
+
+既存の正規系統へ無理に押し込むと研究上の差分が失われる**明確な近傍クラスタ**をDiscoveryで確認した場合、candidateに `lineage_proposal` を付けて正規の系統昇格ゲートへ送ってよい。未知のディレクトリをワーカーが直接作ってはならない。
+
+新設は次をすべて満たす場合だけ提案する。
+
+- `confidence: high`。
+- `neighbor_lineages` に既存の正規系統を1〜3個指定し、`distinctness_reason` で近傍系統では表現できない理由を具体化する。
+- `boundary_rule`、`scope_includes`、`scope_excludes` を明記し、別workerでも同じ境界で分類できるようにする。
+- `supporting_papers` を4本以上指定し、正規IDで検証できること。そのうち少なくとも2本は既収録論文とする。
+- 単一論文、1〜2本の派生研究、単なる実装差では新設しない。
+- 1 Discovery roundで新設できる系統は最大1個とする。
+
+提案は `slug_tail`、`title`、`description`、`distinctness_reason`、`boundary_rule`、`scope_includes`、`scope_excludes`、`neighbor_lineages`、`confidence`、`supporting_papers` を持つ。`queue_worker.py` は `.survey/scripts/lineage_proposal.py` で検査し、PASSなら空いている2桁番号を自動採番して `.survey/config/promoted-inference-lineages.json` へ正規登録し、`papers/inference/<new-lineage>/README.md` を作成してcandidateを新系統へ送る。
+
+条件未達は探索失敗ではない。`.survey/work-queue/lineage-proposals/` に `deferred` と理由を保存し、candidate自体は既存系統または `99-other-inference-systems` へ通常どおり流す。**既存系統の説明を少し広げれば十分な場合は新設せず、複数論文が同じ主要機構を共有し、近傍系統との境界を再現可能に書ける場合は `99-other` に溜め続けず昇格ルートを使う。**
+
 ### 4.4 Discovery submissionからResearchへの一本道
 
 Discovery後半は次の順序を正規経路とする。途中を手作業で代替してはならない。

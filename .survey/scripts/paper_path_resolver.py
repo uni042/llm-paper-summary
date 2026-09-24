@@ -5,8 +5,10 @@ from __future__ import annotations
 import hashlib
 import re
 import unicodedata
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 from typing import Any, Mapping
+
+import paper_taxonomy
 
 DEFAULT_INFERENCE_DIR = "papers/inference/99-other-inference-systems"
 _ARXIV_ID_RE = re.compile(r"(?i)(?:arxiv:)?(\d{4}\.\d{4,5})(?:v\d+)?$")
@@ -62,16 +64,23 @@ def _year(record: Mapping[str, Any], arxiv_id: str | None) -> str:
     return "0000"
 
 
-def resolve_paper_path(record: Mapping[str, Any]) -> str:
-    """Return an explicit path unchanged, otherwise derive a stable fallback path.
+def resolve_paper_path(record: Mapping[str, Any], *, repo_root: Path | None = None) -> str:
+    """Return an explicit path unchanged, otherwise derive a stable inference path.
 
-    Discovery is not required to classify a paper into a repository lineage. When it
-    omits ``paper_path``, the transport uses the final ``99-other`` inference bucket so
-    materialization can proceed safely; later curation may move the paper normally.
+    A registered lineage hint is honored. Missing or unknown lineage hints fall back
+    to 99-other so path resolution never invents a physical directory.
     """
     explicit = record.get("paper_path")
     if explicit is not None:
         return validate_paper_path(explicit)
+
+    requested_lineage = str(record.get("lineage") or "").strip()
+    lineage = paper_taxonomy.canonical_lineage(
+        "inference",
+        requested_lineage or paper_taxonomy.DEFAULT_INFERENCE_LINEAGE,
+        repo_root=repo_root,
+    )
+    inference_dir = f"papers/inference/{lineage}"
 
     arxiv_id = _arxiv_id(record)
     year = _year(record, arxiv_id)
@@ -81,4 +90,4 @@ def resolve_paper_path(record: Mapping[str, Any]) -> str:
     else:
         seed = str(record.get("canonical_id") or record.get("source_url") or record.get("title") or "paper")
         identity = hashlib.sha256(seed.encode("utf-8")).hexdigest()[:12]
-    return f"{DEFAULT_INFERENCE_DIR}/{year}-{identity}-{title_slug}.md"
+    return f"{inference_dir}/{year}-{identity}-{title_slug}.md"

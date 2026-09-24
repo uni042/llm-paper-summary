@@ -8,12 +8,14 @@ created so directory fragmentation does not grow again.
 """
 from __future__ import annotations
 
-from pathlib import PurePosixPath
+import json
+import re
+from pathlib import Path, PurePosixPath
 
 
 DEFAULT_INFERENCE_LINEAGE = "99-other-inference-systems"
 
-CANONICAL_INFERENCE_LINEAGES = (
+_BASE_CANONICAL_INFERENCE_LINEAGES = (
     "01-offload-hierarchical-memory",
     "02-adaptive-expert-computation-compression",
     "03-expert-prefetch",
@@ -26,6 +28,45 @@ CANONICAL_INFERENCE_LINEAGES = (
     "11-llm-serving-scheduling-disaggregation",
     DEFAULT_INFERENCE_LINEAGE,
 )
+
+PROMOTED_INFERENCE_LINEAGES_RELATIVE_PATH = Path(".survey/config/promoted-inference-lineages.json")
+_LINEAGE_SLUG_RE = re.compile(r"^(?:0[1-9]|[1-8][0-9]|9[0-8])-[a-z0-9]+(?:-[a-z0-9]+)*$")
+
+
+def _registry_path(repo_root: Path | None = None) -> Path:
+    if repo_root is not None:
+        return Path(repo_root).resolve() / PROMOTED_INFERENCE_LINEAGES_RELATIVE_PATH
+    return Path(__file__).resolve().parents[2] / PROMOTED_INFERENCE_LINEAGES_RELATIVE_PATH
+
+
+def promoted_inference_lineages(repo_root: Path | None = None) -> tuple[str, ...]:
+    path = _registry_path(repo_root)
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, UnicodeError):
+        return ()
+    rows = value.get("lineages") if isinstance(value, dict) else None
+    if not isinstance(rows, list):
+        return ()
+    out = []
+    seen = set(_BASE_CANONICAL_INFERENCE_LINEAGES)
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        slug = str(row.get("slug") or "").strip()
+        if not _LINEAGE_SLUG_RE.fullmatch(slug) or slug in seen:
+            continue
+        out.append(slug)
+        seen.add(slug)
+    return tuple(out)
+
+
+def canonical_inference_lineages(repo_root: Path | None = None) -> tuple[str, ...]:
+    return _BASE_CANONICAL_INFERENCE_LINEAGES + promoted_inference_lineages(repo_root)
+
+
+CANONICAL_INFERENCE_LINEAGES = canonical_inference_lineages()
+
 
 INFERENCE_LINEAGE_ALIASES = {
     "02-cpu-offload": "01-offload-hierarchical-memory",
@@ -84,21 +125,21 @@ INFERENCE_LINEAGE_ALIASES = {
 }
 
 
-def canonical_lineage(family: str, lineage: str) -> str:
+def canonical_lineage(family: str, lineage: str, *, repo_root: Path | None = None) -> str:
     """Return the stable user-facing lineage for one physical paper directory."""
     name = str(lineage or "").strip()
     if family != "inference":
         return name
-    if name in CANONICAL_INFERENCE_LINEAGES:
+    if name in canonical_inference_lineages(repo_root):
         return name
     return INFERENCE_LINEAGE_ALIASES.get(name, DEFAULT_INFERENCE_LINEAGE)
 
 
-def canonicalize_paper_path(value: str) -> str:
+def canonicalize_paper_path(value: str, *, repo_root: Path | None = None) -> str:
     """Normalize only the lineage segment of an Inference paper path."""
     path = PurePosixPath(str(value))
     parts = list(path.parts)
     if len(parts) >= 4 and tuple(parts[:2]) == ("papers", "inference"):
-        parts[2] = canonical_lineage("inference", parts[2])
+        parts[2] = canonical_lineage("inference", parts[2], repo_root=repo_root)
         return PurePosixPath(*parts).as_posix()
     return path.as_posix()

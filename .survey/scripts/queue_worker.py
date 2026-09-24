@@ -26,7 +26,9 @@ import claim_state  # noqa: E402
 import discovery_preload_queue  # noqa: E402
 import discovery_search_history  # noqa: E402
 import represented_paper_index  # noqa: E402
+import lineage_proposal  # noqa: E402
 from paper_taxonomy import canonicalize_paper_path  # noqa: E402
+from paper_path_resolver import resolve_paper_path  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "work-queue"
@@ -68,8 +70,11 @@ DISCOVERY_INSTRUCTIONS = (
     "is one Discovery round. Submit at most 5 strong candidates per submission; if more than 5 "
     "strong candidates survive one precheck, split them across multiple submissions that reference "
     "the same precheck and declare round_submission_index/round_submission_count. A split round is "
-    "complete only after every declared submission has a successful durable result. Do not fill the "
-    "list with weak papers."
+    "complete only after every declared submission has a successful durable result. When at least four "
+    "verified papers form a high-confidence methodology cluster adjacent to, but operationally distinct "
+    "from, existing canonical lineages, attach a lineage_proposal with explicit scope boundaries and "
+    "neighbor_lineages. Never invent a directory for a single paper; proposals that do not pass the "
+    "promotion gate fall back to 99-other. Do not fill the list with weak papers."
 )
 DISCOVERY_COMPLETION = (
     "Keep alternating productive backward-reference and forward-citation windows, using "
@@ -950,7 +955,9 @@ def make_research_job(c: dict, parent: str):
     jid = stable_id("job-research", key)
     paper_path = c.get("paper_path")
     if isinstance(paper_path, str) and paper_path:
-        paper_path = canonicalize_paper_path(paper_path)
+        paper_path = canonicalize_paper_path(paper_path, repo_root=ROOT.parent)
+    elif c.get("lineage"):
+        paper_path = resolve_paper_path(c, repo_root=ROOT.parent)
     return add_job({
         "job_id": jid,
         "type": "research",
@@ -964,6 +971,7 @@ def make_research_job(c: dict, parent: str):
         "title": c.get("title"),
         "source_url": c.get("source_url"),
         "paper_path": paper_path,
+        "lineage": c.get("lineage"),
         "selection_reason": c.get("reason"),
         "priority_breakdown": c.get("priority_breakdown"),
         "status": "ready",
@@ -1306,7 +1314,27 @@ def process_discovery(sub: dict, job: dict, st: dict, *, precheck_result: Any = 
     accepted_records: list[dict[str, Any]] = []
     added = 0
     final_duplicate_filtered_count = 0
-    for candidate in sorted(candidates, key=candidate_priority_value, reverse=True):
+    lineage_events: list[dict[str, Any]] = []
+    promoted_this_round = False
+    routed_candidates: list[dict[str, Any]] = []
+    for raw_candidate in sorted(candidates, key=candidate_priority_value, reverse=True):
+        candidate = dict(raw_candidate)
+        if candidate.get("lineage_proposal") is not None:
+            outcome = lineage_proposal.consider_lineage_proposal(
+                ROOT.parent,
+                candidate.get("lineage_proposal"),
+                round_candidates=candidates,
+                source_submission=str(sub.get("_file") or ""),
+                allow_new=not promoted_this_round,
+            )
+            lineage_events.append(outcome)
+            if outcome.get("status") == "promoted":
+                promoted_this_round = True
+            if outcome.get("lineage"):
+                candidate = lineage_proposal.route_candidate_to_lineage(candidate, outcome["lineage"])
+        routed_candidates.append(candidate)
+
+    for candidate in routed_candidates:
         key = candidate_key(candidate)
         tokens = paper_identity.identity_tokens(candidate)
         if not key:
@@ -1335,6 +1363,7 @@ def process_discovery(sub: dict, job: dict, st: dict, *, precheck_result: Any = 
         "submitted_candidates": len(candidates),
         "final_duplicate_filtered_count": final_duplicate_filtered_count,
         "research_jobs_added": added,
+        "lineage_proposals": lineage_events,
     }
     if precheck_result is not None:
         job["result_summary"]["precheck_request_id"] = precheck_result.get("request_id")
@@ -1571,6 +1600,7 @@ def process_submissions(st: dict):
                     "final_duplicate_filtered_count": summary.get("final_duplicate_filtered_count", 0),
                     "research_jobs_added": summary.get("research_jobs_added", 0),
                     "precheck_request_id": summary.get("precheck_request_id"),
+                    "lineage_proposals": summary.get("lineage_proposals", []),
                     "next_action": (
                         "Refresh .survey/work-queue/next-jobs.json, confirm the generated Research jobs, "
                         "then claim exactly one ready Research/Audit job through claim_worker_with_banks.py. "
