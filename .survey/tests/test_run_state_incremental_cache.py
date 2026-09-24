@@ -335,6 +335,34 @@ class IncrementalRunStateTests(unittest.TestCase):
             self.assertEqual(pointer["request_id"], "newer")
             self.assertEqual(pointer["snapshot_generation"], 5)
 
+    def test_latest_pointer_same_generation_prefers_newer_processed_at(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            start = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=2)
+            newer_path = write_json(root, ".survey/work-queue/run-state/results/auto-refresh.json", {})
+            newer = {
+                "worker_id": "scheduled-chat-00",
+                "run_key": "run-same",
+                "scheduled_slot": "00",
+                "actual_invocation_start": start.isoformat(),
+                "request_id": "auto-refresh",
+                "snapshot_generation": 0,
+                "processed_at": (start + dt.timedelta(seconds=90)).isoformat(),
+            }
+            self.assertTrue(cache.write_latest_pointer(root, newer_path, newer))
+
+            older_path = write_json(root, ".survey/work-queue/run-state/results/run-initial.json", {})
+            older = dict(newer)
+            older["request_id"] = "run-initial"
+            older["processed_at"] = (start + dt.timedelta(seconds=20)).isoformat()
+
+            self.assertFalse(cache.write_latest_pointer(root, older_path, older))
+            pointer = json.loads(
+                (root / ".survey/work-queue/run-state/latest/scheduled-chat-00.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(pointer["request_id"], "auto-refresh")
+            self.assertEqual(pointer["result_path"], newer_path.relative_to(root).as_posix())
+
     def test_jst_wall_clock_mislabeled_as_utc_is_recovered(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
