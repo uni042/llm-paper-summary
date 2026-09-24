@@ -135,12 +135,36 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertEqual(result["runtime_condition"], "none")
             self.assertEqual(
                 result["runtime_condition_ignored_reason"],
-                "platform_limit_requires_explicit_platform_tool_call_rejection_evidence",
+                "platform_limit_requires_run_wide_tool_rejection_after_fallback",
             )
             self.assertEqual(result["gate"]["decision"], "CONTINUE")
             self.assertEqual(result["gate"]["required_action"], "CLAIM_NEXT_RESEARCH_AUDIT")
 
-    def test_platform_context_limit_requires_actual_platform_rejection_evidence(self):
+    def test_target_specific_platform_rejection_is_not_a_run_wide_hard_stop(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 300, "claimable": 300}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            value = request()
+            value["runtime_condition"] = "platform_context_limit"
+            value["runtime_condition_confirmed"] = True
+            value["runtime_condition_attempts"] = 2
+            value["runtime_condition_event"] = mod.PLATFORM_CONTEXT_LIMIT_EVENT
+            value["runtime_condition_detail"] = "platform rejected two reusable record-slot updates, but create-only transport is still available"
+            result = mod.derive(root, value)
+            self.assertEqual(result["runtime_condition"], "none")
+            self.assertEqual(
+                result["runtime_condition_ignored_reason"],
+                "platform_limit_requires_run_wide_tool_rejection_after_fallback",
+            )
+            self.assertEqual(result["gate"]["decision"], "CONTINUE")
+            self.assertNotIn("platform_limit_reached", result["gate"]["stop_reasons"])
+
+    def test_platform_context_limit_requires_run_wide_platform_rejection_evidence(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             write_json(
@@ -154,10 +178,12 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             value["runtime_condition_confirmed"] = True
             value["runtime_condition_attempts"] = 1
             value["runtime_condition_event"] = mod.PLATFORM_CONTEXT_LIMIT_EVENT
-            value["runtime_condition_detail"] = "platform rejected a required tool call because the context/output limit was reached"
+            value["runtime_condition_scope"] = mod.PLATFORM_CONTEXT_LIMIT_SCOPE
+            value["runtime_condition_detail"] = "platform rejected all required tool calls after the documented fallback route was attempted"
             result = mod.derive(root, value)
             self.assertEqual(result["runtime_condition"], "platform_context_limit")
             self.assertEqual(result["runtime_condition_event"], mod.PLATFORM_CONTEXT_LIMIT_EVENT)
+            self.assertEqual(result["runtime_condition_scope"], mod.PLATFORM_CONTEXT_LIMIT_SCOPE)
             self.assertEqual(result["gate"]["decision"], "STOP_RUN")
             self.assertIn("platform_limit_reached", result["gate"]["stop_reasons"])
 
