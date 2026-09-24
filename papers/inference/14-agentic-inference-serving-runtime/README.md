@@ -26,7 +26,10 @@
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（17本）
 
-### 収録論文
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
+
+### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 - **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -55,6 +58,8 @@
 - **2026-07 · [Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework](2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md)**  
   実装：[✓](https://github.com/hyscale-lab/aries) ・ リポジトリ内被引用：1  
   AriesはLLM推論、ハーネス、状態付きツールを一つのエージェント軌跡として計測し、ツール待ち、長期文脈、サンドボックスの瞬間的な資源需要を同じタスク進捗へ結び付ける実験基盤である。
+
+### 直近12か月・未被引用（2025-10〜2026-09）
 
 - **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -91,6 +96,8 @@
 - **2026-04 · [Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines](2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md)**  
   実装：[✓](https://github.com/anon/Scepsy) ・ リポジトリ内被引用：0  
   LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。
+
+### 2年前（2024-10〜2025-09）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
   実装：✓ ・ リポジトリ内被引用：22  
