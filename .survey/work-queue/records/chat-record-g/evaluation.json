@@ -4,7 +4,78 @@
   "slot": "evaluation",
   "attempt_id": "attempt-preload-696e42f89d3df66e6eb783f8",
   "job_id": "job-research-e3b684ca3ee98a5c",
-  "data": {},
+  "data": {
+    "hardware": [
+      "資源ベンチマーク: Nvidia A100、30GiB超の測定は打ち切り。各点は3回平均。",
+      "Long Range Arena: 各実行で最大2台のNvidia A100。",
+      "T5-base fine-tuning: 単一Nvidia V100。"
+    ],
+    "software": [
+      "資源ベンチマークはPyTorch 1.8.1。",
+      "UNIFIEDQA/T5実験はHugging Face Transformers。",
+      "WikiText-103はfairseqのlanguage-modeling framework。",
+      "A100のベンチマークではTF32への内部castを明示的に無効化。"
+    ],
+    "model": [
+      "BERT-base相当単層multi-head attention: d_model=768、12 heads、head size 64、FF dimension 3072。",
+      "12-layer BERT-base相当Transformer decoder: batch size 1、self-attentionはtop-64/C=1024、FFはquery chunking C=4096。",
+      "WikiText-103: 6-layer Transformer decoder、156M parameters、input length 1024、top-64。",
+      "UNIFIEDQA 11B (T5-based): feed-forward dimension 65,536。",
+      "BERT-large-uncased-whole-word-masking fine-tuned on SQuAD v1。",
+      "T5-base: feed-forward dimension 3072、top-256でfine-tuning。"
+    ],
+    "datasets": [
+      "Long Range Arena: ListOps, IMDb, ACL Anthology Network (AAN)",
+      "WikiText-103",
+      "12 QA datasets for UNIFIEDQA: AI2 elementary/middle, ARC easy/challenge, BoolQ, CommonsenseQA, MCTest, NarrativeQA, OpenBookQA, RACE, SQuAD v1, SQuAD 2.0",
+      "SQuAD v1 for BERT zero-shot replacement test",
+      "T5 fine-tuning: BoolQ, CommonsenseQA, MCTest, OpenBookQA, ROPES"
+    ],
+    "baselines": [
+      "vanilla attention",
+      "query chunking without top-k",
+      "Performer with 256 random features and CUDA implementation",
+      "full feed-forward / vanilla Transformer",
+      "T5-base and UNIFIEDQA-base task baselines"
+    ],
+    "settings": [
+      {
+        "name": "resource benchmark",
+        "description": "forward+backwardをrandom float32 inputsで測定し、torch.cuda.synchronize()で時間区間を囲み、torch.cuda.max_memory_reserved()でmemoryを測る。各点3回平均。自己注意はcausal mask。"
+      },
+      {
+        "name": "single self-attention",
+        "description": "BERT-base相当構成でk=128、query chunk C=1024。入力長を伸ばし、vanilla/Performer/query-chunking/top-k query-chunkingの時間とdevice memoryを比較。"
+      },
+      {
+        "name": "feed-forward benchmark",
+        "description": "batch size 512、input length 512で2^18 queries。top-kはk=512、C=2^14。feed-forward dimensionを最大65K超まで変化させる。"
+      },
+      {
+        "name": "Long Range Arena",
+        "description": "公開LRAコードと既定model構成を使い、各taskでvanillaとtop-128を同一hyperparameterでtraining from scratch。ListOps 2K、IMDb 1K、AAN 4Kの系列長。"
+      },
+      {
+        "name": "WikiText-103",
+        "description": "6-layer/156M decoder、sequence length 1024、50K steps。vanillaとtop-64を比較し、test perplexityを評価。"
+      },
+      {
+        "name": "UNIFIEDQA zero-shot",
+        "description": "11B modelのfeed-forwardをtop-kへ差し替え、追加trainingなしで12 QA development setsをexact match評価。kを64〜4096で走査し、vanilla k=65536と比較。"
+      },
+      {
+        "name": "BERT zero-shot",
+        "description": "SQuAD v1 fine-tuned BERT-largeのself-attentionをtop-kへ差し替え、追加trainingなしでexact matchを測定。Performer 256 featuresも比較。"
+      },
+      {
+        "name": "T5 fine-tuning",
+        "description": "T5-base feed-forwardをtop-256へ置換し、5 QA datasetsで3K steps fine-tuning。BoolQ/CSQA/MCTest/OBQA/ROPESのexact matchをvanillaと比較。"
+      }
+    ],
+    "correctness": "top-kは標準注意と数学的に同一ではなく、選択外キーを捨てる損失近似である。論文はtask accuracy/perplexityが近いことを示すが、出力同一性を主張しない。事前学習済みモデルへ重み変更なしで差し替えられるというplug-and-play性をzero-shotとfine-tuningで検証する。",
+    "methodology": "効率評価ではメモリ削減と速度を分離し、単層注意、巨大FFN、12層モデルの3ケースでvanilla/query-chunking/Performerを比較する。品質評価ではtraining from scratch、zero-shot置換、fine-tuningの三つを使い、疎化率が高くても精度が維持されるかを検証する。",
+    "scope": "主張はメモリ効率と置換容易性が中心。GPU実装は2021年時点のPyTorchで、疎行列積を効率利用できていない。分散serving、KV cache paging、現代FlashAttention系kernel、生成throughputを直接評価した論文ではない。"
+  },
   "reservation": {
     "claim_id": "claim-preload-696e42f89d3df66e6eb783f8",
     "worker_id": "worker-45",
