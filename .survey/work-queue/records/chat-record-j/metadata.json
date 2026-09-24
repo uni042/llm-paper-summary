@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-preload-74bb4af6ce3df82b5f4f239a",
-  "job_id": "job-research-60b244663bfce823",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-74bb4af6ce3df82b5f4f239a",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-74bb4af6ce3df82b5f4f239a","job_id":"job-research-60b244663bfce823","data":{"canonical_id":"arXiv:2310.01889","arxiv_id":"2310.01889","doi":"10.48550/arXiv.2310.01889","openreview_id":null,"arxiv_categories":{"primary":"cs.CL","cross_list":[]},"title":"Ring Attention with Blockwise Transformers for Near-Infinite Context","summary":"Ring Attentionは系列次元を複数デバイスへ分割し、各デバイスが自分のクエリブロックを保持したままキー・値ブロックをリング状に隣接デバイスへ回す分散注意方式である。ブロック単位注意の順序不変性を利用し、現在ブロックの注意計算中に次のキー・値転送を重畳するため、計算時間が通信時間を上回る条件では追加通信待ちを隠蔽できる。活性化メモリは系列長ではなくブロック長に依存する6bchへ抑えられ、最大文脈長はデバイス数にほぼ比例して伸びる。32台A100では7Bモデルで4096Kトークン、TPUv4-1024では3Bモデルで16384Kトークンを扱い、従来のブロック型メモリ効率Transformer比でそれぞれ32倍、512倍の最大文脈長を報告する。","list_summary":"キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。","authors":["Hao Liu","Matei Zaharia","Pieter Abbeel"],"authors_affiliations":"UC Berkeley","published":"2023-10-03","publication":"arXiv","publication_type":"プレプリント","publication_status":"arXiv v4 (2023-11-27)","lineage":"distributed attention / sequence parallelism / blockwise attention / long-context transformers","topics":["リング注意","系列並列","長文脈","ブロック注意","通信計算重畳"],"importance":"長文脈推論・学習においてKVブロック通信そのものを消すのではなく、注意計算の算術強度を使って通信を隠蔽する代表的設計である。系列次元分割とKV移送を組み合わせる後続の分散長文脈推論の基礎比較として重要である。","implementation":"JAX実装を公開し、隣接ホスト間のKV送受信にjax.lax.ppermuteを利用する。ローカルのメモリ効率注意実装とは分離され、利用可能なブロック注意カーネルを各ホストで呼び出せる構成である。","hardware_evaluation":"8/32台A100、TPUv3-512、TPUv4-1024、TPUv5e-256などで評価し、FSDPおよび一部テンソル並列と組み合わせる。A100はNVLinkまたはInfiniBand接続を区別して通信隠蔽条件を分析する。","quality_effect":"近似注意を導入せず元のTransformer注意をブロック順序だけ再編するため、方式自体は注意品質を近似で落とさない。言語モデルとExoRLの強化学習評価で長文脈利用による性能改善も示す。","source":"https://arxiv.org/abs/2310.01889","sources":["https://arxiv.org/abs/2310.01889","https://arxiv.org/pdf/2310.01889","https://github.com/lhao499/llm_large_context"],"code":"https://github.com/lhao499/llm_large_context","last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary PDF","references_total":0},"reservation":{"claim_id":"claim-preload-74bb4af6ce3df82b5f4f239a","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
