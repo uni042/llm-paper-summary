@@ -1,13 +1,79 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "results",
   "attempt_id": "attempt-preload-e67ec48caa52d77d1c7b992a",
   "job_id": "job-research-0a4a1c707b0687af",
-  "data": {},
   "reservation": {
     "claim_id": "claim-preload-e67ec48caa52d77d1c7b992a",
     "worker_id": "worker-924226",
     "worker_kind": "scheduled_chat"
+  },
+  "slot": "results",
+  "data": {
+    "overview": "両モデルで最初のpost-knee grid pointはC=128となり、飽和前はrouter parameterを変えてもPoA-hatがほぼ平坦だが、飽和すると差が拡大する。適応制御はこの遷移を利用し、70B 1P/5Dでは飽和相PoA-hatを66.42から21.53へ下げ、TTFT P99を8.19秒から4.22秒へ短縮する一方、throughputは50.9から44.3 requests/sへ13%低下する。340B 1P/2Dではaggregate TTFT P99が28.26秒から5.92秒へ4.8倍短縮し、切替後steady stateは約0.97秒まで下がるが、飽和相throughputは36%低下する。",
+    "key_results": [
+      {
+        "metric": "飽和時PoA-hat",
+        "value": "66.42 ±12.2 → 21.53 ±0.17（3.1×低減）",
+        "baseline": "Llama-3.1-70B 1P/5D static routing",
+        "condition": "C=128 saturated phase, adaptive τ=0.7, ω=1.0",
+        "interpretation": "5 decode workerの大きなrouting action spaceで状態依存切替の効果が最も大きい。"
+      },
+      {
+        "metric": "TTFT P99",
+        "value": "25.9 ±2.1 s → 3.4 ±0.4 s（7.6×短縮）",
+        "baseline": "Llama-3.1-70B 1P/2D static routing",
+        "condition": "adaptive load-spike test, n=3",
+        "interpretation": "同じparameter設定を別topologyへ移しても大きな末尾遅延改善が得られる。"
+      },
+      {
+        "metric": "aggregate saturated TTFT P99",
+        "value": "28.26 ±5.9 s → 5.92 ±0.06 s（4.8×短縮）",
+        "baseline": "Nemotron-4-340B 1P/2D static routing",
+        "condition": "180 s saturated phase",
+        "interpretation": "切替が相の途中で発火するため、このaggregate値には約55秒のpre-switch区間も含まれる。"
+      },
+      {
+        "metric": "post-switch steady-state TTFT P99",
+        "value": "約28.3 s → 約0.97 s（約29×短縮）",
+        "baseline": "Nemotron-4-340B static",
+        "condition": "switch後約125秒",
+        "interpretation": "aggregate値より切替後の純粋な効果は大きいが、throughputとの交換を伴う。"
+      },
+      {
+        "metric": "飽和相throughput",
+        "value": "50.9 → 44.3 requests/s（約13%低下）",
+        "baseline": "Llama-3.1-70B 1P/5D static",
+        "condition": "adaptive saturated phase",
+        "interpretation": "PoA/TTFT改善は無料ではなく、より低遅延側の運用点へ移した結果。"
+      },
+      {
+        "metric": "飽和前parameter sensitivity",
+        "value": "PoA-hat 18.7 ±0.10 across 16 settings",
+        "baseline": "Nemotron-4-340B 1P/2D",
+        "condition": "C=64, τ×ω 4×4 sweep",
+        "interpretation": "GPUに余裕がある領域では細かなrouter tuningの価値が小さい。"
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "340Bのthroughput代償",
+        "description": "340B 1P/2Dの飽和相ではadaptive throughputが18.2から11.6 requests/sへ36%低下し、TTFT改善は運用点をlatency優先へ移す交換条件を含む。"
+      },
+      {
+        "name": "Game 1未検証",
+        "description": "P/D GPU splitは全実験で固定され、Plannerによる動的resource reallocationの理論予測は実機検証されていない。"
+      },
+      {
+        "name": "多階層cache未励起",
+        "description": "128-token promptと192GB HBMのためKV blockはHBMに留まり、DRAM/SSD/networkへのspilloverを含むGame 2の本来の階層costは検証されない。"
+      },
+      {
+        "name": "PoA-hatの絶対値は未校正",
+        "description": "Hungarian denominatorとparametric cost modelは実測latencyへfitしておらず、PoA-hat=19を『真の最適より19倍悪い』とは解釈できない。"
+      }
+    ],
+    "interpretation": "主要な観察は、低負荷ではrouting parameterの違いがほぼ埋もれるのに、単一prefill workerが飽和へ近づくとqueueingの非線形性で小さな偏りが急激に増幅されることである。そのため常時強いload balancingを使うのではなく、通常時はcache localityを活かし、saturation kneeを超えた時だけ混雑回避へ寄せる設計が成立する。ただし静的counterfactualでは複数routing policyがC>=8でHungarian近似最適から約0.3〜10%内に入り、実測PoA-hatの大きさは単発assignment policyより時間発展するqueue/KV状態に由来すると著者は解釈する。",
+    "quality_impact": "生成品質やmodel accuracyを変える方式ではなく、同じmodel・prompt・decoding設定でworker allocationだけを変える。評価上のtrade-offは主にlatencyとthroughputで、70B 1P/5Dでは飽和時TTFT改善と引き換えに約13%、340B 1P/2Dでは約36%のthroughput低下が観測される。"
   }
 }
