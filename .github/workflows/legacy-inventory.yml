@@ -129,7 +129,7 @@ jobs:
                   if path.name.casefold() in {"readme.md", "comparison.md"}:
                       continue
                   text = path.read_text(encoding="utf-8", errors="ignore")
-                  if text.startswith("---\\n") and "\\n---\\n" in text[4:]:
+                  if text.startswith("---\n") and "\n---\n" in text[4:]:
                       raw = text.split("---", 2)[1]
                       metadata = yaml.safe_load(raw) or {}
                   else:
@@ -156,7 +156,7 @@ jobs:
           }
           out = Path(".survey/reports/legacy-paper-audit.json")
           out.parent.mkdir(parents=True, exist_ok=True)
-          out.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+          out.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
           print(json.dumps({
               "source_commit": source_commit,
               "paper_quality": summary["paper_quality"]["counts"],
