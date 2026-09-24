@@ -1496,12 +1496,40 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             return None
         packet = dict(value)
         preload_id = str(packet["preload_id"])
-        packet["take_path"] = (
+        take_path = (
             Path(".survey/work-queue/discovery-preload/claims") / f"{preload_id}.json"
         ).as_posix()
+        packet["take_path"] = take_path
         packet["take_result_path"] = (
             Path(".survey/work-queue/direct-take-results/discovery") / f"{preload_id}.json"
         ).as_posix()
+        packet["direct_take_contract"] = {
+            "create_only": True,
+            "path": take_path,
+            "lease_seconds": discovery_preload_queue.CLAIM_LEASE_SECONDS,
+            "payload_base": {
+                "schema_version": 1,
+                "operation": "direct_take_discovery",
+                "direct_take": True,
+                "preload_id": preload_id,
+                "discovery_bank": packet.get("discovery_bank"),
+                "discovery_slot_path": packet.get("discovery_slot_path"),
+                "preload_result_path": packet.get("preload_result_path"),
+                "worker_id": request["worker_id"],
+                "run_key": request["run_key"],
+                "scheduled_slot": request["scheduled_slot"],
+                "actual_invocation_start": request["actual_invocation_start"],
+                "candidate_inventory_at_start": inventory,
+                "work_mode_at_start": "discovery",
+                "research_discovery_threshold": claim_window_policy.RESEARCH_DISCOVERY_THRESHOLD,
+                "hot_dispatch_generated_at": request.get("hot_dispatch_generated_at"),
+            },
+            "required_runtime_fields": [
+                "request_id",
+                "claimed_at",
+                "lease_expires_at",
+            ],
+        }
         return packet
 
     discovery_preload = decorate_discovery_packet(discovery_preload)
