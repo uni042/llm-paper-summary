@@ -4,7 +4,30 @@
   "slot": "problem_method",
   "attempt_id": "attempt-preload-9a2b16779f8e3ddfeb6f3da7",
   "job_id": "job-research-c312adffcbd5fa76",
-  "data": {},
+  "data": {
+    "problem": "Leech-lattice vector quantizationは2 bit/weight級で高い品質を報告するが、元のserving kernelは単一shellしか復号せず、2.000 b/wのrateに必要な全301 classのmulti-shell codebookを実際にGPUで復号する経路が欠けていた。さらに圧縮ファイルのbit rateが小さくても、巨大codebookをGPUで分岐なく復号するにはindexを展開したVRAM表現が必要となり、実際のmemory trafficと速度はon-disk rateから予測できない。",
+    "novelty": "全301-class Λ24(12) codebookに対するoffline transcodingとwarp-divergence-freeな融合dequantize+GEMVを実装し、同一bit-exact意味を持つ複数GPU layoutを比較してin-VRAM rateを独立設計軸として定式化した。47-bit combinatorial indexをclass/gain/sign/magnitude bit planesへロード時展開し、固定strideでGPUがshift/mask/predicated selectionだけで復号できるようにする。さらにAWQとQTIPの実配備kernelを同一processで比較し、速度差をbyte traffic差へ帰属させる。",
+    "method_overview": "24次元Leech格子blockの圧縮indexをロード時にGPU向け固定長recordへ変換する。実用Planes14ではblockあたり112 bitのclass/gain/sign/3 magnitude-plane情報を持たせ、14-byte strideで読み出す。kernelは小さなclass tableをcacheし、4つの32-bit wordを読み、shift/maskとpredicated treeで各coordinate magnitudeを選択してactivationとのmatvecへ直接融合する。branchをclassごとに分けずwarp divergenceを避ける。複数layoutをbit-exactに検証し、速度・byte bound・end-to-end性能を測る。",
+    "components": [
+      {
+        "name": "全301-class offline transcoder",
+        "description": "47-bit方向indexをGPU向け固定fieldへロード時展開し、runtimeから複雑な組合せ復号を外す。"
+      },
+      {
+        "name": "Planes14固定長VRAM layout",
+        "description": "class/gain/signと3 magnitude bit planesを112 bit/blockに格納し4.80 bit/weightのin-VRAM rateを実現する。"
+      },
+      {
+        "name": "融合dequantize+GEMV kernel",
+        "description": "固定stride recordをshift/maskとpredicated lookupで復号しながらGEMVを実行しwarp divergenceを避ける。"
+      },
+      {
+        "name": "VRAM rate/byte-bound評価",
+        "description": "bit-exact layout、no-weights control、FP16、AWQ、QTIPを同一processで測り速度差の原因を切り分ける。"
+      }
+    ],
+    "system_design": "圧縮indexの複雑さをruntimeで直接解かず、load-time expansionでregularなGPU recordへ変換し、memory-boundなdecode GEMVに復号を融合する。設計中心はファイル容量最小化ではなくVRAM bytesと復号規則性のPareto最適化である。"
+  },
   "reservation": {
     "claim_id": "claim-preload-9a2b16779f8e3ddfeb6f3da7",
     "worker_id": "scheduled-chat-00",
