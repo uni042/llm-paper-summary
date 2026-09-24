@@ -62,6 +62,17 @@ jobs:
       - name: Audit live metadata coverage
         run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out /tmp/metadata-coverage.json --strict
 
+      - name: Build legacy cleanup inventory
+        run: python .survey/scripts/legacy_inventory.py --root . --output /tmp/legacy-inventory.json --source-commit "${GITHUB_SHA}"
+
+      - name: Upload legacy cleanup inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: legacy-inventory-${{ github.sha }}
+          path: /tmp/legacy-inventory.json
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Build live repository inventory
         run: python .survey/scripts/build_repository_inventory.py --root . --output /tmp/repository-inventory.json --source-commit "${GITHUB_SHA}"
 
