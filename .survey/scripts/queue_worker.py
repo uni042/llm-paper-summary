@@ -317,6 +317,24 @@ def _git_introducing_commit(relative_path: PurePosixPath) -> str | None:
 _POST_MARKER_SUBMISSION_CACHE: dict[str, set[str] | None] = {}
 
 
+def _canonical_discovery_submission_path(source_submission: str) -> PurePosixPath | None:
+    """Normalize current nested and legacy root-level Discovery descriptor paths."""
+    source_path = PurePosixPath(source_submission)
+    if source_path.is_absolute() or ".." in source_path.parts or source_path.suffix != ".json":
+        return None
+
+    parts = source_path.parts
+    if len(parts) == 3 and parts[:2] == ("work-queue", "submissions"):
+        return PurePosixPath(".survey") / source_path
+    if len(parts) == 4 and parts[:3] == ("work-queue", "submissions", "discovery"):
+        return PurePosixPath(".survey") / source_path
+    if len(parts) == 4 and parts[:3] == (".survey", "work-queue", "submissions"):
+        return source_path
+    if len(parts) == 5 and parts[:4] == (".survey", "work-queue", "submissions", "discovery"):
+        return source_path
+    return None
+
+
 def _post_marker_submission_paths() -> set[str] | None:
     """Return current Discovery submission paths added after the enforcement marker."""
     import subprocess
@@ -358,14 +376,8 @@ def _submission_path_added_after_marker(
     source_submission = str(sub.get("_file") or "").strip()
     if not source_submission:
         return False
-    source_path = PurePosixPath(source_submission)
-    if source_path.is_absolute() or ".." in source_path.parts or source_path.suffix != ".json":
-        return True
-    if len(source_path.parts) == 3 and source_path.parts[:2] == ("work-queue", "submissions"):
-        source_path = PurePosixPath(".survey") / source_path
-    elif len(source_path.parts) == 4 and source_path.parts[:3] == (".survey", "work-queue", "submissions"):
-        pass
-    else:
+    source_path = _canonical_discovery_submission_path(source_submission)
+    if source_path is None:
         return True
 
     marker_path = ROOT.parent / Path(marker.as_posix())
@@ -503,14 +515,8 @@ def _discovery_precheck_required(sub: dict) -> bool:
         # proof, validate it; durable queue processing always sets _file.
         return proof_present
 
-    source_path = PurePosixPath(source_submission)
-    if source_path.is_absolute() or ".." in source_path.parts or source_path.suffix != ".json":
-        return True
-    if len(source_path.parts) == 3 and source_path.parts[:2] == ("work-queue", "submissions"):
-        source_path = PurePosixPath(".survey") / source_path
-    elif len(source_path.parts) == 4 and source_path.parts[:3] == (".survey", "work-queue", "submissions"):
-        pass
-    else:
+    source_path = _canonical_discovery_submission_path(source_submission)
+    if source_path is None:
         # Unexpected durable Discovery transport is not a compatibility escape hatch.
         return True
 
