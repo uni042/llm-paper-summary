@@ -200,8 +200,20 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
 
         self.old_submission = self.submissions / "old-round.json"
         self.old_submission.write_text("{}\n", encoding="utf-8")
-        subprocess.run(["git", "add", self.old_submission.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
-        subprocess.run(["git", "commit", "-qm", "historical discovery submission"], cwd=self.repo, check=True)
+        self.old_nested_submission = self.submissions / "discovery" / "old-nested-round.json"
+        self.old_nested_submission.parent.mkdir(parents=True, exist_ok=True)
+        self.old_nested_submission.write_text("{}\n", encoding="utf-8")
+        subprocess.run(
+            [
+                "git",
+                "add",
+                self.old_submission.relative_to(self.repo).as_posix(),
+                self.old_nested_submission.relative_to(self.repo).as_posix(),
+            ],
+            cwd=self.repo,
+            check=True,
+        )
+        subprocess.run(["git", "commit", "-qm", "historical discovery submissions"], cwd=self.repo, check=True)
 
         marker = self.queue / "discovery-precheck" / "ENFORCED"
         marker.write_text("enforced\n", encoding="utf-8")
@@ -305,6 +317,14 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         subprocess.run(["git", "commit", "-qm", f"add {name}"], cwd=self.repo, check=True)
         return f"work-queue/submissions/{name}"
 
+    def _commit_nested_submission(self, name: str = "new-nested-round.json") -> str:
+        path = self.submissions / "discovery" / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("{}\n", encoding="utf-8")
+        subprocess.run(["git", "add", path.relative_to(self.repo).as_posix()], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-qm", f"add nested {name}"], cwd=self.repo, check=True)
+        return f"work-queue/submissions/discovery/{name}"
+
     def _commit_result(
         self,
         *,
@@ -363,6 +383,18 @@ class DiscoveryPrecheckGateTest(unittest.TestCase):
         sub = self._base_sub()
         sub["_file"] = "work-queue/submissions/old-round.json"
         self.assertIsNone(queue_worker.validate_discovery_precheck(sub))
+
+    def test_historical_nested_submission_predating_marker_remains_compatible(self) -> None:
+        sub = self._base_sub()
+        sub["_file"] = "work-queue/submissions/discovery/old-nested-round.json"
+        self.assertIsNone(queue_worker.validate_discovery_precheck(sub))
+
+    def test_new_nested_submission_without_precheck_requires_precheck(self) -> None:
+        sub = self._base_sub()
+        sub["_file"] = self._commit_nested_submission()
+        with self.assertRaises(queue_worker.DiscoveryPrecheckError) as ctx:
+            queue_worker.validate_discovery_precheck(sub)
+        self.assertEqual(ctx.exception.code, "discovery_precheck_required")
 
     def test_new_submission_without_precheck_returns_actionable_guidance(self) -> None:
         sub = self._base_sub()
