@@ -1,12 +1,23 @@
-# レガシー棚卸し — 初回コード経路確認
+# レガシー棚卸し — コード経路とデータの初回確認
 
-## 対象と状態
+## 初回コード経路調査の対象と状態
 
-- 対象commit: `5cccd8347ae6ce2c14129c73b48643aad1005469`
+- 対象commit: `5cccd8347ae6ce2c14129c73b48643aad1005469`（初回調査時点）
 - 調査日: 2026-09-24
 - 種別: 静的コード経路の一次確認。**ファイル全件のデータ分類は未実施**。
 - 判定: この文書の確認だけでreader削除・データ削除へ進んではならない。
 - 現行mainは調査中にも進行している。work-queueのライブデータを扱う前に、最新mainへの追随、書込凍結、active claim/result待ちの確認、全件台帳の再生成が必要。
+
+## 最新固定スナップショットの棚卸し（2026-09-24）
+
+- 対象commit: `cbb17a29b4bd46b62e123984c0f8123bb7e5d5fb`
+- 機械可読台帳: `.survey/reports/legacy-inventory.json`（`source_commit` を確認すること）
+- 論文監査: `.survey/reports/legacy-paper-audit.json`（同じ `source_commit` を確認すること）
+- 走査対象ファイル: 10,828。UTF-8走査不能0。
+- 分類: A〜Eのレビュー済み分類0。未レビュー10,828。したがって `legacy_remaining=10,828` は「旧形式の実データ件数」ではなく、未分類・未決のゲート値である。
+- 旧形式marker候補ヒット: 1,320（`chat-inbox.json` 105、旧Scheduled Chat名1,193、旧unbanked marker 2、旧record bank root 10、旧要約heading 10）。文字列一致であり、ライブ/履歴や旧reader依存を個別判定した件数ではない。
+- 論文監査対象: 1,026。本文品質 PASS 243 / WARN 49 / FAIL 734、明示 `list_summary` 欠落0（一覧品質 PASS 1,017 / WARN 9 / FAIL 0）、代表結果監査 PASS 1,000 / FAIL 26。
+- この状態では旧reader削除、履歴削除、ライブ移行を開始しない。紙面FAILは一次資料を読んで修正し、状態ファイルは参照・終端・writer契約を個別に確認する。
 
 ## コード経路の暫定分類
 
