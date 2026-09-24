@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-preload-adcf408437d27a8a65fe0220",
-  "job_id": "job-research-20dfb7993995c1a7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-adcf408437d27a8a65fe0220",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-adcf408437d27a8a65fe0220","job_id":"job-research-20dfb7993995c1a7","data":{"hardware":"主実機はAMD Alveo V80 FPGA（250MHz、819GB/s max bandwidth、190W peak）。GPU比較はAMD Instinct MI210（1.6TB/s、300W）とNVIDIA A100（2.0TB/s、300W）。FPGA既存手法はAllo、InTAR、FlightLLMをV80向けsimulatorで比較し、原論文データとの差を2%未満に校正する。","software":"V80回路はXilinx Vitis HLS 2024.2、TAPA、RapidStream、Vivado 2024.2で生成。GPU baselineはHugging Face TransformersとvLLM、GPTQ INT8/INT4およびA100のMarlin kernelを使用。電力はpyNVML/pyrsmiで測定する。","methodology":"Qwen3 1.7BをG=512、vector長2、weight centroid数16、activation centroid数64、INT8 lookup tableへ変換する。品質はGLUE、SQuAD v2、MMLU-Proのaccuracy/F1でFP16、RTN INT8、SmoothQuant、SpinQuantと比較する。性能はend-to-end latency、decode latency、tokens/Jを測り、MI210/A100のBF16・INT8・INT4、さらにAllo/InTAR/FlightLLMと比較する。V80のresource utilization、HBM channel配分、250MHz達成も実装成立性として測る。","scope":"実機結果はQwen3 1.7Bと比較的短いcontextを中心とし、32Bは性能モデルによる外挿を含む。GPU側のINT4効率は小型モデルでHBM帯域利用率が落ちる条件に依存し、著者自身も32B外挿ではA100 INT4が逆転すると述べる。FPGA既存手法は同一V80実機への完全再実装ではなくsimulator比較である。"},"reservation":{"claim_id":"claim-preload-adcf408437d27a8a65fe0220","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
