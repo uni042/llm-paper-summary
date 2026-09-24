@@ -621,6 +621,26 @@ def _git_introduction_order(root: Path, relative_paths: list[str]) -> dict[str, 
     return order
 
 
+def _iter_discovery_submission_paths(submission_root: Path) -> list[Path]:
+    """Return current nested Discovery descriptors plus legacy root-level ones."""
+    seen: set[str] = set()
+    ordered: list[Path] = []
+    canonical = submission_root / "discovery"
+    if canonical.is_dir():
+        for path in sorted(canonical.glob("*.json")):
+            if path.name in seen:
+                continue
+            seen.add(path.name)
+            ordered.append(path)
+    if submission_root.is_dir():
+        for path in sorted(submission_root.glob("*.json")):
+            if path.name in seen:
+                continue
+            seen.add(path.name)
+            ordered.append(path)
+    return ordered
+
+
 def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
     request_root = root / ".survey/work-queue/discovery-precheck/requests"
     precheck_result_root = root / ".survey/work-queue/discovery-precheck/results"
@@ -691,84 +711,83 @@ def _discovery_async_state(root: Path, run_key: str) -> dict[str, Any]:
                 )
 
     pending_submissions: list[str] = []
-    if submission_root.is_dir():
-        for path in submission_root.glob("*.json"):
-            submission = _read(path, {})
-            if not isinstance(submission, dict) or submission.get("operation") != "submit_discovery_round":
-                continue
-            stats = submission.get("discovery_stats") if isinstance(submission.get("discovery_stats"), dict) else {}
-            submission_run_key = str(submission.get("run_key") or stats.get("run_key") or "")
-            if submission_run_key != run_key:
-                continue
-            proof = submission.get("discovery_precheck") if isinstance(submission.get("discovery_precheck"), dict) else {}
-            precheck_id = str(
-                proof.get("request_id")
-                or submission.get("precheck_request_id")
-                or stats.get("precheck_request_id")
-                or ""
+    for path in _iter_discovery_submission_paths(submission_root):
+        submission = _read(path, {})
+        if not isinstance(submission, dict) or submission.get("operation") != "submit_discovery_round":
+            continue
+        stats = submission.get("discovery_stats") if isinstance(submission.get("discovery_stats"), dict) else {}
+        submission_run_key = str(submission.get("run_key") or stats.get("run_key") or "")
+        if submission_run_key != run_key:
+            continue
+        proof = submission.get("discovery_precheck") if isinstance(submission.get("discovery_precheck"), dict) else {}
+        precheck_id = str(
+            proof.get("request_id")
+            or submission.get("precheck_request_id")
+            or stats.get("precheck_request_id")
+            or ""
+        )
+        round_id = str(stats.get("round") or "").strip() or None
+        route_key = _discovery_precheck_route_key(precheck_requests.get(precheck_id))
+        relative_submission = path.relative_to(root).as_posix()
+
+        if precheck_id:
+            progress = submission_progress.setdefault(
+                precheck_id,
+                {"expected": 1, "indices": set(), "paths": []},
             )
-            round_id = str(stats.get("round") or "").strip() or None
-            route_key = _discovery_precheck_route_key(precheck_requests.get(precheck_id))
-            relative_submission = path.relative_to(root).as_posix()
+            expected = stats.get("round_submission_count", 1)
+            index = stats.get("round_submission_index", 1)
+            if isinstance(expected, int) and not isinstance(expected, bool):
+                progress["expected"] = max(int(progress["expected"]), max(expected, 1))
+            if isinstance(index, int) and not isinstance(index, bool) and index >= 1:
+                progress["indices"].add(index)
+            progress["paths"].append(path.stem)
 
-            if precheck_id:
-                progress = submission_progress.setdefault(
-                    precheck_id,
-                    {"expected": 1, "indices": set(), "paths": []},
-                )
-                expected = stats.get("round_submission_count", 1)
-                index = stats.get("round_submission_index", 1)
-                if isinstance(expected, int) and not isinstance(expected, bool):
-                    progress["expected"] = max(int(progress["expected"]), max(expected, 1))
-                if isinstance(index, int) and not isinstance(index, bool) and index >= 1:
-                    progress["indices"].add(index)
-                progress["paths"].append(path.stem)
+        result_path = result_root / path.name
+        result = _read(result_path, {})
+        row = {
+            "stem": path.stem,
+            "submission_path": relative_submission,
+            "result_path": result_path.relative_to(root).as_posix(),
+            "precheck_id": precheck_id,
+            "round_id": round_id,
+            "route_key": route_key,
+            "result": result,
+        }
+        submission_rows.append(row)
 
-            result_path = result_root / path.name
-            result = _read(result_path, {})
-            row = {
-                "stem": path.stem,
-                "submission_path": relative_submission,
-                "result_path": result_path.relative_to(root).as_posix(),
-                "precheck_id": precheck_id,
-                "round_id": round_id,
-                "route_key": route_key,
-                "result": result,
-            }
-            submission_rows.append(row)
+        if not result_path.is_file() or not isinstance(result, dict) or not result:
+            pending_submissions.append(path.stem)
+        elif result.get("ok") is False:
+            failed_events.append(
+                {
+                    "target": f"submission:{path.stem}",
+                    "path": row["result_path"],
+                    "route_key": route_key,
+                    "precheck_id": precheck_id or None,
+                    "round_id": round_id,
+                }
+            )
+        elif result.get("ok") is True:
+            progress_events.append(
+                {
+                    "target": f"submission:{path.stem}",
+                    "path": row["result_path"],
+                    "route_key": route_key,
+                }
+            )
 
-            if not result_path.is_file() or not isinstance(result, dict) or not result:
-                pending_submissions.append(path.stem)
-            elif result.get("ok") is False:
-                failed_events.append(
-                    {
-                        "target": f"submission:{path.stem}",
-                        "path": row["result_path"],
-                        "route_key": route_key,
-                        "precheck_id": precheck_id or None,
-                        "round_id": round_id,
-                    }
-                )
-            elif result.get("ok") is True:
-                progress_events.append(
-                    {
-                        "target": f"submission:{path.stem}",
-                        "path": row["result_path"],
-                        "route_key": route_key,
-                    }
-                )
-
-            if (
-                (round_id and round_id in accounted_rounds)
-                or (precheck_id and precheck_id in accounted_prechecks)
-            ):
-                progress_events.append(
-                    {
-                        "target": f"accounted:{path.stem}",
-                        "path": relative_submission,
-                        "route_key": route_key,
-                    }
-                )
+        if (
+            (round_id and round_id in accounted_rounds)
+            or (precheck_id and precheck_id in accounted_prechecks)
+        ):
+            progress_events.append(
+                {
+                    "target": f"accounted:{path.stem}",
+                    "path": relative_submission,
+                    "route_key": route_key,
+                }
+            )
 
     for request_id in successful_prechecks:
         if request_id in accounted_prechecks:
