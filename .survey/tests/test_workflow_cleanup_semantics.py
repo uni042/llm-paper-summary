@@ -38,6 +38,13 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn("apply_offline_job_seed.py", workflow)
         self.assertNotIn("workflow_version': 9", workflow)
 
+        validator = (ROOT / ".survey/scripts/assemble_research_record.py").read_text(encoding="utf-8")
+        self.assertIn("def validate_record(", validator)
+        self.assertIn("MAX_SLOT_BYTES", validator)
+        self.assertNotIn("chat-inbox.json", validator)
+        self.assertNotIn("chat-payload.md", validator)
+        self.assertNotIn("def assemble(", validator)
+
         worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
         self.assertIn("workflow v10", worker)
         self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)
