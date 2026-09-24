@@ -66,7 +66,8 @@ class RunLivenessPolicyTests(unittest.TestCase):
         precheck = (workflows / "discovery-precheck.yml").read_text(encoding="utf-8")
         self.assertIn("3/10", claim)
         self.assertIn("4/10", run_state)
-        self.assertIn("6/10", precheck)
+        self.assertIn("1/5", precheck)
+        self.assertIn("Discovery precheck laneも**5分周期で未result requestを定期回収**する", router)
         self.assertIn("10分周期", router)
 
     def test_run_state_snapshots_require_unique_request_ids(self):
