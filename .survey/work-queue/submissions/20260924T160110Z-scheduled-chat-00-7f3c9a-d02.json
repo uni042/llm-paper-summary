@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {"canonical_id":"DOI:10.1145/3832810.3832811","doi":"10.1145/3832810.3832811","title":"MigMoE: Task-Aware Expert Migration for Faster and More Balanced Expert-Parallel MoE Inference","source_url":"https://www.semanticscholar.org/paper/4310ab210922d45d4073a99eec23c66e8b21f8d2","priority":95,"priority_breakdown":{"base":45,"lineage":30,"recency":15,"venue":5,"total":95},"reason":"マルチタスクMoE推論でタスク別ルーティング特性に応じてexpert配置を動的移行し、EPLB/HarMoEny比で最大56.4%/68.4%のthroughput改善を報告。expert配置・負荷分散・分散MoE推論の重点系統に直接該当する。"},
+    {"canonical_id":"arXiv:2609.22471","arxiv_id":"2609.22471","title":"Efficient Mixture-of-Experts with Speculative Decoding via Expert Coactivation","source_url":"https://www.semanticscholar.org/paper/cf49524c8ee7b75a56467a5558a29487f84e7ad7","priority":95,"priority_breakdown":{"base":45,"lineage":30,"recency":20,"venue":0,"total":95},"reason":"MoEと投機的デコーディングをexpert coactivationで結び、DRAM→NPU転送ボトルネックを抑えてthroughputを21%改善。MoE推論、expert転送、投機的デコーディングの交差領域として高優先度。"}
+  ],
+  "discovery_precheck":{"request_id":"frontier-ffb9f610716bbbb2820ec80c","result_path":".survey/work-queue/discovery-precheck/results/frontier-ffb9f610716bbbb2820ec80c.json","receipt":"sha256:41faaad5f1afa91f5a6b5884c526c8258d902ce6daf5f4101153c99cf6631c6e"},
+  "discovery_stats":{"run_key":"scheduled-chat-00-20260925T005925+0900-7f3c9a","round":"frontier-ffb9f610716bbbb2820ec80c","axis":"explicit user request: forward citations of foundational Adaptive Expert Computation / Compression seed arXiv:2202.09368 (Expert Choice Routing forward citations)","query_summary":"正規frontier precheck 20件を評価し、LLM/MoE推論システムへ直接寄与する強候補のみ採用。","candidate_count":20,"duplicate_filtered_count":0,"accepted_canonical_ids":["DOI:10.1145/3832810.3832811","arXiv:2609.22471"],"round_submission_index":1,"round_submission_count":1,"search_windows":[{"topic":"Expert Choice Routing forward citations","source":"semantic_scholar","date_range":"forward-citation-window","category":"moe-inference","citation_direction":"forward","query_family":"citation-followup","raw_result_count":20,"unseen_result_count":20,"duplicate_filtered_count":0,"rejection_filtered_count":0,"candidate_evaluation_count":20,"candidate_accepted_count":2,"position":"preload-35f79ff9fbb933aa98ef"}]}
+}
