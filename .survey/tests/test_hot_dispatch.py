@@ -144,6 +144,26 @@ class HotDispatchTests(unittest.TestCase):
             self.assertTrue(packets[0]["resume_without_new_claim"])
             self.assertTrue(packets[0]["work_start_allowed"])
             self.assertFalse(packets[0]["record_write_allowed"])
+            self.assertEqual(
+                packets[0]["status_only_submission_path"],
+                ".survey/work-queue/submissions/research/attempt-carryover.json",
+            )
+            self.assertEqual(
+                packets[0]["source_unavailable_next_action"],
+                "WRITE_STATUS_ONLY_BLOCKED_DESCRIPTOR_THEN_CONTINUE_STANDBY",
+            )
+            self.assertEqual(
+                packets[0]["status_only_descriptor_base"],
+                {
+                    "schema_version": 1,
+                    "transport_version": 10,
+                    "kind": "research",
+                    "attempt_id": "attempt-carryover",
+                    "job_id": job_id,
+                    "claim_id": "claim-carryover",
+                    "worker_id": "scheduled-chat-30",
+                },
+            )
 
     def test_threshold_proximity_never_disables_a_stocked_selected_lane(self):
         with tempfile.TemporaryDirectory() as td:
