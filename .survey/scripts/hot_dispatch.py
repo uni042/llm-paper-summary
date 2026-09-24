@@ -763,6 +763,19 @@ def _frontier_request_id(claim: dict[str, Any], preload_id: str) -> str:
     return "frontier-" + hashlib.sha256(material.encode("utf-8")).hexdigest()[:24]
 
 
+def _accounted_discovery_precheck_ids(root: Path, run_key: str) -> set[str]:
+    state = _read(root / ".survey/work-queue/discovery-state.json", {}) or {}
+    history = state.get("history") if isinstance(state.get("history"), list) else []
+    return {
+        str(row.get("precheck_request_id") or "")
+        for row in history
+        if isinstance(row, dict)
+        and str(row.get("run_key") or "") == run_key
+        and (row.get("round_accounted") is True or row.get("round_complete") is True)
+        and str(row.get("precheck_request_id") or "")
+    }
+
+
 def _active_direct_discovery_claims(
     root: Path,
     *,
@@ -771,6 +784,7 @@ def _active_direct_discovery_claims(
 ) -> list[dict[str, Any]]:
     now = _utcnow()
     rows: list[dict[str, Any]] = []
+    accounted = _accounted_discovery_precheck_ids(root, run_key)
     folder = root / DISCOVERY_CLAIMS
     if not folder.is_dir():
         return rows
@@ -782,6 +796,10 @@ def _active_direct_discovery_claims(
         ):
             continue
         if value.get("worker_id") != worker_id or value.get("run_key") != run_key:
+            continue
+        if str(value.get("request_id") or "") in accounted:
+            # Completed rounds no longer consume the bounded in-flight frontier.
+            # This opens capacity immediately for the next prepared packet.
             continue
         claimed = claim_state.parse_time(value.get("claimed_at") or value.get("requested_at"))
         expires = claim_state.parse_time(value.get("lease_expires_at"))
