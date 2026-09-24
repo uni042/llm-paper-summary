@@ -1,32 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-preload-5ae76716eb01958d78f1d488",
-  "job_id": "job-research-b22af651ef4f551f",
-  "reservation": {
-    "claim_id": "claim-preload-5ae76716eb01958d78f1d488",
-    "worker_id": "worker-925000",
-    "worker_kind": "scheduled_chat"
-  },
   "slot": "problem_method",
-  "data": {
-    "problem": "疎なMixture-of-Experts（MoE）では各トークンが少数のエキスパートしか使わないため、全エキスパート重みをGPUへ常駐させず、必要なものだけを高速なVRAMへ置くことで端末の小容量GPUでも大規模モデルを扱える。しかし要求時に未常駐エキスパートをホストから転送するとPCIe待ちがクリティカルパスへ入る。最終利用履歴や頻度に基づくLRU/LFUは将来利用を予測できず、MoE-Infinityの要求単位活性化行列による類似度探索も、エキスパート数が増えるほどベクトルと探索コストが大きくなり、分布変化や複数要求の混在で履歴類似度が弱くなる。端末のバッチ1条件では要求内の活性化に強い偏りがあるため、その偏りを未来予測へ変換して転送を隠すことが課題になる。",
-    "novelty": "MoE-Beyondは、過去の活性化行列から近い要求を探すヒューリスティックではなく、現在の系列から将来のエキスパート活性化を直接推定する多ラベル系列予測器を学習する。各トークンの2048次元埋め込みと27層の層ID埋め込みを結合し、4層の軽量Transformerで64 routed expertsの必要性を同時予測する点が中心である。約6600万のDeepSeek-V2-Lite活性化サンプルを用い、学習に使っていないWebGLM-QAへ移して予測精度を測ることで、単なる同一要求の履歴再生ではなく文脈からの一般化を狙う。また、その予測をGPUエキスパートキャッシュへ接続し、常駐容量を変えたときの適中率までMoE-Infinityと比較する。",
-    "method_overview": "まずDeepSeek-V2-LiteをPuﬃn系プロンプトで推論し、各生成トークンについて層ID、バッチ番号、トークン、実際に起動したエキスパートID、トークン埋め込みを記録する。DeepSeek-V2-Liteは各MoE層に2 shared expertsと64 routed expertsを持ち、各トークンで6 routed expertsを選ぶ。学習器への入力は時系列の2048次元トークン埋め込みと学習可能な512次元の層埋め込みで、結合した2560次元特徴を512次元へ射影してTransformerへ渡す。出力は64エキスパートの多ラベル二値ベクトルである。\n\n予測器は4層Transformer encoder、8 attention heads、2048次元feed-forward networkから構成し、最大系列長512、dropout 0.1を用いる。最終段は2層MLPで512次元から64 logitsを生成し、sigmoid後の確率からエキスパート集合を決める。学習はAdamWと自動混合精度を使い、batch size 4、最大10 epoch、検証損失が3 epoch改善しなければ早期停止する。実運用側では予測した次層エキスパートをGPUキャッシュへ先読みし、ルータが実際に要求したエキスパートが既に常駐していれば転送待ちを避ける。比較対象のMoE-Infinityは要求単位のExpert Activation Matrixを履歴集合と照合し、部分履歴に最も近い過去パターンから次層を推定するため、MoE-Beyondはこの類似度探索を学習済み予測へ置き換える。",
-    "components": [
-      {
-        "name": "活性化トレースと多ラベル入力表現",
-        "description": "DeepSeek-V2-Liteを多数のプロンプトで実行し、各トークンの層位置と実際のrouted expert選択を教師ラベルとして保存する。入力には2048次元のトークン埋め込みと、27層を区別する512次元の学習可能な層埋め込みを用い、結合して2560次元特徴を作る。出力は64エキスパートそれぞれの活性化有無を表す多ラベルベクトルで、1トークンに複数エキスパートが同時に必要というMoEルータの性質をそのまま予測問題へ写す。\n\n学習用にはPuﬃnデータセットから6994プロンプトをDeepSeek-V2-Liteで処理し、約6600万サンプルを得る。一方、評価はWebGLM-QAから100プロンプトを別に選び、同じ特徴を抽出して未見入力に対する一般化を測る。要求単位で活性化が偏るというMoE-Infinityの観察も122プロンプトで再確認し、複数要求を集約すると頻度が平坦化する一方、単一要求では少数エキスパートへ集中することを予測利用の根拠にする。"
-      },
-      {
-        "name": "軽量Transformer活性化予測器",
-        "description": "2560次元の結合特徴を線形層で512次元へ射影し、4層Transformer encoderへ入れる。各層は8 attention headsと2048次元のfeed-forward networkを持ち、注意重みとfeed-forward出力にはdropout 0.1を適用する。最後に2層MLPとGELUで512次元から64 logitsへ落とし、sigmoid確率から各エキスパートの活性化を予測する。最大系列長は512で、切り詰めとpaddingを組み合わせて計算量を制御する。\n\n学習はPyTorch自動混合精度、AdamW、勾配clip 1.0、weight decay 0.01を使い、入力射影・encoder・headに段階的な学習率を設定する。位置単位精度だけでは6:58の活性/非活性不均衡で高く見えやすいため、64エキスパートをそれぞれ二値分類として扱うmacro F1も併用する。論文ではtop-6予測と0.5閾値の記述があり、最終的には実際の活性化集合との一致とF1で予測器を評価する。"
-      },
-      {
-        "name": "予測プリフェッチとGPUキャッシュシミュレーション",
-        "description": "GPU VRAMを全エキスパートの一部だけを保持する高速キャッシュとして扱い、予測器が次層で必要と判断したエキスパートを先に転送する。実際のMoEルータ選択が到着した時点で対象重みがGPUにあればキャッシュ適中となり、無ければホスト側からのロードが必要になる。予測はルータの計算結果そのものを変更せず、データ移動を計算と重ねて待ち時間を減らすために使われる。\n\n比較するMoE-Infinity側は、トレースを27層×64 expertsの要求単位活性化行列へ集約し、履歴集合とのcosine similarityで最も近いパターンを選ぶ。シミュレータはテスト要求をtoken-by-tokenで再生し、初期n tokenでLRU cacheを暖機した後、部分要求行列から次層を予測してprefetchし、記録済みground truthでprediction hitとcache hitを数える。GPUへ常駐できるエキスパート割合を掃引することで、同じ容量制約の下で学習予測と履歴類似度の差を測る。"
-      }
-    ],
-    "system_design": "オフライン段階ではDeepSeek-V2-Liteを使って大量の活性化トレースを集め、トークン埋め込み・層IDから次のrouted expert集合を返す小型Transformerを訓練する。学習済み予測器と元のMoEモデルは別であり、MoE本体のルータ重みを書き換えない。\n\n推論段階では、現在までのトークン情報を予測器へ入力して次層の必要エキスパート候補を得る。候補重みをホストメモリからGPU VRAMキャッシュへ先読みし、その間に先行層の計算を進める。MoE本体のルータが最終的にエキスパートを選んだ際、予測が当たれば転送済み重みを直ちに利用し、外れれば正しい重みを通常ロードする。このため予測器は計算結果を近似するのではなく、重み転送の時刻を前倒しするスケジューラとして機能する。"
+  "attempt_id": "attempt-preload-101d5ac873cbcaa40480d5cb",
+  "job_id": "job-research-62f6ca15b903420d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-101d5ac873cbcaa40480d5cb",
+    "worker_id": "worker-45",
+    "worker_kind": "scheduled_chat"
   }
 }

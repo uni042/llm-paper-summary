@@ -1,28 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-preload-5ae76716eb01958d78f1d488",
-  "job_id": "job-research-b22af651ef4f551f",
-  "reservation": {
-    "claim_id": "claim-preload-5ae76716eb01958d78f1d488",
-    "worker_id": "worker-925000",
-    "worker_kind": "scheduled_chat"
-  },
   "slot": "positioning",
-  "data": {
-    "limitations": [
-      "batch size 1前提で、micro-batchやmulti-tenant環境では活性化疎性が弱まり予測価値が下がる。",
-      "DeepSeek-V2-Lite固有のtoken embeddingと層構造に結合しており、別backboneでは再学習またはfine-tuningが必要。",
-      "予測器学習自体に約48 A100 GPU時間を要し、頻繁なbackbone更新では保守コストになる。",
-      "1層先予測のためDMA転送を深い計算区間まで隠せず、長文脈で残るstallがある。",
-      "cache hit率はtrace-driven simulationで、実端末のend-to-end throughput/latency、電力、メモリ帯域競合は未評価。"
-    ],
-    "differences": [
-      "MoE-Infinityが要求単位Expert Activation Matrixの履歴とcosine similarityを使うのに対し、MoE-Beyondはtoken embeddingとlayer IDを入力する学習済みTransformerで未来のexpert集合を直接予測する。",
-      "DeepSpeed-MoEのような次層全expertのeager loadやLRU/LFUの過去利用中心方策に対し、必要expertだけを将来予測してprefetchすることで不要転送を減らす。",
-      "ProMoEなどのexpert activation prediction系と方向性を共有するが、本論文は端末のbatch-1条件とMoE-Infinity型expert cacheを主対象に、DeepSeek-V2-Liteの大規模activation traceから学習したpredictorをcache capacity sweepで比較する。"
-    ],
-    "implementation_status": "本文に公開GitHub `ngavhane/moe-beyond` が明記され、コード、データ、学習済み重みを公開するとしている。予測器はPyTorchで実装され、学習・テスト結果が示される。一方、端末向けキャッシュ効果はトレース駆動simulatorによる評価で、完全な実端末推論スタックの実測ではない。",
-    "research_positioning": "MoEオフロードにおけるエキスパートキャッシュを、履歴ヒューリスティックから学習ベースの未来予測へ移す研究に位置づく。特にGPUへ全expertを置けない端末環境で、ルータの計算意味を変えずにprefetchだけを改善するため、expert cache/prefetch、CPU・GPU階層メモリ、edge inferenceの系統をつなぐ。ただし実機system throughputではなくpredictionとtrace simulationが中心なので、実運用基盤研究への橋渡しには追加のend-to-end評価が必要である。"
+  "attempt_id": "attempt-preload-101d5ac873cbcaa40480d5cb",
+  "job_id": "job-research-62f6ca15b903420d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-101d5ac873cbcaa40480d5cb",
+    "worker_id": "worker-45",
+    "worker_kind": "scheduled_chat"
   }
 }

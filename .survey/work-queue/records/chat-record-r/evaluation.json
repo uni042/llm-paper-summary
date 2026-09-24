@@ -1,56 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-preload-24504aa3d0d6716cf366c75b",
-  "job_id": "job-research-11098a1512c29cb4",
-  "reservation": {
-    "claim_id": "claim-preload-24504aa3d0d6716cf366c75b",
-    "worker_id": "worker-924226",
-    "worker_kind": "scheduled_chat"
-  },
   "slot": "evaluation",
-  "data": {
-    "hardware": "NVIDIA A100 80GB GPU。長文脈でKV容量とデコード遅延が支配的になるbatch size 1を基本条件とする。",
-    "software": "Python 3.10、PyTorch 2.5.1+cu121、Transformers 4.45.1、CUDA 12.1、PyTorch SDPA。",
-    "model": [
-      "Llama-3.1-8B-Instruct",
-      "Mistral-7B-Instruct",
-      "Qwen2.5-14B-Instruct"
-    ],
-    "datasets": [
-      "PG-19（DGAPのオフライン学習・校正。評価集合とは分離）",
-      "LongBench",
-      "RULER",
-      "MMLU",
-      "WikiText-2"
-    ],
-    "baselines": [
-      "FP16 full-precision",
-      "uniform K1V1/K2V2/K4V4/K8V8",
-      "KIVI 2-bit",
-      "KVQuant 3-bit",
-      "TurboQuant 2.5-bit"
-    ],
-    "correctness": "同じmodel–benchmark pairでは評価prompt、decoding設定、random seedを統一。DGAPの学習/校正はPG-19のtrace-training/validationに限定し、LongBench/RULER/MMLU/WikiText-2から分離。persistent KV bitwidthを変えずに品質回復を比較する。",
-    "settings": [
-      {
-        "name": "精度条件",
-        "description": "K1V1〜K8V8を比較し、特にK1V1を極端な低ビット条件として評価。"
-      },
-      {
-        "name": "校正",
-        "description": "τ、K_b、temperature T、loss weightsはvalidation traceで選びtestでは固定。既定のrisk thresholdはτ=0.60。"
-      },
-      {
-        "name": "遅延計測",
-        "description": "CUDA synchronizationを用い、p95 per-token decode latencyとthroughputを測定。"
-      },
-      {
-        "name": "メモリ評価",
-        "description": "Qwen2.5-14Bについて8K〜128K contextのpersistent KV memoryを比較。"
-      }
-    ],
-    "methodology": "LongBenchの8タスク平均、WikiText-2 perplexity、MMLU accuracy、RULER accuracyに加え、FP16とのlocal distribution driftを測る。機構検証では、FP16ロジットへ量子化順位だけを適用する条件と順位保存スコア変換を比較して、品質低下の原因を順位崩れと値変化へ分離する。ablationではKV精度、補正対象、検出器/補正器のarchitecture、閾値τを変える。",
-    "scope": "単一A100-80GB上のbatch-size-1デコードを中心としたアルゴリズム評価であり、大規模multi-tenant servingや複数GPUスケジューリングは評価対象外。3モデルと4種の評価ベンチマークで一般化を確認するが、校正値の異なるモデル/運用分布への無調整移植は保証しない。"
+  "attempt_id": "attempt-preload-e94e9bec3ed409d2a07e9f3f",
+  "job_id": "job-research-97bdea5134064ed3",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-e94e9bec3ed409d2a07e9f3f",
+    "worker_id": "worker-45",
+    "worker_kind": "scheduled_chat"
   }
 }

@@ -1,6 +1,6 @@
 {
   "fact_generation": 3,
-  "generation": 17,
+  "generation": 18,
   "runs": {
     "worker-45-20260923T194719Z-audit11": {
       "actual_invocation_start": "2026-09-23T19:47:19+00:00",
@@ -404,48 +404,6 @@
       "work_mode": "discovery",
       "worker_id": "worker-45"
     },
-    "worker-45-20260924T064704Z-audit45": {
-      "actual_invocation_start": "2026-09-24T06:47:04+00:00",
-      "attempts": {},
-      "cache_valid": true,
-      "candidate_inventory": 286,
-      "claims": {
-        "active_assignment": false,
-        "active_claim_count": 0,
-        "active_job_ids": [],
-        "claim_monitor_window_seconds": 60,
-        "claim_refill_threshold": 10,
-        "claim_result_pending": false,
-        "claim_result_pending_age_seconds": 0,
-        "claim_state_checked": true,
-        "claim_window": 12,
-        "claim_window_remaining": 12,
-        "foreground_job_id": null,
-        "pending_claim_request_ages_seconds": {},
-        "pending_claim_request_ids": [],
-        "pending_claim_requested_at": {},
-        "standby_job_ids": []
-      },
-      "first_cached_at": "2026-09-24T06:51:22.035879+00:00",
-      "generation": 17,
-      "rebuilt_from_canonical": true,
-      "run_key": "worker-45-20260924T064704Z-audit45",
-      "scheduled_slot": "adhoc",
-      "submission": {
-        "completed_attempt_ids": [],
-        "last_terminal_job_status": "none",
-        "pending_attempt_ids": [],
-        "pipeline_ahead_count": 0,
-        "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 0,
-        "retryable_attempt_ids": [],
-        "submission_result_pending": false,
-        "submission_state_checked": true,
-        "submitted_attempt_ids": []
-      },
-      "work_mode": "discovery",
-      "worker_id": "worker-45"
-    },
     "worker-45-20260924T104800JST-audit13": {
       "actual_invocation_start": "2026-09-24T01:48:00+00:00",
       "attempts": {
@@ -621,9 +579,87 @@
       },
       "work_mode": "research",
       "worker_id": "worker-45"
+    },
+    "worker-45-20260925T014543JST-01": {
+      "actual_invocation_start": "2026-09-24T16:45:43+00:00",
+      "attempts": {},
+      "cache_valid": true,
+      "candidate_inventory": 299,
+      "claims": {
+        "active_assignment": true,
+        "active_claim_count": 12,
+        "active_job_ids": [
+          "job-research-97bdea5134064ed3",
+          "job-research-3ccfe94f6e9f9715",
+          "job-research-62f6ca15b903420d",
+          "job-research-64becbe5cce3752e",
+          "job-research-89b223c1a441edfc",
+          "job-research-53de425c7cce08ac",
+          "job-research-bafde4b6e59e8f79",
+          "job-research-9d57d4c95ee33e52",
+          "job-research-9ffff7b3c686d070",
+          "job-research-2b9259708f8f9ac7",
+          "job-research-659a613581e8490b",
+          "job-research-05f57bc36c570458"
+        ],
+        "claim_monitor_window_seconds": 60,
+        "claim_refill_threshold": 10,
+        "claim_result_pending": false,
+        "claim_result_pending_age_seconds": 0,
+        "claim_state_checked": true,
+        "claim_window": 12,
+        "claim_window_remaining": 0,
+        "foreground_job_id": "job-research-97bdea5134064ed3",
+        "pending_claim_request_ages_seconds": {},
+        "pending_claim_request_ids": [],
+        "pending_claim_requested_at": {},
+        "preflight_inflight_count": 0,
+        "preflight_parked_attempt_ids": [],
+        "preflight_parked_job_ids": [],
+        "preflight_parked_request_ids": {},
+        "preflight_parked_states": {},
+        "preflight_pipeline_capacity_remaining": 2,
+        "preflight_pipeline_overflow_count": 0,
+        "preflight_pipeline_saturated": false,
+        "preflight_pipeline_window": 2,
+        "preflight_repair_attempt_ids": [],
+        "preflight_repair_job_ids": [],
+        "standby_job_ids": [
+          "job-research-3ccfe94f6e9f9715",
+          "job-research-62f6ca15b903420d",
+          "job-research-64becbe5cce3752e",
+          "job-research-89b223c1a441edfc",
+          "job-research-53de425c7cce08ac",
+          "job-research-bafde4b6e59e8f79",
+          "job-research-9d57d4c95ee33e52",
+          "job-research-9ffff7b3c686d070",
+          "job-research-2b9259708f8f9ac7",
+          "job-research-659a613581e8490b",
+          "job-research-05f57bc36c570458"
+        ]
+      },
+      "first_cached_at": "2026-09-24T16:48:12.302997+00:00",
+      "generation": 18,
+      "rebuilt_from_canonical": true,
+      "run_key": "worker-45-20260925T014543JST-01",
+      "scheduled_slot": "adhoc",
+      "submission": {
+        "completed_attempt_ids": [],
+        "last_terminal_job_status": "none",
+        "pending_attempt_ids": [],
+        "pipeline_ahead_count": 0,
+        "repair_required_attempt_ids": [],
+        "research_audit_completed_this_invocation": 0,
+        "retryable_attempt_ids": [],
+        "submission_result_pending": false,
+        "submission_state_checked": true,
+        "submitted_attempt_ids": []
+      },
+      "work_mode": "research",
+      "worker_id": "worker-45"
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T06:51:22.036106+00:00",
+  "updated_at": "2026-09-24T16:48:12.303288+00:00",
   "worker_id": "worker-45"
 }

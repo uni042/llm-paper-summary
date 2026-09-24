@@ -1,36 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-preload-24504aa3d0d6716cf366c75b",
-  "job_id": "job-research-11098a1512c29cb4",
-  "reservation": {
-    "claim_id": "claim-preload-24504aa3d0d6716cf366c75b",
-    "worker_id": "worker-924226",
-    "worker_kind": "scheduled_chat"
-  },
   "slot": "problem_method",
-  "data": {
-    "problem": "長文脈LLMではKVキャッシュが文脈長とバッチサイズに比例して増え、メモリ容量と帯域がデコードの主要制約になる。低ビットKV量子化は容量を削減できる一方、K1V1のような強い量子化では品質が急落する。著者らの制御実験では、FP16ロジットの値を維持して量子化後の順位だけを課すと精度が31.8ポイント低下する一方、順位を保ったスコア変化はFP16から1.2ポイント以内であり、主因は高確率候補の局所的な並べ替えだと示される。問題は、FP16参照を実行時に再計算したり全語彙を補正したりせず、この局所的な分布崩れだけを低コストで修復することである。",
-    "novelty": "DGAPは永続KVのビット幅を上げるのではなく、量子化ロジットに残る「structured local misranking」をデコード時に検出し、回復可能なステップだけtop-K候補分布を補正する。分布リスク検出器と選択的top-K補正器を分離し、前者は量子化ロジット由来の軽量特徴のみ、後者は危険ステップの小さな候補集合だけを処理する。さらにキー精度ごとにFP16候補質量を十分覆う最小回復窓K_bをオフライン校正し、KL分布整合と確率差重み付き順位損失を組み合わせて、局所確率形状と相対順位の双方を復元する。",
-    "method_overview": "入力は既存の低ビットKVデコーダが各ステップで生成する量子化ロジットである。まずentropy、top-K確率質量、候補間gap、確率集中度、分散などから検出器がリスクr_tを推定する。r_tが閾値τ以下なら元の量子化ロジットをそのまま使用し、τを超えると量子化top-K_b集合だけを抽出して補正器が疎なロジット更新量を予測する。K_bはキー精度別に、FP16高確率候補集合の確率質量が量子化top-Kへ十分含まれる最小サイズとして校正される。この判断は各tokenの選択直前に行われ、量子化デコーダ本体の注意計算や保存済みKVの形式は変えない。\n\n学習ではPG-19から同一prefix/targetについてFP16 KVと低ビットKVを対にした軌跡を作る。検出器には、FP16と量子化後の局所分布の距離が閾値を超え、かつFP16高確率候補の十分な質量が回復窓内に残るステップを正例として与える。補正器はFP16局所分布とのKL損失、FP16の相対順位を再現する確率差重み付きpairwise rank loss、更新量のL2正則化で学習する。実行時にはFP16教師も追加forward passもKV再構築も不要で、永続低ビットKVは一切変更しない。",
-    "components": [
-      {
-        "name": "分布リスク検出器",
-        "description": "検出器は量子化ロジットだけを入力にし、entropy、量子化top-K_bに含まれる確率質量、上位候補間のlogit gap、確率集中度、候補分散などのcompactな分布形状特徴を作る。これらは、候補間のmarginが小さい、あるいは確率質量が広く分散しているときに非一様な量子化誤差で順位が反転しやすいという観察を利用する。FP16ロジットや追加のreference forward passはオンラインでは使わず、各デコードstepでrisk score r_tだけを予測する。\n\n教師信号はPG-19から作ったFP16/低ビットのpaired traceから得る。FP16高確率候補集合と量子化top-Kの和集合上で正規化した局所分布距離を測り、分布歪みが閾値を超え、なおFP16候補質量が回復窓に十分残るstepだけを「回復可能な危険step」として正例にする。r_tが校正済み閾値τ以下なら補正器を完全にbypassし、不要な計算を発生させない。これにより高コストなFP16照合をオンライン経路から除外する。"
-      },
-      {
-        "name": "ビット幅別回復窓",
-        "description": "回復窓K_bは固定の共通値ではなく、KVのbitwidthごとにオフライン校正する。まずFP16 next-token分布から累積確率質量αを満たす最小の高確率候補集合を作り、その候補のFP16確率質量が量子化後top-K内で平均して目標ρ_K以上回収される最小Kを選ぶ。キー量子化はquery-key scoreを直接変えるため、bit数が少ないほど候補順位の変動が強くなり、より広い回復窓が必要になるという設計である。\n\nこの仕組みにより、全語彙を毎step補正する計算を避けつつ、実際にFP16側で重要だった候補を補正対象に残す。K1V1のような強い量子化では大きなK_bで回復可能性を確保し、K4V4/K8V8のように元の分布が安定する設定では小さな窓へ縮める。したがって回復精度と候補処理量の折衷がbitwidthに追随し、永続KV精度を一律に上げる必要がない。回復不能なほど重要候補が窓外へ落ちたstepは検出器の正例からも外し、局所補正の適用範囲を明確に限定する。"
-      },
-      {
-        "name": "選択的top-K補正器",
-        "description": "r_tがτを超えたstepでは、量子化ロジットからtop-K_b候補集合だけを選び、各候補の局所logit、順位、margin、確率に検出器の分布特徴を合わせて補正器へ入力する。補正器は選択候補に対する疎なlogit更新量だけを出力し、それを元の全語彙logitへmergeする。候補集合の外側は変更せず、r_tがτ以下なら全logitをそのままtoken selectionへ送るので、stable stepでは補正器のコストが発生しない。\n\n補正後の目的は単に絶対logit誤差を小さくすることではなく、FP16の局所確率形状と相対順位を戻すことである。これにより、1-bit KVを保持したままtoken選択直前の分布だけを修復できる。base modelやattention kernel、stored KV tensorを作り直さず既存低ビットdecoderの後段に追加する構成なので、KVのpersistent memory削減と補正の計算コストを分離して扱える。補正はK_b≪Vの局所sliceに限定されるため、語彙全体を走査・更新するdense correctionを避ける。"
-      },
-      {
-        "name": "局所分布・順位の共同学習",
-        "description": "補正器の教師は検出器と同じpaired FP16/quantized-KV tracesから作る。選択されたtop-K_b候補についてFP16と補正後logitをtemperature付きsoftmaxで局所分布へ変換し、FP16から補正後へのKL divergenceを最小化する。さらにFP16でiがjより上位だった候補pairに対し、補正後もその順序を保つようpairwise rank-consistency lossを加え、各pairの重みにはFP16確率差を使う。大きな更新を抑えるL2正則化も加える。\n\nこの三項目的により、確率質量の形、上位候補の相対順位、補正量の安定性を同時に扱う。pairwise項はオフライン学習時だけに使い、オンラインでは学習済み補正器が局所候補への更新を直接出すため追加のpair列挙は不要である。著者は常時動く単一end-to-end correctorではstable stepにも重い処理が必要になるとし、軽い検出と条件付き補正を分離してデコード時のmemory trafficとcompute overheadを抑えている。補正器は危険かつ回復可能なstepだけに適用されるため、学習目標と実行時gateが同じ局所回復仮説に沿っている。"
-      }
-    ],
-    "system_design": "オフライン段階でPG-19の長文書から複数の文脈長を持つprefixを採り、同一モデルをFP16 KVと対象低ビットKVで実行してpaired tracesを収集する。そこから各stepのFP16/量子化局所分布、候補被覆率、分布特徴を算出し、検出器と補正器を学習する。同時にrisk threshold τとbitwidth別recovery window K_bをvalidation traceで校正し、推論時に固定して使う。学習用PG-19と評価用LongBench、RULER、MMLU、WikiText-2は分離されるため、評価ベンチマークの答えを直接教師へ混入させない構成である。\n\nオンライン段階では既存の低ビットKV attentionが通常どおり量子化KVからlogitsを生成し、その直後にDGAPを置く。検出器が毎stepの量子化logitsからrisk scoreを出し、閾値以下なら何も変更せずtoken selectionへ流す。閾値超過時だけtop-K_b候補を補正器へ渡し、疎なlogit更新を全語彙logitへmergeしてから次tokenを選ぶ。したがってbase model weights、attention kernel、persistent KV layoutを再構成せず、K1V1の保存容量を維持したまま分布修復だけを追加できる。現在の実装はこの後段補正をPyTorch上で評価しており、Triton/CUDA融合やonline calibrationは将来拡張として残されている。"
+  "attempt_id": "attempt-preload-e94e9bec3ed409d2a07e9f3f",
+  "job_id": "job-research-97bdea5134064ed3",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-e94e9bec3ed409d2a07e9f3f",
+    "worker_id": "worker-45",
+    "worker_kind": "scheduled_chat"
   }
 }
