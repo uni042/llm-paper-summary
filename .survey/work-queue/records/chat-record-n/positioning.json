@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-f48e2e24f9e9543b922e54eb",
-  "job_id": "job-research-fdc9e29fb13596db",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-f48e2e24f9e9543b922e54eb",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-f48e2e24f9e9543b922e54eb","job_id":"job-research-fdc9e29fb13596db","data":{"limitations":"評価モデルは約60M〜3B parameterで、現在の大規模LLM servingへ直接外挿できる実機証拠はない。実サービス指標であるTTFT、TPOT、throughput、continuous batching、multi-tenant SLOは評価していない。学習時expert-choice top-kは非因果であり、生成時は別predictorへ切り替える必要がある。predictorの判定によりtokenごとの実行量は動的になるため、固定k学習時と実際のdecode executionの対応をruntime側でどう高効率化するかは未解決。KV cache削減の可能性は述べるが定量的なcache-system評価はない。","differences":"early-exitは一度終了したtokenが後段layerへ戻らないのに対し、MoDは中間blockをskipしたtokenが後段で再び計算へ参加できる。MoEは一定計算量を複数expertへ分配するのに対し、MoDは通常blockとno-op residualの間でrouteし総計算量自体を削減する。CoLT5もheavy/light経路を使うがencoder-decoder中心で、MoDはdecoder-only自己回帰生成に必要なcausal predictorを明示する。","implementation_status":"論文はアルゴリズムと学習・生成評価を詳細に示すが、本文中で汎用serving engineへの統合やproduction runtime実装は主張していない。したがって本サーベイでは完成したserving frameworkではなく、adaptive computationを実装可能な静的capacityへ落とす基礎方式として扱う。","research_positioning":"本サーベイではadaptive expert/computation系統の基礎論文に位置する。特に『固定capacityでshapeを静的化し、token選択だけを動的化する』設計は、GPU/TPUの高利用率を維持しながら条件付き計算を導入する際の重要な基準点である。MoE expert routingとは異なるdepth routingだが、routing予測、prefetch、token scheduling、動的KV/activation管理の研究と接続可能であり、MoDEとしてexpert sparsityとも併用できる。"},"reservation":{"claim_id":"claim-preload-f48e2e24f9e9543b922e54eb","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
