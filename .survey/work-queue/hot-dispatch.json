@@ -1,12 +1,12 @@
 {
-  "candidate_inventory": 288,
-  "direct_start_allowed": true,
+  "candidate_inventory": 286,
+  "direct_start_allowed": false,
   "discovery": {
     "backward": [],
     "forward": [],
     "normal": []
   },
-  "generated_at": "2026-09-24T09:11:32+00:00",
+  "generated_at": "2026-09-24T09:13:02+00:00",
   "lane_available": {
     "discovery": false,
     "research": true
@@ -3166,81 +3166,6 @@
     ],
     "scheduled-chat-30": [
       {
-        "attempt_id": "attempt-preload-7567c60b834735ea01f92a82",
-        "claim_id": "claim-preload-7567c60b834735ea01f92a82",
-        "claim_path": ".survey/work-queue/claims/job-research-7ecc4d7949c81534.json",
-        "claimed_at": "2026-09-24T08:29:26+00:00",
-        "job": {
-          "artifact_transport": "structured_record_v10",
-          "arxiv_id": "2609.26300",
-          "canonical_id": "arXiv:2609.26300",
-          "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
-          "created_at": "2026-09-23T16:18:15+00:00",
-          "doi": null,
-          "identifiers": [],
-          "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-          "job_id": "job-research-7ecc4d7949c81534",
-          "openreview_id": null,
-          "paper_path": "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md",
-          "parent_job_id": "job-3e54b028d058ee2b",
-          "priority": 95,
-          "priority_breakdown": {
-            "base": 55,
-            "lineage": 20,
-            "recency": 15,
-            "total": 95,
-            "venue": 5
-          },
-          "schema_version": 1,
-          "selection_reason": "CompKV directly optimizes sparse KV selection for long-context inference and provides an asynchronous implementation with up to 6.85x self-attention speedup, strongly matching KV-cache and serving-efficiency lineages.",
-          "source_url": "https://www.semanticscholar.org/paper/bfdfdb9a104b074b2a914d3a12d2471d0af1b3fb",
-          "status": "ready",
-          "title": "CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference",
-          "type": "research",
-          "workflow_version": 10
-        },
-        "job_id": "job-research-7ecc4d7949c81534",
-        "job_path": ".survey/work-queue/jobs/job-research-7ecc4d7949c81534.json",
-        "kind": "research",
-        "pipeline_order": 7,
-        "pipeline_position": 1,
-        "pipeline_role": "foreground",
-        "record_bank": "k",
-        "record_bank_root": ".survey/work-queue/records/chat-record-k",
-        "record_slot_paths": {
-          "evaluation": ".survey/work-queue/records/chat-record-k/evaluation.json",
-          "metadata": ".survey/work-queue/records/chat-record-k/metadata.json",
-          "positioning": ".survey/work-queue/records/chat-record-k/positioning.json",
-          "problem_method": ".survey/work-queue/records/chat-record-k/problem_method.json",
-          "results": ".survey/work-queue/records/chat-record-k/results.json"
-        },
-        "record_write_allowed": true,
-        "resume_without_new_claim": true,
-        "source_actual_invocation_start": "2026-09-24T08:28:00+00:00",
-        "source_run_key": "scheduled-chat-30-20260924T081700Z-7f2c91",
-        "source_scheduled_slot": "30",
-        "source_unavailable_next_action": "WRITE_STATUS_ONLY_BLOCKED_DESCRIPTOR_THEN_CONTINUE_STANDBY",
-        "status_only_allowed_statuses": [
-          "blocked",
-          "deferred",
-          "rejected"
-        ],
-        "status_only_descriptor_base": {
-          "attempt_id": "attempt-preload-7567c60b834735ea01f92a82",
-          "claim_id": "claim-preload-7567c60b834735ea01f92a82",
-          "job_id": "job-research-7ecc4d7949c81534",
-          "kind": "research",
-          "schema_version": 1,
-          "transport_version": 10,
-          "worker_id": "scheduled-chat-30"
-        },
-        "status_only_submission_path": ".survey/work-queue/submissions/research/attempt-preload-7567c60b834735ea01f92a82.json",
-        "stock_bank": "j",
-        "stock_lane": "research",
-        "work_start_allowed": true,
-        "worker_id": "scheduled-chat-30"
-      },
-      {
         "attempt_id": "attempt-preload-3ee424a7b2b36c6924101628",
         "claim_id": "claim-preload-3ee424a7b2b36c6924101628",
         "claim_path": ".survey/work-queue/claims/job-research-41d37332b16e3d57.json",
@@ -3278,8 +3203,8 @@
         "job_path": ".survey/work-queue/jobs/job-research-41d37332b16e3d57.json",
         "kind": "research",
         "pipeline_order": 8,
-        "pipeline_position": 2,
-        "pipeline_role": "standby",
+        "pipeline_position": 1,
+        "pipeline_role": "foreground",
         "record_bank": "i",
         "record_bank_root": ".survey/work-queue/records/chat-record-i",
         "record_slot_paths": {
@@ -3353,7 +3278,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-5bd282d7c260721a.json",
         "kind": "research",
         "pipeline_order": 9,
-        "pipeline_position": 3,
+        "pipeline_position": 2,
         "pipeline_role": "standby",
         "record_bank": "l",
         "record_bank_root": ".survey/work-queue/records/chat-record-l",
@@ -3428,7 +3353,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-fc413cbcbab0d455.json",
         "kind": "research",
         "pipeline_order": 10,
-        "pipeline_position": 4,
+        "pipeline_position": 3,
         "pipeline_role": "standby",
         "record_bank": "m",
         "record_bank_root": ".survey/work-queue/records/chat-record-m",
@@ -3503,7 +3428,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-f2e1ac26e49a97fd.json",
         "kind": "research",
         "pipeline_order": 11,
-        "pipeline_position": 5,
+        "pipeline_position": 4,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -3571,7 +3496,7 @@
         "job_path": ".survey/work-queue/jobs/job-research-e37f81d7634eb52b.json",
         "kind": "research",
         "pipeline_order": 12,
-        "pipeline_position": 6,
+        "pipeline_position": 5,
         "pipeline_role": "standby",
         "record_write_allowed": false,
         "resume_without_new_claim": true,
@@ -3604,5 +3529,5 @@
   "route_guard_band": 0,
   "rule": "This is a rebuildable acceleration index. Candidate inventory selects the suggested work mode only; it never disables the prepared Research or Discovery lane. A create-only take reserves one prepared item immediately, while canonical run-state/precheck/claim publication continues asynchronously. same-worker active unsubmitted Research/Audit claims are exposed in research_resume and take precedence over creating a new take, so content work can resume immediately while canonical route repair proceeds; resume packets also expose the canonical status-only submission path/template so a single unreadable paper can be durably terminalized and the next standby can start without ending the run; direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; if that lane has no packet, fall back to the normal synchronous run-state route.",
   "schema_version": 1,
-  "suggested_work_mode": "research"
+  "suggested_work_mode": "discovery"
 }

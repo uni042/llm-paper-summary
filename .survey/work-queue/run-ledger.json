@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T09:07:29.413383+00:00",
+  "updated_at": "2026-09-24T09:13:03.030755+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -45078,6 +45078,64 @@
           "type": "research",
           "canonical_id": "arXiv:2509.12211",
           "title": "TinyServe: Query-Aware Cache Selection for Efficient LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1012,
+      "paper_active_count_after": 1012,
+      "last_successful_action": "research_completed"
+    },
+    {
+      "run_key": "unattributed:35979519332",
+      "first_recorded_at": "2026-09-24T09:13:03.030755+00:00",
+      "last_recorded_at": "2026-09-24T09:13:03.030755+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 2,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35979519332:1",
+          "recorded_at": "2026-09-24T09:13:03.030755+00:00",
+          "github": {
+            "event_name": "workflow_dispatch",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35979519332",
+            "run_attempt": "1",
+            "source_sha": "0d6ff2955b7fe8694d52def25cffac7a98a4b183"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-7ecc4d7949c81534",
+          "type": "research",
+          "canonical_id": "arXiv:2609.26300",
+          "title": "CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-ed39f178b202751f",
+          "type": "research",
+          "canonical_id": "arXiv:2606.24033",
+          "title": "RoPE-Aware Bit Allocation for KV-Cache Quantization",
           "from": "ready",
           "to": "completed"
         }
