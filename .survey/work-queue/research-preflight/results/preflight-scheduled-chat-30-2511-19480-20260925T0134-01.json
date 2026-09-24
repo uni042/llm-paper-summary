@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-scheduled-chat-30-2511-19480-20260925T0134-01",
+  "kind": "research",
+  "attempt_id": "attempt-preload-0eb96878e292ba8c65359cba",
+  "job_id": "job-research-372c7ba23950bd0c",
+  "record_bank": "u",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.19480-unauthorized-moe-compression-expert-attribution.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260925T013037JST-01",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T16:30:37+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:4b3d80013a53399d8f231c42b880172e89d14189cb36bc941a9a4ec90ff7362b",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-u/metadata.json",
+      "blob_sha": "e092a9c3f182bfd507183477df58d476d058af3f"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-u/problem_method.json",
+      "blob_sha": "3ecf809a9080adca65687082e7b8b9176902be19"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-u/evaluation.json",
+      "blob_sha": "40cb123f2a241fecccba03b3d70efbeafc3c789c"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-u/results.json",
+      "blob_sha": "0bb17d0da256c9ed34f27c4d8dc1453440743a18"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-u/positioning.json",
+      "blob_sha": "0f21a2913f2be36ad6d40d3ca15bcd617833cbb0"
+    }
+  ],
+  "validation_errors": [
+    "metadata.source is required",
+    "metadata.sources is required",
+    "metadata.publication is required",
+    "metadata.topics is required",
+    "metadata.implementation is required",
+    "metadata.last_checked is required",
+    "metadata.code is required; use null when no official URL was confirmed",
+    "metadata.publication_type is required",
+    "metadata.published is required",
+    "metadata.arxiv_categories.primary is required for arXiv papers",
+    "metadata.hardware_evaluation is required",
+    "metadata.quality_effect is required",
+    "metadata.references is required; use [] after checking a reference section with no normalized identifiers",
+    "problem_method.system_design is required",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.novelty must explain the paper-specific idea",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[2].description is too short",
+    "evaluation requires hardware/software/methodology evidence",
+    "evaluation.scope is required to distinguish real-hardware/simulation and generalization limits",
+    "results.key_results[0] missing: baseline",
+    "results.key_results[1] missing: baseline",
+    "results.key_results[2] missing: baseline",
+    "results.key_results[3] missing: baseline",
+    "results.interpretation is required; explain why gains change across conditions",
+    "results.quality_impact is required; distinguish lossless from approximate methods",
+    "positioning.differences is required",
+    "positioning.research_positioning is required"
+  ],
+  "checked_at": "2026-09-24T16:35:44+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}
