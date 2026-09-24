@@ -11,6 +11,7 @@ from typing import Any
 
 import claim_state
 import claim_window_policy
+import worker_quota_policy
 import immutable_submission
 import shared_preload_pool
 import worker_identity
@@ -765,8 +766,28 @@ def process_requests(repo_root: Path, at: Any = None, *, maintain_shared_pool: b
             ]
             next_pipeline_order = (max(existing) + 1) if existing else len(resumed)
 
+        if request["worker_kind"] == "scheduled_chat" and allocation_limit > 0:
+            block_size = worker_quota_policy.AUDIT_STARVATION_BLOCK_SIZE
+            block_start = next_pipeline_order - (next_pipeline_order % block_size)
+            prior_kinds = [
+                str(item.get("kind") or "")
+                for item in sorted(resumed, key=_pipeline_sort_key)
+                if isinstance(item.get("pipeline_order"), int)
+                and not isinstance(item.get("pipeline_order"), bool)
+                and block_start <= int(item["pipeline_order"]) < next_pipeline_order
+            ]
+            available = worker_quota_policy.order_with_audit_fairness(
+                available,
+                starting_position=next_pipeline_order,
+                prior_kinds=prior_kinds,
+                kind_field="type",
+                limit=allocation_limit,
+            )
+        else:
+            available = available[:allocation_limit]
+
         new_assignments: list[dict[str, Any]] = []
-        for offset, item in enumerate(available[:allocation_limit]):
+        for offset, item in enumerate(available):
             job_id = str(item["job_id"])
             dependencies = _dependencies(job_id, item)
             if dependencies is None:
