@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-7567c60b834735ea01f92a82",
-  "job_id": "job-research-7ecc4d7949c81534",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-7567c60b834735ea01f92a82",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-7567c60b834735ea01f92a82","job_id":"job-research-7ecc4d7949c81534","data":{"limitations":"効率測定はsingle-layer CPU-offload pipelineで、model全体のend-to-end serving throughputではない。Mean compensationを中心に理論化しており、より複雑なreconstructorへ同じscoreがそのまま最適とは限らない。二次Taylor近似はblock内logit varianceが大きい場合に高次誤差を持つ。complete BF16 KVをCPUに保持するためhost memory容量とPCIe帯域への依存も残る。","implementation_status":"training-free。pinned CPU memoryにBF16 KVとFP32 summaryを保持し、GPU fused statistics/Top-K、CPU gather、single H2D selected-KV transfer、FlashInfer exact attention、auxiliary-stream Mean compensationをoverlapする実装でH100評価を行う。","research_positioning":"Quest、InfiniGen、ShadowKV、RetrievalAttentionなどquery-aware KV selectionが主にattention massや類似度でexact read候補を選ぶのに対し、CompKVはtail compensation後の残差をselection objectiveへ直接入れる。RESA、SparQ、ResKVなどtail reconstruction研究とselection研究の間を接続する。","relation_to_prior":"Quest型のblock selectionでは高attention massが主な優先度だが、CompKVはmass×within-block logit varianceを使うため、mean summaryで容易に復元できるblockの優先度を下げられる。Quest+RESAのようにselection後に補償を足す構成より、selection時点で補償可能性を考える点が差分である。","repository_position":"KV-cache optimization/compressionとCPU offload/hierarchical memoryの交差に配置できる。full KVはCPUに残し、GPUへ運ぶblockをqueryごとに選ぶため、PCIe transfer budgetの割当問題としても解釈でき、階層メモリ型servingのprefetch・cache replacement研究と接続しやすい。","differences":"token evictionではなく全KVをhostに保持して必要blockだけをexact transferし、非選択tailもmean summaryで寄与させる。scoreはattention massだけでなく補償誤差の主要因であるvarianceを含み、GQA複数query headで共有block selectionを行う。","followups":"model全体のmulti-layer end-to-end throughput、NVLink/CXL/NVMeを含む多階層offload、learned/low-rank compensation向けresidual score、adaptive block size、prefetchとの統合を調査するとsystem-level効果をさらに評価できる。"},"reservation":{"claim_id":"claim-preload-7567c60b834735ea01f92a82","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
