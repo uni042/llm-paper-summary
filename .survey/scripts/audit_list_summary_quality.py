@@ -11,6 +11,7 @@ from pathlib import Path
 
 import yaml
 
+from paper_audit_scope import PAPER_AUDIT_BASELINE, added_paper_paths
 from list_summary import (
     DEFAULT_MAX_CHARS,
     DEFAULT_MIN_CHARS,
@@ -64,7 +65,7 @@ def audit_file(path: Path, repo_root: Path) -> Result:
     )
 
 
-def markdown_report(results: list[Result]) -> str:
+def markdown_report(results: list[Result], baseline_commit: str = PAPER_AUDIT_BASELINE) -> str:
     failed = [r for r in results if r.status == "FAIL"]
     warned = [r for r in results if r.status == "WARN"]
     passed = [r for r in results if r.status == "PASS"]
@@ -72,12 +73,13 @@ def markdown_report(results: list[Result]) -> str:
         "# 論文一覧・一文要約の品質監査",
         "",
         f"- 生成日時: {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
-        f"- 対象: {len(results)}件（Inference / Training / Survey）",
+        f"- 対象: {len(results)}件（基準commit `{baseline_commit}` より後の新規追加）",
+        "- 基準時点ですでに存在した論文の本文は読み込まない",
         f"- 合格: {len(passed)}件 / 警告: {len(warned)}件 / 不合格: {len(failed)}件",
         f"- 長さ: {DEFAULT_MIN_CHARS}〜{DEFAULT_MAX_CHARS}文字",
         "- 日本語比率: 70%未満は不合格、80%未満は警告",
         "- 日本語化できる英語専門語、改行、URL、Markdown断片は不合格",
-        "- 正規経路ではresearch workerが作成したタイトル直下の一覧専用解説を使用し、専用解説がない既存ページだけ概要から互換生成",
+        "- 明示された一覧専用解説のみを監査し、本文・概要からの自動生成を行わない",
         "",
         "## 基準未達",
         "",
@@ -104,6 +106,7 @@ def markdown_report(results: list[Result]) -> str:
 def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo-root", default=".")
+    ap.add_argument("--baseline-commit", default=PAPER_AUDIT_BASELINE)
     ap.add_argument("--markdown-out")
     ap.add_argument("--json-out")
     ap.add_argument("--no-fail-exit", action="store_true")
@@ -114,16 +117,16 @@ def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
     results: list[Result] = []
-    for family in PAPER_FAMILIES:
-        root = repo_root / "papers" / family
-        if not root.exists():
+    added_paths = added_paper_paths(repo_root, args.baseline_commit)
+    for relative in sorted(added_paths):
+        path = repo_root / relative
+        if not path.is_file():
             continue
-        for path in sorted(root.rglob("*.md")):
-            meta, body = front(path)
-            if is_paper(path, body):
-                results.append(audit_file(path, repo_root))
+        meta, body = front(path)
+        if is_paper(path, body):
+            results.append(audit_file(path, repo_root))
 
-    report = markdown_report(results)
+    report = markdown_report(results, args.baseline_commit)
     if args.markdown_out:
         out = repo_root / args.markdown_out
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -145,6 +148,8 @@ def main() -> int:
                         "warn_japanese_ratio": 0.80,
                         "bare_english_terms_allowed": 0,
                         "worker_authored_preferred": True,
+                        "baseline_commit": args.baseline_commit,
+                        "paper_target_policy": "Git-added Markdown after baseline only",
                         "legacy_overview_fallback": True,
                     },
                     "results": [asdict(r) for r in results],

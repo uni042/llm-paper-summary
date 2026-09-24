@@ -1,10 +1,14 @@
 # Paper mechanical quality audit
 
-`.survey/scripts/audit_paper_quality.py` は `papers/inference/**/*.md` を全件走査し、`.survey/templates/paper.md` のうち機械判定できる品質条件を一覧化する。
+`.survey/scripts/audit_paper_quality.py` など3つの論文品質監査は、固定した基準commit以後に新規追加された論文だけを対象にする。基準commit時点ですでに存在した論文は品質監査で本文を読み直さない。
 
-監査対象の判定はfrontmatterや`canonical_id`の正常性に依存させない。カテゴリ索引の`README.md`、横断比較表`comparison.md`、正規の移動先だけを示す`# Moved`ファイルだけを除外する。
+新規追加論文の判定にはGitの追加差分を使い、旧論文の本文を除外判定のために開かない。新規追加分からカテゴリ索引の`README.md`、横断比較表`comparison.md`、正規の移動先だけを示す`# Moved`ファイルを除外する。全論文の構造・必須メタデータ検査は引き続き別のrepository consistency checkで行う。
 
 この品質監査には、本文量・日本語率だけでなく、**一覧の一文解説が「何をした論文か」を失っていないか**、**単体ページの概要だけで代表結果が分かるか**も含める。
+
+## 品質監査対象の境界
+
+基準commitは `.survey/scripts/paper_audit_scope.py` の `PAPER_AUDIT_BASELINE` に固定する。監査対象は基準commitより後にGitで新規追加された論文Markdownだけであり、基準commit時点の既存ページは本文を開かずに対象外とする。基準を更新する場合は既存論文を再監査しないことを確認し、新しい現行mainの固定commitへ変更する。品質監査対象の除外は、全件構造検査、必須メタデータ検査、重複識別子検査、ライブ状態検査を除外しない。新しい論文の公開前preflightとsubmission品質ゲートは継続する。
 
 ## 実行
 
