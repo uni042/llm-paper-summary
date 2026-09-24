@@ -23,10 +23,6 @@ RETRY_DELAY_SECONDS = 7 * 24 * 60 * 60
 DORMANT_AFTER_ATTEMPTS = 5
 DORMANT_MIN_AGE_SECONDS = 28 * 24 * 60 * 60
 
-# Backward-compatible name for callers/tests that imported the old constant.
-# Reaching this number no longer means permanent exclusion.
-MAX_BLOCKED_ATTEMPTS = DORMANT_AFTER_ATTEMPTS
-
 
 def utc_now() -> datetime:
     return datetime.now(timezone.utc).replace(microsecond=0)
