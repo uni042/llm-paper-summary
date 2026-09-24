@@ -1,0 +1,556 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-3ff437682c7ba1e6b3d3",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-3ff437682c7ba1e6b3d3",
+  "axis": "forward citations of KVLink efficient KV cache reuse",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "75cc8ef4b83c78061ed6e73061074a0af4b0557d",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T22:07:17.015753+00:00",
+  "preload_id": "preload-3ff437682c7ba1e6b3d3",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "CIFLEX: Contextual Instruction Flow for Sub-task Execution in Multi-Turn Interactions with a Single On-Device LLM",
+      "source_url": "https://www.semanticscholar.org/paper/7b4de2b75e30499bbb772eea64bfea75ec0a72b9",
+      "year": 2025,
+      "published": "2025-09-24",
+      "abstract": "We present CIFLEX (Contextual Instruction Flow for Sub-task Execution), which is a novel execution system for efficient sub-task handling in multi-turn interactions with a single on-device large language model (LLM). As LLMs become increasingly capable, a single model is expected to handle diverse sub-tasks that more effectively and comprehensively support answering user requests. Naive approach reprocesses the entire conversation context when switching between main and sub-tasks (e.g., query rewriting, summarization), incurring significant computational overhead. CIFLEX mitigates this overhead by reusing the key-value (KV) cache from the main task and injecting only task-specific instructions into isolated side paths. After sub-task execution, the model rolls back to the main path via cached context, thereby avoiding redundant prefill computation. To support sub-task selection, we also develop a hierarchical classification strategy tailored for small-scale models, decomposing multi-choice decisions into binary ones. Experiments show that CIFLEX significantly reduces computational costs without degrading task performance, enabling scalable and efficient multi-task dialogue on-device.",
+      "canonical_id": "arXiv:2510.01239",
+      "arxiv_id": "2510.01239",
+      "authors": [
+        "Juntae Lee",
+        "Jihwan Bang",
+        "Seunghan Yang",
+        "Simyung Chang"
+      ]
+    },
+    {
+      "title": "Building a Large Language Model for the Human Resource Services in Malaysia",
+      "source_url": "https://www.semanticscholar.org/paper/642ea0c1454f332e208d4d2a51798b0c7b3b22eb",
+      "year": 2025,
+      "published": "2025-09-15",
+      "abstract": "This study presents the development of a domain-specific base large language model (LLM) tailored for its application in human resources (HR) management, particularly employee engagement. The model addresses inefficiencies in traditional HR systems, such as inconsistent query resolution on compliance management and policy dissemination. By leveraging LLM’s advanced techniques like Rotary Positional Embeddings (RoPE), grouped key-value attention, and Transformer Block enhancements, this research designs and develops an HR-specific base LLM as the first line of HR service for employees in small- and medium-sized enterprises. Data preparation involves cleaning, tokenizing, and training HR-specific datasets, enabling the model to handle nuanced queries with contextual relevance. Through iterative training and evaluation, the Enhanced GPT-2 model has demonstrated significant improvements in learning capability, based on attention weights in the embedding layers, over GPT-2 Small in terms of relevance, consistency, and scalability. Future work focuses on expanding datasets, improving fine-tuning techniques, and integrating retrieval-augmented generation for real-time adaptability.",
+      "canonical_id": "DOI:10.37965/jait.2025.0752",
+      "doi": "10.37965/jait.2025.0752",
+      "authors": [
+        "Guan-Hong Lai",
+        "Darren Xin Lun Chai",
+        "TongMing Lim"
+      ]
+    },
+    {
+      "title": "Performance-Energy Characterization of ML Inference on Heterogeneous Edge AI Platforms",
+      "source_url": "https://www.semanticscholar.org/paper/55d5132dd0c616cc70b6265bba778c1e711764cc",
+      "year": 2025,
+      "published": "2025-09-15",
+      "abstract": "Edge computing enables lower latency and secure real-time processing for machine learning (ML) workloads. State-of-the-art edge platforms are heterogeneous systems with compute cores of diverse performance and energy capabilities. This diversity motivates the need to identify the strengths of individual compute cores for more informed heterogeneous implementations of workloads. In this study, we benchmark a state-of-the-art heterogeneous platform consisting of a multicore CPU, integrated GPU and NPU, on its performance on various ML workloads. We measure system performance in terms of latency, throughput, and Energy-Delay Product (EDP) to analyze the performance-energy tradeoffs of such systems across various configurations -independently on the CPU, GPU or NPU and a heterogeneous NPU-GPU configuration. Our results indicate the superiority of NPUs for energy-efficient inference of LLMs and CNNs. We find that the NPU offers up to 5.2× speedup over CPU for CNN inference. For LLM inference, the NPU achieves up to 4× speedup during the prefill stage, while the GPU offers a 22× speedup on the decode stage. We observe that hybrid NPU-GPU implementation of LLM inference is superior to CPU-only inference in terms of energy consumption and end-to-end (E2E) latency, with an EDP decrease of about 93%. We highlight the broader applicability of our results by discussing extensions to long-context inference in causal LLMs and emerging state-space models on heterogeneous platforms.",
+      "canonical_id": "DOI:10.1109/HPEC67600.2025.11196674",
+      "doi": "10.1109/HPEC67600.2025.11196674",
+      "authors": [
+        "Palash Kohli",
+        "Rakshith Jayanth",
+        "Neelesh Gupta",
+        "Haoyang Fan",
+        "Viktor K. Prasanna"
+      ]
+    },
+    {
+      "title": "RepoFusion-in-Decoder: Efficient Cross-File Code Completion via Lightweight Encoder Fusion",
+      "source_url": "https://www.semanticscholar.org/paper/d60babfaded3ee8da430f637cf739cee41dfbfcd",
+      "year": 2025,
+      "published": "2025-08-15",
+      "abstract": "Large language model (LLM) based code completion tools have greatly enhanced software development productivity by providing repository-aware suggestions. However, existing state-of-the-art decoder-only LLMs, such as Qwen2.5-Coder-3B, suffer from high latency, particularly due to expensive prefill computations when leveraging long, repository-scale contexts. This latency limits their practical deployment in highly interactive programming environments. In this work, we propose an efficient Fusion-in-Decoder (FiD) architecture that extends a pre-trained, high-quality decoder-only code LM with a lightweight encoder and trainable cross-attention layers, while keeping the decoder frozen. Our approach enables independent encoding and caching of cross-file code chunks, substantially reducing prefill time. We design a two-stage data preparation pipeline leveraging repository-level chunking and BM25-based retrieval to supply realistic multi-file context. Experiments on the Long Code Arena and RepoEval-Updated benchmarks demonstrate that our model achieves significant reductions in end-to-end latency, particularly with long prompts, while sustaining strong code completion performance. Our results highlight the promise of FiD-augmented decoder-only models for low-latency cross-file code completion at scale.",
+      "canonical_id": "DOI:10.1109/AANN66429.2025.11257694",
+      "doi": "10.1109/AANN66429.2025.11257694",
+      "authors": [
+        "Zhuoqing Zhong",
+        "Wei Liu",
+        "Changye Yang"
+      ]
+    },
+    {
+      "title": "A Comprehensive Review on Harnessing Large Language Models to Overcome Recommender System Challenges",
+      "source_url": "https://www.semanticscholar.org/paper/fe95f86b34ec5e673af49a430d746dd6afbdd5e5",
+      "year": 2025,
+      "published": "2025-07-17",
+      "abstract": "Recommender systems have traditionally followed modular architectures comprising candidate generation, multi-stage ranking, and re-ranking, each trained separately with supervised objectives and hand-engineered features. While effective in many domains, such systems face persistent challenges including sparse and noisy interaction data, cold-start problems, limited personalization depth, and inadequate semantic understanding of user and item content. The recent emergence of Large Language Models (LLMs) offers a new paradigm for addressing these limitations through unified, language-native mechanisms that can generalize across tasks, domains, and modalities. In this paper, we present a comprehensive technical survey of how LLMs can be leveraged to tackle key challenges in modern recommender systems. We examine the use of LLMs for prompt-driven candidate retrieval, language-native ranking, retrieval-augmented generation (RAG), and conversational recommendation, illustrating how these approaches enhance personalization, semantic alignment, and interpretability without requiring extensive task-specific supervision. LLMs further enable zero- and few-shot reasoning, allowing systems to operate effectively in cold-start and long-tail scenarios by leveraging external knowledge and contextual cues. We categorize these emerging LLM-driven architectures and analyze their effectiveness in mitigating core bottlenecks of conventional pipelines. In doing so, we provide a structured framework for understanding the design space of LLM-enhanced recommenders, and outline the trade-offs between accuracy, scalability, and real-time performance. Our goal is to demonstrate that LLMs are not merely auxiliary components but foundational enablers for building more adaptive, semantically rich, and user-centric recommender systems",
+      "canonical_id": "arXiv:2507.21117",
+      "arxiv_id": "2507.21117",
+      "authors": [
+        "Rahul Raja",
+        "Anshaj Vats",
+        "A. Vats",
+        "Anirban Majumder"
+      ]
+    },
+    {
+      "title": "Agentic Plan Caching: Test-Time Memory for Fast and Cost-Efficient LLM Agents",
+      "source_url": "https://www.semanticscholar.org/paper/cd09ab0315169ce0037dd1cf601f3f24729453f2",
+      "year": 2025,
+      "published": "2025-06-17",
+      "abstract": "LLM-based agent applications have shown increasingly remarkable capabilities in complex workflows but incur substantial costs and latency due to extensive planning and reasoning requirements. Existing LLM caching techniques (like context caching and semantic caching), primarily designed for serving chatbots, are insufficient for agent applications where outputs depend on external data and environmental contexts. We propose Agentic Plan Caching (APC), a novel test-time memory that extracts, stores, adapts, and reuses structured plan templates from planning stages of agent applications across semantically similar tasks to reduce the cost and latency of serving. Unlike traditional semantic caching, our system extracts plan templates from completed agent executions at test-time, employs keyword extraction to match new requests against cached plans, and utilizes lightweight models to adapt these templates to task-specific plans with contexts. Evaluation across multiple real-world agent applications shows that our system can reduce costs by 50.31% and latency by 27.28% on average while maintaining performance, offering a more efficient solution for serving LLM-based agents that complements existing LLM serving infrastructures.",
+      "canonical_id": "arXiv:2506.14852",
+      "arxiv_id": "2506.14852",
+      "authors": [
+        "Qizheng Zhang",
+        "Michael Wornow",
+        "K. Olukotun"
+      ]
+    },
+    {
+      "title": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/18ee9dcd91f50f62973425947b1abd34cc283dbb",
+      "year": 2025,
+      "published": "2025-04-22",
+      "abstract": "Memory is the process of encoding, storing, and retrieving information, allowing humans to retain experiences, knowledge, skills, and facts over time, and serving as the foundation for growth and effective interaction with the world. It plays a crucial role in shaping our identity, making decisions, learning from past experiences, building relationships, and adapting to changes. In the era of large language models (LLMs), memory refers to the ability of an AI system to retain, recall, and use information from past interactions to improve future responses and interactions. Although previous research and reviews have provided detailed descriptions of memory mechanisms, there is still a lack of a systematic review that summarizes and analyzes the relationship between the memory of LLM-driven AI systems and human memory, as well as how we can be inspired by human memory to construct more powerful memory systems. To achieve this, in this paper, we propose a comprehensive survey on the memory of LLM-driven AI systems. In particular, we first conduct a detailed analysis of the categories of human memory and relate them to the memory of AI systems. Second, we systematically organize existing memory-related work and propose a categorization method based on three dimensions (object, form, and time) and eight quadrants. Finally, we illustrate some open problems regarding the memory of current AI systems and outline possible future directions for memory in the era of large language models.",
+      "canonical_id": "arXiv:2504.15965",
+      "arxiv_id": "2504.15965",
+      "authors": [
+        "Yaxiong Wu",
+        "Sheng Liang",
+        "Chen Zhang",
+        "Yichao Wang",
+        "Yong-Yue Zhang",
+        "Huifeng Guo",
+        "Ruiming Tang",
+        "Yong Liu"
+      ]
+    },
+    {
+      "title": "Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/2befc232dbd6117358313da0f7079854bf16c509",
+      "year": 2025,
+      "published": "2025-04-02",
+      "abstract": "We present a comprehensive framework for enhancing Retrieval-Augmented Generation (RAG) systems through dynamic retrieval strategies and reinforcement fine-tuning. This approach significantly improves large language models on knowledge-intensive tasks, including opendomain question answering and complex reasoning. Our framework integrates two complementary techniques: Policy-Optimized RetrievalAugmented Generation (PORAG), which optimizes the use of retrieved information, and Adaptive Token-Layer Attention Scoring (ATLAS), which dynamically determines retrieval timing and content based on contextual needs. Together, these techniques enhance both the utilization and relevance of retrieved content, improving factual accuracy and response quality. Designed as a lightweight solution compatible with any Transformer-based LLM without requiring additional training, our framework excels in knowledge-intensive tasks, boosting output accuracy in RAG settings. We further propose CRITIC, a novel method to selectively compress key-value caches by token importance, mitigating memory bottlenecks in long-context applications. The framework also incorporates test-time scaling techniques to dynamically balance reasoning depth and computational resources, alongside optimized decoding strategies for faster inference. Experiments on benchmark datasets show that our framework reduces hallucinations, strengthens domain-specific reasoning, and achieves significant efficiency and scalability gains over traditional RAG systems. This integrated approach advances the development of robust, efficient, and scalable RAG systems across diverse applications.",
+      "canonical_id": "arXiv:2504.01281",
+      "arxiv_id": "2504.01281",
+      "authors": [
+        "Sakhinana Sagar Srinivas",
+        "Akash Das",
+        "Shivam Gupta",
+        "Venkataramana Runkana"
+      ]
+    },
+    {
+      "title": "A Preliminary Study on the Robustness of Code Generation by Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/c194fc7b54ad08322d100659ca814705e36ee359",
+      "year": 2025,
+      "published": "2025-03-26",
+      "abstract": "Robustness is a critical factor for reliable code generation by large language models, yet most evaluations focus on correctness and overlook key issues such as missing input validation and inadequate error handling. In this work, we present the first empirical study of LLM-generated code robustness using the CoderEval benchmark. Evaluating four state-of-the-art code LLMs, we find that 35.2% of their outputs are less robust than human-written code, with over 90% of deficiencies caused by missing conditional checks-70% of which occur in the first line. Interestingly, in 63% of cases where a conditional statement is needed but absent, the\"if\"token still ranks among the top three predictions, suggesting implicit recognition of control flow. To address these issues, we propose RobGen, a model-agnostic framework that improves robustness without retraining. RobGen combines a line-level intervention checker, which decides whether to adjust logits for each generated line, with token-level conditional logit adjustments to promote essential control structures. Experiments show that RobGen reduces the proportion of less robust code by 10%, achieves the highest average Pass@1 (43.57), and adds minimal overhead (+33.4%). As a lightweight and adaptable solution, RobGen effectively enhances the reliability of LLM-generated code across diverse tasks.",
+      "canonical_id": "arXiv:2503.20197",
+      "arxiv_id": "2503.20197",
+      "authors": [
+        "Zi-Ke Li",
+        "Ming-Wei Liu",
+        "An-Ji Li",
+        "Kaifeng He",
+        "Yanlin Wang",
+        "Xin Peng",
+        "Zibin Zheng"
+      ]
+    },
+    {
+      "title": "Integration of Generative AI and Mobile Networking: A Comprehensive Survey",
+      "source_url": "https://www.semanticscholar.org/paper/e3746992bad2bd5701dec6dc53b9aab6873fcf41",
+      "year": 2026,
+      "published": null,
+      "abstract": "Sixth-generation (6G) mobile networks are foreseen to be intelligent, pervasive, and automated systems that support a broad spectrum of emerging applications, such as immersive extended reality, autonomous mobility, and personalized AI agents. These applications demand transformative network management, requiring real-time intelligence, semantic awareness, and user-centric optimization. However, existing network management frameworks, including those based on conventional deep learning, struggle with the non-stationary, heterogeneous nature of 6G environments. Generative Artificial Intelligence (GAI) emerges as a pivotal paradigm to address these limitations with its capabilities in context-aware generation, adaptive reasoning, and dynamic decision-making. This survey pioneers a comprehensive examination of the bidirectional integration between GAI and mobile networking. First, it explores how GAI techniques fundamentally transform network management across critical domains, including channel modeling, transmission optimization, beamforming, routing, network slicing, and resource orchestration. Second, it systematically investigates how mobile networking must evolve in architecture, data management, mobility support, and resource orchestration to effectively deploy, infer, and adapt increasingly complex GAI models under dynamic and constrained conditions. Distinct from existing works, we provide a structured review of GAI developments and their interplay with mobile networking, thoroughly analyze applications and enabling techniques, identify critical technical, architectural, and practical challenges, and propose concrete research directions. Our work bridges the gap between GAI and mobile networking, outlining pathways towards intelligent, adaptive, and collaborative 6G systems.",
+      "canonical_id": "DOI:10.1109/TNSE.2025.3639401",
+      "doi": "10.1109/TNSE.2025.3639401",
+      "authors": [
+        "Jun-Ling Li",
+        "Mingcheng He",
+        "Conghao Zhou",
+        "Xi Huang",
+        "Zheng Liu",
+        "Liangyuan Zhao",
+        "Cheng-Xiang Wang",
+        "Huaqing Wu"
+      ]
+    },
+    {
+      "title": "CacheNotes: Task-Aware Key-Value Cache Compression for Reasoning-Intensive Knowledge Tasks",
+      "source_url": "https://www.semanticscholar.org/paper/c0ef61f8813aac0db1b753ac682ecb99c2d62d29",
+      "year": 2026,
+      "published": null,
+      "abstract": "Integrating external knowledge into Large Language Models (LLMs) is crucial for many real-world applications, yet current methods like Retrieval-Augmented Generation (RAG) face limitations with broad, multi-source queries, while long-context models are computationally prohibitive. We introduce C ACHE N OTES : Task-Aware Key-Value Cache Compression . Given a task description and a corpus, C ACHE N OTES first generates a sequence of Compression-Planning-Tokens (CPTs), an offline task-focused distillation pass that identifies and organizes key information from the corpus. These CPTs are then used to guide a one-time compression of the corpus into a compact, reusable KV cache, which is then used alone at inference time to efficiently answer diverse, reasoning-intensive queries, eliminating repeated retrieval or context expansion. Experiments on LongBench show that, on Question-Answering tasks at a 20 × compression, C ACHE N OTES outperforms RAG by over 8 F1 points and reduces latency by over 4 × . On RULER, it surpasses previous query-agnostic compression methods by 55 points, narrowing the gap to query-aware compression approaches. Additional results on real-world enterprise and synthetic datasets demonstrate its strong performance on multi-hop and broad-coverage queries.",
+      "canonical_id": "DOI:10.18653/v1/2026.eacl-long.309",
+      "doi": "10.18653/v1/2026.eacl-long.309",
+      "authors": [
+        "Giulio Corallo",
+        "Orion Weller",
+        "F. Petroni",
+        "Paolo Papotti"
+      ]
+    },
+    {
+      "title": "SpecCache: Speculative KV Cache Reuse for Efficient RAG Serving",
+      "source_url": "https://www.semanticscholar.org/paper/e1a5822f60578a310a201d8647137e1be9ea0ed4",
+      "year": 2026,
+      "published": null,
+      "abstract": "Retrieval-Augmented Generation (RAG) significantly enhances LLMs but faces high prefill latency during long-context processing. While KV cache reuse can mitigate this, current meth-ods relying on shallow features or static heuristics often fail to identify critical tokens for recomputation, resulting in generation quality degradation. We have an insight that KV deviations are more pronounced in deep layers. However, directly extracting deep-layer features from the target model is computationally prohibitive. Crucially, we find that the deep-layer features of a lightweight speculative model exhibit strong consistency with the target model in the selection of critical tokens for recomputation. In light of these insights, we propose SpecCache, which employs deep-layer hidden-state norms from a speculative model as a proxy to guide the critical token selection for target large model. Experiments demonstrate that SpecCache outperforms state-of-the-art (SOTA) baselines. Compared to full KV recomputation, it reduces time-to-first-token (TTFT) by 2 . 17 − 3 . 95 × and increases inference throughput by 2 . 7 − 5 . 2 × , with negligible degradation in generation quality relative to full recomputation.",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.859",
+      "doi": "10.18653/v1/2026.acl-long.859",
+      "authors": [
+        "Zi-Jian Wen",
+        "Tao Zhang",
+        "Shuangwu Chen",
+        "Sheng-Hao Ye",
+        "Yu Guo",
+        "Qirui Chen",
+        "Jing-Xian Shuai",
+        "Yunpeng Hou",
+        "Huasen He",
+        "Jian Yang"
+      ]
+    },
+    {
+      "title": "Understanding and Optimizing KV-cache Management for Long-Context LLM Inference A",
+      "source_url": "https://www.semanticscholar.org/paper/fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+      "year": null,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a"
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.01239",
+      "identity_tokens": [
+        "id:arXiv:2510.01239",
+        "title:ciflex contextual instruction flow for subtask execution in multiturn interactions with a single ondevice llm",
+        "url:https://www.semanticscholar.org/paper/7b4de2b75e30499bbb772eea64bfea75ec0a72b9"
+      ],
+      "record": {
+        "title": "CIFLEX: Contextual Instruction Flow for Sub-task Execution in Multi-Turn Interactions with a Single On-Device LLM",
+        "source_url": "https://www.semanticscholar.org/paper/7b4de2b75e30499bbb772eea64bfea75ec0a72b9",
+        "year": 2025,
+        "published": "2025-09-24",
+        "abstract": "We present CIFLEX (Contextual Instruction Flow for Sub-task Execution), which is a novel execution system for efficient sub-task handling in multi-turn interactions with a single on-device large language model (LLM). As LLMs become increasingly capable, a single model is expected to handle diverse sub-tasks that more effectively and comprehensively support answering user requests. Naive approach reprocesses the entire conversation context when switching between main and sub-tasks (e.g., query rewriting, summarization), incurring significant computational overhead. CIFLEX mitigates this overhead by reusing the key-value (KV) cache from the main task and injecting only task-specific instructions into isolated side paths. After sub-task execution, the model rolls back to the main path via cached context, thereby avoiding redundant prefill computation. To support sub-task selection, we also develop a hierarchical classification strategy tailored for small-scale models, decomposing multi-choice decisions into binary ones. Experiments show that CIFLEX significantly reduces computational costs without degrading task performance, enabling scalable and efficient multi-task dialogue on-device.",
+        "canonical_id": "arXiv:2510.01239",
+        "arxiv_id": "2510.01239",
+        "authors": [
+          "Juntae Lee",
+          "Jihwan Bang",
+          "Seunghan Yang",
+          "Simyung Chang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.37965/jait.2025.0752",
+      "identity_tokens": [
+        "id:DOI:10.37965/jait.2025.0752",
+        "title:building a large language model for the human resource services in malaysia",
+        "url:https://www.semanticscholar.org/paper/642ea0c1454f332e208d4d2a51798b0c7b3b22eb"
+      ],
+      "record": {
+        "title": "Building a Large Language Model for the Human Resource Services in Malaysia",
+        "source_url": "https://www.semanticscholar.org/paper/642ea0c1454f332e208d4d2a51798b0c7b3b22eb",
+        "year": 2025,
+        "published": "2025-09-15",
+        "abstract": "This study presents the development of a domain-specific base large language model (LLM) tailored for its application in human resources (HR) management, particularly employee engagement. The model addresses inefficiencies in traditional HR systems, such as inconsistent query resolution on compliance management and policy dissemination. By leveraging LLM’s advanced techniques like Rotary Positional Embeddings (RoPE), grouped key-value attention, and Transformer Block enhancements, this research designs and develops an HR-specific base LLM as the first line of HR service for employees in small- and medium-sized enterprises. Data preparation involves cleaning, tokenizing, and training HR-specific datasets, enabling the model to handle nuanced queries with contextual relevance. Through iterative training and evaluation, the Enhanced GPT-2 model has demonstrated significant improvements in learning capability, based on attention weights in the embedding layers, over GPT-2 Small in terms of relevance, consistency, and scalability. Future work focuses on expanding datasets, improving fine-tuning techniques, and integrating retrieval-augmented generation for real-time adaptability.",
+        "canonical_id": "DOI:10.37965/jait.2025.0752",
+        "doi": "10.37965/jait.2025.0752",
+        "authors": [
+          "Guan-Hong Lai",
+          "Darren Xin Lun Chai",
+          "TongMing Lim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/hpec67600.2025.11196674",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpec67600.2025.11196674",
+        "title:performanceenergy characterization of ml inference on heterogeneous edge ai platforms",
+        "url:https://www.semanticscholar.org/paper/55d5132dd0c616cc70b6265bba778c1e711764cc"
+      ],
+      "record": {
+        "title": "Performance-Energy Characterization of ML Inference on Heterogeneous Edge AI Platforms",
+        "source_url": "https://www.semanticscholar.org/paper/55d5132dd0c616cc70b6265bba778c1e711764cc",
+        "year": 2025,
+        "published": "2025-09-15",
+        "abstract": "Edge computing enables lower latency and secure real-time processing for machine learning (ML) workloads. State-of-the-art edge platforms are heterogeneous systems with compute cores of diverse performance and energy capabilities. This diversity motivates the need to identify the strengths of individual compute cores for more informed heterogeneous implementations of workloads. In this study, we benchmark a state-of-the-art heterogeneous platform consisting of a multicore CPU, integrated GPU and NPU, on its performance on various ML workloads. We measure system performance in terms of latency, throughput, and Energy-Delay Product (EDP) to analyze the performance-energy tradeoffs of such systems across various configurations -independently on the CPU, GPU or NPU and a heterogeneous NPU-GPU configuration. Our results indicate the superiority of NPUs for energy-efficient inference of LLMs and CNNs. We find that the NPU offers up to 5.2× speedup over CPU for CNN inference. For LLM inference, the NPU achieves up to 4× speedup during the prefill stage, while the GPU offers a 22× speedup on the decode stage. We observe that hybrid NPU-GPU implementation of LLM inference is superior to CPU-only inference in terms of energy consumption and end-to-end (E2E) latency, with an EDP decrease of about 93%. We highlight the broader applicability of our results by discussing extensions to long-context inference in causal LLMs and emerging state-space models on heterogeneous platforms.",
+        "canonical_id": "DOI:10.1109/HPEC67600.2025.11196674",
+        "doi": "10.1109/HPEC67600.2025.11196674",
+        "authors": [
+          "Palash Kohli",
+          "Rakshith Jayanth",
+          "Neelesh Gupta",
+          "Haoyang Fan",
+          "Viktor K. Prasanna"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/aann66429.2025.11257694",
+      "identity_tokens": [
+        "id:DOI:10.1109/aann66429.2025.11257694",
+        "title:repofusionindecoder efficient crossfile code completion via lightweight encoder fusion",
+        "url:https://www.semanticscholar.org/paper/d60babfaded3ee8da430f637cf739cee41dfbfcd"
+      ],
+      "record": {
+        "title": "RepoFusion-in-Decoder: Efficient Cross-File Code Completion via Lightweight Encoder Fusion",
+        "source_url": "https://www.semanticscholar.org/paper/d60babfaded3ee8da430f637cf739cee41dfbfcd",
+        "year": 2025,
+        "published": "2025-08-15",
+        "abstract": "Large language model (LLM) based code completion tools have greatly enhanced software development productivity by providing repository-aware suggestions. However, existing state-of-the-art decoder-only LLMs, such as Qwen2.5-Coder-3B, suffer from high latency, particularly due to expensive prefill computations when leveraging long, repository-scale contexts. This latency limits their practical deployment in highly interactive programming environments. In this work, we propose an efficient Fusion-in-Decoder (FiD) architecture that extends a pre-trained, high-quality decoder-only code LM with a lightweight encoder and trainable cross-attention layers, while keeping the decoder frozen. Our approach enables independent encoding and caching of cross-file code chunks, substantially reducing prefill time. We design a two-stage data preparation pipeline leveraging repository-level chunking and BM25-based retrieval to supply realistic multi-file context. Experiments on the Long Code Arena and RepoEval-Updated benchmarks demonstrate that our model achieves significant reductions in end-to-end latency, particularly with long prompts, while sustaining strong code completion performance. Our results highlight the promise of FiD-augmented decoder-only models for low-latency cross-file code completion at scale.",
+        "canonical_id": "DOI:10.1109/AANN66429.2025.11257694",
+        "doi": "10.1109/AANN66429.2025.11257694",
+        "authors": [
+          "Zhuoqing Zhong",
+          "Wei Liu",
+          "Changye Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.21117",
+      "identity_tokens": [
+        "id:arXiv:2507.21117",
+        "title:a comprehensive review on harnessing large language models to overcome recommender system challenges",
+        "url:https://www.semanticscholar.org/paper/fe95f86b34ec5e673af49a430d746dd6afbdd5e5"
+      ],
+      "record": {
+        "title": "A Comprehensive Review on Harnessing Large Language Models to Overcome Recommender System Challenges",
+        "source_url": "https://www.semanticscholar.org/paper/fe95f86b34ec5e673af49a430d746dd6afbdd5e5",
+        "year": 2025,
+        "published": "2025-07-17",
+        "abstract": "Recommender systems have traditionally followed modular architectures comprising candidate generation, multi-stage ranking, and re-ranking, each trained separately with supervised objectives and hand-engineered features. While effective in many domains, such systems face persistent challenges including sparse and noisy interaction data, cold-start problems, limited personalization depth, and inadequate semantic understanding of user and item content. The recent emergence of Large Language Models (LLMs) offers a new paradigm for addressing these limitations through unified, language-native mechanisms that can generalize across tasks, domains, and modalities. In this paper, we present a comprehensive technical survey of how LLMs can be leveraged to tackle key challenges in modern recommender systems. We examine the use of LLMs for prompt-driven candidate retrieval, language-native ranking, retrieval-augmented generation (RAG), and conversational recommendation, illustrating how these approaches enhance personalization, semantic alignment, and interpretability without requiring extensive task-specific supervision. LLMs further enable zero- and few-shot reasoning, allowing systems to operate effectively in cold-start and long-tail scenarios by leveraging external knowledge and contextual cues. We categorize these emerging LLM-driven architectures and analyze their effectiveness in mitigating core bottlenecks of conventional pipelines. In doing so, we provide a structured framework for understanding the design space of LLM-enhanced recommenders, and outline the trade-offs between accuracy, scalability, and real-time performance. Our goal is to demonstrate that LLMs are not merely auxiliary components but foundational enablers for building more adaptive, semantically rich, and user-centric recommender systems",
+        "canonical_id": "arXiv:2507.21117",
+        "arxiv_id": "2507.21117",
+        "authors": [
+          "Rahul Raja",
+          "Anshaj Vats",
+          "A. Vats",
+          "Anirban Majumder"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.14852",
+      "identity_tokens": [
+        "id:arXiv:2506.14852",
+        "title:agentic plan caching testtime memory for fast and costefficient llm agents",
+        "url:https://www.semanticscholar.org/paper/cd09ab0315169ce0037dd1cf601f3f24729453f2"
+      ],
+      "record": {
+        "title": "Agentic Plan Caching: Test-Time Memory for Fast and Cost-Efficient LLM Agents",
+        "source_url": "https://www.semanticscholar.org/paper/cd09ab0315169ce0037dd1cf601f3f24729453f2",
+        "year": 2025,
+        "published": "2025-06-17",
+        "abstract": "LLM-based agent applications have shown increasingly remarkable capabilities in complex workflows but incur substantial costs and latency due to extensive planning and reasoning requirements. Existing LLM caching techniques (like context caching and semantic caching), primarily designed for serving chatbots, are insufficient for agent applications where outputs depend on external data and environmental contexts. We propose Agentic Plan Caching (APC), a novel test-time memory that extracts, stores, adapts, and reuses structured plan templates from planning stages of agent applications across semantically similar tasks to reduce the cost and latency of serving. Unlike traditional semantic caching, our system extracts plan templates from completed agent executions at test-time, employs keyword extraction to match new requests against cached plans, and utilizes lightweight models to adapt these templates to task-specific plans with contexts. Evaluation across multiple real-world agent applications shows that our system can reduce costs by 50.31% and latency by 27.28% on average while maintaining performance, offering a more efficient solution for serving LLM-based agents that complements existing LLM serving infrastructures.",
+        "canonical_id": "arXiv:2506.14852",
+        "arxiv_id": "2506.14852",
+        "authors": [
+          "Qizheng Zhang",
+          "Michael Wornow",
+          "K. Olukotun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.15965",
+      "identity_tokens": [
+        "id:arXiv:2504.15965",
+        "title:from human memory to ai memory a survey on memory mechanisms in the era of llms",
+        "url:https://www.semanticscholar.org/paper/18ee9dcd91f50f62973425947b1abd34cc283dbb"
+      ],
+      "record": {
+        "title": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/18ee9dcd91f50f62973425947b1abd34cc283dbb",
+        "year": 2025,
+        "published": "2025-04-22",
+        "abstract": "Memory is the process of encoding, storing, and retrieving information, allowing humans to retain experiences, knowledge, skills, and facts over time, and serving as the foundation for growth and effective interaction with the world. It plays a crucial role in shaping our identity, making decisions, learning from past experiences, building relationships, and adapting to changes. In the era of large language models (LLMs), memory refers to the ability of an AI system to retain, recall, and use information from past interactions to improve future responses and interactions. Although previous research and reviews have provided detailed descriptions of memory mechanisms, there is still a lack of a systematic review that summarizes and analyzes the relationship between the memory of LLM-driven AI systems and human memory, as well as how we can be inspired by human memory to construct more powerful memory systems. To achieve this, in this paper, we propose a comprehensive survey on the memory of LLM-driven AI systems. In particular, we first conduct a detailed analysis of the categories of human memory and relate them to the memory of AI systems. Second, we systematically organize existing memory-related work and propose a categorization method based on three dimensions (object, form, and time) and eight quadrants. Finally, we illustrate some open problems regarding the memory of current AI systems and outline possible future directions for memory in the era of large language models.",
+        "canonical_id": "arXiv:2504.15965",
+        "arxiv_id": "2504.15965",
+        "authors": [
+          "Yaxiong Wu",
+          "Sheng Liang",
+          "Chen Zhang",
+          "Yichao Wang",
+          "Yong-Yue Zhang",
+          "Huifeng Guo",
+          "Ruiming Tang",
+          "Yong Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.01281",
+      "identity_tokens": [
+        "id:arXiv:2504.01281",
+        "title:scaling testtime inference with policyoptimized dynamic retrievalaugmented generation via kv caching and decoding",
+        "url:https://www.semanticscholar.org/paper/2befc232dbd6117358313da0f7079854bf16c509"
+      ],
+      "record": {
+        "title": "Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/2befc232dbd6117358313da0f7079854bf16c509",
+        "year": 2025,
+        "published": "2025-04-02",
+        "abstract": "We present a comprehensive framework for enhancing Retrieval-Augmented Generation (RAG) systems through dynamic retrieval strategies and reinforcement fine-tuning. This approach significantly improves large language models on knowledge-intensive tasks, including opendomain question answering and complex reasoning. Our framework integrates two complementary techniques: Policy-Optimized RetrievalAugmented Generation (PORAG), which optimizes the use of retrieved information, and Adaptive Token-Layer Attention Scoring (ATLAS), which dynamically determines retrieval timing and content based on contextual needs. Together, these techniques enhance both the utilization and relevance of retrieved content, improving factual accuracy and response quality. Designed as a lightweight solution compatible with any Transformer-based LLM without requiring additional training, our framework excels in knowledge-intensive tasks, boosting output accuracy in RAG settings. We further propose CRITIC, a novel method to selectively compress key-value caches by token importance, mitigating memory bottlenecks in long-context applications. The framework also incorporates test-time scaling techniques to dynamically balance reasoning depth and computational resources, alongside optimized decoding strategies for faster inference. Experiments on benchmark datasets show that our framework reduces hallucinations, strengthens domain-specific reasoning, and achieves significant efficiency and scalability gains over traditional RAG systems. This integrated approach advances the development of robust, efficient, and scalable RAG systems across diverse applications.",
+        "canonical_id": "arXiv:2504.01281",
+        "arxiv_id": "2504.01281",
+        "authors": [
+          "Sakhinana Sagar Srinivas",
+          "Akash Das",
+          "Shivam Gupta",
+          "Venkataramana Runkana"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.20197",
+      "identity_tokens": [
+        "id:arXiv:2503.20197",
+        "title:a preliminary study on the robustness of code generation by large language models",
+        "url:https://www.semanticscholar.org/paper/c194fc7b54ad08322d100659ca814705e36ee359"
+      ],
+      "record": {
+        "title": "A Preliminary Study on the Robustness of Code Generation by Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/c194fc7b54ad08322d100659ca814705e36ee359",
+        "year": 2025,
+        "published": "2025-03-26",
+        "abstract": "Robustness is a critical factor for reliable code generation by large language models, yet most evaluations focus on correctness and overlook key issues such as missing input validation and inadequate error handling. In this work, we present the first empirical study of LLM-generated code robustness using the CoderEval benchmark. Evaluating four state-of-the-art code LLMs, we find that 35.2% of their outputs are less robust than human-written code, with over 90% of deficiencies caused by missing conditional checks-70% of which occur in the first line. Interestingly, in 63% of cases where a conditional statement is needed but absent, the\"if\"token still ranks among the top three predictions, suggesting implicit recognition of control flow. To address these issues, we propose RobGen, a model-agnostic framework that improves robustness without retraining. RobGen combines a line-level intervention checker, which decides whether to adjust logits for each generated line, with token-level conditional logit adjustments to promote essential control structures. Experiments show that RobGen reduces the proportion of less robust code by 10%, achieves the highest average Pass@1 (43.57), and adds minimal overhead (+33.4%). As a lightweight and adaptable solution, RobGen effectively enhances the reliability of LLM-generated code across diverse tasks.",
+        "canonical_id": "arXiv:2503.20197",
+        "arxiv_id": "2503.20197",
+        "authors": [
+          "Zi-Ke Li",
+          "Ming-Wei Liu",
+          "An-Ji Li",
+          "Kaifeng He",
+          "Yanlin Wang",
+          "Xin Peng",
+          "Zibin Zheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tnse.2025.3639401",
+      "identity_tokens": [
+        "id:DOI:10.1109/tnse.2025.3639401",
+        "title:integration of generative ai and mobile networking a comprehensive survey",
+        "url:https://www.semanticscholar.org/paper/e3746992bad2bd5701dec6dc53b9aab6873fcf41"
+      ],
+      "record": {
+        "title": "Integration of Generative AI and Mobile Networking: A Comprehensive Survey",
+        "source_url": "https://www.semanticscholar.org/paper/e3746992bad2bd5701dec6dc53b9aab6873fcf41",
+        "year": 2026,
+        "published": null,
+        "abstract": "Sixth-generation (6G) mobile networks are foreseen to be intelligent, pervasive, and automated systems that support a broad spectrum of emerging applications, such as immersive extended reality, autonomous mobility, and personalized AI agents. These applications demand transformative network management, requiring real-time intelligence, semantic awareness, and user-centric optimization. However, existing network management frameworks, including those based on conventional deep learning, struggle with the non-stationary, heterogeneous nature of 6G environments. Generative Artificial Intelligence (GAI) emerges as a pivotal paradigm to address these limitations with its capabilities in context-aware generation, adaptive reasoning, and dynamic decision-making. This survey pioneers a comprehensive examination of the bidirectional integration between GAI and mobile networking. First, it explores how GAI techniques fundamentally transform network management across critical domains, including channel modeling, transmission optimization, beamforming, routing, network slicing, and resource orchestration. Second, it systematically investigates how mobile networking must evolve in architecture, data management, mobility support, and resource orchestration to effectively deploy, infer, and adapt increasingly complex GAI models under dynamic and constrained conditions. Distinct from existing works, we provide a structured review of GAI developments and their interplay with mobile networking, thoroughly analyze applications and enabling techniques, identify critical technical, architectural, and practical challenges, and propose concrete research directions. Our work bridges the gap between GAI and mobile networking, outlining pathways towards intelligent, adaptive, and collaborative 6G systems.",
+        "canonical_id": "DOI:10.1109/TNSE.2025.3639401",
+        "doi": "10.1109/TNSE.2025.3639401",
+        "authors": [
+          "Jun-Ling Li",
+          "Mingcheng He",
+          "Conghao Zhou",
+          "Xi Huang",
+          "Zheng Liu",
+          "Liangyuan Zhao",
+          "Cheng-Xiang Wang",
+          "Huaqing Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.eacl-long.309",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.eacl-long.309",
+        "title:cachenotes taskaware keyvalue cache compression for reasoningintensive knowledge tasks",
+        "url:https://www.semanticscholar.org/paper/c0ef61f8813aac0db1b753ac682ecb99c2d62d29"
+      ],
+      "record": {
+        "title": "CacheNotes: Task-Aware Key-Value Cache Compression for Reasoning-Intensive Knowledge Tasks",
+        "source_url": "https://www.semanticscholar.org/paper/c0ef61f8813aac0db1b753ac682ecb99c2d62d29",
+        "year": 2026,
+        "published": null,
+        "abstract": "Integrating external knowledge into Large Language Models (LLMs) is crucial for many real-world applications, yet current methods like Retrieval-Augmented Generation (RAG) face limitations with broad, multi-source queries, while long-context models are computationally prohibitive. We introduce C ACHE N OTES : Task-Aware Key-Value Cache Compression . Given a task description and a corpus, C ACHE N OTES first generates a sequence of Compression-Planning-Tokens (CPTs), an offline task-focused distillation pass that identifies and organizes key information from the corpus. These CPTs are then used to guide a one-time compression of the corpus into a compact, reusable KV cache, which is then used alone at inference time to efficiently answer diverse, reasoning-intensive queries, eliminating repeated retrieval or context expansion. Experiments on LongBench show that, on Question-Answering tasks at a 20 × compression, C ACHE N OTES outperforms RAG by over 8 F1 points and reduces latency by over 4 × . On RULER, it surpasses previous query-agnostic compression methods by 55 points, narrowing the gap to query-aware compression approaches. Additional results on real-world enterprise and synthetic datasets demonstrate its strong performance on multi-hop and broad-coverage queries.",
+        "canonical_id": "DOI:10.18653/v1/2026.eacl-long.309",
+        "doi": "10.18653/v1/2026.eacl-long.309",
+        "authors": [
+          "Giulio Corallo",
+          "Orion Weller",
+          "F. Petroni",
+          "Paolo Papotti"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.859",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.859",
+        "title:speccache speculative kv cache reuse for efficient rag serving",
+        "url:https://www.semanticscholar.org/paper/e1a5822f60578a310a201d8647137e1be9ea0ed4"
+      ],
+      "record": {
+        "title": "SpecCache: Speculative KV Cache Reuse for Efficient RAG Serving",
+        "source_url": "https://www.semanticscholar.org/paper/e1a5822f60578a310a201d8647137e1be9ea0ed4",
+        "year": 2026,
+        "published": null,
+        "abstract": "Retrieval-Augmented Generation (RAG) significantly enhances LLMs but faces high prefill latency during long-context processing. While KV cache reuse can mitigate this, current meth-ods relying on shallow features or static heuristics often fail to identify critical tokens for recomputation, resulting in generation quality degradation. We have an insight that KV deviations are more pronounced in deep layers. However, directly extracting deep-layer features from the target model is computationally prohibitive. Crucially, we find that the deep-layer features of a lightweight speculative model exhibit strong consistency with the target model in the selection of critical tokens for recomputation. In light of these insights, we propose SpecCache, which employs deep-layer hidden-state norms from a speculative model as a proxy to guide the critical token selection for target large model. Experiments demonstrate that SpecCache outperforms state-of-the-art (SOTA) baselines. Compared to full KV recomputation, it reduces time-to-first-token (TTFT) by 2 . 17 − 3 . 95 × and increases inference throughput by 2 . 7 − 5 . 2 × , with negligible degradation in generation quality relative to full recomputation.",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.859",
+        "doi": "10.18653/v1/2026.acl-long.859",
+        "authors": [
+          "Zi-Jian Wen",
+          "Tao Zhang",
+          "Shuangwu Chen",
+          "Sheng-Hao Ye",
+          "Yu Guo",
+          "Qirui Chen",
+          "Jing-Xian Shuai",
+          "Yunpeng Hou",
+          "Huasen He",
+          "Jian Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+      "identity_tokens": [
+        "id:SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+        "title:understanding and optimizing kvcache management for longcontext llm inference a",
+        "url:https://www.semanticscholar.org/paper/fe7df672dd110fdae6d3b49e3e63db59075fba7a"
+      ],
+      "record": {
+        "title": "Understanding and Optimizing KV-cache Management for Long-Context LLM Inference A",
+        "source_url": "https://www.semanticscholar.org/paper/fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+        "year": null,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a"
+      }
+    }
+  ],
+  "receipt": "sha256:7b42a71d58ebafbd100605f2ee7a349e57385fc40ffd9de2a55507fd17d58e68",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}
