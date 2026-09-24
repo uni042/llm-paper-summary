@@ -64,10 +64,13 @@ class RunLivenessPolicyTests(unittest.TestCase):
         claim = (workflows / "survey-claim-fast.yml").read_text(encoding="utf-8")
         run_state = (workflows / "survey-run-state.yml").read_text(encoding="utf-8")
         precheck = (workflows / "discovery-precheck.yml").read_text(encoding="utf-8")
+        preload_warm = (workflows / "discovery-preload-warm.yml").read_text(encoding="utf-8")
         self.assertIn("3/10", claim)
         self.assertIn("4/10", run_state)
-        self.assertIn("1/5", precheck)
-        self.assertIn("Discovery precheck laneも**5分周期で未result requestを定期回収**する", router)
+        self.assertNotIn("schedule:", precheck)
+        self.assertIn("workflow_run:", preload_warm)
+        self.assertIn("1/5", preload_warm)
+        self.assertIn("5分周期", router)
         self.assertIn("10分周期", router)
 
     def test_run_state_snapshots_require_unique_request_ids(self):
