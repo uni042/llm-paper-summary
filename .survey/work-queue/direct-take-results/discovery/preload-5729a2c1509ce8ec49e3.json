@@ -1,11 +1,43 @@
 {
-  "error": "ValueError: direct Discovery claim lease is missing or expired",
-  "ok": false,
+  "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-7f3c9a-d07.json",
+  "frontier_target": 3,
+  "frontier_work_available": true,
+  "ok": true,
   "operation": "direct_take_discovery",
   "preload_id": "preload-5729a2c1509ce8ec49e3",
-  "processed_at": "2026-09-24T16:04:12+00:00",
+  "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-5729a2c1509ce8ec49e3.json",
+  "processed_at": "2026-09-24T16:05:58+00:00",
+  "request_id": "disc-take-scheduled-chat-00-7f3c9a-d07",
+  "reserved_frontier": [
+    {
+      "axis": "preload-backward-structured-references",
+      "citation_direction": "backward",
+      "discovery_bank": "j",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-j/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-58519fa41ceae293f0877761.json",
+      "preload_id": "preload-d39cefaabfd94d67ed6b",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-d39cefaabfd94d67ed6b.json",
+      "request_id": "frontier-58519fa41ceae293f0877761",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    },
+    {
+      "axis": "preload-backward-structured-references",
+      "citation_direction": "backward",
+      "discovery_bank": "a",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-5b14108598fd5234322dd9de.json",
+      "preload_id": "preload-f887fe6c8b053855f38d",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-f887fe6c8b053855f38d.json",
+      "request_id": "frontier-5b14108598fd5234322dd9de",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    }
+  ],
+  "run_key": "scheduled-chat-00-20260925T005925+0900-7f3c9a",
   "schema_version": 1,
-  "status": "recovery_required",
+  "status": "precheck_pending",
   "submission_allowed": false,
-  "work_start_allowed": false
+  "work_start_allowed": true,
+  "worker_id": "scheduled-chat-00"
 }

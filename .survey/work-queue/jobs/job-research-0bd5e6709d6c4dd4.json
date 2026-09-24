@@ -1,0 +1,30 @@
+{
+  "job_id": "job-research-0bd5e6709d6c4dd4",
+  "type": "research",
+  "parent_job_id": "job-cb948c38af6553c3",
+  "priority": 75,
+  "canonical_id": "arXiv:2301.00774",
+  "arxiv_id": "2301.00774",
+  "doi": null,
+  "openreview_id": null,
+  "identifiers": [],
+  "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot",
+  "source_url": "https://www.semanticscholar.org/paper/909ad57ce8caa6b390a65ae09db352d27d8f3996",
+  "paper_path": "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+  "lineage": null,
+  "selection_reason": "175B級LLMを再学習なしで50–60%疎化し、半構造化疎性・量子化とも両立する基礎的圧縮手法。重み圧縮・推論効率化系統の重要な前史として収録価値が高い。",
+  "priority_breakdown": {
+    "base": 45,
+    "lineage": 30,
+    "recency": 0,
+    "venue": 0,
+    "total": 75
+  },
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
+  "schema_version": 1,
+  "created_at": "2026-09-24T16:05:41+00:00"
+}
