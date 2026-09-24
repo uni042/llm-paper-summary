@@ -193,7 +193,7 @@ Scheduled Chat等でrepository Pythonを直接起動できない場合も、こ�
 10. 防御的なsubmission側検査でなお `content_validation` / `repair_required` になった場合だけ、そのfailure resultがmainへ耐久保存されたことを確認した後、同じjobを `job_ids: [<job_id>]` で指定した新しいclaim requestへ回す。新しいclaim_id / attempt_idで指摘slotを修正し、**再びセルフレビュー→preflightから**やり直す。全文読解済み成果は捨てない。
 11. failure resultが `retryable=true` の場合は、同じattemptの別descriptorを作らない。既存の同一descriptorをsubmission laneのbounded recoveryに任せ、同じresultを再確認する。`retryable=false` かつ `repair_required` でもないstate/transport guardは、返された回復指示に従う。
 
-Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/discovery-precheck/requests/<request-id>.json` をmainへcommitし、`.github/workflows/discovery-precheck.yml` に `process_discovery_precheck.py` を実行させ、同名resultを読む。Discovery precheck laneも**10分周期で未result requestを定期回収**する。Discovery submissionは既存のqueue処理経路へ流し、Research jobやstateを手で生成しない。Discovery submissionは既存の10分周期recoveryで未完了を回収する。
+Discovery precheckも、ローカルCLIがない場合は `.survey/work-queue/discovery-precheck/requests/<request-id>.json` をmainへcommitし、`.github/workflows/discovery-precheck.yml` に `process_discovery_precheck.py` を実行させ、同名resultを読む。Discovery precheck laneも**5分周期で未result requestを定期回収**する。Discovery submissionは既存のqueue処理経路へ流し、Research jobやstateを手で生成しない。Discovery submissionは既存の10分周期recoveryで未完了を回収する。
 
 **Discovery precheckが `ok=true` / `evaluation_allowed=true` / `decision=READY_FOR_EVALUATION` になった時点では、そのroundはまだ完了していない。** 対応する候補評価を行い、0件を含む正規Discovery submissionを耐久保存し、対応resultまたは明示的hard stopまで進める。`READY_FOR_EVALUATION` のresultだけを残して最終応答・通常handoffへ進んではならない。precheck workflowは成功resultの公開時に同じ `run_key` のrun-state再導出requestを自動生成し、`discovery_evaluation_pending=true` を最新snapshotへ反映する。したがって最終化ゲートが `CONTINUE_DISCOVERY_ROUND` を返す間は、候補枯渇・Actions待ち・古いrun-state snapshotを終了理由にしない。
 
