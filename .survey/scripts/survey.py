@@ -201,19 +201,6 @@ def _recent_window(now=None):
     return start, end
 
 
-def _legacy_title(body, path):
-    m = re.search(r"^#\s+(.+?)\s*$", body, re.M)
-    return m.group(1).strip() if m else path.stem
-
-
-def _legacy_summary(body):
-    m = re.search(r"^##\s+一文要約\s*$\n+(.*?)(?=\n##\s|\Z)", body, re.M | re.S)
-    if not m:
-        return ""
-    value = m.group(1).strip()
-    return re.sub(r"\s*\n\s*", " ", value)
-
-
 def _explicit_implementation(meta, body=""):
     for key in ("code", "code_url", "implementation", "implementation_url", "repository", "repo"):
         value = meta.get(key)
@@ -266,8 +253,8 @@ def paper_views():
                 "source_lineage": source_lineage,
                 "path": rel,
                 "file": p,
-                "title": meta.get("title") or _legacy_title(body, p),
-                "summary": compact_list_summary(body, meta.get("summary") or _legacy_summary(body)),
+                "title": meta["title"],
+                "summary": compact_list_summary(body, meta["summary"]),
                 "year": year,
                 "month": month,
                 "identifiers": _view_identifiers(meta, p),

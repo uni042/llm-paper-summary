@@ -126,6 +126,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
     def test_survey_build_has_no_training_list_migration(self):
         survey = (ROOT / ".survey/scripts/survey.py").read_text(encoding="utf-8")
         self.assertNotIn("_migrate_legacy_training_list", survey)
+        self.assertNotIn("_legacy_title", survey)
+        self.assertNotIn("_legacy_summary", survey)
         self.assertNotIn("old hand-written training paper list", survey)
 
     def test_repository_checker_requires_only_current_worker_docs(self):
