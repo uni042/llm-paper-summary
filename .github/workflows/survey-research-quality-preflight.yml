@@ -9,6 +9,7 @@ on:
       - '.survey/scripts/paper_quality_gate.py'
       - '.survey/scripts/prepare_completed_submission.py'
       - '.survey/scripts/advance_research_submission_pipeline.py'
+      - '.survey/scripts/derive_worker_run_state.py'
       - '.github/workflows/survey-research-quality-preflight.yml'
   workflow_dispatch:
     inputs:
@@ -71,6 +72,7 @@ jobs:
             fi
 
             processed=0
+            : > /tmp/research-preflight-results.txt
             for request in "${requests[@]:-}"; do
               [ -n "$request" ] || continue
               case "$request" in
@@ -86,6 +88,7 @@ jobs:
                 --repo-root . \
                 --request "$request" \
                 --result "$result"
+              printf '%s\n' "$result" >> /tmp/research-preflight-results.txt
               processed=$((processed + 1))
             done
 
@@ -95,7 +98,24 @@ jobs:
               break
             fi
 
-            git add .survey/work-queue/research-preflight/results
+            # Publish a fresh run-state snapshot in the same commit as the
+            # preflight result. FAIL can therefore restore the frozen paper to
+            # foreground repair immediately, while PASS remains parked until the
+            # descriptor materializes.
+            set +e
+            python .survey/scripts/derive_worker_run_state.py \
+              --repo-root . \
+              --preflight-results-file /tmp/research-preflight-results.txt \
+              > /tmp/research-preflight-run-state.json
+            run_state_rc=$?
+            set -e
+            if [ "$run_state_rc" -ne 0 ]; then
+              echo 'Research preflight run-state refresh failed; publish the quality result and let the normal run-state lane recover it.' >&2
+            fi
+
+            git add \
+              .survey/work-queue/research-preflight/results \
+              .survey/work-queue/run-state
             git commit -m 'survey: publish research quality preflight results'
             if git push origin HEAD:main; then
               published=1
