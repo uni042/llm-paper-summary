@@ -10,9 +10,16 @@ on:
       - '.survey/scripts/reference_pool.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
-  # STATUS.md publication is intentionally decoupled from queue pushes so the
-  # dashboard does not amplify main-branch write contention. Pull requests still
-  # validate rendering; publication is periodic or explicitly dispatched.
+  push:
+    branches: [main]
+    paths:
+      - 'papers/**/*.md'
+      - '.github/workflows/status-dashboard.yml'
+  # Queue-only pushes stay decoupled so STATUS publication does not amplify the
+  # hot queue lanes. Paper existence is itself direct STATUS evidence, so a
+  # paper-only repair must refresh immediately instead of waiting for cron.
+  # If the authoritative paper commit already carried STATUS.md, publish exits
+  # without adding a second dashboard commit.
   schedule:
     - cron: '7/10 * * * *'
   workflow_dispatch:
@@ -41,6 +48,7 @@ jobs:
 
   publish:
     if: >-
+      github.event_name == 'push' ||
       github.event_name == 'schedule' ||
       github.event_name == 'workflow_dispatch'
     needs: validate
@@ -61,6 +69,14 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          if [ "${{ github.event_name }}" = "push" ]; then
+            if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" | grep -Fxq 'STATUS.md'; then
+              echo 'Triggering paper push already included STATUS.md; dashboard refresh is already atomic.'
+              exit 0
+            fi
+          fi
+
           for attempt in 1 2 3 4; do
             git fetch origin main
             git reset --hard origin/main
