@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1145/3797905.3807874",
+      "doi": "10.1145/3797905.3807874",
+      "title": "Latency-SLO-Aware Memory Offloading for Large Language Model Inference",
+      "source_url": "https://doi.org/10.1145/3797905.3807874",
+      "priority": 94,
+      "reason": "Host-memory offloading optimized for latency SLOs."
+    },
+    {
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00017",
+      "doi": "10.1109/JCC72984.2026.00017",
+      "title": "Pegasus: Accelerating Large Language Model Inference with Stateful Prefix Caching",
+      "source_url": "https://doi.org/10.1109/JCC72984.2026.00017",
+      "priority": 89,
+      "reason": "Stateful prefix KV caching for lower TTFT."
+    },
+    {
+      "canonical_id": "arXiv:2607.04181",
+      "arxiv_id": "2607.04181",
+      "title": "CoCoScale: Leveraging Layer-wise Scaling to Unlock the Potential of Online LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.04181",
+      "priority": 90,
+      "reason": "Layer-wise scaling for skewed online LLM serving."
+    },
+    {
+      "canonical_id": "arXiv:2607.07862",
+      "arxiv_id": "2607.07862",
+      "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems",
+      "source_url": "https://arxiv.org/abs/2607.07862",
+      "priority": 88,
+      "reason": "Latency-oriented multi-GPU spatial scaling for LLM serving."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-20260925T070210-run1-r4",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T070210-run1-r4.json",
+    "receipt": "sha256:a66562ab2e34bcb5fd76983942bd4568318732274b961a4a6b2c008565baa0fa"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "disc-take-scheduled-chat-00-20260925T070210-run1-r4",
+    "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+    "candidate_count": 20,
+    "accepted_count": 4,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}
