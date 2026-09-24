@@ -960,13 +960,13 @@
   実装：✓ ・ リポジトリ内被引用：41  
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
+- **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
+  実装：✓ ・ リポジトリ内被引用：39  
+  要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
+
 - **2024-08 · [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md)**  
   実装：✓ ・ リポジトリ内被引用：38  
   最終的な出力トークン数を正確に当てる代わりに、プロンプトからどのリクエストが他より短く終わりそうかという順位だけを小型モデルで予測し、短そうなリクエストを先に処理して長いリクエストによるキュー待ちを減らすスケジューラ。
-
-- **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
-  実装：✓ ・ リポジトリ内被引用：37  
-  要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-08 · [NanoFlow: Towards Optimal Large Language Model Serving Throughput](2024-2408.12757-nanoflow.md)**  
   実装：[✓](https://github.com/efeslab/Nanoflow) ・ リポジトリ内被引用：32  

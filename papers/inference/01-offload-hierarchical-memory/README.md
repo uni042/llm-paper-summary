@@ -286,6 +286,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/caoshiyi/artifacts/tree/asplos25) ・ リポジトリ内被引用：9  
   MoE-Lightningは専門家重みとKVをCPU DRAMへ置き、マイクロバッチ間で次の重み転送・CPU注意・GPU計算を重ねて低VRAMのI/O待ちを減らす。
 
+- **2025-03 · [Fast On-device LLM Inference with NPUs](2024-2407.05858-fast-on-device-llm-inference-with-npus.md)**  
+  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：7  
+  可変長入力の固定長分割、量子化外れ値のCPU/GPU分離、ブロック単位の異種プロセッサ配置を組み合わせ、スマートフォンNPUでLLMプリフィルを高速化する。
+
 - **2025-03 · [eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference](2025-2503.06823-emoe.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   過去のエキスパート選択から必要エキスパートを予測・周期再利用し、タスク感度とSLOを考慮した読み込み・スケジューリングでGPUメモリを削減する。
@@ -301,10 +305,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-08 · [Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding](2025-2508.21706-specmoeoff-speculative-decoding-offload.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   専門家重み転送でGPUが遊ぶMoEオフロードに投機的デコードを組み合わせ、1回の重み転送で複数トークンを検証する。CPU向け注意検証と自動設定選択も加え、MoE-Lightning比でスループットを平均2.1倍、最大2.9倍へ改善する。
-
-- **2025-03 · [Fast On-device LLM Inference with NPUs](2024-2407.05858-fast-on-device-llm-inference-with-npus.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：5  
-  可変長入力の固定長分割、量子化外れ値のCPU/GPU分離、ブロック単位の異種プロセッサ配置を組み合わせ、スマートフォンNPUでLLMプリフィルを高速化する。
 
 - **2025-08 · [SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency](2025-2508.06978-ssd-moe-offloading-energy-efficiency.md)**  
   実装：[✓](https://github.com/scale-snu/SSD-offloading) ・ リポジトリ内被引用：4  
@@ -350,13 +350,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/sacs-epfl/moe-inference) ・ リポジトリ内被引用：2  
   全エキスパートを全GPUへテンソル分割してルーティング偏りを計算負荷偏りから切り離し、カーネル融合でMoEエンコーダ推論を高速化する。
 
+- **2025-08 · [Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories](2025-2508.08457-packing-prefetch-onchip-memory-long-context.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  プリフィル計算中の余剰HBM帯域で次層KVを先読みし、512MB〜1GB級M3Dオンチップメモリへ保持して、長文デコードのKV転送待ちを隠すハードウェア・スケジューラ協調方式。
+
 - **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
-
-- **2025-08 · [Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories](2025-2508.08457-packing-prefetch-onchip-memory-long-context.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  プリフィル計算中の余剰HBM帯域で次層KVを先読みし、512MB〜1GB級M3Dオンチップメモリへ保持して、長文デコードのKV転送待ちを隠すハードウェア・スケジューラ協調方式。
 
 - **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -380,6 +380,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：72  
   MoE-Infinityはルーティング履歴から次に再利用される専門家を予測し、GPUキャッシュへ先読みして個人PCのMoEオフロード転送待ちを減らす。
 
+- **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：55  
+  活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
+
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
   実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：55  
   Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
@@ -387,10 +391,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2023-12 · [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：54  
   LLM in a Flashは直近で使ったFFN重みをDRAMに残し、ニューロン単位でFlash上の重みをまとめて必要部分だけ読み出して大規模モデルを限られたメモリで生成する。
-
-- **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：53  
-  活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2024-02 · [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)**  
   実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：50  
@@ -413,7 +413,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   TwinPilotsはTransformer処理ごとにCPU計算とGPU転送・計算の速さを比較し、CPU計算とPCIe転送を並行させてGPUオフロードの生成待ちを減らす。
 
 - **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
 
 - **2024-05 · [IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs](2024-2405.02842-iceformer.md)**  

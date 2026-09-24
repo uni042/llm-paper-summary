@@ -743,7 +743,7 @@
 ### 2年前（2024-10〜2025-09）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：71  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：72  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
@@ -897,7 +897,7 @@
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：24  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
@@ -923,11 +923,11 @@
 ### 4年前（2022-10〜2023-09）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：88  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：90  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：85  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：87  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
@@ -935,16 +935,16 @@
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：32  
+  実装：✓ ・ リポジトリ内被引用：34  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md)**  
-  実装：[✓](https://github.com/Vahe1994/SpQR) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/Vahe1994/SpQR) ・ リポジトリ内被引用：19  
   高感度な少数重みだけを十六ビット疎表現に逃がし、残りと量子化尺度を三〜四ビット化してほぼ無損失圧縮する混合重み表現。
 
 ### 5年前（2021-10〜2022-09）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：99  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：106  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 <!-- survey:auto:end -->
