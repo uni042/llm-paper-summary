@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-preload-54d2a2c5f4eca8e69e54d846",
-  "job_id": "job-research-105b69444b4fa0ad",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-54d2a2c5f4eca8e69e54d846",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-54d2a2c5f4eca8e69e54d846","job_id":"job-research-105b69444b4fa0ad","data":{"overview":"857セッションの全体分析ではツール結果が会話バイトの79.4%を占め、主セッションで各ツール結果が後続ターンに再処理される増幅率中央値は84.4倍、P90は570.8倍だった。API要求を詳細分解した5セッションではdead tool output 26.5%、unused tool schemas 20.2%、static resend 11.0%、skill triplication 2.9%で計60.5%の構造的無駄を観測し、全コーパスへの保守的投影では21.8%、9.704億入力トークンが削減可能と推定した。","key_results":[{"metric":"オフラインページフォルト率","value":"0.0254%（354/1,393,000 evictions）","baseline":"FIFO age=4 turns, min_size=500 bytes","condition":"29 proxy-captured sessions replay","interpretation":"通常ワークロードでは4ターン超のRead結果が再要求される確率は非常に低く、積極的追い出しが成立する。"},{"metric":"標準タスク入力削減","value":"37.1%（114,222→71,816 effective input tokens）","baseline":"proxy observation baseline","condition":"compact+trim、同一Claude Opus/temperature/task","interpretation":"ツール定義削減と古い結果追い出しを併用し、タスク成功を維持した。"},{"metric":"本番Session A空き容量","value":"7%→43% free context","baseline":"compaction前","condition":"steady-state coding、15 evictions","interpretation":"通常のコーディング作業では一度のRead faultを許容して36ポイントの余裕を回復した。"},{"metric":"極端負荷のthrashing","value":"97% fault rate（659/680）","baseline":"通常オフライン0.0254%","condition":"681-turn multi-agent session","interpretation":"作業集合がresident setを超えるとFIFOが破綻し、rate limitを有用作業よりfaultへ消費する。"}],"negative_results":"681ターンの持続的multi-agentセッションでは606件のRead追い出しに対し659件のフォルトが発生し、5,038KBから339KBまで圧縮しながらも同じファイル群を追い出して再読込するスラッシングへ陥った。セッションはcontext limitではなくAPI rate limitで終了した。また会話collapseはprompt cache prefixを変えるため、一例ではcache hit率が一時100%から25%へ低下し約105K tokenの再計算を発生させた。","interpretation":"LLM文脈ではページを保持するだけで毎ターン入力・注意コストが累積するため、古典VMと逆にfaultを少数許容して積極的に追い出す方が安い。ただし高fillでは一回のfaultが全context再推論を誘発するため、圧力が高いほど保守的にするサイズ・fill依存方針が必要になる。","quality_impact":"標準タスクでは三条件すべて正しく完了し、構造的削減が必ずしも回答品質を落とさないことを確認する。一方、極端なthrashingでは追加round tripが増え、品質以前にrate budgetを消費するため、fault-driven pinningや将来のpin decay、working-set推定が必要である。"},"reservation":{"claim_id":"claim-preload-54d2a2c5f4eca8e69e54d846","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
