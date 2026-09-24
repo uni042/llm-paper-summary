@@ -1,6 +1,6 @@
 {
-  "fact_generation": 1,
-  "generation": 2,
+  "fact_generation": 2,
+  "generation": 3,
   "runs": {
     "worker-925000-20260924T153200Z-lazyprobe": {
       "actual_invocation_start": "2026-09-24T15:32:00+00:00",
@@ -11,7 +11,6 @@
         "active_assignment": true,
         "active_claim_count": 12,
         "active_job_ids": [
-          "job-research-5cbec5c2c470e865",
           "job-research-e6152c2a3998faa6",
           "job-research-b22af651ef4f551f",
           "job-research-1a48a3083b0b1499",
@@ -31,27 +30,30 @@
         "claim_state_checked": true,
         "claim_window": 12,
         "claim_window_remaining": 0,
-        "foreground_job_id": "job-research-5cbec5c2c470e865",
+        "foreground_job_id": "job-research-e6152c2a3998faa6",
         "pending_claim_request_ages_seconds": {},
         "pending_claim_request_ids": [],
         "pending_claim_requested_at": {},
-        "preflight_inflight_count": 0,
-        "preflight_parked_attempt_ids": [],
-        "preflight_parked_job_ids": [],
-        "preflight_parked_request_ids": {},
-        "preflight_parked_states": {},
-        "preflight_pipeline_capacity_remaining": 2,
+        "preflight_inflight_count": 1,
+        "preflight_parked_attempt_ids": [
+          "attempt-preload-4cb587870cc33021ea9f2c50"
+        ],
+        "preflight_parked_job_ids": [
+          "job-research-5cbec5c2c470e865"
+        ],
+        "preflight_parked_request_ids": {
+          "job-research-5cbec5c2c470e865": "preflight-worker-925000-cxl-kv-02"
+        },
+        "preflight_parked_states": {
+          "job-research-5cbec5c2c470e865": "passed_waiting_descriptor"
+        },
+        "preflight_pipeline_capacity_remaining": 1,
         "preflight_pipeline_overflow_count": 0,
         "preflight_pipeline_saturated": false,
         "preflight_pipeline_window": 2,
-        "preflight_repair_attempt_ids": [
-          "attempt-preload-4cb587870cc33021ea9f2c50"
-        ],
-        "preflight_repair_job_ids": [
-          "job-research-5cbec5c2c470e865"
-        ],
+        "preflight_repair_attempt_ids": [],
+        "preflight_repair_job_ids": [],
         "standby_job_ids": [
-          "job-research-e6152c2a3998faa6",
           "job-research-b22af651ef4f551f",
           "job-research-1a48a3083b0b1499",
           "job-research-92841f7f38c00d3c",
@@ -65,7 +67,7 @@
         ]
       },
       "first_cached_at": "2026-09-24T15:34:25.368143+00:00",
-      "generation": 2,
+      "generation": 3,
       "rebuilt_from_canonical": true,
       "run_key": "worker-925000-20260924T153200Z-lazyprobe",
       "scheduled_slot": "adhoc",
@@ -86,6 +88,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T15:39:59.176797+00:00",
+  "updated_at": "2026-09-24T15:41:31.323714+00:00",
   "worker_id": "worker-925000"
 }
