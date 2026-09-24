@@ -101,9 +101,6 @@ jobs:
           )
           PY
 
-      - name: Materialize offline spillover jobs
-        run: python .survey/scripts/apply_offline_job_seed.py --root .survey
-
       - name: Apply checkpoint-aware job requests
         run: python .survey/scripts/apply_transport_requests.py --root .survey
 

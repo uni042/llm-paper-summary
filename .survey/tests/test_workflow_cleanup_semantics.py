@@ -28,13 +28,14 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn("group: survey-background-main", workflow)
         self.assertNotIn("group: survey-helper-main", workflow)
 
-    def test_survey_helper_has_no_reusable_chat_or_v10_normalizer_path(self):
+    def test_survey_helper_has_no_retired_transport_paths(self):
         workflow = (ROOT / ".github/workflows/survey-helper.yml").read_text(encoding="utf-8")
         self.assertNotIn("chat-inbox.json", workflow)
         self.assertNotIn("reusable_transport_baseline.py", workflow)
         self.assertNotIn("preflight_chat_record.py", workflow)
         self.assertNotIn("assemble_research_record.py --repo-root", workflow)
         self.assertNotIn("normalize_v10_jobs.py", workflow)
+        self.assertNotIn("apply_offline_job_seed.py", workflow)
         self.assertNotIn("workflow_version': 9", workflow)
 
         worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
@@ -87,6 +88,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             ".survey/scripts/preflight_chat_record.py",
             ".survey/scripts/append_research_throughput_status.py",
             ".survey/scripts/refine_status_observability.py",
+            ".survey/scripts/apply_offline_job_seed.py",
+            ".survey/work-queue/transport/offline-job-seed.json",
             ".survey/tests/test_reusable_transport_baseline.py",
             ".github/workflows/repair-corrupted-lineages.yml",
             ".survey/scripts/repair_corrupted_lineages.py",

@@ -449,7 +449,7 @@ hard stopは曖昧な「安全そうでない」「難しい」「時間がか�
 - platform/context上限が実際に発生し、継続するtool callまたは出力がプラットフォームから拒否された。
 - 正規transportが要求するGitHub Actions/API/認証が利用不能で、Libraryを含む代替耐久経路でも現在成果を安全に引き継げない。
 
-単一provider失敗、**単一論文の一次資料全文取得失敗**、validation failure、record bank枯渇、claim/submission result pending、候補0件、Library backlog、Notion/補助handoffの読取不能、単に次手が分かりにくいことはhard stopではない。これらは正規回復・別provider・status-only・Library route・同一target待機・次の独立作業へ進む。特に一次資料取得失敗を `platform_context_limit` / `global_dependency` へ読み替えてrun全体を終了してはならない。
+単一provider失敗、**単一論文の一次資料全文取得失敗**、validation failure、record bank枯渇、claim/submission result pending、候補0件、Library backlog、単に次手が分かりにくいことはhard stopではない。これらは正規回復・別provider・status-only・Library route・同一target待機・次の独立作業へ進む。特に一次資料取得失敗を `platform_context_limit` / `global_dependency` へ読み替えてrun全体を終了してはならない。
 
 `continuation_gate.py` / `run_finalization_gate.py` へ停止系入力を渡す場合も、この列挙に対応する観測事実がある時だけtrueにする。ワーカー独自の解釈で `platform_limit` / `global_dependency` / `discovery_exhausted` を立てない。
 
