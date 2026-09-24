@@ -167,6 +167,50 @@ class AutoInitialClaimTests(unittest.TestCase):
             self.assertEqual(summary["created"], [])
             self.assertEqual(summary["skipped"][0]["reason"], "run_already_has_claim_transport")
 
+    def test_carryover_active_assignment_runs_fast_recovery_and_publishes_resume_packet(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            value = eligible_result()
+            value["active_assignment"] = True
+            value["gate"]["required_action"] = "CONTINUE_ASSIGNED_WORK"
+            source = root / ".survey/work-queue/run-state/results/run-state-1.json"
+            write_json(source, value)
+            changed = root / "changed.txt"
+            changed.write_text(".survey/work-queue/run-state/results/run-state-1.json\n", encoding="utf-8")
+
+            def recover(repo_root):
+                write_json(
+                    root / ".survey/work-queue/hot-dispatch.json",
+                    {
+                        "research_resume": {
+                            "scheduled-chat-30": [{
+                                "job_id": "job-old",
+                                "claim_id": "claim-old",
+                                "attempt_id": "attempt-old",
+                                "pipeline_role": "foreground",
+                                "work_start_allowed": True,
+                                "record_write_allowed": True,
+                            }]
+                        }
+                    },
+                )
+                return {"ok": True}
+
+            with (
+                mock.patch.object(mod.initial_claim_fast_path, "process") as initial,
+                mock.patch.object(mod.claim_fast_path, "process", side_effect=recover) as fast,
+            ):
+                summary = mod.process(root, changed)
+
+            initial.assert_not_called()
+            fast.assert_called_once()
+            self.assertFalse(summary["resume_recovery"]["skipped"])
+            updated = json.loads(source.read_text(encoding="utf-8"))
+            resume = updated["auto_resume_recovery"]
+            self.assertEqual(resume["status"], "ready")
+            self.assertEqual(resume["assignment_count"], 1)
+            self.assertEqual(resume["foreground"]["attempt_id"], "attempt-old")
+
     def test_noninitial_snapshot_is_not_auto_claimed(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
