@@ -39,6 +39,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install audit dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
       - name: Pin the source snapshot
         id: source
         env:
@@ -89,14 +92,88 @@ jobs:
               print(f"  {key}: {report[key]}")
           PY
 
-      - name: Save the inventory on the work branch
+      - name: Audit paper data in the pinned snapshot
+        env:
+          SOURCE_COMMIT: ${{ steps.source.outputs.sha }}
         run: |
-          if [ -z "$(git status --porcelain -- .survey/reports/legacy-inventory.json)" ]; then
-            echo "Inventory report is unchanged."
+          source_root="$RUNNER_TEMP/legacy-source"
+          audit_root="$RUNNER_TEMP/legacy-paper-audit"
+          mkdir -p "$audit_root"
+          python .survey/scripts/audit_paper_quality.py --repo-root "$source_root" --papers-root papers/inference --no-fail-exit --json-out "$audit_root/inference-and-survey.json"
+          python .survey/scripts/audit_paper_quality.py --repo-root "$source_root" --papers-root papers/training --no-fail-exit --json-out "$audit_root/training.json"
+          python .survey/scripts/audit_list_summary_quality.py --repo-root "$source_root" --no-fail-exit --json-out "$audit_root/list-summary.json"
+          python .survey/scripts/audit_overview_results.py --repo-root "$source_root" --no-fail-exit --json-out "$audit_root/overview-results.json"
+          python - "$source_root" "$audit_root" "$SOURCE_COMMIT" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+          import yaml
+
+          root, audit_root, source_commit = Path(sys.argv[1]), Path(sys.argv[2]), sys.argv[3]
+          def load(name):
+              return json.loads((audit_root / name).read_text(encoding="utf-8"))
+          audits = {
+              "inference_and_survey": load("inference-and-survey.json"),
+              "training": load("training.json"),
+              "list_summary": load("list-summary.json"),
+              "overview_results": load("overview-results.json"),
+          }
+          def status_counts(rows):
+              return {key: sum(row.get("status") == key for row in rows) for key in ("PASS", "WARN", "FAIL")}
+          paper_rows = audits["inference_and_survey"]["results"] + audits["training"]["results"]
+          list_rows = audits["list_summary"]["results"]
+          overview_rows = audits["overview_results"]["results"]
+          missing_list_summary = []
+          for family in ("inference", "training", "survey"):
+              for path in sorted((root / "papers" / family).rglob("*.md")):
+                  if path.name.casefold() in {"readme.md", "comparison.md"}:
+                      continue
+                  text = path.read_text(encoding="utf-8", errors="ignore")
+                  if text.startswith("---\\n") and "\\n---\\n" in text[4:]:
+                      raw = text.split("---", 2)[1]
+                      metadata = yaml.safe_load(raw) or {}
+                  else:
+                      metadata = {}
+                  if not metadata.get("list_summary"):
+                      missing_list_summary.append(path.relative_to(root).as_posix())
+          summary = {
+              "schema_version": 1,
+              "source_commit": source_commit,
+              "paper_quality": {
+                  "counts": status_counts(paper_rows),
+                  "failures": [{"path": row["path"], "failures": row["failures"]} for row in paper_rows if row.get("status") == "FAIL"],
+              },
+              "list_summary_quality": {
+                  "counts": status_counts(list_rows),
+                  "failures": [{"path": row["path"], "failures": row["failures"]} for row in list_rows if row.get("status") == "FAIL"],
+                  "missing_explicit_list_summary_count": len(missing_list_summary),
+                  "missing_explicit_list_summary": missing_list_summary,
+              },
+              "overview_result_quality": {
+                  "counts": status_counts(overview_rows),
+                  "failures": [{"path": row["path"], "failures": row["failures"]} for row in overview_rows if row.get("status") == "FAIL"],
+              },
+          }
+          out = Path(".survey/reports/legacy-paper-audit.json")
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+          print(json.dumps({
+              "source_commit": source_commit,
+              "paper_quality": summary["paper_quality"]["counts"],
+              "list_summary_quality": summary["list_summary_quality"]["counts"],
+              "missing_explicit_list_summary": len(missing_list_summary),
+              "overview_result_quality": summary["overview_result_quality"]["counts"],
+          }, ensure_ascii=False))
+          PY
+
+      - name: Save inventory and paper audit on the work branch
+        run: |
+          if [ -z "$(git status --porcelain -- .survey/reports/legacy-inventory.json .survey/reports/legacy-paper-audit.json)" ]; then
+            echo "Inventory and paper audit reports are unchanged."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .survey/reports/legacy-inventory.json
-          git commit -m "chore: refresh pinned legacy inventory"
+          git add .survey/reports/legacy-inventory.json .survey/reports/legacy-paper-audit.json
+          git commit -m "chore: refresh pinned legacy inventory and paper audit"
           git push origin "HEAD:$GITHUB_REF_NAME"
