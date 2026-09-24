@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 09:30:30 JST**
+> 自動生成: **2026-09-24 09:36:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **298** |
-| 未claim Research job | **154** |
-| 直近24hの検証済みResearch収録 | **40** |
-| 最終検証済みResearch収録 | **09-23 22:05:03 JST（11時間25分前）** |
+| 収録候補論文 | **296** |
+| 未claim Research job | **166** |
+| 直近24hの検証済みResearch収録 | **42** |
+| 最終検証済みResearch収録 | **09-24 09:35:54 JST（6秒前）** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **298** |
+| canonical_id確認済みの一意な候補論文 | **296** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **298** |
+| 非終端Research job合計 | **296** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -34,9 +34,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **6698** |
-| 処理済み | **651** |
-| 未処理 | **6047** |
-| 収録済みとして除外 | **543** |
+| 処理済み | **653** |
+| 未処理 | **6045** |
+| 収録済みとして除外 | **545** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（54分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（1時間0分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **144** | **12** | — |
+| Research | **2** | **1** | **0** | **0** | **130** | **21** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **0** | **4** | **0** | **3** | **144** | **12** | **6** |
+| 合計 | **2** | **4** | **0** | **3** | **130** | **21** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,7 +82,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
-- 検証済み完了なし。
+- **09-24 09:35:54 JST** [research] `arXiv:2210.17323` — GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers
+  - job: `.survey/work-queue/jobs/job-research-a725ebe4f1dc359c.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-27067e88f7585964ab37f6a5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-27067e88f7585964ab37f6a5.json`
+  - paper: `papers/inference/08-quantization-kernels/2022-2210.17323-gptq.md`
+- **09-24 09:35:54 JST** [research] `arXiv:2404.08509` — Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction
+  - job: `.survey/work-queue/jobs/job-research-c4dbc458851f604c.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-2fa50b35dc3b52ca57aadaca.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-2fa50b35dc3b52ca57aadaca.json`
+  - paper: `papers/inference/06-serving-scheduling/2024-2404.08509-ssjf.md`
 
 ### Audit
 
@@ -129,37 +138,37 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **12件**
-- `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
-- `DOI:10.1109/INFOCOM59046.2026.11571388` — CoSine: Enhancing LLM Serving via Collaborative and Decoupled Speculative Inference / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-058d69df18b4e613.json`
-- `DOI:10.1109/ICC59461.2026.11587970` — InKubeator: Pre-warming In-Memory KV Caches from Disk for Elastic LLM Serving / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2177bbc3f309a697.json`
-- `arXiv:2608.10545` — ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-2db1a9d83c60d21c.json`
-- `DOI:10.1109/INFOCOM59046.2026.11571450` — Enabling Memory-Disaggregated Cloud Infrastructure for LLMs: An Adaptive CXL-based KV Cache Scheduling Approach / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-319ee9e5d994faaf.json`
-- `arXiv:2602.11688` — GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-352411c0dfdab5c8.json`
-- `arXiv:2608.19395` — HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-4ed6d0d7f17db5e0.json`
-- `arXiv:2608.14498` — Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-c964557cc105a7b7.json`
-- `DOI:10.1145/3789240.3828750` — ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-cdc29bb5f1d5b9bc.json`
-- `arXiv:2602.06502` — DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **—** / lease expiry: **09-24 21:23:03 JST**
-  - evidence: `.survey/work-queue/claims/job-research-d4b85f1346de1326.json`
+- 未失効かつ非terminal jobのclaim: **130件** / 直近15分heartbeat: **21件**
+- `arXiv:2608.14191` — KV Cache Compression Through the Lens of Transform Coding / worker `shared-preload-pool`
+  - claim: **09-24 09:30:47 JST** / heartbeat: **—** / lease expiry: **09-24 21:30:47 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7b20b235b85d5367.json`
+- `arXiv:2609.23816` — SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-0729262d447a8308.json`
+- `DOI:10.1109/cloud67622.2025.00028` — ZipNN: Lossless Compression for AI Models / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-14b72fcf4a8168cf.json`
+- `arXiv:2506.04301` — The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1846db079990eb9b.json`
+- `arXiv:2609.26333` — Disaggregated Quantization: Specializing LLM Prefill and Decode / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1932d6ac89ddfafb.json`
+- `arXiv:2405.07135` — Post Training Quantization of Large Language Models with Microscaling Formats / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-47d3b689c2eeb296.json`
+- `arXiv:2512.21835` — Collaborative Lossless LLM Inference Serving with Offloading-based Pipeline Parallelism on Edge Devices / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5c9711465b85e7cf.json`
+- `arXiv:2405.05803` — Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-69af59c3cf5bef42.json`
+- `arXiv:2406.02069` — PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-86d74401d2a482f5.json`
+- `arXiv:2604.04599` — LP-GEMM: Integrating Layout Propagation into GEMM Operations / worker `scheduled-chat-30`
+  - claim: **09-24 09:30:46 JST** / heartbeat: **09-24 09:30:46 JST** / lease expiry: **09-24 11:00:46 JST**
+  - evidence: `.survey/work-queue/claims/job-research-af50c1bfbbe9bbb6.json`
 
 #### Audit
 
@@ -179,7 +188,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **298** |
+| ready | **296** |
 
 ### 候補の重複・識別情報欠損
 
@@ -199,7 +208,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1002** |
+| inference/training/survey配下の論文Markdown実体 | **1004** |
 
 ### immutable submissionの未照合
 

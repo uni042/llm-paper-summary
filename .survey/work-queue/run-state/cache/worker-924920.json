@@ -1,6 +1,6 @@
 {
-  "fact_generation": 5,
-  "generation": 6,
+  "fact_generation": 6,
+  "generation": 7,
   "runs": {
     "adhoc-20260924T092000JST-worker-924920": {
       "actual_invocation_start": "2026-09-24T00:20:00+00:00",
@@ -51,10 +51,13 @@
         "attempt-preload-2fa50b35dc3b52ca57aadaca": {
           "attempt_id": "attempt-preload-2fa50b35dc3b52ca57aadaca",
           "claimed_at": "2026-09-24T00:23:02+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-preload-2fa50b35dc3b52ca57aadaca.json",
           "job_id": "job-research-c4dbc458851f604c",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-24T00:35:54+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "adhoc-20260924T092000JST-worker-924920",
@@ -166,20 +169,21 @@
         ]
       },
       "first_cached_at": "2026-09-24T00:22:43.624934+00:00",
-      "generation": 6,
+      "generation": 7,
       "rebuilt_from_canonical": false,
       "run_key": "adhoc-20260924T092000JST-worker-924920",
       "scheduled_slot": "adhoc",
       "submission": {
-        "completed_attempt_ids": [],
-        "last_terminal_job_status": "none",
-        "pending_attempt_ids": [
-          "attempt-preload-06a7382e6e4dd1f8011ebfe2",
+        "completed_attempt_ids": [
           "attempt-preload-2fa50b35dc3b52ca57aadaca"
+        ],
+        "last_terminal_job_status": "completed",
+        "pending_attempt_ids": [
+          "attempt-preload-06a7382e6e4dd1f8011ebfe2"
         ],
         "pipeline_ahead_count": 1,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 0,
+        "research_audit_completed_this_invocation": 1,
         "retryable_attempt_ids": [
           "attempt-preload-06a7382e6e4dd1f8011ebfe2"
         ],
@@ -195,6 +199,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T00:35:34.958560+00:00",
+  "updated_at": "2026-09-24T00:35:54.675646+00:00",
   "worker_id": "worker-924920"
 }
