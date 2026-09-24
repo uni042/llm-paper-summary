@@ -305,6 +305,7 @@ def build_index(repo_root: Path) -> dict[str, Any]:
     research_packets = _research_packets(root, jobs=jobs, claims=claims)
     research_resume = _research_resume_packets(root, jobs=jobs, claims=claims)
     discovery_packets = _discovery_packets(root)
+    discovery_fallback = discovery_preload_queue.fallback_source(root, direction="backward")
     lane_available = {
         "research": bool(research_packets),
         "discovery": any(bool(rows) for rows in discovery_packets.values()),
@@ -316,6 +317,22 @@ def build_index(repo_root: Path) -> dict[str, Any]:
         "research_discovery_threshold": threshold,
         "suggested_work_mode": suggested,
         "direct_start_allowed": lane_available[suggested],
+        "zero_wait_start_allowed": bool(
+            lane_available[suggested]
+            or (suggested == "discovery" and discovery_fallback is not None)
+        ),
+        "fallback_start_allowed": bool(
+            suggested == "discovery" and discovery_fallback is not None
+        ),
+        "discovery_fallback": discovery_fallback if suggested == "discovery" else None,
+        "idle_gap_guard": {
+            "passive_wait_forbidden": True,
+            "rule": (
+                "An asynchronous request must never be the worker's only remaining activity. "
+                "Prefer PRECHECKED Discovery stock; if none exists, start the published fixed-source "
+                "schema-v3 fallback immediately while run-state recovery proceeds asynchronously."
+            ),
+        },
         "route_guard_band": DIRECT_ROUTE_GUARD_BAND,
         "lane_available": lane_available,
         "rule": (
@@ -327,7 +344,9 @@ def build_index(repo_root: Path) -> dict[str, Any]:
             "resume packets also expose the canonical status-only submission path/template so a single unreadable paper "
             "can be durably terminalized and the next standby can start without ending the run; "
             "direct_start_allowed depends only on prepared stock for the selected lane when no same-worker resume exists; "
-            "if that lane has no packet, fall back to the normal synchronous run-state route."
+            "zero_wait_start_allowed additionally covers the Discovery fixed-source cold-start fallback. When Discovery "
+            "stock is absent, use discovery_fallback to issue the run-specific schema-v3 precheck immediately instead "
+            "of waiting for run-state; the precheck lane repairs/refreshes canonical run-state asynchronously."
         ),
         "research": research_packets,
         "research_resume": research_resume,

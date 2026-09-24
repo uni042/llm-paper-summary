@@ -966,6 +966,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     discovery_async = _discovery_async_state(root, request["run_key"])
     selector_direction = str(selector.get("next_direction") or "")
     discovery_preload = None
+    discovery_fallback_source = None
     if (
         work_mode == "discovery"
         and selector_direction in {"backward", "forward", "normal"}
@@ -974,6 +975,11 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             root,
             direction=selector_direction,
         )
+        if discovery_preload is None:
+            discovery_fallback_source = discovery_preload_queue.fallback_source(
+                root,
+                direction=selector_direction,
+            )
 
     now = dt.datetime.now(dt.timezone.utc)
     deadline = started_at + dt.timedelta(seconds=3600)
@@ -1169,6 +1175,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "discovery_rounds_completed": discovery_rounds,
         "discovery_selector": selector,
         "discovery_preload": discovery_preload,
+        "discovery_fallback_source": discovery_fallback_source,
+        "idle_gap_forbidden": True,
         "independent_work": independent_work,
         "gate": gate,
         "finalization_gate": finalization_gate,
@@ -1204,6 +1212,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "Discovery async state and carry-over immutable submissions remain visible across run boundaries. "
             "When work_mode=discovery, discovery_preload exposes the oldest PRECHECKED preload matching the canonical selector direction; "
             "it is only an acceleration hint and must be adopted through a new run-specific schema-v3 precheck request, never referenced directly by a submission. "
+            "If that warm bank is absent, discovery_fallback_source exposes the same selector-compatible fixed source so the next schema-v3 precheck can start immediately without passive waiting. "
+            "idle_gap_forbidden=true means an asynchronous result must not be treated as permission to stop or passively wait when a prepared/fallback next action exists. "
             "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts. "
             "Every durable run-state snapshot embeds the finalization gate result; a normal final response requires finalization_permit_issued=true. "
             "worker_execution_directive=MUST_CONTINUE_NO_FINAL_RESPONSE is an explicit prohibition on emitting a normal final response; follow next_action instead."

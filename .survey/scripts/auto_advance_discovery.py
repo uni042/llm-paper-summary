@@ -139,6 +139,42 @@ def _next_request_id(worker_id: str, run_key: str, preload_id: str) -> str:
     return "auto-next-discovery-" + hashlib.sha256(material.encode("utf-8")).hexdigest()[:24]
 
 
+def _fallback_request_id(worker_id: str, run_key: str, direction: str, source_url: str) -> str:
+    material = "\n".join((worker_id, run_key, direction, source_url))
+    return "auto-next-discovery-fallback-" + hashlib.sha256(material.encode("utf-8")).hexdigest()[:24]
+
+
+def _make_fallback_precheck_request(
+    state: dict[str, Any],
+    request: dict[str, Any],
+    source: dict[str, Any],
+    *,
+    request_id: str,
+    source_submission: str,
+) -> dict[str, Any]:
+    direction = str(source.get("citation_direction") or "discovery")
+    return {
+        "schema_version": 3,
+        "operation": "precheck_discovery_candidates",
+        "request_id": request_id,
+        "provider": source["provider"],
+        "source_url": source["source_url"],
+        "collector_id": f"auto-next-fallback-{direction}-{request_id[-12:]}",
+        "run_key": state["run_key"],
+        "worker_id": state["worker_id"],
+        "scheduled_slot": request["scheduled_slot"],
+        "actual_invocation_start": request["actual_invocation_start"],
+        "axis": source["axis"],
+        "target_unseen": int(source.get("target_unseen") or 20),
+        "page_size": int(source.get("page_size") or 20),
+        "max_pages": int(source.get("max_pages") or 25),
+        "initial_cursor": source.get("initial_cursor"),
+        "auto_next_discovery": True,
+        "fixed_source_fallback": True,
+        "source_submission": source_submission,
+    }
+
+
 def _make_claim(
     state: dict[str, Any],
     request: dict[str, Any],
@@ -353,7 +389,53 @@ def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
                         }
                     )
             else:
-                skipped.append({**run, "reason": "no_matching_prechecked_bank"})
+                source = discovery_preload_queue.fallback_source(root, direction=direction)
+                if isinstance(source, dict) and source.get("provider") and source.get("source_url"):
+                    request_id = _fallback_request_id(
+                        worker_id, run_key, direction, str(source["source_url"])
+                    )
+                    request_path = root / hot_dispatch.PRECHECK_REQUESTS / f"{request_id}.json"
+                    _write(
+                        request_path,
+                        _make_fallback_precheck_request(
+                            state, request, source,
+                            request_id=request_id,
+                            source_submission=run["source_submission"],
+                        ),
+                    )
+                    precheck = _process_formal_precheck(root, request_id)
+                    precheck_ready = bool(
+                        precheck.get("ok") is True
+                        and precheck.get("evaluation_allowed") is True
+                    )
+                    auto_next = {
+                        "status": "ready_for_evaluation" if precheck_ready else "recovery_required",
+                        "work_start_allowed": precheck_ready,
+                        "submission_allowed": precheck_ready,
+                        "source_kind": "fixed_source_fallback",
+                        "preload_id": None,
+                        "direction": direction,
+                        "request_id": request_id,
+                        "formal_precheck_result_path": (
+                            hot_dispatch.PRECHECK_RESULTS / f"{request_id}.json"
+                        ).as_posix(),
+                        "formal_precheck_ready": precheck_ready,
+                        "inline_precheck": True,
+                        "receipt": precheck.get("receipt"),
+                        "source_submission": run["source_submission"],
+                    }
+                    advanced.append({
+                        "worker_id": worker_id,
+                        "run_key": run_key,
+                        "direction": direction,
+                        "preload_id": None,
+                        "source_kind": "fixed_source_fallback",
+                        "request_id": request_id,
+                        "formal_precheck_ok": precheck.get("ok") is True,
+                        "formal_precheck_ready": precheck_ready,
+                    })
+                else:
+                    skipped.append({**run, "reason": "no_matching_prechecked_bank_or_fallback_source"})
         else:
             skipped.append(
                 {

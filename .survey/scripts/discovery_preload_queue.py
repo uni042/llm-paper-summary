@@ -417,6 +417,36 @@ def _source_specs(root: Path) -> list[dict[str, Any]]:
     return values
 
 
+def fallback_source(root: Path, *, direction: str) -> dict[str, Any] | None:
+    """Return the best fixed-source plan when no PRECHECKED bank is available.
+
+    This exposes the same source ranking used by the preload queue without
+    creating or claiming preload state, so foreground Discovery can issue a
+    run-specific schema-v3 precheck immediately instead of passively waiting.
+    """
+    root = root.resolve()
+    direction = str(direction or "").strip().casefold()
+    if direction not in {"backward", "forward", "normal"}:
+        return None
+    for row in _source_specs(root):
+        if str(row.get("citation_direction") or "") != direction:
+            continue
+        return {
+            "source_kind": "fixed_source_fallback",
+            "source_key": row.get("source_key"),
+            "citation_direction": direction,
+            "provider": row.get("provider"),
+            "source_url": row.get("source_url"),
+            "axis": row.get("axis") or f"fallback-{direction}",
+            "seed_canonical_id": row.get("seed_canonical_id"),
+            "initial_cursor": None,
+            "target_unseen": DEFAULT_TARGET_UNSEEN,
+            "page_size": DEFAULT_PAGE_SIZE,
+            "max_pages": DEFAULT_MAX_PAGES,
+        }
+    return None
+
+
 def _entries(root: Path) -> list[dict[str, Any]]:
     folder = root / ENTRIES
     if not folder.is_dir():

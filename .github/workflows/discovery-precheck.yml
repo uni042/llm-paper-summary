@@ -82,30 +82,10 @@ jobs:
             python .survey/scripts/hot_dispatch.py --repo-root . materialize-discovery \
               | tee /tmp/direct-discovery-materialize.json
 
-            # A push caused only by generated preload requests must not occupy
-            # the foreground worker lane. Scheduled maintenance owns preload
-            # execution; push runs settle only unresolved real-worker requests.
-            if [ "$GITHUB_EVENT_NAME" = "push" ]; then
-              foreground_pending=0
-              while IFS= read -r request; do
-                [ -n "$request" ] || continue
-                name="$(basename "$request")"
-                case "$name" in
-                  preload-*.json) continue ;;
-                esac
-                result=".survey/work-queue/discovery-precheck/results/$name"
-                if [ ! -f "$result" ]; then
-                  foreground_pending=1
-                  break
-                fi
-              done < <(
-                find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name '*.json' 2>/dev/null | sort
-              )
-              if [ "$foreground_pending" -eq 0 ]; then
-                echo 'No unresolved foreground Discovery precheck request on this push; preload work is deferred to scheduled maintenance.'
-                exit 0
-              fi
-            fi
+            # Foreground work always has priority, but a push must also repair the
+            # warm Discovery reserve. Deferring every preload to the 10-minute
+            # schedule can leave PRECHECKED stock at zero and create a worker idle
+            # gap. A bounded preload budget below keeps this lane responsive.
 
             rm -rf /tmp/discovery-identities
             rm -f /tmp/discovery-rejections.json
@@ -131,6 +111,8 @@ jobs:
 
             : > /tmp/discovery-foreground-requests.txt
             : > /tmp/discovery-preload-requests.txt
+            preload_push_budget=8
+            preload_push_selected=0
 
             if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_REQUEST:-}" ]; then
               case "$MANUAL_REQUEST" in
@@ -153,8 +135,9 @@ jobs:
                 [ ! -f "$result" ] || continue
                 case "$name" in
                   preload-*.json)
-                    if [ "$GITHUB_EVENT_NAME" != "push" ]; then
+                    if [ "$GITHUB_EVENT_NAME" != "push" ] || [ "$preload_push_selected" -lt "$preload_push_budget" ]; then
                       printf '%s\n' "$request" >> /tmp/discovery-preload-requests.txt
+                      preload_push_selected=$((preload_push_selected + 1))
                     fi
                     ;;
                   *) printf '%s\n' "$request" >> /tmp/discovery-foreground-requests.txt ;;
@@ -246,8 +229,9 @@ jobs:
             python .survey/scripts/derive_worker_run_state.py --repo-root . \
               | tee /tmp/discovery-run-state-derive.json
 
-            # Speculative preload refreshes remain on their separate background lane
-            # and are intentionally paced/serialized to avoid provider bursts.
+            # Background preload refresh remains bounded. Foreground requests were
+            # processed first; pushes now warm at most eight preload windows so the
+            # next worker/round has PRECHECKED work without waiting for the schedule.
             while IFS= read -r request; do
               [ -n "$request" ] || continue
               name="$(basename "$request")"
