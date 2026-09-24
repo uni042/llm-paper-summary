@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-24T01:02:29.271889+00:00",
+  "updated_at": "2026-09-24T01:03:48.404629+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -44420,6 +44420,56 @@
           "type": "research",
           "canonical_id": "DOI:10.1109/IMNS67862.2026.11655252",
           "title": "Characterizing Predictability–Latency Trade-offs of KV-Cache SSD Offloading in LMCache for LLM Serving Systems",
+          "from": "ready",
+          "to": "blocked"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 1006,
+      "paper_active_count_after": 1006,
+      "last_successful_action": "job_blocked"
+    },
+    {
+      "run_key": "unattributed:35941221257",
+      "first_recorded_at": "2026-09-24T01:03:48.404629+00:00",
+      "last_recorded_at": "2026-09-24T01:03:48.404629+00:00",
+      "signals": [
+        "job_blocked"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 1,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "35941221257:1",
+          "recorded_at": "2026-09-24T01:03:48.404629+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "35941221257",
+            "run_attempt": "1",
+            "source_sha": "1f02a9c61ecc9e4fb679d5f9922b1664921035e9"
+          },
+          "signals": [
+            "job_blocked"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-311ed15d31d6fcf9",
+          "type": "research",
+          "canonical_id": "DOI:10.1109/NVMSA71223.2026.11658877",
+          "title": "Poster: SAF: Semantic-Aware Flushing for Latency and Jitter Suppression in Continuous VLA Inference on Edge Devices",
           "from": "ready",
           "to": "blocked"
         }
