@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T180810Z-blockgtq-7c41a2",
+  "kind": "research",
+  "attempt_id": "attempt-preload-d0b404e285d49a0ce5994e57",
+  "job_id": "job-research-ed39f178b202751f",
+  "record_bank": "j",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.24033-rope-aware-bit-allocation-for-kv-cache-quantization.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260924T175541Z-7c41a2",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T17:55:41+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:947927cec3616d06d3042142764904ab540bdebabcd31c22ec88be428a8a90a0",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-j/metadata.json",
+      "blob_sha": "1b788973568c85f80ceb5f0aafb24e4aabd0fb4d"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-j/problem_method.json",
+      "blob_sha": "ecfcd1570cc6fba4d09e2061e19ff065c990e3d4"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-j/evaluation.json",
+      "blob_sha": "bc956652474039785681676bd12f187cae02de0a"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-j/results.json",
+      "blob_sha": "a9f9069294ec34175f4c9d8bce745717d9efc885"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-j/positioning.json",
+      "blob_sha": "83404504d4bd6651de77b774058a8aee339262c2"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-24T09:08:30+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2606.24033-rope-aware-bit-allocation-for-kv-cache-quantization.md",
+    "status": "FAIL",
+    "file_bytes": 19072,
+    "prose_chars": 5694,
+    "paragraphs": 23,
+    "method_paragraphs": 9,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7433697347893916,
+    "japanese_chars": 3812,
+    "latin_chars": 1316,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 74.3% < 警告基準 80.0%"
+    ]
+  }
+}
