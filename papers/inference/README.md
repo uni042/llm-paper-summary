@@ -20,6 +20,9 @@
 - [Edge / On-device LLM Systems](08-edge-on-device-llm-systems/) — smartphoneや個人PCなど、memory・bandwidth・電力制約の厳しい端末でLLMを実行するsystem研究。
 - [KV Cache Offload / Recomputation](10-kv-cache-offload-recomputation/) — KVをCPU・peer GPU・SSD等へ置き、必要な転送・attention実行場所・再計算を最適化する。
 - [LLM Serving / Scheduling / Disaggregation](11-llm-serving-scheduling-disaggregation/) — request順、batch、prefill / decode分離、KV再利用・移動、GPU配置を調整してserving効率とlatencyを改善する。
+- [Kernel / Runtime Compilation](09-kernel-runtime-compilation/) — GPUカーネル生成・融合・JIT・メガカーネル等でLLM推論の演算実装そのものを最適化する。
+- [MoE Parallelism / Communication](12-moe-parallelism-communication/) — expert parallelism、all-to-all通信、分散expert配置、負荷分散を共同最適化する。
+- [Sparse Attention](13-sparse-attention/) — 注意対象token・block・pageを疎に選択し、長文脈attentionの計算量と帯域を削減する。
 - [Other Inference Systems](99-other-inference-systems/) — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 <!-- survey:auto:start -->

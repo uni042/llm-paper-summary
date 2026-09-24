@@ -18,6 +18,9 @@
 - [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 19本 — smartphoneや個人PCなど、memory・bandwidth・電力制約の厳しい端末でLLMを実行するsystem研究。
 - [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 89本 — KVをCPU・peer GPU・SSD等へ置き、必要な転送・attention実行場所・再計算を最適化する。
 - [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 253本 — request順、batch、prefill / decode分離、KV再利用・移動、GPU配置を調整してserving効率とlatencyを改善する。
+- [Kernel / Runtime Compilation](inference/09-kernel-runtime-compilation/) — 19本 — GPUカーネル生成・融合・JIT・メガカーネル等で推論実装を最適化する。
+- [MoE Parallelism / Communication](inference/12-moe-parallelism-communication/) — 24本 — expert parallelism、通信、分散配置、負荷分散を共同最適化する。
+- [Sparse Attention](inference/13-sparse-attention/) — 6本 — attention対象を疎に選択して長文脈推論の計算量と帯域を削減する。
 - [Other Inference Systems](inference/99-other-inference-systems/) — 232本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 → [Inference一覧](inference/)
