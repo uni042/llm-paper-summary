@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 15:49:05 JST**
+> 自動生成: **2026-09-24 17:39:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **285** |
-| 未claim Research job | **141** |
-| 直近24hの検証済みResearch収録 | **26** |
-| 最終検証済みResearch収録 | **09-24 15:48:57 JST** |
+| 収録候補論文 | **294** |
+| 未claim Research job | **150** |
+| 直近24hの検証済みResearch収録 | **20** |
+| 最終検証済みResearch収録 | **09-24 17:39:11 JST** |
 | 整合性異常 | **22** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **285** |
+| canonical_id確認済みの一意な候補論文 | **294** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **285** |
+| 非終端Research job合計 | **294** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（7時間13分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（9時間3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,12 +69,12 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **5** | **2** | **2** | **0** | **144** | **0** | — |
+| Research | **6** | **2** | **2** | **0** | **144** | **12** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
-| Discovery | **3** | **1** | **1** | **0** | **0** | **0** | **1** |
-| 合計 | **8** | **3** | **3** | **0** | **144** | **0** | **1** |
+| Discovery | **8** | **5** | **5** | **0** | **0** | **0** | **10** |
+| 合計 | **14** | **7** | **7** | **0** | **144** | **12** | **10** |
 
-- 最新Discovery runの耐久探索round: **1件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
+- 最新Discovery runの耐久探索round: **5件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
 ## 詳細証拠
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-24 17:39:11 JST** [research] `arXiv:2606.20537` — Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving
+  - job: `.survey/work-queue/jobs/job-research-374463a300b97ed5.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-3c754529c6f791ee0cbc78c5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-3c754529c6f791ee0cbc78c5.json`
+  - paper: `papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md`
 - **09-24 15:48:57 JST** [research] `arXiv:2511.06174` — LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs
   - job: `.survey/work-queue/jobs/job-research-20dfb7993995c1a7.json`
   - result: `.survey/work-queue/results/research/attempt-preload-adcf408437d27a8a65fe0220.json` (`ok=true`)
@@ -114,6 +119,26 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Discovery
 
+- **09-24 16:02:32 JST** job `job-589818bf1fa4284e` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json`
+  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
+- **09-24 16:05:19 JST** job `job-3529923241c3e6b2` / 候補 **1件**
+  - result: `.survey/work-queue/results/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json`
+  - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
+- **09-24 16:07:05 JST** job `job-c1d55ae9db6fc359` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260924T070630Z-scheduled-chat-00-a3f91c-r3.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T070630Z-scheduled-chat-00-a3f91c-r3.json`
+  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
+- **09-24 16:08:42 JST** job `job-e6b42b393dcebba1` / 候補 **2件**
+  - result: `.survey/work-queue/results/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json`
+  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
+- **09-24 16:10:52 JST** job `job-aa8fdeb4b9b6ac4b` / 候補 **3件**
+  - result: `.survey/work-queue/results/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json`
+  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
 - **09-24 15:04:55 JST** job `job-d99c1a1848cb9828` / 候補 **1件**
   - result: `.survey/work-queue/results/20260924T060123Z-scheduled-chat-00-r1.json` (`ok=true`)
   - submission: `.survey/work-queue/submissions/20260924T060123Z-scheduled-chat-00-r1.json`
@@ -152,49 +177,65 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Discovery（最新Discovery run）
 
-- 最新観測run: **2026-09-24 15:01 JST**
-- 耐久探索round: **1件** / immutable submission: **1件** / 検証済み成功result: **1件** / 個別result照合: **1件** / 個別result未照合: **0件** / 候補: **1件**
-- 探索軸: backward structured repository references
-- round `20260924T060123Z-scheduled-chat-00-r1` / 候補 **1件**
-  - submission: `.survey/work-queue/submissions/20260924T060123Z-scheduled-chat-00-r1.json`
-  - 探索軸: backward structured repository references
-  - 個別result照合: あり / `.survey/work-queue/results/20260924T060123Z-scheduled-chat-00-r1.json` (`ok=true`)
+- 最新観測run: **2026-09-24 16:00 JST**
+- 耐久探索round: **5件** / immutable submission: **5件** / 検証済み成功result: **5件** / 個別result照合: **5件** / 個別result未照合: **0件** / 候補: **10件**
+- 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving / forward citations of FlexGen offload and hierarchical-memory LLM inference
+- round `20260924T070008Z-scheduled-chat-00-a3f91c-take1` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json`
+  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
+  - 個別result照合: あり / `.survey/work-queue/results/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json` (`ok=true`)
+- round `20260924T070300Z-scheduled-chat-00-a3f91c-r2` / 候補 **1件**
+  - submission: `.survey/work-queue/submissions/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json`
+  - 探索軸: forward citations of FlexGen offload and hierarchical-memory LLM inference
+  - 個別result照合: あり / `.survey/work-queue/results/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json` (`ok=true`)
+- round `20260924T070530Z-scheduled-chat-00-a3f91c-r3` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260924T070630Z-scheduled-chat-00-a3f91c-r3.json`
+  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
+  - 個別result照合: あり / `.survey/work-queue/results/20260924T070630Z-scheduled-chat-00-a3f91c-r3.json` (`ok=true`)
+- round `20260924T070715Z-scheduled-chat-00-a3f91c-r4` / 候補 **2件**
+  - submission: `.survey/work-queue/submissions/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json`
+  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
+  - 個別result照合: あり / `.survey/work-queue/results/20260924T070815Z-scheduled-chat-00-a3f91c-r4.json` (`ok=true`)
+- round `20260924T070900Z-scheduled-chat-00-a3f91c-r5` / 候補 **3件**
+  - submission: `.survey/work-queue/submissions/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json`
+  - 探索軸: backward references of DistServe disaggregated prefill-decode LLM serving
+  - 個別result照合: あり / `.survey/work-queue/results/20260924T071000Z-scheduled-chat-00-a3f91c-r5.json` (`ok=true`)
 
 ### 現在処理中
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **0件**
-- `arXiv:2605.09735` — KV-RM: Regularizing KV-Cache Movement for Static-Graph LLM Serving / worker `shared-preload-pool`
-  - claim: **09-24 15:48:47 JST** / heartbeat: **—** / lease expiry: **09-25 03:48:47 JST**
-  - evidence: `.survey/work-queue/claims/job-research-17d7652f0f68de09.json`
-- `arXiv:2604.21026` — MCAP: Deployment-Time Layer Profiling for Memory-Constrained LLM Inference / worker `shared-preload-pool`
-  - claim: **09-24 15:48:47 JST** / heartbeat: **—** / lease expiry: **09-25 03:48:47 JST**
-  - evidence: `.survey/work-queue/claims/job-research-9c720b7578a5562f.json`
-- `arXiv:2607.22648` — PTStore (Prefix Tensor Store): Distributed Prefix Caching and Replication for High Throughput Inference Serving / worker `shared-preload-pool`
-  - claim: **09-24 15:48:47 JST** / heartbeat: **—** / lease expiry: **09-25 03:48:47 JST**
-  - evidence: `.survey/work-queue/claims/job-research-bdcddce680082966.json`
-- `DOI:10.1109/INFOCOM59046.2026.11571463` — BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **09-24 15:33:22 JST** / lease expiry: **09-25 03:33:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-042e5712bf1b426e.json`
-- `arXiv:2609.04724` — FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators / worker `shared-preload-pool`
-  - claim: **09-24 15:33:22 JST** / heartbeat: **—** / lease expiry: **09-25 03:33:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-04cf5cb095abe08f.json`
-- `DOI:10.1109/INFOCOM59046.2026.11571388` — CoSine: Enhancing LLM Serving via Collaborative and Decoupled Speculative Inference / worker `shared-preload-pool`
-  - claim: **09-24 09:23:03 JST** / heartbeat: **09-24 15:33:22 JST** / lease expiry: **09-25 03:33:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-058d69df18b4e613.json`
-- `arXiv:2604.16400` — CoLLM: Continuous Adaptation for SLO-Aware LLM Serving on Shared GPU Clusters / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 15:33:22 JST** / lease expiry: **09-25 03:33:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0a2c1791c2461b69.json`
-- `arXiv:2606.17081` — The Price of Anarchy in Disaggregated Inference / worker `shared-preload-pool`
-  - claim: **09-24 01:27:03 JST** / heartbeat: **09-24 15:33:22 JST** / lease expiry: **09-25 03:33:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0a4a1c707b0687af.json`
-- `arXiv:2403.01876` — DéjàVu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving / worker `shared-preload-pool`
-  - claim: **09-24 15:33:22 JST** / heartbeat: **—** / lease expiry: **09-25 03:33:22 JST**
-  - evidence: `.survey/work-queue/claims/job-research-0dbe9070b5598362.json`
-- `arXiv:2603.09023` — The Missing Memory Hierarchy: Demand Paging for LLM Context Windows / worker `shared-preload-pool`
-  - claim: **09-23 23:59:50 JST** / heartbeat: **09-24 15:33:22 JST** / lease expiry: **09-25 03:33:22 JST**
+- 未失効かつ非terminal jobのclaim: **144件** / 直近15分heartbeat: **12件**
+- `arXiv:2603.09023` — The Missing Memory Hierarchy: Demand Paging for LLM Context Windows / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
   - evidence: `.survey/work-queue/claims/job-research-105b69444b4fa0ad.json`
+- `arXiv:2508.15487` — Dream 7B: Diffusion Large Language Models / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-1ba7917ba260cdda.json`
+- `arXiv:2509.12211` — TinyServe: Query-Aware Cache Selection for Efficient LLM Serving / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-3d37c9d48dc78998.json`
+- `arXiv:2609.26796` — Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-41d37332b16e3d57.json`
+- `DOI:10.1145/3806645.3807596` — Scaling Attention Beyond GPUs for LLM Inference / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-5bd282d7c260721a.json`
+- `arXiv:2310.01889` — Ring Attention with Blockwise Transformers for Near-Infinite Context / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-60b244663bfce823.json`
+- `arXiv:2609.26300` — CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-7ecc4d7949c81534.json`
+- `arXiv:2505.16502` — Recursive Offloading for LLM Serving in Multi-tier Networks / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-df8b6eaefcbe8aad.json`
+- `arXiv:2606.09508` — From Rigid to Dynamic: Entropy-Guided Adaptive Inference for Long-Context LLMs / worker `scheduled-chat-30`
+  - claim: **09-24 17:37:35 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-e37f81d7634eb52b.json`
+- `arXiv:2606.24033` — RoPE-Aware Bit Allocation for KV-Cache Quantization / worker `scheduled-chat-30`
+  - claim: **09-24 17:29:26 JST** / heartbeat: **09-24 17:37:35 JST** / lease expiry: **09-24 19:07:35 JST**
+  - evidence: `.survey/work-queue/claims/job-research-ed39f178b202751f.json`
 
 #### Audit
 
@@ -214,7 +255,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **285** |
+| ready | **294** |
 
 ### 候補の重複・識別情報欠損
 
@@ -234,7 +275,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1014** |
+| inference/training/survey配下の論文Markdown実体 | **1015** |
 
 ### immutable submissionの未照合
 
@@ -242,11 +283,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **300** |
+| 成功result未照合のimmutable submission | **301** |
 | └ Research | **169** |
 | └ Audit | **2** |
 | └ Discovery | **71** |
-| └ Other/Unknown | **58** |
+| └ Other/Unknown | **59** |
 
 ### 厳格検証が未成立のcompleted job
 

@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2606.20537",
   "paper_path": "papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md",
   "selection_reason": "KV cacheだけでなくrecurrent/convolution/MTP stateとmetadataを含む完全なrestorable execution stateをgraph-bound capsuleとしてsnapshot/restore/fork/rollbackするruntime設計。small-batch/on-device agent再入場のstate-management問題を扱い、CUDA graph/static-buffer runtimeとcheckpoint機構を一体化するため隣接systemとして価値がある。",
-  "status": "ready",
+  "status": "completed",
   "workflow_version": 10,
   "artifact_transport": "structured_record_v10",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
-  "created_at": "2026-09-18T17:02:47+00:00"
+  "created_at": "2026-09-18T17:02:47+00:00",
+  "completed_at": "2026-09-24T08:39:11+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-preload-3c754529c6f791ee0cbc78c5.json"
 }
