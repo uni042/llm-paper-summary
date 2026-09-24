@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-preload-3a8d1487d30c19a489a3f0c1",
-  "job_id": "job-research-1ba7917ba260cdda",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-3a8d1487d30c19a489a3f0c1",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-3a8d1487d30c19a489a3f0c1","job_id":"job-research-1ba7917ba260cdda","data":{"overview":"Dream 7Bは一般課題でQwen2.5-7Bに近い水準を保ち、ARC-E 83.9対77.4、ARC-C 59.8対51.5、GPQA 36.6対35.5、HumanEval 57.9対56.7では上回る一方、MMLU 69.5対71.9、HellaSwag 73.3対79.0、MBPP 56.2対63.6では下回る。計画課題では差が大きく、Countdown 16.0対6.2、Sudoku 81.0対21.0、Trip planning 17.8対3.6となった。LLaDA 8B比でも0.6兆対2.3兆の少ない拡散学習データで多くの指標を改善する。","key_results":[{"metric":"Sudoku","value":"81.0","baseline":"Qwen2.5-7B 21.0; LLaDA 8B 46.0","condition":"Dream-Base、同一評価手順","interpretation":"全体文脈を反復修正できる拡散生成が計画・制約充足課題で強い可能性を示す。"},{"metric":"Countdown","value":"16.0","baseline":"Qwen2.5-7B 6.2; LLaDA 8B 13.2","condition":"8-shot","interpretation":"自己回帰基盤より約2.6倍の得点で、拡散モデル間でも改善。"},{"metric":"HumanEval","value":"57.9","baseline":"Qwen2.5-7B 56.7; LLaDA 8B 32.9","condition":"0-shot","interpretation":"コードでも自己回帰70億級に匹敵し、既存拡散モデルを大幅に上回る。"},{"metric":"追加拡散事前学習量","value":"約0.6兆トークン","baseline":"LLaDA 8B 2.3兆トークン","condition":"自己回帰重み初期化","interpretation":"強い自己回帰重みを再利用することでゼロからの拡散学習よりデータ効率を高める。"}],"negative_results":"Dreamはすべての一般課題で自己回帰モデルを上回るわけではなく、MMLU、BBH、HellaSwag、WinoGrande、PIQA、GSM8K、MATH、MBPPではQwen2.5-7Bが高い。指示版も教師あり調整のみのため、強化学習まで行ったQwen2.5-InstructにMMLU 67.0対76.6、GSM8K 81.0対91.6、MATH 39.2対75.5と差が残る。","interpretation":"主要成果は『拡散が全面的に自己回帰を置換した』ことではなく、既存自己回帰重みを活用して性能差を縮めながら、計画・任意順生成・穴埋め・反復数調整という拡散固有の自由度を70億規模で実用的に示した点にある。","quality_impact":"反復数を増やすほどより慎重な復元が可能で品質を上げられ、減らすほど一段で多くを確定して速度を上げられる。したがって推論系は負荷や品質目標に応じて反復予算を変える余地がある。"},"reservation":{"claim_id":"claim-preload-3a8d1487d30c19a489a3f0c1","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
