@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-88865dce95348e7f779dacec","job_id":"job-research-3d37c9d48dc78998","data":{"limitations":"評価の主対象は125M〜1.3Bで、7B以上の本番LLMにおける同等の速度・精度特性は直接測定していない。長文脈LLaMA評価にはsliding window処理が含まれ、ネイティブ長文脈モデルとは条件が異なる。ページを粗くするほど推定精度が落ち、速度向上とPPL・KV hit率の悪化が明確に存在する。論文ではコードを出版時公開予定としており、論文記載時点で完全な公開実装URLが提示済みとは限らない。","implementation_status":"問い合わせ依存ページ選択をvLLMのPagedAttentionへ統合した実装を用いて評価し、ページ得点・上位選択・疎KV収集・注意計算を融合CUDAカーネルとして設計する。FP16/INT8 KVと多GPU配分も扱う。論文はフレームワーク、baseline adapter、評価スクリプト、前処理済みデータとcheckpointを公開予定としている。","research_positioning":"vLLMのページ化KV管理と、StreamingLLM・SnapKV・PyramidKVなどKV削減研究の間に位置し、固定窓や静的クラスタリングではなく現在Queryに条件付けたページ選択を実サービング経路へ落とし込む研究である。KVキャッシュ圧縮だけでなく、メタデータ走査、HBM転送、融合カーネル、待ち行列を含むシステム全体で効果を測る点が推論基盤研究として重要である。","relation_to_prior":"PagedAttentionはページ単位の割当と断片化を改善するが、各復号ステップで必要なKV内容そのものをQuery依存に減らす仕組みではない。StreamingLLMは固定窓、SnapKVやPyramidKVは重要KVを圧縮するのに対し、TinyServeはページごとのKey境界メタデータから現在Queryとの関連度を毎ステップ推定し、選択ページだけを読む。","repository_position":"リポジトリではKVキャッシュ最適化・圧縮とLLMサービング基盤の交差領域に置く。特に『どのKVを残すか』だけでなく『必要KVだけをHBMから読むためのページメタデータとカーネル融合』を示すため、KV offload、PagedAttention、疎注意、長文脈サービングとの比較に有用である。","differences":"主要差分は選択がQuery依存かつページ単位であり、モデル改変・再学習を要求しないこと、さらにvLLM統合による実時間復号で評価していることにある。一方で対象モデル規模は本番大規模LLMより小さく、研究用代理モデルとしての外挿可能性は別途検証が必要である。","followups":"7B〜70B級での実測、GQA/MQAや量子化KVとの組合せ、ページメタデータ更新費、prefill/decode分離環境での配置、CPU/NVMe offload時のページ選択を後続調査すると、階層メモリ系統との接続が明確になる。"},"reservation":{"claim_id":"claim-preload-88865dce95348e7f779dacec","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-preload-ccf489d25cd109259fec5fc2",
+  "job_id": "job-research-f2e1ac26e49a97fd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-ccf489d25cd109259fec5fc2",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

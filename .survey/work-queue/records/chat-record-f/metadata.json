@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-preload-88865dce95348e7f779dacec","job_id":"job-research-3d37c9d48dc78998","data":{"canonical_id":"arXiv:2509.12211","arxiv_id":"2509.12211","doi":"10.1145/3746027.3758181","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"TinyServe: Query-Aware Cache Selection for Efficient LLM Serving","summary":"TinyServeは小型言語モデルを用いて実時間サービング挙動を低コストに再現しつつ、復号時のKVキャッシュ全走査を減らす問い合わせ依存ページ選択を実装した推論基盤である。各KVページのKeyについて次元別最小値・最大値だけを軽量メタデータとして保持し、現在のQueryからページごとの注意関連度上界を推定して上位ページだけをHBMから読み出す。ページ評価、疎なKV収集、マスク注意をCUDAカーネルへ融合し、vLLMのPagedAttentionへ統合する。8台のA100 80GB上でTinyLLaMAからLLaMA-1.3Bまで評価し、FullCache比で平均2.1〜3.4倍の復号高速化、2倍超のメモリ削減、LongBenchで小さい精度差を報告する。","list_summary":"QueryごとにKVページの関連度を軽量メタデータで推定し、必要ページだけを融合CUDAカーネルで読むことで小型LLMサービングの復号とメモリ移動を削減する。","authors":["Dong Liu","Yanxuan Yu"],"authors_affiliations":"Yale University; Columbia University","published":"2025-08-28","publication":"ACM Multimedia 2025 / arXiv","publication_type":"国際会議論文","publication_status":"MM ’25、arXiv v1","lineage":"KV cache sparsity / paged attention / query-aware selection / LLM serving","topics":["KVキャッシュ選択","ページ化注意","疎な注意","サービング","CUDAカーネル"],"importance":"KVキャッシュを固定窓や静的圧縮で削るのではなく、復号時Queryごとに必要ページを選ぶ方式を実サービング基盤へ統合し、メモリ帯域削減を実測した点が推論システム系統に直接関係する。","implementation":"vLLMのPagedAttentionを改変して問い合わせ依存ページ選択を統合し、ページ評価・疎KV収集・注意計算を融合したCUDA実行経路を実装する。論文では完全実装・データ・評価スクリプトを出版時に公開予定としている。","hardware_evaluation":"8×NVIDIA A100 80GB、CUDA 11.8、cuDNN 8.7、PyTorch 2.0.1、Ubuntu 20.04。FP16で2048〜8192トークン予算、各結果5回平均。","quality_effect":"ページ選択でLongBench精度を概ねFullCache近傍に維持する一方、ページサイズを大きくすると関連度推定が粗くなりPPLとKV hit率が悪化する。既定ページサイズ16、選択率0.3が速度・精度の折衷。","source":"https://arxiv.org/abs/2509.12211","sources":["https://arxiv.org/abs/2509.12211","https://arxiv.org/html/2509.12211","https://doi.org/10.1145/3746027.3758181"],"code":null,"last_checked":"2026-09-24","references":[],"references_checked_at":"2026-09-24","references_source":"primary manuscript","references_total":0},"reservation":{"claim_id":"claim-preload-88865dce95348e7f779dacec","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-preload-ccf489d25cd109259fec5fc2",
+  "job_id": "job-research-f2e1ac26e49a97fd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-ccf489d25cd109259fec5fc2",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

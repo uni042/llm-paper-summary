@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-88865dce95348e7f779dacec","job_id":"job-research-3d37c9d48dc78998","data":{"overview":"TinyServeはモデル規模と文脈長が増えるほどFullCacheとの差を拡大し、LLaMA-1.3B・32Kでは遅延156.8msから72.8ms、メモリ15.8GBから7.2GBへ削減しつつLongBench平均68.9から70.2を維持する。GPT2-345M・1024同時要求の実サービングではvLLMのP50 45.2ms、P99 128.7ms、18.4 req/sに対し、32.1ms、89.3ms、28.6 req/sを示す。32Kまでの復号ではFullCache比平均2.1〜3.4倍高速化し、8 GPUでは1 GPU比7.68倍のスループットを報告する。","key_results":[{"metric":"LLaMA-1.3B 32K遅延","value":"72.8±0.7 ms","baseline":"FullCache 156.8±2.1 ms","condition":"32K context、FP16、8×A100評価系","interpretation":"長文脈で全KV読出しを避ける効果が大きく、約2.15倍の遅延短縮となる。"},{"metric":"LLaMA-1.3B KVメモリ","value":"7.2±0.4 GB","baseline":"FullCache 15.8±0.5 GB","condition":"32K context","interpretation":"半分未満のメモリ量でLongBench平均を維持している。"},{"metric":"1024同時要求スループット","value":"28.6±1.4 req/s","baseline":"vLLM 18.4±0.9 req/s; TensorRT-LLM 22.1±1.1 req/s","condition":"GPT2-345M、Poisson到着、100〜500生成token","interpretation":"問い合わせ依存選択を待ち行列・セッション込みの実サービング経路でも利益へ変換している。"},{"metric":"多GPUスケーリング","value":"8 GPUで6.221±0.08 tok/ms、7.68×","baseline":"1 GPU 0.81±0.02 tok/ms","condition":"GPT2-345M、16K、batch 128","interpretation":"8 GPUまで96%の並列効率を報告する。"}],"negative_results":"疎化は無条件に品質を保つわけではない。ページサイズを4から64へ増やすと遅延17.6msから6.2msへ下がる一方、PPLは24.3から32.5へ悪化し、KV hit率も98.4%から79.3%へ低下する。LongBenchの個別課題でもTinyServeはFullCacheよりわずかに精度が低い例があり、NarrativeQA 57.8対58.3、Qasper 51.9対52.4、TriviaQA 60.8対61.7、GovReport 47.0対47.9である。","interpretation":"主な価値はKVを単純に捨てることではなく、Query依存のページ重要度を安価に推定し、GPUカーネル融合によって削減したHBM転送を実遅延へ反映した点にある。小型モデル中心の評価なので絶対的な本番適用性より、KVページング・疎注意・サービング統合の設計例として読むのが適切である。","quality_impact":"選択率とページサイズが品質・速度の主要ノブである。既定のページサイズ16ではTinyLLaMA評価で9.3ms、PPL 26.0、KV hit 91.7%となり、より大きなページは速いが品質低下が増える。"},"reservation":{"claim_id":"claim-preload-88865dce95348e7f779dacec","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-preload-ccf489d25cd109259fec5fc2",
+  "job_id": "job-research-f2e1ac26e49a97fd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-preload-ccf489d25cd109259fec5fc2",
+    "worker_id": "scheduled-chat-30",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -29,5 +29,14 @@
   "stock_lane": "research",
   "worker_id": "scheduled-chat-30",
   "worker_kind": "scheduled_chat",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "record_bank": "p",
+  "record_bank_root": ".survey/work-queue/records/chat-record-p",
+  "record_slot_paths": {
+    "metadata": ".survey/work-queue/records/chat-record-p/metadata.json",
+    "problem_method": ".survey/work-queue/records/chat-record-p/problem_method.json",
+    "evaluation": ".survey/work-queue/records/chat-record-p/evaluation.json",
+    "results": ".survey/work-queue/records/chat-record-p/results.json",
+    "positioning": ".survey/work-queue/records/chat-record-p/positioning.json"
+  }
 }
