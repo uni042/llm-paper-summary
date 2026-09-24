@@ -316,6 +316,57 @@ class DeriveWorkerRunStateTests(unittest.TestCase):
             self.assertIn("pre-1", result["discovery_evaluation_request_ids"])
             self.assertEqual(result["gate"]["required_action"], "CONTINUE_DISCOVERY_ROUND")
 
+    def test_nested_discovery_submission_pending_is_tracked(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(
+                root,
+                ".survey/work-queue/next-jobs.json",
+                {"claiming": {"ready_research_audit": 0, "claimable": 0}},
+            )
+            write_json(root, ".survey/work-queue/discovery-state.json", {"schema_version": 3, "history": []})
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/requests/pre-nested.json",
+                {"request_id": "pre-nested", "run_key": "run-1"},
+            )
+            write_json(
+                root,
+                ".survey/work-queue/discovery-precheck/results/pre-nested.json",
+                {
+                    "request_id": "pre-nested",
+                    "run_key": "run-1",
+                    "ok": True,
+                    "evaluation_allowed": True,
+                    "decision": "READY_FOR_EVALUATION",
+                },
+            )
+            write_json(
+                root,
+                ".survey/work-queue/submissions/discovery/nested-round.json",
+                {
+                    "operation": "submit_discovery_round",
+                    "discovery_precheck": {"request_id": "pre-nested"},
+                    "discovery_stats": {
+                        "run_key": "run-1",
+                        "round": "round-nested",
+                        "axis": "backward",
+                        "round_submission_index": 1,
+                        "round_submission_count": 1,
+                    },
+                    "candidates": [],
+                },
+            )
+
+            result = mod.derive(root, request())
+
+            self.assertTrue(result["discovery_submission_result_pending"])
+            self.assertEqual(result["pending_discovery_submission_ids"], ["nested-round"])
+            self.assertFalse(result["discovery_evaluation_pending"])
+            self.assertEqual(result["gate"]["required_action"], "WAIT_FOR_DISCOVERY_SUBMISSION_RESULT")
+            self.assertFalse(result["finalization_permit_issued"])
+            self.assertEqual(result["worker_execution_directive"], "MUST_CONTINUE_NO_FINAL_RESPONSE")
+
     def test_latest_failed_precheck_still_requires_recovery(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
