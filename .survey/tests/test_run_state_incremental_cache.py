@@ -335,6 +335,92 @@ class IncrementalRunStateTests(unittest.TestCase):
             self.assertEqual(pointer["request_id"], "newer")
             self.assertEqual(pointer["snapshot_generation"], 5)
 
+    def test_jst_wall_clock_mislabeled_as_utc_is_recovered(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            now = dt.datetime.now(dt.timezone.utc)
+            bad_start = now + dt.timedelta(hours=8, minutes=59)
+            value = request("scheduled-chat-30", "run-jst-mislabel", now)
+            value["actual_invocation_start"] = bad_start.isoformat()
+            path = write_json(
+                root,
+                ".survey/work-queue/run-state/requests/snap-30-run-jst-mislabel.json",
+                value,
+            )
+            value["request_id"] = path.stem
+
+            normalized = derive._normalize_request(path, value)
+            expected = bad_start - dt.timedelta(hours=9)
+            self.assertEqual(
+                dt.datetime.fromisoformat(normalized["actual_invocation_start"]),
+                expected,
+            )
+            self.assertEqual(
+                normalized["actual_invocation_start_recovery"],
+                "jst_wall_clock_mislabeled_utc",
+            )
+            self.assertEqual(
+                normalized["actual_invocation_start_original"],
+                bad_start.isoformat(),
+            )
+
+    def test_unrelated_future_invocation_start_is_rejected(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            now = dt.datetime.now(dt.timezone.utc)
+            value = request("scheduled-chat-30", "run-future-invalid", now)
+            value["actual_invocation_start"] = (now + dt.timedelta(hours=1)).isoformat()
+            path = write_json(
+                root,
+                ".survey/work-queue/run-state/requests/snap-30-run-future-invalid.json",
+                value,
+            )
+            value["request_id"] = path.stem
+
+            with self.assertRaisesRegex(ValueError, "cannot be materially in the future"):
+                derive._normalize_request(path, value)
+
+    def test_poisoned_future_pointer_cannot_hide_newer_real_run(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            now = dt.datetime.now(dt.timezone.utc)
+            poisoned_path = write_json(
+                root,
+                ".survey/work-queue/run-state/results/poisoned.json",
+                {},
+            )
+            poisoned = {
+                "worker_id": "scheduled-chat-30",
+                "run_key": "run-poisoned",
+                "scheduled_slot": "30",
+                "actual_invocation_start": (now + dt.timedelta(hours=8)).isoformat(),
+                "request_id": "poisoned",
+                "snapshot_generation": 100,
+                "processed_at": now.isoformat(),
+            }
+            pointer_path = root / ".survey/work-queue/run-state/latest/scheduled-chat-30.json"
+            pointer_path.parent.mkdir(parents=True, exist_ok=True)
+            pointer_path.write_text(json.dumps({
+                "schema_version": 1,
+                **poisoned,
+                "result_path": poisoned_path.relative_to(root).as_posix(),
+            }), encoding="utf-8")
+
+            real_path = write_json(root, ".survey/work-queue/run-state/results/real.json", {})
+            real = {
+                "worker_id": "scheduled-chat-30",
+                "run_key": "run-real",
+                "scheduled_slot": "30",
+                "actual_invocation_start": (now - dt.timedelta(minutes=10)).isoformat(),
+                "request_id": "real",
+                "snapshot_generation": 1,
+                "processed_at": now.isoformat(),
+            }
+            self.assertTrue(cache.write_latest_pointer(root, real_path, real))
+            pointer = json.loads(pointer_path.read_text(encoding="utf-8"))
+            self.assertEqual(pointer["run_key"], "run-real")
+            self.assertEqual(pointer["request_id"], "real")
+
     def test_fact_clock_mismatch_forces_canonical_rebuild(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

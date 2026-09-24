@@ -36,6 +36,45 @@ def parse_time(value: Any) -> dt.datetime | None:
     return parsed.astimezone(dt.timezone.utc)
 
 
+MAX_FUTURE_INVOCATION_SKEW = dt.timedelta(minutes=5)
+JST_WALL_CLOCK_OFFSET = dt.timedelta(hours=9)
+JST_MISLABEL_RECOVERY_MAX_AGE = dt.timedelta(hours=3)
+
+
+def normalize_invocation_start(
+    value: Any,
+    *,
+    now: dt.datetime | None = None,
+) -> tuple[dt.datetime | None, str | None]:
+    """Canonicalize actual_invocation_start and reject implausible future starts.
+
+    Scheduled Chat runs use Asia/Tokyo wall-clock time. A previously observed caller
+    bug serialized that JST wall clock with a UTC suffix, making the run appear about
+    nine hours in the future. Recover only that narrow signature; all other materially
+    future timestamps are invalid.
+    """
+    parsed = parse_time(value)
+    if parsed is None:
+        return None, "invalid_timestamp"
+    current = now or dt.datetime.now(dt.timezone.utc)
+    if current.tzinfo is None:
+        current = current.replace(tzinfo=dt.timezone.utc)
+    current = current.astimezone(dt.timezone.utc)
+    if parsed <= current + MAX_FUTURE_INVOCATION_SKEW:
+        return parsed, None
+
+    raw = str(value).strip()
+    explicitly_utc = raw.endswith("Z") or raw.endswith("+00:00")
+    corrected = parsed - JST_WALL_CLOCK_OFFSET
+    corrected_age = current - corrected
+    if (
+        explicitly_utc
+        and -MAX_FUTURE_INVOCATION_SKEW <= corrected_age <= JST_MISLABEL_RECOVERY_MAX_AGE
+    ):
+        return corrected, "jst_wall_clock_mislabeled_utc"
+    return None, "future_timestamp"
+
+
 def _read(path: Path, default: Any = None) -> Any:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -164,9 +203,17 @@ def get_run(root: Path, request: dict[str, Any]) -> dict[str, Any] | None:
     run = cache.get("runs", {}).get(str(request.get("run_key") or ""))
     if not isinstance(run, dict):
         return None
-    for field in ("worker_id", "run_key", "scheduled_slot", "actual_invocation_start"):
+    for field in ("worker_id", "run_key", "scheduled_slot"):
         if run.get(field) != request.get(field):
             return None
+    cached_start, cached_recovery = normalize_invocation_start(run.get("actual_invocation_start"))
+    requested_start, _ = normalize_invocation_start(request.get("actual_invocation_start"))
+    if cached_start is None or requested_start is None or cached_start != requested_start:
+        return None
+    if cached_recovery is not None:
+        # Legacy poisoned cache entries must be rebuilt so completion counts and
+        # deadline state are recomputed from the corrected invocation instant.
+        return None
     if run.get("cache_valid") is not True:
         return None
     cached_fact_generation = cache.get("fact_generation", -1)
@@ -261,13 +308,14 @@ def _claim_result_identity(value: dict[str, Any]) -> dict[str, Any] | None:
     start = value.get("actual_invocation_start")
     if not worker_identity.is_supported_worker_id(worker_id) or not isinstance(run_key, str) or not run_key:
         return None
-    if not worker_identity.identity_slot_valid(worker_id, slot) or parse_time(start) is None:
+    normalized_start, _ = normalize_invocation_start(start)
+    if not worker_identity.identity_slot_valid(worker_id, slot) or normalized_start is None:
         return None
     return {
         "worker_id": worker_id,
         "run_key": run_key,
         "scheduled_slot": slot,
-        "actual_invocation_start": start,
+        "actual_invocation_start": normalized_start.isoformat(),
     }
 
 
@@ -671,8 +719,16 @@ def write_latest_pointer(root: Path, result_path: Path, result: dict[str, Any]) 
         return False
     path = root / LATEST_ROOT / f"{worker_id}.json"
     current = _read(path, {})
-    current_start = parse_time(current.get("actual_invocation_start")) if isinstance(current, dict) else None
-    new_start = parse_time(result.get("actual_invocation_start"))
+    current_start, _ = (
+        normalize_invocation_start(current.get("actual_invocation_start"))
+        if isinstance(current, dict)
+        else (None, None)
+    )
+    new_start, new_recovery = normalize_invocation_start(result.get("actual_invocation_start"))
+    if new_start is None or new_recovery is not None:
+        # New snapshots must already carry canonical time. We only reinterpret a
+        # legacy poisoned current pointer for ordering so it cannot block a newer run.
+        return False
     current_generation = int(current.get("snapshot_generation", -1) or -1) if isinstance(current, dict) else -1
     new_generation = int(result.get("snapshot_generation", 0) or 0)
     if current_start is not None and new_start is not None:
@@ -702,7 +758,8 @@ def _prune_runs(cache: dict[str, Any], keep: int = 8) -> None:
     for key, run in runs.items():
         if not isinstance(run, dict):
             continue
-        start = parse_time(run.get("actual_invocation_start")) or dt.datetime.min.replace(tzinfo=dt.timezone.utc)
+        start, _ = normalize_invocation_start(run.get("actual_invocation_start"))
+        start = start or dt.datetime.min.replace(tzinfo=dt.timezone.utc)
         pending = bool((run.get("submission") or {}).get("submission_result_pending"))
         active = bool((run.get("claims") or {}).get("active_assignment"))
         rows.append((pending or active, start, key))

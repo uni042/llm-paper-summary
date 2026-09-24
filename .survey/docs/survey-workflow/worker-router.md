@@ -17,7 +17,7 @@
 - 必要なら `.survey/work-queue/state.json`
 - 出力品質が必要な場合は `.survey/templates/paper.md`
 
-実際の起動時刻を1回取得し、`actual_invocation_start` として固定する。予定時刻や前回runの時刻を再利用しない。通常の時間枠は起動時刻から3600秒とする。通常のrun-state経路は必ずこの実起動時刻由来のdeadlineを使い、`seconds_to_next_scheduled_task` は過去の直接呼出しを読むための互換入力に限定する。新規runの時間判定を次回予定時刻から組み立てない。**残り600秒以下は新しい独立作業を開始しないための開始禁止窓**であり、すでに開始済みのResearch / Audit、既発行claim、既提出submissionのresult確認・正規repair、すでに開始済みDiscovery roundのprecheck/submission/result完了は継続してよい。残り600〜181秒で新しい論文claimや新しいDiscovery roundを開始してはならない。**残り180秒以下は最終handoff窓**とし、新規内容作業をせず耐久保存・既存非同期結果の確認・安全な引き継ぎだけを行う。開始禁止窓に入った時点で進行中作業が無ければ、そのrunは安全な引き継ぎ後に終了してよい。
+実際の起動時刻を1回取得し、`actual_invocation_start` として固定する。予定時刻や前回runの時刻を再利用しない。**タイムゾーン情報を必ず保持し、JSTの壁時計を `Z` / `+00:00` として偽装しない。** run-state正規化層は既知の「JST壁時計をUTCとして直列化した約9時間ずれ」だけを防御的に補正し、それ以外の実質的な未来時刻を拒否する。通常の時間枠は起動時刻から3600秒とする。通常のrun-state経路は必ずこの実起動時刻由来のdeadlineを使い、`seconds_to_next_scheduled_task` は過去の直接呼出しを読むための互換入力に限定する。新規runの時間判定を次回予定時刻から組み立てない。**残り600秒以下は新しい独立作業を開始しないための開始禁止窓**であり、すでに開始済みのResearch / Audit、既発行claim、既提出submissionのresult確認・正規repair、すでに開始済みDiscovery roundのprecheck/submission/result完了は継続してよい。残り600〜181秒で新しい論文claimや新しいDiscovery roundを開始してはならない。**残り180秒以下は最終handoff窓**とし、新規内容作業をせず耐久保存・既存非同期結果の確認・安全な引き継ぎだけを行う。開始禁止窓に入った時点で進行中作業が無ければ、そのrunは安全な引き継ぎ後に終了してよい。
 
 ### 1.1 run identity と scheduled slot
 

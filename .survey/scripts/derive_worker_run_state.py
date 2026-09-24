@@ -80,9 +80,12 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
     run_key = str(value.get("run_key") or "").strip()
     if not run_key:
         raise ValueError("run_key is required")
-    started_at = _time(value.get("actual_invocation_start"))
+    raw_invocation_start = value.get("actual_invocation_start")
+    started_at, start_recovery = run_state_cache.normalize_invocation_start(raw_invocation_start)
     if started_at is None:
-        raise ValueError("actual_invocation_start must be an offset-aware timestamp")
+        raise ValueError(
+            "actual_invocation_start must be offset-aware and cannot be materially in the future"
+        )
     runtime_condition = str(value.get("runtime_condition") or "none").strip()
     if runtime_condition not in RUNTIME_CONDITIONS:
         raise ValueError("unsupported runtime_condition")
@@ -149,6 +152,10 @@ def _normalize_request(path: Path, value: Any) -> dict[str, Any]:
         "worker_kind": "scheduled_chat",
         "scheduled_slot": scheduled_slot,
         "actual_invocation_start": started_at.astimezone(dt.timezone.utc).isoformat(),
+        "actual_invocation_start_original": (
+            str(raw_invocation_start).strip() if start_recovery is not None else None
+        ),
+        "actual_invocation_start_recovery": start_recovery,
         "runtime_condition": runtime_condition,
         "runtime_condition_confirmed": runtime_condition_confirmed,
         "runtime_condition_attempts": max(runtime_condition_attempts, 0),
@@ -877,8 +884,17 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
     root = root.resolve()
     perf_started = time.perf_counter()
     read_started = READ_COUNT
-    started_at = _time(request["actual_invocation_start"])
-    assert started_at is not None
+    request = dict(request)
+    raw_invocation_start = request.get("actual_invocation_start")
+    started_at, start_recovery = run_state_cache.normalize_invocation_start(raw_invocation_start)
+    if started_at is None:
+        raise ValueError(
+            "actual_invocation_start must be offset-aware and cannot be materially in the future"
+        )
+    request["actual_invocation_start"] = started_at.isoformat()
+    if start_recovery is not None:
+        request["actual_invocation_start_original"] = str(raw_invocation_start).strip()
+        request["actual_invocation_start_recovery"] = start_recovery
 
     cached = None if force_canonical else run_state_cache.get_run(root, request)
     cached_claims = (
@@ -1127,6 +1143,8 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
         "worker_id": request["worker_id"],
         "scheduled_slot": request["scheduled_slot"],
         "actual_invocation_start": request["actual_invocation_start"],
+        "actual_invocation_start_original": request.get("actual_invocation_start_original"),
+        "actual_invocation_start_recovery": request.get("actual_invocation_start_recovery"),
         "processed_at": now.isoformat(),
         "candidate_inventory": inventory,
         "work_mode": work_mode,
