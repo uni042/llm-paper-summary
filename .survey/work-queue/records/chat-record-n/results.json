@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-preload-f48e2e24f9e9543b922e54eb",
-  "job_id": "job-research-fdc9e29fb13596db",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-f48e2e24f9e9543b922e54eb",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-preload-f48e2e24f9e9543b922e54eb","job_id":"job-research-fdc9e29fb13596db","data":{"overview":"MoDは固定capacityで大半のtokenをrouting blockから迂回させても、同一総学習FLOPsのvanilla Transformerと同等以上のlossを達成できる。6e18 FLOPsの探索ではevery-other-block routingかつ12.5% capacityが有力で、同規模220M modelの例ではisoFLOP最適baselineをわずかに上回りながらstepを60%以上高速化し、図中model #3では66%高速化を報告する。より広いisoFLOP解析でも、baselineと同等以上の性能を保ちつつforward FLOPsを削減できる領域が確認される。","key_results":[{"metric":"step速度","value":"最大66%高速化（本文では60%以上の例）","baseline":"同規模220M isoFLOP-optimal vanilla Transformer","condition":"6e18 FLOPs探索、routing every other block、主要capacity 12.5%","interpretation":"tokenの87.5%をrouting blockから迂回させることでforward計算を削減し、同等以上のlossを維持した。"},{"metric":"isoFLOP性能","value":"最終log-probability objectiveで最大約1.5%改善","baseline":"isoFLOP vanilla Transformer","condition":"同一総学習FLOPs・同等wall-clock比較","interpretation":"固定計算予算内で計算を必要tokenへ集中させることで、単なる計算削減だけでなくFLOP当たり性能も改善し得る。"},{"metric":"自己回帰routing予測","value":"97%以上、本文説明では約99% accuracy","baseline":"学習時non-causal top-k membership","condition":"predictor-based causal sampling","interpretation":"未来tokenを使えないdecodeでもtop-k選択を高精度に近似でき、性能劣化は小さい。"},{"metric":"自己回帰評価規模","value":"256,000 sequences / 約500M tokens","baseline":"同一held-out data上のvanilla/MoD variants","condition":"predictor routingへ切替","interpretation":"生成時にもMoDのFLOP削減傾向が維持されることを確認した。"}],"negative_results":"stochastic routingはlearned routingとvanilla baselineの双方より大幅に悪化し、どのtokenを処理するかの学習が重要である。routingを全blockへ適用するよりevery-other-blockが強く、capacityを12.5%よりさらに攻めると性能が悪化する。補助BCE方式は主language-modeling objectiveを約0.2〜0.3%悪化させるため、著者らは別predictor方式も検討する。","interpretation":"固定kにより計算量・shapeを静的に保つ一方、token identityだけを動的にする設計が、条件付き計算と現行ハードウェア効率の折衷になっている。推論システム観点では、実際のserving runtime最適化そのものではないが、token-level layer skippingを予測可能なcapacityとして表現できるため、将来のkernel schedulingやKV/activation管理と接続しやすい。","quality_impact":"MoDは単純skipではなくlearned routingを必要とし、適切なrouting頻度とcapacityではbaseline lossを維持または改善する。生成時predictorへの置換による劣化も小さい一方、過度なcapacity削減やstochastic routingでは品質が崩れるため、速度向上はrouting学習とcapacity選択に依存する。"},"reservation":{"claim_id":"claim-preload-f48e2e24f9e9543b922e54eb","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
