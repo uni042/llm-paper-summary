@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-09-24 09:44:52 JST**
+> 自動生成: **2026-09-24 09:45:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文 | **294** |
+| 収録候補論文 | **293** |
 | 未claim Research job | **166** |
-| 直近24hの検証済みResearch収録 | **41** |
-| 最終検証済みResearch収録 | **09-24 09:40:07 JST（4分前）** |
+| 直近24hの検証済みResearch収録 | **42** |
+| 最終検証済みResearch収録 | **09-24 09:45:14 JST（8秒前）** |
 | 整合性異常 | **1** |
 
 ## 現在の収録候補
@@ -23,9 +23,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **294** |
+| canonical_id確認済みの一意な候補論文 | **293** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **294** |
+| 非終端Research job合計 | **293** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -33,10 +33,10 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 構造化references総候補 | **6709** |
-| 処理済み | **655** |
-| 未処理 | **6054** |
-| 収録済みとして除外 | **547** |
+| 構造化references総候補 | **6712** |
+| 処理済み | **656** |
+| 未処理 | **6056** |
+| 収録済みとして除外 | **548** |
 | 無関係として除外 | **48** |
 | 微妙として除外 | **60** |
 
@@ -49,7 +49,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **09-24 08:35:53 JST（1時間8分前）** |
+| 最終maintenance完了 | **09-24 08:35:53 JST（1時間9分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -69,10 +69,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **4** | **1** | **0** | **0** | **128** | **10** | — |
+| Research | **5** | **1** | **0** | **0** | **127** | **10** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **3** | **0** | **3** | **0** | **0** | **6** |
-| 合計 | **4** | **4** | **0** | **3** | **128** | **10** | **6** |
+| 合計 | **5** | **4** | **0** | **3** | **127** | **10** | **6** |
 
 - 最新Discovery runの耐久探索round: **3件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -82,6 +82,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### Research
 
+- **09-24 09:45:14 JST** [research] `arXiv:2410.01035` — Don't Stop Me Now: Embedding Based Scheduling for LLMs
+  - job: `.survey/work-queue/jobs/job-research-97b59f2c42d3b70d.json`
+  - result: `.survey/work-queue/results/research/attempt-preload-4b68202feb39838866eccea9.json` (`ok=true`)
+  - submission: `.survey/work-queue/submissions/research/attempt-preload-4b68202feb39838866eccea9.json`
+  - paper: `papers/inference/06-serving-scheduling/2024-2410.01035-embedding-based-scheduling.md`
 - **09-24 09:40:07 JST** [research] `arXiv:2406.02069` — PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling
   - job: `.survey/work-queue/jobs/job-research-86d74401d2a482f5.json`
   - result: `.survey/work-queue/results/research/attempt-preload-a27038f725a3ac141db139f4.json` (`ok=true`)
@@ -148,7 +153,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research
 
-- 未失効かつ非terminal jobのclaim: **128件** / 直近15分heartbeat: **10件**
+- 未失効かつ非terminal jobのclaim: **127件** / 直近15分heartbeat: **10件**
 - `arXiv:2608.14191` — KV Cache Compression Through the Lens of Transform Coding / worker `shared-preload-pool`
   - claim: **09-24 09:30:47 JST** / heartbeat: **—** / lease expiry: **09-24 21:30:47 JST**
   - evidence: `.survey/work-queue/claims/job-research-7b20b235b85d5367.json`
@@ -198,7 +203,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **294** |
+| ready | **293** |
 
 ### 候補の重複・識別情報欠損
 
@@ -218,7 +223,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1006** |
+| inference/training/survey配下の論文Markdown実体 | **1007** |
 
 ### immutable submissionの未照合
 
@@ -226,8 +231,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **294** |
-| └ Research | **161** |
+| 成功result未照合のimmutable submission | **293** |
+| └ Research | **160** |
 | └ Audit | **2** |
 | └ Discovery | **72** |
 | └ Other/Unknown | **59** |

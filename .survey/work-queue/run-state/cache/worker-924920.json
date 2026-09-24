@@ -1,6 +1,6 @@
 {
-  "fact_generation": 9,
-  "generation": 10,
+  "fact_generation": 10,
+  "generation": 11,
   "runs": {
     "adhoc-20260924T092000JST-worker-924920": {
       "actual_invocation_start": "2026-09-24T00:20:00+00:00",
@@ -67,10 +67,13 @@
         "attempt-preload-4b68202feb39838866eccea9": {
           "attempt_id": "attempt-preload-4b68202feb39838866eccea9",
           "claimed_at": "2026-09-24T00:23:02+00:00",
+          "completed": true,
           "descriptor_path": ".survey/work-queue/submissions/research/attempt-preload-4b68202feb39838866eccea9.json",
           "job_id": "job-research-97b59f2c42d3b70d",
+          "job_status": "completed",
           "kind": "research",
-          "pending": true,
+          "pending": false,
+          "processed_at": "2026-09-24T00:45:14+00:00",
           "repair_required": false,
           "retryable": false,
           "run_key": "adhoc-20260924T092000JST-worker-924920",
@@ -176,24 +179,23 @@
         ]
       },
       "first_cached_at": "2026-09-24T00:22:43.624934+00:00",
-      "generation": 10,
+      "generation": 11,
       "rebuilt_from_canonical": false,
       "run_key": "adhoc-20260924T092000JST-worker-924920",
       "scheduled_slot": "adhoc",
       "submission": {
         "completed_attempt_ids": [
           "attempt-preload-2fa50b35dc3b52ca57aadaca",
+          "attempt-preload-4b68202feb39838866eccea9",
           "attempt-preload-b1e41ea993ce770bb187a178"
         ],
         "last_terminal_job_status": "completed",
-        "pending_attempt_ids": [
-          "attempt-preload-4b68202feb39838866eccea9"
-        ],
-        "pipeline_ahead_count": 1,
+        "pending_attempt_ids": [],
+        "pipeline_ahead_count": 0,
         "repair_required_attempt_ids": [],
-        "research_audit_completed_this_invocation": 2,
+        "research_audit_completed_this_invocation": 3,
         "retryable_attempt_ids": [],
-        "submission_result_pending": true,
+        "submission_result_pending": false,
         "submission_state_checked": true,
         "submitted_attempt_ids": [
           "attempt-preload-06a7382e6e4dd1f8011ebfe2",
@@ -207,6 +209,6 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-24T00:44:34.040357+00:00",
+  "updated_at": "2026-09-24T00:45:15.119065+00:00",
   "worker_id": "worker-924920"
 }
