@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-preload-f151a18e22842a355a31eb94",
-  "job_id": "job-research-fc413cbcbab0d455",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-f151a18e22842a355a31eb94",
-    "worker_id": "scheduled-chat-30",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-preload-f151a18e22842a355a31eb94","job_id":"job-research-fc413cbcbab0d455","data":{"limitations":"GH200の900GB/s級CPU-GPU接続を主要前提とし、PCIe接続GPUでは重み転送を層計算へ十分隠せない可能性がある。層が同質という理論前提は混合専門家や層ごとに計算量が異なるモデルでは崩れ、個別転送時間を考慮した配置が必要になる。重みを再読込するため再割当率を上げ過ぎると転送がボトルネックになり、軽負荷では動的復帰しないと遅延が悪化する。","implementation_status":"vLLM 0.7.3へ約3000行Python、約300行C++/CUDAを追加し、再割当制御器、非同期転送器、vAttention型動的鍵値物理ページ割当を実装する。公開コードUT-SysML/Oneirosがあり、GH200上で時間共有・空間共有・Pie比較・複数切除を実測する。","research_positioning":"FlexGenやNEOなどの重み・計算退避、Pieなどの鍵値交換、vAttention/vLLMの鍵値仮想メモリ管理の交差に位置する。従来は増大する鍵値を主記憶へ逃がす発想が中心だったのに対し、Oneirosは不変な重みを移動対象へ選び直し、画像処理装置物理ページを鍵値へ弾性的に再用途化する。","relation_to_prior":"Pieは将来層の鍵値を中央処理装置へ退避し、必要時に戻すため、毎トークン更新される鍵値の同期と双方向転送が必要になる。Oneirosは主記憶に既存の重み正本があることを利用し、画像処理装置からの書戻しを省く。NEO/FlexInferのようなCPU offloadとも併用可能で、再割当率上限に達した後の追加手段として位置付ける。","repository_position":"階層メモリ・CPU/GPUオフロード系統の主要論文として配置できる。特に『どのテンソルを下位階層へ置くか』を更新頻度と同期依存から決める例であり、CXL/NVLink世代の高帯域ホストメモリ活用、KV cache容量拡張、multi-tenant servingを結ぶ。","differences":"鍵値を圧縮・削除・交換せず、モデル重みの物理領域を鍵値へ再割当する。休止モデル重みを優先し、循環層順序から等間隔の再転送層を選び、再割当量に応じて一共有領域と二重バッファを切り替える。","followups":"PCIe H100/A100、CXL拡張メモリ、複数GPU、混合専門家、量子化重みでの転送隠蔽、鍵値量子化・CPU退避との共同最適化を調べると、更新頻度を考慮した多階層配置戦略として一般化できる。"},"reservation":{"claim_id":"claim-preload-f151a18e22842a355a31eb94","worker_id":"scheduled-chat-30","worker_kind":"scheduled_chat"}}
