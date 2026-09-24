@@ -291,6 +291,13 @@ def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
     snapshots: list[dict[str, Any]] = []
     skipped: list[dict[str, str]] = []
 
+    # A completed round must immediately free one slot in the bounded Discovery
+    # frontier. Refill/materialize before deriving the next action so a worker
+    # never reaches an idle decision point merely because the previous round just
+    # became durable. Newly materialized precheck requests are published by the
+    # recovery workflow in the same transaction and processed by the precheck lane.
+    frontier_maintenance = hot_dispatch.materialize_discovery_prechecks(root)
+
     for run in _recovered_runs(root, report):
         worker_id = run["worker_id"]
         run_key = run["run_key"]
@@ -465,6 +472,7 @@ def advance(repo_root: Path, recovery_report: Path) -> dict[str, Any]:
     return {
         "ok": True,
         "recovered_runs": len(_recovered_runs(root, report)),
+        "frontier_maintenance": frontier_maintenance,
         "advanced": advanced,
         "snapshots": snapshots,
         "skipped": skipped,
