@@ -34,6 +34,13 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         self.assertIn("periodic recovery will retry unsettled requests", text)
         self.assertIn("cron: '4/10 * * * *'", text)
 
+    def test_discovery_precheck_repairs_missing_run_state_before_publication(self):
+        text = (WORKFLOWS / "discovery-precheck.yml").read_text(encoding="utf-8")
+        self.assertIn("ensure_discovery_run_state.py", text)
+        self.assertIn("--requests-file /tmp/discovery-foreground-requests.txt", text)
+        self.assertIn("derive_worker_run_state.py --repo-root .", text)
+        self.assertIn(".survey/work-queue/run-state", text)
+
     def test_discovery_recovery_auto_advances_prepared_bank_with_push_race_recompute(self):
         text = (WORKFLOWS / "survey-discovery-recovery.yml").read_text(encoding="utf-8")
         self.assertIn("for attempt in $(seq 1 12)", text)
