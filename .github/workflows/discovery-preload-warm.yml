@@ -1,0 +1,192 @@
+name: Discovery preload warm
+
+on:
+  workflow_run:
+    workflows: ['Discovery precheck gate']
+    types: [completed]
+  schedule:
+    - cron: '1/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Preload warming is deliberately serialized and physically separate from worker
+# prechecks. A slow provider may delay this lane, but it can never queue a worker.
+concurrency:
+  group: discovery-preload-background-main
+  cancel-in-progress: false
+
+jobs:
+  warm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      DISCOVERY_PRELOAD_PARALLELISM: '4'
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: '.survey/scripts/requirements.txt'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Compile preload hot path
+        run: |
+          python -m py_compile \
+            .survey/scripts/discovery_preload_queue.py \
+            .survey/scripts/process_discovery_precheck.py \
+            .survey/scripts/process_discovery_precheck_batch.py \
+            .survey/scripts/hot_dispatch.py
+
+      - name: Fill and precheck Discovery banks
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-discovery-preload[bot]'
+          git config user.email 'survey-discovery-preload[bot]@users.noreply.github.com'
+
+          for attempt in $(seq 1 8); do
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Reserve every free Discovery sidecar up front. This produces immutable
+            # preload requests before any worker needs them.
+            python .survey/scripts/discovery_preload_queue.py \
+              --repo-root . top-up --target 32 --max-new 32 \
+              | tee /tmp/discovery-preload-topup.json
+
+            rm -rf /tmp/discovery-identities
+            rm -f /tmp/discovery-rejections.json
+            if [ -d .survey/work-queue/discovery-identities ] \
+              && [ -f .survey/work-queue/discovery-identities/_manifest.json ] \
+              && [ -f .survey/work-queue/discovery-rejections.json ]; then
+              cp -a .survey/work-queue/discovery-identities /tmp/discovery-identities
+              cp .survey/work-queue/discovery-rejections.json /tmp/discovery-rejections.json
+            else
+              python .survey/scripts/build_discovery_identity_snapshot.py \
+                --root .survey \
+                --output /tmp/discovery-identities \
+                --source-commit "$(git rev-parse HEAD)"
+              python .survey/scripts/build_discovery_rejection_ledger.py \
+                --root .survey \
+                --output /tmp/discovery-rejections.json
+            fi
+
+            : > /tmp/preload-local.txt
+            : > /tmp/preload-remote.txt
+            : > /tmp/preload-semantic-scholar.txt
+
+            while IFS= read -r request; do
+              [ -n "$request" ] || continue
+              name="$(basename "$request")"
+              case "$name" in preload-*.json) ;; *) continue ;; esac
+              result=".survey/work-queue/discovery-precheck/results/$name"
+              [ ! -f "$result" ] || continue
+
+              provider="$(
+                python -c 'import json,sys; from pathlib import Path; v=json.loads(Path(sys.argv[1]).read_text(encoding="utf-8")); print(str(v.get("provider") or "").strip().casefold())' "$request"
+              )"
+              case "$provider" in
+                repository_references|repository_reference_pool)
+                  printf '%s\n' "$request" >> /tmp/preload-local.txt
+                  ;;
+                semantic_scholar)
+                  printf '%s\n' "$request" >> /tmp/preload-semantic-scholar.txt
+                  ;;
+                *)
+                  printf '%s\n' "$request" >> /tmp/preload-remote.txt
+                  ;;
+              esac
+            done < <(
+              find .survey/work-queue/discovery-precheck/requests -maxdepth 1 -type f -name 'preload-*.json' 2>/dev/null | sort
+            )
+
+            process_batch () {
+              local file="$1"
+              [ -s "$file" ] || return 0
+              set +e
+              python .survey/scripts/process_discovery_precheck_batch.py \
+                --repo-root . \
+                --requests-file "$file" \
+                --snapshot-dir /tmp/discovery-identities \
+                --rejection-ledger /tmp/discovery-rejections.json \
+                --parallelism "$DISCOVERY_PRELOAD_PARALLELISM"
+              local rc=$?
+              set -e
+              if [ "$rc" -ne 0 ] && [ "$rc" -ne 1 ]; then
+                return "$rc"
+              fi
+              return 0
+            }
+
+            # Local/reference-pool work is cheap; OpenAlex/other remote sources can
+            # also use bounded parallelism. Semantic Scholar remains serialized to
+            # avoid turning its rate limit into a foreground concern later.
+            process_batch /tmp/preload-local.txt
+            process_batch /tmp/preload-remote.txt
+
+            while IFS= read -r request; do
+              [ -n "$request" ] || continue
+              name="$(basename "$request")"
+              result=".survey/work-queue/discovery-precheck/results/$name"
+              sleep 2
+              mkdir -p "$(dirname "$result")"
+              set +e
+              python .survey/scripts/process_discovery_precheck.py \
+                --request "$request" \
+                --result "$result" \
+                --snapshot-dir /tmp/discovery-identities \
+                --rejection-ledger /tmp/discovery-rejections.json \
+                --repo-root .
+              rc=$?
+              set -e
+              if [ "$rc" -ne 0 ]; then
+                echo "Background preload failed for $name; persist the result and continue." >&2
+              fi
+            done < /tmp/preload-semantic-scholar.txt
+
+            # Failed/exhausted windows can free a sidecar. Refill once more in the
+            # same background run, then publish a fresh hot-dispatch snapshot.
+            python .survey/scripts/discovery_preload_queue.py \
+              --repo-root . top-up --target 32 --max-new 32 \
+              | tee /tmp/discovery-preload-retopup.json
+            python .survey/scripts/hot_dispatch.py --repo-root . refresh \
+              > /tmp/hot-dispatch.json
+
+            git add \
+              .survey/work-queue/discovery-precheck/requests \
+              .survey/work-queue/discovery-precheck/results \
+              .survey/work-queue/discovery-preload \
+              .survey/work-queue/hot-dispatch.json
+            while IFS= read -r -d '' preload_slot; do
+              git add -- "$preload_slot"
+            done < <(
+              find .survey/work-queue/records -type f -name 'discovery-preload.json' -print0
+            )
+
+            if git diff --cached --quiet; then
+              echo 'Discovery preload stock is already warm.'
+              exit 0
+            fi
+
+            git commit -m 'survey: warm discovery preload stock'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Preload warm push race on attempt ${attempt}; recomputing from latest main."
+            sleep $(( attempt * 2 ))
+          done
+
+          echo 'Failed to publish Discovery preload stock after retries.' >&2
+          exit 1
