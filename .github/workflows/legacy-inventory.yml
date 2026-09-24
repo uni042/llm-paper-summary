@@ -1,0 +1,102 @@
+name: Legacy inventory
+
+on:
+  push:
+    branches:
+      - 'legacy-purge/**'
+    paths:
+      - '.survey/scripts/audit_legacy_inventory.py'
+      - '.survey/docs/survey-workflow/legacy-removal.md'
+      - '.survey/docs/survey-workflow/legacy-inventory.md'
+      - '.github/workflows/legacy-inventory.yml'
+      - '! .survey/reports/legacy-inventory.json'
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: 'Optional exact 40-character source commit (defaults to latest main)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: legacy-inventory-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  inventory:
+    if: startsWith(github.ref_name, 'legacy-purge/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the work branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Pin the source snapshot
+        id: source
+        env:
+          REQUESTED_SOURCE_COMMIT: ${{ inputs.source_commit }}
+        run: |
+          if [ -n "$REQUESTED_SOURCE_COMMIT" ]; then
+            if ! printf '%s' "$REQUESTED_SOURCE_COMMIT" | grep -Eq '^[0-9a-fA-F]{40}$'; then
+              echo "source_commit must be a full 40-character SHA" >&2
+              exit 1
+            fi
+            git fetch origin "$REQUESTED_SOURCE_COMMIT"
+            source_commit="$(git rev-parse FETCH_HEAD)"
+          else
+            git fetch origin main
+            source_commit="$(git rev-parse FETCH_HEAD)"
+          fi
+          mkdir -p "$RUNNER_TEMP/legacy-source"
+          git archive "$source_commit" | tar -x -C "$RUNNER_TEMP/legacy-source"
+          echo "sha=$source_commit" >> "$GITHUB_OUTPUT"
+          echo "Pinned inventory source: $source_commit"
+
+      - name: Build the read-only inventory
+        env:
+          SOURCE_COMMIT: ${{ steps.source.outputs.sha }}
+        run: |
+          source_root="$RUNNER_TEMP/legacy-source"
+          output_path="$source_root/.survey/reports/legacy-inventory.json"
+          mkdir -p "$(dirname "$output_path")"
+          classification_args=()
+          if [ -f .survey/reports/legacy-classifications.json ]; then
+            classification_args+=(--classifications .survey/reports/legacy-classifications.json)
+          fi
+          python .survey/scripts/audit_legacy_inventory.py \
+            --root "$source_root" \
+            --source-commit "$SOURCE_COMMIT" \
+            "${classification_args[@]}" \
+            --output "$output_path"
+          cp "$output_path" .survey/reports/legacy-inventory.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path(".survey/reports/legacy-inventory.json").read_text(encoding="utf-8"))
+          print("Inventory summary:")
+          for key in ("source_commit", "status", "file_count", "classification_counts",
+                      "legacy_marker_count", "unreviewed_marker_count", "unscannable_count",
+                      "legacy_remaining", "cleanup_remaining"):
+              print(f"  {key}: {report[key]}")
+          PY
+
+      - name: Save the inventory on the work branch
+        run: |
+          if git diff --quiet -- .survey/reports/legacy-inventory.json; then
+            echo "Inventory report is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .survey/reports/legacy-inventory.json
+          git commit -m "chore: refresh pinned legacy inventory"
+          git push origin "HEAD:$GITHUB_REF_NAME"
