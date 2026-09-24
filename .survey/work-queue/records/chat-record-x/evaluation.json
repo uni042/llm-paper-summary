@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-preload-71270ce404475002d20ce60c",
-  "job_id": "job-research-45a223ad00555581",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-preload-71270ce404475002d20ce60c",
-    "worker_id": "scheduled-chat-00",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-preload-71270ce404475002d20ce60c","job_id":"job-research-45a223ad00555581","data":{"hardware":"Llama-3.1-8BはA800-80GB PCIe×1、Qwen3-14BはH20-96GB SXM×1、Qwen3-32BはH20×2、Llama-3.3-70BはH20×4で評価。cluster-levelはQwen3-14Bを載せたsingle-GPU engineのdata-parallel groupを用いる。","software":"vLLM v0.10.1.1 V1 engineを基盤にFairBatching schedulerを実装。比較はvLLM defaultのprefill-prioritized構成、Sarathi-style stall-free batching、FairBatching-vanilla、PAB admission control付きFairBatching-PAB。","methodology":"BurstGPT、Qwen-Bailian Anonymous Dataset、Azure LLM inference trace 2024のhead segmentを異なるload scalingでreplayする。BurstGPTはprompt平均688/p90 1599、output平均237/p90 470、TTFT/TPOT SLO 500/50ms、QwenTraceは892/1776、377/742、500/50ms、AzureTraceは1604/3561、114/392、2000/50ms。TTFT、request内最大TPOT、SLO violation rate、両SLOを満たすrequest数から算出するeffective RPSを測る。SLO sweep、component ablation、DP cluster load-balancingも評価する。","scope":"traceは元データ全体ではなくhead segmentを抽出しており、production workload全体の長期変動を完全には再現しない。PABのsingle-node評価ではrejectをSLO violationとして数えて比較の公平性を保つが、実clusterでのreroute costやnetwork条件は別途影響し得る。評価GPUはA800/H20中心で、他GPU世代へのstep-time modelはprofilingし直す必要がある。"},"reservation":{"claim_id":"claim-preload-71270ce404475002d20ce60c","worker_id":"scheduled-chat-00","worker_kind":"scheduled_chat"}}
